@@ -236,6 +236,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **SELL** | `TJGC` | 27 | $27.68 | $2.09 | $-60.32 | $13,990.14 | ▼ -60.32 after sell → book $14,829.94; vs 09:30 mark -2.09 | dropped from list after 2 sess (min 2) | — |
 | 2026-09-29 09:30 ET | **SELL** | `USDE` | 52 | $16.15 | $2.17 | $+25.27 | $14,827.77 | ▲ +25.27 after sell → book $14,827.77; vs 09:30 mark -2.17 | dropped from list after 2 sess (min 2) | — |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,827.77 | ▲ close $14,827.77 vs 09:30 $14,834.19 (session +0.00) | 16:00 close · cash $14,827.77 · no lots left · equity $14,827.77. | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,827.77 | ▲ 09:30 equity $14,827.77 vs yday $14,827.77 (+0.00) | 09:30 open · cash $14,827.77 · no holdings · equity $14,827.77 vs prior close $14,827.77 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,827.77 | ▲ close $14,827.77 vs 09:30 $14,827.77 (session +0.00) | 16:00 close · cash $14,827.77 · no lots left · equity $14,827.77. | — |
 
 ## Not taken
 

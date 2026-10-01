@@ -197,6 +197,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $119.12 | ▼ close $7,005.41 vs 09:30 $7,033.48 (session -27.45) | 16:00 close · cash $119.12 · equity $7,005.41 vs 09:30 $7,033.48 (-28.07; session marks -27.45) · 1 name(s) marked open→close (per-name table). HALO×61 09:30 $113.34 → close $112.89 -27.45 | — |
 | 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $119.12 | ▲ 09:30 equity $7,005.41 vs yday $7,005.41 (+0.00) | 09:30 open · cash $119.12 (unchanged overnight, no fees) · equity $7,005.41 vs prior close $7,005.41 (+0.00) · 1 name(s) re-marked at the open (per-name table). HALO×61 yday $112.89 → 09:30 $112.89 +0.00 | — |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $119.12 | ▼ close $6,924.28 vs 09:30 $7,005.41 (session -81.13) | 16:00 close · cash $119.12 · equity $6,924.28 vs 09:30 $7,005.41 (-81.13; session marks -81.13) · 1 name(s) marked open→close (per-name table). HALO×61 09:30 $112.89 → close $111.56 -81.13 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $119.12 | ▲ 09:30 equity $6,924.28 vs yday $6,924.28 (+0.00) | 09:30 open · cash $119.12 (unchanged overnight, no fees) · equity $6,924.28 vs prior close $6,924.28 (+0.00) · 1 name(s) re-marked at the open (per-name table). HALO×61 yday $111.56 → 09:30 $111.56 +0.00 | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $119.12 | ▲ close $6,924.28 vs 09:30 $6,924.28 (session +0.00) | 16:00 close · cash $119.12 · equity $6,924.28 vs 09:30 $6,924.28 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). HALO×61 09:30 $111.56 → close $111.56 +0.00 | — |
 
 ## Not taken
 

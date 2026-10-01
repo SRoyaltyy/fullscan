@@ -253,6 +253,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,020.87 | ▲ 09:30 equity $8,020.87 vs yday $8,020.87 (+0.00) | 09:30 open · cash $8,020.87 · no holdings · equity $8,020.87 vs prior close $8,020.87 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-29 09:30 ET | **BUY** | `ZSQR` | 1789 | $4.47 | $23.08 | — | $0.96 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list yday_gainer,yday_mover; ⚪; ret5=+72.0; leftover $8020.87 | join🟢 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.96 | ▼ close $7,425.31 vs 09:30 $8,020.87 (session -572.48) | 16:00 close · cash $0.96 · equity $7,425.31 vs 09:30 $8,020.87 (-595.56; session marks -572.48) · 1 name(s) marked open→close (per-name table). ZSQR×1789 09:30 $4.47 → close $4.15 -572.48 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.96 | ▲ 09:30 equity $7,425.31 vs yday $7,425.31 (+0.00) | 09:30 open · cash $0.96 (unchanged overnight, no fees) · equity $7,425.31 vs prior close $7,425.31 (+0.00) · 1 name(s) re-marked at the open (per-name table). ZSQR×1789 yday $4.15 → 09:30 $4.15 +0.00 | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.96 | ▲ close $7,425.31 vs 09:30 $7,425.31 (session +0.00) | 16:00 close · cash $0.96 · equity $7,425.31 vs 09:30 $7,425.31 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). ZSQR×1789 09:30 $4.15 → close $4.15 +0.00 | — |
 
 ## Not taken
 

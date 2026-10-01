@@ -252,6 +252,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,796.76 | ▲ 09:30 equity $9,796.76 vs yday $9,796.76 (+0.00) | 09:30 open · cash $9,796.76 · no holdings · equity $9,796.76 vs prior close $9,796.76 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-29 09:30 ET | **SHORT** | `AEHL` | 593 | $8.26 | $7.92 | — | $14,684.05 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=+18.9; leftover $4898.38 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,684.05 | ▼ close $9,590.18 vs 09:30 $9,796.76 (session -198.65) | 16:00 close · cash $14,684.05 · equity $9,590.18 vs 09:30 $9,796.76 (-206.58; session marks -198.65) · 1 name(s) marked open→close (per-name table). AEHL×593 09:30 $8.26 → close $8.59 -198.65 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,684.05 | ▲ 09:30 equity $9,590.18 vs yday $9,590.18 (+0.00) | 09:30 open · cash $14,684.05 (unchanged overnight, no fees) · equity $9,590.18 vs prior close $9,590.18 (+0.00) · 1 name(s) re-marked at the open (per-name table). AEHL×593 yday $8.59 → 09:30 $8.59 -0.00 | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,684.05 | ▲ close $9,590.18 vs 09:30 $9,590.18 (session +0.00) | 16:00 close · cash $14,684.05 · equity $9,590.18 vs 09:30 $9,590.18 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). AEHL×593 09:30 $8.59 → close $8.59 -0.00 | — |
 
 ## Not taken
 

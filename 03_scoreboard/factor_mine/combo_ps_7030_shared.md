@@ -322,6 +322,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,903.52 | ▼ 09:30 equity $8,878.90 vs yday $8,884.12 (-5.22) | 09:30 open · cash $12,903.52 (unchanged overnight, no fees) · equity $8,878.90 vs prior close $8,884.12 (-5.22) | — |
 | 2026-09-29 09:30 ET | **SHORT** | `AEHL` | 537 | $8.26 | $7.17 | — | $17,329.28 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=+18.9; combo leftover $4439.45; owner short_news_r_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,329.28 | ▼ close $8,691.83 vs 09:30 $8,878.90 (session -179.89) | 16:00 close · cash $17,329.28 · equity $8,691.83 vs 09:30 $8,878.90 (-187.07; session marks -179.89) · 2 name(s) marked open→close (per-name table). RSKD×522 09:30 $7.71 → close $7.71 -0.00; AEHL×537 09:30 $8.26 → close $8.59 -179.89 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17,329.28 | ▲ 09:30 equity $8,691.83 vs yday $8,691.83 (-0.00) | 09:30 open · cash $17,329.28 (unchanged overnight, no fees) · equity $8,691.83 vs prior close $8,691.83 (-0.00) | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,329.28 | ▲ close $8,691.83 vs 09:30 $8,691.83 (session +0.00) | 16:00 close · cash $17,329.28 · equity $8,691.83 vs 09:30 $8,691.83 (-0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). AEHL×537 09:30 $8.59 → close $8.59 -0.00; RSKD×522 09:30 $7.71 → close $7.71 -0.00 | — |
 
 ## Not taken
 

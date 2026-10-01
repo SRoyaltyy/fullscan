@@ -260,6 +260,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **BUY** | `GLND` | 974 | $3.98 | $12.56 | — | $3,869.24 | — | combo gate; gate news=good,vol=good; list yday_mover; ret5=+55.9; leftover $3879.16 | join🔴 sector🟡 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-29 09:30 ET | **BUY** | `BURL` | 14 | $268.37 | $2.03 | — | $110.02 | — | combo gate; gate news=good,vol=good; list ohlc_hot; 🔵; ret5=+5.8; leftover $3879.16 | join🟢 sector🟡 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $110.02 | ▲ close $8,517.22 vs 09:30 $7,758.32 (session +773.50) | 16:00 close · cash $110.02 · equity $8,517.22 vs 09:30 $7,758.32 (+758.90; session marks +773.50) · 2 name(s) marked open→close (per-name table). GLND×974 09:30 $3.98 → close $4.75 +749.98; BURL×14 09:30 $268.37 → close $270.05 +23.52 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $110.02 | ▲ 09:30 equity $8,517.22 vs yday $8,517.22 (+0.00) | 09:30 open · cash $110.02 (unchanged overnight, no fees) · equity $8,517.22 vs prior close $8,517.22 (+0.00) · 2 name(s) re-marked at the open (per-name table). BURL×14 yday $270.05 → 09:30 $270.05 +0.00; GLND×974 yday $4.75 → 09:30 $4.75 +0.00 | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $110.02 | ▲ close $8,517.22 vs 09:30 $8,517.22 (session +0.00) | 16:00 close · cash $110.02 · equity $8,517.22 vs 09:30 $8,517.22 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). BURL×14 09:30 $270.05 → close $270.05 +0.00; GLND×974 09:30 $4.75 → close $4.75 +0.00 | — |
 
 ## Not taken
 

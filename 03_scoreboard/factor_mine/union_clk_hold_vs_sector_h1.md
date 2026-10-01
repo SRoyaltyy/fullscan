@@ -346,6 +346,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,777.89 | ▲ 09:30 equity $8,777.89 vs yday $8,777.89 (+0.00) | 09:30 open · cash $8,777.89 · no holdings · equity $8,777.89 vs prior close $8,777.89 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-29 09:30 ET | **BUY** | `BUR` | 2214 | $3.95 | $28.56 | — | $4.03 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer; ret5=-0.3; leftover $8777.89 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.03 | ▼ close $8,638.63 vs 09:30 $8,777.89 (session -110.70) | 16:00 close · cash $4.03 · equity $8,638.63 vs 09:30 $8,777.89 (-139.26; session marks -110.70) · 1 name(s) marked open→close (per-name table). BUR×2214 09:30 $3.95 → close $3.90 -110.70 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.03 | ▲ 09:30 equity $8,638.63 vs yday $8,638.63 (+0.00) | 09:30 open · cash $4.03 (unchanged overnight, no fees) · equity $8,638.63 vs prior close $8,638.63 (+0.00) · 1 name(s) re-marked at the open (per-name table). BUR×2214 yday $3.90 → 09:30 $3.90 +0.00 | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.03 | ▲ close $8,638.63 vs 09:30 $8,638.63 (session +0.00) | 16:00 close · cash $4.03 · equity $8,638.63 vs 09:30 $8,638.63 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). BUR×2214 09:30 $3.90 → close $3.90 +0.00 | — |
 
 ## Not taken
 

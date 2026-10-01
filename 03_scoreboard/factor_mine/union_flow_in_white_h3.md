@@ -154,6 +154,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,251.92 | ▲ 09:30 equity $9,251.92 vs yday $9,251.92 (+0.00) | 09:30 open · cash $9,251.92 · no holdings · equity $9,251.92 vs prior close $9,251.92 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-29 09:30 ET | **BUY** | `KMX` | 153 | $60.41 | $2.45 | — | $7.51 | — | combo gate; gate flow_in=True,zero_red=True; list earn_react; 🔵; ⚪; ret5=-2.3; leftover $9251.92 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.51 | ▼ close $9,069.70 vs 09:30 $9,251.92 (session -179.78) | 16:00 close · cash $7.51 · equity $9,069.70 vs 09:30 $9,251.92 (-182.22; session marks -179.78) · 1 name(s) marked open→close (per-name table). KMX×153 09:30 $60.41 → close $59.23 -179.78 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7.51 | ▲ 09:30 equity $9,069.70 vs yday $9,069.70 (-0.00) | 09:30 open · cash $7.51 (unchanged overnight, no fees) · equity $9,069.70 vs prior close $9,069.70 (-0.00) · 1 name(s) re-marked at the open (per-name table). KMX×153 yday $59.23 → 09:30 $59.23 +0.00 | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.51 | ▲ close $9,069.70 vs 09:30 $9,069.70 (session +0.00) | 16:00 close · cash $7.51 · equity $9,069.70 vs 09:30 $9,069.70 (-0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). KMX×153 09:30 $59.23 → close $59.23 +0.00 | — |
 
 ## Not taken
 

@@ -626,6 +626,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,107.98 | ▼ close $3,022.21 vs 09:30 $3,087.15 (session -62.31) | 16:00 close · cash $6,107.98 · equity $3,022.21 vs 09:30 $3,087.15 (-64.94; session marks -62.31) · 2 name(s) marked open→close (per-name table). RSKD×193 09:30 $7.71 → close $7.71 -0.00; AEHL×186 09:30 $8.26 → close $8.59 -62.31 | — |
 | 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,575.18 | ▼ 09:30 equity $3,087.15 vs yday $3,089.08 (-1.93) | 09:30 open · cash $4,575.18 (unchanged overnight, no fees) · equity $3,087.15 vs prior close $3,089.08 (-1.93) · 1 name(s) re-marked at the open (per-name table). RSKD×193 yday $7.70 → 09:30 $7.71 -1.93 | — |
 | 2026-09-29 09:30 ET | **SHORT** | `AEHL` | 186 | $8.26 | $2.63 | — | $6,107.98 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=+18.9; leftover $1543.58 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,107.98 | ▲ close $3,022.21 vs 09:30 $3,022.21 (session +0.00) | 16:00 close · cash $6,107.98 · equity $3,022.21 vs 09:30 $3,022.21 (-0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). AEHL×186 09:30 $8.59 → close $8.59 -0.00; RSKD×193 09:30 $7.71 → close $7.71 -0.00 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,107.98 | ▲ 09:30 equity $3,022.21 vs yday $3,022.21 (-0.00) | 09:30 open · cash $6,107.98 (unchanged overnight, no fees) · equity $3,022.21 vs prior close $3,022.21 (-0.00) · 2 name(s) re-marked at the open (per-name table). AEHL×186 yday $8.59 → 09:30 $8.59 -0.00; RSKD×193 yday $7.71 → 09:30 $7.71 -0.00 | — |
 
 ## Not taken
 

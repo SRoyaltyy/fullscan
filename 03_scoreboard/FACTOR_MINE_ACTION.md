@@ -1,4 +1,4 @@
-# Factor mine action — 2026-08-13 → 2026-09-29
+# Factor mine action — 2026-08-13 → 2026-09-30
 
 Sessions before `2026-08-13` are **reconstructed** (rebuilt inputs, not a frozen 09:30 snapshot). From `2026-08-13` each day's inputs and buy/sell decisions are append-only.
 

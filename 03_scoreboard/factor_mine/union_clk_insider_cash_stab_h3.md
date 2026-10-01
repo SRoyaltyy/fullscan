@@ -145,6 +145,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,162.19 | ▲ 09:30 equity $9,162.19 vs yday $9,162.19 (+0.00) | 09:30 open · cash $9,162.19 · no holdings · equity $9,162.19 vs prior close $9,162.19 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-29 09:30 ET | **BUY** | `MTN` | 66 | $138.42 | $2.19 | — | $24.28 | — | Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data); gate clk_insider_cash_stab=True; rank cond; list earn_react; 🔵; ret5=-1.7; leftover $9162.19 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.28 | ▲ close $9,349.42 vs 09:30 $9,162.19 (session +189.42) | 16:00 close · cash $24.28 · equity $9,349.42 vs 09:30 $9,162.19 (+187.23; session marks +189.42) · 1 name(s) marked open→close (per-name table). MTN×66 09:30 $138.42 → close $141.29 +189.42 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24.28 | ▲ 09:30 equity $9,349.42 vs yday $9,349.42 (+0.00) | 09:30 open · cash $24.28 (unchanged overnight, no fees) · equity $9,349.42 vs prior close $9,349.42 (+0.00) · 1 name(s) re-marked at the open (per-name table). MTN×66 yday $141.29 → 09:30 $141.29 +0.00 | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.28 | ▲ close $9,349.42 vs 09:30 $9,349.42 (session +0.00) | 16:00 close · cash $24.28 · equity $9,349.42 vs 09:30 $9,349.42 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). MTN×66 09:30 $141.29 → close $141.29 +0.00 | — |
 
 ## Not taken
 

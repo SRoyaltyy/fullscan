@@ -250,6 +250,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **BUY** | `CCL` | 195 | $24.39 | $2.58 | — | $4,784.43 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-0.8; leftover $4771.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-29 09:30 ET | **BUY** | `MTN` | 34 | $138.42 | $2.09 | — | $76.06 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-1.7; leftover $4771.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $76.06 | ▲ close $9,776.37 vs 09:30 $9,543.06 (session +237.98) | 16:00 close · cash $76.06 · equity $9,776.37 vs 09:30 $9,543.06 (+233.31; session marks +237.98) · 2 name(s) marked open→close (per-name table). CCL×195 09:30 $24.39 → close $25.11 +140.40; MTN×34 09:30 $138.42 → close $141.29 +97.58 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $76.06 | ▲ 09:30 equity $9,776.37 vs yday $9,776.37 (-0.00) | 09:30 open · cash $76.06 (unchanged overnight, no fees) · equity $9,776.37 vs prior close $9,776.37 (-0.00) · 2 name(s) re-marked at the open (per-name table). CCL×195 yday $25.11 → 09:30 $25.11 +0.00; MTN×34 yday $141.29 → 09:30 $141.29 +0.00 | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $76.06 | ▲ close $9,776.37 vs 09:30 $9,776.37 (session +0.00) | 16:00 close · cash $76.06 · equity $9,776.37 vs 09:30 $9,776.37 (-0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). CCL×195 09:30 $25.11 → close $25.11 +0.00; MTN×34 09:30 $141.29 → close $141.29 +0.00 | — |
 
 ## Not taken
 

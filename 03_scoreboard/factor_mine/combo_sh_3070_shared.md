@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_hot_n4_h1 w=0.3,0.7 net=priority
 
-Cash book **+34.40%** ($13,439) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 230 · skips 159 · realized $+2678.50.
+Cash book **+34.40%** ($13,440) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 230 · skips 159 · realized $+2678.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -369,6 +369,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **BUY** | `GRML` | 279 | $10.50 | $3.60 | — | $5,046.13 | — | top 4 by hot; rank hot_score; list yday_mover; ret5=+25.8; combo leftover $2937.26; owner union_hot_n4_h1 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-29 09:30 ET | **SHORT** | `AEHL` | 611 | $8.26 | $8.16 | — | $10,081.78 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=+18.9; combo leftover $5046.13; owner short_news_r_h3 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,081.78 | ▲ close $13,439.49 vs 09:30 $13,021.86 (session +472.84) | 16:00 close · cash $10,081.78 · equity $13,439.49 vs 09:30 $13,021.86 (+417.63; session marks +472.84) · 6 name(s) marked open→close (per-name table). RSKD×488 09:30 $7.71 → close $7.71 -0.00; KOD×33 09:30 $87.50 → close $91.12 +119.46; GLND×738 09:30 $3.98 → close $4.75 +568.26; SRFM×2468 09:30 $1.19 → close $1.20 +24.68; GRML×279 09:30 $10.50 → close $10.38 -34.88; AEHL×611 09:30 $8.26 → close $8.59 -204.68 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,081.78 | ▲ 09:30 equity $13,439.50 vs yday $13,439.49 (+0.01) | 09:30 open · cash $10,081.78 (unchanged overnight, no fees) · equity $13,439.50 vs prior close $13,439.49 (+0.01) | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,081.78 | ▲ close $13,439.50 vs 09:30 $13,439.50 (session +0.00) | 16:00 close · cash $10,081.78 · equity $13,439.50 vs 09:30 $13,439.50 (-0.00; session marks +0.00) · 6 name(s) marked open→close (per-name table). AEHL×611 09:30 $8.59 → close $8.59 -0.00; GLND×738 09:30 $4.75 → close $4.75 +0.00; GRML×279 09:30 $10.38 → close $10.38 +0.00; KOD×33 09:30 $91.12 → close $91.12 +0.00; RSKD×488 09:30 $7.71 → close $7.71 -0.00; SRFM×2468 09:30 $1.20 → close $1.20 +0.00 | — |
 
 ## Not taken
 

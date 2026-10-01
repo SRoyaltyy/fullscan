@@ -231,6 +231,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,293.48 | ▲ 09:30 equity $8,293.48 vs yday $8,293.48 (+0.00) | 09:30 open · cash $8,293.48 · no holdings · equity $8,293.48 vs prior close $8,293.48 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-29 09:30 ET | **BUY** | `CNXC` | 324 | $25.52 | $4.18 | — | $20.82 | — | baseline list, no extra gate; list overnight; ret5=-7.6; leftover $8293.48 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.82 | ▼ close $8,081.94 vs 09:30 $8,293.48 (session -207.36) | 16:00 close · cash $20.82 · equity $8,081.94 vs 09:30 $8,293.48 (-211.54; session marks -207.36) · 1 name(s) marked open→close (per-name table). CNXC×324 09:30 $25.52 → close $24.88 -207.36 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.82 | ▲ 09:30 equity $8,081.94 vs yday $8,081.94 (+0.00) | 09:30 open · cash $20.82 (unchanged overnight, no fees) · equity $8,081.94 vs prior close $8,081.94 (+0.00) · 1 name(s) re-marked at the open (per-name table). CNXC×324 yday $24.88 → 09:30 $24.88 +0.00 | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.82 | ▲ close $8,081.94 vs 09:30 $8,081.94 (session +0.00) | 16:00 close · cash $20.82 · equity $8,081.94 vs 09:30 $8,081.94 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). CNXC×324 09:30 $24.88 → close $24.88 +0.00 | — |
 
 ## Not taken
 

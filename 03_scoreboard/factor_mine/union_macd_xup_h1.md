@@ -320,6 +320,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **BUY** | `ABCL` | 343 | $14.12 | $4.42 | — | $4,845.66 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer,ohlc_hot; ret5=+10.0; leftover $4846.62 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-29 09:30 ET | **BUY** | `RZLT` | 1063 | $4.54 | $13.71 | — | $0.61 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; ret5=+6.9; leftover $4846.62 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.61 | ▼ close $9,431.54 vs 09:30 $9,693.24 (session -243.57) | 16:00 close · cash $0.61 · equity $9,431.54 vs 09:30 $9,693.24 (-261.70; session marks -243.57) · 2 name(s) marked open→close (per-name table). ABCL×343 09:30 $14.12 → close $14.82 +240.10; RZLT×1063 09:30 $4.54 → close $4.09 -483.67 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.61 | ▲ 09:30 equity $9,431.54 vs yday $9,431.54 (+0.00) | 09:30 open · cash $0.61 (unchanged overnight, no fees) · equity $9,431.54 vs prior close $9,431.54 (+0.00) · 2 name(s) re-marked at the open (per-name table). ABCL×343 yday $14.82 → 09:30 $14.82 +0.00; RZLT×1063 yday $4.09 → 09:30 $4.09 +0.00 | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.61 | ▲ close $9,431.54 vs 09:30 $9,431.54 (session +0.00) | 16:00 close · cash $0.61 · equity $9,431.54 vs 09:30 $9,431.54 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). ABCL×343 09:30 $14.82 → close $14.82 +0.00; RZLT×1063 09:30 $4.09 → close $4.09 +0.00 | — |
 
 ## Not taken
 

@@ -228,6 +228,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **BUY** | `JEF` | 109 | $46.08 | $2.32 | — | $5,059.12 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ret5=-1.5; leftover $5042.08 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-29 09:30 ET | **BUY** | `KMX` | 83 | $60.41 | $2.24 | — | $43.27 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ⚪; ret5=-2.3; leftover $5042.08 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.27 | ▼ close $10,030.04 vs 09:30 $10,084.16 (session -49.57) | 16:00 close · cash $43.27 · equity $10,030.04 vs 09:30 $10,084.16 (-54.12; session marks -49.57) · 2 name(s) marked open→close (per-name table). JEF×109 09:30 $46.08 → close $46.52 +47.96; KMX×83 09:30 $60.41 → close $59.23 -97.53 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $43.27 | ▲ 09:30 equity $10,030.04 vs yday $10,030.04 (+0.00) | 09:30 open · cash $43.27 (unchanged overnight, no fees) · equity $10,030.04 vs prior close $10,030.04 (+0.00) · 2 name(s) re-marked at the open (per-name table). JEF×109 yday $46.52 → 09:30 $46.52 +0.00; KMX×83 yday $59.23 → 09:30 $59.23 +0.00 | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.27 | ▲ close $10,030.04 vs 09:30 $10,030.04 (session +0.00) | 16:00 close · cash $43.27 · equity $10,030.04 vs 09:30 $10,030.04 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). JEF×109 09:30 $46.52 → close $46.52 +0.00; KMX×83 09:30 $59.23 → close $59.23 +0.00 | — |
 
 ## Not taken
 

@@ -182,6 +182,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $404.44 | ▼ close $8,710.72 vs 09:30 $8,728.32 (session -17.60) | 16:00 close · cash $404.44 · equity $8,710.72 vs 09:30 $8,728.32 (-17.60; session marks -17.60) · 1 name(s) marked open→close (per-name table). COST×9 09:30 $924.88 → close $922.92 -17.60 | — |
 | 2026-09-29 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $404.44 | ▼ 09:30 equity $8,655.64 vs yday $8,710.72 (-55.08) | 09:30 open · cash $404.44 (unchanged overnight, no fees) · equity $8,655.64 vs prior close $8,710.72 (-55.08) · 1 name(s) re-marked at the open (per-name table). COST×9 yday $922.92 → 09:30 $916.80 -55.08 | — |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $404.44 | ▲ close $8,725.75 vs 09:30 $8,655.64 (session +70.11) | 16:00 close · cash $404.44 · equity $8,725.75 vs 09:30 $8,655.64 (+70.11; session marks +70.11) · 1 name(s) marked open→close (per-name table). COST×9 09:30 $916.80 → close $924.59 +70.11 | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $404.44 | ▲ 09:30 equity $8,725.75 vs yday $8,725.75 (+0.00) | 09:30 open · cash $404.44 (unchanged overnight, no fees) · equity $8,725.75 vs prior close $8,725.75 (+0.00) · 1 name(s) re-marked at the open (per-name table). COST×9 yday $924.59 → 09:30 $924.59 +0.00 | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $404.44 | ▲ close $8,725.75 vs 09:30 $8,725.75 (session +0.00) | 16:00 close · cash $404.44 · equity $8,725.75 vs 09:30 $8,725.75 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). COST×9 09:30 $924.59 → close $924.59 +0.00 | — |
 
 ## Not taken
 

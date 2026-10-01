@@ -222,6 +222,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 09:30 ET | **SELL** | `TEM` | 10 | $85.48 | $2.04 | $+13.84 | $8,826.14 | ▲ +13.84 after sell → book $9,714.44; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 2) | — |
 | 2026-09-29 09:30 ET | **SELL** | `TXG` | 10 | $88.83 | $2.04 | $+46.64 | $9,712.40 | ▲ +46.64 after sell → book $9,712.40; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 2) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,712.40 | ▲ close $9,712.40 vs 09:30 $9,718.84 (session +0.00) | 16:00 close · cash $9,712.40 · no lots left · equity $9,712.40. | — |
+| 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,712.40 | ▲ 09:30 equity $9,712.40 vs yday $9,712.40 (+0.00) | 09:30 open · cash $9,712.40 · no holdings · equity $9,712.40 vs prior close $9,712.40 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,712.40 | ▲ close $9,712.40 vs 09:30 $9,712.40 (session +0.00) | 16:00 close · cash $9,712.40 · no lots left · equity $9,712.40. | — |
 
 ## Not taken
 
