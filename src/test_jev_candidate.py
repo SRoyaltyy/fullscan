@@ -28,6 +28,25 @@ class Candidate(unittest.TestCase):
             with self.assertRaises(ValueError):c.decide({'title':'News'},p)
         p=payload();del p['answers']['company']
         with self.assertRaises(KeyError):c.decide({'title':'News'},p)
+    def test_v2_context_recovery_and_calendar_veto(self):
+        from . import jev_candidate_v2 as v2
+        p=payload(.5,.3,.7)
+        p["answers"].update(evidence={"type":"choice","choice":"narrative","probabilities":{"reported":.3,"narrative":.7,"calendar_artifact":0.}},context={"type":"noul","noul":.8},link={"type":"noul","noul":.9})
+        self.assertEqual(v2.decide({"title":"Survey shows investors shifting into stocks"},p)["decision"],"keep")
+        self.assertEqual(v2.decide({"title":"Company Q2 FY2026 earnings"},p)["decision"],"drop")
+        self.assertEqual(v2.decide({"title":"Company Earnings Call Summary"},p)["decision"],"drop")
+        p["answers"]["link"]["noul"]=True
+        with self.assertRaises(ValueError):v2.decide({"title":"News"},p)
+    def test_live_gate_and_fail_open_error(self):
+        from .jev_gate import gate
+        rows=[{"title":"Company raises guidance"}]
+        out=gate(rows,live=True,key="test",policy="candidate",poster=lambda *args:payload())
+        self.assertEqual(out[0]["decision"],"keep")
+        self.assertFalse(out[0]["review_required"])
+        out=gate(rows,live=True,key="test",policy="candidate",poster=lambda *args:{})
+        self.assertEqual(out[0]["decision"],"keep")
+        self.assertTrue(out[0]["review_required"])
+        self.assertEqual(out[0]["reason"],"jev_error")
     def test_canonical_publisher_suffix(self):
         self.assertEqual(identity({'title':'Company raises guidance - Investor’s Business Daily'}),identity({'title':'Company raises guidance'}))
 

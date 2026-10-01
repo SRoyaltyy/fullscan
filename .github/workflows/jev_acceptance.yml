@@ -4,8 +4,8 @@ on:
     branches: [codex/jev-news-triage]
     paths:
       - 'src/jev_acceptance.py'
-      - 'src/jev_candidate.py'
-      - '00_grounding/jev_acceptance/candidate_v1_gold.json'
+      - 'src/jev_candidate_v2.py'
+      - '00_grounding/jev_acceptance/candidate_v2_gold.json'
       - '.github/workflows/jev_acceptance.yml'
 permissions:
   contents: write
@@ -34,7 +34,7 @@ jobs:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
           JEV_MODEL: jev-1.13.0
         run: |
-          python -m src.jev_acceptance --input 00_grounding/jev_acceptance/candidate_v1_gold.json --output validation/jev_acceptance_report.json --candidate
+          python -m src.jev_acceptance --input 00_grounding/jev_acceptance/candidate_v2_gold.json --output validation/jev_acceptance_report.json --policy candidate-v2
           python - <<'PY'
           import json
           from pathlib import Path

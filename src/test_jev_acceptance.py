@@ -25,6 +25,14 @@ class Tests(unittest.TestCase):
     def test_unknown_model_cannot_count(self):
         r=round_();r["jev_model"]="unknown"
         self.assertFalse(summarize([r])["rounds"][0]["pass"])
+    def test_duplicate_legacy_round_invalid_without_crash(self):
+        r=round_();r["items"][-1]=dict(r["items"][-2])
+        summary=summarize([r,round_(100)])
+        self.assertFalse(summary["rounds"][0]["valid_protocol"])
+        self.assertEqual(summary["streak"],1)
+    def test_model_change_resets_streak(self):
+        r=round_(100);r["jev_model"]="new-model"
+        self.assertEqual(summarize([round_(),r])["streak"],1)
     def test_old_exposure_rejected(self):
         from .jev_acceptance import identity
         self.assertFalse(summarize([round_()],historical_seen=[identity(rows()[0])])["rounds"][0]["pass"])

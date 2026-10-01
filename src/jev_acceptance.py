@@ -79,8 +79,11 @@ def summarize(rounds, historical_seen=()):
             "streak":streak,"accepted":streak>=5,"rounds":summaries}
 
 
-def run(input_path,output_path,workers=8,candidate=False):
-    if candidate:
+def run(input_path,output_path,workers=8,candidate=False,policy=None):
+    if policy == "candidate-v2":
+        from .jev_candidate_v2 import QUESTIONS as questions, protocol_sha as fingerprint, decide
+        candidate=True
+    elif candidate:
         from .jev_candidate import QUESTIONS as questions, protocol_sha as fingerprint, decide
     else:
         questions, fingerprint = QUESTIONS, protocol_sha
@@ -128,4 +131,5 @@ def run(input_path,output_path,workers=8,candidate=False):
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--input",required=True);p.add_argument("--output",required=True)
     p.add_argument("--candidate",action="store_true")
-    a=p.parse_args();run(a.input,a.output,candidate=a.candidate)
+    p.add_argument("--policy",choices=["candidate-v2"])
+    a=p.parse_args();run(a.input,a.output,candidate=a.candidate,policy=a.policy)
