@@ -3,7 +3,7 @@
   "required_items": 100,
   "threshold": 0.8,
   "strictly_above": true,
-  "streak": 8,
+  "streak": 9,
   "accepted": false,
   "rounds": [
     {
@@ -1359,6 +1359,29 @@
       "gold_audit_invalid": false,
       "audit_note": "",
       "streak": 8,
+      "dataset_role": "acceptance",
+      "protocol_sha256": "50dbd93e96b4f02d08cb695434f217c1006e7dbd6909d80fdabfd69125ff7292",
+      "policy_version": "lane-hop0-v9"
+    },
+    {
+      "round": 60,
+      "n": 100,
+      "useful": 30,
+      "trash": 70,
+      "useful_recall": 0.9,
+      "trash_recall": 0.8571428571428571,
+      "keep_precision": 0.7297297297297297,
+      "drop_precision": 0.9523809523809523,
+      "overall_accuracy": 0.87,
+      "errors_or_reviews": 0,
+      "pass": true,
+      "fresh": true,
+      "overlap_count": 0,
+      "unique": true,
+      "valid_protocol": true,
+      "gold_audit_invalid": false,
+      "audit_note": "",
+      "streak": 9,
       "dataset_role": "acceptance",
       "protocol_sha256": "50dbd93e96b4f02d08cb695434f217c1006e7dbd6909d80fdabfd69125ff7292",
       "policy_version": "lane-hop0-v9"
