@@ -3,7 +3,7 @@
   "required_items": 100,
   "threshold": 0.8,
   "strictly_above": true,
-  "streak": 1,
+  "streak": 0,
   "accepted": false,
   "rounds": [
     {
@@ -948,6 +948,29 @@
       "dataset_role": "acceptance",
       "protocol_sha256": "8cbb0d26cf962f124cd2d69cf03b1ad23a590f442fc681b2f8eaab6204376182",
       "policy_version": "lane-hop0-v6"
+    },
+    {
+      "round": 42,
+      "n": 100,
+      "useful": 27,
+      "trash": 73,
+      "useful_recall": 0.8888888888888888,
+      "trash_recall": 0.726027397260274,
+      "keep_precision": 0.5454545454545454,
+      "drop_precision": 0.9464285714285714,
+      "overall_accuracy": 0.77,
+      "errors_or_reviews": 0,
+      "pass": false,
+      "fresh": true,
+      "overlap_count": 0,
+      "unique": true,
+      "valid_protocol": true,
+      "gold_audit_invalid": false,
+      "audit_note": "",
+      "streak": 0,
+      "dataset_role": "acceptance",
+      "protocol_sha256": "8694c6f87c1d9cac0a8d91e6ebb4823c15eb00af826fa4cbd86b202c5608db77",
+      "policy_version": "lane-hop0-v8"
     }
   ],
   "evidence_scope": "Headline-only; prior-event novelty and article bodies unverified. Old-rubric passes do not count.",
