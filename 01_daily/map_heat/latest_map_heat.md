@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-01
 
-Export `finviz_2026-09-30.csv` · 11616 names · generated 2026-10-01T05:41:34.891454-04:00
+Export `finviz_2026-10-01.csv` · 11616 names · generated 2026-10-01T05:41:52.261525-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -278,14 +278,14 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 4 min **BMRN** BioMarin and Profluent partner on AI-designed enzyme therapies (Pharmaceutical Technology)
+- 5 min **BMRN** BioMarin and Profluent partner on AI-designed enzyme therapies (Pharmaceutical Technology)
 - 8 min **GOOG,GOOGL** Google debuts Gemini 4 Argon, its latest frontier model (Yahoo Finance)
 - 11 min **GOOG,GOOGL,AMZN,MSFT,META** Elizabeth Warren demands answers on $96B in lost federal revenue as Amazon, Google, Meta and Microsoft claim tax breaks (Moneywise)
 - 11 min **GRAL** A Cancer Test Has Investors Betting Big. But Will Insurers Pay? (The Wall Street Journal)
 - 13 min **MU** US Futures Mixed as Micron Outlook and Nike Results Take Focus: Dow Jones, S&P, Nasdaq, Wall Street (InvestorsHub)
 - 24 min **MU** Dow futures hit three-month low as yields surge, Micron earnings offer support (Reuters)
-- 27 min **MU** Micron just blew Wall Street away againhere's what's next (Yahoo Finance)
-- 33 min **SNDK,MU** Micron's Blowout Q4 Pushes Memory Peak Further Out  But Investors Still See A Cycle Risk (Stocktwits)
+- 28 min **MU** Micron just blew Wall Street away againhere's what's next (Yahoo Finance)
+- 34 min **SNDK,MU** Micron's Blowout Q4 Pushes Memory Peak Further Out  But Investors Still See A Cycle Risk (Stocktwits)
 - 34 min **BA,BAC,NOC** NOC Stock Heads For Second Red Week: BofA Calls Northrop Attractive Despite Losing Navy Contract To Boeing (Stocktwits)
 - 39 min **C** Bitcoin Price Tests $85,000 as Citi Raises Target to $113K (Cryptonews)
 - 41 min **MU** Stock market today: Dow, S&P 500, Nasdaq mixed as Micron earnings boost tech (Yahoo Finance)
@@ -296,7 +296,7 @@ COLD (1w):
 - 41 min **CAST** FreeCast Provides Additional Detail on Previously Announced Fiscal 2026 Results (Business Wire)
 - 41 min **UAA,UA** Under the hood of Under Armours quest to reconnect with its football roots (Marketing Brew)
 - 41 min **META** 5 Instagram scams you should know how to spot (Quartz)
-- 45 min **RIO** Bell Bay Aluminium to continue operations until 2031 (Mining Technology)
+- 46 min **RIO** Bell Bay Aluminium to continue operations until 2031 (Mining Technology)
 - 46 min **GOOG,GOOGL** Alphabet shares up in premarket trade after Gemini 4 Argon launch (Investing.com)
 - 51 min **RKLB,ASTS,ORCL,NKE,TSLA** Nasdaq, S&P 500, Dow Futures Mixed Even As Micron Fuels AI Rally: ORCL, NKE, TSLA, RKLB, ASTS, PSKY In Focus (Stocktwits)
 - 54 min **EBON** Rezolv secures up to $636m for 1.3GWp Dama Solar project in Romania (Power Technology)

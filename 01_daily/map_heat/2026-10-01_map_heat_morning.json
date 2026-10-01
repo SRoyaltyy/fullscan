@@ -1,8 +1,8 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:41:34.891454-04:00",
+  "generated_at": "2026-10-01T05:41:52.261525-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-09-30.csv",
+  "export": "finviz_2026-10-01.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,7 +8935,7 @@
   ],
   "ticker_news": [
     {
-      "time": "4 min",
+      "time": "5 min",
       "title": "BioMarin and Profluent partner on AI-designed enzyme therapies",
       "url": "https://finance.yahoo.com/healthcare/articles/biomarin-profluent-partner-ai-designed-093627589.html",
       "source": "Pharmaceutical Technology",
@@ -8994,7 +8994,7 @@
       ]
     },
     {
-      "time": "27 min",
+      "time": "28 min",
       "title": "Micron just blew Wall Street away againhere's what's next",
       "url": "https://finance.yahoo.com/markets/stocks/article/micron-just-blew-wall-street-away-againheres-whats-next-091328638.html",
       "source": "Yahoo Finance",
@@ -9003,7 +9003,7 @@
       ]
     },
     {
-      "time": "33 min",
+      "time": "34 min",
       "title": "Micron's Blowout Q4 Pushes Memory Peak Further Out  But Investors Still See A Cycle Risk",
       "url": "https://finance.yahoo.com/markets/stocks/articles/microns-blowout-q4-pushes-memory-090742260.html",
       "source": "Stocktwits",
@@ -9106,7 +9106,7 @@
       ]
     },
     {
-      "time": "45 min",
+      "time": "46 min",
       "title": "Bell Bay Aluminium to continue operations until 2031",
       "url": "https://finance.yahoo.com/energy/articles/bell-bay-aluminium-continue-operations-085541714.html",
       "source": "Mining Technology",
@@ -10746,5 +10746,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 175,
   "earnings_window_count": 63,
-  "overlay_at": "2026-10-01T05:41:34.891454-04:00"
+  "overlay_at": "2026-10-01T05:41:52.261525-04:00"
 }

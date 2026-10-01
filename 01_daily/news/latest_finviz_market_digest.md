@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-01
 
-**Generated:** 2026-10-01T05:40:15.301728-04:00 (America/New_York)
+**Generated:** 2026-10-01T05:40:33.905244-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures trade mixed as 10-year yield hits highest since 2002 while AI strength underpins tech ahead of jobless claims and ISM data
 **Prior close:** SPX —  Nasdaq —  Dow —
