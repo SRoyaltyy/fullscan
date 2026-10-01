@@ -2,7 +2,7 @@
 import math,re
 from .jev_acceptance import sha
 from .jev_lane_contract import RUBRIC, CONTRACT_VERSION
-VERSION='lane-hop0-v5'
+VERSION='lane-hop0-v6'
 QUESTIONS={
  'q5':{'type':'choice','instructions':RUBRIC,'criteria':{
   'change':'A specific new fact changes a tradable constraint, or a verified physical/legal regime break. Includes committed company expansion, actual results/guidance, deal announcement/cancellation, approval, court ruling, leadership/control, financing, actual disruption, official data or concrete new policy path.',
@@ -22,11 +22,11 @@ QUESTIONS['screen']={'type':'choice','instructions':'Separate whether an article
 QUESTIONS['path_signal']={'type':'noul','instructions':'Does an empowered central-bank/government actor give a specific policy-path signal in this headline? This asks what was said, not whether rates already changed. Treat explicit hike/cut possibilities as signals; do not downgrade them merely because they are conditional.', 'criteria':{'true':'A Fed/central-bank chair, governor, voting official or rate panel says hikes/cuts may be needed, sees scope for more hikes/cuts, leaves the door open for a specified rate move, signals impending hikes/cuts, or says a rate increase is possible/needed. Also an actual signed/announced official rate/trade/fiscal decision. A named institution or its authorized officials can be the actor.','false':'Only an analyst/strategist or market odds predicting rates; generic inflation too high, pledges to tame inflation, pivotal moment, puts nation on alert, expert warnings, lawmakers urging, or an unspecified speech without a concrete rate/action path.'}}
 QUESTIONS['form']={'type':'choice','instructions':'What does the headline itself provide? A direct actual result/action can appear inside reaction or advice wording. A passing mention of earnings or an old event is insufficient. Distinguish actual beat/miss/growth/guidance/corporate/legal facts from only price after earnings. Do not invent missing facts.', 'criteria':{'event_main':'An actual specific underlying event/result is supplied, including earnings beat/miss/growth, official data direction, guidance revision, binding deal, approval, leadership or operational/legal change, or a specific authorized rate-path signal.','recycled':'A feature, opinions on a previous earnings report, how an already-known event changed things, what we know about an old recall/case, generic existing regime, or a causal price narrative with no stated actual result/change.','packaging':'Roundup/list of multiple unrelated news items/earnings movers, transcript/call highlights/summary, upcoming earnings/calendar, pure price target/picks or vague teaser without an actual underlying event/result.'}}
 
-THRESHOLDS={'q5':.35,'action':.65,'print':.65,'policy_path':.65,'reported_fact':.50,'path_signal':.65,'screen':.70,'mechanism':.30,'junk':.90,'rumor':.60,'weather':.95}
+THRESHOLDS={'q5':.35,'action':.65,'print':.65,'policy_path':.65,'reported_fact':.50,'path_signal':.80,'screen':.85,'mechanism':.20,'junk':.90,'rumor':.60,'weather':.85}
 ARTIFACT=re.compile(r'(?i)earnings call (?:transcript|highlights|summary)|morning squawk|\b\d+ key items shaping|earnings live updates|\bopinions on\b|what we know about|today.s news:|lead earnings movers')
 BARE_CALENDAR=re.compile(r'(?i)^.{1,100}\b(?:Q[1-4]\s+(?:FY)?20\d{2}|FQ[1-4]\s+20\d{2})\s+earnings(?:\s+\([^)]*\))?$')
 FORMULA='mechanism >= cutoff AND q5 junk/rumor/weather below veto thresholds AND any q5-change/action/print/policy_path/reported_fact/screen support above their respective thresholds'
-def protocol_sha():return sha(dict(version=VERSION,contract=CONTRACT_VERSION,rubric=RUBRIC,questions=QUESTIONS,thresholds=THRESHOLDS,formula=FORMULA,retries=3,form_veto=[.50,.70],artifacts=[ARTIFACT.pattern,BARE_CALENDAR.pattern]))
+def protocol_sha():return sha(dict(version=VERSION,contract=CONTRACT_VERSION,rubric=RUBRIC,questions=QUESTIONS,thresholds=THRESHOLDS,formula=FORMULA,retries=3,weather_override='path_signal >= .90',form_veto=[.50,.70],artifacts=[ARTIFACT.pattern,BARE_CALENDAR.pattern]))
 def decide(row,payload):
  answers=payload['answers'];s={}
  for key,q in QUESTIONS.items():
@@ -43,7 +43,7 @@ def decide(row,payload):
    s.update(probs) if key=='q5' else s.update(screen=probs['investigate']) if key=='screen' else s.update({'form_'+k:v for k,v in probs.items()})
   else:s[key]=values[0]
  t=THRESHOLDS
- veto=next((key for key in ('junk','rumor','weather') if s[key]>=t[key]),'')
+ veto=next((key for key in ('junk','rumor','weather') if s[key]>=t[key] and not(key=='weather' and s['path_signal']>=.90)),'')
  if s['form_packaging']>=.50 or s['form_recycled']>=.70:veto='packaging_or_recycled'
  if ARTIFACT.search(row.get('title','')) or BARE_CALENDAR.search(row.get('title','')):veto='packaging_or_calendar'
  supported=s['change']>=t['q5'] or any(s[k]>=t[k] for k in ('action','print','policy_path','reported_fact','screen','path_signal'))

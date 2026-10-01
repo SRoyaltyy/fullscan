@@ -68,7 +68,7 @@ def summarize(rounds, historical_seen=(), rubric=RUBRIC):
         overlap=ids & seen
         unique=len(ids)==len(round_["items"])
         scores=score(round_["items"],require_unique=False)
-        valid=(unique and not overlap and round_.get("teacher_blind") is True
+        valid=(not round_.get("gold_audit_invalid") and unique and not overlap and round_.get("teacher_blind") is True
                and round_.get("rubric_sha256")==sha(rubric)
                and config[1] not in {"unknown", "mixed-or-missing", ""}
                and scores["errors_or_reviews"]==0
@@ -78,7 +78,7 @@ def summarize(rounds, historical_seen=(), rubric=RUBRIC):
         passed=valid and scores["pass"]
         streak=streak+1 if passed else 0
         summaries.append({"round":index,**scores,"fresh":not overlap,"overlap_count":len(overlap),
-                          "unique":unique,"valid_protocol":valid,"pass":passed,"streak":streak})
+                          "unique":unique,"valid_protocol":valid,"gold_audit_invalid":bool(round_.get("gold_audit_invalid")),"audit_note":round_.get("audit_note",""),"pass":passed,"streak":streak})
     return {"required_rounds":10,"required_items":100,"threshold":.80,"strictly_above":True,
             "streak":streak,"accepted":streak>=10,"rounds":summaries}
 
