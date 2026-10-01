@@ -37,6 +37,18 @@ class Tests(unittest.TestCase):
  def test_nan_rejected(self):
   p=payload();p['answers']['print']['noul']=float('nan')
   with self.assertRaises(ValueError):decide({'title':'X'},p)
+ def test_specific_policy_path_survives_weather_disagreement(self):
+  p=payload();p['answers']['q5']={'type':'choice','choice':'weather','probabilities':{'weather':.98,'change':.02,'junk':0,'rumor':0}}
+  p['answers']['path_signal']['noul']=.95
+  self.assertEqual(decide({'title':'Fed voter says multiple hikes may be needed'},p)['decision'],'keep')
+ def test_weather_veto_blocks_generic_atomic_false_positive(self):
+  p=payload();p['answers']['q5']={'type':'choice','choice':'weather','probabilities':{'weather':.98,'change':.02,'junk':0,'rumor':0}}
+  p['answers']['reported_fact']['noul']=.9
+  self.assertEqual(decide({'title':'Treasuries dip ahead of inflation data'},p)['decision'],'drop')
+ def test_teacher_audit_invalidates_acceptance_without_relabeling(self):
+  b=round_(0);b.update(rubric_sha256=sha(RUBRIC),protocol_sha256=protocol_sha(),gold_audit_invalid=True)
+  result=summarize([b],rubric=RUBRIC)
+  self.assertFalse(result['rounds'][0]['pass']);self.assertTrue(result['rounds'][0]['gold_audit_invalid'])
  def test_new_gold_contract_resets_old_passes(self):
   rounds=[round_(i*100) for i in range(10)]
   self.assertFalse(summarize(rounds,rubric=RUBRIC)['accepted'])
