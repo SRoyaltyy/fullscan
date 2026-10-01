@@ -1,17 +1,57 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T06:04:54.848848-04:00",
+  "generated_at": "2026-10-01T06:04:44.887804-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
-    "ok": 3,
-    "partial": 4,
-    "fail": 1,
+    "ok": 6,
+    "partial": 2,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
-  "sell_1d": [],
-  "flatten": {},
+  "sell_1d": [
+    {
+      "ticker": "NEOV",
+      "score": -0.17828666315379646
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.2411697007660305
+    },
+    {
+      "ticker": "SOC",
+      "score": -0.5537884549773978
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.2903118725336945
+    },
+    {
+      "ticker": "POWL",
+      "score": -0.06853636509325672
+    },
+    {
+      "ticker": "INDI",
+      "score": -0.1413249335849469
+    },
+    {
+      "ticker": "ACDC",
+      "score": -0.5594004912064034
+    },
+    {
+      "ticker": "TE",
+      "score": -0.28621899857607735
+    }
+  ],
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $81,251.01 \u00b7 morning S missing",
+    "bullets": [
+      "0 priced buys",
+      "cash $81,251.01",
+      "morning S missing"
+    ]
+  },
   "general": {
     "said": "DOWN  -1.343",
     "bullets": [
@@ -25,7 +65,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "2 up / 8 down / 0 flat",
+    "said": "1 up / 6 down / 0 flat",
     "bullets": [
       "XLB DOWN -0.8",
       "XLC UP +7.5",
@@ -34,9 +74,9 @@
       "XLE DOWN -2.4",
       "XLF DOWN -5.2",
       "XLV DOWN -3.9",
-      "XLI DOWN -0.4",
-      "XLRE DOWN -5.9",
-      "XLK UP +5.0",
+      "XLI missing",
+      "XLRE missing",
+      "XLK missing",
       "XLU missing"
     ]
   },
@@ -238,70 +278,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Technology (10/11)",
+      "title": "Sector predict Healthcare (7/11)",
       "date": "2026-10-01",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-01T06:04:54.530956-04:00",
+      "at": "2026-10-01T06:00:10.224905-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-01/technology_predict.md",
+          "path": "01_daily/sectors/2026-10-01/healthcare_predict.md",
           "ok": true,
           "reason": "",
-          "size": 15864,
-          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **5.037** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **3.248** (NQ +0.50%, ES +0.17%, PM:XLK +0.58%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **2.125** (raw 2.125)"
+          "size": 17024,
+          "preview": "# Sector Prediction \u2014 Healthcare \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLV**\n- rubric: `00_grounding/sectors/healthcare.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-3.878** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-2.042** (ES +0.17%, PM:XLV -0.53%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.5** (raw -1.5)"
         },
         {
-          "path": "01_daily/sectors/2026-10-01/technology_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-01/healthcare_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 442,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (134,691 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,081 characters)."
+          "size": 6056,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Healthcare 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (115,714 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLV healthcare sector October 1 2026 premarket\"* \u2192 got 6 results (via gnews_rss)\n- Sector Update: Healthcare Stocks Edge Higher Premarket Friday - Yahoo Finance (https://news.google.com/rss/articles/CBMingFBVV95cUxQUlJOaG5NSThSSmt4bHI4NFlFQURjTGttd3JaTi05ZjRiLWFOcXkzUDVuNG4xR0Z3cXNsaXBRTFNDRHNDUXVlc3c0MnotUkhHdFlxanJ3ZGpLYzVNNWRnbkk2cENnYVRINjdpMXQ0dTBrZy1fak93QUY4c3Y5Y1VFZVN1MGwtaEZsUjlWOWVTcE5XNWUzN0lTNUVjRGszZw?oc=5)\n- Sector Update: Healthcare Stocks Mixed Premarket Wednesday - Yahoo Finance (https://news.google.com/rss/a"
         },
         {
-          "path": "01_daily/_transcripts/2026-10-01_sector_technology_predict.json",
+          "path": "01_daily/_transcripts/2026-10-01_sector_healthcare_predict.json",
           "ok": true,
           "reason": "",
-          "size": 152643,
+          "size": 163486,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-01_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7442,
+          "size": 7469,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-01/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1480,
+          "size": 1497,
           "preview": "keys: date, n_ok, n_total, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-01/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 2001,
-          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T06:04:54.515147-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1932,
+          "preview": "# Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T06:00:10.209310-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-01/_board.json",
           "ok": true,
           "reason": "",
-          "size": 7784,
+          "size": 7275,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 970815,
+          "size": 967566,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **5.037** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **3.248** (NQ +0.50%, ES +0.17%, PM:XLK +0.58%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **2.125** (raw 2.125) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (134,691 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,081 characters). \u00b7 keys: model, messages, provider, fallback_reason \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-01\nGenerated: **2026-10-01T06:04:54.515147-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live nex"
+      "preview": "# Sector Prediction \u2014 Healthcare \u2014 2026-10-01\n- news_mode: **on**\n- ETF: **XLV**\n- rubric: `00_grounding/sectors/healthcare.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-3.878** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-2.042** (ES +0.17%, PM:XLV -0.53%) \u00b7 index_carry **-0.336** (general -1.343) \u00b7 llm_overlay **-1.5** (raw -1.5) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Healthcare 2026-10-01\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (115,714 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLV healthcare sector October 1 2026 premarket\"* \u2192 got 6 results (via gnews_rss)\n- Sector Update: Healthcare Stocks Edge Higher Premarket Friday - Yahoo Finance (https://news.google.com/rss/articles/CBMingFBVV95cUxQUlJOaG5NSThSSmt4bHI4NFlFQURjTGttd3JaTi05ZjRiLWFOcXkzUDVuNG4xR0Z3cXNsaXBRTFNDRHNDUXVlc3c0MnotUkhHdFlxanJ3ZGpLYzVNNWRnbkk2cENnYVRINjdpMXQ0dTBrZy1fak93QUY4c3Y5Y1VFZVN1MGwtaEZsUjlWOWVTcE5XNWUzN0l"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

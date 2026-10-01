@@ -1,6 +1,6 @@
 # Stock book — 2026-10-01
 
-_Generated 2026-10-01T05:59:35.863737-04:00_
+_Generated 2026-10-01T06:04:42.728398-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -21,7 +21,7 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 - Weather risk: **unknown**
 - General predict (same-day): -0.47 down (present)
 - Stand-down: **no** — 0 names qualified through group_leader,catalyst,probable
-- Sector predicts this date: 4/11 (ok)
+- Sector predicts this date: 7/11 (ok)
 - News tickers in play: 111
 - AB coverage: 1891 names · peer RS: 1804
 - Universe after liquidity: 2035
@@ -52,21 +52,21 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 
 | # | Ticker | Domains | Lane | Company / group | Decision |
 |---:|--------|---------|------|-----------------|----------|
-| 1 | **HITI** | 🔴🟡🟢🟡🟢🟢 | blocked | no direct company event; Pharmaceutical Retailers +3.6% d1 / +1.0% 1w / +3.5% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; v2 domain alarm / market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 2 | **CON** | 🔴🟡🟢🟡🟢🟢 | blocked | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; v2 domain alarm / market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 3 | **NTAP** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 4 | **AMN** | 🔴🟡🟢🟡🟢🟢 | blocked | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; v2 domain alarm / market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 5 | **MQ** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 6 | **IMAX** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Entertainment +2.5% d1 / +2.0% 1w / -1.5% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; v2 domain alarm / market=RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 7 | **CNK** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Entertainment +2.5% d1 / +2.0% 1w / -1.5% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; v2 domain alarm / market=RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 8 | **PANW** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 9 | **META** | 🔴🟢🟢🟡🟢🟡 | blocked | direct normal digest (stale/undated): Monness, Crespi, Hardt raises Meta Platforms price target to $830 from $730, keeps Buy rating citing Muse AI traction at Meta Connect 2026; Internet Content & Information +3.0% d1 / +4.2% 1w / +0.8% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; direct catalyst lacks price confirmation; v2 domain alarm / market=RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.30); setup=GREEN; flow=YELLOW |
-| 10 | **TWLO** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 11 | **YEXT** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 12 | **NBIS** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 13 | **NTSK** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 14 | **OLLI** | 🔴🟡🟢🟡🟢🟢 | blocked | no direct company event; Discount Stores +1.8% d1 / +0.8% 1w / +0.3% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; v2 domain alarm / market=RED; parent=YELLOW; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
-| 15 | **KSPI** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 1 | **NTAP** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 2 | **MQ** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 3 | **HITI** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Pharmaceutical Retailers +3.6% d1 / +1.0% 1w / +3.5% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 4 | **IMAX** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Entertainment +2.5% d1 / +2.0% 1w / -1.5% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; v2 domain alarm / market=RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 5 | **CNK** | 🔴🟢🟢🟡🟢🟢 | blocked | no direct company event; Entertainment +2.5% d1 / +2.0% 1w / -1.5% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; v2 domain alarm / market=RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 6 | **PANW** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 7 | **CON** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 8 | **META** | 🔴🟢🟢🟡🟢🟡 | blocked | direct normal digest (stale/undated): Monness, Crespi, Hardt raises Meta Platforms price target to $830 from $730, keeps Buy rating citing Muse AI traction at Meta Connect 2026; Internet Content & Information +3.0% d1 / +4.2% 1w / +0.8% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; direct catalyst lacks price confirmation; v2 domain alarm / market=RED; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.30); setup=GREEN; flow=YELLOW |
+| 9 | **TWLO** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 10 | **YEXT** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 11 | **NBIS** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 12 | **NTSK** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 13 | **OLLI** | 🔴🟡🟢🟡🟢🟢 | blocked | no direct company event; Discount Stores +1.8% d1 / +0.8% 1w / +0.3% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; v2 domain alarm / market=RED; parent=YELLOW; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 14 | **KSPI** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
+| 15 | **AMN** | 🔴🔴🟢🟡🟢🟢 | blocked | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; v2 domain alarm / market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN |
 
 ### Bear decisions
 
@@ -74,19 +74,19 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 |---:|--------|---------|----------|----------|
 | 1 | **NEOV** | 🔴🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7% |
 | 2 | **FCEL** | 🔴🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7% |
-| 3 | **EOSE** | 🔴🔴🔴🟡🔴🟡 | Electrical Equipment & Parts | SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -4.7% |
-| 4 | **POWL** | 🔴🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7% |
-| 5 | **INDI** | 🔴🔴🔴🟡🔴🔴 | Semiconductors | SELL/AVOID — market=RED; red domains=parent,child,setup,flow |
-| 6 | **TE** | 🔴🔴🔴🟡🔴🟡 | Electrical Equipment & Parts | SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -4.7% |
-| 7 | **OKLO** | 🔴🔴🔴🟡🔴🔴 | Utilities - Independent Power Producers | SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -6.3% |
-| 8 | **LUNR** | 🔴🔴🔴🟡🔴🔴 | Aerospace & Defense | SELL/AVOID — market=RED; red domains=parent,child,setup,flow |
-| 9 | **AMSC** | 🔴🔴🔴🟡🔴🔴 | Specialty Industrial Machinery | SELL/AVOID — market=RED; red domains=parent,child,setup,flow |
-| 10 | **PLUG** | 🔴🔴🔴🟡🔴🟡 | Electrical Equipment & Parts | SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -4.7% |
-| 11 | **SKYX** | 🔴🔴🔴🟡🔴🟡 | Electrical Equipment & Parts | SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -4.7% |
-| 12 | **METC** | 🔴🔴🔴🟡🔴🟡 | Coking Coal | SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -5.7% |
-| 13 | **RDW** | 🔴🔴🔴🟡🔴🔴 | Aerospace & Defense | SELL/AVOID — market=RED; red domains=parent,child,setup,flow |
-| 14 | **LPTH** | 🔴🔴🔴🟡🔴🔴 | Electronic Components | SELL/AVOID — market=RED; red domains=parent,child,setup,flow |
-| 15 | **MTZ** | 🔴🔴🔴🟡🔴🔴 | Engineering & Construction | SELL/AVOID — market=RED; red domains=parent,child,setup,flow |
+| 3 | **SOC** | 🔴🔴🔴🟡🔴🟡 | Oil & Gas Drilling | SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -5.4% |
+| 4 | **EOSE** | 🔴🔴🔴🟡🔴🟡 | Electrical Equipment & Parts | SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -4.7% |
+| 5 | **POWL** | 🔴🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7% |
+| 6 | **INDI** | 🔴🔴🔴🟡🔴🔴 | Semiconductors | SELL/AVOID — market=RED; red domains=parent,child,setup,flow |
+| 7 | **ACDC** | 🔴🔴🔴🟡🔴🟡 | Oil & Gas Equipment & Services | SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -7.7% |
+| 8 | **TE** | 🔴🔴🔴🟡🔴🟡 | Electrical Equipment & Parts | SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -4.7% |
+| 9 | **PUMP** | 🔴🔴🔴🟡🔴🟡 | Oil & Gas Equipment & Services | SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -7.7% |
+| 10 | **BORR** | 🔴🔴🔴🟡🔴🟡 | Oil & Gas Drilling | SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -5.4% |
+| 11 | **OKLO** | 🔴🔴🔴🟡🔴🔴 | Utilities - Independent Power Producers | SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -6.3% |
+| 12 | **AESI** | 🔴🔴🔴🟡🔴🟡 | Oil & Gas Equipment & Services | SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -7.7% |
+| 13 | **LUNR** | 🔴🔴🔴🟡🔴🔴 | Aerospace & Defense | SELL/AVOID — market=RED; red domains=parent,child,setup,flow |
+| 14 | **AMSC** | 🔴🔴🔴🟡🔴🔴 | Specialty Industrial Machinery | SELL/AVOID — market=RED; red domains=parent,child,setup,flow |
+| 15 | **PLUG** | 🔴🔴🔴🟡🔴🟡 | Electrical Equipment & Parts | SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -4.7% |
 
 ## Finviz outperform board (industry + theme)
 
@@ -103,9 +103,9 @@ This is the live Finviz groups tape — child industry vs parent sector, plus th
 | Communication Services | +2.7% | +3.5% | +0.40 |  |
 | Consumer Cyclical | -0.4% | -2.0% | -0.66 |  |
 | Consumer Defensive | +1.4% | +0.5% | -0.51 |  |
-| Energy | -0.8% | +1.0% | — |  |
-| Financial | -0.4% | -1.8% | — |  |
-| Healthcare | +1.4% | -2.5% | — |  |
+| Energy | -0.8% | +1.0% | -0.50 |  |
+| Financial | -0.4% | -1.8% | -0.60 |  |
+| Healthcare | +1.4% | -2.5% | -0.56 |  |
 | Industrials | -1.6% | -2.7% | — |  |
 | Real Estate | -0.6% | -2.1% | — |  |
 | Technology | -2.0% | -2.1% | — |  |
@@ -214,7 +214,10 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Sector | bias |
 |--------|------|
 | Consumer Cyclical | -0.66 |
+| Financial | -0.60 |
+| Healthcare | -0.56 |
 | Consumer Defensive | -0.51 |
+| Energy | -0.50 |
 | Communication Services | +0.40 |
 | Basic Materials | -0.22 |
 
@@ -254,12 +257,12 @@ _no names passed the BUY mask_
 
 - **NEOV** (micro, Industrials, $133M) score -0.178. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7%
 - **FCEL** (small, Industrials, $1.3B) score -0.241. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7%
+- **SOC** (small, Energy, $702M) score -0.554. SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -5.4%
 - **EOSE** (small, Industrials, $1.1B) score -0.290. SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -4.7%
 - **POWL** (mid, Industrials, $7.1B) score -0.069. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7%
 - **INDI** (small, Technology, $668M) score -0.141. SELL/AVOID — market=RED; red domains=parent,child,setup,flow
+- **ACDC** (small, Energy, $818M) score -0.559. SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -7.7%
 - **TE** (small, Industrials, $1.1B) score -0.286. SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -4.7%
-- **OKLO** (mid, Utilities, $6.9B) score -0.136. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -6.3%
-- **LUNR** (mid, Industrials, $3.5B) score -0.250. SELL/AVOID — market=RED; red domains=parent,child,setup,flow
 
 ## 3d BUY (compact — same names, different weights)
 
@@ -284,30 +287,30 @@ _no names passed the BUY mask_
 ## 1m AVOID — bottom of the same rank
 
 - **AUR** (large, Consumer Cyclical, $10.7B) score -0.790. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **BORR** (small, Energy, $1.2B) score -0.743. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **IMNM** (mid, Healthcare, $2.5B) score -0.740. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **CWH** (small, Consumer Cyclical, $534M) score -0.738. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **LCID** (small, Consumer Cyclical, $1.5B) score -0.733. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **OI** (small, Consumer Cyclical, $891M) score -0.733. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **SOC** (small, Energy, $702M) score -0.730. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **ACDC** (small, Energy, $818M) score -0.726. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **ALMS** (small, Healthcare, $953M) score -0.724. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **WVE** (small, Healthcare, $749M) score -0.724. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **EYPT** (micro, Healthcare, $287M) score -0.722. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **LFMD** (micro, Healthcare, $141M) score -0.722. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **TYRA** (small, Healthcare, $1.5B) score -0.721. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **AIRS** (micro, Healthcare, $138M) score -0.716. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **FLUT** (large, Consumer Cyclical, $13.3B) score -0.715. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **CRVS** (small, Healthcare, $1.0B) score -0.706. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **PUMP** (small, Energy, $1.1B) score -0.702. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **TNYA** (micro, Healthcare, $130M) score -0.698. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **LAB** (micro, Healthcare, $286M) score -0.695. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **LXRX** (small, Healthcare, $845M) score -0.691. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **ARDX** (small, Healthcare, $860M) score -0.691. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
 - **FUN** (small, Consumer Cyclical, $1.2B) score -0.688. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
 - **GT** (small, Consumer Cyclical, $1.4B) score -0.687. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **XPEV** (mid, Consumer Cyclical, $7.6B) score -0.684. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **MBC** (small, Consumer Cyclical, $1.4B) score -0.678. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing**
-- **PENN** (small, Consumer Cyclical, $2.0B) score -0.664. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **PRKS** (small, Consumer Cyclical, $1.5B) score -0.656. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
-- **CPNG** (large, Consumer Cyclical, $24.7B) score -0.656. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **STLA** (large, Consumer Cyclical, $13.3B) score -0.625. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **DAN** (mid, Consumer Cyclical, $2.9B) score -0.614. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **AGRO** (small, Consumer Defensive, $1.5B) score -0.601. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **WHR** (mid, Consumer Cyclical, $2.1B) score -0.595. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
-- **NUS** (micro, Consumer Defensive, $226M) score -0.594. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **DKNG** (large, Consumer Cyclical, $18.8B) score -0.591. this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **IP** (large, Consumer Cyclical, $18.0B) score -0.584. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **EVGO** (small, Consumer Cyclical, $421M) score -0.582. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **FLO** (small, Consumer Defensive, $1.2B) score -0.571. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **DFH** (small, Consumer Cyclical, $985M) score -0.567. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **JMIA** (small, Consumer Cyclical, $835M) score -0.562. this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **DRI** (large, Consumer Cyclical, $22.4B) score -0.554. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **LZB** (small, Consumer Cyclical, $1.2B) score -0.546. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing**
 
 ## Files for this run
 
