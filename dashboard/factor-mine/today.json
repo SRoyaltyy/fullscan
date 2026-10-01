@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T12:46:21.313371-04:00",
+  "generated_at": "2026-10-01T12:51:10.836035-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -1714,6 +1714,115 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-01\nall_ok=False  qc_all_ok=True  book_ok=True  grok_ok=False  news_mode=on  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T12:46:25.159322-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 32935,
+          "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 804,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-01.json",
+          "ok": true,
+          "reason": "",
+          "size": 143223,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-01_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 105173,
+          "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 256854,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-01_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 247742,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 244807,
+          "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 256854,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 105173,
+          "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 256854,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 256854,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 244807,
+          "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1750,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1750,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 "
     }
   ],
   "source": "publish_live_boards"

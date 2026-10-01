@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T12:46:26.019626-04:00",
+  "generated_at": "2026-10-01T12:51:15.132952-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -443,13 +443,13 @@
       "date": "2026-10-01",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-01T12:46:25.159322-04:00",
+      "at": "2026-10-01T12:51:14.402774-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 32935,
+          "size": 32951,
           "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
         },
         {
@@ -463,14 +463,14 @@
           "path": "data/day_board/2026-10-01.json",
           "ok": true,
           "reason": "",
-          "size": 143223,
+          "size": 148621,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-10-01_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 105173,
+          "size": 110571,
           "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
         },
         {
@@ -505,7 +505,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 105173,
+          "size": 110571,
           "preview": "2026-10-01 BUY BKR, CNR, NTAP, BAND, NTSK \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
         },
         {
