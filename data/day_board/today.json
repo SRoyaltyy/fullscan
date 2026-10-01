@@ -1,12 +1,12 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:44:13.592109-04:00",
+  "generated_at": "2026-10-01T05:44:30.725618-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 2,
-    "fail": 3,
+    "fail": 2,
     "n": 8
   },
   "buy_1d": [],
@@ -15,52 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T05:40:10.561603-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-01_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97000,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-01_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11836,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-01\n_Generated 2026-10-01T05:40:10.416811-04:00 \u00b7 export=data/exports/finviz_2026-10-01.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        },
-        {
-          "path": "data/exports/finviz_2026-10-01.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11030866,
-          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11496924,
-          "preview": "11695 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        },
-        {
-          "path": "01_daily/news/2026-10-01_finviz_digest_preopen.json",
-          "ok": true,
-          "reason": "",
-          "size": 97000,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-01\n_Generated 2026-10-01T05:40:10.416811-04:00 \u00b7 export=data/exports/finviz_2026-10-01.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11695 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-    },
     {
       "key": "finviz_market_digest",
       "title": "Finviz homepage market digest",
@@ -221,6 +175,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T05:44:30.298929-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-01_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7547302,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 GMAB, FPI, AVPT, ATRC, SFL"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-01_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8338035,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, ATRC, LLY, WST, GMAB"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 GMAB, FPI, AVPT, ATRC, SFL \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, ATRC, LLY, WST, GMAB"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

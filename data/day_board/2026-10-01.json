@@ -1,19 +1,18 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T05:44:13.592109-04:00",
+  "generated_at": "2026-10-01T05:44:30.725618-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-01_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-10-01/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-10-01_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-01_judge.md` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-10-01_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-10-01_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 2,
-    "fail": 3,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -533,11 +532,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -545,26 +544,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-10-01_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 7547302,
+          "said": "27 rows",
+          "bullets": [
+            "GMAB, FPI, AVPT, ATRC, SFL, PBR-A, KBR, CRMD"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-01_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8338035,
+          "said": "25 rows",
+          "bullets": [
+            "FIGS, ATRC, LLY, WST, GMAB, FPI, BJ, PANW"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "FIGS, ATRC, LLY, WST, GMAB"
+      ]
     },
     {
       "key": "catalyst",
@@ -707,11 +712,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-01_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8338035,
+          "said": "25 rows",
+          "bullets": [
+            "FIGS, ATRC, LLY, WST, GMAB, FPI, BJ, PANW"
+          ]
         },
         {
           "key": "join",
@@ -1129,6 +1136,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T05:44:30.298929-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-01_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7547302,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 GMAB, FPI, AVPT, ATRC, SFL"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-01_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8338035,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, ATRC, LLY, WST, GMAB"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 GMAB, FPI, AVPT, ATRC, SFL \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 FIGS, ATRC, LLY, WST, GMAB"
     }
   ],
   "href": {
