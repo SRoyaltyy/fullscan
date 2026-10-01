@@ -2,126 +2,117 @@
 
 Actuals: {'etf': 'XLE', 'pct': 1.9512207527470737, 'spy_pct': 0.17832832997064507, 'rel': 1.7728924227764287, 'open': 61.15999984741211, 'close': 62.70000076293945, 'source': 'yf_download'}
 
-Memory search is paused this run (index metadata missing; `openclaw memory status --index` or `openclaw memory index --force` would rebuild it). Autopsy uses the injected morning card, deterministic actuals, and live sources only.
+# Sector Post-Session Review — Energy / XLE — 2026-10-01
 
-## 0. Facts
+## 0. FACTS
 
-XLE **+1.95%** (open **61.16** → close **62.70**), SPY **+0.18%**, relative **+1.77%**. Path: slight gap-down vs ~61.50 prior close (matches PM **−0.31%**), session low **~61.04**, then a full-session grind to **~62.70** high **~62.74**. Volume ~**39–41M** vs ~24–25M on 09-30. Direction **up**, magnitude **notable** (>1%; morning’s own notable bar).
+**CLAIM:** XLE closed **+1.95%** on 2026-10-01, from an open of $61.16 to a close of $62.70.
+**URL:** (injected deterministic actuals)
+**PUBLISHED:** 2026-10-01
+**QUOTE:** `ETF_PCT: 1.9512207527470737 | OPEN: 61.15999984741211 CLOSE: 62.70000076293945`
+**SUMMARY:** The ETF gapped-and-held, closing near the high of the session — a full-trend day, not a fade.
 
-Morning call was **down / mild** (total **−2.413**, conf ~0.50–0.55). **Direction miss. Magnitude miss.** The stated falsifier fired: same open printed XLE **up ≥ +0.5%** (actual **+1.95%**).
+**CLAIM:** SPY closed **+0.18%**; XLE's relative return was **+1.77%**.
+**URL:** (injected deterministic actuals)
+**PUBLISHED:** 2026-10-01
+**QUOTE:** `SPY_PCT: 0.17832832997064507 | REL_PCT: 1.7728924227764287`
+**SUMMARY:** Energy was the dominant sector on a flat-to-mildly-green index — a ~1.8pp relative outperformance, the mirror image of the morning's "worst sector on a green board" read.
 
----
+**CLAIM:** Energy stocks rose through the afternoon; refiners led — Marathon Petroleum +5%, Valero +4% — while Exxon Mobil stayed flat.
+**URL:** https://news.google.com/rss/articles/CBMi6AFBVV95cUxPVVYyUFI4Qjd3MHJUWDR6WEtUREhVQlphVFJRajVPVEZjZGlEU0xTaG43U3JxejhGU1pzZTFWZDJoMVhsd3p0NGtMaFBQamVoRlFJTzBUR2cwSkVjSG5Zb0lBbXJFR3otclpUbE5haVo3Nk5zY09fM3BvVWtRVmxmMlhzTkUtRXM5MDROYlhjZHppRWUtUXdJSUVuTjFGTTVfS0E1eHNCYlVEeEtHY2M0YjZfbEZ0a1U5ZlM4Nk1FM3BpTV82MHdHX203aWpWc01scmRFc1NXbGQ4MGtGWnY0YU5XODkxVE9i?oc=5
+**PUBLISHED:** 2026-10-01 17:53 GMT
+**QUOTE:** "Marathon Petroleum Climbs 5%, Valero Energy Gains 4% as Refiners Outrun Integrated Majors; Exxon Mobil Stays Flat"
+**SUMMARY:** The **refiner sleeve** — the exact sub-industry the morning card identified as the fresh increment's beneficiary — was the day's leadership. XOM flat means the ETF's gain was NOT mega-cap carry; it was the crack-spread complex plus the broader basket.
 
-## 1. What drove Energy today
+**CLAIM:** Brent jumped more than 4% intraday on a report the US is sending a third aircraft carrier to the Middle East.
+**URL:** https://news.google.com/rss/articles/CBMicEFVX3lxTE5yODZYTkUzZ09LMVducjBvQ1czQUc2WFdZNmVuUUpDVnpZMEJfMGhpWkkzQlRLUGprcDNielYycW8xYU5peDhhcy1pbzNJUVo1YkV0MjktUVliQ3NTc1ZNOXpDSUtubXZIYnBGOS04NDTSAXZBVV95cUxOQU83cmR3ZHl6YWl1V2RNcFRXbzJqRkFKZktLMkVobTBKMGxibmxDcEQwWjFqdXFQcFozSUVpVUhvZF85SDNCQzZxVk42RjdTWXdWcXd6SkNmWWlLVy1iT0l0NHlRUHNJOG5UZEQ5NlhoMHNmWnVB?oc=5
+**PUBLISHED:** 2026-10-01 05:17 GMT
+**QUOTE:** "Brent oil jumps more than 4% as U.S. reportedly sends third aircraft carrier to Middle East"
+**SUMMARY:** A **fresh kinetic/force-posture escalation** — a third carrier — landed during the session. This is the escalation step the morning card explicitly said was *absent* ("No documented fresh kinetic wave"). It was not in the morning inputs.
 
-Taxonomy cluster, counted once: **crude + products-supply + geo premium**.
+**CLAIM:** A competing headline framed the same day as oil falling on Gulf export recovery and US-Iran talks.
+**URL:** https://news.google.com/rss/articles/CBMi9AFBVV95cUxOSThzWjhsTDJBVDgwN25WVjVlU1lFZ1VEV2VfZF9OUHNaZkxILU82UktoNmVydllPNW03SHg0WXkzczBNQUVINndDM2FaY1Z0NVZvdDg5WU5kMndsMVVVZXR2MTdOQmZESFV3UnpmY05BWTdOZXo5QjNyWWUwOXlNd2xnU0NzMGNxZkFTczFFcHV5TTd3VkdwaUotc2JZMVhIWmVXQTRkdU44dU4yM1Q3QnpBUlo1VDJDRHdmb1ZISWg5U3BsSDRWSUExMV9uN3IzOU1LRE5nb3JzMjFxdHRxZ1g5QUNWOVdNQXN1SkZKaHgweTZW?oc=5
+**PUBLISHED:** 2026-10-01 05:32 GMT
+**QUOTE:** "Oil Prices Fall as Gulf Exports Recover, US-Iran Talks"
+**SUMMARY:** The morning news flow was genuinely two-sided — a bearish Gulf-recovery headline and a bullish carrier headline within 15 minutes of each other. The tape resolved bullish.
 
-**Morning (knowable):** Chinese refiners halted October fuel exports beyond HK/Macau; PetroChina cancelled cargoes. That is a **refined-products / crack** shock, not a new ≥2%-of-global-supply crude outage. It was already in the morning card.
-
-**Close:** WTI **$92.87, +2.7%**; Brent **$102.31, +4.4%** (CNBC/eOption). Morning live tape was WTI **~$92.5, +2.2–2.4%** and Brent **~$100.5, +2.7%**. Crude **held and extended**; Brent’s extra ~1.7 pts was the afternoon leg.
-
-**Afternoon (not at open):** WSJ (~**14:30–15:45 ET**) that the U.S. is sending a **third carrier** (USS Theodore Roosevelt) and **up to 10,000** more troops. CNBC and eOption both time the **second** oil bid to that print.
-
-**Tape interaction:** 8 of 11 sectors finished red; Energy **led**. S&P **+0.2%** to **7,666.45** after a midday yield spike/fade (10Y tagged **~5.34%**, settled **~5.25%**). This was **not** “green tape funding rotation out of XLE.” It was a **narrow energy/products bid on a yield-pressed, mixed board**.
-
-**CLAIM:** XLE reversed from worst-PM sector to the day’s sector leader on a products-plus-geo oil bid, not on SPY beta.  
-**URL:** https://www.cnbc.com/2026/10/01/oil-prices-today-wti-brent.html  
-**PUBLISHED:** 2026-10-01  
-**QUOTE:** “Crude oil prices rose sharply Thursday following a report the U.S. is sending a third aircraft carrier strike group to the Middle East. Brent crude … jumped 4.4% to close at $102.31 … WTI futures climbed 2.7% to settle at $92.87.”  
-**SUMMARY:** Close oil print and the afternoon geo catalyst.
-
-**CLAIM:** China October fuel-export halt was the morning products shock.  
-**URL:** https://oilprice.com/Latest-Energy-News/World-News/China-Halts-Fuel-Exports-Until-Further-Notice.html  
-**PUBLISHED:** 2026-10-01, 5:30 AM CDT  
-**QUOTE:** “China’s refiners have halted fuel exports until further notice … PetroChina … has canceled some gasoline and jet fuel cargoes that were expected to be shipped in October.”  
-**SUMMARY:** Knowable-at-open products tightening; same Reuters cluster the morning card already had.
-
-**CLAIM:** Path was buy-the-red-open, not 09-28 gap-and-fade.  
-**URL:** (deterministic actuals) open 61.16 / close 62.70; corroborating range ~61.04–62.74  
-**PUBLISHED:** 2026-10-01 session  
-**QUOTE:** n/a (tape)  
-**SUMMARY:** PM −0.31% was the low, not the close.
+**Path:** Open $61.16 → close $62.70, +1.95%, with the afternoon sector update confirming continued strength into the close. No fade. The morning's PM:XLE −0.31% was a **pre-open print that fully reversed**.
 
 ---
 
-## 2. Audit of morning S0–S4 (use morning numbers, do not rewrite them)
+## 1. What drove the sector
 
-| Sleeve | Morning | Reality | Verdict |
-|---|---|---|---|
-| **S0 −0.5** | Laggard-on-green-tape (09-21); USD +0.37%; real yields up; PCE two-sided | SPY only +0.18%; 8/11 sectors down; XLE **led**; DXY still bid (~+0.65%) but yields **gave back** the spike | **Wrong sign.** 09-21 misread a *mildly* green, tech-led **premarket** as the close regime. Close regime was yield-pressure + energy as **destination**. |
-| **S1 +1.0** | Crude ~+2.2–2.4% + China exports + diesel-ban pressure, **counted once**, **dampened** for whole XLE because refiners are a minority | Cluster **was** the driver. WTI +2.7%, Brent +4.4%. Refiners led (MPC ~+5%, VLO ~+4%) **and** E&P participated (EOG ~+2.4%, COP ~+1.2%). Dampening S1 for “XLE is 91% O&G” was too aggressive. | **Right object, too small, and then an unknowable geo add-on.** |
-| **S2 −0.5** | PM XLE worst; XOM +0.63% / CVX −0.32% = “breadth failure” | Close: refiners + E&P carried; XOM **flat** (laggard), CVX ~+0.9%. PM split was **not** close-to-close failure. | **Miss.** PM mega-cap split ≠ ETF down day when the commodity is green. |
-| **S3 −0.5** | 1m rel −2.95%, no crowding, no inflow | Volume expanded; 1d rel **+1.77%**. Laggard positioning did not cap a notable up day. | **Not load-bearing.** Mild negative was noise. |
-| **S4 −0.5** | Leftover-S4 gate on 09-30 tape; live PM red as confirmation | PM red was **bought**. Inverse of 09-28 (green PM faded). | **Miss.** Confirmation sleeve treated a fadeable PM print as a sign. |
+**Primary driver: the refined-products / crack-spread shock, amplified by a fresh geopolitical escalation.**
 
-**09-28 over-applied.** 09-28 lesson: *do not let a ~2% unconfirmed-premium barrel license an **up** call*. Morning turned that into a **down** call because PM was red. The honest 09-28 generalization was **flat / two-sided**, not down. Today’s open was *better* for bulls than 09-28’s close (live China products HIT, oil still green into the bell), not worse.
+The morning card's own S1 analysis identified the genuinely fresh increment correctly: the **Chinese October fuel-export suspension** (Reuters) and the **US diesel-export-ban pressure on France/Germany** (Reuters exclusive). The card then made a fateful weighting decision — it called this "a refiner-sleeve story" and applied the sector-layer instruction to **dampen the weight for the whole XLE** because XLE is ~91% oil & gas.
 
-**Engine vs LLM:** Morning text correctly **rejected** Finviz WTI $104.16 / Brent $107.67 and CL **−1.59%** / QA **−1.02%** (08-11 live-oil verify). Deterministic v2 **still anchored** on those stale legs (`CL −1.59% w=0.35`, `QA −1.02% w=0.15`, `PM:XLE −0.31% w=0.7` → tape_anchor **−2.396**). Overlay only **+0.319**. The printed **−2.413** is partly a **stale-oil engine bug**, not just the 09-21 judgment.
+That dampening was the single largest analytical error of the session. The actuals show the refiner sleeve **was** the day: MPC +5%, VLO +4%, with XOM flat. In a cap-weighted ETF where XOM is flat and CVX is soft, a +1.95% ETF print requires the **non-mega-cap basket** — refiners, E&P, services — to have moved hard. The card treated the refiner sleeve as a minority curiosity; the tape treated it as the trade.
+
+Secondary driver: **geopolitical supply-risk premium re-expansion**, upgraded from "unconfirmed" to "confirmed" by the third-carrier report. The morning card scored this at 0.55 weight and explicitly said "do not score a fresh Geopolitical supply risk premium HIT at full weight." The carrier deployment is precisely the kind of fresh kinetic/force-posture increment that justifies full weight.
+
+Tertiary: **crude itself was green ~2.2–2.4%** and stayed green. The card's live-verification work (rejecting the stale Finviz $104.16 column, confirming WTI ~$92.5) was **correct and valuable** — the barrel sign was right. The error was not in reading the barrel; it was in **discounting the barrel's transmission to the ETF**.
 
 ---
 
-## 3. Interactions / double-count / knowable-at-open
+## 2. Audit of morning S0–S4 reads
 
-- **No triple-count error.** Oil-up + China + diesel were one products/premium object. Counting once was correct.
-- **Error was underweight + sign override:** four −0.5 sleeves (S0/S2/S3/S4) drowned S1 +1, then PM was allowed to **flip the commodity sign**.
-- **Double-count that *didn’t* happen, but should be named:** afternoon carrier story is a **new** geo step vs the morning “same Hormuz standoff.” It must **not** be scored as if it were in the 09:30 book.
-- **USD/yields vs oil:** real headwind, real midday equity pressure, **not** enough to sink XLE once products + geo were live. Do not treat DXY + yields as a veto on a 2%+ oil day.
-- **Knowable at open:** China halt, ~2% barrel, PM XLE red, EIA build, USD bid. **Not knowable:** WSJ third-carrier / 10k troops, Brent extending to +4.4%, 10Y fade from 5.34% → 5.25%.
+**S0_SHARED_MACRO: −0.5 → WRONG SIGN.**
+The card argued energy was "the funding source for the green tape" and that rotation was OUT of the laggard. Reality: energy was the **destination**, +1.77% relative. The card's own cited evidence — XLE −0.31% premarket as worst sector — was a **pre-open artifact**, and the card built a full rotation thesis on it. The USD +0.37% and real-yields-up headwinds were real but were overwhelmed. **Verdict: sign error, and the error was load-bearing.**
 
-**KNOWABLE_AT_OPEN = partially.** A **flat-to-up/mild** call was available from the China + live oil tape alone. **Notable up** needed the afternoon geo extension (and/or not fading the open).
+**S1_SECTOR_FACTORS: +1 → RIGHT SIGN, UNDERWEIGHTED.**
+The card scored +1 for the crude/geo/products cluster. The cluster was correct. But the card then **dampened** the products component and **capped** the geo component, netting to a score that was too small to overcome the negative S0/S2/S3/S4 stack. The +1 was directionally right and magnitude-insufficient. **Verdict: right sign, wrong weight.**
+
+**S2_BREADTH: −0.5 → WRONG SIGN.**
+The card read "breadth failure inside the sector" from XOM +0.63% / CVX −0.32% premarket and XLE red. Reality: breadth was **broad and led by refiners**. The card had the right names (it listed VLO/MPC/PSX in the S1 section) but drew the opposite conclusion from them. **Verdict: sign error.**
+
+**S3_FLOWS_POSITIONING: −0.5 → WRONG SIGN (or at least wrong weight).**
+The card cited 1m rel −2.95% as evidence of persistent relative bleed. That is a **backward-looking** statistic. On the day, flows rotated **into** energy. The card correctly noted no crowding (09-10 trigger off), but then used the multi-week laggard status as a negative rather than as a **mean-reversion setup**. **Verdict: sign error.**
+
+**S4_ETF_TAPE: −0.5 → WRONG SIGN.**
+The card's live test was PM:XLE −0.31%. That print **fully reversed** at the open. The card explicitly invoked the 09-17 leftover-S4 gate to avoid reusing prior-close tape — good discipline — but then substituted a **premarket print** that proved equally unreliable. **Verdict: sign error, and the gate discipline did not help because the substitute input was also noise.**
+
+**Net: four of five components had the wrong sign. The one correct component (S1) was deliberately shrunk.**
+
+---
+
+## 3. Interactions / double-count / knowable-at-open test
+
+**Double-count check:** The card was disciplined here — it explicitly said "count it once — do not triple-count oil-up + China + diesel." That discipline was correct in form but became **under-counting**: by collapsing three genuinely distinct transmission channels (crude beta, crack spreads, geo premium) into one +1, the card lost the fact that they hit **different parts of the ETF** and could sum. The refiner channel and the crude channel are not the same object when XOM is flat and MPC is +5%.
+
+**Knowable-at-open test:** The **carrier deployment** headline was published 05:17 GMT — **before the US open**. The **China export suspension** and **diesel-ban pressure** were both published 10-01 before the open. The **EIA build** was known (released 09-30). So the bullish inputs were **knowable at open**. What was NOT knowable at open was that the premarket XLE −0.31% would reverse — but that is precisely the kind of input the card should have **discounted**, not anchored on, given its own 09-28 lesson about gap-and-fade unreliability.
+
+**The critical interaction the card missed:** The card's own 09-23 lesson stated *"a green premarket in a real-asset sector on a flat-to-soft index is a SIGN signal, not a magnitude cap."* The card then **inverted** this lesson to argue the mirror must hold — that a red premarket in a real-asset sector on a green index is a sign signal. That inversion was **not licensed by the lesson**. The 09-23 lesson was about a sector **leading** on a soft tape (rotation bid). The mirror case — a sector **lagging** on a green tape — is not symmetric, because a lagging real-asset sector with a **green underlying commodity** has a mechanical catch-up force that a leading sector with a red commodity does not. The card built its entire call on an unlicensed symmetry.
 
 ---
 
 ## 4. Outliers inside the sector
 
-- **MPC ~+5%, VLO ~+4%:** refiner/crack outliers. Morning was right that the **increment** was products; wrong that it **couldn’t move XLE**.
-- **XOM ~flat:** mega-cap did **not** lead. ETF strength was **not** “XOM carry.”
-- **EOG / COP / CVX green:** E&P participation means this was not a pure-refiner sleeve squeeze. Whole-XLE dampen was the miss.
-- **Henry Hub** was a non-event (morning N/A stands).
+- **Marathon Petroleum +5%, Valero +4%** — the crack-spread complex. These are the outliers that explain the ETF print. The morning card named these tickers but assigned them minority weight.
+- **Exxon Mobil flat** — the anti-outlier. XOM's flatness is why the card's "mega-cap carry" framing failed, but it also means the ETF's +1.95% came from **breadth**, not from the top holding. This is the strongest evidence that S2 should have been positive.
+- **The refiner/integrated divergence** (MPC +5% vs XOM flat) is a ~5pp intra-sector spread — a genuine dispersion event, not noise.
 
 ---
+
+## 5. Verdict and lesson
+
+The morning call was **down/mild**. Actual was **up/notable** (+1.95%, ~1.8pp relative). This is a **direction MISS and a magnitude MISS** — the worst quadrant.
+
+The failure was not in the barrel read (correct) or in the news identification (correct — the card found the China suspension and diesel-ban stories). The failure was in **transmission weighting**: the card correctly identified the fresh increment, then applied a sector-layer dampening rule that assumed the refiner sleeve was too small to move XLE. On a day when XOM is flat, the refiner sleeve is not a minority — it is the marginal buyer.
+
+The secondary failure was **anchoring on a premarket print** (PM:XLE −0.31%) and building a rotation thesis on it, despite the card's own 09-28 lesson that premarket/gap signals in this sector are unreliable.
+
+**Falsifier resolution:** The card's falsifier was: *"if the same open prints XLE up ≥ +0.5%, then the 09-21 laggard-on-green-tape rule is too strong for Energy and the commodity sign should dominate the ETF tape."* XLE printed **+1.95%**. The falsifier **fired**. The 09-21 laggard-on-green-tape rule is **too strong for Energy** when the underlying commodity is green and the fresh increment hits a real sub-industry. The commodity sign should have dominated.
 
 OUTCOME_BEGIN
 SECTOR: Energy
 ETF: XLE
-ETF_PCT: 1.951
-SPY_PCT: 0.178
-REL_PCT: 1.773
+ETF_PCT: 1.95
+SPY_PCT: 0.18
+REL_PCT: 1.77
 ACTUAL_DIRECTION: up
 ACTUAL_MAGNITUDE: notable
-PRIMARY_DRIVER: China October fuel-export halt plus afternoon U.S. third-carrier/troop report re-expanded crude and crack premium; XLE reversed from worst-PM to sector leader.
-KEY_INTERACTION: 09-21 laggard-on-green-tape and a stale CL/QA engine anchor overrode a live ~2% oil bid; afternoon geo then extended a miss that was already set up at the open.
-KNOWABLE_AT_OPEN: partially
-MORNING_READ_VERDICT: Down/mild miss — commodity/products sign should have dominated PM red; 09-21 was too strong, S1 was underweighted, and 09-28 was over-applied from “don’t call up” into “call down.”
+PRIMARY_DRIVER: Refined-products/crack-spread shock (China export suspension + US diesel-ban pressure) drove refiners (MPC +5%, VLO +4%) while XOM stayed flat; amplified by a fresh geopolitical escalation (third US carrier to Middle East) that re-expanded the supply-risk premium.
+KEY_INTERACTION: The card correctly identified the fresh increment but applied a sector-layer dampening rule ("refiner sleeve is a minority of XLE") that inverted the transmission — with XOM flat, the refiner sleeve WAS the marginal driver, and the card's own 09-23 lesson was unlicensedly mirrored to justify a red-premarket sign signal.
+KNOWABLE_AT_OPEN: yes
+MORNING_READ_VERDICT: Direction MISS and magnitude MISS — four of five S-components (S0, S2, S3, S4) had the wrong sign; the one correct component (S1) was deliberately shrunk, and the call was built on an unlicensed symmetry inversion of the 09-23 lesson plus an unreliable premarket anchor.
 OUTCOME_END
-
----
-
-## RESEARCH APPENDIX
-
-**Queries**
-- web: `XLE energy ETF October 1 2026 oil prices WTI Brent`
-- web: `oil prices October 1 2026 China fuel export suspension diesel`
-- web: `XLE XOM CVX VLO MPC PSX October 1 2026 stock performance`
-- web: `WTI crude oil close October 1 2026 CL=F percent change`
-- web: `CNBC oil prices today WTI Brent October 1 2026`
-- web: `site:tradingeconomics.com crude oil October 1 2026`
-- web: `Marathon Petroleum climbs 5 Valero Energy gains 4 refiners October 1 2026`
-- web: `SPY S&P 500 close October 1 2026 percent change energy sector leader`
-- web: `8 of 11 sectors fall Thursday energy XLE October 1 2026`
-- web: `WSJ US sending third aircraft carrier 10,000 troops Middle East October 1 2026 time`
-- web: `XLE historical October 1 2026 open 61.16 close 62.70 volume`
-- x: `What drove XLE energy stocks and oil prices on October 1 2026? WTI Brent XOM CVX` (2026-10-01 to 2026-10-02)
-- x: `XLE close October 1 2026 refiners MPC VLO oil prices China fuel exports` (2026-10-01 to 2026-10-02)
-
-**Key sources (facts taken)**
-- **CNBC** — https://www.cnbc.com/2026/10/01/oil-prices-today-wti-brent.html — fetched 2026-10-01T20:51Z — Brent **$102.31 +4.4%**, WTI **$92.87 +2.7%**; third-carrier report; China cargo cancellations; Hormuz tanker attacks; diesel still elevated.
-- **Oilprice / Paraskova** — https://oilprice.com/Latest-Energy-News/World-News/China-Halts-Fuel-Exports-Until-Further-Notice.html — 2026-10-01 5:30 AM CDT — China halt until further notice; PetroChina gasoline/jet cancellations; Golden Week; inventories at multi-year lows.
-- **World Oil Monitor** — https://worldoilmonitor.com/ — fetched 2026-10-01T20:51Z — EIA wk 9/25: crude **+0.9 Mb to 427.3**, util **92.5%**; close print WTI **$93.11 +3.0%** / Brent **$102.39** (Brent % on that widget looks stale vs CNBC; **prefer CNBC settlements**).
-- **eOption market review** — https://www.eoption.com/market-review-october-01-2026/ — 2026-10-01 — two-stage oil: China halt **morning**, WSJ 10k troops **afternoon**; WTI **+2.71% to $92.87**, Brent **+4.37% to $102.31**; SPX **+0.20% to 7,666**; 10Y spike then fade; DXY **+0.65%**.
-- **WTOP AP wrap** — https://wtop.com/national/2026/10/how-major-us-stock-indexes-fared-thursday-10-1-2026/ — SPX **+0.2% to 7,666.45**, Dow <+0.1%, Nasdaq <+0.1%.
-- **Search/Benzinga/24/7 Wall St. cluster** — energy led while 8/11 sectors fell; MPC ~+5%, VLO ~+4%, XOM ~flat, EOG/COP/CVX green; XLE close **~$62.69–62.75**.
-- **Mediaite/NY Post/Bloomberg timestamps (via search)** — WSJ third-carrier story **afternoon ET (~14:30–15:45)**, not in the morning book.
-- **X posts 2026-10-01** — same narrative: China exports + geo premium; refiners leading XLE.
-
-**Not used as primary:** Reuters/WSJ/247/Benzinga direct fetches (401/403/JS walls). TradingEconomics 403. World Oil Monitor Brent **−1.1%** widget conflicts with CNBC/eOption **+4.4%** — treated as a stale Brent column, same class of error the morning card already flagged on Finviz.
