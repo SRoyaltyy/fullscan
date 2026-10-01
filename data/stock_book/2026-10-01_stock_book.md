@@ -1,6 +1,6 @@
 # Stock book — 2026-10-01
 
-_Generated 2026-10-01T17:20:06.748875-04:00_
+_Generated 2026-10-01T17:25:22.570087-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -54,8 +54,8 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 |---:|--------|---------|------|-----------------|----------|
 | 1 | **BKR** | 🔴🔴🔴🟢🟢🟢 | probable | usable dossier Bullish conv=28; Oil & Gas Equipment & Services -4.4% d1 / -6.8% 1w / -7.7% vs parent | BUY PROBABLE — most-probable long on RED (size ×0.35); clocks: company news fresh (0.80) — market=RED; parent=RED; child=RED/rel=RED; company=GREEN(0.80); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 2 | **CNR** | 🔴🔴🔴🟢🟡🟢 | probable | usable dossier Bullish conv=21; Thermal Coal -1.8% d1 / -3.4% 1w / -4.4% vs parent | BUY PROBABLE — most-probable long on RED (size ×0.35); clocks: company news fresh (0.80) — market=RED; parent=RED; child=RED/rel=RED; company=GREEN(0.80); setup=YELLOW; flow=GREEN; lookback=🔵,Cond green |
-| 3 | **BAND** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 4 | **NTAP** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 3 | **NTAP** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 4 | **BAND** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 5 | **OKTA** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 6 | **BB** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 7 | **EPAM** | 🔴🟡🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=RED; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
@@ -239,7 +239,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | sector:Healthcare | 50% | 26 | ×0.85 |
 | sector:Industrials | 34% | 29 | ×0.50 |
 | sector:Real Estate | 55% | 29 | ×1.00 |
-| sector:Technology | 37% | 27 | ×0.50 |
+| sector:Technology | 39% | 28 | ×0.50 |
 | sector:Utilities | 42% | 26 | ×0.50 |
 
 ## Horizon weights — book_policy.json v15
