@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T19:44:50.316716-04:00",
+  "generated_at": "2026-10-01T03:11:38.562651-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -94,10 +94,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97081,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96489,
+          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Abbott launches Freenomes colorectal cancer screening test",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11893,
+          "size": 11634,
           "said": "Finviz Daily Digest \u2014 2026-09-30",
           "bullets": [
-            "_Generated 2026-09-30T05:40:32.094815-04:00 \u00b7 export=data/exports/finviz_2026-09-30.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-01T03:11:37.210508-04:00 \u00b7 export=data/exports/finviz_2026-09-30.csv \u00b7 ticker digests=5893 \u00b7 high-signal=1952_",
             "Major indices (live quote page)"
           ]
         },
@@ -167,9 +167,9 @@
           ]
         }
       ],
-      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
       "bullets": [
-        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+        "Abbott launches Freenomes colorectal cancer screening test",
         "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
         "Banks have profited from idle cash for years. AI agents could change that."
       ]
@@ -192,10 +192,10 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97081,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96489,
+          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Abbott launches Freenomes colorectal cancer screening test",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -362,10 +362,10 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7529,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 12 fail",
+          "size": 7525,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 11 fail",
           "bullets": [
-            "finviz_market_digest:missing",
+            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
@@ -378,8 +378,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['sector_predict']",
-          "size": 3029,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=True \u00b7 missing sector_predict",
+          "size": 4980,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing sector_predict",
           "bullets": []
         },
         {
@@ -549,10 +549,10 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97081,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96489,
+          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Abbott launches Freenomes colorectal cancer screening test",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -655,10 +655,10 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97081,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96489,
+          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Abbott launches Freenomes colorectal cancer screening test",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -753,10 +753,10 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97081,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96489,
+          "said": "5893 tickers \u00b7 1952 signals \u00b7 top ABT, AEM, AJG, AME, AMGN, AON, APH, APO",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Abbott launches Freenomes colorectal cancer screening test",
             "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
             "Banks have profited from idle cash for years. AI agents could change that."
           ]
@@ -850,7 +850,7 @@
           "size": 80104,
           "said": "Stock book \u2014 2026-09-30",
           "bullets": [
-            "_Generated 2026-09-30T17:37:03.692762-04:00_",
+            "_Generated 2026-09-30T20:20:08.465090-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -1786,6 +1786,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-30\n**Generated:** 2026-09-30T19:44:49.230502-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed on final day of Q3 as cooler PCE data eased Fed hike odds but 10-year yield hit 24-year high\n**Prior close:** SPX -0.25%  Nasdaq +0.24%  Dow -0.86%\n**SPX:** -0.25%  **Nasdaq:** +0.24%  **Dow:** -0.86%\n**Oil:** \u2014\n**CPI/Fed:** 3.7% hike (3.7% consensus, pulling October Federal Reserve hike)\n**Leaders:** ADP, HPE, INTC, CCL, FICO, MRNA, C, MU, LESL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-01\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T03:11:37.507841-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-30_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96489,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-30_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11655,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-30\n_Generated 2026-10-01T03:11:37.210508-04:00 \u00b7 export=data/exports/finviz_2026-09-30.csv \u00b7 ticker digests=5893 \u00b7 high-signal=1952_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-30.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11496924,
+          "preview": "11695 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11496924,
+          "preview": "11695 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-09-30_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97751,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-30\n_Generated 2026-10-01T03:11:37.210508-04:00 \u00b7 export=data/exports/finviz_2026-09-30.csv \u00b7 ticker digests=5893 \u00b7 high-signal=1952_ \u00b7 11695 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11695 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {

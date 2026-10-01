@@ -1,6 +1,6 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T20:20:11.855775-04:00",
+  "generated_at": "2026-10-01T03:11:38.562651-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -101,31 +101,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz",
-      "title": "Finviz universe export",
-      "date": "2026-09-30",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-30T05:36:04.571497-04:00",
-      "files": [
-        {
-          "path": "data/exports/finviz_2026-09-30.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11030866,
-          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11481957,
-          "preview": "11686 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11686 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -279,6 +254,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-30\n**Generated:** 2026-09-30T19:44:49.230502-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed on final day of Q3 as cooler PCE data eased Fed hike odds but 10-year yield hit 24-year high\n**Prior close:** SPX -0.25%  Nasdaq +0.24%  Dow -0.86%\n**SPX:** -0.25%  **Nasdaq:** +0.24%  **Dow:** -0.86%\n**Oil:** \u2014\n**CPI/Fed:** 3.7% hike (3.7% consensus, pulling October Federal Reserve hike)\n**Leaders:** ADP, HPE, INTC, CCL, FICO, MRNA, C, MU, LESL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-01\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-30",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-01T03:11:37.507841-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-30_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96489,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-30_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11655,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-30\n_Generated 2026-10-01T03:11:37.210508-04:00 \u00b7 export=data/exports/finviz_2026-09-30.csv \u00b7 ticker digests=5893 \u00b7 high-signal=1952_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-30.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11496924,
+          "preview": "11695 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11496924,
+          "preview": "11695 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-09-30_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97751,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-30\n_Generated 2026-10-01T03:11:37.210508-04:00 \u00b7 export=data/exports/finviz_2026-09-30.csv \u00b7 ticker digests=5893 \u00b7 high-signal=1952_ \u00b7 11695 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11695 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

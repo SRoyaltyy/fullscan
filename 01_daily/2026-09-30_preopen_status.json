@@ -1,11 +1,11 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T07:06:00-04:00",
+  "generated_at": "2026-10-01T03:11:37.486618-04:00",
   "run_id": "36688284790",
   "runner": "ecs-openclaw",
   "all_ok": false,
   "qc_all_ok": false,
-  "book_ok": true,
+  "book_ok": false,
   "grok_ok": false,
   "grok_fails": [
     {
@@ -20,6 +20,83 @@
     "sector_n_ok": 0,
     "sector_n_total": 11,
     "items": [
+      {
+        "kind": "general_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/general/2026-09-30_predict.md",
+        "size": 15785
+      },
+      {
+        "kind": "events",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/events/2026-09-30_events.json",
+        "size": 34034
+      },
+      {
+        "kind": "news_judge",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-30_judge.md",
+        "size": 11318
+      },
+      {
+        "kind": "news_parse",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-30_parsed.json",
+        "size": 392687
+      },
+      {
+        "kind": "news_actions",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-30_actions.json",
+        "size": 33627
+      },
+      {
+        "kind": "finviz_digest",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-30_finviz_digest.json",
+        "size": 96489
+      },
+      {
+        "kind": "finviz_market_digest",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-30_finviz_market_digest.json",
+        "size": 6248
+      },
+      {
+        "kind": "finviz_market_digest",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-30_finviz_market_digest_close.json",
+        "size": 8396
+      },
+      {
+        "kind": "map_heat",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/map_heat/2026-09-30_map_heat.json",
+        "size": 278563
+      },
+      {
+        "kind": "map_heat_baseline",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/map_heat/2026-09-30_research_baseline.json",
+        "size": 372862
+      },
+      {
+        "kind": "map_heat_research",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/map_heat/2026-09-30_research.md",
+        "size": 44601
+      },
       {
         "kind": "sector_predict",
         "ok": false,
