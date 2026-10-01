@@ -2,8 +2,8 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (36,354 characters of input). Model: `deepseek-chat`. Web search is disabled for this stage; the model works only from the documents it was given.
+**Step 0 — Setup.** Loaded 35,191 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Search was disabled for this stage; the model worked only from the documents it was given.
 
 
 
-**Step 1 — Done researching.** Sector essay landed with the tool call (5,976 characters); skipping further search so the child can write.
+**Step 1 — Done.** The agent returned its full analysis (4,588 characters).
