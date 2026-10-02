@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-9.61%** ($9,039) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 114 · skips 17 · realized $-2405.95.
+Cash book **-9.58%** ($9,042) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 116 · skips 17 · realized $-2405.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -258,6 +258,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `ACN` | 22 | $215.98 | $2.06 | — | $4,835.70 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-0.1; leftover $4794.66 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `PRGS` | 118 | $40.52 | $2.34 | — | $51.99 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-2.6; leftover $4794.66 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $51.99 | ▼ close $9,039.03 vs 09:30 $9,594.10 (session -545.88) | 16:00 close · cash $51.99 · equity $9,039.03 vs 09:30 $9,594.10 (-555.07; session marks -545.88) · 2 name(s) marked open→close (per-name table). ACN×22 09:30 $215.98 → close $212.30 -80.96; PRGS×118 09:30 $40.52 → close $36.58 -464.92 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $51.99 | ▲ 09:30 equity $9,046.27 vs yday $9,039.03 (+7.24) | 09:30 open · cash $51.99 (unchanged overnight, no fees) · equity $9,046.27 vs prior close $9,039.03 (+7.24) · 2 name(s) re-marked at the open (per-name table). ACN×22 yday $212.30 → 09:30 $211.02 -28.16; PRGS×118 yday $36.58 → 09:30 $36.88 +35.40 | — |
+| 2026-10-02 09:30 ET | **SELL** | `ACN` | 22 | $211.02 | $2.10 | $-113.28 | $4,692.33 | ▼ -113.28 after sell → book $9,044.17; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SELL** | `PRGS` | 118 | $36.88 | $2.40 | $-434.26 | $9,041.77 | ▼ -434.26 after sell → book $9,041.77; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,041.77 | ▲ close $9,041.77 vs 09:30 $9,046.27 (session +0.00) | 16:00 close · cash $9,041.77 · no lots left · equity $9,041.77. | — |
 
 ## Not taken
 

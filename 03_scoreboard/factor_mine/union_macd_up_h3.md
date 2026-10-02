@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_up, no 🚨
 
-Cash book **-0.37%** ($9,963) · signal-only (no cash/fees) was +63.53%. Starts YES **26/30**. Fills 225 · skips 288 · realized $-45.00.
+Cash book **+0.49%** ($10,049) · signal-only (no cash/fees) was +63.53%. Starts YES **26/30**. Fills 227 · skips 288 · realized $-45.00.
 
 ## How this sleeve decides (like you are 10)
 
@@ -367,6 +367,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `UTHR` | 2 | $557.53 | $2.00 | — | $1,244.70 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer,yday_mover; ret5=+10.7; leftover $1178.53 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `SES` | 1935 | $0.61 | $17.59 | — | $48.70 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list yday_gainer,yday_mover; ret5=+14.7; leftover $1178.53 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.70 | ▲ close $9,962.62 vs 09:30 $9,459.13 (session +591.45) | 16:00 close · cash $48.70 · equity $9,962.62 vs 09:30 $9,459.13 (+503.49; session marks +591.45) · 8 name(s) marked open→close (per-name table). AVPT×82 09:30 $14.27 → close $14.08 -15.58; TLSA×1061 09:30 $1.11 → close $1.14 +31.83; CDNL×38 09:30 $30.30 → close $29.74 -21.28; PACB×503 09:30 $2.34 → close $2.51 +85.51; PMVP×701 09:30 $1.68 → close $1.75 +49.07; MNKD×306 09:30 $3.84 → close $3.95 +33.66; UTHR×2 09:30 $557.53 → close $571.38 +27.70; SES×1935 09:30 $0.61 → close $0.82 +400.54 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $48.70 | ▲ 09:30 equity $10,111.93 vs yday $9,962.62 (+149.31) | 09:30 open · cash $48.70 (unchanged overnight, no fees) · equity $10,111.93 vs prior close $9,962.62 (+149.31) · 8 name(s) re-marked at the open (per-name table). AVPT×82 yday $14.08 → 09:30 $14.22 +11.48; CDNL×38 yday $29.74 → 09:30 $30.29 +20.90; MNKD×306 yday $3.95 → 09:30 $4.01 +18.36; PACB×503 yday $2.51 → 09:30 $2.50 -5.03; PMVP×701 yday $1.75 → 09:30 $1.75 +0.00; SES×1935 yday $0.82 → 09:30 $0.86 +85.14; TLSA×1061 yday $1.14 → 09:30 $1.16 +21.22; UTHR×2 yday $571.38 → 09:30 $570.00 -2.76 | — |
+| 2026-10-02 09:30 ET | **BUY** | `QNC` | 3 | $1.69 | $0.06 | — | $43.57 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list probable,yday_gainer,yday_mover; ret5=-7.9; leftover $6.09 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `AIB` | 4 | $1.45 | $0.07 | — | $37.70 | — | union ∩ macd_up, no 🚨; gate macd_up=True; list probable,yday_gainer,yday_mover; ret5=+7.0; leftover $6.09 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $37.70 | ▼ close $10,049.33 vs 09:30 $10,111.93 (session -62.47) | 16:00 close · cash $37.70 · equity $10,049.33 vs 09:30 $10,111.93 (-62.60; session marks -62.47) · 10 name(s) marked open→close (per-name table). AVPT×82 09:30 $14.22 → close $14.07 -12.30; CDNL×38 09:30 $30.29 → close $30.73 +16.72; MNKD×306 09:30 $4.01 → close $3.80 -64.26; PACB×503 09:30 $2.50 → close $2.54 +20.12; PMVP×701 09:30 $1.75 → close $1.79 +28.04; SES×1935 09:30 $0.86 → close $0.88 +47.79; TLSA×1061 09:30 $1.16 → close $1.12 -42.44; UTHR×2 09:30 $570.00 → close $541.70 -56.60; QNC×3 09:30 $1.69 → close $1.59 -0.30; AIB×4 09:30 $1.45 → close $1.64 +0.76 | — |
 
 ## Not taken
 

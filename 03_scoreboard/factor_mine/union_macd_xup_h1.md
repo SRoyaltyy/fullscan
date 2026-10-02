@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-3.47%** ($9,653) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 192 · skips 71 · realized $-1788.82.
+Cash book **-2.48%** ($9,752) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 207 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -334,6 +334,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `DOCS` | 40 | $28.91 | $2.11 | — | $1,222.26 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ret5=+6.7; leftover $1173.20 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `FPI` | 103 | $11.29 | $2.30 | — | $57.09 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ret5=+5.2; leftover $1173.20 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $57.09 | ▲ close $9,652.94 vs 09:30 $9,404.09 (session +310.31) | 16:00 close · cash $57.09 · equity $9,652.94 vs 09:30 $9,404.09 (+248.85; session marks +310.31) · 8 name(s) marked open→close (per-name table). PMVP×698 09:30 $1.68 → close $1.75 +48.86; MNKD×305 09:30 $3.84 → close $3.95 +33.55; UTHR×2 09:30 $557.53 → close $571.38 +27.70; SES×1926 09:30 $0.61 → close $0.82 +398.68; BETR×105 09:30 $11.07 → close $11.19 +12.60; PUSA×299 09:30 $3.92 → close $3.20 -215.28; DOCS×40 09:30 $28.91 → close $28.50 -16.40; FPI×103 09:30 $11.29 → close $11.49 +20.60 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $57.09 | ▲ 09:30 equity $9,912.85 vs yday $9,652.94 (+259.91) | 09:30 open · cash $57.09 (unchanged overnight, no fees) · equity $9,912.85 vs prior close $9,652.94 (+259.91) · 8 name(s) re-marked at the open (per-name table). BETR×105 yday $11.19 → 09:30 $12.38 +124.95; DOCS×40 yday $28.50 → 09:30 $28.93 +17.20; FPI×103 yday $11.49 → 09:30 $11.50 +1.03; MNKD×305 yday $3.95 → 09:30 $4.01 +18.30; PMVP×698 yday $1.75 → 09:30 $1.75 +0.00; PUSA×299 yday $3.20 → 09:30 $3.25 +16.44; SES×1926 yday $0.82 → 09:30 $0.86 +84.74; UTHR×2 yday $571.38 → 09:30 $570.00 -2.76 | — |
+| 2026-10-02 09:30 ET | **SELL** | `BETR` | 105 | $12.38 | $2.33 | $+132.91 | $1,354.66 | ▲ +132.91 after sell → book $9,910.51; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `DOCS` | 40 | $28.93 | $2.13 | $-3.44 | $2,509.73 | ▼ -3.44 after sell → book $9,908.38; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `FPI` | 103 | $11.50 | $2.33 | $+17.00 | $3,691.90 | ▲ +17.00 after sell → book $9,906.06; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `MNKD` | 305 | $4.01 | $4.00 | $+43.92 | $4,910.96 | ▲ +43.92 after sell → book $9,902.06; vs 09:30 mark -4.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `PMVP` | 698 | $1.75 | $9.13 | $+30.73 | $6,123.33 | ▲ +30.73 after sell → book $9,892.93; vs 09:30 mark -9.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `PUSA` | 299 | $3.25 | $3.92 | $-206.61 | $7,092.65 | ▼ -206.61 after sell → book $9,889.01; vs 09:30 mark -3.92 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `SES` | 1926 | $0.86 | $22.67 | $+443.24 | $8,726.34 | ▲ +443.24 after sell → book $9,866.34; vs 09:30 mark -22.67 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SELL** | `UTHR` | 2 | $570.00 | $2.02 | $+20.93 | $9,864.32 | ▲ +20.93 after sell → book $9,864.32; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **BUY** | `COHR` | 4 | $316.56 | $2.00 | — | $8,596.06 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer; 🔵; ret5=+9.8; leftover $1409.19 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `GWRE` | 9 | $155.67 | $2.02 | — | $7,193.01 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer; ret5=+2.9; leftover $1409.19 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `MAT` | 93 | $15.13 | $2.27 | — | $5,783.19 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $1409.19 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ACN` | 6 | $211.02 | $2.01 | — | $4,515.06 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; ret5=+19.7; leftover $1409.19 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `EFOR` | 38 | $36.22 | $2.10 | — | $3,136.60 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,ohlc_hot; ret5=+11.6; leftover $1409.19 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `BLMN` | 165 | $8.50 | $2.48 | — | $1,731.61 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ret5=+3.2; leftover $1409.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `PBF` | 17 | $81.34 | $2.04 | — | $346.79 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+14.5; leftover $1409.19 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $346.79 | ▼ close $9,751.77 vs 09:30 $9,912.85 (session -97.63) | 16:00 close · cash $346.79 · equity $9,751.77 vs 09:30 $9,912.85 (-161.08; session marks -97.63) · 7 name(s) marked open→close (per-name table). COHR×4 09:30 $316.56 → close $337.04 +81.90; GWRE×9 09:30 $155.67 → close $152.15 -31.68; MAT×93 09:30 $15.13 → close $15.27 +12.55; ACN×6 09:30 $211.02 → close $198.90 -72.72; EFOR×38 09:30 $36.22 → close $34.25 -74.86; BLMN×165 09:30 $8.50 → close $8.48 -3.30; PBF×17 09:30 $81.34 → close $80.78 -9.52 | — |
 
 ## Not taken
 

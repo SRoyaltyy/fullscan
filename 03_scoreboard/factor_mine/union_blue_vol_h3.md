@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-13.23%** ($8,676) · signal-only (no cash/fees) was -21.78%. Starts YES **2/30**. Fills 204 · skips 248 · realized $-1054.91.
+Cash book **-12.99%** ($8,701) · signal-only (no cash/fees) was -21.78%. Starts YES **2/30**. Fills 206 · skips 248 · realized $-1054.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -348,6 +348,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `PGEN` | 128 | $8.50 | $2.37 | — | $1,113.62 | — | combo gate; gate blue=True,vol=good; list ohlc_hot; 🔵; ret5=+15.1; leftover $1095.95 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `PPLI` | 26 | $41.68 | $2.07 | — | $27.87 | — | combo gate; gate blue=True,vol=good; list ohlc_hot; 🔵; ret5=+16.7; leftover $1095.95 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.87 | ▼ close $8,676.46 vs 09:30 $8,789.28 (session -63.93) | 16:00 close · cash $27.87 · equity $8,676.46 vs 09:30 $8,789.28 (-112.82; session marks -63.93) · 8 name(s) marked open→close (per-name table). AVPT×76 09:30 $14.27 → close $14.08 -14.44; SWMR×62 09:30 $17.50 → close $16.38 -69.44; MNKD×285 09:30 $3.84 → close $3.95 +31.35; CAPR×117 09:30 $9.36 → close $8.94 -49.14; AIB×782 09:30 $1.40 → close $1.52 +93.84; TRLV×100 09:30 $10.87 → close $10.87 +0.00; PGEN×128 09:30 $8.50 → close $8.21 -37.12; PPLI×26 09:30 $41.68 → close $40.95 -18.98 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $27.87 | ▲ 09:30 equity $8,686.94 vs yday $8,676.46 (+10.48) | 09:30 open · cash $27.87 (unchanged overnight, no fees) · equity $8,686.94 vs prior close $8,676.46 (+10.48) · 8 name(s) re-marked at the open (per-name table). AIB×782 yday $1.52 → 09:30 $1.45 -54.74; AVPT×76 yday $14.08 → 09:30 $14.22 +10.64; CAPR×117 yday $8.94 → 09:30 $9.14 +23.40; MNKD×285 yday $3.95 → 09:30 $4.01 +17.10; PGEN×128 yday $8.21 → 09:30 $8.30 +11.52; PPLI×26 yday $40.95 → 09:30 $41.37 +10.92; SWMR×62 yday $16.38 → 09:30 $16.10 -17.36; TRLV×100 yday $10.87 → 09:30 $10.96 +9.00 | — |
+| 2026-10-02 09:30 ET | **BUY** | `SES` | 4 | $0.86 | $0.05 | — | $24.38 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+54.3; leftover $3.48 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `QSI` | 2 | $1.38 | $0.03 | — | $21.59 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+82.2; leftover $3.48 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.59 | ▲ close $8,700.90 vs 09:30 $8,686.94 (session +14.04) | 16:00 close · cash $21.59 · equity $8,700.90 vs 09:30 $8,686.94 (+13.96; session marks +14.04) · 10 name(s) marked open→close (per-name table). AIB×782 09:30 $1.45 → close $1.64 +148.58; AVPT×76 09:30 $14.22 → close $14.07 -11.40; CAPR×117 09:30 $9.14 → close $8.95 -22.23; MNKD×285 09:30 $4.01 → close $3.80 -59.85; PGEN×128 09:30 $8.30 → close $8.54 +30.72; PPLI×26 09:30 $41.37 → close $41.28 -2.34; SWMR×62 09:30 $16.10 → close $15.36 -45.88; TRLV×100 09:30 $10.96 → close $10.72 -24.00; SES×4 09:30 $0.86 → close $0.88 +0.10; QSI×2 09:30 $1.38 → close $1.55 +0.34 | — |
 
 ## Not taken
 

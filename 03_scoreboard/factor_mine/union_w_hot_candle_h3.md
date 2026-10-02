@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+10.19%** ($11,019) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 226 · skips 289 · realized $+901.34.
+Cash book **+12.78%** ($11,278) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 232 · skips 289 · realized $+901.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -367,6 +367,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `PPLI` | 42 | $41.68 | $2.12 | — | $1,850.63 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+16.7; leftover $1760.58 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `ONTO` | 5 | $315.94 | $2.00 | — | $268.92 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+9.0; leftover $1760.58 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $268.92 | ▲ close $11,018.89 vs 09:30 $10,602.78 (session +496.93) | 16:00 close · cash $268.92 · equity $11,018.89 vs 09:30 $10,602.78 (+416.11; session marks +496.93) · 6 name(s) marked open→close (per-name table). PACB×752 09:30 $2.34 → close $2.51 +127.84; QSI×1467 09:30 $1.20 → close $1.43 +337.41; FORM×11 09:30 $149.45 → close $148.44 -11.11; SITC×525 09:30 $3.35 → close $3.50 +78.75; PPLI×42 09:30 $41.68 → close $40.95 -30.66; ONTO×5 09:30 $315.94 → close $314.88 -5.30 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $268.92 | ▲ 09:30 equity $11,043.12 vs yday $11,018.89 (+24.23) | 09:30 open · cash $268.92 (unchanged overnight, no fees) · equity $11,043.12 vs prior close $11,018.89 (+24.23) · 6 name(s) re-marked at the open (per-name table). FORM×11 yday $148.44 → 09:30 $150.50 +22.66; ONTO×5 yday $314.88 → 09:30 $328.89 +70.05; PACB×752 yday $2.51 → 09:30 $2.50 -7.52; PPLI×42 yday $40.95 → 09:30 $41.37 +17.64; QSI×1467 yday $1.43 → 09:30 $1.38 -73.35; SITC×525 yday $3.50 → 09:30 $3.49 -5.25 | — |
+| 2026-10-02 09:30 ET | **BUY** | `SDEV` | 7 | $5.06 | $0.38 | — | $233.12 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; 🔵; ret5=+183.7; leftover $38.42 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `TJGC` | 1 | $34.92 | $0.35 | — | $197.85 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,ohlc_hot; ret5=+15.5; leftover $38.42 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `SES` | 44 | $0.86 | $0.51 | — | $159.50 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; 🔵; ret5=+54.3; leftover $38.42 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `NAUT` | 23 | $1.67 | $0.45 | — | $120.76 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; 🔵; ⚪; ret5=+58.4; leftover $38.42 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `GLND` | 9 | $4.25 | $0.41 | — | $82.10 | — | rank by w_hot_candle; rank w_hot_candle; list yday_mover,ohlc_hot; ret5=-17.8; leftover $38.42 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `MAT` | 2 | $15.13 | $0.31 | — | $51.52 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $38.42 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $51.52 | ▲ close $11,277.96 vs 09:30 $11,043.12 (session +237.25) | 16:00 close · cash $51.52 · equity $11,277.96 vs 09:30 $11,043.12 (+234.84; session marks +237.25) · 12 name(s) marked open→close (per-name table). FORM×11 09:30 $150.50 → close $149.15 -14.85; ONTO×5 09:30 $328.89 → close $327.77 -5.60; PACB×752 09:30 $2.50 → close $2.54 +30.08; PPLI×42 09:30 $41.37 → close $41.28 -3.78; QSI×1467 09:30 $1.38 → close $1.55 +249.39; SITC×525 09:30 $3.49 → close $3.42 -36.75; SDEV×7 09:30 $5.06 → close $7.48 +16.94; TJGC×1 09:30 $34.92 → close $33.28 -1.64; SES×44 09:30 $0.86 → close $0.88 +1.09; NAUT×23 09:30 $1.67 → close $1.96 +6.78; GLND×9 09:30 $4.25 → close $3.73 -4.68; MAT×2 09:30 $15.13 → close $15.27 +0.27 | — |
 
 ## Not taken
 

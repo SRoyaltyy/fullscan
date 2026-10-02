@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g hold 5, no 🚨
 
-Cash book **-15.12%** ($8,488) · signal-only (no cash/fees) was +4.97%. Starts YES **4/30**. Fills 196 · skips 401 · realized $-981.98.
+Cash book **-14.58%** ($8,542) · signal-only (no cash/fees) was +4.97%. Starts YES **4/30**. Fills 201 · skips 401 · realized $-981.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -338,6 +338,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `PACB` | 445 | $2.34 | $5.74 | — | $1,041.63 | — | union ∩ vol_g hold 5, no 🚨; gate vol=good; list yday_gainer,yday_mover; ret5=+68.1; leftover $1042.44 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `PMVP` | 615 | $1.68 | $7.93 | — | $0.50 | — | union ∩ vol_g hold 5, no 🚨; gate vol=good; list yday_gainer,yday_mover; ret5=+21.9; leftover $1042.44 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.50 | ▲ close $8,488.32 vs 09:30 $8,546.40 (session +23.33) | 16:00 close · cash $0.50 · equity $8,488.32 vs 09:30 $8,546.40 (-58.08; session marks +23.33) · 9 name(s) marked open→close (per-name table). TEM×2 09:30 $82.58 → close $82.58 +0.00; AVPT×73 09:30 $14.27 → close $14.08 -13.87; TLSA×939 09:30 $1.11 → close $1.14 +28.17; IVA×308 09:30 $3.38 → close $3.46 +26.18; CDNL×34 09:30 $30.30 → close $29.74 -19.04; CDZI×267 09:30 $3.89 → close $3.70 -50.73; SWMR×59 09:30 $17.50 → close $16.38 -66.08; PACB×445 09:30 $2.34 → close $2.51 +75.65; PMVP×615 09:30 $1.68 → close $1.75 +43.05 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.50 | ▲ 09:30 equity $8,551.84 vs yday $8,488.32 (+63.52) | 09:30 open · cash $0.50 (unchanged overnight, no fees) · equity $8,551.84 vs prior close $8,488.32 (+63.52) · 9 name(s) re-marked at the open (per-name table). AVPT×73 yday $14.08 → 09:30 $14.22 +10.22; CDNL×34 yday $29.74 → 09:30 $30.29 +18.70; CDZI×267 yday $3.70 → 09:30 $3.75 +13.35; IVA×308 yday $3.46 → 09:30 $3.57 +33.88; PACB×445 yday $2.51 → 09:30 $2.50 -4.45; PMVP×615 yday $1.75 → 09:30 $1.75 +0.00; SWMR×59 yday $16.38 → 09:30 $16.10 -16.52; TEM×2 yday $82.58 → 09:30 $77.36 -10.44; TLSA×939 yday $1.14 → 09:30 $1.16 +18.78 | — |
+| 2026-10-02 09:30 ET | **SELL** | `TEM` | 2 | $77.36 | $1.57 | $-15.92 | $153.65 | ▼ -15.92 after sell → book $8,550.27; vs 09:30 mark -1.57 | exit unpriced hold on first bar after 5 sess | — |
+| 2026-10-02 09:30 ET | **BUY** | `QNC` | 11 | $1.69 | $0.22 | — | $134.84 | — | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=-7.9; leftover $19.21 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `AIB` | 13 | $1.45 | $0.23 | — | $115.76 | — | union ∩ vol_g hold 5, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=+7.0; leftover $19.21 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `SDEV` | 3 | $5.06 | $0.16 | — | $100.42 | — | union ∩ vol_g hold 5, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=+183.7; leftover $19.21 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `SES` | 22 | $0.86 | $0.26 | — | $81.24 | — | union ∩ vol_g hold 5, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=+54.3; leftover $19.21 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $81.24 | ▼ close $8,542.05 vs 09:30 $8,551.84 (session -7.36) | 16:00 close · cash $81.24 · equity $8,542.05 vs 09:30 $8,551.84 (-9.79; session marks -7.36) · 12 name(s) marked open→close (per-name table). AVPT×73 09:30 $14.22 → close $14.07 -10.95; CDNL×34 09:30 $30.29 → close $30.73 +14.96; CDZI×267 09:30 $3.75 → close $3.83 +21.36; IVA×308 09:30 $3.57 → close $3.56 -3.08; PACB×445 09:30 $2.50 → close $2.54 +17.80; PMVP×615 09:30 $1.75 → close $1.79 +24.60; SWMR×59 09:30 $16.10 → close $15.36 -43.66; TLSA×939 09:30 $1.16 → close $1.12 -37.56; QNC×11 09:30 $1.69 → close $1.59 -1.10; AIB×13 09:30 $1.45 → close $1.64 +2.47; SDEV×3 09:30 $5.06 → close $7.48 +7.26; SES×22 09:30 $0.86 → close $0.88 +0.54 | — |
 
 ## Not taken
 

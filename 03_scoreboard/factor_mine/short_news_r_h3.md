@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · news🔴
 
-Cash book **-14.87%** ($8,513) · signal-only (no cash/fees) was -1.35%. Starts YES **0/30**. Fills 113 · skips 118 · realized $+417.93.
+Cash book **-13.66%** ($8,634) · signal-only (no cash/fees) was -1.35%. Starts YES **0/30**. Fills 113 · skips 118 · realized $+417.93.
 
 ## How this sleeve decides (like you are 10)
 
@@ -253,6 +253,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SHORT** | `PYXS` | 909 | $2.31 | $11.95 | — | $10,488.03 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-27.6; leftover $2100.05 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **SHORT** | `NKE` | 59 | $35.45 | $2.25 | — | $12,577.33 | — | news🔴; gate news=bad; list overnight,overnight_mega; ret5=-1.8; leftover $2100.05 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,577.33 | ▲ close $8,512.77 vs 09:30 $8,415.09 (session +126.78) | 16:00 close · cash $12,577.33 · equity $8,512.77 vs 09:30 $8,415.09 (+97.68; session marks +126.78) · 2 name(s) marked open→close (per-name table). PYXS×909 09:30 $2.31 → close $2.19 +109.08; NKE×59 09:30 $35.45 → close $35.15 +17.70 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,577.33 | ▲ 09:30 equity $8,647.81 vs yday $8,512.77 (+135.04) | 09:30 open · cash $12,577.33 (unchanged overnight, no fees) · equity $8,647.81 vs prior close $8,512.77 (+135.04) · 2 name(s) re-marked at the open (per-name table). NKE×59 yday $35.15 → 09:30 $32.55 +153.22; PYXS×909 yday $2.19 → 09:30 $2.21 -18.18 | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,577.33 | ▼ close $8,633.74 vs 09:30 $8,647.81 (session -14.07) | 16:00 close · cash $12,577.33 · equity $8,633.74 vs 09:30 $8,647.81 (-14.07; session marks -14.07) · 2 name(s) marked open→close (per-name table). NKE×59 09:30 $32.55 → close $33.87 -77.70; PYXS×909 09:30 $2.21 → close $2.14 +63.63 | — |
 
 ## Not taken
 

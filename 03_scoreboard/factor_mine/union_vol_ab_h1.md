@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-6.43%** ($9,357) · signal-only (no cash/fees) was +53.27%. Starts YES **26/30**. Fills 234 · skips 65 · realized $+1139.59.
+Cash book **-4.52%** ($9,548) · signal-only (no cash/fees) was +53.27%. Starts YES **26/30**. Fills 248 · skips 65 · realized $+1139.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -378,6 +378,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `FORM` | 7 | $149.45 | $2.01 | — | $1,276.29 | — | combo gate; gate ab=good,vol=good; list yday_gainer,ohlc_hot; ret5=+13.8; leftover $1152.06 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `OMDA` | 55 | $20.90 | $2.15 | — | $124.64 | — | combo gate; gate ab=good,vol=good; list yday_gainer; ret5=+0.6; leftover $1152.06 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $124.64 | ▲ close $9,356.72 vs 09:30 $9,240.38 (session +174.29) | 16:00 close · cash $124.64 · equity $9,356.72 vs 09:30 $9,240.38 (+116.34; session marks +174.29) · 8 name(s) marked open→close (per-name table). AVPT×80 09:30 $14.27 → close $14.08 -15.20; CDNL×38 09:30 $30.30 → close $29.74 -21.28; PMVP×685 09:30 $1.68 → close $1.75 +47.95; UTHR×2 09:30 $557.53 → close $571.38 +27.70; QSI×960 09:30 $1.20 → close $1.43 +220.80; CAPR×123 09:30 $9.36 → close $8.94 -51.66; FORM×7 09:30 $149.45 → close $148.44 -7.07; OMDA×55 09:30 $20.90 → close $20.41 -26.95 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $124.64 | ▲ 09:30 equity $9,395.23 vs yday $9,356.72 (+38.51) | 09:30 open · cash $124.64 (unchanged overnight, no fees) · equity $9,395.23 vs prior close $9,356.72 (+38.51) · 8 name(s) re-marked at the open (per-name table). AVPT×80 yday $14.08 → 09:30 $14.22 +11.20; CAPR×123 yday $8.94 → 09:30 $9.14 +24.60; CDNL×38 yday $29.74 → 09:30 $30.29 +20.90; FORM×7 yday $148.44 → 09:30 $150.50 +14.42; OMDA×55 yday $20.41 → 09:30 $20.74 +18.15; PMVP×685 yday $1.75 → 09:30 $1.75 +0.00; QSI×960 yday $1.43 → 09:30 $1.38 -48.00; UTHR×2 yday $571.38 → 09:30 $570.00 -2.76 | — |
+| 2026-10-02 09:30 ET | **SELL** | `AVPT` | 80 | $14.22 | $2.25 | $-8.48 | $1,259.99 | ▼ -8.48 after sell → book $9,392.98; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `CAPR` | 123 | $9.14 | $2.39 | $-31.81 | $2,381.82 | ▼ -31.81 after sell → book $9,390.59; vs 09:30 mark -2.39 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `CDNL` | 38 | $30.29 | $2.12 | $-4.61 | $3,530.71 | ▼ -4.61 after sell → book $9,388.46; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `FORM` | 7 | $150.50 | $2.03 | $+3.31 | $4,582.18 | ▲ +3.31 after sell → book $9,386.43; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `OMDA` | 55 | $20.74 | $2.17 | $-13.13 | $5,720.71 | ▼ -13.13 after sell → book $9,384.26; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `PMVP` | 685 | $1.75 | $8.96 | $+30.15 | $6,910.50 | ▲ +30.15 after sell → book $9,375.30; vs 09:30 mark -8.96 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `UTHR` | 2 | $570.00 | $2.02 | $+20.93 | $8,048.48 | ▲ +20.93 after sell → book $9,373.28; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **BUY** | `CDNA` | 17 | $66.33 | $2.04 | — | $6,918.83 | — | combo gate; gate ab=good,vol=good; list flatten,ohlc_hot; 🔵; ⚪; ret5=+7.9; leftover $1149.78 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ETON` | 21 | $52.42 | $2.05 | — | $5,815.96 | — | combo gate; gate ab=good,vol=good; list flatten; 🔵; ⚪; ret5=-12.6; leftover $1149.78 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `COHR` | 3 | $316.56 | $2.00 | — | $4,864.26 | — | combo gate; gate ab=good,vol=good; list probable,yday_gainer; 🔵; ret5=+9.8; leftover $1149.78 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `INOD` | 15 | $73.05 | $2.04 | — | $3,766.48 | — | combo gate; gate ab=good,vol=good; list probable,yday_gainer; 🔵; ⚪; ret5=-0.0; leftover $1149.78 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `MAT` | 75 | $15.13 | $2.21 | — | $2,629.14 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $1149.78 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ACN` | 5 | $211.02 | $2.00 | — | $1,572.03 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; ret5=+19.7; leftover $1149.78 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `SNPS` | 2 | $497.86 | $2.00 | — | $574.33 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $1149.78 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $574.33 | ▲ close $9,548.16 vs 09:30 $9,395.23 (session +189.22) | 16:00 close · cash $574.33 · equity $9,548.16 vs 09:30 $9,395.23 (+152.93; session marks +189.22) · 8 name(s) marked open→close (per-name table). QSI×960 09:30 $1.38 → close $1.55 +163.20; CDNA×17 09:30 $66.33 → close $67.15 +13.94; ETON×21 09:30 $52.42 → close $55.36 +61.74; COHR×3 09:30 $316.56 → close $337.04 +61.43; INOD×15 09:30 $73.05 → close $70.07 -44.70; MAT×75 09:30 $15.13 → close $15.27 +10.12; ACN×5 09:30 $211.02 → close $198.90 -60.60; SNPS×2 09:30 $497.86 → close $489.90 -15.91 | — |
 
 ## Not taken
 

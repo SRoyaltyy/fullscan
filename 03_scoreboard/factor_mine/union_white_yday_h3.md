@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · union looker hold 3: 0 red + yesterday up
 
-Cash book **-8.62%** ($9,138) · signal-only (no cash/fees) was -11.78%. Starts YES **2/30**. Fills 143 · skips 140 · realized $-1313.49.
+Cash book **-6.75%** ($9,325) · signal-only (no cash/fees) was -11.78%. Starts YES **2/30**. Fills 151 · skips 140 · realized $-1313.49.
 
 ## How this sleeve decides (like you are 10)
 
@@ -287,6 +287,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SELL** | `VFC` | 11 | $14.11 | $1.61 | $-7.63 | $8,991.46 | ▼ -7.63 after sell → book $9,139.16; vs 09:30 mark -1.60 | exit unpriced hold on first bar after 2 sess | — |
 | 2026-10-01 09:30 ET | **SELL** | `ZSQR` | 35 | $4.22 | $1.60 | $-12.02 | $9,137.56 | ▼ -12.02 after sell → book $9,137.56; vs 09:30 mark -1.60 | exit unpriced hold on first bar after 2 sess | — |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,137.56 | ▲ close $9,137.56 vs 09:30 $9,169.68 (session +0.00) | 16:00 close · cash $9,137.56 · no lots left · equity $9,137.56. | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,137.56 | ▲ 09:30 equity $9,137.56 vs yday $9,137.56 (+0.00) | 09:30 open · cash $9,137.56 · no holdings · equity $9,137.56 vs prior close $9,137.56 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-02 09:30 ET | **BUY** | `CDNA` | 17 | $66.33 | $2.04 | — | $8,007.91 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list flatten,ohlc_hot; 🔵; ⚪; ret5=+7.9; leftover $1142.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ETON` | 21 | $52.42 | $2.05 | — | $6,905.04 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list flatten; 🔵; ⚪; ret5=-12.6; leftover $1142.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `NAUT` | 686 | $1.67 | $8.85 | — | $5,754.00 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list yday_gainer; 🔵; ⚪; ret5=+58.4; leftover $1142.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `SNPS` | 2 | $497.86 | $2.00 | — | $4,756.29 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $1142.19 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ARHS` | 112 | $10.12 | $2.33 | — | $3,620.52 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+4.2; leftover $1142.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `FOSL` | 164 | $6.95 | $2.48 | — | $2,478.24 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+16.2; leftover $1142.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `INOD` | 15 | $73.05 | $2.04 | — | $1,380.46 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list probable,yday_gainer; 🔵; ⚪; ret5=-0.0; leftover $1142.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `PDFS` | 20 | $55.24 | $2.05 | — | $273.61 | — | union looker hold 3: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list ohlc_hot; ⚪; ret5=+11.5; leftover $1142.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $273.61 | ▲ close $9,325.21 vs 09:30 $9,137.56 (session +211.48) | 16:00 close · cash $273.61 · equity $9,325.21 vs 09:30 $9,137.56 (+187.65; session marks +211.48) · 8 name(s) marked open→close (per-name table). CDNA×17 09:30 $66.33 → close $67.15 +13.94; ETON×21 09:30 $52.42 → close $55.36 +61.74; NAUT×686 09:30 $1.67 → close $1.96 +202.37; SNPS×2 09:30 $497.86 → close $489.90 -15.91; ARHS×112 09:30 $10.12 → close $10.24 +13.44; FOSL×164 09:30 $6.95 → close $6.80 -24.60; INOD×15 09:30 $73.05 → close $70.07 -44.70; PDFS×20 09:30 $55.24 → close $55.50 +5.20 | — |
 
 ## Not taken
 

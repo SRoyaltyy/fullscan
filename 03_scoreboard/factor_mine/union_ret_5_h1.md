@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+12.77%** ($11,277) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 285 · skips 100 · realized $+370.60.
+Cash book **+26.81%** ($12,681) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 297 · skips 100 · realized $+370.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -426,6 +426,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `MX` | 482 | $3.78 | $6.22 | — | $1,777.81 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+16.8; leftover $1825.02 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `MNKD` | 461 | $3.84 | $5.95 | — | $1.62 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+16.8; leftover $1825.02 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.62 | ▲ close $11,277.34 vs 09:30 $10,991.26 (session +389.38) | 16:00 close · cash $1.62 · equity $11,277.34 vs 09:30 $10,991.26 (+286.08; session marks +389.38) · 6 name(s) marked open→close (per-name table). PACB×779 09:30 $2.34 → close $2.51 +132.43; QSI×1520 09:30 $1.20 → close $1.43 +349.60; PMVP×1086 09:30 $1.68 → close $1.75 +76.02; QTRX×490 09:30 $3.72 → close $3.41 -151.90; MX×482 09:30 $3.78 → close $3.64 -67.48; MNKD×461 09:30 $3.84 → close $3.95 +50.71 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.62 | ▲ 09:30 equity $11,284.27 vs yday $11,277.34 (+6.93) | 09:30 open · cash $1.62 (unchanged overnight, no fees) · equity $11,284.27 vs prior close $11,277.34 (+6.93) · 6 name(s) re-marked at the open (per-name table). MNKD×461 yday $3.95 → 09:30 $4.01 +27.66; MX×482 yday $3.64 → 09:30 $3.72 +38.56; PACB×779 yday $2.51 → 09:30 $2.50 -7.79; PMVP×1086 yday $1.75 → 09:30 $1.75 +0.00; QSI×1520 yday $1.43 → 09:30 $1.38 -76.00; QTRX×490 yday $3.41 → 09:30 $3.46 +24.50 | — |
+| 2026-10-02 09:30 ET | **SELL** | `MNKD` | 461 | $4.01 | $6.04 | $+66.38 | $1,844.19 | ▲ +66.38 after sell → book $11,278.23; vs 09:30 mark -6.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `MX` | 482 | $3.72 | $6.31 | $-41.45 | $3,630.92 | ▼ -41.45 after sell → book $11,271.92; vs 09:30 mark -6.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `PACB` | 779 | $2.50 | $10.19 | $+104.40 | $5,568.23 | ▲ +104.40 after sell → book $11,261.73; vs 09:30 mark -10.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `PMVP` | 1086 | $1.75 | $14.20 | $+47.81 | $7,454.52 | ▲ +47.81 after sell → book $11,247.52; vs 09:30 mark -14.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `QTRX` | 490 | $3.46 | $6.42 | $-140.14 | $9,143.50 | ▼ -140.14 after sell → book $11,241.10; vs 09:30 mark -6.42 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **BUY** | `SDEV` | 258 | $5.06 | $3.33 | — | $7,834.70 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+183.7; leftover $1306.21 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `NAUT` | 784 | $1.67 | $10.11 | — | $6,519.22 | — | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ⚪; ret5=+58.4; leftover $1306.21 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `SES` | 1518 | $0.86 | $17.61 | — | $5,196.13 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+54.3; leftover $1306.21 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ACN` | 6 | $211.02 | $2.01 | — | $3,928.01 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+19.7; leftover $1306.21 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `WOLF` | 40 | $32.35 | $2.11 | — | $2,631.90 | — | rank by ret_5; rank ret_5; list yday_gainer; ret5=+18.5; leftover $1306.21 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `VECO` | 23 | $55.50 | $2.06 | — | $1,353.34 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+17.0; leftover $1306.21 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `FEAM` | 399 | $3.27 | $5.15 | — | $43.46 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.4; leftover $1306.21 | join🔴 sector🔴 gen🟢 news🟡 digest🔴 judge🔴 ab🟡 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.46 | ▲ close $12,681.37 vs 09:30 $11,284.27 (session +1,482.64) | 16:00 close · cash $43.46 · equity $12,681.37 vs 09:30 $11,284.27 (+1397.10; session marks +1482.64) · 8 name(s) marked open→close (per-name table). QSI×1520 09:30 $1.38 → close $1.55 +258.40; SDEV×258 09:30 $5.06 → close $7.48 +624.36; NAUT×784 09:30 $1.67 → close $1.96 +231.28; SES×1518 09:30 $0.86 → close $0.88 +37.49; ACN×6 09:30 $211.02 → close $198.90 -72.72; WOLF×40 09:30 $32.35 → close $35.28 +117.20; VECO×23 09:30 $55.50 → close $57.38 +43.24; FEAM×399 09:30 $3.27 → close $3.88 +243.39 | — |
 
 ## Not taken
 

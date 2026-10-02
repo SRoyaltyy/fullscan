@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-21.00%** ($7,900) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 135 · skips 80 · realized $-2514.32.
+Cash book **-26.85%** ($7,315) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 136 · skips 80 · realized $-2514.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -273,6 +273,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SELL** | `CNXC` | 307 | $25.97 | $4.08 | $+130.11 | $7,969.65 | ▲ +130.11 after sell → book $7,969.65; vs 09:30 mark -4.08 | exit unpriced hold on first bar after 2 sess | — |
 | 2026-10-01 09:30 ET | **BUY** | `NKE` | 224 | $35.45 | $2.89 | — | $25.97 | — | baseline list, no extra gate; list overnight,overnight_mega; ret5=-1.8; leftover $7969.65 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $25.97 | ▼ close $7,899.57 vs 09:30 $7,973.73 (session -67.20) | 16:00 close · cash $25.97 · equity $7,899.57 vs 09:30 $7,973.73 (-74.16; session marks -67.20) · 1 name(s) marked open→close (per-name table). NKE×224 09:30 $35.45 → close $35.15 -67.20 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $25.97 | ▼ 09:30 equity $7,317.84 vs yday $7,899.57 (-581.73) | 09:30 open · cash $25.97 (unchanged overnight, no fees) · equity $7,317.84 vs prior close $7,899.57 (-581.73) · 1 name(s) re-marked at the open (per-name table). NKE×224 yday $35.15 → 09:30 $32.55 -581.73 | — |
+| 2026-10-02 09:30 ET | **SELL** | `NKE` | 224 | $32.55 | $2.99 | $-654.80 | $7,314.86 | ▼ -654.80 after sell → book $7,314.86; vs 09:30 mark -2.98 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,314.86 | ▲ close $7,314.86 vs 09:30 $7,317.84 (session +0.00) | 16:00 close · cash $7,314.86 · no lots left · equity $7,314.86. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5
 
-Cash book **-24.85%** ($7,515) · signal-only (no cash/fees) was -13.48%. Starts YES **6/30**. Fills 67 · skips 10 · realized $-54.32.
+Cash book **-25.65%** ($7,435) · signal-only (no cash/fees) was -13.48%. Starts YES **6/30**. Fills 71 · skips 10 · realized $-54.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -212,6 +212,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,325.22 | ▲ 09:30 equity $8,325.22 vs yday $8,325.22 (+0.00) | 09:30 open · cash $8,325.22 · no holdings · equity $8,325.22 vs prior close $8,325.22 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-01 09:30 ET | **BUY** | `PRGS` | 205 | $40.52 | $2.64 | — | $15.98 | — | news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list earn_react; 🔵; ret5=-2.6; leftover $8325.22 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.98 | ▼ close $7,514.88 vs 09:30 $8,325.22 (session -807.70) | 16:00 close · cash $15.98 · equity $7,514.88 vs 09:30 $8,325.22 (-810.34; session marks -807.70) · 1 name(s) marked open→close (per-name table). PRGS×205 09:30 $40.52 → close $36.58 -807.70 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.98 | ▲ 09:30 equity $7,576.38 vs yday $7,514.88 (+61.50) | 09:30 open · cash $15.98 (unchanged overnight, no fees) · equity $7,576.38 vs prior close $7,514.88 (+61.50) · 1 name(s) re-marked at the open (per-name table). PRGS×205 yday $36.58 → 09:30 $36.88 +61.50 | — |
+| 2026-10-02 09:30 ET | **SELL** | `PRGS` | 205 | $36.88 | $2.74 | $-751.58 | $7,573.64 | ▼ -751.58 after sell → book $7,573.64; vs 09:30 mark -2.74 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **BUY** | `SNPS` | 10 | $497.86 | $2.02 | — | $2,593.07 | — | news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $5301.55 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `WRBY` | 27 | $27.63 | $2.07 | — | $1,844.99 | — | news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list flatten; 🔵; ⚪; ret5=+4.6; leftover $757.36 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ACN` | 3 | $211.02 | $2.00 | — | $1,209.93 | — | news🟢 +7 −≤1; 70% leftover if #1 net ≥ 5; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list yday_gainer,yday_mover; ret5=+19.7; leftover $757.36 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,209.93 | ▼ close $7,435.44 vs 09:30 $7,576.38 (session -132.11) | 16:00 close · cash $1,209.93 · equity $7,435.44 vs 09:30 $7,576.38 (-140.94; session marks -132.11) · 3 name(s) marked open→close (per-name table). SNPS×10 09:30 $497.86 → close $489.90 -79.55; WRBY×27 09:30 $27.63 → close $27.03 -16.20; ACN×3 09:30 $211.02 → close $198.90 -36.36 | — |
 
 ## Not taken
 

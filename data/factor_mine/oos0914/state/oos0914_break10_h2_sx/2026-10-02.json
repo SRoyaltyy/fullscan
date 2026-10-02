@@ -1,0 +1,145 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 0.86,
+      "shares": 52,
+      "side": "BUY",
+      "ticker": "SES"
+    },
+    {
+      "fill_rule": "open",
+      "price": 32.35,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "WOLF"
+    }
+  ],
+  "cash": 58.38,
+  "date": "2026-10-02",
+  "equity": 10083.18,
+  "fees": 0.9297,
+  "fills": [
+    {
+      "fees": 0.6032,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 0.86,
+      "shares": 52,
+      "side": "BUY",
+      "ticker": "SES"
+    },
+    {
+      "fees": 0.3265,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 32.35,
+      "shares": 1,
+      "side": "BUY",
+      "ticker": "WOLF"
+    }
+  ],
+  "holdings": [
+    "FORM",
+    "PACB",
+    "PMVP",
+    "QSI",
+    "SES",
+    "WOLF"
+  ],
+  "mean": 3.3309,
+  "n_trades_today": 2,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-10-02",
+    "cash": 58.38,
+    "pos": {
+      "FORM": {
+        "close_px": 149.14999389648438,
+        "cost": 2094.332,
+        "entry_date": "2026-10-01",
+        "entry_px": 149.45,
+        "fee_in": 2.032,
+        "last_px": 150.5,
+        "min_hold": 2,
+        "notional": 2092.2999999999997,
+        "peak_px": 150.5,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,ohlc_hot; ret5=+13.8; leftover $2282.67",
+        "shares": 14,
+        "ticker": "FORM"
+      },
+      "PACB": {
+        "close_px": 2.5399999618530273,
+        "cost": 2294.0775,
+        "entry_date": "2026-10-01",
+        "entry_px": 2.34,
+        "fee_in": 12.5775,
+        "last_px": 2.5,
+        "min_hold": 2,
+        "notional": 2281.5,
+        "peak_px": 2.5,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+68.1; leftover $2282.67",
+        "shares": 975,
+        "ticker": "PACB"
+      },
+      "PMVP": {
+        "close_px": 1.7899999618530273,
+        "cost": 2298.9582,
+        "entry_date": "2026-10-01",
+        "entry_px": 1.68,
+        "fee_in": 17.5182,
+        "last_px": 1.75,
+        "min_hold": 2,
+        "notional": 2281.44,
+        "peak_px": 1.75,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+21.9; leftover $2282.67",
+        "shares": 1358,
+        "ticker": "PMVP"
+      },
+      "QSI": {
+        "close_px": 1.55,
+        "cost": 2306.9358,
+        "entry_date": "2026-10-01",
+        "entry_px": 1.2,
+        "fee_in": 24.5358,
+        "last_px": 1.38,
+        "min_hold": 2,
+        "notional": 2282.4,
+        "peak_px": 1.38,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer; ret5=+41.0; leftover $2282.67",
+        "shares": 1902,
+        "ticker": "QSI"
+      },
+      "SES": {
+        "close_px": 0.8847,
+        "cost": 45.3232,
+        "entry_date": "2026-10-02",
+        "entry_px": 0.86,
+        "fee_in": 0.6032,
+        "last_px": 0.86,
+        "min_hold": 2,
+        "notional": 44.72,
+        "peak_px": 0.86,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+54.3; leftover $45.46",
+        "shares": 52,
+        "ticker": "SES"
+      },
+      "WOLF": {
+        "close_px": 35.28,
+        "cost": 32.676500000000004,
+        "entry_date": "2026-10-02",
+        "entry_px": 32.35,
+        "fee_in": 0.3265,
+        "last_px": 32.35,
+        "min_hold": 2,
+        "notional": 32.35,
+        "peak_px": 32.35,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer; ret5=+18.5; leftover $45.46",
+        "shares": 1,
+        "ticker": "WOLF"
+      }
+    },
+    "yday_equity": 10083.18
+  }
+}

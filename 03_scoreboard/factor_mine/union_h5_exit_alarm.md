@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hold 5d, sell next 09:30 if 🚨
 
-Cash book **-10.82%** ($8,918) · signal-only (no cash/fees) was +17.52%. Starts YES **6/30**. Fills 235 · skips 456 · realized $+341.96.
+Cash book **-10.17%** ($8,983) · signal-only (no cash/fees) was +17.52%. Starts YES **6/30**. Fills 239 · skips 456 · realized $+341.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -375,6 +375,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `CDNL` | 35 | $30.30 | $2.10 | — | $1,130.07 | — | hold 5d, sell next 09:30 if 🚨; list probable,yday_gainer; ret5=+6.7; leftover $1070.85 | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `INO` | 863 | $1.24 | $11.13 | — | $48.82 | — | hold 5d, sell next 09:30 if 🚨; list probable,yday_gainer; 🔵; ret5=-2.4; leftover $1070.85 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.82 | ▲ close $8,917.91 vs 09:30 $8,961.27 (session +24.46) | 16:00 close · cash $48.82 · equity $8,917.91 vs 09:30 $8,961.27 (-43.36; session marks +24.46) · 9 name(s) marked open→close (per-name table). SN×2 09:30 $182.44 → close $182.44 +0.00; KSPI×11 09:30 $92.93 → close $92.02 -10.01; IOT×27 09:30 $38.99 → close $40.04 +28.35; AVPT×75 09:30 $14.27 → close $14.08 -14.25; RELY×50 09:30 $21.28 → close $21.48 +10.00; TLSA×964 09:30 $1.11 → close $1.14 +28.92; IVA×317 09:30 $3.38 → close $3.46 +26.94; CDNL×35 09:30 $30.30 → close $29.74 -19.60; INO×863 09:30 $1.24 → close $1.21 -25.89 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $48.82 | ▲ 09:30 equity $9,047.65 vs yday $8,917.91 (+129.74) | 09:30 open · cash $48.82 (unchanged overnight, no fees) · equity $9,047.65 vs prior close $8,917.91 (+129.74) · 9 name(s) re-marked at the open (per-name table). AVPT×75 yday $14.08 → 09:30 $14.22 +10.50; CDNL×35 yday $29.74 → 09:30 $30.29 +19.25; INO×863 yday $1.21 → 09:30 $1.23 +17.26; IOT×27 yday $40.04 → 09:30 $40.41 +9.99; IVA×317 yday $3.46 → 09:30 $3.57 +34.87; KSPI×11 yday $92.02 → 09:30 $92.05 +0.33; RELY×50 yday $21.48 → 09:30 $21.80 +16.00; SN×2 yday $182.44 → 09:30 $183.57 +2.26; TLSA×964 yday $1.14 → 09:30 $1.16 +19.28 | — |
+| 2026-10-02 09:30 ET | **SELL** | `SN` | 2 | $183.57 | $2.02 | $-4.97 | $413.94 | ▼ -4.97 after sell → book $9,045.63; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-02 09:30 ET | **BUY** | `WRBY` | 1 | $27.63 | $0.28 | — | $386.03 | — | hold 5d, sell next 09:30 if 🚨; list flatten; 🔵; ⚪; ret5=+4.6; leftover $51.74 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `BLFS` | 1 | $37.02 | $0.37 | — | $348.64 | — | hold 5d, sell next 09:30 if 🚨; list flatten; 🔵; ⚪; ret5=-4.7; leftover $51.74 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `QNC` | 30 | $1.69 | $0.60 | — | $297.34 | — | hold 5d, sell next 09:30 if 🚨; list probable,yday_gainer,yday_mover; ret5=-7.9; leftover $51.74 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $297.34 | ▼ close $8,982.74 vs 09:30 $9,047.65 (session -61.64) | 16:00 close · cash $297.34 · equity $8,982.74 vs 09:30 $9,047.65 (-64.91; session marks -61.64) · 11 name(s) marked open→close (per-name table). AVPT×75 09:30 $14.22 → close $14.07 -11.25; CDNL×35 09:30 $30.29 → close $30.73 +15.40; INO×863 09:30 $1.23 → close $1.16 -60.41; IOT×27 09:30 $40.41 → close $41.12 +19.17; IVA×317 09:30 $3.57 → close $3.56 -3.17; KSPI×11 09:30 $92.05 → close $94.05 +22.00; RELY×50 09:30 $21.80 → close $21.77 -1.50; TLSA×964 09:30 $1.16 → close $1.12 -38.56; WRBY×1 09:30 $27.63 → close $27.03 -0.60; BLFS×1 09:30 $37.02 → close $37.30 +0.28; QNC×30 09:30 $1.69 → close $1.59 -3.00 | — |
 
 ## Not taken
 

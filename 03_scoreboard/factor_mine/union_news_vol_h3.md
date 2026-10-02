@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-20.08%** ($7,992) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 102 · skips 133 · realized $-1334.78.
+Cash book **-20.51%** ($7,949) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 103 · skips 133 · realized $-1334.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -246,6 +246,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `TLSA` | 3751 | $1.11 | $48.39 | — | $4,115.92 | — | combo gate; gate news=good,vol=good; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+5.7; leftover $4163.96 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `PRGS` | 101 | $40.52 | $2.29 | — | $21.11 | — | combo gate; gate news=good,vol=good; list earn_react; 🔵; ret5=-2.6; leftover $4163.96 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.11 | ▼ close $7,991.83 vs 09:30 $8,346.57 (session -285.41) | 16:00 close · cash $21.11 · equity $7,991.83 vs 09:30 $8,346.57 (-354.74; session marks -285.41) · 2 name(s) marked open→close (per-name table). TLSA×3751 09:30 $1.11 → close $1.14 +112.53; PRGS×101 09:30 $40.52 → close $36.58 -397.94 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21.11 | ▲ 09:30 equity $8,097.15 vs yday $7,991.83 (+105.32) | 09:30 open · cash $21.11 (unchanged overnight, no fees) · equity $8,097.15 vs prior close $7,991.83 (+105.32) · 2 name(s) re-marked at the open (per-name table). PRGS×101 yday $36.58 → 09:30 $36.88 +30.30; TLSA×3751 yday $1.14 → 09:30 $1.16 +75.02 | — |
+| 2026-10-02 09:30 ET | **BUY** | `CMPX` | 4 | $0.94 | $0.05 | — | $17.30 | — | combo gate; gate news=good,vol=good; list yday_mover; 🔵; ret5=-20.6; leftover $4.22 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17.30 | ▼ close $7,948.75 vs 09:30 $8,097.15 (session -148.35) | 16:00 close · cash $17.30 · equity $7,948.75 vs 09:30 $8,097.15 (-148.40; session marks -148.35) · 3 name(s) marked open→close (per-name table). PRGS×101 09:30 $36.88 → close $36.90 +2.02; TLSA×3751 09:30 $1.16 → close $1.12 -150.04; CMPX×4 09:30 $0.94 → close $0.86 -0.33 | — |
 
 ## Not taken
 

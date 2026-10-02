@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/short_news_r_h3 w=0.9,0.1 net=priority
 
-Cash book **-17.19%** ($8,281) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 258 · skips 319 · realized $+4040.10.
+Cash book **-15.16%** ($8,484) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 264 · skips 319 · realized $+4040.10.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $1,651.16.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,286.98.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -401,6 +401,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SHORT** | `RSKD` | 35 | $7.92 | $2.12 | — | $1,405.04 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+10.8; combo leftover $283.51; owner short_news_r_h3 | join🟢 sector🟢 gen🔴 news🔴 digest🟢 judge🟡 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **SHORT** | `NKE` | 7 | $35.45 | $2.04 | — | $1,651.16 | — | news🔴; gate news=bad; list overnight,overnight_mega; ret5=-1.8; combo leftover $283.51; owner short_news_r_h3 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,651.16 | ▼ close $8,280.59 vs 09:30 $8,354.67 (session -61.50) | 16:00 close · cash $1,651.16 · equity $8,280.59 vs 09:30 $8,354.67 (-74.08; session marks -61.50) · 12 name(s) marked open→close (per-name table). AEHL×115 09:30 $9.74 → close $10.16 -48.30; CCL×64 09:30 $24.66 → close $25.07 +26.24; JEF×34 09:30 $45.41 → close $45.25 -5.44; KMX×26 09:30 $55.27 → close $55.89 +16.12; MTN×11 09:30 $138.51 → close $138.99 +5.28; UEC×159 09:30 $9.39 → close $9.36 -4.77; ACN×1 09:30 $215.98 → close $212.30 -3.68; MKC×9 09:30 $46.80 → close $44.14 -23.94; PRGS×10 09:30 $40.52 → close $36.58 -39.40; PYXS×122 09:30 $2.31 → close $2.19 +14.64; RSKD×35 09:30 $7.92 → close $7.93 -0.35; NKE×7 09:30 $35.45 → close $35.15 +2.10 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,651.16 | ▲ 09:30 equity $8,492.54 vs yday $8,280.59 (+211.95) | 09:30 open · cash $1,651.16 (unchanged overnight, no fees) · equity $8,492.54 vs prior close $8,280.59 (+211.95) | — |
+| 2026-10-02 09:30 ET | **COVER** | `AEHL` | 115 | $9.37 | $2.33 | $-132.95 | $571.28 | ▼ -132.95 after sell → book $8,490.20; vs 09:30 mark -2.34 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-02 09:30 ET | **SELL** | `CCL` | 64 | $25.59 | $2.21 | $+72.41 | $2,206.83 | ▲ +72.41 after sell → book $8,488.00; vs 09:30 mark -2.20 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-02 09:30 ET | **SELL** | `JEF` | 34 | $45.54 | $2.11 | $-22.57 | $3,753.07 | ▼ -22.57 after sell → book $8,485.88; vs 09:30 mark -2.12 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-02 09:30 ET | **SELL** | `KMX` | 26 | $56.27 | $2.09 | $-111.67 | $5,214.01 | ▼ -111.67 after sell → book $8,483.79; vs 09:30 mark -2.09 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-02 09:30 ET | **SELL** | `MTN` | 11 | $140.00 | $2.05 | $+13.31 | $6,751.96 | ▲ +13.31 after sell → book $8,481.75; vs 09:30 mark -2.04 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-02 09:30 ET | **SELL** | `UEC` | 159 | $9.67 | $2.51 | $-43.13 | $8,286.98 | ▼ -43.13 after sell → book $8,479.24; vs 09:30 mark -2.51 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,286.98 | ▲ close $8,483.64 vs 09:30 $8,492.54 (session +4.40) | 16:00 close · cash $8,286.98 · equity $8,483.64 vs 09:30 $8,492.54 (-8.90; session marks +4.40) · 6 name(s) marked open→close (per-name table). ACN×1 09:30 $211.02 → close $198.90 -12.12; MKC×9 09:30 $43.52 → close $44.67 +10.35; NKE×7 09:30 $32.55 → close $33.87 -9.22; PRGS×10 09:30 $36.88 → close $36.90 +0.20; PYXS×122 09:30 $2.21 → close $2.14 +8.54; RSKD×35 09:30 $8.05 → close $7.86 +6.65 | — |
 
 ## Not taken
 

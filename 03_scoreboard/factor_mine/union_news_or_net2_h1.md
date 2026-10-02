@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 2
 
-Cash book **-25.53%** ($7,447) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 188 · skips 55 · realized $-720.09.
+Cash book **-26.59%** ($7,341) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 198 · skips 55 · realized $-720.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -332,6 +332,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `TLSA` | 1697 | $1.11 | $21.89 | — | $2,068.47 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+5.7; leftover $1884.02 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `MU` | 1 | $1054.08 | $1.99 | — | $1,012.40 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list earn_react; ret5=-0.6; leftover $1884.02 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,012.40 | ▼ close $7,447.45 vs 09:30 $7,553.45 (session -60.62) | 16:00 close · cash $1,012.40 · equity $7,447.45 vs 09:30 $7,553.45 (-106.00; session marks -60.62) · 4 name(s) marked open→close (per-name table). PRGS×46 09:30 $40.52 → close $36.58 -181.24; NTAP×8 09:30 $211.75 → close $215.05 +26.40; TLSA×1697 09:30 $1.11 → close $1.14 +50.91; MU×1 09:30 $1054.08 → close $1097.39 +43.31 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,012.40 | ▲ 09:30 equity $7,516.29 vs yday $7,447.45 (+68.84) | 09:30 open · cash $1,012.40 (unchanged overnight, no fees) · equity $7,516.29 vs prior close $7,447.45 (+68.84) · 4 name(s) re-marked at the open (per-name table). MU×1 yday $1097.39 → 09:30 $1107.45 +10.06; NTAP×8 yday $215.05 → 09:30 $216.43 +11.04; PRGS×46 yday $36.58 → 09:30 $36.88 +13.80; TLSA×1697 yday $1.14 → 09:30 $1.16 +33.94 | — |
+| 2026-10-02 09:30 ET | **SELL** | `MU` | 1 | $1107.45 | $2.01 | $+49.36 | $2,117.84 | ▲ +49.36 after sell → book $7,514.28; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `NTAP` | 8 | $216.43 | $2.04 | $+33.39 | $3,847.24 | ▲ +33.39 after sell → book $7,512.24; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `PRGS` | 46 | $36.88 | $2.15 | $-171.72 | $5,541.57 | ▼ -171.72 after sell → book $7,510.09; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `TLSA` | 1697 | $1.16 | $22.19 | $+40.77 | $7,487.90 | ▲ +40.77 after sell → book $7,487.90; vs 09:30 mark -22.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **BUY** | `SNPS` | 2 | $497.86 | $2.00 | — | $6,490.19 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $1247.98 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `WRBY` | 45 | $27.63 | $2.12 | — | $5,244.72 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list flatten; 🔵; ⚪; ret5=+4.6; leftover $1247.98 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ACN` | 5 | $211.02 | $2.00 | — | $4,187.61 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list yday_gainer,yday_mover; ret5=+19.7; leftover $1247.98 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `LITE` | 1 | $1053.26 | $1.99 | — | $3,132.36 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list yday_gainer,ohlc_hot; 🔵; ret5=+12.6; leftover $1247.98 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `CMPX` | 1327 | $0.94 | $16.46 | — | $1,868.39 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list yday_mover; 🔵; ret5=-20.6; leftover $1247.98 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `COHR` | 3 | $316.56 | $2.00 | — | $916.70 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list probable,yday_gainer; 🔵; ret5=+9.8; leftover $1247.98 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $916.70 | ▼ close $7,340.73 vs 09:30 $7,516.29 (session -120.59) | 16:00 close · cash $916.70 · equity $7,340.73 vs 09:30 $7,516.29 (-175.56; session marks -120.59) · 6 name(s) marked open→close (per-name table). SNPS×2 09:30 $497.86 → close $489.90 -15.91; WRBY×45 09:30 $27.63 → close $27.03 -27.00; ACN×5 09:30 $211.02 → close $198.90 -60.60; LITE×1 09:30 $1053.26 → close $1085.42 +32.16; CMPX×1327 09:30 $0.94 → close $0.86 -110.67; COHR×3 09:30 $316.56 → close $337.04 +61.43 | — |
 
 ## Not taken
 

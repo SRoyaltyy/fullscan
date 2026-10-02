@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+18.46%** ($11,846) · signal-only (no cash/fees) was +392.57%. Starts YES **29/30**. Fills 224 · skips 265 · realized $+1176.18.
+Cash book **+19.92%** ($11,992) · signal-only (no cash/fees) was +392.57%. Starts YES **29/30**. Fills 226 · skips 265 · realized $+1176.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -365,6 +365,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `MNKD` | 486 | $3.84 | $6.27 | — | $1,894.26 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+16.8; leftover $1868.26 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `SITC` | 557 | $3.35 | $7.19 | — | $21.13 | — | rank by hot_score; rank hot_score; list yday_gainer; ret5=+13.5; leftover $1868.26 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.13 | ▲ close $11,845.67 vs 09:30 $11,245.53 (session +696.27) | 16:00 close · cash $21.13 · equity $11,845.67 vs 09:30 $11,245.53 (+600.14; session marks +696.27) · 6 name(s) marked open→close (per-name table). PACB×798 09:30 $2.34 → close $2.51 +135.66; QSI×1556 09:30 $1.20 → close $1.43 +357.88; PMVP×1112 09:30 $1.68 → close $1.75 +77.84; FORM×12 09:30 $149.45 → close $148.44 -12.12; MNKD×486 09:30 $3.84 → close $3.95 +53.46; SITC×557 09:30 $3.35 → close $3.50 +83.55 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21.13 | ▼ 09:30 equity $11,808.20 vs yday $11,845.67 (-37.47) | 09:30 open · cash $21.13 (unchanged overnight, no fees) · equity $11,808.20 vs prior close $11,845.67 (-37.47) · 6 name(s) re-marked at the open (per-name table). FORM×12 yday $148.44 → 09:30 $150.50 +24.72; MNKD×486 yday $3.95 → 09:30 $4.01 +29.16; PACB×798 yday $2.51 → 09:30 $2.50 -7.98; PMVP×1112 yday $1.75 → 09:30 $1.75 +0.00; QSI×1556 yday $1.43 → 09:30 $1.38 -77.80; SITC×557 yday $3.50 → 09:30 $3.49 -5.57 | — |
+| 2026-10-02 09:30 ET | **BUY** | `SES` | 3 | $0.86 | $0.03 | — | $18.52 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+54.3; leftover $3.02 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `NAUT` | 1 | $1.67 | $0.02 | — | $16.83 | — | rank by hot_score; rank hot_score; list yday_gainer; 🔵; ⚪; ret5=+58.4; leftover $3.02 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16.83 | ▲ close $11,992.18 vs 09:30 $11,808.20 (session +184.03) | 16:00 close · cash $16.83 · equity $11,992.18 vs 09:30 $11,808.20 (+183.98; session marks +184.03) · 8 name(s) marked open→close (per-name table). FORM×12 09:30 $150.50 → close $149.15 -16.20; MNKD×486 09:30 $4.01 → close $3.80 -102.06; PACB×798 09:30 $2.50 → close $2.54 +31.92; PMVP×1112 09:30 $1.75 → close $1.79 +44.48; QSI×1556 09:30 $1.38 → close $1.55 +264.52; SITC×557 09:30 $3.49 → close $3.42 -38.99; SES×3 09:30 $0.86 → close $0.88 +0.07; NAUT×1 09:30 $1.67 → close $1.96 +0.29 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-22.31%** ($7,769) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 187 · skips 65 · realized $-814.48.
+Cash book **-23.80%** ($7,620) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 197 · skips 65 · realized $-814.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -330,6 +330,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `NTAP` | 12 | $211.75 | $2.03 | — | $2,769.58 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+7.0; leftover $2649.53 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `TLSA` | 2386 | $1.11 | $30.78 | — | $90.34 | — | prior-export headline🟢 only; gate headline=good; rank cond; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+5.7; leftover $2649.53 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $90.34 | ▼ close $7,768.68 vs 09:30 $7,969.25 (session -144.92) | 16:00 close · cash $90.34 · equity $7,768.68 vs 09:30 $7,969.25 (-200.57; session marks -144.92) · 3 name(s) marked open→close (per-name table). PRGS×65 09:30 $40.52 → close $36.58 -256.10; NTAP×12 09:30 $211.75 → close $215.05 +39.60; TLSA×2386 09:30 $1.11 → close $1.14 +71.58 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $90.34 | ▲ 09:30 equity $7,852.46 vs yday $7,768.68 (+83.78) | 09:30 open · cash $90.34 (unchanged overnight, no fees) · equity $7,852.46 vs prior close $7,768.68 (+83.78) · 3 name(s) re-marked at the open (per-name table). NTAP×12 yday $215.05 → 09:30 $216.43 +16.56; PRGS×65 yday $36.58 → 09:30 $36.88 +19.50; TLSA×2386 yday $1.14 → 09:30 $1.16 +47.72 | — |
+| 2026-10-02 09:30 ET | **SELL** | `NTAP` | 12 | $216.43 | $2.06 | $+52.08 | $2,685.44 | ▲ +52.08 after sell → book $7,850.40; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `PRGS` | 65 | $36.88 | $2.21 | $-241.00 | $5,080.43 | ▼ -241.00 after sell → book $7,848.19; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `TLSA` | 2386 | $1.16 | $31.20 | $+57.32 | $7,816.99 | ▲ +57.32 after sell → book $7,816.99; vs 09:30 mark -31.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **BUY** | `SNPS` | 2 | $497.86 | $2.00 | — | $6,819.28 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $1116.71 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `WRBY` | 40 | $27.63 | $2.11 | — | $5,711.97 | — | prior-export headline🟢 only; gate headline=good; rank cond; list flatten; 🔵; ⚪; ret5=+4.6; leftover $1116.71 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `LITE` | 1 | $1053.26 | $1.99 | — | $4,656.72 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer,ohlc_hot; 🔵; ret5=+12.6; leftover $1116.71 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `CMPX` | 1187 | $0.94 | $14.72 | — | $3,526.10 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_mover; 🔵; ret5=-20.6; leftover $1116.71 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `COHR` | 3 | $316.56 | $2.00 | — | $2,574.41 | — | prior-export headline🟢 only; gate headline=good; rank cond; list probable,yday_gainer; 🔵; ret5=+9.8; leftover $1116.71 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `CIEN` | 2 | $385.00 | $2.00 | — | $1,802.41 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer; ret5=+5.8; leftover $1116.71 | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `GLND` | 262 | $4.25 | $3.38 | — | $685.53 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_mover,ohlc_hot; ret5=-17.8; leftover $1116.71 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $685.53 | ▼ close $7,619.92 vs 09:30 $7,852.46 (session -168.88) | 16:00 close · cash $685.53 · equity $7,619.92 vs 09:30 $7,852.46 (-232.54; session marks -168.88) · 7 name(s) marked open→close (per-name table). SNPS×2 09:30 $497.86 → close $489.90 -15.91; WRBY×40 09:30 $27.63 → close $27.03 -24.00; LITE×1 09:30 $1053.26 → close $1085.42 +32.16; CMPX×1187 09:30 $0.94 → close $0.86 -99.00; COHR×3 09:30 $316.56 → close $337.04 +61.43; CIEN×2 09:30 $385.00 → close $391.34 +12.68; GLND×262 09:30 $4.25 → close $3.73 -136.24 | — |
 
 ## Not taken
 

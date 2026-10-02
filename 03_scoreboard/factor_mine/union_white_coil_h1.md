@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-20.30%** ($7,970) · signal-only (no cash/fees) was -4.35%. Starts YES **0/30**. Fills 179 · skips 0 · realized $-550.20.
+Cash book **-20.21%** ($7,979) · signal-only (no cash/fees) was -4.35%. Starts YES **0/30**. Fills 188 · skips 0 · realized $-550.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -324,3 +324,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SELL** | `SONO` | 56 | $18.09 | $2.18 | $+14.14 | $6,130.45 | ▲ +14.14 after sell → book $7,972.25; vs 09:30 mark -2.18 | exit unpriced hold on first bar after 2 sess | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 09:30 ET | **SELL** | `TOST` | 32 | $29.05 | $2.11 | $-47.39 | $7,057.94 | ▼ -47.39 after sell → book $7,970.14; vs 09:30 mark -2.11 | exit unpriced hold on first bar after 2 sess | — |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,057.94 | ▲ close $7,970.14 vs 09:30 $7,985.30 (session +0.00) | 16:00 close · cash $7,057.94 · equity $7,970.14 vs 09:30 $7,985.30 (-15.16; session marks +0.00) · 1 name(s) marked open→close (per-name table). SN×5 09:30 $182.44 → close $182.44 +0.00 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,057.94 | ▲ 09:30 equity $7,975.79 vs yday $7,970.14 (+5.65) | 09:30 open · cash $7,057.94 (unchanged overnight, no fees) · equity $7,975.79 vs prior close $7,970.14 (+5.65) · 1 name(s) re-marked at the open (per-name table). SN×5 yday $182.44 → 09:30 $183.57 +5.65 | — |
+| 2026-10-02 09:30 ET | **SELL** | `SN` | 5 | $183.57 | $2.02 | $-6.43 | $7,973.76 | ▼ -6.43 after sell → book $7,973.76; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-02 09:30 ET | **BUY** | `ILMN` | 3 | $265.91 | $2.00 | — | $7,174.04 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten; 🔵; ⚪; ret5=-3.0; leftover $996.72 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `CDNA` | 15 | $66.33 | $2.04 | — | $6,177.05 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten,ohlc_hot; 🔵; ⚪; ret5=+7.9; leftover $996.72 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `WRBY` | 36 | $27.63 | $2.10 | — | $5,180.27 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten; 🔵; ⚪; ret5=+4.6; leftover $996.72 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `BLFS` | 26 | $37.02 | $2.07 | — | $4,215.68 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten; 🔵; ⚪; ret5=-4.7; leftover $996.72 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `INOD` | 13 | $73.05 | $2.03 | — | $3,264.01 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list probable,yday_gainer; 🔵; ⚪; ret5=-0.0; leftover $996.72 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ACRS` | 221 | $4.50 | $2.85 | — | $2,266.66 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list yday_mover; 🔵; ⚪; ret5=-18.0; leftover $996.72 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ARHS` | 98 | $10.12 | $2.28 | — | $1,272.61 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list ohlc_hot; 🔵; ⚪; ret5=+4.2; leftover $996.72 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `GRAL` | 7 | $135.52 | $2.01 | — | $321.96 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list ohlc_hot; 🔵; ⚪; ret5=+5.9; leftover $996.72 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $321.96 | ▲ close $7,978.65 vs 09:30 $7,975.79 (session +22.26) | 16:00 close · cash $321.96 · equity $7,978.65 vs 09:30 $7,975.79 (+2.86; session marks +22.26) · 8 name(s) marked open→close (per-name table). ILMN×3 09:30 $265.91 → close $273.04 +21.39; CDNA×15 09:30 $66.33 → close $67.15 +12.30; WRBY×36 09:30 $27.63 → close $27.03 -21.60; BLFS×26 09:30 $37.02 → close $37.30 +7.28; INOD×13 09:30 $73.05 → close $70.07 -38.74; ACRS×221 09:30 $4.50 → close $4.39 -24.31; ARHS×98 09:30 $10.12 → close $10.24 +11.76; GRAL×7 09:30 $135.52 → close $143.26 +54.18 | — |

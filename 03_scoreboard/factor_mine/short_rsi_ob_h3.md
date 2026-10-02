@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-15.09%** ($8,491) · signal-only (no cash/fees) was -115.85%. Starts YES **1/30**. Fills 254 · skips 279 · realized $-808.98.
+Cash book **-23.15%** ($7,685) · signal-only (no cash/fees) was -115.85%. Starts YES **1/30**. Fills 261 · skips 279 · realized $-808.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -394,6 +394,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SHORT** | `GLND` | 121 | $5.06 | $2.40 | — | $12,970.81 | — | RSI overbought; gate rsi_ob=True; list yday_gainer; ret5=+76.3; leftover $613.25 | join🔴 sector🔴 gen🔴 news🟢 digest🟢 judge🟡 ab🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **SHORT** | `SDEV` | 170 | $3.60 | $2.55 | — | $13,580.25 | — | RSI overbought; gate rsi_ob=True; list yday_mover; ret5=+131.2; leftover $613.25 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,580.25 | ▼ close $8,491.34 vs 09:30 $8,616.19 (session -71.82) | 16:00 close · cash $13,580.25 · equity $8,491.34 vs 09:30 $8,616.19 (-124.85; session marks -71.82) · 8 name(s) marked open→close (per-name table). TEM×9 09:30 $82.58 → close $82.58 -0.00; PACB×262 09:30 $2.34 → close $2.51 -44.54; QSI×511 09:30 $1.20 → close $1.43 -117.53; FEAM×176 09:30 $3.48 → close $3.23 +44.00; FORM×4 09:30 $149.45 → close $148.44 +4.04; SITC×183 09:30 $3.35 → close $3.50 -27.45; GLND×121 09:30 $5.06 → close $4.40 +79.86; SDEV×170 09:30 $3.60 → close $3.66 -10.20 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,580.25 | ▼ 09:30 equity $8,333.19 vs yday $8,491.34 (-158.15) | 09:30 open · cash $13,580.25 (unchanged overnight, no fees) · equity $8,333.19 vs prior close $8,491.34 (-158.15) · 8 name(s) re-marked at the open (per-name table). FEAM×176 yday $3.23 → 09:30 $3.27 -7.04; FORM×4 yday $148.44 → 09:30 $150.50 -8.24; GLND×121 yday $4.40 → 09:30 $4.25 +18.15; PACB×262 yday $2.51 → 09:30 $2.50 +2.62; QSI×511 yday $1.43 → 09:30 $1.38 +25.55; SDEV×170 yday $3.66 → 09:30 $5.06 -238.00; SITC×183 yday $3.50 → 09:30 $3.49 +1.83; TEM×9 yday $82.58 → 09:30 $77.36 +46.98 | — |
+| 2026-10-02 09:30 ET | **COVER** | `TEM` | 9 | $77.36 | $2.02 | $+52.94 | $12,881.99 | ▲ +52.94 after sell → book $8,331.17; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 5 sess | — |
+| 2026-10-02 09:30 ET | **SHORT** | `CDNA` | 10 | $66.33 | $2.06 | — | $13,543.23 | — | RSI overbought; gate rsi_ob=True; list flatten,ohlc_hot; 🔵; ⚪; ret5=+7.9; leftover $694.26 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `SES` | 807 | $0.86 | $9.52 | — | $14,227.73 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+54.3; leftover $694.26 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `ACN` | 3 | $211.02 | $2.04 | — | $14,858.75 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+19.7; leftover $694.26 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `SNPS` | 1 | $497.86 | $2.03 | — | $15,354.58 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $694.26 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `EFXT` | 27 | $25.28 | $2.11 | — | $16,035.03 | — | RSI overbought; gate rsi_ob=True; list yday_gainer; ret5=+9.4; leftover $694.26 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `NAUT` | 416 | $1.67 | $5.46 | — | $16,722.21 | — | RSI overbought; gate rsi_ob=True; list yday_gainer; 🔵; ⚪; ret5=+58.4; leftover $694.26 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,722.21 | ▼ close $7,685.07 vs 09:30 $8,333.19 (session -622.88) | 16:00 close · cash $16,722.21 · equity $7,685.07 vs 09:30 $8,333.19 (-648.12; session marks -622.88) · 13 name(s) marked open→close (per-name table). FEAM×176 09:30 $3.27 → close $3.88 -107.36; FORM×4 09:30 $150.50 → close $149.15 +5.40; GLND×121 09:30 $4.25 → close $3.73 +62.92; PACB×262 09:30 $2.50 → close $2.54 -10.48; QSI×511 09:30 $1.38 → close $1.55 -86.87; SDEV×170 09:30 $5.06 → close $7.48 -411.40; SITC×183 09:30 $3.49 → close $3.42 +12.81; CDNA×10 09:30 $66.33 → close $67.15 -8.20; SES×807 09:30 $0.86 → close $0.88 -19.93; ACN×3 09:30 $211.02 → close $198.90 +36.36; SNPS×1 09:30 $497.86 → close $489.90 +7.96; EFXT×27 09:30 $25.28 → close $24.59 +18.63; NAUT×416 09:30 $1.67 → close $1.96 -122.72 | — |
 
 ## Not taken
 

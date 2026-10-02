@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-9.20%** ($9,080) · signal-only (no cash/fees) was +10.92%. Starts YES **15/30**. Fills 26 · skips 0 · realized $+806.69.
+Cash book **-4.14%** ($9,586) · signal-only (no cash/fees) was +10.92%. Starts YES **15/30**. Fills 27 · skips 0 · realized $+806.69.
 
 ## How this sleeve decides (like you are 10)
 
@@ -170,3 +170,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18.05 | ▼ 09:30 equity $9,082.33 vs yday $9,731.77 (-649.44) | 09:30 open · cash $18.05 (unchanged overnight, no fees) · equity $9,082.33 vs prior close $9,731.77 (-649.44) · 1 name(s) re-marked at the open (per-name table). KMX×164 yday $59.23 → 09:30 $55.27 -649.44 | — |
 | 2026-10-01 09:30 ET | **SELL** | `KMX` | 164 | $55.27 | $2.58 | $-847.20 | $9,079.75 | ▼ -847.20 after sell → book $9,079.75; vs 09:30 mark -2.58 | exit unpriced hold on first bar after 2 sess | — |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,079.75 | ▲ close $9,079.75 vs 09:30 $9,082.33 (session +0.00) | 16:00 close · cash $9,079.75 · no lots left · equity $9,079.75. | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,079.75 | ▲ 09:30 equity $9,079.75 vs yday $9,079.75 (+0.00) | 09:30 open · cash $9,079.75 · no holdings · equity $9,079.75 vs prior close $9,079.75 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-02 09:30 ET | **BUY** | `ETON` | 173 | $52.42 | $2.51 | — | $8.58 | — | combo gate; gate flow_in=True,zero_red=True; list flatten; 🔵; ⚪; ret5=-12.6; leftover $9079.75 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.58 | ▲ close $9,585.86 vs 09:30 $9,079.75 (session +508.62) | 16:00 close · cash $8.58 · equity $9,585.86 vs 09:30 $9,079.75 (+506.11; session marks +508.62) · 1 name(s) marked open→close (per-name table). ETON×173 09:30 $52.42 → close $55.36 +508.62 | — |

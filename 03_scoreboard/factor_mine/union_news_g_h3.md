@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g, no 🚨
 
-Cash book **-22.15%** ($7,785) · signal-only (no cash/fees) was +177.31%. Starts YES **1/30**. Fills 187 · skips 234 · realized $-2132.89.
+Cash book **-21.88%** ($7,812) · signal-only (no cash/fees) was +177.31%. Starts YES **1/30**. Fills 190 · skips 234 · realized $-2132.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -329,6 +329,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `MU` | 1 | $1054.08 | $1.99 | — | $2,921.10 | — | union ∩ news_g, no 🚨; gate news=good; list earn_react; ret5=-0.6; leftover $1969.24 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `PRGS` | 48 | $40.52 | $2.13 | — | $974.00 | — | union ∩ news_g, no 🚨; gate news=good; list earn_react; 🔵; ret5=-2.6; leftover $1969.24 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $974.00 | ▼ close $7,785.04 vs 09:30 $7,901.69 (session -62.89) | 16:00 close · cash $974.00 · equity $7,785.04 vs 09:30 $7,901.69 (-116.65; session marks -62.89) · 4 name(s) marked open→close (per-name table). TLSA×1774 09:30 $1.11 → close $1.14 +53.22; NTAP×9 09:30 $211.75 → close $215.05 +29.70; MU×1 09:30 $1054.08 → close $1097.39 +43.31; PRGS×48 09:30 $40.52 → close $36.58 -189.12 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $974.00 | ▲ 09:30 equity $7,857.40 vs yday $7,785.04 (+72.36) | 09:30 open · cash $974.00 (unchanged overnight, no fees) · equity $7,857.40 vs prior close $7,785.04 (+72.36) · 4 name(s) re-marked at the open (per-name table). MU×1 yday $1097.39 → 09:30 $1107.45 +10.06; NTAP×9 yday $215.05 → 09:30 $216.43 +12.42; PRGS×48 yday $36.58 → 09:30 $36.88 +14.40; TLSA×1774 yday $1.14 → 09:30 $1.16 +35.48 | — |
+| 2026-10-02 09:30 ET | **BUY** | `WRBY` | 4 | $27.63 | $1.12 | — | $862.36 | — | union ∩ news_g, no 🚨; gate news=good; list flatten; 🔵; ⚪; ret5=+4.6; leftover $121.75 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `GLND` | 28 | $4.25 | $1.27 | — | $742.09 | — | union ∩ news_g, no 🚨; gate news=good; list yday_mover,ohlc_hot; ret5=-17.8; leftover $121.75 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `CMPX` | 129 | $0.94 | $1.60 | — | $619.22 | — | union ∩ news_g, no 🚨; gate news=good; list yday_mover; 🔵; ret5=-20.6; leftover $121.75 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $619.22 | ▼ close $7,811.69 vs 09:30 $7,857.40 (session -41.72) | 16:00 close · cash $619.22 · equity $7,811.69 vs 09:30 $7,857.40 (-45.71; session marks -41.72) · 7 name(s) marked open→close (per-name table). MU×1 09:30 $1107.45 → close $1074.89 -32.56; NTAP×9 09:30 $216.43 → close $226.27 +88.56; PRGS×48 09:30 $36.88 → close $36.90 +0.96; TLSA×1774 09:30 $1.16 → close $1.12 -70.96; WRBY×4 09:30 $27.63 → close $27.03 -2.40; GLND×28 09:30 $4.25 → close $3.73 -14.56; CMPX×129 09:30 $0.94 → close $0.86 -10.76 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + (yday up or major catalyst), then Score
 
-Cash book **-10.89%** ($8,911) · signal-only (no cash/fees) was +6.04%. Starts YES **5/30**. Fills 192 · skips 94 · realized $-316.93.
+Cash book **-9.02%** ($9,098) · signal-only (no cash/fees) was +6.04%. Starts YES **5/30**. Fills 201 · skips 94 · realized $-316.93.
 
 ## How this sleeve decides (like you are 10)
 
@@ -336,6 +336,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SELL** | `VFC` | 84 | $14.11 | $2.27 | $-38.11 | $7,375.39 | ▼ -38.11 after sell → book $8,913.13; vs 09:30 mark -2.27 | exit unpriced hold on first bar after 2 sess | — |
 | 2026-10-01 09:30 ET | **SELL** | `ZSQR` | 105 | $4.22 | $2.33 | $+33.16 | $7,816.16 | ▲ +33.16 after sell → book $8,910.80; vs 09:30 mark -2.33 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,816.16 | ▲ close $8,910.80 vs 09:30 $8,926.40 (session +0.00) | 16:00 close · cash $7,816.16 · equity $8,910.80 vs 09:30 $8,926.40 (-15.60; session marks +0.00) · 1 name(s) marked open→close (per-name table). SN×6 09:30 $182.44 → close $182.44 +0.00 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,816.16 | ▲ 09:30 equity $8,917.58 vs yday $8,910.80 (+6.78) | 09:30 open · cash $7,816.16 (unchanged overnight, no fees) · equity $8,917.58 vs prior close $8,910.80 (+6.78) · 1 name(s) re-marked at the open (per-name table). SN×6 yday $182.44 → 09:30 $183.57 +6.78 | — |
+| 2026-10-02 09:30 ET | **SELL** | `SN` | 6 | $183.57 | $2.03 | $-6.92 | $8,915.55 | ▼ -6.92 after sell → book $8,915.55; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-02 09:30 ET | **BUY** | `CDNA` | 16 | $66.33 | $2.04 | — | $7,852.23 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten,ohlc_hot; 🔵; ⚪; ret5=+7.9; leftover $1114.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ETON` | 21 | $52.42 | $2.05 | — | $6,749.36 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list flatten; 🔵; ⚪; ret5=-12.6; leftover $1114.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `INOD` | 15 | $73.05 | $2.04 | — | $5,651.58 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list probable,yday_gainer; 🔵; ⚪; ret5=-0.0; leftover $1114.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `SNPS` | 2 | $497.86 | $2.00 | — | $4,653.87 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $1114.44 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `NAUT` | 669 | $1.67 | $8.63 | — | $3,531.35 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list yday_gainer; 🔵; ⚪; ret5=+58.4; leftover $1114.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `FOSL` | 160 | $6.95 | $2.47 | — | $2,416.88 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; 🔵; ⚪; ret5=+16.2; leftover $1114.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ARHS` | 110 | $10.12 | $2.32 | — | $1,301.36 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; 🔵; ⚪; ret5=+4.2; leftover $1114.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `PDFS` | 20 | $55.24 | $2.05 | — | $194.51 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; ⚪; ret5=+11.5; leftover $1114.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $194.51 | ▲ close $9,097.96 vs 09:30 $8,917.58 (session +206.00) | 16:00 close · cash $194.51 · equity $9,097.96 vs 09:30 $8,917.58 (+180.38; session marks +206.00) · 8 name(s) marked open→close (per-name table). CDNA×16 09:30 $66.33 → close $67.15 +13.12; ETON×21 09:30 $52.42 → close $55.36 +61.74; INOD×15 09:30 $73.05 → close $70.07 -44.70; SNPS×2 09:30 $497.86 → close $489.90 -15.91; NAUT×669 09:30 $1.67 → close $1.96 +197.35; FOSL×160 09:30 $6.95 → close $6.80 -24.00; ARHS×110 09:30 $10.12 → close $10.24 +13.20; PDFS×20 09:30 $55.24 → close $55.50 +5.20 | — |
 
 ## Not taken
 

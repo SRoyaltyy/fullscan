@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-25.48%** ($7,452) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 215 · skips 295 · realized $+93.52.
+Cash book **-23.83%** ($7,617) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 215 · skips 295 · realized $+93.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -357,6 +357,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `PYXS` | 455 | $2.31 | $5.87 | — | $1,101.89 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; 🔵; ret5=-27.6; leftover $1053.35 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `GLAS` | 187 | $5.62 | $2.55 | — | $48.40 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=-28.5; leftover $1053.35 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.40 | ▲ close $7,452.32 vs 09:30 $7,412.43 (session +105.58) | 16:00 close · cash $48.40 · equity $7,452.32 vs 09:30 $7,412.43 (+39.89; session marks +105.58) · 7 name(s) marked open→close (per-name table). KSPI×11 09:30 $92.93 → close $92.02 -10.01; RELY×49 09:30 $21.28 → close $21.48 +9.80; CAPR×112 09:30 $9.36 → close $8.94 -47.04; LQDA×43 09:30 $23.96 → close $27.99 +173.29; AIB×752 09:30 $1.40 → close $1.52 +90.24; PYXS×455 09:30 $2.31 → close $2.19 -54.60; GLAS×187 09:30 $5.62 → close $5.32 -56.10 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $48.40 | ▼ 09:30 equity $7,387.55 vs yday $7,452.32 (-64.77) | 09:30 open · cash $48.40 (unchanged overnight, no fees) · equity $7,387.55 vs prior close $7,452.32 (-64.77) · 7 name(s) re-marked at the open (per-name table). AIB×752 yday $1.52 → 09:30 $1.45 -52.64; CAPR×112 yday $8.94 → 09:30 $9.14 +22.40; GLAS×187 yday $5.32 → 09:30 $5.30 -3.74; KSPI×11 yday $92.02 → 09:30 $92.05 +0.33; LQDA×43 yday $27.99 → 09:30 $26.69 -55.90; PYXS×455 yday $2.19 → 09:30 $2.21 +9.10; RELY×49 yday $21.48 → 09:30 $21.80 +15.68 | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.40 | ▲ close $7,617.21 vs 09:30 $7,387.55 (session +229.66) | 16:00 close · cash $48.40 · equity $7,617.21 vs 09:30 $7,387.55 (+229.66; session marks +229.66) · 7 name(s) marked open→close (per-name table). AIB×752 09:30 $1.45 → close $1.64 +142.88; CAPR×112 09:30 $9.14 → close $8.95 -21.28; GLAS×187 09:30 $5.30 → close $5.49 +35.53; KSPI×11 09:30 $92.05 → close $94.05 +22.00; LQDA×43 09:30 $26.69 → close $28.64 +83.85; PYXS×455 09:30 $2.21 → close $2.14 -31.85; RELY×49 09:30 $21.80 → close $21.77 -1.47 | — |
 
 ## Not taken
 

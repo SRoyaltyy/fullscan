@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short morning packet news🔴
 
-Cash book **+3.46%** ($10,346) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 27 · skips 26 · realized $+60.75.
+Cash book **+5.32%** ($10,532) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 27 · skips 26 · realized $+60.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -167,6 +167,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,305.50 | ▲ 09:30 equity $10,305.50 vs yday $10,305.50 (+0.00) | 09:30 open · cash $10,305.50 · no holdings · equity $10,305.50 vs prior close $10,305.50 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-01 09:30 ET | **SHORT** | `NKE` | 145 | $35.45 | $2.63 | — | $15,443.12 | — | short morning packet news🔴; gate news_box=bad; list overnight,overnight_mega; ret5=-1.8; leftover $5152.75 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,443.12 | ▲ close $10,346.37 vs 09:30 $10,305.50 (session +43.50) | 16:00 close · cash $15,443.12 · equity $10,346.37 vs 09:30 $10,305.50 (+40.87; session marks +43.50) · 1 name(s) marked open→close (per-name table). NKE×145 09:30 $35.45 → close $35.15 +43.50 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,443.12 | ▲ 09:30 equity $10,722.94 vs yday $10,346.37 (+376.57) | 09:30 open · cash $15,443.12 (unchanged overnight, no fees) · equity $10,722.94 vs prior close $10,346.37 (+376.57) · 1 name(s) re-marked at the open (per-name table). NKE×145 yday $35.15 → 09:30 $32.55 +376.57 | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,443.12 | ▼ close $10,531.97 vs 09:30 $10,722.94 (session -190.97) | 16:00 close · cash $15,443.12 · equity $10,531.97 vs 09:30 $10,722.94 (-190.97; session marks -190.97) · 1 name(s) marked open→close (per-name table). NKE×145 09:30 $32.55 → close $33.87 -190.97 | — |
 
 ## Not taken
 

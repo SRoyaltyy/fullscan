@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **-0.16%** ($9,984) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 290 · skips 108 · realized $-743.47.
+Cash book **+0.05%** ($10,005) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 306 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -430,6 +430,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SHORT** | `CDZI` | 160 | $3.89 | $2.52 | — | $14,224.19 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=+2.6; leftover $624.37 | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🔴 heat🟡 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **SHORT** | `ZETA` | 19 | $32.03 | $2.08 | — | $14,830.67 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=+6.0; leftover $624.37 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,830.67 | ▲ close $9,983.72 vs 09:30 $10,008.87 (session +15.85) | 16:00 close · cash $14,830.67 · equity $9,983.72 vs 09:30 $10,008.87 (-25.15; session marks +15.85) · 8 name(s) marked open→close (per-name table). IT×3 09:30 $196.19 → close $192.80 +10.17; KSPI×6 09:30 $92.93 → close $92.02 +5.46; IOT×16 09:30 $38.99 → close $40.04 -16.80; RELY×29 09:30 $21.28 → close $21.48 -5.80; IVA×184 09:30 $3.38 → close $3.46 -15.64; INO×503 09:30 $1.24 → close $1.21 +15.09; CDZI×160 09:30 $3.89 → close $3.70 +30.40; ZETA×19 09:30 $32.03 → close $32.40 -7.03 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,830.67 | ▼ 09:30 equity $9,925.66 vs yday $9,983.72 (-58.06) | 09:30 open · cash $14,830.67 (unchanged overnight, no fees) · equity $9,925.66 vs prior close $9,983.72 (-58.06) · 8 name(s) re-marked at the open (per-name table). CDZI×160 yday $3.70 → 09:30 $3.75 -8.00; INO×503 yday $1.21 → 09:30 $1.23 -10.06; IOT×16 yday $40.04 → 09:30 $40.41 -5.92; IT×3 yday $192.80 → 09:30 $192.74 +0.18; IVA×184 yday $3.46 → 09:30 $3.57 -20.24; KSPI×6 yday $92.02 → 09:30 $92.05 -0.18; RELY×29 yday $21.48 → 09:30 $21.80 -9.28; ZETA×19 yday $32.40 → 09:30 $32.64 -4.56 | — |
+| 2026-10-02 09:30 ET | **COVER** | `CDZI` | 160 | $3.75 | $2.47 | $+17.41 | $14,228.20 | ▲ +17.41 after sell → book $9,923.19; vs 09:30 mark -2.47 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `INO` | 503 | $1.23 | $6.49 | $-8.06 | $13,603.02 | ▼ -8.06 after sell → book $9,916.70; vs 09:30 mark -6.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `IOT` | 16 | $40.41 | $2.04 | $-26.83 | $12,954.42 | ▼ -26.83 after sell → book $9,914.66; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `IT` | 3 | $192.74 | $2.00 | $+6.32 | $12,374.20 | ▲ +6.32 after sell → book $9,912.66; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `IVA` | 184 | $3.57 | $2.54 | $-41.02 | $11,714.78 | ▼ -41.02 after sell → book $9,910.12; vs 09:30 mark -2.54 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `KSPI` | 6 | $92.05 | $2.01 | $+1.23 | $11,160.47 | ▲ +1.23 after sell → book $9,908.11; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `RELY` | 29 | $21.80 | $2.08 | $-19.27 | $10,526.20 | ▼ -19.27 after sell → book $9,906.04; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `ZETA` | 19 | $32.64 | $2.05 | $-15.72 | $9,903.99 | ▼ -15.72 after sell → book $9,903.99; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SHORT** | `CORT` | 5 | $114.38 | $2.04 | — | $10,473.85 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ret5=-3.8; leftover $619.00 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `BLFS` | 16 | $37.02 | $2.07 | — | $11,064.10 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ⚪; ret5=-4.7; leftover $619.00 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `ETON` | 11 | $52.42 | $2.06 | — | $11,638.66 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ⚪; ret5=-12.6; leftover $619.00 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `RR` | 345 | $1.79 | $4.53 | — | $12,251.67 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=+6.7; leftover $619.00 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `CNXC` | 22 | $26.93 | $2.09 | — | $12,842.04 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-8.1; leftover $619.00 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `CTVA` | 49 | $12.38 | $2.17 | — | $13,446.73 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; 🔵; ret5=-84.2; leftover $619.00 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `NKTR` | 13 | $47.11 | $2.07 | — | $14,057.10 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; 🔵; ret5=-20.9; leftover $619.00 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `ACRS` | 137 | $4.50 | $2.45 | — | $14,671.14 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; 🔵; ⚪; ret5=-18.0; leftover $619.00 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,671.14 | ▲ close $10,004.56 vs 09:30 $9,925.66 (session +120.06) | 16:00 close · cash $14,671.14 · equity $10,004.56 vs 09:30 $9,925.66 (+78.90; session marks +120.06) · 8 name(s) marked open→close (per-name table). CORT×5 09:30 $114.38 → close $116.23 -9.25; BLFS×16 09:30 $37.02 → close $37.30 -4.48; ETON×11 09:30 $52.42 → close $55.36 -32.34; RR×345 09:30 $1.79 → close $1.68 +37.95; CNXC×22 09:30 $26.93 → close $24.91 +44.44; CTVA×49 09:30 $12.38 → close $11.92 +22.78; NKTR×13 09:30 $47.11 → close $43.58 +45.89; ACRS×137 09:30 $4.50 → close $4.39 +15.07 | — |
 
 ## Not taken
 

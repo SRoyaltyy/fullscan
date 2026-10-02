@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-7.16%** ($9,284) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 208 · skips 257 · realized $-743.63.
+Cash book **-6.30%** ($9,370) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 208 · skips 257 · realized $-743.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -349,6 +349,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `NTAP` | 5 | $211.75 | $2.00 | — | $1,528.36 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+7.0; leftover $1116.73 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `ICHR` | 18 | $61.92 | $2.04 | — | $411.75 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+5.9; leftover $1116.73 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $411.75 | ▲ close $9,283.83 vs 09:30 $8,962.10 (session +366.16) | 16:00 close · cash $411.75 · equity $9,283.83 vs 09:30 $8,962.10 (+321.73; session marks +366.16) · 8 name(s) marked open→close (per-name table). ONTO×3 09:30 $315.94 → close $314.88 -3.18; MU×1 09:30 $1054.08 → close $1097.39 +43.31; FORM×7 09:30 $149.45 → close $148.44 -7.07; UTHR×2 09:30 $557.53 → close $571.38 +27.70; RCL×4 09:30 $266.12 → close $269.99 +15.48; TJGC×42 09:30 $26.31 → close $32.58 +263.34; NTAP×5 09:30 $211.75 → close $215.05 +16.50; ICHR×18 09:30 $61.92 → close $62.48 +10.08 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $411.75 | ▲ 09:30 equity $9,519.04 vs yday $9,283.83 (+235.21) | 09:30 open · cash $411.75 (unchanged overnight, no fees) · equity $9,519.04 vs prior close $9,283.83 (+235.21) · 8 name(s) re-marked at the open (per-name table). FORM×7 yday $148.44 → 09:30 $150.50 +14.42; ICHR×18 yday $62.48 → 09:30 $65.01 +45.54; MU×1 yday $1097.39 → 09:30 $1107.45 +10.06; NTAP×5 yday $215.05 → 09:30 $216.43 +6.90; ONTO×3 yday $314.88 → 09:30 $328.89 +42.03; RCL×4 yday $269.99 → 09:30 $275.18 +20.74; TJGC×42 yday $32.58 → 09:30 $34.92 +98.28; UTHR×2 yday $571.38 → 09:30 $570.00 -2.76 | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $411.75 | ▼ close $9,370.03 vs 09:30 $9,519.04 (session -149.01) | 16:00 close · cash $411.75 · equity $9,370.03 vs 09:30 $9,519.04 (-149.01; session marks -149.01) · 8 name(s) marked open→close (per-name table). FORM×7 09:30 $150.50 → close $149.15 -9.45; ICHR×18 09:30 $65.01 → close $62.92 -37.62; MU×1 09:30 $1107.45 → close $1074.89 -32.56; NTAP×5 09:30 $216.43 → close $226.27 +49.20; ONTO×3 09:30 $328.89 → close $327.77 -3.36; RCL×4 09:30 $275.18 → close $277.74 +10.26; TJGC×42 09:30 $34.92 → close $33.28 -68.88; UTHR×2 09:30 $570.00 → close $541.70 -56.60 | — |
 
 ## Not taken
 

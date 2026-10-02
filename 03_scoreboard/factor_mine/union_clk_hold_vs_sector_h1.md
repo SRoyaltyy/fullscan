@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-15.23%** ($8,477) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 215 · skips 96 · realized $+387.41.
+Cash book **-14.46%** ($8,554) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 225 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -359,6 +359,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `TRLV` | 98 | $10.87 | $2.28 | — | $1,087.39 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_mover; 🔵; ret5=-13.1; leftover $1070.67 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `ABSI` | 99 | $10.80 | $2.29 | — | $15.90 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+10.5; leftover $1070.67 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.90 | ▼ close $8,476.58 vs 09:30 $8,594.35 (session -67.21) | 16:00 close · cash $15.90 · equity $8,476.58 vs 09:30 $8,594.35 (-117.77; session marks -67.21) · 8 name(s) marked open→close (per-name table). CAPR×114 09:30 $9.36 → close $8.94 -47.88; DOCS×37 09:30 $28.91 → close $28.50 -15.17; LEGN×54 09:30 $19.61 → close $19.32 -15.66; OMDA×51 09:30 $20.90 → close $20.41 -24.99; PACB×457 09:30 $2.34 → close $2.51 +77.69; PGEN×125 09:30 $8.50 → close $8.21 -36.25; TRLV×98 09:30 $10.87 → close $10.87 +0.00; ABSI×99 09:30 $10.80 → close $10.75 -4.95 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.90 | ▲ 09:30 equity $8,586.23 vs yday $8,476.58 (+109.65) | 09:30 open · cash $15.90 (unchanged overnight, no fees) · equity $8,586.23 vs prior close $8,476.58 (+109.65) · 8 name(s) re-marked at the open (per-name table). ABSI×99 yday $10.75 → 09:30 $11.14 +38.61; CAPR×114 yday $8.94 → 09:30 $9.14 +22.80; DOCS×37 yday $28.50 → 09:30 $28.93 +15.91; LEGN×54 yday $19.32 → 09:30 $19.32 +0.00; OMDA×51 yday $20.41 → 09:30 $20.74 +16.83; PACB×457 yday $2.51 → 09:30 $2.50 -4.57; PGEN×125 yday $8.21 → 09:30 $8.30 +11.25; TRLV×98 yday $10.87 → 09:30 $10.96 +8.82 | — |
+| 2026-10-02 09:30 ET | **SELL** | `ABSI` | 99 | $11.14 | $2.31 | $+29.06 | $1,116.45 | ▲ +29.06 after sell → book $8,583.92; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `CAPR` | 114 | $9.14 | $2.36 | $-29.77 | $2,156.05 | ▼ -29.77 after sell → book $8,581.56; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `DOCS` | 37 | $28.93 | $2.12 | $-3.48 | $3,224.33 | ▼ -3.48 after sell → book $8,579.43; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `LEGN` | 54 | $19.32 | $2.17 | $-19.98 | $4,265.44 | ▼ -19.98 after sell → book $8,577.26; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `OMDA` | 51 | $20.74 | $2.16 | $-12.47 | $5,321.02 | ▼ -12.47 after sell → book $8,575.10; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `PACB` | 457 | $2.50 | $5.98 | $+61.24 | $6,457.54 | ▲ +61.24 after sell → book $8,569.12; vs 09:30 mark -5.98 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `PGEN` | 125 | $8.30 | $2.40 | $-29.76 | $7,492.64 | ▼ -29.76 after sell → book $8,566.72; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `TRLV` | 98 | $10.96 | $2.31 | $+4.23 | $8,564.41 | ▲ +4.23 after sell → book $8,564.41; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **BUY** | `PBF` | 52 | $81.34 | $2.15 | — | $4,332.59 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+14.5; leftover $4282.21 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `LWLG` | 756 | $5.66 | $9.75 | — | $43.87 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer; 🔵; ret5=+3.0; leftover $4282.21 | join🔴 sector🔴 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.87 | ▲ close $8,553.63 vs 09:30 $8,586.23 (session +1.12) | 16:00 close · cash $43.87 · equity $8,553.63 vs 09:30 $8,586.23 (-32.60; session marks +1.12) · 2 name(s) marked open→close (per-name table). PBF×52 09:30 $81.34 → close $80.78 -29.12; LWLG×756 09:30 $5.66 → close $5.70 +30.24 | — |
 
 ## Not taken
 

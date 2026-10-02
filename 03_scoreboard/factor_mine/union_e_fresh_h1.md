@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **-10.65%** ($8,935) · signal-only (no cash/fees) was +4.74%. Starts YES **24/30**. Fills 192 · skips 56 · realized $+1231.21.
+Cash book **-9.26%** ($9,074) · signal-only (no cash/fees) was +4.74%. Starts YES **24/30**. Fills 196 · skips 56 · realized $+1231.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -335,6 +335,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `MU` | 2 | $1054.08 | $2.00 | — | $2,681.07 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-0.6; leftover $2312.10 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `PRGS` | 57 | $40.52 | $2.16 | — | $369.27 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-2.6; leftover $2312.10 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $369.27 | ▼ close $8,934.97 vs 09:30 $9,259.55 (session -305.10) | 16:00 close · cash $369.27 · equity $8,934.97 vs 09:30 $9,259.55 (-324.58; session marks -305.10) · 4 name(s) marked open→close (per-name table). ACN×10 09:30 $215.98 → close $212.30 -36.80; MKC×49 09:30 $46.80 → close $44.14 -130.34; MU×2 09:30 $1054.08 → close $1097.39 +86.62; PRGS×57 09:30 $40.52 → close $36.58 -224.58 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $369.27 | ▼ 09:30 equity $8,929.01 vs yday $8,934.97 (-5.96) | 09:30 open · cash $369.27 (unchanged overnight, no fees) · equity $8,929.01 vs prior close $8,934.97 (-5.96) · 4 name(s) re-marked at the open (per-name table). ACN×10 yday $212.30 → 09:30 $211.02 -12.80; MKC×49 yday $44.14 → 09:30 $43.52 -30.38; MU×2 yday $1097.39 → 09:30 $1107.45 +20.12; PRGS×57 yday $36.58 → 09:30 $36.88 +17.10 | — |
+| 2026-10-02 09:30 ET | **SELL** | `MKC` | 49 | $43.52 | $2.16 | $-165.02 | $2,499.59 | ▼ -165.02 after sell → book $8,926.85; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `MU` | 2 | $1107.45 | $2.02 | $+102.72 | $4,712.46 | ▲ +102.72 after sell → book $8,924.82; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `PRGS` | 57 | $36.88 | $2.19 | $-211.83 | $6,812.43 | ▼ -211.83 after sell → book $8,922.63; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **BUY** | `NKE` | 209 | $32.55 | $2.70 | — | $6.16 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-2.3; leftover $6812.43 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.16 | ▲ close $9,073.99 vs 09:30 $8,929.01 (session +154.05) | 16:00 close · cash $6.16 · equity $9,073.99 vs 09:30 $8,929.01 (+144.98; session marks +154.05) · 2 name(s) marked open→close (per-name table). ACN×10 09:30 $211.02 → close $198.90 -121.20; NKE×209 09:30 $32.55 → close $33.87 +275.25 | — |
 
 ## Not taken
 

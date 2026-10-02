@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-16.07%** ($8,393) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 101 · skips 137 · realized $-233.27.
+Cash book **-15.41%** ($8,458) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 103 · skips 137 · realized $-233.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -244,6 +244,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `NTAP` | 4 | $211.75 | $2.00 | — | $1,848.86 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; ret5=+7.0; leftover $898.09 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `TLSA` | 809 | $1.11 | $10.44 | — | $940.43 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+5.7; leftover $898.09 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $940.43 | ▼ close $8,392.79 vs 09:30 $9,010.45 (session -573.23) | 16:00 close · cash $940.43 · equity $8,392.79 vs 09:30 $9,010.45 (-617.66; session marks -573.23) · 3 name(s) marked open→close (per-name table). PRGS×155 09:30 $40.52 → close $36.58 -610.70; NTAP×4 09:30 $211.75 → close $215.05 +13.20; TLSA×809 09:30 $1.11 → close $1.14 +24.27 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $940.43 | ▲ 09:30 equity $8,460.99 vs yday $8,392.79 (+68.20) | 09:30 open · cash $940.43 (unchanged overnight, no fees) · equity $8,460.99 vs prior close $8,392.79 (+68.20) · 3 name(s) re-marked at the open (per-name table). NTAP×4 yday $215.05 → 09:30 $216.43 +5.52; PRGS×155 yday $36.58 → 09:30 $36.88 +46.50; TLSA×809 yday $1.14 → 09:30 $1.16 +16.18 | — |
+| 2026-10-02 09:30 ET | **BUY** | `SNPS` | 1 | $497.86 | $1.99 | — | $440.58 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $658.30 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `WRBY` | 3 | $27.63 | $0.84 | — | $356.85 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list flatten; 🔵; ⚪; ret5=+4.6; leftover $94.04 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $356.85 | ▲ close $8,458.50 vs 09:30 $8,460.99 (session +0.34) | 16:00 close · cash $356.85 · equity $8,458.50 vs 09:30 $8,460.99 (-2.49; session marks +0.34) · 5 name(s) marked open→close (per-name table). NTAP×4 09:30 $216.43 → close $226.27 +39.36; PRGS×155 09:30 $36.88 → close $36.90 +3.10; TLSA×809 09:30 $1.16 → close $1.12 -32.36; SNPS×1 09:30 $497.86 → close $489.90 -7.96; WRBY×3 09:30 $27.63 → close $27.03 -1.80 | — |
 
 ## Not taken
 

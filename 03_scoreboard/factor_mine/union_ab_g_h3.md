@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ ab_g, no 🚨
 
-Cash book **-25.36%** ($7,464) · signal-only (no cash/fees) was -10.05%. Starts YES **2/30**. Fills 198 · skips 241 · realized $-1471.05.
+Cash book **-24.58%** ($7,542) · signal-only (no cash/fees) was -10.05%. Starts YES **2/30**. Fills 198 · skips 241 · realized $-1471.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -340,6 +340,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `ZETA` | 29 | $32.03 | $2.08 | — | $1,009.67 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer; 🔵; ret5=+6.0; leftover $934.02 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `PMVP` | 555 | $1.68 | $7.16 | — | $70.11 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,yday_mover; ret5=+21.9; leftover $934.02 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $70.11 | ▲ close $7,464.25 vs 09:30 $7,493.06 (session +21.49) | 16:00 close · cash $70.11 · equity $7,464.25 vs 09:30 $7,493.06 (-28.81; session marks +21.49) · 8 name(s) marked open→close (per-name table). KSPI×10 09:30 $92.93 → close $92.02 -9.10; IOT×23 09:30 $38.99 → close $40.04 +24.15; AVPT×65 09:30 $14.27 → close $14.08 -12.35; RELY×43 09:30 $21.28 → close $21.48 +8.60; CDNL×30 09:30 $30.30 → close $29.74 -16.80; INO×753 09:30 $1.24 → close $1.21 -22.59; ZETA×29 09:30 $32.03 → close $32.40 +10.73; PMVP×555 09:30 $1.68 → close $1.75 +38.85 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $70.11 | ▲ 09:30 equity $7,534.44 vs yday $7,464.25 (+70.19) | 09:30 open · cash $70.11 (unchanged overnight, no fees) · equity $7,534.44 vs prior close $7,464.25 (+70.19) · 8 name(s) re-marked at the open (per-name table). AVPT×65 yday $14.08 → 09:30 $14.22 +9.10; CDNL×30 yday $29.74 → 09:30 $30.29 +16.50; INO×753 yday $1.21 → 09:30 $1.23 +15.06; IOT×23 yday $40.04 → 09:30 $40.41 +8.51; KSPI×10 yday $92.02 → 09:30 $92.05 +0.30; PMVP×555 yday $1.75 → 09:30 $1.75 +0.00; RELY×43 yday $21.48 → 09:30 $21.80 +13.76; ZETA×29 yday $32.40 → 09:30 $32.64 +6.96 | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $70.11 | ▲ close $7,542.13 vs 09:30 $7,534.44 (session +7.69) | 16:00 close · cash $70.11 · equity $7,542.13 vs 09:30 $7,534.44 (+7.69; session marks +7.69) · 8 name(s) marked open→close (per-name table). AVPT×65 09:30 $14.22 → close $14.07 -9.75; CDNL×30 09:30 $30.29 → close $30.73 +13.20; INO×753 09:30 $1.23 → close $1.16 -52.71; IOT×23 09:30 $40.41 → close $41.12 +16.33; KSPI×10 09:30 $92.05 → close $94.05 +20.00; PMVP×555 09:30 $1.75 → close $1.79 +22.20; RELY×43 09:30 $21.80 → close $21.77 -1.29; ZETA×29 09:30 $32.64 → close $32.63 -0.29 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-19.56%** ($8,044) · signal-only (no cash/fees) was +4.47%. Starts YES **12/30**. Fills 157 · skips 345 · realized $+372.21.
+Cash book **-20.13%** ($7,987) · signal-only (no cash/fees) was +4.47%. Starts YES **12/30**. Fills 164 · skips 345 · realized $+372.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -295,6 +295,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `AVPT` | 61 | $14.27 | $2.17 | — | $967.47 | — | 40% to #1, rest split; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ret5=+7.3; leftover $884.20 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-10-01 09:30 ET | **BUY** | `RELY` | 41 | $21.28 | $2.11 | — | $92.88 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+5.7; leftover $884.20 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $92.88 | ▼ close $8,044.38 vs 09:30 $8,102.08 (session -29.16) | 16:00 close · cash $92.88 · equity $8,044.38 vs 09:30 $8,102.08 (-57.70; session marks -29.16) · 6 name(s) marked open→close (per-name table). SN×12 09:30 $182.44 → close $182.44 +0.00; IT×12 09:30 $196.19 → close $192.80 -40.68; KSPI×9 09:30 $92.93 → close $92.02 -8.19; IOT×22 09:30 $38.99 → close $40.04 +23.10; AVPT×61 09:30 $14.27 → close $14.08 -11.59; RELY×41 09:30 $21.28 → close $21.48 +8.20 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $92.88 | ▲ 09:30 equity $8,087.29 vs yday $8,044.38 (+42.91) | 09:30 open · cash $92.88 (unchanged overnight, no fees) · equity $8,087.29 vs prior close $8,044.38 (+42.91) · 6 name(s) re-marked at the open (per-name table). AVPT×61 yday $14.08 → 09:30 $14.22 +8.54; IOT×22 yday $40.04 → 09:30 $40.41 +8.14; IT×12 yday $192.80 → 09:30 $192.74 -0.72; KSPI×9 yday $92.02 → 09:30 $92.05 +0.27; RELY×41 yday $21.48 → 09:30 $21.80 +13.12; SN×12 yday $182.44 → 09:30 $183.57 +13.56 | — |
+| 2026-10-02 09:30 ET | **SELL** | `SN` | 12 | $183.57 | $2.05 | $-9.84 | $2,293.67 | ▼ -9.84 after sell → book $8,085.24; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-02 09:30 ET | **BUY** | `VEEV` | 3 | $283.10 | $2.00 | — | $1,442.37 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+2.6; leftover $917.47 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `CORT` | 2 | $114.38 | $2.00 | — | $1,211.61 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-3.8; leftover $229.37 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `CDNA` | 3 | $66.33 | $1.99 | — | $1,010.63 | — | 40% to #1, rest split; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+7.9; leftover $229.37 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `WRBY` | 8 | $27.63 | $2.01 | — | $787.57 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+4.6; leftover $229.37 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `BLFS` | 6 | $37.02 | $2.01 | — | $563.45 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-4.7; leftover $229.37 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ETON` | 4 | $52.42 | $2.00 | — | $351.76 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-12.6; leftover $229.37 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $351.76 | ▼ close $7,986.67 vs 09:30 $8,087.29 (session -86.55) | 16:00 close · cash $351.76 · equity $7,986.67 vs 09:30 $8,087.29 (-100.62; session marks -86.55) · 11 name(s) marked open→close (per-name table). AVPT×61 09:30 $14.22 → close $14.07 -9.15; IOT×22 09:30 $40.41 → close $41.12 +15.62; IT×12 09:30 $192.74 → close $184.80 -95.28; KSPI×9 09:30 $92.05 → close $94.05 +18.00; RELY×41 09:30 $21.80 → close $21.77 -1.23; VEEV×3 09:30 $283.10 → close $273.33 -29.31; CORT×2 09:30 $114.38 → close $116.23 +3.70; CDNA×3 09:30 $66.33 → close $67.15 +2.46; WRBY×8 09:30 $27.63 → close $27.03 -4.80; BLFS×6 09:30 $37.02 → close $37.30 +1.68; ETON×4 09:30 $52.42 → close $55.36 +11.76 | — |
 
 ## Not taken
 

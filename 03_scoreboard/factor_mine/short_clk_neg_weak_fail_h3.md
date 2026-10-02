@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **-0.61%** ($9,939) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 223 · skips 270 · realized $-967.53.
+Cash book **+0.80%** ($10,080) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 223 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -363,6 +363,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SHORT** | `PYXS` | 1061 | $2.31 | $13.95 | — | $12,243.77 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; 🔵; ret5=-27.6; leftover $2451.70 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **SHORT** | `NKE` | 69 | $35.45 | $2.30 | — | $14,687.53 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list overnight,overnight_mega; ret5=-1.8; leftover $2451.70 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,687.53 | ▲ close $9,938.59 vs 09:30 $9,820.03 (session +148.02) | 16:00 close · cash $14,687.53 · equity $9,938.59 vs 09:30 $9,820.03 (+118.56; session marks +148.02) · 2 name(s) marked open→close (per-name table). PYXS×1061 09:30 $2.31 → close $2.19 +127.32; NKE×69 09:30 $35.45 → close $35.15 +20.70 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,687.53 | ▲ 09:30 equity $10,096.56 vs yday $9,938.59 (+157.97) | 09:30 open · cash $14,687.53 (unchanged overnight, no fees) · equity $10,096.56 vs prior close $9,938.59 (+157.97) · 2 name(s) re-marked at the open (per-name table). NKE×69 yday $35.15 → 09:30 $32.55 +179.19; PYXS×1061 yday $2.19 → 09:30 $2.21 -21.22 | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,687.53 | ▼ close $10,079.96 vs 09:30 $10,096.56 (session -16.60) | 16:00 close · cash $14,687.53 · equity $10,079.96 vs 09:30 $10,096.56 (-16.60; session marks -16.60) · 2 name(s) marked open→close (per-name table). NKE×69 09:30 $32.55 → close $33.87 -90.87; PYXS×1061 09:30 $2.21 → close $2.14 +74.27 | — |
 
 ## Not taken
 

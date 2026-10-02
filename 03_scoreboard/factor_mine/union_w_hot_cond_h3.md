@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+18.33%** ($11,833) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 232 · skips 286 · realized $+834.44.
+Cash book **+21.12%** ($12,112) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 237 · skips 286 · realized $+834.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -373,6 +373,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `AVPT` | 131 | $14.27 | $2.38 | — | $1,921.69 | — | rank by w_hot_cond; rank w_hot_cond; list flatten,ohlc_hot; 🔵; ret5=+7.3; leftover $1870.86 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-10-01 09:30 ET | **BUY** | `PDFS` | 36 | $51.41 | $2.10 | — | $68.84 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+5.4; leftover $1870.86 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $68.84 | ▲ close $11,833.18 vs 09:30 $11,262.38 (session +647.35) | 16:00 close · cash $68.84 · equity $11,833.18 vs 09:30 $11,262.38 (+570.80; session marks +647.35) · 6 name(s) marked open→close (per-name table). PACB×799 09:30 $2.34 → close $2.51 +135.83; QSI×1559 09:30 $1.20 → close $1.43 +358.57; PAYS×138 09:30 $13.50 → close $14.36 +118.68; FORM×12 09:30 $149.45 → close $148.44 -12.12; AVPT×131 09:30 $14.27 → close $14.08 -24.89; PDFS×36 09:30 $51.41 → close $53.39 +71.28 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $68.84 | ▲ 09:30 equity $11,833.44 vs yday $11,833.18 (+0.26) | 09:30 open · cash $68.84 (unchanged overnight, no fees) · equity $11,833.44 vs prior close $11,833.18 (+0.26) · 6 name(s) re-marked at the open (per-name table). AVPT×131 yday $14.08 → 09:30 $14.22 +18.34; FORM×12 yday $148.44 → 09:30 $150.50 +24.72; PACB×799 yday $2.51 → 09:30 $2.50 -7.99; PAYS×138 yday $14.36 → 09:30 $14.19 -23.46; PDFS×36 yday $53.39 → 09:30 $55.24 +66.60; QSI×1559 yday $1.43 → 09:30 $1.38 -77.95 | — |
+| 2026-10-02 09:30 ET | **BUY** | `SDEV` | 1 | $5.06 | $0.05 | — | $63.73 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+183.7; leftover $9.83 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `NAUT` | 5 | $1.67 | $0.10 | — | $55.30 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; 🔵; ⚪; ret5=+58.4; leftover $9.83 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `SES` | 11 | $0.86 | $0.13 | — | $45.72 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+54.3; leftover $9.83 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `GLND` | 2 | $4.25 | $0.09 | — | $37.12 | — | rank by w_hot_cond; rank w_hot_cond; list yday_mover,ohlc_hot; ret5=-17.8; leftover $9.83 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `FOSL` | 1 | $6.95 | $0.07 | — | $30.10 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+16.2; leftover $9.83 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $30.10 | ▲ close $12,111.99 vs 09:30 $11,833.44 (session +278.99) | 16:00 close · cash $30.10 · equity $12,111.99 vs 09:30 $11,833.44 (+278.55; session marks +278.99) · 11 name(s) marked open→close (per-name table). AVPT×131 09:30 $14.22 → close $14.07 -19.65; FORM×12 09:30 $150.50 → close $149.15 -16.20; PACB×799 09:30 $2.50 → close $2.54 +31.96; PAYS×138 09:30 $14.19 → close $14.23 +5.52; PDFS×36 09:30 $55.24 → close $55.50 +9.36; QSI×1559 09:30 $1.38 → close $1.55 +265.03; SDEV×1 09:30 $5.06 → close $7.48 +2.42; NAUT×5 09:30 $1.67 → close $1.96 +1.47; SES×11 09:30 $0.86 → close $0.88 +0.27; GLND×2 09:30 $4.25 → close $3.73 -1.04; FOSL×1 09:30 $6.95 → close $6.80 -0.15 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_pack_h1/short_news_r_h3 w=0.7,0.3 net=priority
 
-Cash book **-16.85%** ($8,315) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 186 · skips 146 · realized $+1121.47.
+Cash book **-15.65%** ($8,435) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 191 · skips 146 · realized $+1121.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,692.93.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $527.36.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -329,6 +329,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SHORT** | `PYXS` | 861 | $2.31 | $11.32 | — | $7,709.97 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-27.6; combo leftover $1990.66; owner short_news_r_h3 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **SHORT** | `NKE` | 56 | $35.45 | $2.24 | — | $9,692.93 | — | news🔴; gate news=bad; list overnight,overnight_mega; ret5=-1.8; combo leftover $1990.66; owner short_news_r_h3 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,692.93 | ▲ close $8,314.85 vs 09:30 $7,964.66 (session +365.77) | 16:00 close · cash $9,692.93 · equity $8,314.85 vs 09:30 $7,964.66 (+350.19; session marks +365.77) · 5 name(s) marked open→close (per-name table). AEHL×537 09:30 $9.74 → close $10.16 -225.54; RSKD×522 09:30 $7.92 → close $7.93 -5.22; MU×11 09:30 $1054.08 → close $1097.39 +476.41; PYXS×861 09:30 $2.31 → close $2.19 +103.32; NKE×56 09:30 $35.45 → close $35.15 +16.80 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,692.93 | ▲ 09:30 equity $8,915.31 vs yday $8,314.85 (+600.46) | 09:30 open · cash $9,692.93 (unchanged overnight, no fees) · equity $8,915.31 vs prior close $8,314.85 (+600.46) | — |
+| 2026-10-02 09:30 ET | **COVER** | `AEHL` | 537 | $9.37 | $6.93 | $-612.86 | $4,654.31 | ▼ -612.86 after sell → book $8,908.38; vs 09:30 mark -6.93 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-02 09:30 ET | **SELL** | `MU` | 11 | $1107.45 | $2.13 | $+582.92 | $16,834.13 | ▲ +582.92 after sell → book $8,906.25; vs 09:30 mark -2.13 | union_news_pack_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `RSKD` | 522 | $8.05 | $6.73 | $-118.10 | $12,625.30 | ▼ -118.10 after sell → book $8,899.52; vs 09:30 mark -6.73 | short_news_r_h3: dropped from list after 5 sess (min 3) | — |
+| 2026-10-02 09:30 ET | **BUY** | `SNPS` | 12 | $497.86 | $2.03 | — | $6,649.01 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; combo leftover $6312.65; owner union_news_pack_h1 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ACN` | 29 | $211.02 | $2.08 | — | $527.36 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer,yday_mover; ret5=+19.7; combo leftover $6312.65; owner union_news_pack_h1 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $527.36 | ▼ close $8,435.00 vs 09:30 $8,915.31 (session -460.42) | 16:00 close · cash $527.36 · equity $8,435.00 vs 09:30 $8,915.31 (-480.31; session marks -460.42) · 4 name(s) marked open→close (per-name table). NKE×56 09:30 $32.55 → close $33.87 -73.75; PYXS×861 09:30 $2.21 → close $2.14 +60.27; SNPS×12 09:30 $497.86 → close $489.90 -95.46; ACN×29 09:30 $211.02 → close $198.90 -351.48 | — |
 
 ## Not taken
 

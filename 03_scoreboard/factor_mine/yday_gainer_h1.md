@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `yday_gainer` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-17.78%** ($8,222) · signal-only (no cash/fees) was -1.36%. Starts YES **6/30**. Fills 290 · skips 103 · realized $+133.85.
+Cash book **-18.13%** ($8,187) · signal-only (no cash/fees) was -1.36%. Starts YES **6/30**. Fills 306 · skips 103 · realized $+133.85.
 
 ## How this sleeve decides (like you are 10)
 
@@ -428,6 +428,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `SWMR` | 59 | $17.50 | $2.17 | — | $1,070.53 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-21.6; leftover $1047.63 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `BRZE` | 39 | $26.29 | $2.11 | — | $43.11 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-3.0; leftover $1047.63 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.11 | ▼ close $8,222.00 vs 09:30 $8,404.55 (session -120.03) | 16:00 close · cash $43.11 · equity $8,222.00 vs 09:30 $8,404.55 (-182.55; session marks -120.03) · 8 name(s) marked open→close (per-name table). TLSA×943 09:30 $1.11 → close $1.14 +28.29; IVA×310 09:30 $3.38 → close $3.46 +26.35; CDNL×34 09:30 $30.30 → close $29.74 -19.04; INO×844 09:30 $1.24 → close $1.21 -25.32; CDZI×269 09:30 $3.89 → close $3.70 -51.11; ZETA×32 09:30 $32.03 → close $32.40 +11.84; SWMR×59 09:30 $17.50 → close $16.38 -66.08; BRZE×39 09:30 $26.29 → close $25.65 -24.96 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $43.11 | ▲ 09:30 equity $8,321.78 vs yday $8,222.00 (+99.78) | 09:30 open · cash $43.11 (unchanged overnight, no fees) · equity $8,321.78 vs prior close $8,222.00 (+99.78) · 8 name(s) re-marked at the open (per-name table). BRZE×39 yday $25.65 → 09:30 $25.82 +6.63; CDNL×34 yday $29.74 → 09:30 $30.29 +18.70; CDZI×269 yday $3.70 → 09:30 $3.75 +13.45; INO×844 yday $1.21 → 09:30 $1.23 +16.88; IVA×310 yday $3.46 → 09:30 $3.57 +34.10; SWMR×59 yday $16.38 → 09:30 $16.10 -16.52; TLSA×943 yday $1.14 → 09:30 $1.16 +18.86; ZETA×32 yday $32.40 → 09:30 $32.64 +7.68 | — |
+| 2026-10-02 09:30 ET | **SELL** | `BRZE` | 39 | $25.82 | $2.13 | $-22.56 | $1,047.96 | ▼ -22.56 after sell → book $8,319.65; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `CDNL` | 34 | $30.29 | $2.11 | $-4.54 | $2,075.71 | ▼ -4.54 after sell → book $8,317.54; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `CDZI` | 269 | $3.75 | $3.52 | $-44.65 | $3,080.94 | ▼ -44.65 after sell → book $8,314.02; vs 09:30 mark -3.52 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `INO` | 844 | $1.23 | $11.04 | $-30.37 | $4,108.02 | ▼ -30.37 after sell → book $8,302.98; vs 09:30 mark -11.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `IVA` | 310 | $3.57 | $4.06 | $+52.39 | $5,210.66 | ▲ +52.39 after sell → book $8,298.92; vs 09:30 mark -4.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `SWMR` | 59 | $16.10 | $2.19 | $-86.95 | $6,158.37 | ▼ -86.95 after sell → book $8,296.73; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `TLSA` | 943 | $1.16 | $12.33 | $+22.65 | $7,239.92 | ▲ +22.65 after sell → book $8,284.40; vs 09:30 mark -12.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `ZETA` | 32 | $32.64 | $2.11 | $+15.33 | $8,282.29 | ▲ +15.33 after sell → book $8,282.29; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **BUY** | `QNC` | 612 | $1.69 | $7.89 | — | $7,240.12 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-7.9; leftover $1035.29 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `AIB` | 713 | $1.45 | $9.20 | — | $6,197.07 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=+7.0; leftover $1035.29 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `COHR` | 3 | $316.56 | $2.00 | — | $5,245.38 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+9.8; leftover $1035.29 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `RR` | 578 | $1.79 | $7.46 | — | $4,203.30 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+6.7; leftover $1035.29 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `INOD` | 14 | $73.05 | $2.03 | — | $3,178.57 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ⚪; ret5=-0.0; leftover $1035.29 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `GWRE` | 6 | $155.67 | $2.01 | — | $2,242.54 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+2.9; leftover $1035.29 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `LWLG` | 182 | $5.66 | $2.54 | — | $1,209.89 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+3.0; leftover $1035.29 | join🔴 sector🔴 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `CNXC` | 38 | $26.93 | $2.10 | — | $184.44 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-8.1; leftover $1035.29 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $184.44 | ▼ close $8,186.86 vs 09:30 $8,321.78 (session -60.20) | 16:00 close · cash $184.44 · equity $8,186.86 vs 09:30 $8,321.78 (-134.92; session marks -60.20) · 8 name(s) marked open→close (per-name table). QNC×612 09:30 $1.69 → close $1.59 -61.20; AIB×713 09:30 $1.45 → close $1.64 +135.47; COHR×3 09:30 $316.56 → close $337.04 +61.43; RR×578 09:30 $1.79 → close $1.68 -63.58; INOD×14 09:30 $73.05 → close $70.07 -41.72; GWRE×6 09:30 $155.67 → close $152.15 -21.12; LWLG×182 09:30 $5.66 → close $5.70 +7.28; CNXC×38 09:30 $26.93 → close $24.91 -76.76 | — |
 
 ## Not taken
 

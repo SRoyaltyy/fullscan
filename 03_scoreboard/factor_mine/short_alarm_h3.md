@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **-0.10%** ($9,990) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 135 · skips 221 · realized $+639.78.
+Cash book **-7.53%** ($9,247) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 135 · skips 221 · realized $+639.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -275,6 +275,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SHORT** | `EMAT` | 239 | $2.58 | $3.15 | — | $14,138.70 | — | alarm; gate alarm=True; list yday_mover; ret5=-23.5; leftover $617.25 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **SHORT** | `LIND` | 19 | $31.35 | $2.08 | — | $14,732.27 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+15.4; leftover $617.25 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,732.27 | ▲ close $9,989.74 vs 09:30 $9,875.96 (session +132.96) | 16:00 close · cash $14,732.27 · equity $9,989.74 vs 09:30 $9,875.96 (+113.78; session marks +132.96) · 8 name(s) marked open→close (per-name table). IT×3 09:30 $196.19 → close $192.80 +10.17; SONO×34 09:30 $18.09 → close $17.75 +11.56; AEHL×63 09:30 $9.74 → close $10.16 -26.46; FEAM×177 09:30 $3.48 → close $3.23 +44.25; SHMD×128 09:30 $4.80 → close $4.45 +45.44; SDEV×171 09:30 $3.60 → close $3.66 -10.26; EMAT×239 09:30 $2.58 → close $2.15 +101.58; LIND×19 09:30 $31.35 → close $33.63 -43.32 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,732.27 | ▼ 09:30 equity $9,771.71 vs yday $9,989.74 (-218.03) | 09:30 open · cash $14,732.27 (unchanged overnight, no fees) · equity $9,771.71 vs prior close $9,989.74 (-218.03) · 8 name(s) re-marked at the open (per-name table). AEHL×63 yday $10.16 → 09:30 $9.37 +49.77; EMAT×239 yday $2.15 → 09:30 $2.16 -1.20; FEAM×177 yday $3.23 → 09:30 $3.27 -7.08; IT×3 yday $192.80 → 09:30 $192.74 +0.18; LIND×19 yday $33.63 → 09:30 $34.50 -16.53; SDEV×171 yday $3.66 → 09:30 $5.06 -239.40; SHMD×128 yday $4.45 → 09:30 $4.44 +0.64; SONO×34 yday $17.75 → 09:30 $17.88 -4.42 | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,732.27 | ▼ close $9,246.89 vs 09:30 $9,771.71 (session -524.82) | 16:00 close · cash $14,732.27 · equity $9,246.89 vs 09:30 $9,771.71 (-524.82; session marks -524.82) · 8 name(s) marked open→close (per-name table). AEHL×63 09:30 $9.37 → close $10.00 -39.69; EMAT×239 09:30 $2.16 → close $2.04 +28.68; FEAM×177 09:30 $3.27 → close $3.88 -107.97; IT×3 09:30 $192.74 → close $184.80 +23.82; LIND×19 09:30 $34.50 → close $34.78 -5.32; SDEV×171 09:30 $5.06 → close $7.48 -413.82; SHMD×128 09:30 $4.44 → close $4.57 -16.64; SONO×34 09:30 $17.88 → close $17.70 +6.12 | — |
 
 ## Not taken
 

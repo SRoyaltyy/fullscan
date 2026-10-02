@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **+0.18%** ($10,018) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 271 · skips 94 · realized $-657.32.
+Cash book **+2.18%** ($10,218) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 285 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -412,6 +412,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `NTAP` | 5 | $211.75 | $2.00 | — | $2,016.21 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+7.0; leftover $1206.26 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `ICHR` | 19 | $61.92 | $2.05 | — | $837.68 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+5.9; leftover $1206.26 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $837.68 | ▲ close $10,018.43 vs 09:30 $9,666.34 (session +384.52) | 16:00 close · cash $837.68 · equity $10,018.43 vs 09:30 $9,666.34 (+352.09; session marks +384.52) · 8 name(s) marked open→close (per-name table). ONTO×3 09:30 $315.94 → close $314.88 -3.18; MU×1 09:30 $1054.08 → close $1097.39 +43.31; FORM×8 09:30 $149.45 → close $148.44 -8.08; UTHR×2 09:30 $557.53 → close $571.38 +27.70; RCL×4 09:30 $266.12 → close $269.99 +15.48; TJGC×45 09:30 $26.31 → close $32.58 +282.15; NTAP×5 09:30 $211.75 → close $215.05 +16.50; ICHR×19 09:30 $61.92 → close $62.48 +10.64 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $837.68 | ▲ 09:30 equity $10,265.24 vs yday $10,018.43 (+246.81) | 09:30 open · cash $837.68 (unchanged overnight, no fees) · equity $10,265.24 vs prior close $10,018.43 (+246.81) · 8 name(s) re-marked at the open (per-name table). FORM×8 yday $148.44 → 09:30 $150.50 +16.48; ICHR×19 yday $62.48 → 09:30 $65.01 +48.07; MU×1 yday $1097.39 → 09:30 $1107.45 +10.06; NTAP×5 yday $215.05 → 09:30 $216.43 +6.90; ONTO×3 yday $314.88 → 09:30 $328.89 +42.03; RCL×4 yday $269.99 → 09:30 $275.18 +20.74; TJGC×45 yday $32.58 → 09:30 $34.92 +105.30; UTHR×2 yday $571.38 → 09:30 $570.00 -2.76 | — |
+| 2026-10-02 09:30 ET | **SELL** | `FORM` | 8 | $150.50 | $2.03 | $+4.35 | $2,039.65 | ▲ +4.35 after sell → book $10,263.21; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `ICHR` | 19 | $65.01 | $2.07 | $+54.60 | $3,272.77 | ▲ +54.60 after sell → book $10,261.14; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `MU` | 1 | $1107.45 | $2.01 | $+49.36 | $4,378.21 | ▲ +49.36 after sell → book $10,259.13; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `NTAP` | 5 | $216.43 | $2.02 | $+19.37 | $5,458.33 | ▲ +19.37 after sell → book $10,257.10; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `RCL` | 4 | $275.18 | $2.02 | $+32.20 | $6,557.01 | ▲ +32.20 after sell → book $10,255.08; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `TJGC` | 45 | $34.92 | $2.15 | $+383.18 | $8,126.26 | ▲ +383.18 after sell → book $10,252.93; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-02 09:30 ET | **SELL** | `UTHR` | 2 | $570.00 | $2.02 | $+20.93 | $9,264.25 | ▲ +20.93 after sell → book $10,250.92; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **BUY** | `AMAT` | 2 | $543.21 | $2.00 | — | $8,175.84 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+11.6; leftover $1323.46 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `VICR` | 4 | $311.30 | $2.00 | — | $6,928.64 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+11.8; leftover $1323.46 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `FN` | 2 | $460.00 | $2.00 | — | $6,006.64 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+13.3; leftover $1323.46 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `SNPS` | 2 | $497.86 | $2.00 | — | $5,008.94 | — | rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $1323.46 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `LITE` | 1 | $1053.26 | $1.99 | — | $3,953.68 | — | rank by macd_hist; rank macd_hist; list yday_gainer,ohlc_hot; 🔵; ret5=+12.6; leftover $1323.46 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `CDNS` | 3 | $356.50 | $2.00 | — | $2,882.18 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.9; leftover $1323.46 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `LRCX` | 3 | $350.00 | $2.00 | — | $1,830.18 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+10.7; leftover $1323.46 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,830.18 | ▼ close $10,218.29 vs 09:30 $10,265.24 (session -18.64) | 16:00 close · cash $1,830.18 · equity $10,218.29 vs 09:30 $10,265.24 (-46.95; session marks -18.64) · 8 name(s) marked open→close (per-name table). ONTO×3 09:30 $328.89 → close $327.77 -3.36; AMAT×2 09:30 $543.21 → close $540.04 -6.33; VICR×4 09:30 $311.30 → close $308.90 -9.60; FN×2 09:30 $460.00 → close $463.69 +7.38; SNPS×2 09:30 $497.86 → close $489.90 -15.91; LITE×1 09:30 $1053.26 → close $1085.42 +32.16; CDNS×3 09:30 $356.50 → close $351.35 -15.45; LRCX×3 09:30 $350.00 → close $347.49 -7.53 | — |
 
 ## Not taken
 

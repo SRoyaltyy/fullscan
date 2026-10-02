@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **+10.62%** ($11,062) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 211 · skips 298 · realized $+167.97.
+Cash book **+10.10%** ($11,010) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 217 · skips 298 · realized $+167.97.
 
 ## How this sleeve decides (like you are 10)
 
@@ -353,6 +353,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `FORM` | 7 | $149.45 | $2.01 | — | $1,364.91 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,ohlc_hot; ret5=+13.8; leftover $1186.72 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `SITC` | 354 | $3.35 | $4.57 | — | $174.45 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer; ret5=+13.5; leftover $1186.72 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $174.45 | ▲ close $11,061.51 vs 09:30 $10,681.90 (session +454.80) | 16:00 close · cash $174.45 · equity $11,061.51 vs 09:30 $10,681.90 (+379.61; session marks +454.80) · 9 name(s) marked open→close (per-name table). TEM×14 09:30 $82.58 → close $82.58 +0.00; AVPT×83 09:30 $14.27 → close $14.08 -15.77; PACB×507 09:30 $2.34 → close $2.51 +86.19; PMVP×706 09:30 $1.68 → close $1.75 +49.42; MNKD×309 09:30 $3.84 → close $3.95 +33.99; UTHR×2 09:30 $557.53 → close $571.38 +27.70; QSI×988 09:30 $1.20 → close $1.43 +227.24; FORM×7 09:30 $149.45 → close $148.44 -7.07; SITC×354 09:30 $3.35 → close $3.50 +53.10 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $174.45 | ▼ 09:30 equity $10,972.24 vs yday $11,061.51 (-89.27) | 09:30 open · cash $174.45 (unchanged overnight, no fees) · equity $10,972.24 vs prior close $11,061.51 (-89.27) · 9 name(s) re-marked at the open (per-name table). AVPT×83 yday $14.08 → 09:30 $14.22 +11.62; FORM×7 yday $148.44 → 09:30 $150.50 +14.42; MNKD×309 yday $3.95 → 09:30 $4.01 +18.54; PACB×507 yday $2.51 → 09:30 $2.50 -5.07; PMVP×706 yday $1.75 → 09:30 $1.75 +0.00; QSI×988 yday $1.43 → 09:30 $1.38 -49.40; SITC×354 yday $3.50 → 09:30 $3.49 -3.54; TEM×14 yday $82.58 → 09:30 $77.36 -73.08; UTHR×2 yday $571.38 → 09:30 $570.00 -2.76 | — |
+| 2026-10-02 09:30 ET | **SELL** | `TEM` | 14 | $77.36 | $2.05 | $-92.77 | $1,255.44 | ▼ -92.77 after sell → book $10,970.19; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 5 sess | — |
+| 2026-10-02 09:30 ET | **BUY** | `CDNA` | 2 | $66.33 | $1.33 | — | $1,121.45 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten,ohlc_hot; 🔵; ⚪; ret5=+7.9; leftover $179.35 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `SES` | 208 | $0.86 | $2.41 | — | $940.15 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; 🔵; ret5=+54.3; leftover $179.35 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `MAT` | 11 | $15.13 | $1.70 | — | $771.97 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $179.35 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `TDAY` | 25 | $7.17 | $1.87 | — | $590.85 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer; ret5=+9.5; leftover $179.35 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `EFXT` | 7 | $25.28 | $1.79 | — | $412.10 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer; ret5=+9.4; leftover $179.35 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $412.10 | ▲ close $11,009.83 vs 09:30 $10,972.24 (session +48.74) | 16:00 close · cash $412.10 · equity $11,009.83 vs 09:30 $10,972.24 (+37.59; session marks +48.74) · 13 name(s) marked open→close (per-name table). AVPT×83 09:30 $14.22 → close $14.07 -12.45; FORM×7 09:30 $150.50 → close $149.15 -9.45; MNKD×309 09:30 $4.01 → close $3.80 -64.89; PACB×507 09:30 $2.50 → close $2.54 +20.28; PMVP×706 09:30 $1.75 → close $1.79 +28.24; QSI×988 09:30 $1.38 → close $1.55 +167.96; SITC×354 09:30 $3.49 → close $3.42 -24.78; UTHR×2 09:30 $570.00 → close $541.70 -56.60; CDNA×2 09:30 $66.33 → close $67.15 +1.64; SES×208 09:30 $0.86 → close $0.88 +5.14; MAT×11 09:30 $15.13 → close $15.27 +1.48; TDAY×25 09:30 $7.17 → close $7.05 -3.00; EFXT×7 09:30 $25.28 → close $24.59 -4.83 | — |
 
 ## Not taken
 

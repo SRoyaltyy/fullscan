@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green, no 🚨
 
-Cash book **-5.75%** ($9,425) · signal-only (no cash/fees) was +7.64%. Starts YES **9/30**. Fills 295 · skips 107 · realized $+492.16.
+Cash book **-4.38%** ($9,562) · signal-only (no cash/fees) was +7.64%. Starts YES **9/30**. Fills 312 · skips 107 · realized $+492.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -437,6 +437,25 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `CDZI` | 269 | $3.89 | $3.47 | — | $1,074.29 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer; ret5=+2.6; leftover $1048.14 | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🔴 heat🟡 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `ZETA` | 32 | $32.03 | $2.09 | — | $47.24 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer; 🔵; ret5=+6.0; leftover $1048.14 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $47.24 | ▼ close $9,425.23 vs 09:30 $9,500.46 (session -15.56) | 16:00 close · cash $47.24 · equity $9,425.23 vs 09:30 $9,500.46 (-75.23; session marks -15.56) · 9 name(s) marked open→close (per-name table). SN×6 09:30 $182.44 → close $182.44 +0.00; IOT×26 09:30 $38.99 → close $40.04 +27.30; AVPT×73 09:30 $14.27 → close $14.08 -13.87; TLSA×944 09:30 $1.11 → close $1.14 +28.32; IVA×310 09:30 $3.38 → close $3.46 +26.35; CDNL×34 09:30 $30.30 → close $29.74 -19.04; INO×845 09:30 $1.24 → close $1.21 -25.35; CDZI×269 09:30 $3.89 → close $3.70 -51.11; ZETA×32 09:30 $32.03 → close $32.40 +11.84 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $47.24 | ▲ 09:30 equity $9,561.56 vs yday $9,425.23 (+136.33) | 09:30 open · cash $47.24 (unchanged overnight, no fees) · equity $9,561.56 vs prior close $9,425.23 (+136.33) · 9 name(s) re-marked at the open (per-name table). AVPT×73 yday $14.08 → 09:30 $14.22 +10.22; CDNL×34 yday $29.74 → 09:30 $30.29 +18.70; CDZI×269 yday $3.70 → 09:30 $3.75 +13.45; INO×845 yday $1.21 → 09:30 $1.23 +16.90; IOT×26 yday $40.04 → 09:30 $40.41 +9.62; IVA×310 yday $3.46 → 09:30 $3.57 +34.10; SN×6 yday $182.44 → 09:30 $183.57 +6.78; TLSA×944 yday $1.14 → 09:30 $1.16 +18.88; ZETA×32 yday $32.40 → 09:30 $32.64 +7.68 | — |
+| 2026-10-02 09:30 ET | **SELL** | `AVPT` | 73 | $14.22 | $2.23 | $-8.09 | $1,083.07 | ▼ -8.09 after sell → book $9,559.33; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `CDNL` | 34 | $30.29 | $2.11 | $-4.54 | $2,110.82 | ▼ -4.54 after sell → book $9,557.22; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `CDZI` | 269 | $3.75 | $3.52 | $-44.65 | $3,116.04 | ▼ -44.65 after sell → book $9,553.69; vs 09:30 mark -3.53 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `INO` | 845 | $1.23 | $11.05 | $-30.40 | $4,144.34 | ▼ -30.40 after sell → book $9,542.64; vs 09:30 mark -11.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `IOT` | 26 | $40.41 | $2.09 | $+32.76 | $5,192.91 | ▲ +32.76 after sell → book $9,540.55; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `IVA` | 310 | $3.57 | $4.06 | $+52.39 | $6,295.55 | ▲ +52.39 after sell → book $9,536.49; vs 09:30 mark -4.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `SN` | 6 | $183.57 | $2.03 | $-6.92 | $7,394.94 | ▼ -6.92 after sell → book $9,534.46; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-02 09:30 ET | **SELL** | `TLSA` | 944 | $1.16 | $12.34 | $+22.68 | $8,477.64 | ▲ +22.68 after sell → book $9,522.12; vs 09:30 mark -12.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `ZETA` | 32 | $32.64 | $2.11 | $+15.33 | $9,520.01 | ▲ +15.33 after sell → book $9,520.01; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **BUY** | `CDNA` | 17 | $66.33 | $2.04 | — | $8,390.36 | — | union ∩ last_green, no 🚨; gate last_green=True; list flatten,ohlc_hot; 🔵; ⚪; ret5=+7.9; leftover $1190.00 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ETON` | 22 | $52.42 | $2.06 | — | $7,235.07 | — | union ∩ last_green, no 🚨; gate last_green=True; list flatten; 🔵; ⚪; ret5=-12.6; leftover $1190.00 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `QNC` | 704 | $1.69 | $9.08 | — | $6,036.23 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=-7.9; leftover $1190.00 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `AIB` | 820 | $1.45 | $10.58 | — | $4,836.65 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=+7.0; leftover $1190.00 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `COHR` | 3 | $316.56 | $2.00 | — | $3,884.95 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer; 🔵; ret5=+9.8; leftover $1190.00 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `RR` | 664 | $1.79 | $8.57 | — | $2,687.83 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer; ret5=+6.7; leftover $1190.00 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `INOD` | 16 | $73.05 | $2.04 | — | $1,516.99 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer; 🔵; ⚪; ret5=-0.0; leftover $1190.00 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `GWRE` | 7 | $155.67 | $2.01 | — | $425.29 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer; ret5=+2.9; leftover $1190.00 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $425.29 | ▲ close $9,561.73 vs 09:30 $9,561.56 (session +80.09) | 16:00 close · cash $425.29 · equity $9,561.73 vs 09:30 $9,561.56 (+0.17; session marks +80.09) · 8 name(s) marked open→close (per-name table). CDNA×17 09:30 $66.33 → close $67.15 +13.94; ETON×22 09:30 $52.42 → close $55.36 +64.68; QNC×704 09:30 $1.69 → close $1.59 -70.40; AIB×820 09:30 $1.45 → close $1.64 +155.80; COHR×3 09:30 $316.56 → close $337.04 +61.43; RR×664 09:30 $1.79 → close $1.68 -73.04; INOD×16 09:30 $73.05 → close $70.07 -47.68; GWRE×7 09:30 $155.67 → close $152.15 -24.64 | — |
 
 ## Not taken
 

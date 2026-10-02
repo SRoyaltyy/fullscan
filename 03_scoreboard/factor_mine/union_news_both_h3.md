@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 AND headline🟢 (thin; kept as a KILL)
 
-Cash book **-5.17%** ($9,483) · signal-only (no cash/fees) was +1.48%. Starts YES **21/30**. Fills 4 · skips 7 · realized $+403.48.
+Cash book **-6.70%** ($9,330) · signal-only (no cash/fees) was +1.48%. Starts YES **21/30**. Fills 5 · skips 7 · realized $+403.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -147,6 +147,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,483.05 | ▲ close $9,483.05 vs 09:30 $9,483.05 (session +0.00) | 16:00 close · cash $9,483.05 · no lots left · equity $9,483.05. | — |
 | 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,483.05 | ▲ 09:30 equity $9,483.05 vs yday $9,483.05 (+0.00) | 09:30 open · cash $9,483.05 · no holdings · equity $9,483.05 vs prior close $9,483.05 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,483.05 | ▲ close $9,483.05 vs 09:30 $9,483.05 (session +0.00) | 16:00 close · cash $9,483.05 · no lots left · equity $9,483.05. | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,483.05 | ▲ 09:30 equity $9,483.05 vs yday $9,483.05 (+0.00) | 09:30 open · cash $9,483.05 · no holdings · equity $9,483.05 vs prior close $9,483.05 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-02 09:30 ET | **BUY** | `SNPS` | 19 | $497.86 | $2.05 | — | $21.76 | — | packet🟢 AND headline🟢 (thin; kept as a KILL); gate news_and_headline=True; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $9483.05 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.76 | ▼ close $9,329.86 vs 09:30 $9,483.05 (session -151.15) | 16:00 close · cash $21.76 · equity $9,329.86 vs 09:30 $9,483.05 (-153.19; session marks -151.15) · 1 name(s) marked open→close (per-name table). SNPS×19 09:30 $497.86 → close $489.90 -151.15 | — |
 
 ## Not taken
 

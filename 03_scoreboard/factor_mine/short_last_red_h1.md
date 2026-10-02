@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **+0.27%** ($10,027) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 281 · skips 107 · realized $-717.78.
+Cash book **-1.82%** ($9,818) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 296 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -421,6 +421,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SHORT** | `SDEV` | 201 | $3.60 | $2.66 | — | $14,420.48 | — | last bar red; gate last_red=True; list yday_mover; ret5=+131.2; leftover $726.77 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **SHORT** | `PYXS` | 314 | $2.31 | $4.13 | — | $15,141.69 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-27.6; leftover $726.77 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,141.69 | ▼ close $10,026.95 vs 09:30 $10,200.86 (session -125.65) | 16:00 close · cash $15,141.69 · equity $10,026.95 vs 09:30 $10,200.86 (-173.91; session marks -125.65) · 7 name(s) marked open→close (per-name table). KSPI×7 09:30 $92.93 → close $92.02 +6.37; RELY×34 09:30 $21.28 → close $21.48 -6.80; CAPR×77 09:30 $9.36 → close $8.94 +32.34; LQDA×30 09:30 $23.96 → close $27.99 -120.90; AIB×519 09:30 $1.40 → close $1.52 -62.28; SDEV×201 09:30 $3.60 → close $3.66 -12.06; PYXS×314 09:30 $2.31 → close $2.19 +37.68 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,141.69 | ▼ 09:30 equity $9,788.11 vs yday $10,026.95 (-238.84) | 09:30 open · cash $15,141.69 (unchanged overnight, no fees) · equity $9,788.11 vs prior close $10,026.95 (-238.84) · 7 name(s) re-marked at the open (per-name table). AIB×519 yday $1.52 → 09:30 $1.45 +36.33; CAPR×77 yday $8.94 → 09:30 $9.14 -15.40; KSPI×7 yday $92.02 → 09:30 $92.05 -0.21; LQDA×30 yday $27.99 → 09:30 $26.69 +39.00; PYXS×314 yday $2.19 → 09:30 $2.21 -6.28; RELY×34 yday $21.48 → 09:30 $21.80 -10.88; SDEV×201 yday $3.66 → 09:30 $5.06 -281.40 | — |
+| 2026-10-02 09:30 ET | **COVER** | `AIB` | 519 | $1.45 | $6.70 | $-39.46 | $14,382.44 | ▼ -39.46 after sell → book $9,781.41; vs 09:30 mark -6.70 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **COVER** | `CAPR` | 77 | $9.14 | $2.22 | $+12.46 | $13,676.44 | ▲ +12.46 after sell → book $9,779.19; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `KSPI` | 7 | $92.05 | $2.01 | $+2.10 | $13,030.08 | ▲ +2.10 after sell → book $9,777.18; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `LQDA` | 30 | $26.69 | $2.08 | $-86.10 | $12,227.30 | ▼ -86.10 after sell → book $9,775.10; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `PYXS` | 314 | $2.21 | $4.05 | $+23.22 | $11,529.31 | ▲ +23.22 after sell → book $9,771.05; vs 09:30 mark -4.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `RELY` | 34 | $21.80 | $2.09 | $-21.90 | $10,786.02 | ▼ -21.90 after sell → book $9,768.96; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `SDEV` | 201 | $5.06 | $2.60 | $-298.72 | $9,766.36 | ▼ -298.72 after sell → book $9,766.36; vs 09:30 mark -2.60 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `VEEV` | 2 | $283.10 | $2.03 | — | $10,330.53 | — | last bar red; gate last_red=True; list flatten; 🔵; ret5=+2.6; leftover $610.40 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `CORT` | 5 | $114.38 | $2.04 | — | $10,900.39 | — | last bar red; gate last_red=True; list flatten; 🔵; ret5=-3.8; leftover $610.40 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `ILMN` | 2 | $265.91 | $2.03 | — | $11,430.18 | — | last bar red; gate last_red=True; list flatten; 🔵; ⚪; ret5=-3.0; leftover $610.40 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `WRBY` | 22 | $27.63 | $2.09 | — | $12,035.95 | — | last bar red; gate last_red=True; list flatten; 🔵; ⚪; ret5=+4.6; leftover $610.40 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `BLFS` | 16 | $37.02 | $2.07 | — | $12,626.19 | — | last bar red; gate last_red=True; list flatten; 🔵; ⚪; ret5=-4.7; leftover $610.40 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `ACN` | 2 | $211.02 | $2.03 | — | $13,046.21 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=+19.7; leftover $610.40 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `EFXT` | 24 | $25.28 | $2.10 | — | $13,650.83 | — | last bar red; gate last_red=True; list yday_gainer; ret5=+9.4; leftover $610.40 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `CTVA` | 49 | $12.38 | $2.17 | — | $14,255.52 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-84.2; leftover $610.40 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,255.52 | ▲ close $9,818.13 vs 09:30 $9,788.11 (session +68.33) | 16:00 close · cash $14,255.52 · equity $9,818.13 vs 09:30 $9,788.11 (+30.02; session marks +68.33) · 8 name(s) marked open→close (per-name table). VEEV×2 09:30 $283.10 → close $273.33 +19.54; CORT×5 09:30 $114.38 → close $116.23 -9.25; ILMN×2 09:30 $265.91 → close $273.04 -14.26; WRBY×22 09:30 $27.63 → close $27.03 +13.20; BLFS×16 09:30 $37.02 → close $37.30 -4.48; ACN×2 09:30 $211.02 → close $198.90 +24.24; EFXT×24 09:30 $25.28 → close $24.59 +16.56; CTVA×49 09:30 $12.38 → close $11.92 +22.78 | — |
 
 ## Not taken
 

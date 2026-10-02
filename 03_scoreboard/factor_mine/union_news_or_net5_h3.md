@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 5
 
-Cash book **-26.19%** ($7,381) · signal-only (no cash/fees) was -14.84%. Starts YES **1/30**. Fills 83 · skips 100 · realized $-2151.30.
+Cash book **-23.89%** ($7,611) · signal-only (no cash/fees) was -14.84%. Starts YES **1/30**. Fills 84 · skips 100 · realized $-2151.30.
 
 ## How this sleeve decides (like you are 10)
 
@@ -227,6 +227,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `PRGS` | 94 | $40.52 | $2.27 | — | $3,884.73 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list earn_react; 🔵; ret5=-2.6; leftover $3847.94 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `NTAP` | 18 | $211.75 | $2.04 | — | $71.19 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list ohlc_hot; ret5=+7.0; leftover $3847.94 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.19 | ▼ close $7,380.61 vs 09:30 $7,708.45 (session -310.96) | 16:00 close · cash $71.19 · equity $7,380.61 vs 09:30 $7,708.45 (-327.84; session marks -310.96) · 2 name(s) marked open→close (per-name table). PRGS×94 09:30 $40.52 → close $36.58 -370.36; NTAP×18 09:30 $211.75 → close $215.05 +59.40 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $71.19 | ▲ 09:30 equity $7,433.65 vs yday $7,380.61 (+53.04) | 09:30 open · cash $71.19 (unchanged overnight, no fees) · equity $7,433.65 vs prior close $7,380.61 (+53.04) · 2 name(s) re-marked at the open (per-name table). NTAP×18 yday $215.05 → 09:30 $216.43 +24.84; PRGS×94 yday $36.58 → 09:30 $36.88 +28.20 | — |
+| 2026-10-02 09:30 ET | **BUY** | `CMPX` | 15 | $0.94 | $0.19 | — | $56.90 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list yday_mover; 🔵; ret5=-20.6; leftover $14.24 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.90 | ▲ close $7,611.21 vs 09:30 $7,433.65 (session +177.75) | 16:00 close · cash $56.90 · equity $7,611.21 vs 09:30 $7,433.65 (+177.56; session marks +177.75) · 3 name(s) marked open→close (per-name table). NTAP×18 09:30 $216.43 → close $226.27 +177.12; PRGS×94 09:30 $36.88 → close $36.90 +1.88; CMPX×15 09:30 $0.94 → close $0.86 -1.25 | — |
 
 ## Not taken
 

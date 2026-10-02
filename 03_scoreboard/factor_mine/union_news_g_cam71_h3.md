@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +7 −≤1
 
-Cash book **-33.27%** ($6,673) · signal-only (no cash/fees) was -9.70%. Starts YES **2/30**. Fills 53 · skips 63 · realized $-1714.70.
+Cash book **-32.68%** ($6,732) · signal-only (no cash/fees) was -9.70%. Starts YES **2/30**. Fills 53 · skips 63 · realized $-1714.70.
 
 ## How this sleeve decides (like you are 10)
 
@@ -198,6 +198,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SELL** | `ZSQR` | 477 | $4.22 | $6.25 | $+159.32 | $7,392.99 | ▲ +159.32 after sell → book $7,392.99; vs 09:30 mark -6.25 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-10-01 09:30 ET | **BUY** | `PRGS` | 182 | $40.52 | $2.54 | — | $15.81 | — | merged news🟢 and cameras +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list earn_react; 🔵; ret5=-2.6; leftover $7392.99 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.81 | ▼ close $6,673.37 vs 09:30 $7,405.65 (session -717.08) | 16:00 close · cash $15.81 · equity $6,673.37 vs 09:30 $7,405.65 (-732.28; session marks -717.08) · 1 name(s) marked open→close (per-name table). PRGS×182 09:30 $40.52 → close $36.58 -717.08 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.81 | ▲ 09:30 equity $6,727.97 vs yday $6,673.37 (+54.60) | 09:30 open · cash $15.81 (unchanged overnight, no fees) · equity $6,727.97 vs prior close $6,673.37 (+54.60) · 1 name(s) re-marked at the open (per-name table). PRGS×182 yday $36.58 → 09:30 $36.88 +54.60 | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.81 | ▲ close $6,731.61 vs 09:30 $6,727.97 (session +3.64) | 16:00 close · cash $15.81 · equity $6,731.61 vs 09:30 $6,727.97 (+3.64; session marks +3.64) · 1 name(s) marked open→close (per-name table). PRGS×182 09:30 $36.88 → close $36.90 +3.64 | — |
 
 ## Not taken
 

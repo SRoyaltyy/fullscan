@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · split short_news_r_h3/union_e_fresh_h3 w=0.5,0.5 net=priority
 
-Cash book **-15.67%** ($8,433) · signal-only (no cash/fees) was —. Starts YES **21/30**. Fills 246 · skips 315 · realized $+2068.42.
+Cash book **-15.74%** ($8,426) · signal-only (no cash/fees) was —. Starts YES **21/30**. Fills 247 · skips 315 · realized $+2068.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,315.13.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,249.37.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -449,6 +449,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SELL** | `UEC` | 90 | $9.39 | $2.28 | $-51.34 | $4,353.58 | ▼ -51.34 after sell → book $4,353.58; vs 09:30 mark -2.29 | exit unpriced hold on first bar after 2 sess | — |
 | 2026-10-01 09:30 ET | **SHORT** | `NKE` | 29 | $35.45 | $2.13 | — | $6,233.57 | — | news🔴; gate news=bad; list overnight,overnight_mega; ret5=-1.8; leftover $1042.94 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 09:30 ET | **SHORT** | `PYXS` | 451 | $2.31 | $5.93 | — | $5,207.65 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-27.6; leftover $1042.94 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `NKE` | 2 | $32.55 | $0.66 | — | $15.80 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-2.3; leftover $81.56 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,233.57 | ▼ close $4,286.20 vs 09:30 $4,292.82 (session -6.62) | 16:00 close · cash $6,233.57 · equity $4,286.20 vs 09:30 $4,292.82 (-6.62; session marks -6.62) · 2 name(s) marked open→close (per-name table). NKE×29 09:30 $32.55 → close $33.87 -38.19; PYXS×451 09:30 $2.21 → close $2.14 +31.57 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,233.57 | ▲ 09:30 equity $4,292.82 vs yday $4,226.53 (+66.29) | 09:30 open · cash $6,233.57 (unchanged overnight, no fees) · equity $4,292.82 vs prior close $4,226.53 (+66.29) · 2 name(s) re-marked at the open (per-name table). NKE×29 yday $35.15 → 09:30 $32.55 +75.31; PYXS×451 yday $2.19 → 09:30 $2.21 -9.02 | — |
 
 ## Not taken
 

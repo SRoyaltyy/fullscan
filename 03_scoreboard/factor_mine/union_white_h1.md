@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ white, no 🚨
 
-Cash book **-14.71%** ($8,529) · signal-only (no cash/fees) was -8.86%. Starts YES **3/30**. Fills 221 · skips 0 · realized $-116.79.
+Cash book **-12.73%** ($8,727) · signal-only (no cash/fees) was -8.86%. Starts YES **3/30**. Fills 230 · skips 0 · realized $-116.79.
 
 ## How this sleeve decides (like you are 10)
 
@@ -363,3 +363,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SELL** | `TOST` | 35 | $29.05 | $2.12 | $-51.46 | $6,607.17 | ▼ -51.46 after sell → book $8,532.17; vs 09:30 mark -2.12 | exit unpriced hold on first bar after 2 sess | — |
 | 2026-10-01 09:30 ET | **SELL** | `ZSQR` | 240 | $4.22 | $3.15 | $-66.24 | $7,616.82 | ▼ -66.24 after sell → book $8,529.02; vs 09:30 mark -3.15 | exit unpriced hold on first bar after 2 sess | — |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,616.82 | ▲ close $8,529.02 vs 09:30 $8,545.03 (session +0.00) | 16:00 close · cash $7,616.82 · equity $8,529.02 vs 09:30 $8,545.03 (-16.01; session marks +0.00) · 1 name(s) marked open→close (per-name table). SN×5 09:30 $182.44 → close $182.44 +0.00 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,616.82 | ▲ 09:30 equity $8,534.67 vs yday $8,529.02 (+5.65) | 09:30 open · cash $7,616.82 (unchanged overnight, no fees) · equity $8,534.67 vs prior close $8,529.02 (+5.65) · 1 name(s) re-marked at the open (per-name table). SN×5 yday $182.44 → 09:30 $183.57 +5.65 | — |
+| 2026-10-02 09:30 ET | **SELL** | `SN` | 5 | $183.57 | $2.02 | $-6.43 | $8,532.65 | ▼ -6.43 after sell → book $8,532.65; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-02 09:30 ET | **BUY** | `ILMN` | 4 | $265.91 | $2.00 | — | $7,467.00 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten; 🔵; ⚪; ret5=-3.0; leftover $1066.58 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `CDNA` | 16 | $66.33 | $2.04 | — | $6,403.69 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten,ohlc_hot; 🔵; ⚪; ret5=+7.9; leftover $1066.58 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `WRBY` | 38 | $27.63 | $2.10 | — | $5,351.64 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten; 🔵; ⚪; ret5=+4.6; leftover $1066.58 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `BLFS` | 28 | $37.02 | $2.07 | — | $4,313.01 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten; 🔵; ⚪; ret5=-4.7; leftover $1066.58 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ETON` | 20 | $52.42 | $2.05 | — | $3,262.56 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten; 🔵; ⚪; ret5=-12.6; leftover $1066.58 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `INOD` | 14 | $73.05 | $2.03 | — | $2,237.83 | — | union ∩ white, no 🚨; gate zero_red=True; list probable,yday_gainer; 🔵; ⚪; ret5=-0.0; leftover $1066.58 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `SNPS` | 2 | $497.86 | $2.00 | — | $1,240.12 | — | union ∩ white, no 🚨; gate zero_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $1066.58 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `NAUT` | 640 | $1.67 | $8.26 | — | $166.26 | — | union ∩ white, no 🚨; gate zero_red=True; list yday_gainer; 🔵; ⚪; ret5=+58.4; leftover $1066.58 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $166.26 | ▲ close $8,726.74 vs 09:30 $8,534.67 (session +216.65) | 16:00 close · cash $166.26 · equity $8,726.74 vs 09:30 $8,534.67 (+192.07; session marks +216.65) · 8 name(s) marked open→close (per-name table). ILMN×4 09:30 $265.91 → close $273.04 +28.52; CDNA×16 09:30 $66.33 → close $67.15 +13.12; WRBY×38 09:30 $27.63 → close $27.03 -22.80; BLFS×28 09:30 $37.02 → close $37.30 +7.84; ETON×20 09:30 $52.42 → close $55.36 +58.80; INOD×14 09:30 $73.05 → close $70.07 -41.72; SNPS×2 09:30 $497.86 → close $489.90 -15.91; NAUT×640 09:30 $1.67 → close $1.96 +188.80 | — |

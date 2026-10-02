@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-16.32%** ($8,368) · signal-only (no cash/fees) was +24.03%. Starts YES **8/30**. Fills 230 · skips 304 · realized $-1035.82.
+Cash book **-15.50%** ($8,450) · signal-only (no cash/fees) was +24.03%. Starts YES **8/30**. Fills 230 · skips 304 · realized $-1035.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -372,6 +372,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `PACB` | 444 | $2.34 | $5.73 | — | $1,049.92 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer,yday_mover; ret5=+68.1; leftover $1038.99 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `PMVP` | 618 | $1.68 | $7.97 | — | $3.71 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer,yday_mover; ret5=+21.9; leftover $1038.99 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.71 | ▲ close $8,367.72 vs 09:30 $8,342.23 (session +95.38) | 16:00 close · cash $3.71 · equity $8,367.72 vs 09:30 $8,342.23 (+25.49; session marks +95.38) · 8 name(s) marked open→close (per-name table). AVPT×72 09:30 $14.27 → close $14.08 -13.68; TLSA×936 09:30 $1.11 → close $1.14 +28.08; IVA×307 09:30 $3.38 → close $3.46 +26.09; CDZI×267 09:30 $3.89 → close $3.70 -50.73; ZETA×32 09:30 $32.03 → close $32.40 +11.84; BRZE×39 09:30 $26.29 → close $25.65 -24.96; PACB×444 09:30 $2.34 → close $2.51 +75.48; PMVP×618 09:30 $1.68 → close $1.75 +43.26 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.71 | ▲ 09:30 equity $8,453.51 vs yday $8,367.72 (+85.79) | 09:30 open · cash $3.71 (unchanged overnight, no fees) · equity $8,453.51 vs prior close $8,367.72 (+85.79) · 8 name(s) re-marked at the open (per-name table). AVPT×72 yday $14.08 → 09:30 $14.22 +10.08; BRZE×39 yday $25.65 → 09:30 $25.82 +6.63; CDZI×267 yday $3.70 → 09:30 $3.75 +13.35; IVA×307 yday $3.46 → 09:30 $3.57 +33.77; PACB×444 yday $2.51 → 09:30 $2.50 -4.44; PMVP×618 yday $1.75 → 09:30 $1.75 +0.00; TLSA×936 yday $1.14 → 09:30 $1.16 +18.72; ZETA×32 yday $32.40 → 09:30 $32.64 +7.68 | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.71 | ▼ close $8,450.12 vs 09:30 $8,453.51 (session -3.39) | 16:00 close · cash $3.71 · equity $8,450.12 vs 09:30 $8,453.51 (-3.39; session marks -3.39) · 8 name(s) marked open→close (per-name table). AVPT×72 09:30 $14.22 → close $14.07 -10.80; BRZE×39 09:30 $25.82 → close $25.42 -15.60; CDZI×267 09:30 $3.75 → close $3.83 +21.36; IVA×307 09:30 $3.57 → close $3.56 -3.07; PACB×444 09:30 $2.50 → close $2.54 +17.76; PMVP×618 09:30 $1.75 → close $1.79 +24.72; TLSA×936 09:30 $1.16 → close $1.12 -37.44; ZETA×32 09:30 $32.64 → close $32.63 -0.32 | — |
 
 ## Not taken
 

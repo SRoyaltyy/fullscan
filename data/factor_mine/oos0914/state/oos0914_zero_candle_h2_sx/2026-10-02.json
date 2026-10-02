@@ -1,0 +1,147 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 55.24,
+      "shares": 46,
+      "side": "BUY",
+      "ticker": "PDFS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 66.33,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "CDNA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 10.12,
+      "shares": 252,
+      "side": "BUY",
+      "ticker": "ARHS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.665,
+      "shares": 1531,
+      "side": "BUY",
+      "ticker": "NAUT"
+    }
+  ],
+  "cash": 14.47,
+  "date": "2026-10-02",
+  "equity": 10700.41,
+  "fees": 27.2327,
+  "fills": [
+    {
+      "fees": 2.128,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 55.24,
+      "shares": 46,
+      "side": "BUY",
+      "ticker": "PDFS"
+    },
+    {
+      "fees": 2.104,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 66.33,
+      "shares": 38,
+      "side": "BUY",
+      "ticker": "CDNA"
+    },
+    {
+      "fees": 3.2508,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 10.12,
+      "shares": 252,
+      "side": "BUY",
+      "ticker": "ARHS"
+    },
+    {
+      "fees": 19.7499,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.665,
+      "shares": 1531,
+      "side": "BUY",
+      "ticker": "NAUT"
+    }
+  ],
+  "holdings": [
+    "ARHS",
+    "CDNA",
+    "NAUT",
+    "PDFS"
+  ],
+  "mean": 4.8788,
+  "n_trades_today": 4,
+  "recipe": "oos0914_zero_candle_h2_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-10-02",
+    "cash": 14.47,
+    "pos": {
+      "ARHS": {
+        "close_px": 10.24,
+        "cost": 2553.4907999999996,
+        "entry_date": "2026-10-02",
+        "entry_px": 10.12,
+        "fee_in": 3.2508,
+        "last_px": 10.12,
+        "min_hold": 2,
+        "notional": 2550.24,
+        "peak_px": 10.12,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+4.2; leftover $2550.66",
+        "shares": 252,
+        "ticker": "ARHS"
+      },
+      "CDNA": {
+        "close_px": 67.15,
+        "cost": 2522.644,
+        "entry_date": "2026-10-02",
+        "entry_px": 66.33,
+        "fee_in": 2.104,
+        "last_px": 66.33,
+        "min_hold": 2,
+        "notional": 2520.54,
+        "peak_px": 66.33,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+7.9; leftover $2550.66",
+        "shares": 38,
+        "ticker": "CDNA"
+      },
+      "NAUT": {
+        "close_px": 1.96,
+        "cost": 2568.8649,
+        "entry_date": "2026-10-02",
+        "entry_px": 1.665,
+        "fee_in": 19.7499,
+        "last_px": 1.665,
+        "min_hold": 2,
+        "notional": 2549.1150000000002,
+        "peak_px": 1.665,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+58.4; leftover $2550.66",
+        "shares": 1531,
+        "ticker": "NAUT"
+      },
+      "PDFS": {
+        "close_px": 55.5,
+        "cost": 2543.168,
+        "entry_date": "2026-10-02",
+        "entry_px": 55.24,
+        "fee_in": 2.128,
+        "last_px": 55.24,
+        "min_hold": 2,
+        "notional": 2541.04,
+        "peak_px": 55.24,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \u26aa; ret5=+11.5; leftover $2550.66",
+        "shares": 46,
+        "ticker": "PDFS"
+      }
+    },
+    "yday_equity": 10700.41
+  }
+}

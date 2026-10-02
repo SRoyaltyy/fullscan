@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-26.11%** ($7,389) · signal-only (no cash/fees) was -24.98%. Starts YES **1/30**. Fills 218 · skips 306 · realized $-1766.84.
+Cash book **-25.66%** ($7,434) · signal-only (no cash/fees) was -24.98%. Starts YES **1/30**. Fills 221 · skips 306 · realized $-1766.84.
 
 ## How this sleeve decides (like you are 10)
 
@@ -363,6 +363,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `PUSA` | 237 | $3.92 | $3.06 | — | $953.28 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+4.9; leftover $929.68 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `OMDA` | 44 | $20.90 | $2.12 | — | $31.56 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+0.6; leftover $929.68 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $31.56 | ▼ close $7,388.97 vs 09:30 $7,651.94 (session -211.12) | 16:00 close · cash $31.56 · equity $7,388.97 vs 09:30 $7,651.94 (-262.97; session marks -211.12) · 9 name(s) marked open→close (per-name table). SN×1 09:30 $182.44 → close $182.44 +0.00; KSPI×10 09:30 $92.93 → close $92.02 -9.10; AVPT×65 09:30 $14.27 → close $14.08 -12.35; RELY×43 09:30 $21.28 → close $21.48 +8.60; CDNL×30 09:30 $30.30 → close $29.74 -16.80; ZETA×29 09:30 $32.03 → close $32.40 +10.73; ENTX×321 09:30 $2.89 → close $2.89 +0.00; PUSA×237 09:30 $3.92 → close $3.20 -170.64; OMDA×44 09:30 $20.90 → close $20.41 -21.56 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $31.56 | ▲ 09:30 equity $7,464.27 vs yday $7,388.97 (+75.30) | 09:30 open · cash $31.56 (unchanged overnight, no fees) · equity $7,464.27 vs prior close $7,388.97 (+75.30) · 9 name(s) re-marked at the open (per-name table). AVPT×65 yday $14.08 → 09:30 $14.22 +9.10; CDNL×30 yday $29.74 → 09:30 $30.29 +16.50; ENTX×321 yday $2.89 → 09:30 $2.89 +0.00; KSPI×10 yday $92.02 → 09:30 $92.05 +0.30; OMDA×44 yday $20.41 → 09:30 $20.74 +14.52; PUSA×237 yday $3.20 → 09:30 $3.25 +13.03; RELY×43 yday $21.48 → 09:30 $21.80 +13.76; SN×1 yday $182.44 → 09:30 $183.57 +1.13; ZETA×29 yday $32.40 → 09:30 $32.64 +6.96 | — |
+| 2026-10-02 09:30 ET | **SELL** | `SN` | 1 | $183.57 | $1.86 | $-4.18 | $213.27 | ▼ -4.18 after sell → book $7,462.42; vs 09:30 mark -1.85 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-02 09:30 ET | **BUY** | `RR` | 14 | $1.79 | $0.29 | — | $187.92 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; ret5=+6.7; leftover $26.66 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `LWLG` | 4 | $5.66 | $0.24 | — | $165.04 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; 🔵; ret5=+3.0; leftover $26.66 | join🔴 sector🔴 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $165.04 | ▼ close $7,433.95 vs 09:30 $7,464.27 (session -27.93) | 16:00 close · cash $165.04 · equity $7,433.95 vs 09:30 $7,464.27 (-30.32; session marks -27.93) · 10 name(s) marked open→close (per-name table). AVPT×65 09:30 $14.22 → close $14.07 -9.75; CDNL×30 09:30 $30.29 → close $30.73 +13.20; ENTX×321 09:30 $2.89 → close $2.86 -9.63; KSPI×10 09:30 $92.05 → close $94.05 +20.00; OMDA×44 09:30 $20.74 → close $20.37 -16.28; PUSA×237 09:30 $3.25 → close $3.16 -22.51; RELY×43 09:30 $21.80 → close $21.77 -1.29; ZETA×29 09:30 $32.64 → close $32.63 -0.29; RR×14 09:30 $1.79 → close $1.68 -1.54; LWLG×4 09:30 $5.66 → close $5.70 +0.16 | — |
 
 ## Not taken
 

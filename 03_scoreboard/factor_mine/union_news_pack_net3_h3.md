@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 3
 
-Cash book **-22.73%** ($7,727) · signal-only (no cash/fees) was -17.00%. Starts YES **11/30**. Fills 41 · skips 76 · realized $-1552.71.
+Cash book **-25.51%** ($7,449) · signal-only (no cash/fees) was -17.00%. Starts YES **11/30**. Fills 43 · skips 76 · realized $-1552.71.
 
 ## How this sleeve decides (like you are 10)
 
@@ -185,6 +185,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $441.72 | ▼ 09:30 equity $7,728.68 vs yday $7,838.44 (-109.76) | 09:30 open · cash $441.72 (unchanged overnight, no fees) · equity $7,728.68 vs prior close $7,838.44 (-109.76) · 1 name(s) re-marked at the open (per-name table). COST×8 yday $924.59 → 09:30 $910.87 -109.76 | — |
 | 2026-10-01 09:30 ET | **SELL** | `COST` | 8 | $910.87 | $2.08 | $+186.86 | $7,726.60 | ▲ +186.86 after sell → book $7,726.60; vs 09:30 mark -2.08 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,726.60 | ▲ close $7,726.60 vs 09:30 $7,728.68 (session +0.00) | 16:00 close · cash $7,726.60 · no lots left · equity $7,726.60. | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,726.60 | ▲ 09:30 equity $7,726.60 vs yday $7,726.60 (+0.00) | 09:30 open · cash $7,726.60 · no holdings · equity $7,726.60 vs prior close $7,726.60 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-02 09:30 ET | **BUY** | `SNPS` | 7 | $497.86 | $2.01 | — | $4,239.60 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $3863.30 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ACN` | 18 | $211.02 | $2.04 | — | $439.20 | — | packet🟢 and camera net ≥ 3; gate cam_net_min=3,news_box=good; rank cond; list yday_gainer,yday_mover; ret5=+19.7; leftover $3863.30 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $439.20 | ▼ close $7,448.70 vs 09:30 $7,726.60 (session -273.85) | 16:00 close · cash $439.20 · equity $7,448.70 vs 09:30 $7,726.60 (-277.90; session marks -273.85) · 2 name(s) marked open→close (per-name table). SNPS×7 09:30 $497.86 → close $489.90 -55.69; ACN×18 09:30 $211.02 → close $198.90 -218.16 | — |
 
 ## Not taken
 

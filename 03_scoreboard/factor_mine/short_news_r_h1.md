@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · news🔴
 
-Cash book **-10.25%** ($8,975) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 120 · skips 28 · realized $+7.41.
+Cash book **-9.67%** ($9,033) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 123 · skips 28 · realized $+7.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -260,6 +260,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SHORT** | `RSKD` | 187 | $7.92 | $2.63 | — | $11,853.56 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+10.8; leftover $1483.43 | join🟢 sector🟢 gen🔴 news🔴 digest🟢 judge🟡 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **SHORT** | `NKE` | 41 | $35.45 | $2.17 | — | $13,304.84 | — | news🔴; gate news=bad; list overnight,overnight_mega; ret5=-1.8; leftover $1483.43 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,304.84 | ▲ close $8,974.80 vs 09:30 $8,908.23 (session +87.47) | 16:00 close · cash $13,304.84 · equity $8,974.80 vs 09:30 $8,908.23 (+66.57; session marks +87.47) · 3 name(s) marked open→close (per-name table). PYXS×642 09:30 $2.31 → close $2.19 +77.04; RSKD×187 09:30 $7.92 → close $7.93 -1.87; NKE×41 09:30 $35.45 → close $35.15 +12.30 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,304.84 | ▲ 09:30 equity $9,046.00 vs yday $8,974.80 (+71.20) | 09:30 open · cash $13,304.84 (unchanged overnight, no fees) · equity $9,046.00 vs prior close $8,974.80 (+71.20) · 3 name(s) re-marked at the open (per-name table). NKE×41 yday $35.15 → 09:30 $32.55 +106.48; PYXS×642 yday $2.19 → 09:30 $2.21 -12.84; RSKD×187 yday $7.93 → 09:30 $8.05 -22.44 | — |
+| 2026-10-02 09:30 ET | **COVER** | `NKE` | 41 | $32.55 | $2.11 | $+114.49 | $11,968.05 | ▲ +114.49 after sell → book $9,043.88; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **COVER** | `PYXS` | 642 | $2.21 | $8.28 | $+47.48 | $10,540.95 | ▲ +47.48 after sell → book $9,035.60; vs 09:30 mark -8.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `RSKD` | 187 | $8.05 | $2.55 | $-29.50 | $9,033.05 | ▼ -29.50 after sell → book $9,033.05; vs 09:30 mark -2.55 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,033.05 | ▲ close $9,033.05 vs 09:30 $9,046.00 (session +0.00) | 16:00 close · cash $9,033.05 · no lots left · equity $9,033.05. | — |
 
 ## Not taken
 

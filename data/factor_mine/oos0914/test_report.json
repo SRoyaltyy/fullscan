@@ -13,7 +13,8 @@
     "2026-09-28",
     "2026-09-29",
     "2026-09-30",
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-02"
   ],
   "rules": [
     {
@@ -508,14 +509,39 @@
           "equity": 9758.15,
           "mean": 5.7678,
           "mean_flat_15bp": 6.6149
+        },
+        {
+          "date": "2026-10-02",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 0.86,
+              "shares": 52,
+              "side": "BUY",
+              "ticker": "SES"
+            },
+            {
+              "fill_rule": "open",
+              "price": 32.35,
+              "shares": 1,
+              "side": "BUY",
+              "ticker": "WOLF"
+            }
+          ],
+          "sells": [],
+          "fees": 0.9297,
+          "cash": 58.38,
+          "equity": 10083.18,
+          "mean": 3.3309,
+          "mean_flat_15bp": 3.2551
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -2.419,
-      "start_day_win_rate": 0.2857,
+      "after_fees_return": 0.832,
+      "start_day_win_rate": 0.6,
       "best_stock": "SDGR",
-      "without_best_stock_return": -5.658
+      "without_best_stock_return": -2.54
     },
     {
       "name": "oos0914_rvol_lg_h1_sx",
@@ -1154,14 +1180,82 @@
           "equity": 10121.29,
           "mean": 6.8201,
           "mean_flat_15bp": 7.3137
+        },
+        {
+          "date": "2026-10-02",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 5.06,
+              "shares": 493,
+              "side": "BUY",
+              "ticker": "SDEV"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.38,
+              "shares": 1808,
+              "side": "BUY",
+              "ticker": "QSI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 0.86,
+              "shares": 2902,
+              "side": "BUY",
+              "ticker": "SES"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.665,
+              "shares": 1450,
+              "side": "BUY",
+              "ticker": "NAUT"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 150.5,
+              "shares": 15,
+              "side": "SELL",
+              "ticker": "FORM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 2.5,
+              "shares": 1011,
+              "side": "SELL",
+              "ticker": "PACB"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.75,
+              "shares": 1409,
+              "side": "SELL",
+              "ticker": "PMVP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.38,
+              "shares": 1973,
+              "side": "SELL",
+              "ticker": "QSI"
+            }
+          ],
+          "fees": 141.5748,
+          "cash": 2.27,
+          "equity": 11901.7,
+          "mean": 17.5907,
+          "mean_flat_15bp": 18.0027
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": 1.213,
-      "start_day_win_rate": 0.6429,
-      "best_stock": "QSI",
-      "without_best_stock_return": -2.472
+      "after_fees_return": 19.017,
+      "start_day_win_rate": 1.0,
+      "best_stock": "SDEV",
+      "without_best_stock_return": 6.95
     },
     {
       "name": "oos0914_break10_h1_sx",
@@ -1799,14 +1893,82 @@
           "equity": 8505.39,
           "mean": 6.8726,
           "mean_flat_15bp": 7.0856
+        },
+        {
+          "date": "2026-10-02",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 1.38,
+              "shares": 1519,
+              "side": "BUY",
+              "ticker": "QSI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 0.86,
+              "shares": 2438,
+              "side": "BUY",
+              "ticker": "SES"
+            },
+            {
+              "fill_rule": "open",
+              "price": 497.855,
+              "shares": 4,
+              "side": "BUY",
+              "ticker": "SNPS"
+            },
+            {
+              "fill_rule": "open",
+              "price": 32.35,
+              "shares": 64,
+              "side": "BUY",
+              "ticker": "WOLF"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 150.5,
+              "shares": 12,
+              "side": "SELL",
+              "ticker": "FORM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 2.5,
+              "shares": 850,
+              "side": "SELL",
+              "ticker": "PACB"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.75,
+              "shares": 1184,
+              "side": "SELL",
+              "ticker": "PMVP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.38,
+              "shares": 1658,
+              "side": "SELL",
+              "ticker": "QSI"
+            }
+          ],
+          "fees": 102.4018,
+          "cash": 81.59,
+          "equity": 8810.46,
+          "mean": 3.5868,
+          "mean_flat_15bp": 4.4247
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -14.946,
-      "start_day_win_rate": 0.3571,
+      "after_fees_return": -11.895,
+      "start_day_win_rate": 0.4,
       "best_stock": "QSI",
-      "without_best_stock_return": -18.053
+      "without_best_stock_return": -16.279
     },
     {
       "name": "oos0914_zero_candle_h2_sx",
@@ -2273,14 +2435,53 @@
           "equity": 10202.64,
           "mean": 0.8754,
           "mean_flat_15bp": 0.9352
+        },
+        {
+          "date": "2026-10-02",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 55.24,
+              "shares": 46,
+              "side": "BUY",
+              "ticker": "PDFS"
+            },
+            {
+              "fill_rule": "open",
+              "price": 66.33,
+              "shares": 38,
+              "side": "BUY",
+              "ticker": "CDNA"
+            },
+            {
+              "fill_rule": "open",
+              "price": 10.12,
+              "shares": 252,
+              "side": "BUY",
+              "ticker": "ARHS"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.665,
+              "shares": 1531,
+              "side": "BUY",
+              "ticker": "NAUT"
+            }
+          ],
+          "sells": [],
+          "fees": 27.2327,
+          "cash": 14.47,
+          "equity": 10700.41,
+          "mean": 4.8788,
+          "mean_flat_15bp": 5.0562
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": 2.026,
-      "start_day_win_rate": 0.4286,
-      "best_stock": "WGS",
-      "without_best_stock_return": -0.438
+      "after_fees_return": 7.004,
+      "start_day_win_rate": 1.0,
+      "best_stock": "NAUT",
+      "without_best_stock_return": 2.267
     }
   ],
   "baselines": {

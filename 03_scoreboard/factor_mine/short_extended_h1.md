@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-6.25%** ($9,374) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 268 · skips 88 · realized $-1484.16.
+Cash book **-11.21%** ($8,879) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 282 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -408,6 +408,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SHORT** | `SHMD` | 123 | $4.80 | $2.41 | — | $13,557.19 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; ret5=+32.1; leftover $591.32 | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **SHORT** | `GLND` | 116 | $5.06 | $2.38 | — | $14,141.77 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; ret5=+76.3; leftover $591.32 | join🔴 sector🔴 gen🔴 news🟢 digest🟢 judge🟡 ab🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,141.77 | ▼ close $9,374.49 vs 09:30 $9,485.77 (session -60.13) | 16:00 close · cash $14,141.77 · equity $9,374.49 vs 09:30 $9,485.77 (-111.28; session marks -60.13) · 8 name(s) marked open→close (per-name table). PACB×252 09:30 $2.34 → close $2.51 -42.84; AEHL×60 09:30 $9.74 → close $10.16 -25.20; PMVP×351 09:30 $1.68 → close $1.75 -24.57; MNKD×153 09:30 $3.84 → close $3.95 -16.83; QSI×492 09:30 $1.20 → close $1.43 -113.16; FEAM×169 09:30 $3.48 → close $3.23 +42.25; SHMD×123 09:30 $4.80 → close $4.45 +43.66; GLND×116 09:30 $5.06 → close $4.40 +76.56 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,141.77 | ▲ 09:30 equity $9,451.08 vs yday $9,374.49 (+76.59) | 09:30 open · cash $14,141.77 (unchanged overnight, no fees) · equity $9,451.08 vs prior close $9,374.49 (+76.59) · 8 name(s) re-marked at the open (per-name table). AEHL×60 yday $10.16 → 09:30 $9.37 +47.40; FEAM×169 yday $3.23 → 09:30 $3.27 -6.76; GLND×116 yday $4.40 → 09:30 $4.25 +17.40; MNKD×153 yday $3.95 → 09:30 $4.01 -9.18; PACB×252 yday $2.51 → 09:30 $2.50 +2.52; PMVP×351 yday $1.75 → 09:30 $1.75 -0.00; QSI×492 yday $1.43 → 09:30 $1.38 +24.60; SHMD×123 yday $4.45 → 09:30 $4.44 +0.61 | — |
+| 2026-10-02 09:30 ET | **COVER** | `AEHL` | 60 | $9.37 | $2.17 | $+17.82 | $13,577.40 | ▲ +17.82 after sell → book $9,448.91; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `FEAM` | 169 | $3.27 | $2.50 | $+30.44 | $13,022.27 | ▲ +30.44 after sell → book $9,446.41; vs 09:30 mark -2.50 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🔴 judge🔴 ab🟡 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **COVER** | `GLND` | 116 | $4.25 | $2.34 | $+89.24 | $12,526.94 | ▲ +89.24 after sell → book $9,444.08; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **COVER** | `MNKD` | 153 | $4.01 | $2.45 | $-30.96 | $11,910.96 | ▼ -30.96 after sell → book $9,441.63; vs 09:30 mark -2.45 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `PACB` | 252 | $2.50 | $3.25 | $-46.89 | $11,277.71 | ▼ -46.89 after sell → book $9,438.38; vs 09:30 mark -3.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `PMVP` | 351 | $1.75 | $4.53 | $-33.71 | $10,658.93 | ▼ -33.71 after sell → book $9,433.85; vs 09:30 mark -4.53 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **COVER** | `SHMD` | 123 | $4.44 | $2.36 | $+39.52 | $10,110.45 | ▲ +39.52 after sell → book $9,431.49; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SHORT** | `SDEV` | 133 | $5.06 | $2.44 | — | $10,780.99 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+183.7; leftover $673.68 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `SES` | 783 | $0.86 | $9.24 | — | $11,445.13 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+54.3; leftover $673.68 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `ACN` | 3 | $211.02 | $2.04 | — | $12,076.15 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; ret5=+19.7; leftover $673.68 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `SNPS` | 1 | $497.86 | $2.03 | — | $12,571.98 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $673.68 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `WOLF` | 20 | $32.35 | $2.09 | — | $13,216.89 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; ret5=+18.5; leftover $673.68 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `NAUT` | 404 | $1.67 | $5.31 | — | $13,884.24 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; 🔵; ⚪; ret5=+58.4; leftover $673.68 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **SHORT** | `TJGC` | 19 | $34.92 | $2.09 | — | $14,545.64 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,ohlc_hot; ret5=+15.5; leftover $673.68 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,545.64 | ▼ close $8,879.12 vs 09:30 $9,451.08 (session -527.14) | 16:00 close · cash $14,545.64 · equity $8,879.12 vs 09:30 $9,451.08 (-571.96; session marks -527.14) · 8 name(s) marked open→close (per-name table). QSI×492 09:30 $1.38 → close $1.55 -83.64; SDEV×133 09:30 $5.06 → close $7.48 -321.86; SES×783 09:30 $0.86 → close $0.88 -19.34; ACN×3 09:30 $211.02 → close $198.90 +36.36; SNPS×1 09:30 $497.86 → close $489.90 +7.96; WOLF×20 09:30 $32.35 → close $35.28 -58.60; NAUT×404 09:30 $1.67 → close $1.96 -119.18; TJGC×19 09:30 $34.92 → close $33.28 +31.16 | — |
 
 ## Not taken
 

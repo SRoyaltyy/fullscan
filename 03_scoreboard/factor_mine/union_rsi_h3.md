@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-15.45%** ($8,455) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 210 · skips 269 · realized $-1699.80.
+Cash book **-15.77%** ($8,423) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 212 · skips 269 · realized $-1699.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -351,6 +351,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `PYXS` | 529 | $2.31 | $6.82 | — | $1,219.96 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-27.6; leftover $1223.85 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `NKE` | 34 | $35.45 | $2.09 | — | $12.56 | — | rank by rsi; rank rsi; list overnight,overnight_mega; ret5=-1.8; leftover $1223.85 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12.56 | ▼ close $8,455.03 vs 09:30 $8,597.08 (session -85.68) | 16:00 close · cash $12.56 · equity $8,455.03 vs 09:30 $8,597.08 (-142.05; session marks -85.68) · 7 name(s) marked open→close (per-name table). GLAS×217 09:30 $5.62 → close $5.32 -65.10; LQDA×51 09:30 $23.96 → close $27.99 +205.53; QTTB×146 09:30 $8.36 → close $8.25 -16.06; AVXL×611 09:30 $2.00 → close $1.89 -67.21; MKC×26 09:30 $46.80 → close $44.14 -69.16; PYXS×529 09:30 $2.31 → close $2.19 -63.48; NKE×34 09:30 $35.45 → close $35.15 -10.20 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12.56 | ▼ 09:30 equity $8,299.04 vs yday $8,455.03 (-155.99) | 09:30 open · cash $12.56 (unchanged overnight, no fees) · equity $8,299.04 vs prior close $8,455.03 (-155.99) · 7 name(s) re-marked at the open (per-name table). AVXL×611 yday $1.89 → 09:30 $1.88 -6.11; GLAS×217 yday $5.32 → 09:30 $5.30 -4.34; LQDA×51 yday $27.99 → 09:30 $26.69 -66.30; MKC×26 yday $44.14 → 09:30 $43.52 -16.12; NKE×34 yday $35.15 → 09:30 $32.55 -88.30; PYXS×529 yday $2.19 → 09:30 $2.21 +10.58; QTTB×146 yday $8.25 → 09:30 $8.35 +14.60 | — |
+| 2026-10-02 09:30 ET | **BUY** | `CMPX` | 1 | $0.94 | $0.01 | — | $11.61 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-20.6; leftover $1.57 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `LUCD` | 2 | $0.63 | $0.02 | — | $10.32 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-24.2; leftover $1.57 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10.32 | ▲ close $8,423.06 vs 09:30 $8,299.04 (session +124.05) | 16:00 close · cash $10.32 · equity $8,423.06 vs 09:30 $8,299.04 (+124.02; session marks +124.05) · 9 name(s) marked open→close (per-name table). AVXL×611 09:30 $1.88 → close $1.82 -36.66; GLAS×217 09:30 $5.30 → close $5.49 +41.23; LQDA×51 09:30 $26.69 → close $28.64 +99.45; MKC×26 09:30 $43.52 → close $44.67 +29.90; NKE×34 09:30 $32.55 → close $33.87 +44.78; PYXS×529 09:30 $2.21 → close $2.14 -37.03; QTTB×146 09:30 $8.35 → close $8.23 -17.52; CMPX×1 09:30 $0.94 → close $0.86 -0.08; LUCD×2 09:30 $0.63 → close $0.63 -0.02 | — |
 
 ## Not taken
 
