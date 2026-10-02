@@ -4982,5 +4982,306 @@
     "sha256": "83b673812e545079d955fd88eb1be113be5142ca780aaed3c26b483a0b70f0b8",
     "shares": 103,
     "ticker": "TJGC"
+  },
+  {
+    "appended_late": true,
+    "bar_cutoff": "2026-09-28",
+    "cash_before": 1.4018708987664468,
+    "committed_at": "2026-10-02T04:45:16Z",
+    "date": "2026-09-29",
+    "excluded_unexplained_legs": [],
+    "finviz_source": {
+      "commit": "652d4404c66e6a3fdfeb59b5153f7733a04ee6e3",
+      "commit_time": "2026-09-28T20:41:38+00:00",
+      "file_sha256": "6e17a60219004c1041f62816b20ecbcae0732e9a0d4b7232f8ff0c95350b0023",
+      "path": "data/snapshots/2026-09-28.csv",
+      "snapshot_date": "2026-09-28",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "inputs_asof": "before 09:30 ET",
+    "kind": "plan",
+    "morning_s": 1.292,
+    "picks": [
+      {
+        "fv_avg_volume": 731.64,
+        "fv_price": 89.92,
+        "rank": 1,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "KOD"
+      },
+      {
+        "fv_avg_volume": 10496.65,
+        "fv_price": 4.49,
+        "rank": 2,
+        "sources": [
+          "yday_mover"
+        ],
+        "ticker": "GLND"
+      },
+      {
+        "fv_avg_volume": 6779.42,
+        "fv_price": 1.19,
+        "rank": 3,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "SRFM"
+      },
+      {
+        "fv_avg_volume": 1104.81,
+        "fv_price": 28.54,
+        "rank": 4,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "TJGC"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 1211,
+        "ticker": "FEAM"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 713,
+        "ticker": "SHMD"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 163,
+        "ticker": "USDE"
+      }
+    ],
+    "recipe": "union_hot_n4_h1__w0",
+    "s_source": {
+      "blob_sha": "b856d94f715f5ef5ec6d5906423a5b598f6beb63",
+      "kind": "predict",
+      "path": "01_daily/general/2026-09-29_predict.md",
+      "server_time_utc": "2026-09-29T17:00:33+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "dc3182e625d3fb8ebe364b1cf34f16c8e478b9ec6adcbce37fd51cf74af767e2"
+  },
+  {
+    "buys": [
+      {
+        "fee": 2.089,
+        "fill": 87.199997,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 7544,
+        "rank": 1,
+        "shares": 33,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "KOD"
+      },
+      {
+        "fee": 9.4686,
+        "fill": 4.02,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 117238,
+        "rank": 2,
+        "shares": 734,
+        "sources": [
+          "yday_mover"
+        ],
+        "ticker": "GLND"
+      },
+      {
+        "fee": 2.308,
+        "fill": 27.68,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 11391,
+        "rank": 4,
+        "shares": 106,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "TJGC"
+      }
+    ],
+    "cash_primary": 111.9906703937686,
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-29",
+    "excluded_on_fill": [],
+    "holdings": [
+      {
+        "cost_primary": 2974.9019999999996,
+        "entry_date": "2026-09-29",
+        "entry_px": 4.02,
+        "last_px": 4.02,
+        "min_hold": 1,
+        "peak_px": 4.02,
+        "shares": 734,
+        "ticker": "GLND"
+      },
+      {
+        "cost_primary": 2894.0769005049997,
+        "entry_date": "2026-09-29",
+        "entry_px": 87.199997,
+        "last_px": 87.199997,
+        "min_hold": 1,
+        "peak_px": 87.199997,
+        "shares": 33,
+        "ticker": "KOD"
+      },
+      {
+        "cost_primary": 3363.107025,
+        "entry_date": "2026-09-28",
+        "entry_px": 1.125,
+        "last_px": 1.19,
+        "min_hold": 1,
+        "peak_px": 1.19,
+        "shares": 2941,
+        "ticker": "SRFM"
+      },
+      {
+        "cost_primary": 2951.0583999999994,
+        "entry_date": "2026-09-29",
+        "entry_px": 27.68,
+        "last_px": 27.68,
+        "min_hold": 1,
+        "peak_px": 27.68,
+        "shares": 106,
+        "ticker": "TJGC"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "open_fill",
+    "morning_s": 1.292,
+    "open_source": "yahoo_split_adjusted_daily_open",
+    "plan_sha256": "dc3182e625d3fb8ebe364b1cf34f16c8e478b9ec6adcbce37fd51cf74af767e2",
+    "pnl_status": "pending",
+    "recipe": "union_hot_n4_h1__w0",
+    "sells": [
+      {
+        "fee": 15.8494,
+        "fill": 2.73,
+        "reason": "hold-expired",
+        "shares": 1211,
+        "ticker": "FEAM"
+      },
+      {
+        "fee": 9.3406,
+        "fill": 4.31,
+        "reason": "hold-expired",
+        "shares": 713,
+        "ticker": "SHMD"
+      },
+      {
+        "fee": 2.5271,
+        "fill": 16.1,
+        "reason": "hold-expired",
+        "shares": 163,
+        "ticker": "USDE"
+      }
+    ],
+    "sha256": "14e41ef82197ad9d867eeab6b762afcf0f1637d6bd7e281122d904c1a59809d6",
+    "unfilled": []
+  },
+  {
+    "added_buys": [],
+    "added_sells": [],
+    "cash_primary": 111.9906703937686,
+    "date": "2026-09-29",
+    "equity_primary": 13822.920557393769,
+    "holdings": [
+      {
+        "cost_primary": 2974.9019999999996,
+        "entry_date": "2026-09-29",
+        "entry_px": 4.02,
+        "last_px": 4.02,
+        "min_hold": 1,
+        "peak_px": 4.02,
+        "shares": 734,
+        "ticker": "GLND"
+      },
+      {
+        "cost_primary": 2894.0769005049997,
+        "entry_date": "2026-09-29",
+        "entry_px": 87.199997,
+        "last_px": 87.199997,
+        "min_hold": 1,
+        "peak_px": 87.199997,
+        "shares": 33,
+        "ticker": "KOD"
+      },
+      {
+        "cost_primary": 3363.107025,
+        "entry_date": "2026-09-28",
+        "entry_px": 1.125,
+        "last_px": 1.19,
+        "min_hold": 1,
+        "peak_px": 1.19,
+        "shares": 2941,
+        "ticker": "SRFM"
+      },
+      {
+        "cost_primary": 2951.0583999999994,
+        "entry_date": "2026-09-29",
+        "entry_px": 27.68,
+        "last_px": 27.68,
+        "min_hold": 1,
+        "peak_px": 27.68,
+        "shares": 106,
+        "ticker": "TJGC"
+      }
+    ],
+    "kind": "mark",
+    "open_fill_sha256": "14e41ef82197ad9d867eeab6b762afcf0f1637d6bd7e281122d904c1a59809d6",
+    "plan_sha256": "dc3182e625d3fb8ebe364b1cf34f16c8e478b9ec6adcbce37fd51cf74af767e2",
+    "pnl_status": "marked",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "1f06644458231383602f3d780f60b01a4e4265075ee930a4af23feec291e979f"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-29",
+    "entry_date": "2026-09-28",
+    "entry_px": 2.75,
+    "fill": 2.73,
+    "kind": "close",
+    "pnl_primary": -88.87269999999944,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "d8ea2dda752711bacca52e2537f1894babc640ae885a2f7c25cdb945ed72181d",
+    "shares": 1211,
+    "ticker": "FEAM"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-29",
+    "entry_date": "2026-09-28",
+    "entry_px": 4.68,
+    "fill": 4.31,
+    "kind": "close",
+    "pnl_primary": -314.3976499999999,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "2b5d3790b08e0562407ffac1874aaa1668008f5a2e055c11fc39994f729578ef",
+    "shares": 713,
+    "ticker": "SHMD"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-29",
+    "entry_date": "2026-09-25",
+    "entry_px": 15.581100463867188,
+    "fill": 16.1,
+    "kind": "close",
+    "pnl_primary": 53.75442751159744,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "5e6dd8c3bdab31a3d5c05f64ac52b4c5daf52dfbe167a969e22b0b95f14da51c",
+    "shares": 163,
+    "ticker": "USDE"
   }
 ]

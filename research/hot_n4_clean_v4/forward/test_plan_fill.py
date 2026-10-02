@@ -534,7 +534,7 @@ def _sealed_tolerance() -> None:
 
 
 def _float32_overlay() -> None:
-    """A float32 image of the jsonl print is that print. A real move is not."""
+    """The jsonl bar is the stored print, including over a different parquet open."""
     import numpy as np
 
     exact_open = 4.68
@@ -577,8 +577,8 @@ def _float32_overlay() -> None:
         raise SystemExit("overlay kept the float32 open")
     if float(out["stored"]["SHMD"]["close"][0]) != exact_close:
         raise SystemExit("overlay kept the float32 close")
-    if float(out["feat"]["SHMD"]["volume"][0]) != 999.0:
-        raise SystemExit("overlay replaced volume")
+    if float(out["feat"]["SHMD"]["volume"][0]) != 5322584.0:
+        raise SystemExit("overlay left the parquet volume on a stored bar")
     moved = {
         "feat": {
             "SHMD": {
@@ -602,8 +602,8 @@ def _float32_overlay() -> None:
     other = dict(row)
     other["open"] = 16.85
     kept = overlay_rows(moved, [other])
-    if float(kept["stored"]["SHMD"]["open"][0]) != 16.56:
-        raise SystemExit("overlay replaced a real open disagreement")
+    if float(kept["stored"]["SHMD"]["open"][0]) != 16.85:
+        raise SystemExit("overlay kept a parquet open over the stored jsonl print")
 
 
 def main() -> None:
