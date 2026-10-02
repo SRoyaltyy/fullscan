@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "n_ok": 3,
+  "n_ok": 4,
   "n_total": 11,
   "summary": "",
   "sectors": [
@@ -33,9 +33,9 @@
     },
     {
       "sector": "Consumer Defensive",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 20210,
       "status": "DEGRADED",
       "provider": "openclaw",
       "fallback_reason": "openclaw_timeout"

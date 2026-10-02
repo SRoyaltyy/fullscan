@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T08:15:52.836483-04:00",
+  "generated_at": "2026-10-02T08:23:00.304849-04:00",
   "items": [
     {
       "ok": true,
@@ -157,14 +157,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-10-02/consumer_defensive_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 20210,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -275,9 +275,9 @@
     },
     {
       "sector": "Consumer Defensive",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 20210,
       "status": "DEGRADED",
       "provider": "openclaw",
       "fallback_reason": "openclaw_timeout"
@@ -344,7 +344,7 @@
       "fallback_reason": "step deadline"
     }
   ],
-  "sector_n_ok": 3,
+  "sector_n_ok": 4,
   "sector_n_total": 11,
   "all_ok": false
 }
