@@ -172,8 +172,18 @@ def _h1(records: list[dict]) -> None:
             raise SystemExit("h1 wrote a 2026-09-28 plan after the open")
     closes = [row for row in records if row["kind"] == "close"]
     buys = [row for row in records if row["kind"] == "session" for row in row["buys"]]
-    if len(closes) != 80 or len(buys) != 84:
-        raise SystemExit(f"h1 trades closes {len(closes)} buys {len(buys)}")
+    # 80 / 84 is the sealed seed through SESSIONS (2026-09-25). Later
+    # closes are the append-only forward book and must not move that count.
+    seed = set(SESSIONS)
+    seed_closes = [row for row in closes if row.get("date") in seed]
+    later = [row for row in closes if row.get("date") not in seed]
+    if len(seed_closes) != 80 or len(buys) != 84:
+        raise SystemExit(
+            f"h1 seed trades closes {len(seed_closes)} buys {len(buys)} "
+            f"forward closes {len(later)}"
+        )
+    if any(str(row.get("date") or "") <= SESSIONS[-1] for row in later):
+        raise SystemExit("h1 forward close inside the sealed seed")
     reasons = {row["reason"] for row in closes}
     if reasons != {"hold-expired"}:
         raise SystemExit(f"h1 reasons {reasons}")

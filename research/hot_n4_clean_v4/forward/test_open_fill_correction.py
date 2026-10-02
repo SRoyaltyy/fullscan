@@ -287,6 +287,36 @@ def _cash_from(text: str) -> float:
     raise SystemExit(f"no cash line\n{text}")
 
 
+def _locked_correction(name: str, records: list[dict]) -> None:
+    """The sealed 2026-09-28 correction stays put. Do not recompute it."""
+    sealed = next(
+        row for row in records
+        if row["kind"] == "open_fill" and row["date"] == REAL
+    )
+    corr = next(
+        row for row in records
+        if row["kind"] == "open_fill_correction" and row["date"] == REAL
+    )
+    if _fills(sealed).get("SRFM") != 0.9439:
+        raise SystemExit(f"{name} sealed SRFM moved")
+    opened = corr.get("corrected") or {}
+    fills = _fills(opened)
+    for ticker, op in TRUE_OPENS.items():
+        if fills.get(ticker) != op:
+            raise SystemExit(f"{name} locked fill {ticker} {fills.get(ticker)} {op}")
+    if float(opened.get("cash_primary")) < 0:
+        raise SystemExit(f"{name} cash {opened.get('cash_primary')}")
+    if corr.get("reason") != STALE_OPEN_REASON:
+        raise SystemExit(f"{name} reason {corr.get('reason')}")
+    if corr.get("approved_by") != STALE_OPEN_APPROVED_BY:
+        raise SystemExit(f"{name} approved_by {corr.get('approved_by')}")
+    blob = json.dumps(corr.get("changed_legs"))
+    if "0.9439" not in blob or "16.209999" not in blob:
+        raise SystemExit(f"{name} sealed legs")
+    if "1.125" not in blob or "16.0" not in blob:
+        raise SystemExit(f"{name} corrected legs")
+
+
 def _real() -> None:
     from research.hot_n4_clean_v4.forward import forward
 
@@ -322,7 +352,18 @@ def _real() -> None:
                 with redirect_stdout(out), redirect_stderr(err):
                     code = forward.correct_open_main()
                 text = out.getvalue()
-                if code != 0 or "dry-run: wrote nothing" not in text:
+                detail = text + "\n" + err.getvalue()
+                if code != 0:
+                    if "already closed" in detail or "later book record" in detail:
+                        _locked_correction(name, load())
+                        print(f"{name} correction stays sealed after the close")
+                        continue
+                    raise SystemExit(f"{name} dry-run failed {code}\n{detail}")
+                if "open fill correction already sealed" in text:
+                    _locked_correction(name, load())
+                    print(f"{name} correction already sealed; locked fills unchanged")
+                    continue
+                if "dry-run: wrote nothing" not in text:
                     raise SystemExit(f"{name} dry-run failed {code}\n{text}\n{err.getvalue()}")
                 cash = _cash_from(text)
                 if cash < 0:
@@ -390,6 +431,16 @@ def _noop_real_shape() -> None:
             names = sorted(set(open_legs(plan, held)) | {str(ticker).upper() for ticker in held} | {"IWM"})
             bars = bars_with_stored_session(overlay_forward(load_bars()), REAL, names)
             bodies, why = decide_open_correction(records, REAL, bars, fees, index)
+            sealed_now = any(
+                row.get("kind") == "open_fill_correction" and row.get("date") == REAL
+                for row in records
+            )
+            if not bodies and sealed_now and (
+                not why or "already closed" in why or "later book record" in why
+            ):
+                _locked_correction(book.recipe, records)
+                print(f"{book.recipe} correction already sealed; second run appends nothing")
+                continue
             if why or len(bodies) != 1:
                 raise SystemExit(f"{book.recipe} {why}")
             if float(bodies[0]["corrected"]["cash_primary"]) < 0:

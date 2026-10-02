@@ -163,7 +163,10 @@ def test_paper_book_page_is_on_the_pages_deploy() -> None:
     dep = (root / ".github" / "workflows" / "deploy-dashboard.yml").read_text(
         encoding="utf-8")
     pub = (root / "scripts" / "publish_dashboard.sh").read_text(encoding="utf-8")
-    assert "dashboard/paper-book" in dep
+    # The Pages job overlays dashboard/${sub} for each named book, including
+    # paper-book. The workflow does not spell the joined path.
+    assert "paper-book" in dep
+    assert "dashboard/${sub}" in dep
     assert "paper-book" in pub
     shell = (root / "src" / "paper_dash.html").read_text(encoding="utf-8")
     assert 'href="/fullscan/dashboard/paper-book/"' in shell

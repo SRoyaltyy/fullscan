@@ -10,7 +10,8 @@ name: Finviz ALL (GH-hosted Elite)
 #   4. quote_colors --from-ab --top 50 (falls back to liquid / SPY set)
 #
 # A single 403 does not kill the tape: finviz_session.get retries 3x.
-# Hard fail only if the futures tape is empty after the full scrape.
+# An empty futures page keeps the last committed tape, including the
+# morning freeze. Hard fail only when that tape is empty too.
 
 on:
   schedule:
@@ -212,11 +213,13 @@ jobs:
 
       - name: QC + status note
         if: always()
+        env:
+          QC_DATE: ${{ env.DATE }}
         run: |
-          python3 - << PY
-          import json, sys
+          python3 - << 'PY'
+          import json, os, sys
           from pathlib import Path
-          d = "${{ env.DATE }}"
+          d = os.environ["QC_DATE"]
           heat = Path(f"01_daily/map_heat/{d}_map_heat.json")
           digest = Path(f"01_daily/news/{d}_finviz_digest.md")
           colors = Path(f"data/quote_colors/{d}_quote_colors.csv")
@@ -235,7 +238,7 @@ jobs:
               keys = [t.get("ticker") for t in tape[:10]] if isinstance(tape, list) else []
               ok_tape = n_tape > 0
               lines += [
-                  f"- map_heat phase=`{data.get('phase')}` overlay_at=`{data.get('overlay_at')}`",
+                  f"- map_heat phase={data.get('phase')!r} overlay_at={data.get('overlay_at')!r}",
                   f"- industries={n_ind} sectors={n_sec} tape={n_tape} {keys}",
                   f"- econ={len(data.get('econ') or [])} earnings={len(data.get('earnings') or [])} ticker_news={len(data.get('ticker_news') or [])}",
               ]

@@ -284,6 +284,37 @@ def test_parse_earnings_preview_window() -> None:
     assert rows[0]["session"] == "AMC"
 
 
+def test_postclose_keeps_morning_tape_when_live_is_empty() -> None:
+    """A zero-tile futures page must not replace the frozen morning tape."""
+    orig = mh.OUT_DIR
+    with tempfile.TemporaryDirectory() as d:
+        mh.OUT_DIR = Path(d)
+        morning = [{"ticker": "ES", "label": "S&P 500", "last": 7700, "change": -0.2}]
+        (Path(d) / "2026-10-01_map_heat.json").write_text(
+            json.dumps({"phase": "postclose", "tape": []}), encoding="utf-8")
+        (Path(d) / "2026-10-01_map_heat_morning.json").write_text(
+            json.dumps({"phase": "morning_overlay", "tape": morning}),
+            encoding="utf-8")
+        kept = mh.keep_committed_tape("2026-10-01", {
+            "phase": "postclose", "tape": [], "industries": [{}] * 60,
+        })
+        assert kept["tape"] == morning
+        assert kept["phase"] == "postclose"
+        live = mh.keep_committed_tape("2026-10-01", {
+            "phase": "postclose",
+            "tape": [{"ticker": "NQ", "last": 1, "change": 0.1}],
+        })
+        assert live["tape"][0]["ticker"] == "NQ"
+        (Path(d) / "2026-10-01_map_heat_morning.json").write_text(
+            json.dumps({"phase": "morning_overlay", "tape": []}),
+            encoding="utf-8")
+        empty = mh.keep_committed_tape("2026-10-01", {
+            "phase": "postclose", "tape": [],
+        })
+        assert empty["tape"] == []
+    mh.OUT_DIR = orig
+
+
 def test_tape_keeps_all_tiles_not_just_whitelist() -> None:
     tiles = {
         "ES": {"label": "S&P 500", "last": 7700, "change": -0.2},
@@ -316,5 +347,6 @@ if __name__ == "__main__":
     test_weekend_upcoming_econ_does_not_trip_size_gate()
     test_parse_econ_route_init_keeps_upcoming()
     test_parse_earnings_preview_window()
+    test_postclose_keeps_morning_tape_when_live_is_empty()
     test_tape_keeps_all_tiles_not_just_whitelist()
-    print("13 tests passed")
+    print("14 tests passed")
