@@ -1,13 +1,13 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T08:30:38.776620-04:00",
+  "generated_at": "2026-10-02T08:32:40.903871-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 6,
+    "ok": 7,
     "partial": 1,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 14,
+      "n_req_ok": 13,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -343,8 +343,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7206,
-          "said": "2 up / 1 down / 2 flat",
+          "size": 7034,
+          "said": "2 up / 0 down / 2 flat",
           "bullets": [
             "XLB FLAT +3.0",
             "XLC UP +4.6",
@@ -359,8 +359,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8289,
-          "said": "all_ok=False \u00b7 sectors 5/11 \u00b7 7 fail",
+          "size": 8296,
+          "said": "all_ok=False \u00b7 sectors 4/11 \u00b7 8 fail",
           "bullets": [
             "finviz_market_digest:missing",
             "sector_predict:missing",
@@ -449,13 +449,11 @@
           "name": "Sector predict \u2014 energy",
           "path": "01_daily/sectors/2026-10-02/energy_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 19185,
-          "said": "DOWN mild -7.204",
-          "bullets": [
-            "- news_mode: **on"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_financial",
@@ -524,7 +522,7 @@
           "bullets": []
         }
       ],
-      "said": "general UP  4.365 \u00b7 sectors 2 up / 1 down / 2 flat \u00b7 news news_mode: on \u00b7 352 raw / 63 usable \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte",
+      "said": "general UP  4.365 \u00b7 sectors 2 up / 0 down / 2 flat \u00b7 news news_mode: on \u00b7 352 raw / 63 usable \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte",
       "bullets": [
         "bad: 1w 10Y +18bp at 5.29 handle",
         "bad: NFP 8:30 ET unsigned binary",
@@ -535,7 +533,7 @@
         "XLC UP +4.6",
         "XLY FLAT +3.7",
         "XLP UP +4.0",
-        "XLE DOWN -7.2"
+        "XLE missing"
       ]
     },
     {
@@ -632,11 +630,11 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -675,16 +673,11 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-10-02_dossiers.json",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "zero usable dossiers (n=8)",
-          "size": 2853,
-          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NE, RIG, SLB, BKR, KGS, SSRM, NEM, SM",
-          "bullets": [
-            "NE: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE",
-            "RIG: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG",
-            "SLB: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB",
-            "BKR: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR"
-          ]
+          "status": "OK",
+          "reason": "usable=7/7",
+          "size": 26470,
+          "said": "7/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NE, RIG, SLB, BKR, KGS, SSRM, NEM, SM",
+          "bullets": []
         }
       ],
       "said": "44 ticker actions \u00b7 3 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, REPX BUY, INR BUY, OXY BUY, FANG BUY",
@@ -733,8 +726,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7206,
-          "said": "2 up / 1 down / 2 flat",
+          "size": 7034,
+          "said": "2 up / 0 down / 2 flat",
           "bullets": [
             "XLB FLAT +3.0",
             "XLC UP +4.6",
@@ -848,8 +841,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=220",
-          "size": 1517977,
-          "said": "1d BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL BIDU, GOGO, NEOV, AIRJ, VNET, GFL \u00b7 0.57375",
+          "size": 1532673,
+          "said": "1d BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL NEOV, BIDU, GOGO, GFL, AIRJ, IBM \u00b7 0.57375",
           "bullets": []
         },
         {
@@ -859,10 +852,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 90466,
+          "size": 90760,
           "said": "Stock book \u2014 2026-10-02",
           "bullets": [
-            "_Generated 2026-10-02T06:40:06.186687-04:00_",
+            "_Generated 2026-10-02T08:32:37.872327-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -926,8 +919,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=220",
-          "size": 1517977,
-          "said": "1d BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL BIDU, GOGO, NEOV, AIRJ, VNET, GFL \u00b7 0.57375",
+          "size": 1532673,
+          "said": "1d BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL NEOV, BIDU, GOGO, GFL, AIRJ, IBM \u00b7 0.57375",
           "bullets": []
         },
         {
@@ -977,125 +970,125 @@
     "buy_1d": [
       {
         "ticker": "CDNA",
-        "score": 0.8861276704128369
+        "score": 0.8225379481435953
       },
       {
         "ticker": "VEEV",
-        "score": 0.4832938994582936
+        "score": 0.4257924655182237
       },
       {
         "ticker": "CORT",
-        "score": 0.4101951587423279
+        "score": 0.3571999805970373
       },
       {
         "ticker": "ILMN",
-        "score": 0.40220509544630756
+        "score": 0.35001043679986604
       },
       {
         "ticker": "SHOO",
-        "score": 0.7587797603253532
+        "score": 0.7279190312330831
       },
       {
         "ticker": "SN",
-        "score": 0.3654075807977899
+        "score": 0.3368977595867225
       },
       {
         "ticker": "AVPT",
-        "score": 0.7178962678199392
+        "score": 0.6861184751644784
       },
       {
         "ticker": "SIG",
-        "score": 0.7435101567279492
+        "score": 0.7157782789631657
       },
       {
         "ticker": "PRCH",
-        "score": 0.7256925347213633
+        "score": 0.6781574024639143
       },
       {
         "ticker": "FIGS",
-        "score": 0.7290566884037322
+        "score": 0.7011666567266757
       },
       {
         "ticker": "SONO",
-        "score": 0.6358288607842839
+        "score": 0.6122557554404606
       },
       {
         "ticker": "EXLS",
-        "score": 0.6345662329876545
+        "score": 0.6111113600658857
       },
       {
         "ticker": "LAUR",
-        "score": 0.6262059083815144
+        "score": 0.6502540584292986
       },
       {
         "ticker": "MQ",
-        "score": 0.6500031373747726
+        "score": 0.6250094809509803
       },
       {
         "ticker": "IMAX",
-        "score": 0.6349785124113558
+        "score": 0.6289850501705696
       }
     ],
     "sell_1d": [
       {
+        "ticker": "NEOV",
+        "score": -0.30863537860432877
+      },
+      {
         "ticker": "BIDU",
-        "score": -0.38359228675285784
+        "score": -0.30175515119491925
       },
       {
         "ticker": "GOGO",
-        "score": -0.3801096595111547
-      },
-      {
-        "ticker": "NEOV",
-        "score": -0.3606837216520612
-      },
-      {
-        "ticker": "AIRJ",
-        "score": -0.33537465536743677
-      },
-      {
-        "ticker": "VNET",
-        "score": -0.32758283006944394
+        "score": -0.29362472221320157
       },
       {
         "ticker": "GFL",
-        "score": -0.3262015882594449
+        "score": -0.2906078218508684
+      },
+      {
+        "ticker": "AIRJ",
+        "score": -0.2888602348906857
       },
       {
         "ticker": "IBM",
-        "score": -0.32381047413041825
-      },
-      {
-        "ticker": "LILAK",
-        "score": -0.3191433904243694
+        "score": -0.27745520522797523
       },
       {
         "ticker": "PSA",
-        "score": -0.3063995405729825
-      },
-      {
-        "ticker": "PLAY",
-        "score": -0.29506646033277817
+        "score": -0.26879387883973965
       },
       {
         "ticker": "BAK",
-        "score": -0.2937205794802192
+        "score": -0.26337903655708433
       },
       {
         "ticker": "SOC",
-        "score": -0.29239654763331036
+        "score": -0.2593871055310438
+      },
+      {
+        "ticker": "VNET",
+        "score": -0.2548570692147698
+      },
+      {
+        "ticker": "LILAK",
+        "score": -0.2427531973659076
       },
       {
         "ticker": "CMTG",
-        "score": -0.2863148482403817
+        "score": -0.23670572520902705
       },
       {
-        "ticker": "SSTK",
-        "score": -0.28576469936620397
+        "ticker": "PRM",
+        "score": -0.2337447712965146
       },
       {
-        "ticker": "NN",
-        "score": -0.281252160354436
+        "ticker": "AREC",
+        "score": -0.22728287661828434
+      },
+      {
+        "ticker": "RC",
+        "score": -0.22300222973735256
       }
     ],
     "flatten": {
@@ -1118,13 +1111,13 @@
       "direction": "up"
     },
     "sectors": {
-      "said": "2 up / 1 down / 2 flat",
+      "said": "2 up / 0 down / 2 flat",
       "bullets": [
         "XLB FLAT +3.0",
         "XLC UP +4.6",
         "XLY FLAT +3.7",
         "XLP UP +4.0",
-        "XLE DOWN -7.2",
+        "XLE missing",
         "XLF missing",
         "XLV missing",
         "XLI missing",
@@ -2066,70 +2059,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Energy (5/11)",
+      "title": "Sector predict Consumer Defensive (4/11)",
       "date": "2026-10-02",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-02T08:30:36.676133-04:00",
+      "at": "2026-10-02T08:23:00.350531-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-02/energy_predict.md",
+          "path": "01_daily/sectors/2026-10-02/consumer_defensive_predict.md",
           "ok": true,
           "reason": "",
-          "size": 19185,
-          "preview": "# Sector Prediction \u2014 Energy \u2014 2026-10-02\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-7.204** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-4.895** (CL -1.59%, QA -1.02%, ES +0.50%, PM:XLE -0.99%) \u00b7 index_carry **1.091** (general 4.365) \u00b7 llm_overlay **-3.4** (raw -3.4)"
+          "size": 20210,
+          "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-10-02\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **3.994** (mult 0.7)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.903** (ES +0.50%, ZN -0.03%, PM:XLP +0.60%) \u00b7 index_carry **1.091** (general 4.365) \u00b7 llm_overlay **0.0** (raw 0.0)"
         },
         {
-          "path": "01_daily/sectors/2026-10-02/energy_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-02/consumer_defensive_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 387,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Energy 2026-10-02\n**Step 0 \u2014 Setup.** Loaded 135,244 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,144 characters)."
+          "size": 399,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-10-02\n**Step 0 \u2014 Setup.** Loaded 129,938 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (18,306 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-10-02_sector_energy_predict.json",
+          "path": "01_daily/_transcripts/2026-10-02_sector_consumer_defensive_predict.json",
           "ok": true,
           "reason": "",
-          "size": 156304,
+          "size": 151974,
           "preview": "keys: provider, agent, backend_model, messages"
         },
         {
           "path": "01_daily/2026-10-02_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 8289,
+          "size": 8296,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-02/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 2314,
+          "size": 2318,
           "preview": "keys: date, n_ok, n_total, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-02/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1743,
-          "preview": "# Sector Board \u2014 2026-10-02\nGenerated: **2026-10-02T08:30:36.602819-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1694,
+          "preview": "# Sector Board \u2014 2026-10-02\nGenerated: **2026-10-02T08:23:00.322098-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-02/_board.json",
           "ok": true,
           "reason": "",
-          "size": 7206,
+          "size": 7034,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 986640,
+          "size": 985572,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Energy \u2014 2026-10-02\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-7.204** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-4.895** (CL -1.59%, QA -1.02%, ES +0.50%, PM:XLE -0.99%) \u00b7 index_carry **1.091** (general 4.365) \u00b7 llm_overlay **-3.4** (raw -3.4) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Energy 2026-10-02\n**Step 0 \u2014 Setup.** Loaded 135,244 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,144 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-02\nGenerated: **2026-10-02T08:30:36.602819-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 "
+      "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-10-02\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **3.994** (mult 0.7)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.903** (ES +0.50%, ZN -0.03%, PM:XLP +0.60%) \u00b7 index_carry **1.091** (general 4.365) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-10-02\n**Step 0 \u2014 Setup.** Loaded 129,938 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (18,306 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-02\nGenerated: **2026-10-02T08:23:00.322098-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_pred"
     }
   ],
   "href": {
