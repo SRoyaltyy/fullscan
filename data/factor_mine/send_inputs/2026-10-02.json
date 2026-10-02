@@ -24,7 +24,7 @@
     },
     {
       "path": "01_daily/sectors/2026-10-02/_board.json",
-      "sha256": "7f064909a736541e5030f20d2c943ba99cfbe243efcc50f2ea5b8270f7cec98e"
+      "sha256": "7e66d070ee88a19c215cbb14af0cad929649931d78a7b422604fdb7793f96088"
     },
     {
       "path": "01_daily/weather/2026-10-02_weather.json",
@@ -50,6 +50,6 @@
   "prices": [],
   "reason": "no same-day panel rows for 2026-10-02 \u2014 sitting, no live lookup",
   "rows": [],
-  "sha256": "cf0f745e3202a79dac3fb02a7b7854d3cb2783c22675e1e583aca1b5638b2673",
+  "sha256": "eaa15b77114c691632f9192c22171b78f8953b17c259bdae453fe74e7038a95f",
   "source": "no_same_day_panel"
 }

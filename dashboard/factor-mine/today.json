@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T08:43:48.366765-04:00",
+  "generated_at": "2026-10-02T08:52:08.881998-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,19 +12,19 @@
   "buy_1d": [
     {
       "ticker": "CDNA",
-      "score": 0.8225379481435953
+      "score": 0.8738779481435954
     },
     {
       "ticker": "VEEV",
-      "score": 0.4257924655182237
+      "score": 0.47713246551822375
     },
     {
       "ticker": "CORT",
-      "score": 0.3571999805970373
+      "score": 0.40853998059703733
     },
     {
       "ticker": "ILMN",
-      "score": 0.35001043679986604
+      "score": 0.40135043679986604
     },
     {
       "ticker": "SHOO",
@@ -153,7 +153,7 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "2 up / 1 down / 3 flat",
+    "said": "3 up / 1 down / 3 flat",
     "bullets": [
       "XLB FLAT +3.0",
       "XLC UP +4.6",
@@ -161,7 +161,7 @@
       "XLP UP +4.0",
       "XLE DOWN -7.2",
       "XLF FLAT +2.9",
-      "XLV missing",
+      "XLV UP +2.6",
       "XLI missing",
       "XLRE missing",
       "XLK missing",
