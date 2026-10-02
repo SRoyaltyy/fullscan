@@ -1,12 +1,12 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T05:47:12.297817-04:00",
+  "generated_at": "2026-10-02T05:47:34.021328-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -41,24 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_board",
-      "title": "Sector board",
-      "date": "2026-10-02",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-02T05:22:29.372954-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-10-02/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 6363,
-          "preview": "keys: date, generated_at, summary, sectors"
-        }
-      ],
-      "preview": "keys: date, generated_at, summary, sectors"
-    },
     {
       "key": "map_heat_research",
       "title": "Map heat morning delta refresh",
@@ -226,6 +208,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-02T05:47:33.266349-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-02_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7559129,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 EXLS, DINO, ARHS, ESTC, SU"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-02_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8349951,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, SU, DINO, EXLS, CVX"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 EXLS, DINO, ARHS, ESTC, SU \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, SU, DINO, EXLS, CVX"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
