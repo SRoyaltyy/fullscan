@@ -44,9 +44,9 @@ h2 a:hover { text-decoration: underline; }
 <body>
 <header>
 <h1>News directory</h1>
-<p class="lede">Show JEV splits this day on this page. Drops stay on the left. Keeps move to the right.</p>
+<p class="lede">Leave the date blank to search every parsed day by term. A date limits the search to that day.</p>
 <form id="f">
-<label>Parse date<input id="parse" type="date" value="2026-10-01"></label>
+<label>Parse date<input id="parse" type="date"></label>
 <label>Published date<input id="pub" type="date"></label>
 <label>Term or ticker<input id="q" type="text" placeholder="Micron, MU, Hormuz"></label>
 <label class="check"><input id="jev" type="checkbox"> Show JEV</label>
@@ -126,6 +126,13 @@ async function loadDay(date){
   }
   return {out, missing};
 }
+async function loadIndex(){
+  for (const url of ["index.json", RAW + "dashboard/news-dir/index.json"]){
+    const res = await fetch(url);
+    if (res.ok) return res.json();
+  }
+  return null;
+}
 async function loadScores(date){
   const map = new Map();
   const urls = [
@@ -153,7 +160,7 @@ function card(r){
     <div class="meta"><span class="chip ${r.stage}">${r.stage}</span> parsed ${pretty(r.parse)} · published ${pretty(r.published)}</div>
     <h2>${title}</h2>
     <p class="source">${esc(r.source || "no source")}</p>
-    <p class="why">${tag}</p>
+    ${r.jev ? `<p class="why">${tag}</p>` : (r.showJev ? `<p class="why">${tag}</p>` : "")}
   </article>`;
 }
 $("f").onsubmit = async (ev) => {
@@ -162,31 +169,44 @@ $("f").onsubmit = async (ev) => {
   const pub = $("pub").value;
   const q = $("q").value.trim().toLowerCase();
   const show = $("jev").checked;
-  if (!parse){ $("status").textContent = "Enter a parse date."; return; }
+  if (!parse && !q){ $("status").textContent = "Enter a term, or a date."; return; }
   $("status").textContent = "Looking";
   $("layout").classList.toggle("on", show);
-  const loaded = await loadDay(parse);
-  let rows = loaded.out;
+  let rows = [];
+  let missing = [];
+  if (parse){
+    const loaded = await loadDay(parse);
+    rows = loaded.out;
+    missing = loaded.missing;
+  } else {
+    const idx = await loadIndex();
+    if (!idx){
+      $("status").textContent = "The cross-day index is still building. A term search needs it. A date search works now.";
+      return;
+    }
+    rows = idx.rows || [];
+  }
   if (pub) rows = rows.filter(r => r.published === pub);
-  if (q) rows = rows.filter(r => (r.title + " " + r.source + " " + r.tick).toLowerCase().includes(q));
+  if (q) rows = rows.filter(r => (r.title + " " + r.source + " " + (r.tick || "")).toLowerCase().includes(q));
   let keeps = [];
   let drops = rows;
   if (show){
-    const map = await loadScores(parse);
-    if (!map.size){
-      $("status").innerHTML = `<span class="miss">No scores on the site yet for ${esc(parse)}.</span> The score run has not published them.`;
-      $("rows").innerHTML = "";
-      $("keeps").innerHTML = "<li>No keep yet.</li>";
-      return;
-    }
+    const dates = [...new Set(rows.map(r => r.parse).filter(Boolean))];
+    const maps = await Promise.all(dates.slice(0, 12).map(loadScores));
+    const map = new Map();
+    for (const part of maps) for (const [k, v] of part) map.set(k, v);
     for (const r of rows) r.jev = map.get(norm(r.title)) || null;
     keeps = rows.filter(r => r.jev && r.jev.jev === "KEEP");
     drops = rows.filter(r => !r.jev || r.jev.jev !== "KEEP");
   }
+  for (const r of drops) r.showJev = show;
   $("rows").innerHTML = drops.slice(0, 200).map(card).join("");
   $("keeps").innerHTML = keeps.map(r => `<li>${esc(r.title)}<div class="why">${esc(r.jev.reason || "")}</div></li>`).join("") || "<li>No keep in this result.</li>";
-  const miss = loaded.missing.length ? " Missing: " + loaded.missing.join(", ") : "";
-  $("status").innerHTML = `<span class="hit">${rows.length} hits</span> · ${keeps.length} keep · ${drops.filter(r => r.jev && r.jev.jev === "DROP").length} drop${esc(miss)}`;
+  const miss = missing.length ? " Missing: " + missing.join(", ") : "";
+  const jevBit = show ? ` · ${keeps.length} keep · ${drops.filter(r => r.jev && r.jev.jev === "DROP").length} drop` : "";
+  $("status").innerHTML = rows.length
+    ? `<span class="hit">${rows.length} hits</span>${esc(jevBit + miss)}`
+    : `<span class="miss">Not in the repo.</span>${esc(miss)}`;
 };
 </script>
 </body>
