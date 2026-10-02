@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T06:10:09.052414-04:00",
+  "generated_at": "2026-10-02T08:34:50.517450-04:00",
   "order_sent": "09:30 ET",
   "live_wire": false,
   "live_untouched": [
@@ -228,91 +228,91 @@
         "ideal": {
           "reality": "ideal",
           "n_fires": 214,
-          "n_filled": 213,
-          "n_miss": 1,
+          "n_filled": 214,
+          "n_miss": 0,
           "n_wins": 38,
           "n_adverse": 0,
-          "win_rate": 0.1784,
+          "win_rate": 0.1776,
           "adverse_rate": 0.0,
-          "pnl": -277.99
+          "pnl": -286.07
         },
         "market": {
           "reality": "market",
           "n_fires": 214,
-          "n_filled": 213,
-          "n_miss": 1,
+          "n_filled": 214,
+          "n_miss": 0,
           "n_wins": 16,
-          "n_adverse": 200,
-          "win_rate": 0.0751,
-          "adverse_rate": 0.939,
-          "pnl": -379.96
+          "n_adverse": 201,
+          "win_rate": 0.0748,
+          "adverse_rate": 0.9393,
+          "pnl": -388.17
         },
         "limit_open": {
           "reality": "limit_open",
           "n_fires": 214,
-          "n_filled": 206,
-          "n_miss": 8,
+          "n_filled": 207,
+          "n_miss": 7,
           "n_wins": 35,
           "n_adverse": 0,
-          "win_rate": 0.1699,
+          "win_rate": 0.1691,
           "adverse_rate": 0.0,
-          "pnl": -281.93
+          "pnl": -290.0
         },
         "limit_prior": {
           "reality": "limit_prior",
           "n_fires": 214,
-          "n_filled": 170,
-          "n_miss": 44,
+          "n_filled": 171,
+          "n_miss": 43,
           "n_wins": 26,
           "n_adverse": 0,
-          "win_rate": 0.1529,
+          "win_rate": 0.152,
           "adverse_rate": 0.0,
-          "pnl": -204.4
+          "pnl": -210.37
         }
       },
       "verdicts": {
         "ideal": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL flatten_would / ideal: 213 filled fires but after-fee win 17.8% \u2264 55%.",
+          "why": "KILL flatten_would / ideal: 214 filled fires but after-fee win 17.8% \u2264 55%.",
           "n_fires": 214,
-          "n_filled": 213,
-          "win_rate": 0.1784,
-          "pnl": -277.99,
+          "n_filled": 214,
+          "win_rate": 0.1776,
+          "pnl": -286.07,
           "vs_ideal_pnl": null,
           "thin": false
         },
         "market": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL flatten_would / market: 213 filled fires but after-fee win 7.5% \u2264 55%; vs ideal-open $-101.97.",
+          "why": "KILL flatten_would / market: 214 filled fires but after-fee win 7.5% \u2264 55%; vs ideal-open $-102.10.",
           "n_fires": 214,
-          "n_filled": 213,
-          "win_rate": 0.0751,
-          "pnl": -379.96,
-          "vs_ideal_pnl": -101.97,
+          "n_filled": 214,
+          "win_rate": 0.0748,
+          "pnl": -388.17,
+          "vs_ideal_pnl": -102.1,
           "thin": false
         },
         "limit_open": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL flatten_would / limit_open: 206 filled fires but after-fee win 17.0% \u2264 55%; vs ideal-open $-3.94.",
+          "why": "KILL flatten_would / limit_open: 207 filled fires but after-fee win 16.9% \u2264 55%; vs ideal-open $-3.93.",
           "n_fires": 214,
-          "n_filled": 206,
-          "win_rate": 0.1699,
-          "pnl": -281.93,
-          "vs_ideal_pnl": -3.94,
+          "n_filled": 207,
+          "win_rate": 0.1691,
+          "pnl": -290.0,
+          "vs_ideal_pnl": -3.93,
           "thin": false
         },
         "limit_prior": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL flatten_would / limit_prior: 170 filled fires but after-fee win 15.3% \u2264 55%; vs ideal-open $+73.59.",
+          "why": "KILL flatten_would / limit_prior: 171 filled fires but after-fee win 15.2% \u2264 55%; vs ideal-open $+75.70.",
           "n_fires": 214,
-          "n_filled": 170,
-          "win_rate": 0.1529,
-          "pnl": -204.4,
-          "vs_ideal_pnl": 73.59,
+          "n_filled": 171,
+          "win_rate": 0.152,
+          "pnl": -210.37,
+          "vs_ideal_pnl": 75.7,
           "thin": false
         }
       }

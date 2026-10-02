@@ -27,10 +27,10 @@ Window `2026-08-13 → 2026-10-01` (35 sessions). KEEP bar: **≥30 filled fires
 | `union_hot_n4_h1` | market | 140 | 140 | 0 | 21.4% | -134.29 | $-83.81 | **KILL** |
 | `union_hot_n4_h1` | limit_open | 140 | 130 | 10 | 34.6% | -62.73 | $-12.25 | **KILL** |
 | `union_hot_n4_h1` | limit_prior | 140 | 123 | 17 | 37.4% | -46.29 | $+4.19 | **KILL** |
-| `flatten_would` | ideal | 214 | 213 | 1 | 17.8% | -277.99 | — | **KILL** |
-| `flatten_would` | market | 214 | 213 | 1 | 7.5% | -379.96 | $-101.97 | **KILL** |
-| `flatten_would` | limit_open | 214 | 206 | 8 | 17.0% | -281.93 | $-3.94 | **KILL** |
-| `flatten_would` | limit_prior | 214 | 170 | 44 | 15.3% | -204.40 | $+73.59 | **KILL** |
+| `flatten_would` | ideal | 214 | 214 | 0 | 17.8% | -286.07 | — | **KILL** |
+| `flatten_would` | market | 214 | 214 | 0 | 7.5% | -388.17 | $-102.10 | **KILL** |
+| `flatten_would` | limit_open | 214 | 207 | 7 | 16.9% | -290.00 | $-3.93 | **KILL** |
+| `flatten_would` | limit_prior | 214 | 171 | 43 | 15.2% | -210.37 | $+75.70 | **KILL** |
 
 ### Why, in plain language
 
@@ -40,9 +40,9 @@ Window `2026-08-13 → 2026-10-01` (35 sessions). KEEP bar: **≥30 filled fires
 - KILL union_hot_n4_h1 / market: 140 filled fires but after-fee win 21.4% ≤ 55%; vs ideal-open $-83.81.
 - KILL union_hot_n4_h1 / limit_open: 130 filled fires but after-fee win 34.6% ≤ 55%; vs ideal-open $-12.25.
 - KILL union_hot_n4_h1 / limit_prior: 123 filled fires but after-fee win 37.4% ≤ 55%; vs ideal-open $+4.19.
-- KILL flatten_would / market: 213 filled fires but after-fee win 7.5% ≤ 55%; vs ideal-open $-101.97.
-- KILL flatten_would / limit_open: 206 filled fires but after-fee win 17.0% ≤ 55%; vs ideal-open $-3.94.
-- KILL flatten_would / limit_prior: 170 filled fires but after-fee win 15.3% ≤ 55%; vs ideal-open $+73.59.
+- KILL flatten_would / market: 214 filled fires but after-fee win 7.5% ≤ 55%; vs ideal-open $-102.10.
+- KILL flatten_would / limit_open: 207 filled fires but after-fee win 16.9% ≤ 55%; vs ideal-open $-3.93.
+- KILL flatten_would / limit_prior: 171 filled fires but after-fee win 15.2% ≤ 55%; vs ideal-open $+75.70.
 
 ## After-fee caveat
 
