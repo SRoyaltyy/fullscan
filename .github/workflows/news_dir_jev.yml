@@ -1,0 +1,76 @@
+name: News directory JEV evaluate
+
+# The news-dir page dispatches this with the current search titles.
+# Scores the frozen evidence-context-v2 rubric. No schedule.
+
+on:
+  workflow_dispatch:
+    inputs:
+      stamp:
+        description: Score stamp the page will poll
+        required: true
+        type: string
+      titles_b64:
+        description: Base64 JSON of titles from the page
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-dir-jev
+  cancel-in-progress: false
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Score the search result
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          TYPESAFE_API_KEY: ${{ secrets.JEV_API_KEY }}
+          JEV_GATE_POLICY: candidate-v2
+          JEV_MODEL: jev-1.13.0
+          NEWS_DIR_TITLES: ${{ github.event.inputs.titles_b64 }}
+        run: |
+          set -euo pipefail
+          STAMP="${{ github.event.inputs.stamp }}"
+          REQ="dashboard/news-dir/scores/${STAMP}-req.json"
+          if [ -f "$REQ" ]; then
+            PYTHONPATH=. python3 -m src.news_dir_jev --stamp "$STAMP" --from-req "$REQ"
+          else
+            PYTHONPATH=. python3 -m src.news_dir_jev --stamp "$STAMP" --payload "$NEWS_DIR_TITLES"
+          fi
+      - name: Commit scores
+        run: |
+          set -euo pipefail
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add dashboard/news-dir/scores
+          git diff --cached --quiet && exit 0
+          git commit -m "news dir: JEV evaluate ${{ github.event.inputs.stamp }} [skip ci]"
+          git push origin HEAD:main
+      - name: Overlay scores onto gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TMP=$(mktemp -d)
+          git clone --depth 1 --branch gh-pages \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            "$TMP" || exit 0
+          mkdir -p "$TMP/dashboard/news-dir/scores" "$TMP/news-dir/scores"
+          cp -a dashboard/news-dir/scores/. "$TMP/dashboard/news-dir/scores/"
+          cp -a dashboard/news-dir/scores/. "$TMP/news-dir/scores/"
+          git -C "$TMP" config user.name "Market-Bot-Automaton"
+          git -C "$TMP" config user.email "bot@users.noreply.github.com"
+          git -C "$TMP" add dashboard/news-dir/scores news-dir/scores
+          git -C "$TMP" diff --cached --quiet && exit 0
+          git -C "$TMP" commit -m "news dir: JEV scores ${{ github.event.inputs.stamp }}"
+          git -C "$TMP" push origin gh-pages

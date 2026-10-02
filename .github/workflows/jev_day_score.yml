@@ -58,7 +58,7 @@ jobs:
               decision = str(node.get("decision") or node.get("jev") or node.get("verdict") or "").upper()
               if title and decision in {"KEEP", "DROP"}:
                   found.append({"title": title, "decision": decision, "reason": node.get("reason") or node.get("why") or ""})
-              for key in ("items", "rows", "keeps", "dropped", "decisions", "all_items"):
+              for key in ("items", "rows", "keeps", "dropped", "drops", "decisions", "all_items"):
                   if isinstance(node.get(key), list):
                       walk(node[key])
           walk(doc)
