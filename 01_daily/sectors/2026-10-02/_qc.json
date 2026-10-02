@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "n_ok": 10,
+  "n_ok": 11,
   "n_total": 11,
   "summary": "",
   "sectors": [
@@ -95,9 +95,9 @@
     },
     {
       "sector": "Utilities",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 17070,
       "status": "FAIL",
       "fallback_reason": "step deadline"
     }

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T09:04:16.581834-04:00",
+  "generated_at": "2026-10-02T09:12:32.511963-04:00",
   "items": [
     {
       "ok": true,
@@ -234,14 +234,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-10-02/utilities_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 17070,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     }
   ],
@@ -337,14 +337,14 @@
     },
     {
       "sector": "Utilities",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 17070,
       "status": "FAIL",
       "fallback_reason": "step deadline"
     }
   ],
-  "sector_n_ok": 10,
+  "sector_n_ok": 11,
   "sector_n_total": 11,
   "all_ok": true
 }
