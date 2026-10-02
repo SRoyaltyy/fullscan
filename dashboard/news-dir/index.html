@@ -2,33 +2,59 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>News directory</title>
 <style>
-body{font:14px/1.4 ui-sans-serif,system-ui;margin:24px;background:#111;color:#eee}
-input,button{font:inherit;padding:6px 8px;margin:0 6px 8px 0}
-.miss{color:#f88}.hit{color:#9e9}
-table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #333;padding:4px 6px;text-align:left;vertical-align:top}
-.small{color:#888}
+:root { color-scheme: light; }
+body { margin: 0; background: #f4f1ea; color: #1c1915; font: 17px/1.45 Georgia, "Iowan Old Style", Palatino, serif; }
+header, main { max-width: 920px; margin: 0 auto; padding: 28px 20px; }
+h1 { font-size: 32px; margin: 0 0 8px; letter-spacing: -0.02em; }
+.lede { color: #4a453c; margin: 0 0 18px; }
+form { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: end; background: #fff; border: 1px solid #e4ddd0; padding: 14px; }
+label { display: flex; flex-direction: column; gap: 4px; font: 13px/1.2 ui-sans-serif, system-ui, sans-serif; color: #4a453c; }
+input { font: 16px/1.3 ui-sans-serif, system-ui, sans-serif; color: #1c1915; background: #fff; border: 1px solid #c8bfb0; padding: 8px 10px; min-width: 11em; }
+button { font: 16px/1.2 ui-sans-serif, system-ui, sans-serif; background: #1c1915; color: #f4f1ea; border: 0; padding: 10px 16px; cursor: pointer; }
+#status { font: 15px/1.4 ui-sans-serif, system-ui, sans-serif; margin: 16px 0; }
+.hit { color: #1d6b3a; font-weight: 650; }
+.miss { color: #9b2c2c; font-weight: 650; }
+article { background: #fff; border: 1px solid #e4ddd0; padding: 14px 16px; margin: 0 0 10px; }
+.meta { font: 13px/1.3 ui-sans-serif, system-ui, sans-serif; color: #4a453c; margin-bottom: 6px; }
+.chip { display: inline-block; padding: 1px 7px; border-radius: 99px; font-weight: 650; }
+.parsed { background: #e7f0e4; color: #1d6b3a; }
+.published { background: #e7eef8; color: #1d4e89; }
+h2 { font-size: 18px; margin: 0; font-weight: 650; }
+h2 a { color: #1d4e89; text-decoration: none; }
+h2 a:hover { text-decoration: underline; }
+.source { margin: 6px 0 0; color: #4a453c; font: 14px/1.3 ui-sans-serif, system-ui, sans-serif; }
 </style>
 </head>
 <body>
+<header>
 <h1>News directory</h1>
-<p class="small">Parse date is the day the repo wrote the file. Published date is the article clock. A blank result is absence, not a quiet match.</p>
+<p class="lede">Parse date is the day the repo wrote the file. Published date is the article clock. No rows means the article is not in the repo.</p>
 <form id="f">
-<label>Parse date <input id="parse" type="date"></label>
-<label>Published date <input id="pub" type="date"></label>
-<label>Term or ticker <input id="q" placeholder="Micron, MU, Hormuz"></label>
+<label>Parse date<input id="parse" type="date"></label>
+<label>Published date<input id="pub" type="date"></label>
+<label>Term or ticker<input id="q" placeholder="Micron, MU, Hormuz"></label>
 <button>Search</button>
 </form>
+</header>
+<main>
 <p id="status"></p>
-<table><thead><tr><th>parse</th><th>published</th><th>stage</th><th>title</th><th>source</th></tr></thead><tbody id="rows"></tbody></table>
+<div id="rows"></div>
+</main>
 <script>
 const RAW = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/";
 const $ = (id) => document.getElementById(id);
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function day(v){ return (v || "").slice(0, 10); }
-function tickers(title){
-  return (title.match(/\b[A-Z]{1,5}\b/g) || []).join(" ");
+function pretty(iso){
+  if (!iso || iso.length < 10) return "no published date";
+  const [y, m, d] = iso.slice(0, 10).split("-");
+  return `${Number(d)} ${MONTHS[Number(m) - 1]} ${y}`;
 }
+function tickers(title){ return (title.match(/\b[A-Z]{1,5}\b/g) || []).join(" "); }
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&','<':'<','>':'>','"':'"'}[c])); }
 function rowsFrom(doc, parseDate, stage){
   const items = (doc && (doc.all_items || doc.items || doc.events || doc.actions)) || [];
   return items.map(it => ({
@@ -59,12 +85,20 @@ async function loadIndex(){
   if (!res.ok) return null;
   return res.json();
 }
+function card(r){
+  const title = r.url ? `<a href="${esc(r.url)}">${esc(r.title)}</a>` : esc(r.title);
+  return `<article>
+    <div class="meta"><span class="chip ${r.stage}">${r.stage}</span> parsed ${pretty(r.parse)} · published ${pretty(r.published)}</div>
+    <h2>${title}</h2>
+    <p class="source">${esc(r.source || "no source")}</p>
+  </article>`;
+}
 $("f").onsubmit = async (ev) => {
   ev.preventDefault();
   const parse = $("parse").value;
   const pub = $("pub").value;
   const q = $("q").value.trim().toLowerCase();
-  $("status").textContent = "looking";
+  $("status").textContent = "Looking";
   let rows = [];
   const missing = [];
   if (parse){
@@ -76,18 +110,18 @@ $("f").onsubmit = async (ev) => {
   } else {
     const idx = await loadIndex();
     if (!idx){
-      $("status").textContent = "No parse date, and index.json is not built yet. Enter a parse date, or run news_dir.";
+      $("status").textContent = "Enter a parse date. The cross-day index is not built yet.";
       return;
     }
     rows = idx.rows || [];
   }
   if (pub) rows = rows.filter(r => r.published === pub);
   if (q) rows = rows.filter(r => (r.title + " " + r.source + " " + r.tick).toLowerCase().includes(q));
-  $("rows").innerHTML = rows.slice(0, 200).map(r => `<tr><td>${r.parse}</td><td>${r.published || "—"}</td><td>${r.stage}</td><td>${r.url ? `<a href="${r.url}">${r.title}</a>` : r.title}</td><td>${r.source}</td></tr>`).join("");
-  const miss = missing.length ? " Missing files: " + missing.join(", ") : "";
+  $("rows").innerHTML = rows.slice(0, 200).map(card).join("");
+  const miss = missing.length ? " Missing: " + missing.join(", ") : "";
   $("status").innerHTML = rows.length
-    ? `<span class="hit">${rows.length} hit${rows.length===1?"":"s"}</span>${miss}`
-    : `<span class="miss">absent</span>${miss}`;
+    ? `<span class="hit">${rows.length} hit${rows.length===1?"":"s"}</span>${esc(miss)}`
+    : `<span class="miss">Not in the repo.</span>${esc(miss)}`;
 };
 </script>
 </body>
