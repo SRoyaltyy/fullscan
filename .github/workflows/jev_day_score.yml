@@ -1,0 +1,46 @@
+name: JEV day score for the site
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: YYYY-MM-DD
+        required: true
+        default: "2026-10-01"
+        type: string
+      limit:
+        description: Max headlines
+        required: false
+        default: "200"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Score the day
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          TYPESAFE_API_KEY: ${{ secrets.JEV_API_KEY }}
+          JEV_GATE_POLICY: candidate-v2
+          JEV_MODEL: jev-1.13.0
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python3 -m src.jev_gate --date "${{ github.event.inputs.date }}" --limit "${{ github.event.inputs.limit }}"
+      - name: Commit so the site can read it
+        run: |
+          set -euo pipefail
+          git config user.name "SRoyaltyy"
+          git config user.email "104515113+SRoyaltyy@users.noreply.github.com"
+          git add 01_daily/news/*jev_keep* 01_daily/news/*jev_junk* || true
+          git diff --cached --quiet && echo "nothing to commit" && exit 0
+          git commit -m "Score ${{ github.event.inputs.date }} for the news directory"
+          git push
