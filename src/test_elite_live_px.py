@@ -10,6 +10,9 @@ from zoneinfo import ZoneInfo
 from unittest import mock
 
 from src import elite_live_px as elp
+# Lazy import inside attach_hard_red_research. Load it first so
+# patch.object hits the same module object the function binds.
+from src import hard_red_sit_research as hrs
 from src import strategy_tickets as st
 
 
@@ -120,7 +123,7 @@ def test_hard_red_research_is_tagged_not_a_wire() -> None:
             }
         },
     }
-    with mock.patch("src.hard_red_sit_research.clock_bar", side_effect=lambda t, d, bars=None: {
+    with mock.patch.object(hrs, "clock_bar", side_effect=lambda t, d, bars=None: {
         "INDP": {"open": 2.80, "low": 2.77, "close": 2.89},
         "BKV": {"open": 24.26, "low": 24.08, "close": 24.31},
     }.get(t, {})):
@@ -149,8 +152,8 @@ def test_research_uses_scoreboard_open_when_parquet_missing() -> None:
             }
         },
     }
-    with mock.patch("src.hard_red_sit_research.clock_bar", return_value={}), \
-            mock.patch("src.hard_red_sit_research.scoreboard_bars", return_value={
+    with mock.patch.object(hrs, "clock_bar", return_value={}), \
+            mock.patch.object(hrs, "scoreboard_bars", return_value={
                 "INDP": {"open": 2.80, "low": 2.77},
             }):
         out = st.attach_hard_red_research(payload, "2026-09-14")
@@ -174,7 +177,7 @@ def test_research_scoop_ignores_close_and_stale_last() -> None:
             }
         },
     }
-    with mock.patch("src.hard_red_sit_research.clock_bar", side_effect=lambda t, d, bars=None: {
+    with mock.patch.object(hrs, "clock_bar", side_effect=lambda t, d, bars=None: {
         "HOT1": {"open": 100.0, "low": 99.2, "close": 90.0},
         "SH1": {"open": 8.0, "low": 7.9, "close": 7.5},
     }.get(t, {})):
