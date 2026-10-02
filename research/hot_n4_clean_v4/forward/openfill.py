@@ -27,6 +27,7 @@ from research.hot_n4_clean_v4.forward.ledger import (
 STALE_OPEN_REASON = "stale_bar: previous-session bar used for SRFM, SECZ"
 STALE_OPEN_APPROVED_BY = "Cyrus 2026-09-28 21:02 ET"
 from research.hot_n4_clean_v4.forward.opens import OPEN_SOURCE, _positive, session_open
+from research.hot_n4_clean_v4.forward.prices import _same_print
 from research.hot_n4_clean_v4.forward.planfill import book_state_before, fill_book
 from research.hot_n4_clean_v4.forward.book import current_book
 
@@ -72,7 +73,7 @@ def inject_opens(bars: dict, session: str, opens: dict[str, float]) -> dict:
         dates = blob["date"]
         if session in dates:
             i = dates.index(session)
-            if float(blob["open"][i]) != op:
+            if not _same_print(blob["open"][i], op):
                 raise RuntimeError(
                     f"stored open for {name} on {session} no longer matches the session open"
                 )
@@ -88,7 +89,7 @@ def inject_opens(bars: dict, session: str, opens: dict[str, float]) -> dict:
 def _same_fill(old: dict, new: dict) -> bool:
     if int(old["shares"]) != int(new["shares"]):
         return False
-    return float(old["fill"]) == float(new["fill"])
+    return _same_print(old["fill"], new["fill"])
 
 
 def open_fill_body(plan: dict, state: dict, bars: dict, fees: dict, index: dict[str, int], opens: dict[str, float]) -> dict:

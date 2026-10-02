@@ -64,6 +64,7 @@ from research.hot_n4_clean_v4.forward.planfill import (  # noqa: E402
     hide_session,
 )
 from research.hot_n4_clean_v4.forward.prices import (  # noqa: E402
+    _same_print,
     bar_is_final,
     fetch_yahoo,
     overlay_forward,
@@ -577,7 +578,7 @@ def _history_ok(
                 if row_kind == "open_fill":
                     continue
                 return f"stored open for {ticker} on {day} no longer matches the sealed fill"
-            if float(op) != float(fill):
+            if not _same_print(op, fill):
                 return f"stored open for {ticker} on {day} no longer matches the sealed fill"
     return None
 

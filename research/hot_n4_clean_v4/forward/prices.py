@@ -647,8 +647,17 @@ def main() -> int:
     frame, why = frozen_frame(session)
     note = None
     names = set(held) | {"IWM"}
+    pending = open_plan(records)
+    if pending is not None:
+        names |= {str(row["ticker"]).upper() for row in pending.get("picks") or []}
+        names |= {str(row["ticker"]).upper() for row in pending.get("planned_sells") or []}
     if why or frame is None:
-        note = why or "candidate universe unavailable; fetching held names and IWM only"
+        if why:
+            note = why
+        else:
+            note = "candidate universe unavailable; fetching held names and IWM"
+            if pending is not None:
+                note += " plus the sealed plan's names"
         print(note, flush=True)
     else:
         names |= {row["ticker"] for row in liquid_universe(frame)}
