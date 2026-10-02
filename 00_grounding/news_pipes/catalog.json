@@ -1,0 +1,126 @@
+{
+  "version": "2026-10-02",
+  "repo": "SRoyaltyy/fullscan",
+  "rule": "parsed = a feed landed a row. published = a later job wrote a product from those rows. A file with no pipe in this catalog is not news.",
+  "pipes": [
+    {
+      "id": "rss",
+      "stage": "parsed",
+      "live": false,
+      "workflow": ".github/workflows/collect-news-rss.yml",
+      "entry": "python -m collectors.rss_news",
+      "writes": "Postgres via DATABASE_URL. No dated file.",
+      "note": "Schedule disabled 2026-08-29. Dispatch or workflow_call only."
+    },
+    {
+      "id": "newsapi",
+      "stage": "parsed",
+      "live": false,
+      "workflow": ".github/workflows/collect-news-newsapi.yml",
+      "entry": "collectors newsapi",
+      "writes": "Postgres. No dated file.",
+      "note": "Same retired collector family as RSS."
+    },
+    {
+      "id": "reddit",
+      "stage": "parsed",
+      "live": false,
+      "workflow": ".github/workflows/collect-news-reddit.yml",
+      "entry": "collectors reddit",
+      "writes": "Postgres. No dated file.",
+      "note": "Same retired collector family as RSS."
+    },
+    {
+      "id": "news_parse",
+      "stage": "parsed",
+      "live": true,
+      "workflow": ".github/workflows/news_parse.yml",
+      "entry": "python -m src.news_parse",
+      "writes": "01_daily/news/{date}_parsed.md",
+      "note": "No cron. Pre-Open ALL at 06:00 ET owns it. Orchestrator may retry before 09:25 ET. Reads Supabase."
+    },
+    {
+      "id": "events",
+      "stage": "parsed",
+      "live": true,
+      "workflow": ".github/workflows/events_daily.yml",
+      "entry": "python -m src.run_events ; python -m src.run_events_catcher",
+      "writes": "01_daily/events/{date}_events.json ; 01_daily/_transcripts",
+      "note": "No cron. Pre-Open ALL owns the morning scan. Catcher is the gap hunt. A missing file is a failed day, not a carry."
+    },
+    {
+      "id": "grok_automation",
+      "stage": "parsed",
+      "live": true,
+      "workflow": "Gmail dump ingested by src/news_impact/grok_automations.py",
+      "entry": "harvest_source=grok_automation",
+      "writes": "Gmail dump tree, then rows tagged grok_automation",
+      "note": "Preferred when the same fact appears from two harvests."
+    },
+    {
+      "id": "news_actions",
+      "stage": "published",
+      "live": true,
+      "workflow": ".github/workflows/news_actions.yml",
+      "entry": "python -m src.news_actions",
+      "writes": "01_daily/news/{date}_actions.md",
+      "note": "Event edges to tickers. No cron. Pre-Open ALL owns the morning run."
+    },
+    {
+      "id": "jev_hop0",
+      "stage": "published",
+      "live": true,
+      "workflow": ".github/workflows/jev_hop0.yml",
+      "entry": "python -m src.jev_gate",
+      "writes": "01_daily/news/*jev_keep* ; 01_daily/news/*jev_junk* ; 03_scoreboard/JEV_GATE.md",
+      "note": "Cron 25 11 * * 1-6 UTC. Policy candidate-v2, model jev-1.13.0. Door only."
+    },
+    {
+      "id": "jev_train",
+      "stage": "published",
+      "live": true,
+      "workflow": ".github/workflows/jev_train.yml",
+      "entry": "python -m src.jev_train draw|grade",
+      "writes": "dashboard/jev-train/draw.json ; dashboard/jev-train/days.json ; 00_grounding/jev_train/",
+      "note": "Dispatch only. Page reads raw main. Commit is [skip ci]."
+    },
+    {
+      "id": "lane_scan",
+      "stage": "published",
+      "live": false,
+      "workflow": ".github/workflows/lane_news_scan.yml",
+      "entry": "python -m src.lane_news_scan",
+      "writes": "01_daily/news/{date}_lane_sectors.json ; 01_daily/news/{date}_lane_sectors.md",
+      "note": "Dispatch only. Reads parsed sessions already on disk. Does not touch the book."
+    },
+    {
+      "id": "dashboard",
+      "stage": "published",
+      "live": true,
+      "workflow": ".github/workflows/deploy-dashboard.yml",
+      "entry": "GitHub Pages",
+      "writes": "https://sroyaltyy.github.io/fullscan/dashboard/jev-train/",
+      "note": "Publishes dashboard/**. Not a news parser."
+    }
+  ],
+  "not_news": [
+    "theme-radar scores Finviz. It does not parse news.",
+    "stock-sentiment-predictor, newsscrape, gnewstest, scraper are stale and not on the live day.",
+    "01_daily stock_book, universe, match, lookback are book products. They may read events. They are not a news pipe."
+  ],
+  "day_globs": {
+    "parsed": [
+      "01_daily/news/{date}_parsed.md",
+      "01_daily/events/{date}_events.json",
+      "01_daily/events/{date}_events_trace.md",
+      "01_daily/events/{date}_catcher_trace.md"
+    ],
+    "published": [
+      "01_daily/news/{date}_actions.md",
+      "01_daily/news/{date}_jev_keep.md",
+      "01_daily/news/{date}_jev_junk.md",
+      "01_daily/news/{date}_lane_sectors.md",
+      "01_daily/news/{date}_lane_sectors.json"
+    ]
+  }
+}
