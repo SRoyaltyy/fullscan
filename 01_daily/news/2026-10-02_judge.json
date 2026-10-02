@@ -1,0 +1,22 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "mixed",
+  "bearish",
+  "mixed",
+  "mixed",
+  "bearish",
+  "mixed"
+ ],
+ "sector_tilts": {
+  "Gold/Miners": "bearish",
+  "Ai-Hardware": "bearish",
+  "Healthcare": "bullish"
+ },
+ "tickers": {
+  "GDX": -4.0,
+  "XLV": 4.0
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=6\nMACRO rates: [mixed] Cooler PCE fades October hike odds (GS\u2192Dec) but Kashkari/chorus still see inflation too high and another hike this year (session/1d-1w)\nMACRO risk: [bearish] Bond rout underway; SPX/Dow already shrugged off the inflation print while QQQ only relatively holds up (session/1d)\nMACRO nfp: [mixed] Payrolls remain the unresolved high-impact binary \u2014 no signed SPX lean off Fed-speak (session/1d)\nSECTOR gold/miners: [bearish] Spot gold \u2212$100 on hawkish hike expectations (GDX)\nSECTOR ai-hardware: [bearish] APH \u22126.5% on Fabrinet weakness + rising yields (AI interconnect basket)\nSECTOR healthcare: [bullish] AMGN Phase 3 Sj\u00f6gren\u2019s readout with XLV/biotech sympathy (XLV)\nINTERACTION: Do not buy SPX/cyclicals on October-hike-fade headlines while yields are backing up; NFP still open; CIEN AI-networking initiation does not offset APH/yields hit\nWATCH: Diesel still surging is a leftover goods-inflation tail; CIEN initiation is AI-networking color only",
+ "date": "2026-10-02"
+}
