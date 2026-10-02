@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-02",
+  "generated_at": "2026-10-02T05:36:53.863460-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": false,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 0,
+  "status": "FAIL",
+  "targets": [
+    {
+      "ticker": "NE",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling"
+    },
+    {
+      "ticker": "RIG",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling"
+    },
+    {
+      "ticker": "SLB",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "BKR",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "KGS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "SSRM",
+      "role": "conflict",
+      "why": "actions buy net=2.38 vs heat sell"
+    },
+    {
+      "ticker": "NEM",
+      "role": "conflict",
+      "why": "actions buy net=2.38 vs heat sell"
+    },
+    {
+      "ticker": "SM",
+      "role": "action_top",
+      "why": "news_actions buy net=7.36"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "NE",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE"
+    },
+    {
+      "ticker": "RIG",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG"
+    },
+    {
+      "ticker": "SLB",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB"
+    },
+    {
+      "ticker": "BKR",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR"
+    },
+    {
+      "ticker": "KGS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS"
+    },
+    {
+      "ticker": "SSRM",
+      "role": "conflict",
+      "why": "actions buy net=2.38 vs heat sell",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SSRM"
+    },
+    {
+      "ticker": "NEM",
+      "role": "conflict",
+      "why": "actions buy net=2.38 vs heat sell",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NEM"
+    },
+    {
+      "ticker": "SM",
+      "role": "action_top",
+      "why": "news_actions buy net=7.36",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SM"
+    }
+  ]
+}

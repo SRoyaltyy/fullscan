@@ -1,12 +1,12 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T05:32:17.553653-04:00",
+  "generated_at": "2026-10-02T05:36:55.686803-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 3,
-    "partial": 4,
-    "fail": 1,
+    "partial": 3,
+    "fail": 2,
     "n": 8
   },
   "buy_1d": [],
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-02",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-02T04:30:47.214510-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-02_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 322244,
-          "preview": "raw=352 usable=63 single=18 \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte | US rate hike bets fade as revised inflation data points to October pause - Nikke | Indonesian Rupiah strengthens as US Dollar weakens on easing Fed rate hike bets  | A 50-basis-point rate hike vs. waiting longer? Divisions emerge within the Feder | Trump says Warsh should have voted against Fed\u2019s rate hike - The Business Times"
-        },
-        {
-          "path": "01_daily/news/2026-10-02_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 5949,
-          "preview": "# News Parse v2 \u2014 2026-10-02T04:30:36.820973-04:00\nWindow\u224848h | news_mode=on | raw=352 | usable=63 | single_name=18 | noise_dropped=271\nusable polarity={'+': 1, '-': 13, 'mixed': 3, 'neutral': 46}"
-        }
-      ],
-      "preview": "raw=352 usable=63 single=18 \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte | US rate hike bets fade as revised inflation data points to October pause - Nikke | Indonesian Rupiah strengthens as US Dollar weakens on easing Fed rate hike bets  | A 50-basis-point rate hike vs. waiting longer? Divisions emerge within the Feder | Trump says Warsh should have voted against Fed\u2019s rate hike - The Business Times \u00b7 # News Parse v2 \u2014 2026-10-02T04:30:36.820973-04:00\nWindow\u224848h | news_mode=on | raw=352 | usable=63 | single_name=18 | noise_dropped=271\nusable polarity={'+': 1, '-': 13, 'mixed': 3, 'neutral': 46}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -226,6 +201,31 @@
         }
       ],
       "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11707 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-10-02",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-02T05:36:54.910825-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-10-02_dossiers.json",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1278,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-10-02_dossiers.md",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1278,
+          "preview": "# CATALYST DAILY \u2014 2026-10-02\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-02\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
