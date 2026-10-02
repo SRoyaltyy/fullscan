@@ -1,11 +1,11 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T04:16:39.864312-04:00",
+  "generated_at": "2026-10-02T04:17:27.676126-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 2,
-    "partial": 2,
+    "ok": 1,
+    "partial": 3,
     "fail": 4,
     "n": 8
   },
@@ -135,6 +135,45 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-02\nExport `finviz_2026-10-02.csv` \u00b7 11616 names \u00b7 generated 2026-10-02T04:16:39.609027-04:00"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-02T04:17:27.441883-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-02_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96134,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-02_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11576,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-02\n_Generated 2026-10-02T04:17:27.289962-04:00 \u00b7 export=data/exports/finviz_2026-10-01.csv \u00b7 ticker digests=5896 \u00b7 high-signal=1905_"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11498760,
+          "preview": "11707 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-02_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 96134,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-02\n_Generated 2026-10-02T04:17:27.289962-04:00 \u00b7 export=data/exports/finviz_2026-10-01.csv \u00b7 ticker digests=5896 \u00b7 high-signal=1905_ \u00b7 11707 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
