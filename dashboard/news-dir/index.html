@@ -27,6 +27,7 @@ button { font: 16px/1.2 ui-sans-serif, system-ui, sans-serif; background: #1c191
 .keepbox li { margin: 0 0 10px; font-size: 15px; }
 article { background: #fff; border: 1px solid #e4ddd0; padding: 14px 16px; margin: 0 0 10px; }
 article.drop { border-color: #e7c8c8; }
+.theme { border-color: #d7c7a2; }
 .meta { font: 13px/1.3 ui-sans-serif, system-ui, sans-serif; color: #4a453c; margin-bottom: 6px; }
 .chip { display: inline-block; padding: 1px 7px; border-radius: 99px; font-weight: 650; }
 .parsed { background: #e7f0e4; color: #1d6b3a; }
@@ -34,21 +35,25 @@ article.drop { border-color: #e7c8c8; }
 .keep { background: #e7f0e4; color: #1d6b3a; }
 .drop { background: #f8e7e7; color: #9b2c2c; }
 .unscored { background: #eeeae3; color: #4a453c; }
+.themechip { background: #f4ead2; color: #6b5420; }
 h2 { font-size: 18px; margin: 0; font-weight: 650; }
-h2 a { color: #1d4e89; text-decoration: none; }
-h2 a:hover { text-decoration: underline; }
+h2 a, .rel a { color: #1d4e89; text-decoration: none; }
+h2 a:hover, .rel a:hover { text-decoration: underline; }
 .source, .why { margin: 6px 0 0; color: #4a453c; font: 14px/1.3 ui-sans-serif, system-ui, sans-serif; }
+.rel { list-style: none; margin: 10px 0 0; padding: 0; border-top: 1px solid #e4ddd0; }
+.rel li { padding: 8px 0; border-bottom: 1px solid #f0ebe3; font-size: 16px; }
 @media (max-width: 800px) { .layout.on { grid-template-columns: 1fr; } .keepbox { position: static; max-height: none; } }
 </style>
 </head>
 <body>
 <header>
 <h1>News directory</h1>
-<p class="lede">Leave the date blank to search every parsed day by term. A date limits the search to that day.</p>
+<p class="lede">Leave the date blank to search by term. Themes groups one result into stories, the way a front page groups the same event.</p>
 <form id="f">
 <label>Parse date<input id="parse" type="date"></label>
 <label>Published date<input id="pub" type="date"></label>
 <label>Term or ticker<input id="q" type="text" placeholder="Micron, MU, Hormuz"></label>
+<label class="check"><input id="themes" type="checkbox"> Themes</label>
 <label class="check"><input id="jev" type="checkbox"> Show JEV</label>
 <button>Search</button>
 </form>
@@ -65,7 +70,9 @@ h2 a:hover { text-decoration: underline; }
 const RAW = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/";
 const $ = (id) => document.getElementById(id);
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const STOP = new Set("the a an of to and in for on as with after before from by at is are was were be its it that this says said just more new over into about how why what will could would their his her has have had not but or if than then also today yesterday week after update live news stock stocks market markets shares share price prices".split(" "));
 function norm(s){ return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(); }
+function words(title){ return [...new Set(norm(title).split(" ").filter(w => w.length > 2 && !STOP.has(w)))]; }
 function day(v){
   const s = String(v || "");
   const iso = s.match(/(\d{4}-\d{2}-\d{2})/);
@@ -83,11 +90,46 @@ function pretty(iso){
 }
 function tickers(title){ return (title.match(/\b[A-Z]{1,5}\b/g) || []).join(" "); }
 function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&','<':'<','>':'>','"':'"'}[c])); }
+function link(r){ return r.url ? `<a href="${esc(r.url)}">${esc(r.title)}</a>` : esc(r.title); }
+function themesOf(rows){
+  const df = new Map();
+  for (const r of rows) for (const w of words(r.title)) df.set(w, (df.get(w) || 0) + 1);
+  const cap = Math.max(3, Math.floor(rows.length * 0.35));
+  const groups = new Map();
+  const loose = [];
+  for (const r of rows){
+    const keys = words(r.title).filter(w => { const n = df.get(w) || 0; return n >= 2 && n <= cap; });
+    if (!keys.length){ loose.push(r); continue; }
+    keys.sort((a, b) => df.get(a) - df.get(b) || a.localeCompare(b));
+    const key = keys[0];
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(r);
+  }
+  const clusters = [...groups.entries()].filter(([, rs]) => rs.length >= 2).sort((a, b) => b[1].length - a[1].length);
+  return {clusters, loose};
+}
+function themeCard(key, rs){
+  const lead = rs[0];
+  const rest = rs.slice(1).map(r => `<li>${link(r)}<div class="source">${esc(r.source || "no source")}</div></li>`).join("");
+  return `<article class="theme">
+    <div class="meta"><span class="chip themechip">${esc(key)}</span> ${rs.length} headlines</div>
+    <h2>${link(lead)}</h2>
+    <p class="source">${esc(lead.source || "no source")}</p>
+    <ul class="rel">${rest}</ul>
+  </article>`;
+}
+function card(r){
+  const tag = r.jev ? `<p class="why"><span class="chip ${r.jev.jev === "KEEP" ? "keep" : "drop"}">${r.jev.jev}</span> ${esc(r.jev.reason || "")}</p>` : (r.showJev ? `<p class="why"><span class="chip unscored">not scored</span></p>` : "");
+  return `<article class="${r.jev && r.jev.jev === "DROP" ? "drop" : ""}">
+    <div class="meta"><span class="chip ${r.stage || "parsed"}">${r.stage || "parsed"}</span> parsed ${pretty(r.parse)} · published ${pretty(r.published)}</div>
+    <h2>${link(r)}</h2>
+    <p class="source">${esc(r.source || "no source")}</p>
+    ${tag}
+  </article>`;
+}
 function verdict(it){
   const raw = String(it.decision || it.jev || it.verdict || "").toUpperCase();
   if (raw === "KEEP" || raw === "DROP") return raw;
-  if (it.keep === true) return "KEEP";
-  if (it.drop === true) return "DROP";
   return "";
 }
 function walk(node, into){
@@ -135,33 +177,15 @@ async function loadIndex(){
 }
 async function loadScores(date){
   const map = new Map();
-  const urls = [
-    `scores/${date}.json`,
-    RAW + `dashboard/news-dir/scores/${date}.json`,
-    RAW + `01_daily/news/${date}_jev_keep.json`
-  ];
-  let doc = null;
-  for (const url of urls){
+  for (const url of [`scores/${date}.json`, RAW + `dashboard/news-dir/scores/${date}.json`, RAW + `01_daily/news/${date}_jev_keep.json`]){
     const res = await fetch(url);
-    if (res.ok){ doc = await res.json(); break; }
-  }
-  if (!doc) return map;
-  const found = [];
-  walk(doc, found);
-  for (const it of found){
-    map.set(norm(it.title), {jev: verdict(it), reason: it.reason || it.why || ""});
+    if (!res.ok) continue;
+    const found = [];
+    walk(await res.json(), found);
+    for (const it of found) map.set(norm(it.title), {jev: verdict(it), reason: it.reason || ""});
+    if (map.size) break;
   }
   return map;
-}
-function card(r){
-  const title = r.url ? `<a href="${esc(r.url)}">${esc(r.title)}</a>` : esc(r.title);
-  const tag = r.jev ? `<span class="chip ${r.jev.jev === "KEEP" ? "keep" : "drop"}">${r.jev.jev}</span> ${esc(r.jev.reason || "")}` : `<span class="chip unscored">not scored</span>`;
-  return `<article class="${r.jev && r.jev.jev === "DROP" ? "drop" : ""}">
-    <div class="meta"><span class="chip ${r.stage}">${r.stage}</span> parsed ${pretty(r.parse)} · published ${pretty(r.published)}</div>
-    <h2>${title}</h2>
-    <p class="source">${esc(r.source || "no source")}</p>
-    ${r.jev ? `<p class="why">${tag}</p>` : (r.showJev ? `<p class="why">${tag}</p>` : "")}
-  </article>`;
 }
 $("f").onsubmit = async (ev) => {
   ev.preventDefault();
@@ -169,6 +193,7 @@ $("f").onsubmit = async (ev) => {
   const pub = $("pub").value;
   const q = $("q").value.trim().toLowerCase();
   const show = $("jev").checked;
+  const themes = $("themes").checked;
   if (!parse && !q){ $("status").textContent = "Enter a term, or a date."; return; }
   $("status").textContent = "Looking";
   $("layout").classList.toggle("on", show);
@@ -180,16 +205,12 @@ $("f").onsubmit = async (ev) => {
     missing = loaded.missing;
   } else {
     const idx = await loadIndex();
-    if (!idx){
-      $("status").textContent = "The cross-day index is still building. A term search needs it. A date search works now.";
-      return;
-    }
+    if (!idx){ $("status").textContent = "The cross-day index is still building. A date search works now."; return; }
     rows = idx.rows || [];
   }
   if (pub) rows = rows.filter(r => r.published === pub);
   if (q) rows = rows.filter(r => (r.title + " " + r.source + " " + (r.tick || "")).toLowerCase().includes(q));
   let keeps = [];
-  let drops = rows;
   if (show){
     const dates = [...new Set(rows.map(r => r.parse).filter(Boolean))];
     const maps = await Promise.all(dates.slice(0, 12).map(loadScores));
@@ -197,16 +218,19 @@ $("f").onsubmit = async (ev) => {
     for (const part of maps) for (const [k, v] of part) map.set(k, v);
     for (const r of rows) r.jev = map.get(norm(r.title)) || null;
     keeps = rows.filter(r => r.jev && r.jev.jev === "KEEP");
-    drops = rows.filter(r => !r.jev || r.jev.jev !== "KEEP");
   }
-  for (const r of drops) r.showJev = show;
-  $("rows").innerHTML = drops.slice(0, 200).map(card).join("");
+  if (themes){
+    const {clusters, loose} = themesOf(rows);
+    $("rows").innerHTML = clusters.map(([k, rs]) => themeCard(k, rs)).join("") + loose.slice(0, 30).map(card).join("");
+    $("status").innerHTML = `<span class="hit">${clusters.length} themes</span> from ${rows.length} headlines`;
+  } else {
+    const drops = show ? rows.filter(r => !r.jev || r.jev.jev !== "KEEP") : rows;
+    for (const r of drops) r.showJev = show;
+    $("rows").innerHTML = drops.slice(0, 200).map(card).join("");
+    $("status").innerHTML = rows.length ? `<span class="hit">${rows.length} hits</span>` : `<span class="miss">Not in the repo.</span>`;
+  }
   $("keeps").innerHTML = keeps.map(r => `<li>${esc(r.title)}<div class="why">${esc(r.jev.reason || "")}</div></li>`).join("") || "<li>No keep in this result.</li>";
-  const miss = missing.length ? " Missing: " + missing.join(", ") : "";
-  const jevBit = show ? ` · ${keeps.length} keep · ${drops.filter(r => r.jev && r.jev.jev === "DROP").length} drop` : "";
-  $("status").innerHTML = rows.length
-    ? `<span class="hit">${rows.length} hits</span>${esc(jevBit + miss)}`
-    : `<span class="miss">Not in the repo.</span>${esc(miss)}`;
+  if (missing.length) $("status").innerHTML += esc(" Missing: " + missing.join(", "));
 };
 </script>
 </body>
