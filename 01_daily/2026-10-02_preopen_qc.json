@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T08:30:36.557697-04:00",
+  "generated_at": "2026-10-02T08:37:05.039793-04:00",
   "items": [
     {
       "ok": true,
@@ -179,14 +179,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-10-02/financial_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 19543,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -293,9 +293,9 @@
     },
     {
       "sector": "Financial",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 19543,
       "status": "DEGRADED",
       "provider": "openclaw",
       "fallback_reason": "openclaw_timeout"
@@ -344,7 +344,7 @@
       "fallback_reason": "step deadline"
     }
   ],
-  "sector_n_ok": 5,
+  "sector_n_ok": 6,
   "sector_n_total": 11,
   "all_ok": false
 }
