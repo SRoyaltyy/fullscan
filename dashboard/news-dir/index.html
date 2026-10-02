@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>News directory</title>
+<style>
+body{font:14px/1.4 ui-sans-serif,system-ui;margin:24px;background:#111;color:#eee}
+input,button{font:inherit;padding:6px 8px;margin:0 6px 8px 0}
+.miss{color:#f88}.hit{color:#9e9}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #333;padding:4px 6px;text-align:left;vertical-align:top}
+.small{color:#888}
+</style>
+</head>
+<body>
+<h1>News directory</h1>
+<p class="small">Parse date is the day the repo wrote the file. Published date is the article clock. A blank result is absence, not a quiet match.</p>
+<form id="f">
+<label>Parse date <input id="parse" type="date"></label>
+<label>Published date <input id="pub" type="date"></label>
+<label>Term or ticker <input id="q" placeholder="Micron, MU, Hormuz"></label>
+<button>Search</button>
+</form>
+<p id="status"></p>
+<table><thead><tr><th>parse</th><th>published</th><th>stage</th><th>title</th><th>source</th></tr></thead><tbody id="rows"></tbody></table>
+<script>
+const RAW = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/";
+const $ = (id) => document.getElementById(id);
+function day(v){ return (v || "").slice(0, 10); }
+function tickers(title){
+  return (title.match(/\b[A-Z]{1,5}\b/g) || []).join(" ");
+}
+function rowsFrom(doc, parseDate, stage){
+  const items = (doc && (doc.all_items || doc.items || doc.events || doc.actions)) || [];
+  return items.map(it => ({
+    parse: parseDate,
+    published: day(it.published_at || it.known_at || it.date || ""),
+    stage,
+    title: it.title || it.event || it.name || "",
+    source: it.source || "",
+    url: it.url || "",
+    tick: (it.ticker || "") + " " + tickers(it.title || "")
+  })).filter(r => r.title);
+}
+async function loadDay(date){
+  const out = [];
+  for (const [path, stage] of [
+    [`01_daily/news/${date}_parsed.json`, "parsed"],
+    [`01_daily/news/${date}_actions.json`, "published"],
+    [`01_daily/events/${date}_events.json`, "parsed"]
+  ]){
+    const res = await fetch(RAW + path);
+    if (!res.ok){ out.push({missing: path}); continue; }
+    out.push(...rowsFrom(await res.json(), date, stage));
+  }
+  return out;
+}
+async function loadIndex(){
+  const res = await fetch("index.json");
+  if (!res.ok) return null;
+  return res.json();
+}
+$("f").onsubmit = async (ev) => {
+  ev.preventDefault();
+  const parse = $("parse").value;
+  const pub = $("pub").value;
+  const q = $("q").value.trim().toLowerCase();
+  $("status").textContent = "looking";
+  let rows = [];
+  const missing = [];
+  if (parse){
+    const dayRows = await loadDay(parse);
+    for (const r of dayRows){
+      if (r.missing) missing.push(r.missing);
+      else rows.push(r);
+    }
+  } else {
+    const idx = await loadIndex();
+    if (!idx){
+      $("status").textContent = "No parse date, and index.json is not built yet. Enter a parse date, or run news_dir.";
+      return;
+    }
+    rows = idx.rows || [];
+  }
+  if (pub) rows = rows.filter(r => r.published === pub);
+  if (q) rows = rows.filter(r => (r.title + " " + r.source + " " + r.tick).toLowerCase().includes(q));
+  $("rows").innerHTML = rows.slice(0, 200).map(r => `<tr><td>${r.parse}</td><td>${r.published || "—"}</td><td>${r.stage}</td><td>${r.url ? `<a href="${r.url}">${r.title}</a>` : r.title}</td><td>${r.source}</td></tr>`).join("");
+  const miss = missing.length ? " Missing files: " + missing.join(", ") : "";
+  $("status").innerHTML = rows.length
+    ? `<span class="hit">${rows.length} hit${rows.length===1?"":"s"}</span>${miss}`
+    : `<span class="miss">absent</span>${miss}`;
+};
+</script>
+</body>
+</html>
