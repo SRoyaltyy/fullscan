@@ -1,11 +1,12 @@
 {
-  "updated": "2026-10-01T18:06:42.934476-04:00",
+  "updated": "2026-10-02T16:14:42.751150-04:00",
   "window_n": 15,
   "direction_acc": 0.5333333333333333,
   "notes": [],
   "threshold_deltas": {},
   "sector_notes": [
+    "sector:Basic Materials weak (33%): review sector taxonomy weights / search templates.",
     "sector:Communication Services weak (20%): review sector taxonomy weights / search templates.",
-    "sector:Consumer Cyclical weak (33%): review sector taxonomy weights / search templates."
+    "sector:Consumer Cyclical weak (27%): review sector taxonomy weights / search templates."
   ]
 }
