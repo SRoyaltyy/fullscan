@@ -147,11 +147,41 @@ def existing_attempt(journal, date, submit):
     return remote_session_journal(date, submit)
 
 
+def _empty_sit_plan(payload, snap, clock):
+    """No-trade plan. Does not size, and does not read the regime file."""
+    date = clock.date().isoformat()
+    positions = getattr(snap, 'positions', None) or {}
+    return {
+        'date': date,
+        'prepared_at': clock.isoformat(),
+        'fingerprint': (payload.get('decision_readiness') or {}).get('fingerprint'),
+        'sit': True,
+        'card': {
+            'date': date,
+            'want_date': date,
+            'policy': we.HOT4,
+            'tickets': [],
+            'skipped': [],
+            'stale': False,
+            'look_error': '',
+            'score': None,
+            'hard_red': False,
+            'why': f'{we.HOT4} flat sit; no buys or sells',
+            'order_type': 'MARKET',
+        },
+        'cash': getattr(snap, 'cash', None),
+        'n_positions': len(positions),
+    }
+
+
 def make_plan(payload, snap, clock, *, allow_after_bell=False):
     date = clock.date().isoformat()
     rec = validate_payload(payload, date, clock, allow_after_bell=allow_after_bell)
     if not snap.connected:
         raise ValueError(snap.error or 'broker disconnected')
+    # Flat sit has nothing to buy or sell. Do not size, and do not load regime.
+    if _flat_hot4_sit(rec):
+        return _empty_sit_plan(payload, snap, clock)
     card = we.plan_hot4_for_broker(date, snap, payload=payload)
     if card.get('stale') or card.get('look_error'):
         raise ValueError('stale or failed hot4 plan')
@@ -556,7 +586,16 @@ def submit_ready(*, submit=True, clock=now, loader=None, api=None, state_dir=Non
         try:
             body = payload if payload is not None else (loader or load_local)(date)
             snap = api.snapshot()
-            plan = make_plan(body, snap, clock(), allow_after_bell=True)
+            now = clock()
+            hot = (body.get('strategies') or {}).get(we.HOT4) or {}
+            # Flat sit: validate, journal no_trade, do not size or read regime.
+            if _flat_hot4_sit(hot):
+                validate_payload(body, date, now, allow_after_bell=True)
+                if not getattr(snap, 'connected', False):
+                    raise ValueError(getattr(snap, 'error', None) or 'broker disconnected')
+                plan = _empty_sit_plan(body, snap, now)
+            else:
+                plan = make_plan(body, snap, now, allow_after_bell=True)
             atomic_json(status_path, {**plan, 'status': 'armed', 'standing': True})
         except Exception as exc:
             atomic_json(status_path, {'date': date, 'status': 'blocked',

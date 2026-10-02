@@ -153,8 +153,15 @@ def test_ready_submit_flat_sit_missing_score_is_no_trade(tmp_path, monkeypatch):
     )
     early = datetime.fromisoformat(day + 'T06:20:00-04:00')
     api = API()
+
+    def _regime_missing(*_a, **_k):
+        raise SystemExit('missing mover_lookback_action.json')
+
     with patch.object(we, 'write_last'), \
-            patch.object(po, 'remote_session_journal', return_value=None):
+            patch.object(po, 'remote_session_journal', return_value=None), \
+            patch.object(we, 'plan_hot4_for_broker', side_effect=_regime_missing), \
+            patch('src.sleeve_merge.load_payload', side_effect=_regime_missing), \
+            patch('src.factor_mine_book.load_regime', side_effect=_regime_missing):
         rc = po.submit_ready(
             submit=True, clock=lambda: early, loader=lambda _: _flat_sit_payload(day),
             api=api, state_dir=tmp_path)
