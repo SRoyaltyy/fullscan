@@ -7,47 +7,75 @@
 <style>
 :root { color-scheme: light; }
 body { margin: 0; background: #f4f1ea; color: #1c1915; font: 17px/1.45 Georgia, "Iowan Old Style", Palatino, serif; }
-header, main { max-width: 920px; margin: 0 auto; padding: 28px 20px; }
-h1 { font-size: 32px; margin: 0 0 8px; letter-spacing: -0.02em; }
+header { max-width: 1100px; margin: 0 auto; padding: 28px 20px 0; }
+h1 { font-size: 32px; margin: 0 0 8px; }
 .lede { color: #4a453c; margin: 0 0 18px; }
 form { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: end; background: #fff; border: 1px solid #e4ddd0; padding: 14px; }
 label { display: flex; flex-direction: column; gap: 4px; font: 13px/1.2 ui-sans-serif, system-ui, sans-serif; color: #4a453c; }
-input { font: 16px/1.3 ui-sans-serif, system-ui, sans-serif; color: #1c1915; background: #fff; border: 1px solid #c8bfb0; padding: 8px 10px; min-width: 11em; }
+label.check { flex-direction: row; align-items: center; gap: 8px; padding-bottom: 8px; }
+input[type=text], input[type=date] { font: 16px/1.3 ui-sans-serif, system-ui, sans-serif; color: #1c1915; background: #fff; border: 1px solid #c8bfb0; padding: 8px 10px; min-width: 11em; }
 button { font: 16px/1.2 ui-sans-serif, system-ui, sans-serif; background: #1c1915; color: #f4f1ea; border: 0; padding: 10px 16px; cursor: pointer; }
 #status { font: 15px/1.4 ui-sans-serif, system-ui, sans-serif; margin: 16px 0; }
 .hit { color: #1d6b3a; font-weight: 650; }
 .miss { color: #9b2c2c; font-weight: 650; }
+.layout { max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; display: grid; grid-template-columns: 1fr; gap: 16px; }
+.layout.on { grid-template-columns: minmax(0, 1fr) 320px; }
+.keepbox { background: #fff; border: 1px solid #e4ddd0; padding: 14px; position: sticky; top: 12px; max-height: 80vh; overflow: auto; display: none; }
+.layout.on .keepbox { display: block; }
+.keepbox h3 { margin: 0 0 8px; font: 15px/1.3 ui-sans-serif, system-ui, sans-serif; }
+.keepbox ol { margin: 0; padding-left: 18px; }
+.keepbox li { margin: 0 0 10px; font-size: 15px; }
 article { background: #fff; border: 1px solid #e4ddd0; padding: 14px 16px; margin: 0 0 10px; }
 .meta { font: 13px/1.3 ui-sans-serif, system-ui, sans-serif; color: #4a453c; margin-bottom: 6px; }
 .chip { display: inline-block; padding: 1px 7px; border-radius: 99px; font-weight: 650; }
 .parsed { background: #e7f0e4; color: #1d6b3a; }
 .published { background: #e7eef8; color: #1d4e89; }
+.keep { background: #e7f0e4; color: #1d6b3a; }
+.drop { background: #f8e7e7; color: #9b2c2c; }
+.unscored { background: #eeeae3; color: #4a453c; }
 h2 { font-size: 18px; margin: 0; font-weight: 650; }
 h2 a { color: #1d4e89; text-decoration: none; }
 h2 a:hover { text-decoration: underline; }
-.source { margin: 6px 0 0; color: #4a453c; font: 14px/1.3 ui-sans-serif, system-ui, sans-serif; }
+.source, .why { margin: 6px 0 0; color: #4a453c; font: 14px/1.3 ui-sans-serif, system-ui, sans-serif; }
+@media (max-width: 800px) { .layout.on { grid-template-columns: 1fr; } .keepbox { position: static; max-height: none; } }
 </style>
 </head>
 <body>
 <header>
 <h1>News directory</h1>
-<p class="lede">Parse date is the day the repo wrote the file. Published date is the article clock. No rows means the article is not in the repo.</p>
+<p class="lede">Parse date is the day the repo wrote the file. Published date is the article clock. JEV is the last scored draw, not a new call.</p>
 <form id="f">
 <label>Parse date<input id="parse" type="date"></label>
 <label>Published date<input id="pub" type="date"></label>
-<label>Term or ticker<input id="q" placeholder="Micron, MU, Hormuz"></label>
+<label>Term or ticker<input id="q" type="text" placeholder="Micron, MU, Hormuz"></label>
+<label class="check"><input id="jev" type="checkbox"> Show JEV</label>
 <button>Search</button>
 </form>
-</header>
-<main>
 <p id="status"></p>
+</header>
+<div class="layout" id="layout">
 <div id="rows"></div>
-</main>
+<aside class="keepbox" id="keepbox">
+<h3>JEV keep</h3>
+<ol id="keeps"></ol>
+</aside>
+</div>
 <script>
 const RAW = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/";
 const $ = (id) => document.getElementById(id);
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-function day(v){ return (v || "").slice(0, 10); }
+let jevMap = null;
+function norm(s){ return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(); }
+function day(v){
+  const s = String(v || "");
+  const iso = s.match(/(\d{4}-\d{2}-\d{2})/);
+  if (iso) return iso[1];
+  const rfc = s.match(/(\d{1,2})\s+([A-Za-z]{3})\s+(\d{4})/);
+  if (!rfc) return "";
+  const m = MONTHS.findIndex(x => x.toLowerCase() === rfc[2].toLowerCase());
+  if (m < 0) return "";
+  return `${rfc[3]}-${String(m + 1).padStart(2, "0")}-${rfc[1].padStart(2, "0")}`;
+}
 function pretty(iso){
   if (!iso || iso.length < 10) return "no published date";
   const [y, m, d] = iso.slice(0, 10).split("-");
@@ -85,12 +113,34 @@ async function loadIndex(){
   if (!res.ok) return null;
   return res.json();
 }
-function card(r){
+async function loadJev(){
+  if (jevMap) return jevMap;
+  const res = await fetch(RAW + "dashboard/jev-train/draw.json");
+  jevMap = new Map();
+  if (!res.ok) return jevMap;
+  const doc = await res.json();
+  for (const it of doc.items || []){
+    jevMap.set(norm(it.title), it);
+  }
+  jevMap.stamp = doc.stamp || "";
+  return jevMap;
+}
+function card(r, show){
   const title = r.url ? `<a href="${esc(r.url)}">${esc(r.title)}</a>` : esc(r.title);
+  let jev = "";
+  if (show){
+    const hit = r.jev;
+    if (!hit) jev = `<p class="why"><span class="chip unscored">not scored</span></p>`;
+    else {
+      const bits = (hit.bits || []).join(", ");
+      jev = `<p class="why"><span class="chip ${hit.jev === "KEEP" ? "keep" : "drop"}">${esc(hit.jev)}</span> ${esc(hit.reason || "")} ${bits ? "· " + esc(bits) : ""}</p>`;
+    }
+  }
   return `<article>
     <div class="meta"><span class="chip ${r.stage}">${r.stage}</span> parsed ${pretty(r.parse)} · published ${pretty(r.published)}</div>
     <h2>${title}</h2>
     <p class="source">${esc(r.source || "no source")}</p>
+    ${jev}
   </article>`;
 }
 $("f").onsubmit = async (ev) => {
@@ -98,7 +148,9 @@ $("f").onsubmit = async (ev) => {
   const parse = $("parse").value;
   const pub = $("pub").value;
   const q = $("q").value.trim().toLowerCase();
+  const show = $("jev").checked;
   $("status").textContent = "Looking";
+  $("layout").classList.toggle("on", show);
   let rows = [];
   const missing = [];
   if (parse){
@@ -117,10 +169,17 @@ $("f").onsubmit = async (ev) => {
   }
   if (pub) rows = rows.filter(r => r.published === pub);
   if (q) rows = rows.filter(r => (r.title + " " + r.source + " " + r.tick).toLowerCase().includes(q));
-  $("rows").innerHTML = rows.slice(0, 200).map(card).join("");
+  if (show){
+    const map = await loadJev();
+    for (const r of rows) r.jev = map.get(norm(r.title)) || null;
+  }
+  $("rows").innerHTML = rows.slice(0, 200).map(r => card(r, show)).join("");
+  const keeps = show ? rows.filter(r => r.jev && r.jev.jev === "KEEP") : [];
+  $("keeps").innerHTML = keeps.map(r => `<li>${esc(r.title)}<div class="why">${esc(r.jev.reason || "")}</div></li>`).join("") || "<li>No keep in this result.</li>";
   const miss = missing.length ? " Missing: " + missing.join(", ") : "";
+  const scored = show ? ` · ${keeps.length} keep` : "";
   $("status").innerHTML = rows.length
-    ? `<span class="hit">${rows.length} hit${rows.length===1?"":"s"}</span>${esc(miss)}`
+    ? `<span class="hit">${rows.length} hit${rows.length===1?"":"s"}</span>${esc(scored + miss)}`
     : `<span class="miss">Not in the repo.</span>${esc(miss)}`;
 };
 </script>
