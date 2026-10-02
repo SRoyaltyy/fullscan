@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T08:32:40.903871-04:00",
+  "generated_at": "2026-10-02T08:38:14.402993-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -73,64 +73,64 @@
   ],
   "sell_1d": [
     {
+      "ticker": "SOC",
+      "score": -0.5146371055310438
+    },
+    {
+      "ticker": "GFR",
+      "score": -0.4677311321853222
+    },
+    {
+      "ticker": "BORR",
+      "score": -0.45463232099222745
+    },
+    {
+      "ticker": "HP",
+      "score": -0.4494444755006682
+    },
+    {
+      "ticker": "AESI",
+      "score": -0.4043430765347767
+    },
+    {
+      "ticker": "ACDC",
+      "score": -0.3983094123274104
+    },
+    {
+      "ticker": "VIST",
+      "score": -0.3974145912958064
+    },
+    {
+      "ticker": "PUMP",
+      "score": -0.3663380816995629
+    },
+    {
+      "ticker": "UEC",
+      "score": -0.3478931712993255
+    },
+    {
+      "ticker": "CRC",
+      "score": -0.32443293503850007
+    },
+    {
+      "ticker": "CLB",
+      "score": -0.32255661656597623
+    },
+    {
       "ticker": "NEOV",
       "score": -0.30863537860432877
     },
     {
+      "ticker": "DNN",
+      "score": -0.30567607573820205
+    },
+    {
+      "ticker": "UUUU",
+      "score": -0.3033204537244068
+    },
+    {
       "ticker": "BIDU",
       "score": -0.30175515119491925
-    },
-    {
-      "ticker": "GOGO",
-      "score": -0.29362472221320157
-    },
-    {
-      "ticker": "GFL",
-      "score": -0.2906078218508684
-    },
-    {
-      "ticker": "AIRJ",
-      "score": -0.2888602348906857
-    },
-    {
-      "ticker": "IBM",
-      "score": -0.27745520522797523
-    },
-    {
-      "ticker": "PSA",
-      "score": -0.26879387883973965
-    },
-    {
-      "ticker": "BAK",
-      "score": -0.26337903655708433
-    },
-    {
-      "ticker": "SOC",
-      "score": -0.2593871055310438
-    },
-    {
-      "ticker": "VNET",
-      "score": -0.2548570692147698
-    },
-    {
-      "ticker": "LILAK",
-      "score": -0.2427531973659076
-    },
-    {
-      "ticker": "CMTG",
-      "score": -0.23670572520902705
-    },
-    {
-      "ticker": "PRM",
-      "score": -0.2337447712965146
-    },
-    {
-      "ticker": "AREC",
-      "score": -0.22728287661828434
-    },
-    {
-      "ticker": "RC",
-      "score": -0.22300222973735256
     }
   ],
   "flatten": {
@@ -153,13 +153,13 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "2 up / 0 down / 2 flat",
+    "said": "2 up / 1 down / 2 flat",
     "bullets": [
       "XLB FLAT +3.0",
       "XLC UP +4.6",
       "XLY FLAT +3.7",
       "XLP UP +4.0",
-      "XLE missing",
+      "XLE DOWN -7.2",
       "XLF missing",
       "XLV missing",
       "XLI missing",
