@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T17:30:03.127935-04:00",
+  "generated_at": "2026-10-02T19:50:52.476822-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -1322,6 +1322,31 @@
         }
       ],
       "preview": "2026-10-02 BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL SOC, GFR, BORR, HP, AESI, ACDC, VIST, PUMP \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-02 BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL SOC, GFR, BORR, HP, AESI, ACDC, VIST, PUMP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-02 BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL SOC, GFR, BORR, HP, AESI, ACDC, VIST, PUMP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-02 BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL SOC, GFR, BORR, HP, AESI, ACDC, VIST, PUMP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, orde"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-10-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-02T19:46:07.966387-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-02_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8694,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-02_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3864,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-10-02\n**Generated:** 2026-10-02T19:46:07.933931-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher as soft September jobs report reduced Fed rate-hike odds and lifted cyclical sectors\n**Prior close:** SPX +0.73%  Nasdaq +1.19%  Dow +0.49%\n**SPX:** +0.73%  **Nasdaq:** +1.19%  **Dow:** +0.49%\n**Oil:** \u2014\n**CPI/Fed:** 23.0% hike (hike slipping to roughly 23%)\n**Leaders:** CME, TSLA, CCL, NCLH, RCL, NVDA, SYNA, ON, ISRG, VEEV, NKE, WDC, STX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** WDC, STX\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-05\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-02\n**Generated:** 2026-10-02T19:46:07.933931-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher as soft September jobs report reduced Fed rate-hike odds and lifted cyclical sectors\n**Prior close:** SPX +0.73%  Nasdaq +1.19%  Dow +0.49%\n**SPX:** +0.73%  **Nasdaq:** +1.19%  **Dow:** +0.49%\n**Oil:** \u2014\n**CPI/Fed:** 23.0% hike (hike slipping to roughly 23%)\n**Leaders:** CME, TSLA, CCL, NCLH, RCL, NVDA, SYNA, ON, ISRG, VEEV, NKE, WDC, STX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** WDC, STX\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-05\n**Clock use:** `next_open`"
     }
   ],
   "source": "publish_live_boards"
