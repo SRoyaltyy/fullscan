@@ -2655,3 +2655,6 @@
 {"close":98.459999,"date":"2026-10-01","high":104.0,"low":93.949997,"open":95.410004,"ticker":"KOD","volume":3792100.0}
 {"close":3.66,"date":"2026-10-01","high":4.54,"low":3.4,"open":3.6,"ticker":"SDEV","volume":105359000.0}
 {"close":32.580002,"date":"2026-10-01","high":35.726002,"low":26.309999,"open":26.309999,"ticker":"TJGC","volume":117800.0}
+{"close":0.958,"date":"2026-09-29","high":1.03,"low":0.805,"open":0.805,"ticker":"QSI","volume":23007100.0}
+{"close":1.07,"date":"2026-09-30","high":1.12,"low":0.96,"open":0.96,"ticker":"QSI","volume":13838800.0}
+{"close":1.43,"date":"2026-10-01","high":1.48,"low":1.15,"open":1.2,"ticker":"QSI","volume":32680600.0}
