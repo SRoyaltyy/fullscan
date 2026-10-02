@@ -322,28 +322,33 @@ def _real() -> None:
                 with redirect_stdout(out), redirect_stderr(err):
                     code = forward.correct_open_main()
                 text = out.getvalue()
-                if code != 0 or "dry-run: wrote nothing" not in text:
-                    raise SystemExit(f"{name} dry-run failed {code}\n{text}\n{err.getvalue()}")
-                cash = _cash_from(text)
-                if cash < 0:
-                    raise SystemExit(f"{name} cash {cash}")
-                if "pnl_primary=" not in text:
-                    raise SystemExit(f"{name} close P&L missing\n{text}")
-                if f"reason: {STALE_OPEN_REASON}" not in text:
-                    raise SystemExit(f"{name} reason\n{text}")
-                if f"approved_by: {STALE_OPEN_APPROVED_BY}" not in text:
-                    raise SystemExit(f"{name} approved_by\n{text}")
-                for ticker, op in TRUE_OPENS.items():
-                    if f"{ticker} shares=" not in text or f"fill={op}" not in text:
-                        raise SystemExit(f"{name} missing {ticker} {op}\n{text}")
-                if "sealed_fill=0.9439" not in text or "sealed_fill=16.209999" not in text:
-                    raise SystemExit(f"{name} sealed legs\n{text}")
-                if "corrected_fill=1.125" not in text or "corrected_fill=16.0" not in text:
-                    raise SystemExit(f"{name} corrected legs\n{text}")
                 records = load()
                 sealed = next(row for row in records if row["kind"] == "open_fill" and row["date"] == REAL)
                 if _fills(sealed).get("SRFM") != 0.9439:
                     raise SystemExit(f"{name} sealed SRFM moved")
+                if code != 0:
+                    raise SystemExit(f"{name} dry-run failed {code}\n{text}\n{err.getvalue()}")
+                if f"open fill correction already sealed {REAL}" in text:
+                    _sealed_correction(name, records)
+                else:
+                    if "dry-run: wrote nothing" not in text:
+                        raise SystemExit(f"{name} dry-run failed {code}\n{text}\n{err.getvalue()}")
+                    cash = _cash_from(text)
+                    if cash < 0:
+                        raise SystemExit(f"{name} cash {cash}")
+                    if "pnl_primary=" not in text:
+                        raise SystemExit(f"{name} close P&L missing\n{text}")
+                    if f"reason: {STALE_OPEN_REASON}" not in text:
+                        raise SystemExit(f"{name} reason\n{text}")
+                    if f"approved_by: {STALE_OPEN_APPROVED_BY}" not in text:
+                        raise SystemExit(f"{name} approved_by\n{text}")
+                    for ticker, op in TRUE_OPENS.items():
+                        if f"{ticker} shares=" not in text or f"fill={op}" not in text:
+                            raise SystemExit(f"{name} missing {ticker} {op}\n{text}")
+                    if "sealed_fill=0.9439" not in text or "sealed_fill=16.209999" not in text:
+                        raise SystemExit(f"{name} sealed legs\n{text}")
+                    if "corrected_fill=1.125" not in text or "corrected_fill=16.0" not in text:
+                        raise SystemExit(f"{name} corrected legs\n{text}")
                 print(text)
             finally:
                 reset_book(token)
@@ -358,6 +363,32 @@ def _real() -> None:
     if _ledgers() != before:
         raise SystemExit("dry-run wrote a sealed ledger")
     print("2026-09-28 dry-run left both ledgers unchanged")
+
+
+def _sealed_correction(name: str, records: list[dict]) -> None:
+    """The 2026-09-28 correction is already a sealed line. A dry-run must not write another."""
+    corr = next(
+        (row for row in records if row.get("kind") == "open_fill_correction" and row.get("date") == REAL),
+        None,
+    )
+    if corr is None:
+        raise SystemExit(f"{name} already-sealed dry-run has no correction line")
+    if corr.get("reason") != STALE_OPEN_REASON or corr.get("approved_by") != STALE_OPEN_APPROVED_BY:
+        raise SystemExit(f"{name} sealed correction reason")
+    opened = corr.get("corrected") or {}
+    if float(opened.get("cash_primary")) < 0:
+        raise SystemExit(f"{name} cash {opened.get('cash_primary')}")
+    fills = _fills(opened)
+    for ticker, op in TRUE_OPENS.items():
+        if fills.get(ticker) != op:
+            raise SystemExit(f"{name} sealed correction {ticker} {fills.get(ticker)} wanted {op}")
+    changed = {leg["ticker"]: leg for leg in corr.get("changed_legs") or []}
+    srfm = changed.get("SRFM") or {}
+    secz = changed.get("SECZ") or {}
+    if (srfm.get("sealed") or {}).get("fill") != 0.9439 or (srfm.get("corrected") or {}).get("fill") != 1.125:
+        raise SystemExit(f"{name} sealed SRFM leg {srfm}")
+    if (secz.get("sealed") or {}).get("fill") != 16.209999 or (secz.get("corrected") or {}).get("fill") != 16.0:
+        raise SystemExit(f"{name} sealed SECZ leg {secz}")
 
 
 def _pages() -> None:
@@ -390,7 +421,14 @@ def _noop_real_shape() -> None:
             names = sorted(set(open_legs(plan, held)) | {str(ticker).upper() for ticker in held} | {"IWM"})
             bars = bars_with_stored_session(overlay_forward(load_bars()), REAL, names)
             bodies, why = decide_open_correction(records, REAL, bars, fees, index)
-            if why or len(bodies) != 1:
+            if why:
+                raise SystemExit(f"{book.recipe} {why}")
+            if not bodies:
+                again, again_why = decide_open_correction(records, REAL, bars, fees, index)
+                if again or again_why is not None:
+                    raise SystemExit(f"{book.recipe} second correction {again_why}")
+                continue
+            if len(bodies) != 1:
                 raise SystemExit(f"{book.recipe} {why}")
             if float(bodies[0]["corrected"]["cash_primary"]) < 0:
                 raise SystemExit(f"{book.recipe} cash")
