@@ -424,9 +424,118 @@ def _dry_append(out: dict) -> None:
             raise SystemExit("temp plan hash")
 
 
+def _sealed(tickers: tuple[str, ...]) -> list[dict]:
+    return [{
+        "buys": [{"ticker": ticker} for ticker in tickers],
+        "date": SESSION,
+        "holdings": [],
+        "kind": "fill",
+        "sells": [],
+    }]
+
+
+def _ohlc(ticker: str, op: float, high: float, low: float, close: float, volume: float = 1000.0) -> dict:
+    return {
+        "close": close,
+        "date": SESSION,
+        "high": high,
+        "low": low,
+        "open": op,
+        "ticker": ticker,
+        "volume": volume,
+    }
+
+
+def _sealed_tolerance() -> None:
+    """Volume and one-cent reprints stay logged. One larger field is pending.
+
+    The stored bar is never replaced. Two OHLC fields that each move by
+    more than one cent still refuse the session.
+    """
+    now = datetime(2026, 9, 28, 21, 30, tzinfo=timezone.utc)
+    fresh = _bar("FRESH", SESSION, 8.0, 8.1)
+
+    def run(stored: list[dict], yahoo: list[dict], records: list[dict]) -> dict:
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            seeded = refresh(
+                tickers=sorted({row["ticker"] for row in stored}),
+                session=SESSION,
+                held=set(),
+                pinned_stored=_pinned(),
+                records=[],
+                fetch=_fetch(stored),
+                folder=folder,
+                now=now,
+            )
+            if len(seeded["appended"]) != len(stored):
+                raise SystemExit(f"seed failed {seeded}")
+            kept = [dict(row) for row in load_price_rows(folder)]
+            raised = None
+            body = None
+            try:
+                body = refresh(
+                    tickers=sorted({row["ticker"] for row in yahoo + [fresh]}),
+                    session=SESSION,
+                    held=set(),
+                    pinned_stored=_pinned(),
+                    records=records,
+                    fetch=_fetch(yahoo + [fresh]),
+                    folder=folder,
+                    now=now,
+                )
+            except SealedBarRevision as exc:
+                raised = str(exc)
+            return {
+                "body": body,
+                "kept": kept,
+                "raised": raised,
+                "rows": [dict(row) for row in load_price_rows(folder)],
+            }
+
+    volume = run(
+        [_ohlc("FEAM", 4.0, 4.2, 3.9, 4.1, 1000)],
+        [_ohlc("FEAM", 4.0, 4.2, 3.9, 4.1, 5000)],
+        _sealed(("FEAM",)),
+    )
+    if volume["raised"]:
+        raise SystemExit(f"volume-only sealed revision refused {volume['raised']}")
+    if volume["rows"][0]["volume"] != 1000.0:
+        raise SystemExit("volume-only overwrote the stored bar")
+    if not any(row["ticker"] == "FRESH" for row in volume["rows"]):
+        raise SystemExit("volume-only did not append the new bar")
+
+    cent = run(
+        [_ohlc("GLND", 5.138, 5.2, 5.0, 5.2)],
+        [_ohlc("GLND", 5.14, 5.2, 5.0, 5.2)],
+        _sealed(("GLND",)),
+    )
+    if cent["raised"] or (cent["body"] or {}).get("pending"):
+        raise SystemExit(f"one-cent sealed revision refused {cent}")
+    if cent["rows"][0]["open"] != 5.138:
+        raise SystemExit("one-cent revision overwrote the stored open")
+
+    pending = run(
+        [_ohlc("USDE", 16.85, 17.065001, 16.4, 16.9)],
+        [_ohlc("USDE", 16.559999, 17.07, 16.4, 16.9)],
+        _sealed(("USDE",)),
+    )
+    if pending["raised"]:
+        raise SystemExit(f"single pending field refused {pending['raised']}")
+    if pending["rows"][0]["open"] != 16.85:
+        raise SystemExit("pending open was stored")
+    got = (pending["body"] or {}).get("pending")
+    expect = {"field": "open", "new": 16.559999, "old": 16.85, "ticker": "USDE"}
+    if got != expect:
+        raise SystemExit(f"pending leg {got}")
+    if not any(row["ticker"] == "FRESH" for row in pending["rows"]):
+        raise SystemExit("pending field did not append the new bar")
+
+
 def main() -> None:
     _ordering()
     _prices()
+    _sealed_tolerance()
     log_before = (ROOT / "research/hot_n4_clean_v4/forward/holdup_log.jsonl").read_bytes()
     led_before = (ROOT / "research/hot_n4_clean_v4/forward/LEDGER.jsonl").read_bytes()
     out = simulate()

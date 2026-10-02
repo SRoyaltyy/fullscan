@@ -6,7 +6,9 @@ name: h1 open fill
 # calendar day (UTC+8, no DST). GitHub cron does not follow DST. During EST
 # this is before the 09:30 open. A buy or sell leg whose bar is missing
 # or dated another session writes nothing and exits non-zero. The 21:30
-# UTC fill writes the trades.
+# UTC fill writes the trades. A sealed-bar reprint follows the post-close
+# rule: the stored bar stays, and only two OHLC fields that each moved by
+# more than one cent stop the run.
 # Reads the h1 plan sealed at 13:05 UTC for today's session. No plan for
 # today, including 2026-09-28, appends nothing.
 

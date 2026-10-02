@@ -9,8 +9,10 @@ name: h1 post-close fill
 # If the 13:35 UTC open-fill already marked the buys and sells, this run
 # appends closes, the close mark, and any name the open was missing. It
 # does not append those fills again. A Yahoo print that disagrees with a
-# stored bar is logged and not overwritten. If a sealed record used that
-# bar, the run fails.
+# stored bar is logged and not overwritten. Volume and one-cent reprints
+# of a sealed bar do not stop the run. One sealed OHLC field that moved
+# by more than one cent is named pending and new bars still append. Two
+# such fields fail the run and append nothing.
 
 on:
   schedule:
