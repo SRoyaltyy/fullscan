@@ -1,8 +1,8 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T04:16:39.609027-04:00",
+  "generated_at": "2026-10-02T04:18:53.260380-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-02.csv",
+  "export": "finviz_2026-10-01.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,7 +8935,26 @@
   ],
   "ticker_news": [
     {
-      "time": "16 min",
+      "time": "3 min",
+      "title": "Nike stock sinks as revenue misses estimates, expects to cut jobs",
+      "url": "https://finance.yahoo.com/markets/article/nike-stock-sinks-as-revenue-misses-estimates-expects-to-cut-jobs-203030510.html",
+      "source": "Yahoo Finance",
+      "tickers": [
+        "NKE"
+      ]
+    },
+    {
+      "time": "13 min",
+      "title": "META Stock Rides Muse AI To Best Quarter In Over 2 Years  But Analyst Warns Monetization Could Be 'Notoriously Slow'",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/meta-stock-rides-muse-ai-080528207.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "MSFT",
+        "META"
+      ]
+    },
+    {
+      "time": "18 min",
       "title": "CareTrust Announces Strategic SHOP Pipeline Agreement with LNT Care Developments to Acquire 45 New UK Care Homes for \u00a31.1 Billion",
       "url": "/news/398174/caretrust-announces-strategic-shop-pipeline-agreement-with-lnt-care-developments-to-acquire-45-new-uk-care-homes-for-11-billion",
       "source": "Business Wire",
@@ -8944,7 +8963,7 @@
       ]
     },
     {
-      "time": "16 min",
+      "time": "18 min",
       "title": "Piper Sandler Establishes Infrastructure Debt Advisory Team in London",
       "url": "/news/398175/piper-sandler-establishes-infrastructure-debt-advisory-team-in-london",
       "source": "Business Wire",
@@ -8953,7 +8972,33 @@
       ]
     },
     {
-      "time": "29 min",
+      "time": "22 min",
+      "title": "How Do OpenAI And AWS Deals Reshape Synopsys's Design Automation Outlook?",
+      "url": "https://finance.yahoo.com/technology/ai/articles/openai-aws-deals-reshape-synopsyss-075553483.html",
+      "source": "Trefis",
+      "tickers": [
+        "AIP",
+        "KEYS",
+        "CDNS",
+        "SNPS",
+        "AMZN"
+      ]
+    },
+    {
+      "time": "22 min",
+      "title": "Does A Postal Service Backup Plan Materially Alter Amazon's Cash Outlook?",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/does-postal-backup-plan-materially-075550891.html",
+      "source": "Trefis",
+      "tickers": [
+        "GOOGL",
+        "GOOG",
+        "MSFT",
+        "META",
+        "AMZN"
+      ]
+    },
+    {
+      "time": "31 min",
       "title": "GME Stock Eyes 5th Week In Green: A Streak Of Insider Buys Builds Hype For GameStop",
       "url": "https://finance.yahoo.com/markets/stocks/articles/gme-stock-eyes-5th-week-074707397.html",
       "source": "Stocktwits",
@@ -8962,18 +9007,19 @@
       ]
     },
     {
-      "time": "51 min",
+      "time": "53 min",
       "title": "DAL Stock In Focus: Musk-Bastian Feud Over Starlink Escalates As United, American Court Delta Flyers",
       "url": "https://finance.yahoo.com/markets/stocks/articles/dal-stock-focus-musk-bastian-072528347.html",
       "source": "Stocktwits",
       "tickers": [
-        "AAL",
+        "DAL",
         "UAL",
+        "AAL",
         "AMZN"
       ]
     },
     {
-      "time": "53 min",
+      "time": "55 min",
       "title": "Our Cadre Holdings Stock Pick Hasn't Worked Out. We're Walking Away.",
       "url": "https://www.barrons.com/articles/cadre-holdings-stock-pick-walking-away-864ff18d?mod=bar_FV",
       "source": "Barrons.com",
@@ -9028,8 +9074,9 @@
       "source": "Oilprice.com",
       "tickers": [
         "BP",
+        "VG",
         "SHEL",
-        "VG"
+        "COP"
       ]
     },
     {
@@ -9150,10 +9197,10 @@
       "url": "https://www.barrons.com/articles/anthropic-ipo-new-math-ai-trillion-dollar-numbers-a906bbb0?mod=bar_FV",
       "source": "Barrons.com",
       "tickers": [
-        "AKAM",
         "ORCL",
-        "NVDA",
+        "AKAM",
         "GOOGL",
+        "NVDA",
         "META"
       ]
     },
@@ -9173,8 +9220,8 @@
       "source": "Stocktwits",
       "tickers": [
         "SPCX",
-        "NVDA",
         "GOOGL",
+        "NVDA",
         "GOOG"
       ]
     },
@@ -9208,7 +9255,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "MAT Stock Eyes Best Week In 16 Months On Mattel Buyout Buzz  Retail Traders See Room Above $20",
       "url": "https://finance.yahoo.com/markets/stocks/articles/mat-stock-eyes-best-week-051724049.html",
       "source": "Stocktwits",
@@ -9441,7 +9488,7 @@
     },
     {
       "time": "Oct-01",
-      "title": "Oil holds gains as U.S. weighs more Middle East military presence",
+      "title": "Oil dips as traders weigh U.S.-Iran tensions against supply recovery",
       "url": "https://finance.yahoo.com/energy/articles/oil-holds-gains-u-weighs-022013493.html",
       "source": "Investing.com",
       "tickers": [
@@ -9773,45 +9820,6 @@
       "source": "GuruFocus.com",
       "tickers": [
         "AMD"
-      ]
-    },
-    {
-      "time": "Oct-01",
-      "title": "NKE Stock Slumps About 9% After-Hours On A Soft Full-Year Forecast: CEO Says The Fix Will Take Time",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/nke-stock-slumps-9-hours-235709053.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "NKE"
-      ]
-    },
-    {
-      "time": "Oct-01",
-      "title": "AstraZeneca Stocks Drops as $2 Billion Buys an Oncology Option",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/astrazeneca-stocks-drops-2-billion-235700365.html",
-      "source": "GuruFocus.com",
-      "tickers": [
-        "AZN",
-        "SMMT"
-      ]
-    },
-    {
-      "time": "Oct-01",
-      "title": "Review & Preview: Jobs Watch",
-      "url": "https://www.barrons.com/articles/review-preview-jobs-stocks-today-053d5938?mod=bar_FV",
-      "source": "Barrons.com",
-      "tickers": [
-        "ACN",
-        "PSKY",
-        "MU"
-      ]
-    },
-    {
-      "time": "Oct-01",
-      "title": "Anthropic Reportedly Sends Investors IPO Invitations Ahead Of Potential Thanksgiving Debut",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-reportedly-sends-investors-ipo-234834463.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "SPCX"
       ]
     }
   ],
@@ -10725,5 +10733,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 154,
   "earnings_window_count": 60,
-  "overlay_at": "2026-10-02T04:16:39.609027-04:00"
+  "overlay_at": "2026-10-02T04:18:53.260380-04:00"
 }
