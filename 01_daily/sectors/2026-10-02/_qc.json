@@ -1,14 +1,14 @@
 {
   "date": "2026-10-02",
-  "n_ok": 0,
+  "n_ok": 1,
   "n_total": 11,
   "summary": "",
   "sectors": [
     {
       "sector": "Basic Materials",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 24342,
       "status": "DEGRADED",
       "provider": "openclaw",
       "fallback_reason": "openclaw_timeout"
