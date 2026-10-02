@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "n_ok": 1,
+  "n_ok": 2,
   "n_total": 11,
   "summary": "",
   "sectors": [
@@ -15,9 +15,9 @@
     },
     {
       "sector": "Communication Services",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 20611,
       "status": "DEGRADED",
       "provider": "openclaw",
       "fallback_reason": "openclaw_timeout"
