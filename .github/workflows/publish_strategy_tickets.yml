@@ -87,12 +87,17 @@ jobs:
           test -s dashboard/factor-mine/strategy_tickets.json
       - name: Submit paper hot4 standing batch
         if: steps.readiness.outputs.ready == 'true'
+        continue-on-error: true
         env:
           WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
           WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
           WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
         run: |
           set -euo pipefail
+          if [ -z "${WEBULL_ACCOUNT_ID:-}" ]; then
+            echo "WEBULL_ACCOUNT_ID unset; paper submit deferred to Webull paper workflow"
+            exit 0
+          fi
           pip install webull-openapi-python-sdk
           python -m src.paper_open --submit --ready --owner actions
       - name: Push tickets
