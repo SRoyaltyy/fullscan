@@ -128443,7 +128443,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -128509,7 +128509,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -128527,7 +128527,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -128545,7 +128545,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
@@ -128611,7 +128611,7 @@
     "candidate_classes": [
       "capacity"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "capacity",
@@ -128661,7 +128661,7 @@
     "candidate_classes": [
       "demand"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "demand",
@@ -128679,7 +128679,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -128713,7 +128713,7 @@
     "candidate_classes": [
       "key_person"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "key_person",
@@ -128747,7 +128747,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -128765,7 +128765,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -128831,7 +128831,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -128849,7 +128849,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -128883,7 +128883,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -128949,7 +128949,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -128967,7 +128967,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -128985,7 +128985,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -129019,7 +129019,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -129037,7 +129037,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
