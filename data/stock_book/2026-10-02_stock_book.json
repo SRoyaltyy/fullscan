@@ -1,14 +1,15 @@
 {
   "meta": {
     "date": "2026-10-02",
-    "generated_at": "2026-10-02T08:38:11.993447-04:00",
+    "generated_at": "2026-10-02T08:43:46.020868-04:00",
     "general_bias": 0.57375,
     "sector_bias": {
       "Basic Materials": 0.0,
       "Communication Services": 0.325,
       "Consumer Cyclical": 0.0,
       "Consumer Defensive": 0.5525,
-      "Energy": -0.5525
+      "Energy": -0.5525,
+      "Financial": 0.0
     },
     "accuracy_gates": {
       "general": {
@@ -78,7 +79,7 @@
     "n_ab": 1907,
     "n_peer": 1804,
     "same_day_general": true,
-    "same_day_sectors": 5,
+    "same_day_sectors": 6,
     "weather_risk": "on",
     "n_universe": 2035,
     "weights": {
