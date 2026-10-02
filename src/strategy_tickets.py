@@ -787,6 +787,26 @@ def hot4_buy_tickers(rows) -> list[str]:
     return out
 
 
+class Hot4PanelSit(ValueError):
+    """No same-day panel rows. The HOT4 recipe buy and sell lists are empty.
+
+    This is an intentional sit, not a stale look. ``ValueError`` so
+    callers that already refuse any wire error keep refusing when the
+    published lists are not empty.
+    """
+
+
+def _raise_panel_sit(looked: dict, date: str) -> None:
+    if looked.get("source") != "no_same_day_panel":
+        return
+    if looked.get("stale") or looked.get("rows"):
+        return
+    raise Hot4PanelSit(
+        looked.get("error")
+        or f"no same-day panel rows for {date} — sitting, no live lookup"
+    )
+
+
 def hot4_recipe_tickers(date: str, panel: dict | None = None) -> list[str]:
     """Ordered Factor Mine ``pick_day`` list for the Webull HOT4 wire.
 
@@ -803,6 +823,7 @@ def hot4_recipe_tickers(date: str, panel: dict | None = None) -> list[str]:
     elif "by_date" not in panel:
         panel = fm.rehydrate_panel(panel)
     looked = _session_look(date, panel)
+    _raise_panel_sit(looked, date)
     if looked.get("stale") or not looked.get("rows"):
         raise ValueError(
             looked.get("error") or f"no Factor Mine session rows for {date}"
@@ -858,6 +879,7 @@ def hot4_recipe_sells(date: str, panel: dict | None = None, *,
 
     panel = _hot4_panel(panel)
     looked = _session_look(date, panel)
+    _raise_panel_sit(looked, date)
     if looked.get("stale") or not looked.get("rows"):
         raise ValueError(
             looked.get("error") or f"no Factor Mine session rows for {date}"
@@ -938,14 +960,30 @@ def hot4_recipe_sells(date: str, panel: dict | None = None, *,
     return sold_today
 
 
+def _published_hot4_empty(buys, sells) -> bool:
+    if hot4_buy_tickers(buys):
+        return False
+    if sells is not None and hot4_sell_tickers(sells):
+        return False
+    return True
+
+
 def assert_hot4_wire(date: str, buys, *, sells=None,
                      panel: dict | None = None) -> list[str]:
     """Refuse a HOT4 submit whose buys or sells are not the recipe lists.
 
     ``sells=None`` checks buys only (older callers). A submit passes
     the published sell list so a Clock-B exit list is refused.
+
+    A no-same-day-panel sit has no recipe names. Empty published lists
+    match that sit. Any published name on that sit still refuses.
     """
-    recipe = hot4_recipe_tickers(date, panel=panel)
+    try:
+        recipe = hot4_recipe_tickers(date, panel=panel)
+    except Hot4PanelSit:
+        if _published_hot4_empty(buys, sells):
+            return []
+        raise
     published = hot4_buy_tickers(buys)
     if published != recipe:
         raise ValueError(
@@ -953,7 +991,12 @@ def assert_hot4_wire(date: str, buys, *, sells=None,
             f"{recipe} for {date}"
         )
     if sells is not None:
-        recipe_sells = hot4_recipe_sells(date, panel=panel)
+        try:
+            recipe_sells = hot4_recipe_sells(date, panel=panel)
+        except Hot4PanelSit:
+            if _published_hot4_empty(buys, sells):
+                return recipe
+            raise
         published_sells = hot4_sell_tickers(sells)
         if published_sells != recipe_sells:
             raise ValueError(

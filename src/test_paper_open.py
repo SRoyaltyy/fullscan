@@ -15,6 +15,8 @@ def synthetic_hot4_matches_payload(monkeypatch, request):
     if request.node.name in (
         "test_submit_refuses_hot4_buys_that_diverge_from_recipe",
         "test_submit_refuses_hot4_sells_that_diverge_from_recipe",
+        "test_ready_submit_flat_sit_missing_score_is_no_trade",
+        "test_flat_sit_still_refuses_recipe_divergence",
     ):
         return
 
@@ -115,6 +117,84 @@ def test_empty_valid_selection_does_not_reconstruct_winners():
     p = payload(); p['strategies'][we.HOT4]['buy'] = []
     with patch('src.combo_broker.resolve_rows', side_effect=AssertionError('must not backfill')):
         assert not po.make_plan(p, API().snapshot(), BELL-timedelta(seconds=15))['card']['tickets']
+
+
+def _flat_sit_payload(day=DATE):
+    """HOT4 sitting with no legs and no score. Matches a no-panel morning."""
+    p = payload()
+    p['date'] = day
+    p['decision_readiness']['completed_at'] = day + 'T06:00:00-04:00'
+    hot = p['strategies'][we.HOT4]
+    hot['date'] = day
+    hot['status'] = 'sit'
+    hot['s'] = None
+    hot['buy'] = []
+    hot['sell'] = []
+    hot['sit'] = False
+    hot['note'] = f'no same-day panel rows for {day} — sitting, no live lookup'
+    p['look'] = {'stale': False, 'source': 'no_same_day_panel'}
+    return p
+
+
+def test_sit_with_orders_still_requires_finite_score():
+    p = payload()
+    p['strategies'][we.HOT4]['status'] = 'sit'
+    p['strategies'][we.HOT4]['s'] = None
+    with pytest.raises((ValueError, TypeError)):
+        po.validate_payload(p, DATE, BELL - timedelta(seconds=15))
+
+
+def test_ready_submit_flat_sit_missing_score_is_no_trade(tmp_path, monkeypatch):
+    """status=sit, empty legs, s=None is a no-trade. Do not float(None)."""
+    day = '2026-10-02'
+    monkeypatch.setattr(
+        'src.strategy_tickets._load_json',
+        lambda _path: {'by_date': {}, 'rows': [], 'to_date': '2026-10-01'},
+    )
+    early = datetime.fromisoformat(day + 'T06:20:00-04:00')
+    api = API()
+
+    def _regime_missing(*_a, **_k):
+        raise SystemExit('missing mover_lookback_action.json')
+
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None), \
+            patch.object(we, 'plan_hot4_for_broker', side_effect=_regime_missing), \
+            patch('src.sleeve_merge.load_payload', side_effect=_regime_missing), \
+            patch('src.factor_mine_book.load_regime', side_effect=_regime_missing):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: early, loader=lambda _: _flat_sit_payload(day),
+            api=api, state_dir=tmp_path)
+    assert rc == 0
+    assert api.calls == []
+    journal = json.loads((tmp_path / f'{day}_submit.json').read_text())
+    assert journal['status'] == 'no_trade'
+    assert journal['sent'] == []
+    assert journal['standing'] is True
+    status = json.loads((tmp_path / f'{day}_status.json').read_text())
+    assert status['status'] == 'no_trade'
+    assert 'NoneType' not in json.dumps(status)
+
+
+def test_flat_sit_still_refuses_recipe_divergence(tmp_path, monkeypatch):
+    """An empty sit must not hide a recipe that still has names."""
+    day = '2026-10-02'
+    monkeypatch.setattr(
+        'src.strategy_tickets.hot4_recipe_tickers',
+        lambda date, panel=None: ['FEAM'],
+    )
+    early = datetime.fromisoformat(day + 'T06:20:00-04:00')
+    api = API()
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: early, loader=lambda _: _flat_sit_payload(day),
+            api=api, state_dir=tmp_path)
+    assert rc == 2
+    assert api.calls == []
+    status = json.loads((tmp_path / f'{day}_status.json').read_text())
+    assert status['status'] == 'blocked'
+    assert 'diverge' in status['error']
 
 
 @pytest.mark.parametrize('case', ['wrong_date', 'late', 'naive', 'missing_inputs', 'missing_score', 'error'])
