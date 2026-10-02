@@ -92,6 +92,12 @@ class IntakeTests(unittest.TestCase):
             self.assertEqual(report['document_count'], 1)
             self.assertEqual(json.loads(ledger.read_text())[0]['body'], 'Evidence '*1000)
             self.assertEqual(report['paid_api_calls'], 0)
+            card = json.loads((root / 'dashboard/news-intake/articles.json').read_text())[0]
+            self.assertEqual(card['parsed_at'], NOW.isoformat())
+            self.assertEqual(card['first_seen'], NOW.isoformat())
+            self.assertEqual(card['discovery_paths'][0]['source'], 'fixture')
+            self.assertIn('lane_rule_classification', card)
+            self.assertIsNone(card['final_lane_class'])
 
     def test_hosted_sec_block_uses_index_without_claiming_primary(self):
         def fetch(url):

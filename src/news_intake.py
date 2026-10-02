@@ -482,7 +482,12 @@ def first_pass(doc: dict, now: datetime) -> dict:
         reasons.append('Lane rule router disagrees with event wording; retain for contextual review')
     return {"document_id": doc["id"], "title": title, "url": doc.get("url", ""),
             "source": doc.get("source", ""), "published_at": doc.get("published_at", ""),
-            "first_seen": doc["first_seen"], "state": state, "candidate_classes": list(hits),
+            "first_seen": doc["first_seen"], "last_seen": doc.get("last_seen", ""),
+            "parsed_at": stamp(now), "publisher": doc.get("publisher", ""),
+            "publisher_domain": urllib.parse.urlsplit(doc.get("url", "")).hostname or "",
+            "published_raw": doc.get("published_raw", ""),
+            "discovery_paths": doc.get("observations", []),
+            "state": state, "candidate_classes": list(hits),
             "matched_phrases": hits, "date_status": date_status, "review_reasons": reasons,
             "parser": VERSION, "classifier": "deterministic_coverage_hints", "final_lane_class": None,
             "lane_rule_classification": classification, "analyst_family": family_of(route_class),
@@ -687,7 +692,7 @@ def run(root: Path, date: str, force: bool = False, workers: int = 12, extract: 
                "routing_class": p['routing_class'], "routing_basis": p['routing_basis'],
                "prompt_version": PROMPT_VERSION} for d,p in zip(docs,parsed)])
     news = root / "01_daily/news"
-    compact = [{k:r[k] for k in ('document_id','title','url','source','published_at','state','candidate_classes','themes','review_reasons','extraction_status')} for r in parsed]
+    compact = [{k:r[k] for k in ('document_id','title','url','source','published_at','published_raw','first_seen','last_seen','parsed_at','publisher','publisher_domain','discovery_paths','state','candidate_classes','lane_rule_classification','routing_class','routing_basis','final_lane_class','themes','review_reasons','extraction_status')} for r in parsed]
     write_json(news / f"{date}_intake_parsed.json", report | {'all_items': compact})
     (news / f"{date}_intake.md").write_text(render(report, parsed, health))
     dash = root / "dashboard/news-intake"
