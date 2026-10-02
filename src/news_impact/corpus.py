@@ -347,6 +347,21 @@ def inventory() -> dict[str, Any]:
 def load_all_sources(date: str | None = None) -> tuple[list[dict], dict[str, Any]]:
     """Raw articles from every used fullscan path. Caller dedupes."""
     raw: list[dict] = []
+    # Intake preserves full source text and all review candidates. No paid
+    # collector or automatic inference is triggered by reading this ledger.
+    intake = Path("data/news_intake")
+    paths = sorted(intake.glob("*/documents.json"))
+    if date and str(date).lower() not in {"all", "*", "history"}:
+        paths = [p for p in paths if p.parent.name == date]
+    for path in paths:
+        try:
+            documents = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        for doc in documents:
+            raw.append({**doc, "source_file": str(path), "harvest_source": "free_intake",
+                        "retrieved_at": doc.get("first_seen", ""),
+                        "known_at": doc.get("published_at") or doc.get("first_seen", "")})
     raw.extend(load_parsed_tagged(date))
     raw.extend(load_finviz_exports(date))
     raw.extend(load_finviz_digests(date))

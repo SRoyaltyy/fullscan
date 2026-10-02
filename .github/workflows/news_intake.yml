@@ -1,0 +1,83 @@
+name: Free news intake
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/news_intake*.py'
+      - 'src/news_search_catalog.py'
+      - 'config/news_intake_sources.json'
+      - '.github/workflows/news_intake.yml'
+  schedule:
+    - cron: '7,22,37 * * * *'
+    - cron: '52 * * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Hong Kong date YYYY-MM-DD; blank means today'
+        default: ''
+      force:
+        description: 'Poll every source regardless of interval'
+        type: boolean
+        default: true
+      deep:
+        description: 'Run overflow/backfill after publishing the quick harvest'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: free-news-intake
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify collector contracts
+        run: python -m unittest src.test_news_intake
+      - name: Collect and parse without paid APIs
+        env:
+          REQUEST_DATE: ${{ inputs.date }}
+          FORCE_POLL: ${{ inputs.force }}
+        run: |
+          set -euo pipefail
+          ARGS=(--quick --extract 10)
+          if [ -n "$REQUEST_DATE" ]; then ARGS+=(--date "$REQUEST_DATE"); fi
+          if [ "$FORCE_POLL" = "true" ]; then ARGS+=(--force); fi
+          python -m src.news_intake "${ARGS[@]}"
+      - name: Land intake independently of stock-book jobs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REQUEST_DATE: ${{ inputs.date }}
+        run: |
+          DATE=$(TZ=Asia/Hong_Kong date +%F)
+          if [ -n "$REQUEST_DATE" ]; then DATE="$REQUEST_DATE"; fi
+          bash scripts/safe_git_push.sh "auto: free news intake [skip ci]" \
+            data/news_intake/ "01_daily/news/${DATE}_intake.md" \
+            "01_daily/news/${DATE}_intake_parsed.json" dashboard/news-intake/
+      - name: Publish the intake page with the existing Pages mechanism
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash scripts/publish_dashboard.sh
+      - name: Hourly deeper overflow and filing backfill
+        if: github.event.schedule == '52 * * * *' || inputs.deep == true
+        env:
+          REQUEST_DATE: ${{ inputs.date }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          DATE="${REQUEST_DATE:-$(TZ=Asia/Hong_Kong date +%F)}"
+          python -m src.news_intake --date "$DATE" --force --extract 40
+          bash scripts/safe_git_push.sh "auto: free news intake backfill [skip ci]" \
+            data/news_intake/ "01_daily/news/${DATE}_intake.md" \
+            "01_daily/news/${DATE}_intake_parsed.json" dashboard/news-intake/
+          bash scripts/publish_dashboard.sh

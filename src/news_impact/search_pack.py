@@ -11,7 +11,6 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-from src import websearch
 
 
 OVERVIEW_SYSTEM = (
@@ -193,6 +192,7 @@ def search_facts(query: str, max_results: int = 6) -> dict:
     backend, facts, errors = google_ai_overview(query, max_facts=max_results)
     if facts:
         return {"backend": backend, "facts": facts, "errors": errors}
+    from src import websearch
     wb, items, err2 = websearch.search_results(query, max_results)
     facts = []
     for it in items or []:

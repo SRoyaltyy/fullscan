@@ -411,7 +411,7 @@ def _batch_is_fresh(rows: list[dict], date_str: str | None) -> bool:
 
 def load_headlines(hours: int = 48, limit: int = 300,
                    date_str: str | None = None) -> tuple[list[dict], str, dict]:
-    """DB window, then live RSS, then on-disk files. Stale batches are dropped.
+    """Union the shared intake, DB, live RSS and on-disk evidence.
 
     Returns (rows, source, freshness). ``source`` is ``none_stale`` when
     nothing dated and current could be proved. Live RSS does not write
@@ -419,6 +419,22 @@ def load_headlines(hours: int = 48, limit: int = 300,
     """
     from .news_freshness import NEWS_MODE_STALE, assess
     from . import news_live
+
+    intake_rows: list[dict] = []
+    if date_str:
+        ledger = Path("data/news_intake") / date_str / "documents.json"
+        if ledger.exists():
+            try:
+                from .news_intake import parse_time
+                asof = datetime.now(ZoneInfo(config.TZ))
+                for item in json.loads(ledger.read_text(encoding="utf-8")):
+                    published = parse_time(item.get("published_at", ""))
+                    # Review/undated evidence stays in the shared queue, rather
+                    # than being presented as dated news to the old predictor.
+                    if published and 0 <= (asof - published).total_seconds() <= hours * 3600:
+                        intake_rows.append(item)
+            except (OSError, ValueError):
+                intake_rows = []
 
     rows: list[dict] = []
     db_err: db.NewsDbError | None = None
@@ -446,26 +462,36 @@ def load_headlines(hours: int = 48, limit: int = 300,
             wider = []
         rows = wider
     source = "db" if rows else ""
-    if not rows and date_str:
+    if date_str and not intake_rows:
         live = news_live.fetch(limit=limit, hours=hours)
         if live and _batch_is_fresh(live, date_str):
             print(f"[news_parse] using {len(live)} live RSS headlines")
-            rows = live
-            source = "live_rss"
+            rows.extend(live)
+            source = source + "+live_rss" if source else "live_rss"
         elif live:
             verdict = assess(live, date_str)
             print(f"[news_parse] live RSS not fresh — {verdict['reason']}")
-    if not rows and date_str:
+    if date_str:
         file_rows = rows_from_local_files(date_str, limit)
         if file_rows and _batch_is_fresh(file_rows, date_str):
             why = db_err.reason if db_err is not None else "empty"
             print(f"[news_parse] using {len(file_rows)} on-disk headlines "
                   f"(db {why})")
-            rows = file_rows
-            source = f"local_files:{why}"
+            rows.extend(file_rows)
+            source = source + f"+local_files:{why}" if source else f"local_files:{why}"
         elif file_rows:
             print(f"[news_parse] {len(file_rows)} on-disk headlines are "
                   "undated or stale — not the news window")
+    if intake_rows:
+        rows.extend(intake_rows)
+        source = source + "+free_intake" if source else "free_intake"
+    # No collection-wide cap. The legacy UI still samples for prompt size;
+    # the complete set remains in all_items and in the durable intake.
+    unique = {}
+    for item in rows:
+        key = ((item.get("title") or "").strip().casefold(), item.get("url") or "")
+        unique.setdefault(key, item)
+    rows = list(unique.values())
     if date_str:
         freshness = assess(rows, date_str) if rows else assess([], date_str)
     else:
