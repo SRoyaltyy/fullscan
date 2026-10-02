@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T07:11:56.285560-04:00",
+  "generated_at": "2026-10-02T02:59:22.331060-04:00",
   "run_id": "36843931575",
   "runner": "GitHub Actions 1000019628",
   "all_ok": false,
@@ -9,8 +9,8 @@
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/map_heat/2026-10-01_research.md",
-      "reason": "phase=morning_refresh but self-declares failure: 'Morning delta refresh failed captain-evidence QC (coverage:0/28<required:23). Using last night's post-close captain cards... Overnight tape/news was not re-scored.' This is a carry-forward of the prior post-close cards, not a same-day refresh \u2014 malformed/unsupported evidence for a claimed morning_refresh."
+      "path": "(review)",
+      "reason": "empty_review_reply"
     }
   ],
   "missing_required": [],
@@ -187,7 +187,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-01_finviz_digest.json",
-        "size": 97000
+        "size": 96134
       },
       {
         "kind": "finviz_market_digest",
@@ -198,10 +198,10 @@
       },
       {
         "kind": "finviz_market_digest",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-10-01_finviz_market_digest_close.json",
-        "size": 0
+        "size": 8060
       },
       {
         "kind": "map_heat",

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "generated_at": "2026-10-01T18:40:36.366730-04:00",
+  "generated_at": "2026-10-02T02:59:22.946398-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -101,59 +101,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-10-01",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-01T06:23:44.531523-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-10-01_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1195778,
-          "preview": "1d BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
-        },
-        {
-          "path": "data/stock_book/2026-10-01_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-10-01_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2443,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-10-01_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 8223,
-          "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 8223,
-          "preview": "2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC"
-        },
-        {
-          "path": "01_daily/2026-10-01_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 39770,
-          "preview": "# Stock book \u2014 2026-10-01\n_Generated 2026-10-01T06:20:43.949755-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 2026-10-01 BUY NTAP, BAND, NTSK, FIS \u00b7 SELL NEOV, FCEL, OKLO, EOSE, POWL, TE, SKYX, AMSC \u00b7 # Stock book \u2014 2026-10-01\n_Generated 2026-10-01T06:20:43.949755-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -524,6 +471,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-01\n**Generated:** 2026-10-01T16:22:53.120993-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher as tech rebounded on pullback in 10-year yield from 2002-era highs ahead of September jobs report\n**Prior close:** SPX +0.24%  Nasdaq +0.36%  Dow +0.10%\n**SPX:** +0.24%  **Nasdaq:** +0.36%  **Dow:** +0.10%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** ACN, CTSH, SNPS, AMZN, OAIW, COHR, MU, CTVA, NKE, ANTW\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-02\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-01",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-02T02:59:22.350110-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-01_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96134,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-01_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11576,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-01\n_Generated 2026-10-02T02:59:22.099982-04:00 \u00b7 export=data/exports/finviz_2026-10-01.csv \u00b7 ticker digests=5896 \u00b7 high-signal=1905_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-01.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11498760,
+          "preview": "11707 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11498760,
+          "preview": "11707 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-01_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97000,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-01\n_Generated 2026-10-02T02:59:22.099982-04:00 \u00b7 export=data/exports/finviz_2026-10-01.csv \u00b7 ticker digests=5896 \u00b7 high-signal=1905_ \u00b7 11707 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11707 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
