@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-02
 
-Export `finviz_2026-10-02.csv` · 11616 names · generated 2026-10-02T04:16:39.609027-04:00
+Export `finviz_2026-10-01.csv` · 11616 names · generated 2026-10-02T04:18:53.260380-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -275,16 +275,20 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 16 min **CTRE** CareTrust Announces Strategic SHOP Pipeline Agreement with LNT Care Developments to Acquire 45 New UK Care Homes for £1.1 Billion (Business Wire)
-- 16 min **PIPR** Piper Sandler Establishes Infrastructure Debt Advisory Team in London (Business Wire)
-- 29 min **GME** GME Stock Eyes 5th Week In Green: A Streak Of Insider Buys Builds Hype For GameStop (Stocktwits)
-- 51 min **AAL,UAL,AMZN** DAL Stock In Focus: Musk-Bastian Feud Over Starlink Escalates As United, American Court Delta Flyers (Stocktwits)
-- 53 min **CDRE** Our Cadre Holdings Stock Pick Hasn't Worked Out. We're Walking Away. (Barrons.com)
+- 3 min **NKE** Nike stock sinks as revenue misses estimates, expects to cut jobs (Yahoo Finance)
+- 13 min **MSFT,META** META Stock Rides Muse AI To Best Quarter In Over 2 Years  But Analyst Warns Monetization Could Be 'Notoriously Slow' (Stocktwits)
+- 18 min **CTRE** CareTrust Announces Strategic SHOP Pipeline Agreement with LNT Care Developments to Acquire 45 New UK Care Homes for £1.1 Billion (Business Wire)
+- 18 min **PIPR** Piper Sandler Establishes Infrastructure Debt Advisory Team in London (Business Wire)
+- 22 min **AIP,KEYS,CDNS,SNPS,AMZN** How Do OpenAI And AWS Deals Reshape Synopsys's Design Automation Outlook? (Trefis)
+- 22 min **GOOGL,GOOG,MSFT,META,AMZN** Does A Postal Service Backup Plan Materially Alter Amazon's Cash Outlook? (Trefis)
+- 31 min **GME** GME Stock Eyes 5th Week In Green: A Streak Of Insider Buys Builds Hype For GameStop (Stocktwits)
+- 53 min **DAL,UAL,AAL,AMZN** DAL Stock In Focus: Musk-Bastian Feud Over Starlink Escalates As United, American Court Delta Flyers (Stocktwits)
+- 55 min **CDRE** Our Cadre Holdings Stock Pick Hasn't Worked Out. We're Walking Away. (Barrons.com)
 - 1 hour **NVDA,META,MU** Stocktwits AI Roundup: Microns Blowout Quarter, Nvidias $150B Buyback And The Race For AI Agents (Stocktwits)
 - 1 hour **SVCO** Silvaco CEO Dr. Walden "Wally" Rhines Inducted into the National Academy of Engineering (GlobeNewswire)
 - 1 hour **MRNA,SLS,IBRX** SLS, IBRX Stocks Climb Overnight: Retail Eyes Modernas Rally As MRNA Lands A Nasdaq-100 Spot (Stocktwits)
 - 1 hour **CALM** Cal-Maine Foods Inc (CALM) (Q1 2027) Earnings Call Highlights: Swing to $58. ... (GuruFocus.com)
-- 1 hour **BP,SHEL,VG** ConocoPhillips Signs 20-Year LNG Deal With Venture Global (Oilprice.com)
+- 1 hour **BP,VG,SHEL,COP** ConocoPhillips Signs 20-Year LNG Deal With Venture Global (Oilprice.com)
 - 1 hour **QNT** Quantum Computing Is Having a Moment. What to Know About the Hottest Sector After AI. (Barrons.com)
 - 1 hour **MU** Micron ramps up HBM capacity at Taiwan's four major sites (DigiTimes)
 - 1 hour **GS** Goldman Sachs Names Top China Battery Stocks (Investing.com)
@@ -296,10 +300,6 @@ COLD (1w):
 - 2 hours **ALV** Autoliv strengthens safety expertise with two new members to its Research Advisory Board (PR Newswire)
 - 2 hours **FFR** FF EAI Robotics Ecosystem Inc. (NASDAQ: FFR), Which Has Proposed to Acquire FFAI's EAI Robotics Business, Highlights FFAI's EAI Robotics World 2.0 Showcase at IROS 2026, Four-Core Full-Stack AI Ecosystem and Industry Productivity Solutions (PR Newswire)
 - 2 hours **RARE** Ultragenyx Announces Marketing Authorisation Application (MAA) Submission to the European Medicines Agency (EMA) for the First Investigational Gene Therapy for MPS IIIA (Sanfilippo Syndrome Type A) (GlobeNewswire)
-- 2 hours **IHG** InterContinental Hotels Group PLC Announces Transaction in Own Shares - October 02 (ACCESSWIRE)
-- 2 hours **AKAM,ORCL,NVDA,GOOGL,META** The New Math of AI: Are Those Trillion-Dollar Numbers for Real? (Barrons.com)
-- 2 hours **SPY** Stock Market: Will S&P 500 Open Up or Down Today? (Benzinga Prediction Markets)
-- 2 hours **SPCX,NVDA,GOOGL,GOOG** SPCX Stock Climbs Overnight: Musk Teases Big Deal Nvidia AI Milestone  Industry Insider Flags Up To 25% Higher Power (Stocktwits)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
