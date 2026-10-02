@@ -1,6 +1,6 @@
 {
  "date": "2026-10-02",
- "generated_at": "2026-10-02T05:32:32.660086-04:00",
+ "generated_at": "2026-10-02T05:46:54.175799-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -21,15 +21,15 @@
   "yields_source": "fred_dgs10",
   "dgs10_delta_1d": 0.03,
   "dgs10_current": 5.29,
-  "dollar": "soft",
+  "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.18,
+  "dxy_pct_1d": -0.14,
   "vix_ratio": 0.858,
   "vix_spot": 15.95,
   "vix_delta_1d": -0.44,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -3.96,
+  "oil_pct_1d": -4.08,
   "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -179,14 +179,14 @@
   },
   "size": {
    "micro": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-on, dollar flat [general predict + factors]"
    },
    "small": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-on, dollar flat [general predict + factors]"
    },
    "large": {
     "stance": "neutral",
@@ -221,9 +221,9 @@
     "why": "risk-on — mega leads less in broad rallies [general predict]"
    },
    "rut": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-on, dollar flat [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
