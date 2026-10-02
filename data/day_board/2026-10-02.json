@@ -1,10 +1,9 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T04:39:57.890383-04:00",
+  "generated_at": "2026-10-02T04:44:23.217029-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-02_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-10-02/_board.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-02_ab_checklist_enriched.csv` \u2014 missing"
   ],
@@ -181,7 +180,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 5,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 3,
@@ -324,11 +323,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-02_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 17285,
+          "said": "UP 4.365",
+          "bullets": [
+            "bad: 1w 10Y +18bp at 5.29 handle",
+            "bad: NFP 8:30 ET unsigned binary",
+            "bad: leftover Hormuz/Brent >$100",
+            "good: NQ +0.75% vs cash"
+          ]
         },
         {
           "key": "board",
@@ -348,12 +352,12 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7535,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
+          "size": 7532,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
-            "general_predict:missing",
             "finviz_market_digest:missing",
             "map_heat_research:missing",
+            "sector_predict:missing",
             "sector_predict:missing"
           ]
         },
@@ -501,8 +505,13 @@
           "bullets": []
         }
       ],
-      "said": "news news_mode: on \u00b7 352 raw / 63 usable \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte",
+      "said": "general UP  4.365 \u00b7 news news_mode: on \u00b7 352 raw / 63 usable \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte",
       "bullets": [
+        "bad: 1w 10Y +18bp at 5.29 handle",
+        "bad: NFP 8:30 ET unsigned binary",
+        "bad: leftover Hormuz/Brent >$100",
+        "good: NQ +0.75% vs cash",
+        "good: Europe composite +0.87% partial",
         "Fed's Kashkari says inflation is 'still too high' even after softer-than-expected PCE data, labor market is 'pretty good'",
         "US rate hike bets fade as revised inflation data points to October pause - Nikkei Asia",
         "Indonesian Rupiah strengthens as US Dollar weakens on easing Fed rate hike bets - FXStreet",
@@ -675,11 +684,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-02_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 17285,
+          "said": "UP 4.365",
+          "bullets": [
+            "bad: 1w 10Y +18bp at 5.29 handle",
+            "bad: NFP 8:30 ET unsigned binary",
+            "bad: leftover Hormuz/Brent >$100",
+            "good: NQ +0.75% vs cash"
+          ]
         },
         {
           "key": "in_board",
@@ -920,7 +934,18 @@
     "buy_1d": [],
     "sell_1d": [],
     "flatten": {},
-    "general": {},
+    "general": {
+      "said": "UP  4.365",
+      "bullets": [
+        "bad: 1w 10Y +18bp at 5.29 handle",
+        "bad: NFP 8:30 ET unsigned binary",
+        "bad: leftover Hormuz/Brent >$100",
+        "good: NQ +0.75% vs cash",
+        "good: Europe composite +0.87% partial"
+      ],
+      "score": "4.365",
+      "direction": "up"
+    },
     "sectors": {},
     "news": {
       "said": "news_mode: on \u00b7 352 raw / 63 usable \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte",
@@ -1415,6 +1440,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-10-02 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-10-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-02T04:44:22.666377-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-10-02_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 17285,
+          "preview": "# Premarket Prediction \u2014 2026-10-02\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 4.365 (uncertainty multiplier \u00d71.1) | confidence 0.675\n>\n> **Good news vs bad news:** good +1.75 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - NQ +0.75% vs cash\n> - Europe composite +0.87% partial\n> - WTI/Brent offered -3.53%/-2.59%\n> - Oct hike odds faded ~25%\n> - DXY -0.21% 1d\n>\n> **Bad news driving this:**\n> - 1w 10Y +18bp at 5.29 handle\n> - NFP 8:30 ET unsigned binary\n> - leftover Hormuz/Brent >$100\n> - Hang Seng -2.6%\n> - HY +39bp 1w\n>\n> **market uncertainty: **elevated** | VIX 16.02 | policy-uncertainty index 175.08 (1d -18.87)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-10-02\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 4.365 (uncertainty multiplier \u00d71.1) | confidence 0.675\n>\n> **Good news vs bad news:** good +1.75 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - NQ +0.75% vs cash\n> - Europe composite +0.87% partial\n> - WTI/Brent offered -3.53%/-2.59%\n> - Oct hike odds faded ~25%\n> - DXY -0.21% 1d\n>\n> **Bad news driving this:**\n> - 1w 10Y +18bp at 5.29 handle\n> - NFP 8:30 ET unsigned binary\n> - leftover Hormuz/Brent >$100\n> - Hang Seng -2.6%\n> - HY +39bp 1w\n>\n> **market uncertainty: **elevated** | VIX 16.02 | policy-uncertainty index 175.08 (1d -18.87)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7"
     }
   ],
   "href": {

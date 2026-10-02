@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T04:39:57.890383-04:00",
+  "generated_at": "2026-10-02T04:44:23.217029-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -12,27 +12,20 @@
   "buy_1d": [],
   "sell_1d": [],
   "flatten": {},
-  "general": {},
+  "general": {
+    "said": "UP  4.365",
+    "bullets": [
+      "bad: 1w 10Y +18bp at 5.29 handle",
+      "bad: NFP 8:30 ET unsigned binary",
+      "bad: leftover Hormuz/Brent >$100",
+      "good: NQ +0.75% vs cash",
+      "good: Europe composite +0.87% partial"
+    ],
+    "score": "4.365",
+    "direction": "up"
+  },
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-10-02",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-02T04:28:17.268478-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-10-02_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1126457,
-          "preview": "5907 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5907 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime (offline retry)",
@@ -185,6 +178,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-10-02 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-10-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-02T04:44:22.666377-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-10-02_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 17285,
+          "preview": "# Premarket Prediction \u2014 2026-10-02\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 4.365 (uncertainty multiplier \u00d71.1) | confidence 0.675\n>\n> **Good news vs bad news:** good +1.75 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - NQ +0.75% vs cash\n> - Europe composite +0.87% partial\n> - WTI/Brent offered -3.53%/-2.59%\n> - Oct hike odds faded ~25%\n> - DXY -0.21% 1d\n>\n> **Bad news driving this:**\n> - 1w 10Y +18bp at 5.29 handle\n> - NFP 8:30 ET unsigned binary\n> - leftover Hormuz/Brent >$100\n> - Hang Seng -2.6%\n> - HY +39bp 1w\n>\n> **market uncertainty: **elevated** | VIX 16.02 | policy-uncertainty index 175.08 (1d -18.87)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-10-02\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 4.365 (uncertainty multiplier \u00d71.1) | confidence 0.675\n>\n> **Good news vs bad news:** good +1.75 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - NQ +0.75% vs cash\n> - Europe composite +0.87% partial\n> - WTI/Brent offered -3.53%/-2.59%\n> - Oct hike odds faded ~25%\n> - DXY -0.21% 1d\n>\n> **Bad news driving this:**\n> - 1w 10Y +18bp at 5.29 handle\n> - NFP 8:30 ET unsigned binary\n> - leftover Hormuz/Brent >$100\n> - Hang Seng -2.6%\n> - HY +39bp 1w\n>\n> **market uncertainty: **elevated** | VIX 16.02 | policy-uncertainty index 175.08 (1d -18.87)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
