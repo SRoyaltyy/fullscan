@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T05:47:47.021627-04:00",
+  "generated_at": "2026-10-02T05:57:32.720411-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,128 +12,134 @@
   "buy_1d": [
     {
       "ticker": "CDNA",
-      "score": 0.8905806136157817
+      "score": 0.8861276704128369
     },
     {
       "ticker": "VEEV",
-      "score": 0.4941232573364359
-    },
-    {
-      "ticker": "SN",
-      "score": 0.4684009593207332
+      "score": 0.4832938994582936
     },
     {
       "ticker": "CORT",
-      "score": 0.41722948644155045
+      "score": 0.4101951587423279
     },
     {
-      "ticker": "BLFS",
-      "score": 0.7848883707383805
+      "ticker": "ILMN",
+      "score": 0.40220509544630756
     },
     {
       "ticker": "SHOO",
-      "score": 0.7643907568544108
+      "score": 0.7587797603253532
     },
     {
-      "ticker": "PRCH",
-      "score": 0.7545169957463456
-    },
-    {
-      "ticker": "SIG",
-      "score": 0.7543395146060916
+      "ticker": "SN",
+      "score": 0.3654075807977899
     },
     {
       "ticker": "AVPT",
-      "score": 0.7134433246169944
+      "score": 0.7178962678199392
     },
     {
-      "ticker": "CAKE",
-      "score": 0.7203257434944565
+      "ticker": "SIG",
+      "score": 0.7435101567279492
     },
     {
-      "ticker": "TWLO",
-      "score": 0.34133554483572054
+      "ticker": "PRCH",
+      "score": 0.7256925347213633
     },
     {
-      "ticker": "LAUR",
-      "score": 0.6485824844860444
-    },
-    {
-      "ticker": "EXLS",
-      "score": 0.6323868459179436
+      "ticker": "FIGS",
+      "score": 0.7290566884037322
     },
     {
       "ticker": "SONO",
-      "score": 0.6198029810333658
+      "score": 0.6358288607842839
     },
     {
-      "ticker": "CHEF",
-      "score": 0.6444063678309148
+      "ticker": "EXLS",
+      "score": 0.6345662329876545
+    },
+    {
+      "ticker": "LAUR",
+      "score": 0.6262059083815144
+    },
+    {
+      "ticker": "MQ",
+      "score": 0.6500031373747726
+    },
+    {
+      "ticker": "IMAX",
+      "score": 0.6349785124113558
     }
   ],
   "sell_1d": [
     {
       "ticker": "BIDU",
-      "score": -0.3880452299558026
+      "score": -0.38359228675285784
     },
     {
       "ticker": "GOGO",
-      "score": -0.3836293081945982
-    },
-    {
-      "ticker": "IBM",
-      "score": -0.3526349351554006
+      "score": -0.3801096595111547
     },
     {
       "ticker": "NEOV",
-      "score": -0.349854363773919
-    },
-    {
-      "ticker": "VNET",
-      "score": -0.3408358108469873
-    },
-    {
-      "ticker": "LILAK",
-      "score": -0.33239637120191273
+      "score": -0.3606837216520612
     },
     {
       "ticker": "AIRJ",
-      "score": -0.32454529748929445
+      "score": -0.33537465536743677
     },
     {
-      "ticker": "PLAY",
-      "score": -0.300677456861836
+      "ticker": "VNET",
+      "score": -0.32758283006944394
     },
     {
       "ticker": "GFL",
-      "score": -0.3005099316776172
+      "score": -0.3262015882594449
     },
     {
-      "ticker": "AMPG",
-      "score": -0.2969504477363293
+      "ticker": "IBM",
+      "score": -0.32381047413041825
     },
     {
-      "ticker": "SSTK",
-      "score": -0.2965940572443463
+      "ticker": "LILAK",
+      "score": -0.3191433904243694
     },
     {
-      "ticker": "NN",
-      "score": -0.2945051411319793
+      "ticker": "PSA",
+      "score": -0.3063995405729825
     },
     {
-      "ticker": "TIGO",
-      "score": -0.28612134562553787
+      "ticker": "PLAY",
+      "score": -0.29506646033277817
     },
     {
       "ticker": "BAK",
-      "score": -0.2849579174970948
+      "score": -0.2937205794802192
+    },
+    {
+      "ticker": "SOC",
+      "score": -0.29239654763331036
     },
     {
       "ticker": "CMTG",
-      "score": -0.280703851711324
+      "score": -0.2863148482403817
+    },
+    {
+      "ticker": "SSTK",
+      "score": -0.28576469936620397
+    },
+    {
+      "ticker": "NN",
+      "score": -0.281252160354436
     }
   ],
-  "flatten": {},
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $62,568.13",
+    "bullets": [
+      "0 priced buys",
+      "cash $62,568.13"
+    ]
+  },
   "general": {
     "said": "UP  4.365",
     "bullets": [
@@ -865,6 +871,214 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 EXLS, DINO, ARHS, ESTC, SU \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, SU, DINO, EXLS, CVX"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-02T05:47:51.026801-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-02_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1508584,
+          "preview": "1d BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY"
+        },
+        {
+          "path": "data/stock_book/2026-10-02_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2718,
+          "preview": "green 178 \u00b7 CDNA, EXEL, BLFS, CORT, VEEV, ILMN, WRBY, A, CON, AGEN"
+        },
+        {
+          "path": "data/stock_book/2026-10-02_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2454,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-02_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13843,
+          "preview": "2026-10-02 BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13843,
+          "preview": "2026-10-02 BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY"
+        },
+        {
+          "path": "01_daily/2026-10-02_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 92260,
+          "preview": "# Stock book \u2014 2026-10-02\n_Generated 2026-10-02T05:47:44.568829-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY \u00b7 green 178 \u00b7 CDNA, EXEL, BLFS, CORT, VEEV, ILMN, WRBY, A, CON, AGEN \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-02 BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY \u00b7 2026-10-02 BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY \u00b7 # Stock book \u2014 2026-10-02\n_Generated 2026-10-02T05:47:44.568829-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-02T05:47:56.283137-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 15732,
+          "preview": "2026-10-02 BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 827,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-02.json",
+          "ok": true,
+          "reason": "",
+          "size": 86100,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-02_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 46338,
+          "preview": "2026-10-02 BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 272972,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-02_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 272972,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 272888,
+          "preview": "2026-10-02 BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 272972,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 46338,
+          "preview": "2026-10-02 BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 272972,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 272972,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 272888,
+          "preview": "2026-10-02 BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1668,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1668,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-02 BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-02 BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-02 BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-02 BUY CDNA, VEEV, SN, CORT, BLFS, SHOO, PRCH, SIG \u00b7 SELL BIDU, GOGO, IBM, NEOV, VNET, LILAK, AIRJ, PLAY \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, "
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-10-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-02T05:49:09.996441-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-10-02_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 4135,
+          "preview": "# flatten_robust card \u2014 2026-10-02\n_Generated 2026-10-02T09:49:09 \u2014 live `flatten_robust`._\n**S=+4.37; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+4.37** (UP) \u00b7 route **io**\n- Cash leftover **$62,568.13** (after 09:30 $41,913.78 \u00b7 after 16:00 $81,638.05)\n- Prior close **$102,465.72** \u00b7 09:30 **$102,465.72** \u00b7 overnight **$+0.00** \u00b7 session **$-20,827.68** \u00b7 16:00 **$81,638.05**\n- Overnight lots **8** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$20,654.36** \u2264 leftover after sells **$102,292.38**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 16278,
+          "preview": "2026-10-02 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 161757,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 4033,
+          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 56264,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-10-02\n_Generated 2026-10-02T09:49:09 \u2014 live `flatten_robust`._\n**S=+4.37; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+4.37** (UP) \u00b7 route **io**\n- Cash leftover **$62,568.13** (after 09:30 $41,913.78 \u00b7 after 16:00 $81,638.05)\n- Prior close **$102,465.72** \u00b7 09:30 **$102,465.72** \u00b7 overnight **$+0.00** \u00b7 session **$-20,827.68** \u00b7 16:00 **$81,638.05**\n- Overnight lots **8** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$20,654.36** \u2264 leftover after sells **$102,292.38** \u00b7 2026-10-02 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_ove"
     }
   ],
   "source": "publish_live_boards"
