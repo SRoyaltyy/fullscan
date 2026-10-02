@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T12:07:48.084712-04:00",
+  "generated_at": "2026-10-02T12:10:18.472111-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -866,7 +866,7 @@
           "size": 91213,
           "said": "Stock book \u2014 2026-10-02",
           "bullets": [
-            "_Generated 2026-10-02T09:22:46.296192-04:00_",
+            "_Generated 2026-10-02T12:10:16.374760-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -2208,13 +2208,13 @@
       "date": "2026-10-02",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-02T12:07:46.971657-04:00",
+      "at": "2026-10-02T12:03:02.333312-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 32805,
+          "size": 28087,
           "preview": "2026-10-02 BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL SOC, GFR, BORR, HP, AESI, ACDC, VIST, PUMP"
         },
         {
@@ -2228,14 +2228,14 @@
           "path": "data/day_board/2026-10-02.json",
           "ok": true,
           "reason": "",
-          "size": 111054,
+          "size": 105588,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-10-02_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 73999,
+          "size": 68533,
           "preview": "2026-10-02 BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL SOC, GFR, BORR, HP, AESI, ACDC, VIST, PUMP"
         },
         {
@@ -2270,7 +2270,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 73999,
+          "size": 68533,
           "preview": "2026-10-02 BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL SOC, GFR, BORR, HP, AESI, ACDC, VIST, PUMP"
         },
         {
