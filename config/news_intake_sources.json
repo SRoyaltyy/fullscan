@@ -1,0 +1,15 @@
+{
+  "description": "Free source extensions. Add an issuer RSS feed or page monitor here without creating another pipeline. Do not add paid API endpoints.",
+  "sources": [
+    {"id": "official_federal_register", "kind": "feed", "url": "https://www.govinfo.gov/rss/fr.xml", "interval_minutes": 30, "primary": true},
+    {"id": "issuer_ir_search", "kind": "search", "query": "\"investor relations\" (\"announces\" OR \"results\" OR \"agreement\")", "interval_minutes": 30},
+    {"id": "official_fda_search", "kind": "search", "query": "site:fda.gov (approval OR clearance OR recall)", "classes": ["gate", "product_harm"], "interval_minutes": 15},
+    {"id": "official_fed_search", "kind": "search", "query": "site:federalreserve.gov (statement OR speech OR policy)", "classes": ["statement_public", "factor_impulse"], "interval_minutes": 15},
+    {"id": "official_ftc_search", "kind": "search", "query": "site:ftc.gov (merger OR order OR complaint)", "classes": ["deal_review", "regulatory_probe"], "interval_minutes": 30},
+    {"id": "official_doj_search", "kind": "search", "query": "site:justice.gov (antitrust OR settlement OR indictment)", "classes": ["blast_legal", "regulatory_probe"], "interval_minutes": 30},
+    {"id": "official_congress_search", "kind": "search", "query": "site:congress.gov (passed OR enacted OR legislation)", "classes": ["tax_fiscal"], "interval_minutes": 30},
+    {"id": "official_court_search", "kind": "search", "query": "site:uscourts.gov OR site:supremecourt.gov (opinion OR judgment OR ruling)", "classes": ["blast_legal", "ip_ruling"], "interval_minutes": 30},
+    {"id": "exchange_search", "kind": "search", "query": "site:nasdaq.com OR site:nyse.com (listing OR suspension OR delisting)", "classes": ["listing_flow"], "interval_minutes": 30},
+    {"id": "index_search", "kind": "search", "query": "\"S&P Dow Jones Indices\" OR \"MSCI\" (adds OR deletes OR rebalance)", "classes": ["flow_index"], "interval_minutes": 30}
+  ]
+}

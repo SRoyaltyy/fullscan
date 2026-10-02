@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free news intake</title>
+<style>body{font:16px system-ui;margin:32px auto;padding:0 20px;max-width:1200px;background:#111827;color:#e5e7eb}a{color:#93c5fd}input,select{padding:10px;margin:6px;background:#1f2937;color:white;border:1px solid #64748b}article{padding:18px 0;border-bottom:1px solid #374151}small{color:#a8b2c2}.stats{display:flex;gap:24px;flex-wrap:wrap}.pill{padding:4px 8px;background:#25334b;border-radius:5px}table{width:100%;border-collapse:collapse}td,th{padding:8px;text-align:left;border-bottom:1px solid #374151}</style>
+<h1>Free news intake</h1>
+<p>Every collected document remains available. Classes below are deterministic candidate hints, not JEV decisions or verified Lane analysis.</p>
+<div id="summary">Loading…</div>
+<p><a href="latest.json">Source health JSON</a> · <a href="articles.json">All parsed articles JSON</a></p>
+<input id="search" placeholder="Search headline or source" size="40"><select id="cls"><option value="">All candidate classes</option></select><select id="state"><option value="">All states</option><option>candidate</option><option>review</option></select>
+<p id="count"></p><div id="items"></div><h2>Source health</h2><table><thead><tr><th>Source</th><th>Status</th><th>Fetched</th><th>Issue</th></tr></thead><tbody id="health"></tbody></table>
+<script>
+const $=id=>document.getElementById(id);let rows=[];
+function node(tag,text){const n=document.createElement(tag);n.textContent=text;return n}
+function draw(){const q=$('search').value.toLowerCase(),cls=$('cls').value,state=$('state').value;const out=rows.filter(r=>(r.title+' '+r.source).toLowerCase().includes(q)&&(!cls||r.candidate_classes.includes(cls))&&(!state||r.state===state));$('count').textContent=`${out.length} matching documents; showing first 300. Download JSON for every row.`;$('items').replaceChildren();for(const r of out.slice(0,300)){const a=node('article','');const title=node('a',r.title);if(/^https?:\/\//.test(r.url)){title.href=r.url;title.target='_blank';title.rel='noopener noreferrer'}a.append(title,node('p',`${r.state} · ${r.candidate_classes.join(', ')||'open-set review'}`),node('small',`${r.published_at||'Publication unknown'} · ${r.source} · ${r.extraction_status}`));if(r.review_reasons.length)a.append(node('p',r.review_reasons.join('; ')));$('items').append(a)}}
+Promise.all([fetch('latest.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json()}),fetch('articles.json').then(r=>r.json())]).then(([s,a])=>{rows=a;$('summary').textContent=`${s.date} · ${s.document_count} documents · ${s.candidate_count} dated candidates · ${s.review_count} review · ${s.coverage_status} · updated ${s.generated_at}`;for(const c of Object.keys(s.class_counts))$('cls').append(new Option(`${c} (${s.class_counts[c]})`,c));for(const h of s.sources){const tr=node('tr','');for(const v of [h.source,h.status,h.fetched||0,h.error||(h.saturated?'Search saturated':'')])tr.append(node('td',String(v)));$('health').append(tr)}draw()}).catch(e=>$('summary').textContent='No published intake available: '+e.message);for(const id of ['search','cls','state'])$(id).addEventListener('input',draw);
+</script></html>

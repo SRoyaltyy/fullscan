@@ -113,7 +113,7 @@ def _fmt_items(items: list[dict], limit: int = 40) -> str:
 
 def _noise_and_single(report: dict) -> tuple[list[dict], list[dict]]:
     noise = report.get("noise_sample") or report.get("noise") or []
-    single = report.get("single_name") or report.get("single_name_items") or []
+    single = report.get("single_name") or report.get("single_name_items") or report.get("single_name_top") or []
     return noise, single
 
 

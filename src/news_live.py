@@ -76,8 +76,6 @@ def fetch(limit: int = 400, hours: int = 48, *,
     socket.setdefaulttimeout(_PER_FEED_S)
     try:
         for name, url in pairs:
-            if len(rows) >= limit:
-                break
             try:
                 feed = parser(url)
             except Exception as exc:  # noqa: BLE001
@@ -86,7 +84,9 @@ def fetch(limit: int = 400, hours: int = 48, *,
             entries = getattr(feed, "entries", None) or []
             kept = 0
             for entry in entries:
-                if len(rows) >= limit:
+                # Per-source allowance: early Google topics cannot prevent
+                # the remaining publisher feeds from being visited.
+                if kept >= limit:
                     break
                 title = str(getattr(entry, "title", "") or "").strip()
                 if hasattr(entry, "get"):
@@ -120,4 +120,4 @@ def fetch(limit: int = 400, hours: int = 48, *,
     rows.sort(key=lambda r: parse_published(r.get("published_at"))
               or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
     print(f"[news_live] {len(rows)} fresh headlines (no DB write)")
-    return rows[:limit]
+    return rows
