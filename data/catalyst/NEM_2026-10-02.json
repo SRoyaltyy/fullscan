@@ -1,0 +1,320 @@
+{
+  "ticker": "NEM",
+  "analysis_date": "2026-10-02",
+  "current_price": "122.74",
+  "net_signal": "Neutral",
+  "conviction": 8,
+  "catalyst_stack": "On April 23, 2026 Newmont printed record $3.1 billion quarterly free cash flow and a new $6 billion buyback, then on July 23 followed with $2.10 adjusted EPS, $2.2 billion FCF, a $0.26 dividend, and reaffirmed 5.3 Moz guidance. Permitting and legal overhangs eased on June 19 when British Columbia approved the Red Chris block-cave expansion, on August 10 when Newmont and Barrick settled remaining Nevada Gold Mines disputes for $1.95 billion, and on August 14 when Colorado dismissed the Karas Newcrest-disclosure suit. Those positives are tempered by the April 14 Cadia seismic halt, the June 12 USMCA labor action at Pe\u00f1asquito, and C-suite selling (CFO on August 5, 13 days after the Q2 beat; CEO on September 1). Street targets still sit above the $122.74 snapshot (RBC/UBS to $155 on September 16; BMO to $145 on September 30), but the October 2 hot U.S. jobs print lifted rate-hike odds and pressured gold miners.",
+  "key_assumption": "Record FCF and the $6 billion buyback remain the dominant equity driver only if gold/real rates do not follow the October 2 hike-odds shock into a sustained bullion break and Cadia recovers without a 2026 ounce-guidance cut.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 5,
+      "event_ids": [
+        2,
+        10
+      ],
+      "event_date": "2026-07-23",
+      "evidence_excerpt": "producing approximately 1.3 million attributable gold ounces and generating record second quarter free cash flow of $2.2 billion",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/newmont-reports-robust-second-quarter-2026-results-remains-track-achieve-full-year",
+        "https://s24.q4cdn.com/382246808/files/doc_earnings/2026/q2/earnings-result/Newmont-Q2-2026-Earnings-Release_Final.pdf"
+      ],
+      "confidence": 96
+    },
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        3,
+        11
+      ],
+      "event_date": "2026-04-23",
+      "evidence_excerpt": "a new $6 billion share repurchase program has been approved",
+      "source_urls": [
+        "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Generates-Record-Quarterly-Earnings-and-Free-Cash-Flow-Reports-First-Quarter-2026-Results-and-Announces-Increased-Share-Repurchase-Authorization/default.aspx",
+        "https://www.tipranks.com/news/the-fly/newmont-announces-additional-6b-buyback-thefly-news"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Deleveraging/sale of toxic assets/spin-off of loss-making unit",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 3,
+      "event_ids": [
+        4
+      ],
+      "event_date": "2026-04-23",
+      "evidence_excerpt": "we also received approximately $321 million in after-tax proceeds from the sale of equity investments",
+      "source_urls": [
+        "https://www.fool.com/earnings/call-transcripts/2026/04/23/newmont-nem-q1-2026-earnings-transcript/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Operational milestone (e.g., first patient dosed, satellite commissioned)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 4,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-04-23",
+      "evidence_excerpt": "the underground primary crusher is now commissioned, and the materials handling system is on track",
+      "source_urls": [
+        "https://www.fool.com/earnings/call-transcripts/2026/04/23/newmont-nem-q1-2026-earnings-transcript/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Positive personnel change (new CEO, CFO, board members)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 4,
+      "adjusted_weight": 3,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-06-15",
+      "evidence_excerpt": "appointed Brian Tabolt as CFO, Mark Rodgers as COO, and David Thornton as CTO, effective July 1, 2026",
+      "source_urls": [
+        "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Announces-Key-Executive-Appointments-for-the-Next-Phase-of-Delivery/default.aspx",
+        "https://www.sec.gov/Archives/edgar/data/1164727/000110465926074137/tm2617970d1_ex99-1.htm"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 9,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-06-19",
+      "evidence_excerpt": "Red Chris Mine is owned by Newmont (70%) and Imperial Metals (30%).",
+      "source_urls": [
+        "https://archive.news.gov.bc.ca/releases/news_releases_2024-2028/2026MCM0029-000727.htm",
+        "https://www.newmont.com/investors/news-release/news-details/2026/Newmonts-Red-Chris-Block-Cave-Project-Receives-Major-Regulatory-Approvals/default.aspx"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-08-10",
+      "evidence_excerpt": "Newmont will provide Barrick with US$1.95 billion in consideration for the assets to be contributed",
+      "source_urls": [
+        "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-and-Barrick-Reach-Agreement-Regarding-Nevada-Gold-Mines-Joint-Venture/default.aspx",
+        "https://www.mining.com/barrick-newmont-settle-dispute-with-1-95b-deal/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 6,
+      "event_ids": [
+        15
+      ],
+      "event_date": "2026-08-14",
+      "evidence_excerpt": "dismissing the claims for now",
+      "source_urls": [
+        "https://news.bloomberglaw.com/securities-law/newmont-shakes-investor-lawsuit-over-acquired-gold-mining-woes",
+        "https://www.tipranks.com/news/class-action/newmont-lawsuit-ruling-court-dismisses-investor-claims-over-newcrest-mine-disclosures"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        17,
+        19
+      ],
+      "event_date": "2026-09-30",
+      "evidence_excerpt": "BMO Capital Markets increased their price target on shares of Newmont from $135.00 to $145.00",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-bmo-capital-markets-forecasts-strong-price-appreciation-for-newmont-nyse-nem-stock-2026-09-30/",
+        "https://stockanalysis.com/stocks/nem/forecast/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Operational setback (trial halted, satellite failure, production halt)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 7,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-14",
+      "evidence_excerpt": "Newmont has suspended underground operations at its Cadia mine following a magnitude-4.5 earthquake",
+      "source_urls": [
+        "https://www.australianmining.com.au/newmont-pauses-cadia-operations-after-nsw-quake/",
+        "https://www.newmont.com/investors/news-release/news-details/2026/Update-Seismic-Activity-Near-Cadia-2026-YYdIE7_lkv/default.aspx"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Policy reversal/new regulation/tax increase",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        6
+      ],
+      "event_date": "2026-06-12",
+      "evidence_excerpt": "The US (via the Interagency Labor Committee) determined there was sufficient credible evidence of a denial of rights",
+      "source_urls": [
+        "https://www.dol.gov/newsroom/releases/ilab/ilab20260612",
+        "https://www.eleconomista.com.mx/empresas/eu-activa-mecanismo-laboral-t-mec-newmont-penasquito-zacatecas-20260612-818268.html"
+      ],
+      "confidence": 78
+    },
+    {
+      "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 6,
+      "event_ids": [
+        13,
+        16
+      ],
+      "event_date": "2026-09-01",
+      "evidence_excerpt": "CEO Natascha Viljoen sold 3,882 shares of the stock in a transaction on Tuesday, September 1st.",
+      "source_urls": [
+        "https://www.secform4.com/insider-trading/1164727.htm"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Insider-earnings divergence",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 1,
+      "adjusted_weight": 1,
+      "event_ids": [
+        10,
+        13
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "CFO Brian Tabolt sold 11,445 shares of Newmont stock in a transaction on Wednesday, August 5th.",
+      "source_urls": [
+        "https://www.secform4.com/insider-trading/1164727.htm"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Rate hike/monetary tightening/liquidity withdrawal",
+      "type": "negative",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 9,
+      "adjusted_weight": 0,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "Newmont Corp. stock outperforms competitors despite losses on the day",
+      "source_urls": [
+        "https://www.marketwatch.com/data-news/newmont-corp-stock-outperforms-competitors-despite-losses-on-the-day-0fd2fd24-e4c76113545a?mod=mw_FV"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT decrease",
+      "type": "negative",
+      "event_date": "2026-07-14",
+      "evidence_excerpt": "Zacks Research cut Newmont from a \"strong-buy\" rating to a \"hold\" rating in a report on Tuesday, July 14th.",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-bmo-capital-markets-forecasts-strong-price-appreciation-for-newmont-nyse-nem-stock-2026-09-30/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT decrease",
+      "type": "negative",
+      "event_date": "2026-07-23",
+      "evidence_excerpt": "Canaccord Genuity Group reduced their price target on shares of Newmont from $160.00 to $130.00",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-bmo-capital-markets-forecasts-strong-price-appreciation-for-newmont-nyse-nem-stock-2026-09-30/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Operational setback (trial halted, satellite failure, production halt)",
+      "type": "negative",
+      "event_date": "2026-06-19",
+      "evidence_excerpt": "have been suspended for the second time in nine weeks after two earthquakes rocked New South Wales Friday",
+      "source_urls": [
+        "https://www.mining.com/major-newmont-mine-cadia-halted-after-earthquake-report/"
+      ],
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings miss (revenue)",
+      "type": "negative",
+      "event_date": "2026-07-23",
+      "evidence_excerpt": "The company had revenue of $6.12 billion during the quarter, compared to the consensus estimate of $6.35 billion.",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-bmo-capital-markets-forecasts-strong-price-appreciation-for-newmont-nyse-nem-stock-2026-09-30/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-02",
+  "cutoff_date": null,
+  "role": "conflict"
+}

@@ -1,0 +1,193 @@
+{
+  "ticker": "SSRM",
+  "analysis_date": "2026-10-02",
+  "current_price": "35.80",
+  "net_signal": "Strong Bullish",
+  "conviction": 64,
+  "catalyst_stack": "On June 15, 2026 SSR authorized an additional $500 million buyback and reinstated the dividend, then on June 24 closed the $1.49 billion \u00c7\u00f6pler sale and by July 17 converted Hod Maden into an uncapped 4% NSR, leaving a net-cash Americas producer. August 4 Q2 results showed $137.0 million of continuing-operations net income, $337.8 million of share repurchases, and higher 2026 growth capex at Marigold, CC&V, and Seabee. The U.S. \u00c7\u00f6pler securities class action was dismissed with prejudice in late August, and Street support firmed into October as RBC lifted its target to $43 and ATB Cormark to C$64. The only offsetting HIT is RBC\u2019s July 9 trim of its target to $39, which the same firm later reversed.",
+  "key_assumption": "Unhedged gold prices stay supportive and remaining \u00c7\u00f6pler-related Canadian or environmental liabilities do not re-open after the U.S. class-action dismissal, so cash returns and Americas growth capex keep driving the equity.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        4,
+        12
+      ],
+      "event_date": "2026-06-15",
+      "evidence_excerpt": "On June 15, 2026, SSR Mining Inc. (SSRM) announced an additional $500 million authorization for share repurchases",
+      "source_urls": [
+        "https://s22.q4cdn.com/546540291/files/doc_news/2026/Jun/15/SSR-MINING-ANNOUNCES-ADDITIONAL-500-MILLION-SHARE-BUYBACK-AND-REINSTATEMENT-OF-QUARTERLY-DIVIDEND.pdf",
+        "https://www.tipranks.com/news/the-fly/ssr-mining-announces-additional-500m-share-buyback-dividend-reinstatement-thefly-news"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Deleveraging/sale of toxic assets/spin-off of loss-making unit",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        5,
+        2,
+        9
+      ],
+      "event_date": "2026-06-24",
+      "evidence_excerpt": "On June 24, 2026, SSR Mining closed the sale of its 80% ownership stake in the \u00c7\u00f6pler mine",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/ssr-mining-reports-second-quarter-2026-results-2026-08-04",
+        "https://finance.yahoo.com/markets/commodities/articles/ssr-mining-completes-sale-pler-210000762.html"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        6
+      ],
+      "event_date": "2026-06-29",
+      "evidence_excerpt": "SSR now holds approximately 9.9% of Phenom\u2019s outstanding shares on an undiluted basis",
+      "source_urls": [
+        "https://www.phenomresources.com/phenom-announces-closing-of-5-41-million-financing-strategic-investor-and-execution-of-framework-agreement-relating-to-the-dobbin-project/",
+        "https://www.nasdaq.com/press-release/ssr-mining-reports-second-quarter-2026-results-2026-08-04"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-07-09",
+      "evidence_excerpt": "July 9, 2026: RBC Capital Markets cut the price target from $40 to $39 while maintaining Outperform",
+      "source_urls": [
+        "https://www.benzinga.com/quote/SSRM/price-targets",
+        "https://www.gurufocus.com/news/8952029/ssrm-maintained-by-rbc-capital-price-target-lowered-to-3900"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "MISS",
+      "base_weight": 8,
+      "adjusted_weight": 0,
+      "event_ids": [
+        1,
+        11
+      ],
+      "event_date": "2026-08-04",
+      "evidence_excerpt": "SSR Mining reported net income and adjusted net income attributable to SSR Mining shareholders of $137.0 million, or $0.66 per diluted share.",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/ssr-mining-reports-second-quarter-2026-results-2026-08-04",
+        "https://s22.q4cdn.com/546540291/files/doc_earnings/2026/q2/earnings-result/SSR-MINING-REPORTS-SECOND-QUARTER-2026-RESULTS.pdf"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Capacity expansion announced (new factory, satellite constellation)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 8,
+      "event_ids": [
+        13
+      ],
+      "event_date": "2026-08-04",
+      "evidence_excerpt": "2026 growth capital guidance at Marigold has been increased from $48 million to $65 million",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/ssr-mining-reports-second-quarter-2026-results-2026-08-04",
+        "https://www.minichart.com.sg/2026/09/28/ssr-mining-lifts-2026-growth-capital-budget-at-three-mines/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        15
+      ],
+      "event_date": "2026-08-27",
+      "evidence_excerpt": "In August 2026, Chief Judge Daniel D. Domenico dismissed all claims with prejudice and closed the case",
+      "source_urls": [
+        "https://www.aoshearman.com/en/news/ao-shearman-secures-dismissal-with-prejudice-for-ssr-mining-in-securities-class-action",
+        "https://www.tipranks.com/news/class-action/ssr-mining-lawsuit-dismissed-as-court-finds-investors-did-not-adequately-plead-scienter"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        3,
+        8,
+        16,
+        17
+      ],
+      "event_date": "2026-09-15",
+      "evidence_excerpt": "RBC Capital Buy Maintains $39 \u2192 $43",
+      "source_urls": [
+        "https://stockanalysis.com/stocks/ssrm/ratings/",
+        "https://www.benzinga.com/news/26/09/61825247/rbc-capital-maintains-outperform-ssr-mining-raises-price-target-43"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Deleveraging/sale of toxic assets/spin-off of loss-making unit",
+      "type": "positive",
+      "event_date": "2026-07-17",
+      "evidence_excerpt": "on July 17, 2026, the Company closed the sale of its 20% ownership stake in the Hod Maden development project",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/ssr-mining-reports-second-quarter-2026-results-2026-08-04"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "event_date": "2026-10-01",
+      "evidence_excerpt": "ATB Cormark Capital Markets Buy Maintains $41 \u2192 $45",
+      "source_urls": [
+        "https://stockanalysis.com/stocks/ssrm/ratings/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-02",
+  "cutoff_date": null,
+  "role": "conflict"
+}

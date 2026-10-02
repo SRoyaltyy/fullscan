@@ -1,0 +1,309 @@
+{
+  "ticker": "NE",
+  "analysis_date": "2026-10-02",
+  "current_price": "44.62",
+  "net_signal": "Bullish",
+  "conviction": 33,
+  "catalyst_stack": "On April 26, 2026 Noble printed Q1 revenue of $786M, $0.75 EPS and $7.5B backlog while holding FY2026 revenue guidance, then on June 11 refinanced into an upsized $800M 6.250% 2034 notes issue expected to save about $35M of annual cash interest. The break was July 27, when Q2 showed a $37M net loss, a $43M hit from Brazil suspensions of Noble Faye Kozack and Noble Courage, a $42M Ocean Apex impairment and a cut in FY2026 adjusted EBITDA guidance to $850\u2013925M from $940\u20131,020M, sending shares down about 9% on July 28 after Susquehanna had already cut its target to $40 on July 8 and CEO Robert Eifler sold 50,000 shares on June 15. Cover rebuilt with a ~$136M six-well Noble Viking Brunei campaign (July 10), ~$200M of awards including a bp UKCS job for Noble Claus Bachmann (July 27), and a Tullow Ghana program of up to 10 wells for Faye Kozack from mid-2027 (September 28), while Fearnley upgraded to Strong Buy on July 29 and Citi raised its target to $50 on September 7. On October 2 Middle East tensions and higher oil lifted Noble about 7% with offshore drillers, leaving a 2026 utilization trough against still-large 2027\u201328 backlog rather than a franchise break.",
+  "key_assumption": "Brazil idle time and the FY2026 EBITDA cut are a one-year utilization trough rather than a structural loss of Petrobras/Exxon work, and oil stays high enough for 2027\u201328 dayrates to convert the $6.8B backlog.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        12,
+        14,
+        23
+      ],
+      "event_date": "2026-07-10",
+      "evidence_excerpt": "The contract includes a firm scope of six wells with an estimated value of approximately $136.2 million",
+      "source_urls": [
+        "https://worldoil.com/news/2026/7/10/noble-secures-136-million-offshore-brunei-drilling-contract/",
+        "https://www.upstreamonline.com/rigs-and-vessels/noble-scoops-136-million-brunei-drillship-gig/2-1-2015486"
+      ],
+      "confidence": 91
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-26",
+      "evidence_excerpt": "Noble Corporation plc (NYSE: NE) reported its Q1 2026 results on April 26, 2026",
+      "source_urls": [
+        "https://noblecorp.com/press-release/noble-corporation-plc-announces-first-quarter-2026-results/",
+        "https://www.stocktitan.net/sec-filings/NE/10-q-noble-corp-plc-quarterly-earnings-report-2f3844298d27.html"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Geopolitical event that boosts sector (e.g., defense spending surge)",
+      "type": "positive",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 7,
+      "adjusted_weight": 0,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "3 Dividend Stocks From a Value Pro",
+      "source_urls": [
+        "https://www.barrons.com/articles/dividend-stocks-value-investing-picks-74c7f4a0?mod=bar_FV"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 6,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-05-05",
+      "evidence_excerpt": "awarded multiple managed pressure drilling (MPD) contracts and a global aftermarket agreement with Noble Corporation plc",
+      "source_urls": [
+        "https://www.weatherford.com/investor-relations/investor-news-and-events/news/news-article/?ItemID=18536",
+        "https://worldoil.com/news/2026/5/5/weatherford-wins-mpd-contracts-with-noble-for-deepwater-drilling-operations/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        21,
+        2,
+        17
+      ],
+      "event_date": "2026-09-07",
+      "evidence_excerpt": "Raised price target to $50 from $45 (Neutral rating maintained) on September 7, 2026",
+      "source_urls": [
+        "https://es.benzinga.com/quote/NE/price-targets",
+        "https://www.marketbeat.com/instant-alerts/consensus-noble-corporation-plc-nyse-ne-stock-has-consensus-target-price-of-4471-2026-10-02/"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Deleveraging/sale of toxic assets/spin-off of loss-making unit",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-06-11",
+      "evidence_excerpt": "issued $800 million aggregate principal amount of 6.250% Senior Notes due June 15, 2034",
+      "source_urls": [
+        "https://www.stocktitan.net/sec-filings/NE/8-k-noble-corp-plc-reports-material-event-7eb3409fd179.html",
+        "https://noblecorp.com/wp-content/uploads/2026/06/Noble-Announces-Pricing-of-Upsized-Senior-Notes-Offering.pdf"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Institutional ownership increase (13F filings showing accumulation)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 4,
+      "event_ids": [
+        22
+      ],
+      "event_date": "2026-09-24",
+      "evidence_excerpt": "State Street Corp Acquires 215,799 Shares of Noble Corporation plc (NE)",
+      "source_urls": [
+        "https://www.americanbankingnews.com/2026/09/24/state-street-corp-acquires-215799-shares-of-noble-corporation-plc-ne.html",
+        "https://businessquant.com/stocks/ne/institutional-ownership/"
+      ],
+      "confidence": 74
+    },
+    {
+      "taxonomy": "Positive personnel change (new CEO, CFO, board members)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 4,
+      "adjusted_weight": 3,
+      "event_ids": [
+        7,
+        3
+      ],
+      "event_date": "2026-05-21",
+      "evidence_excerpt": "On May 21, 2026, Noble Corporation plc (NYSE: NE) announced the appointment of Jeff Miller",
+      "source_urls": [
+        "https://www.noblecorp.com/investors/news/news-details/2026/NOBLE-CORPORATION-PLC-ANNOUNCES-NEW-DIRECTOR-APPOINTMENT/default.aspx",
+        "https://www.stocktitan.net/sec-filings/NE/8-k-noble-corp-plc-reports-material-event-6bf173f4e868.html"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Contract loss/non-renewal/reduction in scope",
+      "type": "negative",
+      "category": "internal",
+      "status": "MISS",
+      "base_weight": 8,
+      "adjusted_weight": 0,
+      "event_ids": [
+        13
+      ],
+      "event_date": "2026-07-27",
+      "evidence_excerpt": "reported its Q2 2026 earnings on July 27, 2026",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1895262/000189526226000138/exhibit991-q22026pressrele.htm",
+        "https://noblecorp.com/press-release/noble-corporation-plc-announces-second-quarter-2026-results/"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "event_ids": [
+        13
+      ],
+      "event_date": "2026-07-27",
+      "evidence_excerpt": "reported its Q2 2026 earnings on July 27, 2026",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1895262/000189526226000138/exhibit991-q22026pressrele.htm",
+        "https://noblecorp.com/press-release/noble-corporation-plc-announces-second-quarter-2026-results/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Earnings guidance cut",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        13
+      ],
+      "event_date": "2026-07-27",
+      "evidence_excerpt": "reported its Q2 2026 earnings on July 27, 2026",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1895262/000189526226000138/exhibit991-q22026pressrele.htm",
+        "https://noblecorp.com/press-release/noble-corporation-plc-announces-second-quarter-2026-results/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 8,
+      "event_ids": [
+        9,
+        6
+      ],
+      "event_date": "2026-06-15",
+      "evidence_excerpt": "Robert W. Eifler (President & CEO): Sold 50,000 shares on June 15, 2026 (~$45.51 average price)",
+      "source_urls": [
+        "https://www.secform4.com/insider-trading/1895262.htm",
+        "https://www.marketbeat.com/stocks/NYSE/NE/insider-trades/"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        11,
+        18
+      ],
+      "event_date": "2026-07-08",
+      "evidence_excerpt": "Maintained Neutral but sharply lowered target to $40 from $55 on July 8, 2026",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/noble-corp-price-target-lowered-to-40-from-55-at-susquehanna-thefly-news",
+        "https://www.marketbeat.com/instant-alerts/consensus-noble-corporation-plc-nyse-ne-stock-has-consensus-target-price-of-4471-2026-10-02/"
+      ],
+      "confidence": 84
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-09-27",
+      "evidence_excerpt": "The contract includes up to 10 wells and is expected to commence mid-2027.",
+      "source_urls": [
+        "https://ocean-energyresources.com/2026/09/27/noble-has-been-awarded-drilling-contract-by-tullow-oil/",
+        "https://thevaultznews.com/2026/09/28/noble-secures-tullow-contract-for-ghana-drilling-campaign/"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-04-26",
+      "evidence_excerpt": "highlighted by the Noble Courage\u2019s three year extension with Petrobras and the Noble Deliverer\u2019s five-well program with Woodside",
+      "source_urls": [
+        "https://www.shippingherald.com/noble-corporation-announces-first-quarter-2026-results/"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Operational disruption / safety-compliance issue",
+      "type": "negative",
+      "event_date": "2026-07-27",
+      "evidence_excerpt": "Our second quarter was adversely impacted by $43 million due to the operational suspension of both of our rigs in Brazil",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/investor-alert-pomerantz-law-firm-investigates-claims-on-behalf-of-investors-of-noble-corporation-plc---ne-302868549.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Lawsuit / securities investigation",
+      "type": "negative",
+      "event_date": "2026-08-11",
+      "evidence_excerpt": "The investigation concerns whether Noble and certain of its officers and/or directors have engaged in securities fraud",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/investor-alert-pomerantz-law-firm-investigates-claims-on-behalf-of-investors-of-noble-corporation-plc---ne-302868549.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-02",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

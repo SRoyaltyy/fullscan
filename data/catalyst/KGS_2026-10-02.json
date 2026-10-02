@@ -1,0 +1,277 @@
+{
+  "ticker": "KGS",
+  "analysis_date": "2026-10-02",
+  "current_price": "53.30",
+  "net_signal": "Strong Bullish",
+  "conviction": 97,
+  "catalyst_stack": "On 2026-04-01 Kodiak closed the Distributed Power Solutions acquisition (~395 MW for $587 million cash plus ~2.4 million shares), then on 2026-07-08 signed a Baker Hughes multi-year turbine framework covering an initial ~1 GW by 2030 and up to 1.8 GW of distributed power. A 2026-10-02 six-year 76 MW West Texas data-center supply agreement extended that mix-shift into AI/load customers. Q1 (2026-05-11) and Q2 (2026-08-06) printed record adjusted EBITDA and lifted 2026 adjusted EBITDA guidance to $830\u2013$860 million, after a 2026-05-14 underwritten offering of 10.56 million shares at $71.00 that funded growth but diluted holders. Piper initiated Overweight at $78 on 2026-07-28 and Stifel/RBC raised targets in mid-August, offset by Jefferies cutting its target to $69 on 2026-08-10 and CEO McKee selling 5,999 shares on 2026-09-01.",
+  "key_assumption": "DPS integration, Baker Hughes turbine deliveries, and the West Texas data-center contract convert into fee-based EBITDA without another highly dilutive equity raise or a leverage break above management\u2019s ~4.0x comfort zone.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "Kodiak Gas Services Announces Power Supply Agreement with West Texas Data Center",
+      "source_urls": [
+        "https://elite.finviz.com/news/393737/kodiak-gas-services-announces-power-supply-agreement-with-west-texas-data-center"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 7,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-07-08",
+      "evidence_excerpt": "announced a multi-year strategic agreement under which Baker Hughes will provide power generation solutions",
+      "source_urls": [
+        "https://ir.kodiakgas.com/news-events/press-releases/detail/82/kodiak-gas-services-baker-hughes-announce-multi-year-gas",
+        "https://www.nasdaq.com/press-release/kodiak-gas-services-baker-hughes-announce-multi-year-gas-turbine-order-agreement-0"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        6,
+        10,
+        11
+      ],
+      "event_date": "2026-07-28",
+      "evidence_excerpt": "Piper Sandler initiated coverage on Kodiak Gas Services, Inc. (NYSE: KGS) with an Overweight rating and a $78 price target",
+      "source_urls": [
+        "https://seekingalpha.com/news/4619736-kodiak-gas-services-started-overweight-at-piper-sandler-on-distributed-power-solutions-deal",
+        "https://www.tipranks.com/news/the-fly/kodiak-gas-services-initiated-with-an-overweight-at-piper-sandler-thefly-news"
+      ],
+      "confidence": 78
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        3,
+        8
+      ],
+      "event_date": "2026-05-11",
+      "evidence_excerpt": "total revenues of $345.8 million and adjusted EBITDA of $190.1 million",
+      "source_urls": [
+        "https://www.tradingview.com/news/tradingview:683894df703ba:0-kodiak-gas-services-reports-q1-2026-revenue-345-8m-adj-ebitda-190-1m-adj-eps-0-59/",
+        "https://www.sec.gov/Archives/edgar/data/1767042/000176704226000041/kgs-20260511.htm"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        3,
+        8
+      ],
+      "event_date": "2026-08-06",
+      "evidence_excerpt": "Increased Adjusted EBITDA guidance to a range of $830 million to $860 million",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/kodiak-gas-services-reports-second-quarter-2026-financial-results-increases-full-year",
+        "https://www.sec.gov/Archives/edgar/data/1767042/000176704226000052/kgsq22026earningsrelease.htm"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 8,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-01",
+      "evidence_excerpt": "completed the previously announced acquisition of Distributed Power Solutions, LLC (\u201cDPS\u201d)",
+      "source_urls": [
+        "https://ir.kodiakgas.com/news-events/press-releases/detail/76/kodiak-gas-services-announces-completion-of-distributed",
+        "https://www.stocktitan.net/sec-filings/KGS/8-k-kodiak-gas-services-inc-reports-material-event-a33779fb5f34.html"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Capacity expansion announced",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-07-08",
+      "evidence_excerpt": "announced a multi-year strategic agreement under which Baker Hughes will provide power generation solutions",
+      "source_urls": [
+        "https://ir.kodiakgas.com/news-events/press-releases/detail/82/kodiak-gas-services-baker-hughes-announce-multi-year-gas",
+        "https://www.turbomachinerymag.com/view/baker-hughes-turbines-to-back-1-8-gw-of-kodiak-distributed-power"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Strategic pivot/rebranding to high-growth area",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        0,
+        1,
+        5
+      ],
+      "event_date": "2026-04-01",
+      "evidence_excerpt": "completed the previously announced acquisition of Distributed Power Solutions, LLC (\u201cDPS\u201d)",
+      "source_urls": [
+        "https://ir.kodiakgas.com/news-events/press-releases/detail/76/kodiak-gas-services-announces-completion-of-distributed",
+        "https://www.stocktitan.net/sec-filings/KGS/8-k-kodiak-gas-services-inc-reports-material-event-a33779fb5f34.html"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Customer concentration expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "Kodiak Gas Services Announces Power Supply Agreement with West Texas Data Center",
+      "source_urls": [
+        "https://elite.finviz.com/news/393737/kodiak-gas-services-announces-power-supply-agreement-with-west-texas-data-center"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Dilutive offering/distressed fundraising/down round",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        4
+      ],
+      "event_date": "2026-05-14",
+      "evidence_excerpt": "priced its previously announced underwritten public offering of 10,563,380 shares of common stock",
+      "source_urls": [
+        "https://ir.kodiakgas.com/news-events/press-releases/detail/81/kodiak-gas-services-announces-pricing-of-public-offering-of",
+        "https://www.stocktitan.net/sec-filings/KGS/8-k-kodiak-gas-services-inc-reports-material-event-dc3ecb49e74d.html"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-08-10",
+      "evidence_excerpt": "lowered the firm\u2019s price target on Kodiak Gas Services Inc. (NYSE: KGS) to $69 (from a prior $79)",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/kodiak-gas-services-price-target-lowered-to-69-from-79-at-jefferies-thefly-news",
+        "https://www.benzinga.com/news/26/08/61067289/jefferies-maintains-buy-kodiak-gas-services-lowers-price-target-69"
+      ],
+      "confidence": 76
+    },
+    {
+      "taxonomy": "Insider selling",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        12
+      ],
+      "event_date": "2026-09-01",
+      "evidence_excerpt": "Sold 5,999 shares at $59.31 on Sept. 1, 2026; post-sale: 292,590 shares",
+      "source_urls": [
+        "https://businessquant.com/stocks/kgs/insiders/",
+        "https://www.secform4.com/insider-trading/1767042.htm"
+      ],
+      "confidence": 72
+    },
+    {
+      "taxonomy": "Earnings miss",
+      "type": "negative",
+      "event_date": "2026-08-06",
+      "evidence_excerpt": "Q2 Non-GAAP EPS of $0.55 misses by $0.16. Revenue of $391.12M (+21.1% Y/Y) beats by $8.12M.",
+      "source_urls": [
+        "https://seekingalpha.com/news/4628570-kodiak-gas-services-non-gaap-eps-of-0_55-misses-by-0_16-revenue-of-391_12m-beats-by-8_12m",
+        "https://www.nasdaq.com/press-release/kodiak-gas-services-reports-second-quarter-2026-financial-results-increases-full-year"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "event_date": "2026-05-11",
+      "evidence_excerpt": "raised full-year 2026 adjusted EBITDA guidance to $820\u2013$860 million.",
+      "source_urls": [
+        "https://www.tradingview.com/news/tradingview:683894df703ba:0-kodiak-gas-services-reports-q1-2026-revenue-345-8m-adj-ebitda-190-1m-adj-eps-0-59/",
+        "https://www.sec.gov/Archives/edgar/data/1767042/000176704226000041/kgsq12026earningsrelease.htm"
+      ],
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Capacity expansion announced",
+      "type": "positive",
+      "event_date": "2026-05-11",
+      "evidence_excerpt": "Procured over 260 megawatts of additional power generation capacity with plans to deliver 61 MW in 2026",
+      "source_urls": [
+        "https://www.tradingview.com/news/tradingview:683894df703ba:0-kodiak-gas-services-reports-q1-2026-revenue-345-8m-adj-ebitda-190-1m-adj-eps-0-59/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-02",
+  "cutoff_date": null,
+  "role": "override_captain"
+}
