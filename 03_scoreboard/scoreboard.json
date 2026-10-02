@@ -30136,18 +30136,113 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": 0.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7726.24,
+      "actual_close": 7722.72,
+      "actual_pct_change": 0.73,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
+          "date_accessed": "2026-10-02",
+          "summary": "The BLS primary source confirms a large downside NFP miss versus consensus.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/02/fed-rate-hike-odds-decline-after-september-jobs-report.html",
+          "date_accessed": "2026-10-02",
+          "summary": "The NFP miss directly collapsed October hike odds, the day's core transmission channel.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://money.usnews.com/investing/news/articles/2026-10-02/wall-st-futures-gain-as-yields-oil-prices-ease-ahead-of-jobs-report",
+          "date_accessed": "2026-10-02",
+          "summary": "Quantifies the hike-odds collapse that drove the equity bid.",
+          "verification": "unreachable"
+        },
+        {
+          "url": "https://www.santacruzsentinel.com/2026/10/02/us-stocks-september-jobs-report/",
+          "date_accessed": "2026-10-02",
+          "summary": "Confirms the yield reversal that relieved equity discount-rate pressure.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.theguardian.com/business/2026/oct/02/g7-release-barrels-oil-diesel-reserves-emergency",
+          "date_accessed": "2026-10-02",
+          "summary": "A same-day oil-supply catalyst that pushed crude lower and pressured energy equities.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-midday-oct-2-164023337.html",
+          "date_accessed": "2026-10-02",
+          "summary": "Explains the NDX>SPX>Dow dispersion and narrow, tech-led breadth.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bnnbloomberg.ca/markets/2026/10/02/us-stocks-rise-toward-their-record-after-the-latest-jobs-report-calms-the-rattled-bond-market/",
+          "date_accessed": "2026-10-02",
+          "summary": "Confirms the headline index gain and the near-record context.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html",
+          "date_accessed": "2026-10-02",
+          "summary": "Establishes the hiking regime that made the NFP miss equity-positive.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -30177,7 +30272,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 3.815,
-      "overlay_score": 0.55
+      "overlay_score": 0.55,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "September NFP +29k vs ~84k consensus — a large downside miss that collapsed October Fed hike odds (26%→16%) and pulled the 10Y from ~5.35% to ~5.20%",
+      "key_interaction": "Dovish NFP relief (positive) was partially offset by the still-elevated 5-handle long end and Hormuz inflation tax — the dovish impulse was spent by mid-morning, producing the afternoon fade despite the up close",
+      "knowable_at_9am": "partially — the NFP miss itself was an unforeseeable binary, but the BN=GN reaction function (weak print = equity-positive) was knowable and was correctly applied",
+      "attribution_contested": "no — outlets converge on jobs-report→hike-odds as the driver, with tech outlets emphasizing NVDA and macro outlets the Fed; no contradictions",
+      "outlier_watch": "Energy equities (XLE) fell while the broad market rose — the G7 reserve release is index-positive but energy-shareholder-negative; and all three indices closed well below their intraday highs"
     },
     {
       "date": "2026-10-02",
