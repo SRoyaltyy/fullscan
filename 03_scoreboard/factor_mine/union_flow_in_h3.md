@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **-12.21%** ($8,779) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 80 · skips 105 · realized $-281.48.
+Cash book **-16.20%** ($8,380) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 82 · skips 105 · realized $-281.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -220,6 +220,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $36.26 | ▼ close $8,779.45 vs 09:30 $8,827.91 (session -43.98) | 16:00 close · cash $36.26 · equity $8,779.45 vs 09:30 $8,827.91 (-48.46; session marks -43.98) · 2 name(s) marked open→close (per-name table). JEF×95 09:30 $46.08 → close $46.52 +41.80; KMX×73 09:30 $60.41 → close $59.23 -85.78 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $36.26 | ▲ 09:30 equity $8,779.45 vs yday $8,779.45 (+0.00) | 09:30 open · cash $36.26 (unchanged overnight, no fees) · equity $8,779.45 vs prior close $8,779.45 (+0.00) · 2 name(s) re-marked at the open (per-name table). JEF×95 yday $46.52 → 09:30 $46.52 +0.00; KMX×73 yday $59.23 → 09:30 $59.23 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $36.26 | ▲ close $8,779.45 vs 09:30 $8,779.45 (session +0.00) | 16:00 close · cash $36.26 · equity $8,779.45 vs 09:30 $8,779.45 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). JEF×95 09:30 $46.52 → close $46.52 +0.00; KMX×73 09:30 $59.23 → close $59.23 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $36.26 | ▼ 09:30 equity $8,384.92 vs yday $8,779.45 (-394.53) | 09:30 open · cash $36.26 (unchanged overnight, no fees) · equity $8,384.92 vs prior close $8,779.45 (-394.53) · 2 name(s) re-marked at the open (per-name table). JEF×95 yday $46.52 → 09:30 $45.41 -105.45; KMX×73 yday $59.23 → 09:30 $55.27 -289.08 | — |
+| 2026-10-01 09:30 ET | **SELL** | `JEF` | 95 | $45.41 | $2.33 | $-68.25 | $4,347.88 | ▼ -68.25 after sell → book $8,382.59; vs 09:30 mark -2.33 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `KMX` | 73 | $55.27 | $2.25 | $-379.32 | $8,380.34 | ▼ -379.32 after sell → book $8,380.34; vs 09:30 mark -2.25 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,380.34 | ▲ close $8,380.34 vs 09:30 $8,384.92 (session +0.00) | 16:00 close · cash $8,380.34 · no lots left · equity $8,380.34. | — |
 
 ## Not taken
 

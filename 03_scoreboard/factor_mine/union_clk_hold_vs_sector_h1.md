@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-13.61%** ($8,639) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 206 · skips 96 · realized $+387.41.
+Cash book **-15.23%** ($8,477) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 215 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -348,6 +348,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.03 | ▼ close $8,638.63 vs 09:30 $8,777.89 (session -110.70) | 16:00 close · cash $4.03 · equity $8,638.63 vs 09:30 $8,777.89 (-139.26; session marks -110.70) · 1 name(s) marked open→close (per-name table). BUR×2214 09:30 $3.95 → close $3.90 -110.70 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.03 | ▲ 09:30 equity $8,638.63 vs yday $8,638.63 (+0.00) | 09:30 open · cash $4.03 (unchanged overnight, no fees) · equity $8,638.63 vs prior close $8,638.63 (+0.00) · 1 name(s) re-marked at the open (per-name table). BUR×2214 yday $3.90 → 09:30 $3.90 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.03 | ▲ close $8,638.63 vs 09:30 $8,638.63 (session +0.00) | 16:00 close · cash $4.03 · equity $8,638.63 vs 09:30 $8,638.63 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). BUR×2214 09:30 $3.90 → close $3.90 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.03 | ▼ 09:30 equity $8,594.35 vs yday $8,638.63 (-44.28) | 09:30 open · cash $4.03 (unchanged overnight, no fees) · equity $8,594.35 vs prior close $8,638.63 (-44.28) · 1 name(s) re-marked at the open (per-name table). BUR×2214 yday $3.90 → 09:30 $3.88 -44.28 | — |
+| 2026-10-01 09:30 ET | **SELL** | `BUR` | 2214 | $3.88 | $29.00 | $-212.54 | $8,565.35 | ▼ -212.54 after sell → book $8,565.35; vs 09:30 mark -29.00 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **BUY** | `CAPR` | 114 | $9.36 | $2.33 | — | $7,495.98 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; 🔵; ret5=+9.2; leftover $1070.67 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `DOCS` | 37 | $28.91 | $2.10 | — | $6,424.21 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+6.7; leftover $1070.67 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `LEGN` | 54 | $19.61 | $2.15 | — | $5,363.12 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+7.8; leftover $1070.67 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `OMDA` | 51 | $20.90 | $2.14 | — | $4,295.08 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; ret5=+0.6; leftover $1070.67 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `PACB` | 457 | $2.34 | $5.90 | — | $3,219.80 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; ret5=+68.1; leftover $1070.67 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `PGEN` | 125 | $8.50 | $2.37 | — | $2,154.93 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+15.1; leftover $1070.67 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `TRLV` | 98 | $10.87 | $2.28 | — | $1,087.39 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_mover; 🔵; ret5=-13.1; leftover $1070.67 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `ABSI` | 99 | $10.80 | $2.29 | — | $15.90 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+10.5; leftover $1070.67 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.90 | ▼ close $8,476.58 vs 09:30 $8,594.35 (session -67.21) | 16:00 close · cash $15.90 · equity $8,476.58 vs 09:30 $8,594.35 (-117.77; session marks -67.21) · 8 name(s) marked open→close (per-name table). CAPR×114 09:30 $9.36 → close $8.94 -47.88; DOCS×37 09:30 $28.91 → close $28.50 -15.17; LEGN×54 09:30 $19.61 → close $19.32 -15.66; OMDA×51 09:30 $20.90 → close $20.41 -24.99; PACB×457 09:30 $2.34 → close $2.51 +77.69; PGEN×125 09:30 $8.50 → close $8.21 -36.25; TRLV×98 09:30 $10.87 → close $10.87 +0.00; ABSI×99 09:30 $10.80 → close $10.75 -4.95 | — |
 
 ## Not taken
 

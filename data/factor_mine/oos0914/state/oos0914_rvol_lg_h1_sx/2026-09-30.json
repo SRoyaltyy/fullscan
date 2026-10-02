@@ -1,0 +1,87 @@
+{
+  "buys": [],
+  "cash": 4463.4,
+  "date": "2026-09-30",
+  "equity": 9475.08,
+  "fees": 10.9302,
+  "fills": [
+    {
+      "fees": 8.8364,
+      "fill_rule": "open",
+      "pnl": -152.54,
+      "price": 3.12,
+      "shares": 675,
+      "side": "SELL",
+      "ticker": "AMC"
+    },
+    {
+      "fees": 2.0938,
+      "fill_rule": "open",
+      "pnl": 154.09,
+      "price": 93.83,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "KOD"
+    }
+  ],
+  "holdings": [
+    "AGEN",
+    "NAUT"
+  ],
+  "mean": 2.1265,
+  "n_trades_today": 2,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 3.12,
+      "shares": 675,
+      "side": "SELL",
+      "ticker": "AMC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 93.83,
+      "shares": 25,
+      "side": "SELL",
+      "ticker": "KOD"
+    }
+  ],
+  "state": {
+    "after": "2026-09-30",
+    "cash": 4463.4,
+    "pos": {
+      "AGEN": {
+        "close_px": 9.930000305175781,
+        "cost": 2244.7385999999997,
+        "entry_date": "2026-09-29",
+        "entry_px": 9.58,
+        "fee_in": 3.0186,
+        "last_px": 9.58,
+        "min_hold": 1,
+        "notional": 2241.72,
+        "peak_px": 9.58,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,ohlc_hot; ret5=+13.2; leftover $2243.55",
+        "shares": 234,
+        "ticker": "AGEN",
+        "unpriced_held": true
+      },
+      "NAUT": {
+        "close_px": 1.4199999570846558,
+        "cost": 2267.6247,
+        "entry_date": "2026-09-29",
+        "entry_px": 1.185,
+        "fee_in": 24.4197,
+        "last_px": 1.185,
+        "min_hold": 1,
+        "notional": 2243.205,
+        "peak_px": 1.185,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; ret5=+16.2; leftover $2243.55",
+        "shares": 1893,
+        "ticker": "NAUT",
+        "unpriced_held": true
+      }
+    },
+    "yday_equity": 9475.08
+  }
+}

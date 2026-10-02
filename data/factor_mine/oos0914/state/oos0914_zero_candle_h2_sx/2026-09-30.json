@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 246.98,
+  "date": "2026-09-30",
+  "equity": 10114.1,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "MDB",
+    "PDFS",
+    "RGEN",
+    "ZSQR"
+  ],
+  "mean": 1.1929,
+  "n_trades_today": 0,
+  "recipe": "oos0914_zero_candle_h2_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-09-30",
+    "cash": 246.98,
+    "pos": {
+      "MDB": {
+        "close_px": 348.6099853515625,
+        "cost": 2348.026,
+        "entry_date": "2026-09-29",
+        "entry_px": 335.145,
+        "fee_in": 2.011,
+        "last_px": 341.0,
+        "min_hold": 2,
+        "notional": 2346.015,
+        "peak_px": 341.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_mover; \u26aa; ret5=-17.8; leftover $2554.85",
+        "shares": 7,
+        "ticker": "MDB"
+      },
+      "PDFS": {
+        "close_px": 51.04999923706055,
+        "cost": 2514.64,
+        "entry_date": "2026-09-29",
+        "entry_px": 50.25,
+        "fee_in": 2.14,
+        "last_px": 50.529998779296875,
+        "min_hold": 2,
+        "notional": 2512.5,
+        "peak_px": 50.529998779296875,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten; \u26aa; ret5=+6.5; leftover $2554.85",
+        "shares": 50,
+        "ticker": "PDFS"
+      },
+      "RGEN": {
+        "close_px": 192.22999572753906,
+        "cost": 2550.029,
+        "entry_date": "2026-09-29",
+        "entry_px": 196.0,
+        "fee_in": 2.029,
+        "last_px": 193.08999633789062,
+        "min_hold": 2,
+        "notional": 2548.0,
+        "peak_px": 196.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+7.4; leftover $2554.85",
+        "shares": 13,
+        "ticker": "RGEN"
+      },
+      "ZSQR": {
+        "close_px": 4.159999847412109,
+        "cost": 2559.7358999999997,
+        "entry_date": "2026-09-29",
+        "entry_px": 4.47,
+        "fee_in": 7.3659,
+        "last_px": 4.119999885559082,
+        "min_hold": 2,
+        "notional": 2552.37,
+        "peak_px": 4.47,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_gainer,yday_mover; \u26aa; ret5=+72.0; leftover $2554.85",
+        "shares": 571,
+        "ticker": "ZSQR"
+      }
+    },
+    "yday_equity": 10114.1
+  }
+}

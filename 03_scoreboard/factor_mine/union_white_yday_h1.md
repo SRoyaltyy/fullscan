@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · union looker: 0 red cameras + yesterday up, rank +G−R
 
-Cash book **-15.52%** ($8,448) · signal-only (no cash/fees) was +1.95%. Starts YES **3/30**. Fills 199 · skips 2 · realized $-327.39.
+Cash book **-14.96%** ($8,504) · signal-only (no cash/fees) was +1.95%. Starts YES **3/30**. Fills 205 · skips 2 · realized $-327.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -341,6 +341,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.81 | ▼ close $8,448.08 vs 09:30 $8,612.39 (session -147.68) | 16:00 close · cash $213.81 · equity $8,448.08 vs 09:30 $8,612.39 (-164.31; session marks -147.68) · 7 name(s) marked open→close (per-name table). ADMA×122 09:30 $10.04 → close $9.96 -9.76; BB×138 09:30 $8.86 → close $8.72 -19.32; PDFS×24 09:30 $50.25 → close $49.77 -11.52; RGEN×6 09:30 $196.00 → close $194.57 -8.58; VFC×84 09:30 $14.51 → close $14.50 -0.84; SN×6 09:30 $184.05 → close $182.44 -9.66; ZSQR×275 09:30 $4.47 → close $4.15 -88.00 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $213.81 | ▲ 09:30 equity $8,448.08 vs yday $8,448.08 (+0.00) | 09:30 open · cash $213.81 (unchanged overnight, no fees) · equity $8,448.08 vs prior close $8,448.08 (+0.00) · 7 name(s) re-marked at the open (per-name table). ADMA×122 yday $9.96 → 09:30 $9.96 +0.00; BB×138 yday $8.72 → 09:30 $8.72 +0.00; PDFS×24 yday $49.77 → 09:30 $49.77 +0.00; RGEN×6 yday $194.57 → 09:30 $194.57 +0.00; SN×6 yday $182.44 → 09:30 $182.44 +0.00; VFC×84 yday $14.50 → 09:30 $14.50 +0.00; ZSQR×275 yday $4.15 → 09:30 $4.15 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $213.81 | ▲ close $8,448.08 vs 09:30 $8,448.08 (session +0.00) | 16:00 close · cash $213.81 · equity $8,448.08 vs 09:30 $8,448.08 (+0.00; session marks +0.00) · 7 name(s) marked open→close (per-name table). ADMA×122 09:30 $9.96 → close $9.96 +0.00; BB×138 09:30 $8.72 → close $8.72 +0.00; PDFS×24 09:30 $49.77 → close $49.77 +0.00; RGEN×6 09:30 $194.57 → close $194.57 +0.00; SN×6 09:30 $182.44 → close $182.44 +0.00; VFC×84 09:30 $14.50 → close $14.50 +0.00; ZSQR×275 09:30 $4.15 → close $4.15 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $213.81 | ▲ 09:30 equity $8,518.43 vs yday $8,448.08 (+70.35) | 09:30 open · cash $213.81 (unchanged overnight, no fees) · equity $8,518.43 vs prior close $8,448.08 (+70.35) · 7 name(s) re-marked at the open (per-name table). ADMA×122 yday $9.96 → 09:30 $10.07 +13.42; BB×138 yday $8.72 → 09:30 $8.97 +34.50; PDFS×24 yday $49.77 → 09:30 $51.41 +39.36; RGEN×6 yday $194.57 → 09:30 $194.00 -3.42; SN×6 yday $182.44 → 09:30 $182.44 +0.00; VFC×84 yday $14.50 → 09:30 $14.11 -32.76; ZSQR×275 yday $4.15 → 09:30 $4.22 +19.25 | — |
+| 2026-10-01 09:30 ET | **SELL** | `ADMA` | 122 | $10.07 | $2.39 | $-1.08 | $1,439.96 | ▼ -1.08 after sell → book $8,516.04; vs 09:30 mark -2.39 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `BB` | 138 | $8.97 | $2.44 | $+10.34 | $2,675.39 | ▲ +10.34 after sell → book $8,513.61; vs 09:30 mark -2.43 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `PDFS` | 24 | $51.41 | $2.08 | $+23.70 | $3,907.14 | ▲ +23.70 after sell → book $8,511.52; vs 09:30 mark -2.09 | exit unpriced hold on first bar after 2 sess | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SELL** | `RGEN` | 6 | $194.00 | $2.03 | $-16.04 | $5,069.12 | ▼ -16.04 after sell → book $8,509.50; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `VFC` | 84 | $14.11 | $2.27 | $-38.11 | $6,252.09 | ▼ -38.11 after sell → book $8,507.23; vs 09:30 mark -2.27 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `ZSQR` | 275 | $4.22 | $3.60 | $-75.90 | $7,408.99 | ▼ -75.90 after sell → book $8,503.63; vs 09:30 mark -3.60 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,408.99 | ▲ close $8,503.63 vs 09:30 $8,518.43 (session +0.00) | 16:00 close · cash $7,408.99 · equity $8,503.63 vs 09:30 $8,518.43 (-14.80; session marks +0.00) · 1 name(s) marked open→close (per-name table). SN×6 09:30 $182.44 → close $182.44 +0.00 | — |
 
 ## Not taken
 

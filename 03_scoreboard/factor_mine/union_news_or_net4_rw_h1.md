@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `rank_w` · sell `list` · S-boost `none` · OR news + net≥4; leftover weighted by camera rank
 
-Cash book **-26.08%** ($7,392) · signal-only (no cash/fees) was -7.44%. Starts YES **5/30**. Fills 105 · skips 30 · realized $-225.56.
+Cash book **-37.60%** ($6,240) · signal-only (no cash/fees) was -7.44%. Starts YES **5/30**. Fills 110 · skips 30 · realized $-225.56.
 
 ## How this sleeve decides (like you are 10)
 
@@ -247,6 +247,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $186.71 | ▼ close $7,392.04 vs 09:30 $7,698.20 (session -291.00) | 16:00 close · cash $186.71 · equity $7,392.04 vs 09:30 $7,698.20 (-306.16; session marks -291.00) · 3 name(s) marked open→close (per-name table). ZSQR×861 09:30 $4.47 → close $4.15 -275.52; BURL×9 09:30 $268.37 → close $270.05 +15.12; LQDA×17 09:30 $72.49 → close $70.69 -30.60 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $186.71 | ▲ 09:30 equity $7,392.04 vs yday $7,392.04 (+0.00) | 09:30 open · cash $186.71 (unchanged overnight, no fees) · equity $7,392.04 vs prior close $7,392.04 (+0.00) · 3 name(s) re-marked at the open (per-name table). BURL×9 yday $270.05 → 09:30 $270.05 +0.00; LQDA×17 yday $70.69 → 09:30 $70.69 +0.00; ZSQR×861 yday $4.15 → 09:30 $4.15 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $186.71 | ▲ close $7,392.04 vs 09:30 $7,392.04 (session +0.00) | 16:00 close · cash $186.71 · equity $7,392.04 vs 09:30 $7,392.04 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). BURL×9 09:30 $270.05 → close $270.05 +0.00; LQDA×17 09:30 $70.69 → close $70.69 +0.00; ZSQR×861 09:30 $4.15 → close $4.15 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $186.71 | ▼ 09:30 equity $6,656.01 vs yday $7,392.04 (-736.03) | 09:30 open · cash $186.71 (unchanged overnight, no fees) · equity $6,656.01 vs prior close $7,392.04 (-736.03) · 3 name(s) re-marked at the open (per-name table). BURL×9 yday $270.05 → 09:30 $269.84 -1.89; LQDA×17 yday $70.69 → 09:30 $23.96 -794.41; ZSQR×861 yday $4.15 → 09:30 $4.22 +60.27 | — |
+| 2026-10-01 09:30 ET | **SELL** | `BURL` | 9 | $269.84 | $2.05 | $+9.17 | $2,613.22 | ▲ +9.17 after sell → book $6,653.96; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `LQDA` | 17 | $23.96 | $2.06 | $-829.11 | $3,018.48 | ▼ -829.11 after sell → book $6,651.90; vs 09:30 mark -2.06 | exit unpriced hold on first bar after 2 sess | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SELL** | `ZSQR` | 861 | $4.22 | $11.28 | $-237.64 | $6,640.62 | ▼ -237.64 after sell → book $6,640.62; vs 09:30 mark -11.28 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **BUY** | `PRGS` | 109 | $40.52 | $2.32 | — | $2,221.63 | — | OR news + net≥4; leftover weighted by camera rank; gate cam_net_min=4,news_or_headline=True; rank cond; list earn_react; 🔵; ret5=-2.6; leftover $4427.08 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `NTAP` | 10 | $211.75 | $2.02 | — | $102.11 | — | OR news + net≥4; leftover weighted by camera rank; gate cam_net_min=4,news_or_headline=True; rank cond; list ohlc_hot; ret5=+7.0; leftover $2213.54 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $102.11 | ▼ close $6,239.83 vs 09:30 $6,656.01 (session -396.46) | 16:00 close · cash $102.11 · equity $6,239.83 vs 09:30 $6,656.01 (-416.18; session marks -396.46) · 2 name(s) marked open→close (per-name table). PRGS×109 09:30 $40.52 → close $36.58 -429.46; NTAP×10 09:30 $211.75 → close $215.05 +33.00 | — |
 
 ## Not taken
 

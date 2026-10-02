@@ -2296,7 +2296,9 @@ def append_nightly(*, through: str = "", write: bool = False) -> dict:
     # are already on disk are not rebuilt.
     lock_books([d for d in dates if d <= nxt], recipes)
     if TRAIN_REPORT.is_file():
-        refresh_published_from_ledgers(through=closed)
+        # Publish the day just locked. A later missing day stays for the
+        # next run; asking the view for it would refuse this append.
+        refresh_published_from_ledgers(through=nxt)
     print(f"[oos0914] nightly: appended {nxt}", flush=True)
     return {"appended": nxt}
 

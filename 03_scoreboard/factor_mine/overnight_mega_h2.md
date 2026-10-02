@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight_mega` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · same mega calendar; hold 2 also keeps the session after the print
 
-Cash book **+0.00%** ($10,000) · signal-only (no cash/fees) was -8.07%. Starts YES **1/30**. Fills 10 · skips 27 · realized $-735.01.
+Cash book **-0.88%** ($9,912) · signal-only (no cash/fees) was -8.07%. Starts YES **1/30**. Fills 11 · skips 27 · realized $-735.01.
 
 ## How this sleeve decides (like you are 10)
 
@@ -148,6 +148,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,000.00 | ▲ close $10,000.00 vs 09:30 $10,000.00 (session +0.00) | 16:00 close · cash $10,000.00 · no lots left · equity $10,000.00. | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,000.00 | ▲ close $10,000.00 vs 09:30 $10,000.00 (session +0.00) | 16:00 close · cash $10,000.00 · no lots left · equity $10,000.00. | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-01 09:30 ET | **BUY** | `NKE` | 281 | $35.45 | $3.62 | — | $34.93 | — | same mega calendar; hold 2 also keeps the session after the print; list overnight,overnight_mega; ret5=-1.8; leftover $10000.00 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $34.93 | ▼ close $9,912.08 vs 09:30 $10,000.00 (session -84.30) | 16:00 close · cash $34.93 · equity $9,912.08 vs 09:30 $10,000.00 (-87.92; session marks -84.30) · 1 name(s) marked open→close (per-name table). NKE×281 09:30 $35.45 → close $35.15 -84.30 | — |
 
 ## Not taken
 

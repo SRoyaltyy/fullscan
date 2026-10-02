@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-20.72%** ($7,928) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 120 · skips 51 · realized $+1398.96.
+Cash book **-29.51%** ($7,049) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 127 · skips 51 · realized $+1398.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -261,6 +261,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.77 | ▼ close $7,928.06 vs 09:30 $8,219.32 (session -267.98) | 16:00 close · cash $20.77 · equity $7,928.06 vs 09:30 $8,219.32 (-291.26; session marks -267.98) · 4 name(s) marked open→close (per-name table). ZSQR×1287 09:30 $4.47 → close $4.15 -411.84; BURL×3 09:30 $268.37 → close $270.05 +5.04; LQDA×11 09:30 $72.49 → close $70.69 -19.80; GLND×206 09:30 $3.98 → close $4.75 +158.62 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.77 | ▲ 09:30 equity $7,928.06 vs yday $7,928.06 (+0.00) | 09:30 open · cash $20.77 (unchanged overnight, no fees) · equity $7,928.06 vs prior close $7,928.06 (+0.00) · 4 name(s) re-marked at the open (per-name table). BURL×3 yday $270.05 → 09:30 $270.05 +0.00; GLND×206 yday $4.75 → 09:30 $4.75 +0.00; LQDA×11 yday $70.69 → 09:30 $70.69 +0.00; ZSQR×1287 yday $4.15 → 09:30 $4.15 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.77 | ▲ close $7,928.06 vs 09:30 $7,928.06 (session +0.00) | 16:00 close · cash $20.77 · equity $7,928.06 vs 09:30 $7,928.06 (+0.00; session marks +0.00) · 4 name(s) marked open→close (per-name table). BURL×3 09:30 $270.05 → close $270.05 +0.00; GLND×206 09:30 $4.75 → close $4.75 +0.00; LQDA×11 09:30 $70.69 → close $70.69 +0.00; ZSQR×1287 09:30 $4.15 → close $4.15 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.77 | ▼ 09:30 equity $7,567.35 vs yday $7,928.06 (-360.71) | 09:30 open · cash $20.77 (unchanged overnight, no fees) · equity $7,567.35 vs prior close $7,928.06 (-360.71) · 4 name(s) re-marked at the open (per-name table). BURL×3 yday $270.05 → 09:30 $269.84 -0.63; GLND×206 yday $4.75 → 09:30 $5.06 +63.86; LQDA×11 yday $70.69 → 09:30 $23.96 -514.03; ZSQR×1287 yday $4.15 → 09:30 $4.22 +90.09 | — |
+| 2026-10-01 09:30 ET | **SELL** | `BURL` | 3 | $269.84 | $2.02 | $+0.39 | $828.27 | ▲ +0.39 after sell → book $7,565.33; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `GLND` | 206 | $5.06 | $2.70 | $+217.12 | $1,867.93 | ▲ +217.12 after sell → book $7,562.63; vs 09:30 mark -2.70 | exit unpriced hold on first bar after 2 sess | join🔴 sector🔴 gen🔴 news🟢 digest🟢 judge🟡 ab🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SELL** | `LQDA` | 11 | $23.96 | $2.04 | $-537.90 | $2,129.45 | ▼ -537.90 after sell → book $7,560.59; vs 09:30 mark -2.04 | exit unpriced hold on first bar after 2 sess | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SELL** | `ZSQR` | 1287 | $4.22 | $16.86 | $-355.21 | $7,543.73 | ▼ -355.21 after sell → book $7,543.73; vs 09:30 mark -16.86 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **BUY** | `PRGS` | 130 | $40.52 | $2.38 | — | $2,273.75 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list earn_react; 🔵; ret5=-2.6; leftover $5280.61 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `NTAP` | 3 | $211.75 | $2.00 | — | $1,636.50 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; ret5=+7.0; leftover $754.37 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `TLSA` | 679 | $1.11 | $8.76 | — | $874.05 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+5.7; leftover $754.37 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $874.05 | ▼ close $7,048.66 vs 09:30 $7,567.35 (session -481.93) | 16:00 close · cash $874.05 · equity $7,048.66 vs 09:30 $7,567.35 (-518.69; session marks -481.93) · 3 name(s) marked open→close (per-name table). PRGS×130 09:30 $40.52 → close $36.58 -512.20; NTAP×3 09:30 $211.75 → close $215.05 +9.90; TLSA×679 09:30 $1.11 → close $1.14 +20.37 | — |
 
 ## Not taken
 

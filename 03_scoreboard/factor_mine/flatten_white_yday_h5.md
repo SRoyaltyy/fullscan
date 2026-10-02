@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · flatten looker: 0 red + yesterday up
 
-Cash book **-6.98%** ($9,302) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 67 · skips 119 · realized $-62.52.
+Cash book **-6.71%** ($9,329) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 72 · skips 119 · realized $-62.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -209,6 +209,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $31.24 | ▼ close $9,301.65 vs 09:30 $9,368.75 (session -62.90) | 16:00 close · cash $31.24 · equity $9,301.65 vs 09:30 $9,368.75 (-67.10; session marks -62.90) · 6 name(s) marked open→close (per-name table). A×7 09:30 $174.49 → close $175.03 +3.78; HALO×10 09:30 $112.89 → close $111.56 -13.30; MRVI×6 09:30 $7.52 → close $7.65 +0.78; OMER×56 09:30 $19.26 → close $19.25 -0.56; PDFS×58 09:30 $50.25 → close $49.77 -27.84; SN×16 09:30 $184.05 → close $182.44 -25.76 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $31.24 | ▲ 09:30 equity $9,301.65 vs yday $9,301.65 (+0.00) | 09:30 open · cash $31.24 (unchanged overnight, no fees) · equity $9,301.65 vs prior close $9,301.65 (+0.00) · 6 name(s) re-marked at the open (per-name table). A×7 yday $175.03 → 09:30 $175.03 +0.00; HALO×10 yday $111.56 → 09:30 $111.56 +0.00; MRVI×6 yday $7.65 → 09:30 $7.65 +0.00; OMER×56 yday $19.25 → 09:30 $19.25 +0.00; PDFS×58 yday $49.77 → 09:30 $49.77 +0.00; SN×16 yday $182.44 → 09:30 $182.44 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $31.24 | ▲ close $9,301.65 vs 09:30 $9,301.65 (session +0.00) | 16:00 close · cash $31.24 · equity $9,301.65 vs 09:30 $9,301.65 (+0.00; session marks +0.00) · 6 name(s) marked open→close (per-name table). A×7 09:30 $175.03 → close $175.03 +0.00; HALO×10 09:30 $111.56 → close $111.56 +0.00; MRVI×6 09:30 $7.65 → close $7.65 +0.00; OMER×56 09:30 $19.25 → close $19.25 +0.00; PDFS×58 09:30 $49.77 → close $49.77 +0.00; SN×16 09:30 $182.44 → close $182.44 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $31.24 | ▲ 09:30 equity $9,338.10 vs yday $9,301.65 (+36.45) | 09:30 open · cash $31.24 (unchanged overnight, no fees) · equity $9,338.10 vs prior close $9,301.65 (+36.45) · 6 name(s) re-marked at the open (per-name table). A×7 yday $175.03 → 09:30 $172.00 -21.21; HALO×10 yday $111.56 → 09:30 $109.93 -16.30; MRVI×6 yday $7.65 → 09:30 $7.67 +0.12; OMER×56 yday $19.25 → 09:30 $18.87 -21.28; PDFS×58 yday $49.77 → 09:30 $51.41 +95.12; SN×16 yday $182.44 → 09:30 $182.44 +0.00 | — |
+| 2026-10-01 09:30 ET | **SELL** | `A` | 7 | $172.00 | $2.03 | $+34.18 | $1,233.21 | ▲ +34.18 after sell → book $9,336.07; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `HALO` | 10 | $109.93 | $2.04 | $-73.26 | $2,330.47 | ▼ -73.26 after sell → book $9,334.03; vs 09:30 mark -2.04 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `MRVI` | 6 | $7.67 | $0.50 | $-0.86 | $2,375.99 | ▼ -0.86 after sell → book $9,333.53; vs 09:30 mark -0.50 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `OMER` | 56 | $18.87 | $2.18 | $-104.02 | $3,430.53 | ▼ -104.02 after sell → book $9,331.35; vs 09:30 mark -2.18 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `PDFS` | 58 | $51.41 | $2.20 | $+62.92 | $6,410.11 | ▲ +62.92 after sell → book $9,329.15; vs 09:30 mark -2.20 | exit unpriced hold on first bar after 2 sess | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,410.11 | ▲ close $9,329.15 vs 09:30 $9,338.10 (session +0.00) | 16:00 close · cash $6,410.11 · equity $9,329.15 vs 09:30 $9,338.10 (-8.95; session marks +0.00) · 1 name(s) marked open→close (per-name table). SN×16 09:30 $182.44 → close $182.44 +0.00 | — |
 
 ## Not taken
 

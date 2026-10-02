@@ -169,6 +169,11 @@
       "bytes": 173567,
       "sha256": "a6a0a3b65c39cb54b132a04435416a1c667c840f7c580bfbe8cb02a5dddc9ce9",
       "written_at": "2026-09-30T20:13:30.684204-04:00"
+    },
+    "2026-10-01": {
+      "bytes": 172904,
+      "sha256": "5722fd9d465459b1106541b54b2fc880aed3ac8a21307fdc4ec1fbed83e92cee",
+      "written_at": "2026-10-02T00:56:41.876722-04:00"
     }
   },
   "excel_signals": {
@@ -1380,6 +1385,12 @@
       "encoding": "gzip",
       "sha256": "76d3078cb6d560413a833cd9ce19c967b4f5bfbcff209c627b164e96a46112a3",
       "written_at": "2026-09-30T20:14:14.152461-04:00"
+    },
+    "2026-10-01": {
+      "bytes": 21746826,
+      "encoding": "gzip",
+      "sha256": "d4033b327f259379af054b3685e1c3fbf20b6a40029222138d683dc5961f43dd",
+      "written_at": "2026-10-02T00:57:35.241177-04:00"
     }
   },
   "lineups": {
@@ -1552,6 +1563,11 @@
       "bytes": 865,
       "sha256": "1539893078fd0d0ffae8f2616562b51c9e8b3aaa30da6dd22387c718b6e1ba51",
       "written_at": "2026-09-30T20:14:37.366597-04:00"
+    },
+    "2026-10-01": {
+      "bytes": 865,
+      "sha256": "cde8994faf57d83555a735cdcddc631a57b5bd7c2262d972e61a8e8a3fb04776",
+      "written_at": "2026-10-02T00:58:00.354119-04:00"
     }
   },
   "prices": {
@@ -1574,6 +1590,11 @@
       "bytes": 584740,
       "sha256": "60dc4e2a4a19f21442d46ab7d469a7f3f72ebf5411881bef17c653360be635c6",
       "written_at": "2026-09-30T20:13:30.706446-04:00"
+    },
+    "2026-10-01": {
+      "bytes": 639644,
+      "sha256": "5b9bd9a3cf65f7bc1e77e3003726e4830ee3a405662b29c64c1ea92c719f75a7",
+      "written_at": "2026-10-02T00:56:41.899804-04:00"
     }
   },
   "recipe_rules": {
@@ -9634,6 +9655,49 @@
         "ZSQR"
       ],
       "written_at": "2026-09-30T20:13:34.651006-04:00"
+    },
+    "2026-10-01": {
+      "bytes": 300617,
+      "dropped_missing_bars": [
+        "HYAC-U",
+        "SLM",
+        "SM",
+        "SMA",
+        "SMG",
+        "SN",
+        "SNN",
+        "SNY",
+        "SO",
+        "SOLV",
+        "SONY",
+        "SOUN",
+        "SPCX",
+        "SSRM",
+        "STE",
+        "STEP",
+        "STLA",
+        "STLD",
+        "STNG",
+        "STTK",
+        "SUNB",
+        "SVM",
+        "SWK",
+        "SWRD",
+        "TAC",
+        "TARS",
+        "TCPC",
+        "TDW",
+        "TEL",
+        "TEM"
+      ],
+      "heat_vintage": "2026-10-01",
+      "n_rows": 76,
+      "sha256": "bda342ae61828d2b58fab310b59416a9fbb6d8e9ff69fb5db93bc90264b08660",
+      "unpriced_held": [
+        "SN",
+        "TEM"
+      ],
+      "written_at": "2026-10-02T00:56:46.441011-04:00"
     }
   },
   "version": 1

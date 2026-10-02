@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **-14.32%** ($8,568) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 46 · skips 85 · realized $-1342.35.
+Cash book **-12.13%** ($8,787) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 48 · skips 85 · realized $-1342.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -187,6 +187,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $246.94 | ▲ close $8,568.25 vs 09:30 $8,498.14 (session +70.11) | 16:00 close · cash $246.94 · equity $8,568.25 vs 09:30 $8,498.14 (+70.11; session marks +70.11) · 1 name(s) marked open→close (per-name table). COST×9 09:30 $916.80 → close $924.59 +70.11 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $246.94 | ▲ 09:30 equity $8,568.25 vs yday $8,568.25 (+0.00) | 09:30 open · cash $246.94 (unchanged overnight, no fees) · equity $8,568.25 vs prior close $8,568.25 (+0.00) · 1 name(s) re-marked at the open (per-name table). COST×9 yday $924.59 → 09:30 $924.59 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $246.94 | ▲ close $8,568.25 vs 09:30 $8,568.25 (session +0.00) | 16:00 close · cash $246.94 · equity $8,568.25 vs 09:30 $8,568.25 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). COST×9 09:30 $924.59 → close $924.59 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $246.94 | ▼ 09:30 equity $8,444.77 vs yday $8,568.25 (-123.48) | 09:30 open · cash $246.94 (unchanged overnight, no fees) · equity $8,444.77 vs prior close $8,568.25 (-123.48) · 1 name(s) re-marked at the open (per-name table). COST×9 yday $924.59 → 09:30 $910.87 -123.48 | — |
+| 2026-10-01 09:30 ET | **SELL** | `COST` | 9 | $910.87 | $2.09 | $+210.72 | $8,442.68 | ▲ +210.72 after sell → book $8,442.68; vs 09:30 mark -2.09 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **BUY** | `MU` | 8 | $1054.08 | $2.01 | — | $8.02 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; ret5=-0.6; leftover $8442.68 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.02 | ▲ close $8,787.14 vs 09:30 $8,444.77 (session +346.48) | 16:00 close · cash $8.02 · equity $8,787.14 vs 09:30 $8,444.77 (+342.37; session marks +346.48) · 1 name(s) marked open→close (per-name table). MU×8 09:30 $1054.08 → close $1097.39 +346.48 | — |
 
 ## Not taken
 

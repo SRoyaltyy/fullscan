@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-22.27%** ($7,773) · signal-only (no cash/fees) was -37.95%. Starts YES **0/30**. Fills 35 · skips 179 · realized $-881.39.
+Cash book **-20.41%** ($7,959) · signal-only (no cash/fees) was -37.95%. Starts YES **0/30**. Fills 39 · skips 179 · realized $-881.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -171,6 +171,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.34 | ▼ close $7,772.62 vs 09:30 $7,775.54 (session -0.12) | 16:00 close · cash $11.34 · equity $7,772.62 vs 09:30 $7,775.54 (-2.92; session marks -0.12) · 3 name(s) marked open→close (per-name table). NEOV×436 09:30 $2.29 → close $2.54 +109.00; SFIX×496 09:30 $2.47 → close $2.53 +29.76; CNXC×217 09:30 $25.52 → close $24.88 -138.88 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11.34 | ▲ 09:30 equity $7,772.62 vs yday $7,772.62 (+0.00) | 09:30 open · cash $11.34 (unchanged overnight, no fees) · equity $7,772.62 vs prior close $7,772.62 (+0.00) · 3 name(s) re-marked at the open (per-name table). CNXC×217 yday $24.88 → 09:30 $24.88 +0.00; NEOV×436 yday $2.54 → 09:30 $2.54 +0.00; SFIX×496 yday $2.53 → 09:30 $2.53 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.34 | ▲ close $7,772.62 vs 09:30 $7,772.62 (session +0.00) | 16:00 close · cash $11.34 · equity $7,772.62 vs 09:30 $7,772.62 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). CNXC×217 09:30 $24.88 → close $24.88 +0.00; NEOV×436 09:30 $2.54 → close $2.54 +0.00; SFIX×496 09:30 $2.53 → close $2.53 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11.34 | ▲ 09:30 equity $8,045.23 vs yday $7,772.62 (+272.61) | 09:30 open · cash $11.34 (unchanged overnight, no fees) · equity $8,045.23 vs prior close $7,772.62 (+272.61) · 3 name(s) re-marked at the open (per-name table). CNXC×217 yday $24.88 → 09:30 $25.97 +236.53; NEOV×436 yday $2.54 → 09:30 $2.60 +26.16; SFIX×496 yday $2.53 → 09:30 $2.55 +9.92 | — |
+| 2026-10-01 09:30 ET | **SELL** | `CNXC` | 217 | $25.97 | $2.88 | $+91.97 | $5,643.95 | ▲ +91.97 after sell → book $8,042.35; vs 09:30 mark -2.88 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `NEOV` | 436 | $2.60 | $5.71 | $-360.13 | $6,771.84 | ▼ -360.13 after sell → book $8,036.64; vs 09:30 mark -5.71 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `SFIX` | 496 | $2.55 | $6.49 | $-231.13 | $8,030.15 | ▼ -231.13 after sell → book $8,030.15; vs 09:30 mark -6.49 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-10-01 09:30 ET | **BUY** | `NKE` | 226 | $35.45 | $2.92 | — | $15.54 | — | baseline list, no extra gate; list overnight,overnight_mega; ret5=-1.8; leftover $8030.15 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.54 | ▼ close $7,959.44 vs 09:30 $8,045.23 (session -67.80) | 16:00 close · cash $15.54 · equity $7,959.44 vs 09:30 $8,045.23 (-85.79; session marks -67.80) · 1 name(s) marked open→close (per-name table). NKE×226 09:30 $35.45 → close $35.15 -67.80 | — |
 
 ## Not taken
 

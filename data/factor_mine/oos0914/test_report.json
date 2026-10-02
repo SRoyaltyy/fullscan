@@ -11,7 +11,9 @@
     "2026-09-24",
     "2026-09-25",
     "2026-09-28",
-    "2026-09-29"
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01"
   ],
   "rules": [
     {
@@ -428,14 +430,92 @@
           "equity": 9060.14,
           "mean": -2.8425,
           "mean_flat_15bp": -2.3362
+        },
+        {
+          "date": "2026-09-30",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 2.17,
+          "equity": 9226.01,
+          "mean": 1.8308,
+          "mean_flat_15bp": 1.7981
+        },
+        {
+          "date": "2026-10-01",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 2.34,
+              "shares": 975,
+              "side": "BUY",
+              "ticker": "PACB"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.2,
+              "shares": 1902,
+              "side": "BUY",
+              "ticker": "QSI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.68,
+              "shares": 1358,
+              "side": "BUY",
+              "ticker": "PMVP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 149.45,
+              "shares": 14,
+              "side": "BUY",
+              "ticker": "FORM"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 2.52,
+              "shares": 930,
+              "side": "SELL",
+              "ticker": "HLP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 95.41,
+              "shares": 26,
+              "side": "SELL",
+              "ticker": "KOD"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.15,
+              "shares": 1915,
+              "side": "SELL",
+              "ticker": "SRFM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 4.22,
+              "shares": 509,
+              "side": "SELL",
+              "ticker": "ZSQR"
+            }
+          ],
+          "fees": 102.6382,
+          "cash": 136.38,
+          "equity": 9758.15,
+          "mean": 5.7678,
+          "mean_flat_15bp": 6.6149
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -9.399,
-      "start_day_win_rate": 0.0,
+      "after_fees_return": -2.419,
+      "start_day_win_rate": 0.2857,
       "best_stock": "SDGR",
-      "without_best_stock_return": -12.397
+      "without_best_stock_return": -5.658
     },
     {
       "name": "oos0914_rvol_lg_h1_sx",
@@ -995,14 +1075,93 @@
           "equity": 9277.79,
           "mean": 3.3827,
           "mean_flat_15bp": 3.5911
+        },
+        {
+          "date": "2026-09-30",
+          "buys": [],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 3.12,
+              "shares": 675,
+              "side": "SELL",
+              "ticker": "AMC"
+            },
+            {
+              "fill_rule": "open",
+              "price": 93.83,
+              "shares": 25,
+              "side": "SELL",
+              "ticker": "KOD"
+            }
+          ],
+          "fees": 10.9302,
+          "cash": 4463.4,
+          "equity": 9475.08,
+          "mean": 2.1265,
+          "mean_flat_15bp": 2.1195
+        },
+        {
+          "date": "2026-10-01",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 2.34,
+              "shares": 1011,
+              "side": "BUY",
+              "ticker": "PACB"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.2,
+              "shares": 1973,
+              "side": "BUY",
+              "ticker": "QSI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.68,
+              "shares": 1409,
+              "side": "BUY",
+              "ticker": "PMVP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 149.45,
+              "shares": 15,
+              "side": "BUY",
+              "ticker": "FORM"
+            }
+          ],
+          "sells": [
+            {
+              "fill_rule": "unpriced_exit",
+              "price": 9.95,
+              "shares": 234,
+              "side": "SELL",
+              "ticker": "AGEN"
+            },
+            {
+              "fill_rule": "unpriced_exit",
+              "price": 1.43,
+              "shares": 1893,
+              "side": "SELL",
+              "ticker": "NAUT"
+            }
+          ],
+          "fees": 86.5364,
+          "cash": 69.94,
+          "equity": 10121.29,
+          "mean": 6.8201,
+          "mean_flat_15bp": 7.3137
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -7.222,
-      "start_day_win_rate": 0.25,
-      "best_stock": "CYPH",
-      "without_best_stock_return": -8.801
+      "after_fees_return": 1.213,
+      "start_day_win_rate": 0.6429,
+      "best_stock": "QSI",
+      "without_best_stock_return": -2.472
     },
     {
       "name": "oos0914_break10_h1_sx",
@@ -1562,14 +1721,92 @@
           "equity": 7978.2,
           "mean": -0.6749,
           "mean_flat_15bp": -0.2375
+        },
+        {
+          "date": "2026-09-30",
+          "buys": [],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 2.42,
+              "shares": 833,
+              "side": "SELL",
+              "ticker": "HLP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 93.83,
+              "shares": 22,
+              "side": "SELL",
+              "ticker": "KOD"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.2,
+              "shares": 1687,
+              "side": "SELL",
+              "ticker": "SRFM"
+            },
+            {
+              "fill_rule": "open",
+              "price": 4.12,
+              "shares": 449,
+              "side": "SELL",
+              "ticker": "ZSQR"
+            }
+          ],
+          "fees": 40.9225,
+          "cash": 7958.44,
+          "equity": 7958.44,
+          "mean": -0.2477,
+          "mean_flat_15bp": 0.1826
+        },
+        {
+          "date": "2026-10-01",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 2.34,
+              "shares": 850,
+              "side": "BUY",
+              "ticker": "PACB"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.2,
+              "shares": 1658,
+              "side": "BUY",
+              "ticker": "QSI"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.68,
+              "shares": 1184,
+              "side": "BUY",
+              "ticker": "PMVP"
+            },
+            {
+              "fill_rule": "open",
+              "price": 149.45,
+              "shares": 12,
+              "side": "BUY",
+              "ticker": "FORM"
+            }
+          ],
+          "sells": [],
+          "fees": 49.6528,
+          "cash": 147.67,
+          "equity": 8505.39,
+          "mean": 6.8726,
+          "mean_flat_15bp": 7.0856
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -20.218,
-      "start_day_win_rate": 0.0,
-      "best_stock": "HLP",
-      "without_best_stock_return": -22.201
+      "after_fees_return": -14.946,
+      "start_day_win_rate": 0.3571,
+      "best_stock": "QSI",
+      "without_best_stock_return": -18.053
     },
     {
       "name": "oos0914_zero_candle_h2_sx",
@@ -1987,14 +2224,63 @@
           "equity": 9994.87,
           "mean": -2.1268,
           "mean_flat_15bp": -2.0242
+        },
+        {
+          "date": "2026-09-30",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 246.98,
+          "equity": 10114.1,
+          "mean": 1.1929,
+          "mean_flat_15bp": 1.1901
+        },
+        {
+          "date": "2026-10-01",
+          "buys": [],
+          "sells": [
+            {
+              "fill_rule": "open",
+              "price": 352.47,
+              "shares": 7,
+              "side": "SELL",
+              "ticker": "MDB"
+            },
+            {
+              "fill_rule": "open",
+              "price": 51.41,
+              "shares": 50,
+              "side": "SELL",
+              "ticker": "PDFS"
+            },
+            {
+              "fill_rule": "open",
+              "price": 194.0,
+              "shares": 13,
+              "side": "SELL",
+              "ticker": "RGEN"
+            },
+            {
+              "fill_rule": "open",
+              "price": 4.22,
+              "shares": 571,
+              "side": "SELL",
+              "ticker": "ZSQR"
+            }
+          ],
+          "fees": 13.7505,
+          "cash": 10202.64,
+          "equity": 10202.64,
+          "mean": 0.8754,
+          "mean_flat_15bp": 0.9352
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -0.051,
-      "start_day_win_rate": 0.0,
+      "after_fees_return": 2.026,
+      "start_day_win_rate": 0.4286,
       "best_stock": "WGS",
-      "without_best_stock_return": -2.497
+      "without_best_stock_return": -0.438
     }
   ],
   "baselines": {

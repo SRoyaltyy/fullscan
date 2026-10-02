@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 4
 
-Cash book **-22.21%** ($7,779) · signal-only (no cash/fees) was -11.70%. Starts YES **2/30**. Fills 100 · skips 143 · realized $-1899.45.
+Cash book **-28.60%** ($7,140) · signal-only (no cash/fees) was -11.70%. Starts YES **2/30**. Fills 108 · skips 143 · realized $-1899.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -242,6 +242,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $77.17 | ▼ close $7,779.16 vs 09:30 $7,998.07 (session -214.92) | 16:00 close · cash $77.17 · equity $7,779.16 vs 09:30 $7,998.07 (-218.91; session marks -214.92) · 6 name(s) marked open→close (per-name table). COST×2 09:30 $916.80 → close $924.59 +15.58; ILMN×6 09:30 $271.00 → close $272.00 +6.00; SECZ×110 09:30 $16.59 → close $15.84 -82.50; ZSQR×464 09:30 $4.47 → close $4.15 -148.48; BURL×1 09:30 $268.37 → close $270.05 +1.68; LQDA×4 09:30 $72.49 → close $70.69 -7.20 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $77.17 | ▲ 09:30 equity $7,779.16 vs yday $7,779.16 (+0.00) | 09:30 open · cash $77.17 (unchanged overnight, no fees) · equity $7,779.16 vs prior close $7,779.16 (+0.00) · 6 name(s) re-marked at the open (per-name table). BURL×1 yday $270.05 → 09:30 $270.05 +0.00; COST×2 yday $924.59 → 09:30 $924.59 +0.00; ILMN×6 yday $272.00 → 09:30 $272.00 +0.00; LQDA×4 yday $70.69 → 09:30 $70.69 +0.00; SECZ×110 yday $15.84 → 09:30 $15.84 +0.00; ZSQR×464 yday $4.15 → 09:30 $4.15 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $77.17 | ▲ close $7,779.16 vs 09:30 $7,779.16 (session +0.00) | 16:00 close · cash $77.17 · equity $7,779.16 vs 09:30 $7,779.16 (+0.00; session marks +0.00) · 6 name(s) marked open→close (per-name table). BURL×1 09:30 $270.05 → close $270.05 +0.00; COST×2 09:30 $924.59 → close $924.59 +0.00; ILMN×6 09:30 $272.00 → close $272.00 +0.00; LQDA×4 09:30 $70.69 → close $70.69 +0.00; SECZ×110 09:30 $15.84 → close $15.84 +0.00; ZSQR×464 09:30 $4.15 → close $4.15 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $77.17 | ▼ 09:30 equity $7,462.49 vs yday $7,779.16 (-316.67) | 09:30 open · cash $77.17 (unchanged overnight, no fees) · equity $7,462.49 vs prior close $7,779.16 (-316.67) · 6 name(s) re-marked at the open (per-name table). BURL×1 yday $270.05 → 09:30 $269.84 -0.21; COST×2 yday $924.59 → 09:30 $910.87 -27.44; ILMN×6 yday $272.00 → 09:30 $273.22 +7.32; LQDA×4 yday $70.69 → 09:30 $23.96 -186.92; SECZ×110 yday $15.84 → 09:30 $14.55 -141.90; ZSQR×464 yday $4.15 → 09:30 $4.22 +32.48 | — |
+| 2026-10-01 09:30 ET | **SELL** | `BURL` | 1 | $269.84 | $2.01 | $-2.54 | $345.00 | ▼ -2.54 after sell → book $7,460.48; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `COST` | 2 | $910.87 | $2.02 | $+43.72 | $2,164.72 | ▲ +43.72 after sell → book $7,458.46; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `ILMN` | 6 | $273.22 | $2.03 | $+2.32 | $3,802.01 | ▲ +2.32 after sell → book $7,456.43; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `LQDA` | 4 | $23.96 | $0.99 | $-197.11 | $3,896.85 | ▼ -197.11 after sell → book $7,455.43; vs 09:30 mark -1.00 | exit unpriced hold on first bar after 2 sess | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SELL** | `SECZ` | 110 | $14.55 | $2.35 | $-187.27 | $5,495.00 | ▼ -187.27 after sell → book $7,453.08; vs 09:30 mark -2.35 | exit unpriced hold on first bar after 4 sess | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-01 09:30 ET | **SELL** | `ZSQR` | 464 | $4.22 | $6.08 | $+154.98 | $7,447.01 | ▲ +154.98 after sell → book $7,447.01; vs 09:30 mark -6.07 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **BUY** | `PRGS` | 91 | $40.52 | $2.26 | — | $3,757.42 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate cam_net_min=4,news_or_headline=True; rank cond; list earn_react; 🔵; ret5=-2.6; leftover $3723.50 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `NTAP` | 17 | $211.75 | $2.04 | — | $155.63 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate cam_net_min=4,news_or_headline=True; rank cond; list ohlc_hot; ret5=+7.0; leftover $3723.50 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $155.63 | ▼ close $7,140.26 vs 09:30 $7,462.49 (session -302.44) | 16:00 close · cash $155.63 · equity $7,140.26 vs 09:30 $7,462.49 (-322.23; session marks -302.44) · 2 name(s) marked open→close (per-name table). PRGS×91 09:30 $40.52 → close $36.58 -358.54; NTAP×17 09:30 $211.75 → close $215.05 +56.10 | — |
 
 ## Not taken
 

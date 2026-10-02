@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · both+top4 hold5, stop −12% at 09:30 even inside hold
 
-Cash book **+2.67%** ($10,267) · signal-only (no cash/fees) was +22.84%. Starts YES **12/30**. Fills 74 · skips 137 · realized $+2194.89.
+Cash book **+1.98%** ($10,198) · signal-only (no cash/fees) was +22.84%. Starts YES **12/30**. Fills 77 · skips 137 · realized $+2194.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -217,6 +217,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,239.20 | ▼ close $10,266.68 vs 09:30 $10,282.29 (session -15.61) | 16:00 close · cash $6,239.20 · equity $10,266.68 vs 09:30 $10,282.29 (-15.61; session marks -15.61) · 3 name(s) marked open→close (per-name table). A×12 09:30 $174.49 → close $175.03 +6.48; HALO×17 09:30 $112.89 → close $111.56 -22.61; MRVI×4 09:30 $7.52 → close $7.65 +0.52 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,239.20 | ▲ 09:30 equity $10,266.68 vs yday $10,266.68 (+0.00) | 09:30 open · cash $6,239.20 (unchanged overnight, no fees) · equity $10,266.68 vs prior close $10,266.68 (+0.00) · 3 name(s) re-marked at the open (per-name table). A×12 yday $175.03 → 09:30 $175.03 +0.00; HALO×17 yday $111.56 → 09:30 $111.56 +0.00; MRVI×4 yday $7.65 → 09:30 $7.65 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,239.20 | ▲ close $10,266.68 vs 09:30 $10,266.68 (session +0.00) | 16:00 close · cash $6,239.20 · equity $10,266.68 vs 09:30 $10,266.68 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). A×12 09:30 $175.03 → close $175.03 +0.00; HALO×17 09:30 $111.56 → close $111.56 +0.00; MRVI×4 09:30 $7.65 → close $7.65 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,239.20 | ▼ 09:30 equity $10,202.69 vs yday $10,266.68 (-63.99) | 09:30 open · cash $6,239.20 (unchanged overnight, no fees) · equity $10,202.69 vs prior close $10,266.68 (-63.99) · 3 name(s) re-marked at the open (per-name table). A×12 yday $175.03 → 09:30 $172.00 -36.36; HALO×17 yday $111.56 → 09:30 $109.93 -27.71; MRVI×4 yday $7.65 → 09:30 $7.67 +0.08 | — |
+| 2026-10-01 09:30 ET | **SELL** | `A` | 12 | $172.00 | $2.05 | $+61.44 | $8,301.15 | ▲ +61.44 after sell → book $10,200.64; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `HALO` | 17 | $109.93 | $2.07 | $-121.75 | $10,167.89 | ▼ -121.75 after sell → book $10,198.57; vs 09:30 mark -2.07 | exit unpriced hold on first bar after 6 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `MRVI` | 4 | $7.67 | $0.34 | $-0.58 | $10,198.23 | ▼ -0.58 after sell → book $10,198.23; vs 09:30 mark -0.34 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,198.23 | ▲ close $10,198.23 vs 09:30 $10,202.69 (session +0.00) | 16:00 close · cash $10,198.23 · no lots left · equity $10,198.23. | — |
 
 ## Not taken
 
