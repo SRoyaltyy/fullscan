@@ -4936,6 +4936,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-01",
+          "actual_pct": -0.7,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
         }
       }
     },
@@ -6787,6 +6799,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-01",
+          "actual_pct": -10.19,
+          "actual_direction": "down",
+          "actual_magnitude_band": "severe",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -8026,6 +8050,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-01",
+          "actual_pct": 6.57,
+          "actual_direction": "up",
+          "actual_magnitude_band": "notable",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -8823,6 +8859,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-01",
+          "actual_pct": -1.31,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -9028,6 +9076,18 @@
           "actual_magnitude_band": "mild",
           "direction_hit": false,
           "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-01",
+          "actual_pct": -6.58,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
@@ -9239,6 +9299,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-01",
+          "actual_pct": -6.99,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "notable",
+          "confidence": 0.5
         }
       }
     },
@@ -9435,6 +9507,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-01",
+          "actual_pct": -6.44,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       }
     },
@@ -9528,6 +9612,18 @@
           "actual_pct": -3.68,
           "actual_direction": "down",
           "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-01",
+          "actual_pct": -9.76,
+          "actual_direction": "down",
+          "actual_magnitude_band": "severe",
           "direction_hit": false,
           "magnitude_hit": false,
           "predicted_direction": "flat",
@@ -16144,6 +16240,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.48
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-02",
+          "actual_pct": 0.73,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -22942,6 +23050,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-10-01",
+          "actual_pct": -6.26,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.42
         }
       }
     },
@@ -25348,6 +25468,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-10-02",
+          "actual_pct": 0.94,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.52
         }
       },
       "lesson_schema_ok": true
@@ -28426,6 +28558,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.54
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-10-02",
+          "actual_pct": -0.27,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -29437,7 +29581,20 @@
       "knowable_at_9am": "yes — the dominant rates-vs-oil offsetting pair was fully visible in the premarket Channel 1 tape (BZ=F -8.66%, 1w DGS30 +15bp); the 10:00 ET data prints were unknowable but non-decisive",
       "attribution_contested": "yes — Bloomberg/CNBC lead with oil, Yahoo with yields, TheStreet with consumer confidence, Reuters with tech",
       "outlier_watch": "NDX (-0.09%) outperformed Dow (-0.26%) despite the \"tech selloff\" headline; and Channel 1 showed gold +0.90%/silver +1.96% while news outlets reported \"gold fell again / two-month low\"",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-10-02",
+          "actual_pct": 0.68,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.52
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -30192,7 +30349,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-02_lesson.md",
       "sources_used": [
         {
           "url": "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
@@ -30279,7 +30436,9 @@
       "key_interaction": "Dovish NFP relief (positive) was partially offset by the still-elevated 5-handle long end and Hormuz inflation tax — the dovish impulse was spent by mid-morning, producing the afternoon fade despite the up close",
       "knowable_at_9am": "partially — the NFP miss itself was an unforeseeable binary, but the BN=GN reaction function (weak print = equity-positive) was knowable and was correctly applied",
       "attribution_contested": "no — outlets converge on jobs-report→hike-odds as the driver, with tech outlets emphasizing NVDA and macro outlets the Fed; no contradictions",
-      "outlier_watch": "Energy equities (XLE) fell while the broad market rose — the G7 reserve release is index-positive but energy-shareholder-negative; and all three indices closed well below their intraday highs"
+      "outlier_watch": "Energy equities (XLE) fell while the broad market rose — the G7 reserve release is index-positive but energy-shareholder-negative; and all three indices closed well below their intraday highs",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-10-02",
