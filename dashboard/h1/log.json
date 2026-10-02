@@ -4885,5 +4885,102 @@
     "reason": "stale_bar: previous-session bar used for SRFM, SECZ",
     "recipe": "union_hot_n4_h1__w0",
     "sha256": "fddd96bff4eb8cabcabe494edf7a31c43e9b47de616064fec0ac305e059973f8"
+  },
+  {
+    "added_buys": [],
+    "added_sells": [],
+    "cash_primary": 1.4018708987664468,
+    "date": "2026-09-28",
+    "equity_primary": 12535.536870898766,
+    "holdings": [
+      {
+        "cost_primary": 3362.5231499999995,
+        "entry_date": "2026-09-28",
+        "entry_px": 2.75,
+        "last_px": 2.75,
+        "min_hold": 1,
+        "peak_px": 2.75,
+        "shares": 1211,
+        "ticker": "FEAM"
+      },
+      {
+        "cost_primary": 3362.7218999999996,
+        "entry_date": "2026-09-28",
+        "entry_px": 4.68,
+        "last_px": 4.68,
+        "min_hold": 1,
+        "peak_px": 4.68,
+        "shares": 713,
+        "ticker": "SHMD"
+      },
+      {
+        "cost_primary": 3363.107025,
+        "entry_date": "2026-09-28",
+        "entry_px": 1.125,
+        "last_px": 1.125,
+        "min_hold": 1,
+        "peak_px": 1.125,
+        "shares": 2941,
+        "ticker": "SRFM"
+      },
+      {
+        "cost_primary": 2554.8969724884028,
+        "entry_date": "2026-09-25",
+        "entry_px": 15.581100463867188,
+        "last_px": 16.85,
+        "min_hold": 1,
+        "peak_px": 16.85,
+        "shares": 163,
+        "ticker": "USDE"
+      }
+    ],
+    "kind": "mark",
+    "open_fill_sha256": "fddd96bff4eb8cabcabe494edf7a31c43e9b47de616064fec0ac305e059973f8",
+    "plan_sha256": "68dd183b35ce7783269dd9b4ae699e2518c64f7eb9c953a69acece0675f884b6",
+    "pnl_status": "marked",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "70a4c57eacc368a72b5608a1043ba26c024752e8267c8d3857dfd184683a9e0c"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-28",
+    "entry_date": "2026-09-22",
+    "entry_px": 2.940000057220459,
+    "fill": 5.138,
+    "kind": "close",
+    "pnl_primary": 1958.94303715147,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "c10d63303fd71bd277561352648a0b3336b6b3394304bac22344d8fb9fa494ec",
+    "shares": 919,
+    "ticker": "GLND"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-28",
+    "entry_date": "2026-09-24",
+    "entry_px": 14.670000076293945,
+    "fill": 16.0,
+    "kind": "close",
+    "pnl_primary": 193.81013704185534,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "9842c7a329fa985cfd90f2cd86986a68ad9a8ece32c0a2702bb6522f5da99f6e",
+    "shares": 169,
+    "ticker": "SECZ"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-28",
+    "entry_date": "2026-09-24",
+    "entry_px": 24.030000686645508,
+    "fill": 26.5,
+    "kind": "close",
+    "pnl_primary": 223.7500789218907,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "83b673812e545079d955fd88eb1be113be5142ca780aaed3c26b483a0b70f0b8",
+    "shares": 103,
+    "ticker": "TJGC"
   }
 ]

@@ -23,6 +23,7 @@ from research.hot_n4_clean_v4.forward.ledger import (  # noqa: E402
 from research.hot_n4_clean_v4.forward.prices import (  # noqa: E402
     SealedBarRevision,
     load_price_rows,
+    overlay_rows,
     prices_path,
     refresh,
     revisions_path,
@@ -532,10 +533,84 @@ def _sealed_tolerance() -> None:
         raise SystemExit("pending field did not append the new bar")
 
 
+def _float32_overlay() -> None:
+    """A float32 image of the jsonl print is that print. A real move is not."""
+    import numpy as np
+
+    exact_open = 4.68
+    exact_close = 4.375
+    noisy_open = float(np.float32(exact_open))
+    noisy_close = float(np.float32(exact_close))
+    if noisy_open == exact_open:
+        raise SystemExit("fixture open is not a float32 image")
+    row = {
+        "close": exact_close,
+        "date": SESSION,
+        "high": 5.07,
+        "low": 4.36,
+        "open": exact_open,
+        "ticker": "SHMD",
+        "volume": 5322584.0,
+    }
+    bars = {
+        "feat": {
+            "SHMD": {
+                "adjusted": True,
+                "close": np.array([noisy_close]),
+                "date": [SESSION],
+                "high": np.array([5.07]),
+                "low": np.array([4.36]),
+                "open": np.array([noisy_open]),
+                "volume": np.array([999.0]),
+            }
+        },
+        "stored": {
+            "SHMD": {
+                "close": np.array([noisy_close]),
+                "date": [SESSION],
+                "open": np.array([noisy_open]),
+            }
+        },
+    }
+    out = overlay_rows(bars, [row])
+    if float(out["stored"]["SHMD"]["open"][0]) != exact_open:
+        raise SystemExit("overlay kept the float32 open")
+    if float(out["stored"]["SHMD"]["close"][0]) != exact_close:
+        raise SystemExit("overlay kept the float32 close")
+    if float(out["feat"]["SHMD"]["volume"][0]) != 999.0:
+        raise SystemExit("overlay replaced volume")
+    moved = {
+        "feat": {
+            "SHMD": {
+                "adjusted": True,
+                "close": np.array([noisy_close]),
+                "date": [SESSION],
+                "high": np.array([5.07]),
+                "low": np.array([4.36]),
+                "open": np.array([16.56]),
+                "volume": np.array([999.0]),
+            }
+        },
+        "stored": {
+            "SHMD": {
+                "close": np.array([noisy_close]),
+                "date": [SESSION],
+                "open": np.array([16.56]),
+            }
+        },
+    }
+    other = dict(row)
+    other["open"] = 16.85
+    kept = overlay_rows(moved, [other])
+    if float(kept["stored"]["SHMD"]["open"][0]) != 16.56:
+        raise SystemExit("overlay replaced a real open disagreement")
+
+
 def main() -> None:
     _ordering()
     _prices()
     _sealed_tolerance()
+    _float32_overlay()
     log_before = (ROOT / "research/hot_n4_clean_v4/forward/holdup_log.jsonl").read_bytes()
     led_before = (ROOT / "research/hot_n4_clean_v4/forward/LEDGER.jsonl").read_bytes()
     out = simulate()

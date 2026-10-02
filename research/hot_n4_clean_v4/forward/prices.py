@@ -16,6 +16,13 @@ not applied. A new >3x leg is classified with the locked split table and
 the filing-verified real-move table. An unexplained leg removes a candidate.
 The same leg on a held name, or any non-split leg on IWM, halts and appends
 nothing.
+
+When the pinned parquet already holds a post-pin session, the in-memory
+overlay keeps the ``prices.jsonl`` print for any OHLC field that is the
+same price (including a float32 image of that print). A field that moved
+by more than a hundredth of a cent stays on the parquet value, so a real
+disagreement still fails the sealed-fill check. Volume is not replaced.
+The jsonl file itself is not rewritten.
 """
 from __future__ import annotations
 
@@ -185,8 +192,26 @@ def sealed_bar_keys(records: list[dict]) -> set[tuple[str, str]]:
     return keys
 
 
+def _same_print(stored, exact) -> bool:
+    """True when two OHLC prints are the same price.
+
+    A float32 round-trip of the jsonl print is the same price. A move
+    larger than a hundredth of a cent is not.
+    """
+    left = float(stored)
+    right = float(exact)
+    if left == right:
+        return True
+    return round(abs(left - right), 6) <= 1e-4
+
+
 def overlay_rows(bars: dict, rows: list[dict]) -> dict:
-    """Return bars with forward sessions appended. Does not mutate ``bars``."""
+    """Return bars with forward sessions appended. Does not mutate ``bars``.
+
+    A post-pin date already in the pinned parquet keeps the jsonl OHLC
+    when the two prints are the same price. Volume stays on the parquet
+    value. A real OHLC disagreement is left as the parquet print.
+    """
     import numpy as np
 
     out = {"feat": {}, "stored": {}}
@@ -222,6 +247,12 @@ def overlay_rows(bars: dict, rows: list[dict]) -> dict:
             for row in extra:
                 if dates and row["date"] <= dates[-1]:
                     if row["date"] in dates:
+                        index = dates.index(row["date"])
+                        for field in fields:
+                            if field == "volume":
+                                continue
+                            if _same_print(blob[field][index], row[field]):
+                                blob[field][index] = float(row[field])
                         continue
                     raise RuntimeError(f"forward bar out of order {ticker} {row['date']}")
                 dates.append(row["date"])
