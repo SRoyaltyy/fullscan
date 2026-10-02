@@ -4,69 +4,69 @@
   "sectors": [
     {
       "sector": "Basic Materials",
-      "status": "DEGRADED",
+      "status": "OK",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": ""
     },
     {
       "sector": "Communication Services",
-      "status": "DEGRADED",
+      "status": "OK",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": ""
     },
     {
       "sector": "Consumer Cyclical",
-      "status": "DEGRADED",
+      "status": "OK",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": ""
     },
     {
       "sector": "Consumer Defensive",
-      "status": "DEGRADED",
+      "status": "OK",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": ""
     },
     {
       "sector": "Energy",
-      "status": "DEGRADED",
+      "status": "OK",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": ""
     },
     {
       "sector": "Financial",
-      "status": "DEGRADED",
+      "status": "OK",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": ""
     },
     {
       "sector": "Healthcare",
-      "status": "DEGRADED",
+      "status": "OK",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": ""
     },
     {
       "sector": "Industrials",
-      "status": "DEGRADED",
+      "status": "OK",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": ""
     },
     {
       "sector": "Real Estate",
-      "status": "DEGRADED",
+      "status": "OK",
       "provider": "openclaw",
-      "fallback_reason": "openclaw_timeout"
+      "fallback_reason": ""
     },
     {
       "sector": "Technology",
-      "status": "FAIL",
-      "provider": "",
-      "fallback_reason": "step deadline"
+      "status": "OK",
+      "provider": "openclaw",
+      "fallback_reason": ""
     },
     {
       "sector": "Utilities",
-      "status": "FAIL",
-      "provider": "",
-      "fallback_reason": "step deadline"
+      "status": "OK",
+      "provider": "openclaw",
+      "fallback_reason": ""
     }
   ]
 }
