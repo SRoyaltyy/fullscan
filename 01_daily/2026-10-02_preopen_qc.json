@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T08:41:50.890371-04:00",
+  "generated_at": "2026-10-02T08:48:29.439885-04:00",
   "items": [
     {
       "ok": true,
@@ -201,14 +201,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-10-02/industrials_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 22001,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -311,9 +311,9 @@
     },
     {
       "sector": "Industrials",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 22001,
       "status": "DEGRADED",
       "provider": "openclaw",
       "fallback_reason": "openclaw_timeout"
@@ -344,7 +344,7 @@
       "fallback_reason": "step deadline"
     }
   ],
-  "sector_n_ok": 7,
+  "sector_n_ok": 8,
   "sector_n_total": 11,
-  "all_ok": false
+  "all_ok": true
 }

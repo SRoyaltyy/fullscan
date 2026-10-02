@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "n_ok": 7,
+  "n_ok": 8,
   "n_total": 11,
   "summary": "",
   "sectors": [
@@ -69,9 +69,9 @@
     },
     {
       "sector": "Industrials",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 22001,
       "status": "DEGRADED",
       "provider": "openclaw",
       "fallback_reason": "openclaw_timeout"
