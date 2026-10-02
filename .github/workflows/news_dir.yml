@@ -1,0 +1,33 @@
+name: News directory
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "01_daily/news/*_parsed.json"
+      - "01_daily/news/*_actions.json"
+      - "01_daily/events/*_events.json"
+      - "src/news_dir.py"
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build article index
+        run: PYTHONPATH=. python3 -m src.news_dir
+      - name: Commit index
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add dashboard/news-dir/index.json
+          git diff --staged --quiet && exit 0
+          git commit -m "news dir: refresh index [skip ci]"
+          git push origin HEAD:main
