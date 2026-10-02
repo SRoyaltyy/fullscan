@@ -1,11 +1,11 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T08:52:08.881998-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-10-02T12:02:57.471846-04:00",
+  "overall": "OK",
   "ranker_ready": true,
   "counts": {
-    "ok": 7,
-    "partial": 1,
+    "ok": 8,
+    "partial": 0,
     "fail": 0,
     "n": 8
   },
@@ -153,7 +153,7 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "3 up / 1 down / 3 flat",
+    "said": "3 up / 1 down / 7 flat",
     "bullets": [
       "XLB FLAT +3.0",
       "XLC UP +4.6",
@@ -162,10 +162,10 @@
       "XLE DOWN -7.2",
       "XLF FLAT +2.9",
       "XLV UP +2.6",
-      "XLI missing",
-      "XLRE missing",
-      "XLK missing",
-      "XLU missing"
+      "XLI FLAT +6.2",
+      "XLRE FLAT +5.0",
+      "XLK FLAT +7.7",
+      "XLU FLAT +0.9"
     ]
   },
   "lands": [
@@ -1146,6 +1146,73 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-10-02\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **3.994** (mult 0.7)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.903** (ES +0.50%, ZN -0.03%, PM:XLP +0.60%) \u00b7 index_carry **1.091** (general 4.365) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-10-02\n**Step 0 \u2014 Setup.** Loaded 129,938 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (18,306 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-02\nGenerated: **2026-10-02T08:23:00.322098-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_pred"
+    },
+    {
+      "key": "sector_one",
+      "title": "Sector predict Utilities (11/11)",
+      "date": "2026-10-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-02T09:12:32.556618-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-02/utilities_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 17070,
+          "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-02\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **0.943** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.148** (ES +0.50%, ZN -0.03%, PM:XLU -0.09%) \u00b7 index_carry **1.091** (general 4.365) \u00b7 llm_overlay **0.0** (raw 0.0)"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-02/utilities_predict_trace.md",
+          "ok": true,
+          "reason": "",
+          "size": 390,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-02\n**Step 0 \u2014 Setup.** Loaded 125,821 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (15,081 characters)."
+        },
+        {
+          "path": "01_daily/_transcripts/2026-10-02_sector_utilities_predict.json",
+          "ok": true,
+          "reason": "",
+          "size": 144745,
+          "preview": "keys: provider, agent, backend_model, messages"
+        },
+        {
+          "path": "01_daily/2026-10-02_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 8247,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-02/_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 2291,
+          "preview": "keys: date, n_ok, n_total, summary, sectors"
+        },
+        {
+          "path": "01_daily/sectors/2026-10-02/_BOARD.md",
+          "ok": true,
+          "reason": "",
+          "size": 1810,
+          "preview": "# Sector Board \u2014 2026-10-02\nGenerated: **2026-10-02T09:12:32.527900-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+        },
+        {
+          "path": "01_daily/sectors/2026-10-02/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 8217,
+          "preview": "keys: date, generated_at, summary, sectors"
+        },
+        {
+          "path": "03_scoreboard/scoreboard.json",
+          "ok": true,
+          "reason": "",
+          "size": 993086,
+          "preview": "keys: runs"
+        }
+      ],
+      "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-02\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **0.943** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.148** (ES +0.50%, ZN -0.03%, PM:XLU -0.09%) \u00b7 index_carry **1.091** (general 4.365) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-02\n**Step 0 \u2014 Setup.** Loaded 125,821 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (15,081 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-02\nGenerated: **2026-10-02T09:12:32.527900-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: "
     }
   ],
   "source": "publish_live_boards"
