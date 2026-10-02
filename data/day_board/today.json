@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T04:28:53.221051-04:00",
+  "generated_at": "2026-10-02T04:30:37.419000-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,49 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-10-02",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-02T04:18:53.303928-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-02_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 274699,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-02_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18769,
-          "preview": "# MAP HEAT \u2014 2026-10-02\nExport `finviz_2026-10-01.csv` \u00b7 11616 names \u00b7 generated 2026-10-02T04:18:53.260380-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-02\nExport `finviz_2026-10-01.csv` \u00b7 11616 names \u00b7 generated 2026-10-02T04:18:53.260380-04:00"
-    },
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-10-02",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-02T04:21:58.568292-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-10-02_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1122915,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -193,6 +150,41 @@
         }
       ],
       "preview": "5907 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 EXEL, HRMY, NUTX, REGN, CORT"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-02",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-02T04:30:09.297141-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-02T04:30:36.899767-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-02_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 322244,
+          "preview": "raw=352 usable=63 single=18 \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte | US rate hike bets fade as revised inflation data points to October pause - Nikke | Indonesian Rupiah strengthens as US Dollar weakens on easing Fed rate hike bets  | A 50-basis-point rate hike vs. waiting longer? Divisions emerge within the Feder | Trump says Warsh should have voted against Fed\u2019s rate hike - The Business Times"
+        },
+        {
+          "path": "01_daily/news/2026-10-02_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 5949,
+          "preview": "# News Parse v2 \u2014 2026-10-02T04:30:36.820973-04:00\nWindow\u224848h | news_mode=on | raw=352 | usable=63 | single_name=18 | noise_dropped=271\nusable polarity={'+': 1, '-': 13, 'mixed': 3, 'neutral': 46}"
+        }
+      ],
+      "preview": "raw=352 usable=63 single=18 \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte | US rate hike bets fade as revised inflation data points to October pause - Nikke | Indonesian Rupiah strengthens as US Dollar weakens on easing Fed rate hike bets  | A 50-basis-point rate hike vs. waiting longer? Divisions emerge within the Feder | Trump says Warsh should have voted against Fed\u2019s rate hike - The Business Times \u00b7 # News Parse v2 \u2014 2026-10-02T04:30:36.820973-04:00\nWindow\u224848h | news_mode=on | raw=352 | usable=63 | single_name=18 | noise_dropped=271\nusable polarity={'+': 1, '-': 13, 'mixed': 3, 'neutral': 46}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

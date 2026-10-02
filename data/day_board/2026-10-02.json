@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T04:28:53.221051-04:00",
+  "generated_at": "2026-10-02T04:30:37.419000-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -183,7 +183,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -241,11 +241,16 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-10-02_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 322244,
+          "said": "news_mode: on \u00b7 352 raw / 63 usable \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte",
+          "bullets": [
+            "Fed's Kashkari says inflation is 'still too high' even after softer-than-expected PCE data, labor market is 'pretty good'",
+            "US rate hike bets fade as revised inflation data points to October pause - Nikkei Asia",
+            "Indonesian Rupiah strengthens as US Dollar weakens on easing Fed rate hike bets - FXStreet",
+            "A 50-basis-point rate hike vs. waiting longer? Divisions emerge within the Federal Reserve - \u5bcc\u9014\u725b\u725b"
+          ]
         },
         {
           "key": "events",
@@ -331,13 +336,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7546,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7544,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -484,8 +489,13 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "news news_mode: on \u00b7 352 raw / 63 usable \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte",
+      "bullets": [
+        "Fed's Kashkari says inflation is 'still too high' even after softer-than-expected PCE data, labor market is 'pretty good'",
+        "US rate hike bets fade as revised inflation data points to October pause - Nikkei Asia",
+        "Indonesian Rupiah strengthens as US Dollar weakens on easing Fed rate hike bets - FXStreet",
+        "A 50-basis-point rate hike vs. waiting longer? Divisions emerge within the Federal Reserve - \u5bcc\u9014\u725b\u725b"
+      ]
     },
     {
       "key": "weather",
@@ -877,7 +887,17 @@
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {},
+    "news": {
+      "said": "news_mode: on \u00b7 352 raw / 63 usable \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte",
+      "bullets": [
+        "Fed's Kashkari says inflation is 'still too high' even after softer-than-expected PCE data, labor market is 'pretty good'",
+        "US rate hike bets fade as revised inflation data points to October pause - Nikkei Asia",
+        "Indonesian Rupiah strengthens as US Dollar weakens on easing Fed rate hike bets - FXStreet",
+        "A 50-basis-point rate hike vs. waiting longer? Divisions emerge within the Federal Reserve - \u5bcc\u9014\u725b\u725b",
+        "Trump says Warsh should have voted against Fed\u2019s rate hike - The Business Times",
+        "Expectations for a Federal Reserve rate hike in October cool down! Officials hint that there is no need to rush into action; the AI investment boom could become the primary inflation risk next year. - Moomoo"
+      ]
+    },
     "weather": {
       "said": "favorable 1 \u00b7 hostile 6 \u00b7 neutral 4",
       "bullets": [
@@ -1250,6 +1270,41 @@
         }
       ],
       "preview": "5907 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 EXEL, HRMY, NUTX, REGN, CORT"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-02",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-02T04:30:09.297141-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-02",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-02T04:30:36.899767-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-02_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 322244,
+          "preview": "raw=352 usable=63 single=18 \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte | US rate hike bets fade as revised inflation data points to October pause - Nikke | Indonesian Rupiah strengthens as US Dollar weakens on easing Fed rate hike bets  | A 50-basis-point rate hike vs. waiting longer? Divisions emerge within the Feder | Trump says Warsh should have voted against Fed\u2019s rate hike - The Business Times"
+        },
+        {
+          "path": "01_daily/news/2026-10-02_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 5949,
+          "preview": "# News Parse v2 \u2014 2026-10-02T04:30:36.820973-04:00\nWindow\u224848h | news_mode=on | raw=352 | usable=63 | single_name=18 | noise_dropped=271\nusable polarity={'+': 1, '-': 13, 'mixed': 3, 'neutral': 46}"
+        }
+      ],
+      "preview": "raw=352 usable=63 single=18 \u00b7 Fed's Kashkari says inflation is 'still too high' even after softer-than-expecte | US rate hike bets fade as revised inflation data points to October pause - Nikke | Indonesian Rupiah strengthens as US Dollar weakens on easing Fed rate hike bets  | A 50-basis-point rate hike vs. waiting longer? Divisions emerge within the Feder | Trump says Warsh should have voted against Fed\u2019s rate hike - The Business Times \u00b7 # News Parse v2 \u2014 2026-10-02T04:30:36.820973-04:00\nWindow\u224848h | news_mode=on | raw=352 | usable=63 | single_name=18 | noise_dropped=271\nusable polarity={'+': 1, '-': 13, 'mixed': 3, 'neutral': 46}"
     }
   ],
   "href": {
