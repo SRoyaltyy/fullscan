@@ -62,6 +62,17 @@ def atomic_json(path, value):
         os.close(fd)
 
 
+def _flat_hot4_sit(rec) -> bool:
+    """HOT4 is sitting and has no buy or sell leg to place.
+
+    A no-same-day panel sit omits ``s`` (there is no regime score on the
+    sleeve). That is a no-trade, not an unknown regime.
+    """
+    if not isinstance(rec, dict) or rec.get('status') != 'sit':
+        return False
+    return not (rec.get('buy') or []) and not (rec.get('sell') or [])
+
+
 def validate_payload(payload, date, clock, *, allow_after_bell=False):
     target = clock.replace(hour=9, minute=30, second=0, microsecond=0)
     if payload.get('date') != date or date != clock.date().isoformat():
@@ -76,9 +87,11 @@ def validate_payload(payload, date, clock, *, allow_after_bell=False):
     rec = (payload.get('strategies') or {}).get(we.HOT4) or {}
     if rec.get('date') != date or rec.get('status') not in ('ok', 'sit'):
         raise ValueError('hot4 missing, stale or incomplete')
-    score = float(rec.get('s'))
-    if not math.isfinite(score):
-        raise ValueError('unknown market regime')
+    # status ok, and a sit that still has orders, keep requiring a finite s.
+    if not _flat_hot4_sit(rec):
+        score = float(rec.get('s'))
+        if not math.isfinite(score):
+            raise ValueError('unknown market regime')
     if payload.get('look', {}).get('stale'):
         raise ValueError('stale factor look')
     from . import strategy_tickets as st
