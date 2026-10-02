@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T12:17:26.552255-04:00",
+  "generated_at": "2026-10-02T14:29:49.722657-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -1220,13 +1220,13 @@
       "date": "2026-10-02",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-02T12:03:02.333312-04:00",
+      "at": "2026-10-02T12:17:31.355279-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 28087,
+          "size": 32805,
           "preview": "2026-10-02 BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL SOC, GFR, BORR, HP, AESI, ACDC, VIST, PUMP"
         },
         {
@@ -1240,21 +1240,21 @@
           "path": "data/day_board/2026-10-02.json",
           "ok": true,
           "reason": "",
-          "size": 105588,
+          "size": 111054,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-10-02_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 68533,
+          "size": 73999,
           "preview": "2026-10-02 BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL SOC, GFR, BORR, HP, AESI, ACDC, VIST, PUMP"
         },
         {
           "path": "data/day_board/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 291253,
+          "size": 294937,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
@@ -1268,42 +1268,42 @@
           "path": "data/day_board/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 306741,
+          "size": 311201,
           "preview": "2026-10-02 BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL SOC, GFR, BORR, HP, AESI, ACDC, VIST, PUMP"
         },
         {
           "path": "data/factor_mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 291253,
+          "size": 294937,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 68533,
+          "size": 73999,
           "preview": "2026-10-02 BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL SOC, GFR, BORR, HP, AESI, ACDC, VIST, PUMP"
         },
         {
           "path": "dashboard/factor-mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 291253,
+          "size": 294937,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 291253,
+          "size": 294937,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 306741,
+          "size": 311201,
           "preview": "2026-10-02 BUY CDNA, VEEV, CORT, ILMN, SHOO, SN, AVPT, SIG \u00b7 SELL SOC, GFR, BORR, HP, AESI, ACDC, VIST, PUMP"
         },
         {
