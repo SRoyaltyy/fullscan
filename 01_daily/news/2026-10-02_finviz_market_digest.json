@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-02",
+  "generated_at": "2026-10-02T04:14:55.000425-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-02",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US equity futures point to higher open ahead of key jobs report as Treasury yields ease and global stocks trade mixed",
+  "raw_text": "- S&P 500 Futures (@ES) rise 0.4%, Dow Jones Futures (@YM) climb 0.37%, Nasdaq 100 Futures (@NQ) gain 0.62%, and Russell 2000 Futures (@ER2) advance 0.51%, indicating a gap up open for US stocks\n- The September nonfarm payrolls report is due at 8:30 AM ET, with expectations for around 90k jobs added\n- Spotify (SPOT) gains about 0.5% pre-market after forecasting earnings above expectations on strong user growth\n- Ferrari (RACE) climbs about 0.7% pre-market on an upbeat annual outlook\n- Marriott (MAR) falls about 1.8% pre-market following in-line 2026 profit guidance\n- DuPont (DD) trades flat pre-market after raising its full-year profit forecast on strength in healthcare-related businesses\n- Harley-Davidson (HOG) trades flat pre-market after reporting a wider quarterly loss amid softer consumer spending\n- Coca-Cola (KO) rises about 0.2% pre-market as revenue misses estimates due to weaker pricing\n- ON Semiconductor (ON) gains about 5.9% pre-market after shifting its Synaptics deal to a $5.7B all-cash transaction\n- Asian equities mostly trade lower with the Nikkei (@NKD) down over 1%, while European shares recover modestly, oil (@CL) prices trade mixed, Treasury yields ease from recent highs, and US factory orders are due at 10:00 AM ET",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) rise **0.4%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) climb **0.37%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) gain **0.62%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) advance **0.51%**, indicating a **gap up open for US stocks**\n- The **September nonfarm payrolls report** is due at **8:30 AM ET**, with expectations for around **90k jobs** added\n- **Spotify** ([SPOT](https://finviz.com/quote?t=SPOT)) gains about **0.5% pre-market** after forecasting **earnings above expectations** on strong user growth\n- **Ferrari** ([RACE](https://finviz.com/quote?t=RACE)) climbs about **0.7% pre-market** on an **upbeat annual outlook**\n- **Marriott** ([MAR](https://finviz.com/quote?t=MAR)) falls about **1.8% pre-market** following **in-line 2026 profit guidance**\n- **DuPont** ([DD](https://finviz.com/quote?t=DD)) trades **flat pre-market** after **raising its full-year profit forecast** on strength in **healthcare-related businesses**\n- **Harley-Davidson** ([HOG](https://finviz.com/quote?t=HOG)) trades **flat pre-market** after reporting a **wider quarterly loss** amid **softer consumer spending**\n- **Coca-Cola** ([KO](https://finviz.com/quote?t=KO)) rises about **0.2% pre-market** as revenue **misses estimates** due to **weaker pricing**\n- **ON Semiconductor** ([ON](https://finviz.com/quote?t=ON)) gains about **5.9% pre-market** after shifting its **Synaptics deal** to a **$5.7B all-cash transaction**\n- **Asian equities mostly trade lower** with the Nikkei ([@NKD](https://finviz.com/futures_charts?t=NKD)) **down over 1%**, while **European shares recover modestly**, oil ([@CL](https://finviz.com/futures_charts?t=CL)) prices trade **mixed**, **Treasury yields ease from recent highs**, and **US factory orders** are due at **10:00 AM ET**",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "SPOT",
+    "RACE",
+    "MAR",
+    "DD",
+    "HOG",
+    "KO",
+    "ON"
+  ],
+  "named_leaders": [
+    "SPOT",
+    "RACE",
+    "MAR",
+    "DD",
+    "HOG",
+    "KO",
+    "ON"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 300164,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-02T04:06:45.583",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
