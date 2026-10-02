@@ -103,6 +103,8 @@ Each source has its own allowance; no busy topic can stop the rest from being
 polled. Google search overflows trigger date and phrase follow-up queries.
 Remaining capped leaves are flagged. Failed direct feeds can use explicit
 Google fallback queries; the original error and index dependency stay visible.
+The first hosted run encountered SEC HTTP 403 responses. Filing-form keyword
+searches supplement those blocked feeds, but are not direct filing coverage.
 Empty results are unverified, not declared a complete quiet day.
 
 Documents land before extraction. Failed extraction retries have a cooldown

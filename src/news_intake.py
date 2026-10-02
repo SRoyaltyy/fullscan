@@ -43,6 +43,16 @@ FALLBACK_QUERIES = {
     'company_aws_blog': 'site:aws.amazon.com/blogs/aws (launch OR announcing OR available)',
     'official_commerce': 'site:commerce.gov/news/press-releases',
     'official_federal_register': 'site:federalregister.gov (rule OR executive order)',
+    'official_bls': 'site:bls.gov (release OR employment OR inflation)',
+    'official_ftc': 'site:ftc.gov (merger OR order OR complaint)',
+    'sec_8-K': '"8-K" (filed OR filing OR announces)',
+    'sec_6-K': '"6-K" (filed OR filing OR announces)',
+    'sec_4': '"Form 4" (insider OR filed OR filing)',
+    'sec_SC_13D': '"13D" (stake OR filed OR activist)',
+    'sec_SCHEDULE_13D': '"Schedule 13D" (stake OR filed OR activist)',
+    'sec_S-1': '"S-1" (IPO OR registration OR filed)',
+    'sec_S-3': '"S-3" (registration OR offering OR filed)',
+    'sec_SC_TO-T': '"tender offer" (SEC OR filed OR filing)',
 }
 SEC_LOCK = threading.Lock()
 SEC_LAST_REQUEST = 0.0

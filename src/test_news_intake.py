@@ -93,6 +93,17 @@ class IntakeTests(unittest.TestCase):
             self.assertEqual(json.loads(ledger.read_text())[0]['body'], 'Evidence '*1000)
             self.assertEqual(report['paid_api_calls'], 0)
 
+    def test_hosted_sec_block_uses_index_without_claiming_primary(self):
+        def fetch(url):
+            if 'sec.gov' in url:
+                raise ValueError('HTTP 403 from runner')
+            return rss(), 'application/rss+xml'
+        rows, health = collect_source({'id':'sec_8-K', 'kind':'sec', 'form':'8-K', 'primary':True, 'quick':True}, NOW.replace(hour=0), NOW, fetch)
+        self.assertEqual(health['status'], 'fallback_search')
+        self.assertIn('403', health['error'])
+        self.assertEqual(len(rows), 1)
+        self.assertFalse(rows[0]['primary'])
+
     def test_comparison_does_not_mislabel_keyword_match_as_verified_recall(self):
         docs = merge_documents([], [{'title':'Company X FDA approval', 'url':'', 'source':'fixture'}], NOW.isoformat())
         report = compare(docs, [{'event_id':'a', 'keywords':'Company X;FDA approval'}, {'event_id':'b','keywords':'Company Y;acquisition'}])
