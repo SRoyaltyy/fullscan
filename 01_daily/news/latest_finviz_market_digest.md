@@ -1,22 +1,22 @@
-# Finviz homepage market digest — 2026-10-01
+# Finviz homepage market digest — 2026-10-02
 
-**Generated:** 2026-10-01T05:40:33.905244-04:00 (America/New_York)
+**Generated:** 2026-10-02T04:14:55.000425-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US futures trade mixed as 10-year yield hits highest since 2002 while AI strength underpins tech ahead of jobless claims and ISM data
+**Banner:** US equity futures point to higher open ahead of key jobs report as Treasury yields ease and global stocks trade mixed
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
 **CPI/Fed:** —
-**Leaders:** UTHR, CBOE, SNPS, AMZN, JBL, MU, LRCX, AMAT, NVDA, AMD, GOOGL, ACN, MKC, AYI
+**Leaders:** SPOT, RACE, MAR, DD, HOG, KO, ON
 **Next session:** housing no · retail no · Fed no
-**Earnings slate:** ACN, MKC, AYI
+**Earnings slate:** —
 **Geo/grain:** —
-**Clock legal for:** 2026-10-01
+**Clock legal for:** 2026-10-02
 **Clock use:** `same_morning`
 
 ## Clock
 
-Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-10-01).
+Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-10-02).
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
@@ -25,22 +25,22 @@ Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page h
 - **Prior close:** SPX — · Nasdaq — · Dow —
 - **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** UTHR, CBOE, SNPS, AMZN, JBL, MU, LRCX, AMAT, NVDA, AMD, GOOGL, ACN, MKC, AYI
+- **Named leaders:** SPOT, RACE, MAR, DD, HOG, KO, ON
 - **Next-session calendar:** housing no · retail no · Fed no
-- **Earnings slate:** ACN, MKC, AYI
+- **Earnings slate:** —
 - **Geo / grain:** —
 
 ## Narrative
 
-**US futures trade mixed as 10-year yield hits highest since 2002 while AI strength underpins tech ahead of jobless claims and ISM data**
+**US equity futures point to higher open ahead of key jobs report as Treasury yields ease and global stocks trade mixed**
 
-- S&P 500 futures (@ES) rise 0.22%, Nasdaq 100 futures (@NQ) gain 0.64%, Dow Jones futures (@YM) slip 0.28% and Russell 2000 futures (@ER2) fall 0.15% in pre-market trade.
-- The 10-year Treasury yield reaches its highest level since 2002 amid a global bond selloff, contributing to declines in European stocks while Asian markets trade mixed with the Nikkei (@NKD) supported by semiconductor strength.
-- United Therapeutics (UTHR) trades roughly flat pre-market.
-- Cboe Global Markets (CBOE) trades flat after announcing plans to launch SEC-regulated company KPI binary options with Robinhood.
-- Synopsys (SNPS) advances about 2.5% on new AI partnerships with OpenAI and Amazon (AMZN).
-- Jabil (JBL) rises about 1.6% in pre-market trading following its earnings report and guidance.
-- Micron (MU) dips about 0.1% despite issuing a revenue forecast above estimates and highlighting AI-driven customer commitments rising to $32 billion.
-- Lam Research (LRCX) and Applied Materials (AMAT) each gain about 2.6%, while Nvidia (NVDA) and AMD (AMD) add roughly 1% apiece in the chip and AI complex.
-- Alphabet (GOOGL) rises 2.3% pre-market after announcing its Gemini 4 AI model.
-- Accenture (ACN), McCormick (MKC), and Acuity Brands (AYI) report earnings before the bell, with initial jobless claims due at 8:30 AM ET and ISM Manufacturing at 10:00 AM ET.
+- S&P 500 Futures (@ES) rise 0.4%, Dow Jones Futures (@YM) climb 0.37%, Nasdaq 100 Futures (@NQ) gain 0.62%, and Russell 2000 Futures (@ER2) advance 0.51%, indicating a gap up open for US stocks
+- The September nonfarm payrolls report is due at 8:30 AM ET, with expectations for around 90k jobs added
+- Spotify (SPOT) gains about 0.5% pre-market after forecasting earnings above expectations on strong user growth
+- Ferrari (RACE) climbs about 0.7% pre-market on an upbeat annual outlook
+- Marriott (MAR) falls about 1.8% pre-market following in-line 2026 profit guidance
+- DuPont (DD) trades flat pre-market after raising its full-year profit forecast on strength in healthcare-related businesses
+- Harley-Davidson (HOG) trades flat pre-market after reporting a wider quarterly loss amid softer consumer spending
+- Coca-Cola (KO) rises about 0.2% pre-market as revenue misses estimates due to weaker pricing
+- ON Semiconductor (ON) gains about 5.9% pre-market after shifting its Synaptics deal to a $5.7B all-cash transaction
+- Asian equities mostly trade lower with the Nikkei (@NKD) down over 1%, while European shares recover modestly, oil (@CL) prices trade mixed, Treasury yields ease from recent highs, and US factory orders are due at 10:00 AM ET
