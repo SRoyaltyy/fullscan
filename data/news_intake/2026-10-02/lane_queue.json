@@ -193731,7 +193731,7 @@
     "state": "candidate",
     "status": "pending_analysis",
     "analyst_family": "time",
-    "routing_class": "regime_state",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -195406,7 +195406,7 @@
     "candidate_classes": [
       "insider_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "insider_flow",
@@ -195472,7 +195472,7 @@
     "candidate_classes": [
       "blast_ops"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_ops",

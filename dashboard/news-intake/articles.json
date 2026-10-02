@@ -165404,13 +165404,12 @@
     "state": "candidate",
     "candidate_classes": [],
     "themes": [
-      "Personnel and governance",
       "Courts, regulation and investigations"
     ],
     "review_reasons": [
       "no lexical match; open-set review"
     ],
-    "extraction_status": "feed_text"
+    "extraction_status": "page_text"
   },
   {
     "document_id": "65335c02034302486de3cdcf",
@@ -167065,7 +167064,7 @@
     "review_reasons": [
       "no lexical match; open-set review"
     ],
-    "extraction_status": "feed_text"
+    "extraction_status": "thin_text"
   },
   {
     "document_id": "e0a0f79e5da4b6a13995dc47",
@@ -167079,7 +167078,7 @@
     "review_reasons": [
       "no lexical match; open-set review"
     ],
-    "extraction_status": "feed_text"
+    "extraction_status": "thin_text"
   },
   {
     "document_id": "df00033ce20c293110f0cb08",
@@ -167165,7 +167164,7 @@
     "review_reasons": [
       "no lexical match; open-set review"
     ],
-    "extraction_status": "feed_text"
+    "extraction_status": "thin_text"
   },
   {
     "document_id": "90182ec58707798849e54f8b",
@@ -167261,13 +167260,11 @@
     "published_at": "2026-10-01T12:00:00+00:00",
     "state": "candidate",
     "candidate_classes": [],
-    "themes": [
-      "Courts, regulation and investigations"
-    ],
+    "themes": [],
     "review_reasons": [
       "no lexical match; open-set review"
     ],
-    "extraction_status": "feed_text"
+    "extraction_status": "thin_text"
   },
   {
     "document_id": "2ec92824913b529c1ca7da52",
@@ -167281,7 +167278,7 @@
     "review_reasons": [
       "no lexical match; open-set review"
     ],
-    "extraction_status": "feed_text"
+    "extraction_status": "thin_text"
   },
   {
     "document_id": "2c54089e3553b4a73f5bd4b2",
@@ -167333,13 +167330,11 @@
     "published_at": "2026-10-01T12:00:00+00:00",
     "state": "candidate",
     "candidate_classes": [],
-    "themes": [
-      "Courts, regulation and investigations"
-    ],
+    "themes": [],
     "review_reasons": [
       "no lexical match; open-set review"
     ],
-    "extraction_status": "feed_text"
+    "extraction_status": "thin_text"
   },
   {
     "document_id": "0e608103b33fb85b3c19301f",
@@ -183332,13 +183327,12 @@
     "state": "candidate",
     "candidate_classes": [],
     "themes": [
-      "AI models, products and infrastructure",
       "Semiconductors and hardware"
     ],
     "review_reasons": [
       "no lexical match; open-set review"
     ],
-    "extraction_status": "feed_text"
+    "extraction_status": "page_text"
   },
   {
     "document_id": "f599148204f6f011836ef372",
@@ -188170,13 +188164,11 @@
     "published_at": "2026-09-30T12:31:00+00:00",
     "state": "candidate",
     "candidate_classes": [],
-    "themes": [
-      "Central banks, inflation and rates"
-    ],
+    "themes": [],
     "review_reasons": [
       "no lexical match; open-set review"
     ],
-    "extraction_status": "feed_text"
+    "extraction_status": "page_text"
   },
   {
     "document_id": "fad45be779291c1e9926df14",
@@ -188224,7 +188216,7 @@
     "review_reasons": [
       "no lexical match; open-set review"
     ],
-    "extraction_status": "feed_text"
+    "extraction_status": "page_text"
   },
   {
     "document_id": "0cc51bbc6310f8050f7706cf",
@@ -189722,6 +189714,7 @@
     "candidate_classes": [],
     "themes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ],
     "extraction_status": "feed_text"
@@ -189732,12 +189725,13 @@
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQUJsa1Q2UTRUNGxIU3Z6T0RnZWZ5WVdRNEd3R3FNcjFsWTd0S1p3eTVhb3lZMDUxWHFTend3LXFQMzNXVGpBcnJIZGVTMnZWb0t6Y2sxeFJCMlFCc0tmZXBkQjNiNFJabkRteW9aQWxoS3dsMFFqcV9nbVljQmdGUlVkM0JlRFM5ZmFaS3FSTUZZT1JraC1HSURXNWhmMmM4Qjh6NGlpM18wT25CWWxfblZNQWk?oc=5",
     "source": "lane_insider_flow",
     "published_at": "2026-09-30T10:45:18+00:00",
-    "state": "candidate",
+    "state": "review",
     "candidate_classes": [
       "insider_flow"
     ],
     "themes": [],
     "review_reasons": [
+      "outside_window",
       "Lane rule router disagrees with event wording; retain for contextual review"
     ],
     "extraction_status": "feed_text"
@@ -189752,6 +189746,7 @@
     "candidate_classes": [],
     "themes": [],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ],
     "extraction_status": "feed_text"
@@ -189768,6 +189763,7 @@
       "Operational, cyber and labour disruptions"
     ],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ],
     "extraction_status": "feed_text"
@@ -189784,6 +189780,7 @@
       "AI models, products and infrastructure"
     ],
     "review_reasons": [
+      "outside_window",
       "no lexical match; open-set review"
     ],
     "extraction_status": "feed_text"
@@ -189794,7 +189791,7 @@
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNM3ZXR3RDeFZOOGdJa1MyZzY0WmdLMFU1NllqVVJ1U3VhUTdCTUdGdnAtRjBkMm1SMHRGQWJuMGRya0FmekoyMFUwTHpMellOVW9GVDBuRkExakVnYmxzUXl1eUNTT05WaWc3d2s1a1Q5TnVia3I3MUlLQkYwQ0l4R2plbi1Kd0tFZjEteHF2TGMzR0pmejNadUVlb1Qyd1NaUlRKRVc2bndMWXVCMWfSAa4BQVVfeXFMTTN2V0d0Q3hWTjhnSWtTMmc2NFpnSzBVNTZZalVSdVN1YVE3Qk1HRnZwLUYwZDJtUjB0RkFibjBkcmtBZnpKMjBVMEx6THpZTlVvRlQwbkZBMWpFZ2Jsc1F5dXlDU09OVmlnN3drNWtUOU51YmtyNzFJS0JGMENJeEdqZW4tSndLRWYxLXhxdkxjM0dKZnozWnVFZW9UMndTWlJUSkVXNm53TFl1QjFn?oc=5",
     "source": "lane_blast_ops",
     "published_at": "2026-09-30T10:40:33+00:00",
-    "state": "candidate",
+    "state": "review",
     "candidate_classes": [
       "blast_ops"
     ],
@@ -189802,6 +189799,7 @@
       "Contracts, orders and capacity"
     ],
     "review_reasons": [
+      "outside_window",
       "Lane rule router disagrees with event wording; retain for contextual review"
     ],
     "extraction_status": "feed_text"
