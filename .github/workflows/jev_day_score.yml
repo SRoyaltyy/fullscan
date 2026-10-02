@@ -35,12 +35,43 @@ jobs:
         run: |
           set -euo pipefail
           PYTHONPATH=. python3 -m src.jev_gate --date "${{ github.event.inputs.date }}" --limit "${{ github.event.inputs.limit }}"
-      - name: Commit so the site can read it
+      - name: Publish scores onto the site
+        env:
+          DATE: ${{ github.event.inputs.date }}
         run: |
           set -euo pipefail
+          python3 - << 'PY'
+          import json, os
+          from pathlib import Path
+          date = os.environ["DATE"]
+          src = Path(f"01_daily/news/{date}_jev_keep.json")
+          doc = json.loads(src.read_text())
+          found = []
+          def walk(node):
+              if isinstance(node, list):
+                  for x in node:
+                      walk(x)
+                  return
+              if not isinstance(node, dict):
+                  return
+              title = node.get("title") or node.get("headline") or node.get("name")
+              decision = str(node.get("decision") or node.get("jev") or node.get("verdict") or "").upper()
+              if title and decision in {"KEEP", "DROP"}:
+                  found.append({"title": title, "decision": decision, "reason": node.get("reason") or node.get("why") or ""})
+              for key in ("items", "rows", "keeps", "dropped", "decisions", "all_items"):
+                  if isinstance(node.get(key), list):
+                      walk(node[key])
+          walk(doc)
+          if not found:
+              raise SystemExit(f"no verdicts in {src}")
+          out = Path(f"dashboard/news-dir/scores/{date}.json")
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text(json.dumps({"date": date, "items": found}, ensure_ascii=False, indent=2))
+          print(f"site scores {len(found)} -> {out}")
+          PY
           git config user.name "SRoyaltyy"
           git config user.email "104515113+SRoyaltyy@users.noreply.github.com"
-          git add 01_daily/news/*jev_keep* 01_daily/news/*jev_junk* || true
-          git diff --cached --quiet && echo "nothing to commit" && exit 0
-          git commit -m "Score ${{ github.event.inputs.date }} for the news directory"
+          git add -f "01_daily/news/${DATE}_jev_keep.json" "dashboard/news-dir/scores/${DATE}.json"
+          git diff --cached --stat
+          git commit -m "Publish ${DATE} JEV scores on the news directory"
           git push
