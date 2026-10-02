@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-30.76%** ($6,924) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 59 · skips 71 · realized $-2440.55.
+Cash book **-32.74%** ($6,726) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 61 · skips 71 · realized $-2440.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -199,6 +199,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $119.12 | ▼ close $6,924.28 vs 09:30 $7,005.41 (session -81.13) | 16:00 close · cash $119.12 · equity $6,924.28 vs 09:30 $7,005.41 (-81.13; session marks -81.13) · 1 name(s) marked open→close (per-name table). HALO×61 09:30 $112.89 → close $111.56 -81.13 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $119.12 | ▲ 09:30 equity $6,924.28 vs yday $6,924.28 (+0.00) | 09:30 open · cash $119.12 (unchanged overnight, no fees) · equity $6,924.28 vs prior close $6,924.28 (+0.00) · 1 name(s) re-marked at the open (per-name table). HALO×61 yday $111.56 → 09:30 $111.56 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $119.12 | ▲ close $6,924.28 vs 09:30 $6,924.28 (session +0.00) | 16:00 close · cash $119.12 · equity $6,924.28 vs 09:30 $6,924.28 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). HALO×61 09:30 $111.56 → close $111.56 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $119.12 | ▼ 09:30 equity $6,824.85 vs yday $6,924.28 (-99.43) | 09:30 open · cash $119.12 (unchanged overnight, no fees) · equity $6,824.85 vs prior close $6,924.28 (-99.43) · 1 name(s) re-marked at the open (per-name table). HALO×61 yday $111.56 → 09:30 $109.93 -99.43 | — |
+| 2026-10-01 09:30 ET | **SELL** | `HALO` | 61 | $109.93 | $2.24 | $-335.64 | $6,822.61 | ▼ -335.64 after sell → book $6,822.61; vs 09:30 mark -2.24 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **BUY** | `AVPT` | 477 | $14.27 | $6.15 | — | $9.67 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ret5=+7.3; leftover $6822.61 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.67 | ▼ close $6,725.83 vs 09:30 $6,824.85 (session -90.63) | 16:00 close · cash $9.67 · equity $6,725.83 vs 09:30 $6,824.85 (-99.02; session marks -90.63) · 1 name(s) marked open→close (per-name table). AVPT×477 09:30 $14.27 → close $14.08 -90.63 | — |
 
 ## Not taken
 

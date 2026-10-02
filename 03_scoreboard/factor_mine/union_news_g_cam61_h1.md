@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +6 −≤1
 
-Cash book **-21.35%** ($7,865) · signal-only (no cash/fees) was -17.43%. Starts YES **1/30**. Fills 90 · skips 17 · realized $-1774.27.
+Cash book **-24.62%** ($7,538) · signal-only (no cash/fees) was -17.43%. Starts YES **1/30**. Fills 92 · skips 17 · realized $-1774.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -233,6 +233,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,864.78 | ▲ close $7,864.78 vs 09:30 $7,864.78 (session +0.00) | 16:00 close · cash $7,864.78 · no lots left · equity $7,864.78. | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,864.78 | ▲ 09:30 equity $7,864.78 vs yday $7,864.78 (+0.00) | 09:30 open · cash $7,864.78 · no holdings · equity $7,864.78 vs prior close $7,864.78 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,864.78 | ▲ close $7,864.78 vs 09:30 $7,864.78 (session +0.00) | 16:00 close · cash $7,864.78 · no lots left · equity $7,864.78. | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,864.78 | ▲ 09:30 equity $7,864.78 vs yday $7,864.78 (+0.00) | 09:30 open · cash $7,864.78 · no holdings · equity $7,864.78 vs prior close $7,864.78 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-01 09:30 ET | **BUY** | `PRGS` | 97 | $40.52 | $2.28 | — | $3,932.06 | — | merged news🟢 and cameras +6 −≤1; gate cam_bad_max=1,n_pos_min=6,news=good; rank cond; list earn_react; 🔵; ret5=-2.6; leftover $3932.39 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `NTAP` | 18 | $211.75 | $2.04 | — | $118.51 | — | merged news🟢 and cameras +6 −≤1; gate cam_bad_max=1,n_pos_min=6,news=good; rank cond; list ohlc_hot; ret5=+7.0; leftover $3932.39 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $118.51 | ▼ close $7,537.67 vs 09:30 $7,864.78 (session -322.78) | 16:00 close · cash $118.51 · equity $7,537.67 vs 09:30 $7,864.78 (-327.11; session marks -322.78) · 2 name(s) marked open→close (per-name table). PRGS×97 09:30 $40.52 → close $36.58 -382.18; NTAP×18 09:30 $211.75 → close $215.05 +59.40 | — |
 
 ## Not taken
 

@@ -1392,7 +1392,13 @@ def test_published_view_comes_from_ledgers(tmp_path: Path) -> None:
     oos.TEST_REPORT = report
     oos.SCOREBOARD = board
     try:
-        fresh = oos.refresh_published_from_ledgers()
+        # The live window can already contain the next snapshot before that
+        # day's ledger is locked. The view check is the locked prefix. The
+        # nightly append, which runs after these tests, fills the next day.
+        locked = sorted(path.stem for path in oos.LEDGER_DIR.glob("*.json"))
+        if not locked:
+            raise AssertionError("no locked oos ledgers")
+        fresh = oos.refresh_published_from_ledgers(through=locked[-1])
     finally:
         oos.TEST_REPORT, oos.SCOREBOARD = saved
     assert oos._lock_file_hashes() == before

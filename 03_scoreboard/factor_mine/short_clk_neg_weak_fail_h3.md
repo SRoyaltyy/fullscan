@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **-2.49%** ($9,751) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 217 · skips 270 · realized $-967.53.
+Cash book **-0.61%** ($9,939) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 223 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -355,6 +355,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,412.55 | ▼ close $9,751.01 vs 09:30 $9,878.33 (session -127.32) | 16:00 close · cash $14,412.55 · equity $9,751.01 vs 09:30 $9,878.33 (-127.32; session marks -127.32) · 4 name(s) marked open→close (per-name table). BRVE×52 09:30 $21.00 → close $22.34 -69.68; COST×1 09:30 $916.80 → close $924.59 -7.79; NEOV×518 09:30 $2.29 → close $2.54 -129.50; SGMT×135 09:30 $9.92 → close $9.33 +79.65 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,412.55 | ▲ 09:30 equity $9,751.01 vs yday $9,751.01 (-0.00) | 09:30 open · cash $14,412.55 (unchanged overnight, no fees) · equity $9,751.01 vs prior close $9,751.01 (-0.00) · 4 name(s) re-marked at the open (per-name table). BRVE×52 yday $22.34 → 09:30 $22.34 -0.00; COST×1 yday $924.59 → 09:30 $924.59 -0.00; NEOV×518 yday $2.54 → 09:30 $2.54 -0.00; SGMT×135 yday $9.33 → 09:30 $9.33 -0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,412.55 | ▲ close $9,751.01 vs 09:30 $9,751.01 (session +0.00) | 16:00 close · cash $14,412.55 · equity $9,751.01 vs 09:30 $9,751.01 (-0.00; session marks +0.00) · 4 name(s) marked open→close (per-name table). BRVE×52 09:30 $22.34 → close $22.34 -0.00; COST×1 09:30 $924.59 → close $924.59 -0.00; NEOV×518 09:30 $2.54 → close $2.54 -0.00; SGMT×135 09:30 $9.33 → close $9.33 -0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,412.55 | ▲ 09:30 equity $9,820.03 vs yday $9,751.01 (+69.02) | 09:30 open · cash $14,412.55 (unchanged overnight, no fees) · equity $9,820.03 vs prior close $9,751.01 (+69.02) · 4 name(s) re-marked at the open (per-name table). BRVE×52 yday $22.34 → 09:30 $19.90 +126.88; COST×1 yday $924.59 → 09:30 $910.87 +13.72; NEOV×518 yday $2.54 → 09:30 $2.60 -31.08; SGMT×135 yday $9.33 → 09:30 $9.63 -40.50 | — |
+| 2026-10-01 09:30 ET | **COVER** | `BRVE` | 52 | $19.90 | $2.15 | $+187.01 | $13,375.60 | ▲ +187.01 after sell → book $9,817.88; vs 09:30 mark -2.15 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **COVER** | `COST` | 1 | $910.87 | $1.99 | $-27.90 | $12,462.74 | ▼ -27.90 after sell → book $9,815.89; vs 09:30 mark -1.99 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **COVER** | `NEOV` | 518 | $2.60 | $6.68 | $-122.27 | $11,109.26 | ▼ -122.27 after sell → book $9,809.21; vs 09:30 mark -6.68 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **COVER** | `SGMT` | 135 | $9.63 | $2.40 | $-75.06 | $9,806.81 | ▼ -75.06 after sell → book $9,806.81; vs 09:30 mark -2.40 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **SHORT** | `PYXS` | 1061 | $2.31 | $13.95 | — | $12,243.77 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; 🔵; ret5=-27.6; leftover $2451.70 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `NKE` | 69 | $35.45 | $2.30 | — | $14,687.53 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list overnight,overnight_mega; ret5=-1.8; leftover $2451.70 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,687.53 | ▲ close $9,938.59 vs 09:30 $9,820.03 (session +148.02) | 16:00 close · cash $14,687.53 · equity $9,938.59 vs 09:30 $9,820.03 (+118.56; session marks +148.02) · 2 name(s) marked open→close (per-name table). PYXS×1061 09:30 $2.31 → close $2.19 +127.32; NKE×69 09:30 $35.45 → close $35.15 +20.70 | — |
 
 ## Not taken
 

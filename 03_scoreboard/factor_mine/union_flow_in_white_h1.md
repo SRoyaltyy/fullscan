@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-2.68%** ($9,732) · signal-only (no cash/fees) was +10.92%. Starts YES **15/30**. Fills 25 · skips 0 · realized $+806.69.
+Cash book **-9.20%** ($9,080) · signal-only (no cash/fees) was +10.92%. Starts YES **15/30**. Fills 26 · skips 0 · realized $+806.69.
 
 ## How this sleeve decides (like you are 10)
 
@@ -167,3 +167,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.05 | ▼ close $9,731.77 vs 09:30 $9,926.95 (session -192.70) | 16:00 close · cash $18.05 · equity $9,731.77 vs 09:30 $9,926.95 (-195.18; session marks -192.70) · 1 name(s) marked open→close (per-name table). KMX×164 09:30 $60.41 → close $59.23 -192.70 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18.05 | ▲ 09:30 equity $9,731.77 vs yday $9,731.77 (-0.00) | 09:30 open · cash $18.05 (unchanged overnight, no fees) · equity $9,731.77 vs prior close $9,731.77 (-0.00) · 1 name(s) re-marked at the open (per-name table). KMX×164 yday $59.23 → 09:30 $59.23 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.05 | ▲ close $9,731.77 vs 09:30 $9,731.77 (session +0.00) | 16:00 close · cash $18.05 · equity $9,731.77 vs 09:30 $9,731.77 (-0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). KMX×164 09:30 $59.23 → close $59.23 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18.05 | ▼ 09:30 equity $9,082.33 vs yday $9,731.77 (-649.44) | 09:30 open · cash $18.05 (unchanged overnight, no fees) · equity $9,082.33 vs prior close $9,731.77 (-649.44) · 1 name(s) re-marked at the open (per-name table). KMX×164 yday $59.23 → 09:30 $55.27 -649.44 | — |
+| 2026-10-01 09:30 ET | **SELL** | `KMX` | 164 | $55.27 | $2.58 | $-847.20 | $9,079.75 | ▼ -847.20 after sell → book $9,079.75; vs 09:30 mark -2.58 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,079.75 | ▲ close $9,079.75 vs 09:30 $9,082.33 (session +0.00) | 16:00 close · cash $9,079.75 · no lots left · equity $9,079.75. | — |

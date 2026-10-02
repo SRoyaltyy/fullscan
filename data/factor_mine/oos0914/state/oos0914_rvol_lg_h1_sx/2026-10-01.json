@@ -1,0 +1,180 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 2.34,
+      "shares": 1011,
+      "side": "BUY",
+      "ticker": "PACB"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.2,
+      "shares": 1973,
+      "side": "BUY",
+      "ticker": "QSI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.68,
+      "shares": 1409,
+      "side": "BUY",
+      "ticker": "PMVP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 149.45,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "FORM"
+    }
+  ],
+  "cash": 69.94,
+  "date": "2026-10-01",
+  "equity": 10121.29,
+  "fees": 86.5364,
+  "fills": [
+    {
+      "fees": 3.0761,
+      "fill_rule": "unpriced_exit",
+      "pnl": 80.49,
+      "price": 9.95,
+      "shares": 234,
+      "side": "SELL",
+      "ticker": "AGEN"
+    },
+    {
+      "fees": 24.7556,
+      "fill_rule": "unpriced_exit",
+      "pnl": 414.61,
+      "price": 1.43,
+      "shares": 1893,
+      "side": "SELL",
+      "ticker": "NAUT"
+    },
+    {
+      "fees": 13.0419,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 2.34,
+      "shares": 1011,
+      "side": "BUY",
+      "ticker": "PACB"
+    },
+    {
+      "fees": 25.4517,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.2,
+      "shares": 1973,
+      "side": "BUY",
+      "ticker": "QSI"
+    },
+    {
+      "fees": 18.1761,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.68,
+      "shares": 1409,
+      "side": "BUY",
+      "ticker": "PMVP"
+    },
+    {
+      "fees": 2.035,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 149.45,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "FORM"
+    }
+  ],
+  "holdings": [
+    "FORM",
+    "PACB",
+    "PMVP",
+    "QSI"
+  ],
+  "mean": 6.8201,
+  "n_trades_today": 6,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "unpriced_exit",
+      "price": 9.95,
+      "shares": 234,
+      "side": "SELL",
+      "ticker": "AGEN"
+    },
+    {
+      "fill_rule": "unpriced_exit",
+      "price": 1.43,
+      "shares": 1893,
+      "side": "SELL",
+      "ticker": "NAUT"
+    }
+  ],
+  "state": {
+    "after": "2026-10-01",
+    "cash": 69.94,
+    "pos": {
+      "FORM": {
+        "close_px": 148.44,
+        "cost": 2243.785,
+        "entry_date": "2026-10-01",
+        "entry_px": 149.45,
+        "fee_in": 2.035,
+        "last_px": 149.45,
+        "min_hold": 1,
+        "notional": 2241.75,
+        "peak_px": 149.45,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,ohlc_hot; ret5=+13.8; leftover $2367.71",
+        "shares": 15,
+        "ticker": "FORM"
+      },
+      "PACB": {
+        "close_px": 2.51,
+        "cost": 2378.7819,
+        "entry_date": "2026-10-01",
+        "entry_px": 2.34,
+        "fee_in": 13.0419,
+        "last_px": 2.34,
+        "min_hold": 1,
+        "notional": 2365.74,
+        "peak_px": 2.34,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; ret5=+68.1; leftover $2367.71",
+        "shares": 1011,
+        "ticker": "PACB"
+      },
+      "PMVP": {
+        "close_px": 1.75,
+        "cost": 2385.2961,
+        "entry_date": "2026-10-01",
+        "entry_px": 1.68,
+        "fee_in": 18.1761,
+        "last_px": 1.68,
+        "min_hold": 1,
+        "notional": 2367.12,
+        "peak_px": 1.68,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; ret5=+21.9; leftover $2367.71",
+        "shares": 1409,
+        "ticker": "PMVP"
+      },
+      "QSI": {
+        "close_px": 1.43,
+        "cost": 2393.0517,
+        "entry_date": "2026-10-01",
+        "entry_px": 1.2,
+        "fee_in": 25.4517,
+        "last_px": 1.2,
+        "min_hold": 1,
+        "notional": 2367.6,
+        "peak_px": 1.2,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer; ret5=+41.0; leftover $2367.71",
+        "shares": 1973,
+        "ticker": "QSI"
+      }
+    },
+    "yday_equity": 10121.29
+  }
+}

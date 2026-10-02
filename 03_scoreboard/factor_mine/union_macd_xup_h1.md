@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-5.68%** ($9,432) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 182 · skips 71 · realized $-1788.82.
+Cash book **-3.47%** ($9,653) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 192 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -322,6 +322,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.61 | ▼ close $9,431.54 vs 09:30 $9,693.24 (session -243.57) | 16:00 close · cash $0.61 · equity $9,431.54 vs 09:30 $9,693.24 (-261.70; session marks -243.57) · 2 name(s) marked open→close (per-name table). ABCL×343 09:30 $14.12 → close $14.82 +240.10; RZLT×1063 09:30 $4.54 → close $4.09 -483.67 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.61 | ▲ 09:30 equity $9,431.54 vs yday $9,431.54 (+0.00) | 09:30 open · cash $0.61 (unchanged overnight, no fees) · equity $9,431.54 vs prior close $9,431.54 (+0.00) · 2 name(s) re-marked at the open (per-name table). ABCL×343 yday $14.82 → 09:30 $14.82 +0.00; RZLT×1063 yday $4.09 → 09:30 $4.09 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.61 | ▲ close $9,431.54 vs 09:30 $9,431.54 (session +0.00) | 16:00 close · cash $0.61 · equity $9,431.54 vs 09:30 $9,431.54 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). ABCL×343 09:30 $14.82 → close $14.82 +0.00; RZLT×1063 09:30 $4.09 → close $4.09 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.61 | ▼ 09:30 equity $9,404.09 vs yday $9,431.54 (-27.45) | 09:30 open · cash $0.61 (unchanged overnight, no fees) · equity $9,404.09 vs prior close $9,431.54 (-27.45) · 2 name(s) re-marked at the open (per-name table). ABCL×343 yday $14.82 → 09:30 $14.59 -80.60; RZLT×1063 yday $4.09 → 09:30 $4.14 +53.15 | — |
+| 2026-10-01 09:30 ET | **SELL** | `ABCL` | 343 | $14.59 | $4.52 | $+150.55 | $4,998.74 | ▲ +150.55 after sell → book $9,399.56; vs 09:30 mark -4.53 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `RZLT` | 1063 | $4.14 | $13.92 | $-458.15 | $9,385.64 | ▼ -458.15 after sell → book $9,385.64; vs 09:30 mark -13.92 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **BUY** | `PMVP` | 698 | $1.68 | $9.00 | — | $8,203.99 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; ret5=+21.9; leftover $1173.20 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `MNKD` | 305 | $3.84 | $3.93 | — | $7,028.86 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; 🔵; ret5=+16.8; leftover $1173.20 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `UTHR` | 2 | $557.53 | $2.00 | — | $5,911.80 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; ret5=+10.7; leftover $1173.20 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `SES` | 1926 | $0.61 | $17.51 | — | $4,721.36 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; ret5=+14.7; leftover $1173.20 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `BETR` | 105 | $11.07 | $2.31 | — | $3,556.71 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; ret5=-9.5; leftover $1173.20 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `PUSA` | 299 | $3.92 | $3.86 | — | $2,380.77 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; ret5=+4.9; leftover $1173.20 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `DOCS` | 40 | $28.91 | $2.11 | — | $1,222.26 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ret5=+6.7; leftover $1173.20 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `FPI` | 103 | $11.29 | $2.30 | — | $57.09 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; ret5=+5.2; leftover $1173.20 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $57.09 | ▲ close $9,652.94 vs 09:30 $9,404.09 (session +310.31) | 16:00 close · cash $57.09 · equity $9,652.94 vs 09:30 $9,404.09 (+248.85; session marks +310.31) · 8 name(s) marked open→close (per-name table). PMVP×698 09:30 $1.68 → close $1.75 +48.86; MNKD×305 09:30 $3.84 → close $3.95 +33.55; UTHR×2 09:30 $557.53 → close $571.38 +27.70; SES×1926 09:30 $0.61 → close $0.82 +398.68; BETR×105 09:30 $11.07 → close $11.19 +12.60; PUSA×299 09:30 $3.92 → close $3.20 -215.28; DOCS×40 09:30 $28.91 → close $28.50 -16.40; FPI×103 09:30 $11.29 → close $11.49 +20.60 | — |
 
 ## Not taken
 

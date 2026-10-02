@@ -14,7 +14,10 @@ plan records the absence.
 HOLDUP_MODE=plan is the pre-open run. HOLDUP_MODE=open_fill is the 09:35 ET
 open-fill. HOLDUP_MODE=fill is the post-close run. HOLDUP_MODE=correct_open
 appends an open-fill correction for CORRECT_OPEN_DATE. It does not edit a
-sealed line. FORWARD_BOOK selects holdup (default) or h1.
+sealed line. HOLDUP_MODE=backfill appends one plan for the next session
+whose bar is already final and that has no plan yet. It uses the same
+pre-open inputs as plan and does not run from the schedule.
+FORWARD_BOOK selects holdup (default) or h1.
 """
 from __future__ import annotations
 
@@ -60,7 +63,12 @@ from research.hot_n4_clean_v4.forward.planfill import (  # noqa: E402
     build_plan,
     hide_session,
 )
-from research.hot_n4_clean_v4.forward.prices import fetch_yahoo, overlay_forward  # noqa: E402
+from research.hot_n4_clean_v4.forward.prices import (  # noqa: E402
+    _same_print,
+    bar_is_final,
+    fetch_yahoo,
+    overlay_forward,
+)
 from research.hot_n4_clean_v4.forward.render import write_page  # noqa: E402
 from research.hot_n4_clean_v4.protocol import (  # noqa: E402
     ENGINE_SHA256,
@@ -570,7 +578,7 @@ def _history_ok(
                 if row_kind == "open_fill":
                     continue
                 return f"stored open for {ticker} on {day} no longer matches the sealed fill"
-            if float(op) != float(fill):
+            if not _same_print(op, fill):
                 return f"stored open for {ticker} on {day} no longer matches the sealed fill"
     return None
 
@@ -795,6 +803,126 @@ def plan_main() -> int:
     write_page(written, _status(target, target, None, "plan"))
     print(
         f"sealed plan {target} picks {len(body['picks'])} "
+        f"planned sells {len(body['planned_sells'])} committed_at {body['committed_at']}",
+        flush=True,
+    )
+    return 0
+
+
+def seal_backfill(plan: dict, now: datetime | None = None) -> dict:
+    """Keep the pre-open picks for one session whose bar is already final.
+
+    plan_main still writes ``missing`` at or after 09:30 ET. This stamp is
+    only for a later append of a day the schedule never sealed. The picks
+    were built from inputs committed before that day's 09:30 ET.
+    """
+    now = now or utc_now()
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    if not bar_is_final(plan["date"], now):
+        raise RuntimeError(f"{plan['date']} bar is not final")
+    sealed = dict(plan)
+    sealed["appended_late"] = True
+    sealed["committed_at"] = now.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    sealed["inputs_asof"] = "before 09:30 ET"
+    sealed["kind"] = "plan"
+    return sealed
+
+
+def backfill_closed_plan() -> int:
+    """Append the next closed session's plan. One day, then stop.
+
+    The session must be the next one after the book, must have no plan,
+    fill, mark, or missing line, and its bar must already be final. A
+    previous plan that is still open is left alone. Inputs are the same
+    blobs plan_main reads. This does not rewrite a sealed buy or sell.
+    """
+    try:
+        records = load()
+    except RuntimeError as exc:
+        _fail(f"existing record hash does not match the ledger ({exc})")
+        return 1
+    records, code = _ready(records)
+    if records is None:
+        return code
+    pending = open_plan(records)
+    if pending is not None:
+        _fail(f"previous plan is not filled {pending['date']}")
+        return 1
+    requested = os.environ.get("PLAN_SESSION", "").strip()
+    target, why = plan_target(records, requested)
+    if why or target is None:
+        _fail(why or "no session")
+        return 1
+    if not bar_is_final(target, utc_now()):
+        _fail(f"{target} bar is not final; the live plan window seals that day")
+        return 1
+    if any(row.get("kind") == "missing" and row.get("date") == target for row in records):
+        print(f"missing already recorded {target}")
+        return 0
+    print(f"backfill plan {target}", flush=True)
+    index = _index()
+    if target not in index:
+        _log_skip(target, f"{target} is outside the v4 session calendar through 2026-12-31", records)
+        return 0
+    bars, code = _bars(records, target)
+    if bars is None:
+        return code
+    score = morning_gate(target)
+    if score.get("status") == "ABSENT":
+        print(
+            f"morning file absent {target}: {score.get('reason')}; planning with S null",
+            flush=True,
+        )
+    finviz = None
+    if target >= SNAPSHOT_FROM:
+        frame, finviz = snapshot_for(target)
+    else:
+        frame, why = frozen_frame(target)
+        if why:
+            _log_skip(target, why, records)
+            return 0
+    state = book_state(records)
+    held = set(state["pos"])
+    hidden = hide_session(bars, target)
+    try:
+        if frame is None:
+            payload = _gap_payload(target, hidden, held, score)
+        else:
+            payload = _payload(target, hidden, held, score, frame)
+        plan = build_plan(payload, state, index)
+    except Halt as exc:
+        _fail(str(exc))
+        return 1
+    except RuntimeError as exc:
+        _log_skip(target, str(exc), records)
+        return 0
+    stamp_morning(plan, score)
+    if finviz is not None:
+        plan["finviz_source"] = finviz
+    try:
+        current = load()
+    except RuntimeError as exc:
+        _fail(f"existing record hash does not match the ledger ({exc})")
+        return 1
+    if open_plan(current) is not None or any(
+        row["kind"] == "plan" and row["date"] == target for row in current
+    ):
+        print(f"plan already sealed {target}")
+        return 0
+    if any(row["kind"] == "missing" and row["date"] == target for row in current):
+        print(f"missing already recorded {target}")
+        return 0
+    try:
+        body = seal_backfill(plan)
+    except RuntimeError as exc:
+        _fail(str(exc))
+        return 1
+    append_records([body])
+    written = load()
+    write_page(written, _status(target, target, None, "plan"))
+    print(
+        f"sealed backfill plan {target} picks {len(body['picks'])} "
         f"planned sells {len(body['planned_sells'])} committed_at {body['committed_at']}",
         flush=True,
     )
@@ -1149,6 +1277,8 @@ def main() -> int:
         return open_fill_main()
     if mode == "correct_open":
         return correct_open_main()
+    if mode == "backfill":
+        return backfill_closed_plan()
     if mode != "plan":
         _fail(f"HOLDUP_MODE {mode}")
         return 1

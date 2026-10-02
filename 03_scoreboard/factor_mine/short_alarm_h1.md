@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **-0.03%** ($9,997) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 124 · skips 96 · realized $+54.59.
+Cash book **+1.12%** ($10,112) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 132 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -262,6 +262,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,996.57 | ▲ close $9,996.57 vs 09:30 $9,996.57 (session +0.00) | 16:00 close · cash $9,996.57 · no lots left · equity $9,996.57. | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,996.57 | ▲ 09:30 equity $9,996.57 vs yday $9,996.57 (+0.00) | 09:30 open · cash $9,996.57 · no holdings · equity $9,996.57 vs prior close $9,996.57 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,996.57 | ▲ close $9,996.57 vs 09:30 $9,996.57 (session +0.00) | 16:00 close · cash $9,996.57 · no lots left · equity $9,996.57. | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,996.57 | ▲ 09:30 equity $9,996.57 vs yday $9,996.57 (+0.00) | 09:30 open · cash $9,996.57 · no holdings · equity $9,996.57 vs prior close $9,996.57 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-01 09:30 ET | **SHORT** | `IT` | 3 | $196.19 | $2.04 | — | $10,583.10 | — | alarm; gate alarm=True; list flatten; ret5=+4.5; leftover $624.79 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `SONO` | 34 | $18.09 | $2.13 | — | $11,196.04 | — | alarm; gate alarm=True; list flatten; ret5=+4.6; leftover $624.79 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `AEHL` | 64 | $9.74 | $2.22 | — | $11,817.18 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+24.8; leftover $624.79 | join🔴 sector🟢 gen🔴 news🔴 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `FEAM` | 179 | $3.48 | $2.58 | — | $12,437.51 | — | alarm; gate alarm=True; list yday_gainer; ret5=+27.7; leftover $624.79 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `SHMD` | 130 | $4.80 | $2.43 | — | $13,059.08 | — | alarm; gate alarm=True; list yday_gainer; ret5=+32.1; leftover $624.79 | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `SDEV` | 173 | $3.60 | $2.56 | — | $13,679.32 | — | alarm; gate alarm=True; list yday_mover; ret5=+131.2; leftover $624.79 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `EMAT` | 242 | $2.58 | $3.19 | — | $14,300.49 | — | alarm; gate alarm=True; list yday_mover; ret5=-23.5; leftover $624.79 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `LIND` | 19 | $31.35 | $2.08 | — | $14,894.06 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+15.4; leftover $624.79 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,894.06 | ▲ close $10,112.24 vs 09:30 $9,996.57 (session +134.90) | 16:00 close · cash $14,894.06 · equity $10,112.24 vs 09:30 $9,996.57 (+115.67; session marks +134.90) · 8 name(s) marked open→close (per-name table). IT×3 09:30 $196.19 → close $192.80 +10.17; SONO×34 09:30 $18.09 → close $17.75 +11.56; AEHL×64 09:30 $9.74 → close $10.16 -26.88; FEAM×179 09:30 $3.48 → close $3.23 +44.75; SHMD×130 09:30 $4.80 → close $4.45 +46.15; SDEV×173 09:30 $3.60 → close $3.66 -10.38; EMAT×242 09:30 $2.58 → close $2.15 +102.85; LIND×19 09:30 $31.35 → close $33.63 -43.32 | — |
 
 ## Not taken
 

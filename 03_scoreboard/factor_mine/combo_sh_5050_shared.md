@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_hot_n4_h1 w=0.5,0.5 net=priority
 
-Cash book **+21.66%** ($12,166) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 230 · skips 159 · realized $+2615.03.
+Cash book **+24.85%** ($12,485) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 238 · skips 159 · realized $+2615.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $15,028.12.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $16,426.10.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -371,6 +371,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,028.12 | ▲ close $12,165.52 vs 09:30 $11,926.71 (session +285.40) | 16:00 close · cash $15,028.12 · equity $12,165.52 vs 09:30 $11,926.71 (+238.81; session marks +285.40) · 6 name(s) marked open→close (per-name table). RSKD×819 09:30 $7.71 → close $7.71 -0.00; KOD×26 09:30 $87.50 → close $91.12 +94.12; GLND×572 09:30 $3.98 → close $4.75 +440.44; SRFM×1916 09:30 $1.19 → close $1.20 +19.16; GRML×217 09:30 $10.50 → close $10.38 -27.12; AEHL×720 09:30 $8.26 → close $8.59 -241.20 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,028.12 | ▲ 09:30 equity $12,165.53 vs yday $12,165.52 (+0.01) | 09:30 open · cash $15,028.12 (unchanged overnight, no fees) · equity $12,165.53 vs prior close $12,165.52 (+0.01) | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,028.12 | ▲ close $12,165.53 vs 09:30 $12,165.53 (session +0.00) | 16:00 close · cash $15,028.12 · equity $12,165.53 vs 09:30 $12,165.53 (-0.00; session marks +0.00) · 6 name(s) marked open→close (per-name table). AEHL×720 09:30 $8.59 → close $8.59 -0.00; GLND×572 09:30 $4.75 → close $4.75 +0.00; GRML×217 09:30 $10.38 → close $10.38 +0.00; KOD×26 09:30 $91.12 → close $91.12 +0.00; RSKD×819 09:30 $7.71 → close $7.71 -0.00; SRFM×1916 09:30 $1.20 → close $1.20 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,028.12 | ▼ 09:30 equity $11,285.90 vs yday $12,165.53 (-879.63) | 09:30 open · cash $15,028.12 (unchanged overnight, no fees) · equity $11,285.90 vs prior close $12,165.53 (-879.63) | — |
+| 2026-10-01 09:30 ET | **SELL** | `GRML` | 217 | $10.04 | $2.85 | $-105.47 | $17,203.95 | ▼ -105.47 after sell → book $11,283.05; vs 09:30 mark -2.85 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-10-01 09:30 ET | **SELL** | `KOD` | 26 | $95.41 | $2.10 | $+201.49 | $19,682.51 | ▲ +201.49 after sell → book $11,280.95; vs 09:30 mark -2.10 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-10-01 09:30 ET | **SELL** | `SRFM` | 1916 | $1.15 | $25.05 | $-126.41 | $21,860.86 | ▼ -126.41 after sell → book $11,255.90; vs 09:30 mark -25.05 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-10-01 09:30 ET | **BUY** | `PACB` | 1557 | $2.34 | $20.09 | — | $18,197.39 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+68.1; combo leftover $3643.48; owner union_hot_n4_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `TJGC` | 138 | $26.31 | $2.40 | — | $14,564.21 | — | top 4 by hot; rank hot_score; list yday_mover; 🔵; ret5=+29.7; combo leftover $3643.48; owner union_hot_n4_h1 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `QSI` | 3036 | $1.20 | $39.16 | — | $10,881.84 | — | top 4 by hot; rank hot_score; list yday_gainer; ret5=+41.0; combo leftover $3643.48; owner union_hot_n4_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `PYXS` | 1211 | $2.31 | $15.92 | — | $13,663.33 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-27.6; combo leftover $2798.56; owner short_news_r_h3 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `NKE` | 78 | $35.45 | $2.33 | — | $16,426.10 | — | news🔴; gate news=bad; list overnight,overnight_mega; ret5=-1.8; combo leftover $2798.56; owner short_news_r_h3 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,426.10 | ▲ close $12,484.83 vs 09:30 $11,285.90 (session +1,308.84) | 16:00 close · cash $16,426.10 · equity $12,484.83 vs 09:30 $11,285.90 (+1198.93; session marks +1308.84) · 8 name(s) marked open→close (per-name table). AEHL×720 09:30 $9.74 → close $10.16 -302.40; GLND×572 09:30 $5.06 → close $4.40 -377.52; RSKD×819 09:30 $7.92 → close $7.93 -8.19; PACB×1557 09:30 $2.34 → close $2.51 +264.69; TJGC×138 09:30 $26.31 → close $32.58 +865.26; QSI×3036 09:30 $1.20 → close $1.43 +698.28; PYXS×1211 09:30 $2.31 → close $2.19 +145.32; NKE×78 09:30 $35.45 → close $35.15 +23.40 | — |
 
 ## Not taken
 

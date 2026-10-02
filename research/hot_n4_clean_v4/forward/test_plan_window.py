@@ -377,6 +377,101 @@ def _unchanged(before: dict[Path, bytes]) -> None:
             raise SystemExit(f"sealed file changed {path.relative_to(ROOT)}")
 
 
+def _backfill_one(book) -> None:
+    """A final session appends one late plan. The live path still writes missing."""
+    final = datetime(2026, 9, 29, 21, 30, tzinfo=ZoneInfo("UTC"))
+    code, text, calls = _run_mode(book, _Clock(final), "backfill_closed_plan")
+    if code != 0 or len(calls["append"]) != 1:
+        raise SystemExit(f"{book.recipe} backfill {code} {text!r} {calls['append']}")
+    body = calls["append"][0][0]
+    if body["kind"] != "plan" or not body.get("appended_late"):
+        raise SystemExit(f"{book.recipe} backfill body {body}")
+    if body.get("inputs_asof") != "before 09:30 ET":
+        raise SystemExit(f"{book.recipe} backfill inputs {body}")
+    if body["date"] != TARGET:
+        raise SystemExit(f"{book.recipe} backfill date {body['date']}")
+    early = datetime(2026, 9, 29, 14, 0, tzinfo=ZoneInfo("UTC"))
+    code, text, calls = _run_mode(book, _Clock(early), "backfill_closed_plan")
+    if code == 0 or calls["append"] or calls["bars"]:
+        raise SystemExit(f"{book.recipe} backfill ran before the bar was final {code} {calls}")
+    code, text, calls = _run(book, _Clock(final))
+    if code != 0 or len(calls["append"]) != 1:
+        raise SystemExit(f"{book.recipe} live late path {code} {text!r}")
+    if calls["append"][0][0]["kind"] != "missing":
+        raise SystemExit(f"{book.recipe} live late path kept picks")
+
+
+def _run_mode(book, clock, fn_name: str) -> tuple[int, str, dict]:
+    records = _records()
+    calls = {"append": [], "bars": 0, "morning": 0, "page": 0, "skip": 0, "snapshot": 0}
+
+    def load(folder=None):
+        return records
+
+    def append(bodies, folder=None):
+        calls["append"].append(list(bodies))
+        return bodies
+
+    def bars(rows, target):
+        calls["bars"] += 1
+        return {"feat": {}, "stored": {}}, 0
+
+    def morning(session):
+        calls["morning"] += 1
+        return {
+            "blob_sha": "abc",
+            "kind": "predict",
+            "morning_s": None,
+            "path": f"01_daily/general/{session}_predict.md",
+            "server_time_utc": f"{session}T12:00:00Z",
+            "status": "BEFORE_1330",
+        }
+
+    def snapshot(session):
+        calls["snapshot"] += 1
+        return None, {"path": "data/snapshots/2026-09-28.csv", "status": "MISSING"}
+
+    def page(*args, **kwargs):
+        calls["page"] += 1
+
+    def skip(*args, **kwargs):
+        calls["skip"] += 1
+
+    saved = {
+        "append_records": forward.append_records,
+        "load": forward.load,
+        "utc_now": forward.utc_now,
+        "write_page": forward.write_page,
+        "_bars": forward._bars,
+        "_engine_ok": forward._engine_ok,
+        "_halt_known": forward._halt_known,
+        "_log_skip": forward._log_skip,
+        "morning_gate": forward.morning_gate,
+        "snapshot_for": forward.snapshot_for,
+    }
+    token = use_book(book)
+    out = io.StringIO()
+    err = io.StringIO()
+    try:
+        forward.load = load
+        forward.append_records = append
+        forward.write_page = page
+        forward._bars = bars
+        forward._engine_ok = lambda: None
+        forward._log_skip = skip
+        forward._halt_known = lambda *args, **kwargs: None
+        forward.morning_gate = morning
+        forward.snapshot_for = snapshot
+        forward.utc_now = clock
+        with redirect_stdout(out), redirect_stderr(err):
+            code = getattr(forward, fn_name)()
+    finally:
+        reset_book(token)
+        for name, value in saved.items():
+            setattr(forward, name, value)
+    return code, out.getvalue() + err.getvalue(), calls
+
+
 def main() -> None:
     before = {path: path.read_bytes() for path in SEALED if path.is_file()}
     try:
@@ -384,6 +479,8 @@ def main() -> None:
         _bounds()
         _second_check()
         _override()
+        _backfill_one(HOLDUP)
+        _backfill_one(H1)
     finally:
         _unchanged(before)
     print("plan window 08:00-09:30 ET; early run writes nothing; both books")

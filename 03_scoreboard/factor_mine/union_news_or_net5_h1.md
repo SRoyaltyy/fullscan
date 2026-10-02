@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 5
 
-Cash book **-25.75%** ($7,425) · signal-only (no cash/fees) was -10.75%. Starts YES **1/30**. Fills 113 · skips 18 · realized $-1136.92.
+Cash book **-27.84%** ($7,216) · signal-only (no cash/fees) was -10.75%. Starts YES **1/30**. Fills 116 · skips 18 · realized $-1136.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -255,6 +255,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.96 | ▼ close $7,425.31 vs 09:30 $8,020.87 (session -572.48) | 16:00 close · cash $0.96 · equity $7,425.31 vs 09:30 $8,020.87 (-595.56; session marks -572.48) · 1 name(s) marked open→close (per-name table). ZSQR×1789 09:30 $4.47 → close $4.15 -572.48 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.96 | ▲ 09:30 equity $7,425.31 vs yday $7,425.31 (+0.00) | 09:30 open · cash $0.96 (unchanged overnight, no fees) · equity $7,425.31 vs prior close $7,425.31 (+0.00) · 1 name(s) re-marked at the open (per-name table). ZSQR×1789 yday $4.15 → 09:30 $4.15 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.96 | ▲ close $7,425.31 vs 09:30 $7,425.31 (session +0.00) | 16:00 close · cash $0.96 · equity $7,425.31 vs 09:30 $7,425.31 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). ZSQR×1789 09:30 $4.15 → close $4.15 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.96 | ▲ 09:30 equity $7,550.54 vs yday $7,425.31 (+125.23) | 09:30 open · cash $0.96 (unchanged overnight, no fees) · equity $7,550.54 vs prior close $7,425.31 (+125.23) · 1 name(s) re-marked at the open (per-name table). ZSQR×1789 yday $4.15 → 09:30 $4.22 +125.23 | — |
+| 2026-10-01 09:30 ET | **SELL** | `ZSQR` | 1789 | $4.22 | $23.44 | $-493.76 | $7,527.10 | ▼ -493.76 after sell → book $7,527.10; vs 09:30 mark -23.44 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **BUY** | `PRGS` | 92 | $40.52 | $2.27 | — | $3,797.00 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list earn_react; 🔵; ret5=-2.6; leftover $3763.55 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `NTAP` | 17 | $211.75 | $2.04 | — | $195.21 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list ohlc_hot; ret5=+7.0; leftover $3763.55 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $195.21 | ▼ close $7,216.42 vs 09:30 $7,550.54 (session -306.38) | 16:00 close · cash $195.21 · equity $7,216.42 vs 09:30 $7,550.54 (-334.12; session marks -306.38) · 2 name(s) marked open→close (per-name table). PRGS×92 09:30 $40.52 → close $36.58 -362.48; NTAP×17 09:30 $211.75 → close $215.05 +56.10 | — |
 
 ## Not taken
 

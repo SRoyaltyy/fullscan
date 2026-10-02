@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-14.13%** ($8,586) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 97 · skips 133 · realized $-1334.78.
+Cash book **-20.08%** ($7,992) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 102 · skips 133 · realized $-1334.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -239,6 +239,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $111.07 | ▼ close $8,586.47 vs 09:30 $9,091.53 (session -503.86) | 16:00 close · cash $111.07 · equity $8,586.47 vs 09:30 $9,091.53 (-505.06; session marks -503.86) · 3 name(s) marked open→close (per-name table). SECZ×250 09:30 $16.59 → close $15.84 -187.50; ZSQR×1056 09:30 $4.47 → close $4.15 -337.92; GLND×28 09:30 $3.98 → close $4.75 +21.56 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $111.07 | ▲ 09:30 equity $8,586.47 vs yday $8,586.47 (+0.00) | 09:30 open · cash $111.07 (unchanged overnight, no fees) · equity $8,586.47 vs prior close $8,586.47 (+0.00) · 3 name(s) re-marked at the open (per-name table). GLND×28 yday $4.75 → 09:30 $4.75 +0.00; SECZ×250 yday $15.84 → 09:30 $15.84 +0.00; ZSQR×1056 yday $4.15 → 09:30 $4.15 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $111.07 | ▲ close $8,586.47 vs 09:30 $8,586.47 (session +0.00) | 16:00 close · cash $111.07 · equity $8,586.47 vs 09:30 $8,586.47 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). GLND×28 09:30 $4.75 → close $4.75 +0.00; SECZ×250 09:30 $15.84 → close $15.84 +0.00; ZSQR×1056 09:30 $4.15 → close $4.15 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $111.07 | ▼ 09:30 equity $8,346.57 vs yday $8,586.47 (-239.90) | 09:30 open · cash $111.07 (unchanged overnight, no fees) · equity $8,346.57 vs prior close $8,586.47 (-239.90) · 3 name(s) re-marked at the open (per-name table). GLND×28 yday $4.75 → 09:30 $5.06 +8.68; SECZ×250 yday $15.84 → 09:30 $14.55 -322.50; ZSQR×1056 yday $4.15 → 09:30 $4.22 +73.92 | — |
+| 2026-10-01 09:30 ET | **SELL** | `GLND` | 28 | $5.06 | $1.52 | $+27.52 | $251.23 | ▲ +27.52 after sell → book $8,345.05; vs 09:30 mark -1.52 | exit unpriced hold on first bar after 2 sess | join🔴 sector🔴 gen🔴 news🟢 digest🟢 judge🟡 ab🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SELL** | `SECZ` | 250 | $14.55 | $3.30 | $-421.52 | $3,885.43 | ▼ -421.52 after sell → book $8,341.75; vs 09:30 mark -3.30 | exit unpriced hold on first bar after 4 sess | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-01 09:30 ET | **SELL** | `ZSQR` | 1056 | $4.22 | $13.83 | $+352.70 | $8,327.92 | ▲ +352.70 after sell → book $8,327.92; vs 09:30 mark -13.83 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **BUY** | `TLSA` | 3751 | $1.11 | $48.39 | — | $4,115.92 | — | combo gate; gate news=good,vol=good; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+5.7; leftover $4163.96 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `PRGS` | 101 | $40.52 | $2.29 | — | $21.11 | — | combo gate; gate news=good,vol=good; list earn_react; 🔵; ret5=-2.6; leftover $4163.96 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.11 | ▼ close $7,991.83 vs 09:30 $8,346.57 (session -285.41) | 16:00 close · cash $21.11 · equity $7,991.83 vs 09:30 $8,346.57 (-354.74; session marks -285.41) · 2 name(s) marked open→close (per-name table). TLSA×3751 09:30 $1.11 → close $1.14 +112.53; PRGS×101 09:30 $40.52 → close $36.58 -397.94 | — |
 
 ## Not taken
 

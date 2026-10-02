@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + yday up AND catalyst, top 4 by Score
 
-Cash book **-2.90%** ($9,710) · signal-only (no cash/fees) was +32.51%. Starts YES **3/30**. Fills 69 · skips 73 · realized $+170.12.
+Cash book **-3.16%** ($9,684) · signal-only (no cash/fees) was +32.51%. Starts YES **3/30**. Fills 71 · skips 73 · realized $+170.12.
 
 ## How this sleeve decides (like you are 10)
 
@@ -211,6 +211,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $225.26 | ▼ close $9,710.45 vs 09:30 $9,720.52 (session -10.07) | 16:00 close · cash $225.26 · equity $9,710.45 vs 09:30 $9,720.52 (-10.07; session marks -10.07) · 3 name(s) marked open→close (per-name table). MRVI×405 09:30 $7.52 → close $7.65 +52.65; TEM×37 09:30 $85.48 → close $82.58 -107.49; TXG×37 09:30 $88.83 → close $90.04 +44.77 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $225.26 | ▲ 09:30 equity $9,710.45 vs yday $9,710.45 (+0.00) | 09:30 open · cash $225.26 (unchanged overnight, no fees) · equity $9,710.45 vs prior close $9,710.45 (+0.00) · 3 name(s) re-marked at the open (per-name table). MRVI×405 yday $7.65 → 09:30 $7.65 +0.00; TEM×37 yday $82.58 → 09:30 $82.58 +0.00; TXG×37 yday $90.04 → 09:30 $90.04 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $225.26 | ▲ close $9,710.45 vs 09:30 $9,710.45 (session +0.00) | 16:00 close · cash $225.26 · equity $9,710.45 vs 09:30 $9,710.45 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). MRVI×405 09:30 $7.65 → close $7.65 +0.00; TEM×37 09:30 $82.58 → close $82.58 +0.00; TXG×37 09:30 $90.04 → close $90.04 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $225.26 | ▼ 09:30 equity $9,691.17 vs yday $9,710.45 (-19.28) | 09:30 open · cash $225.26 (unchanged overnight, no fees) · equity $9,691.17 vs prior close $9,710.45 (-19.28) · 3 name(s) re-marked at the open (per-name table). MRVI×405 yday $7.65 → 09:30 $7.67 +8.10; TEM×37 yday $82.58 → 09:30 $82.58 +0.00; TXG×37 yday $90.04 → 09:30 $89.30 -27.38 | — |
+| 2026-10-01 09:30 ET | **SELL** | `MRVI` | 405 | $7.67 | $5.32 | $-2.44 | $3,326.29 | ▼ -2.44 after sell → book $9,685.85; vs 09:30 mark -5.32 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `TXG` | 37 | $89.30 | $2.14 | $+200.74 | $6,628.26 | ▲ +200.74 after sell → book $9,683.72; vs 09:30 mark -2.13 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,628.26 | ▲ close $9,683.72 vs 09:30 $9,691.17 (session +0.00) | 16:00 close · cash $6,628.26 · equity $9,683.72 vs 09:30 $9,691.17 (-7.45; session marks +0.00) · 1 name(s) marked open→close (per-name table). TEM×37 09:30 $82.58 → close $82.58 +0.00 | — |
 
 ## Not taken
 

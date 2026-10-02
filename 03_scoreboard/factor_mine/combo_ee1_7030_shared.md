@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_e_fresh_h1 w=0.7,0.3 net=priority
 
-Cash book **-9.87%** ($9,013) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 126 · skips 250 · realized $+4004.41.
+Cash book **-11.57%** ($8,843) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 126 · skips 250 · realized $+4004.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -267,6 +267,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $36.18 | ▼ close $9,013.05 vs 09:30 $9,064.35 (session -40.34) | 16:00 close · cash $36.18 · equity $9,013.05 vs 09:30 $9,064.35 (-51.30; session marks -40.34) · 5 name(s) marked open→close (per-name table). CCL×74 09:30 $24.39 → close $25.11 +53.28; JEF×39 09:30 $46.08 → close $46.52 +17.16; KMX×30 09:30 $60.41 → close $59.23 -35.25; MTN×13 09:30 $138.42 → close $141.29 +37.31; UEC×182 09:30 $9.91 → close $9.29 -112.84 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $36.18 | ▲ 09:30 equity $9,013.05 vs yday $9,013.05 (+0.00) | 09:30 open · cash $36.18 (unchanged overnight, no fees) · equity $9,013.05 vs prior close $9,013.05 (+0.00) | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $36.18 | ▲ close $9,013.05 vs 09:30 $9,013.05 (session +0.00) | 16:00 close · cash $36.18 · equity $9,013.05 vs 09:30 $9,013.05 (+0.00; session marks +0.00) · 5 name(s) marked open→close (per-name table). CCL×74 09:30 $25.11 → close $25.11 +0.00; JEF×39 09:30 $46.52 → close $46.52 +0.00; KMX×30 09:30 $59.23 → close $59.23 +0.00; MTN×13 09:30 $141.29 → close $141.29 +0.00; UEC×182 09:30 $9.29 → close $9.29 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $36.18 | ▼ 09:30 equity $8,799.72 vs yday $9,013.05 (-213.33) | 09:30 open · cash $36.18 (unchanged overnight, no fees) · equity $8,799.72 vs prior close $9,013.05 (-213.33) | — |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $36.18 | ▲ close $8,843.20 vs 09:30 $8,799.72 (session +43.48) | 16:00 close · cash $36.18 · equity $8,843.20 vs 09:30 $8,799.72 (+43.48; session marks +43.48) · 5 name(s) marked open→close (per-name table). CCL×74 09:30 $24.66 → close $25.07 +30.34; JEF×39 09:30 $45.41 → close $45.25 -6.24; KMX×30 09:30 $55.27 → close $55.89 +18.60; MTN×13 09:30 $138.51 → close $138.99 +6.24; UEC×182 09:30 $9.39 → close $9.36 -5.46 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **-8.40%** ($9,160) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 66 · skips 28 · realized $+1837.87.
+Cash book **-4.96%** ($9,505) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 67 · skips 28 · realized $+1837.87.
 
 ## How this sleeve decides (like you are 10)
 
@@ -208,6 +208,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,160.05 | ▲ close $9,160.05 vs 09:30 $9,160.05 (session +0.00) | 16:00 close · cash $9,160.05 · no lots left · equity $9,160.05. | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,160.05 | ▲ 09:30 equity $9,160.05 vs yday $9,160.05 (+0.00) | 09:30 open · cash $9,160.05 · no holdings · equity $9,160.05 vs prior close $9,160.05 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,160.05 | ▲ close $9,160.05 vs 09:30 $9,160.05 (session +0.00) | 16:00 close · cash $9,160.05 · no lots left · equity $9,160.05. | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,160.05 | ▲ 09:30 equity $9,160.05 vs yday $9,160.05 (+0.00) | 09:30 open · cash $9,160.05 · no holdings · equity $9,160.05 vs prior close $9,160.05 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-01 09:30 ET | **BUY** | `MU` | 8 | $1054.08 | $2.01 | — | $725.40 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list earn_react; ret5=-0.6; leftover $9160.05 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $725.40 | ▲ close $9,504.52 vs 09:30 $9,160.05 (session +346.48) | 16:00 close · cash $725.40 · equity $9,504.52 vs 09:30 $9,160.05 (+344.47; session marks +346.48) · 1 name(s) marked open→close (per-name table). MU×8 09:30 $1054.08 → close $1097.39 +346.48 | — |
 
 ## Not taken
 

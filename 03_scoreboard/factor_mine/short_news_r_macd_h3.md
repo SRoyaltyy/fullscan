@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short news🔴 ∩ prior MACD histogram > 0
 
-Cash book **+1.51%** ($10,151) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 81 · skips 81 · realized $+1277.69.
+Cash book **+0.52%** ($10,052) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 83 · skips 81 · realized $+1277.69.
 
 ## How this sleeve decides (like you are 10)
 
@@ -220,6 +220,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,954.37 | ▲ close $10,151.04 vs 09:30 $10,151.04 (session +0.00) | 16:00 close · cash $14,954.37 · equity $10,151.04 vs 09:30 $10,151.04 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). RSKD×623 09:30 $7.71 → close $7.71 -0.00 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,954.37 | ▲ 09:30 equity $10,151.04 vs yday $10,151.04 (+0.00) | 09:30 open · cash $14,954.37 (unchanged overnight, no fees) · equity $10,151.04 vs prior close $10,151.04 (+0.00) · 1 name(s) re-marked at the open (per-name table). RSKD×623 yday $7.71 → 09:30 $7.71 -0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,954.37 | ▲ close $10,151.04 vs 09:30 $10,151.04 (session +0.00) | 16:00 close · cash $14,954.37 · equity $10,151.04 vs 09:30 $10,151.04 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). RSKD×623 09:30 $7.71 → close $7.71 -0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,954.37 | ▼ 09:30 equity $10,020.21 vs yday $10,151.04 (-130.83) | 09:30 open · cash $14,954.37 (unchanged overnight, no fees) · equity $10,020.21 vs prior close $10,151.04 (-130.83) · 1 name(s) re-marked at the open (per-name table). RSKD×623 yday $7.71 → 09:30 $7.92 -130.83 | — |
+| 2026-10-01 09:30 ET | **COVER** | `RSKD` | 623 | $7.92 | $8.04 | $-59.96 | $10,012.17 | ▼ -59.96 after sell → book $10,012.17; vs 09:30 mark -8.04 | exit unpriced hold on first bar after 4 sess | join🟢 sector🟢 gen🔴 news🔴 digest🟢 judge🟡 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `NKE` | 141 | $35.45 | $2.61 | — | $15,008.01 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list overnight,overnight_mega; ret5=-1.8; leftover $5006.09 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,008.01 | ▲ close $10,051.86 vs 09:30 $10,020.21 (session +42.30) | 16:00 close · cash $15,008.01 · equity $10,051.86 vs 09:30 $10,020.21 (+31.65; session marks +42.30) · 1 name(s) marked open→close (per-name table). NKE×141 09:30 $35.45 → close $35.15 +42.30 | — |
 
 ## Not taken
 

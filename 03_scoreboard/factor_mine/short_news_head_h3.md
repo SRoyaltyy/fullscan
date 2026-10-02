@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short prior-export headline🔴
 
-Cash book **-9.13%** ($9,087) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 85 · skips 94 · realized $+602.64.
+Cash book **-15.04%** ($8,496) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 88 · skips 94 · realized $+602.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -223,6 +223,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18,386.26 | ▼ close $9,086.88 vs 09:30 $9,282.66 (session -188.27) | 16:00 close · cash $18,386.26 · equity $9,086.88 vs 09:30 $9,282.66 (-195.78; session marks -188.27) · 2 name(s) marked open→close (per-name table). RSKD×580 09:30 $7.71 → close $7.71 -0.00; AEHL×562 09:30 $8.26 → close $8.59 -188.27 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18,386.26 | ▲ 09:30 equity $9,086.88 vs yday $9,086.88 (-0.00) | 09:30 open · cash $18,386.26 (unchanged overnight, no fees) · equity $9,086.88 vs prior close $9,086.88 (-0.00) · 2 name(s) re-marked at the open (per-name table). AEHL×562 yday $8.59 → 09:30 $8.59 -0.00; RSKD×580 yday $7.71 → 09:30 $7.71 -0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18,386.26 | ▲ close $9,086.88 vs 09:30 $9,086.88 (session +0.00) | 16:00 close · cash $18,386.26 · equity $9,086.88 vs 09:30 $9,086.88 (-0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). AEHL×562 09:30 $8.59 → close $8.59 -0.00; RSKD×580 09:30 $7.71 → close $7.71 -0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $18,386.26 | ▼ 09:30 equity $8,318.78 vs yday $9,086.88 (-768.10) | 09:30 open · cash $18,386.26 (unchanged overnight, no fees) · equity $8,318.78 vs prior close $9,086.88 (-768.10) · 2 name(s) re-marked at the open (per-name table). AEHL×562 yday $8.59 → 09:30 $9.74 -646.30; RSKD×580 yday $7.71 → 09:30 $7.92 -121.80 | — |
+| 2026-10-01 09:30 ET | **COVER** | `AEHL` | 562 | $9.74 | $7.25 | $-849.33 | $12,905.13 | ▼ -849.33 after sell → book $8,311.53; vs 09:30 mark -7.25 | exit unpriced hold on first bar after 2 sess | join🔴 sector🟢 gen🔴 news🔴 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-01 09:30 ET | **COVER** | `RSKD` | 580 | $7.92 | $7.48 | $-55.82 | $8,304.05 | ▼ -55.82 after sell → book $8,304.05; vs 09:30 mark -7.48 | exit unpriced hold on first bar after 4 sess | join🟢 sector🟢 gen🔴 news🔴 digest🟢 judge🟡 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `PYXS` | 1797 | $2.31 | $23.63 | — | $12,431.49 | — | short prior-export headline🔴; gate headline=bad; list yday_mover; 🔵; ret5=-27.6; leftover $4152.02 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,431.49 | ▲ close $8,496.06 vs 09:30 $8,318.78 (session +215.64) | 16:00 close · cash $12,431.49 · equity $8,496.06 vs 09:30 $8,318.78 (+177.28; session marks +215.64) · 1 name(s) marked open→close (per-name table). PYXS×1797 09:30 $2.31 → close $2.19 +215.64 | — |
 
 ## Not taken
 

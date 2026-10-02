@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · news🔴
 
-Cash book **-4.10%** ($9,590) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 116 · skips 28 · realized $+7.41.
+Cash book **-10.25%** ($8,975) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 120 · skips 28 · realized $+7.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -254,6 +254,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,684.05 | ▼ close $9,590.18 vs 09:30 $9,796.76 (session -198.65) | 16:00 close · cash $14,684.05 · equity $9,590.18 vs 09:30 $9,796.76 (-206.58; session marks -198.65) · 1 name(s) marked open→close (per-name table). AEHL×593 09:30 $8.26 → close $8.59 -198.65 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,684.05 | ▲ 09:30 equity $9,590.18 vs yday $9,590.18 (+0.00) | 09:30 open · cash $14,684.05 (unchanged overnight, no fees) · equity $9,590.18 vs prior close $9,590.18 (+0.00) · 1 name(s) re-marked at the open (per-name table). AEHL×593 yday $8.59 → 09:30 $8.59 -0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,684.05 | ▲ close $9,590.18 vs 09:30 $9,590.18 (session +0.00) | 16:00 close · cash $14,684.05 · equity $9,590.18 vs 09:30 $9,590.18 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). AEHL×593 09:30 $8.59 → close $8.59 -0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,684.05 | ▼ 09:30 equity $8,908.23 vs yday $9,590.18 (-681.95) | 09:30 open · cash $14,684.05 (unchanged overnight, no fees) · equity $8,908.23 vs prior close $9,590.18 (-681.95) · 1 name(s) re-marked at the open (per-name table). AEHL×593 yday $8.59 → 09:30 $9.74 -681.95 | — |
+| 2026-10-01 09:30 ET | **COVER** | `AEHL` | 593 | $9.74 | $7.65 | $-896.18 | $8,900.58 | ▼ -896.18 after sell → book $8,900.58; vs 09:30 mark -7.65 | exit unpriced hold on first bar after 2 sess | join🔴 sector🟢 gen🔴 news🔴 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `PYXS` | 642 | $2.31 | $8.44 | — | $10,375.16 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-27.6; leftover $1483.43 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `RSKD` | 187 | $7.92 | $2.63 | — | $11,853.56 | — | news🔴; gate news=bad; list ohlc_hot; 🔵; ret5=+10.8; leftover $1483.43 | join🟢 sector🟢 gen🔴 news🔴 digest🟢 judge🟡 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **SHORT** | `NKE` | 41 | $35.45 | $2.17 | — | $13,304.84 | — | news🔴; gate news=bad; list overnight,overnight_mega; ret5=-1.8; leftover $1483.43 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,304.84 | ▲ close $8,974.80 vs 09:30 $8,908.23 (session +87.47) | 16:00 close · cash $13,304.84 · equity $8,974.80 vs 09:30 $8,908.23 (+66.57; session marks +87.47) · 3 name(s) marked open→close (per-name table). PYXS×642 09:30 $2.31 → close $2.19 +77.04; RSKD×187 09:30 $7.92 → close $7.93 -1.87; NKE×41 09:30 $35.45 → close $35.15 +12.30 | — |
 
 ## Not taken
 

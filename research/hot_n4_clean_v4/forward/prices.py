@@ -4,8 +4,11 @@ The pinned v4 file ``data/prices/ohlc.parquet`` is read-only here. New
 sessions after 2026-09-25 go to ``prices.jsonl``. Each fetch is one line in
 ``PRICE_LEDGER.jsonl``, hashed with sha256. A Yahoo print that disagrees
 with a bar already in ``prices.jsonl`` is written to ``price_revisions.jsonl``
-and is not copied over the stored bar. If that bar was used by a sealed
-record, the run stops.
+and is not copied over the stored bar. A sealed bar whose only changes are
+volume, or OHLC fields that moved by at most one cent, does not stop the
+run. One sealed OHLC field that moved by more than one cent stays pending:
+the stored bar is left as it is, the ledger names that leg, and new bars
+still append. More than one such field stops the run and appends nothing.
 
 Yahoo is asked for split-adjusted daily bars with ``auto_adjust=False`` and
 ``actions=True``, the same call ``src/price_store.py`` locks: dividends are
@@ -13,6 +16,12 @@ not applied. A new >3x leg is classified with the locked split table and
 the filing-verified real-move table. An unexplained leg removes a candidate.
 The same leg on a held name, or any non-split leg on IWM, halts and appends
 nothing.
+
+When the pinned parquet already holds a post-pin session that
+``prices.jsonl`` also has, the in-memory overlay uses the jsonl bar.
+That is the stored print, including a float32 image of the same price
+and a later parquet value that was not copied over the jsonl line.
+The parquet file and the jsonl file are not rewritten.
 """
 from __future__ import annotations
 
@@ -98,6 +107,31 @@ def _same(old: dict, new: dict) -> bool:
     return True
 
 
+def _over_cent(old: float, new: float) -> bool:
+    """True when an OHLC print moved by more than one cent.
+
+    Stored prices are rounded to 6 decimals. A one-cent gap can be a hair
+    over 0.01 in binary, so the test uses that same 6-decimal gap.
+    """
+    return round(abs(float(new) - float(old)), 6) > 0.01
+
+
+def _material_ohlc(old: dict, new: dict) -> list[dict]:
+    """Sealed OHLC fields on one bar that moved by more than one cent."""
+    legs = []
+    for field in ("open", "high", "low", "close"):
+        old_v = float(old[field])
+        new_v = float(new[field])
+        if _over_cent(old_v, new_v):
+            legs.append({
+                "field": field,
+                "new": new_v,
+                "old": old_v,
+                "ticker": str(new["ticker"]),
+            })
+    return legs
+
+
 def load_price_rows(folder: Path | None = None) -> list[dict]:
     path = prices_path(folder)
     if not path.is_file() or path.stat().st_size == 0:
@@ -157,8 +191,25 @@ def sealed_bar_keys(records: list[dict]) -> set[tuple[str, str]]:
     return keys
 
 
+def _same_print(stored, exact) -> bool:
+    """True when two OHLC prints are the same price.
+
+    A float32 round-trip of the jsonl print is the same price. A move
+    larger than a hundredth of a cent is not.
+    """
+    left = float(stored)
+    right = float(exact)
+    if left == right:
+        return True
+    return round(abs(left - right), 6) <= 1e-4
+
+
 def overlay_rows(bars: dict, rows: list[dict]) -> dict:
-    """Return bars with forward sessions appended. Does not mutate ``bars``."""
+    """Return bars with forward sessions appended. Does not mutate ``bars``.
+
+    A post-pin date already in the pinned parquet is replaced in memory
+    by the jsonl bar. The jsonl line is the stored print.
+    """
     import numpy as np
 
     out = {"feat": {}, "stored": {}}
@@ -194,6 +245,9 @@ def overlay_rows(bars: dict, rows: list[dict]) -> dict:
             for row in extra:
                 if dates and row["date"] <= dates[-1]:
                     if row["date"] in dates:
+                        index = dates.index(row["date"])
+                        for field in fields:
+                            blob[field][index] = float(row[field])
                         continue
                     raise RuntimeError(f"forward bar out of order {ticker} {row['date']}")
                 dates.append(row["date"])
@@ -386,7 +440,13 @@ def refresh(
     """Fetch ``tickers`` and append only new final sessions under ``folder``.
 
     Returns the ledger body. Raises Halt or SealedBarRevision after the
-    ledger line is written. A missing bar appends nothing and returns.
+    ledger line is written. A missing name stays in ``missing`` and does
+    not stop the others. A sealed volume change, or a sealed OHLC move of
+    at most one cent, is logged and does not overwrite the stored bar. One
+    sealed OHLC field that moved by more than one cent stays pending: the
+    stored bar is left as it is, the ledger names that leg, and new bars
+    still append. More than one such field raises SealedBarRevision and
+    appends nothing.
     """
     now = now or datetime.now(timezone.utc)
     folder.mkdir(parents=True, exist_ok=True)
@@ -455,12 +515,11 @@ def refresh(
             revisions.append({"new": row, "old": old})
     used = sealed_bar_keys(records)
     revision_lines = []
-    sealed_hit = False
+    material: list[dict] = []
     for rev in revisions:
         new = rev["new"]
         key = (new["ticker"], new["date"])
         touched = key in used
-        sealed_hit = sealed_hit or touched
         revision_lines.append(canonical_bytes({
             "at": now.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "date": new["date"],
@@ -469,9 +528,13 @@ def refresh(
             "sealed_use": touched,
             "ticker": new["ticker"],
         }))
+        if touched:
+            material.extend(_material_ohlc(rev["old"], new))
     if revision_lines:
         _append_lines(revisions_path(folder), revision_lines)
-    if sealed_hit:
+    # More than one sealed OHLC field moved by more than one cent. That is
+    # not a single pending leg, so the session appends nothing.
+    if len(material) > 1:
         body = {
             "appended": [],
             "at": now.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -485,6 +548,7 @@ def refresh(
         }
         _write_ledger(folder, body)
         raise SealedBarRevision(body["why"])
+    pending = material[0] if material else None
     view = _stored_view(pinned_stored, stored_rows)
     excluded = []
     halted = []
@@ -526,6 +590,12 @@ def refresh(
             why = "Yahoo returned no bars; appended nothing"
         else:
             why = f"no new session after {PIN_END}; appended nothing"
+    if pending:
+        named = (
+            f"pending {pending['ticker']} {pending['field']} "
+            f"old {pending['old']} new {pending['new']}"
+        )
+        why = f"{named}; {why}" if why else named
     body = {
         "appended": [{"date": row["date"], "ticker": row["ticker"]} for row in accepted],
         "at": now.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -537,6 +607,8 @@ def refresh(
         "sha256": digest,
         "why": why,
     }
+    if pending:
+        body["pending"] = pending
     _write_ledger(folder, body)
     return body
 
@@ -570,8 +642,17 @@ def main() -> int:
     frame, why = frozen_frame(session)
     note = None
     names = set(held) | {"IWM"}
+    pending = open_plan(records)
+    if pending is not None:
+        names |= {str(row["ticker"]).upper() for row in pending.get("picks") or []}
+        names |= {str(row["ticker"]).upper() for row in pending.get("planned_sells") or []}
     if why or frame is None:
-        note = why or "candidate universe unavailable; fetching held names and IWM only"
+        if why:
+            note = why
+        else:
+            note = "candidate universe unavailable; fetching held names and IWM"
+            if pending is not None:
+                note += " plus the sealed plan's names"
         print(note, flush=True)
     else:
         names |= {row["ticker"] for row in liquid_universe(frame)}

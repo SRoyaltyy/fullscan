@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-19.18%** ($8,082) · signal-only (no cash/fees) was -40.60%. Starts YES **0/30**. Fills 97 · skips 188 · realized $-1635.94.
+Cash book **-16.43%** ($8,357) · signal-only (no cash/fees) was -40.60%. Starts YES **0/30**. Fills 99 · skips 188 · realized $-1635.94.
 
 ## How this sleeve decides (like you are 10)
 
@@ -233,6 +233,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.82 | ▼ close $8,081.94 vs 09:30 $8,293.48 (session -207.36) | 16:00 close · cash $20.82 · equity $8,081.94 vs 09:30 $8,293.48 (-211.54; session marks -207.36) · 1 name(s) marked open→close (per-name table). CNXC×324 09:30 $25.52 → close $24.88 -207.36 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.82 | ▲ 09:30 equity $8,081.94 vs yday $8,081.94 (+0.00) | 09:30 open · cash $20.82 (unchanged overnight, no fees) · equity $8,081.94 vs prior close $8,081.94 (+0.00) · 1 name(s) re-marked at the open (per-name table). CNXC×324 yday $24.88 → 09:30 $24.88 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.82 | ▲ close $8,081.94 vs 09:30 $8,081.94 (session +0.00) | 16:00 close · cash $20.82 · equity $8,081.94 vs 09:30 $8,081.94 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). CNXC×324 09:30 $24.88 → close $24.88 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.82 | ▲ 09:30 equity $8,435.10 vs yday $8,081.94 (+353.16) | 09:30 open · cash $20.82 (unchanged overnight, no fees) · equity $8,435.10 vs prior close $8,081.94 (+353.16) · 1 name(s) re-marked at the open (per-name table). CNXC×324 yday $24.88 → 09:30 $25.97 +353.16 | — |
+| 2026-10-01 09:30 ET | **SELL** | `CNXC` | 324 | $25.97 | $4.30 | $+137.32 | $8,430.80 | ▲ +137.32 after sell → book $8,430.80; vs 09:30 mark -4.30 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **BUY** | `NKE` | 237 | $35.45 | $3.06 | — | $26.09 | — | baseline list, no extra gate; list overnight,overnight_mega; ret5=-1.8; leftover $8430.80 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $26.09 | ▼ close $8,356.64 vs 09:30 $8,435.10 (session -71.10) | 16:00 close · cash $26.09 · equity $8,356.64 vs 09:30 $8,435.10 (-78.46; session marks -71.10) · 1 name(s) marked open→close (per-name table). NKE×237 09:30 $35.45 → close $35.15 -71.10 | — |
 
 ## Not taken
 

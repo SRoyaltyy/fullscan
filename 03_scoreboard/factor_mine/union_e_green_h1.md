@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-2.24%** ($9,776) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 110 · skips 17 · realized $-2405.95.
+Cash book **-9.61%** ($9,039) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 114 · skips 17 · realized $-2405.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -252,6 +252,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $76.06 | ▲ close $9,776.37 vs 09:30 $9,543.06 (session +237.98) | 16:00 close · cash $76.06 · equity $9,776.37 vs 09:30 $9,543.06 (+233.31; session marks +237.98) · 2 name(s) marked open→close (per-name table). CCL×195 09:30 $24.39 → close $25.11 +140.40; MTN×34 09:30 $138.42 → close $141.29 +97.58 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $76.06 | ▲ 09:30 equity $9,776.37 vs yday $9,776.37 (-0.00) | 09:30 open · cash $76.06 (unchanged overnight, no fees) · equity $9,776.37 vs prior close $9,776.37 (-0.00) · 2 name(s) re-marked at the open (per-name table). CCL×195 yday $25.11 → 09:30 $25.11 +0.00; MTN×34 yday $141.29 → 09:30 $141.29 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $76.06 | ▲ close $9,776.37 vs 09:30 $9,776.37 (session +0.00) | 16:00 close · cash $76.06 · equity $9,776.37 vs 09:30 $9,776.37 (-0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). CCL×195 09:30 $25.11 → close $25.11 +0.00; MTN×34 09:30 $141.29 → close $141.29 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $76.06 | ▼ 09:30 equity $9,594.10 vs yday $9,776.37 (-182.27) | 09:30 open · cash $76.06 (unchanged overnight, no fees) · equity $9,594.10 vs prior close $9,776.37 (-182.27) · 2 name(s) re-marked at the open (per-name table). CCL×195 yday $25.11 → 09:30 $24.66 -87.75; MTN×34 yday $141.29 → 09:30 $138.51 -94.52 | — |
+| 2026-10-01 09:30 ET | **SELL** | `CCL` | 195 | $24.66 | $2.65 | $+47.43 | $4,882.11 | ▲ +47.43 after sell → book $9,591.45; vs 09:30 mark -2.65 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `MTN` | 34 | $138.51 | $2.14 | $-1.17 | $9,589.31 | ▼ -1.17 after sell → book $9,589.31; vs 09:30 mark -2.14 | exit unpriced hold on first bar after 2 sess | — |
+| 2026-10-01 09:30 ET | **BUY** | `ACN` | 22 | $215.98 | $2.06 | — | $4,835.70 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-0.1; leftover $4794.66 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `PRGS` | 118 | $40.52 | $2.34 | — | $51.99 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-2.6; leftover $4794.66 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $51.99 | ▼ close $9,039.03 vs 09:30 $9,594.10 (session -545.88) | 16:00 close · cash $51.99 · equity $9,039.03 vs 09:30 $9,594.10 (-555.07; session marks -545.88) · 2 name(s) marked open→close (per-name table). ACN×22 09:30 $215.98 → close $212.30 -80.96; PRGS×118 09:30 $40.52 → close $36.58 -464.92 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 5
 
-Cash book **-21.60%** ($7,840) · signal-only (no cash/fees) was -14.84%. Starts YES **1/30**. Fills 77 · skips 100 · realized $-2151.30.
+Cash book **-26.19%** ($7,381) · signal-only (no cash/fees) was -14.84%. Starts YES **1/30**. Fills 83 · skips 100 · realized $-2151.30.
 
 ## How this sleeve decides (like you are 10)
 
@@ -219,6 +219,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-29 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $634.39 | ▼ close $7,840.15 vs 09:30 $8,052.97 (session -212.82) | 16:00 close · cash $634.39 · equity $7,840.15 vs 09:30 $8,052.97 (-212.82; session marks -212.82) · 4 name(s) marked open→close (per-name table). COST×2 09:30 $916.80 → close $924.59 +15.58; ILMN×6 09:30 $271.00 → close $272.00 +6.00; SECZ×112 09:30 $16.59 → close $15.84 -84.00; ZSQR×470 09:30 $4.47 → close $4.15 -150.40 | — |
 | 2026-09-30 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $634.39 | ▲ 09:30 equity $7,840.15 vs yday $7,840.15 (+0.00) | 09:30 open · cash $634.39 (unchanged overnight, no fees) · equity $7,840.15 vs prior close $7,840.15 (+0.00) · 4 name(s) re-marked at the open (per-name table). COST×2 yday $924.59 → 09:30 $924.59 +0.00; ILMN×6 yday $272.00 → 09:30 $272.00 +0.00; SECZ×112 yday $15.84 → 09:30 $15.84 +0.00; ZSQR×470 yday $4.15 → 09:30 $4.15 +0.00 | — |
 | 2026-09-30 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $634.39 | ▲ close $7,840.15 vs 09:30 $7,840.15 (session +0.00) | 16:00 close · cash $634.39 · equity $7,840.15 vs 09:30 $7,840.15 (+0.00; session marks +0.00) · 4 name(s) marked open→close (per-name table). COST×2 09:30 $924.59 → close $924.59 +0.00; ILMN×6 09:30 $272.00 → close $272.00 +0.00; SECZ×112 09:30 $15.84 → close $15.84 +0.00; ZSQR×470 09:30 $4.15 → close $4.15 +0.00 | — |
+| 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $634.39 | ▼ 09:30 equity $7,708.45 vs yday $7,840.15 (-131.70) | 09:30 open · cash $634.39 (unchanged overnight, no fees) · equity $7,708.45 vs prior close $7,840.15 (-131.70) · 4 name(s) re-marked at the open (per-name table). COST×2 yday $924.59 → 09:30 $910.87 -27.44; ILMN×6 yday $272.00 → 09:30 $273.22 +7.32; SECZ×112 yday $15.84 → 09:30 $14.55 -144.48; ZSQR×470 yday $4.15 → 09:30 $4.22 +32.90 | — |
+| 2026-10-01 09:30 ET | **SELL** | `COST` | 2 | $910.87 | $2.02 | $+43.72 | $2,454.11 | ▲ +43.72 after sell → book $7,706.43; vs 09:30 mark -2.02 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `ILMN` | 6 | $273.22 | $2.03 | $+2.32 | $4,091.40 | ▲ +2.32 after sell → book $7,704.40; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **SELL** | `SECZ` | 112 | $14.55 | $2.36 | $-190.60 | $5,718.64 | ▼ -190.60 after sell → book $7,702.04; vs 09:30 mark -2.36 | exit unpriced hold on first bar after 4 sess | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-01 09:30 ET | **SELL** | `ZSQR` | 470 | $4.22 | $6.16 | $+156.98 | $7,695.88 | ▲ +156.98 after sell → book $7,695.88; vs 09:30 mark -6.16 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-01 09:30 ET | **BUY** | `PRGS` | 94 | $40.52 | $2.27 | — | $3,884.73 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list earn_react; 🔵; ret5=-2.6; leftover $3847.94 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-01 09:30 ET | **BUY** | `NTAP` | 18 | $211.75 | $2.04 | — | $71.19 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate cam_net_min=5,news_or_headline=True; rank cond; list ohlc_hot; ret5=+7.0; leftover $3847.94 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.19 | ▼ close $7,380.61 vs 09:30 $7,708.45 (session -310.96) | 16:00 close · cash $71.19 · equity $7,380.61 vs 09:30 $7,708.45 (-327.84; session marks -310.96) · 2 name(s) marked open→close (per-name table). PRGS×94 09:30 $40.52 → close $36.58 -370.36; NTAP×18 09:30 $211.75 → close $215.05 +59.40 | — |
 
 ## Not taken
 
