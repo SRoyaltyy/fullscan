@@ -1,6 +1,6 @@
 {
  "date": "2026-10-02",
- "generated_at": "2026-10-02T04:28:42.325732-04:00",
+ "generated_at": "2026-10-02T05:32:32.660086-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -9,144 +9,147 @@
  ],
  "signals": {
   "date": "2026-10-02",
-  "risk": "unknown",
-  "yields_score": null,
-  "fed_score": null,
-  "dollar_oil_score": null,
-  "futures_score": null,
+  "general_score": 4.365,
+  "general_direction": "up",
+  "general_confidence": 0.675,
+  "risk": "on",
+  "yields_score": -0.5,
+  "fed_score": 0.0,
+  "dollar_oil_score": 0.5,
+  "futures_score": 0.5,
   "yields": "rising",
   "yields_source": "fred_dgs10",
   "dgs10_delta_1d": 0.03,
   "dgs10_current": 5.29,
   "dollar": "soft",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.22,
-  "vix_ratio": 0.861,
-  "vix_spot": 15.99,
-  "vix_delta_1d": -0.4,
+  "dxy_pct_1d": -0.18,
+  "vix_ratio": 0.858,
+  "vix_spot": 15.95,
+  "vix_delta_1d": -0.44,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -3.23,
+  "oil_pct_1d": -3.96,
   "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
   "regime_corr": -0.576,
   "sectors": {
    "Basic Materials": {
-    "score": -3.99,
+    "score": -4.97,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Communication Services": {
-    "score": -2.73,
+    "score": -2.75,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Consumer Cyclical": {
-    "score": -0.84,
+    "score": -1.38,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Consumer Defensive": {
-    "score": -2.21,
+    "score": -1.62,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Energy": {
-    "score": -2.69,
+    "score": -2.5,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Financial": {
-    "score": -0.59,
+    "score": -1.4,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Healthcare": {
-    "score": -3.3049999999999997,
+    "score": -2.99,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Industrials": {
-    "score": -0.995,
-    "dir": "flat",
+    "score": -1.835,
+    "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Real Estate": {
-    "score": -2.56,
+    "score": -2.49,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Technology": {
-    "score": -0.455,
-    "dir": "flat",
+    "score": -2.625,
+    "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Utilities": {
-    "score": 0.2,
-    "dir": "flat",
+    "score": -3.43,
+    "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    }
   },
   "sector_tape": {
-   "Basic Materials": -3.99,
-   "Communication Services": -2.73,
-   "Consumer Cyclical": -0.84,
-   "Consumer Defensive": -2.21,
-   "Energy": -2.69,
-   "Financial": -0.59,
-   "Healthcare": -3.3049999999999997,
-   "Industrials": -0.995,
-   "Real Estate": -2.56,
-   "Technology": -0.455,
-   "Utilities": 0.2
+   "Basic Materials": -4.97,
+   "Communication Services": -2.75,
+   "Consumer Cyclical": -1.38,
+   "Consumer Defensive": -1.62,
+   "Energy": -2.5,
+   "Financial": -1.4,
+   "Healthcare": -2.99,
+   "Industrials": -1.835,
+   "Real Estate": -2.49,
+   "Technology": -2.625,
+   "Utilities": -3.43
   },
-  "events_bull": 2,
+  "events_bull": 3,
   "events_bear": 2,
-  "china_event_dir": "bull"
+  "china_event_dir": "bear"
  },
  "stances": {
   "sector": {
    "Basic Materials": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "news_judge SECTOR Basic Materials [bearish]"
+    "why": "finviz sector median week -4.97% [tape]"
    },
    "Communication Services": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.73% [tape]"
+    "why": "finviz sector median week -2.75% [tape]"
    },
    "Consumer Cyclical": {
     "stance": "neutral",
     "confidence": "medium",
-    "why": "finviz sector median week -0.84% [tape]"
+    "why": "finviz sector median week -1.38% [tape]"
    },
    "Consumer Defensive": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.21% [tape]"
+    "why": "finviz sector median week -1.62% [tape]"
    },
    "Energy": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.69% [tape]"
+    "why": "finviz sector median week -2.50% [tape]"
    },
    "Financial": {
     "stance": "neutral",
     "confidence": "medium",
-    "why": "finviz sector median week -0.59% [tape]"
+    "why": "finviz sector median week -1.40% [tape]"
    },
    "Healthcare": {
     "stance": "favorable",
@@ -156,100 +159,100 @@
    "Industrials": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "news_judge SECTOR Industrials [bearish]"
+    "why": "finviz sector median week -1.83% [tape]"
    },
    "Real Estate": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.56% [tape]"
+    "why": "finviz sector median week -2.49% [tape]"
    },
    "Technology": {
-    "stance": "neutral",
+    "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -0.46% [tape]"
+    "why": "finviz sector median week -2.62% [tape]"
    },
    "Utilities": {
-    "stance": "neutral",
+    "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week +0.20% [tape]"
+    "why": "finviz sector median week -3.43% [tape]"
    }
   },
   "size": {
    "micro": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors]"
    },
    "small": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
-   },
-   "mid": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors]"
    },
    "large": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-on — mega leads less in broad rallies [general predict]"
    },
    "mega": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-on — mega leads less in broad rallies [general predict]"
+   },
+   "mid": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "no dedicated mid-cap signal in v1"
    }
   },
   "index": {
    "sp500": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-on — mega leads less in broad rallies [general predict]"
    },
    "ndx": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-on — mega leads less in broad rallies [general predict]"
    },
    "djia": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-on — mega leads less in broad rallies [general predict]"
    },
    "rut": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors]"
    },
    "none": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "non-index: not a small-cap proxy"
    }
   },
   "geo": {
    "US": {
-    "stance": "unknown",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "mirrors general risk-unknown [general predict]"
+    "why": "mirrors general risk-on [general predict]"
    },
    "ADR-China": {
-    "stance": "favorable",
+    "stance": "hostile",
     "confidence": "medium",
-    "why": "high-impact China event(s) lean bull [event scanner]"
+    "why": "high-impact China event(s) lean bear [event scanner]"
    }
   },
   "beta": {
    "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "risk-unknown, VIX falling"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "risk-on, VIX falling — high beta outperforms [general + channel1]"
    },
    "low": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-unknown, VIX falling"
+    "why": "risk-on — low beta lags rallies"
    },
    "mid": {
     "stance": "neutral",
@@ -258,25 +261,25 @@
    }
   },
   "short": {
-   "low": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
-   },
-   "mid": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
-   },
    "high": {
-    "stance": "unknown",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-on — crowded shorts are squeeze FUEL if the tape rises (multiplier, not a direction) [general]"
    },
    "extreme": {
-    "stance": "unknown",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-on — crowded shorts are squeeze FUEL if the tape rises (multiplier, not a direction) [general]"
+   },
+   "low": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "low short is not a tailwind by itself"
+   },
+   "mid": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "no strong crowding signal"
    }
   },
   "vol": {
@@ -300,7 +303,7 @@
    "no": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-unknown, F&G None"
+    "why": "risk-on, F&G None"
    },
    "yes": {
     "stance": "neutral",
@@ -354,73 +357,73 @@
   },
   "mom": {
    "uptrend": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "risk-on + positive futures — trend continuation day [general + factors]"
    },
    "downtrend": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "—"
    },
    "mixed": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "—"
    }
   },
   "ext": {
-   "extreme": {
-    "stance": "unknown",
+   "washed": {
+    "stance": "favorable",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "washouts bounce in risk-on turns"
    },
    "extended": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "extension tolerated while tape is firm"
    },
-   "washed": {
-    "stance": "unknown",
+   "extreme": {
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "extension tolerated while tape is firm"
    },
    "neutral": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "—"
    }
   },
   "range": {
    "deep_low": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
-   },
-   "low": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
-   },
-   "mid": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
-   },
-   "high": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
+    "why": "bottom-fishing only with confirmation"
    },
    "top": {
-    "stance": "unknown",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "breakouts follow through on trend days"
    },
    "breakout": {
-    "stance": "unknown",
+    "stance": "favorable",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "breakouts follow through on trend days"
+   },
+   "low": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
+   },
+   "mid": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
+   },
+   "high": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    }
   }
  },
@@ -435,8 +438,5 @@
   "veto_earn_today": true,
   "veto_extreme_risk_off": false
  },
- "data_gaps": [
-  "general predict run",
-  "general predict factor scoreboard"
- ]
+ "data_gaps": []
 }

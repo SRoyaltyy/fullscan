@@ -1075,5 +1075,7 @@
   "judge_tickers": {
     "GDX": -4.0,
     "AMGN": 1.5
-  }
+  },
+  "catalyst_tickers": 0,
+  "catalyst_date": "2026-10-02"
 }

@@ -1,16 +1,18 @@
 # ECS clock status
 
-- generated: 2026-10-01T09:45:50Z UTC / 2026-10-01 05:45 EDT
-- uid=1001 user=runner home=/home/runner
-- repo=/home/runner/work/fullscan/fullscan
-- timer: not-found
-NOT_ENABLED
-- service: inactive
+- generated: 2026-10-02T08:27:30Z UTC / 2026-10-02 04:27 EDT
+- uid=0 user=root home=/home/gha
+- repo=/home/gha/actions-runner/_work/fullscan/fullscan
+- timer: enabled
+- service: failed
 n/a
-- gateway: 18789 DOWN
+- gateway: 18789 up
+- xai.timeoutSeconds: 10800 
+- defaults.timeoutSeconds: 10800 
 
 ```
-NEXT LEFT LAST PASSED UNIT ACTIVATES
+NEXT                        LEFT          LAST                        PASSED  UNIT                   ACTIVATES
+Fri 2026-10-02 17:55:00 CST 1h 27min left Thu 2026-10-01 17:55:04 CST 22h ago fullscan-preopen.timer fullscan-preopen.service
 
-0 timers listed.
+1 timers listed.
 ```
