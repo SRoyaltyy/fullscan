@@ -381,6 +381,40 @@ def _tape_from_futures(futures: dict) -> list[dict]:
     return finviz_calendars.tape_from_futures(futures)
 
 
+def committed_tape(date: str) -> list[dict]:
+    """Last nonempty futures tape already stored for this session.
+
+    Post-close ``build`` must not replace it when the live futures page
+    parses zero tiles. The morning freeze is the fallback after an earlier
+    rebuild already wrote an empty tape over the board.
+    """
+    for name in (f"{date}_map_heat.json", f"{date}_map_heat_morning.json"):
+        path = OUT_DIR / name
+        if not path.is_file():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        tape = data.get("tape") if isinstance(data, dict) else None
+        if isinstance(tape, list) and tape:
+            return tape
+    return []
+
+
+def keep_committed_tape(date: str, payload: dict) -> dict:
+    """Fill an empty live tape from the last committed one. Leave a real tape."""
+    if payload.get("tape"):
+        return payload
+    kept = committed_tape(date)
+    if not kept:
+        return payload
+    out = dict(payload)
+    out["tape"] = kept
+    print("[map_heat] live tape empty — keeping prior committed tape")
+    return out
+
+
 def _calendar_fields(econ: list[dict], earns: list[dict], asof: str | None = None) -> dict:
     return finviz_calendars.calendar_fields(econ, earns, asof)
 
@@ -984,7 +1018,7 @@ def main() -> None:
     if already_good(date) and not args.force:
         print(f"[map_heat] skip-if-good {date}")
         return
-    payload = build(date)
+    payload = keep_committed_tape(date, build(date))
     write(date, payload)
     print(render(payload))
 
