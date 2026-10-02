@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-02T08:52:08.881998-04:00",
+  "generated_at": "2026-10-02T08:57:01.362600-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -153,7 +153,7 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "3 up / 1 down / 3 flat",
+    "said": "3 up / 1 down / 4 flat",
     "bullets": [
       "XLB FLAT +3.0",
       "XLC UP +4.6",
@@ -162,7 +162,7 @@
       "XLE DOWN -7.2",
       "XLF FLAT +2.9",
       "XLV UP +2.6",
-      "XLI missing",
+      "XLI FLAT +6.2",
       "XLRE missing",
       "XLK missing",
       "XLU missing"

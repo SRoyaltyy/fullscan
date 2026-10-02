@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-02",
-    "generated_at": "2026-10-02T08:52:05.780872-04:00",
+    "generated_at": "2026-10-02T08:56:57.814927-04:00",
     "general_bias": 0.57375,
     "sector_bias": {
       "Basic Materials": 0.0,
@@ -10,7 +10,8 @@
       "Consumer Defensive": 0.5525,
       "Energy": -0.5525,
       "Financial": 0.0,
-      "Healthcare": 0.5134
+      "Healthcare": 0.5134,
+      "Industrials": 0.0
     },
     "accuracy_gates": {
       "general": {
@@ -80,7 +81,7 @@
     "n_ab": 1907,
     "n_peer": 1804,
     "same_day_general": true,
-    "same_day_sectors": 7,
+    "same_day_sectors": 8,
     "weather_risk": "on",
     "n_universe": 2035,
     "weights": {
