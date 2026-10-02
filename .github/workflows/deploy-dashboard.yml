@@ -5,8 +5,7 @@ name: Deploy dashboard to GitHub Pages
 # for stock_book + publish + factor-mine today.json / tickets are OK.
 # Catalyst FAIL / sector LLM / OpenClaw do not block. Primary publish
 # is often inside stock_book_all.yml; this remains for resilience.
-# Always overlay dashboard/boring-winners and dashboard/ticker-lookback
-# from main so force-orphan deploys cannot 404 those pages.
+# Always overlay named dashboard folders from main so force-orphan deploys cannot 404 those pages.
 
 on:
   workflow_run:
@@ -40,9 +39,6 @@ permissions:
   pages: write
   id-token: write
 
-# 2026-09-10: two deploys force-pushing gh-pages in the same second →
-# `cannot lock ref 'refs/heads/gh-pages'`. Serialize this workflow with
-# itself; the in-job publish script retries against the other writers.
 concurrency:
   group: gh-pages-deploy
   cancel-in-progress: false
@@ -72,8 +68,6 @@ jobs:
             echo "force=true — publish even if required roles are missing"
             exit 0
           fi
-          # stock_book + publish required roles + factor-mine today.json / tickets.
-          # catalyst FAIL / sector LLM / OpenClaw do not block.
           if python3 -m src.pages_publish_gate --date "$DATE"; then
             echo "ready=yes" >> "$GITHUB_OUTPUT"
           else
@@ -111,137 +105,47 @@ jobs:
             fi
           fi
 
-          # Fallback: use dashboard committed on main
           if [ ! -f pages_out/dashboard/index.html ] && [ -f dashboard/index.html ]; then
             cp -a dashboard/. pages_out/dashboard/
             cp dashboard/index.html pages_out/index.html
             echo "Used dashboard/index.html from main"
           fi
 
-          # Overlay sub-dashboards from this checkout so orphan deploys keep them.
-          if [ -f dashboard/boring-winners/index.html ]; then
-            mkdir -p pages_out/dashboard/boring-winners
-            cp -a dashboard/boring-winners/. pages_out/dashboard/boring-winners/
-            echo "Overlayed dashboard/boring-winners from main"
-          fi
-          if [ -f dashboard/ticker-lookback/index.html ]; then
-            mkdir -p pages_out/dashboard/ticker-lookback
-            cp -a dashboard/ticker-lookback/. pages_out/dashboard/ticker-lookback/
-            echo "Overlayed dashboard/ticker-lookback from main"
-          fi
-          if [ -f dashboard/gainer-lookback/index.html ]; then
-            mkdir -p pages_out/dashboard/gainer-lookback
-            cp -a dashboard/gainer-lookback/. pages_out/dashboard/gainer-lookback/
-            echo "Overlayed dashboard/gainer-lookback from main"
-          fi
-          if [ -f dashboard/flatten-lookback/index.html ]; then
-            mkdir -p pages_out/dashboard/flatten-lookback
-            cp -a dashboard/flatten-lookback/. pages_out/dashboard/flatten-lookback/
-            echo "Overlayed dashboard/flatten-lookback from main"
-          fi
-          if [ -f dashboard/mover-lookback/index.html ]; then
-            mkdir -p pages_out/dashboard/mover-lookback
-            cp -a dashboard/mover-lookback/. pages_out/dashboard/mover-lookback/
-            echo "Overlayed dashboard/mover-lookback from main"
-          fi
-          if [ -f dashboard/sleeve-combine/index.html ]; then
-            mkdir -p pages_out/dashboard/sleeve-combine
-            cp -a dashboard/sleeve-combine/. pages_out/dashboard/sleeve-combine/
-            echo "Overlayed dashboard/sleeve-combine from main"
-          fi
-          if [ -f dashboard/sleeve-merge/index.html ]; then
-            mkdir -p pages_out/dashboard/sleeve-merge
-            cp -a dashboard/sleeve-merge/. pages_out/dashboard/sleeve-merge/
-            echo "Overlayed dashboard/sleeve-merge from main"
-          fi
-          if [ -f dashboard/mover-paper/index.html ]; then
-            mkdir -p pages_out/dashboard/mover-paper
-            cp -a dashboard/mover-paper/. pages_out/dashboard/mover-paper/
-            echo "Overlayed dashboard/mover-paper from main"
-          fi
-          if [ -f dashboard/strategy-board/index.html ]; then
-            mkdir -p pages_out/dashboard/strategy-board
-            cp -a dashboard/strategy-board/. pages_out/dashboard/strategy-board/
-            echo "Overlayed dashboard/strategy-board from main"
-          fi
-          if [ -f dashboard/book-paper/index.html ]; then
-            mkdir -p pages_out/dashboard/book-paper
-            cp -a dashboard/book-paper/. pages_out/dashboard/book-paper/
-            echo "Overlayed dashboard/book-paper from main"
-          fi
-          if [ -f dashboard/paper-book/index.html ]; then
-            mkdir -p pages_out/dashboard/paper-book
-            cp -a dashboard/paper-book/. pages_out/dashboard/paper-book/
-            echo "Overlayed dashboard/paper-book from main"
-          fi
+          overlay() {
+            local sub="$1"
+            if [ -f "dashboard/${sub}/index.html" ]; then
+              mkdir -p "pages_out/dashboard/${sub}"
+              cp -a "dashboard/${sub}/." "pages_out/dashboard/${sub}/"
+              echo "Overlayed dashboard/${sub} from main"
+            fi
+          }
+          for sub in boring-winners ticker-lookback gainer-lookback flatten-lookback \
+                     mover-lookback sleeve-combine sleeve-merge mover-paper strategy-board \
+                     book-paper paper-book factor-mine down-day-mine day-board \
+                     hard-red-exceptions day-movers holdup h1 jev-train news-dir; do
+            overlay "$sub"
+          done
           if [ -f dashboard/factor-mine/index.html ]; then
-            mkdir -p pages_out/dashboard/factor-mine
-            cp -a dashboard/factor-mine/. pages_out/dashboard/factor-mine/
-            echo "Overlayed dashboard/factor-mine from main"
             python3 scripts/patch_fm_ovcal.py pages_out/dashboard/factor-mine/index.html
             python3 scripts/patch_fm_holdup.py pages_out/dashboard/factor-mine/index.html
-            echo "Patched factor-mine new-vs-held calendar + start-date chart"
-          fi
-          if [ -f dashboard/down-day-mine/index.html ]; then
-            mkdir -p pages_out/dashboard/down-day-mine
-            cp -a dashboard/down-day-mine/. pages_out/dashboard/down-day-mine/
-            echo "Overlayed dashboard/down-day-mine from main"
-          fi
-          if [ -f dashboard/day-board/index.html ]; then
-            mkdir -p pages_out/dashboard/day-board
-            cp -a dashboard/day-board/. pages_out/dashboard/day-board/
-            echo "Overlayed dashboard/day-board from main"
-          fi
-          if [ -f dashboard/hard-red-exceptions/index.html ]; then
-            mkdir -p pages_out/dashboard/hard-red-exceptions
-            cp -a dashboard/hard-red-exceptions/. pages_out/dashboard/hard-red-exceptions/
-            echo "Overlayed dashboard/hard-red-exceptions from main"
-          fi
-          if [ -f dashboard/day-movers/index.html ]; then
-            mkdir -p pages_out/dashboard/day-movers
-            cp -a dashboard/day-movers/. pages_out/dashboard/day-movers/
-            echo "Overlayed dashboard/day-movers from main"
-          fi
-          # Same overlay route as dashboard/factor-mine above: copy from main, then the site-root mirror.
-          if [ -f dashboard/holdup/index.html ]; then
-            mkdir -p pages_out/dashboard/holdup
-            cp -a dashboard/holdup/. pages_out/dashboard/holdup/
-            echo "Overlayed dashboard/holdup from main"
-          fi
-          if [ -f dashboard/h1/index.html ]; then
-            mkdir -p pages_out/dashboard/h1
-            cp -a dashboard/h1/. pages_out/dashboard/h1/
-            echo "Overlayed dashboard/h1 from main"
-          fi
-          if [ -f dashboard/jev-train/index.html ]; then
-            mkdir -p pages_out/dashboard/jev-train
-            cp -a dashboard/jev-train/. pages_out/dashboard/jev-train/
-            echo "Overlayed dashboard/jev-train from main"
           fi
 
-          # The paper book is also copied to the site root. Mirror every
-          # sub-dash there so homepage links like sleeve-merge/ resolve.
           for sub in boring-winners ticker-lookback gainer-lookback flatten-lookback \
                      mover-lookback sleeve-combine sleeve-merge mover-paper book-paper paper-book \
-                     strategy-board factor-mine day-board down-day-mine hard-red-exceptions day-movers holdup jev-train; do
+                     strategy-board factor-mine day-board down-day-mine hard-red-exceptions day-movers holdup h1 jev-train news-dir; do
             if [ -d "pages_out/dashboard/${sub}" ]; then
               mkdir -p "pages_out/${sub}"
               cp -a "pages_out/dashboard/${sub}/." "pages_out/${sub}/"
               echo "Root copy pages_out/${sub}"
             fi
           done
-          if [ -d pages_out/dashboard/h1 ]; then
-            mkdir -p pages_out/h1
-            cp -a pages_out/dashboard/h1/. pages_out/h1/
-            echo "Root copy pages_out/h1"
-          fi
 
           if [ ! -f pages_out/dashboard/index.html ]; then
             echo "ERROR: no dashboard index.html to publish"
             exit 1
           fi
-          ls -la pages_out pages_out/dashboard
-          ls -la pages_out/dashboard/boring-winners 2>/dev/null || echo "WARN: boring-winners still missing"
+          test -f pages_out/dashboard/news-dir/index.html
+          ls -la pages_out/dashboard/news-dir
 
       - name: Publish to GitHub Pages (gh-pages, retried)
         if: steps.pages_gate.outputs.ready == 'yes'
@@ -255,24 +159,5 @@ jobs:
       - name: Show Pages URL
         if: steps.pages_gate.outputs.ready == 'yes'
         run: |
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/gainer-lookback/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/flatten-lookback/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/mover-lookback/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-combine/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-merge/"
-          echo "https://SRoyaltyy.github.io/fullscan/sleeve-merge/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/mover-paper/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/paper-book/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/strategy-board/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/factor-mine/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/day-board/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/hard-red-exceptions/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/day-movers/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/down-day-mine/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/holdup/"
-          echo "https://SRoyaltyy.github.io/fullscan/dashboard/h1/"
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/news-dir/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/jev-train/"
-          echo "https://SRoyaltyy.github.io/fullscan/"
-          echo "If 404: Settings → Pages → Deploy from branch → gh-pages / root"
