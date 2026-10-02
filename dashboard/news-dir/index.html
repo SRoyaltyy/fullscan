@@ -44,7 +44,7 @@ h2 a:hover { text-decoration: underline; }
 <body>
 <header>
 <h1>News directory</h1>
-<p class="lede">Show JEV splits this day. Drops stay on the left. Keeps move to the right. A day with no score file has not been sent to JEV.</p>
+<p class="lede">Show JEV splits this day on this page. Drops stay on the left. Keeps move to the right.</p>
 <form id="f">
 <label>Parse date<input id="parse" type="date" value="2026-10-01"></label>
 <label>Published date<input id="pub" type="date"></label>
@@ -94,7 +94,8 @@ function walk(node, into){
   if (!node) return;
   if (Array.isArray(node)){ node.forEach(x => walk(x, into)); return; }
   if (typeof node !== "object") return;
-  if (node.title && verdict(node)) into.push(node);
+  const title = node.title || node.headline || node.name;
+  if (title && verdict(node)) into.push(Object.assign({title}, node));
   for (const k of ["items","rows","keeps","dropped","decisions","all_items"]){
     if (Array.isArray(node[k])) walk(node[k], into);
   }
@@ -127,10 +128,19 @@ async function loadDay(date){
 }
 async function loadScores(date){
   const map = new Map();
-  const res = await fetch(RAW + `01_daily/news/${date}_jev_keep.json`);
-  if (!res.ok) return map;
+  const urls = [
+    `scores/${date}.json`,
+    RAW + `dashboard/news-dir/scores/${date}.json`,
+    RAW + `01_daily/news/${date}_jev_keep.json`
+  ];
+  let doc = null;
+  for (const url of urls){
+    const res = await fetch(url);
+    if (res.ok){ doc = await res.json(); break; }
+  }
+  if (!doc) return map;
   const found = [];
-  walk(await res.json(), found);
+  walk(doc, found);
   for (const it of found){
     map.set(norm(it.title), {jev: verdict(it), reason: it.reason || it.why || ""});
   }
@@ -164,7 +174,7 @@ $("f").onsubmit = async (ev) => {
   if (show){
     const map = await loadScores(parse);
     if (!map.size){
-      $("status").innerHTML = `<span class="miss">No score file for ${esc(parse)}.</span> Hop-0 has not written ${esc(parse)}_jev_keep.json.`;
+      $("status").innerHTML = `<span class="miss">No scores on the site yet for ${esc(parse)}.</span> The score run has not published them.`;
       $("rows").innerHTML = "";
       $("keeps").innerHTML = "<li>No keep yet.</li>";
       return;
