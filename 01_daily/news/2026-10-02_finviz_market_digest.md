@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-02
 
-**Generated:** 2026-10-02T04:15:20.893919-04:00 (America/New_York)
+**Generated:** 2026-10-02T04:17:34.216046-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US equity futures point to higher open ahead of key jobs report as Treasury yields ease and global stocks trade mixed
 **Prior close:** SPX —  Nasdaq —  Dow —
