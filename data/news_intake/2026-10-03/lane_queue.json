@@ -102060,22 +102060,6 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
-    "document_id": "07effc69c7f88a077b8b5570",
-    "title": "September 28, 2026 - FDA intends to evaluate changes to the PMTA regulatory framework",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-intends-evaluate-changes-pmta-regulatory-framework",
-    "published_at": "2026-09-28T21:00:00+00:00",
-    "known_at": "2026-09-28T21:00:00+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
     "document_id": "01b96ba71c4954c9490f7aac",
     "title": "Hain Celestial Group, Inc. v. Palmquist",
     "evidence_file": "documents.json",
@@ -164103,7 +164087,7 @@
     "candidate_classes": [
       "market_structure"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "market_structure",
@@ -164121,7 +164105,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -164171,7 +164155,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -164237,7 +164221,7 @@
     "candidate_classes": [
       "capacity"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "capacity",
@@ -164255,7 +164239,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -164273,7 +164257,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -164307,7 +164291,7 @@
     "candidate_classes": [
       "distress_restruct"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "distress_restruct",
@@ -164389,7 +164373,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -164407,7 +164391,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -164473,7 +164457,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -164491,7 +164475,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -164525,7 +164509,7 @@
     "candidate_classes": [
       "trial_readout"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "trial_readout",
@@ -164543,7 +164527,7 @@
     "candidate_classes": [
       "key_person"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "key_person",
@@ -164561,7 +164545,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
@@ -164595,7 +164579,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -164645,7 +164629,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -164663,7 +164647,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -164695,7 +164679,7 @@
     "published_at": "2026-10-01T15:03:27+00:00",
     "known_at": "2026-10-01T15:03:27+00:00",
     "candidate_classes": [],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
@@ -164761,7 +164745,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -212698,6 +212682,22 @@
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "07effc69c7f88a077b8b5570",
+    "title": "September 28, 2026 - FDA intends to evaluate changes to the PMTA regulatory framework",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-intends-evaluate-changes-pmta-regulatory-framework",
+    "published_at": "2026-09-28T21:00:00+00:00",
+    "known_at": "2026-09-28T21:00:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
