@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Day movers — gainers / losers</title>
+<style>
+  :root {
+    --bg: #0b1020; --card: #141a2e; --line: #24304d; --txt: #e8eefc;
+    --dim: #8b97b3; --gain: #3ddc97; --lose: #ff6b7a; --warn: #e6c36a;
+    --chip: #1c2540; --gold: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.45 ui-sans-serif, system-ui, sans-serif; background: var(--bg); color: var(--txt); }
+  a { color: #9db7ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header { padding: 18px 22px 8px; }
+  h1 { margin: 0 0 4px; font-size: 20px; font-weight: 650; }
+  .sub { color: var(--dim); font-size: 13px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; padding: 10px 22px; }
+  button, .tog button { background: var(--chip); color: var(--txt); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; cursor: pointer; }
+  .tog { display: flex; gap: 0; }
+  .tog button { border-radius: 0; }
+  .tog button:first-child { border-radius: 8px 0 0 8px; }
+  .tog button:last-child { border-radius: 0 8px 8px 0; }
+  .tog button.on { background: #2a3a66; border-color: #5b7ad4; }
+  #date { min-width: 118px; text-align: center; font-variant-numeric: tabular-nums; }
+  .banner { margin: 0 22px 10px; padding: 8px 12px; border-radius: 8px; background: #2a2410; color: var(--warn); border: 1px solid #4a3f18; display: none; }
+  .banner.show { display: block; }
+  .banner.lag { background: #3a1518; color: #ffb4b8; border-color: #7f1d1d; }
+  .layout { display: grid; grid-template-columns: minmax(320px, 0.9fr) minmax(520px, 1.25fr); gap: 14px; padding: 0 22px 28px; align-items: start; }
+  @media (max-width: 1100px) { .layout { grid-template-columns: 1fr; } .pane { position: static; max-height: none; } }
+  table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 12px; overflow: hidden; }
+  th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+  th { color: var(--dim); font-weight: 600; font-size: 12px; }
+  tr { cursor: pointer; }
+  tr:hover td { background: #1b2340; }
+  tr.sel td { background: #243056; }
+  .up, .pos { color: var(--gain); } .dn, .neg { color: var(--lose); } .mut { color: var(--dim); } .gold { color: var(--gold); }
+  .pane { background: var(--card); border: 1px solid var(--line); border-radius: 12px; min-height: 640px; max-height: calc(100vh - 140px); overflow: auto; padding: 16px 18px 22px; position: sticky; top: 10px; }
+  .pane.on { box-shadow: -8px 0 28px rgba(0,0,0,.35); }
+  .pane h2 { margin: 0 0 6px; font-size: 22px; }
+  .kv { display: grid; grid-template-columns: 128px 1fr; gap: 5px 10px; color: var(--dim); margin: 8px 0 12px; }
+  .kv b { color: var(--txt); font-weight: 600; }
+  .empty { color: var(--dim); padding-top: 80px; text-align: center; }
+  .meta { color: var(--dim); font-size: 12px; padding: 0 22px 8px; }
+  .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin: 0 2px; vertical-align: middle; background: #3a445c; }
+  .dot.good { background: #4ade80; } .dot.bad { background: #f87171; } .dot.neutral { background: #fbbf24; } .dot.missing { background: #3a445c; }
+  .cam { display: inline-block; margin: 2px 3px 2px 0; padding: 1px 7px; border: 1px solid var(--line); border-radius: 999px; font-size: 11px; }
+  .cam.pos { color: var(--gain); border-color: #2d6a4f; } .cam.neg { color: var(--lose); border-color: #7f1d1d; } .cam.neu { color: var(--gold); } .cam.miss { color: var(--dim); }
+  .why { background: #101628; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin: 10px 0; }
+  .why ul { margin: 6px 0 0; padding-left: 18px; }
+  .caught { background: #101628; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin: 8px 0; white-space: pre-wrap; word-break: break-word; font: 13px/1.45 ui-monospace, Menlo, monospace; }
+  .cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 8px 0 12px; }
+  @media (max-width: 700px) { .cmp { grid-template-columns: 1fr; } }
+  .box { background: #101628; border: 1px solid var(--line); border-radius: 10px; padding: 10px; }
+  .box h3 { margin: 0 0 6px; font-size: 13px; color: var(--dim); font-weight: 650; }
+  .flag { display: inline-block; margin: 0 3px 0 0; padding: 1px 6px; border-radius: 999px;
+    font: 800 10px/1.3 system-ui; border: 1px solid var(--line); color: var(--dim); }
+  .flag.hot { border-color: var(--gold); color: var(--gold); }
+  .flag.fl { border-color: #9db7ff; color: #9db7ff; }
+  .setup { display: inline-flex; align-items: center; gap: 3px; margin-left: 4px;
+    padding: 1px 7px 1px 5px; border-radius: 999px; font: 800 10px/1.2 system-ui; }
+  .setup.long { background: rgba(61,220,151,.16); color: var(--gain); border: 1px solid rgba(61,220,151,.45); }
+  .setup.short { background: rgba(255,107,122,.16); color: var(--lose); border: 1px solid rgba(255,107,122,.45); }
+  .setup.explore { border-style: dashed; }
+  .setup .logo { width: 12px; height: 12px; display: block; flex: 0 0 12px; }
+  .news-item { border-top: 1px solid var(--line); padding: 8px 0 6px; }
+  .news-item.on { background: #162238; margin: 6px -8px; padding: 8px; border-radius: 8px; border-top: 0; }
+  .news-kicker { font-size: 11px; color: var(--dim); margin-bottom: 2px; }
+  .news-title { color: var(--txt); font-weight: 650; }
+  .news-vote { margin: 6px 0 8px; font-size: 12px; }
+  .news-miss { margin: 0 0 8px; padding: 6px 8px; border-radius: 8px; background: #3a1518; color: #ffb4b8; border: 1px solid #7f1d1d; font-size: 12px; }
+  .pol { display: inline-block; margin: 0 4px 0 0; padding: 0 6px; border-radius: 999px; font: 800 10px/1.4 system-ui; border: 1px solid var(--line); text-transform: uppercase; letter-spacing: .02em; }
+  .pol.good { color: var(--gain); border-color: #2d6a4f; background: rgba(61,220,151,.12); }
+  .pol.bad { color: var(--lose); border-color: #7f1d1d; background: rgba(255,107,122,.12); }
+  .pol.mix { color: var(--gold); border-color: #92720d; background: rgba(251,191,36,.12); }
+  .pol.neu { color: var(--dim); }
+  .news-item.pol-good { border-left: 3px solid var(--gain); padding-left: 8px; }
+  .news-item.pol-bad { border-left: 3px solid var(--lose); padding-left: 8px; }
+  .news-item.pol-mix { border-left: 3px solid var(--gold); padding-left: 8px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Day movers — gainers / losers</h1>
+  <div class="sub">Investigator companion · click a name for the full 09:30 card + every Finviz article on or before that date ·
+    <a href="./cam.html">+5 / −2 cam screen</a> ·
+    <a href="../hard-red-exceptions/">investigator</a> ·
+    <a href="../day-board/">day board</a> ·
+    <a href="../factor-mine/">factor mine</a></div>
+</header>
+<div class="row">
+  <button type="button" id="first"><<</button><button type="button" id="prev"><</button>
+  <strong id="date">—</strong>
+  <button type="button" id="next">></button><button type="button" id="last">>></button>
+  <div class="tog" id="side">
+    <span class="mut" style="padding:6px 8px 6px 0">Side</span>
+    <button type="button" data-v="gainers" class="on">Gainers</button>
+    <button type="button" data-v="losers">Losers</button>
+  </div>
+  <div class="tog" id="clock">
+    <span class="mut" style="padding:6px 8px 6px 0">Clock</span>
+    <button type="button" data-v="interday" class="on">Interday</button>
+    <button type="button" data-v="intraday">Intraday</button>
+  </div>
+</div>
+<div class="meta" id="meta"></div>
+<div class="banner" id="lag"></div>
+<div class="banner" id="banner"></div>
+<div class="layout">
+  <table>
+    <thead><tr>
+      <th>#</th><th>Ticker</th><th>Move %</th><th title="max close vs entry over this session + next 2">3d max</th><th title="min close vs entry over this session + next 2">3d min</th><th>Open</th>
+      <th id="pxHead">Prior close</th><th>S</th><th>Cams</th><th>Flags</th>
+    </tr></thead>
+    <tbody id="body"></tbody>
+  </table>
+  <aside class="pane" id="pane">
+    <div class="empty">click a name</div>
+  </aside>
+</div>
+<script src="./index-core.js?v=20260918r"></script>
+<script src="./eod-overlay.js?v=20260918r"></script>
+</body>
+</html>

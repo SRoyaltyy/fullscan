@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open-bell slip — research overlay</title>
+<style>
+:root{--bg:#0f1420;--card:#171e2e;--line:#262f45;--fg:#dfe6f2;--mut:#8b96ab;
+--pos:#4ade80;--neg:#f87171;--gold:#fbbf24}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);
+font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:16px 14px 32px}
+h1{font-size:20px;margin:0 0 6px}h2{font-size:15px;margin:16px 0 8px;color:#aeb9cf}
+.mut{color:var(--mut)}.pos{color:var(--pos)}.neg{color:var(--neg)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;
+padding:10px 12px;margin:0 0 12px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right}
+th{color:var(--mut)}td:first-child,th:first-child,td:nth-child(2),th:nth-child(2)
+{text-align:left}
+.tick{font-family:ui-monospace,Menlo,Consolas,monospace}
+a{color:#93c5fd}
+</style></head><body><div class="wrap">
+<h1>Open-bell slippage / no-fill</h1>
+<p class="mut">Research overlay · orders sent 09:30 ET
+· window 2026-08-13 → 2026-10-02
+(36 sessions) · generated 2026-10-02T20:07:43.464958-04:00</p>
+<div class="card"><b>Open-bell fills at 09:30 ET: combo_sh_macd_5050_shared MARKET KILL · union_hot_n4_h1 MARKET KILL · flatten_would MARKET KILL</b>
+<p class="mut">Research overlay only. Live flatten_robust, hard-red sit, and Webull paper execution are untouched. After-fee P&amp;L is 1-share Futubull round-trip vs same-day close. Ideal open is the zero-slip baseline — not a live fill.</p>
+<p>Live <code>flatten_robust</code>, hard-red sit, and Webull paper are
+<b>untouched</b>. Ideal open is the zero-slip baseline — not a live fill.</p>
+</div>
+<p class="mut">
+<a href="./">factor mine</a> ·
+<a href="../strategy-board/">strategy board</a> ·
+<a href="https://github.com/SRoyaltyy/fullscan/blob/main/03_scoreboard/OPEN_BELL_SLIP.md">OPEN_BELL_SLIP.md</a>
+</p>
+<h2>Ideal open vs MARKET-like vs LIMIT</h2>
+<p class="mut">KEEP bar ≥30 filled fires and &gt;55%
+after-fee hit rate. After-fee $ is 1-share Futubull round-trip vs same-day close.</p>
+<div style="overflow-x:auto"><table>
+<tr><th>Sleeve</th><th>Reality</th><th>Intended</th><th>Filled</th><th>Miss</th>
+<th>After-fee win</th><th>After-fee $</th><th>vs ideal $</th><th>Verdict</th></tr>
+<tr><td class='tick'>combo_sh_macd_5050_shared</td><td>ideal</td><td>214</td><td>214</td><td>0</td><td>34.6%</td><td>-152.01</td><td>—</td><td class='neg'><b>KILL</b></td></tr><tr><td class='tick'>combo_sh_macd_5050_shared</td><td>market</td><td>214</td><td>214</td><td>0</td><td>19.2%</td><td>-259.97</td><td>$-107.96</td><td class='neg'><b>KILL</b></td></tr><tr><td class='tick'>combo_sh_macd_5050_shared</td><td>limit_open</td><td>214</td><td>200</td><td>14</td><td>32.0%</td><td>-164.08</td><td>$-12.07</td><td class='neg'><b>KILL</b></td></tr><tr><td class='tick'>combo_sh_macd_5050_shared</td><td>limit_prior</td><td>214</td><td>187</td><td>27</td><td>34.2%</td><td>-130.68</td><td>$+21.33</td><td class='neg'><b>KILL</b></td></tr><tr><td class='tick'>union_hot_n4_h1</td><td>ideal</td><td>144</td><td>144</td><td>0</td><td>38.2%</td><td>-51.07</td><td>—</td><td class='neg'><b>KILL</b></td></tr><tr><td class='tick'>union_hot_n4_h1</td><td>market</td><td>144</td><td>144</td><td>0</td><td>22.2%</td><td>-136.06</td><td>$-84.99</td><td class='neg'><b>KILL</b></td></tr><tr><td class='tick'>union_hot_n4_h1</td><td>limit_open</td><td>144</td><td>134</td><td>10</td><td>35.1%</td><td>-63.32</td><td>$-12.25</td><td class='neg'><b>KILL</b></td></tr><tr><td class='tick'>union_hot_n4_h1</td><td>limit_prior</td><td>144</td><td>126</td><td>18</td><td>38.1%</td><td>-46.79</td><td>$+4.28</td><td class='neg'><b>KILL</b></td></tr><tr><td class='tick'>flatten_would</td><td>ideal</td><td>221</td><td>221</td><td>0</td><td>18.1%</td><td>-297.57</td><td>—</td><td class='neg'><b>KILL</b></td></tr><tr><td class='tick'>flatten_would</td><td>market</td><td>221</td><td>221</td><td>0</td><td>7.7%</td><td>-408.37</td><td>$-110.80</td><td class='neg'><b>KILL</b></td></tr><tr><td class='tick'>flatten_would</td><td>limit_open</td><td>221</td><td>214</td><td>7</td><td>17.3%</td><td>-301.51</td><td>$-3.94</td><td class='neg'><b>KILL</b></td></tr><tr><td class='tick'>flatten_would</td><td>limit_prior</td><td>221</td><td>176</td><td>45</td><td>15.3%</td><td>-221.26</td><td>$+76.31</td><td class='neg'><b>KILL</b></td></tr>
+</table></div>
+<h2>Why</h2>
+<ul><li>KILL combo_sh_macd_5050_shared / market: 214 filled fires but after-fee win 19.2% ≤ 55%; vs ideal-open $-107.96.</li><li>KILL combo_sh_macd_5050_shared / limit_open: 200 filled fires but after-fee win 32.0% ≤ 55%; vs ideal-open $-12.07.</li><li>KILL combo_sh_macd_5050_shared / limit_prior: 187 filled fires but after-fee win 34.2% ≤ 55%; vs ideal-open $+21.33.</li><li>KILL union_hot_n4_h1 / market: 144 filled fires but after-fee win 22.2% ≤ 55%; vs ideal-open $-84.99.</li><li>KILL union_hot_n4_h1 / limit_open: 134 filled fires but after-fee win 35.1% ≤ 55%; vs ideal-open $-12.25.</li><li>KILL union_hot_n4_h1 / limit_prior: 126 filled fires but after-fee win 38.1% ≤ 55%; vs ideal-open $+4.28.</li><li>KILL flatten_would / market: 221 filled fires but after-fee win 7.7% ≤ 55%; vs ideal-open $-110.80.</li><li>KILL flatten_would / limit_open: 214 filled fires but after-fee win 17.3% ≤ 55%; vs ideal-open $-3.94.</li><li>KILL flatten_would / limit_prior: 176 filled fires but after-fee win 15.3% ≤ 55%; vs ideal-open $+76.31.</li></ul>
+<h2>What the columns mean</h2>
+<ol>
+<li><b>Ideal open</b> — official 09:30 print (published cash-book fill).</li>
+<li><b>MARKET-like</b> — delayed market walks 35% of the post-open
+adverse room (high−open buy / open−low short). α from prior OHLC only.</li>
+<li><b>LIMIT at open</b> — fill only if the session trades <em>through</em> the
+open after the print. Opened at the extreme and ran = miss.</li>
+<li><b>LIMIT at prior px</b> — working order at yesterday's close. Gap-and-go
+that never comes back = miss.</li>
+</ol>
+<p class="mut">Code names: <code>ideal_fill</code>, <code>market_fill</code>,
+<code>limit_at_open</code>, <code>limit_at_prior</code>, <code>calibrate_slip</code>.
+Regenerate with <code>python -m src.open_bell_slip --write</code>.</p>
+</div></body></html>
