@@ -1,10 +1,8 @@
-"""Hotness: is this article a candidate for company X?
+"""Hotness: could this article be about company X?
 
-Code only. No model call. A hit means the article shares rare words with
-the company blurb, or names the company. It is not a keep.
-
-Companies are {"ticker", "name", "description"}. Descriptions are the
-FMP company_profiles text, or any export of it.
+Code only. Heat comes from rare words shared with the company description
+(Finviz_Description, plus industry). The company name is a bonus, not a
+requirement. A hit is a candidate, not a keep.
 """
 from __future__ import annotations
 
@@ -14,8 +12,9 @@ import re
 from collections import Counter
 from pathlib import Path
 
-_WORD = re.compile(r"[a-z]{3,}")
-_TICKER = re.compile(r"\b[A-Z]{1,5}\b")
+_WORD = re.compile(r"[a-z0-9]{3,}")
+_TICKER = re.compile(r"\b[A-Z]{2,5}\b")
+_FALSE_TICKER = frozenset("AI ALL AND ARE FOR HAS ITS NOT OUR THE WAS YOU".split())
 _STOP = frozenset(
     "the and for are was not but you all can our its that this with from "
     "have has had been were they their company provides offers including "
@@ -29,6 +28,11 @@ def tokens(text: str) -> list[str]:
     return [w for w in _WORD.findall((text or "").lower()) if w not in _STOP]
 
 
+def _name_hit(name: str, low: str) -> bool:
+    parts = [p for p in re.split(r"[^a-z0-9]+", name.lower()) if len(p) >= 4]
+    return any(re.search(rf"\b{re.escape(p)}\b", low) for p in parts)
+
+
 class HotBoard:
     def __init__(self, companies: list[dict]):
         self.companies: list[dict] = []
@@ -36,7 +40,10 @@ class HotBoard:
         for raw in companies:
             ticker = str(raw.get("ticker") or "").upper().strip()
             name = str(raw.get("name") or raw.get("company_name") or "").strip()
-            desc = str(raw.get("description") or "")
+            desc = " ".join(
+                str(raw.get(k) or "")
+                for k in ("description", "industry", "sector")
+            )
             if not ticker or not (name or desc):
                 continue
             words = set(tokens(f"{name} {desc}"))
@@ -48,20 +55,19 @@ class HotBoard:
         self.idf = {w: math.log((n + 1) / (c + 1)) + 1.0 for w, c in df.items()}
 
     def score(self, text: str) -> list[dict]:
-        """Return companies warm to this text, hottest first."""
         body = text or ""
         words = set(tokens(body))
-        named = set(_TICKER.findall(body))
+        named = {t for t in _TICKER.findall(body) if t not in _FALSE_TICKER}
         low = body.lower()
         ranked: list[dict] = []
         for co in self.companies:
             overlap = words & co["words"]
-            if not overlap and co["ticker"] not in named and co["name"].lower() not in low:
+            name_hit = co["ticker"] in named or _name_hit(co["name"], low)
+            if not overlap and not name_hit:
                 continue
             hot = sum(self.idf.get(w, 1.0) for w in overlap)
-            name_hit = co["ticker"] in named or (co["name"] and co["name"].lower() in low)
             if name_hit:
-                hot += 3.0
+                hot += 1.5
             ranked.append({
                 "ticker": co["ticker"],
                 "name": co["name"],
@@ -73,7 +79,6 @@ class HotBoard:
         return ranked
 
     def link(self, text: str, min_hot: float = 2.0, gap: float = 1.5) -> dict:
-        """One clear name, a tied sector, or no company link."""
         ranked = self.score(text)
         warm = [r for r in ranked if r["hot"] >= min_hot]
         if not warm:
