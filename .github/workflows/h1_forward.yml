@@ -76,6 +76,12 @@ jobs:
           HOLDUP_MODE: plan
           PLAN_SESSION: ${{ github.event.inputs.session_date }}
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/forward.py
+      - name: Refresh the h1 close display
+        id: closes
+        if: success()
+        env:
+          FORWARD_BOOK: h1
+        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_closes.py
       - name: Commit the append
         if: always()
         run: |
@@ -91,6 +97,7 @@ jobs:
             research/hot_n4_clean_v4/forward_h1/price_revisions.jsonl
             dashboard/h1/log.json
             dashboard/h1/status.json
+            dashboard/h1/closes.json
           )
           for path in "${files[@]}"; do
             if [ -f "$path" ]; then
@@ -105,5 +112,5 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
       - name: Fail the job when the book halted
-        if: steps.prices.outcome == 'failure' || steps.plan.outcome == 'failure'
+        if: steps.prices.outcome == 'failure' || steps.plan.outcome == 'failure' || steps.closes.outcome == 'failure'
         run: exit 1
