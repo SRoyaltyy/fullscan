@@ -1,687 +1,5 @@
 [
   {
-    "title": "September 15, 2026 - FDA Launches Expedited IND Pilot, Begins Accepting Applications",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-expedited-ind-pilot-begins-accepting-applications",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_fda_releases",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "ff895c2dbf2499d65dec1d73",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_fda_releases",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Cisco Systems, Inc. v. Doe",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/24-856_kjfm.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "f9ebf0c96fcf9b479bb8bde6",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "United States v. Hemani",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r51_k4lo.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "f77968c5fb919c6a2f1a1f4b",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "McCarthy v. Hernandez",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r52_k5fm.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "f1f0aa438c0fc79bcb9b3fa7",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Geo Group, Inc. v. Menocal",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r15_bqmc.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "eeef1453d01cbf5b6aed5bbd",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "National Park Service v. National Trust for Historic Preservation in the United States",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/26a203_2b8e.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "ed0f0aed2962c47b386f01fc",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Jules v. Andre Balazs Properties",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r31_8759.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "eb9c5fa2774e69980f1dc6e6",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "September 23, 2026 - Federal Court Enters Consent Decree Against Gold Star Distribution, Inc. Following Persistent Insanitary Warehouse Conditions",
-    "url": "https://www.fda.gov/news-events/press-announcements/federal-court-enters-consent-decree-against-gold-star-distribution-inc-following-persistent",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_fda_releases",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "eb6d04ae8d35ebbaefc130a1",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_fda_releases",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Landor v. Louisiana Dept of Corrections and Public Safety",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r55_h315.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "e0c9171bbf0272815c3abead",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Operation Economic Outcast Takes Unprecedented Action Against Sanctions Evasion Network Used by Iran",
-    "url": "https://home.treasury.gov/news/press-releases/sb0644/",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_treasury",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "d8311b0ad2d85a05238d1610",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_treasury",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "September 28, 2026 - FDA Approves First Treatment for MCT8 Deficiency",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-mct8-deficiency",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_fda_releases",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "d2674c5a4f395eda7822e36c",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_fda_releases",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Doe v. Dynamic Physical Therapy, LLC",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r03_1o23.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "cf86a96e86dc1ed7ff96b9ba",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Coney Island Auto Parts Unlimited, Inc. v. Burton",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r08_f2q3.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "cc2cfde81d106629d1b59a55",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Rutherford v. United States",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r40_o7kq.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "c718e830dc8a365289e37588",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Enbridge Energy, LP v. Nessel",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r28_i4dk.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "bd858e2b1dcb6fc912f1e9b3",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Louisiana v. Callais",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r29_n648.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "ba09de3be03e28449d40814b",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "The Financial Literacy and Education Commission Releases the 2026 Update to the U.S. National Strategy for Financial Literacy",
-    "url": "https://home.treasury.gov/news/press-releases/sb0646/",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_treasury",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "b8350c75b17282b0409def30",
-    "first_seen": "2026-10-02T16:30:15.020552+00:00",
-    "observations": [
-      {
-        "source": "official_treasury",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "National Republican Congressional Committee v. Brown",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/26a274_l537.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "b3e626bdfc40ea7a779a0e7a",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Urias-Orellana v. Bondi",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r19_3e04.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "ae52d681416733a274f722b1",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Mullin v. Al Otro Lado",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r59_kjfl.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "ae0b89aa8dda7f59de36f785",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Postal Service v. Konan",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r13_m64n.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "a7f0e5264cc9366485a21fe6",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Abouammo v. United States",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r46_2c8f.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "a7daba7bd35ccdd9975360b6",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "T. M. v. University of Md. Medical System Corporation",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r49_mlho.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "a6b763b6aeaa25405b574b80",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Bowe v. United States",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r04_n7ip.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "a37a14e308758b71a9caec86",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "FS Credit Opportunities Corp. v. Saba Capital Master Fund, Ltd.",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r47_m64o.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "9890b5e3d361983cdeb5137a",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "District of Columbia v. R.W.",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r26_ppl4.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "93e4dc6215b64f9e0f776ee8",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "September 30, 2026 - FDA Launches Nationwide Effort to Expand Scientific Expertise and Consumer Voices to Advisory Committees",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-nationwide-effort-expand-scientific-expertise-and-consumer-voices-advisory-committees",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_fda_releases",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "91bde3dd942935c2a53e4a8a",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_fda_releases",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Keathley v. Buddy Ayers Construction, Inc.",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r48_k53m.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "8c19a546eb41806783f18511",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Flowers Foods, Inc. v. Brock",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r37_i425.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "889065270f7835ee43a4d484",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "October 1, 2026 - FDA Approves First Heart Valve Designed to Grow with Children",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-heart-valve-designed-grow-children",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_fda_releases",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "83e34b9db61bc9cc1f9b6e90",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_fda_releases",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Galette v. New Jersey Transit Corp.",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r18_d18f.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "7e18be0b748ccb0e5da445ca",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
     "title": "READOUT: Treasury Co-hosts Syrian Banking Roundtable",
     "url": "https://home.treasury.gov/news/press-releases/sb0649/",
     "body": "",
@@ -696,842 +14,6 @@
     "observations": [
       {
         "source": "official_treasury",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "September 29, 2026 - FDA Investigation Leads to Charges Against Two Indian Nationals Involved in Transnational Counterfeit Drug Distribution Scheme",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-investigation-leads-charges-against-two-indian-nationals-involved-transnational-counterfeit-drug",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_fda_releases",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "7d2ef3c2fdbe31d5d2fac532",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_fda_releases",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "West Virginia v. B. P. J.",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/24-43_2b35.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "7b8c77bd647a5046d9425e52",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Montgomery v. Caribe Transport II, LLC",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r32_g3bi.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "79382e3a48d2f00a34f611b4",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Barrett v. United States",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r07_7647.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "78c216f1267d6a984d890d5a",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "READOUT: Secretary of the Treasury Scott Bessent’s Meeting with Iraq Minister of Foreign Affairs Fuad Hussein",
-    "url": "https://home.treasury.gov/news/press-releases/sb0645/",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_treasury",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "6be943ac2b28f6a5a42ad152",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_treasury",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "First Choice Women’s Resource Centers, Inc. v. Davenport",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r30_3f14.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "67ca9d9a1e192f2371a39e26",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Treasury Sanctions Financial Network of Foreign Terrorist Organization, Tren de Aragua, After Theft of Millions from U.S. Banks",
-    "url": "https://home.treasury.gov/news/press-releases/sb0640/",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_treasury",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "6228912610824a88add25565",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_treasury",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Pitts v. Mississippi",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r01_kjfm.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "5fa83718a533f4b72f8b15d6",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "The Trump Administration Advances the Establishment of America’s First Nationwide School Choice Program",
-    "url": "https://home.treasury.gov/news/press-releases/sb0641/",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_treasury",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "580155787fab45cfad86c9b9",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_treasury",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Hencely v. Fluor Corp.",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r27_bq7c.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "5709be22ad55bf67757f15ee",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Rico v. United States",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r23_4g15.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "513d338bd5c725541115e586",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "People Not Politicians v. Onder",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/26a388_q86b.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "4e0d240dde404fd5a3aab5d3",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "September 17, 2026 - FDA Approves First Gene Therapy for Pediatric Patients with Sanfilippo Syndrome Type A",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapy-pediatric-patients-sanfilippo-syndrome-type",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_fda_releases",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "463a07f32cd10e2546fcf522",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_fda_releases",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Bost v. Illinois Bd. of Elections",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r05_e2q3.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "442f42d18d95d714bce803cb",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Treasury Dismantles Major Hamas Financing Network",
-    "url": "https://home.treasury.gov/news/press-releases/sb0647/",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_treasury",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "43f793a3378b514aaf207de3",
-    "first_seen": "2026-10-02T16:30:15.020552+00:00",
-    "observations": [
-      {
-        "source": "official_treasury",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Learning Resources, Inc. v. Trump",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r12_8nj9.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "3edfc0b2eb6e2be842421da7",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Hikma Pharmaceuticals USA Inc. v. Amarin Pharma, Inc.",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r45_i4dk.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "3d6c5517a02c70bdf9f73225",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Operation Economic Outcast Targets Iran’s Remaining Industrial Lifelines",
-    "url": "https://home.treasury.gov/news/press-releases/sb0643/",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_treasury",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "3c164b16631d56632e369dec",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_treasury",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Department of Homeland Security v. League of Women Voters",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/26a308_pok0.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "3ae556f421c05f021bef0194",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Treasury Announces the Completion of Automatic Enrollment Today for Trump Accounts",
-    "url": "https://home.treasury.gov/news/press-releases/sb0642/",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_treasury",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "3ac7a79fa422a4414663ab89",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_treasury",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "September 21, 2026 -    FDA Updates Regulations to Advance Innovative Alternatives to Animal Testing",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-updates-regulations-advance-innovative-alternatives-animal-testing",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_fda_releases",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "3a701644d5d1250a4290671e",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_fda_releases",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "September 4, 2026 - FDA Takes Steps to Maintain Newborn Access to Life-Saving Starter Nutrition Products",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-takes-steps-maintain-newborn-access-life-saving-starter-nutrition-products",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_fda_releases",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "2b2ee2842a748661e773112a",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_fda_releases",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Cox Communications, Inc. v. Sony Music Entertainment",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r22_k4lo.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "297f47a0054ca023fd0e651d",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Pung v. Isabella County",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r54_d18e.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "29699a12f2fe80cbe1394f7d",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Chevron USA Inc. v. Plaquemines Parish",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r25_2q24.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "23aaab89e4b1f946c37d97a4",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Watson v. Republican National Committee",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r65_g314.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "237abc4b71eed25656e671ab",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "URIF Approves Additional Investments and Partnerships in Energy and Critical Minerals",
-    "url": "https://home.treasury.gov/news/press-releases/sb0648/",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_treasury",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "22add9865429b73ff65259a3",
-    "first_seen": "2026-10-02T20:53:54.710501+00:00",
-    "observations": [
-      {
-        "source": "official_treasury",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Olivier v. City of Brandon",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r20_h315.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "1a74c2177297bfdd9df3bdb0",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Ellingburg v. United States",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r09_4fb4.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "17caf4325aad944e7f1127c2",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Fernandez v. United States",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r39_5iek.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "158a422f8d7246322d86dd9a",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Chatrie v. United States",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r64_7mio.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "150ee476e27d9a602ea6fd88",
-    "first_seen": "2026-10-02T16:30:15.020552+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Havana Docks Corp. v. Royal Caribbean Cruises, Ltd.",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r33_fcgj.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "12d86bbff935b4d746ead830",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "National Republican Senatorial Committee v. Federal Election Comm’n",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/24-621_h315.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "12c144e9678256e9ef7870d4",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "M & K Employee Solutions, Inc. v. Trustees of IAM Nat. Pension",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r34_f2bh.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "117cdad0a8a2e8c5e70355cc",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Exxon Mobil Corp. v. Corporación Cimex, S. A. (Cuba)",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r56_3e04.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "0aec2a08f68f2c1e4fc4bdad",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "September 28, 2026 - FDA intends to evaluate changes to the PMTA regulatory framework",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-intends-evaluate-changes-pmta-regulatory-framework",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_fda_releases",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "07effc69c7f88a077b8b5570",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_fda_releases",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Hain Celestial Group, Inc. v. Palmquist",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r14_1a72.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "01b96ba71c4954c9490f7aac",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
-        "query": "",
-        "classes": []
-      }
-    ],
-    "extraction_status": "headline_only",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
-  },
-  {
-    "title": "Hunter v. United States",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r50_lkgn.pdf",
-    "body": "",
-    "published_at": "",
-    "published_raw": "",
-    "source": "official_scotus",
-    "primary": true,
-    "query_classes": [],
-    "query": "",
-    "id": "0085180a1679675d09a74b40",
-    "first_seen": "2026-10-02T10:39:47.686277+00:00",
-    "observations": [
-      {
-        "source": "official_scotus",
         "query": "",
         "classes": []
       }
@@ -18853,8 +17335,11 @@
         "classes": []
       }
     ],
-    "extraction_status": "feed_text",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+    "extraction_status": "thin_text",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00",
+    "extraction_attempted_at": "2026-10-03T18:54:23.232351+00:00",
+    "extraction_attempts": 1,
+    "extraction_error": ""
   },
   {
     "title": "Merz will meet frontrunners for Lagarde job as ECB race heats up — Bloomberg - The Edge Malaysia",
@@ -39977,6 +38462,28 @@
     "last_seen": "2026-10-03T18:46:42.074757+00:00"
   },
   {
+    "title": "URIF Approves Additional Investments and Partnerships in Energy and Critical Minerals",
+    "url": "https://home.treasury.gov/news/press-releases/sb0648/",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_treasury",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "22add9865429b73ff65259a3",
+    "first_seen": "2026-10-02T20:53:54.710501+00:00",
+    "observations": [
+      {
+        "source": "official_treasury",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
     "title": "What Red Cloud residents said when Dan Osborn returned after shoving them into national spotlight - Nebraska Examiner",
     "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZUh3LXJfTlNCQU9LalFJSUdjXzZzRXphUVlRMUgySnpWemIwVmt3M0VVX3VOOHJVVFVsaDVhY2ZfbEZZQkVzMGVyUGluU1VOZGZ1ODVCakMtVmZnOUVONmI3ak0xYjVNY3o5RlhJWmxiS0RXVHduRWxta2NvRHUzY0t1WXkwUk9ZcWF3YnJwZVlxVG1IZEFMQ3FER0ZZaEVzZXNieVVvZXEwRVBxWUFpbFplUG41QkJUWkZ6R1V3UFF3TlNSTlR1UENiUUFjNk4tRjY5TA?oc=5",
     "publisher": "Nebraska Examiner",
@@ -44935,7 +43442,7 @@
     "title": "Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O",
     "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261002a.htm",
     "publisher": "",
-    "body": "Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O",
+    "body": "﻿ Federal Reserve Board - Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O Skip to main content An official website of the United States Government Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( Lock Locked padlock icon ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. Back to Home Board of Governors of the Federal Reserve System Stay Connected Federal Reserve Facebook Page Federal Reserve Instagram Page Federal Reserve YouTube Page Federal Reserve Flickr Page Federal Reserve LinkedIn Page Federal Reserve Threads Page Federal Reserve X Page Federal Reserve Bluesky Page Subscribe to RSS Subscribe to Email Recent Postings Calendar Publications Site Map A-Z index Careers FAQs Videos Contact Search Submit Search Button Advanced Toggle Dropdown Menu Board of Governors of the Federal Reserve System The Federal Reserve, the central bank of the United States, provides\r\n          the nation with a safe, flexible, and stable monetary and financial\r\n          system. Main Menu Toggle Button Sections Search Toggle Button Search Search Submit Button Submit About the Fed Structure of the Federal Reserve System The Fed Explained Board Members Advisory Councils Federal Reserve Banks Federal Reserve Bank and Branch Directors Federal Reserve Act Currency Board Meetings Board Votes Careers Do Business with the Board Holidays Observed - K.8 Ethics & Values Contact Requesting Information (FOIA) FAQs Economic Education Fed Financial Statements Financial Innovation News & Events Press Releases Speeches & Testimony Calendar Videos Photo Gallery Conferences Monetary Policy Federal Open Market Committee About the FOMC Meeting calendars and information Transcripts and other historical materials FAQs Monetary Policy Principles and Practice Notes Policy Implementation Policy Normalization Policy Tools Reports Monetary Policy Report Beige Book Federal Reserve Balance Sheet Developments Review of Monetary Policy Strategy, Tools, and Communications Overview Supervision & Regulation Supervision Community Banks Regional Banks and Foreign Banks with U.S. Assets < $100 Billion Large Banks and Large Foreign Banks Global Systemically Important Banks Financial Market\r\n                            Utilities Consumer\r\n                            Compliance Resources for Supervised Institutions Reports Federal Reserve\r\n                            Supervision and Regulation Report Reporting Forms Recent Reporting Form Updates Information Collections\r\n                            Under Review Financial\r\n                            Statements Securities Exchange Act of 1934 Applications/Structure Change FFIEC Municipal and\r\n                            Government Securities Activities Monitoring Micro Data Reference Manual Legal Developments Enforcement Actions and\r\n                            Legal Developments Mergers, Acquisitions, and Other Applications Process Filing\r\n                            Information Board and Reserve\r\n                            Bank Actions Supervision and Regulation Letters By Year By Topic Regulatory and Policy Resources Federal Reserve Act Bank Holding Company Act Regulations Supervision Manuals Federal Reserve Regulatory Service Disaster Preparedness and Recovery Resources Banking and Data Structure Beneficial Ownership\r\n                            Reports U.S. Domestically Chartered Commercial Banks Minority Depository\r\n                            Institutions U.S. Offices of Foreign Entities Financial Holding\r\n                            Companies Interstate\r\n                            Branching Securities\r\n                            Underwriting and Dealing Subsidiaries State Member Banks Supervised by the Federal Reserve Financial Stability Financial Stability Assessments About Financial Stability Types of Financial System Vulnerabilities & Risks Monitoring Risk Across the Financial System Proactive Monitoring of Markets & Institutions Financial Stability & Stress Testing Financial Stability Coordination & Actions Responding to Financial System Emergencies Cooperation on Financial Stability Reports Financial Stability Report Payment Systems Regulations & Statutes Regulation CC (Availability of Funds and Collection of Checks) Regulation II (Debit Card Interchange Fees and Routing) Regulation HH (Financial Market Utilities) Other Regulations and Statutes Payment Policies Federal Reserve's Key Policies for the Provision of Financial Services Guidelines for Evaluating Joint Account Requests Overnight Overdrafts Payment System Risk Sponsorship for Priority Telecommunication Services Reserve Bank Payment Services & Data Automated Clearinghouse Services Check Services Currency and Coin Services Daylight Overdrafts and Fees FedNow ® Service Fedwire Funds Services Fedwire Securities Services Fiscal Agency Services Master Account and Services Database National Settlement Service Financial Market Utilities & Infrastructures Supervision & Oversight of Financial Market Infrastructures Designated Financial Market Utilities International Standards for Financial Market Infrastructures Research, Reports, & Committees Federal Reserve Payments Study (FRPS) Payments Research Reports Payments System Policy Advisory Committee Economic Research Meet the Researchers Working Papers and Notes Finance and Economics Discussion Series (FEDS) FEDS Notes International Finance Discussion Papers (IFDP) Data, Models and Tools Economic Research Data FRB/US Model Estimated Dynamic Optimization (EDO) Model Survey of Consumer Finances (SCF) Data Data Download Program Bank Assets and Liabilities Aggregate Reserves of Depository Institutions and the Monetary Base - H.3 Assets and Liabilities of Commercial Banks in the U.S. - H.8 Assets and Liabilities of U.S. Branches and Agencies of Foreign Banks Charge-Off and Delinquency Rates on Loans and Leases at Commercial Banks Senior Financial Officer Survey Senior Loan Officer Opinion Survey on Bank Lending Practices Bank Structure Data U.S. Domestically Chartered Commercial Banks Minority Depository Institutions Structure and Share Data for the U.S. Offices of Foreign Banks Business Finance Commercial Paper Finance Companies - G.20 New Security Issues, State and Local Governments New Security Issues, U.S. Corporations Dealer Financing Terms Senior Credit Officer Opinion Survey on Dealer Financing Terms Exchange Rates and International Data Foreign Exchange Rates - H.10/G.5 International Summary Statistics Securities Holdings and Transactions Statistics Reported by Banks and Other Financial Firms in the United States Structure and Share Data for U.S. Offices of Foreign Banks Financial Accounts Financial Accounts of the United States - Z.1 Household Finance Consumer Credit - G.19 Household Debt Service Ratios Mortgage Debt Outstanding Survey of Consumer Finances (SCF) Survey of Household Economics and Decisionmaking Industrial Activity Industrial Production and Capacity Utilization - G.17 Interest Rates Selected Interest Rates - H.15 Micro Data Reference Manual (MDRM) Micro and Macro Data Collections Money Stock and Reserve Balances Factors Affecting Reserve Balances - H.4.1 Money Stock Measures - H.6 Other Yield Curve Models and Data Consumers & Communities Regulations Community Reinvestment Act (CRA) All Regulations Supervision & Enforcement CA Letters Enforcement Actions Independent Foreclosure Review Community Development Housing and Neighborhood Revitalization Small Business and Entrepreneurship Employment and Workforce Development Community Development Finance Rural Community and Economic Development Conferences Research & Analysis Survey of Household Economics and Decisionmaking Research Publications & Data Analysis Community Advisory Council Resources for Consumers Frauds and Scams Mortgage and Foreclosure Resources Federal Reserve Community Development Resources Home News & Events Press Releases Press Release October 02, 2026 Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O For release at 4:00 p.m. EDT Share The Federal Reserve Board announced Friday that it will extend, until November 4, the comment period on its proposal to modernize Regulation O, its rule governing the extension of credit by a bank to its \"insiders\"—bank executives, board members and major shareholders who could potentially influence a bank's lending decisions. The Board extended the comment period to allow interested parties more time to analyze the issues and prepare their comments. Comments on the proposal were originally due by October 5. For media inquiries, please email [email protected] or call 202-452-2955. Federal Register notice: Loans to Executive Officers, Directors, and Principal Shareholders of Member Banks: Bank Holding Companies (PDF) Last Update:\r\n            October 02, 2026 Board of Governors of the Federal Reserve System About the Fed News & Events Monetary Policy Supervision & Regulation Financial Stability Payment Systems Economic Research Data Consumers & Communities Connect with the Board Tools and Information Contact Publications Freedom of Information (FOIA) Office of Inspector General Budget & Performance | Audit No FEAR Act Español Website Policies | Privacy Program Accessibility Stay Connected Federal Reserve Facebook Page Federal Reserve Instagram Page Federal Reserve YouTube Page Federal Reserve Flickr Page Federal Reserve LinkedIn Page Federal Reserve Threads Page Link to Federal Reserve X Page Link to Federal Reserve Bluesky Page Subscribe to RSS Subscribe to Email Board of Governors of the Federal Reserve System 20th Street and Constitution Avenue N.W., Washington, DC 20551",
     "published_at": "2026-10-02T20:00:00+00:00",
     "published_raw": "Fri, 2 Oct 2026 20:00:00 GMT",
     "source": "official_fed_releases",
@@ -44951,8 +43458,10 @@
         "classes": []
       }
     ],
-    "extraction_status": "feed_text",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+    "extraction_status": "page_text",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00",
+    "extraction_attempted_at": "2026-10-03T18:54:23.298450+00:00",
+    "extraction_attempts": 1
   },
   {
     "title": "G7 countries to fight oil prices by outpouring reserves - wng.org",
@@ -53812,6 +52321,72 @@
     "last_seen": "2026-10-03T18:46:42.074757+00:00"
   },
   {
+    "title": "The Financial Literacy and Education Commission Releases the 2026 Update to the U.S. National Strategy for Financial Literacy",
+    "url": "https://home.treasury.gov/news/press-releases/sb0646/",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_treasury",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "b8350c75b17282b0409def30",
+    "first_seen": "2026-10-02T16:30:15.020552+00:00",
+    "observations": [
+      {
+        "source": "official_treasury",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Treasury Dismantles Major Hamas Financing Network",
+    "url": "https://home.treasury.gov/news/press-releases/sb0647/",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_treasury",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "43f793a3378b514aaf207de3",
+    "first_seen": "2026-10-02T16:30:15.020552+00:00",
+    "observations": [
+      {
+        "source": "official_treasury",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Chatrie v. United States",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r64_7mio.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "150ee476e27d9a602ea6fd88",
+    "first_seen": "2026-10-02T16:30:15.020552+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
     "title": "In brief: ‘Reacher’ spinoff gets a second season and more - News/Talk/Sports 94.9 WSJM",
     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQUkFqUGhwbEc0TEQ4MkQxYV9IeVFBWWFrb01PTXdtLWhBOE1ZdmVCX1dTTmNWNnhsaXNTWHFrelRHN1o5WVN4aElBME9yVGNlX1k1QndUQmpEMnpVbWU1dS1UeTNxSXg2NXY1ZmM1Rm04cWFhSVk4X3Q3RTRNVGhUSENPbVIwYm1zQzYzTWRIY3Y?oc=5",
     "publisher": "News/Talk/Sports 94.9 WSJM",
@@ -54628,8 +53203,11 @@
         "classes": []
       }
     ],
-    "extraction_status": "feed_text",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+    "extraction_status": "fetch_failed",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00",
+    "extraction_attempted_at": "2026-10-03T18:54:23.232373+00:00",
+    "extraction_attempts": 1,
+    "extraction_error": "HTTPError: HTTP Error 403: Forbidden"
   },
   {
     "title": "Introducing GPT-6 Sol and Luna - openai.com",
@@ -66908,7 +65486,7 @@
     "title": "Billings man sentenced to 3 years in prison for unlawfully possessing a handgun",
     "url": "https://www.justice.gov/usao-mt/pr/billings-man-sentenced-3-years-prison-unlawfully-possessing-handgun",
     "publisher": "",
-    "body": "A Billings man who was found in his parked car unlawfully carrying a firearm was sentenced Wednesday to three years and one month in prison, followed by three years of supervised release.",
+    "body": "District of Montana |  Billings man sentenced to 3 years in prison for unlawfully possessing a handgun | United States Department of Justice Skip to main content An official website of the United States government Here's how you know Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( Lock Locked padlock ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites. DOJ Menu U.S. Department\n                            of Justice About The Attorney General Organizational Chart Budget & Performance History & Museum Privacy Program Our Work News Press Releases Speeches Videos Photo Galleries Blogs Podcasts Resources Guidance Documents Forms Publications Information for Victims in Large Cases Justice Manual Business and Contracts Grants Employment Why Justice ? Benefits DOJ Vacancies Legal Careers at DOJ About MT Find Help Contact Us Utilities About MT Find Help Contact Us Search Menu Close About Meet the U.S. Attorney Jobs News Divisions Divisions Civil Division Criminal Division Financial Litigation Unit Programs Programs LECC Project Safe Childhood Project Safe Neighborhoods Victim Witness Assistance Public Service Announcements Contact About MT Find Help Contact Us Main Menu U.S. Department of Justice About title=\"About\" About The Attorney General Organizational Chart Budget & Performance History & Museum Privacy Program Our Work News title=\"News\" News Press Releases Speeches Videos Photo Galleries Blogs Podcasts Resources title=\"Guidance & Resources\" Resources Guidance Documents Forms Publications Information for Victims in Large Cases Justice Manual Business and Contracts Grants Employment Employment Why Justice ? Benefits DOJ Vacancies Legal Careers at DOJ About MT Find Help Contact Us Search Breadcrumb Justice.gov U.S. Attorneys District of Montana Press Releases Billings Man Sentenced To 3 Years In Prison For Unlawfully Possessing a Handgun Press Release Billings man sentenced to 3 years in prison for unlawfully possessing a handgun Friday, October 2, 2026 Share Facebook X LinkedIn Email For Immediate Release U.S. Attorney's Office,               District of Montana BILLINGS – A Billings man who was found in his parked car unlawfully carrying a firearm was sentenced Wednesday to three years and one month in prison, followed by three years of supervised release, the U.S. Attorney’s Office announced. William Thomas Fischer, 65, pleaded guilty in May 2026 to unlawfully possessing a firearm. U.S. District Judge Susan P. Watters presided. The government alleged in court documents that Fischer was asleep in a car in the middle of an empty parking lot when police approached to investigate. Startled awake, Fischer immediately began to talk to the officer, who asked Fischer for identification. As Fischer searched the car for documentation, the officer saw the bottom plate of a Glock magazine and ordered him out of the car. After detaining him, officers searched the car and found a handgun, two BB guns, and assorted ammunition. Fischer is a convicted felon and barred from possessing a firearm. The U.S. Attorney’s Office prosecuted the case. The Billings Police Department and ATF conducted the investigation. Project Safe Neighborhoods (PSN) is the Department of Justice’s nationwide initiative that brings federal, state, local, and tribal law enforcement, prosecutors, and other public safety partners together to coordinate efforts to combat violent crime and make communities safe. Coordinated by U.S. Attorneys’ offices in each of the 94 federal districts, PSN is tailored to particular communities to strategically address specific violent crime and public safety challenges. As a key component of Operation Take Back America, PSN serves a central role in the Department’s commitment to make our country safe. PSN emphasizes three core principles: rapid federal response to violent crime and criminal offenders; strong, strategic partnerships among law enforcement at all levels; and accountability and deterrence through the prosecution of the most serious, readily provable offenses and other strategies. These efforts complement and strengthen President Trump’s Homeland Security Task Forces, ensuring a comprehensive federal response to the most pressing public safety issues facing communities. Contact Keri Leggett Acting Public Affairs Officer keri.leggett@usdoj.gov Updated October 2, 2026 Topic Project Safe Neighborhoods Components Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) USAO - Montana Press Release Number: 26-259 Related Content Press Release Michigan man sentenced to 10 years prison for trafficking meth A Michigan man who was trafficking methamphetamine in Billings was sentenced Friday to 10 years in prison, followed by five years of supervised release. September 28, 2026 Press Release Billings woman sentenced to nearly 4 years in prison for stealing handgun A Billings woman who stole a handgun from an unlocked pickup truck was sentenced Friday to three years and 10 months in prison followed by three years of supervised release. September 28, 2026 Press Release Absorkee man sentenced to 15 months in prison for unlawfully possessing handgun An Absorkee man who was unlawfully carrying a firearm in his truck was sentenced Friday to 15 months in prison, followed by three years of supervised release. September 28, 2026 District of Montana Billings Main Office 2601 2nd Ave N. Suite 3200 Billings, MT 59101 Telephone: (406) 657-6101 Toll free:     (800) 291-6108 Fax Line:   (406) 657-6989 Stay Connected twitter About Budget & Performance Archives FOIA Accessibility Legal Policies & Disclaimers Privacy For Employees Office of the Inspector General No FEAR Act Data EEO Policy Statement Vulnerability Disclosure Multilingual Vote.gov Have a question about Government Services? Contact USA.gov Top",
     "published_at": "2026-10-02T12:00:00+00:00",
     "published_raw": "Fri, 02 Oct 2026 12:00:00 +0000",
     "source": "official_doj",
@@ -66924,8 +65502,10 @@
         "classes": []
       }
     ],
-    "extraction_status": "feed_text",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+    "extraction_status": "page_text",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00",
+    "extraction_attempted_at": "2026-10-03T18:54:23.232343+00:00",
+    "extraction_attempts": 1
   },
   {
     "title": "U.S. Attorney’s Office Marks Domestic Violence Awareness Month, Highlights Federal Funding for New Mexico Victim Services",
@@ -66983,7 +65563,7 @@
     "title": "District Man Sentenced to 20-Year Prison Term for Killing Man in Southeast",
     "url": "https://www.justice.gov/usao-dc/pr/district-man-sentenced-20-year-prison-term-killing-man-southeast",
     "publisher": "",
-    "body": "Kenneth Coleman, 37, of Washington, D.C., was sentenced today to 240 months in prison for the murder of 24-year-old Jireh Martinez in November 2023, announced U.S. Attorney Jeanine Ferris Pirro.",
+    "body": "District of Columbia |  District Man Sentenced to 20-Year Prison Term for Killing Man in Southeast | United States Department of Justice Skip to main content An official website of the United States government Here's how you know Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( Lock Locked padlock ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites. DOJ Menu U.S. Department\n                            of Justice About The Attorney General Organizational Chart Budget & Performance History & Museum Privacy Program Our Work News Press Releases Speeches Videos Photo Galleries Blogs Podcasts Resources Guidance Documents Forms Publications Information for Victims in Large Cases Justice Manual Business and Contracts Grants Employment Why Justice ? Benefits DOJ Vacancies Legal Careers at DOJ About DC Find Help Contact Us Utilities About DC Find Help Contact Us Search Menu Close About About Mission Statement News News Press Conferences Superior Court Reports Meet the U.S. Attorney Divisions Divisions Appellate Division Civil Division Criminal Division Fraud and Asset Recovery Division Special Proceedings Division Superior Court Division Victim Witness Division Services Services Diversion Programs Ending Human Trafficking Engaging Our Community Hate/Bias-Related Crimes Scam Center Strike Force Whistleblower Program Contact Employment Employment AUSAs Internship Legal Fellowship Program SAUSAs - Appellate SAUSAs - Civil Division SAUSAs - Superior Court SAUSAs - Federal Major Crimes Support Staff About DC Find Help Contact Us Main Menu U.S. Department of Justice About title=\"About\" About The Attorney General Organizational Chart Budget & Performance History & Museum Privacy Program Our Work News title=\"News\" News Press Releases Speeches Videos Photo Galleries Blogs Podcasts Resources title=\"Guidance & Resources\" Resources Guidance Documents Forms Publications Information for Victims in Large Cases Justice Manual Business and Contracts Grants Employment Employment Why Justice ? Benefits DOJ Vacancies Legal Careers at DOJ About DC Find Help Contact Us Search Breadcrumb Justice.gov U.S. Attorneys District of Columbia Press Releases District Man Sentenced To 20-Year Prison Term For Killing Man In Southeast Press Release District Man Sentenced to 20-Year Prison Term for Killing Man in Southeast Friday, October 2, 2026 Share Facebook X LinkedIn Email For Immediate Release U.S. Attorney's Office,               District of Columbia USADC.Media@usdoj.gov Victim Shot in Head During Robbery WASHINGTON – Kenneth Coleman, 37, of Washington, D.C., was sentenced today to 240 months in prison for the murder of 24-year-old Jireh Martinez in November 2023, announced U.S. Attorney Jeanine Ferris Pirro. Coleman pleaded guilty to one count of second-degree murder while armed on July 13, 2026, before D.C. Superior Court Judge Danya Dayson. In addition to the 20-year prison sentence, Judge Dayson ordered Coleman to serve five years of supervised release. According to court documents, on November 17, 2023, Coleman attempted to rob Mr. Martinez as Mr. Martinez returned home from a convenience store. Coleman pressed a gun into Mr. Martinez’s head and repeatedly demanded “give it to me.” Mr. Martinez dropped the store bag he was holding but otherwise just stood in place. After the eighth “give it to me,” Coleman pulled the trigger. Mr. Martinez crumpled to the ground, and Coleman walked away. When law enforcement reached Mr. Martinez, his only possession was a single dime. Coleman was arrested on separate charges on February 9, 2024, and has been in custody ever since. Joining the announcement was Interim Chief Jeffery Carroll of the Metropolitan Police Department. In announcing the sentence, U.S. Attorney Pirro and Interim Chief Carroll commended the work of those who investigated the case from the Metropolitan Police Department. They also thanked Assistant U.S. Attorneys Jessica Keefer and William Lawrence, who prosecuted the case. 2025 CF1 008763 Contact USADC.Media@usdoj.gov Updated October 2, 2026 Topics Firearms Offenses Violent Crime Component USAO - District of Columbia Related Content Press Release Virginia Felon Sentenced in D.C. for Possession of Glock Pistol While on Supervised Release Rashim Johnson, 35, a previously convicted felon residing in Warsaw, Virginia, was sentenced today in U.S. District Court in Washington D.C. to 84 months in federal prison in connection with his... October 2, 2026 Press Release Three D.C. Men Found Guilty of Murder for November 2021 Shooting Demonte Gibson, 28, Tre’Quan Nelson, 26, and Asani Forte, 29, all of Washington, D.C., were found guilty today in D.C. Superior Court, related to a shooting on November 3, 2021... October 2, 2026 Press Release Prison Term Handed Down to D.C. Man for February 2020 Chinatown Murder and Shooting at Police During Chase Jaykell Mason, 26, of Washington, D.C., was sentenced today to 18 years in prison, in the Superior Court for the District of Columbia, for charges related to a deadly shooting that... October 2, 2026 District of Columbia Main Office: 601 D Street, NW Washington, DC Email USAO-DC Telephone: (202) 252-7566 Stay Connected twitter linkedin facebook youtube instagram About Budget & Performance Archives FOIA Accessibility Legal Policies & Disclaimers Privacy For Employees Office of the Inspector General No FEAR Act Data EEO Policy Statement Vulnerability Disclosure Multilingual Vote.gov Have a question about Government Services? Contact USA.gov Top",
     "published_at": "2026-10-02T12:00:00+00:00",
     "published_raw": "Fri, 02 Oct 2026 12:00:00 +0000",
     "source": "official_doj",
@@ -66999,8 +65579,10 @@
         "classes": []
       }
     ],
-    "extraction_status": "feed_text",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+    "extraction_status": "page_text",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00",
+    "extraction_attempted_at": "2026-10-03T18:54:23.232306+00:00",
+    "extraction_attempts": 1
   },
   {
     "title": "White & Case advises Pearson on acquisition of Workera - White & Case LLP",
@@ -67238,7 +65820,7 @@
     "title": "U.S. Attorney's Office for the District of New Mexico Weekly Immigration and Border Crimes Report",
     "url": "https://www.justice.gov/usao-nm/pr/us-attorneys-office-district-new-mexico-weekly-immigration-and-border-crimes-report-52",
     "publisher": "",
-    "body": "Today, the United States Attorney’s Office for the District of New Mexico announced its immigration enforcement statistics.",
+    "body": "District of New Mexico |  U.S. Attorney's Office for the District of New Mexico Weekly Immigration and Border Crimes Report | United States Department of Justice Skip to main content An official website of the United States government Here's how you know Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( Lock Locked padlock ) or https:// means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites. DOJ Menu U.S. Department\n                            of Justice About The Attorney General Organizational Chart Budget & Performance History & Museum Privacy Program Our Work News Press Releases Speeches Videos Photo Galleries Blogs Podcasts Resources Guidance Documents Forms Publications Information for Victims in Large Cases Justice Manual Business and Contracts Grants Employment Why Justice ? Benefits DOJ Vacancies Legal Careers at DOJ About NM Find Help Contact Us Utilities About NM Find Help Contact Us Search Menu Close About About Mission Meet the U.S. Attorney News Divisions Programs Programs Project Safe Childhood Public Safety in Indian Country Project Safe Neighborhoods Victim Rights' Links Links Federal Domestic Violence Statutes and Elements for Prosecution Grants ABQ PD Investigation Ayudando Guardians Priest Prosecution Contact Us Contact Us Bid Requests Employment Jobs Jobs Attorneys Support Staff Law Students Non-Law Students About NM Find Help Contact Us Main Menu U.S. Department of Justice About title=\"About\" About The Attorney General Organizational Chart Budget & Performance History & Museum Privacy Program Our Work News title=\"News\" News Press Releases Speeches Videos Photo Galleries Blogs Podcasts Resources title=\"Guidance & Resources\" Resources Guidance Documents Forms Publications Information for Victims in Large Cases Justice Manual Business and Contracts Grants Employment Employment Why Justice ? Benefits DOJ Vacancies Legal Careers at DOJ About NM Find Help Contact Us Search Breadcrumb Justice.gov U.S. Attorneys District of New Mexico Press Releases U.S. Attorney's Office For The District of New Mexico Weekly Immigration and Border Crimes Report Press Release U.S. Attorney's Office for the District of New Mexico Weekly Immigration and Border Crimes Report Friday, October 2, 2026 Share Facebook X LinkedIn Email For Immediate Release U.S. Attorney's Office,               District of New Mexico ALBUQUERQUE – Today, the United States Attorney’s Office for the District of New Mexico announced its immigration enforcement statistics. These cases are prosecuted in partnership with the El Paso Sector of the U.S. Border Patrol, along with Homeland Security Investigations El Paso, and assistance from other federal, state, and county agencies. In the four-week period ending October 2, 2026, the United States Attorney’s Office brought the following criminal charges in New Mexico: 288 individuals were charged with Illegal Reentry After Deportation (8 U.S.C. 1326) 23 individuals were charged with Alien Smuggling (8 U.S.C. 1324) 232 individuals were charged with Illegal Entry (8 U.S.C. 1325) 284 individuals were charged with Illegal Entry (8 U.S.C. 1325), violation of a military security regulation (50 U.S.C. 797) and Entering Military, Naval, or Coast Guard Property (18 U.S.C. 1382), arising from the newly established National Defense Area in New Mexico. Many of the defendants charged pursuant to 8 U.S.C. 1326 had prior criminal convictions for child molestation, drug possession, and theft, possession with intent to distribute narcotics, grand theft, and prior immigration offenses. These cases are part of Operation Take Back America a nationwide initiative that marshals the full resources of the Department of Justice to repel the invasion of illegal immigration, achieve the total elimination of cartels and transnational criminal organizations (TCOs), and protect our communities from the perpetrators of violent crime. These statistics represent prosecutions by the United States Attorney’s Office for the District of New Mexico only. The numbers do not include individuals apprehended by immigration enforcement officials and subjected solely to administrative process. Under current leadership, public safety and a secure border are the top priorities for the District of New Mexico. Enhanced enforcement both at the border and in the interior of the district have yielded aliens engaged in unlawful activity or with serious criminal history, including human trafficking, sexual assault and violence against children. The District of New Mexico consists of 33 counties and shares 180 miles of international border with Mexico.  Assistant U.S. Attorneys from Albuquerque and Las Cruces work directly with our federal, state and local law enforcement partners to prosecute immigration-related and other federal offenses. Updated October 2, 2026 Topic Operation Take Back America Component USAO - New Mexico Press Release Number: 26-282 Related Content Press Release U.S. Attorney's Office for the District of New Mexico Weekly Immigration and Border Crimes Report Today, the United States Attorney’s Office for the District of New Mexico announced its immigration enforcement statistics. August 31, 2026 Press Release U.S. Attorney's Office for the District of New Mexico Immigration and Border Crimes Report Today, the United States Attorney’s Office for the District of New Mexico announced its immigration enforcement statistics for this week. July 31, 2026 Press Release U.S. Attorney's Office for the District of New Mexico Weekly Immigration and Border Crimes Report July 2, 2026 District of New Mexico Main Office: 201 3 rd Street NW, Suite 900 Albuquerque, New Mexico 87102 Email USAO-NM Telephone: (505) 346-7274 Fax (505) 346-7296 Stay Connected twitter linkedin instagram facebook About Budget & Performance Archives FOIA Accessibility Legal Policies & Disclaimers Privacy For Employees Office of the Inspector General No FEAR Act Data EEO Policy Statement Vulnerability Disclosure Multilingual Vote.gov Have a question about Government Services? Contact USA.gov Top",
     "published_at": "2026-10-02T12:00:00+00:00",
     "published_raw": "Fri, 02 Oct 2026 12:00:00 +0000",
     "source": "official_doj",
@@ -67254,8 +65836,10 @@
         "classes": []
       }
     ],
-    "extraction_status": "feed_text",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+    "extraction_status": "page_text",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00",
+    "extraction_attempted_at": "2026-10-03T18:54:23.298485+00:00",
+    "extraction_attempts": 1
   },
   {
     "title": "Gov. Hochul urged to sign firefighter income tax bill credit - Sun Community News",
@@ -70295,6 +68879,1436 @@
       }
     ],
     "extraction_status": "feed_text",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "September 15, 2026 - FDA Launches Expedited IND Pilot, Begins Accepting Applications",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-expedited-ind-pilot-begins-accepting-applications",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_fda_releases",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "ff895c2dbf2499d65dec1d73",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_fda_releases",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Cisco Systems, Inc. v. Doe",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/24-856_kjfm.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "f9ebf0c96fcf9b479bb8bde6",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "United States v. Hemani",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r51_k4lo.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "f77968c5fb919c6a2f1a1f4b",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "McCarthy v. Hernandez",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r52_k5fm.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "f1f0aa438c0fc79bcb9b3fa7",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Geo Group, Inc. v. Menocal",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r15_bqmc.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "eeef1453d01cbf5b6aed5bbd",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "National Park Service v. National Trust for Historic Preservation in the United States",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/26a203_2b8e.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "ed0f0aed2962c47b386f01fc",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Jules v. Andre Balazs Properties",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r31_8759.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "eb9c5fa2774e69980f1dc6e6",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "September 23, 2026 - Federal Court Enters Consent Decree Against Gold Star Distribution, Inc. Following Persistent Insanitary Warehouse Conditions",
+    "url": "https://www.fda.gov/news-events/press-announcements/federal-court-enters-consent-decree-against-gold-star-distribution-inc-following-persistent",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_fda_releases",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "eb6d04ae8d35ebbaefc130a1",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_fda_releases",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Landor v. Louisiana Dept of Corrections and Public Safety",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r55_h315.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "e0c9171bbf0272815c3abead",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Operation Economic Outcast Takes Unprecedented Action Against Sanctions Evasion Network Used by Iran",
+    "url": "https://home.treasury.gov/news/press-releases/sb0644/",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_treasury",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "d8311b0ad2d85a05238d1610",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_treasury",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "September 28, 2026 - FDA Approves First Treatment for MCT8 Deficiency",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-mct8-deficiency",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_fda_releases",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "d2674c5a4f395eda7822e36c",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_fda_releases",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Doe v. Dynamic Physical Therapy, LLC",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r03_1o23.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "cf86a96e86dc1ed7ff96b9ba",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Coney Island Auto Parts Unlimited, Inc. v. Burton",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r08_f2q3.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "cc2cfde81d106629d1b59a55",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Rutherford v. United States",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r40_o7kq.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "c718e830dc8a365289e37588",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Enbridge Energy, LP v. Nessel",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r28_i4dk.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "bd858e2b1dcb6fc912f1e9b3",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Louisiana v. Callais",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r29_n648.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "ba09de3be03e28449d40814b",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "National Republican Congressional Committee v. Brown",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/26a274_l537.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "b3e626bdfc40ea7a779a0e7a",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Urias-Orellana v. Bondi",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r19_3e04.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "ae52d681416733a274f722b1",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Mullin v. Al Otro Lado",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r59_kjfl.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "ae0b89aa8dda7f59de36f785",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Postal Service v. Konan",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r13_m64n.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "a7f0e5264cc9366485a21fe6",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Abouammo v. United States",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r46_2c8f.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "a7daba7bd35ccdd9975360b6",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "T. M. v. University of Md. Medical System Corporation",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r49_mlho.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "a6b763b6aeaa25405b574b80",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Bowe v. United States",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r04_n7ip.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "a37a14e308758b71a9caec86",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "FS Credit Opportunities Corp. v. Saba Capital Master Fund, Ltd.",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r47_m64o.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "9890b5e3d361983cdeb5137a",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "District of Columbia v. R.W.",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r26_ppl4.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "93e4dc6215b64f9e0f776ee8",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "September 30, 2026 - FDA Launches Nationwide Effort to Expand Scientific Expertise and Consumer Voices to Advisory Committees",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-nationwide-effort-expand-scientific-expertise-and-consumer-voices-advisory-committees",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_fda_releases",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "91bde3dd942935c2a53e4a8a",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_fda_releases",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Keathley v. Buddy Ayers Construction, Inc.",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r48_k53m.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "8c19a546eb41806783f18511",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Flowers Foods, Inc. v. Brock",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r37_i425.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "889065270f7835ee43a4d484",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "October 1, 2026 - FDA Approves First Heart Valve Designed to Grow with Children",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-heart-valve-designed-grow-children",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_fda_releases",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "83e34b9db61bc9cc1f9b6e90",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_fda_releases",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Galette v. New Jersey Transit Corp.",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r18_d18f.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "7e18be0b748ccb0e5da445ca",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "September 29, 2026 - FDA Investigation Leads to Charges Against Two Indian Nationals Involved in Transnational Counterfeit Drug Distribution Scheme",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-investigation-leads-charges-against-two-indian-nationals-involved-transnational-counterfeit-drug",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_fda_releases",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "7d2ef3c2fdbe31d5d2fac532",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_fda_releases",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "West Virginia v. B. P. J.",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/24-43_2b35.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "7b8c77bd647a5046d9425e52",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Montgomery v. Caribe Transport II, LLC",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r32_g3bi.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "79382e3a48d2f00a34f611b4",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Barrett v. United States",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r07_7647.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "78c216f1267d6a984d890d5a",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "READOUT: Secretary of the Treasury Scott Bessent’s Meeting with Iraq Minister of Foreign Affairs Fuad Hussein",
+    "url": "https://home.treasury.gov/news/press-releases/sb0645/",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_treasury",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "6be943ac2b28f6a5a42ad152",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_treasury",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "First Choice Women’s Resource Centers, Inc. v. Davenport",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r30_3f14.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "67ca9d9a1e192f2371a39e26",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Treasury Sanctions Financial Network of Foreign Terrorist Organization, Tren de Aragua, After Theft of Millions from U.S. Banks",
+    "url": "https://home.treasury.gov/news/press-releases/sb0640/",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_treasury",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "6228912610824a88add25565",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_treasury",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Pitts v. Mississippi",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r01_kjfm.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "5fa83718a533f4b72f8b15d6",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "The Trump Administration Advances the Establishment of America’s First Nationwide School Choice Program",
+    "url": "https://home.treasury.gov/news/press-releases/sb0641/",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_treasury",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "580155787fab45cfad86c9b9",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_treasury",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Hencely v. Fluor Corp.",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r27_bq7c.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "5709be22ad55bf67757f15ee",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Rico v. United States",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r23_4g15.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "513d338bd5c725541115e586",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "People Not Politicians v. Onder",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/26a388_q86b.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "4e0d240dde404fd5a3aab5d3",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "September 17, 2026 - FDA Approves First Gene Therapy for Pediatric Patients with Sanfilippo Syndrome Type A",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapy-pediatric-patients-sanfilippo-syndrome-type",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_fda_releases",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "463a07f32cd10e2546fcf522",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_fda_releases",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Bost v. Illinois Bd. of Elections",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r05_e2q3.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "442f42d18d95d714bce803cb",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Learning Resources, Inc. v. Trump",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r12_8nj9.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "3edfc0b2eb6e2be842421da7",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Hikma Pharmaceuticals USA Inc. v. Amarin Pharma, Inc.",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r45_i4dk.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "3d6c5517a02c70bdf9f73225",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Operation Economic Outcast Targets Iran’s Remaining Industrial Lifelines",
+    "url": "https://home.treasury.gov/news/press-releases/sb0643/",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_treasury",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "3c164b16631d56632e369dec",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_treasury",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Department of Homeland Security v. League of Women Voters",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/26a308_pok0.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "3ae556f421c05f021bef0194",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Treasury Announces the Completion of Automatic Enrollment Today for Trump Accounts",
+    "url": "https://home.treasury.gov/news/press-releases/sb0642/",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_treasury",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "3ac7a79fa422a4414663ab89",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_treasury",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "September 21, 2026 -    FDA Updates Regulations to Advance Innovative Alternatives to Animal Testing",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-updates-regulations-advance-innovative-alternatives-animal-testing",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_fda_releases",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "3a701644d5d1250a4290671e",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_fda_releases",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "September 4, 2026 - FDA Takes Steps to Maintain Newborn Access to Life-Saving Starter Nutrition Products",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-takes-steps-maintain-newborn-access-life-saving-starter-nutrition-products",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_fda_releases",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "2b2ee2842a748661e773112a",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_fda_releases",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Cox Communications, Inc. v. Sony Music Entertainment",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r22_k4lo.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "297f47a0054ca023fd0e651d",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Pung v. Isabella County",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r54_d18e.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "29699a12f2fe80cbe1394f7d",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Chevron USA Inc. v. Plaquemines Parish",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r25_2q24.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "23aaab89e4b1f946c37d97a4",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Watson v. Republican National Committee",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r65_g314.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "237abc4b71eed25656e671ab",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Olivier v. City of Brandon",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r20_h315.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "1a74c2177297bfdd9df3bdb0",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Ellingburg v. United States",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r09_4fb4.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "17caf4325aad944e7f1127c2",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Fernandez v. United States",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r39_5iek.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "158a422f8d7246322d86dd9a",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Havana Docks Corp. v. Royal Caribbean Cruises, Ltd.",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r33_fcgj.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "12d86bbff935b4d746ead830",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "National Republican Senatorial Committee v. Federal Election Comm’n",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/24-621_h315.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "12c144e9678256e9ef7870d4",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "M & K Employee Solutions, Inc. v. Trustees of IAM Nat. Pension",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us1r34_f2bh.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "117cdad0a8a2e8c5e70355cc",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Exxon Mobil Corp. v. Corporación Cimex, S. A. (Cuba)",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/609us1r56_3e04.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "0aec2a08f68f2c1e4fc4bdad",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "September 28, 2026 - FDA intends to evaluate changes to the PMTA regulatory framework",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-intends-evaluate-changes-pmta-regulatory-framework",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_fda_releases",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "07effc69c7f88a077b8b5570",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_fda_releases",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Hain Celestial Group, Inc. v. Palmquist",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r14_1a72.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "01b96ba71c4954c9490f7aac",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+  },
+  {
+    "title": "Hunter v. United States",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/608us2r50_lkgn.pdf",
+    "body": "",
+    "published_at": "",
+    "published_raw": "",
+    "source": "official_scotus",
+    "primary": true,
+    "query_classes": [],
+    "query": "",
+    "id": "0085180a1679675d09a74b40",
+    "first_seen": "2026-10-02T10:39:47.686277+00:00",
+    "observations": [
+      {
+        "source": "official_scotus",
+        "query": "",
+        "classes": []
+      }
+    ],
+    "extraction_status": "headline_only",
     "last_seen": "2026-10-03T18:46:42.074757+00:00"
   },
   {
@@ -77182,8 +77196,11 @@
         "classes": []
       }
     ],
-    "extraction_status": "feed_text",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+    "extraction_status": "thin_text",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00",
+    "extraction_attempted_at": "2026-10-03T18:54:23.232357+00:00",
+    "extraction_attempts": 1,
+    "extraction_error": ""
   },
   {
     "title": "Kildare tech company announces appointment to senior role - kildare-nationalist.ie",
@@ -82482,8 +82499,11 @@
         "classes": []
       }
     ],
-    "extraction_status": "feed_text",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+    "extraction_status": "fetch_failed",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00",
+    "extraction_attempted_at": "2026-10-03T18:54:23.232378+00:00",
+    "extraction_attempts": 1,
+    "extraction_error": "HTTPError: HTTP Error 403: Forbidden"
   },
   {
     "title": "Watch Treasuries Rebound From Global Bond Selloff - Bloomberg.com",
@@ -93331,8 +93351,11 @@
         "classes": []
       }
     ],
-    "extraction_status": "feed_text",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+    "extraction_status": "thin_text",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00",
+    "extraction_attempted_at": "2026-10-03T18:54:23.232363+00:00",
+    "extraction_attempts": 1,
+    "extraction_error": ""
   },
   {
     "title": "Nunavik beneficiaries to see a 25% gas subsidy increase - nunatsiaq.com",
@@ -93409,8 +93432,11 @@
         "classes": []
       }
     ],
-    "extraction_status": "feed_text",
-    "last_seen": "2026-10-03T18:46:42.074757+00:00"
+    "extraction_status": "thin_text",
+    "last_seen": "2026-10-03T18:46:42.074757+00:00",
+    "extraction_attempted_at": "2026-10-03T18:54:23.232368+00:00",
+    "extraction_attempts": 1,
+    "extraction_error": ""
   },
   {
     "title": "Democrats to Trump: Show Us the Venezuela Oil Deal — or Face Subpoenas - Latin Times",
