@@ -72,7 +72,10 @@ jobs:
 
       - name: Unit tests
         if: steps.clock.outputs.go == 'yes'
-        run: python3 -m src.test_hold_live_px && python3 -m src.test_elite_live_px
+        run: |
+          # hard-red research tests import src.hard_red_sit_research (pandas).
+          pip install pandas
+          python3 -m src.test_hold_live_px && python3 -m src.test_elite_live_px
 
       - name: Install (thin)
         if: steps.clock.outputs.go == 'yes'
