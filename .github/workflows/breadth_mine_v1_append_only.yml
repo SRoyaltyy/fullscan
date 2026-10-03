@@ -1,0 +1,27 @@
+name: Breadth mine v1 append-only
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  append-only:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+    - name: Fetch the PR base
+      run: git fetch --no-tags origin "${{ github.event.pull_request.base.sha }}"
+    - name: Append-only unit tests
+      run: PYTHONHASHSEED=0 python3 -m src.test_breadth_mine_v1_append
+    - name: Install score test dependencies
+      run: pip install pandas numpy pyarrow
+    - name: Prereg fingerprint and breadth tests
+      run: PYTHONHASHSEED=0 python3 -m src.test_breadth_mine_v1
+    - name: Same-day bar guard from the initial study
+      run: PYTHONHASHSEED=0 python3 -m src.test_lever_search_bars
+    - name: Fail if an earlier breadth session changed
+      run: python3 -m src.breadth_mine_v1_append --check-against "${{ github.event.pull_request.base.sha }}"
