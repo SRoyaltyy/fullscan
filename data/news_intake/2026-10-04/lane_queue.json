@@ -73314,22 +73314,6 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
-    "document_id": "91bde3dd942935c2a53e4a8a",
-    "title": "September 30, 2026 - FDA Launches Nationwide Effort to Expand Scientific Expertise and Consumer Voices to Advisory Committees",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-nationwide-effort-expand-scientific-expertise-and-consumer-voices-advisory-committees",
-    "published_at": "2026-09-30T04:00:00+00:00",
-    "known_at": "2026-09-30T04:00:00+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
     "document_id": "8c19a546eb41806783f18511",
     "title": "Keathley v. Buddy Ayers Construction, Inc.",
     "evidence_file": "documents.json",
@@ -73362,24 +73346,6 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
-    "document_id": "83e34b9db61bc9cc1f9b6e90",
-    "title": "October 1, 2026 - FDA Approves First Heart Valve Designed to Grow with Children",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-heart-valve-designed-grow-children",
-    "published_at": "2026-10-01T04:00:00+00:00",
-    "known_at": "2026-10-01T04:00:00+00:00",
-    "candidate_classes": [
-      "gate"
-    ],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "permission",
-    "routing_class": "gate",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
     "document_id": "7e18be0b748ccb0e5da445ca",
     "title": "Galette v. New Jersey Transit Corp.",
     "evidence_file": "documents.json",
@@ -73387,22 +73353,6 @@
     "url": "https://www.supremecourt.gov/opinions/25pdf/607us2r18_d18f.pdf",
     "published_at": "",
     "known_at": "2026-10-02T10:39:47.686277+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
-    "document_id": "7d2ef3c2fdbe31d5d2fac532",
-    "title": "September 29, 2026 - FDA Investigation Leads to Charges Against Two Indian Nationals Involved in Transnational Counterfeit Drug Distribution Scheme",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-investigation-leads-charges-against-two-indian-nationals-involved-transnational-counterfeit-drug",
-    "published_at": "2026-09-29T04:00:00+00:00",
-    "known_at": "2026-09-29T04:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -73460,22 +73410,6 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
-    "document_id": "6be943ac2b28f6a5a42ad152",
-    "title": "READOUT: Secretary of the Treasury Scott Bessent’s Meeting with Iraq Minister of Foreign Affairs Fuad Hussein",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://home.treasury.gov/news/press-releases/sb0645/",
-    "published_at": "2026-10-01T23:15:00+00:00",
-    "known_at": "2026-10-01T23:15:00+00:00",
-    "candidate_classes": [],
-    "state": "candidate",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
     "document_id": "67ca9d9a1e192f2371a39e26",
     "title": "First Choice Women’s Resource Centers, Inc. v. Davenport",
     "evidence_file": "documents.json",
@@ -73492,22 +73426,6 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
-    "document_id": "6228912610824a88add25565",
-    "title": "Treasury Sanctions Financial Network of Foreign Terrorist Organization, Tren de Aragua, After Theft of Millions from U.S. Banks",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://home.treasury.gov/news/press-releases/sb0640/",
-    "published_at": "2026-09-30T14:30:00+00:00",
-    "known_at": "2026-09-30T14:30:00+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "structure",
-    "routing_class": "access_control",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
     "document_id": "5fa83718a533f4b72f8b15d6",
     "title": "Pitts v. Mississippi",
     "evidence_file": "documents.json",
@@ -73515,22 +73433,6 @@
     "url": "https://www.supremecourt.gov/opinions/25pdf/607us1r01_kjfm.pdf",
     "published_at": "",
     "known_at": "2026-10-02T10:39:47.686277+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
-    "document_id": "580155787fab45cfad86c9b9",
-    "title": "The Trump Administration Advances the Establishment of America’s First Nationwide School Choice Program",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://home.treasury.gov/news/press-releases/sb0641/",
-    "published_at": "2026-10-01T13:00:00+00:00",
-    "known_at": "2026-10-01T13:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -73588,24 +73490,6 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
-    "document_id": "463a07f32cd10e2546fcf522",
-    "title": "September 17, 2026 - FDA Approves First Gene Therapy for Pediatric Patients with Sanfilippo Syndrome Type A",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapy-pediatric-patients-sanfilippo-syndrome-type",
-    "published_at": "2026-09-17T18:30:00+00:00",
-    "known_at": "2026-09-17T18:30:00+00:00",
-    "candidate_classes": [
-      "gate"
-    ],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "permission",
-    "routing_class": "gate",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
     "document_id": "442f42d18d95d714bce803cb",
     "title": "Bost v. Illinois Bd. of Elections",
     "evidence_file": "documents.json",
@@ -73654,22 +73538,6 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
-    "document_id": "3c164b16631d56632e369dec",
-    "title": "Operation Economic Outcast Targets Iran’s Remaining Industrial Lifelines",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://home.treasury.gov/news/press-releases/sb0643/",
-    "published_at": "2026-10-01T17:00:00+00:00",
-    "known_at": "2026-10-01T17:00:00+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
     "document_id": "3ae556f421c05f021bef0194",
     "title": "Department of Homeland Security v. League of Women Voters",
     "evidence_file": "documents.json",
@@ -73691,8 +73559,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://home.treasury.gov/news/press-releases/sb0642/",
-    "published_at": "",
-    "known_at": "2026-10-02T10:39:47.686277+00:00",
+    "published_at": "2026-10-01T15:30:00+00:00",
+    "known_at": "2026-10-01T15:30:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -73707,8 +73575,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://www.fda.gov/news-events/press-announcements/fda-updates-regulations-advance-innovative-alternatives-animal-testing",
-    "published_at": "",
-    "known_at": "2026-10-02T10:39:47.686277+00:00",
+    "published_at": "2026-09-21T04:00:00+00:00",
+    "known_at": "2026-09-21T04:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -73723,8 +73591,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://www.fda.gov/news-events/press-announcements/fda-takes-steps-maintain-newborn-access-life-saving-starter-nutrition-products",
-    "published_at": "",
-    "known_at": "2026-10-02T10:39:47.686277+00:00",
+    "published_at": "2026-09-04T04:00:00+00:00",
+    "known_at": "2026-09-04T04:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -90740,6 +90608,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "6be943ac2b28f6a5a42ad152",
+    "title": "READOUT: Secretary of the Treasury Scott Bessent’s Meeting with Iraq Minister of Foreign Affairs Fuad Hussein",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://home.treasury.gov/news/press-releases/sb0645/",
+    "published_at": "2026-10-01T23:15:00+00:00",
+    "known_at": "2026-10-01T23:15:00+00:00",
+    "candidate_classes": [],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "5cb374e37cac88e25c444fe6",
     "title": "Ronaldo's Portugal future in doubt after walkout - Philstar.com",
     "evidence_file": "documents.json",
@@ -92956,7 +92840,7 @@
     "candidate_classes": [
       "key_person"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "key_person",
@@ -93038,7 +92922,7 @@
     "candidate_classes": [
       "access_control"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "access_control",
@@ -93056,7 +92940,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -93090,7 +92974,7 @@
     "candidate_classes": [
       "capacity"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "capacity",
@@ -93108,7 +92992,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -93142,7 +93026,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -93224,7 +93108,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -93242,7 +93126,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -93260,7 +93144,7 @@
     "candidate_classes": [
       "tax_fiscal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "tax_fiscal",
@@ -93296,7 +93180,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -93328,7 +93212,7 @@
     "published_at": "2026-10-01T22:00:00+00:00",
     "known_at": "2026-10-01T22:00:00+00:00",
     "candidate_classes": [],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
@@ -93362,7 +93246,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -93380,7 +93264,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -93398,7 +93282,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -93416,7 +93300,7 @@
     "candidate_classes": [
       "key_person"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "key_person",
@@ -93434,7 +93318,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -93452,7 +93336,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -93486,7 +93370,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -93504,7 +93388,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
@@ -93522,7 +93406,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -93576,7 +93460,7 @@
     "candidate_classes": [
       "key_person"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "key_person",
@@ -102312,6 +102196,104 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "3c164b16631d56632e369dec",
+    "title": "Operation Economic Outcast Targets Iran’s Remaining Industrial Lifelines",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://home.treasury.gov/news/press-releases/sb0643/",
+    "published_at": "2026-10-01T17:00:00+00:00",
+    "known_at": "2026-10-01T17:00:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "580155787fab45cfad86c9b9",
+    "title": "The Trump Administration Advances the Establishment of America’s First Nationwide School Choice Program",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://home.treasury.gov/news/press-releases/sb0641/",
+    "published_at": "2026-10-01T13:00:00+00:00",
+    "known_at": "2026-10-01T13:00:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "83e34b9db61bc9cc1f9b6e90",
+    "title": "October 1, 2026 - FDA Approves First Heart Valve Designed to Grow with Children",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-heart-valve-designed-grow-children",
+    "published_at": "2026-10-01T04:00:00+00:00",
+    "known_at": "2026-10-01T04:00:00+00:00",
+    "candidate_classes": [
+      "gate"
+    ],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "permission",
+    "routing_class": "gate",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "6228912610824a88add25565",
+    "title": "Treasury Sanctions Financial Network of Foreign Terrorist Organization, Tren de Aragua, After Theft of Millions from U.S. Banks",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://home.treasury.gov/news/press-releases/sb0640/",
+    "published_at": "2026-09-30T14:30:00+00:00",
+    "known_at": "2026-09-30T14:30:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "structure",
+    "routing_class": "access_control",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "91bde3dd942935c2a53e4a8a",
+    "title": "September 30, 2026 - FDA Launches Nationwide Effort to Expand Scientific Expertise and Consumer Voices to Advisory Committees",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-nationwide-effort-expand-scientific-expertise-and-consumer-voices-advisory-committees",
+    "published_at": "2026-09-30T04:00:00+00:00",
+    "known_at": "2026-09-30T04:00:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "7d2ef3c2fdbe31d5d2fac532",
+    "title": "September 29, 2026 - FDA Investigation Leads to Charges Against Two Indian Nationals Involved in Transnational Counterfeit Drug Distribution Scheme",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-investigation-leads-charges-against-two-indian-nationals-involved-transnational-counterfeit-drug",
+    "published_at": "2026-09-29T04:00:00+00:00",
+    "known_at": "2026-09-29T04:00:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "d2674c5a4f395eda7822e36c",
     "title": "September 28, 2026 - FDA Approves First Treatment for MCT8 Deficiency",
     "evidence_file": "documents.json",
@@ -102342,6 +102324,24 @@
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "463a07f32cd10e2546fcf522",
+    "title": "September 17, 2026 - FDA Approves First Gene Therapy for Pediatric Patients with Sanfilippo Syndrome Type A",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapy-pediatric-patients-sanfilippo-syndrome-type",
+    "published_at": "2026-09-17T18:30:00+00:00",
+    "known_at": "2026-09-17T18:30:00+00:00",
+    "candidate_classes": [
+      "gate"
+    ],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "permission",
+    "routing_class": "gate",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
