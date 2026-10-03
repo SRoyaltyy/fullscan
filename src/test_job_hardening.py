@@ -575,6 +575,141 @@ def test_sector_outcome_skips_existing_and_times_out_yf() -> None:
     assert "killed after" in src
 
 
+def test_sector_outcome_stage_skips_scoreboard() -> None:
+    """Pipeline stage outcome writes markdown and leaves the scoreboard."""
+    import tempfile
+
+    from src import run_sector_outcome as so
+
+    src = (ROOT / "src" / "run_sector_outcome.py").read_text(encoding="utf-8")
+    assert "--skip-scoreboard" in src
+    assert "SECTOR_OUTCOME_SKIP_SCOREBOARD" in src
+    assert src.index("scoreboard unchanged") < src.index("board = scoreboard.load()")
+    post_py = (ROOT / "src" / "run_postclose_all.py").read_text(encoding="utf-8")
+    assert "--skip-scoreboard" not in post_py
+    assert 'src.run_sector_outcome", "--date"' in post_py
+
+    yml = (WF / "sector_pipeline.yml").read_text(encoding="utf-8")
+    outcome = yml.split("- name: Outcome")[1].split("- name: Reflect")[0]
+    assert "--skip-scoreboard" in outcome
+    assert '[ "${{ github.event.inputs.stage }}" = "outcome" ]' in outcome
+    daily = (WF / "sector_daily.yml").read_text(encoding="utf-8")
+    assert "--skip-scoreboard" not in daily
+
+    commit = yml.split("- name: Commit")[1]
+    outcome_arm, rest = commit.split(
+        '[ "${{ github.event.inputs.stage }}" = "outcome" ]', 1)[1].split(
+            "else", 1)
+    other_arm = rest.split("fi", 1)[0]
+    assert "01_daily/sectors/*/*_outcome.md" in outcome_arm
+    for banned in (
+        "03_scoreboard/",
+        "02_lessons/",
+        "01_daily/_transcripts/",
+        "01_daily/*_preopen_qc.json",
+        "_BOARD.md",
+        "_board.json",
+        "_qc.json",
+    ):
+        assert banned not in outcome_arm, banned
+    assert "01_daily/sectors/ 01_daily/_transcripts/" in other_arm
+    assert "02_lessons/" in other_arm
+    assert "03_scoreboard/" in other_arm
+    assert "01_daily/*_preopen_qc.json" in other_arm
+
+    post = (WF / "postclose_all.yml").read_text(encoding="utf-8")
+    push_paths = post.split("\n  push:\n", 1)[1].split(
+        "\n  workflow_dispatch:", 1)[0]
+    assert "src/run_sector_outcome.py" not in push_paths
+    assert "postclose_all.yml" not in push_paths
+    assert "src/run_postclose_all.py" in push_paths
+    assert "src/run_outcome.py" in push_paths
+    assert "src/run_reflect.py" in push_paths
+    assert "src/run_sector_reflect.py" in push_paths
+    assert "src/learn_cycle.py" in push_paths
+    assert "src/map_heat_postclose.py" in push_paths
+    assert 'cron: "10 20 * * 1-5"' in post
+    assert 'cron: "30 3 * * 2-6"' in post
+    assert "workflow_dispatch:" in post
+
+    prev = os.environ.get("SECTOR_OUTCOME_SKIP_SCOREBOARD")
+    try:
+        os.environ["SECTOR_OUTCOME_SKIP_SCOREBOARD"] = "1"
+        with tempfile.TemporaryDirectory() as td:
+            with mock.patch.object(so.scoreboard, "load",
+                                   side_effect=AssertionError("load")), \
+                 mock.patch.object(so.scoreboard, "save",
+                                   side_effect=AssertionError("save")), \
+                 mock.patch.object(so.scoreboard, "get_or_create",
+                                   side_effect=AssertionError("get")):
+                so._write_outcome(
+                    "Technology", "2026-09-03", td, "technology",
+                    {"etf": "XLK", "pct": 1.0}, "essay body")
+            text = (Path(td) / "technology_outcome.md").read_text(
+                encoding="utf-8")
+            assert text.startswith(
+                "# Sector Outcome — Technology — 2026-09-03")
+            assert "essay body" in text
+        with mock.patch.object(so, "_persist_markdown") as md_only, \
+             mock.patch.object(so, "_persist") as full:
+            so._land_written("2026-09-03", "01_daily/sectors/x/technology_outcome.md")
+        md_only.assert_called_once_with(
+            "01_daily/sectors/x/technology_outcome.md")
+        full.assert_not_called()
+        seen: dict = {}
+
+        def _capture(cmd, timeout=None, env=None):
+            seen["cmd"] = list(cmd)
+            seen["env"] = env
+
+            class _R:
+                returncode = 0
+
+            return _R()
+
+        os.environ.pop("SECTOR_GRADE_CHILD", None)
+        with mock.patch.object(so.subprocess, "run", side_effect=_capture):
+            so._run_one_bounded("Technology", "2026-09-03")
+        assert seen["cmd"][-1] == "--skip-scoreboard"
+        assert seen["env"]["SECTOR_OUTCOME_SKIP_SCOREBOARD"] == "1"
+        assert seen["env"]["SECTOR_GRADE_CHILD"] == "1"
+
+        os.environ.pop("SECTOR_OUTCOME_SKIP_SCOREBOARD", None)
+        board = {"runs": []}
+        saved: dict = {}
+        with tempfile.TemporaryDirectory() as td:
+            with mock.patch.object(so.scoreboard, "load", return_value=board), \
+                 mock.patch.object(so.scoreboard, "save",
+                                   side_effect=lambda b: saved.update(board=b)), \
+                 mock.patch.object(
+                     so.compute_sector_scores, "grade",
+                     return_value={
+                         "actual_direction": "up",
+                         "actual_magnitude_band": "mild",
+                         "direction_hit": True,
+                         "magnitude_hit": True,
+                     }):
+                so._write_outcome(
+                    "Technology", "2026-09-03", td, "technology",
+                    {"etf": "XLK", "pct": 1.2, "open": 1.0, "close": 2.0,
+                     "spy_pct": 0.2, "rel": 1.0},
+                    "graded body")
+            assert (Path(td) / "technology_outcome.md").is_file()
+        assert saved["board"] is board
+        assert board["runs"][0]["actual_pct_change"] == 1.2
+        assert board["runs"][0]["direction_hit"] is True
+        with mock.patch.object(so, "_persist_markdown") as md_only, \
+             mock.patch.object(so, "_persist") as full:
+            so._land_written("2026-09-03", "01_daily/sectors/x/technology_outcome.md")
+        full.assert_called_once_with("2026-09-03")
+        md_only.assert_not_called()
+    finally:
+        if prev is None:
+            os.environ.pop("SECTOR_OUTCOME_SKIP_SCOREBOARD", None)
+        else:
+            os.environ["SECTOR_OUTCOME_SKIP_SCOREBOARD"] = prev
+
+
 def test_sector_parent_continues_after_one_timeout() -> None:
     """A hung first-sector chat() must not eat the other 10."""
     import subprocess
@@ -1253,6 +1388,7 @@ def main() -> None:
         test_ecs_timers_stay_green_and_push,
         test_empty_futures_tape_not_ready,
         test_sector_outcome_skips_existing_and_times_out_yf,
+        test_sector_outcome_stage_skips_scoreboard,
         test_sector_parent_continues_after_one_timeout,
         test_sector_reflect_skips_existing,
         test_etf_actual_falls_back_to_history,
