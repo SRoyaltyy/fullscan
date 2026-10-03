@@ -1,11 +1,14 @@
 """Hotness: could this article be about company X?
 
-Code only. Heat comes from rare words shared with the company description
-(Finviz_Description, plus industry). The company name is a bonus, not a
-requirement. A hit is a candidate, not a keep.
+Code only. Heat comes from words shared with Finviz_Description, then the
+granular industry, then the sector. The company name is a bonus. A hit is
+a candidate, not a keep.
+
+CSV columns: Ticker, Company, Industry, Sector, Finviz_Description.
 """
 from __future__ import annotations
 
+import csv
 import json
 import math
 import re
@@ -20,12 +23,12 @@ _STOP = frozenset(
     "have has had been were they their company provides offers including "
     "through about into over also operates based products services "
     "primarily segment segments business businesses inc corp corporation "
-    "limited ltd plc group holdings holding".split()
+    "limited ltd plc group holdings holding which other their".split()
 )
 
 
-def tokens(text: str) -> list[str]:
-    return [w for w in _WORD.findall((text or "").lower()) if w not in _STOP]
+def tokens(text: str) -> set[str]:
+    return {w for w in _WORD.findall((text or "").lower()) if w not in _STOP}
 
 
 def _name_hit(name: str, low: str) -> bool:
@@ -37,43 +40,49 @@ class HotBoard:
     def __init__(self, companies: list[dict]):
         self.companies: list[dict] = []
         df: Counter[str] = Counter()
+        packed = []
         for raw in companies:
-            ticker = str(raw.get("ticker") or "").upper().strip()
-            name = str(raw.get("name") or raw.get("company_name") or "").strip()
-            desc = " ".join(
-                str(raw.get(k) or "")
-                for k in ("description", "industry", "sector")
-            )
-            if not ticker or not (name or desc):
+            ticker = str(raw.get("ticker") or raw.get("Ticker") or "").upper().strip()
+            name = str(raw.get("name") or raw.get("Company") or raw.get("company_name") or "").strip()
+            desc = tokens(str(raw.get("description") or raw.get("Finviz_Description") or ""))
+            industry = tokens(str(raw.get("industry") or raw.get("Industry") or ""))
+            sector = tokens(str(raw.get("sector") or raw.get("Sector") or ""))
+            if not ticker or not (desc or industry or name):
                 continue
-            words = set(tokens(f"{name} {desc}"))
-            if not words:
-                continue
-            self.companies.append({"ticker": ticker, "name": name, "words": words})
-            df.update(words)
-        n = max(len(self.companies), 1)
+            packed.append({"ticker": ticker, "name": name, "desc": desc, "industry": industry, "sector": sector})
+            df.update(desc | industry | sector)
+        n = max(len(packed), 1)
         self.idf = {w: math.log((n + 1) / (c + 1)) + 1.0 for w, c in df.items()}
+        self.companies = packed
 
     def score(self, text: str) -> list[dict]:
         body = text or ""
-        words = set(tokens(body))
+        words = tokens(body)
         named = {t for t in _TICKER.findall(body) if t not in _FALSE_TICKER}
         low = body.lower()
         ranked: list[dict] = []
         for co in self.companies:
-            overlap = words & co["words"]
+            d = words & co["desc"]
+            ind = words & co["industry"]
+            sec = words & co["sector"]
             name_hit = co["ticker"] in named or _name_hit(co["name"], low)
-            if not overlap and not name_hit:
+            if not (d or ind or sec or name_hit):
                 continue
-            hot = sum(self.idf.get(w, 1.0) for w in overlap)
+            hot = (
+                sum(self.idf.get(w, 1.0) for w in d)
+                + 0.6 * sum(self.idf.get(w, 1.0) for w in ind)
+                + 0.15 * sum(self.idf.get(w, 1.0) for w in sec)
+            )
             if name_hit:
                 hot += 1.5
+            if hot <= 0:
+                continue
             ranked.append({
                 "ticker": co["ticker"],
                 "name": co["name"],
                 "hot": round(hot, 3),
                 "name_hit": name_hit,
-                "overlap": sorted(overlap)[:8],
+                "overlap": sorted(d or ind or sec)[:8],
             })
         ranked.sort(key=lambda r: -r["hot"])
         return ranked
@@ -90,7 +99,11 @@ class HotBoard:
 
 
 def load_companies(path: str | Path) -> list[dict]:
-    raw = json.loads(Path(path).read_text(encoding="utf-8"))
+    path = Path(path)
+    if path.suffix.lower() == ".csv":
+        with path.open(newline="", encoding="utf-8", errors="replace") as f:
+            return [r for r in csv.DictReader(f)]
+    raw = json.loads(path.read_text(encoding="utf-8"))
     if isinstance(raw, dict):
         raw = raw.get("companies") or raw.get("items") or []
     return [r for r in raw if isinstance(r, dict)]
@@ -98,8 +111,8 @@ def load_companies(path: str | Path) -> list[dict]:
 
 def main() -> None:
     import argparse
-    p = argparse.ArgumentParser(description="Score article hotness against company blurbs")
-    p.add_argument("companies", help="JSON list of ticker, name, description")
+    p = argparse.ArgumentParser(description="Score article hotness against Finviz descriptions")
+    p.add_argument("companies", help="CSV or JSON with Ticker, Company, Industry, Sector, Finviz_Description")
     p.add_argument("text", help="Headline or article text")
     args = p.parse_args()
     board = HotBoard(load_companies(args.companies))
