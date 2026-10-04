@@ -21,12 +21,12 @@ Rubric hit rates count a call only when q5=impulse, direction in {up, down}, tra
 | non-weather | 19504 |
 | reaction-in-title (killed by the router) | 697 |
 | impulse + up/down + listed | 10806 |
-| graded articles 0-1d | 1279 |
-| graded articles 2d | 1231 |
-| graded articles 3d | 1201 |
-| graded articles 4d | 1168 |
-| graded articles 5d | 1142 |
-| graded articles 1-4w | 5380 |
+| graded articles 0-1d | 1283 |
+| graded articles 2d | 1236 |
+| graded articles 3d | 1209 |
+| graded articles 4d | 1174 |
+| graded articles 5d | 1145 |
+| graded articles 1-4w | 5424 |
 
 ## Hit rates
 
@@ -34,12 +34,12 @@ Rubric column skips long-horizon classes on 0-1d and 2-5d. Broad column keeps th
 
 | horizon | rubric hits | rubric n | rubric rate | broad hits | broad n | broad rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0-1d | 1133 | 2388 | 1133/2388 = 47.4% | 5689 | 11743 | 5689/11743 = 48.4% |
-| 2d | 1162 | 2304 | 1162/2304 = 50.4% | 5589 | 11432 | 5589/11432 = 48.9% |
-| 3d | 1094 | 2237 | 1094/2237 = 48.9% | 5508 | 11264 | 5508/11264 = 48.9% |
-| 4d | 1066 | 2148 | 1066/2148 = 49.6% | 5390 | 11075 | 5390/11075 = 48.7% |
-| 5d | 1038 | 2067 | 1038/2067 = 50.2% | 5245 | 10880 | 5245/10880 = 48.2% |
-| 1-4w | 3568 | 7813 | 3568/7813 = 45.7% | — | — | — |
+| 0-1d | 1133 | 2392 | 1133/2392 = 47.4% | 5702 | 11766 | 5702/11766 = 48.5% |
+| 2d | 1165 | 2309 | 1165/2309 = 50.5% | 5606 | 11466 | 5606/11466 = 48.9% |
+| 3d | 1095 | 2248 | 1095/2248 = 48.7% | 5527 | 11300 | 5527/11300 = 48.9% |
+| 4d | 1066 | 2154 | 1066/2154 = 49.5% | 5397 | 11094 | 5397/11094 = 48.6% |
+| 5d | 1039 | 2071 | 1039/2071 = 50.2% | 5268 | 10913 | 5268/10913 = 48.3% |
+| 1-4w | 3599 | 7864 | 3599/7864 = 45.8% | — | — | — |
 
 ## Convergence / clash ledger
 
@@ -59,8 +59,8 @@ Hit rates grade the entity once per session. Converge uses that side. Clash uses
 
 | bucket | 0-1d | 2d | 3d | 4d | 5d |
 | --- | --- | --- | --- | --- | --- |
-| singleton | 551/1169 = 47.1% | 565/1119 = 50.5% | 545/1089 = 50.0% | 540/1061 = 50.9% | 535/1034 = 51.7% |
-| converge | 68/133 = 51.1% | 62/131 = 47.3% | 64/126 = 50.8% | 61/123 = 49.6% | 61/119 = 51.3% |
+| singleton | 551/1171 = 47.1% | 566/1122 = 50.4% | 546/1098 = 49.7% | 540/1067 = 50.6% | 536/1037 = 51.7% |
+| converge | 68/134 = 50.7% | 63/132 = 47.7% | 64/127 = 50.4% | 61/123 = 49.6% | 61/119 = 51.3% |
 | clash | 4/12 = 33.3% | 4/12 = 33.3% | 7/12 = 58.3% | 2/11 = 18.2% | 2/10 = 20.0% |
 
 ### Top converge names
@@ -99,7 +99,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 
 ### 0-1d
 
-- ≥5% and <10%: **524**
+- ≥5% and <10%: **526**
 - ≥10%: **291**
 
 | threshold | ticker | date | ret | class | title |
@@ -129,12 +129,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | NIVF | 2026-09-29 | -28.00% | dilution | NewGen Announces Pricing of $1.25 Million Public Offering |
 | ≥10% | ZONE | 2026-08-11 | -27.85% | dilution | CleanCore Solutions, Inc. (NYSE AMERICAN: ZONE) Announces Proposed Public Offering |
 | ≥10% | ZONE | 2026-08-11 | -27.85% | dilution | CleanCore Solutions, Inc. (NYSE American: ZONE) Announces Pricing of $100 Million Public Offering |
-| … | | | | | 790 more in the JSON |
+| … | | | | | 792 more in the JSON |
 
 ### 2d
 
-- ≥5% and <10%: **950**
-- ≥10%: **558**
+- ≥5% and <10%: **954**
+- ≥10%: **560**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -157,18 +157,18 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | BWMN | 2026-08-07 | +55.03% | gate | Earnings To Watch: Bowman Consulting Group Ltd (BWMN) Q2 2026 -- GF Value Sees 64% Upside |
 | ≥10% | APH | 2026-08-19 | -51.54% | print_vs_priced | Amphenol Corp. Cl A stock underperforms Tuesday when compared to competitors |
 | ≥10% | LUNG | 2026-07-30 | +51.43% | print_vs_priced | Pulmonx Corporation Q2 2026 Earnings Call Summary |
+| ≥10% | CYCU | 2026-09-30 | +45.80% | gate | Cycurion Discusses Record Contract Win, Public Safety Expansion and Growth Strategy in New Interview |
 | ≥10% | SDGR | 2026-09-15 | +45.52% | guidance | AI Drug Discovery Market Projected to Reach $13.8 Billion by 2033 |
 | ≥10% | SDGR | 2026-09-15 | +45.52% | guidance | AI Drug Discovery Market Projected to Reach $13.8 Billion by 2033 |
 | ≥10% | OABI | 2026-08-07 | +42.62% | guidance | VERAXA Biotech (VRXA) Advances VXA-222 Cancer Program While Expanding Patent Portfolio for Next-Generation Ant |
 | ≥10% | OABI | 2026-08-07 | +42.62% | guidance | VERAXA Biotech (VRXA) Advances VXA-222 Cancer Program While Expanding Patent Portfolio for Next-Generation Ant |
 | ≥10% | PEPG | 2026-08-06 | +42.38% | print_vs_priced | PepGen Reports Second Quarter 2026 Financial Results and Recent Corporate Highlights |
-| ≥10% | ACDC | 2026-08-06 | +42.06% | print_vs_priced | ProFrac Holding Corp. Reports Second Quarter 2026 Results |
-| … | | | | | 1483 more in the JSON |
+| … | | | | | 1489 more in the JSON |
 
 ### 3d
 
-- ≥5% and <10%: **1064**
-- ≥10%: **644**
+- ≥5% and <10%: **1071**
+- ≥10%: **648**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -197,12 +197,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | SEC Allows Tokenized Stocks After Clarity Act Falters |
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
-| … | | | | | 1683 more in the JSON |
+| … | | | | | 1694 more in the JSON |
 
 ### 4d
 
 - ≥5% and <10%: **1149**
-- ≥10%: **798**
+- ≥10%: **799**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -231,11 +231,11 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Allows Tokenized Stocks After Clarity Act Falters |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate |
-| … | | | | | 1922 more in the JSON |
+| … | | | | | 1923 more in the JSON |
 
 ### 5d
 
-- ≥5% and <10%: **1188**
+- ≥5% and <10%: **1189**
 - ≥10%: **862**
 
 | threshold | ticker | date | ret | class | title |
@@ -265,7 +265,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Allows Tokenized Stocks After Clarity Act Falters |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate |
-| … | | | | | 2025 more in the JSON |
+| … | | | | | 2026 more in the JSON |
 
 ## AMRX
 

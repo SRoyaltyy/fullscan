@@ -21,87 +21,87 @@
     "reaction_in_title": 697,
     "impulse_updown_listed": 10806,
     "graded_articles": {
-      "0-1d": 1279,
-      "2d": 1231,
-      "3d": 1201,
-      "4d": 1168,
-      "5d": 1142,
-      "1-4w": 5380
+      "0-1d": 1283,
+      "2d": 1236,
+      "3d": 1209,
+      "4d": 1174,
+      "5d": 1145,
+      "1-4w": 5424
     }
   },
   "hit_rates": {
     "0-1d": {
       "hits": 1133,
-      "n_calls": 2388,
-      "hit_rate": 0.4745,
-      "graded_articles": 1279
+      "n_calls": 2392,
+      "hit_rate": 0.4737,
+      "graded_articles": 1283
     },
     "2d": {
-      "hits": 1162,
-      "n_calls": 2304,
-      "hit_rate": 0.5043,
-      "graded_articles": 1231
+      "hits": 1165,
+      "n_calls": 2309,
+      "hit_rate": 0.5045,
+      "graded_articles": 1236
     },
     "3d": {
-      "hits": 1094,
-      "n_calls": 2237,
-      "hit_rate": 0.489,
-      "graded_articles": 1201
+      "hits": 1095,
+      "n_calls": 2248,
+      "hit_rate": 0.4871,
+      "graded_articles": 1209
     },
     "4d": {
       "hits": 1066,
-      "n_calls": 2148,
-      "hit_rate": 0.4963,
-      "graded_articles": 1168
+      "n_calls": 2154,
+      "hit_rate": 0.4949,
+      "graded_articles": 1174
     },
     "5d": {
-      "hits": 1038,
-      "n_calls": 2067,
-      "hit_rate": 0.5022,
-      "graded_articles": 1142
+      "hits": 1039,
+      "n_calls": 2071,
+      "hit_rate": 0.5017,
+      "graded_articles": 1145
     },
     "1-4w": {
-      "hits": 3568,
-      "n_calls": 7813,
-      "hit_rate": 0.4567,
-      "graded_articles": 5380
+      "hits": 3599,
+      "n_calls": 7864,
+      "hit_rate": 0.4577,
+      "graded_articles": 5424
     }
   },
   "hit_rates_broad_short": {
     "0-1d": {
-      "hits": 5689,
-      "n_calls": 11743,
-      "hit_rate": 0.4845,
-      "graded_articles": 7473
+      "hits": 5702,
+      "n_calls": 11766,
+      "hit_rate": 0.4846,
+      "graded_articles": 7496
     },
     "2d": {
-      "hits": 5589,
-      "n_calls": 11432,
+      "hits": 5606,
+      "n_calls": 11466,
       "hit_rate": 0.4889,
-      "graded_articles": 7276
+      "graded_articles": 7300
     },
     "3d": {
-      "hits": 5508,
-      "n_calls": 11264,
-      "hit_rate": 0.489,
-      "graded_articles": 7189
+      "hits": 5527,
+      "n_calls": 11300,
+      "hit_rate": 0.4891,
+      "graded_articles": 7219
     },
     "4d": {
-      "hits": 5390,
-      "n_calls": 11075,
-      "hit_rate": 0.4867,
-      "graded_articles": 7105
+      "hits": 5397,
+      "n_calls": 11094,
+      "hit_rate": 0.4865,
+      "graded_articles": 7120
     },
     "5d": {
-      "hits": 5245,
-      "n_calls": 10880,
-      "hit_rate": 0.4821,
-      "graded_articles": 7027
+      "hits": 5268,
+      "n_calls": 10913,
+      "hit_rate": 0.4827,
+      "graded_articles": 7050
     }
   },
   "rippers": {
     "0-1d": {
-      "ge_5_n": 524,
+      "ge_5_n": 526,
       "ge_10_n": 291,
       "ge_5": [
         {
@@ -1536,6 +1536,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "BSET",
+          "direction": "up",
+          "ret": 7.64,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 21:00:38",
+          "title": "Bassett Furniture Industries Inc (BSET) (Q3 2026) Earnings Call Highlights: Revenue Growth and ...",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "ULCC",
           "direction": "up",
           "ret": 7.62,
@@ -2829,6 +2838,15 @@
           "entry_date": "2026-09-16",
           "published_at": "2026-09-16 07:00:00",
           "title": "Kailera Therapeutics to Participate in September Investor Conferences",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "JAKK",
+          "direction": "up",
+          "ret": 6.26,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 18:00:00",
+          "title": "JAKKS Pacific, Inc. Announces Third Quarter 2026 Earnings Call",
           "event_class": "print_vs_priced"
         },
         {
@@ -7444,8 +7462,8 @@
       ]
     },
     "2d": {
-      "ge_5_n": 950,
-      "ge_10_n": 558,
+      "ge_5_n": 954,
+      "ge_10_n": 560,
       "ge_5": [
         {
           "ticker": "BBDC",
@@ -7464,6 +7482,15 @@
           "published_at": "2026-08-03 16:30:00",
           "title": "Vor Bio Reports Inducement Grant Under Nasdaq Listing Rule 5635(c)(4)",
           "event_class": "listing_flow"
+        },
+        {
+          "ticker": "DBVT",
+          "direction": "down",
+          "ret": -9.98,
+          "entry_date": "2026-09-30",
+          "published_at": "2026-09-29 18:29:00",
+          "title": "DBV Technologies Announces Submission of Biologics License Application to U.S. FDA for the VIASKIN Peanut Patch in Children Aged 4-7 Years",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "LCNB",
@@ -11210,6 +11237,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "ACR",
+          "direction": "up",
+          "ret": 6.76,
+          "entry_date": "2026-09-30",
+          "published_at": "2026-09-29 16:30:00",
+          "title": "ACRES Commercial Realty Corp. Reauthorizes an Additional $5 Million Share Repurchase Program",
+          "event_class": "capital_return"
+        },
+        {
           "ticker": "BMHL",
           "direction": "down",
           "ret": -6.75,
@@ -14504,6 +14540,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "POCI",
+          "direction": "up",
+          "ret": 5.44,
+          "entry_date": "2026-09-30",
+          "published_at": "2026-09-29 15:00:21",
+          "title": "Precision Optics Corp Inc (POCI) (Q4 2026) Earnings Call Highlights: Record Revenue and ...",
+          "event_class": "gate"
+        },
+        {
           "ticker": "CSW",
           "direction": "up",
           "ret": 5.43,
@@ -15248,6 +15293,15 @@
           "entry_date": "2026-09-22",
           "published_at": "2026-09-22 07:05:10",
           "title": "Ferroglobe PLC's Dividend Analysis",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CBLL",
+          "direction": "down",
+          "ret": -5.24,
+          "entry_date": "2026-09-30",
+          "published_at": "2026-09-30 07:00:00",
+          "title": "Ceribell Receives FDA 510(k) Clearance for Quantitative EEG Trending and Amplitude-Integrated EEG Analysis",
           "event_class": "print_vs_priced"
         },
         {
@@ -16169,6 +16223,15 @@
           "published_at": "2026-07-30 08:30:00",
           "title": "Pulmonx Corporation Q2 2026 Earnings Call Summary",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CYCU",
+          "direction": "up",
+          "ret": 45.8,
+          "entry_date": "2026-09-30",
+          "published_at": "2026-09-30 08:00:00",
+          "title": "Cycurion Discusses Record Contract Win, Public Safety Expansion and Growth Strategy in New Interview",
+          "event_class": "gate"
         },
         {
           "ticker": "SDGR",
@@ -18553,6 +18616,15 @@
           "entry_date": "2026-08-17",
           "published_at": "2026-08-17 08:00:00",
           "title": "AMASS Brands Inc. Reports Second Quarter 2026 Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "RENX",
+          "direction": "down",
+          "ret": -14.01,
+          "entry_date": "2026-09-30",
+          "published_at": "2026-09-30 07:30:00",
+          "title": "RenX Enterprises Sets Microtec Turbo Mill in Place at Myakka City; Engineered Substrate Commissioning Remains on Track for Fourth Quarter of 2026",
           "event_class": "print_vs_priced"
         },
         {
@@ -21024,8 +21096,8 @@
       ]
     },
     "3d": {
-      "ge_5_n": 1064,
-      "ge_10_n": 644,
+      "ge_5_n": 1071,
+      "ge_10_n": 648,
       "ge_5": [
         {
           "ticker": "HOOD",
@@ -23395,6 +23467,24 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "NTWK",
+          "direction": "up",
+          "ret": 8.18,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-28 17:00:33",
+          "title": "NETSOL Technologies Inc (NTWK) (Q4 2026) Earnings Call Highlights: Record Revenue and Strong ...",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "NTWK",
+          "direction": "up",
+          "ret": 8.18,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-29 08:30:00",
+          "title": "NetSol Technologies, Inc. Q4 2026 Earnings Call Summary",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "TEL",
           "direction": "up",
           "ret": 8.17,
@@ -23410,6 +23500,15 @@
           "entry_date": "2026-09-22",
           "published_at": "2026-09-21 13:45:00",
           "title": "CARFAX Canada Launches a NEW Tool to Simplify Inventory Acquisition for Dealers",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "MNTS",
+          "direction": "down",
+          "ret": -8.17,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-29 08:30:00",
+          "title": "Momentus Demonstrates AI-Enabled LiDAR and Imaging Suite During Successful On-Orbit RPO Mission with NASA Satellite",
           "event_class": "print_vs_priced"
         },
         {
@@ -26689,6 +26788,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "POCI",
+          "direction": "up",
+          "ret": 6.19,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-28 16:30:00",
+          "title": "Precision Optics Reports Fourth Quarter and Fiscal Year 2026 Financial Results",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "BDC",
           "direction": "up",
           "ret": 6.18,
@@ -27785,6 +27893,15 @@
           "published_at": "2026-09-28 08:00:00",
           "title": "Cosmos Health's Contract Manufacturing Division Surpasses $20 Million in Implied Revenue and $18 Million in Implied Gross Profit Across Its Record 32.7 Million-Unit Production Pipe",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CAR",
+          "direction": "up",
+          "ret": 5.75,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-29 09:00:00",
+          "title": "Valpak Clipp Puts the Keys in Your Mailbox with Its Largest Consumer Giveaway Ever: A Brand-New Car",
+          "event_class": "capital_return"
         },
         {
           "ticker": "VIV",
@@ -29369,6 +29486,24 @@
           "published_at": "2026-08-12 09:26:05",
           "title": "Village Farms launches easy-pour cannabis pouches",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SKIL",
+          "direction": "down",
+          "ret": -5.31,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-29 09:00:00",
+          "title": "Kyndryl and Skillsoft Expand AI Education Access to Help High School Students Build Future-Ready Skills",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "SKIL",
+          "direction": "down",
+          "ret": -5.31,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-29 09:00:00",
+          "title": "Kyndryl and Skillsoft Expand AI Education Access to Help High School Students Build Future-Ready Skills",
+          "event_class": "guidance"
         },
         {
           "ticker": "BRFH",
@@ -34080,6 +34215,15 @@
           "event_class": "gate"
         },
         {
+          "ticker": "OSG",
+          "direction": "up",
+          "ret": 13.3,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-29 08:30:00",
+          "title": "E&S MGA Pivix Launches Assault & Battery Program",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "TDAY",
           "direction": "down",
           "ret": -13.27,
@@ -34978,6 +35122,33 @@
           "published_at": "2026-09-18 07:30:00",
           "title": "Ready Capital Corporation Prices $225 Million of Senior Secured Notes Due 2031 and Announces Redemption of $350 Million of Notes Due 2026",
           "event_class": "dilution"
+        },
+        {
+          "ticker": "IDT",
+          "direction": "up",
+          "ret": 11.52,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-28 16:36:00",
+          "title": "IDT Corporation Reports Record Fourth Quarter and Fiscal Year 2026 Results",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "IDT",
+          "direction": "up",
+          "ret": 11.52,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-28 16:56:05",
+          "title": "IDT: Fiscal Q4 Earnings Snapshot",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "IDT",
+          "direction": "up",
+          "ret": 11.52,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-29 08:30:00",
+          "title": "IDT Corporation Q4 2026 Earnings Call Summary",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "CHMG",
@@ -36405,7 +36576,7 @@
     },
     "4d": {
       "ge_5_n": 1149,
-      "ge_10_n": 798,
+      "ge_10_n": 799,
       "ge_5": [
         {
           "ticker": "RGEN",
@@ -48488,6 +48659,15 @@
           "event_class": "dilution"
         },
         {
+          "ticker": "NTWK",
+          "direction": "up",
+          "ret": 21.43,
+          "entry_date": "2026-09-28",
+          "published_at": "2026-09-28 08:00:00",
+          "title": "NETSOL Technologies reports record fiscal 2026 revenue and full-year profitability, exceeding guidance",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "INUV",
           "direction": "down",
           "ret": -21.28,
@@ -53935,7 +54115,7 @@
       ]
     },
     "5d": {
-      "ge_5_n": 1188,
+      "ge_5_n": 1189,
       "ge_10_n": 862,
       "ge_5": [
         {
@@ -62730,6 +62910,15 @@
           "published_at": "2026-08-11 08:30:00",
           "title": "Mistras Group, Inc. Q2 2026 Earnings Call Summary",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "SHIP",
+          "direction": "up",
+          "ret": 5.57,
+          "entry_date": "2026-09-25",
+          "published_at": "2026-09-25 07:05:12",
+          "title": "Seanergy Maritime Holdings Corp's Dividend Analysis",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "OBAI",
@@ -72445,45 +72634,45 @@
       "singleton": {
         "0-1d": {
           "hits": 551,
-          "n": 1169,
-          "hit_rate": 0.4713
+          "n": 1171,
+          "hit_rate": 0.4705
         },
         "2d": {
-          "hits": 565,
-          "n": 1119,
-          "hit_rate": 0.5049
+          "hits": 566,
+          "n": 1122,
+          "hit_rate": 0.5045
         },
         "3d": {
-          "hits": 545,
-          "n": 1089,
-          "hit_rate": 0.5005
+          "hits": 546,
+          "n": 1098,
+          "hit_rate": 0.4973
         },
         "4d": {
           "hits": 540,
-          "n": 1061,
-          "hit_rate": 0.509
+          "n": 1067,
+          "hit_rate": 0.5061
         },
         "5d": {
-          "hits": 535,
-          "n": 1034,
-          "hit_rate": 0.5174
+          "hits": 536,
+          "n": 1037,
+          "hit_rate": 0.5169
         }
       },
       "converge": {
         "0-1d": {
           "hits": 68,
-          "n": 133,
-          "hit_rate": 0.5113
+          "n": 134,
+          "hit_rate": 0.5075
         },
         "2d": {
-          "hits": 62,
-          "n": 131,
-          "hit_rate": 0.4733
+          "hits": 63,
+          "n": 132,
+          "hit_rate": 0.4773
         },
         "3d": {
           "hits": 64,
-          "n": 126,
-          "hit_rate": 0.5079
+          "n": 127,
+          "hit_rate": 0.5039
         },
         "4d": {
           "hits": 61,
