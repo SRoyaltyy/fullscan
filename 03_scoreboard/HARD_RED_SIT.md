@@ -32,7 +32,7 @@ Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP b
 
 | Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |
 |---|---|---|---|
-| `flatten_robust` | long | — | VEEV miss; CORT miss; ILMN miss; CDNA miss; WRBY miss; BLFS miss; ETON miss; SN miss; DT miss; TOST miss; SONO miss; PDFS miss; SHOO miss |
+| `flatten_robust` | long | — | WNC miss; INDP miss; QNC miss; COP miss; ETON miss; PCRX miss; IT miss; MHK miss |
 
 Scoop trigger = official open + session low (Elite live only when the low has not printed). Close / last / Theme Radar never trigger. #236 KILL of global short-only / dip-scoop stands — this table is display/paper only.
 
