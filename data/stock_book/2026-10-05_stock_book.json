@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-05",
-    "generated_at": "2026-10-05T07:34:17.512537-04:00",
+    "generated_at": "2026-10-05T07:40:59.947647-04:00",
     "general_bias": 0.35785,
     "sector_bias": {},
     "accuracy_gates": {
@@ -250,7 +250,7 @@
         "used_as": "next predict prompt, not a ticker score"
       }
     ],
-    "n_news_after_digest": 63,
+    "n_news_after_digest": 64,
     "event_sector_tilt": {
       "Energy": -0.2,
       "Industrials": -0.08000000000000007,
@@ -262,9 +262,9 @@
       "Basic Materials": -0.2
     },
     "green_pile": {
-      "n_pile": 129,
-      "n_pile_raw": 139,
-      "n_pile_liquid": 129,
+      "n_pile": 128,
+      "n_pile_raw": 138,
+      "n_pile_liquid": 128,
       "n_universe": 2035,
       "used": true,
       "min": 8,
@@ -286,10 +286,10 @@
         "max_per_industry": 3,
         "max_large_mega": 4
       },
-      "reason": "pile 129 \u2265 8 liquid all-green names \u2014 BUY 15 from the pile by green_rank (no opp); SELL is core weights on the non-green remainder"
+      "reason": "pile 128 \u2265 8 liquid all-green names \u2014 BUY 15 from the pile by green_rank (no opp); SELL is core weights on the non-green remainder"
     },
-    "n_pile": 129,
-    "n_pile_liquid": 129,
+    "n_pile": 128,
+    "n_pile_liquid": 128,
     "pile_used": true,
     "green_min": 8,
     "ranker": "decision_lattice",
@@ -390,7 +390,7 @@
     "lookback_marks": {
       "n_alarm": 1471,
       "n_fade": 680,
-      "n_blue": 14,
+      "n_blue": 15,
       "n_white": 152,
       "white_is_gate": false,
       "vetoes": [

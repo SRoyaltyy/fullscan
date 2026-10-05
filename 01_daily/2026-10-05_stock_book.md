@@ -1,6 +1,6 @@
 # Stock book — 2026-10-05
 
-_Generated 2026-10-05T07:34:17.512537-04:00_
+_Generated 2026-10-05T07:40:59.947647-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -26,14 +26,14 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 - AB coverage: 1919 names · peer RS: 1804
 - Universe after liquidity: 2035
 - BUY window: $80M ADV, opportunity $400M–$20B, max 4/sector, 3/industry, 4 large/mega
-- News names after digest+judge: 63
+- News names after digest+judge: 64
 
 ## All-green BUY / SELL
 
 - Mode: **green_pile** · SELL **core_weights_ex_green**
-- Pile: **129** liquid all-green names (need ≥ 8) of 2035
+- Pile: **128** liquid all-green names (need ≥ 8) of 2035
 - Core fired: join=yes, AB=yes, peer=yes
-- pile 129 ≥ 8 liquid all-green names — BUY 15 from the pile by green_rank (no opp); SELL is core weights on the non-green remainder
+- pile 128 ≥ 8 liquid all-green names — BUY 15 from the pile by green_rank (no opp); SELL is core weights on the non-green remainder
 
 ## Decision lattice — gate → route → rank
 

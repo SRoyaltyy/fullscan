@@ -1,7 +1,7 @@
 {
-  "n_pile": 129,
-  "n_pile_raw": 139,
-  "n_pile_liquid": 129,
+  "n_pile": 128,
+  "n_pile_raw": 138,
+  "n_pile_liquid": 128,
   "n_universe": 2035,
   "used": true,
   "min": 8,
@@ -23,7 +23,7 @@
     "max_per_industry": 3,
     "max_large_mega": 4
   },
-  "reason": "pile 129 \u2265 8 liquid all-green names \u2014 BUY 15 from the pile by green_rank (no opp); SELL is core weights on the non-green remainder",
+  "reason": "pile 128 \u2265 8 liquid all-green names \u2014 BUY 15 from the pile by green_rank (no opp); SELL is core weights on the non-green remainder",
   "tickers": [
     "GLBE",
     "SHOO",
@@ -59,7 +59,6 @@
     "ARQT",
     "ATMU",
     "WAY",
-    "APH",
     "CORT",
     "MGA",
     "INCY",

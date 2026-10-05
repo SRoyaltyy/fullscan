@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:34:20.806425-04:00",
+  "generated_at": "2026-10-05T07:41:02.249014-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -1422,6 +1422,106 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 EXLS, SB, SKM, CORT, HUM \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TEL, ABBV, EXLS, CORT, SU"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:24:36.666829-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 4056463,
+          "preview": "raw=5587 usable=571 single=180 \u00b7 OPEC+ Has Deal Outline for Steady November Quotas, Delegates Say - Bloomberg.com | Markets bet on RBI rate hike as inflation pressure builds - Reuters | Treasury yields inch lower as investors pare back Fed rate hike bets - cnbc.com | North Korea\u2019s Kim Oversaw Hypersonic Missile Drill, KCNA Says - Bloomberg.com | North Korea says Kim oversaw hypersonic missile drill - Reuters"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 11271,
+          "preview": "# News Parse v2 \u2014 2026-10-05T07:24:17.043410-04:00\nWindow\u224848h | news_mode=on | raw=5587 | usable=571 | single_name=180 | noise_dropped=4516\nusable polarity={'+': 22, '-': 121, 'mixed': 16, 'neutral': 412}"
+        }
+      ],
+      "preview": "raw=5587 usable=571 single=180 \u00b7 OPEC+ Has Deal Outline for Steady November Quotas, Delegates Say - Bloomberg.com | Markets bet on RBI rate hike as inflation pressure builds - Reuters | Treasury yields inch lower as investors pare back Fed rate hike bets - cnbc.com | North Korea\u2019s Kim Oversaw Hypersonic Missile Drill, KCNA Says - Bloomberg.com | North Korea says Kim oversaw hypersonic missile drill - Reuters \u00b7 # News Parse v2 \u2014 2026-10-05T07:24:17.043410-04:00\nWindow\u224848h | news_mode=on | raw=5587 | usable=571 | single_name=180 | noise_dropped=4516\nusable polarity={'+': 22, '-': 121, 'mixed': 16, 'neutral': 412}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:29:45.744323-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-05_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 39087,
+          "preview": "39 events \u00b7 China Golden Week (National Day) travel vs spend | California record heat wave / wildfire-smoke risk | September NFP miss: +29k, U3 4.2%, wages +3.0% y/y | Eurozone September flash HICP 3.8% y/y (energy spike) | OPEC+ holds November output targets unchanged | Camp David Iran 'war council' after Hormuz rejection"
+        },
+        {
+          "path": "01_daily/events/2026-10-05_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 21902,
+          "preview": "# Event Scan \u2014 2026-10-05\n- events tracked: **39** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted and Brent near $102, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20%. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and the CIT challenge to global Section 301 duties keep trade risk binary. Q3 earnings open with PepsiCo then banks/UNH/ASML/TSMC against an AI-memory boom Korea and Micron have already validated."
+        }
+      ],
+      "preview": "39 events \u00b7 China Golden Week (National Day) travel vs spend | California record heat wave / wildfire-smoke risk | September NFP miss: +29k, U3 4.2%, wages +3.0% y/y | Eurozone September flash HICP 3.8% y/y (energy spike) | OPEC+ holds November output targets unchanged | Camp David Iran 'war council' after Hormuz rejection \u00b7 # Event Scan \u2014 2026-10-05\n- events tracked: **39** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted and Brent near $102, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20%. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and the CIT challenge to global Section 301 duties keep trade risk binary. Q3 earnings open with PepsiCo then banks/UNH/ASML/TSMC against an AI-memory boom Korea and Micron have already validated."
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:34:51.854991-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-05_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 54031,
+          "preview": "53 events \u00b7 China Golden Week (National Day) travel vs spend | California record heat wave / wildfire-smoke risk | September NFP miss: +29k, U3 4.2%, wages +3.0% y/y | Eurozone September flash HICP 3.8% y/y (energy spike) | OPEC+ holds November output targets unchanged | Camp David Iran 'war council' after Hormuz rejection"
+        },
+        {
+          "path": "01_daily/events/2026-10-05_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 27362,
+          "preview": "# Event Scan \u2014 2026-10-05\n- events tracked: **39** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted and Brent near $102, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20%. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and the CIT challenge to global Section 301 duties keep trade risk binary. Q3 earnings open with PepsiCo then banks/UNH/ASML/TSMC against an AI-memory boom Korea and Micron have already validated."
+        }
+      ],
+      "preview": "53 events \u00b7 China Golden Week (National Day) travel vs spend | California record heat wave / wildfire-smoke risk | September NFP miss: +29k, U3 4.2%, wages +3.0% y/y | Eurozone September flash HICP 3.8% y/y (energy spike) | OPEC+ holds November output targets unchanged | Camp David Iran 'war council' after Hormuz rejection \u00b7 # Event Scan \u2014 2026-10-05\n- events tracked: **39** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted and Brent near $102, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20%. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and the CIT challenge to global Section 301 duties keep trade risk binary. Q3 earnings open with PepsiCo then banks/UNH/ASML/TSMC against an AI-memory boom Korea and Micron have already validated."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:35:28.472166-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 66158,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 14279,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-05T07:35:28.442929-04:00\nraw=5577 unique_events=6 tickers=83"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-05T07:35:28.442929-04:00\nraw=5577 unique_events=6 tickers=83"
     }
   ],
   "source": "publish_live_boards"

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:34:13.444434-04:00",
+  "generated_at": "2026-10-05T07:40:57.231853-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -27,7 +27,7 @@
       "name": "news_actions",
       "family": "news",
       "status": "ok",
-      "n": 82,
+      "n": 83,
       "detail": ""
     },
     {
@@ -70,7 +70,7 @@
       "family": "addon",
       "status": "ok",
       "n": null,
-      "detail": "34 events, scan_date=2026-10-05"
+      "detail": "53 events, scan_date=2026-10-05"
     },
     {
       "name": "map_heat",
