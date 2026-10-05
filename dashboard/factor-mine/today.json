@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:52:14.707630-04:00",
+  "generated_at": "2026-10-05T08:28:33.695652-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -1522,6 +1522,92 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-05T07:35:28.442929-04:00\nraw=5577 unique_events=6 tickers=83"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:35:49.289766-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 66158,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 14279,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-05T07:35:28.442929-04:00\nraw=5577 unique_events=6 tickers=83"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-05T07:35:28.442929-04:00\nraw=5577 unique_events=6 tickers=83"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:39:32.102842-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 10848,
+          "preview": "# News Judge \u2014 2026-10-05"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1227,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-10-05 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:44:25.402319-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-10-05_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 16705,
+          "preview": "# Premarket Prediction \u2014 2026-10-05\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: FLAT \u2796 \u2014 FLAT** | total score 0.086 (uncertainty multiplier \u00d71.1) | confidence 0.403\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia composite +0.7%\n> - WTI/Brent offered\n> - Oct hike odds faded ~20%\n> - China PMI expansion T+n\n> - DXY not surging\n>\n> **Bad news driving this:**\n> - leftover Hormuz Brent >$100\n> - 1w 30Y +14bp at 5.61\n> - HY +44bp 1w\n> - ISM Services 10:00 unsigned\n> - Graham Act Oct 8/18 clock\n>\n> **market uncertainty: **elevated** | VIX 16.17 | policy-uncertainty index 160.6 (1d -3.85)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> -"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-10-05\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: FLAT \u2796 \u2014 FLAT** | total score 0.086 (uncertainty multiplier \u00d71.1) | confidence 0.403\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia composite +0.7%\n> - WTI/Brent offered\n> - Oct hike odds faded ~20%\n> - China PMI expansion T+n\n> - DXY not surging\n>\n> **Bad news driving this:**\n> - leftover Hormuz Brent >$100\n> - 1w 30Y +14bp at 5.61\n> - HY +44bp 1w\n> - ISM Services 10:00 unsigned\n> - Graham Act Oct 8/18 clock\n>\n> **market uncertainty: **elevated** | VIX 16.17 | policy-uncertainty index 160.6 (1d -3.85)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> -"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T08:22:44.457454-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-05/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6363,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "source": "publish_live_boards"
