@@ -30889,18 +30889,113 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": 0.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7730.86,
+      "actual_close": 7773.95,
+      "actual_pct_change": 0.66,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": true,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/services-pmi-at-54-9-september-2026-ism-services-pmi-report-302898421.html",
+          "date_accessed": "2026-10-05",
+          "summary": "Official ISM print was a slight slowdown still well above 50, released 10:00 ET.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/services-pmi-at-54-9-september-2026-ism-services-pmi-report-302898421.html",
+          "date_accessed": "2026-10-05",
+          "summary": "The inflation subindex, not the headline, was the hawkish half of the 10:00 print.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.ptc.com/en/news/2026/schneider-electric-to-acquire-ptc",
+          "date_accessed": "2026-10-05",
+          "summary": "Same-morning industrial-software/AI M&A, not a MAG7 earnings print.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.morningstar.com/news/dow-jones/202610051216/schneider-electric-to-buy-software-maker-ptc-for-226-billion-update",
+          "date_accessed": "2026-10-05",
+          "summary": "Deal flow was idiosyncratic (target up, acquirer down), a sentiment overlay not an index beta.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.chrobinson.com/en-us/about-us/newsroom/press-releases/2026/ch-robinson-to-acquire-rxo/",
+          "date_accessed": "2026-10-05",
+          "summary": "Second same-day M&A print, logistics/AI-efficiency story, not a macro release.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.dtnpf.com/agriculture/web/AG/news/world-policy/article/2026/10/05/oil-slides-g7-stockpile-release-ulsd",
+          "date_accessed": "2026-10-05",
+          "summary": "Monday’s oil impulse was SPR supply, not a fresh Hormuz facility shock; diesel stayed tight.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/05/gold-gains-as-october-fed-rate-hike-prospects-fade.html",
+          "date_accessed": "2026-10-05",
+          "summary": "The Oct hold is Friday’s NFP leftover; the curve did not price a dovish regime shift.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://economymiddleeast.com/news/oil-prices-slip-to-101-67-as-g7-releases-100-million-barrels-middle-east-exports-offset-supply-fears/",
+          "date_accessed": "2026-10-05",
+          "summary": "Physical-export recovery and SPR are one shared-root oil-down cluster, not separate bullish shocks.",
+          "verification": "unreachable"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -30930,7 +31025,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": -0.464,
-      "overlay_score": 0.55
+      "overlay_score": 0.55,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Megacap/AI follow-through after Friday’s NFP-driven October hike-odds fade, with offered oil as the same-session tailwind",
+      "key_interaction": "Offsetting — ISM Prices 74 + rising long end vs oil relief + Oct-hold odds; net SPX +0.66% looks calm while the Dow V shows the collision",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "NDX/SPX decoupled from rising 10Y and from Asia −0.54%/Hang Seng −2.6%; ISM Prices 74 ignored by cap-weighted stocks; gold did not rally with hike-odds fade"
     }
   ]
 }
