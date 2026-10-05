@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-10-05T15:10:23.811995-04:00 · 2026-08-13 → 2026-10-02 · live sit **untouched**.
+Generated 2026-10-05T15:21:22.745047-04:00 · 2026-08-13 → 2026-10-02 · live sit **untouched**.
 
 ## Latest morning
 
@@ -10,22 +10,22 @@ Generated 2026-10-05T15:10:23.811995-04:00 · 2026-08-13 → 2026-10-02 · live 
 
 ### Longs weather sat on (top)
 
-- **SNPS** idio +31 · +9 −0 · E good · H1 -2.24% H3 None%
-- **ETON** idio +30 · +9 −0 · E good · H1 6.21% H3 None%
+- **SNPS** idio +31 · +9 −0 · E good · H1 -2.49% H3 None%
+- **ETON** idio +30 · +9 −0 · E good · H1 6.26% H3 None%
 - **NAUT** idio +29 · +9 −0 · E good · H1 13.81% H3 None%
-- **FOSL** idio +29 · +8 −0 · E good · H1 3.02% H3 None%
-- **WRBY** idio +28 · +8 −0 · E good · H1 -3.71% H3 None%
-- **ACRS** idio +27 · +9 −0 · E good · H1 -2.78% H3 None%
-- **ARHS** idio +26 · +8 −0 · E good · H1 -0.15% H3 None%
-- **PDFS** idio +26 · +7 −0 · E good · H1 2.35% H3 None%
+- **FOSL** idio +29 · +8 −0 · E good · H1 2.45% H3 None%
+- **WRBY** idio +28 · +8 −0 · E good · H1 -3.17% H3 None%
+- **ACRS** idio +27 · +9 −0 · E good · H1 -2.67% H3 None%
+- **ARHS** idio +26 · +8 −0 · E good · H1 0.0% H3 None%
+- **PDFS** idio +26 · +7 −0 · E good · H1 2.43% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **LWLG** idio -10 · +1 −7 · H1 4.33%
+- **LWLG** idio -10 · +1 −7 · H1 3.27%
 - **EMAT** idio -8 · +2 −6 · H1 5.79%
-- **FEAM** idio -8 · +1 −6 · H1 -16.82%
-- **RR** idio -5 · +2 −4 · H1 2.79%
-- **TJGC** idio -3 · +3 −4 · H1 5.67%
+- **FEAM** idio -8 · +1 −6 · H1 -14.37%
+- **RR** idio -5 · +2 −4 · H1 3.07%
+- **TJGC** idio -3 · +3 −4 · H1 5.5%
 
 ## If we had taken them on hard-red sits (research)
 
