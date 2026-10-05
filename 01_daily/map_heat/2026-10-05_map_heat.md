@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-05
 
-Export `finviz_2026-10-05.csv` · 11616 names · generated 2026-10-05T04:23:20.457205-04:00
+Export `finviz_2026-10-02.csv` · 11616 names · generated 2026-10-05T04:23:33.348627-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -281,8 +281,8 @@ COLD (1w):
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
 - 8 min **VJET** Flyte Aviation Launches Under NYSE American Ticker "VJET" (GlobeNewswire)
-- 10 min **APLD,DAL,LEVI,PEP** Stock market today: Dow, S&P 500, Nasdaq futures drift lower amid markets' cautious optimism (Yahoo Finance)
-- 11 min **PTC** PTC Rallies Premarket After Schneider Electric Agrees To $22.6B Buyout (Stocktwits)
+- 11 min **APLD,DAL,LEVI,PEP** Stock market today: Dow, S&P 500, Nasdaq futures drift lower amid markets' cautious optimism (Yahoo Finance)
+- 12 min **PTC** PTC Rallies Premarket After Schneider Electric Agrees To $22.6B Buyout (Stocktwits)
 - 23 min **ALVO** FDA approves additional U.S. manufacturing capacity for SIMLANDI, Alvotech's biosimilar to Humira (GlobeNewswire)
 - 23 min **NIU** Niu Technologies Provides Third Quarter 2026 Sales Volume Update (GlobeNewswire)
 - 23 min **RDW** Redwire Awarded Follow-On Contract to Provide Roll-Out Solar Array Wings for Axiom Space's Second Space Station Module (Business Wire)
@@ -291,7 +291,7 @@ COLD (1w):
 - 30 min **PTC** This $23 billion software deal was struck at a decade-low valuation, as AI winner takes out loser (MarketWatch)
 - 41 min **EEM** Is the bond sell-off getting stretched? JPMorgan sees room for an equity rebound (Investing.com)
 - 42 min **QCOM,AAPL,AMZN** QCOM Gains Overnight After Patent Deal With Chinas Huawei Covering AI Chip Tech (Stocktwits)
-- 43 min **FDX,AMZN** FDX Stock Reverses 4 Weeks Of Losses: Ross Gerber Lauds FedEx's Fleet Electrification, Wants Amazon To Follow Suit (Stocktwits)
+- 44 min **FDX,AMZN** FDX Stock Reverses 4 Weeks Of Losses: Ross Gerber Lauds FedEx's Fleet Electrification, Wants Amazon To Follow Suit (Stocktwits)
 - 48 min **BBNX** Beta Bionics, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BBNX (PR Newswire)
 - 51 min **HDB** HDFC Bank Limited Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - HDB (PR Newswire)
 - 51 min **SWKS,AMD,QRVO** Stocktwits M&A Watch: Paramount-Warner Bros Combination, Skyworks-Qorvo Merger, AMDs World Labs Acquisition In Focus (Stocktwits)

@@ -1,8 +1,8 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T04:23:20.457205-04:00",
+  "generated_at": "2026-10-05T04:23:33.348627-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-05.csv",
+  "export": "finviz_2026-10-02.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8944,7 +8944,7 @@
       ]
     },
     {
-      "time": "10 min",
+      "time": "11 min",
       "title": "Stock market today: Dow, S&P 500, Nasdaq futures drift lower amid markets' cautious optimism",
       "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-october-5-dow-sp-500-nasdaq-081220790.html",
       "source": "Yahoo Finance",
@@ -8956,7 +8956,7 @@
       ]
     },
     {
-      "time": "11 min",
+      "time": "12 min",
       "title": "PTC Rallies Premarket After Schneider Electric Agrees To $22.6B Buyout",
       "url": "https://finance.yahoo.com/markets/stocks/articles/ptc-rallies-premarket-schneider-electric-081120475.html",
       "source": "Stocktwits",
@@ -9041,7 +9041,7 @@
       ]
     },
     {
-      "time": "43 min",
+      "time": "44 min",
       "title": "FDX Stock Reverses 4 Weeks Of Losses: Ross Gerber Lauds FedEx's Fleet Electrification, Wants Amazon To Follow Suit",
       "url": "https://finance.yahoo.com/markets/stocks/articles/fdx-stock-reverses-4-weeks-073921834.html",
       "source": "Stocktwits",
@@ -9215,8 +9215,8 @@
         "MSTR",
         "NVDA",
         "TSLA",
-        "MSFT",
-        "AAPL"
+        "META",
+        "MSFT"
       ]
     },
     {
@@ -10680,5 +10680,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 172,
   "earnings_window_count": 186,
-  "overlay_at": "2026-10-05T04:23:20.457205-04:00"
+  "overlay_at": "2026-10-05T04:23:33.348627-04:00"
 }
