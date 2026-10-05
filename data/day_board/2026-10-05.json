@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T04:34:42.358475-04:00",
+  "generated_at": "2026-10-05T04:40:42.272026-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -183,7 +183,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -252,11 +252,16 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-10-05_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 33476,
+          "said": "34 events \u00b7 elevated uncertainty \u00b7 The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted and Brent near $101, versus a labor-market miss (+29k) that",
+          "bullets": [
+            "ISM Services PMI (September)",
+            "US\u2013Iran war: Iran says Hormuz stays closed until US meets 7 conditions",
+            "Brent holds ~$100\u2013102 as Hormuz logistics, not just barrels, bite",
+            "China Golden Week (National Day) travel vs spend"
+          ]
         },
         {
           "key": "judge",
@@ -331,13 +336,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7545,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "size": 7542,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
           "bullets": [
             "general_predict:missing",
-            "events:missing",
             "news_judge:missing",
-            "news_actions:missing"
+            "news_actions:missing",
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -1285,6 +1290,31 @@
         }
       ],
       "preview": "raw=5551 usable=563 single=188 \u00b7 OPEC+ Has Deal Outline for Steady November Quotas, Delegates Say - Bloomberg.com | Markets bet on RBI rate hike as inflation pressure builds - Reuters | North Korea\u2019s Kim Oversaw Hypersonic Missile Drill, KCNA Says - Bloomberg.com | North Korea says Kim oversaw hypersonic missile drill - Reuters | North Korea's Kim Yo Jong says intermediate-range missile test was conducted - R \u00b7 # News Parse v2 \u2014 2026-10-05T04:34:25.915611-04:00\nWindow\u224848h | news_mode=on | raw=5551 | usable=563 | single_name=188 | noise_dropped=4491\nusable polarity={'+': 22, '-': 117, 'mixed': 13, 'neutral': 411}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T04:40:41.341759-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-05_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 33476,
+          "preview": "34 events \u00b7 ISM Services PMI (September) | US\u2013Iran war: Iran says Hormuz stays closed until US meets 7 conditions | Brent holds ~$100\u2013102 as Hormuz logistics, not just barrels, bite | China Golden Week (National Day) travel vs spend | California record heat wave / wildfire-smoke risk | September NFP miss: +29k, U3 4.2%, wages +3.0% y/y"
+        },
+        {
+          "path": "01_daily/events/2026-10-05_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 19709,
+          "preview": "# Event Scan \u2014 2026-10-05\n- events tracked: **34** (via openclaw)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted and Brent near $101, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20%. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and the CIT challenge to global Section 301 duties keep trade risk binary. Q3 earnings open with PepsiCo then banks/UNH/ASML against an AI-memory boom Korea and Micron have already validated."
+        }
+      ],
+      "preview": "34 events \u00b7 ISM Services PMI (September) | US\u2013Iran war: Iran says Hormuz stays closed until US meets 7 conditions | Brent holds ~$100\u2013102 as Hormuz logistics, not just barrels, bite | China Golden Week (National Day) travel vs spend | California record heat wave / wildfire-smoke risk | September NFP miss: +29k, U3 4.2%, wages +3.0% y/y \u00b7 # Event Scan \u2014 2026-10-05\n- events tracked: **34** (via openclaw)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted and Brent near $101, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20%. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and the CIT challenge to global Section 301 duties keep trade risk binary. Q3 earnings open with PepsiCo then banks/UNH/ASML against an AI-memory boom Korea and Micron have already validated."
     }
   ],
   "href": {
