@@ -1,89 +1,90 @@
 # News Judge — 2026-10-05
 
 ### IMPORTANT NEWS (my ranking)
-1. **Hawkish Fed comments lift October hike odds; gold dumps $100+** — Direct rates-path reprice into SPX duration/beta; gold move confirms it is trading, not talk. Channel: rates
-2. **FOMC minutes + ISM Services on this week’s calendar** — Unresolved US policy/activity binary that outranks overnight color for the next 1–5 sessions. Channel: rates
-3. **Rising yields + Fabrinet weakness drive APH −6.5%** — Rates are already hitting the AI-hardware/interconnect complex, not just Treasuries. Channel: sector_fundamental
-4. **Copper gains as US jobs data eases Fed-tightening fears** — Same rates cluster, opposite sign; blocks a one-way hawkish read. Channel: rates
-5. **OPEC+ outline for steady November quotas** — Supply policy into oil/XLE and the inflation input, not a cut. Channel: sector_policy
-6. **Amazon raises AWS high-performance AI GPU rental prices** — AI-infra pricing power with basket force (cloud/GPU), not a pure AMZN anecdote. Channel: sector_fundamental
-7. **Goldman: US data-center growth intact despite local opposition** — Keeps the AI-capex demand spine alive against NIMBY/power headlines. Channel: sector_fundamental
-8. **Accenture beats but guides only 2–6% local-currency growth** — Enterprise IT-spend canary for services/software multiples. Channel: sector_fundamental
+1. **Hawkish Fed comments lift October hike odds; gold slumps >$100** — Cleanest rates/risk-appetite print in the Finviz set (AEM); outranks Powell-name junk and foreign hikes. Channel: rates
+2. **Treasury yields dip as investors pare Fed hike bets** — Direct US duration tape that conflicts with (1); must sit in the ranking as the other half of the rates cluster. Channel: rates
+3. **FOMC minutes / ISM Services week-ahead to test the 2026 hike plateau** — Unresolved US policy binary for this week; calendar force > NK missiles or RBI. Channel: rates
+4. **Broadening equity rally hits an economic roadblock** — Bloomberg breadth/risk-appetite stall the mechanical filter dropped; more SPX-relevant than single-name color. Channel: risk
+5. **International markets leading SPY/QQQ/DIA in 2026** — Elevated index narrative of US relative underperformance / capital substitution. Channel: substitution
+6. **Amazon raises AWS high-performance AI-chip rental prices** — Mega-cap AI-infra monetization with sector force, not just AMZN gossip. Channel: sector_fundamental
+7. **Amphenol −6.5% on Fabrinet weakness and rising yields** — Live AI-hardware/interconnect break plus rates transmission into a crowded basket. Channel: sector_fundamental
+8. **Accenture beats, but Q1 FY27 guide is only 2–6% local growth** — Large IT-services bellwether on whether AI spend is showing up in consulting growth. Channel: sector_fundamental
 
-RULES_APPLIED: none. No fresh Hormuz/Iran kinetic, no same-session Chair/voting-governor print, no MAG7/AI-infra bellwether beat in AHR. FOMC *minutes* are week-ahead, not a pending CPI/NFP/decision binary at the open.
+Mechanical usable set is thin and Powell-name polluted; ranking leans on Finviz elevated themes plus two noise rescues.
+
+RULES_APPLIED: none (no pending same-open CPI/NFP/FOMC binary with confirming futures; no fresh Hormuz/kinetic oil increment; no same-day voting Fed appearance; no overnight AI-infra S&P bellwether beat vs macro-drag pattern).
 
 ### STEP 1 — FRAMEWORK SCORE
-1. Hawkish Fed / gold −$100 / Oct hike odds  
-   keep | us_relevance: high — Fed path is SPX beta | channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: spx | action_object_detail: SPX beta / real yields / GLD | polarity: hawkish | polarity_why: hike odds up and bullion crushed on Fed comments | confidence: 0.72
+1. Hawkish Fed / gold >$100 dump  
+keep | us_relevance: high — October hike odds and a gold crash are a US financial-conditions print | channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: spx | action_object_detail: SPX beta / GLD / real yields | polarity: hawkish | polarity_why: Extra October hike expectations tighten conditions via gold and hike odds | confidence: 0.72
 
-2. FOMC minutes + ISM Services week-ahead  
-   keep | us_relevance: high — next US policy/activity prints | channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: spx | action_object_detail: SPX beta into minutes/ISM | polarity: mixed | polarity_why: plateau test, not yet printed | confidence: 0.70
+2. Yields lower / hike bets pared  
+keep | us_relevance: high — 10Y and hike-odds are the equity duration channel | channel: rates | geography: us_domestic | severity: session | horizon: 1d | action_object: spx | action_object_detail: SPX duration / TLT | polarity: dovish | polarity_why: Paring hike bets and yields inching lower ease the rates impulse versus the hawkish gold tape | confidence: 0.63
 
-3. APH −6.5% on Fabrinet weakness + rising yields  
-   keep | us_relevance: high — crowded AI-hardware/interconnect | channel: sector_fundamental | geography: us_supply_chain | severity: session | horizon: 1d-1w | action_object: sector_etf | action_object_detail: SMH / interconnect basket (APH) | polarity: bearish | polarity_why: earnings miss plus duration hit in the same tape | confidence: 0.68
+3. FOMC minutes / ISM Services week-ahead  
+conditional | us_relevance: high — 2026 hike-path binary still unresolved this week | channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: spx | action_object_detail: SPX beta | polarity: mixed | polarity_why: Minutes can confirm a plateau or an extra hike; nothing has printed yet | confidence: 0.58
 
-4. Copper up on jobs-data relief vs tightening  
-   conditional | us_relevance: medium — commodity/Fed-odds cross-check | channel: rates | geography: us_domestic | severity: session | horizon: 1d | action_object: sector_etf | action_object_detail: copper / XLB vs rates cluster | polarity: dovish | polarity_why: jobs print read as less tightening, opposite gold | confidence: 0.55
+4. Broadening rally hits economic roadblock  
+keep | us_relevance: high — breadth stall is a direct SPX risk-appetite signal | channel: risk | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: spx | action_object_detail: SPX / IWM / cyclical breadth | polarity: bearish | polarity_why: The 2026 broadening rally is described as hitting an economic wall, capping risk-on follow-through | confidence: 0.64
 
-5. OPEC+ steady November quotas  
-   keep | us_relevance: medium — oil supply into XLE and inflation | channel: sector_policy | geography: global_priced | severity: session | horizon: 1d-1w | action_object: sector_etf | action_object_detail: XLE / crude complex | polarity: mixed | polarity_why: outline is hold-steady, not a cut or a surge | confidence: 0.62
+5. International markets ahead of US  
+keep | us_relevance: medium — relative-flow story, not a same-session crash catalyst | channel: substitution | geography: global_priced | severity: regime | horizon: 1w-1m | action_object: spx | action_object_detail: SPY vs international ETFs | polarity: bearish | polarity_why: Persistent international leadership is a vote against US exceptionalism / SPX multiple | confidence: 0.52
 
-6. Amazon hikes AWS AI-chip rental prices (incl. A100)  
-   keep | us_relevance: high — AI-infra pricing/demand | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1w | action_object: basket | action_object_detail: AMZN / AI-infra GPU-cloud basket | polarity: bullish | polarity_why: cloud pricing power; mixed only for GPU renters | confidence: 0.66
+6. Amazon AWS AI-chip rental hikes  
+keep | us_relevance: high — AWS AI pricing is mega-cap and AI-capex relevant | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: sector_etf | action_object_detail: AMZN / IGV / AI-infra basket | polarity: bullish | polarity_why: Raising A100/H-class rents is AI-demand monetization for cloud/infra | confidence: 0.66
 
-7. Goldman: US data-center growth intact despite opposition  
-   keep | us_relevance: high — AI capex narrative | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1w-1m | action_object: basket | action_object_detail: AI data-center / power / XLK capex basket | polarity: bullish | polarity_why: demand spine holds vs local backlash | confidence: 0.63
+7. APH −6.5% / Fabrinet weakness + yields  
+keep | us_relevance: high — interconnect/AI hardware chain with a hard down print | channel: sector_fundamental | geography: us_supply_chain | severity: session | horizon: 1d | action_object: basket | action_object_detail: APH / Fabrinet / AI interconnect | polarity: bearish | polarity_why: Earnings weakness plus rising yields hitting a crowded AI-hardware name is a sector tape break | confidence: 0.70
 
-8. Accenture beat / 2–6% local growth guide  
-   conditional | us_relevance: medium — IT-services spend canary, not MAG7 | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: sector_etf | action_object_detail: IT-services / XLK consulting (ACN) | polarity: mixed | polarity_why: beat, but tepid guide does not support multiple expansion | confidence: 0.64
+8. Accenture beat / modest guide  
+conditional | us_relevance: medium — large IT-services print, not SPX beta by itself | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: sector_etf | action_object_detail: IT-services / consulting basket | polarity: mixed | polarity_why: Beat is offset by a 2–6% local-currency growth guide that underwhelms AI-spend translation | confidence: 0.60
 
 ### STEP 2 — INTERACTIONS
-- Fed hawkish comments + FOMC minutes/ISM this week → treat as ONE rates cluster; do not stack gold, StanChart +50 bp, and minutes as separate headwinds.
-- Yields up + Fabrinet/APH weakness → do not buy semis/AI hardware on DC/GPU-price hope while duration is hitting the complex.
-- AMZN GPU-rent hikes + Goldman DC intact + APH/Fabrinet miss → AI demand live, hardware mixed; do not double-count.
-- Copper jobs-relief vs gold hawkish dump → mixed rates; not a clean dovish or hawkish day.
-- Yields-down + cyclicals/IWM risk-on: does **not** fire (yields/hike-odds side is the live tape).
-- SaaS+labor, tariff/semi, wind/IPP, biotech-Phase-3-sympathy: none.
+- Fed hawkish-comments / October hike odds vs yields-down / pared hike bets → treat as **ONE mixed rates cluster** (do not score hawkish and dovish as two macro hits).
+- AI infra demand (AWS price hikes, CIEN AI-networking initiate, Nvidia “not a bubble”) + Fabrinet/APH break → **AI hardware mixed; do not double-count AI as uniformly bullish**.
+- Yields down + cyclicals/small-caps risk-on breadth support → **does not fire** (broadening rally already hitting an economic roadblock).
+- SaaS compression + weak labor: none. AI power + offshore-wind cancel: none (Bloom/Oracle Jupiter FM is downplayed, not a wind-cancel). AMGN Sjögren’s Phase 3: stays single-name/healthcare color, not a sector-sympathy vaccine analog.
 
 ### STEP 3 — RECLASSIFY AUDIT
-**DROP from usable:** North Korea hypersonic cluster (foreign geo, no oil/risk transmission); RBI hike (India); Hassett/Powell-exit political pile-on (not a policy print); Powell-name collisions (obits, sports, Instagram, tavern, Hulu, Titanic); Silver “hike odds decline” as a standalone (conflicts with gold/APH; fold into mixed rates).  
-**RESCUE from noise:** Copper gains on US jobs data / Fed-tightening relief; Goldman US data-center growth intact.  
-**RESCUE from Finviz (mechanical miss, elevated digest):** hawkish-Fed gold dump (AEM); APH/Fabrinet/yields; AMZN AWS GPU prices; ACN growth guide.  
-**Not rescued:** Nvidia “not a bubble” (opinion); Bolsonaro/Brazil (EM); AMGN Phase 3 / BMY FDA / ABT upgrade (single-name healthcare, no peer-sympathy evidence); CIEN initiation (analyst color, dominated by APH tape).
+DROPPED from usable: North Korea hypersonic drill (geo noise, no oil/risk transmission); RBI hike bets (India, foreign_weak_link); Hassett/Trump-adviser “Powell should leave” cluster (politics, not a policy print); Powell name-collision false positives (POWL, obituaries, sports, Instagram, taverns); RealClearMarkets Powell-chair opinion.
+RESCUED from noise: Broadening Rally in Stocks Hits an Economic Roadblock (SPX breadth/risk); Copper Gains as US Jobs Data Offers Relief on Fed Tightening (paid jobs/Fed-tightening relief — fold into the mixed rates cluster, not a separate long).
+Left in single_name (not rescued): Nvidia DBS bubble take, Hon Hai beat, Amazon local data-center fights, Micron SA notes, Apple design-chief color.
 
 ### STEP 4 — B1 / SECTOR INJECT
-NEWS_JUDGE: n=8 rescued=6
-MACRO rates: [hawkish] Fed comments lift Oct hike odds; gold −$100; minutes/ISM this week (session/1d-1w)
-MACRO rates_offset: [dovish] Copper bid as jobs data eases tightening — rates not one-way (session/1d)
-SECTOR energy: [mixed] OPEC+ outline for steady Nov quotas, not a cut (XLE)
-SECTOR semis_ai_hw: [bearish] Fabrinet weakness + rising yields, APH −6.5% (SMH/interconnect)
-SECTOR ai_infra: [bullish] AMZN hikes AWS GPU rents; Goldman DC build intact (AI capex basket)
-SECTOR it_services: [mixed] ACN beat but 2–6% local growth guide (XLK/IT services)
-INTERACTION: One rates cluster vs jobs-relief copper; AI demand does not offset APH/yields — semis mixed
-WATCH: Mechanical usable was mostly Powell-name garbage; Finviz + noise rescue carry the tape
+NEWS_JUDGE: n=8 rescued=2
+MACRO Fed: [mixed] Hawkish comments boost Oct hike odds (gold >$100 dump) vs yields lower/pared hike bets; FOMC minutes this week (session/1d-1w)
+MACRO Breadth: [bearish] Broadening rally hits an economic roadblock (SPX)
+MACRO Relative: [bearish] International markets leading US stocks in 2026 (SPY/QQQ/DIA)
+SECTOR AI infra: [bullish] AMZN hikes AWS AI-chip rents; CIEN initiated as AI networking winner (AI basket)
+SECTOR Tech hardware: [bearish] APH -6.5% on Fabrinet miss + rising yields (interconnect)
+SECTOR IT services: [mixed] ACN beat, Q1 FY27 guide only 2–6% local growth (IT services)
+SECTOR Energy: [neutral] OPEC+ outline for steady November quotas (XLE)
+INTERACTION: One mixed Fed-rates cluster; do not double-count AI (AWS/CIEN vs APH/Fabrinet); yields-down ≠ cyclical risk-on while breadth stalls
+WATCH: Usable set thin/Powell-polluted; tape carried by Finviz + 2 noise rescues
 
 NEWS_PARSE_BEGIN
 IMPORTANT_COUNT: 8
 TOP_ITEMS:
-- Hawkish Fed comments lift Oct hike odds; gold dumps $100+ | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:SPX beta / real yields / GLD | pol=hawkish | conf=0.72
-- FOMC minutes + ISM Services week-ahead | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:SPX beta into minutes/ISM | pol=mixed | conf=0.70
-- Rising yields + Fabrinet weakness, APH -6.5% | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:SMH / interconnect (APH) | pol=bearish | conf=0.68
-- Copper gains as US jobs data eases Fed tightening | keep=conditional | channel=rates | severity=session | horizon=1d | object=sector_etf:copper / XLB vs rates | pol=dovish | conf=0.55
-- OPEC+ outline for steady November quotas | keep=keep | channel=sector_policy | severity=session | horizon=1d-1w | object=sector_etf:XLE / crude | pol=mixed | conf=0.62
-- Amazon raises AWS AI GPU rental prices | keep=keep | channel=sector_fundamental | severity=session | horizon=1w | object=basket:AMZN / AI-infra GPU-cloud | pol=bullish | conf=0.66
-- Goldman: US data-center growth intact despite opposition | keep=keep | channel=sector_fundamental | severity=session | horizon=1w-1m | object=basket:AI data-center / power / XLK capex | pol=bullish | conf=0.63
-- Accenture beat with only 2-6% local growth guide | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:IT services / XLK (ACN) | pol=mixed | conf=0.64
-INTERACTIONS: Fed hawkish comments + FOMC minutes/ISM = one rates cluster; yields up + Fabrinet/APH = do not buy AI hardware on DC/GPU hope; AMZN GPU rents + Goldman DC + APH miss = AI demand live but semis mixed; copper jobs-relief vs gold hawkish = mixed rates not one-way
-RESCUED_FROM_NOISE: Copper Gains as US Jobs Data Offers Relief on Fed Tightening; Goldman sees US data center growth intact despite opposition; Finviz: AEM gold/hawkish Fed; APH Fabrinet/yields; AMZN AWS GPU prices; ACN 2-6% growth guide
-DROPPED_FROM_USABLE: North Korea hypersonic missile cluster; RBI rate-hike bets; Hassett/Powell-exit political cluster; Powell-name collisions (obits/sports/Instagram/tavern/Hulu/Titanic); Silver hike-odds-decline standalone
+- Hawkish Fed comments lift October hike odds; gold slumps >$100 | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:SPX beta/GLD | pol=hawkish | conf=0.72
+- Treasury yields dip as investors pare Fed hike bets | keep=keep | channel=rates | severity=session | horizon=1d | object=spx:SPX duration | pol=dovish | conf=0.63
+- FOMC minutes / ISM Services week-ahead to test 2026 hike plateau | keep=conditional | channel=rates | severity=session | horizon=1d-1w | object=spx:SPX beta | pol=mixed | conf=0.58
+- Broadening equity rally hits an economic roadblock | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=spx:SPX/IWM breadth | pol=bearish | conf=0.64
+- International markets leading SPY/QQQ/DIA in 2026 | keep=keep | channel=substitution | severity=regime | horizon=1w-1m | object=spx:SPY vs international ETFs | pol=bearish | conf=0.52
+- Amazon raises AWS high-performance AI-chip rental prices | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:AMZN/IGV/AI-infra | pol=bullish | conf=0.66
+- Amphenol -6.5% on Fabrinet weakness and rising yields | keep=keep | channel=sector_fundamental | severity=session | horizon=1d | object=basket:APH/Fabrinet/AI interconnect | pol=bearish | conf=0.70
+- Accenture beats but Q1 FY27 guide only 2-6% local growth | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:IT-services | pol=mixed | conf=0.60
+INTERACTIONS: mixed Fed hawkish-comments vs yields-down/pared-hike-bets as one rates cluster; AI AWS/CIEN vs APH/Fabrinet mixed do not double-count; yields-down + cyclicals/IWM risk-on does not fire (breadth roadblock)
+RESCUED_FROM_NOISE: Broadening Rally in Stocks Hits an Economic Roadblock; Copper Gains as US Jobs Data Offers Relief on Fed Tightening
+DROPPED_FROM_USABLE: North Korea hypersonic missile drill; Markets bet on RBI rate hike; Hassett/Trump adviser urges Powell to leave Fed; Powell name-collision false positives (POWL/obituaries/sports/Instagram); RealClearMarkets Powell opinion
 B1_INJECT:
-NEWS_JUDGE: n=8 rescued=6
-MACRO rates: [hawkish] Fed comments lift Oct hike odds; gold -$100; minutes/ISM this week (session/1d-1w)
-MACRO rates_offset: [dovish] Copper bid as jobs data eases tightening — rates not one-way (session/1d)
-SECTOR energy: [mixed] OPEC+ outline for steady Nov quotas, not a cut (XLE)
-SECTOR semis_ai_hw: [bearish] Fabrinet weakness + rising yields, APH -6.5% (SMH/interconnect)
-SECTOR ai_infra: [bullish] AMZN hikes AWS GPU rents; Goldman DC build intact (AI capex basket)
-SECTOR it_services: [mixed] ACN beat but 2-6% local growth guide (XLK/IT services)
-INTERACTION: One rates cluster vs jobs-relief copper; AI demand does not offset APH/yields — semis mixed
-WATCH: Mechanical usable was mostly Powell-name garbage; Finviz + noise rescue carry the tape
+NEWS_JUDGE: n=8 rescued=2
+MACRO Fed: [mixed] Hawkish comments boost Oct hike odds (gold >$100 dump) vs yields lower/pared hike bets; FOMC minutes this week (session/1d-1w)
+MACRO Breadth: [bearish] Broadening rally hits an economic roadblock (SPX)
+MACRO Relative: [bearish] International markets leading US stocks in 2026 (SPY/QQQ/DIA)
+SECTOR AI infra: [bullish] AMZN hikes AWS AI-chip rents; CIEN initiated as AI networking winner (AI basket)
+SECTOR Tech hardware: [bearish] APH -6.5% on Fabrinet miss + rising yields (interconnect)
+SECTOR IT services: [mixed] ACN beat, Q1 FY27 guide only 2–6% local growth (IT services)
+SECTOR Energy: [neutral] OPEC+ outline for steady November quotas (XLE)
+INTERACTION: One mixed Fed-rates cluster; do not double-count AI (AWS/CIEN vs APH/Fabrinet); yields-down ≠ cyclical risk-on while breadth stalls
+WATCH: Usable set thin/Powell-polluted; tape carried by Finviz + 2 noise rescues
 NEWS_PARSE_END

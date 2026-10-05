@@ -30872,10 +30872,10 @@
     {
       "date": "2026-10-05",
       "topic": "general",
-      "predicted_direction": "up",
-      "predicted_magnitude_band": "mild",
-      "confidence_score": 0.421,
-      "total_score": 0.517,
+      "predicted_direction": "flat",
+      "predicted_magnitude_band": "flat",
+      "confidence_score": 0.403,
+      "total_score": 0.086,
       "multiplier": 1.1,
       "components": {
         "B0_ASIA": 0.5,
@@ -30905,31 +30905,31 @@
         "HORIZON_3D": {
           "trading_days": 3,
           "direction": "flat",
-          "magnitude_band": "flat",
-          "confidence": 0.48
+          "magnitude_band": "mild",
+          "confidence": 0.46
         },
         "HORIZON_1W": {
           "trading_days": 5,
-          "direction": "down",
+          "direction": "flat",
           "magnitude_band": "mild",
-          "confidence": 0.5
+          "confidence": 0.42
         },
         "HORIZON_2W": {
           "trading_days": 10,
           "direction": "down",
           "magnitude_band": "mild",
-          "confidence": 0.52
+          "confidence": 0.4
         },
         "HORIZON_1M": {
           "trading_days": 21,
-          "direction": "down",
+          "direction": "flat",
           "magnitude_band": "mild",
-          "confidence": 0.5
+          "confidence": 0.38
         }
       },
       "news_judge_present": true,
       "engine": "v2",
-      "anchor_score": -0.033,
+      "anchor_score": -0.464,
       "overlay_score": 0.55
     }
   ]

@@ -1,6 +1,6 @@
 {
  "date": "2026-10-05",
- "generated_at": "2026-10-05T07:22:41.426684-04:00",
+ "generated_at": "2026-10-05T08:31:41.027556-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -9,9 +9,9 @@
  ],
  "signals": {
   "date": "2026-10-05",
-  "general_score": 0.517,
-  "general_direction": "up",
-  "general_confidence": 0.421,
+  "general_score": 0.086,
+  "general_direction": "flat",
+  "general_confidence": 0.403,
   "risk": "off",
   "yields_score": -0.5,
   "fed_score": 0.0,
@@ -24,12 +24,12 @@
   "dollar": "strong",
   "dollar_source": "dxy",
   "dxy_pct_1d": 0.31,
-  "vix_ratio": 0.901,
-  "vix_spot": 16.22,
-  "vix_delta_1d": 0.91,
+  "vix_ratio": 0.895,
+  "vix_spot": 16.12,
+  "vix_delta_1d": 0.81,
   "vix_ratio_source": "vix/vix3m",
-  "vix": "calm",
-  "oil_pct_1d": -0.64,
+  "vix": "falling",
+  "oil_pct_1d": -0.76,
   "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -115,7 +115,7 @@
    "Technology": -2.625,
    "Utilities": -3.43
   },
-  "events_bull": 5,
+  "events_bull": 7,
   "events_bear": 4,
   "china_event_dir": "bear",
   "risk_source": "news_judge"
@@ -248,12 +248,12 @@
    "high": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, VIX calm"
+    "why": "risk-mixed, VIX falling"
    },
    "low": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, VIX calm"
+    "why": "risk-mixed, VIX falling"
    },
    "mid": {
     "stance": "neutral",
