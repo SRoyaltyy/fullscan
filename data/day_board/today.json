@@ -1,12 +1,12 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T04:40:42.272026-04:00",
+  "generated_at": "2026-10-05T04:40:55.098793-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 3,
-    "partial": 3,
-    "fail": 2,
+    "partial": 4,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T04:31:42.562510-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-05_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 274808,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-05_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18828,
-          "preview": "# MAP HEAT \u2014 2026-10-05\nExport `finviz_2026-10-02.csv` \u00b7 11616 names \u00b7 generated 2026-10-05T04:23:33.348627-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-05\nExport `finviz_2026-10-02.csv` \u00b7 11616 names \u00b7 generated 2026-10-05T04:23:33.348627-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -185,6 +160,31 @@
         }
       ],
       "preview": "34 events \u00b7 ISM Services PMI (September) | US\u2013Iran war: Iran says Hormuz stays closed until US meets 7 conditions | Brent holds ~$100\u2013102 as Hormuz logistics, not just barrels, bite | China Golden Week (National Day) travel vs spend | California record heat wave / wildfire-smoke risk | September NFP miss: +29k, U3 4.2%, wages +3.0% y/y \u00b7 # Event Scan \u2014 2026-10-05\n- events tracked: **34** (via openclaw)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted and Brent near $101, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20%. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and the CIT challenge to global Section 301 duties keep trade risk binary. Q3 earnings open with PepsiCo then banks/UNH/ASML against an AI-memory boom Korea and Micron have already validated."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T04:40:54.270514-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 66221,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 14181,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-05T04:40:54.246473-04:00\nraw=5542 unique_events=6 tickers=82"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-05T04:40:54.246473-04:00\nraw=5542 unique_events=6 tickers=82"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

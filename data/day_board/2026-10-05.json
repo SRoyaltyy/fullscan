@@ -1,19 +1,18 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T04:40:42.272026-04:00",
+  "generated_at": "2026-10-05T04:40:55.098793-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-05_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-10-05/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-10-05_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-10-05_judge.md` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-05_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
     "ok": 3,
-    "partial": 3,
-    "fail": 2,
+    "partial": 4,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -185,7 +184,7 @@
       "inputs_ready": true,
       "n_req_ok": 3,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -301,11 +300,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-05_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 66221,
+          "said": "82 ticker actions \u00b7 6 events \u00b7 5542 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -580,8 +584,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -592,11 +596,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-05_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 66221,
+          "said": "82 ticker actions \u00b7 6 events \u00b7 5542 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -625,8 +634,17 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "82 ticker actions \u00b7 6 events \u00b7 5542 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY RRC",
+        "BUY SM",
+        "BUY HPK",
+        "BUY REPX",
+        "BUY OXY",
+        "BUY DVN"
+      ]
     },
     {
       "key": "stock_book",
@@ -666,11 +684,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-05_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 66221,
+          "said": "82 ticker actions \u00b7 6 events \u00b7 5542 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -1315,6 +1338,31 @@
         }
       ],
       "preview": "34 events \u00b7 ISM Services PMI (September) | US\u2013Iran war: Iran says Hormuz stays closed until US meets 7 conditions | Brent holds ~$100\u2013102 as Hormuz logistics, not just barrels, bite | China Golden Week (National Day) travel vs spend | California record heat wave / wildfire-smoke risk | September NFP miss: +29k, U3 4.2%, wages +3.0% y/y \u00b7 # Event Scan \u2014 2026-10-05\n- events tracked: **34** (via openclaw)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted and Brent near $101, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20%. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and the CIT challenge to global Section 301 duties keep trade risk binary. Q3 earnings open with PepsiCo then banks/UNH/ASML against an AI-memory boom Korea and Micron have already validated."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T04:40:54.270514-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 66221,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 14181,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-05T04:40:54.246473-04:00\nraw=5542 unique_events=6 tickers=82"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-05T04:40:54.246473-04:00\nraw=5542 unique_events=6 tickers=82"
     }
   ],
   "href": {
