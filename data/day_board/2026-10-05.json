@@ -1,20 +1,21 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T04:22:04.047302-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-10-05T04:22:25.134601-04:00",
+  "overall": "FAIL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-05_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-10-05/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-10-05_actions.json` \u2014 missing",
+    "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-10-05_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-10-05_judge.md` \u2014 missing",
     "MISSING Weather JSON `01_daily/weather/2026-10-05_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-05_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
-    "partial": 3,
-    "fail": 4,
+    "ok": 0,
+    "partial": 2,
+    "fail": 6,
     "n": 8
   },
   "processes": [
@@ -87,11 +88,11 @@
       "key": "finviz",
       "name": "Finviz scrape",
       "yaml": "finviz_preopen_scrape.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 2,
       "n_opt": 5,
       "files": [
         {
@@ -99,29 +100,22 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-05_finviz_digest.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 96708,
-          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
-          "bullets": [
-            "How to Create a Million-Dollar Stock Portfolio",
-            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "digest_md",
           "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-10-05_finviz_digest.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 11611,
-          "said": "Finviz Daily Digest \u2014 2026-10-05",
-          "bullets": [
-            "_Generated 2026-10-05T04:21:49.901817-04:00 \u00b7 export=data/exports/finviz_2026-10-02.csv \u00b7 ticker digests=5900 \u00b7 high-signal=1917_",
-            "Major indices (live quote page)"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_json",
@@ -144,7 +138,7 @@
           "size": 1688,
           "said": "Finviz homepage market digest \u2014 2026-10-05",
           "bullets": [
-            "Generated:** 2026-10-05T04:22:03.818834-04:00 (America/New_York)",
+            "Generated:** 2026-10-05T04:22:24.422923-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -171,20 +165,16 @@
           "bullets": []
         }
       ],
-      "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
-      "bullets": [
-        "How to Create a Million-Dollar Stock Portfolio",
-        "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
-        "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 0,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -194,15 +184,11 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-05_finviz_digest.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 96708,
-          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
-          "bullets": [
-            "How to Create a Million-Dollar Stock Portfolio",
-            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_market_digest",
@@ -330,16 +316,11 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-10-05_preopen_qc.json",
           "role": "required",
-          "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7563,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
-          "bullets": [
-            "general_predict:missing",
-            "events:missing",
-            "news_judge:missing",
-            "news_parse:missing"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "status",
@@ -357,13 +338,11 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-10-05_grok_review.json",
           "role": "required",
-          "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 308,
-          "said": "ok=False \u00b7 empty_review_reply (review)",
-          "bullets": [
-            "Grok returned an empty review"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_basic_materials",
@@ -495,7 +474,7 @@
       "name": "Label + weather",
       "yaml": "label_weather.yml",
       "status": "FAIL",
-      "inputs_ready": true,
+      "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
@@ -506,15 +485,11 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-05_finviz_digest.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 96708,
-          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
-          "bullets": [
-            "How to Create a Million-Dollar Stock Portfolio",
-            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "weather",
@@ -595,15 +570,11 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-05_finviz_digest.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 96708,
-          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
-          "bullets": [
-            "How to Create a Million-Dollar Stock Portfolio",
-            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "dossiers",
@@ -669,15 +640,11 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-05_finviz_digest.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 96708,
-          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
-          "bullets": [
-            "How to Create a Million-Dollar Stock Portfolio",
-            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_judge",
@@ -980,6 +947,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-05\n**Generated:** 2026-10-05T04:22:03.818834-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stock futures edge lower in quiet trade ahead of ISM Services PMI data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MKC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-05\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T04:22:24.499173-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 3225,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 1688,
+          "preview": "# Finviz homepage market digest \u2014 2026-10-05\n**Generated:** 2026-10-05T04:22:24.422923-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stock futures edge lower in quiet trade ahead of ISM Services PMI data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MKC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-05\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-05\n**Generated:** 2026-10-05T04:22:24.422923-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stock futures edge lower in quiet trade ahead of ISM Services PMI data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MKC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-05\n**Clock use:** `same_morning`"
     }
   ],
   "href": {
