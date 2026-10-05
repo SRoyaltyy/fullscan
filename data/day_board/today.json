@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:41:02.249014-04:00",
+  "generated_at": "2026-10-05T07:44:27.257073-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -9,24 +9,11 @@
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "ARQT",
-      "score": 0.5362783339840729
-    },
-    {
-      "ticker": "EDU",
-      "score": 0.3740013700258146
-    },
-    {
-      "ticker": "PRGS",
-      "score": 0.3106093192133859
-    }
-  ],
+  "buy_1d": [],
   "sell_1d": [
     {
       "ticker": "ROIV",
-      "score": -0.5876457311307597
+      "score": -0.4753937289952296
     },
     {
       "ticker": "ARE",
@@ -34,55 +21,55 @@
     },
     {
       "ticker": "SOC",
-      "score": -0.3913617286158165
+      "score": -0.3913239823861548
     },
     {
       "ticker": "BIDU",
-      "score": -0.3857019749125207
+      "score": -0.38465342412103465
     },
     {
       "ticker": "BNTX",
-      "score": -0.37843485631894425
+      "score": -0.38172356799127616
     },
     {
-      "ticker": "IFRX",
-      "score": -0.3775394226899668
+      "ticker": "SEER",
+      "score": -0.3730751372228022
     },
     {
       "ticker": "ALMS",
-      "score": -0.3693865283479107
+      "score": -0.3693942759044377
     },
     {
-      "ticker": "IBM",
-      "score": -0.3654413825250935
+      "ticker": "ABSI",
+      "score": -0.36255362009835357
+    },
+    {
+      "ticker": "IFRX",
+      "score": -0.3622211957782761
     },
     {
       "ticker": "PCT",
-      "score": -0.3588178929817754
+      "score": -0.35876277369472237
+    },
+    {
+      "ticker": "INTC",
+      "score": -0.3584543832208301
     },
     {
       "ticker": "TYRA",
-      "score": -0.3578143116714341
-    },
-    {
-      "ticker": "AXSM",
-      "score": -0.35343395433516445
+      "score": -0.35781926502529476
     },
     {
       "ticker": "NRXP",
-      "score": -0.3519298837425717
+      "score": -0.35097727854704575
     },
     {
       "ticker": "WVE",
-      "score": -0.3487760015048991
+      "score": -0.3509103903716723
     },
     {
-      "ticker": "LXRX",
-      "score": -0.3448034547446938
-    },
-    {
-      "ticker": "VNET",
-      "score": -0.3437148373469873
+      "ticker": "IBRX",
+      "score": -0.3481755470160717
     }
   ],
   "flatten": {
@@ -93,7 +80,7 @@
     ]
   },
   "general": {
-    "said": "UP  0.517",
+    "said": "FLAT  0.086",
     "bullets": [
       "bad: leftover Hormuz Brent >$100",
       "bad: 1w 30Y +14bp at 5.61",
@@ -101,8 +88,8 @@
       "good: Asia composite +0.7%",
       "good: WTI/Brent offered"
     ],
-    "score": "0.517",
-    "direction": "up"
+    "score": "0.086",
+    "direction": "flat"
   },
   "sectors": {
     "said": "0 up / 0 down / 0 flat",
@@ -121,67 +108,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T07:22:15.680127-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-10-05_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1122911,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T07:22:42.344929-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-05_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9713,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-05_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5283,
-          "preview": "# Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T07:23:02.994002-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-05_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2286341,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -306,6 +232,74 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-05T07:35:28.442929-04:00\nraw=5577 unique_events=6 tickers=83"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:35:49.289766-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 66158,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 14279,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-05T07:35:28.442929-04:00\nraw=5577 unique_events=6 tickers=83"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-05T07:35:28.442929-04:00\nraw=5577 unique_events=6 tickers=83"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:39:32.102842-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 10848,
+          "preview": "# News Judge \u2014 2026-10-05"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1227,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-10-05 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:44:25.402319-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-10-05_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 16705,
+          "preview": "# Premarket Prediction \u2014 2026-10-05\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: FLAT \u2796 \u2014 FLAT** | total score 0.086 (uncertainty multiplier \u00d71.1) | confidence 0.403\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia composite +0.7%\n> - WTI/Brent offered\n> - Oct hike odds faded ~20%\n> - China PMI expansion T+n\n> - DXY not surging\n>\n> **Bad news driving this:**\n> - leftover Hormuz Brent >$100\n> - 1w 30Y +14bp at 5.61\n> - HY +44bp 1w\n> - ISM Services 10:00 unsigned\n> - Graham Act Oct 8/18 clock\n>\n> **market uncertainty: **elevated** | VIX 16.17 | policy-uncertainty index 160.6 (1d -3.85)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> -"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-10-05\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: FLAT \u2796 \u2014 FLAT** | total score 0.086 (uncertainty multiplier \u00d71.1) | confidence 0.403\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia composite +0.7%\n> - WTI/Brent offered\n> - Oct hike odds faded ~20%\n> - China PMI expansion T+n\n> - DXY not surging\n>\n> **Bad news driving this:**\n> - leftover Hormuz Brent >$100\n> - 1w 30Y +14bp at 5.61\n> - HY +44bp 1w\n> - ISM Services 10:00 unsigned\n> - Graham Act Oct 8/18 clock\n>\n> **market uncertainty: **elevated** | VIX 16.17 | policy-uncertainty index 160.6 (1d -3.85)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> -"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
