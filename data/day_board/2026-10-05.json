@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T04:21:52.815043-04:00",
+  "generated_at": "2026-10-05T04:22:04.047302-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -101,12 +101,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97058,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96708,
+          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "How to Create a Million-Dollar Stock Portfolio",
+            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -116,10 +116,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11870,
+          "size": 11611,
           "said": "Finviz Daily Digest \u2014 2026-10-05",
           "bullets": [
-            "_Generated 2026-10-05T04:21:46.702583-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-05T04:21:49.901817-04:00 \u00b7 export=data/exports/finviz_2026-10-02.csv \u00b7 ticker digests=5900 \u00b7 high-signal=1917_",
             "Major indices (live quote page)"
           ]
         },
@@ -144,7 +144,7 @@
           "size": 1688,
           "said": "Finviz homepage market digest \u2014 2026-10-05",
           "bullets": [
-            "Generated:** 2026-10-05T04:21:52.586404-04:00 (America/New_York)",
+            "Generated:** 2026-10-05T04:22:03.818834-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -171,11 +171,11 @@
           "bullets": []
         }
       ],
-      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
       "bullets": [
-        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-        "Banks have profited from idle cash for years. AI agents could change that."
+        "How to Create a Million-Dollar Stock Portfolio",
+        "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
+        "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
       ]
     },
     {
@@ -196,12 +196,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97058,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96708,
+          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "How to Create a Million-Dollar Stock Portfolio",
+            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -508,12 +508,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97058,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96708,
+          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "How to Create a Million-Dollar Stock Portfolio",
+            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -597,12 +597,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97058,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96708,
+          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "How to Create a Million-Dollar Stock Portfolio",
+            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -671,12 +671,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97058,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 96708,
+          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "How to Create a Million-Dollar Stock Portfolio",
+            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -962,7 +962,7 @@
       "date": "2026-10-05",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-05T04:21:52.597882-04:00",
+      "at": "2026-10-05T04:22:03.829747-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-10-05_finviz_market_digest.json",
@@ -976,10 +976,10 @@
           "ok": true,
           "reason": "",
           "size": 1688,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-05\n**Generated:** 2026-10-05T04:21:52.586404-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stock futures edge lower in quiet trade ahead of ISM Services PMI data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MKC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-05\n**Clock use:** `same_morning`"
+          "preview": "# Finviz homepage market digest \u2014 2026-10-05\n**Generated:** 2026-10-05T04:22:03.818834-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stock futures edge lower in quiet trade ahead of ISM Services PMI data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MKC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-05\n**Clock use:** `same_morning`"
         }
       ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-05\n**Generated:** 2026-10-05T04:21:52.586404-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stock futures edge lower in quiet trade ahead of ISM Services PMI data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MKC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-05\n**Clock use:** `same_morning`"
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-05\n**Generated:** 2026-10-05T04:22:03.818834-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stock futures edge lower in quiet trade ahead of ISM Services PMI data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MKC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-05\n**Clock use:** `same_morning`"
     }
   ],
   "href": {
