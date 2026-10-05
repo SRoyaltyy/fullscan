@@ -99,11 +99,10 @@ jobs:
           WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
         run: |
           set -euo pipefail
-          # ACCOUNT_ID is optional. Keys alone are enough: PaperAPI discovers
-          # the sandbox account id from the account list. Do not defer on an
-          # empty WEBULL_ACCOUNT_ID secret.
+          # ACCOUNT_ID is optional. PaperAPI discovers the sandbox account
+          # when the app key and secret work. Soft-skip only if those are empty.
           if [ -z "${WEBULL_APP_KEY:-}" ] || [ -z "${WEBULL_APP_SECRET:-}" ]; then
-            echo "WEBULL_APP_KEY / WEBULL_APP_SECRET unset; paper submit deferred"
+            echo "WEBULL_APP_KEY or WEBULL_APP_SECRET unset; paper submit skipped"
             exit 0
           fi
           pip install webull-openapi-python-sdk

@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-05",
+  "summary": "",
+  "sectors": [
+    {
+      "sector": "Basic Materials",
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
+    },
+    {
+      "sector": "Communication Services",
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
+    },
+    {
+      "sector": "Consumer Cyclical",
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
+    },
+    {
+      "sector": "Consumer Defensive",
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
+    },
+    {
+      "sector": "Energy",
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
+    },
+    {
+      "sector": "Financial",
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
+    },
+    {
+      "sector": "Healthcare",
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
+    },
+    {
+      "sector": "Industrials",
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
+    },
+    {
+      "sector": "Real Estate",
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
+    },
+    {
+      "sector": "Technology",
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": "step deadline"
+    },
+    {
+      "sector": "Utilities",
+      "status": "FAIL",
+      "provider": "",
+      "fallback_reason": "step deadline"
+    }
+  ]
+}

@@ -127,7 +127,8 @@ def test_boards_and_paper_share_the_bell() -> None:
     assert 'WEBULL_APP_SECRET' in yml
     assert 'WEBULL_ACCOUNT_ID' in yml
     assert 'WEBULL_ACCOUNT_ID unset; paper submit deferred' not in yml
-    assert 'WEBULL_APP_KEY / WEBULL_APP_SECRET unset; paper submit deferred' in yml
+    assert 'WEBULL_APP_KEY or WEBULL_APP_SECRET unset; paper submit skipped' in yml
+    assert 'Soft-skip only if those are empty' in yml
     assert 'cancel-in-progress: true' in yml
     assert '3,18,33,48' not in yml
     assert 'schedule:' not in yml
