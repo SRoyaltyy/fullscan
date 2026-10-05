@@ -1,0 +1,17 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "hawkish"
+ ],
+ "sector_tilts": {
+  "Energy": "mixed"
+ },
+ "tickers": {
+  "APH": -1.5,
+  "AMZN": 1.5,
+  "XLK": 1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=6\nMACRO rates: [hawkish] Fed comments lift Oct hike odds; gold -$100; minutes/ISM this week (session/1d-1w)\nMACRO rates_offset: [dovish] Copper bid as jobs data eases tightening \u2014 rates not one-way (session/1d)\nSECTOR energy: [mixed] OPEC+ outline for steady Nov quotas, not a cut (XLE)\nSECTOR semis_ai_hw: [bearish] Fabrinet weakness + rising yields, APH -6.5% (SMH/interconnect)\nSECTOR ai_infra: [bullish] AMZN hikes AWS GPU rents; Goldman DC build intact (AI capex basket)\nSECTOR it_services: [mixed] ACN beat but 2-6% local growth guide (XLK/IT services)\nINTERACTION: One rates cluster vs jobs-relief copper; AI demand does not offset APH/yields \u2014 semis mixed\nWATCH: Mechanical usable was mostly Powell-name garbage; Finviz + noise rescue carry the tape",
+ "date": "2026-10-05"
+}

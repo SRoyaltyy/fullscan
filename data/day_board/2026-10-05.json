@@ -1,12 +1,11 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T04:41:05.267824-04:00",
+  "generated_at": "2026-10-05T04:43:04.556061-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-05_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-10-05/_board.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-05_judge.md` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-05_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
@@ -182,7 +181,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 4,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 3,
@@ -267,11 +266,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-05_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10178,
+          "said": "1. **Hawkish Fed comments lift October hike odds; gold dumps $100+** \u2014 Direct rates-path reprice into SPX duration/beta; gold move confirms it is trading, not t",
+          "bullets": [
+            "2. **FOMC minutes + ISM Services on this week\u2019s calendar** \u2014 Unresolved US policy/activity binary that outranks overnight color for the next 1\u20135 sessions. Channel: rates",
+            "3. **Rising yields + Fabrinet weakness drive APH \u22126.5%** \u2014 Rates are already hitting the AI-hardware/interconnect complex, not just Treasuries. Channel: sector_fundamental",
+            "4. **Copper gains as US jobs data eases Fed-tightening fears** \u2014 Same rates cluster, opposite sign; blocks a one-way hawkish read. Channel: rates"
+          ]
         },
         {
           "key": "research_json",
@@ -340,13 +343,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7542,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "size": 7536,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
           "bullets": [
             "general_predict:missing",
-            "news_judge:missing",
-            "news_actions:missing",
-            "finviz_market_digest:missing"
+            "finviz_market_digest:missing",
+            "map_heat_research:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -715,11 +718,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-05_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10178,
+          "said": "1. **Hawkish Fed comments lift October hike odds; gold dumps $100+** \u2014 Direct rates-path reprice into SPX duration/beta; gold move confirms it is trading, not t",
+          "bullets": [
+            "2. **FOMC minutes + ISM Services on this week\u2019s calendar** \u2014 Unresolved US policy/activity binary that outranks overnight color for the next 1\u20135 sessions. Channel: rates",
+            "3. **Rising yields + Fabrinet weakness drive APH \u22126.5%** \u2014 Rates are already hitting the AI-hardware/interconnect complex, not just Treasuries. Channel: sector_fundamental",
+            "4. **Copper gains as US jobs data eases Fed-tightening fears** \u2014 Same rates cluster, opposite sign; blocks a one-way hawkish read. Channel: rates"
+          ]
         },
         {
           "key": "in_weather",
@@ -1363,6 +1370,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-05T04:40:54.246473-04:00\nraw=5542 unique_events=6 tickers=82"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T04:43:03.627749-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 10178,
+          "preview": "# News Judge \u2014 2026-10-05"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1009,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-10-05 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {
