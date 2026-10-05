@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T08:43:00.787903-04:00",
+  "generated_at": "2026-10-05T08:51:07.137573-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -54,7 +54,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 274808,
+          "size": 274169,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -65,10 +65,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18442,
+          "size": 18337,
           "said": "MAP HEAT \u2014 2026-10-05",
           "bullets": [
-            "Export `finviz_2026-10-02.csv` \u00b7 11616 names \u00b7 generated 2026-10-05T04:23:33.348627-04:00",
+            "Export `finviz_2026-10-05.csv` \u00b7 11616 names \u00b7 generated 2026-10-05T07:14:39.387392-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -94,12 +94,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 96708,
-          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
+          "size": 97128,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "How to Create a Million-Dollar Stock Portfolio",
-            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11611,
+          "size": 11940,
           "said": "Finviz Daily Digest \u2014 2026-10-05",
           "bullets": [
-            "_Generated 2026-10-05T04:21:49.901817-04:00 \u00b7 export=data/exports/finviz_2026-10-02.csv \u00b7 ticker digests=5900 \u00b7 high-signal=1917_",
+            "_Generated 2026-10-05T07:13:05.936167-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -164,11 +164,11 @@
           "bullets": []
         }
       ],
-      "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
+      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
       "bullets": [
-        "How to Create a Million-Dollar Stock Portfolio",
-        "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
-        "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+        "Banks have profited from idle cash for years. AI agents could change that."
       ]
     },
     {
@@ -189,12 +189,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96708,
-          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
+          "size": 97128,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "How to Create a Million-Dollar Stock Portfolio",
-            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -226,7 +226,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 274808,
+          "size": 274169,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -541,12 +541,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96708,
-          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
+          "size": 97128,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "How to Create a Million-Dollar Stock Portfolio",
-            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -555,8 +555,8 @@
           "path": "01_daily/weather/2026-10-05_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9724 vix=falling yields=falling",
-          "size": 9724,
+          "reason": "sectors=11 bytes=9725 vix=falling yields=falling",
+          "size": 9725,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -647,12 +647,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96708,
-          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
+          "size": 97128,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "How to Create a Million-Dollar Stock Portfolio",
-            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -750,12 +750,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 96708,
-          "said": "5900 tickers \u00b7 1917 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
+          "size": 97128,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "How to Create a Million-Dollar Stock Portfolio",
-            "Anthropic Is Spending $100M To Build The AI Workforce It Needs For Its Next Phase",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -779,8 +779,8 @@
           "path": "01_daily/weather/2026-10-05_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9724 vix=falling yields=falling",
-          "size": 9724,
+          "reason": "sectors=11 bytes=9725 vix=falling yields=falling",
+          "size": 9725,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -832,9 +832,9 @@
           "path": "data/stock_book/2026-10-05_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=125",
-          "size": 937638,
-          "said": "1d BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER \u00b7 0.35785",
+          "reason": "horizons=5 names=199",
+          "size": 1433683,
+          "said": "1d BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI",
           "bullets": []
         },
         {
@@ -858,8 +858,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2263,
-          "said": "139 green \u00b7 SHOO, GLBE, FIGS, SN, HNI, SIG, SKY, VVV, ONON, BIRK",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -910,9 +910,9 @@
           "path": "data/stock_book/2026-10-05_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=125",
-          "size": 937638,
-          "said": "1d BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER \u00b7 0.35785",
+          "reason": "horizons=5 names=199",
+          "size": 1433683,
+          "said": "1d BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI",
           "bullets": []
         },
         {
@@ -959,67 +959,68 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "TMUS",
+        "score": 0.3448303289604864
+      },
+      {
+        "ticker": "COP",
+        "score": 0.548154509076111
+      },
+      {
+        "ticker": "PRGS",
+        "score": 0.2947028867133859
+      },
+      {
+        "ticker": "PRMB",
+        "score": 0.4055163317115056
+      },
+      {
+        "ticker": "SPOT",
+        "score": 0.17604742631397094
+      },
+      {
+        "ticker": "DVN",
+        "score": 0.5892777859408413
+      },
+      {
+        "ticker": "RRC",
+        "score": 0.745920039777549
+      }
+    ],
     "sell_1d": [
       {
-        "ticker": "ROIV",
-        "score": -0.4753937289952296
+        "ticker": "OKLO",
+        "score": -0.26264240622864266
       },
       {
-        "ticker": "ARE",
-        "score": -0.41823590976540176
+        "ticker": "NEOV",
+        "score": -0.25919990820534133
       },
       {
-        "ticker": "SOC",
-        "score": -0.3913239823861548
+        "ticker": "FCEL",
+        "score": -0.16986455033318454
       },
       {
-        "ticker": "BIDU",
-        "score": -0.38465342412103465
+        "ticker": "EOSE",
+        "score": -0.19974540749788555
       },
       {
-        "ticker": "BNTX",
-        "score": -0.38172356799127616
+        "ticker": "NNDM",
+        "score": -0.0346090802266083
       },
       {
-        "ticker": "SEER",
-        "score": -0.3730751372228022
+        "ticker": "INDI",
+        "score": -0.2929655110448106
       },
       {
-        "ticker": "ALMS",
-        "score": -0.3693942759044377
+        "ticker": "TE",
+        "score": -0.26854495652154203
       },
       {
-        "ticker": "ABSI",
-        "score": -0.36255362009835357
-      },
-      {
-        "ticker": "IFRX",
-        "score": -0.3622211957782761
-      },
-      {
-        "ticker": "PCT",
-        "score": -0.35876277369472237
-      },
-      {
-        "ticker": "INTC",
-        "score": -0.3584543832208301
-      },
-      {
-        "ticker": "TYRA",
-        "score": -0.35781926502529476
-      },
-      {
-        "ticker": "NRXP",
-        "score": -0.35097727854704575
-      },
-      {
-        "ticker": "WVE",
-        "score": -0.3509103903716723
-      },
-      {
-        "ticker": "IBRX",
-        "score": -0.3481755470160717
+        "ticker": "HNRG",
+        "score": -0.02730836836844408
       }
     ],
     "flatten": {
@@ -2636,6 +2637,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-05\nall_ok=False  qc_all_ok=False  book_ok=True  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T08:51:06.164318-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-05_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9725,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-05_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5297,
+          "preview": "# Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
