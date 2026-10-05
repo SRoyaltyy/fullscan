@@ -1,0 +1,182 @@
+name: Finviz learning capture (all stocks)
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'full = verify and capture full panels; export = all short summaries only'
+        type: choice
+        options: [full, export]
+        default: full
+      run_date:
+        description: 'Current New York date, or empty. Past dates cannot be fetched retroactively.'
+        type: string
+        default: ''
+      phase:
+        description: 'auto records actual phases; a named phase fails QC if collection crosses its window'
+        type: choice
+        options: [auto, preopen, intraday, postclose]
+        default: auto
+      shards:
+        description: 'Sequential batches; no parallel hammering of the Elite account'
+        type: choice
+        options: ['8', '16', '32']
+        default: '16'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: finviz-learning-capture
+  cancel-in-progress: false
+
+env:
+  FINVIZ_GAP_SEC: '5'
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      path: ${{ steps.prepare.outputs.path }}
+      full_ready: ${{ steps.prepare.outputs.full_ready }}
+      matrix: ${{ steps.prepare.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4 playwright
+      - name: Install browser for full-panel preflight
+        if: inputs.mode == 'full'
+        run: python -m playwright install --with-deps chromium
+      - name: Collector contract tests (no network)
+        run: python -m unittest src.test_finviz_learning_capture -v
+      - name: Live bulk export and full-source preflight
+        id: prepare
+        env:
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+          CAPTURE_DATE: ${{ inputs.run_date }}
+          CAPTURE_MODE: ${{ inputs.mode }}
+          CAPTURE_PHASE: ${{ inputs.phase }}
+          CAPTURE_SHARDS: ${{ inputs.shards }}
+        run: |
+          python -m src.finviz_learning_capture prepare \
+            --date "$CAPTURE_DATE" --mode "$CAPTURE_MODE" --phase "$CAPTURE_PHASE" \
+            --shards "$CAPTURE_SHARDS" --capture-id "${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.prepare.outputs.path != ''
+        with:
+          name: finviz-learning-seed
+          path: ${{ steps.prepare.outputs.path }}/
+          if-no-files-found: error
+          retention-days: 30
+
+  capture:
+    needs: prepare
+    if: needs.prepare.outputs.full_ready == 'true'
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4 playwright
+      - uses: actions/download-artifact@v4
+        with:
+          name: finviz-learning-seed
+          path: ${{ needs.prepare.outputs.path }}
+      - name: Install browser for expanded panels
+        run: python -m playwright install --with-deps chromium
+      - name: Capture batch with explicit per-ticker states
+        env:
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          CAPTURE_PATH: ${{ needs.prepare.outputs.path }}
+          SHARD_INDEX: ${{ matrix.shard }}
+        run: |
+          python -m src.finviz_learning_capture shard \
+            --capture-path "$CAPTURE_PATH" --shard "$SHARD_INDEX" --budget-minutes 70
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: finviz-learning-shard-${{ matrix.shard }}
+          path: ${{ needs.prepare.outputs.path }}/shards/
+          if-no-files-found: error
+          retention-days: 30
+
+  archive:
+    needs: [prepare, capture]
+    if: always() && needs.prepare.outputs.path != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - uses: actions/download-artifact@v4
+        with:
+          name: finviz-learning-seed
+          path: ${{ needs.prepare.outputs.path }}
+      - uses: actions/download-artifact@v4
+        if: needs.capture.result != 'skipped'
+        continue-on-error: true
+        with:
+          pattern: finviz-learning-shard-*
+          merge-multiple: true
+          path: ${{ needs.prepare.outputs.path }}/shards/
+      - name: Build coverage report (retain partial evidence)
+        id: coverage
+        continue-on-error: true
+        env:
+          CAPTURE_PATH: ${{ needs.prepare.outputs.path }}
+          CAPTURE_MODE: ${{ inputs.mode }}
+          CAPTURE_PHASE: ${{ inputs.phase }}
+        run: |
+          python -m src.finviz_learning_capture aggregate \
+            --capture-path "$CAPTURE_PATH" --mode "$CAPTURE_MODE" --phase "$CAPTURE_PHASE"
+      - name: Show report even when coverage fails
+        if: always()
+        env:
+          CAPTURE_PATH: ${{ needs.prepare.outputs.path }}
+        run: |
+          if [ -f "$CAPTURE_PATH/report.md" ]; then
+            cat "$CAPTURE_PATH/report.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: finviz-learning-final-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ needs.prepare.outputs.path }}/
+          if-no-files-found: error
+          retention-days: 90
+      - name: Commit this immutable capture, including failure records
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CAPTURE_PATH: ${{ needs.prepare.outputs.path }}
+        run: |
+          test -f "$CAPTURE_PATH/coverage.json"
+          bash scripts/safe_git_push.sh "data: Finviz learning capture ${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" "$CAPTURE_PATH"
+      - name: Enforce requested coverage
+        if: always()
+        env:
+          CAPTURE_PATH: ${{ needs.prepare.outputs.path }}
+        run: |
+          python -c 'import json,os,sys; p=os.environ["CAPTURE_PATH"]+"/coverage.json"; d=json.load(open(p)); sys.exit(0 if d["complete_for_requested_mode"] else 2)'
