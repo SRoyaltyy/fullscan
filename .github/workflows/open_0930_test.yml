@@ -14,6 +14,8 @@ on:
       - "src/open_0930_clock.py"
       - "src/test_open_0930.py"
       - "src/webull_exec.py"
+      - "src/h1_sealed_exec.py"
+      - "src/test_h1_sealed_webull.py"
       - "src/combo_broker.py"
       - "src/strategy_tickets.py"
       - "src/test_hot4_wire.py"
@@ -34,6 +36,9 @@ on:
       - "src/strategy_tickets.py"
       - "src/test_hot4_wire.py"
       - "src/paper_open.py"
+      - "src/h1_sealed_exec.py"
+      - "src/test_h1_sealed_webull.py"
+      - "src/webull_exec.py"
       - "src/morning_scan.py"
       - "src/test_morning_scan.py"
       - "scripts/publish_open_pack.sh"
@@ -61,5 +66,6 @@ jobs:
           PYTHONPATH=. python3 -m src.test_strategy_tickets
           PYTHONPATH=. python3 -m src.test_morning_scan
           PYTHONPATH=. python3 -m src.test_webull_exec
+          PYTHONPATH=. python3 -m src.test_h1_sealed_webull
           PYTHONPATH=. python3 -m src.test_combo_broker
           PYTHONPATH=. python3 -m src.test_skip_if_good

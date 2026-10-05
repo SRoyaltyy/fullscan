@@ -2,9 +2,10 @@ name: Webull paper (OpenAPI sandbox)
 
 # Warm well BEFORE the bell. Hosted cron is a fallback, not a punctual clock.
 # Primary send is publish_strategy_tickets.yml on decision_ready (standing
-# MARKET/CORE/DAY, --owner actions). This job must not twin-submit: it uses
-# --owner actions (no-ops if owner≠actions) and paper_open journal + stable
-# client_order_id. Do not add another delayed cron.
+# MARKET/CORE/DAY, --owner actions). Both paths send the sealed h1 plan
+# for that session, not a Factor Mine HOT4 pick_day rebuild. This job must
+# not twin-submit: it uses --owner actions (no-ops if owner≠actions) and
+# paper_open journal + stable client_order_id. Do not add another delayed cron.
 on:
   schedule:
     - cron: '7 12,13 * * 1-5'

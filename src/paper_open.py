@@ -12,8 +12,10 @@ pre-open snapshot that has not moved yet still leaves the last leg
 fundable when the open prints above the plan px.
 
 No feature building, dependency installation or Pages deployment on the
-send path. Paper host only. Submit refuses when published HOT4 buys
-or sells diverge from the Factor Mine cash-start recipe for that date.
+send path. Paper host only. The send list is the sealed h1 plan for
+that session (same book ``webull_exec`` uses). A Factor Mine HOT4
+rebuild is not the order list. Paper cash that cannot fund the sealed
+buy notionals fails closed.
 
 00_grounding/paper_flatten.json names one ET date. On that date the
 paper host cancels open orders and sells every lot (MARKET/CORE/DAY).
@@ -85,18 +87,18 @@ def validate_payload(payload, date, clock, *, allow_after_bell=False):
     if completed.tzinfo is None or completed > limit:
         raise ValueError('decision completed after decision clock')
     rec = (payload.get('strategies') or {}).get(we.HOT4) or {}
-    if rec.get('date') != date or rec.get('status') not in ('ok', 'sit'):
-        raise ValueError('hot4 missing, stale or incomplete')
-    # status ok, and a sit that still has orders, keep requiring a finite s.
-    if not _flat_hot4_sit(rec):
-        score = float(rec.get('s'))
-        if not math.isfinite(score):
-            raise ValueError('unknown market regime')
+    # The published HOT4 row is a readiness signal only. Its buy and sell
+    # names are not the order list — the sealed h1 plan is.
+    if rec:
+        if rec.get('date') != date or rec.get('status') not in ('ok', 'sit'):
+            raise ValueError('hot4 missing, stale or incomplete')
+        # status ok, and a sit that still has orders, keep requiring a finite s.
+        if not _flat_hot4_sit(rec):
+            score = float(rec.get('s'))
+            if not math.isfinite(score):
+                raise ValueError('unknown market regime')
     if payload.get('look', {}).get('stale'):
         raise ValueError('stale factor look')
-    from . import strategy_tickets as st
-    st.assert_hot4_wire(
-        date, rec.get('buy') or [], sells=rec.get('sell') or [])
     return rec
 
 
@@ -177,14 +179,12 @@ def _empty_sit_plan(payload, snap, clock):
 def make_plan(payload, snap, clock, *, allow_after_bell=False):
     date = clock.date().isoformat()
     rec = validate_payload(payload, date, clock, allow_after_bell=allow_after_bell)
+    del rec  # sealed plan, not the published HOT4 buy/sell lists
     if not snap.connected:
         raise ValueError(snap.error or 'broker disconnected')
-    # Flat sit has nothing to buy or sell. Do not size, and do not load regime.
-    if _flat_hot4_sit(rec):
-        return _empty_sit_plan(payload, snap, clock)
     card = we.plan_hot4_for_broker(date, snap, payload=payload)
     if card.get('stale') or card.get('look_error'):
-        raise ValueError('stale or failed hot4 plan')
+        raise ValueError(card.get('look_error') or 'stale or failed sealed h1 plan')
     bad = [x for x in card.get('skipped', []) if x.get('kind') in ('cash', 'no_price')]
     if bad:
         raise ValueError('cannot fund/price planned entries: ' + ', '.join(x['ticker'] for x in bad))
@@ -587,15 +587,8 @@ def submit_ready(*, submit=True, clock=now, loader=None, api=None, state_dir=Non
             body = payload if payload is not None else (loader or load_local)(date)
             snap = api.snapshot()
             now = clock()
-            hot = (body.get('strategies') or {}).get(we.HOT4) or {}
-            # Flat sit: validate, journal no_trade, do not size or read regime.
-            if _flat_hot4_sit(hot):
-                validate_payload(body, date, now, allow_after_bell=True)
-                if not getattr(snap, 'connected', False):
-                    raise ValueError(getattr(snap, 'error', None) or 'broker disconnected')
-                plan = _empty_sit_plan(body, snap, now)
-            else:
-                plan = make_plan(body, snap, now, allow_after_bell=True)
+            # A Factor Mine flat sit does not replace the sealed h1 plan.
+            plan = make_plan(body, snap, now, allow_after_bell=True)
             atomic_json(status_path, {**plan, 'status': 'armed', 'standing': True})
         except Exception as exc:
             atomic_json(status_path, {'date': date, 'status': 'blocked',

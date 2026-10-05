@@ -154,6 +154,7 @@ def test_not_connected_writes_last_without_replay(tmp_path=None) -> None:
 
 
 def test_hot4_submit_refuses_divergent_wire() -> None:
+    """A sealed-plan failure is not submitted and does not call pick_day."""
     from unittest import mock
     from src import webull_exec as we
 
@@ -170,31 +171,29 @@ def test_hot4_submit_refuses_divergent_wire() -> None:
                               connected=True, acc_id="paper-1")
 
         def place(self, *a, **k):
-            raise AssertionError("divergent HOT4 must not place")
+            raise AssertionError("sealed-plan failure must not place")
 
         def place_batch(self, *a, **k):
-            raise AssertionError("divergent HOT4 must not place")
+            raise AssertionError("sealed-plan failure must not place")
 
     card = {
         "date": "2026-09-21", "stale": False, "policy": HOT4,
-        "tickets": [{
-            "side": "BUY", "ticker": "DELL", "shares": 1, "px": 10.0,
-            "status": "plan", "date": "2026-09-21",
-        }],
-        "would_buy": {"rows": [
-            {"ticker": t, "side": "long"}
-            for t in ("DELL", "GME", "UMC", "VSTS")
-        ]},
+        "tickets": [],
+        "would_buy": {"rows": []},
+        "would_sell": {"rows": []},
         "hard_red": False,
+        "look_error": (
+            "paper cash 1.00 cannot fund sealed h1 buys; "
+            "refusing; not rebuilding HOT4"
+        ),
+        "why": "refusing; not rebuilding HOT4",
+        "skipped": [],
     }
     with mock.patch.object(we, "PaperAPI", return_value=Alive()), \
             mock.patch.object(we, "_plan", return_value=card), \
             mock.patch(
-                "src.strategy_tickets.assert_hot4_wire",
-                side_effect=ValueError(
-                    "HOT4 buys ['DELL', 'GME', 'UMC', 'VSTS'] diverge from "
-                    "Factor Mine recipe ['FEAM', 'TJGC', 'LVWR', 'SECZ'] "
-                    "for 2026-09-21"),
+                "src.factor_mine.pick_day",
+                side_effect=AssertionError("pick_day"),
             ), \
             mock.patch.object(we, "write_last") as wl, \
             mock.patch.object(we, "inject_today_from_disk"):
@@ -203,7 +202,7 @@ def test_hot4_submit_refuses_divergent_wire() -> None:
     last = wl.call_args[0][0]
     assert last["submit"] is False
     assert last["sent"] == []
-    assert "diverge" in (last.get("error") or "")
+    assert "not rebuilding HOT4" in (last.get("why") or "")
 
 
 def test_stale_combo_does_not_submit() -> None:
@@ -292,68 +291,23 @@ def test_hot4_tickets_long_only_skip_held_cash_and_sit() -> None:
     }
     pub = load_hot4_published("2026-09-17", payload)
     assert [b["ticker"] for b in pub["buy"]] == ["INDP", "GPRO", "INSP", "TJGC"]
+    # The published panel is not the send list. 2026-09-17 has no sealed plan.
     snap = BrokerSnap(env="paper", cash=10_000, positions={"INDP": {"shares": 1}})
     card = plan_hot4_for_broker("2026-09-17", snap, payload=payload)
     assert card["policy"] == HOT4
-    assert card["hard_red"] is False
-    assert card["order_type"] == "MARKET"
-    names = {t["ticker"] for t in card["tickets"]}
-    assert "INDP" not in names
-    assert "GPRO" in names and "INSP" in names and "TJGC" in names
-    assert all(t["side"] == "BUY" for t in card["tickets"])
-    assert len(card["would_buy"]["rows"]) == 4
+    assert card["source"] == "sealed_h1"
+    assert card["tickets"] == []
+    assert "not rebuilding HOT4" in card["look_error"]
+    assert "INDP" not in card["look_error"]
 
 
 def test_hot4_sells_size_from_paper_lots() -> None:
-    """List-drop exits use the paper lot. Unheld and Clock-B leftovers do not sell."""
-    payload = {
-        "date": "2026-09-22",
-        "strategies": {
-            HOT4: {
-                "name": HOT4, "date": "2026-09-22", "side": "long",
-                "status": "ok", "s": -0.5, "sit": False,
-                "buy": [
-                    {"ticker": t, "side": "long", "px": 10}
-                    for t in ("SECZ", "GRAL", "NUAI", "INDP")
-                ],
-                "sell": [
-                    {"ticker": t, "side": "long", "src": "list-drop"}
-                    for t in ("FEAM", "TJGC", "LVWR")
-                ],
-            }
-        },
-    }
-    snap = BrokerSnap(
-        env="paper", cash=5_000, connected=True,
-        positions={
-            "FEAM": {"shares": 40, "cost_px": 3.5, "last_px": 3.2},
-            "DELL": {"shares": 100, "cost_px": 20, "last_px": 21},
-        },
-    )
-    card = plan_hot4_for_broker("2026-09-22", snap, payload=payload)
-    assert [r["ticker"] for r in card["would_sell"]["rows"]] == [
-        "FEAM", "TJGC", "LVWR",
-    ]
-    assert card["tickets"][0]["side"] == "SELL"
-    sells = [t for t in card["tickets"] if t["side"] == "SELL"]
-    assert [t["ticker"] for t in sells] == ["FEAM"]
-    assert sells[0]["shares"] == 40
-    assert sells[0]["order_type"] == "MARKET"
-    assert "DELL" not in {t["ticker"] for t in card["tickets"]}
-    assert any(s["ticker"] == "TJGC" and s["kind"] == "unheld" for s in card["skipped"])
-    assert any(s["ticker"] == "LVWR" and s["kind"] == "unheld" for s in card["skipped"])
-    buys = [t for t in card["tickets"] if t["side"] == "BUY"]
-    assert buys and all(t["side"] == "BUY" for t in buys)
+    """The leftover sizer still uses the paper lot. The sealed send path does not."""
     bare, bare_skips = size_hot4_sells(
         ["FEAM", "NOPE"], positions={"FEAM": {"shares": 2}}, date="2026-09-22",
     )
     assert [(t["ticker"], t["shares"]) for t in bare] == [("FEAM", 2)]
     assert any(s["kind"] == "unheld" and s["ticker"] == "NOPE" for s in bare_skips)
-    payload["strategies"][HOT4]["sit"] = True
-    payload["strategies"][HOT4]["s"] = -4
-    red = plan_hot4_for_broker("2026-09-22", snap, payload=payload)
-    assert [t["ticker"] for t in red["tickets"] if t["side"] == "SELL"] == ["FEAM"]
-    assert [t for t in red["tickets"] if t["side"] == "BUY"] == []
 
 
 def test_hot4_zero_cash_is_honest() -> None:
@@ -367,11 +321,13 @@ def test_hot4_zero_cash_is_honest() -> None:
         },
     }
     snap = BrokerSnap(env="paper", cash=0, positions={}, buying_power=10_000)
-    card = plan_hot4_for_broker("2026-09-17", snap, payload=payload)
+    card = plan_hot4_for_broker("2026-10-02", snap, payload=payload)
     assert card["tickets"] == []
-    assert len(card["would_buy"]["rows"]) == 4
-    assert all(s["kind"] == "cash" for s in card["skipped"])
-    assert "cannot buy 1 share" in card["why"]
+    assert [r["ticker"] for r in card["would_buy"]["rows"]] == [
+        "SDEV", "QSI", "GLND", "TJGC",
+    ]
+    assert "not rebuilding HOT4" in card["why"]
+    assert "cannot fund sealed h1 buys" in card["why"]
 
 
 def test_paper_order_is_market_not_limit() -> None:

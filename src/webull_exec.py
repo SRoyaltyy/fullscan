@@ -1,37 +1,35 @@
-"""Push today's union_hot_n4_h1 (hot4) tickets into Webull *paper*.
+"""Push today's sealed h1 plan into Webull *paper*.
 
-Default source is ``hot4``: long-only today's ``union_hot_n4_h1`` buy
-list and continuous-book list-drop sells from
-``dashboard/factor-mine/today_strategies.json`` (same panel the
-factor-mine cash book uses). Submit refuses when buys or sells
-diverge from that Factor Mine recipe. Sell tickets are sized from
-paper lots the account holds. Flatten live-card tickets stay
-available via ``--source flatten``. Combo is a manual escape only.
+Default source is the sealed IRONCLAD h1 forward plan for that session
+(``research/hot_n4_clean_v4/forward_h1/h1_log.jsonl``, ``kind=plan``).
+The strategy name stays ``union_hot_n4_h1``. Buys are the plan's picks
+at sealed share counts. Sells are ``planned_sells`` at the plan's share
+counts. Factor Mine ``pick_day`` / ``today_strategies.json`` is not a
+fallback: a missing plan or paper cash that cannot fund the sealed buy
+notionals fails closed. Flatten live-card tickets stay available via
+``--source flatten``. Combo is a manual escape only.
 
 Official OpenAPI sandbox is the in-app Paper Trading book
 (webull.com → Open API → “Using OpenAPI service in Paper Trading”).
 App key + secret are auto-approved for sandbox in a few minutes.
 
-    python -m src.webull_exec --date 2026-09-17          # dry-run hot4
-    python -m src.webull_exec --date 2026-09-17 --submit  # paper MARKET
+    python -m src.webull_exec --date 2026-10-02          # dry-run sealed h1
+    python -m src.webull_exec --date 2026-10-02 --submit  # paper MARKET
     python -m src.webull_exec --source flatten --submit   # flatten escape
 
 REAL is refused unless --env real AND --live AND WEBULL_LIVE=1.
 Paper never talks to api.webull.com. Do not enable --env real here.
 
 Rules:
-  * hot4: long-only leftover cash, MARKET (live print, not ticket px)
-  * size that cash at HOT4_CASH_HAIRCUT so the sum of planned notionals
-    stays under the snapshot when earlier fills print above the plan px
-  * serial place re-reads sandbox cash and clamps the next BUY
-    (skip the leg if the remainder cannot buy 1 share)
-  * skip a name already held; skip if leftover cash cannot buy 1 share
-  * sells first: list-drop names after min-hold, whole paper lot only
-  * never sell a name the paper book does not hold
-  * hard-red S≤−3 sits new buys; list-drop exits still sell
-  * stale Friday panel is dry-run unless --allow-stale
+  * sealed h1: MARKET at the live print, not a limit at the plan px
+  * buy and sell tickers and share counts come from that session's plan
+  * paper cash below the sealed buy notional fails closed (no HOT4 rebuild,
+    no silent resize of the sealed share count)
+  * sells first, at the plan's share count, even when the paper book
+    does not already hold the name
+  * a missing sealed plan fails closed — no pick_day rebuild
   * flatten source: only live card tickets (never the would-buy wish list)
-  * $0 sandbox cash still buys nothing — snapshot reports the skip
+  * REAL stays refused unless --env real AND --live AND WEBULL_LIVE=1
 
 Env: WEBULL_APP_KEY, WEBULL_APP_SECRET, WEBULL_ACCOUNT_ID (optional),
      WEBULL_REGION (default us).
@@ -504,134 +502,132 @@ def size_hot4_sells(sells: list, *, positions: dict | None,
     return tickets, skips
 
 
+def _sealed_ticket(date: str, side: str, ticker: str, shares: int, *,
+                   px, reason: str) -> dict:
+    ticket = {
+        "side": side,
+        "ticker": ticker,
+        "shares": int(shares),
+        "order_type": "MARKET",
+        "status": "plan",
+        "sleeve": HOT4,
+        "kid_side": "long",
+        "date": date,
+        "clock": "09:30 ET",
+        "reason": reason,
+        "sealed_shares": True,
+        "source": "sealed_h1",
+    }
+    if px is not None and float(px) > 0:
+        ticket["px"] = round(float(px), 4)
+        ticket["notional"] = round(int(shares) * float(ticket["px"]), 2)
+    return ticket
+
+
 def plan_hot4_for_broker(date: str, snap: BrokerSnap,
                          payload: dict | None = None,
                          panel: dict | None = None) -> dict:
-    """Today's hot4 buys plus recipe exits. Sells use paper lot size."""
-    from src import factor_mine as fm
-    from src import factor_mine_book as fmb
-    from src.combo_broker import resolve_rows
+    """Sealed h1 plan for ``date``. ``payload`` and ``panel`` are ignored.
 
-    published = load_hot4_published(date, payload)
-    buys = list(published.get("buy") or [])
-    sells = list(published.get("sell") or [])
-    use_date = str(published.get("date") or date)
-    stale = bool(published and published.get("status") not in ("ok", "sit"))
-    source = "today_strategies"
-    look_err = ""
-    if not published:
-        looked = resolve_rows(date, panel)
-        rec_by = {r["name"]: r for r in fm.build_recipes()}
-        rec = rec_by.get(HOT4) or {}
-        rows = looked.get("rows") or []
-        use_date = str(looked.get("date") or date)
-        stale = bool(looked.get("stale"))
-        source = f"panel_{looked.get('source') or 'look'}"
-        look_err = looked.get("error") or ""
-        for r in fm.pick_day(rows, rec) if rec else []:
-            t = str(r.get("ticker") or "").upper()
-            if t:
-                buys.append({
-                    "ticker": t,
-                    "src": ",".join(r.get("sources") or []),
-                    "side": "long",
-                    "row": r,
-                })
-        from src import strategy_tickets as st
-        try:
-            recipe_sells = st.hot4_recipe_sells(use_date, panel)
-        except ValueError as exc:
-            look_err = look_err or str(exc)
-            recipe_sells = []
-        for t in recipe_sells:
-            sells.append({
-                "ticker": t, "side": "long", "kid_side": "long",
-                "src": "list-drop",
-            })
-    else:
-        pub_date = str(published.get("date")
-                       or published.get("clock_legal_for")
-                       or published.get("session_open") or "")
-        if pub_date and pub_date != date:
-            stale = True
-            use_date = pub_date
-    try:
-        s = published.get("s")
-        if s is None:
-            s = fmb.morning_s(fmb.load_regime(), date)
-    except Exception:
-        s = published.get("s")
-    sit = bool(published.get("sit"))
-    # Hot4 spends leftover cash only. Buying power is not a fill.
+    The strategy name stays ``union_hot_n4_h1``. Tickers and share counts
+    come from the sealed plan. Paper cash that cannot fund the buy
+    notionals returns an empty ticket list and ``look_error`` — it does
+    not resize and it does not call ``pick_day``.
+    """
+    del payload, panel  # Factor Mine publish is not the send list.
+    from src.h1_sealed_exec import SealedH1Error, sealed_h1_orders
+
     cash = max(float(getattr(snap, "cash", 0) or 0), 0.0)
-    positions = (snap.positions or {}) if snap else {}
-    held = set(positions)
-    sell_tickets, sell_skips = size_hot4_sells(
-        sells, positions=positions, date=use_date,
-    )
-    buy_tickets, buy_skips = size_hot4_tickets(
-        buys, cash=cash, held=held, date=use_date, s=s, sit=sit,
-    )
-    # Recipe sells first so the next snapshot can spend the freed cash.
-    tickets = sell_tickets + buy_tickets
-    skips = sell_skips + buy_skips
+    try:
+        orders = sealed_h1_orders(date)
+    except SealedH1Error as exc:
+        msg = str(exc)
+        if "not rebuilding HOT4" not in msg:
+            msg = f"{msg}; refusing; not rebuilding HOT4"
+        return {
+            "date": date,
+            "want_date": date,
+            "policy": HOT4,
+            "combo": "",
+            "source": "sealed_h1",
+            "stale": False,
+            "score": None,
+            "hard_red": False,
+            "why": msg,
+            "tickets": [],
+            "skipped": [{"date": date, "ticker": "", "kind": "sealed",
+                         "reason": msg}],
+            "would_buy": {"rows": []},
+            "would_sell": {"rows": []},
+            "flatten_ok": True,
+            "look_error": msg,
+            "order_type": "MARKET",
+            "plan_sha256": "",
+        }
     would = []
-    for raw in buys:
-        t = str((raw or {}).get("ticker") or "").upper()
-        if not t:
-            continue
-        side = str(raw.get("side") or raw.get("kid_side") or "long").lower()
-        if side == "short":
-            continue
+    buy_tickets = []
+    for row in orders["buys"]:
         would.append({
-            "ticker": t,
+            "ticker": row["ticker"],
+            "shares": row["shares"],
             "sleeve": HOT4,
             "kid_side": "long",
             "clock": "09:30 ET",
-            "px": raw.get("px"),
-            "src": raw.get("src"),
+            "px": row["px"],
+            "src": ",".join(row.get("sources") or []),
         })
+        buy_tickets.append(_sealed_ticket(
+            date, "BUY", row["ticker"], row["shares"], px=row["px"],
+            reason=f"sealed h1 pick rank {row['rank']} {row['shares']} sh",
+        ))
     would_sell = []
-    for raw in sells:
-        if isinstance(raw, str):
-            t = raw.strip().upper()
-            src = "list-drop"
-            px = None
-        else:
-            t = str((raw or {}).get("ticker") or "").upper()
-            src = raw.get("src")
-            px = raw.get("px")
-        if not t:
-            continue
+    sell_tickets = []
+    for row in orders["sells"]:
         would_sell.append({
-            "ticker": t,
+            "ticker": row["ticker"],
+            "shares": row["shares"],
             "sleeve": HOT4,
             "kid_side": "long",
             "clock": "09:30 ET",
-            "px": px,
-            "src": src or "list-drop",
+            "px": row.get("px"),
+            "src": row.get("reason") or "planned_sell",
         })
-    hard_red = sit or (
-        s is not None and float(s) <= float(fmb.HARD_RED))
-    why = (f"{HOT4} long-only leftover cash ×{HOT4_CASH_HAIRCUT:.0%} "
-           f"slip buffer · list-drop sells from paper lots · MARKET · "
-           f"rows via {source}")
-    if stale:
-        why += (f" · STALE panel {use_date} (wanted {date})"
-                " — do not submit unless --allow-stale")
-    if hard_red:
-        why += f" · hard-red S={s} sit"
-    if cash <= 0:
-        why += f" · leftover cash ${cash:.2f} cannot buy 1 share"
+        sell_tickets.append(_sealed_ticket(
+            date, "SELL", row["ticker"], row["shares"], px=row.get("px"),
+            reason=f"sealed h1 {row.get('reason') or 'planned sell'} {row['shares']} sh",
+        ))
+    need = float(orders["notional"])
+    look_err = ""
+    tickets = sell_tickets + buy_tickets
+    skips: list[dict] = []
+    if need > cash + 1e-6:
+        names = ", ".join(
+            f"{row['ticker']} {row['shares']}" for row in orders["buys"]
+        ) or "none"
+        look_err = (
+            f"paper cash {cash:.2f} cannot fund sealed h1 buys "
+            f"[{names}] costing {need:.2f}; refusing; not rebuilding HOT4"
+        )
+        tickets = []
+        skips.append({
+            "date": date, "ticker": "", "kind": "cash", "reason": look_err,
+        })
+    why = (
+        f"{HOT4} sealed h1 plan {orders.get('plan_sha256', '')[:12]} "
+        f"· buys {len(orders['buys'])} sells {len(orders['sells'])} "
+        f"· notional ${need:.2f} · MARKET · no pick_day"
+    )
+    if look_err:
+        why = look_err
     return {
-        "date": use_date,
+        "date": date,
         "want_date": date,
         "policy": HOT4,
         "combo": "",
-        "source": source,
-        "stale": stale,
-        "score": s,
-        "hard_red": hard_red,
+        "source": "sealed_h1",
+        "stale": False,
+        "score": orders.get("morning_s"),
+        "hard_red": False,
         "why": why,
         "tickets": tickets,
         "skipped": skips,
@@ -640,7 +636,9 @@ def plan_hot4_for_broker(date: str, snap: BrokerSnap,
         "flatten_ok": True,
         "look_error": look_err,
         "order_type": "MARKET",
-        "cash_haircut": HOT4_CASH_HAIRCUT,
+        "plan_sha256": orders.get("plan_sha256") or "",
+        "book_recipe": orders.get("recipe") or "",
+        "sealed_notional": need,
     }
 
 
@@ -941,6 +939,8 @@ class PaperAPI:
         this batch stay reserved until that cash drop shows up, then the
         leg is clamped to floor(cash_still_free / px). Planned shares are
         never increased. A leg that cannot buy 1 share is skipped.
+        A sealed h1 buy (``sealed_shares``) is not resized: if the
+        planned share count does not fit, that leg is refused.
         """
         if self.host != PAPER_HOST or self.trade is None or not self.account_id:
             raise RuntimeError("sandbox account not connected")
@@ -959,6 +959,19 @@ class PaperAPI:
             free = cash_still_free(start_cash, fresh, reserved)
             if side == "BUY" and free is not None and px > 0:
                 shares = clamp_buy_shares(planned, px, free)
+                if body_ticket.get("sealed_shares") and shares != planned:
+                    coid = str(order_body(body_ticket)["client_order_id"])
+                    out[coid] = {
+                        "ok": False,
+                        "shares": planned,
+                        "error": (
+                            f"sealed h1 {body_ticket.get('ticker')} {planned} shares "
+                            f"@ {px:.4f} does not fit cash still free {free:.2f}; "
+                            "refusing; not rebuilding HOT4"
+                        ),
+                        "acknowledged_at": ack,
+                    }
+                    continue
                 if shares < 1:
                     coid = str(order_body(body_ticket)["client_order_id"])
                     out[coid] = {
@@ -1109,26 +1122,9 @@ def run(date: str | None, *, env: str = "paper", submit: bool = False,
     card = _plan(date, snap, source=source, combo=combo)
     for t in card.get("tickets") or []:
         t.setdefault("date", date)
-    if source == "hot4" and requested_submit:
-        from src.strategy_tickets import assert_hot4_wire
-        try:
-            assert_hot4_wire(
-                date, (card.get("would_buy") or {}).get("rows") or [],
-                sells=(card.get("would_sell") or {}).get("rows") or [])
-        except ValueError as exc:
-            print(f"[webull] {exc}")
-            last = {
-                "date": date, "env": env, "submit": False,
-                "connected": True, "error": str(exc), "host": api.host,
-                "n_tickets": 0, "source": source, "combo": "",
-                "stale": bool(card.get("stale")), "policy": HOT4,
-                "skipped": card.get("skipped") or [], "why": str(exc),
-                "sent": [],
-                "generated": datetime.now().isoformat(timespec="seconds"),
-            }
-            if write:
-                write_last(last)
-            return 2
+    if card.get("look_error"):
+        print(f"[webull] {card['look_error']}")
+        submit = False
     if submit and card.get("stale") and not allow_stale:
         print("[webull] stale look — dry-run only (pass --allow-stale "
               "to send Friday's list as today's tickets)")
@@ -1161,7 +1157,8 @@ def run(date: str | None, *, env: str = "paper", submit: bool = False,
     failed = (not submit or card.get("stale") or card.get("look_error") or
               any(x.get("status") == "error" for x in last["sent"]) or
               (source == "hot4" and not card.get("hard_red") and
-               any(x.get("kind") in ("cash", "no_price") for x in card.get("skipped", []))))
+               any(x.get("kind") in ("cash", "no_price", "sealed")
+                   for x in card.get("skipped", []))))
     return 2 if requested_submit and failed else 0
 
 
@@ -1176,7 +1173,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--write", action="store_true", default=True)
     ap.add_argument("--source", choices=("hot4", "flatten", "combo"),
                     default="hot4",
-                    help="union_hot_n4_h1 long-only (default), flatten escape, or combo")
+                    help="sealed h1 plan as union_hot_n4_h1 (default), flatten escape, or combo")
     ap.add_argument("--combo", default=PAPER_COMBO,
                     help="combo name when --source combo (manual escape)")
     ap.add_argument("--allow-stale", action="store_true",

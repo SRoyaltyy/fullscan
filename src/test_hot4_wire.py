@@ -152,7 +152,9 @@ def test_paper_open_and_webull_refuse_divergent_submit() -> None:
     try:
         po.make_plan(payload, snap, clock)
     except ValueError as exc:
-        assert "diverge" in str(exc)
+        text = str(exc)
+        assert "not rebuilding HOT4" in text
+        assert "DELL" not in text
     else:
         raise AssertionError("paper_open accepted a Clock-B HOT4 list")
 
@@ -168,34 +170,20 @@ def test_paper_open_and_webull_refuse_divergent_submit() -> None:
             return snap
 
         def place(self, *args, **kwargs):
-            raise AssertionError("divergent HOT4 must not place")
+            raise AssertionError("unsealed session must not place")
 
         def place_batch(self, *args, **kwargs):
-            raise AssertionError("divergent HOT4 must not place")
+            raise AssertionError("unsealed session must not place")
 
     from unittest import mock
-    card = {
-        "date": date,
-        "stale": False,
-        "policy": we.HOT4,
-        "tickets": [{
-            "side": "BUY", "ticker": "DELL", "shares": 1, "px": 10.0,
-            "date": date, "status": "plan",
-        }],
-        "would_buy": {"rows": [
-            {"ticker": t, "side": "long"} for t in CLOCK_B_PREPARE
-        ]},
-        "hard_red": False,
-    }
     with mock.patch.object(we, "PaperAPI", return_value=Alive()), \
-            mock.patch.object(we, "_plan", return_value=card), \
             mock.patch.object(we, "write_last") as wrote:
         rc = we.run(date, submit=True, write=True, source="hot4")
     assert rc == 2
     last = wrote.call_args[0][0]
     assert last["submit"] is False
     assert last["sent"] == []
-    assert "diverge" in (last.get("error") or "")
+    assert "not rebuilding HOT4" in (last.get("why") or "")
 
 
 def _cash_book_days() -> dict[str, dict]:
