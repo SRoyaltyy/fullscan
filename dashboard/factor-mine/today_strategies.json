@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:41:03.151550-04:00",
+  "generated_at": "2026-10-05T07:46:37.712644-04:00",
   "n": 351,
   "n_ok": 350,
   "families": [
@@ -24,7 +24,7 @@
           "predict": "UP",
           "px": 27.63,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "EDU",
@@ -33,7 +33,7 @@
           "predict": "UP",
           "px": 55.87,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PRGS",
@@ -42,7 +42,7 @@
           "predict": "UP",
           "px": 39.41,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "sell": [
@@ -53,7 +53,7 @@
           "predict": "DOWN",
           "px": 36.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ARE",
@@ -62,7 +62,7 @@
           "predict": "DOWN",
           "px": 48.57,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SOC",
@@ -71,7 +71,7 @@
           "predict": "DOWN",
           "px": 3.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BIDU",
@@ -80,7 +80,7 @@
           "predict": "DOWN",
           "px": 86.59,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BNTX",
@@ -89,7 +89,7 @@
           "predict": "DOWN",
           "px": 97.99,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IFRX",
@@ -98,7 +98,7 @@
           "predict": "DOWN",
           "px": 1.82,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ALMS",
@@ -107,7 +107,7 @@
           "predict": "DOWN",
           "px": 7.14,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IBM",
@@ -116,7 +116,7 @@
           "predict": "DOWN",
           "px": 221.57,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PCT",
@@ -125,7 +125,7 @@
           "predict": "DOWN",
           "px": 4.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "TYRA",
@@ -134,7 +134,7 @@
           "predict": "DOWN",
           "px": 21.45,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "AXSM",
@@ -143,7 +143,7 @@
           "predict": "DOWN",
           "px": 193.89,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "NRXP",
@@ -152,7 +152,7 @@
           "predict": "DOWN",
           "px": 2.91,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "WVE",
@@ -161,7 +161,7 @@
           "predict": "DOWN",
           "px": 3.8,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "LXRX",
@@ -170,7 +170,7 @@
           "predict": "DOWN",
           "px": 1.9,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "VNET",
@@ -179,7 +179,7 @@
           "predict": "DOWN",
           "px": 6.05,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "buy_n": 3,
@@ -204,7 +204,7 @@
           "predict": "UP",
           "px": 27.63,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "EDU",
@@ -213,7 +213,7 @@
           "predict": "UP",
           "px": 55.87,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PRGS",
@@ -222,7 +222,7 @@
           "predict": "UP",
           "px": 39.41,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "sell": [
@@ -233,7 +233,7 @@
           "predict": "DOWN",
           "px": 36.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ARE",
@@ -242,7 +242,7 @@
           "predict": "DOWN",
           "px": 48.57,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SOC",
@@ -251,7 +251,7 @@
           "predict": "DOWN",
           "px": 3.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BIDU",
@@ -260,7 +260,7 @@
           "predict": "DOWN",
           "px": 86.59,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BNTX",
@@ -269,7 +269,7 @@
           "predict": "DOWN",
           "px": 97.99,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IFRX",
@@ -278,7 +278,7 @@
           "predict": "DOWN",
           "px": 1.82,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ALMS",
@@ -287,7 +287,7 @@
           "predict": "DOWN",
           "px": 7.14,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IBM",
@@ -296,7 +296,7 @@
           "predict": "DOWN",
           "px": 221.57,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PCT",
@@ -305,7 +305,7 @@
           "predict": "DOWN",
           "px": 4.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "TYRA",
@@ -314,7 +314,7 @@
           "predict": "DOWN",
           "px": 21.45,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "AXSM",
@@ -323,7 +323,7 @@
           "predict": "DOWN",
           "px": 193.89,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "NRXP",
@@ -332,7 +332,7 @@
           "predict": "DOWN",
           "px": 2.91,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "WVE",
@@ -341,7 +341,7 @@
           "predict": "DOWN",
           "px": 3.8,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "LXRX",
@@ -350,7 +350,7 @@
           "predict": "DOWN",
           "px": 1.9,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "VNET",
@@ -359,7 +359,7 @@
           "predict": "DOWN",
           "px": 6.05,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "buy_n": 3,
@@ -384,7 +384,7 @@
           "predict": "UP",
           "px": 27.63,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "EDU",
@@ -393,7 +393,7 @@
           "predict": "UP",
           "px": 55.87,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PRGS",
@@ -402,7 +402,7 @@
           "predict": "UP",
           "px": 39.41,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "sell": [
@@ -413,7 +413,7 @@
           "predict": "DOWN",
           "px": 36.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SOC",
@@ -422,7 +422,7 @@
           "predict": "DOWN",
           "px": 3.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PCT",
@@ -431,7 +431,7 @@
           "predict": "DOWN",
           "px": 4.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BIDU",
@@ -440,7 +440,7 @@
           "predict": "DOWN",
           "px": 86.59,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IFRX",
@@ -449,7 +449,7 @@
           "predict": "DOWN",
           "px": 1.82,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BNTX",
@@ -458,7 +458,7 @@
           "predict": "DOWN",
           "px": 97.99,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ALMS",
@@ -467,7 +467,7 @@
           "predict": "DOWN",
           "px": 7.14,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ARE",
@@ -476,7 +476,7 @@
           "predict": "DOWN",
           "px": 48.57,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "TYRA",
@@ -485,7 +485,7 @@
           "predict": "DOWN",
           "px": 21.45,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "NRXP",
@@ -494,7 +494,7 @@
           "predict": "DOWN",
           "px": 2.91,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "AXSM",
@@ -503,7 +503,7 @@
           "predict": "DOWN",
           "px": 193.89,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IMNM",
@@ -512,7 +512,7 @@
           "predict": "DOWN",
           "px": 21.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BAK",
@@ -521,7 +521,7 @@
           "predict": "DOWN",
           "px": 1.49,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IBM",
@@ -530,7 +530,7 @@
           "predict": "DOWN",
           "px": 221.57,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ZNTL",
@@ -539,7 +539,7 @@
           "predict": "DOWN",
           "px": 2.57,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "buy_n": 3,
@@ -564,7 +564,7 @@
           "predict": "UP",
           "px": 27.63,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "EDU",
@@ -573,7 +573,7 @@
           "predict": "UP",
           "px": 55.87,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PRGS",
@@ -582,7 +582,7 @@
           "predict": "UP",
           "px": 39.41,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "sell": [
@@ -593,7 +593,7 @@
           "predict": "DOWN",
           "px": 36.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SOC",
@@ -602,7 +602,7 @@
           "predict": "DOWN",
           "px": 3.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PCT",
@@ -611,7 +611,7 @@
           "predict": "DOWN",
           "px": 4.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BIDU",
@@ -620,7 +620,7 @@
           "predict": "DOWN",
           "px": 86.59,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IFRX",
@@ -629,7 +629,7 @@
           "predict": "DOWN",
           "px": 1.82,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BNTX",
@@ -638,7 +638,7 @@
           "predict": "DOWN",
           "px": 97.99,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ALMS",
@@ -647,7 +647,7 @@
           "predict": "DOWN",
           "px": 7.14,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ARE",
@@ -656,7 +656,7 @@
           "predict": "DOWN",
           "px": 48.57,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "TYRA",
@@ -665,7 +665,7 @@
           "predict": "DOWN",
           "px": 21.45,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "NRXP",
@@ -674,7 +674,7 @@
           "predict": "DOWN",
           "px": 2.91,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "AXSM",
@@ -683,7 +683,7 @@
           "predict": "DOWN",
           "px": 193.89,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IMNM",
@@ -692,7 +692,7 @@
           "predict": "DOWN",
           "px": 21.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BAK",
@@ -701,7 +701,7 @@
           "predict": "DOWN",
           "px": 1.49,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IBM",
@@ -710,7 +710,7 @@
           "predict": "DOWN",
           "px": 221.57,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ZNTL",
@@ -719,7 +719,7 @@
           "predict": "DOWN",
           "px": 2.57,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "buy_n": 3,
@@ -744,7 +744,7 @@
           "predict": "UP",
           "px": 27.63,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "EDU",
@@ -753,7 +753,7 @@
           "predict": "UP",
           "px": 55.87,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PRGS",
@@ -762,7 +762,7 @@
           "predict": "UP",
           "px": 39.41,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "sell": [
@@ -773,7 +773,7 @@
           "predict": "DOWN",
           "px": 36.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PCT",
@@ -782,7 +782,7 @@
           "predict": "DOWN",
           "px": 4.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IFRX",
@@ -791,7 +791,7 @@
           "predict": "DOWN",
           "px": 1.82,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SOC",
@@ -800,7 +800,7 @@
           "predict": "DOWN",
           "px": 3.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BNTX",
@@ -809,7 +809,7 @@
           "predict": "DOWN",
           "px": 97.99,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IMNM",
@@ -818,7 +818,7 @@
           "predict": "DOWN",
           "px": 21.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BIDU",
@@ -827,7 +827,7 @@
           "predict": "DOWN",
           "px": 86.59,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "NRXP",
@@ -836,7 +836,7 @@
           "predict": "DOWN",
           "px": 2.91,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BAK",
@@ -845,7 +845,7 @@
           "predict": "DOWN",
           "px": 1.49,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "TMC",
@@ -854,7 +854,7 @@
           "predict": "DOWN",
           "px": 3.85,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "AIRS",
@@ -863,7 +863,7 @@
           "predict": "DOWN",
           "px": 1.92,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ALMS",
@@ -872,7 +872,7 @@
           "predict": "DOWN",
           "px": 7.14,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ZNTL",
@@ -881,7 +881,7 @@
           "predict": "DOWN",
           "px": 2.57,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "LFMD",
@@ -890,7 +890,7 @@
           "predict": "DOWN",
           "px": 2.93,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SMR",
@@ -899,7 +899,7 @@
           "predict": "DOWN",
           "px": 8.02,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "buy_n": 3,
@@ -924,7 +924,7 @@
           "predict": "UP",
           "px": 27.63,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "EDU",
@@ -933,7 +933,7 @@
           "predict": "UP",
           "px": 55.87,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PRGS",
@@ -942,7 +942,7 @@
           "predict": "UP",
           "px": 39.41,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "sell": [
@@ -953,7 +953,7 @@
           "predict": "DOWN",
           "px": 36.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PCT",
@@ -962,7 +962,7 @@
           "predict": "DOWN",
           "px": 4.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IFRX",
@@ -971,7 +971,7 @@
           "predict": "DOWN",
           "px": 1.82,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SOC",
@@ -980,7 +980,7 @@
           "predict": "DOWN",
           "px": 3.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BNTX",
@@ -989,7 +989,7 @@
           "predict": "DOWN",
           "px": 97.99,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IMNM",
@@ -998,7 +998,7 @@
           "predict": "DOWN",
           "px": 21.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BIDU",
@@ -1007,7 +1007,7 @@
           "predict": "DOWN",
           "px": 86.59,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "NRXP",
@@ -1016,7 +1016,7 @@
           "predict": "DOWN",
           "px": 2.91,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BAK",
@@ -1025,7 +1025,7 @@
           "predict": "DOWN",
           "px": 1.49,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "TMC",
@@ -1034,7 +1034,7 @@
           "predict": "DOWN",
           "px": 3.85,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "AIRS",
@@ -1043,7 +1043,7 @@
           "predict": "DOWN",
           "px": 1.92,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ALMS",
@@ -1052,7 +1052,7 @@
           "predict": "DOWN",
           "px": 7.14,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ZNTL",
@@ -1061,7 +1061,7 @@
           "predict": "DOWN",
           "px": 2.57,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "LFMD",
@@ -1070,7 +1070,7 @@
           "predict": "DOWN",
           "px": 2.93,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SMR",
@@ -1079,7 +1079,7 @@
           "predict": "DOWN",
           "px": 8.02,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "buy_n": 3,
@@ -1104,7 +1104,7 @@
           "predict": "UP",
           "px": 27.63,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "EDU",
@@ -1113,7 +1113,7 @@
           "predict": "UP",
           "px": 55.87,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PRGS",
@@ -1122,7 +1122,7 @@
           "predict": "UP",
           "px": 39.41,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "sell": [
@@ -1133,7 +1133,7 @@
           "predict": "DOWN",
           "px": 36.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PCT",
@@ -1142,7 +1142,7 @@
           "predict": "DOWN",
           "px": 4.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IFRX",
@@ -1151,7 +1151,7 @@
           "predict": "DOWN",
           "px": 1.82,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SOC",
@@ -1160,7 +1160,7 @@
           "predict": "DOWN",
           "px": 3.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BNTX",
@@ -1169,7 +1169,7 @@
           "predict": "DOWN",
           "px": 97.99,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IMNM",
@@ -1178,7 +1178,7 @@
           "predict": "DOWN",
           "px": 21.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BIDU",
@@ -1187,7 +1187,7 @@
           "predict": "DOWN",
           "px": 86.59,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "TMC",
@@ -1196,7 +1196,7 @@
           "predict": "DOWN",
           "px": 3.85,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BAK",
@@ -1205,7 +1205,7 @@
           "predict": "DOWN",
           "px": 1.49,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ALMS",
@@ -1214,7 +1214,7 @@
           "predict": "DOWN",
           "px": 7.14,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "NRXP",
@@ -1223,7 +1223,7 @@
           "predict": "DOWN",
           "px": 2.91,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "AIRS",
@@ -1232,7 +1232,7 @@
           "predict": "DOWN",
           "px": 1.92,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SMR",
@@ -1241,7 +1241,7 @@
           "predict": "DOWN",
           "px": 8.02,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "LFMD",
@@ -1250,7 +1250,7 @@
           "predict": "DOWN",
           "px": 2.93,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ASPI",
@@ -1259,7 +1259,7 @@
           "predict": "DOWN",
           "px": 2.62,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "buy_n": 3,
@@ -1284,7 +1284,7 @@
           "predict": "UP",
           "px": 27.63,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "EDU",
@@ -1293,7 +1293,7 @@
           "predict": "UP",
           "px": 55.87,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PRGS",
@@ -1302,7 +1302,7 @@
           "predict": "UP",
           "px": 39.41,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "sell": [
@@ -1313,7 +1313,7 @@
           "predict": "DOWN",
           "px": 36.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PCT",
@@ -1322,7 +1322,7 @@
           "predict": "DOWN",
           "px": 4.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IFRX",
@@ -1331,7 +1331,7 @@
           "predict": "DOWN",
           "px": 1.82,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SOC",
@@ -1340,7 +1340,7 @@
           "predict": "DOWN",
           "px": 3.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BNTX",
@@ -1349,7 +1349,7 @@
           "predict": "DOWN",
           "px": 97.99,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IMNM",
@@ -1358,7 +1358,7 @@
           "predict": "DOWN",
           "px": 21.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BIDU",
@@ -1367,7 +1367,7 @@
           "predict": "DOWN",
           "px": 86.59,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "TMC",
@@ -1376,7 +1376,7 @@
           "predict": "DOWN",
           "px": 3.85,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BAK",
@@ -1385,7 +1385,7 @@
           "predict": "DOWN",
           "px": 1.49,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ALMS",
@@ -1394,7 +1394,7 @@
           "predict": "DOWN",
           "px": 7.14,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "NRXP",
@@ -1403,7 +1403,7 @@
           "predict": "DOWN",
           "px": 2.91,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "AIRS",
@@ -1412,7 +1412,7 @@
           "predict": "DOWN",
           "px": 1.92,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SMR",
@@ -1421,7 +1421,7 @@
           "predict": "DOWN",
           "px": 8.02,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "LFMD",
@@ -1430,7 +1430,7 @@
           "predict": "DOWN",
           "px": 2.93,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ASPI",
@@ -1439,7 +1439,7 @@
           "predict": "DOWN",
           "px": 2.62,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "buy_n": 3,
@@ -1464,7 +1464,7 @@
           "predict": "UP",
           "px": 27.63,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "EDU",
@@ -1473,7 +1473,7 @@
           "predict": "UP",
           "px": 55.87,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PRGS",
@@ -1482,7 +1482,7 @@
           "predict": "UP",
           "px": 39.41,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "sell": [
@@ -1493,7 +1493,7 @@
           "predict": "DOWN",
           "px": 36.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PCT",
@@ -1502,7 +1502,7 @@
           "predict": "DOWN",
           "px": 4.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SOC",
@@ -1511,7 +1511,7 @@
           "predict": "DOWN",
           "px": 3.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IMNM",
@@ -1520,7 +1520,7 @@
           "predict": "DOWN",
           "px": 21.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BIDU",
@@ -1529,7 +1529,7 @@
           "predict": "DOWN",
           "px": 86.59,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BNTX",
@@ -1538,7 +1538,7 @@
           "predict": "DOWN",
           "px": 97.99,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IFRX",
@@ -1547,7 +1547,7 @@
           "predict": "DOWN",
           "px": 1.82,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "TMC",
@@ -1556,7 +1556,7 @@
           "predict": "DOWN",
           "px": 3.85,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ALMS",
@@ -1565,7 +1565,7 @@
           "predict": "DOWN",
           "px": 7.14,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BAK",
@@ -1574,7 +1574,7 @@
           "predict": "DOWN",
           "px": 1.49,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SMR",
@@ -1583,7 +1583,7 @@
           "predict": "DOWN",
           "px": 8.02,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "NRXP",
@@ -1592,7 +1592,7 @@
           "predict": "DOWN",
           "px": 2.91,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ASPI",
@@ -1601,7 +1601,7 @@
           "predict": "DOWN",
           "px": 2.62,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "AIRS",
@@ -1610,7 +1610,7 @@
           "predict": "DOWN",
           "px": 1.92,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "TYRA",
@@ -1619,7 +1619,7 @@
           "predict": "DOWN",
           "px": 21.45,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "buy_n": 3,
@@ -1644,7 +1644,7 @@
           "predict": "UP",
           "px": 27.63,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "EDU",
@@ -1653,7 +1653,7 @@
           "predict": "UP",
           "px": 55.87,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PRGS",
@@ -1662,7 +1662,7 @@
           "predict": "UP",
           "px": 39.41,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "sell": [
@@ -1673,7 +1673,7 @@
           "predict": "DOWN",
           "px": 36.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PCT",
@@ -1682,7 +1682,7 @@
           "predict": "DOWN",
           "px": 4.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SOC",
@@ -1691,7 +1691,7 @@
           "predict": "DOWN",
           "px": 3.66,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IMNM",
@@ -1700,7 +1700,7 @@
           "predict": "DOWN",
           "px": 21.68,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BIDU",
@@ -1709,7 +1709,7 @@
           "predict": "DOWN",
           "px": 86.59,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BNTX",
@@ -1718,7 +1718,7 @@
           "predict": "DOWN",
           "px": 97.99,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IFRX",
@@ -1727,7 +1727,7 @@
           "predict": "DOWN",
           "px": 1.82,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "TMC",
@@ -1736,7 +1736,7 @@
           "predict": "DOWN",
           "px": 3.85,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ALMS",
@@ -1745,7 +1745,7 @@
           "predict": "DOWN",
           "px": 7.14,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "BAK",
@@ -1754,7 +1754,7 @@
           "predict": "DOWN",
           "px": 1.49,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "SMR",
@@ -1763,7 +1763,7 @@
           "predict": "DOWN",
           "px": 8.02,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "NRXP",
@@ -1772,7 +1772,7 @@
           "predict": "DOWN",
           "px": 2.91,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ASPI",
@@ -1781,7 +1781,7 @@
           "predict": "DOWN",
           "px": 2.62,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "AIRS",
@@ -1790,7 +1790,7 @@
           "predict": "DOWN",
           "px": 1.92,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "TYRA",
@@ -1799,7 +1799,7 @@
           "predict": "DOWN",
           "px": 21.45,
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "buy_n": 3,
@@ -1840,7 +1840,7 @@
           "px": 12.79,
           "predict": "UP",
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "INDP",
@@ -1848,7 +1848,7 @@
           "px": 3.22,
           "predict": "UP",
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "sell": [
@@ -1858,7 +1858,7 @@
           "px": 2.16,
           "predict": "UP",
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "COP",
@@ -1866,7 +1866,7 @@
           "px": 126.82,
           "predict": "UP",
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "ETON",
@@ -1874,7 +1874,7 @@
           "px": 59.18,
           "predict": "UP",
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "PCRX",
@@ -1882,7 +1882,7 @@
           "px": 25.39,
           "predict": "UP",
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "IT",
@@ -1890,7 +1890,7 @@
           "px": 185.73,
           "predict": "UP",
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         },
         {
           "ticker": "MHK",
@@ -1898,7 +1898,7 @@
           "px": 124.43,
           "predict": "UP",
           "px_src": "session_export",
-          "px_asof": "2026-10-05T07:41:03.153868-04:00"
+          "px_asof": "2026-10-05T07:46:37.715557-04:00"
         }
       ],
       "buy_n": 2,
@@ -8364,7 +8364,7 @@
   },
   "quote": {
     "src": "session_export",
-    "at": "2026-10-05T07:41:03.153868-04:00",
+    "at": "2026-10-05T07:46:37.715557-04:00",
     "after_open": false,
     "n": 11668,
     "error": null,
@@ -8373,13 +8373,13 @@
   "decision_readiness": {
     "date": "2026-10-05",
     "ready": true,
-    "fingerprint": "aefe2b01625dd4c0ec9932b001fac4eb1e11509af331a3c9b701115be8bb9cdb",
+    "fingerprint": "b7a2352daea2e42cd6204d25db492b3441042d671122712109ff9fe9d57f58ca",
     "inputs": {
       "01_daily/general/2026-10-05_predict.md": "19be7057978b44aaf4a210d2cf104b449780aba85bfcf44856cf70e23ad9db83",
       "01_daily/sectors/2026-10-05/_board.json": "874b3d2417b547f38549d6c28c6f01ae4a206da5c555d3ea2fd69426e52f49ef",
       "01_daily/news/2026-10-05_actions.json": "ecb5cb74c579df473d3fc5721025c42889c64706ca5d8d726f68174e2be5e8a9",
       "01_daily/news/2026-10-05_finviz_digest.json": "9a784cdb5424cbd6e3456c08820b475de4997910caee2d7dc8f9682ade1871db",
-      "01_daily/news/2026-10-05_judge.md": "00ab1e65063c4a4ab5d3850d7e9481cd9651d284b4916008e1d62b9d49d06ee5",
+      "01_daily/news/2026-10-05_judge.md": "1596e901f66835e090983cd036e25e529a178d558f2d87744f21c017bcc3502b",
       "01_daily/weather/2026-10-05_weather.json": "595151d90faa7a0d610b344fe8e9452321fa0ed2cadc74222edf802888203b3a",
       "data/ab_checklist/2026-10-05_ab_checklist_enriched.csv": "17daf64f9247b3ae073157bf98208551439511f263475ede5763887c26ae581f",
       "data/join/2026-10-05_ranked.csv": "23b3a89318866867f9ffabe8790de146979c20ef71f5819b5eecbda2fb2a3762",
@@ -8387,6 +8387,6 @@
       "data/factor_mine/panel.json": "e267fd32c7b4b92ff991aad16bdb4874411b948a677c1861d26a33012837b5ea"
     },
     "blockers": [],
-    "completed_at": "2026-10-05T07:41:04.933870-04:00"
+    "completed_at": "2026-10-05T07:46:39.974577-04:00"
   }
 }

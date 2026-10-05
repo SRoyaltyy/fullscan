@@ -20,7 +20,7 @@
     },
     {
       "path": "01_daily/news/2026-10-05_judge.md",
-      "sha256": "00ab1e65063c4a4ab5d3850d7e9481cd9651d284b4916008e1d62b9d49d06ee5"
+      "sha256": "1596e901f66835e090983cd036e25e529a178d558f2d87744f21c017bcc3502b"
     },
     {
       "path": "01_daily/sectors/2026-10-05/_board.json",
@@ -50,6 +50,6 @@
   "prices": [],
   "reason": "no same-day panel rows for 2026-10-05 \u2014 sitting, no live lookup",
   "rows": [],
-  "sha256": "2bd7342f9f9d79657d3ebbc426dd76c396f0a066292e4a7b6b7403ca18505491",
+  "sha256": "67db6a974b205bbbe2af9c7fcc106709bf449a1b49374c986500e6f6225695be",
   "source": "no_same_day_panel"
 }

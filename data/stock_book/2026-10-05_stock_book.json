@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-05",
-    "generated_at": "2026-10-05T07:40:59.947647-04:00",
+    "generated_at": "2026-10-05T07:46:33.643389-04:00",
     "general_bias": 0.35785,
     "sector_bias": {},
     "accuracy_gates": {
@@ -390,7 +390,7 @@
     "lookback_marks": {
       "n_alarm": 1471,
       "n_fade": 680,
-      "n_blue": 15,
+      "n_blue": 14,
       "n_white": 152,
       "white_is_gate": false,
       "vetoes": [
