@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T06:08:27.349457-04:00",
+  "generated_at": "2026-10-05T06:08:45.629729-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -832,9 +832,9 @@
           "path": "data/stock_book/2026-10-05_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=135",
-          "size": 1002116,
-          "said": "1d BUY JXN, TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS \u00b7 0.35785",
+          "reason": "horizons=5 names=130",
+          "size": 972361,
+          "said": "1d BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS \u00b7 0.35785",
           "bullets": []
         },
         {
@@ -844,10 +844,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 33646,
+          "size": 30376,
           "said": "Stock book \u2014 2026-10-05",
           "bullets": [
-            "_Generated 2026-10-05T06:02:32.326582-04:00_",
+            "_Generated 2026-10-05T06:08:36.228673-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -858,8 +858,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2779,
-          "said": "184 green \u00b7 SHOO, VCTR, WT, GLBE, FIGS, SN, HNI, SIG, SKY, JXN",
+          "size": 2335,
+          "said": "145 green \u00b7 SHOO, GLBE, FIGS, SN, HNI, SIG, SKY, VVV, BIRK, ONON",
           "bullets": []
         },
         {
@@ -910,9 +910,9 @@
           "path": "data/stock_book/2026-10-05_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=135",
-          "size": 1002116,
-          "said": "1d BUY JXN, TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS \u00b7 0.35785",
+          "reason": "horizons=5 names=130",
+          "size": 972361,
+          "said": "1d BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS \u00b7 0.35785",
           "bullets": []
         },
         {
@@ -960,10 +960,6 @@
   "news_mode_reason": "",
   "selections": {
     "buy_1d": [
-      {
-        "ticker": "JXN",
-        "score": 0.48421849403254064
-      },
       {
         "ticker": "TMUS",
         "score": 0.38610985491715305
@@ -2002,6 +1998,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T06:08:44.495406-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-05_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 972361,
+          "preview": "1d BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2335,
+          "preview": "green 145 \u00b7 SHOO, GLBE, FIGS, SN, HNI, SIG, SKY, VVV, BIRK, ONON"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2454,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7620,
+          "preview": "2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7620,
+          "preview": "2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT"
+        },
+        {
+          "path": "01_daily/2026-10-05_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 31288,
+          "preview": "# Stock book \u2014 2026-10-05\n_Generated 2026-10-05T06:08:36.228673-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 green 145 \u00b7 SHOO, GLBE, FIGS, SN, HNI, SIG, SKY, VVV, BIRK, ONON \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 # Stock book \u2014 2026-10-05\n_Generated 2026-10-05T06:08:36.228673-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
