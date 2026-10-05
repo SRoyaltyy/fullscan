@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T08:43:00.787903-04:00",
+  "generated_at": "2026-10-05T08:49:13.761200-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -9,67 +9,68 @@
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "TMUS",
+      "score": 0.3448303289604864
+    },
+    {
+      "ticker": "COP",
+      "score": 0.548154509076111
+    },
+    {
+      "ticker": "PRGS",
+      "score": 0.2947028867133859
+    },
+    {
+      "ticker": "PRMB",
+      "score": 0.4055163317115056
+    },
+    {
+      "ticker": "SPOT",
+      "score": 0.17604742631397094
+    },
+    {
+      "ticker": "DVN",
+      "score": 0.5892777859408413
+    },
+    {
+      "ticker": "RRC",
+      "score": 0.745920039777549
+    }
+  ],
   "sell_1d": [
     {
-      "ticker": "ROIV",
-      "score": -0.4753937289952296
+      "ticker": "OKLO",
+      "score": -0.26264240622864266
     },
     {
-      "ticker": "ARE",
-      "score": -0.41823590976540176
+      "ticker": "NEOV",
+      "score": -0.25919990820534133
     },
     {
-      "ticker": "SOC",
-      "score": -0.3913239823861548
+      "ticker": "FCEL",
+      "score": -0.16986455033318454
     },
     {
-      "ticker": "BIDU",
-      "score": -0.38465342412103465
+      "ticker": "EOSE",
+      "score": -0.19974540749788555
     },
     {
-      "ticker": "BNTX",
-      "score": -0.38172356799127616
+      "ticker": "NNDM",
+      "score": -0.0346090802266083
     },
     {
-      "ticker": "SEER",
-      "score": -0.3730751372228022
+      "ticker": "INDI",
+      "score": -0.2929655110448106
     },
     {
-      "ticker": "ALMS",
-      "score": -0.3693942759044377
+      "ticker": "TE",
+      "score": -0.26854495652154203
     },
     {
-      "ticker": "ABSI",
-      "score": -0.36255362009835357
-    },
-    {
-      "ticker": "IFRX",
-      "score": -0.3622211957782761
-    },
-    {
-      "ticker": "PCT",
-      "score": -0.35876277369472237
-    },
-    {
-      "ticker": "INTC",
-      "score": -0.3584543832208301
-    },
-    {
-      "ticker": "TYRA",
-      "score": -0.35781926502529476
-    },
-    {
-      "ticker": "NRXP",
-      "score": -0.35097727854704575
-    },
-    {
-      "ticker": "WVE",
-      "score": -0.3509103903716723
-    },
-    {
-      "ticker": "IBRX",
-      "score": -0.3481755470160717
+      "ticker": "HNRG",
+      "score": -0.02730836836844408
     }
   ],
   "flatten": {

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T05:40:19.332013-04:00",
+  "generated_at": "2026-10-05T08:49:06.288960-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -13,21 +13,21 @@
       "name": "membership",
       "family": "join",
       "status": "ok",
-      "n": 5908,
+      "n": 5901,
       "detail": ""
     },
     {
       "name": "join_ranked",
       "family": "join",
       "status": "ok",
-      "n": 5908,
-      "detail": "std=0.977"
+      "n": 5901,
+      "detail": "std=0.975"
     },
     {
       "name": "news_actions",
       "family": "news",
       "status": "ok",
-      "n": 82,
+      "n": 83,
       "detail": ""
     },
     {
@@ -70,7 +70,7 @@
       "family": "addon",
       "status": "ok",
       "n": null,
-      "detail": "34 events, scan_date=2026-10-05"
+      "detail": "53 events, scan_date=2026-10-05"
     },
     {
       "name": "map_heat",

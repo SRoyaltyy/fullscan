@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T08:37:04.927327-04:00",
+  "generated_at": "2026-10-05T08:49:13.761200-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,78 +11,66 @@
   },
   "buy_1d": [
     {
-      "ticker": "ARQT",
-      "score": 0.5362783339840729
+      "ticker": "TMUS",
+      "score": 0.3448303289604864
     },
     {
-      "ticker": "EDU",
-      "score": 0.3740013700258146
+      "ticker": "COP",
+      "score": 0.548154509076111
     },
     {
       "ticker": "PRGS",
-      "score": 0.3106093192133859
+      "score": 0.2947028867133859
+    },
+    {
+      "ticker": "PRMB",
+      "score": 0.4055163317115056
+    },
+    {
+      "ticker": "SPOT",
+      "score": 0.17604742631397094
+    },
+    {
+      "ticker": "DVN",
+      "score": 0.5892777859408413
+    },
+    {
+      "ticker": "RRC",
+      "score": 0.745920039777549
     }
   ],
   "sell_1d": [
     {
-      "ticker": "ROIV",
-      "score": -0.5876457311307597
+      "ticker": "OKLO",
+      "score": -0.26264240622864266
     },
     {
-      "ticker": "ARE",
-      "score": -0.41823590976540176
+      "ticker": "NEOV",
+      "score": -0.25919990820534133
     },
     {
-      "ticker": "SOC",
-      "score": -0.3913617286158165
+      "ticker": "FCEL",
+      "score": -0.16986455033318454
     },
     {
-      "ticker": "BIDU",
-      "score": -0.3857019749125207
+      "ticker": "EOSE",
+      "score": -0.19974540749788555
     },
     {
-      "ticker": "BNTX",
-      "score": -0.37843485631894425
+      "ticker": "NNDM",
+      "score": -0.0346090802266083
     },
     {
-      "ticker": "IFRX",
-      "score": -0.3775394226899668
+      "ticker": "INDI",
+      "score": -0.2929655110448106
     },
     {
-      "ticker": "ALMS",
-      "score": -0.3693865283479107
+      "ticker": "TE",
+      "score": -0.26854495652154203
     },
     {
-      "ticker": "IBM",
-      "score": -0.3654413825250935
-    },
-    {
-      "ticker": "PCT",
-      "score": -0.3588178929817754
-    },
-    {
-      "ticker": "TYRA",
-      "score": -0.3578143116714341
-    },
-    {
-      "ticker": "AXSM",
-      "score": -0.35343395433516445
-    },
-    {
-      "ticker": "NRXP",
-      "score": -0.3519298837425717
-    },
-    {
-      "ticker": "WVE",
-      "score": -0.3487760015048991
-    },
-    {
-      "ticker": "LXRX",
-      "score": -0.3448034547446938
-    },
-    {
-      "ticker": "VNET",
-      "score": -0.3437148373469873
+      "ticker": "HNRG",
+      "score": -0.02730836836844408
     }
   ],
   "flatten": {
@@ -1633,6 +1621,63 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-05\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-10-05",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-05T08:40:33.613864-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-10-05_dossiers.json",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1234,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-10-05_dossiers.md",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1234,
+          "preview": "# CATALYST DAILY \u2014 2026-10-05\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-05\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T08:42:58.939167-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-10-05_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 8325,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/2026-10-05_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 8675,
+          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
+        },
+        {
+          "path": "01_daily/2026-10-05_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 589,
+          "preview": "# Pre-open ALL status \u2014 2026-10-05\nall_ok=False  qc_all_ok=False  book_ok=True  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-05\nall_ok=False  qc_all_ok=False  book_ok=True  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
     }
   ],
   "source": "publish_live_boards"
