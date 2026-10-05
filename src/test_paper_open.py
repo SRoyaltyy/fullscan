@@ -139,7 +139,7 @@ def test_submit_ignores_hot4_buys_that_diverge_from_sealed_book(monkeypatch):
     card = po.make_plan(
         _sealed_day_payload(), _rich_snap(), _sealed_clock())['card']
     buys = [t['ticker'] for t in card['tickets'] if t['side'] == 'BUY']
-    assert buys == ['SDEV', 'QSI', 'GLND', 'TJGC']
+    assert buys == ['QSI', 'TJGC']
     assert 'DELL' not in buys
     assert 'FEAM' not in buys
 
@@ -165,7 +165,7 @@ def test_plan_sells_sealed_shares_before_buys(monkeypatch):
     sells = [(t['ticker'], t['shares']) for t in card['tickets'] if t['side'] == 'SELL']
     buys = [t['ticker'] for t in card['tickets'] if t['side'] == 'BUY']
     assert sells == [('EGG', 774), ('KOD', 33)]
-    assert buys == ['SDEV', 'QSI', 'GLND', 'TJGC']
+    assert buys == ['QSI', 'TJGC']
     assert 'FEAM' not in {t['ticker'] for t in card['tickets']}
 
 
@@ -185,7 +185,7 @@ def test_empty_payload_does_not_rebuild_hot4(monkeypatch):
     with patch('src.combo_broker.resolve_rows', side_effect=AssertionError('must not backfill')):
         card = po.make_plan(p, _rich_snap(), _sealed_clock())['card']
     assert [t['ticker'] for t in card['tickets'] if t['side'] == 'BUY'] == [
-        'SDEV', 'QSI', 'GLND', 'TJGC']
+        'QSI', 'TJGC']
 
 
 def test_sealed_cash_short_fails_closed_not_hot4(monkeypatch):
@@ -246,7 +246,7 @@ def test_ready_submit_flat_sit_still_sends_sealed_plan(tmp_path, monkeypatch):
     assert api.calls
     sent = [(row['side'], row['ticker']) for row in api.calls[0]]
     assert ('SELL', 'EGG') in sent and ('SELL', 'KOD') in sent
-    assert [t for side, t in sent if side == 'BUY'] == ['SDEV', 'QSI', 'GLND', 'TJGC']
+    assert [t for side, t in sent if side == 'BUY'] == ['QSI', 'TJGC']
     journal = json.loads((tmp_path / f'{day}_submit.json').read_text())
     assert journal['status'] == 'acknowledged'
     assert journal['standing'] is True

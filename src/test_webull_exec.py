@@ -323,9 +323,7 @@ def test_hot4_zero_cash_is_honest() -> None:
     snap = BrokerSnap(env="paper", cash=0, positions={}, buying_power=10_000)
     card = plan_hot4_for_broker("2026-10-02", snap, payload=payload)
     assert card["tickets"] == []
-    assert [r["ticker"] for r in card["would_buy"]["rows"]] == [
-        "SDEV", "QSI", "GLND", "TJGC",
-    ]
+    assert [r["ticker"] for r in card["would_buy"]["rows"]] == ["QSI", "TJGC"]
     assert "not rebuilding HOT4" in card["why"]
     assert "cannot fund sealed h1 buys" in card["why"]
 

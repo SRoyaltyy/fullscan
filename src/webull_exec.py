@@ -2,10 +2,12 @@
 
 Default source is the sealed IRONCLAD h1 forward plan for that session
 (``research/hot_n4_clean_v4/forward_h1/h1_log.jsonl``, ``kind=plan``).
-The strategy name stays ``union_hot_n4_h1``. Buys are the plan's picks
-at sealed share counts. Sells are ``planned_sells`` at the plan's share
-counts. Factor Mine ``pick_day`` / ``today_strategies.json`` is not a
-fallback: a missing plan or paper cash that cannot fund the sealed buy
+The strategy name stays ``union_hot_n4_h1``. Buys are the sealed
+new-buy set (picks the open fill would buy — names not already held),
+at that set's share counts. Sells are ``planned_sells`` at the plan's
+share counts. A carry name sized as a buy fails closed. Factor Mine
+``pick_day`` / ``today_strategies.json`` is not a fallback: a missing
+plan, a carry-name buy, or paper cash that cannot fund the sealed buy
 notionals fails closed. Flatten live-card tickets stay available via
 ``--source flatten``. Combo is a manual escape only.
 
@@ -22,7 +24,9 @@ Paper never talks to api.webull.com. Do not enable --env real here.
 
 Rules:
   * sealed h1: MARKET at the live print, not a limit at the plan px
-  * buy and sell tickers and share counts come from that session's plan
+  * buy tickers are the sealed new-buy set, not every name on the plan card
+  * sell tickers and share counts are the plan's planned sells
+  * a buy for a name the sealed book already holds fails closed
   * paper cash below the sealed buy notional fails closed (no HOT4 rebuild,
     no silent resize of the sealed share count)
   * sells first, at the plan's share count, even when the paper book
@@ -527,19 +531,27 @@ def _sealed_ticket(date: str, side: str, ticker: str, shares: int, *,
 def plan_hot4_for_broker(date: str, snap: BrokerSnap,
                          payload: dict | None = None,
                          panel: dict | None = None) -> dict:
-    """Sealed h1 plan for ``date``. ``payload`` and ``panel`` are ignored.
+    """Sealed h1 new-buy set for ``date``. ``payload`` and ``panel`` are ignored.
 
-    The strategy name stays ``union_hot_n4_h1``. Tickers and share counts
-    come from the sealed plan. Paper cash that cannot fund the buy
-    notionals returns an empty ticket list and ``look_error`` — it does
-    not resize and it does not call ``pick_day``.
+    The strategy name stays ``union_hot_n4_h1``. Buy tickers are the
+    names the open fill would buy, not every plan-card pick. Paper cash
+    that cannot fund those buys, or a buy for a carry name, returns an
+    empty ticket list and ``look_error`` — it does not resize and it
+    does not call ``pick_day``.
     """
     del payload, panel  # Factor Mine publish is not the send list.
-    from src.h1_sealed_exec import SealedH1Error, sealed_h1_orders
+    from src.h1_sealed_exec import (
+        SealedH1Error, assert_buys_match_new_set, sealed_h1_orders,
+    )
 
     cash = max(float(getattr(snap, "cash", 0) or 0), 0.0)
     try:
         orders = sealed_h1_orders(date)
+        assert_buys_match_new_set(
+            orders["buys"],
+            carry=orders.get("carry") or [],
+            expected=[row["ticker"] for row in orders["buys"]],
+        )
     except SealedH1Error as exc:
         msg = str(exc)
         if "not rebuilding HOT4" not in msg:
@@ -578,7 +590,9 @@ def plan_hot4_for_broker(date: str, snap: BrokerSnap,
         })
         buy_tickets.append(_sealed_ticket(
             date, "BUY", row["ticker"], row["shares"], px=row["px"],
-            reason=f"sealed h1 pick rank {row['rank']} {row['shares']} sh",
+            reason=(
+                f"sealed h1 new buy rank {row['rank']} {row['shares']} sh"
+            ),
         ))
     would_sell = []
     sell_tickets = []
@@ -612,9 +626,17 @@ def plan_hot4_for_broker(date: str, snap: BrokerSnap,
         skips.append({
             "date": date, "ticker": "", "kind": "cash", "reason": look_err,
         })
+    for ticker in orders.get("carry") or []:
+        skips.append({
+            "date": date,
+            "ticker": ticker,
+            "kind": "held",
+            "reason": "already held on the sealed book — not a new buy",
+        })
     why = (
-        f"{HOT4} sealed h1 plan {orders.get('plan_sha256', '')[:12]} "
+        f"{HOT4} sealed h1 new buys {orders.get('plan_sha256', '')[:12]} "
         f"· buys {len(orders['buys'])} sells {len(orders['sells'])} "
+        f"· carry {len(orders.get('carry') or [])} "
         f"· notional ${need:.2f} · MARKET · no pick_day"
     )
     if look_err:

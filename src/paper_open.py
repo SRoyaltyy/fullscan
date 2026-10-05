@@ -12,10 +12,11 @@ pre-open snapshot that has not moved yet still leaves the last leg
 fundable when the open prints above the plan px.
 
 No feature building, dependency installation or Pages deployment on the
-send path. Paper host only. The send list is the sealed h1 plan for
-that session (same book ``webull_exec`` uses). A Factor Mine HOT4
-rebuild is not the order list. Paper cash that cannot fund the sealed
-buy notionals fails closed.
+send path. Paper host only. The send list is the sealed h1 new-buy
+set for that session (same book ``webull_exec`` uses): picks the open
+fill would buy, not every name on the plan card. A Factor Mine HOT4
+rebuild is not the order list. A carry-name buy, or paper cash that
+cannot fund the sealed buy notionals, fails closed.
 
 00_grounding/paper_flatten.json names one ET date. On that date the
 paper host cancels open orders and sells every lot (MARKET/CORE/DAY).

@@ -1,25 +1,34 @@
-"""Webull paper orders from the sealed h1 forward plan.
+"""Webull paper orders from the sealed h1 forward book.
 
-The source of truth is the ``kind=plan`` line in
-``research/hot_n4_clean_v4/forward_h1/h1_log.jsonl`` for session D.
+The source of truth is ``research/hot_n4_clean_v4/forward_h1/h1_log.jsonl``.
 This module only reads that log. It does not import Factor Mine, does
 not call ``pick_day``, and does not write the log or the ledger.
 
-Sell share counts are the plan's ``planned_sells``. A sealed pick does
-not store shares (the ledger forbids that until the open fill). Buy
-share counts are therefore the h1 book's own sizing, using only sealed
-fields:
+The plan card lists every pick, including names the book already holds.
+The open fill does not buy those. It sells ``planned_sells`` first, then
+buys only picks that are still not held — the same rule as
+``forward.openfill.open_legs`` / ``planfill.fill_book``. That set is the
+new-buy set. A carry name is not sized.
 
-* cash starts at the plan's ``cash_before``
-* planned sells add proceeds at the prior sealed lot's ``last_px``
-  (already on the book before D; session D's open is not read)
-* every pick is a buy, equal-split leftover cash, price = ``fv_price``
-* same slip (0.5%), 1% ADV cap, and Futubull fee schedule as the h1 fill
+Sell share counts are the plan's ``planned_sells`` (and must match the
+sealed open fill's sells when that fill exists).
 
-The Webull paper account is not the $10k Futubull lot book, so a name
-the research book already holds is still a buy at that sealed share
-count. The caller sends those shares when paper cash covers the sum of
-buy notionals, and fails closed when it does not.
+Buy share counts:
+
+* When the session already has an effective open fill (a later
+  ``open_fill_correction`` replaces the sealed line in memory only),
+  the shares are that fill's shares. The fill's buy names must equal
+  the new-buy set, or this refuses.
+* When the fill is not sealed yet (the pre-open send), shares are the
+  book's sizing on the new-buy names only: ``cash_before`` plus
+  estimated sell proceeds at the prior lot's ``last_px``, equal-split
+  leftover, price = ``fv_price``, 0.5% slip, 1% ADV cap, Futubull fees.
+  Session D's open is not read. Carry names are left out of the split.
+
+A buy list that includes a carry name, or that does not equal the
+new-buy set, fails closed. The caller sends the sealed new-buy shares
+when paper cash covers them, and fails closed when it does not. It does
+not rebuild HOT4.
 """
 from __future__ import annotations
 
@@ -181,52 +190,98 @@ def _state_before(records: list[tuple[bytes, dict]], date: str) -> dict | None:
     return last
 
 
-def sealed_h1_orders(date: str, *, log_path: Path | None = None) -> dict:
-    """Buy and sell legs for session ``date``.
+def _effective_open_fill(records: list[tuple[bytes, dict]], date: str) -> dict | None:
+    """Open fill readers use. A correction replaces the sealed line in memory only.
 
-    Buys are every pick, in rank order, with sealed share counts.
-    Sells are every planned sell, with the plan's share count.
-    ``notional`` is the sum of buy shares × plan price (what paper cash
-    must cover). This does not resize to a paper account.
+    The sealed line is not rewritten. Same rule as
+    ``forward.ledger.effective_open_fill``.
     """
-    records = read_h1_records(log_path)
-    plan = None
+    sealed = None
+    correction = None
     for raw, obj in records:
-        if obj.get("kind") == "plan" and obj.get("date") == date:
+        if obj.get("date") != date:
+            continue
+        kind = obj.get("kind")
+        if kind == "open_fill":
             _check_line(raw, obj)
-            if plan is not None:
-                raise SealedH1Error(f"duplicate sealed h1 plan for {date}; refusing")
-            plan = obj
-    if plan is None:
+            if sealed is not None:
+                raise SealedH1Error(
+                    f"duplicate sealed h1 open fill for {date}; refusing"
+                )
+            sealed = obj
+        elif kind == "open_fill_correction":
+            _check_line(raw, obj)
+            correction = obj
+    if correction is None:
+        return sealed
+    corrected = correction.get("corrected")
+    if not isinstance(corrected, dict) or not isinstance(corrected.get("buys"), list):
         raise SealedH1Error(
-            f"no sealed h1 plan for {date}; refusing; not rebuilding HOT4"
+            f"sealed h1 open-fill correction for {date} has no buys; refusing"
         )
-    fees = _load_fees()
-    prior = _state_before(records, date) or {}
+    if corrected.get("date") not in (None, date):
+        raise SealedH1Error(
+            f"sealed h1 open-fill correction for {date} is for another session"
+        )
+    body = dict(corrected)
+    if correction.get("sha256"):
+        body["sha256"] = correction["sha256"]
+    return body
+
+
+def assert_buys_match_new_set(buys, *, carry, expected) -> None:
+    """Refuse a buy list that is not the sealed new-buy set.
+
+    A ticker still held after the session's planned sells is a carry name.
+    Sizing it as a buy fails closed. So does any other disagreement with
+    ``expected`` (the picks the open fill would actually buy).
+    """
+    carry_names = {str(ticker).upper() for ticker in carry}
+    got = [str(row["ticker"]).upper() for row in buys]
+    bad = [ticker for ticker in got if ticker in carry_names]
+    if bad:
+        raise SealedH1Error(
+            f"sealed h1 would buy carry name(s) {', '.join(bad)}; "
+            "refusing; not rebuilding HOT4"
+        )
+    want = [str(ticker).upper() for ticker in expected]
+    if got != want:
+        raise SealedH1Error(
+            f"sealed h1 buys {got} do not match the new-buy set {want}; "
+            "refusing; not rebuilding HOT4"
+        )
+
+
+def _held_lots(prior: dict) -> dict:
     held = {}
     for lot in prior.get("holdings") or []:
         if isinstance(lot, dict) and lot.get("ticker"):
             held[str(lot["ticker"]).upper()] = lot
+    return held
+
+
+def _plan_sells(plan: dict, held: dict, fees: dict, date: str) -> tuple[list[dict], float, set[str]]:
     try:
         cash = float(plan.get("cash_before"))
     except (TypeError, ValueError) as exc:
         raise SealedH1Error(f"sealed h1 plan {date} has no cash_before") from exc
     if not math.isfinite(cash) or cash < 0:
         raise SealedH1Error(f"sealed h1 plan {date} cash_before is unusable")
-
     sells: list[dict] = []
-    seen_sells: set[str] = set()
+    seen: set[str] = set()
     for row in plan.get("planned_sells") or []:
         if not isinstance(row, dict):
             raise SealedH1Error(f"sealed h1 plan {date} sell is not an object")
         ticker = str(row.get("ticker") or "").upper().strip()
-        if not ticker or ticker in seen_sells:
+        if not ticker or ticker in seen:
             raise SealedH1Error(f"sealed h1 plan {date} sell ticker is unusable")
-        seen_sells.add(ticker)
+        seen.add(ticker)
         try:
             shares = int(row.get("shares"))
         except (TypeError, ValueError) as exc:
-            raise SealedH1Error(f"sealed h1 plan {date} sell {ticker} has no shares") from exc
+            raise SealedH1Error(
+                f"sealed h1 plan {date} sell {ticker} has no shares"
+            ) from exc
         if shares < 1:
             raise SealedH1Error(f"sealed h1 plan {date} sell {ticker} shares {shares}")
         lot = held.get(ticker) or {}
@@ -243,19 +298,36 @@ def sealed_h1_orders(date: str, *, log_path: Path | None = None) -> dict:
             "reason": row.get("reason") or "",
             "px": round(last_px, 4) if last_px > 0 else None,
         })
+    return sells, cash, seen
 
+
+def _split_picks(plan: dict, held_after: set[str], date: str) -> tuple[list[dict], list[str]]:
+    """Picks the open fill would buy, and plan picks already held."""
     picks = [row for row in (plan.get("picks") or []) if isinstance(row, dict)]
     picks.sort(key=lambda row: (int(row.get("rank") or 0), str(row.get("ticker") or "")))
-    seen_buys: set[str] = set()
+    new: list[dict] = []
+    carry: list[str] = []
+    seen: set[str] = set()
+    for pick in picks:
+        ticker = str(pick.get("ticker") or "").upper().strip()
+        if not ticker or ticker in seen:
+            raise SealedH1Error(f"sealed h1 plan {date} pick ticker is unusable")
+        seen.add(ticker)
+        if ticker in held_after:
+            carry.append(ticker)
+            continue
+        new.append(pick)
+    return new, carry
+
+
+def _size_new_buys(picks: list[dict], cash: float, fees: dict, date: str) -> list[dict]:
+    """Equal-split leftover cash across new buys only. Carry names are absent."""
     sized: list[dict] = []
     n = len(picks)
     budgets = [cash / n] * n if n and cash > 0 else [0.0] * n
     running = cash
     for pick, budget in zip(picks, budgets):
         ticker = str(pick.get("ticker") or "").upper().strip()
-        if not ticker or ticker in seen_buys:
-            raise SealedH1Error(f"sealed h1 plan {date} pick ticker is unusable")
-        seen_buys.add(ticker)
         try:
             px = float(pick.get("fv_price"))
         except (TypeError, ValueError):
@@ -278,13 +350,127 @@ def sealed_h1_orders(date: str, *, log_path: Path | None = None) -> dict:
             "rank": int(pick.get("rank") or 0),
             "sources": list(pick.get("sources") or []),
         })
+    return sized
+
+
+def _buys_from_open_fill(fill: dict, new_picks: list[dict], sells: list[dict], date: str) -> list[dict]:
+    """Share counts the sealed open fill actually bought. Names must match."""
+    fill_buys = []
+    seen: set[str] = set()
+    for row in fill.get("buys") or []:
+        if not isinstance(row, dict):
+            raise SealedH1Error(f"sealed h1 open fill {date} buy is not an object")
+        ticker = str(row.get("ticker") or "").upper().strip()
+        if not ticker or ticker in seen:
+            raise SealedH1Error(f"sealed h1 open fill {date} buy ticker is unusable")
+        seen.add(ticker)
+        try:
+            shares = int(row.get("shares"))
+            px = float(row.get("fill"))
+        except (TypeError, ValueError) as exc:
+            raise SealedH1Error(
+                f"sealed h1 open fill {date} buy {ticker} is unusable"
+            ) from exc
+        if shares < 1 or not math.isfinite(px) or px <= 0:
+            raise SealedH1Error(
+                f"sealed h1 open fill {date} buy {ticker} shares {shares}"
+            )
+        fill_buys.append((ticker, shares, px, row))
+    fill_buys.sort(key=lambda item: (
+        int((item[3].get("rank") or 0)), item[0],
+    ))
+    expected = [str(pick.get("ticker") or "").upper() for pick in new_picks]
+    got = [ticker for ticker, _shares, _px, _row in fill_buys]
+    if got != expected:
+        raise SealedH1Error(
+            f"sealed h1 open fill buys {got} do not match the new-buy set "
+            f"{expected}; refusing; not rebuilding HOT4"
+        )
+    fill_sells = []
+    for row in fill.get("sells") or []:
+        if not isinstance(row, dict):
+            raise SealedH1Error(f"sealed h1 open fill {date} sell is not an object")
+        ticker = str(row.get("ticker") or "").upper().strip()
+        try:
+            shares = int(row.get("shares"))
+        except (TypeError, ValueError) as exc:
+            raise SealedH1Error(
+                f"sealed h1 open fill {date} sell {ticker} is unusable"
+            ) from exc
+        fill_sells.append((ticker, shares))
+    plan_sells = sorted((row["ticker"], row["shares"]) for row in sells)
+    if sorted(fill_sells) != plan_sells:
+        raise SealedH1Error(
+            f"sealed h1 open fill sells do not match the plan for {date}; "
+            "refusing; not rebuilding HOT4"
+        )
+    by_pick = {str(pick.get("ticker") or "").upper(): pick for pick in new_picks}
+    sized = []
+    for ticker, shares, px, row in fill_buys:
+        pick = by_pick[ticker]
+        sized.append({
+            "ticker": ticker,
+            "shares": shares,
+            "px": round(px, 4),
+            "rank": int(pick.get("rank") or row.get("rank") or 0),
+            "sources": list(pick.get("sources") or row.get("sources") or []),
+        })
+    return sized
+
+
+def sealed_h1_orders(date: str, *, log_path: Path | None = None) -> dict:
+    """New-buy and sell legs for session ``date``.
+
+    Buys are the sealed new-buy set, in rank order: plan picks that are
+    not still held after ``planned_sells``. Carry names are listed on
+    ``carry`` and are not sized. Sells are every planned sell.
+
+    When an effective open fill exists, buy shares are that fill's shares.
+    Otherwise they are the pre-open sizing of the new-buy names only.
+    ``notional`` is the sum of buy shares × the price on each leg (what
+    paper cash must cover). This does not resize to a paper account.
+    """
+    records = read_h1_records(log_path)
+    plan = None
+    for raw, obj in records:
+        if obj.get("kind") == "plan" and obj.get("date") == date:
+            _check_line(raw, obj)
+            if plan is not None:
+                raise SealedH1Error(f"duplicate sealed h1 plan for {date}; refusing")
+            plan = obj
+    if plan is None:
+        raise SealedH1Error(
+            f"no sealed h1 plan for {date}; refusing; not rebuilding HOT4"
+        )
+    fees = _load_fees()
+    held = _held_lots(_state_before(records, date) or {})
+    sells, cash, sold = _plan_sells(plan, held, fees, date)
+    held_after = set(held) - sold
+    new_picks, carry = _split_picks(plan, held_after, date)
+    fill = _effective_open_fill(records, date)
+    if fill is not None:
+        sized = _buys_from_open_fill(fill, new_picks, sells, date)
+        source = "open_fill"
+        fill_sha = fill.get("sha256") or ""
+    else:
+        sized = _size_new_buys(new_picks, cash, fees, date)
+        source = "preopen"
+        fill_sha = ""
+    assert_buys_match_new_set(
+        sized,
+        carry=held_after,
+        expected=[str(pick.get("ticker") or "").upper() for pick in new_picks],
+    )
     notional = round(sum(row["shares"] * row["px"] for row in sized), 2)
     return {
         "date": date,
         "buys": sized,
         "sells": sells,
+        "carry": carry,
+        "new_buy_source": source,
         "notional": notional,
         "plan_sha256": plan.get("sha256") or "",
+        "open_fill_sha256": fill_sha,
         "recipe": plan.get("recipe") or "",
         "morning_s": plan.get("morning_s"),
         "cash_before": plan.get("cash_before"),
