@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T04:32:43.234249-04:00",
+  "generated_at": "2026-10-05T04:34:27.674124-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -183,7 +183,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -241,10 +241,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-10-05_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 4043466,
+          "said": "4043466B on disk",
           "bullets": []
         },
         {
@@ -331,13 +331,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7546,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7545,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1250,6 +1250,41 @@
         }
       ],
       "preview": "5908 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, HRMY, HALO, AVAH, CORT"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-05",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-05T04:34:09.152132-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T04:34:26.785595-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 4043466,
+          "preview": "raw=5551 usable=563 single=188 \u00b7 OPEC+ Has Deal Outline for Steady November Quotas, Delegates Say - Bloomberg.com | Markets bet on RBI rate hike as inflation pressure builds - Reuters | North Korea\u2019s Kim Oversaw Hypersonic Missile Drill, KCNA Says - Bloomberg.com | North Korea says Kim oversaw hypersonic missile drill - Reuters | North Korea's Kim Yo Jong says intermediate-range missile test was conducted - R"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 11518,
+          "preview": "# News Parse v2 \u2014 2026-10-05T04:34:25.915611-04:00\nWindow\u224848h | news_mode=on | raw=5551 | usable=563 | single_name=188 | noise_dropped=4491\nusable polarity={'+': 22, '-': 117, 'mixed': 13, 'neutral': 411}"
+        }
+      ],
+      "preview": "raw=5551 usable=563 single=188 \u00b7 OPEC+ Has Deal Outline for Steady November Quotas, Delegates Say - Bloomberg.com | Markets bet on RBI rate hike as inflation pressure builds - Reuters | North Korea\u2019s Kim Oversaw Hypersonic Missile Drill, KCNA Says - Bloomberg.com | North Korea says Kim oversaw hypersonic missile drill - Reuters | North Korea's Kim Yo Jong says intermediate-range missile test was conducted - R \u00b7 # News Parse v2 \u2014 2026-10-05T04:34:25.915611-04:00\nWindow\u224848h | news_mode=on | raw=5551 | usable=563 | single_name=188 | noise_dropped=4491\nusable polarity={'+': 22, '-': 117, 'mixed': 13, 'neutral': 411}"
     }
   ],
   "href": {
