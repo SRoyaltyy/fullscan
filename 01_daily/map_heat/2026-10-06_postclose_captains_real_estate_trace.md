@@ -14,12 +14,12 @@
 
   - VICI Properties Inc. Announces Release Date for Third Quarter 2026 Results - Business Wire (https://news.google.com/rss/articles/CBMiywFBVV95cUxPT2JDZ1ZmRWhTUFB2U2NTZzZxYUIyVkNUNFl0NFB3N1U5eUJYcnl1b3h1RC0waWRTbE4tWkYzc2U0V3ZBQTBVTVJnSllzRU1KMHZHMlBrbmZFeTRyS0FtWDdiLTdjRWQxVzl0Z0liRkpWUUdyUGlmbXpiOHZQVks0NDB4Q2hlSXZMMHNncHAyOXVUR29IRWpVX3BBQ0YtTzN3ZEFIYndoNzZyVjRPY0dDRi0wczVkZUdBaWJsbXM2TXNOOXhMbEthZTFCcw?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"Global Net Lease GNL Modiv Industrial acquisition $535M"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Global Net Lease GNL Modiv Industrial acquisition $535M"* → got 6 results (via gnews_rss)
 
-  - Greenberg Traurig Advises Global Net Lease on $535M Modiv ... (https://www.gtlaw.com/en/news/2026/08/press-releases/greenberg-traurig-advises-global-net-lease-on-535m-modiv-industrial-acquisition)
+  - Global Net Lease completes $535m Modiv Industrial acquisition - Investing.com (https://news.google.com/rss/articles/CBMiuAFBVV95cUxNTUJHcmJEY2w4Z0Jza0t0VmkxMUwyRkpXRGZfeXlhWUJVTmYwVDFLYy1nQXhQLU8yalFJUVVaX0l5YUxqa3pDV0dDeU44NWcyV0pCRnZTNjl6X0JQT2h1RmtMZ2daTVNUdl91S1c3NU5zaVRwb1NnQ09vblEyR2x1eWZJZ3NKZHc1TmhlM2d6ekNHeGFnMXZoVTdkUEdsUnE2eXlRM0tQQXh2bUVsOFdFcXVCQzl0ZEpr?oc=5)
 
-  - Greenberg Traurig Advises Global Net Lease on $535M Modiv ... (https://www.prnewswire.com/news-releases/greenberg-traurig-advises-global-net-lease-on-535m-modiv-industrial-acquisition-302858807.html)
+  - Global Net Lease Agrees to Acquire Modiv Industrial in $535M Deal - REBusinessOnline (https://news.google.com/rss/articles/CBMikAFBVV95cUxOZ082RTFjdnVKWVljRnF0c1RtcXhOcThXZ1FmYmFFYlh5YlR5UUY2VVNTdFQySG53S0s1VnVZSjZYM2tsaUdSSy1CUkcyd3dxQ094YkJpdW1LemloYXNscjNZclI1YmUxdV95RWpzMlFWRzNhYUVqOUlHa3ltQklFMlFnQmw5R29tdGJKdm8zVmI?oc=5)
 
-  - Global Net Lease Completes $535M Modiv Deal - realtywire.com (https://realtywire.com/global-net-lease-modiv-industrial-acquisition/)
+  - Global Net Lease Acquires Industrial REIT for $535M - therealdeal.com (https://news.google.com/rss/articles/CBMimwFBVV95cUxONTdPOWJTdE9WTTBDUk5IRTAtT24wVEJaeXpXcTVBenFISlo2YkVWQXltRVhWR3d1bGo4Vnk4SlJ6MUJmR2VzdTZPaG1IR040WXZ5MzYtM1NuZVVocVhxX3RJR29Oc0VZYm5wN29OdjZkMDJ2dmNiOXN4aUVvd09nUXVBOGRqSmJEOVRCTjhfOGRfSXhaS2h0eGI5bw?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

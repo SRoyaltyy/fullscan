@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"Sempra SRE Petrobras 20-year LNG supply deal news"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"SRE Sempra Petrobras 20-year LNG supply deal"* → got 6 results (via gnews_rss)
 
-  - Sempra Locks In Petrobras for 20-Year U.S. LNG Supply Deal (https://oilprice.com/Company-News/Sempra-Locks-In-Petrobras-for-20-Year-US-LNG-Supply-Deal.html)
+  - Sempra's LNG Unit Signs 20-Year LNG Supply Deal With Petrobras - Yahoo Finance (https://news.google.com/rss/articles/CBMiiwFBVV95cUxNdGJDSGdxLXV3clBQRnMwT1h2UW1SUG5sNFdPYXVqQlplQ3BjaW1ZTjQ5Tm52d1d4TkJVMlpkcTh1NV9QQXJpR0dqeS03M1BQNFFaeHh0SFhfOVhPOEJGVXZjQlZOQzlvcTBoTEQwbm1OQjQxVExDVXZja0hLWWdJNkJka0NYNlp2bXNj?oc=5)
 
-  - Sempra Infrastructure Announces Long-Term LNG Supply ... (https://www.sempra.com/newsroom/press-releases/sempra-infrastructure-announces-long-term-lng-supply-agreement-petrobras)
+  - Sempra Infrastructure Announces Long-Term LNG Supply Agreement with Petrobras - PR Newswire (https://news.google.com/rss/articles/CBMizgFBVV95cUxOcmY1REdWbjI5eHFPM2dzRXhUTGMxMkZCYi1Talk2UHpYaDZzQUdrMU5mV3N5aG9WcWJ5Rm4tcVBacHdYa3h0N3AzeDE5RnY2eTI3YlZibWRZVlh3MWJjaE5SOEtzd3ZBYmJ4QnZBdEZDX1Jnei1XZllwUEhvTWVsZ3dKdllJSFhaS3BFX0NuM0ctLXpfcEJTdlgxanNwSWVGS25CeXJFbE9xQlpXVHFBd2h4VEpYMzhZSElXSXgxMU94cm42N0dJLTRRaHlSUQ?oc=5)
 
-  - Sempra Infrastructure Announces Long-Term LNG Supply ... (https://www.prnewswire.com/news-releases/sempra-infrastructure-announces-long-term-lng-supply-agreement-with-petrobras-302878157.html)
+  - Sempra signs 20-year U.S. LNG supply deal with Petrobras (SRE:NYSE) - Seeking Alpha (https://news.google.com/rss/articles/CBMilwFBVV95cUxPamxhV010X2RDQmltclNuM3lPYWlCWWV3Sl9kV0hyT2VmaGROemV5dElIUTZjWE45VjJ3TkRYQ080MjRvbkp1R1hYM3lHTlBDR3o2el9qaEFmS0hqOE9xa0ZRMUZ4STZGS3J0TV8tMmZNZGJKa2VNM2REU1ZjTm5hZUJoNEpuN1BleFRCQ0NxVVhvTUtBVWdB?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"AES Corp news October 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"AES Corp news October 2026"* → got 6 results (via ddg)
 
-  - Why a State Power Authority Stopped at 51 Percent of a Solar Project - megaproject.com (https://news.google.com/rss/articles/CBMisgFBVV95cUxOb2FnQzA3cl9Ud1g4NFV5RVJ0cTVZMnZaNjZQVzJKSFJMNXZzeGlPNUtwYkpqZHRFbENjME9WTDZ6SWhrYXUzU2ZUTjdVQXFpa1AwZHJuSUhHRFEzWTVubUpha3Z4LTVDT0MyWjd6OEhLYjRiOUZMYkM2S3puWDE1YU5kN3NfN0VoUi1HcUFpVl9mN3Q4bXRNNXRVY1BpS3NoOURNbW44aTJ4NU1BN3RpYl9R?oc=5)
+  - AES Investors: Resources, Reports, News, Filings & Events (https://www.aes.com/investors)
 
-  - PE consortium strikes $33.4B deal for AES Corp. - Markets Group (https://news.google.com/rss/articles/CBMihgFBVV95cUxOck03N0hkSkRiOHJwbWt5QUp6ZnozU2QzTjJESldRREdvOEl5dERQZGcyWm0wOWFlMm1SOXkwYS1GVlV1cGVDOG5ON3NYMTBqUDNhMXJ0eV94bzBVMUZmQWNxLVlrcElZZ29Ud3c0RFdNX0xKWWpBZFM0ZkRfTkNkVEJXWWdaZw?oc=5)
+  - AES' Investor Presentations & Clean Energy Growth (https://www.aes.com/investors/presentations-and-webcasts)
 
-  - The AES Corp's Dividend Analysis - Yahoo Finance (https://news.google.com/rss/articles/CBMilwFBVV95cUxQYkR1WUZONXR3YjFSZzByRVl1ZXhvWDFwenhOV0tPQzQ1TFlSODNiWkw2SXlsdmN2M295a3Z5b2g4aEJlblliUmV6TDM0SnQ2Rm9TZW9ESWtYcjM5SnlhZ0kxby0xZ0QwSDlLdGhpTWlpVzNPTS13NGMwMTl6WGtSejVuZnAwTUxSb1lYYm56bThiRnBxZDdv?oc=5)
+  - AES - The AES Corp News | Morningstar (https://www.morningstar.com/stocks/xnys/aes/news)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

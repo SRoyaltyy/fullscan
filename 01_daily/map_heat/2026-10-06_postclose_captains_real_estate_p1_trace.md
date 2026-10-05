@@ -6,13 +6,13 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"EQIX Equinix news October 2026"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"EQIX Equinix news October 2026"* → got 6 results (via ddg)
 
-  - MEDIA ALERT: Equinix Sets Conference Call for Third-Quarter Results - Equinix Newsroom (https://news.google.com/rss/articles/CBMiqgFBVV95cUxNN0owRGJIRDlkNHdTQ0lINk9KTDlrVU9IRDRuR3ZMejZTMXAzb3dZZ2ZIOWF5aXlrZ1ZBdG1yZ1FkWld3ZXFUUW1FNXdtU2pfbXJnMDRPbkthUzBoemtibXlvMTVoS2xiaTVOSkQwUEtVSEdDbUk2WVhDaXcyazdGblNfN1pwaVMzNkd1VDB2NkFHYWRYOW9DTTE1bW1pVkRtY2NEZ1lkclpYdw?oc=5)
+  - Equinix Reports Second-Quarter Results, Raises 2026 Guidance ... (https://investor.equinix.com/news-events/press-releases/detail/1114/equinix-reports-second-quarter-results-raises-2026)
 
-  - Equinix, Inc. (EQIX) Stock Price, News, Quote & History - Yahoo! Finance Canada (https://news.google.com/rss/articles/CBMiUkFVX3lxTE5LTVA2TVhWNlJYXzNQQVlrNnBoSDZ5VHI0ZFpfMTNYTW1hYzc0R3JlRHBVWVViMEpDaGl2NUFzQXV1Z0lfY2t4NVJuMGFvQ2p3aFE?oc=5)
+  - News & Events :: Equinix, Inc. (EQIX) (https://investor.equinix.com/news-events)
 
-  - Equinix Joins AI Capex Race, Consolidation Triggers Upgraded Buy Rating (NASDAQ:EQIX) - Seeking Alpha (https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVGxobklZR3pmcWRuZjhtcTBjMGFtVGU0R1NCckZvZ0l0MTVzb0xrcDdLTThuazloaUd1RE9lemtBZERNRjIzcVN1YmRWQ3Vjb0pjalFTdFVHRktTZzVCZDhMV2lTQXRyU3haWFkxOHliaE1xcGVFT0IzNXdBQ0l0clRZaUdTN3pNUVBidjFXSnhKX2xJNFBxMnhGb3JYVGdhbHlwUlhKMTROZ1JxMVhLMmlvQkdDMVU1?oc=5)
+  - Data Center News, Press Releases & Company Updates | Equinix (https://newsroom.equinix.com/)
 
 **Step 2 — Research.** The model wanted to know: *"AMT American Tower news October 2026"* → got 6 results (via gnews_rss)
 

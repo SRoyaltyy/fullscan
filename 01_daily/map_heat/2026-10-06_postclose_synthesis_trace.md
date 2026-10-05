@@ -16,10 +16,10 @@
 
 **Step 2 — Research.** The model wanted to know: *"CSTM Constellium news October 2026"* → got 6 results (via ddg)
 
+  - Constellium (CSTM) Earnings Date and Reports 2026 - MarketBeat (https://www.marketbeat.com/stocks/NYSE/CSTM/earnings/)
+
   - CSTM News Today | Why did Constellium stock go down today? (https://www.marketbeat.com/stocks/NYSE/CSTM/news/)
 
   - Investors - Constellium (https://www.constellium.com/investors)
-
-  - Constellium SE (CSTM) Stock Price Today - The Wall Street Journal (https://www.wsj.com/market-data/stock/cstm)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
