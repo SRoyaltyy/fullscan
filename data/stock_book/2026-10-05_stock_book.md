@@ -1,6 +1,6 @@
 # Stock book — 2026-10-05
 
-_Generated 2026-10-05T06:08:20.311703-04:00_
+_Generated 2026-10-05T06:08:36.228673-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -61,8 +61,8 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 7 | **TDAY** | 🟡🟢🟢🟡🟢🟢 | standard | no direct company event; Publishing +3.8% d1 / +2.5% 1w / -1.0% vs parent | BUY STANDARD — market=YELLOW; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 8 | **PBF** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Oil & Gas Refining & Marketing -1.1% d1 / +1.9% 1w / +0.9% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪ |
 | 9 | **SM** | 🟡🟡🟡🟡🟢🟡 | standard | basket/action net=+7.36; context only, not a company catalyst; Oil & Gas E&P -0.1% d1 / +1.5% 1w / +0.5% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.40); setup=GREEN; flow=YELLOW |
-| 10 | **VLO** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Oil & Gas Refining & Marketing -1.1% d1 / +1.9% 1w / +0.9% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪ |
-| 11 | **ECHO** | 🟡🟢🟢🟡🟢🟡 | standard | no direct company event; Telecom Services +0.6% d1 / +0.7% 1w / -2.7% vs parent | BUY STANDARD — market=YELLOW; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
+| 10 | **ECHO** | 🟡🟢🟢🟡🟢🟡 | standard | no direct company event; Telecom Services +0.6% d1 / +0.7% 1w / -2.7% vs parent | BUY STANDARD — market=YELLOW; parent=GREEN; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green |
+| 11 | **VLO** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Oil & Gas Refining & Marketing -1.1% d1 / +1.9% 1w / +0.9% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪ |
 | 12 | **PR** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Oil & Gas E&P -0.1% d1 / +1.5% 1w / +0.5% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪ |
 | 13 | **CVE** | 🟡🟡🟡🟡🟢🟡 | standard | direct high digest (stale/undated): Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance; Oil & Gas Integrated -0.5% d1 / +3.3% 1w / +2.3% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.48); setup=GREEN; flow=YELLOW |
 | 14 | **GPRK** | 🟡🟡🟡🟡🟢🟡 | standard | no direct company event; Oil & Gas E&P -0.1% d1 / +1.5% 1w / +0.5% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=🔵 |
