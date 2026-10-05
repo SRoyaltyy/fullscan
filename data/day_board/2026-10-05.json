@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T05:37:36.130229-04:00",
+  "generated_at": "2026-10-05T05:37:52.317925-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -555,18 +555,18 @@
           "path": "01_daily/weather/2026-10-05_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9707 vix=calm yields=falling",
-          "size": 9707,
-          "said": "hostile 5 \u00b7 neutral 6",
+          "reason": "sectors=11 bytes=9713 vix=calm yields=falling",
+          "size": 9713,
+          "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Real Estate",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
             "events bull 5 / bear 4"
           ]
         }
       ],
-      "said": "hostile 5 \u00b7 neutral 6",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Real Estate",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
         "events bull 5 / bear 4"
       ]
     },
@@ -768,11 +768,11 @@
           "path": "01_daily/weather/2026-10-05_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9707 vix=calm yields=falling",
-          "size": 9707,
-          "said": "hostile 5 \u00b7 neutral 6",
+          "reason": "sectors=11 bytes=9713 vix=calm yields=falling",
+          "size": 9713,
+          "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Real Estate",
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
             "events bull 5 / bear 4"
           ]
         },
@@ -974,9 +974,9 @@
     },
     "news": {},
     "weather": {
-      "said": "hostile 5 \u00b7 neutral 6",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Real Estate",
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
         "events bull 5 / bear 4"
       ]
     }
@@ -1541,6 +1541,31 @@
         }
       ],
       "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11710 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T05:37:51.206915-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-05_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9713,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-05_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5283,
+          "preview": "# Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {

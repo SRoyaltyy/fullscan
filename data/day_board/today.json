@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T05:37:36.130229-04:00",
+  "generated_at": "2026-10-05T05:37:52.317925-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T04:34:41.463821-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-05_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 4043466,
-          "preview": "raw=5551 usable=563 single=188 \u00b7 OPEC+ Has Deal Outline for Steady November Quotas, Delegates Say - Bloomberg.com | Markets bet on RBI rate hike as inflation pressure builds - Reuters | North Korea\u2019s Kim Oversaw Hypersonic Missile Drill, KCNA Says - Bloomberg.com | North Korea says Kim oversaw hypersonic missile drill - Reuters | North Korea's Kim Yo Jong says intermediate-range missile test was conducted - R"
-        },
-        {
-          "path": "01_daily/news/2026-10-05_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 11518,
-          "preview": "# News Parse v2 \u2014 2026-10-05T04:34:25.915611-04:00\nWindow\u224848h | news_mode=on | raw=5551 | usable=563 | single_name=188 | noise_dropped=4491\nusable polarity={'+': 22, '-': 117, 'mixed': 13, 'neutral': 411}"
-        }
-      ],
-      "preview": "raw=5551 usable=563 single=188 \u00b7 OPEC+ Has Deal Outline for Steady November Quotas, Delegates Say - Bloomberg.com | Markets bet on RBI rate hike as inflation pressure builds - Reuters | North Korea\u2019s Kim Oversaw Hypersonic Missile Drill, KCNA Says - Bloomberg.com | North Korea says Kim oversaw hypersonic missile drill - Reuters | North Korea's Kim Yo Jong says intermediate-range missile test was conducted - R \u00b7 # News Parse v2 \u2014 2026-10-05T04:34:25.915611-04:00\nWindow\u224848h | news_mode=on | raw=5551 | usable=563 | single_name=188 | noise_dropped=4491\nusable polarity={'+': 22, '-': 117, 'mixed': 13, 'neutral': 411}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -226,6 +201,31 @@
         }
       ],
       "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11710 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T05:37:51.206915-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-05_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9713,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-05_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5283,
+          "preview": "# Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
