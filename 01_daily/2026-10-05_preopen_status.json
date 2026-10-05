@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:13:06.256074-04:00",
+  "generated_at": "2026-10-05T07:14:39.601018-04:00",
   "run_id": "37282872499",
   "runner": "ecs-openclaw",
   "all_ok": false,
@@ -210,7 +210,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-10-05_map_heat.json",
-        "size": 274808
+        "size": 274169
       },
       {
         "kind": "map_heat_baseline",
