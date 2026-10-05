@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:18:41.204855-04:00",
+  "generated_at": "2026-10-05T07:21:11.898374-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -9,72 +9,67 @@
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "TMUS",
-      "score": 0.38610985491715305
-    }
-  ],
+  "buy_1d": [],
   "sell_1d": [
     {
       "ticker": "ROIV",
-      "score": -0.46456437111708726
-    },
-    {
-      "ticker": "SOC",
-      "score": -0.40008664436927904
+      "score": -0.4753937289952296
     },
     {
       "ticker": "ARE",
-      "score": -0.39254425318357405
+      "score": -0.41823590976540176
+    },
+    {
+      "ticker": "SOC",
+      "score": -0.3913239823861548
     },
     {
       "ticker": "BIDU",
-      "score": -0.3790424275919768
+      "score": -0.38465342412103465
     },
     {
       "ticker": "BNTX",
-      "score": -0.365697688240358
-    },
-    {
-      "ticker": "ALMS",
-      "score": -0.35856491802629525
+      "score": -0.38172356799127616
     },
     {
       "ticker": "SEER",
-      "score": -0.3570492574718841
+      "score": -0.3730751372228022
     },
     {
-      "ticker": "PCT",
-      "score": -0.35172844599549985
-    },
-    {
-      "ticker": "IFRX",
-      "score": -0.346195316027358
-    },
-    {
-      "ticker": "NRXP",
-      "score": -0.3453662820179879
-    },
-    {
-      "ticker": "TYRA",
-      "score": -0.34456628424775143
+      "ticker": "ALMS",
+      "score": -0.3693942759044377
     },
     {
       "ticker": "ABSI",
-      "score": -0.3434530222979487
+      "score": -0.36255362009835357
     },
     {
-      "ticker": "LXRX",
-      "score": -0.3421940224584546
+      "ticker": "IFRX",
+      "score": -0.3622211957782761
+    },
+    {
+      "ticker": "PCT",
+      "score": -0.35876277369472237
+    },
+    {
+      "ticker": "INTC",
+      "score": -0.3584543832208301
+    },
+    {
+      "ticker": "TYRA",
+      "score": -0.35781926502529476
+    },
+    {
+      "ticker": "NRXP",
+      "score": -0.35097727854704575
     },
     {
       "ticker": "WVE",
-      "score": -0.337657409594129
+      "score": -0.3509103903716723
     },
     {
-      "ticker": "GOGO",
-      "score": -0.33311188227190025
+      "ticker": "IBRX",
+      "score": -0.3481755470160717
     }
   ],
   "flatten": {
@@ -113,45 +108,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "flatten",
-      "title": "Flatten live card",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T05:51:18.577832-04:00",
-      "files": [
-        {
-          "path": "data/sleeve_merge/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 13141,
-          "preview": "2026-10-02 BUY \u2014 \u00b7 SELL \u2014"
-        },
-        {
-          "path": "data/sleeve_merge/daily_marks.json",
-          "ok": true,
-          "reason": "",
-          "size": 161757,
-          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
-        },
-        {
-          "path": "data/sleeve_merge/equity_curve.csv",
-          "ok": true,
-          "reason": "",
-          "size": 4033,
-          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
-        },
-        {
-          "path": "dashboard/sleeve-merge/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 55038,
-          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
-        }
-      ],
-      "preview": "2026-10-02 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\" \u00b7 25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19 \u00b7 <!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" co"
-    },
     {
       "key": "catalyst",
       "title": "Catalyst dossiers (after book)",
@@ -445,6 +401,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T07:13:05.936167-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11710 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:21:09.949793-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96708,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11636,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T04:21:49.901817-04:00 \u00b7 export=data/exports/finviz_2026-10-02.csv \u00b7 ticker digests=5900 \u00b7 high-signal=1917_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T04:21:49.901817-04:00 \u00b7 export=data/exports/finviz_2026-10-02.csv \u00b7 ticker digests=5900 \u00b7 high-signal=1917_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

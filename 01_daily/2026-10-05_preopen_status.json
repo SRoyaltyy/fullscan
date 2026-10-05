@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:14:39.601018-04:00",
+  "generated_at": "2026-10-05T07:21:09.914487-04:00",
   "run_id": "37282872499",
   "runner": "ecs-openclaw",
   "all_ok": false,
@@ -9,8 +9,48 @@
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "(review)",
-      "reason": "empty_review_reply"
+      "path": "01_daily/sectors/2026-10-05/basic_materials_predict.md",
+      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-05/communication_services_predict.md",
+      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-05/consumer_cyclical_predict.md",
+      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-05/consumer_defensive_predict.md",
+      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-05/energy_predict.md",
+      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-05/financial_predict.md",
+      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-05/healthcare_predict.md",
+      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-05/industrials_predict.md",
+      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-05/real_estate_predict.md",
+      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-05/technology_predict.md",
+      "reason": "missing; 0/11 sector predicts (need >=8); QC step deadline"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-05/utilities_predict.md",
+      "reason": "missing; 0/11 sector predicts (need >=8); QC step deadline"
     }
   ],
   "missing_required": [
@@ -189,7 +229,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-05_finviz_digest.json",
-        "size": 97128
+        "size": 96708
       },
       {
         "kind": "finviz_market_digest",
@@ -210,7 +250,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-10-05_map_heat.json",
-        "size": 274169
+        "size": 274808
       },
       {
         "kind": "map_heat_baseline",
