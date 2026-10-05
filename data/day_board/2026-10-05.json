@@ -1,12 +1,12 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T05:40:04.270817-04:00",
+  "generated_at": "2026-10-05T05:41:39.015033-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
@@ -681,11 +681,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -824,10 +824,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-05_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=125",
+          "size": 937638,
+          "said": "1d BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER \u00b7 0.35785",
           "bullets": []
         },
         {
@@ -835,21 +835,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-05_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 26789,
+          "said": "Stock book \u2014 2026-10-05",
+          "bullets": [
+            "_Generated 2026-10-05T05:40:29.723978-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-05_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 2263,
+          "said": "139 green \u00b7 SHOO, GLBE, FIGS, SN, HNI, SIG, SKY, VVV, ONON, BIRK",
           "bullets": []
         },
         {
@@ -871,10 +874,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-05 not in dashboard dates (last=2026-10-01)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-05)",
           "size": 10183910,
-          "said": "session 2026-10-05 not in dashboard dates (last=2026-10-01)",
+          "said": "live-book poller + today.json (2026-10-05)",
           "bullets": []
         }
       ],
@@ -887,9 +890,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -899,10 +902,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-05_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=125",
+          "size": 937638,
+          "said": "1d BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER \u00b7 0.35785",
           "bullets": []
         },
         {
@@ -910,10 +913,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-05 not in dashboard dates (last=2026-10-01)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-05)",
           "size": 10183910,
-          "said": "session 2026-10-05 not in dashboard dates (last=2026-10-01)",
+          "said": "live-book poller + today.json (2026-10-05)",
           "bullets": []
         },
         {
@@ -950,7 +953,68 @@
   "news_mode_reason": "",
   "selections": {
     "buy_1d": [],
-    "sell_1d": [],
+    "sell_1d": [
+      {
+        "ticker": "ROIV",
+        "score": -0.4753937289952296
+      },
+      {
+        "ticker": "ARE",
+        "score": -0.41823590976540176
+      },
+      {
+        "ticker": "SOC",
+        "score": -0.3913239823861548
+      },
+      {
+        "ticker": "BIDU",
+        "score": -0.38465342412103465
+      },
+      {
+        "ticker": "BNTX",
+        "score": -0.38172356799127616
+      },
+      {
+        "ticker": "SEER",
+        "score": -0.3730751372228022
+      },
+      {
+        "ticker": "ALMS",
+        "score": -0.3693942759044377
+      },
+      {
+        "ticker": "ABSI",
+        "score": -0.36255362009835357
+      },
+      {
+        "ticker": "IFRX",
+        "score": -0.3622211957782761
+      },
+      {
+        "ticker": "PCT",
+        "score": -0.35876277369472237
+      },
+      {
+        "ticker": "INTC",
+        "score": -0.3584543832208301
+      },
+      {
+        "ticker": "TYRA",
+        "score": -0.35781926502529476
+      },
+      {
+        "ticker": "NRXP",
+        "score": -0.35097727854704575
+      },
+      {
+        "ticker": "WVE",
+        "score": -0.3509103903716723
+      },
+      {
+        "ticker": "IBRX",
+        "score": -0.3481755470160717
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "UP  0.517",
@@ -1635,6 +1699,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 EXLS, SB, SKM, CORT, HUM \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TEL, ABBV, EXLS, CORT, SU"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T05:41:30.877631-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-05_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 937638,
+          "preview": "1d BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2263,
+          "preview": "green 139 \u00b7 SHOO, GLBE, FIGS, SN, HNI, SIG, SKY, VVV, ONON, BIRK"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2454,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7134,
+          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7134,
+          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
+        },
+        {
+          "path": "01_daily/2026-10-05_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 27689,
+          "preview": "# Stock book \u2014 2026-10-05\n_Generated 2026-10-05T05:40:29.723978-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 green 139 \u00b7 SHOO, GLBE, FIGS, SN, HNI, SIG, SKY, VVV, ONON, BIRK \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 # Stock book \u2014 2026-10-05\n_Generated 2026-10-05T05:40:29.723978-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
