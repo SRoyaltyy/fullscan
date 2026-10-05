@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:46:36.557419-04:00",
+  "generated_at": "2026-10-05T07:52:14.707630-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -93,7 +93,7 @@
     ]
   },
   "general": {
-    "said": "UP  0.517",
+    "said": "FLAT  0.086",
     "bullets": [
       "bad: leftover Hormuz Brent >$100",
       "bad: 1w 30Y +14bp at 5.61",
@@ -101,8 +101,8 @@
       "good: Asia composite +0.7%",
       "good: WTI/Brent offered"
     ],
-    "score": "0.517",
-    "direction": "up"
+    "score": "0.086",
+    "direction": "flat"
   },
   "sectors": {
     "said": "0 up / 0 down / 0 flat",
