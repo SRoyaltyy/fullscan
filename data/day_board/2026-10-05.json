@@ -1,21 +1,20 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T04:22:25.134601-04:00",
-  "overall": "FAIL",
+  "generated_at": "2026-10-05T04:23:20.721319-04:00",
+  "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-05_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-10-05/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-10-05_actions.json` \u2014 missing",
-    "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-10-05_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-10-05_judge.md` \u2014 missing",
     "MISSING Weather JSON `01_daily/weather/2026-10-05_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-05_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 0,
+    "ok": 2,
     "partial": 2,
-    "fail": 6,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -23,9 +22,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -60,10 +59,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-10-05_map_heat.json",
           "role": "required",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 274808,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -73,10 +72,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18397,
-          "said": "MAP HEAT \u2014 2026-10-02",
+          "size": 18442,
+          "said": "MAP HEAT \u2014 2026-10-05",
           "bullets": [
-            "Export `finviz_2026-10-01.csv` \u00b7 11616 names \u00b7 generated 2026-10-02T04:18:53.260380-04:00",
+            "Export `finviz_2026-10-05.csv` \u00b7 11616 names \u00b7 generated 2026-10-05T04:23:20.457205-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -88,11 +87,11 @@
       "key": "finviz",
       "name": "Finviz scrape",
       "yaml": "finviz_preopen_scrape.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 5,
       "files": [
         {
@@ -100,22 +99,29 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-05_finviz_digest.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97058,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
+          ]
         },
         {
           "key": "digest_md",
           "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-10-05_finviz_digest.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11870,
+          "said": "Finviz Daily Digest \u2014 2026-10-05",
+          "bullets": [
+            "_Generated 2026-10-05T04:21:46.702583-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "Major indices (live quote page)"
+          ]
         },
         {
           "key": "market_digest_json",
@@ -138,7 +144,7 @@
           "size": 1688,
           "said": "Finviz homepage market digest \u2014 2026-10-05",
           "bullets": [
-            "Generated:** 2026-10-05T04:22:24.422923-04:00 (America/New_York)",
+            "Generated:** 2026-10-05T04:21:52.586404-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -165,16 +171,20 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "bullets": [
+        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+        "Banks have profited from idle cash for years. AI agents could change that."
+      ]
     },
     {
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
-      "n_req_ok": 0,
+      "status": "PARTIAL",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -184,11 +194,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-05_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97058,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
+          ]
         },
         {
           "key": "in_market_digest",
@@ -217,10 +231,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-10-05_map_heat.json",
           "role": "input",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 274808,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -316,11 +330,16 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-10-05_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 7546,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "bullets": [
+            "general_predict:missing",
+            "events:missing",
+            "news_judge:missing",
+            "news_parse:missing"
+          ]
         },
         {
           "key": "status",
@@ -338,11 +357,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-10-05_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -474,7 +495,7 @@
       "name": "Label + weather",
       "yaml": "label_weather.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
@@ -485,11 +506,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-05_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97058,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
+          ]
         },
         {
           "key": "weather",
@@ -570,11 +595,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-05_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97058,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
+          ]
         },
         {
           "key": "dossiers",
@@ -640,11 +669,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-05_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97058,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
+          ]
         },
         {
           "key": "in_judge",
@@ -929,6 +962,31 @@
       "date": "2026-10-05",
       "ok": true,
       "pushed": true,
+      "at": "2026-10-05T04:21:52.597882-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 3225,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 1688,
+          "preview": "# Finviz homepage market digest \u2014 2026-10-05\n**Generated:** 2026-10-05T04:21:52.586404-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stock futures edge lower in quiet trade ahead of ISM Services PMI data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MKC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-05\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-05\n**Generated:** 2026-10-05T04:21:52.586404-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stock futures edge lower in quiet trade ahead of ISM Services PMI data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MKC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-05\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
       "at": "2026-10-05T04:22:03.829747-04:00",
       "files": [
         {
@@ -972,6 +1030,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-05\n**Generated:** 2026-10-05T04:22:24.422923-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stock futures edge lower in quiet trade ahead of ISM Services PMI data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MKC\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-05\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T04:23:20.505786-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-05_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 274808,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-05_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18828,
+          "preview": "# MAP HEAT \u2014 2026-10-05\nExport `finviz_2026-10-05.csv` \u00b7 11616 names \u00b7 generated 2026-10-05T04:23:20.457205-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-05\nExport `finviz_2026-10-05.csv` \u00b7 11616 names \u00b7 generated 2026-10-05T04:23:20.457205-04:00"
     }
   ],
   "href": {
