@@ -1,48 +1,47 @@
-# Finviz homepage market digest (close) — 2026-10-02
+# Finviz homepage market digest (close) — 2026-10-05
 
-**Generated:** 2026-10-02T19:46:07.933931-04:00 (America/New_York)
+**Generated:** 2026-10-05T17:37:41.015063-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks closed higher as soft September jobs report reduced Fed rate-hike odds and lifted cyclical sectors
-**Prior close:** SPX +0.73%  Nasdaq +1.19%  Dow +0.49%
-**SPX:** +0.73%  **Nasdaq:** +1.19%  **Dow:** +0.49%
+**Banner:** US stocks closed higher led by tech and M&A as 10-year yield hit 5.31% and services data signaled cooling growth
+**Prior close:** SPX +0.66%  Nasdaq +1.05%  Dow +0.18%
+**SPX:** +0.66%  **Nasdaq:** +1.05%  **Dow:** +0.18%
 **Oil:** —
-**CPI/Fed:** 23.0% hike (hike slipping to roughly 23%)
-**Leaders:** CME, TSLA, CCL, NCLH, RCL, NVDA, SYNA, ON, ISRG, VEEV, NKE, WDC, STX
-**Next session:** housing no · retail no · Fed yes
-**Earnings slate:** WDC, STX
+**CPI/Fed:** —
+**Leaders:** NVDA, AVGO, MSFT, META, PTC, RXO, CHRW, SPHR, CBRS, PCVX, NU, ITUB, ELBM, STZ, RPM, LW
+**Next session:** housing no · retail no · Fed no
+**Earnings slate:** —
 **Geo/grain:** —
-**Clock legal for:** 2026-10-05
+**Clock legal for:** 2026-10-06
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-05) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-06) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX +0.73% · Nasdaq +1.19% · Dow +0.49%
+- **Prior close:** SPX +0.66% · Nasdaq +1.05% · Dow +0.18%
 - **Oil:** —
-- **CPI / Fed-odds:** 23.0% hike (hike slipping to roughly 23%)
-- **Named leaders:** CME, TSLA, CCL, NCLH, RCL, NVDA, SYNA, ON, ISRG, VEEV, NKE, WDC, STX
-- **Next-session calendar:** housing no · retail no · Fed yes
-  - CME (CME) FedWatch Tool showed October odds of a 25 bp Federal Reserve rate hike slipping to roughly 23% after the weaker jobs data.
-  - Data-storage names Western Digital (WDC) and Seagate (STX) declined after Toshiba announced plans to double hard-disk production capacity, while investors looked ahead to upcoming US inflation data and a heavier earnings slate for further clarity on Federal Reserve policy.
-- **Earnings slate:** WDC, STX
+- **CPI / Fed-odds:** —
+- **Named leaders:** NVDA, AVGO, MSFT, META, PTC, RXO, CHRW, SPHR, CBRS, PCVX, NU, ITUB, ELBM, STZ, RPM, LW
+- **Next-session calendar:** housing no · retail no · Fed no
+  - After the bell, smaller names including ELBM (ELBM) and other small caps reported earnings with limited impact, and traders turned attention to Tuesday’s results from Constellation Brands (STZ), RPM International (RPM), Lamb Weston (LW), and additional economic data.
+- **Earnings slate:** —
 - **Geo / grain:** —
 
 ## Narrative
 
-**US stocks closed higher as soft September jobs report reduced Fed rate-hike odds and lifted cyclical sectors**
+**US stocks closed higher led by tech and M&A as 10-year yield hit 5.31% and services data signaled cooling growth**
 
-- The S&P 500 ($SPX) gained 0.73% to 7,722.72, the Dow Jones Industrial Average ($DJI) rose 0.49% to 51,176.96, the Nasdaq Composite ($COMP) climbed 1.19% to 27,190.86, and the Russell 2000 (IWM) added 0.9% for its largest daily gain in about a month on October 2, 2026.
-- CME (CME) FedWatch Tool showed October odds of a 25 bp Federal Reserve rate hike slipping to roughly 23% after the weaker jobs data.
-- The Labor Department reported September nonfarm payrolls rose by 29,000 versus the 90,000 consensus, prior months were revised sharply lower, and the unemployment rate increased to 4.2%, supporting risk appetite.
-- Consumer Discretionary led S&P sectors, up about 1.5%, as Tesla (TSLA) jumped 4.65% after reporting Q3 deliveries of 486,532 vehicles versus estimates of 461,000.
-- Cruise operators Carnival (CCL), Norwegian Cruise Line (NCLH), and Royal Caribbean (RCL) advanced after Carnival (CCL) posted an earnings beat.
-- Technology shares outperformed, with Nvidia (NVDA) rising 1.4% to $233.95, trading near its record high.
-- Synaptics (SYNA) rose 14.1% and ON Semiconductor (ON) gained about 6% after the companies revised their merger agreement to an all-cash deal valued at roughly $5.7 billion.
-- Healthcare was the weakest group, finishing flat to slightly lower, weighed by Intuitive Surgical (ISRG), down 2.3%, and Veeva Systems (VEEV), off 3.05%.
-- Nike (NKE) fell 3.64% to $33.87 after fiscal Q1 revenue of $11.21 billion missed estimates of $11.32 billion and the company issued cautious guidance citing softer China demand.
-- Data-storage names Western Digital (WDC) and Seagate (STX) declined after Toshiba announced plans to double hard-disk production capacity, while investors looked ahead to upcoming US inflation data and a heavier earnings slate for further clarity on Federal Reserve policy.
+- The S&P 500 ($SPX) rose 0.66% to 7,773.95, the Dow Jones ($DJI) gained 0.18% to 51,267.90, and the Nasdaq Composite ($COMP) climbed 1.05% to a record 27,477.31 as equities advanced despite the 10-year Treasury yield reaching a multi-year high of 5.31%.
+- Megacap tech outperformed, with Nvidia (NVDA) and Broadcom (AVGO) each gaining 2.1%, Microsoft (MSFT) adding 1.5%, Meta Platforms (META) adding 1.9%, and the S&P 500 ($SPX) software & services index rising 1.4% as 9 of 11 sectors finished higher.
+- PTC (PTC) surged 33.5% after Schneider Electric agreed to acquire the software company for $22.6 billion in an all-cash deal.
+- RXO (RXO) jumped 22.5% after C.H. Robinson Worldwide (CHRW) announced a $5.8 billion stock-and-cash acquisition, while C.H. Robinson (CHRW) fell 10.9% on the news.
+- Sphere Entertainment (SPHR) dropped 13.6% during the session.
+- Cerebras Systems (CBRS) gained 9% after OpenAI CEO Sam Altman described it as a “close partner” with “deep engagement” on speed frontiers.
+- Vaxcyte (PCVX) rallied 30.7% after its Vax-31 vaccine candidate met all prespecified primary endpoints in the OPUS-1 Phase 3 trial.
+- Brazilian-exposed stocks advanced, with Nu Holdings (NU) up 13%, Itaú Unibanco (ITUB) gaining 15.5%, and Petrobras (PBR-A) climbing over 12% after Flávio Bolsonaro led the first round of Brazil’s presidential election.
+- ISM services PMI data showed US services activity cooled in September while price pressures built, and softer-than-expected September jobs numbers reduced October rate-hike odds as investors looked ahead to the earnings season kickoff.
+- After the bell, smaller names including ELBM (ELBM) and other small caps reported earnings with limited impact, and traders turned attention to Tuesday’s results from Constellation Brands (STZ), RPM International (RPM), Lamb Weston (LW), and additional economic data.
