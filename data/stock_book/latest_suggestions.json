@@ -2,7 +2,12 @@
   "date": "2026-10-05",
   "horizons": {
     "1d": {
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "JXN",
+          "score": 0.45072535350893966
+        }
+      ],
       "sell": [
         {
           "ticker": "ROIV",
@@ -67,7 +72,12 @@
       ]
     },
     "3d": {
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "JXN",
+          "score": 0.4764274099447681
+        }
+      ],
       "sell": [
         {
           "ticker": "ROIV",
@@ -132,7 +142,12 @@
       ]
     },
     "1w": {
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "JXN",
+          "score": 0.46905174404017513
+        }
+      ],
       "sell": [
         {
           "ticker": "ROIV",
@@ -197,7 +212,12 @@
       ]
     },
     "2w": {
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "JXN",
+          "score": 0.4979755849956668
+        }
+      ],
       "sell": [
         {
           "ticker": "ROIV",
@@ -262,7 +282,12 @@
       ]
     },
     "1m": {
-      "buy": [],
+      "buy": [
+        {
+          "ticker": "JXN",
+          "score": 0.5349152350560871
+        }
+      ],
       "sell": [
         {
           "ticker": "ROIV",
@@ -327,7 +352,9 @@
       ]
     }
   },
-  "buy_1d": [],
+  "buy_1d": [
+    "JXN"
+  ],
   "sell_1d": [
     "ROIV",
     "ARE",

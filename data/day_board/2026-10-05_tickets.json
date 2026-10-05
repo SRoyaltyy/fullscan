@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T05:40:35.355668-04:00",
+  "generated_at": "2026-10-05T05:46:19.944479-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -9,7 +9,12 @@
     "fail": 0,
     "n": 8
   },
-  "buy_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "JXN",
+      "score": 0.45072535350893966
+    }
+  ],
   "sell_1d": [
     {
       "ticker": "ROIV",
