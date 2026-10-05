@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T17:20:46.936468-04:00",
+  "generated_at": "2026-10-05T17:21:06.230633-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -832,9 +832,9 @@
           "path": "data/stock_book/2026-10-05_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=199",
-          "size": 1433680,
-          "said": "1d BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI",
+          "reason": "horizons=5 names=189",
+          "size": 1388219,
+          "said": "1d BUY COP, SPOT, DG, DVN, TMUS, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI",
           "bullets": []
         },
         {
@@ -844,10 +844,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 74369,
+          "size": 69824,
           "said": "Stock book \u2014 2026-10-05",
           "bullets": [
-            "_Generated 2026-10-05T16:53:30.848155-04:00_",
+            "_Generated 2026-10-05T17:20:56.286577-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -910,9 +910,9 @@
           "path": "data/stock_book/2026-10-05_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=199",
-          "size": 1433680,
-          "said": "1d BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI",
+          "reason": "horizons=5 names=189",
+          "size": 1388219,
+          "said": "1d BUY COP, SPOT, DG, DVN, TMUS, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI",
           "bullets": []
         },
         {
@@ -961,66 +961,62 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "TMUS",
-        "score": 0.3448303289604864
-      },
-      {
         "ticker": "COP",
-        "score": 0.548154509076111
-      },
-      {
-        "ticker": "PRGS",
-        "score": 0.2947028867133859
-      },
-      {
-        "ticker": "PRMB",
-        "score": 0.4055163317115056
+        "score": 0.5928244640113322
       },
       {
         "ticker": "SPOT",
-        "score": 0.17604742631397094
+        "score": 0.1457986289286642
+      },
+      {
+        "ticker": "DG",
+        "score": 0.26188343941980674
       },
       {
         "ticker": "DVN",
-        "score": 0.5892777859408413
+        "score": 0.5750671138771493
+      },
+      {
+        "ticker": "TMUS",
+        "score": 0.1735501338913136
       },
       {
         "ticker": "RRC",
-        "score": 0.745920039777549
+        "score": 0.7178435970911741
       }
     ],
     "sell_1d": [
       {
         "ticker": "OKLO",
-        "score": -0.26264240622864266
+        "score": -0.25416526771278103
       },
       {
         "ticker": "NEOV",
-        "score": -0.25919990820534133
+        "score": -0.25841841909317176
       },
       {
         "ticker": "FCEL",
-        "score": -0.16986455033318454
+        "score": -0.17013877830702312
       },
       {
         "ticker": "EOSE",
-        "score": -0.19974540749788555
+        "score": -0.2015632966297088
       },
       {
         "ticker": "NNDM",
-        "score": -0.0346090802266083
+        "score": -0.034098324964642324
       },
       {
         "ticker": "INDI",
-        "score": -0.2929655110448106
+        "score": -0.30203572894274994
       },
       {
         "ticker": "TE",
-        "score": -0.26854495652154203
+        "score": -0.270685453654172
       },
       {
-        "ticker": "HNRG",
-        "score": -0.02730836836844408
+        "ticker": "SKYX",
+        "score": -0.27805698823042735
       }
     ],
     "flatten": {
@@ -3505,6 +3501,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T17:21:05.101378-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-05_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1388219,
+          "preview": "1d BUY COP, SPOT, DG, DVN, TMUS, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-05_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2454,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12252,
+          "preview": "2026-10-05 BUY COP, SPOT, DG, DVN, TMUS, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12252,
+          "preview": "2026-10-05 BUY COP, SPOT, DG, DVN, TMUS, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, SKYX"
+        },
+        {
+          "path": "01_daily/2026-10-05_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 70848,
+          "preview": "# Stock book \u2014 2026-10-05\n_Generated 2026-10-05T17:20:56.286577-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY COP, SPOT, DG, DVN, TMUS, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-05 BUY COP, SPOT, DG, DVN, TMUS, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, SKYX \u00b7 2026-10-05 BUY COP, SPOT, DG, DVN, TMUS, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, SKYX \u00b7 # Stock book \u2014 2026-10-05\n_Generated 2026-10-05T17:20:56.286577-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
