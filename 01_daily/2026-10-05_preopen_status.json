@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:34:51.830363-04:00",
+  "generated_at": "2026-10-05T07:39:07.628187-04:00",
   "run_id": "37282872499",
   "runner": "ecs-openclaw",
   "all_ok": false,
@@ -208,7 +208,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-05_judge.md",
-        "size": 10178
+        "size": 10848
       },
       {
         "kind": "news_parse",
@@ -222,7 +222,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-05_actions.json",
-        "size": 66279
+        "size": 66158
       },
       {
         "kind": "finviz_digest",

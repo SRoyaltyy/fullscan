@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:35:51.643377-04:00",
+  "generated_at": "2026-10-05T07:39:09.607045-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -264,12 +264,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 10178,
-          "said": "1. **Hawkish Fed comments lift October hike odds; gold dumps $100+** \u2014 Direct rates-path reprice into SPX duration/beta; gold move confirms it is trading, not t",
+          "size": 10848,
+          "said": "1. **Hawkish Fed comments lift October hike odds; gold slumps >$100** \u2014 Cleanest rates/risk-appetite print in the Finviz set (AEM); outranks Powell-name junk an",
           "bullets": [
-            "2. **FOMC minutes + ISM Services on this week\u2019s calendar** \u2014 Unresolved US policy/activity binary that outranks overnight color for the next 1\u20135 sessions. Channel: rates",
-            "3. **Rising yields + Fabrinet weakness drive APH \u22126.5%** \u2014 Rates are already hitting the AI-hardware/interconnect complex, not just Treasuries. Channel: sector_fundamental",
-            "4. **Copper gains as US jobs data eases Fed-tightening fears** \u2014 Same rates cluster, opposite sign; blocks a one-way hawkish read. Channel: rates"
+            "2. **Treasury yields dip as investors pare Fed hike bets** \u2014 Direct US duration tape that conflicts with (1); must sit in the ranking as the other half of the rates cluster. Channel: rates",
+            "3. **FOMC minutes / ISM Services week-ahead to test the 2026 hike plateau** \u2014 Unresolved US policy binary for this week; calendar force > NK missiles or RBI. Channel: rates",
+            "4. **Broadening equity rally hits an economic roadblock** \u2014 Bloomberg breadth/risk-appetite stall the mechanical filter dropped; more SPX-relevant than single-name color. Channel: risk"
           ]
         },
         {
@@ -765,12 +765,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 10178,
-          "said": "1. **Hawkish Fed comments lift October hike odds; gold dumps $100+** \u2014 Direct rates-path reprice into SPX duration/beta; gold move confirms it is trading, not t",
+          "size": 10848,
+          "said": "1. **Hawkish Fed comments lift October hike odds; gold slumps >$100** \u2014 Cleanest rates/risk-appetite print in the Finviz set (AEM); outranks Powell-name junk an",
           "bullets": [
-            "2. **FOMC minutes + ISM Services on this week\u2019s calendar** \u2014 Unresolved US policy/activity binary that outranks overnight color for the next 1\u20135 sessions. Channel: rates",
-            "3. **Rising yields + Fabrinet weakness drive APH \u22126.5%** \u2014 Rates are already hitting the AI-hardware/interconnect complex, not just Treasuries. Channel: sector_fundamental",
-            "4. **Copper gains as US jobs data eases Fed-tightening fears** \u2014 Same rates cluster, opposite sign; blocks a one-way hawkish read. Channel: rates"
+            "2. **Treasury yields dip as investors pare Fed hike bets** \u2014 Direct US duration tape that conflicts with (1); must sit in the ranking as the other half of the rates cluster. Channel: rates",
+            "3. **FOMC minutes / ISM Services week-ahead to test the 2026 hike plateau** \u2014 Unresolved US policy binary for this week; calendar force > NK missiles or RBI. Channel: rates",
+            "4. **Broadening equity rally hits an economic roadblock** \u2014 Bloomberg breadth/risk-appetite stall the mechanical filter dropped; more SPX-relevant than single-name color. Channel: risk"
           ]
         },
         {
@@ -2468,6 +2468,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-05T07:35:28.442929-04:00\nraw=5577 unique_events=6 tickers=83"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:39:07.659759-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 10848,
+          "preview": "# News Judge \u2014 2026-10-05"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1227,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-10-05 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {
