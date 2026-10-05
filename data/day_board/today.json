@@ -1,12 +1,12 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T05:38:29.562976-04:00",
+  "generated_at": "2026-10-05T05:40:04.270817-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 4,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_judge",
-      "title": "News judge",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T04:43:14.432719-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-05_judge.md",
-          "ok": true,
-          "reason": "",
-          "size": 10178,
-          "preview": "# News Judge \u2014 2026-10-05"
-        },
-        {
-          "path": "01_daily/news/2026-10-05_judge.json",
-          "ok": true,
-          "reason": "",
-          "size": 1009,
-          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
-        }
-      ],
-      "preview": "# News Judge \u2014 2026-10-05 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
-    },
     {
       "key": "general_predict",
       "title": "General market predict",
@@ -212,6 +187,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T05:40:01.291730-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-05_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7558257,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 EXLS, SB, SKM, CORT, HUM"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-05_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8349151,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TEL, ABBV, EXLS, CORT, SU"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 EXLS, SB, SKM, CORT, HUM \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TEL, ABBV, EXLS, CORT, SU"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
