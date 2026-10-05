@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T06:19:07.771223-04:00",
+  "generated_at": "2026-10-05T07:13:07.273952-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -113,115 +113,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T05:41:47.308166-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 12560,
-          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 845,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-10-05.json",
-          "ok": true,
-          "reason": "",
-          "size": 77288,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-10-05_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 41099,
-          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 242163,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-10-05_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 242163,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 214547,
-          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 242163,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 41099,
-          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 242163,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 242163,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 214547,
-          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1668,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1668,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 keys: date, generated_at, fea"
-    },
     {
       "key": "flatten",
       "title": "Flatten live card",
@@ -508,6 +399,52 @@
         }
       ],
       "preview": "2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 keys: date, generat"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:13:06.267075-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97128,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11964,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T07:13:05.936167-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-05.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11493724,
+          "preview": "11710 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 96708,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T07:13:05.936167-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11710 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
