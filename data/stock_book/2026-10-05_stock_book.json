@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-05",
-    "generated_at": "2026-10-05T17:20:56.286577-04:00",
+    "generated_at": "2026-10-05T17:28:39.651351-04:00",
     "general_bias": 0.0,
     "sector_bias": {},
     "accuracy_gates": {
@@ -293,7 +293,7 @@
     "pile_used": false,
     "green_min": 8,
     "ranker": "decision_lattice",
-    "as_of": false,
+    "as_of": true,
     "general_direction": "flat",
     "market_decision": {
       "date": "2026-10-05",
@@ -2715,53 +2715,6 @@
           "region": "bad"
         },
         {
-          "ticker": "DGXX",
-          "sector": "Utilities",
-          "industry": "Utilities - Independent Power Producers",
-          "size": "small",
-          "lane": "blocked",
-          "eligible": false,
-          "bull_rank": -3.037,
-          "bear_rank": 14.9592,
-          "domains": {
-            "market": "neutral",
-            "parent": "bad",
-            "child": "bad",
-            "company": "neutral",
-            "setup": "bad",
-            "flow": "neutral"
-          },
-          "source_boxes": {
-            "join": "bad",
-            "sector": "bad",
-            "gen": "neutral",
-            "news": "missing",
-            "digest": "missing",
-            "judge": "missing",
-            "ab": "bad",
-            "peer": "neutral",
-            "heat": "bad",
-            "vol": "neutral",
-            "catal": "missing"
-          },
-          "company": "no direct company event",
-          "company_strength": 0.0,
-          "company_direct": false,
-          "company_fresh": false,
-          "company_price_confirmed": false,
-          "group": "Utilities - Independent Power Producers",
-          "child_d1": -5.99,
-          "child_w1": -9.46,
-          "child_residual": -6.28,
-          "bull_decision": "BLOCK BUY \u2014 parent sector RED; child industry/theme RED; setup RED; \ud83d\udea8 alarm; featured fade; legacy Cond red; legacy region red; v2 domain alarm; v2 domain region red | market=YELLOW; parent=RED; child=RED/rel=RED; company=YELLOW(0.00); setup=RED; flow=YELLOW",
-          "bear_decision": "SELL/AVOID \u2014 market=YELLOW; red domains=parent,child,setup; child lags parent -6.3%",
-          "blue": false,
-          "white": false,
-          "alarm": true,
-          "cond": "bad",
-          "region": "bad"
-        },
-        {
           "ticker": "VELO",
           "sector": "Technology",
           "industry": "Computer Hardware",
@@ -2806,6 +2759,53 @@
           "white": false,
           "alarm": true,
           "cond": "neutral",
+          "region": "bad"
+        },
+        {
+          "ticker": "DGXX",
+          "sector": "Utilities",
+          "industry": "Utilities - Independent Power Producers",
+          "size": "small",
+          "lane": "blocked",
+          "eligible": false,
+          "bull_rank": -3.037,
+          "bear_rank": 14.9592,
+          "domains": {
+            "market": "neutral",
+            "parent": "bad",
+            "child": "bad",
+            "company": "neutral",
+            "setup": "bad",
+            "flow": "neutral"
+          },
+          "source_boxes": {
+            "join": "bad",
+            "sector": "bad",
+            "gen": "neutral",
+            "news": "missing",
+            "digest": "missing",
+            "judge": "missing",
+            "ab": "bad",
+            "peer": "neutral",
+            "heat": "bad",
+            "vol": "neutral",
+            "catal": "missing"
+          },
+          "company": "no direct company event",
+          "company_strength": 0.0,
+          "company_direct": false,
+          "company_fresh": false,
+          "company_price_confirmed": false,
+          "group": "Utilities - Independent Power Producers",
+          "child_d1": -5.99,
+          "child_w1": -9.46,
+          "child_residual": -6.28,
+          "bull_decision": "BLOCK BUY \u2014 parent sector RED; child industry/theme RED; setup RED; \ud83d\udea8 alarm; featured fade; legacy Cond red; legacy region red; v2 domain alarm; v2 domain region red | market=YELLOW; parent=RED; child=RED/rel=RED; company=YELLOW(0.00); setup=RED; flow=YELLOW",
+          "bear_decision": "SELL/AVOID \u2014 market=YELLOW; red domains=parent,child,setup; child lags parent -6.3%",
+          "blue": false,
+          "white": false,
+          "alarm": true,
+          "cond": "bad",
           "region": "bad"
         }
       ]
