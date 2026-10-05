@@ -6,18 +6,61 @@ from . import paper_open as po, webull_exec as we
 from .futubull_exec import BrokerSnap
 
 
+def _legacy_payload_plan(date, snap, payload=None, panel=None):
+    """Journal tests still build a card from the synthetic payload.
+
+    Production ``plan_hot4_for_broker`` reads the sealed h1 plan. Tests
+    that are not in the sealed set below keep this stand-in so the clock
+    and journal cases stay on ticker ABC.
+    """
+    del panel
+    published = {}
+    if isinstance(payload, dict):
+        published = (payload.get("strategies") or {}).get(we.HOT4) or {}
+    buys = list(published.get("buy") or [])
+    sells = list(published.get("sell") or [])
+    positions = getattr(snap, "positions", None) or {}
+    cash = max(float(getattr(snap, "cash", 0) or 0), 0.0)
+    sell_tickets, sell_skips = we.size_hot4_sells(
+        sells, positions=positions, date=date)
+    buy_tickets, buy_skips = we.size_hot4_tickets(
+        buys, cash=cash, held=set(positions), date=date,
+        s=published.get("s"), sit=bool(published.get("sit")))
+    return {
+        "date": date,
+        "want_date": date,
+        "policy": we.HOT4,
+        "stale": False,
+        "look_error": "",
+        "hard_red": False,
+        "tickets": sell_tickets + buy_tickets,
+        "skipped": sell_skips + buy_skips,
+        "order_type": "MARKET",
+        "why": "synthetic payload",
+        "score": published.get("s"),
+        "source": "test_payload",
+    }
+
+
+_SEALED_PLAN_TESTS = {
+    "test_submit_ignores_hot4_buys_that_diverge_from_sealed_book",
+    "test_submit_ignores_hot4_sells_that_diverge_from_sealed_book",
+    "test_plan_sells_sealed_shares_before_buys",
+    "test_plan_sends_sealed_sell_even_when_paper_does_not_hold_it",
+    "test_empty_payload_does_not_rebuild_hot4",
+    "test_sealed_cash_short_fails_closed_not_hot4",
+    "test_ready_submit_flat_sit_still_sends_sealed_plan",
+    "test_flat_sit_does_not_hide_sealed_plan",
+}
+
+
 @pytest.fixture(autouse=True)
 def synthetic_hot4_matches_payload(monkeypatch, request):
-    """Synthetic tickets are not the live Factor Mine panel.
+    """Clock and journal tests keep a payload stand-in.
 
-    The divergence test runs the real submit check.
+    Sealed-book tests call the real planner.
     """
-    if request.node.name in (
-        "test_submit_refuses_hot4_buys_that_diverge_from_recipe",
-        "test_submit_refuses_hot4_sells_that_diverge_from_recipe",
-        "test_ready_submit_flat_sit_missing_score_is_no_trade",
-        "test_flat_sit_still_refuses_recipe_divergence",
-    ):
+    if request.node.name in _SEALED_PLAN_TESTS:
         return
 
     def _accept(date, buys, sells=None, panel=None):
@@ -28,6 +71,7 @@ def synthetic_hot4_matches_payload(monkeypatch, request):
         ]
 
     monkeypatch.setattr("src.strategy_tickets.assert_hot4_wire", _accept)
+    monkeypatch.setattr(we, "plan_hot4_for_broker", _legacy_payload_plan)
 
 DATE = '2026-09-17'
 BELL = datetime.fromisoformat(DATE+'T09:30:00-04:00')
@@ -56,67 +100,99 @@ def plan():
     return po.make_plan(payload(), API().snapshot(), BELL-timedelta(seconds=15))
 
 
-def test_submit_refuses_hot4_buys_that_diverge_from_recipe(monkeypatch):
-    monkeypatch.setattr(
-        "src.strategy_tickets.hot4_recipe_tickers",
-        lambda date, panel=None: ["FEAM", "TJGC", "LVWR", "SECZ"],
-    )
+def _sealed_day_payload(day='2026-10-02'):
     p = payload()
-    p["strategies"][we.HOT4]["buy"] = [
-        {"ticker": t, "side": "long", "px": 10}
-        for t in ("DELL", "GME", "UMC", "VSTS")
+    p['date'] = day
+    p['decision_readiness']['completed_at'] = day + 'T09:28:00-04:00'
+    hot = p['strategies'][we.HOT4]
+    hot['date'] = day
+    hot['buy'] = [
+        {'ticker': t, 'side': 'long', 'px': 10}
+        for t in ('DELL', 'GME', 'UMC', 'VSTS')
     ]
-    with pytest.raises(ValueError, match="diverge"):
-        po.make_plan(p, API().snapshot(), BELL - timedelta(seconds=15))
+    hot['sell'] = [{'ticker': 'FEAM', 'side': 'long', 'px': 4}]
+    return p
 
 
-def test_submit_refuses_hot4_sells_that_diverge_from_recipe(monkeypatch):
+def _sealed_clock(day='2026-10-02'):
+    return datetime.fromisoformat(day + 'T09:29:45-04:00')
+
+
+def _rich_snap(**positions):
+    return BrokerSnap(
+        env='paper', cash=20_000, positions=positions, connected=True)
+
+
+def _boom_pick_day(monkeypatch):
     monkeypatch.setattr(
-        "src.strategy_tickets.hot4_recipe_tickers",
-        lambda date, panel=None: ["ABC"],
+        'src.factor_mine.pick_day',
+        lambda *a, **k: (_ for _ in ()).throw(AssertionError('pick_day')),
     )
+
+
+def test_submit_ignores_hot4_buys_that_diverge_from_sealed_book(monkeypatch):
+    _boom_pick_day(monkeypatch)
     monkeypatch.setattr(
-        "src.strategy_tickets.hot4_recipe_sells",
-        lambda date, panel=None, **_kw: ["FEAM", "TJGC", "LVWR"],
+        'src.strategy_tickets.hot4_recipe_tickers',
+        lambda date, panel=None: ['FEAM', 'TJGC', 'LVWR', 'SECZ'],
     )
-    p = payload()
-    p["strategies"][we.HOT4]["sell"] = [
-        {"ticker": t, "side": "long"} for t in ("DELL", "GME")
-    ]
-    with pytest.raises(ValueError, match="diverge"):
-        po.make_plan(p, API().snapshot(), BELL - timedelta(seconds=15))
+    card = po.make_plan(
+        _sealed_day_payload(), _rich_snap(), _sealed_clock())['card']
+    buys = [t['ticker'] for t in card['tickets'] if t['side'] == 'BUY']
+    assert buys == ['QSI', 'TJGC']
+    assert 'DELL' not in buys
+    assert 'FEAM' not in buys
 
 
-def test_plan_sells_held_lot_before_buys():
-    p = payload()
-    p["strategies"][we.HOT4]["buy"] = [{"ticker": "ABC", "px": 10, "side": "long"}]
-    p["strategies"][we.HOT4]["sell"] = [{"ticker": "FEAM", "side": "long", "px": 4}]
-    snap = BrokerSnap(
-        env="paper", cash=1000, connected=True,
-        positions={"FEAM": {"shares": 12, "last_px": 4}},
+def test_submit_ignores_hot4_sells_that_diverge_from_sealed_book(monkeypatch):
+    _boom_pick_day(monkeypatch)
+    monkeypatch.setattr(
+        'src.strategy_tickets.hot4_recipe_sells',
+        lambda date, panel=None, **_kw: ['FEAM', 'TJGC', 'LVWR'],
     )
-    card = po.make_plan(p, snap, BELL - timedelta(seconds=15))["card"]
-    assert card["tickets"][0]["side"] == "SELL"
-    assert card["tickets"][0]["ticker"] == "FEAM"
-    assert card["tickets"][0]["shares"] == 12
-    assert card["tickets"][1]["side"] == "BUY"
-    assert card["tickets"][1]["ticker"] == "ABC"
+    card = po.make_plan(
+        _sealed_day_payload(), _rich_snap(), _sealed_clock())['card']
+    sells = [(t['ticker'], t['shares']) for t in card['tickets'] if t['side'] == 'SELL']
+    assert sells == [('EGG', 774), ('KOD', 33)]
+    assert card['tickets'][0]['side'] == 'SELL'
 
 
-def test_plan_does_not_sell_unheld_name():
-    p = payload()
-    p["strategies"][we.HOT4]["sell"] = [{"ticker": "FEAM", "side": "long"}]
-    snap = BrokerSnap(env="paper", cash=1000, positions={}, connected=True)
-    card = po.make_plan(p, snap, BELL - timedelta(seconds=15))["card"]
-    assert all(t["side"] != "SELL" for t in card["tickets"])
-    assert any(s.get("kind") == "unheld" and s.get("ticker") == "FEAM"
-               for s in card["skipped"])
+def test_plan_sells_sealed_shares_before_buys(monkeypatch):
+    _boom_pick_day(monkeypatch)
+    snap = _rich_snap(FEAM={'shares': 12, 'last_px': 4})
+    card = po.make_plan(_sealed_day_payload(), snap, _sealed_clock())['card']
+    assert card['tickets'][0]['side'] == 'SELL'
+    sells = [(t['ticker'], t['shares']) for t in card['tickets'] if t['side'] == 'SELL']
+    buys = [t['ticker'] for t in card['tickets'] if t['side'] == 'BUY']
+    assert sells == [('EGG', 774), ('KOD', 33)]
+    assert buys == ['QSI', 'TJGC']
+    assert 'FEAM' not in {t['ticker'] for t in card['tickets']}
 
 
-def test_empty_valid_selection_does_not_reconstruct_winners():
-    p = payload(); p['strategies'][we.HOT4]['buy'] = []
+def test_plan_sends_sealed_sell_even_when_paper_does_not_hold_it(monkeypatch):
+    _boom_pick_day(monkeypatch)
+    card = po.make_plan(
+        _sealed_day_payload(), _rich_snap(), _sealed_clock())['card']
+    sells = [(t['ticker'], t['shares']) for t in card['tickets'] if t['side'] == 'SELL']
+    assert sells == [('EGG', 774), ('KOD', 33)]
+
+
+def test_empty_payload_does_not_rebuild_hot4(monkeypatch):
+    _boom_pick_day(monkeypatch)
+    p = _sealed_day_payload()
+    p['strategies'][we.HOT4]['buy'] = []
+    p['strategies'][we.HOT4]['sell'] = []
     with patch('src.combo_broker.resolve_rows', side_effect=AssertionError('must not backfill')):
-        assert not po.make_plan(p, API().snapshot(), BELL-timedelta(seconds=15))['card']['tickets']
+        card = po.make_plan(p, _rich_snap(), _sealed_clock())['card']
+    assert [t['ticker'] for t in card['tickets'] if t['side'] == 'BUY'] == [
+        'QSI', 'TJGC']
+
+
+def test_sealed_cash_short_fails_closed_not_hot4(monkeypatch):
+    _boom_pick_day(monkeypatch)
+    snap = BrokerSnap(env='paper', cash=1000, positions={}, connected=True)
+    with pytest.raises(ValueError, match='not rebuilding HOT4'):
+        po.make_plan(_sealed_day_payload(), snap, _sealed_clock())
 
 
 def _flat_sit_payload(day=DATE):
@@ -144,41 +220,43 @@ def test_sit_with_orders_still_requires_finite_score():
         po.validate_payload(p, DATE, BELL - timedelta(seconds=15))
 
 
-def test_ready_submit_flat_sit_missing_score_is_no_trade(tmp_path, monkeypatch):
-    """status=sit, empty legs, s=None is a no-trade. Do not float(None)."""
+def test_ready_submit_flat_sit_still_sends_sealed_plan(tmp_path, monkeypatch):
+    """A Factor Mine sit with s=None does not drop the sealed h1 plan."""
     day = '2026-10-02'
-    monkeypatch.setattr(
-        'src.strategy_tickets._load_json',
-        lambda _path: {'by_date': {}, 'rows': [], 'to_date': '2026-10-01'},
-    )
+    _boom_pick_day(monkeypatch)
     early = datetime.fromisoformat(day + 'T06:20:00-04:00')
-    api = API()
+
+    class Rich(API):
+        def snapshot(self):
+            return BrokerSnap(env='paper', cash=20_000, positions={}, connected=True)
+
+    api = Rich()
 
     def _regime_missing(*_a, **_k):
         raise SystemExit('missing mover_lookback_action.json')
 
     with patch.object(we, 'write_last'), \
             patch.object(po, 'remote_session_journal', return_value=None), \
-            patch.object(we, 'plan_hot4_for_broker', side_effect=_regime_missing), \
             patch('src.sleeve_merge.load_payload', side_effect=_regime_missing), \
             patch('src.factor_mine_book.load_regime', side_effect=_regime_missing):
         rc = po.submit_ready(
             submit=True, clock=lambda: early, loader=lambda _: _flat_sit_payload(day),
             api=api, state_dir=tmp_path)
     assert rc == 0
-    assert api.calls == []
+    assert api.calls
+    sent = [(row['side'], row['ticker']) for row in api.calls[0]]
+    assert ('SELL', 'EGG') in sent and ('SELL', 'KOD') in sent
+    assert [t for side, t in sent if side == 'BUY'] == ['QSI', 'TJGC']
     journal = json.loads((tmp_path / f'{day}_submit.json').read_text())
-    assert journal['status'] == 'no_trade'
-    assert journal['sent'] == []
+    assert journal['status'] == 'acknowledged'
     assert journal['standing'] is True
-    status = json.loads((tmp_path / f'{day}_status.json').read_text())
-    assert status['status'] == 'no_trade'
-    assert 'NoneType' not in json.dumps(status)
+    assert 'NoneType' not in json.dumps(journal)
 
 
-def test_flat_sit_still_refuses_recipe_divergence(tmp_path, monkeypatch):
-    """An empty sit must not hide a recipe that still has names."""
+def test_flat_sit_does_not_hide_sealed_plan(tmp_path, monkeypatch):
+    """Short paper cash fails closed. It does not swap in a HOT4 rebuild."""
     day = '2026-10-02'
+    _boom_pick_day(monkeypatch)
     monkeypatch.setattr(
         'src.strategy_tickets.hot4_recipe_tickers',
         lambda date, panel=None: ['FEAM'],
@@ -194,7 +272,8 @@ def test_flat_sit_still_refuses_recipe_divergence(tmp_path, monkeypatch):
     assert api.calls == []
     status = json.loads((tmp_path / f'{day}_status.json').read_text())
     assert status['status'] == 'blocked'
-    assert 'diverge' in status['error']
+    assert 'not rebuilding HOT4' in status['error']
+    assert 'diverge' not in status['error']
 
 
 @pytest.mark.parametrize('case', ['wrong_date', 'late', 'naive', 'missing_inputs', 'missing_score', 'error'])

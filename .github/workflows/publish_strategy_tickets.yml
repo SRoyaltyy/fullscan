@@ -1,5 +1,11 @@
 name: Publish strategy tickets
 
+# One in-flight run. The 15-minute cron plus workflow_run plus bot
+# dispatches were stacking a cancelled/success storm. Readiness still
+# comes from decision_ready (workflow_dispatch) and from the two core
+# jobs below. The daily orchestrator remains the missed-job heal.
+# A newer trigger cancels the older run; paper_open's journal and
+# client_order_id keep a single sealed-h1 send per session.
 on:
   workflow_dispatch:
     inputs:
@@ -10,8 +16,6 @@ on:
   push:
     branches: [main]
     paths: ['01_daily/**', 'data/join/**', 'data/peers/**', 'data/ab_checklist/**', 'data/factor_mine/panel.json']
-  schedule:
-    - cron: '3,18,33,48 12-20 * * 1-5'
   workflow_run:
     workflows:
       - "Stock Book ALL (one-shot)"
@@ -24,10 +28,11 @@ permissions:
 
 concurrency:
   group: publish-strategy-tickets
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   tickets:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -85,7 +90,7 @@ jobs:
           PY
           test -s data/day_board/today_strategies.json
           test -s dashboard/factor-mine/strategy_tickets.json
-      - name: Submit paper hot4 standing batch
+      - name: Submit sealed h1 paper standing batch
         if: steps.readiness.outputs.ready == 'true'
         continue-on-error: true
         env:
@@ -101,6 +106,7 @@ jobs:
             exit 0
           fi
           pip install webull-openapi-python-sdk
+          # Sealed h1 plan for this session (forward_h1), not a HOT4 pick_day rebuild.
           python -m src.paper_open --submit --ready --owner actions
       - name: Push tickets
         if: always() && steps.readiness.outputs.ready == 'true'

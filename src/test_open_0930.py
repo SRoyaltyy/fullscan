@@ -126,7 +126,19 @@ def test_boards_and_paper_share_the_bell() -> None:
     assert 'WEBULL_APP_KEY' in yml
     assert 'WEBULL_APP_SECRET' in yml
     assert 'WEBULL_ACCOUNT_ID' in yml
+    assert 'WEBULL_ACCOUNT_ID unset; paper submit deferred' not in yml
+    assert 'WEBULL_APP_KEY or WEBULL_APP_SECRET unset; paper submit skipped' in yml
+    assert 'Soft-skip only if those are empty' in yml
+    assert 'cancel-in-progress: true' in yml
+    assert '3,18,33,48' not in yml
+    assert 'schedule:' not in yml
+    assert 'Stock Book ALL (one-shot)' in yml
+    assert 'Pre-Open ALL (predictive one-shot)' in yml
+    assert "github.event.workflow_run.conclusion == 'success'" in yml
+    install = (WF / 'install_paper_open.yml').read_text()
+    assert 'discover_and_persist_account_id' in install
     paper = (WF / "webull_paper.yml").read_text()
+    assert 'WEBULL_ACCOUNT_ID unset' not in paper
     assert 'src.paper_open' in paper
     assert '--owner actions' in paper
     assert 'workflow_run:' not in paper
