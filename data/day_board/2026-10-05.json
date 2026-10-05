@@ -1,10 +1,9 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T04:49:31.125936-04:00",
+  "generated_at": "2026-10-05T05:27:43.649420-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING Sector board JSON `01_daily/sectors/2026-10-05/_board.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-05_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
@@ -182,7 +181,7 @@
       "inputs_ready": true,
       "n_req_ok": 5,
       "n_req": 20,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -334,11 +333,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-05/_board.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6363,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -347,7 +351,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7533,
+          "size": 8328,
           "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
             "finviz_market_digest:missing",
@@ -500,13 +504,18 @@
           "bullets": []
         }
       ],
-      "said": "general UP  0.517",
+      "said": "general UP  0.517 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
         "bad: leftover Hormuz Brent >$100",
         "bad: 1w 30Y +14bp at 5.61",
         "bad: HY +44bp 1w",
         "good: Asia composite +0.7%",
-        "good: WTI/Brent offered"
+        "good: WTI/Brent offered",
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -691,11 +700,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-05/_board.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6363,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -937,7 +951,22 @@
       "score": "0.517",
       "direction": "up"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "favorable 1 \u00b7 hostile 4 \u00b7 neutral 6",
@@ -1439,6 +1468,24 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-10-05\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 0.517 (uncertainty multiplier \u00d71.1) | confidence 0.421\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia composite +0.7%\n> - WTI/Brent offered\n> - Oct hike odds faded ~20%\n> - China PMI expansion T+n\n> - DXY not surging\n>\n> **Bad news driving this:**\n> - leftover Hormuz Brent >$100\n> - 1w 30Y +14bp at 5.61\n> - HY +44bp 1w\n> - ISM Services 10:00 unsigned\n> - Graham Act Oct 8/18 clock\n>\n> **market uncertainty: **elevated** | VIX 16.11 | policy-uncertainty index 160.6 (1d -3.85)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> - \ud83d\udd34"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T05:27:42.646158-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-05/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6363,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "href": {
