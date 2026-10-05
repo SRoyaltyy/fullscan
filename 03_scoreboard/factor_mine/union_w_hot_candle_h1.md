@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+27.46%** ($12,746) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 301 · skips 97 · realized $+14.68.
+Cash book **+32.34%** ($13,234) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 315 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -444,6 +444,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `VECO` | 24 | $55.50 | $2.06 | — | $1,383.60 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+17.0; leftover $1371.33 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `MAT` | 90 | $15.13 | $2.26 | — | $19.19 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $1371.33 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19.19 | ▲ close $12,745.71 vs 09:30 $11,783.07 (session +1,029.89) | 16:00 close · cash $19.19 · equity $12,745.71 vs 09:30 $11,783.07 (+962.64; session marks +1029.89) · 8 name(s) marked open→close (per-name table). QSI×1565 09:30 $1.38 → close $1.55 +266.05; SDEV×271 09:30 $5.06 → close $7.48 +655.82; TJGC×39 09:30 $34.92 → close $33.28 -63.96; SES×1594 09:30 $0.86 → close $0.88 +39.37; NAUT×823 09:30 $1.67 → close $1.96 +242.78; GLND×322 09:30 $4.25 → close $3.73 -167.44; VECO×24 09:30 $55.50 → close $57.38 +45.12; MAT×90 09:30 $15.13 → close $15.27 +12.15 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19.19 | ▲ 09:30 equity $13,540.84 vs yday $12,745.71 (+795.14) | 09:30 open · cash $19.19 (unchanged overnight, no fees) · equity $13,540.84 vs prior close $12,745.71 (+795.14) · 8 name(s) re-marked at the open (per-name table). GLND×322 yday $3.73 → 09:30 $3.92 +62.79; MAT×90 yday $15.27 → 09:30 $15.20 -6.30; NAUT×823 yday $1.96 → 09:30 $2.18 +181.06; QSI×1565 yday $1.55 → 09:30 $1.52 -39.13; SDEV×271 yday $7.48 → 09:30 $9.71 +604.33; SES×1594 yday $0.88 → 09:30 $0.90 +24.39; TJGC×39 yday $33.28 → 09:30 $32.73 -21.45; VECO×24 yday $57.38 → 09:30 $56.94 -10.56 | — |
+| 2026-10-05 09:30 ET | **SELL** | `GLND` | 322 | $3.92 | $4.22 | $-113.02 | $1,278.82 | ▼ -113.02 after sell → book $13,536.63; vs 09:30 mark -4.22 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `MAT` | 90 | $15.20 | $2.29 | $+1.30 | $2,644.54 | ▲ +1.30 after sell → book $13,534.34; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `NAUT` | 823 | $2.18 | $10.77 | $+402.46 | $4,427.91 | ▲ +402.46 after sell → book $13,523.57; vs 09:30 mark -10.77 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `QSI` | 1565 | $1.52 | $20.47 | $+467.97 | $6,794.07 | ▲ +467.97 after sell → book $13,503.11; vs 09:30 mark -20.46 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `SDEV` | 271 | $9.71 | $3.56 | $+1253.09 | $9,421.91 | ▲ +1,253.09 after sell → book $13,499.54; vs 09:30 mark -3.57 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `SES` | 1594 | $0.90 | $19.40 | $+25.87 | $10,837.11 | ▲ +25.87 after sell → book $13,480.14; vs 09:30 mark -19.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `TJGC` | 39 | $32.73 | $2.13 | $-89.64 | $12,111.45 | ▼ -89.64 after sell → book $13,478.01; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `FEAM` | 445 | $3.88 | $5.74 | — | $10,379.11 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; ret5=+38.6; leftover $1730.21 | join🟡 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `WOLF` | 50 | $34.04 | $2.14 | — | $8,674.97 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; ret5=+28.0; leftover $1730.21 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `NNBR` | 376 | $4.59 | $4.85 | — | $6,944.28 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; ret5=+22.9; leftover $1730.21 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `VIAV` | 36 | $47.39 | $2.10 | — | $5,236.14 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+15.8; leftover $1730.21 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `VSH` | 45 | $37.64 | $2.12 | — | $3,540.22 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,ohlc_hot; ret5=+17.3; leftover $1730.21 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `VPG` | 21 | $78.79 | $2.05 | — | $1,883.58 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+10.4; leftover $1730.21 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `NTAP` | 7 | $225.47 | $2.01 | — | $303.28 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ⚪; ret5=+12.5; leftover $1730.21 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $303.28 | ▼ close $13,233.77 vs 09:30 $13,540.84 (session -223.23) | 16:00 close · cash $303.28 · equity $13,233.77 vs 09:30 $13,540.84 (-307.07; session marks -223.23) · 8 name(s) marked open→close (per-name table). VECO×24 09:30 $56.94 → close $56.31 -15.12; FEAM×445 09:30 $3.88 → close $3.92 +17.80; WOLF×50 09:30 $34.04 → close $33.53 -25.50; NNBR×376 09:30 $4.59 → close $4.24 -131.60; VIAV×36 09:30 $47.39 → close $46.91 -17.28; VSH×45 09:30 $37.64 → close $37.10 -24.30; VPG×21 09:30 $78.79 → close $78.06 -15.33; NTAP×7 09:30 $225.47 → close $223.77 -11.90 | — |
 
 ## Not taken
 

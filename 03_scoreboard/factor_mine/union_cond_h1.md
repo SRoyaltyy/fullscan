@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-11.24%** ($8,876) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 316 · skips 105 · realized $-723.91.
+Cash book **-11.43%** ($8,857) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 332 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -459,6 +459,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `BLFS` | 28 | $37.02 | $2.07 | — | $1,197.95 | — | rank by cond; rank cond; list flatten; 🔵; ⚪; ret5=-4.7; leftover $1059.10 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `FOSL` | 152 | $6.95 | $2.45 | — | $139.10 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+16.2; leftover $1059.10 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $139.10 | ▲ close $8,875.96 vs 09:30 $8,685.22 (session +226.24) | 16:00 close · cash $139.10 · equity $8,875.96 vs 09:30 $8,685.22 (+190.74; session marks +226.24) · 8 name(s) marked open→close (per-name table). ETON×24 09:30 $52.42 → close $55.36 +70.56; ACRS×235 09:30 $4.50 → close $4.39 -25.85; CDNA×15 09:30 $66.33 → close $67.15 +12.30; NAUT×636 09:30 $1.67 → close $1.96 +187.62; SNPS×2 09:30 $497.86 → close $489.90 -15.91; ARHS×104 09:30 $10.12 → close $10.24 +12.48; BLFS×28 09:30 $37.02 → close $37.30 +7.84; FOSL×152 09:30 $6.95 → close $6.80 -22.80 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $139.10 | ▲ 09:30 equity $9,029.00 vs yday $8,875.96 (+153.04) | 09:30 open · cash $139.10 (unchanged overnight, no fees) · equity $9,029.00 vs prior close $8,875.96 (+153.04) · 8 name(s) re-marked at the open (per-name table). ACRS×235 yday $4.39 → 09:30 $4.34 -11.75; ARHS×104 yday $10.24 → 09:30 $10.23 -1.04; BLFS×28 yday $37.30 → 09:30 $37.16 -3.92; CDNA×15 yday $67.15 → 09:30 $66.90 -3.75; ETON×24 yday $55.36 → 09:30 $55.85 +11.76; FOSL×152 yday $6.80 → 09:30 $6.86 +9.12; NAUT×636 yday $1.96 → 09:30 $2.18 +139.92; SNPS×2 yday $489.90 → 09:30 $496.25 +12.70 | — |
+| 2026-10-05 09:30 ET | **SELL** | `ACRS` | 235 | $4.34 | $3.08 | $-43.71 | $1,155.92 | ▼ -43.71 after sell → book $9,025.92; vs 09:30 mark -3.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `ARHS` | 104 | $10.23 | $2.33 | $+6.81 | $2,217.51 | ▲ +6.81 after sell → book $9,023.59; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `BLFS` | 28 | $37.16 | $2.09 | $-0.25 | $3,255.90 | ▼ -0.25 after sell → book $9,021.50; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `CDNA` | 15 | $66.90 | $2.06 | $+4.46 | $4,257.34 | ▲ +4.46 after sell → book $9,019.44; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `ETON` | 24 | $55.85 | $2.08 | $+131.94 | $5,595.66 | ▲ +131.94 after sell → book $9,017.36; vs 09:30 mark -2.08 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `FOSL` | 152 | $6.86 | $2.48 | $-18.61 | $6,635.90 | ▼ -18.61 after sell → book $9,014.88; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `NAUT` | 636 | $2.18 | $8.32 | $+311.01 | $8,014.06 | ▲ +311.01 after sell → book $9,006.56; vs 09:30 mark -8.32 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `SNPS` | 2 | $496.25 | $2.02 | $-7.22 | $9,004.54 | ▼ -7.22 after sell → book $9,004.54; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `NTAP` | 4 | $225.47 | $2.00 | — | $8,100.66 | — | rank by cond; rank cond; list ohlc_hot; ⚪; ret5=+12.5; leftover $1125.57 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `COP` | 8 | $127.00 | $2.01 | — | $7,082.64 | — | rank by cond; rank cond; list flatten; ret5=-0.4; leftover $1125.57 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `RXO` | 38 | $29.00 | $2.10 | — | $5,978.54 | — | rank by cond; rank cond; list yday_gainer; ret5=+18.1; leftover $1125.57 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `VECO` | 19 | $56.94 | $2.05 | — | $4,894.63 | — | rank by cond; rank cond; list ohlc_hot; ret5=+15.5; leftover $1125.57 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `FN` | 2 | $466.00 | $2.00 | — | $3,960.64 | — | rank by cond; rank cond; list ohlc_hot; ret5=+11.1; leftover $1125.57 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `STM` | 19 | $56.60 | $2.05 | — | $2,883.19 | — | rank by cond; rank cond; list ohlc_hot; ret5=+10.3; leftover $1125.57 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `ALGM` | 28 | $39.56 | $2.07 | — | $1,773.44 | — | rank by cond; rank cond; list yday_gainer,ohlc_hot; ret5=+7.5; leftover $1125.57 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `ECX` | 1276 | $0.88 | $15.08 | — | $633.05 | — | rank by cond; rank cond; list yday_mover; ret5=-21.2; leftover $1125.57 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $633.05 | ▼ close $8,856.80 vs 09:30 $9,029.00 (session -118.38) | 16:00 close · cash $633.05 · equity $8,856.80 vs 09:30 $9,029.00 (-172.20; session marks -118.38) · 8 name(s) marked open→close (per-name table). NTAP×4 09:30 $225.47 → close $223.77 -6.80; COP×8 09:30 $127.00 → close $128.40 +11.20; RXO×38 09:30 $29.00 → close $28.65 -13.30; VECO×19 09:30 $56.94 → close $56.31 -11.97; FN×2 09:30 $466.00 → close $453.84 -24.32; STM×19 09:30 $56.60 → close $57.68 +20.52; ALGM×28 09:30 $39.56 → close $38.46 -30.80; ECX×1276 09:30 $0.88 → close $0.83 -62.91 | — |
 
 ## Not taken
 

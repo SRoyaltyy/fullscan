@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 2
 
-Cash book **-26.59%** ($7,341) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 198 · skips 55 · realized $-720.09.
+Cash book **-26.37%** ($7,363) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 207 · skips 55 · realized $-720.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -344,6 +344,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `CMPX` | 1327 | $0.94 | $16.46 | — | $1,868.39 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list yday_mover; 🔵; ret5=-20.6; leftover $1247.98 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `COHR` | 3 | $316.56 | $2.00 | — | $916.70 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list probable,yday_gainer; 🔵; ret5=+9.8; leftover $1247.98 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $916.70 | ▼ close $7,340.73 vs 09:30 $7,516.29 (session -120.59) | 16:00 close · cash $916.70 · equity $7,340.73 vs 09:30 $7,516.29 (-175.56; session marks -120.59) · 6 name(s) marked open→close (per-name table). SNPS×2 09:30 $497.86 → close $489.90 -15.91; WRBY×45 09:30 $27.63 → close $27.03 -27.00; ACN×5 09:30 $211.02 → close $198.90 -60.60; LITE×1 09:30 $1053.26 → close $1085.42 +32.16; CMPX×1327 09:30 $0.94 → close $0.86 -110.67; COHR×3 09:30 $316.56 → close $337.04 +61.43 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $916.70 | ▲ 09:30 equity $7,415.96 vs yday $7,340.73 (+75.23) | 09:30 open · cash $916.70 (unchanged overnight, no fees) · equity $7,415.96 vs prior close $7,340.73 (+75.23) · 6 name(s) re-marked at the open (per-name table). ACN×5 yday $198.90 → 09:30 $196.30 -13.00; CMPX×1327 yday $0.86 → 09:30 $0.90 +57.46; COHR×3 yday $337.04 → 09:30 $340.93 +11.65; LITE×1 yday $1085.42 → 09:30 $1092.29 +6.87; SNPS×2 yday $489.90 → 09:30 $496.25 +12.70; WRBY×45 yday $27.03 → 09:30 $27.02 -0.45 | — |
+| 2026-10-05 09:30 ET | **SELL** | `ACN` | 5 | $196.30 | $2.02 | $-77.63 | $1,896.18 | ▼ -77.63 after sell → book $7,413.94; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `CMPX` | 1327 | $0.90 | $16.15 | $-85.82 | $3,074.32 | ▼ -85.82 after sell → book $7,397.79; vs 09:30 mark -16.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `COHR` | 3 | $340.93 | $2.02 | $+69.06 | $4,095.08 | ▲ +69.06 after sell → book $7,395.77; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `LITE` | 1 | $1092.29 | $2.01 | $+35.02 | $5,185.35 | ▲ +35.02 after sell → book $7,393.75; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `SNPS` | 2 | $496.25 | $2.02 | $-7.22 | $6,175.84 | ▼ -7.22 after sell → book $7,391.74; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `WRBY` | 45 | $27.02 | $2.15 | $-31.72 | $7,389.59 | ▼ -31.72 after sell → book $7,389.59; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `COP` | 19 | $127.00 | $2.05 | — | $4,974.55 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list flatten; ret5=-0.4; leftover $2463.20 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `RRC` | 64 | $38.10 | $2.18 | — | $2,533.96 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list flatten; ret5=-1.0; leftover $2463.20 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `ELMT` | 111 | $22.04 | $2.32 | — | $85.20 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list yday_gainer; ret5=+12.7; leftover $2463.20 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $85.20 | ▼ close $7,362.87 vs 09:30 $7,415.96 (session -20.17) | 16:00 close · cash $85.20 · equity $7,362.87 vs 09:30 $7,415.96 (-53.09; session marks -20.17) · 3 name(s) marked open→close (per-name table). COP×19 09:30 $127.00 → close $128.40 +26.60; RRC×64 09:30 $38.10 → close $38.67 +36.48; ELMT×111 09:30 $22.04 → close $21.29 -83.25 | — |
 
 ## Not taken
 

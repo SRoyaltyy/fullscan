@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **+0.32%** ($10,032) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 94 · skips 27 · realized $+766.09.
+Cash book **+0.65%** ($10,065) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 96 · skips 27 · realized $+766.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -238,6 +238,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `ETON` | 91 | $52.42 | $2.26 | — | $4,803.23 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list flatten; 🔵; ⚪; ret5=-12.6; leftover $4787.85 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `NKE` | 147 | $32.55 | $2.43 | — | $15.51 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ret5=-2.3; leftover $4787.85 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.51 | ▲ close $10,032.15 vs 09:30 $9,575.71 (session +461.14) | 16:00 close · cash $15.51 · equity $10,032.15 vs 09:30 $9,575.71 (+456.44; session marks +461.14) · 2 name(s) marked open→close (per-name table). ETON×91 09:30 $52.42 → close $55.36 +267.54; NKE×147 09:30 $32.55 → close $33.87 +193.60 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.51 | ▲ 09:30 equity $10,069.40 vs yday $10,032.15 (+37.25) | 09:30 open · cash $15.51 (unchanged overnight, no fees) · equity $10,069.40 vs prior close $10,032.15 (+37.25) · 2 name(s) re-marked at the open (per-name table). ETON×91 yday $55.36 → 09:30 $55.85 +44.59; NKE×147 yday $33.87 → 09:30 $33.82 -7.35 | — |
+| 2026-10-05 09:30 ET | **SELL** | `ETON` | 91 | $55.85 | $2.32 | $+307.55 | $5,095.54 | ▲ +307.55 after sell → book $10,067.08; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `NKE` | 147 | $33.82 | $2.50 | $+181.32 | $10,064.59 | ▲ +181.32 after sell → book $10,064.59; vs 09:30 mark -2.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,064.59 | ▲ close $10,064.59 vs 09:30 $10,069.40 (session +0.00) | 16:00 close · cash $10,064.59 · no lots left · equity $10,064.59. | — |
 
 ## Not taken
 

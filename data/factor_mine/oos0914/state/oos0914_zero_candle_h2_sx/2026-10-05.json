@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 14.47,
+  "date": "2026-10-05",
+  "equity": 10659.14,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "ARHS",
+    "CDNA",
+    "NAUT",
+    "PDFS"
+  ],
+  "mean": -0.3857,
+  "n_trades_today": 0,
+  "recipe": "oos0914_zero_candle_h2_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-10-05",
+    "cash": 14.47,
+    "pos": {
+      "ARHS": {
+        "close_px": 10.11,
+        "cost": 2553.4907999999996,
+        "entry_date": "2026-10-02",
+        "entry_px": 10.12,
+        "fee_in": 3.2508,
+        "last_px": 10.23,
+        "min_hold": 2,
+        "notional": 2550.24,
+        "peak_px": 10.23,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+4.2; leftover $2550.66",
+        "shares": 252,
+        "ticker": "ARHS"
+      },
+      "CDNA": {
+        "close_px": 69.8499984741211,
+        "cost": 2522.644,
+        "entry_date": "2026-10-02",
+        "entry_px": 66.33,
+        "fee_in": 2.104,
+        "last_px": 66.9000015258789,
+        "min_hold": 2,
+        "notional": 2520.54,
+        "peak_px": 66.9000015258789,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+7.9; leftover $2550.66",
+        "shares": 38,
+        "ticker": "CDNA"
+      },
+      "NAUT": {
+        "close_px": 1.87,
+        "cost": 2568.8649,
+        "entry_date": "2026-10-02",
+        "entry_px": 1.665,
+        "fee_in": 19.7499,
+        "last_px": 2.18,
+        "min_hold": 2,
+        "notional": 2549.1150000000002,
+        "peak_px": 2.18,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+58.4; leftover $2550.66",
+        "shares": 1531,
+        "ticker": "NAUT"
+      },
+      "PDFS": {
+        "close_px": 56.08,
+        "cost": 2543.168,
+        "entry_date": "2026-10-02",
+        "entry_px": 55.24,
+        "fee_in": 2.128,
+        "last_px": 55.71,
+        "min_hold": 2,
+        "notional": 2541.04,
+        "peak_px": 55.71,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \u26aa; ret5=+11.5; leftover $2550.66",
+        "shares": 46,
+        "ticker": "PDFS"
+      }
+    },
+    "yday_equity": 10659.14
+  }
+}

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 3
 
-Cash book **-43.50%** ($5,650) · signal-only (no cash/fees) was -9.17%. Starts YES **0/30**. Fills 173 · skips 40 · realized $-1690.89.
+Cash book **-42.59%** ($5,741) · signal-only (no cash/fees) was -9.17%. Starts YES **0/30**. Fills 179 · skips 40 · realized $-1690.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -319,6 +319,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `CMPX` | 1023 | $0.94 | $12.69 | — | $2,509.88 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list yday_mover; 🔵; ret5=-20.6; leftover $961.96 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `COHR` | 3 | $316.56 | $2.00 | — | $1,558.19 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list probable,yday_gainer; 🔵; ret5=+9.8; leftover $961.96 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,558.19 | ▼ close $5,650.23 vs 09:30 $5,798.97 (session -100.73) | 16:00 close · cash $1,558.19 · equity $5,650.23 vs 09:30 $5,798.97 (-148.74; session marks -100.73) · 5 name(s) marked open→close (per-name table). SNPS×1 09:30 $497.86 → close $489.90 -7.96; WRBY×34 09:30 $27.63 → close $27.03 -20.40; ACN×4 09:30 $211.02 → close $198.90 -48.48; CMPX×1023 09:30 $0.94 → close $0.86 -85.32; COHR×3 09:30 $316.56 → close $337.04 +61.43 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,558.19 | ▲ 09:30 equity $5,701.80 vs yday $5,650.23 (+51.57) | 09:30 open · cash $1,558.19 (unchanged overnight, no fees) · equity $5,701.80 vs prior close $5,650.23 (+51.57) · 5 name(s) re-marked at the open (per-name table). ACN×4 yday $198.90 → 09:30 $196.30 -10.40; CMPX×1023 yday $0.86 → 09:30 $0.90 +44.30; COHR×3 yday $337.04 → 09:30 $340.93 +11.65; SNPS×1 yday $489.90 → 09:30 $496.25 +6.35; WRBY×34 yday $27.03 → 09:30 $27.02 -0.34 | — |
+| 2026-10-05 09:30 ET | **SELL** | `ACN` | 4 | $196.30 | $2.02 | $-62.90 | $2,341.37 | ▼ -62.90 after sell → book $5,699.77; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `CMPX` | 1023 | $0.90 | $12.46 | $-66.16 | $3,249.61 | ▼ -66.16 after sell → book $5,687.32; vs 09:30 mark -12.45 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `COHR` | 3 | $340.93 | $2.02 | $+69.06 | $4,270.37 | ▲ +69.06 after sell → book $5,685.30; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `SNPS` | 1 | $496.25 | $2.01 | $-5.61 | $4,764.61 | ▼ -5.61 after sell → book $5,683.29; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `WRBY` | 34 | $27.02 | $2.11 | $-24.94 | $5,681.17 | ▼ -24.94 after sell → book $5,681.17; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `COP` | 44 | $127.00 | $2.12 | — | $91.05 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list flatten; ret5=-0.4; leftover $5681.17 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $91.05 | ▲ close $5,740.65 vs 09:30 $5,701.80 (session +61.60) | 16:00 close · cash $91.05 · equity $5,740.65 vs 09:30 $5,701.80 (+38.85; session marks +61.60) · 1 name(s) marked open→close (per-name table). COP×44 09:30 $127.00 → close $128.40 +61.60 | — |
 
 ## Not taken
 

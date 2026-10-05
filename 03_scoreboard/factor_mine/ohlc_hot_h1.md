@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-11.09%** ($8,891) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 278 · skips 93 · realized $-1456.67.
+Cash book **-12.38%** ($8,762) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 290 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -418,6 +418,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `USDE` | 74 | $15.24 | $2.21 | — | $1,294.54 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+9.1; leftover $1142.33 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `VICR` | 3 | $311.30 | $2.00 | — | $358.64 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+11.8; leftover $1142.33 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $358.64 | ▼ close $8,890.74 vs 09:30 $9,188.27 (session -255.19) | 16:00 close · cash $358.64 · equity $8,890.74 vs 09:30 $9,188.27 (-297.53; session marks -255.19) · 8 name(s) marked open→close (per-name table). VECO×21 09:30 $55.50 → close $57.38 +39.48; CDNA×17 09:30 $66.33 → close $67.15 +13.94; EFOR×31 09:30 $36.22 → close $34.25 -61.07; TJGC×32 09:30 $34.92 → close $33.28 -52.48; LITE×1 09:30 $1053.26 → close $1085.42 +32.16; GLND×268 09:30 $4.25 → close $3.73 -139.36; USDE×74 09:30 $15.24 → close $14.15 -80.66; VICR×3 09:30 $311.30 → close $308.90 -7.20 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $358.64 | ▲ 09:30 equity $8,929.79 vs yday $8,890.74 (+39.05) | 09:30 open · cash $358.64 (unchanged overnight, no fees) · equity $8,929.79 vs prior close $8,890.74 (+39.05) · 8 name(s) re-marked at the open (per-name table). CDNA×17 yday $67.15 → 09:30 $66.90 -4.25; EFOR×31 yday $34.25 → 09:30 $34.25 +0.00; GLND×268 yday $3.73 → 09:30 $3.92 +52.26; LITE×1 yday $1085.42 → 09:30 $1092.29 +6.87; TJGC×32 yday $33.28 → 09:30 $32.73 -17.60; USDE×74 yday $14.15 → 09:30 $14.36 +15.54; VECO×21 yday $57.38 → 09:30 $56.94 -9.24; VICR×3 yday $308.90 → 09:30 $307.39 -4.53 | — |
+| 2026-10-05 09:30 ET | **SELL** | `CDNA` | 17 | $66.90 | $2.06 | $+5.59 | $1,493.88 | ▲ +5.59 after sell → book $8,927.73; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `EFOR` | 31 | $34.25 | $2.10 | $-65.26 | $2,553.53 | ▼ -65.26 after sell → book $8,925.63; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `LITE` | 1 | $1092.29 | $2.01 | $+35.02 | $3,643.80 | ▲ +35.02 after sell → book $8,923.61; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `TJGC` | 32 | $32.73 | $2.11 | $-74.27 | $4,689.06 | ▼ -74.27 after sell → book $8,921.51; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `USDE` | 74 | $14.36 | $2.23 | $-69.57 | $5,749.46 | ▼ -69.57 after sell → book $8,919.27; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `VICR` | 3 | $307.39 | $2.02 | $-15.75 | $6,669.61 | ▼ -15.75 after sell → book $8,917.25; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `WNC` | 79 | $14.02 | $2.23 | — | $5,559.81 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+7.8; leftover $1111.60 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `PENG` | 18 | $61.10 | $2.04 | — | $4,457.96 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+9.1; leftover $1111.60 | join🟡 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `MXL` | 10 | $106.00 | $2.02 | — | $3,395.94 | — | baseline list, no extra gate; list yday_gainer,yday_mover,ohlc_hot; ret5=+12.9; leftover $1111.60 | join🟡 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `VSH` | 29 | $37.64 | $2.08 | — | $2,302.31 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+17.3; leftover $1111.60 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `ALGM` | 28 | $39.56 | $2.07 | — | $1,192.55 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+7.5; leftover $1111.60 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `VIAV` | 23 | $47.39 | $2.06 | — | $100.52 | — | baseline list, no extra gate; list ohlc_hot; ret5=+15.8; leftover $1111.60 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $100.52 | ▼ close $8,761.91 vs 09:30 $8,929.79 (session -142.84) | 16:00 close · cash $100.52 · equity $8,761.91 vs 09:30 $8,929.79 (-167.88; session marks -142.84) · 8 name(s) marked open→close (per-name table). GLND×268 09:30 $3.92 → close $3.71 -57.62; VECO×21 09:30 $56.94 → close $56.31 -13.23; WNC×79 09:30 $14.02 → close $13.99 -2.37; PENG×18 09:30 $61.10 → close $60.71 -7.02; MXL×10 09:30 $106.00 → close $105.49 -5.10; VSH×29 09:30 $37.64 → close $37.10 -15.66; ALGM×28 09:30 $39.56 → close $38.46 -30.80; VIAV×23 09:30 $47.39 → close $46.91 -11.04 | — |
 
 ## Not taken
 

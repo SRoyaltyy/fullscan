@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **-1.82%** ($9,818) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 296 · skips 107 · realized $-717.78.
+Cash book **-1.16%** ($9,884) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 312 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -438,6 +438,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **SHORT** | `EFXT` | 24 | $25.28 | $2.10 | — | $13,650.83 | — | last bar red; gate last_red=True; list yday_gainer; ret5=+9.4; leftover $610.40 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **SHORT** | `CTVA` | 49 | $12.38 | $2.17 | — | $14,255.52 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-84.2; leftover $610.40 | join🟢 sector🔴 gen🟢 news🟡 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,255.52 | ▲ close $9,818.13 vs 09:30 $9,788.11 (session +68.33) | 16:00 close · cash $14,255.52 · equity $9,818.13 vs 09:30 $9,788.11 (+30.02; session marks +68.33) · 8 name(s) marked open→close (per-name table). VEEV×2 09:30 $283.10 → close $273.33 +19.54; CORT×5 09:30 $114.38 → close $116.23 -9.25; ILMN×2 09:30 $265.91 → close $273.04 -14.26; WRBY×22 09:30 $27.63 → close $27.03 +13.20; BLFS×16 09:30 $37.02 → close $37.30 -4.48; ACN×2 09:30 $211.02 → close $198.90 +24.24; EFXT×24 09:30 $25.28 → close $24.59 +16.56; CTVA×49 09:30 $12.38 → close $11.92 +22.78 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,255.52 | ▲ 09:30 equity $9,826.32 vs yday $9,818.13 (+8.19) | 09:30 open · cash $14,255.52 (unchanged overnight, no fees) · equity $9,826.32 vs prior close $9,818.13 (+8.19) · 8 name(s) re-marked at the open (per-name table). ACN×2 yday $198.90 → 09:30 $196.30 +5.20; BLFS×16 yday $37.30 → 09:30 $37.16 +2.24; CORT×5 yday $116.23 → 09:30 $115.59 +3.20; CTVA×49 yday $11.92 → 09:30 $11.81 +5.39; EFXT×24 yday $24.59 → 09:30 $24.79 -4.80; ILMN×2 yday $273.04 → 09:30 $273.00 +0.08; VEEV×2 yday $273.33 → 09:30 $275.00 -3.34; WRBY×22 yday $27.03 → 09:30 $27.02 +0.22 | — |
+| 2026-10-05 09:30 ET | **COVER** | `ACN` | 2 | $196.30 | $2.00 | $+25.42 | $13,860.92 | ▲ +25.42 after sell → book $9,824.32; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **COVER** | `BLFS` | 16 | $37.16 | $2.04 | $-6.35 | $13,264.33 | ▼ -6.35 after sell → book $9,822.29; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **COVER** | `CORT` | 5 | $115.59 | $2.00 | $-10.10 | $12,684.37 | ▼ -10.10 after sell → book $9,820.28; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **COVER** | `CTVA` | 49 | $11.81 | $2.14 | $+23.86 | $12,103.54 | ▲ +23.86 after sell → book $9,818.14; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **COVER** | `EFXT` | 24 | $24.79 | $2.06 | $+7.60 | $11,506.52 | ▲ +7.60 after sell → book $9,816.08; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **COVER** | `ILMN` | 2 | $273.00 | $2.00 | $-18.21 | $10,958.53 | ▼ -18.21 after sell → book $9,814.09; vs 09:30 mark -1.99 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **COVER** | `VEEV` | 2 | $275.00 | $2.00 | $+12.17 | $10,406.53 | ▲ +12.17 after sell → book $9,812.09; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **COVER** | `WRBY` | 22 | $27.02 | $2.06 | $+9.27 | $9,810.03 | ▲ +9.27 after sell → book $9,810.03; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SHORT** | `EXE` | 7 | $84.70 | $2.05 | — | $10,400.89 | — | last bar red; gate last_red=True; list flatten; ret5=-1.5; leftover $613.13 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `SYNA` | 5 | $120.98 | $2.04 | — | $11,003.75 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=+17.9; leftover $613.13 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `FHTX` | 303 | $2.02 | $3.99 | — | $11,611.82 | — | last bar red; gate last_red=True; list yday_mover; ret5=-42.3; leftover $613.13 | join🟡 sector🟡 gen🟡 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `IART` | 48 | $12.65 | $2.17 | — | $12,216.85 | — | last bar red; gate last_red=True; list yday_mover; ret5=-21.3; leftover $613.13 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `GLND` | 156 | $3.92 | $2.51 | — | $12,826.64 | — | last bar red; gate last_red=True; list yday_mover,ohlc_hot; ret5=-32.7; leftover $613.13 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `LU` | 578 | $1.06 | $7.58 | — | $13,431.74 | — | last bar red; gate last_red=True; list yday_mover; ret5=-17.1; leftover $613.13 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `SRFM` | 625 | $0.98 | $8.13 | — | $14,036.11 | — | last bar red; gate last_red=True; list yday_mover; ret5=-12.4; leftover $613.13 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `ECX` | 695 | $0.88 | $8.36 | — | $14,640.67 | — | last bar red; gate last_red=True; list yday_mover; ret5=-21.2; leftover $613.13 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,640.67 | ▲ close $9,883.71 vs 09:30 $9,826.32 (session +110.50) | 16:00 close · cash $14,640.67 · equity $9,883.71 vs 09:30 $9,826.32 (+57.39; session marks +110.50) · 8 name(s) marked open→close (per-name table). EXE×7 09:30 $84.70 → close $86.43 -12.11; SYNA×5 09:30 $120.98 → close $119.73 +6.25; FHTX×303 09:30 $2.02 → close $2.00 +6.06; IART×48 09:30 $12.65 → close $13.29 -30.72; GLND×156 09:30 $3.92 → close $3.71 +33.54; LU×578 09:30 $1.06 → close $1.03 +17.34; SRFM×625 09:30 $0.98 → close $0.89 +55.88; ECX×695 09:30 $0.88 → close $0.83 +34.26 | — |
 
 ## Not taken
 

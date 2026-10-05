@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + (yday up or major catalyst), then Score
 
-Cash book **-11.06%** ($8,894) · signal-only (no cash/fees) was -11.72%. Starts YES **1/30**. Fills 166 · skips 277 · realized $+163.47.
+Cash book **-11.04%** ($8,896) · signal-only (no cash/fees) was -11.72%. Starts YES **1/30**. Fills 167 · skips 277 · realized $+163.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -312,6 +312,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `ARHS` | 107 | $10.12 | $2.31 | — | $1,310.11 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; 🔵; ⚪; ret5=+4.2; leftover $1089.43 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `PDFS` | 19 | $55.24 | $2.05 | — | $258.50 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; ⚪; ret5=+11.5; leftover $1089.43 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $258.50 | ▲ close $8,893.70 vs 09:30 $8,717.49 (session +201.60) | 16:00 close · cash $258.50 · equity $8,893.70 vs 09:30 $8,717.49 (+176.21; session marks +201.60) · 8 name(s) marked open→close (per-name table). CDNA×16 09:30 $66.33 → close $67.15 +13.12; ETON×20 09:30 $52.42 → close $55.36 +58.80; INOD×14 09:30 $73.05 → close $70.07 -41.72; SNPS×2 09:30 $497.86 → close $489.90 -15.91; NAUT×654 09:30 $1.67 → close $1.96 +192.93; FOSL×156 09:30 $6.95 → close $6.80 -23.40; ARHS×107 09:30 $10.12 → close $10.24 +12.84; PDFS×19 09:30 $55.24 → close $55.50 +4.94 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $258.50 | ▲ 09:30 equity $9,081.10 vs yday $8,893.70 (+187.40) | 09:30 open · cash $258.50 (unchanged overnight, no fees) · equity $9,081.10 vs prior close $8,893.70 (+187.40) · 8 name(s) re-marked at the open (per-name table). ARHS×107 yday $10.24 → 09:30 $10.23 -1.07; CDNA×16 yday $67.15 → 09:30 $66.90 -4.00; ETON×20 yday $55.36 → 09:30 $55.85 +9.80; FOSL×156 yday $6.80 → 09:30 $6.86 +9.36; INOD×14 yday $70.07 → 09:30 $70.98 +12.74; NAUT×654 yday $1.96 → 09:30 $2.18 +143.88; PDFS×19 yday $55.50 → 09:30 $55.71 +3.99; SNPS×2 yday $489.90 → 09:30 $496.25 +12.70 | — |
+| 2026-10-05 09:30 ET | **BUY** | `NTAP` | 1 | $225.47 | $1.99 | — | $31.04 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; ⚪; ret5=+12.5; leftover $258.50 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $31.04 | ▼ close $8,895.92 vs 09:30 $9,081.10 (session -183.19) | 16:00 close · cash $31.04 · equity $8,895.92 vs 09:30 $9,081.10 (-185.18; session marks -183.19) · 9 name(s) marked open→close (per-name table). ARHS×107 09:30 $10.23 → close $10.11 -12.84; CDNA×16 09:30 $66.90 → close $69.85 +47.20; ETON×20 09:30 $55.85 → close $55.62 -4.60; FOSL×156 09:30 $6.86 → close $7.22 +56.16; INOD×14 09:30 $70.98 → close $66.97 -56.14; NAUT×654 09:30 $2.18 → close $1.87 -202.74; PDFS×19 09:30 $55.71 → close $56.08 +7.03; SNPS×2 09:30 $496.25 → close $488.47 -15.56; NTAP×1 09:30 $225.47 → close $223.77 -1.70 | — |
 
 ## Not taken
 

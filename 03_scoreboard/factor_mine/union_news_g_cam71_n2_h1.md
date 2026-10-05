@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 2 · rank `cond` · size `topheavy` · sell `list` · S-boost `none` · topheavy leftover on news🟢 +7 −≤1
 
-Cash book **-24.37%** ($7,563) · signal-only (no cash/fees) was -13.89%. Starts YES **4/30**. Fills 58 · skips 6 · realized $-1349.66.
+Cash book **-24.05%** ($7,595) · signal-only (no cash/fees) was -13.89%. Starts YES **4/30**. Fills 60 · skips 6 · realized $-1349.66.
 
 ## How this sleeve decides (like you are 10)
 
@@ -205,6 +205,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `SNPS` | 6 | $497.86 | $2.01 | — | $4,726.70 | — | topheavy leftover on news🟢 +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $3086.34 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `WRBY` | 167 | $27.63 | $2.49 | — | $110.00 | — | topheavy leftover on news🟢 +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list flatten; 🔵; ⚪; ret5=+4.6; leftover $4629.50 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $110.00 | ▼ close $7,563.41 vs 09:30 $7,718.63 (session -147.93) | 16:00 close · cash $110.00 · equity $7,563.41 vs 09:30 $7,718.63 (-155.22; session marks -147.93) · 2 name(s) marked open→close (per-name table). SNPS×6 09:30 $497.86 → close $489.90 -47.73; WRBY×167 09:30 $27.63 → close $27.03 -100.20 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $110.00 | ▲ 09:30 equity $7,599.84 vs yday $7,563.41 (+36.43) | 09:30 open · cash $110.00 (unchanged overnight, no fees) · equity $7,599.84 vs prior close $7,563.41 (+36.43) · 2 name(s) re-marked at the open (per-name table). SNPS×6 yday $489.90 → 09:30 $496.25 +38.10; WRBY×167 yday $27.03 → 09:30 $27.02 -1.67 | — |
+| 2026-10-05 09:30 ET | **SELL** | `SNPS` | 6 | $496.25 | $2.04 | $-13.68 | $3,085.46 | ▼ -13.68 after sell → book $7,597.80; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `WRBY` | 167 | $27.02 | $2.55 | $-106.92 | $7,595.24 | ▼ -106.92 after sell → book $7,595.24; vs 09:30 mark -2.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,595.24 | ▲ close $7,595.24 vs 09:30 $7,599.84 (session +0.00) | 16:00 close · cash $7,595.24 · no lots left · equity $7,595.24. | — |
 
 ## Not taken
 

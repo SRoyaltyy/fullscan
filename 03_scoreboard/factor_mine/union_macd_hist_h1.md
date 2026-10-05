@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **+2.18%** ($10,218) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 285 · skips 94 · realized $-657.32.
+Cash book **+1.72%** ($10,172) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 297 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -428,6 +428,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `CDNS` | 3 | $356.50 | $2.00 | — | $2,882.18 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.9; leftover $1323.46 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `LRCX` | 3 | $350.00 | $2.00 | — | $1,830.18 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+10.7; leftover $1323.46 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,830.18 | ▼ close $10,218.29 vs 09:30 $10,265.24 (session -18.64) | 16:00 close · cash $1,830.18 · equity $10,218.29 vs 09:30 $10,265.24 (-46.95; session marks -18.64) · 8 name(s) marked open→close (per-name table). ONTO×3 09:30 $328.89 → close $327.77 -3.36; AMAT×2 09:30 $543.21 → close $540.04 -6.33; VICR×4 09:30 $311.30 → close $308.90 -9.60; FN×2 09:30 $460.00 → close $463.69 +7.38; SNPS×2 09:30 $497.86 → close $489.90 -15.91; LITE×1 09:30 $1053.26 → close $1085.42 +32.16; CDNS×3 09:30 $356.50 → close $351.35 -15.45; LRCX×3 09:30 $350.00 → close $347.49 -7.53 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,830.18 | ▲ 09:30 equity $10,246.18 vs yday $10,218.29 (+27.89) | 09:30 open · cash $1,830.18 (unchanged overnight, no fees) · equity $10,246.18 vs prior close $10,218.29 (+27.89) · 8 name(s) re-marked at the open (per-name table). AMAT×2 yday $540.04 → 09:30 $540.82 +1.56; CDNS×3 yday $351.35 → 09:30 $354.72 +10.11; FN×2 yday $463.69 → 09:30 $466.00 +4.62; LITE×1 yday $1085.42 → 09:30 $1092.29 +6.87; LRCX×3 yday $347.49 → 09:30 $346.88 -1.85; ONTO×3 yday $327.77 → 09:30 $327.74 -0.09; SNPS×2 yday $489.90 → 09:30 $496.25 +12.70; VICR×4 yday $308.90 → 09:30 $307.39 -6.04 | — |
+| 2026-10-05 09:30 ET | **SELL** | `AMAT` | 2 | $540.82 | $2.02 | $-8.78 | $2,909.80 | ▼ -8.78 after sell → book $10,244.16; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `CDNS` | 3 | $354.72 | $2.02 | $-9.36 | $3,971.95 | ▼ -9.36 after sell → book $10,242.14; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `LITE` | 1 | $1092.29 | $2.01 | $+35.02 | $5,062.22 | ▲ +35.02 after sell → book $10,240.13; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `LRCX` | 3 | $346.88 | $2.02 | $-13.39 | $6,100.83 | ▼ -13.39 after sell → book $10,238.11; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `SNPS` | 2 | $496.25 | $2.02 | $-7.22 | $7,091.31 | ▼ -7.22 after sell → book $10,236.09; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `VICR` | 4 | $307.39 | $2.02 | $-19.66 | $8,318.85 | ▼ -19.66 after sell → book $10,234.07; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `TER` | 3 | $447.21 | $2.00 | — | $6,975.22 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+12.7; leftover $1386.48 | join🟢 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `NTAP` | 6 | $225.47 | $2.01 | — | $5,620.39 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ⚪; ret5=+12.5; leftover $1386.48 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `SYNA` | 11 | $120.98 | $2.02 | — | $4,287.59 | — | rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; ret5=+17.9; leftover $1386.48 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `MXL` | 13 | $106.00 | $2.03 | — | $2,907.56 | — | rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover,ohlc_hot; ret5=+12.9; leftover $1386.48 | join🟡 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `VPG` | 17 | $78.79 | $2.04 | — | $1,566.09 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+10.4; leftover $1386.48 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `AAOI` | 11 | $118.64 | $2.02 | — | $258.97 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.0; leftover $1386.48 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $258.97 | ▼ close $10,171.78 vs 09:30 $10,246.18 (session -50.17) | 16:00 close · cash $258.97 · equity $10,171.78 vs 09:30 $10,246.18 (-74.40; session marks -50.17) · 8 name(s) marked open→close (per-name table). FN×2 09:30 $466.00 → close $453.84 -24.32; ONTO×3 09:30 $327.74 → close $325.41 -6.99; TER×3 09:30 $447.21 → close $444.53 -8.04; NTAP×6 09:30 $225.47 → close $223.77 -10.20; SYNA×11 09:30 $120.98 → close $119.73 -13.75; MXL×13 09:30 $106.00 → close $105.49 -6.63; VPG×17 09:30 $78.79 → close $78.06 -12.41; AAOI×11 09:30 $118.64 → close $121.57 +32.17 | — |
 
 ## Not taken
 

@@ -274,6 +274,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.74 | ▼ 09:30 equity $7,298.61 vs yday $7,880.34 (-581.73) | 09:30 open · cash $6.74 (unchanged overnight, no fees) · equity $7,298.61 vs prior close $7,880.34 (-581.73) · 1 name(s) re-marked at the open (per-name table). NKE×224 yday $35.15 → 09:30 $32.55 -581.73 | — |
 | 2026-10-02 09:30 ET | **SELL** | `NKE` | 224 | $32.55 | $2.99 | $-654.80 | $7,295.63 | ▼ -654.80 after sell → book $7,295.63; vs 09:30 mark -2.98 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,295.63 | ▲ close $7,295.63 vs 09:30 $7,298.61 (session +0.00) | 16:00 close · cash $7,295.63 · no lots left · equity $7,295.63. | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,295.63 | ▲ 09:30 equity $7,295.63 vs yday $7,295.63 (+0.00) | 09:30 open · cash $7,295.63 · no holdings · equity $7,295.63 vs prior close $7,295.63 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,295.63 | ▲ close $7,295.63 vs 09:30 $7,295.63 (session +0.00) | 16:00 close · cash $7,295.63 · no lots left · equity $7,295.63. | — |
 
 ## Not taken
 

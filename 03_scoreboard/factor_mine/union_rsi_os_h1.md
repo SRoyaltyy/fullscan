@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-34.00%** ($6,600) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 123 · skips 20 · realized $-3180.18.
+Cash book **-30.91%** ($6,909) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 131 · skips 20 · realized $-3180.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -267,6 +267,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `KDK` | 594 | $1.65 | $7.66 | — | $982.48 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-39.9; leftover $980.88 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `EVMN` | 135 | $7.25 | $2.40 | — | $1.33 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-18.1; leftover $980.88 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.33 | ▼ close $6,600.41 vs 09:30 $6,885.41 (session -220.16) | 16:00 close · cash $1.33 · equity $6,600.41 vs 09:30 $6,885.41 (-285.00; session marks -220.16) · 7 name(s) marked open→close (per-name table). CTVA×79 09:30 $12.38 → close $11.92 -36.73; NKTR×20 09:30 $47.11 → close $43.58 -70.60; LUCD×1545 09:30 $0.63 → close $0.63 -11.59; VIVO×302 09:30 $3.24 → close $3.36 +36.24; CMPX×1043 09:30 $0.94 → close $0.86 -86.99; KDK×594 09:30 $1.65 → close $1.64 -5.94; EVMN×135 09:30 $7.25 → close $6.92 -44.55 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.33 | ▲ 09:30 equity $6,629.55 vs yday $6,600.41 (+29.14) | 09:30 open · cash $1.33 (unchanged overnight, no fees) · equity $6,629.55 vs prior close $6,600.41 (+29.14) · 7 name(s) re-marked at the open (per-name table). CMPX×1043 yday $0.86 → 09:30 $0.90 +45.16; CTVA×79 yday $11.92 → 09:30 $11.81 -8.69; EVMN×135 yday $6.92 → 09:30 $6.86 -8.10; KDK×594 yday $1.64 → 09:30 $1.66 +11.88; LUCD×1545 yday $0.63 → 09:30 $0.62 -6.49; NKTR×20 yday $43.58 → 09:30 $43.50 -1.60; VIVO×302 yday $3.36 → 09:30 $3.35 -3.02 | — |
+| 2026-10-05 09:30 ET | **SELL** | `CMPX` | 1043 | $0.90 | $12.70 | $-67.46 | $927.33 | ▼ -67.46 after sell → book $6,616.85; vs 09:30 mark -12.70 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `CTVA` | 79 | $11.81 | $2.25 | $-49.90 | $1,858.07 | ▼ -49.90 after sell → book $6,614.60; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `EVMN` | 135 | $6.86 | $2.43 | $-57.47 | $2,781.74 | ▼ -57.47 after sell → book $6,612.17; vs 09:30 mark -2.43 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `KDK` | 594 | $1.66 | $7.77 | $-9.49 | $3,760.01 | ▼ -9.49 after sell → book $6,604.40; vs 09:30 mark -7.77 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `LUCD` | 1545 | $0.62 | $14.53 | $-47.05 | $4,708.17 | ▼ -47.05 after sell → book $6,589.87; vs 09:30 mark -14.53 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `NKTR` | 20 | $43.50 | $2.07 | $-76.32 | $5,576.10 | ▼ -76.32 after sell → book $6,587.80; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `VIVO` | 302 | $3.35 | $3.96 | $+25.37 | $6,583.85 | ▲ +25.37 after sell → book $6,583.85; vs 09:30 mark -3.95 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `IART` | 519 | $12.65 | $6.70 | — | $11.80 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-21.3; leftover $6583.85 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.80 | ▲ close $6,909.31 vs 09:30 $6,629.55 (session +332.16) | 16:00 close · cash $11.80 · equity $6,909.31 vs 09:30 $6,629.55 (+279.76; session marks +332.16) · 1 name(s) marked open→close (per-name table). IART×519 09:30 $12.65 → close $13.29 +332.16 | — |
 
 ## Not taken
 

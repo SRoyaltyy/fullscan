@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-13.02%** ($8,698) · signal-only (no cash/fees) was +88.18%. Starts YES **4/30**. Fills 216 · skips 429 · realized $-1050.25.
+Cash book **-14.92%** ($8,508) · signal-only (no cash/fees) was +88.18%. Starts YES **4/30**. Fills 217 · skips 429 · realized $-1050.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -356,6 +356,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `GLND` | 3 | $4.25 | $0.14 | — | $102.13 | — | baseline list, no extra gate; list yday_mover,ohlc_hot; ret5=-17.8; leftover $16.43 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `USDE` | 1 | $15.24 | $0.16 | — | $86.74 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+9.1; leftover $16.43 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $86.74 | ▼ close $8,698.32 vs 09:30 $8,764.87 (session -66.26) | 16:00 close · cash $86.74 · equity $8,698.32 vs 09:30 $8,764.87 (-66.55; session marks -66.26) · 10 name(s) marked open→close (per-name table). AVPT×75 09:30 $14.22 → close $14.07 -11.25; FORM×7 09:30 $150.50 → close $149.15 -9.45; LIND×34 09:30 $34.50 → close $34.78 +9.52; PGEN×126 09:30 $8.30 → close $8.54 +30.24; PPLI×25 09:30 $41.37 → close $41.28 -2.25; SECZ×74 09:30 $14.06 → close $12.99 -79.18; TLSA×971 09:30 $1.16 → close $1.12 -38.84; VECO×20 09:30 $55.50 → close $57.38 +37.60; GLND×3 09:30 $4.25 → close $3.73 -1.56; USDE×1 09:30 $15.24 → close $14.15 -1.09 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $86.74 | ▲ 09:30 equity $8,712.30 vs yday $8,698.32 (+13.98) | 09:30 open · cash $86.74 (unchanged overnight, no fees) · equity $8,712.30 vs prior close $8,698.32 (+13.98) · 10 name(s) re-marked at the open (per-name table). AVPT×75 yday $14.07 → 09:30 $13.91 -12.00; FORM×7 yday $149.15 → 09:30 $150.64 +10.43; GLND×3 yday $3.73 → 09:30 $3.92 +0.58; LIND×34 yday $34.78 → 09:30 $34.78 +0.00; PGEN×126 yday $8.54 → 09:30 $8.51 -3.78; PPLI×25 yday $41.28 → 09:30 $41.13 -3.75; SECZ×74 yday $12.99 → 09:30 $13.41 +31.08; TLSA×971 yday $1.12 → 09:30 $1.12 +0.00; USDE×1 yday $14.15 → 09:30 $14.36 +0.21; VECO×20 yday $57.38 → 09:30 $56.94 -8.80 | — |
+| 2026-10-05 09:30 ET | **BUY** | `WNC` | 1 | $14.02 | $0.14 | — | $72.58 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+7.8; leftover $14.46 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $72.58 | ▼ close $8,507.95 vs 09:30 $8,712.30 (session -204.20) | 16:00 close · cash $72.58 · equity $8,507.95 vs 09:30 $8,712.30 (-204.35; session marks -204.20) · 11 name(s) marked open→close (per-name table). AVPT×75 09:30 $13.91 → close $14.66 +56.25; FORM×7 09:30 $150.64 → close $147.99 -18.55; GLND×3 09:30 $3.92 → close $3.71 -0.64; LIND×34 09:30 $34.78 → close $35.60 +27.88; PGEN×126 09:30 $8.51 → close $7.74 -97.02; PPLI×25 09:30 $41.13 → close $41.73 +15.00; SECZ×74 09:30 $13.41 → close $11.70 -126.54; TLSA×971 09:30 $1.12 → close $1.07 -48.55; USDE×1 09:30 $14.36 → close $14.96 +0.60; VECO×20 09:30 $56.94 → close $56.31 -12.60; WNC×1 09:30 $14.02 → close $13.99 -0.03 | — |
 
 ## Not taken
 

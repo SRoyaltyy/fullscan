@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h3 w=0.7,0.3 net=priority
 
-Cash book **-14.89%** ($8,511) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 274 · skips 322 · realized $+2761.77.
+Cash book **-15.62%** ($8,438) · signal-only (no cash/fees) was —. Starts YES **8/30**. Fills 278 · skips 322 · realized $+2761.77.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,228.53.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12,280.91.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -419,6 +419,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **COVER** | `RSKD` | 591 | $8.05 | $7.62 | $-133.71 | $7,573.19 | ▼ -133.71 after sell → book $8,591.13; vs 09:30 mark -7.62 | short_news_r_h3: dropped from list after 5 sess (min 3) | — |
 | 2026-10-02 09:30 ET | **SELL** | `UEC` | 68 | $9.67 | $2.22 | $-20.73 | $8,228.53 | ▼ -20.73 after sell → book $8,588.92; vs 09:30 mark -2.21 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,228.53 | ▼ close $8,510.60 vs 09:30 $8,614.32 (session -78.32) | 16:00 close · cash $8,228.53 · equity $8,510.60 vs 09:30 $8,614.32 (-103.72; session marks -78.32) · 6 name(s) marked open→close (per-name table). ACN×5 09:30 $211.02 → close $198.90 -60.60; MKC×24 09:30 $43.52 → close $44.67 +27.60; MU×1 09:30 $1107.45 → close $1074.89 -32.56; NKE×58 09:30 $32.55 → close $33.87 -76.39; PRGS×28 09:30 $36.88 → close $36.90 +0.56; PYXS×901 09:30 $2.21 → close $2.14 +63.07 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,228.53 | ▲ 09:30 equity $8,518.14 vs yday $8,510.60 (+7.54) | 09:30 open · cash $8,228.53 (unchanged overnight, no fees) · equity $8,518.14 vs prior close $8,510.60 (+7.54) | — |
+| 2026-10-05 09:30 ET | **SHORT** | `MXL` | 10 | $106.00 | $2.07 | — | $9,286.46 | — | news🔴; gate news=bad; list yday_gainer,yday_mover,ohlc_hot; ret5=+12.9; combo leftover $1064.77; owner short_news_r_h3 | join🟡 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `TER` | 2 | $447.21 | $2.04 | — | $10,178.84 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+12.7; combo leftover $1064.77; owner short_news_r_h3 | join🟢 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `SG` | 115 | $9.24 | $2.39 | — | $11,239.05 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+10.4; combo leftover $1064.77; owner short_news_r_h3 | join🟡 sector🟢 gen🟡 news🔴 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `AXTI` | 12 | $87.00 | $2.07 | — | $12,280.91 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+8.8; combo leftover $1064.77; owner short_news_r_h3 | join🟢 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,280.91 | ▼ close $8,437.95 vs 09:30 $8,518.14 (session -71.61) | 16:00 close · cash $12,280.91 · equity $8,437.95 vs 09:30 $8,518.14 (-80.19; session marks -71.61) · 10 name(s) marked open→close (per-name table). ACN×5 09:30 $196.30 → close $195.05 -6.25; MKC×24 09:30 $44.76 → close $45.54 +18.72; MU×1 09:30 $1069.55 → close $1063.96 -5.59; NKE×58 09:30 $33.82 → close $33.96 -8.12; PRGS×28 09:30 $37.00 → close $37.22 +6.02; PYXS×901 09:30 $2.12 → close $2.24 -108.12; MXL×10 09:30 $106.00 → close $105.49 +5.10; TER×2 09:30 $447.21 → close $444.53 +5.36; SG×115 09:30 $9.24 → close $9.09 +17.25; AXTI×12 09:30 $87.00 → close $86.66 +4.02 | — |
 
 ## Not taken
 

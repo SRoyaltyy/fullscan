@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-2.48%** ($9,752) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 207 · skips 71 · realized $-1788.82.
+Cash book **-6.01%** ($9,399) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 215 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -351,6 +351,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `BLMN` | 165 | $8.50 | $2.48 | — | $1,731.61 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ret5=+3.2; leftover $1409.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `PBF` | 17 | $81.34 | $2.04 | — | $346.79 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+14.5; leftover $1409.19 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $346.79 | ▼ close $9,751.77 vs 09:30 $9,912.85 (session -97.63) | 16:00 close · cash $346.79 · equity $9,751.77 vs 09:30 $9,912.85 (-161.08; session marks -97.63) · 7 name(s) marked open→close (per-name table). COHR×4 09:30 $316.56 → close $337.04 +81.90; GWRE×9 09:30 $155.67 → close $152.15 -31.68; MAT×93 09:30 $15.13 → close $15.27 +12.55; ACN×6 09:30 $211.02 → close $198.90 -72.72; EFOR×38 09:30 $36.22 → close $34.25 -74.86; BLMN×165 09:30 $8.50 → close $8.48 -3.30; PBF×17 09:30 $81.34 → close $80.78 -9.52 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $346.79 | ▼ 09:30 equity $9,750.93 vs yday $9,751.77 (-0.84) | 09:30 open · cash $346.79 (unchanged overnight, no fees) · equity $9,750.93 vs prior close $9,751.77 (-0.84) · 7 name(s) re-marked at the open (per-name table). ACN×6 yday $198.90 → 09:30 $196.30 -15.60; BLMN×165 yday $8.48 → 09:30 $8.51 +4.95; COHR×4 yday $337.04 → 09:30 $340.93 +15.54; EFOR×38 yday $34.25 → 09:30 $34.25 +0.00; GWRE×9 yday $152.15 → 09:30 $152.52 +3.33; MAT×93 yday $15.27 → 09:30 $15.20 -6.51; PBF×17 yday $80.78 → 09:30 $80.63 -2.55 | — |
+| 2026-10-05 09:30 ET | **SELL** | `ACN` | 6 | $196.30 | $2.03 | $-92.36 | $1,522.56 | ▼ -92.36 after sell → book $9,748.90; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `BLMN` | 165 | $8.51 | $2.52 | $-3.36 | $2,924.19 | ▼ -3.36 after sell → book $9,746.38; vs 09:30 mark -2.52 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `COHR` | 4 | $340.93 | $2.02 | $+93.42 | $4,285.87 | ▲ +93.42 after sell → book $9,744.36; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `EFOR` | 38 | $34.25 | $2.12 | $-79.09 | $5,585.24 | ▼ -79.09 after sell → book $9,742.23; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `GWRE` | 9 | $152.52 | $2.04 | $-32.40 | $6,955.88 | ▼ -32.40 after sell → book $9,740.19; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `MAT` | 93 | $15.20 | $2.30 | $+1.48 | $8,367.19 | ▲ +1.48 after sell → book $9,737.90; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `PBF` | 17 | $80.63 | $2.06 | $-16.17 | $9,735.84 | ▼ -16.17 after sell → book $9,735.84; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `ELMT` | 441 | $22.04 | $5.69 | — | $10.51 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; ret5=+12.7; leftover $9735.84 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10.51 | ▼ close $9,399.40 vs 09:30 $9,750.93 (session -330.75) | 16:00 close · cash $10.51 · equity $9,399.40 vs 09:30 $9,750.93 (-351.53; session marks -330.75) · 1 name(s) marked open→close (per-name table). ELMT×441 09:30 $22.04 → close $21.29 -330.75 | — |
 
 ## Not taken
 

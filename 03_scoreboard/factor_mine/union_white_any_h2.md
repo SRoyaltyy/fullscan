@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + (yday up or major catalyst), then Score
 
-Cash book **-9.02%** ($9,098) · signal-only (no cash/fees) was +6.04%. Starts YES **5/30**. Fills 201 · skips 94 · realized $-316.93.
+Cash book **-8.98%** ($9,102) · signal-only (no cash/fees) was +6.04%. Starts YES **5/30**. Fills 201 · skips 94 · realized $-316.93.
 
 ## How this sleeve decides (like you are 10)
 
@@ -347,6 +347,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `ARHS` | 110 | $10.12 | $2.32 | — | $1,301.36 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; 🔵; ⚪; ret5=+4.2; leftover $1114.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `PDFS` | 20 | $55.24 | $2.05 | — | $194.51 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; ⚪; ret5=+11.5; leftover $1114.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $194.51 | ▲ close $9,097.96 vs 09:30 $8,917.58 (session +206.00) | 16:00 close · cash $194.51 · equity $9,097.96 vs 09:30 $8,917.58 (+180.38; session marks +206.00) · 8 name(s) marked open→close (per-name table). CDNA×16 09:30 $66.33 → close $67.15 +13.12; ETON×21 09:30 $52.42 → close $55.36 +61.74; INOD×15 09:30 $73.05 → close $70.07 -44.70; SNPS×2 09:30 $497.86 → close $489.90 -15.91; NAUT×669 09:30 $1.67 → close $1.96 +197.35; FOSL×160 09:30 $6.95 → close $6.80 -24.00; ARHS×110 09:30 $10.12 → close $10.24 +13.20; PDFS×20 09:30 $55.24 → close $55.50 +5.20 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $194.51 | ▲ 09:30 equity $9,290.48 vs yday $9,097.96 (+192.52) | 09:30 open · cash $194.51 (unchanged overnight, no fees) · equity $9,290.48 vs prior close $9,097.96 (+192.52) · 8 name(s) re-marked at the open (per-name table). ARHS×110 yday $10.24 → 09:30 $10.23 -1.10; CDNA×16 yday $67.15 → 09:30 $66.90 -4.00; ETON×21 yday $55.36 → 09:30 $55.85 +10.29; FOSL×160 yday $6.80 → 09:30 $6.86 +9.60; INOD×15 yday $70.07 → 09:30 $70.98 +13.65; NAUT×669 yday $1.96 → 09:30 $2.18 +147.18; PDFS×20 yday $55.50 → 09:30 $55.71 +4.20; SNPS×2 yday $489.90 → 09:30 $496.25 +12.70 | — |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $194.51 | ▼ close $9,101.55 vs 09:30 $9,290.48 (session -188.93) | 16:00 close · cash $194.51 · equity $9,101.55 vs 09:30 $9,290.48 (-188.93; session marks -188.93) · 8 name(s) marked open→close (per-name table). ARHS×110 09:30 $10.23 → close $10.11 -13.20; CDNA×16 09:30 $66.90 → close $69.85 +47.20; ETON×21 09:30 $55.85 → close $55.62 -4.83; FOSL×160 09:30 $6.86 → close $7.22 +57.60; INOD×15 09:30 $70.98 → close $66.97 -60.15; NAUT×669 09:30 $2.18 → close $1.87 -207.39; PDFS×20 09:30 $55.71 → close $56.08 +7.40; SNPS×2 09:30 $496.25 → close $488.47 -15.56 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 fresh catalyst + limited extension (research; not KEEP)
 
-Cash book **-11.09%** ($8,891) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 277 · skips 106 · realized $-137.13.
+Cash book **-8.35%** ($9,165) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 284 · skips 106 · realized $-137.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -423,6 +423,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `CIEN` | 4 | $385.00 | $2.00 | — | $2,406.32 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; ret5=+5.8; leftover $1845.74 | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `GLND` | 434 | $4.25 | $5.60 | — | $556.22 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_mover,ohlc_hot; ret5=-17.8; leftover $1845.74 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $556.22 | ▼ close $8,891.28 vs 09:30 $9,239.05 (session -301.25) | 16:00 close · cash $556.22 · equity $8,891.28 vs 09:30 $9,239.05 (-347.77; session marks -301.25) · 5 name(s) marked open→close (per-name table). WRBY×66 09:30 $27.63 → close $27.03 -39.60; CMPX×1963 09:30 $0.94 → close $0.86 -163.71; COHR×5 09:30 $316.56 → close $337.04 +102.38; CIEN×4 09:30 $385.00 → close $391.34 +25.36; GLND×434 09:30 $4.25 → close $3.73 -225.68 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $556.22 | ▲ 09:30 equity $9,089.39 vs yday $8,891.28 (+198.11) | 09:30 open · cash $556.22 (unchanged overnight, no fees) · equity $9,089.39 vs prior close $8,891.28 (+198.11) · 5 name(s) re-marked at the open (per-name table). CIEN×4 yday $391.34 → 09:30 $393.77 +9.72; CMPX×1963 yday $0.86 → 09:30 $0.90 +85.00; COHR×5 yday $337.04 → 09:30 $340.93 +19.42; GLND×434 yday $3.73 → 09:30 $3.92 +84.63; WRBY×66 yday $27.03 → 09:30 $27.02 -0.66 | — |
+| 2026-10-05 09:30 ET | **SELL** | `CIEN` | 4 | $393.77 | $2.02 | $+31.05 | $2,129.28 | ▲ +31.05 after sell → book $9,087.37; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `CMPX` | 1963 | $0.90 | $23.90 | $-126.96 | $3,872.08 | ▼ -126.96 after sell → book $9,063.47; vs 09:30 mark -23.90 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `COHR` | 5 | $340.93 | $2.03 | $+117.77 | $5,574.68 | ▲ +117.77 after sell → book $9,061.45; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `GLND` | 434 | $3.92 | $5.68 | $-152.33 | $7,272.44 | ▼ -152.33 after sell → book $9,055.76; vs 09:30 mark -5.69 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `WRBY` | 66 | $27.02 | $2.21 | $-44.66 | $9,053.55 | ▼ -44.66 after sell → book $9,053.55; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `COP` | 35 | $127.00 | $2.10 | — | $4,606.45 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ret5=-0.4; leftover $4526.77 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `RRC` | 118 | $38.10 | $2.34 | — | $108.31 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ret5=-1.0; leftover $4526.77 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $108.31 | ▲ close $9,165.37 vs 09:30 $9,089.39 (session +116.26) | 16:00 close · cash $108.31 · equity $9,165.37 vs 09:30 $9,089.39 (+75.98; session marks +116.26) · 2 name(s) marked open→close (per-name table). COP×35 09:30 $127.00 → close $128.40 +49.00; RRC×118 09:30 $38.10 → close $38.67 +67.26 | — |
 
 ## Not taken
 

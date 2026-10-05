@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +7 −≤1
 
-Cash book **-23.03%** ($7,697) · signal-only (no cash/fees) was -11.63%. Starts YES **4/30**. Fills 80 · skips 12 · realized $-910.91.
+Cash book **-23.10%** ($7,690) · signal-only (no cash/fees) was -11.63%. Starts YES **4/30**. Fills 84 · skips 12 · realized $-910.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -227,6 +227,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `ACN` | 9 | $211.02 | $2.02 | — | $2,487.70 | — | merged news🟢 and cameras +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list yday_gainer,yday_mover; ret5=+19.7; leftover $1962.10 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `LITE` | 1 | $1053.26 | $1.99 | — | $1,432.45 | — | merged news🟢 and cameras +7 −≤1; gate cam_bad_max=1,n_pos_min=7,news=good; rank cond; list yday_gainer,ohlc_hot; 🔵; ret5=+12.6; leftover $1962.10 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,432.45 | ▼ close $7,696.80 vs 09:30 $7,851.23 (session -143.39) | 16:00 close · cash $1,432.45 · equity $7,696.80 vs 09:30 $7,851.23 (-154.43; session marks -143.39) · 4 name(s) marked open→close (per-name table). SNPS×3 09:30 $497.86 → close $489.90 -23.87; WRBY×71 09:30 $27.63 → close $27.03 -42.60; ACN×9 09:30 $211.02 → close $198.90 -109.08; LITE×1 09:30 $1053.26 → close $1085.42 +32.16 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,432.45 | ▲ 09:30 equity $7,698.61 vs yday $7,696.80 (+1.81) | 09:30 open · cash $1,432.45 (unchanged overnight, no fees) · equity $7,698.61 vs prior close $7,696.80 (+1.81) · 4 name(s) re-marked at the open (per-name table). ACN×9 yday $198.90 → 09:30 $196.30 -23.40; LITE×1 yday $1085.42 → 09:30 $1092.29 +6.87; SNPS×3 yday $489.90 → 09:30 $496.25 +19.05; WRBY×71 yday $27.03 → 09:30 $27.02 -0.71 | — |
+| 2026-10-05 09:30 ET | **SELL** | `ACN` | 9 | $196.30 | $2.04 | $-136.54 | $3,197.11 | ▼ -136.54 after sell → book $7,696.57; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `LITE` | 1 | $1092.29 | $2.01 | $+35.02 | $4,287.39 | ▲ +35.02 after sell → book $7,694.56; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `SNPS` | 3 | $496.25 | $2.02 | $-8.83 | $5,774.11 | ▼ -8.83 after sell → book $7,692.53; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `WRBY` | 71 | $27.02 | $2.23 | $-47.74 | $7,690.30 | ▼ -47.74 after sell → book $7,690.30; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,690.30 | ▲ close $7,690.30 vs 09:30 $7,698.61 (session +0.00) | 16:00 close · cash $7,690.30 · no lots left · equity $7,690.30. | — |
 
 ## Not taken
 

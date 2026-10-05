@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-8.73%** ($9,127) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 228 · skips 288 · realized $+91.50.
+Cash book **-7.45%** ($9,255) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 228 · skips 288 · realized $+91.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -371,6 +371,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `MAT` | 2 | $15.13 | $0.31 | — | $234.08 | — | rank by candle_score; rank candle_score; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $33.08 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `QSI` | 23 | $1.38 | $0.39 | — | $201.95 | — | rank by candle_score; rank candle_score; list yday_gainer,yday_mover; 🔵; ret5=+82.2; leftover $33.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $201.95 | ▼ close $9,126.98 vs 09:30 $9,140.23 (session -12.55) | 16:00 close · cash $201.95 · equity $9,126.98 vs 09:30 $9,140.23 (-13.25; session marks -12.55) · 10 name(s) marked open→close (per-name table). FORM×7 09:30 $150.50 → close $149.15 -9.45; ONTO×3 09:30 $328.89 → close $327.77 -3.36; PACB×483 09:30 $2.50 → close $2.54 +19.32; PPLI×27 09:30 $41.37 → close $41.28 -2.43; QTRX×304 09:30 $3.46 → close $3.64 +54.72; RSKD×142 09:30 $8.05 → close $7.86 -26.98; SITC×337 09:30 $3.49 → close $3.42 -23.59; TRLV×104 09:30 $10.96 → close $10.72 -24.96; MAT×2 09:30 $15.13 → close $15.27 +0.27; QSI×23 09:30 $1.38 → close $1.55 +3.91 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $201.95 | ▲ 09:30 equity $9,127.70 vs yday $9,126.98 (+0.73) | 09:30 open · cash $201.95 (unchanged overnight, no fees) · equity $9,127.70 vs prior close $9,126.98 (+0.73) · 10 name(s) re-marked at the open (per-name table). FORM×7 yday $149.15 → 09:30 $150.64 +10.43; MAT×2 yday $15.27 → 09:30 $15.20 -0.14; ONTO×3 yday $327.77 → 09:30 $327.74 -0.09; PACB×483 yday $2.54 → 09:30 $2.54 +0.00; PPLI×27 yday $41.28 → 09:30 $41.13 -4.05; QSI×23 yday $1.55 → 09:30 $1.52 -0.58; QTRX×304 yday $3.64 → 09:30 $3.67 +9.12; RSKD×142 yday $7.86 → 09:30 $7.80 -8.52; SITC×337 yday $3.42 → 09:30 $3.41 -3.37; TRLV×104 yday $10.72 → 09:30 $10.70 -2.08 | — |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $201.95 | ▲ close $9,255.31 vs 09:30 $9,127.70 (session +127.61) | 16:00 close · cash $201.95 · equity $9,255.31 vs 09:30 $9,127.70 (+127.61; session marks +127.61) · 10 name(s) marked open→close (per-name table). FORM×7 09:30 $150.64 → close $147.99 -18.55; MAT×2 09:30 $15.20 → close $16.05 +1.70; ONTO×3 09:30 $327.74 → close $325.41 -6.99; PACB×483 09:30 $2.54 → close $2.87 +159.39; PPLI×27 09:30 $41.13 → close $41.73 +16.20; QSI×23 09:30 $1.52 → close $1.28 -5.63; QTRX×304 09:30 $3.67 → close $3.81 +42.56; RSKD×142 09:30 $7.80 → close $7.81 +1.42; SITC×337 09:30 $3.41 → close $3.24 -57.29; TRLV×104 09:30 $10.70 → close $10.65 -5.20 | — |
 
 ## Not taken
 

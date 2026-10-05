@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-9.72%** ($9,027) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 197 · skips 74 · realized $-1849.08.
+Cash book **-9.52%** ($9,048) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 207 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -343,6 +343,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `VPG` | 14 | $77.34 | $2.03 | — | $1,307.41 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.5; leftover $1133.39 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `GRAL` | 8 | $135.52 | $2.01 | — | $221.23 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ⚪; ret5=+5.9; leftover $1133.39 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $221.23 | ▼ close $9,027.47 vs 09:30 $9,084.73 (session -22.98) | 16:00 close · cash $221.23 · equity $9,027.47 vs 09:30 $9,084.73 (-57.26; session marks -22.98) · 8 name(s) marked open→close (per-name table). CDNA×17 09:30 $66.33 → close $67.15 +13.94; USDE×74 09:30 $15.24 → close $14.15 -80.66; ARHS×111 09:30 $10.12 → close $10.24 +13.32; ACMR×13 09:30 $86.09 → close $83.38 -35.23; CDNS×3 09:30 $356.50 → close $351.35 -15.45; SYNA×9 09:30 $121.66 → close $121.10 -5.04; VPG×14 09:30 $77.34 → close $79.07 +24.22; GRAL×8 09:30 $135.52 → close $143.26 +61.92 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $221.23 | ▲ 09:30 equity $9,031.27 vs yday $9,027.47 (+3.80) | 09:30 open · cash $221.23 (unchanged overnight, no fees) · equity $9,031.27 vs prior close $9,027.47 (+3.80) · 8 name(s) re-marked at the open (per-name table). ACMR×13 yday $83.38 → 09:30 $82.81 -7.41; ARHS×111 yday $10.24 → 09:30 $10.23 -1.11; CDNA×17 yday $67.15 → 09:30 $66.90 -4.25; CDNS×3 yday $351.35 → 09:30 $354.72 +10.11; GRAL×8 yday $143.26 → 09:30 $142.75 -4.08; SYNA×9 yday $121.10 → 09:30 $120.98 -1.08; USDE×74 yday $14.15 → 09:30 $14.36 +15.54; VPG×14 yday $79.07 → 09:30 $78.79 -3.92 | — |
+| 2026-10-05 09:30 ET | **SELL** | `ACMR` | 13 | $82.81 | $2.05 | $-46.72 | $1,295.71 | ▼ -46.72 after sell → book $9,029.22; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `ARHS` | 111 | $10.23 | $2.35 | $+7.54 | $2,428.89 | ▲ +7.54 after sell → book $9,026.87; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `CDNA` | 17 | $66.90 | $2.06 | $+5.59 | $3,564.13 | ▲ +5.59 after sell → book $9,024.81; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `CDNS` | 3 | $354.72 | $2.02 | $-9.36 | $4,626.27 | ▼ -9.36 after sell → book $9,022.79; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `GRAL` | 8 | $142.75 | $2.03 | $+53.79 | $5,766.24 | ▲ +53.79 after sell → book $9,020.76; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `SYNA` | 9 | $120.98 | $2.04 | $-10.17 | $6,853.02 | ▼ -10.17 after sell → book $9,018.72; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `USDE` | 74 | $14.36 | $2.23 | $-69.57 | $7,913.42 | ▼ -69.57 after sell → book $9,016.48; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `VPG` | 14 | $78.79 | $2.05 | $+16.22 | $9,014.43 | ▲ +16.22 after sell → book $9,014.43; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `WNC` | 321 | $14.02 | $4.14 | — | $4,509.87 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+7.8; leftover $4507.22 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `ON` | 53 | $85.00 | $2.15 | — | $2.72 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+10.0; leftover $4507.22 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.72 | ▲ close $9,047.80 vs 09:30 $9,031.27 (session +39.66) | 16:00 close · cash $2.72 · equity $9,047.80 vs 09:30 $9,031.27 (+16.53; session marks +39.66) · 2 name(s) marked open→close (per-name table). WNC×321 09:30 $14.02 → close $13.99 -9.63; ON×53 09:30 $85.00 → close $85.93 +49.29 | — |
 
 ## Not taken
 

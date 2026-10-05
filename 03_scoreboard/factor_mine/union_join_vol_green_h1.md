@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+2.83%** ($10,283) · signal-only (no cash/fees) was +14.99%. Starts YES **24/30**. Fills 270 · skips 55 · realized $+1581.44.
+Cash book **+7.20%** ($10,720) · signal-only (no cash/fees) was +14.99%. Starts YES **24/30**. Fills 282 · skips 55 · realized $+1581.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -417,6 +417,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `QSI` | 860 | $1.38 | $11.09 | — | $1,504.50 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+82.2; leftover $1187.47 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `SNPS` | 2 | $497.86 | $2.00 | — | $506.80 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $1187.47 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $506.80 | ▲ close $10,282.51 vs 09:30 $9,544.14 (session +823.03) | 16:00 close · cash $506.80 · equity $10,282.51 vs 09:30 $9,544.14 (+738.37; session marks +823.03) · 8 name(s) marked open→close (per-name table). CDNA×17 09:30 $66.33 → close $67.15 +13.94; ETON×22 09:30 $52.42 → close $55.36 +64.68; COHR×3 09:30 $316.56 → close $337.04 +61.43; INOD×16 09:30 $73.05 → close $70.07 -47.68; SDEV×234 09:30 $5.06 → close $7.48 +566.28; SES×1380 09:30 $0.86 → close $0.88 +34.09; QSI×860 09:30 $1.38 → close $1.55 +146.20; SNPS×2 09:30 $497.86 → close $489.90 -15.91 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $506.80 | ▲ 09:30 equity $10,849.40 vs yday $10,282.51 (+566.89) | 09:30 open · cash $506.80 (unchanged overnight, no fees) · equity $10,849.40 vs prior close $10,282.51 (+566.89) · 8 name(s) re-marked at the open (per-name table). CDNA×17 yday $67.15 → 09:30 $66.90 -4.25; COHR×3 yday $337.04 → 09:30 $340.93 +11.65; ETON×22 yday $55.36 → 09:30 $55.85 +10.78; INOD×16 yday $70.07 → 09:30 $70.98 +14.56; QSI×860 yday $1.55 → 09:30 $1.52 -21.50; SDEV×234 yday $7.48 → 09:30 $9.71 +521.82; SES×1380 yday $0.88 → 09:30 $0.90 +21.11; SNPS×2 yday $489.90 → 09:30 $496.25 +12.70 | — |
+| 2026-10-05 09:30 ET | **SELL** | `CDNA` | 17 | $66.90 | $2.06 | $+5.59 | $1,642.04 | ▲ +5.59 after sell → book $10,847.33; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `COHR` | 3 | $340.93 | $2.02 | $+69.06 | $2,662.80 | ▲ +69.06 after sell → book $10,845.32; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `ETON` | 22 | $55.85 | $2.08 | $+71.33 | $3,889.42 | ▲ +71.33 after sell → book $10,843.24; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `INOD` | 16 | $70.98 | $2.06 | $-37.22 | $5,023.04 | ▼ -37.22 after sell → book $10,841.18; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `QSI` | 860 | $1.52 | $11.25 | $+102.36 | $6,323.29 | ▲ +102.36 after sell → book $10,829.93; vs 09:30 mark -11.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `SDEV` | 234 | $9.71 | $3.08 | $+1082.01 | $8,592.36 | ▲ +1,082.01 after sell → book $10,826.86; vs 09:30 mark -3.07 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `SES` | 1380 | $0.90 | $16.80 | $+22.39 | $9,817.56 | ▲ +22.39 after sell → book $10,810.06; vs 09:30 mark -16.80 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `SNPS` | 2 | $496.25 | $2.02 | $-7.22 | $10,808.04 | ▼ -7.22 after sell → book $10,808.04; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `EVGO` | 1957 | $1.38 | $25.25 | — | $8,082.14 | — | combo gate; gate join=good,last_green=True,vol=good; list probable,yday_gainer; ret5=+0.0; leftover $2702.01 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `VECO` | 47 | $56.94 | $2.13 | — | $5,403.83 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+15.5; leftover $2702.01 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `NTAP` | 11 | $225.47 | $2.02 | — | $2,921.63 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ⚪; ret5=+12.5; leftover $2702.01 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `STM` | 47 | $56.60 | $2.13 | — | $259.30 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+10.3; leftover $2702.01 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $259.30 | ▼ close $10,720.25 vs 09:30 $10,849.40 (session -56.26) | 16:00 close · cash $259.30 · equity $10,720.25 vs 09:30 $10,849.40 (-129.15; session marks -56.26) · 4 name(s) marked open→close (per-name table). EVGO×1957 09:30 $1.38 → close $1.35 -58.71; VECO×47 09:30 $56.94 → close $56.31 -29.61; NTAP×11 09:30 $225.47 → close $223.77 -18.70; STM×47 09:30 $56.60 → close $57.68 +50.76 | — |
 
 ## Not taken
 

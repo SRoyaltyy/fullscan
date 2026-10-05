@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · news🔴
 
-Cash book **-9.67%** ($9,033) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 123 · skips 28 · realized $+7.41.
+Cash book **-9.43%** ($9,057) · signal-only (no cash/fees) was +4.61%. Starts YES **16/30**. Fills 127 · skips 28 · realized $+7.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -265,6 +265,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **COVER** | `PYXS` | 642 | $2.21 | $8.28 | $+47.48 | $10,540.95 | ▲ +47.48 after sell → book $9,035.60; vs 09:30 mark -8.28 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-02 09:30 ET | **COVER** | `RSKD` | 187 | $8.05 | $2.55 | $-29.50 | $9,033.05 | ▼ -29.50 after sell → book $9,033.05; vs 09:30 mark -2.55 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,033.05 | ▲ close $9,033.05 vs 09:30 $9,046.00 (session +0.00) | 16:00 close · cash $9,033.05 · no lots left · equity $9,033.05. | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,033.05 | ▲ 09:30 equity $9,033.05 vs yday $9,033.05 (+0.00) | 09:30 open · cash $9,033.05 · no holdings · equity $9,033.05 vs prior close $9,033.05 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-05 09:30 ET | **SHORT** | `MXL` | 10 | $106.00 | $2.07 | — | $10,090.98 | — | news🔴; gate news=bad; list yday_gainer,yday_mover,ohlc_hot; ret5=+12.9; leftover $1129.13 | join🟡 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `TER` | 2 | $447.21 | $2.04 | — | $10,983.36 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+12.7; leftover $1129.13 | join🟢 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `SG` | 122 | $9.24 | $2.42 | — | $12,108.22 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+10.4; leftover $1129.13 | join🟡 sector🟢 gen🟡 news🔴 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `AXTI` | 12 | $87.00 | $2.07 | — | $13,150.09 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+8.8; leftover $1129.13 | join🟢 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,150.09 | ▲ close $9,057.23 vs 09:30 $9,033.05 (session +32.78) | 16:00 close · cash $13,150.09 · equity $9,057.23 vs 09:30 $9,033.05 (+24.18; session marks +32.78) · 4 name(s) marked open→close (per-name table). MXL×10 09:30 $106.00 → close $105.49 +5.10; TER×2 09:30 $447.21 → close $444.53 +5.36; SG×122 09:30 $9.24 → close $9.09 +18.30; AXTI×12 09:30 $87.00 → close $86.66 +4.02 | — |
 
 ## Not taken
 

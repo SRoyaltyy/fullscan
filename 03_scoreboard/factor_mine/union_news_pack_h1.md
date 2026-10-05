@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **-8.69%** ($9,131) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 76 · skips 29 · realized $+1396.12.
+Cash book **-7.61%** ($9,239) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 80 · skips 29 · realized $+1396.12.
 
 ## How this sleeve decides (like you are 10)
 
@@ -221,6 +221,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `SNPS` | 9 | $497.86 | $2.02 | — | $4,990.17 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $4736.44 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `ACN` | 22 | $211.02 | $2.06 | — | $345.68 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer,yday_mover; ret5=+19.7; leftover $4736.44 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $345.68 | ▼ close $9,130.58 vs 09:30 $9,474.98 (session -338.24) | 16:00 close · cash $345.68 · equity $9,130.58 vs 09:30 $9,474.98 (-344.40; session marks -338.24) · 2 name(s) marked open→close (per-name table). SNPS×9 09:30 $497.86 → close $489.90 -71.60; ACN×22 09:30 $211.02 → close $198.90 -266.64 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $345.68 | ▼ 09:30 equity $9,130.53 vs yday $9,130.58 (-0.05) | 09:30 open · cash $345.68 (unchanged overnight, no fees) · equity $9,130.53 vs prior close $9,130.58 (-0.05) · 2 name(s) re-marked at the open (per-name table). ACN×22 yday $198.90 → 09:30 $196.30 -57.20; SNPS×9 yday $489.90 → 09:30 $496.25 +57.15 | — |
+| 2026-10-05 09:30 ET | **SELL** | `ACN` | 22 | $196.30 | $2.10 | $-328.00 | $4,662.18 | ▼ -328.00 after sell → book $9,128.43; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `SNPS` | 9 | $496.25 | $2.06 | $-18.52 | $9,126.37 | ▼ -18.52 after sell → book $9,126.37; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `COP` | 35 | $127.00 | $2.10 | — | $4,679.27 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list flatten; ret5=-0.4; leftover $4563.18 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `RRC` | 119 | $38.10 | $2.35 | — | $143.02 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list flatten; ret5=-1.0; leftover $4563.18 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $143.02 | ▲ close $9,238.75 vs 09:30 $9,130.53 (session +116.83) | 16:00 close · cash $143.02 · equity $9,238.75 vs 09:30 $9,130.53 (+108.22; session marks +116.83) · 2 name(s) marked open→close (per-name table). COP×35 09:30 $127.00 → close $128.40 +49.00; RRC×119 09:30 $38.10 → close $38.67 +67.83 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-23.80%** ($7,620) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 197 · skips 65 · realized $-814.48.
+Cash book **-25.37%** ($7,463) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 205 · skips 65 · realized $-814.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -342,6 +342,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `CIEN` | 2 | $385.00 | $2.00 | — | $1,802.41 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer; ret5=+5.8; leftover $1116.71 | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `GLND` | 262 | $4.25 | $3.38 | — | $685.53 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_mover,ohlc_hot; ret5=-17.8; leftover $1116.71 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $685.53 | ▼ close $7,619.92 vs 09:30 $7,852.46 (session -168.88) | 16:00 close · cash $685.53 · equity $7,619.92 vs 09:30 $7,852.46 (-232.54; session marks -168.88) · 7 name(s) marked open→close (per-name table). SNPS×2 09:30 $497.86 → close $489.90 -15.91; WRBY×40 09:30 $27.63 → close $27.03 -24.00; LITE×1 09:30 $1053.26 → close $1085.42 +32.16; CMPX×1187 09:30 $0.94 → close $0.86 -99.00; COHR×3 09:30 $316.56 → close $337.04 +61.43; CIEN×2 09:30 $385.00 → close $391.34 +12.68; GLND×262 09:30 $4.25 → close $3.73 -136.24 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $685.53 | ▲ 09:30 equity $7,758.08 vs yday $7,619.92 (+138.16) | 09:30 open · cash $685.53 (unchanged overnight, no fees) · equity $7,758.08 vs prior close $7,619.92 (+138.16) · 7 name(s) re-marked at the open (per-name table). CIEN×2 yday $391.34 → 09:30 $393.77 +4.86; CMPX×1187 yday $0.86 → 09:30 $0.90 +51.40; COHR×3 yday $337.04 → 09:30 $340.93 +11.65; GLND×262 yday $3.73 → 09:30 $3.92 +51.09; LITE×1 yday $1085.42 → 09:30 $1092.29 +6.87; SNPS×2 yday $489.90 → 09:30 $496.25 +12.70; WRBY×40 yday $27.03 → 09:30 $27.02 -0.40 | — |
+| 2026-10-05 09:30 ET | **SELL** | `CIEN` | 2 | $393.77 | $2.02 | $+13.53 | $1,471.05 | ▲ +13.53 after sell → book $7,756.07; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `CMPX` | 1187 | $0.90 | $14.45 | $-76.77 | $2,524.90 | ▼ -76.77 after sell → book $7,741.62; vs 09:30 mark -14.45 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `COHR` | 3 | $340.93 | $2.02 | $+69.06 | $3,545.66 | ▲ +69.06 after sell → book $7,739.60; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `GLND` | 262 | $3.92 | $3.43 | $-91.96 | $4,570.58 | ▼ -91.96 after sell → book $7,736.17; vs 09:30 mark -3.43 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `LITE` | 1 | $1092.29 | $2.01 | $+35.02 | $5,660.85 | ▲ +35.02 after sell → book $7,734.15; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SELL** | `SNPS` | 2 | $496.25 | $2.02 | $-7.22 | $6,651.34 | ▼ -7.22 after sell → book $7,732.14; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `WRBY` | 40 | $27.02 | $2.13 | $-28.64 | $7,730.01 | ▼ -28.64 after sell → book $7,730.01; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `ELMT` | 350 | $22.04 | $4.51 | — | $11.49 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer; ret5=+12.7; leftover $7730.01 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.49 | ▼ close $7,462.99 vs 09:30 $7,758.08 (session -262.50) | 16:00 close · cash $11.49 · equity $7,462.99 vs 09:30 $7,758.08 (-295.09; session marks -262.50) · 1 name(s) marked open→close (per-name table). ELMT×350 09:30 $22.04 → close $21.29 -262.50 | — |
 
 ## Not taken
 

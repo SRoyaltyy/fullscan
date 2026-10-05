@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-12.91%** ($8,709) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 231 · skips 307 · realized $-613.92.
+Cash book **-13.11%** ($8,689) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 232 · skips 307 · realized $-613.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -374,6 +374,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `NAUT` | 5 | $1.67 | $0.10 | — | $47.05 | — | rank by cond; rank cond; list yday_gainer; 🔵; ⚪; ret5=+58.4; leftover $9.22 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `FOSL` | 1 | $6.95 | $0.07 | — | $40.03 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+16.2; leftover $9.22 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $40.03 | ▲ close $8,709.22 vs 09:30 $8,574.78 (session +134.70) | 16:00 close · cash $40.03 · equity $8,709.22 vs 09:30 $8,574.78 (+134.44; session marks +134.70) · 10 name(s) marked open→close (per-name table). AVPT×84 09:30 $14.22 → close $14.07 -12.60; CAPR×128 09:30 $9.14 → close $8.95 -24.32; ETON×24 09:30 $52.42 → close $55.36 +70.56; LQDA×50 09:30 $26.69 → close $28.64 +97.50; PAYS×89 09:30 $14.19 → close $14.23 +3.56; PRGS×29 09:30 $36.88 → close $36.90 +0.58; RELY×56 09:30 $21.80 → close $21.77 -1.68; ACRS×2 09:30 $4.50 → close $4.39 -0.22; NAUT×5 09:30 $1.67 → close $1.96 +1.47; FOSL×1 09:30 $6.95 → close $6.80 -0.15 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $40.03 | ▼ 09:30 equity $8,664.85 vs yday $8,709.22 (-44.37) | 09:30 open · cash $40.03 (unchanged overnight, no fees) · equity $8,664.85 vs prior close $8,709.22 (-44.37) · 10 name(s) re-marked at the open (per-name table). ACRS×2 yday $4.39 → 09:30 $4.34 -0.10; AVPT×84 yday $14.07 → 09:30 $13.91 -13.44; CAPR×128 yday $8.95 → 09:30 $8.75 -25.60; ETON×24 yday $55.36 → 09:30 $55.85 +11.76; FOSL×1 yday $6.80 → 09:30 $6.86 +0.06; LQDA×50 yday $28.64 → 09:30 $28.07 -28.50; NAUT×5 yday $1.96 → 09:30 $2.18 +1.10; PAYS×89 yday $14.23 → 09:30 $14.32 +8.01; PRGS×29 yday $36.90 → 09:30 $37.00 +2.90; RELY×56 yday $21.77 → 09:30 $21.76 -0.56 | — |
+| 2026-10-05 09:30 ET | **BUY** | `ECX` | 5 | $0.88 | $0.06 | — | $35.56 | — | rank by cond; rank cond; list yday_mover; ret5=-21.2; leftover $5.00 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $35.56 | ▲ close $8,689.28 vs 09:30 $8,664.85 (session +24.49) | 16:00 close · cash $35.56 · equity $8,689.28 vs 09:30 $8,664.85 (+24.43; session marks +24.49) · 11 name(s) marked open→close (per-name table). ACRS×2 09:30 $4.34 → close $4.27 -0.14; AVPT×84 09:30 $13.91 → close $14.66 +63.00; CAPR×128 09:30 $8.75 → close $7.78 -124.16; ETON×24 09:30 $55.85 → close $55.62 -5.52; FOSL×1 09:30 $6.86 → close $7.22 +0.36; LQDA×50 09:30 $28.07 → close $27.64 -21.50; NAUT×5 09:30 $2.18 → close $1.87 -1.55; PAYS×89 09:30 $14.32 → close $14.81 +43.61; PRGS×29 09:30 $37.00 → close $37.22 +6.24; RELY×56 09:30 $21.76 → close $22.91 +64.40; ECX×5 09:30 $0.88 → close $0.83 -0.25 | — |
 
 ## Not taken
 

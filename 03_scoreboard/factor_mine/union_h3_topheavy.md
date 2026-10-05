@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-20.90%** ($7,910) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 225 · skips 294 · realized $-410.95.
+Cash book **-20.00%** ($8,000) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 229 · skips 294 · realized $-410.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -365,6 +365,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `BLFS` | 1 | $37.02 | $0.37 | — | $460.09 | — | 40% to #1, rest split; list flatten; 🔵; ⚪; ret5=-4.7; leftover $45.03 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `QNC` | 26 | $1.69 | $0.52 | — | $415.63 | — | 40% to #1, rest split; list probable,yday_gainer,yday_mover; ret5=-7.9; leftover $45.03 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $415.63 | ▼ close $7,909.76 vs 09:30 $8,044.26 (session -131.31) | 16:00 close · cash $415.63 · equity $7,909.76 vs 09:30 $8,044.26 (-134.50; session marks -131.31) · 10 name(s) marked open→close (per-name table). AVPT×53 09:30 $14.22 → close $14.07 -7.95; IOT×19 09:30 $40.41 → close $41.12 +13.49; IT×15 09:30 $192.74 → close $184.80 -119.10; IVA×226 09:30 $3.57 → close $3.56 -2.26; KSPI×8 09:30 $92.05 → close $94.05 +16.00; RELY×35 09:30 $21.80 → close $21.77 -1.05; TLSA×688 09:30 $1.16 → close $1.12 -27.52; WRBY×1 09:30 $27.63 → close $27.03 -0.60; BLFS×1 09:30 $37.02 → close $37.30 +0.28; QNC×26 09:30 $1.69 → close $1.59 -2.60 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $415.63 | ▲ 09:30 equity $7,916.89 vs yday $7,909.76 (+7.13) | 09:30 open · cash $415.63 (unchanged overnight, no fees) · equity $7,916.89 vs prior close $7,909.76 (+7.13) · 10 name(s) re-marked at the open (per-name table). AVPT×53 yday $14.07 → 09:30 $13.91 -8.48; BLFS×1 yday $37.30 → 09:30 $37.16 -0.14; IOT×19 yday $41.12 → 09:30 $42.00 +16.72; IT×15 yday $184.80 → 09:30 $185.07 +4.05; IVA×226 yday $3.56 → 09:30 $3.52 -9.04; KSPI×8 yday $94.05 → 09:30 $94.50 +3.60; QNC×26 yday $1.59 → 09:30 $1.62 +0.78; RELY×35 yday $21.77 → 09:30 $21.76 -0.35; TLSA×688 yday $1.12 → 09:30 $1.12 +0.00; WRBY×1 yday $27.03 → 09:30 $27.02 -0.01 | — |
+| 2026-10-05 09:30 ET | **BUY** | `COP` | 1 | $127.00 | $1.27 | — | $287.36 | — | 40% to #1, rest split; list flatten; ret5=-0.4; leftover $166.25 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `SM` | 1 | $35.27 | $0.36 | — | $251.73 | — | 40% to #1, rest split; list flatten; ret5=+3.9; leftover $35.63 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `GPRK` | 3 | $10.87 | $0.34 | — | $218.79 | — | 40% to #1, rest split; list flatten; ret5=-3.1; leftover $35.63 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `OBE` | 3 | $10.26 | $0.32 | — | $187.69 | — | 40% to #1, rest split; list flatten; ret5=-2.7; leftover $35.63 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $187.69 | ▲ close $7,999.50 vs 09:30 $7,916.89 (session +84.89) | 16:00 close · cash $187.69 · equity $7,999.50 vs 09:30 $7,916.89 (+82.61; session marks +84.89) · 14 name(s) marked open→close (per-name table). AVPT×53 09:30 $13.91 → close $14.66 +39.75; BLFS×1 09:30 $37.16 → close $38.61 +1.45; IOT×19 09:30 $42.00 → close $42.39 +7.41; IT×15 09:30 $185.07 → close $187.76 +40.35; IVA×226 09:30 $3.52 → close $3.48 -9.04; KSPI×8 09:30 $94.50 → close $93.98 -4.16; QNC×26 09:30 $1.62 → close $1.64 +0.52; RELY×35 09:30 $21.76 → close $22.91 +40.25; TLSA×688 09:30 $1.12 → close $1.07 -34.40; WRBY×1 09:30 $27.02 → close $26.65 -0.37; COP×1 09:30 $127.00 → close $128.40 +1.40; SM×1 09:30 $35.27 → close $35.05 -0.22; GPRK×3 09:30 $10.87 → close $11.28 +1.23; OBE×3 09:30 $10.26 → close $10.50 +0.72 | — |
 
 ## Not taken
 

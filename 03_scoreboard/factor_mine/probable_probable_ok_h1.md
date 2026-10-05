@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-7.92%** ($9,208) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 222 · skips 53 · realized $-864.75.
+Cash book **-8.87%** ($9,113) · signal-only (no cash/fees) was -9.22%. Starts YES **0/30**. Fills 235 · skips 53 · realized $-864.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -368,6 +368,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `LWLG` | 205 | $5.66 | $2.64 | — | $1,496.68 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; 🔵; ret5=+3.0; leftover $1165.09 | join🔴 sector🔴 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `CNXC` | 43 | $26.93 | $2.12 | — | $336.57 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=-8.1; leftover $1165.09 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $336.57 | ▼ close $9,207.85 vs 09:30 $9,364.14 (session -74.40) | 16:00 close · cash $336.57 · equity $9,207.85 vs 09:30 $9,364.14 (-156.29; session marks -74.40) · 8 name(s) marked open→close (per-name table). QNC×689 09:30 $1.69 → close $1.59 -68.90; AIB×803 09:30 $1.45 → close $1.64 +152.57; COHR×3 09:30 $316.56 → close $337.04 +61.43; RR×650 09:30 $1.79 → close $1.68 -71.50; INOD×15 09:30 $73.05 → close $70.07 -44.70; GWRE×7 09:30 $155.67 → close $152.15 -24.64; LWLG×205 09:30 $5.66 → close $5.70 +8.20; CNXC×43 09:30 $26.93 → close $24.91 -86.86 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $336.57 | ▲ 09:30 equity $9,216.77 vs yday $9,207.85 (+8.92) | 09:30 open · cash $336.57 (unchanged overnight, no fees) · equity $9,216.77 vs prior close $9,207.85 (+8.92) · 8 name(s) re-marked at the open (per-name table). AIB×803 yday $1.64 → 09:30 $1.62 -16.06; CNXC×43 yday $24.91 → 09:30 $24.77 -5.81; COHR×3 yday $337.04 → 09:30 $340.93 +11.65; GWRE×7 yday $152.15 → 09:30 $152.52 +2.59; INOD×15 yday $70.07 → 09:30 $70.98 +13.65; LWLG×205 yday $5.70 → 09:30 $5.64 -11.28; QNC×689 yday $1.59 → 09:30 $1.62 +20.67; RR×650 yday $1.68 → 09:30 $1.67 -6.50 | — |
+| 2026-10-05 09:30 ET | **SELL** | `AIB` | 803 | $1.62 | $10.50 | $+115.65 | $1,626.93 | ▲ +115.65 after sell → book $9,206.27; vs 09:30 mark -10.50 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `CNXC` | 43 | $24.77 | $2.14 | $-96.92 | $2,690.11 | ▼ -96.92 after sell → book $9,204.13; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `COHR` | 3 | $340.93 | $2.02 | $+69.06 | $3,710.87 | ▲ +69.06 after sell → book $9,202.11; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `GWRE` | 7 | $152.52 | $2.03 | $-26.09 | $4,776.48 | ▼ -26.09 after sell → book $9,200.08; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `INOD` | 15 | $70.98 | $2.06 | $-35.14 | $5,839.12 | ▼ -35.14 after sell → book $9,198.03; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `LWLG` | 205 | $5.64 | $2.69 | $-8.41 | $6,993.66 | ▼ -8.41 after sell → book $9,195.34; vs 09:30 mark -2.69 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `QNC` | 689 | $1.62 | $9.01 | $-66.13 | $8,100.83 | ▼ -66.13 after sell → book $9,186.33; vs 09:30 mark -9.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `RR` | 650 | $1.67 | $8.50 | $-94.89 | $9,177.82 | ▼ -94.89 after sell → book $9,177.82; vs 09:30 mark -8.51 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `WNC` | 130 | $14.02 | $2.38 | — | $7,352.84 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+7.8; leftover $1835.56 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `INDP` | 781 | $2.35 | $10.07 | — | $5,507.42 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=-38.2; leftover $1835.56 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `PENG` | 30 | $61.10 | $2.08 | — | $3,672.34 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+9.1; leftover $1835.56 | join🟡 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `EVGO` | 1330 | $1.38 | $17.16 | — | $1,819.78 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=+0.0; leftover $1835.56 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `INIO` | 90 | $20.09 | $2.26 | — | $9.42 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer; ret5=+4.6; leftover $1835.56 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.42 | ▼ close $9,113.43 vs 09:30 $9,216.77 (session -30.44) | 16:00 close · cash $9.42 · equity $9,113.43 vs 09:30 $9,216.77 (-103.34; session marks -30.44) · 5 name(s) marked open→close (per-name table). WNC×130 09:30 $14.02 → close $13.99 -3.90; INDP×781 09:30 $2.35 → close $2.51 +124.96; PENG×30 09:30 $61.10 → close $60.71 -11.70; EVGO×1330 09:30 $1.38 → close $1.35 -39.90; INIO×90 09:30 $20.09 → close $18.98 -99.90 | — |
 
 ## Not taken
 

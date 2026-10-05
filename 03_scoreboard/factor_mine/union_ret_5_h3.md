@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+9.06%** ($10,906) · signal-only (no cash/fees) was +97.62%. Starts YES **29/30**. Fills 230 · skips 293 · realized $+1779.39.
+Cash book **+7.75%** ($10,774) · signal-only (no cash/fees) was +97.62%. Starts YES **29/30**. Fills 230 · skips 293 · realized $+1779.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -373,6 +373,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.29 | ▲ close $10,611.87 vs 09:30 $10,340.02 (session +366.44) | 16:00 close · cash $2.29 · equity $10,611.87 vs 09:30 $10,340.02 (+271.85; session marks +366.44) · 6 name(s) marked open→close (per-name table). PACB×733 09:30 $2.34 → close $2.51 +124.61; QSI×1431 09:30 $1.20 → close $1.43 +329.13; PMVP×1022 09:30 $1.68 → close $1.75 +71.54; QTRX×461 09:30 $3.72 → close $3.41 -142.91; MX×454 09:30 $3.78 → close $3.64 -63.56; MNKD×433 09:30 $3.84 → close $3.95 +47.63 | — |
 | 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.29 | ▲ 09:30 equity $10,618.34 vs yday $10,611.87 (+6.47) | 09:30 open · cash $2.29 (unchanged overnight, no fees) · equity $10,618.34 vs prior close $10,611.87 (+6.47) · 6 name(s) re-marked at the open (per-name table). MNKD×433 yday $3.95 → 09:30 $4.01 +25.98; MX×454 yday $3.64 → 09:30 $3.72 +36.32; PACB×733 yday $2.51 → 09:30 $2.50 -7.33; PMVP×1022 yday $1.75 → 09:30 $1.75 +0.00; QSI×1431 yday $1.43 → 09:30 $1.38 -71.55; QTRX×461 yday $3.41 → 09:30 $3.46 +23.05 | — |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.29 | ▲ close $10,905.70 vs 09:30 $10,618.34 (session +287.36) | 16:00 close · cash $2.29 · equity $10,905.70 vs 09:30 $10,618.34 (+287.36; session marks +287.36) · 6 name(s) marked open→close (per-name table). MNKD×433 09:30 $4.01 → close $3.80 -90.93; MX×454 09:30 $3.72 → close $3.68 -18.16; PACB×733 09:30 $2.50 → close $2.54 +29.32; PMVP×1022 09:30 $1.75 → close $1.79 +40.88; QSI×1431 09:30 $1.38 → close $1.55 +243.27; QTRX×461 09:30 $3.46 → close $3.64 +82.98 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.29 | ▲ 09:30 equity $10,911.72 vs yday $10,905.70 (+6.01) | 09:30 open · cash $2.29 (unchanged overnight, no fees) · equity $10,911.72 vs prior close $10,905.70 (+6.01) · 6 name(s) re-marked at the open (per-name table). MNKD×433 yday $3.80 → 09:30 $3.82 +8.66; MX×454 yday $3.68 → 09:30 $3.70 +9.08; PACB×733 yday $2.54 → 09:30 $2.54 +0.00; PMVP×1022 yday $1.79 → 09:30 $1.80 +10.22; QSI×1431 yday $1.55 → 09:30 $1.52 -35.78; QTRX×461 yday $3.64 → 09:30 $3.67 +13.83 | — |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.29 | ▼ close $10,774.47 vs 09:30 $10,911.72 (session -137.24) | 16:00 close · cash $2.29 · equity $10,774.47 vs 09:30 $10,911.72 (-137.25; session marks -137.24) · 6 name(s) marked open→close (per-name table). MNKD×433 09:30 $3.82 → close $3.82 +0.00; MX×454 09:30 $3.70 → close $3.54 -72.64; PACB×733 09:30 $2.54 → close $2.87 +241.89; PMVP×1022 09:30 $1.80 → close $1.78 -20.44; QSI×1431 09:30 $1.52 → close $1.28 -350.59; QTRX×461 09:30 $3.67 → close $3.81 +64.54 | — |
 
 ## Not taken
 

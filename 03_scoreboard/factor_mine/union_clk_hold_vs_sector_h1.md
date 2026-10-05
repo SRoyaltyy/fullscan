@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-14.46%** ($8,554) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 225 · skips 96 · realized $+387.41.
+Cash book **-13.56%** ($8,644) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 232 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -371,6 +371,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `PBF` | 52 | $81.34 | $2.15 | — | $4,332.59 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+14.5; leftover $4282.21 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `LWLG` | 756 | $5.66 | $9.75 | — | $43.87 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer; 🔵; ret5=+3.0; leftover $4282.21 | join🔴 sector🔴 gen🟢 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.87 | ▲ close $8,553.63 vs 09:30 $8,586.23 (session +1.12) | 16:00 close · cash $43.87 · equity $8,553.63 vs 09:30 $8,586.23 (-32.60; session marks +1.12) · 2 name(s) marked open→close (per-name table). PBF×52 09:30 $81.34 → close $80.78 -29.12; LWLG×756 09:30 $5.66 → close $5.70 +30.24 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $43.87 | ▼ 09:30 equity $8,504.25 vs yday $8,553.63 (-49.38) | 09:30 open · cash $43.87 (unchanged overnight, no fees) · equity $8,504.25 vs prior close $8,553.63 (-49.38) · 2 name(s) re-marked at the open (per-name table). LWLG×756 yday $5.70 → 09:30 $5.64 -41.58; PBF×52 yday $80.78 → 09:30 $80.63 -7.80 | — |
+| 2026-10-05 09:30 ET | **SELL** | `LWLG` | 756 | $5.64 | $9.91 | $-31.00 | $4,301.58 | ▼ -31.00 after sell → book $8,494.34; vs 09:30 mark -9.91 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `PBF` | 52 | $80.63 | $2.19 | $-41.26 | $8,492.15 | ▼ -41.26 after sell → book $8,492.15; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `COP` | 13 | $127.00 | $2.03 | — | $6,839.12 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list flatten; ret5=-0.4; leftover $1698.43 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `RRC` | 44 | $38.10 | $2.12 | — | $5,160.60 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list flatten; ret5=-1.0; leftover $1698.43 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `GPRK` | 156 | $10.87 | $2.46 | — | $3,462.42 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list flatten; ret5=-3.1; leftover $1698.43 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `OBE` | 165 | $10.26 | $2.48 | — | $1,767.03 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list flatten; ret5=-2.7; leftover $1698.43 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `VET` | 146 | $11.62 | $2.43 | — | $68.09 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list flatten; ret5=+0.7; leftover $1698.43 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $68.09 | ▲ close $8,643.53 vs 09:30 $8,504.25 (session +162.90) | 16:00 close · cash $68.09 · equity $8,643.53 vs 09:30 $8,504.25 (+139.28; session marks +162.90) · 5 name(s) marked open→close (per-name table). COP×13 09:30 $127.00 → close $128.40 +18.20; RRC×44 09:30 $38.10 → close $38.67 +25.08; GPRK×156 09:30 $10.87 → close $11.28 +63.96; OBE×165 09:30 $10.26 → close $10.50 +39.60; VET×146 09:30 $11.62 → close $11.73 +16.06 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ ab_g, no 🚨
 
-Cash book **-13.41%** ($8,659) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 248 · skips 92 · realized $-226.14.
+Cash book **-13.50%** ($8,650) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 264 · skips 92 · realized $-226.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -392,6 +392,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **BUY** | `ETON` | 20 | $52.42 | $2.05 | — | $1,387.94 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ⚪; ret5=-12.6; leftover $1067.60 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-02 09:30 ET | **BUY** | `COHR` | 3 | $316.56 | $2.00 | — | $436.25 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer; 🔵; ret5=+9.8; leftover $1067.60 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $436.25 | ▲ close $8,658.73 vs 09:30 $8,572.85 (session +134.25) | 16:00 close · cash $436.25 · equity $8,658.73 vs 09:30 $8,572.85 (+85.88; session marks +134.25) · 8 name(s) marked open→close (per-name table). VEEV×3 09:30 $283.10 → close $273.33 -29.31; CORT×9 09:30 $114.38 → close $116.23 +16.65; ILMN×4 09:30 $265.91 → close $273.04 +28.52; CDNA×16 09:30 $66.33 → close $67.15 +13.12; WRBY×38 09:30 $27.63 → close $27.03 -22.80; BLFS×28 09:30 $37.02 → close $37.30 +7.84; ETON×20 09:30 $52.42 → close $55.36 +58.80; COHR×3 09:30 $316.56 → close $337.04 +61.43 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $436.25 | ▲ 09:30 equity $8,670.98 vs yday $8,658.73 (+12.25) | 09:30 open · cash $436.25 (unchanged overnight, no fees) · equity $8,670.98 vs prior close $8,658.73 (+12.25) · 8 name(s) re-marked at the open (per-name table). BLFS×28 yday $37.30 → 09:30 $37.16 -3.92; CDNA×16 yday $67.15 → 09:30 $66.90 -4.00; COHR×3 yday $337.04 → 09:30 $340.93 +11.65; CORT×9 yday $116.23 → 09:30 $115.59 -5.76; ETON×20 yday $55.36 → 09:30 $55.85 +9.80; ILMN×4 yday $273.04 → 09:30 $273.00 -0.16; VEEV×3 yday $273.33 → 09:30 $275.00 +5.01; WRBY×38 yday $27.03 → 09:30 $27.02 -0.38 | — |
+| 2026-10-05 09:30 ET | **SELL** | `BLFS` | 28 | $37.16 | $2.09 | $-0.25 | $1,474.64 | ▼ -0.25 after sell → book $8,668.88; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `CDNA` | 16 | $66.90 | $2.06 | $+5.02 | $2,542.98 | ▲ +5.02 after sell → book $8,666.82; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `COHR` | 3 | $340.93 | $2.02 | $+69.06 | $3,563.73 | ▲ +69.06 after sell → book $8,664.80; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `CORT` | 9 | $115.59 | $2.04 | $+6.84 | $4,602.01 | ▲ +6.84 after sell → book $8,662.77; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `ETON` | 20 | $55.85 | $2.07 | $+64.48 | $5,716.94 | ▲ +64.48 after sell → book $8,660.70; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `ILMN` | 4 | $273.00 | $2.02 | $+24.34 | $6,806.92 | ▲ +24.34 after sell → book $8,658.68; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `VEEV` | 3 | $275.00 | $2.02 | $-28.32 | $7,629.90 | ▼ -28.32 after sell → book $8,656.66; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `WRBY` | 38 | $27.02 | $2.12 | $-27.41 | $8,654.53 | ▼ -27.41 after sell → book $8,654.53; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `COP` | 8 | $127.00 | $2.01 | — | $7,636.52 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=-0.4; leftover $1081.82 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `EXE` | 12 | $84.70 | $2.03 | — | $6,618.09 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=-1.5; leftover $1081.82 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `RRC` | 28 | $38.10 | $2.07 | — | $5,549.22 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=-1.0; leftover $1081.82 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `OBE` | 105 | $10.26 | $2.31 | — | $4,469.61 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=-2.7; leftover $1081.82 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `PENG` | 17 | $61.10 | $2.04 | — | $3,428.87 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+9.1; leftover $1081.82 | join🟡 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `INIO` | 53 | $20.09 | $2.15 | — | $2,361.95 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer; ret5=+4.6; leftover $1081.82 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `FEAM` | 278 | $3.88 | $3.59 | — | $1,279.73 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,yday_mover; ret5=+38.6; leftover $1081.82 | join🟡 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `MXL` | 10 | $106.00 | $2.02 | — | $217.71 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,yday_mover,ohlc_hot; ret5=+12.9; leftover $1081.82 | join🟡 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $217.71 | ▲ close $8,650.00 vs 09:30 $8,670.98 (session +13.68) | 16:00 close · cash $217.71 · equity $8,650.00 vs 09:30 $8,670.98 (-20.98; session marks +13.68) · 8 name(s) marked open→close (per-name table). COP×8 09:30 $127.00 → close $128.40 +11.20; EXE×12 09:30 $84.70 → close $86.43 +20.76; RRC×28 09:30 $38.10 → close $38.67 +15.96; OBE×105 09:30 $10.26 → close $10.50 +25.20; PENG×17 09:30 $61.10 → close $60.71 -6.63; INIO×53 09:30 $20.09 → close $18.98 -58.83; FEAM×278 09:30 $3.88 → close $3.92 +11.12; MXL×10 09:30 $106.00 → close $105.49 -5.10 | — |
 
 ## Not taken
 

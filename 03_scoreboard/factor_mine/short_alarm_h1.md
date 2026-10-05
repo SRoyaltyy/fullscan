@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **-1.27%** ($9,873) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 140 · skips 96 · realized $+54.59.
+Cash book **+3.10%** ($10,310) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 148 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -282,6 +282,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **COVER** | `SHMD` | 130 | $4.44 | $2.38 | $+41.99 | $10,483.26 | ▲ +41.99 after sell → book $9,875.34; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-02 09:30 ET | **COVER** | `SONO` | 34 | $17.88 | $2.09 | $+2.92 | $9,873.25 | ▲ +2.92 after sell → book $9,873.25; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,873.25 | ▲ close $9,873.25 vs 09:30 $9,892.11 (session +0.00) | 16:00 close · cash $9,873.25 · no lots left · equity $9,873.25. | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,873.25 | ▲ 09:30 equity $9,873.25 vs yday $9,873.25 (+0.00) | 09:30 open · cash $9,873.25 · no holdings · equity $9,873.25 vs prior close $9,873.25 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-05 09:30 ET | **SHORT** | `DVN` | 12 | $47.64 | $2.06 | — | $10,442.87 | — | alarm; gate alarm=True; list flatten; ret5=+1.3; leftover $617.08 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `SM` | 17 | $35.27 | $2.08 | — | $11,040.38 | — | alarm; gate alarm=True; list flatten; ret5=+3.9; leftover $617.08 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `MTDR` | 11 | $53.35 | $2.06 | — | $11,625.17 | — | alarm; gate alarm=True; list flatten; ret5=+3.8; leftover $617.08 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `MYGN` | 136 | $4.51 | $2.45 | — | $12,236.08 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=+8.9; leftover $617.08 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `MEI` | 38 | $15.98 | $2.14 | — | $12,841.18 | — | alarm; gate alarm=True; list probable,yday_gainer; ret5=+8.5; leftover $617.08 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `SDEV` | 63 | $9.71 | $2.22 | — | $13,450.70 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+402.0; leftover $617.08 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `NAUT` | 283 | $2.18 | $3.72 | — | $14,063.91 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ⚪; ret5=+103.6; leftover $617.08 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `PPC` | 22 | $27.45 | $2.09 | — | $14,665.72 | — | alarm; gate alarm=True; list yday_gainer; ret5=-1.2; leftover $617.08 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,665.72 | ▲ close $10,309.71 vs 09:30 $9,873.25 (session +455.28) | 16:00 close · cash $14,665.72 · equity $10,309.71 vs 09:30 $9,873.25 (+436.46; session marks +455.28) · 8 name(s) marked open→close (per-name table). DVN×12 09:30 $47.64 → close $47.98 -4.08; SM×17 09:30 $35.27 → close $35.05 +3.74; MTDR×11 09:30 $53.35 → close $53.01 +3.74; MYGN×136 09:30 $4.51 → close $4.58 -9.52; MEI×38 09:30 $15.98 → close $15.40 +22.04; SDEV×63 09:30 $9.71 → close $3.94 +363.51; NAUT×283 09:30 $2.18 → close $1.87 +87.73; PPC×22 09:30 $27.45 → close $27.99 -11.88 | — |
 
 ## Not taken
 

@@ -218,6 +218,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,628.26 | ▼ 09:30 equity $9,490.58 vs yday $9,683.72 (-193.14) | 09:30 open · cash $6,628.26 (unchanged overnight, no fees) · equity $9,490.58 vs prior close $9,683.72 (-193.14) · 1 name(s) re-marked at the open (per-name table). TEM×37 yday $82.58 → 09:30 $77.36 -193.14 | — |
 | 2026-10-02 09:30 ET | **SELL** | `TEM` | 37 | $77.36 | $2.13 | $-238.63 | $9,488.45 | ▼ -238.63 after sell → book $9,488.45; vs 09:30 mark -2.13 | exit unpriced hold on first bar after 5 sess | — |
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,488.45 | ▲ close $9,488.45 vs 09:30 $9,490.58 (session +0.00) | 16:00 close · cash $9,488.45 · no lots left · equity $9,488.45. | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,488.45 | ▲ 09:30 equity $9,488.45 vs yday $9,488.45 (+0.00) | 09:30 open · cash $9,488.45 · no holdings · equity $9,488.45 vs prior close $9,488.45 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,488.45 | ▲ close $9,488.45 vs 09:30 $9,488.45 (session +0.00) | 16:00 close · cash $9,488.45 · no lots left · equity $9,488.45. | — |
 
 ## Not taken
 
