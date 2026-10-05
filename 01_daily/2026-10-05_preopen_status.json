@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:29:45.719408-04:00",
+  "generated_at": "2026-10-05T07:34:51.830363-04:00",
   "run_id": "37282872499",
   "runner": "ecs-openclaw",
   "all_ok": false,
@@ -201,7 +201,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/events/2026-10-05_events.json",
-        "size": 39087
+        "size": 54031
       },
       {
         "kind": "news_judge",
