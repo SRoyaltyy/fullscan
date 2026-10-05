@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:23:27.050111-04:00",
+  "generated_at": "2026-10-05T07:29:15.724894-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,70 +11,78 @@
   },
   "buy_1d": [
     {
-      "ticker": "TMUS",
-      "score": 0.38610985491715305
+      "ticker": "ARQT",
+      "score": 0.5362783339840729
+    },
+    {
+      "ticker": "EDU",
+      "score": 0.3740013700258146
+    },
+    {
+      "ticker": "PRGS",
+      "score": 0.3106093192133859
     }
   ],
   "sell_1d": [
     {
       "ticker": "ROIV",
-      "score": -0.46456437111708726
-    },
-    {
-      "ticker": "SOC",
-      "score": -0.40008664436927904
+      "score": -0.5876457311307597
     },
     {
       "ticker": "ARE",
-      "score": -0.39254425318357405
+      "score": -0.41823590976540176
+    },
+    {
+      "ticker": "SOC",
+      "score": -0.3913617286158165
     },
     {
       "ticker": "BIDU",
-      "score": -0.3790424275919768
+      "score": -0.3857019749125207
     },
     {
       "ticker": "BNTX",
-      "score": -0.365697688240358
-    },
-    {
-      "ticker": "ALMS",
-      "score": -0.35856491802629525
-    },
-    {
-      "ticker": "SEER",
-      "score": -0.3570492574718841
-    },
-    {
-      "ticker": "PCT",
-      "score": -0.35172844599549985
+      "score": -0.37843485631894425
     },
     {
       "ticker": "IFRX",
-      "score": -0.346195316027358
+      "score": -0.3775394226899668
     },
     {
-      "ticker": "NRXP",
-      "score": -0.3453662820179879
+      "ticker": "ALMS",
+      "score": -0.3693865283479107
+    },
+    {
+      "ticker": "IBM",
+      "score": -0.3654413825250935
+    },
+    {
+      "ticker": "PCT",
+      "score": -0.3588178929817754
     },
     {
       "ticker": "TYRA",
-      "score": -0.34456628424775143
+      "score": -0.3578143116714341
     },
     {
-      "ticker": "ABSI",
-      "score": -0.3434530222979487
+      "ticker": "AXSM",
+      "score": -0.35343395433516445
     },
     {
-      "ticker": "LXRX",
-      "score": -0.3421940224584546
+      "ticker": "NRXP",
+      "score": -0.3519298837425717
     },
     {
       "ticker": "WVE",
-      "score": -0.337657409594129
+      "score": -0.3487760015048991
     },
     {
-      "ticker": "GOGO",
-      "score": -0.33311188227190025
+      "ticker": "LXRX",
+      "score": -0.3448034547446938
+    },
+    {
+      "ticker": "VNET",
+      "score": -0.3437148373469873
     }
   ],
   "flatten": {
@@ -1253,6 +1261,167 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T07:13:05.936167-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11710 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:21:09.949793-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96708,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11636,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T04:21:49.901817-04:00 \u00b7 export=data/exports/finviz_2026-10-02.csv \u00b7 ticker digests=5900 \u00b7 high-signal=1917_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T04:21:49.901817-04:00 \u00b7 export=data/exports/finviz_2026-10-02.csv \u00b7 ticker digests=5900 \u00b7 high-signal=1917_"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat tables",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:21:32.114647-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-05_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 274808,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-05_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18828,
+          "preview": "# MAP HEAT \u2014 2026-10-05\nExport `finviz_2026-10-02.csv` \u00b7 11616 names \u00b7 generated 2026-10-05T04:23:33.348627-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-05\nExport `finviz_2026-10-02.csv` \u00b7 11616 names \u00b7 generated 2026-10-05T04:23:33.348627-04:00"
+    },
+    {
+      "key": "map_heat_baseline",
+      "title": "Map heat night baseline",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:21:50.361011-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-05_research_baseline.json",
+          "ok": true,
+          "reason": "",
+          "size": 359475,
+          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-05_research_baseline.md",
+          "ok": true,
+          "reason": "",
+          "size": 44951,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-05\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-05\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:22:15.680127-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-10-05_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1122911,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:22:42.344929-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-05_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9713,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-05_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5283,
+          "preview": "# Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:23:02.994002-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-05_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2286341,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:23:28.001013-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-05_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7558257,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 EXLS, SB, SKM, CORT, HUM"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-05_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8349151,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TEL, ABBV, EXLS, CORT, SU"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 EXLS, SB, SKM, CORT, HUM \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TEL, ABBV, EXLS, CORT, SU"
     }
   ],
   "source": "publish_live_boards"
