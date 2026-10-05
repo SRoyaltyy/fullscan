@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T06:08:39.374328-04:00",
+  "generated_at": "2026-10-05T06:13:40.703153-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -1039,6 +1039,168 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T06:08:44.495406-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-05_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 972361,
+          "preview": "1d BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2335,
+          "preview": "green 145 \u00b7 SHOO, GLBE, FIGS, SN, HNI, SIG, SKY, VVV, BIRK, ONON"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2454,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7620,
+          "preview": "2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7620,
+          "preview": "2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT"
+        },
+        {
+          "path": "01_daily/2026-10-05_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 31288,
+          "preview": "# Stock book \u2014 2026-10-05\n_Generated 2026-10-05T06:08:36.228673-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 green 145 \u00b7 SHOO, GLBE, FIGS, SN, HNI, SIG, SKY, VVV, BIRK, ONON \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 # Stock book \u2014 2026-10-05\n_Generated 2026-10-05T06:08:36.228673-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T06:08:50.504574-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 21662,
+          "preview": "2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 845,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-05.json",
+          "ok": true,
+          "reason": "",
+          "size": 95924,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-05_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 58322,
+          "preview": "2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 244801,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-05_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 244801,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 219091,
+          "preview": "2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 244801,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 58322,
+          "preview": "2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 244801,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 244801,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 219091,
+          "preview": "2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1668,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1668,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS, SEER, PCT \u00b7 keys: date, generat"
     }
   ],
   "source": "publish_live_boards"

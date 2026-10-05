@@ -28,7 +28,7 @@
     },
     {
       "path": "01_daily/weather/2026-10-05_weather.json",
-      "sha256": "ea13f3b87cd92adb9f2057e934164dd10f18bc8862185c0e79b071b0ce2c59fc"
+      "sha256": "1149e8a6c6902f3854f694efd4281beede46f5d5b4ac7fc04f84166eeb697565"
     },
     {
       "path": "data/ab_checklist/2026-10-05_ab_checklist_enriched.csv",
@@ -36,7 +36,7 @@
     },
     {
       "path": "data/join/2026-10-05_ranked.csv",
-      "sha256": "90305c5dc9dee8c8e1ed208902c4684211839192af8aef52171f2d44d74ac034"
+      "sha256": "dc083405a5145918178d948180aabf2cc3dd0f67d374eb911f32e59a07b07360"
     },
     {
       "path": "data/peers/2026-10-05_peer_rs.csv",
@@ -50,6 +50,6 @@
   "prices": [],
   "reason": "no same-day panel rows for 2026-10-05 \u2014 sitting, no live lookup",
   "rows": [],
-  "sha256": "6de14ca1bd02800eedd32d482eb7d19d9629b70a820fac81bcd104a43853152a",
+  "sha256": "068da5f7a758831adcb8face375aeea41ddb503f607017c94d5b5db8391a8070",
   "source": "no_same_day_panel"
 }
