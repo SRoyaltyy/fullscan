@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T08:52:44.636996-04:00",
+  "generated_at": "2026-10-05T08:55:07.007778-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -110,6 +110,142 @@
   },
   "lands": [
     {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:35:28.472166-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 66158,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 14279,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-05T07:35:28.442929-04:00\nraw=5577 unique_events=6 tickers=83"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-05T07:35:28.442929-04:00\nraw=5577 unique_events=6 tickers=83"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:35:49.289766-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 66158,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 14279,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-05T07:35:28.442929-04:00\nraw=5577 unique_events=6 tickers=83"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-05T07:35:28.442929-04:00\nraw=5577 unique_events=6 tickers=83"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:39:32.102842-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 10848,
+          "preview": "# News Judge \u2014 2026-10-05"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1227,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-10-05 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:44:25.402319-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-10-05_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 16705,
+          "preview": "# Premarket Prediction \u2014 2026-10-05\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: FLAT \u2796 \u2014 FLAT** | total score 0.086 (uncertainty multiplier \u00d71.1) | confidence 0.403\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia composite +0.7%\n> - WTI/Brent offered\n> - Oct hike odds faded ~20%\n> - China PMI expansion T+n\n> - DXY not surging\n>\n> **Bad news driving this:**\n> - leftover Hormuz Brent >$100\n> - 1w 30Y +14bp at 5.61\n> - HY +44bp 1w\n> - ISM Services 10:00 unsigned\n> - Graham Act Oct 8/18 clock\n>\n> **market uncertainty: **elevated** | VIX 16.17 | policy-uncertainty index 160.6 (1d -3.85)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> -"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-10-05\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: FLAT \u2796 \u2014 FLAT** | total score 0.086 (uncertainty multiplier \u00d71.1) | confidence 0.403\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia composite +0.7%\n> - WTI/Brent offered\n> - Oct hike odds faded ~20%\n> - China PMI expansion T+n\n> - DXY not surging\n>\n> **Bad news driving this:**\n> - leftover Hormuz Brent >$100\n> - 1w 30Y +14bp at 5.61\n> - HY +44bp 1w\n> - ISM Services 10:00 unsigned\n> - Graham Act Oct 8/18 clock\n>\n> **market uncertainty: **elevated** | VIX 16.17 | policy-uncertainty index 160.6 (1d -3.85)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0.0\n> -"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T08:22:44.457454-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-05/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6363,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T08:31:08.198482-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-05_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 45153,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-05_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 45153,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-05\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-05\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
       "key": "catalyst",
       "title": "Catalyst dossiers (after book)",
       "date": "2026-10-05",
@@ -165,275 +301,6 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-05\nall_ok=False  qc_all_ok=False  book_ok=True  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T08:51:06.164318-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-05_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9725,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-05_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5297,
-          "preview": "# Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T08:51:13.561924-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-05_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2286341,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
-    },
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T08:51:18.504783-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-05_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T08:51:34.051542-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-10-05_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1433684,
-          "preview": "1d BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG"
-        },
-        {
-          "path": "data/stock_book/2026-10-05_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-10-05_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2454,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-10-05_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12347,
-          "preview": "2026-10-05 BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12347,
-          "preview": "2026-10-05 BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG"
-        },
-        {
-          "path": "01_daily/2026-10-05_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 75436,
-          "preview": "# Stock book \u2014 2026-10-05\n_Generated 2026-10-05T08:51:27.386363-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-05 BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG \u00b7 2026-10-05 BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG \u00b7 # Stock book \u2014 2026-10-05\n_Generated 2026-10-05T08:51:27.386363-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T08:51:39.166808-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 13614,
-          "preview": "2026-10-05 BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 845,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-10-05.json",
-          "ok": true,
-          "reason": "",
-          "size": 136773,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-10-05_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 99325,
-          "preview": "2026-10-05 BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 267399,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-10-05_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 267399,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 259602,
-          "preview": "2026-10-05 BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 267399,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 99325,
-          "preview": "2026-10-05 BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 267399,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 267399,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 259602,
-          "preview": "2026-10-05 BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1668,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1668,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-10-05 BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-05 BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY TMUS, COP, PRGS, PRMB, SPOT, DVN, RRC \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, INDI, TE, HNRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look,"
-    },
-    {
-      "key": "flatten",
-      "title": "Flatten live card",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T08:52:43.737830-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-10-05_flatten_card.md",
-          "ok": true,
-          "reason": "",
-          "size": 3793,
-          "preview": "# flatten_robust card \u2014 2026-10-05\n_Generated 2026-10-05T12:52:42 \u2014 live `flatten_robust`._\n**S=+0.09; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+0.09** (FLAT) \u00b7 route **io**\n- Cash leftover **$27,392.17** (after 09:30 $6,633.25 \u00b7 after 16:00 $82,683.41)\n- Prior close **$103,477.99** \u00b7 09:30 **$103,477.99** \u00b7 overnight **$+0.00** \u00b7 session **$-20,794.58** \u00b7 16:00 **$82,683.41**\n- Overnight lots **6** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$20,758.93** \u2264 leftover after sells **$103,442.35**"
-        },
-        {
-          "path": "data/sleeve_merge/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 14379,
-          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL \u2014"
-        },
-        {
-          "path": "data/sleeve_merge/daily_marks.json",
-          "ok": true,
-          "reason": "",
-          "size": 161757,
-          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
-        },
-        {
-          "path": "data/sleeve_merge/equity_curve.csv",
-          "ok": true,
-          "reason": "",
-          "size": 4033,
-          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
-        },
-        {
-          "path": "dashboard/sleeve-merge/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 55522,
-          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
-        }
-      ],
-      "preview": "# flatten_robust card \u2014 2026-10-05\n_Generated 2026-10-05T12:52:42 \u2014 live `flatten_robust`._\n**S=+0.09; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+0.09** (FLAT) \u00b7 route **io**\n- Cash leftover **$27,392.17** (after 09:30 $6,633.25 \u00b7 after 16:00 $82,683.41)\n- Prior close **$103,477.99** \u00b7 09:30 **$103,477.99** \u00b7 overnight **$+0.00** \u00b7 session **$-20,794.58** \u00b7 16:00 **$82,683.41**\n- Overnight lots **6** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$20,758.93** \u2264 leftover after sells **$103,442.35** \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_ov"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
