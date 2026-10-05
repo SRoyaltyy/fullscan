@@ -13,7 +13,7 @@
 - **UBER** [conflict] actions sell net=-7.03 vs heat buy
 
 ## DOSSIERS
-- **TSLA** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 TSLA
+- **TSLA** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA
 - **NFLX** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NFLX
 - **NE** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE
 - **RIG** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG

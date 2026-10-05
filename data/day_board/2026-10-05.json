@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T08:31:11.444814-04:00",
+  "generated_at": "2026-10-05T08:40:35.471466-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -306,7 +306,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 66158,
+          "size": 66216,
           "said": "83 ticker actions \u00b7 6 events \u00b7 5577 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
           "bullets": [
             "BUY COP",
@@ -555,19 +555,19 @@
           "path": "01_daily/weather/2026-10-05_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9713 vix=calm yields=falling",
-          "size": 9713,
+          "reason": "sectors=11 bytes=9724 vix=falling yields=falling",
+          "size": 9724,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
-            "events bull 5 / bear 4"
+            "events bull 7 / bear 4"
           ]
         }
       ],
       "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
         "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
-        "events bull 5 / bear 4"
+        "events bull 7 / bear 4"
       ]
     },
     {
@@ -631,7 +631,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 66158,
+          "size": 66216,
           "said": "83 ticker actions \u00b7 6 events \u00b7 5577 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
           "bullets": [
             "BUY COP",
@@ -665,7 +665,7 @@
           "size": 2756,
           "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 TSLA, NFLX, NE, RIG, SLB, BKR, CNR, UBER",
           "bullets": [
-            "TSLA: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 TSLA",
+            "TSLA: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA",
             "NFLX: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NFLX",
             "NE: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE",
             "RIG: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG"
@@ -734,7 +734,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 66158,
+          "size": 66216,
           "said": "83 ticker actions \u00b7 6 events \u00b7 5577 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
           "bullets": [
             "BUY COP",
@@ -779,12 +779,12 @@
           "path": "01_daily/weather/2026-10-05_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9713 vix=calm yields=falling",
-          "size": 9713,
+          "reason": "sectors=11 bytes=9724 vix=falling yields=falling",
+          "size": 9724,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
-            "events bull 5 / bear 4"
+            "events bull 7 / bear 4"
           ]
         },
         {
@@ -1062,7 +1062,7 @@
       "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
         "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
-        "events bull 5 / bear 4"
+        "events bull 7 / bear 4"
       ]
     }
   },
@@ -2579,6 +2579,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-05\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-10-05",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-05T08:40:33.613864-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-10-05_dossiers.json",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1234,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-10-05_dossiers.md",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1234,
+          "preview": "# CATALYST DAILY \u2014 2026-10-05\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-05\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
     }
   ],
   "href": {

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T05:56:45.800698-04:00",
+  "generated_at": "2026-10-05T08:40:32.271617-04:00",
   "max_n": 8,
   "routing": "Grok \u2192 DeepSeek",
   "grok": true,
@@ -56,7 +56,7 @@
       "ticker": "TSLA",
       "role": "earnings",
       "why": "earnings AMC",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 TSLA"
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA"
     },
     {
       "ticker": "NFLX",
