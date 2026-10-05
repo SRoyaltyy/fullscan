@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-05
 
-**Generated:** 2026-10-05T04:22:24.422923-04:00 (America/New_York)
+**Generated:** 2026-10-05T04:21:52.586404-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stock futures edge lower in quiet trade ahead of ISM Services PMI data
 **Prior close:** SPX —  Nasdaq —  Dow —
