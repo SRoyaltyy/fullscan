@@ -71,14 +71,14 @@
       "window_through": "2026-10-02",
       "trading_days_elapsed": 14,
       "complete": true,
-      "latest_close": 166.15,
-      "current_return_pct": -1.11,
+      "latest_close": 166.18,
+      "current_return_pct": -1.09,
       "horizon_returns_pct": {
         "1d": -0.21,
         "3d": 0.48,
         "5d": 0.6,
         "10d": 1.93,
-        "14d": -1.11
+        "14d": -1.09
       },
       "mfe_pct": 2.3,
       "mfe_day": "2026-09-28",
@@ -99,14 +99,14 @@
       "window_through": "2026-10-02",
       "trading_days_elapsed": 14,
       "complete": true,
-      "latest_close": 62.95,
-      "current_return_pct": 4.78,
+      "latest_close": 62.82,
+      "current_return_pct": 5.0,
       "horizon_returns_pct": {
         "1d": 0.05,
         "3d": 2.3,
         "5d": 5.6,
         "10d": 6.22,
-        "14d": 4.78
+        "14d": 5.0
       },
       "mfe_pct": 8.22,
       "mfe_day": "2026-09-29",
@@ -127,14 +127,14 @@
       "window_through": "2026-10-02",
       "trading_days_elapsed": 14,
       "complete": true,
-      "latest_close": 39.82,
-      "current_return_pct": 6.43,
+      "latest_close": 39.83,
+      "current_return_pct": 6.4,
       "horizon_returns_pct": {
         "1d": 2.57,
         "3d": 1.66,
         "5d": 4.23,
         "10d": 7.97,
-        "14d": 6.43
+        "14d": 6.4
       },
       "mfe_pct": 8.58,
       "mfe_day": "2026-09-29",
@@ -183,14 +183,14 @@
       "window_through": "2026-10-02",
       "trading_days_elapsed": 14,
       "complete": true,
-      "latest_close": 281.5,
-      "current_return_pct": 2.13,
+      "latest_close": 281.52,
+      "current_return_pct": 2.12,
       "horizon_returns_pct": {
         "1d": 0.82,
         "3d": 0.72,
         "5d": 0.67,
         "10d": 2.67,
-        "14d": 2.13
+        "14d": 2.12
       },
       "mfe_pct": 4.37,
       "mfe_day": "2026-10-01",
@@ -233,7 +233,7 @@
       "n": 7,
       "wins": 5,
       "win_rate": 71.4,
-      "avg": 4.22
+      "avg": 4.25
     },
     "side_buy": {
       "n": 3,

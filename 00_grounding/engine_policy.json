@@ -1,8 +1,8 @@
 {
   "general": {
     "B0_ASIA": {
-      "n": 20,
-      "hit": 0.55,
+      "n": 21,
+      "hit": 0.571,
       "mult": 1.0
     },
     "B0_EUROPE": {
@@ -16,8 +16,8 @@
       "mult": 1.25
     },
     "B2_BONDS": {
-      "n": 35,
-      "hit": 0.371,
+      "n": 36,
+      "hit": 0.361,
       "mult": 0.0
     },
     "B3_FEDPATH": {
@@ -41,8 +41,8 @@
       "mult": 1.25
     },
     "B7_OIL_DOLLAR": {
-      "n": 34,
-      "hit": 0.618,
+      "n": 35,
+      "hit": 0.629,
       "mult": 1.0
     }
   },
@@ -373,8 +373,8 @@
       }
     }
   },
-  "version": 46,
-  "updated": "2026-10-02T16:14:42-04:00",
+  "version": 47,
+  "updated": "2026-10-05T16:48:50-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -773,6 +773,12 @@
         "Basic Materials.S3_FLOWS_POSITIONING: 1.25 -> 1.0 (n=13, hit=0.615)",
         "Energy.S0_SHARED_MACRO: 1.0 -> 0.5 (n=15, hit=0.533)",
         "Real Estate.S4_ETF_TAPE: 1.25 -> 1.0 (n=21, hit=0.619)"
+      ]
+    },
+    {
+      "at": "2026-10-05T16:48:50-04:00",
+      "changes": [
+        "hold"
       ]
     }
   ]

@@ -1,10 +1,10 @@
 # Lesson efficacy — did promoted lessons change outcomes?
 
-_Generated 2026-10-02T16:14:42.727500-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
+_Generated 2026-10-05T16:48:50.665313-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
 
 This is correlation, not proof — but a lesson whose topic got WORSE after promotion has no evidence of working and is a retirement candidate for the monthly distill.
 
-**Active lessons: 215 · judged (enough data both sides): 177 · improved: 67 · flat: 29 · worse: 81 · mean delta: -0.021**
+**Active lessons: 216 · judged (enough data both sides): 177 · improved: 67 · flat: 29 · worse: 81 · mean delta: -0.021**
 
 ## Retirement candidates (topic got worse after activation)
 
@@ -217,6 +217,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `an-industrials-down-call-is-made-after-a-sharp-p` | sector:Industrials | 2026-08-27 | 14% (n=7) | 43% (n=7) | +29% | improved |
 | `basic-materials-xlb-has-s0-and-s1-net-zero-no-fr` | sector:Basic Materials | 2026-08-28 | 57% (n=7) | 57% (n=7) | +0% | flat |
 | `basic-materials-xlb-is-predicted-up-from-a-a-bro` | sector:Basic Materials | 2026-08-27 | 71% (n=7) | 43% (n=7) | -28% | WORSE |
+| `before-the-open-channel-1-es-nq-is-locked-from-a` | — | 2026-10-05 | — | — | — | not market-graded |
 | `bond-proxy-utilities-with-s0-0-on-a-two-sided-sc` | sector:Utilities | 2026-08-28 | 14% (n=7) | 43% (n=7) | +29% | improved |
 | `consumer-cyclical-xly-is-called-down-mild-from-m` | sector:Consumer Cyclical | 2026-08-13 | 67% (n=3) | 57% (n=7) | — | insufficient |
 | `consumer-defensive-xlp-after-an-outsized-prior-s` | sector:Consumer Defensive | 2026-08-28 | 43% (n=7) | 57% (n=7) | +14% | improved |
@@ -314,7 +315,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 
 | Topic | prev 10 | last 10 |
 |-------|---------|---------|
-| general | 60% (n=10) | 50% (n=10) |
+| general | 70% (n=10) | 40% (n=10) |
 | sector:Basic Materials | 40% (n=10) | 30% (n=10) |
 | sector:Communication Services | 20% (n=10) | 20% (n=10) |
 | sector:Consumer Cyclical | 50% (n=10) | 20% (n=10) |

@@ -1,6 +1,6 @@
 ---
 status: living_policy
-updated: 2026-10-02
+updated: 2026-10-05
 source: src/learn_cycle.py
 covers: general, sectors, news
 note: Injected into general + sector PREDICT. Core output formats unchanged.
@@ -9,7 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-10-02**. Promoted: 0. Retired: 10. Active lessons: 205. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-10-05**. Promoted: 1. Retired: 10. Active lessons: 206. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
@@ -29,24 +29,31 @@ Last learn_cycle: **2026-10-02**. Promoted: 0. Retired: 10. Active lessons: 205.
 ## Numeric factor weights in force (engine_policy.json — applied by code, not by you)
 
 General (B0–B7 LLM components; multiplier applied by compute_scores):
-- B0_ASIA: n=20 sign-hit=0.55 → ×1.0
+- B0_ASIA: n=21 sign-hit=0.57 → ×1.0
 - B0_EUROPE: n=13 sign-hit=0.85 → ×1.25
 - B1_CATALYSTS: n=26 sign-hit=0.77 → ×1.25
-- B2_BONDS: n=35 sign-hit=0.37 → ×0.0
+- B2_BONDS: n=36 sign-hit=0.36 → ×0.0
 - B3_FEDPATH: n=31 sign-hit=0.45 → ×0.5
 - B4_VIX: n=13 sign-hit=0.54 → ×0.5
 - B5_SENTIMENT: n=22 sign-hit=0.32 → ×0.0
 - B6_FUTURES: n=26 sign-hit=0.77 → ×1.25
-- B7_OIL_DOLLAR: n=34 sign-hit=0.62 → ×1.0
+- B7_OIL_DOLLAR: n=35 sign-hit=0.63 → ×1.0
 Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S0_SHARED_MACRO: n=188 sign-hit=0.60 → ×1.0
 - S1_SECTOR_FACTORS: n=212 sign-hit=0.57 → ×1.0
 - S2_BREADTH: n=161 sign-hit=0.60 → ×1.0
 - S3_FLOWS_POSITIONING: n=117 sign-hit=0.51 → ×0.5
 - S4_ETF_TAPE: n=173 sign-hit=0.61 → ×1.0
-Last change: Basic Materials.S2_BREADTH: 1.0 -> 0.5 (n=17, hit=0.529); Basic Materials.S3_FLOWS_POSITIONING: 1.25 -> 1.0 (n=13, hit=0.615); Energy.S0_SHARED_MACRO: 1.0 -> 0.5 (n=15, hit=0.533); Real Estate.S4_ETF_TAPE: 1.25 -> 1.0 (n=21, hit=0.619)
+Last change: hold
 
 ## Active adjustments (newest promoted lessons, truncated)
+
+### before-the-open-channel-1-es-nq-is-locked-from-an-early-snap.md
+## RULE
+Ops step — re-fetch Channel 1 ES/NQ in the final pre-open window (~09:15–09:28 ET) and overwrite B6 if the later snapshot independently exceeds ±0.5%; after that refresh, if |B6| ≥ 0.5% and no unsigned CPI/NFP/FOMC binary is pending, do not emit predicted_direction=flat against that confirming B6. Do not restack paid NFP/hike-odds into B1; do not refresh-and-follow a later red B0 Asia as the US direction when B6 is the confirming tape.
+
+## WHEN IT FIRES
+Before the open, Channel 1 ES/NQ i …
 
 ### mega-cap-concentrated-cyclical-etf-xly-like-amzn-tsla-40-ai.md
 ## RULE
@@ -125,18 +132,14 @@ A two-name duration/growth sector ETF …
 ## RULE
 When a binding lesson's causal precondition is explicitly identified as absent or inverted, ZERO the lesson's component contribution — do not merely damp it. A crowded-long complex that has just de-risked (prior-day negative rel print) into an easing macro overlay (oil offered, green futures) is multiplicatively BULLISH (reflex bounce), so S3 should be ≈ 0 or positive, not negative. Additionally, on a broad risk-on day (all four index futures green ≥ +0.5%, SPY up), score S2 breadth posi …
 
-### a-deep-multi-horizon-relative-laggard-sector-1m-rel-5-with-a.md
-## RULE
-No correction required — this is a validated positive pattern. The three stacked corrections (09-09 emit-directional, 09-10 decay-laggard, 09-04 score-once) all fired in the same direction and all helped. The one honest nuance to carry forward: the +1.07% was a gap-and-hold (close 172.37 < open 172.45), so the entire gain was captured overnight and the intraday path was flat-to-down. "Mild" correctly implied no trend day, but a reader interpreting "up/mild" as an intraday grind would hav …
-
-_(+190 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
+_(+191 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
 
 ## Per-scope DO-INSTEAD
 
 ### scope `general` — wins=8 losses=7
-- **loss 2026-09-29:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-10-01:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **win 2026-10-02:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **loss 2026-10-05:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `news` — wins=0 losses=1
 - **loss news:** [news] Only emit actions with |net| above a higher floor.
@@ -221,13 +224,13 @@ _(+190 older active lessons not excerpted; each predict receives only its own to
 
 ## Retired / falsified (efficacy-gated, automatic)
 
-- 2026-10-02: `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities) — topic hit 80% → 14% after activation; retired.
-- 2026-10-02: `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial) — topic hit 75% → 14% after activation; retired.
-- 2026-10-02: `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities) — topic hit 75% → 14% after activation; retired.
-- 2026-10-02: `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical) — topic hit 86% → 29% after activation; retired.
-- 2026-10-02: `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md` (sector:Consumer Cyclical) — topic hit 71% → 14% after activation; retired.
-- 2026-10-02: `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy) — topic hit 71% → 14% after activation; retired.
-- 2026-10-02: `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical) — topic hit 83% → 29% after activation; retired.
-- 2026-10-02: `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities) — topic hit 67% → 14% after activation; retired.
-- 2026-10-02: `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy) — topic hit 67% → 14% after activation; retired.
-- 2026-10-02: `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial) — topic hit 60% → 14% after activation; retired.
+- 2026-10-05: `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities) — topic hit 80% → 14% after activation; retired.
+- 2026-10-05: `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial) — topic hit 75% → 14% after activation; retired.
+- 2026-10-05: `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities) — topic hit 75% → 14% after activation; retired.
+- 2026-10-05: `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical) — topic hit 86% → 29% after activation; retired.
+- 2026-10-05: `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md` (sector:Consumer Cyclical) — topic hit 71% → 14% after activation; retired.
+- 2026-10-05: `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy) — topic hit 71% → 14% after activation; retired.
+- 2026-10-05: `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical) — topic hit 83% → 29% after activation; retired.
+- 2026-10-05: `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities) — topic hit 67% → 14% after activation; retired.
+- 2026-10-05: `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy) — topic hit 67% → 14% after activation; retired.
+- 2026-10-05: `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial) — topic hit 60% → 14% after activation; retired.

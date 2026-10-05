@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-02T16:14:42.727500-04:00",
+  "generated_at": "2026-10-05T16:48:50.665313-04:00",
   "window": 7,
   "summary": {
-    "n_active": 215,
+    "n_active": 216,
     "n_judged": 177,
     "improved": 67,
     "flat": 29,
@@ -1938,6 +1938,13 @@
       "verdict": "WORSE"
     },
     {
+      "lesson": "before-the-open-channel-1-es-nq-is-locked-from-an-early-snap.md",
+      "topic": null,
+      "active_since": "2026-10-05",
+      "error_category": "D",
+      "verdict": "not market-graded"
+    },
+    {
       "lesson": "bond-proxy-utilities-with-s0-0-on-a-two-sided-scheduled-fed.md",
       "topic": "sector:Utilities",
       "active_since": "2026-08-28",
@@ -3313,11 +3320,11 @@
     {
       "topic": "general",
       "last10": {
-        "hit": 0.5,
+        "hit": 0.4,
         "n": 10
       },
       "prev10": {
-        "hit": 0.6,
+        "hit": 0.7,
         "n": 10
       }
     },
