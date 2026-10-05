@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T08:40:35.471466-04:00",
+  "generated_at": "2026-10-05T08:43:00.787903-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -108,31 +108,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events_catcher",
-      "title": "Event catcher (gap hunt, no carry)",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T07:34:51.854991-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-10-05_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 54031,
-          "preview": "53 events \u00b7 China Golden Week (National Day) travel vs spend | California record heat wave / wildfire-smoke risk | September NFP miss: +29k, U3 4.2%, wages +3.0% y/y | Eurozone September flash HICP 3.8% y/y (energy spike) | OPEC+ holds November output targets unchanged | Camp David Iran 'war council' after Hormuz rejection"
-        },
-        {
-          "path": "01_daily/events/2026-10-05_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 27362,
-          "preview": "# Event Scan \u2014 2026-10-05\n- events tracked: **39** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted and Brent near $102, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20%. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and the CIT challenge to global Section 301 duties keep trade risk binary. Q3 earnings open with PepsiCo then banks/UNH/ASML/TSMC against an AI-memory boom Korea and Micron have already validated."
-        }
-      ],
-      "preview": "53 events \u00b7 China Golden Week (National Day) travel vs spend | California record heat wave / wildfire-smoke risk | September NFP miss: +29k, U3 4.2%, wages +3.0% y/y | Eurozone September flash HICP 3.8% y/y (energy spike) | OPEC+ holds November output targets unchanged | Camp David Iran 'war council' after Hormuz rejection \u00b7 # Event Scan \u2014 2026-10-05\n- events tracked: **39** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted and Brent near $102, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20%. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and the CIT challenge to global Section 301 duties keep trade risk binary. Q3 earnings open with PepsiCo then banks/UNH/ASML/TSMC against an AI-memory boom Korea and Micron have already validated."
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -293,6 +268,38 @@
         }
       ],
       "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-05\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T08:42:58.939167-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-10-05_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 8325,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/2026-10-05_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 8675,
+          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
+        },
+        {
+          "path": "01_daily/2026-10-05_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 589,
+          "preview": "# Pre-open ALL status \u2014 2026-10-05\nall_ok=False  qc_all_ok=False  book_ok=True  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-05\nall_ok=False  qc_all_ok=False  book_ok=True  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

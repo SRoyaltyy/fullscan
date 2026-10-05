@@ -1,56 +1,56 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:44:25.377766-04:00",
-  "run_id": "37282872499",
+  "generated_at": "2026-10-05T08:42:58.127473-04:00",
+  "run_id": "37301175138",
   "runner": "ecs-openclaw",
   "all_ok": false,
   "qc_all_ok": false,
-  "book_ok": false,
+  "book_ok": true,
   "grok_ok": false,
   "grok_fails": [
     {
       "path": "01_daily/sectors/2026-10-05/basic_materials_predict.md",
-      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+      "reason": "missing sector predict"
     },
     {
       "path": "01_daily/sectors/2026-10-05/communication_services_predict.md",
-      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+      "reason": "missing sector predict"
     },
     {
       "path": "01_daily/sectors/2026-10-05/consumer_cyclical_predict.md",
-      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+      "reason": "missing sector predict"
     },
     {
       "path": "01_daily/sectors/2026-10-05/consumer_defensive_predict.md",
-      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+      "reason": "missing sector predict"
     },
     {
       "path": "01_daily/sectors/2026-10-05/energy_predict.md",
-      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+      "reason": "missing sector predict"
     },
     {
       "path": "01_daily/sectors/2026-10-05/financial_predict.md",
-      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+      "reason": "missing sector predict"
     },
     {
       "path": "01_daily/sectors/2026-10-05/healthcare_predict.md",
-      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+      "reason": "missing sector predict"
     },
     {
       "path": "01_daily/sectors/2026-10-05/industrials_predict.md",
-      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+      "reason": "missing sector predict"
     },
     {
       "path": "01_daily/sectors/2026-10-05/real_estate_predict.md",
-      "reason": "missing; 0/11 sector predicts (need >=8); QC openclaw_timeout"
+      "reason": "missing sector predict"
     },
     {
       "path": "01_daily/sectors/2026-10-05/technology_predict.md",
-      "reason": "missing; 0/11 sector predicts (need >=8); QC step deadline"
+      "reason": "missing sector predict"
     },
     {
       "path": "01_daily/sectors/2026-10-05/utilities_predict.md",
-      "reason": "missing; 0/11 sector predicts (need >=8); QC step deadline"
+      "reason": "missing sector predict"
     }
   ],
   "missing_required": [
@@ -113,13 +113,13 @@
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 1,
+      "n_today": 2,
       "latest": {
-        "id": 37282872499,
+        "id": 37301175138,
         "status": "in_progress",
         "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37282872499"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37301175138"
       }
     },
     {
@@ -160,13 +160,13 @@
     },
     {
       "workflow": "catalyst_daily.yml",
-      "n_today": 1,
+      "n_today": 2,
       "latest": {
-        "id": 37291375803,
-        "status": "queued",
-        "conclusion": null,
+        "id": 37300125054,
+        "status": "completed",
+        "conclusion": "cancelled",
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37291375803"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37300125054"
       }
     },
     {
@@ -222,7 +222,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-05_actions.json",
-        "size": 66158
+        "size": 66216
       },
       {
         "kind": "finviz_digest",

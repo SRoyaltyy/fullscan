@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T08:40:35.471466-04:00",
+  "generated_at": "2026-10-05T08:43:00.787903-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -370,8 +370,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['sector_predict']",
-          "size": 9089,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing sector_predict",
+          "size": 8675,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=True \u00b7 missing sector_predict",
           "bullets": []
         },
         {
@@ -380,11 +380,11 @@
           "path": "01_daily/2026-10-05_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Core same-day packet is otherwise human-usable: general predict is UP/mild with MEMORY_CONFIRM and SCORES_BEGIN; events ",
-          "size": 2544,
-          "said": "ok=False \u00b7 missing; 0/11 sector predicts (need >=8); QC openclaw_timeout 01_daily/sectors/2026-10-05/basic_materials_predict.md",
+          "reason": "ok=False Day fails the 8-of-11 sector floor: all 11 sector essays are missing (0/11). Required general predict, events (scan_date",
+          "size": 1951,
+          "said": "ok=False \u00b7 missing sector predict 01_daily/sectors/2026-10-05/basic_materials_predict.md",
           "bullets": [
-            "Core same-day packet is otherwise human-usable: general predict is UP/mild with MEMORY_CONFIRM and SCORES_BEGIN; events scan_date=2026-10-05 is a real 34-event scan not a file-level carry; news judge/parse, finviz digest, and map-heat futures tape (59 contracts) all look complete. Day still fails because zero of eleven sector essays exist (single-miss exception does not apply). Research.md kept last-night captain cards after a failed morning delta (coverage 0/28); enhancement only, not a core fail. Missing finviz_market_digest_close is not required."
+            "Day fails the 8-of-11 sector floor: all 11 sector essays are missing (0/11). Required general predict, events (scan_date 2026-10-05, live catcher), news judge/parse, finviz digest, and map-heat futures tape look like same-day usable packets. Close market digest is missing but non-core. Research reused last-night captain cards after a failed morning delta; noted only, not a day-fail."
           ]
         },
         {
@@ -2604,6 +2604,38 @@
         }
       ],
       "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-05\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T08:42:58.939167-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-10-05_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 8325,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/2026-10-05_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 8675,
+          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
+        },
+        {
+          "path": "01_daily/2026-10-05_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 589,
+          "preview": "# Pre-open ALL status \u2014 2026-10-05\nall_ok=False  qc_all_ok=False  book_ok=True  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-05\nall_ok=False  qc_all_ok=False  book_ok=True  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
     }
   ],
   "href": {
