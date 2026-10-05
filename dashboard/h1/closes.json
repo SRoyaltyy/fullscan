@@ -1235,5 +1235,37 @@
       "open": 34.919998,
       "prior_close": 32.580002
     }
+  },
+  "2026-10-05": {
+    "FEAM": {
+      "close": 3.92,
+      "open": 3.88,
+      "prior_close": 3.88
+    },
+    "GLND": {
+      "close": 3.71,
+      "open": 3.925,
+      "prior_close": 3.73
+    },
+    "NAUT": {
+      "close": 1.87,
+      "open": 2.18,
+      "prior_close": 1.96
+    },
+    "QSI": {
+      "close": 1.28,
+      "open": 1.525,
+      "prior_close": 1.55
+    },
+    "SDEV": {
+      "close": 3.94,
+      "open": 9.71,
+      "prior_close": 7.48
+    },
+    "TJGC": {
+      "close": 32.880001,
+      "open": 32.73,
+      "prior_close": 33.279999
+    }
   }
 }
