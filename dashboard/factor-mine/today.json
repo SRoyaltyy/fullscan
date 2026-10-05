@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T06:02:34.750562-04:00",
+  "generated_at": "2026-10-05T06:08:23.255143-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -10,10 +10,6 @@
     "n": 8
   },
   "buy_1d": [
-    {
-      "ticker": "JXN",
-      "score": 0.48421849403254064
-    },
     {
       "ticker": "TMUS",
       "score": 0.38610985491715305

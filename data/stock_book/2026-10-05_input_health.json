@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T06:02:29.471489-04:00",
+  "generated_at": "2026-10-05T06:08:17.597380-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -82,9 +82,9 @@
     {
       "name": "general_predict",
       "family": "general",
-      "status": "degraded",
+      "status": "ok",
       "n": null,
-      "detail": "QC fail: not on scoreboard"
+      "detail": ""
     },
     {
       "name": "sector_predicts",
@@ -107,7 +107,7 @@
     "ab": "ok",
     "peer": "ok",
     "heat": "ok",
-    "general": "degraded",
+    "general": "ok",
     "sector": "missing"
   },
   "families_present": {
