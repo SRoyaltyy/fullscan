@@ -94,8 +94,10 @@ jobs:
           WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
         run: |
           set -euo pipefail
-          if [ -z "${WEBULL_ACCOUNT_ID:-}" ]; then
-            echo "WEBULL_ACCOUNT_ID unset; paper submit deferred to Webull paper workflow"
+          # ACCOUNT_ID is optional. PaperAPI discovers the sandbox account
+          # when the app key and secret work. Soft-skip only if those are empty.
+          if [ -z "${WEBULL_APP_KEY:-}" ] || [ -z "${WEBULL_APP_SECRET:-}" ]; then
+            echo "WEBULL_APP_KEY or WEBULL_APP_SECRET unset; paper submit skipped"
             exit 0
           fi
           pip install webull-openapi-python-sdk
