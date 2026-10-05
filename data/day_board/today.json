@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:29:47.752957-04:00",
+  "generated_at": "2026-10-05T07:34:20.806425-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -9,11 +9,24 @@
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "ARQT",
+      "score": 0.5362783339840729
+    },
+    {
+      "ticker": "EDU",
+      "score": 0.3740013700258146
+    },
+    {
+      "ticker": "PRGS",
+      "score": 0.3106093192133859
+    }
+  ],
   "sell_1d": [
     {
       "ticker": "ROIV",
-      "score": -0.4753937289952296
+      "score": -0.5876457311307597
     },
     {
       "ticker": "ARE",
@@ -21,55 +34,55 @@
     },
     {
       "ticker": "SOC",
-      "score": -0.3913239823861548
+      "score": -0.3913617286158165
     },
     {
       "ticker": "BIDU",
-      "score": -0.38465342412103465
+      "score": -0.3857019749125207
     },
     {
       "ticker": "BNTX",
-      "score": -0.38172356799127616
-    },
-    {
-      "ticker": "SEER",
-      "score": -0.3730751372228022
-    },
-    {
-      "ticker": "ALMS",
-      "score": -0.3693942759044377
-    },
-    {
-      "ticker": "ABSI",
-      "score": -0.36255362009835357
+      "score": -0.37843485631894425
     },
     {
       "ticker": "IFRX",
-      "score": -0.3622211957782761
+      "score": -0.3775394226899668
+    },
+    {
+      "ticker": "ALMS",
+      "score": -0.3693865283479107
+    },
+    {
+      "ticker": "IBM",
+      "score": -0.3654413825250935
     },
     {
       "ticker": "PCT",
-      "score": -0.35876277369472237
-    },
-    {
-      "ticker": "INTC",
-      "score": -0.3584543832208301
+      "score": -0.3588178929817754
     },
     {
       "ticker": "TYRA",
-      "score": -0.35781926502529476
+      "score": -0.3578143116714341
+    },
+    {
+      "ticker": "AXSM",
+      "score": -0.35343395433516445
     },
     {
       "ticker": "NRXP",
-      "score": -0.35097727854704575
+      "score": -0.3519298837425717
     },
     {
       "ticker": "WVE",
-      "score": -0.3509103903716723
+      "score": -0.3487760015048991
     },
     {
-      "ticker": "IBRX",
-      "score": -0.3481755470160717
+      "ticker": "LXRX",
+      "score": -0.3448034547446938
+    },
+    {
+      "ticker": "VNET",
+      "score": -0.3437148373469873
     }
   ],
   "flatten": {
@@ -108,6 +121,77 @@
     ]
   },
   "lands": [
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:13:06.267075-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97128,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11964,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T07:13:05.936167-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-05.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11493724,
+          "preview": "11710 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 96708,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T07:13:05.936167-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11710 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T07:21:09.949793-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 96708,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11636,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T04:21:49.901817-04:00 \u00b7 export=data/exports/finviz_2026-10-02.csv \u00b7 ticker digests=5900 \u00b7 high-signal=1917_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T04:21:49.901817-04:00 \u00b7 export=data/exports/finviz_2026-10-02.csv \u00b7 ticker digests=5900 \u00b7 high-signal=1917_"
+    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -243,56 +327,6 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 EXLS, SB, SKM, CORT, HUM \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TEL, ABBV, EXLS, CORT, SU"
-    },
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T07:24:36.666829-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-05_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 4056463,
-          "preview": "raw=5587 usable=571 single=180 \u00b7 OPEC+ Has Deal Outline for Steady November Quotas, Delegates Say - Bloomberg.com | Markets bet on RBI rate hike as inflation pressure builds - Reuters | Treasury yields inch lower as investors pare back Fed rate hike bets - cnbc.com | North Korea\u2019s Kim Oversaw Hypersonic Missile Drill, KCNA Says - Bloomberg.com | North Korea says Kim oversaw hypersonic missile drill - Reuters"
-        },
-        {
-          "path": "01_daily/news/2026-10-05_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 11271,
-          "preview": "# News Parse v2 \u2014 2026-10-05T07:24:17.043410-04:00\nWindow\u224848h | news_mode=on | raw=5587 | usable=571 | single_name=180 | noise_dropped=4516\nusable polarity={'+': 22, '-': 121, 'mixed': 16, 'neutral': 412}"
-        }
-      ],
-      "preview": "raw=5587 usable=571 single=180 \u00b7 OPEC+ Has Deal Outline for Steady November Quotas, Delegates Say - Bloomberg.com | Markets bet on RBI rate hike as inflation pressure builds - Reuters | Treasury yields inch lower as investors pare back Fed rate hike bets - cnbc.com | North Korea\u2019s Kim Oversaw Hypersonic Missile Drill, KCNA Says - Bloomberg.com | North Korea says Kim oversaw hypersonic missile drill - Reuters \u00b7 # News Parse v2 \u2014 2026-10-05T07:24:17.043410-04:00\nWindow\u224848h | news_mode=on | raw=5587 | usable=571 | single_name=180 | noise_dropped=4516\nusable polarity={'+': 22, '-': 121, 'mixed': 16, 'neutral': 412}"
-    },
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T07:29:45.744323-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-10-05_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 39087,
-          "preview": "39 events \u00b7 China Golden Week (National Day) travel vs spend | California record heat wave / wildfire-smoke risk | September NFP miss: +29k, U3 4.2%, wages +3.0% y/y | Eurozone September flash HICP 3.8% y/y (energy spike) | OPEC+ holds November output targets unchanged | Camp David Iran 'war council' after Hormuz rejection"
-        },
-        {
-          "path": "01_daily/events/2026-10-05_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 21902,
-          "preview": "# Event Scan \u2014 2026-10-05\n- events tracked: **39** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted and Brent near $102, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20%. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and the CIT challenge to global Section 301 duties keep trade risk binary. Q3 earnings open with PepsiCo then banks/UNH/ASML/TSMC against an AI-memory boom Korea and Micron have already validated."
-        }
-      ],
-      "preview": "39 events \u00b7 China Golden Week (National Day) travel vs spend | California record heat wave / wildfire-smoke risk | September NFP miss: +29k, U3 4.2%, wages +3.0% y/y | Eurozone September flash HICP 3.8% y/y (energy spike) | OPEC+ holds November output targets unchanged | Camp David Iran 'war council' after Hormuz rejection \u00b7 # Event Scan \u2014 2026-10-05\n- events tracked: **39** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted and Brent near $102, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20%. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and the CIT challenge to global Section 301 duties keep trade risk binary. Q3 earnings open with PepsiCo then banks/UNH/ASML/TSMC against an AI-memory boom Korea and Micron have already validated."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
