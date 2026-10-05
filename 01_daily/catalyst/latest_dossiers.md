@@ -1,59 +1,25 @@
-# CATALYST DAILY — 2026-10-02
+# CATALYST DAILY — 2026-10-05
 
-7/8 dossiers · max=8 · routing=Grok → DeepSeek
+0/8 dossiers · max=8 · routing=Grok → DeepSeek
 
 ## TARGETS
+- **TSLA** [earnings] earnings AMC
+- **NFLX** [earnings] earnings AMC
 - **NE** [override_captain] OVERRIDE card Oil & Gas Drilling
 - **RIG** [override_captain] OVERRIDE card Oil & Gas Drilling
 - **SLB** [override_captain] OVERRIDE card Oil & Gas Equipment & Services
 - **BKR** [override_captain] OVERRIDE card Oil & Gas Equipment & Services
-- **KGS** [override_captain] OVERRIDE card Oil & Gas Equipment & Services
-- **SSRM** [conflict] actions buy net=2.38 vs heat sell
-- **NEM** [conflict] actions buy net=2.38 vs heat sell
-- **SM** [action_top] news_actions buy net=7.36
+- **CNR** [override_captain] OVERRIDE card Thermal Coal
+- **UBER** [conflict] actions sell net=-7.03 vs heat buy
 
 ## DOSSIERS
-- **NE** Bullish conv=33 +9/-6 [override_captain] backend=grok_native
-  On April 26, 2026 Noble printed Q1 revenue of $786M, $0.75 EPS and $7.5B backlog while holding FY2026 revenue guidance, then on June 11 refinanced into an upsized $800M 6.250% 2034 notes issue expected to save about $35M of annual cash interest. The break was July 27, when Q2 showed a $37M net loss, a $43M hit from Brazil suspensions of Noble Faye Kozack and Noble Courage, a $42M Ocean Apex impairment and a cut in FY2026 adjusted EBITDA guidance to $850–925M from $940–1,020M, sending shares down about 9% on July 28 after Susquehanna had already cut its target to $40 on July 8 and CEO Robert Eifler sold 50,000 shares on June 15. Cover rebuilt with a ~$136M six-well Noble Viking Brunei campaign (July 10), ~$200M of awards including a bp UKCS job for Noble Claus Bachmann (July 27), and a Tullow Ghana program of up to 10 wells for Faye Kozack from mid-2027 (September 28), while Fearnley upgraded to Strong Buy on July 29 and Citi raised its target to $50 on September 7. On October 2 Middle East tensions and higher oil lifted Noble about 7% with offshore drillers, leaving a 2026 utilization trough against still-large 2027–28 backlog rather than a franchise break.
-  - positive Contract win/expansion 2026-07-10: The contract includes a firm scope of six wells with an estimated value of approximately $
-  - positive Contract win/expansion 2026-09-27: The contract includes up to 10 wells and is expected to commence mid-2027.
-  - positive Contract win/expansion 2026-04-26: highlighted by the Noble Courage’s three year extension with Petrobras and the Noble Deliv
-  - positive Earnings beat (revenue, EBITDA, EPS) 2026-04-26: Noble Corporation plc (NYSE: NE) reported its Q1 2026 results on April 26, 2026
-- **RIG** Strong Bullish conv=89 +10/-4 [override_captain] backend=grok_native
-  On 2026-04-02 Transocean booked about $1.0 billion of incremental firm backlog (Transocean Barents with Vår Energi plus Petrobras extensions) and fully retired $358 million of 8.375% senior secured notes, then added Deepwater Asgard’s ~$158 million East Med campaign (2026-04-16), a license-conditional Equinor Cat D package worth over $1 billion (2026-06-30), ONGC’s ~$300 million Dhirubhai Deepwater KG2 LOA (2026-08-20), and Deepwater Conqueror’s ~$80 million Equatorial Guinea fixture (2026-10-02). Q2 2026 results on 2026-08-05 showed $966 million of contract drilling revenue, 97.0% revenue efficiency, $0.03 adjusted EPS and $312 million adjusted EBITDA, with FY2026 revenue guided at $3,900–$3,975 million and backlog about $6.7 billion excluding Equinor. The $5.8 billion all-stock Valaris deal received CFIUS approval on 2026-06-29 and a closed U.S. DOJ HSR investigation on 2026-09-30, leaving Brazil’s CADE review (opened 2026-08-07 after a 2026-05-04 Second Request) as the remaining gate to a targeted Q4 2026 close. Offsets include Barclays and Susquehanna cutting price targets to $7 (2026-07-08 and 2026-08-12), a 2026-05-21 Form 4 sale by GC Brady Long, and a 2026-09-24 SDNY dismissal without prejudice of the rig-valuation securities case, against a 26.18% short float that can amplify a clean close.
-  - positive Contract win/expansion 2026-06-30: In aggregate, this agreement is worth over $1 billion in contract backlog over seven rig y
-  - positive Earnings beat (revenue, EBITDA, EPS) 2026-08-05: Contract drilling revenues were $966 million with strong revenue efficiency(1) of 97.0%.
-  - positive Regulatory approval (FDA, FCC, FTC clearance) 2026-09-30: Transocean and Valaris received US antitrust approval as the US Department of Justice noti
-  - negative Regulatory denial or delay/antitrust block 2026-08-07: CADE opened its formal review of the concentration (Ato de Concentração nº 08700.006390/20
-- **SLB** Bullish conv=26 +9/-5 [override_captain] backend=grok_native
-  On April 24, 2026 SLB printed a weak Q1 ($8.7B revenue, $0.52 adj. EPS) after Middle East/Iran-war disruption cut sequential revenue by more than $1 billion. Awards then rebuilt the backlog: PETRONAS Suriname with OneSubsea/Subsea7 (Apr 7), KOC’s seven-year Ahmadi digital contract (Jun 30), Oman Bisat-B EPC (Sep 23), and ExxonMobil Rovuma LNG subsea systems (Sep 29), while Q2 on Jul 24 rebounded to $8.97B revenue and $0.55 adj. EPS, beating estimates. The growth overlay is data-center and digital adjacency—Liberty Energy modular power (Jul 14), the $3.4B cash / $0.7B-debt Kelvion thermal deal (Aug 31), S&P geoscience software close (Sep 1), and OneSubsea’s Envirex bolt-on (May 11)—plus ExaCT and U.S. land lift launches in late August. Offsets are the $2B senior notes (May 7), CEO Le Peuch’s 35,000-share 10b5-1 sale at $60 (Sep 1), and only an incremental UBS PT lift to $75 (Sep 14) with the stock still at $52 versus a $62.48 Street target.
-  - negative Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain) 2026-04-24: It was a challenging start to the year, marked by severe disruption in the Middle East tha
-  - positive Successful acquisition/synergy realization 2026-08-31: signed an agreement to acquire Kelvion, a global provider of thermal management and heat e
-  - negative Earnings miss (revenue, EBITDA, EPS) 2026-04-24: It was a challenging start to the year, marked by severe disruption in the Middle East tha
-  - positive Earnings beat (revenue, EBITDA, EPS) 2026-07-24: Revenue: $8.97 billion (up 3% sequentially and 5% YoY).
-- **BKR** Strong Bullish conv=74 +11/-6 [override_captain] backend=grok_native
-  On April 13, 2026 Baker Hughes agreed to sell Waygate Technologies to Hexagon for about $1.45 billion in cash, and on July 16 it closed the Chart Industries acquisition as a third operating segment targeting about $325 million of annualized cost synergies by year three. Q1 results on April 23 and Q2 results on July 26 showed $8.2 billion and $10.5 billion of orders respectively, including a record $7.1 billion of IET orders in Q2 and adjusted EBITDA of $1,231 million above the high end of guidance; on September 9 the company raised FY 2026 revenue to $28.5–$30.3 billion and adjusted EBITDA to about $4.88–$5.48 billion to include Chart. Commercial awards stacked through the summer: a July 8 Kodiak Gas Services agreement for roughly 1 GW of turbines and generators by 2030, a June 24 Mantle Reach geothermal pact targeting up to 500 MW, Venture Global LNG equipment orders on July 29 and September 13, plus Petrobras, Kuwait Oil Company, OGDC, and bp North Sea work. Goldman Sachs reinstated Buy at $71 on September 29 and RBC raised its target to $76 on August 25, while Jefferies and TD Cowen cut targets but kept Buy that same week, and CEO Lorenzo Simonelli sold 181,411 shares on June 22 under a 10b5-1 plan.
-  - positive Successful acquisition/synergy realization 2026-07-16: "today announced the successful completion of its acquisition of Chart Industries, Inc."
-  - positive Contract win/expansion 2026-07-08: "Initial major award includes approximately 1 GW of gas turbines and generators delivered 
-  - positive Earnings guidance raise 2026-09-09: "now expects FY 2026 revenue of $28.5B-$30.3B, up from"
-  - positive Contract win/expansion 2026-07-10: The awards, booked in 2Q26, comprise orders from Bechtel Energy Inc. and Cheniere to suppl
-- **KGS** Strong Bullish conv=97 +11/-4 [override_captain] backend=grok_native
-  On 2026-04-01 Kodiak closed the Distributed Power Solutions acquisition (~395 MW for $587 million cash plus ~2.4 million shares), then on 2026-07-08 signed a Baker Hughes multi-year turbine framework covering an initial ~1 GW by 2030 and up to 1.8 GW of distributed power. A 2026-10-02 six-year 76 MW West Texas data-center supply agreement extended that mix-shift into AI/load customers. Q1 (2026-05-11) and Q2 (2026-08-06) printed record adjusted EBITDA and lifted 2026 adjusted EBITDA guidance to $830–$860 million, after a 2026-05-14 underwritten offering of 10.56 million shares at $71.00 that funded growth but diluted holders. Piper initiated Overweight at $78 on 2026-07-28 and Stifel/RBC raised targets in mid-August, offset by Jefferies cutting its target to $69 on 2026-08-10 and CEO McKee selling 5,999 shares on 2026-09-01.
-  - positive Contract win/expansion 2026-10-02: Kodiak Gas Services Announces Power Supply Agreement with West Texas Data Center
-  - positive Earnings guidance raise 2026-08-06: Increased Adjusted EBITDA guidance to a range of $830 million to $860 million
-  - positive Earnings guidance raise 2026-05-11: raised full-year 2026 adjusted EBITDA guidance to $820–$860 million.
-  - negative Dilutive offering/distressed fundraising/down round 2026-05-14: priced its previously announced underwritten public offering of 10,563,380 shares of commo
-- **SSRM** Strong Bullish conv=64 +8/-1 [conflict] backend=grok_native
-  On June 15, 2026 SSR authorized an additional $500 million buyback and reinstated the dividend, then on June 24 closed the $1.49 billion Çöpler sale and by July 17 converted Hod Maden into an uncapped 4% NSR, leaving a net-cash Americas producer. August 4 Q2 results showed $137.0 million of continuing-operations net income, $337.8 million of share repurchases, and higher 2026 growth capex at Marigold, CC&V, and Seabee. The U.S. Çöpler securities class action was dismissed with prejudice in late August, and Street support firmed into October as RBC lifted its target to $43 and ATB Cormark to C$64. The only offsetting HIT is RBC’s July 9 trim of its target to $39, which the same firm later reversed.
-  - positive Capacity expansion announced (new factory, satellite constellation) 2026-08-04: 2026 growth capital guidance at Marigold has been increased from $48 million to $65 millio
-  - positive Favorable court ruling/patent grant 2026-08-27: In August 2026, Chief Judge Daniel D. Domenico dismissed all claims with prejudice and clo
-  - positive Share repurchase program/increased dividend 2026-06-15: On June 15, 2026, SSR Mining Inc. (SSRM) announced an additional $500 million authorizatio
-  - negative Analyst downgrade/price target cut 2026-07-09: July 9, 2026: RBC Capital Markets cut the price target from $40 to $39 while maintaining O
-- **NEM** Neutral conv=8 +9/-8 [conflict] backend=grok_native
-  On April 23, 2026 Newmont printed record $3.1 billion quarterly free cash flow and a new $6 billion buyback, then on July 23 followed with $2.10 adjusted EPS, $2.2 billion FCF, a $0.26 dividend, and reaffirmed 5.3 Moz guidance. Permitting and legal overhangs eased on June 19 when British Columbia approved the Red Chris block-cave expansion, on August 10 when Newmont and Barrick settled remaining Nevada Gold Mines disputes for $1.95 billion, and on August 14 when Colorado dismissed the Karas Newcrest-disclosure suit. Those positives are tempered by the April 14 Cadia seismic halt, the June 12 USMCA labor action at Peñasquito, and C-suite selling (CFO on August 5, 13 days after the Q2 beat; CEO on September 1). Street targets still sit above the $122.74 snapshot (RBC/UBS to $155 on September 16; BMO to $145 on September 30), but the October 2 hot U.S. jobs print lifted rate-hike odds and pressured gold miners.
-  - positive Regulatory approval (FDA, FCC, FTC clearance) 2026-06-19: Red Chris Mine is owned by Newmont (70%) and Imperial Metals (30%).
-  - negative Policy reversal/new regulation/tax increase 2026-06-12: The US (via the Interagency Labor Committee) determined there was sufficient credible evid
-  - negative Operational setback (trial halted, satellite failure, production halt) 2026-04-14: Newmont has suspended underground operations at its Cadia mine following a magnitude-4.5 e
-  - negative Operational setback (trial halted, satellite failure, production halt) 2026-06-19: have been suspended for the second time in nine weeks after two earthquakes rocked New Sou
+- **TSLA** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 TSLA
+- **NFLX** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NFLX
+- **NE** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE
+- **RIG** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG
+- **SLB** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB
+- **BKR** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR
+- **CNR** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CNR
+- **UBER** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UBER
 
-CATALYST_DAILY_OK
+CATALYST_DAILY_FAIL 0/8

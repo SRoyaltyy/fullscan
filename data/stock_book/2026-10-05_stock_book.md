@@ -1,6 +1,6 @@
 # Stock book — 2026-10-05
 
-_Generated 2026-10-05T05:46:17.726887-04:00_
+_Generated 2026-10-05T05:40:29.723978-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -31,9 +31,9 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 ## All-green BUY / SELL
 
 - Mode: **green_pile** · SELL **core_weights_ex_green**
-- Pile: **161** liquid all-green names (need ≥ 8) of 2035
+- Pile: **128** liquid all-green names (need ≥ 8) of 2035
 - Core fired: join=yes, AB=yes, peer=yes
-- pile 161 ≥ 8 liquid all-green names — BUY 15 from the pile by green_rank (no opp); SELL is core weights on the non-green remainder
+- pile 128 ≥ 8 liquid all-green names — BUY 15 from the pile by green_rank (no opp); SELL is core weights on the non-green remainder
 
 ## Decision lattice — gate → route → rank
 
@@ -41,8 +41,10 @@ The weighted score is now a tie-breaker inside an eligible lane. It cannot avera
 
 ### MARKET: 🟡 YELLOW
 
-- YELLOW: general up score=+0.52; good=+0.0 vs bad=+0.0; risk=off; red pillars=0
+- YELLOW: general up score=+0.52; good=+1.5 vs bad=-1.0; risk=off; red pillars=1
 - Allowed long lanes: **standard, group_leader, catalyst** · max slots 8 · size ×0.60
+- Bull evidence: global sessions +1.00 points; oil / dollar +0.50 points
+- Bear evidence: rates / Fed -1.00 points
 
 Decision domains: **MKT · parent · child · company · setup · flow**. Measured parent/child tape is kept separate from the LLM essay; direct company events must be price-confirmed on a hard-red day.
 
@@ -189,7 +191,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Finviz Elite export | **found** | liquidity + labels + AB proxy + digest |
 | Labels / membership | **found** | join + mid_opp + earnings/range |
 | Weather (tape + FRED/DXY/VIX) | **found** | join × weather |
-| Channel 1 raw | **missing / not in ranker** | via weather |
+| Channel 1 raw | **found** | via weather |
 | Join ranked universe | **found** | s_join |
 | News parse + actions | **found** | s_news |
 | News judge | **found** | s_news ticker tilts |
@@ -242,23 +244,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 
 ## 1d BUY — why these names
 
-### 1. JXN · $8.9B mid · Financial
-
-**1d score +0.451**
-
-**JXN** is a liquid **mid-cap** Financial name (Insurance - Life) at $8.9B, ADV ~700k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **mixed** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.13 | +0.99 | +0.132 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.09 | +0.36 | +0.032 | same-day SPX call × this stock's beta |
-| news / judge | 0.28 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.28 | +0.12 | +0.035 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.22 | +0.24 | +0.053 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1d total** | | | **+0.451** | |
+_no names passed the BUY mask_
 
 
 ## 1d AVOID — bottom of the same rank
@@ -291,41 +277,22 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 
 ## 3d BUY (compact — same names, different weights)
 
-| # | Ticker | Score | Size | Sector | Why in short |
-|---|--------|------:|------|--------|--------------|
-| 1 | JXN | +0.476 | mid | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+_no names passed the BUY mask_
+
 
 ## 1w BUY (compact — same names, different weights)
 
-| # | Ticker | Score | Size | Sector | Why in short |
-|---|--------|------:|------|--------|--------------|
-| 1 | JXN | +0.469 | mid | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+_no names passed the BUY mask_
+
 
 ## 2w BUY (compact — same names, different weights)
 
-| # | Ticker | Score | Size | Sector | Why in short |
-|---|--------|------:|------|--------|--------------|
-| 1 | JXN | +0.498 | mid | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+_no names passed the BUY mask_
+
 
 ## 1m BUY — why these names
 
-### 1. JXN · $8.9B mid · Financial
-
-**1m score +0.535**
-
-**JXN** is a liquid **mid-cap** Financial name (Insurance - Life) at $8.9B, ADV ~700k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **mixed** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.28 | +0.99 | +0.271 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.10 | -0.42 | -0.043 | same-day SPX call × this stock's beta |
-| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.38 | +0.12 | +0.047 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.25 | +0.24 | +0.059 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.535** | |
+_no names passed the BUY mask_
 
 
 ## 1m AVOID — bottom of the same rank

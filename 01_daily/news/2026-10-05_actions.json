@@ -2126,5 +2126,7 @@
   "judge_tickers": {
     "GDX": -4.0,
     "XLV": 4.0
-  }
+  },
+  "catalyst_tickers": 0,
+  "catalyst_date": "2026-10-05"
 }
