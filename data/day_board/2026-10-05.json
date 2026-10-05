@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T06:02:34.750562-04:00",
+  "generated_at": "2026-10-05T06:08:11.578743-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 8,
+      "n_req_ok": 9,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -306,7 +306,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 66221,
+          "size": 66279,
           "said": "82 ticker actions \u00b7 6 events \u00b7 5542 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
           "bullets": [
             "BUY COP",
@@ -354,11 +354,11 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7533,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
+          "size": 8325,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 12 fail",
           "bullets": [
             "finviz_market_digest:missing",
-            "map_heat_research:missing",
+            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
           ]
@@ -368,10 +368,10 @@
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-10-05_preopen_status.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "all_ok=False missing=['sector_predict']",
+          "size": 9089,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing sector_predict",
           "bullets": []
         },
         {
@@ -380,11 +380,11 @@
           "path": "01_daily/2026-10-05_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 308,
-          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "reason": "ok=False Core same-day packet is otherwise human-usable: general predict is UP/mild with MEMORY_CONFIRM and SCORES_BEGIN; events ",
+          "size": 2544,
+          "said": "ok=False \u00b7 missing; 0/11 sector predicts (need >=8); QC openclaw_timeout 01_daily/sectors/2026-10-05/basic_materials_predict.md",
           "bullets": [
-            "Grok returned an empty review"
+            "Core same-day packet is otherwise human-usable: general predict is UP/mild with MEMORY_CONFIRM and SCORES_BEGIN; events scan_date=2026-10-05 is a real 34-event scan not a file-level carry; news judge/parse, finviz digest, and map-heat futures tape (59 contracts) all look complete. Day still fails because zero of eleven sector essays exist (single-miss exception does not apply). Research.md kept last-night captain cards after a failed morning delta (coverage 0/28); enhancement only, not a core fail. Missing finviz_market_digest_close is not required."
           ]
         },
         {
@@ -555,8 +555,8 @@
           "path": "01_daily/weather/2026-10-05_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9713 vix=calm yields=falling",
-          "size": 9713,
+          "reason": "sectors=11 bytes=9712 vix=calm yields=falling",
+          "size": 9712,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -631,7 +631,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 66221,
+          "size": 66279,
           "said": "82 ticker actions \u00b7 6 events \u00b7 5542 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
           "bullets": [
             "BUY COP",
@@ -734,7 +734,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 66221,
+          "size": 66279,
           "said": "82 ticker actions \u00b7 6 events \u00b7 5542 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
           "bullets": [
             "BUY COP",
@@ -779,8 +779,8 @@
           "path": "01_daily/weather/2026-10-05_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9713 vix=calm yields=falling",
-          "size": 9713,
+          "reason": "sectors=11 bytes=9712 vix=calm yields=falling",
+          "size": 9712,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -1941,6 +1941,31 @@
         }
       ],
       "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-05\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T06:08:10.349563-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-05_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9712,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-05_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5282,
+          "preview": "# Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-05\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
