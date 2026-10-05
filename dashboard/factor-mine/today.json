@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T17:28:41.553369-04:00",
+  "generated_at": "2026-10-05T17:43:26.763988-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -70,10 +70,10 @@
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $27,392.17",
+    "said": "0 priced buys \u00b7 cash $20,467.79",
     "bullets": [
       "0 priced buys",
-      "cash $27,392.17"
+      "cash $20,467.79"
     ]
   },
   "general": {
@@ -2750,6 +2750,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-05\n_Generated 2026-10-05T21:22:28 \u2014 live `flatten_robust`._\n**S=+0.09; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+0.09** (FLAT) \u00b7 route **io**\n- Cash leftover **$27,392.17** (after 09:30 $6,586.70 \u00b7 after 16:00 $82,897.01)\n- Prior close **$103,477.99** \u00b7 09:30 **$103,738.13** \u00b7 overnight **$+260.14** \u00b7 session **$-20,841.12** \u00b7 16:00 **$82,897.01**\n- Overnight lots **6** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$20,805.46** \u2264 leftover after sells **$103,702.48** \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T17:37:41.044369-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8142,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3733,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-10-05\n**Generated:** 2026-10-05T17:37:41.015063-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher led by tech and M&A as 10-year yield hit 5.31% and services data signaled cooling growth\n**Prior close:** SPX +0.66%  Nasdaq +1.05%  Dow +0.18%\n**SPX:** +0.66%  **Nasdaq:** +1.05%  **Dow:** +0.18%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, AVGO, MSFT, META, PTC, RXO, CHRW, SPHR, CBRS, PCVX, NU, ITUB, ELBM, STZ, RPM, LW\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-06\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-05\n**Generated:** 2026-10-05T17:37:41.015063-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher led by tech and M&A as 10-year yield hit 5.31% and services data signaled cooling growth\n**Prior close:** SPX +0.66%  Nasdaq +1.05%  Dow +0.18%\n**SPX:** +0.66%  **Nasdaq:** +1.05%  **Dow:** +0.18%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, AVGO, MSFT, META, PTC, RXO, CHRW, SPHR, CBRS, PCVX, NU, ITUB, ELBM, STZ, RPM, LW\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-06\n**Clock use:** `next_open`"
     }
   ],
   "source": "publish_live_boards"

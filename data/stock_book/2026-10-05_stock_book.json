@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-05",
-    "generated_at": "2026-10-05T17:28:39.651351-04:00",
+    "generated_at": "2026-10-05T17:43:23.466623-04:00",
     "general_bias": 0.0,
     "sector_bias": {},
     "accuracy_gates": {
@@ -2715,53 +2715,6 @@
           "region": "bad"
         },
         {
-          "ticker": "VELO",
-          "sector": "Technology",
-          "industry": "Computer Hardware",
-          "size": "small",
-          "lane": "blocked",
-          "eligible": false,
-          "bull_rank": -0.9,
-          "bear_rank": 14.9592,
-          "domains": {
-            "market": "neutral",
-            "parent": "bad",
-            "child": "bad",
-            "company": "neutral",
-            "setup": "bad",
-            "flow": "good"
-          },
-          "source_boxes": {
-            "join": "bad",
-            "sector": "bad",
-            "gen": "neutral",
-            "news": "missing",
-            "digest": "missing",
-            "judge": "missing",
-            "ab": "neutral",
-            "peer": "neutral",
-            "heat": "bad",
-            "vol": "neutral",
-            "catal": "missing"
-          },
-          "company": "no direct company event",
-          "company_strength": 0.0,
-          "company_direct": false,
-          "company_fresh": false,
-          "company_price_confirmed": false,
-          "group": "Computer Hardware",
-          "child_d1": -4.74,
-          "child_w1": -5.14,
-          "child_residual": -3.07,
-          "bull_decision": "BLOCK BUY \u2014 parent sector RED; child industry/theme RED; setup RED; legacy region red; v2 domain alarm; v2 domain region red | market=YELLOW; parent=RED; child=RED/rel=RED; company=YELLOW(0.00); setup=RED; flow=GREEN",
-          "bear_decision": "SELL/AVOID \u2014 market=YELLOW; red domains=parent,child,setup; child lags parent -3.1%",
-          "blue": false,
-          "white": false,
-          "alarm": true,
-          "cond": "neutral",
-          "region": "bad"
-        },
-        {
           "ticker": "DGXX",
           "sector": "Utilities",
           "industry": "Utilities - Independent Power Producers",
@@ -2806,6 +2759,53 @@
           "white": false,
           "alarm": true,
           "cond": "bad",
+          "region": "bad"
+        },
+        {
+          "ticker": "VELO",
+          "sector": "Technology",
+          "industry": "Computer Hardware",
+          "size": "small",
+          "lane": "blocked",
+          "eligible": false,
+          "bull_rank": -0.9,
+          "bear_rank": 14.9592,
+          "domains": {
+            "market": "neutral",
+            "parent": "bad",
+            "child": "bad",
+            "company": "neutral",
+            "setup": "bad",
+            "flow": "good"
+          },
+          "source_boxes": {
+            "join": "bad",
+            "sector": "bad",
+            "gen": "neutral",
+            "news": "missing",
+            "digest": "missing",
+            "judge": "missing",
+            "ab": "neutral",
+            "peer": "neutral",
+            "heat": "bad",
+            "vol": "neutral",
+            "catal": "missing"
+          },
+          "company": "no direct company event",
+          "company_strength": 0.0,
+          "company_direct": false,
+          "company_fresh": false,
+          "company_price_confirmed": false,
+          "group": "Computer Hardware",
+          "child_d1": -4.74,
+          "child_w1": -5.14,
+          "child_residual": -3.07,
+          "bull_decision": "BLOCK BUY \u2014 parent sector RED; child industry/theme RED; setup RED; legacy region red; v2 domain alarm; v2 domain region red | market=YELLOW; parent=RED; child=RED/rel=RED; company=YELLOW(0.00); setup=RED; flow=GREEN",
+          "bear_decision": "SELL/AVOID \u2014 market=YELLOW; red domains=parent,child,setup; child lags parent -3.1%",
+          "blue": false,
+          "white": false,
+          "alarm": true,
+          "cond": "neutral",
           "region": "bad"
         }
       ]
