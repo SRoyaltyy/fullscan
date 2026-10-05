@@ -1,6 +1,6 @@
 # Stock book — 2026-10-05
 
-_Generated 2026-10-05T15:38:16.737771-04:00_
+_Generated 2026-10-05T16:53:30.848155-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -207,7 +207,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Catalyst overlays | **missing / not in ranker** | not in ranker — separate chart workflow |
 | Insider / politician flow | **missing / not in ranker** | no daily file in repo |
 | Industry predict | **found** | not scored (ad-hoc only) |
-| Learnings / mutable policy | **missing / not in ranker** | next predict prompt, not a ticker score |
+| Learnings / mutable policy | **found** | next predict prompt, not a ticker score |
 
 ### Sector LLM bias (1d) — 0 / empty means that essay was not run today
 
@@ -219,7 +219,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 
 | Topic | hit rate | n | weight |
 |-------|----------|---|--------|
-| general | 51% | 43 | ×0.85 |
+| general | 50% | 44 | ×0.85 |
 | sector:Basic Materials | 45% | 31 | ×0.85 |
 | sector:Communication Services | 23% | 30 | ×0.50 |
 | sector:Consumer Cyclical | 45% | 31 | ×0.85 |

@@ -1,13 +1,13 @@
 {
   "meta": {
     "date": "2026-10-05",
-    "generated_at": "2026-10-05T15:38:16.737771-04:00",
+    "generated_at": "2026-10-05T16:53:30.848155-04:00",
     "general_bias": 0.0,
     "sector_bias": {},
     "accuracy_gates": {
       "general": {
-        "hit_rate": 0.512,
-        "n": 43,
+        "hit_rate": 0.5,
+        "n": 44,
         "gate": 0.85
       },
       "sector:Basic Materials": {
@@ -246,7 +246,7 @@
       },
       {
         "name": "Learnings / mutable policy",
-        "found": false,
+        "found": true,
         "used_as": "next predict prompt, not a ticker score"
       }
     ],
