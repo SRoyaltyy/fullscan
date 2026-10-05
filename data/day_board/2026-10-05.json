@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T07:14:40.549613-04:00",
+  "generated_at": "2026-10-05T07:18:41.204855-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -54,7 +54,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 274169,
+          "size": 274808,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -65,10 +65,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18337,
+          "size": 18442,
           "said": "MAP HEAT \u2014 2026-10-05",
           "bullets": [
-            "Export `finviz_2026-10-05.csv` \u00b7 11616 names \u00b7 generated 2026-10-05T07:14:39.387392-04:00",
+            "Export `finviz_2026-10-02.csv` \u00b7 11616 names \u00b7 generated 2026-10-05T04:23:33.348627-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -226,7 +226,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 274169,
+          "size": 274808,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -833,7 +833,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=130",
-          "size": 972360,
+          "size": 972275,
           "said": "1d BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS \u00b7 0.35785",
           "bullets": []
         },
@@ -844,10 +844,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 30376,
+          "size": 30288,
           "said": "Stock book \u2014 2026-10-05",
           "bullets": [
-            "_Generated 2026-10-05T06:19:04.716618-04:00_",
+            "_Generated 2026-10-05T07:18:37.999807-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -911,7 +911,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=130",
-          "size": 972360,
+          "size": 972275,
           "said": "1d BUY TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS \u00b7 0.35785",
           "bullets": []
         },
@@ -2212,31 +2212,6 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T07:13:05.936167-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11710 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-    },
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T07:14:39.613060-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-05_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 274169,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-05_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18714,
-          "preview": "# MAP HEAT \u2014 2026-10-05\nExport `finviz_2026-10-05.csv` \u00b7 11616 names \u00b7 generated 2026-10-05T07:14:39.387392-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-05\nExport `finviz_2026-10-05.csv` \u00b7 11616 names \u00b7 generated 2026-10-05T07:14:39.387392-04:00"
     }
   ],
   "href": {
