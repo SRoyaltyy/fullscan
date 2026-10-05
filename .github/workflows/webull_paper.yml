@@ -44,6 +44,8 @@ jobs:
           WANT_SUBMIT: ${{ github.event_name == 'schedule' || inputs.submit }}
         run: |
           set -euo pipefail
+          # WEBULL_ACCOUNT_ID may be absent. paper_open discovers it from
+          # the sandbox account list when APP_KEY and APP_SECRET are set.
           ARGS=()
           if [ "$WANT_SUBMIT" = true ]; then ARGS+=(--submit); fi
           python -m src.paper_open --owner actions "${ARGS[@]}"

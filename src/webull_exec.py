@@ -1059,6 +1059,76 @@ class PaperAPI:
                 "acknowledged_at": datetime.now().astimezone().isoformat()}
 
 
+_PAPER_ENV_KEYS = ("WEBULL_APP_KEY", "WEBULL_APP_SECRET", "WEBULL_ACCOUNT_ID")
+
+
+def read_paper_env(path) -> dict:
+    """Parse the ECS paper env file. Values are JSON strings. No printing."""
+    out = {}
+    text = Path(path).read_text(encoding="utf-8")
+    for line in text.splitlines():
+        if not line or "=" not in line or line.startswith("#"):
+            continue
+        key, raw = line.split("=", 1)
+        out[key] = json.loads(raw)
+    return out
+
+
+def write_paper_env(path, values: dict) -> None:
+    """Rewrite the env file. Does not log values."""
+    ordered = [key for key in _PAPER_ENV_KEYS if values.get(key)]
+    extra = [key for key in values if key not in _PAPER_ENV_KEYS and values.get(key)]
+    lines = [
+        key + "=" + json.dumps(values[key])
+        for key in ordered + extra
+    ]
+    dest = Path(path)
+    tmp = dest.with_name(dest.name + ".tmp")
+    tmp.write_text("\n".join(lines) + ("\n" if lines else ""), encoding="utf-8")
+    os.chmod(tmp, 0o600)
+    os.replace(tmp, dest)
+
+
+def discover_and_persist_account_id(env_path, *, api=None) -> str:
+    """Resolve sandbox account_id when the env file has keys but no id.
+
+    ``WEBULL_ACCOUNT_ID`` is optional. After a paper connect, the account
+    list supplies the id and this writes it back. A non-sandbox host is
+    refused. Nothing secret, including the account id, is printed.
+    Returns ``present`` when the file already had an id, ``discovered``
+    when this call wrote one.
+    """
+    vals = read_paper_env(env_path)
+    key = str(vals.get("WEBULL_APP_KEY") or "").strip()
+    secret = str(vals.get("WEBULL_APP_SECRET") or "").strip()
+    if not key or not secret:
+        raise RuntimeError("WEBULL_APP_KEY / WEBULL_APP_SECRET missing")
+    os.environ["WEBULL_APP_KEY"] = key
+    os.environ["WEBULL_APP_SECRET"] = secret
+    had = str(vals.get("WEBULL_ACCOUNT_ID") or "").strip()
+    if had:
+        os.environ["WEBULL_ACCOUNT_ID"] = had
+    else:
+        os.environ.pop("WEBULL_ACCOUNT_ID", None)
+        vals.pop("WEBULL_ACCOUNT_ID", None)
+    client = api if api is not None else PaperAPI("paper")
+    if getattr(client, "env", "paper") == "real" or getattr(client, "host", "") != PAPER_HOST:
+        raise RuntimeError("paper-open refuses any non-sandbox host")
+    if not client.connect():
+        raise RuntimeError(client.err or "not connected")
+    snap = client.snapshot()
+    if not getattr(snap, "connected", False):
+        raise RuntimeError(getattr(snap, "error", None) or "not connected")
+    found = str(getattr(snap, "acc_id", "") or getattr(client, "account_id", "") or "").strip()
+    if not found:
+        raise RuntimeError("no Webull account_id in list")
+    if had:
+        return "present"
+    vals["WEBULL_ACCOUNT_ID"] = found
+    write_paper_env(env_path, vals)
+    return "discovered"
+
+
 def write_last(doc: dict) -> Path:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     LAST_JSON.write_text(json.dumps(doc, indent=2), encoding="utf-8")

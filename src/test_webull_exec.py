@@ -605,6 +605,77 @@ def test_rejected_leg_does_not_reserve_cash() -> None:
     assert got[client_order_id("2026-09-21", "BUY", "BBB")]["shares"] == 1
 
 
+def test_empty_account_id_is_discovered_and_not_printed(tmp_path=None) -> None:
+    """Keys alone resolve the sandbox account id. The id is not printed."""
+    import io
+    import os
+    import tempfile
+    from contextlib import redirect_stdout
+
+    from src import webull_exec as we
+
+    if tmp_path is None:
+        tmp_path = Path(tempfile.mkdtemp())
+    env_path = tmp_path / "paper.env"
+    we.write_paper_env(env_path, {
+        "WEBULL_APP_KEY": "test-key",
+        "WEBULL_APP_SECRET": "test-secret",
+    })
+    saved = {name: os.environ.get(name) for name in (
+        "WEBULL_APP_KEY", "WEBULL_APP_SECRET", "WEBULL_ACCOUNT_ID",
+    )}
+
+    class Fake:
+        env = "paper"
+        host = we.PAPER_HOST
+        account_id = ""
+        err = None
+
+        def connect(self):
+            return True
+
+        def snapshot(self):
+            self.account_id = "paper-discovered"
+            return BrokerSnap(
+                env="paper", cash=25.0, positions={}, connected=True,
+                acc_id="paper-discovered",
+            )
+
+    buf = io.StringIO()
+    try:
+        with redirect_stdout(buf):
+            status = we.discover_and_persist_account_id(env_path, api=Fake())
+        assert status == "discovered"
+        stored = we.read_paper_env(env_path)
+        assert stored["WEBULL_ACCOUNT_ID"] == "paper-discovered"
+        assert stored["WEBULL_APP_KEY"] == "test-key"
+        assert "paper-discovered" not in buf.getvalue()
+        assert "test-secret" not in buf.getvalue()
+        again = we.discover_and_persist_account_id(env_path, api=Fake())
+        assert again == "present"
+        assert we.read_paper_env(env_path)["WEBULL_ACCOUNT_ID"] == "paper-discovered"
+
+        class Live:
+            env = "real"
+            host = we.LIVE_HOST
+
+            def connect(self):
+                raise AssertionError("live connect")
+
+        try:
+            we.discover_and_persist_account_id(env_path, api=Live())
+        except RuntimeError as exc:
+            assert "non-sandbox" in str(exc)
+        else:
+            raise AssertionError("live host was accepted")
+    finally:
+        for name, value in saved.items():
+            if value is None:
+                os.environ.pop(name, None)
+            else:
+                os.environ[name] = value
+
+
 def test_yml_warms_before_bell_and_has_one_automatic_sender() -> None:
     root = Path(__file__).resolve().parent.parent
     yml = (root / ".github/workflows/webull_paper.yml").read_text()
@@ -635,6 +706,7 @@ def main() -> None:
     test_not_connected_writes_last_without_replay()
     test_hot4_submit_refuses_divergent_wire()
     test_stale_combo_does_not_submit()
+    test_empty_account_id_is_discovered_and_not_printed()
     test_yml_warms_before_bell_and_has_one_automatic_sender()
     test_hot4_tickets_long_only_skip_held_cash_and_sit()
     test_hot4_sells_size_from_paper_lots()
@@ -648,7 +720,7 @@ def main() -> None:
     test_place_batch_skips_leg_that_cannot_buy_one_share()
     test_place_batch_keeps_haircut_plan_when_preopen_cash_is_unchanged()
     test_rejected_leg_does_not_reserve_cash()
-    print("test_webull_exec: 23 ok")
+    print("test_webull_exec: 24 ok")
 
 
 if __name__ == "__main__":

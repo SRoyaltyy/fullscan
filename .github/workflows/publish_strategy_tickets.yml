@@ -1,5 +1,11 @@
 name: Publish strategy tickets
 
+# One in-flight run. The 15-minute cron plus workflow_run plus bot
+# dispatches were stacking a cancelled/success storm. Readiness still
+# comes from decision_ready (workflow_dispatch) and from the two core
+# jobs below. The daily orchestrator remains the missed-job heal.
+# A newer trigger cancels the older run; paper_open's journal and
+# client_order_id keep a single sealed-h1 send per session.
 on:
   workflow_dispatch:
     inputs:
@@ -10,8 +16,6 @@ on:
   push:
     branches: [main]
     paths: ['01_daily/**', 'data/join/**', 'data/peers/**', 'data/ab_checklist/**', 'data/factor_mine/panel.json']
-  schedule:
-    - cron: '3,18,33,48 12-20 * * 1-5'
   workflow_run:
     workflows:
       - "Stock Book ALL (one-shot)"
@@ -24,10 +28,11 @@ permissions:
 
 concurrency:
   group: publish-strategy-tickets
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   tickets:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -94,8 +99,11 @@ jobs:
           WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
         run: |
           set -euo pipefail
-          if [ -z "${WEBULL_ACCOUNT_ID:-}" ]; then
-            echo "WEBULL_ACCOUNT_ID unset; paper submit deferred to Webull paper workflow"
+          # ACCOUNT_ID is optional. Keys alone are enough: PaperAPI discovers
+          # the sandbox account id from the account list. Do not defer on an
+          # empty WEBULL_ACCOUNT_ID secret.
+          if [ -z "${WEBULL_APP_KEY:-}" ] || [ -z "${WEBULL_APP_SECRET:-}" ]; then
+            echo "WEBULL_APP_KEY / WEBULL_APP_SECRET unset; paper submit deferred"
             exit 0
           fi
           pip install webull-openapi-python-sdk
