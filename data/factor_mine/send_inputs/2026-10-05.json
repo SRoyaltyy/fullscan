@@ -32,7 +32,7 @@
     },
     {
       "path": "data/ab_checklist/2026-10-05_ab_checklist_enriched.csv",
-      "sha256": "17daf64f9247b3ae073157bf98208551439511f263475ede5763887c26ae581f"
+      "sha256": "f4b4514be45a50ff37310df54f6b78edbe9008153eb1799c97c68075a778bec0"
     },
     {
       "path": "data/join/2026-10-05_ranked.csv",
@@ -50,6 +50,6 @@
   "prices": [],
   "reason": "no same-day panel rows for 2026-10-05 \u2014 sitting, no live lookup",
   "rows": [],
-  "sha256": "0e41acec900c23d25c43007f9cd51561e78e6de946c339a183eceabc0227f603",
+  "sha256": "020c4fa3a77b9c5818b013b9e14abd0240ee8dc26f3078607cf204864e87ce9b",
   "source": "no_same_day_panel"
 }

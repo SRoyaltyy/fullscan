@@ -1,75 +1,84 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T05:40:35.355668-04:00",
+  "generated_at": "2026-10-05T06:02:34.750562-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
     "ok": 6,
-    "partial": 2,
-    "fail": 0,
+    "partial": 1,
+    "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "JXN",
+      "score": 0.48421849403254064
+    },
+    {
+      "ticker": "TMUS",
+      "score": 0.38610985491715305
+    }
+  ],
   "sell_1d": [
     {
       "ticker": "ROIV",
-      "score": -0.4753937289952296
-    },
-    {
-      "ticker": "ARE",
-      "score": -0.41823590976540176
+      "score": -0.46456437111708726
     },
     {
       "ticker": "SOC",
-      "score": -0.3913239823861548
+      "score": -0.40008664436927904
+    },
+    {
+      "ticker": "ARE",
+      "score": -0.39254425318357405
     },
     {
       "ticker": "BIDU",
-      "score": -0.38465342412103465
+      "score": -0.3790424275919768
     },
     {
       "ticker": "BNTX",
-      "score": -0.38172356799127616
-    },
-    {
-      "ticker": "SEER",
-      "score": -0.3730751372228022
+      "score": -0.365697688240358
     },
     {
       "ticker": "ALMS",
-      "score": -0.3693942759044377
+      "score": -0.35856491802629525
     },
     {
-      "ticker": "ABSI",
-      "score": -0.36255362009835357
-    },
-    {
-      "ticker": "IFRX",
-      "score": -0.3622211957782761
+      "ticker": "SEER",
+      "score": -0.3570492574718841
     },
     {
       "ticker": "PCT",
-      "score": -0.35876277369472237
+      "score": -0.35172844599549985
     },
     {
-      "ticker": "INTC",
-      "score": -0.3584543832208301
-    },
-    {
-      "ticker": "TYRA",
-      "score": -0.35781926502529476
+      "ticker": "IFRX",
+      "score": -0.346195316027358
     },
     {
       "ticker": "NRXP",
-      "score": -0.35097727854704575
+      "score": -0.3453662820179879
+    },
+    {
+      "ticker": "TYRA",
+      "score": -0.34456628424775143
+    },
+    {
+      "ticker": "ABSI",
+      "score": -0.3434530222979487
+    },
+    {
+      "ticker": "LXRX",
+      "score": -0.3421940224584546
     },
     {
       "ticker": "WVE",
-      "score": -0.3509103903716723
+      "score": -0.337657409594129
     },
     {
-      "ticker": "IBRX",
-      "score": -0.3481755470160717
+      "ticker": "GOGO",
+      "score": -0.33311188227190025
     }
   ],
   "flatten": {},
@@ -747,6 +756,232 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 EXLS, SB, SKM, CORT, HUM \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 TEL, ABBV, EXLS, CORT, SU"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T05:41:30.877631-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-05_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 937638,
+          "preview": "1d BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2263,
+          "preview": "green 139 \u00b7 SHOO, GLBE, FIGS, SN, HNI, SIG, SKY, VVV, ONON, BIRK"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2454,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-05_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7134,
+          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7134,
+          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
+        },
+        {
+          "path": "01_daily/2026-10-05_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 27689,
+          "preview": "# Stock book \u2014 2026-10-05\n_Generated 2026-10-05T05:40:29.723978-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 green 139 \u00b7 SHOO, GLBE, FIGS, SN, HNI, SIG, SKY, VVV, ONON, BIRK \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 # Stock book \u2014 2026-10-05\n_Generated 2026-10-05T05:40:29.723978-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T05:41:47.308166-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 12560,
+          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 845,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-05.json",
+          "ok": true,
+          "reason": "",
+          "size": 77288,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-05_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 41099,
+          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 242163,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-05_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 242163,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 214547,
+          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 242163,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 41099,
+          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 242163,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 242163,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 214547,
+          "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1668,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1668,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-05 BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER, ALMS, ABSI \u00b7 keys: date, generated_at, fea"
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-05T05:51:18.577832-04:00",
+      "files": [
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 13141,
+          "preview": "2026-10-02 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 161757,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 4033,
+          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 55038,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "2026-10-02 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\" \u00b7 25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19 \u00b7 <!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" co"
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-10-05",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-05T05:56:48.541067-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-10-05_dossiers.json",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1234,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-10-05_dossiers.md",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1234,
+          "preview": "# CATALYST DAILY \u2014 2026-10-05\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-05\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
     }
   ],
   "source": "publish_live_boards"

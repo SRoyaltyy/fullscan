@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T06:00:06.785820-04:00",
+  "generated_at": "2026-10-05T06:02:34.750562-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 9,
+      "n_req_ok": 8,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -306,7 +306,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 66279,
+          "size": 66221,
           "said": "82 ticker actions \u00b7 6 events \u00b7 5542 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
           "bullets": [
             "BUY COP",
@@ -354,11 +354,11 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8325,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 12 fail",
+          "size": 7533,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
             "finviz_market_digest:missing",
-            "sector_predict:missing",
+            "map_heat_research:missing",
             "sector_predict:missing",
             "sector_predict:missing"
           ]
@@ -368,10 +368,10 @@
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-10-05_preopen_status.json",
           "role": "required",
-          "status": "OK",
-          "reason": "all_ok=False missing=['sector_predict']",
-          "size": 9089,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing sector_predict",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -380,11 +380,11 @@
           "path": "01_daily/2026-10-05_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Core same-day packet is otherwise human-usable: general predict is UP/mild with MEMORY_CONFIRM and SCORES_BEGIN; events ",
-          "size": 2544,
-          "said": "ok=False \u00b7 missing; 0/11 sector predicts (need >=8); QC openclaw_timeout 01_daily/sectors/2026-10-05/basic_materials_predict.md",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
-            "Core same-day packet is otherwise human-usable: general predict is UP/mild with MEMORY_CONFIRM and SCORES_BEGIN; events scan_date=2026-10-05 is a real 34-event scan not a file-level carry; news judge/parse, finviz digest, and map-heat futures tape (59 contracts) all look complete. Day still fails because zero of eleven sector essays exist (single-miss exception does not apply). Research.md kept last-night captain cards after a failed morning delta (coverage 0/28); enhancement only, not a core fail. Missing finviz_market_digest_close is not required."
+            "Grok returned an empty review"
           ]
         },
         {
@@ -588,10 +588,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 7558257,
+          "size": 7557958,
           "said": "28 rows",
           "bullets": [
-            "EXLS, SB, SKM, CORT, HUM, DSX, PBR, CBRL"
+            "SB, SKM, EXLS, CORT, DSX, HUM, PBR, CBRL"
           ]
         },
         {
@@ -601,16 +601,16 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8349151,
+          "size": 8387842,
           "said": "25 rows",
           "bullets": [
-            "TEL, ABBV, EXLS, CORT, SU, CVX, BP, HUM"
+            "TEL, ABBV, EXLS, CORT, CBRL, BJ, Q, ETON"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "TEL, ABBV, EXLS, CORT, SU"
+        "TEL, ABBV, EXLS, CORT, CBRL"
       ]
     },
     {
@@ -631,7 +631,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 66279,
+          "size": 66221,
           "said": "82 ticker actions \u00b7 6 events \u00b7 5542 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
           "bullets": [
             "BUY COP",
@@ -734,7 +734,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 66279,
+          "size": 66221,
           "said": "82 ticker actions \u00b7 6 events \u00b7 5542 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, DVN BUY",
           "bullets": [
             "BUY COP",
@@ -794,10 +794,10 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8349151,
+          "size": 8387842,
           "said": "25 rows",
           "bullets": [
-            "TEL, ABBV, EXLS, CORT, SU, CVX, BP, HUM"
+            "TEL, ABBV, EXLS, CORT, CBRL, BJ, Q, ETON"
           ]
         },
         {
@@ -832,9 +832,9 @@
           "path": "data/stock_book/2026-10-05_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=125",
-          "size": 937638,
-          "said": "1d BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER \u00b7 0.35785",
+          "reason": "horizons=5 names=135",
+          "size": 1002116,
+          "said": "1d BUY JXN, TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS \u00b7 0.35785",
           "bullets": []
         },
         {
@@ -844,10 +844,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 26789,
+          "size": 33646,
           "said": "Stock book \u2014 2026-10-05",
           "bullets": [
-            "_Generated 2026-10-05T05:40:29.723978-04:00_",
+            "_Generated 2026-10-05T06:02:32.326582-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -858,8 +858,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2263,
-          "said": "139 green \u00b7 SHOO, GLBE, FIGS, SN, HNI, SIG, SKY, VVV, ONON, BIRK",
+          "size": 2779,
+          "said": "184 green \u00b7 SHOO, VCTR, WT, GLBE, FIGS, SN, HNI, SIG, SKY, JXN",
           "bullets": []
         },
         {
@@ -910,9 +910,9 @@
           "path": "data/stock_book/2026-10-05_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=125",
-          "size": 937638,
-          "said": "1d BUY \u2014 \u00b7 SELL ROIV, ARE, SOC, BIDU, BNTX, SEER \u00b7 0.35785",
+          "reason": "horizons=5 names=135",
+          "size": 1002116,
+          "said": "1d BUY JXN, TMUS \u00b7 SELL ROIV, SOC, ARE, BIDU, BNTX, ALMS \u00b7 0.35785",
           "bullets": []
         },
         {
@@ -959,67 +959,76 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "JXN",
+        "score": 0.48421849403254064
+      },
+      {
+        "ticker": "TMUS",
+        "score": 0.38610985491715305
+      }
+    ],
     "sell_1d": [
       {
         "ticker": "ROIV",
-        "score": -0.4753937289952296
-      },
-      {
-        "ticker": "ARE",
-        "score": -0.41823590976540176
+        "score": -0.46456437111708726
       },
       {
         "ticker": "SOC",
-        "score": -0.3913239823861548
+        "score": -0.40008664436927904
+      },
+      {
+        "ticker": "ARE",
+        "score": -0.39254425318357405
       },
       {
         "ticker": "BIDU",
-        "score": -0.38465342412103465
+        "score": -0.3790424275919768
       },
       {
         "ticker": "BNTX",
-        "score": -0.38172356799127616
-      },
-      {
-        "ticker": "SEER",
-        "score": -0.3730751372228022
+        "score": -0.365697688240358
       },
       {
         "ticker": "ALMS",
-        "score": -0.3693942759044377
+        "score": -0.35856491802629525
       },
       {
-        "ticker": "ABSI",
-        "score": -0.36255362009835357
-      },
-      {
-        "ticker": "IFRX",
-        "score": -0.3622211957782761
+        "ticker": "SEER",
+        "score": -0.3570492574718841
       },
       {
         "ticker": "PCT",
-        "score": -0.35876277369472237
+        "score": -0.35172844599549985
       },
       {
-        "ticker": "INTC",
-        "score": -0.3584543832208301
-      },
-      {
-        "ticker": "TYRA",
-        "score": -0.35781926502529476
+        "ticker": "IFRX",
+        "score": -0.346195316027358
       },
       {
         "ticker": "NRXP",
-        "score": -0.35097727854704575
+        "score": -0.3453662820179879
+      },
+      {
+        "ticker": "TYRA",
+        "score": -0.34456628424775143
+      },
+      {
+        "ticker": "ABSI",
+        "score": -0.3434530222979487
+      },
+      {
+        "ticker": "LXRX",
+        "score": -0.3421940224584546
       },
       {
         "ticker": "WVE",
-        "score": -0.3509103903716723
+        "score": -0.337657409594129
       },
       {
-        "ticker": "IBRX",
-        "score": -0.3481755470160717
+        "ticker": "GOGO",
+        "score": -0.33311188227190025
       }
     ],
     "flatten": {},
@@ -1932,38 +1941,6 @@
         }
       ],
       "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-05\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-    },
-    {
-      "key": "status",
-      "title": "Pre-open status packet",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T06:00:04.957161-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-10-05_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 8325,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/2026-10-05_preopen_status.json",
-          "ok": true,
-          "reason": "",
-          "size": 9089,
-          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
-        },
-        {
-          "path": "01_daily/2026-10-05_preopen_status.md",
-          "ok": true,
-          "reason": "",
-          "size": 590,
-          "preview": "# Pre-open ALL status \u2014 2026-10-05\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
-        }
-      ],
-      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-05\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
     }
   ],
   "href": {
