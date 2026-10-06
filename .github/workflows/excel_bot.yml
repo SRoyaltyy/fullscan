@@ -4,6 +4,9 @@ name: Excel Bot (cluster signals daily)
 # Fetch (Yahoo v8 HTTPS, incremental) -> Excel-replica engine (same formulas,
 # same colors) -> strategy signals -> append to ONE suggestions.csv ->
 # refresh tracking on all past suggestions -> daily MD summary.
+# From 2026-10-06, excel_bot/freeze_manifest.json fingerprints each signal
+# day. signal_freeze.py --verify fails closed before the commit if a
+# locked day changed. Days before that are pre-lock and are not hashed.
 #
 # State (the 3,603-ticker price cache) lives on the orphan branch
 # `excel-state` as state/rows.tar.gz, squashed every run so it never grows.
@@ -19,6 +22,10 @@ on:
     paths:
       - "excel_bot/engine/gh_summary.py"
       - "excel_bot/engine/test_gh_summary.py"
+      - "excel_bot/engine/signal_freeze.py"
+      - "excel_bot/engine/test_signal_freeze.py"
+      - "excel_bot/engine/daily_run.py"
+      - "excel_bot/freeze_manifest.json"
       - "src/factor_mine_freeze.py"
       - "src/test_factor_mine_freeze.py"
       - ".github/workflows/excel_bot.yml"
@@ -50,8 +57,10 @@ jobs:
           python-version: "3.12"
       - name: Install
         run: pip install pandas
-      - name: Draft vs final dated signal
-        run: python excel_bot/engine/test_gh_summary.py
+      - name: Draft vs final dated signal, and signal-day lock
+        run: |
+          python excel_bot/engine/test_gh_summary.py
+          python excel_bot/engine/test_signal_freeze.py
 
   run:
     if: github.event_name != 'pull_request'
@@ -90,6 +99,8 @@ jobs:
           if [ "${SIGNALS_ONLY:-false}" = "true" ]; then ARGS="$ARGS --signals-only"; fi
           echo "CMD: python engine/daily_run.py --workers 4 $ARGS"
           python engine/daily_run.py --workers 4 $ARGS
+          # Locked signal days must already match freeze_manifest.json.
+          python engine/signal_freeze.py --verify
           # Before 16:00 ET this writes *_excel_bot_draft.md only.
           # At/after 16:00 ET it creates *_excel_bot.md once, then refuses.
           python engine/gh_summary.py
@@ -113,7 +124,12 @@ jobs:
         if: always()
         run: |
           set -euo pipefail
+          if ! python excel_bot/engine/signal_freeze.py --verify; then
+            echo "[freeze] FAIL CLOSED — committing nothing"
+            exit 1
+          fi
           bash scripts/safe_git_push.sh \
             "excel-bot: daily signals [$(date -u +%F)]" \
             excel_bot/suggestions/suggestions.csv \
+            excel_bot/freeze_manifest.json \
             excel_bot/daily/ || echo "nothing to commit"

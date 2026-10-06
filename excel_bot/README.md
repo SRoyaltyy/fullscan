@@ -17,6 +17,7 @@ Workflow: `.github/workflows/excel_bot.yml` → "Excel Bot (cluster signals dail
    suggestion is a cluster whose *confirmation day* is the latest trading day.
 5. **Store** — appended to `suggestions/suggestions.csv` (one file, deduped).
    All past suggestions get `current_price` / returns refreshed.
+   From 2026-10-06 each signal day is fingerprinted before that write.
 6. **Summary** — before 16:00 ET, `daily/{date}_excel_bot_draft.md` only.
    At or after 16:00 ET, `daily/{date}_excel_bot.md` is created once
    (today's signals, live strategy scoreboard, best/worst open
@@ -30,6 +31,7 @@ Workflow: `.github/workflows/excel_bot.yml` → "Excel Bot (cluster signals dail
 |---|---|
 | `excel_bot/daily/` | **Start here.** Final `{date}_excel_bot.md` after the close. `{date}_excel_bot_draft.md` is the pre-close note. |
 | `excel_bot/suggestions/suggestions.csv` | Every suggestion ever + live tracking. `ret_vs_open` = honest "how is it doing". |
+| `excel_bot/freeze_manifest.json` | Append-only sha256 of each locked signal day from 2026-10-06. Days before that are labelled pre-lock and are not fingerprinted. |
 | `excel_bot/strategies/README.md` | The strategy cards + backtest stats. |
 | `excel_state` branch | Machine state only — never edit by hand. |
 
@@ -41,6 +43,29 @@ Workflow: `.github/workflows/excel_bot.yml` → "Excel Bot (cluster signals dail
 - `first_open` — next trading day's open = the price you could actually get.
 - `exit_rule` — tp8/tp3 = limit sell at +8%/+3%; hold2 = sell after 2 sessions;
   hold1 = next day (shorts).
+
+## Locked signals (from 2026-10-06)
+
+Signal dates before 2026-10-06 are **pre-lock**. They are not fingerprinted,
+not backfilled, and the guard does not rewrite them. Live marks on those
+rows may still refresh.
+
+From 2026-10-06 on, `freeze_manifest.json` stores a sha256 of each signal
+day's locked pick fields: `run_date`, `signal_date`, `ticker`, `side`,
+`strategy`, `exit_rule`, `ref_close`, `signal_colors`. `run_date` is in
+the hash because a pick's run date is written once. `first_open` is
+write-once: a blank may become a value once, and that fill appends a
+manifest entry; a non-blank value must not change. `current_price`,
+`ret_vs_close`, `ret_vs_open`, and `days_held` stay live. Manifest
+entries are never removed or edited. If a locked day's picks are added,
+removed, or changed, or a non-blank `first_open` changes, the run prints
+`FAIL CLOSED` and commits nothing.
+
+The dated file `daily/{date}_excel_bot.md` is already write-once. A run
+before 16:00 ET writes only the `_draft` file. At or after 16:00 ET the
+final file is created once; if that file is already in the tree (it is,
+on a rerun of a date that landed on main), the run refuses to overwrite
+it. Strategy rules, names, and which tickers qualify are unchanged.
 
 ## Caveats (from live tracking + backtest)
 

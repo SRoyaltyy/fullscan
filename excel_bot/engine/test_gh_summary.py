@@ -174,6 +174,12 @@ def test_readers_keep_the_final_and_skip_the_draft():
         "src/factor_mine_freeze.py",
         "src/test_factor_mine_freeze.py",
         ".github/workflows/excel_bot.yml",
+        # Final dated notes only. These readers do not name the draft file.
+        "research/INPUT_HISTORY.md",
+        "research/audit/INPUT_PROVENANCE_336.md",
+        "research/audit/build_fullscan_file_proof.py",
+        "research/audit/input_provenance_336.py",
+        "research/lever_search/excel_ml_lever/excel_ml_lever.py",
     }
     hits = []
     skip = {".git", "node_modules", "__pycache__", ".venv"}
