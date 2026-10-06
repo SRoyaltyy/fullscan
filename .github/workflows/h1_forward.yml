@@ -19,26 +19,166 @@ name: h1 append-only forward
 # and fills no new buy, the same as 2026-08-28.
 # The page is published by deploy-dashboard.yml on the same overlay route
 # as dashboard/factor-mine (copy from main, then the site-root mirror).
+#
+# MORNING CHAIN (workflow_run). GitHub fires the 13:05 UTC cron hours late
+# (10-05 ran at 17:03 ET), so a successful Pre-Open ALL also starts this
+# workflow. Pre-Open ALL lands the only repo input h1 reads, the morning
+# predict / weather file, and its morning run ends before 09:30 ET. The
+# chain job never touches the ledger. On a weekday it waits until 08:00 ET
+# (America/New_York, so EDT and EST are both handled), waits for any
+# queued or running h1 forward / open-fill / fill run, and then dispatches
+# this workflow with session_date=<today ET> and chain=true, the same
+# dispatch a person runs at 08:40 ET. It never dispatches at or after
+# 09:20 ET, and a completion at or after 09:20 ET exits success with
+# nothing done. The chain uses its own concurrency group so a late
+# Pre-Open ALL completion cannot queue in h1-forward and cancel a pending
+# h1 open-fill or fill.
+# A chain=true run re-checks 08:00-09:25 ET on session_date before the plan
+# step and never commits a missing line, so it cannot seal after the open.
+# Every run first checks the ledger. A plan or missing line already on the
+# target session exits success with no commit (no price refresh either).
+# After a commit that seals a new plan, the run dispatches
+# deploy-dashboard.yml (its gh-pages-deploy group queues and never cancels
+# an in-flight deploy) because a GITHUB_TOKEN push does not trigger it.
+# The 13:05 UTC cron and workflow_dispatch stay as fallbacks.
 
 on:
   schedule:
     - cron: "5 13 * * 1-5"
+  workflow_run:
+    workflows:
+      - "Pre-Open ALL (predictive one-shot)"
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
     inputs:
       session_date:
         description: "Session D (YYYY-MM-DD). Empty seals the next session. Refuses at or after 09:30 ET."
         required: false
         default: ""
+      chain:
+        description: "Set to true only by the Pre-Open ALL chain: seal D only inside 08:00-09:25 ET on D. Leave false."
+        required: false
+        default: "false"
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
-  group: h1-forward
+  group: ${{ github.event_name == 'workflow_run' && 'h1-forward-chain' || 'h1-forward' }}
   cancel-in-progress: false
 
 jobs:
+  chain:
+    # Pre-Open ALL finished. Dispatch today's seal inside the window only.
+    if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - name: ET clock gate (wait for 08:00 ET, nothing at or after 09:20 ET)
+        id: clock
+        run: |
+          python3 - <<'PY'
+          import os
+          import sys
+          import time
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          ET = ZoneInfo("America/New_York")
+
+
+          def at(day, hour, minute):
+              return datetime(day.year, day.month, day.day, hour, minute, tzinfo=ET)
+
+
+          def out(go, session, why):
+              print(why, flush=True)
+              with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+                  fh.write(f"go={'true' if go else 'false'}\nsession={session}\n")
+              sys.exit(0)
+
+
+          now = datetime.now(ET)
+          day = now.date()
+          wait_from, open_at, cutoff = at(day, 3, 0), at(day, 8, 0), at(day, 9, 20)
+          shown = now.strftime("%Y-%m-%d %H:%M %Z")
+          if day.weekday() >= 5:
+              out(False, "", f"{shown}: weekend in ET; nothing to seal")
+          if now >= cutoff:
+              out(False, "", f"{shown}: at or after 09:20 ET; the chain does not seal near or after the open")
+          if now < wait_from:
+              out(False, "", f"{shown}: before 03:00 ET; too early to wait for 08:00 ET in one job")
+          if now < open_at:
+              wait = (open_at - now).total_seconds() + 20
+              print(f"{shown}: waiting {wait / 60:.1f} min for 08:00 ET {day}", flush=True)
+              time.sleep(wait)
+          now = datetime.now(ET)
+          shown = now.strftime("%Y-%m-%d %H:%M %Z")
+          if now.date() != day or not (open_at <= now < cutoff):
+              out(False, "", f"{shown}: outside 08:00-09:20 ET on {day}; nothing to seal")
+          out(True, day.isoformat(), f"{shown}: inside the window for {day}")
+          PY
+      - uses: actions/checkout@v4
+        if: steps.clock.outputs.go == 'true'
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Dispatch today's seal once the h1 group is idle
+        if: steps.clock.outputs.go == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          SESSION: ${{ steps.clock.outputs.session }}
+        run: |
+          set -euo pipefail
+          late() { [ "$((10#$(TZ=America/New_York date +%H%M)))" -ge 920 ]; }
+          busy() {
+            local total=0 wf count
+            for wf in h1_forward.yml h1_open_fill.yml h1_fill.yml; do
+              count=$(gh api "repos/${REPO}/actions/workflows/${wf}/runs?per_page=30" \
+                --jq '[.workflow_runs[] | select(.status != "completed" and .event != "workflow_run")] | length')
+              total=$((total + count))
+            done
+            [ "$total" -gt 0 ]
+          }
+          while busy; do
+            if late; then
+              echo "an h1 run is still queued or running at 09:20 ET; leaving ${SESSION} to the fallbacks"
+              exit 0
+            fi
+            echo "an h1 forward / open-fill / fill run is queued or running; waiting 30s"
+            sleep 30
+          done
+          git fetch --no-tags --depth=1 origin main
+          git checkout -q --detach FETCH_HEAD
+          if ! python3 - "$SESSION" <<'PY'
+          import json
+          import sys
+
+          session = sys.argv[1]
+          path = "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl"
+          with open(path, encoding="utf-8") as fh:
+              rows = [json.loads(line) for line in fh if line.strip()]
+          hit = [row["kind"] for row in rows if row.get("date") == session and row.get("kind") in ("plan", "missing")]
+          if hit:
+              print(f"{session} already has a {hit[0]} line on main; nothing to dispatch")
+              sys.exit(1)
+          PY
+          then
+            exit 0
+          fi
+          if late; then
+            echo "09:20 ET passed; leaving ${SESSION} to the fallbacks"
+            exit 0
+          fi
+          gh workflow run h1_forward.yml --repo "$REPO" --ref main \
+            -f session_date="$SESSION" -f chain=true
+          echo "dispatched h1 forward session_date=${SESSION} chain=true"
+
   append:
+    if: github.event_name != 'workflow_run'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -50,7 +190,62 @@ jobs:
           python-version: "3.12"
       - name: Install bar dependencies
         run: pip install numpy pandas pyarrow yfinance
+      - name: Sealed-plan guard
+        id: guard
+        env:
+          FORWARD_BOOK: h1
+          PLAN_SESSION: ${{ github.event.inputs.session_date }}
+          CHAIN: ${{ github.event.inputs.chain }}
+        run: |
+          PYTHONHASHSEED=0 python3 - <<'PY'
+          import os
+          import sys
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          sys.path.insert(0, os.getcwd())
+          from research.hot_n4_clean_v4.forward.forward import plan_target
+          from research.hot_n4_clean_v4.forward.ledger import kind_on, load, open_plan, plan_on
+
+          requested = os.environ.get("PLAN_SESSION", "").strip()
+          chain = os.environ.get("CHAIN", "").strip() == "true"
+          today = datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+
+
+          def done(go, why):
+              print(why, flush=True)
+              with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+                  fh.write(f"go={'true' if go else 'false'}\n")
+              sys.exit(0)
+
+
+          if chain and requested != today:
+              done(False, f"chain run for {requested or 'no date'} but today is {today} ET; nothing to do")
+          try:
+              records = load()
+          except RuntimeError as exc:
+              if chain:
+                  raise
+              done(True, f"ledger did not load ({exc}); forward.py reports it")
+          pending = open_plan(records)
+          if requested:
+              if plan_on(records, requested) is not None or kind_on(records, requested, "missing") is not None:
+                  done(False, f"{requested} is already sealed (plan or missing line); exiting without changes")
+          elif pending is not None and pending["date"] == today:
+              done(False, f"plan already sealed {today}; exiting without changes")
+          if chain:
+              if pending is not None:
+                  done(False, (
+                      f"::warning::plan {pending['date']} has no fill or close mark yet, "
+                      f"so {requested} cannot be sealed by the chain"
+                  ))
+              target, why = plan_target(records, requested)
+              if why or target != requested:
+                  done(False, f"{why or 'no session'}; nothing to seal")
+          done(True, f"seal allowed for {requested or 'the next session'}")
+          PY
       - name: Theme Radar history for the pre-open panel
+        if: steps.guard.outputs.go == 'true'
         run: |
           set -euo pipefail
           if ! git clone --filter=blob:none --no-checkout \
@@ -64,12 +259,31 @@ jobs:
             || echo "theme-radar checkout failed"
       - name: Refresh forward prices
         id: prices
+        if: steps.guard.outputs.go == 'true'
         env:
           FORWARD_BOOK: h1
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/prices.py
+      - name: Chain window re-check
+        id: window
+        if: always() && steps.guard.outputs.go == 'true'
+        env:
+          PLAN_SESSION: ${{ github.event.inputs.session_date }}
+          CHAIN: ${{ github.event.inputs.chain }}
+        run: |
+          set -euo pipefail
+          go=true
+          if [ "${CHAIN:-}" = "true" ]; then
+            today=$(TZ=America/New_York date +%F)
+            hm=$((10#$(TZ=America/New_York date +%H%M)))
+            if [ "$today" != "${PLAN_SESSION:-}" ] || [ "$hm" -lt 800 ] || [ "$hm" -ge 925 ]; then
+              echo "chain run outside 08:00-09:25 ET on ${PLAN_SESSION:-?} (now ${today} ${hm} ET); no seal, no commit"
+              go=false
+            fi
+          fi
+          echo "go=${go}" >> "$GITHUB_OUTPUT"
       - name: Seal the pre-open plan
         id: plan
-        if: success()
+        if: success() && steps.window.outputs.go == 'true'
         env:
           FORWARD_BOOK: h1
           HOLDUP_GIT_REF: origin/main
@@ -78,14 +292,37 @@ jobs:
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/forward.py
       - name: Refresh the h1 close display
         id: closes
-        if: success()
+        if: success() && steps.window.outputs.go == 'true'
         env:
           FORWARD_BOOK: h1
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_closes.py
       - name: Commit the append
-        if: always()
+        id: commit
+        if: always() && steps.guard.outputs.go == 'true' && steps.window.outputs.go == 'true'
+        env:
+          CHAIN: ${{ github.event.inputs.chain }}
         run: |
           set -euo pipefail
+          new_kinds=$(python3 - <<'PY'
+          import json
+          import subprocess
+
+          path = "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl"
+          old = subprocess.run(["git", "show", f"HEAD:{path}"], capture_output=True, check=True).stdout.splitlines()
+          with open(path, "rb") as fh:
+              cur = fh.read().splitlines()
+          print(" ".join(json.loads(line)["kind"] for line in cur[len(old):] if line.strip()))
+          PY
+          )
+          echo "new h1 lines: ${new_kinds:-none}"
+          if [ "${CHAIN:-}" = "true" ]; then
+            for kind in $new_kinds; do
+              if [ "$kind" != "plan" ]; then
+                echo "chain run appended a ${kind} line; the chain never commits anything but a plan"
+                exit 0
+              fi
+            done
+          fi
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
           files=(
@@ -111,6 +348,14 @@ jobs:
           git commit -m "Seal the next h1 plan."
           git pull --rebase origin main
           git push origin HEAD:main
+          case " ${new_kinds} " in
+            *" plan "*) echo "sealed=true" >> "$GITHUB_OUTPUT" ;;
+          esac
+      - name: Publish the h1 page
+        if: always() && steps.commit.outputs.sealed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-dashboard.yml --repo "${{ github.repository }}" --ref main
       - name: Fail the job when the book halted
         if: steps.prices.outcome == 'failure' || steps.plan.outcome == 'failure' || steps.closes.outcome == 'failure'
         run: exit 1
