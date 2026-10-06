@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T14:58:45.407764-04:00",
+  "generated_at": "2026-10-06T14:59:04.882174-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -830,7 +830,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=185",
-          "size": 1402395,
+          "size": 1402396,
           "said": "1d BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS \u00b7 0.51425",
           "bullets": []
         },
@@ -844,7 +844,7 @@
           "size": 67335,
           "said": "Stock book \u2014 2026-10-06",
           "bullets": [
-            "_Generated 2026-10-06T13:03:48.562837-04:00_",
+            "_Generated 2026-10-06T14:58:54.811342-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -908,7 +908,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=185",
-          "size": 1402395,
+          "size": 1402396,
           "said": "1d BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS \u00b7 0.51425",
           "bullets": []
         },
@@ -1113,31 +1113,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T06:04:35.784798-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-06_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 416258,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-06_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 41780,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-06\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-06\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "sector_board",
       "title": "Sector board",
@@ -4449,6 +4424,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T14:59:03.746371-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-06_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1402396,
+          "preview": "1d BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2403,
+          "preview": "green 151 \u00b7 GLBE, FORM, SIG, DOCU, SONO, EXLS, PAYS, PCTY, IT, SHOO"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2492,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12541,
+          "preview": "2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12541,
+          "preview": "2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "01_daily/2026-10-06_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 68420,
+          "preview": "# Stock book \u2014 2026-10-06\n_Generated 2026-10-06T14:58:54.811342-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 green 151 \u00b7 GLBE, FORM, SIG, DOCU, SONO, EXLS, PAYS, PCTY, IT, SHOO \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 # Stock book \u2014 2026-10-06\n_Generated 2026-10-06T14:58:54.811342-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
