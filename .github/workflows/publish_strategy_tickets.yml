@@ -4,8 +4,11 @@ name: Publish strategy tickets
 # The gate skips a run whose input hash already matches the landed
 # ticket, and that skip does not cancel an in-flight publish.
 # A newer hash still cancels the older publish job: latest inputs win.
-# webull_paper.yml is a separate schedule and still sends the sealed
-# h1 plan. paper_open's journal and client_order_id keep one send.
+# This workflow never places a Webull order. A ticket republish and a
+# stock-book rebuild (workflow_run from Stock Book ALL or Pre-Open ALL)
+# only write tickets. The sealed h1 paper send is webull_paper.yml before
+# 09:30 ET, with the ECS backstop as the other sender. A missed send
+# stays missed.
 on:
   workflow_dispatch:
     inputs:
@@ -130,24 +133,6 @@ jobs:
           PY
           test -s data/day_board/today_strategies.json
           test -s dashboard/factor-mine/strategy_tickets.json
-      - name: Submit sealed h1 paper standing batch
-        if: steps.readiness.outputs.ready == 'true'
-        continue-on-error: true
-        env:
-          WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
-          WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
-          WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
-        run: |
-          set -euo pipefail
-          # ACCOUNT_ID is optional. PaperAPI discovers the sandbox account
-          # when the app key and secret work. Soft-skip only if those are empty.
-          if [ -z "${WEBULL_APP_KEY:-}" ] || [ -z "${WEBULL_APP_SECRET:-}" ]; then
-            echo "WEBULL_APP_KEY or WEBULL_APP_SECRET unset; paper submit skipped"
-            exit 0
-          fi
-          pip install webull-openapi-python-sdk
-          # Sealed h1 plan for this session (forward_h1), not a HOT4 pick_day rebuild.
-          python -m src.paper_open --submit --ready --owner actions
       - name: Push tickets
         if: always() && steps.readiness.outputs.ready == 'true'
         env:
@@ -170,8 +155,6 @@ jobs:
             dashboard/factor-mine/today_strategies.json \
             dashboard/today_strategies.json \
             dashboard/factor-mine/today.json \
-            data/paper_open/ \
-            data/sleeve_merge/webull_last.json \
             data/day_board/hold_live_px.json \
             dashboard/factor-mine/hold_live_px.json \
             dashboard/sleeve-merge/index.html \

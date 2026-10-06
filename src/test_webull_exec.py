@@ -702,10 +702,17 @@ def test_yml_warms_before_bell_and_has_one_automatic_sender() -> None:
     assert "  push:" not in yml
     assert "src.webull_exec" not in (root / ".github/workflows/open_0930.yml").read_text()
     pub = (root / ".github/workflows/publish_strategy_tickets.yml").read_text()
-    assert "src.paper_open" in pub
-    assert "--submit" in pub
-    assert "--ready" in pub
-    assert "WEBULL_APP_KEY" in pub
+    assert "python -m src.paper_open" not in pub
+    assert "--submit" not in pub
+    assert "--ready" not in pub
+    assert "WEBULL_APP_KEY" not in pub
+    assert "data/paper_open/" not in pub
+    assert "webull_last.json" not in pub
+    assert "PAPER_OPEN_SENDER" in yml
+    assert "github.event_name == 'workflow_run'" in yml
+    assert "github.event_name == 'schedule'" not in yml
+    assert "inputs.submit" not in yml
+    assert "not the h1 seal; no paper submit and no paper_open write" in yml
     owner = (root / "00_grounding" / "paper_open_owner.json").read_text()
     assert '"owner": "actions"' in owner
 
@@ -856,6 +863,70 @@ def test_broker_guard_present_partial_and_query_failed() -> None:
     assert not journal.exists()
 
 
+def test_run_refuses_submit_after_the_open() -> None:
+    """``webull_exec --submit`` and sleeve_merge ``--submit-webull`` share this."""
+    from datetime import datetime
+    from unittest import mock
+    from src import webull_exec as we
+
+    class Alive:
+        env = "paper"
+        host = "api.sandbox.webull.com"
+        err = None
+
+        def connect(self):
+            return True
+
+        def snapshot(self):
+            return BrokerSnap(env="paper", cash=1_000_000, positions={},
+                              connected=True, acc_id="paper-1")
+
+        def place(self, *a, **k):
+            raise AssertionError("late webull_exec submit must not place")
+
+        def place_batch(self, *a, **k):
+            raise AssertionError("late webull_exec submit must not place")
+
+    card = {
+        "date": "2026-10-06", "stale": False, "policy": HOT4,
+        "tickets": [
+            {"side": "BUY", "ticker": "PACB", "shares": 1113, "px": 2.87,
+             "status": "plan", "date": "2026-10-06"},
+            {"side": "BUY", "ticker": "DNA", "shares": 214, "px": 3.0,
+             "status": "plan", "date": "2026-10-06"},
+            {"side": "BUY", "ticker": "QSI", "shares": 2482, "px": 2.0,
+             "status": "plan", "date": "2026-10-06"},
+        ],
+        "would_buy": {"rows": []},
+        "skipped": [],
+        "hard_red": False,
+    }
+    late = datetime.fromisoformat("2026-10-06T10:17:54-04:00")
+    with mock.patch.object(we, "PaperAPI", return_value=Alive()), \
+            mock.patch.object(we, "_plan", return_value=card), \
+            mock.patch.object(we, "write_last") as wrote, \
+            mock.patch.object(we, "inject_today_from_disk"):
+        rc = we.run("2026-10-06", submit=True, write=True, source="hot4", clock=late)
+    assert rc == 2
+    last = wrote.call_args[0][0]
+    assert last["status"] == "missed_deadline"
+    assert last["submit"] is False
+    assert last["sent"]
+    assert all(row["status"] == "dry_run" for row in last["sent"])
+    early = datetime.fromisoformat("2026-10-06T08:41:00-04:00")
+    with mock.patch.object(we, "PaperAPI", return_value=Alive()), \
+            mock.patch.object(we, "_plan", return_value=card), \
+            mock.patch.object(we, "write_last") as wrote_early, \
+            mock.patch.object(we, "inject_today_from_disk"):
+        rc_early = we.run(
+            "2026-10-06", submit=True, write=True, source="hot4", clock=early)
+    assert rc_early == 2
+    early_last = wrote_early.call_args[0][0]
+    assert early_last["status"] == "refused"
+    assert early_last["submit"] is False
+    assert all(row["status"] == "dry_run" for row in early_last["sent"])
+
+
 def main() -> None:
     test_refuse_real_without_flags()
     test_paper_never_uses_live_host()
@@ -884,7 +955,8 @@ def main() -> None:
     test_place_batch_skips_leg_that_cannot_buy_one_share()
     test_place_batch_keeps_haircut_plan_when_preopen_cash_is_unchanged()
     test_rejected_leg_does_not_reserve_cash()
-    print("test_webull_exec: 27 ok")
+    test_run_refuses_submit_after_the_open()
+    print("test_webull_exec: 28 ok")
 
 
 if __name__ == "__main__":

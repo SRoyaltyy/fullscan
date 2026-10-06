@@ -226,8 +226,11 @@ fi
 # Bell-wait path. Do not add the standing flag: after 09:30 a standing
 # MARKET order would fill at the live print. paper_open records
 # missed_deadline instead. Owner actions is the configured sender.
+# PAPER_OPEN_SENDER=backstop is the only non-seal process allowed to
+# pass --submit. A start at or after 09:30 places nothing.
 # Unset anything that would point PaperAPI at the live host.
 unset WEBULL_LIVE || true
+export PAPER_OPEN_SENDER=backstop
 export PYTHONPATH="$ROOT${PYTHONPATH:+:$PYTHONPATH}"
 set +e
 "$PY" -m src.paper_open --submit --owner actions

@@ -353,7 +353,8 @@ def test_write_saves_send_inputs_beside_the_dated_ticket(tmp=None) -> None:
     yml = (root / ".github/workflows/publish_strategy_tickets.yml").read_text(
         encoding="utf-8")
     assert "data/factor_mine/send_inputs/${DATE}.json" in yml
-    assert "python -m src.paper_open --submit --ready --owner actions" in yml
+    assert "python -m src.paper_open" not in yml
+    assert "--submit" not in yml
 
 
 def main() -> None:

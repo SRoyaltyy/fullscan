@@ -379,7 +379,11 @@ def test_later_fallback_schedule_preserves_first_attempt(tmp_path):
     with patch.object(po, 'remote_session_journal', return_value=None):
         assert po.run(submit=True,clock=lambda:BELL+timedelta(minutes=10),api=api,state_dir=tmp_path)==0
     assert not api.calls
-    assert json.loads((tmp_path/f'{DATE}_status.json').read_text())==original
+    saved = json.loads((tmp_path/f'{DATE}_status.json').read_text())
+    assert saved['status'] == original['status']
+    assert saved['sent'] == original['sent']
+    assert saved['events'][-1]['submit'] is False
+    assert saved['events'][-1]['status'] == 'missed_deadline'
 
 
 def early_payload():
@@ -535,16 +539,28 @@ def test_fallback_run_noops_on_remote_ready_journal(tmp_path):
 
 
 def test_ready_submit_after_bell_when_decisions_arrive_late(tmp_path):
+    """At 09:30 the standing path records a miss. It does not buy the print."""
     api = API()
     late = datetime.fromisoformat(DATE + 'T10:05:00-04:00')
     p = payload()
     p['decision_readiness']['completed_at'] = (BELL + timedelta(minutes=20)).isoformat()
+    loaded = []
+
+    def loader(_date):
+        loaded.append(_date)
+        return p
+
     with patch.object(we, 'write_last'), \
             patch.object(po, 'remote_session_journal', return_value=None):
-        rc = po.submit_ready(submit=True, clock=lambda: late, loader=lambda _: p,
+        rc = po.submit_ready(submit=True, clock=lambda: late, loader=loader,
                              api=api, state_dir=tmp_path)
-    assert rc == 0
-    assert len(api.calls) == 1
+    assert rc == 2
+    assert api.calls == []
+    assert loaded == []
+    assert not (tmp_path / f'{DATE}_submit.json').exists()
+    saved = json.loads((tmp_path / f'{DATE}_status.json').read_text())
+    assert saved['status'] == 'missed_deadline'
+    assert saved['submit'] is False
     with pytest.raises(ValueError, match='after decision clock'):
         po.make_plan(p, API().snapshot(), late)
 
@@ -560,9 +576,18 @@ def test_owner_gate_actions_blocks_ecs(tmp_path, monkeypatch):
         assert po.main(['--submit', '--ready', '--owner', 'ecs']) == 0
         ready.assert_not_called()
         run.assert_not_called()
+        assert po.main(['--submit', '--ready', '--owner', 'actions']) == 2
+        ready.assert_not_called()
+        monkeypatch.setenv('PAPER_OPEN_SENDER', 'seal')
         assert po.main(['--submit', '--ready', '--owner', 'actions']) == 0
         ready.assert_called_once()
         run.assert_not_called()
+        monkeypatch.delenv('PAPER_OPEN_SENDER')
+        assert po.main(['--submit', '--owner', 'actions']) == 2
+        run.assert_not_called()
+        monkeypatch.setenv('PAPER_OPEN_SENDER', 'backstop')
+        assert po.main(['--submit', '--owner', 'actions']) == 0
+        run.assert_called_once()
 
 
 def test_committed_owner_is_actions():
@@ -1039,3 +1064,179 @@ def test_cancel_order_reuses_probe_call():
     api.host = 'api.webull.com'
     with pytest.raises(RuntimeError, match='sandbox'):
         api.cancel_order('OID-9')
+
+
+INCIDENT_DAY = '2026-10-06'
+INCIDENT_AT = datetime.fromisoformat(INCIDENT_DAY + 'T10:17:54-04:00')
+MORNING_MISS = {
+    'date': INCIDENT_DAY,
+    'status': 'missed_deadline',
+    'observed_at': INCIDENT_DAY + 'T09:34:28.027503-04:00',
+}
+# Names the 10:17 ET standing submit actually placed, plus FEAM which the
+# sandbox rejected. The regression must not send any of them.
+INCIDENT_NAMES = ('FEAM', 'GLND', 'NAUT', 'PACB', 'DNA', 'QSI')
+
+
+def _incident_payload():
+    p = payload()
+    p['date'] = INCIDENT_DAY
+    p['decision_readiness']['completed_at'] = INCIDENT_DAY + 'T10:00:00-04:00'
+    p['decision_readiness']['fingerprint'] = 'ac14608197441d33'
+    hot = p['strategies'][we.HOT4]
+    hot['date'] = INCIDENT_DAY
+    hot['s'] = 2.623
+    hot['sell'] = [
+        {'ticker': t, 'side': 'long', 'px': 3.0} for t in ('FEAM', 'GLND', 'NAUT')
+    ]
+    hot['buy'] = [
+        {'ticker': t, 'side': 'long', 'px': 3.0} for t in ('PACB', 'DNA', 'QSI')
+    ]
+    return p
+
+
+class _IncidentAPI(API):
+    def snapshot(self):
+        return BrokerSnap(
+            env='paper', cash=1_000_000, connected=True,
+            positions={'FEAM': {'shares': 939}, 'GLND': {'shares': 633},
+                       'NAUT': {'shares': 1668}})
+
+    def place_batch(self, tickets):
+        names = [t.get('ticker') for t in tickets]
+        raise AssertionError('standing submit after 09:30 placed ' + ','.join(names))
+
+
+def test_standing_submit_at_1017_et_on_2026_10_06_sends_nothing(tmp_path):
+    """The publish-tickets run at 10:17:54 ET must not place or overwrite.
+
+    That morning the h1 send was already ``missed_deadline`` (09:34 ET).
+    The later standing batch used client ids ``fs20261006S<TICKER>`` and
+    acknowledged GLND, NAUT, PACB, DNA and QSI. FEAM was rejected. This
+    clock now appends an event and leaves the first record intact.
+    """
+    status = tmp_path / f'{INCIDENT_DAY}_status.json'
+    status.write_text(json.dumps(MORNING_MISS))
+    api = _IncidentAPI()
+    loaded = []
+
+    def loader(_date):
+        loaded.append(_date)
+        return _incident_payload()
+
+    with patch.object(we, 'write_last') as last, \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: INCIDENT_AT, loader=loader,
+            payload=_incident_payload(), api=api, state_dir=tmp_path)
+    assert rc == 2
+    assert api.calls == []
+    assert loaded == []
+    assert not (tmp_path / f'{INCIDENT_DAY}_submit.json').exists()
+    assert not last.called
+    saved = json.loads(status.read_text())
+    assert saved['status'] == 'missed_deadline'
+    assert saved['observed_at'] == MORNING_MISS['observed_at']
+    assert 'prepared_at' not in saved
+    assert saved.get('submit') is not True
+    assert saved['events'][-1]['status'] == 'missed_deadline'
+    assert saved['events'][-1]['submit'] is False
+    assert saved['events'][-1]['standing'] is True
+    assert saved['events'][-1]['source'] == 'submit_ready'
+
+
+def test_standing_submit_after_open_with_no_status_file_sends_nothing(tmp_path):
+    """Same 10:17 ET batch when the morning file is missing. Still no order."""
+    api = _IncidentAPI()
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: INCIDENT_AT,
+            loader=lambda _: _incident_payload(), api=api, state_dir=tmp_path)
+    assert rc == 2
+    assert api.calls == []
+    assert not (tmp_path / f'{INCIDENT_DAY}_submit.json').exists()
+    saved = json.loads((tmp_path / f'{INCIDENT_DAY}_status.json').read_text())
+    assert saved['status'] == 'missed_deadline'
+    assert saved['submit'] is False
+    assert saved['standing'] is True
+    assert 'events' not in saved
+    assert 'card' not in saved
+    assert 'prepared_at' not in saved
+
+
+def test_standing_release_at_the_bell_does_not_place(tmp_path):
+    bell = datetime.fromisoformat(INCIDENT_DAY + 'T09:30:00-04:00')
+    body = _incident_payload()
+    body['decision_readiness']['completed_at'] = INCIDENT_DAY + 'T09:00:00-04:00'
+    plan = po.make_plan(body, _IncidentAPI().snapshot(), bell - timedelta(seconds=15),
+                        allow_after_bell=True)
+    api = _IncidentAPI()
+    result = po.release(plan, api, lambda: bell, tmp_path / 'journal.json',
+                        submit=True, standing=True)
+    assert api.calls == []
+    assert result['status'] == 'missed_deadline'
+    assert result['submit'] is False
+    assert result['sent'] == []
+    assert not (tmp_path / 'journal.json').exists()
+    names = {t['ticker'] for t in plan['card']['tickets']}
+    assert names == set(INCIDENT_NAMES)
+
+
+def test_submitted_status_is_not_replaced(tmp_path):
+    original = {
+        'date': DATE, 'status': 'acknowledged', 'submit': True,
+        'sent': [{'ticker': 'ABC', 'order_id': 'OID-KEEP', 'status': 'acknowledged'}],
+    }
+    (tmp_path / f'{DATE}_status.json').write_text(json.dumps(original))
+    api = API()
+    early = datetime.fromisoformat(DATE + 'T08:41:00-04:00')
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: early, loader=lambda _: early_payload(),
+            api=api, state_dir=tmp_path)
+    assert rc == 0
+    assert api.calls == []
+    assert not (tmp_path / f'{DATE}_submit.json').exists()
+    saved = json.loads((tmp_path / f'{DATE}_status.json').read_text())
+    assert saved['status'] == 'acknowledged'
+    assert saved['sent'] == original['sent']
+    assert saved['events'][-1]['status'] == 'refused_existing_record'
+    assert saved['events'][-1]['submit'] is False
+
+
+def test_flatten_after_deadline_sends_nothing(tmp_path, monkeypatch):
+    _refuse_hot4(monkeypatch)
+    api = FlattenAPI()
+    late = datetime.fromisoformat(FLAT_DATE + 'T10:17:54-04:00')
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: late,
+            loader=lambda _: (_ for _ in ()).throw(AssertionError('loader')),
+            api=api, state_dir=tmp_path)
+    assert rc == 2
+    assert api.calls == []
+    assert api.events == []
+    assert not (tmp_path / f'{FLAT_DATE}_submit.json').exists()
+    saved = json.loads((tmp_path / f'{FLAT_DATE}_status.json').read_text())
+    assert saved['status'] == 'missed_deadline'
+    assert saved['submit'] is False
+
+
+def test_bell_path_started_after_the_open_sends_nothing(tmp_path):
+    api = _IncidentAPI()
+
+    def boom(*_a, **_k):
+        raise AssertionError('late bell path must not wait or load')
+
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.run(submit=True, clock=lambda: INCIDENT_AT, sleep=boom, loader=boom,
+                    api=api, state_dir=tmp_path)
+    assert rc == 2
+    assert api.calls == []
+    saved = json.loads((tmp_path / f'{INCIDENT_DAY}_status.json').read_text())
+    assert saved['status'] == 'missed_deadline'
+    assert saved['submit'] is False

@@ -16,8 +16,8 @@ Official OpenAPI sandbox is the in-app Paper Trading book
 App key + secret are auto-approved for sandbox in a few minutes.
 
     python -m src.webull_exec --date 2026-10-02          # dry-run sealed h1
-    python -m src.webull_exec --date 2026-10-02 --submit  # paper MARKET
-    python -m src.webull_exec --source flatten --submit   # flatten escape
+    python -m src.webull_exec --date 2026-10-02 --submit  # refused; seal and ECS backstop only
+    python -m src.webull_exec --source flatten --submit   # refused; seal and ECS backstop only
 
 REAL is refused unless --env real AND --live AND WEBULL_LIVE=1.
 Paper never talks to api.webull.com. Do not enable --env real here.
@@ -80,6 +80,24 @@ def _env(name: str, default: str = "") -> str:
     if len(raw) >= 2 and raw[0] == raw[-1] and raw[0] in ("\"", "'"):
         raw = raw[1:-1].strip()
     return raw
+
+
+def at_or_after_open_deadline(clock: datetime | None = None) -> bool:
+    """True at 09:30:00 ET and any later clock on that same civil day.
+
+    Standing sandbox orders have to be resting before the open. A MARKET
+    sent at or after 09:30 fills at the live print. Callers that are not
+    the pre-armed bell release (the 0–2s window inside ``paper_open``)
+    must not place once this is true.
+    """
+    zone = ZoneInfo("America/New_York")
+    current = clock or datetime.now(zone)
+    if current.tzinfo is None:
+        current = current.replace(tzinfo=zone)
+    else:
+        current = current.astimezone(zone)
+    target = current.replace(hour=9, minute=30, second=0, microsecond=0)
+    return current >= target
 
 
 def refuse_real(env: str, submit: bool, live_flag: bool) -> str | None:
@@ -1455,7 +1473,8 @@ def _plan(date: str, snap: BrokerSnap, *, source: str, combo: str) -> dict:
 
 def run(date: str | None, *, env: str = "paper", submit: bool = False,
         live: bool = False, write: bool = True, source: str = "hot4",
-        combo: str = PAPER_COMBO, allow_stale: bool = False) -> int:
+        combo: str = PAPER_COMBO, allow_stale: bool = False,
+        clock: datetime | None = None) -> int:
     requested_submit = submit
     env = "real" if env == "real" else "paper"
     source = _norm_source(source)
@@ -1519,7 +1538,28 @@ def run(date: str | None, *, env: str = "paper", submit: bool = False,
         print("[webull] stale look — dry-run only (pass --allow-stale "
               "to send Friday's list as today's tickets)")
         submit = False
+    # This CLI and sleeve_merge --submit-webull are not senders.
+    # The h1 seal and the ECS backstop go through paper_open. At or
+    # after 09:30 the refusal is a missed_deadline; before that it
+    # still places nothing.
+    late_refused = False
+    blocked_submit = False
+    if submit:
+        blocked_submit = True
+        if at_or_after_open_deadline(clock):
+            print("[webull] at or after 09:30 ET; paper submit refused")
+            late_refused = True
+        else:
+            print("[webull] paper submit refused; only the h1 seal and "
+                  "the ECS backstop place orders")
+        submit = False
     last = send_card(card, snap, submit=submit, opend=api, env=env)
+    if late_refused:
+        last["status"] = "missed_deadline"
+        last["submit"] = False
+    elif blocked_submit:
+        last["status"] = "refused"
+        last["submit"] = False
     last["host"] = api.host
     last["account_id"] = snap.acc_id
     last["source"] = source
@@ -1557,7 +1597,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--date", default="")
     ap.add_argument("--env", choices=("paper", "real"), default="paper")
     ap.add_argument("--submit", action="store_true",
-                    help="place paper orders (default is dry-run)")
+                    help="refused: paper orders are placed only by the h1 seal and the ECS backstop")
     ap.add_argument("--live", action="store_true",
                     help="required together with --env real and WEBULL_LIVE=1")
     ap.add_argument("--write", action="store_true", default=True)

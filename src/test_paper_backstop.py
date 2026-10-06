@@ -164,6 +164,7 @@ def test_workflow_and_timer_contract() -> None:
     assert "ecs_paper_backstop.sh" in service
     assert "ensure_openclaw" not in service
     assert "python -m src.paper_open --submit --owner actions" in script
+    assert "PAPER_OPEN_SENDER=backstop" in script
     assert '--found "$FOUND_JSON"' in script
     assert "--owner ecs" not in script
     assert "--ready" not in script
