@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T04:32:10.237515-04:00",
+  "generated_at": "2026-10-06T04:33:54.197423-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,49 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T04:22:36.601012-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-06_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 275479,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-06_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18823,
-          "preview": "# MAP HEAT \u2014 2026-10-06\nExport `finviz_2026-10-05.csv` \u00b7 11616 names \u00b7 generated 2026-10-06T04:22:36.554946-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-06\nExport `finviz_2026-10-05.csv` \u00b7 11616 names \u00b7 generated 2026-10-06T04:22:36.554946-04:00"
-    },
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T04:25:33.349288-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-10-06_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1122911,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -193,6 +150,41 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, DOCU, INOD, SKHY, SONO"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-06",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-06T04:33:33.811991-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T04:33:53.280452-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-06_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 6719258,
+          "preview": "raw=9433 usable=739 single=275 \u00b7 OPEC+ Has Deal Outline for Steady November Quotas, Delegates Say - Bloomberg.com | Inflation may force Fed rate hike this month, investor says - Reuters | TSX futures flat as investors cut rate hike expectations - Reuters | Asian shares track Wall Street higher, Treasury yields near multi-decade highs - | Treasury yields inch lower as investors pare back Fed rate hike bets - CNBC"
+        },
+        {
+          "path": "01_daily/news/2026-10-06_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12570,
+          "preview": "# News Parse v2 \u2014 2026-10-06T04:33:52.061942-04:00\nWindow\u224848h | news_mode=on | raw=9433 | usable=739 | single_name=275 | noise_dropped=8024\nusable polarity={'+': 34, '-': 134, 'mixed': 23, 'neutral': 548}"
+        }
+      ],
+      "preview": "raw=9433 usable=739 single=275 \u00b7 OPEC+ Has Deal Outline for Steady November Quotas, Delegates Say - Bloomberg.com | Inflation may force Fed rate hike this month, investor says - Reuters | TSX futures flat as investors cut rate hike expectations - Reuters | Asian shares track Wall Street higher, Treasury yields near multi-decade highs - | Treasury yields inch lower as investors pare back Fed rate hike bets - CNBC \u00b7 # News Parse v2 \u2014 2026-10-06T04:33:52.061942-04:00\nWindow\u224848h | news_mode=on | raw=9433 | usable=739 | single_name=275 | noise_dropped=8024\nusable polarity={'+': 34, '-': 134, 'mixed': 23, 'neutral': 548}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
