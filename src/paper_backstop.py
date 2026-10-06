@@ -23,13 +23,15 @@ from src.h1_sealed_exec import SealedH1Error, load_sealed_h1_plan
 
 ET = ZoneInfo("America/New_York")
 # Status values that mean a sandbox batch was already attempted.
-# missed_deadline / blocked / not_ready / broker_unavailable are not.
+# missed_deadline / blocked / not_ready / broker_unavailable / query_failed
+# are not: a failed broker read placed nothing and may be tried again.
 ATTEMPTED_STATUSES = frozenset({
     "acknowledged",
     "no_trade",
     "dry_run",
     "failed",
     "releasing",
+    "already_submitted",
 })
 
 
@@ -109,6 +111,7 @@ def build_record(
     sealed: bool,
     submitted: bool,
     note: str = "",
+    found=None,
 ) -> dict:
     rec = {
         "date": date,
@@ -125,6 +128,8 @@ def build_record(
     }
     if note:
         rec["note"] = note
+    if found:
+        rec["found"] = found
     return rec
 
 
@@ -188,6 +193,8 @@ def main(argv: list[str] | None = None) -> int:
     w.add_argument("--sealed", required=True, choices=("true", "false"))
     w.add_argument("--submitted", required=True, choices=("true", "false"))
     w.add_argument("--note", default="")
+    w.add_argument("--found", default="",
+                   help="JSON list of sandbox orders already on the book")
 
     args = p.parse_args(argv)
     if args.cmd == "decide":
@@ -200,6 +207,11 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(rec))
         return 0
     clock = _parse_clock(args.started_at)
+    found = None
+    if getattr(args, "found", ""):
+        parsed = json.loads(args.found)
+        if isinstance(parsed, list) and parsed:
+            found = parsed
     rec = build_record(
         date=session_date(clock),
         started_at=clock.isoformat(),
@@ -209,6 +221,7 @@ def main(argv: list[str] | None = None) -> int:
         sealed=args.sealed == "true",
         submitted=args.submitted == "true",
         note=args.note,
+        found=found,
     )
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)

@@ -90,6 +90,8 @@ class API:
     def __init__(self): self.calls = []
     def connect(self): return True
     def snapshot(self): return BrokerSnap(env='paper', cash=1000, positions={}, connected=True)
+    def list_session_orders(self, date):
+        return []
     def place_batch(self, tickets):
         self.calls.append(tickets)
         return {we.client_order_id(t['date'], t['side'], t['ticker']):
@@ -404,6 +406,94 @@ def test_ready_submit_places_standing_orders_before_bell(tmp_path):
     assert body['order_type'] == 'MARKET'
     assert body['support_trading_session'] == 'CORE'
     assert body['time_in_force'] == 'DAY'
+
+
+class Book(API):
+    def __init__(self, rows=None, error=None):
+        super().__init__()
+        self.rows = list(rows or [])
+        self.error = error
+
+    def list_session_orders(self, date):
+        if self.error:
+            raise RuntimeError(self.error)
+        return list(self.rows)
+
+
+def _two_name_payload():
+    p = early_payload()
+    p['strategies'][we.HOT4]['buy'] = [
+        {'ticker': 'SDEV', 'px': 10, 'side': 'long'},
+        {'ticker': 'AAA', 'px': 10, 'side': 'long'},
+    ]
+    return p
+
+
+def test_orders_already_at_broker_write_already_submitted_without_status_file(tmp_path):
+    """A crash after the place, before any status file, must not send again."""
+    early = datetime.fromisoformat(DATE + 'T08:41:00-04:00')
+    body = _two_name_payload()
+    coid_s = we.client_order_id(DATE, 'BUY', 'SDEV')
+    assert coid_s == 'h1-' + DATE + '-SDEV-buy'
+    api = Book(rows=[
+        {'order_id': 'OID-S', 'client_order_id': coid_s, 'symbol': 'SDEV',
+         'side': 'BUY', 'status': 'FILLED', 'filled_time': DATE + 'T09:30:01-04:00'},
+        {'order_id': 'OID-A', 'client_order_id': 'older-id', 'symbol': 'AAA',
+         'side': 'BUY', 'status': 'SUBMITTED'},
+    ])
+    status = tmp_path / f'{DATE}_status.json'
+    assert not status.exists()
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: early, loader=lambda _: body,
+            api=api, state_dir=tmp_path)
+    assert rc == 0
+    assert api.calls == []
+    saved = json.loads(status.read_text())
+    assert saved['status'] == 'already_submitted'
+    assert {row['ticker'] for row in saved['found']} == {'SDEV', 'AAA'}
+    assert {row['match'] for row in saved['found']} == {'client_order_id', 'symbol_side'}
+
+
+def test_partial_broker_book_submits_only_the_missing_orders(tmp_path):
+    early = datetime.fromisoformat(DATE + 'T08:41:00-04:00')
+    body = _two_name_payload()
+    coid_s = we.client_order_id(DATE, 'BUY', 'SDEV')
+    api = Book(rows=[
+        {'order_id': 'OID-S', 'client_order_id': coid_s, 'symbol': 'SDEV',
+         'side': 'BUY', 'status': 'SUBMITTED'},
+    ])
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: early, loader=lambda _: body,
+            api=api, state_dir=tmp_path)
+    assert rc == 0
+    assert len(api.calls) == 1
+    assert [row['ticker'] for row in api.calls[0]] == ['AAA']
+    saved = json.loads((tmp_path / f'{DATE}_status.json').read_text())
+    assert saved['status'] == 'acknowledged'
+    assert [row['ticker'] for row in saved['found']] == ['SDEV']
+    by = {row['ticker']: row['status'] for row in saved['sent']}
+    assert by['SDEV'] == 'already_submitted'
+    assert by['AAA'] == 'acknowledged'
+
+
+def test_broker_query_failure_submits_nothing(tmp_path):
+    early = datetime.fromisoformat(DATE + 'T08:41:00-04:00')
+    api = Book(error='sandbox order list down')
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: early, loader=lambda _: _two_name_payload(),
+            api=api, state_dir=tmp_path)
+    assert rc == 2
+    assert api.calls == []
+    assert not (tmp_path / f'{DATE}_submit.json').exists()
+    saved = json.loads((tmp_path / f'{DATE}_status.json').read_text())
+    assert saved['status'] == 'query_failed'
+    assert saved['sent'] == []
 
 
 def test_ready_refire_does_not_double_place(tmp_path):

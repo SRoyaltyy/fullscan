@@ -45,9 +45,9 @@ import json
 import math
 import os
 import re
-import uuid
 from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from src.combo_broker import PAPER_COMBO, plan_combo_for_broker
 from src.futubull_exec import (
@@ -101,13 +101,203 @@ def paper_host(env: str) -> str:
     return PAPER_HOST
 
 
-def client_order_id(date: str, side: str, ticker: str) -> str:
-    """Stable ≤32-char id so a re-fire of the same morning does not double."""
-    day = re.sub(r"[^0-9]", "", str(date or ""))[:8]
-    sig = "B" if str(side).upper() == "BUY" else "S"
-    name = re.sub(r"[^A-Z0-9]", "", str(ticker or "").upper())[:16]
-    oid = f"fs{day}{sig}{name}"
-    return (oid or uuid.uuid4().hex)[:32]
+# Webull client_order_id is at most 32 characters. The sandbox accepted
+# hyphens (STANDTEST-20260918-1789726292). Letters, digits, and hyphens only.
+_CLIENT_ORDER_ID_MAX = 32
+
+
+def client_order_id(date: str, side: str, ticker: str, strategy: str = "h1") -> str:
+    """Deterministic id from the strategy, session date, ticker, and side.
+
+    Readable form, cut to Webull's 32-character limit:
+    ``h1-2026-10-07-SDEV-buy``. The same four fields always produce the
+    same id. It does not use a broker order id, a clock, or a random value,
+    so a crash before any local save still matches the order on the book.
+    """
+    strat = re.sub(r"[^A-Za-z0-9]", "", str(strategy or "")).lower() or "h1"
+    digits = re.sub(r"[^0-9]", "", str(date or ""))[:8]
+    if len(digits) == 8:
+        day = f"{digits[:4]}-{digits[4:6]}-{digits[6:8]}"
+    else:
+        day = digits
+    side_s = "buy" if str(side or "").upper() == "BUY" else "sell"
+    name = re.sub(r"[^A-Za-z0-9]", "", str(ticker or "").upper())
+    raw = f"{strat}-{day}-{name}-{side_s}"
+    if len(raw) <= _CLIENT_ORDER_ID_MAX:
+        return raw
+    # Date hyphens cost two characters. Drop them before shortening the ticker.
+    compact = f"{strat}-{digits}-{name}-{side_s}"
+    if len(compact) <= _CLIENT_ORDER_ID_MAX:
+        return compact
+    overhead = len(strat) + 1 + len(digits) + 1 + 1 + len(side_s)
+    room = _CLIENT_ORDER_ID_MAX - overhead
+    if room < 1:
+        squashed = re.sub(r"[^A-Za-z0-9]", "", f"{strat}{digits}{name}{side_s}")
+        return squashed[:_CLIENT_ORDER_ID_MAX]
+    return f"{strat}-{digits}-{name[:room]}-{side_s}"
+
+
+_DEAD_ORDER_STATUSES = frozenset({
+    "CANCELLED", "CANCELED", "REJECTED", "EXPIRED", "FAILED", "INACTIVE",
+})
+_ROW_DATE_KEYS = (
+    "trade_date", "order_date", "date",
+    "place_time", "create_time", "order_time", "filled_time",
+    "createTime", "orderTime", "filledTime", "placeTime",
+    "order_create_time",
+)
+
+
+def _norm_side(side) -> str:
+    raw = str(side or "").upper()
+    if raw in ("BUY", "B", "LONG"):
+        return "BUY"
+    if raw in ("SELL", "S", "SHORT"):
+        return "SELL"
+    return raw
+
+
+def _row_client_order_id(row: dict) -> str:
+    return str(row.get("client_order_id") or row.get("clientOrderId") or "").strip()
+
+
+def _row_symbol(row: dict) -> str:
+    return re.sub(
+        r"[^A-Z0-9]", "",
+        str(row.get("symbol") or row.get("ticker") or "").upper(),
+    )
+
+
+def order_blocks_resend(row: dict) -> bool:
+    """Open and filled orders block a second send. A cancel does not."""
+    if not isinstance(row, dict):
+        return False
+    status = str(
+        row.get("status") or row.get("order_status") or row.get("orderStatus") or ""
+    ).upper().replace(" ", "_")
+    if not status:
+        return True
+    return status not in _DEAD_ORDER_STATUSES
+
+
+def _row_session_dates(row: dict) -> set[str]:
+    found: set[str] = set()
+    for key in _ROW_DATE_KEYS:
+        val = row.get(key)
+        if val is None or val == "":
+            continue
+        text = str(val).strip()
+        match = re.search(r"(20\d{2}-\d{2}-\d{2})", text)
+        if match:
+            found.add(match.group(1))
+            continue
+        if text.isdigit() and len(text) >= 12:
+            try:
+                stamp = int(text)
+                if stamp > 10_000_000_000_000:
+                    stamp = stamp / 1000.0
+                if stamp > 10_000_000_000:
+                    stamp = stamp / 1000.0
+                found.add(datetime.fromtimestamp(
+                    stamp, ZoneInfo("America/New_York")).date().isoformat())
+            except (OverflowError, OSError, ValueError):
+                continue
+    return found
+
+
+def row_on_session(row: dict, date: str) -> bool:
+    """Keep undated rows. Drop a row whose timestamps are all another day."""
+    dates = _row_session_dates(row)
+    if not dates:
+        return True
+    return str(date or "") in dates
+
+
+def match_sealed_orders(tickets, rows, date: str, strategy: str = "h1"):
+    """Split a sealed-h1 batch into orders already on the book and the rest.
+
+    Match the derived ``client_order_id`` first. A same-day open or filled
+    row with the same symbol and side still counts, so an order placed under
+    an older id is not sent again. Returns ``(found, missing_tickets)``.
+    """
+    planned = []
+    for ticket in tickets or []:
+        if not isinstance(ticket, dict):
+            continue
+        side = _norm_side(ticket.get("side"))
+        coid = client_order_id(
+            str(ticket.get("date") or date or ""),
+            side,
+            ticket.get("ticker") or "",
+            strategy=strategy,
+        )
+        planned.append((ticket, side, coid))
+    live = []
+    for row in rows or []:
+        if not isinstance(row, dict):
+            continue
+        if not order_blocks_resend(row):
+            continue
+        if not row_on_session(row, date):
+            continue
+        live.append(row)
+    used: set[int] = set()
+    found = []
+    matched: set[int] = set()
+    derived = {coid for _, _, coid in planned}
+
+    def _hit(ticket, side, coid, row, how):
+        return {
+            "ticker": str(ticket.get("ticker") or ""),
+            "side": side,
+            "shares": ticket.get("shares"),
+            "client_order_id": coid,
+            "match": how,
+            "order_id": str(row.get("order_id") or row.get("orderId") or ""),
+            "broker_client_order_id": _row_client_order_id(row),
+            "symbol": str(row.get("symbol") or row.get("ticker") or ""),
+            "broker_side": str(row.get("side") or row.get("order_side") or ""),
+            "broker_status": str(
+                row.get("status") or row.get("order_status") or row.get("orderStatus") or ""
+            ),
+        }
+
+    for index, (ticket, side, coid) in enumerate(planned):
+        hit = None
+        for j, row in enumerate(live):
+            if j in used:
+                continue
+            if _row_client_order_id(row) == coid:
+                hit = j
+                break
+        if hit is None:
+            continue
+        used.add(hit)
+        matched.add(index)
+        found.append(_hit(ticket, side, coid, live[hit], "client_order_id"))
+    missing = []
+    for index, (ticket, side, coid) in enumerate(planned):
+        if index in matched:
+            continue
+        symbol = re.sub(r"[^A-Z0-9]", "", str(ticket.get("ticker") or "").upper())
+        hit = None
+        for j, row in enumerate(live):
+            if j in used:
+                continue
+            row_coid = _row_client_order_id(row)
+            if row_coid and row_coid in derived and row_coid != coid:
+                continue
+            row_side = _norm_side(
+                row.get("side") or row.get("order_side") or row.get("action"))
+            if _row_symbol(row) == symbol and row_side == side and symbol:
+                hit = j
+                break
+        if hit is None:
+            missing.append(ticket)
+            continue
+        used.add(hit)
+        found.append(_hit(ticket, side, coid, live[hit], "symbol_side"))
+    return found, missing
 
 
 def _as_list(payload) -> list:
@@ -671,7 +861,8 @@ def order_body(ticket: dict) -> dict:
         "combo_type": "NORMAL",
         "client_order_id": client_order_id(
             str(ticket.get("date") or ticket.get("asof") or ""),
-            side, ticket.get("ticker") or ""),
+            side, ticket.get("ticker") or "",
+            strategy="h1"),
         "symbol": str(ticket.get("ticker") or "").upper(),
         "instrument_type": "EQUITY",
         "market": "US",
@@ -773,6 +964,31 @@ def _walk_open_orders(payload) -> list:
         seen_coid.add(coid)
         identified.append(row)
     return identified
+
+
+def _try_history_call(api, fn, account_id: str, date: str):
+    """Try SDK history signatures. TypeError means the next signature.
+
+    Any other error fails this method. The caller tries the next method
+    and, if all of them fail, raises rather than treating it as no fills.
+    """
+    attempts = (
+        lambda: fn(account_id, start_date=date, end_date=date, page_size=200),
+        lambda: fn(account_id, start_date=date, end_date=date),
+        lambda: fn(account_id, date, date),
+        lambda: fn(account_id, date),
+        lambda: fn(account_id),
+    )
+    errors = []
+    for call in attempts:
+        try:
+            return api._json(call(), "filled_orders"), ""
+        except TypeError as exc:
+            errors.append(str(exc)[:80])
+            continue
+        except Exception as exc:  # noqa: BLE001 — next history method
+            return None, str(exc)[:160]
+    return None, " | ".join(errors) or "no signature"
 
 
 class PaperAPI:
@@ -905,6 +1121,88 @@ class PaperAPI:
         if open_payload is None:
             raise RuntimeError("open-order list failed: " + " | ".join(errors))
         return _walk_open_orders(open_payload)
+
+    def list_filled_orders(self, date: str) -> list:
+        """Filled and history rows for one session. A miss is an error.
+
+        An empty payload is a real empty book. No history method on the
+        client, or every call failing, is a failed query — callers must
+        not place while a fill may already be on the sandbox book.
+        """
+        if self.host != PAPER_HOST:
+            raise RuntimeError("paper-open refuses any non-sandbox host")
+        if self.trade is None:
+            raise RuntimeError(self.err or "not connected")
+        aid = self._ensure_account_id()
+        day = str(date or "")
+        names = (
+            "list_order_history",
+            "get_order_history",
+            "list_history_orders",
+            "get_history_orders",
+            "list_filled_orders",
+            "get_order_filled",
+            "list_today_orders",
+            "get_today_orders",
+        )
+        candidates = []
+        for label, obj in (
+            ("v3", getattr(self.trade, "order_v3", None)),
+            ("v2", getattr(self.trade, "order_v2", None)),
+        ):
+            if obj is None:
+                continue
+            for name in names:
+                fn = getattr(obj, name, None)
+                if callable(fn):
+                    candidates.append((f"{label}.{name}", fn))
+        if not candidates:
+            raise RuntimeError(
+                "filled-order list failed: no history method on the sandbox client")
+        errors = []
+        payload = None
+        for label, fn in candidates:
+            got, err = _try_history_call(self, fn, aid, day)
+            if got is not None:
+                payload = got
+                break
+            if err:
+                errors.append(f"{label}: {err}"[:180])
+        if payload is None:
+            raise RuntimeError("filled-order list failed: " + " | ".join(errors))
+        return _walk_open_orders(payload)
+
+    def list_session_orders(self, date: str) -> list:
+        """Today's open and filled sandbox orders. Either query failing raises.
+
+        Cancelled, rejected, and expired rows are dropped. A row dated on
+        another session is dropped. Undated open rows stay, because a
+        working order with no timestamp must still block a second send.
+        """
+        if self.host != PAPER_HOST:
+            raise RuntimeError("paper-open refuses any non-sandbox host")
+        open_rows = self.list_open_orders()
+        filled_rows = self.list_filled_orders(date)
+        seen = set()
+        out = []
+        for row in list(open_rows or []) + list(filled_rows or []):
+            if not isinstance(row, dict):
+                continue
+            if not order_blocks_resend(row):
+                continue
+            if not row_on_session(row, date):
+                continue
+            key = (
+                str(row.get("order_id") or row.get("orderId") or ""),
+                _row_client_order_id(row),
+                _row_symbol(row),
+                _norm_side(row.get("side") or row.get("order_side")),
+            )
+            if key in seen:
+                continue
+            seen.add(key)
+            out.append(row)
+        return out
 
     def cancel_order(self, order_id: str) -> dict:
         """Cancel one sandbox order. Same call as the standtest probe."""

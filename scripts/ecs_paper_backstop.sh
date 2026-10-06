@@ -16,8 +16,10 @@
 #    A start after 09:25 ET still writes that file with late=true.
 #
 # Paper/sandbox only. paper_open refuses a non-sandbox host, keeps the
-# 09:30 deadline on this path (bell wait, not a standing order), and will not resend once the
-# journal exists. Stable client_order_id is the broker duplicate lock.
+# 09:30 deadline on this path (bell wait, not a standing order), and will not
+# resend once the journal exists. Before it places anything it queries the
+# sandbox open and filled book. A matching client_order_id (or the same
+# symbol and side) is not sent again. A failed query places nothing.
 set -euo pipefail
 
 ROOT="${FULLSCAN_ROOT:-/home/gha/fullscan}"
@@ -39,6 +41,7 @@ LATE="false"
 SEALED="false"
 SUBMITTED="false"
 NOTE=""
+FOUND_JSON="[]"
 DAY=""
 START_ISO=""
 RC=0
@@ -103,7 +106,8 @@ finalize() {
     --late "$LATE" \
     --sealed "$SEALED" \
     --submitted "$SUBMITTED" \
-    --note "$NOTE" || echo "[paper-backstop] WARN: could not write $out"
+    --note "$NOTE" \
+    --found "$FOUND_JSON" || echo "[paper-backstop] WARN: could not write $out"
   echo "[paper-backstop] wrote $out action=$ACTION result=$RESULT late=$LATE"
   if [ -x "$ROOT/scripts/safe_git_push.sh" ] || [ -f "$ROOT/scripts/safe_git_push.sh" ]; then
     bash "$ROOT/scripts/safe_git_push.sh" \
@@ -236,6 +240,7 @@ if [ -f "$STATUS_FILE" ]; then
   if [ -n "$GOT" ]; then
     RESULT="$GOT"
   fi
+  FOUND_JSON="$("$PY" -c 'import json,sys; d=json.load(open(sys.argv[1])); print(json.dumps(d.get("found") or []))' "$STATUS_FILE" 2>/dev/null || printf '%s' '[]')"
 fi
 echo "[paper-backstop] paper_open rc=$RC result=$RESULT"
 if [ "$RC" -ne 0 ]; then

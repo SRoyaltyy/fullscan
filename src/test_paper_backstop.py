@@ -67,6 +67,8 @@ def test_missed_deadline_status_is_not_an_attempt() -> None:
     blocked = {"date": "2026-10-06", "status": "blocked"}
     assert already_attempted(None, blocked) is False
     assert already_attempted(None, {"status": "acknowledged"}) is True
+    assert already_attempted(None, {"status": "already_submitted"}) is True
+    assert already_attempted(None, {"status": "query_failed"}) is False
 
 
 def test_unsealed_day_does_not_send() -> None:
@@ -115,6 +117,27 @@ def test_late_record_keeps_the_flag(tmp_path=None) -> None:
     assert got["live"] is False
     assert got["owner"] == "actions"
     assert got["env"] == "paper"
+    found = [{
+        "ticker": "SDEV",
+        "client_order_id": "h1-2026-10-07-SDEV-buy",
+        "match": "client_order_id",
+    }]
+    dest2 = dest.parent / "found.json"
+    assert main([
+        "record",
+        "--out", str(dest2),
+        "--started-at", "2026-10-07T09:12:00-04:00",
+        "--action", "send",
+        "--result", "already_submitted",
+        "--late", "false",
+        "--sealed", "true",
+        "--submitted", "false",
+        "--found", json.dumps(found),
+    ]) == 0
+    listed = json.loads(dest2.read_text(encoding="utf-8"))
+    assert listed["result"] == "already_submitted"
+    assert listed["found"] == found
+    assert listed["live"] is False
 
 
 def test_workflow_and_timer_contract() -> None:
@@ -141,6 +164,7 @@ def test_workflow_and_timer_contract() -> None:
     assert "ecs_paper_backstop.sh" in service
     assert "ensure_openclaw" not in service
     assert "python -m src.paper_open --submit --owner actions" in script
+    assert '--found "$FOUND_JSON"' in script
     assert "--owner ecs" not in script
     assert "--ready" not in script
     assert "--env real" not in script
