@@ -1,11 +1,11 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T04:20:55.638108-04:00",
+  "generated_at": "2026-10-06T04:22:14.804399-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 1,
-    "partial": 3,
+    "ok": 2,
+    "partial": 2,
     "fail": 4,
     "n": 8
   },
@@ -174,6 +174,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-06\n**Generated:** 2026-10-06T04:20:55.403386-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a gap-up open as traders look to ADP jobs data, Fed speakers and oil prices after reduced Fed hike odds\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** LW\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** LW\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-06\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T04:22:14.590405-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-06_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 275477,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-06_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18823,
+          "preview": "# MAP HEAT \u2014 2026-10-06\nExport `finviz_2026-10-06.csv` \u00b7 11616 names \u00b7 generated 2026-10-06T04:22:14.529338-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-06\nExport `finviz_2026-10-06.csv` \u00b7 11616 names \u00b7 generated 2026-10-06T04:22:14.529338-04:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
