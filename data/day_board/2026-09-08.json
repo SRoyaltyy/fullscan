@@ -1,6 +1,6 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-10-06T15:41:10.611828-04:00",
+  "generated_at": "2026-10-06T15:41:40.060875-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [
@@ -269,12 +269,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 12924,
-          "said": "1. **Blowout jobs report fans Fed rate-HIKE fears; Dow/S&P close lower, Nasdaq held up by chips** \u2014 the single dominant macro driver: a hot labor print pushing",
+          "size": 14118,
+          "said": "1. **Blowout jobs report fans Fed rate-HIKE fears; Dow/S&P close lower, Nasdaq held up by chip strength** \u2014 dominant macro driver: a hot labor print that *raise",
           "bullets": [
-            "2. **Fed hike-odds whipsaw: October hike odds collapse to ~18\u201322% on a soft jobs miss (Kalshi/Binance/AMWatch) vs. Williams saying a late-2026 hike \"may be appropriate\"** \u2014 conflicting labor data + a hawkish voter is the unresolved policy binary that sets the discount rate.",
-            "3. **10Y/30Y Treasury yields hit 24-year highs; 2Y down** \u2014 a bear-steepening long-end back-up is the direct multiple/valuation headwind for SPX beta and rate-sensitive sectors.",
-            "4. **Gold slides >3% on Warsh's Jackson Hole hawkish comments lifting September hike expectations (AU); gold also bid on cut bets (B +8.2%)** \u2014 real-rate/rate-path signal that transmits to miners, defensives and the dollar."
+            "2. **Fed Chair Warsh: inflation \"too high\"; Williams says a late-2026 hike \"may be appropriate\"; October hike odds fall to ~17.7% after soft jobs data** \u2014 the policy path is the second leg of the same rates cluster and is internally contradictory (hawkish Chair vs. market cutting odds), which is itself the tradable signal. (channel: rates)",
+            "3. **10Y/30Y Treasury yields hit 24-year highs; mortgage rates rise as yields top 5%** \u2014 long-end term-premium shock is the transmission channel into duration-sensitive equities (REITs, utilities, small caps, unprofitable growth). (channel: rates)",
+            "4. **Nvidia AI deal + Dell server backlog spark semis rally; AMAT +5%, NVDA at record ~$5.76T, ALAB +12% on S&P 500 inclusion speculation** \u2014 the counterweight: AI-capex complex is the one sector with independent positive force strong enough to offset the rates drag on Nasdaq. (channel: sector_fundamental)"
           ]
         },
         {
@@ -367,7 +367,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 6995,
+          "size": 7778,
           "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False",
           "bullets": []
         },
@@ -377,11 +377,11 @@
           "path": "01_daily/2026-09-08_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 309,
-          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "reason": "ok=False Core general predict, events JSON, news judge, finviz digests, and map-heat tables are same-day and usable; news_actions",
+          "size": 1781,
+          "said": "ok=False \u00b7 Wrong date / stale scan: generated_at 2026-10-06, median_published 2026-10-05, and top items published Oct 5-6 2026 \u2014 the news set is a month after the 2026-09-08 session, not a same-day scan (the actions.json itself flags this as 'Wrong date'). 01_daily/news/2026-09-\u2026",
           "bullets": [
-            "Grok returned an empty review"
+            "Core general predict, events JSON, news judge, finviz digests, and map-heat tables are same-day and usable; news_actions is optional and its stale_news flag is consistent with the parsed.json problem. Two sector essays (technology, utilities) are carry-forward from the 2026-09-18 session and are failed, but 9 of 11 sector essays are quality-ok same-day artifacts, so the sector minimum is met. The decisive failure is news_parse: it is a month-late scan (Oct 5-6 items) masquerading as the 2026-09-08 packet, which is a required core file. map_heat_research shows phase=morning_refresh with a failed delta refresh falling back to last night's cards (142 cards, so card-count is fine), noted but not itself a fail."
           ]
         },
         {
@@ -760,12 +760,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 12924,
-          "said": "1. **Blowout jobs report fans Fed rate-HIKE fears; Dow/S&P close lower, Nasdaq held up by chips** \u2014 the single dominant macro driver: a hot labor print pushing",
+          "size": 14118,
+          "said": "1. **Blowout jobs report fans Fed rate-HIKE fears; Dow/S&P close lower, Nasdaq held up by chip strength** \u2014 dominant macro driver: a hot labor print that *raise",
           "bullets": [
-            "2. **Fed hike-odds whipsaw: October hike odds collapse to ~18\u201322% on a soft jobs miss (Kalshi/Binance/AMWatch) vs. Williams saying a late-2026 hike \"may be appropriate\"** \u2014 conflicting labor data + a hawkish voter is the unresolved policy binary that sets the discount rate.",
-            "3. **10Y/30Y Treasury yields hit 24-year highs; 2Y down** \u2014 a bear-steepening long-end back-up is the direct multiple/valuation headwind for SPX beta and rate-sensitive sectors.",
-            "4. **Gold slides >3% on Warsh's Jackson Hole hawkish comments lifting September hike expectations (AU); gold also bid on cut bets (B +8.2%)** \u2014 real-rate/rate-path signal that transmits to miners, defensives and the dollar."
+            "2. **Fed Chair Warsh: inflation \"too high\"; Williams says a late-2026 hike \"may be appropriate\"; October hike odds fall to ~17.7% after soft jobs data** \u2014 the policy path is the second leg of the same rates cluster and is internally contradictory (hawkish Chair vs. market cutting odds), which is itself the tradable signal. (channel: rates)",
+            "3. **10Y/30Y Treasury yields hit 24-year highs; mortgage rates rise as yields top 5%** \u2014 long-end term-premium shock is the transmission channel into duration-sensitive equities (REITs, utilities, small caps, unprofitable growth). (channel: rates)",
+            "4. **Nvidia AI deal + Dell server backlog spark semis rally; AMAT +5%, NVDA at record ~$5.76T, ALAB +12% on S&P 500 inclusion speculation** \u2014 the counterweight: AI-capex complex is the one sector with independent positive force strong enough to offset the rates drag on Nasdaq. (channel: sector_fundamental)"
           ]
         },
         {
@@ -877,9 +877,9 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "generated=2026-10-06T10:44:01.674224-04:00 last=2026-10-06",
+          "reason": "live-book poller + today.json (2026-09-08)",
           "size": 10249330,
-          "said": "generated=2026-10-06T10:44:01.674224-04:00 last=2026-10-06",
+          "said": "live-book poller + today.json (2026-09-08)",
           "bullets": []
         }
       ],
@@ -916,9 +916,9 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "generated=2026-10-06T10:44:01.674224-04:00 last=2026-10-06",
+          "reason": "live-book poller + today.json (2026-09-08)",
           "size": 10249330,
-          "said": "generated=2026-10-06T10:44:01.674224-04:00 last=2026-10-06",
+          "said": "live-book poller + today.json (2026-09-08)",
           "bullets": []
         },
         {
@@ -951,8 +951,8 @@
       "bullets": []
     }
   ],
-  "news_mode": "on",
-  "news_mode_reason": "",
+  "news_mode": "none_stale",
+  "news_mode_reason": "Wrong date / stale scan: generated_at 2026-10-06, median_published 2026-10-05, and top items published Oct 5-6 2026 \u2014 the news set is a month after the 2026-09-08 session, not a same-day scan (the actions.json itself flags this as 'Wrong date').",
   "selections": {
     "buy_1d": [
       {
@@ -1289,6 +1289,31 @@
         }
       ],
       "preview": "raw=607 usable=105 single=62 \u00b7 Gold rises on expectations of Fed rate hike will ease dollar, Treasury yield pre | Gold price rises as oil falls, Fed rate hike bets ease - Mining.com.au | Bank of Canada rate hike case weaker than Fed's, CIBC argues - Mortgage Professi | Trump Distances Himself From Fed Chair Warsh After Rate Hike, Blames 'Hostile' B | Bank of Canada faces weaker case for rate hike than Fed: CIBC - Canadian Mortgag \u00b7 # News Parse v2 \u2014 2026-10-06T15:41:08.818481-04:00\nWindow\u224848h | news_mode=on | raw=607 | usable=105 | single_name=62 | noise_dropped=440\nusable polarity={'+': 3, '-': 21, 'mixed': 7, 'neutral': 74}"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T15:41:39.001159-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-08_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 14118,
+          "preview": "# News Judge \u2014 2026-09-08"
+        },
+        {
+          "path": "01_daily/news/2026-09-08_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1419,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-08 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {

@@ -3,24 +3,19 @@
  "macros": [
   "hawkish",
   "bearish",
-  "mixed",
   "hawkish",
-  "bearish",
-  "mixed"
+  "bearish"
  ],
  "sector_tilts": {
   "Technology": "bullish",
+  "Utilities/Ipp": "bullish",
   "Healthcare": "bullish",
-  "Ai-Power": "bullish",
-  "Ai-Supply-Chain": "mixed"
+  "Financial": "mixed"
  },
  "tickers": {
-  "SMH": 4.0,
-  "ADI": 5.5,
   "NVDA": 4.0,
-  "XLV": 4.0,
-  "XLU": -1.5
+  "CEG": 5.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] Blowout jobs fans hike fears; hike-odds whipsaw vs. Williams hawkish (regime/1d-1w)\nMACRO rates: [bearish] 10Y/30Y at 24-yr highs, 2Y down \u2014 long-end back-up pressures multiples (regime/1w-1m)\nMACRO rates: [mixed] Fed minutes tomorrow = unresolved policy binary; treat labor+Williams as ONE cluster (session/1d)\nSECTOR semis: [bullish] NVDA AI deal + Dell backlog lift AMAT/ADI/ALAB; SMH/SOXX demand leg (SMH)\nSECTOR healthcare: [bullish] ABBV Phase 3 etentamig MM data + Apogee close; XLV/large-cap pharma sympathy (XLV)\nSECTOR AI-power: [bullish] Google nuclear bet on AI energy crunch; utilities/IPP basket (basket)\nSECTOR AI-supply-chain: [mixed] AVGO PT cut on AI concentration, APH -6.5% on Fabrinet/yields (basket)\nINTERACTION: Fed path + weak labor = ONE rates cluster; long-end back-up caps software/cyclicals \u2014 do not read chip-led Nasdaq as broad risk-on\nWATCH: macro set internally contradictory on Fed; if hike-odds resolve hawkish, semis demand leg may not hold SPX beta",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] Blowout jobs + Warsh \"inflation too high\" vs. Oct hike odds cut to 17.7% \u2014 unresolved Fed path (regime/1w-1m)\nMACRO rates: [bearish] 10Y/30Y at 24-yr highs, mortgage >5% \u2014 duration drag on REITs/utilities/IWM (regime/1w-1m)\nSECTOR semis: [bullish] NVDA AI deal + Dell backlog, AMAT +5%, ALAB +12% on S&P inclusion \u2014 SMH/SOXX leadership (session/1d-1w)\nSECTOR utilities/IPP: [bullish] Google 20-yr nuclear PPA with Constellation \u2014 AI-power demand re-rate (session/1w-1m)\nSECTOR healthcare: [bullish] ABBV Phase 3 etentamig MM data + Apogee close \u2014 XBI/IBB sympathy (session/1d-1w)\nSECTOR financials: [mixed] Fed supervision overhaul (12\u21925 regions), Powell subpoena block \u2014 XLF policy uncertainty (session/1w)\nINTERACTION: Fed path + weak labor = ONE rates cluster (do not double-count); AI-capex strength does NOT imply broad tech risk-on while long yields back up\nWATCH: contradictory jobs wires (blowout vs. soft) \u2014 treat rates regime as unresolved; do not emit directional SPX call off the labor headline alone",
  "date": "2026-09-08"
 }

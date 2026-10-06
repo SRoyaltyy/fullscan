@@ -1,14 +1,22 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-10-06T15:41:09.498051-04:00",
+  "generated_at": "2026-10-06T15:41:38.957409-04:00",
   "all_ok": false,
   "qc_all_ok": false,
   "book_ok": false,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "(review)",
-      "reason": "empty_review_reply"
+      "path": "01_daily/news/2026-09-08_parsed.json",
+      "reason": "Wrong date / stale scan: generated_at 2026-10-06, median_published 2026-10-05, and top items published Oct 5-6 2026 \u2014 the news set is a month after the 2026-09-08 session, not a same-day scan (the actions.json itself flags this as 'Wrong date')."
+    },
+    {
+      "path": "01_daily/sectors/2026-09-08/technology_predict.md",
+      "reason": "Wrong date: body is explicitly about the 2026-09-18 session (FOMC printed 09-16, BOJ hiked 09-18, Apple iPhone 18 availability 09-18, tape 'through 2026-09-17'), not 2026-09-08."
+    },
+    {
+      "path": "01_daily/sectors/2026-09-08/utilities_predict.md",
+      "reason": "Wrong date: body is explicitly about the 2026-09-18 session (post-FOMC 09-17 tape, triple witching 09-18, tape 'through 2026-09-17'), not 2026-09-08."
     }
   ],
   "missing_required": [],
@@ -161,7 +169,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-08_judge.md",
-        "size": 12924
+        "size": 14118
       },
       {
         "kind": "news_parse",

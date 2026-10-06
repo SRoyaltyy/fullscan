@@ -1,6 +1,6 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-10-06T15:41:08.953705-04:00",
+  "generated_at": "2026-10-06T15:41:35.045601-04:00",
   "items": [
     {
       "ok": true,
@@ -29,7 +29,7 @@
       "kind": "news_judge",
       "path": "01_daily/news/2026-09-08_judge.md",
       "reason": "",
-      "size": 12924,
+      "size": 14118,
       "carried": false,
       "timeout": false,
       "empty": false,
