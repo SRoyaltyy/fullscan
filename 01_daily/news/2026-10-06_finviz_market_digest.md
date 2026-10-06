@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-06
 
-**Generated:** 2026-10-06T04:20:36.689590-04:00 (America/New_York)
+**Generated:** 2026-10-06T04:20:55.403386-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a gap-up open as traders look to ADP jobs data, Fed speakers and oil prices after reduced Fed hike odds
 **Prior close:** SPX —  Nasdaq —  Dow —
