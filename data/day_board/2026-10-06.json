@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T17:27:37.418732-04:00",
+  "generated_at": "2026-10-06T17:30:48.007486-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -560,8 +560,8 @@
           "path": "01_daily/weather/2026-10-06_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9479 vix=falling yields=rising",
-          "size": 9479,
+          "reason": "sectors=11 bytes=9478 vix=falling yields=rising",
+          "size": 9478,
           "said": "hostile 8 \u00b7 neutral 3",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities",
@@ -779,8 +779,8 @@
           "path": "01_daily/weather/2026-10-06_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9479 vix=falling yields=rising",
-          "size": 9479,
+          "reason": "sectors=11 bytes=9478 vix=falling yields=rising",
+          "size": 9478,
           "said": "hostile 8 \u00b7 neutral 3",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities",
@@ -1072,24 +1072,6 @@
     }
   },
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T07:10:55.585316-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-06_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -4548,6 +4530,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-06\n_Generated 2026-10-06T21:27:35 \u2014 live `flatten_robust`._\n**S=+2.62; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+2.62** (UP) \u00b7 route **io**\n- Cash leftover **$81,063.30** (after 09:30 $60,122.82 \u00b7 after 16:00 $83,762.73)\n- Prior close **$104,522.30** \u00b7 09:30 **$104,663.06** \u00b7 overnight **$+140.76** \u00b7 session **$-20,900.33** \u00b7 16:00 **$83,762.73**\n- Overnight lots **6** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$20,940.48** \u2264 leftover after sells **$104,703.19** \u00b7 2026-10-06 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_o"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T17:30:47.245685-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-06_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9478,
+          "preview": "weather sectors 11 \u00b7 Technology={'score': 2.701, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-06_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5257,
+          "preview": "# Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Technology={'score': 2.701, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
