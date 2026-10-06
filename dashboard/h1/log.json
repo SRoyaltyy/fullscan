@@ -6400,5 +6400,88 @@
     "sha256": "78696c365b4c4344a613cdbf3de32b3c580c8dd0b74ccd49041657b17f09e435",
     "shares": 104,
     "ticker": "TJGC"
+  },
+  {
+    "bar_cutoff": "2026-10-05",
+    "cash_before": 3.926193643773331,
+    "committed_at": "2026-10-06T12:41:31Z",
+    "date": "2026-10-06",
+    "excluded_unexplained_legs": [],
+    "finviz_source": {
+      "commit": "af68184f9259ba9065c10e4090071d3d8b3b9899",
+      "commit_time": "2026-10-05T20:49:08Z",
+      "file_sha256": "6e8fb52d441b5c32f9878f22a5ef2973686929e77367a18050da88949630d451",
+      "path": "data/snapshots/2026-10-05.csv",
+      "snapshot_date": "2026-10-05",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": 2.623,
+    "picks": [
+      {
+        "fv_avg_volume": 8682.45,
+        "fv_price": 3.94,
+        "rank": 1,
+        "sources": [
+          "yday_mover"
+        ],
+        "ticker": "SDEV"
+      },
+      {
+        "fv_avg_volume": 8822.59,
+        "fv_price": 2.87,
+        "rank": 2,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "PACB"
+      },
+      {
+        "fv_avg_volume": 1396.72,
+        "fv_price": 14.98,
+        "rank": 3,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "DNA"
+      },
+      {
+        "fv_avg_volume": 3688.45,
+        "fv_price": 1.28,
+        "rank": 4,
+        "sources": [
+          "yday_mover"
+        ],
+        "ticker": "QSI"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 939,
+        "ticker": "FEAM"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 633,
+        "ticker": "GLND"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 1668,
+        "ticker": "NAUT"
+      }
+    ],
+    "recipe": "union_hot_n4_h1__w0",
+    "s_source": {
+      "blob_sha": "ab862ba778bb14c5c35c193b268d61431dc698cd",
+      "kind": "predict",
+      "path": "01_daily/general/2026-10-06_predict.md",
+      "server_time_utc": "2026-10-06T16:48:07+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "83ab5fae400dffb26aad23e503fad59b772c18b7f2da84479612a08fcd3b46d7"
   }
 ]
