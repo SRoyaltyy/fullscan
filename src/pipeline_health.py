@@ -1217,20 +1217,33 @@ def check_preopen(report: Report, date: str) -> None:
              name="General market predict", group="preopen",
              path=gen / f"{date}_predict.md", required=True,
              expected_date=date, qc=output_qc.qc_general_predict)
+    sectors_required = output_qc.sector_predicts_required(date)
     n_ok = 0
     for sector in FINVIZ_SECTORS:
         p = sec / f"{_slug(sector)}_predict.md"
         before = len(report.checks)
+        if not sectors_required and not p.exists():
+            _add(report, step=f"preopen.sector.{_slug(sector)}",
+                 name=f"Sector predict — {sector}", group="preopen",
+                 status="OK", required=False,
+                 detail="optional — not run", path=str(p))
+            continue
         artifact(report, step=f"preopen.sector.{_slug(sector)}",
                  name=f"Sector predict — {sector}", group="preopen",
-                 path=p, required=True, expected_date=date,
+                 path=p, required=sectors_required, expected_date=date,
                  qc=output_qc.qc_sector_predict)
         if report.checks[-1].status == "OK" and len(report.checks) > before:
             n_ok += 1
+    if sectors_required:
+        count_status = "OK" if n_ok >= 8 else "FAIL"
+        count_detail = f"{n_ok}/11"
+    else:
+        count_status = "OK"
+        count_detail = f"{n_ok}/11 optional"
     _add(report, step="preopen.sector_count",
          name="≥8/11 quality sector predicts", group="preopen",
-         status="OK" if n_ok >= 8 else "FAIL", required=True,
-         detail=f"{n_ok}/11")
+         status=count_status, required=sectors_required,
+         detail=count_detail)
     artifact(report, step="preopen.board",
              name="Sector board JSON", group="preopen",
              path=sec / "_board.json", required=False, expected_date=date)

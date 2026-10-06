@@ -72,6 +72,53 @@ or
 {"ok": false, "fails": [{"path": "...", "reason": "..."}], "notes": "..."}
 """
 
+# Appended only on sessions where sector essays are optional (2026-10-07+).
+# The base SYSTEM stays unchanged so a review of an older day still
+# requires 8 of 11.
+_OPTIONAL_SECTOR_NOTE = """
+
+SECTOR PREDICTS ARE OPTIONAL on this date. Missing sector essays,
+including 0 of 11, must NOT be fails and must NOT set ok=false.
+Do not list a missing sector path in fails. General market predict
+stays required. A sector file that is present and is a timeout stub
+may be noted, but its absence must not fail the day.
+"""
+
+
+def system_for(date: str) -> str:
+    if output_qc.sector_predicts_required(date):
+        return SYSTEM
+    return SYSTEM + _OPTIONAL_SECTOR_NOTE
+
+
+def _sector_predict_fail(fail: dict) -> bool:
+    path = str((fail or {}).get("path") or "").replace("\\", "/")
+    return "/sectors/" in path and "predict" in path
+
+
+def without_optional_sector_misses(date: str, verdict: dict | None) -> dict:
+    """Drop sector-absence fails once sector essays are optional.
+
+    A verdict that failed only because sector files are missing becomes
+    ok. Other fails (general predict, events, parse, …) stay fails.
+    Does not call a model.
+    """
+    verdict = dict(verdict or {})
+    fails = list(verdict.get("fails") or [])
+    if output_qc.sector_predicts_required(date):
+        verdict["fails"] = fails
+        return verdict
+    kept = [
+        f for f in fails
+        if not (isinstance(f, dict) and _sector_predict_fail(f))
+    ]
+    verdict["fails"] = kept
+    if fails and not kept:
+        verdict["ok"] = True
+    elif kept:
+        verdict["ok"] = False
+    return verdict
+
 
 def _slug(sector: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", sector.lower()).strip("_")
@@ -115,6 +162,18 @@ def bundle_preopen(date: str, root: Path | None = None,
     if mechanical_report is not None:
         parts.append("MECHANICAL output_qc (regex) said:")
         parts.append(output_qc.render(mechanical_report))
+        if output_qc.sector_predicts_required(date):
+            sector_rule = (
+                "(3) a single missing sector if at least 8 of 11 sector essays "
+                "are quality-ok (list it in notes; ok stays true if the rest "
+                "of core is good)."
+            )
+        else:
+            sector_rule = (
+                "(3) sector predict files are optional on this date. Missing "
+                "sectors, including 0 of 11, must not fail the day and must "
+                "not appear in fails. General market predict stays required."
+            )
         parts.append(
             "Regex is necessary but not sufficient for CORE files. "
             "You may FAIL a file the regex passed. "
@@ -126,9 +185,7 @@ def bundle_preopen(date: str, root: Path | None = None,
             "phase=morning_bootstrap (expected until the first 22:00 post-close "
             "job — note it, keep ok=true); "
             "(2) map_heat_research phase=morning_bootstrap; "
-            "(3) a single missing sector if at least 8 of 11 sector essays are "
-            "quality-ok (list it in notes; ok stays true if the rest of core "
-            "is good)."
+            + sector_rule
         )
         parts.append("")
 
@@ -307,7 +364,8 @@ def _refresh_status(date: str, report: dict, grok: dict | None,
     missing = list(status.get("missing_required") or [])
     for kind in list(missing):
         if kind == "sector_predict":
-            if int(report.get("sector_n_ok") or 0) >= 8:
+            if (not output_qc.sector_predicts_required(date)
+                    or int(report.get("sector_n_ok") or 0) >= 8):
                 missing.remove(kind)
             continue
         rows = by_kind.get(kind) or []
@@ -327,6 +385,7 @@ def _refresh_status(date: str, report: dict, grok: dict | None,
         ],
     }
     if grok is not None:
+        grok = without_optional_sector_misses(date, grok)
         status["grok_ok"] = bool(grok.get("ok"))
         status["grok_fails"] = grok.get("fails") or []
     try:
@@ -408,7 +467,7 @@ def review_preopen(date: str, mechanical_report: dict | None = None,
     try:
         raw = chat_fn(
             [
-                {"role": "system", "content": SYSTEM},
+                {"role": "system", "content": system_for(date)},
                 {"role": "user", "content": prompt},
             ],
             model=config.MODEL_PREDICT,
@@ -425,6 +484,7 @@ def review_preopen(date: str, mechanical_report: dict | None = None,
                    "notes": str(e)[:400]}
     else:
         verdict = parse_verdict(raw or "")
+    verdict = without_optional_sector_misses(date, verdict)
 
     payload = {
         "date": date,
