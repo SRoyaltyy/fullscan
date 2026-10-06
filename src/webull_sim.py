@@ -89,6 +89,20 @@ class Schedule:
     retrieved: str
 
 
+# A plan that does not set a count or weights uses this slot. h1 sets its own count.
+SIZING_RULE = (
+    "When a plan does not set its own count or weights, each pick gets a slot of "
+    "equity ÷ max(20, that day's pick count). Equity is measured at that day's "
+    "09:30 open before buys. All of that day's picks are sized. None is dropped "
+    "for ranking, and the result does not depend on an unsealed order. "
+    "The plan sets no priority. A slot too small for one whole share logs "
+    "'no whole share'. 'No cash' happens only when held lots tie up the cash. "
+    "Those picks stay in the plan's listed order and are marked "
+    "'plan sets no priority'. A plan that sets its own count or weights "
+    "(for example h1) keeps that count or those weights."
+)
+
+
 @dataclass
 class Pick:
     ticker: str
@@ -96,6 +110,8 @@ class Pick:
     stop: Decimal | None = None
     target_pct: Decimal | None = None
     hold_sessions: int | None = None
+    shares: int | None = None
+    weight: Decimal | None = None
 
 
 @dataclass
@@ -181,6 +197,66 @@ def _book_exit(lot: Lot, price: Decimal, schedule: Schedule, reason: str, date: 
     }
 
 
+def equity_at_open(account: Account, bars: dict[str, dict]) -> Decimal:
+    """Equity at the 09:30 open, after open exits and before new buys."""
+    equity = account.cash
+    for lot in account.lots:
+        px = _bar_px(bars.get(lot.ticker), "open")
+        if px is None:
+            px = lot.entry_px
+        if lot.side == "long":
+            equity += px * Decimal(lot.shares)
+        else:
+            equity += (lot.entry_px - px) * Decimal(lot.shares)
+    return equity
+
+
+def resolve_sizing(picks: list[Pick], sizing: str) -> str:
+    """Explicit shares or weights on the plan outrank the default slot."""
+    if any(pick.shares is not None for pick in picks):
+        return "own_shares"
+    if any(pick.weight is not None for pick in picks):
+        return "own_weights"
+    if sizing == "own_count":
+        return "own_count"
+    return "slot"
+
+
+def sizing_label(mode: str, n: int) -> str:
+    if mode == "own_count":
+        if not n:
+            return "plan sets its own count; each slot is equity / that count"
+        return f"plan sets its own count ({n}); each slot is equity / {n}"
+    if mode == "own_weights":
+        return "plan sets its own weights"
+    if mode == "own_shares":
+        return "plan sets its own share count"
+    shown = n if n else "n"
+    return (
+        f"each slot is equity / max(20, {shown}) at the 09:30 open before buys; "
+        "all picks sized; plan sets no priority"
+    )
+
+
+def slot_budgets(equity: Decimal, picks: list[Pick], mode: str) -> list[Decimal]:
+    n = len(picks)
+    if n == 0:
+        return []
+    if mode == "own_weights":
+        weights = [pick.weight if pick.weight is not None else Decimal("0") for pick in picks]
+        total = sum(weights, Decimal("0"))
+        if total <= 0:
+            return [equity / Decimal(n)] * n
+        return [equity * weight / total for weight in weights]
+    if mode == "own_count":
+        slot = equity / Decimal(n)
+        return [slot] * n
+    if mode == "own_shares":
+        return [Decimal("0")] * n
+    slot = equity / Decimal(max(20, n))
+    return [slot] * n
+
+
 def apply_cash_exit(account: Account, lot: Lot, fill: dict) -> None:
     price = fill["price"]
     fee = fill["fee"]
@@ -200,6 +276,7 @@ def apply_session(
     schedule: Schedule,
     date: str,
     session_index: int,
+    sizing: str = "slot",
 ) -> list[dict]:
     """One session. Open exits and new buys use the open. Stop wins over target."""
     fills: list[dict] = []
@@ -229,10 +306,14 @@ def apply_session(
             kept.append(lot)
     account.lots = kept
 
-    ordered = sorted(picks, key=lambda p: (p.ticker, p.side))
-    for i, pick in enumerate(ordered):
+    # Listed order is the plan's order. It is not a rank. Every pick is sized.
+    mode = resolve_sizing(picks, sizing)
+    equity = equity_at_open(account, bars)
+    budgets = slot_budgets(equity, picks, mode)
+    for pick, budget in zip(picks, budgets):
         bar = bars.get(pick.ticker)
         opened = _bar_px(bar, "open")
+        entry_side = "buy" if pick.side == "long" else "sell"
         if opened is None:
             fills.append({
                 "ticker": pick.ticker, "side": pick.side, "shares": 0,
@@ -240,16 +321,39 @@ def apply_session(
                 "date": date,
             })
             continue
-        slots = len(ordered) - i
-        budget = account.cash / Decimal(slots)
-        entry_side = "buy" if pick.side == "long" else "sell"
-        shares = whole_shares(budget, opened, schedule, entry_side)
-        if shares < 1:
+        if mode == "own_shares":
+            requested = int(pick.shares or 0)
+            slot_shares = requested if requested > 0 else 0
+        else:
+            slot_shares = whole_shares(budget, opened, schedule, entry_side)
+        if slot_shares < 1:
             fills.append({
                 "ticker": pick.ticker, "side": entry_side, "shares": 0,
                 "price": opened, "fee": Decimal("0"), "reason": "no whole share",
                 "date": date,
             })
+            continue
+        affordable = whole_shares(account.cash, opened, schedule, entry_side)
+        shares = min(slot_shares, affordable)
+        if shares < 1:
+            # A flat account that cannot buy one share is "no whole share".
+            # "no cash" is only when held lots leave too little cash.
+            equity_shares = whole_shares(equity, opened, schedule, entry_side)
+            if mode == "own_shares" and equity_shares < 1:
+                fills.append({
+                    "ticker": pick.ticker, "side": entry_side, "shares": 0,
+                    "price": opened, "fee": Decimal("0"), "reason": "no whole share",
+                    "date": date,
+                })
+                continue
+            skipped = {
+                "ticker": pick.ticker, "side": entry_side, "shares": 0,
+                "price": opened, "fee": Decimal("0"), "reason": "no cash",
+                "date": date,
+            }
+            if mode == "slot":
+                skipped["mark"] = "plan sets no priority"
+            fills.append(skipped)
             continue
         fee = fee_for(schedule, entry_side, shares, opened)
         if pick.side == "long":
@@ -406,6 +510,7 @@ def make_row(
     picks: int,
     borrow: str = "",
     sandbox: str = "",
+    sizing: str = "",
 ) -> dict:
     return {
         "name": name,
@@ -426,6 +531,7 @@ def make_row(
         "picks": picks,
         "borrow": borrow,
         "sandbox": sandbox,
+        "sizing": sizing,
         "start_cash": q(START_CASH),
     }
 
@@ -486,7 +592,13 @@ def run_book(
         note = plan.get("note") or ""
         # A day before the lock can still be simulated once. The late commit
         # stays visible, and the result stays out of the locked section.
-        if day < FIRST_LOCKED and plan["picks"] and not tradable:
+        # A row that was not a pre-09:30 plan is not force-traded.
+        if (
+            day < FIRST_LOCKED
+            and plan["picks"]
+            and not tradable
+            and reason != "no pre-09:30 plan"
+        ):
             note = (note + " " + reason).strip()
             reason = ""
             tradable = True
@@ -507,13 +619,25 @@ def run_book(
                     if not bar or bar.get("open") is None:
                         opens_ok = False
         fills: list[dict] = []
-        if tradable and opens_ok:
+        mode = resolve_sizing(plan["picks"], plan.get("sizing") or "slot")
+        if tradable:
+            # One missing print does not drop the other picks. Each name is
+            # sized off the same open equity, or logged "open not observed".
             fills = apply_session(
                 account, plan["picks"], plan["exits"], bars, schedule,
-                day, index[day],
+                day, index[day], sizing=mode,
             )
-        elif tradable and not opens_ok:
-            reason = "open not observed"
+            if not opens_ok:
+                traded = any(fill.get("shares") for fill in fills)
+                if not traded:
+                    reason = "open not observed"
+                else:
+                    missing = [
+                        pick.ticker for pick in plan["picks"]
+                        if not (bars.get(pick.ticker) or {}).get("open")
+                    ]
+                    if missing:
+                        note = (note + " open not observed: " + ",".join(missing)).strip()
         equity, missing_marks = mark_equity(account, bars)
         if missing_marks:
             note = (note + " mark not observed, carried at entry: " + ",".join(missing_marks)).strip()
@@ -542,6 +666,7 @@ def run_book(
             picks=len(plan["picks"]),
             borrow=plan.get("borrow") or "",
             sandbox=sandbox,
+            sizing=sizing_label(mode, len(plan["picks"])),
         ))
     return rows
 
@@ -780,10 +905,15 @@ def load_h1_plans() -> list[dict]:
             for p in (row.get("picks") or [])
         ]
         exits = [str(s["ticker"]).upper() for s in (row.get("planned_sells") or [])]
-        note = "Sealed h1 plan log. Sim cash starts at $10,000 and is not the research book's cash."
+        note = (
+            "Sealed h1 plan log. The plan sets its own count and equal weight. "
+            "Sim cash starts at $10,000 and is not the research book's cash."
+        )
         if row.get("holdup_on"):
             note += " holdup_on."
-        plans.append(_plan(day, rel, sha, when, before, picks, exits, note=note))
+        plan = _plan(day, rel, sha, when, before, picks, exits, note=note)
+        plan["sizing"] = "own_count"
+        plans.append(plan)
     return plans
 
 
@@ -815,93 +945,216 @@ def load_shadow_plans() -> dict[str, list[dict]]:
     return books
 
 
-def parse_theme_log(text: str, commit: str, when: datetime | None) -> dict[str, list[dict]]:
-    reader = csv.DictReader(io.StringIO(text))
-    fields = set(reader.fieldnames or [])
-    rate_field = next((name for name in BORROW_FIELDS if name in fields), "")
-    books: dict[str, list[dict]] = {}
-    grouped: dict[tuple[str, str], list[Pick]] = {}
-    for row in reader:
+THEME_SOURCE = "SRoyaltyy/theme-radar:research/shadow_log/log.csv"
+THEME_CELLS = (
+    "fpe_delta_t3_earn_today_3d",
+    "fresh_dcp_t1_ep_ge03_2d",
+    "fresh_dcp_t1_avoid_ah_3d",
+)
+
+
+def _borrow_label(row: dict) -> str:
+    for name in BORROW_FIELDS:
+        if row.get(name):
+            return f"log field {name}={row[name]}"
+    return "borrow not modeled"
+
+
+def _theme_pick(row: dict) -> Pick | None:
+    ticker = (row.get("ticker") or "").upper()
+    if not ticker:
+        return None
+    try:
+        hold = int(row.get("hold_days") or "0")
+    except ValueError:
+        hold = 0
+    return Pick(ticker=ticker, side="short", hold_sessions=hold or None)
+
+
+def group_theme_rows(rows: list[dict]) -> dict[str, list[dict]]:
+    """One plan per cell and entry day, stamped with each row's first appearance.
+
+    A row whose first commit is at or after 09:30 ET on its entry day is not a
+    fill. The day still gets a visible row, reason ``no pre-09:30 plan``.
+    """
+    grouped: dict[tuple[str, str], list[dict]] = {}
+    for row in rows:
         cell = row.get("cell") or "theme_radar"
         day = row.get("entry") or row.get("date") or ""
-        ticker = (row.get("ticker") or "").upper()
-        if not day or not ticker:
+        if not day or not (row.get("ticker") or "").strip():
             continue
-        try:
-            hold = int(row.get("hold_days") or "0")
-        except ValueError:
-            hold = 0
-        grouped.setdefault((cell, day), []).append(
-            Pick(ticker=ticker, side="short", hold_sessions=hold or None)
-        )
-        if rate_field and row.get(rate_field):
-            grouped[(cell, day)]  # borrow attached below
-    # Re-read borrow per day from the first row that has it.
-    borrow_by: dict[tuple[str, str], str] = {}
-    if rate_field:
-        for row in csv.DictReader(io.StringIO(text)):
-            cell = row.get("cell") or "theme_radar"
-            day = row.get("entry") or row.get("date") or ""
-            if row.get(rate_field):
-                borrow_by[(cell, day)] = f"log field {rate_field}={row[rate_field]}"
-    for (cell, day), picks in sorted(grouped.items()):
-        borrow = borrow_by.get((cell, day), "borrow not modeled")
-        before = bool(when and before_open(when, day))
-        note = (
-            "Research short. Off the real Webull paper account. "
-            "Enters at the 09:30 open and covers at the open after the hold. "
-            + borrow + "."
-        )
-        plan = _plan(
-            day, "SRoyaltyy/theme-radar:research/shadow_log/log.csv",
-            commit, when, before, picks, [], note=note, borrow=borrow,
-        )
-        # Days before the lock stay in the built-after section even when the
-        # log commit is the morning of the first locked day.
-        books.setdefault(book_name(f"theme_radar_{cell}"), []).append(plan)
+        grouped.setdefault((cell, day), []).append(row)
+    books: dict[str, list[dict]] = {}
+    for (cell, day), day_rows in sorted(grouped.items()):
+        picks = []
+        early = []
+        late = []
+        for row in day_rows:
+            pick = _theme_pick(row)
+            if pick is None:
+                continue
+            when = row.get("_when")
+            if isinstance(when, datetime) and before_open(when, day):
+                early.append(row)
+                picks.append(pick)
+            else:
+                late.append(row)
+        borrow = "borrow not modeled"
+        for row in day_rows:
+            label = _borrow_label(row)
+            if label != "borrow not modeled":
+                borrow = label
+                break
+        name = book_name(f"theme_radar_{cell}")
+        if early and not late:
+            when = max(row["_when"] for row in early)
+            sha = next(row["_sha"] for row in early if row["_when"] == when)
+            note = (
+                "Research short. Off the real Webull paper account. "
+                "Enters at the 09:30 open and covers at the open after the hold. "
+                + borrow + "."
+            )
+            plan = _plan(
+                day, THEME_SOURCE, sha, when, True, picks, [],
+                note=note, borrow=borrow,
+            )
+        elif early and late:
+            when = max(row["_when"] for row in early)
+            sha = next(row["_sha"] for row in early if row["_when"] == when)
+            late_names = ", ".join(_theme_pick(row).ticker for row in late if _theme_pick(row))
+            note = (
+                "Research short. Off the real Webull paper account. "
+                "Enters at the 09:30 open and covers at the open after the hold. "
+                f"{late_names} first appeared after 09:30 ET on {day} and are not filled. "
+                + borrow + "."
+            )
+            plan = _plan(
+                day, THEME_SOURCE, sha, when, True, picks, [],
+                note=note, borrow=borrow,
+            )
+        else:
+            stamped = [row for row in late if isinstance(row.get("_when"), datetime)]
+            when = min((row["_when"] for row in stamped), default=None)
+            sha = ""
+            if when is not None:
+                sha = next(row["_sha"] for row in stamped if row["_when"] == when)
+            names = ", ".join(
+                pick.ticker for row in day_rows if (pick := _theme_pick(row)) is not None
+            )
+            kept = [pick for row in day_rows if (pick := _theme_pick(row)) is not None]
+            note = (
+                "Research short. Off the real Webull paper account. "
+                f"{names} first appeared after 09:30 ET on {day}. Not a fill. "
+                + borrow + "."
+            )
+            plan = _plan(
+                day, THEME_SOURCE, sha, when, False, kept, [],
+                note=note, borrow=borrow,
+            )
+            plan["reason"] = "no pre-09:30 plan"
+            plan["tradable"] = False
+        books.setdefault(name, []).append(plan)
     return books
 
 
-def load_theme_plans() -> dict[str, list[dict]]:
+def parse_theme_log(text: str, commit: str, when: datetime | None) -> dict[str, list[dict]]:
+    """Parse one log text. ``when`` is that text's first appearance."""
+    reader = csv.DictReader(io.StringIO(text))
+    rows = []
+    for row in reader:
+        stamped = dict(row)
+        stamped["_sha"] = commit
+        stamped["_when"] = when
+        rows.append(stamped)
+    return group_theme_rows(rows)
+
+
+def _theme_commits() -> list[dict]:
+    commits: list[dict] = []
+    page = 1
+    while page <= 20:
+        proc = subprocess.run(
+            ["gh", "api",
+             f"repos/SRoyaltyy/theme-radar/commits?path=research/shadow_log/log.csv&per_page=100&page={page}"],
+            cwd=ROOT, check=False, capture_output=True, text=True,
+        )
+        if proc.returncode != 0 or not proc.stdout.strip().startswith("["):
+            break
+        batch = json.loads(proc.stdout)
+        if not batch:
+            break
+        commits.extend(batch)
+        if len(batch) < 100:
+            break
+        page += 1
+    return commits
+
+
+def _theme_file(sha: str) -> str:
     proc = subprocess.run(
-        ["gh", "api", "repos/SRoyaltyy/theme-radar/contents/research/shadow_log/log.csv",
+        ["gh", "api",
+         f"repos/SRoyaltyy/theme-radar/contents/research/shadow_log/log.csv?ref={sha}",
          "-H", "Accept: application/vnd.github.raw"],
         cwd=ROOT, check=False, capture_output=True, text=True,
     )
-    meta = subprocess.run(
-        ["gh", "api", "repos/SRoyaltyy/theme-radar/commits?path=research/shadow_log/log.csv&per_page=1"],
-        cwd=ROOT, check=False, capture_output=True, text=True,
-    )
-    source = "SRoyaltyy/theme-radar:research/shadow_log/log.csv"
     if proc.returncode != 0 or not proc.stdout.strip():
-        return {
-            book_name(f"theme_radar_{cell}"): [
-                empty_plan(FIRST_LOCKED, "no pre-09:30 plan", "theme-radar log not readable this run")
-            ]
-            for cell in ("fpe_delta_t3_earn_today_3d", "fresh_dcp_t1_ep_ge03_2d", "fresh_dcp_t1_avoid_ah_3d")
-        }
-    when = None
-    sha = ""
-    if meta.returncode == 0 and meta.stdout.strip().startswith("["):
-        commits = json.loads(meta.stdout)
-        if commits:
-            sha = commits[0]["sha"]
-            when = datetime.fromisoformat(
-                commits[0]["commit"]["committer"]["date"].replace("Z", "+00:00")
-            )
-    books = parse_theme_log(proc.stdout, sha, when)
-    for plans in books.values():
+        raise FileNotFoundError(sha)
+    return proc.stdout
+
+
+def load_theme_plans() -> dict[str, list[dict]]:
+    """First appearance of each log row, compared with 09:30 ET on its entry day."""
+    unread = {
+        book_name(f"theme_radar_{cell}"): [
+            empty_plan(FIRST_LOCKED, "no pre-09:30 plan", "theme-radar log not readable this run")
+        ]
+        for cell in THEME_CELLS
+    }
+    commits = _theme_commits()
+    if not commits:
+        return unread
+    seen: set[tuple[str, str, str]] = set()
+    rows: list[dict] = []
+    for commit in reversed(commits):
+        sha = commit.get("sha") or ""
+        raw_when = ((commit.get("commit") or {}).get("committer") or {}).get("date") or ""
+        if not sha or not raw_when:
+            continue
+        when = datetime.fromisoformat(raw_when.replace("Z", "+00:00"))
+        try:
+            text = _theme_file(sha)
+        except FileNotFoundError:
+            continue
+        for row in csv.DictReader(io.StringIO(text)):
+            cell = row.get("cell") or "theme_radar"
+            day = row.get("entry") or row.get("date") or ""
+            ticker = (row.get("ticker") or "").upper()
+            if not day or not ticker:
+                continue
+            key = (cell, day, ticker)
+            if key in seen:
+                continue
+            seen.add(key)
+            stamped = dict(row)
+            stamped["_sha"] = sha
+            stamped["_when"] = when
+            rows.append(stamped)
+    if not rows:
+        return unread
+    books = group_theme_rows(rows)
+    for cell in THEME_CELLS:
+        name = book_name(f"theme_radar_{cell}")
+        plans = books.setdefault(name, [])
         if FIRST_LOCKED in {plan["date"] for plan in plans}:
             continue
-        before = bool(when and before_open(when, FIRST_LOCKED))
-        note = (
-            "Research short. Off the real Webull paper account. "
-            "borrow not modeled."
+        # A log with no row for this entry day is not a sealed sit.
+        plan = empty_plan(
+            FIRST_LOCKED,
+            "no pre-09:30 plan",
+            "No theme-radar row for this entry day was committed before 09:30 ET.",
         )
-        plans.append(_plan(
-            FIRST_LOCKED, source, sha, when, before, [], [],
-            note=note, borrow="borrow not modeled",
-        ))
+        plan["source"] = THEME_SOURCE
+        plans.append(plan)
     return books
 
 
@@ -1005,7 +1258,11 @@ def collect_books() -> dict[str, list[dict]]:
     for name, plans in list(books.items()):
         have = {plan["date"] for plan in plans}
         if FIRST_LOCKED not in have:
-            plans.append(empty_plan(FIRST_LOCKED, "no pre-09:30 plan"))
+            gap = empty_plan(FIRST_LOCKED, "no pre-09:30 plan")
+            modes = {plan.get("sizing") for plan in plans if plan.get("sizing")}
+            if len(modes) == 1:
+                gap["sizing"] = modes.pop()
+            plans.append(gap)
         plans.sort(key=lambda plan: plan["date"])
     for name, plans in static_gap_plans(days).items():
         books.setdefault(name, plans)
@@ -1159,18 +1416,21 @@ def render_md(rows: list[dict], schedule: Schedule) -> str:
         "Excel sleeves buy the next 09:30 open. Their research cards buy the signal-day close. "
         "The two results are not comparable. Theme Radar shorts stay off the real Webull paper account.",
         "",
+        SIZING_RULE,
+        "",
         f"Locked trade rows: {len(locked)}. Built after the fact: {len(built)}. "
         f"Visible, not a locked trade: {len(visible)}.",
         "",
         "## Locked and not-yet-locked",
         "",
-        "| Book | Date | Section | Reason | Picks | Equity | Fees | Commit ET | Source | SHA | Sandbox |",
-        "|---|---|---|---|---:|---:|---:|---|---|---|---|",
+        "| Book | Date | Section | Reason | Sizing | Picks | Equity | Fees | Commit ET | Source | SHA | Sandbox |",
+        "|---|---|---|---|---|---:|---:|---:|---|---|---|---|",
     ]
     show = [r for r in rows if r["date"] >= FIRST_LOCKED]
     for row in show:
         lines.append(
             f"| {row['name']} | {row['date']} | {row['section']} | {row['reason'] or 'traded'} | "
+            f"{row.get('sizing') or '—'} | "
             f"{row['picks']} | {_money(row['equity'])} | {_money(row['fees'])} | "
             f"{row['commit_et'] or '—'} | {row['source'] or '—'} | "
             f"{(row['commit'] or '—')[:12]} | {row['sandbox'] or '—'} |"
@@ -1181,8 +1441,8 @@ def render_md(rows: list[dict], schedule: Schedule) -> str:
         "",
         "These days were assembled from plans that already existed. They are not locked performance.",
         "",
-        "| Book | Days | Last equity | Last reason |",
-        "|---|---:|---:|---|",
+        "| Book | Days | Last equity | Last reason | Sizing |",
+        "|---|---:|---:|---|---|",
     ]
     by_name: dict[str, list[dict]] = {}
     for row in built:
@@ -1191,7 +1451,8 @@ def render_md(rows: list[dict], schedule: Schedule) -> str:
         group = by_name[name]
         last = group[-1]
         lines.append(
-            f"| {name} | {len(group)} | {_money(last['equity'])} | {last['reason'] or 'traded'} |"
+            f"| {name} | {len(group)} | {_money(last['equity'])} | {last['reason'] or 'traded'} | "
+            f"{last.get('sizing') or '—'} |"
         )
     lines += [
         "",
@@ -1211,7 +1472,8 @@ def render_html(rows: list[dict], schedule: Schedule) -> str:
         body.append(
             "<tr>"
             f"<td>{row['name']}</td><td>{row['date']}</td><td>{row['section']}</td>"
-            f"<td>{reason}</td><td>{row['picks']}</td><td>{_money(row['equity'])}</td>"
+            f"<td>{reason}</td><td>{row.get('sizing') or '—'}</td>"
+            f"<td>{row['picks']}</td><td>{_money(row['equity'])}</td>"
             f"<td>{row['commit_et'] or '—'}</td>"
             f"<td>{(row['commit'] or '—')[:12]}</td>"
             f"<td>{row['sandbox'] or '—'}</td>"
@@ -1236,8 +1498,9 @@ Earlier days stay in the built-after section.</p>
 <p class="note">Excel sim buys the next 09:30 open. The research card buys the signal-day close.
 Those numbers are not the same test. Theme Radar shorts are not sent to the Webull paper account.
 h1 sandbox fills read the paper-open journal and show "not observed" until a fill price is there.</p>
+<p class="note">{SIZING_RULE}</p>
 <table>
-<thead><tr><th>Book</th><th>Date</th><th>Section</th><th>Reason</th><th>Picks</th><th>Equity</th><th>Commit ET</th><th>SHA</th><th>Sandbox</th></tr></thead>
+<thead><tr><th>Book</th><th>Date</th><th>Section</th><th>Reason</th><th>Sizing</th><th>Picks</th><th>Equity</th><th>Commit ET</th><th>SHA</th><th>Sandbox</th></tr></thead>
 <tbody>
 {table}
 </tbody></table>

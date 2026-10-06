@@ -25,9 +25,11 @@ from src.webull_sim import (
     in_write_freeze,
     load_schedule,
     make_row,
+    group_theme_rows,
     parse_excel,
     parse_theme_log,
     q,
+    resolve_sizing,
     run_book,
     sandbox_label,
     seal_row,
@@ -182,11 +184,15 @@ def test_locked_section_does_not_inherit_built_after_pnl() -> None:
     )
     assert rows[0]["section"] == "built_after"
     assert rows[1]["section"] == "locked"
-    shares = whole_shares(START_CASH, Decimal("10"), fees, "buy")
+    slot = START_CASH / Decimal(20)
+    shares = whole_shares(slot, Decimal("10"), fees, "buy")
     spent = Decimal("10") * shares + fee_for(fees, "buy", shares, Decimal("10"))
     assert Decimal(rows[1]["cash"]) == START_CASH - spent
     assert rows[1]["positions"][0]["shares"] == shares
+    assert shares < whole_shares(START_CASH, Decimal("10"), fees, "buy")
     assert Decimal(rows[1]["equity"]) > Decimal(rows[0]["equity"])
+    assert "max(20, 1)" in rows[1]["sizing"]
+    assert "plan sets no priority" in rows[1]["sizing"]
 
 
 def test_sit_and_late_commit_are_visible_and_not_locked_trades() -> None:
@@ -322,6 +328,166 @@ def test_same_day_rerun_matches(tmp_path: Path) -> None:
     assert kept["cash"] == q(START_CASH)
 
 
+def _flat_bars(tickers: list[str], day: str, price: str) -> dict:
+    px = float(price)
+    return {ticker: {"open": px, "high": px, "low": px, "close": px} for ticker in tickers}
+
+
+def test_slot_is_equity_over_max_20_n() -> None:
+    fees = schedule()
+    account = Account()
+    picks = [Pick(f"N{i}", "long") for i in range(7)]
+    fills = apply_session(
+        account, picks, [], _flat_bars([p.ticker for p in picks], "2026-10-01", "10"),
+        fees, "2026-10-01", 0,
+    )
+    slot = START_CASH / Decimal(20)
+    shares = whole_shares(slot, Decimal("10"), fees, "buy")
+    assert shares == 49
+    assert [fill["reason"] for fill in fills] == ["open"] * 7
+    assert [fill["shares"] for fill in fills] == [shares] * 7
+    assert [fill["ticker"] for fill in fills] == [p.ticker for p in picks]
+    # Seven names do not split the book seven ways, and one name does not take it all.
+    assert shares != whole_shares(START_CASH / Decimal(7), Decimal("10"), fees, "buy")
+    assert account.cash > START_CASH - slot * 7
+
+
+def test_thirty_four_picks_get_thirty_four_equal_slots() -> None:
+    fees = schedule()
+    # Listed Z-to-A so a ticker sort would disagree with the plan.
+    picks = [Pick(f"T{i:02d}", "long") for i in range(33, -1, -1)]
+    assert len(picks) == 34
+    account = Account()
+    fills = apply_session(
+        account, picks, [], _flat_bars([p.ticker for p in picks], "2026-10-01", "10"),
+        fees, "2026-10-01", 0,
+    )
+    slot = START_CASH / Decimal(34)
+    shares = whole_shares(slot, Decimal("10"), fees, "buy")
+    assert [fill["ticker"] for fill in fills] == [p.ticker for p in picks]
+    assert [fill["reason"] for fill in fills] == ["open"] * 34
+    assert [fill["shares"] for fill in fills] == [shares] * 34
+    assert shares == whole_shares(START_CASH / Decimal(max(20, 34)), Decimal("10"), fees, "buy")
+    reversed_picks = list(reversed(picks))
+    other = Account()
+    other_fills = apply_session(
+        other, reversed_picks, [],
+        _flat_bars([p.ticker for p in reversed_picks], "2026-10-01", "10"),
+        fees, "2026-10-01", 0,
+    )
+    by_ticker = {fill["ticker"]: fill["shares"] for fill in fills}
+    assert {fill["ticker"]: fill["shares"] for fill in other_fills} == by_ticker
+
+
+def test_missing_open_does_not_drop_the_other_picks() -> None:
+    fees = schedule()
+    picks = [Pick("AAA", "long"), Pick("MISS", "long"), Pick("BBB", "long")]
+    bars = _flat_bars(["AAA", "BBB"], "2026-10-01", "10")
+    fills = apply_session(Account(), picks, [], bars, fees, "2026-10-01", 0)
+    slot = START_CASH / Decimal(20)
+    shares = whole_shares(slot, Decimal("10"), fees, "buy")
+    assert [fill["ticker"] for fill in fills] == ["AAA", "MISS", "BBB"]
+    assert fills[0]["reason"] == "open" and fills[0]["shares"] == shares
+    assert fills[1]["reason"] == "open not observed" and fills[1]["shares"] == 0
+    assert fills[2]["reason"] == "open" and fills[2]["shares"] == shares
+
+
+def test_no_cash_only_from_held_lots() -> None:
+    fees = schedule()
+    from src.webull_sim import Lot
+    held = Account(cash=Decimal("5"))
+    held.lots.append(Lot(
+        ticker="HELD", side="long", shares=100, entry_px=Decimal("100"),
+        entry_date="2026-09-30",
+    ))
+    picks = [Pick("BBB", "long"), Pick("AAA", "long")]
+    bars = _flat_bars(["HELD", "BBB", "AAA"], "2026-10-01", "10")
+    bars["HELD"] = {"open": 100, "high": 100, "low": 100, "close": 100}
+    fills = apply_session(held, picks, [], bars, fees, "2026-10-01", 1)
+    assert [fill["ticker"] for fill in fills] == ["BBB", "AAA"]
+    assert [fill["reason"] for fill in fills] == ["no cash", "no cash"]
+    assert [fill["mark"] for fill in fills] == ["plan sets no priority", "plan sets no priority"]
+    # A flat book whose slot cannot buy one share is not "no cash".
+    flat = Account()
+    pricey = apply_session(
+        flat, [Pick("ZZZ", "long")], [],
+        _flat_bars(["ZZZ"], "2026-10-01", "600"),
+        fees, "2026-10-01", 0,
+    )
+    assert pricey[0]["reason"] == "no whole share"
+    assert "mark" not in pricey[0]
+    assert flat.lots == []
+
+
+def test_own_count_precedence() -> None:
+    fees = schedule()
+    picks = [Pick(f"H{i}", "long") for i in range(4)]
+    bars = _flat_bars([p.ticker for p in picks], "2026-10-01", "10")
+    own = Account()
+    fills = apply_session(own, picks, [], bars, fees, "2026-10-01", 0, sizing="own_count")
+    slot = START_CASH / Decimal(4)
+    shares = whole_shares(slot, Decimal("10"), fees, "buy")
+    default_shares = whole_shares(START_CASH / Decimal(20), Decimal("10"), fees, "buy")
+    assert shares > default_shares
+    assert [fill["shares"] for fill in fills] == [shares] * 4
+    assert resolve_sizing(picks, "own_count") == "own_count"
+    weighted = [
+        Pick("W1", "long", weight=Decimal("1")),
+        Pick("W3", "long", weight=Decimal("3")),
+    ]
+    weighted_fills = apply_session(
+        Account(), weighted, [], _flat_bars(["W1", "W3"], "2026-10-01", "10"),
+        fees, "2026-10-01", 0,
+    )
+    assert weighted_fills[0]["shares"] == whole_shares(START_CASH / Decimal(4), Decimal("10"), fees, "buy")
+    assert weighted_fills[1]["shares"] == whole_shares(START_CASH * Decimal(3) / Decimal(4), Decimal("10"), fees, "buy")
+    assert resolve_sizing(weighted, "slot") == "own_weights"
+    counted = [Pick("S1", "long", shares=10), Pick("S2", "long", shares=10)]
+    counted_fills = apply_session(
+        Account(), counted, [], _flat_bars(["S1", "S2"], "2026-10-01", "10"),
+        fees, "2026-10-01", 0,
+    )
+    assert [fill["shares"] for fill in counted_fills] == [10, 10]
+    assert resolve_sizing(counted, "slot") == "own_shares"
+
+
+def test_theme_radar_late_first_appearance_is_not_a_fill() -> None:
+    text = (
+        "cell,date,ticker,entry,hold_days,exit_date,short_ret,short_ret_fee_only,"
+        "short_ret_fee_borrow,tape,feature_date,source,meta\n"
+        "cell_a,2026-10-05,AAA,2026-10-05,2,2026-10-07,0.1,0.09,0.08,down,2026-10-02,shadow,\n"
+    )
+    late = datetime(2026, 10, 5, 17, 0, tzinfo=ET)
+    books = parse_theme_log(text, "latecommit", late)
+    name = book_name("theme_radar_cell_a")
+    plan = books[name][0]
+    assert plan["reason"] == "no pre-09:30 plan"
+    assert plan["tradable"] is False
+    assert plan["commit"] == "latecommit"
+    assert [pick.ticker for pick in plan["picks"]] == ["AAA"]
+    early = datetime(2026, 10, 5, 8, 0, tzinfo=ET)
+    early_plan = group_theme_rows([{
+        "cell": "cell_a", "ticker": "BBB", "entry": "2026-10-05", "hold_days": "3",
+        "_sha": "earlycommit", "_when": early,
+    }])[name][0]
+    assert early_plan["tradable"] is True
+    assert early_plan["commit"] == "earlycommit"
+    assert early_plan["picks"][0].hold_sessions == 3
+
+    def bars_for(day, tickers):
+        return {ticker: {"open": 10, "high": 10, "low": 10, "close": 10} for ticker in tickers}
+
+    rows = run_book(
+        name, [plan], ["2026-10-05"], bars_for, schedule(),
+        datetime(2026, 10, 6, 12, tzinfo=ET),
+    )
+    assert rows[0]["section"] == "built_after"
+    assert rows[0]["reason"] == "no pre-09:30 plan"
+    assert rows[0]["fills"] == []
+    assert Decimal(rows[0]["cash"]) == START_CASH
+    assert rows[0]["picks"] == 1
+
+
 def test_workflow_is_after_the_freeze_and_on_ubuntu() -> None:
     text = (ROOT / ".github/workflows/webull_sim.yml").read_text(encoding="utf-8")
     assert "ubuntu-latest" in text
@@ -347,6 +513,12 @@ if __name__ == "__main__":
     test_sit_and_late_commit_are_visible_and_not_locked_trades()
     test_excel_final_file_counts_and_is_not_the_card()
     test_theme_radar_borrow_is_not_invented()
+    test_theme_radar_late_first_appearance_is_not_a_fill()
+    test_slot_is_equity_over_max_20_n()
+    test_thirty_four_picks_get_thirty_four_equal_slots()
+    test_missing_open_does_not_drop_the_other_picks()
+    test_no_cash_only_from_held_lots()
+    test_own_count_precedence()
     test_h1_sandbox_fill_not_observed()
     test_freeze_window()
     test_workflow_is_after_the_freeze_and_on_ubuntu()
