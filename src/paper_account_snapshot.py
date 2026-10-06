@@ -794,9 +794,8 @@ def run_snapshot(*, api=None, clock: datetime | None = None,
     except Exception as exc:  # noqa: BLE001
         raise RuntimeError("position snapshot failed: " + str(exc)[:240]) from exc
     if not getattr(snap, "connected", False):
-        raise RuntimeError(
-            getattr(snap, "error", None) or "position snapshot failed"
-        )
+        detail = getattr(snap, "error", None) or "not connected"
+        raise RuntimeError("position snapshot failed: " + str(detail)[:240])
     positions = position_rows(snap)
     collected = collect_orders(guard, moment)
     _assert_readonly(guard)
