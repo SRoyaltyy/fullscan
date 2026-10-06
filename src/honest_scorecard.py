@@ -220,6 +220,53 @@ def parse_flatten_card(text: str) -> tuple[float, float] | None:
     return money(found.group(1)), money(found.group(2))
 
 
+def flatten_bad_print(text: str, eq_0930: float, eq_close: float) -> str | None:
+    """A first card that took the planned buy out of equity and did not mark the shares.
+
+    The close column is a copy of the 09:30 price, and the session dollar
+    matches the planned buy. That is a units bug, not a day's result.
+    """
+    buy_match = re.search(r"Planned buy cost \*\*\$([\d,.]+)\*\*", text)
+    if not buy_match:
+        return None
+    buy = money(buy_match.group(1))
+    if buy is None or buy < 1000:
+        return None
+    session = float(eq_close) - float(eq_0930)
+    if abs(session + buy) > max(250.0, 0.05 * buy):
+        return None
+    rows = 0
+    copied = 0
+    cols: dict[str, int] = {}
+    active = False
+    for line in text.splitlines():
+        if not line.startswith("|"):
+            if active:
+                break
+            continue
+        cells = _cells(line)
+        if not cells or set(cells[0]) <= set("-: "):
+            continue
+        if cells[0].lower() == "ticker" and "close" in {cell.lower() for cell in cells}:
+            cols = {cell.lower(): i for i, cell in enumerate(cells)}
+            active = True
+            continue
+        if not active or "09:30" not in cols or "close" not in cols:
+            continue
+        if cols["close"] >= len(cells) or cols["09:30"] >= len(cells):
+            continue
+        rows += 1
+        if cells[cols["close"]] == cells[cols["09:30"]]:
+            copied += 1
+    if rows == 0 or copied != rows:
+        return None
+    return (
+        "known bad print: the planned buy was taken out of 16:00 equity "
+        "and every close price is a copy of the 09:30 price, so the new "
+        "shares were not marked"
+    )
+
+
 def parse_flatten_lots(text: str) -> dict[str, float]:
     """Day $ by ticker from the one-day session-mark table on a flatten card."""
     lots: dict[str, float] = {}
@@ -483,6 +530,7 @@ def flatten_prime(root: Path | None = None) -> dict[str, dict]:
                         "eq_0930": pair[0], "eq_close": pair[1],
                         "pnls": [], "lots": parse_flatten_lots(text),
                         "commit": commit,
+                        "bad_print": flatten_bad_print(text, pair[0], pair[1]),
                     }
                     break
     finally:
@@ -531,10 +579,13 @@ class Section:
     book: str = ""
     baseline: dict = field(default_factory=dict)
 
+    def _scored_days(self) -> list[dict]:
+        return [day for day in self.days if not day.get("bad_print")]
+
     @property
     def percents(self) -> list[float]:
         vals = []
-        for day in self.days:
+        for day in self._scored_days():
             pct = day_percent(day.get("eq_0930"), day.get("eq_close"))
             if pct is not None:
                 vals.append(pct)
@@ -543,7 +594,7 @@ class Section:
     @property
     def session_dollars(self) -> float | None:
         parts = []
-        for day in self.days:
+        for day in self._scored_days():
             if day.get("eq_0930") is None or day.get("eq_close") is None:
                 continue
             parts.append(float(day["eq_close"]) - float(day["eq_0930"]))
@@ -561,7 +612,7 @@ class Section:
 
     def lot_sums(self) -> dict[str, float]:
         totals: dict[str, float] = defaultdict(float)
-        for day in self.days:
+        for day in self._scored_days():
             for tick, got in (day.get("lots") or {}).items():
                 totals[tick] += float(got)
         return dict(totals)
@@ -694,6 +745,13 @@ def render_markdown(blocks: list[tuple[str, list[Section], str]],
                     if pct is None:
                         continue
                     commit = str(day.get("commit") or "")[:10]
+                    if day.get("bad_print"):
+                        details.append(
+                            f"| {day['date']} | known bad print | "
+                            f"{fmt_money(float(day['eq_close']) - float(day['eq_0930']))} "
+                            f"printed, not scored | {commit} |"
+                        )
+                        continue
                     details.append(
                         f"| {day['date']} | {fmt_pct(pct)} | "
                         f"{fmt_money(float(day['eq_close']) - float(day['eq_0930']))} | "
@@ -938,7 +996,7 @@ def describe_baselines(strategy_pct: float | None, draws: list[float] | None,
 
 def _priced_dates(section: Section) -> list[str]:
     dates = []
-    for day in section.days:
+    for day in section._scored_days():
         if day_percent(day.get("eq_0930"), day.get("eq_close")) is not None:
             dates.append(str(day["date"]))
     return dates
@@ -991,8 +1049,10 @@ def _attach_baselines(blocks, prices: dict, root: Path) -> None:
             else:
                 section.baseline = describe_baselines(None, None, iwm)
             if iwm is not None and len(iwm_dates) != len(dates):
+                missing = [day for day in dates if day not in set(iwm_dates)]
                 section.baseline["iwm"] += (
-                    f"; {len(dates) - len(iwm_dates)} day(s) had no IWM bar"
+                    f"; omitted {', '.join(missing)} (no IWM bar). "
+                    "IWM is the other scored days only, same Futubull fees."
                 )
 
 
@@ -1071,10 +1131,13 @@ def build_report(root: Path | None = None, *,
         "First locked-before-09:30 day is "
         f"{h1_first or 'none'}. "
         "09:30 equity is cash plus shares times the open_fill last price "
-        "(the morning book as printed). Close equity is mark.equity_primary. "
+        "(holdings store the open). Close equity is mark.equity_primary, "
+        "which matches cash plus that day's prices.jsonl close. "
         "Days with only a session line and no close mark have no day percent. "
         "A day after the first lock that was committed after 09:30 stays in "
-        "BUILT AFTER THE FACT.",
+        "BUILT AFTER THE FACT. The win rate counts closed trades only; "
+        "a name still held at the close is in the day percent and not in "
+        "that count. 2026-10-05 is SDEV, 1,222 shares, open 9.71 to close 3.94.",
     ))
 
     hold_days = read_jsonl_book(root / "research" / "hot_n4_clean_v4" / "forward" / "holdup_log.jsonl")
@@ -1105,7 +1168,10 @@ def build_report(root: Path | None = None, *,
         f"First ticket locked before 09:30 is {flat_first or 'none'}. "
         "A later day whose ticket was first committed after 09:30 is not in "
         "the live section. Sleeves share this card; the card is the daily record. "
-        "Closed-trade P/L is the round-trip blotter (after entry and exit fees).",
+        "Closed-trade P/L is the round-trip blotter (after entry and exit fees). "
+        "A known bad print is the first card whose session dollar matches the "
+        "planned buy and whose close price is a copy of the 09:30 price. "
+        "Those days stay in the table and are not in the compound.",
     ))
 
     watermark = factor_mine_watermark(root)
@@ -1142,7 +1208,13 @@ def build_report(root: Path | None = None, *,
         "split-adjusted open and sold at the close. IWM is buy-and-hold on "
         "Yahoo split-adjusted bars with the same fee schedule. "
         "Prices are not the raw on-disk OHLC store. A candidate with no "
-        "split-adjusted open and close that morning is left out of the draw."
+        "split-adjusted open and close that morning is left out of the draw. "
+        "RANDOM4 and IWM use the scored days of that same section and the "
+        "Futubull schedule in `00_grounding/futubull_fees.json` (the same "
+        "formula as `paper_trade.order_fees`). A known bad print is not a "
+        "scored day. A morning with no four priced names, or no IWM bar, is "
+        "named and left out of that baseline; the percentile uses the book "
+        "on the days that remain."
     )
     if not with_baselines:
         note += " Baselines are filled when --baselines can download split-adjusted Yahoo prices."

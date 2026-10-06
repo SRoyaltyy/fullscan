@@ -157,6 +157,30 @@ def test_clock() -> None:
     assert not before_0930(None, "2026-09-28")
 
 
+def test_flatten_bad_print_is_not_a_result() -> None:
+    from src.honest_scorecard import Section, flatten_bad_print
+    bad = "\n".join([
+        "- Planned buy cost **$20,758.93** ≤ leftover after sells **$103,442.35**",
+        "- Prior close **$103,477.99** · 09:30 **$103,477.99** · "
+        "overnight **$+0.00** · session **$-20,794.58** · 16:00 **$82,683.41**",
+        "| Ticker | Sleeve | Held | Shares | 09:30 | Close | Overnight $ | Session $ | Day $ |",
+        "|---|---|---|---:|---:|---:|---:|---:|---:|",
+        "| COP | io_core | sold-close | 116→0 | $126.75 | $126.75 | $+0.00 | $+0.00 | $+0.00 |",
+    ])
+    reason = flatten_bad_print(bad, 103477.99, 82683.41)
+    assert reason and reason.startswith("known bad print")
+    good = bad.replace("Planned buy cost **$20,758.93**", "Planned buy cost **$0.00**")
+    good = good.replace("16:00 **$82,683.41**", "16:00 **$103,462.44**")
+    assert flatten_bad_print(good, 103477.99, 103462.44) is None
+    section = Section("LIVE-LOCKED")
+    section.days = [
+        {"date": "2026-10-05", "eq_0930": 103477.99, "eq_close": 82683.41, "bad_print": reason, "lots": {}},
+        {"date": "2026-10-01", "eq_0930": 100000.0, "eq_close": 99900.0, "bad_print": None, "lots": {}},
+    ]
+    assert len(section.percents) == 1
+    assert abs(section.session_dollars - (-100.0)) < 1e-9
+
+
 def test_flatten_card_line() -> None:
     text = (
         "- Prior close **$103,336.45** · 09:30 **$103,577.15** · "
@@ -254,6 +278,7 @@ def main() -> None:
         test_open_close_marks_count_as_both_equities,
         test_live_is_not_blended_with_later_unsealed_days,
         test_clock,
+        test_flatten_bad_print_is_not_a_result,
         test_flatten_card_line,
         test_random4_uses_open_to_close_and_reports_rank,
         test_git_prime_ignores_the_working_tree,
