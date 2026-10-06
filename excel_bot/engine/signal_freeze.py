@@ -18,6 +18,10 @@ ret_vs_open, days_held.
 
 Manifest entries are only appended. A mismatch fails closed: callers must
 not write suggestions and must not commit.
+
+A new lock entry is refused when that signal_date's NYSE session has not
+closed yet (before 16:00 America/New_York, or a later session). An entry
+already in the manifest is not edited or removed.
 """
 from __future__ import annotations
 
@@ -292,7 +296,37 @@ def _id_change(stored_ids: list, current_ids: list) -> tuple[list, list]:
     return added, removed
 
 
-def plan(rows: list, manifest: dict) -> FreezePlan:
+def session_has_closed(signal_date: str, now=None) -> bool:
+    """True once `signal_date`'s NYSE session has reached 16:00 ET.
+
+    Uses gh_summary.resolve_session. A signal_date after the stamped
+    session has not closed. The stamped session itself has not closed
+    while that stamp is still a draft.
+    """
+    import gh_summary
+    stamp = gh_summary.resolve_session(now)
+    try:
+        day = date.fromisoformat(norm_date(signal_date))
+    except ValueError:
+        return False
+    if day > stamp.session:
+        return False
+    if day == stamp.session and not stamp.write_final:
+        return False
+    return True
+
+
+def _refuse_unclosed_lock(signal_date: str, now=None) -> None:
+    if session_has_closed(signal_date, now):
+        return
+    _fail(
+        f"signal_date {signal_date} has not closed yet "
+        "(before 16:00 ET America/New_York). "
+        "A pre-close run cannot lock that session."
+    )
+
+
+def plan(rows: list, manifest: dict, now=None) -> FreezePlan:
     """Entries to append so `rows` matches the lock. Raises on a broken day."""
     _header_ok(manifest)
     entries = manifest["entries"]
@@ -353,6 +387,7 @@ def plan(rows: list, manifest: dict) -> FreezePlan:
         except ValueError:
             continue
         picks = grouped[signal_date]
+        _refuse_unclosed_lock(signal_date, now)
         additions.append({
             "signal_date": signal_date,
             "sha256": fingerprint(picks),
@@ -364,8 +399,8 @@ def plan(rows: list, manifest: dict) -> FreezePlan:
     return FreezePlan(additions, [dict(entry) for entry in entries])
 
 
-def plan_rows(rows: list, manifest_path: str | None = None) -> FreezePlan:
-    return plan(rows, load_manifest(manifest_path))
+def plan_rows(rows: list, manifest_path: str | None = None, now=None) -> FreezePlan:
+    return plan(rows, load_manifest(manifest_path), now=now)
 
 
 def save_manifest(path: str, manifest: dict, prior_entries: list) -> None:
@@ -403,10 +438,13 @@ def save_manifest(path: str, manifest: dict, prior_entries: list) -> None:
     os.replace(tmp, path)
 
 
-def append_entries(planned: FreezePlan, manifest_path: str | None = None) -> list:
+def append_entries(planned: FreezePlan, manifest_path: str | None = None, now=None) -> list:
     """Append planned entries. A no-op plan does not rewrite the file."""
     if not planned.additions:
         return []
+    for entry in planned.additions:
+        if entry.get("kind") == "lock":
+            _refuse_unclosed_lock(entry["signal_date"], now)
     path = manifest_path or MANIFEST_PATH
     manifest = load_manifest(path)
     if manifest["entries"] != planned.prior_entries:
@@ -420,11 +458,11 @@ def append_entries(planned: FreezePlan, manifest_path: str | None = None) -> lis
     return list(planned.additions)
 
 
-def seal(rows: list, manifest_path: str | None = None) -> list:
+def seal(rows: list, manifest_path: str | None = None, now=None) -> list:
     """Verify `rows` and append any new lock or first_open entries."""
     path = manifest_path or MANIFEST_PATH
-    planned = plan_rows(rows, path)
-    return append_entries(planned, path)
+    planned = plan_rows(rows, path, now=now)
+    return append_entries(planned, path, now=now)
 
 
 def load_csv(path: str | None = None) -> list:
