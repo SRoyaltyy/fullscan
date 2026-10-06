@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T10:09:58.696122-04:00",
+  "generated_at": "2026-10-06T10:10:18.731403-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -157,24 +157,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T10:01:47.615978-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-06_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2270495,
-          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, HRTG, PURR, FORM"
-        }
-      ],
-      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, HRTG, PURR, FORM"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -461,6 +443,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T10:10:17.571426-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-06_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1402396,
+          "preview": "1d BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2403,
+          "preview": "green 151 \u00b7 GLBE, FORM, SIG, DOCU, SONO, EXLS, PAYS, PCTY, IT, SHOO"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2492,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12541,
+          "preview": "2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12541,
+          "preview": "2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "01_daily/2026-10-06_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 68420,
+          "preview": "# Stock book \u2014 2026-10-06\n_Generated 2026-10-06T10:10:08.464815-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 green 151 \u00b7 GLBE, FORM, SIG, DOCU, SONO, EXLS, PAYS, PCTY, IT, SHOO \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 # Stock book \u2014 2026-10-06\n_Generated 2026-10-06T10:10:08.464815-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
