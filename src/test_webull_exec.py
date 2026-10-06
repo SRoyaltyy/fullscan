@@ -744,7 +744,7 @@ def test_session_query_keeps_open_and_filled_for_that_day() -> None:
 
     def history(aid, start_date=None, end_date=None):
         assert aid == "aid-1"
-        assert start_date == "2026-10-07" and end_date == "2026-10-07"
+        assert start_date == "2026-10-07" and end_date == "2026-10-08"
         return {"orders": [
             {"order_id": "F1", "client_order_id": "h1-2026-10-07-SDEV-buy",
              "symbol": "SDEV", "side": "BUY", "status": "FILLED",
@@ -773,20 +773,35 @@ def test_session_query_keeps_open_and_filled_for_that_day() -> None:
     assert {row["order_id"] for row in rows} == {"O1", "F1"}
 
 
-def test_history_windows_pin_sdk_timestamp() -> None:
-    """list_order_history wants yyyy-MM-dd'T'HH:mm:ss.SSSZ, not yyyy-MM-dd."""
-    from src.webull_exec import history_windows
+def test_history_time_candidates_pin_formats() -> None:
+    """Formats after the sandbox rejected RFC822 -0400 and a bare date.
 
-    assert history_windows("2026-10-06") == [
-        ("2026-10-06T00:00:00.000-0400", "2026-10-06T23:59:59.999-0400"),
+    The SDK docstring says yyyy-MM-dd'T'HH:mm:ss.SSSZ and gives no example.
+    The client's x-timestamp header is yyyy-MM-dd'T'HH:mm:ssZ.
+    """
+    from src.webull_exec import history_time_candidates
+
+    got = dict(history_time_candidates("2026-10-06"))
+    assert list(got) == ["iso_offset", "utc_millis_z", "utc_z", "epoch_ms"]
+    assert got["iso_offset"] == [
+        ("2026-10-06T00:00:00.000-04:00", "2026-10-06T23:59:59.999-04:00"),
     ]
-    assert history_windows("2026-12-01") == [
-        ("2026-12-01T00:00:00.000-0500", "2026-12-01T23:59:59.999-0500"),
+    assert got["utc_millis_z"] == [
+        ("2026-10-06T04:00:00.000Z", "2026-10-07T03:59:59.999Z"),
     ]
-    # Fall-back Sunday is ~25h absolute, so it is two calls, each <= 24h.
-    assert history_windows("2026-11-01") == [
-        ("2026-11-01T00:00:00.000-0400", "2026-11-01T22:59:59.999-0500"),
-        ("2026-11-01T23:00:00.000-0500", "2026-11-01T23:59:59.999-0500"),
+    assert got["utc_z"] == [
+        ("2026-10-06T04:00:00Z", "2026-10-07T03:59:59Z"),
+    ]
+    assert got["epoch_ms"] == [("1791259200000", "1791345599999")]
+    for windows in got.values():
+        for start, end in windows:
+            assert start != "2026-10-06"
+            assert "-0400" not in start and "-0400" not in end
+    # Fall-back Sunday stays two windows, each at most 24h, in one format.
+    fall = dict(history_time_candidates("2026-11-01"))
+    assert fall["utc_millis_z"] == [
+        ("2026-11-01T04:00:00.000Z", "2026-11-02T03:59:59.999Z"),
+        ("2026-11-02T04:00:00.000Z", "2026-11-02T04:59:59.999Z"),
     ]
 
 
@@ -820,10 +835,11 @@ def test_list_order_history_gets_sdk_timestamps_not_a_bare_date() -> None:
     )
     rows = api.list_filled_orders("2026-10-06")
     assert seen == [
-        ("2026-10-06T00:00:00.000-0400", "2026-10-06T23:59:59.999-0400", None),
-        ("2026-10-06T00:00:00.000-0400", "2026-10-06T23:59:59.999-0400", "p2"),
+        ("2026-10-06T00:00:00.000-04:00", "2026-10-06T23:59:59.999-04:00", None),
+        ("2026-10-06T00:00:00.000-04:00", "2026-10-06T23:59:59.999-04:00", "p2"),
     ]
     assert {row["order_id"] for row in rows} == {"P1", "P2"}
+    assert api.history_formats["2026-10-06"] == "iso_offset"
 
 
 def test_get_order_history_page_size_is_100() -> None:
@@ -835,7 +851,7 @@ def test_get_order_history_page_size_is_100() -> None:
 
     def get_order_history(account_id, page_size=None, start_date=None, end_date=None):
         assert page_size == 100
-        assert start_date == "2026-10-06" and end_date == "2026-10-06"
+        assert start_date == "2026-10-06" and end_date == "2026-10-07"
         return {"orders": [{
             "order_id": "Z", "symbol": "AAA", "side": "BUY", "status": "FILLED",
         }]}
@@ -904,7 +920,8 @@ def test_morning_status_records_fill_price_without_placing(tmp_path) -> None:
         submit=True, standing=True,
     )
     assert placed == []
-    assert seen == ["2026-10-06T00:00:00.000-0400"]
+    assert seen == ["2026-10-06T00:00:00.000-04:00"]
+    assert api.last_history_format == "iso_offset"
     assert result["status"] == "already_submitted"
     sent = result["sent"][0]
     assert sent["status"] == "already_submitted"
@@ -912,6 +929,70 @@ def test_morning_status_records_fill_price_without_placing(tmp_path) -> None:
     assert sent["filled_qty"] == 10
     assert sent["broker_status"] == "FILLED"
     assert sent["avg_fill_px"] != 9.99
+
+
+def test_rejected_time_format_tries_the_next_and_keeps_the_full_error() -> None:
+    from types import SimpleNamespace
+    from src.webull_exec import PaperAPI, history_error_text
+
+    dump = "Request:{ " + ("x" * 400)
+    msg = (
+        "ServerException:HTTP Status: 417, Code: OPENAPI_PARAM_ERR, "
+        "Msg: Parameter error, invalid start_time, value: "
+        "2026-10-06T00:00:00.000-04:00, RequestID: abc-full"
+    )
+    assert history_error_text(RuntimeError(dump + msg)) == msg
+    assert "RequestID: abc-full" in msg
+    seen = []
+
+    def list_order_history(account_id, start_time=None, end_time=None,
+                           pagination_key=None):
+        seen.append(start_time)
+        if start_time and str(start_time).endswith("-04:00"):
+            raise RuntimeError(dump + msg)
+        return {"orders": [{
+            "order_id": "OK", "symbol": "AAA", "side": "BUY", "status": "FILLED",
+            "filled_time": "2026-10-06T09:31:00-04:00",
+        }]}
+
+    api = PaperAPI()
+    api.account_id = "aid-1"
+    api.trade = SimpleNamespace(
+        order_v3=SimpleNamespace(list_order_history=list_order_history),
+    )
+    rows = api.list_filled_orders("2026-10-06")
+    assert rows[0]["order_id"] == "OK"
+    assert seen[0] == "2026-10-06T00:00:00.000-04:00"
+    assert seen[1] == "2026-10-06T04:00:00.000Z"
+    assert api.history_formats["2026-10-06"] == "utc_millis_z"
+
+    date_msg = msg.replace("invalid start_time", "invalid start_date,end_date")
+
+    def reject_times(account_id, start_time=None, end_time=None, pagination_key=None):
+        raise RuntimeError(dump + msg)
+
+    def reject_dates(account_id, page_size=None, start_date=None, end_date=None):
+        raise RuntimeError(dump + date_msg)
+
+    failed = PaperAPI()
+    failed.account_id = "aid-1"
+    failed.trade = SimpleNamespace(
+        order_v3=SimpleNamespace(
+            list_order_history=reject_times,
+            get_order_history=reject_dates,
+        ),
+    )
+    try:
+        failed.list_filled_orders("2026-10-06")
+    except RuntimeError as exc:
+        text = str(exc)
+    else:
+        raise AssertionError("history failure must raise")
+    assert "RequestID: abc-full" in text
+    assert "invalid start_time" in text
+    assert "invalid start_date,end_date" in text
+    assert "Request:{" not in text
+    assert "HTTP Status: 417" in text
 
 
 def test_working_order_limit_is_not_a_fill_price() -> None:

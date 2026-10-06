@@ -1047,25 +1047,11 @@ def _walk_open_orders(payload) -> list:
     return identified
 
 
-def _webull_timestamp(moment: datetime) -> str:
-    """``yyyy-MM-dd'T'HH:mm:ss.SSSZ`` for ``list_order_history``.
+def _history_bounds(day: str) -> list[tuple[datetime, datetime]]:
+    """One ET civil day as instants, each spanning at most 24h.
 
-    Java ``Z`` is an RFC 822 offset (``-0400``), not a colon offset and
-    not a bare ``yyyy-MM-dd``. The sandbox rejects the bare date with
-    ``OPENAPI_PARAM_ERR invalid start_time``.
-    """
-    local = moment.astimezone(ET)
-    millis = local.microsecond // 1000
-    return local.strftime("%Y-%m-%dT%H:%M:%S.") + f"{millis:03d}" + local.strftime("%z")
-
-
-def history_windows(day: str) -> list[tuple[str, str]]:
-    """One ET civil day as ``(start_time, end_time)`` pairs, each <= 24h.
-
-    A normal day is midnight through ``23:59:59.999`` in the local offset.
     Adding ``timedelta(hours=24)`` follows the wall clock, so on the
-    fall-back Sunday it lands ~25h later. Windows are split on absolute
-    time instead.
+    fall-back Sunday it lands about 25h later. Split on absolute time.
     """
     text = str(day or "")[:10]
     year_s, month_s, day_s = text.split("-")
@@ -1073,17 +1059,82 @@ def history_windows(day: str) -> list[tuple[str, str]]:
     next_day = start.date() + timedelta(days=1)
     end = datetime(next_day.year, next_day.month, next_day.day, tzinfo=ET)
     end = end - timedelta(milliseconds=1)
-    windows: list[tuple[str, str]] = []
+    bounds: list[tuple[datetime, datetime]] = []
     cursor = start
     for _ in range(4):
         if end.timestamp() - cursor.timestamp() <= _HISTORY_MAX_SECONDS:
-            windows.append((_webull_timestamp(cursor), _webull_timestamp(end)))
-            return windows
+            bounds.append((cursor, end))
+            return bounds
         chunk_end = datetime.fromtimestamp(
             cursor.timestamp() + _HISTORY_MAX_SECONDS - 0.001, ET)
-        windows.append((_webull_timestamp(cursor), _webull_timestamp(chunk_end)))
+        bounds.append((cursor, chunk_end))
         cursor = datetime.fromtimestamp(chunk_end.timestamp() + 0.001, ET)
     raise ValueError("history window split failed for " + text)
+
+
+def _fmt_iso_offset(moment: datetime) -> str:
+    """ISO-8601 with a colon offset: ``2026-10-06T00:00:00.000-04:00``."""
+    local = moment.astimezone(ET)
+    millis = local.microsecond // 1000
+    off = local.strftime("%z")
+    if len(off) == 5:
+        off = off[:3] + ":" + off[3:]
+    return local.strftime("%Y-%m-%dT%H:%M:%S.") + f"{millis:03d}" + off
+
+
+def _fmt_utc_millis(moment: datetime) -> str:
+    """UTC with milliseconds and a literal Z."""
+    utc = moment.astimezone(ZoneInfo("UTC"))
+    millis = utc.microsecond // 1000
+    return utc.strftime("%Y-%m-%dT%H:%M:%S.") + f"{millis:03d}Z"
+
+
+def _fmt_utc(moment: datetime) -> str:
+    """Same shape as the SDK ``x-timestamp`` header: ``yyyy-MM-dd'T'HH:mm:ssZ``."""
+    utc = moment.astimezone(ZoneInfo("UTC"))
+    return utc.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def _fmt_epoch_ms(moment: datetime) -> str:
+    return str(int(round(moment.timestamp() * 1000)))
+
+
+# Order is the try order. ``-0400`` (no colon) and a bare ``yyyy-MM-dd``
+# were both rejected by the sandbox (run 37538537300). The SDK docstring
+# says ``yyyy-MM-dd'T'HH:mm:ss.SSSZ`` and does not give an example.
+_HISTORY_TIME_FORMATS = (
+    ("iso_offset", _fmt_iso_offset),
+    ("utc_millis_z", _fmt_utc_millis),
+    ("utc_z", _fmt_utc),
+    ("epoch_ms", _fmt_epoch_ms),
+)
+
+
+def history_time_candidates(day: str) -> list[tuple[str, list[tuple[str, str]]]]:
+    """``(name, [(start_time, end_time), ...])`` for one session.
+
+    Each name is one format. A fall-back day may be two windows, both in
+    that same format, and each window is at most 24h.
+    """
+    bounds = _history_bounds(day)
+    candidates = []
+    for name, fmt in _HISTORY_TIME_FORMATS:
+        windows = [(fmt(start), fmt(end)) for start, end in bounds]
+        candidates.append((name, windows))
+    return candidates
+
+
+def history_error_text(exc) -> str:
+    """The server's message, from ``ServerException:`` through the request id.
+
+    The SDK prefixes that sentence with the request dump. A short slice of
+    the whole string stops at ``HTTP Stat`` and drops the parameter error.
+    """
+    text = str(exc).strip()
+    at = text.find("ServerException:")
+    if at >= 0:
+        return text[at:].strip()
+    return text
 
 
 def _param_names(fn) -> set[str]:
@@ -1116,9 +1167,24 @@ def _history_pagination_key(payload) -> str:
     return ""
 
 
-def _history_by_timestamp(api, fn, account_id: str, date: str, names: set[str]):
+def _note_history_format(api, day: str, label: str) -> None:
+    formats = getattr(api, "history_formats", None)
+    if not isinstance(formats, dict):
+        formats = {}
+        try:
+            api.history_formats = formats
+        except Exception:
+            return
+    formats[str(day or "")[:10]] = label
+    try:
+        api.last_history_format = label
+    except Exception:
+        pass
+
+
+def _fetch_history_windows(api, fn, account_id: str, windows, names: set[str]):
     pages = []
-    for start_time, end_time in history_windows(date):
+    for start_time, end_time in windows:
         page_key = ""
         for _page in range(_HISTORY_PAGE_CAP):
             kwargs = {"start_time": start_time, "end_time": end_time}
@@ -1141,23 +1207,98 @@ def _history_by_timestamp(api, fn, account_id: str, date: str, names: set[str]):
     return pages
 
 
+def _history_on_day(payload, day: str):
+    session = str(day or "")[:10]
+    kept = [
+        row for row in _walk_open_orders(payload)
+        if row_on_session(row, session)
+    ]
+    return {"orders": kept}
+
+
+def _history_by_timestamp(api, fn, account_id: str, date: str, names: set[str]):
+    """Try each start_time format. The first accepted call wins.
+
+    An unscoped call (the server default, last 7 days) is last. An empty
+    default is not success: that day may sit outside the default window,
+    and an empty book must not be reported as a confirmed miss.
+    """
+    errors = []
+    for label, windows in history_time_candidates(date):
+        try:
+            body = _fetch_history_windows(api, fn, account_id, windows, names)
+        except Exception as exc:  # noqa: BLE001 — next format
+            errors.append(label + ": " + history_error_text(exc))
+            continue
+        _note_history_format(api, date, label)
+        return body
+    try:
+        body = api._json(fn(account_id), "filled_orders")
+    except Exception as exc:  # noqa: BLE001 — next history method
+        errors.append("default: " + history_error_text(exc))
+        raise RuntimeError(" | ".join(errors))
+    kept = _history_on_day(body, date)
+    if not kept["orders"]:
+        errors.append("default: empty")
+        raise RuntimeError(" | ".join(errors))
+    _note_history_format(api, date, "default")
+    return kept
+
+
+def _next_civil_day(day: str) -> str:
+    text = str(day or "")[:10]
+    year_s, month_s, day_s = text.split("-")
+    start = datetime(int(year_s), int(month_s), int(day_s), tzinfo=ET)
+    return (start.date() + timedelta(days=1)).isoformat()
+
+
 def _history_by_date(api, fn, account_id: str, date: str, names: set[str]):
+    """``get_order_history`` dates. Same-day start and end was rejected.
+
+    The sandbox answered ``invalid start_date,end_date`` for
+    ``2026-10-06,2026-10-06``. Try an exclusive next-day end, then the
+    server default. ``page_size`` stays 100 when the signature has it
+    (200 is out of range).
+    """
     session = str(date or "")[:10]
-    kwargs = {"start_date": session, "end_date": session}
-    if "page_size" in names:
-        kwargs["page_size"] = _HISTORY_PAGE_SIZE
-    return api._json(fn(account_id, **kwargs), "filled_orders")
+    attempts = (
+        ("start_date_exclusive", {
+            "start_date": session,
+            "end_date": _next_civil_day(session),
+        }),
+        ("start_date_default", {}),
+    )
+    errors = []
+    for label, extra in attempts:
+        kwargs = dict(extra)
+        if "page_size" in names:
+            kwargs["page_size"] = _HISTORY_PAGE_SIZE
+        try:
+            body = api._json(fn(account_id, **kwargs), "filled_orders")
+        except Exception as exc:  # noqa: BLE001 — next date shape
+            errors.append(label + ": " + history_error_text(exc))
+            continue
+        if label == "start_date_default":
+            kept = _history_on_day(body, session)
+            if not kept["orders"]:
+                errors.append("start_date_default: empty")
+                continue
+            body = kept
+        _note_history_format(api, session, label)
+        return body
+    raise RuntimeError(" | ".join(errors))
 
 
 def _try_history_call(api, fn, account_id: str, date: str):
     """Call one history method with the arguments its signature accepts.
 
-    ``list_order_history`` takes ``start_time`` / ``end_time``. A bare
-    session date must not be passed positionally into those parameters.
-    ``get_order_history`` still takes ``yyyy-MM-dd`` plus ``page_size``
-    of at most 100. Any error fails this method. The caller tries the
-    next method and, if all of them fail, raises rather than treating
-    the miss as no fills.
+    ``list_order_history`` takes ``start_time`` / ``end_time``. Several
+    formats are tried; a bare date is never passed positionally.
+    ``get_order_history`` takes ``yyyy-MM-dd`` plus ``page_size`` of at
+    most 100. The error text keeps the server's full ``ServerException``
+    sentence. Any error fails this method. The caller tries the next
+    method and, if all of them fail, raises rather than treating the
+    miss as no fills.
     """
     names = _param_names(fn)
     try:
@@ -1165,11 +1306,11 @@ def _try_history_call(api, fn, account_id: str, date: str):
             return _history_by_timestamp(api, fn, account_id, date, names), ""
         if "start_date" in names:
             return _history_by_date(api, fn, account_id, date, names), ""
-        return api._json(fn(account_id), "filled_orders"), ""
-    except TypeError as exc:
-        return None, str(exc)[:80]
+        body = api._json(fn(account_id), "filled_orders")
+        _note_history_format(api, date, "default")
+        return body, ""
     except Exception as exc:  # noqa: BLE001 — next history method
-        return None, str(exc)[:160]
+        return None, history_error_text(exc)
 
 
 class PaperAPI:
@@ -1181,6 +1322,8 @@ class PaperAPI:
         self.trade = None
         self.account_id = _env("WEBULL_ACCOUNT_ID")
         self.err: str | None = None
+        self.history_formats: dict = {}
+        self.last_history_format = ""
 
     def connect(self) -> bool:
         key = _env("WEBULL_APP_KEY")
@@ -1348,7 +1491,7 @@ class PaperAPI:
                 payload = got
                 break
             if err:
-                errors.append(f"{label}: {err}"[:180])
+                errors.append(label + ": " + err)
         if payload is None:
             raise RuntimeError("filled-order list failed: " + " | ".join(errors))
         return _walk_open_orders(payload)

@@ -128,6 +128,35 @@ def test_freeze_does_not_read_or_write(tmp_path):
     assert log.read_bytes() == before
 
 
+def test_snapshot_records_history_format_and_the_full_error(tmp_path):
+    log = tmp_path / "drift_log.jsonl"
+    log.write_text('{"kind":"doc"}\n', encoding="utf-8")
+    long_msg = (
+        "Request:{ " + ("x" * 300)
+        + "ServerException:HTTP Status: 417, Code: OPENAPI_PARAM_ERR, "
+        "Msg: Parameter error, invalid start_time, value: BAD, "
+        "RequestID: keep-me"
+    )
+    spy = Spy(positions={}, by_date={})
+    spy.history_formats = {"2026-10-06": "utc_millis_z"}
+
+    def list_filled_orders(day):
+        spy.calls.append("list_filled_orders")
+        if day == "2026-10-06":
+            raise RuntimeError(long_msg)
+        return []
+
+    spy.list_filled_orders = list_filled_orders
+    result = snap.run_snapshot(api=spy, clock=OUTSIDE, path=log)
+    queries = result["snapshot"]["order_queries"]
+    assert queries["history_formats"]["2026-10-06"] == "utc_millis_z"
+    stored = queries["errors"]["2026-10-06"]
+    assert "RequestID: keep-me" in stored
+    assert "HTTP Status: 417" in stored
+    assert len(stored) > 240
+    assert spy.placed is False
+
+
 def test_live_host_is_refused_before_connect(tmp_path):
     log = tmp_path / "drift_log.jsonl"
     log.write_text("{}\n", encoding="utf-8")
