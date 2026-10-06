@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "lock_from": "2026-10-06",
+  "pre_lock": "signal_date < 2026-10-06",
+  "pre_lock_note": "Rows with signal_date before 2026-10-06 are pre-lock. They are not fingerprinted, not backfilled, and this guard does not rewrite them. Live mark columns may still refresh.",
+  "locked_fields": [
+    "run_date",
+    "signal_date",
+    "ticker",
+    "side",
+    "strategy",
+    "exit_rule",
+    "ref_close",
+    "signal_colors"
+  ],
+  "write_once_fields": [
+    "first_open"
+  ],
+  "live_fields": [
+    "current_price",
+    "ret_vs_close",
+    "ret_vs_open",
+    "days_held"
+  ],
+  "entries": []
+}
