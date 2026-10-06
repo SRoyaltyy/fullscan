@@ -267,6 +267,8 @@ def test_readers_keep_the_final_and_skip_the_draft():
         "research/audit/build_fullscan_file_proof.py",
         "research/audit/input_provenance_336.py",
         "research/lever_search/excel_ml_lever/excel_ml_lever.py",
+        "src/test_webull_sim.py",
+        "03_scoreboard/WEBULL_SIM.md",
     }
     hits = []
     skip = {".git", "node_modules", "__pycache__", ".venv"}
