@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-06",
-    "generated_at": "2026-10-06T06:59:37.002620-04:00",
+    "generated_at": "2026-10-06T07:11:06.168974-04:00",
     "general_bias": 0.51425,
     "sector_bias": {},
     "accuracy_gates": {
@@ -331,7 +331,7 @@
       "stand_down": false,
       "restrict_to_catalysts": false,
       "reason": "459 names qualified through standard,group_leader,catalyst (106 probable)",
-      "n_usable_catalysts": 3,
+      "n_usable_catalysts": 2,
       "market_state": "green"
     },
     "calendar_entry_scale": 0.5,
@@ -432,57 +432,10 @@
         "stand_down": false,
         "restrict_to_catalysts": false,
         "reason": "459 names qualified through standard,group_leader,catalyst (106 probable)",
-        "n_usable_catalysts": 3,
+        "n_usable_catalysts": 2,
         "market_state": "green"
       },
       "bull_watch": [
-        {
-          "ticker": "BKR",
-          "sector": "Energy",
-          "industry": "Oil & Gas Equipment & Services",
-          "size": "large",
-          "lane": "blocked",
-          "eligible": false,
-          "bull_rank": 3.495,
-          "bear_rank": 2.2512,
-          "domains": {
-            "market": "good",
-            "parent": "neutral",
-            "child": "bad",
-            "company": "neutral",
-            "setup": "good",
-            "flow": "good"
-          },
-          "source_boxes": {
-            "join": "bad",
-            "sector": "neutral",
-            "gen": "good",
-            "news": "good",
-            "digest": "missing",
-            "judge": "missing",
-            "ab": "good",
-            "peer": "good",
-            "heat": "bad",
-            "vol": "missing",
-            "catal": "neutral"
-          },
-          "company": "usable dossier Strong Bullish conv=72",
-          "company_strength": 0.8,
-          "company_direct": true,
-          "company_fresh": true,
-          "company_price_confirmed": false,
-          "group": "Oil & Gas Equipment & Services",
-          "child_d1": -4.43,
-          "child_w1": -6.75,
-          "child_residual": -7.73,
-          "bull_decision": "BLOCK BUY \u2014 child industry/theme RED; direct catalyst lacks price confirmation | market=GREEN; parent=YELLOW; child=RED/rel=RED; company=YELLOW(0.80); setup=GREEN; flow=GREEN",
-          "bear_decision": "NO BEAR \u2014 market=GREEN; red domains=child; child lags parent -7.7%",
-          "blue": true,
-          "white": true,
-          "alarm": false,
-          "cond": "good",
-          "region": "good"
-        },
         {
           "ticker": "HITI",
           "sector": "Healthcare",
@@ -1610,6 +1563,53 @@
           "alarm": false,
           "cond": "good",
           "region": "neutral"
+        },
+        {
+          "ticker": "FTNT",
+          "sector": "Technology",
+          "industry": "Software - Infrastructure",
+          "size": "large",
+          "lane": "group_leader",
+          "eligible": true,
+          "bull_rank": 16.185,
+          "bear_rank": 1.0,
+          "domains": {
+            "market": "good",
+            "parent": "bad",
+            "child": "good",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "good"
+          },
+          "source_boxes": {
+            "join": "neutral",
+            "sector": "bad",
+            "gen": "good",
+            "news": "missing",
+            "digest": "missing",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "missing",
+            "catal": "missing"
+          },
+          "company": "no direct company event",
+          "company_strength": 0.0,
+          "company_direct": false,
+          "company_fresh": false,
+          "company_price_confirmed": false,
+          "group": "Software - Infrastructure",
+          "child_d1": 2.78,
+          "child_w1": 1.36,
+          "child_residual": 3.43,
+          "bull_decision": "BUY GROUP_LEADER \u2014 market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=\ud83d\udd35,Cond green",
+          "bear_decision": "NO BEAR \u2014 market=GREEN; red domains=parent",
+          "blue": true,
+          "white": true,
+          "alarm": false,
+          "cond": "good",
+          "region": "good"
         }
       ],
       "bear_watch": [
