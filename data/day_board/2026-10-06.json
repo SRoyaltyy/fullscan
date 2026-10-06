@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T06:04:30.878237-04:00",
+  "generated_at": "2026-10-06T06:04:36.982971-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -2787,6 +2787,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-06\nExport `finviz_2026-10-05.csv` \u00b7 11616 names \u00b7 generated 2026-10-06T04:22:36.554946-04:00"
+    },
+    {
+      "key": "map_heat_baseline",
+      "title": "Map heat night baseline",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T06:04:35.784798-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-06_research_baseline.json",
+          "ok": true,
+          "reason": "",
+          "size": 416258,
+          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-06_research_baseline.md",
+          "ok": true,
+          "reason": "",
+          "size": 41780,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-06\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-06\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
     }
   ],
   "href": {
