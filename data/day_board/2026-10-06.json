@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T10:00:24.688628-04:00",
+  "generated_at": "2026-10-06T10:01:40.879996-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -557,8 +557,8 @@
           "path": "01_daily/weather/2026-10-06_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9705 vix=falling yields=rising",
-          "size": 9705,
+          "reason": "sectors=11 bytes=9704 vix=falling yields=rising",
+          "size": 9704,
           "said": "hostile 8 \u00b7 neutral 3",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities",
@@ -776,8 +776,8 @@
           "path": "01_daily/weather/2026-10-06_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9705 vix=falling yields=rising",
-          "size": 9705,
+          "reason": "sectors=11 bytes=9704 vix=falling yields=rising",
+          "size": 9704,
           "said": "hostile 8 \u00b7 neutral 3",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities",
@@ -841,10 +841,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 67335,
+          "size": 77018,
           "said": "Stock book \u2014 2026-10-06",
           "bullets": [
-            "_Generated 2026-10-06T10:00:08.269639-04:00_",
+            "_Generated 2026-10-06T07:26:57.178687-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -3999,6 +3999,31 @@
         }
       ],
       "preview": "2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, orde"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T10:01:39.627284-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-06_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9704,
+          "preview": "weather sectors 11 \u00b7 Technology={'score': 2.701, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-06_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5313,
+          "preview": "# Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Technology={'score': 2.701, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
