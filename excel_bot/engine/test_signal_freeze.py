@@ -1,6 +1,7 @@
 """Verify excel_bot signal days lock from 2026-10-06 and finals stay write-once."""
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import sys
@@ -479,7 +480,8 @@ def _manifest_with_void(tmp: str) -> tuple:
     manifest["entries"] = [lock, void]
     path = os.path.join(tmp, "freeze_manifest.json")
     with open(path, "w", encoding="utf-8") as handle:
-        json.dump(manifest, handle)
+        json.dump(manifest, handle, indent=2)
+        handle.write("\n")
     signal_freeze.load_manifest(path)
     return path, lock, void
 
@@ -570,8 +572,9 @@ def test_void_archive_rows_match_voided_lock_sha() -> None:
     assert void["sha256"] == VOID_SHA
     assert void["archive"] == "excel_bot/void/2026-10-06_pre_close_draft.csv"
     assert void["note"] == "excel_bot/void/2026-10-06_pre_close_draft.md"
-    assert void["n_picks"] == 104
-    assert void["pick_ids"] == lock["pick_ids"]
+    assert "pick_ids" not in void
+    assert "first_opens" not in void
+    assert "n_picks" not in void
     assert void["reason"] == allowed["reason"]
     live = signal_freeze.load_csv()
     assert all(row["signal_date"] != "2026-10-06" for row in live)
@@ -588,6 +591,56 @@ def test_void_archive_rows_match_voided_lock_sha() -> None:
     assert "13:37" in note
     assert "no book traded on it" in note
     signal_freeze.verify_store()
+
+
+# sha256 of origin/main's freeze_manifest.json: the single 2026-10-06 lock,
+# before this void was appended. json.dumps of that document matches the file.
+PRIOR_MANIFEST_SHA256 = "7383a56a06f94b135de6b70c23bd3ad4b76c6d2cc94d73b69a8de2acce68aaac"
+
+
+def test_save_manifest_appends_without_reserializing_existing_entries() -> None:
+    """An append splices the new object. Existing entry text is not rewritten."""
+    with tempfile.TemporaryDirectory() as tmp:
+        path = _start(tmp)
+        signal_freeze.seal([_row()], path, now=AFTER_CLOSE)
+        before = _bytes(path).decode("utf-8")
+        # A trailing space survives only if the writer does not json.dumps the file.
+        mutated = before.replace('"schema": 1,\n', '"schema": 1, \n', 1)
+        assert mutated != before
+        with open(path, "w", encoding="utf-8") as handle:
+            handle.write(mutated)
+        signal_freeze.seal([_row(first_open="10.2500")], path, now=AFTER_CLOSE)
+        after = _bytes(path).decode("utf-8")
+        tail = "\n  ]\n}\n"
+        assert mutated.endswith(tail)
+        kept = mutated[: -len(tail)]
+        assert kept.endswith("\n    }")
+        assert after.startswith(kept[:-1] + "},\n")
+        assert '"schema": 1, \n' in after
+        parsed = json.loads(after)
+        assert parsed["entries"][0] == json.loads(mutated)["entries"][0]
+        assert parsed["entries"][1]["kind"] == "first_open"
+
+
+def test_committed_void_leaves_existing_entry_text_unchanged() -> None:
+    """The repo manifest's only edit to the old lock text is the joining comma."""
+    path = signal_freeze.MANIFEST_PATH
+    raw = _bytes(path).decode("utf-8")
+    manifest = json.loads(raw)
+    assert [entry["kind"] for entry in manifest["entries"]] == ["lock", "void"]
+    lock = manifest["entries"][0]
+    void = manifest["entries"][1]
+    assert "pick_ids" not in void and "first_opens" not in void
+    prior = dict(manifest)
+    prior["entries"] = [lock]
+    prior_text = json.dumps(prior, indent=2, ensure_ascii=False) + "\n"
+    assert hashlib.sha256(prior_text.encode("utf-8")).hexdigest() == PRIOR_MANIFEST_SHA256
+    assert raw == signal_freeze._splice_entries(prior_text, [void])
+    assert prior_text.endswith("\n    }\n  ]\n}\n")
+    kept = prior_text[: -len("\n  ]\n}\n")]
+    assert kept.endswith("\n    }")
+    assert raw.startswith(kept[:-1] + "},\n")
+    assert raw.count('"pick_ids"') == prior_text.count('"pick_ids"')
 
 
 def test_unclosed_signal_date_cannot_be_locked() -> None:
@@ -640,4 +693,6 @@ if __name__ == "__main__":
     test_voiding_a_different_sha_fails()
     test_change_after_fresh_lock_fails_closed()
     test_void_archive_rows_match_voided_lock_sha()
+    test_save_manifest_appends_without_reserializing_existing_entries()
+    test_committed_void_leaves_existing_entry_text_unchanged()
     print("ok")

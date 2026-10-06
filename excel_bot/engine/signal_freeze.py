@@ -25,8 +25,9 @@ already in the manifest is not edited or removed.
 
 One pre-close lock may be voided by a later entry. The void names that
 lock's signal_date and sha256, and the original lock entry stays as
-written. The only void the checker accepts is the 2026-10-06 draft lock
-from commit 856c5f64c. After that void, the day may be locked once more.
+written. A void does not copy pick_ids or first_opens. The only void
+the checker accepts is the 2026-10-06 draft lock from commit 856c5f64c.
+After that void, the day may be locked once more.
 """
 from __future__ import annotations
 
@@ -168,23 +169,56 @@ def _as_int(value, label: str) -> int:
     return value
 
 
-def _check_entry(entry: dict, index: int) -> None:
-    if not isinstance(entry, dict):
-        _fail(f"manifest entry {index} is not an object.")
-    need = ("signal_date", "sha256", "n_picks", "pick_ids", "first_opens", "kind")
-    missing = [key for key in need if key not in entry]
-    if missing:
-        _fail(f"manifest entry {index} is missing {missing}.")
-    signal_date = entry["signal_date"]
-    if signal_date != norm_date(signal_date) or signal_date < LOCK_FROM:
+# A void names the lock. It does not repeat that lock's pick list.
+VOID_ENTRY_KEYS = (
+    "signal_date",
+    "sha256",
+    "kind",
+    "reason",
+    "locked_at",
+    "added_at",
+    "archive",
+    "note",
+)
+
+
+def _check_identity(entry: dict, index: int) -> None:
+    signal_date = entry.get("signal_date")
+    if (
+        not isinstance(signal_date, str)
+        or signal_date != norm_date(signal_date)
+        or signal_date < LOCK_FROM
+    ):
         _fail(
             f"manifest entry {index} fingerprints {signal_date!r}. "
             f"Only signal_date >= {LOCK_FROM} may be locked. "
             "Pre-lock days must not be backfilled."
         )
-    digest = str(entry["sha256"])
+    digest = str(entry.get("sha256", ""))
     if len(digest) != 64 or any(ch not in "0123456789abcdef" for ch in digest):
         _fail(f"manifest entry {index} has a bad sha256.")
+
+
+def _check_entry(entry: dict, index: int) -> None:
+    if not isinstance(entry, dict):
+        _fail(f"manifest entry {index} is not an object.")
+    if entry.get("kind") == "void":
+        extra = sorted(set(entry) - set(VOID_ENTRY_KEYS))
+        missing = [key for key in VOID_ENTRY_KEYS if key not in entry]
+        if missing or extra:
+            _fail(
+                f"manifest entry {index} void fields are {sorted(entry)}. "
+                "A void names signal_date and sha256 only and does not "
+                "copy pick_ids or first_opens."
+            )
+        _check_identity(entry, index)
+        _check_void_entry(entry, index)
+        return
+    need = ("signal_date", "sha256", "n_picks", "pick_ids", "first_opens", "kind")
+    missing = [key for key in need if key not in entry]
+    if missing:
+        _fail(f"manifest entry {index} is missing {missing}.")
+    _check_identity(entry, index)
     n_picks = _as_int(entry["n_picks"], f"manifest entry {index} n_picks")
     if n_picks < 1:
         _fail(f"manifest entry {index} has no picks.")
@@ -204,10 +238,8 @@ def _check_entry(entry: dict, index: int) -> None:
     for open_i, first_open in enumerate(first_opens):
         if not isinstance(first_open, str):
             _fail(f"manifest entry {index} first_opens[{open_i}] is not a string.")
-    if entry["kind"] not in ("lock", "first_open", "void"):
+    if entry["kind"] not in ("lock", "first_open"):
         _fail(f"manifest entry {index} kind {entry['kind']!r} is unknown.")
-    if entry["kind"] == "void":
-        _check_void_entry(entry, index)
 
 
 def load_manifest(path: str | None = None) -> dict:
@@ -295,9 +327,6 @@ def void_entry_for(lock: dict) -> dict:
     return {
         "signal_date": lock["signal_date"],
         "sha256": lock["sha256"],
-        "n_picks": lock["n_picks"],
-        "pick_ids": [list(item) for item in lock["pick_ids"]],
-        "first_opens": list(lock["first_opens"]),
         "kind": "void",
         "reason": allowed["reason"],
         "locked_at": allowed["locked_at"],
@@ -359,12 +388,7 @@ def _check_history(entries: list) -> None:
                     "is not directly after the lock it names."
                 )
             lock = chain[0]
-            if (
-                entry["sha256"] != lock["sha256"]
-                or entry["pick_ids"] != lock["pick_ids"]
-                or entry["n_picks"] != lock["n_picks"]
-                or entry["first_opens"] != lock["first_opens"]
-            ):
+            if entry["sha256"] != lock["sha256"]:
                 _fail(
                     f"signal_date {day} void at manifest index {index} "
                     f"names sha256 {entry['sha256']} but the lock is {lock['sha256']}. "
@@ -582,16 +606,56 @@ def plan_rows(rows: list, manifest_path: str | None = None, now=None) -> FreezeP
     return plan(rows, load_manifest(manifest_path), now=now)
 
 
+_EMPTY_ENTRIES_TAIL = '  "entries": []\n}\n'
+_ENTRIES_TAIL = "\n  ]\n}\n"
+
+
+def _render_entry(entry: dict) -> str:
+    """One manifest entry, indented as a member of the top-level entries array."""
+    dumped = json.dumps(entry, indent=2, ensure_ascii=False)
+    return "\n".join("    " + line for line in dumped.splitlines())
+
+
+def _splice_entries(raw: str, new_entries: list) -> str:
+    """Append `new_entries` onto manifest text. Existing bytes stay put.
+
+    The only edit to text already in the file is the comma that joins the
+    new object to the previous one. An empty entries array is replaced by
+    the first objects. Any other shape is refused, so a rewrite cannot
+    re-indent the entries that are already there.
+    """
+    if not new_entries:
+        return raw
+    rendered = ",\n".join(_render_entry(entry) for entry in new_entries)
+    if raw.endswith(_EMPTY_ENTRIES_TAIL):
+        head = raw[: -len(_EMPTY_ENTRIES_TAIL)]
+        return head + '  "entries": [\n' + rendered + "\n  ]\n}\n"
+    if not raw.endswith(_ENTRIES_TAIL):
+        _fail(
+            "freeze manifest ending is not the append form. "
+            "Refusing to rewrite it."
+        )
+    body = raw[: -len(_ENTRIES_TAIL)]
+    if not body.endswith("\n    }"):
+        _fail(
+            "freeze manifest entry ending is not the append form. "
+            "Refusing to rewrite it."
+        )
+    return body[:-1] + "},\n" + rendered + _ENTRIES_TAIL
+
+
 def save_manifest(path: str, manifest: dict, prior_entries: list) -> None:
-    """Write `manifest` only when its entries extend the on-disk prefix."""
+    """Append entries. Existing entry text is not re-serialized."""
     _header_ok(manifest)
+    prior_entries = list(prior_entries)
     if os.path.exists(path):
         with open(path, encoding="utf-8") as handle:
-            on_disk = json.load(handle)
+            raw = handle.read()
+        on_disk = json.loads(raw)
         if not isinstance(on_disk, dict) or not isinstance(on_disk.get("entries"), list):
             _fail("on-disk freeze manifest has no entries list.")
         disk_entries = on_disk["entries"]
-        if disk_entries != list(prior_entries):
+        if disk_entries != prior_entries:
             _fail(
                 "on-disk manifest entries do not match the sealed prefix. "
                 "Refusing to rewrite them."
@@ -600,12 +664,19 @@ def save_manifest(path: str, manifest: dict, prior_entries: list) -> None:
             _fail("refusing to remove freeze manifest entries.")
         if manifest["entries"][:len(disk_entries)] != disk_entries:
             _fail("refusing to edit existing freeze manifest entries.")
+        new_entries = manifest["entries"][len(disk_entries):]
+        if not new_entries:
+            return
+        text = _splice_entries(raw, new_entries)
     elif prior_entries:
         _fail("freeze manifest is missing. Refusing to append onto nothing.")
-    text = json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
+    else:
+        text = json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
     parsed = json.loads(text)
-    if parsed["entries"][:len(prior_entries)] != list(prior_entries):
+    if parsed["entries"][:len(prior_entries)] != prior_entries:
         _fail("refusing to edit existing freeze manifest entries.")
+    if parsed["entries"] != manifest["entries"]:
+        _fail("appended freeze manifest entries do not match the plan.")
     parent = os.path.dirname(path)
     if parent:
         os.makedirs(parent, exist_ok=True)
