@@ -360,3 +360,16 @@
 {"date":"2026-10-06","kind":"day","name":"L5_long_green_hold2_midhibeta_webull_sim","record":"webull_sim","sha256":"0b4235f55ea0bedf77586809505c69ad3f9d18f9b562916cad51f774deb335ca"}
 {"date":"2026-10-06","kind":"day","name":"flatten_robust_webull_sim","record":"webull_sim","sha256":"dfbbc47731a8dbc0ed044b7d07ad42fc2e323ad30bcfdc01c4f20fa9460ddaec"}
 {"date":"2026-10-06","kind":"day","name":"h1_webull_sim","record":"webull_sim","sha256":"db9cc5b02174515dcb0a373f4899bf591aec6fea5e58696c324ea41bd3835694"}
+{"date":"2026-10-06","kind":"day","name":"1d_top_webull_sim","record":"webull_sim","sha256":"0ce957a28eff46763b01728a7712adb6aab5df1b32dbc4a3252bd85f3210e51f"}
+{"date":"2026-10-06","kind":"day","name":"1m_top_webull_sim","record":"webull_sim","sha256":"487cd0549f5520be86fd783a0ec25c93b328c3b72658754cf61574134e9b7820"}
+{"date":"2026-10-06","kind":"day","name":"1w_top_webull_sim","record":"webull_sim","sha256":"03770d1237d38abb6551c96315d0746bee4f9f01a292e43edfdc572af06420df"}
+{"date":"2026-10-06","kind":"day","name":"2w_top_webull_sim","record":"webull_sim","sha256":"0008f5ba45d352d819605f9e1b01854ffb564f8769bf88563c2c09d18c407630"}
+{"date":"2026-10-06","kind":"day","name":"3d_top_webull_sim","record":"webull_sim","sha256":"632deb0f052be2bc78c1a89db5b7f5c1d297820724e0de5c76cd9a77da2358ae"}
+{"date":"2026-10-06","kind":"day","name":"stock_book_1d_webull_sim","record":"webull_sim","sha256":"2c0020711bd5f9023305aa75986f7a8bbea48f7673d0dd9e0ebe9a6e5f36c53d"}
+{"date":"2026-10-06","kind":"day","name":"stock_book_1m_webull_sim","record":"webull_sim","sha256":"237e395739a34eab1eba4c06070b5f3cb56ca68481a7c7b12aa84a66223dd9e0"}
+{"date":"2026-10-06","kind":"day","name":"stock_book_1w_webull_sim","record":"webull_sim","sha256":"ebf07808ce486ce935fc5bbc75d2ee5c1097e651314476ff1948061a020f373f"}
+{"date":"2026-10-06","kind":"day","name":"stock_book_2w_webull_sim","record":"webull_sim","sha256":"a906ca86617b4e3a7f717269db68b7337aad7eba78604657c69195d7e164dcfc"}
+{"date":"2026-10-06","kind":"day","name":"stock_book_3d_webull_sim","record":"webull_sim","sha256":"e8967b3b436f5947426ba4bf01255664c39f9cf427b91a982f58ae5283251c28"}
+{"date":"2026-10-06","kind":"day","name":"theme_radar_fpe_delta_t3_earn_today_3d_webull_sim","record":"webull_sim","sha256":"01a5d4a5c10b48df57071638e9d91117deb0595aa74a698ad04f870a4ad64e59"}
+{"date":"2026-10-06","kind":"day","name":"theme_radar_fresh_dcp_t1_avoid_ah_3d_webull_sim","record":"webull_sim","sha256":"e401a6c5c1a0c38c7d913c6ec70740e5afc401e205d13173b464bb5c245739fe"}
+{"date":"2026-10-06","kind":"day","name":"theme_radar_fresh_dcp_t1_ep_ge03_2d_webull_sim","record":"webull_sim","sha256":"cb094f3706cab512e00df825495d604da2dd697c0c8d45dcfe1e12180a1ebc84"}
