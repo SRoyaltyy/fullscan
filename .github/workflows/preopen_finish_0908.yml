@@ -175,8 +175,8 @@ jobs:
           set +e
           DATE="${DATE}"
           LOG=$(mktemp)
-          echo "CMD: python -m src.paper_trade --date ${DATE} --top 10"
-          python -m src.paper_trade --date "${DATE}" --top 10 >"$LOG" 2>&1
+          echo "CMD: python -m src.paper_trade_append --date ${DATE} --top 10"
+          python -m src.paper_trade_append --date "${DATE}" --top 10 >"$LOG" 2>&1
           RC=$?
           cat "$LOG"
           python - <<'PY' || true

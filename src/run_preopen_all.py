@@ -788,7 +788,7 @@ def run(date: str | None = None, force: bool = False,
         # while a book file is already on disk; follow that book and
         # append. Printed days stay printed.
         print("[preopen-all] → paper (append after the last printed date)")
-        _run([py, "-m", "src.paper_trade", "--date", date, "--top", "10"],
+        _run([py, "-m", "src.paper_trade_append", "--date", date, "--top", "10"],
              timeout_s=900)
         _land(date, "paper", "Paper dashboard")
     else:
