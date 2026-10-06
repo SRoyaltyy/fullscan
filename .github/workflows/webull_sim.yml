@@ -2,8 +2,13 @@ name: webull sim
 
 # Builds the day's Webull sim rows after the open and again after the close.
 # 09:45 ET and 10:15 ET are 13:45 and 14:15 UTC while the US is on EDT
-# (through 2026-11-01). 16:15 ET is 20:15 UTC. The first run is after the
-# 03:00–09:40 ET freeze. GitHub-hosted runner only.
+# (through 2026-11-01). Those two runs retry a missing open.
+# 16:15 ET is 20:15 UTC. That cron is the day's final run: it is the only
+# one at or after the 16:00 ET close, and a name that still has no usable
+# open is logged "no open, not filled" so the rest of the book can lock.
+# The first run is after the 03:00–09:40 ET freeze. GitHub-hosted runner only.
+# Theme Radar plans are cloned from the public theme-radar repo. The job
+# token is for this repo and cannot read that one.
 
 on:
   workflow_dispatch:
@@ -37,8 +42,17 @@ jobs:
         run: pip install pyarrow pandas yfinance
       - name: Tests
         run: python3 -m src.test_webull_sim
+      - name: Checkout Theme Radar plans
+        if: github.event_name != 'pull_request'
+        run: |
+          rm -rf "$RUNNER_TEMP/theme-radar"
+          git clone --filter=blob:none --sparse https://github.com/SRoyaltyy/theme-radar.git "$RUNNER_TEMP/theme-radar"
+          git -C "$RUNNER_TEMP/theme-radar" sparse-checkout set research/shadow_log/plans
+          git -C "$RUNNER_TEMP/theme-radar" checkout
       - name: Build today's rows
         if: github.event_name != 'pull_request'
+        env:
+          THEME_RADAR_DIR: ${{ runner.temp }}/theme-radar
         run: python3 -m src.webull_sim
       - name: Land the sim books
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'

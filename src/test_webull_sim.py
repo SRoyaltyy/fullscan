@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import tempfile
 from datetime import datetime
 from decimal import Decimal
@@ -32,6 +33,10 @@ from src.webull_sim import (
     in_write_freeze,
     load_h1_plans,
     load_schedule,
+    MISSING_OPEN_RULE,
+    canon,
+    github_api,
+    is_final_run,
     load_theme_plans,
     official_opens,
     unsent_orders_label,
@@ -505,14 +510,19 @@ def test_theme_radar_late_first_appearance_is_not_a_fill() -> None:
 EARLY_SHA = "ecdb627a7d3df2b8fd9470f9bab1aa4a77732336"
 LATE_SHA = "ffffffffffffffffffffffffffffffffffffffff"
 PLAN_PATH = "research/shadow_log/plans/plan_2026-10-06.csv"
-PLAN_CSV = """cell,signal_date,ticker,entry_date,hold_days,rules_sha256,source
-fpe_delta_t3_earn_today_3d,2026-10-05,AXIL,2026-10-06,3,abc,preopen_plan_2026-10-06
-fresh_dcp_t1_ep_ge03_2d,2026-10-05,AIB,2026-10-06,2,abc,preopen_plan_2026-10-06
+FPE_10_06 = ["AXIL", "DAL", "FBK", "JPM", "LEVI", "LW", "NEOG", "PENG", "RELL", "UNH", "WFC", "WS"]
+PLAN_CSV = "cell,signal_date,ticker,entry_date,hold_days,rules_sha256,source\n" + "".join(
+    f"fpe_delta_t3_earn_today_3d,2026-10-05,{ticker},2026-10-06,3,abc,preopen_plan_2026-10-06\n"
+    for ticker in FPE_10_06
+) + """fresh_dcp_t1_ep_ge03_2d,2026-10-05,AIB,2026-10-06,2,abc,preopen_plan_2026-10-06
 fresh_dcp_t1_ep_ge03_2d,2026-10-05,RIVN,2026-10-06,2,abc,preopen_plan_2026-10-06
 fresh_dcp_t1_avoid_ah_3d,2026-10-05,AIB,2026-10-06,3,abc,preopen_plan_2026-10-06
 fresh_dcp_t1_avoid_ah_3d,2026-10-05,RIVN,2026-10-06,3,abc,preopen_plan_2026-10-06
-# status=fires rows=5 fpe_delta_t3_earn_today_3d=1 fresh_dcp_t1_ep_ge03_2d=2 fresh_dcp_t1_avoid_ah_3d=2
+# status=fires rows=16 fpe_delta_t3_earn_today_3d=12 fresh_dcp_t1_ep_ge03_2d=2 fresh_dcp_t1_avoid_ah_3d=2
 # built_at_utc=2026-10-06T10:20:11Z signal_date=2026-10-05 entry_date=2026-10-06
+"""
+NO_FIRES_CSV = """# status=no_fires
+# built_at_utc=2026-10-07T10:20:11Z signal_date=2026-10-06 entry_date=2026-10-07
 """
 
 
@@ -558,10 +568,16 @@ def test_theme_plan_first_commit_before_open_is_locked() -> None:
     assert plan["commit"] == EARLY_SHA
     assert plan["commit_et"] == "2026-10-06T06:20:12-04:00"
     assert plan["source"] == f"SRoyaltyy/theme-radar:{PLAN_PATH}"
-    assert plan["picks"][0].ticker == "AXIL"
-    assert plan["picks"][0].side == "short"
-    assert plan["picks"][0].hold_sessions == 3
+    assert [pick.ticker for pick in plan["picks"]] == FPE_10_06
+    assert all(pick.side == "short" and pick.hold_sessions == 3 for pick in plan["picks"])
     assert plan["picks"][0].exit_on == "2026-10-09"
+    ep = books[book_name("theme_radar_fresh_dcp_t1_ep_ge03_2d")][0]
+    ah = books[book_name("theme_radar_fresh_dcp_t1_avoid_ah_3d")][0]
+    assert [pick.ticker for pick in ep["picks"]] == ["AIB", "RIVN"]
+    assert [pick.hold_sessions for pick in ep["picks"]] == [2, 2]
+    assert [pick.ticker for pick in ah["picks"]] == ["AIB", "RIVN"]
+    assert [pick.hold_sessions for pick in ah["picks"]] == [3, 3]
+    assert len(plan["picks"]) == 12 and len(ep["picks"]) == 2 and len(ah["picks"]) == 2
     assert add_trading_days("2026-09-18", 3) == "2026-09-23"
     assert add_trading_days("2026-09-04", 1) == "2026-09-08"
 
@@ -608,7 +624,7 @@ def test_theme_plan_at_or_after_open_or_missing_is_not_a_fill() -> None:
         assert rows[0]["reason"] == "no pre-09:30 plan"
         assert rows[0]["fills"] == []
         assert Decimal(rows[0]["cash"]) == START_CASH
-        assert rows[0]["picks"] == 1
+        assert rows[0]["picks"] == 12
         return rows[0]
 
     # 13:30 UTC is 09:30 ET. The lock is strict: at the open is not before it.
@@ -898,8 +914,8 @@ def test_unexplained_jump_is_not_used_and_a_missing_open_is_not_guessed() -> Non
     assert ("JUMP", "2026-10-06") not in got
     assert got[("SPLIT", "2026-10-06")]["open"] == 10.0
     assert "GONE" not in {ticker for ticker, _day in got}
-    # 16:15 still locks only when the open was observed. The same price path
-    # runs then; a missing open does not become a fill at the close.
+    # The jump is not a price. The 16:15 run logs it as not filled
+    # (test_final_run_locks_the_other_picks_when_one_open_is_missing).
     close = datetime(2026, 10, 6, 16, 15, tzinfo=ET)
     assert final_row("2026-10-06", close, True, False) is False
     assert final_row("2026-10-06", close, True, True) is True
@@ -1007,13 +1023,240 @@ def test_excel_pre_lock_label_and_pages_ship_webull_sim() -> None:
     assert "webull-sim" in publish
 
 
+def _session_plan(day: str, picks: list[Pick], exits: list[str] | None = None) -> dict:
+    return {
+        "date": day,
+        "source": "data/day_board/x.json",
+        "commit": "abc",
+        "commit_et": f"{day}T08:00:00-04:00",
+        "picks": picks,
+        "exits": exits or [],
+        "reason": "",
+        "tradable": True,
+        "note": "",
+        "borrow": "",
+        "sizing": "slot",
+    }
+
+
+def test_final_run_locks_the_other_picks_when_one_open_is_missing() -> None:
+    """16:15 ET is the final run. 10:15 still retries. A 3x jump is a missing open."""
+    import pandas as pd
+
+    assert is_final_run(datetime(2026, 10, 6, 9, 45, tzinfo=ET), "2026-10-06") is False
+    assert is_final_run(datetime(2026, 10, 6, 10, 15, tzinfo=ET), "2026-10-06") is False
+    assert is_final_run(datetime(2026, 10, 6, 16, 15, tzinfo=ET), "2026-10-06") is True
+    picks = [Pick(f"N{i:02d}", "long") for i in range(15)]
+    missing = "N07"
+
+    def bars_for(day, tickers):
+        return {ticker: _flat_day(10) for ticker in tickers if ticker != missing}
+
+    plan = _session_plan("2026-10-06", picks)
+    early = run_book(
+        "1d_top_webull_sim", [plan], ["2026-10-06"], bars_for, schedule(),
+        datetime(2026, 10, 6, 10, 15, tzinfo=ET),
+    )[0]
+    assert early["section"] == "not_a_locked_trade"
+    assert early["final"] is False
+    assert early["locked_trade"] is False
+    missed = next(fill for fill in early["fills"] if fill["ticker"] == missing)
+    assert missed["reason"] == "open not observed" and missed["shares"] == 0
+    filled = [fill for fill in early["fills"] if fill.get("shares")]
+    assert len(filled) == 14
+
+    late = run_book(
+        "1d_top_webull_sim", [plan], ["2026-10-06"], bars_for, schedule(),
+        datetime(2026, 10, 6, 16, 15, tzinfo=ET),
+    )[0]
+    assert late["section"] == "locked"
+    assert late["final"] is True
+    assert late["locked_trade"] is True
+    assert late["reason"] == ""
+    missed = next(fill for fill in late["fills"] if fill["ticker"] == missing)
+    assert missed["reason"] == "no open, not filled" and missed["shares"] == 0
+    assert len([fill for fill in late["fills"] if fill.get("shares")]) == 14
+    assert "no open, not filled: N07" in late["note"]
+    assert missing not in {row["ticker"] for row in late["positions"]}
+    page = render_md([late], schedule(), manifest={"lock_from": "2026-10-06", "entries": []},
+                     paper_open=Path("/no/such/paper"))
+    html = render_html([late], schedule(), manifest={"lock_from": "2026-10-06", "entries": []},
+                       paper_open=Path("/no/such/paper"))
+    assert MISSING_OPEN_RULE in page and MISSING_OPEN_RULE in html
+    assert "no open, not filled: N07" in page and "no open, not filled: N07" in html
+
+    # A held lot whose exit open is missing stays held and is logged.
+    held = [Pick("HELD", "long")]
+    nxt = [Pick("BBB", "long")]
+
+    def two_days(day, tickers):
+        if day == "2026-10-06":
+            return {ticker: _flat_day(10) for ticker in tickers}
+        return {ticker: _flat_day(10) for ticker in tickers if ticker != "HELD"}
+
+    rows = run_book(
+        "demo_webull_sim",
+        [
+            _session_plan("2026-10-06", held),
+            _session_plan("2026-10-07", nxt, ["HELD"]),
+        ],
+        ["2026-10-06", "2026-10-07"],
+        two_days, schedule(),
+        datetime(2026, 10, 7, 16, 15, tzinfo=ET),
+    )
+    second = rows[1]
+    assert second["section"] == "locked" and second["final"] is True
+    assert any(row["ticker"] == "HELD" and row["shares"] > 0 for row in second["positions"])
+    logged = next(fill for fill in second["fills"] if fill["ticker"] == "HELD")
+    assert logged["reason"] == "no open, not filled" and logged["shares"] == 0
+    assert "no open, not filled: HELD" in second["note"]
+    bought = next(fill for fill in second["fills"] if fill["ticker"] == "BBB")
+    assert bought["reason"] == "open" and bought["shares"] > 0
+
+    flat = pd.DataFrame([
+        {"date": "2026-10-03", "ticker": "AAA", "open": 10.0, "high": 10.0, "low": 10.0, "close": 10.0, "volume": 1},
+        {"date": "2026-10-06", "ticker": "AAA", "open": 10.2, "high": 10.2, "low": 10.2, "close": 10.2, "volume": 1},
+        {"date": "2026-10-03", "ticker": "JUMP", "open": 10.0, "high": 10.0, "low": 10.0, "close": 10.0, "volume": 1},
+        {"date": "2026-10-06", "ticker": "JUMP", "open": 40.0, "high": 40.0, "low": 40.0, "close": 40.0, "volume": 1},
+    ])
+    opens = official_opens(flat, None, "2026-10-06")
+    assert ("JUMP", "2026-10-06") not in opens
+
+    def jump_bars(day, tickers):
+        return {ticker: opens[(ticker, day)] for ticker in tickers if (ticker, day) in opens}
+
+    jump = run_book(
+        "1d_top_webull_sim",
+        [_session_plan("2026-10-06", [Pick("AAA", "long"), Pick("JUMP", "long")])],
+        ["2026-10-06"], jump_bars, schedule(),
+        datetime(2026, 10, 6, 16, 15, tzinfo=ET),
+    )[0]
+    assert jump["section"] == "locked"
+    assert next(fill for fill in jump["fills"] if fill["ticker"] == "JUMP")["reason"] == "no open, not filled"
+    assert next(fill for fill in jump["fills"] if fill["ticker"] == "AAA")["shares"] > 0
+
+    # A book whose opens all printed does not change between 10:15 and 16:15.
+    whole = _session_plan("2026-10-06", [Pick("AAA", "long"), Pick("BBB", "long")])
+
+    def all_bars(day, tickers):
+        return {ticker: _flat_day(10) for ticker in tickers}
+
+    at_1015 = run_book(
+        "h1_webull_sim", [whole], ["2026-10-06"], all_bars, schedule(),
+        datetime(2026, 10, 6, 10, 15, tzinfo=ET),
+    )[0]
+    at_1615 = run_book(
+        "h1_webull_sim", [whole], ["2026-10-06"], all_bars, schedule(),
+        datetime(2026, 10, 6, 16, 15, tzinfo=ET),
+    )[0]
+    assert canon(at_1015) == canon(at_1615)
+    assert at_1615["locked_trade"] is True and at_1615["final"] is True
+
+
+def test_no_fires_sits_out_and_history_starts_on_10_06() -> None:
+    import os
+    import subprocess
+
+    fires = _theme_github([_commit(EARLY_SHA, "2026-10-06T10:20:12Z")], text=NO_FIRES_CSV)
+    with mock.patch("src.webull_sim.github_api", side_effect=fires):
+        books = load_theme_plans()
+    for cell in (
+        "fpe_delta_t3_earn_today_3d",
+        "fresh_dcp_t1_ep_ge03_2d",
+        "fresh_dcp_t1_avoid_ah_3d",
+    ):
+        plan = books[book_name(f"theme_radar_{cell}")][0]
+        assert plan["date"] == "2026-10-06"
+        assert plan["reason"] == "sat out, 0 picks"
+        assert plan["tradable"] is False
+        assert plan["picks"] == []
+        assert plan["commit"] == EARLY_SHA
+        assert "status=no_fires" in plan["note"]
+    late = _theme_github([_commit(LATE_SHA, "2026-10-06T15:00:00Z")], text=NO_FIRES_CSV)
+    with mock.patch("src.webull_sim.github_api", side_effect=late):
+        late_books = load_theme_plans()
+    late_plan = late_books[book_name("theme_radar_fpe_delta_t3_earn_today_3d")][0]
+    assert late_plan["reason"] == "no pre-09:30 plan"
+    assert late_plan["tradable"] is False
+
+    listing = [
+        {"name": "plan_2026-10-03.csv", "type": "file"},
+        {"name": "plan_2026-10-06.csv", "type": "file"},
+    ]
+
+    def github_api(path: str, accept: str = "") -> tuple[int, str]:
+        if "plan_2026-10-03.csv" in path:
+            raise AssertionError(path)
+        return _theme_github([_commit(EARLY_SHA, "2026-10-06T10:20:12Z")], listing=listing)(path, accept)
+
+    with mock.patch("src.webull_sim.github_api", side_effect=github_api):
+        dated = load_theme_plans()
+    days = {plan["date"] for plans in dated.values() for plan in plans}
+    assert "2026-10-03" not in days
+    assert "2026-10-06" in days
+
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        subprocess.run(["git", "init"], cwd=root, check=True, capture_output=True)
+        folder = root / "research" / "shadow_log" / "plans"
+        folder.mkdir(parents=True)
+        (folder / "plan_2026-10-03.csv").write_text(PLAN_CSV, encoding="utf-8")
+        (folder / "plan_2026-10-06.csv").write_text(PLAN_CSV, encoding="utf-8")
+        (folder / "plan_2026-10-07.csv").write_text(NO_FIRES_CSV, encoding="utf-8")
+        env = os.environ.copy()
+        env.update({
+            "GIT_AUTHOR_DATE": "2026-10-06T10:20:12Z",
+            "GIT_COMMITTER_DATE": "2026-10-06T10:20:12Z",
+            "GIT_AUTHOR_NAME": "test",
+            "GIT_AUTHOR_EMAIL": "test@example.com",
+            "GIT_COMMITTER_NAME": "test",
+            "GIT_COMMITTER_EMAIL": "test@example.com",
+        })
+        subprocess.run(["git", "add", "."], cwd=root, check=True, capture_output=True, env=env)
+        subprocess.run(["git", "commit", "-m", "plans"], cwd=root, check=True, capture_output=True, env=env)
+        with mock.patch.dict(os.environ, {"THEME_RADAR_DIR": str(root)}):
+            local = load_theme_plans()
+    fpe = local[book_name("theme_radar_fpe_delta_t3_earn_today_3d")]
+    assert [plan["date"] for plan in fpe] == ["2026-10-06", "2026-10-07"]
+    assert [pick.ticker for pick in fpe[0]["picks"]] == FPE_10_06
+    assert fpe[1]["reason"] == "sat out, 0 picks"
+    assert "2026-10-03" not in {plan["date"] for plans in local.values() for plan in plans}
+
+
+def test_theme_radar_fetch_does_not_send_the_actions_token() -> None:
+    captured = {}
+
+    def run(cmd, **kwargs):
+        captured["cmd"] = cmd
+        captured["env"] = kwargs.get("env")
+
+        class _Proc:
+            returncode = 0
+            stdout = "[]\n200"
+            stderr = ""
+
+        return _Proc()
+
+    with mock.patch.dict(os.environ, {"GITHUB_TOKEN": "secret", "GH_TOKEN": "secret"}):
+        with mock.patch("src.webull_sim.subprocess.run", side_effect=run):
+            github_api("repos/SRoyaltyy/theme-radar/contents/research/shadow_log/plans")
+    assert captured["cmd"][0] == "curl"
+    assert "secret" not in " ".join(captured["cmd"])
+    assert captured["env"] is not None
+    assert "GITHUB_TOKEN" not in captured["env"]
+    assert "GH_TOKEN" not in captured["env"]
+
+
 def test_workflow_is_after_the_freeze_and_on_ubuntu() -> None:
     text = (ROOT / ".github/workflows/webull_sim.yml").read_text(encoding="utf-8")
     assert "ubuntu-latest" in text
     assert "workflow_dispatch" in text
     assert "45 13 * * 1-5" in text
+    assert "15 20 * * 1-5" in text
     assert "OpenClaw" not in text
     assert "webull_sim" in text
+    assert "https://github.com/SRoyaltyy/theme-radar.git" in text
+    assert "THEME_RADAR_DIR" in text
 
 
 if __name__ == "__main__":
@@ -1049,6 +1292,9 @@ if __name__ == "__main__":
     test_unexplained_jump_is_not_used_and_a_missing_open_is_not_guessed()
     test_h1_ledger_plan_fills_at_the_open_and_flatten_h1_sat_out()
     test_excel_pre_lock_label_and_pages_ship_webull_sim()
+    test_final_run_locks_the_other_picks_when_one_open_is_missing()
+    test_no_fires_sits_out_and_history_starts_on_10_06()
+    test_theme_radar_fetch_does_not_send_the_actions_token()
     test_freeze_window()
     test_workflow_is_after_the_freeze_and_on_ubuntu()
     with tempfile.TemporaryDirectory() as tmp:
