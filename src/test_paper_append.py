@@ -233,19 +233,36 @@ if __name__ == "__main__":
     import tempfile
 
     class _MP:
-        def setattr(self, obj, name, value):
+        def __init__(self):
+            self._saved = []
+
+        def setattr(self, obj, name, value, raising=True):
+            exists = hasattr(obj, name)
+            if not exists and not raising:
+                return
+            self._saved.append((obj, name, getattr(obj, name, None), exists))
             setattr(obj, name, value)
 
-    with tempfile.TemporaryDirectory() as d:
-        test_resume_appends_later_books_and_keeps_printed_bytes(Path(d), _MP())
-    with tempfile.TemporaryDirectory() as d:
-        test_missing_state_refuses_to_rewrite_the_curve(Path(d), _MP())
-    with tempfile.TemporaryDirectory() as d:
-        test_unpriced_resume_does_not_skip_ahead(Path(d), _MP())
-    with tempfile.TemporaryDirectory() as d:
-        test_book_committed_before_0930_is_appended(Path(d), _MP())
-    with tempfile.TemporaryDirectory() as d:
-        test_late_book_stays_missing_and_the_next_session_appends(Path(d), _MP())
-    with tempfile.TemporaryDirectory() as d:
-        test_open_cutoff_is_strict_and_reads_the_oldest_main_commit(Path(d), _MP())
+        def undo(self):
+            for obj, name, old, existed in reversed(self._saved):
+                if existed:
+                    setattr(obj, name, old)
+                elif hasattr(obj, name):
+                    delattr(obj, name)
+            self._saved.clear()
+
+    def _run(fn):
+        with tempfile.TemporaryDirectory() as d:
+            mp = _MP()
+            try:
+                fn(Path(d), mp)
+            finally:
+                mp.undo()
+
+    _run(test_resume_appends_later_books_and_keeps_printed_bytes)
+    _run(test_missing_state_refuses_to_rewrite_the_curve)
+    _run(test_unpriced_resume_does_not_skip_ahead)
+    _run(test_book_committed_before_0930_is_appended)
+    _run(test_late_book_stays_missing_and_the_next_session_appends)
+    _run(test_open_cutoff_is_strict_and_reads_the_oldest_main_commit)
     print("paper append ok")
