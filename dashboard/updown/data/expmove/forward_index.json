@@ -1,5 +1,7 @@
 {
  "model": "updown_expmove_v1",
- "forward_days": [],
+ "forward_days": [
+  "2026-10-07"
+ ],
  "missed": []
 }
