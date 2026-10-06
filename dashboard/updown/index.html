@@ -37,18 +37,20 @@ button,input,select{font:inherit}#status{color:#8a1c1c}
 </main>
 <script>
 const qs=new URLSearchParams(location.search);
-const BASE=qs.get('data')||'https://raw.githubusercontent.com/SRoyaltyy/fullscan/updown-data/updown/';
+const BASE=qs.get('data')||'data/';
 let IDX,DAYS,cur=0,rows=[],sortK='p',sortD=-1,HT=null;const MC={};
 const $=s=>document.querySelector(s),pct=(x,d=2)=>x==null?'':(x*100).toFixed(d)+'%';
 fetch(BASE+'index.json').then(r=>{if(!r.ok)throw r.status;return r.json()}).then(j=>{IDX=j;DAYS=j.days.map(a=>({d:a[0],per:a[1]=='h'?'holdout':'dev',n:a[2],up:a[3],hit:a[4],auc:a[5],spr:a[6],mp:a[7]}));init();}).catch(e=>$('#status').textContent='Could not load data ('+e+') from '+BASE);
-function month(mo){if(MC[mo])return MC[mo];return MC[mo]=fetch(BASE+'m/'+mo+'.bin').then(r=>r.arrayBuffer()).then(b=>{const v=new DataView(b),nT=v.getUint16(4,true),nD=v.getUint16(6,true);let o=8;
+async function gunz(r){if(!r.ok)throw 'HTTP '+r.status;let b=await r.arrayBuffer();const u=new Uint8Array(b,0,2);if(u[0]==0x1f&&u[1]==0x8b){b=await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();}return b;}
+function month(mo){const y=mo.slice(0,4);if(MC[y])return MC[y];return MC[y]=fetch(BASE+'y/'+y+'.bin.gz').then(gunz).then(b=>{const v=new DataView(b),nT=v.getUint16(4,true),nD=v.getUint16(6,true);let o=8;
  const T=new Uint16Array(b,o,nT);o+=2*nT;const D=new Uint16Array(b,o,nD);o+=2*nD;const P=new Uint16Array(b,o,nT*nD);o+=2*nT*nD;const R=new Int16Array(b,o,nT*nD);return {T,D,P,R,nT,nD};});}
 function init(){$('#built').textContent='built '+IDX.built+' · horizon: '+IDX.horizon+' · final holdout from '+IDX.holdout_start;
  $('#notes').innerHTML='<ul>'+IDX.notes.map(n=>'<li>'+n+'</li>').join('')+'</ul>';let h='';
  for(const k of ['dev','holdout']){const s=IDX.summary[k];h+=`<div class="kpi"><span class="${k=='dev'?'dev':'hold'}">${k=='dev'?'dev (walk-forward)':'FINAL HOLDOUT'}</span> ${s.days} days</div><div class="kpi">mean AUC<b>${s.auc.toFixed(4)}</b></div><div class="kpi">hit<b>${pct(s.hit,1)}</b><small>always-up ${pct(s.always_up,1)} · always-down ${pct(s.always_down,1)}</small></div><div class="kpi">top-bottom decile<b>${s.spread_pct.toFixed(3)}%/day</b><small>after 0.4% fees ${s.ls_net_pct.toFixed(3)}%</small></div><div style="flex-basis:100%"></div>`;}
  $('#sumrow').innerHTML=h;$('#dp').min=DAYS[0].d;$('#dp').max=DAYS[DAYS.length-1].d;drawChart();
- const m=location.hash.match(/d=(\d{4}-\d\d-\d\d)/);go(m?nearest(m[1]):DAYS.length-1);
+ const m=location.hash.match(/d=(\d{4}-\d\d-\d\d)/),mt=location.hash.match(/t=([A-Za-z0-9.\-^]+)/);go(m?nearest(m[1]):DAYS.length-1);if(mt&&IDX.tickers.includes(mt[1].toUpperCase()))hist(mt[1].toUpperCase(),false);
  $('#prev').onclick=()=>go(Math.max(0,cur-1));$('#next').onclick=()=>go(Math.min(DAYS.length-1,cur+1));$('#dp').onchange=e=>go(nearest(e.target.value));
+ window.addEventListener('unhandledrejection',e=>$('#status').textContent='Could not load data ('+e.reason+')');
  $('#q').oninput=render;$('#filt').onchange=render;
  document.querySelectorAll('#tbl th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;sortD=(sortK==k)?-sortD:-1;sortK=k;render();});
  $('#hclose').onclick=()=>$('#hist').style.display='none';$('#hall').onclick=()=>HT&&hist(HT,true);
@@ -62,7 +64,7 @@ function drawChart(){const c=$('#chart'),W=c.width=c.clientWidth*2,H=c.height=32
 function go(i){cur=i;const D=DAYS[i];$('#dp').value=D.d;history.replaceState(null,'','#d='+D.d);
  $('#badge').innerHTML=D.per=='holdout'?'<span class="hold">FINAL HOLDOUT day</span>':'<span class="dev">dev (walk-forward out-of-sample)</span>';
  $('#daysum').innerHTML=`<div class="kpi">tickers<b>${D.n}</b></div><div class="kpi">realized up-rate<b>${pct(D.up,1)}</b></div><div class="kpi">model hit<b>${pct(D.hit,1)}</b></div><div class="kpi">AUC<b>${D.auc==null?'':D.auc.toFixed(3)}</b></div><div class="kpi">top-bottom decile<b>${D.spr==null?'':D.spr.toFixed(2)+'%'}</b></div><div class="kpi">mean p_up<b>${pct(D.mp,1)}</b></div>`;
- month(D.d.slice(0,7)).then(M=>{const k=Array.prototype.indexOf.call(M.D,i);const R=[];if(k<0){rows=[];render();return;}
+ month(D.d.slice(0,7)).then(M=>{if(DAYS[cur]!==D)return;const k=Array.prototype.indexOf.call(M.D,i);const R=[];if(k<0){rows=[];render();return;}
   for(let j=0;j<M.nT;j++){const p=M.P[k*M.nT+j];if(p==65535)continue;const rr=M.R[k*M.nT+j];R.push({t:IDX.tickers[M.T[j]],p:p/10000,r:rr==-32768?null:rr/10000});}
   const ord=R.map((x,ix)=>ix).sort((a,b)=>R[a].p-R[b].p);ord.forEach((ix,rank)=>R[ix].dec=Math.floor(rank*10/R.length)+1);
   R.forEach(x=>{x.c=x.p>0.5?'UP':'DOWN';x.u=x.r==null?null:(x.r>0?'UP':'DOWN');x.h=x.u==null?null:(x.c==x.u?1:0);});rows=R;render();});}
@@ -71,15 +73,15 @@ function render(){const q=$('#q').value.trim().toUpperCase(),f=$('#filt').value;
  R.sort((a,b)=>{let A=a[sortK],B=b[sortK];if(A==null)return 1;if(B==null)return -1;return (A<B?-1:A>B?1:0)*sortD;});
  const tb=$('#tbl tbody');tb.innerHTML=R.slice(0,1500).map(x=>`<tr><td><span class="tk" data-t="${x.t}">${x.t}</span></td><td>${x.p.toFixed(3)}</td><td class="${x.c=='UP'?'up':'dn'}">${x.c}</td><td>${x.dec}</td><td class="${x.r>0?'up':(x.r<0?'dn':'')}">${x.r==null?'':pct(x.r)}</td><td>${x.u||''}</td><td>${x.h==null?'':(x.h?'✔':'✘')}</td></tr>`).join('')+(R.length>1500?`<tr><td colspan=7>showing 1500 of ${R.length}; refine the search</td></tr>`:'');
  tb.querySelectorAll('.tk').forEach(e=>e.onclick=()=>hist(e.dataset.t,false));}
-function hist(t,all){HT=t;const ti=IDX.tickers.indexOf(t),mos=all?IDX.months:IDX.months.slice(-12);
+function hist(t,all){HT=t;const ti=IDX.tickers.indexOf(t),last=DAYS[DAYS.length-1].d,cut=all?'':(String(+last.slice(0,4)-1)+last.slice(4)),mos=IDX.years.filter(y=>all||y>=cut.slice(0,4));
  $('#hist').style.display='block';$('#htitle').textContent=t+' — history ('+(all?'all months':'last 12 months')+', loading…)';
  Promise.all(mos.map(month)).then(Ms=>{const H=[];Ms.forEach(M=>{const j=Array.prototype.indexOf.call(M.T,ti);if(j<0)return;
-  for(let k=0;k<M.nD;k++){const p=M.P[k*M.nT+j];if(p==65535)continue;const rr=M.R[k*M.nT+j];H.push({D:DAYS[M.D[k]],p:p/10000,r:rr==-32768?null:rr/10000});}});
+  for(let k=0;k<M.nD;k++){const p=M.P[k*M.nT+j];if(p==65535)continue;const rr=M.R[k*M.nT+j];if(DAYS[M.D[k]].d<cut)continue;H.push({D:DAYS[M.D[k]],p:p/10000,r:rr==-32768?null:rr/10000});}});
   let n=0,h=0;H.forEach(x=>{x.c=x.p>0.5?'UP':'DOWN';x.hit=x.r==null?null:((x.c==(x.r>0?'UP':'DOWN'))?1:0);if(x.hit!=null){n++;h+=x.hit;}});
   $('#htitle').textContent=t+' — history ('+(all?'all months':'last 12 months')+')';$('#hsum').textContent=` ${n} scored days · hit ${n?(h/n*100).toFixed(1):'-'}%`;
   $('#htbl tbody').innerHTML=H.slice().reverse().map(x=>`<tr><td>${x.D.d}</td><td>${x.D.per}</td><td>${x.p.toFixed(3)}</td><td class="${x.c=='UP'?'up':'dn'}">${x.c}</td><td class="${x.r>0?'up':(x.r<0?'dn':'')}">${x.r==null?'':pct(x.r)}</td><td>${x.hit==null?'':(x.hit?'✔':'✘')}</td></tr>`).join('');
   const c=$('#hchart'),W=c.width=c.clientWidth*2,Hh=c.height=320,g=c.getContext('2d'),y=v=>Hh-(v-.3)/.4*Hh;g.clearRect(0,0,W,Hh);
   g.strokeStyle='#aaa';g.beginPath();g.moveTo(0,y(.5));g.lineTo(W,y(.5));g.stroke();const n0=H.length;
   H.forEach((x,i)=>{g.fillStyle=x.r==null?'#888':(x.r>0?'#0a7d32':'#b3261e');g.fillRect(i/Math.max(1,n0-1)*W,y(Math.min(.7,Math.max(.3,x.p))),3,3);});
-  $('#hist').scrollIntoView({behavior:'smooth'});});}
+  $('#hist').scrollIntoView({behavior:'smooth'});}).catch(e=>$('#htitle').textContent=t+' — could not load history ('+e+')');}
 </script></body></html>
