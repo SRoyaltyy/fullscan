@@ -1,6 +1,6 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-10-06T10:00:41.623586-04:00",
+  "generated_at": "2026-10-06T10:00:52.666663-04:00",
   "items": [
     {
       "ok": true,
@@ -47,11 +47,11 @@
       "missing_markers": []
     },
     {
-      "ok": true,
+      "ok": false,
       "kind": "news_actions",
       "path": "01_daily/news/2026-09-08_actions.json",
-      "reason": "",
-      "size": 46252,
+      "reason": "stale_news",
+      "size": 0,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -326,5 +326,5 @@
   ],
   "sector_n_ok": 11,
   "sector_n_total": 11,
-  "all_ok": true
+  "all_ok": false
 }

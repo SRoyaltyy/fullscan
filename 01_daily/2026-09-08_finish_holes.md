@@ -4,9 +4,9 @@
 |---|---|
 | parse | ok |
 | judge | ok |
-| actions | ok |
+| actions | fail:2 |
 | general | ok_existing |
-| tech | ok |
-| utilities | ok |
+| tech | ok_existing |
+| utilities | ok_existing |
 | catalyst | skipped_override |
 | dashboard | ok |

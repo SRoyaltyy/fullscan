@@ -2,72 +2,84 @@
   "date": "2026-09-08",
   "n_ok": 11,
   "n_total": 11,
+  "summary": "",
   "sectors": [
     {
       "sector": "Basic Materials",
       "ok": true,
       "reason": "",
-      "size": 8628
+      "size": 8628,
+      "status": "OK"
     },
     {
       "sector": "Communication Services",
       "ok": true,
       "reason": "",
-      "size": 11347
+      "size": 11347,
+      "status": "OK"
     },
     {
       "sector": "Consumer Cyclical",
       "ok": true,
       "reason": "",
-      "size": 12244
+      "size": 12244,
+      "status": "OK"
     },
     {
       "sector": "Consumer Defensive",
       "ok": true,
       "reason": "",
-      "size": 21247
+      "size": 21247,
+      "status": "OK"
     },
     {
       "sector": "Energy",
       "ok": true,
       "reason": "",
-      "size": 8560
+      "size": 8560,
+      "status": "OK"
     },
     {
       "sector": "Financial",
       "ok": true,
       "reason": "",
-      "size": 14373
+      "size": 14373,
+      "status": "OK"
     },
     {
       "sector": "Healthcare",
       "ok": true,
       "reason": "",
-      "size": 9059
+      "size": 9059,
+      "status": "OK"
     },
     {
       "sector": "Industrials",
       "ok": true,
       "reason": "",
-      "size": 11069
+      "size": 11069,
+      "status": "OK"
     },
     {
       "sector": "Real Estate",
       "ok": true,
       "reason": "",
-      "size": 10480
+      "size": 10480,
+      "status": "OK"
     },
     {
       "sector": "Technology",
       "ok": true,
       "reason": "",
-      "size": 18970
+      "size": 18970,
+      "status": "OK"
     },
     {
       "sector": "Utilities",
       "ok": true,
       "reason": "",
-      "size": 18367
+      "size": 18367,
+      "status": "OK"
     }
   ]
 }
