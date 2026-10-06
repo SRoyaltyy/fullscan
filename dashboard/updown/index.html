@@ -18,7 +18,7 @@ th{cursor:pointer;background:#f0f2f5;position:sticky;top:0}td:first-child,th:fir
 button,input,select{font:inherit}#status{color:#8a1c1c}
 </style></head><body>
 <header><h1>Every-stock morning up/down read — <span id="model">updown_o2c_v2</span></h1><small id="built" style="color:#cfd6df"></small></header>
-<div class="warn">RESEARCH ONLY &mdash; NOT A TRADING SIGNAL.<ul style="margin:4px 0 0 18px;padding:0;font-weight:400"><li>The up-probabilities use each day's <b>09:30 official open</b>, and that same open is the <b>entry price</b> of the open&rarr;close result. You cannot know the official open before an opening order is committed, so the edge shown cannot be traded as printed.</li><li>A version that knows only the <b>prior close</b> (no same-day open) scores <b>AUC about 0.52</b> with <b>no after-fee edge</b> (dev long-short &minus;0.20%/day after 0.4% fees; holdout +0.07%/day, not significant).</li><li>The data carries <b>survivorship bias</b>: the stock list holds only companies still trading in 2026, so companies that died in 2018&ndash;2025 are missing.</li><li>Full leak audit: <a href="LEAK_AUDIT.md">LEAK_AUDIT.md</a>.</li></ul></div>
+<div class="warn">RESEARCH ONLY &mdash; NOT A TRADING SIGNAL.<ul style="margin:4px 0 0 18px;padding:0;font-weight:400"><li>The up-probabilities use each day's <b>09:30 official open</b>, and that same open is the <b>entry price</b> of the open&rarr;close result. You cannot know the official open before an opening order is committed, so the edge shown cannot be traded as printed.</li><li>A version that knows only the <b>prior close</b> (no same-day open) scores <b>AUC about 0.52</b> with <b>no after-fee edge</b> (dev long-short &minus;0.20%/day after 0.4% fees; holdout +0.07%/day, not significant).</li><li>The data carries <b>survivorship bias</b>: the stock list holds only companies still trading in 2026, so companies that died in 2018&ndash;2025 are missing.</li><li>Full leak audit: <a href="LEAK_AUDIT.md">LEAK_AUDIT.md</a>.</li><li><b>Exp. move rank</b> column (updown_expmove_v1) is a descriptive risk rank, not a trading signal. It shows the predicted size of the move from today's open to the next open, |open&rarr;next open|, ranked within the top 1,000 names by dollar volume (100 = biggest expected move). It uses only pre-open inputs. It beats plain 20-day Parkinson volatility only slightly (rank IC about 0.42 vs 0.38). Past days are walk-forward out-of-sample; from 2026-10-07, days are frozen before 09:25 ET (see the card below). Paper shadow strategy: <a href="../updown-shadow/">updown-shadow</a>.</li></ul></div>
 <main>
 <div id="status"></div>
 <div class="card"><div id="notes"></div><div class="row" id="sumrow"></div></div>
@@ -28,17 +28,23 @@ button,input,select{font:inherit}#status{color:#8a1c1c}
   <input id="q" placeholder="search ticker" size="10">
   <select id="filt"><option value="all">all</option><option value="UP">calls UP</option><option value="DOWN">calls DOWN</option><option value="top">top decile</option><option value="bot">bottom decile</option></select></div>
  <div class="row" id="daysum" style="margin-top:8px"></div>
- <div id="tablewrap"><table id="tbl"><thead><tr><th data-k="t">Ticker</th><th data-k="p">p_up</th><th data-k="c">Call</th><th data-k="dec">Decile (10 = most up)</th><th data-k="r">Realized o2c</th><th data-k="u">Realized dir</th><th data-k="h">Hit</th></tr></thead><tbody></tbody></table></div>
- <small>Horizon: today's official open &rarr; today's close (Yahoo split-adjusted). Call = UP if p_up &gt; 0.5. Hit = call matches realized direction (0.00% counts as not-up).</small>
+ <div id="tablewrap"><table id="tbl"><thead><tr><th data-k="t">Ticker</th><th data-k="p">p_up</th><th data-k="c">Call</th><th data-k="dec">Decile (10 = most up)</th><th data-k="r">Realized o2c</th><th data-k="u">Realized dir</th><th data-k="h">Hit</th><th data-k="em" title="updown_expmove_v1: predicted |open-&gt;next open| rank within top-1000 by dollar volume; 100 = largest">Exp. move rank</th></tr></thead><tbody></tbody></table></div>
+<small>Exp. move rank: blank = not in the top-1,000 liquid set or not scored (2026-10-05/06 not scored).</small><br> <small>Horizon: today's official open &rarr; today's close (Yahoo split-adjusted). Call = UP if p_up &gt; 0.5. Hit = call matches realized direction (0.00% counts as not-up).</small>
 </div>
 <div class="card" id="hist" style="display:none"><div class="row"><b id="htitle"></b><span id="hsum"></span><button id="hall">load full history</button><button id="hclose">close</button></div>
 <canvas id="hchart" height="160"></canvas>
 <div style="max-height:360px;overflow:auto"><table id="htbl"><thead><tr><th>Date</th><th>Period</th><th>p_up</th><th>Call</th><th>Realized o2c</th><th>Hit</th></tr></thead><tbody></tbody></table></div></div>
+<div class="card" id="emcard"><div class="row"><b>Expected-move rank, forward frozen days (updown_expmove_v1)</b><select id="emday"></select><input id="emq" placeholder="search ticker" size="10"><span id="emmeta"></span></div>
+<small>Descriptive risk rank only, no trading claim. Each day is frozen before 09:25 ET from pre-open inputs, then committed and fingerprinted (data/expmove/LOCKS.jsonl), append-only. Realized |open&rarr;next open| appears after the exit session.</small>
+<div style="max-height:420px;overflow:auto"><table id="emtbl"><thead><tr><th>Ticker</th><th>Exp. move rank</th><th>Model score (unitless)</th><th>20-day Parkinson rank</th><th>Realized |open&rarr;next open|</th></tr></thead><tbody></tbody></table></div></div>
 </main>
 <script>
 const qs=new URLSearchParams(location.search);
 const BASE=qs.get('data')||'data/';
-let IDX,DAYS,cur=0,rows=[],sortK='p',sortD=-1,HT=null;const MC={};
+let IDX,DAYS,cur=0,rows=[],sortK='p',sortD=-1,HT=null;const MC={},EMC={};let EMI=null;
+const EMB=BASE+'expmove/';const emIdx=fetch(EMB+'index.json').then(r=>r.ok?r.json():null).then(j=>{EMI=j;if(j)j.di=Object.fromEntries(j.days.map((a,i)=>[a[0],i]));return j;}).catch(()=>null);
+function emYear(y){if(EMC[y])return EMC[y];return EMC[y]=emIdx.then(j=>{if(!j||!j.years.includes(y))return null;return fetch(EMB+'y/'+y+'.bin.gz').then(gunz).then(b=>{const v=new DataView(b),nT=v.getUint16(4,true),nD=v.getUint16(6,true);let o=8;const T=new Uint16Array(b,o,nT);o+=2*nT;const D=new Uint16Array(b,o,nD);o+=2*nD;const R=new Uint16Array(b,o,nT*nD);return {T,D,R,nT,nD};});}).catch(()=>null);}
+function emDay(d){return emYear(d.slice(0,4)).then(M=>{if(!M||!EMI||!(d in EMI.di))return null;const k=Array.prototype.indexOf.call(M.D,EMI.di[d]);if(k<0)return null;const out={};for(let j=0;j<M.nT;j++){const v=M.R[k*M.nT+j];if(v!=65535)out[EMI.tickers[M.T[j]]]=v/10000;}return out;});}
 const $=s=>document.querySelector(s),pct=(x,d=2)=>x==null?'':(x*100).toFixed(d)+'%';
 fetch(BASE+'index.json').then(r=>{if(!r.ok)throw r.status;return r.json()}).then(j=>{IDX=j;DAYS=j.days.map(a=>({d:a[0],per:a[1]=='h'?'holdout':'dev',n:a[2],up:a[3],hit:a[4],auc:a[5],spr:a[6],mp:a[7]}));init();}).catch(e=>$('#status').textContent='Could not load data ('+e+') from '+BASE);
 async function gunz(r){if(!r.ok)throw 'HTTP '+r.status;let b=await r.arrayBuffer();const u=new Uint8Array(b,0,2);if(u[0]==0x1f&&u[1]==0x8b){b=await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();}return b;}
@@ -67,11 +73,12 @@ function go(i){cur=i;const D=DAYS[i];$('#dp').value=D.d;history.replaceState(nul
  month(D.d.slice(0,7)).then(M=>{if(DAYS[cur]!==D)return;const k=Array.prototype.indexOf.call(M.D,i);const R=[];if(k<0){rows=[];render();return;}
   for(let j=0;j<M.nT;j++){const p=M.P[k*M.nT+j];if(p==65535)continue;const rr=M.R[k*M.nT+j];R.push({t:IDX.tickers[M.T[j]],p:p/10000,r:rr==-32768?null:rr/10000});}
   const ord=R.map((x,ix)=>ix).sort((a,b)=>R[a].p-R[b].p);ord.forEach((ix,rank)=>R[ix].dec=Math.floor(rank*10/R.length)+1);
-  R.forEach(x=>{x.c=x.p>0.5?'UP':'DOWN';x.u=x.r==null?null:(x.r>0?'UP':'DOWN');x.h=x.u==null?null:(x.c==x.u?1:0);});rows=R;render();});}
+  R.forEach(x=>{x.c=x.p>0.5?'UP':'DOWN';x.u=x.r==null?null:(x.r>0?'UP':'DOWN');x.h=x.u==null?null:(x.c==x.u?1:0);x.em=null;});rows=R;render();
+  emDay(D.d).then(E=>{if(!E||DAYS[cur]!==D)return;R.forEach(x=>{x.em=E[x.t]==null?null:E[x.t];});render();});});}
 function render(){const q=$('#q').value.trim().toUpperCase(),f=$('#filt').value;
  let R=rows.filter(x=>(!q||x.t.startsWith(q))&&(f=='all'||(f=='top'&&x.dec==10)||(f=='bot'&&x.dec==1)||x.c==f));
  R.sort((a,b)=>{let A=a[sortK],B=b[sortK];if(A==null)return 1;if(B==null)return -1;return (A<B?-1:A>B?1:0)*sortD;});
- const tb=$('#tbl tbody');tb.innerHTML=R.slice(0,1500).map(x=>`<tr><td><span class="tk" data-t="${x.t}">${x.t}</span></td><td>${x.p.toFixed(3)}</td><td class="${x.c=='UP'?'up':'dn'}">${x.c}</td><td>${x.dec}</td><td class="${x.r>0?'up':(x.r<0?'dn':'')}">${x.r==null?'':pct(x.r)}</td><td>${x.u||''}</td><td>${x.h==null?'':(x.h?'✔':'✘')}</td></tr>`).join('')+(R.length>1500?`<tr><td colspan=7>showing 1500 of ${R.length}; refine the search</td></tr>`:'');
+ const tb=$('#tbl tbody');tb.innerHTML=R.slice(0,1500).map(x=>`<tr><td><span class="tk" data-t="${x.t}">${x.t}</span></td><td>${x.p.toFixed(3)}</td><td class="${x.c=='UP'?'up':'dn'}">${x.c}</td><td>${x.dec}</td><td class="${x.r>0?'up':(x.r<0?'dn':'')}">${x.r==null?'':pct(x.r)}</td><td>${x.u||''}</td><td>${x.h==null?'':(x.h?'✔':'✘')}</td><td>${x.em==null?'':Math.max(1,Math.ceil(x.em*100))}</td></tr>`).join('')+(R.length>1500?`<tr><td colspan=8>showing 1500 of ${R.length}; refine the search</td></tr>`:'');
  tb.querySelectorAll('.tk').forEach(e=>e.onclick=()=>hist(e.dataset.t,false));}
 function hist(t,all){HT=t;const ti=IDX.tickers.indexOf(t),last=DAYS[DAYS.length-1].d,cut=all?'':(String(+last.slice(0,4)-1)+last.slice(4)),mos=IDX.years.filter(y=>all||y>=cut.slice(0,4));
  $('#hist').style.display='block';$('#htitle').textContent=t+' — history ('+(all?'all months':'last 12 months')+', loading…)';
@@ -84,4 +91,13 @@ function hist(t,all){HT=t;const ti=IDX.tickers.indexOf(t),last=DAYS[DAYS.length-
   g.strokeStyle='#aaa';g.beginPath();g.moveTo(0,y(.5));g.lineTo(W,y(.5));g.stroke();const n0=H.length;
   H.forEach((x,i)=>{g.fillStyle=x.r==null?'#888':(x.r>0?'#0a7d32':'#b3261e');g.fillRect(i/Math.max(1,n0-1)*W,y(Math.min(.7,Math.max(.3,x.p))),3,3);});
   $('#hist').scrollIntoView({behavior:'smooth'});}).catch(e=>$('#htitle').textContent=t+' — could not load history ('+e+')');}
+let EMF=null,EMR=null,EMROWS=[];
+fetch(EMB+'forward_index.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{EMF=j;const s=$('#emday');if(!j||!j.forward_days.length){$('#emmeta').textContent='No forward day frozen yet (first: 2026-10-07).';return;}
+ j.forward_days.slice().reverse().forEach(d=>{const o=document.createElement('option');o.value=d;o.textContent=d;s.appendChild(o);});
+ fetch(EMB+'forward_realized.json',{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})).then(R=>{EMR=R||{};s.onchange=()=>emShow(s.value);$('#emq').oninput=emRender;emShow(j.forward_days[j.forward_days.length-1]);});}).catch(()=>{});
+function emShow(d){fetch(EMB+'days/'+d+'.json').then(r=>r.json()).then(J=>{const re=(EMR&&EMR[d])||null;
+ $('#emmeta').innerHTML=` frozen ${J.frozen_at_utc} UTC · ${J.rows.length} names`+(re?` · realized rank IC ${re.ic.toFixed(3)} (Parkinson-20 ${re.ic_park20.toFixed(3)})`:' · realized: pending');
+ EMROWS=J.rows.map(r=>({t:r[0],p:r[1],rk:r[2],pk:r[3],a:re&&re.abs?re.abs[r[0]]:null})).sort((a,b)=>b.rk-a.rk);emRender();});}
+function emRender(){const q=$('#emq').value.trim().toUpperCase();const R=EMROWS.filter(x=>!q||x.t.startsWith(q));
+ $('#emtbl tbody').innerHTML=R.map(x=>`<tr><td>${x.t}</td><td>${Math.max(1,Math.ceil(x.rk*100))}</td><td>${x.p.toFixed(4)}</td><td>${x.pk==null?'':Math.max(1,Math.ceil(x.pk*100))}</td><td>${x.a==null?'':pct(x.a/10000)}</td></tr>`).join('');}
 </script></body></html>
