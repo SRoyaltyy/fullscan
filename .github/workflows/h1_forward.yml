@@ -41,6 +41,16 @@ name: h1 append-only forward
 # deploy-dashboard.yml (its gh-pages-deploy group queues and never cancels
 # an in-flight deploy) because a GITHUB_TOKEN push does not trigger it.
 # The 13:05 UTC cron and workflow_dispatch stay as fallbacks.
+# WEBULL PAPER. The primary h1 sender is publish_strategy_tickets.yml
+# (paper_open --ready --submit, standing MARKET/CORE/DAY), but its morning
+# run comes before the seal and refuses "no sealed h1 plan". So a seal of
+# today's plan before 09:15 ET also dispatches Publish strategy tickets
+# (run_date=D), and before 09:20 ET dispatches webull_paper.yml submit=true
+# as the bell fallback, unless a D submit journal is already on main.
+# Both senders keep their own guards: --owner actions, the
+# data/paper_open/<D>_submit.json journal (local and on main), the stable
+# client_order_id, and webull_paper's missed_deadline refusal at 09:30 ET.
+# Nothing is dispatched at or after those cutoffs.
 
 on:
   schedule:
@@ -349,13 +359,56 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
           case " ${new_kinds} " in
-            *" plan "*) echo "sealed=true" >> "$GITHUB_OUTPUT" ;;
+            *" plan "*)
+              session=$(python3 - <<'PY'
+          import json
+
+          path = "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl"
+          with open(path, encoding="utf-8") as fh:
+              rows = [json.loads(line) for line in fh if line.strip()]
+          print([row["date"] for row in rows if row.get("kind") == "plan"][-1])
+          PY
+              )
+              echo "sealed=true" >> "$GITHUB_OUTPUT"
+              echo "session=${session}" >> "$GITHUB_OUTPUT"
+              ;;
           esac
       - name: Publish the h1 page
         if: always() && steps.commit.outputs.sealed == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run deploy-dashboard.yml --repo "${{ github.repository }}" --ref main
+      - name: Start the h1 Webull paper submit (pre-open only)
+        if: always() && steps.commit.outputs.sealed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          SESSION: ${{ steps.commit.outputs.session }}
+        run: |
+          set -euo pipefail
+          today=$(TZ=America/New_York date +%F)
+          hm=$((10#$(TZ=America/New_York date +%H%M)))
+          if [ "${SESSION:-}" != "$today" ]; then
+            echo "sealed plan ${SESSION:-?} is not today ${today} ET; no paper submit"
+            exit 0
+          fi
+          git fetch --no-tags -q origin main
+          if git cat-file -e "FETCH_HEAD:data/paper_open/${SESSION}_submit.json" 2>/dev/null; then
+            echo "data/paper_open/${SESSION}_submit.json is already on main; the session was attempted, no resend"
+            exit 0
+          fi
+          if [ "$hm" -lt 915 ]; then
+            gh workflow run publish_strategy_tickets.yml --repo "$REPO" --ref main -f run_date="$SESSION"
+            echo "dispatched Publish strategy tickets run_date=${SESSION} (standing h1 paper submit)"
+          else
+            echo "09:15 ET passed (${hm}); no tickets rerun, so no standing send near or after the open"
+          fi
+          if [ "$hm" -ge 920 ]; then
+            echo "09:20 ET passed (${hm}); no webull_paper fallback"
+            exit 0
+          fi
+          gh workflow run webull_paper.yml --repo "$REPO" --ref main -f submit=true
+          echo "dispatched webull_paper submit=true (09:30 ET bell fallback; refuses at or after 09:30 ET)"
       - name: Fail the job when the book halted
         if: steps.prices.outcome == 'failure' || steps.plan.outcome == 'failure' || steps.closes.outcome == 'failure'
         run: exit 1
