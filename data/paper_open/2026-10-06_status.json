@@ -275,5 +275,15 @@
     }
   ],
   "fill_status": "not_observed",
-  "host": "api.sandbox.webull.com"
+  "host": "api.sandbox.webull.com",
+  "events": [
+    {
+      "at": "2026-10-06T12:30:53.849547-04:00",
+      "status": "missed_deadline",
+      "submit": false,
+      "standing": false,
+      "source": "run",
+      "note": "day record kept; no order sent"
+    }
+  ]
 }
