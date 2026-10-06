@@ -1,14 +1,14 @@
 # Sector Board — 2026-10-06
 
-Generated: **2026-10-06T07:19:44.326514-04:00** (America/New_York)
+Generated: **2026-10-06T16:31:54.621580-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
 ## Summary
 
 - Predicts present: **1/11**
-- Outcomes graded: **0/11**
-- Direction hits (when graded): **0/0**
+- Outcomes graded: **1/11**
+- Direction hits (when graded): **0/1**
 - Predicted up / down / flat-or-missing: **0** / **0** / **11**
 
 ## Full table
@@ -24,7 +24,7 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 | Healthcare | XLV | — | — | — | — | — | — | — | — |
 | Industrials | XLI | — | — | — | — | — | — | — | — |
 | Real Estate | XLRE | — | — | — | — | — | — | — | — |
-| Technology | XLK | flat | flat | 2.70 | 0.55 | — | — | — | P |
+| Technology | XLK | flat | flat | 2.70 | 0.55 | 0.53 | MISS | MISS | PO |
 | Utilities | XLU | — | — | — | — | — | — | — | — |
 
 ## Predicted leaders (up)
@@ -34,6 +34,10 @@ _None_
 ## Predicted laggards (down)
 
 _None_
+
+## Graded calls (post-outcome)
+
+- **Technology**: pred flat → actual 0.53% (up) — dir MISS, mag MISS
 
 ## Files
 

@@ -1,6 +1,6 @@
 ---
 status: living_policy
-updated: 2026-10-05
+updated: 2026-10-06
 source: src/learn_cycle.py
 covers: general, sectors, news
 note: Injected into general + sector PREDICT. Core output formats unchanged.
@@ -9,7 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-10-05**. Promoted: 0. Retired: 10. Active lessons: 206. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-10-06**. Promoted: 1. Retired: 10. Active lessons: 207. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
@@ -23,7 +23,7 @@ Last learn_cycle: **2026-10-05**. Promoted: 0. Retired: 10. Active lessons: 206.
 - **sector:Healthcare**: 40% (6/15)
 - **sector:Industrials**: 47% (7/15)
 - **sector:Real Estate**: 60% (9/15)
-- **sector:Technology**: 40% (6/15)
+- **sector:Technology**: 33% (5/15)
 - **sector:Utilities**: 40% (6/15)
 
 ## Numeric factor weights in force (engine_policy.json — applied by code, not by you)
@@ -47,6 +47,10 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 Last change: hold
 
 ## Active adjustments (newest promoted lessons, truncated)
+
+### a-scheduled-us-cash-session-where-the-run-packet-contains-a.md
+## RULE
+Before finalizing any ops_fail=True grade, the grader MUST execute a packet-scan step: search the run packet for a valid SCORES_BEGIN...SCORES_END block with non-null predicted_direction and predicted_magnitude_band. If found, do NOT mark ops_fail — instead pair the artifact to the session, grade direction_hit/magnitude_hit against it, and log a timing/path mismatch to the ops channel. Only mark ops_fail=True when no valid SCORES_BEGIN block exists anywhere in the packet. This is the enf …
 
 ### before-the-open-channel-1-es-nq-is-locked-from-an-early-snap.md
 ## RULE
@@ -128,11 +132,7 @@ Enforce the leftover-ban inside sector_rs_veto: do not flatten a directional cal
 ## WHEN IT FIRES
 A two-name duration/growth sector ETF …
 
-### a-binding-sector-lesson-crowded-long-fuel-unwind-fuel-fires.md
-## RULE
-When a binding lesson's causal precondition is explicitly identified as absent or inverted, ZERO the lesson's component contribution — do not merely damp it. A crowded-long complex that has just de-risked (prior-day negative rel print) into an easing macro overlay (oil offered, green futures) is multiplicatively BULLISH (reflex bounce), so S3 should be ≈ 0 or positive, not negative. Additionally, on a broad risk-on day (all four index futures green ≥ +0.5%, SPY up), score S2 breadth posi …
-
-_(+191 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
+_(+192 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
 
 ## Per-scope DO-INSTEAD
 
@@ -189,10 +189,10 @@ _(+191 older active lessons not excerpted; each predict receives only its own to
 - **win 2026-10-01:** [sector_real_estate] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **loss 2026-10-02:** [sector_real_estate] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
-### scope `sector_technology` — wins=6 losses=9
-- **win 2026-09-28:** [sector_technology] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `sector_technology` — wins=5 losses=10
 - **win 2026-10-01:** [sector_technology] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **loss 2026-10-02:** [sector_technology] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-10-06:** [sector_technology] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `sector_utilities` — wins=6 losses=9
 - **loss 2026-09-25:** [sector_utilities] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
@@ -224,13 +224,13 @@ _(+191 older active lessons not excerpted; each predict receives only its own to
 
 ## Retired / falsified (efficacy-gated, automatic)
 
-- 2026-10-05: `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities) — topic hit 80% → 14% after activation; retired.
-- 2026-10-05: `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial) — topic hit 75% → 14% after activation; retired.
-- 2026-10-05: `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities) — topic hit 75% → 14% after activation; retired.
-- 2026-10-05: `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical) — topic hit 86% → 29% after activation; retired.
-- 2026-10-05: `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md` (sector:Consumer Cyclical) — topic hit 71% → 14% after activation; retired.
-- 2026-10-05: `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy) — topic hit 71% → 14% after activation; retired.
-- 2026-10-05: `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical) — topic hit 83% → 29% after activation; retired.
-- 2026-10-05: `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities) — topic hit 67% → 14% after activation; retired.
-- 2026-10-05: `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy) — topic hit 67% → 14% after activation; retired.
-- 2026-10-05: `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial) — topic hit 60% → 14% after activation; retired.
+- 2026-10-06: `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities) — topic hit 80% → 14% after activation; retired.
+- 2026-10-06: `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial) — topic hit 75% → 14% after activation; retired.
+- 2026-10-06: `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities) — topic hit 75% → 14% after activation; retired.
+- 2026-10-06: `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical) — topic hit 86% → 29% after activation; retired.
+- 2026-10-06: `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md` (sector:Consumer Cyclical) — topic hit 71% → 14% after activation; retired.
+- 2026-10-06: `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy) — topic hit 71% → 14% after activation; retired.
+- 2026-10-06: `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical) — topic hit 83% → 29% after activation; retired.
+- 2026-10-06: `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities) — topic hit 67% → 14% after activation; retired.
+- 2026-10-06: `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy) — topic hit 67% → 14% after activation; retired.
+- 2026-10-06: `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial) — topic hit 60% → 14% after activation; retired.

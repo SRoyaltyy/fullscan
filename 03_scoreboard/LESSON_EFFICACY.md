@@ -1,10 +1,10 @@
 # Lesson efficacy — did promoted lessons change outcomes?
 
-_Generated 2026-10-06T06:48:54.680867-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
+_Generated 2026-10-06T16:32:25.702166-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
 
 This is correlation, not proof — but a lesson whose topic got WORSE after promotion has no evidence of working and is a retirement candidate for the monthly distill.
 
-**Active lessons: 216 · judged (enough data both sides): 177 · improved: 67 · flat: 29 · worse: 81 · mean delta: -0.021**
+**Active lessons: 217 · judged (enough data both sides): 177 · improved: 67 · flat: 29 · worse: 81 · mean delta: -0.021**
 
 ## Retirement candidates (topic got worse after activation)
 
@@ -170,6 +170,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `a-scheduled-high-impact-macro-release-cpi-nfp-fo` | general | 2026-09-11 | 57% (n=7) | 71% (n=7) | +14% | improved |
 | `a-scheduled-high-impact-macro-release-nfp-cpi-fo` | general | 2026-09-04 | 29% (n=7) | 71% (n=7) | +43% | improved |
 | `a-scheduled-us-cash-session-where-a-valid-premar` | — | 2026-09-30 | — | — | — | not market-graded |
+| `a-scheduled-us-cash-session-where-the-run-packet` | — | 2026-10-06 | — | — | — | not market-graded |
 | `a-sector-analysis-names-a-factor-as-a-relative-h` | sector:Consumer Defensive | 2026-09-11 | 43% (n=7) | 43% (n=7) | +0% | flat |
 | `a-sector-call-correctly-identifies-a-dominant-ri` | sector:Basic Materials | 2026-08-19 | 57% (n=7) | 57% (n=7) | +0% | flat |
 | `a-sector-call-has-a-decisively-negative-fundamen` | sector:Consumer Cyclical | 2026-08-18 | 83% (n=6) | 29% (n=7) | -55% | WORSE |
