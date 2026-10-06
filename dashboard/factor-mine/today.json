@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T07:26:59.709313-04:00",
+  "generated_at": "2026-10-06T10:00:11.887752-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,81 +12,65 @@
   "buy_1d": [
     {
       "ticker": "CBRL",
-      "score": 0.8188520976220306
+      "score": 0.81061977118985
+    },
+    {
+      "ticker": "PDFS",
+      "score": 0.8259797083235363
+    },
+    {
+      "ticker": "MQ",
+      "score": 0.7685850596149104
     },
     {
       "ticker": "SN",
-      "score": 0.38842744787326466
-    },
-    {
-      "ticker": "CDNA",
-      "score": 0.779322931079411
-    },
-    {
-      "ticker": "BLFS",
-      "score": 0.7729416702547345
-    },
-    {
-      "ticker": "VEEV",
-      "score": 0.4039840092042226
-    },
-    {
-      "ticker": "CORT",
-      "score": 0.3495695131492006
-    },
-    {
-      "ticker": "CAKE",
-      "score": 0.6779175372644974
+      "score": 0.38601303976185863
     },
     {
       "ticker": "AVPT",
-      "score": 0.7300861389384327
+      "score": 0.7671315788719157
+    },
+    {
+      "ticker": "TOST",
+      "score": 0.5996654000573721
+    },
+    {
+      "ticker": "CDNA",
+      "score": 0.7581057469232331
+    },
+    {
+      "ticker": "CORT",
+      "score": 0.33362466610604236
+    },
+    {
+      "ticker": "BLFS",
+      "score": 0.7510273170686401
+    },
+    {
+      "ticker": "VEEV",
+      "score": 0.38312534189369374
     },
     {
       "ticker": "SHOO",
       "score": 0.6523744988821549
     },
     {
-      "ticker": "DOCU",
-      "score": 0.3267183940634876
-    },
-    {
-      "ticker": "SONO",
-      "score": 0.7311648428962598
-    },
-    {
-      "ticker": "MQ",
-      "score": 0.6893524278797252
-    },
-    {
-      "ticker": "LAUR",
-      "score": 0.5697662856792058
-    },
-    {
-      "ticker": "CTOS",
-      "score": 0.5726172672568266
-    },
-    {
-      "ticker": "PBI",
-      "score": 0.43101699388683157
+      "ticker": "CAKE",
+      "score": 0.6719100657230686
     }
   ],
   "sell_1d": [
     {
       "ticker": "IBRX",
-      "score": -0.3591811426950829
+      "score": -0.3611347066361848
     },
     {
       "ticker": "ROIV",
-      "score": -0.3563642173284435
-    },
-    {
-      "ticker": "INTC",
-      "score": -0.31917318415709356
+      "score": -0.35959001604121005
     },
     {
       "ticker": "NFLX",
-      "score": -0.30281082617839133
+      "score": -0.31908487244460887
     },
     {
       "ticker": "SOC",
@@ -94,11 +78,11 @@
     },
     {
       "ticker": "GOGO",
-      "score": -0.2867703733034231
+      "score": -0.29249169174759343
     },
     {
       "ticker": "SBS",
-      "score": -0.28440767692590374
+      "score": -0.2852051322908815
     },
     {
       "ticker": "ARE",
@@ -109,28 +93,32 @@
       "score": -0.27595786241742926
     },
     {
+      "ticker": "BAK",
+      "score": -0.25492429007729805
+    },
+    {
       "ticker": "TYRA",
-      "score": -0.2491919573133986
+      "score": -0.25277471797055784
     },
     {
       "ticker": "SSP",
-      "score": -0.24750571035879182
-    },
-    {
-      "ticker": "BAK",
-      "score": -0.2467705760118079
-    },
-    {
-      "ticker": "PTC",
-      "score": -0.24285576325849148
+      "score": -0.25271214541859993
     },
     {
       "ticker": "NRXP",
-      "score": -0.24061198918842724
+      "score": -0.25001741018194695
     },
     {
-      "ticker": "IBM",
-      "score": -0.23694584227651666
+      "ticker": "AIRS",
+      "score": -0.23875413843562326
+    },
+    {
+      "ticker": "ITUB",
+      "score": -0.23066557102418656
+    },
+    {
+      "ticker": "MGNX",
+      "score": -0.22917581165158096
     }
   ],
   "flatten": {
@@ -2832,6 +2820,67 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Technology \u2014 2026-10-06\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **2.701** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.701** (NQ +0.40%, ES +0.28%, PM:XLK +0.47%) \u00b7 index_carry **0.0** (general None) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-10-06 retry1\n**Step 0 \u2014 Setup.** Loaded 128,731 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (18,550 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-06\nGenerated: **2026-10-06T07:19:44.326514-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T09:59:43.385974-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-06_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9705,
+          "preview": "weather sectors 11 \u00b7 Technology={'score': 2.701, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-06_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5314,
+          "preview": "# Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Technology={'score': 2.701, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T09:59:50.874071-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-06_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2270495,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, HRTG, PURR, FORM"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, HRTG, PURR, FORM"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T09:59:57.961945-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-06_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "source": "publish_live_boards"
