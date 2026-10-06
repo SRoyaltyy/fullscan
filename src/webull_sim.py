@@ -39,6 +39,8 @@ BOOKS_PATH = ROOT / "data" / "webull_sim" / "days.jsonl"
 # Side notes for sealed rows. Keyed by book and date. Not part of the row.
 MARK_NOTES_PATH = ROOT / "data" / "webull_sim" / "mark_notes.jsonl"
 INTRADAY_MARK_NOTE = "equity is a 10:56 ET intraday mark, not the close"
+CLOSE_EQUITY_KIND = "close_equity"
+CLOSE_EQUITY_NOTE = "true 16:00 ET close equity; sealed row unchanged"
 MD_PATH = ROOT / "03_scoreboard" / "WEBULL_SIM.md"
 HTML_PATH = ROOT / "dashboard" / "webull-sim" / "index.html"
 H1_LOG = ROOT / "research" / "hot_n4_clean_v4" / "forward_h1" / "h1_log.jsonl"
@@ -478,6 +480,7 @@ def load_mark_notes(path: Path | None = None) -> dict[tuple[str, str], str]:
     """Add-only notes keyed by book and date. The first line for a key wins.
 
     These lines are not written into days.jsonl. A sealed row stays as sealed.
+    A later ``close_equity`` line does not replace this note.
     """
     dest = path or MARK_NOTES_PATH
     notes: dict[tuple[str, str], str] = {}
@@ -489,6 +492,125 @@ def load_mark_notes(path: Path | None = None) -> dict[tuple[str, str], str]:
         row = json.loads(line)
         notes.setdefault((str(row["name"]), str(row["date"])), str(row["note"]))
     return notes
+
+
+def mark_note_lines(path: Path | None = None) -> list[str]:
+    dest = path or MARK_NOTES_PATH
+    if not dest.is_file():
+        return []
+    return [line for line in dest.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+
+def assert_mark_notes_append_only(base_text: str, head_text: str) -> None:
+    """Existing mark-note lines are a prefix. A run may only append."""
+    base = [line for line in base_text.splitlines() if line.strip()]
+    head = [line for line in head_text.splitlines() if line.strip()]
+    if head[: len(base)] != base:
+        raise ValueError(
+            "mark notes are add-only: an existing line was edited, removed, or reordered"
+        )
+
+
+def load_close_equities(path: Path | None = None) -> dict[tuple[str, str], str]:
+    """First close-equity line for each book and date. Later lines do not replace it."""
+    found: dict[tuple[str, str], str] = {}
+    for line in mark_note_lines(path):
+        row = json.loads(line)
+        if row.get("kind") != CLOSE_EQUITY_KIND:
+            continue
+        found.setdefault((str(row["name"]), str(row["date"])), str(row["close_equity"]))
+    return found
+
+
+def append_mark_note(row: dict, path: Path | None = None) -> None:
+    """Append one JSON line. The bytes already in the file stay as they are."""
+    dest = path or MARK_NOTES_PATH
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    prior = dest.read_text(encoding="utf-8") if dest.is_file() else ""
+    if prior and not prior.endswith("\n"):
+        raise ValueError("mark notes are add-only: the file has no trailing newline")
+    line = json.dumps(row, separators=(",", ":"), ensure_ascii=False)
+    head = prior + line + "\n"
+    assert_mark_notes_append_only(prior, head)
+    dest.write_text(head, encoding="utf-8")
+
+
+def close_source_label(day: str) -> str:
+    return f"Yahoo split-adjusted {day} daily close"
+
+
+def require_close_mark(row: dict, bars: dict[str, dict]) -> Decimal:
+    """Close equity from cash and lots. A missing close is an error, not a guess."""
+    equity = close_mark_equity(row, bars)
+    if equity is None:
+        held = [str(pos.get("ticker") or "") for pos in (row.get("positions") or [])]
+        raise ValueError(
+            f"close missing for {row.get('name')} {row.get('date')}: {','.join(held)}. "
+            "Not guessing a close."
+        )
+    return equity
+
+
+def session_closes(tickers: set[str], day: str) -> dict[str, dict]:
+    """Bars for ``day`` from the sim price store, then Yahoo for any name still missing.
+
+    A ticker with no close is omitted. Callers that must not guess use
+    ``require_close_mark``, which fails when a held name is absent.
+    """
+    store = load_bars(tickers, {day})
+    missing = sorted(
+        ticker for ticker in tickers
+        if (store.get((ticker, day)) or {}).get("close") is None
+    )
+    live = fetch_live_bars(missing, day) if missing else {}
+    out: dict[str, dict] = {}
+    for ticker in tickers:
+        bar = store.get((ticker, day))
+        if bar is None or bar.get("close") is None:
+            bar = live.get((ticker, day))
+        if bar is None or bar.get("close") is None:
+            continue
+        out[ticker] = bar
+    return out
+
+
+def close_equity_note(row: dict, equity: Decimal) -> dict:
+    day = str(row["date"])
+    return {
+        "date": day,
+        "name": str(row["name"]),
+        "kind": CLOSE_EQUITY_KIND,
+        "close_equity": q(equity),
+        "sealed_equity": str(row["equity"]),
+        "close_source": close_source_label(day),
+        "note": CLOSE_EQUITY_NOTE,
+    }
+
+
+def append_close_equity_note(row: dict, equity: Decimal, path: Path | None = None) -> None:
+    """One close line per book and date. A second line is refused."""
+    key = (str(row["name"]), str(row["date"]))
+    already = load_close_equities(path)
+    if key in already:
+        if already[key] != q(equity):
+            raise ValueError(
+                f"mark notes are add-only: {key[0]} {key[1]} close equity "
+                f"is already {already[key]}"
+            )
+        return
+    append_mark_note(close_equity_note(row, equity), path)
+
+
+def day_pct_text(start: Decimal | str, close: Decimal | str) -> str:
+    """Percent from the book's start cash to the close equity."""
+    start_d = Decimal(str(start))
+    close_d = Decimal(str(close))
+    if start_d <= 0:
+        raise ValueError("day percent needs a positive start equity")
+    pct = ((close_d - start_d) / start_d * Decimal(100)).quantize(
+        Decimal("0.01"), rounding=ROUND_HALF_UP,
+    )
+    return format(pct, "+.2f") + "%"
 
 
 def close_mark_equity(row: dict, bars: dict[str, dict]) -> Decimal | None:
@@ -2227,28 +2349,44 @@ def display_sandbox(row: dict, paper_open: Path | None = None) -> str:
 
 def display_equity(row: dict, notes: dict[tuple[str, str], str] | None = None,
                    close_marks: dict[tuple[str, str], str] | None = None, *,
+                   close_notes: dict[tuple[str, str], str] | None = None,
                    escape: bool = False) -> str:
-    """Sealed equity, plus a side note that is not stored on the row."""
+    """Sealed equity, plus a side note that is not stored on the row.
+
+    A passed ``close_marks`` value wins over the add-only close note, so a
+    test can show a synthetic close. The page load uses the note when no
+    live mark was passed.
+    """
     text = _money(row["equity"])
-    note = (notes or {}).get((row.get("name") or "", row.get("date") or ""), "")
-    if not note:
+    key = (row.get("name") or "", row.get("date") or "")
+    note = (notes or {}).get(key, "")
+    mark = (close_marks or {}).get(key)
+    if mark in (None, ""):
+        mark = (close_notes or {}).get(key)
+    if not note and mark in (None, ""):
         return text
-    mark = (close_marks or {}).get((row.get("name") or "", row.get("date") or ""))
+    parts = []
+    if note:
+        parts.append(note)
     if mark not in (None, ""):
-        note = f"{note}; close {_money(mark)}"
+        parts.append(f"close equity {_money(mark)}")
+        start = row.get("start_cash") or q(START_CASH)
+        parts.append(f"day {day_pct_text(start, mark)} using the close")
+    body = "; ".join(parts)
     if escape:
-        note = html.escape(note)
-    return f"{text} ({note})"
+        body = html.escape(body)
+    return f"{text} sealed ({body})"
 
 
 def _md_book_row(row: dict, *, manifest: dict | None = None,
                  paper_open: Path | None = None,
                  notes: dict[tuple[str, str], str] | None = None,
-                 close_marks: dict[tuple[str, str], str] | None = None) -> str:
+                 close_marks: dict[tuple[str, str], str] | None = None,
+                 close_notes: dict[tuple[str, str], str] | None = None) -> str:
     return (
         f"| {row['name']} | {row['date']} | {row['section']} | {display_reason(row)} | "
         f"{row.get('sizing') or '—'} | "
-        f"{row['picks']} | {display_equity(row, notes, close_marks)} | {_money(row['fees'])} | "
+        f"{row['picks']} | {display_equity(row, notes, close_marks, close_notes=close_notes)} | {_money(row['fees'])} | "
         f"{row['commit_et'] or '—'} | {display_source(row, manifest)} | "
         f"{(row['commit'] or '—')[:12]} | {display_sandbox(row, paper_open)} |"
     )
@@ -2257,7 +2395,8 @@ def _md_book_row(row: dict, *, manifest: dict | None = None,
 def _html_book_row(row: dict, *, manifest: dict | None = None,
                    paper_open: Path | None = None,
                    notes: dict[tuple[str, str], str] | None = None,
-                   close_marks: dict[tuple[str, str], str] | None = None) -> str:
+                   close_marks: dict[tuple[str, str], str] | None = None,
+                   close_notes: dict[tuple[str, str], str] | None = None) -> str:
     reason = display_reason(row)
     sha = (row["commit"] or "—")[:12]
     seal = excel_seal_label(str(row.get("source") or ""), manifest)
@@ -2270,7 +2409,7 @@ def _html_book_row(row: dict, *, manifest: dict | None = None,
         "<tr>"
         f"<td>{row['name']}</td><td>{row['date']}</td><td>{row['section']}</td>"
         f"<td>{reason}</td><td>{row.get('sizing') or '—'}</td>"
-        f"<td>{row['picks']}</td><td>{display_equity(row, notes, close_marks, escape=True)}</td>"
+        f"<td>{row['picks']}</td><td>{display_equity(row, notes, close_marks, close_notes=close_notes, escape=True)}</td>"
         f"<td>{row['commit_et'] or '—'}</td>"
         f"<td>{sha}</td>"
         f"<td>{sandbox}</td>"
@@ -2289,6 +2428,7 @@ def render_md(rows: list[dict], schedule: Schedule, *,
     if manifest is None:
         manifest = load_excel_freeze()
     notes = load_mark_notes()
+    close_notes = load_close_equities()
     locked = [r for r in rows if r["section"] == "locked"]
     built = [r for r in rows if r["section"] == "built_after"]
     visible = [r for r in rows if r["section"] == "not_a_locked_trade"]
@@ -2333,7 +2473,7 @@ def render_md(rows: list[dict], schedule: Schedule, *,
     for row in show:
         lines.append(_md_book_row(
             row, manifest=manifest, paper_open=paper_open,
-            notes=notes, close_marks=close_marks,
+            notes=notes, close_marks=close_marks, close_notes=close_notes,
         ))
     theme_names = _theme_names(rows)
     if theme_names:
@@ -2351,7 +2491,7 @@ def render_md(rows: list[dict], schedule: Schedule, *,
                 for row in group:
                     lines.append(_md_book_row(
                         row, manifest=manifest, paper_open=paper_open,
-                        notes=notes, close_marks=close_marks,
+                        notes=notes, close_marks=close_marks, close_notes=close_notes,
                     ))
                 lines.append("")
             lines.append(THEME_BORROW_NOTE)
@@ -2394,10 +2534,11 @@ def render_html(rows: list[dict], schedule: Schedule, *,
     if manifest is None:
         manifest = load_excel_freeze()
     notes = load_mark_notes()
+    close_notes = load_close_equities()
     show = [r for r in rows if r["date"] >= FIRST_LOCKED and not is_theme_book(r["name"])]
     body = [_html_book_row(
         row, manifest=manifest, paper_open=paper_open,
-        notes=notes, close_marks=close_marks,
+        notes=notes, close_marks=close_marks, close_notes=close_notes,
     ) for row in show]
     table = "\n".join(body)
     theme_blocks = []
@@ -2406,7 +2547,7 @@ def render_html(rows: list[dict], schedule: Schedule, *,
         group_table = "\n".join(
             _html_book_row(
                 row, manifest=manifest, paper_open=paper_open,
-                notes=notes, close_marks=close_marks,
+                notes=notes, close_marks=close_marks, close_notes=close_notes,
             ) for row in group
         )
         theme_blocks.append(
