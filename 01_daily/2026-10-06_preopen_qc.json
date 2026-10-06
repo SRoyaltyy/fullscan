@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T04:48:01.039079-04:00",
+  "generated_at": "2026-10-06T06:04:21.728611-04:00",
   "items": [
     {
       "ok": true,
@@ -113,14 +113,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "map_heat_research",
       "path": "01_daily/map_heat/2026-10-06_research.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 41982,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
