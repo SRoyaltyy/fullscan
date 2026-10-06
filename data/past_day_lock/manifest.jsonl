@@ -354,3 +354,9 @@
 {"date":"2026-10-06","kind":"day","name":"yday_gainer_h1_webull_sim","record":"webull_sim","sha256":"03034c6d59b5c7153d0871addc709c8b540b33740f0f7c3337ef54215eff49b1"}
 {"date":"2026-10-06","kind":"day","name":"yday_gainer_h3_webull_sim","record":"webull_sim","sha256":"9ef1bc87fbe25d17b2a6a713600f0b743c8818879bc8c7c604fee135fbb259a6"}
 {"date":"2026-10-06","kind":"day","name":"yday_gainer_h5_webull_sim","record":"webull_sim","sha256":"2511469556892cf206f396bdebd0051a144fdcb67708fc966896d40fa89eb404"}
+{"date":"2026-10-06","kind":"day","name":"L1_long_green_tp8_lowvol_webull_sim","record":"webull_sim","sha256":"df6b2f40f7e74604bb5df4581de010e3bbf29ae4d88d722688f9631fe41bcd48"}
+{"date":"2026-10-06","kind":"day","name":"L2_long_green_tp3_lowvol_webull_sim","record":"webull_sim","sha256":"4703f3389ede441ade99c1d0c8edfb6cf9cccfbb66fdd4d0879638ef7dae0a26"}
+{"date":"2026-10-06","kind":"day","name":"L3_long_green_hold2_midcap_webull_sim","record":"webull_sim","sha256":"245f1aed8fa06a4881c75c05fddc8661b7faf0d1b50665f83e78ab7523d2a0ec"}
+{"date":"2026-10-06","kind":"day","name":"L5_long_green_hold2_midhibeta_webull_sim","record":"webull_sim","sha256":"0b4235f55ea0bedf77586809505c69ad3f9d18f9b562916cad51f774deb335ca"}
+{"date":"2026-10-06","kind":"day","name":"flatten_robust_webull_sim","record":"webull_sim","sha256":"dfbbc47731a8dbc0ed044b7d07ad42fc2e323ad30bcfdc01c4f20fa9460ddaec"}
+{"date":"2026-10-06","kind":"day","name":"h1_webull_sim","record":"webull_sim","sha256":"db9cc5b02174515dcb0a373f4899bf591aec6fea5e58696c324ea41bd3835694"}
