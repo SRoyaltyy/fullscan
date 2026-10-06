@@ -8,6 +8,8 @@ Live headline: **2.57%** (flatten_robust).
 
 Integrity: **fill** = one Futubull cash account. **stitch** = daily mark overlay (not one fill clock). **follow_book** = $10k .io paper sleeves. **confirm** = Excel, not capital. **leak** = known same-day recycle.
 
+Honest scorecard (live-locked days kept apart from days built after the fact): [HONEST_SCORECARD.md](HONEST_SCORECARD.md).
+
 | Live | Book | Family | PR | Integrity | Return | Max DD | Trades | Win | Cap |
 |---|---|---|---|---|---:|---:|---:|---:|---:|
 | YES | flatten_robust | sleeve merge | — | fill | +2.57% | 12.62% | 80 | 41.2% | 100000 |
