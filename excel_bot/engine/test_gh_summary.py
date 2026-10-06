@@ -258,6 +258,9 @@ def test_readers_keep_the_final_and_skip_the_draft():
         "src/factor_mine_freeze.py",
         "src/test_factor_mine_freeze.py",
         ".github/workflows/excel_bot.yml",
+        # Asserts the workflow lands excel_bot/daily on a draft run.
+        # It does not read that file as a signal.
+        "excel_bot/engine/test_signal_freeze.py",
         # Records the pre-close note beside the prior final. Tickets still
         # use the final file; this catalog does not feed the next open.
         "research/input_freeze/tool/freeze_inputs.py",
@@ -268,6 +271,8 @@ def test_readers_keep_the_final_and_skip_the_draft():
         "research/audit/input_provenance_336.py",
         "research/lever_search/excel_ml_lever/excel_ml_lever.py",
         "src/test_webull_sim.py",
+        # Reads final dated notes and skips any name containing "draft".
+        "src/webull_sim.py",
         "03_scoreboard/WEBULL_SIM.md",
     }
     hits = []

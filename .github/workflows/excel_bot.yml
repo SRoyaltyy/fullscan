@@ -2,11 +2,15 @@ name: Excel Bot (cluster signals daily)
 
 # The local 18:30 Windows pipeline, moved to GitHub. Zero tokens.
 # Fetch (Yahoo v8 HTTPS, incremental) -> Excel-replica engine (same formulas,
-# same colors) -> strategy signals -> append to ONE suggestions.csv ->
-# refresh tracking on all past suggestions -> daily MD summary.
+# same colors) -> strategy signals -> on a final run, append to ONE
+# suggestions.csv and refresh tracking -> daily MD summary. A draft run
+# writes the draft note only.
 # From 2026-10-06, excel_bot/freeze_manifest.json fingerprints each signal
-# day. signal_freeze.py --verify fails closed before the commit if a
-# locked day changed. Days before that are pre-lock and are not hashed.
+# day after that session has closed. A run before 16:00 ET writes the
+# draft markdown only: it does not append suggestions.csv and does not
+# write the manifest. signal_freeze.py --verify fails closed before the
+# commit if a locked day changed. Days before 2026-10-06 are pre-lock
+# and are not hashed.
 #
 # State (the 3,603-ticker price cache) lives on the orphan branch
 # `excel-state` as state/rows.tar.gz, squashed every run so it never grows.
@@ -65,6 +69,9 @@ jobs:
       - name: Draft vs final dated signal, and signal-day lock
         run: |
           python excel_bot/engine/test_gh_summary.py
+          # test_pre_close_run_does_not_write_suggestions_csv_or_freeze_manifest
+          # fails if a New York session before 16:00 ET writes
+          # excel_bot/suggestions/suggestions.csv or excel_bot/freeze_manifest.json.
           python excel_bot/engine/test_signal_freeze.py
 
   run:
@@ -142,8 +149,18 @@ jobs:
             echo "[freeze] FAIL CLOSED — committing nothing"
             exit 1
           fi
-          bash scripts/safe_git_push.sh \
-            "excel-bot: daily signals [$(date -u +%F)]" \
-            excel_bot/suggestions/suggestions.csv \
-            excel_bot/freeze_manifest.json \
-            excel_bot/daily/ || echo "nothing to commit"
+          # Before 16:00 ET this run is a draft. Do not commit
+          # suggestions.csv or freeze_manifest.json even if they changed.
+          # The draft note under excel_bot/daily/ is the only land.
+          if python -c 'import sys; sys.path.insert(0, "excel_bot/engine"); import gh_summary; sys.exit(0 if gh_summary.resolve_session().write_final else 1)'; then
+            bash scripts/safe_git_push.sh \
+              "excel-bot: daily signals [$(date -u +%F)]" \
+              excel_bot/suggestions/suggestions.csv \
+              excel_bot/freeze_manifest.json \
+              excel_bot/daily/ || echo "nothing to commit"
+          else
+            echo "[draft] before 16:00 ET: not committing suggestions.csv or freeze_manifest.json"
+            bash scripts/safe_git_push.sh \
+              "excel-bot: draft note [$(date -u +%F)]" \
+              excel_bot/daily/ || echo "nothing to commit"
+          fi

@@ -8,8 +8,8 @@ off the local PC. Zero tokens, zero LLM — pure math on Yahoo OHLCV.
 
 Two schedules share one job (`excel-bot`, no cancel-in-progress):
 
-- **Draft** — Tue–Sat 10:30 UTC. This usually starts before the 16:00 ET close and writes only the draft.
-- **Final** — Mon–Fri 21:17 UTC (17:17 EDT / 16:17 EST), after the cash close in both DST states. Same full path as a manual run left on limit 0 and signals_only false: every ticker, fetch included. It creates that session's dated file once.
+- **Draft** — Tue–Sat 10:30 UTC. This usually starts before the 16:00 ET close and writes only the draft markdown. It does not append `suggestions.csv` and does not write `freeze_manifest.json`.
+- **Final** — Mon–Fri 21:17 UTC (17:17 EDT / 16:17 EST), after the cash close in both DST states. Same full path as a manual run left on limit 0 and signals_only false: every ticker, fetch included. It creates that session's dated file once, appends suggestion rows, and locks the closed session.
 
 `run_date` and the dated file use the NYSE session in America/New_York, not the UTC date. A new manifest entry is keyed by the pick's `signal_date` (the confirmation session on the bar). A start after midnight UTC that is still the previous evening in New York stamps that evening. Before 16:00 ET the live session has not closed, so the run writes a draft and does not create its final. A weekend or full-day NYSE holiday stamps the previous completed session and will not overwrite a final that is already there.
 
@@ -22,9 +22,10 @@ Workflow: `.github/workflows/excel_bot.yml` → "Excel Bot (cluster signals dail
    (`engine/model.json` = the extracted cell equations).
 4. **Signals** — every validated strategy in `strategies/` is checked; a
    suggestion is a cluster whose *confirmation day* is the latest trading day.
-5. **Store** — appended to `suggestions/suggestions.csv` (one file, deduped).
-   All past suggestions get `current_price` / returns refreshed.
-   From 2026-10-06 each signal day is fingerprinted before that write.
+5. **Store** — on a final run only, appended to `suggestions/suggestions.csv`
+   (one file, deduped). All past suggestions get `current_price` / returns
+   refreshed. From 2026-10-06 each closed signal day is fingerprinted before
+   that write. A draft run leaves the csv and the manifest byte-identical.
 6. **Summary** — before 16:00 ET, `daily/{date}_excel_bot_draft.md` only.
    At or after 16:00 ET, `daily/{date}_excel_bot.md` is created once
    (today's signals, live strategy scoreboard, best/worst open
@@ -66,7 +67,8 @@ manifest entry; a non-blank value must not change. `current_price`,
 `ret_vs_close`, `ret_vs_open`, and `days_held` stay live. Manifest
 entries are never removed or edited. If a locked day's picks are added,
 removed, or changed, or a non-blank `first_open` changes, the run prints
-`FAIL CLOSED` and commits nothing.
+`FAIL CLOSED` and commits nothing. A session that has not reached 16:00 ET
+cannot be locked. The pre-close run does not append rows or manifest entries.
 
 The dated file `daily/{date}_excel_bot.md` is write-once for that NYSE
 session. A run before 16:00 ET on a session day writes only the `_draft`

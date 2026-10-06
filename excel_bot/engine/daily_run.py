@@ -9,10 +9,14 @@ Every run (scheduled 06:30 local, after the US close):
   3. SIGNALS evaluate every validated strategy in strategies/*/card.json;
              a suggestion is a cluster whose CONFIRMATION day is the latest
              trading day -> buy at next open (long) / short at next open
-  4. STORE   append to ONE file: suggestions/suggestions.csv  (never
-             per-day files). Old rows get current_price / returns refreshed.
-             From 2026-10-06, signal_freeze locks each day's picks before
-             the write. A mismatch leaves the file untouched.
+  4. STORE   On a final run only (16:00 ET or later, or a weekend /
+             holiday for the previous completed session): append to ONE
+             file, suggestions/suggestions.csv (never per-day files).
+             Old rows get current_price / returns refreshed. From
+             2026-10-06, signal_freeze locks each closed day's picks
+             before the write. A mismatch leaves the file untouched.
+             A draft run (before 16:00 ET on a session day) does not
+             append rows and does not write freeze_manifest.json.
   5. TRACK   effectiveness: first_open (filled next run) vs current price
 
 Usage:
@@ -32,7 +36,6 @@ from datetime import date, datetime, timedelta
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from stockhistory import fetch_daily
 from fastfetch import fetch_daily_fast
-from backtest import build_ticker, pick_anchors, serial
 from sweep import days_features, detect_def, definition_matrix
 from cohort_analysis import load_finviz, cohorts_of
 from cards import color_name, s2d
@@ -86,6 +89,8 @@ def init_cache_from_grids(ticker):
 
 def update_ticker(ticker):
     """Incremental fetch + merge + rebuild grid. Returns (ticker, n_days, err)."""
+    # Imported here so a store-path test can load this module without openpyxl.
+    from backtest import build_ticker, pick_anchors
     try:
         cached = load_rows(ticker)
         if cached is None:
@@ -203,12 +208,13 @@ def parse_date(s):
     return None
 
 
-def load_suggestions():
+def load_suggestions(path=None):
     """Load CSV and NORMALIZE all date fields back to ISO, so an Excel
     re-save can never break dedupe keys or tracking math."""
-    if not os.path.exists(SUGG_CSV):
+    path = path or SUGG_CSV
+    if not os.path.exists(path):
         return []
-    with open(SUGG_CSV, newline="", encoding="utf-8") as fh:
+    with open(path, newline="", encoding="utf-8") as fh:
         rows = list(csv.DictReader(fh))
     for r in rows:
         for fld in ("run_date", "signal_date"):
@@ -237,6 +243,134 @@ def open_after(ticker, after_iso):
         if r["date"].isoformat() > after_iso and r["open"]:
             return r["open"]
     return None
+
+
+def store_signals(sigs, *, now=None, sugg_csv=None, manifest_path=None):
+    """Persist picks after the close. A pre-close run writes neither file.
+
+    `now` is the clock for gh_summary.resolve_session, the same ET rule
+    the summary uses. Before 16:00 ET on a session day this verifies
+    locks already on disk and returns. suggestions.csv and
+    freeze_manifest.json stay byte-identical. Only a final run appends
+    rows and manifest entries. A signal_date whose session has not
+    closed is not locked (signal_freeze refuses that too).
+    """
+    import gh_summary
+    import signal_freeze
+
+    sugg_csv = SUGG_CSV if sugg_csv is None else sugg_csv
+    stamp = gh_summary.resolve_session(now)
+    run_date = stamp.session.isoformat()
+    if not stamp.write_final:
+        manifest = manifest_path or signal_freeze.MANIFEST_PATH
+        if os.path.exists(sugg_csv) and os.path.exists(manifest):
+            # Read-only. verify_store raises if a locked day already
+            # disagrees with the file; it does not append a lock.
+            signal_freeze.verify_store(sugg_csv, manifest)
+        print(
+            f"[store] draft {run_date} before 16:00 ET: "
+            "suggestions.csv and freeze_manifest.json were not written",
+            flush=True,
+        )
+        return 0
+
+    # -- update tracking on old rows, append new ones (final run only)
+    os.makedirs(os.path.dirname(os.path.abspath(sugg_csv)), exist_ok=True)
+    rows_old = load_suggestions(sugg_csv)
+    for r in rows_old:
+        tk = r["ticker"]
+        if not r["first_open"]:
+            fo = open_after(tk, r["signal_date"])
+            if fo:
+                r["first_open"] = f"{fo:.4f}"
+        cur = latest_close(tk)
+        if cur:
+            r["current_price"] = f"{cur:.4f}"
+            ref = float(r["ref_close"])
+            r["ret_vs_close"] = f"{(cur/ref-1)*100:+.2f}%"
+            if r["first_open"]:
+                fo = float(r["first_open"])
+                r["ret_vs_open"] = f"{(cur/fo-1)*100:+.2f}%"
+        r["days_held"] = str((date.fromisoformat(run_date) -
+                              parse_date(r["signal_date"])).days)
+
+    # Same (signal_date, ticker, strategy) is not appended twice. If that
+    # day is already locked and the engine's locked fields disagree, put
+    # the disagreement on the in-memory row so plan_rows fails closed
+    # before the file is replaced. Pre-lock rows stay on the old dedupe.
+    manifest_on_disk = manifest_path or signal_freeze.MANIFEST_PATH
+    locked_days = set()
+    if os.path.exists(manifest_on_disk):
+        locked_days = {
+            entry["signal_date"]
+            for entry in signal_freeze.load_manifest(manifest_on_disk)["entries"]
+            if entry.get("kind") == "lock"
+        }
+    by_key = {(r["signal_date"], r["ticker"], r["strategy"]): r for r in rows_old}
+    new = []
+    for s in sigs:
+        key_date = s["signal_date"]          # actual grid date of confirmation
+        fresh = {
+            "run_date": run_date, "signal_date": key_date,
+            "ticker": s["ticker"], "side": s["side"],
+            "strategy": s["strategy"], "exit_rule": s["exit_rule"],
+            "ref_close": f"{s['ref_close']:.4f}", "first_open": "",
+            "current_price": f"{s['ref_close']:.4f}",
+            "ret_vs_close": "+0.00%", "ret_vs_open": "", "days_held": "0",
+            "signal_colors": s["signal_colors"],
+        }
+        key = (key_date, s["ticker"], s["strategy"])
+        if key in by_key:
+            stored = by_key[key]
+            if key_date in locked_days:
+                for field in signal_freeze.LOCKED_FIELDS:
+                    if stored.get(field) != fresh[field]:
+                        stored[field] = fresh[field]
+            continue
+        new.append(fresh)
+
+    # Lock days on or after 2026-10-06 before the file is replaced.
+    # A mismatch must not write suggestions.csv and must not commit.
+    # plan_rows also refuses a signal_date whose session has not closed.
+    payload = rows_old + new
+    pending = signal_freeze.plan_rows(payload, manifest_path, now=now)
+
+    # -- crash-proof write: retry if the file is open in Excel; never lose data
+    written = False
+    for attempt in range(6):
+        try:
+            tmp = sugg_csv + ".tmp"
+            with open(tmp, "w", newline="", encoding="utf-8") as fh:
+                w = csv.DictWriter(fh, fieldnames=FIELDS)
+                w.writeheader()
+                w.writerows(payload)
+            os.replace(tmp, sugg_csv)
+            written = True
+            break
+        except PermissionError:
+            print(f"[store] WARNING: {sugg_csv} is locked (open in Excel?). "
+                  f"Retry {attempt+1}/6 in 20s -- close it now!", flush=True)
+            time.sleep(20)
+    if not written:
+        fb = os.path.join(os.path.dirname(sugg_csv),
+                          f"suggestions_fallback_{run_date}.csv")
+        with open(fb, "w", newline="", encoding="utf-8") as fh:
+            w = csv.DictWriter(fh, fieldnames=FIELDS)
+            w.writeheader()
+            w.writerows(payload)
+        print(f"[store] ERROR: main file stayed locked. FULL results saved to "
+              f"{fb} -- close Excel and rerun: "
+              f"python engine/daily_run.py --signals-only", flush=True)
+        sys.exit(2)
+    added = signal_freeze.append_entries(pending, manifest_path, now=now)
+    if added:
+        print(f"[freeze] appended {len(added)} manifest "
+              f"{'entry' if len(added) == 1 else 'entries'}", flush=True)
+    else:
+        print("[freeze] locked signal dates verified", flush=True)
+    print(f"[store] {len(new)} new suggestions appended -> {sugg_csv} "
+          f"(total {len(payload)})", flush=True)
+    return len(new)
 
 
 def main():
@@ -292,91 +426,12 @@ def main():
     sigs = find_signals(strategies)
     print(f"[signals] {len(sigs)} new cluster confirmations", flush=True)
 
-    # -- update tracking on old rows, append new ones
-    os.makedirs(os.path.dirname(SUGG_CSV), exist_ok=True)
-    rows_old = load_suggestions()
-    known = {(r["signal_date"], r["ticker"], r["strategy"]) for r in rows_old}
-    for r in rows_old:
-        tk = r["ticker"]
-        if not r["first_open"]:
-            fo = open_after(tk, r["signal_date"])
-            if fo:
-                r["first_open"] = f"{fo:.4f}"
-        cur = latest_close(tk)
-        if cur:
-            r["current_price"] = f"{cur:.4f}"
-            ref = float(r["ref_close"])
-            r["ret_vs_close"] = f"{(cur/ref-1)*100:+.2f}%"
-            if r["first_open"]:
-                fo = float(r["first_open"])
-                r["ret_vs_open"] = f"{(cur/fo-1)*100:+.2f}%"
-        r["days_held"] = str((date.fromisoformat(run_date) -
-                              parse_date(r["signal_date"])).days)
-
-    new = []
-    for s in sigs:
-        key_date = s["signal_date"]          # actual grid date of confirmation
-        if (key_date, s["ticker"], s["strategy"]) in known:
-            continue
-        new.append({
-            "run_date": run_date, "signal_date": key_date,
-            "ticker": s["ticker"], "side": s["side"],
-            "strategy": s["strategy"], "exit_rule": s["exit_rule"],
-            "ref_close": f"{s['ref_close']:.4f}", "first_open": "",
-            "current_price": f"{s['ref_close']:.4f}",
-            "ret_vs_close": "+0.00%", "ret_vs_open": "", "days_held": "0",
-            "signal_colors": s["signal_colors"],
-        })
-
-    # Lock days on or after 2026-10-06 before the file is replaced.
-    # A mismatch must not write suggestions.csv and must not commit.
-    payload = rows_old + new
+    import signal_freeze
     try:
-        import signal_freeze
-        pending = signal_freeze.plan_rows(payload)
+        store_signals(sigs)
     except signal_freeze.SignalFreezeError as exc:
         print(exc, flush=True)
         sys.exit(3)
-
-    # -- crash-proof write: retry if the file is open in Excel; never lose data
-    written = False
-    for attempt in range(6):
-        try:
-            tmp = SUGG_CSV + ".tmp"
-            with open(tmp, "w", newline="", encoding="utf-8") as fh:
-                w = csv.DictWriter(fh, fieldnames=FIELDS)
-                w.writeheader()
-                w.writerows(payload)
-            os.replace(tmp, SUGG_CSV)
-            written = True
-            break
-        except PermissionError:
-            print(f"[store] WARNING: {SUGG_CSV} is locked (open in Excel?). "
-                  f"Retry {attempt+1}/6 in 20s -- close it now!", flush=True)
-            time.sleep(20)
-    if not written:
-        fb = os.path.join(os.path.dirname(SUGG_CSV),
-                          f"suggestions_fallback_{run_date}.csv")
-        with open(fb, "w", newline="", encoding="utf-8") as fh:
-            w = csv.DictWriter(fh, fieldnames=FIELDS)
-            w.writeheader()
-            w.writerows(payload)
-        print(f"[store] ERROR: main file stayed locked. FULL results saved to "
-              f"{fb} -- close Excel and rerun: "
-              f"python engine/daily_run.py --signals-only", flush=True)
-        sys.exit(2)
-    try:
-        added = signal_freeze.append_entries(pending)
-    except signal_freeze.SignalFreezeError as exc:
-        print(exc, flush=True)
-        sys.exit(3)
-    if added:
-        print(f"[freeze] appended {len(added)} manifest "
-              f"{'entry' if len(added) == 1 else 'entries'}", flush=True)
-    else:
-        print("[freeze] locked signal dates verified", flush=True)
-    print(f"[store] {len(new)} new suggestions appended -> {SUGG_CSV} "
-          f"(total {len(payload)})", flush=True)
     print(f"[done] {time.time()-t0:.0f}s", flush=True)
 
 
