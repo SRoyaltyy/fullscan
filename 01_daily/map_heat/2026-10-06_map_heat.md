@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-06
 
-Export `finviz_2026-10-06.csv` · 11616 names · generated 2026-10-06T04:22:14.529338-04:00
+Export `finviz_2026-10-05.csv` · 11616 names · generated 2026-10-06T04:22:36.554946-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -281,7 +281,7 @@ COLD (1w):
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
 - 11 min **FISV** FISV Stock Rises Premarket After Posting Best Day In Nearly A Month: Burry Says Fiserv Is Cheap Enough to Hold Despite Buying It 'Poorly' (Stocktwits)
-- 16 min **NVDA** Stock market today: Dow, S&P 500, Nasdaq futures climb after record-breaking rally (Yahoo Finance)
+- 17 min **NVDA** Stock market today: Dow, S&P 500, Nasdaq futures climb after record-breaking rally (Yahoo Finance)
 - 22 min **CTSH** Cognizant Selected by SITA to Deliver AI-Led Global Finance Transformation on the Cloud (PR Newswire)
 - 22 min **KD** Kyndryl and WPP Expand Strategic Partnership to Drive Enterprise Transformation, Marketing Growth and Joint Go-to-Market Innovation (PR Newswire)
 - 22 min **MAR** The Rise of Place: Marriott International Reveals Asia Pacific's Future of Food (PR Newswire)
@@ -293,12 +293,12 @@ COLD (1w):
 - 22 min **TTGT** Informa TechTarget Announces Winners of the First-Ever Archer Awards for GTM Excellence In the Middle East and North Africa (MENA) (Business Wire)
 - 22 min **III** European Medtech Firms Adopt Continuous Lifecycle Model (Business Wire)
 - 45 min **BLK** TOKEN2049 Singapore Schedule Puts Institutional DeFi on the 2026 Agenda (Cryptonews)
-- 45 min **NEOG,LW,PENG,NVDA,STZ** Stock Market Today: Dow, S&P 500 set to rise after Nasdaq hits record high ahead of third-quarter earnings season (MarketWatch)
-- 45 min **NVDA** U.S. stocks poised to rise after Nasdaq hits new high (MarketWatch)
+- 46 min **NEOG,LW,PENG,NVDA,STZ** Stock Market Today: Dow, S&P 500 set to rise after Nasdaq hits record high ahead of third-quarter earnings season (MarketWatch)
+- 46 min **NVDA** U.S. stocks poised to rise after Nasdaq hits new high (MarketWatch)
 - 48 min **SPCX,TSLA** Elon Musk's Trump Admin 'Return' Puts Tesla, SpaceX in Focus: Analyst Says TSLA Faces 'Key Test'  Prediction Market Weighs in (Benzinga Prediction Markets)
-- 52 min **SPCX,NVDA,META** Asian stocks mostly up after tech-led Wall St record (AFP)
-- 55 min **MU,AMD** AMD CEO Sees Very High Chip Demand, Urges AI Firms to Cooperate (Bloomberg)
-- 58 min **V** Nearly half of Asia Pacific consumers open to stablecoins, Visa finds (Electronic Payments)
+- 53 min **SPCX,NVDA,META** Asian stocks mostly up after tech-led Wall St record (AFP)
+- 56 min **MU,AMD** AMD CEO Sees Very High Chip Demand, Urges AI Firms to Cooperate (Bloomberg)
+- 59 min **V** Nearly half of Asia Pacific consumers open to stablecoins, Visa finds (Electronic Payments)
 - 1 hour **LYV** Live Nation Entertainment Announces Launch of Private Senior Notes Offering (PR Newswire)
 - 1 hour **XMTR** Xometry Names Marc Teulieres as General Manager for Europe to Accelerate Regional Adoption (GlobeNewswire)
 - 1 hour **LOGI** New Logitech Ctrl Tomorrow Study Reveals Technologys Impact On Mood, Wellbeing, Performance and Potential (Business Wire)
