@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import tempfile
 from datetime import datetime
 from decimal import Decimal
 from pathlib import Path
@@ -29,8 +30,11 @@ from src.webull_sim import (
     final_row,
     hold_continuations,
     in_write_freeze,
+    load_h1_plans,
     load_schedule,
     load_theme_plans,
+    official_opens,
+    unsent_orders_label,
     make_row,
     group_theme_rows,
     parse_excel,
@@ -842,6 +846,167 @@ def test_theme_radar_page_states_the_borrow_lines_under_each_book() -> None:
         assert at < html.index(THEME_BORROW_NOTE, at) < html.index(THEME_LOG_NOTE, at)
 
 
+def test_low_ticker_does_not_drop_the_yahoo_open() -> None:
+    """LOW/HIGH/OPEN are real tickers and also OHLC field names."""
+    import pandas as pd
+    from src.price_store import _flatten_yf
+
+    index = pd.to_datetime(["2026-10-06"])
+    columns = pd.MultiIndex.from_tuples([
+        ("Open", "AAPL"), ("High", "AAPL"), ("Low", "AAPL"), ("Close", "AAPL"), ("Volume", "AAPL"),
+        ("Open", "LOW"), ("High", "LOW"), ("Low", "LOW"), ("Close", "LOW"), ("Volume", "LOW"),
+    ])
+    raw = pd.DataFrame(
+        [[332.3, 334.0, 330.0, 333.0, 100, 20.0, 21.0, 19.0, 20.5, 50]],
+        index=index, columns=columns,
+    )
+    flat = _flatten_yf(raw, ["AAPL", "LOW"])
+    assert set(flat["ticker"]) == {"AAPL", "LOW"}
+    apple = flat[flat["ticker"] == "AAPL"].iloc[0]
+    assert float(apple["open"]) == 332.3
+    # group_by="ticker" puts the name on level 0. LOW must not flip that either.
+    grouped = pd.DataFrame(
+        [[332.3, 334.0, 330.0, 333.0, 100, 20.0, 21.0, 19.0, 20.5, 50]],
+        index=index,
+        columns=pd.MultiIndex.from_tuples([
+            ("AAPL", "Open"), ("AAPL", "High"), ("AAPL", "Low"), ("AAPL", "Close"), ("AAPL", "Volume"),
+            ("LOW", "Open"), ("LOW", "High"), ("LOW", "Low"), ("LOW", "Close"), ("LOW", "Volume"),
+        ]),
+    )
+    again = _flatten_yf(grouped, ["AAPL", "LOW"])
+    assert float(again[again["ticker"] == "AAPL"].iloc[0]["open"]) == 332.3
+
+
+def test_unexplained_jump_is_not_used_and_a_missing_open_is_not_guessed() -> None:
+    import pandas as pd
+
+    flat = pd.DataFrame([
+        {"date": "2026-10-03", "ticker": "SDEV", "open": 3.0, "high": 3.2, "low": 2.9, "close": 3.1, "volume": 1},
+        {"date": "2026-10-06", "ticker": "SDEV", "open": 3.48, "high": 3.8, "low": 3.2, "close": 3.54, "volume": 1},
+        {"date": "2026-10-03", "ticker": "JUMP", "open": 10.0, "high": 10.0, "low": 10.0, "close": 10.0, "volume": 1},
+        {"date": "2026-10-06", "ticker": "JUMP", "open": 40.0, "high": 40.0, "low": 40.0, "close": 40.0, "volume": 1},
+        {"date": "2026-10-06", "ticker": "NEW", "open": 5.0, "high": 5.0, "low": 5.0, "close": 5.0, "volume": 1},
+        {"date": "2026-10-03", "ticker": "SPLIT", "open": 20.0, "high": 20.0, "low": 20.0, "close": 20.0, "volume": 1},
+        {"date": "2026-10-06", "ticker": "SPLIT", "open": 10.0, "high": 10.0, "low": 10.0, "close": 10.0, "volume": 1},
+    ])
+    actions = pd.DataFrame([
+        {"date": "2026-10-06", "ticker": "SPLIT", "split": 2.0},
+    ])
+    got = official_opens(flat, actions, "2026-10-06")
+    assert got[("SDEV", "2026-10-06")]["open"] == 3.48
+    assert got[("NEW", "2026-10-06")]["open"] == 5.0
+    assert ("JUMP", "2026-10-06") not in got
+    assert got[("SPLIT", "2026-10-06")]["open"] == 10.0
+    assert "GONE" not in {ticker for ticker, _day in got}
+    # 16:15 still locks only when the open was observed. The same price path
+    # runs then; a missing open does not become a fill at the close.
+    close = datetime(2026, 10, 6, 16, 15, tzinfo=ET)
+    assert final_row("2026-10-06", close, True, False) is False
+    assert final_row("2026-10-06", close, True, True) is True
+
+
+def test_h1_ledger_plan_fills_at_the_open_and_flatten_h1_sat_out() -> None:
+    plans = [plan for plan in load_h1_plans() if plan["date"] == "2026-10-06"]
+    assert len(plans) == 1
+    plan = plans[0]
+    assert [pick.ticker for pick in plan["picks"]] == ["SDEV", "PACB", "DNA", "QSI"]
+    assert plan["exits"] == ["FEAM", "GLND", "NAUT"]
+    assert plan["commit"].startswith("dcec598c3")
+    assert plan["tradable"] is True
+    assert plan["commit_et"].startswith("2026-10-06T08:41")
+    tickets = json.loads((ROOT / "data/day_board/2026-10-06_strategy_tickets.json").read_text())
+    flatten = tickets["strategies"]["flatten_h1"]
+    assert flatten["buy"] == [] and flatten["sell"] == []
+    assert "h1" not in tickets["strategies"]
+    bars = {}
+    for ticker, price in (("SDEV", 3.48), ("PACB", 2.10), ("DNA", 4.00), ("QSI", 1.50)):
+        bars[(ticker, "2026-10-06")] = {
+            "open": price, "high": price, "low": price, "close": price,
+        }
+    # No open for a fifth name, and the research sells have no sim lot.
+    rows = simulate(
+        {"h1_webull_sim": [plan]},
+        datetime(2026, 10, 6, 10, 15, tzinfo=ET),
+        schedule(),
+        bars,
+    )
+    row = rows[0]
+    assert row["name"] == "h1_webull_sim"
+    assert row["section"] == "locked"
+    assert row["reason"] == ""
+    filled = {fill["ticker"]: fill for fill in row["fills"] if fill.get("shares")}
+    assert set(filled) == {"SDEV", "PACB", "DNA", "QSI"}
+    assert all(fill["side"] == "buy" for fill in filled.values())
+    assert all(fill["reason"] == "open" for fill in filled.values())
+    assert "FEAM" not in filled and "GLND" not in filled and "NAUT" not in filled
+    # The live 10-06 journal has acknowledged order ids, so the column does
+    # not claim that no orders went out. The missed-deadline sentence is the
+    # overlay for a status file that actually says that.
+    live = json.loads((ROOT / "data/paper_open/2026-10-06_status.json").read_text())
+    assert any(str(order.get("order_id") or "").strip() for order in live.get("sent") or [])
+    assert unsent_orders_label(live) == ""
+    sentence = (
+        "No Webull orders sent on 2026-10-06: "
+        "send started after the 09:30 open (missed deadline)"
+    )
+    missed = {"date": "2026-10-06", "status": "missed_deadline"}
+    assert unsent_orders_label(missed) == sentence
+    late_send = {
+        "date": "2026-10-06",
+        "status": "failed",
+        "sent": [{"status": "missed_deadline", "ok": False, "order_id": ""}],
+    }
+    assert unsent_orders_label(late_send) == sentence
+    with tempfile.TemporaryDirectory() as tmp:
+        folder = Path(tmp)
+        (folder / "2026-10-06_status.json").write_text(json.dumps(missed), encoding="utf-8")
+        page = render_md(
+            [row], schedule(),
+            manifest={"lock_from": "2026-10-06", "entries": []},
+            paper_open=folder,
+        )
+    assert "h1_webull_sim" in page
+    assert sentence in page
+    stored = json.dumps(row, sort_keys=True)
+    quiet = render_md(
+        [row], schedule(),
+        manifest={"lock_from": "2026-10-06", "entries": []},
+        paper_open=ROOT / "data/paper_open",
+    )
+    assert "No Webull orders sent" not in quiet
+    assert json.dumps(row, sort_keys=True) == stored
+
+
+def test_excel_pre_lock_label_and_pages_ship_webull_sim() -> None:
+    row = make_row(
+        name="L1_long_green_tp8_lowvol_webull_sim", day="2026-10-06",
+        source="excel_bot/daily/2026-10-05_excel_bot.md", commit="caf155612ba7",
+        commit_et="2026-10-05T18:29:10-04:00", reason="open not observed", note="",
+        section="not_a_locked_trade", locked_trade=False, final=False,
+        cash=START_CASH, fees=Decimal("0"), equity=START_CASH, fills=[],
+        positions=[], picks=12,
+    )
+    before = json.dumps(row, sort_keys=True)
+    phrase = "sealed by git commit time (pre-lock)"
+    md = render_md([row], schedule(), manifest={"lock_from": "2026-10-06", "entries": []},
+                   paper_open=Path("/no/such/paper"))
+    assert f"excel_bot/daily/2026-10-05_excel_bot.md — {phrase}" in md
+    listed = {"lock_from": "2026-10-06", "entries": [{"signal_date": "2026-10-06"}]}
+    later = dict(row)
+    later["source"] = "excel_bot/daily/2026-10-06_excel_bot.md"
+    later["date"] = "2026-10-07"
+    sealed = render_md([later], schedule(), manifest=listed, paper_open=Path("/no/such/paper"))
+    assert "sealed by git commit time + excel_bot freeze manifest" in sealed
+    quiet = render_md([later], schedule(), manifest={"lock_from": "2026-10-06", "entries": []},
+                      paper_open=Path("/no/such/paper"))
+    assert "freeze manifest" not in quiet
+    assert json.dumps(row, sort_keys=True) == before
+    deploy = (ROOT / ".github/workflows/deploy-dashboard.yml").read_text(encoding="utf-8")
+    publish = (ROOT / "scripts/publish_dashboard.sh").read_text(encoding="utf-8")
+    assert "webull-sim" in deploy
+    assert "webull-sim" in publish
+
+
 def test_workflow_is_after_the_freeze_and_on_ubuntu() -> None:
     text = (ROOT / ".github/workflows/webull_sim.yml").read_text(encoding="utf-8")
     assert "ubuntu-latest" in text
@@ -880,6 +1045,10 @@ if __name__ == "__main__":
     test_no_cash_only_from_held_lots()
     test_own_count_precedence()
     test_h1_sandbox_fill_not_observed()
+    test_low_ticker_does_not_drop_the_yahoo_open()
+    test_unexplained_jump_is_not_used_and_a_missing_open_is_not_guessed()
+    test_h1_ledger_plan_fills_at_the_open_and_flatten_h1_sat_out()
+    test_excel_pre_lock_label_and_pages_ship_webull_sim()
     test_freeze_window()
     test_workflow_is_after_the_freeze_and_on_ubuntu()
     with tempfile.TemporaryDirectory() as tmp:

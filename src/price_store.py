@@ -170,6 +170,42 @@ def _yf_download(tickers: list[str], start: str, end: str, *,
     return ohlc
 
 
+_OHLC_FIELDS = {
+    "OPEN", "HIGH", "LOW", "CLOSE", "VOLUME",
+    "ADJ CLOSE", "DIVIDENDS", "STOCK SPLITS",
+}
+
+
+def _ticker_level(raw: pd.DataFrame, tickers: list[str]) -> int | None:
+    """Column level that holds tickers, not Open/High/Low.
+
+    A name such as LOW sits in the same batch as the Low column. Matching
+    the field level first drops the whole download.
+    """
+    if raw is None or not isinstance(raw.columns, pd.MultiIndex):
+        return None
+    wanted = {str(ticker).upper() for ticker in tickers}
+    best = None
+    best_key = None
+    for level in range(raw.columns.nlevels):
+        values = {str(value).upper() for value in raw.columns.get_level_values(level)}
+        overlap = len(wanted & values)
+        fields = len(values & _OHLC_FIELDS)
+        key = (overlap, -fields)
+        if best_key is None or key > best_key:
+            best, best_key = level, key
+    if best is None or best_key[0] <= 0:
+        return None
+    return best
+
+
+def _level_label(raw: pd.DataFrame, level: int, sym: str):
+    for value in raw.columns.get_level_values(level):
+        if str(value).upper() == str(sym).upper():
+            return value
+    return None
+
+
 def _flatten_yf(raw: pd.DataFrame, tickers: list[str]) -> pd.DataFrame:
     """Normalize yfinance 0.2 / 1.x column layouts to a long OHLC table."""
     def _one(df: pd.DataFrame, sym: str) -> pd.DataFrame:
@@ -208,32 +244,16 @@ def _flatten_yf(raw: pd.DataFrame, tickers: list[str]) -> pd.DataFrame:
         })
         return out.dropna(subset=["close"])
 
+    rows = []
     if not isinstance(raw.columns, pd.MultiIndex):
         if len(tickers) == 1:
-            return _one(raw, tickers[0])
-        return pd.DataFrame()
-    levels0 = set(raw.columns.get_level_values(0))
-    levels1 = set(raw.columns.get_level_values(1)) if raw.columns.nlevels > 1 else set()
-    rows = []
-    ticker_set = {str(t).upper() for t in tickers}
-    if ticker_set & {str(x).upper() for x in levels0}:
-        for sym in tickers:
-            if sym not in levels0:
-                continue
-            try:
-                rows.append(_one(raw[sym], sym))
-            except Exception:
-                continue
-    elif ticker_set & {str(x).upper() for x in levels1}:
-        for sym in tickers:
-            try:
-                sub = raw.xs(sym, axis=1, level=1, drop_level=True)
-            except Exception:
-                continue
-            rows.append(_one(sub, sym))
-    else:
-        if len(tickers) == 1:
             rows.append(_one(raw, tickers[0]))
+    else:
+        for sym, frame in _symbol_frames(raw, tickers):
+            try:
+                rows.append(_one(frame, sym))
+            except Exception:
+                continue
     rows = [r for r in rows if r is not None and len(r)]
     if not rows:
         return pd.DataFrame()
@@ -248,25 +268,22 @@ def _symbol_frames(raw: pd.DataFrame, tickers: list[str]):
         if len(tickers) == 1:
             yield tickers[0], raw
         return
-    levels0 = set(raw.columns.get_level_values(0))
-    levels1 = set(raw.columns.get_level_values(1)) if raw.columns.nlevels > 1 else set()
-    ticker_set = {str(t).upper() for t in tickers}
-    if ticker_set & {str(x).upper() for x in levels0}:
-        for sym in tickers:
-            if sym not in levels0:
-                continue
-            try:
-                yield sym, raw[sym]
-            except Exception:
-                continue
-    elif ticker_set & {str(x).upper() for x in levels1}:
-        for sym in tickers:
-            try:
-                yield sym, raw.xs(sym, axis=1, level=1, drop_level=True)
-            except Exception:
-                continue
-    elif len(tickers) == 1:
-        yield tickers[0], raw
+    level = _ticker_level(raw, tickers)
+    if level is None:
+        if len(tickers) == 1:
+            yield tickers[0], raw
+        return
+    for sym in tickers:
+        label = _level_label(raw, level, sym)
+        if label is None:
+            continue
+        try:
+            if level == 0:
+                yield sym, raw[label]
+            else:
+                yield sym, raw.xs(label, axis=1, level=level, drop_level=True)
+        except Exception:
+            continue
 
 
 def _action_rows(df: pd.DataFrame, sym: str) -> pd.DataFrame:

@@ -324,35 +324,44 @@ def test_morning_chain_replay(tmp: Path) -> None:
     morning = ticket_src.replace("2026-10-05", "2026-10-06", 1)
     body_a = morning
     body_b = morning + "\n"
-    _ticket_pass(ticket_dir, manifest, "2026-10-06", body_a, at("2026-10-06", 8, 7))
-    _ticket_pass(ticket_dir, manifest, "2026-10-06", body_b, at("2026-10-06", 9, 7))
-    held = (ticket_dir / "2026-10-06_strategy_tickets.json").read_text(encoding="utf-8")
-    assert held == body_b
-    after = body_b + "{\"rewritten\": true}\n"
-    _ticket_pass(ticket_dir, manifest, "2026-10-06", after, at("2026-10-06", 9, 40))
-    assert (ticket_dir / "2026-10-06_strategy_tickets.json").read_text(encoding="utf-8") == body_b
-    ticket_days = [
-        row["date"] for row in load_manifest(manifest)
-        if row.get("record") == "strategy_tickets" and row.get("kind") == "day"
-    ]
-    assert ticket_days == ["2026-10-06"]
-    next_morning = ticket_src.replace("2026-10-05", "2026-10-07", 1)
-    _ticket_pass(ticket_dir, manifest, "2026-10-07", next_morning, at("2026-10-07", 8, 7))
-    _ticket_pass(ticket_dir, manifest, "2026-10-07", next_morning + "\n", at("2026-10-07", 9, 7))
-    held_next = (ticket_dir / "2026-10-07_strategy_tickets.json").read_text(encoding="utf-8")
-    assert held_next == next_morning + "\n"
-    assert "2026-10-07" not in [
-        row["date"] for row in load_manifest(manifest)
-        if row.get("record") == "strategy_tickets" and row.get("kind") == "day"
-    ]
+    # The live 2026-10-06 submit journal freezes that date even at 08:07.
+    # This replay is about the 09:30 clock, so it uses an empty journal.
+    from unittest import mock
+    from src import strategy_tickets
 
-    def smash_ticket() -> None:
-        assert_ticket(
-            "2026-10-06", ticket_dir / "2026-10-06_strategy_tickets.json",
-            body_b + "changed\n", keep_existing=False, manifest=manifest,
-        )
+    def empty_journal(date: str) -> Path:
+        return tmp / "paper_open" / f"{date}_submit.json"
 
-    _expect_fail("strategy_tickets 2026-10-06", smash_ticket)
+    with mock.patch.object(strategy_tickets, "paper_submit_journal", empty_journal):
+        _ticket_pass(ticket_dir, manifest, "2026-10-06", body_a, at("2026-10-06", 8, 7))
+        _ticket_pass(ticket_dir, manifest, "2026-10-06", body_b, at("2026-10-06", 9, 7))
+        held = (ticket_dir / "2026-10-06_strategy_tickets.json").read_text(encoding="utf-8")
+        assert held == body_b
+        after = body_b + "{\"rewritten\": true}\n"
+        _ticket_pass(ticket_dir, manifest, "2026-10-06", after, at("2026-10-06", 9, 40))
+        assert (ticket_dir / "2026-10-06_strategy_tickets.json").read_text(encoding="utf-8") == body_b
+        ticket_days = [
+            row["date"] for row in load_manifest(manifest)
+            if row.get("record") == "strategy_tickets" and row.get("kind") == "day"
+        ]
+        assert ticket_days == ["2026-10-06"]
+        next_morning = ticket_src.replace("2026-10-05", "2026-10-07", 1)
+        _ticket_pass(ticket_dir, manifest, "2026-10-07", next_morning, at("2026-10-07", 8, 7))
+        _ticket_pass(ticket_dir, manifest, "2026-10-07", next_morning + "\n", at("2026-10-07", 9, 7))
+        held_next = (ticket_dir / "2026-10-07_strategy_tickets.json").read_text(encoding="utf-8")
+        assert held_next == next_morning + "\n"
+        assert "2026-10-07" not in [
+            row["date"] for row in load_manifest(manifest)
+            if row.get("record") == "strategy_tickets" and row.get("kind") == "day"
+        ]
+
+        def smash_ticket() -> None:
+            assert_ticket(
+                "2026-10-06", ticket_dir / "2026-10-06_strategy_tickets.json",
+                body_b + "changed\n", keep_existing=False, manifest=manifest,
+            )
+
+        _expect_fail("strategy_tickets 2026-10-06", smash_ticket)
 
 
 def test_sha_stable() -> None:
