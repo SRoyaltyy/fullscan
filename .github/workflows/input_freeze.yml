@@ -1,0 +1,190 @@
+name: Input freeze (pre-open, append-only)
+
+# Freezes every daily model input at ~09:20 ET into
+# research/input_freeze/<YYYY-MM-DD>/ with manifest.json (source path,
+# source commit SHA + commit time, freeze time UTC, sha256 per file).
+# Only versions whose source commit time is before the freeze time are
+# copied. Missing inputs are recorded as missing; this job never fails
+# the open path and never writes outside research/input_freeze/.
+#
+# IRONCLAD (A.2 / C.9): a day folder, once written, is never rewritten.
+# Folder already on main -> exit success, no changes. Fired at/after
+# 09:28 ET with no folder -> write a 'late: not frozen' manifest only.
+#
+# Clock: GitHub cron on this repo runs hours late, so cron is a backstop.
+# The reliable trigger is workflow_run after the hand-dispatched h1
+# forward (~08:40 ET) or a Pre-Open ALL pass; the job sleeps to 09:20 ET.
+# 09:30 ET is computed with zoneinfo, so the Nov DST switch needs no edit
+# (13:15 UTC cron = 09:15 EDT; 14:15 UTC cron = 09:15 EST).
+#
+# Does not delay the 09:30 deploy: own concurrency group, ubuntu-latest,
+# small commit under research/input_freeze/ pushed with GITHUB_TOKEN
+# (GITHUB_TOKEN pushes start no workflows; Deploy dashboard's push paths
+# are dashboard/**, data/stock_book/**, 01_daily/*_stock_book.md).
+
+on:
+  schedule:
+    - cron: "15 13 * * 1-5"   # 09:15 EDT (Mar–Nov)
+    - cron: "15 14 * * 1-5"   # 09:15 EST (Nov–Mar); in EDT this is a no-op
+    - cron: "0 11 * * 1-5"    # early backstop; sleeps to 09:20 ET if on time
+  workflow_run:
+    workflows:
+      - "h1 append-only forward"
+      - "Pre-Open ALL (predictive one-shot)"
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "true = build and print the manifest, write nothing"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
+      date:
+        description: "dry run only: YYYY-MM-DD to freeze as of 09:20 ET that day"
+        required: false
+        default: ""
+  pull_request:
+    paths:
+      - "research/input_freeze/**"
+      - ".github/workflows/input_freeze.yml"
+  push:
+    branches: [main]
+    paths:
+      - "research/input_freeze/**"
+      - ".github/workflows/input_freeze.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    name: Append-only check + tests + dry run
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: research/input_freeze
+      - name: Unit tests
+        run: python3 research/input_freeze/tool/test_freeze_inputs.py
+      - name: IRONCLAD — fail if any past day folder changed
+        env:
+          BASE: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -z "$BASE" ] || [ "$BASE" = "0000000000000000000000000000000000000000" ]; then
+            echo "no base commit — nothing to compare"; exit 0
+          fi
+          git fetch --no-tags --filter=blob:none origin "$BASE" || true
+          python3 research/input_freeze/tool/freeze_inputs.py check --base "$BASE" --head HEAD
+      - name: Dry run on main as of 09:20 ET (writes nothing)
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch --no-tags --filter=blob:none origin +refs/heads/main:refs/remotes/origin/main
+          git clone -q --filter=blob:none --no-checkout https://github.com/SRoyaltyy/theme-radar.git "$RUNNER_TEMP/theme-radar" || true
+          D=$(python3 - <<'EOF'
+          import datetime as dt, sys
+          sys.path.insert(0, "research/input_freeze/tool")
+          import freeze_inputs as fi
+          d = dt.datetime.now(fi.ET).date()
+          while not fi.is_session(d.isoformat()):
+              d -= dt.timedelta(days=1)
+          print(d.isoformat())
+          EOF
+          )
+          python3 research/input_freeze/tool/freeze_inputs.py freeze --date "$D" --at-target \
+            --fullscan . --fullscan-ref origin/main \
+            --theme-radar "$RUNNER_TEMP/theme-radar" --theme-radar-ref origin/main \
+            --out-root "$RUNNER_TEMP/never-written" --dry-run
+          test ! -e "$RUNNER_TEMP/never-written"
+          git status --porcelain | tee /dev/stderr | (! grep -q .)
+
+  freeze:
+    name: Freeze inputs before 09:30 ET
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_run' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    concurrency:
+      group: input-freeze
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: research/input_freeze
+      - name: Dry run (dispatch, writes nothing)
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run == 'true'
+        env:
+          D: ${{ github.event.inputs.date }}
+        run: |
+          git clone -q --filter=blob:none --no-checkout https://github.com/SRoyaltyy/theme-radar.git "$RUNNER_TEMP/theme-radar" || true
+          ARGS=(--fullscan . --fullscan-ref origin/main --theme-radar "$RUNNER_TEMP/theme-radar"
+                --theme-radar-ref origin/main --out-root "$RUNNER_TEMP/never-written" --dry-run)
+          if [ -n "$D" ]; then ARGS+=(--date "$D" --at-target); fi
+          python3 research/input_freeze/tool/freeze_inputs.py freeze "${ARGS[@]}"
+          test ! -e "$RUNNER_TEMP/never-written"
+          git status --porcelain | (! grep -q .)
+          echo "dry run OK — nothing written, nothing committed"
+      - name: Gate (append-only / clock)
+        id: gate
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.dry_run != 'true'
+        run: python3 research/input_freeze/tool/freeze_inputs.py gate --ref origin/main
+      - name: Sleep to 09:20 ET
+        if: steps.gate.outputs.action == 'freeze' && steps.gate.outputs.sleep_s != '0'
+        run: |
+          echo "sleeping ${{ steps.gate.outputs.sleep_s }}s to 09:20 ET"
+          sleep "${{ steps.gate.outputs.sleep_s }}"
+      - name: Freeze or record late (never fails the open path)
+        if: steps.gate.outputs.action == 'freeze' || steps.gate.outputs.action == 'late'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          META: >-
+            {"trigger": "${{ github.event_name }}", "run_id": "${{ github.run_id }}",
+            "run_attempt": "${{ github.run_attempt }}", "workflow_sha": "${{ github.sha }}"}
+        run: |
+          set -euo pipefail
+          T=research/input_freeze/tool/freeze_inputs.py
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git fetch --no-tags --filter=blob:none origin +refs/heads/main:refs/remotes/origin/main
+          git reset -q --hard origin/main
+          # Re-gate after the sleep on a fresh main.
+          python3 "$T" gate --ref origin/main > "$RUNNER_TEMP/gate.json"
+          cat "$RUNNER_TEMP/gate.json"
+          ACTION=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['action'])" "$RUNNER_TEMP/gate.json")
+          D=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['date'])" "$RUNNER_TEMP/gate.json")
+          if [ "$ACTION" = "freeze" ]; then
+            NOW=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+            git clone -q --filter=blob:none --no-checkout https://github.com/SRoyaltyy/theme-radar.git "$RUNNER_TEMP/theme-radar" \
+              || echo "theme-radar not readable — recorded as missing"
+            python3 "$T" freeze --date "$D" --now "$NOW" --fullscan . --fullscan-ref origin/main \
+              --theme-radar "$RUNNER_TEMP/theme-radar" --theme-radar-ref origin/main --meta "$META"
+            MSG="auto: input freeze $D (pre-open, append-only)"
+          elif [ "$ACTION" = "late" ]; then
+            python3 "$T" late --ref origin/main --meta "$META"
+            MSG="auto: input freeze $D late: not frozen"
+          else
+            echo "gate now says $ACTION — nothing to write"; exit 0
+          fi
+          test -d "research/input_freeze/$D" || { echo "nothing written"; exit 0; }
+          git add -- "research/input_freeze/$D"
+          git commit -q -m "$MSG"
+          for i in 1 2 3 4 5 6; do
+            git fetch --no-tags --filter=blob:none origin +refs/heads/main:refs/remotes/origin/main
+            if git ls-tree --name-only origin/main "research/input_freeze/$D" | grep -q .; then
+              echo "another run already wrote $D — leaving it untouched"; exit 0
+            fi
+            git rebase -q origin/main
+            python3 "$T" check --base origin/main --head HEAD --only-day "$D"
+            if git push origin HEAD:main; then echo "pushed $(git rev-parse --short HEAD)"; exit 0; fi
+            sleep $((i * 5))
+          done
+          echo "push failed after retries"; exit 1
