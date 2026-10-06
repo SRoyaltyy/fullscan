@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-10-06T12:58:40.624879-04:00",
+  "generated_at": "2026-10-06T13:15:20.741655-04:00",
   "from_date": "2026-08-13",
   "to_date": "2026-10-05",
   "n_days": 37,
@@ -1592,7 +1592,7 @@
         "weather": [
           "sector good"
         ],
-        "h1": 1.71,
+        "h1": 1.92,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -1610,7 +1610,7 @@
           "Tape RSI 76 OB \u00b7 MACD hist 2.7562",
           "Side lean: long \u00b7 idio +23"
         ],
-        "h1_px": 229.33,
+        "h1_px": 229.805,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -1697,7 +1697,7 @@
         "weather": [
           "sector bad"
         ],
-        "h1": 2.22,
+        "h1": 2.28,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -1715,7 +1715,7 @@
           "Tape RSI 45 \u00b7 MACD hist -0.9739",
           "Side lean: long \u00b7 idio +19"
         ],
-        "h1_px": 129.825,
+        "h1_px": 129.89,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -1812,7 +1812,7 @@
         "weather": [
           "sector good"
         ],
-        "h1": -1.48,
+        "h1": -1.53,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -1830,7 +1830,7 @@
           "Tape RSI 73 OB \u00b7 MACD hist 1.608",
           "Side lean: long \u00b7 idio +19"
         ],
-        "h1_px": 56.1,
+        "h1_px": 56.07,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -1917,7 +1917,7 @@
         "weather": [
           "sector good"
         ],
-        "h1": 3.89,
+        "h1": 4.85,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -1935,7 +1935,7 @@
           "Tape RSI 62 \u00b7 MACD hist 10.0803",
           "Side lean: long \u00b7 idio +18"
         ],
-        "h1_px": 484.115,
+        "h1_px": 488.61,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -2022,7 +2022,7 @@
         "weather": [
           "sector good"
         ],
-        "h1": -2.48,
+        "h1": -2.4,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -2040,7 +2040,7 @@
           "Tape RSI 68 \u00b7 MACD hist 0.4318",
           "Side lean: long \u00b7 idio +17"
         ],
-        "h1_px": 28.28,
+        "h1_px": 28.305,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -2122,7 +2122,7 @@
         "weather": [
           "sector good"
         ],
-        "h1": 4.2,
+        "h1": 4.03,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -2140,7 +2140,7 @@
           "Tape RSI 67 \u00b7 MACD hist 0.7815",
           "Side lean: long \u00b7 idio +17"
         ],
-        "h1_px": 58.975,
+        "h1_px": 58.88,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -2228,7 +2228,7 @@
         "weather": [
           "sector good"
         ],
-        "h1": -1.79,
+        "h1": -2.38,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -2246,7 +2246,7 @@
           "Tape RSI 62 \u00b7 MACD hist 0.7277",
           "Side lean: long \u00b7 idio +14"
         ],
-        "h1_px": 38.85,
+        "h1_px": 38.62,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -2328,7 +2328,7 @@
         "weather": [
           "sector good"
         ],
-        "h1": 7.08,
+        "h1": 7.12,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -2346,7 +2346,7 @@
           "Tape RSI 62 \u00b7 MACD hist 0.0072",
           "Side lean: long \u00b7 idio +14"
         ],
-        "h1_px": 23.6,
+        "h1_px": 23.61,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -2428,7 +2428,7 @@
           }
         ],
         "weather": [],
-        "h1": -2.55,
+        "h1": -2.77,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -2445,7 +2445,7 @@
           "Tape RSI 44 \u00b7 MACD hist -0.309",
           "Side lean: short \u00b7 idio -14"
         ],
-        "h1_px": 28.15,
+        "h1_px": 28.21,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -2520,7 +2520,7 @@
           }
         ],
         "weather": [],
-        "h1": -3.43,
+        "h1": -3.16,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -2536,7 +2536,7 @@
           "Tape RSI 41 \u00b7 MACD hist -0.0715",
           "Side lean: short \u00b7 idio -13"
         ],
-        "h1_px": 9.65,
+        "h1_px": 9.625,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -2629,7 +2629,7 @@
         "weather": [
           "sector good"
         ],
-        "h1": 4.01,
+        "h1": 3.88,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -2647,7 +2647,7 @@
           "Tape RSI 57 \u00b7 MACD hist 0.1877",
           "Side lean: short \u00b7 idio -9"
         ],
-        "h1_px": 15.34,
+        "h1_px": 15.36,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -2729,7 +2729,7 @@
         "weather": [
           "sector good"
         ],
-        "h1": -11.59,
+        "h1": -12.85,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -2747,7 +2747,7 @@
           "Tape RSI 56 \u00b7 MACD hist 0.2401",
           "Side lean: short \u00b7 idio -8"
         ],
-        "h1_px": 20.158,
+        "h1_px": 20.3871,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -2835,7 +2835,7 @@
         "weather": [
           "sector bad"
         ],
-        "h1": 21.27,
+        "h1": 20.51,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -2853,7 +2853,7 @@
           "Tape RSI 57 \u00b7 MACD hist 0.1953",
           "Side lean: short \u00b7 idio -8"
         ],
-        "h1_px": 3.09,
+        "h1_px": 3.12,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -3041,7 +3041,7 @@
           }
         ],
         "weather": [],
-        "h1": 3.44,
+        "h1": 2.44,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -3058,7 +3058,7 @@
           "Tape RSI 68 \u00b7 MACD hist 0.0657",
           "Side lean: short \u00b7 idio -3"
         ],
-        "h1_px": 4.355,
+        "h1_px": 4.4,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -3135,7 +3135,7 @@
         "weather": [
           "sector bad"
         ],
-        "h1": -0.9,
+        "h1": -1.25,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -3152,7 +3152,7 @@
           "Tape RSI 43 \u00b7 MACD hist -0.1401",
           "Side lean: short \u00b7 idio -3"
         ],
-        "h1_px": 11.725,
+        "h1_px": 11.765,
         "h1_date": "2026-10-06",
         "h3_px": null,
         "h3_date": null,
@@ -55985,7 +55985,7 @@
           ],
           "h1": 0.73,
           "h3": -0.34,
-          "h5": -1.91,
+          "h5": -1.8,
           "side": "long",
           "why": [
             "Weather S=1.292. Not a sit morning \u2014 still ranked.",
@@ -56005,7 +56005,7 @@
           "h1_date": "2026-09-30",
           "h3_px": 17.7,
           "h3_date": "2026-10-02",
-          "h5_px": 17.42,
+          "h5_px": 17.44,
           "h5_date": "2026-10-06"
         },
         {
@@ -56097,7 +56097,7 @@
           ],
           "h1": -0.1,
           "h3": -3.19,
-          "h5": 2.09,
+          "h5": 1.69,
           "side": "long",
           "why": [
             "Weather S=1.292. Not a sit morning \u2014 still ranked.",
@@ -56117,7 +56117,7 @@
           "h1_date": "2026-09-30",
           "h3_px": 9.72,
           "h3_date": "2026-10-02",
-          "h5_px": 10.25,
+          "h5_px": 10.21,
           "h5_date": "2026-10-06"
         },
         {
@@ -56207,7 +56207,7 @@
           ],
           "h1": 1.59,
           "h3": 10.45,
-          "h5": 7.95,
+          "h5": 8.34,
           "side": "long",
           "why": [
             "Weather S=1.292. Not a sit morning \u2014 still ranked.",
@@ -56227,7 +56227,7 @@
           "h1_date": "2026-09-30",
           "h3_px": 55.5,
           "h3_date": "2026-10-02",
-          "h5_px": 54.245,
+          "h5_px": 54.44,
           "h5_date": "2026-10-06"
         },
         {
@@ -56312,7 +56312,7 @@
           ],
           "h1": 4.02,
           "h3": 6.81,
-          "h5": 8.32,
+          "h5": 8.61,
           "side": "long",
           "why": [
             "Weather S=1.292. Not a sit morning \u2014 still ranked.",
@@ -56332,7 +56332,7 @@
           "h1_date": "2026-09-30",
           "h3_px": 357.96,
           "h3_date": "2026-10-02",
-          "h5_px": 363.045,
+          "h5_px": 364.0,
           "h5_date": "2026-10-06"
         },
         {
@@ -56422,7 +56422,7 @@
           ],
           "h1": 0.61,
           "h3": 3.36,
-          "h5": 5.95,
+          "h5": 6.0,
           "side": "long",
           "why": [
             "Weather S=1.292. Not a sit morning \u2014 still ranked.",
@@ -56442,7 +56442,7 @@
           "h1_date": "2026-09-30",
           "h3_px": 59.32,
           "h3_date": "2026-10-02",
-          "h5_px": 60.805,
+          "h5_px": 60.835,
           "h5_date": "2026-10-06"
         },
         {
@@ -56537,7 +56537,7 @@
           ],
           "h1": -1.92,
           "h3": -7.3,
-          "h5": -9.03,
+          "h5": -8.96,
           "side": "long",
           "why": [
             "Weather S=1.292. Not a sit morning \u2014 still ranked.",
@@ -56557,7 +56557,7 @@
           "h1_date": "2026-09-30",
           "h3_px": 181.7,
           "h3_date": "2026-10-02",
-          "h5_px": 178.3099,
+          "h5_px": 178.43,
           "h5_date": "2026-10-06"
         },
         {
@@ -56647,7 +56647,7 @@
           ],
           "h1": -2.14,
           "h3": -0.8,
-          "h5": -0.5,
+          "h5": -0.66,
           "side": "long",
           "why": [
             "Weather S=1.292. Not a sit morning \u2014 still ranked.",
@@ -56667,7 +56667,7 @@
           "h1_date": "2026-09-30",
           "h3_px": 182.57,
           "h3_date": "2026-10-02",
-          "h5_px": 183.13,
+          "h5_px": 182.8399,
           "h5_date": "2026-10-06"
         },
         {
@@ -56747,7 +56747,7 @@
           ],
           "h1": 2.03,
           "h3": 4.97,
-          "h5": 7.73,
+          "h5": 8.04,
           "side": "long",
           "why": [
             "Weather S=1.292. Not a sit morning \u2014 still ranked.",
@@ -56767,7 +56767,7 @@
           "h1_date": "2026-09-30",
           "h3_px": 9.3,
           "h3_date": "2026-10-02",
-          "h5_px": 9.545,
+          "h5_px": 9.5726,
           "h5_date": "2026-10-06"
         }
       ],
@@ -56849,7 +56849,7 @@
           ],
           "h1": 0.71,
           "h3": 2.09,
-          "h5": 0.44,
+          "h5": 0.3,
           "side": "short",
           "why": [
             "Weather S=1.292. Not a sit morning \u2014 still ranked.",
@@ -56869,7 +56869,7 @@
           "h1_date": "2026-09-30",
           "h3_px": 35.62,
           "h3_date": "2026-10-02",
-          "h5_px": 36.22,
+          "h5_px": 36.27,
           "h5_date": "2026-10-06"
         },
         {
@@ -56954,7 +56954,7 @@
           ],
           "h1": 4.64,
           "h3": 6.16,
-          "h5": -3.99,
+          "h5": -4.61,
           "side": "short",
           "why": [
             "Weather S=1.292. Not a sit morning \u2014 still ranked.",
@@ -56974,7 +56974,7 @@
           "h1_date": "2026-09-30",
           "h3_px": 9.3,
           "h3_date": "2026-10-02",
-          "h5_px": 10.305,
+          "h5_px": 10.3664,
           "h5_date": "2026-10-06"
         },
         {
@@ -57056,7 +57056,7 @@
           ],
           "h1": 0.76,
           "h3": 7.59,
-          "h5": 9.49,
+          "h5": 9.75,
           "side": "short",
           "why": [
             "Weather S=1.292. Not a sit morning \u2014 still ranked.",
@@ -57076,7 +57076,7 @@
           "h1_date": "2026-09-30",
           "h3_px": 3.65,
           "h3_date": "2026-10-02",
-          "h5_px": 3.575,
+          "h5_px": 3.565,
           "h5_date": "2026-10-06"
         },
         {
@@ -57250,7 +57250,7 @@
           ],
           "h1": -4.14,
           "h3": -6.58,
-          "h5": -6.86,
+          "h5": -6.53,
           "side": "short",
           "why": [
             "Weather S=1.292. Not a sit morning \u2014 still ranked.",
@@ -57270,7 +57270,7 @@
           "h1_date": "2026-09-30",
           "h3_px": 5.67,
           "h3_date": "2026-10-02",
-          "h5_px": 5.685,
+          "h5_px": 5.6674,
           "h5_date": "2026-10-06"
         }
       ],
@@ -59060,7 +59060,7 @@
             "sector good"
           ],
           "h1": -8.93,
-          "h3": -8.39,
+          "h3": -8.48,
           "h5": null,
           "side": "long",
           "why": [
@@ -59079,7 +59079,7 @@
           ],
           "h1_px": 36.9,
           "h1_date": "2026-10-02",
-          "h3_px": 37.12,
+          "h3_px": 37.085,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -59167,7 +59167,7 @@
             "sector good"
           ],
           "h1": -1.4,
-          "h3": 3.27,
+          "h3": 3.4,
           "h5": null,
           "side": "long",
           "why": [
@@ -59186,7 +59186,7 @@
           ],
           "h1_px": 14.07,
           "h1_date": "2026-10-02",
-          "h3_px": 14.736,
+          "h3_px": 14.755,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -59268,7 +59268,7 @@
             "sector good"
           ],
           "h1": 5.41,
-          "h3": 7.67,
+          "h3": 7.93,
           "h5": null,
           "side": "long",
           "why": [
@@ -59287,7 +59287,7 @@
           ],
           "h1_px": 14.23,
           "h1_date": "2026-10-02",
-          "h3_px": 14.535,
+          "h3_px": 14.57,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -59374,7 +59374,7 @@
             "sector good"
           ],
           "h1": 7.96,
-          "h3": 5.51,
+          "h3": 5.89,
           "h5": null,
           "side": "long",
           "why": [
@@ -59393,7 +59393,7 @@
           ],
           "h1_px": 55.5,
           "h1_date": "2026-10-02",
-          "h3_px": 54.245,
+          "h3_px": 54.44,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -59480,7 +59480,7 @@
             "sector good"
           ],
           "h1": 6.86,
-          "h3": 8.3,
+          "h3": 8.53,
           "h5": null,
           "side": "long",
           "why": [
@@ -59499,7 +59499,7 @@
           ],
           "h1_px": 226.27,
           "h1_date": "2026-10-02",
-          "h3_px": 229.33,
+          "h3_px": 229.805,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -59586,7 +59586,7 @@
             "sector good"
           ],
           "h1": -0.96,
-          "h3": -0.34,
+          "h3": -0.49,
           "h5": null,
           "side": "long",
           "why": [
@@ -59605,7 +59605,7 @@
           ],
           "h1_px": 41.28,
           "h1_date": "2026-10-02",
-          "h3_px": 41.54,
+          "h3_px": 41.475,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -59687,7 +59687,7 @@
             "sector bad"
           ],
           "h1": 10.32,
-          "h3": 8.61,
+          "h3": 8.51,
           "h5": null,
           "side": "long",
           "why": [
@@ -59706,7 +59706,7 @@
           ],
           "h1_px": 55.36,
           "h1_date": "2026-10-02",
-          "h3_px": 54.5,
+          "h3_px": 54.45,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -59788,7 +59788,7 @@
             "sector good"
           ],
           "h1": 2.3,
-          "h3": 9.8,
+          "h3": 9.47,
           "h5": null,
           "side": "long",
           "why": [
@@ -59807,7 +59807,7 @@
           ],
           "h1_px": 21.77,
           "h1_date": "2026-10-02",
-          "h3_px": 23.365,
+          "h3_px": 23.295,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -59886,7 +59886,7 @@
             "sector bad"
           ],
           "h1": 20.93,
-          "h3": 24.22,
+          "h3": 24.34,
           "h5": null,
           "side": "short",
           "why": [
@@ -59904,7 +59904,7 @@
           ],
           "h1_px": 2.04,
           "h1_date": "2026-10-02",
-          "h3_px": 1.955,
+          "h3_px": 1.952,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -59996,7 +59996,7 @@
             "sector bad"
           ],
           "h1": -3.41,
-          "h3": -5.34,
+          "h3": -5.06,
           "h5": null,
           "side": "short",
           "why": [
@@ -60015,7 +60015,7 @@
           ],
           "h1_px": 9.1,
           "h1_date": "2026-10-02",
-          "h3_px": 9.27,
+          "h3_px": 9.245,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -60102,7 +60102,7 @@
             "sector bad"
           ],
           "h1": -107.78,
-          "h3": -8.61,
+          "h3": -6.39,
           "h5": null,
           "side": "short",
           "why": [
@@ -60121,7 +60121,7 @@
           ],
           "h1_px": 7.48,
           "h1_date": "2026-10-02",
-          "h3_px": 3.9101,
+          "h3_px": 3.83,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -60306,7 +60306,7 @@
             "sector bad"
           ],
           "h1": 4.46,
-          "h3": 3.16,
+          "h3": 3.36,
           "h5": null,
           "side": "short",
           "why": [
@@ -60325,7 +60325,7 @@
           ],
           "h1_px": 33.87,
           "h1_date": "2026-10-02",
-          "h3_px": 34.33,
+          "h3_px": 34.26,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -60427,7 +60427,7 @@
             "sector bad"
           ],
           "h1": -11.49,
-          "h3": -16.09,
+          "h3": -15.09,
           "h5": null,
           "side": "short",
           "why": [
@@ -60446,7 +60446,7 @@
           ],
           "h1_px": 3.88,
           "h1_date": "2026-10-02",
-          "h3_px": 4.04,
+          "h3_px": 4.005,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -60528,7 +60528,7 @@
             "sector bad"
           ],
           "h1": -0.94,
-          "h3": -18.48,
+          "h3": -18.67,
           "h5": null,
           "side": "short",
           "why": [
@@ -60547,7 +60547,7 @@
           ],
           "h1_px": 8.59,
           "h1_date": "2026-10-02",
-          "h3_px": 10.0823,
+          "h3_px": 10.099,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -60630,7 +60630,7 @@
             "sector good"
           ],
           "h1": 1.54,
-          "h3": 11.57,
+          "h3": 10.8,
           "h5": null,
           "side": "short",
           "why": [
@@ -60649,7 +60649,7 @@
           ],
           "h1_px": 3.83,
           "h1_date": "2026-10-02",
-          "h3_px": 3.44,
+          "h3_px": 3.47,
           "h3_date": "2026-10-06",
           "h5_px": null,
           "h5_date": null
@@ -62167,7 +62167,7 @@
           "weather": [
             "sector good"
           ],
-          "h1": 1.71,
+          "h1": 1.92,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -62185,7 +62185,7 @@
             "Tape RSI 76 OB \u00b7 MACD hist 2.7562",
             "Side lean: long \u00b7 idio +23"
           ],
-          "h1_px": 229.33,
+          "h1_px": 229.805,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -62272,7 +62272,7 @@
           "weather": [
             "sector bad"
           ],
-          "h1": 2.22,
+          "h1": 2.28,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -62290,7 +62290,7 @@
             "Tape RSI 45 \u00b7 MACD hist -0.9739",
             "Side lean: long \u00b7 idio +19"
           ],
-          "h1_px": 129.825,
+          "h1_px": 129.89,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -62387,7 +62387,7 @@
           "weather": [
             "sector good"
           ],
-          "h1": -1.48,
+          "h1": -1.53,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -62405,7 +62405,7 @@
             "Tape RSI 73 OB \u00b7 MACD hist 1.608",
             "Side lean: long \u00b7 idio +19"
           ],
-          "h1_px": 56.1,
+          "h1_px": 56.07,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -62492,7 +62492,7 @@
           "weather": [
             "sector good"
           ],
-          "h1": 3.89,
+          "h1": 4.85,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -62510,7 +62510,7 @@
             "Tape RSI 62 \u00b7 MACD hist 10.0803",
             "Side lean: long \u00b7 idio +18"
           ],
-          "h1_px": 484.115,
+          "h1_px": 488.61,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -62597,7 +62597,7 @@
           "weather": [
             "sector good"
           ],
-          "h1": -2.48,
+          "h1": -2.4,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -62615,7 +62615,7 @@
             "Tape RSI 68 \u00b7 MACD hist 0.4318",
             "Side lean: long \u00b7 idio +17"
           ],
-          "h1_px": 28.28,
+          "h1_px": 28.305,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -62697,7 +62697,7 @@
           "weather": [
             "sector good"
           ],
-          "h1": 4.2,
+          "h1": 4.03,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -62715,7 +62715,7 @@
             "Tape RSI 67 \u00b7 MACD hist 0.7815",
             "Side lean: long \u00b7 idio +17"
           ],
-          "h1_px": 58.975,
+          "h1_px": 58.88,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -62803,7 +62803,7 @@
           "weather": [
             "sector good"
           ],
-          "h1": -1.79,
+          "h1": -2.38,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -62821,7 +62821,7 @@
             "Tape RSI 62 \u00b7 MACD hist 0.7277",
             "Side lean: long \u00b7 idio +14"
           ],
-          "h1_px": 38.85,
+          "h1_px": 38.62,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -62903,7 +62903,7 @@
           "weather": [
             "sector good"
           ],
-          "h1": 7.08,
+          "h1": 7.12,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -62921,7 +62921,7 @@
             "Tape RSI 62 \u00b7 MACD hist 0.0072",
             "Side lean: long \u00b7 idio +14"
           ],
-          "h1_px": 23.6,
+          "h1_px": 23.61,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -63003,7 +63003,7 @@
             }
           ],
           "weather": [],
-          "h1": -2.55,
+          "h1": -2.77,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -63020,7 +63020,7 @@
             "Tape RSI 44 \u00b7 MACD hist -0.309",
             "Side lean: short \u00b7 idio -14"
           ],
-          "h1_px": 28.15,
+          "h1_px": 28.21,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -63095,7 +63095,7 @@
             }
           ],
           "weather": [],
-          "h1": -3.43,
+          "h1": -3.16,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -63111,7 +63111,7 @@
             "Tape RSI 41 \u00b7 MACD hist -0.0715",
             "Side lean: short \u00b7 idio -13"
           ],
-          "h1_px": 9.65,
+          "h1_px": 9.625,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -63204,7 +63204,7 @@
           "weather": [
             "sector good"
           ],
-          "h1": 4.01,
+          "h1": 3.88,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -63222,7 +63222,7 @@
             "Tape RSI 57 \u00b7 MACD hist 0.1877",
             "Side lean: short \u00b7 idio -9"
           ],
-          "h1_px": 15.34,
+          "h1_px": 15.36,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -63304,7 +63304,7 @@
           "weather": [
             "sector good"
           ],
-          "h1": -11.59,
+          "h1": -12.85,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -63322,7 +63322,7 @@
             "Tape RSI 56 \u00b7 MACD hist 0.2401",
             "Side lean: short \u00b7 idio -8"
           ],
-          "h1_px": 20.158,
+          "h1_px": 20.3871,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -63410,7 +63410,7 @@
           "weather": [
             "sector bad"
           ],
-          "h1": 21.27,
+          "h1": 20.51,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -63428,7 +63428,7 @@
             "Tape RSI 57 \u00b7 MACD hist 0.1953",
             "Side lean: short \u00b7 idio -8"
           ],
-          "h1_px": 3.09,
+          "h1_px": 3.12,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -63616,7 +63616,7 @@
             }
           ],
           "weather": [],
-          "h1": 3.44,
+          "h1": 2.44,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -63633,7 +63633,7 @@
             "Tape RSI 68 \u00b7 MACD hist 0.0657",
             "Side lean: short \u00b7 idio -3"
           ],
-          "h1_px": 4.355,
+          "h1_px": 4.4,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
@@ -63710,7 +63710,7 @@
           "weather": [
             "sector bad"
           ],
-          "h1": -0.9,
+          "h1": -1.25,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -63727,7 +63727,7 @@
             "Tape RSI 43 \u00b7 MACD hist -0.1401",
             "Side lean: short \u00b7 idio -3"
           ],
-          "h1_px": 11.725,
+          "h1_px": 11.765,
           "h1_date": "2026-10-06",
           "h3_px": null,
           "h3_date": null,
