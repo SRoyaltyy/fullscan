@@ -6602,5 +6602,102 @@
     ],
     "sha256": "4c0dad2cc3a4d67f4a9880da7f3dd5d42e4698f844b381f0b39c6ee41742c165",
     "unfilled": []
+  },
+  {
+    "added_buys": [],
+    "added_sells": [],
+    "cash_primary": 13.74984364377542,
+    "date": "2026-10-06",
+    "equity_primary": 11869.509843643777,
+    "holdings": [
+      {
+        "cost_primary": 2973.0363999999995,
+        "entry_date": "2026-10-06",
+        "entry_px": 15.08,
+        "last_px": 15.08,
+        "min_hold": 1,
+        "peak_px": 15.08,
+        "shares": 196,
+        "ticker": "DNA"
+      },
+      {
+        "cost_primary": 2984.6536499999997,
+        "entry_date": "2026-10-06",
+        "entry_px": 2.99,
+        "last_px": 2.99,
+        "min_hold": 1,
+        "peak_px": 2.99,
+        "shares": 989,
+        "ticker": "PACB"
+      },
+      {
+        "cost_primary": 2985.3179999999998,
+        "entry_date": "2026-10-06",
+        "entry_px": 1.29,
+        "last_px": 1.29,
+        "min_hold": 1,
+        "peak_px": 1.29,
+        "shares": 2280,
+        "ticker": "QSI"
+      },
+      {
+        "cost_primary": 3331.6608,
+        "entry_date": "2026-09-30",
+        "entry_px": 2.7,
+        "last_px": 3.48,
+        "min_hold": 1,
+        "peak_px": 9.71,
+        "shares": 1222,
+        "ticker": "SDEV"
+      }
+    ],
+    "kind": "mark",
+    "open_fill_sha256": "4c0dad2cc3a4d67f4a9880da7f3dd5d42e4698f844b381f0b39c6ee41742c165",
+    "plan_sha256": "83ab5fae400dffb26aad23e503fad59b772c18b7f2da84479612a08fcd3b46d7",
+    "pnl_status": "marked",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "bdc3080997bccea105313987412763c5495c84502ddabd15fc3504b9096905ce"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-06",
+    "entry_date": "2026-10-05",
+    "entry_px": 3.88,
+    "fill": 3.96,
+    "kind": "close",
+    "pnl_primary": 13.899400000000696,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "6b23e756f44d90d88318ffa87892306f8fb55cc20bcf88c7133fee04287003b5",
+    "shares": 939,
+    "ticker": "FEAM"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-06",
+    "entry_date": "2026-10-01",
+    "entry_px": 5.06,
+    "fill": 3.48,
+    "kind": "close",
+    "pnl_primary": -1043.623199999999,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "5c7d01e651115b3f0933b77a30089a115c935958558710baeb73e17b380249bd",
+    "shares": 633,
+    "ticker": "GLND"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-06",
+    "entry_date": "2026-10-05",
+    "entry_px": 2.18,
+    "fill": 1.87,
+    "kind": "close",
+    "pnl_primary": -594.1931999999993,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "2e6fba31f78b6fde9977df7cb2af0e9dc942639d62f83c8eb7a0e4bb28305b14",
+    "shares": 1668,
+    "ticker": "NAUT"
   }
 ]
