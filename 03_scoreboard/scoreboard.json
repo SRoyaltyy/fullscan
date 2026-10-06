@@ -31192,6 +31192,85 @@
       "anchor_score": 2.701,
       "overlay_score": 0.0,
       "index_carry": 0.0
+    },
+    {
+      "date": "2026-10-06",
+      "topic": "general",
+      "predicted_direction": null,
+      "predicted_magnitude_band": null,
+      "confidence_score": null,
+      "total_score": null,
+      "multiplier": null,
+      "components": {},
+      "leading_sum": null,
+      "actual_open": 7805.96,
+      "actual_close": 7818.93,
+      "actual_pct_change": 0.58,
+      "actual_direction": "up",
+      "actual_magnitude_band": "mild",
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [
+        {
+          "url": "https://www.pulsafi.com/market-today",
+          "date_accessed": "2026-10-06",
+          "summary": "Confirms the exact close figures and that utilities led while health care lagged, with the 10Y falling 4 bp.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.reuters.com/business/wall-st-futures-rise-yields-oil-dip-2026-10-06/",
+          "date_accessed": "2026-10-06",
+          "summary": "Reuters frames the day as an oil/yields reprieve driving record closes.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUGptbnU1SUxQWEJrRlFLQUhoSU9WMDhMQmhtZ29ZSGtMRHdvaFI4MGdJXzFWbmVuSHc0bFVkamJVTzBfY3VjRmVmNjN3ekpFMEtyS1Bxc2NMTmhiZlJGQUk5Tml5b2Q0NGZPc1REcExtWElITFFlOW01VWNETGMyZXVMM0x0cGJjWVFfaXZqSzlSNlUxdnFvVFNOMUg2ekVPRktkdVptSFRHa3lNcHREaktPU2RTZGs?oc=5",
+          "date_accessed": "2026-10-06",
+          "summary": "Reuters confirms the mid-session nuclear power deal that ignited the AI-energy/power complex.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcXUtRWFfWnhqRC1XRi1XdFVObEVCbjJrakZOd1BNVTRyanl1c0RCdHZxTWxLc0dBZ1VyQUV2UHFCTUJoQWRxN1lwMnRuMW56dmgxT1drMTlrQURwWlI5MnQ5N19HamVsNFhMUE5MUERvcHZlNURXelROOHotUV8zc0RVUEdESDJ4WTU5SjVkTXQzS0VRMXVJTmFvSTU?oc=5",
+          "date_accessed": "2026-10-06",
+          "summary": "Confirms the magnitude of the single-name move that drove the power/nuclear rally.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZm4yN3lGTlZFWFRCMmNTSFJSUWE4MnJqSGc5aGVKMXBWR3lrcXYtSEpTRWpncXNuUHc5QVVKeDVRa0NuTWpuXzBSRUxqXzcyUklYUlU2NUdLNTkwS2FndzlLdXBaQThKZThGT2d3cjRkN0FBVjFQcEJzR2NrbEpDa1RvSlJ3a3d2bUoxcnAwSF9jVnZXY0J4V0s4WjM5Y3hRVWlhY3dSQ0J0WkMxZ3c?oc=5",
+          "date_accessed": "2026-10-06",
+          "summary": "Reuters confirms the offered-oil driver that eased inflation/rate fears.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQT1hXS25odFlKa0dNdnFrbEEwVWhJTVl2OHRCdU90WXpKcTJPMXdqMXVCejhDc3QxTV9fUDdrUTlLTGk5d0x0SEFwZUFUTjMxSmZfUFhLY0MzMW50SV9tZ0ZzVUVlcU5GQUlweVlEYWVoT0g1b2h2NEFBZ0pmUjhPei1UOEZLWllfUGRIUUFRRkVGM0FadEFUV1JCVVQxb3FCMS1qX1dxaW53MU0xdldoUnVSRTF3VFlzZ1JpUWZuOFVTR0ZP?oc=5",
+          "date_accessed": "2026-10-06",
+          "summary": "MarketWatch attributes the record to narrow mega-cap leadership, supporting the breadth-quality divergence.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeWZUcVJEME0zOGg1UHZULXBtandVRUJhdmgtdGliaXJwdmhZT1hCUFhiSFB5dlJFdEVjRmluTDJ6T1ZFVWVBRGxTalFYZ1l2ZVlTa09qQ3c2bmhocDd3RXVxLUtYcHdJZlV0WGt1UmdNOXVJSnp5dEhfaXl2RHRiQWgwb3JiS0g0U1dqSW9meXVGOWxpMFNSdGRLT3VIaEJWNkJseXJ1TExvQUhaZ0hYNGNtdDJ0Zw?oc=5",
+          "date_accessed": "2026-10-06",
+          "summary": "Confirms the defensive-led breadth that diverges from the AI/tech leadership narrative.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNOFN5eXRjNl9mSi1ZREpVbmZzNFhwVnRTMzUwZ3A5WER3eG9MRDRnNWF5enhjU1FsTnNHQnV0dktUVXFkbUdGeTlUclFEcnZoc3pLMFRhc185VUtORkozNUJ6WWlZbngtaTAxVUt6cFhQSkNaMW9pUmNOdFVRZnI5S01MYjFEZEJuYmpKaDFjX3k1Ym1peWxFQllzaDY?oc=5",
+          "date_accessed": "2026-10-06",
+          "summary": "Confirms the minutes are a forward event risk, not a today driver.",
+          "verification": "quote_not_found"
+        }
+      ],
+      "ops_fail": true,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Oil offered (Aramco Asia OSP cut to six-year low, rising Mideast exports, G7 reserve release) pulling Treasury yields ~4 bp lower to 5.27%, easing the inflation/discount-rate fear",
+      "key_interaction": "Oil-offered and yields-eased are one causal chain (falling crude pulls breakevens and nominal yields down) that amplified the bullish stack into a +0.91% morning high, then offsetting forces (narrow breadth, profit-taking into records, minutes event risk) faded roughly half the move into the close",
+      "knowable_at_9am": "partially — direction (up) was foreseeable from offered oil + green futures, but the day's biggest idiosyncratic catalyst (Google–Constellation nuclear deal, ~10:46 ET) and the intraday fade were not",
+      "attribution_contested": "no — outlets differ in emphasis (Reuters: oil/yields; MarketWatch: Mag 7; Benzinga: nuclear deal) but agree on direction and the record close",
+      "outlier_watch": "NDX reversed down to close near its low while SPX/Dow held gains, and the record day was led by defensives (utilities +2.98%) with health care −0.17% lagging — a breadth-quality divergence against the AI-leadership narrative"
     }
   ]
 }
