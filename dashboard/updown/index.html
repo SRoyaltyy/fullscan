@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Every-stock up/down (research) — updown_o2c_v1</title>
+<style>
+body{font:14px/1.4 system-ui,sans-serif;margin:0;background:#f6f7f9;color:#1d232b}
+header{background:#1d232b;color:#fff;padding:10px 16px}header h1{font-size:18px;margin:0}
+.warn{background:#fff3cd;border-bottom:1px solid #e0c36b;padding:8px 16px;font-weight:600}
+main{padding:12px 16px;max-width:1200px;margin:auto}
+.card{background:#fff;border:1px solid #dde1e6;border-radius:6px;padding:10px 12px;margin-bottom:12px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.kpi{min-width:120px}.kpi b{display:block;font-size:18px}
+.hold{background:#fde2e2;color:#8a1c1c;padding:2px 8px;border-radius:10px;font-weight:600}
+.dev{background:#e2ecfd;color:#1c3f8a;padding:2px 8px;border-radius:10px;font-weight:600}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{padding:3px 6px;border-bottom:1px solid #eef0f3;text-align:right}
+th{cursor:pointer;background:#f0f2f5;position:sticky;top:0}td:first-child,th:first-child{text-align:left}
+.up{color:#0a7d32}.dn{color:#b3261e}.tk{color:#1c3f8a;cursor:pointer;text-decoration:underline}
+#tablewrap{max-height:560px;overflow:auto}canvas{width:100%;height:160px}small{color:#5b6573}
+button,input,select{font:inherit}#status{color:#8a1c1c}
+</style></head><body>
+<header><h1>Every-stock morning up/down read — <span id="model">updown_o2c_v1</span></h1><small id="built" style="color:#cfd6df"></small></header>
+<div class="warn">RESEARCH PAGE — NOT A TRADING SIGNAL. Out-of-sample statistical estimates; edges are small; per-stock numbers ignore fees and slippage.</div>
+<main>
+<div id="status"></div>
+<div class="card"><div id="notes"></div><div class="row" id="sumrow"></div></div>
+<div class="card"><div class="row"><b>Daily AUC (blue = dev walk-forward, red = final holdout; line = 60-day mean)</b><small>click to jump to a day</small></div><canvas id="chart" height="160"></canvas></div>
+<div class="card">
+ <div class="row"><button id="prev">&larr;</button><input type="date" id="dp"><button id="next">&rarr;</button><span id="badge"></span>
+  <input id="q" placeholder="search ticker" size="10">
+  <select id="filt"><option value="all">all</option><option value="UP">calls UP</option><option value="DOWN">calls DOWN</option><option value="top">top decile</option><option value="bot">bottom decile</option></select></div>
+ <div class="row" id="daysum" style="margin-top:8px"></div>
+ <div id="tablewrap"><table id="tbl"><thead><tr><th data-k="t">Ticker</th><th data-k="p">p_up</th><th data-k="c">Call</th><th data-k="dec">Decile (10 = most up)</th><th data-k="r">Realized o2c</th><th data-k="u">Realized dir</th><th data-k="h">Hit</th></tr></thead><tbody></tbody></table></div>
+ <small>Horizon: today's official open &rarr; today's close (Yahoo split-adjusted). Call = UP if p_up &gt; 0.5. Hit = call matches realized direction (0.00% counts as not-up).</small>
+</div>
+<div class="card" id="hist" style="display:none"><div class="row"><b id="htitle"></b><span id="hsum"></span><button id="hall">load full history</button><button id="hclose">close</button></div>
+<canvas id="hchart" height="160"></canvas>
+<div style="max-height:360px;overflow:auto"><table id="htbl"><thead><tr><th>Date</th><th>Period</th><th>p_up</th><th>Call</th><th>Realized o2c</th><th>Hit</th></tr></thead><tbody></tbody></table></div></div>
+</main>
+<script>
+const qs=new URLSearchParams(location.search);
+const BASE=qs.get('data')||'https://raw.githubusercontent.com/SRoyaltyy/fullscan/updown-data/updown/';
+let IDX,DAYS,cur=0,rows=[],sortK='p',sortD=-1,HT=null;const MC={};
+const $=s=>document.querySelector(s),pct=(x,d=2)=>x==null?'':(x*100).toFixed(d)+'%';
+fetch(BASE+'index.json').then(r=>{if(!r.ok)throw r.status;return r.json()}).then(j=>{IDX=j;DAYS=j.days.map(a=>({d:a[0],per:a[1]=='h'?'holdout':'dev',n:a[2],up:a[3],hit:a[4],auc:a[5],spr:a[6],mp:a[7]}));init();}).catch(e=>$('#status').textContent='Could not load data ('+e+') from '+BASE);
+function month(mo){if(MC[mo])return MC[mo];return MC[mo]=fetch(BASE+'m/'+mo+'.bin').then(r=>r.arrayBuffer()).then(b=>{const v=new DataView(b),nT=v.getUint16(4,true),nD=v.getUint16(6,true);let o=8;
+ const T=new Uint16Array(b,o,nT);o+=2*nT;const D=new Uint16Array(b,o,nD);o+=2*nD;const P=new Uint16Array(b,o,nT*nD);o+=2*nT*nD;const R=new Int16Array(b,o,nT*nD);return {T,D,P,R,nT,nD};});}
+function init(){$('#built').textContent='built '+IDX.built+' · horizon: '+IDX.horizon+' · final holdout from '+IDX.holdout_start;
+ $('#notes').innerHTML='<ul>'+IDX.notes.map(n=>'<li>'+n+'</li>').join('')+'</ul>';let h='';
+ for(const k of ['dev','holdout']){const s=IDX.summary[k];h+=`<div class="kpi"><span class="${k=='dev'?'dev':'hold'}">${k=='dev'?'dev (walk-forward)':'FINAL HOLDOUT'}</span> ${s.days} days</div><div class="kpi">mean AUC<b>${s.auc.toFixed(4)}</b></div><div class="kpi">hit<b>${pct(s.hit,1)}</b><small>always-up ${pct(s.always_up,1)} · always-down ${pct(s.always_down,1)}</small></div><div class="kpi">top-bottom decile<b>${s.spread_pct.toFixed(3)}%/day</b><small>after 0.4% fees ${s.ls_net_pct.toFixed(3)}%</small></div><div style="flex-basis:100%"></div>`;}
+ $('#sumrow').innerHTML=h;$('#dp').min=DAYS[0].d;$('#dp').max=DAYS[DAYS.length-1].d;drawChart();
+ const m=location.hash.match(/d=(\d{4}-\d\d-\d\d)/);go(m?nearest(m[1]):DAYS.length-1);
+ $('#prev').onclick=()=>go(Math.max(0,cur-1));$('#next').onclick=()=>go(Math.min(DAYS.length-1,cur+1));$('#dp').onchange=e=>go(nearest(e.target.value));
+ $('#q').oninput=render;$('#filt').onchange=render;
+ document.querySelectorAll('#tbl th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;sortD=(sortK==k)?-sortD:-1;sortK=k;render();});
+ $('#hclose').onclick=()=>$('#hist').style.display='none';$('#hall').onclick=()=>HT&&hist(HT,true);
+ $('#chart').onclick=e=>{const r=e.target.getBoundingClientRect();go(Math.round((e.clientX-r.left)/r.width*(DAYS.length-1)));};}
+function nearest(d){let i=DAYS.findIndex(x=>x.d>=d);return i<0?DAYS.length-1:i;}
+function drawChart(){const c=$('#chart'),W=c.width=c.clientWidth*2,H=c.height=320,g=c.getContext('2d'),lo=.40,hi=.70,y=v=>H-(v-lo)/(hi-lo)*H;
+ const hx=DAYS.findIndex(d=>d.per=='holdout')/(DAYS.length-1)*W;g.fillStyle='rgba(192,57,43,.08)';g.fillRect(hx,0,W-hx,H);
+ g.strokeStyle='#999';g.beginPath();g.moveTo(0,y(.5));g.lineTo(W,y(.5));g.stroke();g.fillStyle='#555';g.font='20px sans-serif';g.fillText('AUC 0.50',4,y(.5)-4);
+ DAYS.forEach((d,i)=>{if(d.auc==null)return;g.fillStyle=d.per=='holdout'?'#c0392b':'#2e6bd8';g.fillRect(i/(DAYS.length-1)*W,y(Math.min(hi,Math.max(lo,d.auc))),2,2);});
+ g.strokeStyle='#111';g.lineWidth=2;g.beginPath();let s=[],f=true;DAYS.forEach((d,i)=>{if(d.auc!=null)s.push(d.auc);if(s.length>60)s.shift();if(s.length>=20){const m=s.reduce((a,b)=>a+b)/s.length,X=i/(DAYS.length-1)*W;f?g.moveTo(X,y(m)):g.lineTo(X,y(m));f=false;}});g.stroke();}
+function go(i){cur=i;const D=DAYS[i];$('#dp').value=D.d;history.replaceState(null,'','#d='+D.d);
+ $('#badge').innerHTML=D.per=='holdout'?'<span class="hold">FINAL HOLDOUT day</span>':'<span class="dev">dev (walk-forward out-of-sample)</span>';
+ $('#daysum').innerHTML=`<div class="kpi">tickers<b>${D.n}</b></div><div class="kpi">realized up-rate<b>${pct(D.up,1)}</b></div><div class="kpi">model hit<b>${pct(D.hit,1)}</b></div><div class="kpi">AUC<b>${D.auc==null?'':D.auc.toFixed(3)}</b></div><div class="kpi">top-bottom decile<b>${D.spr==null?'':D.spr.toFixed(2)+'%'}</b></div><div class="kpi">mean p_up<b>${pct(D.mp,1)}</b></div>`;
+ month(D.d.slice(0,7)).then(M=>{const k=Array.prototype.indexOf.call(M.D,i);const R=[];if(k<0){rows=[];render();return;}
+  for(let j=0;j<M.nT;j++){const p=M.P[k*M.nT+j];if(p==65535)continue;const rr=M.R[k*M.nT+j];R.push({t:IDX.tickers[M.T[j]],p:p/10000,r:rr==-32768?null:rr/10000});}
+  const ord=R.map((x,ix)=>ix).sort((a,b)=>R[a].p-R[b].p);ord.forEach((ix,rank)=>R[ix].dec=Math.floor(rank*10/R.length)+1);
+  R.forEach(x=>{x.c=x.p>0.5?'UP':'DOWN';x.u=x.r==null?null:(x.r>0?'UP':'DOWN');x.h=x.u==null?null:(x.c==x.u?1:0);});rows=R;render();});}
+function render(){const q=$('#q').value.trim().toUpperCase(),f=$('#filt').value;
+ let R=rows.filter(x=>(!q||x.t.startsWith(q))&&(f=='all'||(f=='top'&&x.dec==10)||(f=='bot'&&x.dec==1)||x.c==f));
+ R.sort((a,b)=>{let A=a[sortK],B=b[sortK];if(A==null)return 1;if(B==null)return -1;return (A<B?-1:A>B?1:0)*sortD;});
+ const tb=$('#tbl tbody');tb.innerHTML=R.slice(0,1500).map(x=>`<tr><td><span class="tk" data-t="${x.t}">${x.t}</span></td><td>${x.p.toFixed(3)}</td><td class="${x.c=='UP'?'up':'dn'}">${x.c}</td><td>${x.dec}</td><td class="${x.r>0?'up':(x.r<0?'dn':'')}">${x.r==null?'':pct(x.r)}</td><td>${x.u||''}</td><td>${x.h==null?'':(x.h?'✔':'✘')}</td></tr>`).join('')+(R.length>1500?`<tr><td colspan=7>showing 1500 of ${R.length}; refine the search</td></tr>`:'');
+ tb.querySelectorAll('.tk').forEach(e=>e.onclick=()=>hist(e.dataset.t,false));}
+function hist(t,all){HT=t;const ti=IDX.tickers.indexOf(t),mos=all?IDX.months:IDX.months.slice(-12);
+ $('#hist').style.display='block';$('#htitle').textContent=t+' — history ('+(all?'all months':'last 12 months')+', loading…)';
+ Promise.all(mos.map(month)).then(Ms=>{const H=[];Ms.forEach(M=>{const j=Array.prototype.indexOf.call(M.T,ti);if(j<0)return;
+  for(let k=0;k<M.nD;k++){const p=M.P[k*M.nT+j];if(p==65535)continue;const rr=M.R[k*M.nT+j];H.push({D:DAYS[M.D[k]],p:p/10000,r:rr==-32768?null:rr/10000});}});
+  let n=0,h=0;H.forEach(x=>{x.c=x.p>0.5?'UP':'DOWN';x.hit=x.r==null?null:((x.c==(x.r>0?'UP':'DOWN'))?1:0);if(x.hit!=null){n++;h+=x.hit;}});
+  $('#htitle').textContent=t+' — history ('+(all?'all months':'last 12 months')+')';$('#hsum').textContent=` ${n} scored days · hit ${n?(h/n*100).toFixed(1):'-'}%`;
+  $('#htbl tbody').innerHTML=H.slice().reverse().map(x=>`<tr><td>${x.D.d}</td><td>${x.D.per}</td><td>${x.p.toFixed(3)}</td><td class="${x.c=='UP'?'up':'dn'}">${x.c}</td><td class="${x.r>0?'up':(x.r<0?'dn':'')}">${x.r==null?'':pct(x.r)}</td><td>${x.hit==null?'':(x.hit?'✔':'✘')}</td></tr>`).join('');
+  const c=$('#hchart'),W=c.width=c.clientWidth*2,Hh=c.height=320,g=c.getContext('2d'),y=v=>Hh-(v-.3)/.4*Hh;g.clearRect(0,0,W,Hh);
+  g.strokeStyle='#aaa';g.beginPath();g.moveTo(0,y(.5));g.lineTo(W,y(.5));g.stroke();const n0=H.length;
+  H.forEach((x,i)=>{g.fillStyle=x.r==null?'#888':(x.r>0?'#0a7d32':'#b3261e');g.fillRect(i/Math.max(1,n0-1)*W,y(Math.min(.7,Math.max(.3,x.p))),3,3);});
+  $('#hist').scrollIntoView({behavior:'smooth'});});}
+</script></body></html>
