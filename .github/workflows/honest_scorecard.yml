@@ -1,0 +1,31 @@
+name: honest scorecard
+
+# Reporting check only. Does not call OpenClaw or Grok.
+
+on:
+  pull_request:
+    paths:
+      - "src/honest_scorecard.py"
+      - "src/test_honest_scorecard.py"
+      - ".github/workflows/honest_scorecard.yml"
+  push:
+    branches: [main]
+    paths:
+      - "src/honest_scorecard.py"
+      - "src/test_honest_scorecard.py"
+      - ".github/workflows/honest_scorecard.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  scorecard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Honest scorecard rules
+        run: python3 -m src.test_honest_scorecard

@@ -710,6 +710,9 @@ def write_md(rows: list[dict]) -> str:
         "",
         "Dashboard: `dashboard/strategy-board/index.html`.",
         "",
+        "Honest scorecard (live-locked days kept apart from days built after "
+        "the fact): [HONEST_SCORECARD.md](HONEST_SCORECARD.md).",
+        "",
         "Research overlay (not a wire): open-bell MARKET / LIMIT fills vs "
         "ideal 09:30 open live on "
         "[OPEN_BELL_SLIP.md](OPEN_BELL_SLIP.md). "
