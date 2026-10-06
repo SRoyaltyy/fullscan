@@ -2155,6 +2155,26 @@
       "size": "large"
     },
     {
+      "ticker": "BKR",
+      "buy_score": 2.16,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 2.16,
+          "bucket": "override_captain",
+          "net_signal": "Strong Bullish",
+          "conviction": 72
+        }
+      ],
+      "net": 2.16,
+      "side": "buy",
+      "catalyst_signal": "Strong Bullish",
+      "catalyst_conviction": 72,
+      "catalyst_stack": "On 2026-04-23 and 2026-07-26, Baker Hughes delivered Q1 and Q2 beats with adjusted EBITDA of $1.16B and $1.23B, record IET orders of $7.1B, and $1.1B free cash flow. On 2026-07-10 and 2026-07-16, the company cleared conditional EU antitrust approval and completed the $13.6B Chart"
+    },
+    {
       "ticker": "CRM",
       "buy_score": 1.57,
       "sell_score": 2.83,
@@ -2461,6 +2481,26 @@
       "net": 0.94,
       "side": "buy",
       "size": "large"
+    },
+    {
+      "ticker": "GOOG",
+      "buy_score": 0.45,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 0.45,
+          "bucket": "earnings",
+          "net_signal": "Bullish",
+          "conviction": 22
+        }
+      ],
+      "net": 0.45,
+      "side": "buy",
+      "catalyst_signal": "Bullish",
+      "catalyst_conviction": 22,
+      "catalyst_stack": "On 2026-07-22 Alphabet delivered a massive Q2 2026 beat (EPS $9.11 vs ~$2.88 consensus, revenue $119.80B) with Google Cloud up 82% YoY to $24.77B and a $514B backlog, but raised 2026 capex to $195-205B, pressuring shares. On 2026-09-02 a judge allowed Google to keep its advertisi"
     },
     {
       "ticker": "NEM",
@@ -2993,5 +3033,7 @@
   ],
   "judge_tickers": {
     "AMZN": 5.5
-  }
+  },
+  "catalyst_tickers": 2,
+  "catalyst_date": "2026-10-06"
 }

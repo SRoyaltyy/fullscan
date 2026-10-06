@@ -1,0 +1,203 @@
+{
+  "ticker": "GOOGL",
+  "analysis_date": "2026-10-06",
+  "current_price": "N/A",
+  "net_signal": "Neutral",
+  "conviction": 11,
+  "catalyst_stack": "On 2026-07-22, Alphabet posted better-than-expected Q2 CY2026 sales with Google Cloud growth accelerating, though shares slipped on a capex surge and earnings-quality questions surfaced by 2026-07-24. On 2026-09-09, Google announced a two-year \u20ac13 billion AI infrastructure investment in Finland, reinforcing its capacity expansion and cloud/AI demand narrative. On 2026-08-19, Google struck an AI chip deal with Marvell allowing up to $12.2 billion in share purchases, and on 2026-07-30 Oracle agreed to make Gemini models available to thousands of enterprise customers. Offsetting these positives, on 2026-07-02 Google lost its appeal against a record \u20ac4.1 billion EU antitrust fine and on 2026-07-01 was hit with a $2 billion antitrust judgment for skewing shopping searches, keeping regulatory risk elevated.",
+  "key_assumption": "The AI/cloud growth catalysts (Finland capex, Marvell chip deal, Oracle Gemini distribution, Q2 Cloud acceleration) outweigh the EU antitrust fine and shopping-search judgment, and no further binary antitrust remedy (e.g., Chrome divestiture or DMA structural penalty) materializes in the near term.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "Alphabet (NASDAQ:GOOGL) Posts Better-Than-Expected Sales In Q2 CY2026",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxOeThtYjFUUWpkUlp2ZE9CS3NtUV9TV1hFUzJoRllOMlFVZDZJeXNNUUluT1lXRm1YazRPaGRNbWRja2tZRlZ4b180UmxzZ3lPLXBSS2U0d0NQdERJZmprM3NaamVhay1YeFdIcGZLUXdNS3hBU3dJZ2Q4NjRjY1RxZGJQeEhqS01xTHljQmx6VVR3WGdpMXlCSVpRU01QTlZUVk9XMGNzZzVvVmFRZFEyNHNMRXFDR1g3ZVo2SFg3Zml1djVa?oc=5"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Capacity expansion announced (new factory, satellite constellation)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 7,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "Google Deepens Commitment to Finland with Two-Year \u20ac13 Billion investment in AI Infrastructure",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi3wFBVV95cUxORUh0cVRJb2JtWWxYWUV3NF9CSFZweVdNNzFVeWRuV0MyX0xkaE51RkF6VXFjWXg4WWRWYmtWenpkQTZTVmdkbUZkWk5fUWpBOEdYVEZyS2Z0SnI3Rnl2SHRmUTBDLTBmeHhxTzUwb2R5OXg4aTRUd21QdWd2NFpuNTZDaHNoVTdRbjNZaHBPajlmNWhtUDZxTXJkQmF6WGFRWGN1VHFXckRFSlhaYmZKamdSMmtUT1J0VmU2ZzY1cnRpb1ZYWHFOQVhseFMzRjFBUWJLSXc0QVZnZ2QzN21j?oc=5"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-08-19",
+      "evidence_excerpt": "Marvell's stock pops 10% on AI chip deal that lets Google buy up to $12.2 billion in shares",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMibEFVX3lxTE01ZjN6RG5qZ2hsZU5Db1FlOVdDNWJsX2dpVHVlMnAwdEpIa1BaV21fZ290eTNhVUdqOEVqSkdlRGZCclRtellnd05GQm9JWlpKRC11X1p6Y21CLUdyUWUwaThFUDFwQ01TWmNDUdIBckFVX3lxTE1mNEJ4WHBveW1zdm5DeGU2X3RTcndUbDdfNW5ZcjVlX1g0dGZERE5YdVJjbG9ZVHZnaDhzSklJcnRkb08wd1Bsd1pLeHZCd0xfbkx2dHJkaXJNVHZyaUZhMWw2V1hZVThYclhzdHJVVVh6Zw?oc=5"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 6,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-07-30",
+      "evidence_excerpt": "Oracle to Make Gemini Models Available to Thousands of Enterprise Applications Customers",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxOemdqRGdjbU5YYTJJZ1YzNmdCVjh3TnZMc2FqS2xnM2h6UzNBcWFMRTY2Y01EVE01RHlwdlR6dUdyaWRzUklmQi05MWw1d0FWUzRCdjEzUFdkOXFZdENoUWw1NHE1eFJ4eDA0OFp0MlRZUXgtT3JvY3loc1NoNFdiaFJ2MmMzQXlqTFl5TjhMY09FcGdERmc?oc=5"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 6,
+      "event_ids": [
+        6
+      ],
+      "event_date": "2026-08-11",
+      "evidence_excerpt": "Ryanair signs five-year Google Cloud deal, expands use of AI in airline operations",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxQQnc2ZXQxTHpZQU1SNDdJczNXWUdBamNIaGxDXzY2dXlGUEFBMDQyM29WaERCSWdiRVB6Mm1tX0psSzhDUkh3Z25xamdDd0JfQ0JWMi1MZ3ZMcEZjMmpNSmo5TWVTVEdsa1RlSk82Z3BXVWJFSWxDdUhrMm4xczhWVEZzNlY4Rm91eFFtQjNsU3k0ckxKRmY2c1FGOV9XS0M3NFJ1THNRMF9hOThzZENsMDVLV3lDb1BfMk9pMg?oc=5"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Customer concentration expansion (existing customer deepens relationship)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        4
+      ],
+      "event_date": "2026-04-06",
+      "evidence_excerpt": "Anthropic expands Google and Broadcom compute deal",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMidEFVX3lxTFB0dUE0NnFtSW9iTTQyZTFsa1FvWkZXaXoxdE5YY3RleHNUSXdwRlgzODd5S0lXOVBVTFRPSGdXX1I2cW16YUxwQV81NjRjNFB4ZDh5QVdIZy1BcVNKNzl2YWlUZkRjWHNzay1nVEhjaW5QQndL?oc=5"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        10
+      ],
+      "event_date": "2026-07-02",
+      "evidence_excerpt": "Google loses fight against record \u20ac4.1 billion EU antitrust fine",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxNeFFsalo3LWdiNVRiVnR2aGx3VEhYRm9JZW9XMFpWMTNzWENjczNPdG5JOUNrVWJYN3lVeFV6Q1RITnI5OUN3Y3Q4Uno4UlNoNGRybmppNGxVa3hOTXZyNGc4eV9JcUUzaE45cGhGWkRjNlhYSVpvcjR2TWtjZUN4TG9ZWjFOWllFcHBrNnBYM09pS19GYzVxdTFOVGJEUFNrdDJUTHNrWGcwVElWY3dNbGVuSmZSeVB3dGZBbUlR?oc=5"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-07-01",
+      "evidence_excerpt": "Google hit with $2-billion antitrust judgment for skewing shopping searches",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOR0FEVlI2Z1hnaXhpR2lZdUJyVktvN1hRMjdWb3JCUEgzbDRXMkxRQnlhREk3ZFlQRDlscVNFU3lqazJvU3A4THNFZzh4S1dfMU5EZFMyckhSZTVKQS1RU1pac2QwUFQ3Mm8wNVk1aDNpclNSenFIanNYSmZ5cXpBOHA3Z3NqUWlRdVlhSWQ1YkVLam91Q1dHTlgwM1ZUbWpCQVIyOUZtb0hFZURZYUJPTHduV1Nrd2hweG5KQU5TSF9IQQ?oc=5"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Policy reversal/new regulation/tax increase",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-10-06",
+      "evidence_excerpt": "Alphabet's Google appeals EU requests to open Android AI features to rivals and share search data",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/j-p-morgan-drops-sharp-080910133.html"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Capacity underutilization/overexpansion write-down",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "Alphabet beats Q2 2026 estimates, shares fall on capex surge",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPbThFdFFfZlh5eWJvYWUzdlpjbFZvT2ltbjUzR2dxajBtZS1iTGJFbjJfMGxDSzNtNXNhS3BVZm1NNy0tdERJMm16OFVZNGFmZWlkY19fZ3V1cHFQSzRjaEVuV2UxU0Q3N3lHRTNBS2oxQlRBb3ZPX0RvNmk0VXFlSi1QLVBSTzBGTDZyWU9BNUR5OW9nWlFMQlkwQWR1VjltWlNvMkp5a240ejlRZTE1WGFBWXBiaVJidl80d2xXWGJpLXFjd3ZNUTE4X0VfQkhGVFE4NFA1OA?oc=5"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 8,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "Alphabet (GOOGL) Stock Faces Earnings Quality Questions After 55% Net Margin Headline Beat",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOT1VtMlFjQ0RMUllhbE9iSDVybVJaN2hPMkgzcXFGaldrZmUwWlg2cUtKcXpyVWZJaGplU3JZa1owVDhaTC1TS2FHaGxlcFAzVnY5ekRkajZGTWR3clJXNHFJU1l1aHdWR21HNl9EYVFHd3Y1dzk4X25RbFlUaFlPdjlYMWNsM3ozNUU3WjJFTVJ4TGR3bU8xd2RtVDJCaDJfS09GaUZ1bUhWVTE2QzVNSGZ1cnN3RzNzWFA2MHdROXFsd9IBxwFBVV95cUxObUpuS05vai1fZ1NJZ1lYUV9mWDBvakNLOGR2QUtlU0ZPOGNiNlVWdVcteGhfaGU0RmlhenhuMGpiaHVBVzNFQWloQ2o0aF8xTXlxR3lKSmFWTzVJcXNVdi1VZUF4bFNSb0NibklLcVlEOEpidnhjaDYtdXlhdEZFdXFtSGt5eFRrZ1ItWC0wcXV1bGtiUmlrLW13LS1zYlpTdTZELTFGQ0NvRlNqWjUxOFpRNXhLMklHemRiSlFrdmxWbF82ZEtZ?oc=5"
+      ],
+      "confidence": 75
+    }
+  ],
+  "grok_verdict": null,
+  "search_backend": "deepseek_fallback",
+  "generated_at": "2026-10-06",
+  "cutoff_date": null,
+  "role": "earnings"
+}

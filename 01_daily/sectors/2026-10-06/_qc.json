@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-06",
+  "n_ok": 0,
+  "n_total": 11,
+  "summary": "",
+  "sectors": [
+    {
+      "sector": "Basic Materials",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL"
+    },
+    {
+      "sector": "Communication Services",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL"
+    },
+    {
+      "sector": "Consumer Cyclical",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL"
+    },
+    {
+      "sector": "Consumer Defensive",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL"
+    },
+    {
+      "sector": "Energy",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL"
+    },
+    {
+      "sector": "Financial",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL"
+    },
+    {
+      "sector": "Healthcare",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL"
+    },
+    {
+      "sector": "Industrials",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL"
+    },
+    {
+      "sector": "Real Estate",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL"
+    },
+    {
+      "sector": "Technology",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL"
+    },
+    {
+      "sector": "Utilities",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL"
+    }
+  ]
+}

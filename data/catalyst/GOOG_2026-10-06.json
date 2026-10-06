@@ -1,0 +1,325 @@
+{
+  "ticker": "GOOG",
+  "analysis_date": "2026-10-06",
+  "current_price": "N/A (financial snapshot empty)",
+  "net_signal": "Bullish",
+  "conviction": 22,
+  "catalyst_stack": "On 2026-07-22 Alphabet delivered a massive Q2 2026 beat (EPS $9.11 vs ~$2.88 consensus, revenue $119.80B) with Google Cloud up 82% YoY to $24.77B and a $514B backlog, but raised 2026 capex to $195-205B, pressuring shares. On 2026-09-02 a judge allowed Google to keep its advertising business despite the ad tech monopoly ruling, a major favorable legal catalyst, while the 2026-07-02 EU court upheld a \u20ac4.1B antitrust fine and 2026-07-23 added a $1B EU fine. Strategic AI momentum continued with the 2026-08-24 Verizon Gemini Enterprise partnership, the 2026-09-08 Accenture Gemini Enterprise business group, and the 2026-05-18 Blackstone $5B TPU cloud JV. Offsetting risks include the 2026-04-25 search monopoly remedies barring exclusive distribution deals, the 2026-10-01 \u20ac640M ad tech damages claim, and the 2026-08-31 social media addiction negligence finding.",
+  "key_assumption": "The favorable 2026-09-02 ad tech ruling (Google keeps its ad business) and the Q2 2026 earnings/cloud acceleration outweigh the cumulative antitrust fines and capex-driven margin pressure, so the net catalyst balance remains positive.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        9,
+        10
+      ],
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "Alphabet posted Q2 2026 EPS of $9.11 vs ~$2.88 consensus and revenue of $119.80B, beating estimates.",
+      "source_urls": [
+        "https://www.marketbeat.com/stocks/NASDAQ/GOOG/earnings/",
+        "https://www.cnbc.com/2026/04/29/alphabet-googl-q1-2026-earnings.html"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 6,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "Alphabet raised its full-year 2026 capital expenditure forecast to between $195 billion and $205 billion as AI infrastructure demand exceeds capacity.",
+      "source_urls": [
+        "https://convergedigest.com/google-raises-2026-capex-to-205b-as-ai-infrastructure-demand-outpaces-capacity/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        13
+      ],
+      "event_date": "2026-04-27",
+      "evidence_excerpt": "On April 27th, 2026, Alphabet announced that it had raised its quarterly dividend by 4.8% to $0.22 per share.",
+      "source_urls": [
+        "https://smarterdividends.com/news/alphabet-inc-raises-dividend-2026"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        1,
+        3,
+        4,
+        5,
+        25
+      ],
+      "event_date": "2026-08-24",
+      "evidence_excerpt": "Google Cloud announced a strategic partnership with Verizon to scale enterprise AI using Gemini Enterprise; Accenture, Blackstone, Workday and Unilever deals also expanded.",
+      "source_urls": [
+        "https://www.googlecloudpresscorner.com/2026-08-24-Google-Cloud-Announces-Strategic-Partnership-with-Verizon-to-Scale-Enterprise-AI",
+        "https://www.blackstone.com/news/press/blackstone-announces-joint-venture-with-google-to-create-new-tpu-cloud/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 8,
+      "event_ids": [
+        7,
+        6
+      ],
+      "event_date": "2026-05-19",
+      "evidence_excerpt": "At Google I/O 2026, Google released two new models, Gemini Omni and Gemini 3.5; Gemini 4 Argon followed on 2026-09-30.",
+      "source_urls": [
+        "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/",
+        "https://felloai.com/all-we-know-about-google-gemini-4/"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 6,
+      "event_ids": [
+        2,
+        24
+      ],
+      "event_date": "2026-04-28",
+      "evidence_excerpt": "Google signed a new classified AI contract with the U.S. DoD and extended its Gemini OneGov deal with the U.S. government into November.",
+      "source_urls": [
+        "https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/",
+        "https://www.nextgov.com/acquisition/2026/09/google-extends-gemini-onegov-deal-november/416320/"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Capacity expansion announced",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        22
+      ],
+      "event_date": "2026-06-15",
+      "evidence_excerpt": "Google announced a $1.5 billion investment across 2026 and 2027 to expand its data center campus in Jackson County, Alabama.",
+      "source_urls": [
+        "https://finance.yahoo.com/technology/articles/alphabet-googl-announces-1-5-183154192.html?fr=sycsrp_catchall"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-09-28",
+      "evidence_excerpt": "Piper Sandler raised their target price on Alphabet from $395.00 to $400.00 and gave the company an \"overweight\" rating.",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-alphabet-nasdaq-goog-given-new-40000-price-target-at-piper-sandler-2026-09-28/"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Operational milestone",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        23
+      ],
+      "event_date": "2026-06-29",
+      "evidence_excerpt": "Waymo forms German unit ahead of possible European expansion.",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxNZmVZcWVCbGZfVW1KM1YxUlBLNTZRa3dBdzIwSk5aelljQ2gzU0licnMzcUpTZGw2OVZyV1Q0RDFDWEplRUZ6dGpnRUZtZnZaMlJ6ZHdmNHZRbDN0aFY4cFg2aFRubUZlaWRyb3ZTV2EyUmZJVUxkNHg4dG53WnUyQ2o4M1NIZVRGMm5zaGVmUU95WHlY?oc=5"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        17
+      ],
+      "event_date": "2026-09-02",
+      "evidence_excerpt": "Google keeps ad business despite monopoly ruling by judge.",
+      "source_urls": [
+        "https://www.usatoday.com/story/tech/news/2026/09/02/google-ad-tech-antitrust-breakup/91580194007/"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Capital infusion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 2,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-08-06",
+      "evidence_excerpt": "Alphabet Inc. sold $25 billion of investment-grade bonds after generous yield payouts helped secure one of the year's largest order books for AI-related debt.",
+      "source_urls": [
+        "https://www.reuters.com/business/alphabet-seeks-up-25-billion-its-latest-bond-sale-bloomberg-news-reports-2026-08-06/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Adverse litigation/antitrust",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "event_ids": [
+        15,
+        16,
+        18,
+        19,
+        20,
+        21
+      ],
+      "event_date": "2026-07-02",
+      "evidence_excerpt": "EU top court rejected Google's appeal against a record \u20ac4.1B antitrust fine; $1B EU fine, \u20ac640M ad tech damages claim, search remedies and negligence ruling also hit.",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxNeFFsalo3LWdiNVRiVnR2aGx3VEhYRm9JZW9XMFpWMTNzWENjczNPdG5JOUNrVWJYN3lVeFV6Q1RITnI5OUN3Y3Q4Sno4UlNoNGRybmppNGxVa3hOTXZyNGc4eV9JcUUzaE45cGhGWkRjNlhYSVpvcjR2TWtjZUN4TG9ZWjFOWllFcHBrNnBYM09pS19GYzVxdTFOVGJEUFNrdDJUTHNrWGcwVElWY3dNbGVuSmZSeVB3dGZBbUlR?oc=5",
+        "https://www.usatoday.com/story/tech/news/2026/09/02/google-ad-tech-antitrust-breakup/91580194007/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Policy reversal/new regulation/tax increase",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 8,
+      "event_ids": [
+        0,
+        18
+      ],
+      "event_date": "2026-10-06",
+      "evidence_excerpt": "Alphabet's Google appeals EU requests to open Android AI features to rivals and share search data; search monopoly remedies bar exclusive distribution contracts.",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/j-p-morgan-drops-sharp-080910133.html",
+        "https://tech-insider.org/google-antitrust-appeal-doj-search-monopoly-2026/"
+      ],
+      "confidence": 78
+    },
+    {
+      "taxonomy": "Capacity underutilization/overexpansion",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "Alphabet raised its full-year 2026 capital expenditure forecast to between $195 billion and $205 billion, pressuring margins if AI demand does not keep pace.",
+      "source_urls": [
+        "https://convergedigest.com/google-raises-2026-capex-to-205b-as-ai-infrastructure-demand-outpaces-capacity/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Policy reversal/new regulation/tax increase",
+      "type": "negative",
+      "event_date": "2026-07-23",
+      "evidence_excerpt": "Commission fines Google \u20ac890 million for breaches of the Digital Markets Act",
+      "source_urls": [
+        "https://digital-markets-act.ec.europa.eu/commission-fines-google-eur890-million-breaches-digital-markets-act-2026-07-23_en"
+      ],
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 8,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Adverse litigation/antitrust",
+      "type": "negative",
+      "event_date": "2026-10-05",
+      "evidence_excerpt": "Alphabet Inc. Sued for Securities Fraud After Misstatements about AI Model Development Lead to 4% Stock Drop",
+      "source_urls": [
+        "https://www.morningstar.com/news/business-wire/20261005782193/goog-googl-class-action-notice-alphabet-inc-sued-for-securities-fraud-after-misstatements-about-ai-model-development-lead-to-4-stock-drop-investors-urged-to-contact-bfa-law"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "negative",
+      "event_date": "2026-07-16",
+      "evidence_excerpt": "Google Gemini Launch Delayed as Tech Falls Short of Internal Goals",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSlZfZWZLYTc0S3BpZ0hmcWNfSnNXQnJObDJWMFRLM2Nyb2hEX3FSVFZoTU1CTEp2WGVjREVoSGN1NmM3Wlo2RkZ5V3o0TUNocS1lcDktTlBLQ3ZHUS1DclV4eGgzUzgta29RY3NNY2hRdWdkVWVhdWVvOGJoWlM3eDhoc1ViQTgxQkRHc1FwTWg3OHlpQ0pYWG8yWFZ1NEltdUdieFdhcFJKNXNHVk1VZGRKY3dHcFN0?oc=5"
+      ],
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 8,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "negative",
+      "event_date": "2026-07-23",
+      "evidence_excerpt": "Alphabet shares fell nearly 8% on Thursday morning after a string of brokerages lowered their price targets",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/googl-stock-sinks-8-day-180056188.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "deepseek_fallback",
+  "generated_at": "2026-10-06",
+  "cutoff_date": null,
+  "role": "earnings"
+}
