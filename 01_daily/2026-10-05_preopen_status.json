@@ -1,56 +1,16 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T08:42:58.127473-04:00",
+  "generated_at": "2026-10-06T03:32:00.737546-04:00",
   "run_id": "37301175138",
   "runner": "ecs-openclaw",
   "all_ok": false,
   "qc_all_ok": false,
-  "book_ok": true,
+  "book_ok": false,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/sectors/2026-10-05/basic_materials_predict.md",
-      "reason": "missing sector predict"
-    },
-    {
-      "path": "01_daily/sectors/2026-10-05/communication_services_predict.md",
-      "reason": "missing sector predict"
-    },
-    {
-      "path": "01_daily/sectors/2026-10-05/consumer_cyclical_predict.md",
-      "reason": "missing sector predict"
-    },
-    {
-      "path": "01_daily/sectors/2026-10-05/consumer_defensive_predict.md",
-      "reason": "missing sector predict"
-    },
-    {
-      "path": "01_daily/sectors/2026-10-05/energy_predict.md",
-      "reason": "missing sector predict"
-    },
-    {
-      "path": "01_daily/sectors/2026-10-05/financial_predict.md",
-      "reason": "missing sector predict"
-    },
-    {
-      "path": "01_daily/sectors/2026-10-05/healthcare_predict.md",
-      "reason": "missing sector predict"
-    },
-    {
-      "path": "01_daily/sectors/2026-10-05/industrials_predict.md",
-      "reason": "missing sector predict"
-    },
-    {
-      "path": "01_daily/sectors/2026-10-05/real_estate_predict.md",
-      "reason": "missing sector predict"
-    },
-    {
-      "path": "01_daily/sectors/2026-10-05/technology_predict.md",
-      "reason": "missing sector predict"
-    },
-    {
-      "path": "01_daily/sectors/2026-10-05/utilities_predict.md",
-      "reason": "missing sector predict"
+      "path": "(review)",
+      "reason": "empty_review_reply"
     }
   ],
   "missing_required": [
@@ -229,7 +189,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-05_finviz_digest.json",
-        "size": 96708
+        "size": 97534
       },
       {
         "kind": "finviz_market_digest",
@@ -240,17 +200,17 @@
       },
       {
         "kind": "finviz_market_digest",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-10-05_finviz_market_digest_close.json",
-        "size": 0
+        "size": 8142
       },
       {
         "kind": "map_heat",
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-10-05_map_heat.json",
-        "size": 274808
+        "size": 274169
       },
       {
         "kind": "map_heat_baseline",

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-05",
-  "generated_at": "2026-10-05T17:37:42.006261-04:00",
+  "generated_at": "2026-10-06T03:32:01.940492-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -94,12 +94,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97128,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97534,
+          "said": "5898 tickers \u00b7 1881 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Abbott receives FDA approval for new CardioMEMS HF System capabilities that help patients engage in the care of their heart condition",
+            "How To Create Income From IBM Stock",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11940,
+          "size": 11485,
           "said": "Finviz Daily Digest \u2014 2026-10-05",
           "bullets": [
-            "_Generated 2026-10-05T07:13:05.936167-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-06T03:32:00.325924-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5898 \u00b7 high-signal=1881_",
             "Major indices (live quote page)"
           ]
         },
@@ -167,11 +167,11 @@
           ]
         }
       ],
-      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "said": "5898 tickers \u00b7 1881 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
       "bullets": [
-        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-        "Banks have profited from idle cash for years. AI agents could change that."
+        "Abbott receives FDA approval for new CardioMEMS HF System capabilities that help patients engage in the care of their heart condition",
+        "How To Create Income From IBM Stock",
+        "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
       ]
     },
     {
@@ -192,12 +192,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97128,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97534,
+          "said": "5898 tickers \u00b7 1881 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Abbott receives FDA approval for new CardioMEMS HF System capabilities that help patients engage in the care of their heart condition",
+            "How To Create Income From IBM Stock",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -357,10 +357,10 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8325,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 12 fail",
+          "size": 8321,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 11 fail",
           "bullets": [
-            "finviz_market_digest:missing",
+            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
@@ -373,8 +373,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['sector_predict']",
-          "size": 8675,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=True \u00b7 missing sector_predict",
+          "size": 7388,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing sector_predict",
           "bullets": []
         },
         {
@@ -383,11 +383,11 @@
           "path": "01_daily/2026-10-05_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Day fails the 8-of-11 sector floor: all 11 sector essays are missing (0/11). Required general predict, events (scan_date",
-          "size": 1951,
-          "said": "ok=False \u00b7 missing sector predict 01_daily/sectors/2026-10-05/basic_materials_predict.md",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 309,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
-            "Day fails the 8-of-11 sector floor: all 11 sector essays are missing (0/11). Required general predict, events (scan_date 2026-10-05, live catcher), news judge/parse, finviz digest, and map-heat futures tape look like same-day usable packets. Close market digest is missing but non-core. Research reused last-night captain cards after a failed morning delta; noted only, not a day-fail."
+            "Grok returned an empty review"
           ]
         },
         {
@@ -544,12 +544,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97128,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97534,
+          "said": "5898 tickers \u00b7 1881 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Abbott receives FDA approval for new CardioMEMS HF System capabilities that help patients engage in the care of their heart condition",
+            "How To Create Income From IBM Stock",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -650,12 +650,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97128,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97534,
+          "said": "5898 tickers \u00b7 1881 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Abbott receives FDA approval for new CardioMEMS HF System capabilities that help patients engage in the care of their heart condition",
+            "How To Create Income From IBM Stock",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -753,12 +753,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97128,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97534,
+          "said": "5898 tickers \u00b7 1881 signals \u00b7 top ABT, ACN, AEM, AME, AMGN, AMZN, AON, APH",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Abbott receives FDA approval for new CardioMEMS HF System capabilities that help patients engage in the care of their heart condition",
+            "How To Create Income From IBM Stock",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -850,7 +850,7 @@
           "size": 69824,
           "said": "Stock book \u2014 2026-10-05",
           "bullets": [
-            "_Generated 2026-10-05T17:28:39.651351-04:00_",
+            "_Generated 2026-10-05T21:29:37.782201-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -1067,52 +1067,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-05",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-05T04:21:46.848365-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-05_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97058,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-05_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11894,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T04:21:46.702583-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        },
-        {
-          "path": "data/exports/finviz_2026-10-05.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11030866,
-          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11493724,
-          "preview": "11710 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        },
-        {
-          "path": "01_daily/news/2026-10-05_finviz_digest_preopen.json",
-          "ok": true,
-          "reason": "",
-          "size": 97058,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-05T04:21:46.702583-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11710 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -3737,6 +3691,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-05\n**Generated:** 2026-10-05T17:37:41.015063-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher led by tech and M&A as 10-year yield hit 5.31% and services data signaled cooling growth\n**Prior close:** SPX +0.66%  Nasdaq +1.05%  Dow +0.18%\n**SPX:** +0.66%  **Nasdaq:** +1.05%  **Dow:** +0.18%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, AVGO, MSFT, META, PTC, RXO, CHRW, SPHR, CBRS, PCVX, NU, ITUB, ELBM, STZ, RPM, LW\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-06\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-05",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T03:32:00.755679-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97534,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11506,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-06T03:32:00.325924-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5898 \u00b7 high-signal=1881_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-05.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11495180,
+          "preview": "11704 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11495180,
+          "preview": "11704 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-05_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 96708,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-05\n_Generated 2026-10-06T03:32:00.325924-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5898 \u00b7 high-signal=1881_ \u00b7 11704 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11704 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
