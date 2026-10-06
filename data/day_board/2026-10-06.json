@@ -1,12 +1,12 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T05:41:15.866187-04:00",
+  "generated_at": "2026-10-06T05:41:31.802467-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
@@ -683,11 +683,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -826,10 +826,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-06_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=200",
+          "size": 1459335,
+          "said": "1d BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO \u00b7 0.51425",
           "bullets": []
         },
         {
@@ -837,21 +837,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-06_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 77180,
+          "said": "Stock book \u2014 2026-10-06",
+          "bullets": [
+            "_Generated 2026-10-06T05:41:24.009520-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-06_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 2324,
+          "said": "144 green \u00b7 GLBE, SIG, SHOO, FIGS, SN, HNI, MHK, AEO, GTX, MGA",
           "bullets": []
         },
         {
@@ -873,10 +876,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-06 not in dashboard dates (last=2026-10-01)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-06)",
           "size": 10183910,
-          "said": "session 2026-10-06 not in dashboard dates (last=2026-10-01)",
+          "said": "live-book poller + today.json (2026-10-06)",
           "bullets": []
         }
       ],
@@ -889,9 +892,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -901,10 +904,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-06_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=200",
+          "size": 1459335,
+          "said": "1d BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO \u00b7 0.51425",
           "bullets": []
         },
         {
@@ -912,10 +915,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-06 not in dashboard dates (last=2026-10-01)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-06)",
           "size": 10183910,
-          "said": "session 2026-10-06 not in dashboard dates (last=2026-10-01)",
+          "said": "live-book poller + today.json (2026-10-06)",
           "bullets": []
         },
         {
@@ -951,8 +954,130 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "CBRL",
+        "score": 0.873139627659973
+      },
+      {
+        "ticker": "SN",
+        "score": 0.4360008321596437
+      },
+      {
+        "ticker": "CDNA",
+        "score": 0.8381210056240389
+      },
+      {
+        "ticker": "BLFS",
+        "score": 0.8310309000486988
+      },
+      {
+        "ticker": "VEEV",
+        "score": 0.4590738124188569
+      },
+      {
+        "ticker": "CORT",
+        "score": 0.4017243256292501
+      },
+      {
+        "ticker": "CAKE",
+        "score": 0.7165422758365148
+      },
+      {
+        "ticker": "AVPT",
+        "score": 0.7611943559955066
+      },
+      {
+        "ticker": "SHOO",
+        "score": 0.691281558179909
+      },
+      {
+        "ticker": "DOCU",
+        "score": 0.3541151083013004
+      },
+      {
+        "ticker": "SONO",
+        "score": 0.7592886118303119
+      },
+      {
+        "ticker": "MQ",
+        "score": 0.7159347692547866
+      },
+      {
+        "ticker": "LAUR",
+        "score": 0.6070647019977062
+      },
+      {
+        "ticker": "CTOS",
+        "score": 0.5862573075166913
+      },
+      {
+        "ticker": "PBI",
+        "score": 0.42346573460519976
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "ROIV",
+        "score": -0.39593922722363517
+      },
+      {
+        "ticker": "IBRX",
+        "score": -0.385704773039642
+      },
+      {
+        "ticker": "ARE",
+        "score": -0.3612839297654018
+      },
+      {
+        "ticker": "INTC",
+        "score": -0.35794679043046645
+      },
+      {
+        "ticker": "SOC",
+        "score": -0.33383225755630164
+      },
+      {
+        "ticker": "GOGO",
+        "score": -0.31971805924350044
+      },
+      {
+        "ticker": "SBS",
+        "score": -0.3104245982552575
+      },
+      {
+        "ticker": "NFLX",
+        "score": -0.30755697680801763
+      },
+      {
+        "ticker": "TYRA",
+        "score": -0.30462823541818485
+      },
+      {
+        "ticker": "BIDU",
+        "score": -0.3021483751633109
+      },
+      {
+        "ticker": "BAK",
+        "score": -0.29749563986806876
+      },
+      {
+        "ticker": "IBM",
+        "score": -0.28746861024820614
+      },
+      {
+        "ticker": "AIRS",
+        "score": -0.28723237669691276
+      },
+      {
+        "ticker": "NRXP",
+        "score": -0.28621124610483434
+      },
+      {
+        "ticker": "NEOV",
+        "score": -0.27920462073178093
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "UP  2.623",
@@ -1860,6 +1985,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T05:41:30.893739-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-06_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1459335,
+          "preview": "1d BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2324,
+          "preview": "green 144 \u00b7 GLBE, SIG, SHOO, FIGS, SN, HNI, MHK, AEO, GTX, MGA"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2493,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13849,
+          "preview": "2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13849,
+          "preview": "2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
+        },
+        {
+          "path": "01_daily/2026-10-06_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 78310,
+          "preview": "# Stock book \u2014 2026-10-06\n_Generated 2026-10-06T05:41:24.009520-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX \u00b7 green 144 \u00b7 GLBE, SIG, SHOO, FIGS, SN, HNI, MHK, AEO, GTX, MGA \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX \u00b7 2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX \u00b7 # Stock book \u2014 2026-10-06\n_Generated 2026-10-06T05:41:24.009520-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
