@@ -195,6 +195,13 @@ class ReadOnlyPaper:
     def list_filled_orders(self, day: str):
         return self._call("list_filled_orders", day)
 
+    def history_format_used(self) -> dict:
+        """Which start_time/start_date shape the last history read accepted."""
+        raw = getattr(self._api, "history_formats", None)
+        if not isinstance(raw, dict):
+            return {}
+        return {str(key): str(value) for key, value in raw.items()}
+
     def __getattr__(self, name: str):
         if name in FORBIDDEN_CALLS or name not in ALLOWED_CALLS:
             raise SnapshotRefused("read-only snapshot refuses " + name)
@@ -460,13 +467,18 @@ def collect_orders(guard: ReadOnlyPaper, clock: datetime) -> dict:
             raise
         except Exception as exc:  # noqa: BLE001
             history_ok[day] = False
-            errors[day] = str(exc)[:240]
+            errors[day] = str(exc)
     incident_history_ok = bool(history_ok.get(INCIDENT_DAY))
+    formats = {}
+    reader = getattr(guard, "history_format_used", None)
+    if callable(reader):
+        formats = reader() or {}
     return {
         "orders": dedupe_orders(rows),
         "open_ok": open_ok,
         "history_ok": history_ok,
         "incident_history_ok": incident_history_ok,
+        "history_formats": formats,
         "errors": errors,
         "queried_dates": order_dates(clock),
     }
@@ -720,6 +732,7 @@ def build_snapshot(
             "open_ok": collected["open_ok"],
             "incident_history_ok": collected["incident_history_ok"],
             "history_ok": collected["history_ok"],
+            "history_formats": collected.get("history_formats") or {},
             "errors": collected["errors"],
         },
         "note": (
