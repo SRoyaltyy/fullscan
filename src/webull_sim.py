@@ -36,6 +36,9 @@ ROOT = Path(__file__).resolve().parents[1]
 ET = ZoneInfo("America/New_York")
 FEES_PATH = ROOT / "00_grounding" / "webull_fees.json"
 BOOKS_PATH = ROOT / "data" / "webull_sim" / "days.jsonl"
+# Side notes for sealed rows. Keyed by book and date. Not part of the row.
+MARK_NOTES_PATH = ROOT / "data" / "webull_sim" / "mark_notes.jsonl"
+INTRADAY_MARK_NOTE = "equity is a 10:56 ET intraday mark, not the close"
 MD_PATH = ROOT / "03_scoreboard" / "WEBULL_SIM.md"
 HTML_PATH = ROOT / "dashboard" / "webull-sim" / "index.html"
 H1_LOG = ROOT / "research" / "hot_n4_clean_v4" / "forward_h1" / "h1_log.jsonl"
@@ -55,12 +58,14 @@ JUMP_TOL = 0.25
 MISSING_OPEN_RULE = (
     "The 09:45 and 10:15 ET runs retry a name that still has no usable Yahoo "
     "session open. The 16:15 ET run is the day's final run: it is the only "
-    "scheduled run at or after the 16:00 ET close. On that run a pick with no "
-    "print, or an open dropped by the unexplained 3x jump check, is logged "
-    "\"no open, not filled\". That slot stays cash and the other fills lock. "
-    "A planned exit with no open is not sold; the lot stays held and is logged "
-    "the same way. The unfilled names are listed on the row. A row that is "
-    "already locked is left as written."
+    "scheduled run at or after the 16:00 ET close. No row becomes final before "
+    "that close. A run during market hours writes a draft: the open fills can "
+    "show, and the row stays rewritable until the close run. On the final run "
+    "a pick with no print, or an open dropped by the unexplained 3x jump check, "
+    "is logged \"no open, not filled\". That slot stays cash and the other fills "
+    "lock. A planned exit with no open is not sold; the lot stays held and is "
+    "logged the same way. The unfilled names are listed on the row. A row that "
+    "is already final is left as written."
 )
 SHADOW_DIR = ROOT / "research" / "forward_shadow_v1" / "ledger"
 PAPER_OPEN = ROOT / "data" / "paper_open"
@@ -119,7 +124,8 @@ class Schedule:
 SIZING_RULE = (
     "When a plan does not set its own count or weights, each pick gets a slot of "
     "equity ÷ max(20, that day's pick count). Equity is measured at that day's "
-    "09:30 open before buys. All of that day's picks are sized. None is dropped "
+    "09:30 open before buys. Carried lots are marked at that open. A prior row's "
+    "stored equity is not reused. All of that day's picks are sized. None is dropped "
     "for ranking, and the result does not depend on an unsealed order. "
     "The plan sets no priority. A slot too small for one whole share logs "
     "'no whole share'. 'No cash' happens only when held lots tie up the cash. "
@@ -226,7 +232,11 @@ def _book_exit(lot: Lot, price: Decimal, schedule: Schedule, reason: str, date: 
 
 
 def equity_at_open(account: Account, bars: dict[str, dict]) -> Decimal:
-    """Equity at the 09:30 open, after open exits and before new buys."""
+    """Equity at the 09:30 open, after open exits and before new buys.
+
+    This is cash plus lots at the open. It does not read a stored equity
+    figure, including a sealed intraday mark.
+    """
     equity = account.cash
     for lot in account.lots:
         px = _bar_px(bars.get(lot.ticker), "open")
@@ -464,6 +474,51 @@ def mark_equity(account: Account, bars: dict[str, dict]) -> tuple[Decimal, list[
     return equity, missing
 
 
+def load_mark_notes(path: Path | None = None) -> dict[tuple[str, str], str]:
+    """Add-only notes keyed by book and date. The first line for a key wins.
+
+    These lines are not written into days.jsonl. A sealed row stays as sealed.
+    """
+    dest = path or MARK_NOTES_PATH
+    notes: dict[tuple[str, str], str] = {}
+    if not dest.is_file():
+        return notes
+    for line in dest.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        notes.setdefault((str(row["name"]), str(row["date"])), str(row["note"]))
+    return notes
+
+
+def close_mark_equity(row: dict, bars: dict[str, dict]) -> Decimal | None:
+    """Cash and lots marked at the close. The stored equity is not an input.
+
+    Returns None when a held name has no close, so an intraday last is not
+    labeled as the close by mistake.
+    """
+    account = Account(
+        cash=Decimal(str(row["cash"])),
+        fees=Decimal(str(row.get("fees") or "0")),
+    )
+    for pos in row.get("positions") or []:
+        ticker = str(pos["ticker"])
+        bar = bars.get(ticker) or {}
+        if bar.get("close") is None:
+            return None
+        account.lots.append(Lot(
+            ticker=ticker,
+            side=str(pos["side"]),
+            shares=int(pos["shares"]),
+            entry_px=Decimal(str(pos["entry_px"])),
+            entry_date=str(pos.get("entry_date") or row.get("date") or ""),
+        ))
+    equity, missing = mark_equity(account, bars)
+    if missing:
+        return None
+    return equity
+
+
 def in_write_freeze(now: datetime) -> bool:
     local = now.astimezone(ET)
     start = local.replace(hour=3, minute=0, second=0, microsecond=0)
@@ -649,13 +704,54 @@ def section_for(day: str, locked_trade: bool) -> str:
 
 
 def final_row(day: str, now: datetime, tradable: bool, opens_ok: bool) -> bool:
+    """A row stays a draft until that session's 16:00 ET close.
+
+    Open fills can show earlier. They are not final, and they are not sealed,
+    until the close run. A day whose close is already in the past can be final.
+    """
+    if now.astimezone(ET) < session_close(day):
+        return False
     if day < FIRST_LOCKED:
         return (not tradable) or opens_ok
-    if now.astimezone(ET) < session_open(day) + timedelta(minutes=10):
-        return False
     if not tradable:
         return True
     return opens_ok
+
+
+def _restore_account(row: dict, plan: dict, session_index: int, previous: Account) -> Account:
+    """End state of a final row. Stops and targets come from the plan, not a rescore."""
+    account = Account(
+        cash=Decimal(str(row["cash"])),
+        fees=Decimal(str(row.get("fees") or "0")),
+    )
+    picks = {pick.ticker: pick for pick in plan.get("picks") or []}
+    carried = {(lot.ticker, lot.entry_date): lot for lot in previous.lots}
+    for pos in row.get("positions") or []:
+        ticker = str(pos["ticker"])
+        entry = Decimal(str(pos["entry_px"]))
+        side = str(pos["side"])
+        old = carried.get((ticker, pos.get("entry_date")))
+        stop = old.stop if old is not None else None
+        target = old.target if old is not None else None
+        exit_index = old.exit_index if old is not None else None
+        exit_on = old.exit_on if old is not None else None
+        pick = picks.get(ticker)
+        if pick is not None and pos.get("entry_date") == plan["date"]:
+            stop = pick.stop
+            target = None
+            if pick.target_pct is not None:
+                sign = Decimal("1") if side == "long" else Decimal("-1")
+                target = entry * (Decimal("1") + sign * pick.target_pct)
+            exit_on = pick.exit_on
+            exit_index = None
+            if pick.hold_sessions is not None and not pick.exit_on:
+                exit_index = session_index + pick.hold_sessions
+        account.lots.append(Lot(
+            ticker=ticker, side=side, shares=int(pos["shares"]),
+            entry_px=entry, entry_date=str(pos["entry_date"]),
+            stop=stop, target=target, exit_index=exit_index, exit_on=exit_on,
+        ))
+    return account
 
 
 def run_book(
@@ -666,15 +762,37 @@ def run_book(
     schedule: Schedule,
     now: datetime,
     sandbox_for=None,
+    sealed_rows: dict[str, dict] | None = None,
+    close_marks: dict[tuple[str, str], str] | None = None,
 ) -> list[dict]:
-    """Sequential sim. Locked cash starts over at the first locked day."""
+    """Sequential sim. Locked cash starts over at the first locked day.
+
+    A row already marked final in days.jsonl is copied through. It is not
+    rebuilt, so a later close mark cannot change its bytes.
+    """
     index = {day: i for i, day in enumerate(sessions)}
     built = Account()
     locked = Account()
     rows = []
+    sealed_rows = sealed_rows or {}
+    noted = load_mark_notes() if close_marks is not None else {}
     for plan in plans:
         day = plan["date"]
         account = built if day < FIRST_LOCKED else locked
+        prior = sealed_rows.get(day)
+        if prior and prior.get("final"):
+            rows.append(prior)
+            restored = _restore_account(prior, plan, index.get(day, 0), account)
+            if day < FIRST_LOCKED:
+                built = restored
+            else:
+                locked = restored
+            if close_marks is not None and close_is_final(now, day) and (name, day) in noted:
+                tickers = [lot.ticker for lot in restored.lots]
+                marked = close_mark_equity(prior, bars_for(day, tickers))
+                if marked is not None:
+                    close_marks[(name, day)] = q(marked)
+            continue
         tradable, reason = plan["tradable"], plan["reason"]
         note = plan.get("note") or ""
         # A day before the lock can still be simulated once. The late commit
@@ -758,11 +876,9 @@ def run_book(
         locked_trade = bool(
             day >= FIRST_LOCKED and tradable and opens_ok and reason == ""
         )
+        # final_row stays false until 16:00 ET, so a market-hours row is a
+        # draft: fills can show, and the line stays rewritable.
         is_final = final_row(day, now, tradable, opens_ok)
-        if is_theme_book(name) and not close_is_final(now, day):
-            # The open fill can show as locked before the close. Sealing
-            # waits so the close mark, and a same-day cover, stay writable.
-            is_final = False
         if any(lot.exit_on == day for lot in account.lots):
             is_final = False
         sandbox = ""
@@ -1805,11 +1921,25 @@ def needed_universe(books: dict[str, list[dict]]) -> tuple[set[str], set[str]]:
     return tickers, days
 
 
+def _final_rows(path: Path | None) -> dict[str, dict[str, dict]]:
+    """Final rows already on disk, keyed by book then date. Loaded verbatim."""
+    kept: dict[str, dict[str, dict]] = {}
+    for row in read_books(path):
+        if row.get("final"):
+            kept.setdefault(row["name"], {})[row["date"]] = row
+    return kept
+
+
 def simulate(books: dict[str, list[dict]], now: datetime,
              schedule: Schedule | None = None,
-             bars: dict[tuple[str, str], dict] | None = None) -> list[dict]:
+             bars: dict[tuple[str, str], dict] | None = None,
+             *,
+             books_path: Path | None = None,
+             close_marks: dict[tuple[str, str], str] | None = None) -> list[dict]:
     schedule = schedule or load_schedule()
     sessions = session_calendar(books)
+    # None means a test sim with no book file. build() passes the real path.
+    finals = _final_rows(books_path) if books_path is not None else {}
     if bars is None:
         tickers, days = needed_universe(books)
         bars = adjust_splits(load_bars(tickers, days))
@@ -1865,6 +1995,8 @@ def simulate(books: dict[str, list[dict]], now: datetime,
         rows.extend(run_book(
             name, plans, use_sessions, use_bars, schedule, now,
             sandbox_for=sandbox_for,
+            sealed_rows=finals.get(name),
+            close_marks=close_marks,
         ))
     return rows
 
@@ -2093,19 +2225,39 @@ def display_sandbox(row: dict, paper_open: Path | None = None) -> str:
     return label or stored
 
 
+def display_equity(row: dict, notes: dict[tuple[str, str], str] | None = None,
+                   close_marks: dict[tuple[str, str], str] | None = None, *,
+                   escape: bool = False) -> str:
+    """Sealed equity, plus a side note that is not stored on the row."""
+    text = _money(row["equity"])
+    note = (notes or {}).get((row.get("name") or "", row.get("date") or ""), "")
+    if not note:
+        return text
+    mark = (close_marks or {}).get((row.get("name") or "", row.get("date") or ""))
+    if mark not in (None, ""):
+        note = f"{note}; close {_money(mark)}"
+    if escape:
+        note = html.escape(note)
+    return f"{text} ({note})"
+
+
 def _md_book_row(row: dict, *, manifest: dict | None = None,
-                 paper_open: Path | None = None) -> str:
+                 paper_open: Path | None = None,
+                 notes: dict[tuple[str, str], str] | None = None,
+                 close_marks: dict[tuple[str, str], str] | None = None) -> str:
     return (
         f"| {row['name']} | {row['date']} | {row['section']} | {display_reason(row)} | "
         f"{row.get('sizing') or '—'} | "
-        f"{row['picks']} | {_money(row['equity'])} | {_money(row['fees'])} | "
+        f"{row['picks']} | {display_equity(row, notes, close_marks)} | {_money(row['fees'])} | "
         f"{row['commit_et'] or '—'} | {display_source(row, manifest)} | "
         f"{(row['commit'] or '—')[:12]} | {display_sandbox(row, paper_open)} |"
     )
 
 
 def _html_book_row(row: dict, *, manifest: dict | None = None,
-                   paper_open: Path | None = None) -> str:
+                   paper_open: Path | None = None,
+                   notes: dict[tuple[str, str], str] | None = None,
+                   close_marks: dict[tuple[str, str], str] | None = None) -> str:
     reason = display_reason(row)
     sha = (row["commit"] or "—")[:12]
     seal = excel_seal_label(str(row.get("source") or ""), manifest)
@@ -2118,7 +2270,7 @@ def _html_book_row(row: dict, *, manifest: dict | None = None,
         "<tr>"
         f"<td>{row['name']}</td><td>{row['date']}</td><td>{row['section']}</td>"
         f"<td>{reason}</td><td>{row.get('sizing') or '—'}</td>"
-        f"<td>{row['picks']}</td><td>{_money(row['equity'])}</td>"
+        f"<td>{row['picks']}</td><td>{display_equity(row, notes, close_marks, escape=True)}</td>"
         f"<td>{row['commit_et'] or '—'}</td>"
         f"<td>{sha}</td>"
         f"<td>{sandbox}</td>"
@@ -2132,9 +2284,11 @@ def _theme_names(rows: list[dict]) -> list[str]:
 
 def render_md(rows: list[dict], schedule: Schedule, *,
               manifest: dict | None = None,
-              paper_open: Path | None = None) -> str:
+              paper_open: Path | None = None,
+              close_marks: dict[tuple[str, str], str] | None = None) -> str:
     if manifest is None:
         manifest = load_excel_freeze()
+    notes = load_mark_notes()
     locked = [r for r in rows if r["section"] == "locked"]
     built = [r for r in rows if r["section"] == "built_after"]
     visible = [r for r in rows if r["section"] == "not_a_locked_trade"]
@@ -2177,7 +2331,10 @@ def render_md(rows: list[dict], schedule: Schedule, *,
     ]
     show = [r for r in rows if r["date"] >= FIRST_LOCKED and not is_theme_book(r["name"])]
     for row in show:
-        lines.append(_md_book_row(row, manifest=manifest, paper_open=paper_open))
+        lines.append(_md_book_row(
+            row, manifest=manifest, paper_open=paper_open,
+            notes=notes, close_marks=close_marks,
+        ))
     theme_names = _theme_names(rows)
     if theme_names:
         lines += ["", "## Theme Radar short books", ""]
@@ -2192,7 +2349,10 @@ def render_md(rows: list[dict], schedule: Schedule, *,
             if group:
                 lines.extend(header)
                 for row in group:
-                    lines.append(_md_book_row(row, manifest=manifest, paper_open=paper_open))
+                    lines.append(_md_book_row(
+                        row, manifest=manifest, paper_open=paper_open,
+                        notes=notes, close_marks=close_marks,
+                    ))
                 lines.append("")
             lines.append(THEME_BORROW_NOTE)
             lines.append("")
@@ -2229,17 +2389,25 @@ def render_md(rows: list[dict], schedule: Schedule, *,
 
 def render_html(rows: list[dict], schedule: Schedule, *,
                 manifest: dict | None = None,
-                paper_open: Path | None = None) -> str:
+                paper_open: Path | None = None,
+                close_marks: dict[tuple[str, str], str] | None = None) -> str:
     if manifest is None:
         manifest = load_excel_freeze()
+    notes = load_mark_notes()
     show = [r for r in rows if r["date"] >= FIRST_LOCKED and not is_theme_book(r["name"])]
-    body = [_html_book_row(row, manifest=manifest, paper_open=paper_open) for row in show]
+    body = [_html_book_row(
+        row, manifest=manifest, paper_open=paper_open,
+        notes=notes, close_marks=close_marks,
+    ) for row in show]
     table = "\n".join(body)
     theme_blocks = []
     for name in _theme_names(rows):
         group = [r for r in rows if r["name"] == name and r["date"] >= FIRST_LOCKED]
         group_table = "\n".join(
-            _html_book_row(row, manifest=manifest, paper_open=paper_open) for row in group
+            _html_book_row(
+                row, manifest=manifest, paper_open=paper_open,
+                notes=notes, close_marks=close_marks,
+            ) for row in group
         )
         theme_blocks.append(
             f"<h2>{name}</h2>\n"
@@ -2284,12 +2452,13 @@ h1 sandbox fills read the paper-open journal and show "not observed" until a fil
 """
 
 
-def publish(rows: list[dict], schedule: Schedule | None = None) -> None:
+def publish(rows: list[dict], schedule: Schedule | None = None,
+            close_marks: dict[tuple[str, str], str] | None = None) -> None:
     schedule = schedule or load_schedule()
     MD_PATH.parent.mkdir(parents=True, exist_ok=True)
     HTML_PATH.parent.mkdir(parents=True, exist_ok=True)
-    MD_PATH.write_text(render_md(rows, schedule), encoding="utf-8")
-    HTML_PATH.write_text(render_html(rows, schedule), encoding="utf-8")
+    MD_PATH.write_text(render_md(rows, schedule, close_marks=close_marks), encoding="utf-8")
+    HTML_PATH.write_text(render_html(rows, schedule, close_marks=close_marks), encoding="utf-8")
 
 
 def build(now: datetime, *, seal: bool = False) -> list[dict]:
@@ -2298,9 +2467,10 @@ def build(now: datetime, *, seal: bool = False) -> list[dict]:
     schedule = load_schedule()
     books = collect_books()
     print(f"webull sim: {len(books)} books", flush=True)
-    rows = simulate(books, now, schedule)
+    close_marks: dict[tuple[str, str], str] = {}
+    rows = simulate(books, now, schedule, books_path=BOOKS_PATH, close_marks=close_marks)
     written = write_books(rows, seal=seal)
-    publish(written, schedule)
+    publish(written, schedule, close_marks=close_marks)
     return written
 
 
