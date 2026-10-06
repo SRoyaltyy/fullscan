@@ -1,18 +1,14 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-17T23:48:10.712135-04:00",
+  "generated_at": "2026-10-06T10:00:00.715037-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": false,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/sectors/2026-09-08/technology_predict.md",
-      "reason": "Wrong date / carry-forward: body is explicitly for 2026-09-18 (header 'Sector Environment Analysis \u2014 2026-09-18', Channel 1 tape 'through 2026-09-17', FOMC printed 09-16, BOJ hiked 09-18, Apple iPhone 18 availability TODAY 09-18, HIT_GRID dated 2026-09-18). Not a same-day 2026-09-08 artifact."
-    },
-    {
-      "path": "01_daily/sectors/2026-09-08/utilities_predict.md",
-      "reason": "Wrong date / carry-forward: body is for 2026-09-18 (header 'Utilities (XLU) \u2014 2026-09-18', tape 'through 2026-09-17', post-FOMC 09-16/09-17 discussion, triple-witching 09-18, HIT_GRID dated 2026-09-18). Not a same-day 2026-09-08 artifact."
+      "path": "(review)",
+      "reason": "empty_review_reply"
     }
   ],
   "missing_required": [],
@@ -172,14 +168,14 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-08_parsed.json",
-        "size": 307699
+        "size": 492914
       },
       {
         "kind": "news_actions",
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-08_actions.json",
-        "size": 861
+        "size": 46252
       },
       {
         "kind": "finviz_digest",
@@ -197,10 +193,10 @@
       },
       {
         "kind": "finviz_market_digest",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-09-08_finviz_market_digest_close.json",
-        "size": 0
+        "size": 9419
       },
       {
         "kind": "map_heat",
