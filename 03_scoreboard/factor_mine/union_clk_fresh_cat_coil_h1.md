@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 fresh catalyst + limited extension (research; not KEEP)
 
-Cash book **-8.35%** ($9,165) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 284 · skips 106 · realized $-137.13.
+Cash book **-10.53%** ($8,947) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 287 · skips 106 · realized $-137.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -432,6 +432,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `COP` | 35 | $127.00 | $2.10 | — | $4,606.45 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ret5=-0.4; leftover $4526.77 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `RRC` | 118 | $38.10 | $2.34 | — | $108.31 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ret5=-1.0; leftover $4526.77 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $108.31 | ▲ close $9,165.37 vs 09:30 $9,089.39 (session +116.26) | 16:00 close · cash $108.31 · equity $9,165.37 vs 09:30 $9,089.39 (+75.98; session marks +116.26) · 2 name(s) marked open→close (per-name table). COP×35 09:30 $127.00 → close $128.40 +49.00; RRC×118 09:30 $38.10 → close $38.67 +67.26 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $108.31 | ▼ 09:30 equity $9,162.74 vs yday $9,165.37 (-2.63) | 09:30 open · cash $108.31 (unchanged overnight, no fees) · equity $9,162.74 vs prior close $9,165.37 (-2.63) · 2 name(s) re-marked at the open (per-name table). COP×35 yday $128.40 → 09:30 $128.19 -7.35; RRC×118 yday $38.67 → 09:30 $38.71 +4.72 | — |
+| 2026-10-06 09:30 ET | **SELL** | `COP` | 35 | $128.19 | $2.14 | $+37.41 | $4,592.82 | ▲ +37.41 after sell → book $9,160.60; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `RRC` | 118 | $38.71 | $2.40 | $+67.24 | $9,158.20 | ▲ +67.24 after sell → book $9,158.20; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `SIBN` | 457 | $20.00 | $5.90 | — | $12.30 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable; ret5=+5.6; leftover $9158.20 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12.30 | ▼ close $8,946.65 vs 09:30 $9,162.74 (session -205.65) | 16:00 close · cash $12.30 · equity $8,946.65 vs 09:30 $9,162.74 (-216.09; session marks -205.65) · 1 name(s) marked open→close (per-name table). SIBN×457 09:30 $20.00 → close $19.55 -205.65 | — |
 
 ## Not taken
 

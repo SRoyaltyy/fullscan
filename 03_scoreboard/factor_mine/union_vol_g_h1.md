@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-14.64%** ($8,536) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 306 · skips 87 · realized $-1273.21.
+Cash book **-15.90%** ($8,409) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 322 · skips 87 · realized $-1273.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -452,6 +452,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `SYNA` | 9 | $120.98 | $2.02 | — | $1,119.54 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; ret5=+17.9; leftover $1091.90 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `WOLF` | 32 | $34.04 | $2.09 | — | $28.18 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; ret5=+28.0; leftover $1091.90 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $28.18 | ▼ close $8,535.89 vs 09:30 $8,775.69 (session -169.47) | 16:00 close · cash $28.18 · equity $8,535.89 vs 09:30 $8,775.69 (-239.80; session marks -169.47) · 8 name(s) marked open→close (per-name table). WNC×77 09:30 $14.02 → close $13.99 -2.31; EVGO×791 09:30 $1.38 → close $1.35 -23.73; NNBR×237 09:30 $4.59 → close $4.24 -82.95; NEOV×355 09:30 $3.07 → close $2.96 -39.05; FEAM×281 09:30 $3.88 → close $3.92 +11.24; MXL×10 09:30 $106.00 → close $105.49 -5.10; SYNA×9 09:30 $120.98 → close $119.73 -11.25; WOLF×32 09:30 $34.04 → close $33.53 -16.32 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $28.18 | ▲ 09:30 equity $8,621.59 vs yday $8,535.89 (+85.70) | 09:30 open · cash $28.18 (unchanged overnight, no fees) · equity $8,621.59 vs prior close $8,535.89 (+85.70) · 8 name(s) re-marked at the open (per-name table). EVGO×791 yday $1.35 → 09:30 $1.36 +7.20; FEAM×281 yday $3.92 → 09:30 $3.96 +11.24; MXL×10 yday $105.49 → 09:30 $108.22 +27.30; NEOV×355 yday $2.96 → 09:30 $2.97 +3.55; NNBR×237 yday $4.24 → 09:30 $4.24 +0.00; SYNA×9 yday $119.73 → 09:30 $120.65 +8.28; WNC×77 yday $13.99 → 09:30 $14.16 +13.09; WOLF×32 yday $33.53 → 09:30 $34.00 +15.04 | — |
+| 2026-10-06 09:30 ET | **SELL** | `EVGO` | 791 | $1.36 | $10.35 | $-37.08 | $1,092.88 | ▼ -37.08 after sell → book $8,611.24; vs 09:30 mark -10.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `FEAM` | 281 | $3.96 | $3.68 | $+15.17 | $2,201.96 | ▲ +15.17 after sell → book $8,607.56; vs 09:30 mark -3.68 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `MXL` | 10 | $108.22 | $2.04 | $+18.14 | $3,282.12 | ▲ +18.14 after sell → book $8,605.52; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `NEOV` | 355 | $2.97 | $4.65 | $-44.73 | $4,331.82 | ▼ -44.73 after sell → book $8,600.87; vs 09:30 mark -4.65 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `NNBR` | 237 | $4.24 | $3.11 | $-89.11 | $5,333.60 | ▼ -89.11 after sell → book $8,597.77; vs 09:30 mark -3.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `SYNA` | 9 | $120.65 | $2.04 | $-7.02 | $6,417.41 | ▼ -7.02 after sell → book $8,595.73; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `WNC` | 77 | $14.16 | $2.24 | $+6.32 | $7,505.49 | ▲ +6.32 after sell → book $8,593.49; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `WOLF` | 32 | $34.00 | $2.11 | $-5.47 | $8,591.38 | ▼ -5.47 after sell → book $8,591.38; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `AVPT` | 72 | $14.77 | $2.21 | — | $7,525.73 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; ⚪; ret5=+7.2; leftover $1073.92 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `EBS` | 149 | $7.16 | $2.44 | — | $6,456.46 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; ret5=+5.5; leftover $1073.92 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ALVO` | 176 | $6.07 | $2.52 | — | $5,385.62 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; ret5=-0.7; leftover $1073.92 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `XERS` | 104 | $10.23 | $2.30 | — | $4,319.40 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable; ret5=+3.1; leftover $1073.92 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ZNTL` | 382 | $2.81 | $4.93 | — | $3,241.05 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable; ret5=+6.9; leftover $1073.92 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `QTEX` | 629 | $1.71 | $8.11 | — | $2,160.49 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=+123.8; leftover $1073.92 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PTC` | 5 | $193.00 | $2.00 | — | $1,193.48 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+37.6; leftover $1073.92 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `XP` | 36 | $29.20 | $2.10 | — | $140.19 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; ret5=+39.1; leftover $1073.92 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $140.19 | ▼ close $8,409.47 vs 09:30 $8,621.59 (session -155.30) | 16:00 close · cash $140.19 · equity $8,409.47 vs 09:30 $8,621.59 (-212.12; session marks -155.30) · 8 name(s) marked open→close (per-name table). AVPT×72 09:30 $14.77 → close $14.59 -12.96; EBS×149 09:30 $7.16 → close $6.95 -31.29; ALVO×176 09:30 $6.07 → close $6.14 +12.32; XERS×104 09:30 $10.23 → close $10.07 -16.64; ZNTL×382 09:30 $2.81 → close $2.67 -53.48; QTEX×629 09:30 $1.71 → close $1.59 -72.33; PTC×5 09:30 $193.00 → close $193.00 +0.00; XP×36 09:30 $29.20 → close $29.73 +19.08 | — |
 
 ## Not taken
 

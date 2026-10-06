@@ -184,6 +184,11 @@
       "bytes": 172641,
       "sha256": "6c75feddab1e77456fb7f70d309c82b700498661f5eb0f07838e6dfb82d60863",
       "written_at": "2026-10-05T17:46:24.836041-04:00"
+    },
+    "2026-10-06": {
+      "bytes": 172736,
+      "sha256": "faf34d0910fad237f3ac5472274f9b58bf1f4af792939d7a2e86b265fd17c5ea",
+      "written_at": "2026-10-06T16:58:22.911511-04:00"
     }
   },
   "excel_signals": {
@@ -1413,6 +1418,12 @@
       "encoding": "gzip",
       "sha256": "a5c490cc36c3ea159d9cff16b7a6cdf7556dc2be01fbc987dab4f41a3ddce327",
       "written_at": "2026-10-05T17:47:23.237762-04:00"
+    },
+    "2026-10-06": {
+      "bytes": 22106176,
+      "encoding": "gzip",
+      "sha256": "8a15a1bc27ef6f4ab5c140a1cd44bb3eeb6c0af433e3b0f5e03f313b521867c1",
+      "written_at": "2026-10-06T16:59:23.450973-04:00"
     }
   },
   "lineups": {
@@ -1600,6 +1611,11 @@
       "bytes": 865,
       "sha256": "1b5b2a9dd36f971a7ed206eedd5cdb38d9d07aa576e97af943ccbfbb41918f43",
       "written_at": "2026-10-05T17:47:50.428023-04:00"
+    },
+    "2026-10-06": {
+      "bytes": 929,
+      "sha256": "6cbf8a45c1f09e6a4a6a21f044d3be2bbfec220fdb1a163a9019b8295feae8ed",
+      "written_at": "2026-10-06T16:59:52.446725-04:00"
     }
   },
   "prices": {
@@ -1637,6 +1653,11 @@
       "bytes": 531125,
       "sha256": "da6277f08ad938ca5e4930c15f5550151593e2e74a5f9f7a86002175382fc410",
       "written_at": "2026-10-05T17:46:24.859458-04:00"
+    },
+    "2026-10-06": {
+      "bytes": 599559,
+      "sha256": "693be73bc2294f3139cb8ded0c8954182280b861d2880c495f67b6ad2d1e469c",
+      "written_at": "2026-10-06T16:58:22.935462-04:00"
     }
   },
   "recipe_rules": {
@@ -9764,6 +9785,25 @@
       "sha256": "f1412aec9ff5dddec56f087adff2fb65b9ece41e051997c112e8f25146d3984f",
       "unpriced_held": [],
       "written_at": "2026-10-05T17:46:30.025223-04:00"
+    },
+    "2026-10-06": {
+      "bytes": 289904,
+      "dropped_missing_bars": [
+        "BLFS",
+        "HYAC-U",
+        "IPHXU",
+        "LEDRU",
+        "PORT-U",
+        "PSKY",
+        "WBD"
+      ],
+      "heat_vintage": "2026-10-06",
+      "n_rows": 71,
+      "sha256": "6202a98054e645dc5029eedca23920144d2412495f88415d7bc72e3761dd9bf5",
+      "unpriced_held": [
+        "BLFS"
+      ],
+      "written_at": "2026-10-06T16:58:29.030913-04:00"
     }
   },
   "version": 1

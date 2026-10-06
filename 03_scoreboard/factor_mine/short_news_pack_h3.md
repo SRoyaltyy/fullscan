@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short morning packet news🔴
 
-Cash book **+5.36%** ($10,536) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 30 · skips 26 · realized $+60.75.
+Cash book **+6.04%** ($10,604) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 31 · skips 26 · realized $+60.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -174,6 +174,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **SHORT** | `TER` | 3 | $447.21 | $2.06 | — | $18,476.59 | — | short morning packet news🔴; gate news_box=bad; list ohlc_hot; ret5=+12.7; leftover $1756.54 | join🟢 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 09:30 ET | **SHORT** | `AXTI` | 20 | $87.00 | $2.12 | — | $20,214.36 | — | short morning packet news🔴; gate news_box=bad; list ohlc_hot; ret5=+8.8; leftover $1756.54 | join🟢 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20,214.36 | ▲ close $10,535.53 vs 09:30 $10,539.22 (session +2.60) | 16:00 close · cash $20,214.36 · equity $10,535.53 vs 09:30 $10,539.22 (-3.69; session marks +2.60) · 4 name(s) marked open→close (per-name table). NKE×145 09:30 $33.82 → close $33.96 -20.30; MXL×16 09:30 $106.00 → close $105.49 +8.16; TER×3 09:30 $447.21 → close $444.53 +8.04; AXTI×20 09:30 $87.00 → close $86.66 +6.70 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20,214.36 | ▼ 09:30 equity $10,504.13 vs yday $10,535.53 (-31.40) | 09:30 open · cash $20,214.36 (unchanged overnight, no fees) · equity $10,504.13 vs prior close $10,535.53 (-31.40) · 4 name(s) re-marked at the open (per-name table). AXTI×20 yday $86.66 → 09:30 $87.85 -23.80; MXL×16 yday $105.49 → 09:30 $108.22 -43.68; NKE×145 yday $33.96 → 09:30 $33.70 +37.70; TER×3 yday $444.53 → 09:30 $445.07 -1.62 | — |
+| 2026-10-06 09:30 ET | **COVER** | `NKE` | 145 | $33.70 | $2.42 | $+248.69 | $15,325.44 | ▲ +248.69 after sell → book $10,501.71; vs 09:30 mark -2.42 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,325.44 | ▲ close $10,604.48 vs 09:30 $10,504.13 (session +102.77) | 16:00 close · cash $15,325.44 · equity $10,604.48 vs 09:30 $10,504.13 (+100.35; session marks +102.77) · 3 name(s) marked open→close (per-name table). AXTI×20 09:30 $87.85 → close $84.06 +75.80; MXL×16 09:30 $108.22 → close $109.30 -17.28; TER×3 09:30 $445.07 → close $430.32 +44.25 | — |
 
 ## Not taken
 

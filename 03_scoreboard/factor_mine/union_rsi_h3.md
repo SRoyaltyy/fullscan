@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-16.66%** ($8,334) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 214 · skips 269 · realized $-1699.80.
+Cash book **-19.65%** ($8,035) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 229 · skips 269 · realized $-1699.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -359,6 +359,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `ECX` | 1 | $0.88 | $0.01 | — | $9.43 | — | rank by rsi; rank rsi; list yday_mover; ret5=-21.2; leftover $1.29 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `LU` | 1 | $1.06 | $0.01 | — | $8.35 | — | rank by rsi; rank rsi; list yday_mover; ret5=-17.1; leftover $1.29 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.35 | ▼ close $8,333.71 vs 09:30 $8,345.32 (session -11.59) | 16:00 close · cash $8.35 · equity $8,333.71 vs 09:30 $8,345.32 (-11.61; session marks -11.59) · 11 name(s) marked open→close (per-name table). AVXL×611 09:30 $1.79 → close $1.65 -88.60; CMPX×1 09:30 $0.90 → close $0.96 +0.06; GLAS×217 09:30 $5.49 → close $5.35 -30.38; LQDA×51 09:30 $28.07 → close $27.64 -21.93; LUCD×2 09:30 $0.62 → close $0.59 -0.06; MKC×26 09:30 $44.76 → close $45.54 +20.28; NKE×34 09:30 $33.82 → close $33.96 +4.76; PYXS×529 09:30 $2.12 → close $2.24 +63.48; QTTB×146 09:30 $8.09 → close $8.37 +40.88; ECX×1 09:30 $0.88 → close $0.83 -0.05; LU×1 09:30 $1.06 → close $1.03 -0.03 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8.35 | ▲ 09:30 equity $8,337.45 vs yday $8,333.71 (+3.74) | 09:30 open · cash $8.35 (unchanged overnight, no fees) · equity $8,337.45 vs prior close $8,333.71 (+3.74) · 11 name(s) re-marked at the open (per-name table). AVXL×611 yday $1.65 → 09:30 $1.66 +9.16; CMPX×1 yday $0.96 → 09:30 $0.99 +0.03; ECX×1 yday $0.83 → 09:30 $0.83 +0.00; GLAS×217 yday $5.35 → 09:30 $5.35 +0.00; LQDA×51 yday $27.64 → 09:30 $27.95 +15.81; LU×1 yday $1.03 → 09:30 $1.02 -0.01; LUCD×2 yday $0.59 → 09:30 $0.60 +0.01; MKC×26 yday $45.54 → 09:30 $45.75 +5.46; NKE×34 yday $33.96 → 09:30 $33.70 -8.84; PYXS×529 yday $2.24 → 09:30 $2.22 -10.58; QTTB×146 yday $8.37 → 09:30 $8.32 -7.30 | — |
+| 2026-10-06 09:30 ET | **SELL** | `AVXL` | 611 | $1.66 | $7.99 | $-223.62 | $1,014.62 | ▼ -223.62 after sell → book $8,329.46; vs 09:30 mark -7.99 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **SELL** | `GLAS` | 217 | $5.35 | $2.85 | $-64.23 | $2,172.72 | ▼ -64.23 after sell → book $8,326.61; vs 09:30 mark -2.85 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **SELL** | `LQDA` | 51 | $27.95 | $2.16 | $+199.18 | $3,596.01 | ▲ +199.18 after sell → book $8,324.45; vs 09:30 mark -2.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **SELL** | `MKC` | 26 | $45.75 | $2.09 | $-31.46 | $4,783.42 | ▼ -31.46 after sell → book $8,322.36; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **SELL** | `NKE` | 34 | $33.70 | $2.11 | $-63.70 | $5,927.11 | ▼ -63.70 after sell → book $8,320.25; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **SELL** | `PYXS` | 529 | $2.22 | $6.92 | $-61.36 | $7,094.57 | ▼ -61.36 after sell → book $8,313.33; vs 09:30 mark -6.92 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **SELL** | `QTTB` | 146 | $8.32 | $2.46 | $-10.73 | $8,306.82 | ▼ -10.73 after sell → book $8,310.87; vs 09:30 mark -2.46 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **BUY** | `NXH` | 508 | $2.04 | $6.55 | — | $7,263.95 | — | rank by rsi; rank rsi; list yday_mover; ret5=-33.3; leftover $1038.35 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `STZ` | 9 | $113.83 | $2.02 | — | $6,237.46 | — | rank by rsi; rank rsi; list overnight; ret5=+0.3; leftover $1038.35 | join🔴 sector🔴 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `RPM` | 10 | $96.25 | $2.02 | — | $5,272.94 | — | rank by rsi; rank rsi; list earn_react; 🔵; ret5=-4.9; leftover $1038.35 | join🔴 sector🟢 gen🟡 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ZNTL` | 369 | $2.81 | $4.76 | — | $4,231.29 | — | rank by rsi; rank rsi; list probable; ret5=+6.9; leftover $1038.35 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `VELO` | 106 | $9.77 | $2.31 | — | $3,193.36 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-12.8; leftover $1038.35 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `TOST` | 34 | $30.07 | $2.09 | — | $2,168.89 | — | rank by rsi; rank rsi; list flatten; ⚪; ret5=-1.1; leftover $1038.35 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PCOR` | 19 | $54.22 | $2.05 | — | $1,136.67 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+10.4; leftover $1038.35 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ARCT` | 70 | $14.70 | $2.20 | — | $105.47 | — | rank by rsi; rank rsi; list probable,yday_gainer; ret5=+1.4; leftover $1038.35 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $105.47 | ▼ close $8,034.84 vs 09:30 $8,337.45 (session -252.02) | 16:00 close · cash $105.47 · equity $8,034.84 vs 09:30 $8,337.45 (-302.61; session marks -252.02) · 12 name(s) marked open→close (per-name table). CMPX×1 09:30 $0.99 → close $1.00 +0.01; ECX×1 09:30 $0.83 → close $0.84 +0.01; LU×1 09:30 $1.02 → close $1.01 -0.01; LUCD×2 09:30 $0.60 → close $0.60 +0.00; NXH×508 09:30 $2.04 → close $1.83 -106.68; STZ×9 09:30 $113.83 → close $115.67 +16.56; RPM×10 09:30 $96.25 → close $98.31 +20.60; ZNTL×369 09:30 $2.81 → close $2.67 -51.66; VELO×106 09:30 $9.77 → close $9.57 -21.20; TOST×34 09:30 $30.07 → close $30.25 +6.12; PCOR×19 09:30 $54.22 → close $54.39 +3.23; ARCT×70 09:30 $14.70 → close $13.00 -119.00 | — |
 
 ## Not taken
 

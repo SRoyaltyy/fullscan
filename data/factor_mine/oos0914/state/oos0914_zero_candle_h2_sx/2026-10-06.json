@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 56.89,
+      "shares": 47,
+      "side": "BUY",
+      "ticker": "PDFS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 166.02,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "SHOP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 14.77,
+      "shares": 182,
+      "side": "BUY",
+      "ticker": "AVPT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 42.7,
+      "shares": 63,
+      "side": "BUY",
+      "ticker": "IOT"
+    }
+  ],
+  "cash": 46.45,
+  "date": "2026-10-06",
+  "equity": 10521.17,
+  "fees": 36.5189,
+  "fills": [
+    {
+      "fees": 3.3135,
+      "fill_rule": "open",
+      "pnl": 46.36,
+      "price": 10.33,
+      "shares": 252,
+      "side": "SELL",
+      "ticker": "ARHS"
+    },
+    {
+      "fees": 2.1356,
+      "fill_rule": "open",
+      "pnl": 169.04,
+      "price": 70.89,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "CDNA"
+    },
+    {
+      "fees": 20.0269,
+      "fill_rule": "open",
+      "pnl": 274.08,
+      "price": 1.87,
+      "shares": 1531,
+      "side": "SELL",
+      "ticker": "NAUT"
+    },
+    {
+      "fees": 2.1589,
+      "fill_rule": "open",
+      "pnl": 71.61,
+      "price": 56.89,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "PDFS"
+    },
+    {
+      "fees": 2.131,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 56.89,
+      "shares": 47,
+      "side": "BUY",
+      "ticker": "PDFS"
+    },
+    {
+      "fees": 2.038,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 166.02,
+      "shares": 16,
+      "side": "BUY",
+      "ticker": "SHOP"
+    },
+    {
+      "fees": 2.536,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 14.77,
+      "shares": 182,
+      "side": "BUY",
+      "ticker": "AVPT"
+    },
+    {
+      "fees": 2.179,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 42.7,
+      "shares": 63,
+      "side": "BUY",
+      "ticker": "IOT"
+    }
+  ],
+  "holdings": [
+    "AVPT",
+    "IOT",
+    "PDFS",
+    "SHOP"
+  ],
+  "mean": -1.2944,
+  "n_trades_today": 8,
+  "recipe": "oos0914_zero_candle_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 10.33,
+      "shares": 252,
+      "side": "SELL",
+      "ticker": "ARHS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 70.89,
+      "shares": 38,
+      "side": "SELL",
+      "ticker": "CDNA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.87,
+      "shares": 1531,
+      "side": "SELL",
+      "ticker": "NAUT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 56.89,
+      "shares": 46,
+      "side": "SELL",
+      "ticker": "PDFS"
+    }
+  ],
+  "state": {
+    "after": "2026-10-06",
+    "cash": 46.45,
+    "pos": {
+      "AVPT": {
+        "close_px": 14.59,
+        "cost": 2690.676,
+        "entry_date": "2026-10-06",
+        "entry_px": 14.77,
+        "fee_in": 2.536,
+        "last_px": 14.77,
+        "min_hold": 2,
+        "notional": 2688.14,
+        "peak_px": 14.77,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten; \u26aa; ret5=+7.2; leftover $2690.93",
+        "shares": 182,
+        "ticker": "AVPT"
+      },
+      "IOT": {
+        "close_px": 41.74,
+        "cost": 2692.2790000000005,
+        "entry_date": "2026-10-06",
+        "entry_px": 42.7,
+        "fee_in": 2.179,
+        "last_px": 42.7,
+        "min_hold": 2,
+        "notional": 2690.1000000000004,
+        "peak_px": 42.7,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \u26aa; ret5=+11.8; leftover $2690.93",
+        "shares": 63,
+        "ticker": "IOT"
+      },
+      "PDFS": {
+        "close_px": 54.44,
+        "cost": 2675.961,
+        "entry_date": "2026-10-06",
+        "entry_px": 56.89,
+        "fee_in": 2.131,
+        "last_px": 56.89,
+        "min_hold": 2,
+        "notional": 2673.83,
+        "peak_px": 56.89,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; leftover $2690.93",
+        "shares": 47,
+        "ticker": "PDFS"
+      },
+      "SHOP": {
+        "close_px": 164.44,
+        "cost": 2658.358,
+        "entry_date": "2026-10-06",
+        "entry_px": 166.02,
+        "fee_in": 2.038,
+        "last_px": 166.02,
+        "min_hold": 2,
+        "notional": 2656.32,
+        "peak_px": 166.02,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.2; leftover $2690.93",
+        "shares": 16,
+        "ticker": "SHOP"
+      }
+    },
+    "yday_equity": 10521.17
+  }
+}

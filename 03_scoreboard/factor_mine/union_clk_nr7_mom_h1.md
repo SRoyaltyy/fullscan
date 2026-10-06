@@ -206,6 +206,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8.13 | ▲ 09:30 equity $9,686.77 vs yday $9,545.23 (+141.54) | 09:30 open · cash $8.13 (unchanged overnight, no fees) · equity $9,686.77 vs prior close $9,545.23 (+141.54) · 1 name(s) re-marked at the open (per-name table). USDE×674 yday $14.15 → 09:30 $14.36 +141.54 | — |
 | 2026-10-05 09:30 ET | **SELL** | `USDE` | 674 | $14.36 | $8.88 | $-610.70 | $9,677.89 | ▼ -610.70 after sell → book $9,677.89; vs 09:30 mark -8.88 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,677.89 | ▲ close $9,677.89 vs 09:30 $9,686.77 (session +0.00) | 16:00 close · cash $9,677.89 · no lots left · equity $9,677.89. | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,677.89 | ▲ 09:30 equity $9,677.89 vs yday $9,677.89 (+0.00) | 09:30 open · cash $9,677.89 · no holdings · equity $9,677.89 vs prior close $9,677.89 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,677.89 | ▲ close $9,677.89 vs 09:30 $9,677.89 (session +0.00) | 16:00 close · cash $9,677.89 · no lots left · equity $9,677.89. | — |
 
 ## Not taken
 

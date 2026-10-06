@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · union looker: 0 red cameras + yesterday up, rank +G−R
 
-Cash book **-12.26%** ($8,774) · signal-only (no cash/fees) was +1.95%. Starts YES **3/30**. Fills 223 · skips 2 · realized $-327.39.
+Cash book **-13.06%** ($8,694) · signal-only (no cash/fees) was +1.95%. Starts YES **3/30**. Fills 231 · skips 2 · realized $-327.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -371,6 +371,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **SELL** | `SNPS` | 2 | $496.25 | $2.02 | $-7.22 | $8,842.61 | ▼ -7.22 after sell → book $8,842.61; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-05 09:30 ET | **BUY** | `NTAP` | 39 | $225.47 | $2.11 | — | $47.18 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list ohlc_hot; ⚪; ret5=+12.5; leftover $8842.61 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $47.18 | ▼ close $8,774.21 vs 09:30 $8,866.04 (session -66.30) | 16:00 close · cash $47.18 · equity $8,774.21 vs 09:30 $8,866.04 (-91.83; session marks -66.30) · 1 name(s) marked open→close (per-name table). NTAP×39 09:30 $225.47 → close $223.77 -66.30 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $47.18 | ▲ 09:30 equity $8,814.38 vs yday $8,774.21 (+40.17) | 09:30 open · cash $47.18 (unchanged overnight, no fees) · equity $8,814.38 vs prior close $8,774.21 (+40.17) · 1 name(s) re-marked at the open (per-name table). NTAP×39 yday $223.77 → 09:30 $224.80 +40.17 | — |
+| 2026-10-06 09:30 ET | **SELL** | `NTAP` | 39 | $224.80 | $2.19 | $-30.42 | $8,812.19 | ▼ -30.42 after sell → book $8,812.19; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `AVPT` | 85 | $14.77 | $2.25 | — | $7,554.50 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list flatten; ⚪; ret5=+7.2; leftover $1258.88 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `GWRE` | 7 | $165.00 | $2.01 | — | $6,397.49 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+12.4; leftover $1258.88 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PTC` | 6 | $193.00 | $2.01 | — | $5,237.48 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+37.6; leftover $1258.88 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `IOT` | 29 | $42.70 | $2.08 | — | $3,997.10 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list ohlc_hot; ⚪; ret5=+11.8; leftover $1258.88 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PDFS` | 22 | $56.89 | $2.06 | — | $2,743.47 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list flatten; 🔵; ⚪; ret5=+12.7; leftover $1258.88 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `SHOP` | 7 | $166.02 | $2.01 | — | $1,579.31 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+11.2; leftover $1258.88 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `TOST` | 41 | $30.07 | $2.11 | — | $344.33 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate yday_up=True,zero_red=True; rank cond; list flatten; ⚪; ret5=-1.1; leftover $1258.88 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $344.33 | ▼ close $8,693.59 vs 09:30 $8,814.38 (session -104.08) | 16:00 close · cash $344.33 · equity $8,693.59 vs 09:30 $8,814.38 (-120.79; session marks -104.08) · 7 name(s) marked open→close (per-name table). AVPT×85 09:30 $14.77 → close $14.59 -15.30; GWRE×7 09:30 $165.00 → close $164.52 -3.36; PTC×6 09:30 $193.00 → close $193.00 +0.00; IOT×29 09:30 $42.70 → close $41.74 -27.84; PDFS×22 09:30 $56.89 → close $54.44 -53.90; SHOP×7 09:30 $166.02 → close $164.44 -11.06; TOST×41 09:30 $30.07 → close $30.25 +7.38 | — |
 
 ## Not taken
 

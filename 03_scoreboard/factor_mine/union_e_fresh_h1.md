@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **-9.67%** ($9,033) · signal-only (no cash/fees) was +4.74%. Starts YES **24/30**. Fills 198 · skips 56 · realized $+1231.21.
+Cash book **-7.78%** ($9,222) · signal-only (no cash/fees) was +4.74%. Starts YES **24/30**. Fills 199 · skips 56 · realized $+1231.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -345,6 +345,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **SELL** | `ACN` | 10 | $196.30 | $2.05 | $-200.87 | $1,967.11 | ▼ -200.87 after sell → book $9,035.49; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | — |
 | 2026-10-05 09:30 ET | **SELL** | `NKE` | 209 | $33.82 | $2.79 | $+259.32 | $9,032.71 | ▲ +259.32 after sell → book $9,032.71; vs 09:30 mark -2.78 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,032.71 | ▲ close $9,032.71 vs 09:30 $9,037.54 (session +0.00) | 16:00 close · cash $9,032.71 · no lots left · equity $9,032.71. | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,032.71 | ▲ 09:30 equity $9,032.71 vs yday $9,032.71 (+0.00) | 09:30 open · cash $9,032.71 · no holdings · equity $9,032.71 vs prior close $9,032.71 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-06 09:30 ET | **BUY** | `RPM` | 93 | $96.25 | $2.27 | — | $79.19 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-4.9; leftover $9032.71 | join🔴 sector🟢 gen🟡 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $79.19 | ▲ close $9,222.02 vs 09:30 $9,032.71 (session +191.58) | 16:00 close · cash $79.19 · equity $9,222.02 vs 09:30 $9,032.71 (+189.31; session marks +191.58) · 1 name(s) marked open→close (per-name table). RPM×93 09:30 $96.25 → close $98.31 +191.58 | — |
 
 ## Not taken
 

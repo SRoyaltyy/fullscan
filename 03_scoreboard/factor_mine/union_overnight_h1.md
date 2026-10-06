@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-27.04%** ($7,296) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 130 · skips 73 · realized $-2767.20.
+Cash book **-27.75%** ($7,225) · signal-only (no cash/fees) was -26.59%. Starts YES **0/30**. Fills 133 · skips 73 · realized $-2767.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -276,6 +276,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,295.63 | ▲ close $7,295.63 vs 09:30 $7,298.61 (session +0.00) | 16:00 close · cash $7,295.63 · no lots left · equity $7,295.63. | — |
 | 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,295.63 | ▲ 09:30 equity $7,295.63 vs yday $7,295.63 (+0.00) | 09:30 open · cash $7,295.63 · no holdings · equity $7,295.63 vs prior close $7,295.63 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,295.63 | ▲ close $7,295.63 vs 09:30 $7,295.63 (session +0.00) | 16:00 close · cash $7,295.63 · no lots left · equity $7,295.63. | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,295.63 | ▲ 09:30 equity $7,295.63 vs yday $7,295.63 (+0.00) | 09:30 open · cash $7,295.63 · no holdings · equity $7,295.63 vs prior close $7,295.63 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-06 09:30 ET | **BUY** | `NEOG` | 186 | $13.06 | $2.55 | — | $4,863.92 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-5.2; leftover $2431.88 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PENG` | 39 | $61.60 | $2.11 | — | $2,459.42 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=+10.4; leftover $2431.88 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `STZ` | 21 | $113.83 | $2.05 | — | $66.93 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=+0.3; leftover $2431.88 | join🔴 sector🔴 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $66.93 | ▼ close $7,224.75 vs 09:30 $7,295.63 (session -64.17) | 16:00 close · cash $66.93 · equity $7,224.75 vs 09:30 $7,295.63 (-70.88; session marks -64.17) · 3 name(s) marked open→close (per-name table). NEOG×186 09:30 $13.06 → close $11.96 -204.60; PENG×39 09:30 $61.60 → close $64.21 +101.79; STZ×21 09:30 $113.83 → close $115.67 +38.64 | — |
 
 ## Not taken
 

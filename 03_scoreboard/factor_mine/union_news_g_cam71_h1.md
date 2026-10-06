@@ -233,6 +233,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **SELL** | `SNPS` | 3 | $496.25 | $2.02 | $-8.83 | $5,774.11 | ▼ -8.83 after sell → book $7,692.53; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-05 09:30 ET | **SELL** | `WRBY` | 71 | $27.02 | $2.23 | $-47.74 | $7,690.30 | ▼ -47.74 after sell → book $7,690.30; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,690.30 | ▲ close $7,690.30 vs 09:30 $7,698.61 (session +0.00) | 16:00 close · cash $7,690.30 · no lots left · equity $7,690.30. | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,690.30 | ▲ 09:30 equity $7,690.30 vs yday $7,690.30 (+0.00) | 09:30 open · cash $7,690.30 · no holdings · equity $7,690.30 vs prior close $7,690.30 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,690.30 | ▲ close $7,690.30 vs 09:30 $7,690.30 (session +0.00) | 16:00 close · cash $7,690.30 · no lots left · equity $7,690.30. | — |
 
 ## Not taken
 

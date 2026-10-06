@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-22.07%** ($7,793) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 103 · skips 133 · realized $-1334.78.
+Cash book **-28.92%** ($7,108) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 107 · skips 133 · realized $-1334.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -251,6 +251,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17.30 | ▼ close $7,948.75 vs 09:30 $8,097.15 (session -148.35) | 16:00 close · cash $17.30 · equity $7,948.75 vs 09:30 $8,097.15 (-148.40; session marks -148.35) · 3 name(s) marked open→close (per-name table). PRGS×101 09:30 $36.88 → close $36.90 +2.02; TLSA×3751 09:30 $1.16 → close $1.12 -150.04; CMPX×4 09:30 $0.94 → close $0.86 -0.33 | — |
 | 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17.30 | ▲ 09:30 equity $7,959.02 vs yday $7,948.75 (+10.27) | 09:30 open · cash $17.30 (unchanged overnight, no fees) · equity $7,959.02 vs prior close $7,948.75 (+10.27) · 3 name(s) re-marked at the open (per-name table). CMPX×4 yday $0.86 → 09:30 $0.90 +0.17; PRGS×101 yday $36.90 → 09:30 $37.00 +10.10; TLSA×3751 yday $1.12 → 09:30 $1.12 +0.00 | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17.30 | ▼ close $7,793.43 vs 09:30 $7,959.02 (session -165.59) | 16:00 close · cash $17.30 · equity $7,793.43 vs 09:30 $7,959.02 (-165.59; session marks -165.59) · 3 name(s) marked open→close (per-name table). CMPX×4 09:30 $0.90 → close $0.96 +0.24; PRGS×101 09:30 $37.00 → close $37.22 +21.72; TLSA×3751 09:30 $1.12 → close $1.07 -187.55 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17.30 | ▲ 09:30 equity $7,890.83 vs yday $7,793.43 (+97.40) | 09:30 open · cash $17.30 (unchanged overnight, no fees) · equity $7,890.83 vs prior close $7,793.43 (+97.40) · 3 name(s) re-marked at the open (per-name table). CMPX×4 yday $0.96 → 09:30 $0.99 +0.12; PRGS×101 yday $37.22 → 09:30 $37.81 +59.77; TLSA×3751 yday $1.07 → 09:30 $1.08 +37.51 | — |
+| 2026-10-06 09:30 ET | **SELL** | `PRGS` | 101 | $37.81 | $2.34 | $-278.67 | $3,833.45 | ▼ -278.67 after sell → book $7,888.49; vs 09:30 mark -2.34 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **SELL** | `TLSA` | 3751 | $1.08 | $49.04 | $-209.96 | $7,835.48 | ▼ -209.96 after sell → book $7,839.44; vs 09:30 mark -49.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **BUY** | `ALVO` | 645 | $6.07 | $8.32 | — | $3,912.01 | — | combo gate; gate news=good,vol=good; list probable,yday_gainer; ret5=-0.7; leftover $3917.74 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `TWST` | 18 | $209.55 | $2.04 | — | $138.07 | — | combo gate; gate news=good,vol=good; list ohlc_hot; ret5=+14.1; leftover $3917.74 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $138.07 | ▼ close $7,107.82 vs 09:30 $7,890.83 (session -721.26) | 16:00 close · cash $138.07 · equity $7,107.82 vs 09:30 $7,890.83 (-783.01; session marks -721.26) · 3 name(s) marked open→close (per-name table). CMPX×4 09:30 $0.99 → close $1.00 +0.03; ALVO×645 09:30 $6.07 → close $6.14 +45.15; TWST×18 09:30 $209.55 → close $166.97 -766.44 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-5.01%** ($9,499) · signal-only (no cash/fees) was +53.27%. Starts YES **26/30**. Fills 264 · skips 65 · realized $+1139.59.
+Cash book **-6.07%** ($9,393) · signal-only (no cash/fees) was +53.27%. Starts YES **26/30**. Fills 280 · skips 65 · realized $+1139.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -412,6 +412,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `ALGM` | 30 | $39.56 | $2.08 | — | $1,378.52 | — | combo gate; gate ab=good,vol=good; list yday_gainer,ohlc_hot; ret5=+7.5; leftover $1190.36 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `VECO` | 20 | $56.94 | $2.05 | — | $237.67 | — | combo gate; gate ab=good,vol=good; list ohlc_hot; ret5=+15.5; leftover $1190.36 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $237.67 | ▼ close $9,498.70 vs 09:30 $9,549.95 (session -5.75) | 16:00 close · cash $237.67 · equity $9,498.70 vs 09:30 $9,549.95 (-51.25; session marks -5.75) · 8 name(s) marked open→close (per-name table). FEAM×306 09:30 $3.88 → close $3.92 +12.24; SYNA×9 09:30 $120.98 → close $119.73 -11.25; WOLF×34 09:30 $34.04 → close $33.53 -17.34; AZTA×29 09:30 $39.72 → close $42.73 +87.29; VSH×31 09:30 $37.64 → close $37.10 -16.74; RXO×41 09:30 $29.00 → close $28.65 -14.35; ALGM×30 09:30 $39.56 → close $38.46 -33.00; VECO×20 09:30 $56.94 → close $56.31 -12.60 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $237.67 | ▲ 09:30 equity $9,602.44 vs yday $9,498.70 (+103.74) | 09:30 open · cash $237.67 (unchanged overnight, no fees) · equity $9,602.44 vs prior close $9,498.70 (+103.74) · 8 name(s) re-marked at the open (per-name table). ALGM×30 yday $38.46 → 09:30 $38.90 +13.05; AZTA×29 yday $42.73 → 09:30 $43.81 +31.32; FEAM×306 yday $3.92 → 09:30 $3.96 +12.24; RXO×41 yday $28.65 → 09:30 $28.73 +3.28; SYNA×9 yday $119.73 → 09:30 $120.65 +8.28; VECO×20 yday $56.31 → 09:30 $57.24 +18.66; VSH×31 yday $37.10 → 09:30 $37.13 +0.93; WOLF×34 yday $33.53 → 09:30 $34.00 +15.98 | — |
+| 2026-10-06 09:30 ET | **SELL** | `ALGM` | 30 | $38.90 | $2.10 | $-24.13 | $1,402.42 | ▼ -24.13 after sell → book $9,600.34; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `AZTA` | 29 | $43.81 | $2.10 | $+114.44 | $2,670.81 | ▲ +114.44 after sell → book $9,598.24; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `FEAM` | 306 | $3.96 | $4.01 | $+16.52 | $3,878.56 | ▲ +16.52 after sell → book $9,594.23; vs 09:30 mark -4.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `RXO` | 41 | $28.73 | $2.13 | $-15.32 | $5,054.36 | ▼ -15.32 after sell → book $9,592.10; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SELL** | `SYNA` | 9 | $120.65 | $2.04 | $-7.02 | $6,138.17 | ▼ -7.02 after sell → book $9,590.06; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `VECO` | 20 | $57.24 | $2.07 | $+1.94 | $7,280.96 | ▲ +1.94 after sell → book $9,587.99; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `VSH` | 31 | $37.13 | $2.10 | $-20.00 | $8,429.89 | ▼ -20.00 after sell → book $9,585.89; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `WOLF` | 34 | $34.00 | $2.11 | $-5.56 | $9,583.78 | ▼ -5.56 after sell → book $9,583.78; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `AVPT` | 81 | $14.77 | $2.23 | — | $8,385.17 | — | combo gate; gate ab=good,vol=good; list flatten; ⚪; ret5=+7.2; leftover $1197.97 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ALVO` | 197 | $6.07 | $2.58 | — | $7,186.80 | — | combo gate; gate ab=good,vol=good; list probable,yday_gainer; ret5=-0.7; leftover $1197.97 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PTC` | 6 | $193.00 | $2.01 | — | $6,026.80 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+37.6; leftover $1197.97 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `XP` | 41 | $29.20 | $2.11 | — | $4,827.48 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; ret5=+39.1; leftover $1197.97 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PCVX` | 16 | $73.35 | $2.04 | — | $3,651.84 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; ret5=+26.7; leftover $1197.97 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟢 |
+| 2026-10-06 09:30 ET | **BUY** | `PAGS` | 109 | $10.96 | $2.32 | — | $2,454.89 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+23.0; leftover $1197.97 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `NVAX` | 97 | $12.35 | $2.28 | — | $1,254.66 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; ret5=+16.3; leftover $1197.97 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `INTR` | 175 | $6.81 | $2.52 | — | $60.39 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+30.2; leftover $1197.97 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $60.39 | ▼ close $9,392.66 vs 09:30 $9,602.44 (session -173.03) | 16:00 close · cash $60.39 · equity $9,392.66 vs 09:30 $9,602.44 (-209.78; session marks -173.03) · 8 name(s) marked open→close (per-name table). AVPT×81 09:30 $14.77 → close $14.59 -14.58; ALVO×197 09:30 $6.07 → close $6.14 +13.79; PTC×6 09:30 $193.00 → close $193.00 +0.00; XP×41 09:30 $29.20 → close $29.73 +21.73; PCVX×16 09:30 $73.35 → close $66.70 -106.40; PAGS×109 09:30 $10.96 → close $10.72 -26.16; NVAX×97 09:30 $12.35 → close $11.32 -99.91; INTR×175 09:30 $6.81 → close $7.03 +38.50 | — |
 
 ## Not taken
 

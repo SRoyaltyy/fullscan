@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-12.38%** ($8,762) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 290 · skips 93 · realized $-1456.67.
+Cash book **-18.57%** ($8,143) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 306 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -432,6 +432,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `ALGM` | 28 | $39.56 | $2.07 | — | $1,192.55 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+7.5; leftover $1111.60 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `VIAV` | 23 | $47.39 | $2.06 | — | $100.52 | — | baseline list, no extra gate; list ohlc_hot; ret5=+15.8; leftover $1111.60 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $100.52 | ▼ close $8,761.91 vs 09:30 $8,929.79 (session -142.84) | 16:00 close · cash $100.52 · equity $8,761.91 vs 09:30 $8,929.79 (-167.88; session marks -142.84) · 8 name(s) marked open→close (per-name table). GLND×268 09:30 $3.92 → close $3.71 -57.62; VECO×21 09:30 $56.94 → close $56.31 -13.23; WNC×79 09:30 $14.02 → close $13.99 -2.37; PENG×18 09:30 $61.10 → close $60.71 -7.02; MXL×10 09:30 $106.00 → close $105.49 -5.10; VSH×29 09:30 $37.64 → close $37.10 -15.66; ALGM×28 09:30 $39.56 → close $38.46 -30.80; VIAV×23 09:30 $47.39 → close $46.91 -11.04 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $100.52 | ▲ 09:30 equity $8,801.16 vs yday $8,761.91 (+39.25) | 09:30 open · cash $100.52 (unchanged overnight, no fees) · equity $8,801.16 vs prior close $8,761.91 (+39.25) · 8 name(s) re-marked at the open (per-name table). ALGM×28 yday $38.46 → 09:30 $38.90 +12.18; GLND×268 yday $3.71 → 09:30 $3.48 -61.64; MXL×10 yday $105.49 → 09:30 $108.22 +27.30; PENG×18 yday $60.71 → 09:30 $61.60 +16.02; VECO×21 yday $56.31 → 09:30 $57.24 +19.59; VIAV×23 yday $46.91 → 09:30 $47.41 +11.50; VSH×29 yday $37.10 → 09:30 $37.13 +0.87; WNC×79 yday $13.99 → 09:30 $14.16 +13.43 | — |
+| 2026-10-06 09:30 ET | **SELL** | `ALGM` | 28 | $38.90 | $2.09 | $-22.79 | $1,187.49 | ▼ -22.79 after sell → book $8,799.07; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `GLND` | 268 | $3.48 | $3.51 | $-213.33 | $2,116.61 | ▼ -213.33 after sell → book $8,795.56; vs 09:30 mark -3.51 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `MXL` | 10 | $108.22 | $2.04 | $+18.14 | $3,196.77 | ▲ +18.14 after sell → book $8,793.52; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `PENG` | 18 | $61.60 | $2.06 | $+4.89 | $4,303.51 | ▲ +4.89 after sell → book $8,791.45; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SELL** | `VECO` | 21 | $57.24 | $2.07 | $+107.44 | $5,503.54 | ▲ +107.44 after sell → book $8,789.38; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `VIAV` | 23 | $47.41 | $2.08 | $-3.68 | $6,591.89 | ▼ -3.68 after sell → book $8,787.30; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `VSH` | 29 | $37.13 | $2.10 | $-18.96 | $7,666.56 | ▼ -18.96 after sell → book $8,785.20; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `WNC` | 79 | $14.16 | $2.25 | $+6.58 | $8,782.95 | ▲ +6.58 after sell → book $8,782.95; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `CDNA` | 15 | $70.89 | $2.04 | — | $7,717.57 | — | baseline list, no extra gate; list flatten,ohlc_hot; ret5=+8.1; leftover $1097.87 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `QDEL` | 89 | $12.24 | $2.26 | — | $6,626.09 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; ret5=+12.1; leftover $1097.87 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `KOD` | 11 | $93.00 | $2.02 | — | $5,601.07 | — | baseline list, no extra gate; list ohlc_hot; ret5=+4.3; leftover $1097.87 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `TJGC` | 33 | $33.00 | $2.09 | — | $4,509.98 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+15.2; leftover $1097.87 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `GRAL` | 6 | $159.01 | $2.01 | — | $3,553.91 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.2; leftover $1097.87 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `SEER` | 469 | $2.34 | $6.05 | — | $2,450.40 | — | baseline list, no extra gate; list ohlc_hot; ret5=+14.8; leftover $1097.87 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `TWST` | 5 | $209.55 | $2.00 | — | $1,400.65 | — | baseline list, no extra gate; list ohlc_hot; ret5=+14.1; leftover $1097.87 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `MTSI` | 3 | $334.22 | $2.00 | — | $395.99 | — | baseline list, no extra gate; list ohlc_hot; ret5=+17.9; leftover $1097.87 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $395.99 | ▼ close $8,143.02 vs 09:30 $8,801.16 (session -619.47) | 16:00 close · cash $395.99 · equity $8,143.02 vs 09:30 $8,801.16 (-658.14; session marks -619.47) · 8 name(s) marked open→close (per-name table). CDNA×15 09:30 $70.89 → close $63.79 -106.50; QDEL×89 09:30 $12.24 → close $12.57 +29.51; KOD×11 09:30 $93.00 → close $92.34 -7.26; TJGC×33 09:30 $33.00 → close $27.82 -170.94; GRAL×6 09:30 $159.01 → close $137.28 -130.38; SEER×469 09:30 $2.34 → close $2.19 -70.35; TWST×5 09:30 $209.55 → close $166.97 -212.90; MTSI×3 09:30 $334.22 → close $350.67 +49.35 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · flatten looker: 0 red + yesterday up
 
-Cash book **-1.28%** ($9,872) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 75 · skips 119 · realized $-62.52.
+Cash book **-6.28%** ($9,372) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 75 · skips 119 · realized $-62.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -223,6 +223,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $32.22 | ▲ close $9,659.76 vs 09:30 $9,347.23 (session +319.06) | 16:00 close · cash $32.22 · equity $9,659.76 vs 09:30 $9,347.23 (+312.53; session marks +319.06) · 2 name(s) marked open→close (per-name table). CDNA×70 09:30 $66.33 → close $67.15 +57.40; ETON×89 09:30 $52.42 → close $55.36 +261.66 | — |
 | 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $32.22 | ▲ 09:30 equity $9,685.87 vs yday $9,659.76 (+26.11) | 09:30 open · cash $32.22 (unchanged overnight, no fees) · equity $9,685.87 vs prior close $9,659.76 (+26.11) · 2 name(s) re-marked at the open (per-name table). CDNA×70 yday $67.15 → 09:30 $66.90 -17.50; ETON×89 yday $55.36 → 09:30 $55.85 +43.61 | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $32.22 | ▲ close $9,871.90 vs 09:30 $9,685.87 (session +186.03) | 16:00 close · cash $32.22 · equity $9,871.90 vs 09:30 $9,685.87 (+186.03; session marks +186.03) · 2 name(s) marked open→close (per-name table). CDNA×70 09:30 $66.90 → close $69.85 +206.50; ETON×89 09:30 $55.85 → close $55.62 -20.47 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $32.22 | ▲ 09:30 equity $9,991.87 vs yday $9,871.90 (+119.97) | 09:30 open · cash $32.22 (unchanged overnight, no fees) · equity $9,991.87 vs prior close $9,871.90 (+119.97) · 2 name(s) re-marked at the open (per-name table). CDNA×70 yday $69.85 → 09:30 $70.89 +72.80; ETON×89 yday $55.62 → 09:30 $56.15 +47.17 | — |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $32.22 | ▼ close $9,372.05 vs 09:30 $9,991.87 (session -619.82) | 16:00 close · cash $32.22 · equity $9,372.05 vs 09:30 $9,991.87 (-619.82; session marks -619.82) · 2 name(s) marked open→close (per-name table). CDNA×70 09:30 $70.89 → close $63.79 -497.00; ETON×89 09:30 $56.15 → close $54.77 -122.82 | — |
 
 ## Not taken
 

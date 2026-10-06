@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_g_h1/union_earn_react_h3 w=0.5,0.5 net=priority
 
-Cash book **-19.37%** ($8,063) · signal-only (no cash/fees) was —. Starts YES **6/30**. Fills 361 · skips 304 · realized $+1785.21.
+Cash book **-19.55%** ($8,045) · signal-only (no cash/fees) was —. Starts YES **6/30**. Fills 371 · skips 304 · realized $+1785.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $111.45.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $196.02.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -508,6 +508,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `RRC` | 31 | $38.10 | $2.08 | — | $1,303.76 | — | union ∩ news_g, no 🚨; gate news=good; list flatten; ret5=-1.0; combo leftover $1210.65; owner union_news_g_h1 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `ELMT` | 54 | $22.04 | $2.15 | — | $111.45 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; ret5=+12.7; combo leftover $1210.65; owner union_news_g_h1 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $111.45 | ▲ close $8,062.59 vs 09:30 $8,075.51 (session +10.60) | 16:00 close · cash $111.45 · equity $8,062.59 vs 09:30 $8,075.51 (-12.92; session marks +10.60) · 7 name(s) marked open→close (per-name table). ACN×2 09:30 $196.30 → close $195.05 -2.50; MKC×10 09:30 $44.76 → close $45.54 +7.80; NKE×94 09:30 $33.82 → close $33.96 +13.16; PRGS×11 09:30 $37.00 → close $37.22 +2.37; COP×9 09:30 $127.00 → close $128.40 +12.60; RRC×31 09:30 $38.10 → close $38.67 +17.67; ELMT×54 09:30 $22.04 → close $21.29 -40.50 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $111.45 | ▲ 09:30 equity $8,065.22 vs yday $8,062.59 (+2.63) | 09:30 open · cash $111.45 (unchanged overnight, no fees) · equity $8,065.22 vs prior close $8,062.59 (+2.63) | — |
+| 2026-10-06 09:30 ET | **SELL** | `ACN` | 2 | $195.43 | $2.02 | $-45.11 | $500.29 | ▼ -45.11 after sell → book $8,063.21; vs 09:30 mark -2.01 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **SELL** | `COP` | 9 | $128.19 | $2.04 | $+6.66 | $1,651.97 | ▲ +6.66 after sell → book $8,061.17; vs 09:30 mark -2.04 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `ELMT` | 54 | $21.63 | $2.17 | $-26.46 | $2,817.82 | ▼ -26.46 after sell → book $8,059.00; vs 09:30 mark -2.17 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `MKC` | 10 | $45.75 | $2.04 | $-14.56 | $3,273.28 | ▼ -14.56 after sell → book $8,056.96; vs 09:30 mark -2.04 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **SELL** | `PRGS` | 11 | $37.81 | $2.04 | $-33.91 | $3,687.11 | ▼ -33.91 after sell → book $8,054.92; vs 09:30 mark -2.04 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **SELL** | `RRC` | 31 | $38.71 | $2.10 | $+14.72 | $4,885.01 | ▲ +14.72 after sell → book $8,052.81; vs 09:30 mark -2.11 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `RPM` | 25 | $96.25 | $2.06 | — | $2,476.70 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-4.9; combo leftover $2442.51; owner union_earn_react_h3 | join🔴 sector🟢 gen🟡 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ALVO` | 136 | $6.07 | $2.40 | — | $1,648.78 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer; ret5=-0.7; combo leftover $825.57; owner union_news_g_h1 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `SIBN` | 41 | $20.00 | $2.11 | — | $826.67 | — | union ∩ news_g, no 🚨; gate news=good; list probable; ret5=+5.6; combo leftover $825.57; owner union_news_g_h1 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `TWST` | 3 | $209.55 | $2.00 | — | $196.02 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+14.1; combo leftover $825.57; owner union_news_g_h1 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $196.02 | ▲ close $8,044.61 vs 09:30 $8,065.22 (session +0.37) | 16:00 close · cash $196.02 · equity $8,044.61 vs 09:30 $8,065.22 (-20.61; session marks +0.37) · 5 name(s) marked open→close (per-name table). NKE×94 09:30 $33.70 → close $34.61 +85.54; RPM×25 09:30 $96.25 → close $98.31 +51.50; ALVO×136 09:30 $6.07 → close $6.14 +9.52; SIBN×41 09:30 $20.00 → close $19.55 -18.45; TWST×3 09:30 $209.55 → close $166.97 -127.74 | — |
 
 ## Not taken
 

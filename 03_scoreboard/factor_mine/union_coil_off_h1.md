@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-15.12%** ($8,488) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 313 · skips 105 · realized $-1593.31.
+Cash book **-17.86%** ($8,214) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 325 · skips 105 · realized $-1593.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -462,6 +462,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `INIO` | 107 | $20.09 | $2.31 | — | $2,163.21 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; ret5=+4.6; leftover $2165.54 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `ON` | 25 | $85.00 | $2.06 | — | $36.15 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+10.0; leftover $2165.54 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $36.15 | ▼ close $8,487.87 vs 09:30 $8,684.93 (session -147.21) | 16:00 close · cash $36.15 · equity $8,487.87 vs 09:30 $8,684.93 (-197.06; session marks -147.21) · 4 name(s) marked open→close (per-name table). WNC×154 09:30 $14.02 → close $13.99 -4.62; EVGO×1569 09:30 $1.38 → close $1.35 -47.07; INIO×107 09:30 $20.09 → close $18.98 -118.77; ON×25 09:30 $85.00 → close $85.93 +23.25 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $36.15 | ▲ 09:30 equity $8,590.03 vs yday $8,487.87 (+102.16) | 09:30 open · cash $36.15 (unchanged overnight, no fees) · equity $8,590.03 vs prior close $8,487.87 (+102.16) · 4 name(s) re-marked at the open (per-name table). EVGO×1569 yday $1.35 → 09:30 $1.36 +14.28; INIO×107 yday $18.98 → 09:30 $19.33 +37.45; ON×25 yday $85.93 → 09:30 $86.90 +24.25; WNC×154 yday $13.99 → 09:30 $14.16 +26.18 | — |
+| 2026-10-06 09:30 ET | **SELL** | `EVGO` | 1569 | $1.36 | $20.52 | $-73.55 | $2,148.06 | ▼ -73.55 after sell → book $8,569.51; vs 09:30 mark -20.52 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `INIO` | 107 | $19.33 | $2.35 | $-85.98 | $4,214.02 | ▼ -85.98 after sell → book $8,567.16; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `ON` | 25 | $86.90 | $2.09 | $+43.34 | $6,384.43 | ▲ +43.34 after sell → book $8,565.07; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `WNC` | 154 | $14.16 | $2.50 | $+16.61 | $8,562.58 | ▲ +16.61 after sell → book $8,562.58; vs 09:30 mark -2.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `AVPT` | 72 | $14.77 | $2.21 | — | $7,496.93 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ⚪; ret5=+7.2; leftover $1070.32 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `EBS` | 149 | $7.16 | $2.44 | — | $6,427.65 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer,yday_mover; ret5=+5.5; leftover $1070.32 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ARCT` | 72 | $14.70 | $2.21 | — | $5,367.05 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; ret5=+1.4; leftover $1070.32 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `XERS` | 104 | $10.23 | $2.30 | — | $4,300.83 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable; ret5=+3.1; leftover $1070.32 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ZNTL` | 380 | $2.81 | $4.90 | — | $3,228.12 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable; ret5=+6.9; leftover $1070.32 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `SIBN` | 53 | $20.00 | $2.15 | — | $2,165.98 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable; ret5=+5.6; leftover $1070.32 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ILMN` | 3 | $301.58 | $2.00 | — | $1,259.24 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+8.0; leftover $1070.32 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `STZ` | 9 | $113.83 | $2.02 | — | $232.75 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list overnight; ret5=+0.3; leftover $1070.32 | join🔴 sector🔴 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $232.75 | ▼ close $8,214.46 vs 09:30 $8,590.03 (session -327.90) | 16:00 close · cash $232.75 · equity $8,214.46 vs 09:30 $8,590.03 (-375.57; session marks -327.90) · 8 name(s) marked open→close (per-name table). AVPT×72 09:30 $14.77 → close $14.59 -12.96; EBS×149 09:30 $7.16 → close $6.95 -31.29; ARCT×72 09:30 $14.70 → close $13.00 -122.40; XERS×104 09:30 $10.23 → close $10.07 -16.64; ZNTL×380 09:30 $2.81 → close $2.67 -53.20; SIBN×53 09:30 $20.00 → close $19.55 -23.85; ILMN×3 09:30 $301.58 → close $273.54 -84.12; STZ×9 09:30 $113.83 → close $115.67 +16.56 | — |
 
 ## Not taken
 

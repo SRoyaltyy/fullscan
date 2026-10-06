@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-25.37%** ($7,463) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 205 · skips 65 · realized $-814.48.
+Cash book **-29.71%** ($7,029) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 209 · skips 65 · realized $-814.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -352,6 +352,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **SELL** | `WRBY` | 40 | $27.02 | $2.13 | $-28.64 | $7,730.01 | ▼ -28.64 after sell → book $7,730.01; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-05 09:30 ET | **BUY** | `ELMT` | 350 | $22.04 | $4.51 | — | $11.49 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer; ret5=+12.7; leftover $7730.01 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.49 | ▼ close $7,462.99 vs 09:30 $7,758.08 (session -262.50) | 16:00 close · cash $11.49 · equity $7,462.99 vs 09:30 $7,758.08 (-295.09; session marks -262.50) · 1 name(s) marked open→close (per-name table). ELMT×350 09:30 $22.04 → close $21.29 -262.50 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11.49 | ▲ 09:30 equity $7,581.99 vs yday $7,462.99 (+119.00) | 09:30 open · cash $11.49 (unchanged overnight, no fees) · equity $7,581.99 vs prior close $7,462.99 (+119.00) · 1 name(s) re-marked at the open (per-name table). ELMT×350 yday $21.29 → 09:30 $21.63 +119.00 | — |
+| 2026-10-06 09:30 ET | **SELL** | `ELMT` | 350 | $21.63 | $4.63 | $-152.65 | $7,577.36 | ▼ -152.65 after sell → book $7,577.36; vs 09:30 mark -4.63 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `ALVO` | 416 | $6.07 | $5.37 | — | $5,046.87 | — | prior-export headline🟢 only; gate headline=good; rank cond; list probable,yday_gainer; ret5=-0.7; leftover $2525.79 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `SIBN` | 126 | $20.00 | $2.37 | — | $2,524.50 | — | prior-export headline🟢 only; gate headline=good; rank cond; list probable; ret5=+5.6; leftover $2525.79 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `TWST` | 12 | $209.55 | $2.03 | — | $7.88 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+14.1; leftover $2525.79 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.88 | ▼ close $7,029.06 vs 09:30 $7,581.99 (session -538.54) | 16:00 close · cash $7.88 · equity $7,029.06 vs 09:30 $7,581.99 (-552.93; session marks -538.54) · 3 name(s) marked open→close (per-name table). ALVO×416 09:30 $6.07 → close $6.14 +29.12; SIBN×126 09:30 $20.00 → close $19.55 -56.70; TWST×12 09:30 $209.55 → close $166.97 -510.96 | — |
 
 ## Not taken
 

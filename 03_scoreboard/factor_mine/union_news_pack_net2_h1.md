@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **-6.49%** ($9,351) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 74 · skips 28 · realized $+1837.87.
+Cash book **-6.56%** ($9,344) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 76 · skips 28 · realized $+1837.87.
 
 ## How this sleeve decides (like you are 10)
 
@@ -222,6 +222,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `COP` | 36 | $127.00 | $2.10 | — | $4,662.29 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list flatten; ret5=-0.4; leftover $4618.19 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `RRC` | 121 | $38.10 | $2.35 | — | $49.84 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list flatten; ret5=-1.0; leftover $4618.19 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $49.84 | ▲ close $9,351.31 vs 09:30 $9,240.55 (session +119.37) | 16:00 close · cash $49.84 · equity $9,351.31 vs 09:30 $9,240.55 (+110.76; session marks +119.37) · 2 name(s) marked open→close (per-name table). COP×36 09:30 $127.00 → close $128.40 +50.40; RRC×121 09:30 $38.10 → close $38.67 +68.97 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $49.84 | ▼ 09:30 equity $9,348.59 vs yday $9,351.31 (-2.72) | 09:30 open · cash $49.84 (unchanged overnight, no fees) · equity $9,348.59 vs prior close $9,351.31 (-2.72) · 2 name(s) re-marked at the open (per-name table). COP×36 yday $128.40 → 09:30 $128.19 -7.56; RRC×121 yday $38.67 → 09:30 $38.71 +4.84 | — |
+| 2026-10-06 09:30 ET | **SELL** | `COP` | 36 | $128.19 | $2.14 | $+38.60 | $4,662.54 | ▲ +38.60 after sell → book $9,346.45; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `RRC` | 121 | $38.71 | $2.41 | $+69.05 | $9,344.03 | ▲ +69.05 after sell → book $9,344.03; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,344.03 | ▲ close $9,344.03 vs 09:30 $9,348.59 (session +0.00) | 16:00 close · cash $9,344.03 · no lots left · equity $9,344.03. | — |
 
 ## Not taken
 

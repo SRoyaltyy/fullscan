@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+3.10%** ($10,310) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 148 · skips 96 · realized $+54.59.
+Cash book **+4.02%** ($10,402) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 164 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -292,6 +292,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **SHORT** | `NAUT` | 283 | $2.18 | $3.72 | — | $14,063.91 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ⚪; ret5=+103.6; leftover $617.08 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-05 09:30 ET | **SHORT** | `PPC` | 22 | $27.45 | $2.09 | — | $14,665.72 | — | alarm; gate alarm=True; list yday_gainer; ret5=-1.2; leftover $617.08 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,665.72 | ▲ close $10,309.71 vs 09:30 $9,873.25 (session +455.28) | 16:00 close · cash $14,665.72 · equity $10,309.71 vs 09:30 $9,873.25 (+436.46; session marks +455.28) · 8 name(s) marked open→close (per-name table). DVN×12 09:30 $47.64 → close $47.98 -4.08; SM×17 09:30 $35.27 → close $35.05 +3.74; MTDR×11 09:30 $53.35 → close $53.01 +3.74; MYGN×136 09:30 $4.51 → close $4.58 -9.52; MEI×38 09:30 $15.98 → close $15.40 +22.04; SDEV×63 09:30 $9.71 → close $3.94 +363.51; NAUT×283 09:30 $2.18 → close $1.87 +87.73; PPC×22 09:30 $27.45 → close $27.99 -11.88 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,665.72 | ▲ 09:30 equity $10,341.69 vs yday $10,309.71 (+31.98) | 09:30 open · cash $14,665.72 (unchanged overnight, no fees) · equity $10,341.69 vs prior close $10,309.71 (+31.98) · 8 name(s) re-marked at the open (per-name table). DVN×12 yday $47.98 → 09:30 $47.48 +6.06; MEI×38 yday $15.40 → 09:30 $15.50 -3.80; MTDR×11 yday $53.01 → 09:30 $52.56 +4.95; MYGN×136 yday $4.58 → 09:30 $4.62 -5.44; NAUT×283 yday $1.87 → 09:30 $1.87 -0.00; PPC×22 yday $27.99 → 09:30 $28.05 -1.32; SDEV×63 yday $3.94 → 09:30 $3.48 +28.98; SM×17 yday $35.05 → 09:30 $34.90 +2.55 | — |
+| 2026-10-06 09:30 ET | **COVER** | `DVN` | 12 | $47.48 | $2.03 | $-2.11 | $14,093.99 | ▼ -2.11 after sell → book $10,339.66; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `MEI` | 38 | $15.50 | $2.10 | $+14.00 | $13,502.89 | ▲ +14.00 after sell → book $10,337.56; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `MTDR` | 11 | $52.56 | $2.02 | $+4.61 | $12,922.71 | ▲ +4.61 after sell → book $10,335.54; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `MYGN` | 136 | $4.62 | $2.40 | $-19.81 | $12,291.99 | ▼ -19.81 after sell → book $10,333.14; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `NAUT` | 283 | $1.87 | $3.65 | $+80.35 | $11,759.13 | ▲ +80.35 after sell → book $10,329.49; vs 09:30 mark -3.65 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `PPC` | 22 | $28.05 | $2.06 | $-17.35 | $11,139.97 | ▼ -17.35 after sell → book $10,327.43; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `SDEV` | 63 | $3.48 | $2.18 | $+388.09 | $10,918.55 | ▲ +388.09 after sell → book $10,325.25; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **COVER** | `SM` | 17 | $34.90 | $2.04 | $+2.17 | $10,323.21 | ▲ +2.17 after sell → book $10,323.21; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SHORT** | `CDNA` | 9 | $70.89 | $2.05 | — | $10,959.17 | — | alarm; gate alarm=True; list flatten,ohlc_hot; ret5=+8.1; leftover $645.20 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `NTAP` | 2 | $224.80 | $2.03 | — | $11,406.74 | — | alarm; gate alarm=True; list flatten; ⚪; ret5=+9.5; leftover $645.20 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `CMPX` | 651 | $0.99 | $8.50 | — | $12,042.73 | — | alarm; gate alarm=True; list probable,yday_gainer; ret5=-13.5; leftover $645.20 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `ONT` | 45 | $14.27 | $2.16 | — | $12,682.72 | — | alarm; gate alarm=True; list probable,yday_gainer; ret5=-2.9; leftover $645.20 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `RXO` | 22 | $28.73 | $2.09 | — | $13,312.68 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+42.2; leftover $645.20 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `ITUB` | 63 | $10.11 | $2.22 | — | $13,947.40 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+24.2; leftover $645.20 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `ARCO` | 79 | $8.10 | $2.27 | — | $14,585.03 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+13.4; leftover $645.20 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `PACB` | 215 | $2.99 | $2.84 | — | $15,225.04 | — | alarm; gate alarm=True; list yday_gainer; ret5=+67.8; leftover $645.20 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,225.04 | ▲ close $10,401.56 vs 09:30 $10,341.69 (session +102.51) | 16:00 close · cash $15,225.04 · equity $10,401.56 vs 09:30 $10,341.69 (+59.87; session marks +102.51) · 8 name(s) marked open→close (per-name table). CDNA×9 09:30 $70.89 → close $63.79 +63.90; NTAP×2 09:30 $224.80 → close $228.45 -7.30; CMPX×651 09:30 $0.99 → close $1.00 -5.27; ONT×45 09:30 $14.27 → close $14.52 -11.25; RXO×22 09:30 $28.73 → close $28.54 +4.18; ITUB×63 09:30 $10.11 → close $10.15 -2.52; ARCO×79 09:30 $8.10 → close $8.12 -1.58; PACB×215 09:30 $2.99 → close $2.70 +62.35 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-6.01%** ($9,399) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 215 · skips 71 · realized $-1788.82.
+Cash book **-6.91%** ($9,309) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 224 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -361,6 +361,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **SELL** | `PBF` | 17 | $80.63 | $2.06 | $-16.17 | $9,735.84 | ▼ -16.17 after sell → book $9,735.84; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-05 09:30 ET | **BUY** | `ELMT` | 441 | $22.04 | $5.69 | — | $10.51 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; ret5=+12.7; leftover $9735.84 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10.51 | ▼ close $9,399.40 vs 09:30 $9,750.93 (session -330.75) | 16:00 close · cash $10.51 · equity $9,399.40 vs 09:30 $9,750.93 (-351.53; session marks -330.75) · 1 name(s) marked open→close (per-name table). ELMT×441 09:30 $22.04 → close $21.29 -330.75 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10.51 | ▲ 09:30 equity $9,549.34 vs yday $9,399.40 (+149.94) | 09:30 open · cash $10.51 (unchanged overnight, no fees) · equity $9,549.34 vs prior close $9,399.40 (+149.94) · 1 name(s) re-marked at the open (per-name table). ELMT×441 yday $21.29 → 09:30 $21.63 +149.94 | — |
+| 2026-10-06 09:30 ET | **SELL** | `ELMT` | 441 | $21.63 | $5.84 | $-192.34 | $9,543.50 | ▼ -192.34 after sell → book $9,543.50; vs 09:30 mark -5.84 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `EBS` | 166 | $7.16 | $2.49 | — | $8,352.45 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer,yday_mover; ret5=+5.5; leftover $1192.94 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `SIBN` | 59 | $20.00 | $2.17 | — | $7,170.29 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable; ret5=+5.6; leftover $1192.94 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `XP` | 40 | $29.20 | $2.11 | — | $6,000.18 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; ret5=+39.1; leftover $1192.94 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PCVX` | 16 | $73.35 | $2.04 | — | $4,824.54 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; ret5=+26.7; leftover $1192.94 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟢 |
+| 2026-10-06 09:30 ET | **BUY** | `PAGS` | 108 | $10.96 | $2.31 | — | $3,638.54 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; 🔵; ret5=+23.0; leftover $1192.94 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `NVAX` | 96 | $12.35 | $2.28 | — | $2,450.67 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; ret5=+16.3; leftover $1192.94 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `INTR` | 175 | $6.81 | $2.52 | — | $1,256.40 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; 🔵; ret5=+30.2; leftover $1192.94 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `NU` | 77 | $15.45 | $2.22 | — | $64.53 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ret5=+24.1; leftover $1192.94 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $64.53 | ▼ close $9,308.63 vs 09:30 $9,549.34 (session -216.74) | 16:00 close · cash $64.53 · equity $9,308.63 vs 09:30 $9,549.34 (-240.71; session marks -216.74) · 8 name(s) marked open→close (per-name table). EBS×166 09:30 $7.16 → close $6.95 -34.86; SIBN×59 09:30 $20.00 → close $19.55 -26.55; XP×40 09:30 $29.20 → close $29.73 +21.20; PCVX×16 09:30 $73.35 → close $66.70 -106.40; PAGS×108 09:30 $10.96 → close $10.72 -25.92; NVAX×96 09:30 $12.35 → close $11.32 -98.88; INTR×175 09:30 $6.81 → close $7.03 +38.50; NU×77 09:30 $15.45 → close $15.66 +16.17 | — |
 
 ## Not taken
 

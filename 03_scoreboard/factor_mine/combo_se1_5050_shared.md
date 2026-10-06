@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h1 w=0.5,0.5 net=priority
 
-Cash book **-21.51%** ($7,849) · signal-only (no cash/fees) was —. Starts YES **1/30**. Fills 299 · skips 162 · realized $+1198.48.
+Cash book **-19.66%** ($8,034) · signal-only (no cash/fees) was —. Starts YES **1/30**. Fills 303 · skips 162 · realized $+1198.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $15,459.32.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,748.83.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -446,6 +446,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **SHORT** | `SG` | 107 | $9.24 | $2.37 | — | $14,504.44 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+10.4; combo leftover $992.47; owner short_news_r_h3 | join🟡 sector🟢 gen🟡 news🔴 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-05 09:30 ET | **SHORT** | `AXTI` | 11 | $87.00 | $2.07 | — | $15,459.32 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+8.8; combo leftover $992.47; owner short_news_r_h3 | join🟢 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,459.32 | ▼ close $7,848.88 vs 09:30 $7,941.78 (session -82.31) | 16:00 close · cash $15,459.32 · equity $7,848.88 vs 09:30 $7,941.78 (-92.90; session marks -82.31) · 6 name(s) marked open→close (per-name table). NKE×56 09:30 $33.82 → close $33.96 -7.84; PYXS×868 09:30 $2.12 → close $2.24 -104.16; MXL×9 09:30 $106.00 → close $105.49 +4.59; TER×2 09:30 $447.21 → close $444.53 +5.36; SG×107 09:30 $9.24 → close $9.09 +16.05; AXTI×11 09:30 $87.00 → close $86.66 +3.69 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,459.32 | ▼ 09:30 equity $7,843.13 vs yday $7,848.88 (-5.75) | 09:30 open · cash $15,459.32 (unchanged overnight, no fees) · equity $7,843.13 vs prior close $7,848.88 (-5.75) | — |
+| 2026-10-06 09:30 ET | **COVER** | `NKE` | 56 | $33.70 | $2.16 | $+93.60 | $13,569.96 | ▲ +93.60 after sell → book $7,840.97; vs 09:30 mark -2.16 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **COVER** | `PYXS` | 868 | $2.22 | $11.20 | $+55.51 | $11,631.80 | ▲ +55.51 after sell → book $7,829.77; vs 09:30 mark -11.20 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **BUY** | `RPM` | 60 | $96.25 | $2.17 | — | $5,854.63 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-4.9; combo leftover $5815.90; owner union_e_fresh_h1 | join🔴 sector🟢 gen🟡 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `TRMD` | 99 | $39.36 | $2.44 | — | $9,748.83 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+15.9; combo leftover $3913.80; owner short_news_r_h3 | join🔴 sector🔴 gen🟡 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,748.83 | ▲ close $8,034.50 vs 09:30 $7,843.13 (session +209.34) | 16:00 close · cash $9,748.83 · equity $8,034.50 vs 09:30 $7,843.13 (+191.37; session marks +209.34) · 6 name(s) marked open→close (per-name table). AXTI×11 09:30 $87.85 → close $84.06 +41.69; MXL×9 09:30 $108.22 → close $109.30 -9.72; SG×107 09:30 $9.08 → close $9.14 -6.42; TER×2 09:30 $445.07 → close $430.32 +29.50; RPM×60 09:30 $96.25 → close $98.31 +123.60; TRMD×99 09:30 $39.36 → close $39.05 +30.69 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-6.84%** ($9,316) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 297 · skips 96 · realized $-120.43.
+Cash book **-9.73%** ($9,027) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 308 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -445,6 +445,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `INIO` | 82 | $20.09 | $2.24 | — | $1,703.43 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer; ret5=+4.6; leftover $1665.03 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `EVGO` | 1206 | $1.38 | $15.56 | — | $23.59 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer; ret5=+0.0; leftover $1665.03 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.59 | ▼ close $9,316.38 vs 09:30 $9,531.46 (session -174.45) | 16:00 close · cash $23.59 · equity $9,316.38 vs 09:30 $9,531.46 (-215.08; session marks -174.45) · 6 name(s) marked open→close (per-name table). ON×14 09:30 $85.00 → close $85.93 +13.02; PENG×27 09:30 $61.10 → close $60.71 -10.53; ALGM×42 09:30 $39.56 → close $38.46 -46.20; WNC×118 09:30 $14.02 → close $13.99 -3.54; INIO×82 09:30 $20.09 → close $18.98 -91.02; EVGO×1206 09:30 $1.38 → close $1.35 -36.18 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23.59 | ▲ 09:30 equity $9,431.99 vs yday $9,316.38 (+115.61) | 09:30 open · cash $23.59 (unchanged overnight, no fees) · equity $9,431.99 vs prior close $9,316.38 (+115.61) · 6 name(s) re-marked at the open (per-name table). ALGM×42 yday $38.46 → 09:30 $38.90 +18.27; EVGO×1206 yday $1.35 → 09:30 $1.36 +10.97; INIO×82 yday $18.98 → 09:30 $19.33 +28.70; ON×14 yday $85.93 → 09:30 $86.90 +13.58; PENG×27 yday $60.71 → 09:30 $61.60 +24.03; WNC×118 yday $13.99 → 09:30 $14.16 +20.06 | — |
+| 2026-10-06 09:30 ET | **SELL** | `ALGM` | 42 | $38.90 | $2.14 | $-32.19 | $1,655.04 | ▼ -32.19 after sell → book $9,429.86; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `EVGO` | 1206 | $1.36 | $15.77 | $-56.53 | $3,278.34 | ▼ -56.53 after sell → book $9,414.08; vs 09:30 mark -15.78 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `INIO` | 82 | $19.33 | $2.26 | $-66.82 | $4,861.14 | ▼ -66.82 after sell → book $9,411.82; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `ON` | 14 | $86.90 | $2.05 | $+26.02 | $6,075.69 | ▲ +26.02 after sell → book $9,409.77; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `PENG` | 27 | $61.60 | $2.09 | $+9.33 | $7,736.80 | ▲ +9.33 after sell → book $9,407.68; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SELL** | `WNC` | 118 | $14.16 | $2.38 | $+11.80 | $9,405.30 | ▲ +11.80 after sell → book $9,405.30; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `EBS` | 262 | $7.16 | $3.38 | — | $7,526.00 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover; ret5=+5.5; leftover $1881.06 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `AVPT` | 127 | $14.77 | $2.37 | — | $5,647.84 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; ⚪; ret5=+7.2; leftover $1881.06 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `SIBN` | 94 | $20.00 | $2.27 | — | $3,765.57 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable; ret5=+5.6; leftover $1881.06 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `XERS` | 183 | $10.23 | $2.54 | — | $1,890.94 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable; ret5=+3.1; leftover $1881.06 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ARCT` | 127 | $14.70 | $2.37 | — | $21.67 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer; ret5=+1.4; leftover $1881.06 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.67 | ▼ close $9,027.01 vs 09:30 $9,431.99 (session -365.36) | 16:00 close · cash $21.67 · equity $9,027.01 vs 09:30 $9,431.99 (-404.98; session marks -365.36) · 5 name(s) marked open→close (per-name table). EBS×262 09:30 $7.16 → close $6.95 -55.02; AVPT×127 09:30 $14.77 → close $14.59 -22.86; SIBN×94 09:30 $20.00 → close $19.55 -42.30; XERS×183 09:30 $10.23 → close $10.07 -29.28; ARCT×127 09:30 $14.70 → close $13.00 -215.90 | — |
 
 ## Not taken
 

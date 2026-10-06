@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **+0.65%** ($10,065) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 96 · skips 27 · realized $+766.09.
+Cash book **+4.88%** ($10,488) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 97 · skips 27 · realized $+766.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -242,6 +242,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **SELL** | `ETON` | 91 | $55.85 | $2.32 | $+307.55 | $5,095.54 | ▲ +307.55 after sell → book $10,067.08; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-05 09:30 ET | **SELL** | `NKE` | 147 | $33.82 | $2.50 | $+181.32 | $10,064.59 | ▲ +181.32 after sell → book $10,064.59; vs 09:30 mark -2.49 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,064.59 | ▲ close $10,064.59 vs 09:30 $10,069.40 (session +0.00) | 16:00 close · cash $10,064.59 · no lots left · equity $10,064.59. | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,064.59 | ▲ 09:30 equity $10,064.59 vs yday $10,064.59 (+0.00) | 09:30 open · cash $10,064.59 · no holdings · equity $10,064.59 vs prior close $10,064.59 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-06 09:30 ET | **BUY** | `PENG` | 163 | $61.60 | $2.48 | — | $21.31 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list overnight; 🔵; ret5=+10.4; leftover $10064.59 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.31 | ▲ close $10,487.54 vs 09:30 $10,064.59 (session +425.43) | 16:00 close · cash $21.31 · equity $10,487.54 vs 09:30 $10,064.59 (+422.95; session marks +425.43) · 1 name(s) marked open→close (per-name table). PENG×163 09:30 $61.60 → close $64.21 +425.43 | — |
 
 ## Not taken
 

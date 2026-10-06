@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **-1.16%** ($9,884) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 312 · skips 107 · realized $-717.78.
+Cash book **+0.11%** ($10,011) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 328 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -456,6 +456,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **SHORT** | `SRFM` | 625 | $0.98 | $8.13 | — | $14,036.11 | — | last bar red; gate last_red=True; list yday_mover; ret5=-12.4; leftover $613.13 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 09:30 ET | **SHORT** | `ECX` | 695 | $0.88 | $8.36 | — | $14,640.67 | — | last bar red; gate last_red=True; list yday_mover; ret5=-21.2; leftover $613.13 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,640.67 | ▲ close $9,883.71 vs 09:30 $9,826.32 (session +110.50) | 16:00 close · cash $14,640.67 · equity $9,883.71 vs 09:30 $9,826.32 (+57.39; session marks +110.50) · 8 name(s) marked open→close (per-name table). EXE×7 09:30 $84.70 → close $86.43 -12.11; SYNA×5 09:30 $120.98 → close $119.73 +6.25; FHTX×303 09:30 $2.02 → close $2.00 +6.06; IART×48 09:30 $12.65 → close $13.29 -30.72; GLND×156 09:30 $3.92 → close $3.71 +33.54; LU×578 09:30 $1.06 → close $1.03 +17.34; SRFM×625 09:30 $0.98 → close $0.89 +55.88; ECX×695 09:30 $0.88 → close $0.83 +34.26 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,640.67 | ▲ 09:30 equity $9,886.61 vs yday $9,883.71 (+2.90) | 09:30 open · cash $14,640.67 (unchanged overnight, no fees) · equity $9,886.61 vs prior close $9,883.71 (+2.90) · 8 name(s) re-marked at the open (per-name table). ECX×695 yday $0.83 → 09:30 $0.83 -0.00; EXE×7 yday $86.43 → 09:30 $86.38 +0.35; FHTX×303 yday $2.00 → 09:30 $2.00 -0.00; GLND×156 yday $3.71 → 09:30 $3.48 +35.88; IART×48 yday $13.29 → 09:30 $13.41 -5.76; LU×578 yday $1.03 → 09:30 $1.02 +5.78; SRFM×625 yday $0.89 → 09:30 $0.94 -28.75; SYNA×5 yday $119.73 → 09:30 $120.65 -4.60 | — |
+| 2026-10-06 09:30 ET | **COVER** | `ECX` | 695 | $0.83 | $7.87 | $+18.04 | $14,054.14 | ▲ +18.04 after sell → book $9,878.74; vs 09:30 mark -7.87 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `EXE` | 7 | $86.38 | $2.01 | $-15.82 | $13,447.47 | ▼ -15.82 after sell → book $9,876.73; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `FHTX` | 303 | $2.00 | $3.91 | $-1.83 | $12,837.56 | ▼ -1.83 after sell → book $9,872.82; vs 09:30 mark -3.91 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `GLND` | 156 | $3.48 | $2.46 | $+64.45 | $12,292.22 | ▲ +64.45 after sell → book $9,870.36; vs 09:30 mark -2.46 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `IART` | 48 | $13.41 | $2.13 | $-40.78 | $11,646.41 | ▼ -40.78 after sell → book $9,868.22; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `LU` | 578 | $1.02 | $7.46 | $+8.08 | $11,049.39 | ▲ +8.08 after sell → book $9,860.77; vs 09:30 mark -7.45 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `SRFM` | 625 | $0.94 | $7.73 | $+11.27 | $10,456.29 | ▲ +11.27 after sell → book $9,853.04; vs 09:30 mark -7.73 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `SYNA` | 5 | $120.65 | $2.00 | $-2.40 | $9,851.03 | ▼ -2.40 after sell → book $9,851.03; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SHORT** | `SN` | 3 | $183.47 | $2.03 | — | $10,399.41 | — | last bar red; gate last_red=True; list flatten; ret5=+0.4; leftover $615.69 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `NTAP` | 2 | $224.80 | $2.03 | — | $10,846.98 | — | last bar red; gate last_red=True; list flatten; ⚪; ret5=+9.5; leftover $615.69 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `PTC` | 3 | $193.00 | $2.03 | — | $11,423.95 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+37.6; leftover $615.69 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `PCVX` | 8 | $73.35 | $2.05 | — | $12,008.70 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=+26.7; leftover $615.69 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟢 |
+| 2026-10-06 09:30 ET | **SHORT** | `RXO` | 21 | $28.73 | $2.09 | — | $12,609.94 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=+42.2; leftover $615.69 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `SDEV` | 176 | $3.48 | $2.57 | — | $13,219.84 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=+151.0; leftover $615.69 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `NXH` | 301 | $2.04 | $3.96 | — | $13,829.92 | — | last bar red; gate last_red=True; list yday_mover; ret5=-33.3; leftover $615.69 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `QSI` | 477 | $1.29 | $6.26 | — | $14,438.99 | — | last bar red; gate last_red=True; list yday_mover; ret5=+61.0; leftover $615.69 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,438.99 | ▲ close $10,011.22 vs 09:30 $9,886.61 (session +183.22) | 16:00 close · cash $14,438.99 · equity $10,011.22 vs 09:30 $9,886.61 (+124.61; session marks +183.22) · 8 name(s) marked open→close (per-name table). SN×3 09:30 $183.47 → close $184.72 -3.75; NTAP×2 09:30 $224.80 → close $228.45 -7.30; PTC×3 09:30 $193.00 → close $193.00 -0.00; PCVX×8 09:30 $73.35 → close $66.70 +53.20; RXO×21 09:30 $28.73 → close $28.54 +3.99; SDEV×176 09:30 $3.48 → close $3.25 +40.48; NXH×301 09:30 $2.04 → close $1.83 +63.21; QSI×477 09:30 $1.29 → close $1.22 +33.39 | — |
 
 ## Not taken
 

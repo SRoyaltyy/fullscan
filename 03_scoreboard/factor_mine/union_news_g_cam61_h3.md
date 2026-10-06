@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +6 −≤1
 
-Cash book **-27.09%** ($7,291) · signal-only (no cash/fees) was -22.84%. Starts YES **1/30**. Fills 78 · skips 85 · realized $-2058.05.
+Cash book **-26.42%** ($7,358) · signal-only (no cash/fees) was -22.84%. Starts YES **1/30**. Fills 80 · skips 85 · realized $-2058.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -227,6 +227,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $100.29 | ▲ close $7,304.78 vs 09:30 $7,135.68 (session +169.10) | 16:00 close · cash $100.29 · equity $7,304.78 vs 09:30 $7,135.68 (+169.10; session marks +169.10) · 2 name(s) marked open→close (per-name table). NTAP×17 09:30 $216.43 → close $226.27 +167.28; PRGS×91 09:30 $36.88 → close $36.90 +1.82 | — |
 | 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $100.29 | ▼ 09:30 equity $7,300.28 vs yday $7,304.78 (-4.50) | 09:30 open · cash $100.29 (unchanged overnight, no fees) · equity $7,300.28 vs prior close $7,304.78 (-4.50) · 2 name(s) re-marked at the open (per-name table). NTAP×17 yday $226.27 → 09:30 $225.47 -13.60; PRGS×91 yday $36.90 → 09:30 $37.00 +9.10 | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $100.29 | ▼ close $7,290.95 vs 09:30 $7,300.28 (session -9.33) | 16:00 close · cash $100.29 · equity $7,290.95 vs 09:30 $7,300.28 (-9.33; session marks -9.33) · 2 name(s) marked open→close (per-name table). NTAP×17 09:30 $225.47 → close $223.77 -28.90; PRGS×91 09:30 $37.00 → close $37.22 +19.57 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $100.29 | ▲ 09:30 equity $7,362.31 vs yday $7,290.95 (+71.36) | 09:30 open · cash $100.29 (unchanged overnight, no fees) · equity $7,362.31 vs prior close $7,290.95 (+71.36) · 2 name(s) re-marked at the open (per-name table). NTAP×17 yday $223.77 → 09:30 $224.80 +17.51; PRGS×91 yday $37.22 → 09:30 $37.81 +53.85 | — |
+| 2026-10-06 09:30 ET | **SELL** | `NTAP` | 17 | $224.80 | $2.08 | $+217.73 | $3,919.81 | ▲ +217.73 after sell → book $7,360.23; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SELL** | `PRGS` | 91 | $37.81 | $2.31 | $-251.47 | $7,357.92 | ▼ -251.47 after sell → book $7,357.92; vs 09:30 mark -2.31 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,357.92 | ▲ close $7,357.92 vs 09:30 $7,362.31 (session +0.00) | 16:00 close · cash $7,357.92 · no lots left · equity $7,357.92. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `cut_loser` · S-boost `none` · after min-hold, cut −3% losers
 
-Cash book **-11.51%** ($8,849) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 312 · skips 108 · realized $-123.31.
+Cash book **-15.11%** ($8,490) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 328 · skips 108 · realized $-123.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -454,6 +454,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `GPRK` | 100 | $10.87 | $2.29 | — | $1,348.34 | — | after min-hold, cut −3% losers; list flatten; ret5=-3.1; leftover $1094.70 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `OBE` | 106 | $10.26 | $2.31 | — | $258.47 | — | after min-hold, cut −3% losers; list flatten; ret5=-2.7; leftover $1094.70 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $258.47 | ▲ close $8,848.90 vs 09:30 $8,780.50 (session +108.22) | 16:00 close · cash $258.47 · equity $8,848.90 vs 09:30 $8,780.50 (+68.40; session marks +108.22) · 8 name(s) marked open→close (per-name table). COP×8 09:30 $127.00 → close $128.40 +11.20; DVN×22 09:30 $47.64 → close $47.98 +7.48; EXE×12 09:30 $84.70 → close $86.43 +20.76; RRC×28 09:30 $38.10 → close $38.67 +15.96; SM×31 09:30 $35.27 → close $35.05 -6.82; MTDR×20 09:30 $53.35 → close $53.01 -6.80; GPRK×100 09:30 $10.87 → close $11.28 +41.00; OBE×106 09:30 $10.26 → close $10.50 +25.44 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $258.47 | ▼ 09:30 equity $8,820.62 vs yday $8,848.90 (-28.28) | 09:30 open · cash $258.47 (unchanged overnight, no fees) · equity $8,820.62 vs prior close $8,848.90 (-28.28) · 8 name(s) re-marked at the open (per-name table). COP×8 yday $128.40 → 09:30 $128.19 -1.68; DVN×22 yday $47.98 → 09:30 $47.48 -11.11; EXE×12 yday $86.43 → 09:30 $86.38 -0.60; GPRK×100 yday $11.28 → 09:30 $11.32 +4.00; MTDR×20 yday $53.01 → 09:30 $52.56 -9.00; OBE×106 yday $10.50 → 09:30 $10.44 -6.36; RRC×28 yday $38.67 → 09:30 $38.71 +1.12; SM×31 yday $35.05 → 09:30 $34.90 -4.65 | — |
+| 2026-10-06 09:30 ET | **SELL** | `COP` | 8 | $128.19 | $2.03 | $+5.47 | $1,281.96 | ▲ +5.47 after sell → book $8,818.59; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `DVN` | 22 | $47.48 | $2.08 | $-7.76 | $2,324.33 | ▼ -7.76 after sell → book $8,816.51; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `EXE` | 12 | $86.38 | $2.05 | $+16.09 | $3,358.84 | ▲ +16.09 after sell → book $8,814.46; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `GPRK` | 100 | $11.32 | $2.32 | $+40.39 | $4,488.53 | ▲ +40.39 after sell → book $8,812.15; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `MTDR` | 20 | $52.56 | $2.07 | $-19.92 | $5,537.66 | ▼ -19.92 after sell → book $8,810.08; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `OBE` | 106 | $10.44 | $2.34 | $+14.44 | $6,641.96 | ▲ +14.44 after sell → book $8,807.74; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `RRC` | 28 | $38.71 | $2.09 | $+12.91 | $7,723.75 | ▲ +12.91 after sell → book $8,805.65; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `SM` | 31 | $34.90 | $2.10 | $-15.66 | $8,803.54 | ▼ -15.66 after sell → book $8,803.54; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `CDNA` | 15 | $70.89 | $2.04 | — | $7,738.16 | — | after min-hold, cut −3% losers; list flatten,ohlc_hot; ret5=+8.1; leftover $1100.44 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `SN` | 5 | $183.47 | $2.00 | — | $6,818.80 | — | after min-hold, cut −3% losers; list flatten; ret5=+0.4; leftover $1100.44 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `TOST` | 36 | $30.07 | $2.10 | — | $5,734.19 | — | after min-hold, cut −3% losers; list flatten; ⚪; ret5=-1.1; leftover $1100.44 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `NTAP` | 4 | $224.80 | $2.00 | — | $4,832.98 | — | after min-hold, cut −3% losers; list flatten; ⚪; ret5=+9.5; leftover $1100.44 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PDFS` | 19 | $56.89 | $2.05 | — | $3,750.03 | — | after min-hold, cut −3% losers; list flatten; 🔵; ⚪; ret5=+12.7; leftover $1100.44 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `AVPT` | 74 | $14.77 | $2.21 | — | $2,654.84 | — | after min-hold, cut −3% losers; list flatten; ⚪; ret5=+7.2; leftover $1100.44 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `EBS` | 153 | $7.16 | $2.45 | — | $1,556.91 | — | after min-hold, cut −3% losers; list probable,yday_gainer,yday_mover; ret5=+5.5; leftover $1100.44 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ARCT` | 74 | $14.70 | $2.21 | — | $466.89 | — | after min-hold, cut −3% losers; list probable,yday_gainer; ret5=+1.4; leftover $1100.44 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $466.89 | ▼ close $8,489.51 vs 09:30 $8,820.62 (session -296.97) | 16:00 close · cash $466.89 · equity $8,489.51 vs 09:30 $8,820.62 (-331.11; session marks -296.97) · 8 name(s) marked open→close (per-name table). CDNA×15 09:30 $70.89 → close $63.79 -106.50; SN×5 09:30 $183.47 → close $184.72 +6.25; TOST×36 09:30 $30.07 → close $30.25 +6.48; NTAP×4 09:30 $224.80 → close $228.45 +14.60; PDFS×19 09:30 $56.89 → close $54.44 -46.55; AVPT×74 09:30 $14.77 → close $14.59 -13.32; EBS×153 09:30 $7.16 → close $6.95 -32.13; ARCT×74 09:30 $14.70 → close $13.00 -125.80 | — |
 
 ## Not taken
 

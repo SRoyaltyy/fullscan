@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-11.43%** ($8,857) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 332 · skips 105 · realized $-723.91.
+Cash book **-11.95%** ($8,806) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 348 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -477,6 +477,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `ALGM` | 28 | $39.56 | $2.07 | — | $1,773.44 | — | rank by cond; rank cond; list yday_gainer,ohlc_hot; ret5=+7.5; leftover $1125.57 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `ECX` | 1276 | $0.88 | $15.08 | — | $633.05 | — | rank by cond; rank cond; list yday_mover; ret5=-21.2; leftover $1125.57 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $633.05 | ▼ close $8,856.80 vs 09:30 $9,029.00 (session -118.38) | 16:00 close · cash $633.05 · equity $8,856.80 vs 09:30 $9,029.00 (-172.20; session marks -118.38) · 8 name(s) marked open→close (per-name table). NTAP×4 09:30 $225.47 → close $223.77 -6.80; COP×8 09:30 $127.00 → close $128.40 +11.20; RXO×38 09:30 $29.00 → close $28.65 -13.30; VECO×19 09:30 $56.94 → close $56.31 -11.97; FN×2 09:30 $466.00 → close $453.84 -24.32; STM×19 09:30 $56.60 → close $57.68 +20.52; ALGM×28 09:30 $39.56 → close $38.46 -30.80; ECX×1276 09:30 $0.88 → close $0.83 -62.91 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $633.05 | ▲ 09:30 equity $8,908.52 vs yday $8,856.80 (+51.72) | 09:30 open · cash $633.05 (unchanged overnight, no fees) · equity $8,908.52 vs prior close $8,856.80 (+51.72) · 8 name(s) re-marked at the open (per-name table). ALGM×28 yday $38.46 → 09:30 $38.90 +12.18; COP×8 yday $128.40 → 09:30 $128.19 -1.68; ECX×1276 yday $0.83 → 09:30 $0.83 +0.00; FN×2 yday $453.84 → 09:30 $459.35 +11.02; NTAP×4 yday $223.77 → 09:30 $224.80 +4.12; RXO×38 yday $28.65 → 09:30 $28.73 +3.04; STM×19 yday $57.68 → 09:30 $57.96 +5.32; VECO×19 yday $56.31 → 09:30 $57.24 +17.73 | — |
+| 2026-10-06 09:30 ET | **SELL** | `ALGM` | 28 | $38.90 | $2.09 | $-22.79 | $1,720.02 | ▼ -22.79 after sell → book $8,906.43; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `COP` | 8 | $128.19 | $2.03 | $+5.47 | $2,743.50 | ▲ +5.47 after sell → book $8,904.39; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `ECX` | 1276 | $0.83 | $14.67 | $-92.66 | $3,791.23 | ▼ -92.66 after sell → book $8,889.72; vs 09:30 mark -14.67 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `FN` | 2 | $459.35 | $2.02 | $-17.31 | $4,707.91 | ▼ -17.31 after sell → book $8,887.70; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `NTAP` | 4 | $224.80 | $2.02 | $-6.70 | $5,605.09 | ▼ -6.70 after sell → book $8,885.68; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SELL** | `RXO` | 38 | $28.73 | $2.12 | $-14.49 | $6,694.70 | ▼ -14.49 after sell → book $8,883.56; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SELL** | `STM` | 19 | $57.96 | $2.07 | $+21.73 | $7,793.88 | ▲ +21.73 after sell → book $8,881.49; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `VECO` | 19 | $57.24 | $2.07 | $+1.64 | $8,879.42 | ▲ +1.64 after sell → book $8,879.42; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `AVPT` | 75 | $14.77 | $2.21 | — | $7,769.46 | — | rank by cond; rank cond; list flatten; ⚪; ret5=+7.2; leftover $1109.93 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `GWRE` | 6 | $165.00 | $2.01 | — | $6,777.45 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+12.4; leftover $1109.93 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PTC` | 5 | $193.00 | $2.00 | — | $5,810.45 | — | rank by cond; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+37.6; leftover $1109.93 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `IOT` | 25 | $42.70 | $2.06 | — | $4,740.88 | — | rank by cond; rank cond; list ohlc_hot; ⚪; ret5=+11.8; leftover $1109.93 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PDFS` | 19 | $56.89 | $2.05 | — | $3,657.92 | — | rank by cond; rank cond; list flatten; 🔵; ⚪; ret5=+12.7; leftover $1109.93 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `SHOP` | 6 | $166.02 | $2.01 | — | $2,659.80 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+11.2; leftover $1109.93 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `TOST` | 36 | $30.07 | $2.10 | — | $1,575.18 | — | rank by cond; rank cond; list flatten; ⚪; ret5=-1.1; leftover $1109.93 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `BSY` | 31 | $34.92 | $2.08 | — | $490.58 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+11.1; leftover $1109.93 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $490.58 | ▼ close $8,805.52 vs 09:30 $8,908.52 (session -57.38) | 16:00 close · cash $490.58 · equity $8,805.52 vs 09:30 $8,908.52 (-103.00; session marks -57.38) · 8 name(s) marked open→close (per-name table). AVPT×75 09:30 $14.77 → close $14.59 -13.50; GWRE×6 09:30 $165.00 → close $164.52 -2.88; PTC×5 09:30 $193.00 → close $193.00 +0.00; IOT×25 09:30 $42.70 → close $41.74 -24.00; PDFS×19 09:30 $56.89 → close $54.44 -46.55; SHOP×6 09:30 $166.02 → close $164.44 -9.48; TOST×36 09:30 $30.07 → close $30.25 +6.48; BSY×31 09:30 $34.92 → close $35.97 +32.55 | — |
 
 ## Not taken
 

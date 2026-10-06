@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-11.79%** ($8,821) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 315 · skips 107 · realized $-305.80.
+Cash book **-13.77%** ($8,623) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 330 · skips 107 · realized $-305.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -457,6 +457,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `EVGO` | 921 | $1.38 | $11.88 | — | $1,315.01 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+0.0; leftover $1271.41 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `INIO` | 63 | $20.09 | $2.18 | — | $47.17 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+4.6; leftover $1271.41 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $47.17 | ▼ close $8,821.05 vs 09:30 $8,937.95 (session -47.65) | 16:00 close · cash $47.17 · equity $8,821.05 vs 09:30 $8,937.95 (-116.90; session marks -47.65) · 7 name(s) marked open→close (per-name table). WNC×90 09:30 $14.02 → close $13.99 -2.70; INDP×541 09:30 $2.35 → close $2.51 +86.56; MYGN×281 09:30 $4.51 → close $4.58 +19.67; PENG×20 09:30 $61.10 → close $60.71 -7.80; MEI×79 09:30 $15.98 → close $15.40 -45.82; EVGO×921 09:30 $1.38 → close $1.35 -27.63; INIO×63 09:30 $20.09 → close $18.98 -69.93 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $47.17 | ▲ 09:30 equity $8,903.72 vs yday $8,821.05 (+82.67) | 09:30 open · cash $47.17 (unchanged overnight, no fees) · equity $8,903.72 vs prior close $8,821.05 (+82.67) · 7 name(s) re-marked at the open (per-name table). EVGO×921 yday $1.35 → 09:30 $1.36 +8.38; INDP×541 yday $2.51 → 09:30 $2.51 +0.00; INIO×63 yday $18.98 → 09:30 $19.33 +22.05; MEI×79 yday $15.40 → 09:30 $15.50 +7.90; MYGN×281 yday $4.58 → 09:30 $4.62 +11.24; PENG×20 yday $60.71 → 09:30 $61.60 +17.80; WNC×90 yday $13.99 → 09:30 $14.16 +15.30 | — |
+| 2026-10-06 09:30 ET | **SELL** | `EVGO` | 921 | $1.36 | $12.04 | $-43.17 | $1,286.86 | ▼ -43.17 after sell → book $8,891.68; vs 09:30 mark -12.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `INDP` | 541 | $2.51 | $7.08 | $+72.50 | $2,637.69 | ▲ +72.50 after sell → book $8,884.60; vs 09:30 mark -7.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `INIO` | 63 | $19.33 | $2.20 | $-52.26 | $3,853.28 | ▼ -52.26 after sell → book $8,882.40; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `MEI` | 79 | $15.50 | $2.25 | $-42.40 | $5,075.53 | ▼ -42.40 after sell → book $8,880.15; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `MYGN` | 281 | $4.62 | $3.68 | $+23.60 | $6,370.07 | ▲ +23.60 after sell → book $8,876.47; vs 09:30 mark -3.68 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `PENG` | 20 | $61.60 | $2.07 | $+5.88 | $7,600.00 | ▲ +5.88 after sell → book $8,874.40; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SELL** | `WNC` | 90 | $14.16 | $2.29 | $+8.05 | $8,872.11 | ▲ +8.05 after sell → book $8,872.11; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `EBS` | 154 | $7.16 | $2.45 | — | $7,767.02 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=+5.5; leftover $1109.01 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ARCT` | 75 | $14.70 | $2.21 | — | $6,662.30 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+1.4; leftover $1109.01 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `CMPX` | 1120 | $0.99 | $14.39 | — | $5,539.11 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-13.5; leftover $1109.01 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ALVO` | 182 | $6.07 | $2.54 | — | $4,431.84 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-0.7; leftover $1109.01 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ONT` | 77 | $14.27 | $2.22 | — | $3,330.83 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-2.9; leftover $1109.01 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `XERS` | 108 | $10.23 | $2.31 | — | $2,223.67 | — | baseline list, no extra gate; list probable; ret5=+3.1; leftover $1109.01 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ZNTL` | 394 | $2.81 | $5.08 | — | $1,111.45 | — | baseline list, no extra gate; list probable; ret5=+6.9; leftover $1109.01 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `SIBN` | 55 | $20.00 | $2.15 | — | $9.29 | — | baseline list, no extra gate; list probable; ret5=+5.6; leftover $1109.01 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.29 | ▼ close $8,622.78 vs 09:30 $8,903.72 (session -215.97) | 16:00 close · cash $9.29 · equity $8,622.78 vs 09:30 $8,903.72 (-280.94; session marks -215.97) · 8 name(s) marked open→close (per-name table). EBS×154 09:30 $7.16 → close $6.95 -32.34; ARCT×75 09:30 $14.70 → close $13.00 -127.50; CMPX×1120 09:30 $0.99 → close $1.00 +9.07; ALVO×182 09:30 $6.07 → close $6.14 +12.74; ONT×77 09:30 $14.27 → close $14.52 +19.25; XERS×108 09:30 $10.23 → close $10.07 -17.28; ZNTL×394 09:30 $2.81 → close $2.67 -55.16; SIBN×55 09:30 $20.00 → close $19.55 -24.75 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ join_g, no 🚨
 
-Cash book **-11.85%** ($8,815) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 326 · skips 104 · realized $-96.65.
+Cash book **-13.47%** ($8,653) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 342 · skips 104 · realized $-96.65.
 
 ## How this sleeve decides (like you are 10)
 
@@ -472,6 +472,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `ECX` | 1245 | $0.88 | $14.71 | — | $1,259.22 | — | union ∩ join_g, no 🚨; gate join=good; list yday_mover; ret5=-21.2; leftover $1098.70 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `VECO` | 19 | $56.94 | $2.05 | — | $175.31 | — | union ∩ join_g, no 🚨; gate join=good; list ohlc_hot; ret5=+15.5; leftover $1098.70 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $175.31 | ▲ close $8,814.96 vs 09:30 $8,806.05 (session +66.82) | 16:00 close · cash $175.31 · equity $8,814.96 vs 09:30 $8,806.05 (+8.91; session marks +66.82) · 8 name(s) marked open→close (per-name table). COP×8 09:30 $127.00 → close $128.40 +11.20; EXE×12 09:30 $84.70 → close $86.43 +20.76; RRC×28 09:30 $38.10 → close $38.67 +15.96; GPRK×101 09:30 $10.87 → close $11.28 +41.41; INDP×467 09:30 $2.35 → close $2.51 +74.72; EVGO×796 09:30 $1.38 → close $1.35 -23.88; ECX×1245 09:30 $0.88 → close $0.83 -61.38; VECO×19 09:30 $56.94 → close $56.31 -11.97 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $175.31 | ▲ 09:30 equity $8,842.81 vs yday $8,814.96 (+27.85) | 09:30 open · cash $175.31 (unchanged overnight, no fees) · equity $8,842.81 vs prior close $8,814.96 (+27.85) · 8 name(s) re-marked at the open (per-name table). COP×8 yday $128.40 → 09:30 $128.19 -1.68; ECX×1245 yday $0.83 → 09:30 $0.83 +0.00; EVGO×796 yday $1.35 → 09:30 $1.36 +7.24; EXE×12 yday $86.43 → 09:30 $86.38 -0.60; GPRK×101 yday $11.28 → 09:30 $11.32 +4.04; INDP×467 yday $2.51 → 09:30 $2.51 +0.00; RRC×28 yday $38.67 → 09:30 $38.71 +1.12; VECO×19 yday $56.31 → 09:30 $57.24 +17.73 | — |
+| 2026-10-06 09:30 ET | **SELL** | `COP` | 8 | $128.19 | $2.03 | $+5.47 | $1,198.80 | ▲ +5.47 after sell → book $8,840.77; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `ECX` | 1245 | $0.83 | $14.32 | $-90.41 | $2,221.07 | ▼ -90.41 after sell → book $8,826.45; vs 09:30 mark -14.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `EVGO` | 796 | $1.36 | $10.41 | $-37.32 | $3,292.50 | ▼ -37.32 after sell → book $8,816.04; vs 09:30 mark -10.41 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `EXE` | 12 | $86.38 | $2.05 | $+16.09 | $4,327.01 | ▲ +16.09 after sell → book $8,814.00; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `GPRK` | 101 | $11.32 | $2.32 | $+40.84 | $5,468.01 | ▲ +40.84 after sell → book $8,811.68; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `INDP` | 467 | $2.51 | $6.11 | $+62.58 | $6,634.07 | ▲ +62.58 after sell → book $8,805.57; vs 09:30 mark -6.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `RRC` | 28 | $38.71 | $2.09 | $+12.91 | $7,715.86 | ▲ +12.91 after sell → book $8,803.47; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `VECO` | 19 | $57.24 | $2.07 | $+1.64 | $8,801.41 | ▲ +1.64 after sell → book $8,801.41; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `SN` | 5 | $183.47 | $2.00 | — | $7,882.05 | — | union ∩ join_g, no 🚨; gate join=good; list flatten; ret5=+0.4; leftover $1100.18 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `TOST` | 36 | $30.07 | $2.10 | — | $6,797.43 | — | union ∩ join_g, no 🚨; gate join=good; list flatten; ⚪; ret5=-1.1; leftover $1100.18 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PDFS` | 19 | $56.89 | $2.05 | — | $5,714.48 | — | union ∩ join_g, no 🚨; gate join=good; list flatten; 🔵; ⚪; ret5=+12.7; leftover $1100.18 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `AVPT` | 74 | $14.77 | $2.21 | — | $4,619.28 | — | union ∩ join_g, no 🚨; gate join=good; list flatten; ⚪; ret5=+7.2; leftover $1100.18 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `QTEX` | 645 | $1.71 | $8.32 | — | $3,511.24 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer,yday_mover; 🔵; ret5=+123.8; leftover $1100.18 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PTC` | 5 | $193.00 | $2.00 | — | $2,544.23 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+37.6; leftover $1100.18 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `XP` | 37 | $29.20 | $2.10 | — | $1,461.73 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer,yday_mover; ret5=+39.1; leftover $1100.18 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PAGS` | 100 | $10.96 | $2.29 | — | $363.44 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer,yday_mover; 🔵; ret5=+23.0; leftover $1100.18 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $363.44 | ▼ close $8,652.62 vs 09:30 $8,842.81 (session -125.70) | 16:00 close · cash $363.44 · equity $8,652.62 vs 09:30 $8,842.81 (-190.19; session marks -125.70) · 8 name(s) marked open→close (per-name table). SN×5 09:30 $183.47 → close $184.72 +6.25; TOST×36 09:30 $30.07 → close $30.25 +6.48; PDFS×19 09:30 $56.89 → close $54.44 -46.55; AVPT×74 09:30 $14.77 → close $14.59 -13.32; QTEX×645 09:30 $1.71 → close $1.59 -74.17; PTC×5 09:30 $193.00 → close $193.00 +0.00; XP×37 09:30 $29.20 → close $29.73 +19.61; PAGS×100 09:30 $10.96 → close $10.72 -24.00 | — |
 
 ## Not taken
 

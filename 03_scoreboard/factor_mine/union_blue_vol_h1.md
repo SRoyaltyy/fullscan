@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-16.48%** ($8,352) · signal-only (no cash/fees) was -5.26%. Starts YES **0/30**. Fills 288 · skips 56 · realized $-1650.33.
+Cash book **-17.25%** ($8,275) · signal-only (no cash/fees) was -5.26%. Starts YES **0/30**. Fills 296 · skips 56 · realized $-1650.33.
 
 ## How this sleeve decides (like you are 10)
 
@@ -436,6 +436,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **SELL** | `SDEV` | 181 | $9.71 | $2.58 | $+836.54 | $7,404.87 | ▲ +836.54 after sell → book $8,365.17; vs 09:30 mark -2.57 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 09:30 ET | **SELL** | `SES` | 1067 | $0.90 | $12.99 | $+17.31 | $8,352.18 | ▲ +17.31 after sell → book $8,352.18; vs 09:30 mark -12.99 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,352.18 | ▲ close $8,352.18 vs 09:30 $8,386.81 (session +0.00) | 16:00 close · cash $8,352.18 · no lots left · equity $8,352.18. | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,352.18 | ▲ 09:30 equity $8,352.18 vs yday $8,352.18 (+0.00) | 09:30 open · cash $8,352.18 · no holdings · equity $8,352.18 vs prior close $8,352.18 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-06 09:30 ET | **BUY** | `QTEX` | 612 | $1.71 | $7.89 | — | $7,300.83 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+123.8; leftover $1044.02 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PTC` | 5 | $193.00 | $2.00 | — | $6,333.82 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+37.6; leftover $1044.02 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PAGS` | 95 | $10.96 | $2.27 | — | $5,290.35 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+23.0; leftover $1044.02 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `STNE` | 89 | $11.67 | $2.26 | — | $4,249.46 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+24.5; leftover $1044.02 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `INTR` | 153 | $6.81 | $2.45 | — | $3,205.08 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+30.2; leftover $1044.02 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `BBD` | 230 | $4.52 | $2.97 | — | $2,162.51 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+29.4; leftover $1044.02 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `SBS` | 162 | $6.41 | $2.48 | — | $1,121.62 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+21.8; leftover $1044.02 | join🔴 sector🟡 gen🟡 news🟡 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `NU` | 67 | $15.45 | $2.19 | — | $84.28 | — | combo gate; gate blue=True,vol=good; list yday_gainer; 🔵; ret5=+24.1; leftover $1044.02 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $84.28 | ▼ close $8,275.47 vs 09:30 $8,352.18 (session -52.20) | 16:00 close · cash $84.28 · equity $8,275.47 vs 09:30 $8,352.18 (-76.71; session marks -52.20) · 8 name(s) marked open→close (per-name table). QTEX×612 09:30 $1.71 → close $1.59 -70.38; PTC×5 09:30 $193.00 → close $193.00 +0.00; PAGS×95 09:30 $10.96 → close $10.72 -22.80; STNE×89 09:30 $11.67 → close $11.62 -4.45; INTR×153 09:30 $6.81 → close $7.03 +33.66; BBD×230 09:30 $4.52 → close $4.51 -2.30; SBS×162 09:30 $6.41 → close $6.41 +0.00; NU×67 09:30 $15.45 → close $15.66 +14.07 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-14.30%** ($8,570) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 244 · skips 78 · realized $-357.09.
+Cash book **-16.66%** ($8,334) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 258 · skips 78 · realized $-357.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -386,6 +386,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `GPRK` | 97 | $10.87 | $2.28 | — | $1,230.82 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=-3.1; leftover $1060.09 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `OBE` | 103 | $10.26 | $2.30 | — | $171.74 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=-2.7; leftover $1060.09 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $171.74 | ▲ close $8,570.10 vs 09:30 $8,495.18 (session +106.26) | 16:00 close · cash $171.74 · equity $8,570.10 vs 09:30 $8,495.18 (+74.92; session marks +106.26) · 8 name(s) marked open→close (per-name table). COP×8 09:30 $127.00 → close $128.40 +11.20; DVN×22 09:30 $47.64 → close $47.98 +7.48; EXE×12 09:30 $84.70 → close $86.43 +20.76; RRC×27 09:30 $38.10 → close $38.67 +15.39; SM×30 09:30 $35.27 → close $35.05 -6.60; MTDR×19 09:30 $53.35 → close $53.01 -6.46; GPRK×97 09:30 $10.87 → close $11.28 +39.77; OBE×103 09:30 $10.26 → close $10.50 +24.72 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $171.74 | ▼ 09:30 equity $8,542.44 vs yday $8,570.10 (-27.66) | 09:30 open · cash $171.74 (unchanged overnight, no fees) · equity $8,542.44 vs prior close $8,570.10 (-27.66) · 8 name(s) re-marked at the open (per-name table). COP×8 yday $128.40 → 09:30 $128.19 -1.68; DVN×22 yday $47.98 → 09:30 $47.48 -11.11; EXE×12 yday $86.43 → 09:30 $86.38 -0.60; GPRK×97 yday $11.28 → 09:30 $11.32 +3.88; MTDR×19 yday $53.01 → 09:30 $52.56 -8.55; OBE×103 yday $10.50 → 09:30 $10.44 -6.18; RRC×27 yday $38.67 → 09:30 $38.71 +1.08; SM×30 yday $35.05 → 09:30 $34.90 -4.50 | — |
+| 2026-10-06 09:30 ET | **SELL** | `COP` | 8 | $128.19 | $2.03 | $+5.47 | $1,195.23 | ▲ +5.47 after sell → book $8,540.41; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `DVN` | 22 | $47.48 | $2.08 | $-7.76 | $2,237.60 | ▼ -7.76 after sell → book $8,538.33; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `EXE` | 12 | $86.38 | $2.05 | $+16.09 | $3,272.11 | ▲ +16.09 after sell → book $8,536.28; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `GPRK` | 97 | $11.32 | $2.31 | $+39.06 | $4,367.85 | ▲ +39.06 after sell → book $8,533.98; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `MTDR` | 19 | $52.56 | $2.07 | $-19.12 | $5,364.42 | ▼ -19.12 after sell → book $8,531.91; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `OBE` | 103 | $10.44 | $2.33 | $+13.91 | $6,437.41 | ▲ +13.91 after sell → book $8,529.58; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `RRC` | 27 | $38.71 | $2.09 | $+12.31 | $7,480.49 | ▲ +12.31 after sell → book $8,527.49; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `SM` | 30 | $34.90 | $2.10 | $-15.28 | $8,525.39 | ▼ -15.28 after sell → book $8,525.39; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `CDNA` | 20 | $70.89 | $2.05 | — | $7,105.54 | — | baseline list, no extra gate; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); ret5=+8.1; leftover $1420.90 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `SN` | 7 | $183.47 | $2.01 | — | $5,819.24 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+0.4; leftover $1420.90 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `TOST` | 47 | $30.07 | $2.13 | — | $4,403.82 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-1.1; leftover $1420.90 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `NTAP` | 6 | $224.80 | $2.01 | — | $3,053.01 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+9.5; leftover $1420.90 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PDFS` | 24 | $56.89 | $2.06 | — | $1,685.59 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+12.7; leftover $1420.90 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `AVPT` | 96 | $14.77 | $2.28 | — | $265.39 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+7.2; leftover $1420.90 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $265.39 | ▼ close $8,333.88 vs 09:30 $8,542.44 (session -178.97) | 16:00 close · cash $265.39 · equity $8,333.88 vs 09:30 $8,542.44 (-208.56; session marks -178.97) · 6 name(s) marked open→close (per-name table). CDNA×20 09:30 $70.89 → close $63.79 -142.00; SN×7 09:30 $183.47 → close $184.72 +8.75; TOST×47 09:30 $30.07 → close $30.25 +8.46; NTAP×6 09:30 $224.80 → close $228.45 +21.90; PDFS×24 09:30 $56.89 → close $54.44 -58.80; AVPT×96 09:30 $14.77 → close $14.59 -17.28 | — |
 
 ## Not taken
 

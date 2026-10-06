@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **+1.72%** ($10,172) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 297 · skips 94 · realized $-657.32.
+Cash book **-2.14%** ($9,786) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 313 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -442,6 +442,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `VPG` | 17 | $78.79 | $2.04 | — | $1,566.09 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+10.4; leftover $1386.48 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `AAOI` | 11 | $118.64 | $2.02 | — | $258.97 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.0; leftover $1386.48 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $258.97 | ▼ close $10,171.78 vs 09:30 $10,246.18 (session -50.17) | 16:00 close · cash $258.97 · equity $10,171.78 vs 09:30 $10,246.18 (-74.40; session marks -50.17) · 8 name(s) marked open→close (per-name table). FN×2 09:30 $466.00 → close $453.84 -24.32; ONTO×3 09:30 $327.74 → close $325.41 -6.99; TER×3 09:30 $447.21 → close $444.53 -8.04; NTAP×6 09:30 $225.47 → close $223.77 -10.20; SYNA×11 09:30 $120.98 → close $119.73 -13.75; MXL×13 09:30 $106.00 → close $105.49 -6.63; VPG×17 09:30 $78.79 → close $78.06 -12.41; AAOI×11 09:30 $118.64 → close $121.57 +32.17 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $258.97 | ▲ 09:30 equity $10,307.64 vs yday $10,171.78 (+135.86) | 09:30 open · cash $258.97 (unchanged overnight, no fees) · equity $10,307.64 vs prior close $10,171.78 (+135.86) · 8 name(s) re-marked at the open (per-name table). AAOI×11 yday $121.57 → 09:30 $126.14 +50.27; FN×2 yday $453.84 → 09:30 $459.35 +11.02; MXL×13 yday $105.49 → 09:30 $108.22 +35.49; NTAP×6 yday $223.77 → 09:30 $224.80 +6.18; ONTO×3 yday $325.41 → 09:30 $329.29 +11.64; SYNA×11 yday $119.73 → 09:30 $120.65 +10.12; TER×3 yday $444.53 → 09:30 $445.07 +1.62; VPG×17 yday $78.06 → 09:30 $78.62 +9.52 | — |
+| 2026-10-06 09:30 ET | **SELL** | `AAOI` | 11 | $126.14 | $2.04 | $+78.38 | $1,644.47 | ▲ +78.38 after sell → book $10,305.60; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `FN` | 2 | $459.35 | $2.02 | $-5.31 | $2,561.15 | ▼ -5.31 after sell → book $10,303.58; vs 09:30 mark -2.02 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `MXL` | 13 | $108.22 | $2.05 | $+24.78 | $3,965.96 | ▲ +24.78 after sell → book $10,301.53; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `NTAP` | 6 | $224.80 | $2.03 | $-8.06 | $5,312.73 | ▼ -8.06 after sell → book $10,299.50; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SELL** | `ONTO` | 3 | $329.29 | $2.02 | $+36.03 | $6,298.58 | ▲ +36.03 after sell → book $10,297.48; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `SYNA` | 11 | $120.65 | $2.04 | $-7.70 | $7,623.69 | ▼ -7.70 after sell → book $10,295.44; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `TER` | 3 | $445.07 | $2.02 | $-10.44 | $8,956.88 | ▼ -10.44 after sell → book $10,293.42; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `VPG` | 17 | $78.62 | $2.06 | $-6.99 | $10,291.36 | ▼ -6.99 after sell → book $10,291.36; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `MTSI` | 3 | $334.22 | $2.00 | — | $9,286.70 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+17.9; leftover $1286.42 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `GRAL` | 8 | $159.01 | $2.01 | — | $8,012.60 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+16.2; leftover $1286.42 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PTC` | 6 | $193.00 | $2.01 | — | $6,852.60 | — | rank by macd_hist; rank macd_hist; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+37.6; leftover $1286.42 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `P` | 8 | $146.00 | $2.01 | — | $5,682.58 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+11.2; leftover $1286.42 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `ILMN` | 4 | $301.58 | $2.00 | — | $4,474.26 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.0; leftover $1286.42 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `TWST` | 6 | $209.55 | $2.01 | — | $3,214.95 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.1; leftover $1286.42 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `SHOP` | 7 | $166.02 | $2.01 | — | $2,050.80 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ⚪; ret5=+11.2; leftover $1286.42 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `QLYS` | 6 | $199.16 | $2.01 | — | $853.83 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+14.3; leftover $1286.42 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $853.83 | ▼ close $9,786.32 vs 09:30 $10,307.64 (session -488.97) | 16:00 close · cash $853.83 · equity $9,786.32 vs 09:30 $10,307.64 (-521.32; session marks -488.97) · 8 name(s) marked open→close (per-name table). MTSI×3 09:30 $334.22 → close $350.67 +49.35; GRAL×8 09:30 $159.01 → close $137.28 -173.84; PTC×6 09:30 $193.00 → close $193.00 +0.00; P×8 09:30 $146.00 → close $147.20 +9.60; ILMN×4 09:30 $301.58 → close $273.54 -112.16; TWST×6 09:30 $209.55 → close $166.97 -255.48; SHOP×7 09:30 $166.02 → close $164.44 -11.06; QLYS×6 09:30 $199.16 → close $199.93 +4.62 | — |
 
 ## Not taken
 

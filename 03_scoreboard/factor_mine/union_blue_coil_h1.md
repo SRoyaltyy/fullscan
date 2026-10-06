@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-16.21%** ($8,379) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 304 · skips 79 · realized $-1931.95.
+Cash book **-16.26%** ($8,374) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 306 · skips 79 · realized $-1931.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -452,6 +452,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **SELL** | `VEEV` | 3 | $275.00 | $2.02 | $-28.32 | $7,380.94 | ▼ -28.32 after sell → book $8,380.68; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-05 09:30 ET | **SELL** | `WRBY` | 37 | $27.02 | $2.12 | $-26.79 | $8,378.56 | ▼ -26.79 after sell → book $8,378.56; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,378.56 | ▲ close $8,378.56 vs 09:30 $8,394.99 (session +0.00) | 16:00 close · cash $8,378.56 · no lots left · equity $8,378.56. | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,378.56 | ▲ 09:30 equity $8,378.56 vs yday $8,378.56 (+0.00) | 09:30 open · cash $8,378.56 · no holdings · equity $8,378.56 vs prior close $8,378.56 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-06 09:30 ET | **BUY** | `VELO` | 428 | $9.77 | $5.52 | — | $4,191.48 | — | combo gate; gate blue=True,ret_5_max=10.0; list yday_mover; 🔵; ret5=-12.8; leftover $4189.28 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `RPM` | 43 | $96.25 | $2.12 | — | $50.61 | — | combo gate; gate blue=True,ret_5_max=10.0; list earn_react; 🔵; ret5=-4.9; leftover $4189.28 | join🔴 sector🟢 gen🟡 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $50.61 | ▲ close $8,373.90 vs 09:30 $8,378.56 (session +2.98) | 16:00 close · cash $50.61 · equity $8,373.90 vs 09:30 $8,378.56 (-4.66; session marks +2.98) · 2 name(s) marked open→close (per-name table). VELO×428 09:30 $9.77 → close $9.57 -85.60; RPM×43 09:30 $96.25 → close $98.31 +88.58 | — |
 
 ## Not taken
 

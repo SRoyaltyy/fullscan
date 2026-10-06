@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-19.25%** ($8,075) · signal-only (no cash/fees) was -40.60%. Starts YES **0/30**. Fills 99 · skips 188 · realized $-1635.94.
+Cash book **-20.67%** ($7,933) · signal-only (no cash/fees) was -40.60%. Starts YES **0/30**. Fills 103 · skips 188 · realized $-1635.94.
 
 ## How this sleeve decides (like you are 10)
 
@@ -241,6 +241,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $26.09 | ▲ close $8,053.28 vs 09:30 $7,741.15 (session +312.13) | 16:00 close · cash $26.09 · equity $8,053.28 vs 09:30 $7,741.15 (+312.13; session marks +312.13) · 1 name(s) marked open→close (per-name table). NKE×237 09:30 $32.55 → close $33.87 +312.13 | — |
 | 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $26.09 | ▼ 09:30 equity $8,041.43 vs yday $8,053.28 (-11.85) | 09:30 open · cash $26.09 (unchanged overnight, no fees) · equity $8,041.43 vs prior close $8,053.28 (-11.85) · 1 name(s) re-marked at the open (per-name table). NKE×237 yday $33.87 → 09:30 $33.82 -11.85 | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $26.09 | ▲ close $8,074.61 vs 09:30 $8,041.43 (session +33.18) | 16:00 close · cash $26.09 · equity $8,074.61 vs 09:30 $8,041.43 (+33.18; session marks +33.18) · 1 name(s) marked open→close (per-name table). NKE×237 09:30 $33.82 → close $33.96 +33.18 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $26.09 | ▼ 09:30 equity $8,012.99 vs yday $8,074.61 (-61.62) | 09:30 open · cash $26.09 (unchanged overnight, no fees) · equity $8,012.99 vs prior close $8,074.61 (-61.62) · 1 name(s) re-marked at the open (per-name table). NKE×237 yday $33.96 → 09:30 $33.70 -61.62 | — |
+| 2026-10-06 09:30 ET | **SELL** | `NKE` | 237 | $33.70 | $3.16 | $-420.97 | $8,009.83 | ▼ -420.97 after sell → book $8,009.83; vs 09:30 mark -3.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **BUY** | `NEOG` | 204 | $13.06 | $2.63 | — | $5,342.96 | — | baseline list, no extra gate; list overnight; ret5=-5.2; leftover $2669.94 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `PENG` | 43 | $61.60 | $2.12 | — | $2,692.04 | — | baseline list, no extra gate; list overnight; 🔵; ret5=+10.4; leftover $2669.94 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **BUY** | `STZ` | 23 | $113.83 | $2.06 | — | $71.89 | — | baseline list, no extra gate; list overnight; ret5=+0.3; leftover $2669.94 | join🔴 sector🔴 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.89 | ▼ close $7,933.17 vs 09:30 $8,012.99 (session -69.85) | 16:00 close · cash $71.89 · equity $7,933.17 vs 09:30 $8,012.99 (-79.82; session marks -69.85) · 3 name(s) marked open→close (per-name table). NEOG×204 09:30 $13.06 → close $11.96 -224.40; PENG×43 09:30 $61.60 → close $64.21 +112.23; STZ×23 09:30 $113.83 → close $115.67 +42.32 | — |
 
 ## Not taken
 

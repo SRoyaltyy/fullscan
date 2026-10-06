@@ -155,6 +155,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $226.85 | ▲ 09:30 equity $9,655.60 vs yday $9,534.95 (+120.65) | 09:30 open · cash $226.85 (unchanged overnight, no fees) · equity $9,655.60 vs prior close $9,534.95 (+120.65) · 1 name(s) re-marked at the open (per-name table). SNPS×19 yday $489.90 → 09:30 $496.25 +120.65 | — |
 | 2026-10-05 09:30 ET | **SELL** | `SNPS` | 19 | $496.25 | $2.13 | $-34.67 | $9,653.47 | ▼ -34.67 after sell → book $9,653.47; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,653.47 | ▲ close $9,653.47 vs 09:30 $9,655.60 (session +0.00) | 16:00 close · cash $9,653.47 · no lots left · equity $9,653.47. | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,653.47 | ▲ 09:30 equity $9,653.47 vs yday $9,653.47 (+0.00) | 09:30 open · cash $9,653.47 · no holdings · equity $9,653.47 vs prior close $9,653.47 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,653.47 | ▲ close $9,653.47 vs 09:30 $9,653.47 (session +0.00) | 16:00 close · cash $9,653.47 · no lots left · equity $9,653.47. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **-0.32%** ($9,968) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 223 · skips 270 · realized $-967.53.
+Cash book **+0.27%** ($10,027) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 226 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -367,6 +367,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,687.53 | ▼ close $10,079.96 vs 09:30 $10,096.56 (session -16.60) | 16:00 close · cash $14,687.53 · equity $10,079.96 vs 09:30 $10,096.56 (-16.60; session marks -16.60) · 2 name(s) marked open→close (per-name table). NKE×69 09:30 $32.55 → close $33.87 -90.87; PYXS×1061 09:30 $2.21 → close $2.14 +74.27 | — |
 | 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,687.53 | ▲ 09:30 equity $10,104.63 vs yday $10,079.96 (+24.67) | 09:30 open · cash $14,687.53 (unchanged overnight, no fees) · equity $10,104.63 vs prior close $10,079.96 (+24.67) · 2 name(s) re-marked at the open (per-name table). NKE×69 yday $33.87 → 09:30 $33.82 +3.45; PYXS×1061 yday $2.14 → 09:30 $2.12 +21.22 | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,687.53 | ▼ close $9,967.65 vs 09:30 $10,104.63 (session -136.98) | 16:00 close · cash $14,687.53 · equity $9,967.65 vs 09:30 $10,104.63 (-136.98; session marks -136.98) · 2 name(s) marked open→close (per-name table). NKE×69 09:30 $33.82 → close $33.96 -9.66; PYXS×1061 09:30 $2.12 → close $2.24 -127.32 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,687.53 | ▲ 09:30 equity $10,006.81 vs yday $9,967.65 (+39.16) | 09:30 open · cash $14,687.53 (unchanged overnight, no fees) · equity $10,006.81 vs prior close $9,967.65 (+39.16) · 2 name(s) re-marked at the open (per-name table). NKE×69 yday $33.96 → 09:30 $33.70 +17.94; PYXS×1061 yday $2.24 → 09:30 $2.22 +21.22 | — |
+| 2026-10-06 09:30 ET | **COVER** | `NKE` | 69 | $33.70 | $2.20 | $+116.26 | $12,360.03 | ▲ +116.26 after sell → book $10,004.61; vs 09:30 mark -2.20 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **COVER** | `PYXS` | 1061 | $2.22 | $13.69 | $+67.85 | $9,990.93 | ▲ +67.85 after sell → book $9,990.93; vs 09:30 mark -13.68 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **SHORT** | `TRMD` | 126 | $39.36 | $2.56 | — | $14,947.72 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list ohlc_hot; ret5=+15.9; leftover $4995.46 | join🔴 sector🔴 gen🟡 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,947.72 | ▲ close $10,027.42 vs 09:30 $10,006.81 (session +39.06) | 16:00 close · cash $14,947.72 · equity $10,027.42 vs 09:30 $10,006.81 (+20.61; session marks +39.06) · 1 name(s) marked open→close (per-name table). TRMD×126 09:30 $39.36 → close $39.05 +39.06 | — |
 
 ## Not taken
 

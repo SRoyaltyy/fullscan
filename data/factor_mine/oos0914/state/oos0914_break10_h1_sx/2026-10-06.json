@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 1.705,
+      "shares": 1237,
+      "side": "BUY",
+      "ticker": "QTEX"
+    },
+    {
+      "fill_rule": "open",
+      "price": 15.08,
+      "shares": 139,
+      "side": "BUY",
+      "ticker": "DNA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 29.2,
+      "shares": 72,
+      "side": "BUY",
+      "ticker": "XP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 193.0,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "PTC"
+    }
+  ],
+  "cash": 179.05,
+  "date": "2026-10-06",
+  "equity": 7941.43,
+  "fees": 40.984,
+  "fills": [
+    {
+      "fees": 7.3347,
+      "fill_rule": "open",
+      "pnl": 30.24,
+      "price": 3.96,
+      "shares": 560,
+      "side": "SELL",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.6561,
+      "fill_rule": "open",
+      "pnl": -108.28,
+      "price": 10.25,
+      "shares": 202,
+      "side": "SELL",
+      "ticker": "IBRX"
+    },
+    {
+      "fees": 6.1963,
+      "fill_rule": "open",
+      "pnl": -177.85,
+      "price": 4.24,
+      "shares": 473,
+      "side": "SELL",
+      "ticker": "NNBR"
+    },
+    {
+      "fees": 2.2066,
+      "fill_rule": "open",
+      "pnl": -6.91,
+      "price": 34.0,
+      "shares": 63,
+      "side": "SELL",
+      "ticker": "WOLF"
+    },
+    {
+      "fees": 15.9573,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.705,
+      "shares": 1237,
+      "side": "BUY",
+      "ticker": "QTEX"
+    },
+    {
+      "fees": 2.407,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 15.08,
+      "shares": 139,
+      "side": "BUY",
+      "ticker": "DNA"
+    },
+    {
+      "fees": 2.206,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 29.2,
+      "shares": 72,
+      "side": "BUY",
+      "ticker": "XP"
+    },
+    {
+      "fees": 2.02,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 193.0,
+      "shares": 10,
+      "side": "BUY",
+      "ticker": "PTC"
+    }
+  ],
+  "holdings": [
+    "DNA",
+    "PTC",
+    "QTEX",
+    "XP"
+  ],
+  "mean": -5.8167,
+  "n_trades_today": 8,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 3.96,
+      "shares": 560,
+      "side": "SELL",
+      "ticker": "FEAM"
+    },
+    {
+      "fill_rule": "open",
+      "price": 10.25,
+      "shares": 202,
+      "side": "SELL",
+      "ticker": "IBRX"
+    },
+    {
+      "fill_rule": "open",
+      "price": 4.24,
+      "shares": 473,
+      "side": "SELL",
+      "ticker": "NNBR"
+    },
+    {
+      "fill_rule": "open",
+      "price": 34.0,
+      "shares": 63,
+      "side": "SELL",
+      "ticker": "WOLF"
+    }
+  ],
+  "state": {
+    "after": "2026-10-06",
+    "cash": 179.05,
+    "pos": {
+      "DNA": {
+        "close_px": 12.41,
+        "cost": 2098.527,
+        "entry_date": "2026-10-06",
+        "entry_px": 15.08,
+        "fee_in": 2.407,
+        "last_px": 15.08,
+        "min_hold": 1,
+        "notional": 2096.12,
+        "peak_px": 15.08,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+43.2; leftover $2109.81",
+        "shares": 139,
+        "ticker": "DNA"
+      },
+      "PTC": {
+        "close_px": 193.0,
+        "cost": 1932.02,
+        "entry_date": "2026-10-06",
+        "entry_px": 193.0,
+        "fee_in": 2.02,
+        "last_px": 193.0,
+        "min_hold": 1,
+        "notional": 1930.0,
+        "peak_px": 193.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+37.6; leftover $2109.81",
+        "shares": 10,
+        "ticker": "PTC"
+      },
+      "QTEX": {
+        "close_px": 1.59,
+        "cost": 2125.0423,
+        "entry_date": "2026-10-06",
+        "entry_px": 1.705,
+        "fee_in": 15.9573,
+        "last_px": 1.705,
+        "min_hold": 1,
+        "notional": 2109.085,
+        "peak_px": 1.705,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+123.8; leftover $2109.81",
+        "shares": 1237,
+        "ticker": "QTEX"
+      },
+      "XP": {
+        "close_px": 29.73,
+        "cost": 2104.606,
+        "entry_date": "2026-10-06",
+        "entry_px": 29.2,
+        "fee_in": 2.206,
+        "last_px": 29.2,
+        "min_hold": 1,
+        "notional": 2102.4,
+        "peak_px": 29.2,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+39.1; leftover $2109.81",
+        "shares": 72,
+        "ticker": "XP"
+      }
+    },
+    "yday_equity": 7941.43
+  }
+}

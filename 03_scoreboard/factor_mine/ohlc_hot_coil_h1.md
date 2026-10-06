@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-9.52%** ($9,048) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 207 · skips 74 · realized $-1849.08.
+Cash book **-16.96%** ($8,304) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 210 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -355,6 +355,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **BUY** | `WNC` | 321 | $14.02 | $4.14 | — | $4,509.87 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+7.8; leftover $4507.22 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 09:30 ET | **BUY** | `ON` | 53 | $85.00 | $2.15 | — | $2.72 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+10.0; leftover $4507.22 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.72 | ▲ close $9,047.80 vs 09:30 $9,031.27 (session +39.66) | 16:00 close · cash $2.72 · equity $9,047.80 vs 09:30 $9,031.27 (+16.53; session marks +39.66) · 2 name(s) marked open→close (per-name table). WNC×321 09:30 $14.02 → close $13.99 -9.63; ON×53 09:30 $85.00 → close $85.93 +49.29 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.72 | ▲ 09:30 equity $9,153.78 vs yday $9,047.80 (+105.98) | 09:30 open · cash $2.72 (unchanged overnight, no fees) · equity $9,153.78 vs prior close $9,047.80 (+105.98) · 2 name(s) re-marked at the open (per-name table). ON×53 yday $85.93 → 09:30 $86.90 +51.41; WNC×321 yday $13.99 → 09:30 $14.16 +54.57 | — |
+| 2026-10-06 09:30 ET | **SELL** | `ON` | 53 | $86.90 | $2.20 | $+96.36 | $4,606.22 | ▲ +96.36 after sell → book $9,151.58; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SELL** | `WNC` | 321 | $14.16 | $4.23 | $+36.57 | $9,147.35 | ▲ +36.57 after sell → book $9,147.35; vs 09:30 mark -4.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **BUY** | `ILMN` | 30 | $301.58 | $2.08 | — | $97.87 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+8.0; leftover $9147.35 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $97.87 | ▼ close $8,304.07 vs 09:30 $9,153.78 (session -841.20) | 16:00 close · cash $97.87 · equity $8,304.07 vs 09:30 $9,153.78 (-849.71; session marks -841.20) · 1 name(s) marked open→close (per-name table). ILMN×30 09:30 $301.58 → close $273.54 -841.20 | — |
 
 ## Not taken
 

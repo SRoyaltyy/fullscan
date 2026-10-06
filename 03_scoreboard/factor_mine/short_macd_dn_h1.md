@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **-0.73%** ($9,927) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 322 · skips 108 · realized $-743.47.
+Cash book **+0.34%** ($10,034) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 338 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -466,6 +466,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 09:30 ET | **SHORT** | `GPRK` | 57 | $10.87 | $2.20 | — | $14,126.46 | — | MACD histogram < 0; gate macd_down=True; list flatten; ret5=-3.1; leftover $625.32 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-05 09:30 ET | **SHORT** | `OBE` | 60 | $10.26 | $2.21 | — | $14,739.86 | — | MACD histogram < 0; gate macd_down=True; list flatten; ret5=-2.7; leftover $625.32 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,739.86 | ▼ close $9,926.87 vs 09:30 $10,024.31 (session -61.54) | 16:00 close · cash $14,739.86 · equity $9,926.87 vs 09:30 $10,024.31 (-97.44; session marks -61.54) · 8 name(s) marked open→close (per-name table). COP×4 09:30 $127.00 → close $128.40 -5.60; DVN×13 09:30 $47.64 → close $47.98 -4.42; EXE×7 09:30 $84.70 → close $86.43 -12.11; RRC×16 09:30 $38.10 → close $38.67 -9.12; SM×17 09:30 $35.27 → close $35.05 +3.74; MTDR×11 09:30 $53.35 → close $53.01 +3.74; GPRK×57 09:30 $10.87 → close $11.28 -23.37; OBE×60 09:30 $10.26 → close $10.50 -14.40 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,739.86 | ▲ 09:30 equity $9,942.81 vs yday $9,926.87 (+15.93) | 09:30 open · cash $14,739.86 (unchanged overnight, no fees) · equity $9,942.81 vs prior close $9,926.87 (+15.93) · 8 name(s) re-marked at the open (per-name table). COP×4 yday $128.40 → 09:30 $128.19 +0.84; DVN×13 yday $47.98 → 09:30 $47.48 +6.56; EXE×7 yday $86.43 → 09:30 $86.38 +0.35; GPRK×57 yday $11.28 → 09:30 $11.32 -2.28; MTDR×11 yday $53.01 → 09:30 $52.56 +4.95; OBE×60 yday $10.50 → 09:30 $10.44 +3.60; RRC×16 yday $38.67 → 09:30 $38.71 -0.64; SM×17 yday $35.05 → 09:30 $34.90 +2.55 | — |
+| 2026-10-06 09:30 ET | **COVER** | `COP` | 4 | $128.19 | $2.00 | $-8.80 | $14,225.10 | ▼ -8.80 after sell → book $9,940.80; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `DVN` | 13 | $47.48 | $2.03 | $-1.95 | $13,605.89 | ▼ -1.95 after sell → book $9,938.77; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `EXE` | 7 | $86.38 | $2.01 | $-15.82 | $12,999.22 | ▼ -15.82 after sell → book $9,936.76; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `GPRK` | 57 | $11.32 | $2.16 | $-30.01 | $12,351.82 | ▼ -30.01 after sell → book $9,934.60; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `MTDR` | 11 | $52.56 | $2.02 | $+4.61 | $11,771.64 | ▲ +4.61 after sell → book $9,932.58; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `OBE` | 60 | $10.44 | $2.17 | $-15.18 | $11,143.07 | ▼ -15.18 after sell → book $9,930.41; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `RRC` | 16 | $38.71 | $2.04 | $-13.87 | $10,521.67 | ▼ -13.87 after sell → book $9,928.37; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **COVER** | `SM` | 17 | $34.90 | $2.04 | $+2.17 | $9,926.33 | ▲ +2.17 after sell → book $9,926.33; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-06 09:30 ET | **SHORT** | `TOST` | 20 | $30.07 | $2.09 | — | $10,525.64 | — | MACD histogram < 0; gate macd_down=True; list flatten; ⚪; ret5=-1.1; leftover $620.40 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `ARCT` | 42 | $14.70 | $2.15 | — | $11,140.89 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=+1.4; leftover $620.40 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `CMPX` | 626 | $0.99 | $8.17 | — | $11,752.46 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-13.5; leftover $620.40 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `ALVO` | 102 | $6.07 | $2.34 | — | $12,369.26 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-0.7; leftover $620.40 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `ONT` | 43 | $14.27 | $2.16 | — | $12,980.71 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-2.9; leftover $620.40 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `ZNTL` | 220 | $2.81 | $2.90 | — | $13,596.01 | — | MACD histogram < 0; gate macd_down=True; list probable; ret5=+6.9; leftover $620.40 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `ACB` | 136 | $4.55 | $2.45 | — | $14,212.36 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer; ret5=+9.0; leftover $620.40 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-06 09:30 ET | **SHORT** | `NXH` | 304 | $2.04 | $4.00 | — | $14,828.52 | — | MACD histogram < 0; gate macd_down=True; list yday_mover; ret5=-33.3; leftover $620.40 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,828.52 | ▲ close $10,034.11 vs 09:30 $9,942.81 (session +134.04) | 16:00 close · cash $14,828.52 · equity $10,034.11 vs 09:30 $9,942.81 (+91.30; session marks +134.04) · 8 name(s) marked open→close (per-name table). TOST×20 09:30 $30.07 → close $30.25 -3.60; ARCT×42 09:30 $14.70 → close $13.00 +71.40; CMPX×626 09:30 $0.99 → close $1.00 -5.07; ALVO×102 09:30 $6.07 → close $6.14 -7.14; ONT×43 09:30 $14.27 → close $14.52 -10.75; ZNTL×220 09:30 $2.81 → close $2.67 +30.80; ACB×136 09:30 $4.55 → close $4.59 -5.44; NXH×304 09:30 $2.04 → close $1.83 +63.84 | — |
 
 ## Not taken
 

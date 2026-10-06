@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-12.20%** ($8,780) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 74 · skips 104 · realized $-87.73.
+Cash book **-11.46%** ($8,854) · signal-only (no cash/fees) was -18.73%. Starts YES **20/30**. Fills 76 · skips 104 · realized $-87.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -222,6 +222,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $97.77 | ▼ close $8,827.77 vs 09:30 $9,092.05 (session -264.28) | 16:00 close · cash $97.77 · equity $8,827.77 vs 09:30 $9,092.05 (-264.28; session marks -264.28) · 2 name(s) marked open→close (per-name table). ACN×22 09:30 $211.02 → close $198.90 -266.64; PRGS×118 09:30 $36.88 → close $36.90 +2.36 | — |
 | 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $97.77 | ▼ 09:30 equity $8,782.37 vs yday $8,827.77 (-45.40) | 09:30 open · cash $97.77 (unchanged overnight, no fees) · equity $8,782.37 vs prior close $8,827.77 (-45.40) · 2 name(s) re-marked at the open (per-name table). ACN×22 yday $198.90 → 09:30 $196.30 -57.20; PRGS×118 yday $36.90 → 09:30 $37.00 +11.80 | — |
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $97.77 | ▼ close $8,780.24 vs 09:30 $8,782.37 (session -2.13) | 16:00 close · cash $97.77 · equity $8,780.24 vs 09:30 $8,782.37 (-2.13; session marks -2.13) · 2 name(s) marked open→close (per-name table). ACN×22 09:30 $196.30 → close $195.05 -27.50; PRGS×118 09:30 $37.00 → close $37.22 +25.37 | — |
+| 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $97.77 | ▲ 09:30 equity $8,858.43 vs yday $8,780.24 (+78.19) | 09:30 open · cash $97.77 (unchanged overnight, no fees) · equity $8,858.43 vs prior close $8,780.24 (+78.19) · 2 name(s) re-marked at the open (per-name table). ACN×22 yday $195.05 → 09:30 $195.43 +8.36; PRGS×118 yday $37.22 → 09:30 $37.81 +69.83 | — |
+| 2026-10-06 09:30 ET | **SELL** | `ACN` | 22 | $195.43 | $2.10 | $-456.26 | $4,395.13 | ▼ -456.26 after sell → book $8,856.33; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 09:30 ET | **SELL** | `PRGS` | 118 | $37.81 | $2.40 | $-324.90 | $8,853.93 | ▼ -324.90 after sell → book $8,853.93; vs 09:30 mark -2.40 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,853.93 | ▲ close $8,853.93 vs 09:30 $8,858.43 (session +0.00) | 16:00 close · cash $8,853.93 · no lots left · equity $8,853.93. | — |
 
 ## Not taken
 
