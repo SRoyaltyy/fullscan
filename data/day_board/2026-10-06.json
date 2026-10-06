@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T12:27:53.159182-04:00",
+  "generated_at": "2026-10-06T12:28:06.790990-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -844,7 +844,7 @@
           "size": 67335,
           "said": "Stock book \u2014 2026-10-06",
           "bullets": [
-            "_Generated 2026-10-06T12:23:01.136569-04:00_",
+            "_Generated 2026-10-06T12:28:00.390472-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -1113,31 +1113,6 @@
     }
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T05:53:22.406160-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-06_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9695,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-06_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5300,
-          "preview": "# Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -4449,6 +4424,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T12:28:06.114660-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-06_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1402396,
+          "preview": "1d BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2403,
+          "preview": "green 151 \u00b7 GLBE, FORM, SIG, DOCU, SONO, EXLS, PAYS, PCTY, IT, SHOO"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2492,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12541,
+          "preview": "2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12541,
+          "preview": "2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "01_daily/2026-10-06_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 68420,
+          "preview": "# Stock book \u2014 2026-10-06\n_Generated 2026-10-06T12:28:00.390472-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 green 151 \u00b7 GLBE, FORM, SIG, DOCU, SONO, EXLS, PAYS, PCTY, IT, SHOO \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 # Stock book \u2014 2026-10-06\n_Generated 2026-10-06T12:28:00.390472-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
