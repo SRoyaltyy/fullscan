@@ -433,6 +433,14 @@ def release(plan, api, clock, journal, *, submit, max_late=2, standing=False,
             row['ok'] = True
             row['match'] = hit.get('match')
             row['order_id'] = hit.get('order_id') or ''
+            # Status only. already_submitted still skips place.
+            broker_status = hit.get('broker_status') or ''
+            if broker_status:
+                row['broker_status'] = broker_status
+            if hit.get('avg_fill_px') is not None:
+                row['avg_fill_px'] = hit['avg_fill_px']
+            if hit.get('filled_qty') is not None:
+                row['filled_qty'] = hit['filled_qty']
         result['sent'].append(row)
     for row in drift_skipped + foreign:
         coid = we.client_order_id(
