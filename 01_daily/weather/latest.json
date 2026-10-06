@@ -1,6 +1,6 @@
 {
  "date": "2026-10-06",
- "generated_at": "2026-10-06T06:05:12.922523-04:00",
+ "generated_at": "2026-10-06T06:59:18.289749-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -21,15 +21,15 @@
   "yields_source": "fred_dgs10",
   "dgs10_delta_1d": 0.04,
   "dgs10_current": 5.28,
-  "dollar": "flat",
+  "dollar": "soft",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.14,
-  "vix_ratio": 0.857,
-  "vix_spot": 15.42,
-  "vix_delta_1d": -0.1,
+  "dxy_pct_1d": -0.15,
+  "vix_ratio": 0.854,
+  "vix_spot": 15.37,
+  "vix_delta_1d": -0.15,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -2.23,
+  "oil_pct_1d": -2.21,
   "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -182,12 +182,12 @@
    "micro": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, dollar flat [general predict + factors]"
+    "why": "risk-mixed, dollar soft [general predict + factors]"
    },
    "small": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, dollar flat [general predict + factors]"
+    "why": "risk-mixed, dollar soft [general predict + factors]"
    },
    "large": {
     "stance": "neutral",
@@ -224,7 +224,7 @@
    "rut": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-mixed, dollar flat [general predict + factors]"
+    "why": "risk-mixed, dollar soft [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
