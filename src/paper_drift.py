@@ -7,6 +7,9 @@ day's tickets, and does not fail the rest of the day's sealed list.
 
 ``data/paper_open/drift_log.jsonl`` is append-only. Callers add a line.
 They do not rewrite earlier lines, including the 2026-10-06 gap.
+An ``account_snapshot`` line and the ``correction`` line after it are
+further appends. They record a read of the sandbox account. They do
+not send, modify, or cancel an order, and they do not catch the book up.
 """
 from __future__ import annotations
 
