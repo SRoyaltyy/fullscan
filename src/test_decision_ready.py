@@ -78,6 +78,33 @@ def test_gate_skips_same_hash_and_publishes_a_new_one(tmp_path):
             assert dr.gate_decision(date)[0] is False
 
 
+def test_main_publish_reaches_publish_and_gate_keeps_stdout_contract():
+    """--gate must not bind the name publish, or --publish is UnboundLocalError.
+
+    publish_strategy_tickets.yml reads the last publish= and fingerprint= lines.
+    """
+    import io
+    import sys
+    import contextlib
+
+    date = '2026-10-06'
+    with patch.object(sys, 'argv', ['decision_ready', '--date', date, '--publish']), \
+         patch.object(dr, 'publish', return_value=0) as publish:
+        assert dr.main() == 0
+    publish.assert_called_once_with(date)
+
+    def gate_lines(flag, fingerprint):
+        buf = io.StringIO()
+        with patch.object(sys, 'argv', ['decision_ready', '--date', date, '--gate']), \
+             patch.object(dr, 'gate_decision', return_value=(flag, fingerprint)), \
+             contextlib.redirect_stdout(buf):
+            assert dr.main() == 0
+        return buf.getvalue().splitlines()
+
+    assert gate_lines(True, 'abc123') == ['publish=true', 'fingerprint=abc123']
+    assert gate_lines(False, 'def456') == ['publish=false', 'fingerprint=def456']
+
+
 def test_ready_false_when_hashed_peer_rs_never_landed_on_main():
     proof = {
         'ready': True,
