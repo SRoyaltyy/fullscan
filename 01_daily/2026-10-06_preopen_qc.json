@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T07:19:44.306462-04:00",
+  "generated_at": "2026-10-06T07:19:58.696867-04:00",
   "items": [
     {
       "ok": true,
@@ -314,7 +314,8 @@
       "ok": true,
       "reason": "",
       "size": 20534,
-      "status": "OK"
+      "status": "OK",
+      "provider": "openclaw"
     },
     {
       "sector": "Utilities",

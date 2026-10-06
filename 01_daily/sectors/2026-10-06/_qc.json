@@ -72,7 +72,8 @@
       "ok": true,
       "reason": "",
       "size": 20534,
-      "status": "OK"
+      "status": "OK",
+      "provider": "openclaw"
     },
     {
       "sector": "Utilities",
