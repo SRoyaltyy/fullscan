@@ -1,8 +1,8 @@
 {
   "ok": false,
   "n_fail": 2,
-  "grok_busy": false,
-  "updated_at": "2026-10-05T06:59:13.610426-04:00",
+  "grok_busy": true,
+  "updated_at": "2026-10-06T04:18:50.867709-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -45,18 +45,18 @@
       "id": "pong",
       "name": "PONG",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "classroom live (Hey. I just came online.) model=openclaw/default",
+      "status": "SKIP",
+      "required": false,
+      "detail": "Grok job running \u2014 not poking the classroom",
       "action": "none"
     },
     {
       "id": "model",
       "name": "Classroom model",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "model=openclaw/default",
+      "status": "SKIP",
+      "required": false,
+      "detail": "probe skipped",
       "action": "none"
     },
     {
@@ -81,9 +81,9 @@
       "id": "http401",
       "name": "HTTP 401",
       "group": "classroom",
-      "status": "OK",
-      "required": true,
-      "detail": "live PONG 200 \u2014 last packet 401 is history",
+      "status": "WARN",
+      "required": false,
+      "detail": "401 in last packet 2026-10-06_map_heat.json, 2026-10-05_predict.md \u2014 not live",
       "action": "none"
     },
     {
@@ -128,7 +128,7 @@
       "group": "preopen",
       "status": "WARN",
       "required": false,
-      "detail": "latest=success systemd=exit-code",
+      "detail": "latest=in_progress systemd=exit-code",
       "action": "none"
     },
     {
@@ -155,7 +155,7 @@
       "group": "postclose",
       "status": "FAIL",
       "required": true,
-      "detail": "403 in 2026-09-30_pipeline_health.json, 2026-10-05_map_postclose_captains_technology_p1_retry.json",
+      "detail": "403 in 2026-09-30_pipeline_health.json, 2026-10-05_preopen_status.json",
       "action": "none"
     },
     {
@@ -164,11 +164,9 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "history \u2014 401 in 2026-10-05_predict.md, 2026-10-05_map_heat.json; DeepSeek fallback in 2026-10-05_map_postclose_captains_utilities.json (classroom live)",
+      "detail": "history \u2014 401 in 2026-10-06_map_heat.json, 2026-10-05_predict.md; DeepSeek fallback in 2026-10-06_map_postclose_captains_utilities.json, 2026-10-05_map_postclose_captains_utilities",
       "action": "none"
     }
   ],
-  "healed": [
-    "ensure_openclaw_timeouts.sh exit=0             PASSED      UNIT                   ACTIVATES | Tue 2026-10-06 17:55:00 CST 22h left Mon 2026-10-05 17:55:04 CST 1h 3min ago full"
-  ]
+  "healed": []
 }
