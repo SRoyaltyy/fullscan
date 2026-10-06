@@ -30,7 +30,6 @@ CLI: python -m src.paper_trade [--date YYYY-MM-DD] [--top 10] [--capital 10000]
 from __future__ import annotations
 
 import argparse
-import io
 import json
 import math
 import re
@@ -1403,27 +1402,11 @@ def run(date: str | None = None, top_n: int = 10, capital: float | None = None) 
     skips = collect_skips(books, prices, trade_rows, top_n, capital,
                           session_ix=sess_ix)
     PAPER_DIR.mkdir(parents=True, exist_ok=True)
-    curve = pd.DataFrame(curve_rows)
-    trades_frame = pd.DataFrame(trade_rows)
-    from . import past_day_lock as pdl
-
-    def _csv_text(frame: pd.DataFrame) -> str:
-        buf = io.StringIO()
-        frame.to_csv(buf, index=False)
-        return buf.getvalue()
-
-    def _locked_csv(record: str, filename: str, frame: pd.DataFrame) -> None:
-        path = PAPER_DIR / filename
-        old = path.read_text(encoding="utf-8") if path.is_file() else ""
-        new = _csv_text(frame)
-        if pdl.in_repo(path):
-            pdl.guard_csv(record, old, new)
-        path.write_text(new, encoding="utf-8")
-        if pdl.in_repo(path):
-            pdl.seal_csv(record, old, new)
-
-    _locked_csv("paper_equity", "equity_curve.csv", curve)
-    _locked_csv("paper_trades", "trades.csv", trades_frame)
+    # Not past-day locked. Each run replays every book, and a later run
+    # rewrites earlier rows (a closed sell reprices, an open lot exits,
+    # a late close fills in). Same reason sleeve_merge trades.csv is open.
+    pd.DataFrame(curve_rows).to_csv(PAPER_DIR / "equity_curve.csv", index=False)
+    pd.DataFrame(trade_rows).to_csv(PAPER_DIR / "trades.csv", index=False)
     if trips:
         pd.DataFrame(trips).to_csv(PAPER_DIR / "roundtrips.csv", index=False)
     if skips:

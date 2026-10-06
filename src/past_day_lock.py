@@ -12,6 +12,17 @@ unhashed. A missing day is not filled in.
 
 Header lines on a Factor Mine scoreboard (totals, fills, realized,
 audit) are not part of the day hash. Day rows and buy/sell lines are.
+
+``data/paper/trades.csv`` and ``data/paper/equity_curve.csv`` are not
+locked. ``paper_trade`` rebuilds both from every stock book on each
+run, and a later run rewrites days already printed. Sealing a closed
+row would still fail the morning chain. ``data/sleeve_merge/trades.csv``
+stays unlocked for the same reason.
+
+The flatten card for the newest day stays open: same-day reruns rewrite
+the equity lines. That day is sealed when a later session is written.
+Strategy tickets stay writable until the 09:30 ET / paper-send lock;
+the 08:07 and 09:07 passes may both change the file.
 """
 from __future__ import annotations
 
@@ -252,32 +263,50 @@ def prepare_flatten_card(date: str, new_text: str, path: Path, *,
                 f"(sha256 {prev} -> {digest}). Not rescoring a sealed day."
             )
         return None
+    newer = [d for d in on_disk if d > day and (not wm or d > wm)]
+    if newer:
+        raise PastDayLockError(
+            f"past-day lock: flatten_robust {day} is before {max(newer)}. "
+            f"A missed day stays missing."
+        )
     if wm and day <= wm:
         return new_text
-    if existed:
-        old_digest = sha256_text(card_body(path.read_text(encoding="utf-8")))
-        if old_digest != digest:
-            raise PastDayLockError(
-                f"past-day lock: flatten_robust {day} was already written "
-                f"and its card changed. Not rescoring a sealed day."
-            )
+    # Newest day stays open so a same-day rerun can refresh 16:00 marks.
+    # Pin the watermark now so that rerun does not swallow this day.
+    if _seed_row(rows, "flatten_robust") is None:
+        _ensure_seed(rows, "flatten_robust", wm, manifest)
+    if existed and path.read_text(encoding="utf-8") == new_text:
         return None
-    _ensure_seed(rows, "flatten_robust", wm, manifest)
     return new_text
 
 
 def seal_flatten_card(date: str, path: Path, *,
                       manifest: Path | None = None) -> None:
-    if (manifest is None and not in_repo(path)) or not path.is_file():
+    """Seal cards from earlier sessions. The day just written stays open.
+
+    A same-day rerun rewrites 09:30 and 16:00 marks. Those bytes are the
+    record only once a later session is written.
+    """
+    if manifest is None and not in_repo(path):
+        return
+    if not path.parent.is_dir():
         return
     day = str(date)[:10]
     rows = load_manifest(manifest)
-    on_disk = [d for d in _dates_in_dir(path.parent, CARD_FILE) if d != day]
-    wm = _watermark(rows, "flatten_robust", on_disk, writing=day, existed=False)
-    if wm and day <= wm:
+    if _seed_row(rows, "flatten_robust") is None:
         return
-    digest = sha256_text(card_body(path.read_text(encoding="utf-8")))
-    _seal(rows, "flatten_robust", day, digest, manifest, watermark=wm)
+    wm = str(_seed_row(rows, "flatten_robust").get("watermark") or "")
+    on_disk = _dates_in_dir(path.parent, CARD_FILE)
+    for prior in sorted(on_disk):
+        if prior >= day or (wm and prior <= wm):
+            continue
+        prior_path = path.parent / f"{prior}_flatten_card.md"
+        if not prior_path.is_file():
+            continue
+        digest = sha256_text(card_body(prior_path.read_text(encoding="utf-8")))
+        rows = _seal(
+            rows, "flatten_robust", prior, digest, manifest, watermark=wm,
+        )
 
 
 def assert_ticket(date: str, path: Path, new_text: str, *,
@@ -299,13 +328,8 @@ def assert_ticket(date: str, path: Path, new_text: str, *,
         return
     sealed = {row.get("date"): row for row in _day_rows(rows, "strategy_tickets")}
     if day not in sealed:
-        if existed and _seed_row(rows, "strategy_tickets") and not keep_existing:
-            old = path.read_text(encoding="utf-8")
-            if sha256_text(old) != sha256_text(new_text):
-                raise PastDayLockError(
-                    f"past-day lock: strategy_tickets {day} was already "
-                    f"written and changed. Not rescoring a sealed day."
-                )
+        # Morning passes (decision_ready, workflow_run, 08:07 and 09:07)
+        # rewrite this file until the 09:30 / paper-send lock seals it.
         return
     prev = str(sealed[day].get("sha256") or "")
     if keep_existing:
@@ -332,7 +356,8 @@ def seal_ticket(date: str, path: Path, *, locked: bool,
         return
     day = str(date)[:10]
     rows = load_manifest(manifest)
-    on_disk = [d for d in _dates_in_dir(path.parent, TICKET_FILE) if d != day]
+    # Later dated files must not raise the watermark over this session.
+    on_disk = [d for d in _dates_in_dir(path.parent, TICKET_FILE) if d < day]
     wm = _watermark(rows, "strategy_tickets", on_disk, writing=day, existed=False)
     if wm and day <= wm:
         return
@@ -683,10 +708,14 @@ def describe_seeds() -> str:
         "The first locked day is the next day each record appends after "
         "this code is running. The watermark is the latest day already "
         "on disk at that moment (flatten cards and sleeve tickets through "
-        "the latest dated file, paper trades and equity through the latest "
-        "row, Factor Mine scoreboards through the latest day row). Days on "
-        "or before that watermark are not fingerprinted. No sha256 is "
-        "written for 14-24 Sep or any other day already in the record."
+        "the latest dated file, Factor Mine scoreboards through the latest "
+        "day row). Days on or before that watermark are not fingerprinted. "
+        "No sha256 is written for 14-24 Sep or any other day already in "
+        "the record. The newest flatten card stays open until the next "
+        "session. Strategy tickets stay open until 09:30 ET or the paper "
+        "send journal. data/paper/trades.csv, data/paper/equity_curve.csv, "
+        "and data/sleeve_merge/trades.csv are not locked: each run rebuilds "
+        "them and rewrites earlier rows."
     )
 
 
