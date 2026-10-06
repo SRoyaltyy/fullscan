@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T10:02:19.922702-04:00",
+  "generated_at": "2026-10-06T10:02:25.044694-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1113,45 +1113,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T04:20:48.588926-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-06_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97534,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-06_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11506,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-06\n_Generated 2026-10-06T04:20:48.467301-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5898 \u00b7 high-signal=1881_"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11495180,
-          "preview": "11704 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        },
-        {
-          "path": "01_daily/news/2026-10-06_finviz_digest_preopen.json",
-          "ok": true,
-          "reason": "",
-          "size": 97534,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-06\n_Generated 2026-10-06T04:20:48.467301-04:00 \u00b7 export=data/exports/finviz_2026-10-05.csv \u00b7 ticker digests=5898 \u00b7 high-signal=1881_ \u00b7 11704 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-    },
     {
       "key": "finviz_market_digest",
       "title": "Finviz homepage market digest",
@@ -4063,6 +4024,115 @@
         }
       ],
       "preview": "1d BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 green 151 \u00b7 GLBE, FORM, SIG, DOCU, SONO, EXLS, PAYS, PCTY, IT, SHOO \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 # Stock book \u2014 2026-10-06\n_Generated 2026-10-06T10:02:09.764846-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T10:02:23.893803-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 23675,
+          "preview": "2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 863,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-06.json",
+          "ok": true,
+          "reason": "",
+          "size": 219608,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-06_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 183247,
+          "preview": "2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 273225,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-06_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 275297,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 273680,
+          "preview": "2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 273225,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 183247,
+          "preview": "2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 273225,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 273225,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 273680,
+          "preview": "2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1822,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1822,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-06 BUY CBRL, PDFS, MQ, SN, AVPT, TOST, CDNA, CORT \u00b7 SELL IBRX, ROIV, NFLX, SOC, GOGO, SBS, ARE, BIDU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, orde"
     }
   ],
   "href": {
