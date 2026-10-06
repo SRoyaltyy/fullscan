@@ -81,6 +81,27 @@ MIN_SECTOR_CHARS = 2500
 MIN_JUDGE_CHARS = 400
 MIN_EVENTS_CHARS = 200
 
+# Cyrus 2026-10-06: the 11 sector essays are optional from the next
+# session. General predict stays required. Through 2026-10-06 they stay
+# required so a rebuild still matches the printed PARTIAL board.
+SECTOR_PREDICT_OPTIONAL_FROM = "2026-10-07"
+
+
+def sector_predicts_required(date: str) -> bool:
+    """True when missing sector essays fail the day.
+
+    False from 2026-10-07 onward. The files may still be written when
+    Sector Predict is triggered; absence is informational only.
+    """
+    return str(date) < SECTOR_PREDICT_OPTIONAL_FROM
+
+
+def sector_count_blocks(date: str, n_ok: int) -> bool:
+    """True when the sector tally should fail all_ok / the day gate."""
+    if not sector_predicts_required(date):
+        return False
+    return int(n_ok) < 8
+
 
 @dataclass
 class QCResult:
@@ -730,13 +751,14 @@ def preopen_report(date_str: str) -> dict:
         # Baseline/research enhance the day but cannot invalidate otherwise
         # tradable core inputs. Their consumers are stricter: only a valid
         # phase=morning_refresh can inject prompts or create s_heat.
+        "sectors_required": sector_predicts_required(date_str),
         "all_ok": all(
             r.ok for r in items
             if r.kind not in (
                 "sector_predict", "map_heat_baseline", "map_heat_research",
                 "finviz_market_digest")
         )
-                  and n_ok >= 8,
+                  and not sector_count_blocks(date_str, n_ok),
     }
     return report
 
@@ -777,11 +799,15 @@ def write_preopen_report(date_str: str) -> str:
         llm = _read_json(os.path.join(sec_dir, "_llm.json"))
         if isinstance(llm, dict):
             summary = str(llm.get("summary") or "")
+        required = bool(report.get("sectors_required", True))
         with open(sidecar, "w", encoding="utf-8") as fh:
             json.dump({
                 "date": date_str,
                 "n_ok": report["sector_n_ok"],
                 "n_total": report["sector_n_total"],
+                "required": required,
+                # Missing sectors do not fail the sidecar once they are optional.
+                "ok": (not required) or int(report["sector_n_ok"] or 0) >= 8,
                 "summary": summary,
                 "sectors": sectors,
             }, fh, indent=2)

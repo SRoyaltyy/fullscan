@@ -97,6 +97,13 @@ REQUIRED = [
 ]
 
 
+def _required_for(key: str, required: bool, date: str) -> bool:
+    """Sector essays stop blocking the packet on 2026-10-07. General stays required."""
+    if key == "sector_predict" and not output_qc.sector_predicts_required(date):
+        return False
+    return required
+
+
 def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
@@ -846,12 +853,18 @@ def run(date: str | None = None, force: bool = False,
     for item in report.get("items") or []:
         by_kind.setdefault(item.get("kind"), []).append(item)
 
+    grok = grok_review.without_optional_sector_misses(date, grok)
     for key, title, required in REQUIRED:
+        required = _required_for(key, required, date)
         if key == "sector_predict":
             n_ok = int(report.get("sector_n_ok") or 0)
             n_tot = int(report.get("sector_n_total") or 11)
-            ok = n_ok >= 8
-            detail = f"{n_ok}/{n_tot} quality sector predicts (need >=8)"
+            if output_qc.sector_predicts_required(date):
+                ok = n_ok >= 8
+                detail = f"{n_ok}/{n_tot} quality sector predicts (need >=8)"
+            else:
+                ok = True
+                detail = f"{n_ok}/{n_tot} optional"
         elif key == "general_predict":
             rows = by_kind.get("general_predict") or []
             ok = bool(rows) and all(r.get("ok") for r in rows)
