@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T10:01:45.964190-04:00",
+  "generated_at": "2026-10-06T10:01:48.777205-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -557,8 +557,8 @@
           "path": "01_daily/weather/2026-10-06_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9705 vix=falling yields=rising",
-          "size": 9705,
+          "reason": "sectors=11 bytes=9704 vix=falling yields=rising",
+          "size": 9704,
           "said": "hostile 8 \u00b7 neutral 3",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities",
@@ -776,8 +776,8 @@
           "path": "01_daily/weather/2026-10-06_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9705 vix=falling yields=rising",
-          "size": 9705,
+          "reason": "sectors=11 bytes=9704 vix=falling yields=rising",
+          "size": 9704,
           "said": "hostile 8 \u00b7 neutral 3",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities",
@@ -841,10 +841,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 67335,
+          "size": 77018,
           "said": "Stock book \u2014 2026-10-06",
           "bullets": [
-            "_Generated 2026-10-06T10:00:08.269639-04:00_",
+            "_Generated 2026-10-06T07:26:57.178687-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -1113,31 +1113,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T04:19:59.089612-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-06_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 4236,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-10-06_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2129,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-06\n**Generated:** 2026-10-06T04:19:59.076334-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a gap-up open as traders look to ADP jobs data, Fed speakers and oil prices after reduced Fed hike odds\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** LW\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** LW\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-06\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-06\n**Generated:** 2026-10-06T04:19:59.076334-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a gap-up open as traders look to ADP jobs data, Fed speakers and oil prices after reduced Fed hike odds\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** LW\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** LW\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-06\n**Clock use:** `same_morning`"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -4070,6 +4045,24 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-06\n_Generated 2026-10-06T14:01:43 \u2014 live `flatten_robust`._\n**S=+2.62; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+2.62** (UP) \u00b7 route **io**\n- Cash leftover **$81,063.40** (after 09:30 $60,013.21 \u00b7 after 16:00 $83,657.95)\n- Prior close **$104,522.40** \u00b7 09:30 **$104,784.02** \u00b7 overnight **$+261.62** \u00b7 session **$-21,126.07** \u00b7 16:00 **$83,657.95**\n- Overnight lots **6** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$21,050.19** \u2264 leftover after sells **$104,708.14** \u00b7 2026-10-06 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_o"
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T10:01:47.615978-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-06_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2270495,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, HRTG, PURR, FORM"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, HRTG, PURR, FORM"
     }
   ],
   "href": {
