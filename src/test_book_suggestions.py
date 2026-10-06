@@ -148,7 +148,8 @@ def test_preopen_and_book_publish_strip_without_paper() -> None:
     paper_idx = pre.index("src.paper_trade")
     assert live_idx < paper_idx
     assert "src.publish_live_boards" in book
-    assert "skip extras (catalyst/backtest/paper/sleeve)" in book
+    assert book.index("src.publish_live_boards") < book.index("src.paper_trade")
+    assert "append after the last printed date" in book
     assert "timeout_s=180" in book
     assert "book_suggestions.write" in sb
     assert "ensure_dashboard_poller" in sb

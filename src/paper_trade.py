@@ -7,7 +7,13 @@ capital, following the daily stock book:
     {1d,3d,1w,2w,1m}_size  — top 3 per size bucket (large+ / mid / small-micro)
 
 Rules
-- Rebuild from scratch every run: replay all books chronologically (idempotent).
+- Printed curve rows stay byte-for-byte. A later run resumes from
+  state.json and appends only stock-book sessions after the last
+  printed date. The first curve (no file yet) is still one chronological
+  pass. A session with no book stays missing. A session is appended
+  only when that day's stock-book file was first committed on main
+  before 09:30 ET on that day. A later landing is logged and skipped;
+  the next eligible session continues from the carried state.
 - Entry/exit at the signal day's closing price (yfinance, auto-adjusted).
 - Follow-the-book: hold a name while it stays in the sleeve's pick list;
   sell when it drops out (only after the horizon min-hold: 1d=1, 3d=3,
@@ -30,9 +36,12 @@ CLI: python -m src.paper_trade [--date YYYY-MM-DD] [--top 10] [--capital 10000]
 from __future__ import annotations
 
 import argparse
+import csv
+import io
 import json
 import math
 import re
+import subprocess
 from collections import defaultdict, deque
 from datetime import datetime
 from pathlib import Path
@@ -909,24 +918,50 @@ def load_risk_policy() -> dict:
     return out
 
 
+def _sleeve_state(raw: dict | None, capital: float) -> dict:
+    src = raw or {}
+    pos = {}
+    for ticker, lot in (src.get("pos") or {}).items():
+        if isinstance(lot, dict):
+            pos[str(ticker)] = dict(lot)
+    return {
+        "cash": float(src.get("cash", capital)),
+        "pos": pos,
+        "realized": float(src.get("realized", 0.0)),
+        "fees": float(src.get("fees", 0.0)),
+        "trades": int(src.get("trades", 0)),
+        "wins": int(src.get("wins", 0)),
+        "closed": int(src.get("closed", 0)),
+    }
+
+
 def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
             capital: float, top_n: int, fees: dict,
-            session_ix: dict[str, int] | None = None):
+            session_ix: dict[str, int] | None = None,
+            initial: dict | None = None,
+            spy0: float | None = None,
+            stop_when_unpriced: bool = False):
     sleeves = [f"{h}_{k}" for h in HORIZONS for k in ("top", "size")]
-    st = {
-        s: {"cash": capital, "pos": {}, "realized": 0.0, "fees": 0.0,
-            "trades": 0, "wins": 0, "closed": 0}
-        for s in sleeves
-    }
+    if initial:
+        st = {s: _sleeve_state(initial.get(s), capital) for s in sleeves}
+    else:
+        st = {
+            s: {"cash": capital, "pos": {}, "realized": 0.0, "fees": 0.0,
+                "trades": 0, "wins": 0, "closed": 0}
+            for s in sleeves
+        }
     risk_pol = load_risk_policy()
     curve_rows: list[dict] = []
     trade_rows: list[dict] = []
-    spy0 = None
     date_ix = session_ix or {d: i for i, (d, _) in enumerate(books)}
 
     for date, path in books:
         day_px = prices.loc[:date]
         if day_px.empty:
+            if stop_when_unpriced:
+                print(f"[paper] no price on or before {date}; "
+                      "later books stay unprinted", flush=True)
+                break
             continue
         # Per-name last close on or before this session. A sparse newer row
         # (NaN for names the cache did not refresh) is not "no price".
@@ -1371,6 +1406,179 @@ def write_report(stats: list[dict], date: str, capital: float) -> None:
 
 # ------------------------------------------------------------ driver ------
 
+_CURVE_COLS = ["date", "sleeve", "equity", "cash", "invested", "fees_cum", "realized_cum"]
+
+
+def _read_csv_rows(path: Path) -> list[dict]:
+    if not path.is_file() or path.stat().st_size == 0:
+        return []
+    with path.open(newline="", encoding="utf-8") as handle:
+        return list(csv.DictReader(handle))
+
+
+def _csv_columns(path: Path, fallback: list[str]) -> list[str]:
+    if not path.is_file():
+        return list(fallback)
+    with path.open(encoding="utf-8") as handle:
+        header = handle.readline().strip()
+    cols = [c.strip() for c in header.split(",") if c.strip()]
+    return cols or list(fallback)
+
+
+def _append_csv_rows(path: Path, rows: list[dict], columns: list[str]) -> None:
+    if not rows:
+        return
+    buf = io.StringIO()
+    writer = csv.DictWriter(
+        buf, fieldnames=columns, lineterminator="\n", extrasaction="ignore",
+    )
+    for row in rows:
+        writer.writerow({c: "" if row.get(c) is None else row.get(c, "") for c in columns})
+    blob = buf.getvalue().encode("utf-8")
+    if path.is_file() and path.stat().st_size > 0:
+        existing = path.read_bytes()
+        if not existing.endswith(b"\n"):
+            existing += b"\n"
+        path.write_bytes(existing + blob)
+        return
+    header = io.StringIO()
+    head = csv.DictWriter(header, fieldnames=columns, lineterminator="\n")
+    head.writeheader()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(header.getvalue().encode("utf-8") + blob)
+
+
+def _max_date(rows: list[dict]) -> str:
+    dates = [str(r.get("date") or "")[:10] for r in rows if r.get("date")]
+    return max(dates) if dates else ""
+
+
+def _spy0_from_curve(rows: list[dict], prices: pd.DataFrame, capital: float) -> float | None:
+    first = next((r for r in rows if str(r.get("sleeve") or "").startswith("SPY")), None)
+    if not first:
+        return None
+    try:
+        equity = float(first.get("equity") or 0)
+    except (TypeError, ValueError):
+        return None
+    if equity <= 0:
+        return None
+    px = _finite_positive(asof_closes(prices, str(first.get("date") or "")[:10]).get("SPY"))
+    if px is None:
+        return None
+    return capital * px / equity
+
+
+def committed_before_session_open(when: datetime, session: str) -> bool:
+    """True when ``when`` is strictly before 09:30 ET on ``session``."""
+    et = ZoneInfo("America/New_York")
+    if when.tzinfo is None:
+        when = when.replace(tzinfo=ZoneInfo("UTC"))
+    local = when.astimezone(et)
+    year, month, day = (int(part) for part in str(session)[:10].split("-"))
+    deadline = datetime(year, month, day, 9, 30, tzinfo=et)
+    return local < deadline
+
+
+def _repo_is_shallow() -> bool:
+    try:
+        out = subprocess.run(
+            ["git", "rev-parse", "--is-shallow-repository"],
+            cwd=str(ROOT), capture_output=True, text=True, timeout=15, check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return True
+    return (out.stdout or "").strip() == "true"
+
+
+def first_main_commit_at(rel: str) -> datetime | None:
+    """Committer time of the oldest commit on main that touches ``rel``.
+
+    A shallow clone cannot prove that commit, so this returns None
+    rather than treating the tip as the first landing.
+    """
+    rel = str(rel or "").replace("\\", "/").lstrip("/")
+    if not rel or _repo_is_shallow():
+        return None
+    for ref in ("origin/main", "main"):
+        try:
+            verify = subprocess.run(
+                ["git", "rev-parse", "--verify", ref],
+                cwd=str(ROOT), capture_output=True, timeout=15, check=False,
+            )
+        except (OSError, subprocess.TimeoutExpired):
+            return None
+        if verify.returncode != 0:
+            continue
+        try:
+            rev = subprocess.run(
+                ["git", "rev-list", "--reverse", ref, "--", rel],
+                cwd=str(ROOT), capture_output=True, text=True, timeout=60, check=False,
+            )
+        except (OSError, subprocess.TimeoutExpired):
+            return None
+        if rev.returncode != 0:
+            continue
+        sha = next((line.strip() for line in (rev.stdout or "").splitlines() if line.strip()), "")
+        if not sha:
+            continue
+        try:
+            show = subprocess.run(
+                ["git", "show", "-s", "--format=%cI", sha],
+                cwd=str(ROOT), capture_output=True, text=True, timeout=15, check=False,
+            )
+        except (OSError, subprocess.TimeoutExpired):
+            return None
+        stamp = (show.stdout or "").strip()
+        if show.returncode != 0 or not stamp:
+            continue
+        try:
+            return datetime.fromisoformat(stamp)
+        except ValueError:
+            return None
+    return None
+
+
+def book_on_main_before_open(session: str) -> bool:
+    """The dated stock book was first committed on main before 09:30 ET that day."""
+    rel = f"data/stock_book/{str(session)[:10]}_stock_book.json"
+    when = first_main_commit_at(rel)
+    if when is None:
+        return False
+    return committed_before_session_open(when, session)
+
+
+def _eligible_append_books(books: list[tuple[str, Path]]) -> list[tuple[str, Path]]:
+    """Drop sessions whose book was not on main before that day's 09:30 ET.
+
+    Later eligible sessions stay in order. No curve row is invented for
+    a dropped day; the sim carries the last printed state forward.
+    """
+    kept: list[tuple[str, Path]] = []
+    for session, path in books:
+        if book_on_main_before_open(session):
+            kept.append((session, path))
+            continue
+        print(f"missing: book not on main before 09:30 ET {str(session)[:10]}", flush=True)
+    return kept
+
+
+def _open_tickers(state: dict) -> set[str]:
+    names = {"SPY"}
+    for sleeve in state.values():
+        if isinstance(sleeve, dict):
+            names.update(str(t) for t in (sleeve.get("pos") or {}))
+    return names
+
+
+def _write_fresh(curve_rows, trade_rows, skips) -> None:
+    curve = pd.DataFrame(curve_rows)
+    curve.to_csv(PAPER_DIR / "equity_curve.csv", index=False)
+    pd.DataFrame(trade_rows).to_csv(PAPER_DIR / "trades.csv", index=False)
+    if skips:
+        pd.DataFrame(skips).to_csv(PAPER_DIR / "skipped.csv", index=False)
+
+
 def run(date: str | None = None, top_n: int = 10, capital: float | None = None) -> None:
     fees = load_fees()
     capital = capital or float(fees["paper_account"]["starting_capital_per_sleeve"])
@@ -1380,50 +1588,127 @@ def run(date: str | None = None, top_n: int = 10, capital: float | None = None) 
     if not books:
         raise SystemExit("[paper] no stock books found — run stock_book first")
 
-    # collect every ticker we may need to price
-    tickers = {"SPY"}
-    for _, p in books:
-        bk = json.loads(p.read_text(encoding="utf-8"))
+    PAPER_DIR.mkdir(parents=True, exist_ok=True)
+    curve_path = PAPER_DIR / "equity_curve.csv"
+    trades_path = PAPER_DIR / "trades.csv"
+    state_path = PAPER_DIR / "state.json"
+    prior_curve = _read_csv_rows(curve_path)
+    prior_trades = _read_csv_rows(trades_path)
+    prior_skips = _read_csv_rows(PAPER_DIR / "skipped.csv")
+    last_printed = _max_date(prior_curve)
+    if curve_path.is_file() and curve_path.stat().st_size > 0 and not last_printed:
+        raise SystemExit(
+            "[paper] equity curve has no dates; refusing to rewrite it")
+
+    resume = bool(last_printed)
+    initial = None
+    spy0 = None
+    if resume:
+        if not state_path.is_file():
+            raise SystemExit(
+                f"[paper] equity curve is locked through {last_printed} "
+                "but state.json is missing; refusing to rewrite printed days")
+        try:
+            initial = json.loads(state_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            raise SystemExit(
+                f"[paper] state.json is unreadable; refusing to rewrite "
+                f"printed days through {last_printed}"
+            ) from exc
+        if not isinstance(initial, dict) or "1d_top" not in initial:
+            raise SystemExit(
+                "[paper] state.json is not a sleeve book; "
+                "refusing to rewrite printed days")
+        books_to_sim = _eligible_append_books(
+            [(d, p) for d, p in books if d > last_printed])
+        if not books_to_sim:
+            print(f"[paper] curve already through {last_printed}; "
+                  "nothing eligible to append", flush=True)
+            return
+        print(f"[paper] resume after {last_printed}: "
+              f"{len(books_to_sim)} book session(s) to append", flush=True)
+    else:
+        books_to_sim = books
+
+    tickers = _open_tickers(initial or {})
+    for _, path in books_to_sim:
+        bk = json.loads(path.read_text(encoding="utf-8"))
         for picks in picks_from_book(bk, top_n).values():
             tickers.update(picks)
-    start, end = books[0][0], books[-1][0]
-    prices = get_prices(sorted(tickers), start, end)
-    sess_ix = session_index(trading_calendar(prices, [d for d, _ in books]))
+    end = books_to_sim[-1][0]
+    price_start = books_to_sim[0][0]
+    anchor = str(prior_curve[0].get("date") or "")[:10] if prior_curve else price_start
+    prices = get_prices(sorted(tickers), anchor or price_start, end)
+    if resume:
+        spy0 = _spy0_from_curve(prior_curve, prices, capital)
+    cal_extra = [d for d, _ in books]
+    cal_extra.extend(str(r.get("date") or "")[:10] for r in prior_curve)
+    sess_ix = session_index(trading_calendar(prices, cal_extra))
 
     st, curve_rows, trade_rows = run_sim(
-        books, prices, capital, top_n, fees, session_ix=sess_ix)
+        books_to_sim, prices, capital, top_n, fees, session_ix=sess_ix,
+        initial=initial, spy0=spy0, stop_when_unpriced=resume)
     if not curve_rows:
+        if resume:
+            print("[paper] no new priced session to append", flush=True)
+            return
         raise SystemExit(
-            f"[paper] no price data on/before {books[0][0]} — cannot simulate. "
+            f"[paper] no price data on/before {books_to_sim[0][0]} — cannot simulate. "
             "Check yfinance connectivity.")
+    if resume and any(str(r.get("date") or "")[:10] <= last_printed for r in curve_rows):
+        raise SystemExit(
+            "[paper] refuse to rewrite a printed session "
+            f"through {last_printed}")
 
-    trips = match_roundtrips(trade_rows, prices, session_ix=sess_ix, asof=end)
-    attach_trails(trade_rows, trips)
-    skips = collect_skips(books, prices, trade_rows, top_n, capital,
-                          session_ix=sess_ix)
-    PAPER_DIR.mkdir(parents=True, exist_ok=True)
-    # Not past-day locked. Each run replays every book, and a later run
-    # rewrites earlier rows (a closed sell reprices, an open lot exits,
-    # a late close fills in). Same reason sleeve_merge trades.csv is open.
-    pd.DataFrame(curve_rows).to_csv(PAPER_DIR / "equity_curve.csv", index=False)
-    pd.DataFrame(trade_rows).to_csv(PAPER_DIR / "trades.csv", index=False)
+    all_trades = prior_trades + trade_rows
+    trips = match_roundtrips(all_trades, prices, session_ix=sess_ix, asof=end)
+    # Trails land on the new fills before they are appended. Prior rows
+    # stay in the file; this only mutates the in-memory copies.
+    attach_trails(all_trades, trips)
+    new_skips = collect_skips(
+        books_to_sim, prices, trade_rows, top_n, capital, session_ix=sess_ix)
+    skips = prior_skips + new_skips
+
+    if resume:
+        locked = curve_path.read_bytes()
+        _append_csv_rows(curve_path, curve_rows, _csv_columns(curve_path, _CURVE_COLS))
+        if not curve_path.read_bytes().startswith(locked):
+            raise SystemExit("[paper] append changed a printed curve row")
+        if trade_rows:
+            _append_csv_rows(
+                trades_path, trade_rows,
+                _csv_columns(trades_path, list(trade_rows[0].keys())),
+            )
+        if new_skips:
+            _append_csv_rows(
+                PAPER_DIR / "skipped.csv", new_skips,
+                _csv_columns(PAPER_DIR / "skipped.csv", list(new_skips[0].keys())),
+            )
+    else:
+        _write_fresh(curve_rows, trade_rows, skips)
     if trips:
         pd.DataFrame(trips).to_csv(PAPER_DIR / "roundtrips.csv", index=False)
-    if skips:
-        pd.DataFrame(skips).to_csv(PAPER_DIR / "skipped.csv", index=False)
-    (PAPER_DIR / "state.json").write_text(json.dumps(st, indent=2, default=str),
-                                          encoding="utf-8")
+    (PAPER_DIR / "state.json").write_text(
+        json.dumps(st, indent=2, default=str), encoding="utf-8")
 
+    curve = pd.DataFrame(prior_curve + curve_rows)
+    for col in ("equity", "cash", "invested", "fees_cum", "realized_cum"):
+        if col in curve.columns:
+            curve[col] = pd.to_numeric(curve[col], errors="coerce")
     stats = [sleeve_stats(s, st[s], prices, capital) for s in st]
-    last = books[-1][0]
-    last_picks = picks_from_book(json.loads(books[-1][1].read_text(encoding="utf-8")), top_n)
+    last = str(curve_rows[-1]["date"])[:10]
+    last_book = books_to_sim[-1]
+    last_picks = picks_from_book(
+        json.loads(last_book[1].read_text(encoding="utf-8")), top_n)
     write_report(stats, last, capital)
-    write_dashboard(curve, stats, st, prices, last, capital, fees, trade_rows,
-                    last_picks=last_picks, book_dates=[d for d, _ in books],
-                    roundtrips=trips, skipped=skips, session_ix=sess_ix)
+    write_dashboard(
+        curve, stats, st, prices, last, capital, fees, all_trades,
+        last_picks=last_picks, book_dates=[d for d, _ in books],
+        roundtrips=trips, skipped=skips, session_ix=sess_ix)
     n_closed = sum(1 for t in trips if t["status"] == "closed")
     n_open = sum(1 for t in trips if t["status"] == "open")
-    print(f"[paper] {len(books)} book(s), {len(trade_rows)} trades "
+    print(f"[paper] appended {len(curve_rows)} curve rows "
+          f"from {len(books_to_sim)} book(s), {len(trade_rows)} new trades "
           f"({n_closed} closed pairs, {n_open} open lots, {len(skips)} not taken), "
           f"curves → dashboard/index.html, summary → 03_scoreboard/PAPER_TRADING.md")
 

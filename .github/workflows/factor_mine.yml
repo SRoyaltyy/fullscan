@@ -119,7 +119,7 @@ on:
         default: false
         type: boolean
       restate:
-        description: "Rewrite one frozen session YYYY-MM-DD (logged). Empty keeps history append-only."
+        description: "Rewrite today's frozen session YYYY-MM-DD (logged). A past day is refused. Empty keeps history append-only."
         required: false
         default: ""
       oppset_union:

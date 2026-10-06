@@ -38,6 +38,8 @@ jobs:
   fromjson:
     name: fromJSON + preopen job
     runs-on: ubuntu-latest
+    # Checkout of this repo plus the contract tests overruns five minutes,
+    # and GitHub then cancels a job whose steps already passed.
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4

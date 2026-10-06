@@ -267,6 +267,18 @@ def _ticket_pass(day_dir: Path, manifest: Path, day: str, text: str, now) -> Non
 
 
 def test_morning_chain_replay(tmp: Path) -> None:
+    """The live 2026-10-06 send journal must not lock this scratch session."""
+    from src import strategy_tickets as st
+
+    saved = st.paper_submit_journal
+    st.paper_submit_journal = lambda date: tmp / "journals" / f"{date}_submit.json"
+    try:
+        _morning_chain_replay(tmp)
+    finally:
+        st.paper_submit_journal = saved
+
+
+def _morning_chain_replay(tmp: Path) -> None:
     """Scratch copy of the 2026-10-05 books, then 10-06 twice and a rerun.
 
     10-05 stays the watermark. 10-06 stays open through same-day rewrites.

@@ -769,10 +769,7 @@ def run(date: str | None = None, force: bool = False,
                   "--date", date, "--write", "--no-extras"], timeout_s=180)
             _land(date, "live_boards", "Live 1d BUY/SELL strip")
             if force or not preopen.past_predict_cutoff():
-                print("[preopen-all] → paper / sleeve (after book is on main)")
-                _run([py, "-m", "src.paper_trade", "--date", date, "--top", "10"],
-                     timeout_s=900)
-                _land(date, "paper", "Paper dashboard")
+                print("[preopen-all] → sleeve (after book is on main)")
                 _run([py, "-m", "src.sleeve_combine_bt",
                       "--mode", "io_boost", "--hold", "3d"], timeout_s=1200)
                 print("[preopen-all] → flatten_hard_red live card (after book)")
@@ -780,6 +777,13 @@ def run(date: str | None = None, force: bool = False,
                       "--date", date, "--write-card"], timeout_s=420)
                 snapshot_persist(date)
                 _land(date, "flatten", "Flatten live card")
+        # 09:25 stops essays, not the paper tape. book_ok can be false
+        # while a book file is already on disk; follow that book and
+        # append. Printed days stay printed.
+        print("[preopen-all] → paper (append after the last printed date)")
+        _run([py, "-m", "src.paper_trade", "--date", date, "--top", "10"],
+             timeout_s=900)
+        _land(date, "paper", "Paper dashboard")
     else:
         print("[preopen-all] --no-book: leaving stock book to a later click")
 
