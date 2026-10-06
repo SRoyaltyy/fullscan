@@ -5,7 +5,7 @@ import csv
 import os
 import sys
 import tempfile
-from datetime import datetime
+from datetime import date, datetime
 from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -17,6 +17,7 @@ import gh_summary  # noqa: E402
 from src.factor_mine_freeze import is_excel_signal_path  # noqa: E402
 
 ET = ZoneInfo("America/New_York")
+UTC = ZoneInfo("UTC")
 DAY = "2026-09-28"
 FIELDS = [
     "run_date", "signal_date", "ticker", "side", "strategy", "exit_rule",
@@ -159,6 +160,89 @@ def test_sibling_csv_and_json_follow_the_same_rule():
             assert open(final, "rb").read() == frozen
 
 
+def test_late_utc_start_stamps_the_et_evening():
+    """2026-10-06T01:10Z is 21:10 ET on 2026-10-05, after that close."""
+    now = datetime(2026, 10, 6, 1, 10, tzinfo=UTC)
+    stamp = gh_summary.resolve_session(now)
+    assert stamp.session.isoformat() == "2026-10-05"
+    assert stamp.write_final is True
+    with tempfile.TemporaryDirectory() as tmp:
+        sugg = os.path.join(tmp, "suggestions.csv")
+        _suggestions(sugg)
+        written = gh_summary.run(now=now, out_dir=os.path.join(tmp, "daily"), sugg_path=sugg)
+        daily = os.path.join(tmp, "daily")
+        assert os.path.basename(written) == "2026-10-05_excel_bot.md"
+        assert "Excel-bot daily — 2026-10-05" in open(written, encoding="utf-8").read()
+        assert not os.path.exists(os.path.join(daily, "2026-10-06_excel_bot.md"))
+        assert not os.path.exists(os.path.join(daily, "2026-10-06_excel_bot_draft.md"))
+
+
+def test_before_close_utc_is_draft_only():
+    """2026-10-05T19:00Z is 15:00 ET. That session has not closed."""
+    now = datetime(2026, 10, 5, 19, 0, tzinfo=UTC)
+    stamp = gh_summary.resolve_session(now)
+    assert stamp.session.isoformat() == "2026-10-05"
+    assert stamp.write_final is False
+    with tempfile.TemporaryDirectory() as tmp:
+        sugg = os.path.join(tmp, "suggestions.csv")
+        _suggestions(sugg)
+        written = gh_summary.run(now=now, out_dir=os.path.join(tmp, "daily"), sugg_path=sugg)
+        daily = os.path.join(tmp, "daily")
+        assert os.path.basename(written) == "2026-10-05_excel_bot_draft.md"
+        assert not os.path.exists(os.path.join(daily, "2026-10-05_excel_bot.md"))
+        assert not os.path.exists(os.path.join(daily, "2026-10-06_excel_bot.md"))
+
+
+def test_saturday_stamps_friday_and_refuses_an_existing_final():
+    """Saturday belongs to Friday. A second Saturday run does not rewrite it."""
+    saturday = datetime(2026, 10, 10, 14, 0, tzinfo=ET)
+    stamp = gh_summary.resolve_session(saturday)
+    assert date(2026, 10, 10).weekday() == 5
+    assert stamp.session.isoformat() == "2026-10-09"
+    assert stamp.write_final is True
+    with tempfile.TemporaryDirectory() as tmp:
+        sugg = os.path.join(tmp, "suggestions.csv")
+        _suggestions(sugg)
+        daily = os.path.join(tmp, "daily")
+        written = gh_summary.run(now=saturday, out_dir=daily, sugg_path=sugg)
+        assert os.path.basename(written) == "2026-10-09_excel_bot.md"
+        frozen = open(written, "rb").read()
+        assert not os.path.exists(os.path.join(daily, "2026-10-10_excel_bot.md"))
+        try:
+            gh_summary.run(now=saturday, out_dir=daily, sugg_path=sugg)
+        except gh_summary.FinalSignalExists as exc:
+            assert "REFUSE" in str(exc)
+            assert "2026-10-09_excel_bot.md" in str(exc)
+        else:
+            raise AssertionError("Saturday rerun overwrote Friday's final")
+        assert open(written, "rb").read() == frozen
+        assert not os.path.exists(os.path.join(daily, "2026-10-10_excel_bot.md"))
+
+
+def test_holiday_stamps_the_previous_session():
+    """Labor Day 2026-09-07 is closed. The stamp is Friday 2026-09-04."""
+    labor = datetime(2026, 9, 7, 17, 17, tzinfo=ET)
+    stamp = gh_summary.resolve_session(labor)
+    assert gh_summary.is_nyse_holiday(date(2026, 9, 7)) is True
+    assert stamp.session.isoformat() == "2026-09-04"
+    assert stamp.write_final is True
+    with tempfile.TemporaryDirectory() as tmp:
+        sugg = os.path.join(tmp, "suggestions.csv")
+        _suggestions(sugg)
+        written = gh_summary.run(now=labor, out_dir=os.path.join(tmp, "daily"), sugg_path=sugg)
+        assert os.path.basename(written) == "2026-09-04_excel_bot.md"
+        assert not os.path.exists(os.path.join(tmp, "daily", "2026-09-07_excel_bot.md"))
+
+
+def test_nyse_holidays_match_skip_if_good():
+    from src.skip_if_good import is_nyse_holiday
+    for year in (2026, 2027):
+        for month in range(1, 13):
+            for day in range(1, 29):
+                d = date(year, month, day)
+                assert gh_summary.is_nyse_holiday(d) is is_nyse_holiday(d)
+
+
 def test_readers_keep_the_final_and_skip_the_draft():
     final = f"excel_bot/daily/{DAY}_excel_bot.md"
     draft = f"excel_bot/daily/{DAY}_excel_bot_draft.md"
@@ -205,5 +289,10 @@ if __name__ == "__main__":
     test_main_exits_when_the_final_exists()
     test_close_boundary_and_existing_final_stays_put()
     test_sibling_csv_and_json_follow_the_same_rule()
+    test_late_utc_start_stamps_the_et_evening()
+    test_before_close_utc_is_draft_only()
+    test_saturday_stamps_friday_and_refuses_an_existing_final()
+    test_holiday_stamps_the_previous_session()
+    test_nyse_holidays_match_skip_if_good()
     test_readers_keep_the_final_and_skip_the_draft()
     print("ok")

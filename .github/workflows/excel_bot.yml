@@ -13,11 +13,16 @@ name: Excel Bot (cluster signals daily)
 
 on:
   schedule:
-    # Tue-Sat 10:30 UTC. GitHub often starts it around 15:00 UTC (~11:00 ET),
-    # before the cash close. That run and the after-close dispatch share
-    # engine/gh_summary.py. The writer uses 16:00 ET: draft only before
-    # the close, the dated final once at or after the close.
+    # Draft. Tue-Sat 10:30 UTC. GitHub usually starts this before the
+    # 16:00 ET cash close, so that run writes the draft only.
     - cron: "30 10 * * 2-6"
+    # Final. Mon-Fri 21:17 UTC = 17:17 EDT / 16:17 EST, after the close
+    # in both DST states. The same job as a manual dispatch left on
+    # limit=0 and signals_only=false. A late start (even after midnight
+    # UTC) stamps the last completed NYSE session in America/New_York,
+    # not the UTC date. Weekend/holiday and pre-close runs do not create
+    # a final for a session that has not closed.
+    - cron: "17 21 * * 1-5"
   pull_request:
     paths:
       - "excel_bot/engine/gh_summary.py"
@@ -94,15 +99,24 @@ jobs:
           SIGNALS_ONLY: ${{ github.event.inputs.signals_only }}
         run: |
           set -euo pipefail
+          # schedule has no workflow_dispatch inputs. Same full path as
+          # Run workflow left on the defaults: all tickers, fetch on.
+          if [ "${GITHUB_EVENT_NAME}" = "schedule" ]; then
+            LIMIT=0
+            SIGNALS_ONLY=false
+          fi
           ARGS=""
           if [ -n "${LIMIT:-}" ] && [ "${LIMIT:-0}" != "0" ]; then ARGS="--limit $LIMIT"; fi
           if [ "${SIGNALS_ONLY:-false}" = "true" ]; then ARGS="$ARGS --signals-only"; fi
+          echo "event=${GITHUB_EVENT_NAME} limit=${LIMIT:-0} signals_only=${SIGNALS_ONLY:-false}"
           echo "CMD: python engine/daily_run.py --workers 4 $ARGS"
           python engine/daily_run.py --workers 4 $ARGS
           # Locked signal days must already match freeze_manifest.json.
           python engine/signal_freeze.py --verify
-          # Before 16:00 ET this writes *_excel_bot_draft.md only.
-          # At/after 16:00 ET it creates *_excel_bot.md once, then refuses.
+          # Session date is America/New_York, never the UTC date.
+          # Before 16:00 ET on a session day this writes the draft only.
+          # At/after 16:00 ET, or on a weekend/holiday for the previous
+          # completed session, it creates the final once, then REFUSE.
           python engine/gh_summary.py
 
       - name: Save price-cache state (squash excel-state)

@@ -248,7 +248,17 @@ def main():
     args = ap.parse_args()
 
     t0 = time.time()
-    run_date = date.today().isoformat()
+    # GitHub's clock is UTC. A job that starts after midnight UTC can
+    # still be the previous evening in New York. run_date (a locked
+    # field) is that NYSE session, never the UTC date.
+    import gh_summary
+    stamp = gh_summary.resolve_session()
+    run_date = stamp.session.isoformat()
+    print(
+        f"[session] {run_date} America/New_York "
+        f"({'final' if stamp.write_final else 'draft'})",
+        flush=True,
+    )
     # Universe = grids (if present) UNION rows cache. On GitHub runners the
     # grids dir starts empty (only rows are restored from the state branch),
     # so grids-only enumeration silently processed ZERO tickers.

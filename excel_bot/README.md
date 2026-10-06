@@ -4,7 +4,14 @@ This is the exact Python replica of the `Simple View--Calculation.xlsx`
 cluster-color engine (same formulas, same dependencies, same colors), moved
 off the local PC. Zero tokens, zero LLM — pure math on Yahoo OHLCV.
 
-## What it does daily (Tue–Sat 10:30 UTC = 18:30 HKT, after the US close)
+## What it does daily
+
+Two schedules share one job (`excel-bot`, no cancel-in-progress):
+
+- **Draft** — Tue–Sat 10:30 UTC. This usually starts before the 16:00 ET close and writes only the draft.
+- **Final** — Mon–Fri 21:17 UTC (17:17 EDT / 16:17 EST), after the cash close in both DST states. Same full path as a manual run left on limit 0 and signals_only false: every ticker, fetch included. It creates that session's dated file once.
+
+`run_date` and the dated file use the NYSE session in America/New_York, not the UTC date. A new manifest entry is keyed by the pick's `signal_date` (the confirmation session on the bar). A start after midnight UTC that is still the previous evening in New York stamps that evening. Before 16:00 ET the live session has not closed, so the run writes a draft and does not create its final. A weekend or full-day NYSE holiday stamps the previous completed session and will not overwrite a final that is already there.
 
 Workflow: `.github/workflows/excel_bot.yml` → "Excel Bot (cluster signals daily)"
 
@@ -61,11 +68,13 @@ entries are never removed or edited. If a locked day's picks are added,
 removed, or changed, or a non-blank `first_open` changes, the run prints
 `FAIL CLOSED` and commits nothing.
 
-The dated file `daily/{date}_excel_bot.md` is already write-once. A run
-before 16:00 ET writes only the `_draft` file. At or after 16:00 ET the
-final file is created once; if that file is already in the tree (it is,
-on a rerun of a date that landed on main), the run refuses to overwrite
-it. Strategy rules, names, and which tickers qualify are unchanged.
+The dated file `daily/{date}_excel_bot.md` is write-once for that NYSE
+session. A run before 16:00 ET on a session day writes only the `_draft`
+file. At or after 16:00 ET, and on a weekend or holiday for the previous
+completed session, the final file is created once. If that file is already
+in the tree, the run refuses to overwrite it. A manual workflow dispatch
+is the by-hand backup and uses the same clock. Strategy rules, names,
+and which tickers qualify are unchanged.
 
 ## Caveats (from live tracking + backtest)
 

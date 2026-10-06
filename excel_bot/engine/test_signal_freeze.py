@@ -270,6 +270,8 @@ def test_run_wires_fail_closed_verify() -> None:
     write_at = daily.index("os.replace(tmp, SUGG_CSV)")
     append_at = daily.index("signal_freeze.append_entries")
     assert plan_at < write_at < append_at
+    assert "gh_summary.resolve_session()" in daily
+    assert "run_date = stamp.session.isoformat()" in daily
     workflow = open(
         os.path.join(ROOT, ".github", "workflows", "excel_bot.yml"),
         encoding="utf-8",
@@ -282,6 +284,13 @@ def test_run_wires_fail_closed_verify() -> None:
     assert "freeze_manifest.json" in commit[push_at:]
     assert "FAIL CLOSED" in commit
     assert "exit 1" in commit
+    assert 'cron: "30 10 * * 2-6"' in workflow
+    assert 'cron: "17 21 * * 1-5"' in workflow
+    assert "group: excel-bot" in workflow
+    assert "cancel-in-progress: false" in workflow
+    assert 'if [ "${GITHUB_EVENT_NAME}" = "schedule" ]; then' in workflow
+    assert "LIMIT=0" in workflow
+    assert "SIGNALS_ONLY=false" in workflow
 
 
 def _write_csv(tmp: str, rows: list) -> str:
