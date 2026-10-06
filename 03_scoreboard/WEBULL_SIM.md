@@ -16,17 +16,17 @@ Excel sleeves buy the next 09:30 open. Their research cards buy the signal-day c
 
 When a plan does not set its own count or weights, each pick gets a slot of equity ÷ max(20, that day's pick count). Equity is measured at that day's 09:30 open before buys. Carried lots are marked at that open. A prior row's stored equity is not reused. All of that day's picks are sized. None is dropped for ranking, and the result does not depend on an unsealed order. The plan sets no priority. A slot too small for one whole share logs 'no whole share'. 'No cash' happens only when held lots tie up the cash. Those picks stay in the plan's listed order and are marked 'plan sets no priority'. A plan that sets its own count or weights (for example h1) keeps that count or those weights.
 
-Locked trade rows: 6. Built after the fact: 6846. Visible, not a locked trade: 366.
+Locked trade rows: 9. Built after the fact: 6846. Visible, not a locked trade: 363.
 
 ## Locked and not-yet-locked
 
 | Book | Date | Section | Reason | Sizing | Picks | Equity | Fees | Commit ET | Source | SHA | Sandbox |
 |---|---|---|---|---|---:|---:|---:|---|---|---|---|
-| 1d_top_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,932.04 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
-| 1m_top_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,932.04 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
-| 1w_top_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,932.04 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
-| 2w_top_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,932.04 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
-| 3d_top_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,932.04 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
+| 1d_top_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,929.81 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
+| 1m_top_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,929.81 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
+| 1w_top_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,929.81 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
+| 2w_top_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,929.81 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
+| 3d_top_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,929.81 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
 | L1_long_green_tp8_lowvol_webull_sim | 2026-10-06 | locked | traded | each slot is equity / max(20, 12) at the 09:30 open before buys; all picks sized; plan sets no priority | 12 | $10,010.82 (equity is a 10:56 ET intraday mark, not the close) | $0.00 | 2026-10-05T18:29:10-04:00 | excel_bot/daily/2026-10-05_excel_bot.md — sealed by git commit time (pre-lock) | caf155612ba7 | — |
 | L2_long_green_tp3_lowvol_webull_sim | 2026-10-06 | locked | traded | each slot is equity / max(20, 12) at the 09:30 open before buys; all picks sized; plan sets no priority | 12 | $10,010.82 (equity is a 10:56 ET intraday mark, not the close) | $0.00 | 2026-10-05T18:29:10-04:00 | excel_bot/daily/2026-10-05_excel_bot.md — sealed by git commit time (pre-lock) | caf155612ba7 | — |
 | L3_long_green_hold2_midcap_webull_sim | 2026-10-06 | locked | traded | each slot is equity / max(20, 34) at the 09:30 open before buys; all picks sized; plan sets no priority | 34 | $9,945.09 (equity is a 10:56 ET intraday mark, not the close) | $0.00 | 2026-10-05T18:29:10-04:00 | excel_bot/daily/2026-10-05_excel_bot.md — sealed by git commit time (pre-lock) | caf155612ba7 | — |
@@ -198,11 +198,11 @@ Locked trade rows: 6. Built after the fact: 6846. Visible, not a locked trade: 3
 | short_r_down_h3_webull_sim | 2026-10-06 | not_a_locked_trade | sat out, 0 picks | each slot is equity / max(20, n) at the 09:30 open before buys; all picks sized; plan sets no priority | 0 | $10,000.00 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
 | short_rsi_ob_h1_webull_sim | 2026-10-06 | not_a_locked_trade | sat out, 0 picks | each slot is equity / max(20, n) at the 09:30 open before buys; all picks sized; plan sets no priority | 0 | $10,000.00 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
 | short_rsi_ob_h3_webull_sim | 2026-10-06 | not_a_locked_trade | sat out, 0 picks | each slot is equity / max(20, n) at the 09:30 open before buys; all picks sized; plan sets no priority | 0 | $10,000.00 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
-| stock_book_1d_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,932.04 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
-| stock_book_1m_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,932.04 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
-| stock_book_1w_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,932.04 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
-| stock_book_2w_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,932.04 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
-| stock_book_3d_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,932.04 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
+| stock_book_1d_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,929.81 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
+| stock_book_1m_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,929.81 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
+| stock_book_1w_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,929.81 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
+| stock_book_2w_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,929.81 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
+| stock_book_3d_webull_sim | 2026-10-06 | not_a_locked_trade | traded; open not observed: BLFS | each slot is equity / max(20, 15) at the 09:30 open before buys; all picks sized; plan sets no priority | 15 | $9,929.81 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
 | union_ab_g_h1_webull_sim | 2026-10-06 | not_a_locked_trade | sat out, 0 picks | each slot is equity / max(20, n) at the 09:30 open before buys; all picks sized; plan sets no priority | 0 | $10,000.00 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
 | union_ab_g_h3_webull_sim | 2026-10-06 | not_a_locked_trade | sat out, 0 picks | each slot is equity / max(20, n) at the 09:30 open before buys; all picks sized; plan sets no priority | 0 | $10,000.00 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
 | union_blue_coil_h1_webull_sim | 2026-10-06 | not_a_locked_trade | sat out, 0 picks | each slot is equity / max(20, n) at the 09:30 open before buys; all picks sized; plan sets no priority | 0 | $10,000.00 | $0.00 | 2026-10-06T07:27:14-04:00 | data/day_board/2026-10-06_strategy_tickets.json | 26966ff2a3dd | — |
@@ -398,7 +398,7 @@ Locked trade rows: 6. Built after the fact: 6846. Visible, not a locked trade: 3
 
 | Book | Date | Section | Reason | Sizing | Picks | Equity | Fees | Commit ET | Source | SHA | Sandbox |
 |---|---|---|---|---|---:|---:|---:|---|---|---|---|
-| theme_radar_fpe_delta_t3_earn_today_3d_webull_sim | 2026-10-06 | not_a_locked_trade | no pre-09:30 plan | each slot is equity / max(20, n) at the 09:30 open before buys; all picks sized; plan sets no priority | 0 | $10,000.00 | $0.00 | — | — | — | — |
+| theme_radar_fpe_delta_t3_earn_today_3d_webull_sim | 2026-10-06 | locked | traded | each slot is equity / max(20, 12) at the 09:30 open before buys; all picks sized; plan sets no priority | 12 | $10,018.55 | $0.11 | 2026-10-06T06:20:12-04:00 | SRoyaltyy/theme-radar:research/shadow_log/plans/plan_2026-10-06.csv | ecdb627a7d3d | — |
 
 Borrow cost and availability are not modeled in this sim.
 
@@ -408,7 +408,7 @@ Theme Radar's shadow-log figures include an assumed 0.3% borrow plus a 15bp fee 
 
 | Book | Date | Section | Reason | Sizing | Picks | Equity | Fees | Commit ET | Source | SHA | Sandbox |
 |---|---|---|---|---|---:|---:|---:|---|---|---|---|
-| theme_radar_fresh_dcp_t1_avoid_ah_3d_webull_sim | 2026-10-06 | not_a_locked_trade | no pre-09:30 plan | each slot is equity / max(20, n) at the 09:30 open before buys; all picks sized; plan sets no priority | 0 | $10,000.00 | $0.00 | — | — | — | — |
+| theme_radar_fresh_dcp_t1_avoid_ah_3d_webull_sim | 2026-10-06 | locked | traded | each slot is equity / max(20, 2) at the 09:30 open before buys; all picks sized; plan sets no priority | 2 | $9,992.67 | $0.02 | 2026-10-06T06:20:12-04:00 | SRoyaltyy/theme-radar:research/shadow_log/plans/plan_2026-10-06.csv | ecdb627a7d3d | — |
 
 Borrow cost and availability are not modeled in this sim.
 
@@ -418,7 +418,7 @@ Theme Radar's shadow-log figures include an assumed 0.3% borrow plus a 15bp fee 
 
 | Book | Date | Section | Reason | Sizing | Picks | Equity | Fees | Commit ET | Source | SHA | Sandbox |
 |---|---|---|---|---|---:|---:|---:|---|---|---|---|
-| theme_radar_fresh_dcp_t1_ep_ge03_2d_webull_sim | 2026-10-06 | not_a_locked_trade | no pre-09:30 plan | each slot is equity / max(20, n) at the 09:30 open before buys; all picks sized; plan sets no priority | 0 | $10,000.00 | $0.00 | — | — | — | — |
+| theme_radar_fresh_dcp_t1_ep_ge03_2d_webull_sim | 2026-10-06 | locked | traded | each slot is equity / max(20, 2) at the 09:30 open before buys; all picks sized; plan sets no priority | 2 | $9,992.67 | $0.02 | 2026-10-06T06:20:12-04:00 | SRoyaltyy/theme-radar:research/shadow_log/plans/plan_2026-10-06.csv | ecdb627a7d3d | — |
 
 Borrow cost and availability are not modeled in this sim.
 
