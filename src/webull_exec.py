@@ -41,11 +41,12 @@ Env: WEBULL_APP_KEY, WEBULL_APP_SECRET, WEBULL_ACCOUNT_ID (optional),
 from __future__ import annotations
 
 import argparse
+import inspect
 import json
 import math
 import os
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -73,6 +74,20 @@ HOT4_STRATEGY_PATHS = (
 LAST_JSON = OUT_DIR / "webull_last.json"
 PAPER_HOST = "api.sandbox.webull.com"
 LIVE_HOST = "api.webull.com"
+ET = ZoneInfo("America/New_York")
+# list_order_history rejects a span over 24h. A fall-back civil day is ~25h.
+_HISTORY_MAX_SECONDS = 24 * 60 * 60
+_HISTORY_PAGE_CAP = 20
+# get_order_history accepts page_size 10..100. 200 is OPENAPI_PARAM_ERR.
+_HISTORY_PAGE_SIZE = 100
+_FILL_PRICE_KEYS = (
+    "avg_filled_price", "average_filled_price", "avgFilledPrice",
+    "filled_avg_price", "avg_fill_px", "avg_price",
+    "fill_price", "filled_price",
+)
+_FILLED_QTY_KEYS = (
+    "filled_quantity", "filledQuantity", "filled_qty", "fill_qty",
+)
 
 
 def _env(name: str, default: str = "") -> str:
@@ -231,6 +246,43 @@ def row_on_session(row: dict, date: str) -> bool:
     return str(date or "") in dates
 
 
+def _row_fill_price(row: dict):
+    """Average fill. A limit ``price`` is not a fill."""
+    for key in _FILL_PRICE_KEYS:
+        value = row.get(key)
+        if value is None or value == "":
+            continue
+        try:
+            number = float(value)
+        except (TypeError, ValueError):
+            continue
+        if math.isfinite(number):
+            return number
+    return None
+
+
+def _row_filled_qty(row: dict):
+    for key in _FILLED_QTY_KEYS:
+        value = row.get(key)
+        if value is None or value == "":
+            continue
+        try:
+            return int(float(value))
+        except (TypeError, ValueError):
+            continue
+    return None
+
+
+def _row_filled(row: dict) -> bool:
+    status = str(
+        row.get("status") or row.get("order_status") or row.get("orderStatus") or ""
+    ).upper().replace(" ", "_")
+    if status.startswith("FILL") or "PARTIAL" in status:
+        return True
+    qty = _row_filled_qty(row)
+    return qty is not None and qty > 0
+
+
 def match_sealed_orders(tickets, rows, date: str, strategy: str = "h1"):
     """Split a sealed-h1 batch into orders already on the book and the rest.
 
@@ -265,7 +317,7 @@ def match_sealed_orders(tickets, rows, date: str, strategy: str = "h1"):
     derived = {coid for _, _, coid in planned}
 
     def _hit(ticket, side, coid, row, how):
-        return {
+        hit = {
             "ticker": str(ticket.get("ticker") or ""),
             "side": side,
             "shares": ticket.get("shares"),
@@ -279,6 +331,14 @@ def match_sealed_orders(tickets, rows, date: str, strategy: str = "h1"):
                 row.get("status") or row.get("order_status") or row.get("orderStatus") or ""
             ),
         }
+        if _row_filled(row):
+            price = _row_fill_price(row)
+            qty = _row_filled_qty(row)
+            if price is not None:
+                hit["avg_fill_px"] = price
+            if qty is not None:
+                hit["filled_qty"] = qty
+        return hit
 
     for index, (ticket, side, coid) in enumerate(planned):
         hit = None
@@ -987,29 +1047,129 @@ def _walk_open_orders(payload) -> list:
     return identified
 
 
-def _try_history_call(api, fn, account_id: str, date: str):
-    """Try SDK history signatures. TypeError means the next signature.
+def _webull_timestamp(moment: datetime) -> str:
+    """``yyyy-MM-dd'T'HH:mm:ss.SSSZ`` for ``list_order_history``.
 
-    Any other error fails this method. The caller tries the next method
-    and, if all of them fail, raises rather than treating it as no fills.
+    Java ``Z`` is an RFC 822 offset (``-0400``), not a colon offset and
+    not a bare ``yyyy-MM-dd``. The sandbox rejects the bare date with
+    ``OPENAPI_PARAM_ERR invalid start_time``.
     """
-    attempts = (
-        lambda: fn(account_id, start_date=date, end_date=date, page_size=200),
-        lambda: fn(account_id, start_date=date, end_date=date),
-        lambda: fn(account_id, date, date),
-        lambda: fn(account_id, date),
-        lambda: fn(account_id),
-    )
-    errors = []
-    for call in attempts:
-        try:
-            return api._json(call(), "filled_orders"), ""
-        except TypeError as exc:
-            errors.append(str(exc)[:80])
-            continue
-        except Exception as exc:  # noqa: BLE001 — next history method
-            return None, str(exc)[:160]
-    return None, " | ".join(errors) or "no signature"
+    local = moment.astimezone(ET)
+    millis = local.microsecond // 1000
+    return local.strftime("%Y-%m-%dT%H:%M:%S.") + f"{millis:03d}" + local.strftime("%z")
+
+
+def history_windows(day: str) -> list[tuple[str, str]]:
+    """One ET civil day as ``(start_time, end_time)`` pairs, each <= 24h.
+
+    A normal day is midnight through ``23:59:59.999`` in the local offset.
+    Adding ``timedelta(hours=24)`` follows the wall clock, so on the
+    fall-back Sunday it lands ~25h later. Windows are split on absolute
+    time instead.
+    """
+    text = str(day or "")[:10]
+    year_s, month_s, day_s = text.split("-")
+    start = datetime(int(year_s), int(month_s), int(day_s), tzinfo=ET)
+    next_day = start.date() + timedelta(days=1)
+    end = datetime(next_day.year, next_day.month, next_day.day, tzinfo=ET)
+    end = end - timedelta(milliseconds=1)
+    windows: list[tuple[str, str]] = []
+    cursor = start
+    for _ in range(4):
+        if end.timestamp() - cursor.timestamp() <= _HISTORY_MAX_SECONDS:
+            windows.append((_webull_timestamp(cursor), _webull_timestamp(end)))
+            return windows
+        chunk_end = datetime.fromtimestamp(
+            cursor.timestamp() + _HISTORY_MAX_SECONDS - 0.001, ET)
+        windows.append((_webull_timestamp(cursor), _webull_timestamp(chunk_end)))
+        cursor = datetime.fromtimestamp(chunk_end.timestamp() + 0.001, ET)
+    raise ValueError("history window split failed for " + text)
+
+
+def _param_names(fn) -> set[str]:
+    try:
+        signature = inspect.signature(fn)
+    except (TypeError, ValueError):
+        return set()
+    return {
+        name for name, param in signature.parameters.items()
+        if param.kind in (
+            inspect.Parameter.POSITIONAL_OR_KEYWORD,
+            inspect.Parameter.KEYWORD_ONLY,
+        )
+    }
+
+
+def _history_pagination_key(payload) -> str:
+    if not isinstance(payload, dict):
+        return ""
+    for key in ("pagination_key", "paginationKey"):
+        value = payload.get(key)
+        if value:
+            return str(value)
+    data = payload.get("data")
+    if isinstance(data, dict):
+        for key in ("pagination_key", "paginationKey"):
+            value = data.get(key)
+            if value:
+                return str(value)
+    return ""
+
+
+def _history_by_timestamp(api, fn, account_id: str, date: str, names: set[str]):
+    pages = []
+    for start_time, end_time in history_windows(date):
+        page_key = ""
+        for _page in range(_HISTORY_PAGE_CAP):
+            kwargs = {"start_time": start_time, "end_time": end_time}
+            if "page_size" in names:
+                kwargs["page_size"] = _HISTORY_PAGE_SIZE
+            if page_key and "pagination_key" in names:
+                kwargs["pagination_key"] = page_key
+            body = api._json(fn(account_id, **kwargs), "filled_orders")
+            pages.append(body)
+            if "pagination_key" not in names:
+                break
+            page_key = _history_pagination_key(body)
+            if not page_key:
+                break
+        else:
+            raise RuntimeError(
+                "history pagination exceeded " + str(_HISTORY_PAGE_CAP))
+    if len(pages) == 1:
+        return pages[0]
+    return pages
+
+
+def _history_by_date(api, fn, account_id: str, date: str, names: set[str]):
+    session = str(date or "")[:10]
+    kwargs = {"start_date": session, "end_date": session}
+    if "page_size" in names:
+        kwargs["page_size"] = _HISTORY_PAGE_SIZE
+    return api._json(fn(account_id, **kwargs), "filled_orders")
+
+
+def _try_history_call(api, fn, account_id: str, date: str):
+    """Call one history method with the arguments its signature accepts.
+
+    ``list_order_history`` takes ``start_time`` / ``end_time``. A bare
+    session date must not be passed positionally into those parameters.
+    ``get_order_history`` still takes ``yyyy-MM-dd`` plus ``page_size``
+    of at most 100. Any error fails this method. The caller tries the
+    next method and, if all of them fail, raises rather than treating
+    the miss as no fills.
+    """
+    names = _param_names(fn)
+    try:
+        if "start_time" in names:
+            return _history_by_timestamp(api, fn, account_id, date, names), ""
+        if "start_date" in names:
+            return _history_by_date(api, fn, account_id, date, names), ""
+        return api._json(fn(account_id), "filled_orders"), ""
+    except TypeError as exc:
+        return None, str(exc)[:80]
+    except Exception as exc:  # noqa: BLE001 — next history method
+        return None, str(exc)[:160]
 
 
 class PaperAPI:

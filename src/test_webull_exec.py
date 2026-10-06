@@ -773,6 +773,166 @@ def test_session_query_keeps_open_and_filled_for_that_day() -> None:
     assert {row["order_id"] for row in rows} == {"O1", "F1"}
 
 
+def test_history_windows_pin_sdk_timestamp() -> None:
+    """list_order_history wants yyyy-MM-dd'T'HH:mm:ss.SSSZ, not yyyy-MM-dd."""
+    from src.webull_exec import history_windows
+
+    assert history_windows("2026-10-06") == [
+        ("2026-10-06T00:00:00.000-0400", "2026-10-06T23:59:59.999-0400"),
+    ]
+    assert history_windows("2026-12-01") == [
+        ("2026-12-01T00:00:00.000-0500", "2026-12-01T23:59:59.999-0500"),
+    ]
+    # Fall-back Sunday is ~25h absolute, so it is two calls, each <= 24h.
+    assert history_windows("2026-11-01") == [
+        ("2026-11-01T00:00:00.000-0400", "2026-11-01T22:59:59.999-0500"),
+        ("2026-11-01T23:00:00.000-0500", "2026-11-01T23:59:59.999-0500"),
+    ]
+
+
+def test_list_order_history_gets_sdk_timestamps_not_a_bare_date() -> None:
+    from types import SimpleNamespace
+    from src.webull_exec import PaperAPI
+
+    seen = []
+
+    def list_order_history(account_id, start_time=None, end_time=None,
+                           pagination_key=None):
+        seen.append((start_time, end_time, pagination_key))
+        assert start_time != "2026-10-06" and end_time != "2026-10-06"
+        if pagination_key == "p2":
+            return {"orders": [{
+                "order_id": "P2", "client_order_id": "c2",
+                "symbol": "AAA", "side": "BUY", "status": "FILLED",
+            }]}
+        return {
+            "pagination_key": "p2",
+            "orders": [{
+                "order_id": "P1", "client_order_id": "c1",
+                "symbol": "SDEV", "side": "BUY", "status": "FILLED",
+            }],
+        }
+
+    api = PaperAPI()
+    api.account_id = "aid-1"
+    api.trade = SimpleNamespace(
+        order_v3=SimpleNamespace(list_order_history=list_order_history),
+    )
+    rows = api.list_filled_orders("2026-10-06")
+    assert seen == [
+        ("2026-10-06T00:00:00.000-0400", "2026-10-06T23:59:59.999-0400", None),
+        ("2026-10-06T00:00:00.000-0400", "2026-10-06T23:59:59.999-0400", "p2"),
+    ]
+    assert {row["order_id"] for row in rows} == {"P1", "P2"}
+
+
+def test_get_order_history_page_size_is_100() -> None:
+    from types import SimpleNamespace
+    from src.webull_exec import PaperAPI
+
+    def list_order_history(account_id, start_time=None, end_time=None):
+        raise RuntimeError("HTTP 417 invalid start_time")
+
+    def get_order_history(account_id, page_size=None, start_date=None, end_date=None):
+        assert page_size == 100
+        assert start_date == "2026-10-06" and end_date == "2026-10-06"
+        return {"orders": [{
+            "order_id": "Z", "symbol": "AAA", "side": "BUY", "status": "FILLED",
+        }]}
+
+    api = PaperAPI()
+    api.account_id = "aid-1"
+    api.trade = SimpleNamespace(
+        order_v3=SimpleNamespace(
+            list_order_history=list_order_history,
+            get_order_history=get_order_history,
+        ),
+    )
+    rows = api.list_filled_orders("2026-10-06")
+    assert [row["order_id"] for row in rows] == ["Z"]
+
+
+def test_morning_status_records_fill_price_without_placing(tmp_path) -> None:
+    from datetime import datetime, timedelta
+    from types import SimpleNamespace
+    from src import paper_open as po
+    from src.webull_exec import PaperAPI
+
+    day = "2026-10-06"
+    coid = client_order_id(day, "BUY", "SDEV")
+    seen = []
+
+    def list_order_history(account_id, start_time=None, end_time=None,
+                           pagination_key=None):
+        seen.append(start_time)
+        return {"orders": [{
+            "order_id": "OID-S",
+            "client_order_id": coid,
+            "symbol": "SDEV",
+            "side": "BUY",
+            "status": "FILLED",
+            "avg_filled_price": "4.25",
+            "filled_quantity": "10",
+            "price": "9.99",
+            "filled_time": day + "T09:31:00-04:00",
+        }]}
+
+    api = PaperAPI()
+    api.account_id = "aid-1"
+    api.trade = SimpleNamespace(
+        order_v3=SimpleNamespace(
+            list_order_open=lambda aid: {"orders": []},
+            get_order_open=lambda aid: (_ for _ in ()).throw(RuntimeError("no")),
+            get_order_detail=lambda aid, oid: (_ for _ in ()).throw(RuntimeError("no")),
+            list_order_history=list_order_history,
+        ),
+    )
+    placed = []
+    api.place_batch = lambda tickets: placed.append(tickets) or {}
+    early = datetime.fromisoformat(day + "T08:41:00-04:00")
+    result = po.release(
+        {
+            "date": day,
+            "prepared_at": (early - timedelta(seconds=10)).isoformat(),
+            "fingerprint": "t",
+            "card": {"tickets": [{
+                "ticker": "SDEV", "side": "BUY", "shares": 10,
+                "px": 9.99, "date": day,
+            }]},
+        },
+        api, lambda: early, tmp_path / "seal.json",
+        submit=True, standing=True,
+    )
+    assert placed == []
+    assert seen == ["2026-10-06T00:00:00.000-0400"]
+    assert result["status"] == "already_submitted"
+    sent = result["sent"][0]
+    assert sent["status"] == "already_submitted"
+    assert sent["avg_fill_px"] == 4.25
+    assert sent["filled_qty"] == 10
+    assert sent["broker_status"] == "FILLED"
+    assert sent["avg_fill_px"] != 9.99
+
+
+def test_working_order_limit_is_not_a_fill_price() -> None:
+    from src.webull_exec import match_sealed_orders
+
+    day = "2026-10-06"
+    coid = client_order_id(day, "BUY", "SDEV")
+    found, missing = match_sealed_orders(
+        [{"ticker": "SDEV", "side": "BUY", "shares": 10, "date": day}],
+        [{
+            "order_id": "1", "client_order_id": coid, "symbol": "SDEV",
+            "side": "BUY", "status": "SUBMITTED", "price": "9.99",
+            "order_time": day + "T08:00:00-04:00",
+        }],
+        day,
+    )
+    assert missing == []
+    assert "avg_fill_px" not in found[0]
+    assert found[0]["broker_status"] == "SUBMITTED"
+
+
 def test_broker_guard_present_partial_and_query_failed() -> None:
     """No local status file. The sandbox book decides what may be sent."""
     import tempfile
