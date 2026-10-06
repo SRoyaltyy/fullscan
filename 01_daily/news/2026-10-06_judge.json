@@ -1,0 +1,22 @@
+{
+ "risk_tilt": "on",
+ "macros": [
+  "mixed",
+  "bullish",
+  "mixed",
+  "bullish"
+ ],
+ "sector_tilts": {
+  "Semis/Ai": "mixed",
+  "Utilities/Nuclear": "bullish",
+  "Energy": "bearish",
+  "Financial": "mixed"
+ },
+ "tickers": {
+  "GOOGL": 4.0,
+  "XLE": -9.5,
+  "CEG": 1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=6\nMACRO rates: [mixed] Two-sided Oct hike path (hawkish comments + inflation-hike talk vs weak jobs/pared bets); yields still near multi-decade highs (session/1d-1w)\nMACRO risk: [bullish] NDX records as mega-caps shrug the bond selloff; top-heavy tape is the break-risk (session/1d-1w)\nSECTOR semis/AI: [mixed] NVDA/AVGO shielded, rest of chain hit by power crunch; AWS raising AI-chip rents (SMH split)\nSECTOR utilities/nuclear: [bullish] GOOGL\u2013CEG near billion-dollar firm-power deal; AI load bid (CEG/IPP basket)\nSECTOR energy: [bearish] OPEC+ steady Nov quotas, no extra cut (XLE)\nSECTOR financials: [mixed] NY Fed reviewing bank loans to private credit; minutes/ISM unsigned (KRE/credit)\nINTERACTION: one rates cluster + yield-high vs NDX-lead; do not blanket-buy SMH or software on easing hope\nWATCH: FOMC minutes/ISM Services this week still unsigned; TSMC Terafab is talks-only",
+ "date": "2026-10-06"
+}
