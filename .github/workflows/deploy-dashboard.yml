@@ -123,7 +123,7 @@ jobs:
                      mover-lookback sleeve-combine sleeve-merge mover-paper strategy-board \
                      book-paper paper-book factor-mine down-day-mine day-board \
                      hard-red-exceptions day-movers holdup h1 jev-train news-dir news-intake \
-                     webull-sim; do
+                     webull-sim updown updown-shadow; do
             overlay "$sub"
           done
           if [ -f dashboard/factor-mine/index.html ]; then

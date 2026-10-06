@@ -1,0 +1,9 @@
+{
+ "source": "api.nasdaq.com calendar/earnings, one file per weekday",
+ "final_through": "2026-10-06",
+ "final_note": "dates <= final_through were fetched after the fact (complete); later dates are the schedule as fetched 2026-10-07 HKT and are used only as a fallback when the live fetch fails",
+ "first": "2026-05-01",
+ "last": "2026-11-20",
+ "events": 12396,
+ "future_days_fetched": 33
+}
