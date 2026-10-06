@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T06:04:36.982971-04:00",
+  "generated_at": "2026-10-06T06:04:44.067226-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -338,7 +338,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6363,
+          "size": 6085,
           "said": "0 up / 0 down / 0 flat",
           "bullets": [
             "XLB missing",
@@ -713,7 +713,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6363,
+          "size": 6085,
           "said": "0 up / 0 down / 0 flat",
           "bullets": [
             "XLB missing",
@@ -2812,6 +2812,24 @@
         }
       ],
       "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-06\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T06:04:42.869588-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-06/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6085,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "href": {
