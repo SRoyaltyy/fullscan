@@ -2677,3 +2677,13 @@
 {"close":1.28,"date":"2026-10-05","high":1.53,"low":1.2601,"open":1.525,"ticker":"QSI","volume":19096071.0}
 {"close":3.94,"date":"2026-10-05","high":9.82,"low":3.25,"open":9.71,"ticker":"SDEV","volume":83395056.0}
 {"close":32.880001,"date":"2026-10-05","high":34.220001,"low":30.5,"open":32.73,"ticker":"TJGC","volume":114783.0}
+{"close":11.96,"date":"2026-09-29","high":12.27,"low":10.53,"open":10.54,"ticker":"DNA","volume":4745900.0}
+{"close":12.83,"date":"2026-09-30","high":13.415,"low":11.865,"open":11.9,"ticker":"DNA","volume":4647900.0}
+{"close":12.5,"date":"2026-10-01","high":13.16,"low":12.11,"open":12.6,"ticker":"DNA","volume":2915100.0}
+{"close":12.35,"date":"2026-10-02","high":13.4,"low":11.94,"open":13.0,"ticker":"DNA","volume":2040100.0}
+{"close":14.98,"date":"2026-10-05","high":15.48,"low":12.48,"open":12.5,"ticker":"DNA","volume":7650300.0}
+{"close":1.83,"date":"2026-09-29","high":1.85,"low":1.63,"open":1.68,"ticker":"PACB","volume":17423900.0}
+{"close":2.37,"date":"2026-09-30","high":2.46,"low":1.84,"open":1.84,"ticker":"PACB","volume":80386300.0}
+{"close":2.51,"date":"2026-10-01","high":2.56,"low":2.32,"open":2.34,"ticker":"PACB","volume":35866100.0}
+{"close":2.54,"date":"2026-10-02","high":2.65,"low":2.44,"open":2.5,"ticker":"PACB","volume":26011200.0}
+{"close":2.87,"date":"2026-10-05","high":2.92,"low":2.51,"open":2.53,"ticker":"PACB","volume":26189000.0}
