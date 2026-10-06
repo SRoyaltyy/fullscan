@@ -79,6 +79,7 @@ jobs:
           DATE="${RUN_DATE:-}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
           python -m src.sleeve_merge --card --date "$DATE" --write-card
+          python -m src.past_day_lock --check
           test -s "data/sleeve_merge/today.json"
           test -s "data/sleeve_merge/positions.json"
           test -s "01_daily/${DATE}_flatten_card.md"
@@ -99,7 +100,8 @@ jobs:
             "01_daily/${DATE}_flatten_card.md" \
             data/sleeve_merge/today.json \
             data/sleeve_merge/positions.json \
-            dashboard/sleeve-merge/
+            dashboard/sleeve-merge/ \
+            data/past_day_lock/
 
       - name: Overlay Pages
         if: env.skip != 'yes'

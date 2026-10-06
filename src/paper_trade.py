@@ -1402,8 +1402,10 @@ def run(date: str | None = None, top_n: int = 10, capital: float | None = None) 
     skips = collect_skips(books, prices, trade_rows, top_n, capital,
                           session_ix=sess_ix)
     PAPER_DIR.mkdir(parents=True, exist_ok=True)
-    curve = pd.DataFrame(curve_rows)
-    curve.to_csv(PAPER_DIR / "equity_curve.csv", index=False)
+    # Not past-day locked. Each run replays every book, and a later run
+    # rewrites earlier rows (a closed sell reprices, an open lot exits,
+    # a late close fills in). Same reason sleeve_merge trades.csv is open.
+    pd.DataFrame(curve_rows).to_csv(PAPER_DIR / "equity_curve.csv", index=False)
     pd.DataFrame(trade_rows).to_csv(PAPER_DIR / "trades.csv", index=False)
     if trips:
         pd.DataFrame(trips).to_csv(PAPER_DIR / "roundtrips.csv", index=False)

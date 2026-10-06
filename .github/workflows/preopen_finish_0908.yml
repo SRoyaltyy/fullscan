@@ -393,6 +393,7 @@ jobs:
             "dashboard/" \
             "03_scoreboard/" \
             "data/paper/" \
+            "data/past_day_lock/" \
             "data/catalyst/" \
             "data/stock_book/" || true
 

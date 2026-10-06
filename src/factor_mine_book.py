@@ -1871,12 +1871,20 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
             "explain": s.get("explain"),
         }
 
+    rendered: list[tuple[str, str]] = []
     for name, b in books.items():
         s = by_stats.get(name)
         if not s:
             continue
-        (dest_dir / f"{name}.md").write_text(
-            render_recipe_md(rec_for(name, s), s, b), encoding="utf-8")
+        rendered.append((name, render_recipe_md(rec_for(name, s), s, b)))
+    from . import past_day_lock as pdl
+    watermark = ""
+    if pdl.in_repo(dest_dir) and dest_dir.resolve() == pdl.FACTOR_MINE_DIR.resolve():
+        watermark = pdl.guard_factor_mine_dir(dest_dir, rendered)
+    for name, text in rendered:
+        (dest_dir / f"{name}.md").write_text(text, encoding="utf-8")
+    if pdl.in_repo(dest_dir) and dest_dir.resolve() == pdl.FACTOR_MINE_DIR.resolve():
+        pdl.seal_factor_mine_dir(dest_dir, rendered, watermark=watermark)
 
     index = [
         f"# Factor mine action — {payload.get('from_date')} → {payload.get('to_date')}",
