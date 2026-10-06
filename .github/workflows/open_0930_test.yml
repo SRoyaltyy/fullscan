@@ -20,6 +20,11 @@ on:
       - "src/strategy_tickets.py"
       - "src/test_hot4_wire.py"
       - "src/paper_open.py"
+      - "src/paper_backstop.py"
+      - "src/test_paper_backstop.py"
+      - "scripts/ecs_paper_backstop.sh"
+      - "scripts/install_paper_backstop.sh"
+      - ".github/workflows/install_paper_backstop.yml"
       - "src/morning_scan.py"
       - "src/test_morning_scan.py"
       - "src/skip_if_good.py"
@@ -36,6 +41,11 @@ on:
       - "src/strategy_tickets.py"
       - "src/test_hot4_wire.py"
       - "src/paper_open.py"
+      - "src/paper_backstop.py"
+      - "src/test_paper_backstop.py"
+      - "scripts/ecs_paper_backstop.sh"
+      - "scripts/install_paper_backstop.sh"
+      - ".github/workflows/install_paper_backstop.yml"
       - "src/h1_sealed_exec.py"
       - "src/test_h1_sealed_webull.py"
       - "src/webull_exec.py"
@@ -67,5 +77,6 @@ jobs:
           PYTHONPATH=. python3 -m src.test_morning_scan
           PYTHONPATH=. python3 -m src.test_webull_exec
           PYTHONPATH=. python3 -m src.test_h1_sealed_webull
+          PYTHONPATH=. python3 -m src.test_paper_backstop
           PYTHONPATH=. python3 -m src.test_combo_broker
           PYTHONPATH=. python3 -m src.test_skip_if_good

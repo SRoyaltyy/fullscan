@@ -682,8 +682,11 @@ def test_yml_warms_before_bell_and_has_one_automatic_sender() -> None:
     assert "7 12,13" in yml
     assert "src.paper_open" in yml
     assert "--owner actions" in yml
-    assert "--ready" not in yml
-    assert "workflow_run:" not in yml
+    # --ready is the seal trigger only, and only before 09:30 ET.
+    assert "h1 append-only forward" in yml
+    assert "workflow_run:" in yml
+    assert "-lt 930" in yml
+    assert yml.index("[ \"$SEAL_EVENT\" = \"workflow_run\" ]") < yml.index("ARGS+=(--ready)")
     assert "  push:" not in yml
     assert "src.webull_exec" not in (root / ".github/workflows/open_0930.yml").read_text()
     pub = (root / ".github/workflows/publish_strategy_tickets.yml").read_text()

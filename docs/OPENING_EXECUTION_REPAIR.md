@@ -43,6 +43,8 @@ The live factor-mine strip refreshes every ten seconds. Other live strips select
 
 The ECS timer `fullscan-paper-open.timer` remains installed at 08:15 America/New_York as a dormant spare. Because the committed owner is `actions` and the service passes `--owner ecs`, `owner_enabled` skips before any broker call. Re-run the installer after executor updates to refresh the isolated checkout; the installer now **keeps** `owner=actions` and refuses to claim the send. Journals on the host stay in `/home/gha/fullscan-persist/paper-open` and are independent of the Actions workspace journal landed on `main`.
 
+Hosted cron is not a punctual backstop. When `h1 append-only forward` completes successfully on `main`, `webull_paper.yml` starts from `workflow_run` (its own concurrency group, so the 08:07 ET cron cannot queue it). Before 09:30 ET that run passes `--ready` and places the standing sandbox batch; at or after 09:30 it keeps the bell path and records `missed_deadline`. `fullscan-paper-backstop.timer` on the ECS box (`ecs-openclaw`, `/home/gha`) fires weekdays at 09:12 America/New_York (`OnCalendar` includes the timezone). It sends with `--owner actions` only when origin/main has today's sealed h1 plan and no submit journal yet. `--owner ecs` would no-op. A start after 09:25 ET still commits `data/paper_open/<date>_backstop.json` with `late: true`. The timer does not upgrade OpenClaw.
+
 ```sh
 systemctl status fullscan-paper-open.timer
 journalctl -u fullscan-paper-open.service --since today

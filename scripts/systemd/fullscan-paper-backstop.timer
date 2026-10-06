@@ -1,0 +1,17 @@
+[Unit]
+Description=Sealed-h1 Webull paper backstop weekdays 09:12 America/New_York
+
+[Timer]
+# On the ECS box (ecs-openclaw), not a GitHub-hosted cron. The timezone
+# is in OnCalendar so EDT and EST both fire at 09:12 New York.
+OnCalendar=Mon..Fri *-*-* 09:12:00 America/New_York
+AccuracySec=1s
+RandomizedDelaySec=0
+# A late enable must not catch up into the cash session. The next
+# weekday 09:12 is the run. Persistent=true would fire at install time
+# on a day whose 09:12 already passed.
+Persistent=false
+Unit=fullscan-paper-backstop.service
+
+[Install]
+WantedBy=timers.target

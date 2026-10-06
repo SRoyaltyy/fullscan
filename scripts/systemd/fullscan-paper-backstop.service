@@ -1,0 +1,24 @@
+[Unit]
+Description=Sealed-h1 Webull paper backstop (sandbox, 09:12 ET)
+After=network-online.target time-sync.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=gha
+Group=gha
+WorkingDirectory=/home/gha/fullscan
+EnvironmentFile=-/home/gha/.fullscan.env
+EnvironmentFile=-/home/gha/.fullscan-paper.env
+Environment=HOME=/home/gha
+Environment=FULLSCAN_HOME=/home/gha
+Environment=TZ=America/New_York
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONPATH=/home/gha/fullscan
+ExecStart=/bin/bash /home/gha/fullscan/scripts/ecs_paper_backstop.sh
+TimeoutStartSec=7200
+Nice=5
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
