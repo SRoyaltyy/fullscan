@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Every-stock up/down (research) — updown_o2c_v1</title>
+<title>Every-stock up/down (research) — updown_o2c_v2</title>
 <style>
 body{font:14px/1.4 system-ui,sans-serif;margin:0;background:#f6f7f9;color:#1d232b}
 header{background:#1d232b;color:#fff;padding:10px 16px}header h1{font-size:18px;margin:0}
@@ -17,8 +17,8 @@ th{cursor:pointer;background:#f0f2f5;position:sticky;top:0}td:first-child,th:fir
 #tablewrap{max-height:560px;overflow:auto}canvas{width:100%;height:160px}small{color:#5b6573}
 button,input,select{font:inherit}#status{color:#8a1c1c}
 </style></head><body>
-<header><h1>Every-stock morning up/down read — <span id="model">updown_o2c_v1</span></h1><small id="built" style="color:#cfd6df"></small></header>
-<div class="warn">RESEARCH PAGE — NOT A TRADING SIGNAL. Out-of-sample statistical estimates; edges are small; per-stock numbers ignore fees and slippage.</div>
+<header><h1>Every-stock morning up/down read — <span id="model">updown_o2c_v2</span></h1><small id="built" style="color:#cfd6df"></small></header>
+<div class="warn">RESEARCH PAGE — NOT A TRADING SIGNAL. Out-of-sample statistical estimates; edges are small; per-stock numbers ignore fees and slippage. The open&rarr;close edge relies on today's official open, which cannot be known before an opening order is committed; with no same-day open information the after-fee edge disappears. Leak audit: <a href="LEAK_AUDIT.md">LEAK_AUDIT.md</a>.</div>
 <main>
 <div id="status"></div>
 <div class="card"><div id="notes"></div><div class="row" id="sumrow"></div></div>
@@ -44,7 +44,7 @@ fetch(BASE+'index.json').then(r=>{if(!r.ok)throw r.status;return r.json()}).then
 async function gunz(r){if(!r.ok)throw 'HTTP '+r.status;let b=await r.arrayBuffer();const u=new Uint8Array(b,0,2);if(u[0]==0x1f&&u[1]==0x8b){b=await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();}return b;}
 function month(mo){const y=mo.slice(0,4);if(MC[y])return MC[y];return MC[y]=fetch(BASE+'y/'+y+'.bin.gz').then(gunz).then(b=>{const v=new DataView(b),nT=v.getUint16(4,true),nD=v.getUint16(6,true);let o=8;
  const T=new Uint16Array(b,o,nT);o+=2*nT;const D=new Uint16Array(b,o,nD);o+=2*nD;const P=new Uint16Array(b,o,nT*nD);o+=2*nT*nD;const R=new Int16Array(b,o,nT*nD);return {T,D,P,R,nT,nD};});}
-function init(){$('#built').textContent='built '+IDX.built+' · horizon: '+IDX.horizon+' · final holdout from '+IDX.holdout_start;
+function init(){$('#model').textContent=IDX.model;$('#built').textContent='built '+IDX.built+' · horizon: '+IDX.horizon+' · final holdout from '+IDX.holdout_start;
  $('#notes').innerHTML='<ul>'+IDX.notes.map(n=>'<li>'+n+'</li>').join('')+'</ul>';let h='';
  for(const k of ['dev','holdout']){const s=IDX.summary[k];h+=`<div class="kpi"><span class="${k=='dev'?'dev':'hold'}">${k=='dev'?'dev (walk-forward)':'FINAL HOLDOUT'}</span> ${s.days} days</div><div class="kpi">mean AUC<b>${s.auc.toFixed(4)}</b></div><div class="kpi">hit<b>${pct(s.hit,1)}</b><small>always-up ${pct(s.always_up,1)} · always-down ${pct(s.always_down,1)}</small></div><div class="kpi">top-bottom decile<b>${s.spread_pct.toFixed(3)}%/day</b><small>after 0.4% fees ${s.ls_net_pct.toFixed(3)}%</small></div><div style="flex-basis:100%"></div>`;}
  $('#sumrow').innerHTML=h;$('#dp').min=DAYS[0].d;$('#dp').max=DAYS[DAYS.length-1].d;drawChart();
