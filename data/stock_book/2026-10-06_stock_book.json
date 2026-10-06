@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-06",
-    "generated_at": "2026-10-06T10:17:35.386161-04:00",
+    "generated_at": "2026-10-06T10:42:56.822227-04:00",
     "general_bias": 0.51425,
     "sector_bias": {
       "Technology": 0.0
@@ -293,7 +293,7 @@
     "pile_used": true,
     "green_min": 8,
     "ranker": "decision_lattice",
-    "as_of": true,
+    "as_of": false,
     "general_direction": "up",
     "market_decision": {
       "date": "2026-10-06",
