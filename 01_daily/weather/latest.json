@@ -1,6 +1,6 @@
 {
  "date": "2026-10-06",
- "generated_at": "2026-10-06T04:25:47.664229-04:00",
+ "generated_at": "2026-10-06T05:41:01.912818-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -9,25 +9,28 @@
  ],
  "signals": {
   "date": "2026-10-06",
-  "risk": "unknown",
-  "yields_score": null,
-  "fed_score": null,
-  "dollar_oil_score": null,
-  "futures_score": null,
+  "general_score": 2.623,
+  "general_direction": "up",
+  "general_confidence": 0.605,
+  "risk": "on",
+  "yields_score": -0.5,
+  "fed_score": 0.0,
+  "dollar_oil_score": 0.5,
+  "futures_score": 0.0,
   "yields": "rising",
   "yields_source": "fred_dgs10",
   "dgs10_delta_1d": 0.04,
   "dgs10_current": 5.28,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.06,
-  "vix_ratio": 0.859,
-  "vix_spot": 15.47,
-  "vix_delta_1d": -0.05,
+  "dxy_pct_1d": -0.13,
+  "vix_ratio": 0.856,
+  "vix_spot": 15.41,
+  "vix_delta_1d": -0.11,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -0.49,
-  "oil": "flat",
+  "oil_pct_1d": -1.91,
+  "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
   "regime_corr": 0.166,
@@ -114,7 +117,8 @@
   },
   "events_bull": 7,
   "events_bear": 4,
-  "china_event_dir": "bear"
+  "china_event_dir": "bear",
+  "risk_source": "news_judge"
  },
  "stances": {
   "sector": {
@@ -141,7 +145,7 @@
    "Energy": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.50% [tape]"
+    "why": "news_judge SECTOR Energy [bearish]"
    },
    "Financial": {
     "stance": "neutral",
@@ -176,63 +180,63 @@
   },
   "size": {
    "micro": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-mixed, dollar flat [general predict + factors]"
    },
    "small": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
-   },
-   "mid": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-mixed, dollar flat [general predict + factors]"
    },
    "large": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-mixed [general predict]"
    },
    "mega": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-mixed [general predict]"
+   },
+   "mid": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "no dedicated mid-cap signal in v1"
    }
   },
   "index": {
    "sp500": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-mixed [general predict]"
    },
    "ndx": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-mixed [general predict]"
    },
    "djia": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-mixed [general predict]"
    },
    "rut": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "risk-mixed, dollar flat [general predict + factors]"
    },
    "none": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "non-index: not a small-cap proxy"
    }
   },
   "geo": {
    "US": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "mirrors general risk-unknown [general predict]"
+    "why": "mirrors general risk-mixed [general predict]"
    },
    "ADR-China": {
     "stance": "hostile",
@@ -244,12 +248,12 @@
    "high": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-unknown, VIX falling"
+    "why": "risk-mixed, VIX falling"
    },
    "low": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-unknown, VIX falling"
+    "why": "risk-mixed, VIX falling"
    },
    "mid": {
     "stance": "neutral",
@@ -258,25 +262,25 @@
    }
   },
   "short": {
-   "low": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
-   },
-   "mid": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
-   },
    "high": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "mixed tape — squeeze/stress unresolved"
    },
    "extreme": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "mixed tape — squeeze/stress unresolved"
+   },
+   "low": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "low short is not a tailwind by itself"
+   },
+   "mid": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "no strong crowding signal"
    }
   },
   "vol": {
@@ -300,7 +304,7 @@
    "no": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "risk-unknown, F&G None"
+    "why": "risk-mixed, F&G None"
    },
    "yes": {
     "stance": "neutral",
@@ -354,73 +358,73 @@
   },
   "mom": {
    "uptrend": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "mixed tape"
    },
    "downtrend": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "—"
    },
    "mixed": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "—"
    }
   },
   "ext": {
-   "extreme": {
-    "stance": "unknown",
+   "washed": {
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "mixed tape"
    },
    "extended": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "extension tolerated while tape is firm"
    },
-   "washed": {
-    "stance": "unknown",
+   "extreme": {
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "extension tolerated while tape is firm"
    },
    "neutral": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "—"
    }
   },
   "range": {
    "deep_low": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
-   },
-   "low": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
-   },
-   "mid": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
-   },
-   "high": {
-    "stance": "unknown",
-    "confidence": "low",
-    "why": "no general predict"
+    "why": "mixed tape"
    },
    "top": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "—"
    },
    "breakout": {
-    "stance": "unknown",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "no general predict"
+    "why": "—"
+   },
+   "low": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
+   },
+   "mid": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
+   },
+   "high": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    }
   }
  },
@@ -435,8 +439,5 @@
   "veto_earn_today": true,
   "veto_extreme_risk_off": false
  },
- "data_gaps": [
-  "general predict run",
-  "general predict factor scoreboard"
- ]
+ "data_gaps": []
 }
