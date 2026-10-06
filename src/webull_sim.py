@@ -19,6 +19,7 @@ and covers the close of the last hold day.
 from __future__ import annotations
 
 import csv
+import html
 import io
 import json
 import os
@@ -41,6 +42,10 @@ H1_LOG = ROOT / "research" / "hot_n4_clean_v4" / "forward_h1" / "h1_log.jsonl"
 TICKET_DIR = ROOT / "data" / "day_board"
 EXCEL_DIR = ROOT / "excel_bot" / "daily"
 EXCEL_STRATS = ROOT / "excel_bot" / "strategies"
+EXCEL_FREEZE = ROOT / "excel_bot" / "freeze_manifest.json"
+EXCEL_LOCK_FROM = "2026-10-06"
+EXCEL_PRE_LOCK = "sealed by git commit time (pre-lock)"
+EXCEL_MANIFEST_SEAL = "sealed by git commit time + excel_bot freeze manifest"
 SHADOW_DIR = ROOT / "research" / "forward_shadow_v1" / "ledger"
 PAPER_OPEN = ROOT / "data" / "paper_open"
 PRICE_PATH = ROOT / "data" / "prices" / "ohlc.parquet"
@@ -1718,26 +1723,175 @@ def _money(text: str) -> str:
     return f"${Decimal(text):,.2f}"
 
 
-def _md_book_row(row: dict) -> str:
+def load_excel_freeze(path: Path | None = None) -> dict:
+    """The excel_bot lock. A missing file does not invent fingerprints."""
+    dest = path or EXCEL_FREEZE
+    if not dest.is_file():
+        return {"lock_from": EXCEL_LOCK_FROM, "entries": []}
+    try:
+        data = json.loads(dest.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {"lock_from": EXCEL_LOCK_FROM, "entries": []}
+    if not isinstance(data, dict):
+        return {"lock_from": EXCEL_LOCK_FROM, "entries": []}
+    return data
+
+
+def excel_signal_day(source: str) -> str | None:
+    """Date in ``excel_bot/daily/<date>_excel_bot.md``. That date is the signal date."""
+    name = str(source or "").replace("\\", "/").rsplit("/", 1)[-1]
+    if "draft" in name or not name.endswith("_excel_bot.md") or len(name) < 11:
+        return None
+    if name[10] != "_":
+        return None
+    day = name[:10]
+    try:
+        date.fromisoformat(day)
+    except ValueError:
+        return None
+    return day
+
+
+def _manifest_lists_file(source: str, file_day: str, manifest: dict) -> bool:
+    entries = manifest.get("entries")
+    if not isinstance(entries, list):
+        return False
+    for entry in entries:
+        if isinstance(entry, dict):
+            if str(entry.get("signal_date") or "") == file_day:
+                return True
+            if source and source in json.dumps(entry, ensure_ascii=False):
+                return True
+        elif isinstance(entry, str) and source and source in entry:
+            return True
+    return False
+
+
+def excel_seal_label(source: str, manifest: dict | None = None) -> str:
+    """Page label for an excel_bot daily file. Empty when the file is not labelled."""
+    file_day = excel_signal_day(source)
+    if not file_day:
+        return ""
+    doc = manifest if manifest is not None else load_excel_freeze()
+    lock_from = str(doc.get("lock_from") or EXCEL_LOCK_FROM)
+    if file_day < lock_from:
+        return EXCEL_PRE_LOCK
+    if _manifest_lists_file(source, file_day, doc):
+        return EXCEL_MANIFEST_SEAL
+    return ""
+
+
+def display_source(row: dict, manifest: dict | None = None) -> str:
+    source = row.get("source") or "—"
+    label = excel_seal_label(str(row.get("source") or ""), manifest)
+    if not label:
+        return source
+    return f"{source} — {label}"
+
+
+def _orders_were_sent(payload: dict) -> bool:
+    sent = payload.get("sent")
+    if not isinstance(sent, list):
+        return False
+    for order in sent:
+        if not isinstance(order, dict):
+            continue
+        if str(order.get("order_id") or "").strip():
+            return True
+        if order.get("ok") is True:
+            return True
+    return False
+
+
+def _send_missed_open(payload: dict) -> bool:
+    sent = payload.get("sent")
+    if not isinstance(sent, list) or not sent:
+        return False
+    for order in sent:
+        if not isinstance(order, dict):
+            return False
+        if order.get("status") != "missed_deadline":
+            return False
+        if str(order.get("order_id") or "").strip() or order.get("ok") is True:
+            return False
+    return True
+
+
+def unsent_orders_label(payload: dict | None) -> str:
+    """Plain reason when the paper-open status file shows no orders went out.
+
+    The date is the file's own ``date``. An empty string means the stored
+    sandbox text stays.
+    """
+    if not isinstance(payload, dict) or _orders_were_sent(payload):
+        return ""
+    status = str(payload.get("status") or "")
+    late = _send_missed_open(payload)
+    if status not in {
+        "missed_deadline", "blocked", "broker_unavailable",
+        "not_ready_at_open", "failed", "dry_run", "no_trade",
+    } and not late:
+        return ""
+    day = str(payload.get("date") or "").strip()
+    if not day:
+        return ""
+    if status == "missed_deadline" or late:
+        detail = "send started after the 09:30 open (missed deadline)"
+    elif status == "blocked":
+        error = str(payload.get("error") or "").strip()
+        detail = f"{error} (blocked)" if error else "blocked"
+    else:
+        error = str(payload.get("error") or "").strip()
+        words = status.replace("_", " ")
+        detail = f"{error} ({words})" if error else words
+    return f"No Webull orders sent on {day}: {detail}"
+
+
+def display_sandbox(row: dict, paper_open: Path | None = None) -> str:
+    stored = row.get("sandbox") or "—"
+    if row.get("name") != "h1_webull_sim":
+        return stored
+    day = str(row.get("date") or "")
+    path = (paper_open or PAPER_OPEN) / f"{day}_status.json"
+    if not path.is_file():
+        return stored
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return stored
+    label = unsent_orders_label(payload)
+    return label or stored
+
+
+def _md_book_row(row: dict, *, manifest: dict | None = None,
+                 paper_open: Path | None = None) -> str:
     return (
         f"| {row['name']} | {row['date']} | {row['section']} | {row['reason'] or 'traded'} | "
         f"{row.get('sizing') or '—'} | "
         f"{row['picks']} | {_money(row['equity'])} | {_money(row['fees'])} | "
-        f"{row['commit_et'] or '—'} | {row['source'] or '—'} | "
-        f"{(row['commit'] or '—')[:12]} | {row['sandbox'] or '—'} |"
+        f"{row['commit_et'] or '—'} | {display_source(row, manifest)} | "
+        f"{(row['commit'] or '—')[:12]} | {display_sandbox(row, paper_open)} |"
     )
 
 
-def _html_book_row(row: dict) -> str:
+def _html_book_row(row: dict, *, manifest: dict | None = None,
+                   paper_open: Path | None = None) -> str:
     reason = row["reason"] or "traded"
+    sha = (row["commit"] or "—")[:12]
+    seal = excel_seal_label(str(row.get("source") or ""), manifest)
+    if seal:
+        sha = f"{sha} {html.escape(seal)}"
+    sandbox = display_sandbox(row, paper_open)
+    if sandbox != (row.get("sandbox") or "—"):
+        sandbox = html.escape(sandbox)
     return (
         "<tr>"
         f"<td>{row['name']}</td><td>{row['date']}</td><td>{row['section']}</td>"
         f"<td>{reason}</td><td>{row.get('sizing') or '—'}</td>"
         f"<td>{row['picks']}</td><td>{_money(row['equity'])}</td>"
         f"<td>{row['commit_et'] or '—'}</td>"
-        f"<td>{(row['commit'] or '—')[:12]}</td>"
-        f"<td>{row['sandbox'] or '—'}</td>"
+        f"<td>{sha}</td>"
+        f"<td>{sandbox}</td>"
         "</tr>"
     )
 
@@ -1746,7 +1900,11 @@ def _theme_names(rows: list[dict]) -> list[str]:
     return sorted({row["name"] for row in rows if is_theme_book(row.get("name") or "")})
 
 
-def render_md(rows: list[dict], schedule: Schedule) -> str:
+def render_md(rows: list[dict], schedule: Schedule, *,
+              manifest: dict | None = None,
+              paper_open: Path | None = None) -> str:
+    if manifest is None:
+        manifest = load_excel_freeze()
     locked = [r for r in rows if r["section"] == "locked"]
     built = [r for r in rows if r["section"] == "built_after"]
     visible = [r for r in rows if r["section"] == "not_a_locked_trade"]
@@ -1787,7 +1945,7 @@ def render_md(rows: list[dict], schedule: Schedule) -> str:
     ]
     show = [r for r in rows if r["date"] >= FIRST_LOCKED and not is_theme_book(r["name"])]
     for row in show:
-        lines.append(_md_book_row(row))
+        lines.append(_md_book_row(row, manifest=manifest, paper_open=paper_open))
     theme_names = _theme_names(rows)
     if theme_names:
         lines += ["", "## Theme Radar short books", ""]
@@ -1802,7 +1960,7 @@ def render_md(rows: list[dict], schedule: Schedule) -> str:
             if group:
                 lines.extend(header)
                 for row in group:
-                    lines.append(_md_book_row(row))
+                    lines.append(_md_book_row(row, manifest=manifest, paper_open=paper_open))
                 lines.append("")
             lines.append(THEME_BORROW_NOTE)
             lines.append("")
@@ -1837,14 +1995,20 @@ def render_md(rows: list[dict], schedule: Schedule) -> str:
     return "\n".join(lines)
 
 
-def render_html(rows: list[dict], schedule: Schedule) -> str:
+def render_html(rows: list[dict], schedule: Schedule, *,
+                manifest: dict | None = None,
+                paper_open: Path | None = None) -> str:
+    if manifest is None:
+        manifest = load_excel_freeze()
     show = [r for r in rows if r["date"] >= FIRST_LOCKED and not is_theme_book(r["name"])]
-    body = [_html_book_row(row) for row in show]
+    body = [_html_book_row(row, manifest=manifest, paper_open=paper_open) for row in show]
     table = "\n".join(body)
     theme_blocks = []
     for name in _theme_names(rows):
         group = [r for r in rows if r["name"] == name and r["date"] >= FIRST_LOCKED]
-        group_table = "\n".join(_html_book_row(row) for row in group)
+        group_table = "\n".join(
+            _html_book_row(row, manifest=manifest, paper_open=paper_open) for row in group
+        )
         theme_blocks.append(
             f"<h2>{name}</h2>\n"
             "<table>\n"

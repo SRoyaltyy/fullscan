@@ -851,6 +851,147 @@ def test_workflow_is_after_the_freeze_and_on_ubuntu() -> None:
     assert "webull_sim" in text
 
 
+def _shown_row(**overrides) -> dict:
+    fields = dict(
+        name="L1_long_green_tp8_lowvol_webull_sim",
+        day="2026-10-06",
+        source="excel_bot/daily/2026-10-05_excel_bot.md",
+        commit="caf155612ba7",
+        commit_et="2026-10-05T18:29:10-04:00",
+        reason="open not observed",
+        note="",
+        section="not_a_locked_trade",
+        locked_trade=False,
+        final=False,
+        cash=START_CASH,
+        fees=Decimal("0"),
+        equity=START_CASH,
+        fills=[],
+        positions=[],
+        picks=12,
+        sandbox="",
+    )
+    fields.update(overrides)
+    return make_row(**fields)
+
+
+def test_excel_pre_lock_label_is_display_only() -> None:
+    row = _shown_row()
+    before = json.dumps(row, sort_keys=True)
+    manifest = {"lock_from": "2026-10-06", "entries": []}
+    md = render_md([row], schedule(), manifest=manifest, paper_open=Path("/no/such/paper"))
+    html = render_html([row], schedule(), manifest=manifest, paper_open=Path("/no/such/paper"))
+    phrase = "sealed by git commit time (pre-lock)"
+    assert f"excel_bot/daily/2026-10-05_excel_bot.md — {phrase}" in md
+    assert phrase in html
+    assert "excel_bot freeze manifest" not in md
+    assert "excel_bot freeze manifest" not in html
+    assert json.dumps(row, sort_keys=True) == before
+    # The repo manifest's first signal date is what the live page reads.
+    live = render_md([row], schedule(), paper_open=Path("/no/such/paper"))
+    assert phrase in live
+
+
+def test_excel_manifest_label_only_when_the_file_is_listed() -> None:
+    source = "excel_bot/daily/2026-10-06_excel_bot.md"
+    row = _shown_row(day="2026-10-07", source=source, commit="abc123")
+    before = json.dumps(row, sort_keys=True)
+    empty = {"lock_from": "2026-10-06", "entries": []}
+    md = render_md([row], schedule(), manifest=empty, paper_open=Path("/no/such/paper"))
+    html = render_html([row], schedule(), manifest=empty, paper_open=Path("/no/such/paper"))
+    assert "excel_bot freeze manifest" not in md
+    assert "excel_bot freeze manifest" not in html
+    assert "(pre-lock)" not in md
+    assert source in md
+    listed = {
+        "lock_from": "2026-10-06",
+        "entries": [{"signal_date": "2026-10-06", "kind": "lock"}],
+    }
+    md = render_md([row], schedule(), manifest=listed, paper_open=Path("/no/such/paper"))
+    html = render_html([row], schedule(), manifest=listed, paper_open=Path("/no/such/paper"))
+    phrase = "sealed by git commit time + excel_bot freeze manifest"
+    assert f"{source} — {phrase}" in md
+    assert phrase in html
+    assert "(pre-lock)" not in md
+    other = {"lock_from": "2026-10-06", "entries": [{"signal_date": "2026-10-07"}]}
+    md = render_md([row], schedule(), manifest=other, paper_open=Path("/no/such/paper"))
+    assert "excel_bot freeze manifest" not in md
+    assert json.dumps(row, sort_keys=True) == before
+
+
+def test_h1_unsent_status_is_display_only(tmp_path: Path) -> None:
+    missed = {
+        "date": "2026-10-06",
+        "status": "missed_deadline",
+        "observed_at": "2026-10-06T09:34:28.027503-04:00",
+    }
+    (tmp_path / "2026-10-06_status.json").write_text(json.dumps(missed), encoding="utf-8")
+    row = _shown_row(name="h1_webull_sim", source="", commit="", commit_et="", picks=0, sandbox="not observed")
+    before = json.dumps(row, sort_keys=True)
+    md = render_md([row], schedule(), manifest={"entries": []}, paper_open=tmp_path)
+    html = render_html([row], schedule(), manifest={"entries": []}, paper_open=tmp_path)
+    sentence = (
+        "No Webull orders sent on 2026-10-06: "
+        "send started after the 09:30 open (missed deadline)"
+    )
+    assert sentence in md
+    assert sentence in html
+    assert json.dumps(row, sort_keys=True) == before
+    assert row["sandbox"] == "not observed"
+
+    blocked_day = "2026-10-08"
+    (tmp_path / f"{blocked_day}_status.json").write_text(json.dumps({
+        "date": blocked_day,
+        "status": "blocked",
+        "error": "flatten flag unreadable: boom",
+    }), encoding="utf-8")
+    blocked = _shown_row(
+        name="h1_webull_sim", day=blocked_day, source="", commit="", commit_et="",
+        picks=0, sandbox="",
+    )
+    text = render_md([blocked], schedule(), manifest={"entries": []}, paper_open=tmp_path)
+    assert (
+        "No Webull orders sent on 2026-10-08: flatten flag unreadable: boom (blocked)"
+    ) in text
+
+    late = _shown_row(
+        name="h1_webull_sim", day="2026-10-09", source="", commit="", commit_et="",
+        picks=0, sandbox="not observed",
+    )
+    (tmp_path / "2026-10-09_status.json").write_text(json.dumps({
+        "date": "2026-10-09",
+        "status": "failed",
+        "sent": [{"ticker": "AAA", "status": "missed_deadline", "ok": False}],
+    }), encoding="utf-8")
+    late_page = render_md([late], schedule(), manifest={"entries": []}, paper_open=tmp_path)
+    assert "No Webull orders sent on 2026-10-09: send started after the 09:30 open (missed deadline)" in late_page
+
+    sent = _shown_row(
+        name="h1_webull_sim", day="2026-10-05", source="", commit="", commit_et="",
+        picks=0, sandbox="not observed", section="built_after",
+    )
+    # Built-after rows are not in the per-day table. Use a locked date with a sent journal.
+    sent["date"] = "2026-10-07"
+    sent["section"] = "not_a_locked_trade"
+    (tmp_path / "2026-10-07_status.json").write_text(json.dumps({
+        "date": "2026-10-07",
+        "status": "acknowledged",
+        "fill_status": "not_observed",
+        "sent": [{"ticker": "AAA", "ok": True, "order_id": "OID1"}],
+    }), encoding="utf-8")
+    sent_page = render_md([sent], schedule(), manifest={"entries": []}, paper_open=tmp_path)
+    assert "No Webull orders sent" not in sent_page
+    assert "| not observed |" in sent_page
+
+    missing = _shown_row(
+        name="h1_webull_sim", day="2026-10-10", source="", commit="", commit_et="",
+        picks=0, sandbox="not observed",
+    )
+    missing_page = render_md([missing], schedule(), manifest={"entries": []}, paper_open=tmp_path)
+    assert "No Webull orders sent" not in missing_page
+    assert "not observed" in missing_page
+
+
 if __name__ == "__main__":
     import tempfile
 
@@ -880,6 +1021,8 @@ if __name__ == "__main__":
     test_no_cash_only_from_held_lots()
     test_own_count_precedence()
     test_h1_sandbox_fill_not_observed()
+    test_excel_pre_lock_label_is_display_only()
+    test_excel_manifest_label_only_when_the_file_is_listed()
     test_freeze_window()
     test_workflow_is_after_the_freeze_and_on_ubuntu()
     with tempfile.TemporaryDirectory() as tmp:
@@ -889,4 +1032,6 @@ if __name__ == "__main__":
         test_missed_day_stays_missing(Path(tmp), _Patch())
     with tempfile.TemporaryDirectory() as tmp:
         test_same_day_rerun_matches(Path(tmp))
+    with tempfile.TemporaryDirectory() as tmp:
+        test_h1_unsent_status_is_display_only(Path(tmp))
     print("ok")
