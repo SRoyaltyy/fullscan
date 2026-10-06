@@ -2483,6 +2483,42 @@
       "size": "large"
     },
     {
+      "ticker": "GOOG",
+      "buy_score": 0.45,
+      "sell_score": 1.36,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 0.45,
+          "bucket": "earnings",
+          "net_signal": "Bullish",
+          "conviction": 22
+        },
+        {
+          "event": "catalyst",
+          "side": "sell",
+          "weight": 0.68,
+          "bucket": "earnings",
+          "net_signal": "Bearish",
+          "conviction": 38
+        },
+        {
+          "event": "catalyst",
+          "side": "sell",
+          "weight": 0.68,
+          "bucket": "earnings",
+          "net_signal": "Bearish",
+          "conviction": 38
+        }
+      ],
+      "net": -0.91,
+      "side": "sell",
+      "catalyst_signal": "Bearish",
+      "catalyst_conviction": 38,
+      "catalyst_stack": "On 2026-09-02 Judge Brinkema refused a DOJ AdX divestiture and imposed behavioral remedies, stripping the worst-case breakup overhang from the ads cash engine. Q1/Q2 2026 beats ($109.9B then $119.8B, Cloud +82% in Q2) and capex lifts to $195–205B, reinforced by the 2026-09-09 €13"
+    },
+    {
       "ticker": "NEM",
       "buy_score": 2.52,
       "sell_score": 2.83,
@@ -2657,34 +2693,6 @@
       "net": -0.31,
       "side": "sell",
       "size": "large"
-    },
-    {
-      "ticker": "GOOG",
-      "buy_score": 0.45,
-      "sell_score": 0.68,
-      "events": [
-        {
-          "event": "catalyst",
-          "side": "buy",
-          "weight": 0.45,
-          "bucket": "earnings",
-          "net_signal": "Bullish",
-          "conviction": 22
-        },
-        {
-          "event": "catalyst",
-          "side": "sell",
-          "weight": 0.68,
-          "bucket": "earnings",
-          "net_signal": "Bearish",
-          "conviction": 38
-        }
-      ],
-      "net": -0.23,
-      "side": "sell",
-      "catalyst_signal": "Bearish",
-      "catalyst_conviction": 38,
-      "catalyst_stack": "On 2026-09-02 Judge Brinkema refused a DOJ AdX divestiture and imposed behavioral remedies, stripping the worst-case breakup overhang from the ads cash engine. Q1/Q2 2026 beats ($109.9B then $119.8B, Cloud +82% in Q2) and capex lifts to $195–205B, reinforced by the 2026-09-09 €13"
     },
     {
       "ticker": "ASML",
