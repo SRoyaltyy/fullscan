@@ -70,6 +70,12 @@ removed, or changed, or a non-blank `first_open` changes, the run prints
 `FAIL CLOSED` and commits nothing. A session that has not reached 16:00 ET
 cannot be locked. The pre-close run does not append rows or manifest entries.
 
+The 2026-10-06 pre-close draft lock is still in the manifest. A later
+entry of kind `void` names its sha256 and points at
+`excel_bot/void/2026-10-06_pre_close_draft.csv`. The lock entry itself
+is not edited. No other sha256 may be voided. After that void the day
+may be locked once from the close.
+
 The dated file `daily/{date}_excel_bot.md` is write-once for that NYSE
 session. A run before 16:00 ET on a session day writes only the `_draft`
 file. At or after 16:00 ET, and on a weekend or holiday for the previous

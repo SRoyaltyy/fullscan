@@ -464,6 +464,132 @@ def test_changed_picks_on_final_run_fail_closed() -> None:
         assert _bytes(manifest) == sealed_manifest
 
 
+VOID_SHA = "9d910cb9de3933b888159d438e95925d105bd8d485b5aaeda60272ad65e44992"
+ARCHIVE = os.path.join(ROOT, "excel_bot", "void", "2026-10-06_pre_close_draft.csv")
+ARCHIVE_NOTE = os.path.join(ROOT, "excel_bot", "void", "2026-10-06_pre_close_draft.md")
+
+
+def _manifest_with_void(tmp: str) -> tuple:
+    """Real 2026-10-06 lock plus the allowlisted void, in a temp file."""
+    manifest = json.loads(json.dumps(signal_freeze.load_manifest()))
+    lock = manifest["entries"][0]
+    assert lock["kind"] == "lock"
+    assert lock["sha256"] == VOID_SHA
+    void = signal_freeze.void_entry_for(lock)
+    manifest["entries"] = [lock, void]
+    path = os.path.join(tmp, "freeze_manifest.json")
+    with open(path, "w", encoding="utf-8") as handle:
+        json.dump(manifest, handle)
+    signal_freeze.load_manifest(path)
+    return path, lock, void
+
+
+def test_void_then_relock_passes() -> None:
+    """After the allowlisted void, one fresh lock of new picks is accepted."""
+    with tempfile.TemporaryDirectory() as tmp:
+        path, lock, void = _manifest_with_void(tmp)
+        rows = [_row()]
+        added = signal_freeze.seal(rows, path, now=AFTER_CLOSE)
+        assert len(added) == 1
+        assert added[0]["kind"] == "lock"
+        assert added[0]["sha256"] != VOID_SHA
+        assert added[0]["signal_date"] == DAY
+        body = json.loads(_bytes(path))
+        assert body["entries"][0] == lock
+        assert body["entries"][1]["kind"] == "void"
+        assert body["entries"][1]["sha256"] == void["sha256"]
+        assert body["entries"][2]["kind"] == "lock"
+        assert signal_freeze.seal(rows, path, now=AFTER_CLOSE) == []
+        signal_freeze.verify_store(_write_csv(tmp, rows), path)
+
+
+def test_second_void_fails() -> None:
+    """A day can be voided once. A second void does not rewrite the file."""
+    with tempfile.TemporaryDirectory() as tmp:
+        path, lock, void = _manifest_with_void(tmp)
+        sealed = _bytes(path)
+        planned = signal_freeze.FreezePlan([void], [lock, void])
+        text = _raises(lambda: signal_freeze.append_entries(planned, path, now=AFTER_CLOSE))
+        assert "second void" in text
+        assert _bytes(path) == sealed
+
+
+def test_voiding_a_different_sha_fails() -> None:
+    """A void that names any sha other than the draft lock is refused."""
+    with tempfile.TemporaryDirectory() as tmp:
+        path, lock, void = _manifest_with_void(tmp)
+        manifest = json.loads(_bytes(path))
+        manifest["entries"] = [lock]
+        with open(path, "w", encoding="utf-8") as handle:
+            json.dump(manifest, handle)
+        sealed = _bytes(path)
+        bad = dict(void)
+        bad["sha256"] = "b" * 64
+        text = _raises(lambda: signal_freeze.append_entries(
+            signal_freeze.FreezePlan([bad], [lock]), path, now=AFTER_CLOSE,
+        ))
+        assert "different sha256" in text
+        assert _bytes(path) == sealed
+
+
+def test_change_after_fresh_lock_fails_closed() -> None:
+    """Picks changed after the fresh lock do not rewrite the manifest."""
+    with tempfile.TemporaryDirectory() as tmp:
+        path, lock, _void = _manifest_with_void(tmp)
+        rows = [_row()]
+        signal_freeze.seal(rows, path, now=AFTER_CLOSE)
+        sealed = _bytes(path)
+
+        def changed():
+            signal_freeze.seal([_row(ref_close="99.0000")], path, now=AFTER_CLOSE)
+
+        text = _raises(changed)
+        assert "cannot be added, removed, or changed" in text
+        assert _bytes(path) == sealed
+        body = json.loads(sealed)
+        assert body["entries"][0] == lock
+        assert body["entries"][1]["kind"] == "void"
+        assert body["entries"][2]["kind"] == "lock"
+
+
+def test_void_archive_rows_match_voided_lock_sha() -> None:
+    """The archived draft rows are exactly the lock that the void names."""
+    assert len(signal_freeze.VOIDABLE_LOCKS) == 1
+    allowed = signal_freeze.VOIDABLE_LOCKS[0]
+    assert allowed["sha256"] == VOID_SHA
+    assert signal_freeze._taken_before_close(allowed["signal_date"], allowed["locked_at"])
+    rows = signal_freeze.load_csv(ARCHIVE)
+    assert len(rows) == 104
+    picks = signal_freeze.canonical_picks(rows)["2026-10-06"]
+    assert signal_freeze.fingerprint(picks) == VOID_SHA
+    manifest = signal_freeze.load_manifest()
+    lock = manifest["entries"][0]
+    void = manifest["entries"][1]
+    assert lock["kind"] == "lock" and lock["sha256"] == VOID_SHA
+    assert void["kind"] == "void"
+    assert void["sha256"] == VOID_SHA
+    assert void["archive"] == "excel_bot/void/2026-10-06_pre_close_draft.csv"
+    assert void["note"] == "excel_bot/void/2026-10-06_pre_close_draft.md"
+    assert void["n_picks"] == 104
+    assert void["pick_ids"] == lock["pick_ids"]
+    assert void["reason"] == allowed["reason"]
+    live = signal_freeze.load_csv()
+    assert all(row["signal_date"] != "2026-10-06" for row in live)
+    archive_lines = open(ARCHIVE, "rb").read().splitlines(keepends=True)
+    live_header = open(
+        os.path.join(ROOT, "excel_bot", "suggestions", "suggestions.csv"), "rb",
+    ).read().splitlines(keepends=True)[0]
+    assert archive_lines[0] == live_header
+    assert len(archive_lines) == 105
+    note = open(ARCHIVE_NOTE, encoding="utf-8").read()
+    assert VOID_SHA in note
+    assert "37499263674" in note
+    assert "856c5f64c" in note
+    assert "13:37" in note
+    assert "no book traded on it" in note
+    signal_freeze.verify_store()
+
+
 def test_unclosed_signal_date_cannot_be_locked() -> None:
     """signal_freeze itself refuses a lock for a session that has not closed."""
     stamp = gh_summary.resolve_session(PRE_CLOSE)
@@ -509,4 +635,9 @@ if __name__ == "__main__":
     test_second_final_run_with_identical_picks_verifies()
     test_changed_picks_on_final_run_fail_closed()
     test_unclosed_signal_date_cannot_be_locked()
+    test_void_then_relock_passes()
+    test_second_void_fails()
+    test_voiding_a_different_sha_fails()
+    test_change_after_fresh_lock_fails_closed()
+    test_void_archive_rows_match_voided_lock_sha()
     print("ok")

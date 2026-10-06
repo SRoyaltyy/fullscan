@@ -301,10 +301,13 @@ def store_signals(sigs, *, now=None, sugg_csv=None, manifest_path=None):
     manifest_on_disk = manifest_path or signal_freeze.MANIFEST_PATH
     locked_days = set()
     if os.path.exists(manifest_on_disk):
+        loaded = signal_freeze.load_manifest(manifest_on_disk)
+        by_chain: dict = {}
+        for entry in loaded["entries"]:
+            by_chain.setdefault(entry["signal_date"], []).append(entry)
         locked_days = {
-            entry["signal_date"]
-            for entry in signal_freeze.load_manifest(manifest_on_disk)["entries"]
-            if entry.get("kind") == "lock"
+            day for day, chain in by_chain.items()
+            if signal_freeze.active_lock(chain) is not None
         }
     by_key = {(r["signal_date"], r["ticker"], r["strategy"]): r for r in rows_old}
     new = []

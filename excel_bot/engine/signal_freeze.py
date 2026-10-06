@@ -22,6 +22,11 @@ not write suggestions and must not commit.
 A new lock entry is refused when that signal_date's NYSE session has not
 closed yet (before 16:00 America/New_York, or a later session). An entry
 already in the manifest is not edited or removed.
+
+One pre-close lock may be voided by a later entry. The void names that
+lock's signal_date and sha256, and the original lock entry stays as
+written. The only void the checker accepts is the 2026-10-06 draft lock
+from commit 856c5f64c. After that void, the day may be locked once more.
 """
 from __future__ import annotations
 
@@ -55,6 +60,27 @@ _ENGINE_DIR = os.path.dirname(os.path.abspath(__file__))
 EXCEL_DIR = os.path.dirname(_ENGINE_DIR)
 MANIFEST_PATH = os.path.join(EXCEL_DIR, "freeze_manifest.json")
 SUGG_PATH = os.path.join(EXCEL_DIR, "suggestions", "suggestions.csv")
+
+# The only lock a void entry may name. Commit 856c5f64c
+# (856c5f64c033af7fecd410c2220ee73e29d873da) was authored at
+# 2026-10-06T17:37:43Z, which is 13:37 ET, during GitHub run 37499263674.
+# That is before the 16:00 ET close. locked_at is that commit time.
+# _taken_before_close checks it with the same New York clock the bot uses.
+# No other sha256 is accepted.
+VOIDABLE_LOCKS = (
+    {
+        "signal_date": "2026-10-06",
+        "sha256": "9d910cb9de3933b888159d438e95925d105bd8d485b5aaeda60272ad65e44992",
+        "locked_at": "2026-10-06T17:37:43Z",
+        "added_at": "2026-10-06T21:25:00Z",
+        "archive": "excel_bot/void/2026-10-06_pre_close_draft.csv",
+        "note": "excel_bot/void/2026-10-06_pre_close_draft.md",
+        "reason": (
+            "pre-close draft lock, run 37499263674, commit 856c5f64c, "
+            "13:37 ET 2026-10-06; no book traded on it"
+        ),
+    },
+)
 
 _DATE_FORMATS = ("%d/%m/%Y", "%m/%d/%Y", "%d-%m-%Y", "%Y/%m/%d")
 
@@ -178,8 +204,10 @@ def _check_entry(entry: dict, index: int) -> None:
     for open_i, first_open in enumerate(first_opens):
         if not isinstance(first_open, str):
             _fail(f"manifest entry {index} first_opens[{open_i}] is not a string.")
-    if entry["kind"] not in ("lock", "first_open"):
+    if entry["kind"] not in ("lock", "first_open", "void"):
         _fail(f"manifest entry {index} kind {entry['kind']!r} is unknown.")
+    if entry["kind"] == "void":
+        _check_void_entry(entry, index)
 
 
 def load_manifest(path: str | None = None) -> dict:
@@ -200,37 +228,181 @@ def load_manifest(path: str | None = None) -> dict:
     return manifest
 
 
+def _allowlisted_void(signal_date: str, sha256: str) -> dict | None:
+    for item in VOIDABLE_LOCKS:
+        if item["signal_date"] == signal_date and item["sha256"] == sha256:
+            return item
+    return None
+
+
+def _taken_before_close(signal_date: str, locked_at: str) -> bool:
+    """True when `locked_at` is still before 16:00 ET on `signal_date`."""
+    import gh_summary
+    text = locked_at.strip()
+    if text.endswith("Z"):
+        text = text[:-1] + "+00:00"
+    try:
+        instant = datetime.fromisoformat(text)
+    except ValueError:
+        return False
+    if instant.tzinfo is None:
+        return False
+    stamp = gh_summary.resolve_session(instant)
+    return stamp.session.isoformat() == signal_date and not stamp.write_final
+
+
+def _check_void_entry(entry: dict, index: int) -> None:
+    """A void may name only the one allowlisted pre-close lock."""
+    for key in ("reason", "locked_at", "added_at", "archive", "note"):
+        value = entry.get(key)
+        if not isinstance(value, str) or not value.strip():
+            _fail(f"manifest entry {index} void is missing {key}.")
+    allowed = _allowlisted_void(entry["signal_date"], str(entry["sha256"]))
+    if allowed is None:
+        _fail(
+            f"manifest entry {index} voids sha256 {entry['sha256']} "
+            f"for signal_date {entry['signal_date']}. "
+            "That lock is not the allowlisted pre-close draft lock. "
+            "Refusing to void a different sha256."
+        )
+    for key in ("reason", "locked_at", "added_at", "archive", "note"):
+        if entry[key] != allowed[key]:
+            _fail(
+                f"manifest entry {index} void field {key} does not match "
+                "the allowlisted pre-close lock."
+            )
+    if not _taken_before_close(allowed["signal_date"], allowed["locked_at"]):
+        _fail(
+            f"signal_date {allowed['signal_date']} lock {allowed['sha256']} "
+            f"at {allowed['locked_at']} was not before the 16:00 ET close. "
+            "Refusing to void it."
+        )
+
+
+def void_entry_for(lock: dict) -> dict:
+    """The void entry that names `lock`. Fails if `lock` is not allowlisted."""
+    allowed = _allowlisted_void(lock["signal_date"], lock["sha256"])
+    if allowed is None:
+        _fail(
+            f"signal_date {lock.get('signal_date')} sha256 {lock.get('sha256')} "
+            "is not the allowlisted pre-close draft lock. "
+            "Refusing to void a different sha256."
+        )
+    if not _taken_before_close(allowed["signal_date"], allowed["locked_at"]):
+        _fail(
+            f"signal_date {allowed['signal_date']} was not locked before the close."
+        )
+    return {
+        "signal_date": lock["signal_date"],
+        "sha256": lock["sha256"],
+        "n_picks": lock["n_picks"],
+        "pick_ids": [list(item) for item in lock["pick_ids"]],
+        "first_opens": list(lock["first_opens"]),
+        "kind": "void",
+        "reason": allowed["reason"],
+        "locked_at": allowed["locked_at"],
+        "added_at": allowed["added_at"],
+        "archive": allowed["archive"],
+        "note": allowed["note"],
+    }
+
+
+def active_lock(chain: list) -> dict | None:
+    """The lock that still binds the day.
+
+    No void: the original lock. A void with no later lock: nothing. A void
+    followed by one fresh lock: that fresh lock.
+    """
+    void_at = None
+    for index, entry in enumerate(chain):
+        if entry.get("kind") == "void":
+            void_at = index
+            break
+    if void_at is None:
+        if chain and chain[0].get("kind") == "lock":
+            return chain[0]
+        return None
+    for entry in chain[void_at + 1:]:
+        if entry.get("kind") == "lock":
+            return entry
+    return None
+
+
 def _check_history(entries: list) -> None:
-    """One lock per day, then write-once first_open fills. Hashes stay put."""
+    """Lock, at most one void of that lock, then one fresh lock, then first_opens.
+
+    A void is accepted only as the next entry after the lock it names.
+    The original lock is not edited. After the void, exactly one fresh
+    lock may be appended. first_open fills attach to the active lock.
+    """
     seen: dict[str, list] = {}
     for index, entry in enumerate(entries):
         day = entry["signal_date"]
         chain = seen.setdefault(day, [])
-        if not chain and entry["kind"] != "lock":
-            _fail(
-                f"signal_date {day} manifest history does not start with a lock entry."
-            )
-        if chain and entry["kind"] != "first_open":
+        kind = entry["kind"]
+        if not chain:
+            if kind != "lock":
+                _fail(
+                    f"signal_date {day} manifest history does not start with a lock entry."
+                )
+            chain.append(entry)
+            continue
+        if kind == "void":
+            if any(item["kind"] == "void" for item in chain):
+                _fail(
+                    f"signal_date {day} already has a void at manifest index {index}. "
+                    "A second void is refused."
+                )
+            if len(chain) != 1 or chain[0]["kind"] != "lock":
+                _fail(
+                    f"signal_date {day} void at manifest index {index} "
+                    "is not directly after the lock it names."
+                )
+            lock = chain[0]
+            if (
+                entry["sha256"] != lock["sha256"]
+                or entry["pick_ids"] != lock["pick_ids"]
+                or entry["n_picks"] != lock["n_picks"]
+                or entry["first_opens"] != lock["first_opens"]
+            ):
+                _fail(
+                    f"signal_date {day} void at manifest index {index} "
+                    f"names sha256 {entry['sha256']} but the lock is {lock['sha256']}. "
+                    "A void must name the lock it follows. "
+                    "Refusing to void a different sha256."
+                )
+            chain.append(entry)
+            continue
+        if kind == "lock":
+            if len(chain) == 2 and chain[1]["kind"] == "void" and active_lock(chain) is None:
+                chain.append(entry)
+                continue
             _fail(
                 f"signal_date {day} repeated a lock entry at manifest index {index}. "
                 "Lock entries are not rewritten."
             )
-        if chain:
-            locked = chain[0]
-            if entry["sha256"] != locked["sha256"] or entry["pick_ids"] != locked["pick_ids"]:
-                _fail(
-                    f"signal_date {day} fingerprint changed inside the manifest "
-                    f"at index {index}."
-                )
-            if entry["n_picks"] != locked["n_picks"]:
-                _fail(f"signal_date {day} n_picks changed inside the manifest.")
-            _opens_step(
-                chain[-1]["first_opens"],
-                entry["first_opens"],
-                day,
-                f"manifest index {index}",
-                entry["pick_ids"],
+        if kind != "first_open":
+            _fail(f"manifest entry {index} kind {kind!r} is unknown.")
+        acting = active_lock(chain)
+        if acting is None:
+            _fail(
+                f"signal_date {day} first_open at manifest index {index} "
+                "has no active lock. A voided day must be locked again first."
             )
+        if entry["sha256"] != acting["sha256"] or entry["pick_ids"] != acting["pick_ids"]:
+            _fail(
+                f"signal_date {day} fingerprint changed inside the manifest "
+                f"at index {index}."
+            )
+        if entry["n_picks"] != acting["n_picks"]:
+            _fail(f"signal_date {day} n_picks changed inside the manifest.")
+        _opens_step(
+            chain[-1]["first_opens"],
+            entry["first_opens"],
+            day,
+            f"manifest index {index}",
+            entry["pick_ids"],
+        )
         chain.append(entry)
 
 
@@ -340,7 +512,11 @@ def plan(rows: list, manifest: dict, now=None) -> FreezePlan:
     additions = []
     for signal_date in sorted(by_day):
         chain = by_day[signal_date]
-        locked = chain[0]
+        locked = active_lock(chain)
+        if locked is None:
+            # Voided, and the fresh lock is not in the manifest yet.
+            # Picks for this day are a new lock, not a change to the voided one.
+            continue
         picks = grouped.get(signal_date) or []
         current_hash = fingerprint(picks) if picks else ""
         current_ids = _pick_ids(picks)
@@ -380,7 +556,10 @@ def plan(rows: list, manifest: dict, now=None) -> FreezePlan:
                 "kind": "first_open",
             })
     for signal_date in sorted(grouped):
-        if signal_date < LOCK_FROM or signal_date in by_day:
+        if signal_date < LOCK_FROM:
+            continue
+        chain = by_day.get(signal_date)
+        if chain is not None and active_lock(chain) is not None:
             continue
         try:
             date.fromisoformat(signal_date)
