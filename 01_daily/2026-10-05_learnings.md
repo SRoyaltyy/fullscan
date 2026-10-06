@@ -1,6 +1,6 @@
 # Learnings report — 2026-10-05
 
-Generated: **2026-10-06T06:48:54.705982-04:00** by `src/learn_cycle.py`.
+Generated: **2026-10-06T19:51:39.185530-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -13,12 +13,12 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Item | Value |
 |------|-------|
 | Graded runs mined | 180 |
-| Hypotheses written | 181 (wins=80, losses=101) |
+| Hypotheses written | 181 (wins=79, losses=102) |
 | News hypotheses | 1 |
 | Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
-| Active lesson files now | 206 |
-| Engine policy version | 51 |
+| Active lesson files now | 207 |
+| Engine policy version | 54 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -34,7 +34,7 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | sector:Healthcare | 40% | 6/15 | weak — priority |
 | sector:Industrials | 47% | 7/15 | weak — priority |
 | sector:Real Estate | 60% | 9/15 | ok |
-| sector:Technology | 40% | 6/15 | weak — priority |
+| sector:Technology | 33% | 5/15 | weak — priority |
 | sector:Utilities | 40% | 6/15 | weak — priority |
 
 ## 3. What we learned (by scope)
@@ -81,7 +81,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 ### `news` — 0 wins, 1 losses
 
 #### LOSS — news
-- **When:** [news] Global 1d close win rate 52.9% (n=1959).
+- **When:** [news] Global 1d close win rate 53.5% (n=1967).
 - **Ask:** Entry timing, side mix, or event taxonomy noise?
 - **Experiment:** [news] Raise min net weight to map a ticker; drop weak edges.
 - **Do instead:** [news] Only emit actions with |net| above a higher floor.
@@ -420,14 +420,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 - **Do instead:** [sector_real_estate] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **Wrong if:** [sector_real_estate] Wrong if this hedge reduces direction accuracy over 10 runs.
 
-### `sector_technology` — 6 wins, 9 losses
-
-#### WIN — 2026-09-24
-- **When:** [sector_technology] Predicted down, market/sector went down (pct=-0.3225092842398247, score=-16.172, sector=Technology).
-- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
-- **Experiment:** [sector_technology] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
-- **Do instead:** [sector_technology] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
-- **Wrong if:** [sector_technology] Wrong if milder bands hurt direction accuracy over 10 runs.
+### `sector_technology` — 5 wins, 10 losses
 
 #### LOSS — 2026-09-25
 - **When:** [sector_technology] Predicted flat but went up (pct=0.8011902340932187, score=2.841, sector=Technology).
@@ -452,6 +445,13 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 #### LOSS — 2026-10-02
 - **When:** [sector_technology] Predicted flat but went up (pct=1.0312969870583055, score=7.741, sector=Technology).
+- **Ask:** Dominant factor family? Regime misread vs sector-specific shock? Shared macro S0 wrong or sector factors S1 wrong?
+- **Experiment:** [sector_technology] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
+- **Do instead:** [sector_technology] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **Wrong if:** [sector_technology] Wrong if this hedge reduces direction accuracy over 10 runs.
+
+#### LOSS — 2026-10-06
+- **When:** [sector_technology] Predicted flat but went up (pct=0.5325274290659543, score=2.701, sector=Technology).
 - **Ask:** Dominant factor family? Regime misread vs sector-specific shock? Shared macro S0 wrong or sector factors S1 wrong?
 - **Experiment:** [sector_technology] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
 - **Do instead:** [sector_technology] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
