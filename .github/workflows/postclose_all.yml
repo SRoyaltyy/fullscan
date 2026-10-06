@@ -109,6 +109,8 @@ jobs:
       - name: Match origin/main (leftover ECS files must not fake SKIP)
         if: env.skip != 'yes'
         run: |
+          # Shared ECS work dir keeps a prior job's sparse-checkout.
+          git sparse-checkout disable || true
           git fetch origin main
           git reset --hard origin/main
           # Gate files only. Keep 01_daily/_transcripts so a hung Grok
@@ -117,6 +119,10 @@ jobs:
             01_daily/map_heat 01_daily/news 02_lessons 03_scoreboard || true
           git ls-files -o --exclude-standard -- '01_daily/*_learnings.md' \
             | xargs -r rm -f
+          test -f requirements.txt || {
+            echo "ERROR: requirements.txt missing. A prior job left git sparse-checkout enabled on this self-hosted runner."
+            exit 1
+          }
 
       - name: Skip if post-close pack already on disk (no LLM)
         if: env.skip != 'yes' && github.event.inputs.force != 'true'

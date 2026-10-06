@@ -122,6 +122,14 @@ jobs:
       - uses: actions/checkout@v4
         with:
           clean: false
+      - name: Full tree after leftover sparse-checkout
+        run: |
+          # Shared ECS work dir keeps a prior job's sparse-checkout.
+          git sparse-checkout disable || true
+          test -f requirements.txt || {
+            echo "ERROR: requirements.txt missing. A prior job left git sparse-checkout enabled on this self-hosted runner."
+            exit 1
+          }
       - name: Enable classroom then hop SuperGrok
         run: |
           set -euo pipefail

@@ -1373,6 +1373,56 @@ def test_lane_free_strain_keys_and_skip() -> None:
             assert f"secrets.{secret}" in blob, (wf_name, secret)
 
 
+def test_postclose_all_clears_leftover_sparse_checkout() -> None:
+    """Shared ECS workspace: clean:false must not keep a prior sparse-checkout.
+
+    postclose_all disables sparse-checkout before reset --hard, then fails
+    if requirements.txt is still missing. Every other self-hosted workflow
+    that checks out with clean: false does the same. Sparse-checkout jobs
+    that themselves run on ECS clear the setting on the way out.
+    """
+    disable = "git sparse-checkout disable || true"
+    probe = "test -f requirements.txt"
+    post = (WF / "postclose_all.yml").read_text(encoding="utf-8")
+    disable_at = post.find(disable)
+    reset_at = post.find("git reset --hard origin/main")
+    probe_at = post.find(probe)
+    assert 0 <= disable_at < reset_at < probe_at
+    assert "requirements.txt missing" in post
+
+    guarded = []
+    for path in sorted(WF.glob("*.yml")):
+        text = path.read_text(encoding="utf-8")
+        if "clean: false" not in text:
+            continue
+        on_ecs = "self-hosted" in text or path.name == "postclose_last_closed.yml"
+        if not on_ecs:
+            continue
+        assert disable in text, path.name
+        assert probe in text, path.name
+        assert text.find(disable) < text.find(probe), path.name
+        if "git reset --hard" in text:
+            assert text.find(disable) < text.find("git reset --hard"), path.name
+        guarded.append(path.name)
+    assert "postclose_all.yml" in guarded
+    assert "preopen_all.yml" in guarded
+    assert "map_heat_postclose.yml" in guarded
+    assert "postclose_last_closed.yml" in guarded
+
+    sparse_on_ecs = []
+    for path in sorted(WF.glob("*.yml")):
+        text = path.read_text(encoding="utf-8")
+        if "sparse-checkout:" not in text or "self-hosted" not in text:
+            continue
+        assert "if: always()" in text, path.name
+        assert text.rfind(disable) > text.rfind("sparse-checkout:"), path.name
+        sparse_on_ecs.append(path.name)
+    assert sparse_on_ecs == [
+        "install_paper_backstop.yml",
+        "install_paper_open.yml",
+    ]
+
+
 def test_ci_workflow_is_wired() -> None:
     yml = (WF / "workflow_selfcheck.yml").read_text(encoding="utf-8")
     assert "pull_request:" in yml
@@ -1408,6 +1458,7 @@ def main() -> None:
         test_lane_paid_deepseek_opt_in,
         test_lane_hop_429_next_model_same_lane,
         test_lane_free_strain_keys_and_skip,
+        test_postclose_all_clears_leftover_sparse_checkout,
         test_ci_workflow_is_wired,
     ]
     failed = 0

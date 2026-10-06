@@ -239,7 +239,11 @@ def test_snapshot_appends_correction_and_does_not_place(tmp_path):
     got = log.read_bytes()
     assert got.startswith(raw)
     assert REAL_LOG.read_bytes() == raw
-    new = [json.loads(line) for line in got.decode().splitlines()[2:]]
+    # The committed log is append-only and already has a real snapshot.
+    # Judge only the lines this call added.
+    prior = raw.decode().splitlines()
+    got_lines = got.decode().splitlines()
+    new = [json.loads(line) for line in got_lines[len(prior):]]
     assert [row["kind"] for row in new] == ["account_snapshot", "correction"]
     account = new[0]
     assert account["host"] == "api.sandbox.webull.com"

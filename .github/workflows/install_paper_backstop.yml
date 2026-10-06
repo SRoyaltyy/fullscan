@@ -55,3 +55,6 @@ jobs:
           bash scripts/install_paper_backstop.sh
           echo "---- systemctl list-timers (verify) ----"
           systemctl list-timers --all fullscan-paper-backstop.timer --no-pager
+      - name: Leave a full checkout on the shared ECS workspace
+        if: always()
+        run: git sparse-checkout disable || true

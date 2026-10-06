@@ -322,6 +322,16 @@ jobs:
           persist-credentials: true
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Full tree after leftover sparse-checkout
+        if: env.skip != 'yes'
+        run: |
+          # Shared ECS work dir keeps a prior job's sparse-checkout.
+          git sparse-checkout disable || true
+          test -f requirements.txt || {
+            echo "ERROR: requirements.txt missing. A prior job left git sparse-checkout enabled on this self-hosted runner."
+            exit 1
+          }
+
       - name: Twin guard (completed Pre-Open pass already landed)
         if: env.skip != 'yes' && github.event.inputs.force != 'true'
         run: |
