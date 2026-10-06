@@ -10,7 +10,10 @@ Rules
 - Printed curve rows stay byte-for-byte. A later run resumes from
   state.json and appends only stock-book sessions after the last
   printed date. The first curve (no file yet) is still one chronological
-  pass. A session with no book stays missing.
+  pass. A session with no book stays missing. A session is appended
+  only when that day's stock-book file was first committed on main
+  before 09:30 ET on that day. A later landing is logged and skipped;
+  the next eligible session continues from the carried state.
 - Entry/exit at the signal day's closing price (yfinance, auto-adjusted).
 - Follow-the-book: hold a name while it stays in the sleeve's pick list;
   sell when it drops out (only after the horizon min-hold: 1d=1, 3d=3,
@@ -38,6 +41,7 @@ import io
 import json
 import math
 import re
+import subprocess
 from collections import defaultdict, deque
 from datetime import datetime
 from pathlib import Path
@@ -1465,6 +1469,100 @@ def _spy0_from_curve(rows: list[dict], prices: pd.DataFrame, capital: float) -> 
     return capital * px / equity
 
 
+def committed_before_session_open(when: datetime, session: str) -> bool:
+    """True when ``when`` is strictly before 09:30 ET on ``session``."""
+    et = ZoneInfo("America/New_York")
+    if when.tzinfo is None:
+        when = when.replace(tzinfo=ZoneInfo("UTC"))
+    local = when.astimezone(et)
+    year, month, day = (int(part) for part in str(session)[:10].split("-"))
+    deadline = datetime(year, month, day, 9, 30, tzinfo=et)
+    return local < deadline
+
+
+def _repo_is_shallow() -> bool:
+    try:
+        out = subprocess.run(
+            ["git", "rev-parse", "--is-shallow-repository"],
+            cwd=str(ROOT), capture_output=True, text=True, timeout=15, check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return True
+    return (out.stdout or "").strip() == "true"
+
+
+def first_main_commit_at(rel: str) -> datetime | None:
+    """Committer time of the oldest commit on main that touches ``rel``.
+
+    A shallow clone cannot prove that commit, so this returns None
+    rather than treating the tip as the first landing.
+    """
+    rel = str(rel or "").replace("\\", "/").lstrip("/")
+    if not rel or _repo_is_shallow():
+        return None
+    for ref in ("origin/main", "main"):
+        try:
+            verify = subprocess.run(
+                ["git", "rev-parse", "--verify", ref],
+                cwd=str(ROOT), capture_output=True, timeout=15, check=False,
+            )
+        except (OSError, subprocess.TimeoutExpired):
+            return None
+        if verify.returncode != 0:
+            continue
+        try:
+            rev = subprocess.run(
+                ["git", "rev-list", "--reverse", ref, "--", rel],
+                cwd=str(ROOT), capture_output=True, text=True, timeout=60, check=False,
+            )
+        except (OSError, subprocess.TimeoutExpired):
+            return None
+        if rev.returncode != 0:
+            continue
+        sha = next((line.strip() for line in (rev.stdout or "").splitlines() if line.strip()), "")
+        if not sha:
+            continue
+        try:
+            show = subprocess.run(
+                ["git", "show", "-s", "--format=%cI", sha],
+                cwd=str(ROOT), capture_output=True, text=True, timeout=15, check=False,
+            )
+        except (OSError, subprocess.TimeoutExpired):
+            return None
+        stamp = (show.stdout or "").strip()
+        if show.returncode != 0 or not stamp:
+            continue
+        try:
+            return datetime.fromisoformat(stamp)
+        except ValueError:
+            return None
+    return None
+
+
+def book_on_main_before_open(session: str) -> bool:
+    """The dated stock book was first committed on main before 09:30 ET that day."""
+    rel = f"data/stock_book/{str(session)[:10]}_stock_book.json"
+    when = first_main_commit_at(rel)
+    if when is None:
+        return False
+    return committed_before_session_open(when, session)
+
+
+def _eligible_append_books(books: list[tuple[str, Path]]) -> list[tuple[str, Path]]:
+    """Drop sessions whose book was not on main before that day's 09:30 ET.
+
+    Later eligible sessions stay in order. No curve row is invented for
+    a dropped day; the sim carries the last printed state forward.
+    """
+    kept: list[tuple[str, Path]] = []
+    for session, path in books:
+        if book_on_main_before_open(session):
+            kept.append((session, path))
+            continue
+        print(f"missing: book not on main before 09:30 ET {str(session)[:10]}", flush=True)
+    return kept
+
+
 def _open_tickers(state: dict) -> set[str]:
     names = {"SPY"}
     for sleeve in state.values():
@@ -1521,10 +1619,11 @@ def run(date: str | None = None, top_n: int = 10, capital: float | None = None) 
             raise SystemExit(
                 "[paper] state.json is not a sleeve book; "
                 "refusing to rewrite printed days")
-        books_to_sim = [(d, p) for d, p in books if d > last_printed]
+        books_to_sim = _eligible_append_books(
+            [(d, p) for d, p in books if d > last_printed])
         if not books_to_sim:
             print(f"[paper] curve already through {last_printed}; "
-                  "nothing to append", flush=True)
+                  "nothing eligible to append", flush=True)
             return
         print(f"[paper] resume after {last_printed}: "
               f"{len(books_to_sim)} book session(s) to append", flush=True)
