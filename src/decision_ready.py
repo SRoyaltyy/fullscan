@@ -118,6 +118,73 @@ def evaluate(date):
             'fingerprint': fingerprint, 'inputs': hashes, 'blockers': missing}
 
 
+def landed_ticket_fingerprint(date: str) -> str | None:
+    """Fingerprint already written on the dated ticket, if that file exists."""
+    path = ROOT / "data" / "day_board" / f"{date}_strategy_tickets.json"
+    if not path.is_file():
+        return None
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    proof = payload.get("decision_readiness") if isinstance(payload, dict) else None
+    if not isinstance(proof, dict):
+        return None
+    fp = proof.get("fingerprint")
+    return str(fp) if fp else None
+
+
+def inputs_match_landed_ticket(date: str) -> bool:
+    """True when today's ready input hash is already the landed ticket.
+
+    A matching hash does not need another publish. A checker error returns
+    False so the dispatch still happens and the workflow can decide.
+    """
+    landed = landed_ticket_fingerprint(date)
+    if not landed:
+        return False
+    try:
+        current = evaluate(date)
+    except Exception as exc:
+        print(f"[decision] fingerprint check failed ({exc}); dispatching", flush=True)
+        return False
+    fp = str(current.get("fingerprint") or "")
+    if current.get("ready") and fp == landed:
+        print(
+            f"[decision] skip dispatch {date}: inputs match landed ticket {fp[:12]}",
+            flush=True,
+        )
+        return True
+    return False
+
+
+def gate_decision(date: str) -> tuple[bool, str]:
+    """Whether a publish run should start, plus the input fingerprint.
+
+    Not-ready and already-landed hashes return False so the caller does
+    not join the cancel-in-progress group. A checker error returns True
+    so the publish job still runs its own readiness check.
+    """
+    try:
+        proof = apply_main_gate(evaluate(date))
+    except Exception as exc:
+        print(f"[decision] gate failed ({exc}); publish job will re-check", flush=True)
+        return True, ""
+    fp = str(proof.get("fingerprint") or "")
+    if not proof.get("ready"):
+        print(f"[decision] not ready {date}; skip publish", flush=True)
+        return False, fp
+    landed = landed_ticket_fingerprint(date)
+    if landed and landed == fp:
+        print(
+            f"[decision] skip publish {date}: inputs match landed ticket {landed[:12]}",
+            flush=True,
+        )
+        return False, fp
+    print(f"[decision] publish {date}: fingerprint {fp[:12]}", flush=True)
+    return True, fp
+
+
 def dispatch(date):
     """GITHUB_TOKEN pushes do not trigger push workflows; dispatch explicitly."""
     token = os.environ.get('GITHUB_TOKEN')
@@ -142,7 +209,11 @@ def notify_changed(paths):
                 'data/peers/', 'data/ab_checklist/')
     relevant = any((date in p and p.startswith(prefixes)) or p == 'data/factor_mine/panel.json'
                    for p in paths)
-    return dispatch(date) if relevant else False
+    if not relevant:
+        return False
+    if inputs_match_landed_ticket(date):
+        return False
+    return dispatch(date)
 
 
 def publish(date):
@@ -197,9 +268,18 @@ def main():
     parser.add_argument('--date', default=datetime.now(ET).date().isoformat())
     parser.add_argument('--publish', action='store_true')
     parser.add_argument('--notify', nargs='*')
+    parser.add_argument(
+        '--gate', action='store_true',
+        help='Print publish=true/false. Exit 0 either way.',
+    )
     args = parser.parse_args()
     if args.notify is not None:
         notify_changed(args.notify)
+        return 0
+    if args.gate:
+        publish, fingerprint = gate_decision(args.date)
+        print(f"publish={'true' if publish else 'false'}")
+        print(f"fingerprint={fingerprint}")
         return 0
     if args.publish:
         return publish(args.date)

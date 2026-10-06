@@ -28,12 +28,54 @@ def test_inputs_not_existing_outputs_control_readiness(tmp_path):
 
 def test_dispatch_for_upstream_input_but_not_own_publication():
     date = dr.datetime.now(dr.ET).date().isoformat()
-    with patch.object(dr, 'dispatch', return_value=True) as dispatch:
+    with patch.object(dr, 'dispatch', return_value=True) as dispatch, \
+         patch.object(dr, 'inputs_match_landed_ticket', return_value=False):
         assert dr.notify_changed([f'01_daily/news/{date}_actions.json'])
         assert dispatch.call_count == 1
         assert not dr.notify_changed(['dashboard/factor-mine/today.json',
                                       f'data/day_board/{date}_strategy_tickets.json'])
         assert dispatch.call_count == 1
+
+
+def test_notify_skips_when_landed_ticket_has_the_same_fingerprint(tmp_path):
+    date = '2026-10-06'
+    ticket = tmp_path / 'data' / 'day_board' / f'{date}_strategy_tickets.json'
+    ticket.parent.mkdir(parents=True)
+    ticket.write_text(json.dumps({
+        'decision_readiness': {'fingerprint': 'abc', 'ready': True},
+    }))
+    proof = {'date': date, 'ready': True, 'fingerprint': 'abc', 'inputs': {}, 'blockers': []}
+    with patch.object(dr, 'ROOT', tmp_path), \
+         patch.object(dr, 'evaluate', return_value=proof), \
+         patch.object(dr, 'dispatch', return_value=True) as dispatch:
+        assert dr.inputs_match_landed_ticket(date) is True
+        assert dr.notify_changed([f'01_daily/news/{date}_actions.json']) is False
+        assert dispatch.call_count == 0
+        changed = dict(proof, fingerprint='def')
+        with patch.object(dr, 'evaluate', return_value=changed):
+            assert dr.inputs_match_landed_ticket(date) is False
+            assert dr.notify_changed([f'data/peers/{date}_peer_rs.csv']) is True
+        assert dispatch.call_count == 1
+
+
+def test_gate_skips_same_hash_and_publishes_a_new_one(tmp_path):
+    date = '2026-10-06'
+    ticket = tmp_path / 'data' / 'day_board' / f'{date}_strategy_tickets.json'
+    ticket.parent.mkdir(parents=True)
+    ticket.write_text(json.dumps({
+        'decision_readiness': {'fingerprint': 'abc', 'ready': True},
+    }))
+    same = {'date': date, 'ready': True, 'fingerprint': 'abc', 'inputs': {'a': '1'}, 'blockers': []}
+    with patch.object(dr, 'ROOT', tmp_path), \
+         patch.object(dr, 'evaluate', return_value=same), \
+         patch.object(dr, 'apply_main_gate', side_effect=lambda proof: proof):
+        assert dr.gate_decision(date) == (False, 'abc')
+        fresh = dict(same, fingerprint='def')
+        with patch.object(dr, 'evaluate', return_value=fresh):
+            assert dr.gate_decision(date) == (True, 'def')
+        blocked = dict(same, ready=False, fingerprint='zzz')
+        with patch.object(dr, 'evaluate', return_value=blocked):
+            assert dr.gate_decision(date)[0] is False
 
 
 def test_ready_false_when_hashed_peer_rs_never_landed_on_main():
