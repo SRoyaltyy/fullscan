@@ -1247,6 +1247,154 @@ def test_theme_radar_fetch_does_not_send_the_actions_token() -> None:
     assert "GH_TOKEN" not in captured["env"]
 
 
+def test_a_final_row_is_copied_when_the_close_moves() -> None:
+    """A sealed row stays byte-identical after a new field and a new close."""
+    picks = [Pick("AAA", "long", target_pct=Decimal("0.08"))]
+    plan = _session_plan("2026-10-06", picks)
+    plan["note"] = "original rule"
+
+    def bars_for(day, names):
+        return {ticker: {"open": 10, "high": 10, "low": 10, "close": 10} for ticker in names}
+
+    early = run_book(
+        "toy_webull_sim", [plan], ["2026-10-06"], bars_for, schedule(),
+        datetime(2026, 10, 6, 16, 15, tzinfo=ET),
+    )[0]
+    assert early["final"] is True
+    with tempfile.TemporaryDirectory() as tmp:
+        folder = Path(tmp)
+        path = folder / "days.jsonl"
+        manifest = folder / "manifest.jsonl"
+        write_books([early], seal=False, path=path, manifest=manifest)
+        seal_row(early, manifest=manifest)
+        original = path.read_text(encoding="utf-8").strip()
+        later = _session_plan("2026-10-07", [Pick("BBB", "long")])
+        changed = dict(plan)
+        changed["note"] = "new rule note"
+        bars = {}
+        for day in ("2026-10-06", "2026-10-07"):
+            for ticker in ("AAA", "BBB"):
+                # 10-07 stays under the 8% target so the carried lot is still held.
+                # 10-06's close is a different print; the sealed row must ignore it.
+                bars[(ticker, day)] = {
+                    "open": 10, "high": 10, "low": 10,
+                    "close": 80 if day == "2026-10-06" else 10,
+                }
+        real_make = make_row
+
+        def extra_field(**kwargs):
+            row = real_make(**kwargs)
+            row["rule_note"] = "added later"
+            return row
+
+        with mock.patch("src.webull_sim.make_row", side_effect=extra_field):
+            rows = simulate(
+                {"toy_webull_sim": [changed, later]},
+                datetime(2026, 10, 7, 10, 15, tzinfo=ET),
+                schedule(), bars, books_path=path,
+            )
+        kept = next(row for row in rows if row["date"] == "2026-10-06")
+        nxt = next(row for row in rows if row["date"] == "2026-10-07")
+        assert "rule_note" not in kept
+        assert kept["note"] == "original rule"
+        assert kept["equity"] == early["equity"]
+        assert canon(kept) == original
+        assert nxt.get("rule_note") == "added later"
+        assert any(pos["ticker"] == "AAA" for pos in nxt["positions"])
+        assert Decimal(nxt["cash"]) < Decimal(kept["cash"])
+        write_books(rows, seal=True, path=path, manifest=manifest)
+        assert original in path.read_text(encoding="utf-8")
+
+
+def test_final_run_keeps_sealed_rows_and_locks_blfs_and_theme() -> None:
+    """16:15 ET on the current books: the seal holds, BLFS locks, shorts fill."""
+    import shutil
+    import subprocess
+    from src.webull_sim import collect_books, needed_universe
+
+    ten = [
+        "1d_top_webull_sim", "1m_top_webull_sim", "1w_top_webull_sim",
+        "2w_top_webull_sim", "3d_top_webull_sim",
+        "stock_book_1d_webull_sim", "stock_book_1m_webull_sim",
+        "stock_book_1w_webull_sim", "stock_book_2w_webull_sim",
+        "stock_book_3d_webull_sim",
+    ]
+    with tempfile.TemporaryDirectory() as tmp:
+        folder = Path(tmp)
+        days = folder / "days.jsonl"
+        manifest = folder / "manifest.jsonl"
+        shutil.copy(ROOT / "data/webull_sim/days.jsonl", days)
+        shutil.copy(ROOT / "data/past_day_lock/manifest.jsonl", manifest)
+        sealed_lines = {}
+        for line in days.read_text(encoding="utf-8").splitlines():
+            row = json.loads(line)
+            if row.get("final") and row.get("date") == "2026-10-06":
+                sealed_lines[row["name"]] = line
+        assert "L1_long_green_tp8_lowvol_webull_sim" in sealed_lines
+        radar = folder / "theme-radar"
+        radar.mkdir(parents=True)
+        subprocess.run(["git", "init"], cwd=radar, check=True, capture_output=True)
+        plan_dir = radar / "research" / "shadow_log" / "plans"
+        plan_dir.mkdir(parents=True)
+        (plan_dir / "plan_2026-10-06.csv").write_text(PLAN_CSV, encoding="utf-8")
+        env = os.environ.copy()
+        env.update({
+            "GIT_AUTHOR_DATE": "2026-10-06T10:20:12Z",
+            "GIT_COMMITTER_DATE": "2026-10-06T10:20:12Z",
+            "GIT_AUTHOR_NAME": "test",
+            "GIT_AUTHOR_EMAIL": "test@example.com",
+            "GIT_COMMITTER_NAME": "test",
+            "GIT_COMMITTER_EMAIL": "test@example.com",
+        })
+        subprocess.run(["git", "add", "."], cwd=radar, check=True, capture_output=True, env=env)
+        subprocess.run(["git", "commit", "-m", "plan"], cwd=radar, check=True, capture_output=True, env=env)
+        with mock.patch.dict(os.environ, {"THEME_RADAR_DIR": str(radar)}):
+            books = collect_books()
+        tickers, _days = needed_universe(books)
+        bars = {}
+        for ticker in tickers:
+            if ticker == "BLFS":
+                continue
+            bars[(ticker, "2026-10-06")] = {"open": 10, "high": 10, "low": 10, "close": 10}
+        rows = simulate(
+            books, datetime(2026, 10, 6, 16, 15, tzinfo=ET),
+            schedule(), bars, books_path=days,
+        )
+        written = write_books(rows, seal=True, path=days, manifest=manifest)
+        text = days.read_text(encoding="utf-8")
+        for name, line in sealed_lines.items():
+            assert line in text, name
+        l1 = json.loads(sealed_lines["L1_long_green_tp8_lowvol_webull_sim"])
+        assert l1["equity"] == "10010.820817"
+        sealed_now = {
+            (row.get("name"), row.get("date"))
+            for row in past_day_lock.load_manifest(manifest)
+            if row.get("record") == "webull_sim" and row.get("kind") == "day"
+        }
+        by_name = {row["name"]: row for row in written if row["date"] == "2026-10-06"}
+        for name in ten:
+            row = by_name[name]
+            assert row["section"] == "locked" and row["final"] is True and row["locked_trade"] is True
+            assert "no open, not filled: BLFS" in row["note"]
+            assert sum(1 for fill in row["fills"] if fill.get("shares")) == 14
+            assert next(fill for fill in row["fills"] if fill["ticker"] == "BLFS")["reason"] == "no open, not filled"
+            assert (name, "2026-10-06") in sealed_now
+        theme = {
+            "theme_radar_fpe_delta_t3_earn_today_3d_webull_sim": (FPE_10_06, 3),
+            "theme_radar_fresh_dcp_t1_ep_ge03_2d_webull_sim": (["AIB", "RIVN"], 2),
+            "theme_radar_fresh_dcp_t1_avoid_ah_3d_webull_sim": (["AIB", "RIVN"], 3),
+        }
+        for name, (tickers, hold) in theme.items():
+            row = by_name[name]
+            assert row["section"] == "locked" and row["final"] is True and row["locked_trade"] is True
+            assert row["reason"] == ""
+            assert [fill["ticker"] for fill in row["fills"] if fill.get("shares")] == tickers
+            assert all(fill["side"] == "sell" for fill in row["fills"] if fill.get("shares"))
+            assert all(pos["side"] == "short" for pos in row["positions"])
+            assert row["picks"] == len(tickers)
+            assert (name, "2026-10-06") in sealed_now
+
+
 def test_workflow_is_after_the_freeze_and_on_ubuntu() -> None:
     text = (ROOT / ".github/workflows/webull_sim.yml").read_text(encoding="utf-8")
     assert "ubuntu-latest" in text
@@ -1295,6 +1443,8 @@ if __name__ == "__main__":
     test_final_run_locks_the_other_picks_when_one_open_is_missing()
     test_no_fires_sits_out_and_history_starts_on_10_06()
     test_theme_radar_fetch_does_not_send_the_actions_token()
+    test_a_final_row_is_copied_when_the_close_moves()
+    test_final_run_keeps_sealed_rows_and_locks_blfs_and_theme()
     test_freeze_window()
     test_workflow_is_after_the_freeze_and_on_ubuntu()
     with tempfile.TemporaryDirectory() as tmp:

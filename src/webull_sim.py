@@ -658,6 +658,42 @@ def final_row(day: str, now: datetime, tradable: bool, opens_ok: bool) -> bool:
     return opens_ok
 
 
+def _restore_account(row: dict, plan: dict, session_index: int, previous: Account) -> Account:
+    """End state of a final row. Stops and targets come from the plan, not a rescore."""
+    account = Account(
+        cash=Decimal(str(row["cash"])),
+        fees=Decimal(str(row.get("fees") or "0")),
+    )
+    picks = {pick.ticker: pick for pick in plan.get("picks") or []}
+    carried = {(lot.ticker, lot.entry_date): lot for lot in previous.lots}
+    for pos in row.get("positions") or []:
+        ticker = str(pos["ticker"])
+        entry = Decimal(str(pos["entry_px"]))
+        side = str(pos["side"])
+        old = carried.get((ticker, pos.get("entry_date")))
+        stop = old.stop if old is not None else None
+        target = old.target if old is not None else None
+        exit_index = old.exit_index if old is not None else None
+        exit_on = old.exit_on if old is not None else None
+        pick = picks.get(ticker)
+        if pick is not None and pos.get("entry_date") == plan["date"]:
+            stop = pick.stop
+            target = None
+            if pick.target_pct is not None:
+                sign = Decimal("1") if side == "long" else Decimal("-1")
+                target = entry * (Decimal("1") + sign * pick.target_pct)
+            exit_on = pick.exit_on
+            exit_index = None
+            if pick.hold_sessions is not None and not pick.exit_on:
+                exit_index = session_index + pick.hold_sessions
+        account.lots.append(Lot(
+            ticker=ticker, side=side, shares=int(pos["shares"]),
+            entry_px=entry, entry_date=str(pos["entry_date"]),
+            stop=stop, target=target, exit_index=exit_index, exit_on=exit_on,
+        ))
+    return account
+
+
 def run_book(
     name: str,
     plans: list[dict],
@@ -666,15 +702,30 @@ def run_book(
     schedule: Schedule,
     now: datetime,
     sandbox_for=None,
+    sealed_rows: dict[str, dict] | None = None,
 ) -> list[dict]:
-    """Sequential sim. Locked cash starts over at the first locked day."""
+    """Sequential sim. Locked cash starts over at the first locked day.
+
+    A row already marked final in days.jsonl is copied through. It is not
+    rebuilt, so a later close mark cannot change its bytes.
+    """
     index = {day: i for i, day in enumerate(sessions)}
     built = Account()
     locked = Account()
     rows = []
+    sealed_rows = sealed_rows or {}
     for plan in plans:
         day = plan["date"]
         account = built if day < FIRST_LOCKED else locked
+        prior = sealed_rows.get(day)
+        if prior and prior.get("final"):
+            rows.append(prior)
+            restored = _restore_account(prior, plan, index.get(day, 0), account)
+            if day < FIRST_LOCKED:
+                built = restored
+            else:
+                locked = restored
+            continue
         tradable, reason = plan["tradable"], plan["reason"]
         note = plan.get("note") or ""
         # A day before the lock can still be simulated once. The late commit
@@ -1805,11 +1856,24 @@ def needed_universe(books: dict[str, list[dict]]) -> tuple[set[str], set[str]]:
     return tickers, days
 
 
+def _final_rows(path: Path | None) -> dict[str, dict[str, dict]]:
+    """Final rows already on disk, keyed by book then date. Loaded verbatim."""
+    kept: dict[str, dict[str, dict]] = {}
+    for row in read_books(path):
+        if row.get("final"):
+            kept.setdefault(row["name"], {})[row["date"]] = row
+    return kept
+
+
 def simulate(books: dict[str, list[dict]], now: datetime,
              schedule: Schedule | None = None,
-             bars: dict[tuple[str, str], dict] | None = None) -> list[dict]:
+             bars: dict[tuple[str, str], dict] | None = None,
+             *,
+             books_path: Path | None = None) -> list[dict]:
     schedule = schedule or load_schedule()
     sessions = session_calendar(books)
+    # None means a test sim with no book file. build() passes the real path.
+    finals = _final_rows(books_path) if books_path is not None else {}
     if bars is None:
         tickers, days = needed_universe(books)
         bars = adjust_splits(load_bars(tickers, days))
@@ -1865,6 +1929,7 @@ def simulate(books: dict[str, list[dict]], now: datetime,
         rows.extend(run_book(
             name, plans, use_sessions, use_bars, schedule, now,
             sandbox_for=sandbox_for,
+            sealed_rows=finals.get(name),
         ))
     return rows
 
@@ -2298,7 +2363,7 @@ def build(now: datetime, *, seal: bool = False) -> list[dict]:
     schedule = load_schedule()
     books = collect_books()
     print(f"webull sim: {len(books)} books", flush=True)
-    rows = simulate(books, now, schedule)
+    rows = simulate(books, now, schedule, books_path=BOOKS_PATH)
     written = write_books(rows, seal=seal)
     publish(written, schedule)
     return written
