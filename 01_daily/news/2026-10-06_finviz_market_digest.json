@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-06",
+  "generated_at": "2026-10-06T04:19:59.076334-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-06",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to a gap-up open as traders look to ADP jobs data, Fed speakers and oil prices after reduced Fed hike odds",
+  "raw_text": "- S&P 500 Futures (@ES) +0.20%, Dow Jones Futures (@YM) +0.47%, Nasdaq 100 Futures (@NQ) +0.18%, and Russell 2000 Futures (@ER2) +0.22% indicate a gap-up open for US equities\n- Nasdaq ($COMP) comes off a record in the prior session amid reduced odds of an imminent Fed rate hike\n- Asian equities mostly advance with Japan’s Nikkei 225 (@NKD) rising more than 1% and European stock futures up around 0.5%\n- Lamb Weston (LW) is scheduled to report earnings before the opening bell\n- ADP employment change data are due at 8:15 AM ET and US trade balance at 8:30 AM ET\n- New York Fed President John Williams is scheduled to speak at 9:05 AM ET\n- Fed Governor Michelle Bowman is scheduled to speak at 10:45 AM ET\n- Oil (@CL) prices hold near recent levels around $88.50 per barrel amid supply developments\n- Longer-term US Treasury yields remain elevated near multi-decade highs",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) **+0.20%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) **+0.47%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) **+0.18%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) **+0.22%** indicate a **gap-up open for US equities**\n- **Nasdaq** ([$COMP](https://finviz.com/index/COMP?p=d)) comes off a **record in the prior session** amid **reduced odds of an imminent Fed rate hike**\n- **Asian equities mostly advance** with **Japan’s Nikkei 225** ([@NKD](https://finviz.com/futures_charts?t=NKD)) rising more than **1%** and European stock futures up around **0.5%**\n- **Lamb Weston** ([LW](https://finviz.com/quote?t=LW)) is scheduled to **report earnings before the opening bell**\n- **ADP employment change** data are due at **8:15 AM ET** and **US trade balance** at **8:30 AM ET**\n- **New York Fed President John Williams** is scheduled to speak at **9:05 AM ET**\n- **Fed Governor Michelle Bowman** is scheduled to speak at **10:45 AM ET**\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices hold near recent levels around **$88.50 per barrel** amid supply developments\n- **Longer-term US Treasury yields** remain elevated near **multi-decade highs**",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "LW"
+  ],
+  "named_leaders": [
+    "LW"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "LW"
+    ],
+    "text": "Lamb Weston (LW) is scheduled to report earnings before the opening bell"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 302191,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-06T04:06:21.273",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
