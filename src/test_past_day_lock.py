@@ -206,6 +206,12 @@ def test_paper_books_are_not_locked() -> None:
     note = describe_seeds()
     assert "data/paper/trades.csv" in note
     assert "not locked" in note
+    # The append lives outside the pinned engine so a later run cannot
+    # rewrite a printed curve row.
+    book = (ROOT / "src" / "run_stock_book_all.py").read_text(encoding="utf-8")
+    pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    assert "src.paper_trade_append" in book
+    assert "src.paper_trade_append" in pre
 
 
 def test_csv_append_and_past_edit(tmp: Path) -> None:
@@ -242,6 +248,13 @@ def test_workflow_runs_the_check() -> None:
     assert "self-hosted" not in text
     assert "src.past_day_lock --check-against" in text
     assert "src.test_past_day_lock" in text
+    assert "src.test_v4_engine_pins" in text
+    assert "src.test_factor_mine_past_lock" in text
+    assert "src/factor_mine.py" in text
+    assert "00_grounding/futubull_fees.json" in text
+    assert "research/hot_n4_clean_v4/protocol.py" in text
+    mine = (ROOT / ".github" / "workflows" / "factor_mine.yml").read_text(encoding="utf-8")
+    assert "src.factor_mine_past_lock" in mine
     yml = (ROOT / ".github" / "workflows" / "factor_mine.yml").read_text(encoding="utf-8")
     assert "data/past_day_lock/" in yml
     book = (ROOT / ".github" / "workflows" / "stock_book_all.yml").read_text(encoding="utf-8")

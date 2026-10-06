@@ -607,7 +607,7 @@ def run(
         # sessions after the last printed date; the book is already on main.
         print("[all] → Paper trading (append after the last printed date)")
         _run(
-            [sys.executable, "-m", "src.paper_trade", "--date", date, "--top", "10"],
+            [sys.executable, "-m", "src.paper_trade_append", "--date", date, "--top", "10"],
             check=False, timeout_s=900,
         )
         _land(date, "paper", "Paper dashboard")
@@ -646,7 +646,7 @@ def run(
 
     print("[all] → Paper trading (Futubull-fee simulation + dashboard)")
     _run(
-        [sys.executable, "-m", "src.paper_trade", "--date", date, "--top", "10"],
+        [sys.executable, "-m", "src.paper_trade_append", "--date", date, "--top", "10"],
         check=False, timeout_s=900,
     )
     print("[all] → past-day lock (sealed days must still match)")

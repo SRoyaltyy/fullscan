@@ -163,7 +163,7 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
         py = sys.executable
         _run([py, "-m", "src.sleeve_merge", "--card", "--date", date,
               "--write-card"], timeout_s=120)
-        _run([py, "-m", "src.paper_trade", "--date", date, "--top", "10"],
+        _run([py, "-m", "src.paper_trade_append", "--date", date, "--top", "10"],
              timeout_s=180)
         _run([py, "-m", "src.strategy_board", "--write"], timeout_s=180)
         _run([py, "-m", "src.sleeve_merge", "--write"], timeout_s=180)

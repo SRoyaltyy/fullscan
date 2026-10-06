@@ -11,7 +11,19 @@ on:
       - "src/sleeve_merge_live.py"
       - "src/strategy_tickets.py"
       - "src/paper_trade.py"
+      - "src/paper_trade_append.py"
       - "src/factor_mine_book.py"
+      - "src/factor_mine.py"
+      - "src/factor_mine_past_lock.py"
+      - "src/test_factor_mine_past_lock.py"
+      - "src/ohlc_ripper.py"
+      - "src/gainer_capture.py"
+      - "src/gainer_asof.py"
+      - "src/ticker_lookback.py"
+      - "src/test_v4_engine_pins.py"
+      - "00_grounding/futubull_fees.json"
+      - "research/hot_n4_clean_v4/protocol.py"
+      - ".github/workflows/factor_mine.yml"
       - "01_daily/*_flatten_card.md"
       - "data/day_board/*_strategy_tickets.json"
       - "data/paper/trades.csv"
@@ -27,7 +39,19 @@ on:
       - "src/sleeve_merge_live.py"
       - "src/strategy_tickets.py"
       - "src/paper_trade.py"
+      - "src/paper_trade_append.py"
       - "src/factor_mine_book.py"
+      - "src/factor_mine.py"
+      - "src/factor_mine_past_lock.py"
+      - "src/test_factor_mine_past_lock.py"
+      - "src/ohlc_ripper.py"
+      - "src/gainer_capture.py"
+      - "src/gainer_asof.py"
+      - "src/ticker_lookback.py"
+      - "src/test_v4_engine_pins.py"
+      - "00_grounding/futubull_fees.json"
+      - "research/hot_n4_clean_v4/protocol.py"
+      - ".github/workflows/factor_mine.yml"
       - "01_daily/*_flatten_card.md"
       - "data/day_board/*_strategy_tickets.json"
       - "data/paper/trades.csv"
@@ -56,3 +80,8 @@ jobs:
         run: |
           python3 -m src.past_day_lock --check-against origin/main
           python3 -m src.test_past_day_lock
+          python3 -m src.test_v4_engine_pins
+      - name: Install the Factor Mine wrapper test
+        run: pip install pandas numpy
+      - name: Factor Mine past-day wrapper
+        run: python3 -m src.test_factor_mine_past_lock
