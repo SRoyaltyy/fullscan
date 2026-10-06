@@ -1,0 +1,48 @@
+name: webull sim
+
+# Builds the day's Webull sim rows after the open and again after the close.
+# 09:45 ET and 10:15 ET are 13:45 and 14:15 UTC while the US is on EDT
+# (through 2026-11-01). 16:15 ET is 20:15 UTC. The first run is after the
+# 03:00–09:40 ET freeze. GitHub-hosted runner only.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 13 * * 1-5"
+    - cron: "15 14 * * 1-5"
+    - cron: "15 20 * * 1-5"
+  pull_request:
+    paths:
+      - "src/webull_sim.py"
+      - "src/test_webull_sim.py"
+      - "src/past_day_lock.py"
+      - "00_grounding/webull_fees.json"
+      - ".github/workflows/webull_sim.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  sim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install the price-store reader
+        run: pip install pyarrow pandas yfinance
+      - name: Tests
+        run: python3 -m src.test_webull_sim
+      - name: Build today's rows
+        if: github.event_name != 'pull_request'
+        run: python3 -m src.webull_sim
+      - name: Land the sim books
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          bash scripts/safe_git_push.sh \
+            "webull sim $(date -u +%F)" \
+            data/webull_sim 03_scoreboard/WEBULL_SIM.md dashboard/webull-sim data/past_day_lock || true

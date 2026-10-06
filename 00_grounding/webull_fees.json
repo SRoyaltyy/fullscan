@@ -1,0 +1,32 @@
+{
+  "source_url": "https://www.webull.com/pricing",
+  "retrieved": "2026-10-06",
+  "scope": "US stocks and ETFs listed on US exchanges. This sim places a 09:30 market open, not an algo order.",
+  "commission_per_trade": 0,
+  "commission_note": "Webull does not charge commissions for trading stocks, ETFs and options listed on U.S. exchanges.",
+  "sec_fee": {
+    "rate_per_dollar_of_sale": "0.0000206",
+    "applies": "sells only",
+    "page_text": "$0.0000206 * Total Trade Volume",
+    "how_applied": "The printed coefficient matches the SEC Section 31 dollar rate ($20.60 per $1,000,000 of sales). Sale volume here is the sale proceeds in dollars, shares times price."
+  },
+  "cat_fee": {
+    "rate_per_share": "0.000003",
+    "applies": "buys and sells",
+    "page_text": "$0.000003 * Total Trade Volume",
+    "how_applied": "Applied per share on buys and on sells. The page's $0.000003 coefficient is the per-share CAT passthrough, not a per-dollar rate."
+  },
+  "finra_taf": {
+    "per_share": "0",
+    "max_per_trade": "0",
+    "applies": "sells only",
+    "page_text": "Current rates are: $0 per share for each sale of a covered equity security, with a maximum charge of $0 per trade.",
+    "left_out": "The pricing page does not print a non-zero TAF rate as of the retrieval date. No other TAF rate is charged."
+  },
+  "left_out": {
+    "stock_borrow": "The page says Webull earns revenue from stock loans. It does not publish a client borrow rate or a per-share borrow charge. Borrow is not modeled.",
+    "algo_orders": "Equity algo order types are listed at $0.0050 per share. This sim does not use an algo order, so that fee is not applied.",
+    "otc": "Low-priced OTC, F-stock, and NSCC illiquidity charges are published for OTC activity. They are not applied to listed US-stock books.",
+    "payment_for_order_flow": "Named as a Webull revenue line. No client charge is printed, so none is applied."
+  }
+}
