@@ -50,6 +50,18 @@ EXCEL_MANIFEST_SEAL = "sealed by git commit time + excel_bot freeze manifest"
 JUMP_HI = 3.0
 JUMP_LO = 1.0 / 3.0
 JUMP_TOL = 0.25
+# The day's last sim. 09:45 and 10:15 ET retry. 16:15 ET is the only cron
+# at or after the 16:00 close, so that run is final.
+MISSING_OPEN_RULE = (
+    "The 09:45 and 10:15 ET runs retry a name that still has no usable Yahoo "
+    "session open. The 16:15 ET run is the day's final run: it is the only "
+    "scheduled run at or after the 16:00 ET close. On that run a pick with no "
+    "print, or an open dropped by the unexplained 3x jump check, is logged "
+    "\"no open, not filled\". That slot stays cash and the other fills lock. "
+    "A planned exit with no open is not sold; the lot stays held and is logged "
+    "the same way. The unfilled names are listed on the row. A row that is "
+    "already locked is left as written."
+)
 SHADOW_DIR = ROOT / "research" / "forward_shadow_v1" / "ledger"
 PAPER_OPEN = ROOT / "data" / "paper_open"
 PRICE_PATH = ROOT / "data" / "prices" / "ohlc.parquet"
@@ -476,6 +488,15 @@ def close_is_final(now: datetime, day: str) -> bool:
     return now.astimezone(ET) >= session_close(day)
 
 
+def is_final_run(now: datetime, day: str) -> bool:
+    """The run that decides a still-open row.
+
+    Under the current cron that is 16:15 ET (20:15 UTC). A dispatch before
+    the close keeps retrying a missing open.
+    """
+    return close_is_final(now, day)
+
+
 def add_trading_days(day: str, n: int) -> str:
     """``n`` NYSE sessions after ``day``. Weekends and full-day holidays skip."""
     from .skip_if_good import _next_weekday
@@ -672,38 +693,61 @@ def run_book(
         tickers += [lot.ticker for lot in account.lots]
         tickers += list(plan["exits"])
         bars = bars_for(day, tickers)
-        opens_ok = True
+        missing_picks = []
+        missing_exits = []
         if tradable:
             for pick in plan["picks"]:
                 bar = bars.get(pick.ticker)
                 if not bar or bar.get("open") is None:
-                    opens_ok = False
-                    break
+                    missing_picks.append(pick.ticker)
             for ticker in plan["exits"]:
                 if any(lot.ticker == ticker for lot in account.lots):
                     bar = bars.get(ticker)
                     if not bar or bar.get("open") is None:
-                        opens_ok = False
+                        missing_exits.append(ticker)
+        opens_ok = not missing_picks and not missing_exits
+        # Only a row that is still open can take this. A locked row is not
+        # rewritten; write_books keeps the sealed line.
+        accept_missing = (
+            day >= FIRST_LOCKED
+            and not opens_ok
+            and is_final_run(now, day)
+        )
         fills: list[dict] = []
         mode = resolve_sizing(plan["picks"], plan.get("sizing") or "slot")
         if tradable:
             # One missing print does not drop the other picks. Each name is
-            # sized off the same open equity, or logged "open not observed".
+            # sized off the same open equity. Before the final run the miss
+            # stays "open not observed" and the row stays unlocked.
             fills = apply_session(
                 account, plan["picks"], plan["exits"], bars, schedule,
                 day, index[day], sizing=mode,
             )
-            if not opens_ok:
+            if accept_missing:
+                for fill in fills:
+                    if fill.get("reason") == "open not observed":
+                        fill["reason"] = "no open, not filled"
+                for ticker in missing_exits:
+                    lot = next(lot for lot in account.lots if lot.ticker == ticker)
+                    fills.append({
+                        "ticker": ticker,
+                        "side": "sell" if lot.side == "long" else "buy",
+                        "shares": 0,
+                        "price": None,
+                        "fee": Decimal("0"),
+                        "reason": "no open, not filled",
+                        "date": day,
+                    })
+                names = list(dict.fromkeys(missing_picks + missing_exits))
+                note = (note + " no open, not filled: " + ",".join(names)).strip()
+                opens_ok = True
+            elif not opens_ok:
                 traded = any(fill.get("shares") for fill in fills)
                 if not traded:
                     reason = "open not observed"
                 else:
-                    missing = [
-                        pick.ticker for pick in plan["picks"]
-                        if not (bars.get(pick.ticker) or {}).get("open")
-                    ]
-                    if missing:
-                        note = (note + " open not observed: " + ",".join(missing)).strip()
+                    if missing_picks:
+                        note = (note + " open not observed: " + ",".join(missing_picks)).strip()
         if is_theme_book(name):
             # A late or empty day still covers shorts that were already on.
             # New picks were not opened above unless the plan was tradable.
@@ -1156,25 +1200,60 @@ def parse_theme_log(text: str, commit: str, when: datetime | None) -> dict[str, 
 
 
 def github_api(path: str, accept: str = "") -> tuple[int, str]:
-    """GET ``https://api.github.com/{path}`` through the gh CLI.
+    """GET ``https://api.github.com/{path}`` with no Actions token.
 
-    A public repo answers without a token. ``GITHUB_TOKEN`` / ``GH_TOKEN``
-    is what ``gh`` uses when it is set.
+    ``GITHUB_TOKEN`` on ubuntu-latest is this repo's token. theme-radar
+    answers 404 to it. A public read goes out unauthenticated.
     """
-    cmd = ["gh", "api", path]
-    if accept:
-        cmd.extend(["-H", f"Accept: {accept}"])
+    url = "https://api.github.com/" + path.lstrip("/")
+    header = accept or "application/vnd.github+json"
+    env = {
+        key: value for key, value in os.environ.items()
+        if key not in {"GH_TOKEN", "GITHUB_TOKEN", "GH_ENTERPRISE_TOKEN"}
+    }
     try:
         proc = subprocess.run(
-            cmd, cwd=ROOT, check=False, capture_output=True, text=True,
-            timeout=60,
+            [
+                "curl", "-sS", "-w", "\n%{http_code}",
+                "-H", f"Accept: {header}",
+                "-H", "User-Agent: fullscan-webull-sim",
+                url,
+            ],
+            cwd=ROOT, check=False, capture_output=True, text=True,
+            timeout=60, env=env,
         )
     except (OSError, subprocess.TimeoutExpired):
         return 1, ""
-    text = proc.stdout or ""
-    if proc.returncode != 0 and not text.strip():
-        text = proc.stderr or ""
-    return proc.returncode, text
+    raw = proc.stdout or ""
+    body, sep, code = raw.rpartition("\n")
+    if not sep:
+        return proc.returncode or 1, raw
+    try:
+        status = int(code.strip())
+    except ValueError:
+        return proc.returncode or 1, raw
+    return (0 if status < 400 else status), body
+
+
+def theme_radar_root() -> Path | None:
+    """Local theme-radar checkout. The workflow sets ``THEME_RADAR_DIR``."""
+    raw = os.environ.get("THEME_RADAR_DIR", "").strip()
+    if not raw:
+        return None
+    path = Path(raw)
+    if (path / ".git").exists():
+        return path
+    return None
+
+
+def _theme_git(root: Path, args: list[str]) -> subprocess.CompletedProcess | None:
+    try:
+        return subprocess.run(
+            ["git", *args], cwd=root, check=False, capture_output=True,
+            text=True, timeout=60,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return None
 
 
 def _github_json(path: str):
@@ -1204,6 +1283,14 @@ def _plan_day(name: str) -> str | None:
 
 def theme_plan_names() -> list[str] | None:
     """``plan_<entry>.csv`` filenames. None when the listing could not be read."""
+    root = theme_radar_root()
+    if root is not None:
+        folder = root / THEME_PLAN_DIR
+        if not folder.is_dir():
+            return None
+        return sorted(
+            path.name for path in folder.glob("plan_*.csv") if _plan_day(path.name)
+        )
     code, payload = _github_json(
         f"repos/SRoyaltyy/theme-radar/contents/{THEME_PLAN_DIR}"
     )
@@ -1229,7 +1316,19 @@ def theme_commits(path: str) -> list[tuple[str, datetime]] | None:
     ``[]`` means the path was never committed. None means the history
     could not be read. The first commit is the oldest of this list.
     """
-    found: list[tuple[str, datetime]] = []
+    root = theme_radar_root()
+    if root is not None:
+        proc = _theme_git(root, ["log", "--format=%H%x09%cI", "--", path])
+        if proc is None or proc.returncode != 0:
+            return None
+        found: list[tuple[str, datetime]] = []
+        for line in proc.stdout.splitlines():
+            if "\t" not in line:
+                continue
+            sha, iso = line.split("\t", 1)
+            found.append((sha, datetime.fromisoformat(iso)))
+        return found
+    found = []
     for page in range(1, 21):
         code, payload = _github_json(
             "repos/SRoyaltyy/theme-radar/commits?path="
@@ -1258,6 +1357,12 @@ def theme_commits(path: str) -> list[tuple[str, datetime]] | None:
 
 
 def theme_plan_text(path: str, sha: str) -> str | None:
+    root = theme_radar_root()
+    if root is not None:
+        proc = _theme_git(root, ["show", f"{sha}:{path}"])
+        if proc is None or proc.returncode != 0 or not proc.stdout.strip():
+            return None
+        return proc.stdout
     code, text = github_api(
         f"repos/SRoyaltyy/theme-radar/contents/{path}?ref={sha}",
         accept="application/vnd.github.raw",
@@ -1302,7 +1407,7 @@ def _plan_pick(row: dict, day: str) -> Pick | None:
 
 
 def _theme_plan(day: str, source: str, sha: str, when: datetime,
-                before: bool, picks: list[Pick]) -> dict:
+                before: bool, picks: list[Pick], *, no_fires: bool = False) -> dict:
     borrow = "borrow not modeled"
     if before and picks:
         note = (
@@ -1316,6 +1421,8 @@ def _theme_plan(day: str, source: str, sha: str, when: datetime,
             "Research short. Off the real Webull paper account. "
             "Pre-open plan fired nothing for this rule. " + borrow + "."
         )
+        if no_fires:
+            note += " status=no_fires."
         return _plan(day, source, sha, when, True, [], [], note=note, borrow=borrow)
     names = ", ".join(pick.ticker for pick in picks) if picks else "The plan file"
     note = (
@@ -1370,6 +1477,7 @@ def plans_from_plan_file(path: str, day: str) -> dict[str, dict] | None:
     for cell in order:
         if cell not in cells:
             cells.append(cell)
+    no_fires = "status=no_fires" in text
     books: dict[str, dict] = {}
     for cell in cells:
         picks = []
@@ -1379,6 +1487,7 @@ def plans_from_plan_file(path: str, day: str) -> dict[str, dict] | None:
                 picks.append(pick)
         books[book_name(f"theme_radar_{cell}")] = _theme_plan(
             day, source, sha, when, before, picks,
+            no_fires=no_fires and not picks,
         )
     return books
 
@@ -1402,6 +1511,9 @@ def load_theme_plans() -> dict[str, list[dict]]:
         return books
     for name in names:
         day = _plan_day(name) or ""
+        # Theme Radar sim history starts on the first locked day.
+        if not day or day < FIRST_LOCKED:
+            continue
         path = f"{THEME_PLAN_DIR}/{name}"
         built = plans_from_plan_file(path, day)
         if built is None:
@@ -1885,6 +1997,24 @@ def excel_seal_label(source: str, manifest: dict | None = None) -> str:
     return ""
 
 
+def display_reason(row: dict) -> str:
+    """Reason cell. Unfilled names stay in the note and are shown on the row."""
+    reason = row.get("reason") or "traded"
+    note = str(row.get("note") or "")
+    for marker in ("no open, not filled:", "open not observed:"):
+        if marker not in note:
+            continue
+        names = note.split(marker, 1)[1].strip()
+        cut = names.find(" mark not observed")
+        if cut >= 0:
+            names = names[:cut].strip()
+        extra = f"{marker} {names}".strip()
+        if extra in reason:
+            return reason
+        return f"{reason}; {extra}"
+    return reason
+
+
 def display_source(row: dict, manifest: dict | None = None) -> str:
     source = row.get("source") or "—"
     label = excel_seal_label(str(row.get("source") or ""), manifest)
@@ -1966,7 +2096,7 @@ def display_sandbox(row: dict, paper_open: Path | None = None) -> str:
 def _md_book_row(row: dict, *, manifest: dict | None = None,
                  paper_open: Path | None = None) -> str:
     return (
-        f"| {row['name']} | {row['date']} | {row['section']} | {row['reason'] or 'traded'} | "
+        f"| {row['name']} | {row['date']} | {row['section']} | {display_reason(row)} | "
         f"{row.get('sizing') or '—'} | "
         f"{row['picks']} | {_money(row['equity'])} | {_money(row['fees'])} | "
         f"{row['commit_et'] or '—'} | {display_source(row, manifest)} | "
@@ -1976,7 +2106,7 @@ def _md_book_row(row: dict, *, manifest: dict | None = None,
 
 def _html_book_row(row: dict, *, manifest: dict | None = None,
                    paper_open: Path | None = None) -> str:
-    reason = row["reason"] or "traded"
+    reason = display_reason(row)
     sha = (row["commit"] or "—")[:12]
     seal = excel_seal_label(str(row.get("source") or ""), manifest)
     if seal:
@@ -2029,6 +2159,8 @@ def render_md(rows: list[dict], schedule: Schedule, *,
         "",
         "The stop fills before the target when the same daily bar touches both. "
         "Cash, positions, and fees carry inside a section. The locked section starts again at $10,000.",
+        "",
+        MISSING_OPEN_RULE,
         "",
         "Excel sleeves buy the next 09:30 open. Their research cards buy the signal-day close. "
         "The two results are not comparable. Theme Radar shorts stay off the real Webull paper account.",
@@ -2140,6 +2272,7 @@ Earlier days stay in the built-after section.</p>
 Those numbers are not the same test. Theme Radar shorts are not sent to the Webull paper account.
 h1 sandbox fills read the paper-open journal and show "not observed" until a fill price is there.</p>
 <p class="note">{SIZING_RULE}</p>
+<p class="note">{MISSING_OPEN_RULE}</p>
 <table>
 <thead><tr><th>Book</th><th>Date</th><th>Section</th><th>Reason</th><th>Sizing</th><th>Picks</th><th>Equity</th><th>Commit ET</th><th>SHA</th><th>Sandbox</th></tr></thead>
 <tbody>
