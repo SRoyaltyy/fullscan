@@ -1,126 +1,16 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T05:41:03.020189-04:00",
+  "generated_at": "2026-10-06T05:41:10.806259-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 5,
+    "partial": 3,
     "fail": 0,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "CDNA",
-      "score": 0.8381210056240389
-    },
-    {
-      "ticker": "BLFS",
-      "score": 0.8310309000486988
-    },
-    {
-      "ticker": "VEEV",
-      "score": 0.4590738124188569
-    },
-    {
-      "ticker": "CORT",
-      "score": 0.4017243256292501
-    },
-    {
-      "ticker": "AVPT",
-      "score": 0.7611943559955066
-    },
-    {
-      "ticker": "DOCU",
-      "score": 0.3541151083013004
-    },
-    {
-      "ticker": "SONO",
-      "score": 0.7592886118303119
-    },
-    {
-      "ticker": "MQ",
-      "score": 0.7159347692547866
-    },
-    {
-      "ticker": "IMAX",
-      "score": 0.6311845815246115
-    },
-    {
-      "ticker": "CNK",
-      "score": 0.6072653397869845
-    },
-    {
-      "ticker": "QNST",
-      "score": 0.5388235022870291
-    },
-    {
-      "ticker": "MOMO",
-      "score": 0.4246110807225903
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "ROIV",
-      "score": -0.39593922722363517
-    },
-    {
-      "ticker": "IBRX",
-      "score": -0.385704773039642
-    },
-    {
-      "ticker": "ARE",
-      "score": -0.3612839297654018
-    },
-    {
-      "ticker": "INTC",
-      "score": -0.35794679043046645
-    },
-    {
-      "ticker": "SOC",
-      "score": -0.33383225755630164
-    },
-    {
-      "ticker": "GOGO",
-      "score": -0.31971805924350044
-    },
-    {
-      "ticker": "SBS",
-      "score": -0.3104245982552575
-    },
-    {
-      "ticker": "NFLX",
-      "score": -0.30755697680801763
-    },
-    {
-      "ticker": "TYRA",
-      "score": -0.30462823541818485
-    },
-    {
-      "ticker": "BIDU",
-      "score": -0.3021483751633109
-    },
-    {
-      "ticker": "BAK",
-      "score": -0.29749563986806876
-    },
-    {
-      "ticker": "IBM",
-      "score": -0.28746861024820614
-    },
-    {
-      "ticker": "AIRS",
-      "score": -0.28723237669691276
-    },
-    {
-      "ticker": "NRXP",
-      "score": -0.28621124610483434
-    },
-    {
-      "ticker": "NEOV",
-      "score": -0.27920462073178093
-    }
-  ],
+  "buy_1d": [],
+  "sell_1d": [],
   "flatten": {},
   "general": {
     "said": "UP  2.623",
@@ -151,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz",
-      "title": "Finviz universe export",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T05:36:02.048541-04:00",
-      "files": [
-        {
-          "path": "data/exports/finviz_2026-10-06.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11030866,
-          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11495180,
-          "preview": "11704 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11704 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -448,6 +313,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T05:41:09.934057-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-06_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2280924,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, PURR, HRTG, SIG"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, PURR, HRTG, SIG"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
