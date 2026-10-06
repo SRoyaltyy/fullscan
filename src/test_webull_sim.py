@@ -38,6 +38,15 @@ from src.webull_sim import (
     close_mark_equity,
     github_api,
     load_mark_notes,
+    load_close_equities,
+    append_close_equity_note,
+    assert_mark_notes_append_only,
+    require_close_mark,
+    day_pct_text,
+    CLOSE_EQUITY_KIND,
+    CLOSE_EQUITY_NOTE,
+    close_source_label,
+    MARK_NOTES_PATH,
     INTRADAY_MARK_NOTE,
     is_final_run,
     load_theme_plans,
@@ -1502,8 +1511,10 @@ def test_intraday_mark_note_is_outside_the_sealed_row() -> None:
         paper_open=Path("/no/such/paper"),
         close_marks=close_marks,
     )
-    shown = f"{INTRADAY_MARK_NOTE}; close {_money_note(marked)}"
+    shown = f"{INTRADAY_MARK_NOTE}; close equity {_money_note(marked)}"
     assert shown in page and shown in html
+    assert f"day {day_pct_text(h1['start_cash'], q(marked))} using the close" in page
+    assert f"day {day_pct_text(h1['start_cash'], q(marked))} using the close" in html
     assert _money_note(Decimal(h1["equity"])) in page
     assert canon(h1) == before
     assert saved["h1_webull_sim"] in (ROOT / "data/webull_sim/days.jsonl").read_text(encoding="utf-8")
@@ -1512,6 +1523,177 @@ def test_intraday_mark_note_is_outside_the_sealed_row() -> None:
 def _money_note(amount) -> str:
     from src.webull_sim import _money
     return _money(q(amount))
+
+
+SIX_CLOSE_BOOKS = (
+    "L1_long_green_tp8_lowvol_webull_sim",
+    "L2_long_green_tp3_lowvol_webull_sim",
+    "L3_long_green_hold2_midcap_webull_sim",
+    "L5_long_green_hold2_midhibeta_webull_sim",
+    "flatten_robust_webull_sim",
+    "h1_webull_sim",
+)
+
+
+def test_midday_1253_run_does_not_finalize_or_lock() -> None:
+    """12:53 ET is before the 16:00 close. No row is final and the lock is untouched.
+
+    Same hour as the 2026-10-06 excel_bot draft run. Open fills may show.
+    They are not sealed, and the past-day lock manifest gains no line.
+    """
+    now = datetime(2026, 10, 6, 12, 53, tzinfo=ET)
+    assert is_final_run(now, "2026-10-06") is False
+    assert final_row("2026-10-06", now, True, True) is False
+    assert final_row("2026-10-06", now, False, True) is False
+    sat = _session_plan("2026-10-06", [])
+    sat["tradable"] = False
+    sat["reason"] = "sat out, 0 picks"
+    books = {
+        "h1_webull_sim": [_session_plan("2026-10-06", [Pick("AAA", "long"), Pick("BBB", "short")])],
+        "flatten_robust_webull_sim": [sat],
+    }
+
+    def bars_for(day, tickers):
+        return {
+            ticker: {"open": 10, "high": 12, "low": 9, "close": 11}
+            for ticker in tickers
+        }
+
+    with tempfile.TemporaryDirectory() as tmp:
+        folder = Path(tmp)
+        path = folder / "days.jsonl"
+        manifest = folder / "manifest.jsonl"
+        rows = simulate(
+            books, now, schedule(),
+            bars={(ticker, "2026-10-06"): {"open": 10, "high": 12, "low": 9, "close": 11}
+                  for ticker in ("AAA", "BBB")},
+            books_path=path,
+        )
+        assert rows
+        assert all(row["final"] is False for row in rows)
+        assert all(row["date"] == "2026-10-06" for row in rows)
+        traded = next(row for row in rows if row["name"] == "h1_webull_sim")
+        assert any(fill.get("shares") for fill in traded["fills"])
+        before = manifest.read_bytes() if manifest.is_file() else b""
+        written = write_books(rows, seal=True, path=path, manifest=manifest)
+        after = manifest.read_bytes() if manifest.is_file() else b""
+        assert after == before
+        assert all(row["final"] is False for row in written)
+        sealed = [
+            row for row in past_day_lock.load_manifest(manifest)
+            if row.get("record") == "webull_sim" and row.get("kind") == "day"
+        ]
+        assert sealed == []
+    # The same books at 16:15 do become final. The clock is the guard.
+    later = run_book(
+        "h1_webull_sim", books["h1_webull_sim"], ["2026-10-06"], bars_for, schedule(),
+        datetime(2026, 10, 6, 16, 15, tzinfo=ET),
+    )[0]
+    assert later["final"] is True
+
+
+def test_close_equity_notes_are_add_only() -> None:
+    """The six close lines are appended. The intraday lines and sealed rows stay put."""
+    text = MARK_NOTES_PATH.read_text(encoding="utf-8")
+    lines = [line for line in text.splitlines() if line.strip()]
+    assert text.endswith("\n")
+    assert len(lines) == 12
+    for line, name in zip(lines[:6], SIX_CLOSE_BOOKS):
+        assert json.loads(line) == {
+            "date": "2026-10-06",
+            "name": name,
+            "note": INTRADAY_MARK_NOTE,
+        }
+    saved = {
+        row["name"]: line
+        for line in (ROOT / "data/webull_sim/days.jsonl").read_text(encoding="utf-8").splitlines()
+        if (row := json.loads(line)).get("date") == "2026-10-06" and row["name"] in SIX_CLOSE_BOOKS
+    }
+    assert set(saved) == set(SIX_CLOSE_BOOKS)
+    manifest = {
+        (str(row.get("name")), str(row.get("date"))): str(row.get("sha256"))
+        for row in past_day_lock.load_manifest()
+        if row.get("record") == "webull_sim" and row.get("kind") == "day"
+    }
+    closes = {}
+    for line, name in zip(lines[6:], SIX_CLOSE_BOOKS):
+        note = json.loads(line)
+        assert note["date"] == "2026-10-06"
+        assert note["name"] == name
+        assert note["kind"] == CLOSE_EQUITY_KIND
+        assert note["note"] == CLOSE_EQUITY_NOTE
+        assert note["close_source"] == close_source_label("2026-10-06")
+        sealed = json.loads(saved[name])
+        assert note["sealed_equity"] == sealed["equity"]
+        assert note["close_equity"] != sealed["equity"]
+        assert manifest[(name, "2026-10-06")] == past_day_lock.sha256_text(saved[name] + "\n")
+        closes[name] = note["close_equity"]
+    assert load_close_equities() == {(name, "2026-10-06"): closes[name] for name in SIX_CLOSE_BOOKS}
+    assert_mark_notes_append_only("\n".join(lines[:6]) + "\n", text)
+    edited = lines[:]
+    edited[0] = edited[0].replace("10:56", "10:57")
+    try:
+        assert_mark_notes_append_only("\n".join(lines[:6]) + "\n", "\n".join(edited) + "\n")
+    except ValueError as exc:
+        assert "add-only" in str(exc)
+    else:
+        raise AssertionError("an edited mark note was accepted")
+    dropped = "\n".join(lines[:5]) + "\n" + "\n".join(lines[6:]) + "\n"
+    try:
+        assert_mark_notes_append_only(text, dropped)
+    except ValueError as exc:
+        assert "add-only" in str(exc)
+    else:
+        raise AssertionError("a removed mark note was accepted")
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / "mark_notes.jsonl"
+        path.write_text("\n".join(lines[:6]) + "\n", encoding="utf-8")
+        sample = json.loads(saved["h1_webull_sim"])
+        marked = require_close_mark(sample, {
+            pos["ticker"]: {"open": 1, "close": 2} for pos in sample["positions"]
+        })
+        append_close_equity_note(sample, marked, path)
+        again = path.read_text(encoding="utf-8")
+        append_close_equity_note(sample, marked, path)
+        assert path.read_text(encoding="utf-8") == again
+        try:
+            append_close_equity_note(sample, marked + 1, path)
+        except ValueError as exc:
+            assert "add-only" in str(exc)
+        else:
+            raise AssertionError("a different close equity was appended")
+        bare = {"open": 1}
+        try:
+            require_close_mark(sample, {pos["ticker"]: bare for pos in sample["positions"]})
+        except ValueError as exc:
+            assert "Not guessing" in str(exc)
+        else:
+            raise AssertionError("a missing close was accepted")
+        short = {
+            "name": "short_webull_sim",
+            "date": "2026-10-06",
+            "cash": "10000",
+            "equity": "10000.000000",
+            "positions": [{
+                "ticker": "ZZZ", "side": "short", "shares": 10,
+                "entry_px": "5", "entry_date": "2026-10-06",
+            }],
+        }
+        assert require_close_mark(short, {"ZZZ": {"open": 5, "close": 4}}) == Decimal("10010")
+    page_rows = [json.loads(saved[name]) for name in SIX_CLOSE_BOOKS]
+    page = render_md(page_rows, schedule(), manifest={"lock_from": "2026-10-06", "entries": []},
+                     paper_open=Path("/no/such/paper"))
+    html = render_html(page_rows, schedule(), manifest={"lock_from": "2026-10-06", "entries": []},
+                       paper_open=Path("/no/such/paper"))
+    for name in SIX_CLOSE_BOOKS:
+        sealed = json.loads(saved[name])
+        label = (
+            f"{_money_note(Decimal(sealed['equity']))} sealed ({INTRADAY_MARK_NOTE}; "
+            f"close equity {_money_note(Decimal(closes[name]))}; "
+            f"day {day_pct_text(sealed['start_cash'], closes[name])} using the close)"
+        )
+        assert label in page and label in html
+        assert saved[name] in (ROOT / "data/webull_sim/days.jsonl").read_text(encoding="utf-8")
 
 
 def test_next_day_sizing_uses_the_open_not_the_sealed_equity() -> None:
@@ -1618,7 +1800,9 @@ if __name__ == "__main__":
     test_a_final_row_is_copied_when_the_close_moves()
     test_final_run_keeps_sealed_rows_and_locks_blfs_and_theme()
     test_market_hours_draft_is_not_final_until_the_close()
+    test_midday_1253_run_does_not_finalize_or_lock()
     test_intraday_mark_note_is_outside_the_sealed_row()
+    test_close_equity_notes_are_add_only()
     test_next_day_sizing_uses_the_open_not_the_sealed_equity()
     test_freeze_window()
     test_workflow_is_after_the_freeze_and_on_ubuntu()

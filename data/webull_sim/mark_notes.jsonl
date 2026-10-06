@@ -4,3 +4,9 @@
 {"date":"2026-10-06","name":"L5_long_green_hold2_midhibeta_webull_sim","note":"equity is a 10:56 ET intraday mark, not the close"}
 {"date":"2026-10-06","name":"flatten_robust_webull_sim","note":"equity is a 10:56 ET intraday mark, not the close"}
 {"date":"2026-10-06","name":"h1_webull_sim","note":"equity is a 10:56 ET intraday mark, not the close"}
+{"date":"2026-10-06","name":"L1_long_green_tp8_lowvol_webull_sim","kind":"close_equity","close_equity":"9982.489209","sealed_equity":"10010.820817","close_source":"Yahoo split-adjusted 2026-10-06 daily close","note":"true 16:00 ET close equity; sealed row unchanged"}
+{"date":"2026-10-06","name":"L2_long_green_tp3_lowvol_webull_sim","kind":"close_equity","close_equity":"9982.489209","sealed_equity":"10010.820817","close_source":"Yahoo split-adjusted 2026-10-06 daily close","note":"true 16:00 ET close equity; sealed row unchanged"}
+{"date":"2026-10-06","name":"L3_long_green_hold2_midcap_webull_sim","kind":"close_equity","close_equity":"9897.726547","sealed_equity":"9945.085501","close_source":"Yahoo split-adjusted 2026-10-06 daily close","note":"true 16:00 ET close equity; sealed row unchanged"}
+{"date":"2026-10-06","name":"L5_long_green_hold2_midhibeta_webull_sim","kind":"close_equity","close_equity":"9870.408430","sealed_equity":"9901.543399","close_source":"Yahoo split-adjusted 2026-10-06 daily close","note":"true 16:00 ET close equity; sealed row unchanged"}
+{"date":"2026-10-06","name":"flatten_robust_webull_sim","kind":"close_equity","close_equity":"9951.813909","sealed_equity":"9997.576002","close_source":"Yahoo split-adjusted 2026-10-06 daily close","note":"true 16:00 ET close equity; sealed row unchanged"}
+{"date":"2026-10-06","name":"h1_webull_sim","kind":"close_equity","close_equity":"9016.269167","sealed_equity":"9229.321271","close_source":"Yahoo split-adjusted 2026-10-06 daily close","note":"true 16:00 ET close equity; sealed row unchanged"}
