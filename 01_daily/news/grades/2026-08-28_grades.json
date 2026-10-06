@@ -2243,24 +2243,18 @@
         "tariff_semis_solar",
         "ai_chip_demand_spike"
       ],
-      "entry_date": "2026-08-28",
-      "entry_open": 96.33,
-      "window_through": "2026-09-18",
-      "trading_days_elapsed": 14,
-      "complete": true,
-      "latest_close": 117.18,
-      "current_return_pct": 21.64,
-      "horizon_returns_pct": {
-        "1d": -0.26,
-        "3d": 4.46,
-        "5d": 6.76,
-        "10d": 12.09,
-        "14d": 21.64
-      },
-      "mfe_pct": 25.36,
-      "mfe_day": "2026-09-18",
+      "entry_date": "2026-09-14",
+      "entry_open": 114.11,
+      "window_through": "2026-09-14",
+      "trading_days_elapsed": 0,
+      "complete": false,
+      "latest_close": 107.98,
+      "current_return_pct": -5.37,
+      "horizon_returns_pct": {},
+      "mfe_pct": 0.85,
+      "mfe_day": "2026-09-14",
       "ever_profitable": true,
-      "first_profitable_day": "2026-08-28"
+      "first_profitable_day": "2026-09-14"
     },
     {
       "signal_date": "2026-08-28",
@@ -2387,34 +2381,34 @@
       "win_rate": 98.8
     },
     "close_1d": {
-      "n": 84,
+      "n": 83,
       "wins": 57,
-      "win_rate": 67.9,
-      "avg": 2.1
+      "win_rate": 68.7,
+      "avg": 2.13
     },
     "close_3d": {
-      "n": 84,
-      "wins": 66,
-      "win_rate": 78.6,
-      "avg": 3.25
+      "n": 83,
+      "wins": 65,
+      "win_rate": 78.3,
+      "avg": 3.24
     },
     "close_5d": {
-      "n": 84,
-      "wins": 66,
-      "win_rate": 78.6,
-      "avg": 2.7
+      "n": 83,
+      "wins": 65,
+      "win_rate": 78.3,
+      "avg": 2.65
     },
     "close_10d": {
-      "n": 84,
-      "wins": 56,
-      "win_rate": 66.7,
-      "avg": 3.66
+      "n": 83,
+      "wins": 55,
+      "win_rate": 66.3,
+      "avg": 3.55
     },
     "close_14d": {
-      "n": 84,
-      "wins": 52,
-      "win_rate": 61.9,
-      "avg": 3.38
+      "n": 83,
+      "wins": 51,
+      "win_rate": 61.4,
+      "avg": 3.16
     },
     "side_buy": {
       "n": 37,
@@ -2422,13 +2416,13 @@
         "n": 36,
         "wins": 36,
         "win_rate": 100.0,
-        "avg": 5.73
+        "avg": 5.05
       },
       "close_5d": {
-        "n": 37,
-        "wins": 26,
-        "win_rate": 70.3,
-        "avg": 0.91
+        "n": 36,
+        "wins": 25,
+        "win_rate": 69.4,
+        "avg": 0.75
       }
     },
     "side_sell": {

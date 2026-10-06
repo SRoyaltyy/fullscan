@@ -9,7 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-10-06**. Promoted: 1. Retired: 10. Active lessons: 207. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-10-06**. Promoted: 0. Retired: 10. Active lessons: 207. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 

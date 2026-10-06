@@ -934,24 +934,18 @@
       "events": [
         "ai_chip_demand_spike"
       ],
-      "entry_date": "2026-09-01",
-      "entry_open": 95.03,
-      "window_through": "2026-09-22",
-      "trading_days_elapsed": 14,
-      "complete": true,
-      "latest_close": 118.44,
-      "current_return_pct": 24.63,
-      "horizon_returns_pct": {
-        "1d": 5.89,
-        "3d": 8.22,
-        "5d": 10.74,
-        "10d": 19.93,
-        "14d": 24.63
-      },
-      "mfe_pct": 27.08,
-      "mfe_day": "2026-09-18",
+      "entry_date": "2026-09-14",
+      "entry_open": 114.11,
+      "window_through": "2026-09-14",
+      "trading_days_elapsed": 0,
+      "complete": false,
+      "latest_close": 107.98,
+      "current_return_pct": -5.37,
+      "horizon_returns_pct": {},
+      "mfe_pct": 0.85,
+      "mfe_day": "2026-09-14",
       "ever_profitable": true,
-      "first_profitable_day": "2026-09-01"
+      "first_profitable_day": "2026-09-14"
     },
     {
       "signal_date": "2026-09-01",
@@ -1914,34 +1908,34 @@
       "win_rate": 100.0
     },
     "close_1d": {
-      "n": 68,
-      "wins": 34,
-      "win_rate": 50.0,
-      "avg": 0.32
+      "n": 67,
+      "wins": 33,
+      "win_rate": 49.3,
+      "avg": 0.23
     },
     "close_3d": {
-      "n": 68,
-      "wins": 39,
-      "win_rate": 57.4,
-      "avg": 0.69
+      "n": 67,
+      "wins": 38,
+      "win_rate": 56.7,
+      "avg": 0.58
     },
     "close_5d": {
-      "n": 68,
-      "wins": 38,
-      "win_rate": 55.9,
-      "avg": 0.77
+      "n": 67,
+      "wins": 37,
+      "win_rate": 55.2,
+      "avg": 0.63
     },
     "close_10d": {
-      "n": 68,
-      "wins": 18,
-      "win_rate": 26.5,
-      "avg": -2.56
+      "n": 67,
+      "wins": 17,
+      "win_rate": 25.4,
+      "avg": -2.9
     },
     "close_14d": {
-      "n": 68,
-      "wins": 31,
-      "win_rate": 45.6,
-      "avg": 0.25
+      "n": 67,
+      "wins": 30,
+      "win_rate": 44.8,
+      "avg": -0.11
     },
     "side_buy": {
       "n": 54,
@@ -1949,13 +1943,13 @@
         "n": 54,
         "wins": 54,
         "win_rate": 100.0,
-        "avg": 8.93
+        "avg": 8.44
       },
       "close_5d": {
-        "n": 54,
-        "wins": 35,
-        "win_rate": 64.8,
-        "avg": 1.36
+        "n": 53,
+        "wins": 34,
+        "win_rate": 64.2,
+        "avg": 1.18
       }
     },
     "side_sell": {
