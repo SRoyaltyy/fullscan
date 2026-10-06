@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T12:27:42.395043-04:00",
+  "generated_at": "2026-10-06T12:27:49.031340-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1113,115 +1113,6 @@
     }
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T05:41:36.311849-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 19778,
-          "preview": "2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 863,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-10-06.json",
-          "ok": true,
-          "reason": "",
-          "size": 92200,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-10-06_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 54666,
-          "preview": "2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 281150,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-10-06_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 281150,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 282746,
-          "preview": "2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 281150,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 54666,
-          "preview": "2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 281150,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 281150,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 282746,
-          "preview": "2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1788,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1788,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategi"
-    },
     {
       "key": "flatten",
       "title": "Flatten live card",
@@ -4568,6 +4459,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Technology={'score': 2.701, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T12:27:48.360288-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-06_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2270495,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, PURR, HRTG, FORM"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, PURR, HRTG, FORM"
     }
   ],
   "href": {
