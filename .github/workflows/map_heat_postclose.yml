@@ -87,6 +87,15 @@ jobs:
         if: env.skip != 'yes'
         with:
           clean: false
+      - name: Full tree after leftover sparse-checkout
+        if: env.skip != 'yes'
+        run: |
+          # Shared ECS work dir keeps a prior job's sparse-checkout.
+          git sparse-checkout disable || true
+          test -f requirements.txt || {
+            echo "ERROR: requirements.txt missing. A prior job left git sparse-checkout enabled on this self-hosted runner."
+            exit 1
+          }
       - name: Skip if last-closed baseline already on disk
         if: env.skip != 'yes' && github.event.inputs.force != 'true'
         run: |

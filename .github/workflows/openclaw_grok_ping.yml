@@ -41,6 +41,15 @@ jobs:
           clean: false
           fetch-depth: 0
 
+      - name: Full tree after leftover sparse-checkout
+        run: |
+          # Shared ECS work dir keeps a prior job's sparse-checkout.
+          git sparse-checkout disable || true
+          test -f requirements.txt || {
+            echo "ERROR: requirements.txt missing. A prior job left git sparse-checkout enabled on this self-hosted runner."
+            exit 1
+          }
+
       - name: Enable classroom if chat is dark (no bounce while Grok is busy)
         env:
           OPENCLAW_BACKEND_MODEL: ${{ env.OPENCLAW_NEWS_MODEL }}

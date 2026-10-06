@@ -64,6 +64,15 @@ jobs:
           clean: false
           fetch-depth: 0
 
+      - name: Full tree after leftover sparse-checkout
+        run: |
+          # Shared ECS work dir keeps a prior job's sparse-checkout.
+          git sparse-checkout disable || true
+          test -f requirements.txt || {
+            echo "ERROR: requirements.txt missing. A prior job left git sparse-checkout enabled on this self-hosted runner."
+            exit 1
+          }
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"

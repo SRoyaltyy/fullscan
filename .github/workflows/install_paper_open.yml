@@ -84,3 +84,6 @@ jobs:
               raise SystemExit('owner must remain actions; ECS --owner ecs must no-op via owner_enabled')
           print('owner=actions; ECS timer stays installed but skips automatic send')
           PY
+      - name: Leave a full checkout on the shared ECS workspace
+        if: always()
+        run: git sparse-checkout disable || true
