@@ -288,6 +288,7 @@ jobs:
           bash scripts/safe_git_push.sh \
             "auto: stock book leftover sweep" \
             data/universe data/exports data/join data/stock_book data/paper \
+            data/past_day_lock/ \
             data/sleeve_merge data/day_board \
             data/peers data/checklist data/ab_checklist data/catalyst \
             01_daily/ 03_scoreboard/ 00_grounding/mutable_policy.md \

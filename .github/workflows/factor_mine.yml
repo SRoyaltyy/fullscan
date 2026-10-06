@@ -284,6 +284,7 @@ jobs:
             data/factor_mine/open_source_log.csv \
             data/factor_mine/daily_returns.csv \
             data/factor_mine/prices/ \
+            data/past_day_lock/ \
             data/prices/ohlc.parquet \
             data/prices/actions.parquet \
             data/prices/meta.json \

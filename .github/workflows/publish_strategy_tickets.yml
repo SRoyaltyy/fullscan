@@ -137,6 +137,7 @@ jobs:
             dashboard/sleeve-merge/index.html \
             dashboard/strategy-board/index.html \
             dashboard/index.html \
+            data/past_day_lock/ \
             "data/stock_book/" \
             "01_daily/${DATE}_stock_book.md"
           chmod +x scripts/publish_dashboard.sh || true

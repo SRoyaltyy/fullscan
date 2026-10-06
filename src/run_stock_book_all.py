@@ -641,6 +641,11 @@ def run(
         [sys.executable, "-m", "src.paper_trade", "--date", date, "--top", "10"],
         check=False, timeout_s=900,
     )
+    print("[all] → past-day lock (sealed days must still match)")
+    _run(
+        [sys.executable, "-m", "src.past_day_lock", "--check"],
+        check=True, timeout_s=60,
+    )
 
     print("[all] → Sleeve combine (dual wallets, all days, buy/sell dashboard)")
     _run(
