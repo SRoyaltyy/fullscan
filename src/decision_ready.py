@@ -277,8 +277,8 @@ def main():
         notify_changed(args.notify)
         return 0
     if args.gate:
-        publish, fingerprint = gate_decision(args.date)
-        print(f"publish={'true' if publish else 'false'}")
+        should_publish, fingerprint = gate_decision(args.date)
+        print(f"publish={'true' if should_publish else 'false'}")
         print(f"fingerprint={fingerprint}")
         return 0
     if args.publish:
