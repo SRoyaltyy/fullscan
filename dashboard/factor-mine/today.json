@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T17:12:43.609400-04:00",
+  "generated_at": "2026-10-06T17:25:48.226739-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,26 +11,6 @@
   },
   "buy_1d": [
     {
-      "ticker": "HITI",
-      "score": 0.37402882569005014
-    },
-    {
-      "ticker": "CON",
-      "score": 0.5610138862717572
-    },
-    {
-      "ticker": "ASTH",
-      "score": 0.5745970062363628
-    },
-    {
-      "ticker": "NTAP",
-      "score": 0.4022275749079849
-    },
-    {
-      "ticker": "AMN",
-      "score": 0.5452500269234322
-    },
-    {
       "ticker": "BAND",
       "score": 0.733556143665846
     },
@@ -39,42 +19,42 @@
       "score": 0.7912685318443962
     },
     {
-      "ticker": "AVPT",
-      "score": 0.7896759076928359
-    },
-    {
-      "ticker": "PACS",
-      "score": 0.6795020342192937
-    },
-    {
-      "ticker": "IT",
-      "score": 0.4462494227309966
-    },
-    {
-      "ticker": "MD",
-      "score": 0.47517998091697095
-    },
-    {
-      "ticker": "TOST",
-      "score": 0.6000761057562191
-    },
-    {
       "ticker": "ACN",
       "score": 0.21897914731488438
+    },
+    {
+      "ticker": "NTSK",
+      "score": 0.5358067004048164
+    },
+    {
+      "ticker": "NET",
+      "score": 0.17448798248868358
+    },
+    {
+      "ticker": "PRTH",
+      "score": 0.5392257708490016
+    },
+    {
+      "ticker": "TLS",
+      "score": 0.562236405593484
+    },
+    {
+      "ticker": "CGNT",
+      "score": 0.5079999562537683
     }
   ],
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.26983440367105516
+      "score": -0.31983440367105515
     },
     {
       "ticker": "OKLO",
-      "score": -0.19955992831766184
+      "score": -0.24955992831766183
     },
     {
       "ticker": "FCEL",
-      "score": -0.12229668747032606
+      "score": -0.17229668747032606
     },
     {
       "ticker": "EOSE",
@@ -86,43 +66,15 @@
     },
     {
       "ticker": "TE",
-      "score": -0.23601177407144858
+      "score": -0.28601177407144857
     },
     {
       "ticker": "SKYX",
-      "score": -0.26163257675544543
+      "score": -0.3116325767554454
     },
     {
       "ticker": "NNDM",
       "score": 0.11386750018032428
-    },
-    {
-      "ticker": "MTZ",
-      "score": 0.01876157697890496
-    },
-    {
-      "ticker": "LUNR",
-      "score": -0.20115184376709028
-    },
-    {
-      "ticker": "METC",
-      "score": -0.20790990341448534
-    },
-    {
-      "ticker": "AMSC",
-      "score": -0.011822865336138508
-    },
-    {
-      "ticker": "PLUG",
-      "score": -0.12452931673238064
-    },
-    {
-      "ticker": "INDI",
-      "score": -0.13601827859264964
-    },
-    {
-      "ticker": "NRG",
-      "score": -0.085872217722939
     }
   ],
   "flatten": {
@@ -161,95 +113,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T06:59:24.526784-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-06_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2280924,
-          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, PURR, HRTG, SIG"
-        }
-      ],
-      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, PURR, HRTG, SIG"
-    },
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T06:59:29.722053-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-06_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T06:59:43.538772-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-10-06_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1459408,
-          "preview": "1d BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
-        },
-        {
-          "path": "data/stock_book/2026-10-06_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 2324,
-          "preview": "green 144 \u00b7 GLBE, SIG, SHOO, FIGS, SN, HNI, MHK, AEO, GTX, MGA"
-        },
-        {
-          "path": "data/stock_book/2026-10-06_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2493,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-10-06_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 13849,
-          "preview": "2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 13849,
-          "preview": "2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
-        },
-        {
-          "path": "01_daily/2026-10-06_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 78229,
-          "preview": "# Stock book \u2014 2026-10-06\n_Generated 2026-10-06T06:59:37.002620-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX \u00b7 green 144 \u00b7 GLBE, SIG, SHOO, FIGS, SN, HNI, MHK, AEO, GTX, MGA \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX \u00b7 2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX \u00b7 # Stock book \u2014 2026-10-06\n_Generated 2026-10-06T06:59:37.002620-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -3630,6 +3493,67 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-06\n**Generated:** 2026-10-06T16:24:55.601596-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks extended gains to record S&P 500 and Nasdaq closes as AI-driven winners, lower Treasury yields and deal activity offset a wider US trade deficit\n**Prior close:** SPX +0.60%  Nasdaq \u2014  Dow +0.60%\n**SPX:** +0.60%  **Nasdaq:** \u2014  **Dow:** +0.60%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** CEG, GOOGL, VST, TLN, OPCH, MCK, CIEN, MRVL, RPM, APOG\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-07\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T17:25:19.121288-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-06_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9479,
+          "preview": "weather sectors 11 \u00b7 Technology={'score': 2.701, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-06_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5257,
+          "preview": "# Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Technology={'score': 2.701, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T17:25:26.916485-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-06_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2260362,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, HRTG, PURR, FORM"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, HRTG, PURR, FORM"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T17:25:34.085457-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-06_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "source": "publish_live_boards"
