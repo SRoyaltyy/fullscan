@@ -1,13 +1,13 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T06:54:36.222146-04:00",
+  "generated_at": "2026-10-06T06:45:34.210556-04:00",
   "max_n": 8,
   "routing": "Grok \u2192 DeepSeek",
   "grok": true,
   "deepseek_fallback": true,
   "gemini": false,
   "n_targets": 8,
-  "n_ok": 3,
+  "n_ok": 2,
   "status": "OK",
   "targets": [
     {
@@ -56,90 +56,43 @@
       "ticker": "GOOG",
       "role": "earnings",
       "why": "earnings BMO",
-      "net_signal": "Bullish",
-      "conviction": 22,
-      "search_backend": "deepseek_fallback",
-      "catalyst_stack": "On 2026-07-22 Alphabet delivered a massive Q2 2026 beat (EPS $9.11 vs ~$2.88 consensus, revenue $119.80B) with Google Cloud up 82% YoY to $24.77B and a $514B backlog, but raised 2026 capex to $195-205B, pressuring shares. On 2026-09-02 a judge allowed Google to keep its advertising business despite the ad tech monopoly ruling, a major favorable legal catalyst, while the 2026-07-02 EU court upheld a \u20ac4.1B antitrust fine and 2026-07-23 added a $1B EU fine. Strategic AI momentum continued with the 2026-08-24 Verizon Gemini Enterprise partnership, the 2026-09-08 Accenture Gemini Enterprise business group, and the 2026-05-18 Blackstone $5B TPU cloud JV. Offsetting risks include the 2026-04-25 search monopoly remedies barring exclusive distribution deals, the 2026-10-01 \u20ac640M ad tech damages claim, and the 2026-08-31 social media addiction negligence finding.",
-      "key_assumption": "The favorable 2026-09-02 ad tech ruling (Google keeps its ad business) and the Q2 2026 earnings/cloud acceleration outweigh the cumulative antitrust fines and capex-driven margin pressure, so the net catalyst balance remains positive.",
-      "n_pos": 11,
-      "n_neg": 7,
+      "net_signal": "Bearish",
+      "conviction": 38,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 2026-09-02 Judge Brinkema refused a DOJ AdX divestiture and imposed behavioral remedies, stripping the worst-case breakup overhang from the ads cash engine. Q1/Q2 2026 beats ($109.9B then $119.8B, Cloud +82% in Q2) and capex lifts to $195\u2013205B, reinforced by the 2026-09-09 \u20ac13B Finland/nuclear build, SpaceX GPU offtake, and the Blackstone TPU-cloud JV, define an aggressive AI capacity cycle. That cycle was partly funded by the ~$90B June 4 equity raise (including Berkshire), which is dilutive, while the EU Court on 2026-07-02 locked in the \u20ac4.125B Android fine and Brussels still wants Android AI features and search data opened to rivals. Mid/late-September PT hikes to $400\u2013$485 support the growth tape, but FCF absorption from capex and leftover EU/US remedies remain the swing factors versus the Cloud/AI run-rate.",
+      "key_assumption": "AI/Cloud demand continues to absorb $195\u2013205B of 2026 capex plus GPU/TPU offtake at returns that offset the June equity dilution and leftover antitrust constraints, with U.S. ad-tech relief staying behavioral rather than structural.",
+      "n_pos": 8,
+      "n_neg": 11,
       "top_hits": [
         {
           "type": "positive",
           "taxonomy": "Favorable court ruling/patent grant",
           "event_date": "2026-09-02",
-          "headline": "Google keeps ad business despite monopoly ruling by judge.",
-          "weight": 10,
-          "confidence": 82
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Product launch/FDA approval/regulatory greenlight",
-          "event_date": "2026-05-19",
-          "headline": "At Google I/O 2026, Google released two new models, Gemini Omni and Gemini 3.5; Gemini 4 Argon followed on 2026-09-30.",
-          "weight": 8,
-          "confidence": 85
-        },
-        {
-          "type": "negative",
-          "taxonomy": "Policy reversal/new regulation/tax increase",
-          "event_date": "2026-10-06",
-          "headline": "Alphabet's Google appeals EU requests to open Android AI features to rivals and share search data; search monopoly remedies bar exclusive distribution contracts",
-          "weight": 8,
-          "confidence": 78
-        },
-        {
-          "type": "negative",
-          "taxonomy": "Policy reversal/new regulation/tax increase",
-          "event_date": "2026-07-23",
-          "headline": "Commission fines Google \u20ac890 million for breaches of the Digital Markets Act",
-          "weight": 8,
-          "confidence": 80
-        },
-        {
-          "type": "negative",
-          "taxonomy": "Product launch/FDA approval/regulatory greenlight",
-          "event_date": "2026-07-16",
-          "headline": "Google Gemini Launch Delayed as Tech Falls Short of Internal Goals",
-          "weight": 8,
-          "confidence": 80
-        },
-        {
-          "type": "negative",
-          "taxonomy": "Adverse litigation/antitrust",
-          "event_date": "2026-07-02",
-          "headline": "EU top court rejected Google's appeal against a record \u20ac4.1B antitrust fine; $1B EU fine, \u20ac640M ad tech damages claim, search remedies and negligence ruling als",
-          "weight": 7,
-          "confidence": 88
-        }
-      ],
-      "error": null
-    },
-    {
-      "ticker": "GOOGL",
-      "role": "earnings",
-      "why": "earnings BMO",
-      "net_signal": "Neutral",
-      "conviction": 11,
-      "search_backend": "deepseek_fallback",
-      "catalyst_stack": "On 2026-07-22, Alphabet posted better-than-expected Q2 CY2026 sales with Google Cloud growth accelerating, though shares slipped on a capex surge and earnings-quality questions surfaced by 2026-07-24. On 2026-09-09, Google announced a two-year \u20ac13 billion AI infrastructure investment in Finland, reinforcing its capacity expansion and cloud/AI demand narrative. On 2026-08-19, Google struck an AI chip deal with Marvell allowing up to $12.2 billion in share purchases, and on 2026-07-30 Oracle agreed to make Gemini models available to thousands of enterprise customers. Offsetting these positives, on 2026-07-02 Google lost its appeal against a record \u20ac4.1 billion EU antitrust fine and on 2026-07-01 was hit with a $2 billion antitrust judgment for skewing shopping searches, keeping regulatory risk elevated.",
-      "key_assumption": "The AI/cloud growth catalysts (Finland capex, Marvell chip deal, Oracle Gemini distribution, Q2 Cloud acceleration) outweigh the EU antitrust fine and shopping-search judgment, and no further binary antitrust remedy (e.g., Chrome divestiture or DMA structural penalty) materializes in the near term.",
-      "n_pos": 6,
-      "n_neg": 5,
-      "top_hits": [
-        {
-          "type": "negative",
-          "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
-          "event_date": "2026-07-02",
-          "headline": "Google loses fight against record \u20ac4.1 billion EU antitrust fine",
+          "headline": "the court\u2019s refusal to force a Google AdX breakup didn\u2019t land as a shock",
           "weight": 10,
           "confidence": 90
         },
         {
           "type": "negative",
           "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
-          "event_date": "2026-07-01",
-          "headline": "Google hit with $2-billion antitrust judgment for skewing shopping searches",
+          "event_date": "2026-07-02",
+          "headline": "dismissed the appeal brought by Google and Alphabet in the Android case and upheld the \u20ac4.125 billion fine",
+          "weight": 10,
+          "confidence": 94
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+          "event_date": "2026-07-23",
+          "headline": "Google has been fined \u20ac890m (\u00a3759m) by the EU for allegedly abusing its power by favouring its own apps",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+          "event_date": "2026-10-06",
+          "headline": "a class action lawsuit has been filed against Alphabet Inc.",
           "weight": 10,
           "confidence": 80
         },
@@ -153,120 +106,74 @@
         },
         {
           "type": "negative",
-          "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
-          "event_date": "2026-07-24",
-          "headline": "Alphabet (GOOGL) Stock Faces Earnings Quality Questions After 55% Net Margin Headline Beat",
-          "weight": 8,
-          "confidence": 75
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
-          "event_date": "2026-07-22",
-          "headline": "Alphabet (NASDAQ:GOOGL) Posts Better-Than-Expected Sales In Q2 CY2026",
-          "weight": 7,
-          "confidence": 85
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Capacity expansion announced (new factory, satellite constellation)",
-          "event_date": "2026-09-09",
-          "headline": "Google Deepens Commitment to Finland with Two-Year \u20ac13 Billion investment in AI Infrastructure",
-          "weight": 7,
-          "confidence": 85
+          "taxonomy": "Policy reversal/new regulation/tax increase",
+          "event_date": "2026-07-16",
+          "headline": "In July, the European Commission issued two sets of binding specification measures to Google under the Digital Markets Act (DMA)",
+          "weight": 9,
+          "confidence": 80
         }
       ],
       "error": null
     },
     {
-      "ticker": "TSLA",
+      "ticker": "GOOGL",
       "role": "earnings",
-      "why": "earnings AMC",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA"
-    },
-    {
-      "ticker": "NFLX",
-      "role": "earnings",
-      "why": "earnings AMC",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NFLX"
-    },
-    {
-      "ticker": "NE",
-      "role": "override_captain",
-      "why": "OVERRIDE card Oil & Gas Drilling",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE"
-    },
-    {
-      "ticker": "RIG",
-      "role": "override_captain",
-      "why": "OVERRIDE card Oil & Gas Drilling",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG"
-    },
-    {
-      "ticker": "SLB",
-      "role": "override_captain",
-      "why": "OVERRIDE card Oil & Gas Equipment & Services",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB"
-    },
-    {
-      "ticker": "BKR",
-      "role": "override_captain",
-      "why": "OVERRIDE card Oil & Gas Equipment & Services",
-      "net_signal": "Strong Bullish",
-      "conviction": 72,
-      "search_backend": "deepseek_fallback",
-      "catalyst_stack": "On 2026-04-23 and 2026-07-26, Baker Hughes delivered Q1 and Q2 beats with adjusted EBITDA of $1.16B and $1.23B, record IET orders of $7.1B, and $1.1B free cash flow. On 2026-07-10 and 2026-07-16, the company cleared conditional EU antitrust approval and completed the $13.6B Chart Industries acquisition, then raised 2026 revenue guidance to $28.5B-$30.3B on 2026-09-09. Contract momentum accelerated with bp North Sea stimulation on 2026-09-04, Venture Global LNG orders on 2026-09-13, and Venezuela gas infrastructure agreements on 2026-10-05. Offsetting this, on 2026-09-10 the stock fell 6.7% after management flagged near-term margin and FCF pressure from Chart, cutting 2026 FCF conversion to 40%-45%, while Jefferies trimmed its target to $77 on 2026-09-28.",
-      "key_assumption": "Chart Industries integration proceeds broadly on plan and the 2026 guidance raise is not derailed by margin/FCF pressure or further regulatory/geopolitical shocks.",
-      "n_pos": 7,
-      "n_neg": 2,
+      "why": "earnings BMO",
+      "net_signal": "Neutral",
+      "conviction": 8,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On July 22, 2026 Alphabet beat Q2 revenue at $119.8B as Cloud jumped 82% to $24.8B, after a Q1 beat on April 29, while 2026 capex was raised to $195\u2013$205B and a June 4 ~$80\u201385B equity raise (including Berkshire) funded the AI build. Product launches stacked through the year: Gemini Intelligence on Android (May 12), Gemini 3.5 Flash at I/O (May 20), and Gemini 4 Argon (September 30), with reports on October 6 that a $1B+ Constellation nuclear PPA is near. Legal outcomes split: on September 2 a U.S. judge rejected a DOJ ad-tech breakup, and on September 30 Chegg/Penske AI Overviews claims were dismissed, but the same day a New York judge left billions in publisher ad-tech damages in play. Offsetting that, the European Commission fined Alphabet \u20ac890M on July 23 for DMA breaches, while Tigress, Evercore, Rosenblatt, and Piper lifted targets into the $400\u2013$485 range in August\u2013September.",
+      "key_assumption": "Cloud/AI demand absorbs $195\u2013205B 2026 capex without a lasting FCF/multiple break, and U.S. search/ad-tech remedies stay behavioral rather than a breakup or forced data-sharing that hits Search defaults.",
+      "n_pos": 8,
+      "n_neg": 8,
       "top_hits": [
         {
           "type": "positive",
-          "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
-          "event_date": "2026-07-10",
-          "headline": "Baker Hughes wins conditional EU nod for $13.6 billion Chart deal",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-09-02",
+          "headline": "Judge Leonie Brinkema declined the Justice Department\u2019s request to make Google sell off parts of its ad tech business",
           "weight": 10,
-          "confidence": 88
+          "confidence": 90
         },
         {
-          "type": "positive",
-          "taxonomy": "Successful acquisition/synergy realization",
-          "event_date": "2026-07-16",
-          "headline": "Baker Hughes Company (NASDAQ: BKR) today announced the successful completion of its acquisition of Chart Industries, Inc.",
+          "type": "negative",
+          "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+          "event_date": "2026-09-30",
+          "headline": "On September 30, 2026, Judge P. Kevin Castel denied Google\u2019s motion for summary judgment on core claims",
+          "weight": 10,
+          "confidence": 78
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Policy reversal/new regulation/tax increase",
+          "event_date": "2026-07-23",
+          "headline": "The European Union has fined Google\u2019s parent company Alphabet \u20ac890 million (about $1 billion) for two separate violations",
           "weight": 9,
           "confidence": 92
         },
         {
           "type": "positive",
-          "taxonomy": "Contract win/expansion",
-          "event_date": "2026-09-13",
-          "headline": "Baker Hughes Wins Major Venture Global LNG Orders for Cloud Connector Pipeline and Plaquemines LNG Expansion",
-          "weight": 9,
-          "confidence": 85
+          "taxonomy": "Capacity expansion announced (new factory, satellite constellation)",
+          "event_date": "2026-07-22",
+          "headline": "Shares fell after 2026 capex was raised to $195\u2013$205 billion, following a prior lift to $180\u2013$190 billion.",
+          "weight": 8,
+          "confidence": 93
         },
         {
           "type": "positive",
           "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
-          "event_date": "2026-07-26",
-          "headline": "Baker Hughes delivered a strong Q2 with adjusted EBITDA of $1.23B (up 2% YoY, exceeding guidance), record IET orders of $7.1B (doubling YoY)",
-          "weight": 8,
-          "confidence": 90
-        },
-        {
-          "type": "negative",
-          "taxonomy": "Earnings guidance cut",
-          "event_date": "2026-09-10",
-          "headline": "Baker Hughes fell 6.7% on September 10, 2026, after CEO Lorenzo Simonelli cautioned that the Chart Industries acquisition will pressure near-term margins",
-          "weight": 8,
-          "confidence": 85
+          "event_date": "2026-07-22",
+          "headline": "Revenue: $119.80 billion vs $116.93 billion expected by LSEG",
+          "weight": 7,
+          "confidence": 93
         },
         {
           "type": "positive",
-          "taxonomy": "Earnings guidance raise",
-          "event_date": "2026-09-09",
-          "headline": "Baker Hughes hikes guidance for 2026 revenue, EBITDA to reflect Chart Industries deal",
+          "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+          "event_date": "2026-09-30",
+          "headline": "Today, we\u2019re announcing our new frontier model, Gemini 4 Argon, which is rolling out to a set of trusted cyber defenders",
           "weight": 7,
-          "confidence": 88
+          "confidence": 92
         }
       ],
       "error": null
