@@ -753,6 +753,9 @@ def plan_hot4_for_broker(date: str, snap: BrokerSnap,
     )
 
     cash = max(float(getattr(snap, "cash", 0) or 0), 0.0)
+    # Sandbox positions are not an input. A drifted account must not
+    # empty this list, add a catch-up order, or change share counts.
+    # Cash below the sealed buy notional still fails closed.
     try:
         orders = sealed_h1_orders(date)
         assert_buys_match_new_set(
