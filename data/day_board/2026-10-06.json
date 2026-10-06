@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T06:05:28.691572-04:00",
+  "generated_at": "2026-10-06T06:05:48.450693-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -828,7 +828,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=200",
-          "size": 1459334,
+          "size": 1459335,
           "said": "1d BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO \u00b7 0.51425",
           "bullets": []
         },
@@ -842,7 +842,7 @@
           "size": 77180,
           "said": "Stock book \u2014 2026-10-06",
           "bullets": [
-            "_Generated 2026-10-06T05:49:24.117496-04:00_",
+            "_Generated 2026-10-06T06:05:37.239314-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -854,7 +854,7 @@
           "status": "OK",
           "reason": "",
           "size": 2324,
-          "said": "144 green \u00b7 GLBE, SIG, SHOO, FIGS, SN, HNI, MHK, AEO, GTX, MGA",
+          "said": "144 green \u00b7 GLBE, SIG, SHOO, FIGS, SN, MHK, AEO, HNI, GTX, MGA",
           "bullets": []
         },
         {
@@ -906,7 +906,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=200",
-          "size": 1459334,
+          "size": 1459335,
           "said": "1d BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO \u00b7 0.51425",
           "bullets": []
         },
@@ -2916,6 +2916,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T06:05:47.241815-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-06_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1459335,
+          "preview": "1d BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2324,
+          "preview": "green 144 \u00b7 GLBE, SIG, SHOO, FIGS, SN, MHK, AEO, HNI, GTX, MGA"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2493,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13849,
+          "preview": "2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13849,
+          "preview": "2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX"
+        },
+        {
+          "path": "01_daily/2026-10-06_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 78310,
+          "preview": "# Stock book \u2014 2026-10-06\n_Generated 2026-10-06T06:05:37.239314-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX \u00b7 green 144 \u00b7 GLBE, SIG, SHOO, FIGS, SN, MHK, AEO, HNI, GTX, MGA \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX \u00b7 2026-10-06 BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO, SBS, NFLX \u00b7 # Stock book \u2014 2026-10-06\n_Generated 2026-10-06T06:05:37.239314-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
