@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · flatten looker: 0 red + yesterday up
 
-Cash book **-6.71%** ($9,329) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 72 · skips 119 · realized $-62.52.
+Cash book **-1.28%** ($9,872) · signal-only (no cash/fees) was +1.97%. Starts YES **12/30**. Fills 75 · skips 119 · realized $-62.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -216,6 +216,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SELL** | `OMER` | 56 | $18.87 | $2.18 | $-104.02 | $3,430.53 | ▼ -104.02 after sell → book $9,331.35; vs 09:30 mark -2.18 | exit unpriced hold on first bar after 6 sess | — |
 | 2026-10-01 09:30 ET | **SELL** | `PDFS` | 58 | $51.41 | $2.20 | $+62.92 | $6,410.11 | ▲ +62.92 after sell → book $9,329.15; vs 09:30 mark -2.20 | exit unpriced hold on first bar after 2 sess | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,410.11 | ▲ close $9,329.15 vs 09:30 $9,338.10 (session +0.00) | 16:00 close · cash $6,410.11 · equity $9,329.15 vs 09:30 $9,338.10 (-8.95; session marks +0.00) · 1 name(s) marked open→close (per-name table). SN×16 09:30 $182.44 → close $182.44 +0.00 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,410.11 | ▲ 09:30 equity $9,347.23 vs yday $9,329.15 (+18.08) | 09:30 open · cash $6,410.11 (unchanged overnight, no fees) · equity $9,347.23 vs prior close $9,329.15 (+18.08) · 1 name(s) re-marked at the open (per-name table). SN×16 yday $182.44 → 09:30 $183.57 +18.08 | — |
+| 2026-10-02 09:30 ET | **SELL** | `SN` | 16 | $183.57 | $2.07 | $-11.79 | $9,345.16 | ▼ -11.79 after sell → book $9,345.16; vs 09:30 mark -2.07 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-02 09:30 ET | **BUY** | `CDNA` | 70 | $66.33 | $2.20 | — | $4,699.86 | — | flatten looker: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+7.9; leftover $4672.58 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ETON` | 89 | $52.42 | $2.26 | — | $32.22 | — | flatten looker: 0 red + yesterday up; gate yday_up=True,zero_red=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-12.6; leftover $4672.58 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $32.22 | ▲ close $9,659.76 vs 09:30 $9,347.23 (session +319.06) | 16:00 close · cash $32.22 · equity $9,659.76 vs 09:30 $9,347.23 (+312.53; session marks +319.06) · 2 name(s) marked open→close (per-name table). CDNA×70 09:30 $66.33 → close $67.15 +57.40; ETON×89 09:30 $52.42 → close $55.36 +261.66 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $32.22 | ▲ 09:30 equity $9,685.87 vs yday $9,659.76 (+26.11) | 09:30 open · cash $32.22 (unchanged overnight, no fees) · equity $9,685.87 vs prior close $9,659.76 (+26.11) · 2 name(s) re-marked at the open (per-name table). CDNA×70 yday $67.15 → 09:30 $66.90 -17.50; ETON×89 yday $55.36 → 09:30 $55.85 +43.61 | — |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $32.22 | ▲ close $9,871.90 vs 09:30 $9,685.87 (session +186.03) | 16:00 close · cash $32.22 · equity $9,871.90 vs 09:30 $9,685.87 (+186.03; session marks +186.03) · 2 name(s) marked open→close (per-name table). CDNA×70 09:30 $66.90 → close $69.85 +206.50; ETON×89 09:30 $55.85 → close $55.62 -20.47 | — |
 
 ## Not taken
 

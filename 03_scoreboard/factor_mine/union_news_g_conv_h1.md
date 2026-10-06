@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-29.51%** ($7,049) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 127 · skips 51 · realized $+1398.96.
+Cash book **-29.67%** ($7,033) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 139 · skips 51 · realized $+1398.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -270,6 +270,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `NTAP` | 3 | $211.75 | $2.00 | — | $1,636.50 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; ret5=+7.0; leftover $754.37 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `TLSA` | 679 | $1.11 | $8.76 | — | $874.05 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+5.7; leftover $754.37 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $874.05 | ▼ close $7,048.66 vs 09:30 $7,567.35 (session -481.93) | 16:00 close · cash $874.05 · equity $7,048.66 vs 09:30 $7,567.35 (-518.69; session marks -481.93) · 3 name(s) marked open→close (per-name table). PRGS×130 09:30 $40.52 → close $36.58 -512.20; NTAP×3 09:30 $211.75 → close $215.05 +9.90; TLSA×679 09:30 $1.11 → close $1.14 +20.37 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $874.05 | ▲ 09:30 equity $7,105.38 vs yday $7,048.66 (+56.72) | 09:30 open · cash $874.05 (unchanged overnight, no fees) · equity $7,105.38 vs prior close $7,048.66 (+56.72) · 3 name(s) re-marked at the open (per-name table). NTAP×3 yday $215.05 → 09:30 $216.43 +4.14; PRGS×130 yday $36.58 → 09:30 $36.88 +39.00; TLSA×679 yday $1.14 → 09:30 $1.16 +13.58 | — |
+| 2026-10-02 09:30 ET | **SELL** | `NTAP` | 3 | $216.43 | $2.02 | $+10.02 | $1,521.32 | ▲ +10.02 after sell → book $7,103.36; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `PRGS` | 130 | $36.88 | $2.44 | $-478.02 | $6,313.28 | ▼ -478.02 after sell → book $7,100.92; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **SELL** | `TLSA` | 679 | $1.16 | $8.88 | $+16.31 | $7,092.04 | ▲ +16.31 after sell → book $7,092.04; vs 09:30 mark -8.88 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-02 09:30 ET | **BUY** | `SNPS` | 9 | $497.86 | $2.02 | — | $2,609.33 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+15.4; leftover $4964.43 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `WRBY` | 25 | $27.63 | $2.06 | — | $1,916.51 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list flatten; 🔵; ⚪; ret5=+4.6; leftover $709.20 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `ACN` | 3 | $211.02 | $2.00 | — | $1,281.45 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer,yday_mover; ret5=+19.7; leftover $709.20 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,281.45 | ▼ close $6,963.00 vs 09:30 $7,105.38 (session -122.96) | 16:00 close · cash $1,281.45 · equity $6,963.00 vs 09:30 $7,105.38 (-142.38; session marks -122.96) · 3 name(s) marked open→close (per-name table). SNPS×9 09:30 $497.86 → close $489.90 -71.60; WRBY×25 09:30 $27.63 → close $27.03 -15.00; ACN×3 09:30 $211.02 → close $198.90 -36.36 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,281.45 | ▲ 09:30 equity $7,012.10 vs yday $6,963.00 (+49.10) | 09:30 open · cash $1,281.45 (unchanged overnight, no fees) · equity $7,012.10 vs prior close $6,963.00 (+49.10) · 3 name(s) re-marked at the open (per-name table). ACN×3 yday $198.90 → 09:30 $196.30 -7.80; SNPS×9 yday $489.90 → 09:30 $496.25 +57.15; WRBY×25 yday $27.03 → 09:30 $27.02 -0.25 | — |
+| 2026-10-05 09:30 ET | **SELL** | `ACN` | 3 | $196.30 | $2.02 | $-48.18 | $1,868.33 | ▼ -48.18 after sell → book $7,010.08; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `SNPS` | 9 | $496.25 | $2.06 | $-18.52 | $6,332.52 | ▼ -18.52 after sell → book $7,008.02; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **SELL** | `WRBY` | 25 | $27.02 | $2.08 | $-19.40 | $7,005.93 | ▼ -19.40 after sell → book $7,005.93; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-05 09:30 ET | **BUY** | `COP` | 38 | $127.00 | $2.10 | — | $2,177.83 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list flatten; ret5=-0.4; leftover $4904.15 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `RRC` | 27 | $38.10 | $2.07 | — | $1,147.06 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list flatten; ret5=-1.0; leftover $1050.89 | join🟢 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **BUY** | `ELMT` | 47 | $22.04 | $2.13 | — | $109.05 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer; ret5=+12.7; leftover $1050.89 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $109.05 | ▲ close $7,032.97 vs 09:30 $7,012.10 (session +33.34) | 16:00 close · cash $109.05 · equity $7,032.97 vs 09:30 $7,012.10 (+20.87; session marks +33.34) · 3 name(s) marked open→close (per-name table). COP×38 09:30 $127.00 → close $128.40 +53.20; RRC×27 09:30 $38.10 → close $38.67 +15.39; ELMT×47 09:30 $22.04 → close $21.29 -35.25 | — |
 
 ## Not taken
 

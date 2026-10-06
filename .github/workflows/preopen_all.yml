@@ -488,7 +488,7 @@ jobs:
               01_daily/*_preopen_status.md
               01_daily/*_grok_review.json 01_daily/*_grok_review.md
               01_daily/*_stock_book.md
-              data/catalyst/ data/stock_book/ data/paper/ data/join/
+              data/catalyst/ data/stock_book/ data/paper/ data/past_day_lock/ data/join/
               data/universe/ data/ab_checklist/ data/peers/ data/checklist/
               03_scoreboard/ 02_lessons/)
           fi

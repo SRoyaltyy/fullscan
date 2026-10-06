@@ -1,0 +1,57 @@
+name: Install paper backstop timer
+
+# Idempotent install of fullscan-paper-backstop.timer on the ECS box
+# (self-hosted runner ecs-openclaw, /home/gha). Does not upgrade or
+# restart the chat gateway. Does not start the paper send.
+# Verify in this job's log: `systemctl list-timers` for
+# fullscan-paper-backstop.timer (OnCalendar 09:12 America/New_York).
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/install_paper_backstop.yml
+      - scripts/install_paper_backstop.sh
+      - scripts/ecs_paper_backstop.sh
+      - scripts/systemd/fullscan-paper-backstop.service
+      - scripts/systemd/fullscan-paper-backstop.timer
+      - src/paper_backstop.py
+  pull_request:
+    paths:
+      - .github/workflows/install_paper_backstop.yml
+      - scripts/install_paper_backstop.sh
+      - scripts/ecs_paper_backstop.sh
+      - scripts/systemd/fullscan-paper-backstop.service
+      - scripts/systemd/fullscan-paper-backstop.timer
+      - src/paper_backstop.py
+
+permissions:
+  contents: read
+
+concurrency:
+  group: install-paper-backstop
+  cancel-in-progress: false
+
+jobs:
+  install:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            scripts
+            src/paper_backstop.py
+      - name: Enable 09:12 paper backstop timer if missing
+        env:
+          PAPER_BACKSTOP_STRICT: "1"
+          FULLSCAN_ROOT: /home/gha/fullscan
+        run: |
+          set -euo pipefail
+          chmod +x scripts/install_paper_backstop.sh scripts/ecs_paper_backstop.sh
+          bash scripts/install_paper_backstop.sh
+          echo "---- systemctl list-timers (verify) ----"
+          systemctl list-timers --all fullscan-paper-backstop.timer --no-pager

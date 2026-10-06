@@ -219,6 +219,9 @@ def check_preopen_all(date: str) -> bool:
         for p in sector_dir.glob("*_predict.md"):
             if output_qc.qc_sector_predict(p).ok:
                 n_ok += 1
+    if not output_qc.sector_predicts_required(date):
+        return _log(True, "preopen_all", date,
+                    f"sector predicts optional; on_disk={n_ok}/11")
     ok = n_ok >= 8
     return _log(ok, "preopen_all", date, f"sector_predict_ok={n_ok}/11")
 

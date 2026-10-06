@@ -54,22 +54,25 @@ jobs:
       - name: Verify broker connection before switching automatic ownership
         run: |
           sudo -n -u gha /home/gha/fullscan-paper-open/.venv/bin/python - <<'PY'
-          import json, os, sys
+          import sys
           sys.path.insert(0, '/home/gha/fullscan-paper-open')
-          with open('/home/gha/.fullscan-paper.env') as f:
-              for line in f:
-                  key, value = line.rstrip().split('=', 1)
-                  os.environ[key] = json.loads(value)
-          from src.webull_exec import PaperAPI
+          from src.webull_exec import PaperAPI, discover_and_persist_account_id
+          # Keys alone are enough. An empty WEBULL_ACCOUNT_ID secret is
+          # discovered from the sandbox account list and written into the
+          # env file. The id and the secrets are not printed.
+          try:
+              status = discover_and_persist_account_id('/home/gha/.fullscan-paper.env')
+          except RuntimeError as exc:
+              raise SystemExit(str(exc))
           api = PaperAPI('paper')
           if not api.connect():
-              raise SystemExit(api.err)
+              raise SystemExit(api.err or 'not connected')
           snap = api.snapshot()
           if not snap.connected:
-              raise SystemExit(snap.error)
+              raise SystemExit(snap.error or 'not connected')
           if snap.cash <= 0:
               raise SystemExit('Sandbox has no spendable cash; fund/reset the paper account before activation')
-          print('Sandbox preflight passed; spendable cash is positive. No orders submitted.')
+          print('Sandbox preflight passed; account id ' + status + '; spendable cash is positive. No orders submitted.')
           PY
       - name: Keep Actions as automatic owner (ECS timer must skip)
         run: |

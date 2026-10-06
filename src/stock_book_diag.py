@@ -530,9 +530,14 @@ def workflow_specs(date: str, as_of: bool = True) -> list[dict]:
     cat = f"01_daily/catalyst/{date}"
     ab = f"data/ab_checklist/{date}"
     book = f"data/stock_book/{date}"
+    # Source of truth for the day board. Optional from 2026-10-07;
+    # earlier sessions stay required so 2026-10-06 stays PARTIAL.
+    sector_role = (
+        "required" if output_qc.sector_predicts_required(date) else "optional"
+    )
     sectors = [
         _file(f"sector_{slug}", f"Sector predict — {slug}",
-              f"{sec}/{slug}_predict.md", "required", "sector_predict")
+              f"{sec}/{slug}_predict.md", sector_role, "sector_predict")
         for slug in SECTOR_SLUGS
     ]
     specs = [
@@ -776,6 +781,12 @@ def _check_file(spec: dict, date: str) -> FileCheck:
                 source=spec.get("source") or "",
             )
     status, reason, size = inspect_kind(spec["kind"], path, date)
+    # Absent sector essays stay on the board as an optional line. They
+    # must not use MISSING, which the day board counts as a hole.
+    if (role == "optional" and spec.get("kind") == "sector_predict"
+            and status == "MISSING"):
+        status = "SKIP"
+        reason = "optional — sector predict not required"
     return FileCheck(
         key=spec["key"],
         name=spec["name"],

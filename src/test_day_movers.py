@@ -182,15 +182,23 @@ def test_open_camera_setup_badge_roundtrip():
 
 
 def test_page_and_nav_sit_next_to_investigator():
-    page = (ROOT / "dashboard" / "day-movers" / "index.html").read_text(
-        encoding="utf-8")
+    page_path = ROOT / "dashboard" / "day-movers" / "index.html"
+    page = page_path.read_text(encoding="utf-8")
     assert "Day movers — gainers / losers" in page
     assert "Intraday" in page and "Interday" in page
     assert "Gainers" in page and "Losers" in page
+    # Leak warning has to sit in the HTML itself. The banner script
+    # still repeats it, but the page file dropped the sentence when
+    # the inline script moved to index-core.js.
     assert "same-session close — not knowable at 09:30" in page
     assert "click a name" in page.lower()
     assert "../hard-red-exceptions/" in page
-    assert "days.json" in page
+    # days.json is fetched by the script this page loads.
+    bundle = page
+    if "index-core.js" in page:
+        bundle += "\n" + (page_path.parent / "index-core.js").read_text(
+            encoding="utf-8")
+    assert "days.json" in bundle
     hre = (ROOT / "dashboard" / "hard-red-exceptions" / "index.html").read_text(
         encoding="utf-8")
     assert "../day-movers/" in hre

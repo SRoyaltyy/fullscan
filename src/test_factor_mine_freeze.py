@@ -60,12 +60,18 @@ def test_snapshot_is_write_once_and_restate_logs_previous_hash() -> None:
             changed = dict(snap, rows=[{"ticker": "BBB", "open": 11.0,
                                         "ohlc_hot_score": 2.0,
                                         "heat_vintage": "2026-09-25"}])
-            second = fmf.write_snapshot("2026-09-25", changed, restate=True)
-            assert first != second
+            with mock.patch.object(fmf, "_today_et", return_value="2026-10-06"):
+                try:
+                    fmf.write_snapshot("2026-09-25", changed, restate=True)
+                except SystemExit as exc:
+                    assert "restate refuses" in str(exc)
+                    assert "2026-09-25" in str(exc)
+                else:
+                    raise AssertionError("past-day restate wrote a snapshot")
+            assert fmf.sha256_bytes(fmf.snapshot_path("2026-09-25").read_bytes()) == first
             man = fmf.load_manifest()
-            assert man["snapshots"]["2026-09-25"]["sha256"] == second
-            assert man["restatements"][-1]["prev_sha256"] == first
-            assert man["restatements"][-1]["date"] == "2026-09-25"
+            assert man["snapshots"]["2026-09-25"]["sha256"] == first
+            assert man.get("restatements") == []
             assert man["first_frozen"] == "2026-09-25"
         finally:
             _restore(old)
@@ -123,9 +129,72 @@ def test_guard_fails_when_an_earlier_hash_changes() -> None:
             raw = fmf.encode_frozen("ledgers", restated)
             fmf.ledger_path("2026-09-25").write_bytes(raw)
             broken["ledgers"]["2026-09-25"] = {"sha256": fmf.sha256_bytes(raw)}
-            fmf.guard_manifest(old, broken, restate=["2026-09-25"])
+            with mock.patch.object(fmf, "_today_et", return_value="2026-10-06"):
+                try:
+                    fmf.guard_manifest(old, broken, restate=["2026-09-25"])
+                except SystemExit as exc:
+                    assert "restate refuses" in str(exc)
+                else:
+                    raise AssertionError("guard allowed a past-day restate")
+            with mock.patch.object(fmf, "_today_et", return_value="2026-09-25"):
+                fmf.guard_manifest(old, broken, restate=["2026-09-25"])
         finally:
             _restore(saved)
+
+
+def test_same_day_restate_logs_previous_hash() -> None:
+    with tempfile.TemporaryDirectory() as d:
+        old = _use(Path(d))
+        try:
+            day = "2099-01-02"
+            snap = {
+                "date": day,
+                "rows": [{"ticker": "AAA", "open": 10.0, "ohlc_hot_score": 1.0,
+                          "heat_vintage": "2099-01-01"}],
+            }
+            with mock.patch.object(fmf, "_today_et", return_value=day):
+                first = fmf.write_snapshot(day, snap, restate=False)
+                changed = dict(snap, rows=[{"ticker": "BBB", "open": 11.0,
+                                            "ohlc_hot_score": 2.0,
+                                            "heat_vintage": day}])
+                second = fmf.write_snapshot(day, changed, restate=True)
+            assert first != second
+            man = fmf.load_manifest()
+            assert man["restatements"][-1]["prev_sha256"] == first
+            assert man["restatements"][-1]["date"] == day
+            assert man["snapshots"][day]["sha256"] == second
+        finally:
+            _restore(old)
+
+
+def test_past_day_restate_fails_closed() -> None:
+    with mock.patch.object(fmf, "_today_et", return_value="2026-10-06"):
+        os.environ["FM_RESTATE"] = "2026-09-25"
+        try:
+            with mock.patch.object(fmf, "committed_manifest", return_value={}), \
+                    mock.patch.object(fmf, "load_manifest", return_value={"snapshots": {}}), \
+                    mock.patch.object(fmf, "guard_recipe_catalog"):
+                try:
+                    fmf.assert_history_unchanged()
+                except SystemExit as exc:
+                    assert "restate refuses past 2026-09-25" in str(exc)
+                else:
+                    raise AssertionError("FM_RESTATE past day was allowed")
+        finally:
+            os.environ.pop("FM_RESTATE", None)
+        with tempfile.TemporaryDirectory() as d:
+            old = _use(Path(d))
+            try:
+                try:
+                    fmf.write_ledger(
+                        "2026-09-25", {"date": "2026-09-25"}, restate=True)
+                except SystemExit as exc:
+                    assert "restate refuses" in str(exc)
+                else:
+                    raise AssertionError("ledger restate of a past day wrote")
+                assert not fmf.ledger_path("2026-09-25").is_file()
+            finally:
+                _restore(old)
 
 
 def test_missing_bars_hold_the_day_and_do_not_write_hot_zero() -> None:
@@ -2373,6 +2442,8 @@ if __name__ == "__main__":
         os.execv(sys.executable, [sys.executable, "-m", "src.test_factor_mine_freeze"])
     test_snapshot_is_write_once_and_restate_logs_previous_hash()
     test_guard_fails_when_an_earlier_hash_changes()
+    test_same_day_restate_logs_previous_hash()
+    test_past_day_restate_fails_closed()
     test_missing_bars_hold_the_day_and_do_not_write_hot_zero()
     test_finviz_stooq_disagreement_does_not_hold_the_day()
     test_missing_yahoo_bars_drop_and_the_day_locks()

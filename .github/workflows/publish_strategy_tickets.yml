@@ -1,5 +1,14 @@
 name: Publish strategy tickets
 
+# workflow_run (successful main runs only) plus push plus dispatch.
+# The gate skips a run whose input hash already matches the landed
+# ticket, and that skip does not cancel an in-flight publish.
+# A newer hash still cancels the older publish job: latest inputs win.
+# This workflow never places a Webull order. A ticket republish and a
+# stock-book rebuild (workflow_run from Stock Book ALL or Pre-Open ALL)
+# only write tickets. The sealed h1 paper send is webull_paper.yml before
+# 09:30 ET, with the ECS backstop as the other sender. A missed send
+# stays missed.
 on:
   workflow_dispatch:
     inputs:
@@ -10,24 +19,63 @@ on:
   push:
     branches: [main]
     paths: ['01_daily/**', 'data/join/**', 'data/peers/**', 'data/ab_checklist/**', 'data/factor_mine/panel.json']
-  schedule:
-    - cron: '3,18,33,48 12-20 * * 1-5'
   workflow_run:
     workflows:
       - "Stock Book ALL (one-shot)"
       - "Pre-Open ALL (predictive one-shot)"
     types: [completed]
+    branches: [main]
 
 permissions:
   contents: write
   actions: write
 
-concurrency:
-  group: publish-strategy-tickets
-  cancel-in-progress: false
-
+# Concurrency sits on the publish job, not the whole workflow. A duplicate
+# trigger whose input hash already matches the landed ticket never joins
+# the group, so it does not cancel the run that is writing that ticket.
+# A new hash still cancels the older publish: latest inputs win.
 jobs:
+  gate:
+    if: >
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      publish: ${{ steps.fingerprint.outputs.publish }}
+      fingerprint: ${{ steps.fingerprint.outputs.fingerprint }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow openpyxl requests
+      - name: Skip when the landed ticket already has this input hash
+        id: fingerprint
+        env:
+          RUN_DATE: ${{ github.event.inputs.run_date }}
+          FULLSCAN_REQUIRE_MAIN: "1"
+        run: |
+          set -euo pipefail
+          DATE="${RUN_DATE:-$(TZ=America/New_York date +%F)}"
+          python -m src.decision_ready --date "$DATE" --gate | tee /tmp/gate.txt
+          publish=$(awk -F= '/^publish=/{print $2}' /tmp/gate.txt | tail -1)
+          fp=$(awk -F= '/^fingerprint=/{print $2}' /tmp/gate.txt | tail -1)
+          echo "publish=${publish:-false}" >> "$GITHUB_OUTPUT"
+          echo "fingerprint=${fp}" >> "$GITHUB_OUTPUT"
+          echo "gate publish=${publish:-false} fingerprint=${fp}"
+
   tickets:
+    needs: gate
+    if: needs.gate.outputs.publish == 'true'
+    concurrency:
+      group: publish-strategy-tickets
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -85,21 +133,6 @@ jobs:
           PY
           test -s data/day_board/today_strategies.json
           test -s dashboard/factor-mine/strategy_tickets.json
-      - name: Submit paper hot4 standing batch
-        if: steps.readiness.outputs.ready == 'true'
-        continue-on-error: true
-        env:
-          WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
-          WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
-          WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
-        run: |
-          set -euo pipefail
-          if [ -z "${WEBULL_ACCOUNT_ID:-}" ]; then
-            echo "WEBULL_ACCOUNT_ID unset; paper submit deferred to Webull paper workflow"
-            exit 0
-          fi
-          pip install webull-openapi-python-sdk
-          python -m src.paper_open --submit --ready --owner actions
       - name: Push tickets
         if: always() && steps.readiness.outputs.ready == 'true'
         env:
@@ -122,13 +155,12 @@ jobs:
             dashboard/factor-mine/today_strategies.json \
             dashboard/today_strategies.json \
             dashboard/factor-mine/today.json \
-            data/paper_open/ \
-            data/sleeve_merge/webull_last.json \
             data/day_board/hold_live_px.json \
             dashboard/factor-mine/hold_live_px.json \
             dashboard/sleeve-merge/index.html \
             dashboard/strategy-board/index.html \
             dashboard/index.html \
+            data/past_day_lock/ \
             "data/stock_book/" \
             "01_daily/${DATE}_stock_book.md"
           chmod +x scripts/publish_dashboard.sh || true

@@ -8,6 +8,8 @@ Live headline: **2.57%** (flatten_robust).
 
 Integrity: **fill** = one Futubull cash account. **stitch** = daily mark overlay (not one fill clock). **follow_book** = $10k .io paper sleeves. **confirm** = Excel, not capital. **leak** = known same-day recycle.
 
+Honest scorecard (live-locked days kept apart from days built after the fact): [HONEST_SCORECARD.md](HONEST_SCORECARD.md).
+
 | Live | Book | Family | PR | Integrity | Return | Max DD | Trades | Win | Cap |
 |---|---|---|---|---|---:|---:|---:|---:|---:|
 | YES | flatten_robust | sleeve merge | — | fill | +2.57% | 12.62% | 80 | 41.2% | 100000 |
@@ -399,5 +401,7 @@ Integrity: **fill** = one Futubull cash account. **stitch** = daily mark overlay
 |  | .io 3d_top | .io paper | — | follow_book | -11.00% | — | — | — | 10000 |
 
 Dashboard: `dashboard/strategy-board/index.html`.
+
+Webull simulated books (separate from every live record): [WEBULL_SIM.md](WEBULL_SIM.md) and `dashboard/webull-sim/index.html`.
 
 Research overlay (not a wire): open-bell MARKET / LIMIT fills vs ideal 09:30 open live on [OPEN_BELL_SLIP.md](OPEN_BELL_SLIP.md). Does not change live `flatten_robust`, hard-red sit, or Webull paper.

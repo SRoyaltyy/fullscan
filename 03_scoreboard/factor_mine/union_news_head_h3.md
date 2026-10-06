@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-23.30%** ($7,670) · signal-only (no cash/fees) was +184.18%. Starts YES **1/30**. Fills 161 · skips 192 · realized $-2398.84.
+Cash book **-23.52%** ($7,648) · signal-only (no cash/fees) was +184.18%. Starts YES **1/30**. Fills 164 · skips 192 · realized $-2398.84.
 
 ## How this sleeve decides (like you are 10)
 
@@ -304,6 +304,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **BUY** | `NTAP` | 12 | $211.75 | $2.03 | — | $2,708.39 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+7.0; leftover $2615.63 | join🟢 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-01 09:30 ET | **BUY** | `TLSA` | 2356 | $1.11 | $30.39 | — | $62.84 | — | prior-export headline🟢 only; gate headline=good; rank cond; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+5.7; leftover $2615.63 | join🟢 sector🔴 gen🔴 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $62.84 | ▼ close $7,670.40 vs 09:30 $7,868.40 (session -141.88) | 16:00 close · cash $62.84 · equity $7,670.40 vs 09:30 $7,868.40 (-198.00; session marks -141.88) · 3 name(s) marked open→close (per-name table). PRGS×64 09:30 $40.52 → close $36.58 -252.16; NTAP×12 09:30 $211.75 → close $215.05 +39.60; TLSA×2356 09:30 $1.11 → close $1.14 +70.68 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $62.84 | ▲ 09:30 equity $7,753.28 vs yday $7,670.40 (+82.88) | 09:30 open · cash $62.84 (unchanged overnight, no fees) · equity $7,753.28 vs prior close $7,670.40 (+82.88) · 3 name(s) re-marked at the open (per-name table). NTAP×12 yday $215.05 → 09:30 $216.43 +16.56; PRGS×64 yday $36.58 → 09:30 $36.88 +19.20; TLSA×2356 yday $1.14 → 09:30 $1.16 +47.12 | — |
+| 2026-10-02 09:30 ET | **BUY** | `CMPX` | 9 | $0.94 | $0.11 | — | $54.27 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_mover; 🔵; ret5=-20.6; leftover $8.98 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-02 09:30 ET | **BUY** | `GLND` | 2 | $4.25 | $0.09 | — | $45.68 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_mover,ohlc_hot; ret5=-17.8; leftover $8.98 | join🔴 sector🔴 gen🟢 news🟢 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $45.68 | ▲ close $7,776.41 vs 09:30 $7,753.28 (session +23.33) | 16:00 close · cash $45.68 · equity $7,776.41 vs 09:30 $7,753.28 (+23.13; session marks +23.33) · 5 name(s) marked open→close (per-name table). NTAP×12 09:30 $216.43 → close $226.27 +118.08; PRGS×64 09:30 $36.88 → close $36.90 +1.28; TLSA×2356 09:30 $1.16 → close $1.12 -94.24; CMPX×9 09:30 $0.94 → close $0.86 -0.75; GLND×2 09:30 $4.25 → close $3.73 -1.04 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $45.68 | ▼ 09:30 equity $7,773.99 vs yday $7,776.41 (-2.42) | 09:30 open · cash $45.68 (unchanged overnight, no fees) · equity $7,773.99 vs prior close $7,776.41 (-2.42) · 5 name(s) re-marked at the open (per-name table). CMPX×9 yday $0.86 → 09:30 $0.90 +0.39; GLND×2 yday $3.73 → 09:30 $3.92 +0.39; NTAP×12 yday $226.27 → 09:30 $225.47 -9.60; PRGS×64 yday $36.90 → 09:30 $37.00 +6.40; TLSA×2356 yday $1.12 → 09:30 $1.12 +0.00 | — |
+| 2026-10-05 09:30 ET | **BUY** | `ELMT` | 2 | $22.04 | $0.45 | — | $1.15 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer; ret5=+12.7; leftover $45.68 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.15 | ▼ close $7,647.72 vs 09:30 $7,773.99 (session -125.82) | 16:00 close · cash $1.15 · equity $7,647.72 vs 09:30 $7,773.99 (-126.27; session marks -125.82) · 6 name(s) marked open→close (per-name table). CMPX×9 09:30 $0.90 → close $0.96 +0.55; GLND×2 09:30 $3.92 → close $3.71 -0.43; NTAP×12 09:30 $225.47 → close $223.77 -20.40; PRGS×64 09:30 $37.00 → close $37.22 +13.76; TLSA×2356 09:30 $1.12 → close $1.07 -117.80; ELMT×2 09:30 $22.04 → close $21.29 -1.50 | — |
 
 ## Not taken
 

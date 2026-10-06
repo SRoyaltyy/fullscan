@@ -1,37 +1,39 @@
-"""Push today's union_hot_n4_h1 (hot4) tickets into Webull *paper*.
+"""Push today's sealed h1 plan into Webull *paper*.
 
-Default source is ``hot4``: long-only today's ``union_hot_n4_h1`` buy
-list and continuous-book list-drop sells from
-``dashboard/factor-mine/today_strategies.json`` (same panel the
-factor-mine cash book uses). Submit refuses when buys or sells
-diverge from that Factor Mine recipe. Sell tickets are sized from
-paper lots the account holds. Flatten live-card tickets stay
-available via ``--source flatten``. Combo is a manual escape only.
+Default source is the sealed IRONCLAD h1 forward plan for that session
+(``research/hot_n4_clean_v4/forward_h1/h1_log.jsonl``, ``kind=plan``).
+The strategy name stays ``union_hot_n4_h1``. Buys are the sealed
+new-buy set (picks the open fill would buy — names not already held),
+at that set's share counts. Sells are ``planned_sells`` at the plan's
+share counts. A carry name sized as a buy fails closed. Factor Mine
+``pick_day`` / ``today_strategies.json`` is not a fallback: a missing
+plan, a carry-name buy, or paper cash that cannot fund the sealed buy
+notionals fails closed. Flatten live-card tickets stay available via
+``--source flatten``. Combo is a manual escape only.
 
 Official OpenAPI sandbox is the in-app Paper Trading book
 (webull.com → Open API → “Using OpenAPI service in Paper Trading”).
 App key + secret are auto-approved for sandbox in a few minutes.
 
-    python -m src.webull_exec --date 2026-09-17          # dry-run hot4
-    python -m src.webull_exec --date 2026-09-17 --submit  # paper MARKET
-    python -m src.webull_exec --source flatten --submit   # flatten escape
+    python -m src.webull_exec --date 2026-10-02          # dry-run sealed h1
+    python -m src.webull_exec --date 2026-10-02 --submit  # refused; seal and ECS backstop only
+    python -m src.webull_exec --source flatten --submit   # refused; seal and ECS backstop only
 
 REAL is refused unless --env real AND --live AND WEBULL_LIVE=1.
 Paper never talks to api.webull.com. Do not enable --env real here.
 
 Rules:
-  * hot4: long-only leftover cash, MARKET (live print, not ticket px)
-  * size that cash at HOT4_CASH_HAIRCUT so the sum of planned notionals
-    stays under the snapshot when earlier fills print above the plan px
-  * serial place re-reads sandbox cash and clamps the next BUY
-    (skip the leg if the remainder cannot buy 1 share)
-  * skip a name already held; skip if leftover cash cannot buy 1 share
-  * sells first: list-drop names after min-hold, whole paper lot only
-  * never sell a name the paper book does not hold
-  * hard-red S≤−3 sits new buys; list-drop exits still sell
-  * stale Friday panel is dry-run unless --allow-stale
+  * sealed h1: MARKET at the live print, not a limit at the plan px
+  * buy tickers are the sealed new-buy set, not every name on the plan card
+  * sell tickers and share counts are the plan's planned sells
+  * a buy for a name the sealed book already holds fails closed
+  * paper cash below the sealed buy notional fails closed (no HOT4 rebuild,
+    no silent resize of the sealed share count)
+  * sells first, at the plan's share count, even when the paper book
+    does not already hold the name
+  * a missing sealed plan fails closed — no pick_day rebuild
   * flatten source: only live card tickets (never the would-buy wish list)
-  * $0 sandbox cash still buys nothing — snapshot reports the skip
+  * REAL stays refused unless --env real AND --live AND WEBULL_LIVE=1
 
 Env: WEBULL_APP_KEY, WEBULL_APP_SECRET, WEBULL_ACCOUNT_ID (optional),
      WEBULL_REGION (default us).
@@ -43,9 +45,9 @@ import json
 import math
 import os
 import re
-import uuid
 from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from src.combo_broker import PAPER_COMBO, plan_combo_for_broker
 from src.futubull_exec import (
@@ -80,6 +82,24 @@ def _env(name: str, default: str = "") -> str:
     return raw
 
 
+def at_or_after_open_deadline(clock: datetime | None = None) -> bool:
+    """True at 09:30:00 ET and any later clock on that same civil day.
+
+    Standing sandbox orders have to be resting before the open. A MARKET
+    sent at or after 09:30 fills at the live print. Callers that are not
+    the pre-armed bell release (the 0–2s window inside ``paper_open``)
+    must not place once this is true.
+    """
+    zone = ZoneInfo("America/New_York")
+    current = clock or datetime.now(zone)
+    if current.tzinfo is None:
+        current = current.replace(tzinfo=zone)
+    else:
+        current = current.astimezone(zone)
+    target = current.replace(hour=9, minute=30, second=0, microsecond=0)
+    return current >= target
+
+
 def refuse_real(env: str, submit: bool, live_flag: bool) -> str | None:
     if env != "real":
         return None
@@ -99,13 +119,203 @@ def paper_host(env: str) -> str:
     return PAPER_HOST
 
 
-def client_order_id(date: str, side: str, ticker: str) -> str:
-    """Stable ≤32-char id so a re-fire of the same morning does not double."""
-    day = re.sub(r"[^0-9]", "", str(date or ""))[:8]
-    sig = "B" if str(side).upper() == "BUY" else "S"
-    name = re.sub(r"[^A-Z0-9]", "", str(ticker or "").upper())[:16]
-    oid = f"fs{day}{sig}{name}"
-    return (oid or uuid.uuid4().hex)[:32]
+# Webull client_order_id is at most 32 characters. The sandbox accepted
+# hyphens (STANDTEST-20260918-1789726292). Letters, digits, and hyphens only.
+_CLIENT_ORDER_ID_MAX = 32
+
+
+def client_order_id(date: str, side: str, ticker: str, strategy: str = "h1") -> str:
+    """Deterministic id from the strategy, session date, ticker, and side.
+
+    Readable form, cut to Webull's 32-character limit:
+    ``h1-2026-10-07-SDEV-buy``. The same four fields always produce the
+    same id. It does not use a broker order id, a clock, or a random value,
+    so a crash before any local save still matches the order on the book.
+    """
+    strat = re.sub(r"[^A-Za-z0-9]", "", str(strategy or "")).lower() or "h1"
+    digits = re.sub(r"[^0-9]", "", str(date or ""))[:8]
+    if len(digits) == 8:
+        day = f"{digits[:4]}-{digits[4:6]}-{digits[6:8]}"
+    else:
+        day = digits
+    side_s = "buy" if str(side or "").upper() == "BUY" else "sell"
+    name = re.sub(r"[^A-Za-z0-9]", "", str(ticker or "").upper())
+    raw = f"{strat}-{day}-{name}-{side_s}"
+    if len(raw) <= _CLIENT_ORDER_ID_MAX:
+        return raw
+    # Date hyphens cost two characters. Drop them before shortening the ticker.
+    compact = f"{strat}-{digits}-{name}-{side_s}"
+    if len(compact) <= _CLIENT_ORDER_ID_MAX:
+        return compact
+    overhead = len(strat) + 1 + len(digits) + 1 + 1 + len(side_s)
+    room = _CLIENT_ORDER_ID_MAX - overhead
+    if room < 1:
+        squashed = re.sub(r"[^A-Za-z0-9]", "", f"{strat}{digits}{name}{side_s}")
+        return squashed[:_CLIENT_ORDER_ID_MAX]
+    return f"{strat}-{digits}-{name[:room]}-{side_s}"
+
+
+_DEAD_ORDER_STATUSES = frozenset({
+    "CANCELLED", "CANCELED", "REJECTED", "EXPIRED", "FAILED", "INACTIVE",
+})
+_ROW_DATE_KEYS = (
+    "trade_date", "order_date", "date",
+    "place_time", "create_time", "order_time", "filled_time",
+    "createTime", "orderTime", "filledTime", "placeTime",
+    "order_create_time",
+)
+
+
+def _norm_side(side) -> str:
+    raw = str(side or "").upper()
+    if raw in ("BUY", "B", "LONG"):
+        return "BUY"
+    if raw in ("SELL", "S", "SHORT"):
+        return "SELL"
+    return raw
+
+
+def _row_client_order_id(row: dict) -> str:
+    return str(row.get("client_order_id") or row.get("clientOrderId") or "").strip()
+
+
+def _row_symbol(row: dict) -> str:
+    return re.sub(
+        r"[^A-Z0-9]", "",
+        str(row.get("symbol") or row.get("ticker") or "").upper(),
+    )
+
+
+def order_blocks_resend(row: dict) -> bool:
+    """Open and filled orders block a second send. A cancel does not."""
+    if not isinstance(row, dict):
+        return False
+    status = str(
+        row.get("status") or row.get("order_status") or row.get("orderStatus") or ""
+    ).upper().replace(" ", "_")
+    if not status:
+        return True
+    return status not in _DEAD_ORDER_STATUSES
+
+
+def _row_session_dates(row: dict) -> set[str]:
+    found: set[str] = set()
+    for key in _ROW_DATE_KEYS:
+        val = row.get(key)
+        if val is None or val == "":
+            continue
+        text = str(val).strip()
+        match = re.search(r"(20\d{2}-\d{2}-\d{2})", text)
+        if match:
+            found.add(match.group(1))
+            continue
+        if text.isdigit() and len(text) >= 12:
+            try:
+                stamp = int(text)
+                if stamp > 10_000_000_000_000:
+                    stamp = stamp / 1000.0
+                if stamp > 10_000_000_000:
+                    stamp = stamp / 1000.0
+                found.add(datetime.fromtimestamp(
+                    stamp, ZoneInfo("America/New_York")).date().isoformat())
+            except (OverflowError, OSError, ValueError):
+                continue
+    return found
+
+
+def row_on_session(row: dict, date: str) -> bool:
+    """Keep undated rows. Drop a row whose timestamps are all another day."""
+    dates = _row_session_dates(row)
+    if not dates:
+        return True
+    return str(date or "") in dates
+
+
+def match_sealed_orders(tickets, rows, date: str, strategy: str = "h1"):
+    """Split a sealed-h1 batch into orders already on the book and the rest.
+
+    Match the derived ``client_order_id`` first. A same-day open or filled
+    row with the same symbol and side still counts, so an order placed under
+    an older id is not sent again. Returns ``(found, missing_tickets)``.
+    """
+    planned = []
+    for ticket in tickets or []:
+        if not isinstance(ticket, dict):
+            continue
+        side = _norm_side(ticket.get("side"))
+        coid = client_order_id(
+            str(ticket.get("date") or date or ""),
+            side,
+            ticket.get("ticker") or "",
+            strategy=strategy,
+        )
+        planned.append((ticket, side, coid))
+    live = []
+    for row in rows or []:
+        if not isinstance(row, dict):
+            continue
+        if not order_blocks_resend(row):
+            continue
+        if not row_on_session(row, date):
+            continue
+        live.append(row)
+    used: set[int] = set()
+    found = []
+    matched: set[int] = set()
+    derived = {coid for _, _, coid in planned}
+
+    def _hit(ticket, side, coid, row, how):
+        return {
+            "ticker": str(ticket.get("ticker") or ""),
+            "side": side,
+            "shares": ticket.get("shares"),
+            "client_order_id": coid,
+            "match": how,
+            "order_id": str(row.get("order_id") or row.get("orderId") or ""),
+            "broker_client_order_id": _row_client_order_id(row),
+            "symbol": str(row.get("symbol") or row.get("ticker") or ""),
+            "broker_side": str(row.get("side") or row.get("order_side") or ""),
+            "broker_status": str(
+                row.get("status") or row.get("order_status") or row.get("orderStatus") or ""
+            ),
+        }
+
+    for index, (ticket, side, coid) in enumerate(planned):
+        hit = None
+        for j, row in enumerate(live):
+            if j in used:
+                continue
+            if _row_client_order_id(row) == coid:
+                hit = j
+                break
+        if hit is None:
+            continue
+        used.add(hit)
+        matched.add(index)
+        found.append(_hit(ticket, side, coid, live[hit], "client_order_id"))
+    missing = []
+    for index, (ticket, side, coid) in enumerate(planned):
+        if index in matched:
+            continue
+        symbol = re.sub(r"[^A-Z0-9]", "", str(ticket.get("ticker") or "").upper())
+        hit = None
+        for j, row in enumerate(live):
+            if j in used:
+                continue
+            row_coid = _row_client_order_id(row)
+            if row_coid and row_coid in derived and row_coid != coid:
+                continue
+            row_side = _norm_side(
+                row.get("side") or row.get("order_side") or row.get("action"))
+            if _row_symbol(row) == symbol and row_side == side and symbol:
+                hit = j
+                break
+        if hit is None:
+            missing.append(ticket)
+            continue
+        used.add(hit)
+        found.append(_hit(ticket, side, coid, live[hit], "symbol_side"))
+    return found, missing
 
 
 def _as_list(payload) -> list:
@@ -504,134 +714,153 @@ def size_hot4_sells(sells: list, *, positions: dict | None,
     return tickets, skips
 
 
+def _sealed_ticket(date: str, side: str, ticker: str, shares: int, *,
+                   px, reason: str) -> dict:
+    ticket = {
+        "side": side,
+        "ticker": ticker,
+        "shares": int(shares),
+        "order_type": "MARKET",
+        "status": "plan",
+        "sleeve": HOT4,
+        "kid_side": "long",
+        "date": date,
+        "clock": "09:30 ET",
+        "reason": reason,
+        "sealed_shares": True,
+        "source": "sealed_h1",
+    }
+    if px is not None and float(px) > 0:
+        ticket["px"] = round(float(px), 4)
+        ticket["notional"] = round(int(shares) * float(ticket["px"]), 2)
+    return ticket
+
+
 def plan_hot4_for_broker(date: str, snap: BrokerSnap,
                          payload: dict | None = None,
                          panel: dict | None = None) -> dict:
-    """Today's hot4 buys plus recipe exits. Sells use paper lot size."""
-    from src import factor_mine as fm
-    from src import factor_mine_book as fmb
-    from src.combo_broker import resolve_rows
+    """Sealed h1 new-buy set for ``date``. ``payload`` and ``panel`` are ignored.
 
-    published = load_hot4_published(date, payload)
-    buys = list(published.get("buy") or [])
-    sells = list(published.get("sell") or [])
-    use_date = str(published.get("date") or date)
-    stale = bool(published and published.get("status") not in ("ok", "sit"))
-    source = "today_strategies"
-    look_err = ""
-    if not published:
-        looked = resolve_rows(date, panel)
-        rec_by = {r["name"]: r for r in fm.build_recipes()}
-        rec = rec_by.get(HOT4) or {}
-        rows = looked.get("rows") or []
-        use_date = str(looked.get("date") or date)
-        stale = bool(looked.get("stale"))
-        source = f"panel_{looked.get('source') or 'look'}"
-        look_err = looked.get("error") or ""
-        for r in fm.pick_day(rows, rec) if rec else []:
-            t = str(r.get("ticker") or "").upper()
-            if t:
-                buys.append({
-                    "ticker": t,
-                    "src": ",".join(r.get("sources") or []),
-                    "side": "long",
-                    "row": r,
-                })
-        from src import strategy_tickets as st
-        try:
-            recipe_sells = st.hot4_recipe_sells(use_date, panel)
-        except ValueError as exc:
-            look_err = look_err or str(exc)
-            recipe_sells = []
-        for t in recipe_sells:
-            sells.append({
-                "ticker": t, "side": "long", "kid_side": "long",
-                "src": "list-drop",
-            })
-    else:
-        pub_date = str(published.get("date")
-                       or published.get("clock_legal_for")
-                       or published.get("session_open") or "")
-        if pub_date and pub_date != date:
-            stale = True
-            use_date = pub_date
-    try:
-        s = published.get("s")
-        if s is None:
-            s = fmb.morning_s(fmb.load_regime(), date)
-    except Exception:
-        s = published.get("s")
-    sit = bool(published.get("sit"))
-    # Hot4 spends leftover cash only. Buying power is not a fill.
+    The strategy name stays ``union_hot_n4_h1``. Buy tickers are the
+    names the open fill would buy, not every plan-card pick. Paper cash
+    that cannot fund those buys, or a buy for a carry name, returns an
+    empty ticket list and ``look_error`` — it does not resize and it
+    does not call ``pick_day``.
+    """
+    del payload, panel  # Factor Mine publish is not the send list.
+    from src.h1_sealed_exec import (
+        SealedH1Error, assert_buys_match_new_set, sealed_h1_orders,
+    )
+
     cash = max(float(getattr(snap, "cash", 0) or 0), 0.0)
-    positions = (snap.positions or {}) if snap else {}
-    held = set(positions)
-    sell_tickets, sell_skips = size_hot4_sells(
-        sells, positions=positions, date=use_date,
-    )
-    buy_tickets, buy_skips = size_hot4_tickets(
-        buys, cash=cash, held=held, date=use_date, s=s, sit=sit,
-    )
-    # Recipe sells first so the next snapshot can spend the freed cash.
-    tickets = sell_tickets + buy_tickets
-    skips = sell_skips + buy_skips
+    # Sandbox positions are not an input. A drifted account must not
+    # empty this list, add a catch-up order, or change share counts.
+    # Cash below the sealed buy notional still fails closed.
+    try:
+        orders = sealed_h1_orders(date)
+        assert_buys_match_new_set(
+            orders["buys"],
+            carry=orders.get("carry") or [],
+            expected=[row["ticker"] for row in orders["buys"]],
+        )
+    except SealedH1Error as exc:
+        msg = str(exc)
+        if "not rebuilding HOT4" not in msg:
+            msg = f"{msg}; refusing; not rebuilding HOT4"
+        return {
+            "date": date,
+            "want_date": date,
+            "policy": HOT4,
+            "combo": "",
+            "source": "sealed_h1",
+            "stale": False,
+            "score": None,
+            "hard_red": False,
+            "why": msg,
+            "tickets": [],
+            "skipped": [{"date": date, "ticker": "", "kind": "sealed",
+                         "reason": msg}],
+            "would_buy": {"rows": []},
+            "would_sell": {"rows": []},
+            "flatten_ok": True,
+            "look_error": msg,
+            "order_type": "MARKET",
+            "plan_sha256": "",
+        }
     would = []
-    for raw in buys:
-        t = str((raw or {}).get("ticker") or "").upper()
-        if not t:
-            continue
-        side = str(raw.get("side") or raw.get("kid_side") or "long").lower()
-        if side == "short":
-            continue
+    buy_tickets = []
+    for row in orders["buys"]:
         would.append({
-            "ticker": t,
+            "ticker": row["ticker"],
+            "shares": row["shares"],
             "sleeve": HOT4,
             "kid_side": "long",
             "clock": "09:30 ET",
-            "px": raw.get("px"),
-            "src": raw.get("src"),
+            "px": row["px"],
+            "src": ",".join(row.get("sources") or []),
         })
+        buy_tickets.append(_sealed_ticket(
+            date, "BUY", row["ticker"], row["shares"], px=row["px"],
+            reason=(
+                f"sealed h1 new buy rank {row['rank']} {row['shares']} sh"
+            ),
+        ))
     would_sell = []
-    for raw in sells:
-        if isinstance(raw, str):
-            t = raw.strip().upper()
-            src = "list-drop"
-            px = None
-        else:
-            t = str((raw or {}).get("ticker") or "").upper()
-            src = raw.get("src")
-            px = raw.get("px")
-        if not t:
-            continue
+    sell_tickets = []
+    for row in orders["sells"]:
         would_sell.append({
-            "ticker": t,
+            "ticker": row["ticker"],
+            "shares": row["shares"],
             "sleeve": HOT4,
             "kid_side": "long",
             "clock": "09:30 ET",
-            "px": px,
-            "src": src or "list-drop",
+            "px": row.get("px"),
+            "src": row.get("reason") or "planned_sell",
         })
-    hard_red = sit or (
-        s is not None and float(s) <= float(fmb.HARD_RED))
-    why = (f"{HOT4} long-only leftover cash ×{HOT4_CASH_HAIRCUT:.0%} "
-           f"slip buffer · list-drop sells from paper lots · MARKET · "
-           f"rows via {source}")
-    if stale:
-        why += (f" · STALE panel {use_date} (wanted {date})"
-                " — do not submit unless --allow-stale")
-    if hard_red:
-        why += f" · hard-red S={s} sit"
-    if cash <= 0:
-        why += f" · leftover cash ${cash:.2f} cannot buy 1 share"
+        sell_tickets.append(_sealed_ticket(
+            date, "SELL", row["ticker"], row["shares"], px=row.get("px"),
+            reason=f"sealed h1 {row.get('reason') or 'planned sell'} {row['shares']} sh",
+        ))
+    need = float(orders["notional"])
+    look_err = ""
+    tickets = sell_tickets + buy_tickets
+    skips: list[dict] = []
+    if need > cash + 1e-6:
+        names = ", ".join(
+            f"{row['ticker']} {row['shares']}" for row in orders["buys"]
+        ) or "none"
+        look_err = (
+            f"paper cash {cash:.2f} cannot fund sealed h1 buys "
+            f"[{names}] costing {need:.2f}; refusing; not rebuilding HOT4"
+        )
+        tickets = []
+        skips.append({
+            "date": date, "ticker": "", "kind": "cash", "reason": look_err,
+        })
+    for ticker in orders.get("carry") or []:
+        skips.append({
+            "date": date,
+            "ticker": ticker,
+            "kind": "held",
+            "reason": "already held on the sealed book — not a new buy",
+        })
+    why = (
+        f"{HOT4} sealed h1 new buys {orders.get('plan_sha256', '')[:12]} "
+        f"· buys {len(orders['buys'])} sells {len(orders['sells'])} "
+        f"· carry {len(orders.get('carry') or [])} "
+        f"· notional ${need:.2f} · MARKET · no pick_day"
+    )
+    if look_err:
+        why = look_err
     return {
-        "date": use_date,
+        "date": date,
         "want_date": date,
         "policy": HOT4,
         "combo": "",
-        "source": source,
-        "stale": stale,
-        "score": s,
-        "hard_red": hard_red,
+        "source": "sealed_h1",
+        "stale": False,
+        "score": orders.get("morning_s"),
+        "hard_red": False,
         "why": why,
         "tickets": tickets,
         "skipped": skips,
@@ -640,7 +869,9 @@ def plan_hot4_for_broker(date: str, snap: BrokerSnap,
         "flatten_ok": True,
         "look_error": look_err,
         "order_type": "MARKET",
-        "cash_haircut": HOT4_CASH_HAIRCUT,
+        "plan_sha256": orders.get("plan_sha256") or "",
+        "book_recipe": orders.get("recipe") or "",
+        "sealed_notional": need,
     }
 
 
@@ -651,7 +882,8 @@ def order_body(ticket: dict) -> dict:
         "combo_type": "NORMAL",
         "client_order_id": client_order_id(
             str(ticket.get("date") or ticket.get("asof") or ""),
-            side, ticket.get("ticker") or ""),
+            side, ticket.get("ticker") or "",
+            strategy="h1"),
         "symbol": str(ticket.get("ticker") or "").upper(),
         "instrument_type": "EQUITY",
         "market": "US",
@@ -753,6 +985,31 @@ def _walk_open_orders(payload) -> list:
         seen_coid.add(coid)
         identified.append(row)
     return identified
+
+
+def _try_history_call(api, fn, account_id: str, date: str):
+    """Try SDK history signatures. TypeError means the next signature.
+
+    Any other error fails this method. The caller tries the next method
+    and, if all of them fail, raises rather than treating it as no fills.
+    """
+    attempts = (
+        lambda: fn(account_id, start_date=date, end_date=date, page_size=200),
+        lambda: fn(account_id, start_date=date, end_date=date),
+        lambda: fn(account_id, date, date),
+        lambda: fn(account_id, date),
+        lambda: fn(account_id),
+    )
+    errors = []
+    for call in attempts:
+        try:
+            return api._json(call(), "filled_orders"), ""
+        except TypeError as exc:
+            errors.append(str(exc)[:80])
+            continue
+        except Exception as exc:  # noqa: BLE001 — next history method
+            return None, str(exc)[:160]
+    return None, " | ".join(errors) or "no signature"
 
 
 class PaperAPI:
@@ -886,6 +1143,88 @@ class PaperAPI:
             raise RuntimeError("open-order list failed: " + " | ".join(errors))
         return _walk_open_orders(open_payload)
 
+    def list_filled_orders(self, date: str) -> list:
+        """Filled and history rows for one session. A miss is an error.
+
+        An empty payload is a real empty book. No history method on the
+        client, or every call failing, is a failed query — callers must
+        not place while a fill may already be on the sandbox book.
+        """
+        if self.host != PAPER_HOST:
+            raise RuntimeError("paper-open refuses any non-sandbox host")
+        if self.trade is None:
+            raise RuntimeError(self.err or "not connected")
+        aid = self._ensure_account_id()
+        day = str(date or "")
+        names = (
+            "list_order_history",
+            "get_order_history",
+            "list_history_orders",
+            "get_history_orders",
+            "list_filled_orders",
+            "get_order_filled",
+            "list_today_orders",
+            "get_today_orders",
+        )
+        candidates = []
+        for label, obj in (
+            ("v3", getattr(self.trade, "order_v3", None)),
+            ("v2", getattr(self.trade, "order_v2", None)),
+        ):
+            if obj is None:
+                continue
+            for name in names:
+                fn = getattr(obj, name, None)
+                if callable(fn):
+                    candidates.append((f"{label}.{name}", fn))
+        if not candidates:
+            raise RuntimeError(
+                "filled-order list failed: no history method on the sandbox client")
+        errors = []
+        payload = None
+        for label, fn in candidates:
+            got, err = _try_history_call(self, fn, aid, day)
+            if got is not None:
+                payload = got
+                break
+            if err:
+                errors.append(f"{label}: {err}"[:180])
+        if payload is None:
+            raise RuntimeError("filled-order list failed: " + " | ".join(errors))
+        return _walk_open_orders(payload)
+
+    def list_session_orders(self, date: str) -> list:
+        """Today's open and filled sandbox orders. Either query failing raises.
+
+        Cancelled, rejected, and expired rows are dropped. A row dated on
+        another session is dropped. Undated open rows stay, because a
+        working order with no timestamp must still block a second send.
+        """
+        if self.host != PAPER_HOST:
+            raise RuntimeError("paper-open refuses any non-sandbox host")
+        open_rows = self.list_open_orders()
+        filled_rows = self.list_filled_orders(date)
+        seen = set()
+        out = []
+        for row in list(open_rows or []) + list(filled_rows or []):
+            if not isinstance(row, dict):
+                continue
+            if not order_blocks_resend(row):
+                continue
+            if not row_on_session(row, date):
+                continue
+            key = (
+                str(row.get("order_id") or row.get("orderId") or ""),
+                _row_client_order_id(row),
+                _row_symbol(row),
+                _norm_side(row.get("side") or row.get("order_side")),
+            )
+            if key in seen:
+                continue
+            seen.add(key)
+            out.append(row)
+        return out
+
     def cancel_order(self, order_id: str) -> dict:
         """Cancel one sandbox order. Same call as the standtest probe."""
         if self.host != PAPER_HOST:
@@ -941,6 +1280,8 @@ class PaperAPI:
         this batch stay reserved until that cash drop shows up, then the
         leg is clamped to floor(cash_still_free / px). Planned shares are
         never increased. A leg that cannot buy 1 share is skipped.
+        A sealed h1 buy (``sealed_shares``) is not resized: if the
+        planned share count does not fit, that leg is refused.
         """
         if self.host != PAPER_HOST or self.trade is None or not self.account_id:
             raise RuntimeError("sandbox account not connected")
@@ -959,6 +1300,19 @@ class PaperAPI:
             free = cash_still_free(start_cash, fresh, reserved)
             if side == "BUY" and free is not None and px > 0:
                 shares = clamp_buy_shares(planned, px, free)
+                if body_ticket.get("sealed_shares") and shares != planned:
+                    coid = str(order_body(body_ticket)["client_order_id"])
+                    out[coid] = {
+                        "ok": False,
+                        "shares": planned,
+                        "error": (
+                            f"sealed h1 {body_ticket.get('ticker')} {planned} shares "
+                            f"@ {px:.4f} does not fit cash still free {free:.2f}; "
+                            "refusing; not rebuilding HOT4"
+                        ),
+                        "acknowledged_at": ack,
+                    }
+                    continue
                 if shares < 1:
                     coid = str(order_body(body_ticket)["client_order_id"])
                     out[coid] = {
@@ -1024,6 +1378,76 @@ class PaperAPI:
                 "acknowledged_at": datetime.now().astimezone().isoformat()}
 
 
+_PAPER_ENV_KEYS = ("WEBULL_APP_KEY", "WEBULL_APP_SECRET", "WEBULL_ACCOUNT_ID")
+
+
+def read_paper_env(path) -> dict:
+    """Parse the ECS paper env file. Values are JSON strings. No printing."""
+    out = {}
+    text = Path(path).read_text(encoding="utf-8")
+    for line in text.splitlines():
+        if not line or "=" not in line or line.startswith("#"):
+            continue
+        key, raw = line.split("=", 1)
+        out[key] = json.loads(raw)
+    return out
+
+
+def write_paper_env(path, values: dict) -> None:
+    """Rewrite the env file. Does not log values."""
+    ordered = [key for key in _PAPER_ENV_KEYS if values.get(key)]
+    extra = [key for key in values if key not in _PAPER_ENV_KEYS and values.get(key)]
+    lines = [
+        key + "=" + json.dumps(values[key])
+        for key in ordered + extra
+    ]
+    dest = Path(path)
+    tmp = dest.with_name(dest.name + ".tmp")
+    tmp.write_text("\n".join(lines) + ("\n" if lines else ""), encoding="utf-8")
+    os.chmod(tmp, 0o600)
+    os.replace(tmp, dest)
+
+
+def discover_and_persist_account_id(env_path, *, api=None) -> str:
+    """Resolve sandbox account_id when the env file has keys but no id.
+
+    ``WEBULL_ACCOUNT_ID`` is optional. After a paper connect, the account
+    list supplies the id and this writes it back. A non-sandbox host is
+    refused. Nothing secret, including the account id, is printed.
+    Returns ``present`` when the file already had an id, ``discovered``
+    when this call wrote one.
+    """
+    vals = read_paper_env(env_path)
+    key = str(vals.get("WEBULL_APP_KEY") or "").strip()
+    secret = str(vals.get("WEBULL_APP_SECRET") or "").strip()
+    if not key or not secret:
+        raise RuntimeError("WEBULL_APP_KEY / WEBULL_APP_SECRET missing")
+    os.environ["WEBULL_APP_KEY"] = key
+    os.environ["WEBULL_APP_SECRET"] = secret
+    had = str(vals.get("WEBULL_ACCOUNT_ID") or "").strip()
+    if had:
+        os.environ["WEBULL_ACCOUNT_ID"] = had
+    else:
+        os.environ.pop("WEBULL_ACCOUNT_ID", None)
+        vals.pop("WEBULL_ACCOUNT_ID", None)
+    client = api if api is not None else PaperAPI("paper")
+    if getattr(client, "env", "paper") == "real" or getattr(client, "host", "") != PAPER_HOST:
+        raise RuntimeError("paper-open refuses any non-sandbox host")
+    if not client.connect():
+        raise RuntimeError(client.err or "not connected")
+    snap = client.snapshot()
+    if not getattr(snap, "connected", False):
+        raise RuntimeError(getattr(snap, "error", None) or "not connected")
+    found = str(getattr(snap, "acc_id", "") or getattr(client, "account_id", "") or "").strip()
+    if not found:
+        raise RuntimeError("no Webull account_id in list")
+    if had:
+        return "present"
+    vals["WEBULL_ACCOUNT_ID"] = found
+    write_paper_env(env_path, vals)
+    return "discovered"
+
+
 def write_last(doc: dict) -> Path:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     LAST_JSON.write_text(json.dumps(doc, indent=2), encoding="utf-8")
@@ -1052,7 +1476,8 @@ def _plan(date: str, snap: BrokerSnap, *, source: str, combo: str) -> dict:
 
 def run(date: str | None, *, env: str = "paper", submit: bool = False,
         live: bool = False, write: bool = True, source: str = "hot4",
-        combo: str = PAPER_COMBO, allow_stale: bool = False) -> int:
+        combo: str = PAPER_COMBO, allow_stale: bool = False,
+        clock: datetime | None = None) -> int:
     requested_submit = submit
     env = "real" if env == "real" else "paper"
     source = _norm_source(source)
@@ -1109,31 +1534,35 @@ def run(date: str | None, *, env: str = "paper", submit: bool = False,
     card = _plan(date, snap, source=source, combo=combo)
     for t in card.get("tickets") or []:
         t.setdefault("date", date)
-    if source == "hot4" and requested_submit:
-        from src.strategy_tickets import assert_hot4_wire
-        try:
-            assert_hot4_wire(
-                date, (card.get("would_buy") or {}).get("rows") or [],
-                sells=(card.get("would_sell") or {}).get("rows") or [])
-        except ValueError as exc:
-            print(f"[webull] {exc}")
-            last = {
-                "date": date, "env": env, "submit": False,
-                "connected": True, "error": str(exc), "host": api.host,
-                "n_tickets": 0, "source": source, "combo": "",
-                "stale": bool(card.get("stale")), "policy": HOT4,
-                "skipped": card.get("skipped") or [], "why": str(exc),
-                "sent": [],
-                "generated": datetime.now().isoformat(timespec="seconds"),
-            }
-            if write:
-                write_last(last)
-            return 2
+    if card.get("look_error"):
+        print(f"[webull] {card['look_error']}")
+        submit = False
     if submit and card.get("stale") and not allow_stale:
         print("[webull] stale look — dry-run only (pass --allow-stale "
               "to send Friday's list as today's tickets)")
         submit = False
+    # This CLI and sleeve_merge --submit-webull are not senders.
+    # The h1 seal and the ECS backstop go through paper_open. At or
+    # after 09:30 the refusal is a missed_deadline; before that it
+    # still places nothing.
+    late_refused = False
+    blocked_submit = False
+    if submit:
+        blocked_submit = True
+        if at_or_after_open_deadline(clock):
+            print("[webull] at or after 09:30 ET; paper submit refused")
+            late_refused = True
+        else:
+            print("[webull] paper submit refused; only the h1 seal and "
+                  "the ECS backstop place orders")
+        submit = False
     last = send_card(card, snap, submit=submit, opend=api, env=env)
+    if late_refused:
+        last["status"] = "missed_deadline"
+        last["submit"] = False
+    elif blocked_submit:
+        last["status"] = "refused"
+        last["submit"] = False
     last["host"] = api.host
     last["account_id"] = snap.acc_id
     last["source"] = source
@@ -1161,7 +1590,8 @@ def run(date: str | None, *, env: str = "paper", submit: bool = False,
     failed = (not submit or card.get("stale") or card.get("look_error") or
               any(x.get("status") == "error" for x in last["sent"]) or
               (source == "hot4" and not card.get("hard_red") and
-               any(x.get("kind") in ("cash", "no_price") for x in card.get("skipped", []))))
+               any(x.get("kind") in ("cash", "no_price", "sealed")
+                   for x in card.get("skipped", []))))
     return 2 if requested_submit and failed else 0
 
 
@@ -1170,13 +1600,13 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--date", default="")
     ap.add_argument("--env", choices=("paper", "real"), default="paper")
     ap.add_argument("--submit", action="store_true",
-                    help="place paper orders (default is dry-run)")
+                    help="refused: paper orders are placed only by the h1 seal and the ECS backstop")
     ap.add_argument("--live", action="store_true",
                     help="required together with --env real and WEBULL_LIVE=1")
     ap.add_argument("--write", action="store_true", default=True)
     ap.add_argument("--source", choices=("hot4", "flatten", "combo"),
                     default="hot4",
-                    help="union_hot_n4_h1 long-only (default), flatten escape, or combo")
+                    help="sealed h1 plan as union_hot_n4_h1 (default), flatten escape, or combo")
     ap.add_argument("--combo", default=PAPER_COMBO,
                     help="combo name when --source combo (manual escape)")
     ap.add_argument("--allow-stale", action="store_true",

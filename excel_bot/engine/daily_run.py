@@ -10,7 +10,9 @@ Every run (scheduled 06:30 local, after the US close):
              a suggestion is a cluster whose CONFIRMATION day is the latest
              trading day -> buy at next open (long) / short at next open
   4. STORE   append to ONE file: suggestions/suggestions.csv  (never
-             per-day files). Old rows get current_price / returns refreshed
+             per-day files). Old rows get current_price / returns refreshed.
+             From 2026-10-06, signal_freeze locks each day's picks before
+             the write. A mismatch leaves the file untouched.
   5. TRACK   effectiveness: first_open (filled next run) vs current price
 
 Usage:
@@ -246,7 +248,17 @@ def main():
     args = ap.parse_args()
 
     t0 = time.time()
-    run_date = date.today().isoformat()
+    # GitHub's clock is UTC. A job that starts after midnight UTC can
+    # still be the previous evening in New York. run_date (a locked
+    # field) is that NYSE session, never the UTC date.
+    import gh_summary
+    stamp = gh_summary.resolve_session()
+    run_date = stamp.session.isoformat()
+    print(
+        f"[session] {run_date} America/New_York "
+        f"({'final' if stamp.write_final else 'draft'})",
+        flush=True,
+    )
     # Universe = grids (if present) UNION rows cache. On GitHub runners the
     # grids dir starts empty (only rows are restored from the state branch),
     # so grids-only enumeration silently processed ZERO tickers.
@@ -316,8 +328,17 @@ def main():
             "signal_colors": s["signal_colors"],
         })
 
-    # -- crash-proof write: retry if the file is open in Excel; never lose data
+    # Lock days on or after 2026-10-06 before the file is replaced.
+    # A mismatch must not write suggestions.csv and must not commit.
     payload = rows_old + new
+    try:
+        import signal_freeze
+        pending = signal_freeze.plan_rows(payload)
+    except signal_freeze.SignalFreezeError as exc:
+        print(exc, flush=True)
+        sys.exit(3)
+
+    # -- crash-proof write: retry if the file is open in Excel; never lose data
     written = False
     for attempt in range(6):
         try:
@@ -344,6 +365,16 @@ def main():
               f"{fb} -- close Excel and rerun: "
               f"python engine/daily_run.py --signals-only", flush=True)
         sys.exit(2)
+    try:
+        added = signal_freeze.append_entries(pending)
+    except signal_freeze.SignalFreezeError as exc:
+        print(exc, flush=True)
+        sys.exit(3)
+    if added:
+        print(f"[freeze] appended {len(added)} manifest "
+              f"{'entry' if len(added) == 1 else 'entries'}", flush=True)
+    else:
+        print("[freeze] locked signal dates verified", flush=True)
     print(f"[store] {len(new)} new suggestions appended -> {SUGG_CSV} "
           f"(total {len(payload)})", flush=True)
     print(f"[done] {time.time()-t0:.0f}s", flush=True)

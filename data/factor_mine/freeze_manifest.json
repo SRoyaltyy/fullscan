@@ -174,6 +174,16 @@
       "bytes": 172904,
       "sha256": "5722fd9d465459b1106541b54b2fc880aed3ac8a21307fdc4ec1fbed83e92cee",
       "written_at": "2026-10-02T00:56:41.876722-04:00"
+    },
+    "2026-10-02": {
+      "bytes": 172671,
+      "sha256": "e0c0d844f182f37b48f119fdf0a3e2de8422e72def1e6838c9b7153d4daa8181",
+      "written_at": "2026-10-02T16:56:01.434494-04:00"
+    },
+    "2026-10-05": {
+      "bytes": 172641,
+      "sha256": "6c75feddab1e77456fb7f70d309c82b700498661f5eb0f07838e6dfb82d60863",
+      "written_at": "2026-10-05T17:46:24.836041-04:00"
     }
   },
   "excel_signals": {
@@ -1391,6 +1401,18 @@
       "encoding": "gzip",
       "sha256": "d4033b327f259379af054b3685e1c3fbf20b6a40029222138d683dc5961f43dd",
       "written_at": "2026-10-02T00:57:35.241177-04:00"
+    },
+    "2026-10-02": {
+      "bytes": 14817768,
+      "encoding": "gzip",
+      "sha256": "887bd250a1bee852a837e96c3665f6de22061ab51caa4fd23138c68e233f7728",
+      "written_at": "2026-10-02T16:56:55.341772-04:00"
+    },
+    "2026-10-05": {
+      "bytes": 17146926,
+      "encoding": "gzip",
+      "sha256": "a5c490cc36c3ea159d9cff16b7a6cdf7556dc2be01fbc987dab4f41a3ddce327",
+      "written_at": "2026-10-05T17:47:23.237762-04:00"
     }
   },
   "lineups": {
@@ -1568,6 +1590,16 @@
       "bytes": 865,
       "sha256": "cde8994faf57d83555a735cdcddc631a57b5bd7c2262d972e61a8e8a3fb04776",
       "written_at": "2026-10-02T00:58:00.354119-04:00"
+    },
+    "2026-10-02": {
+      "bytes": 807,
+      "sha256": "89124b62dc097eaeabfd1cb36249b6b4a354a305b2441dbbdb603af940b54201",
+      "written_at": "2026-10-02T16:57:23.443139-04:00"
+    },
+    "2026-10-05": {
+      "bytes": 865,
+      "sha256": "1b5b2a9dd36f971a7ed206eedd5cdb38d9d07aa576e97af943ccbfbb41918f43",
+      "written_at": "2026-10-05T17:47:50.428023-04:00"
     }
   },
   "prices": {
@@ -1595,6 +1627,16 @@
       "bytes": 639644,
       "sha256": "5b9bd9a3cf65f7bc1e77e3003726e4830ee3a405662b29c64c1ea92c719f75a7",
       "written_at": "2026-10-02T00:56:41.899804-04:00"
+    },
+    "2026-10-02": {
+      "bytes": 585096,
+      "sha256": "9db4267597b21ce4c058585541baa81cac3e048d488e45f1fb3bc2c0d7143ed5",
+      "written_at": "2026-10-02T16:56:01.457237-04:00"
+    },
+    "2026-10-05": {
+      "bytes": 531125,
+      "sha256": "da6277f08ad938ca5e4930c15f5550151593e2e74a5f9f7a86002175382fc410",
+      "written_at": "2026-10-05T17:46:24.859458-04:00"
     }
   },
   "recipe_rules": {
@@ -9698,6 +9740,30 @@
         "TEM"
       ],
       "written_at": "2026-10-02T00:56:46.441011-04:00"
+    },
+    "2026-10-02": {
+      "bytes": 287307,
+      "dropped_missing_bars": [
+        "HYAC-U"
+      ],
+      "heat_vintage": "2026-10-02",
+      "n_rows": 70,
+      "sha256": "39ace1a923d28c6903d7ab3fe4e948ef8741b5c9186c2892bb03c6b6f2c8ad81",
+      "unpriced_held": [],
+      "written_at": "2026-10-02T16:56:06.874951-04:00"
+    },
+    "2026-10-05": {
+      "bytes": 276814,
+      "dropped_missing_bars": [
+        "HYAC-U",
+        "PORT-U",
+        "QRVO"
+      ],
+      "heat_vintage": "2026-10-05",
+      "n_rows": 63,
+      "sha256": "f1412aec9ff5dddec56f087adff2fb65b9ece41e051997c112e8f25146d3984f",
+      "unpriced_held": [],
+      "written_at": "2026-10-05T17:46:30.025223-04:00"
     }
   },
   "version": 1

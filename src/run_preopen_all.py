@@ -97,6 +97,13 @@ REQUIRED = [
 ]
 
 
+def _required_for(key: str, required: bool, date: str) -> bool:
+    """Sector essays stop blocking the packet on 2026-10-07. General stays required."""
+    if key == "sector_predict" and not output_qc.sector_predicts_required(date):
+        return False
+    return required
+
+
 def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
@@ -769,10 +776,7 @@ def run(date: str | None = None, force: bool = False,
                   "--date", date, "--write", "--no-extras"], timeout_s=180)
             _land(date, "live_boards", "Live 1d BUY/SELL strip")
             if force or not preopen.past_predict_cutoff():
-                print("[preopen-all] → paper / sleeve (after book is on main)")
-                _run([py, "-m", "src.paper_trade", "--date", date, "--top", "10"],
-                     timeout_s=900)
-                _land(date, "paper", "Paper dashboard")
+                print("[preopen-all] → sleeve (after book is on main)")
                 _run([py, "-m", "src.sleeve_combine_bt",
                       "--mode", "io_boost", "--hold", "3d"], timeout_s=1200)
                 print("[preopen-all] → flatten_hard_red live card (after book)")
@@ -780,6 +784,13 @@ def run(date: str | None = None, force: bool = False,
                       "--date", date, "--write-card"], timeout_s=420)
                 snapshot_persist(date)
                 _land(date, "flatten", "Flatten live card")
+        # 09:25 stops essays, not the paper tape. book_ok can be false
+        # while a book file is already on disk; follow that book and
+        # append. Printed days stay printed.
+        print("[preopen-all] → paper (append after the last printed date)")
+        _run([py, "-m", "src.paper_trade_append", "--date", date, "--top", "10"],
+             timeout_s=900)
+        _land(date, "paper", "Paper dashboard")
     else:
         print("[preopen-all] --no-book: leaving stock book to a later click")
 
@@ -842,12 +853,18 @@ def run(date: str | None = None, force: bool = False,
     for item in report.get("items") or []:
         by_kind.setdefault(item.get("kind"), []).append(item)
 
+    grok = grok_review.without_optional_sector_misses(date, grok)
     for key, title, required in REQUIRED:
+        required = _required_for(key, required, date)
         if key == "sector_predict":
             n_ok = int(report.get("sector_n_ok") or 0)
             n_tot = int(report.get("sector_n_total") or 11)
-            ok = n_ok >= 8
-            detail = f"{n_ok}/{n_tot} quality sector predicts (need >=8)"
+            if output_qc.sector_predicts_required(date):
+                ok = n_ok >= 8
+                detail = f"{n_ok}/{n_tot} quality sector predicts (need >=8)"
+            else:
+                ok = True
+                detail = f"{n_ok}/{n_tot} optional"
         elif key == "general_predict":
             rows = by_kind.get("general_predict") or []
             ok = bool(rows) and all(r.get("ok") for r in rows)

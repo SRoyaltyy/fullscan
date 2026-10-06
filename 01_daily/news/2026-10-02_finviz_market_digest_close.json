@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-02",
+  "generated_at": "2026-10-02T19:46:07.933931-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-05",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-05) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed higher as soft September jobs report reduced Fed rate-hike odds and lifted cyclical sectors",
+  "raw_text": "- The S&P 500 ($SPX) gained 0.73% to 7,722.72, the Dow Jones Industrial Average ($DJI) rose 0.49% to 51,176.96, the Nasdaq Composite ($COMP) climbed 1.19% to 27,190.86, and the Russell 2000 (IWM) added 0.9% for its largest daily gain in about a month on October 2, 2026.\n- CME (CME) FedWatch Tool showed October odds of a 25 bp Federal Reserve rate hike slipping to roughly 23% after the weaker jobs data.\n- The Labor Department reported September nonfarm payrolls rose by 29,000 versus the 90,000 consensus, prior months were revised sharply lower, and the unemployment rate increased to 4.2%, supporting risk appetite.\n- Consumer Discretionary led S&P sectors, up about 1.5%, as Tesla (TSLA) jumped 4.65% after reporting Q3 deliveries of 486,532 vehicles versus estimates of 461,000.\n- Cruise operators Carnival (CCL), Norwegian Cruise Line (NCLH), and Royal Caribbean (RCL) advanced after Carnival (CCL) posted an earnings beat.\n- Technology shares outperformed, with Nvidia (NVDA) rising 1.4% to $233.95, trading near its record high.\n- Synaptics (SYNA) rose 14.1% and ON Semiconductor (ON) gained about 6% after the companies revised their merger agreement to an all-cash deal valued at roughly $5.7 billion.\n- Healthcare was the weakest group, finishing flat to slightly lower, weighed by Intuitive Surgical (ISRG), down 2.3%, and Veeva Systems (VEEV), off 3.05%.\n- Nike (NKE) fell 3.64% to $33.87 after fiscal Q1 revenue of $11.21 billion missed estimates of $11.32 billion and the company issued cautious guidance citing softer China demand.\n- Data-storage names Western Digital (WDC) and Seagate (STX) declined after Toshiba announced plans to double hard-disk production capacity, while investors looked ahead to upcoming US inflation data and a heavier earnings slate for further clarity on Federal Reserve policy.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) gained **0.73% to 7,722.72**, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) rose **0.49% to 51,176.96**, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) climbed **1.19% to 27,190.86**, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) added **0.9%** for its **largest daily gain in about a month** on **October 2, 2026**.\n- **CME** ([CME](https://finviz.com/quote?t=CME)) **FedWatch Tool** showed **October odds of a 25 bp Federal Reserve rate hike slipping to roughly 23%** after the weaker jobs data.\n- The Labor Department reported **September nonfarm payrolls rose by 29,000 versus the 90,000 consensus**, prior months were **revised sharply lower**, and the **unemployment rate increased to 4.2%**, supporting risk appetite.\n- **Consumer Discretionary led S&P sectors, up about 1.5%**, as **Tesla** ([TSLA](https://finviz.com/quote?t=TSLA)) jumped **4.65%** after reporting Q3 deliveries of **486,532 vehicles versus estimates of 461,000**.\n- **Cruise operators Carnival** ([CCL](https://finviz.com/quote?t=CCL)), **Norwegian Cruise Line** ([NCLH](https://finviz.com/quote?t=NCLH)), and **Royal Caribbean** ([RCL](https://finviz.com/quote?t=RCL)) advanced after **Carnival** ([CCL](https://finviz.com/quote?t=CCL)) **posted an earnings beat**.\n- **Technology shares outperformed**, with **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) rising **1.4% to $233.95**, trading near its **record high**.\n- **Synaptics** ([SYNA](https://finviz.com/quote?t=SYNA)) rose **14.1%** and **ON Semiconductor** ([ON](https://finviz.com/quote?t=ON)) gained about **6%** after the companies revised their merger agreement to an **all-cash deal valued at roughly $5.7 billion**.\n- **Healthcare was the weakest group**, finishing flat to slightly lower, weighed by **Intuitive Surgical** ([ISRG](https://finviz.com/quote?t=ISRG)), down **2.3%**, and **Veeva Systems** ([VEEV](https://finviz.com/quote?t=VEEV)), off **3.05%**.\n- **Nike** ([NKE](https://finviz.com/quote?t=NKE)) fell **3.64% to $33.87** after fiscal Q1 revenue of **$11.21 billion missed estimates of $11.32 billion** and the company issued **cautious guidance citing softer China demand**.\n- **Data-storage names Western Digital** ([WDC](https://finviz.com/quote?t=WDC)) **and Seagate** ([STX](https://finviz.com/quote?t=STX)) declined after **Toshiba announced plans to double hard-disk production capacity**, while investors looked ahead to upcoming **US inflation data** and a **heavier earnings slate** for further clarity on **Federal Reserve policy**.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 0.73,
+      "verb": "gained"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 0.49,
+      "verb": "rose"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 1.19,
+      "verb": "climbed"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 0.9,
+      "verb": "added"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": {
+    "pct": 23.0,
+    "action": "hike",
+    "text": "hike slipping to roughly 23%"
+  },
+  "named_tickers": [
+    "CME",
+    "TSLA",
+    "CCL",
+    "NCLH",
+    "RCL",
+    "NVDA",
+    "SYNA",
+    "ON",
+    "ISRG",
+    "VEEV",
+    "NKE",
+    "WDC",
+    "STX"
+  ],
+  "named_leaders": [
+    "CME",
+    "TSLA",
+    "CCL",
+    "NCLH",
+    "RCL",
+    "NVDA",
+    "SYNA",
+    "ON",
+    "ISRG",
+    "VEEV",
+    "NKE",
+    "WDC",
+    "STX"
+  ],
+  "calendar": [
+    "Data-storage names Western Digital (WDC) and Seagate (STX) declined after Toshiba announced plans to double hard-disk production capacity, while investors looked ahead to upcoming US inflation data and a heavier earnings slate for further clarity on Federal Reserve policy."
+  ],
+  "prior_close": {
+    "spx": 0.73,
+    "nasdaq": 1.19,
+    "dow": 0.49
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 23.0,
+      "action": "hike",
+      "text": "hike slipping to roughly 23%"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "CME (CME) FedWatch Tool showed October odds of a 25 bp Federal Reserve rate hike slipping to roughly 23% after the weaker jobs data.",
+      "Data-storage names Western Digital (WDC) and Seagate (STX) declined after Toshiba announced plans to double hard-disk production capacity, while investors looked ahead to upcoming US inflation data and a heavier earnings slate for further clarity on Federal Reserve policy."
+    ],
+    "text": "CME (CME) FedWatch Tool showed October odds of a 25 bp Federal Reserve rate hike slipping to roughly 23% after the weaker jobs data. Data-storage names Western Digital (WDC) and Seagate (STX) declined after Toshiba announced plans to double hard-disk production capacity, while investors looked ahead to upcoming US inflation data and a heavier earnings slate for further clarity on Federal Reserve policy."
+  },
+  "earnings_slate": {
+    "tickers": [
+      "WDC",
+      "STX"
+    ],
+    "text": "Data-storage names Western Digital (WDC) and Seagate (STX) declined after Toshiba announced plans to double hard-disk production capacity, while investors looked ahead to upcoming US inflation data and a heavier earnings slate for further clarity on Federal Reserve policy."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 300886,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-02T19:36:31.267",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

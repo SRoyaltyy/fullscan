@@ -1,13 +1,15 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-21T07:57:33.492735-04:00",
+  "generated_at": "2026-10-06T15:41:40.060875-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
-  "blockers": [],
+  "blockers": [
+    "FAIL News actions JSON `01_daily/news/2026-09-08_actions.json` \u2014 stale_news"
+  ],
   "counts": {
     "ok": 7,
-    "partial": 1,
-    "fail": 0,
+    "partial": 0,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -82,10 +84,10 @@
       "yaml": "finviz_preopen_scrape.yml",
       "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 4,
-      "n_req": 4,
-      "n_opt_ok": 0,
-      "n_opt": 0,
+      "n_req_ok": 1,
+      "n_req": 1,
+      "n_opt_ok": 3,
+      "n_opt": 3,
       "files": [
         {
           "key": "digest_json",
@@ -106,7 +108,7 @@
           "key": "digest_md",
           "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-09-08_finviz_digest.md",
-          "role": "required",
+          "role": "optional",
           "status": "OK",
           "reason": "",
           "size": 11415,
@@ -120,7 +122,7 @@
           "key": "market_digest_json",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-08_finviz_market_digest.json",
-          "role": "required",
+          "role": "optional",
           "status": "OK",
           "reason": "",
           "size": 9341,
@@ -131,7 +133,7 @@
           "key": "market_digest_md",
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-08_finviz_market_digest.md",
-          "role": "required",
+          "role": "optional",
           "status": "OK",
           "reason": "",
           "size": 3957,
@@ -183,7 +185,7 @@
       "n_req_ok": 20,
       "n_req": 20,
       "n_opt_ok": 2,
-      "n_opt": 2,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_digest",
@@ -204,7 +206,7 @@
           "key": "in_market_digest",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-08_finviz_market_digest.json",
-          "role": "input",
+          "role": "optional",
           "status": "OK",
           "reason": "",
           "size": 9341,
@@ -240,14 +242,9 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 307699,
-          "said": "400 raw / 37 usable \u00b7 September Fed decision is now a coin flip as rate hike odds increase post Warsh",
-          "bullets": [
-            "September Fed decision is now a coin flip as rate hike odds increase post Warsh",
-            "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
-            "Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate Hike. - Barron's",
-            "Economists betting on a rate hike after Fed chair speech - RealEstateNews.com"
-          ]
+          "size": 488573,
+          "said": "488573B on disk",
+          "bullets": []
         },
         {
           "key": "events",
@@ -272,12 +269,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 12839,
-          "said": "1. **Fed Chair Warsh's Jackson Hole hawkish shift puts a September rate HIKE back on the table (coin-flip odds)** \u2014 single dominant macro driver; reprices the e",
+          "size": 14118,
+          "said": "1. **Blowout jobs report fans Fed rate-HIKE fears; Dow/S&P close lower, Nasdaq held up by chip strength** \u2014 dominant macro driver: a hot labor print that *raise",
           "bullets": [
-            "2. **Treasury yields rise as Warsh vows to pull down inflation; bond market \"trusts his word\"** \u2014 the transmission channel that actually moves equity multiples; confirms the rates cluster rather than a one-day headline. `rates`",
-            "3. **Gold slides >3% on Warsh hike-odds repricing (AU); Barrick +8% on prior cut-bets now unwound** \u2014 clean cross-asset confirmation of the hawkish repricing; real-yield channel, not noise. `substitution`",
-            "4. **Semis rally on Nvidia AI deal + Dell server backlog (AMAT +5%, ADI upgrades on AI data-center)** \u2014 the only large-cap growth pocket working against a hawkish tape; keeps Nasdaq from confirming the Dow's weakness. `sector_fundamental`"
+            "2. **Fed Chair Warsh: inflation \"too high\"; Williams says a late-2026 hike \"may be appropriate\"; October hike odds fall to ~17.7% after soft jobs data** \u2014 the policy path is the second leg of the same rates cluster and is internally contradictory (hawkish Chair vs. market cutting odds), which is itself the tradable signal. (channel: rates)",
+            "3. **10Y/30Y Treasury yields hit 24-year highs; mortgage rates rise as yields top 5%** \u2014 long-end term-premium shock is the transmission channel into duration-sensitive equities (REITs, utilities, small caps, unprofitable growth). (channel: rates)",
+            "4. **Nvidia AI deal + Dell server backlog spark semis rally; AMAT +5%, NVDA at record ~$5.76T, ALAB +12% on S&P 500 inclusion speculation** \u2014 the counterweight: AI-capex complex is the one sector with independent positive force strong enough to offset the rates drag on Nasdaq. (channel: sector_fundamental)"
           ]
         },
         {
@@ -312,16 +309,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-08_actions.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 46252,
-          "said": "70 ticker actions \u00b7 5 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY RRC",
-            "BUY SM"
-          ]
+          "status": "FAIL",
+          "reason": "stale_news",
+          "size": 0,
+          "said": "stale_news \u00b7 0 ticker actions \u00b7 0 events \u00b7 0 headlines",
+          "bullets": []
         },
         {
           "key": "general",
@@ -361,11 +353,11 @@
           "path": "01_daily/2026-09-08_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=True",
-          "size": 7182,
-          "said": "all_ok=True \u00b7 sectors 11/11 \u00b7 1 fail",
+          "reason": "all_ok=False",
+          "size": 7456,
+          "said": "all_ok=False \u00b7 sectors 11/11 \u00b7 1 fail",
           "bullets": [
-            "finviz_market_digest:missing"
+            "news_actions:stale_news"
           ]
         },
         {
@@ -375,8 +367,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7652,
-          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=False",
+          "size": 7778,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False",
           "bullets": []
         },
         {
@@ -385,11 +377,11 @@
           "path": "01_daily/2026-09-08_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Core packet is otherwise a real, same-day 2026-09-08 set: general predict takes a clear DOWN/mild direction with MEMORY_",
-          "size": 1745,
-          "said": "ok=False \u00b7 Wrong date / carry-forward: body is explicitly for 2026-09-18 (header 'Sector Environment Analysis \u2014 2026-09-18', Channel 1 tape 'through 2026-09-17', FOMC printed 09-16, BOJ hiked 09-18, Apple iPhone 18 availability TODAY 09-18, HIT_GRID dated 2026-09-18). Not a same\u2026",
+          "reason": "ok=False Core general predict, events JSON, news judge, finviz digests, and map-heat tables are same-day and usable; news_actions",
+          "size": 1781,
+          "said": "ok=False \u00b7 Wrong date / stale scan: generated_at 2026-10-06, median_published 2026-10-05, and top items published Oct 5-6 2026 \u2014 the news set is a month after the 2026-09-08 session, not a same-day scan (the actions.json itself flags this as 'Wrong date'). 01_daily/news/2026-09-\u2026",
           "bullets": [
-            "Core packet is otherwise a real, same-day 2026-09-08 set: general predict takes a clear DOWN/mild direction with MEMORY_CONFIRM/SCORES markers, events JSON is a genuine scan_date 2026-09-08 scan, news judge/parse are complete and same-day, finviz digest and map-heat tables are populated with a live futures tape, and 9 of 11 sector essays are quality-ok. Two sector files (technology, utilities) are stale carry-forwards of the 2026-09-18 session and fail. map_heat_baseline/research are present (research phase is a morning refresh with 142 cards, so no bootstrap exemption applies); the research.md notes a failed morning delta refresh falling back to last night's cards, which is noted but not itself a fail. The missing finviz_market_digest_close.json is a post-close artifact and not required p"
+            "Core general predict, events JSON, news judge, finviz digests, and map-heat tables are same-day and usable; news_actions is optional and its stale_news flag is consistent with the parsed.json problem. Two sector essays (technology, utilities) are carry-forward from the 2026-09-18 session and are failed, but 9 of 11 sector essays are quality-ok same-day artifacts, so the sector minimum is met. The decisive failure is news_parse: it is a month-late scan (Oct 5-6 items) masquerading as the 2026-09-08 packet, which is a required core file. map_heat_research shows phase=morning_refresh with a failed delta refresh falling back to last night's cards (142 cards, so card-count is fine), noted but not itself a fail."
           ]
         },
         {
@@ -536,7 +528,7 @@
           ]
         }
       ],
-      "said": "general DOWN  -11.475 \u00b7 sectors 2 up / 4 down / 5 flat \u00b7 news 400 raw / 37 usable \u00b7 September Fed decision is now a coin flip as rate hike odds increase post Warsh",
+      "said": "general DOWN  -11.475 \u00b7 sectors 2 up / 4 down / 5 flat",
       "bullets": [
         "bad: Houthi attack on Saudi energy (73 wounded)",
         "bad: Iran tanker attack in Hormuz",
@@ -644,8 +636,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
-      "inputs_ready": true,
+      "status": "FAIL",
+      "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -656,16 +648,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-08_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 46252,
-          "said": "70 ticker actions \u00b7 5 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY RRC",
-            "BUY SM"
-          ]
+          "status": "FAIL",
+          "reason": "stale_news",
+          "size": 0,
+          "said": "stale_news \u00b7 0 ticker actions \u00b7 0 events \u00b7 0 headlines",
+          "bullets": []
         },
         {
           "key": "in_digest",
@@ -694,24 +681,15 @@
           "bullets": []
         }
       ],
-      "said": "70 ticker actions \u00b7 5 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
-      "bullets": [
-        "BUY COP",
-        "BUY EOG",
-        "BUY RRC",
-        "BUY SM",
-        "BUY HPK",
-        "BUY REPX",
-        "BUY OXY",
-        "BUY FANG"
-      ]
+      "said": "0 ticker actions \u00b7 0 events \u00b7 0 headlines",
+      "bullets": []
     },
     {
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "OK",
-      "inputs_ready": true,
+      "inputs_ready": false,
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
@@ -754,16 +732,11 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-08_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 46252,
-          "said": "70 ticker actions \u00b7 5 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY, FANG BUY",
-          "bullets": [
-            "BUY COP",
-            "BUY EOG",
-            "BUY RRC",
-            "BUY SM"
-          ]
+          "status": "FAIL",
+          "reason": "stale_news",
+          "size": 0,
+          "said": "stale_news \u00b7 0 ticker actions \u00b7 0 events \u00b7 0 headlines",
+          "bullets": []
         },
         {
           "key": "in_digest",
@@ -787,12 +760,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 12839,
-          "said": "1. **Fed Chair Warsh's Jackson Hole hawkish shift puts a September rate HIKE back on the table (coin-flip odds)** \u2014 single dominant macro driver; reprices the e",
+          "size": 14118,
+          "said": "1. **Blowout jobs report fans Fed rate-HIKE fears; Dow/S&P close lower, Nasdaq held up by chip strength** \u2014 dominant macro driver: a hot labor print that *raise",
           "bullets": [
-            "2. **Treasury yields rise as Warsh vows to pull down inflation; bond market \"trusts his word\"** \u2014 the transmission channel that actually moves equity multiples; confirms the rates cluster rather than a one-day headline. `rates`",
-            "3. **Gold slides >3% on Warsh hike-odds repricing (AU); Barrick +8% on prior cut-bets now unwound** \u2014 clean cross-asset confirmation of the hawkish repricing; real-yield channel, not noise. `substitution`",
-            "4. **Semis rally on Nvidia AI deal + Dell server backlog (AMAT +5%, ADI upgrades on AI data-center)** \u2014 the only large-cap growth pocket working against a hawkish tape; keeps Nasdaq from confirming the Dow's weakness. `sector_fundamental`"
+            "2. **Fed Chair Warsh: inflation \"too high\"; Williams says a late-2026 hike \"may be appropriate\"; October hike odds fall to ~17.7% after soft jobs data** \u2014 the policy path is the second leg of the same rates cluster and is internally contradictory (hawkish Chair vs. market cutting odds), which is itself the tradable signal. (channel: rates)",
+            "3. **10Y/30Y Treasury yields hit 24-year highs; mortgage rates rise as yields top 5%** \u2014 long-end term-premium shock is the transmission channel into duration-sensitive equities (REITs, utilities, small caps, unprofitable growth). (channel: rates)",
+            "4. **Nvidia AI deal + Dell server backlog spark semis rally; AMAT +5%, NVDA at record ~$5.76T, ALAB +12% on S&P 500 inclusion speculation** \u2014 the counterweight: AI-capex complex is the one sector with independent positive force strong enough to offset the rates drag on Nasdaq. (channel: sector_fundamental)"
           ]
         },
         {
@@ -891,11 +864,11 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1789,
+          "size": 1869,
           "said": "Paper trading \u2014 Futubull-fee simulation",
           "bullets": [
-            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
-            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+            "As of **2026-10-06** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-10-06** ranker: **green pile** (137 liquid names). Paper buys the pile 15, not the old weighted 15."
           ]
         },
         {
@@ -904,9 +877,9 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "generated=2026-09-17T20:51:59.413465-04:00 last=2026-09-17",
-          "size": 6300795,
-          "said": "generated=2026-09-17T20:51:59.413465-04:00 last=2026-09-17",
+          "reason": "live-book poller + today.json (2026-09-08)",
+          "size": 10249330,
+          "said": "live-book poller + today.json (2026-09-08)",
           "bullets": []
         }
       ],
@@ -943,9 +916,9 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "generated=2026-09-17T20:51:59.413465-04:00 last=2026-09-17",
-          "size": 6300795,
-          "said": "generated=2026-09-17T20:51:59.413465-04:00 last=2026-09-17",
+          "reason": "live-book poller + today.json (2026-09-08)",
+          "size": 10249330,
+          "said": "live-book poller + today.json (2026-09-08)",
           "bullets": []
         },
         {
@@ -955,11 +928,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1789,
+          "size": 1869,
           "said": "Paper trading \u2014 Futubull-fee simulation",
           "bullets": [
-            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
-            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+            "As of **2026-10-06** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-10-06** ranker: **green pile** (137 liquid names). Paper buys the pile 15, not the old weighted 15."
           ]
         },
         {
@@ -978,6 +951,8 @@
       "bullets": []
     }
   ],
+  "news_mode": "none_stale",
+  "news_mode_reason": "Wrong date / stale scan: generated_at 2026-10-06, median_published 2026-10-05, and top items published Oct 5-6 2026 \u2014 the news set is a month after the 2026-09-08 session, not a same-day scan (the actions.json itself flags this as 'Wrong date').",
   "selections": {
     "buy_1d": [
       {
@@ -1063,17 +1038,7 @@
         "XLU FLAT -2.2"
       ]
     },
-    "news": {
-      "said": "400 raw / 37 usable \u00b7 September Fed decision is now a coin flip as rate hike odds increase post Warsh",
-      "bullets": [
-        "September Fed decision is now a coin flip as rate hike odds increase post Warsh",
-        "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
-        "Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate Hike. - Barron's",
-        "Economists betting on a rate hike after Fed chair speech - RealEstateNews.com",
-        "Fed Chairman Kevin Warsh Leaves the Door Open for September Rate Hike in Jackson Hole Speech - Realtor.com",
-        "Markets see rate hike coming following Warsh's speech - Bond Buyer"
-      ]
-    },
+    "news": {},
     "weather": {
       "said": "favorable 3 \u00b7 hostile 4 \u00b7 neutral 4",
       "bullets": [
@@ -1249,6 +1214,106 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-08\n**Generated:** 2026-09-08T21:03:48-04:00 (America/New_York)\n**Source:** `wayback`\n**Banner:** US stocks closed lower as Brent crude neared $100 and the 10-year yield hit 4.805% ahead CPI and PPI amid escalating US-Iran and Middle East tensions\n**Prior close:** SPX -0.58%  Nasdaq -0.32%  Dow -1.18%\n**SPX:** -0.58%  **Nasdaq:** -0.32%  **Dow:** -1.18%\n**Oil:** Brent crude $97.92 up (rose)\n**CPI/Fed:** s CPI data; 4.805% hike (4.805%, its highest level since 2023, reviving inflation and Fed rate-hike)\n**Leaders:** TPL, VLO, MPC, OKE, WMB, AMGN, SYK, INTC, QCOM, AMZN, GLW, VZ, NVS, CRM, CASY, TTAN, ANY, COO\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** COO\n**Geo/grain:** geo\n**Archive snapshot:** `20260909010348` (2026-09-08T21:03:48-04:00)\n**Archive URL:** https://web.archive.org/web/20260909010348id_/https://finv"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T10:00:00.748236-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-08_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 492914,
+          "preview": "raw=607 usable=114 single=48 \u00b7 Fed Effect To Rupee Jitters: Five Triggers Building The Case For An RBI Rate Hik | Fed Rate Hike & What It Means for Mortgage Rates - HousingWire | Gold edges up as October rate hike bets ease, stronger dollar cap gains - Kitco | Fed rate hike odds plummet after September jobs miss - Kalshi News | The Fed's Rate Hike Was a Bad Call, Not Bad Faith - RealClearMarkets"
+        },
+        {
+          "path": "01_daily/news/2026-09-08_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 8226,
+          "preview": "# News Parse v2 \u2014 2026-10-06T10:00:00.189319-04:00\nWindow\u224848h | news_mode=on | raw=607 | usable=114 | single_name=48 | noise_dropped=445\nusable polarity={'+': 5, '-': 21, 'mixed': 11, 'neutral': 77}"
+        }
+      ],
+      "preview": "raw=607 usable=114 single=48 \u00b7 Fed Effect To Rupee Jitters: Five Triggers Building The Case For An RBI Rate Hik | Fed Rate Hike & What It Means for Mortgage Rates - HousingWire | Gold edges up as October rate hike bets ease, stronger dollar cap gains - Kitco | Fed rate hike odds plummet after September jobs miss - Kalshi News | The Fed's Rate Hike Was a Bad Call, Not Bad Faith - RealClearMarkets \u00b7 # News Parse v2 \u2014 2026-10-06T10:00:00.189319-04:00\nWindow\u224848h | news_mode=on | raw=607 | usable=114 | single_name=48 | noise_dropped=445\nusable polarity={'+': 5, '-': 21, 'mixed': 11, 'neutral': 77}"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T10:00:45.847058-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-08_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 12924,
+          "preview": "# News Judge \u2014 2026-09-08"
+        },
+        {
+          "path": "01_daily/news/2026-09-08_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1426,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-08 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T15:41:09.531392-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-08_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 488573,
+          "preview": "raw=607 usable=105 single=62 \u00b7 Gold rises on expectations of Fed rate hike will ease dollar, Treasury yield pre | Gold price rises as oil falls, Fed rate hike bets ease - Mining.com.au | Bank of Canada rate hike case weaker than Fed's, CIBC argues - Mortgage Professi | Trump Distances Himself From Fed Chair Warsh After Rate Hike, Blames 'Hostile' B | Bank of Canada faces weaker case for rate hike than Fed: CIBC - Canadian Mortgag"
+        },
+        {
+          "path": "01_daily/news/2026-09-08_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 7534,
+          "preview": "# News Parse v2 \u2014 2026-10-06T15:41:08.818481-04:00\nWindow\u224848h | news_mode=on | raw=607 | usable=105 | single_name=62 | noise_dropped=440\nusable polarity={'+': 3, '-': 21, 'mixed': 7, 'neutral': 74}"
+        }
+      ],
+      "preview": "raw=607 usable=105 single=62 \u00b7 Gold rises on expectations of Fed rate hike will ease dollar, Treasury yield pre | Gold price rises as oil falls, Fed rate hike bets ease - Mining.com.au | Bank of Canada rate hike case weaker than Fed's, CIBC argues - Mortgage Professi | Trump Distances Himself From Fed Chair Warsh After Rate Hike, Blames 'Hostile' B | Bank of Canada faces weaker case for rate hike than Fed: CIBC - Canadian Mortgag \u00b7 # News Parse v2 \u2014 2026-10-06T15:41:08.818481-04:00\nWindow\u224848h | news_mode=on | raw=607 | usable=105 | single_name=62 | noise_dropped=440\nusable polarity={'+': 3, '-': 21, 'mixed': 7, 'neutral': 74}"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T15:41:39.001159-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-08_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 14118,
+          "preview": "# News Judge \u2014 2026-09-08"
+        },
+        {
+          "path": "01_daily/news/2026-09-08_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1419,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-08 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {

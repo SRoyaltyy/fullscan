@@ -1,13 +1,13 @@
 {
   "general": {
     "B0_ASIA": {
-      "n": 20,
-      "hit": 0.55,
+      "n": 21,
+      "hit": 0.571,
       "mult": 1.0
     },
     "B0_EUROPE": {
-      "n": 12,
-      "hit": 0.833,
+      "n": 13,
+      "hit": 0.846,
       "mult": 1.25
     },
     "B1_CATALYSTS": {
@@ -16,8 +16,8 @@
       "mult": 1.25
     },
     "B2_BONDS": {
-      "n": 34,
-      "hit": 0.382,
+      "n": 36,
+      "hit": 0.361,
       "mult": 0.0
     },
     "B3_FEDPATH": {
@@ -36,40 +36,40 @@
       "mult": 0.0
     },
     "B6_FUTURES": {
-      "n": 25,
-      "hit": 0.76,
+      "n": 26,
+      "hit": 0.769,
       "mult": 1.25
     },
     "B7_OIL_DOLLAR": {
-      "n": 33,
-      "hit": 0.606,
+      "n": 35,
+      "hit": 0.629,
       "mult": 1.0
     }
   },
   "sector_pooled": {
     "S0_SHARED_MACRO": {
-      "n": 184,
-      "hit": 0.592,
+      "n": 188,
+      "hit": 0.596,
       "mult": 1.0
     },
     "S1_SECTOR_FACTORS": {
-      "n": 210,
-      "hit": 0.567,
+      "n": 212,
+      "hit": 0.566,
       "mult": 1.0
     },
     "S2_BREADTH": {
-      "n": 160,
-      "hit": 0.606,
+      "n": 161,
+      "hit": 0.602,
       "mult": 1.0
     },
     "S3_FLOWS_POSITIONING": {
-      "n": 116,
-      "hit": 0.517,
+      "n": 117,
+      "hit": 0.513,
       "mult": 0.5
     },
     "S4_ETF_TAPE": {
-      "n": 170,
-      "hit": 0.612,
+      "n": 173,
+      "hit": 0.613,
       "mult": 1.0
     }
   },
@@ -86,14 +86,14 @@
         "mult": 0.5
       },
       "S2_BREADTH": {
-        "n": 16,
-        "hit": 0.562,
-        "mult": 1.0
+        "n": 17,
+        "hit": 0.529,
+        "mult": 0.5
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 12,
-        "hit": 0.667,
-        "mult": 1.25
+        "n": 13,
+        "hit": 0.615,
+        "mult": 1.0
       },
       "S4_ETF_TAPE": {
         "n": 13,
@@ -184,13 +184,13 @@
     },
     "Energy": {
       "S0_SHARED_MACRO": {
-        "n": 14,
-        "hit": 0.571,
-        "mult": 1.0
+        "n": 15,
+        "hit": 0.533,
+        "mult": 0.5
       },
       "S1_SECTOR_FACTORS": {
-        "n": 29,
-        "hit": 0.621,
+        "n": 30,
+        "hit": 0.6,
         "mult": 1.0
       },
       "S2_BREADTH": {
@@ -265,8 +265,8 @@
     },
     "Industrials": {
       "S0_SHARED_MACRO": {
-        "n": 16,
-        "hit": 0.625,
+        "n": 17,
+        "hit": 0.647,
         "mult": 1.0
       },
       "S1_SECTOR_FACTORS": {
@@ -297,8 +297,8 @@
         "mult": 1.25
       },
       "S1_SECTOR_FACTORS": {
-        "n": 20,
-        "hit": 0.6,
+        "n": 21,
+        "hit": 0.619,
         "mult": 1.0
       },
       "S2_BREADTH": {
@@ -312,15 +312,15 @@
         "mult": 1.25
       },
       "S4_ETF_TAPE": {
-        "n": 20,
-        "hit": 0.65,
-        "mult": 1.25
+        "n": 21,
+        "hit": 0.619,
+        "mult": 1.0
       }
     },
     "Technology": {
       "S0_SHARED_MACRO": {
-        "n": 22,
-        "hit": 0.727,
+        "n": 23,
+        "hit": 0.739,
         "mult": 1.25
       },
       "S1_SECTOR_FACTORS": {
@@ -339,15 +339,15 @@
         "mult": 0.0
       },
       "S4_ETF_TAPE": {
-        "n": 17,
-        "hit": 0.706,
+        "n": 18,
+        "hit": 0.722,
         "mult": 1.25
       }
     },
     "Utilities": {
       "S0_SHARED_MACRO": {
-        "n": 12,
-        "hit": 0.333,
+        "n": 13,
+        "hit": 0.385,
         "mult": 0.0
       },
       "S1_SECTOR_FACTORS": {
@@ -361,20 +361,20 @@
         "mult": 1.0
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 116,
-        "hit": 0.517,
+        "n": 117,
+        "hit": 0.513,
         "mult": 0.5,
         "pooled": true
       },
       "S4_ETF_TAPE": {
-        "n": 18,
-        "hit": 0.611,
+        "n": 19,
+        "hit": 0.632,
         "mult": 1.0
       }
     }
   },
-  "version": 45,
-  "updated": "2026-10-01T18:06:42-04:00",
+  "version": 52,
+  "updated": "2026-10-06T16:32:25-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -764,6 +764,51 @@
         "Financial.S2_BREADTH: 1.0 -> 0.5 (n=17, hit=0.529)",
         "Real Estate.S0_SHARED_MACRO: 1.0 -> 1.25 (n=15, hit=0.667)",
         "Real Estate.S4_ETF_TAPE: 1.0 -> 1.25 (n=20, hit=0.65)"
+      ]
+    },
+    {
+      "at": "2026-10-02T16:14:42-04:00",
+      "changes": [
+        "Basic Materials.S2_BREADTH: 1.0 -> 0.5 (n=17, hit=0.529)",
+        "Basic Materials.S3_FLOWS_POSITIONING: 1.25 -> 1.0 (n=13, hit=0.615)",
+        "Energy.S0_SHARED_MACRO: 1.0 -> 0.5 (n=15, hit=0.533)",
+        "Real Estate.S4_ETF_TAPE: 1.25 -> 1.0 (n=21, hit=0.619)"
+      ]
+    },
+    {
+      "at": "2026-10-05T16:48:50-04:00",
+      "changes": [
+        "hold"
+      ]
+    },
+    {
+      "at": "2026-10-05T18:10:52-04:00",
+      "changes": [
+        "hold"
+      ]
+    },
+    {
+      "at": "2026-10-05T21:22:03-04:00",
+      "changes": [
+        "hold"
+      ]
+    },
+    {
+      "at": "2026-10-05T21:24:07-04:00",
+      "changes": [
+        "hold"
+      ]
+    },
+    {
+      "at": "2026-10-06T06:48:54-04:00",
+      "changes": [
+        "hold"
+      ]
+    },
+    {
+      "at": "2026-10-06T16:32:25-04:00",
+      "changes": [
+        "hold"
       ]
     }
   ]

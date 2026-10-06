@@ -1,6 +1,6 @@
 # OpenClaw live probe
 
-- generated: 2026-09-28T11:20:22Z UTC / 2026-09-28 07:20 EDT / 2026-09-28 19:20 CST
+- generated: 2026-10-06T11:01:42Z UTC / 2026-10-06 07:01 EDT / 2026-10-06 19:01 CST
 - uid=0 user=root home=/home/gha
 - gateway_url=http://127.0.0.1:18789
 - token_set=yes
@@ -15,22 +15,22 @@ LISTEN 0      511            [::1]:18789         [::]:*    users:(("openclaw-gat
 ### GET http://127.0.0.1:18789/health
 ```
 {"ok":true,"status":"live"}
-HTTP 200 time=0.033666s
+HTTP 200 time=0.032190s
 ```
 ### GET http://127.0.0.1:18789/healthz
 ```
 {"ok":true,"status":"live"}
-HTTP 200 time=0.007937s
+HTTP 200 time=0.001320s
 ```
 ### GET http://127.0.0.1:18789/ready
 ```
-{"ready":true,"failing":[],"uptimeMs":611984461,"eventLoop":{"degraded":false,"reasons":[],"intervalMs":35820,"delayP99Ms":24.4,"delayMaxMs":395.1,"utilization":0.082,"cpuCoreRatio":0.039}}
-HTTP 200 time=0.008020s
+{"ready":true,"failing":[],"uptimeMs":1302064865,"eventLoop":{"degraded":true,"reasons":["event_loop_delay"],"intervalMs":47582,"delayP99Ms":39.6,"delayMaxMs":1550.8,"utilization":0.133,"cpuCoreRatio":0.135}}
+HTTP 200 time=0.006041s
 ```
 ### GET http://127.0.0.1:18789/readyz
 ```
-{"ready":true,"failing":[],"uptimeMs":611984495,"eventLoop":{"degraded":false,"reasons":[],"intervalMs":35820,"delayP99Ms":24.4,"delayMaxMs":395.1,"utilization":0.082,"cpuCoreRatio":0.039}}
-HTTP 200 time=0.003733s
+{"ready":true,"failing":[],"uptimeMs":1302064883,"eventLoop":{"degraded":true,"reasons":["event_loop_delay"],"intervalMs":47582,"delayP99Ms":39.6,"delayMaxMs":1550.8,"utilization":0.133,"cpuCoreRatio":0.135}}
+HTTP 200 time=0.002205s
 ```
 ### GET http://127.0.0.1:18789/startup
 ```
@@ -58,7 +58,7 @@ HTTP 200 time=0.003733s
 ### GET http://127.0.0.1:18789/v1/models (Accept: application/json)
 ```
 {"object":"list","data":[{"id":"openclaw","object":"model","created":0,"owned_by":"openclaw","permission":[]},{"id":"openclaw/default","object":"model","created":0,"owned_by":"openclaw","permission":[]},{"id":"openclaw/main","object":"model","created":0,"owned_by":"openclaw","permission":[]}]}
-HTTP 200 time=0.003351s
+HTTP 200 time=0.002642s
 ```
 
 ## 2. Live timeoutSeconds (CLI talks to the running gateway)
@@ -112,16 +112,16 @@ models.providers.anthropic.timeoutSeconds = 10800
 ```
 {
   "ok": true,
-  "ts": 1790594454496,
-  "durationMs": 22,
+  "ts": 1791284536836,
+  "durationMs": 59,
   "eventLoop": {
     "degraded": false,
     "reasons": [],
-    "intervalMs": 7611,
-    "delayP99Ms": 32,
-    "delayMaxMs": 130,
-    "utilization": 0.19,
-    "cpuCoreRatio": 0.199
+    "intervalMs": 21260,
+    "delayP99Ms": 20.7,
+    "delayMaxMs": 27.8,
+    "utilization": 0.021,
+    "cpuCoreRatio": 0.041
   },
   "plugins": {
     "loaded": [
@@ -198,15 +198,15 @@ Gateway connection:
   Source: local loopback
   Config: /home/gha/.openclaw/openclaw.json
   Bind: loopback
-Gateway event loop: ok max=54ms p99=20ms util=0.035 cpu=0.034
+Gateway event loop: ok max=354ms p99=41ms util=0.175 cpu=0.222
 Agents: main (default)
 Heartbeat interval: 30m (main)
-Session store (main): /home/gha/.openclaw/agents/main/sessions/sessions.json (508 entries)
-- agent:main:fullscan-sector-predict-technology-2026-09-28-139fd185dbbc (9m ago)
-- agent:main:fullscan-catalyst-step1-bkr-1c685532c321 (24m ago)
-- agent:main:fullscan-catalyst-verdict-bkr-e4c01da337e5 (24m ago)
-- agent:main:fullscan-catalyst-step2-bkr-05a6d7ff8a3b (24m ago)
-- agent:main:fullscan-catalyst-catcher-slb-023723393165 (25m ago)
+Session store (main): /home/gha/.openclaw/agents/main/sessions/sessions.json (522 entries)
+- agent:main:fullscan-catalyst-catcher-tsla-e7a801250fd5 (1m ago)
+- agent:main:fullscan-catalyst-step4-tsla-897a6423ff0f (6m ago)
+- agent:main:fullscan-catalyst-step2-tsla-d51703cb3b90 (11m ago)
+- agent:main:fullscan-catalyst-verdict-tsla-a7f00a39780c (11m ago)
+- agent:main:fullscan-catalyst-step1-tsla-395f25267ce0 (11m ago)
 [exit 0]
 ```
 ### openclaw status --deep
@@ -221,19 +221,19 @@ Overview
 │ Dashboard            │ http://127.0.0.1:18789/                                                                       │
 │ Tailscale exposure   │ off                                                                                           │
 │ Channel              │ stable (default)                                                                              │
-│ Update               │ available · npm · npm update 2026.9.6 · deps ok                                               │
-│ Gateway              │ local · ws://127.0.0.1:18789 (local loopback) · reachable 481ms · auth token                  │
+│ Update               │ available · npm · npm update 2026.9.8 · deps ok                                               │
+│ Gateway              │ local · ws://127.0.0.1:18789 (local loopback) · reachable 448ms · auth token                  │
 │ Gateway service      │ systemd user not installed                                                                    │
 │ Node service         │ systemd user not installed                                                                    │
-│ Agents               │ 1 · 1 bootstrap file present · sessions 508 · default main active 10m ago                     │
+│ Agents               │ 1 · 1 bootstrap file present · sessions 522 · default main active 1m ago                      │
 │ Memory               │ enabled (plugin memory-core) · not checked                                                    │
 │ Plugin compatibility │ none                                                                                          │
 │ Probes               │ enabled                                                                                       │
 │ Events               │ none                                                                                          │
 │ Tasks                │ none                                                                                          │
 │ Heartbeat            │ 30m (main)                                                                                    │
-│ Last heartbeat       │ skipped · just now ago · unknown                                                              │
-│ Sessions             │ 508 active · default grok-4.6 (200k ctx) · ~/.openclaw/agents/main/sessions/sessions.json     │
+│ Last heartbeat       │ skipped · 11m ago ago · unknown                                                               │
+│ Sessions             │ 522 active · default grok-4.6 (200k ctx) · ~/.openclaw/agents/main/sessions/sessions.json     │
 └──────────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────┘
 
 Security audit
@@ -251,26 +251,26 @@ Sessions
 ┌───────────────────────────────┬────────┬─────────┬──────────────┬──────────────────┬─────────────────────────────────┐
 │ Key                           │ Kind   │ Age     │ Model        │ Runtime          │ Tokens                          │
 ├───────────────────────────────┼────────┼─────────┼──────────────┼──────────────────┼─────────────────────────────────┤
-│ agent:main:fullscan-sector-   │ direct │ 10m ago │ grok-4.6     │ OpenClaw Default │ 87k/256k (34%) · 🗄️ 49% cached  │
-│ pred…                         │        │         │              │                  │                                 │
-│ agent:main:fullscan-catalyst- │ direct │ 24m ago │ grok-4.6     │ OpenClaw Default │ 21k/256k (8%) · 🗄️ 2% cached    │
-│ st…                           │        │         │              │                  │                                 │
-│ agent:main:fullscan-catalyst- │ direct │ 24m ago │ grok-4.6     │ OpenClaw Default │ 21k/256k (8%) · 🗄️ 2% cached    │
-│ ve…                           │        │         │              │                  │                                 │
-│ agent:main:fullscan-catalyst- │ direct │ 24m ago │ grok-4.6     │ OpenClaw Default │ unknown/256k (?%)               │
-│ st…                           │        │         │              │                  │                                 │
-│ agent:main:fullscan-catalyst- │ direct │ 25m ago │ grok-4.6     │ OpenClaw Default │ 73k/256k (28%) · 🗄️ 85% cached  │
+│ agent:main:fullscan-catalyst- │ direct │ 1m ago  │ grok-4.6     │ OpenClaw Default │ 357k/256k (139%)                │
 │ ca…                           │        │         │              │                  │                                 │
-│ agent:main:fullscan-catalyst- │ direct │ 30m ago │ grok-4.6     │ OpenClaw Default │ 32k/256k (12%) · 🗄️ 50% cached  │
+│ agent:main:fullscan-catalyst- │ direct │ 7m ago  │ grok-4.6     │ OpenClaw Default │ 30k/256k (12%) · 🗄️ 2% cached   │
 │ st…                           │        │         │              │                  │                                 │
-│ agent:main:fullscan-catalyst- │ direct │ 36m ago │ grok-4.6     │ OpenClaw Default │ 115k/256k (45%) · 🗄️ 71% cached │
+│ agent:main:fullscan-catalyst- │ direct │ 11m ago │ grok-4.6     │ OpenClaw Default │ 78k/256k (31%) · 🗄️ 52% cached  │
 │ st…                           │        │         │              │                  │                                 │
-│ agent:main:fullscan-catalyst- │ direct │ 36m ago │ grok-4.6     │ OpenClaw Default │ 136k/256k (53%) · 🗄️ 80% cached │
+│ agent:main:fullscan-catalyst- │ direct │ 11m ago │ grok-4.6     │ OpenClaw Default │ 75k/256k (29%) · 🗄️ 76% cached  │
 │ ve…                           │        │         │              │                  │                                 │
-│ agent:main:fullscan-catalyst- │ direct │ 37m ago │ grok-4.6     │ OpenClaw Default │ 57k/256k (22%) · 🗄️ 73% cached  │
+│ agent:main:fullscan-catalyst- │ direct │ 12m ago │ grok-4.6     │ OpenClaw Default │ 66k/256k (26%) · 🗄️ 82% cached  │
 │ st…                           │        │         │              │                  │                                 │
-│ agent:main:fullscan-catalyst- │ direct │ 43m ago │ grok-4.6     │ OpenClaw Default │ 83k/256k (32%) · 🗄️ 63% cached  │
+│ agent:main:fullscan-catalyst- │ direct │ 17m ago │ grok-4.6     │ OpenClaw Default │ 122k/256k (48%) · 🗄️ 78% cached │
 │ ca…                           │        │         │              │                  │                                 │
+│ agent:main:fullscan-catalyst- │ direct │ 25m ago │ grok-4.6     │ OpenClaw Default │ 30k/256k (12%) · 🗄️ 50% cached  │
+│ st…                           │        │         │              │                  │                                 │
+│ agent:main:fullscan-catalyst- │ direct │ 29m ago │ grok-4.6     │ OpenClaw Default │ 61k/256k (24%) · 🗄️ 60% cached  │
+│ st…                           │        │         │              │                  │                                 │
+│ agent:main:fullscan-catalyst- │ direct │ 29m ago │ grok-4.6     │ OpenClaw Default │ 72k/256k (28%) · 🗄️ 83% cached  │
+│ st…                           │        │         │              │                  │                                 │
+│ agent:main:fullscan-catalyst- │ direct │ 30m ago │ grok-4.6     │ OpenClaw Default │ 116k/256k (45%) · 🗄️ 30% cached │
+│ ve…                           │        │         │              │                  │                                 │
 └───────────────────────────────┴────────┴─────────┴──────────────┴──────────────────┴─────────────────────────────────┘
 
 Health
@@ -278,13 +278,13 @@ Health
 │ Item       │ Status    │ Detail                                                                                      │
 ├────────────┼───────────┼─────────────────────────────────────────────────────────────────────────────────────────────┤
 │ Gateway    │ reachable │ 20ms                                                                                        │
-│ Event loop │ OK        │ healthy · max 54ms · p99 52ms · util 0.173 · cpu 0.149                                      │
+│ Event loop │ OK        │ healthy · max 85ms · p99 39ms · util 0.167 · cpu 0.149                                      │
 └────────────┴───────────┴─────────────────────────────────────────────────────────────────────────────────────────────┘
 
 FAQ: https://docs.openclaw.ai/faq
 Troubleshooting: https://docs.openclaw.ai/troubleshooting
 
-Update available (npm 2026.9.6). Run: openclaw update
+Update available (npm 2026.9.8). Run: openclaw update
 Next steps:
   Need to share?      openclaw status --all
   Need to debug live? openclaw logs --follow
@@ -294,7 +294,7 @@ Next steps:
 ### openclaw gateway status --deep
 ```
 Service: systemd user (disabled)
-File logs: /tmp/openclaw-1000/openclaw-2026-09-28.log
+File logs: /tmp/openclaw-1000/openclaw-2026-10-06.log
 
 Config (cli): ~/.openclaw/openclaw.json
 Config (service): ~/.openclaw/openclaw.json
@@ -332,7 +332,7 @@ Tip: if the gateway is remote, mDNS won’t cross networks; use Wide-Area Bonjou
 
 Targets
 Local loopback ws://127.0.0.1:18789
-  Connect: ok (50ms) · Capability: connect-only · Read probe: limited - missing scope: operator.read
+  Connect: ok (84ms) · Capability: connect-only · Read probe: limited - missing scope: operator.read
 
 [exit 0]
 ```
@@ -407,16 +407,16 @@ ls: cannot access '/home/gha/.openclaw/cron': No such file or directory
 ### fullscan-preopen.timer
 enabled
 active
-NEXT                        LEFT     LAST                        PASSED       UNIT                   ACTIVATES
-Tue 2026-09-29 17:55:00 CST 22h left Mon 2026-09-28 17:55:04 CST 1h 26min ago fullscan-preopen.timer fullscan-preopen.service
+NEXT                        LEFT     LAST                        PASSED      UNIT                   ACTIVATES
+Wed 2026-10-07 17:55:00 CST 22h left Tue 2026-10-06 17:55:54 CST 1h 7min ago fullscan-preopen.timer fullscan-preopen.service
 
 1 timers listed.
 
 ### fullscan-preopen.timer show
 ```
 Unit=fullscan-preopen.service
-NextElapseUSecRealtime=Tue 2026-09-29 17:55:00 CST
-LastTriggerUSec=Mon 2026-09-28 17:55:04 CST
+NextElapseUSecRealtime=Wed 2026-10-07 17:55:00 CST
+LastTriggerUSec=Tue 2026-10-06 17:55:54 CST
 Persistent=yes
 Triggers=fullscan-preopen.service
 ActiveState=active
@@ -448,31 +448,31 @@ active
 ● fullscan-openclaw-gateway.service - /usr/bin/openclaw gateway
      Loaded: loaded (/run/systemd/transient/fullscan-openclaw-gateway.service; transient)
   Transient: yes
-     Active: active (running) since Mon 2026-09-21 17:20:24 CST; 1 week 0 days ago
+     Active: active (running) since Mon 2026-09-21 17:20:24 CST; 2 weeks 1 day ago
    Main PID: 1608979 (openclaw-gatewa)
       Tasks: 12 (limit: 1789)
-     Memory: 495.0M
-        CPU: 6h 44min 1.976s
+     Memory: 527.7M
+        CPU: 14h 28min 55.769s
      CGroup: /system.slice/fullscan-openclaw-gateway.service
              └─1608979 openclaw-gateway "" "" "" "" "" "" "" "" "" "" "" "" "" ""
 
-Sep 28 19:11:42 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 13. Stockanalysis / Public.com premarket (09-28) — LRCX ~$305.75 (~−3%); AMAT ~$470–472 (~−3%) vs 09-25 closes. **Nested semi-eq tape for S2.**
-Sep 28 19:11:42 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 14. X search 09-27..09-28 — sparse 09-28 posts; weekend setup: 10Y >5% as the test of AI/tech; Hormuz still headline risk; oil as premium not confirmed structural shutdown. **Color only; did not override Channel 1.**
-Sep 28 19:11:42 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 15. Yahoo Finance live blog fetch — **failed**; premarket XLK ~$194.56 −0.87% vs 09-25 $196.27 from Tradesmith/Investing.com search snippets, directionally consistent with Channel 1 XLK PM −1.16%.
-Sep 28 19:11:42 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: **Not used as Channel 1 replacements:** Finviz futures board (stale SPX +0.20% / NQ +0.41% vs live ES/NQ vs-prior-close); Finviz WTI −1.59% vs Channel 1 CL=F +4.12%.
-Sep 28 19:11:42 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-28T19:11:42.371+08:00 [agents/agent-command] [agent] run chatcmpl_11bddd69-8705-43d1-81f7-53f28ac80a75 ended with stopReason=stop
-Sep 28 19:20:59 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-28T19:20:59.008+08:00 [ws] ⇄ res ✓ health 64ms conn=7822612c…bc12 id=32d1f7d0…409b
-Sep 28 19:21:15 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-28T19:21:15.199+08:00 [ws] ⇄ res ✗ system-presence 2ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=2c9439a7…b2d7 id=9dcd9768…a8a3
-Sep 28 19:21:34 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-28T19:21:34.832+08:00 [ws] ⇄ res ✗ status 2ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=a29fc077…0ce2 id=d8dd67e1…b9e3
-Sep 28 19:21:34 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-28T19:21:34.842+08:00 [ws] ⇄ res ✗ system-presence 15ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=a29fc077…0ce2 id=6b87d9f0…54d0
-Sep 28 19:21:34 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-09-28T19:21:34.851+08:00 [ws] ⇄ res ✗ config.get 22ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=a29fc077…0ce2 id=719263fa…4f37
+Oct 06 19:01:21 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-10-06T19:01:21.882+08:00 [openai-transport] [responses] error provider=xai api=openai-responses model=grok-4.6 name=Error status=undefined code=undefined type=undefined causeName=undefined causeCode=undefined message=Request was aborted
+Oct 06 19:01:22 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-10-06T19:01:22.681+08:00 [agent/embedded] embedded run failover decision: runId=chatcmpl_f9cdda56-e5bd-45e9-921e-16cda4c7667f stage=assistant decision=surface_error reason=none from=xai/grok-4.6 profile=sha256:2ff640b124a6 rawError=Request was aborted
+Oct 06 19:01:25 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-10-06T19:01:25.341+08:00 [provider-transport-fetch] [model-fetch] start provider=xai api=openai-responses model=grok-4.6 method=POST url=https://api.x.ai/v1/responses timeoutMs=10800000 proxy=none policy=custom
+Oct 06 19:01:26 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-10-06T19:01:26.032+08:00 [provider-transport-fetch] [model-fetch] response provider=xai api=openai-responses model=grok-4.6 status=200 elapsedMs=691 contentType=text/event-stream
+Oct 06 19:01:40 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-10-06T19:01:40.231+08:00 LLM request failed.
+Oct 06 19:01:40 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-10-06T19:01:40.252+08:00 [agents/agent-command] [agent] run chatcmpl_f9cdda56-e5bd-45e9-921e-16cda4c7667f ended with stopReason=aborted
+Oct 06 19:02:37 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-10-06T19:02:37.563+08:00 [ws] ⇄ res ✗ system-presence 1ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=652d27bd…f57f id=4166f567…2af9
+Oct 06 19:02:57 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-10-06T19:02:57.453+08:00 [ws] ⇄ res ✗ status 2ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=416820b6…3cc6 id=3c3ffda2…a152
+Oct 06 19:02:57 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-10-06T19:02:57.465+08:00 [ws] ⇄ res ✗ system-presence 14ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=416820b6…3cc6 id=6f4dc322…4a44
+Oct 06 19:02:57 iZt4nagf215582ts0wf5jcZ openclaw[1608979]: 2026-10-06T19:02:57.482+08:00 [ws] ⇄ res ✗ config.get 25ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=416820b6…3cc6 id=d079fe43…b2ed
 ```
 ### expected next 05:55 America/New_York vs systemd Next
 ```
-now ET: 2026-09-28T07:22:02.968596-04:00
-next weekday 05:55 ET: 2026-09-29T05:55:00-04:00
-next as CST: 2026-09-29T17:55:00+08:00
-hours until: 22.55
+now ET: 2026-10-06T07:03:25.408898-04:00
+next weekday 05:55 ET: 2026-10-07T05:55:00-04:00
+next as CST: 2026-10-07T17:55:00+08:00
+hours until: 22.86
 ```
 
 ## 6. Live chat ping (gateway actually answers)
@@ -481,7 +481,7 @@ Short completion against /v1/chat/completions. 90s cap. Proves the
 running process will take a Grok turn. Does NOT soak 9 minutes.
 
 ```
-/v1/chat/completions HTTP 200 in 18.1s
+/v1/chat/completions HTTP 200 in 31.3s
 content: PONG
 model: openclaw/default
 PING_RESULT=PONG_OK
@@ -489,11 +489,11 @@ PING_RESULT=PONG_OK
 
 ## 7. Verdict (live, this run)
 
-systemd NextElapseUSecRealtime: Tue 2026-09-29 17:55:00 CST
-systemd TimersCalendar: { OnCalendar=Mon..Fri *-*-* 05:55:00 America/New_York ; next_elapse=Tue 2026-09-29 17:55:00 CST }
+systemd NextElapseUSecRealtime: Wed 2026-10-07 17:55:00 CST
+systemd TimersCalendar: { OnCalendar=Mon..Fri *-*-* 05:55:00 America/New_York ; next_elapse=Wed 2026-10-07 17:55:00 CST }
 systemd Persistent: yes
-expect next 05:55 ET: 2026-09-29T05:55:00-04:00
-now ET: 2026-09-28T07:22:21.410523-04:00
+expect next 05:55 ET: 2026-10-07T05:55:00-04:00
+now ET: 2026-10-06T07:03:57.078586-04:00
 fullscan-openclaw-gateway: active
 
 OK:

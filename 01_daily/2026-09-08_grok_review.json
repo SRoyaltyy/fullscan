@@ -1,19 +1,23 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-17T23:48:10.711518-04:00",
+  "generated_at": "2026-10-06T15:41:38.956014-04:00",
   "ok": false,
   "fails": [
     {
+      "path": "01_daily/news/2026-09-08_parsed.json",
+      "reason": "Wrong date / stale scan: generated_at 2026-10-06, median_published 2026-10-05, and top items published Oct 5-6 2026 \u2014 the news set is a month after the 2026-09-08 session, not a same-day scan (the actions.json itself flags this as 'Wrong date')."
+    },
+    {
       "path": "01_daily/sectors/2026-09-08/technology_predict.md",
-      "reason": "Wrong date / carry-forward: body is explicitly for 2026-09-18 (header 'Sector Environment Analysis \u2014 2026-09-18', Channel 1 tape 'through 2026-09-17', FOMC printed 09-16, BOJ hiked 09-18, Apple iPhone 18 availability TODAY 09-18, HIT_GRID dated 2026-09-18). Not a same-day 2026-09-08 artifact."
+      "reason": "Wrong date: body is explicitly about the 2026-09-18 session (FOMC printed 09-16, BOJ hiked 09-18, Apple iPhone 18 availability 09-18, tape 'through 2026-09-17'), not 2026-09-08."
     },
     {
       "path": "01_daily/sectors/2026-09-08/utilities_predict.md",
-      "reason": "Wrong date / carry-forward: body is for 2026-09-18 (header 'Utilities (XLU) \u2014 2026-09-18', tape 'through 2026-09-17', post-FOMC 09-16/09-17 discussion, triple-witching 09-18, HIT_GRID dated 2026-09-18). Not a same-day 2026-09-08 artifact."
+      "reason": "Wrong date: body is explicitly about the 2026-09-18 session (post-FOMC 09-17 tape, triple witching 09-18, tape 'through 2026-09-17'), not 2026-09-08."
     }
   ],
-  "notes": "Core packet is otherwise a real, same-day 2026-09-08 set: general predict takes a clear DOWN/mild direction with MEMORY_CONFIRM/SCORES markers, events JSON is a genuine scan_date 2026-09-08 scan, news judge/parse are complete and same-day, finviz digest and map-heat tables are populated with a live futures tape, and 9 of 11 sector essays are quality-ok. Two sector files (technology, utilities) are stale carry-forwards of the 2026-09-18 session and fail. map_heat_baseline/research are present (research phase is a morning refresh with 142 cards, so no bootstrap exemption applies); the research.md notes a failed morning delta refresh falling back to last night's cards, which is noted but not itself a fail. The missing finviz_market_digest_close.json is a post-close artifact and not required p",
-  "prompt_chars": 230705,
-  "reply_chars": 1529,
+  "notes": "Core general predict, events JSON, news judge, finviz digests, and map-heat tables are same-day and usable; news_actions is optional and its stale_news flag is consistent with the parsed.json problem. Two sector essays (technology, utilities) are carry-forward from the 2026-09-18 session and are failed, but 9 of 11 sector essays are quality-ok same-day artifacts, so the sector minimum is met. The decisive failure is news_parse: it is a month-late scan (Oct 5-6 items) masquerading as the 2026-09-08 packet, which is a required core file. map_heat_research shows phase=morning_refresh with a failed delta refresh falling back to last night's cards (142 cards, so card-count is fine), noted but not itself a fail.",
+  "prompt_chars": 230725,
+  "reply_chars": 1540,
   "reviewer": "grok-4.6-text"
 }

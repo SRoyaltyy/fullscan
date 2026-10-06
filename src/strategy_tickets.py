@@ -1277,6 +1277,11 @@ def write(date: str, payload: dict | None = None, now: datetime | None = None) -
     text = json.dumps(payload, indent=2)
     dated = DAY / f"{date}_strategy_tickets.json"
     reason = dated_tickets_lock_reason(date, now) if dated.is_file() else None
+    from . import past_day_lock as pdl
+    pdl.assert_ticket(
+        date, dated, text,
+        keep_existing=bool(reason and dated.is_file() and dated.read_text(encoding="utf-8") != text),
+    )
     refuse = False
     frozen = b""
     write.last_lock = None
@@ -1401,6 +1406,12 @@ def write(date: str, payload: dict | None = None, now: datetime | None = None) -
         flush=True,
     )
     _freeze_send_inputs(date, payload, now)
+    if dated.is_file():
+        from . import past_day_lock as pdl
+        pdl.seal_ticket(
+            date, dated,
+            locked=dated_tickets_lock_reason(date, now) is not None,
+        )
     return wrote
 
 

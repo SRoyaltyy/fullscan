@@ -1,10 +1,29 @@
 """Prepare sandbox orders; submit the paper batch when decisions are ready.
 
-Ready-publish may place standing MARKET/CORE/DAY orders before 09:30 ET.
+The seal path may place standing MARKET/CORE/DAY orders before 09:30 ET.
 Webull paper keeps those SUBMITTED (filled_qty=0) until RTH, then fills at
-the open — proven by STANDTEST-20260918-1789726292. The 09:30 wait path is
-a warm fallback only. Journal + stable client_order_id prevent a re-fire
-from double-placing. Acknowledgment is not a fill promise.
+the open — proven by STANDTEST-20260918-1789726292. At 09:30:00 or later
+a standing submit places nothing and records ``missed_deadline``. The bell
+path is the ECS backstop only: it may release inside the 0–2s window when
+it armed before the bell. A start at or after 09:30 records
+``missed_deadline`` and places nothing. A ticket republish or a stock-book
+rebuild does not submit.
+
+The day's ``<date>_status.json`` is append-only once it holds
+``missed_deadline`` or a submitted record. A later run adds an ``events``
+entry and leaves that first record intact.
+
+The send list is that session's sealed tickets only. Sandbox positions
+are not compared to the sealed book to fail the day or to add a
+catch-up order. A sealed sell the account does not hold is
+``drift-skipped`` and is not sent. Drift is appended to
+``data/paper_open/drift_log.jsonl``.
+
+Before any submit, the sandbox open and filled book is queried. Orders
+already there (derived client_order_id, or the same symbol and side) are
+not sent again. A failed query places nothing.
+The id is ``h1-{date}-{ticker}-{buy|sell}`` and does not depend on a
+saved file. Acknowledgment is not a fill promise.
 
 Serial BUY legs are clamped to sandbox cash still free after earlier
 acks in the same batch. Hot4 plans are sized with a slip haircut so a
@@ -12,8 +31,11 @@ pre-open snapshot that has not moved yet still leaves the last leg
 fundable when the open prints above the plan px.
 
 No feature building, dependency installation or Pages deployment on the
-send path. Paper host only. Submit refuses when published HOT4 buys
-or sells diverge from the Factor Mine cash-start recipe for that date.
+send path. Paper host only. The send list is the sealed h1 new-buy
+set for that session (same book ``webull_exec`` uses): picks the open
+fill would buy, not every name on the plan card. A Factor Mine HOT4
+rebuild is not the order list. A carry-name buy, or paper cash that
+cannot fund the sealed buy notionals, fails closed.
 
 00_grounding/paper_flatten.json names one ET date. On that date the
 paper host cancels open orders and sells every lot (MARKET/CORE/DAY).
@@ -31,13 +53,25 @@ import urllib.error
 import urllib.request
 from zoneinfo import ZoneInfo
 
-from . import webull_exec as we
+from . import paper_drift, webull_exec as we
 from .open_0930_clock import is_session_day
 ET = ZoneInfo('America/New_York')
 ROOT = Path(__file__).resolve().parent.parent
 STANDING_OPEN_HOUR = 4   # CORE session; STANDTEST accepted 06:20 ET
 STANDING_CLOSE_HOUR = 16
-OK_STATUSES = ('acknowledged', 'no_trade', 'dry_run')
+OK_STATUSES = ('acknowledged', 'no_trade', 'dry_run', 'already_submitted')
+# First record stays. Later runs append to ``events`` instead of replacing it.
+# dry_run / armed / blocked stay replaceable so the morning loop can still
+# move from armed to the real submit, and a dry-run cannot lock the day.
+LOCKED_STATUSES = frozenset({
+    'missed_deadline',
+    'acknowledged',
+    'already_submitted',
+    'failed',
+    'no_trade',
+    'releasing',
+})
+SEAL_SENDER = 'seal'
 FLATTEN_FLAG = ROOT / '00_grounding' / 'paper_flatten.json'
 FLATTEN_MODE = 'flatten_account'
 
@@ -60,6 +94,63 @@ def atomic_json(path, value):
         os.fsync(fd)
     finally:
         os.close(fd)
+
+
+def read_status(path):
+    path = Path(path)
+    if not path.is_file():
+        return None
+    try:
+        doc = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None
+    return doc if isinstance(doc, dict) else None
+
+
+def status_locked(doc) -> bool:
+    """True when this file is the day's missed or submitted record."""
+    if not isinstance(doc, dict):
+        return False
+    if doc.get('status') in LOCKED_STATUSES:
+        return True
+    if doc.get('submit') is True and isinstance(doc.get('sent'), list) and doc.get('sent'):
+        return True
+    return False
+
+
+def _status_event(record, source):
+    event = {
+        'at': (record.get('observed_at') or record.get('prepared_at')
+               or record.get('at') or datetime.now(ET).isoformat()),
+        'status': record.get('status'),
+        'submit': bool(record.get('submit')),
+        'standing': bool(record.get('standing')),
+        'source': source,
+    }
+    note = record.get('note') or record.get('error')
+    if note:
+        event['note'] = str(note)[:400]
+    return event
+
+
+def write_status(path, record, *, source='paper_open'):
+    """Create the first record, or append an event once it is locked.
+
+    A missed_deadline or submitted record is never replaced. The new
+    attempt is an entry on ``events``. Armed, blocked, and dry-run
+    notes are still replaced by the first real outcome.
+    """
+    path = Path(path)
+    existing = read_status(path)
+    if status_locked(existing):
+        merged = dict(existing)
+        events = [row for row in (merged.get('events') or []) if isinstance(row, dict)]
+        events.append(_status_event(record, source))
+        merged['events'] = events
+        atomic_json(path, merged)
+        return merged
+    atomic_json(path, record)
+    return record
 
 
 def _flat_hot4_sit(rec) -> bool:
@@ -85,18 +176,18 @@ def validate_payload(payload, date, clock, *, allow_after_bell=False):
     if completed.tzinfo is None or completed > limit:
         raise ValueError('decision completed after decision clock')
     rec = (payload.get('strategies') or {}).get(we.HOT4) or {}
-    if rec.get('date') != date or rec.get('status') not in ('ok', 'sit'):
-        raise ValueError('hot4 missing, stale or incomplete')
-    # status ok, and a sit that still has orders, keep requiring a finite s.
-    if not _flat_hot4_sit(rec):
-        score = float(rec.get('s'))
-        if not math.isfinite(score):
-            raise ValueError('unknown market regime')
+    # The published HOT4 row is a readiness signal only. Its buy and sell
+    # names are not the order list — the sealed h1 plan is.
+    if rec:
+        if rec.get('date') != date or rec.get('status') not in ('ok', 'sit'):
+            raise ValueError('hot4 missing, stale or incomplete')
+        # status ok, and a sit that still has orders, keep requiring a finite s.
+        if not _flat_hot4_sit(rec):
+            score = float(rec.get('s'))
+            if not math.isfinite(score):
+                raise ValueError('unknown market regime')
     if payload.get('look', {}).get('stale'):
         raise ValueError('stale factor look')
-    from . import strategy_tickets as st
-    st.assert_hot4_wire(
-        date, rec.get('buy') or [], sells=rec.get('sell') or [])
     return rec
 
 
@@ -177,14 +268,12 @@ def _empty_sit_plan(payload, snap, clock):
 def make_plan(payload, snap, clock, *, allow_after_bell=False):
     date = clock.date().isoformat()
     rec = validate_payload(payload, date, clock, allow_after_bell=allow_after_bell)
+    del rec  # sealed plan, not the published HOT4 buy/sell lists
     if not snap.connected:
         raise ValueError(snap.error or 'broker disconnected')
-    # Flat sit has nothing to buy or sell. Do not size, and do not load regime.
-    if _flat_hot4_sit(rec):
-        return _empty_sit_plan(payload, snap, clock)
     card = we.plan_hot4_for_broker(date, snap, payload=payload)
     if card.get('stale') or card.get('look_error'):
-        raise ValueError('stale or failed hot4 plan')
+        raise ValueError(card.get('look_error') or 'stale or failed sealed h1 plan')
     bad = [x for x in card.get('skipped', []) if x.get('kind') in ('cash', 'no_price')]
     if bad:
         raise ValueError('cannot fund/price planned entries: ' + ', '.join(x['ticker'] for x in bad))
@@ -193,12 +282,49 @@ def make_plan(payload, snap, clock, *, allow_after_bell=False):
             'cash': snap.cash, 'n_positions': len(snap.positions)}
 
 
+def _account_positions(api):
+    """Sandbox lots, or None when the snapshot cannot be read.
+
+    A failed read is not treated as an empty account, so a sealed sell
+    is not drift-skipped just because the query failed. The caller does
+    not fail the day on that miss.
+    """
+    snap_fn = getattr(api, 'snapshot', None)
+    if not callable(snap_fn):
+        return None
+    try:
+        snap = snap_fn()
+    except Exception:
+        return None
+    if snap is None or not getattr(snap, 'connected', False):
+        return None
+    return getattr(snap, 'positions', None) or {}
+
+
+def _load_session_orders(api, date):
+    """Open and filled sandbox orders. Missing or failed query raises."""
+    if getattr(api, 'host', None) != we.PAPER_HOST:
+        raise RuntimeError('paper-open refuses any non-sandbox host')
+    fn = getattr(api, 'list_session_orders', None)
+    if not callable(fn):
+        raise RuntimeError('sandbox order query is not available')
+    rows = fn(date)
+    if not isinstance(rows, list):
+        raise RuntimeError('sandbox order query returned no order list')
+    return rows
+
+
 def _place_batch(result, api, tickets):
     try:
         # Serial single places (sandbox rejects multi-order combo_type).
         # place_batch may shrink a later BUY to cash still free, or skip it.
+        # Rows already on the book stay already_submitted and are not in tickets.
         replies = api.place_batch(tickets)
+        fresh = []
         for row in result['sent']:
+            if row.get('status') in ('already_submitted', paper_drift.DRIFT_SKIPPED):
+                continue
+            fresh.append(row)
             got = replies.get(row['client_order_id'], {})
             row.update(got)
             if got.get('skipped'):
@@ -206,17 +332,22 @@ def _place_batch(result, api, tickets):
                 row['ok'] = True
             else:
                 row['status'] = 'acknowledged' if got.get('ok') else 'rejected_or_unknown'
-        if any(not row.get('ok') for row in result['sent']):
+        if any(not row.get('ok') for row in fresh):
             result['status'] = 'failed'
-        elif result['sent'] and all(row.get('skipped') for row in result['sent']):
+        elif fresh and all(row.get('skipped') for row in fresh):
             result['status'] = 'no_trade'
+        elif not fresh and result['sent']:
+            result['status'] = 'already_submitted'
     except Exception:
         result['status'] = 'failed'
         for row in result['sent']:
+            if row.get('status') == 'already_submitted':
+                continue
             row.update(status='unknown', ok=False, error='submission outcome unknown; reconcile broker')
 
 
-def release(plan, api, clock, journal, *, submit, max_late=2, standing=False):
+def release(plan, api, clock, journal, *, submit, max_late=2, standing=False,
+            reconcile=True):
     """Durable before-send intent: an ambiguous send is never blindly retried."""
     current = clock()
     target = current.replace(hour=9, minute=30, second=0, microsecond=0)
@@ -235,39 +366,121 @@ def release(plan, api, clock, journal, *, submit, max_late=2, standing=False):
     journal = Path(journal)
     if journal.exists():
         raise ValueError('session already attempted; reconcile broker before any retry')
+    # Standing orders rest for the open. At the bell they would fill the
+    # live print. Do not create a submit journal for that refusal: the
+    # 2026-10-06 morning miss had no journal, and a later standing run
+    # must not look like a fresh attempt that replaces it.
+    if standing and current >= target:
+        if getattr(api, 'host', None) != we.PAPER_HOST:
+            raise ValueError('paper-open refuses any non-sandbox host')
+        return {**plan, 'target_at': target.isoformat(), 'submit': False,
+                'standing': True, 'status': 'missed_deadline', 'sent': [],
+                'fill_status': 'not_observed', 'host': we.PAPER_HOST,
+                'observed_at': current.isoformat()}
     result = {**plan, 'target_at': target.isoformat(), 'submit': submit,
               'standing': standing, 'status': 'releasing' if submit else 'dry_run',
               'sent': [], 'fill_status': 'not_observed', 'host': we.PAPER_HOST}
     if api.host != we.PAPER_HOST:
         raise ValueError('paper-open refuses any non-sandbox host')
+    tickets = [
+        ticket for ticket in (plan['card'].get('tickets') or [])
+        if isinstance(ticket, dict)
+    ]
+    # Flatten already sells the lots the account holds. Drift handling is
+    # only for the sealed h1 list, and it must not add another snapshot
+    # or drop those sells.
+    if plan.get('mode') == FLATTEN_MODE:
+        sendable, drift_skipped, foreign, drift_warning = tickets, [], [], None
+    else:
+        positions = _account_positions(api)
+        sendable, drift_skipped, foreign, drift_warning = paper_drift.partition_tickets(
+            tickets, positions, plan['date'], positions_known=positions is not None)
+    if drift_warning is not None:
+        drift_warning['at'] = current.isoformat()
+        drift_warning['source'] = 'standing' if standing else 'bell'
+        paper_drift.append_drift(drift_warning, Path(journal).parent / 'drift_log.jsonl')
+    found = []
+    missing = sendable
+    # Broker book before any journal. A crash after the place, and before
+    # this file existed, must not send those orders again. A failed query
+    # places nothing and does not lock the session.
+    if submit and sendable and reconcile:
+        try:
+            rows = _load_session_orders(api, plan['date'])
+        except Exception as exc:
+            result['status'] = 'query_failed'
+            result['error'] = str(exc)[:400]
+            result['found'] = []
+            result['sent'] = []
+            return result
+        found, missing = we.match_sealed_orders(sendable, rows, plan['date'])
+        result['found'] = found
     # Exclusive creation plus a host lock in the caller protects local restarts.
     journal.parent.mkdir(parents=True, exist_ok=True)
     with journal.open('x') as f:
         json.dump(result, f)
-    tickets = plan['card'].get('tickets', [])
+    found_ids = {row['client_order_id']: row for row in found}
     sent_at = clock()
-    for ticket in tickets:
-        result['sent'].append({'ticker': ticket['ticker'], 'side': ticket['side'], 'shares': ticket['shares'],
-            'client_order_id': we.client_order_id(plan['date'], ticket['side'], ticket['ticker']),
+    for ticket in sendable:
+        coid = we.client_order_id(plan['date'], ticket['side'], ticket['ticker'])
+        row = {'ticker': ticket['ticker'], 'side': ticket['side'], 'shares': ticket['shares'],
+            'client_order_id': coid,
             'intent_at': sent_at.isoformat(),
-            'status': 'intent' if submit else 'dry_run'})
+            'status': 'intent' if submit else 'dry_run'}
+        hit = found_ids.get(coid)
+        if hit:
+            row['status'] = 'already_submitted'
+            row['ok'] = True
+            row['match'] = hit.get('match')
+            row['order_id'] = hit.get('order_id') or ''
+        result['sent'].append(row)
+    for row in drift_skipped + foreign:
+        coid = we.client_order_id(
+            plan['date'], row.get('side') or '', row.get('ticker') or '')
+        result['sent'].append({
+            **row,
+            'client_order_id': coid,
+            'intent_at': sent_at.isoformat(),
+            'status': paper_drift.DRIFT_SKIPPED,
+            'ok': False,
+        })
     atomic_json(journal, result)
-    if submit and tickets:
+    if submit and missing:
         sent_at = clock()
         for row in result['sent']:
+            if row.get('status') in ('already_submitted', paper_drift.DRIFT_SKIPPED):
+                continue
             row.update(submission_started_at=sent_at.isoformat(),
                        lateness_ms=(sent_at-target).total_seconds()*1000)
         if standing:
-            _place_batch(result, api, tickets)
+            if sent_at >= target:
+                result['status'] = 'missed_deadline'
+                result['submit'] = False
+                for row in result['sent']:
+                    if row.get('status') in (
+                            'already_submitted', paper_drift.DRIFT_SKIPPED):
+                        continue
+                    row.update(status='missed_deadline', ok=False)
+            else:
+                _place_batch(result, api, missing)
         elif not 0 <= (sent_at-target).total_seconds() <= max_late:
             result['status'] = 'failed'
             for row in result['sent']:
+                if row.get('status') in (
+                        'already_submitted', paper_drift.DRIFT_SKIPPED):
+                    continue
                 row.update(status='missed_deadline', ok=False)
         else:
-            _place_batch(result, api, tickets)
+            _place_batch(result, api, missing)
+    elif submit and sendable:
+        result['status'] = 'already_submitted'
     atomic_json(journal, result)
     if result['status'] == 'releasing':
-        result['status'] = 'acknowledged' if result['sent'] else 'no_trade'
+        placed = [
+            row for row in result['sent']
+            if row.get('status') != paper_drift.DRIFT_SKIPPED
+        ]
+        result['status'] = 'acknowledged' if placed else 'no_trade'
     atomic_json(journal, result)
     return result
 
@@ -337,7 +550,7 @@ def _flatten_sell_tickets(date, snap):
 
 def _abort_flatten(status_path, date, error, **extra):
     print(f'[paper-open] FLATTEN ABORT — no orders sent: {error}', flush=True)
-    atomic_json(status_path, {
+    write_status(status_path, {
         'date': date, 'status': 'blocked', 'mode': FLATTEN_MODE,
         'error': str(error), 'standing': True, **extra,
     })
@@ -357,7 +570,7 @@ def _flatten_session(*, date, clock, submit, api, status_path, journal):
     """Cancel every open paper order, then sell every lot. Never buy."""
     if not submit:
         print('[paper-open] FLATTEN due; dry-run sends nothing', flush=True)
-        atomic_json(status_path, {
+        write_status(status_path, {
             'date': date, 'status': 'dry_run', 'mode': FLATTEN_MODE, 'submit': False,
         })
         return 0
@@ -442,13 +655,14 @@ def _flatten_session(*, date, clock, submit, api, status_path, journal):
         'cancels': cancels,
     }
     try:
-        result = release(plan, api, clock, journal, submit=True, standing=True)
+        result = release(
+            plan, api, clock, journal, submit=True, standing=True, reconcile=False)
     except Exception as exc:
         return _abort_flatten(status_path, date, str(exc), cancels=cancels)
     if any(str(row.get('side') or '').upper() == 'BUY' for row in result.get('sent') or []):
         print('[paper-open] FLATTEN ABORT — buy recorded after send; reconcile broker',
               flush=True)
-        atomic_json(status_path, result)
+        write_status(status_path, result)
         return 2
     cancel_ids = ', '.join(c['order_id'] for c in cancels) or 'none'
     sell_ids = ', '.join(
@@ -456,9 +670,37 @@ def _flatten_session(*, date, clock, submit, api, status_path, journal):
         for row in result.get('sent') or []) or 'none'
     print(f'[paper-open] FLATTEN {date}: status={result["status"]} '
           f'cancelled=[{cancel_ids}] sells=[{sell_ids}]', flush=True)
-    atomic_json(status_path, result)
+    write_status(status_path, result)
     we.write_last(result)
     return 2 if result['status'] == 'failed' else 0
+
+
+def _refuse_locked(status_path, existing, current, *, source, standing=False):
+    """Append a no-send event. The first missed or submitted record stays."""
+    late = we.at_or_after_open_deadline(current)
+    write_status(status_path, {
+        'date': existing.get('date') or current.date().isoformat(),
+        'status': 'missed_deadline' if late else 'refused_existing_record',
+        'observed_at': current.isoformat(),
+        'submit': False,
+        'standing': standing,
+        'note': 'day record kept; no order sent',
+    }, source=source)
+    print('[paper-open] day record kept; no order sent', flush=True)
+    return 0 if existing.get('status') in OK_STATUSES else 2
+
+
+def _record_missed(status_path, date, current, *, source, standing=False):
+    write_status(status_path, {
+        'date': date,
+        'status': 'missed_deadline',
+        'observed_at': current.isoformat(),
+        'submit': False,
+        'standing': standing,
+    }, source=source)
+    print('[paper-open] at or after 09:30 ET; missed_deadline, no order sent',
+          flush=True)
+    return 2
 
 
 def _maybe_flatten(current, *, date, clock, submit, api, status_path, journal):
@@ -495,19 +737,26 @@ def run(*, submit=False, clock=now, sleep=time.sleep, loader=load_published, api
             # Ready-publish, the second DST fallback, or a restart must
             # preserve the first attempt rather than replace it.
             print('[paper-open] session already attempted; no resend', flush=True)
+            existing = read_status(status_path)
+            if status_locked(existing):
+                _refuse_locked(status_path, existing, current, source='run')
             return 0 if prior.get('status') in OK_STATUSES else 2
+        existing = read_status(status_path)
+        if status_locked(existing):
+            return _refuse_locked(status_path, existing, current, source='run')
+        # A start at or after the bell does not wait and does not sell a
+        # flatten. The backstop is the path that armed before 09:30.
+        if current >= target:
+            return _record_missed(status_path, date, current, source='run')
         # Flagged ET date only. Any other date keeps the bell path below.
         flattened = _maybe_flatten(
             current, date=date, clock=clock, submit=submit, api=api,
             status_path=status_path, journal=journal)
         if flattened is not None:
             return flattened
-        if current >= target:
-            atomic_json(status_path, {'date': date, 'status': 'missed_deadline', 'observed_at': current.isoformat()})
-            return 2
         api = api or we.PaperAPI('paper')
         if not api.connect():
-            atomic_json(status_path, {'date': date, 'status': 'broker_unavailable', 'error': api.err})
+            write_status(status_path, {'date': date, 'status': 'broker_unavailable', 'error': api.err})
             return 2
         plan = None
         error = 'waiting for inputs'
@@ -517,47 +766,47 @@ def run(*, submit=False, clock=now, sleep=time.sleep, loader=load_published, api
                 payload = loader(date)
                 snap = api.snapshot()
                 plan = make_plan(payload, snap, clock())
-                atomic_json(status_path, {**plan, 'status': 'armed'})
+                write_status(status_path, {**plan, 'status': 'armed'})
                 error = ''
             except Exception as exc:
                 plan = None  # never keep a previously valid plan after a failed refresh
                 error = str(exc)
-                atomic_json(status_path, {'date': date, 'status': 'blocked', 'error': error})
+                write_status(status_path, {'date': date, 'status': 'blocked', 'error': error})
             remaining = (target-clock()).total_seconds()
             if remaining > 5:
                 sleep(min(15, max(.05, remaining-5)))
         if plan is None:
-            atomic_json(status_path, {'date': date, 'status': 'not_ready_at_open', 'error': error})
+            write_status(status_path, {'date': date, 'status': 'not_ready_at_open', 'error': error})
             return 2
         while clock() < target:
             sleep(min(.1, max(0, (target-clock()).total_seconds())))
         prior = existing_attempt(journal, date, submit)
         if prior is not None:
             print('[paper-open] session already attempted; no resend', flush=True)
-            atomic_json(status_path, prior)
+            write_status(status_path, prior)
             return 0 if prior.get('status') in OK_STATUSES else 2
         try:
             result = release(plan, api, clock, journal, submit=submit)
         except Exception as exc:
-            atomic_json(status_path, {'date': date, 'status': 'blocked', 'error': str(exc)})
+            write_status(status_path, {'date': date, 'status': 'blocked', 'error': str(exc)})
             return 2
-        atomic_json(status_path, result)
+        write_status(status_path, result)
         we.write_last(result)
-        return 2 if result['status'] == 'failed' else 0
+        return 2 if result['status'] in ('failed', 'query_failed', 'missed_deadline') else 0
 
 
 def submit_ready(*, submit=True, clock=now, loader=None, api=None, state_dir=None,
                  payload=None):
-    """Same-workflow ready publish: place standing paper now. No bell wait."""
+    """Seal path: standing paper before 09:30 ET. No bell wait.
+
+    At or after 09:30 this records ``missed_deadline`` and places nothing.
+    It does not replace a missed or submitted status already on disk.
+    """
     import fcntl
     current = clock()
     date = current.date().isoformat()
     if not is_session_day(current):
         print('[paper-open] not a session day; skip ready submit', flush=True)
-        return 0
-    if not STANDING_OPEN_HOUR <= current.hour < STANDING_CLOSE_HOUR:
-        print('[paper-open] outside standing CORE/DAY window (04:00–16:00 ET); skip',
-              flush=True)
         return 0
     state = Path(state_dir or os.environ.get('PAPER_OPEN_STATE', ROOT / 'data/paper_open'))
     state.mkdir(parents=True, exist_ok=True)
@@ -571,7 +820,24 @@ def submit_ready(*, submit=True, clock=now, loader=None, api=None, state_dir=Non
         prior = existing_attempt(journal, date, submit)
         if prior is not None:
             print('[paper-open] session already attempted; no resend', flush=True)
+            existing = read_status(status_path)
+            if status_locked(existing):
+                _refuse_locked(status_path, existing, current,
+                               source='submit_ready', standing=True)
             return 0 if prior.get('status') in OK_STATUSES else 2
+        existing = read_status(status_path)
+        if status_locked(existing):
+            return _refuse_locked(status_path, existing, current,
+                                  source='submit_ready', standing=True)
+        # 2026-10-06 10:17 ET: a standing --ready after the open placed
+        # the live print. That clock submits nothing.
+        if we.at_or_after_open_deadline(current):
+            return _record_missed(status_path, date, current,
+                                  source='submit_ready', standing=True)
+        if not STANDING_OPEN_HOUR <= current.hour < STANDING_CLOSE_HOUR:
+            print('[paper-open] outside standing CORE/DAY window (04:00–16:00 ET); skip',
+                  flush=True)
+            return 0
         # Flagged ET date only. Any other date keeps the HOT4 standing path.
         flattened = _maybe_flatten(
             current, date=date, clock=clock, submit=submit, api=api,
@@ -580,36 +846,29 @@ def submit_ready(*, submit=True, clock=now, loader=None, api=None, state_dir=Non
             return flattened
         api = api or we.PaperAPI('paper')
         if not api.connect():
-            atomic_json(status_path, {'date': date, 'status': 'broker_unavailable',
+            write_status(status_path, {'date': date, 'status': 'broker_unavailable',
                                      'error': api.err, 'standing': True})
             return 2
         try:
             body = payload if payload is not None else (loader or load_local)(date)
             snap = api.snapshot()
             now = clock()
-            hot = (body.get('strategies') or {}).get(we.HOT4) or {}
-            # Flat sit: validate, journal no_trade, do not size or read regime.
-            if _flat_hot4_sit(hot):
-                validate_payload(body, date, now, allow_after_bell=True)
-                if not getattr(snap, 'connected', False):
-                    raise ValueError(getattr(snap, 'error', None) or 'broker disconnected')
-                plan = _empty_sit_plan(body, snap, now)
-            else:
-                plan = make_plan(body, snap, now, allow_after_bell=True)
-            atomic_json(status_path, {**plan, 'status': 'armed', 'standing': True})
+            # A Factor Mine flat sit does not replace the sealed h1 plan.
+            plan = make_plan(body, snap, now, allow_after_bell=True)
+            write_status(status_path, {**plan, 'status': 'armed', 'standing': True})
         except Exception as exc:
-            atomic_json(status_path, {'date': date, 'status': 'blocked',
+            write_status(status_path, {'date': date, 'status': 'blocked',
                                      'error': str(exc), 'standing': True})
             return 2
         try:
             result = release(plan, api, clock, journal, submit=submit, standing=True)
         except Exception as exc:
-            atomic_json(status_path, {'date': date, 'status': 'blocked',
+            write_status(status_path, {'date': date, 'status': 'blocked',
                                      'error': str(exc), 'standing': True})
             return 2
-        atomic_json(status_path, result)
+        write_status(status_path, result)
         we.write_last(result)
-        return 2 if result['status'] == 'failed' else 0
+        return 2 if result['status'] in ('failed', 'query_failed', 'missed_deadline') else 0
 
 
 def load_owner_record():
@@ -633,14 +892,27 @@ def main(argv=None):
     p = argparse.ArgumentParser()
     p.add_argument('--submit', action='store_true')
     p.add_argument('--ready', action='store_true',
-                   help='submit immediately after ready publish; standing MARKET/CORE/DAY OK before 09:30')
+                   help='seal path only: standing MARKET/CORE/DAY before 09:30 ET')
     p.add_argument('--owner', choices=('actions', 'ecs'), default='actions')
     args = p.parse_args(argv)
     if not owner_enabled(args.owner):
         print(f'[paper-open] {args.owner} is not the configured automatic owner; skip')
         return 0
+    sender = os.environ.get('PAPER_OPEN_SENDER') or ''
     if args.ready:
+        # Ticket republish and stock-book rebuild call the same flags.
+        # Only the h1-seal workflow sets PAPER_OPEN_SENDER=seal.
+        if sender != SEAL_SENDER:
+            print('[paper-open] --ready refused; only the h1 seal sender '
+                  'may place standing orders', flush=True)
+            return 2
         return submit_ready(submit=args.submit)
+    # The bell path places only for the ECS backstop, or for the seal
+    # workflow once 09:30 has passed (that call records missed_deadline).
+    if args.submit and sender not in (SEAL_SENDER, 'backstop'):
+        print('[paper-open] --submit refused; only the h1 seal and the '
+              'ECS backstop may place orders', flush=True)
+        return 2
     return run(submit=args.submit)
 
 

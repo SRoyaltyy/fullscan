@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight_mega` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · prior-calendar AMC-today / BMO-next, mcap≥$50B; hold 1 sells at next 09:30 so the print gap is in the book
 
-Cash book **-0.88%** ($9,912) · signal-only (no cash/fees) was -15.28%. Starts YES **0/30**. Fills 25 · skips 15 · realized $-576.24.
+Cash book **-8.21%** ($9,179) · signal-only (no cash/fees) was -15.28%. Starts YES **0/30**. Fills 26 · skips 15 · realized $-576.24.
 
 ## How this sleeve decides (like you are 10)
 
@@ -165,6 +165,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-01 09:30 ET | **BUY** | `NKE` | 281 | $35.45 | $3.62 | — | $34.93 | — | prior-calendar AMC-today / BMO-next, mcap≥$50B; hold 1 sells at next 09:30 so the print gap is in the book; list overnight,overnight_mega; ret5=-1.8; leftover $10000.00 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $34.93 | ▼ close $9,912.08 vs 09:30 $10,000.00 (session -84.30) | 16:00 close · cash $34.93 · equity $9,912.08 vs 09:30 $10,000.00 (-87.92; session marks -84.30) · 1 name(s) marked open→close (per-name table). NKE×281 09:30 $35.45 → close $35.15 -84.30 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $34.93 | ▼ 09:30 equity $9,182.32 vs yday $9,912.08 (-729.76) | 09:30 open · cash $34.93 (unchanged overnight, no fees) · equity $9,182.32 vs prior close $9,912.08 (-729.76) · 1 name(s) re-marked at the open (per-name table). NKE×281 yday $35.15 → 09:30 $32.55 -729.76 | — |
+| 2026-10-02 09:30 ET | **SELL** | `NKE` | 281 | $32.55 | $3.74 | $-821.43 | $9,178.58 | ▼ -821.43 after sell → book $9,178.58; vs 09:30 mark -3.74 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,178.58 | ▲ close $9,178.58 vs 09:30 $9,182.32 (session +0.00) | 16:00 close · cash $9,178.58 · no lots left · equity $9,178.58. | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,178.58 | ▲ 09:30 equity $9,178.58 vs yday $9,178.58 (+0.00) | 09:30 open · cash $9,178.58 · no holdings · equity $9,178.58 vs prior close $9,178.58 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,178.58 | ▲ close $9,178.58 vs 09:30 $9,178.58 (session +0.00) | 16:00 close · cash $9,178.58 · no lots left · equity $9,178.58. | — |
 
 ## Not taken
 

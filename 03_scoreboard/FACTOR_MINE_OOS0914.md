@@ -4,7 +4,7 @@ Rules for this mine: [IRONCLAD_RULES.md](../IRONCLAD_RULES.md).
 
 The frozen rules are logged experiments, not keepers. `keep_bar_met` is false. 12 train fires against the 30-fire bar. Excel's luck test p=0.87.
 
-`oos0914_break10_h2_sx` made -2.42% on the 14 locked test sessions (2026-09-14 through 2026-10-01) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (SDGR) that test window was -5.66%. `oos0914_rvol_lg_h1_sx` made +1.21% on the 14 locked test sessions (2026-09-14 through 2026-10-01) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (QSI) that test window was -2.47%. `oos0914_break10_h1_sx` made -14.95% on the 14 locked test sessions (2026-09-14 through 2026-10-01) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (QSI) that test window was -18.05%. `oos0914_zero_candle_h2_sx` made +2.03% on the 14 locked test sessions (2026-09-14 through 2026-10-01) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (WGS) that test window was -0.44%.
+`oos0914_break10_h2_sx` made -3.50% on the 16 locked test sessions (2026-09-14 through 2026-10-05) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (SDGR) that test window was -6.23%. `oos0914_rvol_lg_h1_sx` made +28.25% on the 16 locked test sessions (2026-09-14 through 2026-10-05) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (SDEV) that test window was +6.28%. `oos0914_break10_h1_sx` made -15.68% on the 16 locked test sessions (2026-09-14 through 2026-10-05) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (QSI) that test window was -19.47%. `oos0914_zero_candle_h2_sx` made +6.59% on the 16 locked test sessions (2026-09-14 through 2026-10-05) after fees, versus random picks -6.87% and IWM -1.34%. Without its best stock (NAUT) that test window was +3.16%.
 
 ## Train
 
@@ -78,6 +78,8 @@ Logged experiment, not a keeper. `keep_bar_met` is false.
 | 2026-09-29 | KOD,SRFM,ZSQR,HLP | GLND,SECZ,TJGC,USDE | 58.0337 | 2.17 | 9060.14 | -2.84% | -2.34% |
 | 2026-09-30 | — | — | 0 | 2.17 | 9226.01 | +1.83% | +1.80% |
 | 2026-10-01 | PACB,QSI,PMVP,FORM | HLP,KOD,SRFM,ZSQR | 102.6382 | 136.38 | 9758.15 | +5.77% | +6.61% |
+| 2026-10-02 | SES,WOLF | — | 0.9297 | 58.38 | 10083.18 | +3.33% | +3.26% |
+| 2026-10-05 | FEAM,NNBR,IBRX | FORM,PACB,PMVP,QSI | 81.6951 | 6.26 | 9649.96 | -4.30% | -3.54% |
 
 ### `oos0914_rvol_lg_h1_sx`
 
@@ -99,6 +101,8 @@ Logged experiment, not a keeper. `keep_bar_met` is false.
 | 2026-09-29 | KOD,AGEN,NAUT,AMC | — | 38.2108 | 22.58 | 9277.79 | +3.38% | +3.59% |
 | 2026-09-30 | — | AMC,KOD | 10.9302 | 4463.4 | 9475.08 | +2.13% | +2.12% |
 | 2026-10-01 | PACB,QSI,PMVP,FORM | AGEN,NAUT | 86.5364 | 69.94 | 10121.29 | +6.82% | +7.31% |
+| 2026-10-02 | SDEV,QSI,SES,NAUT | FORM,PACB,PMVP,QSI | 141.5748 | 2.27 | 11901.7 | +17.59% | +18.00% |
+| 2026-10-05 | FEAM,WOLF,NNBR,IBRX | NAUT,QSI,SDEV,SES | 110.93 | 3.37 | 12824.7 | +7.76% | +8.11% |
 
 ### `oos0914_break10_h1_sx`
 
@@ -120,6 +124,8 @@ Logged experiment, not a keeper. `keep_bar_met` is false.
 | 2026-09-29 | KOD,SRFM,ZSQR,HLP | — | 40.3561 | 44.96 | 7978.2 | -0.67% | -0.24% |
 | 2026-09-30 | — | HLP,KOD,SRFM,ZSQR | 40.9225 | 7958.44 | 7958.44 | -0.25% | +0.18% |
 | 2026-10-01 | PACB,QSI,PMVP,FORM | — | 49.6528 | 147.67 | 8505.39 | +6.87% | +7.09% |
+| 2026-10-02 | QSI,SES,SNPS,WOLF | FORM,PACB,PMVP,QSI | 102.4018 | 81.59 | 8810.46 | +3.59% | +4.42% |
+| 2026-10-05 | FEAM,WOLF,NNBR,IBRX | QSI,SES,SNPS,WOLF | 71.8928 | 22.02 | 8431.89 | -4.30% | -3.43% |
 
 ### `oos0914_zero_candle_h2_sx`
 
@@ -141,6 +147,8 @@ Logged experiment, not a keeper. `keep_bar_met` is false.
 | 2026-09-29 | ZSQR,RGEN,PDFS,MDB | A,NTRA,RSKD,SENS | 25.255 | 246.98 | 9994.87 | -2.13% | -2.02% |
 | 2026-09-30 | — | — | 0 | 246.98 | 10114.1 | +1.19% | +1.19% |
 | 2026-10-01 | — | MDB,PDFS,RGEN,ZSQR | 13.7505 | 10202.64 | 10202.64 | +0.88% | +0.94% |
+| 2026-10-02 | PDFS,CDNA,ARHS,NAUT | — | 27.2327 | 14.47 | 10700.41 | +4.88% | +5.06% |
+| 2026-10-05 | — | — | 0 | 14.47 | 10659.14 | -0.39% | -0.38% |
 
 ## Baselines
 

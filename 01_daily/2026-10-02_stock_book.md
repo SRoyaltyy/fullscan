@@ -1,6 +1,6 @@
 # Stock book — 2026-10-02
 
-_Generated 2026-10-02T14:35:00.345419-04:00_
+_Generated 2026-10-02T19:50:50.196321-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -207,7 +207,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Catalyst overlays | **missing / not in ranker** | not in ranker — separate chart workflow |
 | Insider / politician flow | **missing / not in ranker** | no daily file in repo |
 | Industry predict | **found** | not scored (ad-hoc only) |
-| Learnings / mutable policy | **missing / not in ranker** | next predict prompt, not a ticker score |
+| Learnings / mutable policy | **found** | next predict prompt, not a ticker score |
 
 ### Sector LLM bias (1d) — 0 / empty means that essay was not run today
 
@@ -229,18 +229,18 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 
 | Topic | hit rate | n | weight |
 |-------|----------|---|--------|
-| general | 50% | 42 | ×0.85 |
-| sector:Basic Materials | 47% | 30 | ×0.85 |
-| sector:Communication Services | 21% | 29 | ×0.50 |
-| sector:Consumer Cyclical | 47% | 30 | ×0.85 |
-| sector:Consumer Defensive | 48% | 29 | ×0.85 |
-| sector:Energy | 53% | 30 | ×0.85 |
-| sector:Financial | 45% | 29 | ×0.50 |
-| sector:Healthcare | 50% | 26 | ×0.85 |
-| sector:Industrials | 34% | 29 | ×0.50 |
-| sector:Real Estate | 55% | 29 | ×1.00 |
-| sector:Technology | 39% | 28 | ×0.50 |
-| sector:Utilities | 41% | 27 | ×0.50 |
+| general | 51% | 43 | ×0.85 |
+| sector:Basic Materials | 45% | 31 | ×0.85 |
+| sector:Communication Services | 23% | 30 | ×0.50 |
+| sector:Consumer Cyclical | 45% | 31 | ×0.85 |
+| sector:Consumer Defensive | 50% | 30 | ×0.85 |
+| sector:Energy | 52% | 31 | ×0.85 |
+| sector:Financial | 47% | 30 | ×0.85 |
+| sector:Healthcare | 48% | 27 | ×0.85 |
+| sector:Industrials | 33% | 30 | ×0.50 |
+| sector:Real Estate | 53% | 30 | ×0.85 |
+| sector:Technology | 38% | 29 | ×0.50 |
+| sector:Utilities | 39% | 28 | ×0.50 |
 
 ## Horizon weights — book_policy.json v15
 

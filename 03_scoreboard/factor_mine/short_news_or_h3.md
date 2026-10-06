@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short packet🔴 OR headline🔴
 
-Cash book **-14.87%** ($8,513) · signal-only (no cash/fees) was -1.39%. Starts YES **0/30**. Fills 115 · skips 120 · realized $+434.23.
+Cash book **-14.39%** ($8,561) · signal-only (no cash/fees) was -1.39%. Starts YES **0/30**. Fills 119 · skips 120 · realized $+434.23.
 
 ## How this sleeve decides (like you are 10)
 
@@ -255,6 +255,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SHORT** | `PYXS` | 909 | $2.31 | $11.95 | — | $10,488.03 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list yday_mover; 🔵; ret5=-27.6; leftover $2100.05 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **SHORT** | `NKE` | 59 | $35.45 | $2.25 | — | $12,577.33 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list overnight,overnight_mega; ret5=-1.8; leftover $2100.05 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,577.33 | ▲ close $8,512.77 vs 09:30 $8,415.09 (session +126.78) | 16:00 close · cash $12,577.33 · equity $8,512.77 vs 09:30 $8,415.09 (+97.68; session marks +126.78) · 2 name(s) marked open→close (per-name table). PYXS×909 09:30 $2.31 → close $2.19 +109.08; NKE×59 09:30 $35.45 → close $35.15 +17.70 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,577.33 | ▲ 09:30 equity $8,647.81 vs yday $8,512.77 (+135.04) | 09:30 open · cash $12,577.33 (unchanged overnight, no fees) · equity $8,647.81 vs prior close $8,512.77 (+135.04) · 2 name(s) re-marked at the open (per-name table). NKE×59 yday $35.15 → 09:30 $32.55 +153.22; PYXS×909 yday $2.19 → 09:30 $2.21 -18.18 | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,577.33 | ▼ close $8,633.74 vs 09:30 $8,647.81 (session -14.07) | 16:00 close · cash $12,577.33 · equity $8,633.74 vs 09:30 $8,647.81 (-14.07; session marks -14.07) · 2 name(s) marked open→close (per-name table). NKE×59 09:30 $32.55 → close $33.87 -77.70; PYXS×909 09:30 $2.21 → close $2.14 +63.63 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,577.33 | ▲ 09:30 equity $8,654.87 vs yday $8,633.74 (+21.13) | 09:30 open · cash $12,577.33 (unchanged overnight, no fees) · equity $8,654.87 vs prior close $8,633.74 (+21.13) · 2 name(s) re-marked at the open (per-name table). NKE×59 yday $33.87 → 09:30 $33.82 +2.95; PYXS×909 yday $2.14 → 09:30 $2.12 +18.18 | — |
+| 2026-10-05 09:30 ET | **SHORT** | `MXL` | 10 | $106.00 | $2.07 | — | $13,635.26 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list yday_gainer,yday_mover,ohlc_hot; ret5=+12.9; leftover $1081.86 | join🟡 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `TER` | 2 | $447.21 | $2.04 | — | $14,527.64 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list ohlc_hot; ret5=+12.7; leftover $1081.86 | join🟢 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `SG` | 117 | $9.24 | $2.40 | — | $15,606.32 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list ohlc_hot; ret5=+10.4; leftover $1081.86 | join🟡 sector🟢 gen🟡 news🔴 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 09:30 ET | **SHORT** | `AXTI` | 12 | $87.00 | $2.07 | — | $16,648.19 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list ohlc_hot; ret5=+8.8; leftover $1081.86 | join🟢 sector🟢 gen🟡 news🔴 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,648.19 | ▼ close $8,560.98 vs 09:30 $8,654.87 (session -85.31) | 16:00 close · cash $16,648.19 · equity $8,560.98 vs 09:30 $8,654.87 (-93.89; session marks -85.31) · 6 name(s) marked open→close (per-name table). NKE×59 09:30 $33.82 → close $33.96 -8.26; PYXS×909 09:30 $2.12 → close $2.24 -109.08; MXL×10 09:30 $106.00 → close $105.49 +5.10; TER×2 09:30 $447.21 → close $444.53 +5.36; SG×117 09:30 $9.24 → close $9.09 +17.55; AXTI×12 09:30 $87.00 → close $86.66 +4.02 | — |
 
 ## Not taken
 

@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 1.38,
+      "shares": 1519,
+      "side": "BUY",
+      "ticker": "QSI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 0.86,
+      "shares": 2438,
+      "side": "BUY",
+      "ticker": "SES"
+    },
+    {
+      "fill_rule": "open",
+      "price": 497.855,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "SNPS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 32.35,
+      "shares": 64,
+      "side": "BUY",
+      "ticker": "WOLF"
+    }
+  ],
+  "cash": 81.59,
+  "date": "2026-10-02",
+  "equity": 8810.46,
+  "fees": 102.4018,
+  "fills": [
+    {
+      "fees": 2.0504,
+      "fill_rule": "open",
+      "pnl": 8.52,
+      "price": 150.5,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "FORM"
+    },
+    {
+      "fees": 11.1231,
+      "fill_rule": "open",
+      "pnl": 113.91,
+      "price": 2.5,
+      "shares": 850,
+      "side": "SELL",
+      "ticker": "PACB"
+    },
+    {
+      "fees": 15.4867,
+      "fill_rule": "open",
+      "pnl": 52.12,
+      "price": 1.75,
+      "shares": 1184,
+      "side": "SELL",
+      "ticker": "PMVP"
+    },
+    {
+      "fees": 21.6817,
+      "fill_rule": "open",
+      "pnl": 255.37,
+      "price": 1.38,
+      "shares": 1658,
+      "side": "SELL",
+      "ticker": "QSI"
+    },
+    {
+      "fees": 19.5951,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.38,
+      "shares": 1519,
+      "side": "BUY",
+      "ticker": "QSI"
+    },
+    {
+      "fees": 28.2808,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 0.86,
+      "shares": 2438,
+      "side": "BUY",
+      "ticker": "SES"
+    },
+    {
+      "fees": 2.002,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 497.855,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "SNPS"
+    },
+    {
+      "fees": 2.182,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 32.35,
+      "shares": 64,
+      "side": "BUY",
+      "ticker": "WOLF"
+    }
+  ],
+  "holdings": [
+    "QSI",
+    "SES",
+    "SNPS",
+    "WOLF"
+  ],
+  "mean": 3.5868,
+  "n_trades_today": 8,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 150.5,
+      "shares": 12,
+      "side": "SELL",
+      "ticker": "FORM"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.5,
+      "shares": 850,
+      "side": "SELL",
+      "ticker": "PACB"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.75,
+      "shares": 1184,
+      "side": "SELL",
+      "ticker": "PMVP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.38,
+      "shares": 1658,
+      "side": "SELL",
+      "ticker": "QSI"
+    }
+  ],
+  "state": {
+    "after": "2026-10-02",
+    "cash": 81.59,
+    "pos": {
+      "QSI": {
+        "close_px": 1.55,
+        "cost": 2115.8151,
+        "entry_date": "2026-10-02",
+        "entry_px": 1.38,
+        "fee_in": 19.5951,
+        "last_px": 1.38,
+        "min_hold": 1,
+        "notional": 2096.22,
+        "peak_px": 1.38,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+82.2; leftover $2097.09",
+        "shares": 1519,
+        "ticker": "QSI"
+      },
+      "SES": {
+        "close_px": 0.8847,
+        "cost": 2124.9608,
+        "entry_date": "2026-10-02",
+        "entry_px": 0.86,
+        "fee_in": 28.2808,
+        "last_px": 0.86,
+        "min_hold": 1,
+        "notional": 2096.68,
+        "peak_px": 0.86,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+54.3; leftover $2097.09",
+        "shares": 2438,
+        "ticker": "SES"
+      },
+      "SNPS": {
+        "close_px": 489.9,
+        "cost": 1993.422,
+        "entry_date": "2026-10-02",
+        "entry_px": 497.855,
+        "fee_in": 2.002,
+        "last_px": 497.855,
+        "min_hold": 1,
+        "notional": 1991.42,
+        "peak_px": 497.855,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; \u26aa; ret5=+15.4; leftover $2097.09",
+        "shares": 4,
+        "ticker": "SNPS"
+      },
+      "WOLF": {
+        "close_px": 35.28,
+        "cost": 2072.582,
+        "entry_date": "2026-10-02",
+        "entry_px": 32.35,
+        "fee_in": 2.182,
+        "last_px": 32.35,
+        "min_hold": 1,
+        "notional": 2070.4,
+        "peak_px": 32.35,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer; ret5=+18.5; leftover $2097.09",
+        "shares": 64,
+        "ticker": "WOLF"
+      }
+    },
+    "yday_equity": 8810.46
+  }
+}

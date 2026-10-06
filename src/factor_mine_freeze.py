@@ -25,7 +25,8 @@ built that day. A later rule change is a new recipe version or a
 logged ``--restate``. It does not rewrite the old file in place.
 
 Later runs read those files and append the new day. They do not rebuild
-earlier dates. ``--restate D`` is the logged correction path.
+earlier dates. ``--restate D`` may correct the session still in progress.
+A date before today is refused: a locked session cannot be rewritten.
 """
 from __future__ import annotations
 
@@ -37,6 +38,7 @@ import os
 import subprocess
 from datetime import datetime, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from . import ticker_lookback as tl
 
@@ -1922,10 +1924,17 @@ def _write_frozen(path: Path, obj: dict, slot: str, date: str, *,
     prev = (man.get(slot) or {}).get(date) or {}
     if path.is_file() and not restate:
         have = sha256_bytes(path.read_bytes())
+        if _is_past_session(date):
+            raise FrozenHistory(
+                f"{path.name} already frozen sha={have[:12]} "
+                f"(a past session cannot be restated)"
+            )
         raise FrozenHistory(
             f"{path.name} already frozen sha={have[:12]} "
             f"(pass --restate {date} to correct it)"
         )
+    if restate:
+        refuse_past_restate([date])
     if path.is_file() and restate:
         have = sha256_bytes(path.read_bytes())
         man.setdefault("restatements", []).append({
@@ -1970,6 +1979,8 @@ def write_snapshot(date: str, snap: dict, *, restate: bool = False) -> str:
 
 def write_ledger(date: str, ledger: dict, *, restate: bool = False) -> str:
     plain = LEDGER_DIR / f"{date}.json"
+    if restate:
+        refuse_past_restate([date])
     if plain.is_file() and not restate:
         raise FrozenHistory(
             f"{plain.name} already frozen "
@@ -2158,6 +2169,34 @@ def label_payload(payload: dict) -> dict:
     return payload
 
 
+def _today_et() -> str:
+    """Session date in America/New_York. Tests patch this."""
+    return datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+
+
+def _is_past_session(date: str, today: str | None = None) -> bool:
+    day = str(date or "")[:10]
+    if len(day) != 10:
+        return False
+    return day < (today or _today_et())
+
+
+def refuse_past_restate(dates) -> None:
+    """A locked session before today cannot be rewritten, logged or not."""
+    today = _today_et()
+    past = sorted({
+        str(d)[:10] for d in (dates or [])
+        if _is_past_session(d, today)
+    })
+    if not past:
+        return
+    raise SystemExit(
+        "[factor-mine] restate refuses past "
+        + ", ".join(past)
+        + "; a locked session cannot be rewritten"
+    )
+
+
 def committed_manifest() -> dict:
     rel = MANIFEST_PATH.relative_to(ROOT).as_posix()
     try:
@@ -2181,6 +2220,7 @@ def guard_manifest(old: dict | None, new: dict | None,
     old = old or {}
     new = new or {}
     allow = {str(d)[:10] for d in (restate or []) if d}
+    refuse_past_restate(allow)
     for slot in GUARD_SLOTS:
         for date, meta in (old.get(slot) or {}).items():
             if date in allow:
@@ -2190,6 +2230,11 @@ def guard_manifest(old: dict | None, new: dict | None,
             prev = (meta or {}).get("sha256")
             got = now.get("sha256")
             if prev and got != prev:
+                if _is_past_session(date):
+                    raise SystemExit(
+                        f"frozen {slot} {date} hash changed {prev} -> {got}. "
+                        "A past session cannot be restated."
+                    )
                 raise SystemExit(
                     f"frozen {slot} {date} hash changed {prev} -> {got}. "
                     f"Pass --restate {date} to log a correction."
@@ -2837,6 +2882,7 @@ def append_land(from_date: str, target: str, *, write: bool = False,
     from . import factor_mine as fm
 
     restate_set = {str(d)[:10] for d in (restate or []) if d}
+    refuse_past_restate(restate_set)
     if payload is None:
         payload = fm.load_scoreboard() if fm.OUT_JSON.is_file() else {}
     payload = dict(payload or {})

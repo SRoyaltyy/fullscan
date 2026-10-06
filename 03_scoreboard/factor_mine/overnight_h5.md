@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-20.41%** ($7,959) · signal-only (no cash/fees) was -37.95%. Starts YES **0/30**. Fills 39 · skips 179 · realized $-881.39.
+Cash book **-23.09%** ($7,690) · signal-only (no cash/fees) was -37.95%. Starts YES **0/30**. Fills 39 · skips 179 · realized $-881.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -177,6 +177,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SELL** | `SFIX` | 496 | $2.55 | $6.49 | $-231.13 | $8,030.15 | ▼ -231.13 after sell → book $8,030.15; vs 09:30 mark -6.49 | exit unpriced hold on first bar after 6 sess | — |
 | 2026-10-01 09:30 ET | **BUY** | `NKE` | 226 | $35.45 | $2.92 | — | $15.54 | — | baseline list, no extra gate; list overnight,overnight_mega; ret5=-1.8; leftover $8030.15 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.54 | ▼ close $7,959.44 vs 09:30 $8,045.23 (session -67.80) | 16:00 close · cash $15.54 · equity $7,959.44 vs 09:30 $8,045.23 (-85.79; session marks -67.80) · 1 name(s) marked open→close (per-name table). NKE×226 09:30 $35.45 → close $35.15 -67.80 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.54 | ▼ 09:30 equity $7,372.52 vs yday $7,959.44 (-586.92) | 09:30 open · cash $15.54 (unchanged overnight, no fees) · equity $7,372.52 vs prior close $7,959.44 (-586.92) · 1 name(s) re-marked at the open (per-name table). NKE×226 yday $35.15 → 09:30 $32.55 -586.92 | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.54 | ▲ close $7,670.16 vs 09:30 $7,372.52 (session +297.64) | 16:00 close · cash $15.54 · equity $7,670.16 vs 09:30 $7,372.52 (+297.64; session marks +297.64) · 1 name(s) marked open→close (per-name table). NKE×226 09:30 $32.55 → close $33.87 +297.64 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.54 | ▼ 09:30 equity $7,658.86 vs yday $7,670.16 (-11.30) | 09:30 open · cash $15.54 (unchanged overnight, no fees) · equity $7,658.86 vs prior close $7,670.16 (-11.30) · 1 name(s) re-marked at the open (per-name table). NKE×226 yday $33.87 → 09:30 $33.82 -11.30 | — |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.54 | ▲ close $7,690.50 vs 09:30 $7,658.86 (session +31.64) | 16:00 close · cash $15.54 · equity $7,690.50 vs 09:30 $7,658.86 (+31.64; session marks +31.64) · 1 name(s) marked open→close (per-name table). NKE×226 09:30 $33.82 → close $33.96 +31.64 | — |
 
 ## Not taken
 

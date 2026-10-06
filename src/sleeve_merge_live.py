@@ -1125,7 +1125,12 @@ def write_card(card: dict) -> dict[str, Path]:
     POSITIONS_JSON.write_text(
         json.dumps(positions_doc(card), indent=2), encoding="utf-8")
     daily = DAILY_DIR / f"{card['date']}_flatten_card.md"
-    daily.write_text(card_markdown(card), encoding="utf-8")
+    from . import past_day_lock as pdl
+    card_text = card_markdown(card)
+    kept = pdl.prepare_flatten_card(card["date"], card_text, daily)
+    if kept is not None:
+        daily.write_text(kept, encoding="utf-8")
+    pdl.seal_flatten_card(card["date"], daily)
     html_path = DASH_DIR / "index.html"
     if html_path.is_file():
         html = html_path.read_text(encoding="utf-8")

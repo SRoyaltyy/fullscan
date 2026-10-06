@@ -41,13 +41,25 @@ def test_paper_never_uses_live_host() -> None:
 
 
 def test_client_order_id_stable_and_short() -> None:
-    a = client_order_id("2026-09-11", "BUY", "HOOD")
-    b = client_order_id("2026-09-11", "BUY", "HOOD")
-    c = client_order_id("2026-09-11", "SELL", "HOOD")
-    assert a == b == "fs20260911BHOOD"
-    assert c == "fs20260911SHOOD"
+    """Pinned form: strategy, session date, ticker, side. No random, no clock."""
+    a = client_order_id("2026-10-07", "BUY", "SDEV")
+    b = client_order_id("2026-10-07", "BUY", "SDEV", strategy="h1")
+    c = client_order_id("2026-10-07", "SELL", "SDEV")
+    assert a == b == "h1-2026-10-07-SDEV-buy"
+    assert c == "h1-2026-10-07-SDEV-sell"
     assert len(a) <= 32
-    assert client_order_id("2026-09-11", "BUY", "BRK-B") == "fs20260911BBRKB"
+    assert client_order_id("2026-09-11", "BUY", "HOOD") == "h1-2026-09-11-HOOD-buy"
+    assert client_order_id("2026-09-11", "SELL", "HOOD") == "h1-2026-09-11-HOOD-sell"
+    assert client_order_id("2026-09-11", "BUY", "BRK-B") == "h1-2026-09-11-BRKB-buy"
+    long_name = "ABCDEFGHIJKLMNOPQRST"
+    long_id = client_order_id("2026-10-07", "BUY", long_name)
+    assert long_id == client_order_id("2026-10-07", "buy", long_name)
+    assert len(long_id) <= 32
+    assert long_id.startswith("h1-")
+    assert long_id.endswith("-buy")
+    empty = client_order_id("", "BUY", "")
+    assert empty == client_order_id("", "BUY", "")
+    assert len(empty) <= 32
 
 
 def test_parse_account_and_book() -> None:
@@ -154,6 +166,7 @@ def test_not_connected_writes_last_without_replay(tmp_path=None) -> None:
 
 
 def test_hot4_submit_refuses_divergent_wire() -> None:
+    """A sealed-plan failure is not submitted and does not call pick_day."""
     from unittest import mock
     from src import webull_exec as we
 
@@ -170,31 +183,29 @@ def test_hot4_submit_refuses_divergent_wire() -> None:
                               connected=True, acc_id="paper-1")
 
         def place(self, *a, **k):
-            raise AssertionError("divergent HOT4 must not place")
+            raise AssertionError("sealed-plan failure must not place")
 
         def place_batch(self, *a, **k):
-            raise AssertionError("divergent HOT4 must not place")
+            raise AssertionError("sealed-plan failure must not place")
 
     card = {
         "date": "2026-09-21", "stale": False, "policy": HOT4,
-        "tickets": [{
-            "side": "BUY", "ticker": "DELL", "shares": 1, "px": 10.0,
-            "status": "plan", "date": "2026-09-21",
-        }],
-        "would_buy": {"rows": [
-            {"ticker": t, "side": "long"}
-            for t in ("DELL", "GME", "UMC", "VSTS")
-        ]},
+        "tickets": [],
+        "would_buy": {"rows": []},
+        "would_sell": {"rows": []},
         "hard_red": False,
+        "look_error": (
+            "paper cash 1.00 cannot fund sealed h1 buys; "
+            "refusing; not rebuilding HOT4"
+        ),
+        "why": "refusing; not rebuilding HOT4",
+        "skipped": [],
     }
     with mock.patch.object(we, "PaperAPI", return_value=Alive()), \
             mock.patch.object(we, "_plan", return_value=card), \
             mock.patch(
-                "src.strategy_tickets.assert_hot4_wire",
-                side_effect=ValueError(
-                    "HOT4 buys ['DELL', 'GME', 'UMC', 'VSTS'] diverge from "
-                    "Factor Mine recipe ['FEAM', 'TJGC', 'LVWR', 'SECZ'] "
-                    "for 2026-09-21"),
+                "src.factor_mine.pick_day",
+                side_effect=AssertionError("pick_day"),
             ), \
             mock.patch.object(we, "write_last") as wl, \
             mock.patch.object(we, "inject_today_from_disk"):
@@ -203,7 +214,7 @@ def test_hot4_submit_refuses_divergent_wire() -> None:
     last = wl.call_args[0][0]
     assert last["submit"] is False
     assert last["sent"] == []
-    assert "diverge" in (last.get("error") or "")
+    assert "not rebuilding HOT4" in (last.get("why") or "")
 
 
 def test_stale_combo_does_not_submit() -> None:
@@ -292,68 +303,23 @@ def test_hot4_tickets_long_only_skip_held_cash_and_sit() -> None:
     }
     pub = load_hot4_published("2026-09-17", payload)
     assert [b["ticker"] for b in pub["buy"]] == ["INDP", "GPRO", "INSP", "TJGC"]
+    # The published panel is not the send list. 2026-09-17 has no sealed plan.
     snap = BrokerSnap(env="paper", cash=10_000, positions={"INDP": {"shares": 1}})
     card = plan_hot4_for_broker("2026-09-17", snap, payload=payload)
     assert card["policy"] == HOT4
-    assert card["hard_red"] is False
-    assert card["order_type"] == "MARKET"
-    names = {t["ticker"] for t in card["tickets"]}
-    assert "INDP" not in names
-    assert "GPRO" in names and "INSP" in names and "TJGC" in names
-    assert all(t["side"] == "BUY" for t in card["tickets"])
-    assert len(card["would_buy"]["rows"]) == 4
+    assert card["source"] == "sealed_h1"
+    assert card["tickets"] == []
+    assert "not rebuilding HOT4" in card["look_error"]
+    assert "INDP" not in card["look_error"]
 
 
 def test_hot4_sells_size_from_paper_lots() -> None:
-    """List-drop exits use the paper lot. Unheld and Clock-B leftovers do not sell."""
-    payload = {
-        "date": "2026-09-22",
-        "strategies": {
-            HOT4: {
-                "name": HOT4, "date": "2026-09-22", "side": "long",
-                "status": "ok", "s": -0.5, "sit": False,
-                "buy": [
-                    {"ticker": t, "side": "long", "px": 10}
-                    for t in ("SECZ", "GRAL", "NUAI", "INDP")
-                ],
-                "sell": [
-                    {"ticker": t, "side": "long", "src": "list-drop"}
-                    for t in ("FEAM", "TJGC", "LVWR")
-                ],
-            }
-        },
-    }
-    snap = BrokerSnap(
-        env="paper", cash=5_000, connected=True,
-        positions={
-            "FEAM": {"shares": 40, "cost_px": 3.5, "last_px": 3.2},
-            "DELL": {"shares": 100, "cost_px": 20, "last_px": 21},
-        },
-    )
-    card = plan_hot4_for_broker("2026-09-22", snap, payload=payload)
-    assert [r["ticker"] for r in card["would_sell"]["rows"]] == [
-        "FEAM", "TJGC", "LVWR",
-    ]
-    assert card["tickets"][0]["side"] == "SELL"
-    sells = [t for t in card["tickets"] if t["side"] == "SELL"]
-    assert [t["ticker"] for t in sells] == ["FEAM"]
-    assert sells[0]["shares"] == 40
-    assert sells[0]["order_type"] == "MARKET"
-    assert "DELL" not in {t["ticker"] for t in card["tickets"]}
-    assert any(s["ticker"] == "TJGC" and s["kind"] == "unheld" for s in card["skipped"])
-    assert any(s["ticker"] == "LVWR" and s["kind"] == "unheld" for s in card["skipped"])
-    buys = [t for t in card["tickets"] if t["side"] == "BUY"]
-    assert buys and all(t["side"] == "BUY" for t in buys)
+    """The leftover sizer still uses the paper lot. The sealed send path does not."""
     bare, bare_skips = size_hot4_sells(
         ["FEAM", "NOPE"], positions={"FEAM": {"shares": 2}}, date="2026-09-22",
     )
     assert [(t["ticker"], t["shares"]) for t in bare] == [("FEAM", 2)]
     assert any(s["kind"] == "unheld" and s["ticker"] == "NOPE" for s in bare_skips)
-    payload["strategies"][HOT4]["sit"] = True
-    payload["strategies"][HOT4]["s"] = -4
-    red = plan_hot4_for_broker("2026-09-22", snap, payload=payload)
-    assert [t["ticker"] for t in red["tickets"] if t["side"] == "SELL"] == ["FEAM"]
-    assert [t for t in red["tickets"] if t["side"] == "BUY"] == []
 
 
 def test_hot4_zero_cash_is_honest() -> None:
@@ -367,11 +333,11 @@ def test_hot4_zero_cash_is_honest() -> None:
         },
     }
     snap = BrokerSnap(env="paper", cash=0, positions={}, buying_power=10_000)
-    card = plan_hot4_for_broker("2026-09-17", snap, payload=payload)
+    card = plan_hot4_for_broker("2026-10-02", snap, payload=payload)
     assert card["tickets"] == []
-    assert len(card["would_buy"]["rows"]) == 4
-    assert all(s["kind"] == "cash" for s in card["skipped"])
-    assert "cannot buy 1 share" in card["why"]
+    assert [r["ticker"] for r in card["would_buy"]["rows"]] == ["QSI", "TJGC"]
+    assert "not rebuilding HOT4" in card["why"]
+    assert "cannot fund sealed h1 buys" in card["why"]
 
 
 def test_paper_order_is_market_not_limit() -> None:
@@ -651,29 +617,323 @@ def test_rejected_leg_does_not_reserve_cash() -> None:
     assert got[client_order_id("2026-09-21", "BUY", "BBB")]["shares"] == 1
 
 
+def test_empty_account_id_is_discovered_and_not_printed(tmp_path=None) -> None:
+    """Keys alone resolve the sandbox account id. The id is not printed."""
+    import io
+    import os
+    import tempfile
+    from contextlib import redirect_stdout
+
+    from src import webull_exec as we
+
+    if tmp_path is None:
+        tmp_path = Path(tempfile.mkdtemp())
+    env_path = tmp_path / "paper.env"
+    we.write_paper_env(env_path, {
+        "WEBULL_APP_KEY": "test-key",
+        "WEBULL_APP_SECRET": "test-secret",
+    })
+    saved = {name: os.environ.get(name) for name in (
+        "WEBULL_APP_KEY", "WEBULL_APP_SECRET", "WEBULL_ACCOUNT_ID",
+    )}
+
+    class Fake:
+        env = "paper"
+        host = we.PAPER_HOST
+        account_id = ""
+        err = None
+
+        def connect(self):
+            return True
+
+        def snapshot(self):
+            self.account_id = "paper-discovered"
+            return BrokerSnap(
+                env="paper", cash=25.0, positions={}, connected=True,
+                acc_id="paper-discovered",
+            )
+
+    buf = io.StringIO()
+    try:
+        with redirect_stdout(buf):
+            status = we.discover_and_persist_account_id(env_path, api=Fake())
+        assert status == "discovered"
+        stored = we.read_paper_env(env_path)
+        assert stored["WEBULL_ACCOUNT_ID"] == "paper-discovered"
+        assert stored["WEBULL_APP_KEY"] == "test-key"
+        assert "paper-discovered" not in buf.getvalue()
+        assert "test-secret" not in buf.getvalue()
+        again = we.discover_and_persist_account_id(env_path, api=Fake())
+        assert again == "present"
+        assert we.read_paper_env(env_path)["WEBULL_ACCOUNT_ID"] == "paper-discovered"
+
+        class Live:
+            env = "real"
+            host = we.LIVE_HOST
+
+            def connect(self):
+                raise AssertionError("live connect")
+
+        try:
+            we.discover_and_persist_account_id(env_path, api=Live())
+        except RuntimeError as exc:
+            assert "non-sandbox" in str(exc)
+        else:
+            raise AssertionError("live host was accepted")
+    finally:
+        for name, value in saved.items():
+            if value is None:
+                os.environ.pop(name, None)
+            else:
+                os.environ[name] = value
+
+
 def test_yml_warms_before_bell_and_has_one_automatic_sender() -> None:
     root = Path(__file__).resolve().parent.parent
     yml = (root / ".github/workflows/webull_paper.yml").read_text()
     assert "7 12,13" in yml
     assert "src.paper_open" in yml
     assert "--owner actions" in yml
-    assert "--ready" not in yml
-    assert "workflow_run:" not in yml
+    # --ready is the seal trigger only, and only before 09:30 ET.
+    assert "h1 append-only forward" in yml
+    assert "workflow_run:" in yml
+    assert "-lt 930" in yml
+    assert yml.index("[ \"$SEAL_EVENT\" = \"workflow_run\" ]") < yml.index("ARGS+=(--ready)")
     assert "  push:" not in yml
     assert "src.webull_exec" not in (root / ".github/workflows/open_0930.yml").read_text()
     pub = (root / ".github/workflows/publish_strategy_tickets.yml").read_text()
-    assert "src.paper_open" in pub
-    assert "--submit" in pub
-    assert "--ready" in pub
-    assert "WEBULL_APP_KEY" in pub
+    assert "python -m src.paper_open" not in pub
+    assert "--submit" not in pub
+    assert "--ready" not in pub
+    assert "WEBULL_APP_KEY" not in pub
+    assert "data/paper_open/" not in pub
+    assert "webull_last.json" not in pub
+    assert "PAPER_OPEN_SENDER" in yml
+    assert "github.event_name == 'workflow_run'" in yml
+    assert "github.event_name == 'schedule'" not in yml
+    assert "inputs.submit" not in yml
+    assert "not the h1 seal; no paper submit and no paper_open write" in yml
     owner = (root / "00_grounding" / "paper_open_owner.json").read_text()
     assert '"owner": "actions"' in owner
+
+
+def test_session_query_fails_closed_without_a_history_method() -> None:
+    from types import SimpleNamespace
+    from src.webull_exec import PaperAPI
+
+    api = PaperAPI()
+    api.account_id = "aid-1"
+    api.trade = SimpleNamespace(
+        order_v3=SimpleNamespace(
+            list_order_open=lambda aid: {"data": []},
+            get_order_open=lambda aid: (_ for _ in ()).throw(RuntimeError("no")),
+            get_order_detail=lambda aid, oid: (_ for _ in ()).throw(RuntimeError("no")),
+        ),
+    )
+    try:
+        api.list_session_orders("2026-10-07")
+    except RuntimeError as exc:
+        assert "filled-order" in str(exc)
+    else:
+        raise AssertionError("query must fail closed")
+
+
+def test_session_query_keeps_open_and_filled_for_that_day() -> None:
+    from types import SimpleNamespace
+    from src.webull_exec import PaperAPI
+
+    def history(aid, start_date=None, end_date=None):
+        assert aid == "aid-1"
+        assert start_date == "2026-10-07" and end_date == "2026-10-07"
+        return {"orders": [
+            {"order_id": "F1", "client_order_id": "h1-2026-10-07-SDEV-buy",
+             "symbol": "SDEV", "side": "BUY", "status": "FILLED",
+             "filled_time": "2026-10-07T09:30:01-04:00"},
+            {"order_id": "OLD", "client_order_id": "h1-2026-10-06-SDEV-buy",
+             "symbol": "SDEV", "side": "BUY", "status": "FILLED",
+             "filled_time": "2026-10-06T09:30:01-04:00"},
+            {"order_id": "C1", "symbol": "AAA", "side": "BUY", "status": "CANCELLED",
+             "order_time": "2026-10-07T09:31:00-04:00"},
+        ]}
+
+    api = PaperAPI()
+    api.account_id = "aid-1"
+    api.trade = SimpleNamespace(
+        order_v3=SimpleNamespace(
+            list_order_open=lambda aid: {"orders": [
+                {"order_id": "O1", "client_order_id": "h1-2026-10-07-AAA-buy",
+                 "symbol": "AAA", "side": "BUY", "status": "SUBMITTED"},
+            ]},
+            get_order_open=lambda aid: (_ for _ in ()).throw(AssertionError("second")),
+            get_order_detail=lambda aid, oid: (_ for _ in ()).throw(AssertionError("detail")),
+            get_order_history=history,
+        ),
+    )
+    rows = api.list_session_orders("2026-10-07")
+    assert {row["order_id"] for row in rows} == {"O1", "F1"}
+
+
+def test_broker_guard_present_partial_and_query_failed() -> None:
+    """No local status file. The sandbox book decides what may be sent."""
+    import tempfile
+    from datetime import datetime, timedelta
+    from src import paper_open as po
+
+    day = "2026-10-07"
+    bell = datetime.fromisoformat(day + "T09:30:00-04:00")
+    early = datetime.fromisoformat(day + "T08:41:00-04:00")
+    tickets = [
+        {"ticker": "SDEV", "side": "BUY", "shares": 10, "px": 5, "date": day},
+        {"ticker": "AAA", "side": "BUY", "shares": 8, "px": 5, "date": day},
+    ]
+    coid_s = client_order_id(day, "BUY", "SDEV")
+    assert coid_s == "h1-2026-10-07-SDEV-buy"
+    book = [
+        {"order_id": "OID-S", "client_order_id": coid_s, "symbol": "SDEV",
+         "side": "BUY", "status": "FILLED",
+         "filled_time": day + "T09:30:01-04:00"},
+        {"order_id": "OID-A", "client_order_id": "fs-old-aaa", "symbol": "AAA",
+         "side": "BUY", "status": "SUBMITTED"},
+    ]
+
+    class Book:
+        host = "api.sandbox.webull.com"
+
+        def __init__(self, rows=None, error=None):
+            self.rows = list(rows or [])
+            self.error = error
+            self.calls = []
+
+        def list_session_orders(self, date):
+            assert date == day
+            if self.error:
+                raise RuntimeError(self.error)
+            return list(self.rows)
+
+        def place_batch(self, batch):
+            self.calls.append(list(batch))
+            return {
+                client_order_id(t["date"], t["side"], t["ticker"]):
+                {"ok": True, "order_id": "new-" + t["ticker"]}
+                for t in batch
+            }
+
+    def plan():
+        return {
+            "date": day,
+            "prepared_at": (bell - timedelta(seconds=10)).isoformat(),
+            "fingerprint": "t",
+            "card": {"tickets": [dict(t) for t in tickets]},
+        }
+
+    folder = Path(tempfile.mkdtemp())
+    assert not (folder / f"{day}_status.json").exists()
+    present = Book(rows=book)
+    result = po.release(
+        plan(), present, lambda: early, folder / "seal.json",
+        submit=True, standing=True)
+    assert present.calls == []
+    assert result["status"] == "already_submitted"
+    assert {row["ticker"] for row in result["found"]} == {"SDEV", "AAA"}
+    assert {row["match"] for row in result["found"]} == {"client_order_id", "symbol_side"}
+    bell_book = Book(rows=book)
+    bell_result = po.release(
+        plan(), bell_book, lambda: bell, folder / "bell.json", submit=True)
+    assert bell_book.calls == []
+    assert bell_result["status"] == "already_submitted"
+
+    partial = Book(rows=[book[0]])
+    partial_result = po.release(
+        plan(), partial, lambda: early, folder / "partial.json",
+        submit=True, standing=True)
+    assert partial_result["status"] == "acknowledged"
+    assert [row["ticker"] for row in partial.calls[0]] == ["AAA"]
+    by = {row["ticker"]: row["status"] for row in partial_result["sent"]}
+    assert by["SDEV"] == "already_submitted"
+    assert by["AAA"] == "acknowledged"
+    assert [row["ticker"] for row in partial_result["found"]] == ["SDEV"]
+
+    failed = Book(error="sandbox down")
+    journal = folder / "failed.json"
+    failed_result = po.release(
+        plan(), failed, lambda: early, journal, submit=True, standing=True)
+    assert failed.calls == []
+    assert failed_result["status"] == "query_failed"
+    assert failed_result["sent"] == []
+    assert not journal.exists()
+
+
+def test_run_refuses_submit_after_the_open() -> None:
+    """``webull_exec --submit`` and sleeve_merge ``--submit-webull`` share this."""
+    from datetime import datetime
+    from unittest import mock
+    from src import webull_exec as we
+
+    class Alive:
+        env = "paper"
+        host = "api.sandbox.webull.com"
+        err = None
+
+        def connect(self):
+            return True
+
+        def snapshot(self):
+            return BrokerSnap(env="paper", cash=1_000_000, positions={},
+                              connected=True, acc_id="paper-1")
+
+        def place(self, *a, **k):
+            raise AssertionError("late webull_exec submit must not place")
+
+        def place_batch(self, *a, **k):
+            raise AssertionError("late webull_exec submit must not place")
+
+    card = {
+        "date": "2026-10-06", "stale": False, "policy": HOT4,
+        "tickets": [
+            {"side": "BUY", "ticker": "PACB", "shares": 1113, "px": 2.87,
+             "status": "plan", "date": "2026-10-06"},
+            {"side": "BUY", "ticker": "DNA", "shares": 214, "px": 3.0,
+             "status": "plan", "date": "2026-10-06"},
+            {"side": "BUY", "ticker": "QSI", "shares": 2482, "px": 2.0,
+             "status": "plan", "date": "2026-10-06"},
+        ],
+        "would_buy": {"rows": []},
+        "skipped": [],
+        "hard_red": False,
+    }
+    late = datetime.fromisoformat("2026-10-06T10:17:54-04:00")
+    with mock.patch.object(we, "PaperAPI", return_value=Alive()), \
+            mock.patch.object(we, "_plan", return_value=card), \
+            mock.patch.object(we, "write_last") as wrote, \
+            mock.patch.object(we, "inject_today_from_disk"):
+        rc = we.run("2026-10-06", submit=True, write=True, source="hot4", clock=late)
+    assert rc == 2
+    last = wrote.call_args[0][0]
+    assert last["status"] == "missed_deadline"
+    assert last["submit"] is False
+    assert last["sent"]
+    assert all(row["status"] == "dry_run" for row in last["sent"])
+    early = datetime.fromisoformat("2026-10-06T08:41:00-04:00")
+    with mock.patch.object(we, "PaperAPI", return_value=Alive()), \
+            mock.patch.object(we, "_plan", return_value=card), \
+            mock.patch.object(we, "write_last") as wrote_early, \
+            mock.patch.object(we, "inject_today_from_disk"):
+        rc_early = we.run(
+            "2026-10-06", submit=True, write=True, source="hot4", clock=early)
+    assert rc_early == 2
+    early_last = wrote_early.call_args[0][0]
+    assert early_last["status"] == "refused"
+    assert early_last["submit"] is False
+    assert all(row["status"] == "dry_run" for row in early_last["sent"])
 
 
 def main() -> None:
     test_refuse_real_without_flags()
     test_paper_never_uses_live_host()
     test_client_order_id_stable_and_short()
+    test_session_query_fails_closed_without_a_history_method()
+    test_session_query_keeps_open_and_filled_for_that_day()
+    test_broker_guard_present_partial_and_query_failed()
     test_parse_account_and_book()
     test_dry_run_does_not_place()
     test_submit_uses_paper_place()
@@ -681,6 +941,7 @@ def main() -> None:
     test_not_connected_writes_last_without_replay()
     test_hot4_submit_refuses_divergent_wire()
     test_stale_combo_does_not_submit()
+    test_empty_account_id_is_discovered_and_not_printed()
     test_yml_warms_before_bell_and_has_one_automatic_sender()
     test_hot4_tickets_long_only_skip_held_cash_and_sit()
     test_hot4_sells_size_from_paper_lots()
@@ -694,7 +955,8 @@ def main() -> None:
     test_place_batch_skips_leg_that_cannot_buy_one_share()
     test_place_batch_keeps_haircut_plan_when_preopen_cash_is_unchanged()
     test_rejected_leg_does_not_reserve_cash()
-    print("test_webull_exec: 23 ok")
+    test_run_refuses_submit_after_the_open()
+    print("test_webull_exec: 28 ok")
 
 
 if __name__ == "__main__":

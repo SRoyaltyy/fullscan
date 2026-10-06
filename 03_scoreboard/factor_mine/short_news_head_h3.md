@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short prior-export headline🔴
 
-Cash book **-15.04%** ($8,496) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 88 · skips 94 · realized $+602.64.
+Cash book **-15.30%** ($8,470) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 89 · skips 94 · realized $+602.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -228,6 +228,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **COVER** | `RSKD` | 580 | $7.92 | $7.48 | $-55.82 | $8,304.05 | ▼ -55.82 after sell → book $8,304.05; vs 09:30 mark -7.48 | exit unpriced hold on first bar after 4 sess | join🟢 sector🟢 gen🔴 news🔴 digest🟢 judge🟡 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 09:30 ET | **SHORT** | `PYXS` | 1797 | $2.31 | $23.63 | — | $12,431.49 | — | short prior-export headline🔴; gate headline=bad; list yday_mover; 🔵; ret5=-27.6; leftover $4152.02 | join🟢 sector🔴 gen🔴 news🔴 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,431.49 | ▲ close $8,496.06 vs 09:30 $8,318.78 (session +215.64) | 16:00 close · cash $12,431.49 · equity $8,496.06 vs 09:30 $8,318.78 (+177.28; session marks +215.64) · 1 name(s) marked open→close (per-name table). PYXS×1797 09:30 $2.31 → close $2.19 +215.64 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,431.49 | ▼ 09:30 equity $8,460.12 vs yday $8,496.06 (-35.94) | 09:30 open · cash $12,431.49 (unchanged overnight, no fees) · equity $8,460.12 vs prior close $8,496.06 (-35.94) · 1 name(s) re-marked at the open (per-name table). PYXS×1797 yday $2.19 → 09:30 $2.21 -35.94 | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,431.49 | ▲ close $8,585.91 vs 09:30 $8,460.12 (session +125.79) | 16:00 close · cash $12,431.49 · equity $8,585.91 vs 09:30 $8,460.12 (+125.79; session marks +125.79) · 1 name(s) marked open→close (per-name table). PYXS×1797 09:30 $2.21 → close $2.14 +125.79 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,431.49 | ▲ 09:30 equity $8,621.85 vs yday $8,585.91 (+35.94) | 09:30 open · cash $12,431.49 (unchanged overnight, no fees) · equity $8,621.85 vs prior close $8,585.91 (+35.94) · 1 name(s) re-marked at the open (per-name table). PYXS×1797 yday $2.14 → 09:30 $2.12 +35.94 | — |
+| 2026-10-05 09:30 ET | **SHORT** | `SG` | 466 | $9.24 | $6.24 | — | $16,731.09 | — | short prior-export headline🔴; gate headline=bad; list ohlc_hot; ret5=+10.4; leftover $4310.92 | join🟡 sector🟢 gen🟡 news🔴 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,731.09 | ▼ close $8,469.87 vs 09:30 $8,621.85 (session -145.74) | 16:00 close · cash $16,731.09 · equity $8,469.87 vs 09:30 $8,621.85 (-151.98; session marks -145.74) · 2 name(s) marked open→close (per-name table). PYXS×1797 09:30 $2.12 → close $2.24 -215.64; SG×466 09:30 $9.24 → close $9.09 +69.90 | — |
 
 ## Not taken
 

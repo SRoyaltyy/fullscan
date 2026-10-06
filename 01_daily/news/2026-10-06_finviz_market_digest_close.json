@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-06",
+  "generated_at": "2026-10-06T16:24:55.601596-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-07",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-07) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks extended gains to record S&P 500 and Nasdaq closes as AI-driven winners, lower Treasury yields and deal activity offset a wider US trade deficit",
+  "raw_text": "- The S&P 500 ($SPX) rose 0.6% to a record close of 7,824, its first finish above 7,800, while the Nasdaq Composite ($COMP) and Nasdaq 100 ($NDX) also ended at record levels, the Dow Jones Industrial Average ($DJI) gained 0.6% to 51,622, and the Russell 2000 (IWM) slipped 0.71%.\n- The 10-year Treasury yield fell to 5.27% and oil prices (@CL) retreated, helping support equities alongside ongoing focus on earnings.\n- Commerce Department data showed the US trade deficit widened to $105.6 billion in August.\n- Nine of 11 S&P 500 ($SPX) sectors advanced, led by utilities, while healthcare was the only decliner.\n- Constellation Energy (CEG) jumped 12% after signing a deal with Alphabet (GOOGL)’s Google to supply nuclear power for data centers, lifting Vistra (VST) by 10.8% and Talen Energy (TLN) by 12.4%.\n- Option Care Health (OPCH) surged 32.7% after McKesson (MCK) and Clayton Dubilier & Rice agreed to acquire it for $5.8 billion including debt.\n- Ciena (CIEN) climbed 13.9% on strong AI networking demand.\n- Marvell Technology (MRVL) gained 5.8% after its investor day outlined higher revenue targets, including fiscal 2028 revenue of $20 billion and a $70–90 billion range by 2031 driven by AI data-center demand and an expanded Google chip partnership.\n- RPM International (RPM) advanced after beating Q1 estimates with EPS of $1.98 versus $1.95 expected and revenue of $2.22 billion.\n- Apogee Enterprises (APOG) rose after an earnings beat and raised fiscal 2027 guidance, with no major negative catalysts emerging into the close.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) rose **0.6%** to a **record close of 7,824**, its **first finish above 7,800**, while the Nasdaq Composite ([$COMP](https://finviz.com/index/COMP?p=d)) and Nasdaq 100 ([$NDX](https://finviz.com/index/NDX?p=d)) also ended at **record levels**, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) gained **0.6%** to **51,622**, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) slipped **0.71%**.\n- The **10-year Treasury yield** fell to **5.27%** and **oil prices** ([@CL](https://finviz.com/futures_charts?t=CL)) retreated, helping support equities alongside ongoing focus on earnings.\n- Commerce Department data showed the **US trade deficit widened to $105.6 billion in August**.\n- **Nine of 11 S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) sectors advanced, led by **utilities**, while **healthcare** was the only decliner.\n- **Constellation Energy** ([CEG](https://finviz.com/quote?t=CEG)) jumped **12%** after signing a deal with **Alphabet** ([GOOGL](https://finviz.com/quote?t=GOOGL))’s Google to **supply nuclear power for data centers**, lifting **Vistra** ([VST](https://finviz.com/quote?t=VST)) by **10.8%** and **Talen Energy** ([TLN](https://finviz.com/quote?t=TLN)) by **12.4%**.\n- **Option Care Health** ([OPCH](https://finviz.com/quote?t=OPCH)) surged **32.7%** after **McKesson** ([MCK](https://finviz.com/quote?t=MCK)) and **Clayton Dubilier & Rice** agreed to acquire it for **$5.8 billion** including debt.\n- **Ciena** ([CIEN](https://finviz.com/quote?t=CIEN)) climbed **13.9%** on strong **AI networking demand**.\n- **Marvell Technology** ([MRVL](https://finviz.com/quote?t=MRVL)) gained **5.8%** after its investor day outlined **higher revenue targets**, including **fiscal 2028 revenue of $20 billion** and a **$70–90 billion range by 2031** driven by **AI data-center demand** and an **expanded Google chip partnership**.\n- **RPM International** ([RPM](https://finviz.com/quote?t=RPM)) advanced after **beating Q1 estimates** with **EPS of $1.98 versus $1.95 expected** and **revenue of $2.22 billion**.\n- **Apogee Enterprises** ([APOG](https://finviz.com/quote?t=APOG)) rose after an **earnings beat** and **raised fiscal 2027 guidance**, with no major negative catalysts emerging into the close.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 0.6,
+      "verb": "rose"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 0.6,
+      "verb": "gained"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": -0.71,
+      "verb": "slipped"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "CEG",
+    "GOOGL",
+    "VST",
+    "TLN",
+    "OPCH",
+    "MCK",
+    "CIEN",
+    "MRVL",
+    "RPM",
+    "APOG"
+  ],
+  "named_leaders": [
+    "CEG",
+    "GOOGL",
+    "VST",
+    "TLN",
+    "OPCH",
+    "MCK",
+    "CIEN",
+    "MRVL",
+    "RPM",
+    "APOG"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": 0.6,
+    "nasdaq": null,
+    "dow": 0.6
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 302897,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-06T16:07:06.357",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

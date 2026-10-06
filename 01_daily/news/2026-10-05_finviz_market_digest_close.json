@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-05",
+  "generated_at": "2026-10-05T17:37:41.015063-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-06",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-06) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed higher led by tech and M&A as 10-year yield hit 5.31% and services data signaled cooling growth",
+  "raw_text": "- The S&P 500 ($SPX) rose 0.66% to 7,773.95, the Dow Jones ($DJI) gained 0.18% to 51,267.90, and the Nasdaq Composite ($COMP) climbed 1.05% to a record 27,477.31 as equities advanced despite the 10-year Treasury yield reaching a multi-year high of 5.31%.\n- Megacap tech outperformed, with Nvidia (NVDA) and Broadcom (AVGO) each gaining 2.1%, Microsoft (MSFT) adding 1.5%, Meta Platforms (META) adding 1.9%, and the S&P 500 ($SPX) software & services index rising 1.4% as 9 of 11 sectors finished higher.\n- PTC (PTC) surged 33.5% after Schneider Electric agreed to acquire the software company for $22.6 billion in an all-cash deal.\n- RXO (RXO) jumped 22.5% after C.H. Robinson Worldwide (CHRW) announced a $5.8 billion stock-and-cash acquisition, while C.H. Robinson (CHRW) fell 10.9% on the news.\n- Sphere Entertainment (SPHR) dropped 13.6% during the session.\n- Cerebras Systems (CBRS) gained 9% after OpenAI CEO Sam Altman described it as a “close partner” with “deep engagement” on speed frontiers.\n- Vaxcyte (PCVX) rallied 30.7% after its Vax-31 vaccine candidate met all prespecified primary endpoints in the OPUS-1 Phase 3 trial.\n- Brazilian-exposed stocks advanced, with Nu Holdings (NU) up 13%, Itaú Unibanco (ITUB) gaining 15.5%, and Petrobras (PBR-A) climbing over 12% after Flávio Bolsonaro led the first round of Brazil’s presidential election.\n- ISM services PMI data showed US services activity cooled in September while price pressures built, and softer-than-expected September jobs numbers reduced October rate-hike odds as investors looked ahead to the earnings season kickoff.\n- After the bell, smaller names including ELBM (ELBM) and other small caps reported earnings with limited impact, and traders turned attention to Tuesday’s results from Constellation Brands (STZ), RPM International (RPM), Lamb Weston (LW), and additional economic data.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **rose 0.66% to 7,773.95**, the **Dow Jones** ([$DJI](https://finviz.com/index/DJI?p=d)) **gained 0.18% to 51,267.90**, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) **climbed 1.05% to a record 27,477.31** as equities advanced despite the **10-year Treasury yield** reaching a multi-year high of **5.31%**.\n- **Megacap tech outperformed**, with **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) and **Broadcom** ([AVGO](https://finviz.com/quote?t=AVGO)) **each gaining 2.1%**, **Microsoft** ([MSFT](https://finviz.com/quote?t=MSFT)) **adding 1.5%**, **Meta Platforms** ([META](https://finviz.com/quote?t=META)) **adding 1.9%**, and the **S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) software & services index rising 1.4%** as **9 of 11 sectors** finished higher.\n- **PTC** ([PTC](https://finviz.com/quote?t=PTC)) **surged 33.5%** after **Schneider Electric** agreed to acquire the software company for **$22.6 billion** in an all-cash deal.\n- **RXO** ([RXO](https://finviz.com/quote?t=RXO)) **jumped 22.5%** after **C.H. Robinson Worldwide** ([CHRW](https://finviz.com/quote?t=CHRW)) announced a **$5.8 billion** stock-and-cash acquisition, while **C.H. Robinson (CHRW) fell 10.9%** on the news.\n- **Sphere Entertainment** ([SPHR](https://finviz.com/quote?t=SPHR)) **dropped 13.6%** during the session.\n- **Cerebras Systems** ([CBRS](https://finviz.com/quote?t=CBRS)) **gained 9%** after OpenAI CEO **Sam Altman** described it as a **“close partner”** with **“deep engagement”** on speed frontiers.\n- **Vaxcyte** ([PCVX](https://finviz.com/quote?t=PCVX)) **rallied 30.7%** after its **Vax-31** vaccine candidate met all prespecified primary endpoints in the **OPUS-1 Phase 3 trial**.\n- **Brazilian-exposed stocks advanced**, with **Nu Holdings** ([NU](https://finviz.com/quote?t=NU)) **up 13%**, **Itaú Unibanco** ([ITUB](https://finviz.com/quote?t=ITUB)) **gaining 15.5%**, and **Petrobras** ([PBR-A](https://finviz.com/quote?t=PBR-A)) **climbing over 12%** after **Flávio Bolsonaro** led the first round of **Brazil’s presidential election**.\n- **ISM services PMI data** showed US services activity **cooled in September** while **price pressures built**, and **softer-than-expected September jobs numbers** **reduced October rate-hike odds** as investors looked ahead to the **earnings season kickoff**.\n- **After the bell**, smaller names including **ELBM** ([ELBM](https://finviz.com/quote?t=ELBM)) and other small caps reported earnings with **limited impact**, and traders turned attention to **Tuesday’s results** from **Constellation Brands** ([STZ](https://finviz.com/quote?t=STZ)), **RPM International** ([RPM](https://finviz.com/quote?t=RPM)), **Lamb Weston** ([LW](https://finviz.com/quote?t=LW)), and **additional economic data**.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 0.66,
+      "verb": "rose"
+    },
+    {
+      "name": "Dow Jones",
+      "code": "DJI",
+      "change_pct": 0.18,
+      "verb": "gained"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 1.05,
+      "verb": "climbed"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "AVGO",
+    "MSFT",
+    "META",
+    "PTC",
+    "RXO",
+    "CHRW",
+    "SPHR",
+    "CBRS",
+    "PCVX",
+    "NU",
+    "ITUB",
+    "ELBM",
+    "STZ",
+    "RPM",
+    "LW"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "AVGO",
+    "MSFT",
+    "META",
+    "PTC",
+    "RXO",
+    "CHRW",
+    "SPHR",
+    "CBRS",
+    "PCVX",
+    "NU",
+    "ITUB",
+    "ELBM",
+    "STZ",
+    "RPM",
+    "LW"
+  ],
+  "calendar": [
+    "After the bell, smaller names including ELBM (ELBM) and other small caps reported earnings with limited impact, and traders turned attention to Tuesday’s results from Constellation Brands (STZ), RPM International (RPM), Lamb Weston (LW), and additional economic data."
+  ],
+  "prior_close": {
+    "spx": 0.66,
+    "nasdaq": 1.05,
+    "dow": 0.18
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "After the bell, smaller names including ELBM (ELBM) and other small caps reported earnings with limited impact, and traders turned attention to Tuesday’s results from Constellation Brands (STZ), RPM International (RPM), Lamb Weston (LW), and additional economic data."
+    ],
+    "text": "After the bell, smaller names including ELBM (ELBM) and other small caps reported earnings with limited impact, and traders turned attention to Tuesday’s results from Constellation Brands (STZ), RPM International (RPM), Lamb Weston (LW), and additional economic data."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 301993,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-05T17:36:58.197",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

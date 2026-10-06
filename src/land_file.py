@@ -178,6 +178,9 @@ def _qc_one(path: Path, date: str) -> output_qc.QCResult:
             total += 1
             if output_qc.qc_sector_predict(p).ok:
                 ok_n += 1
+        if not output_qc.sector_predicts_required(date):
+            return output_qc._ok(
+                "sector_predict", rel, f"{ok_n}/{total or 0} optional")
         if total == 0:
             return output_qc._fail("sector_predict", rel, "missing", empty=True)
         if ok_n >= 8:

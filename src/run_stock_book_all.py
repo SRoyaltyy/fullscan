@@ -601,8 +601,16 @@ def run(
         _land(date, "live_boards", "Live 1d BUY/SELL strip")
 
     if skip_extras:
-        print("[all] skip extras (catalyst/backtest/paper/sleeve) — "
-              "book + live strip already written")
+        print("[all] skip catalyst/backtest — book + live strip already written")
+        # Paper used to live in the extras block, so every scheduled and
+        # workflow_run land (skip_extras) stopped the curve. Append only
+        # sessions after the last printed date; the book is already on main.
+        print("[all] → Paper trading (append after the last printed date)")
+        _run(
+            [sys.executable, "-m", "src.paper_trade_append", "--date", date, "--top", "10"],
+            check=False, timeout_s=900,
+        )
+        _land(date, "paper", "Paper dashboard")
         print("[all] → Sleeve merge live card (after book; no sweep)")
         _run(
             [sys.executable, "-m", "src.sleeve_merge", "--card",
@@ -638,8 +646,13 @@ def run(
 
     print("[all] → Paper trading (Futubull-fee simulation + dashboard)")
     _run(
-        [sys.executable, "-m", "src.paper_trade", "--date", date, "--top", "10"],
+        [sys.executable, "-m", "src.paper_trade_append", "--date", date, "--top", "10"],
         check=False, timeout_s=900,
+    )
+    print("[all] → past-day lock (sealed days must still match)")
+    _run(
+        [sys.executable, "-m", "src.past_day_lock", "--check"],
+        check=True, timeout_s=60,
     )
 
     print("[all] → Sleeve combine (dual wallets, all days, buy/sell dashboard)")

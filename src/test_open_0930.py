@@ -115,21 +115,52 @@ def test_open_pack_stamps_session_open_and_restamps_pages() -> None:
 
 
 def test_boards_and_paper_share_the_bell() -> None:
-    """Ready publish writes tickets and submits paper in the same workflow."""
+    """Ticket publish writes the board. It does not submit paper."""
     yml = (WF / "publish_strategy_tickets.yml").read_text()
     assert 'src.decision_ready' in yml
     assert 'src.open_0930_clock' not in yml
-    assert 'src.paper_open' in yml
-    assert '--submit' in yml
-    assert '--ready' in yml
-    assert '--owner actions' in yml
-    assert 'WEBULL_APP_KEY' in yml
-    assert 'WEBULL_APP_SECRET' in yml
-    assert 'WEBULL_ACCOUNT_ID' in yml
+    assert 'python -m src.paper_open' not in yml
+    assert '--submit' not in yml
+    assert '--ready' not in yml
+    assert 'WEBULL_APP_KEY' not in yml
+    assert 'WEBULL_APP_SECRET' not in yml
+    assert 'WEBULL_ACCOUNT_ID' not in yml
+    assert 'data/paper_open/' not in yml
+    assert 'webull_last.json' not in yml
+    assert 'cancel-in-progress: true' in yml
+    assert '3,18,33,48' not in yml
+    assert 'schedule:' not in yml
+    assert 'Stock Book ALL (one-shot)' in yml
+    assert 'Pre-Open ALL (predictive one-shot)' in yml
+    assert "github.event.workflow_run.conclusion == 'success'" in yml
+    install = (WF / 'install_paper_open.yml').read_text()
+    assert 'discover_and_persist_account_id' in install
     paper = (WF / "webull_paper.yml").read_text()
+    assert 'WEBULL_ACCOUNT_ID unset' not in paper
     assert 'src.paper_open' in paper
     assert '--owner actions' in paper
-    assert 'workflow_run:' not in paper
+    assert 'workflow_run:' in paper
+
+
+def test_h1_seal_starts_webull_paper() -> None:
+    """A successful h1 seal on main starts the sandbox send."""
+    paper = (WF / "webull_paper.yml").read_text(encoding="utf-8")
+    h1 = (WF / "h1_forward.yml").read_text(encoding="utf-8")
+    assert h1.startswith("name: h1 append-only forward\n")
+    assert 'workflows: ["h1 append-only forward"]' in paper
+    assert "types: [completed]" in paper
+    assert "branches: [main]" in paper
+    assert "github.event.workflow_run.conclusion == 'success'" in paper
+    assert "github.event.workflow_run.head_branch == 'main'" in paper
+    assert "webull-paper-seal" in paper
+    # Standing send only before the open. The cron path does not pass --ready.
+    assert "[ \"$SEAL_EVENT\" = \"workflow_run\" ]" in paper
+    assert "ET_HM" in paper
+    assert "-lt 930" in paper
+    assert paper.index("workflow_run") < paper.index("ARGS+=(--ready)")
+    assert "cron: '7 12,13 * * 1-5'" in paper
+    assert "--owner actions" in paper
+    assert "api.webull.com" not in paper
 
 
 def test_webull_backup_schedule_is_clock_gated() -> None:
@@ -137,8 +168,13 @@ def test_webull_backup_schedule_is_clock_gated() -> None:
     assert "cron: '7 12,13 * * 1-5'" in yml
     assert 'src.paper_open' in yml
     assert yml.index('pip install') < yml.index('python -m src.paper_open')
-    assert "github.event_name == 'schedule'" in yml
-    assert 'group: webull-paper' in yml
+    assert "github.event_name == 'schedule'" not in yml
+    assert "inputs.submit" not in yml
+    assert "PAPER_OPEN_SENDER" in yml
+    assert 'not the h1 seal; no paper submit and no paper_open write' in yml
+    assert yml.index('SEAL_EVENT" != "workflow_run"') < yml.index("python -m src.paper_open")
+    assert "webull-paper" in yml
+    assert "webull-paper-seal" in yml
 
 
 def test_tickets_install_requests() -> None:
@@ -154,6 +190,21 @@ def test_ci_gates_the_bell_contract() -> None:
     assert "src.test_combo_broker" in yml
     assert "src.test_skip_if_good" in yml
     assert "api.webull.com" not in yml
+
+
+def test_stock_book_rebuild_never_submits() -> None:
+    """Stock Book ALL / Pre-Open ALL republish tickets. They do not send."""
+    for name in (
+        "stock_book.yml",
+        "stock_book_all.yml",
+        "sleeve_merge_live.yml",
+        "publish_strategy_tickets.yml",
+    ):
+        text = (WF / name).read_text(encoding="utf-8")
+        assert "python -m src.paper_open" not in text
+        assert "python -m src.webull_exec" not in text
+        assert "--submit-webull" not in text
+        assert "--submit" not in text
 
 
 def test_orch_heals_open_0930() -> None:
@@ -174,11 +225,13 @@ def main_tests() -> None:
     test_open_0930_yml_owns_the_bell()
     test_open_pack_stamps_session_open_and_restamps_pages()
     test_boards_and_paper_share_the_bell()
+    test_h1_seal_starts_webull_paper()
     test_webull_backup_schedule_is_clock_gated()
     test_tickets_install_requests()
     test_ci_gates_the_bell_contract()
+    test_stock_book_rebuild_never_submits()
     test_orch_heals_open_0930()
-    print("test_open_0930: 13 ok")
+    print("test_open_0930: 15 ok")
 
 
 if __name__ == "__main__":

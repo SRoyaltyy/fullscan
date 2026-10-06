@@ -1,0 +1,180 @@
+{
+  "ticker": "BKR",
+  "analysis_date": "2026-10-06",
+  "current_price": "N/A",
+  "net_signal": "Strong Bullish",
+  "conviction": 72,
+  "catalyst_stack": "On 2026-04-23 and 2026-07-26, Baker Hughes delivered Q1 and Q2 beats with adjusted EBITDA of $1.16B and $1.23B, record IET orders of $7.1B, and $1.1B free cash flow. On 2026-07-10 and 2026-07-16, the company cleared conditional EU antitrust approval and completed the $13.6B Chart Industries acquisition, then raised 2026 revenue guidance to $28.5B-$30.3B on 2026-09-09. Contract momentum accelerated with bp North Sea stimulation on 2026-09-04, Venture Global LNG orders on 2026-09-13, and Venezuela gas infrastructure agreements on 2026-10-05. Offsetting this, on 2026-09-10 the stock fell 6.7% after management flagged near-term margin and FCF pressure from Chart, cutting 2026 FCF conversion to 40%-45%, while Jefferies trimmed its target to $77 on 2026-09-28.",
+  "key_assumption": "Chart Industries integration proceeds broadly on plan and the 2026 guidance raise is not derailed by margin/FCF pressure or further regulatory/geopolitical shocks.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 8,
+      "event_ids": [
+        2,
+        10
+      ],
+      "event_date": "2026-07-26",
+      "evidence_excerpt": "Baker Hughes delivered a strong Q2 with adjusted EBITDA of $1.23B (up 2% YoY, exceeding guidance), record IET orders of $7.1B (doubling YoY)",
+      "source_urls": [
+        "https://investors.bakerhughes.com/news/press-releases/news-details/2026/Baker-Hughes-Announces-Second-Quarter-2026-Results/default.aspx",
+        "https://www.investing.com/news/company-news/baker-hughes-q2-2026-slides-record-orders-drive-margin-expansion-93CH-4814643"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 7,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "Baker Hughes hikes guidance for 2026 revenue, EBITDA to reflect Chart Industries deal",
+      "source_urls": [
+        "https://www.gurufocus.com/news/9072879/baker-hughes-bkr-to-present-at-barclays-conference-unveils-updated-fy2026-guidance-post-chart-acquisition",
+        "https://www.portrak.com/news/bkr-updates-2026-guidance-simonelli-barclays"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-07-10",
+      "evidence_excerpt": "Baker Hughes wins conditional EU nod for $13.6 billion Chart deal",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWVAwVWtmQ3hEdERjcDFNVFBaNEl5STBGNHJZdklxa2hqVTdYLUdvTkQyNWw1dl9ySC1oN0lYOUtFck9ubFNLVUJUSGpFdlRVUFRXT3NmNmE5WGdnMjlGU0lmenVTUnpKdGJNSE1jaUtmTzkwQ1M4SDkyVjFXbnBDUy01d05EaWJ0UVlwTXVXdUtmQk9XVml6aW9yOXo1QTFmLUI2ZWJKdTFsZ1J3SEN0dEh3?oc=5"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-07-16",
+      "evidence_excerpt": "Baker Hughes Company (NASDAQ: BKR) today announced the successful completion of its acquisition of Chart Industries, Inc.",
+      "source_urls": [
+        "https://investors.bakerhughes.com/news/press-releases/news-details/2026/Baker-Hughes-Completes-Acquisition-of-Chart-Industries/default.aspx",
+        "https://www.marketscreener.com/news/baker-hughes-company-completed-the-acquisition-of-chart-industries-inc--ce7f5ed3da8ef42c"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "event_ids": [
+        13,
+        6,
+        7,
+        11,
+        12,
+        16
+      ],
+      "event_date": "2026-09-13",
+      "evidence_excerpt": "Baker Hughes Wins Major Venture Global LNG Orders for Cloud Connector Pipeline and Plaquemines LNG Expansion",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPTFF2cnhaaGtQUjItb0tmeGdqREtoenJVNnE1YXZOa3gwcjNNQ1JmOXVoeU42alh4RTNwakVqRDlSNVlKUkZYcUdYeFYwT1JLejJ2XzAzSkJ6NTdNZVhITDYzM2NDOEhtM0J0NGYxV1AyMjFVRktSWlA4TjFEdzRiUUJrU2d1WFc0dnRwdW5GbjBSc0ktVm10REtYSE9rZ3RoMXVPZTJCbmpWRzdjdFZjQzJHUWRKbExoMTRiUDJCcWVXUUhlX25OSWloazduN1NaRjVaZW02ZUE?oc=5"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 6,
+      "event_ids": [
+        18
+      ],
+      "event_date": "2026-10-05",
+      "evidence_excerpt": "An alliance agreement was signed with PDVSA, Lindsayca and Fulcrum LNG, Inc. to restore energy infrastructure for gas production",
+      "source_urls": [
+        "https://investors.bakerhughes.com/news/press-releases/news-details/2026/Baker-Hughes-Signs-Two-Agreements-to-Develop-Venezuelas-Natural-Gas-and-Energy-Infrastructure/default.aspx",
+        "https://www.reuters.com/business/energy/baker-hughes-signs-agreements-expand-venezuela-gas-infrastructure-2026-10-05/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Deleveraging/sale of toxic assets/spin-off of loss-making unit",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-13",
+      "evidence_excerpt": "Baker Hughes to sell Waygate Technologies business to Hexagon in an all-cash transaction for approximately $1.45 billion",
+      "source_urls": [
+        "https://investors.bakerhughes.com/news/press-releases/news-details/2026/Baker-Hughes-Announces-Sale-of-Waygate-Technologies-to-Hexagon/default.aspx",
+        "https://hexagon.com/company/newsroom/press-releases/2026/hexagon-to-acquire-waygate-technologies-expanding-into-nondestructive-testing"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        17
+      ],
+      "event_date": "2026-09-28",
+      "evidence_excerpt": "On September 28, 2026, analyst firm Jefferies adjusted its price target for Baker Hughes (NASDAQ: BKR) to $77.00 from $80.00.",
+      "source_urls": [
+        "https://site.financialmodelingprep.com/market-news/baker-hughes-price-target-jefferies-growth"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings guidance cut",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 8,
+      "event_ids": [
+        15
+      ],
+      "event_date": "2026-09-10",
+      "evidence_excerpt": "Baker Hughes fell 6.7% on September 10, 2026, after CEO Lorenzo Simonelli cautioned that the Chart Industries acquisition will pressure near-term margins",
+      "source_urls": [
+        "https://beststocks.com/stocks/bkr/what-changed/2026-09-10"
+      ],
+      "confidence": 85
+    }
+  ],
+  "grok_verdict": null,
+  "search_backend": "deepseek_fallback",
+  "generated_at": "2026-10-06",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

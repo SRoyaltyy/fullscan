@@ -64,6 +64,12 @@ jobs:
           HOLDUP_GIT_REF: origin/main
           HOLDUP_MODE: fill
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/forward.py
+      - name: Refresh the h1 close display
+        id: closes
+        if: success()
+        env:
+          FORWARD_BOOK: h1
+        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_closes.py
       - name: Commit the append
         if: always()
         run: |
@@ -79,6 +85,7 @@ jobs:
             research/hot_n4_clean_v4/forward_h1/price_revisions.jsonl
             dashboard/h1/log.json
             dashboard/h1/status.json
+            dashboard/h1/closes.json
           )
           for path in "${files[@]}"; do
             if [ -f "$path" ]; then
@@ -90,8 +97,33 @@ jobs:
             exit 0
           fi
           git commit -m "Seal the h1 fill."
-          git pull --rebase origin main
-          git push origin HEAD:main
+          # Another job can push between our rebase and push. Retry a
+          # non-conflicting race up to 5 times. A rebase conflict means a record
+          # file changed on main under this run: abort and fail, never force.
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            if ! git pull --rebase origin main; then
+              if [ -d "$(git rev-parse --git-path rebase-merge)" ] \
+                 || [ -d "$(git rev-parse --git-path rebase-apply)" ]; then
+                git rebase --abort || true
+                echo "::error::rebase conflict on attempt ${attempt}; not retrying"
+                exit 1
+              fi
+              echo "pull failed on attempt ${attempt}"
+            elif git push origin HEAD:main; then
+              pushed=true
+              break
+            else
+              echo "push rejected on attempt ${attempt}"
+            fi
+            if [ "$attempt" -lt 5 ]; then
+              sleep $(( 2 * attempt + RANDOM % 5 ))
+            fi
+          done
+          if [ "$pushed" != "true" ]; then
+            echo "::error::push failed after 5 attempts"
+            exit 1
+          fi
       - name: Fail the job when the book halted
-        if: steps.prices.outcome == 'failure' || steps.fill.outcome == 'failure'
+        if: steps.prices.outcome == 'failure' || steps.fill.outcome == 'failure' || steps.closes.outcome == 'failure'
         run: exit 1

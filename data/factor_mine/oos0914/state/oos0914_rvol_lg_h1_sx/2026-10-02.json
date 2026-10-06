@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 5.06,
+      "shares": 493,
+      "side": "BUY",
+      "ticker": "SDEV"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.38,
+      "shares": 1808,
+      "side": "BUY",
+      "ticker": "QSI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 0.86,
+      "shares": 2902,
+      "side": "BUY",
+      "ticker": "SES"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.665,
+      "shares": 1450,
+      "side": "BUY",
+      "ticker": "NAUT"
+    }
+  ],
+  "cash": 2.27,
+  "date": "2026-10-02",
+  "equity": 11901.7,
+  "fees": 141.5748,
+  "fills": [
+    {
+      "fees": 2.0631,
+      "fill_rule": "open",
+      "pnl": 11.65,
+      "price": 150.5,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "FORM"
+    },
+    {
+      "fees": 13.2299,
+      "fill_rule": "open",
+      "pnl": 135.49,
+      "price": 2.5,
+      "shares": 1011,
+      "side": "SELL",
+      "ticker": "PACB"
+    },
+    {
+      "fees": 18.4297,
+      "fill_rule": "open",
+      "pnl": 62.02,
+      "price": 1.75,
+      "shares": 1409,
+      "side": "SELL",
+      "ticker": "PMVP"
+    },
+    {
+      "fees": 25.801,
+      "fill_rule": "open",
+      "pnl": 303.89,
+      "price": 1.38,
+      "shares": 1973,
+      "side": "SELL",
+      "ticker": "QSI"
+    },
+    {
+      "fees": 6.3597,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 5.06,
+      "shares": 493,
+      "side": "BUY",
+      "ticker": "SDEV"
+    },
+    {
+      "fees": 23.3232,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.38,
+      "shares": 1808,
+      "side": "BUY",
+      "ticker": "QSI"
+    },
+    {
+      "fees": 33.6632,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 0.86,
+      "shares": 2902,
+      "side": "BUY",
+      "ticker": "SES"
+    },
+    {
+      "fees": 18.705,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.665,
+      "shares": 1450,
+      "side": "BUY",
+      "ticker": "NAUT"
+    }
+  ],
+  "holdings": [
+    "NAUT",
+    "QSI",
+    "SDEV",
+    "SES"
+  ],
+  "mean": 17.5907,
+  "n_trades_today": 8,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 150.5,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "FORM"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.5,
+      "shares": 1011,
+      "side": "SELL",
+      "ticker": "PACB"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.75,
+      "shares": 1409,
+      "side": "SELL",
+      "ticker": "PMVP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.38,
+      "shares": 1973,
+      "side": "SELL",
+      "ticker": "QSI"
+    }
+  ],
+  "state": {
+    "after": "2026-10-02",
+    "cash": 2.27,
+    "pos": {
+      "NAUT": {
+        "close_px": 1.96,
+        "cost": 2432.955,
+        "entry_date": "2026-10-02",
+        "entry_px": 1.665,
+        "fee_in": 18.705,
+        "last_px": 1.665,
+        "min_hold": 1,
+        "notional": 2414.25,
+        "peak_px": 1.665,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer; \ud83d\udd35; \u26aa; ret5=+58.4; leftover $2495.98",
+        "shares": 1450,
+        "ticker": "NAUT"
+      },
+      "QSI": {
+        "close_px": 1.55,
+        "cost": 2518.3632,
+        "entry_date": "2026-10-02",
+        "entry_px": 1.38,
+        "fee_in": 23.3232,
+        "last_px": 1.38,
+        "min_hold": 1,
+        "notional": 2495.04,
+        "peak_px": 1.38,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+82.2; leftover $2495.98",
+        "shares": 1808,
+        "ticker": "QSI"
+      },
+      "SDEV": {
+        "close_px": 7.48,
+        "cost": 2500.9397,
+        "entry_date": "2026-10-02",
+        "entry_px": 5.06,
+        "fee_in": 6.3597,
+        "last_px": 5.06,
+        "min_hold": 1,
+        "notional": 2494.58,
+        "peak_px": 5.06,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+183.7; leftover $2495.98",
+        "shares": 493,
+        "ticker": "SDEV"
+      },
+      "SES": {
+        "close_px": 0.8847,
+        "cost": 2529.3831999999998,
+        "entry_date": "2026-10-02",
+        "entry_px": 0.86,
+        "fee_in": 33.6632,
+        "last_px": 0.86,
+        "min_hold": 1,
+        "notional": 2495.72,
+        "peak_px": 0.86,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+54.3; leftover $2495.98",
+        "shares": 2902,
+        "ticker": "SES"
+      }
+    },
+    "yday_equity": 11901.7
+  }
+}

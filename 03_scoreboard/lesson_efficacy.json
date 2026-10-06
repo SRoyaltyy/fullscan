@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-01T18:06:42.888472-04:00",
+  "generated_at": "2026-10-06T16:32:25.702166-04:00",
   "window": 7,
   "summary": {
-    "n_active": 215,
+    "n_active": 217,
     "n_judged": 177,
-    "improved": 69,
-    "flat": 27,
+    "improved": 67,
+    "flat": 29,
     "worse": 81,
     "mean_delta": -0.021
   },
@@ -769,10 +769,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 6
+        "hit": 0.714,
+        "n": 7
       },
-      "delta": 0.096,
+      "delta": 0.143,
       "verdict": "improved"
     },
     {
@@ -785,11 +785,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 6
+        "hit": 0.429,
+        "n": 7
       },
-      "delta": 0.071,
-      "verdict": "improved"
+      "delta": 0.0,
+      "verdict": "flat"
     },
     {
       "lesson": "a-low-beta-defensive-sector-etf-xlp-xlu-xlv-like-posts-a-net.md",
@@ -801,10 +801,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.8,
-        "n": 5
+        "hit": 0.833,
+        "n": 6
       },
-      "delta": 0.371,
+      "delta": 0.404,
       "verdict": "improved"
     },
     {
@@ -1189,6 +1189,13 @@
       "verdict": "not market-graded"
     },
     {
+      "lesson": "a-scheduled-us-cash-session-where-the-run-packet-contains-a.md",
+      "topic": null,
+      "active_since": "2026-10-06",
+      "error_category": "D",
+      "verdict": "not market-graded"
+    },
+    {
       "lesson": "a-sector-analysis-names-a-factor-as-a-relative-headwind-drag.md",
       "topic": "sector:Consumer Defensive",
       "active_since": "2026-09-11",
@@ -1294,11 +1301,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 6
+        "hit": 0.429,
+        "n": 7
       },
-      "delta": 0.071,
-      "verdict": "improved"
+      "delta": 0.0,
+      "verdict": "flat"
     },
     {
       "lesson": "a-sector-etf-gaps-1-at-the-open-on-a-risk-off-commodity-coll.md",
@@ -1853,10 +1860,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.4,
-        "n": 5
+        "hit": 0.333,
+        "n": 6
       },
-      "delta": 0.257,
+      "delta": 0.19,
       "verdict": "improved"
     },
     {
@@ -1936,6 +1943,13 @@
       },
       "delta": -0.285,
       "verdict": "WORSE"
+    },
+    {
+      "lesson": "before-the-open-channel-1-es-nq-is-locked-from-an-early-snap.md",
+      "topic": null,
+      "active_since": "2026-10-05",
+      "error_category": "D",
+      "verdict": "not market-graded"
     },
     {
       "lesson": "bond-proxy-utilities-with-s0-0-on-a-two-sided-scheduled-fed.md",
@@ -2239,8 +2253,8 @@
         "n": 7
       },
       "after": {
-        "hit": null,
-        "n": 0
+        "hit": 0.0,
+        "n": 1
       },
       "verdict": "insufficient"
     },
@@ -3313,11 +3327,11 @@
     {
       "topic": "general",
       "last10": {
-        "hit": 0.5,
+        "hit": 0.4,
         "n": 10
       },
       "prev10": {
-        "hit": 0.5,
+        "hit": 0.7,
         "n": 10
       }
     },
@@ -3335,7 +3349,7 @@
     {
       "topic": "sector:Communication Services",
       "last10": {
-        "hit": 0.1,
+        "hit": 0.2,
         "n": 10
       },
       "prev10": {
@@ -3357,7 +3371,7 @@
     {
       "topic": "sector:Consumer Defensive",
       "last10": {
-        "hit": 0.5,
+        "hit": 0.6,
         "n": 10
       },
       "prev10": {
@@ -3368,7 +3382,7 @@
     {
       "topic": "sector:Energy",
       "last10": {
-        "hit": 0.7,
+        "hit": 0.6,
         "n": 10
       },
       "prev10": {
@@ -3383,7 +3397,7 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.4,
+        "hit": 0.5,
         "n": 10
       }
     },
@@ -3394,29 +3408,29 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.5,
+        "hit": 0.4,
         "n": 10
       }
     },
     {
       "topic": "sector:Industrials",
       "last10": {
-        "hit": 0.4,
+        "hit": 0.3,
         "n": 10
       },
       "prev10": {
-        "hit": 0.4,
+        "hit": 0.5,
         "n": 10
       }
     },
     {
       "topic": "sector:Real Estate",
       "last10": {
-        "hit": 0.6,
+        "hit": 0.5,
         "n": 10
       },
       "prev10": {
-        "hit": 0.4,
+        "hit": 0.5,
         "n": 10
       }
     },
@@ -3434,11 +3448,11 @@
     {
       "topic": "sector:Utilities",
       "last10": {
-        "hit": 0.4,
+        "hit": 0.3,
         "n": 10
       },
       "prev10": {
-        "hit": 0.3,
+        "hit": 0.4,
         "n": 10
       }
     }

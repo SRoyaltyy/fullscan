@@ -5,16 +5,21 @@ Run AFTER daily_run.py, from the excel_bot/ directory:
 
 Reads suggestions/suggestions.csv.
 
-The schedule and the after-close dispatch share this writer. Before
-16:00 ET it writes daily/{date}_excel_bot_draft.md only and does not
-create or modify the final dated file. At or after 16:00 ET it creates
-daily/{date}_excel_bot.md once. A second after-close run refuses to
-overwrite that file. Sibling .csv/.json dated artifacts use the same
-rule. Zero network, zero tokens — pure stdlib + the suggestions file.
+The morning schedule, the after-close schedule, and a manual dispatch
+share this writer. The date on the file is the NYSE session in
+America/New_York, never the UTC calendar date.
+
+Before 16:00 ET on a session day it writes daily/{date}_excel_bot_draft.md
+only and does not create the final. At or after 16:00 ET on a session
+day it creates daily/{date}_excel_bot.md once. A weekend or full-day
+holiday stamps the previous completed session and uses that same
+write-once final. A second run refuses to overwrite it. Sibling
+.csv/.json dated artifacts use the same rule. Zero network, zero
+tokens — pure stdlib + the suggestions file.
 """
 import csv
 import os
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 SUGG = "suggestions/suggestions.csv"
@@ -49,6 +54,97 @@ def is_after_close(now=None):
     clock = session_clock(now)
     close = clock.replace(hour=CLOSE_HOUR, minute=0, second=0, microsecond=0)
     return clock >= close
+
+
+def _nth_weekday(year, month, weekday, n):
+    """n>0 is the nth weekday of the month (Mon=0). n=-1 is the last."""
+    if n > 0:
+        d = date(year, month, 1)
+        d += timedelta(days=(weekday - d.weekday()) % 7)
+        return d + timedelta(weeks=n - 1)
+    if month == 12:
+        d = date(year + 1, 1, 1) - timedelta(days=1)
+    else:
+        d = date(year, month + 1, 1) - timedelta(days=1)
+    d -= timedelta(days=(d.weekday() - weekday) % 7)
+    return d
+
+
+def _easter_gregorian(year):
+    """Anonymous Gregorian Easter (Western). Same rule as src/skip_if_good."""
+    a = year % 19
+    b, c = divmod(year, 100)
+    d, e = divmod(b, 4)
+    f = (b + 8) // 25
+    g = (b - f + 1) // 3
+    h = (19 * a + b - d - g + 15) % 30
+    i, k = divmod(c, 4)
+    el = (32 + 2 * e + 2 * i - h - k) % 7
+    m = (a + 11 * h + 22 * el) // 451
+    month, day = divmod(h + el - 7 * m + 114, 31)
+    return date(year, month, day + 1)
+
+
+def _observed_nyse(d):
+    """Saturday holiday closes Friday. Sunday holiday closes Monday."""
+    if d.weekday() == 5:
+        return d - timedelta(days=1)
+    if d.weekday() == 6:
+        return d + timedelta(days=1)
+    return d
+
+
+def is_nyse_holiday(d):
+    """Full-day NYSE closures. Same set as src/skip_if_good.is_nyse_holiday."""
+    y = d.year
+    holidays = {
+        _observed_nyse(date(y, 1, 1)),
+        _nth_weekday(y, 1, 0, 3),
+        _nth_weekday(y, 2, 0, 3),
+        _easter_gregorian(y) - timedelta(days=2),
+        _nth_weekday(y, 5, 0, -1),
+        _observed_nyse(date(y, 6, 19)),
+        _observed_nyse(date(y, 7, 4)),
+        _nth_weekday(y, 9, 0, 1),
+        _nth_weekday(y, 11, 3, 4),
+        _observed_nyse(date(y, 12, 25)),
+    }
+    return d in holidays
+
+
+def is_nyse_session(d):
+    """Weekday that is not a full-day NYSE holiday."""
+    return d.weekday() < 5 and not is_nyse_holiday(d)
+
+
+class SessionStamp:
+    """The NYSE date this run is allowed to name, and whether its close printed."""
+
+    def __init__(self, session, write_final):
+        self.session = session
+        self.write_final = bool(write_final)
+
+    def __repr__(self):
+        kind = "final" if self.write_final else "draft"
+        return f"SessionStamp({self.session.isoformat()}, {kind})"
+
+
+def resolve_session(now=None):
+    """Session stamp in America/New_York. The UTC date is not used.
+
+    At or after 16:00 ET on an NYSE session, that day is the final.
+    Before 16:00 ET on an NYSE session, that day has not closed: draft
+    only, and no final is created for it. A weekend or full-day holiday
+    stamps the previous completed session and writes that final once.
+    """
+    clock = session_clock(now)
+    day = clock.date()
+    if is_nyse_session(day):
+        return SessionStamp(day, write_final=is_after_close(clock))
+    previous = day - timedelta(days=1)
+    while not is_nyse_session(previous):
+        previous -= timedelta(days=1)
+    return SessionStamp(previous, write_final=True)
 
 
 def dated_name(day, ext, *, draft):
@@ -182,15 +278,18 @@ def render(rows, today):
 
 
 def run(now=None, out_dir=OUT_DIR, sugg_path=SUGG):
-    clock = session_clock(now)
-    # Same ET clock as the 16:00 cutoff. On GitHub this matches the UTC
-    # date daily_run stamps, for both the midday and after-close windows.
-    today = clock.date().isoformat()
+    stamp = resolve_session(now)
+    # ET session, including a GitHub start after midnight UTC that is
+    # still the previous evening in New York, and a weekend/holiday
+    # start that belongs to the previous completed session.
+    today = stamp.session.isoformat()
+    kind = "final" if stamp.write_final else "draft"
+    print(f"[summary] session {today} America/New_York {kind}", flush=True)
     with open(sugg_path, newline="", encoding="utf-8") as fh:
         rows = list(csv.DictReader(fh))
     text = render(rows, today)
     return write_dated(
-        out_dir, today, ".md", text, after_close=is_after_close(clock),
+        out_dir, today, ".md", text, after_close=stamp.write_final,
     )
 
 

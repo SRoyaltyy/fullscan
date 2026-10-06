@@ -1,87 +1,118 @@
-# News Judge — 2026-10-02
+# News Judge — 2026-09-08
 
 ### IMPORTANT NEWS (my ranking)
-1. **Bond-market rout this week; QQQ holding up vs SPY/DIA** — Live yield shock is already splitting index beta (growth/duration vs cyclicals/Dow); outranks another Fed-quote. Channel: rates
-2. **Fed officials lean against an October hike; Goldman shifts the next hike to December after cooler PCE** — This is the session’s core policy-odds move, but it is not a clean dovish green light. Channel: rates
-3. **Kashkari: inflation still too high, labor “pretty good,” one more hike this year** — Hawkish counterweight that explains why yields/gold did not treat cooler PCE as easing. Channel: rates
-4. **SPX/Dow ended lower as investors shrugged off cooler-than-expected inflation** — Risk appetite already failed to follow the data print; more informative than duplicate hike-odds headlines. Channel: risk
-5. **Spot gold dumps >$100 (AEM) as hawkish Fed comments lift extra-hike odds** — Confirms the real-yield/hawkish transmission the mechanical Fed-fade tape underweights. Channel: rates
-6. **NFP still the next hard binary (gold tape waiting on payrolls)** — First-Friday-style scheduled catalyst; do not convert Fed-speak into a signed SPX call until it prints. Channel: rates
-7. **APH −6.5% on Fabrinet weakness plus rising yields** — Hardware/AI interconnect hit from both rates and a supply-chain print; sector force beyond one name. Channel: sector_fundamental
-8. **Amgen Phase 3 dazodalibep win in Sjögren’s; Jefferies PT to $410** — Late-stage immunology readout with peer-sympathy potential in Healthcare, not only AMGN. Channel: sector_fundamental
 
-RULES_APPLIED: a-scheduled-high-impact-macro-release-nfp-cpi-fomc-is-the-do; a-scheduled-high-impact-macro-release-cpi-nfp-fomc-is-the-do. NFP is the unresolved high-impact binary on this Friday tape — do not emit a signed SPX lean off Fed-speak or cooler PCE. Kinetic-oil, mega-cap-earnings-over-macro-drag, and same-morning Chair/Governor B3=0 gates do not fire (no fresh Hormuz increment; no MAG7/AI-infra bellwether beat; Kashkari is already printed, not a pending pre-open appearance).
+1. **Blowout jobs report fans Fed rate-HIKE fears; Dow/S&P close lower, Nasdaq held up by chip strength** — dominant macro driver: a hot labor print that *raises* hike odds is the single biggest input to SPX beta and the rates spine this session. (channel: rates)
+2. **Fed Chair Warsh: inflation "too high"; Williams says a late-2026 hike "may be appropriate"; October hike odds fall to ~17.7% after soft jobs data** — the policy path is the second leg of the same rates cluster and is internally contradictory (hawkish Chair vs. market cutting odds), which is itself the tradable signal. (channel: rates)
+3. **10Y/30Y Treasury yields hit 24-year highs; mortgage rates rise as yields top 5%** — long-end term-premium shock is the transmission channel into duration-sensitive equities (REITs, utilities, small caps, unprofitable growth). (channel: rates)
+4. **Nvidia AI deal + Dell server backlog spark semis rally; AMAT +5%, NVDA at record ~$5.76T, ALAB +12% on S&P 500 inclusion speculation** — the counterweight: AI-capex complex is the one sector with independent positive force strong enough to offset the rates drag on Nasdaq. (channel: sector_fundamental)
+5. **Google signs 20-year nuclear deal with Constellation to power AI build-out** — AI-power demand is now a structural utility/IPP theme, not a single-name story; it re-rates the nuclear/PPA complex. (channel: sector_fundamental)
+6. **Gold slides >3% on Warsh hawkish comments / hike-odds repricing (offset by separate "gold rises as hike bets ease" wires)** — real-rate sensitivity is the cleanest read on how the market is pricing the Fed path; the conflicting wires themselves signal an unresolved rates regime. (channel: substitution)
+7. **AbbVie positive Phase 3 etentamig multiple myeloma data + $10.9B Apogee close, guidance reaffirmed** — large-cap Healthcare catalyst with peer sympathy (myeloma/BCMA space), sector_fundamental not pure single-name. (channel: sector_fundamental)
+8. **Fed unveils major bank-supervision overhaul (12 districts → 5 regions); judge blocks DOJ subpoenas involving Powell; Trump distances himself from Warsh** — institutional/independence noise that can move financials and the policy-risk premium at the margin. (channel: sector_policy)
+
+*(Input set is macro-heavy and thin on fresh US hard data; ranking reflects that. Single-name earnings color — BDX, APD, BNS, BBVA, AME, ARGX — is real but does not carry sector force today.)*
+
+---
 
 ### STEP 1 — FRAMEWORK SCORE
-1. Bond rout / QQQ > SPY/DIA  
-keep | us_relevance: high — US duration shock already showing in index relative performance | channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: spx | action_object_detail: SPX beta vs QQQ/DIA split | polarity: bearish | polarity_why: higher yields compress cyclicals/Dow and cap SPX even if NQ holds up | confidence: 0.74
 
-2. October hike odds fade / GS to December  
-keep | us_relevance: high — FOMC path is the dominant rates input | channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: spx | action_object_detail: SPX beta / rate-sensitive duration | polarity: mixed | polarity_why: less-near-term hike is locally dovish, but it is a delay not a pivot and fights the yield backup | confidence: 0.70
+**1. Blowout jobs → hike fears; Dow/S&P lower, Nasdaq chip-led**
+- keep | us_relevance: high — hot labor print directly repricing the Fed path | channel: rates | geography: us_domestic | severity: regime | horizon: 1d-1w | action_object: spx | detail: SPX beta, rate-sensitive baskets | polarity: hawkish | polarity_why: strong labor → higher hike odds → discount-rate drag | confidence: 0.75
 
-3. Kashkari inflation-too-high / one more hike this year  
-keep | us_relevance: high — voting-region Fed color keeping terminal hike alive | channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: spx | action_object_detail: SPX beta via 2s/10s and hike odds | polarity: hawkish | polarity_why: labor-ok + inflation-too-high is a “more work to do” stance, not a pause-and-ease | confidence: 0.72
+**2. Warsh "inflation too high" / Williams late-2026 hike / Oct odds 17.7%**
+- keep | us_relevance: high — Chair + voter guidance sets the path | channel: rates | geography: us_domestic | severity: regime | horizon: 1w-1m | action_object: spx | detail: SPX beta, 2Y/10Y | polarity: mixed | polarity_why: hawkish rhetoric vs. market cutting hike odds = unresolved two-sided | confidence: 0.7
 
-4. SPX/Dow lower, cooler inflation shrugged off  
-keep | us_relevance: high — shows the data did not buy risk | channel: risk | geography: us_domestic | severity: session | horizon: 1d | action_object: spx | action_object_detail: SPX/DIA beta | polarity: bearish | polarity_why: failed follow-through after a disinflation print is a risk-off tell | confidence: 0.68
+**3. 10Y/30Y at 24-year highs; mortgage rates >5%**
+- keep | us_relevance: high — long-end term premium is the equity-duration transmission | channel: rates | geography: us_domestic | severity: regime | horizon: 1w-1m | action_object: basket | detail: REITs, utilities, small-cap (IWM), unprofitable growth | polarity: bearish | polarity_why: higher long yields compress duration multiples | confidence: 0.75
 
-5. Gold −$100 on hawkish Fed / hike expectations  
-keep | us_relevance: high — real-yield confirmation of the hawkish sleeve | channel: rates | geography: global_priced | severity: session | horizon: 1d-1w | action_object: sector_etf | action_object_detail: GDX/gold miners; rates confirmation for SPX | polarity: hawkish | polarity_why: bullion dump is the market pricing tighter real rates, not cuts | confidence: 0.71
+**4. Nvidia AI deal + Dell backlog; AMAT +5%, ALAB +12%**
+- keep | us_relevance: high — AI-capex complex is the largest SPX weight cluster | channel: sector_fundamental | geography: us_supply_chain | severity: session | horizon: 1d-1w | action_object: sector_etf | detail: SMH/SOXX, semis basket | polarity: bullish | polarity_why: fresh demand catalyst + index-inclusion flow | confidence: 0.8
 
-6. NFP awaited  
-conditional | us_relevance: high — scheduled payrolls binary dominates the next print | channel: rates | geography: us_domestic | severity: session | horizon: 1d | action_object: spx | action_object_detail: SPX beta into/after NFP | polarity: mixed | polarity_why: two-sided labor/inflation read; unresolved until released | confidence: 0.62
+**5. Google 20-yr nuclear deal with Constellation**
+- conditional | us_relevance: medium — structural AI-power theme, but one deal | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1w-1m | action_object: sector_etf | detail: utilities/IPP basket (CEG, VST, nuclear/PPA names) | polarity: bullish | polarity_why: validates AI-power demand curve | confidence: 0.65
 
-7. APH −6.5% Fabrinet + yields  
-conditional | us_relevance: medium — AI-hardware basket, not SPX-wide unless it broadens | channel: sector_fundamental | geography: us_supply_chain | severity: session | horizon: 1d-1w | action_object: basket | action_object_detail: AI interconnect/hardware (APH, Fabrinet chain) | polarity: bearish | polarity_why: earnings-adjacent weakness plus higher yields hit the hardware multiple | confidence: 0.58
+**6. Gold −3% on Warsh hawkish / +wires on easing hike bets**
+- conditional | us_relevance: medium — real-rate read-through, not direct SPX driver | channel: substitution | geography: global_priced | severity: session | horizon: 1d-1w | action_object: basket | detail: gold miners (GDX), bullion | polarity: mixed | polarity_why: conflicting wires = unresolved real-rate signal | confidence: 0.55
 
-8. AMGN Phase 3 Sjögren’s  
-keep | us_relevance: medium — large-cap biotech with immunology peer read-through | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: sector_etf | action_object_detail: XLV / large-cap biotech basket | polarity: bullish | polarity_why: successful late-stage readout lifts the name and can bid immunology peers | confidence: 0.60
+**7. AbbVie Phase 3 etentamig MM data + Apogee close**
+- keep | us_relevance: medium — large-cap Healthcare with peer sympathy | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: sector_etf | detail: XBI/IBB, BCMA/myeloma basket | polarity: bullish | polarity_why: positive late-stage readout lifts sector sentiment | confidence: 0.7
+
+**8. Fed supervision overhaul / Powell subpoena block / Trump-Warsh rift**
+- conditional | us_relevance: medium — institutional-independence risk premium | channel: sector_policy | geography: us_domestic | severity: session | horizon: 1w | action_object: basket | detail: large-cap banks (XLF) | polarity: mixed | polarity_why: structural change = uncertainty, not clean direction | confidence: 0.5
+
+---
 
 ### STEP 2 — INTERACTIONS
-- Fed path (October hike fade after cooler PCE) + Kashkari/Logan “inflation still too high” + bond rout/gold dump → treat as **ONE mixed rates cluster**; do not buy SPX/cyclicals on dovish-hike-odds headlines while yields are backing up.
-- Yields **up** (rout) + cyclicals/Dow lag vs QQQ → inverse of the risk-on breadth pattern; QQQ relative strength is duration/AI hold-up, not broad risk-on.
-- AI-hardware demand (CIEN initiation as AI networking winner) + APH/Fabrinet weakness + rising yields → semis/hardware **mixed**; do not double-count CIEN as a green AI-beta offset to the APH hit.
-- AMGN Phase 3 success → Healthcare basket sympathy, not only AMGN.
-- NFP pending + Fed-speak already in the tape → one rates binary still open; do not stack a second directional Fed call.
+
+- **Fed path + weak labor → treat as ONE rates cluster.** The "blowout jobs" headline and the "soft jobs data reduces hike odds" wire are contradictory; net effect is an unresolved rates regime, not two separate signals. Do not double-count hawkish and dovish legs.
+- **Yields at 24-yr highs + cyclicals/small-caps → risk-off breadth pressure.** Long-end term premium is a headwind to IWM and rate-sensitive sectors; do not read Nasdaq strength as broad risk-on.
+- **AI chip demand + rates backup → semis mixed-to-up, but do not extrapolate to broad tech.** NVDA/AMAT/ALAB strength is idiosyncratic AI-capex; SaaS and unprofitable growth remain duration-pressured.
+- **AI power demand (Google/Constellation) + nuclear/PPA theme → do not short IPPs on rates alone.** Structural demand offsets rate drag for the nuclear-adjacent complex.
+- **Single-name biotech Phase 3 success (ABBV) + sector sympathy → Healthcare basket, not only ABBV.**
+
+---
 
 ### STEP 3 — RECLASSIFY AUDIT
-**DROP from usable (duplicates/politics/FX/explainers, not incremental US equity drivers):** Trump says Warsh should have voted against the hike (multi-wire); Elizabeth Warren blames Trump for the hike; Indonesian Rupiah / Swiss Franc USD-fade FX; “What the Latest Federal Reserve Rate Increase Means for Consumers”; Cato “higher yields add trillions to the debt”; Pluang Oct inflation/Fed preview; ET “bold” Fed prediction; Powell leadership scrutiny; Fox/consumer-banker style recaps.
 
-**RESCUE into keep/conditional:** Finviz bond-rout QQQ vs SPY/DIA (index narrative; mechanical set buried it in Fed quotes); Finviz SPX/Dow shrug-off of cooler inflation; AEM gold −$100 hawkish dump (usable gold headline was the weaker “capped below $4,200 / await cuts” framing); APH −6.5% Fabrinet+yields; AMGN Phase 3 Sjögren’s; NFP-as-binary (usable gold line, elevated because Friday payrolls). **Noise-sample rescue:** diesel prices still surging → goods/CPI/transport cost pressure (conditional, not top-ranked). Not rescued: Bitget hack, MarketWatch retirement letters, Nike “worst year,” Congress stock-trading bill, S&P reconstitution shakeup.
+**DROPPED from mechanical usable:**
+- "Bank of Canada rate hike case weaker than Fed's, CIBC argues" / "Bank of Canada faces weaker case…" — foreign central bank, no US equity transmission.
+- "Gold rises on expectations of Fed rate hike will ease dollar…" / "Gold price rises as oil falls…" / "Gold edges up as October rate hike bets ease" — duplicate gold wires; consolidated into one substitution item (#6).
+- "Fed Rate Hike & What It Means for Mortgage Rates" / "8 Years of History Warns What a September Rate Hike Could Mean for Stocks" — derivative commentary, no incremental driver.
+- "The Fed's Rate Hike Was a Bad Call, Not Bad Faith" / "The Federal Reserve's Nonsense Policy" / "Revised Inflation Data Don't Change The Fed's Job" — opinion/analysis, not news.
+- "Jobs report shows US unexpectedly lost jobs in February" — stale/out-of-window, contradicts today's blowout-jobs narrative; likely mis-dated.
+- "Asian shares higher as odds reduced for another Fed rate hike" — Asia session color, already priced into US open.
+- "US Fed interest rate hike: How will it impact private equity dealmaking?" — thematic, no session force.
+
+**RESCUED from noise / single_name:**
+- "Google signs 20-year nuclear deal with Constellation Energy" (single_name bucket) → **keep/conditional**: AI-power structural theme, utility/IPP sector force.
+- "Nvidia AI deal and Dell server backlog spark semis rally lifting Applied Materials 5%" (single_name bucket) → **keep**: index-relevant AI-capex catalyst, SMH/SOXX force.
+- "Nvidia Heads for $6 Trillion Value…" / "Nvidia Is Now Worth $5.76 Trillion…" (single_name) → **conditional**: confirms AI leadership breadth, supports #4.
+- "OpenAI, Anthropic, Meta, Google stop short of AI safety guarantee" (single_name) → **conditional**: regulatory-risk overhang for AI complex, watch item.
+- "OpenAI, Anthropic IPOs Could Spark a Selloff in These Struggling Stocks" (single_name) → **conditional**: sentiment/positioning risk for IBM/TSLA/APP basket.
+- "Brazilian stocks jump as Bolsonaro seen as heavy favorite" (noise) → **drop**: EM single-country, no US equity transmission.
+- "Marvell just impressed Wall Street with 'good numbers plus a better story'" (noise) → **conditional**: semis sympathy, supports #4.
+
+---
 
 ### STEP 4 — B1 / SECTOR INJECT
-NEWS_JUDGE: n=8 rescued=6
-MACRO rates: [mixed] Cooler PCE fades October hike odds (GS→Dec) but Kashkari/chorus still see inflation too high and another hike this year (session/1d-1w)
-MACRO risk: [bearish] Bond rout underway; SPX/Dow already shrugged off the inflation print while QQQ only relatively holds up (session/1d)
-MACRO nfp: [mixed] Payrolls remain the unresolved high-impact binary — no signed SPX lean off Fed-speak (session/1d)
-SECTOR gold/miners: [bearish] Spot gold −$100 on hawkish hike expectations (GDX)
-SECTOR ai-hardware: [bearish] APH −6.5% on Fabrinet weakness + rising yields (AI interconnect basket)
-SECTOR healthcare: [bullish] AMGN Phase 3 Sjögren’s readout with XLV/biotech sympathy (XLV)
-INTERACTION: Do not buy SPX/cyclicals on October-hike-fade headlines while yields are backing up; NFP still open; CIEN AI-networking initiation does not offset APH/yields hit
-WATCH: Diesel still surging is a leftover goods-inflation tail; CIEN initiation is AI-networking color only
+
+```
+NEWS_JUDGE: n=8 rescued=3
+MACRO rates: [hawkish] Blowout jobs + Warsh "inflation too high" vs. Oct hike odds cut to 17.7% — unresolved Fed path (regime/1w-1m)
+MACRO rates: [bearish] 10Y/30Y at 24-yr highs, mortgage >5% — duration drag on REITs/utilities/IWM (regime/1w-1m)
+SECTOR semis: [bullish] NVDA AI deal + Dell backlog, AMAT +5%, ALAB +12% on S&P inclusion — SMH/SOXX leadership (session/1d-1w)
+SECTOR utilities/IPP: [bullish] Google 20-yr nuclear PPA with Constellation — AI-power demand re-rate (session/1w-1m)
+SECTOR healthcare: [bullish] ABBV Phase 3 etentamig MM data + Apogee close — XBI/IBB sympathy (session/1d-1w)
+SECTOR financials: [mixed] Fed supervision overhaul (12→5 regions), Powell subpoena block — XLF policy uncertainty (session/1w)
+INTERACTION: Fed path + weak labor = ONE rates cluster (do not double-count); AI-capex strength does NOT imply broad tech risk-on while long yields back up
+WATCH: contradictory jobs wires (blowout vs. soft) — treat rates regime as unresolved; do not emit directional SPX call off the labor headline alone
+```
+
+---
 
 NEWS_PARSE_BEGIN
 IMPORTANT_COUNT: 8
 TOP_ITEMS:
-- Bond market rout; QQQ holds up vs SPY/DIA | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:SPX beta vs QQQ/DIA split | pol=bearish | conf=0.74
-- Fed leans against October hike; GS shifts next hike to December after cooler PCE | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:SPX beta / hike odds | pol=mixed | conf=0.70
-- Kashkari: inflation still too high, labor pretty good, one more hike this year | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:SPX beta via terminal hike | pol=hawkish | conf=0.72
-- SPX/Dow lower as investors shrug off cooler inflation | keep=keep | channel=risk | severity=session | horizon=1d | object=spx:SPX/DIA beta | pol=bearish | conf=0.68
-- Gold dumps >$100 on hawkish Fed/hike expectations | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=sector_etf:GDX | pol=hawkish | conf=0.71
-- NFP awaited as next Fed binary | keep=conditional | channel=rates | severity=session | horizon=1d | object=spx:SPX beta into NFP | pol=mixed | conf=0.62
-- APH -6.5% on Fabrinet weakness and rising yields | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=basket:AI interconnect/hardware | pol=bearish | conf=0.58
-- AMGN Phase 3 dazodalibep Sjögren’s win | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLV | pol=bullish | conf=0.60
-INTERACTIONS: Fed-hike-fade + Kashkari-too-high + bond-rout/gold-dump = one mixed rates cluster do not buy beta on dovish odds; yields-up + Dow/SPY lag vs QQQ = not risk-on breadth; CIEN AI-networking + APH/Fabrinet/yields = hardware mixed do not double-count; AMGN P3 → XLV sympathy; NFP pending blocks a second signed Fed call
-RESCUED_FROM_NOISE: diesel prices keep surging (goods/CPI/transport); Finviz bond-rout QQQ vs SPY/DIA; Finviz SPX/Dow shrug-off cooler inflation; AEM gold -$100 hawkish dump; APH -6.5% Fabrinet+yields; AMGN Phase 3 Sjögren’s
-DROPPED_FROM_USABLE: Trump says Warsh should have voted against Fed hike; Elizabeth Warren blames Trump policies for hike; Indonesian Rupiah strengthens as USD weakens; Swiss Franc gains as USD eases; What the Latest Federal Reserve Rate Increase Means for Consumers; Persistently Higher Treasury Yields Could Add Trillions to the Debt; Key U.S. inflation data and Fed decision in Oct (Pluang); US Federal Reserve Interest Rate prediction bold forecast; Powell’s leadership of the Federal Reserve under scrutiny
+- Blowout jobs report fans Fed rate-hike fears; Dow/S&P lower, Nasdaq chip-led | keep=keep | channel=rates | severity=regime | horizon=1d-1w | object=spx:SPX beta | pol=hawkish | conf=0.75
+- Warsh "inflation too high" / Williams late-2026 hike / Oct odds 17.7% | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=spx:SPX beta, 2Y/10Y | pol=mixed | conf=0.7
+- 10Y/30Y at 24-year highs; mortgage rates top 5% | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=basket:REITs, utilities, IWM, unprofitable growth | pol=bearish | conf=0.75
+- Nvidia AI deal + Dell backlog; AMAT +5%, ALAB +12% | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:SMH/SOXX | pol=bullish | conf=0.8
+- Google 20-yr nuclear deal with Constellation | keep=conditional | channel=sector_fundamental | severity=session | horizon=1w-1m | object=sector_etf:utilities/IPP (CEG, VST) | pol=bullish | conf=0.65
+- Gold −3% on Warsh hawkish vs. +wires on easing hike bets | keep=conditional | channel=substitution | severity=session | horizon=1d-1w | object=basket:GDX, bullion | pol=mixed | conf=0.55
+- AbbVie Phase 3 etentamig MM data + $10.9B Apogee close | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XBI/IBB | pol=bullish | conf=0.7
+- Fed supervision overhaul / Powell subpoena block / Trump-Warsh rift | keep=conditional | channel=sector_policy | severity=session | horizon=1w | object=basket:XLF large-cap banks | pol=mixed | conf=0.5
+INTERACTIONS: Fed path + weak labor = ONE rates cluster (do not double-count); yields at 24-yr highs + cyclicals/small-caps = risk-off breadth pressure; AI chip demand + rates backup = semis mixed-to-up but do not extrapolate to broad tech; AI power demand + nuclear/PPA = do not short IPPs on rates alone; ABBV Phase 3 + sector sympathy = Healthcare basket not only ABBV
+RESCUED_FROM_NOISE: Google 20-yr nuclear deal with Constellation; Nvidia AI deal + Dell backlog spark semis rally (AMAT +5%); Marvell "good numbers plus a better story"
+DROPPED_FROM_USABLE: Bank of Canada rate hike case weaker than Fed's (CIBC) x2; Gold rises on expectations of Fed rate hike will ease dollar; Gold price rises as oil falls; Gold edges up as October rate hike bets ease; Fed Rate Hike & What It Means for Mortgage Rates; 8 Years of History Warns What a September Rate Hike Could Mean for Stocks; The Fed's Rate Hike Was a Bad Call Not Bad Faith; The Federal Reserve's Nonsense Policy; Revised Inflation Data Don't Change The Fed's Job; Jobs report shows US unexpectedly lost jobs in February (stale); Asian shares higher as odds reduced for another Fed rate hike; US Fed interest rate hike: How will it impact private equity dealmaking
 B1_INJECT:
-NEWS_JUDGE: n=8 rescued=6
-MACRO rates: [mixed] Cooler PCE fades October hike odds (GS→Dec) but Kashkari/chorus still see inflation too high and another hike this year (session/1d-1w)
-MACRO risk: [bearish] Bond rout underway; SPX/Dow already shrugged off the inflation print while QQQ only relatively holds up (session/1d)
-MACRO nfp: [mixed] Payrolls remain the unresolved high-impact binary — no signed SPX lean off Fed-speak (session/1d)
-SECTOR gold/miners: [bearish] Spot gold −$100 on hawkish hike expectations (GDX)
-SECTOR ai-hardware: [bearish] APH −6.5% on Fabrinet weakness + rising yields (AI interconnect basket)
-SECTOR healthcare: [bullish] AMGN Phase 3 Sjögren’s readout with XLV/biotech sympathy (XLV)
-INTERACTION: Do not buy SPX/cyclicals on October-hike-fade headlines while yields are backing up; NFP still open; CIEN AI-networking initiation does not offset APH/yields hit
-WATCH: Diesel still surging is a leftover goods-inflation tail; CIEN initiation is AI-networking color only
+NEWS_JUDGE: n=8 rescued=3
+MACRO rates: [hawkish] Blowout jobs + Warsh "inflation too high" vs. Oct hike odds cut to 17.7% — unresolved Fed path (regime/1w-1m)
+MACRO rates: [bearish] 10Y/30Y at 24-yr highs, mortgage >5% — duration drag on REITs/utilities/IWM (regime/1w-1m)
+SECTOR semis: [bullish] NVDA AI deal + Dell backlog, AMAT +5%, ALAB +12% on S&P inclusion — SMH/SOXX leadership (session/1d-1w)
+SECTOR utilities/IPP: [bullish] Google 20-yr nuclear PPA with Constellation — AI-power demand re-rate (session/1w-1m)
+SECTOR healthcare: [bullish] ABBV Phase 3 etentamig MM data + Apogee close — XBI/IBB sympathy (session/1d-1w)
+SECTOR financials: [mixed] Fed supervision overhaul (12→5 regions), Powell subpoena block — XLF policy uncertainty (session/1w)
+INTERACTION: Fed path + weak labor = ONE rates cluster (do not double-count); AI-capex strength does NOT imply broad tech risk-on while long yields back up
+WATCH: contradictory jobs wires (blowout vs. soft) — treat rates regime as unresolved; do not emit directional SPX call off the labor headline alone
 NEWS_PARSE_END

@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-32.74%** ($6,726) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 61 · skips 71 · realized $-2440.55.
+Cash book **-29.98%** ($7,002) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 61 · skips 71 · realized $-2440.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -203,6 +203,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-01 09:30 ET | **SELL** | `HALO` | 61 | $109.93 | $2.24 | $-335.64 | $6,822.61 | ▼ -335.64 after sell → book $6,822.61; vs 09:30 mark -2.24 | exit unpriced hold on first bar after 4 sess | — |
 | 2026-10-01 09:30 ET | **BUY** | `AVPT` | 477 | $14.27 | $6.15 | — | $9.67 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ret5=+7.3; leftover $6822.61 | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-10-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.67 | ▼ close $6,725.83 vs 09:30 $6,824.85 (session -90.63) | 16:00 close · cash $9.67 · equity $6,725.83 vs 09:30 $6,824.85 (-99.02; session marks -90.63) · 1 name(s) marked open→close (per-name table). AVPT×477 09:30 $14.27 → close $14.08 -90.63 | — |
+| 2026-10-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9.67 | ▲ 09:30 equity $6,792.61 vs yday $6,725.83 (+66.78) | 09:30 open · cash $9.67 (unchanged overnight, no fees) · equity $6,792.61 vs prior close $6,725.83 (+66.78) · 1 name(s) re-marked at the open (per-name table). AVPT×477 yday $14.08 → 09:30 $14.22 +66.78 | — |
+| 2026-10-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.67 | ▼ close $6,721.06 vs 09:30 $6,792.61 (session -71.55) | 16:00 close · cash $9.67 · equity $6,721.06 vs 09:30 $6,792.61 (-71.55; session marks -71.55) · 1 name(s) marked open→close (per-name table). AVPT×477 09:30 $14.22 → close $14.07 -71.55 | — |
+| 2026-10-05 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9.67 | ▼ 09:30 equity $6,644.74 vs yday $6,721.06 (-76.32) | 09:30 open · cash $9.67 (unchanged overnight, no fees) · equity $6,644.74 vs prior close $6,721.06 (-76.32) · 1 name(s) re-marked at the open (per-name table). AVPT×477 yday $14.07 → 09:30 $13.91 -76.32 | — |
+| 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.67 | ▲ close $7,002.49 vs 09:30 $6,644.74 (session +357.75) | 16:00 close · cash $9.67 · equity $7,002.49 vs 09:30 $6,644.74 (+357.75; session marks +357.75) · 1 name(s) marked open→close (per-name table). AVPT×477 09:30 $13.91 → close $14.66 +357.75 | — |
 
 ## Not taken
 
