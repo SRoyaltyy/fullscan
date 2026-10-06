@@ -5,8 +5,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** ON (general predict up score +2.6, conf 0.605)
-- **Yields:** rising (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.85 via vix/vix3m) spot 15.34
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.17
+- **Yields:** rising (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.86 via vix/vix3m) spot 15.41
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.05
 - **High-impact events:** 7 bullish vs 4 bearish | China: bear
 
 ## Sectors
@@ -22,7 +22,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 | sector:Healthcare | 🌧️ hostile | medium | finviz sector median week -2.99% [tape] |
 | sector:Industrials | 🌧️ hostile | medium | finviz sector median week -1.83% [tape] |
 | sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -2.49% [tape] |
-| sector:Technology | 🌧️ hostile | medium | finviz sector median week -2.62% [tape] |
+| sector:Technology | ⛅ neutral | high | sector predict score +2.7 dir flat conf 0.55 [sector board] |
 | sector:Utilities | 🌧️ hostile | medium | finviz sector median week -3.43% [tape] |
 
 ## Size
