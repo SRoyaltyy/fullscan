@@ -51,6 +51,9 @@ _SEALED_PLAN_TESTS = {
     "test_sealed_cash_short_fails_closed_not_hot4",
     "test_ready_submit_flat_sit_still_sends_sealed_plan",
     "test_flat_sit_does_not_hide_sealed_plan",
+    "test_account_positions_do_not_fail_closed_against_sealed_tickets",
+    "test_unheld_sealed_sell_is_drift_skipped_and_not_sent",
+    "test_2026_10_07_from_drifted_1006_account_sends_only_that_days_tickets",
 }
 
 
@@ -230,7 +233,11 @@ def test_ready_submit_flat_sit_still_sends_sealed_plan(tmp_path, monkeypatch):
 
     class Rich(API):
         def snapshot(self):
-            return BrokerSnap(env='paper', cash=20_000, positions={}, connected=True)
+            return BrokerSnap(
+                env='paper', cash=20_000, positions={
+                    'EGG': {'shares': 774, 'last_px': 5.05},
+                    'KOD': {'shares': 33, 'last_px': 95.41},
+                }, connected=True)
 
     api = Rich()
 
@@ -1240,3 +1247,192 @@ def test_bell_path_started_after_the_open_sends_nothing(tmp_path):
     saved = json.loads((tmp_path / f'{INCIDENT_DAY}_status.json').read_text())
     assert saved['status'] == 'missed_deadline'
     assert saved['submit'] is False
+
+
+def test_drift_log_records_2026_10_06_and_is_append_only(tmp_path):
+    """The 10-06 gap is a committed line. A later append does not rewrite it."""
+    from src import paper_drift
+
+    real = po.ROOT / 'data' / 'paper_open' / 'drift_log.jsonl'
+    raw = real.read_bytes()
+    lines = raw.decode().splitlines()
+    assert lines[0].startswith('{"kind":"doc"')
+    gap = json.loads(lines[1])
+    assert gap['kind'] == 'gap'
+    assert gap['date'] == '2026-10-06'
+    assert gap['plan_commit'].startswith('dcec598c3d')
+    assert gap['prepared_at'].startswith('2026-10-06T10:17:54')
+    assert gap['lateness_ms'] == 2874717.075
+    assert gap['sdev']['bought'] is False
+    assert 'already held on the sealed book' in gap['sdev']['reason']
+    assert gap['sdev']['sealed_book_shares'] == 1222
+    assert gap['feam']['sold'] is False
+    assert gap['feam']['held_shares'] == 939
+    assert gap['feam']['error'] == 'OPENAPI_ORDER_NOT_SUPPORT_REVERSE_OPTION'
+    assert gap['feam']['order_id'] == ''
+    sold = {row['ticker']: row['order_id'] for row in gap['sells_sent_late']}
+    bought = {row['ticker']: row['order_id'] for row in gap['buys_sent_late']}
+    assert sold == {
+        'GLND': 'NJJO7E6QDTMI40CLS4EGQ4KRL8',
+        'NAUT': '1GIIVILVRVQI877IGQUS6D5ASA',
+    }
+    assert bought == {
+        'PACB': '3IG4QHJ4IC309B8FJNLRCJD0GA',
+        'DNA': '3UHAD2KIHSSID8SO8KDQLQKR09',
+        'QSI': 'HUIIVGPG79II8OCHIG4IDT7818',
+    }
+    copy = tmp_path / 'drift_log.jsonl'
+    copy.write_bytes(raw)
+    paper_drift.append_drift({'kind': 'warning', 'date': '2026-10-07', 'note': 'later'}, copy)
+    got = copy.read_bytes()
+    assert got.startswith(raw)
+    assert got != raw
+    assert json.loads(got.decode().splitlines()[1]) == gap
+    assert real.read_bytes() == raw
+
+
+def test_account_positions_do_not_fail_closed_against_sealed_tickets(monkeypatch):
+    """Tickets are the sealed book. A drifted sandbox account does not block."""
+    _boom_pick_day(monkeypatch)
+    day = '2026-10-02'
+    empty = po.make_plan(_sealed_day_payload(day), _rich_snap(), _sealed_clock(day))
+    drifted = po.make_plan(
+        _sealed_day_payload(day),
+        _rich_snap(**{
+            'FEAM': {'shares': 939},
+            'PACB': {'shares': 1113},
+            'DNA': {'shares': 214},
+            'QSI': {'shares': 2482},
+            'SDEV': {'shares': 1},
+        }),
+        _sealed_clock(day),
+    )
+    assert empty['card']['tickets'] == drifted['card']['tickets']
+    sells = [(t['ticker'], t['shares']) for t in empty['card']['tickets'] if t['side'] == 'SELL']
+    buys = [t['ticker'] for t in empty['card']['tickets'] if t['side'] == 'BUY']
+    assert sells == [('EGG', 774), ('KOD', 33)]
+    assert buys == ['QSI', 'TJGC']
+    assert empty['card']['look_error'] == ''
+
+
+def test_unheld_sealed_sell_is_drift_skipped_and_not_sent(tmp_path, monkeypatch):
+    """A sealed sell the account does not hold is logged and not placed."""
+    _boom_pick_day(monkeypatch)
+    day = '2026-10-02'
+    early = datetime.fromisoformat(day + 'T06:20:00-04:00')
+
+    class Flat(API):
+        def snapshot(self):
+            return BrokerSnap(env='paper', cash=1_000_000, positions={}, connected=True)
+
+    api = Flat()
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: early, loader=lambda _: _flat_sit_payload(day),
+            api=api, state_dir=tmp_path)
+    assert rc == 0
+    assert api.calls
+    placed = [(row['side'], row['ticker']) for row in api.calls[0]]
+    assert ('SELL', 'EGG') not in placed and ('SELL', 'KOD') not in placed
+    assert [t for side, t in placed if side == 'BUY'] == ['QSI', 'TJGC']
+    journal = json.loads((tmp_path / f'{day}_submit.json').read_text())
+    skipped = [row['ticker'] for row in journal['sent'] if row['status'] == 'drift-skipped']
+    assert skipped == ['EGG', 'KOD']
+    log = (tmp_path / 'drift_log.jsonl').read_text()
+    assert 'drift-skipped' in log
+    assert 'EGG' in log and 'KOD' in log
+
+
+def test_2026_10_07_from_drifted_1006_account_sends_only_that_days_tickets(
+        tmp_path, monkeypatch):
+    """10-07 seal sends the 10-07 plan only. The drifted 10-06 account is not corrected."""
+    import hashlib
+    from src.h1_sealed_exec import canonical_bytes
+
+    def seal_line(obj):
+        body = {k: v for k, v in obj.items() if k != 'sha256'}
+        digest = hashlib.sha256(canonical_bytes(body)).hexdigest()
+        full = dict(body)
+        full['sha256'] = digest
+        return canonical_bytes(full)
+
+    mark = {
+        'kind': 'mark', 'date': '2026-10-06',
+        'holdings': [
+            {'ticker': 'SDEV', 'shares': 1222, 'last_px': 3.94, 'entry_date': '2026-09-30'},
+            {'ticker': 'FEAM', 'shares': 939, 'last_px': 3.88, 'entry_date': '2026-10-05'},
+        ],
+    }
+    plan_line = {
+        'kind': 'plan', 'date': '2026-10-07', 'bar_cutoff': '2026-10-06',
+        'cash_before': 10000.0, 'committed_at': '2026-10-07T12:00:00Z',
+        'excluded_unexplained_legs': [], 'holdup_on': False, 'morning_s': 1.0,
+        'picks': [{
+            'ticker': 'AAPL', 'rank': 1, 'fv_price': 100.0,
+            'fv_avg_volume': 50000.0, 'sources': ['yday_mover'],
+        }],
+        'planned_sells': [{'ticker': 'SDEV', 'shares': 1222, 'reason': 'hold-expired'}],
+        'recipe': 'union_hot_n4_h1__w0',
+    }
+    log = tmp_path / 'h1_log.jsonl'
+    log.write_bytes((json.dumps(mark) + '\n').encode() + seal_line(plan_line))
+    monkeypatch.setattr('src.h1_sealed_exec.H1_LOG', log)
+    _boom_pick_day(monkeypatch)
+    day = '2026-10-07'
+    early = datetime.fromisoformat(day + 'T08:00:00-04:00')
+    drifted = {
+        'FEAM': {'shares': 939},
+        'PACB': {'shares': 1113},
+        'DNA': {'shares': 214},
+        'QSI': {'shares': 2482},
+    }
+
+    class Drifted(API):
+        def snapshot(self):
+            return BrokerSnap(
+                env='paper', cash=1_000_000, positions=drifted, connected=True)
+
+    body = _sealed_day_payload(day)
+    body['decision_readiness']['completed_at'] = day + 'T06:00:00-04:00'
+    hot = body['strategies'][we.HOT4]
+    hot['buy'] = [
+        {'ticker': t, 'side': 'long', 'px': 1}
+        for t in ('SDEV', 'PACB', 'DNA', 'QSI')
+    ]
+    hot['sell'] = [
+        {'ticker': t, 'side': 'long'} for t in ('FEAM', 'GLND', 'NAUT')
+    ]
+    card = po.make_plan(body, Drifted().snapshot(), early)['card']
+    assert [(t['ticker'], t['side'], t['shares']) for t in card['tickets']] == [
+        ('SDEV', 'SELL', 1222), ('AAPL', 'BUY', 146),
+    ]
+    assert card['look_error'] == ''
+    api = Drifted()
+    real = (po.ROOT / 'data' / 'paper_open' / 'drift_log.jsonl').read_bytes()
+    status_before = (po.ROOT / 'data' / 'paper_open' / '2026-10-06_status.json').read_bytes()
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(
+            submit=True, clock=lambda: early, loader=lambda _: body,
+            api=api, state_dir=tmp_path)
+    assert rc == 0
+    assert len(api.calls) == 1
+    placed = api.calls[0]
+    assert [(row['side'], row['ticker'], row['shares']) for row in placed] == [
+        ('BUY', 'AAPL', 146),
+    ]
+    assert all(str(row.get('date') or day) == day for row in placed)
+    banned = {'SDEV', 'FEAM', 'GLND', 'NAUT', 'PACB', 'DNA', 'QSI'}
+    assert banned.isdisjoint({row['ticker'] for row in placed})
+    journal = json.loads((tmp_path / f'{day}_submit.json').read_text())
+    skipped = [row for row in journal['sent'] if row['status'] == 'drift-skipped']
+    assert [(row['ticker'], row['side']) for row in skipped] == [('SDEV', 'SELL')]
+    warning = json.loads((tmp_path / 'drift_log.jsonl').read_text().splitlines()[-1])
+    assert warning['kind'] == 'warning'
+    assert warning['date'] == day
+    held = {row['ticker'] for row in warning['held_not_on_plan']}
+    assert held == {'DNA', 'FEAM', 'PACB', 'QSI'}
+    assert 'no catch-up' in warning['note']
+    assert (po.ROOT / 'data' / 'paper_open' / 'drift_log.jsonl').read_bytes() == real
+    assert (po.ROOT / 'data' / 'paper_open' / '2026-10-06_status.json').read_bytes() == status_before

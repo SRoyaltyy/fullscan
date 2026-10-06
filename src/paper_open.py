@@ -13,6 +13,12 @@ The day's ``<date>_status.json`` is append-only once it holds
 ``missed_deadline`` or a submitted record. A later run adds an ``events``
 entry and leaves that first record intact.
 
+The send list is that session's sealed tickets only. Sandbox positions
+are not compared to the sealed book to fail the day or to add a
+catch-up order. A sealed sell the account does not hold is
+``drift-skipped`` and is not sent. Drift is appended to
+``data/paper_open/drift_log.jsonl``.
+
 Before any submit, the sandbox open and filled book is queried. Orders
 already there (derived client_order_id, or the same symbol and side) are
 not sent again. A failed query places nothing.
@@ -47,7 +53,7 @@ import urllib.error
 import urllib.request
 from zoneinfo import ZoneInfo
 
-from . import webull_exec as we
+from . import paper_drift, webull_exec as we
 from .open_0930_clock import is_session_day
 ET = ZoneInfo('America/New_York')
 ROOT = Path(__file__).resolve().parent.parent
@@ -276,6 +282,25 @@ def make_plan(payload, snap, clock, *, allow_after_bell=False):
             'cash': snap.cash, 'n_positions': len(snap.positions)}
 
 
+def _account_positions(api):
+    """Sandbox lots, or None when the snapshot cannot be read.
+
+    A failed read is not treated as an empty account, so a sealed sell
+    is not drift-skipped just because the query failed. The caller does
+    not fail the day on that miss.
+    """
+    snap_fn = getattr(api, 'snapshot', None)
+    if not callable(snap_fn):
+        return None
+    try:
+        snap = snap_fn()
+    except Exception:
+        return None
+    if snap is None or not getattr(snap, 'connected', False):
+        return None
+    return getattr(snap, 'positions', None) or {}
+
+
 def _load_session_orders(api, date):
     """Open and filled sandbox orders. Missing or failed query raises."""
     if getattr(api, 'host', None) != we.PAPER_HOST:
@@ -297,7 +322,7 @@ def _place_batch(result, api, tickets):
         replies = api.place_batch(tickets)
         fresh = []
         for row in result['sent']:
-            if row.get('status') == 'already_submitted':
+            if row.get('status') in ('already_submitted', paper_drift.DRIFT_SKIPPED):
                 continue
             fresh.append(row)
             got = replies.get(row['client_order_id'], {})
@@ -357,13 +382,29 @@ def release(plan, api, clock, journal, *, submit, max_late=2, standing=False,
               'sent': [], 'fill_status': 'not_observed', 'host': we.PAPER_HOST}
     if api.host != we.PAPER_HOST:
         raise ValueError('paper-open refuses any non-sandbox host')
-    tickets = list(plan['card'].get('tickets') or [])
+    tickets = [
+        ticket for ticket in (plan['card'].get('tickets') or [])
+        if isinstance(ticket, dict)
+    ]
+    # Flatten already sells the lots the account holds. Drift handling is
+    # only for the sealed h1 list, and it must not add another snapshot
+    # or drop those sells.
+    if plan.get('mode') == FLATTEN_MODE:
+        sendable, drift_skipped, foreign, drift_warning = tickets, [], [], None
+    else:
+        positions = _account_positions(api)
+        sendable, drift_skipped, foreign, drift_warning = paper_drift.partition_tickets(
+            tickets, positions, plan['date'], positions_known=positions is not None)
+    if drift_warning is not None:
+        drift_warning['at'] = current.isoformat()
+        drift_warning['source'] = 'standing' if standing else 'bell'
+        paper_drift.append_drift(drift_warning, Path(journal).parent / 'drift_log.jsonl')
     found = []
-    missing = tickets
+    missing = sendable
     # Broker book before any journal. A crash after the place, and before
     # this file existed, must not send those orders again. A failed query
     # places nothing and does not lock the session.
-    if submit and tickets and reconcile:
+    if submit and sendable and reconcile:
         try:
             rows = _load_session_orders(api, plan['date'])
         except Exception as exc:
@@ -372,7 +413,7 @@ def release(plan, api, clock, journal, *, submit, max_late=2, standing=False,
             result['found'] = []
             result['sent'] = []
             return result
-        found, missing = we.match_sealed_orders(tickets, rows, plan['date'])
+        found, missing = we.match_sealed_orders(sendable, rows, plan['date'])
         result['found'] = found
     # Exclusive creation plus a host lock in the caller protects local restarts.
     journal.parent.mkdir(parents=True, exist_ok=True)
@@ -380,7 +421,7 @@ def release(plan, api, clock, journal, *, submit, max_late=2, standing=False,
         json.dump(result, f)
     found_ids = {row['client_order_id']: row for row in found}
     sent_at = clock()
-    for ticket in tickets:
+    for ticket in sendable:
         coid = we.client_order_id(plan['date'], ticket['side'], ticket['ticker'])
         row = {'ticker': ticket['ticker'], 'side': ticket['side'], 'shares': ticket['shares'],
             'client_order_id': coid,
@@ -393,11 +434,21 @@ def release(plan, api, clock, journal, *, submit, max_late=2, standing=False,
             row['match'] = hit.get('match')
             row['order_id'] = hit.get('order_id') or ''
         result['sent'].append(row)
+    for row in drift_skipped + foreign:
+        coid = we.client_order_id(
+            plan['date'], row.get('side') or '', row.get('ticker') or '')
+        result['sent'].append({
+            **row,
+            'client_order_id': coid,
+            'intent_at': sent_at.isoformat(),
+            'status': paper_drift.DRIFT_SKIPPED,
+            'ok': False,
+        })
     atomic_json(journal, result)
     if submit and missing:
         sent_at = clock()
         for row in result['sent']:
-            if row.get('status') == 'already_submitted':
+            if row.get('status') in ('already_submitted', paper_drift.DRIFT_SKIPPED):
                 continue
             row.update(submission_started_at=sent_at.isoformat(),
                        lateness_ms=(sent_at-target).total_seconds()*1000)
@@ -406,7 +457,8 @@ def release(plan, api, clock, journal, *, submit, max_late=2, standing=False,
                 result['status'] = 'missed_deadline'
                 result['submit'] = False
                 for row in result['sent']:
-                    if row.get('status') == 'already_submitted':
+                    if row.get('status') in (
+                            'already_submitted', paper_drift.DRIFT_SKIPPED):
                         continue
                     row.update(status='missed_deadline', ok=False)
             else:
@@ -414,16 +466,21 @@ def release(plan, api, clock, journal, *, submit, max_late=2, standing=False,
         elif not 0 <= (sent_at-target).total_seconds() <= max_late:
             result['status'] = 'failed'
             for row in result['sent']:
-                if row.get('status') == 'already_submitted':
+                if row.get('status') in (
+                        'already_submitted', paper_drift.DRIFT_SKIPPED):
                     continue
                 row.update(status='missed_deadline', ok=False)
         else:
             _place_batch(result, api, missing)
-    elif submit and tickets:
+    elif submit and sendable:
         result['status'] = 'already_submitted'
     atomic_json(journal, result)
     if result['status'] == 'releasing':
-        result['status'] = 'acknowledged' if result['sent'] else 'no_trade'
+        placed = [
+            row for row in result['sent']
+            if row.get('status') != paper_drift.DRIFT_SKIPPED
+        ]
+        result['status'] = 'acknowledged' if placed else 'no_trade'
     atomic_json(journal, result)
     return result
 
