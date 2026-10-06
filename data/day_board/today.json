@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T17:31:00.679277-04:00",
+  "generated_at": "2026-10-06T17:31:22.958698-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -113,24 +113,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T17:25:34.085457-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-06_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -424,6 +406,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T17:31:22.275239-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-06_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1457402,
+          "preview": "1d BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-06_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2492,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-06_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12472,
+          "preview": "2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12472,
+          "preview": "2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM"
+        },
+        {
+          "path": "01_daily/2026-10-06_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84539,
+          "preview": "# Stock book \u2014 2026-10-06\n_Generated 2026-10-06T17:31:07.145985-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM \u00b7 2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM \u00b7 # Stock book \u2014 2026-10-06\n_Generated 2026-10-06T17:31:07.145985-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
