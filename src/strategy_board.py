@@ -713,6 +713,10 @@ def write_md(rows: list[dict]) -> str:
         "Honest scorecard (live-locked days kept apart from days built after "
         "the fact): [HONEST_SCORECARD.md](HONEST_SCORECARD.md).",
         "",
+        "Webull simulated books (separate from every live record): "
+        "[WEBULL_SIM.md](WEBULL_SIM.md) and "
+        "`dashboard/webull-sim/index.html`.",
+        "",
         "Research overlay (not a wire): open-bell MARKET / LIMIT fills vs "
         "ideal 09:30 open live on "
         "[OPEN_BELL_SLIP.md](OPEN_BELL_SLIP.md). "

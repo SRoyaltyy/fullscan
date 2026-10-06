@@ -38,6 +38,7 @@ FACTOR_MINE_DIR = ROOT / "03_scoreboard" / "factor_mine"
 FLATTEN_DIR = ROOT / "01_daily"
 TICKET_DIR = ROOT / "data" / "day_board"
 PAPER_DIR = ROOT / "data" / "paper"
+WEBULL_DIR = ROOT / "data" / "webull_sim"
 
 DAY_LINE = re.compile(r"^\| (\d{4}-\d{2}-\d{2})\b")
 CARD_FILE = re.compile(r"^(\d{4}-\d{2}-\d{2})_flatten_card\.md$")
@@ -657,6 +658,20 @@ def _digest_for_row(row: dict) -> str | None:
         if not lines:
             return None
         return sha256_text("\n".join(lines) + "\n")
+    if record == "webull_sim":
+        path = WEBULL_DIR / "days.jsonl"
+        if not path.is_file():
+            return None
+        matched = []
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            if str(row.get("name") or "") == name and str(row.get("date") or "") == date:
+                matched.append(line)
+        if len(matched) != 1:
+            return None
+        return sha256_text(matched[0] + "\n")
     raise PastDayLockError(f"past-day lock: unknown record {record}")
 
 
@@ -715,7 +730,9 @@ def describe_seeds() -> str:
         "session. Strategy tickets stay open until 09:30 ET or the paper "
         "send journal. data/paper/trades.csv, data/paper/equity_curve.csv, "
         "and data/sleeve_merge/trades.csv are not locked: each run rebuilds "
-        "them and rewrites earlier rows."
+        "them and rewrites earlier rows. "
+        "Webull sim books fingerprint from 2026-10-06. Days before that "
+        "are built after the fact and are not fingerprinted."
     )
 
 
