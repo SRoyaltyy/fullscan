@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T10:49:27.233052-04:00",
+  "generated_at": "2026-10-06T10:49:34.235423-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1113,24 +1113,6 @@
     }
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T04:48:01.283277-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-10-06_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 15392,
-          "preview": "# Premarket Prediction \u2014 2026-10-06\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.623 (uncertainty multiplier \u00d71.1) | confidence 0.605\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Europe partial +0.70%\n> - oil offered CL -1.15%/BZ -0.54%\n> - leftover NDX/AI bid\n> - Oct hike odds faded ~23% hold\n> - DXY not surging\n>\n> **Bad news driving this:**\n> - 1w 10Y +11bp at 5.28 handle\n> - leftover Hormuz/Brent still high\n> - FOMC minutes Oct 7 unsigned\n> - HY +17bp 1w\n> - Bowman 10:45 unprinted\n>\n> **market uncertainty: **elevated** | VIX 15.46 | policy-uncertainty index 277.43 (1d -232.72)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Overnight news & cataly"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-10-06\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.623 (uncertainty multiplier \u00d71.1) | confidence 0.605\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Europe partial +0.70%\n> - oil offered CL -1.15%/BZ -0.54%\n> - leftover NDX/AI bid\n> - Oct hike odds faded ~23% hold\n> - DXY not surging\n>\n> **Bad news driving this:**\n> - 1w 10Y +11bp at 5.28 handle\n> - leftover Hormuz/Brent still high\n> - FOMC minutes Oct 7 unsigned\n> - HY +17bp 1w\n> - Bowman 10:45 unprinted\n>\n> **market uncertainty: **elevated** | VIX 15.46 | policy-uncertainty index 277.43 (1d -232.72)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Overnight news & cataly"
-    },
     {
       "key": "sector_board",
       "title": "Sector board",
@@ -4428,6 +4410,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Technology={'score': 2.701, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T10:49:33.104559-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-06_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2270495,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, HRTG, PURR, FORM"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ANF, GLBE, HRTG, PURR, FORM"
     }
   ],
   "href": {
