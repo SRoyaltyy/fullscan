@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-10-06T10:27:01.186745-04:00 · 2026-08-13 → 2026-10-05 · live sit **untouched**.
+Generated 2026-10-06T10:39:41.477547-04:00 · 2026-08-13 → 2026-10-05 · live sit **untouched**.
 
 ## Latest morning
 
@@ -10,25 +10,25 @@ Generated 2026-10-06T10:27:01.186745-04:00 · 2026-08-13 → 2026-10-05 · live 
 
 ### Longs weather sat on (top)
 
-- **NTAP** idio +23 · +7 −0 · E good · H1 1.5% H3 None%
-- **COP** idio +19 · +6 −1 · E good · H1 1.83% H3 None%
-- **VECO** idio +19 · +6 −1 · E good · H1 -1.38% H3 None%
-- **FN** idio +18 · +5 −1 · E good · H1 3.14% H3 None%
-- **RXO** idio +17 · +6 −1 · E good · H1 -2.21% H3 None%
-- **STM** idio +17 · +5 −1 · E good · H1 3.06% H3 None%
-- **ALGM** idio +14 · +5 −2 · E good · H1 -3.19% H3 None%
-- **ELMT** idio +14 · +3 −1 · E good · H1 8.53% H3 None%
+- **NTAP** idio +23 · +7 −0 · E good · H1 1.49% H3 None%
+- **COP** idio +19 · +6 −1 · E good · H1 1.88% H3 None%
+- **VECO** idio +19 · +6 −1 · E good · H1 -1.83% H3 None%
+- **FN** idio +18 · +5 −1 · E good · H1 3.15% H3 None%
+- **RXO** idio +17 · +6 −1 · E good · H1 -1.97% H3 None%
+- **STM** idio +17 · +5 −1 · E good · H1 2.85% H3 None%
+- **ALGM** idio +14 · +5 −2 · E good · H1 -3.75% H3 None%
+- **ELMT** idio +14 · +3 −1 · E good · H1 6.35% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **PPC** idio -14 · +1 −4 · H1 -3.02%
-- **SGML** idio -13 · +1 −5 · H1 -2.79%
-- **MEI** idio -9 · +2 −4 · H1 3.88%
-- **FCEL** idio -8 · +2 −4 · H1 -6.45%
-- **GLND** idio -8 · +1 −5 · H1 16.44%
-- **NEOV** idio -5 · +3 −4 · H1 3.09%
-- **MYGN** idio -3 · +3 −2 · H1 3.22%
-- **VET** idio -3 · +1 −4 · H1 -0.34%
+- **PPC** idio -14 · +1 −4 · H1 -2.44%
+- **SGML** idio -13 · +1 −5 · H1 -2.41%
+- **MEI** idio -9 · +2 −4 · H1 4.26%
+- **FCEL** idio -8 · +2 −4 · H1 -3.35%
+- **GLND** idio -8 · +1 −5 · H1 15.54%
+- **NEOV** idio -5 · +3 −4 · H1 3.58%
+- **MYGN** idio -3 · +3 −2 · H1 5.21%
+- **VET** idio -3 · +1 −4 · H1 -0.69%
 
 ## If we had taken them on hard-red sits (research)
 
