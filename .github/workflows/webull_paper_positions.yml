@@ -1,0 +1,85 @@
+name: Webull paper positions (read-only sandbox)
+
+# Manual dispatch only. No schedule, no workflow_run, no pull_request.
+# Reads the Webull sandbox (api.sandbox.webull.com) with the same runner
+# and secrets as webull_paper.yml: ubuntu-latest, WEBULL_APP_KEY,
+# WEBULL_APP_SECRET, WEBULL_ACCOUNT_ID, and GITHUB_TOKEN for the land.
+# install_paper_open.yml uses [self-hosted, ecs] to install the box
+# timer. This job only reads the account and appends the drift log, so
+# it follows the hosted paper job.
+#
+# Appends an account_snapshot line and a correction line to
+# data/paper_open/drift_log.jsonl. Does not place, modify, or cancel.
+# Does not call the seal sender or the backstop sender.
+# Refuses a live host. From 03:00 ET until 09:40 ET the read and the
+# commit do not run: nothing writes to books in that window.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: webull-paper-positions
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Book-write window
+        id: clock
+        run: |
+          set -euo pipefail
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          if [ "$ET_HM" -ge 300 ] && [ "$ET_HM" -lt 940 ]; then
+            echo "03:00-09:40 ET is closed; nothing writes to books in this window"
+            echo "closed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "closed=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.clock.outputs.closed != 'true'
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        if: steps.clock.outputs.closed != 'true'
+        with:
+          python-version: '3.12'
+      - name: Install the sandbox client
+        if: steps.clock.outputs.closed != 'true'
+        run: pip install webull-openapi-python-sdk pandas numpy pyarrow yfinance requests
+      - name: Read sandbox positions
+        id: snap
+        if: steps.clock.outputs.closed != 'true'
+        env:
+          WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
+          WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
+          WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          if [ "$ET_HM" -ge 300 ] && [ "$ET_HM" -lt 940 ]; then
+            echo "03:00-09:40 ET is closed; nothing writes to books in this window"
+            echo "ran=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          python -m src.paper_account_snapshot
+          echo "ran=true" >> "$GITHUB_OUTPUT"
+      - name: Append the drift log on main
+        if: steps.snap.outputs.ran == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          if [ "$ET_HM" -ge 300 ] && [ "$ET_HM" -lt 940 ]; then
+            echo "03:00-09:40 ET is closed; not committing"
+            exit 0
+          fi
+          bash scripts/safe_git_push.sh \
+            "auto: paper account snapshot" \
+            data/paper_open/drift_log.jsonl
