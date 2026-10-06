@@ -450,7 +450,8 @@ def test_postclose_does_not_wait_on_ticket_publish() -> None:
     tickets = (root / ".github/workflows/publish_strategy_tickets.yml").read_text(
         encoding="utf-8")
     assert 'python3 -m src.decision_ready --date "$DATE" --publish' in tickets
-    assert "python -m src.paper_open --submit --ready --owner actions" in tickets
+    assert "python -m src.paper_open" not in tickets
+    assert "--submit" not in tickets
 
 
 def test_ticket_restate_log_appends_one_line_per_restore(tmp_path=None) -> None:

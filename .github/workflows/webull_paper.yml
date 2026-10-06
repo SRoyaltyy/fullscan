@@ -3,14 +3,16 @@ name: Webull paper (OpenAPI sandbox)
 # Warm well BEFORE the bell. Hosted cron is a fallback, not a punctual clock.
 # After "h1 append-only forward" succeeds on main, workflow_run starts this
 # job immediately. Before 09:30 ET that run places the standing sandbox
-# batch (--submit --ready). At or after 09:30 it keeps the bell path, which
-# records missed_deadline instead of buying the live print.
-# The 12:07/13:07 UTC cron stays the bell-wait fallback and does not pass
-# --ready. It does not share a concurrency group with the seal run: the
-# 08:07 ET cron holds webull-paper until 09:30, and queueing the seal
-# behind it is how 2026-10-06 missed the open.
+# batch (--submit --ready, PAPER_OPEN_SENDER=seal). At or after 09:30 it
+# keeps the bell path, which records missed_deadline and places nothing.
+# The 12:07/13:07 UTC cron and workflow_dispatch exit before paper_open.
+# They do not submit and they do not write the day's paper_open files.
+# They do not share a concurrency group with the seal run: the 08:07 ET
+# cron holds webull-paper until 09:30, and queueing the seal behind it is
+# how 2026-10-06 missed the open.
 # ECS fullscan-paper-backstop.timer (09:12 America/New_York) is the on-box
-# backstop when this hosted run is still queued.
+# backstop when this hosted run is still queued. It is the other sender.
+# A ticket republish or a stock-book rebuild must not submit.
 # Both paths send the sealed h1 new-buy set for that session (picks the
 # open fill would buy, not names the book already holds), not a Factor Mine
 # HOT4 pick_day rebuild. Published tickets are the readiness signal only.
@@ -25,11 +27,6 @@ on:
     types: [completed]
     branches: [main]
   workflow_dispatch:
-    inputs:
-      submit:
-        description: Place sandbox orders at the next 09:30 ET (late starts fail)
-        type: boolean
-        default: false
 permissions:
   contents: write
 concurrency:
@@ -55,10 +52,17 @@ jobs:
           WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
           WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
           WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
-          WANT_SUBMIT: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_run' || inputs.submit }}
+          WANT_SUBMIT: ${{ github.event_name == 'workflow_run' }}
           SEAL_EVENT: ${{ github.event_name }}
+          PAPER_OPEN_SENDER: ${{ github.event_name == 'workflow_run' && 'seal' || 'none' }}
         run: |
           set -euo pipefail
+          # Cron and manual dispatch are not senders. Leave the day's
+          # paper_open record untouched.
+          if [ "$SEAL_EVENT" != "workflow_run" ]; then
+            echo "not the h1 seal; no paper submit and no paper_open write"
+            exit 0
+          fi
           # WEBULL_ACCOUNT_ID may be absent. paper_open discovers it from
           # the sandbox account list when APP_KEY and APP_SECRET are set.
           ARGS=()

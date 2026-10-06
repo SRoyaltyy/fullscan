@@ -311,6 +311,19 @@ def main():
         (out_dir / "standtest_result.json").write_text(json.dumps(doc2, indent=2))
         return 3
 
+    # Manual probe. Same deadline as the sealed paper send: at or after
+    # 09:30 ET a MARKET buy fills the live print, so this places nothing.
+    deadline = now_et().replace(hour=9, minute=30, second=0, microsecond=0)
+    if now_et() >= deadline:
+        refused = {
+            "ok": False, "stage": "missed_deadline", "submit": False,
+            "reason": "at or after 09:30 ET; paper order refused",
+            "et": now_et().isoformat(), "cash": cash,
+        }
+        print(json.dumps(refused, indent=2))
+        (out_dir / "standtest_result.json").write_text(json.dumps(refused, indent=2))
+        return 2
+
     ticker = (_env("STANDTEST_TICKER", "AAPL") or "AAPL").upper()
     qty = int(_env("STANDTEST_QTY", "1") or "1")
     coid = (_env("STANDTEST_COID") or f"STANDTEST-20260918-{int(time.time())}")[:32]
