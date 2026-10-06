@@ -3,8 +3,11 @@
 Ready-publish may place standing MARKET/CORE/DAY orders before 09:30 ET.
 Webull paper keeps those SUBMITTED (filled_qty=0) until RTH, then fills at
 the open — proven by STANDTEST-20260918-1789726292. The 09:30 wait path is
-a warm fallback only. Journal + stable client_order_id prevent a re-fire
-from double-placing. Acknowledgment is not a fill promise.
+a warm fallback only. Before any submit, the sandbox open and filled
+book is queried. Orders already there (derived client_order_id, or the
+same symbol and side) are not sent again. A failed query places nothing.
+The id is ``h1-{date}-{ticker}-{buy|sell}`` and does not depend on a
+saved file. Acknowledgment is not a fill promise.
 
 Serial BUY legs are clamped to sandbox cash still free after earlier
 acks in the same batch. Hot4 plans are sized with a slip haircut so a
@@ -40,7 +43,7 @@ ET = ZoneInfo('America/New_York')
 ROOT = Path(__file__).resolve().parent.parent
 STANDING_OPEN_HOUR = 4   # CORE session; STANDTEST accepted 06:20 ET
 STANDING_CLOSE_HOUR = 16
-OK_STATUSES = ('acknowledged', 'no_trade', 'dry_run')
+OK_STATUSES = ('acknowledged', 'no_trade', 'dry_run', 'already_submitted')
 FLATTEN_FLAG = ROOT / '00_grounding' / 'paper_flatten.json'
 FLATTEN_MODE = 'flatten_account'
 
@@ -194,12 +197,30 @@ def make_plan(payload, snap, clock, *, allow_after_bell=False):
             'cash': snap.cash, 'n_positions': len(snap.positions)}
 
 
+def _load_session_orders(api, date):
+    """Open and filled sandbox orders. Missing or failed query raises."""
+    if getattr(api, 'host', None) != we.PAPER_HOST:
+        raise RuntimeError('paper-open refuses any non-sandbox host')
+    fn = getattr(api, 'list_session_orders', None)
+    if not callable(fn):
+        raise RuntimeError('sandbox order query is not available')
+    rows = fn(date)
+    if not isinstance(rows, list):
+        raise RuntimeError('sandbox order query returned no order list')
+    return rows
+
+
 def _place_batch(result, api, tickets):
     try:
         # Serial single places (sandbox rejects multi-order combo_type).
         # place_batch may shrink a later BUY to cash still free, or skip it.
+        # Rows already on the book stay already_submitted and are not in tickets.
         replies = api.place_batch(tickets)
+        fresh = []
         for row in result['sent']:
+            if row.get('status') == 'already_submitted':
+                continue
+            fresh.append(row)
             got = replies.get(row['client_order_id'], {})
             row.update(got)
             if got.get('skipped'):
@@ -207,17 +228,22 @@ def _place_batch(result, api, tickets):
                 row['ok'] = True
             else:
                 row['status'] = 'acknowledged' if got.get('ok') else 'rejected_or_unknown'
-        if any(not row.get('ok') for row in result['sent']):
+        if any(not row.get('ok') for row in fresh):
             result['status'] = 'failed'
-        elif result['sent'] and all(row.get('skipped') for row in result['sent']):
+        elif fresh and all(row.get('skipped') for row in fresh):
             result['status'] = 'no_trade'
+        elif not fresh and result['sent']:
+            result['status'] = 'already_submitted'
     except Exception:
         result['status'] = 'failed'
         for row in result['sent']:
+            if row.get('status') == 'already_submitted':
+                continue
             row.update(status='unknown', ok=False, error='submission outcome unknown; reconcile broker')
 
 
-def release(plan, api, clock, journal, *, submit, max_late=2, standing=False):
+def release(plan, api, clock, journal, *, submit, max_late=2, standing=False,
+            reconcile=True):
     """Durable before-send intent: an ambiguous send is never blindly retried."""
     current = clock()
     target = current.replace(hour=9, minute=30, second=0, microsecond=0)
@@ -241,31 +267,62 @@ def release(plan, api, clock, journal, *, submit, max_late=2, standing=False):
               'sent': [], 'fill_status': 'not_observed', 'host': we.PAPER_HOST}
     if api.host != we.PAPER_HOST:
         raise ValueError('paper-open refuses any non-sandbox host')
+    tickets = list(plan['card'].get('tickets') or [])
+    found = []
+    missing = tickets
+    # Broker book before any journal. A crash after the place, and before
+    # this file existed, must not send those orders again. A failed query
+    # places nothing and does not lock the session.
+    if submit and tickets and reconcile:
+        try:
+            rows = _load_session_orders(api, plan['date'])
+        except Exception as exc:
+            result['status'] = 'query_failed'
+            result['error'] = str(exc)[:400]
+            result['found'] = []
+            result['sent'] = []
+            return result
+        found, missing = we.match_sealed_orders(tickets, rows, plan['date'])
+        result['found'] = found
     # Exclusive creation plus a host lock in the caller protects local restarts.
     journal.parent.mkdir(parents=True, exist_ok=True)
     with journal.open('x') as f:
         json.dump(result, f)
-    tickets = plan['card'].get('tickets', [])
+    found_ids = {row['client_order_id']: row for row in found}
     sent_at = clock()
     for ticket in tickets:
-        result['sent'].append({'ticker': ticket['ticker'], 'side': ticket['side'], 'shares': ticket['shares'],
-            'client_order_id': we.client_order_id(plan['date'], ticket['side'], ticket['ticker']),
+        coid = we.client_order_id(plan['date'], ticket['side'], ticket['ticker'])
+        row = {'ticker': ticket['ticker'], 'side': ticket['side'], 'shares': ticket['shares'],
+            'client_order_id': coid,
             'intent_at': sent_at.isoformat(),
-            'status': 'intent' if submit else 'dry_run'})
+            'status': 'intent' if submit else 'dry_run'}
+        hit = found_ids.get(coid)
+        if hit:
+            row['status'] = 'already_submitted'
+            row['ok'] = True
+            row['match'] = hit.get('match')
+            row['order_id'] = hit.get('order_id') or ''
+        result['sent'].append(row)
     atomic_json(journal, result)
-    if submit and tickets:
+    if submit and missing:
         sent_at = clock()
         for row in result['sent']:
+            if row.get('status') == 'already_submitted':
+                continue
             row.update(submission_started_at=sent_at.isoformat(),
                        lateness_ms=(sent_at-target).total_seconds()*1000)
         if standing:
-            _place_batch(result, api, tickets)
+            _place_batch(result, api, missing)
         elif not 0 <= (sent_at-target).total_seconds() <= max_late:
             result['status'] = 'failed'
             for row in result['sent']:
+                if row.get('status') == 'already_submitted':
+                    continue
                 row.update(status='missed_deadline', ok=False)
         else:
-            _place_batch(result, api, tickets)
+            _place_batch(result, api, missing)
+    elif submit and tickets:
+        result['status'] = 'already_submitted'
     atomic_json(journal, result)
     if result['status'] == 'releasing':
         result['status'] = 'acknowledged' if result['sent'] else 'no_trade'
@@ -443,7 +500,8 @@ def _flatten_session(*, date, clock, submit, api, status_path, journal):
         'cancels': cancels,
     }
     try:
-        result = release(plan, api, clock, journal, submit=True, standing=True)
+        result = release(
+            plan, api, clock, journal, submit=True, standing=True, reconcile=False)
     except Exception as exc:
         return _abort_flatten(status_path, date, str(exc), cancels=cancels)
     if any(str(row.get('side') or '').upper() == 'BUY' for row in result.get('sent') or []):
@@ -544,7 +602,7 @@ def run(*, submit=False, clock=now, sleep=time.sleep, loader=load_published, api
             return 2
         atomic_json(status_path, result)
         we.write_last(result)
-        return 2 if result['status'] == 'failed' else 0
+        return 2 if result['status'] in ('failed', 'query_failed') else 0
 
 
 def submit_ready(*, submit=True, clock=now, loader=None, api=None, state_dir=None,
@@ -603,7 +661,7 @@ def submit_ready(*, submit=True, clock=now, loader=None, api=None, state_dir=Non
             return 2
         atomic_json(status_path, result)
         we.write_last(result)
-        return 2 if result['status'] == 'failed' else 0
+        return 2 if result['status'] in ('failed', 'query_failed') else 0
 
 
 def load_owner_record():

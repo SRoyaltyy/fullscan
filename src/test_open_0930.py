@@ -141,7 +141,28 @@ def test_boards_and_paper_share_the_bell() -> None:
     assert 'WEBULL_ACCOUNT_ID unset' not in paper
     assert 'src.paper_open' in paper
     assert '--owner actions' in paper
-    assert 'workflow_run:' not in paper
+    assert 'workflow_run:' in paper
+
+
+def test_h1_seal_starts_webull_paper() -> None:
+    """A successful h1 seal on main starts the sandbox send."""
+    paper = (WF / "webull_paper.yml").read_text(encoding="utf-8")
+    h1 = (WF / "h1_forward.yml").read_text(encoding="utf-8")
+    assert h1.startswith("name: h1 append-only forward\n")
+    assert 'workflows: ["h1 append-only forward"]' in paper
+    assert "types: [completed]" in paper
+    assert "branches: [main]" in paper
+    assert "github.event.workflow_run.conclusion == 'success'" in paper
+    assert "github.event.workflow_run.head_branch == 'main'" in paper
+    assert "webull-paper-seal" in paper
+    # Standing send only before the open. The cron path does not pass --ready.
+    assert "[ \"$SEAL_EVENT\" = \"workflow_run\" ]" in paper
+    assert "ET_HM" in paper
+    assert "-lt 930" in paper
+    assert paper.index("workflow_run") < paper.index("ARGS+=(--ready)")
+    assert "cron: '7 12,13 * * 1-5'" in paper
+    assert "--owner actions" in paper
+    assert "api.webull.com" not in paper
 
 
 def test_webull_backup_schedule_is_clock_gated() -> None:
@@ -150,7 +171,8 @@ def test_webull_backup_schedule_is_clock_gated() -> None:
     assert 'src.paper_open' in yml
     assert yml.index('pip install') < yml.index('python -m src.paper_open')
     assert "github.event_name == 'schedule'" in yml
-    assert 'group: webull-paper' in yml
+    assert "webull-paper" in yml
+    assert "webull-paper-seal" in yml
 
 
 def test_tickets_install_requests() -> None:
@@ -186,11 +208,12 @@ def main_tests() -> None:
     test_open_0930_yml_owns_the_bell()
     test_open_pack_stamps_session_open_and_restamps_pages()
     test_boards_and_paper_share_the_bell()
+    test_h1_seal_starts_webull_paper()
     test_webull_backup_schedule_is_clock_gated()
     test_tickets_install_requests()
     test_ci_gates_the_bell_contract()
     test_orch_heals_open_0930()
-    print("test_open_0930: 13 ok")
+    print("test_open_0930: 14 ok")
 
 
 if __name__ == "__main__":
