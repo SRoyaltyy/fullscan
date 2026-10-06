@@ -18,7 +18,7 @@ th{cursor:pointer;background:#f0f2f5;position:sticky;top:0}td:first-child,th:fir
 button,input,select{font:inherit}#status{color:#8a1c1c}
 </style></head><body>
 <header><h1>Every-stock morning up/down read — <span id="model">updown_o2c_v2</span></h1><small id="built" style="color:#cfd6df"></small></header>
-<div class="warn">RESEARCH PAGE — NOT A TRADING SIGNAL. Out-of-sample statistical estimates; edges are small; per-stock numbers ignore fees and slippage. The open&rarr;close edge relies on today's official open, which cannot be known before an opening order is committed; with no same-day open information the after-fee edge disappears. Leak audit: <a href="LEAK_AUDIT.md">LEAK_AUDIT.md</a>.</div>
+<div class="warn">RESEARCH ONLY &mdash; NOT A TRADING SIGNAL.<ul style="margin:4px 0 0 18px;padding:0;font-weight:400"><li>The up-probabilities use each day's <b>09:30 official open</b>, and that same open is the <b>entry price</b> of the open&rarr;close result. You cannot know the official open before an opening order is committed, so the edge shown cannot be traded as printed.</li><li>A version that knows only the <b>prior close</b> (no same-day open) scores <b>AUC about 0.52</b> with <b>no after-fee edge</b> (dev long-short &minus;0.20%/day after 0.4% fees; holdout +0.07%/day, not significant).</li><li>The data carries <b>survivorship bias</b>: the stock list holds only companies still trading in 2026, so companies that died in 2018&ndash;2025 are missing.</li><li>Full leak audit: <a href="LEAK_AUDIT.md">LEAK_AUDIT.md</a>.</li></ul></div>
 <main>
 <div id="status"></div>
 <div class="card"><div id="notes"></div><div class="row" id="sumrow"></div></div>
