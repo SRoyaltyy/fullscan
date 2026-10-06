@@ -1,6 +1,6 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-10-06T10:00:52.666663-04:00",
+  "generated_at": "2026-10-06T15:41:08.953705-04:00",
   "items": [
     {
       "ok": true,
@@ -40,7 +40,7 @@
       "kind": "news_parse",
       "path": "01_daily/news/2026-09-08_parsed.json",
       "reason": "",
-      "size": 492914,
+      "size": 488573,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -326,5 +326,6 @@
   ],
   "sector_n_ok": 11,
   "sector_n_total": 11,
+  "sectors_required": true,
   "all_ok": false
 }

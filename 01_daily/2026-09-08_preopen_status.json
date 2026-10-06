@@ -1,26 +1,14 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-10-06T10:00:45.812883-04:00",
+  "generated_at": "2026-10-06T15:41:09.498051-04:00",
   "all_ok": false,
-  "qc_all_ok": true,
+  "qc_all_ok": false,
   "book_ok": false,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/sectors/2026-09-08/technology_predict.md",
-      "reason": "Wrong date / stale carry-forward: body is dated 2026-09-18 and analyzes the 09-18 session (FOMC printed 09-16, BOJ hike 09-18, Apple iPhone 18 availability 09-18, XLK tape 'through 2026-09-17', NQ +2.66% anchor). Not a same-day 2026-09-08 artifact."
-    },
-    {
-      "path": "01_daily/sectors/2026-09-08/utilities_predict.md",
-      "reason": "Wrong date / stale carry-forward: body is dated 2026-09-18 and analyzes the 09-18 session (post-FOMC 09-16, triple witching 09-18, XLK/XLU tape 'through 2026-09-17'). Not a same-day 2026-09-08 artifact."
-    },
-    {
-      "path": "01_daily/news/2026-09-08_parsed.json",
-      "reason": "Wrong date: generated_at 2026-10-06, freshness asof 2026-09-08 but median_published 2026-10-05 and all top items published Oct 5-6 2026 \u2014 the news set is a month after the session, not a same-day scan."
-    },
-    {
-      "path": "01_daily/news/2026-09-08_actions.json",
-      "reason": "Wrong date: generated_at 2026-09-17 with evidence headlines dated Aug 27-28 and a 'weak_labor_print' event that contradicts the day's hot NFP; not a same-day 09-08 artifact."
+      "path": "(review)",
+      "reason": "empty_review_reply"
     }
   ],
   "missing_required": [],
@@ -180,14 +168,14 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-08_parsed.json",
-        "size": 492914
+        "size": 488573
       },
       {
         "kind": "news_actions",
-        "ok": true,
-        "reason": "",
+        "ok": false,
+        "reason": "stale_news",
         "path": "01_daily/news/2026-09-08_actions.json",
-        "size": 46252
+        "size": 0
       },
       {
         "kind": "finviz_digest",
