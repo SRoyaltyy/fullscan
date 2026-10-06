@@ -1,6 +1,6 @@
 {
  "date": "2026-10-06",
- "generated_at": "2026-10-06T07:10:41.471230-04:00",
+ "generated_at": "2026-10-06T09:59:43.247524-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -23,18 +23,24 @@
   "dgs10_current": 5.28,
   "dollar": "soft",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.16,
-  "vix_ratio": 0.852,
-  "vix_spot": 15.34,
-  "vix_delta_1d": -0.18,
+  "dxy_pct_1d": -0.22,
+  "vix_ratio": 0.859,
+  "vix_spot": 15.41,
+  "vix_delta_1d": -0.11,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -1.89,
+  "oil_pct_1d": -1.85,
   "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.166,
+  "regime_corr": 0.046,
   "sectors": {
+   "Technology": {
+    "score": 2.701,
+    "dir": "flat",
+    "conf": 0.55,
+    "source": "llm"
+   },
    "Basic Materials": {
     "score": -4.97,
     "dir": "down",
@@ -85,12 +91,6 @@
    },
    "Real Estate": {
     "score": -2.49,
-    "dir": "down",
-    "conf": 0.4,
-    "source": "finviz_week"
-   },
-   "Technology": {
-    "score": -2.625,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
@@ -168,9 +168,9 @@
     "why": "finviz sector median week -2.49% [tape]"
    },
    "Technology": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "finviz sector median week -2.62% [tape]"
+    "stance": "neutral",
+    "confidence": "high",
+    "why": "sector predict score +2.7 dir flat conf 0.55 [sector board]"
    },
    "Utilities": {
     "stance": "hostile",
