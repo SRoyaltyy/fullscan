@@ -12,7 +12,7 @@
     },
     {
       "path": "01_daily/news/2026-10-06_actions.json",
-      "sha256": "3b97602ccf9ae1c8376555d11ee5195ffad908c2be74bab51f456f8301697117"
+      "sha256": "61acb817cbbb609eea093d84c79e537ddaf7b1f144852c4153cd2ceffd64bc06"
     },
     {
       "path": "01_daily/news/2026-10-06_finviz_digest.json",
@@ -28,7 +28,7 @@
     },
     {
       "path": "01_daily/weather/2026-10-06_weather.json",
-      "sha256": "5947ea1984268af795cf157e4c09cf457097edb4f5b9dd8540eb2df0bfa8acb4"
+      "sha256": "86317acadb427e173ecc1722f57a99167aaa17602ccb1c058f7eb4c9cb84a4a8"
     },
     {
       "path": "data/ab_checklist/2026-10-06_ab_checklist_enriched.csv",
@@ -50,6 +50,6 @@
   "prices": [],
   "reason": "no same-day panel rows for 2026-10-06 \u2014 sitting, no live lookup",
   "rows": [],
-  "sha256": "cbb8db8c329e70fb1c452d4a708b726931d1e7148c193a86bd16bc9c0ab32754",
+  "sha256": "ca6ad96d37f2de55dece406bf4541ca58045fbc00dcdd39d1c7dc3d12dca4e79",
   "source": "no_same_day_panel"
 }
