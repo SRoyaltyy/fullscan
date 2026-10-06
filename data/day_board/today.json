@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T04:31:08.868178-04:00",
+  "generated_at": "2026-10-06T04:31:16.227634-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T04:20:36.703152-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-06_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 4236,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-10-06_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2129,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-06\n**Generated:** 2026-10-06T04:20:36.689590-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a gap-up open as traders look to ADP jobs data, Fed speakers and oil prices after reduced Fed hike odds\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** LW\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** LW\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-06\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-06\n**Generated:** 2026-10-06T04:20:36.689590-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a gap-up open as traders look to ADP jobs data, Fed speakers and oil prices after reduced Fed hike odds\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** LW\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** LW\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-06\n**Clock use:** `same_morning`"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -221,6 +196,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-06\nExport `finviz_2026-10-05.csv` \u00b7 11616 names \u00b7 generated 2026-10-06T04:22:36.554946-04:00"
+    },
+    {
+      "key": "map_heat_baseline",
+      "title": "Map heat night baseline",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T04:31:15.723044-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-06_research_baseline.json",
+          "ok": true,
+          "reason": "",
+          "size": 416258,
+          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-06_research_baseline.md",
+          "ok": true,
+          "reason": "",
+          "size": 41780,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-06\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-06\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
