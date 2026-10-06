@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T17:31:22.958698-04:00",
+  "generated_at": "2026-10-06T17:31:27.138482-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1072,73 +1072,6 @@
     }
   },
   "lands": [
-    {
-      "key": "sector_one",
-      "title": "Sector predict Technology (1/11)",
-      "date": "2026-10-06",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-06T07:19:44.356794-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-10-06/technology_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 20534,
-          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-10-06\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **2.701** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.701** (NQ +0.40%, ES +0.28%, PM:XLK +0.47%) \u00b7 index_carry **0.0** (general None) \u00b7 llm_overlay **0.0** (raw 0.0)"
-        },
-        {
-          "path": "01_daily/sectors/2026-10-06/technology_predict_trace.md",
-          "ok": true,
-          "reason": "",
-          "size": 398,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-10-06 retry1\n**Step 0 \u2014 Setup.** Loaded 128,731 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (18,550 characters)."
-        },
-        {
-          "path": "01_daily/_transcripts/2026-10-06_sector_technology_predict.json",
-          "ok": true,
-          "reason": "",
-          "size": 151012,
-          "preview": "keys: provider, agent, backend_model, messages"
-        },
-        {
-          "path": "01_daily/2026-10-06_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7521,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/sectors/2026-10-06/_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 1533,
-          "preview": "keys: date, n_ok, n_total, summary, sectors"
-        },
-        {
-          "path": "01_daily/sectors/2026-10-06/_BOARD.md",
-          "ok": true,
-          "reason": "",
-          "size": 1568,
-          "preview": "# Sector Board \u2014 2026-10-06\nGenerated: **2026-10-06T07:19:44.326514-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
-        },
-        {
-          "path": "01_daily/sectors/2026-10-06/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 6252,
-          "preview": "keys: date, generated_at, summary, sectors"
-        },
-        {
-          "path": "03_scoreboard/scoreboard.json",
-          "ok": true,
-          "reason": "",
-          "size": 1016201,
-          "preview": "keys: runs"
-        }
-      ],
-      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-10-06\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **2.701** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.701** (NQ +0.40%, ES +0.28%, PM:XLK +0.47%) \u00b7 index_carry **0.0** (general None) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-10-06 retry1\n**Step 0 \u2014 Setup.** Loaded 128,731 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (18,550 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, summary, sectors \u00b7 # Sector Board \u2014 2026-10-06\nGenerated: **2026-10-06T07:19:44.326514-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -4436,6 +4369,115 @@
         }
       ],
       "preview": "1d BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM \u00b7 2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM \u00b7 # Stock book \u2014 2026-10-06\n_Generated 2026-10-06T17:31:07.145985-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T17:31:26.479663-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 25592,
+          "preview": "2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 863,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-06.json",
+          "ok": true,
+          "reason": "",
+          "size": 270346,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-06_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 236944,
+          "preview": "2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 904498,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-06_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 275297,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1234284,
+          "preview": "2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 904498,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 236944,
+          "preview": "2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 904498,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 904498,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1234284,
+          "preview": "2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1822,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1822,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-06 BUY BAND, MQ, ACN, NTSK, NET, PRTH, TLS, CGNT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, TE, SKYX, NNDM \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, orde"
     }
   ],
   "href": {
