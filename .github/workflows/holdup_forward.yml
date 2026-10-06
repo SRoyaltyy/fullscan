@@ -98,8 +98,33 @@ jobs:
             exit 0
           fi
           git commit -m "Seal the next holdup plan."
-          git pull --rebase origin main
-          git push origin HEAD:main
+          # Another job can push between our rebase and push. Retry a
+          # non-conflicting race up to 5 times. A rebase conflict means a record
+          # file changed on main under this run: abort and fail, never force.
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            if ! git pull --rebase origin main; then
+              if [ -d "$(git rev-parse --git-path rebase-merge)" ] \
+                 || [ -d "$(git rev-parse --git-path rebase-apply)" ]; then
+                git rebase --abort || true
+                echo "::error::rebase conflict on attempt ${attempt}; not retrying"
+                exit 1
+              fi
+              echo "pull failed on attempt ${attempt}"
+            elif git push origin HEAD:main; then
+              pushed=true
+              break
+            else
+              echo "push rejected on attempt ${attempt}"
+            fi
+            if [ "$attempt" -lt 5 ]; then
+              sleep $(( 2 * attempt + RANDOM % 5 ))
+            fi
+          done
+          if [ "$pushed" != "true" ]; then
+            echo "::error::push failed after 5 attempts"
+            exit 1
+          fi
       - name: Fail the job when the book halted
         if: steps.prices.outcome == 'failure' || steps.plan.outcome == 'failure'
         run: exit 1
