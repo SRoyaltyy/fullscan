@@ -24,19 +24,19 @@
     },
     {
       "path": "01_daily/sectors/2026-10-06/_board.json",
-      "sha256": "5195de88227b2fce8bd64bc01cdb5cea1421523c3bb9056787c244c91fe745f3"
+      "sha256": "35c79e98f5845bd7a82a81b72cbe6729fa541b8e4601d6ff49539d03b24b8819"
     },
     {
       "path": "01_daily/weather/2026-10-06_weather.json",
-      "sha256": "15a1e67124f30590dbb55161931f393cb5902dc9bd6c486f6508aa61499a4cc0"
+      "sha256": "5947ea1984268af795cf157e4c09cf457097edb4f5b9dd8540eb2df0bfa8acb4"
     },
     {
       "path": "data/ab_checklist/2026-10-06_ab_checklist_enriched.csv",
-      "sha256": "bb3ad2dd96df5a49e2723ffbd358ac36216e9fe94f0c49356beb368daa839936"
+      "sha256": "cd2e1bb511ac2bdfdea08e32f197d105908849e9462e2e41f400e78d3e10dfa3"
     },
     {
       "path": "data/join/2026-10-06_ranked.csv",
-      "sha256": "02d3db7f291979841a0e3fc033c2595c8626e690f8a561d58ec1249c721dbfef"
+      "sha256": "ab2597a4c08257c6943915a214d29b734cee44802bfdb572ede8d671035d224b"
     },
     {
       "path": "data/peers/2026-10-06_peer_rs.csv",
@@ -50,6 +50,6 @@
   "prices": [],
   "reason": "no same-day panel rows for 2026-10-06 \u2014 sitting, no live lookup",
   "rows": [],
-  "sha256": "4d2569d75c0d13df179ca77e7e558e68c9c5b89dddd3a6a9b7d81c0139d26baf",
+  "sha256": "cbb8db8c329e70fb1c452d4a708b726931d1e7148c193a86bd16bc9c0ab32754",
   "source": "no_same_day_panel"
 }
