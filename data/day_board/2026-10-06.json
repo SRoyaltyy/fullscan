@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T06:55:39.168110-04:00",
+  "generated_at": "2026-10-06T06:59:19.531853-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -555,8 +555,8 @@
           "path": "01_daily/weather/2026-10-06_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9694 vix=falling yields=rising",
-          "size": 9694,
+          "reason": "sectors=11 bytes=9695 vix=falling yields=rising",
+          "size": 9695,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -588,10 +588,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 7568941,
+          "size": 7568684,
           "said": "27 rows",
           "bullets": [
-            "SONO, CVX, KNTK, LPG, HUM, WAT, TECK, WAY"
+            "SONO, LPG, HUM, KNTK, CVX, WAT, WAY, VLTO"
           ]
         },
         {
@@ -601,16 +601,16 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8359816,
+          "size": 8359556,
           "said": "25 rows",
           "bullets": [
-            "WAT, ABBV, ICLR, BIIB, CVX, EC, ESI, ETON"
+            "WAT, BIIB, CVX, ABBV, ICLR, SONO, RGEN, ANF"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "WAT, ABBV, ICLR, BIIB, CVX"
+        "WAT, BIIB, CVX, ABBV, ICLR"
       ]
     },
     {
@@ -779,8 +779,8 @@
           "path": "01_daily/weather/2026-10-06_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9694 vix=falling yields=rising",
-          "size": 9694,
+          "reason": "sectors=11 bytes=9695 vix=falling yields=rising",
+          "size": 9695,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -794,10 +794,10 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8359816,
+          "size": 8359556,
           "said": "25 rows",
           "bullets": [
-            "WAT, ABBV, ICLR, BIIB, CVX, EC, ESI, ETON"
+            "WAT, BIIB, CVX, ABBV, ICLR, SONO, RGEN, ANF"
           ]
         },
         {
@@ -833,7 +833,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=200",
-          "size": 1459335,
+          "size": 1459339,
           "said": "1d BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO \u00b7 0.51425",
           "bullets": []
         },
@@ -847,7 +847,7 @@
           "size": 77180,
           "said": "Stock book \u2014 2026-10-06",
           "bullets": [
-            "_Generated 2026-10-06T06:05:37.239314-04:00_",
+            "_Generated 2026-10-06T06:11:46.261230-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -911,7 +911,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=200",
-          "size": 1459335,
+          "size": 1459339,
           "said": "1d BUY CBRL, SN, CDNA, BLFS, VEEV, CORT, CAKE, AVPT \u00b7 SELL ROIV, IBRX, ARE, INTC, SOC, GOGO \u00b7 0.51425",
           "bullets": []
         },
@@ -3186,6 +3186,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-06\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-06",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-06T06:59:18.526638-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-06_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9695,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-06_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5300,
+          "preview": "# Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-06\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
