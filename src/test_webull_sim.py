@@ -8,32 +8,42 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from src import past_day_lock
+from unittest import mock
+
 from src.webull_sim import (
     live_fetch_allowed,
     FEES_PATH,
     FIRST_LOCKED,
     START_CASH,
+    THEME_BORROW_NOTE,
+    THEME_LOG_NOTE,
     Account,
     Pick,
     Schedule,
     apply_session,
+    add_trading_days,
     before_open,
     book_name,
     classify,
     fee_for,
     final_row,
+    hold_continuations,
     in_write_freeze,
     load_schedule,
+    load_theme_plans,
     make_row,
     group_theme_rows,
     parse_excel,
     parse_theme_log,
     q,
+    render_html,
+    render_md,
     resolve_sizing,
     run_book,
     sandbox_label,
     seal_row,
     section_for,
+    simulate,
     whole_shares,
     write_books,
 )
@@ -488,6 +498,350 @@ def test_theme_radar_late_first_appearance_is_not_a_fill() -> None:
     assert rows[0]["picks"] == 1
 
 
+EARLY_SHA = "ecdb627a7d3df2b8fd9470f9bab1aa4a77732336"
+LATE_SHA = "ffffffffffffffffffffffffffffffffffffffff"
+PLAN_PATH = "research/shadow_log/plans/plan_2026-10-06.csv"
+PLAN_CSV = """cell,signal_date,ticker,entry_date,hold_days,rules_sha256,source
+fpe_delta_t3_earn_today_3d,2026-10-05,AXIL,2026-10-06,3,abc,preopen_plan_2026-10-06
+fresh_dcp_t1_ep_ge03_2d,2026-10-05,AIB,2026-10-06,2,abc,preopen_plan_2026-10-06
+fresh_dcp_t1_ep_ge03_2d,2026-10-05,RIVN,2026-10-06,2,abc,preopen_plan_2026-10-06
+fresh_dcp_t1_avoid_ah_3d,2026-10-05,AIB,2026-10-06,3,abc,preopen_plan_2026-10-06
+fresh_dcp_t1_avoid_ah_3d,2026-10-05,RIVN,2026-10-06,3,abc,preopen_plan_2026-10-06
+# status=fires rows=5 fpe_delta_t3_earn_today_3d=1 fresh_dcp_t1_ep_ge03_2d=2 fresh_dcp_t1_avoid_ah_3d=2
+# built_at_utc=2026-10-06T10:20:11Z signal_date=2026-10-05 entry_date=2026-10-06
+"""
+
+
+def _commit(sha: str, when: str) -> dict:
+    return {"sha": sha, "commit": {"committer": {"date": when}}}
+
+
+def _theme_github(commits: list[dict], *, listing: list[dict] | None = None, text: str = PLAN_CSV):
+    """Stand-in for the GitHub API. Newest commit is first, matching the API."""
+    if listing is None:
+        listing = [{"name": "plan_2026-10-06.csv", "type": "file"}]
+
+    def github_api(path: str, accept: str = "") -> tuple[int, str]:
+        if "log.csv" in path:
+            raise AssertionError(path)
+        if "commits?" in path:
+            return 0, json.dumps(commits)
+        if "?ref=" in path:
+            return 0, text
+        if path.endswith("research/shadow_log/plans"):
+            return 0, json.dumps(listing)
+        raise AssertionError(path)
+
+    return github_api
+
+
+def _flat_day(price: float) -> dict:
+    return {"open": price, "high": price, "low": price, "close": price}
+
+
+def test_theme_plan_first_commit_before_open_is_locked() -> None:
+    # Newest-first. A later rewrite after the open must not hide the 06:20 ET commit.
+    commits = [
+        _commit(LATE_SHA, "2026-10-06T15:00:00Z"),
+        _commit(EARLY_SHA, "2026-10-06T10:20:12Z"),
+    ]
+    with mock.patch("src.webull_sim.github_api", side_effect=_theme_github(commits)):
+        books = load_theme_plans()
+    name = book_name("theme_radar_fpe_delta_t3_earn_today_3d")
+    plan = books[name][0]
+    assert plan["tradable"] is True
+    assert plan["reason"] == ""
+    assert plan["commit"] == EARLY_SHA
+    assert plan["commit_et"] == "2026-10-06T06:20:12-04:00"
+    assert plan["source"] == f"SRoyaltyy/theme-radar:{PLAN_PATH}"
+    assert plan["picks"][0].ticker == "AXIL"
+    assert plan["picks"][0].side == "short"
+    assert plan["picks"][0].hold_sessions == 3
+    assert plan["picks"][0].exit_on == "2026-10-09"
+    assert add_trading_days("2026-09-18", 3) == "2026-09-23"
+    assert add_trading_days("2026-09-04", 1) == "2026-09-08"
+
+    def bars_for(day, tickers):
+        return {ticker: _flat_day(10) for ticker in tickers}
+
+    rows = run_book(
+        name, [plan], ["2026-10-06"], bars_for, schedule(),
+        datetime(2026, 10, 6, 12, tzinfo=ET),
+    )
+    assert rows[0]["section"] == "locked"
+    assert rows[0]["locked_trade"] is True
+    assert rows[0]["final"] is False
+    assert rows[0]["commit"] == EARLY_SHA
+    assert rows[0]["commit_et"] == "2026-10-06T06:20:12-04:00"
+    assert rows[0]["source"] == f"SRoyaltyy/theme-radar:{PLAN_PATH}"
+    assert rows[0]["fills"][0]["side"] == "sell"
+    assert rows[0]["fills"][0]["reason"] == "open"
+    assert rows[0]["positions"][0]["side"] == "short"
+
+
+def test_theme_plan_at_or_after_open_or_missing_is_not_a_fill() -> None:
+    def run_at(when: str) -> dict:
+        with mock.patch(
+            "src.webull_sim.github_api",
+            side_effect=_theme_github([_commit(LATE_SHA, when)]),
+        ):
+            books = load_theme_plans()
+        name = book_name("theme_radar_fpe_delta_t3_earn_today_3d")
+        plan = books[name][0]
+        assert plan["reason"] == "no pre-09:30 plan"
+        assert plan["tradable"] is False
+        assert plan["commit"] == LATE_SHA
+        assert plan["source"].endswith(PLAN_PATH)
+
+        def bars_for(day, tickers):
+            return {ticker: _flat_day(10) for ticker in tickers}
+
+        rows = run_book(
+            name, [plan], ["2026-10-06"], bars_for, schedule(),
+            datetime(2026, 10, 6, 16, 15, tzinfo=ET),
+        )
+        assert rows[0]["section"] == "not_a_locked_trade"
+        assert rows[0]["reason"] == "no pre-09:30 plan"
+        assert rows[0]["fills"] == []
+        assert Decimal(rows[0]["cash"]) == START_CASH
+        assert rows[0]["picks"] == 1
+        return rows[0]
+
+    # 13:30 UTC is 09:30 ET. The lock is strict: at the open is not before it.
+    run_at("2026-10-06T13:30:00Z")
+    run_at("2026-10-06T13:41:00Z")
+
+    listing = [
+        {"name": "README.md", "type": "file"},
+        {"name": "letters_2026-10-06.csv", "type": "file"},
+    ]
+    with mock.patch(
+        "src.webull_sim.github_api",
+        side_effect=_theme_github([], listing=listing),
+    ):
+        missing = load_theme_plans()
+    for cell in (
+        "fpe_delta_t3_earn_today_3d",
+        "fresh_dcp_t1_ep_ge03_2d",
+        "fresh_dcp_t1_avoid_ah_3d",
+    ):
+        plan = missing[book_name(f"theme_radar_{cell}")][0]
+        assert plan["date"] == "2026-10-06"
+        assert plan["reason"] == "no pre-09:30 plan"
+        assert plan["tradable"] is False
+        assert plan["commit"] == ""
+        assert plan["picks"] == []
+
+
+def test_aib_stays_in_both_theme_radar_books() -> None:
+    commits = [_commit(EARLY_SHA, "2026-10-06T10:20:12Z")]
+    with mock.patch("src.webull_sim.github_api", side_effect=_theme_github(commits)):
+        books = load_theme_plans()
+    ep = book_name("theme_radar_fresh_dcp_t1_ep_ge03_2d")
+    ah = book_name("theme_radar_fresh_dcp_t1_avoid_ah_3d")
+    ep_names = [pick.ticker for pick in books[ep][0]["picks"]]
+    ah_names = [pick.ticker for pick in books[ah][0]["picks"]]
+    assert ep_names == ["AIB", "RIVN"]
+    assert ah_names == ["AIB", "RIVN"]
+    assert books[ep][0]["picks"][0].exit_on == "2026-10-08"
+    assert books[ah][0]["picks"][0].exit_on == "2026-10-09"
+
+    def bars_for(day, tickers):
+        return {ticker: _flat_day(10) for ticker in tickers}
+
+    now = datetime(2026, 10, 6, 12, tzinfo=ET)
+    ep_rows = run_book(ep, books[ep], ["2026-10-06"], bars_for, schedule(), now)
+    ah_rows = run_book(ah, books[ah], ["2026-10-06"], bars_for, schedule(), now)
+    assert [row["ticker"] for row in ep_rows[0]["positions"]] == ["AIB", "RIVN"]
+    assert [row["ticker"] for row in ah_rows[0]["positions"]] == ["AIB", "RIVN"]
+    assert ep_rows[0]["positions"][0]["shares"] == ah_rows[0]["positions"][0]["shares"] > 0
+    assert ep_rows[0]["positions"][0]["side"] == "short"
+    assert ah_rows[0]["positions"][0]["side"] == "short"
+
+
+def test_short_pnl_sign_and_fees() -> None:
+    fees = schedule()
+    entry = "2026-10-06"
+    exit_day = add_trading_days(entry, 2)
+    assert exit_day == "2026-10-08"
+    pick = Pick("AAA", "short", hold_sessions=2, exit_on=exit_day)
+    plan = {
+        "date": entry,
+        "source": f"SRoyaltyy/theme-radar:{PLAN_PATH}",
+        "commit": EARLY_SHA,
+        "commit_et": "2026-10-06T06:20:12-04:00",
+        "picks": [pick],
+        "exits": [],
+        "reason": "",
+        "tradable": True,
+        "note": "",
+        "borrow": "borrow not modeled",
+    }
+    plans = hold_continuations([plan], exit_day)
+    assert [item["date"] for item in plans] == [entry, "2026-10-07", exit_day]
+    sessions = [item["date"] for item in plans]
+
+    def down(day, tickers):
+        close = {"2026-10-06": 10, "2026-10-07": 9, "2026-10-08": 8}[day]
+        opened = 10 if day == entry else 9
+        return {ticker: {"open": opened, "high": opened, "low": close, "close": close} for ticker in tickers}
+
+    noon = datetime(2026, 10, 8, 12, tzinfo=ET)
+    still = run_book("theme_radar_cell_webull_sim", plans, sessions, down, fees, noon)
+    assert still[-1]["positions"]
+    assert still[-1]["positions"][0]["side"] == "short"
+    assert all(fill["reason"] != "hold" for row in still for fill in row["fills"])
+
+    done = run_book(
+        "theme_radar_cell_webull_sim", plans, sessions, down, fees,
+        datetime(2026, 10, 8, 16, 15, tzinfo=ET),
+    )
+    opened = [fill for fill in done[0]["fills"] if fill["reason"] == "open"]
+    covered = [fill for fill in done[-1]["fills"] if fill["reason"] == "hold"]
+    assert len(opened) == 1 and len(covered) == 1
+    shares = opened[0]["shares"]
+    assert opened[0]["side"] == "sell"
+    assert covered[0]["side"] == "buy"
+    assert Decimal(covered[0]["price"]) == Decimal("8")
+    entry_fee = fee_for(fees, "sell", shares, Decimal("10"))
+    cover_fee = fee_for(fees, "buy", shares, Decimal("8"))
+    assert Decimal(opened[0]["fee"]) == entry_fee
+    assert Decimal(covered[0]["fee"]) == cover_fee
+    # The sale is the entry, so the SEC fee is on that leg only. CAT is on both.
+    assert entry_fee - cover_fee == fees.sec_per_dollar * Decimal("10") * shares
+    profit = (Decimal("10") - Decimal("8")) * shares - entry_fee - cover_fee
+    assert profit > 0
+    assert Decimal(done[-1]["cash"]) == START_CASH + profit
+    assert Decimal(done[-1]["fees"]) == entry_fee + cover_fee
+    assert done[-1]["positions"] == []
+
+    def up(day, tickers):
+        close = 12 if day == exit_day else 10
+        opened_px = 10
+        return {ticker: {"open": opened_px, "high": close, "low": opened_px, "close": close} for ticker in tickers}
+
+    lost = run_book(
+        "theme_radar_cell_webull_sim", plans, sessions, up, fees,
+        datetime(2026, 10, 8, 16, 15, tzinfo=ET),
+    )
+    loss_cover = [fill for fill in lost[-1]["fills"] if fill["reason"] == "hold"][0]
+    assert Decimal(loss_cover["price"]) == Decimal("12")
+    loss_fee = fee_for(fees, "buy", shares, Decimal("12"))
+    loss = (Decimal("10") - Decimal("12")) * shares - entry_fee - loss_fee
+    assert loss < 0
+    assert Decimal(lost[-1]["cash"]) == START_CASH + loss
+
+    pricey = apply_session(
+        Account(), [Pick("ZZZ", "short")], [],
+        {"ZZZ": _flat_day(600)}, fees, entry, 0,
+    )
+    assert pricey[0]["reason"] == "no whole share"
+    assert pricey[0]["side"] == "sell"
+
+
+def test_theme_hold_days_do_not_move_other_books() -> None:
+    fees = schedule()
+    toy = [
+        {
+            "date": "2026-10-06",
+            "source": "toy.json",
+            "commit": "abc",
+            "commit_et": "2026-10-06T08:00:00-04:00",
+            "picks": [Pick("AAA", "long", hold_sessions=3)],
+            "exits": [],
+            "reason": "",
+            "tradable": True,
+            "note": "",
+            "borrow": "",
+        },
+        {
+            "date": "2026-10-09",
+            "source": "toy.json",
+            "commit": "abc",
+            "commit_et": "2026-10-09T08:00:00-04:00",
+            "picks": [],
+            "exits": [],
+            "reason": "",
+            "tradable": True,
+            "note": "",
+            "borrow": "",
+        },
+    ]
+    theme = [{
+        "date": "2026-10-06",
+        "source": f"SRoyaltyy/theme-radar:{PLAN_PATH}",
+        "commit": EARLY_SHA,
+        "commit_et": "2026-10-06T06:20:12-04:00",
+        "picks": [Pick("AIB", "short", hold_sessions=3, exit_on="2026-10-09")],
+        "exits": [],
+        "reason": "",
+        "tradable": True,
+        "note": "",
+        "borrow": "borrow not modeled",
+    }]
+    bars = {}
+    for day, px in (("2026-10-06", 10), ("2026-10-07", 10), ("2026-10-08", 10), ("2026-10-09", 11)):
+        bars[("AAA", day)] = _flat_day(px)
+    bars[("AIB", "2026-10-06")] = _flat_day(20)
+    bars[("AIB", "2026-10-07")] = _flat_day(19)
+    bars[("AIB", "2026-10-08")] = _flat_day(18)
+    bars[("AIB", "2026-10-09")] = {"open": 18, "high": 18, "low": 16, "close": 16}
+    now = datetime(2026, 10, 9, 16, 30, tzinfo=ET)
+    alone = simulate({"toy_webull_sim": toy}, now, fees, bars)
+    both = simulate(
+        {"toy_webull_sim": toy, "theme_radar_fresh_dcp_t1_avoid_ah_3d_webull_sim": theme},
+        now, fees, bars,
+    )
+    toy_alone = [row for row in alone if row["name"] == "toy_webull_sim"]
+    toy_both = [row for row in both if row["name"] == "toy_webull_sim"]
+    assert toy_alone == toy_both
+    assert toy_both[-1]["positions"][0]["ticker"] == "AAA"
+    theme_rows = [row for row in both if row["name"].startswith("theme_radar_")]
+    cover = [fill for fill in theme_rows[-1]["fills"] if fill["reason"] == "hold"]
+    assert Decimal(cover[0]["price"]) == Decimal("16")
+    assert cover[0]["side"] == "buy"
+
+
+def test_theme_radar_page_states_the_borrow_lines_under_each_book() -> None:
+    def row(name: str) -> dict:
+        return make_row(
+            name=name, day=FIRST_LOCKED, source=f"SRoyaltyy/theme-radar:{PLAN_PATH}",
+            commit=EARLY_SHA, commit_et="2026-10-06T06:20:12-04:00",
+            reason="", note="", section="locked", locked_trade=True, final=False,
+            cash=START_CASH, fees=Decimal("0"), equity=START_CASH, fills=[],
+            positions=[], picks=1,
+        )
+
+    other = row("h1_webull_sim")
+    plain = render_md([other], schedule())
+    plain_html = render_html([other], schedule())
+    assert THEME_BORROW_NOTE not in plain
+    assert THEME_LOG_NOTE not in plain
+    assert THEME_BORROW_NOTE not in plain_html
+    ep = book_name("theme_radar_fresh_dcp_t1_ep_ge03_2d")
+    ah = book_name("theme_radar_fresh_dcp_t1_avoid_ah_3d")
+    md = render_md([other, row(ep), row(ah)], schedule())
+    html = render_html([other, row(ep), row(ah)], schedule())
+    head, tail = md.split("## Theme Radar short books", 1)
+    assert "h1_webull_sim" in head
+    assert ep not in head and ah not in head
+    assert md.count(THEME_BORROW_NOTE) == 2
+    assert md.count(THEME_LOG_NOTE) == 2
+    for name in sorted((ep, ah)):
+        at = tail.index(f"### {name}")
+        borrow_at = tail.index(THEME_BORROW_NOTE, at)
+        log_at = tail.index(THEME_LOG_NOTE, at)
+        assert at < borrow_at < log_at
+        rest = tail[log_at + len(THEME_LOG_NOTE):]
+        if "### " in rest:
+            assert borrow_at < tail.index("### ", at + 4)
+    assert html.count(THEME_BORROW_NOTE) == 2
+    assert html.count(THEME_LOG_NOTE) == 2
+    for name in (ep, ah):
+        at = html.index(f"<h2>{name}</h2>")
+        assert at < html.index(THEME_BORROW_NOTE, at) < html.index(THEME_LOG_NOTE, at)
+
+
 def test_workflow_is_after_the_freeze_and_on_ubuntu() -> None:
     text = (ROOT / ".github/workflows/webull_sim.yml").read_text(encoding="utf-8")
     assert "ubuntu-latest" in text
@@ -514,6 +868,12 @@ if __name__ == "__main__":
     test_excel_final_file_counts_and_is_not_the_card()
     test_theme_radar_borrow_is_not_invented()
     test_theme_radar_late_first_appearance_is_not_a_fill()
+    test_theme_plan_first_commit_before_open_is_locked()
+    test_theme_plan_at_or_after_open_or_missing_is_not_a_fill()
+    test_aib_stays_in_both_theme_radar_books()
+    test_short_pnl_sign_and_fees()
+    test_theme_hold_days_do_not_move_other_books()
+    test_theme_radar_page_states_the_borrow_lines_under_each_book()
     test_slot_is_equity_over_max_20_n()
     test_thirty_four_picks_get_thirty_four_equal_slots()
     test_missing_open_does_not_drop_the_other_picks()

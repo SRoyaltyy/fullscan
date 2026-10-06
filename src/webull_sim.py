@@ -10,6 +10,11 @@ locked result. A strategy with no sealed plan still gets a row that says
 why. Nothing here writes an existing live book.
 
 The scheduled run stays shut from 03:00 until 09:40 ET.
+
+Theme Radar research shorts read that repo's pre-open plan file
+(``research/shadow_log/plans/plan_<entry date>.csv``), not the shadow log.
+The file's first commit has to be before 09:30 ET. A short sells the open
+and covers the close of the last hold day.
 """
 from __future__ import annotations
 
@@ -112,6 +117,7 @@ class Pick:
     hold_sessions: int | None = None
     shares: int | None = None
     weight: Decimal | None = None
+    exit_on: str | None = None
 
 
 @dataclass
@@ -124,6 +130,7 @@ class Lot:
     stop: Decimal | None = None
     target: Decimal | None = None
     exit_index: int | None = None
+    exit_on: str | None = None
 
 
 @dataclass
@@ -366,11 +373,13 @@ def apply_session(
             sign = Decimal("1") if pick.side == "long" else Decimal("-1")
             target = opened * (Decimal("1") + sign * pick.target_pct)
         exit_index = None
-        if pick.hold_sessions is not None:
+        # A dated close cover (Theme Radar shorts) is not the next-open hold.
+        if pick.hold_sessions is not None and not pick.exit_on:
             exit_index = session_index + pick.hold_sessions
         account.lots.append(Lot(
             ticker=pick.ticker, side=pick.side, shares=shares, entry_px=opened,
             entry_date=date, stop=pick.stop, target=target, exit_index=exit_index,
+            exit_on=pick.exit_on,
         ))
         fills.append({
             "ticker": pick.ticker, "side": entry_side, "shares": shares,
@@ -445,8 +454,52 @@ def session_open(day: str) -> datetime:
     return datetime.combine(date.fromisoformat(day), time(9, 30), tzinfo=ET)
 
 
+def session_close(day: str) -> datetime:
+    return datetime.combine(date.fromisoformat(day), time(16, 0), tzinfo=ET)
+
+
 def before_open(when: datetime, day: str) -> bool:
     return when.astimezone(ET) < session_open(day)
+
+
+def close_is_final(now: datetime, day: str) -> bool:
+    """The daily close is the 16:00 ET print, not the mid-session last."""
+    return now.astimezone(ET) >= session_close(day)
+
+
+def add_trading_days(day: str, n: int) -> str:
+    """``n`` NYSE sessions after ``day``. Weekends and full-day holidays skip."""
+    from .skip_if_good import _next_weekday
+    cursor = day
+    for _ in range(max(0, n)):
+        cursor = _next_weekday(cursor)
+    return cursor
+
+
+def cover_at_close(account: Account, bars: dict[str, dict], schedule: Schedule,
+                   day: str, now: datetime) -> list[dict]:
+    """Cover shorts whose last hold day is ``day``, at that day's close.
+
+    Other books do not set ``exit_on``, so this does not touch them.
+    Before 16:00 ET the close is not the session close, and the lot stays.
+    """
+    if not close_is_final(now, day):
+        return []
+    fills: list[dict] = []
+    kept: list[Lot] = []
+    for lot in account.lots:
+        if lot.exit_on != day or lot.side != "short":
+            kept.append(lot)
+            continue
+        price = _bar_px(bars.get(lot.ticker), "close")
+        if price is None:
+            kept.append(lot)
+            continue
+        fill = _book_exit(lot, price, schedule, "hold", day)
+        apply_cash_exit(account, lot, fill)
+        fills.append(fill)
+    account.lots = kept
+    return fills
 
 
 def clock_et(when: datetime) -> str:
@@ -463,6 +516,10 @@ def next_weekday(day: str) -> str:
 def book_name(strategy: str) -> str:
     stem = strategy if strategy.endswith("_webull_sim") else f"{strategy}_webull_sim"
     return stem
+
+
+def is_theme_book(name: str) -> bool:
+    return name.startswith("theme_radar_") and name.endswith("_webull_sim")
 
 
 def canon(row: dict) -> str:
@@ -638,12 +695,23 @@ def run_book(
                     ]
                     if missing:
                         note = (note + " open not observed: " + ",".join(missing)).strip()
+        if is_theme_book(name):
+            # A late or empty day still covers shorts that were already on.
+            # New picks were not opened above unless the plan was tradable.
+            fills = list(fills) + cover_at_close(account, bars, schedule, day, now)
         equity, missing_marks = mark_equity(account, bars)
         if missing_marks:
             note = (note + " mark not observed, carried at entry: " + ",".join(missing_marks)).strip()
         locked_trade = bool(
             day >= FIRST_LOCKED and tradable and opens_ok and reason == ""
         )
+        is_final = final_row(day, now, tradable, opens_ok)
+        if is_theme_book(name) and not close_is_final(now, day):
+            # The open fill can show as locked before the close. Sealing
+            # waits so the close mark, and a same-day cover, stay writable.
+            is_final = False
+        if any(lot.exit_on == day for lot in account.lots):
+            is_final = False
         sandbox = ""
         if sandbox_for and name == "h1_webull_sim":
             sandbox = sandbox_for(day)
@@ -657,7 +725,7 @@ def run_book(
             note=note,
             section=section_for(day, locked_trade),
             locked_trade=locked_trade,
-            final=final_row(day, now, tradable, opens_ok),
+            final=is_final,
             cash=account.cash,
             fees=account.fees,
             equity=equity,
@@ -946,10 +1014,17 @@ def load_shadow_plans() -> dict[str, list[dict]]:
 
 
 THEME_SOURCE = "SRoyaltyy/theme-radar:research/shadow_log/log.csv"
+THEME_PLAN_DIR = "research/shadow_log/plans"
 THEME_CELLS = (
     "fpe_delta_t3_earn_today_3d",
     "fresh_dcp_t1_ep_ge03_2d",
     "fresh_dcp_t1_avoid_ah_3d",
+)
+THEME_BORROW_NOTE = "Borrow cost and availability are not modeled in this sim."
+THEME_LOG_NOTE = (
+    "Theme Radar's shadow-log figures include an assumed 0.3% borrow plus a 15bp fee "
+    "on every short (its own assumption, not a real borrow rate), so the log will read "
+    "somewhat worse than this sim for the same trades."
 )
 
 
@@ -972,10 +1047,12 @@ def _theme_pick(row: dict) -> Pick | None:
 
 
 def group_theme_rows(rows: list[dict]) -> dict[str, list[dict]]:
-    """One plan per cell and entry day, stamped with each row's first appearance.
+    """Legacy shadow-log grouping. The sim does not call this.
 
-    A row whose first commit is at or after 09:30 ET on its entry day is not a
-    fill. The day still gets a visible row, reason ``no pre-09:30 plan``.
+    ``load_theme_plans`` reads ``plans/plan_<entry>.csv`` instead. This
+    remains for the log-shaped fixtures: a row whose first commit is at or
+    after 09:30 ET on its entry day is not a fill, and the day still gets a
+    visible row, reason ``no pre-09:30 plan``.
     """
     grouped: dict[tuple[str, str], list[dict]] = {}
     for row in rows:
@@ -1069,93 +1146,317 @@ def parse_theme_log(text: str, commit: str, when: datetime | None) -> dict[str, 
     return group_theme_rows(rows)
 
 
-def _theme_commits() -> list[dict]:
-    commits: list[dict] = []
-    page = 1
-    while page <= 20:
+def github_api(path: str, accept: str = "") -> tuple[int, str]:
+    """GET ``https://api.github.com/{path}`` through the gh CLI.
+
+    A public repo answers without a token. ``GITHUB_TOKEN`` / ``GH_TOKEN``
+    is what ``gh`` uses when it is set.
+    """
+    cmd = ["gh", "api", path]
+    if accept:
+        cmd.extend(["-H", f"Accept: {accept}"])
+    try:
         proc = subprocess.run(
-            ["gh", "api",
-             f"repos/SRoyaltyy/theme-radar/commits?path=research/shadow_log/log.csv&per_page=100&page={page}"],
-            cwd=ROOT, check=False, capture_output=True, text=True,
+            cmd, cwd=ROOT, check=False, capture_output=True, text=True,
+            timeout=60,
         )
-        if proc.returncode != 0 or not proc.stdout.strip().startswith("["):
-            break
-        batch = json.loads(proc.stdout)
-        if not batch:
-            break
-        commits.extend(batch)
-        if len(batch) < 100:
-            break
-        page += 1
-    return commits
+    except (OSError, subprocess.TimeoutExpired):
+        return 1, ""
+    text = proc.stdout or ""
+    if proc.returncode != 0 and not text.strip():
+        text = proc.stderr or ""
+    return proc.returncode, text
 
 
-def _theme_file(sha: str) -> str:
-    proc = subprocess.run(
-        ["gh", "api",
-         f"repos/SRoyaltyy/theme-radar/contents/research/shadow_log/log.csv?ref={sha}",
-         "-H", "Accept: application/vnd.github.raw"],
-        cwd=ROOT, check=False, capture_output=True, text=True,
+def _github_json(path: str):
+    code, text = github_api(path)
+    if not text.strip():
+        return code, None
+    try:
+        return code, json.loads(text)
+    except json.JSONDecodeError:
+        return code, None
+
+
+def _not_found(payload) -> bool:
+    return isinstance(payload, dict) and "Not Found" in str(payload.get("message") or "")
+
+
+def _plan_day(name: str) -> str | None:
+    if not (name.startswith("plan_") and name.endswith(".csv")):
+        return None
+    day = name[len("plan_"):-len(".csv")]
+    try:
+        date.fromisoformat(day)
+    except ValueError:
+        return None
+    return day
+
+
+def theme_plan_names() -> list[str] | None:
+    """``plan_<entry>.csv`` filenames. None when the listing could not be read."""
+    code, payload = _github_json(
+        f"repos/SRoyaltyy/theme-radar/contents/{THEME_PLAN_DIR}"
     )
-    if proc.returncode != 0 or not proc.stdout.strip():
-        raise FileNotFoundError(sha)
-    return proc.stdout
+    if _not_found(payload):
+        return []
+    if code != 0 or not isinstance(payload, list):
+        return None
+    names = []
+    for item in payload:
+        if not isinstance(item, dict):
+            continue
+        if item.get("type") not in (None, "file"):
+            continue
+        name = str(item.get("name") or "")
+        if _plan_day(name):
+            names.append(name)
+    return sorted(names)
+
+
+def theme_commits(path: str) -> list[tuple[str, datetime]] | None:
+    """Committer times for ``path``, newest first.
+
+    ``[]`` means the path was never committed. None means the history
+    could not be read. The first commit is the oldest of this list.
+    """
+    found: list[tuple[str, datetime]] = []
+    for page in range(1, 21):
+        code, payload = _github_json(
+            "repos/SRoyaltyy/theme-radar/commits?path="
+            f"{path}&per_page=100&page={page}"
+        )
+        if _not_found(payload):
+            return [] if page == 1 else found
+        if code != 0 or payload is None:
+            return None if page == 1 else found
+        if isinstance(payload, dict):
+            return None if page == 1 else found
+        if not isinstance(payload, list) or not payload:
+            break
+        for item in payload:
+            if not isinstance(item, dict):
+                continue
+            sha = str(item.get("sha") or "")
+            raw = ((item.get("commit") or {}).get("committer") or {}).get("date") or ""
+            if not sha or not raw:
+                continue
+            when = datetime.fromisoformat(str(raw).replace("Z", "+00:00"))
+            found.append((sha, when))
+        if len(payload) < 100:
+            break
+    return found
+
+
+def theme_plan_text(path: str, sha: str) -> str | None:
+    code, text = github_api(
+        f"repos/SRoyaltyy/theme-radar/contents/{path}?ref={sha}",
+        accept="application/vnd.github.raw",
+    )
+    if code != 0 or not text.strip():
+        return None
+    if text.lstrip().startswith("{") and "Not Found" in text:
+        return None
+    return text
+
+
+def parse_plan_csv(text: str) -> list[dict]:
+    """Plan rows. ``#`` trailer lines are provenance, not picks."""
+    lines = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        lines.append(line)
+    if not lines:
+        return []
+    return list(csv.DictReader(io.StringIO("\n".join(lines) + "\n")))
+
+
+def theme_source(path: str) -> str:
+    return f"SRoyaltyy/theme-radar:{path}"
+
+
+def _plan_pick(row: dict, day: str) -> Pick | None:
+    ticker = (row.get("ticker") or "").upper().strip()
+    if not ticker:
+        return None
+    try:
+        hold = int(str(row.get("hold_days") or "0").strip() or "0")
+    except ValueError:
+        hold = 0
+    exit_on = add_trading_days(day, hold) if hold > 0 else None
+    return Pick(
+        ticker=ticker, side="short",
+        hold_sessions=hold or None, exit_on=exit_on,
+    )
+
+
+def _theme_plan(day: str, source: str, sha: str, when: datetime,
+                before: bool, picks: list[Pick]) -> dict:
+    borrow = "borrow not modeled"
+    if before and picks:
+        note = (
+            "Research short. Off the real Webull paper account. "
+            "Enters at the 09:30 open and covers at the close of the last hold day. "
+            + borrow + "."
+        )
+        return _plan(day, source, sha, when, True, picks, [], note=note, borrow=borrow)
+    if before and not picks:
+        note = (
+            "Research short. Off the real Webull paper account. "
+            "Pre-open plan fired nothing for this rule. " + borrow + "."
+        )
+        return _plan(day, source, sha, when, True, [], [], note=note, borrow=borrow)
+    names = ", ".join(pick.ticker for pick in picks) if picks else "The plan file"
+    note = (
+        "Research short. Off the real Webull paper account. "
+        f"{names} is on a plan whose first commit is not before 09:30 ET. Not a fill. "
+        + borrow + "."
+    )
+    plan = _plan(day, source, sha, when, False, picks, [], note=note, borrow=borrow)
+    plan["reason"] = "no pre-09:30 plan"
+    plan["tradable"] = False
+    return plan
+
+
+def plans_from_plan_file(path: str, day: str) -> dict[str, dict] | None:
+    """One plan per rule. None when the history or the file could not be read.
+
+    The lock uses the oldest commit on ``path``, not a later rewrite.
+    A missing file is ``no pre-09:30 plan`` with no commit.
+    """
+    history = theme_commits(path)
+    if history is None:
+        return None
+    source = theme_source(path)
+    if not history:
+        return {
+            book_name(f"theme_radar_{cell}"): empty_plan(
+                day, "no pre-09:30 plan",
+                "No theme-radar plan file for this entry day.",
+            )
+            for cell in THEME_CELLS
+        }
+    # Newest-first history: the smallest committer time is the first commit.
+    # A tied time keeps the later list entry, which is the older revision.
+    sha, when = min(enumerate(history), key=lambda item: (item[1][1], -item[0]))[1]
+    before = before_open(when, day)
+    text = theme_plan_text(path, sha)
+    if text is None:
+        return None
+    grouped: dict[str, list[dict]] = {}
+    order: list[str] = []
+    for row in parse_plan_csv(text):
+        entry = (row.get("entry_date") or "").strip()
+        if entry and entry != day:
+            continue
+        cell = (row.get("cell") or "").strip()
+        if not cell or not (row.get("ticker") or "").strip():
+            continue
+        if cell not in grouped:
+            order.append(cell)
+        grouped.setdefault(cell, []).append(row)
+    cells = list(THEME_CELLS)
+    for cell in order:
+        if cell not in cells:
+            cells.append(cell)
+    books: dict[str, dict] = {}
+    for cell in cells:
+        picks = []
+        for row in grouped.get(cell, []):
+            pick = _plan_pick(row, day)
+            if pick is not None:
+                picks.append(pick)
+        books[book_name(f"theme_radar_{cell}")] = _theme_plan(
+            day, source, sha, when, before, picks,
+        )
+    return books
+
+
+def _unread_theme(day: str, source: str = "") -> dict:
+    plan = empty_plan(day, "no pre-09:30 plan", "theme-radar plan not readable this run")
+    if source:
+        plan["source"] = source
+    return plan
 
 
 def load_theme_plans() -> dict[str, list[dict]]:
-    """First appearance of each log row, compared with 09:30 ET on its entry day."""
-    unread = {
-        book_name(f"theme_radar_{cell}"): [
-            empty_plan(FIRST_LOCKED, "no pre-09:30 plan", "theme-radar log not readable this run")
-        ]
-        for cell in THEME_CELLS
+    """Pre-open plan files, one book per rule. The shadow log is not the source."""
+    books: dict[str, list[dict]] = {
+        book_name(f"theme_radar_{cell}"): [] for cell in THEME_CELLS
     }
-    commits = _theme_commits()
-    if not commits:
-        return unread
-    seen: set[tuple[str, str, str]] = set()
-    rows: list[dict] = []
-    for commit in reversed(commits):
-        sha = commit.get("sha") or ""
-        raw_when = ((commit.get("commit") or {}).get("committer") or {}).get("date") or ""
-        if not sha or not raw_when:
+    names = theme_plan_names()
+    if names is None:
+        for cell in THEME_CELLS:
+            books[book_name(f"theme_radar_{cell}")].append(_unread_theme(FIRST_LOCKED))
+        return books
+    for name in names:
+        day = _plan_day(name) or ""
+        path = f"{THEME_PLAN_DIR}/{name}"
+        built = plans_from_plan_file(path, day)
+        if built is None:
+            for cell in THEME_CELLS:
+                books[book_name(f"theme_radar_{cell}")].append(
+                    _unread_theme(day, theme_source(path))
+                )
             continue
-        when = datetime.fromisoformat(raw_when.replace("Z", "+00:00"))
-        try:
-            text = _theme_file(sha)
-        except FileNotFoundError:
-            continue
-        for row in csv.DictReader(io.StringIO(text)):
-            cell = row.get("cell") or "theme_radar"
-            day = row.get("entry") or row.get("date") or ""
-            ticker = (row.get("ticker") or "").upper()
-            if not day or not ticker:
-                continue
-            key = (cell, day, ticker)
-            if key in seen:
-                continue
-            seen.add(key)
-            stamped = dict(row)
-            stamped["_sha"] = sha
-            stamped["_when"] = when
-            rows.append(stamped)
-    if not rows:
-        return unread
-    books = group_theme_rows(rows)
+        for book, plan in built.items():
+            books.setdefault(book, []).append(plan)
     for cell in THEME_CELLS:
-        name = book_name(f"theme_radar_{cell}")
-        plans = books.setdefault(name, [])
+        book = book_name(f"theme_radar_{cell}")
+        plans = books.setdefault(book, [])
         if FIRST_LOCKED in {plan["date"] for plan in plans}:
             continue
-        # A log with no row for this entry day is not a sealed sit.
-        plan = empty_plan(
-            FIRST_LOCKED,
-            "no pre-09:30 plan",
-            "No theme-radar row for this entry day was committed before 09:30 ET.",
-        )
-        plan["source"] = THEME_SOURCE
-        plans.append(plan)
+        plans.append(empty_plan(
+            FIRST_LOCKED, "no pre-09:30 plan",
+            "No theme-radar plan file for this entry day.",
+        ))
     return books
+
+
+def _holding_plan(plan: dict, day: str) -> dict:
+    return {
+        "date": day,
+        "source": plan.get("source") or "",
+        "commit": plan.get("commit") or "",
+        "commit_et": plan.get("commit_et") or "",
+        "before": True,
+        "picks": [],
+        "exits": [],
+        "reason": "",
+        "tradable": True,
+        "note": "Holding the short. Cover at the close of the last hold day.",
+        "borrow": plan.get("borrow") or "borrow not modeled",
+    }
+
+
+def hold_continuations(plans: list[dict], today: str) -> list[dict]:
+    """Visit each session through the cover day, without adding those dates
+    to any other book's calendar. Days after ``today`` stay off the book.
+    """
+    from .skip_if_good import _next_weekday
+    existing = {plan["date"] for plan in plans}
+    extra = []
+    for plan in plans:
+        if not plan.get("tradable"):
+            continue
+        deadlines = [pick.exit_on for pick in plan["picks"] if pick.exit_on]
+        if not deadlines:
+            continue
+        last = max(deadlines)
+        cursor = plan["date"]
+        while cursor < last and cursor < today:
+            cursor = _next_weekday(cursor)
+            if cursor > last or cursor > today:
+                break
+            if cursor in existing:
+                continue
+            existing.add(cursor)
+            extra.append(_holding_plan(plan, cursor))
+    if not extra:
+        return list(plans)
+    return sorted([*plans, *extra], key=lambda plan: plan["date"])
 
 
 def static_gap_plans(days: list[str]) -> dict[str, list[dict]]:
@@ -1302,16 +1603,46 @@ def simulate(books: dict[str, list[dict]], now: datetime,
     def bars_for(day: str, tickers: list[str]) -> dict[str, dict]:
         return {ticker: bars[(ticker, day)] for ticker in tickers if (ticker, day) in bars}
 
+    fetched: dict[tuple[str, str], dict] = {}
+
+    def theme_bars_for(day: str, tickers: list[str]) -> dict[str, dict]:
+        """Same Yahoo source, fetched for this book's hold days only.
+
+        Results stay out of the shared map so another book does not start
+        seeing a print it did not ask for.
+        """
+        found = bars_for(day, tickers)
+        for ticker in tickers:
+            if ticker not in found and (ticker, day) in fetched:
+                found[ticker] = fetched[(ticker, day)]
+        missing = [ticker for ticker in tickers if ticker not in found]
+        if not missing or not live_fetch_allowed(datetime.now(ET), day):
+            return found
+        for (ticker, bar_day), bar in fetch_live_bars(missing, day).items():
+            if bar_day == day:
+                fetched[(ticker, day)] = bar
+                found[ticker] = bar
+        return found
+
     def sandbox_for(day: str) -> str:
         path = PAPER_OPEN / f"{day}_status.json"
         if not path.is_file():
             return "not observed"
         return sandbox_label(json.loads(path.read_text(encoding="utf-8")))
 
+    today = now.astimezone(ET).date().isoformat()
     rows = []
     for name in sorted(books):
+        plans = books[name]
+        use_sessions = sessions
+        use_bars = bars_for
+        if is_theme_book(name):
+            # Cover days are on this book's calendar only.
+            plans = hold_continuations(plans, today)
+            use_sessions = sorted(set(sessions) | {plan["date"] for plan in plans})
+            use_bars = theme_bars_for
         rows.extend(run_book(
-            name, books[name], sessions, bars_for, schedule, now,
+            name, plans, use_sessions, use_bars, schedule, now,
             sandbox_for=sandbox_for,
         ))
     return rows
@@ -1387,6 +1718,34 @@ def _money(text: str) -> str:
     return f"${Decimal(text):,.2f}"
 
 
+def _md_book_row(row: dict) -> str:
+    return (
+        f"| {row['name']} | {row['date']} | {row['section']} | {row['reason'] or 'traded'} | "
+        f"{row.get('sizing') or '—'} | "
+        f"{row['picks']} | {_money(row['equity'])} | {_money(row['fees'])} | "
+        f"{row['commit_et'] or '—'} | {row['source'] or '—'} | "
+        f"{(row['commit'] or '—')[:12]} | {row['sandbox'] or '—'} |"
+    )
+
+
+def _html_book_row(row: dict) -> str:
+    reason = row["reason"] or "traded"
+    return (
+        "<tr>"
+        f"<td>{row['name']}</td><td>{row['date']}</td><td>{row['section']}</td>"
+        f"<td>{reason}</td><td>{row.get('sizing') or '—'}</td>"
+        f"<td>{row['picks']}</td><td>{_money(row['equity'])}</td>"
+        f"<td>{row['commit_et'] or '—'}</td>"
+        f"<td>{(row['commit'] or '—')[:12]}</td>"
+        f"<td>{row['sandbox'] or '—'}</td>"
+        "</tr>"
+    )
+
+
+def _theme_names(rows: list[dict]) -> list[str]:
+    return sorted({row["name"] for row in rows if is_theme_book(row.get("name") or "")})
+
+
 def render_md(rows: list[dict], schedule: Schedule) -> str:
     locked = [r for r in rows if r["section"] == "locked"]
     built = [r for r in rows if r["section"] == "built_after"]
@@ -1426,15 +1785,29 @@ def render_md(rows: list[dict], schedule: Schedule) -> str:
         "| Book | Date | Section | Reason | Sizing | Picks | Equity | Fees | Commit ET | Source | SHA | Sandbox |",
         "|---|---|---|---|---|---:|---:|---:|---|---|---|---|",
     ]
-    show = [r for r in rows if r["date"] >= FIRST_LOCKED]
+    show = [r for r in rows if r["date"] >= FIRST_LOCKED and not is_theme_book(r["name"])]
     for row in show:
-        lines.append(
-            f"| {row['name']} | {row['date']} | {row['section']} | {row['reason'] or 'traded'} | "
-            f"{row.get('sizing') or '—'} | "
-            f"{row['picks']} | {_money(row['equity'])} | {_money(row['fees'])} | "
-            f"{row['commit_et'] or '—'} | {row['source'] or '—'} | "
-            f"{(row['commit'] or '—')[:12]} | {row['sandbox'] or '—'} |"
+        lines.append(_md_book_row(row))
+    theme_names = _theme_names(rows)
+    if theme_names:
+        lines += ["", "## Theme Radar short books", ""]
+        header = (
+            "| Book | Date | Section | Reason | Sizing | Picks | Equity | Fees | Commit ET | Source | SHA | Sandbox |",
+            "|---|---|---|---|---|---:|---:|---:|---|---|---|---|",
         )
+        for name in theme_names:
+            lines.append(f"### {name}")
+            lines.append("")
+            group = [r for r in rows if r["name"] == name and r["date"] >= FIRST_LOCKED]
+            if group:
+                lines.extend(header)
+                for row in group:
+                    lines.append(_md_book_row(row))
+                lines.append("")
+            lines.append(THEME_BORROW_NOTE)
+            lines.append("")
+            lines.append(THEME_LOG_NOTE)
+            lines.append("")
     lines += [
         "",
         "## Built after the fact",
@@ -1465,21 +1838,25 @@ def render_md(rows: list[dict], schedule: Schedule) -> str:
 
 
 def render_html(rows: list[dict], schedule: Schedule) -> str:
-    show = [r for r in rows if r["date"] >= FIRST_LOCKED]
-    body = []
-    for row in show:
-        reason = row["reason"] or "traded"
-        body.append(
-            "<tr>"
-            f"<td>{row['name']}</td><td>{row['date']}</td><td>{row['section']}</td>"
-            f"<td>{reason}</td><td>{row.get('sizing') or '—'}</td>"
-            f"<td>{row['picks']}</td><td>{_money(row['equity'])}</td>"
-            f"<td>{row['commit_et'] or '—'}</td>"
-            f"<td>{(row['commit'] or '—')[:12]}</td>"
-            f"<td>{row['sandbox'] or '—'}</td>"
-            "</tr>"
-        )
+    show = [r for r in rows if r["date"] >= FIRST_LOCKED and not is_theme_book(r["name"])]
+    body = [_html_book_row(row) for row in show]
     table = "\n".join(body)
+    theme_blocks = []
+    for name in _theme_names(rows):
+        group = [r for r in rows if r["name"] == name and r["date"] >= FIRST_LOCKED]
+        group_table = "\n".join(_html_book_row(row) for row in group)
+        theme_blocks.append(
+            f"<h2>{name}</h2>\n"
+            "<table>\n"
+            "<thead><tr><th>Book</th><th>Date</th><th>Section</th><th>Reason</th>"
+            "<th>Sizing</th><th>Picks</th><th>Equity</th><th>Commit ET</th>"
+            "<th>SHA</th><th>Sandbox</th></tr></thead>\n"
+            f"<tbody>\n{group_table}\n</tbody></table>\n"
+            f"<p class=\"note\">{THEME_BORROW_NOTE}</p>\n"
+            f"<p class=\"note\">{THEME_LOG_NOTE}</p>"
+        )
+    theme_html = "\n".join(theme_blocks)
+    theme_heading = "<h2>Theme Radar short books</h2>\n" if theme_blocks else ""
     return f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <title>Webull sim</title>
@@ -1504,6 +1881,7 @@ h1 sandbox fills read the paper-open journal and show "not observed" until a fil
 <tbody>
 {table}
 </tbody></table>
+{theme_heading}{theme_html}
 <p>Machine rows: data/webull_sim/days.jsonl. Write-up: 03_scoreboard/WEBULL_SIM.md.</p>
 </body></html>
 """
