@@ -30,6 +30,13 @@ permissions:
   contents: write
   actions: write
 
+# Trigger debounce (2026-10-07 churn): one run + at most one pending per
+# trigger source and date. A newer pending dispatch replaces the older
+# pending one instead of starting and being cancelled mid-publish.
+concurrency:
+  group: tickets-trigger-${{ github.event_name == 'workflow_run' && github.event.workflow_run.name || 'dispatch' }}-${{ github.event.inputs.run_date || 'today' }}
+  cancel-in-progress: false
+
 # Concurrency sits on the publish job, not the whole workflow. A duplicate
 # trigger whose input hash already matches the landed ticket never joins
 # the group, so it does not cancel the run that is writing that ticket.

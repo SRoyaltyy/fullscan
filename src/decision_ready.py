@@ -211,9 +211,40 @@ def notify_changed(paths):
                    for p in paths)
     if not relevant:
         return False
+    # Churn fix (2026-10-07: 34 ticket-publish runs before 07:00 ET, most
+    # cancelled). Inside a Pre-Open packet every sector/news/map land fired
+    # its own dispatch; the packet's workflow_run trigger publishes once
+    # when the stage completes, so stay quiet here.
+    if (os.environ.get('PREOPEN_IN_PACKET') or '').strip() == '1':
+        print('[decision] in Pre-Open packet — stage-end workflow_run publishes', flush=True)
+        return False
     if inputs_match_landed_ticket(date):
         return False
+    if publish_already_pending():
+        print('[decision] publish already queued — it reads the newer tree', flush=True)
+        return False
     return dispatch(date)
+
+
+def publish_already_pending():
+    """True when a publish_strategy_tickets run is already queued/waiting."""
+    token = os.environ.get('GITHUB_TOKEN')
+    if not token:
+        return False
+    repo = os.environ.get('GITHUB_REPOSITORY', 'SRoyaltyy/fullscan')
+    for status in ('queued', 'waiting', 'pending'):
+        req = urllib.request.Request(
+            f'https://api.github.com/repos/{repo}/actions/workflows/'
+            f'publish_strategy_tickets.yml/runs?status={status}&per_page=1',
+            headers={'Authorization': f'Bearer {token}',
+                     'Accept': 'application/vnd.github+json'})
+        try:
+            with urllib.request.urlopen(req, timeout=10) as r:
+                if json.loads(r.read() or b'{}').get('total_count', 0):
+                    return True
+        except Exception:
+            return False
+    return False
 
 
 def publish(date):
