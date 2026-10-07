@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-07
 
-**Generated:** 2026-10-07T04:19:24.260608-04:00 (America/New_York)
+**Generated:** 2026-10-07T04:19:45.863097-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US equity futures set to open slightly lower as traders await EIA crude data and FOMC Minutes on a quiet Wednesday session
 **Prior close:** SPX —  Nasdaq —  Dow —
