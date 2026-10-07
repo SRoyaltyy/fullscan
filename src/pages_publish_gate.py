@@ -10,8 +10,14 @@ PARTIAL because catalyst FAIL still means "files present → publish."
 Fallback: if Stock Book skipped / book_ok=False but tickets +
 dashboard/factor-mine/today.json already exist for the date, still OK.
 
+When --date is omitted, the session is the latest completed NYSE
+session. Before 09:30 ET on a trading day, and on a weekend or
+full-day holiday, that is the previous trading session
+(src.skip_if_good calendar). An explicit --date is used as given.
+
 CLI: python -m src.pages_publish_gate [--date YYYY-MM-DD]
-Exit 0 = fire Deploy dashboard. Exit 1 = not yet.
+Exit 0 = publish. Exit 1 = do not publish. Callers must treat exit 1
+as a failed deploy. A skipped publish is not a green no-op.
 """
 from __future__ import annotations
 
@@ -27,10 +33,9 @@ ROOT = Path(__file__).resolve().parent.parent
 # Cyrus's Pages-publish process list. Catalyst / preopen LLM are not here.
 PAGES_PROCESS_KEYS = ("stock_book", "publish")
 IGNORE_PROCESS_KEYS = frozenset({"catalyst"})
-
-
-def _today() -> str:
-    return datetime.now(ET).date().isoformat()
+# Regular-session open. Before this bell the day has not started, so
+# the latest completed session is still the previous NYSE session.
+OPEN_H, OPEN_M = 9, 30
 
 
 def _load_json(path: Path) -> dict:
@@ -58,11 +63,40 @@ def _fm_today(root: Path) -> Path:
     return root / "dashboard" / "factor-mine" / "today.json"
 
 
-def resolve_date(date: str = "", *, root: Path | None = None) -> str:
-    if date:
-        return date
-    latest = _load_json(_board_dir(root or ROOT) / "latest.json")
-    return str(latest.get("date") or "") or _today()
+def latest_completed_session(now: datetime | None = None) -> str:
+    """Latest NYSE session that has already opened, else the previous one.
+
+    Before 09:30 ET on a session day the open has not printed, so the
+    previous trading session is the one with a finished day board.
+    Weekends and full-day holidays roll back the same way. At or after
+    09:30 ET on a session day, that day is the session. The calendar is
+    ``skip_if_good`` (weekends + NYSE full-day holidays).
+    """
+    from .skip_if_good import _prev_weekday, _session_date
+
+    if now is None:
+        now = datetime.now(ET)
+    elif now.tzinfo is None:
+        now = now.replace(tzinfo=ET)
+    else:
+        now = now.astimezone(ET)
+    bell = now.replace(hour=OPEN_H, minute=OPEN_M, second=0, microsecond=0)
+    if _session_date(now.date()) and now >= bell:
+        return now.date().isoformat()
+    return _prev_weekday(now.date().isoformat())
+
+
+def resolve_date(date: str = "", *, root: Path | None = None,
+                 now: datetime | None = None) -> str:
+    """Explicit ``date`` wins. Empty uses ``latest_completed_session``.
+
+    ``root`` stays in the signature for callers that pass a fixture.
+    The empty-date choice does not read ``latest.json`` or calendar today.
+    """
+    picked = str(date or "").strip()
+    if picked:
+        return picked
+    return latest_completed_session(now)
 
 
 def load_board(date: str, *, root: Path | None = None) -> dict:
@@ -127,10 +161,11 @@ def tickets_ok(date: str, *, root: Path | None = None) -> tuple[bool, str]:
     return False, "strategy tickets missing or wrong session"
 
 
-def evaluate(date: str = "", *, root: Path | None = None) -> dict:
+def evaluate(date: str = "", *, root: Path | None = None,
+             now: datetime | None = None) -> dict:
     """Return a verdict dict. ``ready`` is the deploy trigger."""
     root = Path(root) if root is not None else ROOT
-    date = resolve_date(date, root=root)
+    date = resolve_date(date, root=root, now=now)
     board = load_board(date, root=root)
     processes = {
         str(p.get("key") or ""): p
@@ -216,8 +251,16 @@ def main() -> None:
     ap.add_argument("--date", default="")
     args = ap.parse_args()
     verdict = evaluate(args.date)
-    print(format_verdict(verdict), flush=True)
-    raise SystemExit(0 if verdict["ready"] else 1)
+    line = format_verdict(verdict)
+    print(line, flush=True)
+    if verdict["ready"]:
+        raise SystemExit(0)
+    print(
+        f"[pages-gate] FAIL: not publishing {verdict.get('date')}. "
+        f"{verdict.get('reason')}",
+        flush=True,
+    )
+    raise SystemExit(1)
 
 
 if __name__ == "__main__":
