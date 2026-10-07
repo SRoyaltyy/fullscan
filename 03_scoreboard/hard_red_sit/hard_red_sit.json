@@ -3355,42 +3355,6 @@
               }
             },
             "tag": "RESEARCH"
-          },
-          {
-            "ticker": "EBS",
-            "side": "long",
-            "open": null,
-            "px": 6.86,
-            "px_src": "session_export+elite_live_skipped",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
           }
         ],
         "tag": "RESEARCH",
