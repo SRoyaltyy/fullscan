@@ -5,7 +5,9 @@ and appends only stock-book sessions after the last printed date. The first
 curve (no file yet) is still one chronological pass. A session is appended
 only when that day's stock book was first committed on main before 09:30 ET.
 Fill rules stay in the pinned engine; this module only chooses which sessions
-to replay and refuses to rewrite a printed row.
+to replay and refuses to rewrite a printed row. Sealed past days are checked
+with ``past_day_lock.commit_open_tail_csv``: the newest day stays open, and
+a sealed buy/sell day that would change fails closed.
 """
 from __future__ import annotations
 
@@ -160,26 +162,6 @@ def _csv_columns(path: Path, fallback: list[str]) -> list[str]:
     cols = [c.strip() for c in header.split(',') if c.strip()]
     return cols or list(fallback)
 
-def _append_csv_rows(path: Path, rows: list[dict], columns: list[str]) -> None:
-    if not rows:
-        return
-    buf = io.StringIO()
-    writer = csv.DictWriter(buf, fieldnames=columns, lineterminator='\n', extrasaction='ignore')
-    for row in rows:
-        writer.writerow({c: '' if row.get(c) is None else row.get(c, '') for c in columns})
-    blob = buf.getvalue().encode('utf-8')
-    if path.is_file() and path.stat().st_size > 0:
-        existing = path.read_bytes()
-        if not existing.endswith(b'\n'):
-            existing += b'\n'
-        path.write_bytes(existing + blob)
-        return
-    header = io.StringIO()
-    head = csv.DictWriter(header, fieldnames=columns, lineterminator='\n')
-    head.writeheader()
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_bytes(header.getvalue().encode('utf-8') + blob)
-
 def _max_date(rows: list[dict]) -> str:
     dates = [str(r.get('date') or '')[:10] for r in rows if r.get('date')]
     return max(dates) if dates else ''
@@ -283,12 +265,37 @@ def _open_tickers(state: dict) -> set[str]:
             names.update((str(t) for t in sleeve.get('pos') or {}))
     return names
 
+def _frame_csv(frame: pd.DataFrame) -> str:
+    buf = io.StringIO()
+    frame.to_csv(buf, index=False)
+    return buf.getvalue()
+
+def _commit_csv(record: str, filename: str, new_text: str, column: str) -> None:
+    from src import past_day_lock as pdl
+    pdl.commit_open_tail_csv(record, engine.PAPER_DIR / filename, new_text, column=column)
+
+def _text_with_appended_rows(path: Path, rows: list[dict], columns: list[str]) -> str:
+    """Full CSV text with ``rows`` appended. Does not touch ``path``."""
+    buf = io.StringIO()
+    writer = csv.DictWriter(buf, fieldnames=columns, lineterminator='\n', extrasaction='ignore')
+    for row in rows:
+        writer.writerow({c: '' if row.get(c) is None else row.get(c, '') for c in columns})
+    blob = buf.getvalue()
+    if path.is_file() and path.stat().st_size > 0:
+        existing = path.read_text(encoding='utf-8')
+        if existing and not existing.endswith('\n'):
+            existing += '\n'
+        return existing + blob
+    header = io.StringIO()
+    head = csv.DictWriter(header, fieldnames=columns, lineterminator='\n')
+    head.writeheader()
+    return header.getvalue() + blob
+
 def _write_fresh(curve_rows, trade_rows, skips) -> None:
-    curve = pd.DataFrame(curve_rows)
-    curve.to_csv(engine.PAPER_DIR / 'equity_curve.csv', index=False)
-    pd.DataFrame(trade_rows).to_csv(engine.PAPER_DIR / 'trades.csv', index=False)
+    _commit_csv('paper_equity', 'equity_curve.csv', _frame_csv(pd.DataFrame(curve_rows)), 'date')
+    _commit_csv('paper_trades', 'trades.csv', _frame_csv(pd.DataFrame(trade_rows)), 'date')
     if skips:
-        pd.DataFrame(skips).to_csv(engine.PAPER_DIR / 'skipped.csv', index=False)
+        _commit_csv('paper_skipped', 'skipped.csv', _frame_csv(pd.DataFrame(skips)), 'date')
 
 def run(date: str | None=None, top_n: int=10, capital: float | None=None) -> None:
     fees = engine.load_fees()
@@ -356,17 +363,18 @@ def run(date: str | None=None, top_n: int=10, capital: float | None=None) -> Non
     skips = prior_skips + new_skips
     if resume:
         locked = curve_path.read_bytes()
-        _append_csv_rows(curve_path, curve_rows, _csv_columns(curve_path, _CURVE_COLS))
+        _commit_csv('paper_equity', 'equity_curve.csv', _text_with_appended_rows(curve_path, curve_rows, _csv_columns(curve_path, _CURVE_COLS)), 'date')
         if not curve_path.read_bytes().startswith(locked):
             raise SystemExit('[paper] append changed a printed curve row')
         if trade_rows:
-            _append_csv_rows(trades_path, trade_rows, _csv_columns(trades_path, list(trade_rows[0].keys())))
+            _commit_csv('paper_trades', 'trades.csv', _text_with_appended_rows(trades_path, trade_rows, _csv_columns(trades_path, list(trade_rows[0].keys()))), 'date')
         if new_skips:
-            _append_csv_rows(engine.PAPER_DIR / 'skipped.csv', new_skips, _csv_columns(engine.PAPER_DIR / 'skipped.csv', list(new_skips[0].keys())))
+            skip_path = engine.PAPER_DIR / 'skipped.csv'
+            _commit_csv('paper_skipped', 'skipped.csv', _text_with_appended_rows(skip_path, new_skips, _csv_columns(skip_path, list(new_skips[0].keys()))), 'date')
     else:
         _write_fresh(curve_rows, trade_rows, skips)
     if trips:
-        pd.DataFrame(trips).to_csv(engine.PAPER_DIR / 'roundtrips.csv', index=False)
+        _commit_csv('paper_roundtrips', 'roundtrips.csv', _frame_csv(pd.DataFrame(trips)), 'sell_date')
     (engine.PAPER_DIR / 'state.json').write_text(json.dumps(st, indent=2, default=str), encoding='utf-8')
     curve = pd.DataFrame(prior_curve + curve_rows)
     for col in ('equity', 'cash', 'invested', 'fees_cum', 'realized_cum'):
