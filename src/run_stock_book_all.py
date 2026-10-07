@@ -32,6 +32,31 @@ def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
 
+def _maybe_write_flatten_card(date: str) -> None:
+    """Write the flatten card unless sleeve_merge_live already owns it.
+
+    After 09:30 ET both this job and sleeve_merge_live would rewrite
+    ``01_daily/<date>_flatten_card.md``. The live card job is the
+    post-open owner. If that file is already on disk, skip.
+    """
+    from .past_day_lock import skip_flatten_card_after_open
+
+    if skip_flatten_card_after_open(date):
+        print(
+            f"[all] skip flatten card after 09:30 ET — sleeve_merge_live owns "
+            f"01_daily/{date}_flatten_card.md",
+            flush=True,
+        )
+        return
+    print("[all] → Sleeve merge live card (today's tickets, no sweep)")
+    _run(
+        [sys.executable, "-m", "src.sleeve_merge", "--card",
+         "--date", date, "--write-card"],
+        check=False, timeout_s=CARD_T,
+    )
+    _land(date, "flatten", "Flatten live card")
+
+
 def _run(cmd: list[str], check: bool = True, timeout_s: int | None = None) -> int:
     print(f"\n>>> {' '.join(cmd)}", flush=True)
     try:
@@ -611,13 +636,7 @@ def run(
             check=False, timeout_s=900,
         )
         _land(date, "paper", "Paper dashboard")
-        print("[all] → Sleeve merge live card (after book; no sweep)")
-        _run(
-            [sys.executable, "-m", "src.sleeve_merge", "--card",
-             "--date", date, "--write-card"],
-            check=False, timeout_s=CARD_T,
-        )
-        _land(date, "flatten", "Flatten live card")
+        _maybe_write_flatten_card(date)
         print("\n[all] FINAL STATUS after run:")
         _print_status(date, _status_for_day(date))
         print(f"[all] book → 01_daily/{date}_stock_book.md")
@@ -661,13 +680,7 @@ def run(
         check=False, timeout_s=1200,
     )
 
-    print("[all] → Sleeve merge live card (today's tickets, no sweep)")
-    _run(
-        [sys.executable, "-m", "src.sleeve_merge", "--card",
-         "--date", date, "--write-card"],
-        check=False, timeout_s=CARD_T,
-    )
-    _land(date, "flatten", "Flatten live card")
+    _maybe_write_flatten_card(date)
     _land(date, "paper", "Paper dashboard")
 
     print("[all] → Sleeve merge (.io × mover dashboard, live=hard-red)")

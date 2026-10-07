@@ -10,15 +10,19 @@ from src.past_day_lock import (
     assert_manifest_prefix,
     assert_ticket,
     card_body,
+    commit_open_tail_csv,
     describe_seeds,
     guard_csv,
     load_manifest,
+    merge_open_tail_csv,
     prepare_flatten_card,
     seal_csv,
     seal_factor_mine,
     seal_flatten_card,
+    seal_open_tail_csv,
     seal_ticket,
     sha256_text,
+    skip_flatten_card_after_open,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -199,19 +203,159 @@ def test_flatten_append_and_edit(tmp: Path) -> None:
     assert card_body(path.read_text(encoding="utf-8")).count("BBB") == 1
 
 
-def test_paper_books_are_not_locked() -> None:
-    src = (ROOT / "src" / "paper_trade.py").read_text(encoding="utf-8")
-    assert "past_day_lock" not in src
-    assert "guard_csv" not in src
-    note = describe_seeds()
-    assert "data/paper/trades.csv" in note
-    assert "not locked" in note
-    # The append lives outside the pinned engine so a later run cannot
-    # rewrite a printed curve row.
+def test_paper_and_sleeve_fills_are_locked() -> None:
+    paper = (ROOT / "src" / "paper_trade.py").read_text(encoding="utf-8")
+    append = (ROOT / "src" / "paper_trade_append.py").read_text(encoding="utf-8")
+    sleeve = (ROOT / "src" / "sleeve_merge.py").read_text(encoding="utf-8")
     book = (ROOT / "src" / "run_stock_book_all.py").read_text(encoding="utf-8")
     pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    live = (ROOT / "src" / "sleeve_merge_live.py").read_text(encoding="utf-8")
+    assert "commit_open_tail_csv" in paper
+    assert "commit_open_tail_csv" in append
+    assert "commit_open_tail_csv" in sleeve
+    assert "prepare_flatten_card" in live
+    assert "seal_flatten_card" in live
+    assert "skip_flatten_card_after_open" in book
+    note = describe_seeds()
+    assert "data/paper/trades.csv" in note
+    assert "data/sleeve_merge/trades.csv" in note
+    assert "not locked" not in note
+    assert "not fingerprinted" in note
     assert "src.paper_trade_append" in book
     assert "src.paper_trade_append" in pre
+
+
+def _lock_csv(record: str, old: str, new: str, column: str, manifest: Path) -> str:
+    merged = merge_open_tail_csv(
+        record, old, new, column=column, manifest=manifest,
+    )
+    seal_open_tail_csv(record, merged, column=column, manifest=manifest)
+    return merged
+
+
+def test_open_tail_csv_going_forward(tmp: Path) -> None:
+    """Watermark days stay unhashed. The newest day rewrites. The prior day seals."""
+    manifest = tmp / "manifest.jsonl"
+    old = "date,ticker\r\n2026-10-01,AAA\r\n2026-10-02,BBB\r\n"
+    rewritten = "date,ticker\r\n2026-10-01,ZZZ\r\n2026-10-02,QQQ\r\n"
+    out = _lock_csv("paper_trades", old, rewritten, "date", manifest)
+    assert "2026-10-01,AAA" in out
+    assert "2026-10-02,QQQ" in out
+    assert "ZZZ" not in out
+    assert load_manifest(manifest) == []
+    assert out.startswith("date,ticker\r\n2026-10-01,AAA\r\n")
+    added = (
+        "date,ticker\r\n2026-10-01,ZZZ\r\n2026-10-02,NOPE\r\n"
+        "2026-10-03,CCC\r\n"
+    )
+    out = _lock_csv("paper_trades", out, added, "date", manifest)
+    assert "2026-10-02,QQQ" in out
+    assert "NOPE" not in out
+    assert "2026-10-03,CCC" in out
+    seed = [row for row in load_manifest(manifest) if row["kind"] == "seed"]
+    assert seed[0]["watermark"] == "2026-10-02"
+    assert [row.get("date") for row in load_manifest(manifest) if row["kind"] == "day"] == []
+    nxt = (
+        "date,ticker\r\n2026-10-01,Z\r\n2026-10-02,Z\r\n"
+        "2026-10-03,CCC\r\n2026-10-04,DDD\r\n"
+    )
+    out = _lock_csv("paper_trades", out, nxt, "date", manifest)
+    days = [row for row in load_manifest(manifest) if row["kind"] == "day"]
+    assert [row["date"] for row in days] == ["2026-10-03"]
+    assert days[0]["sha256"] == sha256_text("2026-10-03,CCC\n")
+    assert "2026-10-01" not in [row["date"] for row in days]
+    assert "2026-10-02" not in [row["date"] for row in days]
+    same = nxt.replace("DDD", "EEE")
+    out = _lock_csv("paper_trades", out, same, "date", manifest)
+    assert "2026-10-04,EEE" in out
+    assert [row["date"] for row in load_manifest(manifest) if row["kind"] == "day"] == ["2026-10-03"]
+    bad = same.replace("2026-10-03,CCC", "2026-10-03,XXX")
+
+    def check() -> None:
+        merge_open_tail_csv("paper_trades", out, bad, column="date", manifest=manifest)
+
+    _expect_fail("paper_trades 2026-10-03", check)
+    path = tmp / "trades.csv"
+    path.write_text(out, encoding="utf-8")
+    commit_open_tail_csv(
+        "paper_trades", path, same, column="date", manifest=manifest,
+    )
+    assert "2026-10-03,CCC" in path.read_text(encoding="utf-8")
+
+
+def test_sleeve_and_roundtrip_open_tail(tmp: Path) -> None:
+    manifest = tmp / "manifest.jsonl"
+    old = (
+        "cash_after,entry_date,exit_date,side,ticker\r\n"
+        "1,2026-10-01,2026-10-02,BUY,AAA\r\n"
+    )
+    nxt = (
+        "cash_after,entry_date,exit_date,side,ticker\r\n"
+        "9,2026-10-01,2026-10-02,BUY,ZZZ\r\n"
+        "2,2026-10-03,2026-10-03,BUY,BBB\r\n"
+    )
+    out = _lock_csv("sleeve_trades", old, nxt, "exit_date", manifest)
+    assert "BUY,AAA" in out
+    assert "ZZZ" not in out
+    assert "BUY,BBB" in out
+    assert [row.get("date") for row in load_manifest(manifest) if row["kind"] == "day"] == []
+    later = (
+        "cash_after,entry_date,exit_date,side,ticker\r\n"
+        "9,2026-10-01,2026-10-02,BUY,ZZZ\r\n"
+        "2,2026-10-03,2026-10-03,BUY,BBB\r\n"
+        "3,2026-10-04,2026-10-04,BUY,CCC\r\n"
+    )
+    out = _lock_csv("sleeve_trades", out, later, "exit_date", manifest)
+    days = [row["date"] for row in load_manifest(manifest) if row["kind"] == "day"]
+    assert days == ["2026-10-03"]
+
+    def smash() -> None:
+        merge_open_tail_csv(
+            "sleeve_trades", out, later.replace("BBB", "QQQ"),
+            column="exit_date", manifest=manifest,
+        )
+
+    _expect_fail("sleeve_trades 2026-10-03", smash)
+
+    trips_old = "status,sell_date,ticker\nclosed,2026-10-02,AAA\nopen,,BBB\n"
+    trips_new = "status,sell_date,ticker\nclosed,2026-10-02,ZZZ\nclosed,2026-10-03,CCC\nopen,,DDD\n"
+    trip_manifest = tmp / "trips.jsonl"
+    trips = _lock_csv("paper_roundtrips", trips_old, trips_new, "sell_date", trip_manifest)
+    assert "closed,2026-10-02,AAA" in trips
+    assert "ZZZ" not in trips
+    assert "open,,DDD" in trips
+    trips_later = (
+        "status,sell_date,ticker\nclosed,2026-10-02,ZZZ\n"
+        "closed,2026-10-03,CCC\nclosed,2026-10-04,EEE\nopen,,FFF\n"
+    )
+    trips = _lock_csv("paper_roundtrips", trips, trips_later, "sell_date", trip_manifest)
+    assert "open,,FFF" in trips
+    assert [row["date"] for row in load_manifest(trip_manifest) if row["kind"] == "day"] == ["2026-10-03"]
+
+    def smash_trip() -> None:
+        merge_open_tail_csv(
+            "paper_roundtrips", trips, trips_later.replace("CCC", "QQQ"),
+            column="sell_date", manifest=trip_manifest,
+        )
+
+    _expect_fail("paper_roundtrips 2026-10-03", smash_trip)
+
+
+def test_flatten_card_owner_after_open(tmp: Path) -> None:
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+
+    et = ZoneInfo("America/New_York")
+    card = tmp / "2026-10-06_flatten_card.md"
+    early = datetime(2026, 10, 6, 9, 29, tzinfo=et)
+    opened = datetime(2026, 10, 6, 9, 30, tzinfo=et)
+    assert skip_flatten_card_after_open("2026-10-06", early, card) is False
+    assert skip_flatten_card_after_open("2026-10-06", opened, card) is False
+    card.write_text("# card\n", encoding="utf-8")
+    assert skip_flatten_card_after_open("2026-10-06", early, card) is False
+    assert skip_flatten_card_after_open("2026-10-06", opened, card) is True
+    later = datetime(2026, 10, 6, 16, 5, tzinfo=et)
+    assert skip_flatten_card_after_open("2026-10-06", later, card) is True
 
 
 def test_csv_append_and_past_edit(tmp: Path) -> None:
@@ -403,7 +547,10 @@ def main() -> None:
         test_watermark_is_not_fingerprinted,
         test_missed_day_is_not_filled,
         test_flatten_append_and_edit,
-        test_paper_books_are_not_locked,
+        test_paper_and_sleeve_fills_are_locked,
+        test_open_tail_csv_going_forward,
+        test_sleeve_and_roundtrip_open_tail,
+        test_flatten_card_owner_after_open,
         test_csv_append_and_past_edit,
         test_morning_chain_replay,
         test_manifest_prefix,

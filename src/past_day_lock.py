@@ -13,20 +13,30 @@ unhashed. A missing day is not filled in.
 Header lines on a Factor Mine scoreboard (totals, fills, realized,
 audit) are not part of the day hash. Day rows and buy/sell lines are.
 
-``data/paper/trades.csv`` and ``data/paper/equity_curve.csv`` are not
-locked. ``paper_trade`` rebuilds both from every stock book on each
-run, and a later run rewrites days already printed. Sealing a closed
-row would still fail the morning chain. ``data/sleeve_merge/trades.csv``
-stays unlocked for the same reason.
+``data/paper/`` (trades, roundtrips, skipped, equity_curve) and
+``data/sleeve_merge/`` (trades, skipped, equity_curve) are locked
+going forward. The watermark is the latest day already in the file
+before the first new day is appended after this code runs. That next
+day is the first day that can be sealed, and only once a later
+session is written. Older rows are not fingerprinted and are not
+rewritten. The newest day stays open so a same-day rerun may still
+replace it. A sealed day that would change raises
+``PastDayLockError``. Sleeve-merge trades are closed round-trips
+keyed by ``exit_date``. Paper round-trips key closed rows by
+``sell_date``; open lots stay writable.
 
 The flatten card for the newest day stays open: same-day reruns rewrite
 the equity lines. That day is sealed when a later session is written.
-Strategy tickets stay writable until the 09:30 ET / paper-send lock;
-the 08:07 and 09:07 passes may both change the file.
+After 09:30 ET, sleeve_merge_live owns post-open card updates so
+Stock Book ALL does not stomp a card already on disk. Strategy
+tickets stay writable until the 09:30 ET / paper-send lock; the
+08:07 and 09:07 passes may both change the file.
 """
 from __future__ import annotations
 
+import csv
 import hashlib
+import io
 import json
 import re
 import subprocess
@@ -38,7 +48,20 @@ FACTOR_MINE_DIR = ROOT / "03_scoreboard" / "factor_mine"
 FLATTEN_DIR = ROOT / "01_daily"
 TICKET_DIR = ROOT / "data" / "day_board"
 PAPER_DIR = ROOT / "data" / "paper"
+SLEEVE_DIR = ROOT / "data" / "sleeve_merge"
 WEBULL_DIR = ROOT / "data" / "webull_sim"
+
+# record -> (directory, filename, date column). Open round-trip rows
+# have an empty sell_date and are not part of a sealed day.
+_CSV_RECORDS: dict[str, tuple[Path, str, str]] = {
+    "paper_trades": (PAPER_DIR, "trades.csv", "date"),
+    "paper_equity": (PAPER_DIR, "equity_curve.csv", "date"),
+    "paper_skipped": (PAPER_DIR, "skipped.csv", "date"),
+    "paper_roundtrips": (PAPER_DIR, "roundtrips.csv", "sell_date"),
+    "sleeve_trades": (SLEEVE_DIR, "trades.csv", "exit_date"),
+    "sleeve_equity": (SLEEVE_DIR, "equity_curve.csv", "date"),
+    "sleeve_skipped": (SLEEVE_DIR, "skipped.csv", "date"),
+}
 
 DAY_LINE = re.compile(r"^\| (\d{4}-\d{2}-\d{2})\b")
 CARD_FILE = re.compile(r"^(\d{4}-\d{2}-\d{2})_flatten_card\.md$")
@@ -463,6 +486,214 @@ def seal_csv(record: str, old_text: str, new_text: str, *,
         rows = _seal(rows, record, date, digest, manifest, watermark=wm)
 
 
+def _csv_newline(text: str) -> str:
+    return "\r\n" if "\r\n" in text else "\n"
+
+
+def _split_csv(text: str, column: str) -> tuple[str, dict[str, list[str]], list[str]]:
+    """Header, dated body lines, and rows with no session date.
+
+    Lines keep their original text without the newline. An empty
+    ``sell_date`` (an open paper lot) lands in the undated list.
+    """
+    if text.strip() == "":
+        return "", {}, []
+    lines = text.splitlines()
+    header = lines[0]
+    cols = next(csv.reader([header]))
+    if column not in cols:
+        raise PastDayLockError(
+            f"past-day lock: csv has no {column} column"
+        )
+    idx = cols.index(column)
+    days: dict[str, list[str]] = {}
+    undated: list[str] = []
+    for line in lines[1:]:
+        if line == "":
+            continue
+        cells = next(csv.reader([line]))
+        raw = cells[idx] if idx < len(cells) else ""
+        date = raw[:10]
+        if ISO_DAY.fullmatch(date or ""):
+            days.setdefault(date, []).append(line)
+        else:
+            undated.append(line)
+    return header, days, undated
+
+
+def _headers_match(left: str, right: str) -> bool:
+    if left == right:
+        return True
+    return next(csv.reader([left])) == next(csv.reader([right]))
+
+
+def _reserialize_line(line: str, src_header: str, dst_header: str) -> str:
+    src_cols = next(csv.reader([src_header]))
+    dst_cols = next(csv.reader([dst_header]))
+    cells = next(csv.reader([line]))
+    row = {src_cols[i]: cells[i] if i < len(cells) else "" for i in range(len(src_cols))}
+    buf = io.StringIO()
+    writer = csv.DictWriter(buf, fieldnames=dst_cols, lineterminator="\n", extrasaction="ignore")
+    writer.writerow({col: row.get(col, "") for col in dst_cols})
+    return buf.getvalue().rstrip("\n")
+
+
+def _project_lines(lines: list[str] | None, *, from_new: bool,
+                   new_header: str, old_header: str) -> list[str]:
+    if not lines:
+        return []
+    if not from_new or not old_header or _headers_match(old_header, new_header):
+        return list(lines)
+    return [_reserialize_line(line, new_header, old_header) for line in lines]
+
+
+def _join_csv(header: str, order: list[str], days: dict[str, list[str]],
+              undated: list[str], newline: str) -> str:
+    parts = [header]
+    for date in order:
+        parts.extend(days.get(date) or [])
+    parts.extend(undated)
+    return newline.join(parts) + newline
+
+
+def merge_open_tail_csv(record: str, old_text: str, new_text: str, *,
+                        column: str, manifest: Path | None = None) -> str:
+    """Text to write. Watermark days stay byte-for-byte. Newest day stays open.
+
+    A sealed day, or any post-watermark day that is no longer the newest,
+    must match or this raises ``PastDayLockError``. A day that is not
+    already on disk and sits before a later on-disk day is not inserted.
+    The first write of an empty file is stored as-is and is not hashed.
+    """
+    if not old_text.strip():
+        if new_text and not new_text.endswith(("\n", "\r\n")):
+            return new_text + "\n"
+        return new_text
+    old_header, old_days, _old_undated = _split_csv(old_text, column)
+    if new_text.strip() == "":
+        return old_text
+    new_header, new_days, new_undated = _split_csv(new_text, column)
+    if not new_days and not new_undated:
+        return old_text
+    rows = load_manifest(manifest)
+    seed = _seed_row(rows, record)
+    pinned = seed is not None
+    wm = str(seed.get("watermark") or "") if seed is not None else (
+        max(old_days) if old_days else ""
+    )
+    sealed = {str(row.get("date")): row for row in _day_rows(rows, record)}
+    all_dates = sorted(set(old_days) | set(new_days))
+    newest = all_dates[-1] if all_dates else ""
+    merged: dict[str, list[str]] = {}
+    for date in all_dates:
+        old_lines = old_days.get(date)
+        new_lines = new_days.get(date)
+        if wm and date < wm:
+            if old_lines is None:
+                continue
+            merged[date] = list(old_lines)
+            continue
+        if wm and date == wm:
+            if old_lines is None:
+                continue
+            if pinned or date != newest:
+                merged[date] = list(old_lines)
+            else:
+                chosen = new_lines if new_lines is not None else old_lines
+                merged[date] = _project_lines(
+                    chosen, from_new=new_lines is not None,
+                    new_header=new_header, old_header=old_header,
+                )
+            continue
+        if date in sealed:
+            if new_lines != old_lines:
+                prev = str(sealed[date].get("sha256") or "")
+                digest = sha256_text("\n".join(new_lines or []) + "\n")
+                raise PastDayLockError(
+                    f"past-day lock: {record} {date} changed "
+                    f"(sha256 {prev} -> {digest}). Not rescoring a sealed day."
+                )
+            merged[date] = list(old_lines or [])
+            continue
+        if date != newest:
+            later_on_disk = [item for item in old_days if item > date]
+            if old_lines is None and later_on_disk:
+                raise PastDayLockError(
+                    f"past-day lock: {record} {date} is before {max(later_on_disk)}. "
+                    f"A missed day stays missing."
+                )
+            if old_lines is not None and new_lines != old_lines:
+                raise PastDayLockError(
+                    f"past-day lock: {record} {date} was already written "
+                    f"and changed. Not rescoring a sealed day."
+                )
+            chosen = new_lines if new_lines is not None else old_lines
+            merged[date] = _project_lines(
+                chosen, from_new=new_lines is not None and old_lines is None,
+                new_header=new_header, old_header=old_header,
+            )
+            continue
+        chosen = new_lines if new_lines is not None else old_lines
+        merged[date] = _project_lines(
+            chosen, from_new=new_lines is not None,
+            new_header=new_header, old_header=old_header,
+        )
+    if not pinned and old_days and any(date > wm for date in merged):
+        _ensure_seed(rows, record, wm, manifest)
+    order: list[str] = []
+    for date in old_days:
+        if date in merged and date not in order:
+            order.append(date)
+    for date in sorted(merged):
+        if date not in order:
+            order.append(date)
+    undated = _project_lines(
+        new_undated, from_new=True, new_header=new_header, old_header=old_header,
+    )
+    return _join_csv(old_header, order, merged, undated, _csv_newline(old_text))
+
+
+def seal_open_tail_csv(record: str, text: str, *, column: str,
+                       manifest: Path | None = None) -> None:
+    """Seal every post-watermark day except the newest. The open day stays unhashed."""
+    if text.strip() == "":
+        return
+    rows = load_manifest(manifest)
+    if _seed_row(rows, record) is None:
+        return
+    wm = str(_seed_row(rows, record).get("watermark") or "")
+    _header, days, _undated = _split_csv(text, column)
+    if not days:
+        return
+    newest = max(days)
+    for date in sorted(days):
+        if wm and date <= wm:
+            continue
+        if date == newest:
+            continue
+        digest = sha256_text("\n".join(days[date]) + "\n")
+        rows = _seal(rows, record, date, digest, manifest, watermark=wm)
+
+
+def commit_open_tail_csv(record: str, path: Path, new_text: str, *,
+                         column: str, manifest: Path | None = None) -> None:
+    """Merge, write, then seal. Paths outside the repo stay unlocked for tests."""
+    path = Path(path)
+    if manifest is None and not in_repo(path):
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if new_text and not new_text.endswith(("\n", "\r\n")):
+            new_text += "\n"
+        path.write_text(new_text, encoding="utf-8")
+        return
+    old = path.read_text(encoding="utf-8") if path.is_file() else ""
+    merged = merge_open_tail_csv(
+        record, old, new_text, column=column, manifest=manifest,
+    )
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(merged, encoding="utf-8")
+    seal_open_tail_csv(record, merged, column=column, manifest=manifest)
+
+
 def assert_factor_mine(name: str, old_text: str, new_text: str, *,
                        watermark: str, rows: list[dict]) -> None:
     """Fail when a sealed day row or buy/sell line changes.
@@ -649,12 +880,14 @@ def _digest_for_row(row: dict) -> str | None:
         if not lines:
             return None
         return sha256_text("\n".join(lines) + "\n")
-    if record in ("paper_trades", "paper_equity"):
-        filename = "trades.csv" if record == "paper_trades" else "equity_curve.csv"
-        path = PAPER_DIR / filename
+    spec = _CSV_RECORDS.get(record)
+    if spec is not None:
+        directory, filename, column = spec
+        path = directory / filename
         if not path.is_file():
             return None
-        lines = _csv_days(path.read_text(encoding="utf-8")).get(date) or []
+        _header, days, _undated = _split_csv(path.read_text(encoding="utf-8"), column)
+        lines = days.get(date) or []
         if not lines:
             return None
         return sha256_text("\n".join(lines) + "\n")
@@ -717,6 +950,39 @@ def check_against(rev: str, *, manifest: Path | None = None) -> None:
     check_manifest(path=dest)
 
 
+def skip_flatten_card_after_open(date: str, now=None,
+                                 card_path: Path | None = None) -> bool:
+    """True when Stock Book ALL must not rewrite today's flatten card.
+
+    After 09:30 ET, sleeve_merge_live owns post-open updates to
+    ``01_daily/<date>_flatten_card.md``. Stock Book ALL writes that
+    same file. Once the open has passed and the card is already on
+    disk, the book job skips so the two jobs do not replace each
+    other's tickets. Before 09:30 the book job may still write. A
+    missing card after the open is still written once. Sealed buy/sell
+    lines stay under prepare/seal; this does not invent fills.
+    """
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+
+    et = ZoneInfo("America/New_York")
+    clock = now or datetime.now(et)
+    if clock.tzinfo is None:
+        clock = clock.replace(tzinfo=et)
+    else:
+        clock = clock.astimezone(et)
+    day = str(date)[:10]
+    try:
+        year, month, day_n = (int(part) for part in day.split("-"))
+    except ValueError:
+        return False
+    open_at = datetime(year, month, day_n, 9, 30, tzinfo=et)
+    if clock < open_at:
+        return False
+    path = card_path or (FLATTEN_DIR / f"{day}_flatten_card.md")
+    return path.is_file()
+
+
 def describe_seeds() -> str:
     """Plain-English note. No historical day is hashed by this file."""
     return (
@@ -728,9 +994,11 @@ def describe_seeds() -> str:
         "No sha256 is written for 14-24 Sep or any other day already in "
         "the record. The newest flatten card stays open until the next "
         "session. Strategy tickets stay open until 09:30 ET or the paper "
-        "send journal. data/paper/trades.csv, data/paper/equity_curve.csv, "
-        "and data/sleeve_merge/trades.csv are not locked: each run rebuilds "
-        "them and rewrites earlier rows. "
+        "send journal. data/paper/trades.csv, roundtrips, skipped, "
+        "equity_curve, and data/sleeve_merge/trades.csv, skipped, and "
+        "equity_curve are locked the same way: the newest day stays open, "
+        "days on or before the watermark are not fingerprinted and are "
+        "not rewritten, and a sealed day that would change fails closed. "
         "Webull sim books fingerprint from 2026-10-06. Days before that "
         "are built after the fact and are not fingerprinted."
     )

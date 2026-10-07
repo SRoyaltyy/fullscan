@@ -1820,6 +1820,25 @@ def run_sweep(payload: dict, books: list[tuple[str, Path]],
 
 
 # ----------------------------------------------------------- report --
+def _commit_sleeve_csv(record: str, filename: str, rows: list[dict],
+                       column: str, fields: list[str]) -> None:
+    """Write one sleeve-merge CSV through the going-forward past-day lock.
+
+    Closed trades are keyed by exit_date. Days on or before the watermark
+    stay as stored. The newest day stays open until a later session seals
+    it. A sealed day that would change fails closed.
+    """
+    import io
+
+    from . import past_day_lock as pdl
+
+    buf = io.StringIO(newline="")
+    writer = csv.DictWriter(buf, fieldnames=fields, extrasaction="ignore")
+    writer.writeheader()
+    writer.writerows(rows)
+    pdl.commit_open_tail_csv(record, OUT_DIR / filename, buf.getvalue(), column=column)
+
+
 def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float,
                   starts: dict | None = None) -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -1869,11 +1888,8 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float,
     }, indent=2), encoding="utf-8")
 
     if sim["curve"]:
-        with (OUT_DIR / "equity_curve.csv").open("w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=CURVE_CSV_FIELDS,
-                               extrasaction="ignore")
-            w.writeheader()
-            w.writerows(sim["curve"])
+        _commit_sleeve_csv("sleeve_equity", "equity_curve.csv", sim["curve"],
+                           "date", CURVE_CSV_FIELDS)
         (OUT_DIR / "daily_marks.json").write_text(
             json.dumps([
                 {k: r.get(k) for k in (
@@ -1886,16 +1902,12 @@ def write_outputs(winner: dict, sweep_rows: list[dict], io_top: float,
             encoding="utf-8")
     if sim["trades"]:
         keys = sorted({k for t in sim["trades"] for k in t})
-        with (OUT_DIR / "trades.csv").open("w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=keys)
-            w.writeheader()
-            w.writerows(sim["trades"])
+        _commit_sleeve_csv("sleeve_trades", "trades.csv", sim["trades"],
+                           "exit_date", keys)
     if sim["skipped"]:
         keys = sorted({k for t in sim["skipped"] for k in t})
-        with (OUT_DIR / "skipped.csv").open("w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=keys)
-            w.writeheader()
-            w.writerows(sim["skipped"])
+        _commit_sleeve_csv("sleeve_skipped", "skipped.csv", sim["skipped"],
+                           "date", keys)
     if starts:
         (OUT_DIR / "start_dates.json").write_text(
             json.dumps(starts, indent=2), encoding="utf-8")
