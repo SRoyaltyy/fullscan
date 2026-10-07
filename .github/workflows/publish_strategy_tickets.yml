@@ -9,6 +9,11 @@ name: Publish strategy tickets
 # only write tickets. The sealed h1 paper send is webull_paper.yml before
 # 09:30 ET, with the ECS backstop as the other sender. A missed send
 # stays missed.
+#
+# Push paths must cover every file the decision fingerprint hashes
+# (src/decision_ready.py): stock-book inputs + factor-mine panel +
+# excel suggestions + the sleeve-merge flatten card. A change in any of
+# them wakes the gate so "inputs unchanged" stays meaningful.
 on:
   workflow_dispatch:
     inputs:
@@ -18,7 +23,7 @@ on:
         default: ""
   push:
     branches: [main]
-    paths: ['01_daily/**', 'data/join/**', 'data/peers/**', 'data/ab_checklist/**', 'data/factor_mine/panel.json']
+    paths: ['01_daily/**', 'data/join/**', 'data/peers/**', 'data/ab_checklist/**', 'data/factor_mine/panel.json', 'excel_bot/suggestions/suggestions.csv', 'data/sleeve_merge/today.json']
   workflow_run:
     workflows:
       - "Stock Book ALL (one-shot)"
