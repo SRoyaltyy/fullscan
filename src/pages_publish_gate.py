@@ -161,11 +161,45 @@ def tickets_ok(date: str, *, root: Path | None = None) -> tuple[bool, str]:
     return False, "strategy tickets missing or wrong session"
 
 
+def preopen_today(now: datetime | None = None) -> str:
+    """Today's ET date if it is a session day before 09:30 ET, else ""."""
+    from .skip_if_good import _session_date
+
+    if now is None:
+        now = datetime.now(ET)
+    elif now.tzinfo is None:
+        now = now.replace(tzinfo=ET)
+    else:
+        now = now.astimezone(ET)
+    bell = now.replace(hour=OPEN_H, minute=OPEN_M, second=0, microsecond=0)
+    if _session_date(now.date()) and now < bell:
+        return now.date().isoformat()
+    return ""
+
+
 def evaluate(date: str = "", *, root: Path | None = None,
              now: datetime | None = None) -> dict:
-    """Return a verdict dict. ``ready`` is the deploy trigger."""
+    """Return a verdict dict. ``ready`` is the deploy trigger.
+
+    Empty ``date`` before 09:30 ET on a session day: if today's own day
+    board, factor-mine today.json and tickets are already rolled to
+    today and pass the gate, publish today (the morning pipeline has
+    moved on, so the previous session's files no longer exist at the
+    top level). Otherwise fall back to the previous session (#504).
+    """
     root = Path(root) if root is not None else ROOT
+    if not str(date or "").strip():
+        today = preopen_today(now)
+        if today and (_board_dir(root) / f"{today}.json").is_file():
+            v = _evaluate_date(today, root=root)
+            if v["ready"]:
+                v["reason"] = "pre-open: today's session ready; " + v["reason"]
+                return v
     date = resolve_date(date, root=root, now=now)
+    return _evaluate_date(date, root=root)
+
+
+def _evaluate_date(date: str, *, root: Path) -> dict:
     board = load_board(date, root=root)
     processes = {
         str(p.get("key") or ""): p

@@ -328,6 +328,40 @@ def test_preopen_2026_10_07_resolves_to_2026_10_06() -> None:
         assert blocked["ready"] is False
 
 
+def test_preopen_uses_today_when_today_files_ready() -> None:
+    """Before the bell, if today's board + today.json + tickets have rolled
+    to today, publish today. If only the board rolled, fall back (#504)."""
+    preopen = datetime(2026, 10, 7, 8, 40, tzinfo=ET)
+    procs = [
+        _proc("stock_book", [_file("book_json", "required", "OK")]),
+        _proc("publish", [_file("dash_html", "required", "OK")]),
+    ]
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        _board(root, "2026-10-06", procs)
+        _board(root, "2026-10-07", procs)
+        _fm_and_tickets(root, "2026-10-07")
+        v = gate.evaluate("", root=root, now=preopen)
+        assert v["date"] == "2026-10-07" and v["ready"] is True, v
+        assert v["reason"].startswith("pre-open: today")
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        _board(root, "2026-10-06", procs)
+        _board(root, "2026-10-07", procs)
+        _fm_and_tickets(root, "2026-10-06")
+        v = gate.evaluate("", root=root, now=preopen)
+        assert v["date"] == "2026-10-06" and v["ready"] is True, v
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        _board(root, "2026-10-06", procs)
+        _fm_and_tickets(root, "2026-10-07")
+        v = gate.evaluate("", root=root, now=preopen)
+        assert v["date"] == "2026-10-06" and v["ready"] is False, v
+    # Weekend never picks "today".
+    assert gate.preopen_today(datetime(2026, 10, 10, 8, 0, tzinfo=ET)) == ""
+    assert gate.preopen_today(datetime(2026, 10, 7, 9, 30, tzinfo=ET)) == ""
+
+
 def test_weekend_resolves_to_friday() -> None:
     """Saturday, Sunday, and Monday before the open stay on Friday."""
     assert gate.latest_completed_session(
@@ -489,6 +523,7 @@ def main() -> None:
         test_paper_book_page_is_on_the_pages_deploy,
         test_publish_restores_h1_and_holdup_aliases,
         test_preopen_2026_10_07_resolves_to_2026_10_06,
+        test_preopen_uses_today_when_today_files_ready,
         test_weekend_resolves_to_friday,
         test_gate_block_fails_the_workflow,
         test_workflows_wire_the_gate,
