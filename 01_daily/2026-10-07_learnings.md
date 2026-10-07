@@ -1,6 +1,6 @@
 # Learnings report — 2026-10-07
 
-Generated: **2026-10-07T16:32:46.669022-04:00** by `src/learn_cycle.py`.
+Generated: **2026-10-07T16:46:15.546675-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -15,10 +15,10 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Graded runs mined | 180 |
 | Hypotheses written | 181 (wins=79, losses=102) |
 | News hypotheses | 1 |
-| Lessons promoted to active | 1 |
+| Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
 | Active lesson files now | 208 |
-| Engine policy version | 59 |
+| Engine policy version | 60 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -496,7 +496,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 ## 4. Promoted standing rules (this cycle)
 
-- `a-scheduled-us-cash-session-where-the-run-packet-already-con.md`
+_No new promotions this cycle (candidates incomplete, not yet recurring, or already active)._
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 
