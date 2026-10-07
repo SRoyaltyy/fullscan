@@ -18,6 +18,7 @@ on:
       - "Publish strategy tickets"
       - "Open 09:30 pack"
       - "Factor strategy mine"
+      - "Factor Mine pre-open sleeves"
     types: [completed]
   push:
     branches: [main]

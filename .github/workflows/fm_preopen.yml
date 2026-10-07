@@ -1,0 +1,129 @@
+name: Factor Mine pre-open sleeves
+
+# union_hot_n4_h1_preopen / union_hot_n4_holdup_preopen (src/factor_mine_preopen.py).
+# Start: $10k at the 2026-10-08 open. No backfill, no day before 10-08.
+#
+# seal: morning, BEFORE 09:30 ET. Reads tickets / candidates / predict md /
+#   weather / prior state at their last commit before 09:30 ET on the
+#   session and writes data/factor_mine/preopen/seals/<D>.json once. The
+#   code refuses at or after 09:30 ET; this job also stops at 09:25 ET so
+#   the push lands before the open. A seal committed at or after 09:30 ET
+#   is treated as a sit by the book. The window is 09:00-09:25 ET so the
+#   morning tickets (about 05:40 ET) are already on main; a seal is write-once.
+# book: after the close (and after "Factor strategy mine"). Steps each
+#   closed session from 10-08 with no state yet, in order, writes
+#   data/factor_mine/state/<sleeve>/<D>.json once and appends the day to
+#   03_scoreboard/factor_mine/<sleeve>.md under the past-day lock, then
+#   restamps Pages (deploy-dashboard.yml).
+
+on:
+  schedule:
+    - cron: "2 13 * * 1-5"    # 09:02 EDT seal
+    - cron: "15 13 * * 1-5"   # 09:15 EDT seal fallback
+    - cron: "40 21 * * 1-5"   # 17:40 EDT book
+  workflow_run:
+    workflows:
+      - "Pre-Open ALL (predictive one-shot)"
+      - "Factor strategy mine"
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      step:
+        description: "seal or book"
+        type: choice
+        options: [seal, book]
+        default: book
+      date:
+        description: "Session YYYY-MM-DD (seal: today ET; book: last closed)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: fm-preopen
+  cancel-in-progress: false
+
+jobs:
+  run:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Pick the step
+        id: pick
+        env:
+          EV: ${{ github.event_name }}
+          SCHED: ${{ github.event.schedule }}
+          WF: ${{ github.event.workflow_run.name }}
+          IN_STEP: ${{ github.event.inputs.step }}
+        run: |
+          set -euo pipefail
+          step=book
+          if [ "$EV" = "workflow_dispatch" ]; then step="$IN_STEP"
+          elif [ "$EV" = "schedule" ] && { [ "$SCHED" = "2 13 * * 1-5" ] || [ "$SCHED" = "15 13 * * 1-5" ]; }; then step=seal
+          elif [ "$EV" = "workflow_run" ] && [ "$WF" = "Pre-Open ALL (predictive one-shot)" ]; then step=seal
+          fi
+          hhmm=$((10#$(TZ=America/New_York date +%H%M)))
+          go=true
+          if [ "$step" = "seal" ] && { [ "$hhmm" -ge 925 ] || [ "$hhmm" -lt 900 ]; }; then
+            echo "seal window is 09:00-09:25 ET (after the morning tickets land); now $(TZ=America/New_York date +%H:%M) ET, nothing sealed"
+            go=false
+          fi
+          echo "step=$step" >> "$GITHUB_OUTPUT"
+          echo "go=$go" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        if: steps.pick.outputs.go == 'true'
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        if: steps.pick.outputs.go == 'true'
+        with:
+          python-version: "3.12"
+      - name: Install
+        if: steps.pick.outputs.go == 'true'
+        run: pip install numpy pandas pyarrow requests yfinance
+      - name: Pins and past-day lock
+        if: steps.pick.outputs.go == 'true'
+        run: |
+          python3 -m src.test_v4_engine_pins
+          python3 -m src.past_day_lock --check
+      - name: Seal (before 09:30 ET)
+        if: steps.pick.outputs.go == 'true' && steps.pick.outputs.step == 'seal'
+        env:
+          D: ${{ github.event.inputs.date }}
+        run: |
+          set -euo pipefail
+          python3 -m src.factor_mine_preopen seal ${D:+--date "$D"}
+          hhmm=$((10#$(TZ=America/New_York date +%H%M)))
+          if [ "$hhmm" -ge 929 ]; then
+            echo "09:29 ET passed before the push; not landing a seal at the open"
+            exit 0
+          fi
+          bash scripts/safe_git_push.sh "auto: factor mine pre-open seal $(TZ=America/New_York date +%F)" \
+            data/factor_mine/preopen/seals/
+      - name: Book (after the close)
+        if: steps.pick.outputs.go == 'true' && steps.pick.outputs.step == 'book'
+        env:
+          D: ${{ github.event.inputs.date }}
+        run: |
+          set -euo pipefail
+          python3 -m src.factor_mine_preopen book ${D:+--date "$D"}
+          python3 -m src.past_day_lock --check
+          bash scripts/safe_git_push.sh "auto: factor mine pre-open sleeves book" \
+            data/factor_mine/state/union_hot_n4_h1_preopen/ \
+            data/factor_mine/state/union_hot_n4_holdup_preopen/ \
+            03_scoreboard/factor_mine/union_hot_n4_h1_preopen.md \
+            03_scoreboard/factor_mine/union_hot_n4_holdup_preopen.md \
+            data/factor_mine/preopen/summary.json \
+            dashboard/factor-mine/preopen.json \
+            data/past_day_lock/
+      - name: Restamp GitHub Pages
+        if: steps.pick.outputs.go == 'true' && steps.pick.outputs.step == 'book'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-dashboard.yml --ref main
