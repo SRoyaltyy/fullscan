@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-07",
-    "generated_at": "2026-10-07T13:38:55.894259-04:00",
+    "generated_at": "2026-10-07T15:25:32.843542-04:00",
     "general_bias": -0.6018,
     "sector_bias": {},
     "accuracy_gates": {
@@ -293,7 +293,7 @@
     "pile_used": false,
     "green_min": 8,
     "ranker": "decision_lattice",
-    "as_of": true,
+    "as_of": false,
     "general_direction": "down",
     "market_decision": {
       "date": "2026-10-07",
