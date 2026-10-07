@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T06:27:09.232859-04:00",
+  "generated_at": "2026-10-07T10:06:10.074560-04:00",
   "clock_use": "session_open",
   "clock_legal_for": "2026-10-07",
   "session_open": "2026-10-07",
@@ -8,31 +8,31 @@
   "n": 351,
   "n_ok": 350,
   "quote": {
-    "src": "session_export",
-    "at": "2026-10-07T06:27:09.235854-04:00",
-    "after_open": false,
+    "src": "session_export+elite_live_skipped",
+    "at": "2026-10-07T10:06:10.078750-04:00",
+    "after_open": true,
     "n": 11668,
-    "error": null,
+    "error": "elite_live_skipped",
     "clock_rule": "px is Finviz Elite Price from a fresh post-09:30 Overview export when live is allowed. Theme Radar close dump and yesterday Price are never live."
   },
   "decision_readiness": {
     "date": "2026-10-07",
     "ready": true,
-    "fingerprint": "2c359b0d08c03f9b9112ff56815c05002f194a73531c49bf4b947687586f75e7",
+    "fingerprint": "8189e5071dd68721f215c18caaeb9606cc9ad1c80414085c4d42bd27fe09e1c8",
     "inputs": {
       "01_daily/general/2026-10-07_predict.md": "7d33f852fa5222b2e754cfd660fbf2b57ae67a350e0e6f5409387f6cead11d67",
       "01_daily/sectors/2026-10-07/_board.json": "5c1ab2051472fafecc3048588809bbdc31c07d0b550dbbda7162a22bdc789c82",
       "01_daily/news/2026-10-07_actions.json": "0a193c596c47051cdc26c4aa277bdd7425e252e085a93c7cc23589a50deaeeb4",
       "01_daily/news/2026-10-07_finviz_digest.json": "d44407b735a6a4da575f8a126574962fa4341c533123b7ae4a1ddb05c03eac2d",
       "01_daily/news/2026-10-07_judge.md": "288cadea73fcb8e885c43060ee226d9840071f0f5aef5e2b8b7f309e4e4f8bfe",
-      "01_daily/weather/2026-10-07_weather.json": "0fe2a859669085e127194503ae375718185976a12c94799b0caff48ba5131346",
+      "01_daily/weather/2026-10-07_weather.json": "0bb221ade48384410d74af0b00f70c7fe2ec7d2612e7e995e958d06f2f354cdb",
       "data/ab_checklist/2026-10-07_ab_checklist_enriched.csv": "a131892eb615671172b5cabcc436602b5239fbfd8ad4394f5ef1457f4e1be12c",
       "data/join/2026-10-07_ranked.csv": "7c89958e519dbc76b5f2ab65e8e9ffd1fecbc9f068d2187b7ba0c4d027aefb21",
       "data/peers/2026-10-07_peer_rs.csv": "ddfb7334677cd9faeca962d70765b32d2761a81b9eb437bd02384acd0fa85445",
       "data/factor_mine/panel.json": "24116efdd8ee6338804928ded9ad36789b7a1bbb5229d176647cf909a23fb44d"
     },
     "blockers": [],
-    "completed_at": "2026-10-07T06:27:11.459396-04:00"
+    "completed_at": "2026-10-07T10:06:12.416691-04:00"
   },
   "scan": {
     "methodology": "oppset_union+clock_b",
@@ -52,16 +52,16 @@
       "side": "long",
       "predict": "UP",
       "px": 70.83,
-      "px_src": "session_export",
-      "px_asof": "2026-10-07T06:27:09.235854-04:00"
+      "px_src": "session_export+elite_live_skipped",
+      "px_asof": "2026-10-07T10:06:10.078750-04:00"
     },
     {
       "ticker": "SIRI",
       "side": "long",
       "predict": "UP",
       "px": 25.94,
-      "px_src": "session_export",
-      "px_asof": "2026-10-07T06:27:09.235854-04:00"
+      "px_src": "session_export+elite_live_skipped",
+      "px_asof": "2026-10-07T10:06:10.078750-04:00"
     }
   ],
   "sell_1d": [
@@ -70,64 +70,64 @@
       "side": "short",
       "predict": "DOWN",
       "px": 2.25,
-      "px_src": "session_export",
-      "px_asof": "2026-10-07T06:27:09.235854-04:00"
+      "px_src": "session_export+elite_live_skipped",
+      "px_asof": "2026-10-07T10:06:10.078750-04:00"
     },
     {
       "ticker": "OKLO",
       "side": "short",
       "predict": "DOWN",
       "px": 37.26,
-      "px_src": "session_export",
-      "px_asof": "2026-10-07T06:27:09.235854-04:00"
+      "px_src": "session_export+elite_live_skipped",
+      "px_asof": "2026-10-07T10:06:10.078750-04:00"
     },
     {
       "ticker": "FCEL",
       "side": "short",
       "predict": "DOWN",
       "px": 16.16,
-      "px_src": "session_export",
-      "px_asof": "2026-10-07T06:27:09.235854-04:00"
+      "px_src": "session_export+elite_live_skipped",
+      "px_asof": "2026-10-07T10:06:10.078750-04:00"
     },
     {
       "ticker": "EOSE",
       "side": "short",
       "predict": "DOWN",
       "px": 3.1,
-      "px_src": "session_export",
-      "px_asof": "2026-10-07T06:27:09.235854-04:00"
+      "px_src": "session_export+elite_live_skipped",
+      "px_asof": "2026-10-07T10:06:10.078750-04:00"
     },
     {
       "ticker": "ENVX",
       "side": "short",
       "predict": "DOWN",
       "px": 2.56,
-      "px_src": "session_export",
-      "px_asof": "2026-10-07T06:27:09.235854-04:00"
+      "px_src": "session_export+elite_live_skipped",
+      "px_asof": "2026-10-07T10:06:10.078750-04:00"
     },
     {
       "ticker": "INDI",
       "side": "short",
       "predict": "DOWN",
       "px": 2.88,
-      "px_src": "session_export",
-      "px_asof": "2026-10-07T06:27:09.235854-04:00"
+      "px_src": "session_export+elite_live_skipped",
+      "px_asof": "2026-10-07T10:06:10.078750-04:00"
     },
     {
       "ticker": "TE",
       "side": "short",
       "predict": "DOWN",
       "px": 3.62,
-      "px_src": "session_export",
-      "px_asof": "2026-10-07T06:27:09.235854-04:00"
+      "px_src": "session_export+elite_live_skipped",
+      "px_asof": "2026-10-07T10:06:10.078750-04:00"
     },
     {
       "ticker": "SKYX",
       "side": "short",
       "predict": "DOWN",
       "px": 1.17,
-      "px_src": "session_export",
-      "px_asof": "2026-10-07T06:27:09.235854-04:00"
+      "px_src": "session_export+elite_live_skipped",
+      "px_asof": "2026-10-07T10:06:10.078750-04:00"
     }
   ],
   "strategies": {
@@ -138,16 +138,16 @@
           "side": "long",
           "predict": "UP",
           "px": 70.83,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "SIRI",
           "side": "long",
           "predict": "UP",
           "px": 25.94,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sell": [
@@ -156,64 +156,64 @@
           "side": "short",
           "predict": "DOWN",
           "px": 2.25,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "OKLO",
           "side": "short",
           "predict": "DOWN",
           "px": 37.26,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "FCEL",
           "side": "short",
           "predict": "DOWN",
           "px": 16.16,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "EOSE",
           "side": "short",
           "predict": "DOWN",
           "px": 3.1,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ENVX",
           "side": "short",
           "predict": "DOWN",
           "px": 2.56,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "INDI",
           "side": "short",
           "predict": "DOWN",
           "px": 2.88,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "TE",
           "side": "short",
           "predict": "DOWN",
           "px": 3.62,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "SKYX",
           "side": "short",
           "predict": "DOWN",
           "px": 1.17,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sit": false,
@@ -233,7 +233,7 @@
           "take": "BUY",
           "px": 70.83,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "SIRI",
@@ -242,7 +242,7 @@
           "take": "BUY",
           "px": 25.94,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NEOV",
@@ -251,7 +251,7 @@
           "take": "SELL",
           "px": 2.25,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "OKLO",
@@ -260,7 +260,7 @@
           "take": "SELL",
           "px": 37.26,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "FCEL",
@@ -269,7 +269,7 @@
           "take": "SELL",
           "px": 16.16,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "EOSE",
@@ -278,7 +278,7 @@
           "take": "SELL",
           "px": 3.1,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ENVX",
@@ -287,7 +287,7 @@
           "take": "SELL",
           "px": 2.56,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "INDI",
@@ -296,7 +296,7 @@
           "take": "SELL",
           "px": 2.88,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "TE",
@@ -305,7 +305,7 @@
           "take": "SELL",
           "px": 3.62,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "SKYX",
@@ -314,7 +314,7 @@
           "take": "SELL",
           "px": 1.17,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         }
       ],
       "research": null
@@ -326,16 +326,16 @@
           "side": "long",
           "predict": "UP",
           "px": 70.83,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "SIRI",
           "side": "long",
           "predict": "UP",
           "px": 25.94,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sell": [
@@ -344,64 +344,64 @@
           "side": "short",
           "predict": "DOWN",
           "px": 2.25,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "OKLO",
           "side": "short",
           "predict": "DOWN",
           "px": 37.26,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "FCEL",
           "side": "short",
           "predict": "DOWN",
           "px": 16.16,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "EOSE",
           "side": "short",
           "predict": "DOWN",
           "px": 3.1,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ENVX",
           "side": "short",
           "predict": "DOWN",
           "px": 2.56,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "INDI",
           "side": "short",
           "predict": "DOWN",
           "px": 2.88,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "TE",
           "side": "short",
           "predict": "DOWN",
           "px": 3.62,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "SKYX",
           "side": "short",
           "predict": "DOWN",
           "px": 1.17,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sit": false,
@@ -421,7 +421,7 @@
           "take": "BUY",
           "px": 70.83,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "SIRI",
@@ -430,7 +430,7 @@
           "take": "BUY",
           "px": 25.94,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NEOV",
@@ -439,7 +439,7 @@
           "take": "SELL",
           "px": 2.25,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "OKLO",
@@ -448,7 +448,7 @@
           "take": "SELL",
           "px": 37.26,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "FCEL",
@@ -457,7 +457,7 @@
           "take": "SELL",
           "px": 16.16,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "EOSE",
@@ -466,7 +466,7 @@
           "take": "SELL",
           "px": 3.1,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ENVX",
@@ -475,7 +475,7 @@
           "take": "SELL",
           "px": 2.56,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "INDI",
@@ -484,7 +484,7 @@
           "take": "SELL",
           "px": 2.88,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "TE",
@@ -493,7 +493,7 @@
           "take": "SELL",
           "px": 3.62,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "SKYX",
@@ -502,7 +502,7 @@
           "take": "SELL",
           "px": 1.17,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         }
       ],
       "research": null
@@ -514,16 +514,16 @@
           "side": "long",
           "predict": "UP",
           "px": 70.83,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "SIRI",
           "side": "long",
           "predict": "UP",
           "px": 25.94,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sell": [
@@ -532,120 +532,120 @@
           "side": "short",
           "predict": "DOWN",
           "px": 177.01,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "NRXP",
           "side": "short",
           "predict": "DOWN",
           "px": 2.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ABSI",
           "side": "short",
           "predict": "DOWN",
           "px": 9.47,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "INTC",
           "side": "short",
           "predict": "DOWN",
           "px": 116.43,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "BAK",
           "side": "short",
           "predict": "DOWN",
           "px": 1.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "NEOV",
           "side": "short",
           "predict": "DOWN",
           "px": 2.25,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PCT",
           "side": "short",
           "predict": "DOWN",
           "px": 4.66,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RVMD",
           "side": "short",
           "predict": "DOWN",
           "px": 203.02,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ZNTL",
           "side": "short",
           "predict": "DOWN",
           "px": 2.57,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "AIRS",
           "side": "short",
           "predict": "DOWN",
           "px": 1.92,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PAL",
           "side": "short",
           "predict": "DOWN",
           "px": 3.53,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "IMNM",
           "side": "short",
           "predict": "DOWN",
           "px": 21.68,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ARE",
           "side": "short",
           "predict": "DOWN",
           "px": 48.57,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sit": false,
@@ -665,7 +665,7 @@
           "take": "BUY",
           "px": 70.83,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "SIRI",
@@ -674,7 +674,7 @@
           "take": "BUY",
           "px": 25.94,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "GH",
@@ -683,7 +683,7 @@
           "take": "SELL",
           "px": 177.01,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NRXP",
@@ -692,7 +692,7 @@
           "take": "SELL",
           "px": 2.91,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ABSI",
@@ -701,7 +701,7 @@
           "take": "SELL",
           "px": 9.47,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "INTC",
@@ -710,7 +710,7 @@
           "take": "SELL",
           "px": 116.43,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "BAK",
@@ -719,7 +719,7 @@
           "take": "SELL",
           "px": 1.49,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RC",
@@ -728,7 +728,7 @@
           "take": "SELL",
           "px": 1.32,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NEOV",
@@ -737,7 +737,7 @@
           "take": "SELL",
           "px": 2.25,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PCT",
@@ -746,7 +746,7 @@
           "take": "SELL",
           "px": 4.66,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RVMD",
@@ -755,7 +755,7 @@
           "take": "SELL",
           "px": 203.02,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ZNTL",
@@ -764,7 +764,7 @@
           "take": "SELL",
           "px": 2.57,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "AIRS",
@@ -773,7 +773,7 @@
           "take": "SELL",
           "px": 1.92,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PAL",
@@ -782,7 +782,7 @@
           "take": "SELL",
           "px": 3.53,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "IMNM",
@@ -791,7 +791,7 @@
           "take": "SELL",
           "px": 21.68,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ARE",
@@ -800,7 +800,7 @@
           "take": "SELL",
           "px": 48.57,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "CMTG",
@@ -809,7 +809,7 @@
           "take": "SELL",
           "px": 1.27,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         }
       ],
       "research": null
@@ -821,16 +821,16 @@
           "side": "long",
           "predict": "UP",
           "px": 70.83,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "SIRI",
           "side": "long",
           "predict": "UP",
           "px": 25.94,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sell": [
@@ -839,120 +839,120 @@
           "side": "short",
           "predict": "DOWN",
           "px": 177.01,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "NRXP",
           "side": "short",
           "predict": "DOWN",
           "px": 2.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ABSI",
           "side": "short",
           "predict": "DOWN",
           "px": 9.47,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "INTC",
           "side": "short",
           "predict": "DOWN",
           "px": 116.43,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "BAK",
           "side": "short",
           "predict": "DOWN",
           "px": 1.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "NEOV",
           "side": "short",
           "predict": "DOWN",
           "px": 2.25,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PCT",
           "side": "short",
           "predict": "DOWN",
           "px": 4.66,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RVMD",
           "side": "short",
           "predict": "DOWN",
           "px": 203.02,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ZNTL",
           "side": "short",
           "predict": "DOWN",
           "px": 2.57,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "AIRS",
           "side": "short",
           "predict": "DOWN",
           "px": 1.92,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PAL",
           "side": "short",
           "predict": "DOWN",
           "px": 3.53,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "IMNM",
           "side": "short",
           "predict": "DOWN",
           "px": 21.68,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ARE",
           "side": "short",
           "predict": "DOWN",
           "px": 48.57,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sit": false,
@@ -972,7 +972,7 @@
           "take": "BUY",
           "px": 70.83,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "SIRI",
@@ -981,7 +981,7 @@
           "take": "BUY",
           "px": 25.94,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "GH",
@@ -990,7 +990,7 @@
           "take": "SELL",
           "px": 177.01,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NRXP",
@@ -999,7 +999,7 @@
           "take": "SELL",
           "px": 2.91,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ABSI",
@@ -1008,7 +1008,7 @@
           "take": "SELL",
           "px": 9.47,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "INTC",
@@ -1017,7 +1017,7 @@
           "take": "SELL",
           "px": 116.43,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "BAK",
@@ -1026,7 +1026,7 @@
           "take": "SELL",
           "px": 1.49,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RC",
@@ -1035,7 +1035,7 @@
           "take": "SELL",
           "px": 1.32,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NEOV",
@@ -1044,7 +1044,7 @@
           "take": "SELL",
           "px": 2.25,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PCT",
@@ -1053,7 +1053,7 @@
           "take": "SELL",
           "px": 4.66,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RVMD",
@@ -1062,7 +1062,7 @@
           "take": "SELL",
           "px": 203.02,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ZNTL",
@@ -1071,7 +1071,7 @@
           "take": "SELL",
           "px": 2.57,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "AIRS",
@@ -1080,7 +1080,7 @@
           "take": "SELL",
           "px": 1.92,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PAL",
@@ -1089,7 +1089,7 @@
           "take": "SELL",
           "px": 3.53,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "IMNM",
@@ -1098,7 +1098,7 @@
           "take": "SELL",
           "px": 21.68,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ARE",
@@ -1107,7 +1107,7 @@
           "take": "SELL",
           "px": 48.57,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "CMTG",
@@ -1116,7 +1116,7 @@
           "take": "SELL",
           "px": 1.27,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         }
       ],
       "research": null
@@ -1128,16 +1128,16 @@
           "side": "long",
           "predict": "UP",
           "px": 70.83,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "SIRI",
           "side": "long",
           "predict": "UP",
           "px": 25.94,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sell": [
@@ -1146,120 +1146,120 @@
           "side": "short",
           "predict": "DOWN",
           "px": 177.01,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "NRXP",
           "side": "short",
           "predict": "DOWN",
           "px": 2.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ABSI",
           "side": "short",
           "predict": "DOWN",
           "px": 9.47,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "BAK",
           "side": "short",
           "predict": "DOWN",
           "px": 1.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PCT",
           "side": "short",
           "predict": "DOWN",
           "px": 4.66,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "INTC",
           "side": "short",
           "predict": "DOWN",
           "px": 116.43,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "NEOV",
           "side": "short",
           "predict": "DOWN",
           "px": 2.25,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RVMD",
           "side": "short",
           "predict": "DOWN",
           "px": 203.02,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "IMNM",
           "side": "short",
           "predict": "DOWN",
           "px": 21.68,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ASPI",
           "side": "short",
           "predict": "DOWN",
           "px": 2.62,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "AIRS",
           "side": "short",
           "predict": "DOWN",
           "px": 1.92,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PAL",
           "side": "short",
           "predict": "DOWN",
           "px": 3.53,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "WVE",
           "side": "short",
           "predict": "DOWN",
           "px": 3.8,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sit": false,
@@ -1279,7 +1279,7 @@
           "take": "BUY",
           "px": 70.83,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "SIRI",
@@ -1288,7 +1288,7 @@
           "take": "BUY",
           "px": 25.94,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "GH",
@@ -1297,7 +1297,7 @@
           "take": "SELL",
           "px": 177.01,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NRXP",
@@ -1306,7 +1306,7 @@
           "take": "SELL",
           "px": 2.91,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ABSI",
@@ -1315,7 +1315,7 @@
           "take": "SELL",
           "px": 9.47,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "BAK",
@@ -1324,7 +1324,7 @@
           "take": "SELL",
           "px": 1.49,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PCT",
@@ -1333,7 +1333,7 @@
           "take": "SELL",
           "px": 4.66,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RC",
@@ -1342,7 +1342,7 @@
           "take": "SELL",
           "px": 1.32,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "INTC",
@@ -1351,7 +1351,7 @@
           "take": "SELL",
           "px": 116.43,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NEOV",
@@ -1360,7 +1360,7 @@
           "take": "SELL",
           "px": 2.25,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RVMD",
@@ -1369,7 +1369,7 @@
           "take": "SELL",
           "px": 203.02,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "IMNM",
@@ -1378,7 +1378,7 @@
           "take": "SELL",
           "px": 21.68,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ASPI",
@@ -1387,7 +1387,7 @@
           "take": "SELL",
           "px": 2.62,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "AIRS",
@@ -1396,7 +1396,7 @@
           "take": "SELL",
           "px": 1.92,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PAL",
@@ -1405,7 +1405,7 @@
           "take": "SELL",
           "px": 3.53,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "WVE",
@@ -1414,7 +1414,7 @@
           "take": "SELL",
           "px": 3.8,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "CMTG",
@@ -1423,7 +1423,7 @@
           "take": "SELL",
           "px": 1.27,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         }
       ],
       "research": null
@@ -1435,16 +1435,16 @@
           "side": "long",
           "predict": "UP",
           "px": 70.83,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "SIRI",
           "side": "long",
           "predict": "UP",
           "px": 25.94,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sell": [
@@ -1453,120 +1453,120 @@
           "side": "short",
           "predict": "DOWN",
           "px": 177.01,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "NRXP",
           "side": "short",
           "predict": "DOWN",
           "px": 2.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ABSI",
           "side": "short",
           "predict": "DOWN",
           "px": 9.47,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "BAK",
           "side": "short",
           "predict": "DOWN",
           "px": 1.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PCT",
           "side": "short",
           "predict": "DOWN",
           "px": 4.66,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "INTC",
           "side": "short",
           "predict": "DOWN",
           "px": 116.43,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "NEOV",
           "side": "short",
           "predict": "DOWN",
           "px": 2.25,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RVMD",
           "side": "short",
           "predict": "DOWN",
           "px": 203.02,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "IMNM",
           "side": "short",
           "predict": "DOWN",
           "px": 21.68,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ASPI",
           "side": "short",
           "predict": "DOWN",
           "px": 2.62,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "AIRS",
           "side": "short",
           "predict": "DOWN",
           "px": 1.92,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PAL",
           "side": "short",
           "predict": "DOWN",
           "px": 3.53,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "WVE",
           "side": "short",
           "predict": "DOWN",
           "px": 3.8,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sit": false,
@@ -1586,7 +1586,7 @@
           "take": "BUY",
           "px": 70.83,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "SIRI",
@@ -1595,7 +1595,7 @@
           "take": "BUY",
           "px": 25.94,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "GH",
@@ -1604,7 +1604,7 @@
           "take": "SELL",
           "px": 177.01,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NRXP",
@@ -1613,7 +1613,7 @@
           "take": "SELL",
           "px": 2.91,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ABSI",
@@ -1622,7 +1622,7 @@
           "take": "SELL",
           "px": 9.47,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "BAK",
@@ -1631,7 +1631,7 @@
           "take": "SELL",
           "px": 1.49,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PCT",
@@ -1640,7 +1640,7 @@
           "take": "SELL",
           "px": 4.66,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RC",
@@ -1649,7 +1649,7 @@
           "take": "SELL",
           "px": 1.32,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "INTC",
@@ -1658,7 +1658,7 @@
           "take": "SELL",
           "px": 116.43,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NEOV",
@@ -1667,7 +1667,7 @@
           "take": "SELL",
           "px": 2.25,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RVMD",
@@ -1676,7 +1676,7 @@
           "take": "SELL",
           "px": 203.02,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "IMNM",
@@ -1685,7 +1685,7 @@
           "take": "SELL",
           "px": 21.68,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ASPI",
@@ -1694,7 +1694,7 @@
           "take": "SELL",
           "px": 2.62,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "AIRS",
@@ -1703,7 +1703,7 @@
           "take": "SELL",
           "px": 1.92,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PAL",
@@ -1712,7 +1712,7 @@
           "take": "SELL",
           "px": 3.53,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "WVE",
@@ -1721,7 +1721,7 @@
           "take": "SELL",
           "px": 3.8,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "CMTG",
@@ -1730,7 +1730,7 @@
           "take": "SELL",
           "px": 1.27,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         }
       ],
       "research": null
@@ -1742,16 +1742,16 @@
           "side": "long",
           "predict": "UP",
           "px": 70.83,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "SIRI",
           "side": "long",
           "predict": "UP",
           "px": 25.94,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sell": [
@@ -1760,120 +1760,120 @@
           "side": "short",
           "predict": "DOWN",
           "px": 177.01,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "NRXP",
           "side": "short",
           "predict": "DOWN",
           "px": 2.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ABSI",
           "side": "short",
           "predict": "DOWN",
           "px": 9.47,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PCT",
           "side": "short",
           "predict": "DOWN",
           "px": 4.66,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "BAK",
           "side": "short",
           "predict": "DOWN",
           "px": 1.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "IMNM",
           "side": "short",
           "predict": "DOWN",
           "px": 21.68,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ASPI",
           "side": "short",
           "predict": "DOWN",
           "px": 2.62,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "AIRS",
           "side": "short",
           "predict": "DOWN",
           "px": 1.92,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "INTC",
           "side": "short",
           "predict": "DOWN",
           "px": 116.43,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RVMD",
           "side": "short",
           "predict": "DOWN",
           "px": 203.02,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PAL",
           "side": "short",
           "predict": "DOWN",
           "px": 3.53,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "LFMD",
           "side": "short",
           "predict": "DOWN",
           "px": 2.93,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "TMC",
           "side": "short",
           "predict": "DOWN",
           "px": 3.85,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ZNTL",
           "side": "short",
           "predict": "DOWN",
           "px": 2.57,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sit": false,
@@ -1893,7 +1893,7 @@
           "take": "BUY",
           "px": 70.83,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "SIRI",
@@ -1902,7 +1902,7 @@
           "take": "BUY",
           "px": 25.94,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "GH",
@@ -1911,7 +1911,7 @@
           "take": "SELL",
           "px": 177.01,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NRXP",
@@ -1920,7 +1920,7 @@
           "take": "SELL",
           "px": 2.91,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ABSI",
@@ -1929,7 +1929,7 @@
           "take": "SELL",
           "px": 9.47,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PCT",
@@ -1938,7 +1938,7 @@
           "take": "SELL",
           "px": 4.66,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "BAK",
@@ -1947,7 +1947,7 @@
           "take": "SELL",
           "px": 1.49,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RC",
@@ -1956,7 +1956,7 @@
           "take": "SELL",
           "px": 1.32,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "IMNM",
@@ -1965,7 +1965,7 @@
           "take": "SELL",
           "px": 21.68,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ASPI",
@@ -1974,7 +1974,7 @@
           "take": "SELL",
           "px": 2.62,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "AIRS",
@@ -1983,7 +1983,7 @@
           "take": "SELL",
           "px": 1.92,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "INTC",
@@ -1992,7 +1992,7 @@
           "take": "SELL",
           "px": 116.43,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RVMD",
@@ -2001,7 +2001,7 @@
           "take": "SELL",
           "px": 203.02,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PAL",
@@ -2010,7 +2010,7 @@
           "take": "SELL",
           "px": 3.53,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "LFMD",
@@ -2019,7 +2019,7 @@
           "take": "SELL",
           "px": 2.93,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "TMC",
@@ -2028,7 +2028,7 @@
           "take": "SELL",
           "px": 3.85,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ZNTL",
@@ -2037,7 +2037,7 @@
           "take": "SELL",
           "px": 2.57,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         }
       ],
       "research": null
@@ -2049,16 +2049,16 @@
           "side": "long",
           "predict": "UP",
           "px": 70.83,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "SIRI",
           "side": "long",
           "predict": "UP",
           "px": 25.94,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sell": [
@@ -2067,120 +2067,120 @@
           "side": "short",
           "predict": "DOWN",
           "px": 177.01,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "NRXP",
           "side": "short",
           "predict": "DOWN",
           "px": 2.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ABSI",
           "side": "short",
           "predict": "DOWN",
           "px": 9.47,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PCT",
           "side": "short",
           "predict": "DOWN",
           "px": 4.66,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "BAK",
           "side": "short",
           "predict": "DOWN",
           "px": 1.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "IMNM",
           "side": "short",
           "predict": "DOWN",
           "px": 21.68,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ASPI",
           "side": "short",
           "predict": "DOWN",
           "px": 2.62,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "AIRS",
           "side": "short",
           "predict": "DOWN",
           "px": 1.92,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "INTC",
           "side": "short",
           "predict": "DOWN",
           "px": 116.43,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RVMD",
           "side": "short",
           "predict": "DOWN",
           "px": 203.02,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PAL",
           "side": "short",
           "predict": "DOWN",
           "px": 3.53,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "LFMD",
           "side": "short",
           "predict": "DOWN",
           "px": 2.93,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "TMC",
           "side": "short",
           "predict": "DOWN",
           "px": 3.85,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ZNTL",
           "side": "short",
           "predict": "DOWN",
           "px": 2.57,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sit": false,
@@ -2200,7 +2200,7 @@
           "take": "BUY",
           "px": 70.83,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "SIRI",
@@ -2209,7 +2209,7 @@
           "take": "BUY",
           "px": 25.94,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "GH",
@@ -2218,7 +2218,7 @@
           "take": "SELL",
           "px": 177.01,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NRXP",
@@ -2227,7 +2227,7 @@
           "take": "SELL",
           "px": 2.91,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ABSI",
@@ -2236,7 +2236,7 @@
           "take": "SELL",
           "px": 9.47,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PCT",
@@ -2245,7 +2245,7 @@
           "take": "SELL",
           "px": 4.66,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "BAK",
@@ -2254,7 +2254,7 @@
           "take": "SELL",
           "px": 1.49,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RC",
@@ -2263,7 +2263,7 @@
           "take": "SELL",
           "px": 1.32,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "IMNM",
@@ -2272,7 +2272,7 @@
           "take": "SELL",
           "px": 21.68,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ASPI",
@@ -2281,7 +2281,7 @@
           "take": "SELL",
           "px": 2.62,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "AIRS",
@@ -2290,7 +2290,7 @@
           "take": "SELL",
           "px": 1.92,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "INTC",
@@ -2299,7 +2299,7 @@
           "take": "SELL",
           "px": 116.43,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RVMD",
@@ -2308,7 +2308,7 @@
           "take": "SELL",
           "px": 203.02,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PAL",
@@ -2317,7 +2317,7 @@
           "take": "SELL",
           "px": 3.53,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "LFMD",
@@ -2326,7 +2326,7 @@
           "take": "SELL",
           "px": 2.93,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "TMC",
@@ -2335,7 +2335,7 @@
           "take": "SELL",
           "px": 3.85,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ZNTL",
@@ -2344,7 +2344,7 @@
           "take": "SELL",
           "px": 2.57,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         }
       ],
       "research": null
@@ -2356,16 +2356,16 @@
           "side": "long",
           "predict": "UP",
           "px": 70.83,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "SIRI",
           "side": "long",
           "predict": "UP",
           "px": 25.94,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sell": [
@@ -2374,120 +2374,120 @@
           "side": "short",
           "predict": "DOWN",
           "px": 177.01,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ABSI",
           "side": "short",
           "predict": "DOWN",
           "px": 9.47,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "NRXP",
           "side": "short",
           "predict": "DOWN",
           "px": 2.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PCT",
           "side": "short",
           "predict": "DOWN",
           "px": 4.66,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "BAK",
           "side": "short",
           "predict": "DOWN",
           "px": 1.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "IMNM",
           "side": "short",
           "predict": "DOWN",
           "px": 21.68,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ASPI",
           "side": "short",
           "predict": "DOWN",
           "px": 2.62,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "AIRS",
           "side": "short",
           "predict": "DOWN",
           "px": 1.92,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PAL",
           "side": "short",
           "predict": "DOWN",
           "px": 3.53,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "TMC",
           "side": "short",
           "predict": "DOWN",
           "px": 3.85,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PRM",
           "side": "short",
           "predict": "DOWN",
           "px": 27.88,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "LFMD",
           "side": "short",
           "predict": "DOWN",
           "px": 2.93,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RVMD",
           "side": "short",
           "predict": "DOWN",
           "px": 203.02,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sit": false,
@@ -2507,7 +2507,7 @@
           "take": "BUY",
           "px": 70.83,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "SIRI",
@@ -2516,7 +2516,7 @@
           "take": "BUY",
           "px": 25.94,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "GH",
@@ -2525,7 +2525,7 @@
           "take": "SELL",
           "px": 177.01,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ABSI",
@@ -2534,7 +2534,7 @@
           "take": "SELL",
           "px": 9.47,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NRXP",
@@ -2543,7 +2543,7 @@
           "take": "SELL",
           "px": 2.91,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PCT",
@@ -2552,7 +2552,7 @@
           "take": "SELL",
           "px": 4.66,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "BAK",
@@ -2561,7 +2561,7 @@
           "take": "SELL",
           "px": 1.49,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RC",
@@ -2570,7 +2570,7 @@
           "take": "SELL",
           "px": 1.32,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "IMNM",
@@ -2579,7 +2579,7 @@
           "take": "SELL",
           "px": 21.68,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ASPI",
@@ -2588,7 +2588,7 @@
           "take": "SELL",
           "px": 2.62,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "AIRS",
@@ -2597,7 +2597,7 @@
           "take": "SELL",
           "px": 1.92,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PAL",
@@ -2606,7 +2606,7 @@
           "take": "SELL",
           "px": 3.53,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "TMC",
@@ -2615,7 +2615,7 @@
           "take": "SELL",
           "px": 3.85,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PRM",
@@ -2624,7 +2624,7 @@
           "take": "SELL",
           "px": 27.88,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "LFMD",
@@ -2633,7 +2633,7 @@
           "take": "SELL",
           "px": 2.93,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RVMD",
@@ -2642,7 +2642,7 @@
           "take": "SELL",
           "px": 203.02,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "CMTG",
@@ -2651,7 +2651,7 @@
           "take": "SELL",
           "px": 1.27,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         }
       ],
       "research": null
@@ -2663,16 +2663,16 @@
           "side": "long",
           "predict": "UP",
           "px": 70.83,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "SIRI",
           "side": "long",
           "predict": "UP",
           "px": 25.94,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sell": [
@@ -2681,120 +2681,120 @@
           "side": "short",
           "predict": "DOWN",
           "px": 177.01,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ABSI",
           "side": "short",
           "predict": "DOWN",
           "px": 9.47,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "NRXP",
           "side": "short",
           "predict": "DOWN",
           "px": 2.91,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PCT",
           "side": "short",
           "predict": "DOWN",
           "px": 4.66,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "BAK",
           "side": "short",
           "predict": "DOWN",
           "px": 1.49,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RC",
           "side": "short",
           "predict": "DOWN",
           "px": 1.32,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "IMNM",
           "side": "short",
           "predict": "DOWN",
           "px": 21.68,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "ASPI",
           "side": "short",
           "predict": "DOWN",
           "px": 2.62,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "AIRS",
           "side": "short",
           "predict": "DOWN",
           "px": 1.92,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PAL",
           "side": "short",
           "predict": "DOWN",
           "px": 3.53,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "TMC",
           "side": "short",
           "predict": "DOWN",
           "px": 3.85,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PRM",
           "side": "short",
           "predict": "DOWN",
           "px": 27.88,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "LFMD",
           "side": "short",
           "predict": "DOWN",
           "px": 2.93,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "RVMD",
           "side": "short",
           "predict": "DOWN",
           "px": 203.02,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "CMTG",
           "side": "short",
           "predict": "DOWN",
           "px": 1.27,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sit": false,
@@ -2814,7 +2814,7 @@
           "take": "BUY",
           "px": 70.83,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "SIRI",
@@ -2823,7 +2823,7 @@
           "take": "BUY",
           "px": 25.94,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "GH",
@@ -2832,7 +2832,7 @@
           "take": "SELL",
           "px": 177.01,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ABSI",
@@ -2841,7 +2841,7 @@
           "take": "SELL",
           "px": 9.47,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "NRXP",
@@ -2850,7 +2850,7 @@
           "take": "SELL",
           "px": 2.91,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PCT",
@@ -2859,7 +2859,7 @@
           "take": "SELL",
           "px": 4.66,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "BAK",
@@ -2868,7 +2868,7 @@
           "take": "SELL",
           "px": 1.49,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RC",
@@ -2877,7 +2877,7 @@
           "take": "SELL",
           "px": 1.32,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "IMNM",
@@ -2886,7 +2886,7 @@
           "take": "SELL",
           "px": 21.68,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "ASPI",
@@ -2895,7 +2895,7 @@
           "take": "SELL",
           "px": 2.62,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "AIRS",
@@ -2904,7 +2904,7 @@
           "take": "SELL",
           "px": 1.92,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PAL",
@@ -2913,7 +2913,7 @@
           "take": "SELL",
           "px": 3.53,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "TMC",
@@ -2922,7 +2922,7 @@
           "take": "SELL",
           "px": 3.85,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PRM",
@@ -2931,7 +2931,7 @@
           "take": "SELL",
           "px": 27.88,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "LFMD",
@@ -2940,7 +2940,7 @@
           "take": "SELL",
           "px": 2.93,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "RVMD",
@@ -2949,7 +2949,7 @@
           "take": "SELL",
           "px": 203.02,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "CMTG",
@@ -2958,7 +2958,7 @@
           "take": "SELL",
           "px": 1.27,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         }
       ],
       "research": null
@@ -2985,16 +2985,16 @@
           "side": "long",
           "predict": "UP",
           "px": 70.83,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "SIRI",
           "side": "long",
           "predict": "UP",
           "px": 25.94,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sell": [
@@ -3003,88 +3003,88 @@
           "side": "long",
           "predict": "UP",
           "px": 13.67,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "TWLO",
           "side": "long",
           "predict": "UP",
           "px": 287.79,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "GWRE",
           "side": "long",
           "predict": "UP",
           "px": 145.18,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "OKTA",
           "side": "long",
           "predict": "UP",
           "px": 202.0,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "BB",
           "side": "long",
           "predict": "UP",
           "px": 8.75,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "EPAM",
           "side": "long",
           "predict": "UP",
           "px": 108.15,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "IOT",
           "side": "long",
           "predict": "UP",
           "px": 37.93,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "KSPI",
           "side": "long",
           "predict": "UP",
           "px": 95.82,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PANW",
           "side": "long",
           "predict": "UP",
           "px": 392.99,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "PAYS",
           "side": "long",
           "predict": "UP",
           "px": 12.72,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         },
         {
           "ticker": "EBS",
           "side": "long",
           "predict": "UP",
           "px": 6.86,
-          "px_src": "session_export",
-          "px_asof": "2026-10-07T06:27:09.235854-04:00"
+          "px_src": "session_export+elite_live_skipped",
+          "px_asof": "2026-10-07T10:06:10.078750-04:00"
         }
       ],
       "sit": true,
@@ -3104,7 +3104,7 @@
           "take": "BUY",
           "px": 70.83,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "SIRI",
@@ -3113,7 +3113,7 @@
           "take": "BUY",
           "px": 25.94,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "AVPT",
@@ -3122,7 +3122,7 @@
           "take": "SELL",
           "px": 13.67,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "TWLO",
@@ -3131,7 +3131,7 @@
           "take": "SELL",
           "px": 287.79,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "GWRE",
@@ -3140,7 +3140,7 @@
           "take": "SELL",
           "px": 145.18,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "OKTA",
@@ -3149,7 +3149,7 @@
           "take": "SELL",
           "px": 202.0,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "BB",
@@ -3158,7 +3158,7 @@
           "take": "SELL",
           "px": 8.75,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "EPAM",
@@ -3167,7 +3167,7 @@
           "take": "SELL",
           "px": 108.15,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "IOT",
@@ -3176,7 +3176,7 @@
           "take": "SELL",
           "px": 37.93,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "KSPI",
@@ -3185,7 +3185,7 @@
           "take": "SELL",
           "px": 95.82,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PANW",
@@ -3194,7 +3194,7 @@
           "take": "SELL",
           "px": 392.99,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "PAYS",
@@ -3203,7 +3203,7 @@
           "take": "SELL",
           "px": 12.72,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         },
         {
           "ticker": "EBS",
@@ -3212,7 +3212,7 @@
           "take": "SELL",
           "px": 6.86,
           "open_px": null,
-          "px_src": "session_export"
+          "px_src": "session_export+elite_live_skipped"
         }
       ],
       "research": {
@@ -3227,7 +3227,7 @@
             "side": "long",
             "open": null,
             "px": 70.83,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3263,7 +3263,7 @@
             "side": "long",
             "open": null,
             "px": 25.94,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3299,7 +3299,7 @@
             "side": "long",
             "open": null,
             "px": 13.67,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3335,7 +3335,7 @@
             "side": "long",
             "open": null,
             "px": 287.79,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3371,7 +3371,7 @@
             "side": "long",
             "open": null,
             "px": 145.18,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3407,7 +3407,7 @@
             "side": "long",
             "open": null,
             "px": 202.0,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3443,7 +3443,7 @@
             "side": "long",
             "open": null,
             "px": 8.75,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3479,7 +3479,7 @@
             "side": "long",
             "open": null,
             "px": 108.15,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3515,7 +3515,7 @@
             "side": "long",
             "open": null,
             "px": 37.93,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3551,7 +3551,7 @@
             "side": "long",
             "open": null,
             "px": 95.82,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3587,7 +3587,7 @@
             "side": "long",
             "open": null,
             "px": 392.99,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3623,7 +3623,7 @@
             "side": "long",
             "open": null,
             "px": 12.72,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3659,7 +3659,7 @@
             "side": "long",
             "open": null,
             "px": 6.86,
-            "px_src": "session_export",
+            "px_src": "session_export+elite_live_skipped",
             "low": null,
             "scoops": {
               "0.5": {
@@ -8778,5 +8778,11 @@
       "predict": [],
       "research": null
     }
+  },
+  "ticket_lock": {
+    "dated": "2026-10-07_strategy_tickets.json",
+    "draft": "2026-10-07_strategy_tickets_draft.json",
+    "reason": "paper send journaled (2026-10-07_submit.json); after 2026-10-07 09:30 ET",
+    "dated_unchanged": true
   }
 }
