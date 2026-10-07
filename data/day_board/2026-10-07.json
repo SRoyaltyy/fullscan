@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T04:34:59.061725-04:00",
+  "generated_at": "2026-10-07T04:41:19.055651-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -183,7 +183,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -252,11 +252,16 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-10-07_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 35440,
+          "said": "36 events \u00b7 elevated uncertainty \u00b7 The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted, Brent ~$101, and diesel tight enough for a Oct 5 tax-defer",
+          "bullets": [
+            "FOMC minutes (Sept 15\u201316 hike to 3.75\u20134.00%)",
+            "US\u2013Iran war: Hormuz still restricted; Iran's 7 conditions unmet",
+            "Brent ~$101: crude transits rebound, refined products still tight",
+            "China Golden Week (National Day) last day: travel vs spend"
+          ]
         },
         {
           "key": "judge",
@@ -331,13 +336,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7574,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "size": 7571,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
           "bullets": [
             "general_predict:missing",
-            "events:missing",
             "news_judge:missing",
-            "news_actions:missing"
+            "news_actions:missing",
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -1285,6 +1290,31 @@
         }
       ],
       "preview": "raw=11590 usable=771 single=414 \u00b7 AMD CEO says continues to explore foundry partnership with Samsung Electronics - | US Dollar Index Price Forecast: 101.80 remains key support zone ahead of FOMC mi | AUD/USD edges higher as Treasury yields retreat, traders eye FOMC minutes and ke | United States Dollar Index retakes 102.00 as bulls eye YTD peak ahead of FOMC Mi | Oil Inventories in the West Have Been Exhausted, Vitol CEO Says - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-10-07T04:34:36.637956-04:00\nWindow\u224848h | news_mode=on | raw=11590 | usable=771 | single_name=414 | noise_dropped=9977\nusable polarity={'+': 39, '-': 153, 'mixed': 10, 'neutral': 569}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T04:41:17.719651-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-07_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 35440,
+          "preview": "36 events \u00b7 FOMC minutes (Sept 15\u201316 hike to 3.75\u20134.00%) | US\u2013Iran war: Hormuz still restricted; Iran's 7 conditions unmet | Brent ~$101: crude transits rebound, refined products still tight | China Golden Week (National Day) last day: travel vs spend | Southern California record October heat / wildfire overlay | Taiwan gray-zone pressure vs silicon shield (no invasion base case)"
+        },
+        {
+          "path": "01_daily/events/2026-10-07_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 19789,
+          "preview": "# Event Scan \u2014 2026-10-07\n- events tracked: **36** (via openclaw)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted, Brent ~$101, and diesel tight enough for a Oct 5 tax-deferral EO, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20% ahead of today's minutes. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 2027 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and a CIT forced-labor 301 briefing keep trade risk binary. Q3 earnings open tomorrow with PepsiCo and Samsung, then banks/UNH/ASML/TSMC against an AI-memory boom Korea and Micron have already validated."
+        }
+      ],
+      "preview": "36 events \u00b7 FOMC minutes (Sept 15\u201316 hike to 3.75\u20134.00%) | US\u2013Iran war: Hormuz still restricted; Iran's 7 conditions unmet | Brent ~$101: crude transits rebound, refined products still tight | China Golden Week (National Day) last day: travel vs spend | Southern California record October heat / wildfire overlay | Taiwan gray-zone pressure vs silicon shield (no invasion base case) \u00b7 # Event Scan \u2014 2026-10-07\n- events tracked: **36** (via openclaw)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted, Brent ~$101, and diesel tight enough for a Oct 5 tax-deferral EO, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20% ahead of today's minutes. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 2027 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and a CIT forced-labor 301 briefing keep trade risk binary. Q3 earnings open tomorrow with PepsiCo and Samsung, then banks/UNH/ASML/TSMC against an AI-memory boom Korea and Micron have already validated."
     }
   ],
   "href": {
