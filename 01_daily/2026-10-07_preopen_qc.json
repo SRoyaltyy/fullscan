@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T04:19:40.244966-04:00",
+  "generated_at": "2026-10-07T04:20:26.977317-04:00",
   "items": [
     {
       "ok": false,
@@ -62,7 +62,7 @@
       "kind": "finviz_digest",
       "path": "01_daily/news/2026-10-07_finviz_digest.json",
       "reason": "",
-      "size": 97075,
+      "size": 98242,
       "carried": false,
       "timeout": false,
       "empty": false,
