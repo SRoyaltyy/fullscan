@@ -1,0 +1,340 @@
+{
+  "ticker": "GOOG",
+  "analysis_date": "2026-10-07",
+  "current_price": "344.59",
+  "net_signal": "Bearish",
+  "conviction": 29,
+  "catalyst_stack": "On April 29, 2026 Alphabet beat Q1 estimates, lifted 2026 capex to $180\u2013$190 billion, and raised the quarterly dividend 5% to $0.22. The July 22 print repeated the revenue beat as Google Cloud jumped 82% to $24.8 billion, but a further capex hike to $195\u2013$205 billion, a buyback pause, and the June 4 close of upsized equity offerings totaling $90 billion framed an AI build funded by dilution rather than cash return. Leadership rotated on August 5 as Demis Hassabis became Alphabet chief scientist while Jeff Dean left, then September brought Gemini 4 Argon and behavioral ad-tech remedies that stopped short of an AdX breakup. Into October 6\u20137, a ~3.59 GW Constellation nuclear power deal and Street PT hikes to $417/$485 offset an EU Android-AI appeal, leaving Cloud/AI scale roughly balanced against capex, dilution, and antitrust overhang.",
+  "key_assumption": "The $195\u2013$205 billion 2026 capex program converts Cloud/AI demand at high incremental margins, and ad-tech behavioral remedies plus the EU Android-AI fight do not structurally impair the ads and distribution engine.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Capacity expansion announced",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-04-29",
+      "evidence_excerpt": "\"The company also updated its 2026 capital expenditure guidance range to $180 billion to $190 billion\"",
+      "source_urls": [
+        "https://www.cnbc.com/2026/04/29/alphabet-googl-q1-2026-earnings.html"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-04-29",
+      "evidence_excerpt": "\"announced a 5% increase to the dividend, resulting in a quarterly cash dividend of $0.22\"",
+      "source_urls": [
+        "https://seekingalpha.com/news/4582044-alphabet-raises-quarterly-dividend-by-5-to-022",
+        "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-release.pdf"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Dilutive offering",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-06-04",
+      "evidence_excerpt": "\"The stock offering and private placement closed on June 4, 2026.\"",
+      "source_urls": [
+        "https://www.clearygottlieb.com/news-and-insights/news-listing/alphabet-in-80-billion-equity-offerings-jun-2026"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        1,
+        7
+      ],
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "\"Revenue: $119.80 billion vs $116.93 billion expected by LSEG\"",
+      "source_urls": [
+        "https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html",
+        "https://qz.com/alphabet-google-second-quarter-earnings-revenue-cloud-072226"
+      ],
+      "confidence": 96
+    },
+    {
+      "taxonomy": "Capacity underutilization/overexpansion",
+      "type": "negative",
+      "category": "internal",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "\"Google now expects capex for the year of $195 billion to $205 billion, up from the $180 billion to $190 billion forecast provided last quarter.\"",
+      "source_urls": [
+        "https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Suspension of buyback/dividend cut",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "\"reported $0 in share repurchases for Q2 2026 (and the full first half of 2026), effectively pausing its buyback program.\"",
+      "source_urls": [
+        "https://www.opencapital.sh/stocks/goog/metrics/share_repurchases",
+        "https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Positive personnel change",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        10
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "\"Hassabis is now Chair of GDM and Chief Scientist of Alphabet.\"",
+      "source_urls": [
+        "https://9to5google.com/2026/08/05/demis-hassabis-deepmind/",
+        "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Negative personnel change",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "\"Jeff Dean left Google (Alphabet) in early August 2026 to co-found Discovery Loop, a new AI startup.\"",
+      "source_urls": [
+        "https://9to5google.com/2026/08/05/demis-hassabis-deepmind/",
+        "https://www.businessinsider.com/jeff-dean-google-exit-video-chat-yoga-soccer-goodbye-messages-2026-8"
+      ],
+      "confidence": 84
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/antitrust",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "event_ids": [
+        12
+      ],
+      "event_date": "2026-09-02",
+      "evidence_excerpt": "\"The Justice Department\u2019s Antitrust Division won substantial relief in its monopolization case against Google in advertising technology markets.\"",
+      "source_urls": [
+        "https://www.justice.gov/opa/pr/department-justice-again-wins-substantial-relief-against-google",
+        "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 6,
+      "event_ids": [
+        4,
+        15
+      ],
+      "event_date": "2026-09-30",
+      "evidence_excerpt": "\"Alphabet unveiled Gemini 4 Argon on Wednesday, its most advanced artificial intelligence model yet\"",
+      "source_urls": [
+        "https://www.cnbc.com/2026/09/30/google-gemini-4-argon-ai.html",
+        "https://www.reuters.com/legal/litigation/google-announces-gemini-4-flagship-ai-model-after-months-delays-2026-09-30/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        16
+      ],
+      "event_date": "2026-10-06",
+      "evidence_excerpt": "\"Oct. 6, 2026 \u2014 Google and Constellation Energy today announced a long-term strategic clean energy collaboration to bring 890 megawatts (MW) of new, reliable nuclear capacity\"",
+      "source_urls": [
+        "https://www.googlecloudpresscorner.com/2026-10-06-Google-and-Constellation-Announce-Landmark-Agreement-to-Bring-890-MW-of-New-Nuclear-Capacity-to-PJM-Grid-as-Part-of-Long-Term-Power-Deal",
+        "https://blog.google/company-news/why-were-backing-americas-existing-nuclear-plants/"
+      ],
+      "confidence": 96
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        13,
+        17
+      ],
+      "event_date": "2026-10-06",
+      "evidence_excerpt": "\"the bank raised its target for Alphabet from USD 411.00 to USD 417.00 and kept an Overweight rating.\"",
+      "source_urls": [
+        "https://www.ad-hoc-news.de/boerse/news/corporate-news/wells-fargo-raises-target-for-alphabet-c-stock-from-usd-411-00-to-usd-417-00/70242237",
+        "https://finance.yahoo.com/markets/stocks/articles/wells-fargo-adjusts-price-target-092550988.html"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Policy reversal/new regulation/tax increase",
+      "type": "negative",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 7,
+      "adjusted_weight": 0,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-10-07",
+      "evidence_excerpt": "Alphabet's Google appeals EU requests to open Android AI features to rivals and share search data",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/j-p-morgan-drops-sharp-080910133.html"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "event_date": "2026-04-29",
+      "evidence_excerpt": "Revenue: $109.9 billion vs $107.2 billion expected by analysts polled by LSEG",
+      "source_urls": [
+        "https://www.cnbc.com/2026/04/29/alphabet-googl-q1-2026-earnings.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Negative personnel change",
+      "type": "negative",
+      "event_date": "2026-06-18",
+      "evidence_excerpt": "a co-lead of its Gemini AI models Noam Shazeer announced Wednesday that he was leaving the company to join OpenAI.",
+      "source_urls": [
+        "https://www.cnbc.com/2026/06/18/google-gemini-co-lead-noam-shazeer-leaves-for-openai.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Negative personnel change",
+      "type": "negative",
+      "event_date": "2026-06-19",
+      "evidence_excerpt": "Senior research scientist John Jumper said on Friday he would leave Google DeepMind to join AI startup Anthropic",
+      "source_urls": [
+        "https://www.cnbc.com/2026/06/19/john-jumper-to-leave-google-deepmind-for-anthropic.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Policy reversal/new regulation/tax increase",
+      "type": "negative",
+      "event_date": "2026-07-16",
+      "evidence_excerpt": "The European Commission has issued two sets of binding specification measures to Google under the Digital Markets Act.",
+      "source_urls": [
+        "https://digital-strategy.ec.europa.eu/en/news/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data"
+      ],
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Product delay",
+      "type": "negative",
+      "event_date": "2026-07-16",
+      "evidence_excerpt": "Alphabet shares sank 4% on Thursday following a report that the company has delayed releasing its flagship artificial intelligence model.",
+      "source_urls": [
+        "https://www.cnbc.com/2026/07/16/alphabet-stock-gemini-3-5-pro-ai.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/antitrust",
+      "type": "negative",
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "Google is challenging the EU\u2019s DMA requirements in court, which would force it to open Android further to rival AI assistants",
+      "source_urls": [
+        "https://www.androidauthority.com/google-eu-ai-assitant-and-search-appeal-3716641/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Lawsuits",
+      "type": "negative",
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "Alphabet has been sued for securities fraud after its stock price fell 4%",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/goog-googl-stock-notice-alphabet-inc-stock-plummeted-4-after-ai-issues-disclosed--securities-fraud-class-action-filed-302899076.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-07",
+  "cutoff_date": null,
+  "role": "earnings"
+}
