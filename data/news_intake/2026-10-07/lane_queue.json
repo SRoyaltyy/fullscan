@@ -1,5 +1,197 @@
 [
   {
+    "document_id": "c9903f6d229833c69f9d7f67",
+    "title": "From 'woke' ridicule to real car - new electric Jaguar unveiled",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.bbc.co.uk/news/articles/c6je50ydld31o?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-10-07T01:39:54+00:00",
+    "known_at": "2026-10-07T01:39:54+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "e2a68bdd2793e3255a58c75d",
+    "title": "Syrian embassy returns seized passport after 43 years",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/7/syrian-embassy-returns-seized-passport-after-43-years?traffic_source=rss",
+    "published_at": "2026-10-07T01:20:11+00:00",
+    "known_at": "2026-10-07T01:20:11+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "88feca90a0198311e37e815d",
+    "title": "Politicians slam Trump’s suggestion that Iran ‘take’ San Diego, Los Angeles",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/7/politicians-slam-trumps-suggestion-that-iran-take-san-diego-los-angeles?traffic_source=rss",
+    "published_at": "2026-10-07T01:07:21+00:00",
+    "known_at": "2026-10-07T01:07:21+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "a3a91021471f57f1ac848d3c",
+    "title": "What’s behind Israel’s growing shift to the right?",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/7/whats-behind-israels-growing-shift-to-the-right?traffic_source=rss",
+    "published_at": "2026-10-07T00:58:21+00:00",
+    "known_at": "2026-10-07T00:58:21+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "8816dd47b16037e69ad960ff",
+    "title": "Yemeni forces launch offensive to retake Houthi-held al-Waziiya in Taiz",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/7/yemeni-forces-launch-offensive-to-retake-houthi-held-al-waziiya-in-taiz?traffic_source=rss",
+    "published_at": "2026-10-07T00:35:57+00:00",
+    "known_at": "2026-10-07T00:35:57+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "83bb3fe272721179402a8728",
+    "title": "Sudan’s al-Burhan rejects talks, vows to retake all territory from RSF",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/7/sudans-al-burhan-rejects-talks-vows-to-retake-all-territory-from-rsf?traffic_source=rss",
+    "published_at": "2026-10-07T00:26:47+00:00",
+    "known_at": "2026-10-07T00:26:47+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "424db4d542cb80a9b52b23aa",
+    "title": "South Sudan’s aid crisis deepens as food stocks run low",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/7/south-sudans-aid-crisis-deepens-as-food-stocks-run-low?traffic_source=rss",
+    "published_at": "2026-10-07T00:13:59+00:00",
+    "known_at": "2026-10-07T00:13:59+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "e9ef0b0d9e641395920302bf",
+    "title": "French mayor tear-gassed after shielding protesters from police",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/7/french-mayor-tear-gassed-after-shielding-protesters-from-police?traffic_source=rss",
+    "published_at": "2026-10-07T00:10:56+00:00",
+    "known_at": "2026-10-07T00:10:56+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "7bb44c62e93247b88d6a3d99",
+    "title": "Iran war live: Yemen forces claim control over strategic Taiz mountain peak",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/liveblog/2026/10/7/iran-war-live-yemen-forces-claim-control-over-strategic-taiz-mountain-peak?traffic_source=rss",
+    "published_at": "2026-10-07T00:00:00+00:00",
+    "known_at": "2026-10-07T00:00:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "8914fee492551343d369a991",
+    "title": "Electric car bursts into flames at charging station in Turkiye",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/6/10-7-ev-blowsup-turkiye-clip-mp4?traffic_source=rss",
+    "published_at": "2026-10-06T23:33:33+00:00",
+    "known_at": "2026-10-06T23:33:33+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "8b5259d28d6242c731f9743f",
+    "title": "A beautiful Himalayan bird is changing its voice due to human activity, research shows",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.bbc.co.uk/news/articles/cq9868z88rexo?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-10-06T23:07:44+00:00",
+    "known_at": "2026-10-06T23:07:44+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "9bbb2e17c71f250fade20648",
+    "title": "‘We are desperate’: Venezuela’s power cuts fuel growing public anger",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/longform/2026/10/6/we-are-desperate-venezuelas-power-cuts-fuel-growing-public-anger?traffic_source=rss",
+    "published_at": "2026-10-06T23:05:38+00:00",
+    "known_at": "2026-10-06T23:05:38+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "611f168f763dff3de0dd20d7",
     "title": "Fedorchak: U.S. must establish AI safeguards without surrendering technology rac - WDAY Radio",
     "evidence_file": "documents.json",
@@ -7,6 +199,70 @@
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPV0dXb0Y4OGRyeEZVM25aVmtVX2psT3JETExDRFV4bXVOdXF6VW94aURaTmM5aW51R3BSTE8yWkdfU000M3IxN2dNTk5JT1J1SHFQYmtjUVB5bnNkeTJJUW8tV0lfNVJOWGFFOVkySEVham5UV25NVWd2SG5DVGdRRWVVX285d1NqSmFOWG1mWFRZejQ2WlJERXdxLWRtT1VXVHpsVm5ja1pfa2ZjWUZ5RXRSSWJGWWRkRVR1V1I4MHdvYkFQQVE?oc=5",
     "published_at": "2026-10-06T23:02:11+00:00",
     "known_at": "2026-10-06T23:02:11+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "c62293577ca423e5e7f3d09b",
+    "title": "Froyo's made a comeback. But at £12 a tub will it last?",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.bbc.co.uk/news/articles/cxly57v78yv7o?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-10-06T23:01:31+00:00",
+    "known_at": "2026-10-06T23:01:31+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "5ffd26ebd53e807e810b4fae",
+    "title": "Braid-creator Jonathan Blow on making the 'biggest puzzle game ever'",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.bbc.co.uk/news/articles/cj3vqxldglepo?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-10-06T23:01:22+00:00",
+    "known_at": "2026-10-06T23:01:22+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "1bd12705676d9a97894c8645",
+    "title": "UK risks being 'uninvestable' if new oil and gas fields not approved, warns Equinor",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.bbc.co.uk/news/articles/c6zxjrekg29zo?at_medium=RSS&at_campaign=rss",
+    "published_at": "2026-10-06T23:01:13+00:00",
+    "known_at": "2026-10-06T23:01:13+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "6789a6174a308c90eb932785",
+    "title": "Christa Pike lawyers say she is speaking one week after failed execution",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/6/christa-pike-lawyers-say-she-is-speaking-one-week-after-failed-execution?traffic_source=rss",
+    "published_at": "2026-10-06T23:01:05+00:00",
+    "known_at": "2026-10-06T23:01:05+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -63058,6 +63314,22 @@
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "regime_state",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "ebb413cc5359756bf9234b81",
+    "title": "How Jump Trading is scaling quant research with ChatGPT",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://openai.com/index/jump-trading",
+    "published_at": "2026-10-06T12:00:00+00:00",
+    "known_at": "2026-10-06T12:00:00+00:00",
+    "candidate_classes": [],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -167529,7 +167801,7 @@
     "candidate_classes": [
       "reserve_revision"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "reserve_revision",
@@ -167547,7 +167819,7 @@
     "candidate_classes": [
       "capacity"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "capacity",
@@ -167565,7 +167837,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -167583,7 +167855,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -167633,7 +167905,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -167651,7 +167923,7 @@
     "candidate_classes": [
       "cat_weather"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "cat_weather",
@@ -167669,7 +167941,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -167735,7 +168007,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -167753,7 +168025,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -167839,7 +168111,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -167857,7 +168129,7 @@
     "candidate_classes": [
       "factor_impulse"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "regime_state",
@@ -167907,7 +168179,7 @@
     "candidate_classes": [
       "factor_impulse"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "factor_impulse",
@@ -167925,7 +168197,7 @@
     "candidate_classes": [
       "factor_impulse"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "factor_impulse",
@@ -167943,7 +168215,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -168043,7 +168315,7 @@
     "candidate_classes": [
       "key_person"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "key_person",
@@ -168061,7 +168333,7 @@
     "candidate_classes": [
       "capacity"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "capacity",
@@ -168163,7 +168435,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
@@ -168245,7 +168517,7 @@
     "candidate_classes": [
       "factor_impulse"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "regime_state",
@@ -168263,7 +168535,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
@@ -168379,7 +168651,7 @@
     "candidate_classes": [
       "insider_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "insider_flow",
@@ -168413,7 +168685,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -168431,7 +168703,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -168465,7 +168737,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -168483,7 +168755,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -168501,7 +168773,7 @@
     "candidate_classes": [
       "market_structure"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "market_structure",
@@ -168535,7 +168807,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
@@ -168571,7 +168843,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -168639,7 +168911,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -168657,7 +168929,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -168723,7 +168995,7 @@
     "candidate_classes": [
       "key_person"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "key_person",
@@ -168757,7 +169029,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -168775,7 +169047,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -168809,7 +169081,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -168843,7 +169115,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -168861,7 +169133,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -168879,7 +169151,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -168897,7 +169169,7 @@
     "candidate_classes": [
       "factor_impulse"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "factor_impulse",
@@ -168915,7 +169187,7 @@
     "candidate_classes": [
       "trial_readout"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "trial_readout",
@@ -168933,7 +169205,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -168951,7 +169223,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -168985,7 +169257,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -169067,7 +169339,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -169197,7 +169469,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -169295,7 +169567,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -169313,7 +169585,7 @@
     "candidate_classes": [
       "access_control"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "access_control",
@@ -169347,7 +169619,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -169381,7 +169653,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -169399,7 +169671,7 @@
     "candidate_classes": [
       "factor_impulse"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "factor_impulse",
@@ -169515,7 +169787,7 @@
     "candidate_classes": [
       "distress_restruct"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "distress_restruct",
@@ -169533,7 +169805,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -169551,7 +169823,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -169569,7 +169841,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -169603,7 +169875,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -169621,7 +169893,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
@@ -169639,7 +169911,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -169657,7 +169929,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -169691,7 +169963,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -169709,7 +169981,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -169743,7 +170015,7 @@
     "candidate_classes": [
       "insider_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "insider_flow",
@@ -169761,7 +170033,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -169779,7 +170051,7 @@
     "candidate_classes": [
       "cat_weather"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "cat_weather",
@@ -169845,7 +170117,7 @@
     "candidate_classes": [
       "cat_weather"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "cat_weather",
@@ -169863,7 +170135,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -169881,7 +170153,7 @@
     "candidate_classes": [
       "cat_weather"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "cat_weather",
@@ -169899,7 +170171,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -169917,7 +170189,7 @@
     "candidate_classes": [
       "reserve_revision"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "reserve_revision",
@@ -169951,7 +170223,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -169969,7 +170241,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -169987,7 +170259,7 @@
     "candidate_classes": [
       "reserve_revision"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "reserve_revision",
@@ -170021,7 +170293,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -170039,7 +170311,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -170057,7 +170329,7 @@
     "candidate_classes": [
       "factor_impulse"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "factor_impulse",
@@ -170075,7 +170347,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -170093,7 +170365,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
@@ -170111,7 +170383,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
