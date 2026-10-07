@@ -56,3 +56,14 @@ The sealed 2026-09-28 open fills stay as written. A later `open_fill_correction`
 - rule: an `open_fill_correction` references the sealed open fill's sha256 and the plan's sha256. It records reason `stale_bar: previous-session bar used for SRFM, SECZ`, approved_by `Cyrus 2026-09-28 21:02 ET`, the corrected open fill, and the sealed-versus-corrected values for each leg that moved. Cash after the correction must be at least zero. A second identical run appends nothing. The close fill and the book's cash and positions read the latest correction. Sealed lines are not edited.
 - code: `HOLDUP_MODE=correct_open` with `CORRECT_OPEN_DATE` in `research/hot_n4_clean_v4/forward/forward.py`. Holdup and h1 share that entry point. The manual workflow is `.github/workflows/correct_open.yml`. It has no schedule.
 - sealed lines: unchanged. The 2026-09-28 correction was not written to either log or ledger.
+
+## 2026-10-07 — Several Yahoo reprints on sealed bars stay pending
+
+This PR merges only with Cyrus's approval. It changes the price-refresh guard, not a pick, fill, or P&L rule, so the study name stays `hot_n4_clean_v4`.
+
+- study: `hot_n4_clean_v4`, recipes `union_hot_n4_h1__w0` and `union_hot_n4_holdup__w0`
+- what happened: the 2026-10-07 19:29 UTC h1 open fill (run 37674833077) stopped in the price refresh with `Yahoo revised a bar a sealed record used`. Yahoo reprinted the open and the high of one sealed 2026-10-02 bar by more than one cent, while an open on a sealed 2026-10-06 bar was already pending. The old guard allowed one such field in total and stopped on two or more, so the open fill, the post-close fill, and the next plan would all stop.
+- rule: a sealed OHLC field that Yahoo moves by more than one cent is pending, however many fields or bars move. The revision is appended to `price_revisions.jsonl`, the stored bar stays exactly as first recorded, the ledger line names every leg in `pending_legs` (`pending` keeps its earlier one-leg shape), and new bars still append. Fills, marks, and plans keep reading the stored bars.
+- still refuses: a sealed bar whose open, high, low, and close all moved by more than one cent. That can be a new price basis (a late split or a re-based series), and a new bar on that basis next to the stored bars would change a sealed position's value. The run appends nothing and the ledger line lists the bar under `restated`. The held-name jump halt and the IWM halt are unchanged.
+- code: `refresh` in `research/hot_n4_clean_v4/forward/prices.py`. That file is not in `ENGINE_SHA256` or any other hash pin. Holdup and h1 share it.
+- sealed lines: unchanged. No `*.jsonl` record, ledger, price, or revision line was edited, and no stored bar was replaced.
