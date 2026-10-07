@@ -69,6 +69,7 @@
  .today-plan h3{margin:0 0 6px;font-size:13px;font-family:ui-monospace,Menlo,Consolas,monospace}
  .lab{color:var(--dim);font-size:11px;margin:4px 0 2px}
  .skip{color:var(--gold);margin:0 0 10px}
+ .warn{background:rgba(251,191,36,.14);border:1px solid var(--gold);color:var(--gold);border-radius:8px;padding:6px 8px;margin:6px 0 0;font-size:12px}
  .backfill{margin-top:28px;padding-top:12px;border-top:1px solid var(--line)}
  .ovcal-wrap{margin:0 0 12px}
  .ovcal-leg{display:flex;flex-wrap:wrap;gap:8px;color:var(--mut);font-size:11.5px;margin:0 0 8px}
@@ -542,7 +543,16 @@ function withCorrections(rows){
   });
 }
 let BARS = {};
+let NOTES = [];
 let curveStart = "";
+function notesFor(date){
+  return (NOTES || []).filter(note => note && (note.date === date || (note.dates || []).indexOf(date) >= 0));
+}
+function dayNotesHtml(date){
+  const rows = notesFor(date);
+  if (!rows.length) return "";
+  return `<div class="warn">${rows.map(note => esc(note.note || "")).join("<br>")}</div>`;
+}
 
 function quote(date, ticker){
   const day = BARS[date] || {};
@@ -594,6 +604,7 @@ function closeBookHtml(day, bars){
       <span class="mut">cash + closes ${money(book.sum)}</span>
     </div>
     <div class="pills">${book.pills || '<span class="mut">flat cash · no lots</span>'}</div>
+    ${dayNotesHtml(day.date)}
   </div>`;
   } finally {
     if (bars) BARS = saved;
@@ -749,9 +760,9 @@ function marksHtml(models, seed){
     });
     prev = book;
     if (!rows.length){
-      return `<div class="day-card"><h4>${esc(book.date)}</h4><div class="pill mut">flat cash · no lots · overnight $0 · session $0</div></div>`;
+      return `<div class="day-card"><h4>${esc(book.date)}</h4><div class="pill mut">flat cash · no lots · overnight $0 · session $0</div>${dayNotesHtml(book.date)}</div>`;
     }
-    return `<div class="day-card"><h4>${esc(book.date)}</h4><div class="pills">${rows.join("")}</div></div>`;
+    return `<div class="day-card"><h4>${esc(book.date)}</h4><div class="pills">${rows.join("")}</div>${dayNotesHtml(book.date)}</div>`;
   }).join("");
   return html || '<div class="mut">No close marks yet.</div>';
 }
@@ -776,6 +787,7 @@ function stateHtml(models, seed){
         <span class="pill">held at close: ${esc(held)}</span>
       </div>
       <div class="pills">${bookPx.pills}</div>
+      ${dayNotesHtml(book.date)}
     </div>`;
   }).join("");
   return html || '<div class="mut">No daily state yet.</div>';
@@ -865,7 +877,8 @@ function holdLiveHtml(book){
       <td class="num">${dollars == null ? "—" : money(dollars)}</td></tr>`;
   }).join("");
   return `<div class="day-card"><h4>${esc(book.date)} · book ${money(book.equity_primary)} · cash + closes ${money(broken.sum)}</h4>
-    <table><tr><th>Ticker</th><th>Side</th><th>Shares</th><th>Entry</th><th>Close</th><th>vs entry</th><th>$ at close</th></tr>${rows}</table></div>`;
+    <table><tr><th>Ticker</th><th>Side</th><th>Shares</th><th>Entry</th><th>Close</th><th>vs entry</th><th>$ at close</th></tr>${rows}</table>
+    ${dayNotesHtml(book.date)}</div>`;
 }
 function statsHtml(models){
   const books = models.filter(model => model.book && model.book.equity_primary != null).map(model => model.book);
@@ -1087,7 +1100,10 @@ function boot(){
   }).then(rows => {
     return fetch("closes.json").then(r => r.ok ? r.json() : {}).catch(() => ({})).then(bars => {
       BARS = bars || {};
-      return fetch("status.json").then(r => r.ok ? r.json() : null).catch(() => null).then(status => render(rows, status));
+      return fetch("mark_notes.json").then(r => r.ok ? r.json() : []).catch(() => []).then(notes => {
+        NOTES = Array.isArray(notes) ? notes : [];
+        return fetch("status.json").then(r => r.ok ? r.json() : null).catch(() => null).then(status => render(rows, status));
+      });
     });
   }).catch(err => {
     const blot = document.getElementById("blot");

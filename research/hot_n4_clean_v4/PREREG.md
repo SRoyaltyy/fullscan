@@ -2,8 +2,9 @@
 
 - status: locked before any score. This commit has no return, no win rate, and no trade outcome.
 - written: 2026-09-27
-- fingerprint_sha256: 5059366464a6fdd19571436296a759717d077a413cc0c693dbbb61f5dc295c5e
+- fingerprint_sha256: d1f36a229fd8d6eedb8b9f840a53b6ad6a9019bdaefb8e52e8bf4e57ac78fbcf
 - engine restatement: 2026-09-28 ET, Cyrus approved. `src/factor_mine.py` sha256 moved from `ce4f1954b0c5e97009dedf6c2d7604d8c225a5633c96090d6e2b20f9e04a9272` to `b51eed634fb5ce213e3a2e1f85c83749e97ee42519b33d1d60ad7ad0c0047860`. See RESTATEMENTS.md.
+- engine restatement: 2026-10-07. `src/paper_trade.py` sha256 moved from `54e70b314dc0b959b45573343a234f46bb396588ed7f65dff678d79c88d23f9d` to `ebda9df4a672481d28b0464e7f5b50abf430034be63eb65bc582a27462417b4b` after #502. The change is the paper CSV past-day lock. `order_fees` is unchanged. See RESTATEMENTS.md.
 - fingerprint_scope: SHA-256 of the UTF-8 bytes after the line `<!-- BEGIN COVERED -->`, including the final newline. Line endings are LF. The header above the marker is not covered.
 - study: `research/hot_n4_clean_v4/`. New files only. No edit to an engine, to `src/`, to `forward_shadow`, to `hot_n4_clean_v1`, to `hot_n4_clean_v2`, to `hot_n4_clean_v3`, or to another study.
 - sessions: 2026-08-13 through 2026-09-25. The before window ends 2026-09-11. The after window starts 2026-09-14 and can only reject.
@@ -377,7 +378,7 @@ Engine files, content sha256. A later run whose bytes differ stops.
 | `src/ohlc_ripper.py` | `7b3d674b2f4b5f5e7c52331543b7e0abf24219c3a3d0f2a178476842783bf641` |
 | `src/gainer_capture.py` | `ee03ea4d5cfad51dddcf3dc24b434b63fd19169ad0aacf657d505f5c5da82af5` |
 | `src/gainer_asof.py` | `43b36e5a17b7ffb07ddbee6ecb7b047a03281513fd9670d1828abf427e27f51e` |
-| `src/paper_trade.py` | `54e70b314dc0b959b45573343a234f46bb396588ed7f65dff678d79c88d23f9d` |
+| `src/paper_trade.py` | `ebda9df4a672481d28b0464e7f5b50abf430034be63eb65bc582a27462417b4b` |
 | `src/ticker_lookback.py` | `1e08f2f42c732407f834847f2e347b0218d8a18b2612a2ee565f24bcc6a2731e` |
 
 ## 12. Rule 9 — Fills, slippage, and the liquidity cap

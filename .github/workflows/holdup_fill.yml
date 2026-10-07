@@ -72,8 +72,10 @@ jobs:
             research/hot_n4_clean_v4/forward/prices.jsonl
             research/hot_n4_clean_v4/forward/PRICE_LEDGER.jsonl
             research/hot_n4_clean_v4/forward/price_revisions.jsonl
+            research/hot_n4_clean_v4/forward/mark_notes.jsonl
             dashboard/holdup/log.json
             dashboard/holdup/status.json
+            dashboard/holdup/mark_notes.json
           )
           for path in "${files[@]}"; do
             if [ -f "$path" ]; then
