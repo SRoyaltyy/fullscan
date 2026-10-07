@@ -1,7 +1,7 @@
 {
-  "date": "2026-09-28",
-  "latest_skip": null,
+  "date": "2026-09-29",
+  "latest_skip": "missing: plan not sealed before open",
   "pending": null,
-  "phase": "mark",
+  "phase": "missing",
   "recipe": "union_hot_n4_holdup__w0"
 }

@@ -4892,5 +4892,13 @@
     "sha256": "e407b89288c65bbf1a9995681029e6dbe9f9776b9614deb3e5ce5f74a59de549",
     "shares": 35,
     "ticker": "TJGC"
+  },
+  {
+    "committed_at": "2026-10-07T19:16:56Z",
+    "date": "2026-09-29",
+    "kind": "missing",
+    "reason": "missing: plan not sealed before open",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "a9802e1eff9eaf4ed7931624db8cd2436b856beed6dd39d1770a7e1abf64e9be"
   }
 ]
