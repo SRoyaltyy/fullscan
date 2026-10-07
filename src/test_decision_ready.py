@@ -38,16 +38,16 @@ def test_dispatch_for_upstream_input_but_not_own_publication():
 
 
 def test_notify_skips_when_landed_ticket_has_the_same_fingerprint(tmp_path):
-    # notify_changed only treats paths that contain today's ET date as relevant.
-    date = dr.datetime.now(dr.ET).date().isoformat()
+    # notify_changed keeps a path only when it contains the ET date from its
+    # clock. Freeze that clock and build every path from the same session.
+    frozen = dr.datetime(2026, 10, 6, 16, 0, tzinfo=dr.ET)
+    date = frozen.date().isoformat()
     ticket = tmp_path / 'data' / 'day_board' / f'{date}_strategy_tickets.json'
     ticket.parent.mkdir(parents=True)
     ticket.write_text(json.dumps({
         'decision_readiness': {'fingerprint': 'abc', 'ready': True},
     }))
     proof = {'date': date, 'ready': True, 'fingerprint': 'abc', 'inputs': {}, 'blockers': []}
-    # notify_changed uses the civil clock, and only a path for that day counts.
-    frozen = dr.datetime(2026, 10, 6, 16, 0, tzinfo=dr.ET)
     with patch.object(dr, 'ROOT', tmp_path), \
          patch.object(dr, 'evaluate', return_value=proof), \
          patch.object(dr, 'dispatch', return_value=True) as dispatch, \
