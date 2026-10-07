@@ -90,6 +90,119 @@ def hit_tally(looks_by_date: dict, hard_dates) -> dict:
     }
 
 
+def _lot_ticker(token) -> str:
+    """``GLND×973`` / ``GLND`` → ticker. Display lots, not a book rewrite.
+
+    The separator is the multiplication sign. A ticker such as ABVX must
+    stay intact.
+    """
+    text = str(token or "").strip()
+    if not text:
+        return ""
+    if "×" in text:
+        text = text.split("×", 1)[0]
+    return fm._tick(text)
+
+
+def held_or_traded_tickers(payload: dict) -> set[str]:
+    """Names the page marks as bought, sold, shorted, or already held."""
+    out: set[str] = set()
+    for bk in (payload.get("books") or {}).values():
+        for t in (bk or {}).get("trades") or []:
+            if t.get("side") in ("BUY", "SELL", "SHORT", "COVER") and t.get("ticker"):
+                out.add(fm._tick(t["ticker"]))
+    for days in (payload.get("daily") or {}).values():
+        for row in days or []:
+            if not isinstance(row, dict):
+                continue
+            for key in ("open_held", "close_held", "held", "bought", "sold"):
+                for item in row.get(key) or []:
+                    if isinstance(item, dict):
+                        name = fm._tick(item.get("ticker"))
+                    else:
+                        name = _lot_ticker(item)
+                    if name:
+                        out.add(name)
+    for paths in (payload.get("starts") or {}).values():
+        for path in paths or []:
+            if not isinstance(path, dict):
+                continue
+            for item in path.get("buys") or []:
+                if isinstance(item, dict) and item.get("ticker"):
+                    out.add(fm._tick(item["ticker"]))
+            for item in path.get("bought") or []:
+                name = _lot_ticker(item) if not isinstance(item, dict) else fm._tick(item.get("ticker"))
+                if name:
+                    out.add(name)
+    return {t for t in out if t}
+
+
+def yahoo_open_close(ticker: str, date: str) -> list | None:
+    """Yahoo regular-session open/close. ``auto_adjust=False`` is split-adjusted.
+
+    The price store locks that print. A missing bar stays missing — the
+    page falls back to equity − open equity instead of a Finviz last-trade.
+    """
+    bar = tl._official_ohlc(ticker, date) or {}
+    o = fm._finite(bar.get("open"))
+    c = fm._finite(bar.get("close"))
+    if o is None and c is None:
+        return None
+    return [
+        None if o is None else round(float(o), 4),
+        None if c is None else round(float(c), 4),
+    ]
+
+
+def _bar_complete(row) -> bool:
+    return (
+        isinstance(row, (list, tuple))
+        and len(row) >= 2
+        and row[0] is not None
+        and row[1] is not None
+    )
+
+
+def cover_sim_dates(payload: dict) -> dict:
+    """Make ``sim.dates`` match page dates and fill tape holes.
+
+    ``send_inputs`` days are appended onto dates / daily / series without
+    a remine, so the replay pack used to stop on the last panel session.
+    This only fills display prices. It does not rewrite buys, sells, or
+    the scoreboard.
+    """
+    dates = [str(d)[:10] for d in (payload.get("dates") or []) if d]
+    if not dates:
+        return payload
+    sim = dict(payload.get("sim") or {})
+    tape: dict[str, dict] = {}
+    for ticker, by in (sim.get("tape") or {}).items():
+        if isinstance(by, dict):
+            tape[fm._tick(ticker)] = dict(by)
+    for ticker in sorted(held_or_traded_tickers(payload)):
+        have = tape.setdefault(ticker, {})
+        for date in dates:
+            if _bar_complete(have.get(date)):
+                continue
+            oc = yahoo_open_close(ticker, date)
+            if oc is None:
+                continue
+            prev = have.get(date)
+            if isinstance(prev, (list, tuple)) and len(prev) >= 2:
+                have[date] = [
+                    prev[0] if prev[0] is not None else oc[0],
+                    prev[1] if prev[1] is not None else oc[1],
+                ]
+            else:
+                have[date] = oc
+        if not have:
+            tape.pop(ticker, None)
+    sim["dates"] = list(dates)
+    sim["tape"] = tape
+    payload["sim"] = sim
+    return payload
+
+
 def build_sim_pack(panel: dict) -> dict:
     """Rows + tape + fee schedule. No same-day Change%."""
     from . import factor_mine_probe as fmp
