@@ -6,6 +6,9 @@ name: Deploy dashboard to GitHub Pages
 # Catalyst FAIL / sector LLM / OpenClaw do not block. Primary publish
 # is often inside stock_book_all.yml; this remains for resilience.
 # Always overlay named dashboard folders from main so force-orphan deploys cannot 404 those pages.
+# No session_date: the gate uses the latest completed NYSE session
+# (before 09:30 ET, or a weekend/holiday, that is the previous session).
+# A gate block fails the job. A skipped Download/Publish is never green.
 
 on:
   workflow_run:
@@ -25,7 +28,7 @@ on:
   workflow_dispatch:
     inputs:
       session_date:
-        description: "YYYY-MM-DD (empty = today ET)"
+        description: "YYYY-MM-DD (empty = latest completed NYSE session)"
         required: false
         default: ""
       force:
@@ -62,18 +65,33 @@ jobs:
         run: |
           set -euo pipefail
           DATE="${SESSION_DATE:-}"
-          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
           if [ "${FORCE}" = "true" ]; then
             echo "ready=yes" >> "$GITHUB_OUTPUT"
             echo "force=true — publish even if required roles are missing"
             exit 0
           fi
-          if python3 -m src.pages_publish_gate --date "$DATE"; then
-            echo "ready=yes" >> "$GITHUB_OUTPUT"
-          else
-            echo "ready=no" >> "$GITHUB_OUTPUT"
-            echo "required files not OK — skip Pages (catalyst FAIL alone is not a blocker)"
+          args=()
+          if [ -n "$DATE" ]; then
+            args+=(--date "$DATE")
           fi
+          set +e
+          log=$(python3 -m src.pages_publish_gate "${args[@]}")
+          status=$?
+          set -e
+          printf '%s\n' "$log"
+          if [ "$status" -ne 0 ]; then
+            echo "ready=no" >> "$GITHUB_OUTPUT"
+            echo "ERROR: Pages publish refused (gate exit ${status}). Download and Publish are skipped. This workflow fails on purpose: a green run must not leave stale Pages live."
+            printf '%s\n' "$log" | tail -n 5
+            exit 1
+          fi
+          echo "ready=yes" >> "$GITHUB_OUTPUT"
+
+      - name: Fail closed when Pages publish did not run
+        if: always() && steps.pages_gate.outputs.ready != 'yes'
+        run: |
+          echo "ERROR: Download and Publish did not run (pages_gate.ready='${{ steps.pages_gate.outputs.ready }}'). A skipped Pages publish is a failed deploy, not a green no-op."
+          exit 1
 
       - name: Download dashboard artifact (from triggering run or latest on main)
         if: steps.pages_gate.outputs.ready == 'yes'

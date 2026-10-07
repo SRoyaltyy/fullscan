@@ -10,9 +10,13 @@ import shlex
 import shutil
 import subprocess
 import tempfile
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from src import pages_publish_gate as gate
+
+ET = ZoneInfo("America/New_York")
 
 
 def _proc(key: str, files: list[dict], status: str = "OK") -> dict:
@@ -299,6 +303,125 @@ def test_publish_restores_h1_and_holdup_aliases() -> None:
         assert _blob(intake_bare, "dashboard/news-intake/index.html") == "intake-from-main"
 
 
+def test_preopen_2026_10_07_resolves_to_2026_10_06() -> None:
+    """Before the bell, today ET is not the session the day board is for."""
+    preopen = datetime(2026, 10, 7, 8, 40, tzinfo=ET)
+    assert gate.latest_completed_session(preopen) == "2026-10-06"
+    assert gate.resolve_date("", now=preopen) == "2026-10-06"
+    assert gate.resolve_date("2026-10-07", now=preopen) == "2026-10-07"
+    at_bell = datetime(2026, 10, 7, 9, 30, tzinfo=ET)
+    assert gate.latest_completed_session(at_bell) == "2026-10-07"
+    # Naive timestamps are ET, same as the rest of the clock helpers.
+    assert gate.latest_completed_session(datetime(2026, 10, 7, 8, 40)) == "2026-10-06"
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        _board(root, "2026-10-06", [
+            _proc("stock_book", [_file("book_json", "required", "OK")]),
+            _proc("publish", [_file("dash_html", "required", "OK")]),
+        ])
+        _fm_and_tickets(root, "2026-10-06")
+        ready = gate.evaluate("", root=root, now=preopen)
+        assert ready["date"] == "2026-10-06"
+        assert ready["ready"] is True
+        blocked = gate.evaluate("2026-10-07", root=root, now=preopen)
+        assert blocked["date"] == "2026-10-07"
+        assert blocked["ready"] is False
+
+
+def test_weekend_resolves_to_friday() -> None:
+    """Saturday, Sunday, and Monday before the open stay on Friday."""
+    assert gate.latest_completed_session(
+        datetime(2026, 10, 10, 12, 0, tzinfo=ET)) == "2026-10-09"
+    assert gate.latest_completed_session(
+        datetime(2026, 10, 11, 18, 0, tzinfo=ET)) == "2026-10-09"
+    assert gate.latest_completed_session(
+        datetime(2026, 10, 5, 9, 0, tzinfo=ET)) == "2026-10-02"
+    # Labor Day is not a session. Tuesday morning still closes Friday.
+    assert gate.latest_completed_session(
+        datetime(2026, 9, 7, 15, 0, tzinfo=ET)) == "2026-09-04"
+    assert gate.latest_completed_session(
+        datetime(2026, 9, 8, 8, 0, tzinfo=ET)) == "2026-09-04"
+    assert gate.latest_completed_session(
+        datetime(2026, 9, 8, 9, 30, tzinfo=ET)) == "2026-09-08"
+
+
+def _workflow_gate_script() -> str:
+    dep = (Path(__file__).resolve().parent.parent
+           / ".github" / "workflows" / "deploy-dashboard.yml").read_text(
+               encoding="utf-8")
+    start = dep.index("id: pages_gate")
+    rest = dep[start:]
+    body = rest.split("run: |", 1)[1]
+    lines = []
+    for line in body.splitlines()[1:]:
+        if line.startswith("      - name:"):
+            break
+        if line.startswith("          "):
+            lines.append(line[10:])
+        elif line.strip() == "":
+            lines.append("")
+        else:
+            break
+    return "\n".join(lines).strip() + "\n"
+
+
+def _run_gate_step(**env: str) -> subprocess.CompletedProcess[str]:
+    script = _workflow_gate_script()
+    assert "exit 1" in script
+    assert 'DATE="${DATE:-$(TZ=America/New_York date +%F)}"' not in script
+    with tempfile.TemporaryDirectory() as d:
+        out = Path(d) / "github_output"
+        merged = os.environ.copy()
+        merged["GITHUB_OUTPUT"] = str(out)
+        merged["PYTHONPATH"] = str(Path(__file__).resolve().parent.parent)
+        merged.pop("SESSION_DATE", None)
+        merged.pop("FORCE", None)
+        merged.update(env)
+        proc = subprocess.run(
+            ["bash", "-c", script],
+            cwd=Path(__file__).resolve().parent.parent,
+            env=merged,
+            capture_output=True,
+            text=True,
+            timeout=60,
+            check=False,
+        )
+        proc.github_output = out.read_text(encoding="utf-8") if out.is_file() else ""  # type: ignore[attr-defined]
+        return proc
+
+
+def test_gate_block_fails_the_workflow() -> None:
+    """A refused publish must be a non-zero step, never a green skip."""
+    blocked = _run_gate_step(SESSION_DATE="2099-01-04", FORCE="false")
+    text = blocked.stdout + blocked.stderr
+    assert blocked.returncode != 0, text
+    assert "FAIL" in text
+    assert "2099-01-04" in text
+    assert "Pages publish refused" in text
+    assert "ready=no" in blocked.github_output  # type: ignore[attr-defined]
+    assert "ready=yes" not in blocked.github_output  # type: ignore[attr-defined]
+
+    forced = _run_gate_step(SESSION_DATE="2099-01-04", FORCE="true")
+    assert forced.returncode == 0, forced.stdout + forced.stderr
+    assert "ready=yes" in forced.github_output  # type: ignore[attr-defined]
+    assert "force=true" in forced.stdout
+
+    explicit = _run_gate_step(SESSION_DATE="2026-10-06", FORCE="")
+    assert explicit.returncode == 0, explicit.stdout + explicit.stderr
+    assert "2026-10-06" in explicit.stdout
+    assert "READY" in explicit.stdout
+    assert "ready=yes" in explicit.github_output  # type: ignore[attr-defined]
+
+    dep = (Path(__file__).resolve().parent.parent
+           / ".github" / "workflows" / "deploy-dashboard.yml").read_text(
+               encoding="utf-8")
+    assert "Fail closed when Pages publish did not run" in dep
+    assert "steps.pages_gate.outputs.ready != 'yes'" in dep
+    assert "exit 1" in dep
+    assert dep.count("holdup h1") >= 2
+    assert "empty = latest completed NYSE session" in dep
+
+
 def test_workflows_wire_the_gate() -> None:
     root = Path(__file__).resolve().parent.parent
     dep = (root / ".github" / "workflows" / "deploy-dashboard.yml").read_text(
@@ -323,6 +446,9 @@ def main() -> None:
         test_dash_template_has_session_and_pack_stamp,
         test_paper_book_page_is_on_the_pages_deploy,
         test_publish_restores_h1_and_holdup_aliases,
+        test_preopen_2026_10_07_resolves_to_2026_10_06,
+        test_weekend_resolves_to_friday,
+        test_gate_block_fails_the_workflow,
         test_workflows_wire_the_gate,
     ]
     for fn in tests:
