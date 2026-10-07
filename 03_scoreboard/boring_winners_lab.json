@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-06T13:11:30.793132-04:00",
+  "generated": "2026-10-07T10:25:45.153792-04:00",
   "capital": 10000.0,
   "dates": [
     "2026-08-13",
@@ -42,7 +42,8 @@
     "2026-10-01",
     "2026-10-02",
     "2026-10-05",
-    "2026-10-06"
+    "2026-10-06",
+    "2026-10-07"
   ],
   "scenarios": [
     {
@@ -277,6 +278,7 @@
       0.18,
       0.74,
       0.67,
+      0.55,
       -0.02
     ],
     "equity": [
@@ -320,7 +322,8 @@
       10059.79,
       10134.23,
       10202.13,
-      10200.09
+      10258.24,
+      10256.19
     ]
   },
   "sleeves": {
@@ -336,15 +339,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 6,
-        "n_loss_days": 33,
-        "p_loss_day": 0.8049,
-        "p_win_day": 0.1463,
-        "mean_day": -6.521,
+        "n_loss_days": 34,
+        "p_loss_day": 0.8095,
+        "p_win_day": 0.1429,
+        "mean_day": -6.761,
         "avg_win_day": 0.697,
-        "avg_loss_day": -8.229,
-        "cum_sum": -267.378
+        "avg_loss_day": -8.475,
+        "cum_sum": -283.956
       },
       "equity": [
         9953.57,
@@ -387,9 +390,10 @@
         336.78,
         335.35,
         334.71,
-        248.06
+        333.72,
+        192.99
       ],
-      "final": 248.06,
+      "final": 192.99,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -8805,44 +8809,213 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -25.888,
-          "equity": 248.06,
-          "n_held": 12,
-          "n_buy": 0,
+          "day_pnl": -0.296,
+          "equity": 333.72,
+          "n_held": 8,
+          "n_buy": 5,
           "n_sell": 2,
-          "n_skip": 12,
-          "n_cand": 12,
+          "n_skip": 3,
+          "n_cand": 8,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "MQ",
+            "NTSK",
+            "PRTH",
+            "TLS",
+            "CGNT"
+          ],
           "sold": [
             "DVN",
             "RRC"
+          ],
+          "held": [
+            "MQ",
+            "NTSK",
+            "PRTH",
+            "TLS",
+            "CGNT"
+          ],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 2,
+              "fees": 0.337,
+              "amount": 33.44,
+              "cash_after": 301.74
+            },
+            {
+              "ticker": "NTSK",
+              "side": "buy",
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 18.829999923706055,
+              "low": 18.780000686645508,
+              "high": 20.385000228881836,
+              "close": 19.639999389648438,
+              "shares": 1,
+              "fees": 0.1994,
+              "amount": 19.84,
+              "cash_after": 281.9
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 4,
+              "fees": 0.3232,
+              "amount": 31.44,
+              "cash_after": 250.46
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 7,
+              "fees": 0.3248,
+              "amount": 30.7,
+              "cash_after": 219.75
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 3,
+              "fees": 0.2739,
+              "amount": 26.76,
+              "cash_after": 192.99
+            }
+          ],
+          "sells": [
+            {
+              "ticker": "DVN",
+              "side": "sell",
+              "sell_px": 48.02000045776367,
+              "sell_when": "16:00 ET close",
+              "buy_px": 47.97999954223633,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.5032,
+              "amount": 47.52,
+              "realized_pnl": -0.95,
+              "cash_after": 295.58
+            },
+            {
+              "ticker": "RRC",
+              "side": "sell",
+              "sell_px": 40.02000045776367,
+              "sell_when": "16:00 ET close",
+              "buy_px": 38.66999816894531,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.4232,
+              "amount": 39.6,
+              "realized_pnl": 0.54,
+              "cash_after": 335.18
+            }
+          ],
+          "cash": 192.99,
+          "invested": 140.73,
+          "fees_cum": 677.21
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -42.17,
+          "equity": 192.99,
+          "n_held": 2,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 2,
+          "n_cand": 2,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MQ",
+            "NTSK",
+            "PRTH",
+            "TLS",
+            "CGNT"
           ],
           "held": [],
           "buys": [],
           "sells": [
             {
-              "ticker": "DVN",
+              "ticker": "MQ",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 47.97999954223633,
+              "buy_px": 16.549999237060547,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             },
             {
-              "ticker": "RRC",
+              "ticker": "NTSK",
               "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 38.66999816894531,
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRTH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TLS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CGNT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.829999923706055,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 248.06,
+          "cash": 192.99,
           "invested": 0.0,
-          "fees_cum": 674.82
+          "fees_cum": 677.21
         }
       ]
     },
@@ -8858,15 +9031,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 5,
-        "n_loss_days": 34,
-        "p_loss_day": 0.8293,
-        "p_win_day": 0.122,
-        "mean_day": -6.442,
+        "n_loss_days": 35,
+        "p_loss_day": 0.8333,
+        "p_win_day": 0.119,
+        "mean_day": -6.741,
         "avg_win_day": 0.23,
-        "avg_loss_day": -7.802,
-        "cum_sum": -264.103
+        "avg_loss_day": -8.122,
+        "cum_sum": -283.105
       },
       "equity": [
         9955.38,
@@ -8909,9 +9082,10 @@
         388.83,
         388.44,
         387.8,
-        300.48
+        386.02,
+        227.52
       ],
-      "final": 300.48,
+      "final": 227.52,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -18850,54 +19024,309 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -22.517,
-          "equity": 300.48,
-          "n_held": 13,
-          "n_buy": 0,
+          "day_pnl": -0.459,
+          "equity": 386.02,
+          "n_held": 12,
+          "n_buy": 8,
           "n_sell": 3,
-          "n_skip": 13,
+          "n_skip": 5,
           "n_cand": 13,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
           "sold": [
             "GPRK",
             "BETA",
             "MEC"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 1,
+              "fees": 0.1685,
+              "amount": 16.72,
+              "cash_after": 370.94
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 7,
+              "fees": 0.3248,
+              "amount": 30.7,
+              "cash_after": 340.24
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 3,
+              "fees": 0.2424,
+              "amount": 23.58,
+              "cash_after": 316.65
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 2,
+              "fees": 0.1826,
+              "amount": 17.84,
+              "cash_after": 298.81
+            },
+            {
+              "ticker": "NTSK",
+              "side": "buy",
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 18.829999923706055,
+              "low": 18.780000686645508,
+              "high": 20.385000228881836,
+              "close": 19.639999389648438,
+              "shares": 1,
+              "fees": 0.1994,
+              "amount": 19.84,
+              "cash_after": 278.97
+            },
+            {
+              "ticker": "SG",
+              "side": "buy",
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.079999923706055,
+              "low": 9.039999961853027,
+              "high": 9.34000015258789,
+              "close": 9.140000343322754,
+              "shares": 2,
+              "fees": 0.1888,
+              "amount": 18.47,
+              "cash_after": 260.5
+            },
+            {
+              "ticker": "SIBN",
+              "side": "buy",
+              "buy_px": 19.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 20.0,
+              "low": 19.209999084472656,
+              "high": 20.0,
+              "close": 19.549999237060547,
+              "shares": 1,
+              "fees": 0.1985,
+              "amount": 19.75,
+              "cash_after": 240.75
+            },
+            {
+              "ticker": "BVS",
+              "side": "buy",
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.5,
+              "low": 13.069999694824219,
+              "high": 13.619000434875488,
+              "close": 13.100000381469727,
+              "shares": 1,
+              "fees": 0.134,
+              "amount": 13.23,
+              "cash_after": 227.52
+            }
+          ],
           "sells": [
             {
               "ticker": "GPRK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 11.4399995803833,
+              "sell_when": "16:00 ET close",
               "buy_px": 11.279999732971191,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.3722,
+              "amount": 33.95,
+              "realized_pnl": -0.24,
+              "cash_after": 334.43
             },
             {
               "ticker": "BETA",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 20.899999618530273,
+              "sell_when": "16:00 ET close",
               "buy_px": 20.700000762939453,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.232,
+              "amount": 20.67,
+              "realized_pnl": -0.24,
+              "cash_after": 355.09
             },
             {
               "ticker": "MEC",
               "side": "sell",
+              "sell_px": 16.459999084472656,
+              "sell_when": "16:00 ET close",
+              "buy_px": 16.389999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.3552,
+              "amount": 32.56,
+              "realized_pnl": -0.55,
+              "cash_after": 387.66
+            }
+          ],
+          "cash": 227.52,
+          "invested": 158.5,
+          "fees_cum": 788.34
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -41.06,
+          "equity": 227.52,
+          "n_held": 7,
+          "n_buy": 0,
+          "n_sell": 8,
+          "n_skip": 7,
+          "n_cand": 7,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MQ",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 16.389999389648438,
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TLS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRTH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CGNT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "NTSK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SIBN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BVS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.100000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 300.48,
+          "cash": 227.52,
           "invested": 0.0,
-          "fees_cum": 785.75
+          "fees_cum": 788.34
         }
       ]
     },
@@ -18913,15 +19342,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 5,
-        "n_loss_days": 35,
-        "p_loss_day": 0.8537,
-        "p_win_day": 0.122,
-        "mean_day": 7.893,
+        "n_loss_days": 36,
+        "p_loss_day": 0.8571,
+        "p_win_day": 0.119,
+        "mean_day": 7.721,
         "avg_win_day": 132.656,
-        "avg_loss_day": -9.705,
-        "cum_sum": 323.616
+        "avg_loss_day": -9.417,
+        "cum_sum": 324.282
       },
       "equity": [
         9880.7,
@@ -18964,9 +19393,10 @@
         1112.78,
         1104.75,
         1098.7,
-        697.6
+        1083.87,
+        710.03
       ],
-      "final": 697.6,
+      "final": 710.03,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -38243,18 +38673,31 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -36.507,
-          "equity": 697.6,
-          "n_held": 25,
-          "n_buy": 0,
-          "n_sell": 11,
-          "n_skip": 24,
-          "n_cand": 25,
+          "day_pnl": -1.35,
+          "equity": 1083.87,
+          "n_held": 22,
+          "n_buy": 11,
+          "n_sell": 12,
+          "n_skip": 12,
+          "n_cand": 23,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "SMMT",
+            "MOMO",
+            "BVS",
+            "MUR",
+            "SG",
+            "TSCO",
+            "SIBN",
+            "ACVA",
+            "BOBS",
+            "PEPG",
+            "ALVO"
+          ],
           "sold": [
             "COLL",
             "KURA",
+            "NKE",
             "DVN",
             "GPRK",
             "BETA",
@@ -38266,113 +38709,489 @@
             "GRAB"
           ],
           "held": [
-            "NKE"
+            "SMMT",
+            "MOMO",
+            "BVS",
+            "MUR",
+            "SG",
+            "TSCO",
+            "SIBN",
+            "ACVA",
+            "BOBS",
+            "PEPG",
+            "ALVO"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "SMMT",
+              "side": "buy",
+              "buy_px": 17.309999465942383,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.5,
+              "low": 16.530000686645508,
+              "high": 17.530000686645508,
+              "close": 17.309999465942383,
+              "shares": 2,
+              "fees": 0.3522,
+              "amount": 34.97,
+              "cash_after": 1052.77
+            },
+            {
+              "ticker": "MOMO",
+              "side": "buy",
+              "buy_px": 4.769999980926514,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.639999866485596,
+              "low": 4.610000133514404,
+              "high": 4.800000190734863,
+              "close": 4.769999980926514,
+              "shares": 10,
+              "fees": 0.507,
+              "amount": 48.21,
+              "cash_after": 1004.57
+            },
+            {
+              "ticker": "BVS",
+              "side": "buy",
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.5,
+              "low": 13.069999694824219,
+              "high": 13.619000434875488,
+              "close": 13.100000381469727,
+              "shares": 3,
+              "fees": 0.402,
+              "amount": 39.7,
+              "cash_after": 964.86
+            },
+            {
+              "ticker": "MUR",
+              "side": "buy",
+              "buy_px": 37.790000915527344,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 38.189998626708984,
+              "low": 37.68000030517578,
+              "high": 38.494998931884766,
+              "close": 37.790000915527344,
+              "shares": 1,
+              "fees": 0.3809,
+              "amount": 38.17,
+              "cash_after": 926.69
+            },
+            {
+              "ticker": "SG",
+              "side": "buy",
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.079999923706055,
+              "low": 9.039999961853027,
+              "high": 9.34000015258789,
+              "close": 9.140000343322754,
+              "shares": 4,
+              "fees": 0.3776,
+              "amount": 36.94,
+              "cash_after": 889.76
+            },
+            {
+              "ticker": "TSCO",
+              "side": "buy",
+              "buy_px": 32.290000915527344,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 31.399999618530273,
+              "low": 31.219999313354492,
+              "high": 32.6150016784668,
+              "close": 32.290000915527344,
+              "shares": 1,
+              "fees": 0.3259,
+              "amount": 32.62,
+              "cash_after": 857.14
+            },
+            {
+              "ticker": "SIBN",
+              "side": "buy",
+              "buy_px": 19.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 20.0,
+              "low": 19.209999084472656,
+              "high": 20.0,
+              "close": 19.549999237060547,
+              "shares": 1,
+              "fees": 0.1985,
+              "amount": 19.75,
+              "cash_after": 837.39
+            },
+            {
+              "ticker": "ACVA",
+              "side": "buy",
+              "buy_px": 10.4399995803833,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 10.479999542236328,
+              "low": 10.4399995803833,
+              "high": 10.479999542236328,
+              "close": 10.4399995803833,
+              "shares": 3,
+              "fees": 0.3222,
+              "amount": 31.64,
+              "cash_after": 805.75
+            },
+            {
+              "ticker": "BOBS",
+              "side": "buy",
+              "buy_px": 14.680000305175781,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 14.15999984741211,
+              "low": 13.960000038146973,
+              "high": 14.789999961853027,
+              "close": 14.680000305175781,
+              "shares": 2,
+              "fees": 0.2996,
+              "amount": 29.66,
+              "cash_after": 776.09
+            },
+            {
+              "ticker": "PEPG",
+              "side": "buy",
+              "buy_px": 2.309999942779541,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 2.380000114440918,
+              "low": 2.259999990463257,
+              "high": 2.384999990463257,
+              "close": 2.309999942779541,
+              "shares": 15,
+              "fees": 0.3915,
+              "amount": 35.04,
+              "cash_after": 741.05
+            },
+            {
+              "ticker": "ALVO",
+              "side": "buy",
+              "buy_px": 6.139999866485596,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 6.070000171661377,
+              "low": 6.0,
+              "high": 6.164999961853027,
+              "close": 6.139999866485596,
+              "shares": 5,
+              "fees": 0.322,
+              "amount": 31.02,
+              "cash_after": 710.03
+            }
+          ],
           "sells": [
             {
               "ticker": "COLL",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 21.8799991607666,
+              "sell_when": "16:00 ET close",
               "buy_px": 22.020000457763672,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.2418,
+              "amount": 21.64,
+              "realized_pnl": -0.61,
+              "cash_after": 685.28
             },
             {
               "ticker": "KURA",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 10.529999732971191,
+              "sell_when": "16:00 ET close",
               "buy_px": 10.649999618530273,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.3449,
+              "amount": 31.25,
+              "realized_pnl": -1.03,
+              "cash_after": 716.52
+            },
+            {
+              "ticker": "NKE",
+              "side": "sell",
+              "sell_px": 34.61000061035156,
+              "sell_when": "16:00 ET close",
+              "buy_px": 33.959999084472656,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.3691,
+              "amount": 34.24,
+              "realized_pnl": -0.06,
+              "cash_after": 750.77
             },
             {
               "ticker": "DVN",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 48.02000045776367,
+              "sell_when": "16:00 ET close",
               "buy_px": 47.97999954223633,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.5032,
+              "amount": 47.52,
+              "realized_pnl": -0.95,
+              "cash_after": 798.28
             },
             {
               "ticker": "GPRK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 11.4399995803833,
+              "sell_when": "16:00 ET close",
               "buy_px": 11.279999732971191,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 4,
+              "fees": 0.4896,
+              "amount": 45.27,
+              "realized_pnl": -0.31,
+              "cash_after": 843.55
             },
             {
               "ticker": "BETA",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 20.899999618530273,
+              "sell_when": "16:00 ET close",
               "buy_px": 20.700000762939453,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.444,
+              "amount": 41.36,
+              "realized_pnl": -0.46,
+              "cash_after": 884.91
             },
             {
               "ticker": "PNNT",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 3.2100000381469727,
+              "sell_when": "16:00 ET close",
               "buy_px": 3.2300000190734863,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 14,
+              "fees": 0.5114,
+              "amount": 44.43,
+              "realized_pnl": -1.29,
+              "cash_after": 929.34
             },
             {
               "ticker": "MEC",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 16.459999084472656,
+              "sell_when": "16:00 ET close",
               "buy_px": 16.389999389648438,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.3552,
+              "amount": 32.56,
+              "realized_pnl": -0.55,
+              "cash_after": 961.9
             },
             {
               "ticker": "ARCT",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 13.0,
+              "sell_when": "16:00 ET close",
               "buy_px": 14.65999984741211,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.286,
+              "amount": 25.71,
+              "realized_pnl": -3.91,
+              "cash_after": 987.62
             },
             {
               "ticker": "NVAX",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 11.319999694824219,
+              "sell_when": "16:00 ET close",
               "buy_px": 12.5600004196167,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.3686,
+              "amount": 33.59,
+              "realized_pnl": -4.47,
+              "cash_after": 1021.21
             },
             {
               "ticker": "BEKE",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 16.760000228881836,
+              "sell_when": "16:00 ET close",
               "buy_px": 16.5,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.3612,
+              "amount": 33.16,
+              "realized_pnl": -0.18,
+              "cash_after": 1054.37
             },
             {
               "ticker": "GRAB",
               "side": "sell",
+              "sell_px": 3.069999933242798,
+              "sell_when": "16:00 ET close",
+              "buy_px": 3.1700000762939453,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 11,
+              "fees": 0.3907,
+              "amount": 33.38,
+              "realized_pnl": -1.87,
+              "cash_after": 1087.75
+            }
+          ],
+          "cash": 710.03,
+          "invested": 373.84,
+          "fees_cum": 2640.06
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -34.491,
+          "equity": 710.03,
+          "n_held": 25,
+          "n_buy": 0,
+          "n_sell": 11,
+          "n_skip": 25,
+          "n_cand": 25,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "SMMT",
+            "MOMO",
+            "BVS",
+            "MUR",
+            "SG",
+            "TSCO",
+            "SIBN",
+            "ACVA",
+            "BOBS",
+            "PEPG",
+            "ALVO"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "SMMT",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 3.1700000762939453,
+              "buy_px": 17.309999465942383,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "MOMO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.769999980926514,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BVS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "MUR",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 37.790000915527344,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TSCO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 32.290000915527344,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SIBN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ACVA",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 10.4399995803833,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BOBS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 14.680000305175781,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PEPG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 2.309999942779541,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ALVO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 6.139999866485596,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 663.64,
-          "invested": 33.96,
-          "fees_cum": 2631.52
+          "cash": 710.03,
+          "invested": 0.0,
+          "fees_cum": 2640.06
         }
       ]
     },
@@ -38388,15 +39207,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 4,
-        "n_loss_days": 35,
-        "p_loss_day": 0.8537,
-        "p_win_day": 0.0976,
-        "mean_day": -6.641,
+        "n_loss_days": 36,
+        "p_loss_day": 0.8571,
+        "p_win_day": 0.0952,
+        "mean_day": -7.114,
         "avg_win_day": 0.638,
-        "avg_loss_day": -7.852,
-        "cum_sum": -272.274
+        "avg_loss_day": -8.371,
+        "cum_sum": -298.8
       },
       "equity": [
         9918.74,
@@ -38439,9 +39258,10 @@
         304.63,
         304.78,
         303.94,
-        244.29
+        302.42,
+        164.36
       ],
-      "final": 244.29,
+      "final": 164.36,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -45544,54 +46364,255 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -19.626,
-          "equity": 244.29,
-          "n_held": 10,
-          "n_buy": 0,
+          "day_pnl": -0.5,
+          "equity": 302.42,
+          "n_held": 9,
+          "n_buy": 6,
           "n_sell": 3,
-          "n_skip": 10,
+          "n_skip": 4,
           "n_cand": 10,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG"
+          ],
           "sold": [
             "GPRK",
             "BETA",
             "MEC"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG"
+          ],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 2,
+              "fees": 0.337,
+              "amount": 33.44,
+              "cash_after": 270.41
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 6,
+              "fees": 0.2784,
+              "amount": 26.32,
+              "cash_after": 244.1
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 3,
+              "fees": 0.2424,
+              "amount": 23.58,
+              "cash_after": 220.51
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 2,
+              "fees": 0.1826,
+              "amount": 17.84,
+              "cash_after": 202.67
+            },
+            {
+              "ticker": "NTSK",
+              "side": "buy",
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 18.829999923706055,
+              "low": 18.780000686645508,
+              "high": 20.385000228881836,
+              "close": 19.639999389648438,
+              "shares": 1,
+              "fees": 0.1994,
+              "amount": 19.84,
+              "cash_after": 182.83
+            },
+            {
+              "ticker": "SG",
+              "side": "buy",
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.079999923706055,
+              "low": 9.039999961853027,
+              "high": 9.34000015258789,
+              "close": 9.140000343322754,
+              "shares": 2,
+              "fees": 0.1888,
+              "amount": 18.47,
+              "cash_after": 164.36
+            }
+          ],
           "sells": [
             {
               "ticker": "GPRK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 11.4399995803833,
+              "sell_when": "16:00 ET close",
               "buy_px": 11.279999732971191,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.2548,
+              "amount": 22.63,
+              "realized_pnl": -0.17,
+              "cash_after": 266.91
             },
             {
               "ticker": "BETA",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 20.899999618530273,
+              "sell_when": "16:00 ET close",
               "buy_px": 20.700000762939453,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.232,
+              "amount": 20.67,
+              "realized_pnl": -0.24,
+              "cash_after": 287.58
             },
             {
               "ticker": "MEC",
               "side": "sell",
+              "sell_px": 16.459999084472656,
+              "sell_when": "16:00 ET close",
+              "buy_px": 16.389999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1876,
+              "amount": 16.27,
+              "realized_pnl": -0.28,
+              "cash_after": 303.85
+            }
+          ],
+          "cash": 164.36,
+          "invested": 138.06,
+          "fees_cum": 695.09
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -45.652,
+          "equity": 164.36,
+          "n_held": 7,
+          "n_buy": 0,
+          "n_sell": 6,
+          "n_skip": 7,
+          "n_cand": 7,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MQ",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 16.389999389648438,
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TLS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRTH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CGNT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "NTSK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.140000343322754,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 244.29,
+          "cash": 164.36,
           "invested": 0.0,
-          "fees_cum": 692.98
+          "fees_cum": 695.09
         }
       ]
     },
@@ -45607,15 +46628,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 4,
-        "n_loss_days": 35,
-        "p_loss_day": 0.8537,
-        "p_win_day": 0.0976,
-        "mean_day": -6.213,
+        "n_loss_days": 36,
+        "p_loss_day": 0.8571,
+        "p_win_day": 0.0952,
+        "mean_day": -6.494,
         "avg_win_day": 0.153,
-        "avg_loss_day": -7.296,
-        "cum_sum": -254.735
+        "avg_loss_day": -7.594,
+        "cum_sum": -272.764
       },
       "equity": [
         9955.38,
@@ -45658,9 +46679,10 @@
         415.25,
         414.66,
         413.96,
-        338.72
+        412.02,
+        264.78
       ],
-      "final": 338.72,
+      "final": 264.78,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -56330,64 +57352,351 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -18.176,
-          "equity": 338.72,
-          "n_held": 13,
-          "n_buy": 0,
+          "day_pnl": -0.469,
+          "equity": 412.02,
+          "n_held": 17,
+          "n_buy": 9,
           "n_sell": 4,
-          "n_skip": 13,
-          "n_cand": 13,
+          "n_skip": 9,
+          "n_cand": 18,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "BVS",
+            "MOMO",
+            "ACVA"
+          ],
           "sold": [
             "GPRK",
             "BETA",
             "MEC",
             "PD"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "BVS",
+            "MOMO",
+            "ACVA"
+          ],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 1,
+              "fees": 0.1685,
+              "amount": 16.72,
+              "cash_after": 396.83
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 5,
+              "fees": 0.232,
+              "amount": 21.93,
+              "cash_after": 374.89
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 2,
+              "fees": 0.1616,
+              "amount": 15.72,
+              "cash_after": 359.17
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 2,
+              "fees": 0.1826,
+              "amount": 17.84,
+              "cash_after": 341.33
+            },
+            {
+              "ticker": "NTSK",
+              "side": "buy",
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 18.829999923706055,
+              "low": 18.780000686645508,
+              "high": 20.385000228881836,
+              "close": 19.639999389648438,
+              "shares": 1,
+              "fees": 0.1994,
+              "amount": 19.84,
+              "cash_after": 321.49
+            },
+            {
+              "ticker": "SG",
+              "side": "buy",
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.079999923706055,
+              "low": 9.039999961853027,
+              "high": 9.34000015258789,
+              "close": 9.140000343322754,
+              "shares": 2,
+              "fees": 0.1888,
+              "amount": 18.47,
+              "cash_after": 303.02
+            },
+            {
+              "ticker": "BVS",
+              "side": "buy",
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.5,
+              "low": 13.069999694824219,
+              "high": 13.619000434875488,
+              "close": 13.100000381469727,
+              "shares": 1,
+              "fees": 0.134,
+              "amount": 13.23,
+              "cash_after": 289.79
+            },
+            {
+              "ticker": "MOMO",
+              "side": "buy",
+              "buy_px": 4.769999980926514,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.639999866485596,
+              "low": 4.610000133514404,
+              "high": 4.800000190734863,
+              "close": 4.769999980926514,
+              "shares": 3,
+              "fees": 0.1521,
+              "amount": 14.46,
+              "cash_after": 275.32
+            },
+            {
+              "ticker": "ACVA",
+              "side": "buy",
+              "buy_px": 10.4399995803833,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 10.479999542236328,
+              "low": 10.4399995803833,
+              "high": 10.479999542236328,
+              "close": 10.4399995803833,
+              "shares": 1,
+              "fees": 0.1074,
+              "amount": 10.55,
+              "cash_after": 264.78
+            }
+          ],
           "sells": [
             {
               "ticker": "GPRK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 11.4399995803833,
+              "sell_when": "16:00 ET close",
               "buy_px": 11.279999732971191,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.2548,
+              "amount": 22.63,
+              "realized_pnl": -0.17,
+              "cash_after": 361.34
             },
             {
               "ticker": "BETA",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 20.899999618530273,
+              "sell_when": "16:00 ET close",
               "buy_px": 20.700000762939453,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.232,
+              "amount": 20.67,
+              "realized_pnl": -0.24,
+              "cash_after": 382.01
             },
             {
               "ticker": "MEC",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 16.459999084472656,
+              "sell_when": "16:00 ET close",
               "buy_px": 16.389999389648438,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1876,
+              "amount": 16.27,
+              "realized_pnl": -0.28,
+              "cash_after": 398.28
             },
             {
               "ticker": "PD",
               "side": "sell",
+              "sell_px": 15.4399995803833,
+              "sell_when": "16:00 ET close",
+              "buy_px": 15.59000015258789,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1774,
+              "amount": 15.26,
+              "realized_pnl": -0.49,
+              "cash_after": 413.54
+            }
+          ],
+          "cash": 264.78,
+          "invested": 147.24,
+          "fees_cum": 825.75
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -35.736,
+          "equity": 264.78,
+          "n_held": 9,
+          "n_buy": 0,
+          "n_sell": 9,
+          "n_skip": 9,
+          "n_cand": 9,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "BVS",
+            "MOMO",
+            "ACVA"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MQ",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 15.59000015258789,
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TLS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRTH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CGNT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "NTSK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BVS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "MOMO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.769999980926514,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ACVA",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 10.4399995803833,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 338.72,
+          "cash": 264.78,
           "invested": 0.0,
-          "fees_cum": 823.37
+          "fees_cum": 825.75
         }
       ]
     },
@@ -56403,15 +57712,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 5,
-        "n_loss_days": 36,
-        "p_loss_day": 0.878,
-        "p_win_day": 0.122,
-        "mean_day": -6.722,
+        "n_loss_days": 37,
+        "p_loss_day": 0.881,
+        "p_win_day": 0.119,
+        "mean_day": -6.968,
         "avg_win_day": 0.752,
-        "avg_loss_day": -7.76,
-        "cum_sum": -275.604
+        "avg_loss_day": -8.012,
+        "cum_sum": -292.667
       },
       "equity": [
         9955.38,
@@ -56454,9 +57763,10 @@
         305.96,
         306.75,
         306.16,
-        297.92
+        305.96,
+        245.72
       ],
-      "final": 297.92,
+      "final": 245.72,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -64664,38 +65974,205 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -2.691,
-          "equity": 297.92,
-          "n_held": 16,
-          "n_buy": 0,
+          "day_pnl": -0.065,
+          "equity": 305.96,
+          "n_held": 15,
+          "n_buy": 6,
           "n_sell": 1,
-          "n_skip": 13,
+          "n_skip": 7,
           "n_cand": 13,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG",
+            "BVS"
+          ],
           "sold": [
             "ABX"
           ],
           "held": [
             "GPRK",
             "BETA",
-            "MEC"
+            "MEC",
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG",
+            "BVS"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 1,
+              "fees": 0.1685,
+              "amount": 16.72,
+              "cash_after": 229.84
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 4,
+              "fees": 0.1856,
+              "amount": 17.55,
+              "cash_after": 212.29
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 2,
+              "fees": 0.1616,
+              "amount": 15.72,
+              "cash_after": 196.57
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 1,
+              "fees": 0.0913,
+              "amount": 8.92,
+              "cash_after": 187.65
+            },
+            {
+              "ticker": "SG",
+              "side": "buy",
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.079999923706055,
+              "low": 9.039999961853027,
+              "high": 9.34000015258789,
+              "close": 9.140000343322754,
+              "shares": 1,
+              "fees": 0.0944,
+              "amount": 9.23,
+              "cash_after": 178.42
+            },
+            {
+              "ticker": "BVS",
+              "side": "buy",
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.5,
+              "low": 13.069999694824219,
+              "high": 13.619000434875488,
+              "close": 13.100000381469727,
+              "shares": 1,
+              "fees": 0.134,
+              "amount": 13.23,
+              "cash_after": 165.18
+            }
+          ],
           "sells": [
             {
               "ticker": "ABX",
               "side": "sell",
+              "sell_px": 8.390000343322754,
+              "sell_when": "16:00 ET close",
+              "buy_px": 8.270000457763672,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1069,
+              "amount": 8.28,
+              "realized_pnl": -0.07,
+              "cash_after": 246.56
+            }
+          ],
+          "cash": 165.18,
+          "invested": 140.78,
+          "fees_cum": 604.56
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -19.689,
+          "equity": 245.72,
+          "n_held": 13,
+          "n_buy": 0,
+          "n_sell": 3,
+          "n_skip": 7,
+          "n_cand": 7,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "GPRK",
+            "BETA",
+            "MEC"
+          ],
+          "held": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG",
+            "BVS"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "GPRK",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 8.270000457763672,
+              "buy_px": 11.279999732971191,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BETA",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 20.700000762939453,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "MEC",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 16.389999389648438,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 238.27,
-          "invested": 59.65,
-          "fees_cum": 603.62
+          "cash": 165.18,
+          "invested": 80.54,
+          "fees_cum": 604.56
         }
       ]
     },
@@ -64711,15 +66188,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
-        "n_win_days": 11,
+        "n_days": 42,
+        "n_win_days": 12,
         "n_loss_days": 30,
-        "p_loss_day": 0.7317,
-        "p_win_day": 0.2683,
-        "mean_day": -3.916,
-        "avg_win_day": 0.611,
-        "avg_loss_day": -5.575,
-        "cum_sum": -160.538
+        "p_loss_day": 0.7143,
+        "p_win_day": 0.2857,
+        "mean_day": -3.693,
+        "avg_win_day": 0.565,
+        "avg_loss_day": -5.396,
+        "cum_sum": -155.091
       },
       "equity": [
         9955.38,
@@ -64762,9 +66239,10 @@
         2371.21,
         2397.92,
         2415.23,
-        1695.56
+        2416.63,
+        1826.79
       ],
-      "final": 1695.56,
+      "final": 1826.79,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -73881,23 +75359,31 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -29.797,
-          "equity": 1695.56,
+          "day_pnl": 0.058,
+          "equity": 2416.63,
           "n_held": 25,
-          "n_buy": 0,
-          "n_sell": 5,
-          "n_skip": 11,
+          "n_buy": 7,
+          "n_sell": 4,
+          "n_skip": 4,
           "n_cand": 13,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "BAND",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
           "sold": [
             "CNR",
             "BKR",
             "CEVA",
-            "MXL",
-            "NTSK"
+            "MXL"
           ],
           "held": [
+            "NTSK",
             "FIGS",
             "PRCH",
             "LAUR",
@@ -73912,46 +75398,224 @@
             "GPRK",
             "BETA",
             "MEC",
-            "RRC"
+            "RRC",
+            "BAND",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG",
+            "SIBN",
+            "BVS"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "BAND",
+              "side": "buy",
+              "buy_px": 60.09000015258789,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 63.7400016784668,
+              "low": 59.72999954223633,
+              "high": 65.57620239257812,
+              "close": 60.09000015258789,
+              "shares": 2,
+              "fees": 1.2078,
+              "amount": 121.39,
+              "cash_after": 1142.23
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 29,
+              "fees": 1.3456,
+              "amount": 127.21,
+              "cash_after": 1015.02
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 14,
+              "fees": 1.1312,
+              "amount": 110.05,
+              "cash_after": 904.97
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 11,
+              "fees": 1.0043,
+              "amount": 98.13,
+              "cash_after": 806.84
+            },
+            {
+              "ticker": "SG",
+              "side": "buy",
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.079999923706055,
+              "low": 9.039999961853027,
+              "high": 9.34000015258789,
+              "close": 9.140000343322754,
+              "shares": 9,
+              "fees": 0.8496,
+              "amount": 83.11,
+              "cash_after": 723.73
+            },
+            {
+              "ticker": "SIBN",
+              "side": "buy",
+              "buy_px": 19.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 20.0,
+              "low": 19.209999084472656,
+              "high": 20.0,
+              "close": 19.549999237060547,
+              "shares": 4,
+              "fees": 0.794,
+              "amount": 78.99,
+              "cash_after": 644.74
+            },
+            {
+              "ticker": "BVS",
+              "side": "buy",
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.5,
+              "low": 13.069999694824219,
+              "high": 13.619000434875488,
+              "close": 13.100000381469727,
+              "shares": 5,
+              "fees": 0.67,
+              "amount": 66.17,
+              "cash_after": 578.57
+            }
+          ],
           "sells": [
             {
               "ticker": "CNR",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 90.20999908447266,
+              "sell_when": "16:00 ET close",
               "buy_px": 87.5999984741211,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 1.8302,
+              "amount": 178.59,
+              "realized_pnl": 1.63,
+              "cash_after": 842.59
             },
             {
               "ticker": "BKR",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 57.130001068115234,
+              "sell_when": "16:00 ET close",
               "buy_px": 55.619998931884766,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 1.7429,
+              "amount": 169.65,
+              "realized_pnl": 1.11,
+              "cash_after": 1012.23
             },
             {
               "ticker": "CEVA",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 36.16999816894531,
+              "sell_when": "16:00 ET close",
               "buy_px": 35.52000045776367,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 4,
+              "fees": 1.4788,
+              "amount": 143.2,
+              "realized_pnl": -0.31,
+              "cash_after": 1155.43
             },
             {
               "ticker": "MXL",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 109.30000305175781,
+              "sell_when": "16:00 ET close",
               "buy_px": 92.12000274658203,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
-            },
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 1.116,
+              "amount": 108.18,
+              "realized_pnl": 15.14,
+              "cash_after": 1263.62
+            }
+          ],
+          "cash": 578.57,
+          "invested": 1838.06,
+          "fees_cum": 735.11
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -24.408,
+          "equity": 1826.79,
+          "n_held": 20,
+          "n_buy": 0,
+          "n_sell": 10,
+          "n_skip": 7,
+          "n_cand": 7,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "NTSK",
+            "FIGS",
+            "PRCH",
+            "LAUR",
+            "IMAX",
+            "EZPW",
+            "ABX",
+            "PEB",
+            "MQ",
+            "SONO"
+          ],
+          "held": [
+            "DVN",
+            "DG",
+            "GPRK",
+            "BETA",
+            "MEC",
+            "RRC",
+            "BAND",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
+          "buys": [],
+          "sells": [
             {
               "ticker": "NTSK",
               "side": "sell",
@@ -73960,11 +75624,92 @@
               "buy_px": 17.850000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
+            },
+            {
+              "ticker": "FIGS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.520000457763672,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRCH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 17.309999465942383,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LAUR",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 38.619998931884766,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "IMAX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 52.720001220703125,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EZPW",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 30.200000762939453,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.270000457763672,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PEB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.06999969482422,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "MQ",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SONO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 17.700000762939453,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
             }
           ],
-          "cash": 664.0,
-          "invested": 1031.56,
-          "fees_cum": 721.94
+          "cash": 578.57,
+          "invested": 1248.22,
+          "fees_cum": 735.11
         }
       ]
     },
@@ -73980,15 +75725,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 14,
-        "n_loss_days": 27,
-        "p_loss_day": 0.6585,
-        "p_win_day": 0.3415,
-        "mean_day": -3.711,
+        "n_loss_days": 28,
+        "p_loss_day": 0.6667,
+        "p_win_day": 0.3333,
+        "mean_day": -4.075,
         "avg_win_day": 0.811,
-        "avg_loss_day": -6.056,
-        "cum_sum": -152.152
+        "avg_loss_day": -6.517,
+        "cum_sum": -171.14
       },
       "equity": [
         9955.38,
@@ -74031,9 +75776,10 @@
         1688.07,
         1694.92,
         1714.04,
-        1552.56
+        1707.29,
+        1228.99
       ],
-      "final": 1552.56,
+      "final": 1228.99,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -80825,15 +82571,21 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -9.421,
-          "equity": 1552.56,
+          "day_pnl": -0.394,
+          "equity": 1707.29,
           "n_held": 25,
-          "n_buy": 0,
+          "n_buy": 5,
           "n_sell": 3,
-          "n_skip": 9,
+          "n_skip": 6,
           "n_cand": 13,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG"
+          ],
           "sold": [
             "ARHS",
             "CRON",
@@ -80857,41 +82609,236 @@
             "PRCH",
             "DVN",
             "GPRK",
-            "BETA"
+            "BETA",
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 3,
+              "fees": 0.5055,
+              "amount": 50.16,
+              "cash_after": 412.54
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 13,
+              "fees": 0.6032,
+              "amount": 57.02,
+              "cash_after": 355.52
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 6,
+              "fees": 0.4848,
+              "amount": 47.16,
+              "cash_after": 308.35
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 4,
+              "fees": 0.3652,
+              "amount": 35.69,
+              "cash_after": 272.67
+            },
+            {
+              "ticker": "SG",
+              "side": "buy",
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.079999923706055,
+              "low": 9.039999961853027,
+              "high": 9.34000015258789,
+              "close": 9.140000343322754,
+              "shares": 4,
+              "fees": 0.3776,
+              "amount": 36.94,
+              "cash_after": 235.73
+            }
+          ],
           "sells": [
             {
               "ticker": "ARHS",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 9.920000076293945,
+              "sell_when": "16:00 ET close",
               "buy_px": 9.460000038146973,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 5,
+              "fees": 0.531,
+              "amount": 49.07,
+              "realized_pnl": 1.28,
+              "cash_after": 379.84
             },
             {
               "ticker": "CRON",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 3.2850000858306885,
+              "sell_when": "16:00 ET close",
               "buy_px": 3.380000114440918,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 14,
+              "fees": 0.5219,
+              "amount": 45.47,
+              "realized_pnl": -2.37,
+              "cash_after": 425.3
             },
             {
               "ticker": "TAL",
               "side": "sell",
+              "sell_px": 12.600000381469727,
+              "sell_when": "16:00 ET close",
+              "buy_px": 11.729999542236328,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.407,
+              "amount": 37.39,
+              "realized_pnl": 1.84,
+              "cash_after": 462.7
+            }
+          ],
+          "cash": 235.73,
+          "invested": 1471.56,
+          "fees_cum": 476.4
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -28.015,
+          "equity": 1228.99,
+          "n_held": 24,
+          "n_buy": 0,
+          "n_sell": 6,
+          "n_skip": 7,
+          "n_cand": 7,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "AVPT",
+            "AMN",
+            "RELY",
+            "MD",
+            "ADMA",
+            "PCRX"
+          ],
+          "held": [
+            "CNR",
+            "BKR",
+            "BAND",
+            "CEVA",
+            "NTSK",
+            "CDNA",
+            "SHOO",
+            "FIGS",
+            "PRCH",
+            "DVN",
+            "GPRK",
+            "BETA",
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "AVPT",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 11.729999542236328,
+              "buy_px": 14.079999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "AMN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 35.869998931884766,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "RELY",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 21.34000015258789,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "MD",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 25.729999542236328,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ADMA",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 10.029999732971191,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PCRX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 25.049999237060547,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 330.77,
-          "invested": 1221.79,
-          "fees_cum": 472.6
+          "cash": 235.73,
+          "invested": 993.26,
+          "fees_cum": 476.4
         }
       ]
     },
@@ -80907,15 +82854,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
-        "n_win_days": 17,
+        "n_days": 42,
+        "n_win_days": 18,
         "n_loss_days": 23,
-        "p_loss_day": 0.561,
-        "p_win_day": 0.4146,
-        "mean_day": -2.417,
-        "avg_win_day": 0.666,
-        "avg_loss_day": -4.801,
-        "cum_sum": -99.095
+        "p_loss_day": 0.5476,
+        "p_win_day": 0.4286,
+        "mean_day": -2.285,
+        "avg_win_day": 0.643,
+        "avg_loss_day": -4.676,
+        "cum_sum": -95.97
       },
       "equity": [
         9953.57,
@@ -80958,9 +82905,10 @@
         4532.04,
         4551.52,
         4608.65,
-        3311.47
+        4620.17,
+        3452.54
       ],
-      "final": 3311.47,
+      "final": 3452.54,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -88949,22 +90897,28 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -28.147,
-          "equity": 3311.47,
-          "n_held": 25,
-          "n_buy": 0,
-          "n_sell": 4,
-          "n_skip": 10,
-          "n_cand": 12,
+          "day_pnl": 0.25,
+          "equity": 4620.17,
+          "n_held": 23,
+          "n_buy": 5,
+          "n_sell": 3,
+          "n_skip": 1,
+          "n_cand": 8,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "BAND",
+            "ACN",
+            "PRTH",
+            "TLS",
+            "CGNT"
+          ],
           "sold": [
             "BKR",
             "CNR",
-            "NTAP",
-            "NTSK"
+            "NTAP"
           ],
           "held": [
+            "NTSK",
             "CORT",
             "SIG",
             "PRCH",
@@ -88980,37 +90934,177 @@
             "DG",
             "DVN",
             "TMUS",
-            "RRC"
+            "RRC",
+            "BAND",
+            "ACN",
+            "PRTH",
+            "TLS",
+            "CGNT"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "BAND",
+              "side": "buy",
+              "buy_px": 60.09000015258789,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 63.7400016784668,
+              "low": 59.72999954223633,
+              "high": 65.57620239257812,
+              "close": 60.09000015258789,
+              "shares": 6,
+              "fees": 2.008,
+              "amount": 362.55,
+              "cash_after": 1830.39
+            },
+            {
+              "ticker": "ACN",
+              "side": "buy",
+              "buy_px": 193.39999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 195.42999267578125,
+              "low": 192.5847930908203,
+              "high": 196.16000366210938,
+              "close": 193.39999389648438,
+              "shares": 1,
+              "fees": 1.937,
+              "amount": 195.34,
+              "cash_after": 1635.05
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 35,
+              "fees": 2.095,
+              "amount": 274.4,
+              "cash_after": 1360.66
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 52,
+              "fees": 2.146,
+              "amount": 227.83,
+              "cash_after": 1132.83
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 21,
+              "fees": 1.9173,
+              "amount": 187.35,
+              "cash_after": 945.48
+            }
+          ],
           "sells": [
             {
               "ticker": "BKR",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 57.130001068115234,
+              "sell_when": "16:00 ET close",
               "buy_px": 55.619998931884766,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 8,
+              "fees": 2.034,
+              "amount": 455.01,
+              "realized_pnl": 8.03,
+              "cash_after": 1607.68
             },
             {
               "ticker": "CNR",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 90.20999908447266,
+              "sell_when": "16:00 ET close",
               "buy_px": 87.5999984741211,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 4,
+              "fees": 2.022,
+              "amount": 358.82,
+              "realized_pnl": 6.42,
+              "cash_after": 1966.5
             },
             {
               "ticker": "NTAP",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 228.4499969482422,
+              "sell_when": "16:00 ET close",
               "buy_px": 215.0500030517578,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
-            },
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 2.013,
+              "amount": 226.44,
+              "realized_pnl": 9.39,
+              "cash_after": 2192.94
+            }
+          ],
+          "cash": 945.48,
+          "invested": 3674.69,
+          "fees_cum": 753.28
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -25.272,
+          "equity": 3452.54,
+          "n_held": 12,
+          "n_buy": 0,
+          "n_sell": 12,
+          "n_skip": 2,
+          "n_cand": 2,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "NTSK",
+            "CORT",
+            "SIG",
+            "PRCH",
+            "FIGS",
+            "SONO",
+            "EXLS",
+            "LAUR",
+            "MQ",
+            "IMAX",
+            "EZPW",
+            "PEB"
+          ],
+          "held": [
+            "COP",
+            "DG",
+            "DVN",
+            "TMUS",
+            "RRC",
+            "BAND",
+            "ACN",
+            "PRTH",
+            "TLS",
+            "CGNT"
+          ],
+          "buys": [],
+          "sells": [
             {
               "ticker": "NTSK",
               "side": "sell",
@@ -89019,11 +91113,110 @@
               "buy_px": 17.850000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
+            },
+            {
+              "ticker": "CORT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 116.2300033569336,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SIG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 100.58000183105469,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRCH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 17.309999465942383,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "FIGS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.520000457763672,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SONO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 17.700000762939453,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EXLS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 35.75,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LAUR",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 38.619998931884766,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "MQ",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "IMAX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 52.720001220703125,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EZPW",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 30.200000762939453,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PEB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.06999969482422,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
             }
           ],
-          "cash": 1152.68,
-          "invested": 2158.79,
-          "fees_cum": 737.11
+          "cash": 945.48,
+          "invested": 2507.06,
+          "fees_cum": 753.28
         }
       ]
     },
@@ -89039,15 +91232,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 15,
-        "n_loss_days": 25,
-        "p_loss_day": 0.6098,
-        "p_win_day": 0.3659,
-        "mean_day": -3.432,
+        "n_loss_days": 26,
+        "p_loss_day": 0.619,
+        "p_win_day": 0.3571,
+        "mean_day": -3.504,
         "avg_win_day": 0.855,
-        "avg_loss_day": -6.142,
-        "cum_sum": -140.722
+        "avg_loss_day": -6.154,
+        "cum_sum": -147.172
       },
       "equity": [
         9918.74,
@@ -89090,9 +91283,10 @@
         2530.17,
         2548.01,
         2570.79,
-        1940.17
+        2570.35,
+        1774.48
       ],
-      "final": 1940.17,
+      "final": 1774.48,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -93930,49 +96124,127 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -24.53,
-          "equity": 1940.17,
+          "day_pnl": -0.017,
+          "equity": 2570.35,
           "n_held": 10,
-          "n_buy": 0,
-          "n_sell": 3,
-          "n_skip": 10,
+          "n_buy": 2,
+          "n_sell": 2,
+          "n_skip": 7,
           "n_cand": 10,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "MQ",
+            "TLS"
+          ],
           "sold": [
             "CNR",
-            "BKR",
-            "BAND"
+            "BKR"
           ],
           "held": [
+            "BAND",
             "SIG",
             "FIGS",
             "PRCH",
             "DVN",
             "COP",
             "DG",
-            "TMUS"
+            "TMUS",
+            "MQ",
+            "TLS"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 32,
+              "fees": 2.086,
+              "amount": 531.69,
+              "cash_after": 546.82
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 62,
+              "fees": 2.176,
+              "amount": 271.26,
+              "cash_after": 275.56
+            }
+          ],
           "sells": [
             {
               "ticker": "CNR",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 90.20999908447266,
+              "sell_when": "16:00 ET close",
               "buy_px": 87.5999984741211,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 2.019,
+              "amount": 268.61,
+              "realized_pnl": 3.81,
+              "cash_after": 852.0
             },
             {
               "ticker": "BKR",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 57.130001068115234,
+              "sell_when": "16:00 ET close",
               "buy_px": 55.619998931884766,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
-            },
+              "buy_kind": "close",
+              "shares": 4,
+              "fees": 2.022,
+              "amount": 226.5,
+              "realized_pnl": 2.02,
+              "cash_after": 1078.5
+            }
+          ],
+          "cash": 275.56,
+          "invested": 2294.79,
+          "fees_cum": 599.95
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -30.963,
+          "equity": 1774.48,
+          "n_held": 10,
+          "n_buy": 0,
+          "n_sell": 4,
+          "n_skip": 7,
+          "n_cand": 7,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "BAND",
+            "SIG",
+            "FIGS",
+            "PRCH"
+          ],
+          "held": [
+            "DVN",
+            "COP",
+            "DG",
+            "TMUS",
+            "MQ",
+            "TLS"
+          ],
+          "buys": [],
+          "sells": [
             {
               "ticker": "BAND",
               "side": "sell",
@@ -93981,11 +96253,38 @@
               "buy_px": 62.439998626708984,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
+            },
+            {
+              "ticker": "SIG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 100.58000183105469,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "FIGS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.520000457763672,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRCH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 17.309999465942383,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
             }
           ],
-          "cash": 583.39,
-          "invested": 1356.78,
-          "fees_cum": 591.65
+          "cash": 275.56,
+          "invested": 1498.92,
+          "fees_cum": 599.95
         }
       ]
     },
@@ -94001,15 +96300,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 3,
-        "n_loss_days": 35,
-        "p_loss_day": 0.8537,
-        "p_win_day": 0.0732,
-        "mean_day": -7.704,
+        "n_loss_days": 36,
+        "p_loss_day": 0.8571,
+        "p_win_day": 0.0714,
+        "mean_day": -6.855,
         "avg_win_day": 0.31,
-        "avg_loss_day": -9.052,
-        "cum_sum": -315.878
+        "avg_loss_day": -8.023,
+        "cum_sum": -287.91
       },
       "equity": [
         10000.0,
@@ -94052,9 +96351,10 @@
         272.88,
         273.46,
         271.42,
-        104.14
+        269.92,
+        180.55
       ],
-      "final": 104.14,
+      "final": 180.55,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -100973,64 +103273,270 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -61.631,
-          "equity": 104.14,
-          "n_held": 13,
-          "n_buy": 0,
+          "day_pnl": -0.553,
+          "equity": 269.92,
+          "n_held": 12,
+          "n_buy": 6,
           "n_sell": 4,
-          "n_skip": 13,
+          "n_skip": 7,
           "n_cand": 13,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG",
+            "BVS"
+          ],
           "sold": [
             "DVN",
             "GPRK",
             "BETA",
             "MEC"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG",
+            "BVS"
+          ],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 1,
+              "fees": 0.1685,
+              "amount": 16.72,
+              "cash_after": 254.13
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 4,
+              "fees": 0.1856,
+              "amount": 17.55,
+              "cash_after": 236.59
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 2,
+              "fees": 0.1616,
+              "amount": 15.72,
+              "cash_after": 220.86
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 2,
+              "fees": 0.1826,
+              "amount": 17.84,
+              "cash_after": 203.02
+            },
+            {
+              "ticker": "SG",
+              "side": "buy",
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.079999923706055,
+              "low": 9.039999961853027,
+              "high": 9.34000015258789,
+              "close": 9.140000343322754,
+              "shares": 1,
+              "fees": 0.0944,
+              "amount": 9.23,
+              "cash_after": 193.79
+            },
+            {
+              "ticker": "BVS",
+              "side": "buy",
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.5,
+              "low": 13.069999694824219,
+              "high": 13.619000434875488,
+              "close": 13.100000381469727,
+              "shares": 1,
+              "fees": 0.134,
+              "amount": 13.23,
+              "cash_after": 180.55
+            }
+          ],
           "sells": [
             {
               "ticker": "DVN",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 48.02000045776367,
+              "sell_when": "16:00 ET close",
               "buy_px": 47.97999954223633,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.5032,
+              "amount": 47.52,
+              "realized_pnl": -0.95,
+              "cash_after": 151.66
             },
             {
               "ticker": "GPRK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 11.4399995803833,
+              "sell_when": "16:00 ET close",
               "buy_px": 11.279999732971191,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 4,
+              "fees": 0.4896,
+              "amount": 45.27,
+              "realized_pnl": -0.31,
+              "cash_after": 196.93
             },
             {
               "ticker": "BETA",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 20.899999618530273,
+              "sell_when": "16:00 ET close",
               "buy_px": 20.700000762939453,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.444,
+              "amount": 41.36,
+              "realized_pnl": -0.46,
+              "cash_after": 238.29
             },
             {
               "ticker": "MEC",
               "side": "sell",
+              "sell_px": 16.459999084472656,
+              "sell_when": "16:00 ET close",
+              "buy_px": 16.389999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.3552,
+              "amount": 32.56,
+              "realized_pnl": -0.55,
+              "cash_after": 270.85
+            }
+          ],
+          "cash": 180.55,
+          "invested": 89.37,
+          "fees_cum": 470.51
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -33.11,
+          "equity": 180.55,
+          "n_held": 7,
+          "n_buy": 0,
+          "n_sell": 6,
+          "n_skip": 7,
+          "n_cand": 7,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG",
+            "BVS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MQ",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 16.389999389648438,
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TLS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRTH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CGNT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BVS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.100000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 104.14,
+          "cash": 180.55,
           "invested": 0.0,
-          "fees_cum": 467.79
+          "fees_cum": 470.51
         }
       ]
     },
@@ -101046,15 +103552,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 7,
-        "n_loss_days": 31,
-        "p_loss_day": 0.7561,
-        "p_win_day": 0.1707,
-        "mean_day": -6.044,
+        "n_loss_days": 33,
+        "p_loss_day": 0.7857,
+        "p_win_day": 0.1667,
+        "mean_day": -6.962,
         "avg_win_day": 0.298,
-        "avg_loss_day": -8.061,
-        "cum_sum": -247.797
+        "avg_loss_day": -8.924,
+        "cum_sum": -292.405
       },
       "equity": [
         9955.38,
@@ -101097,9 +103603,10 @@
         311.89,
         312.13,
         312.36,
-        312.36
+        310.94,
+        173.65
       ],
-      "final": 312.36,
+      "final": 173.65,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -109838,22 +112345,181 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": 0.0,
-          "equity": 312.36,
-          "n_held": 13,
-          "n_buy": 0,
+          "day_pnl": -0.455,
+          "equity": 310.94,
+          "n_held": 8,
+          "n_buy": 5,
           "n_sell": 0,
-          "n_skip": 13,
-          "n_cand": 13,
+          "n_skip": 3,
+          "n_cand": 8,
+          "hard_red": false,
+          "bought": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK"
+          ],
+          "sold": [],
+          "held": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK"
+          ],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 2,
+              "fees": 0.337,
+              "amount": 33.44,
+              "cash_after": 278.92
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 8,
+              "fees": 0.3712,
+              "amount": 35.09,
+              "cash_after": 243.83
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 3,
+              "fees": 0.2424,
+              "amount": 23.58,
+              "cash_after": 220.25
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 3,
+              "fees": 0.2739,
+              "amount": 26.76,
+              "cash_after": 193.49
+            },
+            {
+              "ticker": "NTSK",
+              "side": "buy",
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 18.829999923706055,
+              "low": 18.780000686645508,
+              "high": 20.385000228881836,
+              "close": 19.639999389648438,
+              "shares": 1,
+              "fees": 0.1994,
+              "amount": 19.84,
+              "cash_after": 173.65
+            }
+          ],
+          "sells": [],
+          "cash": 173.65,
+          "invested": 137.29,
+          "fees_cum": 694.92
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -44.153,
+          "equity": 173.65,
+          "n_held": 6,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 6,
+          "n_cand": 6,
           "hard_red": false,
           "bought": [],
-          "sold": [],
+          "sold": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK"
+          ],
           "held": [],
           "buys": [],
-          "sells": [],
-          "cash": 312.36,
+          "sells": [
+            {
+              "ticker": "MQ",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TLS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRTH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CGNT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "NTSK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 173.65,
           "invested": 0.0,
-          "fees_cum": 693.49
+          "fees_cum": 694.92
         }
       ]
     },
@@ -109869,15 +112535,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 6,
-        "n_loss_days": 32,
-        "p_loss_day": 0.7805,
-        "p_win_day": 0.1463,
-        "mean_day": -6.204,
+        "n_loss_days": 34,
+        "p_loss_day": 0.8095,
+        "p_win_day": 0.1429,
+        "mean_day": -7.119,
         "avg_win_day": 0.68,
-        "avg_loss_day": -8.077,
-        "cum_sum": -254.378
+        "avg_loss_day": -8.914,
+        "cum_sum": -299.008
       },
       "equity": [
         9918.74,
@@ -109920,9 +112586,10 @@
         272.19,
         272.63,
         272.39,
-        272.39
+        271.15,
+        151.37
       ],
-      "final": 272.39,
+      "final": 151.37,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -116080,22 +118747,181 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": 0.0,
-          "equity": 272.39,
-          "n_held": 10,
-          "n_buy": 0,
+          "day_pnl": -0.455,
+          "equity": 271.15,
+          "n_held": 8,
+          "n_buy": 5,
           "n_sell": 0,
-          "n_skip": 10,
-          "n_cand": 10,
+          "n_skip": 3,
+          "n_cand": 8,
+          "hard_red": false,
+          "bought": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK"
+          ],
+          "sold": [],
+          "held": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK"
+          ],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 2,
+              "fees": 0.337,
+              "amount": 33.44,
+              "cash_after": 238.95
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 6,
+              "fees": 0.2784,
+              "amount": 26.32,
+              "cash_after": 212.63
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 3,
+              "fees": 0.2424,
+              "amount": 23.58,
+              "cash_after": 189.05
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 2,
+              "fees": 0.1826,
+              "amount": 17.84,
+              "cash_after": 171.21
+            },
+            {
+              "ticker": "NTSK",
+              "side": "buy",
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 18.829999923706055,
+              "low": 18.780000686645508,
+              "high": 20.385000228881836,
+              "close": 19.639999389648438,
+              "shares": 1,
+              "fees": 0.1994,
+              "amount": 19.84,
+              "cash_after": 151.37
+            }
+          ],
+          "sells": [],
+          "cash": 151.37,
+          "invested": 119.78,
+          "fees_cum": 603.34
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -44.175,
+          "equity": 151.37,
+          "n_held": 6,
+          "n_buy": 0,
+          "n_sell": 5,
+          "n_skip": 6,
+          "n_cand": 6,
           "hard_red": false,
           "bought": [],
-          "sold": [],
+          "sold": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK"
+          ],
           "held": [],
           "buys": [],
-          "sells": [],
-          "cash": 272.39,
+          "sells": [
+            {
+              "ticker": "MQ",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TLS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRTH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CGNT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "NTSK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            }
+          ],
+          "cash": 151.37,
           "invested": 0.0,
-          "fees_cum": 602.1
+          "fees_cum": 603.34
         }
       ]
     },
@@ -116111,15 +118937,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 9,
-        "n_loss_days": 31,
-        "p_loss_day": 0.7561,
-        "p_win_day": 0.2195,
-        "mean_day": -3.821,
+        "n_loss_days": 32,
+        "p_loss_day": 0.7619,
+        "p_win_day": 0.2143,
+        "mean_day": -3.402,
         "avg_win_day": 0.842,
-        "avg_loss_day": -5.298,
-        "cum_sum": -156.653
+        "avg_loss_day": -4.701,
+        "cum_sum": -142.866
       },
       "equity": [
         10000.0,
@@ -116162,9 +118988,10 @@
         2547.25,
         2576.57,
         2588.45,
-        1796.06
+        2580.17,
+        2154.3
       ],
-      "final": 1796.06,
+      "final": 2154.3,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -123761,15 +126588,26 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -30.613,
-          "equity": 1796.06,
+          "day_pnl": -0.32,
+          "equity": 2580.17,
           "n_held": 23,
-          "n_buy": 0,
+          "n_buy": 10,
           "n_sell": 4,
-          "n_skip": 12,
+          "n_skip": 3,
           "n_cand": 13,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "MQ",
+            "BAND",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS",
+            "MUR"
+          ],
           "sold": [
             "CNR",
             "BKR",
@@ -123787,50 +126625,337 @@
             "DVN",
             "GPRK",
             "BETA",
-            "MEC"
+            "MEC",
+            "MQ",
+            "BAND",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS",
+            "MUR"
           ],
-          "buys": [],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 6,
+              "fees": 1.011,
+              "amount": 100.31,
+              "cash_after": 1131.73
+            },
+            {
+              "ticker": "BAND",
+              "side": "buy",
+              "buy_px": 60.09000015258789,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 63.7400016784668,
+              "low": 59.72999954223633,
+              "high": 65.57620239257812,
+              "close": 60.09000015258789,
+              "shares": 1,
+              "fees": 0.6039,
+              "amount": 60.69,
+              "cash_after": 1071.04
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 20,
+              "fees": 0.928,
+              "amount": 87.73,
+              "cash_after": 983.31
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 10,
+              "fees": 0.808,
+              "amount": 78.61,
+              "cash_after": 904.7
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 8,
+              "fees": 0.7304,
+              "amount": 71.37,
+              "cash_after": 833.33
+            },
+            {
+              "ticker": "NTSK",
+              "side": "buy",
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 18.829999923706055,
+              "low": 18.780000686645508,
+              "high": 20.385000228881836,
+              "close": 19.639999389648438,
+              "shares": 3,
+              "fees": 0.5982,
+              "amount": 59.52,
+              "cash_after": 773.82
+            },
+            {
+              "ticker": "SG",
+              "side": "buy",
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.079999923706055,
+              "low": 9.039999961853027,
+              "high": 9.34000015258789,
+              "close": 9.140000343322754,
+              "shares": 7,
+              "fees": 0.6608,
+              "amount": 64.64,
+              "cash_after": 709.17
+            },
+            {
+              "ticker": "SIBN",
+              "side": "buy",
+              "buy_px": 19.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 20.0,
+              "low": 19.209999084472656,
+              "high": 20.0,
+              "close": 19.549999237060547,
+              "shares": 3,
+              "fees": 0.5955,
+              "amount": 59.25,
+              "cash_after": 649.93
+            },
+            {
+              "ticker": "BVS",
+              "side": "buy",
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.5,
+              "low": 13.069999694824219,
+              "high": 13.619000434875488,
+              "close": 13.100000381469727,
+              "shares": 4,
+              "fees": 0.536,
+              "amount": 52.94,
+              "cash_after": 596.99
+            },
+            {
+              "ticker": "MUR",
+              "side": "buy",
+              "buy_px": 37.790000915527344,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 38.189998626708984,
+              "low": 37.68000030517578,
+              "high": 38.494998931884766,
+              "close": 37.790000915527344,
+              "shares": 1,
+              "fees": 0.3809,
+              "amount": 38.17,
+              "cash_after": 558.82
+            }
+          ],
           "sells": [
             {
               "ticker": "CNR",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 90.20999908447266,
+              "sell_when": "16:00 ET close",
               "buy_px": 87.5999984741211,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 2.019,
+              "amount": 268.61,
+              "realized_pnl": 3.81,
+              "cash_after": 718.36
             },
             {
               "ticker": "BKR",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 57.130001068115234,
+              "sell_when": "16:00 ET close",
               "buy_px": 55.619998931884766,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 4,
+              "fees": 2.022,
+              "amount": 226.5,
+              "realized_pnl": 2.02,
+              "cash_after": 944.85
             },
             {
               "ticker": "CEVA",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 36.16999816894531,
+              "sell_when": "16:00 ET close",
               "buy_px": 35.52000045776367,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 5,
+              "fees": 1.8435,
+              "amount": 179.01,
+              "realized_pnl": -0.38,
+              "cash_after": 1123.86
             },
             {
               "ticker": "MXL",
               "side": "sell",
+              "sell_px": 109.30000305175781,
+              "sell_when": "16:00 ET close",
+              "buy_px": 92.12000274658203,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 1.116,
+              "amount": 108.18,
+              "realized_pnl": 15.14,
+              "cash_after": 1232.05
+            }
+          ],
+          "cash": 558.82,
+          "invested": 2021.35,
+          "fees_cum": 512.41
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -16.506,
+          "equity": 2154.3,
+          "n_held": 21,
+          "n_buy": 0,
+          "n_sell": 7,
+          "n_skip": 7,
+          "n_cand": 7,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "FIGS",
+            "PRCH",
+            "LAUR",
+            "IMAX",
+            "EZPW",
+            "ABX",
+            "PEB"
+          ],
+          "held": [
+            "DVN",
+            "GPRK",
+            "BETA",
+            "MEC",
+            "MQ",
+            "BAND",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS",
+            "MUR"
+          ],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "FIGS",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 92.12000274658203,
+              "buy_px": 13.520000457763672,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRCH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 17.309999465942383,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "LAUR",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 38.619998931884766,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "IMAX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 52.720001220703125,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "EZPW",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 30.200000762939453,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ABX",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.270000457763672,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PEB",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.06999969482422,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 449.75,
-          "invested": 1346.31,
-          "fees_cum": 498.55
+          "cash": 558.82,
+          "invested": 1595.48,
+          "fees_cum": 512.41
         }
       ]
     },
@@ -123846,15 +126971,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 4,
-        "n_loss_days": 27,
-        "p_loss_day": 0.6585,
-        "p_win_day": 0.0976,
-        "mean_day": -6.366,
+        "n_loss_days": 28,
+        "p_loss_day": 0.6667,
+        "p_win_day": 0.0952,
+        "mean_day": -6.725,
         "avg_win_day": 0.261,
-        "avg_loss_day": -9.705,
-        "cum_sum": -260.995
+        "avg_loss_day": -10.125,
+        "cum_sum": -282.464
       },
       "equity": [
         9955.38,
@@ -123897,9 +127022,10 @@
         412.21,
         411.62,
         410.68,
-        312.08
+        408.69,
+        224.81
       ],
-      "final": 312.08,
+      "final": 224.81,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -131819,54 +134945,309 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -24.009,
-          "equity": 312.08,
-          "n_held": 13,
-          "n_buy": 0,
+          "day_pnl": -0.485,
+          "equity": 408.69,
+          "n_held": 12,
+          "n_buy": 8,
           "n_sell": 3,
-          "n_skip": 13,
+          "n_skip": 5,
           "n_cand": 13,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
           "sold": [
             "GPRK",
             "BETA",
             "MEC"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 2,
+              "fees": 0.337,
+              "amount": 33.44,
+              "cash_after": 377.15
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 7,
+              "fees": 0.3248,
+              "amount": 30.7,
+              "cash_after": 346.44
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 3,
+              "fees": 0.2424,
+              "amount": 23.58,
+              "cash_after": 322.86
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 3,
+              "fees": 0.2739,
+              "amount": 26.76,
+              "cash_after": 296.1
+            },
+            {
+              "ticker": "NTSK",
+              "side": "buy",
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 18.829999923706055,
+              "low": 18.780000686645508,
+              "high": 20.385000228881836,
+              "close": 19.639999389648438,
+              "shares": 1,
+              "fees": 0.1994,
+              "amount": 19.84,
+              "cash_after": 276.26
+            },
+            {
+              "ticker": "SG",
+              "side": "buy",
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.079999923706055,
+              "low": 9.039999961853027,
+              "high": 9.34000015258789,
+              "close": 9.140000343322754,
+              "shares": 2,
+              "fees": 0.1888,
+              "amount": 18.47,
+              "cash_after": 257.79
+            },
+            {
+              "ticker": "SIBN",
+              "side": "buy",
+              "buy_px": 19.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 20.0,
+              "low": 19.209999084472656,
+              "high": 20.0,
+              "close": 19.549999237060547,
+              "shares": 1,
+              "fees": 0.1985,
+              "amount": 19.75,
+              "cash_after": 238.04
+            },
+            {
+              "ticker": "BVS",
+              "side": "buy",
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.5,
+              "low": 13.069999694824219,
+              "high": 13.619000434875488,
+              "close": 13.100000381469727,
+              "shares": 1,
+              "fees": 0.134,
+              "amount": 13.23,
+              "cash_after": 224.81
+            }
+          ],
           "sells": [
             {
               "ticker": "GPRK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 11.4399995803833,
+              "sell_when": "16:00 ET close",
               "buy_px": 11.279999732971191,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 4,
+              "fees": 0.4896,
+              "amount": 45.27,
+              "realized_pnl": -0.31,
+              "cash_after": 357.35
             },
             {
               "ticker": "BETA",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 20.899999618530273,
+              "sell_when": "16:00 ET close",
               "buy_px": 20.700000762939453,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.232,
+              "amount": 20.67,
+              "realized_pnl": -0.24,
+              "cash_after": 378.02
             },
             {
               "ticker": "MEC",
               "side": "sell",
+              "sell_px": 16.459999084472656,
+              "sell_when": "16:00 ET close",
+              "buy_px": 16.389999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.3552,
+              "amount": 32.56,
+              "realized_pnl": -0.55,
+              "cash_after": 410.59
+            }
+          ],
+          "cash": 224.81,
+          "invested": 183.88,
+          "fees_cum": 608.43
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -44.993,
+          "equity": 224.81,
+          "n_held": 7,
+          "n_buy": 0,
+          "n_sell": 8,
+          "n_skip": 7,
+          "n_cand": 7,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MQ",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 16.389999389648438,
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TLS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRTH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CGNT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "NTSK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SIBN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BVS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.100000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 312.08,
+          "cash": 224.81,
           "invested": 0.0,
-          "fees_cum": 605.46
+          "fees_cum": 608.43
         }
       ]
     },
@@ -131882,15 +135263,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 5,
-        "n_loss_days": 34,
-        "p_loss_day": 0.8293,
-        "p_win_day": 0.122,
-        "mean_day": -6.451,
+        "n_loss_days": 35,
+        "p_loss_day": 0.8333,
+        "p_win_day": 0.119,
+        "mean_day": -6.75,
         "avg_win_day": 0.241,
-        "avg_loss_day": -7.814,
-        "cum_sum": -264.489
+        "avg_loss_day": -8.135,
+        "cum_sum": -283.511
       },
       "equity": [
         9955.38,
@@ -131933,9 +135314,10 @@
         388.22,
         388.03,
         387.39,
-        300.07
+        385.61,
+        227.11
       ],
-      "final": 300.07,
+      "final": 227.11,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -141810,54 +145192,309 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -22.541,
-          "equity": 300.07,
-          "n_held": 13,
-          "n_buy": 0,
+          "day_pnl": -0.459,
+          "equity": 385.61,
+          "n_held": 12,
+          "n_buy": 8,
           "n_sell": 3,
-          "n_skip": 13,
+          "n_skip": 5,
           "n_cand": 13,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
           "sold": [
             "GPRK",
             "BETA",
             "MEC"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 1,
+              "fees": 0.1685,
+              "amount": 16.72,
+              "cash_after": 370.53
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 7,
+              "fees": 0.3248,
+              "amount": 30.7,
+              "cash_after": 339.82
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 3,
+              "fees": 0.2424,
+              "amount": 23.58,
+              "cash_after": 316.24
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 2,
+              "fees": 0.1826,
+              "amount": 17.84,
+              "cash_after": 298.4
+            },
+            {
+              "ticker": "NTSK",
+              "side": "buy",
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 18.829999923706055,
+              "low": 18.780000686645508,
+              "high": 20.385000228881836,
+              "close": 19.639999389648438,
+              "shares": 1,
+              "fees": 0.1994,
+              "amount": 19.84,
+              "cash_after": 278.56
+            },
+            {
+              "ticker": "SG",
+              "side": "buy",
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.079999923706055,
+              "low": 9.039999961853027,
+              "high": 9.34000015258789,
+              "close": 9.140000343322754,
+              "shares": 2,
+              "fees": 0.1888,
+              "amount": 18.47,
+              "cash_after": 260.09
+            },
+            {
+              "ticker": "SIBN",
+              "side": "buy",
+              "buy_px": 19.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 20.0,
+              "low": 19.209999084472656,
+              "high": 20.0,
+              "close": 19.549999237060547,
+              "shares": 1,
+              "fees": 0.1985,
+              "amount": 19.75,
+              "cash_after": 240.34
+            },
+            {
+              "ticker": "BVS",
+              "side": "buy",
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.5,
+              "low": 13.069999694824219,
+              "high": 13.619000434875488,
+              "close": 13.100000381469727,
+              "shares": 1,
+              "fees": 0.134,
+              "amount": 13.23,
+              "cash_after": 227.11
+            }
+          ],
           "sells": [
             {
               "ticker": "GPRK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 11.4399995803833,
+              "sell_when": "16:00 ET close",
               "buy_px": 11.279999732971191,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 3,
+              "fees": 0.3722,
+              "amount": 33.95,
+              "realized_pnl": -0.24,
+              "cash_after": 334.01
             },
             {
               "ticker": "BETA",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 20.899999618530273,
+              "sell_when": "16:00 ET close",
               "buy_px": 20.700000762939453,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.232,
+              "amount": 20.67,
+              "realized_pnl": -0.24,
+              "cash_after": 354.68
             },
             {
               "ticker": "MEC",
               "side": "sell",
+              "sell_px": 16.459999084472656,
+              "sell_when": "16:00 ET close",
+              "buy_px": 16.389999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.3552,
+              "amount": 32.56,
+              "realized_pnl": -0.55,
+              "cash_after": 387.25
+            }
+          ],
+          "cash": 227.11,
+          "invested": 158.5,
+          "fees_cum": 784.07
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -41.104,
+          "equity": 227.11,
+          "n_held": 7,
+          "n_buy": 0,
+          "n_sell": 8,
+          "n_skip": 7,
+          "n_cand": 7,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MQ",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 16.389999389648438,
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TLS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRTH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CGNT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "NTSK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SIBN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BVS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.100000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 300.07,
+          "cash": 227.11,
           "invested": 0.0,
-          "fees_cum": 781.47
+          "fees_cum": 784.07
         }
       ]
     },
@@ -141873,15 +145510,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 6,
-        "n_loss_days": 28,
-        "p_loss_day": 0.6829,
-        "p_win_day": 0.1463,
-        "mean_day": -6.376,
+        "n_loss_days": 29,
+        "p_loss_day": 0.6905,
+        "p_win_day": 0.1429,
+        "mean_day": -6.598,
         "avg_win_day": 0.554,
-        "avg_loss_day": -9.455,
-        "cum_sum": -261.424
+        "avg_loss_day": -9.67,
+        "cum_sum": -277.102
       },
       "equity": [
         9955.38,
@@ -141924,9 +145561,10 @@
         431.91,
         431.32,
         430.17,
-        310.87
+        428.17,
+        244.29
       ],
-      "final": 310.87,
+      "final": 244.29,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -149962,54 +153600,309 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -27.733,
-          "equity": 310.87,
-          "n_held": 13,
-          "n_buy": 0,
+          "day_pnl": -0.465,
+          "equity": 428.17,
+          "n_held": 12,
+          "n_buy": 8,
           "n_sell": 3,
-          "n_skip": 13,
+          "n_skip": 5,
           "n_cand": 13,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
           "sold": [
             "GPRK",
             "BETA",
             "MEC"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 2,
+              "fees": 0.337,
+              "amount": 33.44,
+              "cash_after": 396.63
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 7,
+              "fees": 0.3248,
+              "amount": 30.7,
+              "cash_after": 365.92
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 3,
+              "fees": 0.2424,
+              "amount": 23.58,
+              "cash_after": 342.34
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 3,
+              "fees": 0.2739,
+              "amount": 26.76,
+              "cash_after": 315.58
+            },
+            {
+              "ticker": "NTSK",
+              "side": "buy",
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 18.829999923706055,
+              "low": 18.780000686645508,
+              "high": 20.385000228881836,
+              "close": 19.639999389648438,
+              "shares": 1,
+              "fees": 0.1994,
+              "amount": 19.84,
+              "cash_after": 295.74
+            },
+            {
+              "ticker": "SG",
+              "side": "buy",
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.079999923706055,
+              "low": 9.039999961853027,
+              "high": 9.34000015258789,
+              "close": 9.140000343322754,
+              "shares": 2,
+              "fees": 0.1888,
+              "amount": 18.47,
+              "cash_after": 277.27
+            },
+            {
+              "ticker": "SIBN",
+              "side": "buy",
+              "buy_px": 19.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 20.0,
+              "low": 19.209999084472656,
+              "high": 20.0,
+              "close": 19.549999237060547,
+              "shares": 1,
+              "fees": 0.1985,
+              "amount": 19.75,
+              "cash_after": 257.52
+            },
+            {
+              "ticker": "BVS",
+              "side": "buy",
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.5,
+              "low": 13.069999694824219,
+              "high": 13.619000434875488,
+              "close": 13.100000381469727,
+              "shares": 1,
+              "fees": 0.134,
+              "amount": 13.23,
+              "cash_after": 244.29
+            }
+          ],
           "sells": [
             {
               "ticker": "GPRK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 11.4399995803833,
+              "sell_when": "16:00 ET close",
               "buy_px": 11.279999732971191,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 4,
+              "fees": 0.4896,
+              "amount": 45.27,
+              "realized_pnl": -0.31,
+              "cash_after": 356.14
             },
             {
               "ticker": "BETA",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 20.899999618530273,
+              "sell_when": "16:00 ET close",
               "buy_px": 20.700000762939453,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.444,
+              "amount": 41.36,
+              "realized_pnl": -0.46,
+              "cash_after": 397.5
             },
             {
               "ticker": "MEC",
               "side": "sell",
+              "sell_px": 16.459999084472656,
+              "sell_when": "16:00 ET close",
+              "buy_px": 16.389999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.3552,
+              "amount": 32.56,
+              "realized_pnl": -0.55,
+              "cash_after": 430.07
+            }
+          ],
+          "cash": 244.29,
+          "invested": 183.88,
+          "fees_cum": 623.8
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -42.946,
+          "equity": 244.29,
+          "n_held": 7,
+          "n_buy": 0,
+          "n_sell": 8,
+          "n_skip": 7,
+          "n_cand": 7,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "NTSK",
+            "SG",
+            "SIBN",
+            "BVS"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MQ",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 16.389999389648438,
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TLS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRTH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CGNT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "NTSK",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.639999389648438,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SIBN",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 19.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BVS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.100000381469727,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 310.87,
+          "cash": 244.29,
           "invested": 0.0,
-          "fees_cum": 620.62
+          "fees_cum": 623.8
         }
       ]
     },
@@ -150025,15 +153918,15 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 41,
+        "n_days": 42,
         "n_win_days": 4,
-        "n_loss_days": 35,
-        "p_loss_day": 0.8537,
-        "p_win_day": 0.0976,
-        "mean_day": -6.333,
+        "n_loss_days": 36,
+        "p_loss_day": 0.8571,
+        "p_win_day": 0.0952,
+        "mean_day": -6.513,
         "avg_win_day": 0.153,
-        "avg_loss_day": -7.437,
-        "cum_sum": -259.67
+        "avg_loss_day": -7.616,
+        "cum_sum": -273.56
       },
       "equity": [
         9955.38,
@@ -150076,9 +153969,10 @@
         394.47,
         394.08,
         393.56,
-        318.32
+        391.82,
+        264.22
       ],
-      "final": 318.32,
+      "final": 264.22,
       "orig_window": {
         "start": "2026-08-13",
         "end": "2026-08-21",
@@ -160716,64 +164610,324 @@
         },
         {
           "date": "2026-10-06",
-          "day_pnl": -19.118,
-          "equity": 318.32,
-          "n_held": 13,
-          "n_buy": 0,
+          "day_pnl": -0.442,
+          "equity": 391.82,
+          "n_held": 17,
+          "n_buy": 8,
           "n_sell": 4,
-          "n_skip": 13,
-          "n_cand": 13,
+          "n_skip": 10,
+          "n_cand": 18,
           "hard_red": false,
-          "bought": [],
+          "bought": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG",
+            "BVS",
+            "MOMO",
+            "ACVA"
+          ],
           "sold": [
             "GPRK",
             "BETA",
             "MEC",
             "PD"
           ],
-          "held": [],
-          "buys": [],
+          "held": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG",
+            "BVS",
+            "MOMO",
+            "ACVA"
+          ],
+          "buys": [
+            {
+              "ticker": "MQ",
+              "side": "buy",
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 17.06999969482422,
+              "low": 16.5,
+              "high": 17.06999969482422,
+              "close": 16.549999237060547,
+              "shares": 1,
+              "fees": 0.1685,
+              "amount": 16.72,
+              "cash_after": 376.43
+            },
+            {
+              "ticker": "TLS",
+              "side": "buy",
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.420000076293945,
+              "low": 4.309999942779541,
+              "high": 4.559899806976318,
+              "close": 4.340000152587891,
+              "shares": 5,
+              "fees": 0.232,
+              "amount": 21.93,
+              "cash_after": 354.5
+            },
+            {
+              "ticker": "PRTH",
+              "side": "buy",
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 7.800000190734863,
+              "low": 7.78000020980835,
+              "high": 7.800000190734863,
+              "close": 7.78000020980835,
+              "shares": 2,
+              "fees": 0.1616,
+              "amount": 15.72,
+              "cash_after": 338.77
+            },
+            {
+              "ticker": "CGNT",
+              "side": "buy",
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 8.800000190734863,
+              "low": 8.800000190734863,
+              "high": 8.947999954223633,
+              "close": 8.829999923706055,
+              "shares": 2,
+              "fees": 0.1826,
+              "amount": 17.84,
+              "cash_after": 320.93
+            },
+            {
+              "ticker": "SG",
+              "side": "buy",
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 9.079999923706055,
+              "low": 9.039999961853027,
+              "high": 9.34000015258789,
+              "close": 9.140000343322754,
+              "shares": 2,
+              "fees": 0.1888,
+              "amount": 18.47,
+              "cash_after": 302.46
+            },
+            {
+              "ticker": "BVS",
+              "side": "buy",
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 13.5,
+              "low": 13.069999694824219,
+              "high": 13.619000434875488,
+              "close": 13.100000381469727,
+              "shares": 1,
+              "fees": 0.134,
+              "amount": 13.23,
+              "cash_after": 289.23
+            },
+            {
+              "ticker": "MOMO",
+              "side": "buy",
+              "buy_px": 4.769999980926514,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 4.639999866485596,
+              "low": 4.610000133514404,
+              "high": 4.800000190734863,
+              "close": 4.769999980926514,
+              "shares": 3,
+              "fees": 0.1521,
+              "amount": 14.46,
+              "cash_after": 274.77
+            },
+            {
+              "ticker": "ACVA",
+              "side": "buy",
+              "buy_px": 10.4399995803833,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "open": 10.479999542236328,
+              "low": 10.4399995803833,
+              "high": 10.479999542236328,
+              "close": 10.4399995803833,
+              "shares": 1,
+              "fees": 0.1074,
+              "amount": 10.55,
+              "cash_after": 264.22
+            }
+          ],
           "sells": [
             {
               "ticker": "GPRK",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 11.4399995803833,
+              "sell_when": "16:00 ET close",
               "buy_px": 11.279999732971191,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 2,
+              "fees": 0.2548,
+              "amount": 22.63,
+              "realized_pnl": -0.17,
+              "cash_after": 340.94
             },
             {
               "ticker": "BETA",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 20.899999618530273,
+              "sell_when": "16:00 ET close",
               "buy_px": 20.700000762939453,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.232,
+              "amount": 20.67,
+              "realized_pnl": -0.24,
+              "cash_after": 361.61
             },
             {
               "ticker": "MEC",
               "side": "sell",
-              "sell_px": null,
-              "sell_when": null,
+              "sell_px": 16.459999084472656,
+              "sell_when": "16:00 ET close",
               "buy_px": 16.389999389648438,
               "buy_when": "16:00 ET close",
-              "buy_kind": "close"
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1876,
+              "amount": 16.27,
+              "realized_pnl": -0.28,
+              "cash_after": 377.88
             },
             {
               "ticker": "PD",
               "side": "sell",
+              "sell_px": 15.4399995803833,
+              "sell_when": "16:00 ET close",
+              "buy_px": 15.59000015258789,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close",
+              "shares": 1,
+              "fees": 0.1774,
+              "amount": 15.26,
+              "realized_pnl": -0.49,
+              "cash_after": 393.15
+            }
+          ],
+          "cash": 264.22,
+          "invested": 127.6,
+          "fees_cum": 826.04
+        },
+        {
+          "date": "2026-10-07",
+          "day_pnl": -32.566,
+          "equity": 264.22,
+          "n_held": 9,
+          "n_buy": 0,
+          "n_sell": 8,
+          "n_skip": 9,
+          "n_cand": 9,
+          "hard_red": false,
+          "bought": [],
+          "sold": [
+            "MQ",
+            "TLS",
+            "PRTH",
+            "CGNT",
+            "SG",
+            "BVS",
+            "MOMO",
+            "ACVA"
+          ],
+          "held": [],
+          "buys": [],
+          "sells": [
+            {
+              "ticker": "MQ",
+              "side": "sell",
               "sell_px": null,
               "sell_when": null,
-              "buy_px": 15.59000015258789,
+              "buy_px": 16.549999237060547,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "TLS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.340000152587891,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "PRTH",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 7.78000020980835,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "CGNT",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 8.829999923706055,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "SG",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 9.140000343322754,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "BVS",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 13.100000381469727,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "MOMO",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 4.769999980926514,
+              "buy_when": "16:00 ET close",
+              "buy_kind": "close"
+            },
+            {
+              "ticker": "ACVA",
+              "side": "sell",
+              "sell_px": null,
+              "sell_when": null,
+              "buy_px": 10.4399995803833,
               "buy_when": "16:00 ET close",
               "buy_kind": "close"
             }
           ],
-          "cash": 318.32,
+          "cash": 264.22,
           "invested": 0.0,
-          "fees_cum": 823.86
+          "fees_cum": 826.04
         }
       ]
     }
