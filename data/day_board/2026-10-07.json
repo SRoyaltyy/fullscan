@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T10:48:11.628254-04:00",
+  "generated_at": "2026-10-07T10:49:13.078464-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -842,7 +842,7 @@
           "size": 32972,
           "said": "Stock book \u2014 2026-10-07",
           "bullets": [
-            "_Generated 2026-10-07T10:39:57.728562-04:00_",
+            "_Generated 2026-10-07T10:48:19.527130-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -1043,31 +1043,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T04:32:03.793149-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-07_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 354425,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-07_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 43162,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-07\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-07\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -3958,6 +3933,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T10:49:11.862180-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-07_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1010341,
+          "preview": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/2026-10-07_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-07_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2493,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-07_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7333,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7333,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "01_daily/2026-10-07_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 33858,
+          "preview": "# Stock book \u2014 2026-10-07\n_Generated 2026-10-07T10:48:19.527130-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 # Stock book \u2014 2026-10-07\n_Generated 2026-10-07T10:48:19.527130-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
