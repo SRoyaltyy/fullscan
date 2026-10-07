@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-10-07T01:20:30.253494-04:00",
+  "generated_at": "2026-10-07T06:08:01.605764-04:00",
   "from_date": "2026-08-13",
   "to_date": "2026-10-06",
   "n_days": 38,
@@ -1846,7 +1846,7 @@
         "e_label": "beat \u00b7 EPS surprise +6.1% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Lititz Mutual Selects Guidewire ProNavigator to Bring AI-Powered Guidance to Agents and Employees",
+        "headline": "West Bend Lays the Foundation for AI-Driven Claims on Guidewire",
         "yday_ret": 7.28,
         "rsi": 55.2,
         "macd_hist": 1.743,
@@ -1946,13 +1946,13 @@
           "+1 join green",
           "+1 peer green",
           "Weather cameras (not in idio score): sector good",
-          "News: neutral \u2014 Lititz Mutual Selects Guidewire ProNavigator to Bring AI-Powered Guidance to Agents and Employees",
+          "News: neutral \u2014 West Bend Lays the Foundation for AI-Driven Claims on Guidewire",
           "beat \u00b7 EPS surprise +6.1% (morning export)",
           "Tape RSI 55 \u00b7 MACD hist 1.743",
           "Side lean: long \u00b7 idio +27"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2069,7 +2069,7 @@
           "Side lean: long \u00b7 idio +26"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2085,7 +2085,7 @@
         "e_label": "beat \u00b7 EPS surprise +25.0% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Samsara Brings Connected Operations to the Ice with Laval Rocket Partnership",
+        "headline": "Samsara positioned for growth as AI expands value of proprietary data, Jefferies says",
         "yday_ret": 3.09,
         "rsi": 61.82,
         "macd_hist": 0.2536,
@@ -2180,13 +2180,13 @@
           "+1 join green",
           "+1 peer green",
           "Weather cameras (not in idio score): sector good",
-          "News: neutral \u2014 Samsara Brings Connected Operations to the Ice with Laval Rocket Partnership",
+          "News: neutral \u2014 Samsara positioned for growth as AI expands value of proprietary data, Jefferies says",
           "beat \u00b7 EPS surprise +25.0% (morning export)",
           "Tape RSI 62 \u00b7 MACD hist 0.2536",
           "Side lean: long \u00b7 idio +24"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2202,7 +2202,7 @@
         "e_label": "beat \u00b7 EPS surprise +4.3% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Amazon Opened Seller Central to Walmart and eBay but Blocked Metas Muse. Heres What Connects the Two Moves",
+        "headline": "TSX futures point higher amid easing bond selloff, oil price drop",
         "yday_ret": 5.76,
         "rsi": 67.61,
         "macd_hist": 2.2106,
@@ -2297,13 +2297,13 @@
           "+1 join green",
           "+1 peer green",
           "Weather cameras (not in idio score): sector good",
-          "News: neutral \u2014 Amazon Opened Seller Central to Walmart and eBay but Blocked Metas Muse. Heres What Connects the Two Moves",
+          "News: neutral \u2014 TSX futures point higher amid easing bond selloff, oil price drop",
           "beat \u00b7 EPS surprise +4.3% (morning export)",
           "Tape RSI 68 \u00b7 MACD hist 2.2106",
           "Side lean: long \u00b7 idio +24"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2319,7 +2319,7 @@
         "e_label": "beat \u00b7 EPS surprise +11.7% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Kung Fu Tea Picks Toast to Power Peak Volume at Over 300 Locations",
+        "headline": "New Toast IQ Team and Expanded Toast IQ Grow Help Businesses Drive Profits, Attract Guests, and Manage Labor",
         "yday_ret": 0.84,
         "rsi": 41.17,
         "macd_hist": -0.0131,
@@ -2409,13 +2409,13 @@
           "+1 join green",
           "+1 peer green",
           "Weather cameras (not in idio score): sector good",
-          "News: neutral \u2014 Kung Fu Tea Picks Toast to Power Peak Volume at Over 300 Locations",
+          "News: neutral \u2014 New Toast IQ Team and Expanded Toast IQ Grow Help Businesses Drive Profits, Attract Guests, and Manage Labor",
           "beat \u00b7 EPS surprise +11.7% (morning export)",
           "Tape RSI 41 \u00b7 MACD hist -0.0131",
           "Side lean: long \u00b7 idio +23"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2537,7 +2537,7 @@
           "Side lean: long \u00b7 idio +22"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2649,7 +2649,7 @@
           "Side lean: long \u00b7 idio +20"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2665,7 +2665,7 @@
         "e_label": "beat \u00b7 EPS surprise +10.7% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "The Reason To Buy Autodesk Stock",
+        "headline": "Why Is Everyone Ignoring Autodesk Stock's High Cash Yield?",
         "yday_ret": 7.82,
         "rsi": 59.54,
         "macd_hist": 0.3217,
@@ -2755,13 +2755,13 @@
           "-1 peer red",
           "+1 yday +7.8%",
           "Weather cameras (not in idio score): sector good",
-          "News: neutral \u2014 The Reason To Buy Autodesk Stock",
+          "News: neutral \u2014 Why Is Everyone Ignoring Autodesk Stock's High Cash Yield?",
           "beat \u00b7 EPS surprise +10.7% (morning export)",
           "Tape RSI 60 \u00b7 MACD hist 0.3217",
           "Side lean: long \u00b7 idio +18"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2882,7 +2882,7 @@
           "Side lean: short \u00b7 idio -11"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2898,7 +2898,7 @@
         "e_label": "miss \u00b7 EPS surprise -57.3% (morning export)",
         "r_pol": "neutral",
         "news_tone": "neutral",
-        "headline": "Onterris Builds Momentum in National Brownfields & Community Revitalization Practice",
+        "headline": "Onterris Releases 2025 Sustainability Report, Demonstrating Progress Towards Climate Goals and Strengthening Long-Term Resilience",
         "yday_ret": 11.8,
         "rsi": 40.04,
         "macd_hist": -0.3646,
@@ -2978,13 +2978,13 @@
           "-1 join red",
           "+1 yday +11.8%",
           "Weather cameras (not in idio score): sector bad",
-          "News: neutral \u2014 Onterris Builds Momentum in National Brownfields & Community Revitalization Practice",
+          "News: neutral \u2014 Onterris Releases 2025 Sustainability Report, Demonstrating Progress Towards Climate Goals and Strengthening Long-Term R",
           "miss \u00b7 EPS surprise -57.3% (morning export)",
           "Tape RSI 40 \u00b7 MACD hist -0.3646",
           "Side lean: short \u00b7 idio -9"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3099,7 +3099,7 @@
           "Side lean: short \u00b7 idio -9"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3197,7 +3197,7 @@
           "Side lean: short \u00b7 idio -9"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3213,7 +3213,7 @@
         "e_label": "no earnings date on the morning export",
         "r_pol": "neutral",
         "news_tone": "neutral",
-        "headline": "6 food manufacturers talk supply chain tactics",
+        "headline": "3 Consumer-Facing Stocks Reporting This Week",
         "yday_ret": 0.39,
         "rsi": 26.65,
         "macd_hist": -0.17,
@@ -3292,13 +3292,13 @@
           "+1 yday +0.4%",
           "+1 RSI 27 OS \u2014 long-friendly",
           "Weather cameras (not in idio score): sector bad",
-          "News: neutral \u2014 6 food manufacturers talk supply chain tactics",
+          "News: neutral \u2014 3 Consumer-Facing Stocks Reporting This Week",
           "no earnings date on the morning export",
           "Tape RSI 27 OS \u00b7 MACD hist -0.17",
           "Side lean: short \u00b7 idio -8"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3412,7 +3412,7 @@
           "Side lean: short \u00b7 idio -7"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3428,7 +3428,7 @@
         "e_label": "miss \u00b7 EPS surprise -9.8% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Why Did KOD, RGEN, BIIB Stocks Rise To 52-Week Highs?",
+        "headline": "This week in charts: Kodiaks big comeback and Hengruis dealmaking",
         "yday_ret": -0.68,
         "rsi": 84.34,
         "macd_hist": 6.94,
@@ -3525,13 +3525,13 @@
           "-2 RSI 84 OB \u2014 pause longs",
           "-1 join red",
           "+1 peer green",
-          "News: neutral \u2014 Why Did KOD, RGEN, BIIB Stocks Rise To 52-Week Highs?",
+          "News: neutral \u2014 This week in charts: Kodiaks big comeback and Hengruis dealmaking",
           "miss \u00b7 EPS surprise -9.8% (morning export)",
           "Tape RSI 84 OB \u00b7 MACD hist 6.94",
           "Side lean: short \u00b7 idio -7"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3640,7 +3640,7 @@
           "Side lean: short \u00b7 idio -7"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-07",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3660,7 +3660,7 @@
         "e_label": "beat \u00b7 EPS surprise +6.1% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Lititz Mutual Selects Guidewire ProNavigator to Bring AI-Powered Guidance to Agents and Employees",
+        "headline": "West Bend Lays the Foundation for AI-Driven Claims on Guidewire",
         "yday_ret": 7.28,
         "rsi": 55.2,
         "macd_hist": 1.743,
@@ -3857,7 +3857,7 @@
         "e_label": "beat \u00b7 EPS surprise +25.0% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Samsara Brings Connected Operations to the Ice with Laval Rocket Partnership",
+        "headline": "Samsara positioned for growth as AI expands value of proprietary data, Jefferies says",
         "yday_ret": 3.09,
         "rsi": 61.82,
         "macd_hist": 0.2536,
@@ -3944,108 +3944,6 @@
         "h5": null
       },
       {
-        "ticker": "PTC",
-        "date": "2026-10-06",
-        "idio": 24,
-        "n_pos": 7,
-        "n_neg": 0,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +0.9% (morning export)",
-        "r_pol": "good",
-        "news_tone": "neutral",
-        "headline": "The Reason To Buy Autodesk Stock",
-        "yday_ret": 33.49,
-        "rsi": 80.47,
-        "macd_hist": 4.1703,
-        "flow_in": false,
-        "white": true,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "yday_gainer",
-          "yday_mover"
-        ],
-        "open": 193.0,
-        "close": 193.0,
-        "day_pct": 0.0,
-        "boxes": {
-          "join": "good",
-          "sector": "good",
-          "gen": "neutral",
-          "news": "neutral",
-          "digest": "good",
-          "judge": "neutral",
-          "ab": "good",
-          "peer": "good",
-          "heat": "good",
-          "vol": "good",
-          "catal": "missing",
-          "buy": "neutral",
-          "yday": "missing"
-        },
-        "domains": {
-          "market": "missing",
-          "parent": "missing",
-          "child": "missing",
-          "company": "missing",
-          "setup": "missing",
-          "flow": "missing"
-        },
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": 14,
-            "why": "+7 \u22120 cameras"
-          },
-          {
-            "k": "E",
-            "pts": 4,
-            "why": "beat \u00b7 EPS surprise +0.9% (morning export)"
-          },
-          {
-            "k": "R",
-            "pts": 2,
-            "why": "buy-side recom 1.9 (level, not a change \u00b7 morning export)"
-          },
-          {
-            "k": "join",
-            "pts": 1,
-            "why": "join green"
-          },
-          {
-            "k": "peer",
-            "pts": 1,
-            "why": "peer green"
-          },
-          {
-            "k": "yday",
-            "pts": 1,
-            "why": "yday +33.5%"
-          },
-          {
-            "k": "white",
-            "pts": 2,
-            "why": "zero red cameras"
-          },
-          {
-            "k": "macd",
-            "pts": 1,
-            "why": "MACD hist + / X+"
-          },
-          {
-            "k": "rsi",
-            "pts": -2,
-            "why": "RSI 80 OB \u2014 pause longs"
-          }
-        ],
-        "weather": [
-          "sector good"
-        ],
-        "h1": null,
-        "h3": null,
-        "h5": null
-      },
-      {
         "ticker": "SHOP",
         "date": "2026-10-06",
         "idio": 24,
@@ -4055,7 +3953,7 @@
         "e_label": "beat \u00b7 EPS surprise +4.3% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Amazon Opened Seller Central to Walmart and eBay but Blocked Metas Muse. Heres What Connects the Two Moves",
+        "headline": "TSX futures point higher amid easing bond selloff, oil price drop",
         "yday_ret": 5.76,
         "rsi": 67.61,
         "macd_hist": 2.2106,
@@ -4151,7 +4049,7 @@
         "e_label": "beat \u00b7 EPS surprise +11.7% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Kung Fu Tea Picks Toast to Power Peak Volume at Over 300 Locations",
+        "headline": "New Toast IQ Team and Expanded Toast IQ Grow Help Businesses Drive Profits, Attract Guests, and Manage Labor",
         "yday_ret": 0.84,
         "rsi": 41.17,
         "macd_hist": -0.0131,
@@ -4334,6 +4232,103 @@
         "h5": null
       },
       {
+        "ticker": "PTC",
+        "date": "2026-10-06",
+        "idio": 22,
+        "n_pos": 7,
+        "n_neg": 0,
+        "e_pol": "good",
+        "e_label": "beat \u00b7 EPS surprise +0.9% (morning export)",
+        "r_pol": "neutral",
+        "news_tone": "neutral",
+        "headline": "Are RXO, PTC, LFCR, WAFD Obtaining Fair Deals for their Shareholders?",
+        "yday_ret": 33.49,
+        "rsi": 80.47,
+        "macd_hist": 4.1703,
+        "flow_in": false,
+        "white": true,
+        "alarm": false,
+        "on_list": true,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "open": 193.0,
+        "close": 193.0,
+        "day_pct": 0.0,
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "neutral",
+          "news": "neutral",
+          "digest": "good",
+          "judge": "neutral",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "good",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "missing"
+        },
+        "domains": {
+          "market": "missing",
+          "parent": "missing",
+          "child": "missing",
+          "company": "missing",
+          "setup": "missing",
+          "flow": "missing"
+        },
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 14,
+            "why": "+7 \u22120 cameras"
+          },
+          {
+            "k": "E",
+            "pts": 4,
+            "why": "beat \u00b7 EPS surprise +0.9% (morning export)"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": 1,
+            "why": "yday +33.5%"
+          },
+          {
+            "k": "white",
+            "pts": 2,
+            "why": "zero red cameras"
+          },
+          {
+            "k": "macd",
+            "pts": 1,
+            "why": "MACD hist + / X+"
+          },
+          {
+            "k": "rsi",
+            "pts": -2,
+            "why": "RSI 80 OB \u2014 pause longs"
+          }
+        ],
+        "weather": [
+          "sector good"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null
+      },
+      {
         "ticker": "PCOR",
         "date": "2026-10-06",
         "idio": 20,
@@ -4434,7 +4429,7 @@
         "e_label": "beat \u00b7 EPS surprise +10.7% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "The Reason To Buy Autodesk Stock",
+        "headline": "Why Is Everyone Ignoring Autodesk Stock's High Cash Yield?",
         "yday_ret": 7.82,
         "rsi": 59.54,
         "macd_hist": 0.3217,
@@ -4525,7 +4520,7 @@
         "e_label": "beat \u00b7 EPS surprise +13.4% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "SharkNinja Stock Has Room To Run Higher, Analyst Says",
+        "headline": "Meet the Ninja PREPi Precision-Powered Prep - Store System: Prep, Serve, Store & Go - All with One Bowl.",
         "yday_ret": 0.07,
         "rsi": 60.31,
         "macd_hist": 1.3746,
@@ -4609,7 +4604,7 @@
         "e_label": "",
         "r_pol": "missing",
         "news_tone": "good",
-        "headline": "What Happens To ExxonMobil Stock If Refining Profits Fade?",
+        "headline": "Has The Story Under ExxonMobil Stock Run Out?",
         "yday_ret": null,
         "rsi": null,
         "macd_hist": null,
@@ -4696,7 +4691,7 @@
         "e_label": "beat \u00b7 EPS surprise +21.6% (morning export)",
         "r_pol": "neutral",
         "news_tone": "neutral",
-        "headline": "IBD Stock Of The Day: NetApp's AI-Powered Rally Faces Next Test",
+        "headline": "What Was Seagate Telling You Before Its Stock Ran?",
         "yday_ret": -1.1,
         "rsi": 72.54,
         "macd_hist": 2.9338,
@@ -5132,7 +5127,7 @@
         "e_label": "beat \u00b7 EPS surprise +3.5% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "This Little-Known Chip Stock Has Doubled. Wall Street Is Getting Bullish.",
+        "headline": "MACOM to Showcase RF and Microwave Products and Technologies at European Microwave Week",
         "yday_ret": 2.08,
         "rsi": 69.47,
         "macd_hist": 6.3751,
@@ -5228,7 +5223,7 @@
         "e_label": "",
         "r_pol": "missing",
         "news_tone": "missing",
-        "headline": "Nike Stock Has Dropped 44% This Year. Why Jefferies Says to Buy the Dip.",
+        "headline": "Nike Stock Near 52-Week Lows: Can Its Dividend and Caitlin Clark Spark a Rebound?",
         "yday_ret": null,
         "rsi": null,
         "macd_hist": null,
@@ -5310,7 +5305,7 @@
         "e_label": "beat \u00b7 EPS surprise +20.7% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "These Tech Stocks Trade Near Buy Points. One Sees 80% To 100% Core Income Growth.",
+        "headline": "Why Did CRWD, TWLO, P Stocks Hit 52-Week Highs Today?",
         "yday_ret": 2.67,
         "rsi": 79.73,
         "macd_hist": 3.1483,
@@ -5401,7 +5396,7 @@
         "e_label": "beat \u00b7 EPS surprise +41.3% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Vir Biotechnology to Participate in the Morgan Stanley 24th Annual Global Healthcare Conference",
+        "headline": "Vir Biotechnology to Present Expanded Phase 2 SOLSTICE Results for Elebsiran and Tobevibart in Hepatitis Delta at AASLD's The Liver Meeting 2026",
         "yday_ret": 5.46,
         "rsi": 63.37,
         "macd_hist": 0.0367,
@@ -5495,7 +5490,7 @@
         "e_label": "beat \u00b7 EPS surprise +49.1% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Arcos Dorados Holdings Inc's Dividend Analysis",
+        "headline": "Arcos Dorados to Host 2026 Investor Day, Outlining Long-Term Growth Strategy and Financial Framework",
         "yday_ret": 13.92,
         "rsi": 61.33,
         "macd_hist": 0.0271,
@@ -5597,7 +5592,7 @@
         "e_label": "",
         "r_pol": "missing",
         "news_tone": "missing",
-        "headline": "Exclusive: OpenAI poaches Brian McCarthy from SpaceX to be its VP of worldwide sales",
+        "headline": "Cybersecurity stocks hit new highs as AI agents spark 'biggest risk today': Chart of the Day",
         "yday_ret": null,
         "rsi": null,
         "macd_hist": null,
@@ -5720,7 +5715,7 @@
           {
             "k": "R",
             "pts": 2,
-            "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
+            "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
           },
           {
             "k": "join",
@@ -5768,7 +5763,7 @@
         "e_label": "beat \u00b7 EPS surprise +9.6% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Monzo in talks over potential sale to Brazils Nubank  report",
+        "headline": "Brazilian stocks soar as Fl\u00e1vio Bolsonaro takes surprise election lead",
         "yday_ret": 13.03,
         "rsi": 61.38,
         "macd_hist": 0.0689,
@@ -5864,7 +5859,7 @@
         "e_label": "no earnings date on the morning export",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Penguin Solutions Sets Conference Call for Fourth Quarter and Fiscal 2026 Results",
+        "headline": "AI Infrastructure Stock Crosses Key Bullish Trendline",
         "yday_ret": -1.06,
         "rsi": 62.24,
         "macd_hist": 1.071,
@@ -5955,7 +5950,7 @@
         "e_label": "beat \u00b7 EPS surprise +67.1% (morning export)",
         "r_pol": "neutral",
         "news_tone": "good",
-        "headline": "RXO Executive Named a Finalist in 2026 Stevie Awards for Women in Business",
+        "headline": "Are RXO, PTC, LFCR, WAFD Obtaining Fair Deals for their Shareholders?",
         "yday_ret": 22.54,
         "rsi": 81.72,
         "macd_hist": 0.8464,
@@ -6148,7 +6143,7 @@
         "e_label": "",
         "r_pol": "missing",
         "news_tone": "missing",
-        "headline": "Are BLFS, FTHM, AUUD, VRME Obtaining Fair Deals for their Shareholders?",
+        "headline": "Freshworks Set to Join S&P SmallCap 600",
         "yday_ret": null,
         "rsi": null,
         "macd_hist": null,
@@ -6161,7 +6156,7 @@
           "flatten"
         ],
         "open": null,
-        "close": 38.61000061035156,
+        "close": 38.61,
         "day_pct": 0.0,
         "boxes": {
           "join": "neutral",
@@ -6379,7 +6374,7 @@
         "e_label": "beat \u00b7 EPS surprise +3.6% (morning export)",
         "r_pol": "neutral",
         "news_tone": "neutral",
-        "headline": "MRNA On Track To Be September's No. 2 S&P 500 Stock  But These 5 Smaller Health Care Names Did Even Better",
+        "headline": "GRAIL to Present New Data From NHS-Galleri and PATHFINDER 2 at EDCC and ESMO Congress 2026",
         "yday_ret": 7.55,
         "rsi": 84.61,
         "macd_hist": 4.6792,
@@ -6575,7 +6570,7 @@
         "e_label": "beat \u00b7 EPS surprise +15.8% (morning export)",
         "r_pol": "neutral",
         "news_tone": "neutral",
-        "headline": "Novavax to Participate in September Investor Conferences",
+        "headline": "NVAX, EBS, ARCT, MRNA Rally After Russia Plague Lab Worker's Death: Retail Traders Eye 'Contract Awards'",
         "yday_ret": 20.08,
         "rsi": 77.17,
         "macd_hist": 0.0936,
@@ -6670,7 +6665,7 @@
         "e_label": "",
         "r_pol": "missing",
         "news_tone": "missing",
-        "headline": "AstraZeneca invests $2 billion in Summit Therapeutics in cancer drug deal",
+        "headline": "",
         "yday_ret": null,
         "rsi": null,
         "macd_hist": null,
@@ -6895,7 +6890,7 @@
           {
             "k": "R",
             "pts": 2,
-            "why": "buy-side recom 1.2 (level, not a change \u00b7 morning export)"
+            "why": "buy-side recom 1.1 (level, not a change \u00b7 morning export)"
           },
           {
             "k": "join",
@@ -6945,7 +6940,7 @@
         "e_label": "E 12 sess ago \u00b7 polarity unknown (export stamped the date, not beat/miss)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "QTREX Quantum Reports First Half 2026 Financial Results",
+        "headline": "QTREX Interconnect Independently Tested at 20 mK by a Leading Quantum Computing Company; Over 100 dB Channel Isolation, 60 dB Beyond the Market Leader",
         "yday_ret": 40.0,
         "rsi": 78.91,
         "macd_hist": 0.0686,
@@ -7232,10 +7227,10 @@
         "n_pos": 3,
         "n_neg": 3,
         "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +3.3% (morning export)",
+        "e_label": "beat \u00b7 EPS surprise +1.7% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "RPM Announces Acquisition of Volteco",
+        "headline": "RPM International beats first quarter earnings estimates",
         "yday_ret": -3.92,
         "rsi": 31.87,
         "macd_hist": 0.0021,
@@ -7281,7 +7276,7 @@
           {
             "k": "E",
             "pts": 4,
-            "why": "beat \u00b7 EPS surprise +3.3% (morning export)"
+            "why": "beat \u00b7 EPS surprise +1.7% (morning export)"
           },
           {
             "k": "R",
@@ -60643,7 +60638,7 @@
           "h3_px": 4.24,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "LIND",
@@ -60765,7 +60760,7 @@
           "h3_px": 35.6,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "ETON",
@@ -60874,7 +60869,7 @@
           "h3_px": 55.62,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "BE",
@@ -60982,7 +60977,7 @@
           "h3_px": 286.65,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "SN",
@@ -61094,7 +61089,7 @@
           "h3_px": 182.69,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "PCRX",
@@ -61203,7 +61198,7 @@
           "h3_px": 25.05,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "JELD",
@@ -61305,7 +61300,7 @@
           "h3_px": 1.76,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "COP",
@@ -61417,7 +61412,7 @@
           "h3_px": 128.4,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         }
       ],
       "shorts": [
@@ -61538,7 +61533,7 @@
           "h3_px": 2.33,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "TJGC",
@@ -61648,7 +61643,7 @@
           "h3_px": 32.88,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "ABCL",
@@ -61777,7 +61772,7 @@
           "h3_px": 13.78,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "RXRX",
@@ -61881,7 +61876,7 @@
           "h3_px": 4.78,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "CAG",
@@ -61990,7 +61985,7 @@
           "h3_px": 13.19,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "CALM",
@@ -62099,7 +62094,7 @@
           "h3_px": 64.99,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "BETR",
@@ -62191,7 +62186,7 @@
           "h3_px": 11.13,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         },
         {
           "ticker": "SUJA",
@@ -62305,7 +62300,7 @@
           "h3_px": 9.43,
           "h3_date": "2026-10-05",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-07"
         }
       ],
       "n_long_ok": 42,
@@ -64259,7 +64254,7 @@
           "h1_px": 488.47,
           "h1_date": "2026-10-05",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-07",
           "h5_px": null,
           "h5_date": null
         },
@@ -64377,7 +64372,7 @@
           "h1_px": 55.62,
           "h1_date": "2026-10-05",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-07",
           "h5_px": null,
           "h5_date": null
         },
@@ -64505,7 +64500,7 @@
           "h1_px": 1.87,
           "h1_date": "2026-10-05",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-07",
           "h5_px": null,
           "h5_date": null
         },
@@ -64628,7 +64623,7 @@
           "h1_px": 7.22,
           "h1_date": "2026-10-05",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-07",
           "h5_px": null,
           "h5_date": null
         },
@@ -64751,7 +64746,7 @@
           "h1_px": 26.65,
           "h1_date": "2026-10-05",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-07",
           "h5_px": null,
           "h5_date": null
         },
@@ -64864,7 +64859,7 @@
           "h1_px": 4.27,
           "h1_date": "2026-10-05",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-07",
           "h5_px": null,
           "h5_date": null
         },
@@ -64977,7 +64972,7 @@
           "h1_px": 10.11,
           "h1_date": "2026-10-05",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-07",
           "h5_px": null,
           "h5_date": null
         },
@@ -65095,7 +65090,7 @@
           "h1_px": 56.08,
           "h1_date": "2026-10-05",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-07",
           "h5_px": null,
           "h5_date": null
         }
@@ -65206,7 +65201,7 @@
           "h1_px": 5.55,
           "h1_date": "2026-10-05",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-07",
           "h5_px": null,
           "h5_date": null
         },
@@ -65302,7 +65297,7 @@
           "h1_px": 2.055,
           "h1_date": "2026-10-05",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-07",
           "h5_px": null,
           "h5_date": null
         },
@@ -65420,7 +65415,7 @@
           "h1_px": 3.92,
           "h1_date": "2026-10-05",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-07",
           "h5_px": null,
           "h5_date": null
         },
@@ -65516,7 +65511,7 @@
           "h1_px": 1.72,
           "h1_date": "2026-10-05",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-07",
           "h5_px": null,
           "h5_date": null
         },
@@ -65619,7 +65614,7 @@
           "h1_px": 32.88,
           "h1_date": "2026-10-05",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-07",
           "h5_px": null,
           "h5_date": null
         }
@@ -67411,7 +67406,7 @@
           "e_label": "beat \u00b7 EPS surprise +6.1% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Lititz Mutual Selects Guidewire ProNavigator to Bring AI-Powered Guidance to Agents and Employees",
+          "headline": "West Bend Lays the Foundation for AI-Driven Claims on Guidewire",
           "yday_ret": 7.28,
           "rsi": 55.2,
           "macd_hist": 1.743,
@@ -67511,13 +67506,13 @@
             "+1 join green",
             "+1 peer green",
             "Weather cameras (not in idio score): sector good",
-            "News: neutral \u2014 Lititz Mutual Selects Guidewire ProNavigator to Bring AI-Powered Guidance to Agents and Employees",
+            "News: neutral \u2014 West Bend Lays the Foundation for AI-Driven Claims on Guidewire",
             "beat \u00b7 EPS surprise +6.1% (morning export)",
             "Tape RSI 55 \u00b7 MACD hist 1.743",
             "Side lean: long \u00b7 idio +27"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -67634,7 +67629,7 @@
             "Side lean: long \u00b7 idio +26"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -67650,7 +67645,7 @@
           "e_label": "beat \u00b7 EPS surprise +25.0% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Samsara Brings Connected Operations to the Ice with Laval Rocket Partnership",
+          "headline": "Samsara positioned for growth as AI expands value of proprietary data, Jefferies says",
           "yday_ret": 3.09,
           "rsi": 61.82,
           "macd_hist": 0.2536,
@@ -67745,13 +67740,13 @@
             "+1 join green",
             "+1 peer green",
             "Weather cameras (not in idio score): sector good",
-            "News: neutral \u2014 Samsara Brings Connected Operations to the Ice with Laval Rocket Partnership",
+            "News: neutral \u2014 Samsara positioned for growth as AI expands value of proprietary data, Jefferies says",
             "beat \u00b7 EPS surprise +25.0% (morning export)",
             "Tape RSI 62 \u00b7 MACD hist 0.2536",
             "Side lean: long \u00b7 idio +24"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -67767,7 +67762,7 @@
           "e_label": "beat \u00b7 EPS surprise +4.3% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Amazon Opened Seller Central to Walmart and eBay but Blocked Metas Muse. Heres What Connects the Two Moves",
+          "headline": "TSX futures point higher amid easing bond selloff, oil price drop",
           "yday_ret": 5.76,
           "rsi": 67.61,
           "macd_hist": 2.2106,
@@ -67862,13 +67857,13 @@
             "+1 join green",
             "+1 peer green",
             "Weather cameras (not in idio score): sector good",
-            "News: neutral \u2014 Amazon Opened Seller Central to Walmart and eBay but Blocked Metas Muse. Heres What Connects the Two Moves",
+            "News: neutral \u2014 TSX futures point higher amid easing bond selloff, oil price drop",
             "beat \u00b7 EPS surprise +4.3% (morning export)",
             "Tape RSI 68 \u00b7 MACD hist 2.2106",
             "Side lean: long \u00b7 idio +24"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -67884,7 +67879,7 @@
           "e_label": "beat \u00b7 EPS surprise +11.7% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Kung Fu Tea Picks Toast to Power Peak Volume at Over 300 Locations",
+          "headline": "New Toast IQ Team and Expanded Toast IQ Grow Help Businesses Drive Profits, Attract Guests, and Manage Labor",
           "yday_ret": 0.84,
           "rsi": 41.17,
           "macd_hist": -0.0131,
@@ -67974,13 +67969,13 @@
             "+1 join green",
             "+1 peer green",
             "Weather cameras (not in idio score): sector good",
-            "News: neutral \u2014 Kung Fu Tea Picks Toast to Power Peak Volume at Over 300 Locations",
+            "News: neutral \u2014 New Toast IQ Team and Expanded Toast IQ Grow Help Businesses Drive Profits, Attract Guests, and Manage Labor",
             "beat \u00b7 EPS surprise +11.7% (morning export)",
             "Tape RSI 41 \u00b7 MACD hist -0.0131",
             "Side lean: long \u00b7 idio +23"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -68102,7 +68097,7 @@
             "Side lean: long \u00b7 idio +22"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -68214,7 +68209,7 @@
             "Side lean: long \u00b7 idio +20"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -68230,7 +68225,7 @@
           "e_label": "beat \u00b7 EPS surprise +10.7% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "The Reason To Buy Autodesk Stock",
+          "headline": "Why Is Everyone Ignoring Autodesk Stock's High Cash Yield?",
           "yday_ret": 7.82,
           "rsi": 59.54,
           "macd_hist": 0.3217,
@@ -68320,13 +68315,13 @@
             "-1 peer red",
             "+1 yday +7.8%",
             "Weather cameras (not in idio score): sector good",
-            "News: neutral \u2014 The Reason To Buy Autodesk Stock",
+            "News: neutral \u2014 Why Is Everyone Ignoring Autodesk Stock's High Cash Yield?",
             "beat \u00b7 EPS surprise +10.7% (morning export)",
             "Tape RSI 60 \u00b7 MACD hist 0.3217",
             "Side lean: long \u00b7 idio +18"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -68447,7 +68442,7 @@
             "Side lean: short \u00b7 idio -11"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -68463,7 +68458,7 @@
           "e_label": "miss \u00b7 EPS surprise -57.3% (morning export)",
           "r_pol": "neutral",
           "news_tone": "neutral",
-          "headline": "Onterris Builds Momentum in National Brownfields & Community Revitalization Practice",
+          "headline": "Onterris Releases 2025 Sustainability Report, Demonstrating Progress Towards Climate Goals and Strengthening Long-Term Resilience",
           "yday_ret": 11.8,
           "rsi": 40.04,
           "macd_hist": -0.3646,
@@ -68543,13 +68538,13 @@
             "-1 join red",
             "+1 yday +11.8%",
             "Weather cameras (not in idio score): sector bad",
-            "News: neutral \u2014 Onterris Builds Momentum in National Brownfields & Community Revitalization Practice",
+            "News: neutral \u2014 Onterris Releases 2025 Sustainability Report, Demonstrating Progress Towards Climate Goals and Strengthening Long-Term R",
             "miss \u00b7 EPS surprise -57.3% (morning export)",
             "Tape RSI 40 \u00b7 MACD hist -0.3646",
             "Side lean: short \u00b7 idio -9"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -68664,7 +68659,7 @@
             "Side lean: short \u00b7 idio -9"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -68762,7 +68757,7 @@
             "Side lean: short \u00b7 idio -9"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -68778,7 +68773,7 @@
           "e_label": "no earnings date on the morning export",
           "r_pol": "neutral",
           "news_tone": "neutral",
-          "headline": "6 food manufacturers talk supply chain tactics",
+          "headline": "3 Consumer-Facing Stocks Reporting This Week",
           "yday_ret": 0.39,
           "rsi": 26.65,
           "macd_hist": -0.17,
@@ -68857,13 +68852,13 @@
             "+1 yday +0.4%",
             "+1 RSI 27 OS \u2014 long-friendly",
             "Weather cameras (not in idio score): sector bad",
-            "News: neutral \u2014 6 food manufacturers talk supply chain tactics",
+            "News: neutral \u2014 3 Consumer-Facing Stocks Reporting This Week",
             "no earnings date on the morning export",
             "Tape RSI 27 OS \u00b7 MACD hist -0.17",
             "Side lean: short \u00b7 idio -8"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -68977,7 +68972,7 @@
             "Side lean: short \u00b7 idio -7"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -68993,7 +68988,7 @@
           "e_label": "miss \u00b7 EPS surprise -9.8% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Why Did KOD, RGEN, BIIB Stocks Rise To 52-Week Highs?",
+          "headline": "This week in charts: Kodiaks big comeback and Hengruis dealmaking",
           "yday_ret": -0.68,
           "rsi": 84.34,
           "macd_hist": 6.94,
@@ -69090,13 +69085,13 @@
             "-2 RSI 84 OB \u2014 pause longs",
             "-1 join red",
             "+1 peer green",
-            "News: neutral \u2014 Why Did KOD, RGEN, BIIB Stocks Rise To 52-Week Highs?",
+            "News: neutral \u2014 This week in charts: Kodiaks big comeback and Hengruis dealmaking",
             "miss \u00b7 EPS surprise -9.8% (morning export)",
             "Tape RSI 84 OB \u00b7 MACD hist 6.94",
             "Side lean: short \u00b7 idio -7"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -69205,7 +69200,7 @@
             "Side lean: short \u00b7 idio -7"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-07",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -69225,7 +69220,7 @@
           "e_label": "beat \u00b7 EPS surprise +6.1% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Lititz Mutual Selects Guidewire ProNavigator to Bring AI-Powered Guidance to Agents and Employees",
+          "headline": "West Bend Lays the Foundation for AI-Driven Claims on Guidewire",
           "yday_ret": 7.28,
           "rsi": 55.2,
           "macd_hist": 1.743,
@@ -69422,7 +69417,7 @@
           "e_label": "beat \u00b7 EPS surprise +25.0% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Samsara Brings Connected Operations to the Ice with Laval Rocket Partnership",
+          "headline": "Samsara positioned for growth as AI expands value of proprietary data, Jefferies says",
           "yday_ret": 3.09,
           "rsi": 61.82,
           "macd_hist": 0.2536,
@@ -69509,108 +69504,6 @@
           "h5": null
         },
         {
-          "ticker": "PTC",
-          "date": "2026-10-06",
-          "idio": 24,
-          "n_pos": 7,
-          "n_neg": 0,
-          "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +0.9% (morning export)",
-          "r_pol": "good",
-          "news_tone": "neutral",
-          "headline": "The Reason To Buy Autodesk Stock",
-          "yday_ret": 33.49,
-          "rsi": 80.47,
-          "macd_hist": 4.1703,
-          "flow_in": false,
-          "white": true,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "yday_gainer",
-            "yday_mover"
-          ],
-          "open": 193.0,
-          "close": 193.0,
-          "day_pct": 0.0,
-          "boxes": {
-            "join": "good",
-            "sector": "good",
-            "gen": "neutral",
-            "news": "neutral",
-            "digest": "good",
-            "judge": "neutral",
-            "ab": "good",
-            "peer": "good",
-            "heat": "good",
-            "vol": "good",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": {
-            "market": "missing",
-            "parent": "missing",
-            "child": "missing",
-            "company": "missing",
-            "setup": "missing",
-            "flow": "missing"
-          },
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": 14,
-              "why": "+7 \u22120 cameras"
-            },
-            {
-              "k": "E",
-              "pts": 4,
-              "why": "beat \u00b7 EPS surprise +0.9% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.9 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "join",
-              "pts": 1,
-              "why": "join green"
-            },
-            {
-              "k": "peer",
-              "pts": 1,
-              "why": "peer green"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +33.5%"
-            },
-            {
-              "k": "white",
-              "pts": 2,
-              "why": "zero red cameras"
-            },
-            {
-              "k": "macd",
-              "pts": 1,
-              "why": "MACD hist + / X+"
-            },
-            {
-              "k": "rsi",
-              "pts": -2,
-              "why": "RSI 80 OB \u2014 pause longs"
-            }
-          ],
-          "weather": [
-            "sector good"
-          ],
-          "h1": null,
-          "h3": null,
-          "h5": null
-        },
-        {
           "ticker": "SHOP",
           "date": "2026-10-06",
           "idio": 24,
@@ -69620,7 +69513,7 @@
           "e_label": "beat \u00b7 EPS surprise +4.3% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Amazon Opened Seller Central to Walmart and eBay but Blocked Metas Muse. Heres What Connects the Two Moves",
+          "headline": "TSX futures point higher amid easing bond selloff, oil price drop",
           "yday_ret": 5.76,
           "rsi": 67.61,
           "macd_hist": 2.2106,
@@ -69716,7 +69609,7 @@
           "e_label": "beat \u00b7 EPS surprise +11.7% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Kung Fu Tea Picks Toast to Power Peak Volume at Over 300 Locations",
+          "headline": "New Toast IQ Team and Expanded Toast IQ Grow Help Businesses Drive Profits, Attract Guests, and Manage Labor",
           "yday_ret": 0.84,
           "rsi": 41.17,
           "macd_hist": -0.0131,
@@ -69899,6 +69792,103 @@
           "h5": null
         },
         {
+          "ticker": "PTC",
+          "date": "2026-10-06",
+          "idio": 22,
+          "n_pos": 7,
+          "n_neg": 0,
+          "e_pol": "good",
+          "e_label": "beat \u00b7 EPS surprise +0.9% (morning export)",
+          "r_pol": "neutral",
+          "news_tone": "neutral",
+          "headline": "Are RXO, PTC, LFCR, WAFD Obtaining Fair Deals for their Shareholders?",
+          "yday_ret": 33.49,
+          "rsi": 80.47,
+          "macd_hist": 4.1703,
+          "flow_in": false,
+          "white": true,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "open": 193.0,
+          "close": 193.0,
+          "day_pct": 0.0,
+          "boxes": {
+            "join": "good",
+            "sector": "good",
+            "gen": "neutral",
+            "news": "neutral",
+            "digest": "good",
+            "judge": "neutral",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "good",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": {
+            "market": "missing",
+            "parent": "missing",
+            "child": "missing",
+            "company": "missing",
+            "setup": "missing",
+            "flow": "missing"
+          },
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 14,
+              "why": "+7 \u22120 cameras"
+            },
+            {
+              "k": "E",
+              "pts": 4,
+              "why": "beat \u00b7 EPS surprise +0.9% (morning export)"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "yday +33.5%"
+            },
+            {
+              "k": "white",
+              "pts": 2,
+              "why": "zero red cameras"
+            },
+            {
+              "k": "macd",
+              "pts": 1,
+              "why": "MACD hist + / X+"
+            },
+            {
+              "k": "rsi",
+              "pts": -2,
+              "why": "RSI 80 OB \u2014 pause longs"
+            }
+          ],
+          "weather": [
+            "sector good"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
           "ticker": "PCOR",
           "date": "2026-10-06",
           "idio": 20,
@@ -69999,7 +69989,7 @@
           "e_label": "beat \u00b7 EPS surprise +10.7% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "The Reason To Buy Autodesk Stock",
+          "headline": "Why Is Everyone Ignoring Autodesk Stock's High Cash Yield?",
           "yday_ret": 7.82,
           "rsi": 59.54,
           "macd_hist": 0.3217,
@@ -70090,7 +70080,7 @@
           "e_label": "beat \u00b7 EPS surprise +13.4% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "SharkNinja Stock Has Room To Run Higher, Analyst Says",
+          "headline": "Meet the Ninja PREPi Precision-Powered Prep - Store System: Prep, Serve, Store & Go - All with One Bowl.",
           "yday_ret": 0.07,
           "rsi": 60.31,
           "macd_hist": 1.3746,
@@ -70174,7 +70164,7 @@
           "e_label": "",
           "r_pol": "missing",
           "news_tone": "good",
-          "headline": "What Happens To ExxonMobil Stock If Refining Profits Fade?",
+          "headline": "Has The Story Under ExxonMobil Stock Run Out?",
           "yday_ret": null,
           "rsi": null,
           "macd_hist": null,
@@ -70261,7 +70251,7 @@
           "e_label": "beat \u00b7 EPS surprise +21.6% (morning export)",
           "r_pol": "neutral",
           "news_tone": "neutral",
-          "headline": "IBD Stock Of The Day: NetApp's AI-Powered Rally Faces Next Test",
+          "headline": "What Was Seagate Telling You Before Its Stock Ran?",
           "yday_ret": -1.1,
           "rsi": 72.54,
           "macd_hist": 2.9338,
@@ -70697,7 +70687,7 @@
           "e_label": "beat \u00b7 EPS surprise +3.5% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "This Little-Known Chip Stock Has Doubled. Wall Street Is Getting Bullish.",
+          "headline": "MACOM to Showcase RF and Microwave Products and Technologies at European Microwave Week",
           "yday_ret": 2.08,
           "rsi": 69.47,
           "macd_hist": 6.3751,
@@ -70793,7 +70783,7 @@
           "e_label": "",
           "r_pol": "missing",
           "news_tone": "missing",
-          "headline": "Nike Stock Has Dropped 44% This Year. Why Jefferies Says to Buy the Dip.",
+          "headline": "Nike Stock Near 52-Week Lows: Can Its Dividend and Caitlin Clark Spark a Rebound?",
           "yday_ret": null,
           "rsi": null,
           "macd_hist": null,
@@ -70875,7 +70865,7 @@
           "e_label": "beat \u00b7 EPS surprise +20.7% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "These Tech Stocks Trade Near Buy Points. One Sees 80% To 100% Core Income Growth.",
+          "headline": "Why Did CRWD, TWLO, P Stocks Hit 52-Week Highs Today?",
           "yday_ret": 2.67,
           "rsi": 79.73,
           "macd_hist": 3.1483,
@@ -70966,7 +70956,7 @@
           "e_label": "beat \u00b7 EPS surprise +41.3% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Vir Biotechnology to Participate in the Morgan Stanley 24th Annual Global Healthcare Conference",
+          "headline": "Vir Biotechnology to Present Expanded Phase 2 SOLSTICE Results for Elebsiran and Tobevibart in Hepatitis Delta at AASLD's The Liver Meeting 2026",
           "yday_ret": 5.46,
           "rsi": 63.37,
           "macd_hist": 0.0367,
@@ -71060,7 +71050,7 @@
           "e_label": "beat \u00b7 EPS surprise +49.1% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Arcos Dorados Holdings Inc's Dividend Analysis",
+          "headline": "Arcos Dorados to Host 2026 Investor Day, Outlining Long-Term Growth Strategy and Financial Framework",
           "yday_ret": 13.92,
           "rsi": 61.33,
           "macd_hist": 0.0271,
@@ -71162,7 +71152,7 @@
           "e_label": "",
           "r_pol": "missing",
           "news_tone": "missing",
-          "headline": "Exclusive: OpenAI poaches Brian McCarthy from SpaceX to be its VP of worldwide sales",
+          "headline": "Cybersecurity stocks hit new highs as AI agents spark 'biggest risk today': Chart of the Day",
           "yday_ret": null,
           "rsi": null,
           "macd_hist": null,
@@ -71285,7 +71275,7 @@
             {
               "k": "R",
               "pts": 2,
-              "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
+              "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
             },
             {
               "k": "join",
@@ -71333,7 +71323,7 @@
           "e_label": "beat \u00b7 EPS surprise +9.6% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Monzo in talks over potential sale to Brazils Nubank  report",
+          "headline": "Brazilian stocks soar as Fl\u00e1vio Bolsonaro takes surprise election lead",
           "yday_ret": 13.03,
           "rsi": 61.38,
           "macd_hist": 0.0689,
@@ -71429,7 +71419,7 @@
           "e_label": "no earnings date on the morning export",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Penguin Solutions Sets Conference Call for Fourth Quarter and Fiscal 2026 Results",
+          "headline": "AI Infrastructure Stock Crosses Key Bullish Trendline",
           "yday_ret": -1.06,
           "rsi": 62.24,
           "macd_hist": 1.071,
@@ -71520,7 +71510,7 @@
           "e_label": "beat \u00b7 EPS surprise +67.1% (morning export)",
           "r_pol": "neutral",
           "news_tone": "good",
-          "headline": "RXO Executive Named a Finalist in 2026 Stevie Awards for Women in Business",
+          "headline": "Are RXO, PTC, LFCR, WAFD Obtaining Fair Deals for their Shareholders?",
           "yday_ret": 22.54,
           "rsi": 81.72,
           "macd_hist": 0.8464,
@@ -71713,7 +71703,7 @@
           "e_label": "",
           "r_pol": "missing",
           "news_tone": "missing",
-          "headline": "Are BLFS, FTHM, AUUD, VRME Obtaining Fair Deals for their Shareholders?",
+          "headline": "Freshworks Set to Join S&P SmallCap 600",
           "yday_ret": null,
           "rsi": null,
           "macd_hist": null,
@@ -71726,7 +71716,7 @@
             "flatten"
           ],
           "open": null,
-          "close": 38.61000061035156,
+          "close": 38.61,
           "day_pct": 0.0,
           "boxes": {
             "join": "neutral",
@@ -71944,7 +71934,7 @@
           "e_label": "beat \u00b7 EPS surprise +3.6% (morning export)",
           "r_pol": "neutral",
           "news_tone": "neutral",
-          "headline": "MRNA On Track To Be September's No. 2 S&P 500 Stock  But These 5 Smaller Health Care Names Did Even Better",
+          "headline": "GRAIL to Present New Data From NHS-Galleri and PATHFINDER 2 at EDCC and ESMO Congress 2026",
           "yday_ret": 7.55,
           "rsi": 84.61,
           "macd_hist": 4.6792,
@@ -72140,7 +72130,7 @@
           "e_label": "beat \u00b7 EPS surprise +15.8% (morning export)",
           "r_pol": "neutral",
           "news_tone": "neutral",
-          "headline": "Novavax to Participate in September Investor Conferences",
+          "headline": "NVAX, EBS, ARCT, MRNA Rally After Russia Plague Lab Worker's Death: Retail Traders Eye 'Contract Awards'",
           "yday_ret": 20.08,
           "rsi": 77.17,
           "macd_hist": 0.0936,
@@ -72235,7 +72225,7 @@
           "e_label": "",
           "r_pol": "missing",
           "news_tone": "missing",
-          "headline": "AstraZeneca invests $2 billion in Summit Therapeutics in cancer drug deal",
+          "headline": "",
           "yday_ret": null,
           "rsi": null,
           "macd_hist": null,
@@ -72460,7 +72450,7 @@
             {
               "k": "R",
               "pts": 2,
-              "why": "buy-side recom 1.2 (level, not a change \u00b7 morning export)"
+              "why": "buy-side recom 1.1 (level, not a change \u00b7 morning export)"
             },
             {
               "k": "join",
@@ -72510,7 +72500,7 @@
           "e_label": "E 12 sess ago \u00b7 polarity unknown (export stamped the date, not beat/miss)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "QTREX Quantum Reports First Half 2026 Financial Results",
+          "headline": "QTREX Interconnect Independently Tested at 20 mK by a Leading Quantum Computing Company; Over 100 dB Channel Isolation, 60 dB Beyond the Market Leader",
           "yday_ret": 40.0,
           "rsi": 78.91,
           "macd_hist": 0.0686,
@@ -72797,10 +72787,10 @@
           "n_pos": 3,
           "n_neg": 3,
           "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +3.3% (morning export)",
+          "e_label": "beat \u00b7 EPS surprise +1.7% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "RPM Announces Acquisition of Volteco",
+          "headline": "RPM International beats first quarter earnings estimates",
           "yday_ret": -3.92,
           "rsi": 31.87,
           "macd_hist": 0.0021,
@@ -72846,7 +72836,7 @@
             {
               "k": "E",
               "pts": 4,
-              "why": "beat \u00b7 EPS surprise +3.3% (morning export)"
+              "why": "beat \u00b7 EPS surprise +1.7% (morning export)"
             },
             {
               "k": "R",
