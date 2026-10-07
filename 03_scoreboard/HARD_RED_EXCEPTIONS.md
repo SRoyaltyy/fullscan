@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-10-07T13:48:43.916906-04:00 · 2026-08-13 → 2026-10-06 · live sit **untouched**.
+Generated 2026-10-07T14:00:51.775568-04:00 · 2026-08-13 → 2026-10-06 · live sit **untouched**.
 
 ## Latest morning
 
@@ -10,24 +10,24 @@ Generated 2026-10-07T13:48:43.916906-04:00 · 2026-08-13 → 2026-10-06 · live 
 
 ### Longs weather sat on (top)
 
-- **GWRE** idio +27 · +7 −0 · E good · H1 -0.96% H3 None%
-- **AVPT** idio +26 · +7 −1 · E good · H1 -3.79% H3 None%
-- **IOT** idio +24 · +6 −1 · E good · H1 -4.19% H3 None%
-- **SHOP** idio +24 · +6 −0 · E good · H1 -0.48% H3 None%
-- **TOST** idio +23 · +6 −1 · E good · H1 2.58% H3 None%
-- **PDFS** idio +22 · +6 −1 · E good · H1 -6.87% H3 None%
-- **PCOR** idio +20 · +6 −1 · E good · H1 1.36% H3 None%
-- **BSY** idio +18 · +6 −1 · E good · H1 0.42% H3 None%
+- **GWRE** idio +27 · +7 −0 · E good · H1 -0.7% H3 None%
+- **AVPT** idio +26 · +7 −1 · E good · H1 -3.72% H3 None%
+- **IOT** idio +24 · +6 −1 · E good · H1 -4.45% H3 None%
+- **SHOP** idio +24 · +6 −0 · E good · H1 -0.64% H3 None%
+- **TOST** idio +23 · +6 −1 · E good · H1 2.71% H3 None%
+- **PDFS** idio +22 · +6 −1 · E good · H1 -7.17% H3 None%
+- **PCOR** idio +20 · +6 −1 · E good · H1 1.6% H3 None%
+- **BSY** idio +18 · +6 −1 · E good · H1 0.66% H3 None%
 
 ### Shorts weather sat on (top)
 
-- **SEER** idio -11 · +1 −4 · H1 3.21%
-- **ONT** idio -9 · +2 −3 · H1 1.12%
-- **RXRX** idio -9 · +2 −4 · H1 10.52%
-- **TJGC** idio -9 · +1 −4 · H1 6.48%
-- **STZ** idio -8 · +1 −5 · H1 -3.93%
-- **CERT** idio -7 · +2 −2 · H1 10.08%
-- **KOD** idio -7 · +3 −3 · H1 1.07%
+- **SEER** idio -11 · +1 −4 · H1 3.42%
+- **ONT** idio -9 · +2 −3 · H1 0.84%
+- **RXRX** idio -9 · +2 −4 · H1 11.04%
+- **TJGC** idio -9 · +1 −4 · H1 6.97%
+- **STZ** idio -8 · +1 −5 · H1 -3.62%
+- **CERT** idio -7 · +2 −2 · H1 10.68%
+- **KOD** idio -7 · +3 −3 · H1 0.91%
 - **QTRX** idio -7 · +2 −3 · H1 10.16%
 
 ## If we had taken them on hard-red sits (research)
