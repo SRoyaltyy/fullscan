@@ -7,7 +7,7 @@ from pathlib import Path
 import pytest
 
 from src import paper_account_snapshot as snap
-from src.webull_exec import PAPER_HOST, PaperAPI
+from src.webull_exec import PAPER_HOST, PaperAPI, parse_positions
 
 ROOT = Path(__file__).resolve().parent.parent
 REAL_LOG = ROOT / "data" / "paper_open" / "drift_log.jsonl"
@@ -279,7 +279,14 @@ def test_snapshot_appends_correction_and_does_not_place(tmp_path):
     assert account["timestamp"].startswith("2026-10-06T16:30:00")
     assert account["orders_sent"] is False
     listed = {row["ticker"]: row for row in account["positions"]}
-    assert listed["PACB"] == {"ticker": "PACB", "qty": 1113, "avg_cost": 2.5}
+    assert listed["PACB"] == {
+        "ticker": "PACB",
+        "qty": 1113,
+        "quantity": 1113,
+        "available_quantity": None,
+        "avg_cost": 2.5,
+        "raw": {"shares": 1113},
+    }
     assert "FEAM" not in listed
     assert "SDEV" not in listed
     assert any(row["ticker"] == "GLND" and row["status"] == "FILLED" for row in account["orders"])
@@ -311,6 +318,55 @@ def test_snapshot_appends_correction_and_does_not_place(tmp_path):
     assert final.startswith(got)
     assert json.loads(final.decode().splitlines()[1])["feam"]["held_shares"] == 939
     assert REAL_LOG.read_bytes() == raw
+
+
+def test_snapshot_records_quantity_available_and_raw_fields(tmp_path):
+    """A locked lot stays on the line, with only symbol and quantity raw fields."""
+    raw_log = REAL_LOG.read_bytes()
+    log = tmp_path / "drift_log.jsonl"
+    log.write_bytes(raw_log)
+    parsed = parse_positions({
+        "positions": [
+            {
+                "symbol": "QSI",
+                "quantity": "2482",
+                "available_quantity": "0",
+                "cost_price": "1.28",
+                "last_price": "1.30",
+                "market_value": "3226.60",
+                "instrument_id": "913000001",
+                "account_id": "SECRET-ACCOUNT",
+            },
+            {
+                "symbol": "DNA",
+                "quantity": "214",
+                "available_quantity": "214",
+                "cost_price": "14.50",
+            },
+        ],
+    })
+    spy = Spy(positions=parsed, by_date=_filled_book())
+    result = snap.run_snapshot(api=spy, clock=OUTSIDE, path=log)
+    listed = {row["ticker"]: row for row in result["snapshot"]["positions"]}
+    qsi = listed["QSI"]
+    assert qsi["qty"] == 2482
+    assert qsi["quantity"] == 2482
+    assert qsi["available_quantity"] == 0
+    assert qsi["avg_cost"] == 1.28
+    assert qsi["raw"] == {
+        "symbol": "QSI",
+        "quantity": "2482",
+        "available_quantity": "0",
+    }
+    assert listed["DNA"]["quantity"] == 214
+    assert listed["DNA"]["available_quantity"] == 214
+    blob = json.dumps(result["snapshot"]["positions"])
+    assert "SECRET-ACCOUNT" not in blob
+    assert "913000001" not in blob
+    assert "instrument_id" not in blob
+    assert "account_id" not in blob
+    assert log.read_bytes().startswith(raw_log)
+    assert REAL_LOG.read_bytes() == raw_log
 
 
 def test_actual_holdings_are_not_replaced_by_the_book_count(tmp_path):
