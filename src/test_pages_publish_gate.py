@@ -5,6 +5,10 @@ Run: PYTHONPATH=. python3 -m src.test_pages_publish_gate
 from __future__ import annotations
 
 import json
+import os
+import shlex
+import shutil
+import subprocess
 import tempfile
 from pathlib import Path
 
@@ -183,6 +187,118 @@ def test_paper_book_page_is_on_the_pages_deploy() -> None:
         assert 'href="../paper-book/"' in sboard_path.read_text(encoding="utf-8")
 
 
+def _write_page(root: Path, rel: str, body: str) -> None:
+    p = root / rel
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(body, encoding="utf-8")
+
+
+def _git_wrapper(path: Path, real: str, bare: Path) -> None:
+    """Send the publish script's gh-pages remote at a local bare repo."""
+    path.write_text(
+        "#!/bin/bash\n"
+        f"real={shlex.quote(real)}\n"
+        f"bare={shlex.quote(str(bare))}\n"
+        'if [ "${1:-}" = "-C" ] && [ "${3:-}" = "remote" ] && '
+        '[ "${4:-}" = "add" ] && [ "${5:-}" = "origin" ]; then\n'
+        '  exec "$real" -C "$2" remote add origin "$bare"\n'
+        "fi\n"
+        'exec "$real" "$@"\n',
+        encoding="utf-8",
+    )
+    path.chmod(0o755)
+
+
+def _publish(ws: Path, bare: Path, pages_out: Path | None) -> subprocess.CompletedProcess[str]:
+    real = shutil.which("git")
+    assert real
+    bindir = ws.parent / "bin"
+    bindir.mkdir(exist_ok=True)
+    _git_wrapper(bindir / "git", real, bare)
+    script = Path(__file__).resolve().parent.parent / "scripts" / "publish_dashboard.sh"
+    env = os.environ.copy()
+    for key in ("GITHUB_WORKSPACE", "GIT_DIR", "GIT_WORK_TREE", "GIT_INDEX_FILE"):
+        env.pop(key, None)
+    env["PATH"] = f"{bindir}{os.pathsep}{env.get('PATH', '')}"
+    env["HOME"] = str(ws.parent / "home")
+    env["GITHUB_TOKEN"] = "test-token-not-a-real-secret"
+    env["GITHUB_REPOSITORY"] = "SRoyaltyy/fullscan"
+    env["PAGES_PUSH_ATTEMPTS"] = "1"
+    env["GIT_CONFIG_NOSYSTEM"] = "1"
+    env["GIT_CONFIG_GLOBAL"] = os.devnull
+    if pages_out is None:
+        env.pop("PAGES_OUT_DIR", None)
+    else:
+        env["PAGES_OUT_DIR"] = str(pages_out)
+    Path(env["HOME"]).mkdir(exist_ok=True)
+    return subprocess.run(
+        ["bash", str(script)],
+        cwd=ws,
+        env=env,
+        capture_output=True,
+        text=True,
+        timeout=30,
+        check=False,
+    )
+
+
+def _blob(bare: Path, rel: str) -> str:
+    return subprocess.check_output(
+        ["git", "--git-dir", str(bare), "show", f"gh-pages:{rel}"],
+        text=True,
+    )
+
+
+def test_publish_restores_h1_and_holdup_aliases() -> None:
+    """A news-intake-style force publish must keep /h1/ and /holdup/.
+
+    The prebuilt tree is the partial case: stale dashboard/h1, no holdup,
+    and no root aliases. The checkout is main. The published branch has
+    to overlay both folders and copy them to the site root.
+    """
+    with tempfile.TemporaryDirectory() as d:
+        base = Path(d)
+        ws = base / "ws"
+        out = base / "pages_out"
+        bare = base / "origin.git"
+        ws.mkdir()
+        subprocess.check_call(["git", "init", "--bare", "-q", str(bare)])
+        _write_page(ws, "dashboard/index.html", "<html>main</html>")
+        _write_page(ws, "dashboard/h1/index.html", "h1-from-main")
+        _write_page(ws, "dashboard/h1/log.json", '{"book":"h1"}')
+        _write_page(ws, "dashboard/holdup/index.html", "holdup-from-main")
+        _write_page(ws, "dashboard/holdup/status.json", '{"book":"holdup"}')
+        _write_page(ws, "dashboard/news-intake/index.html", "intake-from-main")
+        _write_page(out, "dashboard/index.html", "<html>partial</html>")
+        _write_page(out, "index.html", "<html>partial</html>")
+        _write_page(out, "dashboard/h1/index.html", "STALE-H1")
+        _write_page(out, "dashboard/news-intake/index.html", "intake-partial")
+
+        partial = _publish(ws, bare, out)
+        assert partial.returncode == 0, partial.stdout + partial.stderr
+        assert "[pages] published" in partial.stdout, partial.stdout + partial.stderr
+        assert _blob(bare, "h1/index.html") == "h1-from-main"
+        assert _blob(bare, "dashboard/h1/index.html") == "h1-from-main"
+        assert _blob(bare, "dashboard/h1/log.json") == '{"book":"h1"}'
+        assert _blob(bare, "holdup/index.html") == "holdup-from-main"
+        assert _blob(bare, "dashboard/holdup/index.html") == "holdup-from-main"
+        assert _blob(bare, "dashboard/holdup/status.json") == '{"book":"holdup"}'
+        assert _blob(bare, "dashboard/news-intake/index.html") == "intake-from-main"
+        assert _blob(bare, ".nojekyll") == ""
+
+        # Same checkout, no prebuilt tree: the free-news-intake call.
+        intake_bare = base / "intake.git"
+        subprocess.check_call(["git", "init", "--bare", "-q", str(intake_bare)])
+        intake = _publish(ws, intake_bare, None)
+        assert intake.returncode == 0, intake.stdout + intake.stderr
+        assert "[pages] published" in intake.stdout, intake.stdout + intake.stderr
+        assert _blob(intake_bare, "h1/index.html") == "h1-from-main"
+        assert _blob(intake_bare, "holdup/index.html") == "holdup-from-main"
+        assert _blob(intake_bare, "dashboard/h1/index.html") == "h1-from-main"
+        assert _blob(intake_bare, "dashboard/holdup/index.html") == "holdup-from-main"
+        assert _blob(intake_bare, "dashboard/news-intake/index.html") == "intake-from-main"
+
+
 def test_workflows_wire_the_gate() -> None:
     root = Path(__file__).resolve().parent.parent
     dep = (root / ".github" / "workflows" / "deploy-dashboard.yml").read_text(
@@ -206,6 +322,7 @@ def main() -> None:
         test_live_2026_09_16_board_is_ready,
         test_dash_template_has_session_and_pack_stamp,
         test_paper_book_page_is_on_the_pages_deploy,
+        test_publish_restores_h1_and_holdup_aliases,
         test_workflows_wire_the_gate,
     ]
     for fn in tests:
