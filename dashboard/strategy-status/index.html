@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strategy status — today's open decisions</title>
+<meta http-equiv="refresh" content="90">
+<style>
+ :root{
+  --bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;
+  --fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;
+  --gold:#fbbf24; --day:#121826; --blue:#93c5fd;
+ }
+ *{box-sizing:border-box}
+ html,body{margin:0;background:var(--bg);color:var(--fg);
+   font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{max-width:1280px;margin:0 auto;padding:16px 14px 48px}
+ h1{font-size:20px;margin:0 0 4px}
+ h2{font-size:15px;margin:18px 0 8px;color:var(--mut);font-weight:600}
+ .sub{color:var(--mut);font-size:12px;margin:0 0 12px}
+ .sub a{color:var(--blue)}
+ .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+ input,select,button{background:var(--card);color:var(--fg);border:1px solid var(--line);
+   border-radius:8px;padding:8px 10px;font:13px/1.3 ui-monospace,Menlo,monospace}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:0 0 14px}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+ .card b{display:block;font-size:16px;margin-top:2px;font-variant-numeric:tabular-nums}
+ .ok{color:var(--pos)} .fail{color:var(--neg)} .part{color:var(--gold)} .mut{color:var(--mut)} .dim{color:var(--dim)}
+ table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--card);
+   border:1px solid var(--line);border-radius:10px;overflow:hidden}
+ th,td{padding:6px 10px;border-top:1px solid var(--line2);text-align:left;vertical-align:top}
+ th{color:var(--mut);font-weight:600;background:var(--day);position:sticky;top:0}
+ td.name{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;word-break:break-all}
+ td.tk{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;word-break:break-word}
+ .badge{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11px;font-weight:600;
+   border:1px solid var(--line)}
+ .b-ok{background:rgba(74,222,128,.12);color:var(--pos);border-color:rgba(74,222,128,.4)}
+ .b-sit{background:rgba(251,191,36,.12);color:var(--gold);border-color:rgba(251,191,36,.4)}
+ .b-fail{background:rgba(248,113,113,.12);color:var(--neg);border-color:rgba(248,113,113,.4)}
+ .b-wait{background:rgba(147,197,253,.10);color:var(--blue);border-color:rgba(147,197,253,.35)}
+ .proc{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:0 0 10px;overflow:hidden}
+ .proc h3{margin:0;padding:10px 12px;background:var(--day);font-size:13px;
+   display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between}
+ .proc table{border:0;border-radius:0}
+ .note{color:var(--dim);font-size:11.5px;margin-top:14px;max-width:900px}
+ .why{color:var(--dim);font-size:11px}
+ .sh{font-family:ui-monospace,Menlo,monospace;color:var(--neg);font-size:11.5px}
+ .lo{font-family:ui-monospace,Menlo,monospace;color:var(--gold);font-size:11.5px}
+</style></head><body><div class="wrap">
+<h1>Strategy status — decisions for today's open</h1>
+<div class="sub">Per-strategy BUY/SELL for the session, straight from the
+ decision ticket on <a href="https://sroyaltyy.github.io/fullscan/dashboard/">.io</a> —
+ polls <code>main</code> so a publish that just landed shows here even if
+ Pages has not rebuilt.
+ · <a href="../day-board/">day board</a>
+ · <a href="../factor-mine/">factor mine</a>
+ · <a href="../h1/">h1</a>
+ · <a href="../hard-red-exceptions/">investigator</a></div>
+<div class="bar">
+  <label>Trading day <input type="date" id="dateSel"></label>
+  <button type="button" id="reload">Reload now</button>
+  <label>Family <select id="famSel"><option value="">all</option></select></label>
+  <label>Filter <input type="text" id="flt" size="14" placeholder="name/ticker"></label>
+  <span class="mut" id="stamp">loading…</span>
+</div>
+<h2>Decision ticket</h2>
+<div class="cards" id="cards"></div>
+<div id="ticketWrap"></div>
+<h2>Inputs for this session</h2>
+<div class="mut" id="inStamp" style="font-size:12px;margin-bottom:6px"></div>
+<div id="inputs"></div>
+<p class="note">OK = the landed ticket carries this strategy with status
+ <code>ok</code>. SIT = the decision is made and it is "no new lots"
+ (hard-red score day or a deliberate sit) — list-drop sells may still be
+ shown. Any other status (missing / error / pick_fail / look_stale …)
+ means the decision for that strategy is <b>not</b> final. Times are ET.
+ "Finalized" is the ticket clock; "pushed" is the last commit of the
+ dated ticket on main (GitHub API, best-effort). The dated file locks at
+ 09:30 ET or the paper send; later publishes land in the draft and the
+ evening copy is labelled as such. Input presence is a raw-file
+ 200/404 probe of <code>main</code> — presence, not QC.</p>
+</div>
+<script>
+const LOCAL = location.hostname === "localhost" || location.hostname === "127.0.0.1"
+  || location.protocol === "file:";
+const RAW = LOCAL
+  ? "../.."
+  : "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main";
+const API = "https://api.github.com/repos/SRoyaltyy/fullscan";
+function $(id){return document.getElementById(id)}
+function etNow(){return new Date(new Date().toLocaleString("en-US",{timeZone:"America/New_York"}))}
+function dstr(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function todayET(){return dstr(etNow())}
+function hhmm(iso){
+  if(!iso) return "—";
+  const d = new Date(iso);
+  if(isNaN(d)) return "—";
+  return d.toLocaleString("en-US",{timeZone:"America/New_York",hour12:false,
+    month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});
+}
+async function probe(path){
+  try{
+    const r = await fetch(`${RAW}/${path}?t=${Date.now()}`,{cache:"no-store"});
+    if(!r.ok) return {ok:false,status:r.status,text:""};
+    return {ok:true,status:200,text:await r.text()};
+  }catch(e){ return {ok:false,status:0,text:""} }
+}
+async function jprobe(path){
+  const r = await probe(path);
+  if(!r.ok) return {ok:false,status:r.status};
+  try{ return {ok:true,status:200,json:JSON.parse(r.text)} }
+  catch(e){ return {ok:false,status:200,badjson:true} }
+}
+const tickers = rows => (rows||[]).map(r=>{
+  const t = (r&&(r.ticker||r.symbol)||"").toUpperCase();
+  if(!t) return "";
+  const side = (r&&(r.kid_side||r.side)||"").toLowerCase();
+  return side === "short" ? `<span class="sh">${t}</span>` : t;
+}).filter(Boolean).join(", ") || "—";
+function badge(st, sit, hard){
+  if(st === "ok") return `<span class="badge b-ok">OK</span>`;
+  if(st === "sit") return `<span class="badge b-sit">SIT${hard?" 🔻":""}</span>`;
+  const label = String(st||"missing").toUpperCase();
+  return `<span class="badge b-fail">${label}</span>`;
+}
+async function loadTicket(d){
+  const chain = [
+    ["sealed", `data/day_board/${d}_strategy_tickets.json`],
+    ["draft",  `data/day_board/${d}_strategy_tickets_draft.json`],
+    ["evening","data/day_board/strategy_tickets.json"],
+  ];
+  for(const [label, path] of chain){
+    const r = await jprobe(path);
+    if(r.ok && r.json && (r.json.date === d || label === "evening")){
+      return {label, json:r.json, path};
+    }
+  }
+  return null;
+}
+async function pushTime(d){
+  try{
+    const r = await fetch(`${API}/commits?path=data/day_board/${d}_strategy_tickets.json&per_page=1`);
+    if(r.ok){ const j = await r.json(); if(j && j.length) return j[0].commit.committer.date; }
+  }catch(e){}
+  return null;
+}
+function etCutoff(d){ // 09:30 ET on YYYY-MM-DD d, DST-safe
+  return new Date(new Date(`${d}T09:30:00`).toLocaleString("en-US",{timeZone:"America/New_York"}));
+}
+function renderCards(tk, pushed, d){
+  const cards = [];
+  const add = (label, val, cls) => cards.push(`<div class="card">${label}<b class="${cls}">${val}</b></div>`);
+  if(!tk){
+    add("ticket","not landed","fail");
+    $("cards").innerHTML = cards.join("");
+    return;
+  }
+  const st = tk.json.strategies || {};
+  const names = Object.keys(st);
+  const ok = names.filter(n=>st[n].status==="ok").length;
+  const sit = names.filter(n=>st[n].status==="sit").length;
+  const bad = names.length - ok - sit;
+  add("source", tk.label === "sealed" ? "sealed dated ticket"
+      : tk.label === "draft" ? "draft (dated file locked)" : "evening copy (undated)", tk.label==="sealed"?"ok":"part");
+  add("strategies", names.length, "");
+  add("OK", ok, "ok");
+  add("SIT", sit, sit?"part":"");
+  add("not final", bad, bad?"fail":"");
+  const gen = tk.json.generated_at, comp = (tk.json.decision_readiness||{}).completed_at;
+  add("finalized (ET)", hhmm(gen), "mut");
+  add("pushed (ET)", pushed ? hhmm(pushed) : "n/a", "mut");
+  if(pushed){
+    const before = new Date(pushed) < etCutoff(d);
+    add("before 09:30", before ? "YES" : "NO", before ? "ok" : "fail");
+  } else {
+    add("before 09:30", "?", "mut");
+  }
+  $("cards").innerHTML = cards.join("");
+}
+function renderTicket(tk, d){
+  if(!tk){
+    $("ticketWrap").innerHTML = `<div class="proc"><h3>No decision ticket for ${d} yet</h3>
+      <table><tr><td class="mut">The dated, draft and evening ticket files are all absent from
+      <code>main</code>. Decisions cannot be final until
+      <code>src.decision_ready</code> says the required inputs are ready (see below) and
+      <code>publish_strategy_tickets</code> runs. Nothing here is final until the ticket lands.</td></tr></table></div>`;
+    return;
+  }
+  const st = tk.json.strategies || {};
+  const fams = [...new Set(Object.values(st).map(s=>s.family||""))].sort();
+  const famSel = $("famSel");
+  if(famSel.options.length !== fams.length + 1){
+    famSel.innerHTML = `<option value="">all</option>` + fams.map(f=>`<option>${f}</option>`).join("");
+  }
+  const famF = famSel.value, txt = ($("flt").value||"").toLowerCase();
+  const rows = [];
+  for(const [name, s] of Object.entries(st)){
+    if(famF && s.family !== famF) continue;
+    const hay = (name + " " + JSON.stringify(s.buy||[]) + " " + JSON.stringify(s.sell||[])).toLowerCase();
+    if(txt && !hay.includes(txt)) continue;
+    const why = s.why || s.note || "";
+    const shortWhy = why.length > 90 ? why.slice(0,90) + "…" : why;
+    rows.push(`<tr>
+      <td class="name">${name}${s.s!=null?` <span class="dim">S=${s.s}</span>`:""}</td>
+      <td class="mut">${s.family||""}</td>
+      <td>${badge(s.status, s.sit, s.hard_red)}</td>
+      <td class="tk">${tickers(s.buy)}</td>
+      <td class="tk">${tickers(s.sell)}</td>
+      <td class="why" title="${String(why).replace(/"/g,"&quot;")}">${shortWhy}</td>
+    </tr>`);
+  }
+  rows.sort();
+  $("ticketWrap").innerHTML = `<table>
+    <tr><th>strategy</th><th>family</th><th>decision</th><th>BUY @ open</th><th>SELL @ open</th><th>why / note</th></tr>
+    ${rows.join("") || `<tr><td colspan="6" class="mut">no strategies match the filter</td></tr>`}
+  </table>`;
+}
+async function renderInputs(d){
+  const groups = [
+    ["morning packet (LLM)", [
+      ["general predict", `01_daily/general/${d}_predict.md`],
+      ["sector board", `01_daily/sectors/${d}/_board.json`],
+      ["news judge", `01_daily/news/${d}_judge.md`],
+      ["news actions", `01_daily/news/${d}_actions.json`],
+      ["finviz digest", `01_daily/news/${d}_finviz_digest.json`],
+    ]],
+    ["ranker (book)", [
+      ["weather", `01_daily/weather/${d}_weather.json`],
+      ["AB enriched", `data/ab_checklist/${d}_ab_checklist_enriched.csv`],
+      ["join ranked", `data/join/${d}_ranked.csv`],
+      ["peer RS", `data/peers/${d}_peer_rs.csv`],
+      ["stock book", `data/stock_book/${d}_stock_book.json`],
+      ["book report", `01_daily/${d}_stock_book.md`],
+    ]],
+    ["factor-mine", [
+      ["send-inputs freeze", `data/factor_mine/send_inputs/${d}.json`],
+    ]],
+    ["excel sleeves", [
+      ["suggestions", "excel_bot/suggestions/suggestions.csv"],
+    ]],
+    ["flatten / sleeve-merge", [
+      ["flatten card", "data/sleeve_merge/today.json"],
+    ]],
+  ];
+  const results = [];
+  await Promise.all(groups.map(async (g, gi) => {
+    const rows = await Promise.all(g[1].map(async ([label, path]) => {
+      const r = await probe(path);
+      return {label, path, ok:r.ok};
+    }));
+    results[gi] = {name:g[0], rows};
+  }));
+  // richer reads for excel + sleeve + factor-mine
+  const sug = await probe("excel_bot/suggestions/suggestions.csv");
+  let sugToday = 0;
+  if(sug.ok){
+    sugToday = sug.text.split(/\r?\n/).slice(1)
+      .filter(l => l.split(",").some(c => c.trim() === d)).length;
+  }
+  const slv = await jprobe("data/sleeve_merge/today.json");
+  const slvToday = slv.ok && slv.json && (slv.json.date === d);
+  const si = await jprobe(`data/factor_mine/send_inputs/${d}.json`);
+  const panel = await jprobe("data/factor_mine/panel.json");
+  let panelToday = false;
+  if(panel.ok && panel.json && panel.json.by_date && (panel.json.by_date[d]||[]).length){
+    panelToday = true;
+  }
+  $("inStamp").textContent =
+    `excel suggestions rows for ${d}: ${sugToday} · sleeve card today: ${slvToday ? "yes" : "no"}` +
+    ` · send-inputs freeze: ${si.ok ? "yes" : "no"} · panel same-day rows: ${panelToday ? "yes" : "no"}`;
+  const html = results.map(g => {
+    const nOk = g.rows.filter(r=>r.ok).length;
+    const cls = nOk === g.rows.length ? "ok" : (nOk === 0 ? "fail" : "part");
+    return `<div class="proc"><h3><span>${g.name}</span><span class="${cls}">${nOk}/${g.rows.length}</span></h3>
+      <table><tr><th>input</th><th>status</th><th>path</th></tr>
+      ${g.rows.map(r=>`<tr><td>${r.label}</td>
+        <td>${r.ok?'<span class="ok">OK</span>':'<span class="fail">MISSING</span>'}</td>
+        <td class="name">${r.path}</td></tr>`).join("")}
+      </table></div>`;
+  }).join("");
+  $("inputs").innerHTML = html;
+}
+async function refresh(){
+  const d = $("dateSel").value || todayET();
+  $("stamp").textContent = `loading ${d} …`;
+  const [tk, pushed] = await Promise.all([loadTicket(d), pushTime(d)]);
+  renderCards(tk, pushed, d);
+  renderTicket(tk, d);
+  renderInputs(d);
+  $("stamp").textContent = `updated ${hhmm(new Date().toISOString())} · ${d} (ET)`;
+}
+$("dateSel").value = todayET();
+$("reload").onclick = refresh;
+$("dateSel").onchange = refresh;
+$("famSel").onchange = () => { loadTicket($("dateSel").value||todayET()).then(tk=>renderTicket(tk, $("dateSel").value)) };
+$("flt").oninput = $("famSel").onchange;
+refresh();
+</script>
+</body></html>
