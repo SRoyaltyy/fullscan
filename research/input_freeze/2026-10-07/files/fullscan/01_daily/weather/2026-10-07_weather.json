@@ -1,0 +1,442 @@
+{
+ "date": "2026-10-07",
+ "generated_at": "2026-10-07T06:15:55.625510-04:00",
+ "stance_vocabulary": [
+  "favorable",
+  "neutral",
+  "hostile",
+  "unknown"
+ ],
+ "signals": {
+  "date": "2026-10-07",
+  "general_score": -5.211,
+  "general_direction": "down",
+  "general_confidence": 0.708,
+  "risk": "off",
+  "yields_score": -0.5,
+  "fed_score": 0.0,
+  "dollar_oil_score": 0.0,
+  "futures_score": 0.0,
+  "yields": "rising",
+  "yields_source": "fred_dgs10",
+  "dgs10_delta_1d": 0.03,
+  "dgs10_current": 5.31,
+  "dollar": "strong",
+  "dollar_source": "dxy",
+  "dxy_pct_1d": 0.44,
+  "vix_ratio": 0.88,
+  "vix_spot": 15.52,
+  "vix_delta_1d": 0.51,
+  "vix_ratio_source": "vix/vix3m",
+  "vix": "falling",
+  "oil_pct_1d": 0.42,
+  "oil": "flat",
+  "fear_greed": null,
+  "fear_greed_label": null,
+  "regime_corr": 0.023,
+  "sectors": {
+   "Basic Materials": {
+    "score": -4.97,
+    "dir": "down",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Communication Services": {
+    "score": -2.75,
+    "dir": "down",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Consumer Cyclical": {
+    "score": -1.38,
+    "dir": "flat",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Consumer Defensive": {
+    "score": -1.62,
+    "dir": "down",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Energy": {
+    "score": -2.5,
+    "dir": "down",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Financial": {
+    "score": -1.4,
+    "dir": "flat",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Healthcare": {
+    "score": -2.99,
+    "dir": "down",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Industrials": {
+    "score": -1.835,
+    "dir": "down",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Real Estate": {
+    "score": -2.49,
+    "dir": "down",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Technology": {
+    "score": -2.625,
+    "dir": "down",
+    "conf": 0.4,
+    "source": "finviz_week"
+   },
+   "Utilities": {
+    "score": -3.43,
+    "dir": "down",
+    "conf": 0.4,
+    "source": "finviz_week"
+   }
+  },
+  "sector_tape": {
+   "Basic Materials": -4.97,
+   "Communication Services": -2.75,
+   "Consumer Cyclical": -1.38,
+   "Consumer Defensive": -1.62,
+   "Energy": -2.5,
+   "Financial": -1.4,
+   "Healthcare": -2.99,
+   "Industrials": -1.835,
+   "Real Estate": -2.49,
+   "Technology": -2.625,
+   "Utilities": -3.43
+  },
+  "events_bull": 7,
+  "events_bear": 4,
+  "china_event_dir": "bear"
+ },
+ "stances": {
+  "sector": {
+   "Basic Materials": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "finviz sector median week -4.97% [tape]"
+   },
+   "Communication Services": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "finviz sector median week -2.75% [tape]"
+   },
+   "Consumer Cyclical": {
+    "stance": "neutral",
+    "confidence": "medium",
+    "why": "finviz sector median week -1.38% [tape]"
+   },
+   "Consumer Defensive": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "finviz sector median week -1.62% [tape]"
+   },
+   "Energy": {
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "news_judge SECTOR Energy [bullish]"
+   },
+   "Financial": {
+    "stance": "neutral",
+    "confidence": "medium",
+    "why": "finviz sector median week -1.40% [tape]"
+   },
+   "Healthcare": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "finviz sector median week -2.99% [tape]"
+   },
+   "Industrials": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "finviz sector median week -1.83% [tape]"
+   },
+   "Real Estate": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "finviz sector median week -2.49% [tape]"
+   },
+   "Technology": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "finviz sector median week -2.62% [tape]"
+   },
+   "Utilities": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "finviz sector median week -3.43% [tape]"
+   }
+  },
+  "size": {
+   "micro": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors]"
+   },
+   "small": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors]"
+   },
+   "large": {
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "risk-off — defensive/quality bid concentrates in large & mega [general predict]"
+   },
+   "mega": {
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "risk-off — defensive/quality bid concentrates in large & mega [general predict]"
+   },
+   "mid": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "no dedicated mid-cap signal in v1"
+   }
+  },
+  "index": {
+   "sp500": {
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "risk-off — defensive/quality bid concentrates in large & mega [general predict]"
+   },
+   "ndx": {
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "risk-off — defensive/quality bid concentrates in large & mega [general predict]"
+   },
+   "djia": {
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "risk-off — defensive/quality bid concentrates in large & mega [general predict]"
+   },
+   "rut": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "risk-off — small caps de-rate first; risk-off, dollar strong [general predict + factors]"
+   },
+   "none": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "non-index: not a small-cap proxy"
+   }
+  },
+  "geo": {
+   "US": {
+    "stance": "hostile",
+    "confidence": "low",
+    "why": "mirrors general risk-off [general predict]"
+   },
+   "ADR-China": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "high-impact China event(s) lean bear [event scanner]"
+   }
+  },
+  "beta": {
+   "high": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "risk-off — high beta is the exit door [channel1 + general]"
+   },
+   "low": {
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "defensive ballast bid in stress [general + channel1]"
+   },
+   "mid": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "beta-neutral zone"
+   }
+  },
+  "short": {
+   "high": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "risk-off — heavy short interest marks balance-sheet/dilution stress; it amplifies falls [general]"
+   },
+   "extreme": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "risk-off — heavy short interest marks balance-sheet/dilution stress; it amplifies falls [general]"
+   },
+   "low": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "low short is not a tailwind by itself"
+   },
+   "mid": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "no strong crowding signal"
+   }
+  },
+  "vol": {
+   "high": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "stress market — high-vol names de-rate fast [general + channel1]"
+   },
+   "low": {
+    "stance": "favorable",
+    "confidence": "low",
+    "why": "low-vol preferred in stress"
+   },
+   "mid": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
+   }
+  },
+  "profit": {
+   "no": {
+    "stance": "hostile",
+    "confidence": "high",
+    "why": "risk-off — unprofitable names are sold first [general]"
+   },
+   "yes": {
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "risk-off — quality/profitability bid [general]"
+   },
+   "thin": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
+   }
+  },
+  "lev": {
+   "high": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — leverage amplifies the downside [factors + general]"
+   },
+   "low": {
+    "stance": "favorable",
+    "confidence": "low",
+    "why": "balance-sheet strength preferred in stress"
+   },
+   "mid": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
+   },
+   "neg_equity": {
+    "stance": "hostile",
+    "confidence": "low",
+    "why": "negative equity is distressed in any regime"
+   }
+  },
+  "style": {
+   "growth": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
+   },
+   "value": {
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
+   },
+   "blend": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
+   }
+  },
+  "mom": {
+   "uptrend": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "uptrends under test in risk-off"
+   },
+   "downtrend": {
+    "stance": "hostile",
+    "confidence": "low",
+    "why": "downtrends get no bid in risk-off"
+   },
+   "mixed": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
+   }
+  },
+  "ext": {
+   "washed": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "falling knives stay sharp in risk-off"
+   },
+   "extended": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "parabolic + risk-off = nasty unwind risk"
+   },
+   "extreme": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "parabolic + risk-off = nasty unwind risk"
+   },
+   "neutral": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
+   }
+  },
+  "range": {
+   "deep_low": {
+    "stance": "hostile",
+    "confidence": "medium",
+    "why": "falling knife zone in risk-off"
+   },
+   "top": {
+    "stance": "hostile",
+    "confidence": "low",
+    "why": "high-zone names unwind in risk-off"
+   },
+   "breakout": {
+    "stance": "hostile",
+    "confidence": "low",
+    "why": "high-zone names unwind in risk-off"
+   },
+   "low": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
+   },
+   "mid": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
+   },
+   "high": {
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
+   }
+  }
+ },
+ "gates": {
+  "earn:today": "reports today — event risk, not a segment bet; size down or skip",
+  "earn:this_week": "reports within a week — flag, expect gap moves",
+  "liq:low": "thin dollar volume — gaps on news, hard to exit; down-rank",
+  "rvol:hot": "abnormal participation — moves are 'real' but confirm direction first",
+  "ext:extreme + risk-off": "parabolic names into a hostile tape = veto longs",
+  "elevated_short_caution": true,
+  "earnings_proximity": true,
+  "veto_earn_today": true,
+  "veto_extreme_risk_off": true
+ },
+ "data_gaps": []
+}

@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-07",
   "latest_skip": null,
-  "pending": null,
-  "phase": "mark",
+  "pending": "2026-10-07",
+  "phase": "plan",
   "recipe": "union_hot_n4_h1__w0"
 }

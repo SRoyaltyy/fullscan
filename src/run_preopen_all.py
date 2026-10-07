@@ -772,8 +772,10 @@ def run(date: str | None = None, force: bool = False,
             # Names on .io come from raw JSON. Do this even after 09:25 —
             # paper_trade must not gate the live BUY/SELL strip.
             print("[preopen-all] → live 1d BUY/SELL strip (dashboards poll main)")
-            _run([py, "-m", "src.publish_live_boards",
-                  "--date", date, "--write", "--no-extras"], timeout_s=180)
+            # morning_look wraps publish_live_boards: factor-mine rows from
+            # the last commit before 09:30 ET instead of the evening panel.
+            _run([py, "-m", "src.morning_look", "live_boards",
+                  "--date", date, "--write", "--no-extras"], timeout_s=480)
             _land(date, "live_boards", "Live 1d BUY/SELL strip")
             if force or not preopen.past_predict_cutoff():
                 print("[preopen-all] → sleeve (after book is on main)")
