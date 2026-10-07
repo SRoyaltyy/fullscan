@@ -53,16 +53,18 @@ function ovSplitDays(name){
   return days.map(function(d){
     const bought={}; (d.bought||[]).forEach(function(t){ bought[String(t).split('×')[0]]=true; });
     const sold={}; (d.sold||[]).forEach(function(t){ sold[String(t).split('×')[0]]=true; });
-    let neu=0, held=0;
+    let neu=0, held=0, sawPx=false;
     const buyLots=[];
     trades.forEach(function(t){
       if(t.date!==d.date) return;
       const p=ovPx(t.ticker, d.date);
       let pnl=null;
       if(p && isFinite(p.c) && isFinite(t.price)){
-        pnl = Number(t.shares||0)*(p.c-Number(t.price));
+        const sh=Number(t.shares||0), px=Number(t.price);
+        pnl = t.side==='SHORT' ? sh*(px-p.c) : sh*(p.c-px);
         if(t.fees) pnl -= Number(t.fees);
         neu += pnl;
+        sawPx = true;
       }
       buyLots.push({ticker:t.ticker, shares:t.shares, price:t.price, pnl:pnl});
     });
@@ -76,12 +78,19 @@ function ovSplitDays(name){
       const p=ovPx(ticker, d.date);
       const y=prev ? ovPx(ticker, prev) : null;
       if(sh!=null && isFinite(sh)){
-        if(y && p && isFinite(y.c) && isFinite(p.o)) gap = sh*(p.o-y.c);
-        if(!sold[ticker] && p && isFinite(p.o) && isFinite(p.c)) sess = sh*(p.c-p.o);
+        if(y && p && isFinite(y.c) && isFinite(p.o)){ gap = sh*(p.o-y.c); sawPx = true; }
+        if(!sold[ticker] && p && isFinite(p.o) && isFinite(p.c)){ sess = sh*(p.c-p.o); sawPx = true; }
         held += gap+sess;
       }
       heldLots.push({ticker:ticker, shares:sh, sold:!!sold[ticker], pnl:gap+sess});
     });
+    if(!sawPx){
+      const tot=Number(d.equity)-Number(d.open_equity);
+      if(isFinite(tot)){
+        if((d.bought||[]).length && !(d.open_held||[]).length) neu=tot;
+        else held=tot;
+      }
+    }
     const hard = !!d.hard_red || (d.s!=null && Number(d.s)<=-3);
     return {
       date:d.date, held:held, neu:neu, bought:d.bought||[], sold:d.sold||[],

@@ -93,10 +93,11 @@ def patch_html(html: str) -> str:
   }"""
     new_so = """function seriesOf(name){
   if(name===pickedName()){
+    const full=(D.dates||[]).length;
     const sp=startPath();
-    if(sp && sp.equity && sp.equity.some(v=>v!=null)) return ovAlignSeries(sp.equity, sp.start);
+    if(sp && sp.equity && sp.equity.some(v=>v!=null) && sp.equity.length>=full) return ovAlignSeries(sp.equity, sp.start);
     const b=typeof simBook==='function' ? simBook() : null;
-    if(b && (b.daily||[]).length) return ovSeriesFromDaily(b.daily, sp && sp.start);
+    if(b && (b.daily||[]).length>=full) return ovSeriesFromDaily(b.daily, sp && sp.start);
   }"""
     if old_so in html:
         html = html.replace(old_so, new_so, 1)

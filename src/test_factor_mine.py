@@ -2824,6 +2824,61 @@ def test_action_filters_size_sell_boost() -> None:
     assert any(r["name"] == "flatten_h5_rankw" for r in only)
 
 
+def test_cover_sim_dates_fills_send_inputs_tape() -> None:
+    """send_inputs days stay on D.dates; the replay tape has to follow."""
+    from src import factor_mine_sim as fms
+    payload = {
+        "dates": ["2026-09-24", "2026-09-28"],
+        "input_sources": {"2026-09-28": "send_inputs"},
+        "daily": {"sleeve": [{
+            "date": "2026-09-28",
+            "open_held": ["AAA×10"],
+            "held": ["AAA", "BBB"],
+            "bought": ["BBB"],
+            "equity": 10100,
+            "open_equity": 10050,
+        }]},
+        "books": {"sleeve": {"trades": [
+            {"date": "2026-09-28", "ticker": "BBB", "side": "SHORT",
+             "shares": 5, "price": 8},
+        ]}},
+        "sim": {
+            "dates": ["2026-09-24"],
+            "tape": {"AAA": {"2026-09-24": [10, 11]}},
+            "rows": [{"date": "2026-09-24", "ticker": "AAA"}],
+        },
+    }
+    orig = fms.tl._official_ohlc
+
+    def fake(ticker, date):
+        return {"open": 3.5, "close": 4.25}
+
+    fms.tl._official_ohlc = fake
+    try:
+        out = fms.cover_sim_dates(payload)
+    finally:
+        fms.tl._official_ohlc = orig
+    assert out["sim"]["dates"] == ["2026-09-24", "2026-09-28"]
+    assert out["sim"]["tape"]["AAA"]["2026-09-24"] == [10, 11]
+    assert out["sim"]["tape"]["AAA"]["2026-09-28"] == [3.5, 4.25]
+    assert out["sim"]["tape"]["BBB"]["2026-09-28"] == [3.5, 4.25]
+    assert out["sim"]["rows"] == [{"date": "2026-09-24", "ticker": "AAA"}]
+    assert out["books"]["sleeve"]["trades"][0]["price"] == 8
+    assert fms._lot_ticker("ABVX") == "ABVX"
+    assert fms._lot_ticker("GLND×973") == "GLND"
+
+
+def test_baked_dash_sim_dates_cover_page_dates() -> None:
+    """The shipped page JSON: every D.dates session is on sim.dates."""
+    doc = fm.load_dash_payload()
+    dates = [str(d)[:10] for d in (doc.get("dates") or []) if d]
+    sim_dates = [str(d)[:10] for d in ((doc.get("sim") or {}).get("dates") or []) if d]
+    assert dates
+    missing = [d for d in dates if d not in set(sim_dates)]
+    assert not missing
+    assert sim_dates == dates
+
+
 if __name__ == "__main__":
     test_hold_window_includes_entry_day()
     test_feature_export_is_always_prior_session()
@@ -2911,6 +2966,8 @@ if __name__ == "__main__":
     test_js_look_day_cams_and_white_yday()
     test_js_white_horizon_pool_then_score()
     test_js_bracket_take_inside_min_hold()
+    test_cover_sim_dates_fills_send_inputs_tape()
+    test_baked_dash_sim_dates_cover_page_dates()
     from src.test_clock_b_tells import main as clock_b_main
     clock_b_main()
     print("factor-mine tests passed")

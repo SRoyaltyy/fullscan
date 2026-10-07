@@ -57,6 +57,10 @@ def test_ovcal_patcher_injects_calendar_and_start_date_chart() -> None:
     assert "function ovJumpDate" in twice
     assert "renderOvCal();" in twice
     assert "ovAlignSeries(sp.equity" in twice
+    assert "sp.equity.length>=full" in twice
+    assert "b.daily||[]).length>=full" in twice
+    assert "t.side==='SHORT'" in twice
+    assert "d.equity)-Number(d.open_equity)" in twice
     assert "ovSeriesFromDaily" in twice
     assert "function ovChartDates" in twice
     assert "const x=X(Math.max(0,j-off))" in twice
@@ -91,6 +95,9 @@ def test_baked_and_template_have_ovcal_hooks() -> None:
     for html in (tpl, baked):
         assert 'id="ovCalBox"' in html
         assert "ovAlignSeries(sp.equity" in html
+        assert "sp.equity.length>=full" in html
+        assert "t.side==='SHORT'" in html
+        assert "d.equity)-Number(d.open_equity)" in html
         assert "function ovChartDates" in html
         assert "renderOvCal();" in html
 
