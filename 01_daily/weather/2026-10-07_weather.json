@@ -1,6 +1,6 @@
 {
  "date": "2026-10-07",
- "generated_at": "2026-10-07T05:36:09.020565-04:00",
+ "generated_at": "2026-10-07T05:41:37.589415-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -23,13 +23,13 @@
   "dgs10_current": 5.31,
   "dollar": "strong",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.45,
+  "dxy_pct_1d": 0.47,
   "vix_ratio": 0.868,
-  "vix_spot": 15.32,
-  "vix_delta_1d": 0.31,
+  "vix_spot": 15.31,
+  "vix_delta_1d": 0.3,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": 0.18,
+  "oil_pct_1d": 0.35,
   "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -115,7 +115,7 @@
    "Technology": -2.625,
    "Utilities": -3.43
   },
-  "events_bull": 4,
+  "events_bull": 7,
   "events_bear": 4,
   "china_event_dir": "bear"
  },
