@@ -1,6 +1,6 @@
 ---
 status: living_policy
-updated: 2026-10-05
+updated: 2026-10-06
 source: src/learn_cycle.py
 covers: general, sectors, news
 note: Injected into general + sector PREDICT. Core output formats unchanged.
@@ -9,7 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-10-05**. Promoted: 0. Retired: 10. Active lessons: 207. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-10-06**. Promoted: 0. Retired: 10. Active lessons: 197. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
@@ -96,13 +96,6 @@ A low-beta bond-proxy defensive (XLP-like) posts a net-negative leading S0–S4 
 ## RULE
 No direction/band correction. Keep 09-11 S0 as the relative funding-source read; keep 08-13 as a ban on leftover-RS up/notable. Do not extend 09-16’s force-flat past an unprinted path-binary. When FOMC is paid and PM:XLV is already in the mild band (~+0.4%) on a confirmed NQ-led risk-on tape, official absolute may follow tape_anchor up/mild; relative is the S0 object. Do not rewrite S0 as a duration bid from same-session yield relief, and do not promote XBI/high-beta sleeve or single-nam …
 
-### a-cyclical-industrials-etf-xli-like-posts-an-all-zero-s0-s4.md
-## RULE
-No signed-call change. Keep flat/flat on an unsigned post-event industrials card. Do not promote the overnight ES gap into up, and do not promote the post-close relative lag into down — both were path, not pre-open factors. A ~0.2% faded-gap print that misses the flat/up direction threshold is banding noise, not a mandate to lift direction.
-
-## WHEN IT FIRES
-A cyclical industrials ETF (XLI-like) posts an all-zero S0–S4 card on the session AFTER a paid FOMC/SEP, with 1w/1m relative lag fo …
-
 ### a-sector-etf-posts-an-all-zero-or-net-zero-s0-s4-leading-car.md
 ## RULE
 When S0–S3 net to zero BUT (a) the index backdrop is strongly positive (ES/NQ ≥ +0.5% and ideally ≥ +1%), (b) yields are falling / duration-relief is live, and (c) the sector's own PM is green, the residual should be MILD UP with relative lag — not flat. Condition the 8/28 "residual-is-flat" rule on a NEUTRAL index tape; it must not bind when the broad tape is up >1%. Treat the 8/27 S4-cap as a cap on CONVICTION (cannot emit confirmed-up), not on LEVEL (a capped-up call is still an up ca …
@@ -132,7 +125,11 @@ Enforce the leftover-ban inside sector_rs_veto: do not flatten a directional cal
 ## WHEN IT FIRES
 A two-name duration/growth sector ETF …
 
-_(+192 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
+### a-binding-sector-lesson-crowded-long-fuel-unwind-fuel-fires.md
+## RULE
+When a binding lesson's causal precondition is explicitly identified as absent or inverted, ZERO the lesson's component contribution — do not merely damp it. A crowded-long complex that has just de-risked (prior-day negative rel print) into an easing macro overlay (oil offered, green futures) is multiplicatively BULLISH (reflex bounce), so S3 should be ≈ 0 or positive, not negative. Additionally, on a broad risk-on day (all four index futures green ≥ +0.5%, SPY up), score S2 breadth posi …
+
+_(+182 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
 
 ## Per-scope DO-INSTEAD
 
@@ -224,13 +221,13 @@ _(+192 older active lessons not excerpted; each predict receives only its own to
 
 ## Retired / falsified (efficacy-gated, automatic)
 
-- 2026-10-05: `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities) — topic hit 80% → 14% after activation; retired.
-- 2026-10-05: `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial) — topic hit 75% → 14% after activation; retired.
-- 2026-10-05: `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities) — topic hit 75% → 14% after activation; retired.
-- 2026-10-05: `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical) — topic hit 86% → 29% after activation; retired.
-- 2026-10-05: `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md` (sector:Consumer Cyclical) — topic hit 71% → 14% after activation; retired.
-- 2026-10-05: `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy) — topic hit 71% → 14% after activation; retired.
-- 2026-10-05: `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical) — topic hit 83% → 29% after activation; retired.
-- 2026-10-05: `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities) — topic hit 67% → 14% after activation; retired.
-- 2026-10-05: `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy) — topic hit 67% → 14% after activation; retired.
-- 2026-10-05: `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial) — topic hit 60% → 14% after activation; retired.
+- 2026-10-06: `a-fresh-top-holding-legal-regulatory-catalyst-e-g-a-trial-op.md` (sector:Communication Services) — topic hit 43% → 0% after activation; retired.
+- 2026-10-06: `a-cyclical-industrials-etf-xli-like-posts-an-all-zero-s0-s4.md` (sector:Industrials) — topic hit 71% → 29% after activation; retired.
+- 2026-10-06: `a-defensive-bond-proxy-sector-utilities-faces-a-risk-off-tap.md` (sector:Utilities) — topic hit 57% → 14% after activation; retired.
+- 2026-10-06: `a-healthcare-xlv-call-with-s0-0-flat-mixed-es-nq-leftover-te.md` (sector:Healthcare) — topic hit 71% → 29% after activation; retired.
+- 2026-10-06: `a-live-macro-shock-oil-geopolitical-is-present-at-the-open-t.md` (sector:Consumer Cyclical) — topic hit 57% → 14% after activation; retired.
+- 2026-10-06: `a-long-duration-rate-sensitive-sector-reits-faces-a-live-rat.md` (sector:Real Estate) — topic hit 71% → 29% after activation; retired.
+- 2026-10-06: `a-single-macro-shock-oil-rates-is-scored-as-multiple-indepen.md` (sector:Consumer Cyclical) — topic hit 57% → 14% after activation; retired.
+- 2026-10-06: `a-technology-xlk-down-call-has-strongly-negative-leading-com.md` (sector:Technology) — topic hit 57% → 14% after activation; retired.
+- 2026-10-06: `sector-etf-prediction-where-the-prior-session-had-a-modest-p.md` (sector:Healthcare) — topic hit 71% → 29% after activation; retired.
+- 2026-10-06: `sector-prediction-emits-flat-flat-when-broad-market-tape-is.md` (sector:Healthcare) — topic hit 71% → 29% after activation; retired.
