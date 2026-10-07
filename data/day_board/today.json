@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T05:35:52.885585-04:00",
+  "generated_at": "2026-10-07T05:36:10.949534-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T04:34:57.770474-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-07_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 8261123,
-          "preview": "raw=11590 usable=771 single=414 \u00b7 AMD CEO says continues to explore foundry partnership with Samsung Electronics - | US Dollar Index Price Forecast: 101.80 remains key support zone ahead of FOMC mi | AUD/USD edges higher as Treasury yields retreat, traders eye FOMC minutes and ke | United States Dollar Index retakes 102.00 as bulls eye YTD peak ahead of FOMC Mi | Oil Inventories in the West Have Been Exhausted, Vitol CEO Says - Bloomberg.com"
-        },
-        {
-          "path": "01_daily/news/2026-10-07_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 12846,
-          "preview": "# News Parse v2 \u2014 2026-10-07T04:34:36.637956-04:00\nWindow\u224848h | news_mode=on | raw=11590 | usable=771 | single_name=414 | noise_dropped=9977\nusable polarity={'+': 39, '-': 153, 'mixed': 10, 'neutral': 569}"
-        }
-      ],
-      "preview": "raw=11590 usable=771 single=414 \u00b7 AMD CEO says continues to explore foundry partnership with Samsung Electronics - | US Dollar Index Price Forecast: 101.80 remains key support zone ahead of FOMC mi | AUD/USD edges higher as Treasury yields retreat, traders eye FOMC minutes and ke | United States Dollar Index retakes 102.00 as bulls eye YTD peak ahead of FOMC Mi | Oil Inventories in the West Have Been Exhausted, Vitol CEO Says - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-10-07T04:34:36.637956-04:00\nWindow\u224848h | news_mode=on | raw=11590 | usable=771 | single_name=414 | noise_dropped=9977\nusable polarity={'+': 39, '-': 153, 'mixed': 10, 'neutral': 569}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -226,6 +201,31 @@
         }
       ],
       "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11708 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T05:36:09.337042-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-07_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10570,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-07_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6033,
+          "preview": "# Weather report \u2014 2026-10-07\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-07\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
