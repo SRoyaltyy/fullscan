@@ -108,12 +108,34 @@ def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
 
+def _run_group(cmd: list[str], timeout_s: int | None):
+    """Run in its own process group; on timeout SIGKILL the whole group so
+    grandchildren can't keep the step alive (10-07: a 420s timeout took
+    20 min to return)."""
+    import os as _os
+    import signal as _signal
+    p = subprocess.Popen(cmd, cwd=str(ROOT),
+                         env=step_deadline.child_env(timeout_s),
+                         start_new_session=True)
+    try:
+        p.wait(timeout=timeout_s)
+    except subprocess.TimeoutExpired:
+        try:
+            _os.killpg(p.pid, _signal.SIGKILL)
+        except (ProcessLookupError, PermissionError):
+            p.kill()
+        try:
+            p.wait(timeout=30)
+        except subprocess.TimeoutExpired:
+            pass
+        raise
+    return p
+
+
 def _run(cmd: list[str], timeout_s: int | None = None) -> int:
     print(f"\n>>> {' '.join(cmd)}", flush=True)
     try:
-        r = subprocess.run(
-            cmd, cwd=str(ROOT), env=step_deadline.child_env(timeout_s),
-            timeout=timeout_s)
+        r = _run_group(cmd, timeout_s)
     except subprocess.TimeoutExpired:
         print(f"[preopen-all] WARN: timed out after {timeout_s}s: "
               f"{' '.join(cmd)}", flush=True)

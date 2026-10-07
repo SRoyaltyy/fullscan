@@ -904,8 +904,8 @@ def test_incremental_land_and_day_board() -> None:
     assert '"src.morning_look", "live_boards"' in pre
     yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     assert "leftover sweep" in yml
-    assert "timeout-minutes: 180" in yml
-    assert "timeout-minutes: 240" in yml
+    assert "timeout-minutes: 50" in yml
+    assert "timeout-minutes: 75" in yml
     assert "ubuntu-h0909c" not in yml
     gates = (ROOT / "src" / "packet_gates.py").read_text(encoding="utf-8")
     assert "MIN_JSON_BYTES = 80" in gates
