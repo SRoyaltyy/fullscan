@@ -387,6 +387,55 @@ def looks_like_timeout_content(text: str) -> bool:
 
 
 
+# Cross-process OpenClaw breaker (2026-10-07). Pre-Open runs each sector
+# predict as its own subprocess, so the in-memory 3-timeout breaker never
+# tripped (every log line said consecutive=1) and a hung loopback gateway
+# cost ~11 x 230s + 2 x 480s ≈ 60+ min. When OPENCLAW_BREAKER_FILE is set,
+# timeouts are counted in that file and, once OPENCLAW_BREAKER_N are seen,
+# every later call in the run skips OpenClaw at once (fallback path runs).
+def _breaker_file() -> str:
+    return os.environ.get("OPENCLAW_BREAKER_FILE", "").strip()
+
+
+def _breaker_count() -> int:
+    f = _breaker_file()
+    if not f:
+        return 0
+    try:
+        with open(f, encoding="utf-8") as fh:
+            return sum(1 for ln in fh if ln.strip())
+    except OSError:
+        return 0
+
+
+def _breaker_note_timeout(label: str) -> None:
+    f = _breaker_file()
+    if not f:
+        return
+    try:
+        with open(f, "a", encoding="utf-8") as fh:
+            fh.write(f"{time.time():.0f} {label[:80]}\n")
+    except OSError:
+        pass
+
+
+def _breaker_open() -> bool:
+    try:
+        n = int(os.environ.get("OPENCLAW_BREAKER_N", "2"))
+    except ValueError:
+        n = 2
+    return bool(_breaker_file()) and _breaker_count() >= max(1, n)
+
+
+def _read_cap(read_to):
+    """Fail-fast cap on one OpenClaw read (OPENCLAW_READ_CAP_S)."""
+    try:
+        cap = int(os.environ.get("OPENCLAW_READ_CAP_S", "0"))
+    except ValueError:
+        cap = 0
+    return min(read_to, cap) if cap > 0 else read_to
+
+
 def _post_openclaw(messages: list[dict], max_tokens: int,
                    temperature: float, stage_label: str = "",
                    retries: int = 2,
@@ -413,6 +462,10 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
     fallback_reserve = (
         FALLBACK_RESERVE_S
         if (config.DEEPSEEK_API_KEY and not config.grok_only()) else 30)
+    if _breaker_open():
+        raise RuntimeError(
+            f"OpenClaw breaker open: {_breaker_count()} timeouts this run "
+            "— skipping gateway (fail fast to fallback)")
     for attempt in range(retries):
         rem = step_deadline.remaining_s()
         if rem is not None and rem < fallback_reserve + 30:
@@ -422,6 +475,7 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
             break
         read_to = step_deadline.bounded(config.OPENCLAW_TIMEOUT,
                                         reserve=fallback_reserve, floor=30)
+        read_to = _read_cap(read_to)
         if config.OPENCLAW_TOKEN:
             headers["Authorization"] = f"Bearer {config.OPENCLAW_TOKEN}"
         try:
@@ -447,6 +501,7 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
             break
         except requests.Timeout as e:
             last = f"timeout after {read_to}s: {e}"
+            _breaker_note_timeout(stage_label or "llm run")
             print(f"[openclaw] {last} — not retrying a hung {read_to}s call")
             break
         except requests.RequestException as e:
