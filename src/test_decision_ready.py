@@ -45,7 +45,16 @@ def test_notify_skips_when_landed_ticket_has_the_same_fingerprint(tmp_path):
         'decision_readiness': {'fingerprint': 'abc', 'ready': True},
     }))
     proof = {'date': date, 'ready': True, 'fingerprint': 'abc', 'inputs': {}, 'blockers': []}
+    # notify_changed only counts a path that contains today's ET date.
+    clock = dr.datetime(2026, 10, 6, 8, 0, tzinfo=dr.ET)
+
+    class _Clock(dr.datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return clock
+
     with patch.object(dr, 'ROOT', tmp_path), \
+         patch.object(dr, 'datetime', _Clock), \
          patch.object(dr, 'evaluate', return_value=proof), \
          patch.object(dr, 'dispatch', return_value=True) as dispatch:
         assert dr.inputs_match_landed_ticket(date) is True
