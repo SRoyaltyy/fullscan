@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T04:32:58.595045-04:00",
+  "generated_at": "2026-10-07T04:34:39.908777-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,49 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T04:22:15.492653-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-07_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 273475,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-07_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18251,
-          "preview": "# MAP HEAT \u2014 2026-10-07\nExport `finviz_2026-10-06.csv` \u00b7 11616 names \u00b7 generated 2026-10-07T04:22:15.456945-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-07\nExport `finviz_2026-10-06.csv` \u00b7 11616 names \u00b7 generated 2026-10-07T04:22:15.456945-04:00"
-    },
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T04:25:26.215754-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-10-07_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1122927,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -193,6 +150,41 @@
         }
       ],
       "preview": "5905 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 REGN, FORM, EXEL, PR, NUTX"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-07",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-07T04:34:17.751815-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T04:34:38.529581-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-07_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 8261123,
+          "preview": "raw=11590 usable=771 single=414 \u00b7 AMD CEO says continues to explore foundry partnership with Samsung Electronics - | US Dollar Index Price Forecast: 101.80 remains key support zone ahead of FOMC mi | AUD/USD edges higher as Treasury yields retreat, traders eye FOMC minutes and ke | United States Dollar Index retakes 102.00 as bulls eye YTD peak ahead of FOMC Mi | Oil Inventories in the West Have Been Exhausted, Vitol CEO Says - Bloomberg.com"
+        },
+        {
+          "path": "01_daily/news/2026-10-07_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12846,
+          "preview": "# News Parse v2 \u2014 2026-10-07T04:34:36.637956-04:00\nWindow\u224848h | news_mode=on | raw=11590 | usable=771 | single_name=414 | noise_dropped=9977\nusable polarity={'+': 39, '-': 153, 'mixed': 10, 'neutral': 569}"
+        }
+      ],
+      "preview": "raw=11590 usable=771 single=414 \u00b7 AMD CEO says continues to explore foundry partnership with Samsung Electronics - | US Dollar Index Price Forecast: 101.80 remains key support zone ahead of FOMC mi | AUD/USD edges higher as Treasury yields retreat, traders eye FOMC minutes and ke | United States Dollar Index retakes 102.00 as bulls eye YTD peak ahead of FOMC Mi | Oil Inventories in the West Have Been Exhausted, Vitol CEO Says - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-10-07T04:34:36.637956-04:00\nWindow\u224848h | news_mode=on | raw=11590 | usable=771 | single_name=414 | noise_dropped=9977\nusable polarity={'+': 39, '-': 153, 'mixed': 10, 'neutral': 569}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
