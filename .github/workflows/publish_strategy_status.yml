@@ -1,0 +1,84 @@
+name: Publish strategy status
+# Fast publish for dashboard/strategy-status (the source of truth for each
+# strategy's daily buys/sells). Fires the moment any seal/confirm workflow
+# finishes, rebuilds data/strategy_status/<D>.json from sealed records
+# (read-only; src/strategy_status_publish.py), and commits ONLY that folder.
+# The page polls raw main, so the commit is the publish: no Pages Deploy,
+# nothing under dashboard/ (cannot overwrite deploy patches, #511), and
+# data/strategy_status/** is not a push path of any other workflow (no
+# churn, #516). Own concurrency group; a newer run supersedes a queued one.
+on:
+  workflow_run:
+    workflows:
+      - "Publish strategy tickets"
+      - "Factor Mine pre-open sleeves"
+      - "h1 append-only forward"
+      - "Sleeve merge live card"
+      - "Excel Bot (cluster signals daily)"
+      - "webull sim"
+      - "Open 09:30 pack"
+    types: [completed]
+  schedule:
+    # Theme Radar lives in another repo: poll for plan_<D>.csv pre-open.
+    - cron: "*/10 10-13 * * 1-5"
+    - cron: "*/30 14-21 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+permissions:
+  contents: write
+concurrency:
+  group: strategy-status-publish
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+          sparse-checkout: |
+            src
+            data/day_board
+            data/factor_mine/preopen/seals
+            data/webull_sim/days.jsonl
+            research/hot_n4_clean_v4/forward_h1/h1_log.jsonl
+            data/strategy_status
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build status (read-only over sealed records)
+        env:
+          RUN_DATE: ${{ github.event.inputs.run_date }}
+        run: python -m src.strategy_status_publish ${RUN_DATE:+--date "$RUN_DATE"}
+      - name: Commit data/strategy_status only
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add -- data/strategy_status
+          if git diff --staged --quiet; then echo "no change"; exit 0; fi
+          # Only the derived status folder may be staged.
+          if git diff --staged --name-only | grep -v '^data/strategy_status/'; then
+            echo "::error::refusing to commit outside data/strategy_status"; exit 1
+          fi
+          git commit -q -m "strategy-status: publish $(date -u +%FT%TZ) [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0
+            git rebase --abort 2>/dev/null || true
+            # Derived file only: on conflict, rebuild on top of fresh main.
+            git reset -q --hard origin/main
+            python -m src.strategy_status_publish ${RUN_DATE:+--date "$RUN_DATE"}
+            git add -- data/strategy_status
+            git diff --staged --quiet && exit 0
+            git commit -q -m "strategy-status: publish $(date -u +%FT%TZ) [skip ci]"
+            sleep $(( 2 * attempt + RANDOM % 5 ))
+          done
+          echo "::error::push failed"; exit 1
+        env:
+          RUN_DATE: ${{ github.event.inputs.run_date }}
