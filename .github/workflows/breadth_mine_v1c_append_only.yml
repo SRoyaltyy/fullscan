@@ -1,0 +1,38 @@
+name: breadth_mine_v1c append-only
+
+on:
+  push:
+    paths:
+      - "research/breadth_mine_v1c/**"
+      - "src/breadth_mine_v1c_append.py"
+      - "src/breadth_mine_v1c_score.py"
+      - "src/breadth_mine_v1c_bars.py"
+      - "src/test_breadth_mine_v1c.py"
+      - "src/test_breadth_mine_v1c_append.py"
+      - ".github/workflows/breadth_mine_v1c_append_only.yml"
+  pull_request:
+    paths:
+      - "research/breadth_mine_v1c/**"
+      - "src/breadth_mine_v1c_append.py"
+      - "src/breadth_mine_v1c_score.py"
+      - "src/breadth_mine_v1c_bars.py"
+      - "src/test_breadth_mine_v1c.py"
+      - "src/test_breadth_mine_v1c_append.py"
+      - ".github/workflows/breadth_mine_v1c_append_only.yml"
+
+jobs:
+  append-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: append-only and protocol
+        run: |
+          python3 -m src.breadth_mine_v1c_append --check-against origin/main
+          python3 -m src.test_breadth_mine_v1c_append
+          python3 -m src.test_breadth_mine_v1c
+          python3 -c "from src.breadth_mine_v1c_bars import assert_split_consistent; assert_split_consistent()"
