@@ -1,12 +1,12 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T05:38:10.041815-04:00",
+  "generated_at": "2026-10-07T05:39:40.120294-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
@@ -681,11 +681,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -824,10 +824,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-07_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=120",
+          "size": 1013889,
+          "said": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI \u00b7 -0.6018",
           "bullets": []
         },
         {
@@ -835,21 +835,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-07_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 33158,
+          "said": "Stock book \u2014 2026-10-07",
+          "bullets": [
+            "_Generated 2026-10-07T05:38:35.872156-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-07_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -871,10 +874,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-07 not in dashboard dates (last=2026-10-06)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-07)",
           "size": 10249330,
-          "said": "session 2026-10-07 not in dashboard dates (last=2026-10-06)",
+          "said": "live-book poller + today.json (2026-10-07)",
           "bullets": []
         }
       ],
@@ -887,9 +890,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -899,10 +902,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-07_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=120",
+          "size": 1013889,
+          "said": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI \u00b7 -0.6018",
           "bullets": []
         },
         {
@@ -910,10 +913,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-07 not in dashboard dates (last=2026-10-06)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-07)",
           "size": 10249330,
-          "said": "session 2026-10-07 not in dashboard dates (last=2026-10-06)",
+          "said": "live-book poller + today.json (2026-10-07)",
           "bullets": []
         },
         {
@@ -949,8 +952,58 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "WH",
+        "score": 0.7148452157101206
+      },
+      {
+        "ticker": "SIRI",
+        "score": 0.091114254003668
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "NEOV",
+        "score": -0.4182677525064805
+      },
+      {
+        "ticker": "OKLO",
+        "score": -0.12049586074736385
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.22111687251822526
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.3154010585007891
+      },
+      {
+        "ticker": "ENVX",
+        "score": -0.20203143846195815
+      },
+      {
+        "ticker": "INDI",
+        "score": -0.2882462432599445
+      },
+      {
+        "ticker": "TE",
+        "score": -0.37256493198303836
+      },
+      {
+        "ticker": "SKYX",
+        "score": -0.3677246360202181
+      },
+      {
+        "ticker": "NNDM",
+        "score": -0.10500577310314202
+      },
+      {
+        "ticker": "MTZ",
+        "score": -0.1774016778355627
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "DOWN  -5.211",
@@ -1635,6 +1688,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ESTC, MH, ELV, FUTU, SOLS \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ABBV, BIIB, ESTC, MH, WST"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T05:39:35.464447-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-07_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1013889,
+          "preview": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/2026-10-07_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-07_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2455,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-07_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7531,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7531,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "01_daily/2026-10-07_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 34045,
+          "preview": "# Stock book \u2014 2026-10-07\n_Generated 2026-10-07T05:38:35.872156-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 # Stock book \u2014 2026-10-07\n_Generated 2026-10-07T05:38:35.872156-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
