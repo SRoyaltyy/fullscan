@@ -1,12 +1,12 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T04:41:19.055651-04:00",
+  "generated_at": "2026-10-07T04:41:33.853980-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 3,
-    "partial": 3,
-    "fail": 2,
+    "partial": 4,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T04:31:54.111313-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-07_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 273475,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-07_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18251,
-          "preview": "# MAP HEAT \u2014 2026-10-07\nExport `finviz_2026-10-06.csv` \u00b7 11616 names \u00b7 generated 2026-10-07T04:22:15.456945-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-07\nExport `finviz_2026-10-06.csv` \u00b7 11616 names \u00b7 generated 2026-10-07T04:22:15.456945-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -185,6 +160,31 @@
         }
       ],
       "preview": "36 events \u00b7 FOMC minutes (Sept 15\u201316 hike to 3.75\u20134.00%) | US\u2013Iran war: Hormuz still restricted; Iran's 7 conditions unmet | Brent ~$101: crude transits rebound, refined products still tight | China Golden Week (National Day) last day: travel vs spend | Southern California record October heat / wildfire overlay | Taiwan gray-zone pressure vs silicon shield (no invasion base case) \u00b7 # Event Scan \u2014 2026-10-07\n- events tracked: **36** (via openclaw)\n- uncertainty: **elevated**\n- summary: The tape is still a two-factor regime: a live US\u2013Iran war with Hormuz restricted, Brent ~$101, and diesel tight enough for a Oct 5 tax-deferral EO, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20% ahead of today's minutes. Policy is two-sided \u2014 a US\u2013China truce to Jan 10 2027 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and a CIT forced-labor 301 briefing keep trade risk binary. Q3 earnings open tomorrow with PepsiCo and Samsung, then banks/UNH/ASML/TSMC against an AI-memory boom Korea and Micron have already validated."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T04:41:32.444845-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-07_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 96327,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-07_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 19583,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-07T04:41:32.405965-04:00\nraw=11609 unique_events=9 tickers=124"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-07T04:41:32.405965-04:00\nraw=11609 unique_events=9 tickers=124"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
