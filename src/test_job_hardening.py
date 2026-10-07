@@ -901,7 +901,7 @@ def test_incremental_land_and_day_board() -> None:
     """Write A → QC A → push A. Day board is an .io page, not an Action."""
     pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
     assert "land_file.land" in pre
-    assert "src.publish_live_boards" in pre
+    assert '"src.morning_look", "live_boards"' in pre
     yml = (WF / "preopen_all.yml").read_text(encoding="utf-8")
     assert "leftover sweep" in yml
     assert "timeout-minutes: 50" in yml

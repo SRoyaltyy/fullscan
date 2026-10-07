@@ -382,9 +382,9 @@ def run(
               "on disk — skip ranker")
         print("[all] → Live 1d BUY/SELL strip (dashboards poll main)")
         _run(
-            [sys.executable, "-m", "src.publish_live_boards",
+            [sys.executable, "-m", "src.morning_look", "live_boards",
              "--date", date, "--write", "--no-extras"],
-            check=False, timeout_s=180,
+            check=False, timeout_s=480,
         )
         _land(date, "stock_book", "Stock book + green")
         _land(date, "live_boards", "Live 1d BUY/SELL strip")
@@ -640,9 +640,9 @@ def run(
     else:
         print("[all] → Live 1d BUY/SELL strip (dashboards poll main, no paper rebuild)")
         _run(
-            [sys.executable, "-m", "src.publish_live_boards",
+            [sys.executable, "-m", "src.morning_look", "live_boards",
              "--date", date, "--write", "--no-extras"],
-            check=False, timeout_s=180,
+            check=False, timeout_s=480,
         )
         _land(date, "stock_book", "Stock book + green")
         _land(date, "live_boards", "Live 1d BUY/SELL strip")

@@ -1,0 +1,371 @@
+{
+  "date": "2026-10-07",
+  "generated_at": "2026-10-07T07:52:37.212240-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 5,
+  "status": "OK",
+  "targets": [
+    {
+      "ticker": "GOOGL",
+      "role": "earnings",
+      "why": "earnings BMO"
+    },
+    {
+      "ticker": "GOOG",
+      "role": "earnings",
+      "why": "earnings BMO"
+    },
+    {
+      "ticker": "TSLA",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "NFLX",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "NE",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling"
+    },
+    {
+      "ticker": "RIG",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling"
+    },
+    {
+      "ticker": "SLB",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "BKR",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "GOOGL",
+      "role": "earnings",
+      "why": "earnings BMO",
+      "net_signal": "Bearish",
+      "conviction": 27,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On July 22, 2026 Alphabet reported Q2 revenue of $119.8 billion (+24%) and Cloud revenue of $24.8 billion (+82%), even as it lifted 2026 capex to $195-205 billion and halted buybacks. The AI build is being funded by the June 1-2 ~$80 billion equity raise and anchored by the October 6 Google-Constellation ~3.59 GW nuclear power deal. Legal outcomes split: on September 2 Judge Brinkema rejected a forced AdX sale, but July 16 DMA specification orders, the July 23 \u20ac890 million EU fine, and the September 16 six-year ad-tech remedies still open Search, Play, and ads to rivals. Product cadence stayed constructive with Gemini 3.5 at I/O on May 19 and Gemini 4 Argon on September 30, while analysts lifted targets as high as $485 into early October.",
+      "key_assumption": "Avoiding a structural ad-tech breakup plus Cloud/AI demand continue to dominate DMA/ad-tech behavioral costs, equity dilution, and FCF pressure from ~$200B capex.",
+      "n_pos": 7,
+      "n_neg": 8,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-09-02",
+          "headline": "On September 2, 2026, U.S. District Judge Leonie M. Brinkema (Eastern District of Virginia) issued a remedies ruling",
+          "weight": 10,
+          "confidence": 94
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+          "event_date": "2026-09-16",
+          "headline": "A detailed 106-page remedies opinion was unsealed on September 16, 2026. It orders significant behavioral relief",
+          "weight": 10,
+          "confidence": 90
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+          "event_date": "2026-10-06",
+          "headline": "a class action lawsuit has been filed against Alphabet Inc. (\u201cAlphabet\u201d or the \u201cCompany\u201d) (NASDAQ:GOOG)",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Policy reversal/new regulation/tax increase",
+          "event_date": "2026-07-16",
+          "headline": "On July 16, 2026, the European Commission adopted two binding specification decisions under the EU Digital Markets Act",
+          "weight": 8,
+          "confidence": 94
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Policy reversal/new regulation/tax increase",
+          "event_date": "2026-07-23",
+          "headline": "The European Union has fined Google's parent company Alphabet \u20ac890 million (about $1 billion) for two separate violations",
+          "weight": 8,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+          "event_date": "2026-09-30",
+          "headline": "Google announced Gemini 4 Argon on September 30, 2026.",
+          "weight": 6,
+          "confidence": 94
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "GOOG",
+      "role": "earnings",
+      "why": "earnings BMO",
+      "net_signal": "Bearish",
+      "conviction": 29,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On April 29, 2026 Alphabet beat Q1 estimates, lifted 2026 capex to $180\u2013$190 billion, and raised the quarterly dividend 5% to $0.22. The July 22 print repeated the revenue beat as Google Cloud jumped 82% to $24.8 billion, but a further capex hike to $195\u2013$205 billion, a buyback pause, and the June 4 close of upsized equity offerings totaling $90 billion framed an AI build funded by dilution rather than cash return. Leadership rotated on August 5 as Demis Hassabis became Alphabet chief scientist while Jeff Dean left, then September brought Gemini 4 Argon and behavioral ad-tech remedies that stopped short of an AdX breakup. Into October 6\u20137, a ~3.59 GW Constellation nuclear power deal and Street PT hikes to $417/$485 offset an EU Android-AI appeal, leaving Cloud/AI scale roughly balanced against capex, dilution, and antitrust overhang.",
+      "key_assumption": "The $195\u2013$205 billion 2026 capex program converts Cloud/AI demand at high incremental margins, and ad-tech behavioral remedies plus the EU Android-AI fight do not structurally impair the ads and distribution engine.",
+      "n_pos": 8,
+      "n_neg": 10,
+      "top_hits": [
+        {
+          "type": "negative",
+          "taxonomy": "Policy reversal/new regulation/tax increase",
+          "event_date": "2026-07-16",
+          "headline": "The European Commission has issued two sets of binding specification measures to Google under the Digital Markets Act.",
+          "weight": 9,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation outcome/antitrust",
+          "event_date": "2026-09-02",
+          "headline": "\"The Justice Department\u2019s Antitrust Division won substantial relief in its monopolization case against Google in advertising technology markets.\"",
+          "weight": 7,
+          "confidence": 93
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation outcome/antitrust",
+          "event_date": "2026-09-29",
+          "headline": "Google is challenging the EU\u2019s DMA requirements in court, which would force it to open Android further to rival AI assistants",
+          "weight": 7,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Capacity expansion announced",
+          "event_date": "2026-04-29",
+          "headline": "\"The company also updated its 2026 capital expenditure guidance range to $180 billion to $190 billion\"",
+          "weight": 6,
+          "confidence": 94
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+          "event_date": "2026-09-30",
+          "headline": "\"Alphabet unveiled Gemini 4 Argon on Wednesday, its most advanced artificial intelligence model yet\"",
+          "weight": 6,
+          "confidence": 94
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Negative personnel change",
+          "event_date": "2026-08-05",
+          "headline": "\"Jeff Dean left Google (Alphabet) in early August 2026 to co-found Discovery Loop, a new AI startup.\"",
+          "weight": 6,
+          "confidence": 84
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "TSLA",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "net_signal": "Bearish",
+      "conviction": 37,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 2026-10-02 Tesla reported a Q3 delivery beat at 486,532 vehicles and 13.7 GWh of storage, extending the 2026-07-02 Q2 volume record of 480,126. The 2026-09-03 Cybercab launch and limited Austin robotaxi service, the 2026-07-24 close of a $1.95B AI-hardware deal, and 2026-09-29 $30B undrawn credit lines keep the robotaxi/AI duration bid intact. Offsetting that, the 2026-07-22 Q2 print missed non-GAAP EPS at $0.33 vs about $0.53 as operating margin fell to 1.4% and FCF turned negative, while 2026 recalls (notably 218,868 vehicles on 2026-05-04), a 2026-09-30 NHTSA Cybercab audit, and a 2026-10-07 EU FSD vote slip add regulatory friction. JPMorgan\u2019s 2026-10-07 cut to a $415 PT is a modest overhang versus still-above-spot targets, with Q3 earnings on 2026-10-21 the next hard check.",
+      "key_assumption": "The robotaxi/AI option (Cybercab, FSD, Optimus funding backstop) still dominates Tesla\u2019s multiple even if auto margins stay compressed into the Oct 21 print, and EU/NHTSA processes delay rather than deny unsupervised driving.",
+      "n_pos": 6,
+      "n_neg": 8,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-04-21",
+          "headline": "Tesla's board revoked Elon Musk's $29 billion interim 2025 pay award on April 21 after Delaware restored the 2018 CEO package",
+          "weight": 10,
+          "confidence": 90
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
+          "event_date": "2026-07-22",
+          "headline": "non-GAAP earnings came in at just $0.33 per share, well short of the $0.53 analysts were looking for",
+          "weight": 10,
+          "confidence": 93
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Product delay/failure/rejection/safety recall",
+          "event_date": "2026-05-04",
+          "headline": "May 4, 2026 (26V283000): 218,868 vehicles ... Delayed rearview camera image (up to 11 seconds)",
+          "weight": 10,
+          "confidence": 82
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Regulatory denial or delay/antitrust block",
+          "event_date": "2026-10-07",
+          "headline": "Tesla is facing scrutiny and mounting pressure in its push for EU-wide approval of its \"Full Self-Driving (Supervised)\" driver-assistance system",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Regulatory denial or delay/antitrust block",
+          "event_date": "2026-09-03",
+          "headline": "NHTSA opened an audit into how Tesla certified the vehicle the same day the company started putting passengers in it in Austin.",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Product delay/failure/rejection/safety recall",
+          "event_date": "2026-08-04",
+          "headline": "Tesla has issued a recall on over 20,349 Model 3 and Model Y vehicles which have low-beam headlights that exceed the maximum brightness.",
+          "weight": 10,
+          "confidence": 80
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "NFLX",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "net_signal": "Strong Bearish",
+      "conviction": 41,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On April 16, 2026 Netflix printed a WBD-fee-boosted Q1 ($12.25B revenue) and on April 22 authorized an extra $25B buyback, later executing a record $4.7B repurchase in Q2. That support was undercut on July 16 when Q2\u2019s $12.56B revenue / $0.80 EPS arrived with lighter $12.86B Q3 revenue guidance and as much as a 9% after-hours drop, followed by Co-CEO Ted Sarandos selling 133,162 shares on August 3\u20134 under a 10b5-1 plan. Governance and legal pressure stacked as Reed Hastings left the board on June 4 and kids-data/privacy suits arrived from Texas (May 11), Florida (September 9), and Ohio parents (September 28). Street opinion then split\u2014Evercore raised its PT to $110 on September 14 and Deutsche Bank upgraded to Buy on September 29, while Wells Fargo went Underweight ($57 PT) on September 18 and HSBC to Hold\u2014leaving early October\u2019s Filmin Spain collection and limited Disney licensing too small to offset a ~$69 tape.",
+      "key_assumption": "The Texas/Florida AG and Ohio class-action kids-data cases stay headline and legal-cost noise rather than a damages or behavioral remedy that restricts ads, profiling, or M&A optionality, and Q3 engagement does not worsen versus the July 16 guide-down.",
+      "n_pos": 4,
+      "n_neg": 8,
+      "top_hits": [
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+          "event_date": "2026-09-09",
+          "headline": "Attorney General James Uthmeier filed a lawsuit against Netflix, alleging the streaming company spent years promising Florida families a paid, ad-free service",
+          "weight": 9,
+          "confidence": 94
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-04-16",
+          "headline": "Revenue reached $12.25 billion, up 16.2% from the comparable 2025 quarter.",
+          "weight": 7,
+          "confidence": 92
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Earnings guidance cut",
+          "event_date": "2026-07-16",
+          "headline": "Netflix reported Q2 revenue of $12.56 billion, up 13.4% year over year, and net income of $3.4 billion (translating to 80 cents per share).",
+          "weight": 7,
+          "confidence": 93
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Earnings guidance cut",
+          "event_date": "2026-04-16",
+          "headline": "the company issued weaker-than-expected Q2 guidance",
+          "weight": 7,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Strategic partnership/alliance",
+          "event_date": "2026-10-02",
+          "headline": "Disney agreed to license a selection of its movies and TV shows to Netflix for limited or multi-year windows.",
+          "weight": 5,
+          "confidence": 88
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+          "event_date": "2026-08-03",
+          "headline": "open-market sales of 133,162 shares of Netflix common stock on August 3\u20134, 2026, for approximately $9.73 million",
+          "weight": 5,
+          "confidence": 80
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "NE",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling",
+      "net_signal": "Neutral",
+      "conviction": 13,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On April 26, 2026 Noble followed a profitable Q1 with a Petrobras Courage extension, a Woodside Deliverer award, and higher capex to reactivate Deliverer, then refinanced into $800 million 6.250% 2034 notes in June while the CEO sold 50,000 shares under a 10b5-1 plan. The tape broke on July 27 when Q2 swung to a $37 million loss after a $43 million Brazil idle-time charge, a $42 million Ocean Apex scrap impairment, and a cut in FY2026 adjusted EBITDA guidance to $850\u2013$925 million, after Susquehanna had already slashed its target to $40 on July 8. Backlog still rebuilt via about $200 million of Q2 awards, a 670-day ConocoPhillips Interceptor contract on August 7, and a long-term Tullow Ghana campaign for Faye Kozack on September 29, while Fearnley went Strong Buy and later Citi/Susquehanna lifted targets. A Kirby McInerney securities investigation opened August 10, and Middle East tensions plus a crude spike lifted NE about 7% on October 7, but the 2026 earnings reset still outweighs 2027 contract optionality.",
+      "key_assumption": "The Brazil suspensions are a 2026 utilization and guidance problem rather than lost term contracts, so the 2027-start backlog and a geopolitical oil bid only re-rate NE if FY2026 EBITDA is not cut again.",
+      "n_pos": 5,
+      "n_neg": 6,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-29",
+          "headline": "Noble Corporation has secured a contract with Tullow Oil for its drillship Noble Faye Kozack to support a drilling campaign offshore Ghana involving up to 10 we",
+          "weight": 10,
+          "confidence": 88
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-04-26",
+          "headline": "Approximately $565 million in new contract value since the January fleet status report, including 3-year extension for the Noble Courage",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-07-27",
+          "headline": "Approximately $200 million in new contract value since the April fleet status report, including a 6-well contract for the Noble Viking",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
+          "event_date": "2026-07-27",
+          "headline": "Our second quarter was adversely impacted by $43 million due to the operational suspension of both of our rigs in Brazil",
+          "weight": 10,
+          "confidence": 95
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Earnings guidance cut",
+          "event_date": "2026-07-27",
+          "headline": "Revenue guidance is reduced to $2,800-$2,900 million (versus $2,800-$3,000 million previously)",
+          "weight": 9,
+          "confidence": 95
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+          "event_date": "2026-06-15",
+          "headline": "Sold a total of 50,000 shares in two open-market transactions under a 10b5-1 plan adopted December 12, 2025.",
+          "weight": 8,
+          "confidence": 80
+        }
+      ],
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "ticker": "TSLA",
+  "analysis_date": "2026-10-07",
+  "current_price": "380.68",
+  "net_signal": "Bearish",
+  "conviction": 37,
+  "catalyst_stack": "On 2026-10-02 Tesla reported a Q3 delivery beat at 486,532 vehicles and 13.7 GWh of storage, extending the 2026-07-02 Q2 volume record of 480,126. The 2026-09-03 Cybercab launch and limited Austin robotaxi service, the 2026-07-24 close of a $1.95B AI-hardware deal, and 2026-09-29 $30B undrawn credit lines keep the robotaxi/AI duration bid intact. Offsetting that, the 2026-07-22 Q2 print missed non-GAAP EPS at $0.33 vs about $0.53 as operating margin fell to 1.4% and FCF turned negative, while 2026 recalls (notably 218,868 vehicles on 2026-05-04), a 2026-09-30 NHTSA Cybercab audit, and a 2026-10-07 EU FSD vote slip add regulatory friction. JPMorgan\u2019s 2026-10-07 cut to a $415 PT is a modest overhang versus still-above-spot targets, with Q3 earnings on 2026-10-21 the next hard check.",
+  "key_assumption": "The robotaxi/AI option (Cybercab, FSD, Optimus funding backstop) still dominates Tesla\u2019s multiple even if auto margins stay compressed into the Oct 21 print, and EU/NHTSA processes delay rather than deny unsupervised driving.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-21",
+      "evidence_excerpt": "Tesla's board revoked Elon Musk's $29 billion interim 2025 pay award on April 21 after Delaware restored the 2018 CEO package",
+      "source_urls": [
+        "https://techcrunch.com/2026/04/23/tesla-drops-musks-29b-interim-award-after-delaware-court-restored-larger-pay-package/",
+        "https://www.sec.gov/Archives/edgar/data/1318605/000162828026026673/tsla-20260331.htm"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "non-GAAP earnings came in at just $0.33 per share, well short of the $0.53 analysts were looking for",
+      "source_urls": [
+        "https://electrek.co/2026/07/22/tesla-tsla-q2-2026-financial-results/"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Product delay/failure/rejection/safety recall",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        4,
+        5,
+        12,
+        13
+      ],
+      "event_date": "2026-05-04",
+      "evidence_excerpt": "May 4, 2026 (26V283000): 218,868 vehicles ... Delayed rearview camera image (up to 11 seconds)",
+      "source_urls": [
+        "https://www.arfc.org/recalls/vehicles/tesla",
+        "https://recallbench.com/vehicle/tesla/"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 9,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-09-03",
+      "evidence_excerpt": "At a private, closed-door event in Austin, Texas today, Tesla officially launched its gilded car of the future: the Cybercab.",
+      "source_urls": [
+        "https://www.theverge.com/transportation/989501/tesla-cybercab-launch-robotaxi-austin-musk",
+        "https://www.reuters.com/business/autos-transportation/teslas-cybercab-event-set-thursday-with-few-details-2026-09-03/"
+      ],
+      "confidence": 91
+    },
+    {
+      "taxonomy": "Regulatory denial or delay/antitrust block",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        18,
+        16
+      ],
+      "event_date": "2026-10-07",
+      "evidence_excerpt": "Tesla is facing scrutiny and mounting pressure in its push for EU-wide approval of its \"Full Self-Driving (Supervised)\" driver-assistance system",
+      "source_urls": [
+        "https://www.reuters.com/investigations/tesla-is-browbeating-eu-approve-its-full-self-driving-tech-pressure-is-working-2026-10-07/",
+        "https://www.reuters.com/business/musk-welcomes-german-backing-tesla-driver-assistance-tech-group-chases-eu-2026-10-07/"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Operational milestone (e.g., first patient dosed, satellite commissioned)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 7,
+      "event_ids": [
+        17,
+        8
+      ],
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "In the third quarter, we produced over 464,000 vehicles, delivered over 486,000 vehicles and deployed 13.7 GWh",
+      "source_urls": [
+        "https://www.morningstar.com/news/business-wire/20261002169209/tesla-third-quarter-2026-production-deliveries-deployments",
+        "https://electrek.co/2026/10/02/tesla-q3-2026-deliveries-486532/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-04-22",
+      "evidence_excerpt": "beat expectations with earnings of $0.41 per share (non-GAAP), and it delivered revenue expectations with $22.38 billion",
+      "source_urls": [
+        "https://electrek.co/2026/04/22/tesla-tsla-q1-2026-financial-results/"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 5,
+      "event_ids": [
+        11,
+        3
+      ],
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "acquired an AI hardware company in an asset acquisition for $1.95 billion in Tesla common stock and equity awards",
+      "source_urls": [
+        "https://electrek.co/2026/07/24/tesla-secret-2-billion-ai-hardware-acquisition-closes/",
+        "https://electrek.co/2026/04/23/tesla-tsla-quietly-discloses-2-billion-ai-hardware-acquisition-10q/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-10-07",
+      "evidence_excerpt": "JPMorgan cuts Tesla's price target to $415 from $445 and lowers its Q3 delivery and margin estimates",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/j-p-morgan-drops-sharp-080910133.html"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Capital infusion (PIPE, funding round, favorable terms)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 3,
+      "event_ids": [
+        15
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "Tesla has secured $30 billion in fresh credit lines that it could use to help scale the new products",
+      "source_urls": [
+        "https://techcrunch.com/2026/09/29/tesla-secures-30b-in-new-credit-lines-as-it-looks-to-scale-cybercab-optimus/",
+        "https://www.reuters.com/business/autos-transportation/tesla-lines-up-30-billion-credit-lines-capex-robotaxi-push-accelerate-2026-09-29/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Regulatory denial or delay/antitrust block",
+      "type": "negative",
+      "event_date": "2026-09-03",
+      "evidence_excerpt": "NHTSA opened an audit into how Tesla certified the vehicle the same day the company started putting passengers in it in Austin.",
+      "source_urls": [
+        "https://electrek.co/2026/09/04/tesla-cybercab-nhtsa-investigation-fmvss-certification/",
+        "https://techcrunch.com/2026/09/04/feds-launch-investigation-into-teslas-cybercab-deployment/",
+        "https://www.theverge.com/transportation/990130/tesla-cybercab-nhtsa-investigation-fmvss-certify"
+      ],
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Product delay/failure/rejection/safety recall",
+      "type": "negative",
+      "event_date": "2026-08-04",
+      "evidence_excerpt": "Tesla has issued a recall on over 20,349 Model 3 and Model Y vehicles which have low-beam headlights that exceed the maximum brightness.",
+      "source_urls": [
+        "https://electrek.co/2026/08/11/tesla-recall-20000-model-3-y-for-headlights-that-are-too-bright/",
+        "https://www.notateslaapp.com/news/4567/tesla-issues-physical-recall-for-20349-model-3-and-model-y-vehicles-over-headlights"
+      ],
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Product delay/failure/rejection/safety recall",
+      "type": "negative",
+      "event_date": "2026-04-22",
+      "evidence_excerpt": "the announcement was accompanied by what seems to be a backpedaling on availability of Robotaxis in 5 of the 8 cities",
+      "source_urls": [
+        "https://electrek.co/2026/04/22/tesla-seems-to-say-robotaxi-launch-will-be-pushed-back-in-5-us-cities/"
+      ],
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Lawsuits",
+      "type": "negative",
+      "event_date": "2026-09-21",
+      "evidence_excerpt": "Tesla goes on trial today over allegations that its flagship Fremont factory subjected thousands of Black workers to racial slurs",
+      "source_urls": [
+        "https://electrek.co/2026/09/21/tesla-racism-trial-california-fremont-black-workers/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-07",
+  "cutoff_date": null,
+  "role": "earnings"
+}

@@ -14,7 +14,7 @@ if [ "$ET_HM" -ge 930 ]; then
   echo "[open-pack] after 09:30 — Elite Overview live px allowed (not Theme Radar)"
 fi
 echo "[open-pack] date=$DATE"
-python3 -m src.strategy_tickets --date "$DATE" --write
+python3 -m src.morning_look tickets --date "$DATE" --write
 python3 -m src.hold_live_px --date "$DATE" --write || true
 python3 - "$DATE" <<'PY'
 import json
@@ -31,7 +31,7 @@ if legal != date or use != "session_open":
     )
 print(f"[open-pack] clock_legal_for={legal} clock_use={use}")
 PY
-python3 -m src.publish_live_boards --date "$DATE" --write --no-extras || true
+python3 -m src.morning_look live_boards --date "$DATE" --write --no-extras || true
 python3 -m src.land_file --date "$DATE" --key live_boards || true
 chmod +x scripts/publish_dashboard.sh || true
 bash scripts/publish_dashboard.sh || true

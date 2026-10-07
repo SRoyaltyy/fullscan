@@ -449,7 +449,7 @@ def test_postclose_does_not_wait_on_ticket_publish() -> None:
     assert "skip Post-Close ALL until 16:00 ET" in orch
     tickets = (root / ".github/workflows/publish_strategy_tickets.yml").read_text(
         encoding="utf-8")
-    assert 'python3 -m src.decision_ready --date "$DATE" --publish' in tickets
+    assert 'python3 -m src.morning_look decision_ready --date "$DATE" --publish' in tickets
     assert "python -m src.paper_open" not in tickets
     assert "--submit" not in tickets
 
