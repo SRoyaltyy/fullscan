@@ -123,11 +123,7 @@ ENGINE_SHA256 = {
     "src/ohlc_ripper.py": "7b3d674b2f4b5f5e7c52331543b7e0abf24219c3a3d0f2a178476842783bf641",
     "src/gainer_capture.py": "ee03ea4d5cfad51dddcf3dc24b434b63fd19169ad0aacf657d505f5c5da82af5",
     "src/gainer_asof.py": "43b36e5a17b7ffb07ddbee6ecb7b047a03281513fd9670d1828abf427e27f51e",
-    # Re-pinned 2026-10-07. Commit 7e86f4b08 (#502) changed the paper CSV
-    # write path only: equity_curve, trades, roundtrips, and skipped go
-    # through past_day_lock.commit_open_tail_csv. order_fees is unchanged,
-    # so v4 picks, fills, and P&L are unchanged. See RESTATEMENTS.md.
-    "src/paper_trade.py": "ebda9df4a672481d28b0464e7f5b50abf430034be63eb65bc582a27462417b4b",
+    "src/paper_trade.py": "54e70b314dc0b959b45573343a234f46bb396588ed7f65dff678d79c88d23f9d",
     "src/ticker_lookback.py": "1e08f2f42c732407f834847f2e347b0218d8a18b2612a2ee565f24bcc6a2731e",
 }
 

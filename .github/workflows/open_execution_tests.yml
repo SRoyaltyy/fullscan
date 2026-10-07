@@ -17,7 +17,9 @@ jobs:
             .github
             00_grounding
             dashboard/paper-book
+            dashboard/factor-mine
             data/paper_open
+            data/day_board
             research/hot_n4_clean_v4/forward_h1
       - uses: actions/setup-python@v5
         with:
