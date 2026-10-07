@@ -1,6 +1,6 @@
 {
   "date": "2026-10-06",
-  "generated_at": "2026-10-06T06:55:37.818927-04:00",
+  "generated_at": "2026-10-07T03:12:48.163867-04:00",
   "run_id": "37445974301",
   "runner": "GitHub Actions 1000021907",
   "all_ok": false,
@@ -9,8 +9,8 @@
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/sectors/2026-10-06/*_predict.md",
-      "reason": "All 11 sector predicts missing (0/11); requirement is at least 8 of 11 quality sector essays. Only one missing sector is tolerated."
+      "path": "(review)",
+      "reason": "empty_review_reply"
     }
   ],
   "missing_required": [
@@ -148,7 +148,7 @@
     }
   ],
   "qc": {
-    "sector_n_ok": 0,
+    "sector_n_ok": 1,
     "sector_n_total": 11,
     "items": [
       {
@@ -184,14 +184,14 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-06_actions.json",
-        "size": 85842
+        "size": 86245
       },
       {
         "kind": "finviz_digest",
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-06_finviz_digest.json",
-        "size": 97534
+        "size": 98242
       },
       {
         "kind": "finviz_market_digest",
@@ -202,10 +202,10 @@
       },
       {
         "kind": "finviz_market_digest",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-10-06_finviz_market_digest_close.json",
-        "size": 0
+        "size": 6376
       },
       {
         "kind": "map_heat",
@@ -293,10 +293,10 @@
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-10-06/technology_predict.md",
-        "size": 0
+        "size": 20534
       },
       {
         "kind": "sector_predict",
