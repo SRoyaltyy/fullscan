@@ -10,21 +10,23 @@ on:
     paths:
       - "src/record_certificate.py"
       - "src/test_record_certificate.py"
-      - "src/factor_mine.py"
       - "research/hot_n4_clean_v4/forward/render.py"
       - "dashboard/factor-mine/index.html"
       - "dashboard/h1/index.html"
       - ".github/workflows/record_certificate.yml"
+      - ".github/workflows/factor_mine.yml"
+      - ".github/workflows/restamp_factor_mine_dash.yml"
   push:
     branches: [main]
     paths:
       - "src/record_certificate.py"
       - "src/test_record_certificate.py"
-      - "src/factor_mine.py"
       - "research/hot_n4_clean_v4/forward/render.py"
       - "dashboard/factor-mine/index.html"
       - "dashboard/h1/index.html"
       - ".github/workflows/record_certificate.yml"
+      - ".github/workflows/factor_mine.yml"
+      - ".github/workflows/restamp_factor_mine_dash.yml"
 
 permissions:
   contents: read

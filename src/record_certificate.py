@@ -47,6 +47,8 @@ FILL_RE = re.compile(
 ISO_DAY = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 # Live badge. Other strategy pages stay unstamped until a later pass.
+# factor_mine.py is engine-pinned, so the Factor Mine bake workflows
+# stamp the page after write_dash_html. h1 stamps inside write_page.
 BOARD_PAGES: dict[str, tuple[str, ...]] = {
     "factor_mine": ("dashboard/factor-mine/index.html",),
     "h1": ("dashboard/h1/index.html",),

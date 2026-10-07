@@ -3695,11 +3695,6 @@ def write_dash_html(payload: dict, dash_dir: Path | None = None,
     html = html.replace("__DATA__", encode_payload(payload))
     dest.write_text(html, encoding="utf-8")
     apply_factor_mine_page_patches(dest)
-    try:
-        from src.record_certificate import stamp_dashboard
-        stamp_dashboard(dest, "factor_mine")
-    except Exception as exc:
-        print(f"[factor-mine] record certificate: {exc}", flush=True)
     return dest
 
 

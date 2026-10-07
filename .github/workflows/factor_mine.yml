@@ -262,6 +262,8 @@ jobs:
           if bad:
               raise SystemExit("oversize publish path:\n" + "\n".join(bad))
           PY
+      - name: Past buy/sell certificate
+        run: python -m src.record_certificate --stamp --board factor_mine
       - name: Publish scoreboard to main
         run: |
           bash scripts/safe_git_push.sh \

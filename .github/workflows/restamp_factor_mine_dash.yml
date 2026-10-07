@@ -51,6 +51,7 @@ jobs:
           grep -c 'id="ovCalBox"' dashboard/factor-mine/index.html
           grep -c "ovAlignSeries(sp.equity" dashboard/factor-mine/index.html
           grep -c "function ovChartDates" dashboard/factor-mine/index.html
+          python -m src.record_certificate --stamp --board factor_mine
       - name: Publish restamped dash
         run: |
           bash scripts/safe_git_push.sh \
