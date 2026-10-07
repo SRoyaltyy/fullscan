@@ -480,7 +480,7 @@ jobs:
           python -m src.run_preopen_all "${ARGS[@]}"
 
       - name: Show QC
-        if: always() && env.skip != 'yes' && env.skip_python != 'yes'
+        if: "!cancelled() && env.skip != 'yes' && env.skip_python != 'yes'"
         run: |
           D="${{ github.event.inputs.run_date }}"
           D="${D:-$(TZ=America/New_York date +%F)}"
@@ -488,7 +488,7 @@ jobs:
           cat "01_daily/${D}_preopen_status.md" 2>/dev/null || true
 
       - name: Commit predictive artifacts
-        if: always() && env.skip != 'yes'
+        if: "!cancelled() && env.skip != 'yes'"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -513,7 +513,7 @@ jobs:
             "${PATHS[@]}" || echo "[preopen] leftover sweep failed — lands already on main"
 
       - name: Commit dashboard HTML (best-effort; never fail the packet)
-        if: always() && env.skip != 'yes' && env.skip_python != 'yes'
+        if: "!cancelled() && env.skip != 'yes' && env.skip_python != 'yes'"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -525,7 +525,7 @@ jobs:
             dashboard/ || echo "[preopen] dashboard push skipped (packet already on main)"
 
       - name: Upload dashboard artifact
-        if: always() && env.skip != 'yes'
+        if: "!cancelled() && env.skip != 'yes'"
         uses: actions/upload-artifact@v4
         with:
           name: dashboard
@@ -533,7 +533,7 @@ jobs:
           if-no-files-found: warn
 
       - name: Publish buy/sell dashboard to GitHub Pages
-        if: always() && env.skip != 'yes'
+        if: "!cancelled() && env.skip != 'yes'"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -541,7 +541,7 @@ jobs:
           bash scripts/publish_dashboard.sh
 
       - name: Refresh GitHub Pages workflow (backup)
-        if: always() && env.skip != 'yes'
+        if: "!cancelled() && env.skip != 'yes'"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run deploy-dashboard.yml --ref main || true
