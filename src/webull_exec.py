@@ -80,6 +80,18 @@ _HISTORY_MAX_SECONDS = 24 * 60 * 60
 _HISTORY_PAGE_CAP = 20
 # get_order_history accepts page_size 10..100. 200 is OPENAPI_PARAM_ERR.
 _HISTORY_PAGE_SIZE = 100
+# Deprecated Account.get_account_position pages (page_size default 10,
+# max 100, last_instrument_id). AccountV2.get_account_position, the call
+# snapshot() makes, takes only account_id and does not page.
+_POSITION_PAGE_CAP = 20
+_POSITION_PAGE_SIZE = 100
+_HELD_QTY_KEYS = ("quantity", "position", "qty", "shares")
+_AVAILABLE_QTY_KEYS = ("available_quantity", "availableQuantity")
+_RAW_POSITION_KEYS = (
+    "symbol", "ticker", "ticker_id",
+    "quantity", "qty", "position", "shares",
+    "available_quantity", "availableQuantity",
+)
 _FILL_PRICE_KEYS = (
     "avg_filled_price", "average_filled_price", "avgFilledPrice",
     "filled_avg_price", "avg_fill_px", "avg_price",
@@ -408,6 +420,39 @@ def _num(row: dict, *keys: str, default: float = 0.0) -> float:
     return default
 
 
+def _present_num(row: dict, keys) -> float | None:
+    """First present numeric field. Missing is None, so 0 stays 0."""
+    if not isinstance(row, dict):
+        return None
+    for key in keys:
+        if key not in row:
+            continue
+        raw = row.get(key)
+        if raw is None or raw == "" or isinstance(raw, (dict, list)):
+            continue
+        try:
+            return float(raw)
+        except (TypeError, ValueError):
+            continue
+    return None
+
+
+def _compact_position_fields(*rows: dict) -> dict:
+    """Symbol and quantity fields only. No account ids, no other columns."""
+    out = {}
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        for key in _RAW_POSITION_KEYS:
+            if key not in row:
+                continue
+            value = row.get(key)
+            if value is None or value == "" or isinstance(value, (dict, list)):
+                continue
+            out[key] = value
+    return out
+
+
 def parse_account_id(payload, preferred: str = "") -> str:
     want = (preferred or "").strip()
     rows = _as_list(payload)
@@ -461,25 +506,143 @@ def parse_balance(payload) -> tuple[float, float]:
 
 
 def parse_positions(payload) -> dict:
+    """Held lots keyed by symbol.
+
+    ``quantity`` / ``position`` / ``qty`` / ``shares`` is the lot size.
+    ``available_quantity`` is sellable shares and stays a separate field.
+    A lot with quantity > 0 and available 0 is still held: unsettled or
+    reserved shares used to disappear because available was read first.
+    """
     out = {}
     for row in _as_list(payload):
         if not isinstance(row, dict):
             continue
         inner = row.get("position") if isinstance(row.get("position"), dict) else row
         t = str(inner.get("symbol") or inner.get("ticker_id")
-                or inner.get("ticker") or "").upper().strip()
+                or inner.get("ticker") or row.get("symbol")
+                or row.get("ticker_id") or row.get("ticker") or "").upper().strip()
         if "." in t and t.split(".", 1)[0] in ("US", "NYSE", "NASDAQ"):
             t = t.split(".", 1)[-1]
-        sh = int(_num(inner, "available_quantity", "quantity", "qty",
-                      "position", "shares"))
-        if not t or sh < 1:
+        held = _present_num(inner, _HELD_QTY_KEYS)
+        available = _present_num(inner, _AVAILABLE_QTY_KEYS)
+        if held is None:
+            held = available
+        if not t or held is None or int(held) < 1:
             continue
+        sh = int(held)
         px = _num(inner, "cost_price", "average_price", "avg_price")
         last = _num(inner, "last_price", "market_price", "current_price",
                     default=px)
         mv = _num(inner, "market_value", "market_val", default=sh * last)
-        out[t] = {"shares": sh, "cost_px": px, "last_px": last, "mv": mv}
+        avail_out = None if available is None else int(available)
+        out[t] = {
+            "shares": sh,
+            "quantity": sh,
+            "available_quantity": avail_out,
+            "cost_px": px,
+            "last_px": last,
+            "mv": mv,
+            "raw": _compact_position_fields(row, inner),
+        }
     return out
+
+
+def _flag_or_none(value):
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, (int, float)):
+        return value != 0
+    text = str(value).strip().lower()
+    if text in ("1", "true", "yes"):
+        return True
+    if text in ("0", "false", "no"):
+        return False
+    return None
+
+
+def _position_has_next(payload):
+    """True, False, or None when this page does not say."""
+    if not isinstance(payload, dict):
+        return None
+    boxes = [payload]
+    data = payload.get("data")
+    if isinstance(data, dict):
+        boxes.append(data)
+    for box in boxes:
+        for key in ("has_next", "hasNext"):
+            if key not in box or box.get(key) in (None, ""):
+                continue
+            flag = _flag_or_none(box.get(key))
+            if flag is not None:
+                return flag
+    return None
+
+
+def _position_cursor(payload) -> str:
+    if isinstance(payload, dict):
+        boxes = [payload]
+        data = payload.get("data")
+        if isinstance(data, dict):
+            boxes.append(data)
+        for box in boxes:
+            for key in ("last_instrument_id", "lastInstrumentId"):
+                value = box.get(key)
+                if value not in (None, ""):
+                    return str(value)
+    rows = [row for row in _as_list(payload) if isinstance(row, dict)]
+    if not rows:
+        return ""
+    last = rows[-1]
+    for key in ("instrument_id", "instrumentId"):
+        value = last.get(key)
+        if value not in (None, ""):
+            return str(value)
+    return ""
+
+
+def _merge_position_pages(pages: list):
+    if len(pages) == 1:
+        return pages[0]
+    rows = []
+    for page in pages:
+        rows.extend(row for row in _as_list(page) if isinstance(row, dict))
+    return {"positions": rows}
+
+
+def _read_position_pages(api, fn, account_id: str):
+    """Read get_account_position, following pages when that method pages.
+
+    AccountV2's method takes only account_id, so this is one call.
+    The deprecated Account method takes page_size and last_instrument_id;
+    those are followed while has_next is true, up to the page cap.
+    """
+    names = _param_names(fn)
+    can_page = "page_size" in names or "last_instrument_id" in names
+    pages = []
+    cursor = ""
+    for _page in range(_POSITION_PAGE_CAP):
+        if can_page:
+            kwargs = {}
+            if "page_size" in names:
+                kwargs["page_size"] = _POSITION_PAGE_SIZE
+            if cursor and "last_instrument_id" in names:
+                kwargs["last_instrument_id"] = cursor
+            body = api._json(fn(account_id, **kwargs), "positions")
+        else:
+            body = api._json(fn(account_id), "positions")
+        pages.append(body)
+        if _position_has_next(body) is not True:
+            break
+        nxt = _position_cursor(body)
+        if not nxt or nxt == cursor or "last_instrument_id" not in names:
+            raise RuntimeError(
+                "position list has another page but "
+                "get_account_position cannot request it")
+        cursor = nxt
+    else:
+        raise RuntimeError(
+            "position pagination exceeded " + str(_POSITION_PAGE_CAP))
+    return _merge_position_pages(pages)
 
 
 def _hot4_from_payload(payload) -> dict:
@@ -1388,9 +1551,8 @@ class PaperAPI:
             bal = self._json(
                 self.trade.account_v2.get_account_balance(self.account_id),
                 "balance")
-            pos = self._json(
-                self.trade.account_v2.get_account_position(self.account_id),
-                "positions")
+            pos = _read_position_pages(
+                self, self.trade.account_v2.get_account_position, self.account_id)
         except Exception as e:  # noqa: BLE001
             return BrokerSnap(env=self.env, cash=0, positions={},
                               connected=False, error=str(e)[:240])

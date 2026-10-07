@@ -86,8 +86,184 @@ def test_parse_account_and_book() -> None:
         {"symbol": "SKIP", "quantity": "0"},
     ]})
     assert pos["SOFI"]["shares"] == 10
+    assert pos["SOFI"]["quantity"] == 10
+    assert pos["SOFI"]["available_quantity"] is None
     assert "SKIP" not in pos
     assert parse_order_id({"data": [{"order_id": "abc"}]}) == "abc"
+
+
+def test_parse_positions_keeps_held_quantity_when_available_is_zero() -> None:
+    """SDK-shaped rows. available_quantity 0 must not drop a positive quantity."""
+    pos = parse_positions({
+        "has_next": False,
+        "positions": [
+            {
+                "instrument_id": "913000001",
+                "symbol": "QSI",
+                "instrument_type": "EQUITY",
+                "currency": "USD",
+                "quantity": "2482",
+                "available_quantity": "0",
+                "cost_price": "1.28",
+                "last_price": "1.30",
+                "market_value": "3226.60",
+                "account_id": "SECRET-ACCOUNT",
+            },
+            {
+                "symbol": "DNA",
+                "quantity": "214",
+                "available_quantity": "214",
+                "cost_price": "14.50",
+                "last_price": "14.50",
+                "market_value": "3103.00",
+            },
+            {"symbol": "FLAT", "quantity": "0", "available_quantity": "0"},
+        ],
+    })
+    assert pos["QSI"]["shares"] == 2482
+    assert pos["QSI"]["quantity"] == 2482
+    assert pos["QSI"]["available_quantity"] == 0
+    assert pos["QSI"]["cost_px"] == 1.28
+    assert pos["QSI"]["raw"] == {
+        "symbol": "QSI",
+        "quantity": "2482",
+        "available_quantity": "0",
+    }
+    assert "account_id" not in pos["QSI"]["raw"]
+    assert "instrument_id" not in pos["QSI"]["raw"]
+    assert pos["DNA"]["shares"] == 214
+    assert pos["DNA"]["available_quantity"] == 214
+    assert "FLAT" not in pos
+
+
+def _position_api(get_account_position):
+    from types import SimpleNamespace
+    from src import webull_exec as we
+
+    api = we.PaperAPI()
+    api.account_id = "paper-test"
+    api.trade = SimpleNamespace(
+        account_v2=SimpleNamespace(
+            get_account_list=lambda: {
+                "data": [{"account_id": "paper-test", "account_type": "PAPER"}],
+            },
+            get_account_balance=lambda account_id: {
+                "available_cash": "1000",
+                "buying_power": "1000",
+            },
+            get_account_position=get_account_position,
+        ),
+    )
+    return api
+
+
+def test_snapshot_reads_one_page_when_the_method_does_not_page() -> None:
+    """AccountV2.get_account_position(account_id) has no page cursor."""
+    calls = []
+
+    def get_account_position(account_id):
+        calls.append(account_id)
+        return {
+            "positions": [{
+                "symbol": "QSI",
+                "quantity": "2482",
+                "available_quantity": "0",
+                "cost_price": "1.28",
+            }],
+        }
+
+    snap = _position_api(get_account_position).snapshot()
+    assert snap.connected is True
+    assert calls == ["paper-test"]
+    assert snap.positions["QSI"]["shares"] == 2482
+    assert snap.positions["QSI"]["available_quantity"] == 0
+
+
+def test_snapshot_follows_position_pages() -> None:
+    pages = {
+        None: {
+            "has_next": True,
+            "last_instrument_id": "i-dna",
+            "positions": [{
+                "symbol": "DNA",
+                "instrument_id": "i-dna",
+                "quantity": "214",
+                "available_quantity": "214",
+                "cost_price": "14.50",
+            }],
+        },
+        "i-dna": {
+            "has_next": False,
+            "positions": [{
+                "symbol": "QSI",
+                "instrument_id": "i-qsi",
+                "quantity": "2482",
+                "available_quantity": "0",
+                "cost_price": "1.28",
+                "account_id": "SECRET-ACCOUNT",
+            }],
+        },
+    }
+    seen = []
+
+    def get_account_position(account_id, page_size=10, last_instrument_id=None):
+        seen.append((account_id, page_size, last_instrument_id))
+        return pages[last_instrument_id]
+
+    snap = _position_api(get_account_position).snapshot()
+    assert snap.connected is True
+    assert seen == [
+        ("paper-test", 100, None),
+        ("paper-test", 100, "i-dna"),
+    ]
+    assert snap.positions["DNA"]["shares"] == 214
+    assert snap.positions["QSI"]["shares"] == 2482
+    assert snap.positions["QSI"]["available_quantity"] == 0
+    assert "SECRET-ACCOUNT" not in str(snap.positions)
+
+
+def test_position_pagination_stops_at_the_cap() -> None:
+    from src import webull_exec as we
+
+    def get_account_position(account_id, page_size=10, last_instrument_id=None):
+        n = 0 if last_instrument_id is None else int(last_instrument_id)
+        return {
+            "has_next": True,
+            "last_instrument_id": str(n + 1),
+            "positions": [{
+                "symbol": "S" + str(n),
+                "quantity": "1",
+                "instrument_id": str(n),
+            }],
+        }
+
+    snap = _position_api(get_account_position).snapshot()
+    assert snap.connected is False
+    assert "position pagination exceeded " + str(we._POSITION_PAGE_CAP) in (
+        snap.error or "")
+
+
+def test_unavailable_lot_is_still_held_for_a_sealed_sell() -> None:
+    """paper_open release() reads shares from snapshot() -> parse_positions."""
+    from src import paper_drift
+
+    positions = parse_positions({"positions": [{
+        "symbol": "QSI",
+        "quantity": "2482",
+        "available_quantity": "0",
+        "cost_price": "1.28",
+    }]})
+    sendable, skipped, foreign, warning = paper_drift.partition_tickets(
+        [{"ticker": "QSI", "side": "SELL", "shares": 2482, "date": "2026-10-07"}],
+        positions,
+        "2026-10-07",
+        positions_known=True,
+    )
+    assert foreign == []
+    assert skipped == []
+    assert warning is None
+    assert sendable[0]["ticker"] == "QSI"
+    assert positions["QSI"]["shares"] == 2482
 
 
 def test_dry_run_does_not_place() -> None:
@@ -1176,6 +1352,11 @@ def main() -> None:
     test_session_query_keeps_open_and_filled_for_that_day()
     test_broker_guard_present_partial_and_query_failed()
     test_parse_account_and_book()
+    test_parse_positions_keeps_held_quantity_when_available_is_zero()
+    test_snapshot_reads_one_page_when_the_method_does_not_page()
+    test_snapshot_follows_position_pages()
+    test_position_pagination_stops_at_the_cap()
+    test_unavailable_lot_is_still_held_for_a_sealed_sell()
     test_dry_run_does_not_place()
     test_submit_uses_paper_place()
     test_env_strips_quoted_secrets()
@@ -1197,7 +1378,7 @@ def main() -> None:
     test_place_batch_keeps_haircut_plan_when_preopen_cash_is_unchanged()
     test_rejected_leg_does_not_reserve_cash()
     test_run_refuses_submit_after_the_open()
-    print("test_webull_exec: 28 ok")
+    print("test_webull_exec: 33 ok")
 
 
 if __name__ == "__main__":

@@ -301,24 +301,59 @@ def session_dates(row: dict) -> list[str]:
     return found
 
 
+# Drift-log raw rows keep the symbol and the quantity fields. Account ids
+# and every other column stay off the line.
+_RAW_POSITION_KEYS = (
+    "symbol", "ticker", "ticker_id",
+    "quantity", "qty", "position", "shares",
+    "available_quantity", "availableQuantity",
+)
+
+
+def _public_position_raw(row: dict) -> dict:
+    out = {}
+    if not isinstance(row, dict):
+        return out
+    for key in _RAW_POSITION_KEYS:
+        if key not in row:
+            continue
+        value = row.get(key)
+        if value is None or value == "" or isinstance(value, (dict, list)):
+            continue
+        out[key] = value
+    return out
+
+
 def position_rows(snap) -> list[dict]:
-    """Current long lots as ticker, qty, avg cost. Shorts and zeros drop."""
+    """Current long lots. Quantity is shares held, not shares free to sell.
+
+    ``available_quantity`` is recorded beside it. A compact ``raw`` copy
+    keeps only the symbol and quantity fields from the broker row.
+    """
     raw = getattr(snap, "positions", None) or {}
     rows = []
     for ticker, lot in raw.items():
         name = str(ticker).upper().strip()
         if isinstance(lot, dict):
-            qty = _opt_int(lot, "shares", "qty", "quantity")
+            qty = _opt_int(lot, "quantity", "position", "qty", "shares")
             cost = _opt_float(lot, "cost_px", "avg_cost", "average_price", "avg_price")
+            available = _opt_int(lot, "available_quantity", "availableQuantity")
+            supplied = lot.get("raw") if isinstance(lot.get("raw"), dict) else lot
+            compact = _public_position_raw(supplied)
         else:
             qty = _opt_int({"qty": lot}, "qty")
             cost = None
+            available = None
+            compact = _public_position_raw({"qty": lot})
         if not name or qty is None or qty < 1:
             continue
         rows.append({
             "ticker": name,
             "qty": qty,
+            "quantity": qty,
+            "available_quantity": available,
             "avg_cost": _money(cost),
+            "raw": compact,
         })
     rows.sort(key=lambda row: row["ticker"])
     return rows

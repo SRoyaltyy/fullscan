@@ -45,9 +45,13 @@ def test_notify_skips_when_landed_ticket_has_the_same_fingerprint(tmp_path):
         'decision_readiness': {'fingerprint': 'abc', 'ready': True},
     }))
     proof = {'date': date, 'ready': True, 'fingerprint': 'abc', 'inputs': {}, 'blockers': []}
+    # notify_changed uses the civil clock, and only a path for that day counts.
+    frozen = dr.datetime(2026, 10, 6, 16, 0, tzinfo=dr.ET)
     with patch.object(dr, 'ROOT', tmp_path), \
          patch.object(dr, 'evaluate', return_value=proof), \
-         patch.object(dr, 'dispatch', return_value=True) as dispatch:
+         patch.object(dr, 'dispatch', return_value=True) as dispatch, \
+         patch('src.decision_ready.datetime') as clock:
+        clock.now.return_value = frozen
         assert dr.inputs_match_landed_ticket(date) is True
         assert dr.notify_changed([f'01_daily/news/{date}_actions.json']) is False
         assert dispatch.call_count == 0
