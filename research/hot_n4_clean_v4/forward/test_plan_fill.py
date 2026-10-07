@@ -274,6 +274,23 @@ def _prices() -> None:
             "kind": "fill",
             "sells": [],
         }]
+        # Open and low moved on a sealed bar: pending, logged, not stored.
+        partial = refresh(
+            tickers=["AAA"],
+            session=SESSION,
+            held=set(),
+            pinned_stored=_pinned(),
+            records=used,
+            fetch=_fetch([revised]),
+            folder=folder,
+            now=now,
+        )
+        if [leg["field"] for leg in partial.get("pending_legs") or []] != ["open", "low"]:
+            raise SystemExit(f"partial sealed revision legs {partial}")
+        if prices_path(folder).read_bytes() != stored:
+            raise SystemExit("partial sealed revision overwrote the bar")
+        # Every OHLC field moved on a sealed bar: a new price basis refuses.
+        whole = _bar("AAA", SESSION, 12.0, 12.5)
         try:
             refresh(
                 tickers=["AAA"],
@@ -281,14 +298,14 @@ def _prices() -> None:
                 held=set(),
                 pinned_stored=_pinned(),
                 records=used,
-                fetch=_fetch([revised]),
+                fetch=_fetch([whole]),
                 folder=folder,
                 now=now,
             )
         except SealedBarRevision:
             pass
         else:
-            raise SystemExit("sealed-bar revision did not fail")
+            raise SystemExit("whole-bar sealed restatement did not fail")
         if prices_path(folder).read_bytes() != stored:
             raise SystemExit("sealed revision overwrote the bar")
         jump = _bar("AAA", "2026-09-29", 40.0, 40.0)
@@ -448,10 +465,11 @@ def _ohlc(ticker: str, op: float, high: float, low: float, close: float, volume:
 
 
 def _sealed_tolerance() -> None:
-    """Volume and one-cent reprints stay logged. One larger field is pending.
+    """Volume and one-cent reprints stay logged. Larger fields are pending.
 
-    The stored bar is never replaced. Two OHLC fields that each move by
-    more than one cent still refuse the session.
+    The stored bar is never replaced. One field or several, on one bar or
+    several, is pending. A sealed bar whose open, high, low, and close all
+    moved by more than one cent refuses the session.
     """
     now = datetime(2026, 9, 28, 21, 30, tzinfo=timezone.utc)
     fresh = _bar("FRESH", SESSION, 8.0, 8.1)
@@ -531,6 +549,64 @@ def _sealed_tolerance() -> None:
         raise SystemExit(f"pending leg {got}")
     if not any(row["ticker"] == "FRESH" for row in pending["rows"]):
         raise SystemExit("pending field did not append the new bar")
+
+    # Two fields on one sealed bar (open and high), like the 2026-10-07
+    # refusal. Same rule as one field: pending, stored bar kept.
+    two_fields = run(
+        [_ohlc("KKK", 98.150002, 98.150002, 95.0, 96.0)],
+        [_ohlc("KKK", 98.949997, 98.949997, 95.0, 96.0)],
+        _sealed(("KKK",)),
+    )
+    if two_fields["raised"]:
+        raise SystemExit(f"two-field sealed revision refused {two_fields['raised']}")
+    if two_fields["rows"][0] != two_fields["kept"][0]:
+        raise SystemExit("two-field revision changed the stored bar")
+    legs = (two_fields["body"] or {}).get("pending_legs") or []
+    if [(leg["ticker"], leg["date"], leg["field"]) for leg in legs] != [
+        ("KKK", SESSION, "open"), ("KKK", SESSION, "high"),
+    ]:
+        raise SystemExit(f"two-field pending legs {legs}")
+    if (two_fields["body"] or {}).get("pending") != {
+        "field": "open", "new": 98.949997, "old": 98.150002, "ticker": "KKK",
+    }:
+        raise SystemExit(f"two-field pending shape {two_fields['body']}")
+    if not any(row["ticker"] == "FRESH" for row in two_fields["rows"]):
+        raise SystemExit("two-field revision did not append the new bar")
+
+    # One field on each of two sealed bars. Also pending, not a refusal.
+    two_bars = run(
+        [_ohlc("PPP", 2.99, 3.1, 2.9, 3.0), _ohlc("KKK", 98.15, 99.0, 95.0, 96.0)],
+        [_ohlc("PPP", 3.02, 3.1, 2.9, 3.0), _ohlc("KKK", 98.95, 99.0, 95.0, 96.0)],
+        _sealed(("PPP", "KKK")),
+    )
+    if two_bars["raised"]:
+        raise SystemExit(f"two-bar sealed revision refused {two_bars['raised']}")
+    if sorted(map(str, two_bars["rows"][:2])) != sorted(map(str, two_bars["kept"])):
+        raise SystemExit("two-bar revision changed a stored bar")
+    if len((two_bars["body"] or {}).get("pending_legs") or []) != 2:
+        raise SystemExit(f"two-bar pending legs {two_bars['body']}")
+
+    # Every OHLC field moved on a sealed bar: refuse, append nothing.
+    whole = run(
+        [_ohlc("WWW", 10.0, 10.5, 9.5, 10.2)],
+        [_ohlc("WWW", 5.0, 5.25, 4.75, 5.1)],
+        _sealed(("WWW",)),
+    )
+    if not whole["raised"]:
+        raise SystemExit("whole-bar sealed restatement did not refuse")
+    if whole["rows"] != whole["kept"]:
+        raise SystemExit("whole-bar restatement changed or appended bars")
+
+    # The same whole-bar move on a bar no sealed record used is only logged.
+    unsealed = run(
+        [_ohlc("WWW", 10.0, 10.5, 9.5, 10.2)],
+        [_ohlc("WWW", 5.0, 5.25, 4.75, 5.1)],
+        [],
+    )
+    if unsealed["raised"] or (unsealed["body"] or {}).get("pending"):
+        raise SystemExit(f"unsealed restatement refused {unsealed}")
+    if unsealed["rows"][0] != unsealed["kept"][0]:
+        raise SystemExit("unsealed restatement overwrote the stored bar")
 
 
 def _float32_overlay() -> None:

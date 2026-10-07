@@ -6,9 +6,17 @@ sessions after 2026-09-25 go to ``prices.jsonl``. Each fetch is one line in
 with a bar already in ``prices.jsonl`` is written to ``price_revisions.jsonl``
 and is not copied over the stored bar. A sealed bar whose only changes are
 volume, or OHLC fields that moved by at most one cent, does not stop the
-run. One sealed OHLC field that moved by more than one cent stays pending:
-the stored bar is left as it is, the ledger names that leg, and new bars
-still append. More than one such field stops the run and appends nothing.
+run. A sealed OHLC field that moved by more than one cent stays pending:
+the stored bar is left as it is, the ledger names every such leg, and new
+bars still append. Fills, marks, and plans keep reading the stored bar, so
+a pending leg cannot change a sealed result. One field or several, on one
+bar or several, is the same rule.
+
+A sealed bar whose open, high, low, and close all moved by more than one
+cent is a whole-bar restatement: Yahoo may have put the series on a new
+price basis (a late split or a re-based print). A new bar on that basis
+next to the stored bars would change what a sealed record's position is
+worth, so that run stops and appends nothing.
 
 Yahoo is asked for split-adjusted daily bars with ``auto_adjust=False`` and
 ``actions=True``, the same call ``src/price_store.py`` locks: dividends are
@@ -116,6 +124,9 @@ def _over_cent(old: float, new: float) -> bool:
     return round(abs(float(new) - float(old)), 6) > 0.01
 
 
+OHLC_FIELDS = ("open", "high", "low", "close")
+
+
 def _material_ohlc(old: dict, new: dict) -> list[dict]:
     """Sealed OHLC fields on one bar that moved by more than one cent."""
     legs = []
@@ -124,12 +135,18 @@ def _material_ohlc(old: dict, new: dict) -> list[dict]:
         new_v = float(new[field])
         if _over_cent(old_v, new_v):
             legs.append({
+                "date": str(new["date"])[:10],
                 "field": field,
                 "new": new_v,
                 "old": old_v,
                 "ticker": str(new["ticker"]),
             })
     return legs
+
+
+def _whole_bar_restated(legs: list[dict]) -> bool:
+    """True when every OHLC field on one sealed bar moved by more than one cent."""
+    return {leg["field"] for leg in legs} >= set(OHLC_FIELDS)
 
 
 def load_price_rows(folder: Path | None = None) -> list[dict]:
@@ -442,11 +459,11 @@ def refresh(
     Returns the ledger body. Raises Halt or SealedBarRevision after the
     ledger line is written. A missing name stays in ``missing`` and does
     not stop the others. A sealed volume change, or a sealed OHLC move of
-    at most one cent, is logged and does not overwrite the stored bar. One
+    at most one cent, is logged and does not overwrite the stored bar. Any
     sealed OHLC field that moved by more than one cent stays pending: the
-    stored bar is left as it is, the ledger names that leg, and new bars
-    still append. More than one such field raises SealedBarRevision and
-    appends nothing.
+    stored bar is left as it is, the ledger names every such leg, and new
+    bars still append. A sealed bar whose open, high, low, and close all
+    moved by more than one cent raises SealedBarRevision and appends nothing.
     """
     now = now or datetime.now(timezone.utc)
     folder.mkdir(parents=True, exist_ok=True)
@@ -516,6 +533,7 @@ def refresh(
     used = sealed_bar_keys(records)
     revision_lines = []
     material: list[dict] = []
+    restated: list[dict] = []
     for rev in revisions:
         new = rev["new"]
         key = (new["ticker"], new["date"])
@@ -529,26 +547,36 @@ def refresh(
             "ticker": new["ticker"],
         }))
         if touched:
-            material.extend(_material_ohlc(rev["old"], new))
+            legs = _material_ohlc(rev["old"], new)
+            material.extend(legs)
+            if _whole_bar_restated(legs):
+                restated.append({"date": new["date"], "ticker": new["ticker"]})
     if revision_lines:
         _append_lines(revisions_path(folder), revision_lines)
-    # More than one sealed OHLC field moved by more than one cent. That is
-    # not a single pending leg, so the session appends nothing.
-    if len(material) > 1:
+    # Every OHLC field on a sealed bar moved by more than one cent. That
+    # can be a new price basis, so the session appends nothing.
+    if restated:
         body = {
             "appended": [],
             "at": now.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "excluded_unexplained_legs": [],
             "missing": fetched.get("missing") or [],
             "note": note,
+            "restated": restated,
             "revisions": len(revisions),
             "session": session,
             "sha256": digest,
-            "why": "Yahoo revised a bar a sealed record used",
+            "why": "Yahoo restated every OHLC field of a bar a sealed record used",
         }
         _write_ledger(folder, body)
         raise SealedBarRevision(body["why"])
-    pending = material[0] if material else None
+    material.sort(key=lambda leg: (leg["ticker"], leg["date"], OHLC_FIELDS.index(leg["field"])))
+    # ``pending`` keeps its earlier shape (first leg, no date). Every leg,
+    # with its bar date, is in ``pending_legs``.
+    pending = (
+        {key: value for key, value in material[0].items() if key != "date"}
+        if material else None
+    )
     view = _stored_view(pinned_stored, stored_rows)
     excluded = []
     halted = []
@@ -590,10 +618,11 @@ def refresh(
             why = "Yahoo returned no bars; appended nothing"
         else:
             why = f"no new session after {PIN_END}; appended nothing"
-    if pending:
-        named = (
-            f"pending {pending['ticker']} {pending['field']} "
-            f"old {pending['old']} new {pending['new']}"
+    if material:
+        named = "; ".join(
+            f"pending {leg['ticker']} {leg['date']} {leg['field']} "
+            f"old {leg['old']} new {leg['new']}"
+            for leg in material
         )
         why = f"{named}; {why}" if why else named
     body = {
@@ -609,6 +638,7 @@ def refresh(
     }
     if pending:
         body["pending"] = pending
+        body["pending_legs"] = material
     _write_ledger(folder, body)
     return body
 
