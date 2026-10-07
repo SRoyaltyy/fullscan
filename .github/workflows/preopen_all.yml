@@ -288,7 +288,7 @@ jobs:
     needs: [gate, scrape]
     if: ${{ needs.gate.outputs.go == 'yes' && always() }}
     runs-on: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
-    timeout-minutes: 240
+    timeout-minutes: 75
     env:
       OPENCLAW_TIMEOUT: "10800"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
@@ -420,12 +420,18 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENCLAW_TIMEOUT: "10800"
+          OPENCLAW_TIMEOUT: "600"
+          # Fail fast (2026-10-07 hang): cap each OpenClaw read and stop
+          # calling the gateway after 2 timeouts across all subprocesses.
+          OPENCLAW_READ_CAP_S: "240"
+          OPENCLAW_BREAKER_N: "2"
+          OPENCLAW_BREAKER_FILE: ${{ runner.temp }}/openclaw_breaker_${{ github.run_id }}.txt
           GROK_ONLY: "0"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'auto' }}
           FINVIZ_SKIP_LIVE: "1"
           PREOPEN_LLM_TIMEOUT: "900"
-        timeout-minutes: 180
+        # was 180: 10-06/10-07 ECS hangs sat ~90 min here before cancel.
+        timeout-minutes: 50
         run: |
           set -e
           export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
