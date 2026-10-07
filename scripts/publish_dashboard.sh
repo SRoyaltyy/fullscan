@@ -61,6 +61,17 @@ for sub in $SUBS; do
     cp -a "$TMP/dashboard/${sub}/." "$TMP/${sub}/"
   fi
 done
+# The overlay above copies dashboard/factor-mine from main, which drops
+# the deploy-time patches (cash-start replay, ovcal, pre-open labels and
+# replay panel). Re-apply them to both published copies. Each patch is
+# idempotent and add-only.
+for page in "$TMP/dashboard/factor-mine/index.html" "$TMP/factor-mine/index.html"; do
+  if [ -f "$page" ]; then
+    python3 scripts/patch_fm_ovcal.py "$page" || true
+    python3 scripts/patch_fm_holdup.py "$page" || true
+    python3 scripts/patch_fm_preopen_labels.py "$page" dashboard/factor-mine/replay_preopen.json || true
+  fi
+done
 git -C "$TMP" init -q
 git -C "$TMP" checkout -q -b gh-pages
 git -C "$TMP" config user.name "Market-Bot-Automaton"
