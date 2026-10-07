@@ -239,7 +239,15 @@ def _sealed_records_match_main() -> None:
         json.loads(line) for line in MANIFEST.read_text(encoding="utf-8").splitlines() if line.strip()
     ]
     h1_locks = [row for row in locks if row.get("name") == "h1_webull_sim"]
-    if [row.get("date") for row in h1_locks] != ["2026-10-06"]:
+    # The manifest is append-only: later sessions add rows after 2026-10-06.
+    # The 2026-10-06 row stays first and 2026-10-05 is never backfilled.
+    lock_dates = [row.get("date") for row in h1_locks]
+    if (
+        not lock_dates
+        or lock_dates[0] != "2026-10-06"
+        or "2026-10-05" in lock_dates
+        or lock_dates != sorted(set(lock_dates))
+    ):
         raise SystemExit(f"h1_webull_sim lock dates changed {h1_locks}")
     if h1_locks[0].get("sha256") != LOCK_SHA:
         raise SystemExit("h1_webull_sim 2026-10-06 lock hash changed")

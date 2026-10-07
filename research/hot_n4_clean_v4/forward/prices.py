@@ -10,6 +10,15 @@ run. One sealed OHLC field that moved by more than one cent stays pending:
 the stored bar is left as it is, the ledger names that leg, and new bars
 still append. More than one such field stops the run and appends nothing.
 
+``price_revision_acks.jsonl`` beside the book log is append-only. One line
+names one sealed OHLC field revision by ticker, session, field, the stored
+value and the Yahoo value. A field whose revision matches an approved line
+exactly is not counted toward that stop. The revision is still written to
+``price_revisions.jsonl``, the stored bar is still not overwritten, and the
+ledger line lists it under ``acknowledged``. A line whose ``approved_by`` is
+empty or starts with ``PENDING`` is not honored. A different Yahoo value for
+the same field does not match and still counts. A malformed line refuses.
+
 Yahoo is asked for split-adjusted daily bars with ``auto_adjust=False`` and
 ``actions=True``, the same call ``src/price_store.py`` locks: dividends are
 not applied. A new >3x leg is classified with the locked split table and
@@ -59,6 +68,13 @@ FINAL_UTC = time(21, 15)
 PRICES_NAME = "prices.jsonl"
 LEDGER_NAME = "PRICE_LEDGER.jsonl"
 REVISIONS_NAME = "price_revisions.jsonl"
+ACKS_NAME = "price_revision_acks.jsonl"
+ACK_KIND = "price_revision_ack"
+ACK_FIELDS = ("open", "high", "low", "close")
+ACK_REQUIRED = (
+    "approved_by", "date", "field", "kind", "new", "old", "reason",
+    "sealed_record_sha256", "ticker",
+)
 
 
 class SealedBarRevision(RuntimeError):
@@ -79,6 +95,75 @@ def price_ledger_path(folder: Path | None = None) -> Path:
 
 def revisions_path(folder: Path | None = None) -> Path:
     return _price_folder(folder) / REVISIONS_NAME
+
+
+def acks_path(folder: Path | None = None) -> Path:
+    return _price_folder(folder) / ACKS_NAME
+
+
+def ack_is_approved(row: dict) -> bool:
+    """An ack counts only once a person is named. ``PENDING ...`` does not."""
+    who = str(row.get("approved_by") or "").strip()
+    return bool(who) and not who.upper().startswith("PENDING")
+
+
+def _ack_key(ticker: str, session: str, field: str, old: float, new: float) -> tuple:
+    return (
+        str(ticker).upper(),
+        str(session)[:10],
+        str(field),
+        round(float(old), 6),
+        round(float(new), 6),
+    )
+
+
+def load_acks(folder: Path | None = None) -> list[dict]:
+    """Every ack line, approved or not. A malformed file refuses."""
+    path = acks_path(folder)
+    if not path.is_file() or path.stat().st_size == 0:
+        return []
+    text = path.read_bytes()
+    if b"\r" in text or not text.endswith(b"\n"):
+        raise RuntimeError(f"{ACKS_NAME} is not complete lines")
+    rows = []
+    for line in text.splitlines():
+        if not line:
+            raise RuntimeError(f"blank line in {ACKS_NAME}")
+        row = json.loads(line)
+        missing = [key for key in ACK_REQUIRED if key not in row]
+        if missing:
+            raise RuntimeError(f"{ACKS_NAME} line is missing {', '.join(missing)}")
+        if row["kind"] != ACK_KIND:
+            raise RuntimeError(f"{ACKS_NAME} kind {row['kind']}")
+        if row["field"] not in ACK_FIELDS:
+            raise RuntimeError(f"{ACKS_NAME} field {row['field']}")
+        if str(row["date"])[:10] <= PIN_END:
+            raise RuntimeError(f"{ACKS_NAME} names a pinned date {row['date']}")
+        rows.append(row)
+    return rows
+
+
+def approved_ack_keys(acks: list[dict]) -> set[tuple]:
+    return {
+        _ack_key(row["ticker"], row["date"], row["field"], row["old"], row["new"])
+        for row in acks
+        if ack_is_approved(row)
+    }
+
+
+def split_acknowledged(
+    legs: list[dict], session: str, approved: set[tuple],
+) -> tuple[list[dict], list[dict]]:
+    """(still material, acknowledged). Only an exact match is acknowledged."""
+    material = []
+    acked = []
+    for leg in legs:
+        key = _ack_key(leg["ticker"], session, leg["field"], leg["old"], leg["new"])
+        if key in approved:
+            acked.append({**leg, "date": session})
+        else:
+            material.append(leg)
+    return material, acked
 
 
 def bar_is_final(session: str, now: datetime) -> bool:
@@ -514,8 +599,10 @@ def refresh(
         if not _same(old, row):
             revisions.append({"new": row, "old": old})
     used = sealed_bar_keys(records)
+    approved = approved_ack_keys(load_acks(folder))
     revision_lines = []
     material: list[dict] = []
+    acknowledged: list[dict] = []
     for rev in revisions:
         new = rev["new"]
         key = (new["ticker"], new["date"])
@@ -529,7 +616,11 @@ def refresh(
             "ticker": new["ticker"],
         }))
         if touched:
-            material.extend(_material_ohlc(rev["old"], new))
+            still, acked = split_acknowledged(
+                _material_ohlc(rev["old"], new), new["date"], approved,
+            )
+            material.extend(still)
+            acknowledged.extend(acked)
     if revision_lines:
         _append_lines(revisions_path(folder), revision_lines)
     # More than one sealed OHLC field moved by more than one cent. That is
@@ -546,6 +637,8 @@ def refresh(
             "sha256": digest,
             "why": "Yahoo revised a bar a sealed record used",
         }
+        if acknowledged:
+            body["acknowledged"] = acknowledged
         _write_ledger(folder, body)
         raise SealedBarRevision(body["why"])
     pending = material[0] if material else None
@@ -609,6 +702,8 @@ def refresh(
     }
     if pending:
         body["pending"] = pending
+    if acknowledged:
+        body["acknowledged"] = acknowledged
     _write_ledger(folder, body)
     return body
 
