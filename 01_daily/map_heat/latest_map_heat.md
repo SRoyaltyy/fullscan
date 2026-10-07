@@ -1,6 +1,6 @@
-# MAP HEAT — 2026-10-06
+# MAP HEAT — 2026-10-07
 
-Export `finviz_2026-10-05.csv` · 11616 names · generated 2026-10-06T04:22:36.554946-04:00
+Export `finviz_2026-10-06.csv` · 11616 names · generated 2026-10-07T04:22:15.456945-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -69,14 +69,6 @@ Export `finviz_2026-10-05.csv` · 11616 names · generated 2026-10-06T04:22:36.5
 **SIZE GATE on** — high-impact print and/or mega-cap earnings today.
 
 Econ (importance ≥ 2):
-- 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev 20K
-- 08:30 ET  Balance of Trade  actual —  cons -$102B  surprise —  prev -$88.6B
-- 08:30 ET  Exports  actual —  cons $314.6B  surprise —  prev $310.7B
-- 08:30 ET  Imports  actual —  cons $416.8B  surprise —  prev $399.3B
-- 09:05 ET  Fed Williams Speech  actual —  cons —  surprise —  prev —
-- 10:45 ET  Fed Bowman Speech  actual —  cons —  surprise —  prev —
-- 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev 1.019M
-- 19:00 ET  Fed Logan Speech  actual —  cons —  surprise —  prev —
 - 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev 7.3%
 - 10:30 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev 0.922M
 - 10:30 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev -1.684M
@@ -109,56 +101,64 @@ Econ (importance ≥ 2):
 - 12:00 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev —
 - 12:00 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev —
 - 08:30 ET  Export Prices MoM  actual —  cons —  surprise —  prev 0.6%
+- 08:30 ET  Import Prices MoM  actual —  cons —  surprise —  prev 0.7%
+- 09:15 ET  Industrial Production MoM  actual —  cons —  surprise —  prev 0%
+- 16:00 ET  Net Long-term TIC Flows  actual —  cons —  surprise —  prev -$27.9B
+- 10:00 ET  NAHB Housing Market Index  actual —  cons —  surprise —  prev 32
+- 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev —
+- 08:30 ET  Building Permits Prel  actual —  cons 1.36M  surprise —  prev —
+- 08:30 ET  Housing Starts  actual —  cons 1.3M  surprise —  prev 1.275M
+- 08:30 ET  Building Permits MoM Prel  actual —  cons —  surprise —  prev -2.1%
 
 Mega-cap earnings:
-- BMO **GOOG**  EPS est 2.8769  (Alphabet Inc)
 - BMO **GOOGL**  EPS est 2.8774  (Alphabet Inc)
-- BMO **TSM**  EPS est 4.4091  (Taiwan Semiconductor Manufacturing ADR)
-- AMC **TSLA**  EPS est 0.4528  (Tesla Inc)
-- BMO **JPM**  EPS est 5.9045  (JPMorgan Chase & Co)
-- BMO **ASML**  EPS est 12.0982  (ASML Holding NV)
-- BMO **JNJ**  EPS est 2.7174  (Johnson & Johnson)
+- BMO **GOOG**  EPS est 2.8769  (Alphabet Inc)
+- BMO **TSM**  EPS est 4.4196  (Taiwan Semiconductor Manufacturing ADR)
+- AMC **TSLA**  EPS est 0.4495  (Tesla Inc)
+- BMO **JPM**  EPS est 5.904  (JPMorgan Chase & Co)
+- BMO **ASML**  EPS est 12.0654  (ASML Holding NV)
+- BMO **JNJ**  EPS est 2.6633  (Johnson & Johnson)
 - AMC **LRCX**  EPS est 2.1779  (Lam Research Corp)
-- BMO **BAC**  EPS est 1.1085  (Bank Of America Corp)
-- BMO **UNH**  EPS est 4.1222  (Unitedhealth Group Inc)
-- BMO **PG**  EPS est 1.881  (Procter & Gamble Co)
+- BMO **BAC**  EPS est 1.104  (Bank Of America Corp)
+- BMO **PG**  EPS est 1.8832  (Procter & Gamble Co)
+- BMO **UNH**  EPS est 4.1224  (Unitedhealth Group Inc)
 - BMO **GE**  EPS est 1.9875  (GE Aerospace)
-- BMO **MS**  EPS est 2.9867  (Morgan Stanley)
+- BMO **MS**  EPS est 2.9528  (Morgan Stanley)
 - BMO **PM**  EPS est 2.2958  (Philip Morris International Inc)
-- AMC **NFLX**  EPS est 0.8204  (Netflix Inc)
+- AMC **NFLX**  EPS est 0.8209  (Netflix Inc)
 - AMC **TXN**  EPS est 2.416  (Texas Instruments Inc)
-- BMO **GS**  EPS est 13.7017  (Goldman Sachs Group Inc)
+- BMO **GS**  EPS est 13.2951  (Goldman Sachs Group Inc)
 - BMO **NVS**  EPS est 2.1721  (Novartis AG ADR)
-- BMO **TMO**  EPS est 6.411  (Thermo Fisher Scientific Inc)
 - BMO **RTX**  EPS est 1.7698  (RTX Corp)
-- BMO **WFC**  EPS est 1.8444  (Wells Fargo & Co)
-- AMC **SAP**  EPS est 2.0838  (Sap SE ADR)
-- BMO **C**  EPS est 2.6549  (Citigroup Inc)
+- BMO **WFC**  EPS est 1.8426  (Wells Fargo & Co)
+- BMO **TMO**  EPS est 6.4035  (Thermo Fisher Scientific Inc)
+- AMC **SAP**  EPS est 2.0818  (Sap SE ADR)
+- BMO **C**  EPS est 2.6499  (Citigroup Inc)
 - AMC **IBM**  EPS est 2.8606  (International Business Machines Corp)
-- BMO **BLK**  EPS est 14.1821  (Blackrock Inc)
-- BMO **ABT**  EPS est 1.4151  (Abbott Laboratories)
-- BMO **PEP**  EPS est 2.2954  (PepsiCo Inc)
-- BMO **SCHW**  EPS est 1.6678  (Charles Schwab Corp)
-- BMO **T**  EPS est 0.6015  (AT&T Inc)
-- BMO **UNP**  EPS est 3.4427  (Union Pacific Corp)
-- BMO **DHR**  EPS est 1.9127  (Danaher Corp)
-- AMC **ISRG**  EPS est 2.6428  (Intuitive Surgical Inc)
-- AMC **CB**  EPS est 6.4592  (Chubb Limited)
+- BMO **AXP**  EPS est 4.5949  (American Express Co)
+- BMO **BLK**  EPS est 14.3281  (Blackrock Inc)
+- BMO **PEP**  EPS est 2.2949  (PepsiCo Inc)
+- BMO **ABT**  EPS est 1.4199  (Abbott Laboratories)
+- BMO **SCHW**  EPS est 1.6644  (Charles Schwab Corp)
+- BMO **T**  EPS est 0.6016  (AT&T Inc)
+- BMO **UNP**  EPS est 3.4503  (Union Pacific Corp)
+- BMO **DHR**  EPS est 1.9129  (Danaher Corp)
+- AMC **ISRG**  EPS est 2.6458  (Intuitive Surgical Inc)
+- AMC **CB**  EPS est 6.5394  (Chubb Limited)
 - BMO **PLD**  EPS est 0.7767  (Prologis Inc)
-- BMO **PGR**  EPS est 4.236  (Progressive Corp)
+- BMO **PGR**  EPS est 4.2792  (Progressive Corp)
 - AMC **NEM**  EPS est 2.1567  (Newmont Corp)
-- BMO **VLO**  EPS est 19.6893  (Valero Energy Corp)
-- AMC **COF**  EPS est 5.5009  (Capital One Financial Corp)
+- BMO **VLO**  EPS est 19.816  (Valero Energy Corp)
+- AMC **COF**  EPS est 5.4641  (Capital One Financial Corp)
 - BMO **LMT**  EPS est 7.5578  (Lockheed Martin Corp)
-- BMO **SPOT**  EPS est 3.1761  (Spotify Technology SA)
 
 Options event-vol flags (NOT direction):
-- **GOOG** exp 2026-10-09 ATM IV 0.0039 implied move +0.0% put/call OI —
-- **GOOGL** exp 2026-10-07 ATM IV 0.0078 implied move +0.0% put/call OI —
-- **TSM** exp 2026-10-09 ATM IV 0.002 implied move +0.0% put/call OI —
-- **TSLA** exp 2026-10-07 ATM IV 0.0078 implied move +0.0% put/call OI —
-- **JPM** exp 2026-10-09 ATM IV 0.0005 implied move 0.0% put/call OI —
-- **ASML** exp 2026-10-09 ATM IV 0.0001 implied move 0.0% put/call OI —
+- **GOOGL** exp 2026-10-07 ATM IV 0.002 implied move +0.0% put/call OI —
+- **GOOG** exp 2026-10-09 ATM IV 0.002 implied move +0.0% put/call OI —
+- **TSM** exp 2026-10-09 ATM IV 0.001 implied move +0.0% put/call OI —
+- **TSLA** exp 2026-10-07 ATM IV 0.0039 implied move +0.0% put/call OI —
+- **JPM** exp 2026-10-09 ATM IV 0.0078 implied move +0.1% put/call OI —
+- **ASML** exp 2026-10-09 ATM IV 0.001 implied move +0.0% put/call OI —
 - **JNJ** exp 2026-10-09 ATM IV 0.002 implied move +0.0% put/call OI —
 - **LRCX** exp 2026-10-09 ATM IV 0.0039 implied move +0.0% put/call OI —
 
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 11 min **FISV** FISV Stock Rises Premarket After Posting Best Day In Nearly A Month: Burry Says Fiserv Is Cheap Enough to Hold Despite Buying It 'Poorly' (Stocktwits)
-- 17 min **NVDA** Stock market today: Dow, S&P 500, Nasdaq futures climb after record-breaking rally (Yahoo Finance)
-- 22 min **CTSH** Cognizant Selected by SITA to Deliver AI-Led Global Finance Transformation on the Cloud (PR Newswire)
-- 22 min **KD** Kyndryl and WPP Expand Strategic Partnership to Drive Enterprise Transformation, Marketing Growth and Joint Go-to-Market Innovation (PR Newswire)
-- 22 min **MAR** The Rise of Place: Marriott International Reveals Asia Pacific's Future of Food (PR Newswire)
-- 22 min **SNN** Smith+Nephew's revolutionary CARTIHEAL AGILI-C Cartilage Repair Implant launches in Europe; to be featured at ICRS Summit in Portugal (GlobeNewswire)
-- 22 min **SNN** Smith+Nephew lancia in Europa CARTIHEAL AGILI-C, l'innovativo impianto per la riparazione della cartilagine, che sara presentato all'ICRS Summit in Portogallo. (GlobeNewswire)
-- 22 min **VTSI** VirTra Wins Five-Year CBP Contract With Up to $14 Million in Potential Value (GlobeNewswire)
-- 22 min **SNN** Smith+Nephew lanza en Europa el innovador implante de reparacion de cartilago CARTIHEAL AGILI-C, que sera protagonista en el Congreso ICRS de Portugal (GlobeNewswire)
-- 22 min **BTGO** BitGo and HashKey Sign Multi-Pillar Strategic Partnership Spanning Staking, Trading, Custody and RWA Tokenization (Business Wire)
-- 22 min **TTGT** Informa TechTarget Announces Winners of the First-Ever Archer Awards for GTM Excellence In the Middle East and North Africa (MENA) (Business Wire)
-- 22 min **III** European Medtech Firms Adopt Continuous Lifecycle Model (Business Wire)
-- 45 min **BLK** TOKEN2049 Singapore Schedule Puts Institutional DeFi on the 2026 Agenda (Cryptonews)
-- 46 min **NEOG,LW,PENG,NVDA,STZ** Stock Market Today: Dow, S&P 500 set to rise after Nasdaq hits record high ahead of third-quarter earnings season (MarketWatch)
-- 46 min **NVDA** U.S. stocks poised to rise after Nasdaq hits new high (MarketWatch)
-- 48 min **SPCX,TSLA** Elon Musk's Trump Admin 'Return' Puts Tesla, SpaceX in Focus: Analyst Says TSLA Faces 'Key Test'  Prediction Market Weighs in (Benzinga Prediction Markets)
-- 53 min **SPCX,NVDA,META** Asian stocks mostly up after tech-led Wall St record (AFP)
-- 56 min **MU,AMD** AMD CEO Sees Very High Chip Demand, Urges AI Firms to Cooperate (Bloomberg)
-- 59 min **V** Nearly half of Asia Pacific consumers open to stablecoins, Visa finds (Electronic Payments)
-- 1 hour **LYV** Live Nation Entertainment Announces Launch of Private Senior Notes Offering (PR Newswire)
-- 1 hour **XMTR** Xometry Names Marc Teulieres as General Manager for Europe to Accelerate Regional Adoption (GlobeNewswire)
-- 1 hour **LOGI** New Logitech Ctrl Tomorrow Study Reveals Technologys Impact On Mood, Wellbeing, Performance and Potential (Business Wire)
-- 1 hour **DPZ** Berenberg starts bullish coverage on Dominos on Chick N Dip growth (Investing.com)
-- 1 hour **AJG** Arthur J. Gallagher & Co. Acquires Winter & Co Solicitors LLP (PR Newswire)
-- 1 hour **STX** STX Stock Inches Higher Overnight: Seagate Reportedly Makes Higher Bid For TDKs Multi-Billion Magnetic-Heads Business (Stocktwits)
+- 4 min **TRMD** TORM plc capital increase in connection with exercise of Restricted Share Units as part of TORM's incentive program (PR Newswire)
+- 19 min **MSFT,NVDA,AAPL** Stock market today: Dow, S&P 500, Nasdaq futures steady after tech rally (Yahoo Finance)
+- 22 min **ZURA** This biotech stock is a top pick at Guggenheim (Investing.com)
+- 25 min **META** Meta stock achieves a golden cross as shares thrive since Muse introduction (MarketWatch)
+- 26 min **MU** Micron's Taoyuan union in Taiwan secures authorisation to strike (Reuters)
+- 32 min **NVDA** Oil rises and stocks fall as Hormuz worries flare (AFP)
+- 39 min **INTC,TSM** INTC Stock Jumps Overnight: CEO Says Intel Will Keep Working With Musk's Terafab Amid TSMC Partnership Buzz (Stocktwits)
+- 41 min **CL,LCO** European stocks slip as Houthi threat lift oil ahead of FOMC minutes (Investing.com)
+- 42 min **MU** Micron workers at Taiwan plant vote in favour of strike (AFP)
+- 42 min **HOOD,EOG,XLE,XOM** Robinhood's Chief Investment Officer Says Energy Stocks Remain The Best Hedge: Here Are 2 Stocks She Prefers (Stocktwits)
+- 51 min **XRPN** XRP Treasury Giant Delays Nasdaq Debut (BeInCrypto)
+- 52 min **JEF** Pennon shares plunge 20% as Jefferies flags equity raise and dividend cut (Proactive)
+- 52 min **TEAM** Atlassian Launches Forward Deployed Engineering Program to Scale Enterprise AI Transformation (Business Wire)
+- 57 min **CL** Bitcoin drops to $84k amid pressure from rising oil prices, yields (Investing.com)
+- 59 min **RACE** Porsche targets 20% price rise on top models, cuts break-even below 200,000 units (Investing.com)
+- 1 hour **ZIM** ZIM Stock Rises Overnight After Shipper Raises 2026 Guidance, Even As Hapag-Lloyd Deal Hits Israeli Hurdle (Stocktwits)
+- 1 hour **FCN** FTI Consulting Expands Technology Transformation Capabilities in EMEA With Appointment of Anita Fuller (GlobeNewswire)
+- 1 hour **TEAM** Atlassian Introduces AMP: The Agentic Multiplayer Protocol to Power Human-AI Collaboration (Business Wire)
+- 1 hour **SPOT** Spotify expands audiobooks to over 180 markets (TechCrunch)
+- 1 hour **MA** How to Monetize Mastercard's Weakness Before It Reports Earnings (Barrons.com)
+- 1 hour **QCOM** Commentary: Qualcomm patent deal puts spotlight on Huawei's broader IP push (DigiTimes)
+- 1 hour **SHEL** Shell raises gas output forecast, sees stronger refining margins in Q3 (Investing.com)
+- 1 hour **CAML** Central Asia Metals says producing operations remain firmly on track (Proactive)
+- 1 hour **AMD** AMD expands Korea push after Taiwan supply talks (DigiTimes)
+- 1 hour **SHEL** Shell flags stronger refining margins as third-quarter gas output rises (Proactive)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.

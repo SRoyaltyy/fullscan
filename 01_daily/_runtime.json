@@ -2,7 +2,7 @@
   "ok": false,
   "n_fail": 2,
   "grok_busy": true,
-  "updated_at": "2026-10-06T04:18:50.867709-04:00",
+  "updated_at": "2026-10-07T04:21:14.414768-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -83,7 +83,7 @@
       "group": "classroom",
       "status": "WARN",
       "required": false,
-      "detail": "401 in last packet 2026-10-06_map_heat.json, 2026-10-05_predict.md \u2014 not live",
+      "detail": "401 in last packet 2026-10-07_map_heat.json \u2014 not live",
       "action": "none"
     },
     {
@@ -164,7 +164,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "history \u2014 401 in 2026-10-06_map_heat.json, 2026-10-05_predict.md; DeepSeek fallback in 2026-10-06_map_postclose_captains_utilities.json, 2026-10-05_map_postclose_captains_utilities",
+      "detail": "history \u2014 401 in 2026-10-07_map_heat.json; DeepSeek fallback in 2026-10-07_map_postclose_captains_utilities.json, 2026-10-06_map_postclose_captains_utilities.json (classroom live)",
       "action": "none"
     }
   ],

@@ -1,0 +1,17 @@
+{
+ "risk_tilt": null,
+ "macros": [],
+ "sector_tilts": {
+  "Semis/Ai": "bullish",
+  "Utilities/Nuclear": "bullish",
+  "Energy": "bullish"
+ },
+ "tickers": {
+  "NVDA": 5.5,
+  "XLU": 5.5,
+  "XLE": 9.5,
+  "CEG": 1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=6\nMACRO FOMC minutes: [mixed] Unsigned Sep-minutes binary; hawkish October-hike chatter already in gold/USD (session/1d)\nMACRO risk-on records: [bullish] SPX/NDX record closes on earnings-optimism, AI leadership back in Big Tech (session/1d-1w)\nMACRO geo-oil: [mixed] Hormuz tanker + Houthi Aden/Riyadh lift oil; Europe slips; not crash without futures confirm (session/1d)\nSECTOR semis/AI: [bullish] NVDA $6T path, AMD PT/memory-crunch, Samsung foundry talk (SMH/QQQ)\nSECTOR utilities/nuclear: [bullish] Google\u2013CEG power + Black Hills DC capex; uranium sympathy (XLU/CEG)\nSECTOR energy: [bullish] Vitol Western inventories exhausted + diesel/refining-margin spike; EIA today (XLE)\nINTERACTION: hawkish-Fed + AI-record tape = one rates cluster; do not fade NDX on geo or buy GDX on risk-on; oil tightness + AI load = long energy/power not short IPPs\nWATCH: minutes can reverse the hawkish-gold dump; kinetic oil only becomes SPX-down if ES/NQ confirm \u2264 \u22120.5%",
+ "date": "2026-10-07"
+}
