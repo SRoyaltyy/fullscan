@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-10-07
 
-_Generated 2026-10-07T09:57:09 — live `flatten_robust`._
+_Generated 2026-10-07T10:09:18 — live `flatten_robust`._
 
 **S=-5.21; hard-red: no new buys; holds and due 1d exits stay**
 
