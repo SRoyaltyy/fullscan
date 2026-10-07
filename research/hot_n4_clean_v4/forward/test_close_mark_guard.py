@@ -254,12 +254,18 @@ def _sealed_records_match_main() -> None:
 
 
 def _historical_notes() -> None:
-    rows = load_notes(NOTES)
-    if len(rows) != 3:
-        raise SystemExit(f"historical notes {len(rows)}")
+    every = load_notes(NOTES)
+    if len(every) < 3:
+        raise SystemExit(f"historical notes {len(every)}")
     rendered = json.loads(PAGE_NOTES.read_text(encoding="utf-8"))
-    if rendered != rows:
+    if rendered != every:
         raise SystemExit("h1 dashboard notes are not the log")
+    # The notes file is add-only. The first three lines are the close-mark
+    # notes this test pins; later lines (for example open_price_revision
+    # notes) are appended after them and are not close-mark corrections.
+    rows = every[:3]
+    if any(row["kind"] == "correction" for row in every[3:]):
+        raise SystemExit("a later close-mark correction needs its own check")
     by_kind = {}
     for row in rows:
         by_kind.setdefault(row["kind"], []).append(row)
