@@ -298,6 +298,14 @@
       "standing": false,
       "source": "run",
       "note": "day record kept; no order sent"
+    },
+    {
+      "at": "2026-10-07T15:27:12.949901-04:00",
+      "status": "missed_deadline",
+      "submit": false,
+      "standing": false,
+      "source": "run",
+      "note": "day record kept; no order sent"
     }
   ]
 }
