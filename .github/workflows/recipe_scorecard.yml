@@ -1,0 +1,53 @@
+name: Recipe scorecard
+
+# Folds data/factor_mine/ledgers/<date>.json.gz (per-recipe daily paper-trade
+# equity, $10k start, fees included) into the compact
+# data/factor_mine/recipe_scorecard.json the dashboards fetch. Runs when a
+# ledger lands or on demand; commits only when the scorecard changed.
+# GITHUB_TOKEN pushes start no workflows; the change is data-only.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/factor_mine/ledgers/**"
+      - "src/recipe_scorecard.py"
+  pull_request:
+    paths:
+      - "data/factor_mine/ledgers/**"
+      - "src/recipe_scorecard.py"
+      - ".github/workflows/recipe_scorecard.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scorecard:
+    name: Rebuild recipe scorecard
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        if: github.event_name == 'pull_request'
+        run: python3 src/test_recipe_scorecard.py
+      - name: Rebuild scorecard
+        run: python3 src/recipe_scorecard.py
+      - name: Commit when changed
+        if: github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet -- data/factor_mine/recipe_scorecard.json; then
+            echo "recipe_scorecard.json up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/factor_mine/recipe_scorecard.json
+          git commit -m "recipe scorecard: rebuild from daily ledgers"
+          git push
