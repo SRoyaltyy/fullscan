@@ -42,3 +42,16 @@ python3 research/input_freeze/tool/freeze_inputs.py freeze --date 2026-10-06 --a
   --fullscan . --fullscan-ref origin/main --theme-radar ../theme-radar --dry-run
 python3 research/input_freeze/tool/test_freeze_inputs.py
 ```
+
+## Replay check (decision freeze)
+
+`.github/workflows/decision_freeze_check.yml` runs
+`research/input_freeze/tool/check_decision_freeze.py`, which verifies that the
+sealed `data/day_board/<date>_strategy_tickets.json` was built from exactly the
+frozen inputs: every `decision_readiness.inputs` digest must equal the freeze
+manifest row's sha256 (or be a recorded `absent`/`missing` pair). A mismatch is
+a hard FAIL when the ticket was completed after the freeze cutoff, INFO when the
+ticket legitimately predates it. Stored copies are re-hashed so a tampered
+append-only folder also fails. From schema `input_freeze/v2` the SPEC covers
+every fingerprinted input (`data/factor_mine/panel.json`,
+`data/sleeve_merge/today.json`); v1 folders only WARN on uncovered inputs.
