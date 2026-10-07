@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T05:36:23.061412-04:00",
+  "generated_at": "2026-10-07T05:36:47.965501-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T04:41:43.537576-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-07_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 96327,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-10-07_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 19583,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-07T04:41:32.405965-04:00\nraw=11609 unique_events=9 tickers=124"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-07T04:41:32.405965-04:00\nraw=11609 unique_events=9 tickers=124"
-    },
     {
       "key": "news_judge",
       "title": "News judge",
@@ -219,6 +194,24 @@
         }
       ],
       "preview": "5905 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COP, DVN, PR, OXY, TS"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T05:36:46.398036-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-07_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
