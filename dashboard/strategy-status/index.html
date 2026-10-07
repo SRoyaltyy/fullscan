@@ -61,6 +61,9 @@
   <label>Filter <input type="text" id="flt" size="14" placeholder="name/ticker"></label>
   <span class="mut" id="stamp">loading…</span>
 </div>
+<h2>All strategies — sealed buys/sells (source of truth)</h2>
+<div class="mut" id="allStamp" style="font-size:12px;margin-bottom:6px"></div>
+<div id="allWrap"></div>
 <h2>Decision ticket</h2>
 <div class="cards" id="cards"></div>
 <div id="ticketWrap"></div>
@@ -278,6 +281,18 @@ async function renderInputs(d){
   }).join("");
   $("inputs").innerHTML = html;
 }
+async function renderAll(d){
+  const r = await jprobe(`data/strategy_status/${d}.json`);
+  if(!r.ok){ $("allStamp").textContent = `data/strategy_status/${d}.json not published yet — every strategy MISSING`; $("allWrap").innerHTML=""; return; }
+  const doc = r.json, fam = $("famSel").value, q = ($("flt").value||"").toUpperCase();
+  $("allStamp").textContent = `published ${hhmm(doc.generated_at)} ET · ` +
+    Object.entries(doc.counts||{}).map(([f,c])=>`${f}: ${c.OK} OK / ${c.SIT} SIT / ${c.MISSING} MISSING`).join(" · ");
+  const rows = (doc.strategies||[]).filter(x => (!fam || x.family===fam || (fam==="factor_mine" && x.family==="factor_mine_preopen"))
+    && (!q || (x.name+" "+x.buys.join(" ")+" "+x.sells.join(" ")).toUpperCase().includes(q)));
+  const b = st => st==="OK" ? `<span class="badge b-ok">OK</span>` : st==="SIT" ? `<span class="badge b-sit">SIT</span>` : `<span class="badge b-fail">MISSING</span>`;
+  $("allWrap").innerHTML = `<table><tr><th>strategy</th><th>family</th><th>status</th><th>BUY</th><th>SELL</th><th>note</th></tr>` +
+    rows.map(x=>`<tr><td class="name">${x.name}</td><td>${x.family}</td><td>${b(x.status)}</td><td>${x.buys.join(", ")||"—"}</td><td>${x.sells.join(", ")||"—"}</td><td class="mut">${x.note||""}</td></tr>`).join("") + `</table>`;
+}
 async function refresh(){
   const d = $("dateSel").value || todayET();
   $("stamp").textContent = `loading ${d} …`;
@@ -285,13 +300,14 @@ async function refresh(){
   renderCards(tk, pushed, d);
   renderTicket(tk, d);
   renderInputs(d);
+  renderAll(d);
   $("stamp").textContent = `updated ${hhmm(new Date().toISOString())} · ${d} (ET)`;
 }
 $("dateSel").value = todayET();
 $("reload").onclick = refresh;
 $("dateSel").onchange = refresh;
-$("famSel").onchange = () => { loadTicket($("dateSel").value||todayET()).then(tk=>renderTicket(tk, $("dateSel").value)) };
-$("flt").oninput = $("famSel").onchange;
+$("famSel").onchange = () => { loadTicket($("dateSel").value||todayET()).then(tk=>renderTicket(tk, $("dateSel").value)); renderAll($("dateSel").value||todayET()); };
+$("flt").oninput = () => { $("famSel").onchange(); renderAll($("dateSel").value||todayET()); };
 refresh();
 </script>
 </body></html>
