@@ -26,13 +26,13 @@ Clock split: (A) short-only is a pre-open policy call — shorts fire at the clo
 
 ## RESEARCH per sleeve (paper, not a wire)
 
-**2026-10-06** — `1` sit sleeves with looked names / `1` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
+**2026-10-07** — `1` sit sleeves with looked names / `1` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
 
 Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP bar unchanged. (A) short-only fires the short kid at the 09:30 open. (B) dip-scoop longs wait for open−X% (session low / Elite live). Close does not trigger.
 
 | Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |
 |---|---|---|---|
-| `flatten_robust` | long | — | EBS scoop 0.5,1,1.5,2,3%; ARCT scoop 0.5,1,1.5,2,3%; WNC scoop 0.5,1,1.5,2%; INDP scoop 0.5,1,1.5,2,3%; KSPI scoop 0.5,1,1.5%; IOT scoop 0.5,1,1.5,2%; AVPT scoop 0.5,1,1.5%; RELY scoop 0.5,1,1.5% |
+| `flatten_robust` | long | — | COP miss; BLFS miss; TOST miss; ONON miss; PDFS miss; AVPT miss; KSPI miss; IOT miss; RELY miss |
 
 Scoop trigger = official open + session low (Elite live only when the low has not printed). Close / last / Theme Radar never trigger. #236 KILL of global short-only / dip-scoop stands — this table is display/paper only.
 
