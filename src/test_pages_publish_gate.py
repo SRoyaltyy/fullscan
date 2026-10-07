@@ -365,7 +365,8 @@ def _workflow_gate_script() -> str:
     return "\n".join(lines).strip() + "\n"
 
 
-def _run_gate_step(**env: str) -> subprocess.CompletedProcess[str]:
+def _run_gate_step(*, path_prefix: str = "",
+                   **env: str) -> subprocess.CompletedProcess[str]:
     script = _workflow_gate_script()
     assert "exit 1" in script
     assert 'DATE="${DATE:-$(TZ=America/New_York date +%F)}"' not in script
@@ -376,6 +377,8 @@ def _run_gate_step(**env: str) -> subprocess.CompletedProcess[str]:
         merged["PYTHONPATH"] = str(Path(__file__).resolve().parent.parent)
         merged.pop("SESSION_DATE", None)
         merged.pop("FORCE", None)
+        if path_prefix:
+            merged["PATH"] = path_prefix + os.pathsep + merged.get("PATH", "")
         merged.update(env)
         proc = subprocess.run(
             ["bash", "-c", script],
@@ -388,6 +391,18 @@ def _run_gate_step(**env: str) -> subprocess.CompletedProcess[str]:
         )
         proc.github_output = out.read_text(encoding="utf-8") if out.is_file() else ""  # type: ignore[attr-defined]
         return proc
+
+
+def _python_stub(directory: Path, body: str) -> str:
+    """A python3 on PATH so the workflow step can be run without live Pages files.
+
+    Opening-execution CI sparse-checkouts src/ and omits dashboard/factor-mine.
+    """
+    directory.mkdir(parents=True, exist_ok=True)
+    path = directory / "python3"
+    path.write_text(body, encoding="utf-8")
+    path.chmod(0o755)
+    return str(directory)
 
 
 def test_gate_block_fails_the_workflow() -> None:
@@ -406,11 +421,38 @@ def test_gate_block_fails_the_workflow() -> None:
     assert "ready=yes" in forced.github_output  # type: ignore[attr-defined]
     assert "force=true" in forced.stdout
 
-    explicit = _run_gate_step(SESSION_DATE="2026-10-06", FORCE="")
-    assert explicit.returncode == 0, explicit.stdout + explicit.stderr
-    assert "2026-10-06" in explicit.stdout
-    assert "READY" in explicit.stdout
-    assert "ready=yes" in explicit.github_output  # type: ignore[attr-defined]
+    # Explicit session_date is forwarded and a ready gate exits 0.
+    # Empty session_date must not inject calendar today before the gate.
+    with tempfile.TemporaryDirectory() as stub_root:
+        explicit_bin = _python_stub(Path(stub_root) / "explicit", """#!/bin/bash
+if [ "${1:-}" = "-m" ] && [ "${2:-}" = "src.pages_publish_gate" ] \
+    && [ "${3:-}" = "--date" ] && [ "${4:-}" = "2026-10-06" ]; then
+  echo "[pages-gate] 2026-10-06 READY"
+  exit 0
+fi
+echo "gate argv: $*" >&2
+exit 3
+""")
+        explicit = _run_gate_step(
+            path_prefix=explicit_bin, SESSION_DATE="2026-10-06", FORCE="")
+        assert explicit.returncode == 0, explicit.stdout + explicit.stderr
+        assert "2026-10-06" in explicit.stdout
+        assert "READY" in explicit.stdout
+        assert "ready=yes" in explicit.github_output  # type: ignore[attr-defined]
+
+        empty_bin = _python_stub(Path(stub_root) / "empty", """#!/bin/bash
+if [ "${1:-}" = "-m" ] && [ "${2:-}" = "src.pages_publish_gate" ] \
+    && [ "$#" -eq 2 ]; then
+  echo "[pages-gate] resolved READY"
+  exit 0
+fi
+echo "gate argv: $*" >&2
+exit 3
+""")
+        empty = _run_gate_step(path_prefix=empty_bin, SESSION_DATE="", FORCE="")
+        assert empty.returncode == 0, empty.stdout + empty.stderr
+        assert "resolved READY" in empty.stdout
+        assert "ready=yes" in empty.github_output  # type: ignore[attr-defined]
 
     dep = (Path(__file__).resolve().parent.parent
            / ".github" / "workflows" / "deploy-dashboard.yml").read_text(
