@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T06:07:32.932400-04:00",
+  "generated_at": "2026-10-07T06:08:13.746018-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -354,11 +354,11 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7561,
-          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 13 fail",
+          "size": 7558,
+          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 12 fail",
           "bullets": [
             "finviz_market_digest:missing",
-            "map_heat_research:missing",
+            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
           ]
@@ -555,8 +555,8 @@
           "path": "01_daily/weather/2026-10-07_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10570 vix=falling yields=rising",
-          "size": 10570,
+          "reason": "sectors=11 bytes=10569 vix=falling yields=rising",
+          "size": 10569,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -774,8 +774,8 @@
           "path": "01_daily/weather/2026-10-07_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10570 vix=falling yields=rising",
-          "size": 10570,
+          "reason": "sectors=11 bytes=10569 vix=falling yields=rising",
+          "size": 10569,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -828,7 +828,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=118",
-          "size": 1010208,
+          "size": 1010786,
           "said": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI \u00b7 -0.6018",
           "bullets": []
         },
@@ -839,10 +839,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 32666,
+          "size": 32667,
           "said": "Stock book \u2014 2026-10-07",
           "bullets": [
-            "_Generated 2026-10-07T06:07:11.343226-04:00_",
+            "_Generated 2026-10-07T05:54:58.772723-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -906,7 +906,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=118",
-          "size": 1010208,
+          "size": 1010786,
           "said": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI \u00b7 -0.6018",
           "bullets": []
         },
@@ -987,7 +987,7 @@
       },
       {
         "ticker": "INDI",
-        "score": -0.2625545866781168
+        "score": -0.2882462432599445
       },
       {
         "ticker": "TE",
@@ -2711,6 +2711,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T06:08:12.584897-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-07_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 98242,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-07_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11722,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-07\n_Generated 2026-10-07T04:20:26.921924-04:00 \u00b7 export=data/exports/finviz_2026-10-06.csv \u00b7 ticker digests=5899 \u00b7 high-signal=1849_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-07\n_Generated 2026-10-07T04:20:26.921924-04:00 \u00b7 export=data/exports/finviz_2026-10-06.csv \u00b7 ticker digests=5899 \u00b7 high-signal=1849_"
     }
   ],
   "href": {
