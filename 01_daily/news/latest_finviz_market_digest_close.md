@@ -1,46 +1,49 @@
-# Finviz homepage market digest (close) — 2026-10-06
+# Finviz homepage market digest (close) — 2026-10-07
 
-**Generated:** 2026-10-06T16:24:55.601596-04:00 (America/New_York)
+**Generated:** 2026-10-07T16:24:50.990077-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks extended gains to record S&P 500 and Nasdaq closes as AI-driven winners, lower Treasury yields and deal activity offset a wider US trade deficit
-**Prior close:** SPX +0.60%  Nasdaq —  Dow +0.60%
-**SPX:** +0.60%  **Nasdaq:** —  **Dow:** +0.60%
-**Oil:** —
-**CPI/Fed:** —
-**Leaders:** CEG, GOOGL, VST, TLN, OPCH, MCK, CIEN, MRVL, RPM, APOG
-**Next session:** housing no · retail no · Fed no
+**Banner:** US stocks eased from record highs as Treasury yields hit multi-decade levels and Brent briefly topped $100 amid hawkish Fed minutes
+**Prior close:** SPX —  Nasdaq -1.30%  Dow —
+**SPX:** —  **Nasdaq:** -1.30%  **Dow:** —
+**Oil:** Brent crude $100.0
+**CPI/Fed:** 4.0% hike (4.00%, saw additional work needed to tame inflation, expected another hike)
+**Leaders:** CAT, DE, BULL, ZIM, SPCX
+**Next session:** housing yes · retail no · Fed yes
 **Earnings slate:** —
-**Geo/grain:** —
-**Clock legal for:** 2026-10-07
+**Geo/grain:** geo
+**Clock legal for:** 2026-10-08
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-07) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-08) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX +0.60% · Nasdaq — · Dow +0.60%
-- **Oil:** —
-- **CPI / Fed-odds:** —
-- **Named leaders:** CEG, GOOGL, VST, TLN, OPCH, MCK, CIEN, MRVL, RPM, APOG
-- **Next-session calendar:** housing no · retail no · Fed no
+- **Prior close:** SPX — · Nasdaq -1.30% · Dow —
+- **Oil:** Brent crude $100.0
+- **CPI / Fed-odds:** 4.0% hike (4.00%, saw additional work needed to tame inflation, expected another hike)
+- **Named leaders:** CAT, DE, BULL, ZIM, SPCX
+- **Next-session calendar:** housing yes · retail no · Fed yes
+  - The 30-year Treasury yield briefly touched a 24-year high near 5.70% before retreating after a strong $39 billion 10-year auction, helping major indexes recover from intraday lows.
+  - Federal Reserve minutes showed policymakers unanimously raised rates in September to 3.75%-4.00%, saw additional work needed to tame inflation, expected another hike this year, and were divided on the impact of energy shocks versus demand pressures.
+  - Eight of 11 S&P 500 ($SPX) sectors closed lower, led by materials and industrials, while housing stocks fell about 3.1%.
 - **Earnings slate:** —
-- **Geo / grain:** —
+- **Geo / grain:** geo
 
 ## Narrative
 
-**US stocks extended gains to record S&P 500 and Nasdaq closes as AI-driven winners, lower Treasury yields and deal activity offset a wider US trade deficit**
+**US stocks eased from record highs as Treasury yields hit multi-decade levels and Brent briefly topped $100 amid hawkish Fed minutes**
 
-- The S&P 500 ($SPX) rose 0.6% to a record close of 7,824, its first finish above 7,800, while the Nasdaq Composite ($COMP) and Nasdaq 100 ($NDX) also ended at record levels, the Dow Jones Industrial Average ($DJI) gained 0.6% to 51,622, and the Russell 2000 (IWM) slipped 0.71%.
-- The 10-year Treasury yield fell to 5.27% and oil prices (@CL) retreated, helping support equities alongside ongoing focus on earnings.
-- Commerce Department data showed the US trade deficit widened to $105.6 billion in August.
-- Nine of 11 S&P 500 ($SPX) sectors advanced, led by utilities, while healthcare was the only decliner.
-- Constellation Energy (CEG) jumped 12% after signing a deal with Alphabet (GOOGL)’s Google to supply nuclear power for data centers, lifting Vistra (VST) by 10.8% and Talen Energy (TLN) by 12.4%.
-- Option Care Health (OPCH) surged 32.7% after McKesson (MCK) and Clayton Dubilier & Rice agreed to acquire it for $5.8 billion including debt.
-- Ciena (CIEN) climbed 13.9% on strong AI networking demand.
-- Marvell Technology (MRVL) gained 5.8% after its investor day outlined higher revenue targets, including fiscal 2028 revenue of $20 billion and a $70–90 billion range by 2031 driven by AI data-center demand and an expanded Google chip partnership.
-- RPM International (RPM) advanced after beating Q1 estimates with EPS of $1.98 versus $1.95 expected and revenue of $2.22 billion.
-- Apogee Enterprises (APOG) rose after an earnings beat and raised fiscal 2027 guidance, with no major negative catalysts emerging into the close.
+- The S&P 500 ($SPX) closed at 7,798.84, down 0.26%, the Dow Jones Industrial Average ($DJI) at 51,196.54, down 0.63%, the Nasdaq Composite ($COMP) at 27,489.08, down 0.40%, and the Russell 2000 (IWM) fell 1.3%, with Dow futures (@YM) off roughly 0.72% in extended trading.
+- The 30-year Treasury yield briefly touched a 24-year high near 5.70% before retreating after a strong $39 billion 10-year auction, helping major indexes recover from intraday lows.
+- Brent crude (@QA) briefly topped $100 per barrel on attacks in the Strait of Hormuz and rising Gulf storm risks.
+- Federal Reserve minutes showed policymakers unanimously raised rates in September to 3.75%-4.00%, saw additional work needed to tame inflation, expected another hike this year, and were divided on the impact of energy shocks versus demand pressures.
+- Caterpillar (CAT) shares fell over 5.5% after the FTC and USDA opened a broad inquiry into business practices and repair restrictions in the agricultural equipment market.
+- Deere & Co. (DE) declined after the FTC and USDA opened an inquiry into practices in the farm equipment market.
+- Webull (BULL) plunged about 20% following congressional concerns over the broker’s ties to China.
+- ZIM Integrated Shipping Services (ZIM) climbed after the company raised its 2026 full-year guidance.
+- SpaceX (SPCX) slipped 2.8% on reports it plans to build and run a Texas Terafab AI chip complex.
+- Eight of 11 S&P 500 ($SPX) sectors closed lower, led by materials and industrials, while housing stocks fell about 3.1%.
