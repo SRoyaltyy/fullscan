@@ -42,12 +42,12 @@ jobs:
       - name: Commit when changed
         if: github.event_name != 'pull_request'
         run: |
-          if git diff --quiet -- data/factor_mine/recipe_scorecard.json; then
-            echo "recipe_scorecard.json up to date"
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/factor_mine/recipe_scorecard.json
+          if git diff --cached --quiet; then
+            echo "recipe_scorecard.json up to date"
+            exit 0
+          fi
           git commit -m "recipe scorecard: rebuild from daily ledgers"
           git push
