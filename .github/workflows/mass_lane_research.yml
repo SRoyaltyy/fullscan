@@ -1,0 +1,70 @@
+name: Mass Lane article research
+on:
+  push:
+    branches: [research/mass-lane-20261008]
+    paths:
+      - src/news_batch_research.py
+      - .github/workflows/mass_lane_research.yml
+      - 01_daily/news/2026-10-07_mass_lane_input_*.json
+      - 01_daily/news/2026-10-07_mass_lane_spec.json
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mass-lane-research-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            src
+            01_daily/news/2026-10-07_mass_lane*
+            data/news_intake/2026-10-02/documents.json
+            data/news_intake/2026-10-03/documents.json
+            data/news_intake/2026-10-04/documents.json
+            data/news_intake/2026-10-05/documents.json
+            data/news_intake/2026-10-06/documents.json
+          sparse-checkout-cone-mode: false
+      - name: Classify then analyse by Lane family
+        env:
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
+          TOKENHUB_API_KEY: ${{ secrets.TOKENHUB_API_KEY }}
+          TENCENT_API_KEY: ${{ secrets.TENCENT_API_KEY }}
+          HUNYUAN_API_KEY: ${{ secrets.HUNYUAN_API_KEY }}
+          TOKENHUB_BASE_URL: ${{ secrets.TOKENHUB_BASE_URL }}
+          TENCENT_BASE_URL: ${{ secrets.TENCENT_BASE_URL }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          DASHSCOPE_BASE_URL: ${{ secrets.DASHSCOPE_BASE_URL }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+          LANE_ALLOW_PAID_DEEPSEEK: "0"
+        run: python -u -m src.news_batch_research --max-seconds 18000
+      - name: Upload resumable research
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mass-lane-model-research
+          path: 01_daily/news/2026-10-07_mass_lane_model_*.json
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Save results to this research branch
+        if: always()
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add 01_daily/news/2026-10-07_mass_lane_model_*.json
+          if git diff --staged --quiet; then exit 0; fi
+          git commit -m "research: checkpoint mass Lane article analysis"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
