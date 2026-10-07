@@ -25,5 +25,5 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install pytest pandas numpy requests pyarrow
-      - run: python -m pytest -q src/test_paper_open.py src/test_paper_account_snapshot.py src/test_open_0930.py src/test_webull_exec.py src/test_h1_sealed_webull.py src/test_decision_ready.py src/test_paper_append.py src/test_live_decision_refresh.py src/test_pages_publish_gate.py src/test_paper_backstop.py -k "not live_2026_09_16_board_is_ready"
+      - run: python -m pytest -q src/test_paper_open.py src/test_paper_account_snapshot.py src/test_open_0930.py src/test_webull_exec.py src/test_h1_sealed_webull.py src/test_decision_ready.py src/test_paper_append.py src/test_live_decision_refresh.py src/test_pages_publish_gate.py src/test_paper_backstop.py src/test_morning_look.py -k "not live_2026_09_16_board_is_ready"
       - run: bash -n scripts/safe_git_push.sh scripts/install_paper_open.sh scripts/install_paper_backstop.sh scripts/ecs_paper_backstop.sh

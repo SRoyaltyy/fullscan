@@ -82,7 +82,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 1
+          # morning_look proves commit times; a shallow clone refuses.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -118,7 +119,7 @@ jobs:
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
           set -euo pipefail
-          python3 -m src.decision_ready --date "$DATE" --publish
+          python3 -m src.morning_look decision_ready --date "$DATE" --publish
           python3 - <<'PY'
           import json
           from pathlib import Path
@@ -146,6 +147,7 @@ jobs:
             "data/day_board/${DATE}_strategy_tickets.json" \
             "data/day_board/${DATE}_strategy_tickets_draft.json" \
             "data/factor_mine/send_inputs/${DATE}.json" \
+            "data/factor_mine/morning_look/${DATE}.json" \
             dashboard/factor-mine/index.html \
             data/day_board/strategy_tickets.json \
             data/day_board/today_strategies.json \

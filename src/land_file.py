@@ -135,6 +135,7 @@ def step_paths(date: str, key: str) -> list[Path]:
             ROOT / "data" / "day_board" / f"{date}_tickets.json",
             ROOT / "data" / "day_board" / "strategy_tickets.json",
             ROOT / "data" / "day_board" / f"{date}_strategy_tickets.json",
+            ROOT / "data" / "factor_mine" / "morning_look" / f"{date}.json",
             ROOT / "data" / "day_board" / "today_strategies.json",
             ROOT / "data" / "factor_mine" / "strategy_tickets.json",
             ROOT / "dashboard" / "factor-mine" / "today.json",
