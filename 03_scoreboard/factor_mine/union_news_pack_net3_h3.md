@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 3
 
-Cash book **-25.38%** ($7,462) · signal-only (no cash/fees) was -17.00%. Starts YES **11/30**. Fills 44 · skips 76 · realized $-1552.71.
+Cash book **-25.11%** ($7,489) · signal-only (no cash/fees) was -17.00%. Starts YES **11/30**. Fills 46 · skips 76 · realized $-1552.71.
 
 ## How this sleeve decides (like you are 10)
 
@@ -194,6 +194,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.20 | ▼ close $7,371.59 vs 09:30 $7,446.35 (session -72.76) | 16:00 close · cash $56.20 · equity $7,371.59 vs 09:30 $7,446.35 (-74.76; session marks -72.76) · 3 name(s) marked open→close (per-name table). ACN×18 09:30 $196.30 → close $195.05 -22.50; SNPS×7 09:30 $496.25 → close $488.47 -54.46; COP×3 09:30 $127.00 → close $128.40 +4.20 | — |
 | 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $56.20 | ▲ 09:30 equity $7,396.21 vs yday $7,371.59 (+24.62) | 09:30 open · cash $56.20 (unchanged overnight, no fees) · equity $7,396.21 vs prior close $7,371.59 (+24.62) · 3 name(s) re-marked at the open (per-name table). ACN×18 yday $195.05 → 09:30 $195.43 +6.84; COP×3 yday $128.40 → 09:30 $128.19 -0.63; SNPS×7 yday $488.47 → 09:30 $491.10 +18.41 | — |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.20 | ▲ close $7,461.64 vs 09:30 $7,396.21 (session +65.43) | 16:00 close · cash $56.20 · equity $7,461.64 vs 09:30 $7,396.21 (+65.43; session marks +65.43) · 3 name(s) marked open→close (per-name table). ACN×18 09:30 $195.43 → close $193.40 -36.54; COP×3 09:30 $128.19 → close $129.35 +3.48; SNPS×7 09:30 $491.10 → close $505.17 +98.49 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $56.20 | ▲ 09:30 equity $7,497.52 vs yday $7,461.64 (+35.88) | 09:30 open · cash $56.20 (unchanged overnight, no fees) · equity $7,497.52 vs prior close $7,461.64 (+35.88) · 3 name(s) re-marked at the open (per-name table). ACN×18 yday $193.40 → 09:30 $195.00 +28.80; COP×3 yday $129.35 → 09:30 $131.29 +5.82; SNPS×7 yday $505.17 → 09:30 $505.35 +1.26 | — |
+| 2026-10-07 09:30 ET | **SELL** | `ACN` | 18 | $195.00 | $2.08 | $-292.49 | $3,564.12 | ▼ -292.49 after sell → book $7,495.44; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SNPS` | 7 | $505.35 | $2.05 | $+48.40 | $7,099.52 | ▲ +48.40 after sell → book $7,493.39; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,099.52 | ▼ close $7,489.04 vs 09:30 $7,497.52 (session -4.35) | 16:00 close · cash $7,099.52 · equity $7,489.04 vs 09:30 $7,497.52 (-8.48; session marks -4.35) · 1 name(s) marked open→close (per-name table). COP×3 09:30 $131.29 → close $129.84 -4.35 | — |
 
 ## Not taken
 

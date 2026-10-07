@@ -1,0 +1,81 @@
+{
+  "buys": [],
+  "cash": 46.45,
+  "date": "2026-10-07",
+  "equity": 10353.01,
+  "fees": 0,
+  "fills": [],
+  "holdings": [
+    "AVPT",
+    "IOT",
+    "PDFS",
+    "SHOP"
+  ],
+  "mean": -1.5983,
+  "n_trades_today": 0,
+  "recipe": "oos0914_zero_candle_h2_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-10-07",
+    "cash": 46.45,
+    "pos": {
+      "AVPT": {
+        "close_px": 14.279999732971191,
+        "cost": 2690.676,
+        "entry_date": "2026-10-06",
+        "entry_px": 14.77,
+        "fee_in": 2.536,
+        "last_px": 14.510000228881836,
+        "min_hold": 2,
+        "notional": 2688.14,
+        "peak_px": 14.77,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten; \u26aa; ret5=+7.2; leftover $2690.93",
+        "shares": 182,
+        "ticker": "AVPT"
+      },
+      "IOT": {
+        "close_px": 40.5099983215332,
+        "cost": 2692.2790000000005,
+        "entry_date": "2026-10-06",
+        "entry_px": 42.7,
+        "fee_in": 2.179,
+        "last_px": 41.599998474121094,
+        "min_hold": 2,
+        "notional": 2690.1000000000004,
+        "peak_px": 42.7,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \u26aa; ret5=+11.8; leftover $2690.93",
+        "shares": 63,
+        "ticker": "IOT"
+      },
+      "PDFS": {
+        "close_px": 53.16999816894531,
+        "cost": 2675.961,
+        "entry_date": "2026-10-06",
+        "entry_px": 56.89,
+        "fee_in": 2.131,
+        "last_px": 52.540000915527344,
+        "min_hold": 2,
+        "notional": 2673.83,
+        "peak_px": 56.89,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten; \ud83d\udd35; \u26aa; ret5=+12.7; leftover $2690.93",
+        "shares": 47,
+        "ticker": "PDFS"
+      },
+      "SHOP": {
+        "close_px": 166.02999877929688,
+        "cost": 2658.358,
+        "entry_date": "2026-10-06",
+        "entry_px": 166.02,
+        "fee_in": 2.038,
+        "last_px": 162.57000732421875,
+        "min_hold": 2,
+        "notional": 2656.32,
+        "peak_px": 166.02,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+11.2; leftover $2690.93",
+        "shares": 16,
+        "ticker": "SHOP"
+      }
+    },
+    "yday_equity": 10353.01
+  }
+}

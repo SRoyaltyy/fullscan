@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ blue, no 🚨
 
-Cash book **-24.27%** ($7,573) · signal-only (no cash/fees) was -3.24%. Starts YES **2/30**. Fills 231 · skips 296 · realized $-1559.94.
+Cash book **-24.54%** ($7,546) · signal-only (no cash/fees) was -3.24%. Starts YES **2/30**. Fills 231 · skips 296 · realized $-1559.94.
 
 ## How this sleeve decides (like you are 10)
 
@@ -379,6 +379,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `BBD` | 212 | $4.52 | $2.73 | — | $1,202.61 | — | union ∩ blue, no 🚨; gate blue=True; list yday_gainer,yday_mover; 🔵; ret5=+29.4; leftover $962.04 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `SBS` | 150 | $6.41 | $2.44 | — | $238.67 | — | union ∩ blue, no 🚨; gate blue=True; list yday_gainer,yday_mover; 🔵; ret5=+21.8; leftover $962.04 | join🔴 sector🟡 gen🟡 news🟡 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $238.67 | ▼ close $7,572.80 vs 09:30 $7,721.29 (session -100.14) | 16:00 close · cash $238.67 · equity $7,572.80 vs 09:30 $7,721.29 (-148.49; session marks -100.14) · 8 name(s) marked open→close (per-name table). PDFS×16 09:30 $56.89 → close $54.44 -39.20; QTEX×564 09:30 $1.71 → close $1.59 -64.86; PTC×4 09:30 $193.00 → close $193.00 +0.00; PAGS×87 09:30 $10.96 → close $10.72 -20.88; STNE×82 09:30 $11.67 → close $11.62 -4.10; INTR×141 09:30 $6.81 → close $7.03 +31.02; BBD×212 09:30 $4.52 → close $4.51 -2.12; SBS×150 09:30 $6.41 → close $6.41 +0.00 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $238.67 | ▼ 09:30 equity $7,408.03 vs yday $7,572.80 (-164.77) | 09:30 open · cash $238.67 (unchanged overnight, no fees) · equity $7,408.03 vs prior close $7,572.80 (-164.77) · 8 name(s) re-marked at the open (per-name table). BBD×212 yday $4.51 → 09:30 $4.50 -2.12; INTR×141 yday $7.03 → 09:30 $7.02 -1.41; PAGS×87 yday $10.72 → 09:30 $10.64 -6.96; PDFS×16 yday $54.44 → 09:30 $52.54 -30.40; PTC×4 yday $193.00 → 09:30 $193.20 +0.80; QTEX×564 yday $1.59 → 09:30 $1.38 -121.26; SBS×150 yday $6.41 → 09:30 $6.42 +1.50; STNE×82 yday $11.62 → 09:30 $11.56 -4.92 | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $238.67 | ▲ close $7,546.18 vs 09:30 $7,408.03 (session +138.15) | 16:00 close · cash $238.67 · equity $7,546.18 vs 09:30 $7,408.03 (+138.15; session marks +138.15) · 8 name(s) marked open→close (per-name table). BBD×212 09:30 $4.50 → close $4.34 -33.92; INTR×141 09:30 $7.02 → close $7.18 +22.56; PAGS×87 09:30 $10.64 → close $10.51 -11.31; PDFS×16 09:30 $52.54 → close $53.17 +10.08; PTC×4 09:30 $193.20 → close $193.60 +1.60; QTEX×564 09:30 $1.38 → close $1.66 +160.74; SBS×150 09:30 $6.42 → close $6.37 -7.50; STNE×82 09:30 $11.56 → close $11.51 -4.10 | — |
 
 ## Not taken
 

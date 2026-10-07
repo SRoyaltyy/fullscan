@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-28.43%** ($7,157) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 233 · skips 295 · realized $+93.52.
+Cash book **-30.51%** ($6,949) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 233 · skips 295 · realized $+93.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -381,6 +381,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `ABEV` | 285 | $3.27 | $3.68 | — | $1,161.85 | — | union ∩ last_red, no 🚨; gate last_red=True; list ohlc_hot; ret5=+13.2; leftover $934.98 | join🔴 sector🔴 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `SID` | 724 | $1.29 | $9.34 | — | $218.55 | — | union ∩ last_red, no 🚨; gate last_red=True; list ohlc_hot; 🔵; ret5=+11.7; leftover $934.98 | join🔴 sector🟢 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $218.55 | ▼ close $7,157.22 vs 09:30 $7,522.61 (session -307.62) | 16:00 close · cash $218.55 · equity $7,157.22 vs 09:30 $7,522.61 (-365.39; session marks -307.62) · 11 name(s) marked open→close (per-name table). ECX×6 09:30 $0.83 → close $0.84 +0.05; LU×5 09:30 $1.02 → close $1.01 -0.05; SRFM×6 09:30 $0.94 → close $1.01 +0.44; SN×5 09:30 $183.47 → close $184.72 +6.25; PTC×4 09:30 $193.00 → close $193.00 +0.00; PCVX×12 09:30 $73.35 → close $66.70 -79.80; SDEV×268 09:30 $3.48 → close $3.25 -61.64; NXH×458 09:30 $2.04 → close $1.83 -96.18; VELO×95 09:30 $9.77 → close $9.57 -19.00; ABEV×285 09:30 $3.27 → close $3.22 -14.25; SID×724 09:30 $1.29 → close $1.23 -43.44 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $218.55 | ▼ 09:30 equity $7,053.81 vs yday $7,157.22 (-103.41) | 09:30 open · cash $218.55 (unchanged overnight, no fees) · equity $7,053.81 vs prior close $7,157.22 (-103.41) · 11 name(s) re-marked at the open (per-name table). ABEV×285 yday $3.22 → 09:30 $3.16 -17.10; ECX×6 yday $0.84 → 09:30 $0.82 -0.10; LU×5 yday $1.01 → 09:30 $1.01 +0.00; NXH×458 yday $1.83 → 09:30 $1.81 -9.16; PCVX×12 yday $66.70 → 09:30 $65.86 -10.08; PTC×4 yday $193.00 → 09:30 $193.20 +0.80; SDEV×268 yday $3.25 → 09:30 $3.27 +5.36; SID×724 yday $1.23 → 09:30 $1.20 -21.72; SN×5 yday $184.72 → 09:30 $183.00 -8.60; SRFM×6 yday $1.01 → 09:30 $1.00 -0.06; VELO×95 yday $9.57 → 09:30 $9.12 -42.75 | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $218.55 | ▼ close $6,948.66 vs 09:30 $7,053.81 (session -105.14) | 16:00 close · cash $218.55 · equity $6,948.66 vs 09:30 $7,053.81 (-105.15; session marks -105.14) · 11 name(s) marked open→close (per-name table). ABEV×285 09:30 $3.16 → close $3.15 -2.85; ECX×6 09:30 $0.82 → close $0.85 +0.15; LU×5 09:30 $1.01 → close $0.98 -0.14; NXH×458 09:30 $1.81 → close $1.77 -16.03; PCVX×12 09:30 $65.86 → close $66.96 +13.20; PTC×4 09:30 $193.20 → close $193.60 +1.60; SDEV×268 09:30 $3.27 → close $2.78 -131.32; SID×724 09:30 $1.20 → close $1.23 +21.72; SN×5 09:30 $183.00 → close $185.19 +10.95; SRFM×6 09:30 $1.00 → close $0.91 -0.52; VELO×95 09:30 $9.12 → close $9.10 -1.90 | — |
 
 ## Not taken
 

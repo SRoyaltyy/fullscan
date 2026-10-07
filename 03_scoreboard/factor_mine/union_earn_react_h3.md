@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **-22.52%** ($7,748) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 143 · skips 198 · realized $+2100.34.
+Cash book **-22.59%** ($7,741) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 144 · skips 198 · realized $+2100.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -291,6 +291,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **SELL** | `PRGS` | 48 | $37.81 | $2.16 | $-134.53 | $6,571.78 | ▼ -134.53 after sell → book $7,582.78; vs 09:30 mark -2.16 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-06 09:30 ET | **BUY** | `RPM` | 68 | $96.25 | $2.19 | — | $24.59 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-4.9; leftover $6571.78 | join🔴 sector🟢 gen🟡 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.59 | ▲ close $7,747.97 vs 09:30 $7,591.14 (session +167.38) | 16:00 close · cash $24.59 · equity $7,747.97 vs 09:30 $7,591.14 (+156.83; session marks +167.38) · 2 name(s) marked open→close (per-name table). NKE×30 09:30 $33.70 → close $34.61 +27.30; RPM×68 09:30 $96.25 → close $98.31 +140.08 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24.59 | ▼ 09:30 equity $7,727.09 vs yday $7,747.97 (-20.88) | 09:30 open · cash $24.59 (unchanged overnight, no fees) · equity $7,727.09 vs prior close $7,747.97 (-20.88) · 2 name(s) re-marked at the open (per-name table). NKE×30 yday $34.61 → 09:30 $34.39 -6.60; RPM×68 yday $98.31 → 09:30 $98.10 -14.28 | — |
+| 2026-10-07 09:30 ET | **SELL** | `NKE` | 30 | $34.39 | $2.10 | $+50.93 | $1,054.19 | ▲ +50.93 after sell → book $7,724.99; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,054.19 | ▲ close $7,740.63 vs 09:30 $7,727.09 (session +15.64) | 16:00 close · cash $1,054.19 · equity $7,740.63 vs 09:30 $7,727.09 (+13.54; session marks +15.64) · 1 name(s) marked open→close (per-name table). RPM×68 09:30 $98.10 → close $98.33 +15.64 | — |
 
 ## Not taken
 

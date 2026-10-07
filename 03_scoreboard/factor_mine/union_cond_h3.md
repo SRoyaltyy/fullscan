@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-13.34%** ($8,666) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 245 · skips 307 · realized $-613.92.
+Cash book **-14.01%** ($8,599) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 249 · skips 307 · realized $-613.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -392,6 +392,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `TOST` | 35 | $30.07 | $2.10 | — | $1,404.66 | — | rank by cond; rank cond; list flatten; ⚪; ret5=-1.1; leftover $1067.04 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `BSY` | 30 | $34.92 | $2.08 | — | $354.98 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+11.1; leftover $1067.04 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $354.98 | ▼ close $8,666.34 vs 09:30 $8,752.28 (session -58.43) | 16:00 close · cash $354.98 · equity $8,666.34 vs 09:30 $8,752.28 (-85.94; session marks -58.43) · 12 name(s) marked open→close (per-name table). ACRS×2 09:30 $4.22 → close $3.70 -1.04; AVPT×84 09:30 $14.77 → close $14.59 -15.12; ECX×5 09:30 $0.83 → close $0.84 +0.04; FOSL×1 09:30 $7.17 → close $7.06 -0.11; NAUT×5 09:30 $1.87 → close $1.77 -0.50; GWRE×6 09:30 $165.00 → close $164.52 -2.88; PTC×5 09:30 $193.00 → close $193.00 +0.00; IOT×24 09:30 $42.70 → close $41.74 -23.04; PDFS×18 09:30 $56.89 → close $54.44 -44.10; SHOP×6 09:30 $166.02 → close $164.44 -9.48; TOST×35 09:30 $30.07 → close $30.25 +6.30; BSY×30 09:30 $34.92 → close $35.97 +31.50 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $354.98 | ▼ 09:30 equity $8,592.06 vs yday $8,666.34 (-74.28) | 09:30 open · cash $354.98 (unchanged overnight, no fees) · equity $8,592.06 vs prior close $8,666.34 (-74.28) · 12 name(s) re-marked at the open (per-name table). ACRS×2 yday $3.70 → 09:30 $3.58 -0.24; AVPT×84 yday $14.59 → 09:30 $14.51 -6.72; BSY×30 yday $35.97 → 09:30 $35.98 +0.30; ECX×5 yday $0.84 → 09:30 $0.82 -0.08; FOSL×1 yday $7.06 → 09:30 $7.06 +0.00; GWRE×6 yday $164.52 → 09:30 $162.01 -15.06; IOT×24 yday $41.74 → 09:30 $41.60 -3.36; NAUT×5 yday $1.77 → 09:30 $1.67 -0.50; PDFS×18 yday $54.44 → 09:30 $52.54 -34.20; PTC×5 yday $193.00 → 09:30 $193.20 +1.00; SHOP×6 yday $164.44 → 09:30 $162.57 -11.22; TOST×35 yday $30.25 → 09:30 $30.13 -4.20 | — |
+| 2026-10-07 09:30 ET | **SELL** | `ACRS` | 2 | $3.58 | $0.10 | $-2.03 | $362.04 | ▼ -2.03 after sell → book $8,591.97; vs 09:30 mark -0.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 84 | $14.51 | $2.27 | $+15.65 | $1,578.62 | ▲ +15.65 after sell → book $8,589.70; vs 09:30 mark -2.27 | dropped from list after 4 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `FOSL` | 1 | $7.06 | $0.09 | $-0.06 | $1,585.58 | ▼ -0.06 after sell → book $8,589.61; vs 09:30 mark -0.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `NAUT` | 5 | $1.67 | $0.12 | $-0.19 | $1,593.81 | ▼ -0.19 after sell → book $8,589.49; vs 09:30 mark -0.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,593.81 | ▲ close $8,599.17 vs 09:30 $8,592.06 (session +9.69) | 16:00 close · cash $1,593.81 · equity $8,599.17 vs 09:30 $8,592.06 (+7.11; session marks +9.69) · 8 name(s) marked open→close (per-name table). BSY×30 09:30 $35.98 → close $35.15 -24.90; ECX×5 09:30 $0.82 → close $0.85 +0.13; GWRE×6 09:30 $162.01 → close $163.98 +11.82; IOT×24 09:30 $41.60 → close $40.51 -26.16; PDFS×18 09:30 $52.54 → close $53.17 +11.34; PTC×5 09:30 $193.20 → close $193.60 +2.00; SHOP×6 09:30 $162.57 → close $166.03 +20.76; TOST×35 09:30 $30.13 → close $30.55 +14.70 | — |
 
 ## Not taken
 

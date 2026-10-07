@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+4.02%** ($10,402) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 164 · skips 96 · realized $+54.59.
+Cash book **+4.50%** ($10,450) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 172 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -310,6 +310,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **SHORT** | `ARCO` | 79 | $8.10 | $2.27 | — | $14,585.03 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+13.4; leftover $645.20 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **SHORT** | `PACB` | 215 | $2.99 | $2.84 | — | $15,225.04 | — | alarm; gate alarm=True; list yday_gainer; ret5=+67.8; leftover $645.20 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,225.04 | ▲ close $10,401.56 vs 09:30 $10,341.69 (session +102.51) | 16:00 close · cash $15,225.04 · equity $10,401.56 vs 09:30 $10,341.69 (+59.87; session marks +102.51) · 8 name(s) marked open→close (per-name table). CDNA×9 09:30 $70.89 → close $63.79 +63.90; NTAP×2 09:30 $224.80 → close $228.45 -7.30; CMPX×651 09:30 $0.99 → close $1.00 -5.27; ONT×45 09:30 $14.27 → close $14.52 -11.25; RXO×22 09:30 $28.73 → close $28.54 +4.18; ITUB×63 09:30 $10.11 → close $10.15 -2.52; ARCO×79 09:30 $8.10 → close $8.12 -1.58; PACB×215 09:30 $2.99 → close $2.70 +62.35 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,225.04 | ▲ 09:30 equity $10,474.10 vs yday $10,401.56 (+72.54) | 09:30 open · cash $15,225.04 (unchanged overnight, no fees) · equity $10,474.10 vs prior close $10,401.56 (+72.54) · 8 name(s) re-marked at the open (per-name table). ARCO×79 yday $8.12 → 09:30 $8.06 +4.74; CDNA×9 yday $63.79 → 09:30 $61.38 +21.67; CMPX×651 yday $1.00 → 09:30 $0.97 +17.97; ITUB×63 yday $10.15 → 09:30 $10.11 +2.52; NTAP×2 yday $228.45 → 09:30 $232.00 -7.10; ONT×45 yday $14.52 → 09:30 $14.27 +11.25; PACB×215 yday $2.70 → 09:30 $2.62 +17.20; RXO×22 yday $28.54 → 09:30 $28.34 +4.29 | — |
+| 2026-10-07 09:30 ET | **COVER** | `ARCO` | 79 | $8.06 | $2.23 | $-1.33 | $14,586.07 | ▼ -1.33 after sell → book $10,471.87; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **COVER** | `CDNA` | 9 | $61.38 | $2.02 | $+81.50 | $14,031.62 | ▲ +81.50 after sell → book $10,469.85; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **COVER** | `CMPX` | 651 | $0.97 | $8.27 | $-4.08 | $13,391.55 | ▼ -4.08 after sell → book $10,461.58; vs 09:30 mark -8.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **COVER** | `ITUB` | 63 | $10.11 | $2.18 | $-4.40 | $12,752.44 | ▼ -4.40 after sell → book $10,459.40; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **COVER** | `NTAP` | 2 | $232.00 | $2.00 | $-18.42 | $12,286.45 | ▼ -18.42 after sell → book $10,457.41; vs 09:30 mark -1.99 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **COVER** | `ONT` | 45 | $14.27 | $2.12 | $-4.29 | $11,642.17 | ▼ -4.29 after sell → book $10,455.28; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **COVER** | `PACB` | 215 | $2.62 | $2.77 | $+73.94 | $11,076.10 | ▲ +73.94 after sell → book $10,452.51; vs 09:30 mark -2.77 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **COVER** | `RXO` | 22 | $28.34 | $2.06 | $+4.32 | $10,450.45 | ▲ +4.32 after sell → book $10,450.45; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,450.45 | ▲ close $10,450.45 vs 09:30 $10,474.10 (session +0.00) | 16:00 close · cash $10,450.45 · no lots left · equity $10,450.45. | — |
 
 ## Not taken
 

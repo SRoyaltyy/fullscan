@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-17.11%** ($8,290) · signal-only (no cash/fees) was +24.03%. Starts YES **8/30**. Fills 244 · skips 304 · realized $-1035.82.
+Cash book **-17.96%** ($8,204) · signal-only (no cash/fees) was +24.03%. Starts YES **8/30**. Fills 245 · skips 304 · realized $-1035.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -392,6 +392,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `ZNTL` | 383 | $2.81 | $4.94 | — | $1,154.92 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable; ret5=+6.9; leftover $1077.84 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `SIBN` | 53 | $20.00 | $2.15 | — | $92.77 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable; ret5=+5.6; leftover $1077.84 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $92.77 | ▼ close $8,289.53 vs 09:30 $8,646.23 (session -300.63) | 16:00 close · cash $92.77 · equity $8,289.53 vs 09:30 $8,646.23 (-356.70; session marks -300.63) · 8 name(s) marked open→close (per-name table). AVPT×72 09:30 $14.77 → close $14.59 -12.96; TOST×35 09:30 $30.07 → close $30.25 +6.30; PDFS×18 09:30 $56.89 → close $54.44 -44.10; EBS×150 09:30 $7.16 → close $6.95 -31.50; ARCT×73 09:30 $14.70 → close $13.00 -124.10; XERS×105 09:30 $10.23 → close $10.07 -16.80; ZNTL×383 09:30 $2.81 → close $2.67 -53.62; SIBN×53 09:30 $20.00 → close $19.55 -23.85 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $92.77 | ▼ 09:30 equity $8,201.69 vs yday $8,289.53 (-87.84) | 09:30 open · cash $92.77 (unchanged overnight, no fees) · equity $8,201.69 vs prior close $8,289.53 (-87.84) · 8 name(s) re-marked at the open (per-name table). ARCT×73 yday $13.00 → 09:30 $12.71 -21.17; AVPT×72 yday $14.59 → 09:30 $14.51 -5.76; EBS×150 yday $6.95 → 09:30 $7.05 +15.00; PDFS×18 yday $54.44 → 09:30 $52.54 -34.20; SIBN×53 yday $19.55 → 09:30 $19.27 -14.84; TOST×35 yday $30.25 → 09:30 $30.13 -4.20; XERS×105 yday $10.07 → 09:30 $10.00 -7.35; ZNTL×383 yday $2.67 → 09:30 $2.63 -15.32 | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 72 | $14.51 | $2.23 | $+12.85 | $1,135.26 | ▲ +12.85 after sell → book $8,199.46; vs 09:30 mark -2.23 | dropped from list after 4 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,135.26 | ▲ close $8,204.42 vs 09:30 $8,201.69 (session +4.95) | 16:00 close · cash $1,135.26 · equity $8,204.42 vs 09:30 $8,201.69 (+2.73; session marks +4.95) · 7 name(s) marked open→close (per-name table). ARCT×73 09:30 $12.71 → close $12.77 +4.01; EBS×150 09:30 $7.05 → close $7.07 +3.00; PDFS×18 09:30 $52.54 → close $53.17 +11.34; SIBN×53 09:30 $19.27 → close $19.10 -9.01; TOST×35 09:30 $30.13 → close $30.55 +14.70; XERS×105 09:30 $10.00 → close $10.11 +11.55; ZNTL×383 09:30 $2.63 → close $2.55 -30.64 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_join_vol_green_h1 w=0.5,0.5 net=priority
 
-Cash book **-1.28%** ($9,872) · signal-only (no cash/fees) was —. Starts YES **26/30**. Fills 438 · skips 283 · realized $+3654.25.
+Cash book **-2.33%** ($9,767) · signal-only (no cash/fees) was —. Starts YES **26/30**. Fills 447 · skips 283 · realized $+3654.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $46.73.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,816.75.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -587,6 +587,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `BBD` | 81 | $4.52 | $2.23 | — | $404.14 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+29.4; combo leftover $367.69; owner union_join_vol_green_h1 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `NU` | 23 | $15.45 | $2.06 | — | $46.73 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_gainer; 🔵; ret5=+24.1; combo leftover $367.69; owner union_join_vol_green_h1 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $46.73 | ▲ close $9,871.62 vs 09:30 $9,762.75 (session +150.89) | 16:00 close · cash $46.73 · equity $9,871.62 vs 09:30 $9,762.75 (+108.87; session marks +150.89) · 10 name(s) marked open→close (per-name table). NKE×116 09:30 $33.70 → close $34.61 +105.56; RPM×30 09:30 $96.25 → close $98.31 +61.80; AVPT×24 09:30 $14.77 → close $14.59 -4.32; QTEX×215 09:30 $1.71 → close $1.59 -24.72; XP×12 09:30 $29.20 → close $29.73 +6.36; PAGS×33 09:30 $10.96 → close $10.72 -7.92; STNE×31 09:30 $11.67 → close $11.62 -1.55; INTR×53 09:30 $6.81 → close $7.03 +11.66; BBD×81 09:30 $4.52 → close $4.51 -0.81; NU×23 09:30 $15.45 → close $15.66 +4.83 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $46.73 | ▼ 09:30 equity $9,779.81 vs yday $9,871.62 (-91.82) | 09:30 open · cash $46.73 (unchanged overnight, no fees) · equity $9,779.81 vs prior close $9,871.62 (-91.82) | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 24 | $14.51 | $2.08 | $-10.38 | $392.89 | ▼ -10.38 after sell → book $9,777.72; vs 09:30 mark -2.09 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `BBD` | 81 | $4.50 | $2.26 | $-6.11 | $755.13 | ▼ -6.11 after sell → book $9,775.47; vs 09:30 mark -2.25 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `INTR` | 53 | $7.02 | $2.17 | $+6.81 | $1,125.02 | ▲ +6.81 after sell → book $9,773.30; vs 09:30 mark -2.17 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `NKE` | 116 | $34.39 | $2.39 | $+208.36 | $5,111.87 | ▲ +208.36 after sell → book $9,770.91; vs 09:30 mark -2.39 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `NU` | 23 | $15.55 | $2.08 | $-1.84 | $5,467.44 | ▼ -1.84 after sell → book $9,768.83; vs 09:30 mark -2.08 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PAGS` | 33 | $10.64 | $2.11 | $-14.76 | $5,816.46 | ▼ -14.76 after sell → book $9,766.72; vs 09:30 mark -2.11 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `QTEX` | 215 | $1.38 | $2.82 | $-76.54 | $6,109.26 | ▼ -76.54 after sell → book $9,763.90; vs 09:30 mark -2.82 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `STNE` | 31 | $11.56 | $2.10 | $-7.60 | $6,465.52 | ▼ -7.60 after sell → book $9,761.80; vs 09:30 mark -2.10 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `XP` | 12 | $29.44 | $2.05 | $-1.19 | $6,816.75 | ▼ -1.19 after sell → book $9,759.75; vs 09:30 mark -2.05 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,816.75 | ▲ close $9,766.65 vs 09:30 $9,779.81 (session +6.90) | 16:00 close · cash $6,816.75 · equity $9,766.65 vs 09:30 $9,779.81 (-13.16; session marks +6.90) · 1 name(s) marked open→close (per-name table). RPM×30 09:30 $98.10 → close $98.33 +6.90 | — |
 
 ## Not taken
 

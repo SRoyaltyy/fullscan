@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in hold 5, no 🚨
 
-Cash book **-14.87%** ($8,513) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 60 · skips 144 · realized $+404.42.
+Cash book **-15.10%** ($8,491) · signal-only (no cash/fees) was -2.74%. Starts YES **16/30**. Fills 60 · skips 144 · realized $+404.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -208,6 +208,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.11 | ▼ close $8,497.89 vs 09:30 $8,498.24 (session -0.35) | 16:00 close · cash $4.11 · equity $8,497.89 vs 09:30 $8,498.24 (-0.35; session marks -0.35) · 2 name(s) marked open→close (per-name table). ETON×77 09:30 $55.85 → close $55.62 -17.71; NKE×124 09:30 $33.82 → close $33.96 +17.36 | — |
 | 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.11 | ▲ 09:30 equity $8,506.46 vs yday $8,497.89 (+8.57) | 09:30 open · cash $4.11 (unchanged overnight, no fees) · equity $8,506.46 vs prior close $8,497.89 (+8.57) · 2 name(s) re-marked at the open (per-name table). ETON×77 yday $55.62 → 09:30 $56.15 +40.81; NKE×124 yday $33.96 → 09:30 $33.70 -32.24 | — |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.11 | ▲ close $8,513.04 vs 09:30 $8,506.46 (session +6.58) | 16:00 close · cash $4.11 · equity $8,513.04 vs 09:30 $8,506.46 (+6.58; session marks +6.58) · 2 name(s) marked open→close (per-name table). ETON×77 09:30 $56.15 → close $54.77 -106.26; NKE×124 09:30 $33.70 → close $34.61 +112.84 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.11 | ▼ 09:30 equity $8,414.15 vs yday $8,513.04 (-98.89) | 09:30 open · cash $4.11 (unchanged overnight, no fees) · equity $8,414.15 vs prior close $8,513.04 (-98.89) · 2 name(s) re-marked at the open (per-name table). ETON×77 yday $54.77 → 09:30 $53.84 -71.61; NKE×124 yday $34.61 → 09:30 $34.39 -27.28 | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.11 | ▲ close $8,490.51 vs 09:30 $8,414.15 (session +76.36) | 16:00 close · cash $4.11 · equity $8,490.51 vs 09:30 $8,414.15 (+76.36; session marks +76.36) · 2 name(s) marked open→close (per-name table). ETON×77 09:30 $53.84 → close $54.88 +80.08; NKE×124 09:30 $34.39 → close $34.36 -3.72 | — |
 
 ## Not taken
 

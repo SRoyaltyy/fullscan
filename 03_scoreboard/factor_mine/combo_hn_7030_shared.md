@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_news_g_h1 w=0.7,0.3 net=priority
 
-Cash book **+29.59%** ($12,959) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 364 · skips 126 · realized $+1716.61.
+Cash book **+24.08%** ($12,408) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 370 · skips 126 · realized $+1716.61.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $151.93.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,474.43.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -513,6 +513,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `SIBN` | 69 | $20.00 | $2.20 | — | $1,411.24 | — | union ∩ news_g, no 🚨; gate news=good; list probable; ret5=+5.6; combo leftover $1397.50; owner union_news_g_h1 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `TWST` | 6 | $209.55 | $2.01 | — | $151.93 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+14.1; combo leftover $1397.50; owner union_news_g_h1 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $151.93 | ▼ close $12,959.31 vs 09:30 $14,011.70 (session -985.69) | 16:00 close · cash $151.93 · equity $12,959.31 vs 09:30 $14,011.70 (-1052.39; session marks -985.69) · 7 name(s) marked open→close (per-name table). SDEV×703 09:30 $3.48 → close $3.25 -161.69; QTEX×1435 09:30 $1.71 → close $1.59 -165.02; DNA×162 09:30 $15.08 → close $12.41 -432.54; XP×83 09:30 $29.20 → close $29.73 +43.99; ALVO×230 09:30 $6.07 → close $6.14 +16.10; SIBN×69 09:30 $20.00 → close $19.55 -31.05; TWST×6 09:30 $209.55 → close $166.97 -255.48 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $151.93 | ▼ 09:30 equity $12,461.98 vs yday $12,959.31 (-497.33) | 09:30 open · cash $151.93 (unchanged overnight, no fees) · equity $12,461.98 vs prior close $12,959.31 (-497.33) | — |
+| 2026-10-07 09:30 ET | **SELL** | `ALVO` | 230 | $6.10 | $3.02 | $+0.92 | $1,551.91 | ▲ +0.92 after sell → book $12,458.97; vs 09:30 mark -3.01 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `DNA` | 162 | $11.80 | $2.52 | $-535.54 | $3,461.81 | ▼ -535.54 after sell → book $12,456.45; vs 09:30 mark -2.52 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `QTEX` | 1435 | $1.38 | $18.77 | $-510.83 | $5,416.16 | ▼ -510.83 after sell → book $12,437.68; vs 09:30 mark -18.77 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SDEV` | 703 | $3.27 | $9.20 | $-165.90 | $7,705.77 | ▼ -165.90 after sell → book $12,428.48; vs 09:30 mark -9.20 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `SIBN` | 69 | $19.27 | $2.22 | $-54.79 | $9,033.18 | ▼ -54.79 after sell → book $12,426.26; vs 09:30 mark -2.22 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `XP` | 83 | $29.44 | $2.27 | $+15.41 | $11,474.43 | ▲ +15.41 after sell → book $12,423.99; vs 09:30 mark -2.27 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,474.43 | ▼ close $12,408.33 vs 09:30 $12,461.98 (session -15.66) | 16:00 close · cash $11,474.43 · equity $12,408.33 vs 09:30 $12,461.98 (-53.65; session marks -15.66) · 1 name(s) marked open→close (per-name table). TWST×6 09:30 $158.26 → close $155.65 -15.66 | — |
 
 ## Not taken
 

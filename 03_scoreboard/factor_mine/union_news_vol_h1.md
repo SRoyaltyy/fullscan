@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-24.06%** ($7,594) · signal-only (no cash/fees) was +0.74%. Starts YES **0/30**. Fills 138 · skips 41 · realized $-847.98.
+Cash book **-26.70%** ($7,330) · signal-only (no cash/fees) was +0.74%. Starts YES **0/30**. Fills 139 · skips 41 · realized $-847.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -288,6 +288,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `ALVO` | 692 | $6.07 | $8.93 | — | $4,198.32 | — | combo gate; gate news=good,vol=good; list probable,yday_gainer; ret5=-0.7; leftover $4203.85 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `TWST` | 20 | $209.55 | $2.05 | — | $5.27 | — | combo gate; gate news=good,vol=good; list ohlc_hot; ret5=+14.1; leftover $4203.85 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.27 | ▼ close $7,593.55 vs 09:30 $8,407.69 (session -803.16) | 16:00 close · cash $5.27 · equity $7,593.55 vs 09:30 $8,407.69 (-814.14; session marks -803.16) · 2 name(s) marked open→close (per-name table). ALVO×692 09:30 $6.07 → close $6.14 +48.44; TWST×20 09:30 $209.55 → close $166.97 -851.60 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.27 | ▼ 09:30 equity $7,391.67 vs yday $7,593.55 (-201.88) | 09:30 open · cash $5.27 (unchanged overnight, no fees) · equity $7,391.67 vs prior close $7,593.55 (-201.88) · 2 name(s) re-marked at the open (per-name table). ALVO×692 yday $6.14 → 09:30 $6.10 -27.68; TWST×20 yday $166.97 → 09:30 $158.26 -174.20 | — |
+| 2026-10-07 09:30 ET | **SELL** | `ALVO` | 692 | $6.10 | $9.08 | $+2.76 | $4,217.39 | ▲ +2.76 after sell → book $7,382.59; vs 09:30 mark -9.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,217.39 | ▼ close $7,330.39 vs 09:30 $7,391.67 (session -52.20) | 16:00 close · cash $4,217.39 · equity $7,330.39 vs 09:30 $7,391.67 (-61.28; session marks -52.20) · 1 name(s) marked open→close (per-name table). TWST×20 09:30 $158.26 → close $155.65 -52.20 | — |
 
 ## Not taken
 

@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 7549.6,
+  "date": "2026-10-07",
+  "equity": 7549.6,
+  "fees": 22.8998,
+  "fills": [
+    {
+      "fees": 2.4432,
+      "fill_rule": "open",
+      "pnl": -460.08,
+      "price": 11.805,
+      "shares": 139,
+      "side": "SELL",
+      "ticker": "DNA"
+    },
+    {
+      "fees": 2.0455,
+      "fill_rule": "open",
+      "pnl": -2.07,
+      "price": 193.2,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "PTC"
+    },
+    {
+      "fees": 16.1762,
+      "fill_rule": "open",
+      "pnl": -440.34,
+      "price": 1.375,
+      "shares": 1237,
+      "side": "SELL",
+      "ticker": "QTEX"
+    },
+    {
+      "fees": 2.2349,
+      "fill_rule": "open",
+      "pnl": 12.84,
+      "price": 29.44,
+      "shares": 72,
+      "side": "SELL",
+      "ticker": "XP"
+    }
+  ],
+  "holdings": [],
+  "mean": -4.934,
+  "n_trades_today": 4,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 11.805,
+      "shares": 139,
+      "side": "SELL",
+      "ticker": "DNA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 193.2,
+      "shares": 10,
+      "side": "SELL",
+      "ticker": "PTC"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.375,
+      "shares": 1237,
+      "side": "SELL",
+      "ticker": "QTEX"
+    },
+    {
+      "fill_rule": "open",
+      "price": 29.44,
+      "shares": 72,
+      "side": "SELL",
+      "ticker": "XP"
+    }
+  ],
+  "state": {
+    "after": "2026-10-07",
+    "cash": 7549.6,
+    "pos": {},
+    "yday_equity": 7549.6
+  }
+}

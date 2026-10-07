@@ -231,6 +231,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **SELL** | `NTAP` | 17 | $224.80 | $2.08 | $+217.73 | $3,919.81 | ▲ +217.73 after sell → book $7,360.23; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **SELL** | `PRGS` | 91 | $37.81 | $2.31 | $-251.47 | $7,357.92 | ▼ -251.47 after sell → book $7,357.92; vs 09:30 mark -2.31 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,357.92 | ▲ close $7,357.92 vs 09:30 $7,362.31 (session +0.00) | 16:00 close · cash $7,357.92 · no lots left · equity $7,357.92. | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,357.92 | ▲ 09:30 equity $7,357.92 vs yday $7,357.92 (+0.00) | 09:30 open · cash $7,357.92 · no holdings · equity $7,357.92 vs prior close $7,357.92 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,357.92 | ▲ close $7,357.92 vs 09:30 $7,357.92 (session +0.00) | 16:00 close · cash $7,357.92 · no lots left · equity $7,357.92. | — |
 
 ## Not taken
 

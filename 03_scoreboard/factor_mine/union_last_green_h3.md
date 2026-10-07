@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green, no 🚨
 
-Cash book **-17.15%** ($8,285) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 222 · skips 312 · realized $-335.16.
+Cash book **-18.28%** ($8,172) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 226 · skips 312 · realized $-335.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -370,6 +370,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `XERS` | 103 | $10.23 | $2.30 | — | $1,113.44 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable; ret5=+3.1; leftover $1061.64 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `ZNTL` | 377 | $2.81 | $4.86 | — | $49.21 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable; ret5=+6.9; leftover $1061.64 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $49.21 | ▼ close $8,285.12 vs 09:30 $8,604.20 (session -262.28) | 16:00 close · cash $49.21 · equity $8,285.12 vs 09:30 $8,604.20 (-319.08; session marks -262.28) · 12 name(s) marked open→close (per-name table). AIB×5 09:30 $1.63 → close $1.57 -0.30; AVPT×75 09:30 $14.77 → close $14.59 -13.50; INDP×2 09:30 $2.51 → close $2.59 +0.16; QNC×4 09:30 $1.63 → close $1.63 +0.00; RR×4 09:30 $1.74 → close $1.67 -0.28; TOST×35 09:30 $30.07 → close $30.25 +6.30; PDFS×18 09:30 $56.89 → close $54.44 -44.10; EBS×148 09:30 $7.16 → close $6.95 -31.08; ARCT×72 09:30 $14.70 → close $13.00 -122.40; ALVO×174 09:30 $6.07 → close $6.14 +12.18; XERS×103 09:30 $10.23 → close $10.07 -16.48; ZNTL×377 09:30 $2.81 → close $2.67 -52.78 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $49.21 | ▼ 09:30 equity $8,204.62 vs yday $8,285.12 (-80.50) | 09:30 open · cash $49.21 (unchanged overnight, no fees) · equity $8,204.62 vs prior close $8,285.12 (-80.50) · 12 name(s) re-marked at the open (per-name table). AIB×5 yday $1.57 → 09:30 $1.48 -0.45; ALVO×174 yday $6.14 → 09:30 $6.10 -6.96; ARCT×72 yday $13.00 → 09:30 $12.71 -20.88; AVPT×75 yday $14.59 → 09:30 $14.51 -6.00; EBS×148 yday $6.95 → 09:30 $7.05 +14.80; INDP×2 yday $2.59 → 09:30 $2.57 -0.04; PDFS×18 yday $54.44 → 09:30 $52.54 -34.20; QNC×4 yday $1.63 → 09:30 $1.60 -0.12; RR×4 yday $1.67 → 09:30 $1.63 -0.16; TOST×35 yday $30.25 → 09:30 $30.13 -4.20; XERS×103 yday $10.07 → 09:30 $10.00 -7.21; ZNTL×377 yday $2.67 → 09:30 $2.63 -15.08 | — |
+| 2026-10-07 09:30 ET | **SELL** | `AIB` | 5 | $1.48 | $0.11 | $-0.05 | $56.50 | ▼ -0.05 after sell → book $8,204.51; vs 09:30 mark -0.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 75 | $14.51 | $2.24 | $+13.55 | $1,142.51 | ▲ +13.55 after sell → book $8,202.27; vs 09:30 mark -2.24 | dropped from list after 4 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `QNC` | 4 | $1.60 | $0.10 | $-0.54 | $1,148.82 | ▼ -0.54 after sell → book $8,202.18; vs 09:30 mark -0.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `RR` | 4 | $1.63 | $0.10 | $-0.82 | $1,155.24 | ▼ -0.82 after sell → book $8,202.08; vs 09:30 mark -0.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,155.24 | ▼ close $8,172.09 vs 09:30 $8,204.62 (session -29.99) | 16:00 close · cash $1,155.24 · equity $8,172.09 vs 09:30 $8,204.62 (-32.53; session marks -29.99) · 8 name(s) marked open→close (per-name table). ALVO×174 09:30 $6.10 → close $5.85 -43.50; ARCT×72 09:30 $12.71 → close $12.77 +3.96; EBS×148 09:30 $7.05 → close $7.07 +2.96; INDP×2 09:30 $2.57 → close $2.26 -0.62; PDFS×18 09:30 $52.54 → close $53.17 +11.34; TOST×35 09:30 $30.13 → close $30.55 +14.70; XERS×103 09:30 $10.00 → close $10.11 +11.33; ZNTL×377 09:30 $2.63 → close $2.55 -30.16 | — |
 
 ## Not taken
 

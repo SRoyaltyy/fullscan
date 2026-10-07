@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 4
 
-Cash book **-25.84%** ($7,416) · signal-only (no cash/fees) was -11.70%. Starts YES **2/30**. Fills 112 · skips 143 · realized $-1899.45.
+Cash book **-25.85%** ($7,415) · signal-only (no cash/fees) was -11.70%. Starts YES **2/30**. Fills 113 · skips 143 · realized $-1899.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -262,6 +262,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **SELL** | `NTAP` | 17 | $224.80 | $2.08 | $+217.73 | $3,821.16 | ▲ +217.73 after sell → book $7,416.50; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **SELL** | `PRGS` | 91 | $37.81 | $2.31 | $-251.47 | $7,259.27 | ▼ -251.47 after sell → book $7,414.19; vs 09:30 mark -2.31 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,259.27 | ▲ close $7,415.57 vs 09:30 $7,418.58 (session +1.38) | 16:00 close · cash $7,259.27 · equity $7,415.57 vs 09:30 $7,418.58 (-3.01; session marks +1.38) · 2 name(s) marked open→close (per-name table). CMPX×27 09:30 $0.99 → close $1.00 +0.22; COP×1 09:30 $128.19 → close $129.35 +1.16 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,259.27 | ▲ 09:30 equity $7,416.76 vs yday $7,415.57 (+1.19) | 09:30 open · cash $7,259.27 (unchanged overnight, no fees) · equity $7,416.76 vs prior close $7,415.57 (+1.19) · 2 name(s) re-marked at the open (per-name table). CMPX×27 yday $1.00 → 09:30 $0.97 -0.75; COP×1 yday $129.35 → 09:30 $131.29 +1.94 | — |
+| 2026-10-07 09:30 ET | **SELL** | `CMPX` | 27 | $0.97 | $0.36 | $+0.12 | $7,285.11 | ▲ +0.12 after sell → book $7,416.40; vs 09:30 mark -0.36 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,285.11 | ▼ close $7,414.95 vs 09:30 $7,416.76 (session -1.45) | 16:00 close · cash $7,285.11 · equity $7,414.95 vs 09:30 $7,416.76 (-1.81; session marks -1.45) · 1 name(s) marked open→close (per-name table). COP×1 09:30 $131.29 → close $129.84 -1.45 | — |
 
 ## Not taken
 

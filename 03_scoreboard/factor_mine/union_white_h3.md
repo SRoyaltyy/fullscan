@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ white, no 🚨
 
-Cash book **-18.80%** ($8,120) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 181 · skips 157 · realized $-1586.47.
+Cash book **-20.43%** ($7,957) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 188 · skips 157 · realized $-1586.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -329,6 +329,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $136.29 | ▲ 09:30 equity $8,417.60 vs yday $8,335.78 (+81.82) | 09:30 open · cash $136.29 (unchanged overnight, no fees) · equity $8,417.60 vs prior close $8,335.78 (+81.82) · 9 name(s) re-marked at the open (per-name table). BLFS×27 yday $38.61 → 09:30 $38.61 +0.00; CDNA×15 yday $69.85 → 09:30 $70.89 +15.60; ETON×19 yday $55.62 → 09:30 $56.15 +10.07; ILMN×3 yday $293.69 → 09:30 $301.58 +23.67; INOD×13 yday $66.97 → 09:30 $68.32 +17.55; NAUT×610 yday $1.87 → 09:30 $1.87 +0.00; NTAP×1 yday $223.77 → 09:30 $224.80 +1.03; SNPS×2 yday $488.47 → 09:30 $491.10 +5.26; WRBY×36 yday $26.65 → 09:30 $26.89 +8.64 | — |
 | 2026-10-06 09:30 ET | **BUY** | `AVPT` | 1 | $14.77 | $0.15 | — | $121.37 | — | union ∩ white, no 🚨; gate zero_red=True; list flatten; ⚪; ret5=+7.2; leftover $19.47 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $121.37 | ▼ close $8,120.42 vs 09:30 $8,417.60 (session -297.03) | 16:00 close · cash $121.37 · equity $8,120.42 vs 09:30 $8,417.60 (-297.18; session marks -297.03) · 10 name(s) marked open→close (per-name table). BLFS×27 09:30 $38.61 → close $38.61 +0.00; CDNA×15 09:30 $70.89 → close $63.79 -106.50; ETON×19 09:30 $56.15 → close $54.77 -26.22; ILMN×3 09:30 $301.58 → close $273.54 -84.12; INOD×13 09:30 $68.32 → close $66.24 -27.04; NAUT×610 09:30 $1.87 → close $1.77 -61.00; NTAP×1 09:30 $224.80 → close $228.45 +3.65; SNPS×2 09:30 $491.10 → close $505.17 +28.14; WRBY×36 09:30 $26.89 → close $26.23 -23.76; AVPT×1 09:30 $14.77 → close $14.59 -0.18 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $121.37 | ▼ 09:30 equity $7,973.77 vs yday $8,120.42 (-146.65) | 09:30 open · cash $121.37 (unchanged overnight, no fees) · equity $7,973.77 vs prior close $8,120.42 (-146.65) · 10 name(s) re-marked at the open (per-name table). AVPT×1 yday $14.59 → 09:30 $14.51 -0.08; BLFS×27 yday $38.61 → 09:30 $38.61 +0.00; CDNA×15 yday $63.79 → 09:30 $61.38 -36.12; ETON×19 yday $54.77 → 09:30 $53.84 -17.67; ILMN×3 yday $273.54 → 09:30 $271.61 -5.79; INOD×13 yday $66.24 → 09:30 $64.63 -20.90; NAUT×610 yday $1.77 → 09:30 $1.67 -61.00; NTAP×1 yday $228.45 → 09:30 $232.00 +3.55; SNPS×2 yday $505.17 → 09:30 $505.35 +0.36; WRBY×36 yday $26.23 → 09:30 $25.98 -9.00 | — |
+| 2026-10-07 09:30 ET | **SELL** | `CDNA` | 15 | $61.38 | $2.06 | $-78.31 | $1,040.05 | ▼ -78.31 after sell → book $7,971.71; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `ETON` | 19 | $53.84 | $2.07 | $+22.87 | $2,060.94 | ▲ +22.87 after sell → book $7,969.64; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `ILMN` | 3 | $271.61 | $2.02 | $+13.08 | $2,873.75 | ▲ +13.08 after sell → book $7,967.62; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `INOD` | 13 | $64.63 | $2.05 | $-113.51 | $3,711.92 | ▼ -113.51 after sell → book $7,965.58; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `NAUT` | 610 | $1.67 | $7.98 | $-12.80 | $4,722.64 | ▼ -12.80 after sell → book $7,957.60; vs 09:30 mark -7.98 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SNPS` | 2 | $505.35 | $2.02 | $+10.98 | $5,731.32 | ▲ +10.98 after sell → book $7,955.58; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `WRBY` | 36 | $25.98 | $2.12 | $-63.62 | $6,664.48 | ▼ -63.62 after sell → book $7,953.46; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,664.48 | ▲ close $7,957.00 vs 09:30 $7,973.77 (session +3.54) | 16:00 close · cash $6,664.48 · equity $7,957.00 vs 09:30 $7,973.77 (-16.77; session marks +3.54) · 3 name(s) marked open→close (per-name table). AVPT×1 09:30 $14.51 → close $14.28 -0.23; BLFS×27 09:30 $38.61 → close $38.61 +0.00; NTAP×1 09:30 $232.00 → close $235.77 +3.77 | — |
 
 ## Not taken
 

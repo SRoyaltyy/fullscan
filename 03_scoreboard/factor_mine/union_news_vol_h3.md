@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-28.92%** ($7,108) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 107 · skips 133 · realized $-1334.78.
+Cash book **-32.83%** ($6,717) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 108 · skips 133 · realized $-1334.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -257,6 +257,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `ALVO` | 645 | $6.07 | $8.32 | — | $3,912.01 | — | combo gate; gate news=good,vol=good; list probable,yday_gainer; ret5=-0.7; leftover $3917.74 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `TWST` | 18 | $209.55 | $2.04 | — | $138.07 | — | combo gate; gate news=good,vol=good; list ohlc_hot; ret5=+14.1; leftover $3917.74 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $138.07 | ▼ close $7,107.82 vs 09:30 $7,890.83 (session -721.26) | 16:00 close · cash $138.07 · equity $7,107.82 vs 09:30 $7,890.83 (-783.01; session marks -721.26) · 3 name(s) marked open→close (per-name table). CMPX×4 09:30 $0.99 → close $1.00 +0.03; ALVO×645 09:30 $6.07 → close $6.14 +45.15; TWST×18 09:30 $209.55 → close $166.97 -766.44 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $138.07 | ▼ 09:30 equity $6,925.13 vs yday $7,107.82 (-182.69) | 09:30 open · cash $138.07 (unchanged overnight, no fees) · equity $6,925.13 vs prior close $7,107.82 (-182.69) · 3 name(s) re-marked at the open (per-name table). ALVO×645 yday $6.14 → 09:30 $6.10 -25.80; CMPX×4 yday $1.00 → 09:30 $0.97 -0.11; TWST×18 yday $166.97 → 09:30 $158.26 -156.78 | — |
+| 2026-10-07 09:30 ET | **SELL** | `CMPX` | 4 | $0.97 | $0.07 | $+0.00 | $141.88 | ▼ +0.00 after sell → book $6,925.06; vs 09:30 mark -0.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $141.88 | ▼ close $6,716.83 vs 09:30 $6,925.13 (session -208.23) | 16:00 close · cash $141.88 · equity $6,716.83 vs 09:30 $6,925.13 (-208.30; session marks -208.23) · 2 name(s) marked open→close (per-name table). ALVO×645 09:30 $6.10 → close $5.85 -161.25; TWST×18 09:30 $158.26 → close $155.65 -46.98 | — |
 
 ## Not taken
 

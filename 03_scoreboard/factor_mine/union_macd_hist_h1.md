@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-2.14%** ($9,786) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 313 · skips 94 · realized $-657.32.
+Cash book **-3.24%** ($9,676) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 320 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -460,6 +460,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `SHOP` | 7 | $166.02 | $2.01 | — | $2,050.80 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ⚪; ret5=+11.2; leftover $1286.42 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `QLYS` | 6 | $199.16 | $2.01 | — | $853.83 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+14.3; leftover $1286.42 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $853.83 | ▼ close $9,786.32 vs 09:30 $10,307.64 (session -488.97) | 16:00 close · cash $853.83 · equity $9,786.32 vs 09:30 $10,307.64 (-521.32; session marks -488.97) · 8 name(s) marked open→close (per-name table). MTSI×3 09:30 $334.22 → close $350.67 +49.35; GRAL×8 09:30 $159.01 → close $137.28 -173.84; PTC×6 09:30 $193.00 → close $193.00 +0.00; P×8 09:30 $146.00 → close $147.20 +9.60; ILMN×4 09:30 $301.58 → close $273.54 -112.16; TWST×6 09:30 $209.55 → close $166.97 -255.48; SHOP×7 09:30 $166.02 → close $164.44 -11.06; QLYS×6 09:30 $199.16 → close $199.93 +4.62 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $853.83 | ▼ 09:30 equity $9,625.58 vs yday $9,786.32 (-160.74) | 09:30 open · cash $853.83 (unchanged overnight, no fees) · equity $9,625.58 vs prior close $9,786.32 (-160.74) · 8 name(s) re-marked at the open (per-name table). GRAL×8 yday $137.28 → 09:30 $134.00 -26.24; ILMN×4 yday $273.54 → 09:30 $271.61 -7.72; MTSI×3 yday $350.67 → 09:30 $339.98 -32.07; P×8 yday $147.20 → 09:30 $144.58 -20.96; PTC×6 yday $193.00 → 09:30 $193.20 +1.20; QLYS×6 yday $199.93 → 09:30 $198.33 -9.60; SHOP×7 yday $164.44 → 09:30 $162.57 -13.09; TWST×6 yday $166.97 → 09:30 $158.26 -52.26 | — |
+| 2026-10-07 09:30 ET | **SELL** | `GRAL` | 8 | $134.00 | $2.03 | $-204.13 | $1,923.80 | ▼ -204.13 after sell → book $9,623.55; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `ILMN` | 4 | $271.61 | $2.02 | $-123.90 | $3,008.21 | ▼ -123.90 after sell → book $9,621.52; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `MTSI` | 3 | $339.98 | $2.02 | $+13.26 | $4,026.14 | ▲ +13.26 after sell → book $9,619.51; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PTC` | 6 | $193.20 | $2.03 | $-2.84 | $5,183.31 | ▼ -2.84 after sell → book $9,617.48; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `QLYS` | 6 | $198.33 | $2.03 | $-9.02 | $6,371.26 | ▼ -9.02 after sell → book $9,615.45; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SHOP` | 7 | $162.57 | $2.03 | $-28.19 | $7,507.22 | ▼ -28.19 after sell → book $9,613.42; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `TWST` | 6 | $158.26 | $2.03 | $-311.78 | $8,454.75 | ▼ -311.78 after sell → book $9,611.39; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,454.75 | ▲ close $9,676.03 vs 09:30 $9,625.58 (session +64.64) | 16:00 close · cash $8,454.75 · equity $9,676.03 vs 09:30 $9,625.58 (+50.45; session marks +64.64) · 1 name(s) marked open→close (per-name table). P×8 09:30 $144.58 → close $152.66 +64.64 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_hot_n4_h1 w=0.5,0.5 net=priority
 
-Cash book **+80.01%** ($18,001) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 265 · skips 159 · realized $+2615.03.
+Cash book **+76.31%** ($17,631) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 269 · skips 159 · realized $+2615.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $23,513.31.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $35,908.28.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -414,6 +414,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `XP` | 120 | $29.20 | $2.35 | — | $14,109.72 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+39.1; combo leftover $3528.17; owner union_hot_n4_h1 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **SHORT** | `TRMD` | 239 | $39.36 | $3.46 | — | $23,513.31 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+15.9; combo leftover $9411.57; owner short_news_r_h3 | join🔴 sector🔴 gen🟡 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23,513.31 | ▼ close $18,000.95 vs 09:30 $18,911.29 (session -818.74) | 16:00 close · cash $23,513.31 · equity $18,000.95 vs 09:30 $18,911.29 (-910.34; session marks -818.74) · 9 name(s) marked open→close (per-name table). AXTI×27 09:30 $87.85 → close $84.06 +102.33; MXL×22 09:30 $108.22 → close $109.30 -23.76; SG×262 09:30 $9.08 → close $9.14 -15.72; TER×5 09:30 $445.07 → close $430.32 +73.75; SDEV×1013 09:30 $3.48 → close $3.25 -232.99; QTEX×2069 09:30 $1.71 → close $1.59 -237.93; DNA×233 09:30 $15.08 → close $12.41 -622.11; XP×120 09:30 $29.20 → close $29.73 +63.60; TRMD×239 09:30 $39.36 → close $39.05 +74.09 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23,513.31 | ▼ 09:30 equity $17,649.60 vs yday $18,000.95 (-351.35) | 09:30 open · cash $23,513.31 (unchanged overnight, no fees) · equity $17,649.60 vs prior close $18,000.95 (-351.35) | — |
+| 2026-10-07 09:30 ET | **SELL** | `DNA` | 233 | $11.80 | $3.07 | $-769.15 | $26,260.81 | ▼ -769.15 after sell → book $17,646.53; vs 09:30 mark -3.07 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `QTEX` | 2069 | $1.38 | $27.06 | $-736.52 | $29,078.63 | ▼ -736.52 after sell → book $17,619.48; vs 09:30 mark -27.05 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SDEV` | 1013 | $3.27 | $13.26 | $-239.06 | $32,377.87 | ▼ -239.06 after sell → book $17,606.21; vs 09:30 mark -13.27 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `XP` | 120 | $29.44 | $2.40 | $+24.05 | $35,908.28 | ▲ +24.05 after sell → book $17,603.82; vs 09:30 mark -2.39 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $35,908.28 | ▲ close $17,631.33 vs 09:30 $17,649.60 (session +27.51) | 16:00 close · cash $35,908.28 · equity $17,631.33 vs 09:30 $17,649.60 (-18.27; session marks +27.51) · 5 name(s) marked open→close (per-name table). AXTI×27 09:30 $79.80 → close $79.79 +0.27; MXL×22 09:30 $105.38 → close $107.36 -43.67; SG×262 09:30 $9.01 → close $9.16 -39.30; TER×5 09:30 $415.18 → close $411.78 +17.00; TRMD×239 09:30 $39.31 → close $38.92 +93.21 | — |
 
 ## Not taken
 

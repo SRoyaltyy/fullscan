@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-28.74%** ($7,126) · signal-only (no cash/fees) was -24.98%. Starts YES **1/30**. Fills 238 · skips 306 · realized $-1766.84.
+Cash book **-29.32%** ($7,068) · signal-only (no cash/fees) was -24.98%. Starts YES **1/30**. Fills 241 · skips 306 · realized $-1766.84.
 
 ## How this sleeve decides (like you are 10)
 
@@ -389,6 +389,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `ILMN` | 2 | $301.58 | $2.00 | — | $1,215.80 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+8.0; leftover $898.87 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `STZ` | 7 | $113.83 | $2.01 | — | $416.98 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list overnight; ret5=+0.3; leftover $898.87 | join🔴 sector🔴 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $416.98 | ▼ close $7,126.45 vs 09:30 $7,423.65 (session -262.34) | 16:00 close · cash $416.98 · equity $7,126.45 vs 09:30 $7,423.65 (-297.20; session marks -262.34) · 13 name(s) marked open→close (per-name table). AVPT×65 09:30 $14.77 → close $14.59 -11.70; EVGO×29 09:30 $1.36 → close $1.32 -1.13; INIO×2 09:30 $19.33 → close $21.35 +4.04; LWLG×4 09:30 $5.74 → close $5.62 -0.46; RR×14 09:30 $1.74 → close $1.67 -0.98; WNC×2 09:30 $14.16 → close $13.87 -0.58; EBS×125 09:30 $7.16 → close $6.95 -26.25; ARCT×61 09:30 $14.70 → close $13.00 -103.70; XERS×87 09:30 $10.23 → close $10.07 -13.92; ZNTL×319 09:30 $2.81 → close $2.67 -44.66; SIBN×44 09:30 $20.00 → close $19.55 -19.80; ILMN×2 09:30 $301.58 → close $273.54 -56.08; STZ×7 09:30 $113.83 → close $115.67 +12.88 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $416.98 | ▼ 09:30 equity $7,069.14 vs yday $7,126.45 (-57.31) | 09:30 open · cash $416.98 (unchanged overnight, no fees) · equity $7,069.14 vs prior close $7,126.45 (-57.31) · 13 name(s) re-marked at the open (per-name table). ARCT×61 yday $13.00 → 09:30 $12.71 -17.69; AVPT×65 yday $14.59 → 09:30 $14.51 -5.20; EBS×125 yday $6.95 → 09:30 $7.05 +12.50; EVGO×29 yday $1.32 → 09:30 $1.32 +0.00; ILMN×2 yday $273.54 → 09:30 $271.61 -3.86; INIO×2 yday $21.35 → 09:30 $20.80 -1.10; LWLG×4 yday $5.62 → 09:30 $5.54 -0.32; RR×14 yday $1.67 → 09:30 $1.63 -0.56; SIBN×44 yday $19.55 → 09:30 $19.27 -12.32; STZ×7 yday $115.67 → 09:30 $114.34 -9.31; WNC×2 yday $13.87 → 09:30 $13.57 -0.60; XERS×87 yday $10.07 → 09:30 $10.00 -6.09; ZNTL×319 yday $2.67 → 09:30 $2.63 -12.76 | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 65 | $14.51 | $2.21 | $+11.21 | $1,357.92 | ▲ +11.21 after sell → book $7,066.93; vs 09:30 mark -2.21 | dropped from list after 4 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `LWLG` | 4 | $5.54 | $0.25 | $-0.97 | $1,379.83 | ▼ -0.97 after sell → book $7,066.68; vs 09:30 mark -0.25 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `RR` | 14 | $1.63 | $0.29 | $-2.82 | $1,402.36 | ▼ -2.82 after sell → book $7,066.39; vs 09:30 mark -0.29 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,402.36 | ▲ close $7,067.96 vs 09:30 $7,069.14 (session +1.56) | 16:00 close · cash $1,402.36 · equity $7,067.96 vs 09:30 $7,069.14 (-1.18; session marks +1.56) · 10 name(s) marked open→close (per-name table). ARCT×61 09:30 $12.71 → close $12.77 +3.35; EBS×125 09:30 $7.05 → close $7.07 +2.50; EVGO×29 09:30 $1.32 → close $1.29 -0.87; ILMN×2 09:30 $271.61 → close $267.76 -7.70; INIO×2 09:30 $20.80 → close $20.34 -0.92; SIBN×44 09:30 $19.27 → close $19.10 -7.48; STZ×7 09:30 $114.34 → close $118.39 +28.35; WNC×2 09:30 $13.57 → close $13.71 +0.28; XERS×87 09:30 $10.00 → close $10.11 +9.57; ZNTL×319 09:30 $2.63 → close $2.55 -25.52 | — |
 
 ## Not taken
 

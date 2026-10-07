@@ -205,6 +205,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.81 | ▲ 09:30 equity $6,896.65 vs yday $6,788.94 (+107.71) | 09:30 open · cash $15.81 (unchanged overnight, no fees) · equity $6,896.65 vs prior close $6,788.94 (+107.71) · 1 name(s) re-marked at the open (per-name table). PRGS×182 yday $37.22 → 09:30 $37.81 +107.71 | — |
 | 2026-10-06 09:30 ET | **SELL** | `PRGS` | 182 | $37.81 | $2.62 | $-498.96 | $6,894.03 | ▼ -498.96 after sell → book $6,894.03; vs 09:30 mark -2.62 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,894.03 | ▲ close $6,894.03 vs 09:30 $6,896.65 (session +0.00) | 16:00 close · cash $6,894.03 · no lots left · equity $6,894.03. | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,894.03 | ▲ 09:30 equity $6,894.03 vs yday $6,894.03 (+0.00) | 09:30 open · cash $6,894.03 · no holdings · equity $6,894.03 vs prior close $6,894.03 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,894.03 | ▲ close $6,894.03 vs 09:30 $6,894.03 (session +0.00) | 16:00 close · cash $6,894.03 · no lots left · equity $6,894.03. | — |
 
 ## Not taken
 

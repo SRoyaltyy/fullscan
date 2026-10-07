@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-21.63%** ($7,837) · signal-only (no cash/fees) was -37.95%. Starts YES **0/30**. Fills 39 · skips 179 · realized $-881.39.
+Cash book **-22.19%** ($7,781) · signal-only (no cash/fees) was -37.95%. Starts YES **0/30**. Fills 39 · skips 179 · realized $-881.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -183,6 +183,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.54 | ▲ close $7,690.50 vs 09:30 $7,658.86 (session +31.64) | 16:00 close · cash $15.54 · equity $7,690.50 vs 09:30 $7,658.86 (+31.64; session marks +31.64) · 1 name(s) marked open→close (per-name table). NKE×226 09:30 $33.82 → close $33.96 +31.64 | — |
 | 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.54 | ▼ 09:30 equity $7,631.74 vs yday $7,690.50 (-58.76) | 09:30 open · cash $15.54 (unchanged overnight, no fees) · equity $7,631.74 vs prior close $7,690.50 (-58.76) · 1 name(s) re-marked at the open (per-name table). NKE×226 yday $33.96 → 09:30 $33.70 -58.76 | — |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.54 | ▲ close $7,837.40 vs 09:30 $7,631.74 (session +205.66) | 16:00 close · cash $15.54 · equity $7,837.40 vs 09:30 $7,631.74 (+205.66; session marks +205.66) · 1 name(s) marked open→close (per-name table). NKE×226 09:30 $33.70 → close $34.61 +205.66 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15.54 | ▼ 09:30 equity $7,787.68 vs yday $7,837.40 (-49.72) | 09:30 open · cash $15.54 (unchanged overnight, no fees) · equity $7,787.68 vs prior close $7,837.40 (-49.72) · 1 name(s) re-marked at the open (per-name table). NKE×226 yday $34.61 → 09:30 $34.39 -49.72 | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.54 | ▼ close $7,780.90 vs 09:30 $7,787.68 (session -6.78) | 16:00 close · cash $15.54 · equity $7,780.90 vs 09:30 $7,787.68 (-6.78; session marks -6.78) · 1 name(s) marked open→close (per-name table). NKE×226 09:30 $34.39 → close $34.36 -6.78 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g hold 5, no 🚨
 
-Cash book **-23.65%** ($7,635) · signal-only (no cash/fees) was +99.58%. Starts YES **1/30**. Fills 166 · skips 344 · realized $-1589.16.
+Cash book **-22.96%** ($7,704) · signal-only (no cash/fees) was +99.58%. Starts YES **1/30**. Fills 166 · skips 344 · realized $-1589.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -314,6 +314,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `ALVO` | 4 | $6.07 | $0.25 | — | $54.10 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list probable,yday_gainer; ret5=-0.7; leftover $26.21 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `SIBN` | 1 | $20.00 | $0.20 | — | $33.89 | — | union ∩ news_g hold 5, no 🚨; gate news=good; list probable; ret5=+5.6; leftover $26.21 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.89 | ▲ close $7,634.73 vs 09:30 $7,591.08 (session +44.11) | 16:00 close · cash $33.89 · equity $7,634.73 vs 09:30 $7,591.08 (+43.65; session marks +44.11) · 12 name(s) marked open→close (per-name table). CMPX×116 09:30 $0.99 → close $1.00 +0.94; COP×1 09:30 $128.19 → close $129.35 +1.16; ELMT×8 09:30 $21.63 → close $23.16 +12.24; GLND×25 09:30 $3.48 → close $3.00 -12.00; MU×1 09:30 $1064.48 → close $1045.56 -18.92; NTAP×9 09:30 $224.80 → close $228.45 +32.85; PRGS×47 09:30 $37.81 → close $37.20 -28.52; RRC×5 09:30 $38.71 → close $40.02 +6.55; TLSA×1732 09:30 $1.08 → close $1.11 +51.96; WRBY×3 09:30 $26.89 → close $26.23 -1.98; ALVO×4 09:30 $6.07 → close $6.14 +0.28; SIBN×1 09:30 $20.00 → close $19.55 -0.45 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $33.89 | ▲ 09:30 equity $7,643.80 vs yday $7,634.73 (+9.07) | 09:30 open · cash $33.89 (unchanged overnight, no fees) · equity $7,643.80 vs prior close $7,634.73 (+9.07) · 12 name(s) re-marked at the open (per-name table). ALVO×4 yday $6.14 → 09:30 $6.10 -0.16; CMPX×116 yday $1.00 → 09:30 $0.97 -3.20; COP×1 yday $129.35 → 09:30 $131.29 +1.94; ELMT×8 yday $23.16 → 09:30 $22.56 -4.80; GLND×25 yday $3.00 → 09:30 $2.94 -1.50; MU×1 yday $1045.56 → 09:30 $1017.37 -28.19; NTAP×9 yday $228.45 → 09:30 $232.00 +31.95; PRGS×47 yday $37.20 → 09:30 $37.48 +13.16; RRC×5 yday $40.02 → 09:30 $40.20 +0.90; SIBN×1 yday $19.55 → 09:30 $19.27 -0.28; TLSA×1732 yday $1.11 → 09:30 $1.11 +0.00; WRBY×3 yday $26.23 → 09:30 $25.98 -0.75 | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.89 | ▲ close $7,704.34 vs 09:30 $7,643.80 (session +60.54) | 16:00 close · cash $33.89 · equity $7,704.34 vs 09:30 $7,643.80 (+60.54; session marks +60.54) · 12 name(s) marked open→close (per-name table). ALVO×4 09:30 $6.10 → close $5.85 -1.00; CMPX×116 09:30 $0.97 → close $1.02 +5.74; COP×1 09:30 $131.29 → close $129.84 -1.45; ELMT×8 09:30 $22.56 → close $21.62 -7.52; GLND×25 09:30 $2.94 → close $2.71 -5.75; MU×1 09:30 $1017.37 → close $1088.00 +70.63; NTAP×9 09:30 $232.00 → close $235.77 +33.93; PRGS×47 09:30 $37.48 → close $37.21 -12.69; RRC×5 09:30 $40.20 → close $39.83 -1.85; SIBN×1 09:30 $19.27 → close $19.10 -0.17; TLSA×1732 09:30 $1.11 → close $1.10 -17.32; WRBY×3 09:30 $25.98 → close $25.31 -2.01 | — |
 
 ## Not taken
 

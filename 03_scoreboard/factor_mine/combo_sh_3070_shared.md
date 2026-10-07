@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_hot_n4_h1 w=0.3,0.7 net=priority
 
-Cash book **+84.03%** ($18,403) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 265 · skips 159 · realized $+2678.50.
+Cash book **+77.56%** ($17,757) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 269 · skips 159 · realized $+2678.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $16,233.86.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $33,005.13.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -414,6 +414,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `XP` | 163 | $29.20 | $2.48 | — | $8,128.68 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+39.1; combo leftover $4764.05; owner union_hot_n4_h1 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **SHORT** | `TRMD` | 206 | $39.36 | $2.98 | — | $16,233.86 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+15.9; combo leftover $8128.68; owner short_news_r_h3 | join🔴 sector🔴 gen🟡 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,233.86 | ▼ close $18,403.18 vs 09:30 $19,736.17 (session -1,216.23) | 16:00 close · cash $16,233.86 · equity $18,403.18 vs 09:30 $19,736.17 (-1332.99; session marks -1216.23) · 9 name(s) marked open→close (per-name table). AXTI×22 09:30 $87.85 → close $84.06 +83.38; MXL×18 09:30 $108.22 → close $109.30 -19.44; SG×207 09:30 $9.08 → close $9.14 -12.42; TER×4 09:30 $445.07 → close $430.32 +59.00; SDEV×1368 09:30 $3.48 → close $3.25 -314.64; QTEX×2794 09:30 $1.71 → close $1.59 -321.31; DNA×315 09:30 $15.08 → close $12.41 -841.05; XP×163 09:30 $29.20 → close $29.73 +86.39; TRMD×206 09:30 $39.36 → close $39.05 +63.86 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,233.86 | ▼ 09:30 equity $17,790.26 vs yday $18,403.18 (-612.92) | 09:30 open · cash $16,233.86 (unchanged overnight, no fees) · equity $17,790.26 vs prior close $18,403.18 (-612.92) | — |
+| 2026-10-07 09:30 ET | **SELL** | `DNA` | 315 | $11.80 | $4.15 | $-1039.83 | $19,948.29 | ▼ -1,039.83 after sell → book $17,786.12; vs 09:30 mark -4.15 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `QTEX` | 2794 | $1.38 | $36.54 | $-994.60 | $23,753.50 | ▼ -994.60 after sell → book $17,749.58; vs 09:30 mark -36.54 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SDEV` | 1368 | $3.27 | $17.91 | $-322.84 | $28,208.95 | ▼ -322.84 after sell → book $17,731.67; vs 09:30 mark -17.91 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `XP` | 163 | $29.44 | $2.54 | $+34.10 | $33,005.13 | ▲ +34.10 after sell → book $17,729.13; vs 09:30 mark -2.54 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33,005.13 | ▲ close $17,756.51 vs 09:30 $17,790.26 (session +27.38) | 16:00 close · cash $33,005.13 · equity $17,756.51 vs 09:30 $17,790.26 (-33.75; session marks +27.38) · 5 name(s) marked open→close (per-name table). AXTI×22 09:30 $79.80 → close $79.79 +0.22; MXL×18 09:30 $105.38 → close $107.36 -35.73; SG×207 09:30 $9.01 → close $9.16 -31.05; TER×4 09:30 $415.18 → close $411.78 +13.60; TRMD×206 09:30 $39.31 → close $38.92 +80.34 | — |
 
 ## Not taken
 

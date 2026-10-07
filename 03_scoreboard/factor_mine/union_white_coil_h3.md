@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-25.31%** ($7,469) · signal-only (no cash/fees) was -22.27%. Starts YES **0/30**. Fills 160 · skips 128 · realized $-1374.07.
+Cash book **-26.85%** ($7,315) · signal-only (no cash/fees) was -22.27%. Starts YES **0/30**. Fills 167 · skips 128 · realized $-1374.07.
 
 ## How this sleeve decides (like you are 10)
 
@@ -311,6 +311,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `TOST` | 4 | $30.07 | $1.21 | — | $141.82 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten; ⚪; ret5=-1.1; leftover $131.66 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `AVPT` | 8 | $14.77 | $1.21 | — | $22.45 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten; ⚪; ret5=+7.2; leftover $131.66 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.45 | ▼ close $7,469.36 vs 09:30 $8,009.95 (session -538.17) | 16:00 close · cash $22.45 · equity $7,469.36 vs 09:30 $8,009.95 (-540.59; session marks -538.17) · 10 name(s) marked open→close (per-name table). ACRS×216 09:30 $4.22 → close $3.70 -112.32; ARHS×96 09:30 $10.33 → close $9.92 -39.36; BLFS×26 09:30 $38.61 → close $38.61 +0.00; CDNA×14 09:30 $70.89 → close $63.79 -99.40; GRAL×7 09:30 $159.01 → close $137.28 -152.11; ILMN×3 09:30 $301.58 → close $273.54 -84.12; INOD×13 09:30 $68.32 → close $66.24 -27.04; WRBY×35 09:30 $26.89 → close $26.23 -23.10; TOST×4 09:30 $30.07 → close $30.25 +0.72; AVPT×8 09:30 $14.77 → close $14.59 -1.44 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $22.45 | ▼ 09:30 equity $7,331.00 vs yday $7,469.36 (-138.36) | 09:30 open · cash $22.45 (unchanged overnight, no fees) · equity $7,331.00 vs prior close $7,469.36 (-138.36) · 10 name(s) re-marked at the open (per-name table). ACRS×216 yday $3.70 → 09:30 $3.58 -25.92; ARHS×96 yday $9.92 → 09:30 $9.72 -19.20; AVPT×8 yday $14.59 → 09:30 $14.51 -0.64; BLFS×26 yday $38.61 → 09:30 $38.61 +0.00; CDNA×14 yday $63.79 → 09:30 $61.38 -33.71; GRAL×7 yday $137.28 → 09:30 $134.00 -22.96; ILMN×3 yday $273.54 → 09:30 $271.61 -5.79; INOD×13 yday $66.24 → 09:30 $64.63 -20.90; TOST×4 yday $30.25 → 09:30 $30.13 -0.48; WRBY×35 yday $26.23 → 09:30 $25.98 -8.75 | — |
+| 2026-10-07 09:30 ET | **SELL** | `ACRS` | 216 | $3.58 | $2.83 | $-204.34 | $792.90 | ▼ -204.34 after sell → book $7,328.17; vs 09:30 mark -2.83 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `ARHS` | 96 | $9.72 | $2.30 | $-42.98 | $1,723.71 | ▼ -42.98 after sell → book $7,325.87; vs 09:30 mark -2.30 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `CDNA` | 14 | $61.38 | $2.05 | $-73.36 | $2,581.01 | ▼ -73.36 after sell → book $7,323.82; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `GRAL` | 7 | $134.00 | $2.03 | $-14.68 | $3,516.98 | ▼ -14.68 after sell → book $7,321.78; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `ILMN` | 3 | $271.61 | $2.02 | $+13.08 | $4,329.79 | ▲ +13.08 after sell → book $7,319.77; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `INOD` | 13 | $64.63 | $2.05 | $-113.51 | $5,167.96 | ▼ -113.51 after sell → book $7,317.72; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `WRBY` | 35 | $25.98 | $2.12 | $-61.96 | $6,075.14 | ▼ -61.96 after sell → book $7,315.60; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,075.14 | ▼ close $7,315.44 vs 09:30 $7,331.00 (session -0.16) | 16:00 close · cash $6,075.14 · equity $7,315.44 vs 09:30 $7,331.00 (-15.56; session marks -0.16) · 3 name(s) marked open→close (per-name table). AVPT×8 09:30 $14.51 → close $14.28 -1.84; BLFS×26 09:30 $38.61 → close $38.61 +0.00; TOST×4 09:30 $30.13 → close $30.55 +1.68 | — |
 
 ## Not taken
 

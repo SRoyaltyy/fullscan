@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-18.57%** ($8,143) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 306 · skips 93 · realized $-1456.67.
+Cash book **-20.95%** ($7,905) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 313 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -450,6 +450,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `TWST` | 5 | $209.55 | $2.00 | — | $1,400.65 | — | baseline list, no extra gate; list ohlc_hot; ret5=+14.1; leftover $1097.87 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `MTSI` | 3 | $334.22 | $2.00 | — | $395.99 | — | baseline list, no extra gate; list ohlc_hot; ret5=+17.9; leftover $1097.87 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $395.99 | ▼ close $8,143.02 vs 09:30 $8,801.16 (session -619.47) | 16:00 close · cash $395.99 · equity $8,143.02 vs 09:30 $8,801.16 (-658.14; session marks -619.47) · 8 name(s) marked open→close (per-name table). CDNA×15 09:30 $70.89 → close $63.79 -106.50; QDEL×89 09:30 $12.24 → close $12.57 +29.51; KOD×11 09:30 $93.00 → close $92.34 -7.26; TJGC×33 09:30 $33.00 → close $27.82 -170.94; GRAL×6 09:30 $159.01 → close $137.28 -130.38; SEER×469 09:30 $2.34 → close $2.19 -70.35; TWST×5 09:30 $209.55 → close $166.97 -212.90; MTSI×3 09:30 $334.22 → close $350.67 +49.35 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $395.99 | ▼ 09:30 equity $7,930.53 vs yday $8,143.02 (-212.49) | 09:30 open · cash $395.99 (unchanged overnight, no fees) · equity $7,930.53 vs prior close $8,143.02 (-212.49) · 8 name(s) re-marked at the open (per-name table). CDNA×15 yday $63.79 → 09:30 $61.38 -36.12; GRAL×6 yday $137.28 → 09:30 $134.00 -19.68; KOD×11 yday $92.34 → 09:30 $91.74 -6.60; MTSI×3 yday $350.67 → 09:30 $339.98 -32.07; QDEL×89 yday $12.57 → 09:30 $12.34 -20.47; SEER×469 yday $2.19 → 09:30 $2.16 -14.07; TJGC×33 yday $27.82 → 09:30 $26.61 -39.93; TWST×5 yday $166.97 → 09:30 $158.26 -43.55 | — |
+| 2026-10-07 09:30 ET | **SELL** | `CDNA` | 15 | $61.38 | $2.06 | $-146.71 | $1,314.66 | ▼ -146.71 after sell → book $7,928.48; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `GRAL` | 6 | $134.00 | $2.03 | $-154.10 | $2,116.64 | ▼ -154.10 after sell → book $7,926.45; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `MTSI` | 3 | $339.98 | $2.02 | $+13.26 | $3,134.56 | ▲ +13.26 after sell → book $7,924.43; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `QDEL` | 89 | $12.34 | $2.28 | $+4.50 | $4,230.54 | ▲ +4.50 after sell → book $7,922.15; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SEER` | 469 | $2.16 | $6.14 | $-96.61 | $5,237.44 | ▼ -96.61 after sell → book $7,916.01; vs 09:30 mark -6.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `TJGC` | 33 | $26.61 | $2.11 | $-215.07 | $6,113.46 | ▼ -215.07 after sell → book $7,913.90; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `TWST` | 5 | $158.26 | $2.02 | $-260.48 | $6,902.73 | ▼ -260.48 after sell → book $7,911.87; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,902.73 | ▼ close $7,904.61 vs 09:30 $7,930.53 (session -7.26) | 16:00 close · cash $6,902.73 · equity $7,904.61 vs 09:30 $7,930.53 (-25.92; session marks -7.26) · 1 name(s) marked open→close (per-name table). KOD×11 09:30 $91.74 → close $91.08 -7.26 | — |
 
 ## Not taken
 

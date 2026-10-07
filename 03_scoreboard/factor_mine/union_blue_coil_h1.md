@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-16.26%** ($8,374) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 306 · skips 79 · realized $-1931.95.
+Cash book **-18.36%** ($8,164) · signal-only (no cash/fees) was -23.64%. Starts YES **0/30**. Fills 308 · skips 79 · realized $-1931.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -456,6 +456,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `VELO` | 428 | $9.77 | $5.52 | — | $4,191.48 | — | combo gate; gate blue=True,ret_5_max=10.0; list yday_mover; 🔵; ret5=-12.8; leftover $4189.28 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `RPM` | 43 | $96.25 | $2.12 | — | $50.61 | — | combo gate; gate blue=True,ret_5_max=10.0; list earn_react; 🔵; ret5=-4.9; leftover $4189.28 | join🔴 sector🟢 gen🟡 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $50.61 | ▲ close $8,373.90 vs 09:30 $8,378.56 (session +2.98) | 16:00 close · cash $50.61 · equity $8,373.90 vs 09:30 $8,378.56 (-4.66; session marks +2.98) · 2 name(s) marked open→close (per-name table). VELO×428 09:30 $9.77 → close $9.57 -85.60; RPM×43 09:30 $96.25 → close $98.31 +88.58 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $50.61 | ▼ 09:30 equity $8,172.27 vs yday $8,373.90 (-201.63) | 09:30 open · cash $50.61 (unchanged overnight, no fees) · equity $8,172.27 vs prior close $8,373.90 (-201.63) · 2 name(s) re-marked at the open (per-name table). RPM×43 yday $98.31 → 09:30 $98.10 -9.03; VELO×428 yday $9.57 → 09:30 $9.12 -192.60 | — |
+| 2026-10-07 09:30 ET | **SELL** | `RPM` | 43 | $98.10 | $2.16 | $+75.27 | $4,266.75 | ▲ +75.27 after sell → book $8,170.11; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `VELO` | 428 | $9.12 | $5.62 | $-289.34 | $8,164.48 | ▼ -289.34 after sell → book $8,164.48; vs 09:30 mark -5.63 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,164.48 | ▲ close $8,164.48 vs 09:30 $8,172.27 (session +0.00) | 16:00 close · cash $8,164.48 · no lots left · equity $8,164.48. | — |
 
 ## Not taken
 

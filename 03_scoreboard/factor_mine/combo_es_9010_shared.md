@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/short_news_r_h3 w=0.9,0.1 net=priority
 
-Cash book **-12.38%** ($8,761) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 276 · skips 319 · realized $+4040.10.
+Cash book **-11.27%** ($8,873) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 276 · skips 319 · realized $+4040.10.
 
 ## How this sleeve decides (like you are 10)
 
@@ -425,6 +425,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `RPM` | 117 | $96.25 | $2.34 | — | $1,256.03 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-4.9; combo leftover $11267.66; owner union_e_fresh_h3 | join🔴 sector🟢 gen🟡 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **SHORT** | `TRMD` | 31 | $39.36 | $2.14 | — | $2,474.05 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+15.9; combo leftover $1256.03; owner short_news_r_h3 | join🔴 sector🔴 gen🟡 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,474.05 | ▲ close $8,761.45 vs 09:30 $8,470.48 (session +307.97) | 16:00 close · cash $2,474.05 · equity $8,761.45 vs 09:30 $8,470.48 (+290.97; session marks +307.97) · 6 name(s) marked open→close (per-name table). AXTI×12 09:30 $87.85 → close $84.06 +45.48; MXL×10 09:30 $108.22 → close $109.30 -10.80; SG×114 09:30 $9.08 → close $9.14 -6.84; TER×2 09:30 $445.07 → close $430.32 +29.50; RPM×117 09:30 $96.25 → close $98.31 +241.02; TRMD×31 09:30 $39.36 → close $39.05 +9.61 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,474.05 | ▲ 09:30 equity $8,864.29 vs yday $8,761.45 (+102.84) | 09:30 open · cash $2,474.05 (unchanged overnight, no fees) · equity $8,864.29 vs prior close $8,761.45 (+102.84) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,474.05 | ▲ close $8,873.26 vs 09:30 $8,864.29 (session +8.97) | 16:00 close · cash $2,474.05 · equity $8,873.26 vs 09:30 $8,864.29 (+8.97; session marks +8.97) · 6 name(s) marked open→close (per-name table). AXTI×12 09:30 $79.80 → close $79.79 +0.12; MXL×10 09:30 $105.38 → close $107.36 -19.85; RPM×117 09:30 $98.10 → close $98.33 +26.91; SG×114 09:30 $9.01 → close $9.16 -17.10; TER×2 09:30 $415.18 → close $411.78 +6.80; TRMD×31 09:30 $39.31 → close $38.92 +12.09 | — |
 
 ## Not taken
 

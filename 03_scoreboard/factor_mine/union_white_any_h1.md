@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + (yday up or major catalyst), then Score
 
-Cash book **-13.85%** ($8,615) · signal-only (no cash/fees) was -10.91%. Starts YES **0/30**. Fills 241 · skips 0 · realized $-1084.78.
+Cash book **-14.85%** ($8,516) · signal-only (no cash/fees) was -10.91%. Starts YES **0/30**. Fills 248 · skips 0 · realized $-1084.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -391,3 +391,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `IOT` | 29 | $42.70 | $2.08 | — | $1,499.15 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; ⚪; ret5=+11.8; leftover $1247.31 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `SHOP` | 7 | $166.02 | $2.01 | — | $335.00 | — | −0 red + (yday up or major catalyst), then Score; gate cam_bad_max=0,yday_or_catalyst=True; rank list; list ohlc_hot; 🔵; ⚪; ret5=+11.2; leftover $1247.31 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $335.00 | ▼ close $8,615.23 vs 09:30 $8,733.38 (session -101.45) | 16:00 close · cash $335.00 · equity $8,615.23 vs 09:30 $8,733.38 (-118.15; session marks -101.45) · 7 name(s) marked open→close (per-name table). TOST×41 09:30 $30.07 → close $30.25 +7.38; PDFS×21 09:30 $56.89 → close $54.44 -51.45; AVPT×84 09:30 $14.77 → close $14.59 -15.12; PTC×6 09:30 $193.00 → close $193.00 +0.00; GWRE×7 09:30 $165.00 → close $164.52 -3.36; IOT×29 09:30 $42.70 → close $41.74 -27.84; SHOP×7 09:30 $166.02 → close $164.44 -11.06 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $335.00 | ▼ 09:30 equity $8,530.17 vs yday $8,615.23 (-85.06) | 09:30 open · cash $335.00 (unchanged overnight, no fees) · equity $8,530.17 vs prior close $8,615.23 (-85.06) · 7 name(s) re-marked at the open (per-name table). AVPT×84 yday $14.59 → 09:30 $14.51 -6.72; GWRE×7 yday $164.52 → 09:30 $162.01 -17.57; IOT×29 yday $41.74 → 09:30 $41.60 -4.06; PDFS×21 yday $54.44 → 09:30 $52.54 -39.90; PTC×6 yday $193.00 → 09:30 $193.20 +1.20; SHOP×7 yday $164.44 → 09:30 $162.57 -13.09; TOST×41 yday $30.25 → 09:30 $30.13 -4.92 | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 84 | $14.51 | $2.27 | $-26.35 | $1,551.57 | ▼ -26.35 after sell → book $8,527.90; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `GWRE` | 7 | $162.01 | $2.03 | $-24.97 | $2,683.61 | ▼ -24.97 after sell → book $8,525.87; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `IOT` | 29 | $41.60 | $2.10 | $-36.07 | $3,887.92 | ▼ -36.07 after sell → book $8,523.78; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PDFS` | 21 | $52.54 | $2.07 | $-95.48 | $4,989.18 | ▼ -95.48 after sell → book $8,521.70; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PTC` | 6 | $193.20 | $2.03 | $-2.84 | $6,146.36 | ▼ -2.84 after sell → book $8,519.68; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SHOP` | 7 | $162.57 | $2.03 | $-28.19 | $7,282.31 | ▼ -28.19 after sell → book $8,517.64; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `TOST` | 41 | $30.13 | $2.13 | $-1.79 | $8,515.51 | ▼ -1.79 after sell → book $8,515.51; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,515.51 | ▲ close $8,515.51 vs 09:30 $8,530.17 (session +0.00) | 16:00 close · cash $8,515.51 · no lots left · equity $8,515.51. | — |

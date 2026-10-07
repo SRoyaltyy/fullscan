@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-10.63%** ($8,937) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 224 · skips 257 · realized $-743.63.
+Cash book **-11.79%** ($8,821) · signal-only (no cash/fees) was -17.17%. Starts YES **5/30**. Fills 224 · skips 257 · realized $-743.63.
 
 ## How this sleeve decides (like you are 10)
 
@@ -371,6 +371,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `SHOP` | 7 | $166.02 | $2.01 | — | $1,780.23 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ⚪; ret5=+11.2; leftover $1168.83 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `QLYS` | 5 | $199.16 | $2.00 | — | $782.42 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+14.3; leftover $1168.83 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $782.42 | ▼ close $8,937.19 vs 09:30 $9,366.96 (session -397.39) | 16:00 close · cash $782.42 · equity $8,937.19 vs 09:30 $9,366.96 (-429.77; session marks -397.39) · 8 name(s) marked open→close (per-name table). MTSI×3 09:30 $334.22 → close $350.67 +49.35; GRAL×7 09:30 $159.01 → close $137.28 -152.11; PTC×6 09:30 $193.00 → close $193.00 +0.00; P×8 09:30 $146.00 → close $147.20 +9.60; ILMN×3 09:30 $301.58 → close $273.54 -84.12; TWST×5 09:30 $209.55 → close $166.97 -212.90; SHOP×7 09:30 $166.02 → close $164.44 -11.06; QLYS×5 09:30 $199.16 → close $199.93 +3.85 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $782.42 | ▼ 09:30 equity $8,791.97 vs yday $8,937.19 (-145.22) | 09:30 open · cash $782.42 (unchanged overnight, no fees) · equity $8,791.97 vs prior close $8,937.19 (-145.22) · 8 name(s) re-marked at the open (per-name table). GRAL×7 yday $137.28 → 09:30 $134.00 -22.96; ILMN×3 yday $273.54 → 09:30 $271.61 -5.79; MTSI×3 yday $350.67 → 09:30 $339.98 -32.07; P×8 yday $147.20 → 09:30 $144.58 -20.96; PTC×6 yday $193.00 → 09:30 $193.20 +1.20; QLYS×5 yday $199.93 → 09:30 $198.33 -8.00; SHOP×7 yday $164.44 → 09:30 $162.57 -13.09; TWST×5 yday $166.97 → 09:30 $158.26 -43.55 | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $782.42 | ▲ close $8,820.82 vs 09:30 $8,791.97 (session +28.85) | 16:00 close · cash $782.42 · equity $8,820.82 vs 09:30 $8,791.97 (+28.85; session marks +28.85) · 8 name(s) marked open→close (per-name table). GRAL×7 09:30 $134.00 → close $132.90 -7.70; ILMN×3 09:30 $271.61 → close $267.76 -11.55; MTSI×3 09:30 $339.98 → close $335.91 -12.21; P×8 09:30 $144.58 → close $152.66 +64.64; PTC×6 09:30 $193.20 → close $193.60 +2.40; QLYS×5 09:30 $198.33 → close $194.75 -17.90; SHOP×7 09:30 $162.57 → close $166.03 +24.22; TWST×5 09:30 $158.26 → close $155.65 -13.05 | — |
 
 ## Not taken
 

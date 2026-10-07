@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_g_h1/union_earn_react_h3 w=0.5,0.5 net=priority
 
-Cash book **-19.55%** ($8,045) · signal-only (no cash/fees) was —. Starts YES **6/30**. Fills 371 · skips 304 · realized $+1785.21.
+Cash book **-20.33%** ($7,967) · signal-only (no cash/fees) was —. Starts YES **6/30**. Fills 374 · skips 304 · realized $+1785.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $196.02.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $5,041.47.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -520,6 +520,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `SIBN` | 41 | $20.00 | $2.11 | — | $826.67 | — | union ∩ news_g, no 🚨; gate news=good; list probable; ret5=+5.6; combo leftover $825.57; owner union_news_g_h1 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `TWST` | 3 | $209.55 | $2.00 | — | $196.02 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+14.1; combo leftover $825.57; owner union_news_g_h1 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $196.02 | ▲ close $8,044.61 vs 09:30 $8,065.22 (session +0.37) | 16:00 close · cash $196.02 · equity $8,044.61 vs 09:30 $8,065.22 (-20.61; session marks +0.37) · 5 name(s) marked open→close (per-name table). NKE×94 09:30 $33.70 → close $34.61 +85.54; RPM×25 09:30 $96.25 → close $98.31 +51.50; ALVO×136 09:30 $6.07 → close $6.14 +9.52; SIBN×41 09:30 $20.00 → close $19.55 -18.45; TWST×3 09:30 $209.55 → close $166.97 -127.74 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $196.02 | ▼ 09:30 equity $7,975.63 vs yday $8,044.61 (-68.98) | 09:30 open · cash $196.02 (unchanged overnight, no fees) · equity $7,975.63 vs prior close $8,044.61 (-68.98) | — |
+| 2026-10-07 09:30 ET | **SELL** | `ALVO` | 136 | $6.10 | $2.43 | $-0.75 | $1,023.19 | ▼ -0.75 after sell → book $7,973.20; vs 09:30 mark -2.43 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `NKE` | 94 | $34.39 | $2.31 | $+168.09 | $4,253.54 | ▲ +168.09 after sell → book $7,970.89; vs 09:30 mark -2.31 | union_earn_react_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SIBN` | 41 | $19.27 | $2.13 | $-34.18 | $5,041.47 | ▼ -34.18 after sell → book $7,968.75; vs 09:30 mark -2.14 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,041.47 | ▼ close $7,966.67 vs 09:30 $7,975.63 (session -2.08) | 16:00 close · cash $5,041.47 · equity $7,966.67 vs 09:30 $7,975.63 (-8.96; session marks -2.08) · 2 name(s) marked open→close (per-name table). RPM×25 09:30 $98.10 → close $98.33 +5.75; TWST×3 09:30 $158.26 → close $155.65 -7.83 | — |
 
 ## Not taken
 

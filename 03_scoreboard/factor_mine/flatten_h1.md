@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-16.66%** ($8,334) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 258 · skips 78 · realized $-357.09.
+Cash book **-17.77%** ($8,223) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 264 · skips 78 · realized $-357.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -402,6 +402,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `PDFS` | 24 | $56.89 | $2.06 | — | $1,685.59 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+12.7; leftover $1420.90 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `AVPT` | 96 | $14.77 | $2.28 | — | $265.39 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+7.2; leftover $1420.90 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $265.39 | ▼ close $8,333.88 vs 09:30 $8,542.44 (session -178.97) | 16:00 close · cash $265.39 · equity $8,333.88 vs 09:30 $8,542.44 (-208.56; session marks -178.97) · 6 name(s) marked open→close (per-name table). CDNA×20 09:30 $70.89 → close $63.79 -142.00; SN×7 09:30 $183.47 → close $184.72 +8.75; TOST×47 09:30 $30.07 → close $30.25 +8.46; NTAP×6 09:30 $224.80 → close $228.45 +21.90; PDFS×24 09:30 $56.89 → close $54.44 -58.80; AVPT×96 09:30 $14.77 → close $14.59 -17.28 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $265.39 | ▼ 09:30 equity $8,236.06 vs yday $8,333.88 (-97.82) | 09:30 open · cash $265.39 (unchanged overnight, no fees) · equity $8,236.06 vs prior close $8,333.88 (-97.82) · 6 name(s) re-marked at the open (per-name table). AVPT×96 yday $14.59 → 09:30 $14.51 -7.68; CDNA×20 yday $63.79 → 09:30 $61.38 -48.16; NTAP×6 yday $228.45 → 09:30 $232.00 +21.30; PDFS×24 yday $54.44 → 09:30 $52.54 -45.60; SN×7 yday $184.72 → 09:30 $183.00 -12.04; TOST×47 yday $30.25 → 09:30 $30.13 -5.64 | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 96 | $14.51 | $2.31 | $-29.54 | $1,656.04 | ▼ -29.54 after sell → book $8,233.75; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `CDNA` | 20 | $61.38 | $2.07 | $-194.28 | $2,881.61 | ▼ -194.28 after sell → book $8,231.68; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `NTAP` | 6 | $232.00 | $2.03 | $+39.16 | $4,271.59 | ▲ +39.16 after sell → book $8,229.66; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PDFS` | 24 | $52.54 | $2.08 | $-108.54 | $5,530.46 | ▼ -108.54 after sell → book $8,227.57; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SN` | 7 | $183.00 | $2.03 | $-7.33 | $6,809.43 | ▼ -7.33 after sell → book $8,225.54; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `TOST` | 47 | $30.13 | $2.15 | $-1.46 | $8,223.39 | ▼ -1.46 after sell → book $8,223.39; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,223.39 | ▲ close $8,223.39 vs 09:30 $8,236.06 (session +0.00) | 16:00 close · cash $8,223.39 · no lots left · equity $8,223.39. | — |
 
 ## Not taken
 

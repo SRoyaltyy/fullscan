@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_news_g_h1 w=0.3,0.7 net=priority
 
-Cash book **-44.28%** ($5,572) · signal-only (no cash/fees) was —. Starts YES **0/30**. Fills 369 · skips 196 · realized $-422.24.
+Cash book **-45.09%** ($5,491) · signal-only (no cash/fees) was —. Starts YES **0/30**. Fills 371 · skips 196 · realized $-422.24.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $5,074.72.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,864.05.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -518,6 +518,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `TWST` | 9 | $209.55 | $2.02 | — | $2,557.96 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+14.1; combo leftover $1938.69; owner union_news_g_h1 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **SHORT** | `TRMD` | 64 | $39.36 | $2.28 | — | $5,074.72 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+15.9; combo leftover $2557.96; owner short_news_r_h3 | join🔴 sector🔴 gen🟡 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,074.72 | ▼ close $5,571.95 vs 09:30 $5,953.68 (session -353.83) | 16:00 close · cash $5,074.72 · equity $5,571.95 vs 09:30 $5,953.68 (-381.73; session marks -353.83) · 8 name(s) marked open→close (per-name table). AXTI×7 09:30 $87.85 → close $84.06 +26.53; MXL×6 09:30 $108.22 → close $109.30 -6.48; SG×73 09:30 $9.08 → close $9.14 -4.38; TER×1 09:30 $445.07 → close $430.32 +14.75; ALVO×319 09:30 $6.07 → close $6.14 +22.33; SIBN×96 09:30 $20.00 → close $19.55 -43.20; TWST×9 09:30 $209.55 → close $166.97 -383.22; TRMD×64 09:30 $39.36 → close $39.05 +19.84 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,074.72 | ▼ 09:30 equity $5,515.28 vs yday $5,571.95 (-56.67) | 09:30 open · cash $5,074.72 (unchanged overnight, no fees) · equity $5,515.28 vs prior close $5,571.95 (-56.67) | — |
+| 2026-10-07 09:30 ET | **SELL** | `ALVO` | 319 | $6.10 | $4.18 | $+1.27 | $7,016.44 | ▲ +1.27 after sell → book $5,511.10; vs 09:30 mark -4.18 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SIBN` | 96 | $19.27 | $2.31 | $-74.67 | $8,864.05 | ▼ -74.67 after sell → book $5,508.79; vs 09:30 mark -2.31 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,864.05 | ▼ close $5,490.87 vs 09:30 $5,515.28 (session -17.92) | 16:00 close · cash $8,864.05 · equity $5,490.87 vs 09:30 $5,515.28 (-24.41; session marks -17.92) · 6 name(s) marked open→close (per-name table). AXTI×7 09:30 $79.80 → close $79.79 +0.07; MXL×6 09:30 $105.38 → close $107.36 -11.91; SG×73 09:30 $9.01 → close $9.16 -10.95; TER×1 09:30 $415.18 → close $411.78 +3.40; TRMD×64 09:30 $39.31 → close $38.92 +24.96; TWST×9 09:30 $158.26 → close $155.65 -23.49 | — |
 
 ## Not taken
 

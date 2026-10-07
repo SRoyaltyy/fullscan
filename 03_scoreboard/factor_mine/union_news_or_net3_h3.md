@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 3
 
-Cash book **-27.07%** ($7,292) · signal-only (no cash/fees) was -21.14%. Starts YES **1/30**. Fills 138 · skips 162 · realized $-2181.08.
+Cash book **-27.08%** ($7,292) · signal-only (no cash/fees) was -21.14%. Starts YES **1/30**. Fills 139 · skips 162 · realized $-2181.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -288,6 +288,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **SELL** | `PRGS` | 61 | $37.81 | $2.20 | $-169.88 | $4,883.89 | ▼ -169.88 after sell → book $7,321.54; vs 09:30 mark -2.20 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-06 09:30 ET | **SELL** | `TLSA` | 2236 | $1.08 | $29.23 | $-125.16 | $7,269.54 | ▼ -125.16 after sell → book $7,292.31; vs 09:30 mark -29.23 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,269.54 | ▲ close $7,292.49 vs 09:30 $7,325.79 (session +0.19) | 16:00 close · cash $7,269.54 · equity $7,292.49 vs 09:30 $7,325.79 (-33.30; session marks +0.19) · 1 name(s) marked open→close (per-name table). CMPX×23 09:30 $0.99 → close $1.00 +0.19 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,269.54 | ▼ 09:30 equity $7,291.86 vs yday $7,292.49 (-0.63) | 09:30 open · cash $7,269.54 (unchanged overnight, no fees) · equity $7,291.86 vs prior close $7,292.49 (-0.63) · 1 name(s) re-marked at the open (per-name table). CMPX×23 yday $1.00 → 09:30 $0.97 -0.63 | — |
+| 2026-10-07 09:30 ET | **SELL** | `CMPX` | 23 | $0.97 | $0.31 | $+0.10 | $7,291.55 | ▲ +0.10 after sell → book $7,291.55; vs 09:30 mark -0.31 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,291.55 | ▲ close $7,291.55 vs 09:30 $7,291.86 (session +0.00) | 16:00 close · cash $7,291.55 · no lots left · equity $7,291.55. | — |
 
 ## Not taken
 

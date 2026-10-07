@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-20.81%** ($7,919) · signal-only (no cash/fees) was -4.35%. Starts YES **0/30**. Fills 198 · skips 0 · realized $-550.20.
+Cash book **-21.24%** ($7,876) · signal-only (no cash/fees) was -4.35%. Starts YES **0/30**. Fills 200 · skips 0 · realized $-550.20.
 
 ## How this sleeve decides (like you are 10)
 
@@ -349,3 +349,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `TOST` | 132 | $30.07 | $2.39 | — | $3,977.81 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten; ⚪; ret5=-1.1; leftover $3974.72 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `AVPT` | 269 | $14.77 | $3.47 | — | $1.21 | — | combo gate; gate ret_5_max=10.0,rvol_max=2.2,zero_red=True; list flatten; ⚪; ret5=+7.2; leftover $3974.72 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.21 | ▼ close $7,918.92 vs 09:30 $7,949.44 (session -24.66) | 16:00 close · cash $1.21 · equity $7,918.92 vs 09:30 $7,949.44 (-30.52; session marks -24.66) · 2 name(s) marked open→close (per-name table). TOST×132 09:30 $30.07 → close $30.25 +23.76; AVPT×269 09:30 $14.77 → close $14.59 -48.42 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.21 | ▼ 09:30 equity $7,881.56 vs yday $7,918.92 (-37.36) | 09:30 open · cash $1.21 (unchanged overnight, no fees) · equity $7,881.56 vs prior close $7,918.92 (-37.36) · 2 name(s) re-marked at the open (per-name table). AVPT×269 yday $14.59 → 09:30 $14.51 -21.52; TOST×132 yday $30.25 → 09:30 $30.13 -15.84 | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 269 | $14.51 | $3.55 | $-76.96 | $3,900.85 | ▼ -76.96 after sell → book $7,878.01; vs 09:30 mark -3.55 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `TOST` | 132 | $30.13 | $2.44 | $+3.09 | $7,875.57 | ▲ +3.09 after sell → book $7,875.57; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,875.57 | ▲ close $7,875.57 vs 09:30 $7,881.56 (session +0.00) | 16:00 close · cash $7,875.57 · no lots left · equity $7,875.57. | — |

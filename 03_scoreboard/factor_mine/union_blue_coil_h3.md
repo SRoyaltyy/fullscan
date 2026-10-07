@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-23.53%** ($7,647) · signal-only (no cash/fees) was -38.70%. Starts YES **1/30**. Fills 237 · skips 286 · realized $-1292.46.
+Cash book **-25.36%** ($7,464) · signal-only (no cash/fees) was -38.70%. Starts YES **1/30**. Fills 237 · skips 286 · realized $-1292.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -387,6 +387,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `VELO` | 391 | $9.77 | $5.04 | — | $3,827.12 | — | combo gate; gate blue=True,ret_5_max=10.0; list yday_mover; 🔵; ret5=-12.8; leftover $3826.12 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `RPM` | 39 | $96.25 | $2.11 | — | $71.26 | — | combo gate; gate blue=True,ret_5_max=10.0; list earn_react; 🔵; ret5=-4.9; leftover $3826.12 | join🔴 sector🟢 gen🟡 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.26 | ▲ close $7,647.22 vs 09:30 $7,677.14 (session +2.14) | 16:00 close · cash $71.26 · equity $7,647.22 vs 09:30 $7,677.14 (-29.92; session marks +2.14) · 2 name(s) marked open→close (per-name table). VELO×391 09:30 $9.77 → close $9.57 -78.20; RPM×39 09:30 $96.25 → close $98.31 +80.34 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $71.26 | ▼ 09:30 equity $7,463.08 vs yday $7,647.22 (-184.14) | 09:30 open · cash $71.26 (unchanged overnight, no fees) · equity $7,463.08 vs prior close $7,647.22 (-184.14) · 2 name(s) re-marked at the open (per-name table). RPM×39 yday $98.31 → 09:30 $98.10 -8.19; VELO×391 yday $9.57 → 09:30 $9.12 -175.95 | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.26 | ▲ close $7,464.23 vs 09:30 $7,463.08 (session +1.15) | 16:00 close · cash $71.26 · equity $7,464.23 vs 09:30 $7,463.08 (+1.15; session marks +1.15) · 2 name(s) marked open→close (per-name table). RPM×39 09:30 $98.10 → close $98.33 +8.97; VELO×391 09:30 $9.12 → close $9.10 -7.82 | — |
 
 ## Not taken
 

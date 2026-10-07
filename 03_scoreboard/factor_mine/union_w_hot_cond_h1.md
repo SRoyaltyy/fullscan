@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+25.98%** ($12,598) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 334 · skips 96 · realized $-9.27.
+Cash book **+22.43%** ($12,244) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 342 · skips 96 · realized $-9.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -481,6 +481,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `XP` | 56 | $29.20 | $2.16 | — | $1,898.31 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+39.1; leftover $1646.39 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `AVPT` | 111 | $14.77 | $2.32 | — | $256.51 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=+7.2; leftover $1646.39 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $256.51 | ▼ close $12,597.85 vs 09:30 $13,194.09 (session -541.41) | 16:00 close · cash $256.51 · equity $12,597.85 vs 09:30 $13,194.09 (-596.24; session marks -541.41) · 8 name(s) marked open→close (per-name table). SDEV×473 09:30 $3.48 → close $3.25 -108.79; QTEX×965 09:30 $1.71 → close $1.59 -110.97; PTC×8 09:30 $193.00 → close $193.00 +0.00; DNA×109 09:30 $15.08 → close $12.41 -291.03; PAGS×150 09:30 $10.96 → close $10.72 -36.00; GWRE×9 09:30 $165.00 → close $164.52 -4.32; XP×56 09:30 $29.20 → close $29.73 +29.68; AVPT×111 09:30 $14.77 → close $14.59 -19.98 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $256.51 | ▼ 09:30 equity $12,275.78 vs yday $12,597.85 (-322.07) | 09:30 open · cash $256.51 (unchanged overnight, no fees) · equity $12,275.78 vs prior close $12,597.85 (-322.07) · 8 name(s) re-marked at the open (per-name table). AVPT×111 yday $14.59 → 09:30 $14.51 -8.88; DNA×109 yday $12.41 → 09:30 $11.80 -65.95; GWRE×9 yday $164.52 → 09:30 $162.01 -22.59; PAGS×150 yday $10.72 → 09:30 $10.64 -12.00; PTC×8 yday $193.00 → 09:30 $193.20 +1.60; QTEX×965 yday $1.59 → 09:30 $1.38 -207.48; SDEV×473 yday $3.25 → 09:30 $3.27 +9.46; XP×56 yday $29.73 → 09:30 $29.44 -16.24 | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 111 | $14.51 | $2.35 | $-33.54 | $1,864.77 | ▼ -33.54 after sell → book $12,273.43; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `DNA` | 109 | $11.80 | $2.35 | $-361.64 | $3,149.17 | ▼ -361.64 after sell → book $12,271.08; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `GWRE` | 9 | $162.01 | $2.04 | $-30.97 | $4,605.22 | ▼ -30.97 after sell → book $12,269.04; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PAGS` | 150 | $10.64 | $2.48 | $-52.92 | $6,198.74 | ▼ -52.92 after sell → book $12,266.56; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PTC` | 8 | $193.20 | $2.04 | $-2.45 | $7,742.30 | ▼ -2.45 after sell → book $12,264.53; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `QTEX` | 965 | $1.38 | $12.62 | $-343.52 | $9,056.56 | ▼ -343.52 after sell → book $12,251.91; vs 09:30 mark -12.62 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SDEV` | 473 | $3.27 | $6.19 | $-111.62 | $10,597.08 | ▼ -111.62 after sell → book $12,245.72; vs 09:30 mark -6.19 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `XP` | 56 | $29.44 | $2.18 | $+9.10 | $12,243.53 | ▲ +9.10 after sell → book $12,243.53; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,243.53 | ▲ close $12,243.53 vs 09:30 $12,275.78 (session +0.00) | 16:00 close · cash $12,243.53 · no lots left · equity $12,243.53. | — |
 
 ## Not taken
 

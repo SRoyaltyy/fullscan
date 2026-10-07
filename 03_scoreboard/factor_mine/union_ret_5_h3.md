@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+3.93%** ($10,393) · signal-only (no cash/fees) was +97.62%. Starts YES **29/30**. Fills 244 · skips 293 · realized $+1779.39.
+Cash book **+0.55%** ($10,055) · signal-only (no cash/fees) was +97.62%. Starts YES **29/30**. Fills 244 · skips 293 · realized $+1779.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -391,6 +391,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `BBD` | 299 | $4.52 | $3.86 | — | $1,358.95 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+29.4; leftover $1353.19 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `RXRX` | 281 | $4.80 | $3.62 | — | $6.53 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+29.2; leftover $1353.19 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.53 | ▼ close $10,392.93 vs 09:30 $10,884.84 (session -400.88) | 16:00 close · cash $6.53 · equity $10,392.93 vs 09:30 $10,884.84 (-491.91; session marks -400.88) · 8 name(s) marked open→close (per-name table). SDEV×388 09:30 $3.48 → close $3.25 -89.24; QTEX×793 09:30 $1.71 → close $1.59 -91.19; DNA×89 09:30 $15.08 → close $12.41 -237.63; XP×46 09:30 $29.20 → close $29.73 +24.38; PTC×7 09:30 $193.00 → close $193.00 +0.00; INTR×198 09:30 $6.81 → close $7.03 +43.56; BBD×299 09:30 $4.52 → close $4.51 -2.99; RXRX×281 09:30 $4.80 → close $4.63 -47.77 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.53 | ▼ 09:30 equity $10,124.31 vs yday $10,392.93 (-268.62) | 09:30 open · cash $6.53 (unchanged overnight, no fees) · equity $10,124.31 vs prior close $10,392.93 (-268.62) · 8 name(s) re-marked at the open (per-name table). BBD×299 yday $4.51 → 09:30 $4.50 -2.99; DNA×89 yday $12.41 → 09:30 $11.80 -53.85; INTR×198 yday $7.03 → 09:30 $7.02 -1.98; PTC×7 yday $193.00 → 09:30 $193.20 +1.40; QTEX×793 yday $1.59 → 09:30 $1.38 -170.50; RXRX×281 yday $4.63 → 09:30 $4.50 -35.12; SDEV×388 yday $3.25 → 09:30 $3.27 +7.76; XP×46 yday $29.73 → 09:30 $29.44 -13.34 | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.53 | ▼ close $10,055.13 vs 09:30 $10,124.31 (session -69.19) | 16:00 close · cash $6.53 · equity $10,055.13 vs 09:30 $10,124.31 (-69.18; session marks -69.19) · 8 name(s) marked open→close (per-name table). BBD×299 09:30 $4.50 → close $4.34 -47.84; DNA×89 09:30 $11.80 → close $11.47 -29.81; INTR×198 09:30 $7.02 → close $7.18 +31.68; PTC×7 09:30 $193.20 → close $193.60 +2.80; QTEX×793 09:30 $1.38 → close $1.66 +226.00; RXRX×281 09:30 $4.50 → close $4.27 -66.04; SDEV×388 09:30 $3.27 → close $2.78 -190.12; XP×46 09:30 $29.44 → close $29.53 +4.14 | — |
 
 ## Not taken
 

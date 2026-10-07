@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `half` · sell `list` · S-boost `none` · deploy half leftover
 
-Cash book **-9.38%** ($9,062) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 324 · skips 107 · realized $-342.82.
+Cash book **-10.00%** ($9,000) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 332 · skips 107 · realized $-342.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -468,6 +468,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `EBS` | 80 | $7.16 | $2.23 | — | $5,364.76 | — | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=+5.5; leftover $577.21 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `ARCT` | 39 | $14.70 | $2.11 | — | $4,789.35 | — | deploy half leftover; list probable,yday_gainer; ret5=+1.4; leftover $577.21 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,789.35 | ▼ close $9,061.89 vs 09:30 $9,251.96 (session -156.95) | 16:00 close · cash $4,789.35 · equity $9,061.89 vs 09:30 $9,251.96 (-190.07; session marks -156.95) · 8 name(s) marked open→close (per-name table). CDNA×8 09:30 $70.89 → close $63.79 -56.80; SN×3 09:30 $183.47 → close $184.72 +3.75; TOST×19 09:30 $30.07 → close $30.25 +3.42; NTAP×2 09:30 $224.80 → close $228.45 +7.30; PDFS×10 09:30 $56.89 → close $54.44 -24.50; AVPT×39 09:30 $14.77 → close $14.59 -7.02; EBS×80 09:30 $7.16 → close $6.95 -16.80; ARCT×39 09:30 $14.70 → close $13.00 -66.30 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,789.35 | ▼ 09:30 equity $9,016.86 vs yday $9,061.89 (-45.03) | 09:30 open · cash $4,789.35 (unchanged overnight, no fees) · equity $9,016.86 vs prior close $9,061.89 (-45.03) · 8 name(s) re-marked at the open (per-name table). ARCT×39 yday $13.00 → 09:30 $12.71 -11.31; AVPT×39 yday $14.59 → 09:30 $14.51 -3.12; CDNA×8 yday $63.79 → 09:30 $61.38 -19.26; EBS×80 yday $6.95 → 09:30 $7.05 +8.00; NTAP×2 yday $228.45 → 09:30 $232.00 +7.10; PDFS×10 yday $54.44 → 09:30 $52.54 -19.00; SN×3 yday $184.72 → 09:30 $183.00 -5.16; TOST×19 yday $30.25 → 09:30 $30.13 -2.28 | — |
+| 2026-10-07 09:30 ET | **SELL** | `ARCT` | 39 | $12.71 | $2.13 | $-81.84 | $5,282.91 | ▼ -81.84 after sell → book $9,014.73; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 39 | $14.51 | $2.13 | $-14.37 | $5,846.68 | ▼ -14.37 after sell → book $9,012.60; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `CDNA` | 8 | $61.38 | $2.03 | $-80.11 | $6,335.70 | ▼ -80.11 after sell → book $9,010.57; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `EBS` | 80 | $7.05 | $2.25 | $-13.28 | $6,897.44 | ▼ -13.28 after sell → book $9,008.31; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `NTAP` | 2 | $232.00 | $2.02 | $+10.39 | $7,359.43 | ▲ +10.39 after sell → book $9,006.30; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PDFS` | 10 | $52.54 | $2.04 | $-47.56 | $7,882.79 | ▼ -47.56 after sell → book $9,004.26; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SN` | 3 | $183.00 | $2.02 | $-5.43 | $8,429.77 | ▼ -5.43 after sell → book $9,002.24; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `TOST` | 19 | $30.13 | $2.07 | $-2.97 | $9,000.17 | ▼ -2.97 after sell → book $9,000.17; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,000.17 | ▲ close $9,000.17 vs 09:30 $9,016.86 (session +0.00) | 16:00 close · cash $9,000.17 · no lots left · equity $9,000.17. | — |
 
 ## Not taken
 

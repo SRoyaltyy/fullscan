@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-11.60%** ($8,840) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 333 · skips 104 · realized $-563.45.
+Cash book **-12.75%** ($8,725) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 340 · skips 104 · realized $-563.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -480,6 +480,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `GRAL` | 7 | $159.01 | $2.01 | — | $1,386.86 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+16.2; leftover $1159.23 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `RXRX` | 241 | $4.80 | $3.11 | — | $226.95 | — | rank by candle_score; rank candle_score; list yday_gainer,yday_mover; ret5=+29.2; leftover $1159.23 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $226.95 | ▼ close $8,840.45 vs 09:30 $9,290.35 (session -414.57) | 16:00 close · cash $226.95 · equity $8,840.45 vs 09:30 $9,290.35 (-449.90; session marks -414.57) · 8 name(s) marked open→close (per-name table). PDFS×20 09:30 $56.89 → close $54.44 -49.00; DNA×76 09:30 $15.08 → close $12.41 -202.92; BBD×256 09:30 $4.52 → close $4.51 -2.56; P×7 09:30 $146.00 → close $147.20 +8.40; XP×39 09:30 $29.20 → close $29.73 +20.67; PBF×14 09:30 $82.60 → close $82.88 +3.92; GRAL×7 09:30 $159.01 → close $137.28 -152.11; RXRX×241 09:30 $4.80 → close $4.63 -40.97 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $226.95 | ▼ 09:30 equity $8,685.74 vs yday $8,840.45 (-154.72) | 09:30 open · cash $226.95 (unchanged overnight, no fees) · equity $8,685.74 vs prior close $8,840.45 (-154.72) · 8 name(s) re-marked at the open (per-name table). BBD×256 yday $4.51 → 09:30 $4.50 -2.56; DNA×76 yday $12.41 → 09:30 $11.80 -45.98; GRAL×7 yday $137.28 → 09:30 $134.00 -22.96; P×7 yday $147.20 → 09:30 $144.58 -18.34; PBF×14 yday $82.88 → 09:30 $83.92 +14.56; PDFS×20 yday $54.44 → 09:30 $52.54 -38.00; RXRX×241 yday $4.63 → 09:30 $4.50 -30.12; XP×39 yday $29.73 → 09:30 $29.44 -11.31 | — |
+| 2026-10-07 09:30 ET | **SELL** | `BBD` | 256 | $4.50 | $3.35 | $-11.78 | $1,375.60 | ▼ -11.78 after sell → book $8,682.38; vs 09:30 mark -3.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `DNA` | 76 | $11.80 | $2.24 | $-253.36 | $2,270.53 | ▼ -253.36 after sell → book $8,680.14; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `GRAL` | 7 | $134.00 | $2.03 | $-179.11 | $3,206.50 | ▼ -179.11 after sell → book $8,678.11; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PBF` | 14 | $83.92 | $2.05 | $+14.40 | $4,379.33 | ▲ +14.40 after sell → book $8,676.06; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PDFS` | 20 | $52.54 | $2.07 | $-91.12 | $5,428.06 | ▼ -91.12 after sell → book $8,673.99; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `RXRX` | 241 | $4.50 | $3.16 | $-77.36 | $6,510.61 | ▼ -77.36 after sell → book $8,670.83; vs 09:30 mark -3.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `XP` | 39 | $29.44 | $2.13 | $+5.13 | $7,656.64 | ▲ +5.13 after sell → book $8,668.70; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,656.64 | ▲ close $8,725.26 vs 09:30 $8,685.74 (session +56.56) | 16:00 close · cash $7,656.64 · equity $8,725.26 vs 09:30 $8,685.74 (+39.52; session marks +56.56) · 1 name(s) marked open→close (per-name table). P×7 09:30 $144.58 → close $152.66 +56.56 | — |
 
 ## Not taken
 

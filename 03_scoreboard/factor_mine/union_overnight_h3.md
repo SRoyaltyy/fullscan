@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-20.67%** ($7,933) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 99 · skips 176 · realized $-1797.14.
+Cash book **-17.00%** ($8,300) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 99 · skips 176 · realized $-1797.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -247,6 +247,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `PENG` | 43 | $61.60 | $2.12 | — | $2,692.04 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=+10.4; leftover $2669.94 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `STZ` | 23 | $113.83 | $2.06 | — | $71.89 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=+0.3; leftover $2669.94 | join🔴 sector🔴 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.89 | ▼ close $7,933.17 vs 09:30 $8,012.99 (session -69.85) | 16:00 close · cash $71.89 · equity $7,933.17 vs 09:30 $8,012.99 (-79.82; session marks -69.85) · 3 name(s) marked open→close (per-name table). NEOG×204 09:30 $13.06 → close $11.96 -224.40; PENG×43 09:30 $61.60 → close $64.21 +112.23; STZ×23 09:30 $113.83 → close $115.67 +42.32 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $71.89 | ▲ 09:30 equity $8,167.08 vs yday $7,933.17 (+233.91) | 09:30 open · cash $71.89 (unchanged overnight, no fees) · equity $8,167.08 vs prior close $7,933.17 (+233.91) · 3 name(s) re-marked at the open (per-name table). NEOG×204 yday $11.96 → 09:30 $12.61 +132.60; PENG×43 yday $64.21 → 09:30 $67.28 +131.90; STZ×23 yday $115.67 → 09:30 $114.34 -30.59 | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.89 | ▲ close $8,299.81 vs 09:30 $8,167.08 (session +132.73) | 16:00 close · cash $71.89 · equity $8,299.81 vs 09:30 $8,167.08 (+132.73; session marks +132.73) · 3 name(s) marked open→close (per-name table). NEOG×204 09:30 $12.61 → close $11.68 -189.72; PENG×43 09:30 $67.28 → close $72.61 +229.30; STZ×23 09:30 $114.34 → close $118.39 +93.15 | — |
 
 ## Not taken
 

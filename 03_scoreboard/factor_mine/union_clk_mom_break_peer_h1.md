@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-9.73%** ($9,027) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 308 · skips 96 · realized $-120.43.
+Cash book **-10.46%** ($8,954) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 313 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -458,6 +458,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `XERS` | 183 | $10.23 | $2.54 | — | $1,890.94 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable; ret5=+3.1; leftover $1881.06 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `ARCT` | 127 | $14.70 | $2.37 | — | $21.67 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer; ret5=+1.4; leftover $1881.06 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.67 | ▼ close $9,027.01 vs 09:30 $9,431.99 (session -365.36) | 16:00 close · cash $21.67 · equity $9,027.01 vs 09:30 $9,431.99 (-404.98; session marks -365.36) · 5 name(s) marked open→close (per-name table). EBS×262 09:30 $7.16 → close $6.95 -55.02; AVPT×127 09:30 $14.77 → close $14.59 -22.86; SIBN×94 09:30 $20.00 → close $19.55 -42.30; XERS×183 09:30 $10.23 → close $10.07 -29.28; ARCT×127 09:30 $14.70 → close $13.00 -215.90 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21.67 | ▼ 09:30 equity $8,967.09 vs yday $9,027.01 (-59.92) | 09:30 open · cash $21.67 (unchanged overnight, no fees) · equity $8,967.09 vs prior close $9,027.01 (-59.92) · 5 name(s) re-marked at the open (per-name table). ARCT×127 yday $13.00 → 09:30 $12.71 -36.83; AVPT×127 yday $14.59 → 09:30 $14.51 -10.16; EBS×262 yday $6.95 → 09:30 $7.05 +26.20; SIBN×94 yday $19.55 → 09:30 $19.27 -26.32; XERS×183 yday $10.07 → 09:30 $10.00 -12.81 | — |
+| 2026-10-07 09:30 ET | **SELL** | `ARCT` | 127 | $12.71 | $2.40 | $-257.51 | $1,633.44 | ▼ -257.51 after sell → book $8,964.68; vs 09:30 mark -2.41 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 127 | $14.51 | $2.41 | $-37.80 | $3,473.80 | ▼ -37.80 after sell → book $8,962.28; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `EBS` | 262 | $7.05 | $3.44 | $-35.64 | $5,317.46 | ▼ -35.64 after sell → book $8,958.84; vs 09:30 mark -3.44 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SIBN` | 94 | $19.27 | $2.30 | $-73.19 | $7,126.54 | ▼ -73.19 after sell → book $8,956.54; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `XERS` | 183 | $10.00 | $2.58 | $-47.21 | $8,953.95 | ▼ -47.21 after sell → book $8,953.95; vs 09:30 mark -2.59 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,953.95 | ▲ close $8,953.95 vs 09:30 $8,967.09 (session +0.00) | 16:00 close · cash $8,953.95 · no lots left · equity $8,953.95. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `time` · S-boost `none` · sell at min-hold even if still listed
 
-Cash book **-22.36%** ($7,764) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 180 · skips 219 · realized $-788.42.
+Cash book **-22.54%** ($7,746) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 181 · skips 219 · realized $-788.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -324,6 +324,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `PDFS` | 23 | $56.89 | $2.06 | — | $1,575.38 | — | sell at min-hold even if still listed; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+12.7; leftover $1311.90 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `AVPT` | 88 | $14.77 | $2.25 | — | $273.36 | — | sell at min-hold even if still listed; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+7.2; leftover $1311.90 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $273.36 | ▼ close $7,764.01 vs 09:30 $7,952.61 (session -165.31) | 16:00 close · cash $273.36 · equity $7,764.01 vs 09:30 $7,952.61 (-188.60; session marks -165.31) · 9 name(s) marked open→close (per-name table). AVPT×88 09:30 $14.77 → close $14.59 -15.84; GPRK×2 09:30 $11.32 → close $11.44 +0.24; OBE×2 09:30 $10.44 → close $10.62 +0.36; WRBY×1 09:30 $26.89 → close $26.23 -0.66; CDNA×18 09:30 $70.89 → close $63.79 -127.80; SN×7 09:30 $183.47 → close $184.72 +8.75; TOST×43 09:30 $30.07 → close $30.25 +7.74; NTAP×5 09:30 $224.80 → close $228.45 +18.25; PDFS×23 09:30 $56.89 → close $54.44 -56.35 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $273.36 | ▼ 09:30 equity $7,670.55 vs yday $7,764.01 (-93.46) | 09:30 open · cash $273.36 (unchanged overnight, no fees) · equity $7,670.55 vs prior close $7,764.01 (-93.46) · 9 name(s) re-marked at the open (per-name table). AVPT×88 yday $14.59 → 09:30 $14.51 -7.04; CDNA×18 yday $63.79 → 09:30 $61.38 -43.34; GPRK×2 yday $11.44 → 09:30 $11.50 +0.12; NTAP×5 yday $228.45 → 09:30 $232.00 +17.75; OBE×2 yday $10.62 → 09:30 $10.72 +0.20; PDFS×23 yday $54.44 → 09:30 $52.54 -43.70; SN×7 yday $184.72 → 09:30 $183.00 -12.04; TOST×43 yday $30.25 → 09:30 $30.13 -5.16; WRBY×1 yday $26.23 → 09:30 $25.98 -0.25 | — |
+| 2026-10-07 09:30 ET | **SELL** | `WRBY` | 1 | $25.98 | $0.28 | $-2.21 | $299.06 | ▼ -2.21 after sell → book $7,670.26; vs 09:30 mark -0.29 | time-stop after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $299.06 | ▲ close $7,745.64 vs 09:30 $7,670.55 (session +75.37) | 16:00 close · cash $299.06 · equity $7,745.64 vs 09:30 $7,670.55 (+75.09; session marks +75.37) · 8 name(s) marked open→close (per-name table). AVPT×88 09:30 $14.51 → close $14.28 -20.24; CDNA×18 09:30 $61.38 → close $63.04 +29.84; GPRK×2 09:30 $11.50 → close $11.11 -0.78; NTAP×5 09:30 $232.00 → close $235.77 +18.85; OBE×2 09:30 $10.72 → close $10.63 -0.18; PDFS×23 09:30 $52.54 → close $53.17 +14.49; SN×7 09:30 $183.00 → close $185.19 +15.33; TOST×43 09:30 $30.13 → close $30.55 +18.06 | — |
 
 ## Not taken
 

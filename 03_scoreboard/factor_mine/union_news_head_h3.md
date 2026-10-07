@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-28.59%** ($7,140) · signal-only (no cash/fees) was +184.18%. Starts YES **1/30**. Fills 170 · skips 192 · realized $-2398.84.
+Cash book **-31.78%** ($6,822) · signal-only (no cash/fees) was +184.18%. Starts YES **1/30**. Fills 171 · skips 192 · realized $-2398.84.
 
 ## How this sleeve decides (like you are 10)
 
@@ -319,6 +319,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `SIBN` | 127 | $20.00 | $2.37 | — | $2,542.77 | — | prior-export headline🟢 only; gate headline=good; rank cond; list probable; ret5=+5.6; leftover $2542.60 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `TWST` | 12 | $209.55 | $2.03 | — | $26.14 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+14.1; leftover $2542.60 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $26.14 | ▼ close $7,140.46 vs 09:30 $7,722.00 (session -536.68) | 16:00 close · cash $26.14 · equity $7,140.46 vs 09:30 $7,722.00 (-581.54; session marks -536.68) · 6 name(s) marked open→close (per-name table). CMPX×9 09:30 $0.99 → close $1.00 +0.07; ELMT×2 09:30 $21.63 → close $23.16 +3.06; GLND×2 09:30 $3.48 → close $3.00 -0.96; ALVO×418 09:30 $6.07 → close $6.14 +29.26; SIBN×127 09:30 $20.00 → close $19.55 -57.15; TWST×12 09:30 $209.55 → close $166.97 -510.96 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $26.14 | ▼ 09:30 equity $6,982.08 vs yday $7,140.46 (-158.38) | 09:30 open · cash $26.14 (unchanged overnight, no fees) · equity $6,982.08 vs prior close $7,140.46 (-158.38) · 6 name(s) re-marked at the open (per-name table). ALVO×418 yday $6.14 → 09:30 $6.10 -16.72; CMPX×9 yday $1.00 → 09:30 $0.97 -0.25; ELMT×2 yday $23.16 → 09:30 $22.56 -1.20; GLND×2 yday $3.00 → 09:30 $2.94 -0.12; SIBN×127 yday $19.55 → 09:30 $19.27 -35.56; TWST×12 yday $166.97 → 09:30 $158.26 -104.52 | — |
+| 2026-10-07 09:30 ET | **SELL** | `CMPX` | 9 | $0.97 | $0.13 | $+0.03 | $34.74 | ▲ +0.03 after sell → book $6,981.95; vs 09:30 mark -0.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $34.74 | ▼ close $6,822.20 vs 09:30 $6,982.08 (session -159.75) | 16:00 close · cash $34.74 · equity $6,822.20 vs 09:30 $6,982.08 (-159.88; session marks -159.75) · 5 name(s) marked open→close (per-name table). ALVO×418 09:30 $6.10 → close $5.85 -104.50; ELMT×2 09:30 $22.56 → close $21.62 -1.88; GLND×2 09:30 $2.94 → close $2.71 -0.46; SIBN×127 09:30 $19.27 → close $19.10 -21.59; TWST×12 09:30 $158.26 → close $155.65 -31.32 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-22.27%** ($7,773) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 326 · skips 105 · realized $-1315.32.
+Cash book **-23.71%** ($7,629) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 334 · skips 105 · realized $-1315.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -474,6 +474,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `ABEV` | 311 | $3.27 | $4.01 | — | $1,218.11 | — | union ∩ last_red, no 🚨; gate last_red=True; list ohlc_hot; ret5=+13.2; leftover $1017.71 | join🔴 sector🔴 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `SID` | 788 | $1.29 | $10.17 | — | $191.43 | — | union ∩ last_red, no 🚨; gate last_red=True; list ohlc_hot; 🔵; ret5=+11.7; leftover $1017.71 | join🔴 sector🟢 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $191.43 | ▼ close $7,773.41 vs 09:30 $8,190.89 (session -335.57) | 16:00 close · cash $191.43 · equity $7,773.41 vs 09:30 $8,190.89 (-417.48; session marks -335.57) · 8 name(s) marked open→close (per-name table). SN×5 09:30 $183.47 → close $184.72 +6.25; PTC×5 09:30 $193.00 → close $193.00 +0.00; PCVX×13 09:30 $73.35 → close $66.70 -86.45; SDEV×292 09:30 $3.48 → close $3.25 -67.16; NXH×498 09:30 $2.04 → close $1.83 -104.58; VELO×104 09:30 $9.77 → close $9.57 -20.80; ABEV×311 09:30 $3.27 → close $3.22 -15.55; SID×788 09:30 $1.29 → close $1.23 -47.28 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $191.43 | ▼ 09:30 equity $7,661.67 vs yday $7,773.41 (-111.74) | 09:30 open · cash $191.43 (unchanged overnight, no fees) · equity $7,661.67 vs prior close $7,773.41 (-111.74) · 8 name(s) re-marked at the open (per-name table). ABEV×311 yday $3.22 → 09:30 $3.16 -18.66; NXH×498 yday $1.83 → 09:30 $1.81 -9.96; PCVX×13 yday $66.70 → 09:30 $65.86 -10.92; PTC×5 yday $193.00 → 09:30 $193.20 +1.00; SDEV×292 yday $3.25 → 09:30 $3.27 +5.84; SID×788 yday $1.23 → 09:30 $1.20 -23.64; SN×5 yday $184.72 → 09:30 $183.00 -8.60; VELO×104 yday $9.57 → 09:30 $9.12 -46.80 | — |
+| 2026-10-07 09:30 ET | **SELL** | `ABEV` | 311 | $3.16 | $4.07 | $-42.30 | $1,170.12 | ▼ -42.30 after sell → book $7,657.60; vs 09:30 mark -4.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `NXH` | 498 | $1.81 | $6.52 | $-127.48 | $2,064.98 | ▼ -127.48 after sell → book $7,651.08; vs 09:30 mark -6.52 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PCVX` | 13 | $65.86 | $2.05 | $-101.45 | $2,919.11 | ▼ -101.45 after sell → book $7,649.03; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PTC` | 5 | $193.20 | $2.02 | $-3.03 | $3,883.09 | ▼ -3.03 after sell → book $7,647.01; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SDEV` | 292 | $3.27 | $3.83 | $-68.91 | $4,834.10 | ▼ -68.91 after sell → book $7,643.18; vs 09:30 mark -3.83 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `SID` | 788 | $1.20 | $10.31 | $-91.39 | $5,769.39 | ▼ -91.39 after sell → book $7,632.87; vs 09:30 mark -10.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SN` | 5 | $183.00 | $2.02 | $-6.38 | $6,682.37 | ▼ -6.38 after sell → book $7,630.85; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `VELO` | 104 | $9.12 | $2.33 | $-72.23 | $7,628.52 | ▼ -72.23 after sell → book $7,628.52; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,628.52 | ▲ close $7,628.52 vs 09:30 $7,661.67 (session +0.00) | 16:00 close · cash $7,628.52 · no lots left · equity $7,628.52. | — |
 
 ## Not taken
 

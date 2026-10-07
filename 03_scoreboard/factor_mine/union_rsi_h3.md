@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-19.65%** ($8,035) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 229 · skips 269 · realized $-1699.80.
+Cash book **-20.61%** ($7,939) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 231 · skips 269 · realized $-1699.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -376,6 +376,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `PCOR` | 19 | $54.22 | $2.05 | — | $1,136.67 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+10.4; leftover $1038.35 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `ARCT` | 70 | $14.70 | $2.20 | — | $105.47 | — | rank by rsi; rank rsi; list probable,yday_gainer; ret5=+1.4; leftover $1038.35 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $105.47 | ▼ close $8,034.84 vs 09:30 $8,337.45 (session -252.02) | 16:00 close · cash $105.47 · equity $8,034.84 vs 09:30 $8,337.45 (-302.61; session marks -252.02) · 12 name(s) marked open→close (per-name table). CMPX×1 09:30 $0.99 → close $1.00 +0.01; ECX×1 09:30 $0.83 → close $0.84 +0.01; LU×1 09:30 $1.02 → close $1.01 -0.01; LUCD×2 09:30 $0.60 → close $0.60 +0.00; NXH×508 09:30 $2.04 → close $1.83 -106.68; STZ×9 09:30 $113.83 → close $115.67 +16.56; RPM×10 09:30 $96.25 → close $98.31 +20.60; ZNTL×369 09:30 $2.81 → close $2.67 -51.66; VELO×106 09:30 $9.77 → close $9.57 -21.20; TOST×34 09:30 $30.07 → close $30.25 +6.12; PCOR×19 09:30 $54.22 → close $54.39 +3.23; ARCT×70 09:30 $14.70 → close $13.00 -119.00 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $105.47 | ▼ 09:30 equity $7,917.07 vs yday $8,034.84 (-117.77) | 09:30 open · cash $105.47 (unchanged overnight, no fees) · equity $7,917.07 vs prior close $8,034.84 (-117.77) · 12 name(s) re-marked at the open (per-name table). ARCT×70 yday $13.00 → 09:30 $12.71 -20.30; CMPX×1 yday $1.00 → 09:30 $0.97 -0.03; ECX×1 yday $0.84 → 09:30 $0.82 -0.02; LU×1 yday $1.01 → 09:30 $1.01 +0.00; LUCD×2 yday $0.60 → 09:30 $0.59 -0.02; NXH×508 yday $1.83 → 09:30 $1.81 -10.16; PCOR×19 yday $54.39 → 09:30 $54.04 -6.65; RPM×10 yday $98.31 → 09:30 $98.10 -2.10; STZ×9 yday $115.67 → 09:30 $114.34 -11.97; TOST×34 yday $30.25 → 09:30 $30.13 -4.08; VELO×106 yday $9.57 → 09:30 $9.12 -47.70; ZNTL×369 yday $2.67 → 09:30 $2.63 -14.76 | — |
+| 2026-10-07 09:30 ET | **SELL** | `CMPX` | 1 | $0.97 | $0.03 | $-0.01 | $106.41 | ▼ -0.01 after sell → book $7,917.03; vs 09:30 mark -0.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `LUCD` | 2 | $0.59 | $0.04 | $-0.14 | $107.55 | ▼ -0.14 after sell → book $7,917.00; vs 09:30 mark -0.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.55 | ▲ close $7,938.89 vs 09:30 $7,917.07 (session +21.90) | 16:00 close · cash $107.55 · equity $7,938.89 vs 09:30 $7,917.07 (+21.82; session marks +21.90) · 10 name(s) marked open→close (per-name table). ARCT×70 09:30 $12.71 → close $12.77 +3.85; ECX×1 09:30 $0.82 → close $0.85 +0.03; LU×1 09:30 $1.01 → close $0.98 -0.03; NXH×508 09:30 $1.81 → close $1.77 -17.78; PCOR×19 09:30 $54.04 → close $54.80 +14.44; RPM×10 09:30 $98.10 → close $98.33 +2.30; STZ×9 09:30 $114.34 → close $118.39 +36.45; TOST×34 09:30 $30.13 → close $30.55 +14.28; VELO×106 09:30 $9.12 → close $9.10 -2.12; ZNTL×369 09:30 $2.63 → close $2.55 -29.52 | — |
 
 ## Not taken
 

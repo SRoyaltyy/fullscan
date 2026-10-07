@@ -198,6 +198,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8.02 | ▲ 09:30 equity $8,523.86 vs yday $8,519.70 (+4.16) | 09:30 open · cash $8.02 (unchanged overnight, no fees) · equity $8,523.86 vs prior close $8,519.70 (+4.16) · 1 name(s) re-marked at the open (per-name table). MU×8 yday $1063.96 → 09:30 $1064.48 +4.16 | — |
 | 2026-10-06 09:30 ET | **SELL** | `MU` | 8 | $1064.48 | $2.09 | $+79.09 | $8,521.77 | ▲ +79.09 after sell → book $8,521.77; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,521.77 | ▲ close $8,521.77 vs 09:30 $8,523.86 (session +0.00) | 16:00 close · cash $8,521.77 · no lots left · equity $8,521.77. | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,521.77 | ▲ 09:30 equity $8,521.77 vs yday $8,521.77 (+0.00) | 09:30 open · cash $8,521.77 · no holdings · equity $8,521.77 vs prior close $8,521.77 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,521.77 | ▲ close $8,521.77 vs 09:30 $8,521.77 (session +0.00) | 16:00 close · cash $8,521.77 · no lots left · equity $8,521.77. | — |
 
 ## Not taken
 

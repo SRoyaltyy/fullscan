@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 AND headline🟢 (thin; kept as a KILL)
 
-Cash book **-3.80%** ($9,620) · signal-only (no cash/fees) was +1.48%. Starts YES **21/30**. Fills 5 · skips 7 · realized $+403.48.
+Cash book **-3.79%** ($9,621) · signal-only (no cash/fees) was +1.48%. Starts YES **21/30**. Fills 6 · skips 7 · realized $+403.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -154,6 +154,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.76 | ▼ close $9,302.69 vs 09:30 $9,450.51 (session -147.82) | 16:00 close · cash $21.76 · equity $9,302.69 vs 09:30 $9,450.51 (-147.82; session marks -147.82) · 1 name(s) marked open→close (per-name table). SNPS×19 09:30 $496.25 → close $488.47 -147.82 | — |
 | 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21.76 | ▲ 09:30 equity $9,352.66 vs yday $9,302.69 (+49.97) | 09:30 open · cash $21.76 (unchanged overnight, no fees) · equity $9,352.66 vs prior close $9,302.69 (+49.97) · 1 name(s) re-marked at the open (per-name table). SNPS×19 yday $488.47 → 09:30 $491.10 +49.97 | — |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.76 | ▲ close $9,619.99 vs 09:30 $9,352.66 (session +267.33) | 16:00 close · cash $21.76 · equity $9,619.99 vs 09:30 $9,352.66 (+267.33; session marks +267.33) · 1 name(s) marked open→close (per-name table). SNPS×19 09:30 $491.10 → close $505.17 +267.33 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21.76 | ▲ 09:30 equity $9,623.41 vs yday $9,619.99 (+3.42) | 09:30 open · cash $21.76 (unchanged overnight, no fees) · equity $9,623.41 vs prior close $9,619.99 (+3.42) · 1 name(s) re-marked at the open (per-name table). SNPS×19 yday $505.17 → 09:30 $505.35 +3.42 | — |
+| 2026-10-07 09:30 ET | **SELL** | `SNPS` | 19 | $505.35 | $2.13 | $+138.22 | $9,621.28 | ▲ +138.22 after sell → book $9,621.28; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,621.28 | ▲ close $9,621.28 vs 09:30 $9,623.41 (session +0.00) | 16:00 close · cash $9,621.28 · no lots left · equity $9,621.28. | — |
 
 ## Not taken
 

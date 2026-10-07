@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-11.20%** ($8,880) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 244 · skips 288 · realized $+91.50.
+Cash book **-13.37%** ($8,664) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 246 · skips 288 · realized $+91.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -391,6 +391,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `GRAL` | 7 | $159.01 | $2.01 | — | $1,370.77 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+16.2; leftover $1156.66 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `RXRX` | 240 | $4.80 | $3.10 | — | $215.68 | — | rank by candle_score; rank candle_score; list yday_gainer,yday_mover; ret5=+29.2; leftover $1156.66 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $215.68 | ▼ close $8,879.96 vs 09:30 $9,340.47 (session -416.06) | 16:00 close · cash $215.68 · equity $8,879.96 vs 09:30 $9,340.47 (-460.51; session marks -416.06) · 10 name(s) marked open→close (per-name table). MAT×2 09:30 $15.96 → close $15.93 -0.06; QSI×23 09:30 $1.29 → close $1.22 -1.61; PDFS×20 09:30 $56.89 → close $54.44 -49.00; DNA×76 09:30 $15.08 → close $12.41 -202.92; BBD×255 09:30 $4.52 → close $4.51 -2.55; P×7 09:30 $146.00 → close $147.20 +8.40; XP×39 09:30 $29.20 → close $29.73 +20.67; PBF×14 09:30 $82.60 → close $82.88 +3.92; GRAL×7 09:30 $159.01 → close $137.28 -152.11; RXRX×240 09:30 $4.80 → close $4.63 -40.80 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $215.68 | ▼ 09:30 equity $8,725.31 vs yday $8,879.96 (-154.65) | 09:30 open · cash $215.68 (unchanged overnight, no fees) · equity $8,725.31 vs prior close $8,879.96 (-154.65) · 10 name(s) re-marked at the open (per-name table). BBD×255 yday $4.51 → 09:30 $4.50 -2.55; DNA×76 yday $12.41 → 09:30 $11.80 -45.98; GRAL×7 yday $137.28 → 09:30 $134.00 -22.96; MAT×2 yday $15.93 → 09:30 $16.36 +0.85; P×7 yday $147.20 → 09:30 $144.58 -18.34; PBF×14 yday $82.88 → 09:30 $83.92 +14.56; PDFS×20 yday $54.44 → 09:30 $52.54 -38.00; QSI×23 yday $1.22 → 09:30 $1.18 -0.92; RXRX×240 yday $4.63 → 09:30 $4.50 -30.00; XP×39 yday $29.73 → 09:30 $29.44 -11.31 | — |
+| 2026-10-07 09:30 ET | **SELL** | `MAT` | 2 | $16.36 | $0.35 | $+1.78 | $248.04 | ▲ +1.78 after sell → book $8,724.96; vs 09:30 mark -0.35 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `QSI` | 23 | $1.18 | $0.36 | $-5.35 | $274.82 | ▼ -5.35 after sell → book $8,724.60; vs 09:30 mark -0.36 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $274.82 | ▼ close $8,663.55 vs 09:30 $8,725.31 (session -61.05) | 16:00 close · cash $274.82 · equity $8,663.55 vs 09:30 $8,725.31 (-61.76; session marks -61.05) · 8 name(s) marked open→close (per-name table). BBD×255 09:30 $4.50 → close $4.34 -40.80; DNA×76 09:30 $11.80 → close $11.47 -25.46; GRAL×7 09:30 $134.00 → close $132.90 -7.70; P×7 09:30 $144.58 → close $152.66 +56.56; PBF×14 09:30 $83.92 → close $83.68 -3.36; PDFS×20 09:30 $52.54 → close $53.17 +12.60; RXRX×240 09:30 $4.50 → close $4.27 -56.40; XP×39 09:30 $29.44 → close $29.53 +3.51 | — |
 
 ## Not taken
 

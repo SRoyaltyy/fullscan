@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **+0.27%** ($10,027) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 226 · skips 270 · realized $-967.53.
+Cash book **+0.44%** ($10,044) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 226 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -372,6 +372,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **COVER** | `PYXS` | 1061 | $2.22 | $13.69 | $+67.85 | $9,990.93 | ▲ +67.85 after sell → book $9,990.93; vs 09:30 mark -13.68 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-06 09:30 ET | **SHORT** | `TRMD` | 126 | $39.36 | $2.56 | — | $14,947.72 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list ohlc_hot; ret5=+15.9; leftover $4995.46 | join🔴 sector🔴 gen🟡 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,947.72 | ▲ close $10,027.42 vs 09:30 $10,006.81 (session +39.06) | 16:00 close · cash $14,947.72 · equity $10,027.42 vs 09:30 $10,006.81 (+20.61; session marks +39.06) · 1 name(s) marked open→close (per-name table). TRMD×126 09:30 $39.36 → close $39.05 +39.06 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,947.72 | ▼ 09:30 equity $9,994.66 vs yday $10,027.42 (-32.76) | 09:30 open · cash $14,947.72 (unchanged overnight, no fees) · equity $9,994.66 vs prior close $10,027.42 (-32.76) · 1 name(s) re-marked at the open (per-name table). TRMD×126 yday $39.05 → 09:30 $39.31 -32.76 | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,947.72 | ▲ close $10,043.80 vs 09:30 $9,994.66 (session +49.14) | 16:00 close · cash $14,947.72 · equity $10,043.80 vs 09:30 $9,994.66 (+49.14; session marks +49.14) · 1 name(s) marked open→close (per-name table). TRMD×126 09:30 $39.31 → close $38.92 +49.14 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 2
 
-Cash book **-26.58%** ($7,342) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 212 · skips 55 · realized $-720.09.
+Cash book **-27.45%** ($7,256) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 214 · skips 55 · realized $-720.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -362,6 +362,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `ALVO` | 608 | $6.07 | $7.84 | — | $3,694.13 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list probable,yday_gainer; ret5=-0.7; leftover $3696.27 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `SIBN` | 184 | $20.00 | $2.54 | — | $11.59 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list probable; ret5=+5.6; leftover $3696.27 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.59 | ▼ close $7,341.91 vs 09:30 $7,399.18 (session -40.24) | 16:00 close · cash $11.59 · equity $7,341.91 vs 09:30 $7,399.18 (-57.27; session marks -40.24) · 2 name(s) marked open→close (per-name table). ALVO×608 09:30 $6.07 → close $6.14 +42.56; SIBN×184 09:30 $20.00 → close $19.55 -82.80 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11.59 | ▼ 09:30 equity $7,266.07 vs yday $7,341.91 (-75.84) | 09:30 open · cash $11.59 (unchanged overnight, no fees) · equity $7,266.07 vs prior close $7,341.91 (-75.84) · 2 name(s) re-marked at the open (per-name table). ALVO×608 yday $6.14 → 09:30 $6.10 -24.32; SIBN×184 yday $19.55 → 09:30 $19.27 -51.52 | — |
+| 2026-10-07 09:30 ET | **SELL** | `ALVO` | 608 | $6.10 | $7.97 | $+2.42 | $3,712.42 | ▲ +2.42 after sell → book $7,258.10; vs 09:30 mark -7.97 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SIBN` | 184 | $19.27 | $2.60 | $-139.46 | $7,255.50 | ▼ -139.46 after sell → book $7,255.50; vs 09:30 mark -2.60 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,255.50 | ▲ close $7,255.50 vs 09:30 $7,266.07 (session +0.00) | 16:00 close · cash $7,255.50 · no lots left · equity $7,255.50. | — |
 
 ## Not taken
 

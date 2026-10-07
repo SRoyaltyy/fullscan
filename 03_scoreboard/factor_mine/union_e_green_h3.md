@@ -226,6 +226,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **SELL** | `ACN` | 22 | $195.43 | $2.10 | $-456.26 | $4,395.13 | ▼ -456.26 after sell → book $8,856.33; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-06 09:30 ET | **SELL** | `PRGS` | 118 | $37.81 | $2.40 | $-324.90 | $8,853.93 | ▼ -324.90 after sell → book $8,853.93; vs 09:30 mark -2.40 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,853.93 | ▲ close $8,853.93 vs 09:30 $8,858.43 (session +0.00) | 16:00 close · cash $8,853.93 · no lots left · equity $8,853.93. | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,853.93 | ▲ 09:30 equity $8,853.93 vs yday $8,853.93 (+0.00) | 09:30 open · cash $8,853.93 · no holdings · equity $8,853.93 vs prior close $8,853.93 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,853.93 | ▲ close $8,853.93 vs 09:30 $8,853.93 (session +0.00) | 16:00 close · cash $8,853.93 · no lots left · equity $8,853.93. | — |
 
 ## Not taken
 

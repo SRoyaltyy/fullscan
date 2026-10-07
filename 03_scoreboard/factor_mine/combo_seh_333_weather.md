@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h3/union_hot_n4_h1 w=0.33,0.33,0.33 net=weather
 
-Cash book **+71.41%** ($17,140) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 435 · skips 369 · realized $+2544.60.
+Cash book **+69.90%** ($16,990) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 439 · skips 369 · realized $+2544.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $17,254.62.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $24,866.06.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -585,6 +585,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `XP` | 74 | $29.20 | $2.21 | — | $8,637.94 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+39.1; combo leftover $2163.40; owner union_hot_n4_h1 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **SHORT** | `TRMD` | 219 | $39.36 | $3.17 | — | $17,254.62 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+15.9; combo leftover $8637.94; owner short_news_r_h3 | join🔴 sector🔴 gen🟡 news🔴 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,254.62 | ▼ close $17,140.46 vs 09:30 $17,479.83 (session -263.40) | 16:00 close · cash $17,254.62 · equity $17,140.46 vs 09:30 $17,479.83 (-339.37; session marks -263.40) · 10 name(s) marked open→close (per-name table). AXTI×25 09:30 $87.85 → close $84.06 +94.75; MXL×21 09:30 $108.22 → close $109.30 -22.68; SG×241 09:30 $9.08 → close $9.14 -14.46; TER×4 09:30 $445.07 → close $430.32 +59.00; RPM×89 09:30 $96.25 → close $98.31 +183.34; SDEV×621 09:30 $3.48 → close $3.25 -142.83; QTEX×1268 09:30 $1.71 → close $1.59 -145.82; DNA×143 09:30 $15.08 → close $12.41 -381.81; XP×74 09:30 $29.20 → close $29.73 +39.22; TRMD×219 09:30 $39.36 → close $39.05 +67.89 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17,254.62 | ▼ 09:30 equity $16,977.47 vs yday $17,140.46 (-162.99) | 09:30 open · cash $17,254.62 (unchanged overnight, no fees) · equity $16,977.47 vs prior close $17,140.46 (-162.99) | — |
+| 2026-10-07 09:30 ET | **SELL** | `DNA` | 143 | $11.80 | $2.46 | $-473.20 | $18,940.28 | ▼ -473.20 after sell → book $16,975.01; vs 09:30 mark -2.46 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `QTEX` | 1268 | $1.38 | $16.58 | $-451.38 | $20,667.20 | ▼ -451.38 after sell → book $16,958.43; vs 09:30 mark -16.58 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SDEV` | 621 | $3.27 | $8.13 | $-146.55 | $22,689.74 | ▼ -146.55 after sell → book $16,950.30; vs 09:30 mark -8.13 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `XP` | 74 | $29.44 | $2.24 | $+13.31 | $24,866.06 | ▲ +13.31 after sell → book $16,948.06; vs 09:30 mark -2.24 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24,866.06 | ▲ close $16,989.96 vs 09:30 $16,977.47 (session +41.90) | 16:00 close · cash $24,866.06 · equity $16,989.96 vs 09:30 $16,977.47 (+12.49; session marks +41.90) · 6 name(s) marked open→close (per-name table). AXTI×25 09:30 $79.80 → close $79.79 +0.25; MXL×21 09:30 $105.38 → close $107.36 -41.68; RPM×89 09:30 $98.10 → close $98.33 +20.47; SG×241 09:30 $9.01 → close $9.16 -36.15; TER×4 09:30 $415.18 → close $411.78 +13.60; TRMD×219 09:30 $39.31 → close $38.92 +85.41 | — |
 
 ## Not taken
 

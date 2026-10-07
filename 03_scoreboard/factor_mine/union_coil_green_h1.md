@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-12.76%** ($8,724) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 325 · skips 101 · realized $-768.45.
+Cash book **-13.64%** ($8,636) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 332 · skips 101 · realized $-768.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -478,6 +478,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `SIBN` | 65 | $20.00 | $2.19 | — | $1,321.80 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable; ret5=+5.6; leftover $1310.95 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `ILMN` | 4 | $301.58 | $2.00 | — | $113.48 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+8.0; leftover $1310.95 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $113.48 | ▼ close $8,724.34 vs 09:30 $9,205.65 (session -432.70) | 16:00 close · cash $113.48 · equity $8,724.34 vs 09:30 $9,205.65 (-481.31; session marks -432.70) · 7 name(s) marked open→close (per-name table). AVPT×88 09:30 $14.77 → close $14.59 -15.84; EBS×183 09:30 $7.16 → close $6.95 -38.43; ARCT×89 09:30 $14.70 → close $13.00 -151.30; XERS×128 09:30 $10.23 → close $10.07 -20.48; ZNTL×466 09:30 $2.81 → close $2.67 -65.24; SIBN×65 09:30 $20.00 → close $19.55 -29.25; ILMN×4 09:30 $301.58 → close $273.54 -112.16 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $113.48 | ▼ 09:30 equity $8,656.27 vs yday $8,724.34 (-68.07) | 09:30 open · cash $113.48 (unchanged overnight, no fees) · equity $8,656.27 vs prior close $8,724.34 (-68.07) · 7 name(s) re-marked at the open (per-name table). ARCT×89 yday $13.00 → 09:30 $12.71 -25.81; AVPT×88 yday $14.59 → 09:30 $14.51 -7.04; EBS×183 yday $6.95 → 09:30 $7.05 +18.30; ILMN×4 yday $273.54 → 09:30 $271.61 -7.72; SIBN×65 yday $19.55 → 09:30 $19.27 -18.20; XERS×128 yday $10.07 → 09:30 $10.00 -8.96; ZNTL×466 yday $2.67 → 09:30 $2.63 -18.64 | — |
+| 2026-10-07 09:30 ET | **SELL** | `ARCT` | 89 | $12.71 | $2.28 | $-181.65 | $1,242.39 | ▼ -181.65 after sell → book $8,653.99; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 88 | $14.51 | $2.28 | $-27.41 | $2,516.99 | ▼ -27.41 after sell → book $8,651.71; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `EBS` | 183 | $7.05 | $2.58 | $-25.25 | $3,804.56 | ▼ -25.25 after sell → book $8,649.13; vs 09:30 mark -2.58 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `ILMN` | 4 | $271.61 | $2.02 | $-123.90 | $4,888.98 | ▼ -123.90 after sell → book $8,647.11; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SIBN` | 65 | $19.27 | $2.21 | $-51.84 | $6,139.32 | ▼ -51.84 after sell → book $8,644.90; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `XERS` | 128 | $10.00 | $2.41 | $-34.22 | $7,416.92 | ▼ -34.22 after sell → book $8,642.50; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `ZNTL` | 466 | $2.63 | $6.10 | $-95.99 | $8,636.40 | ▼ -95.99 after sell → book $8,636.40; vs 09:30 mark -6.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,636.40 | ▲ close $8,636.40 vs 09:30 $8,656.27 (session +0.00) | 16:00 close · cash $8,636.40 · no lots left · equity $8,636.40. | — |
 
 ## Not taken
 

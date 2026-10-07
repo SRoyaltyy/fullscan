@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-30.31%** ($6,969) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 61 · skips 71 · realized $-2440.55.
+Cash book **-30.75%** ($6,925) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 62 · skips 71 · realized $-2440.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -209,6 +209,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-05 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.67 | ▲ close $7,002.49 vs 09:30 $6,644.74 (session +357.75) | 16:00 close · cash $9.67 · equity $7,002.49 vs 09:30 $6,644.74 (+357.75; session marks +357.75) · 1 name(s) marked open→close (per-name table). AVPT×477 09:30 $13.91 → close $14.66 +357.75 | — |
 | 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9.67 | ▲ 09:30 equity $7,054.96 vs yday $7,002.49 (+52.47) | 09:30 open · cash $9.67 (unchanged overnight, no fees) · equity $7,054.96 vs prior close $7,002.49 (+52.47) · 1 name(s) re-marked at the open (per-name table). AVPT×477 yday $14.66 → 09:30 $14.77 +52.47 | — |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.67 | ▼ close $6,969.10 vs 09:30 $7,054.96 (session -85.86) | 16:00 close · cash $9.67 · equity $6,969.10 vs 09:30 $7,054.96 (-85.86; session marks -85.86) · 1 name(s) marked open→close (per-name table). AVPT×477 09:30 $14.77 → close $14.59 -85.86 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9.67 | ▼ 09:30 equity $6,930.94 vs yday $6,969.10 (-38.16) | 09:30 open · cash $9.67 (unchanged overnight, no fees) · equity $6,930.94 vs prior close $6,969.10 (-38.16) · 1 name(s) re-marked at the open (per-name table). AVPT×477 yday $14.59 → 09:30 $14.51 -38.16 | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 477 | $14.51 | $6.29 | $+102.04 | $6,924.65 | ▲ +102.04 after sell → book $6,924.65; vs 09:30 mark -6.29 | dropped from list after 4 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,924.65 | ▲ close $6,924.65 vs 09:30 $6,930.94 (session +0.00) | 16:00 close · cash $6,924.65 · no lots left · equity $6,924.65. | — |
 
 ## Not taken
 

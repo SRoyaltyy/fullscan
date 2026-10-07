@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hold 3d, sell next 09:30 if news🔴
 
-Cash book **-23.23%** ($7,677) · signal-only (no cash/fees) was +1.29%. Starts YES **0/30**. Fills 250 · skips 301 · realized $-427.03.
+Cash book **-23.83%** ($7,617) · signal-only (no cash/fees) was +1.29%. Starts YES **0/30**. Fills 252 · skips 301 · realized $-427.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -397,6 +397,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `ALVO` | 161 | $6.07 | $2.47 | — | $1,081.74 | — | hold 3d, sell next 09:30 if news🔴; list probable,yday_gainer; ret5=-0.7; leftover $980.41 | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `XERS` | 95 | $10.23 | $2.27 | — | $107.61 | — | hold 3d, sell next 09:30 if news🔴; list probable; ret5=+3.1; leftover $980.41 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.61 | ▼ close $7,676.90 vs 09:30 $7,912.78 (session -186.41) | 16:00 close · cash $107.61 · equity $7,676.90 vs 09:30 $7,912.78 (-235.88; session marks -186.41) · 10 name(s) marked open→close (per-name table). AVPT×68 09:30 $14.77 → close $14.59 -12.24; INDP×2 09:30 $2.51 → close $2.59 +0.16; QNC×4 09:30 $1.63 → close $1.63 +0.00; SN×5 09:30 $183.47 → close $184.72 +6.25; TOST×32 09:30 $30.07 → close $30.25 +5.76; PDFS×17 09:30 $56.89 → close $54.44 -41.65; EBS×136 09:30 $7.16 → close $6.95 -28.56; ARCT×66 09:30 $14.70 → close $13.00 -112.20; ALVO×161 09:30 $6.07 → close $6.14 +11.27; XERS×95 09:30 $10.23 → close $10.07 -15.20 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $107.61 | ▼ 09:30 equity $7,607.93 vs yday $7,676.90 (-68.97) | 09:30 open · cash $107.61 (unchanged overnight, no fees) · equity $7,607.93 vs prior close $7,676.90 (-68.97) · 10 name(s) re-marked at the open (per-name table). ALVO×161 yday $6.14 → 09:30 $6.10 -6.44; ARCT×66 yday $13.00 → 09:30 $12.71 -19.14; AVPT×68 yday $14.59 → 09:30 $14.51 -5.44; EBS×136 yday $6.95 → 09:30 $7.05 +13.60; INDP×2 yday $2.59 → 09:30 $2.57 -0.04; PDFS×17 yday $54.44 → 09:30 $52.54 -32.30; QNC×4 yday $1.63 → 09:30 $1.60 -0.12; SN×5 yday $184.72 → 09:30 $183.00 -8.60; TOST×32 yday $30.25 → 09:30 $30.13 -3.84; XERS×95 yday $10.07 → 09:30 $10.00 -6.65 | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 68 | $14.51 | $2.22 | $+11.91 | $1,092.07 | ▲ +11.91 after sell → book $7,605.71; vs 09:30 mark -2.22 | dropped from list after 4 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `QNC` | 4 | $1.60 | $0.10 | $-0.54 | $1,098.38 | ▼ -0.54 after sell → book $7,605.62; vs 09:30 mark -0.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,098.38 | ▲ close $7,616.65 vs 09:30 $7,607.93 (session +11.03) | 16:00 close · cash $1,098.38 · equity $7,616.65 vs 09:30 $7,607.93 (+8.72; session marks +11.03) · 8 name(s) marked open→close (per-name table). ALVO×161 09:30 $6.10 → close $5.85 -40.25; ARCT×66 09:30 $12.71 → close $12.77 +3.63; EBS×136 09:30 $7.05 → close $7.07 +2.72; INDP×2 09:30 $2.57 → close $2.26 -0.62; PDFS×17 09:30 $52.54 → close $53.17 +10.71; SN×5 09:30 $183.00 → close $185.19 +10.95; TOST×32 09:30 $30.13 → close $30.55 +13.44; XERS×95 09:30 $10.00 → close $10.11 +10.45 | — |
 
 ## Not taken
 

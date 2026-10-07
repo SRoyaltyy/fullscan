@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-13.77%** ($8,623) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 330 · skips 107 · realized $-305.80.
+Cash book **-15.13%** ($8,487) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 338 · skips 107 · realized $-305.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -474,6 +474,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `ZNTL` | 394 | $2.81 | $5.08 | — | $1,111.45 | — | baseline list, no extra gate; list probable; ret5=+6.9; leftover $1109.01 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `SIBN` | 55 | $20.00 | $2.15 | — | $9.29 | — | baseline list, no extra gate; list probable; ret5=+5.6; leftover $1109.01 | join🟡 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.29 | ▼ close $8,622.78 vs 09:30 $8,903.72 (session -215.97) | 16:00 close · cash $9.29 · equity $8,622.78 vs 09:30 $8,903.72 (-280.94; session marks -215.97) · 8 name(s) marked open→close (per-name table). EBS×154 09:30 $7.16 → close $6.95 -32.34; ARCT×75 09:30 $14.70 → close $13.00 -127.50; CMPX×1120 09:30 $0.99 → close $1.00 +9.07; ALVO×182 09:30 $6.07 → close $6.14 +12.74; ONT×77 09:30 $14.27 → close $14.52 +19.25; XERS×108 09:30 $10.23 → close $10.07 -17.28; ZNTL×394 09:30 $2.81 → close $2.67 -55.16; SIBN×55 09:30 $20.00 → close $19.55 -24.75 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9.29 | ▼ 09:30 equity $8,520.26 vs yday $8,622.78 (-102.52) | 09:30 open · cash $9.29 (unchanged overnight, no fees) · equity $8,520.26 vs prior close $8,622.78 (-102.52) · 8 name(s) re-marked at the open (per-name table). ALVO×182 yday $6.14 → 09:30 $6.10 -7.28; ARCT×75 yday $13.00 → 09:30 $12.71 -21.75; CMPX×1120 yday $1.00 → 09:30 $0.97 -30.91; EBS×154 yday $6.95 → 09:30 $7.05 +15.40; ONT×77 yday $14.52 → 09:30 $14.27 -19.25; SIBN×55 yday $19.55 → 09:30 $19.27 -15.40; XERS×108 yday $10.07 → 09:30 $10.00 -7.56; ZNTL×394 yday $2.67 → 09:30 $2.63 -15.76 | — |
+| 2026-10-07 09:30 ET | **SELL** | `ALVO` | 182 | $6.10 | $2.58 | $+0.35 | $1,116.91 | ▲ +0.35 after sell → book $8,517.68; vs 09:30 mark -2.58 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `ARCT` | 75 | $12.71 | $2.24 | $-153.70 | $2,067.93 | ▼ -153.70 after sell → book $8,515.45; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `CMPX` | 1120 | $0.97 | $14.43 | $-50.66 | $3,140.46 | ▼ -50.66 after sell → book $8,501.02; vs 09:30 mark -14.43 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `EBS` | 154 | $7.05 | $2.49 | $-21.88 | $4,223.67 | ▼ -21.88 after sell → book $8,498.53; vs 09:30 mark -2.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `ONT` | 77 | $14.27 | $2.24 | $-4.46 | $5,320.22 | ▼ -4.46 after sell → book $8,496.29; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SIBN` | 55 | $19.27 | $2.17 | $-44.48 | $6,377.89 | ▼ -44.48 after sell → book $8,494.11; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `XERS` | 108 | $10.00 | $2.34 | $-29.50 | $7,455.55 | ▼ -29.50 after sell → book $8,491.77; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `ZNTL` | 394 | $2.63 | $5.16 | $-81.16 | $8,486.61 | ▼ -81.16 after sell → book $8,486.61; vs 09:30 mark -5.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,486.61 | ▲ close $8,486.61 vs 09:30 $8,520.26 (session +0.00) | 16:00 close · cash $8,486.61 · no lots left · equity $8,486.61. | — |
 
 ## Not taken
 

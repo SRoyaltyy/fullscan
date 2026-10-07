@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 11456.7,
+  "date": "2026-10-07",
+  "equity": 11456.7,
+  "fees": 39.0641,
+  "fills": [
+    {
+      "fees": 9.3024,
+      "fill_rule": "open",
+      "pnl": -32.66,
+      "price": 4.5,
+      "shares": 710,
+      "side": "SELL",
+      "ticker": "BBD"
+    },
+    {
+      "fees": 2.79,
+      "fill_rule": "open",
+      "pnl": -699.82,
+      "price": 11.805,
+      "shares": 212,
+      "side": "SELL",
+      "ticker": "DNA"
+    },
+    {
+      "fees": 24.6109,
+      "fill_rule": "open",
+      "pnl": -669.95,
+      "price": 1.375,
+      "shares": 1882,
+      "side": "SELL",
+      "ticker": "QTEX"
+    },
+    {
+      "fees": 2.3608,
+      "fill_rule": "open",
+      "pnl": 21.48,
+      "price": 29.44,
+      "shares": 109,
+      "side": "SELL",
+      "ticker": "XP"
+    }
+  ],
+  "holdings": [],
+  "mean": -5.0604,
+  "n_trades_today": 4,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 4.5,
+      "shares": 710,
+      "side": "SELL",
+      "ticker": "BBD"
+    },
+    {
+      "fill_rule": "open",
+      "price": 11.805,
+      "shares": 212,
+      "side": "SELL",
+      "ticker": "DNA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.375,
+      "shares": 1882,
+      "side": "SELL",
+      "ticker": "QTEX"
+    },
+    {
+      "fill_rule": "open",
+      "price": 29.44,
+      "shares": 109,
+      "side": "SELL",
+      "ticker": "XP"
+    }
+  ],
+  "state": {
+    "after": "2026-10-07",
+    "cash": 11456.7,
+    "pos": {},
+    "yday_equity": 11456.7
+  }
+}

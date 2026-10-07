@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-27.56%** ($7,244) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 139 · skips 80 · realized $-2514.32.
+Cash book **-25.50%** ($7,450) · signal-only (no cash/fees) was -22.61%. Starts YES **0/30**. Fills 142 · skips 80 · realized $-2514.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -283,6 +283,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `PENG` | 39 | $61.60 | $2.11 | — | $2,478.64 | — | baseline list, no extra gate; list overnight; 🔵; ret5=+10.4; leftover $2438.29 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `STZ` | 21 | $113.83 | $2.05 | — | $86.16 | — | baseline list, no extra gate; list overnight; ret5=+0.3; leftover $2438.29 | join🔴 sector🔴 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $86.16 | ▼ close $7,243.98 vs 09:30 $7,314.86 (session -64.17) | 16:00 close · cash $86.16 · equity $7,243.98 vs 09:30 $7,314.86 (-70.88; session marks -64.17) · 3 name(s) marked open→close (per-name table). NEOG×186 09:30 $13.06 → close $11.96 -204.60; PENG×39 09:30 $61.60 → close $64.21 +101.79; STZ×21 09:30 $113.83 → close $115.67 +38.64 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $86.16 | ▲ 09:30 equity $7,456.58 vs yday $7,243.98 (+212.60) | 09:30 open · cash $86.16 (unchanged overnight, no fees) · equity $7,456.58 vs prior close $7,243.98 (+212.60) · 3 name(s) re-marked at the open (per-name table). NEOG×186 yday $11.96 → 09:30 $12.61 +120.90; PENG×39 yday $64.21 → 09:30 $67.28 +119.63; STZ×21 yday $115.67 → 09:30 $114.34 -27.93 | — |
+| 2026-10-07 09:30 ET | **SELL** | `NEOG` | 186 | $12.61 | $2.60 | $-88.85 | $2,429.02 | ▼ -88.85 after sell → book $7,453.98; vs 09:30 mark -2.60 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `PENG` | 39 | $67.28 | $2.14 | $+217.18 | $5,050.71 | ▲ +217.18 after sell → book $7,451.85; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `STZ` | 21 | $114.34 | $2.08 | $+6.57 | $7,449.76 | ▲ +6.57 after sell → book $7,449.76; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,449.76 | ▲ close $7,449.76 vs 09:30 $7,456.58 (session +0.00) | 16:00 close · cash $7,449.76 · no lots left · equity $7,449.76. | — |
 
 ## Not taken
 

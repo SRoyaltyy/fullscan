@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-17.25%** ($8,275) · signal-only (no cash/fees) was -5.26%. Starts YES **0/30**. Fills 296 · skips 56 · realized $-1650.33.
+Cash book **-19.02%** ($8,098) · signal-only (no cash/fees) was -5.26%. Starts YES **0/30**. Fills 304 · skips 56 · realized $-1650.33.
 
 ## How this sleeve decides (like you are 10)
 
@@ -446,6 +446,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `SBS` | 162 | $6.41 | $2.48 | — | $1,121.62 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+21.8; leftover $1044.02 | join🔴 sector🟡 gen🟡 news🟡 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `NU` | 67 | $15.45 | $2.19 | — | $84.28 | — | combo gate; gate blue=True,vol=good; list yday_gainer; 🔵; ret5=+24.1; leftover $1044.02 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $84.28 | ▼ close $8,275.47 vs 09:30 $8,352.18 (session -52.20) | 16:00 close · cash $84.28 · equity $8,275.47 vs 09:30 $8,352.18 (-76.71; session marks -52.20) · 8 name(s) marked open→close (per-name table). QTEX×612 09:30 $1.71 → close $1.59 -70.38; PTC×5 09:30 $193.00 → close $193.00 +0.00; PAGS×95 09:30 $10.96 → close $10.72 -22.80; STNE×89 09:30 $11.67 → close $11.62 -4.45; INTR×153 09:30 $6.81 → close $7.03 +33.66; BBD×230 09:30 $4.52 → close $4.51 -2.30; SBS×162 09:30 $6.41 → close $6.41 +0.00; NU×67 09:30 $15.45 → close $15.66 +14.07 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $84.28 | ▼ 09:30 equity $8,122.37 vs yday $8,275.47 (-153.10) | 09:30 open · cash $84.28 (unchanged overnight, no fees) · equity $8,122.37 vs prior close $8,275.47 (-153.10) · 8 name(s) re-marked at the open (per-name table). BBD×230 yday $4.51 → 09:30 $4.50 -2.30; INTR×153 yday $7.03 → 09:30 $7.02 -1.53; NU×67 yday $15.66 → 09:30 $15.55 -7.37; PAGS×95 yday $10.72 → 09:30 $10.64 -7.60; PTC×5 yday $193.00 → 09:30 $193.20 +1.00; QTEX×612 yday $1.59 → 09:30 $1.38 -131.58; SBS×162 yday $6.41 → 09:30 $6.42 +1.62; STNE×89 yday $11.62 → 09:30 $11.56 -5.34 | — |
+| 2026-10-07 09:30 ET | **SELL** | `BBD` | 230 | $4.50 | $3.02 | $-10.58 | $1,116.26 | ▼ -10.58 after sell → book $8,119.35; vs 09:30 mark -3.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `INTR` | 153 | $7.02 | $2.48 | $+27.20 | $2,187.84 | ▲ +27.20 after sell → book $8,116.87; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `NU` | 67 | $15.55 | $2.21 | $+2.30 | $3,227.48 | ▲ +2.30 after sell → book $8,114.66; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PAGS` | 95 | $10.64 | $2.30 | $-34.98 | $4,235.98 | ▼ -34.98 after sell → book $8,112.36; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PTC` | 5 | $193.20 | $2.02 | $-3.03 | $5,199.95 | ▼ -3.03 after sell → book $8,110.33; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `QTEX` | 612 | $1.38 | $8.01 | $-217.86 | $6,033.45 | ▼ -217.86 after sell → book $8,102.33; vs 09:30 mark -8.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SBS` | 162 | $6.42 | $2.51 | $-3.37 | $7,070.97 | ▼ -3.37 after sell → book $8,099.81; vs 09:30 mark -2.52 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `STNE` | 89 | $11.56 | $2.28 | $-14.33 | $8,097.53 | ▼ -14.33 after sell → book $8,097.53; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,097.53 | ▲ close $8,097.53 vs 09:30 $8,122.37 (session +0.00) | 16:00 close · cash $8,097.53 · no lots left · equity $8,097.53. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+4.00%** ($10,400) · signal-only (no cash/fees) was +58.93%. Starts YES **21/30**. Fills 223 · skips 230 · realized $-9.83.
+Cash book **+3.69%** ($10,369) · signal-only (no cash/fees) was +58.93%. Starts YES **21/30**. Fills 227 · skips 230 · realized $-9.83.
 
 ## How this sleeve decides (like you are 10)
 
@@ -374,6 +374,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `BBD` | 287 | $4.52 | $3.70 | — | $1,311.63 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+29.4; leftover $1300.98 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `NU` | 84 | $15.45 | $2.24 | — | $11.58 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_gainer; 🔵; ret5=+24.1; leftover $1300.98 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.58 | ▼ close $10,400.02 vs 09:30 $10,531.63 (session -60.63) | 16:00 close · cash $11.58 · equity $10,400.02 vs 09:30 $10,531.63 (-131.61; session marks -60.63) · 12 name(s) marked open→close (per-name table). AVPT×89 09:30 $14.77 → close $14.59 -16.02; EVGO×16 09:30 $1.36 → close $1.32 -0.63; QSI×12 09:30 $1.29 → close $1.22 -0.84; SDEV×3 09:30 $3.48 → close $3.25 -0.69; SES×20 09:30 $0.84 → close $0.79 -0.95; QTEX×763 09:30 $1.71 → close $1.59 -87.74; XP×44 09:30 $29.20 → close $29.73 +23.32; PAGS×118 09:30 $10.96 → close $10.72 -28.32; STNE×111 09:30 $11.67 → close $11.62 -5.55; INTR×191 09:30 $6.81 → close $7.03 +42.02; BBD×287 09:30 $4.52 → close $4.51 -2.87; NU×84 09:30 $15.45 → close $15.66 +17.64 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11.58 | ▼ 09:30 equity $10,184.85 vs yday $10,400.02 (-215.17) | 09:30 open · cash $11.58 (unchanged overnight, no fees) · equity $10,184.85 vs prior close $10,400.02 (-215.17) · 12 name(s) re-marked at the open (per-name table). AVPT×89 yday $14.59 → 09:30 $14.51 -7.12; BBD×287 yday $4.51 → 09:30 $4.50 -2.87; EVGO×16 yday $1.32 → 09:30 $1.32 +0.00; INTR×191 yday $7.03 → 09:30 $7.02 -1.91; NU×84 yday $15.66 → 09:30 $15.55 -9.24; PAGS×118 yday $10.72 → 09:30 $10.64 -9.44; QSI×12 yday $1.22 → 09:30 $1.18 -0.48; QTEX×763 yday $1.59 → 09:30 $1.38 -164.05; SDEV×3 yday $3.25 → 09:30 $3.27 +0.06; SES×20 yday $0.79 → 09:30 $0.76 -0.70; STNE×111 yday $11.62 → 09:30 $11.56 -6.66; XP×44 yday $29.73 → 09:30 $29.44 -12.76 | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 89 | $14.51 | $2.28 | $+16.82 | $1,300.69 | ▲ +16.82 after sell → book $10,182.56; vs 09:30 mark -2.29 | dropped from list after 4 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `QSI` | 12 | $1.18 | $0.20 | $-2.80 | $1,314.65 | ▼ -2.80 after sell → book $10,182.37; vs 09:30 mark -0.19 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SDEV` | 3 | $3.27 | $0.13 | $-5.66 | $1,324.33 | ▼ -5.66 after sell → book $10,182.24; vs 09:30 mark -0.13 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-07 09:30 ET | **SELL** | `SES` | 20 | $0.76 | $0.23 | $-2.56 | $1,339.20 | ▼ -2.56 after sell → book $10,182.01; vs 09:30 mark -0.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,339.20 | ▲ close $10,369.21 vs 09:30 $10,184.85 (session +187.20) | 16:00 close · cash $1,339.20 · equity $10,369.21 vs 09:30 $10,184.85 (+184.36; session marks +187.20) · 8 name(s) marked open→close (per-name table). BBD×287 09:30 $4.50 → close $4.34 -45.92; EVGO×16 09:30 $1.32 → close $1.29 -0.48; INTR×191 09:30 $7.02 → close $7.18 +30.56; NU×84 09:30 $15.55 → close $15.58 +2.52; PAGS×118 09:30 $10.64 → close $10.51 -15.34; QTEX×763 09:30 $1.38 → close $1.66 +217.45; STNE×111 09:30 $11.56 → close $11.51 -5.55; XP×44 09:30 $29.44 → close $29.53 +3.96 | — |
 
 ## Not taken
 

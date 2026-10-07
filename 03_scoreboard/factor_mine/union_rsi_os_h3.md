@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-16.90%** ($8,310) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 102 · skips 88 · realized $-2389.72.
+Cash book **-17.07%** ($8,293) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 106 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -250,6 +250,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `NXH` | 2134 | $2.04 | $27.53 | — | $4,326.00 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-33.3; leftover $4353.45 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `STZ` | 37 | $113.83 | $2.10 | — | $112.19 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list overnight; ret5=+0.3; leftover $4353.45 | join🔴 sector🔴 gen🟡 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $112.19 | ▼ close $8,309.93 vs 09:30 $8,742.36 (session -380.28) | 16:00 close · cash $112.19 · equity $8,309.93 vs 09:30 $8,742.36 (-432.43; session marks -380.28) · 6 name(s) marked open→close (per-name table). CMPX×3 09:30 $0.99 → close $1.00 +0.02; KDK×2 09:30 $1.80 → close $1.72 -0.16; LUCD×5 09:30 $0.60 → close $0.60 +0.00; VIVO×1 09:30 $3.37 → close $3.29 -0.08; NXH×2134 09:30 $2.04 → close $1.83 -448.14; STZ×37 09:30 $113.83 → close $115.67 +68.08 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $112.19 | ▼ 09:30 equity $8,217.83 vs yday $8,309.93 (-92.10) | 09:30 open · cash $112.19 (unchanged overnight, no fees) · equity $8,217.83 vs prior close $8,309.93 (-92.10) · 6 name(s) re-marked at the open (per-name table). CMPX×3 yday $1.00 → 09:30 $0.97 -0.08; KDK×2 yday $1.72 → 09:30 $1.70 -0.04; LUCD×5 yday $0.60 → 09:30 $0.59 -0.05; NXH×2134 yday $1.83 → 09:30 $1.81 -42.68; STZ×37 yday $115.67 → 09:30 $114.34 -49.21; VIVO×1 yday $3.29 → 09:30 $3.25 -0.04 | — |
+| 2026-10-07 09:30 ET | **SELL** | `CMPX` | 3 | $0.97 | $0.06 | $-0.00 | $115.04 | ▼ -0.00 after sell → book $8,217.77; vs 09:30 mark -0.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `KDK` | 2 | $1.70 | $0.06 | $+0.00 | $118.38 | ▼ +0.00 after sell → book $8,217.71; vs 09:30 mark -0.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `LUCD` | 5 | $0.59 | $0.06 | $-0.33 | $121.27 | ▼ -0.33 after sell → book $8,217.64; vs 09:30 mark -0.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 09:30 ET | **SELL** | `VIVO` | 1 | $3.25 | $0.06 | $-0.08 | $124.47 | ▼ -0.08 after sell → book $8,217.59; vs 09:30 mark -0.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $124.47 | ▲ close $8,292.75 vs 09:30 $8,217.83 (session +75.16) | 16:00 close · cash $124.47 · equity $8,292.75 vs 09:30 $8,217.83 (+74.92; session marks +75.16) · 2 name(s) marked open→close (per-name table). NXH×2134 09:30 $1.81 → close $1.77 -74.69; STZ×37 09:30 $114.34 → close $118.39 +149.85 | — |
 
 ## Not taken
 

@@ -330,6 +330,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $91.05 | ▼ 09:30 equity $5,731.41 vs yday $5,740.65 (-9.24) | 09:30 open · cash $91.05 (unchanged overnight, no fees) · equity $5,731.41 vs prior close $5,740.65 (-9.24) · 1 name(s) re-marked at the open (per-name table). COP×44 yday $128.40 → 09:30 $128.19 -9.24 | — |
 | 2026-10-06 09:30 ET | **SELL** | `COP` | 44 | $128.19 | $2.18 | $+48.06 | $5,729.23 | ▲ +48.06 after sell → book $5,729.23; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,729.23 | ▲ close $5,729.23 vs 09:30 $5,731.41 (session +0.00) | 16:00 close · cash $5,729.23 · no lots left · equity $5,729.23. | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,729.23 | ▲ 09:30 equity $5,729.23 vs yday $5,729.23 (+0.00) | 09:30 open · cash $5,729.23 · no holdings · equity $5,729.23 vs prior close $5,729.23 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,729.23 | ▲ close $5,729.23 vs 09:30 $5,729.23 (session +0.00) | 16:00 close · cash $5,729.23 · no lots left · equity $5,729.23. | — |
 
 ## Not taken
 

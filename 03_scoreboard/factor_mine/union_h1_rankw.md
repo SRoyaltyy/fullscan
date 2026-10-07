@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-14.61%** ($8,539) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 326 · skips 107 · realized $-24.70.
+Cash book **-15.80%** ($8,420) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 334 · skips 107 · realized $-24.70.
 
 ## How this sleeve decides (like you are 10)
 
@@ -470,6 +470,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 09:30 ET | **BUY** | `EBS` | 68 | $7.16 | $2.19 | — | $476.38 | — | rank-weighted leftover; list probable,yday_gainer,yday_mover; ret5=+5.5; leftover $488.96 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-06 09:30 ET | **BUY** | `ARCT` | 16 | $14.70 | $2.04 | — | $239.14 | — | rank-weighted leftover; list probable,yday_gainer; ret5=+1.4; leftover $244.48 | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $239.14 | ▼ close $8,539.19 vs 09:30 $8,818.04 (session -245.51) | 16:00 close · cash $239.14 · equity $8,539.19 vs 09:30 $8,818.04 (-278.85; session marks -245.51) · 8 name(s) marked open→close (per-name table). CDNA×27 09:30 $70.89 → close $63.79 -191.70; SN×9 09:30 $183.47 → close $184.72 +11.25; TOST×48 09:30 $30.07 → close $30.25 +8.64; NTAP×5 09:30 $224.80 → close $228.45 +18.25; PDFS×17 09:30 $56.89 → close $54.44 -41.65; AVPT×49 09:30 $14.77 → close $14.59 -8.82; EBS×68 09:30 $7.16 → close $6.95 -14.28; ARCT×16 09:30 $14.70 → close $13.00 -27.20 | — |
+| 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $239.14 | ▼ 09:30 equity $8,436.62 vs yday $8,539.19 (-102.57) | 09:30 open · cash $239.14 (unchanged overnight, no fees) · equity $8,436.62 vs prior close $8,539.19 (-102.57) · 8 name(s) re-marked at the open (per-name table). ARCT×16 yday $13.00 → 09:30 $12.71 -4.64; AVPT×49 yday $14.59 → 09:30 $14.51 -3.92; CDNA×27 yday $63.79 → 09:30 $61.38 -65.02; EBS×68 yday $6.95 → 09:30 $7.05 +6.80; NTAP×5 yday $228.45 → 09:30 $232.00 +17.75; PDFS×17 yday $54.44 → 09:30 $52.54 -32.30; SN×9 yday $184.72 → 09:30 $183.00 -15.48; TOST×48 yday $30.25 → 09:30 $30.13 -5.76 | — |
+| 2026-10-07 09:30 ET | **SELL** | `ARCT` | 16 | $12.71 | $2.06 | $-35.94 | $440.44 | ▼ -35.94 after sell → book $8,434.57; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `AVPT` | 49 | $14.51 | $2.16 | $-17.03 | $1,149.28 | ▼ -17.03 after sell → book $8,432.41; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `CDNA` | 27 | $61.38 | $2.09 | $-260.88 | $2,804.49 | ▼ -260.88 after sell → book $8,430.31; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `EBS` | 68 | $7.05 | $2.22 | $-11.89 | $3,281.68 | ▼ -11.89 after sell → book $8,428.10; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `NTAP` | 5 | $232.00 | $2.02 | $+31.97 | $4,439.65 | ▲ +31.97 after sell → book $8,426.07; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `PDFS` | 17 | $52.54 | $2.06 | $-78.05 | $5,330.77 | ▼ -78.05 after sell → book $8,424.01; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `SN` | 9 | $183.00 | $2.04 | $-8.29 | $6,975.73 | ▼ -8.29 after sell → book $8,421.97; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 09:30 ET | **SELL** | `TOST` | 48 | $30.13 | $2.16 | $-1.41 | $8,419.82 | ▼ -1.41 after sell → book $8,419.82; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,419.82 | ▲ close $8,419.82 vs 09:30 $8,436.62 (session +0.00) | 16:00 close · cash $8,419.82 · no lots left · equity $8,419.82. | — |
 
 ## Not taken
 
