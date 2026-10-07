@@ -41,6 +41,12 @@ def write_page(records: list[dict] | None = None, status: dict | None = None) ->
         (page / "status.json").write_text(
             json.dumps(status, indent=2, sort_keys=True) + "\n", encoding="utf-8",
         )
+    if page.name == "h1":
+        try:
+            from src.record_certificate import stamp_dashboard
+            stamp_dashboard(page / "index.html", "h1")
+        except Exception as exc:
+            print(f"[h1] record certificate: {exc}", flush=True)
 
 
 def session_on_or_after(day: date) -> str:

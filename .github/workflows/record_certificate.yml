@@ -1,0 +1,44 @@
+name: record certificate
+
+# Past buy/sell certificate for Factor Mine and h1. Fails the test run
+# when the checker itself breaks. A red dashboard (a past day that really
+# moved) is the certificate working, and is not a test failure. Does not
+# place orders or rewrite sealed books.
+
+on:
+  pull_request:
+    paths:
+      - "src/record_certificate.py"
+      - "src/test_record_certificate.py"
+      - "src/factor_mine.py"
+      - "research/hot_n4_clean_v4/forward/render.py"
+      - "dashboard/factor-mine/index.html"
+      - "dashboard/h1/index.html"
+      - ".github/workflows/record_certificate.yml"
+  push:
+    branches: [main]
+    paths:
+      - "src/record_certificate.py"
+      - "src/test_record_certificate.py"
+      - "src/factor_mine.py"
+      - "research/hot_n4_clean_v4/forward/render.py"
+      - "dashboard/factor-mine/index.html"
+      - "dashboard/h1/index.html"
+      - ".github/workflows/record_certificate.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  certificate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Past buy/sell certificate
+        run: python3 -m src.test_record_certificate
