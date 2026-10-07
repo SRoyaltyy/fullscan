@@ -1,8 +1,8 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T04:21:25.136394-04:00",
+  "generated_at": "2026-10-07T04:22:15.456945-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-07.csv",
+  "export": "finviz_2026-10-06.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,7 +8935,7 @@
   ],
   "ticker_news": [
     {
-      "time": "3 min",
+      "time": "4 min",
       "title": "TORM plc capital increase in connection with exercise of Restricted Share Units as part of TORM's incentive program",
       "url": "/news/399640/torm-plc-capital-increase-in-connection-with-exercise-of-restricted-share-units-as-part-of-torms-incentive-program",
       "source": "PR Newswire",
@@ -8944,7 +8944,7 @@
       ]
     },
     {
-      "time": "18 min",
+      "time": "19 min",
       "title": "Stock market today: Dow, S&P 500, Nasdaq futures steady after tech rally",
       "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-7-dow-sp-500-nasdaq-080241833.html",
       "source": "Yahoo Finance",
@@ -8955,7 +8955,7 @@
       ]
     },
     {
-      "time": "21 min",
+      "time": "22 min",
       "title": "This biotech stock is a top pick at Guggenheim",
       "url": "https://finance.yahoo.com/healthcare/articles/biotech-stock-top-pick-guggenheim-080004787.html",
       "source": "Investing.com",
@@ -8964,7 +8964,7 @@
       ]
     },
     {
-      "time": "24 min",
+      "time": "25 min",
       "title": "Meta stock achieves a golden cross as shares thrive since Muse introduction",
       "url": "https://www.marketwatch.com/story/meta-stock-achieves-a-golden-cross-as-shares-thrive-since-muse-introduction-5ba818d4?mod=mw_FV",
       "source": "MarketWatch",
@@ -8973,7 +8973,7 @@
       ]
     },
     {
-      "time": "25 min",
+      "time": "26 min",
       "title": "Micron's Taoyuan union in Taiwan secures authorisation to strike",
       "url": "https://finance.yahoo.com/technology/articles/microns-taoyuan-union-taiwan-secures-075554802.html",
       "source": "Reuters",
@@ -8982,7 +8982,7 @@
       ]
     },
     {
-      "time": "31 min",
+      "time": "32 min",
       "title": "Oil rises and stocks fall as Hormuz worries flare",
       "url": "https://finance.yahoo.com/energy/articles/oil-rises-stocks-fall-hormuz-023838273.html",
       "source": "AFP",
@@ -8991,7 +8991,7 @@
       ]
     },
     {
-      "time": "38 min",
+      "time": "39 min",
       "title": "INTC Stock Jumps Overnight: CEO Says Intel Will Keep Working With Musk's Terafab Amid TSMC Partnership Buzz",
       "url": "https://finance.yahoo.com/markets/stocks/articles/intc-stock-jumps-overnight-ceo-074228291.html",
       "source": "Stocktwits",
@@ -9001,7 +9001,7 @@
       ]
     },
     {
-      "time": "40 min",
+      "time": "41 min",
       "title": "European stocks slip as Houthi threat lift oil ahead of FOMC\u00a0minutes",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/european-stocks-slip-houthi-threat-074052597.html",
       "source": "Investing.com",
@@ -9011,7 +9011,7 @@
       ]
     },
     {
-      "time": "41 min",
+      "time": "42 min",
       "title": "Micron workers at Taiwan plant vote in favour of strike",
       "url": "https://finance.yahoo.com/markets/stocks/articles/micron-workers-taiwan-plant-vote-074005592.html",
       "source": "AFP",
@@ -9020,7 +9020,7 @@
       ]
     },
     {
-      "time": "41 min",
+      "time": "42 min",
       "title": "Robinhood's Chief Investment Officer Says Energy Stocks Remain The Best Hedge: Here Are 2 Stocks She Prefers",
       "url": "https://finance.yahoo.com/energy/articles/robinhoods-chief-investment-officer-says-073923437.html",
       "source": "Stocktwits",
@@ -9032,7 +9032,7 @@
       ]
     },
     {
-      "time": "50 min",
+      "time": "51 min",
       "title": "XRP Treasury Giant Delays Nasdaq Debut",
       "url": "https://finance.yahoo.com/markets/crypto/articles/xrp-treasury-giant-delays-nasdaq-073104622.html",
       "source": "BeInCrypto",
@@ -9041,7 +9041,7 @@
       ]
     },
     {
-      "time": "51 min",
+      "time": "52 min",
       "title": "Pennon shares plunge 20% as Jefferies flags equity raise and dividend cut",
       "url": "https://finance.yahoo.com/markets/stocks/articles/pennon-shares-plunge-20-jefferies-073000281.html",
       "source": "Proactive",
@@ -9050,7 +9050,7 @@
       ]
     },
     {
-      "time": "51 min",
+      "time": "52 min",
       "title": "Atlassian Launches Forward Deployed Engineering Program to Scale Enterprise AI Transformation",
       "url": "https://www.businesswire.com/news/home/20261007018462/en/",
       "source": "Business Wire",
@@ -9068,7 +9068,7 @@
       ]
     },
     {
-      "time": "58 min",
+      "time": "59 min",
       "title": "Porsche targets 20% price rise on top models, cuts break-even below 200,000 units",
       "url": "https://finance.yahoo.com/markets/stocks/articles/porsche-targets-20-price-rise-072219488.html",
       "source": "Investing.com",
@@ -9211,8 +9211,8 @@
       "tickers": [
         "AFRM",
         "KLAR",
-        "SOFI",
         "SEZL",
+        "SOFI",
         "COF"
       ]
     },
@@ -9365,8 +9365,8 @@
       "source": "Yahoo Finance",
       "tickers": [
         "MU",
-        "AMD",
-        "NVDA"
+        "NVDA",
+        "AMD"
       ]
     },
     {
@@ -9376,8 +9376,8 @@
       "source": "Stocktwits",
       "tickers": [
         "SPCX",
-        "AMD",
         "NVDA",
+        "AMD",
         "CRWD"
       ]
     },
@@ -10708,5 +10708,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 171,
   "earnings_window_count": 249,
-  "overlay_at": "2026-10-07T04:21:25.136394-04:00"
+  "overlay_at": "2026-10-07T04:22:15.456945-04:00"
 }

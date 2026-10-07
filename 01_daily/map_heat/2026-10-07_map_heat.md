@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-07
 
-Export `finviz_2026-10-07.csv` · 11616 names · generated 2026-10-07T04:21:25.136394-04:00
+Export `finviz_2026-10-06.csv` · 11616 names · generated 2026-10-07T04:22:15.456945-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -280,21 +280,21 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 3 min **TRMD** TORM plc capital increase in connection with exercise of Restricted Share Units as part of TORM's incentive program (PR Newswire)
-- 18 min **MSFT,NVDA,AAPL** Stock market today: Dow, S&P 500, Nasdaq futures steady after tech rally (Yahoo Finance)
-- 21 min **ZURA** This biotech stock is a top pick at Guggenheim (Investing.com)
-- 24 min **META** Meta stock achieves a golden cross as shares thrive since Muse introduction (MarketWatch)
-- 25 min **MU** Micron's Taoyuan union in Taiwan secures authorisation to strike (Reuters)
-- 31 min **NVDA** Oil rises and stocks fall as Hormuz worries flare (AFP)
-- 38 min **INTC,TSM** INTC Stock Jumps Overnight: CEO Says Intel Will Keep Working With Musk's Terafab Amid TSMC Partnership Buzz (Stocktwits)
-- 40 min **CL,LCO** European stocks slip as Houthi threat lift oil ahead of FOMC minutes (Investing.com)
-- 41 min **MU** Micron workers at Taiwan plant vote in favour of strike (AFP)
-- 41 min **HOOD,EOG,XLE,XOM** Robinhood's Chief Investment Officer Says Energy Stocks Remain The Best Hedge: Here Are 2 Stocks She Prefers (Stocktwits)
-- 50 min **XRPN** XRP Treasury Giant Delays Nasdaq Debut (BeInCrypto)
-- 51 min **JEF** Pennon shares plunge 20% as Jefferies flags equity raise and dividend cut (Proactive)
-- 51 min **TEAM** Atlassian Launches Forward Deployed Engineering Program to Scale Enterprise AI Transformation (Business Wire)
+- 4 min **TRMD** TORM plc capital increase in connection with exercise of Restricted Share Units as part of TORM's incentive program (PR Newswire)
+- 19 min **MSFT,NVDA,AAPL** Stock market today: Dow, S&P 500, Nasdaq futures steady after tech rally (Yahoo Finance)
+- 22 min **ZURA** This biotech stock is a top pick at Guggenheim (Investing.com)
+- 25 min **META** Meta stock achieves a golden cross as shares thrive since Muse introduction (MarketWatch)
+- 26 min **MU** Micron's Taoyuan union in Taiwan secures authorisation to strike (Reuters)
+- 32 min **NVDA** Oil rises and stocks fall as Hormuz worries flare (AFP)
+- 39 min **INTC,TSM** INTC Stock Jumps Overnight: CEO Says Intel Will Keep Working With Musk's Terafab Amid TSMC Partnership Buzz (Stocktwits)
+- 41 min **CL,LCO** European stocks slip as Houthi threat lift oil ahead of FOMC minutes (Investing.com)
+- 42 min **MU** Micron workers at Taiwan plant vote in favour of strike (AFP)
+- 42 min **HOOD,EOG,XLE,XOM** Robinhood's Chief Investment Officer Says Energy Stocks Remain The Best Hedge: Here Are 2 Stocks She Prefers (Stocktwits)
+- 51 min **XRPN** XRP Treasury Giant Delays Nasdaq Debut (BeInCrypto)
+- 52 min **JEF** Pennon shares plunge 20% as Jefferies flags equity raise and dividend cut (Proactive)
+- 52 min **TEAM** Atlassian Launches Forward Deployed Engineering Program to Scale Enterprise AI Transformation (Business Wire)
 - 57 min **CL** Bitcoin drops to $84k amid pressure from rising oil prices, yields (Investing.com)
-- 58 min **RACE** Porsche targets 20% price rise on top models, cuts break-even below 200,000 units (Investing.com)
+- 59 min **RACE** Porsche targets 20% price rise on top models, cuts break-even below 200,000 units (Investing.com)
 - 1 hour **ZIM** ZIM Stock Rises Overnight After Shipper Raises 2026 Guidance, Even As Hapag-Lloyd Deal Hits Israeli Hurdle (Stocktwits)
 - 1 hour **FCN** FTI Consulting Expands Technology Transformation Capabilities in EMEA With Appointment of Anita Fuller (GlobeNewswire)
 - 1 hour **TEAM** Atlassian Introduces AMP: The Agentic Multiplayer Protocol to Power Human-AI Collaboration (Business Wire)
