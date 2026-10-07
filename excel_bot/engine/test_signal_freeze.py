@@ -493,6 +493,152 @@ def test_unclosed_signal_date_cannot_be_locked() -> None:
         assert _bytes(path) == sealed
 
 
+def _tickers(path: str) -> list:
+    import csv
+    with open(path, newline="", encoding="utf-8") as handle:
+        return [
+            (row["signal_date"], row["ticker"], row["strategy"], row["run_date"])
+            for row in csv.DictReader(handle)
+        ]
+
+
+def test_stale_signal_on_locked_day_does_not_fail_or_append() -> None:
+    """A grid stuck on a locked day must not add a pick or fail the run.
+
+    The next session re-emits the locked ticker plus an extra one, both
+    dated the old day. Neither is appended. The lock entry is unchanged.
+    """
+    import contextlib
+    import io
+    import daily_run
+    later = datetime(2026, 10, 7, 17, 17, tzinfo=ET)
+    assert gh_summary.resolve_session(later).session.isoformat() == "2026-10-07"
+    assert gh_summary.resolve_session(later).write_final is True
+    with tempfile.TemporaryDirectory() as tmp:
+        sugg, manifest = _prepare_store(tmp)
+        daily_run.store_signals(
+            [_signal()], now=AFTER_CLOSE, sugg_csv=sugg, manifest_path=manifest,
+        )
+        locked = json.loads(_bytes(manifest))["entries"]
+        assert len(locked) == 1
+        assert locked[0]["pick_ids"] == [["AAA", "L1_long_green_tp8_lowvol"]]
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            added = daily_run.store_signals(
+                [
+                    _signal(),
+                    _signal(ticker="BBB", ref_close=4.17),
+                ],
+                now=later,
+                sugg_csv=sugg,
+                manifest_path=manifest,
+            )
+        assert added == 0
+        text = buf.getvalue()
+        assert "skip AAA" in text and "signal_date 2026-10-06" in text
+        assert "skip BBB" in text
+        assert "not the 2026-10-07 session" in text
+        rows = _tickers(sugg)
+        assert ("2026-10-06", "BBB", "L1_long_green_tp8_lowvol", "2026-10-07") not in rows
+        assert all(row[1] != "BBB" for row in rows)
+        stored = [row for row in rows if row[0] == "2026-10-06"]
+        assert stored == [("2026-10-06", "AAA", "L1_long_green_tp8_lowvol", "2026-10-06")]
+        after = json.loads(_bytes(manifest))["entries"]
+        assert after == locked
+        signal_freeze.verify_store(sugg, manifest)
+
+
+def test_same_session_signal_still_appends_and_locks() -> None:
+    """A confirmation on the resolved session is appended and locked."""
+    import daily_run
+    later = datetime(2026, 10, 7, 17, 17, tzinfo=ET)
+    with tempfile.TemporaryDirectory() as tmp:
+        sugg, manifest = _prepare_store(tmp)
+        daily_run.store_signals(
+            [_signal()], now=AFTER_CLOSE, sugg_csv=sugg, manifest_path=manifest,
+        )
+        added = daily_run.store_signals(
+            [
+                _signal(ticker="BBB", ref_close=4.17),
+                _signal(ticker="CCC", signal_date="2026-10-07", ref_close=12.5),
+            ],
+            now=later,
+            sugg_csv=sugg,
+            manifest_path=manifest,
+        )
+        assert added == 1
+        rows = _tickers(sugg)
+        assert all(row[1] != "BBB" for row in rows)
+        assert ("2026-10-07", "CCC", "L1_long_green_tp8_lowvol", "2026-10-07") in rows
+        body = json.loads(_bytes(manifest))
+        assert [entry["signal_date"] for entry in body["entries"]] == [
+            "2026-10-06", "2026-10-07",
+        ]
+        assert body["entries"][0]["pick_ids"] == [["AAA", "L1_long_green_tp8_lowvol"]]
+        assert body["entries"][1]["kind"] == "lock"
+        assert body["entries"][1]["pick_ids"] == [["CCC", "L1_long_green_tp8_lowvol"]]
+        signal_freeze.verify_store(sugg, manifest)
+
+
+def test_weekend_and_holiday_keep_the_resolved_session() -> None:
+    """The session stamp is the previous completed day, and that day may append.
+
+    Saturday 2026-10-10 and Thanksgiving 2026-11-26 both write a final for
+    the prior session. A signal on that session is stored. A signal from
+    the day before it is not.
+    """
+    import contextlib
+    import io
+    import daily_run
+    saturday = datetime(2026, 10, 10, 12, 0, tzinfo=ET)
+    thanksgiving = datetime(2026, 11, 26, 12, 0, tzinfo=ET)
+    assert gh_summary.resolve_session(saturday).session.isoformat() == "2026-10-09"
+    assert gh_summary.resolve_session(saturday).write_final is True
+    assert gh_summary.is_nyse_holiday(thanksgiving.date()) is True
+    assert gh_summary.resolve_session(thanksgiving).session.isoformat() == "2026-11-25"
+    assert gh_summary.resolve_session(thanksgiving).write_final is True
+    with tempfile.TemporaryDirectory() as tmp:
+        sugg, manifest = _prepare_store(tmp)
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            added = daily_run.store_signals(
+                [
+                    _signal(ticker="FRI", signal_date="2026-10-09", ref_close=9.0),
+                    _signal(ticker="THU", signal_date="2026-10-08", ref_close=8.0),
+                ],
+                now=saturday,
+                sugg_csv=sugg,
+                manifest_path=manifest,
+            )
+        assert added == 1
+        assert "skip THU" in buf.getvalue()
+        assert "not the 2026-10-09 session" in buf.getvalue()
+        rows = _tickers(sugg)
+        assert ("2026-10-09", "FRI", "L1_long_green_tp8_lowvol", "2026-10-09") in rows
+        assert all(row[1] != "THU" for row in rows)
+        body = json.loads(_bytes(manifest))
+        assert [entry["signal_date"] for entry in body["entries"]] == ["2026-10-09"]
+        signal_freeze.verify_store(sugg, manifest)
+    with tempfile.TemporaryDirectory() as tmp:
+        sugg, manifest = _prepare_store(tmp)
+        added = daily_run.store_signals(
+            [
+                _signal(ticker="WED", signal_date="2026-11-25", ref_close=11.0),
+                _signal(ticker="TUE", signal_date="2026-11-24", ref_close=10.0),
+            ],
+            now=thanksgiving,
+            sugg_csv=sugg,
+            manifest_path=manifest,
+        )
+        assert added == 1
+        rows = _tickers(sugg)
+        assert ("2026-11-25", "WED", "L1_long_green_tp8_lowvol", "2026-11-25") in rows
+        assert all(row[1] != "TUE" for row in rows)
+        body = json.loads(_bytes(manifest))
+        assert body["entries"][0]["signal_date"] == "2026-11-25"
+        assert body["entries"][0]["kind"] == "lock"
+
+
 if __name__ == "__main__":
     test_unchanged_passes()
     test_changed_pick_fails()
@@ -509,4 +655,7 @@ if __name__ == "__main__":
     test_second_final_run_with_identical_picks_verifies()
     test_changed_picks_on_final_run_fail_closed()
     test_unclosed_signal_date_cannot_be_locked()
+    test_stale_signal_on_locked_day_does_not_fail_or_append()
+    test_same_session_signal_still_appends_and_locks()
+    test_weekend_and_holiday_keep_the_resolved_session()
     print("ok")

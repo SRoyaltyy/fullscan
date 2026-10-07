@@ -252,8 +252,14 @@ def store_signals(sigs, *, now=None, sugg_csv=None, manifest_path=None):
     the summary uses. Before 16:00 ET on a session day this verifies
     locks already on disk and returns. suggestions.csv and
     freeze_manifest.json stay byte-identical. Only a final run appends
-    rows and manifest entries. A signal_date whose session has not
-    closed is not locked (signal_freeze refuses that too).
+    rows and manifest entries. A new row is appended only when its
+    signal_date is that resolved session. A weekend or holiday stamp
+    is already the previous completed session, so a confirmation on
+    that day is still appended. Any other date is logged and skipped:
+    a failed fetch leaves the grid's last bar on an older day, and
+    appending that bar would add a pick to a day that may already be
+    locked. Rows already stored keep verifying. A signal_date whose
+    session has not closed is not locked (signal_freeze refuses that too).
     """
     import gh_summary
     import signal_freeze
@@ -320,6 +326,16 @@ def store_signals(sigs, *, now=None, sugg_csv=None, manifest_path=None):
             "signal_colors": s["signal_colors"],
         }
         key = (key_date, s["ticker"], s["strategy"])
+        if key_date != run_date:
+            # Not this session. Do not append it, and do not copy it
+            # onto a stored row: fresh["run_date"] is today's session,
+            # so that copy would change a locked field and fail the run.
+            print(
+                f"[store] skip {s['ticker']} {s['strategy']} "
+                f"signal_date {key_date}: not the {run_date} session",
+                flush=True,
+            )
+            continue
         if key in by_key:
             stored = by_key[key]
             if key_date in locked_days:

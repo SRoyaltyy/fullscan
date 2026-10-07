@@ -23,9 +23,14 @@ Workflow: `.github/workflows/excel_bot.yml` → "Excel Bot (cluster signals dail
 4. **Signals** — every validated strategy in `strategies/` is checked; a
    suggestion is a cluster whose *confirmation day* is the latest trading day.
 5. **Store** — on a final run only, appended to `suggestions/suggestions.csv`
-   (one file, deduped). All past suggestions get `current_price` / returns
-   refreshed. From 2026-10-06 each closed signal day is fingerprinted before
-   that write. A draft run leaves the csv and the manifest byte-identical.
+   (one file, deduped). A new row is appended only when its `signal_date`
+   is this run's NYSE session. A weekend or holiday session is the previous
+   completed day, so that day's new confirmation is still appended. An
+   older date (a grid whose last bar did not move because the fetch failed)
+   is logged and skipped, and is not treated as an edit of a locked day.
+   All past suggestions get `current_price` / returns refreshed. From
+   2026-10-06 each closed signal day is fingerprinted before that write.
+   A draft run leaves the csv and the manifest byte-identical.
 6. **Summary** — before 16:00 ET, `daily/{date}_excel_bot_draft.md` only.
    At or after 16:00 ET, `daily/{date}_excel_bot.md` is created once
    (today's signals, live strategy scoreboard, best/worst open
