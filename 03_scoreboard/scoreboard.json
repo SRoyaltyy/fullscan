@@ -19653,6 +19653,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-07",
+          "actual_pct": 1.67,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -27493,6 +27505,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.42
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-10-07",
+          "actual_pct": 1.24,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -30606,7 +30630,20 @@
       "knowable_at_9am": "partially — the NFP miss itself was an unforeseeable binary, but the BN=GN reaction function (weak print = equity-positive) was knowable and was correctly applied",
       "attribution_contested": "no — outlets converge on jobs-report→hike-odds as the driver, with tech outlets emphasizing NVDA and macro outlets the Fed; no contradictions",
       "outlier_watch": "Energy equities (XLE) fell while the broad market rose — the G7 reserve release is index-positive but energy-shareholder-negative; and all three indices closed well below their intraday highs",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-10-07",
+          "actual_pct": 1.02,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.48
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -31344,7 +31381,7 @@
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-07_lesson.md",
       "sources_used": [
         {
           "url": "https://www.cnbc.com/2026/10/07/fed-officials-see-another-hike-coming-but-no-sign-as-to-when-minutes-show.html",
@@ -31389,7 +31426,8 @@
       "key_interaction": "Yields+oil+Europe amplified into the midday hole; auction demand (and non-shock minutes) offset that stack, so a violent duration day closed only mildly red",
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
-      "outlier_watch": "Dow did not V with SPX/NDX; energy lagged oil; VIX stayed ~15; gold sold with real yields; minutes printed after the low"
+      "outlier_watch": "Dow did not V with SPX/NDX; energy lagged oil; VIX stayed ~15; gold sold with real yields; minutes printed after the low",
+      "lesson_schema_ok": true
     }
   ]
 }
