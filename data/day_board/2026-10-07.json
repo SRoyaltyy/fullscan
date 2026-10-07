@@ -1,10 +1,9 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T04:44:01.026960-04:00",
+  "generated_at": "2026-10-07T04:48:57.760500-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-07_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-10-07/_board.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-07_ab_checklist_enriched.csv` \u2014 missing"
   ],
@@ -181,7 +180,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 5,
       "n_req": 9,
       "n_opt_ok": 2,
       "n_opt": 14,
@@ -319,11 +318,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-07_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 15902,
+          "said": "DOWN -5.211",
+          "bullets": [
+            "bad: FOMC minutes 14:00 ET unsigned",
+            "bad: Hormuz On Peace + Houthi Aden increment",
+            "bad: Asia composite -0.66%",
+            "good: leftover SPX/NDX record closes"
+          ]
         },
         {
           "key": "board",
@@ -342,13 +346,13 @@
           "path": "01_daily/2026-10-07_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7565,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
+          "reason": "all_ok=True",
+          "size": 7561,
+          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
-            "general_predict:missing",
             "finviz_market_digest:missing",
             "map_heat_research:missing",
+            "sector_predict:missing",
             "sector_predict:missing"
           ]
         },
@@ -496,8 +500,14 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "general DOWN  -5.211",
+      "bullets": [
+        "bad: FOMC minutes 14:00 ET unsigned",
+        "bad: Hormuz On Peace + Houthi Aden increment",
+        "bad: Asia composite -0.66%",
+        "good: leftover SPX/NDX record closes",
+        "good: Oct hike odds faded ~20% hold"
+      ]
     },
     {
       "key": "weather",
@@ -665,11 +675,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-07_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 15902,
+          "said": "DOWN -5.211",
+          "bullets": [
+            "bad: FOMC minutes 14:00 ET unsigned",
+            "bad: Hormuz On Peace + Houthi Aden increment",
+            "bad: Asia composite -0.66%",
+            "good: leftover SPX/NDX record closes"
+          ]
         },
         {
           "key": "in_board",
@@ -910,7 +925,18 @@
     "buy_1d": [],
     "sell_1d": [],
     "flatten": {},
-    "general": {},
+    "general": {
+      "said": "DOWN  -5.211",
+      "bullets": [
+        "bad: FOMC minutes 14:00 ET unsigned",
+        "bad: Hormuz On Peace + Houthi Aden increment",
+        "bad: Asia composite -0.66%",
+        "good: leftover SPX/NDX record closes",
+        "good: Oct hike odds faded ~20% hold"
+      ],
+      "score": "-5.211",
+      "direction": "down"
+    },
     "sectors": {},
     "news": {},
     "weather": {
@@ -1395,6 +1421,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-10-07 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T04:48:56.328959-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-10-07_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 15902,
+          "preview": "# Premarket Prediction \u2014 2026-10-07\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -5.211 (uncertainty multiplier \u00d71.1) | confidence 0.708\n>\n> **Good news vs bad news:** good +0 pts vs bad -5.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - leftover SPX/NDX record closes\n> - Oct hike odds faded ~20% hold\n> - AI-chip/memory bid T+1\n> - VIX 15.3 contango\n> - DXY not surging 1d\n>\n> **Bad news driving this:**\n> - FOMC minutes 14:00 ET unsigned\n> - Hormuz On Peace + Houthi Aden increment\n> - Asia composite -0.66%\n> - 1w 10Y +7bp at 5.31\n> - EPU 422 1d +173\n>\n> **market uncertainty: **elevated** | VIX 15.26 | policy-uncertainty index 421.71 (1d +173.48)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news &"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-10-07\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -5.211 (uncertainty multiplier \u00d71.1) | confidence 0.708\n>\n> **Good news vs bad news:** good +0 pts vs bad -5.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - leftover SPX/NDX record closes\n> - Oct hike odds faded ~20% hold\n> - AI-chip/memory bid T+1\n> - VIX 15.3 contango\n> - DXY not surging 1d\n>\n> **Bad news driving this:**\n> - FOMC minutes 14:00 ET unsigned\n> - Hormuz On Peace + Houthi Aden increment\n> - Asia composite -0.66%\n> - 1w 10Y +7bp at 5.31\n> - EPU 422 1d +173\n>\n> **market uncertainty: **elevated** | VIX 15.26 | policy-uncertainty index 421.71 (1d +173.48)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news &"
     }
   ],
   "href": {
