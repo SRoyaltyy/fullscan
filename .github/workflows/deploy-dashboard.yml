@@ -8,6 +8,8 @@ name: Deploy dashboard to GitHub Pages
 # Always overlay named dashboard folders from main so force-orphan deploys cannot 404 those pages.
 # No session_date: the gate uses the latest completed NYSE session
 # (before 09:30 ET, or a weekend/holiday, that is the previous session).
+# Exception: before 09:30 ET, if today's day board + factor-mine today.json
+# + tickets have already rolled to today and pass, publish today instead.
 # A gate block fails the job. A skipped Download/Publish is never green.
 
 on:
