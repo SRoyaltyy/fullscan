@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T06:09:21.085863-04:00",
+  "generated_at": "2026-10-07T06:09:22.448888-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -354,11 +354,11 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7561,
-          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 13 fail",
+          "size": 7558,
+          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 12 fail",
           "bullets": [
             "finviz_market_digest:missing",
-            "map_heat_research:missing",
+            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
           ]
@@ -842,7 +842,7 @@
           "size": 32666,
           "said": "Stock book \u2014 2026-10-07",
           "bullets": [
-            "_Generated 2026-10-07T06:07:11.343226-04:00_",
+            "_Generated 2026-10-07T06:09:10.926570-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -2893,6 +2893,59 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-07\n_Generated 2026-10-07T10:09:18 \u2014 live `flatten_robust`._\n**S=-5.21; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-5.21** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$5.78** (after 09:30 $5.78 \u00b7 after 16:00 $105,429.62)\n- Prior close **$105,483.16** \u00b7 09:30 **$105,483.16** \u00b7 overnight **$+0.00** \u00b7 session **$-53.54** \u00b7 16:00 **$105,429.62**\n- Overnight lots **11** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$105,429.62** \u00b7 2026-10-07 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\":"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T06:09:21.236114-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-07_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1010208,
+          "preview": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/2026-10-07_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-07_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2493,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-07_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7333,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7333,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "01_daily/2026-10-07_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 33549,
+          "preview": "# Stock book \u2014 2026-10-07\n_Generated 2026-10-07T06:09:10.926570-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 # Stock book \u2014 2026-10-07\n_Generated 2026-10-07T06:09:10.926570-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
