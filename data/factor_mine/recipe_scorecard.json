@@ -1,0 +1,2723 @@
+{
+ "generated_at": "2026-10-07T17:23:49Z",
+ "baseline_cash": 10000.0,
+ "recent_sessions": 20,
+ "start_date": "2026-08-13",
+ "last_date": "2026-10-06",
+ "n_days": 38,
+ "n_recipes": 339,
+ "recipes": {
+  "coil_h3_exit_alarm": {
+   "equity": 7323.38,
+   "total_ret_pct": -26.766,
+   "ret_recent_pct": -21.606,
+   "n_trades": 263,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_e1er_5050_shared": {
+   "equity": 9222.02,
+   "total_ret_pct": -7.78,
+   "ret_recent_pct": -0.457,
+   "n_trades": 173,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_e1s_7030_shared": {
+   "equity": 7873.32,
+   "total_ret_pct": -21.267,
+   "ret_recent_pct": -19.189,
+   "n_trades": 222,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ee1_3070_shared": {
+   "equity": 8870.17,
+   "total_ret_pct": -11.298,
+   "ret_recent_pct": -0.798,
+   "n_trades": 150,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ee1_5050_shared": {
+   "equity": 8870.17,
+   "total_ret_pct": -11.298,
+   "ret_recent_pct": -0.798,
+   "n_trades": 150,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ee1_7030_shared": {
+   "equity": 8870.17,
+   "total_ret_pct": -11.298,
+   "ret_recent_pct": -0.798,
+   "n_trades": 150,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_eer_5050_shared": {
+   "equity": 8870.17,
+   "total_ret_pct": -11.298,
+   "ret_recent_pct": -0.798,
+   "n_trades": 150,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ef_3070_shared": {
+   "equity": 8769.11,
+   "total_ret_pct": -12.309,
+   "ret_recent_pct": -6.814,
+   "n_trades": 266,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ef_5050_shared": {
+   "equity": 8816.03,
+   "total_ret_pct": -11.84,
+   "ret_recent_pct": -4.831,
+   "n_trades": 272,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ef_7030_shared": {
+   "equity": 8935.99,
+   "total_ret_pct": -10.64,
+   "ret_recent_pct": -2.138,
+   "n_trades": 272,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_eh_3070_shared": {
+   "equity": 13589.34,
+   "total_ret_pct": 35.893,
+   "ret_recent_pct": 38.661,
+   "n_trades": 266,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_eh_5050_shared": {
+   "equity": 12705.58,
+   "total_ret_pct": 27.056,
+   "ret_recent_pct": 33.083,
+   "n_trades": 266,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_eh_7030_shared": {
+   "equity": 11477.09,
+   "total_ret_pct": 14.771,
+   "ret_recent_pct": 23.328,
+   "n_trades": 264,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ehs_601525_shared": {
+   "equity": 16146.85,
+   "total_ret_pct": 61.468,
+   "ret_recent_pct": 67.155,
+   "n_trades": 314,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ehs_702010_shared": {
+   "equity": 15327.64,
+   "total_ret_pct": 53.276,
+   "ret_recent_pct": 63.854,
+   "n_trades": 308,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ej_5050_shared": {
+   "equity": 9871.62,
+   "total_ret_pct": -1.284,
+   "ret_recent_pct": 5.021,
+   "n_trades": 368,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_en_3070_shared": {
+   "equity": 7983.79,
+   "total_ret_pct": -20.162,
+   "ret_recent_pct": -16.449,
+   "n_trades": 307,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_en_5050_shared": {
+   "equity": 8453.04,
+   "total_ret_pct": -15.47,
+   "ret_recent_pct": -9.727,
+   "n_trades": 307,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_en_7030_shared": {
+   "equity": 8891.61,
+   "total_ret_pct": -11.084,
+   "ret_recent_pct": -3.333,
+   "n_trades": 293,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ers_7030_shared": {
+   "equity": 8075.83,
+   "total_ret_pct": -19.242,
+   "ret_recent_pct": -15.084,
+   "n_trades": 214,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_es_8020_shared": {
+   "equity": 8814.38,
+   "total_ret_pct": -11.856,
+   "ret_recent_pct": -5.566,
+   "n_trades": 218,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_es_9010_shared": {
+   "equity": 8761.45,
+   "total_ret_pct": -12.385,
+   "ret_recent_pct": -4.033,
+   "n_trades": 218,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_fe1_5050_shared": {
+   "equity": 8935.58,
+   "total_ret_pct": -10.644,
+   "ret_recent_pct": -5.125,
+   "n_trades": 284,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_fe_5050_shared": {
+   "equity": 8816.03,
+   "total_ret_pct": -11.84,
+   "ret_recent_pct": -4.831,
+   "n_trades": 272,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_fer_5050_shared": {
+   "equity": 8605.84,
+   "total_ret_pct": -13.942,
+   "ret_recent_pct": -7.1,
+   "n_trades": 268,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_fes_403030_shared": {
+   "equity": 8995.15,
+   "total_ret_pct": -10.049,
+   "ret_recent_pct": -8.178,
+   "n_trades": 320,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_fh_7030_shared": {
+   "equity": 9754.44,
+   "total_ret_pct": -2.456,
+   "ret_recent_pct": -0.491,
+   "n_trades": 291,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_fse_333_shared": {
+   "equity": 8964.52,
+   "total_ret_pct": -10.355,
+   "ret_recent_pct": -8.54,
+   "n_trades": 318,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_he1_5050_shared": {
+   "equity": 12401.48,
+   "total_ret_pct": 24.015,
+   "ret_recent_pct": 27.804,
+   "n_trades": 271,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_her_5050_shared": {
+   "equity": 11993.92,
+   "total_ret_pct": 19.939,
+   "ret_recent_pct": 25.629,
+   "n_trades": 262,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_hf_5050_shared": {
+   "equity": 10604.77,
+   "total_ret_pct": 6.048,
+   "ret_recent_pct": 6.992,
+   "n_trades": 294,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_hj_5050_shared": {
+   "equity": 13419.5,
+   "total_ret_pct": 34.195,
+   "ret_recent_pct": 35.962,
+   "n_trades": 350,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_hn_3070_shared": {
+   "equity": 9600.97,
+   "total_ret_pct": -3.99,
+   "ret_recent_pct": -3.403,
+   "n_trades": 319,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_hn_5050_shared": {
+   "equity": 11383.64,
+   "total_ret_pct": 13.836,
+   "ret_recent_pct": 13.838,
+   "n_trades": 311,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_hn_7030_shared": {
+   "equity": 12959.31,
+   "total_ret_pct": 29.593,
+   "ret_recent_pct": 28.702,
+   "n_trades": 303,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_je1_5050_shared": {
+   "equity": 9766.61,
+   "total_ret_pct": -2.334,
+   "ret_recent_pct": 2.213,
+   "n_trades": 375,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_jer_5050_shared": {
+   "equity": 9411.9,
+   "total_ret_pct": -5.881,
+   "ret_recent_pct": 0.13,
+   "n_trades": 366,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_jf_5050_shared": {
+   "equity": 8827.09,
+   "total_ret_pct": -11.729,
+   "ret_recent_pct": -8.974,
+   "n_trades": 391,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_jse_333_shared": {
+   "equity": 9692.79,
+   "total_ret_pct": -3.072,
+   "ret_recent_pct": -1.943,
+   "n_trades": 420,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ne1_5050_shared": {
+   "equity": 7679.76,
+   "total_ret_pct": -23.202,
+   "ret_recent_pct": -19.353,
+   "n_trades": 308,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ner_5050_shared": {
+   "equity": 8044.61,
+   "total_ret_pct": -19.554,
+   "ret_recent_pct": -14.089,
+   "n_trades": 303,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_nf_5050_shared": {
+   "equity": 8271.04,
+   "total_ret_pct": -17.29,
+   "ret_recent_pct": -14.723,
+   "n_trades": 333,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_nj_5050_shared": {
+   "equity": 8014.78,
+   "total_ret_pct": -19.852,
+   "ret_recent_pct": -18.237,
+   "n_trades": 415,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_nse_333_shared": {
+   "equity": 7283.89,
+   "total_ret_pct": -27.161,
+   "ret_recent_pct": -25.975,
+   "n_trades": 359,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_oh_5050_shared": {
+   "equity": 16003.52,
+   "total_ret_pct": 60.035,
+   "ret_recent_pct": 56.994,
+   "n_trades": 176,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_p2s_5050_shared": {
+   "equity": 8281.59,
+   "total_ret_pct": -17.184,
+   "ret_recent_pct": -21.493,
+   "n_trades": 167,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ps_5050_shared": {
+   "equity": 8222.85,
+   "total_ret_pct": -17.771,
+   "ret_recent_pct": -21.636,
+   "n_trades": 171,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ps_7030_shared": {
+   "equity": 8526.03,
+   "total_ret_pct": -14.74,
+   "ret_recent_pct": -19.121,
+   "n_trades": 171,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_se1_5050_shared": {
+   "equity": 8034.5,
+   "total_ret_pct": -19.655,
+   "ret_recent_pct": -19.901,
+   "n_trades": 222,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_se_3070_shared": {
+   "equity": 8719.78,
+   "total_ret_pct": -12.802,
+   "ret_recent_pct": -8.313,
+   "n_trades": 218,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_se_5050_shared": {
+   "equity": 8506.98,
+   "total_ret_pct": -14.93,
+   "ret_recent_pct": -13.84,
+   "n_trades": 222,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_se_5050_skip": {
+   "equity": 8891.97,
+   "total_ret_pct": -11.08,
+   "ret_recent_pct": -9.941,
+   "n_trades": 220,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_se_5050_split": {
+   "equity": 8514.92,
+   "total_ret_pct": -14.851,
+   "ret_recent_pct": -11.83,
+   "n_trades": 289,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_se_5050_weather": {
+   "equity": 8506.98,
+   "total_ret_pct": -14.93,
+   "ret_recent_pct": -13.84,
+   "n_trades": 222,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_se_7030_shared": {
+   "equity": 8595.72,
+   "total_ret_pct": -14.043,
+   "ret_recent_pct": -14.822,
+   "n_trades": 222,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_seh_333_shared": {
+   "equity": 17140.46,
+   "total_ret_pct": 71.405,
+   "ret_recent_pct": 70.941,
+   "n_trades": 316,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_seh_333_skip": {
+   "equity": 16484.11,
+   "total_ret_pct": 64.841,
+   "ret_recent_pct": 64.395,
+   "n_trades": 316,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_seh_333_split": {
+   "equity": 10710.97,
+   "total_ret_pct": 7.11,
+   "ret_recent_pct": 9.051,
+   "n_trades": 462,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_seh_333_weather": {
+   "equity": 17140.46,
+   "total_ret_pct": 71.405,
+   "ret_recent_pct": 70.941,
+   "n_trades": 316,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_seh_403525_shared": {
+   "equity": 15767.14,
+   "total_ret_pct": 57.671,
+   "ret_recent_pct": 57.091,
+   "n_trades": 318,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_seh_404020_shared": {
+   "equity": 15759.3,
+   "total_ret_pct": 57.593,
+   "ret_recent_pct": 58.353,
+   "n_trades": 318,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_seh_451540_shared": {
+   "equity": 16850.29,
+   "total_ret_pct": 68.503,
+   "ret_recent_pct": 63.041,
+   "n_trades": 312,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_seh_502525_shared": {
+   "equity": 16444.47,
+   "total_ret_pct": 64.445,
+   "ret_recent_pct": 61.551,
+   "n_trades": 316,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_seh_502525_split": {
+   "equity": 10115.72,
+   "total_ret_pct": 1.157,
+   "ret_recent_pct": 1.681,
+   "n_trades": 461,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_seh_601525_shared": {
+   "equity": 17407.03,
+   "total_ret_pct": 74.07,
+   "ret_recent_pct": 68.868,
+   "n_trades": 312,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_ser_5050_shared": {
+   "equity": 8057.82,
+   "total_ret_pct": -19.422,
+   "ret_recent_pct": -18.389,
+   "n_trades": 218,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_sf_3070_shared": {
+   "equity": 8850.26,
+   "total_ret_pct": -11.497,
+   "ret_recent_pct": -11.84,
+   "n_trades": 220,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_sf_5050_shared": {
+   "equity": 9274.09,
+   "total_ret_pct": -7.259,
+   "ret_recent_pct": -9.781,
+   "n_trades": 202,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_sf_7030_shared": {
+   "equity": 9293.1,
+   "total_ret_pct": -7.069,
+   "ret_recent_pct": -10.164,
+   "n_trades": 204,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_sh_3070_shared": {
+   "equity": 18403.18,
+   "total_ret_pct": 84.032,
+   "ret_recent_pct": 75.93,
+   "n_trades": 227,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_sh_5050_shared": {
+   "equity": 18000.95,
+   "total_ret_pct": 80.01,
+   "ret_recent_pct": 70.838,
+   "n_trades": 227,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_sh_7030_shared": {
+   "equity": 19082.1,
+   "total_ret_pct": 90.821,
+   "ret_recent_pct": 81.93,
+   "n_trades": 227,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_sh_macd_5050_shared": {
+   "equity": 19929.74,
+   "total_ret_pct": 99.297,
+   "ret_recent_pct": 89.144,
+   "n_trades": 209,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_sj_3070_shared": {
+   "equity": 9872.76,
+   "total_ret_pct": -1.272,
+   "ret_recent_pct": -2.519,
+   "n_trades": 341,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_sj_5050_shared": {
+   "equity": 9923.2,
+   "total_ret_pct": -0.768,
+   "ret_recent_pct": -3.895,
+   "n_trades": 341,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_sj_7030_shared": {
+   "equity": 10021.97,
+   "total_ret_pct": 0.22,
+   "ret_recent_pct": -3.091,
+   "n_trades": 339,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_sn_3070_shared": {
+   "equity": 5571.95,
+   "total_ret_pct": -44.281,
+   "ret_recent_pct": -45.223,
+   "n_trades": 286,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_sn_5050_shared": {
+   "equity": 6202.69,
+   "total_ret_pct": -37.973,
+   "ret_recent_pct": -40.103,
+   "n_trades": 286,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_sn_7030_shared": {
+   "equity": 7077.11,
+   "total_ret_pct": -29.229,
+   "ret_recent_pct": -31.839,
+   "n_trades": 284,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "combo_snj_333_shared": {
+   "equity": 6915.99,
+   "total_ret_pct": -30.84,
+   "ret_recent_pct": -31.708,
+   "n_trades": 472,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h1": {
+   "equity": 8333.88,
+   "total_ret_pct": -16.661,
+   "ret_recent_pct": -13.83,
+   "n_trades": 254,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h3": {
+   "equity": 7773.14,
+   "total_ret_pct": -22.269,
+   "ret_recent_pct": -20.535,
+   "n_trades": 189,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h3_cut": {
+   "equity": 7773.14,
+   "total_ret_pct": -22.269,
+   "ret_recent_pct": -20.535,
+   "n_trades": 189,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h3_half": {
+   "equity": 8897.68,
+   "total_ret_pct": -11.023,
+   "ret_recent_pct": -9.964,
+   "n_trades": 220,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h3_rankw": {
+   "equity": 7713.92,
+   "total_ret_pct": -22.861,
+   "ret_recent_pct": -21.567,
+   "n_trades": 188,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h3_sboost": {
+   "equity": 7773.14,
+   "total_ret_pct": -22.269,
+   "ret_recent_pct": -20.535,
+   "n_trades": 189,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h3_sizeup": {
+   "equity": 7773.14,
+   "total_ret_pct": -22.269,
+   "ret_recent_pct": -20.535,
+   "n_trades": 189,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h3_time": {
+   "equity": 7764.01,
+   "total_ret_pct": -22.36,
+   "ret_recent_pct": -20.628,
+   "n_trades": 191,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h3_topheavy": {
+   "equity": 7463.13,
+   "total_ret_pct": -25.369,
+   "ret_recent_pct": -22.944,
+   "n_trades": 182,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h3_trail": {
+   "equity": 7773.14,
+   "total_ret_pct": -22.269,
+   "ret_recent_pct": -20.535,
+   "n_trades": 189,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h5": {
+   "equity": 8590.72,
+   "total_ret_pct": -14.093,
+   "ret_recent_pct": -11.048,
+   "n_trades": 163,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h5_cut": {
+   "equity": 8590.72,
+   "total_ret_pct": -14.093,
+   "ret_recent_pct": -11.048,
+   "n_trades": 163,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h5_half": {
+   "equity": 9167.52,
+   "total_ret_pct": -8.325,
+   "ret_recent_pct": -6.622,
+   "n_trades": 211,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h5_rankw": {
+   "equity": 8247.72,
+   "total_ret_pct": -17.523,
+   "ret_recent_pct": -15.192,
+   "n_trades": 165,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h5_s8": {
+   "equity": 8679.87,
+   "total_ret_pct": -13.201,
+   "ret_recent_pct": -10.238,
+   "n_trades": 198,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h5_sboost": {
+   "equity": 8590.72,
+   "total_ret_pct": -14.093,
+   "ret_recent_pct": -11.048,
+   "n_trades": 163,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h5_sizeup": {
+   "equity": 8590.72,
+   "total_ret_pct": -14.093,
+   "ret_recent_pct": -11.048,
+   "n_trades": 163,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h5_time": {
+   "equity": 8590.72,
+   "total_ret_pct": -14.093,
+   "ret_recent_pct": -11.048,
+   "n_trades": 163,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h5_topheavy": {
+   "equity": 8112.68,
+   "total_ret_pct": -18.873,
+   "ret_recent_pct": -15.466,
+   "n_trades": 169,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_h5_trail": {
+   "equity": 8590.72,
+   "total_ret_pct": -14.093,
+   "ret_recent_pct": -11.048,
+   "n_trades": 163,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_live_h1": {
+   "equity": 9827.6,
+   "total_ret_pct": -1.724,
+   "ret_recent_pct": 0.0,
+   "n_trades": 92,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_live_h1_cut": {
+   "equity": 9827.6,
+   "total_ret_pct": -1.724,
+   "ret_recent_pct": 0.0,
+   "n_trades": 92,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_live_h1_half": {
+   "equity": 9907.34,
+   "total_ret_pct": -0.927,
+   "ret_recent_pct": 0.0,
+   "n_trades": 92,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_live_h1_rankw": {
+   "equity": 9735.28,
+   "total_ret_pct": -2.647,
+   "ret_recent_pct": 0.0,
+   "n_trades": 92,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_live_h1_sboost": {
+   "equity": 9827.6,
+   "total_ret_pct": -1.724,
+   "ret_recent_pct": 0.0,
+   "n_trades": 92,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_live_h1_sizeup": {
+   "equity": 9827.6,
+   "total_ret_pct": -1.724,
+   "ret_recent_pct": 0.0,
+   "n_trades": 92,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_live_h1_time": {
+   "equity": 9827.6,
+   "total_ret_pct": -1.724,
+   "ret_recent_pct": 0.0,
+   "n_trades": 92,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_live_h1_topheavy": {
+   "equity": 9825.11,
+   "total_ret_pct": -1.749,
+   "ret_recent_pct": 0.0,
+   "n_trades": 92,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_live_h1_trail": {
+   "equity": 9827.6,
+   "total_ret_pct": -1.724,
+   "ret_recent_pct": 0.0,
+   "n_trades": 92,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_live_h3": {
+   "equity": 9046.85,
+   "total_ret_pct": -9.531,
+   "ret_recent_pct": -6.908,
+   "n_trades": 92,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_live_h5": {
+   "equity": 9033.41,
+   "total_ret_pct": -9.666,
+   "ret_recent_pct": -7.046,
+   "n_trades": 92,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_vol_g_h3": {
+   "equity": 6969.1,
+   "total_ret_pct": -30.309,
+   "ret_recent_pct": -27.682,
+   "n_trades": 107,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "flatten_white_yday_h5": {
+   "equity": 9372.05,
+   "total_ret_pct": -6.28,
+   "ret_recent_pct": -1.045,
+   "n_trades": 118,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "ohlc_hot_coil_h1": {
+   "equity": 8304.07,
+   "total_ret_pct": -16.959,
+   "ret_recent_pct": -15.234,
+   "n_trades": 215,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "ohlc_hot_h1": {
+   "equity": 8143.02,
+   "total_ret_pct": -18.57,
+   "ret_recent_pct": -17.066,
+   "n_trades": 294,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "ohlc_hot_h3": {
+   "equity": 8914.47,
+   "total_ret_pct": -10.855,
+   "ret_recent_pct": -7.739,
+   "n_trades": 239,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "ohlc_hot_h5": {
+   "equity": 8533.88,
+   "total_ret_pct": -14.661,
+   "ret_recent_pct": -14.641,
+   "n_trades": 208,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "oppset_h1": {
+   "equity": 9547.55,
+   "total_ret_pct": -4.525,
+   "ret_recent_pct": -0.638,
+   "n_trades": 164,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "overnight_h1": {
+   "equity": 7243.98,
+   "total_ret_pct": -27.56,
+   "ret_recent_pct": -25.3,
+   "n_trades": 123,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "overnight_h3": {
+   "equity": 7933.17,
+   "total_ret_pct": -20.668,
+   "ret_recent_pct": -13.03,
+   "n_trades": 107,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "overnight_h5": {
+   "equity": 7837.4,
+   "total_ret_pct": -21.626,
+   "ret_recent_pct": -11.862,
+   "n_trades": 103,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "overnight_mega_green_h1": {
+   "equity": 10000.0,
+   "total_ret_pct": 0.0,
+   "ret_recent_pct": 0.0,
+   "n_trades": 76,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "overnight_mega_h1": {
+   "equity": 9178.58,
+   "total_ret_pct": -8.214,
+   "ret_recent_pct": -8.214,
+   "n_trades": 78,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "overnight_mega_h2": {
+   "equity": 9534.6,
+   "total_ret_pct": -4.654,
+   "ret_recent_pct": -4.654,
+   "n_trades": 78,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "probable_h1": {
+   "equity": 8622.78,
+   "total_ret_pct": -13.772,
+   "ret_recent_pct": -9.996,
+   "n_trades": 302,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "probable_h3": {
+   "equity": 8045.0,
+   "total_ret_pct": -19.55,
+   "ret_recent_pct": -17.983,
+   "n_trades": 262,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "probable_h5": {
+   "equity": 8507.43,
+   "total_ret_pct": -14.926,
+   "ret_recent_pct": -14.067,
+   "n_trades": 210,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "probable_probable_ok_h1": {
+   "equity": 8815.15,
+   "total_ret_pct": -11.849,
+   "ret_recent_pct": -11.86,
+   "n_trades": 256,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "probable_probable_ok_h3": {
+   "equity": 7164.78,
+   "total_ret_pct": -28.352,
+   "ret_recent_pct": -17.771,
+   "n_trades": 216,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_alarm_h1": {
+   "equity": 10401.56,
+   "total_ret_pct": 4.016,
+   "ret_recent_pct": 3.417,
+   "n_trades": 180,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_alarm_h3": {
+   "equity": 10069.81,
+   "total_ret_pct": 0.698,
+   "ret_recent_pct": -0.365,
+   "n_trades": 169,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_clk_ext_veto_h3": {
+   "equity": 9310.08,
+   "total_ret_pct": -6.899,
+   "ret_recent_pct": -8.43,
+   "n_trades": 194,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_clk_ext_veto_opp_h3": {
+   "equity": 10316.39,
+   "total_ret_pct": 3.164,
+   "ret_recent_pct": 3.747,
+   "n_trades": 88,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_clk_neg_weak_fail_h3": {
+   "equity": 10027.42,
+   "total_ret_pct": 0.274,
+   "ret_recent_pct": 4.659,
+   "n_trades": 195,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_clk_neg_weak_fail_opp_h3": {
+   "equity": 9420.24,
+   "total_ret_pct": -5.798,
+   "ret_recent_pct": -6.477,
+   "n_trades": 134,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_extended_h1": {
+   "equity": 9702.68,
+   "total_ret_pct": -2.973,
+   "ret_recent_pct": -2.169,
+   "n_trades": 284,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_extended_h3": {
+   "equity": 8759.33,
+   "total_ret_pct": -12.407,
+   "ret_recent_pct": -14.979,
+   "n_trades": 251,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_last_red_h1": {
+   "equity": 10011.22,
+   "total_ret_pct": 0.112,
+   "ret_recent_pct": -0.446,
+   "n_trades": 286,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_last_red_h3": {
+   "equity": 9618.17,
+   "total_ret_pct": -3.818,
+   "ret_recent_pct": -5.065,
+   "n_trades": 266,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_macd_dn_h1": {
+   "equity": 10034.11,
+   "total_ret_pct": 0.341,
+   "ret_recent_pct": 0.725,
+   "n_trades": 304,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_macd_dn_h3": {
+   "equity": 10327.31,
+   "total_ret_pct": 3.273,
+   "ret_recent_pct": 4.391,
+   "n_trades": 284,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_news_head_h3": {
+   "equity": 8490.02,
+   "total_ret_pct": -15.1,
+   "ret_recent_pct": -17.783,
+   "n_trades": 122,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_news_or_h3": {
+   "equity": 8627.27,
+   "total_ret_pct": -13.727,
+   "ret_recent_pct": -17.33,
+   "n_trades": 131,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_news_pack_h3": {
+   "equity": 10604.48,
+   "total_ret_pct": 6.045,
+   "ret_recent_pct": 0.461,
+   "n_trades": 85,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_news_r_h1": {
+   "equity": 9040.22,
+   "total_ret_pct": -9.598,
+   "ret_recent_pct": -10.791,
+   "n_trades": 141,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_news_r_h3": {
+   "equity": 8627.27,
+   "total_ret_pct": -13.727,
+   "ret_recent_pct": -17.33,
+   "n_trades": 131,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_news_r_macd_h3": {
+   "equity": 10331.7,
+   "total_ret_pct": 3.317,
+   "ret_recent_pct": -0.997,
+   "n_trades": 113,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_r_down_h1": {
+   "equity": 10000.0,
+   "total_ret_pct": 0.0,
+   "ret_recent_pct": 0.0,
+   "n_trades": 76,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_r_down_h3": {
+   "equity": 10000.0,
+   "total_ret_pct": 0.0,
+   "ret_recent_pct": 0.0,
+   "n_trades": 76,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_rsi_ob_h1": {
+   "equity": 9649.28,
+   "total_ret_pct": -3.507,
+   "ret_recent_pct": -3.213,
+   "n_trades": 278,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "short_rsi_ob_h3": {
+   "equity": 8796.92,
+   "total_ret_pct": -12.031,
+   "ret_recent_pct": -13.588,
+   "n_trades": 246,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_ab_g_h1": {
+   "equity": 8496.14,
+   "total_ret_pct": -15.039,
+   "ret_recent_pct": -11.895,
+   "n_trades": 308,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_ab_g_h3": {
+   "equity": 7416.6,
+   "total_ret_pct": -25.834,
+   "ret_recent_pct": -21.707,
+   "n_trades": 241,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_blue_coil_h1": {
+   "equity": 8373.9,
+   "total_ret_pct": -16.261,
+   "ret_recent_pct": -11.368,
+   "n_trades": 272,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_blue_coil_h3": {
+   "equity": 7647.22,
+   "total_ret_pct": -23.528,
+   "ret_recent_pct": -17.623,
+   "n_trades": 230,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_blue_h1": {
+   "equity": 8138.58,
+   "total_ret_pct": -18.614,
+   "ret_recent_pct": -13.97,
+   "n_trades": 280,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_blue_h3": {
+   "equity": 7572.8,
+   "total_ret_pct": -24.272,
+   "ret_recent_pct": -18.134,
+   "n_trades": 224,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_blue_vol_h1": {
+   "equity": 8275.47,
+   "total_ret_pct": -17.245,
+   "ret_recent_pct": -14.476,
+   "n_trades": 272,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_blue_vol_h3": {
+   "equity": 8442.72,
+   "total_ret_pct": -15.573,
+   "ret_recent_pct": -12.412,
+   "n_trades": 224,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_break10_h1": {
+   "equity": 9016.84,
+   "total_ret_pct": -9.832,
+   "ret_recent_pct": -8.211,
+   "n_trades": 304,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_break10_h3": {
+   "equity": 10603.04,
+   "total_ret_pct": 6.03,
+   "ret_recent_pct": 10.597,
+   "n_trades": 264,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_candle_h1": {
+   "equity": 9221.07,
+   "total_ret_pct": -7.789,
+   "ret_recent_pct": -3.168,
+   "n_trades": 306,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_candle_h3": {
+   "equity": 8289.53,
+   "total_ret_pct": -17.105,
+   "ret_recent_pct": -11.543,
+   "n_trades": 248,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_candle_score_h1": {
+   "equity": 8840.45,
+   "total_ret_pct": -11.595,
+   "ret_recent_pct": -10.798,
+   "n_trades": 300,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_candle_score_h3": {
+   "equity": 8879.96,
+   "total_ret_pct": -11.2,
+   "ret_recent_pct": -6.923,
+   "n_trades": 240,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_catal_present_h1": {
+   "equity": 9449.85,
+   "total_ret_pct": -5.501,
+   "ret_recent_pct": -5.501,
+   "n_trades": 80,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_catal_present_h3": {
+   "equity": 8850.74,
+   "total_ret_pct": -11.493,
+   "ret_recent_pct": -11.493,
+   "n_trades": 80,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_clk_earn_guide_react_h1": {
+   "equity": 9563.02,
+   "total_ret_pct": -4.37,
+   "ret_recent_pct": -3.057,
+   "n_trades": 84,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_clk_flow_coil_h1": {
+   "equity": 9545.19,
+   "total_ret_pct": -4.548,
+   "ret_recent_pct": 0.985,
+   "n_trades": 86,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_clk_fresh_cat_coil_h1": {
+   "equity": 8946.65,
+   "total_ret_pct": -10.534,
+   "ret_recent_pct": -6.958,
+   "n_trades": 263,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_clk_fresh_cat_coil_opp_h1": {
+   "equity": 10475.92,
+   "total_ret_pct": 4.759,
+   "ret_recent_pct": 6.801,
+   "n_trades": 164,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_clk_hold_vs_sector_h1": {
+   "equity": 8661.14,
+   "total_ret_pct": -13.389,
+   "ret_recent_pct": -13.174,
+   "n_trades": 236,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_clk_hold_vs_sector_opp_h1": {
+   "equity": 10083.12,
+   "total_ret_pct": 0.831,
+   "ret_recent_pct": -0.265,
+   "n_trades": 142,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_clk_insider_cash_stab_h3": {
+   "equity": 9163.67,
+   "total_ret_pct": -8.363,
+   "ret_recent_pct": -2.991,
+   "n_trades": 82,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_clk_mom_break_peer_h1": {
+   "equity": 9027.01,
+   "total_ret_pct": -9.73,
+   "ret_recent_pct": -8.959,
+   "n_trades": 285,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_clk_mom_break_peer_opp_h1": {
+   "equity": 9964.85,
+   "total_ret_pct": -0.351,
+   "ret_recent_pct": 1.877,
+   "n_trades": 164,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_clk_nr7_mom_h1": {
+   "equity": 9677.89,
+   "total_ret_pct": -3.221,
+   "ret_recent_pct": -1.28,
+   "n_trades": 106,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_clk_nr7_mom_opp_h1": {
+   "equity": 10031.18,
+   "total_ret_pct": 0.312,
+   "ret_recent_pct": 0.0,
+   "n_trades": 80,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_clk_r_up_coil_h1": {
+   "equity": 10000.0,
+   "total_ret_pct": 0.0,
+   "ret_recent_pct": 0.0,
+   "n_trades": 76,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_coil_green_h1": {
+   "equity": 8724.34,
+   "total_ret_pct": -12.757,
+   "ret_recent_pct": -10.663,
+   "n_trades": 281,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_coil_green_h3": {
+   "equity": 7531.61,
+   "total_ret_pct": -24.684,
+   "ret_recent_pct": -20.104,
+   "n_trades": 252,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_coil_off_h1": {
+   "equity": 8214.46,
+   "total_ret_pct": -17.855,
+   "ret_recent_pct": -11.705,
+   "n_trades": 284,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_coil_off_h3": {
+   "equity": 7126.45,
+   "total_ret_pct": -28.736,
+   "ret_recent_pct": -23.428,
+   "n_trades": 251,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_coil_off_h5": {
+   "equity": 8015.12,
+   "total_ret_pct": -19.849,
+   "ret_recent_pct": -14.387,
+   "n_trades": 208,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_cond_h1": {
+   "equity": 8805.52,
+   "total_ret_pct": -11.945,
+   "ret_recent_pct": -8.371,
+   "n_trades": 302,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_cond_h3": {
+   "equity": 8666.34,
+   "total_ret_pct": -13.337,
+   "ret_recent_pct": -8.733,
+   "n_trades": 242,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_cond_n4_h3": {
+   "equity": 8422.18,
+   "total_ret_pct": -15.778,
+   "ret_recent_pct": -8.697,
+   "n_trades": 154,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_e_fresh_h1": {
+   "equity": 9222.02,
+   "total_ret_pct": -7.78,
+   "ret_recent_pct": -0.457,
+   "n_trades": 173,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_e_fresh_h3": {
+   "equity": 8573.9,
+   "total_ret_pct": -14.261,
+   "ret_recent_pct": -4.111,
+   "n_trades": 158,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_e_green_h1": {
+   "equity": 9041.77,
+   "total_ret_pct": -9.582,
+   "ret_recent_pct": -3.624,
+   "n_trades": 114,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_e_green_h3": {
+   "equity": 8853.93,
+   "total_ret_pct": -11.461,
+   "ret_recent_pct": -3.239,
+   "n_trades": 112,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_earn_react_h1": {
+   "equity": 8950.12,
+   "total_ret_pct": -10.499,
+   "ret_recent_pct": -3.392,
+   "n_trades": 169,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_earn_react_h3": {
+   "equity": 7747.97,
+   "total_ret_pct": -22.52,
+   "ret_recent_pct": -13.348,
+   "n_trades": 154,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_flow_in_h1": {
+   "equity": 10487.54,
+   "total_ret_pct": 4.875,
+   "ret_recent_pct": 5.087,
+   "n_trades": 121,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_flow_in_h3": {
+   "equity": 8826.68,
+   "total_ret_pct": -11.733,
+   "ret_recent_pct": -8.448,
+   "n_trades": 117,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_flow_in_h5": {
+   "equity": 8513.04,
+   "total_ret_pct": -14.87,
+   "ret_recent_pct": -11.415,
+   "n_trades": 110,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_flow_in_white_h1": {
+   "equity": 9668.02,
+   "total_ret_pct": -3.32,
+   "ret_recent_pct": -5.941,
+   "n_trades": 94,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_flow_in_white_h3": {
+   "equity": 8837.16,
+   "total_ret_pct": -11.628,
+   "ret_recent_pct": -12.715,
+   "n_trades": 93,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h1": {
+   "equity": 8498.45,
+   "total_ret_pct": -15.015,
+   "ret_recent_pct": -10.848,
+   "n_trades": 306,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h1_cut": {
+   "equity": 8489.51,
+   "total_ret_pct": -15.105,
+   "ret_recent_pct": -10.942,
+   "n_trades": 306,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h1_half": {
+   "equity": 9061.89,
+   "total_ret_pct": -9.381,
+   "ret_recent_pct": -7.016,
+   "n_trades": 304,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h1_rankw": {
+   "equity": 8539.19,
+   "total_ret_pct": -14.608,
+   "ret_recent_pct": -10.143,
+   "n_trades": 306,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h1_sboost": {
+   "equity": 8332.4,
+   "total_ret_pct": -16.676,
+   "ret_recent_pct": -12.59,
+   "n_trades": 330,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h1_sizeup": {
+   "equity": 8498.45,
+   "total_ret_pct": -15.015,
+   "ret_recent_pct": -10.848,
+   "n_trades": 306,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h1_time": {
+   "equity": 8489.51,
+   "total_ret_pct": -15.105,
+   "ret_recent_pct": -10.942,
+   "n_trades": 306,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h1_topheavy": {
+   "equity": 8420.76,
+   "total_ret_pct": -15.792,
+   "ret_recent_pct": -12.597,
+   "n_trades": 306,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h1_trail": {
+   "equity": 8498.45,
+   "total_ret_pct": -15.015,
+   "ret_recent_pct": -10.848,
+   "n_trades": 306,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h3": {
+   "equity": 8021.32,
+   "total_ret_pct": -19.787,
+   "ret_recent_pct": -16.539,
+   "n_trades": 238,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h3_cut": {
+   "equity": 8021.32,
+   "total_ret_pct": -19.787,
+   "ret_recent_pct": -16.539,
+   "n_trades": 238,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h3_exit_alarm": {
+   "equity": 7793.48,
+   "total_ret_pct": -22.065,
+   "ret_recent_pct": -17.992,
+   "n_trades": 251,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h3_exit_news_r": {
+   "equity": 7676.9,
+   "total_ret_pct": -23.231,
+   "ret_recent_pct": -17.702,
+   "n_trades": 248,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h3_exit_red": {
+   "equity": 8149.88,
+   "total_ret_pct": -18.501,
+   "ret_recent_pct": -16.217,
+   "n_trades": 250,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h3_half": {
+   "equity": 8883.1,
+   "total_ret_pct": -11.169,
+   "ret_recent_pct": -9.254,
+   "n_trades": 267,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h3_rankw": {
+   "equity": 7813.72,
+   "total_ret_pct": -21.863,
+   "ret_recent_pct": -18.545,
+   "n_trades": 220,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h3_sboost": {
+   "equity": 8063.94,
+   "total_ret_pct": -19.361,
+   "ret_recent_pct": -16.095,
+   "n_trades": 254,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h3_sizeup": {
+   "equity": 8021.32,
+   "total_ret_pct": -19.787,
+   "ret_recent_pct": -16.539,
+   "n_trades": 238,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h3_time": {
+   "equity": 8014.19,
+   "total_ret_pct": -19.858,
+   "ret_recent_pct": -16.613,
+   "n_trades": 240,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h3_topheavy": {
+   "equity": 7620.64,
+   "total_ret_pct": -23.794,
+   "ret_recent_pct": -20.318,
+   "n_trades": 229,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h3_trail": {
+   "equity": 8021.32,
+   "total_ret_pct": -19.787,
+   "ret_recent_pct": -16.539,
+   "n_trades": 238,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h5": {
+   "equity": 9235.25,
+   "total_ret_pct": -7.647,
+   "ret_recent_pct": -3.92,
+   "n_trades": 189,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h5_cut": {
+   "equity": 9235.25,
+   "total_ret_pct": -7.647,
+   "ret_recent_pct": -3.92,
+   "n_trades": 189,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h5_exit_alarm": {
+   "equity": 8965.99,
+   "total_ret_pct": -10.34,
+   "ret_recent_pct": -5.531,
+   "n_trades": 216,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h5_half": {
+   "equity": 9290.64,
+   "total_ret_pct": -7.094,
+   "ret_recent_pct": -5.09,
+   "n_trades": 259,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h5_rankw": {
+   "equity": 8669.25,
+   "total_ret_pct": -13.308,
+   "ret_recent_pct": -9.172,
+   "n_trades": 200,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h5_sboost": {
+   "equity": 9041.81,
+   "total_ret_pct": -9.582,
+   "ret_recent_pct": -5.933,
+   "n_trades": 220,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h5_sizeup": {
+   "equity": 9235.25,
+   "total_ret_pct": -7.647,
+   "ret_recent_pct": -3.92,
+   "n_trades": 189,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h5_time": {
+   "equity": 9235.25,
+   "total_ret_pct": -7.647,
+   "ret_recent_pct": -3.92,
+   "n_trades": 189,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h5_topheavy": {
+   "equity": 8539.25,
+   "total_ret_pct": -14.607,
+   "ret_recent_pct": -10.906,
+   "n_trades": 210,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_h5_trail": {
+   "equity": 9235.25,
+   "total_ret_pct": -7.647,
+   "ret_recent_pct": -3.92,
+   "n_trades": 189,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_hot_n12_h1": {
+   "equity": 11544.92,
+   "total_ret_pct": 15.449,
+   "ret_recent_pct": 17.758,
+   "n_trades": 388,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_hot_n4_h1": {
+   "equity": 12236.0,
+   "total_ret_pct": 22.36,
+   "ret_recent_pct": 20.035,
+   "n_trades": 146,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_hot_n4_holdup": {
+   "equity": 14827.77,
+   "total_ret_pct": 48.278,
+   "ret_recent_pct": 45.217,
+   "n_trades": 138,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_hot_score_h1": {
+   "equity": 13072.65,
+   "total_ret_pct": 30.726,
+   "ret_recent_pct": 30.956,
+   "n_trades": 288,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_hot_score_h3": {
+   "equity": 11316.73,
+   "total_ret_pct": 13.167,
+   "ret_recent_pct": 17.249,
+   "n_trades": 226,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_join_g_h1": {
+   "equity": 8652.62,
+   "total_ret_pct": -13.474,
+   "ret_recent_pct": -8.705,
+   "n_trades": 308,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_join_g_h3": {
+   "equity": 7624.57,
+   "total_ret_pct": -23.754,
+   "ret_recent_pct": -17.636,
+   "n_trades": 243,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_join_present_h1": {
+   "equity": 8817.75,
+   "total_ret_pct": -11.823,
+   "ret_recent_pct": -7.783,
+   "n_trades": 308,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_join_present_h3": {
+   "equity": 7866.55,
+   "total_ret_pct": -21.335,
+   "ret_recent_pct": -17.223,
+   "n_trades": 242,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_join_vol_green_h1": {
+   "equity": 10687.38,
+   "total_ret_pct": 6.874,
+   "ret_recent_pct": 9.03,
+   "n_trades": 286,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_join_vol_green_h3": {
+   "equity": 10400.02,
+   "total_ret_pct": 4.0,
+   "ret_recent_pct": 9.559,
+   "n_trades": 240,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_last_green_h1": {
+   "equity": 9398.65,
+   "total_ret_pct": -6.014,
+   "ret_recent_pct": -3.807,
+   "n_trades": 308,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_last_green_h3": {
+   "equity": 8285.12,
+   "total_ret_pct": -17.149,
+   "ret_recent_pct": -14.827,
+   "n_trades": 236,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_last_green_h5": {
+   "equity": 9241.37,
+   "total_ret_pct": -7.586,
+   "ret_recent_pct": -4.971,
+   "n_trades": 213,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_last_red_h1": {
+   "equity": 7773.41,
+   "total_ret_pct": -22.266,
+   "ret_recent_pct": -17.788,
+   "n_trades": 290,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_last_red_h3": {
+   "equity": 7157.22,
+   "total_ret_pct": -28.428,
+   "ret_recent_pct": -22.725,
+   "n_trades": 223,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_macd_hist_h1": {
+   "equity": 9786.32,
+   "total_ret_pct": -2.137,
+   "ret_recent_pct": -2.929,
+   "n_trades": 292,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_macd_hist_h3": {
+   "equity": 8937.19,
+   "total_ret_pct": -10.628,
+   "ret_recent_pct": -10.289,
+   "n_trades": 236,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_macd_up_h1": {
+   "equity": 8843.7,
+   "total_ret_pct": -11.563,
+   "ret_recent_pct": -7.416,
+   "n_trades": 306,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_macd_up_h3": {
+   "equity": 9813.91,
+   "total_ret_pct": -1.861,
+   "ret_recent_pct": 3.309,
+   "n_trades": 246,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_macd_xup_h1": {
+   "equity": 9308.63,
+   "total_ret_pct": -6.914,
+   "ret_recent_pct": -5.026,
+   "n_trades": 252,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_macd_xup_h3": {
+   "equity": 9355.6,
+   "total_ret_pct": -6.444,
+   "ret_recent_pct": -1.866,
+   "n_trades": 222,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_both_h1": {
+   "equity": 9653.47,
+   "total_ret_pct": -3.465,
+   "ret_recent_pct": -3.465,
+   "n_trades": 82,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_both_h3": {
+   "equity": 9619.99,
+   "total_ret_pct": -3.8,
+   "ret_recent_pct": -3.8,
+   "n_trades": 81,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_cam61_h1": {
+   "equity": 7510.31,
+   "total_ret_pct": -24.897,
+   "ret_recent_pct": -22.381,
+   "n_trades": 140,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_cam61_h3": {
+   "equity": 7357.92,
+   "total_ret_pct": -26.421,
+   "ret_recent_pct": -20.427,
+   "n_trades": 120,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_cam71_conv_h1": {
+   "equity": 7484.69,
+   "total_ret_pct": -25.153,
+   "ret_recent_pct": -22.556,
+   "n_trades": 120,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_cam71_h1": {
+   "equity": 7690.3,
+   "total_ret_pct": -23.097,
+   "ret_recent_pct": -20.923,
+   "n_trades": 128,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_cam71_h3": {
+   "equity": 6894.03,
+   "total_ret_pct": -31.06,
+   "ret_recent_pct": -25.072,
+   "n_trades": 112,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_cam71_n2_h1": {
+   "equity": 7595.24,
+   "total_ret_pct": -24.048,
+   "ret_recent_pct": -20.403,
+   "n_trades": 108,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_cam91_n1_h1": {
+   "equity": 7760.71,
+   "total_ret_pct": -22.393,
+   "ret_recent_pct": -19.487,
+   "n_trades": 84,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_cond_h1": {
+   "equity": 7093.42,
+   "total_ret_pct": -29.066,
+   "ret_recent_pct": -28.332,
+   "n_trades": 229,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_cond_h3": {
+   "equity": 7200.15,
+   "total_ret_pct": -27.999,
+   "ret_recent_pct": -25.313,
+   "n_trades": 203,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_conv_h1": {
+   "equity": 6798.82,
+   "total_ret_pct": -32.012,
+   "ret_recent_pct": -30.306,
+   "n_trades": 177,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_conv_h3": {
+   "equity": 8281.54,
+   "total_ret_pct": -17.185,
+   "ret_recent_pct": -12.754,
+   "n_trades": 152,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_h1": {
+   "equity": 7082.05,
+   "total_ret_pct": -29.18,
+   "ret_recent_pct": -28.364,
+   "n_trades": 231,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_h3": {
+   "equity": 7282.77,
+   "total_ret_pct": -27.172,
+   "ret_recent_pct": -24.959,
+   "n_trades": 205,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_g_h5": {
+   "equity": 7634.73,
+   "total_ret_pct": -23.653,
+   "ret_recent_pct": -21.693,
+   "n_trades": 170,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_head_h1": {
+   "equity": 7029.06,
+   "total_ret_pct": -29.709,
+   "ret_recent_pct": -28.519,
+   "n_trades": 209,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_head_h3": {
+   "equity": 7140.46,
+   "total_ret_pct": -28.595,
+   "ret_recent_pct": -23.789,
+   "n_trades": 178,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_missing_h1": {
+   "equity": 10000.0,
+   "total_ret_pct": 0.0,
+   "ret_recent_pct": 0.0,
+   "n_trades": 76,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_missing_h3": {
+   "equity": 10000.0,
+   "total_ret_pct": 0.0,
+   "ret_recent_pct": 0.0,
+   "n_trades": 76,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_or_h1": {
+   "equity": 7093.42,
+   "total_ret_pct": -29.066,
+   "ret_recent_pct": -28.332,
+   "n_trades": 229,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_or_h3": {
+   "equity": 7200.15,
+   "total_ret_pct": -27.999,
+   "ret_recent_pct": -25.313,
+   "n_trades": 203,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_or_net2_h1": {
+   "equity": 7341.91,
+   "total_ret_pct": -26.581,
+   "ret_recent_pct": -26.331,
+   "n_trades": 194,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_or_net2_h3": {
+   "equity": 7851.51,
+   "total_ret_pct": -21.485,
+   "ret_recent_pct": -19.133,
+   "n_trades": 171,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_or_net3_h1": {
+   "equity": 5729.23,
+   "total_ret_pct": -42.708,
+   "ret_recent_pct": -42.513,
+   "n_trades": 172,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_or_net3_h3": {
+   "equity": 7292.49,
+   "total_ret_pct": -27.075,
+   "ret_recent_pct": -24.891,
+   "n_trades": 151,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_or_net4_conv_h1": {
+   "equity": 6234.88,
+   "total_ret_pct": -37.651,
+   "ret_recent_pct": -36.087,
+   "n_trades": 150,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_or_net4_h1": {
+   "equity": 5683.21,
+   "total_ret_pct": -43.168,
+   "ret_recent_pct": -42.974,
+   "n_trades": 168,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_or_net4_h3": {
+   "equity": 7415.57,
+   "total_ret_pct": -25.844,
+   "ret_recent_pct": -23.623,
+   "n_trades": 150,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_or_net4_rw_h1": {
+   "equity": 6199.13,
+   "total_ret_pct": -38.009,
+   "ret_recent_pct": -36.676,
+   "n_trades": 150,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_or_net5_h1": {
+   "equity": 7123.65,
+   "total_ret_pct": -28.764,
+   "ret_recent_pct": -28.688,
+   "n_trades": 154,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_or_net5_h3": {
+   "equity": 7667.71,
+   "total_ret_pct": -23.323,
+   "ret_recent_pct": -20.674,
+   "n_trades": 133,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_pack_h1": {
+   "equity": 9231.62,
+   "total_ret_pct": -7.684,
+   "ret_recent_pct": -8.292,
+   "n_trades": 118,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_pack_h3": {
+   "equity": 8521.77,
+   "total_ret_pct": -14.782,
+   "ret_recent_pct": -13.236,
+   "n_trades": 106,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_pack_net2_h1": {
+   "equity": 9344.03,
+   "total_ret_pct": -6.56,
+   "ret_recent_pct": -8.383,
+   "n_trades": 114,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_pack_net2_h3": {
+   "equity": 8682.34,
+   "total_ret_pct": -13.177,
+   "ret_recent_pct": -12.67,
+   "n_trades": 103,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_pack_net3_h1": {
+   "equity": 7900.64,
+   "total_ret_pct": -20.994,
+   "ret_recent_pct": -22.536,
+   "n_trades": 108,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_pack_net3_h3": {
+   "equity": 7461.64,
+   "total_ret_pct": -25.384,
+   "ret_recent_pct": -24.948,
+   "n_trades": 101,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_present_h1": {
+   "equity": 8817.75,
+   "total_ret_pct": -11.823,
+   "ret_recent_pct": -7.783,
+   "n_trades": 308,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_present_h3": {
+   "equity": 7866.55,
+   "total_ret_pct": -21.335,
+   "ret_recent_pct": -17.223,
+   "n_trades": 242,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_vol_h1": {
+   "equity": 7593.55,
+   "total_ret_pct": -24.064,
+   "ret_recent_pct": -21.275,
+   "n_trades": 160,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_news_vol_h3": {
+   "equity": 7107.82,
+   "total_ret_pct": -28.922,
+   "ret_recent_pct": -25.077,
+   "n_trades": 137,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_oppset_h1": {
+   "equity": 9463.98,
+   "total_ret_pct": -5.36,
+   "ret_recent_pct": -1.508,
+   "n_trades": 166,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_overnight_h1": {
+   "equity": 7224.75,
+   "total_ret_pct": -27.753,
+   "ret_recent_pct": -25.498,
+   "n_trades": 121,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_overnight_h3": {
+   "equity": 7933.17,
+   "total_ret_pct": -20.668,
+   "ret_recent_pct": -13.03,
+   "n_trades": 107,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_r_up_h1": {
+   "equity": 10000.0,
+   "total_ret_pct": 0.0,
+   "ret_recent_pct": 0.0,
+   "n_trades": 76,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_r_up_h3": {
+   "equity": 10000.0,
+   "total_ret_pct": 0.0,
+   "ret_recent_pct": 0.0,
+   "n_trades": 76,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_ret_5_h1": {
+   "equity": 12432.75,
+   "total_ret_pct": 24.327,
+   "ret_recent_pct": 28.008,
+   "n_trades": 286,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_ret_5_h3": {
+   "equity": 10392.93,
+   "total_ret_pct": 3.929,
+   "ret_recent_pct": 12.103,
+   "n_trades": 230,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_rsi_h1": {
+   "equity": 6401.94,
+   "total_ret_pct": -35.981,
+   "ret_recent_pct": -31.707,
+   "n_trades": 292,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_rsi_h3": {
+   "equity": 8034.84,
+   "total_ret_pct": -19.652,
+   "ret_recent_pct": -14.729,
+   "n_trades": 226,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_rsi_os_h1": {
+   "equity": 6637.38,
+   "total_ret_pct": -33.626,
+   "ret_recent_pct": -27.343,
+   "n_trades": 174,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_rsi_os_h3": {
+   "equity": 8309.93,
+   "total_ret_pct": -16.901,
+   "ret_recent_pct": -8.805,
+   "n_trades": 152,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_rsi_os_h5": {
+   "equity": 7736.13,
+   "total_ret_pct": -22.639,
+   "ret_recent_pct": -15.716,
+   "n_trades": 137,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_rsi_os_macd_h1": {
+   "equity": 10367.74,
+   "total_ret_pct": 3.677,
+   "ret_recent_pct": -2.499,
+   "n_trades": 84,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_rsi_os_macd_h3": {
+   "equity": 10998.02,
+   "total_ret_pct": 9.98,
+   "ret_recent_pct": 0.834,
+   "n_trades": 84,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_vol_ab_h1": {
+   "equity": 9392.66,
+   "total_ret_pct": -6.073,
+   "ret_recent_pct": -1.536,
+   "n_trades": 302,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_vol_ab_h3": {
+   "equity": 9182.08,
+   "total_ret_pct": -8.179,
+   "ret_recent_pct": -4.102,
+   "n_trades": 244,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_vol_g_h1": {
+   "equity": 8409.47,
+   "total_ret_pct": -15.905,
+   "ret_recent_pct": -12.5,
+   "n_trades": 308,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_vol_g_h3": {
+   "equity": 9066.75,
+   "total_ret_pct": -9.332,
+   "ret_recent_pct": -5.901,
+   "n_trades": 260,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_vol_g_h5": {
+   "equity": 8296.74,
+   "total_ret_pct": -17.033,
+   "ret_recent_pct": -13.18,
+   "n_trades": 205,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_vol_green_h1": {
+   "equity": 8560.15,
+   "total_ret_pct": -14.399,
+   "ret_recent_pct": -11.484,
+   "n_trades": 306,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_vol_green_h3": {
+   "equity": 9083.63,
+   "total_ret_pct": -9.164,
+   "ret_recent_pct": -4.005,
+   "n_trades": 262,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_vol_missing_h1": {
+   "equity": 10000.0,
+   "total_ret_pct": 0.0,
+   "ret_recent_pct": 0.0,
+   "n_trades": 76,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_vol_missing_h3": {
+   "equity": 10000.0,
+   "total_ret_pct": 0.0,
+   "ret_recent_pct": 0.0,
+   "n_trades": 76,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_w_hot_candle_h1": {
+   "equity": 12508.72,
+   "total_ret_pct": 25.087,
+   "ret_recent_pct": 25.49,
+   "n_trades": 290,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_w_hot_candle_h3": {
+   "equity": 10435.82,
+   "total_ret_pct": 4.358,
+   "ret_recent_pct": 7.266,
+   "n_trades": 221,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_w_hot_cond_h1": {
+   "equity": 12597.85,
+   "total_ret_pct": 25.978,
+   "ret_recent_pct": 25.408,
+   "n_trades": 292,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_w_hot_cond_h3": {
+   "equity": 11763.85,
+   "total_ret_pct": 17.639,
+   "ret_recent_pct": 21.846,
+   "n_trades": 234,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_any_h1": {
+   "equity": 8615.23,
+   "total_ret_pct": -13.848,
+   "ret_recent_pct": -9.384,
+   "n_trades": 243,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_any_h2": {
+   "equity": 9049.4,
+   "total_ret_pct": -9.506,
+   "ret_recent_pct": -1.997,
+   "n_trades": 225,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_any_h3": {
+   "equity": 8075.23,
+   "total_ret_pct": -19.248,
+   "ret_recent_pct": -12.447,
+   "n_trades": 199,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_any_h5": {
+   "equity": 8667.97,
+   "total_ret_pct": -13.32,
+   "ret_recent_pct": -7.995,
+   "n_trades": 173,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_both_n4_h1": {
+   "equity": 9438.99,
+   "total_ret_pct": -5.61,
+   "ret_recent_pct": -2.357,
+   "n_trades": 138,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_both_n4_h2": {
+   "equity": 9712.4,
+   "total_ret_pct": -2.876,
+   "ret_recent_pct": 5.748,
+   "n_trades": 132,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_both_n4_h3": {
+   "equity": 9488.45,
+   "total_ret_pct": -5.115,
+   "ret_recent_pct": 2.876,
+   "n_trades": 128,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_both_n4_h5": {
+   "equity": 10088.48,
+   "total_ret_pct": 0.885,
+   "ret_recent_pct": 6.206,
+   "n_trades": 128,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_both_n4_h5_s12": {
+   "equity": 10198.23,
+   "total_ret_pct": 1.982,
+   "ret_recent_pct": 7.361,
+   "n_trades": 128,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_coil_h1": {
+   "equity": 7918.92,
+   "total_ret_pct": -20.811,
+   "ret_recent_pct": -16.318,
+   "n_trades": 202,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_coil_h3": {
+   "equity": 7469.36,
+   "total_ret_pct": -25.306,
+   "ret_recent_pct": -18.948,
+   "n_trades": 182,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_h1": {
+   "equity": 8722.66,
+   "total_ret_pct": -12.773,
+   "ret_recent_pct": -8.254,
+   "n_trades": 243,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_h3": {
+   "equity": 8120.42,
+   "total_ret_pct": -18.796,
+   "ret_recent_pct": -11.957,
+   "n_trades": 202,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_h5": {
+   "equity": 8782.03,
+   "total_ret_pct": -12.18,
+   "ret_recent_pct": -6.785,
+   "n_trades": 173,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_yday_h1": {
+   "equity": 8693.59,
+   "total_ret_pct": -13.064,
+   "ret_recent_pct": -11.677,
+   "n_trades": 237,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "union_white_yday_h3": {
+   "equity": 9085.04,
+   "total_ret_pct": -9.15,
+   "ret_recent_pct": -4.382,
+   "n_trades": 195,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "yday_gainer_h1": {
+   "equity": 7298.97,
+   "total_ret_pct": -27.01,
+   "ret_recent_pct": -23.891,
+   "n_trades": 306,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "yday_gainer_h3": {
+   "equity": 8297.47,
+   "total_ret_pct": -17.025,
+   "ret_recent_pct": -14.977,
+   "n_trades": 244,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  },
+  "yday_gainer_h5": {
+   "equity": 8490.35,
+   "total_ret_pct": -15.097,
+   "ret_recent_pct": -13.801,
+   "n_trades": 223,
+   "first_date": "2026-08-13",
+   "last_date": "2026-10-06"
+  }
+ }
+}
