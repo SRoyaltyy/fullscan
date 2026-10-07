@@ -31,7 +31,7 @@ from zoneinfo import ZoneInfo
 
 ET = ZoneInfo("America/New_York")
 UTC = dt.timezone.utc
-SCHEMA = "input_freeze/v1"
+SCHEMA = "input_freeze/v2"
 FREEZE_ROOT = "research/input_freeze"
 DAY_RE = re.compile(r"^research/input_freeze/(\d{4}-\d{2}-\d{2})/")
 FIRST_DATE = "2026-10-07"          # no folders (not even 'late') before this
@@ -139,6 +139,9 @@ SPEC: list[tuple[str, str, str, dict]] = [
     ("strategy_tickets", "fullscan", "data/day_board/{date}.json", {"max_lag": 0}),
     ("strategy_tickets", "fullscan", "data/factor_mine/send_inputs/{date}.json", {"max_lag": 0}),
     ("strategy_tickets", "fullscan", "data/day_board/today_strategies.json", {}),
+    # Decision-fingerprint-only inputs (C.10 replay coverage; added in v2)
+    ("factor_mine", "fullscan", "data/factor_mine/panel.json", {}),
+    ("sleeve_merge", "fullscan", "data/sleeve_merge/today.json", {}),
 ]
 
 

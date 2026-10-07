@@ -1,0 +1,67 @@
+name: Decision freeze replay check
+
+# Proves the sealed strategy tickets were built from the frozen input set
+# (IRONCLAD C.10): for the newest session date that has both
+# research/input_freeze/<date>/manifest.json (status frozen) and
+# data/day_board/<date>_strategy_tickets.json, every
+# decision_readiness.inputs digest must equal the freeze manifest sha256
+# (or be an absent/missing pair), and every stored copy must re-hash to
+# its recorded sha256. Mismatch after the freeze cutoff, a tampered
+# stored copy, or an uncovered fingerprinted input (v2+ folders) fails.
+
+on:
+  schedule:
+    - cron: "43 13 * * 1-5"   # after the 09:20 ET freeze lands (EDT)
+    - cron: "43 14 * * 1-5"   # after the 09:20 ET freeze lands (EST)
+  workflow_run:
+    workflows:
+      - "Input freeze (pre-open, append-only)"
+      - "Publish strategy tickets"
+    types: [completed]
+  pull_request:
+    paths:
+      - "research/input_freeze/**"
+      - "data/day_board/**"
+      - "src/decision_ready.py"
+      - ".github/workflows/decision_freeze_check.yml"
+  push:
+    branches: [main]
+    paths:
+      - "research/input_freeze/**"
+      - "data/day_board/**"
+      - "src/decision_ready.py"
+      - ".github/workflows/decision_freeze_check.yml"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "YYYY-MM-DD to check (empty = newest complete pair)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  replay-check:
+    name: Ticket vs frozen inputs hash-match
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests (replay checker)
+        run: python3 research/input_freeze/tool/test_check_decision_freeze.py
+      - name: Replay check — sealed ticket vs frozen inputs
+        env:
+          DATE: ${{ github.event.inputs.date }}
+        run: |
+          if [ -n "$DATE" ]; then
+            python3 research/input_freeze/tool/check_decision_freeze.py --date "$DATE"
+          else
+            python3 research/input_freeze/tool/check_decision_freeze.py
+          fi
