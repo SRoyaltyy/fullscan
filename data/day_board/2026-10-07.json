@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T13:27:53.927489-04:00",
+  "generated_at": "2026-10-07T13:28:00.876781-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -1043,24 +1043,6 @@
     }
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T05:36:21.528577-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-07_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2248137,
-          "preview": "5905 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COP, DVN, PR, OXY, TS"
-        }
-      ],
-      "preview": "5905 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COP, DVN, PR, OXY, TS"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -4197,6 +4179,24 @@
         }
       ],
       "preview": "5905 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COP, DVN, PR, OXY, TS"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T13:27:59.615618-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-07_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "href": {
