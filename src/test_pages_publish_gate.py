@@ -365,6 +365,32 @@ def _workflow_gate_script() -> str:
     return "\n".join(lines).strip() + "\n"
 
 
+# Same stdout / exit contract as src.pages_publish_gate, but rooted at
+# GATE_ROOT so the workflow step does not read the checkout's today.json.
+_GATE_FIXTURE_RUNNER = """
+import os
+import sys
+from pathlib import Path
+
+from src.pages_publish_gate import evaluate, format_verdict
+
+args = sys.argv[1:]
+date = ""
+if "--date" in args:
+    date = args[args.index("--date") + 1]
+verdict = evaluate(date, root=Path(os.environ["GATE_ROOT"]))
+print(format_verdict(verdict), flush=True)
+if verdict["ready"]:
+    raise SystemExit(0)
+print(
+    "[pages-gate] FAIL: not publishing "
+    f"{verdict.get('date')}. {verdict.get('reason')}",
+    flush=True,
+)
+raise SystemExit(1)
+"""
+
+
 def _run_gate_step(**env: str) -> subprocess.CompletedProcess[str]:
     script = _workflow_gate_script()
     assert "exit 1" in script
@@ -376,7 +402,15 @@ def _run_gate_step(**env: str) -> subprocess.CompletedProcess[str]:
         merged["PYTHONPATH"] = str(Path(__file__).resolve().parent.parent)
         merged.pop("SESSION_DATE", None)
         merged.pop("FORCE", None)
+        merged.pop("GATE_ROOT", None)
         merged.update(env)
+        if merged.get("GATE_ROOT"):
+            runner = Path(d) / "gate_runner.py"
+            runner.write_text(_GATE_FIXTURE_RUNNER, encoding="utf-8")
+            script = script.replace(
+                "python3 -m src.pages_publish_gate",
+                "python3 " + shlex.quote(str(runner)),
+            )
         proc = subprocess.run(
             ["bash", "-c", script],
             cwd=Path(__file__).resolve().parent.parent,
@@ -406,7 +440,15 @@ def test_gate_block_fails_the_workflow() -> None:
     assert "ready=yes" in forced.github_output  # type: ignore[attr-defined]
     assert "force=true" in forced.stdout
 
-    explicit = _run_gate_step(SESSION_DATE="2026-10-06", FORCE="")
+    with tempfile.TemporaryDirectory() as ready_dir:
+        ready_root = Path(ready_dir)
+        _board(ready_root, "2026-10-06", [
+            _proc("stock_book", [_file("book_json", "required", "OK")]),
+            _proc("publish", [_file("dash_html", "required", "OK")]),
+        ])
+        _fm_and_tickets(ready_root, "2026-10-06")
+        explicit = _run_gate_step(
+            SESSION_DATE="2026-10-06", FORCE="", GATE_ROOT=str(ready_root))
     assert explicit.returncode == 0, explicit.stdout + explicit.stderr
     assert "2026-10-06" in explicit.stdout
     assert "READY" in explicit.stdout

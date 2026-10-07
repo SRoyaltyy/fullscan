@@ -7,9 +7,7 @@ capital, following the daily stock book:
     {1d,3d,1w,2w,1m}_size  — top 3 per size bucket (large+ / mid / small-micro)
 
 Rules
-- Replay every book. Days already stored on or before the past-day
-  watermark stay byte-for-byte. The newest session may still be
-  rewritten until a later session seals it.
+- Rebuild from scratch every run: replay all books chronologically (idempotent).
 - Entry/exit at the signal day's closing price (yfinance, auto-adjusted).
 - Follow-the-book: hold a name while it stays in the sleeve's pick list;
   sell when it drops out (only after the horizon min-hold: 1d=1, 3d=3,
@@ -1373,17 +1371,6 @@ def write_report(stats: list[dict], date: str, capital: float) -> None:
 
 # ------------------------------------------------------------ driver ------
 
-def _commit_csv(record: str, filename: str, frame: pd.DataFrame, column: str) -> None:
-    """Write one paper CSV through the going-forward past-day lock."""
-    import io
-
-    from . import past_day_lock as pdl
-
-    buf = io.StringIO()
-    frame.to_csv(buf, index=False)
-    pdl.commit_open_tail_csv(record, PAPER_DIR / filename, buf.getvalue(), column=column)
-
-
 def run(date: str | None = None, top_n: int = 10, capital: float | None = None) -> None:
     fees = load_fees()
     capital = capital or float(fees["paper_account"]["starting_capital_per_sleeve"])
@@ -1416,12 +1403,12 @@ def run(date: str | None = None, top_n: int = 10, capital: float | None = None) 
                           session_ix=sess_ix)
     PAPER_DIR.mkdir(parents=True, exist_ok=True)
     curve = pd.DataFrame(curve_rows)
-    _commit_csv("paper_equity", "equity_curve.csv", curve, "date")
-    _commit_csv("paper_trades", "trades.csv", pd.DataFrame(trade_rows), "date")
+    curve.to_csv(PAPER_DIR / "equity_curve.csv", index=False)
+    pd.DataFrame(trade_rows).to_csv(PAPER_DIR / "trades.csv", index=False)
     if trips:
-        _commit_csv("paper_roundtrips", "roundtrips.csv", pd.DataFrame(trips), "sell_date")
+        pd.DataFrame(trips).to_csv(PAPER_DIR / "roundtrips.csv", index=False)
     if skips:
-        _commit_csv("paper_skipped", "skipped.csv", pd.DataFrame(skips), "date")
+        pd.DataFrame(skips).to_csv(PAPER_DIR / "skipped.csv", index=False)
     (PAPER_DIR / "state.json").write_text(json.dumps(st, indent=2, default=str),
                                           encoding="utf-8")
 

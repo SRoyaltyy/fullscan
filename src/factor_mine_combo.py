@@ -178,6 +178,10 @@ def enrich_payload_legs(payload: dict, pin: bool = True) -> dict:
             seen.add(n)
             featured.append(n)
     payload["featured"] = featured
+    # Page JSON only. send_inputs days are already on dates/daily/series;
+    # the replay tape has to cover those sessions too. Books stay put.
+    from . import factor_mine_sim as fms
+    fms.cover_sim_dates(payload)
     return payload
 
 # Members we actually have a reason to mix (elite + the user's three).
