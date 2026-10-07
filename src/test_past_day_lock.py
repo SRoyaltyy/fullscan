@@ -210,8 +210,21 @@ def test_paper_and_sleeve_fills_are_locked() -> None:
     book = (ROOT / "src" / "run_stock_book_all.py").read_text(encoding="utf-8")
     pre = (ROOT / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
     live = (ROOT / "src" / "sleeve_merge_live.py").read_text(encoding="utf-8")
-    assert "commit_open_tail_csv" in paper
+    boards = (ROOT / "src" / "publish_live_boards.py").read_text(encoding="utf-8")
+    finish = (ROOT / ".github" / "workflows" / "preopen_finish_0908.yml").read_text(encoding="utf-8")
+    # src/paper_trade.py is a pinned v4 engine file. The going-forward
+    # CSV lock stays in the daily writer, outside those bytes.
+    assert "past_day_lock" not in paper
+    assert "commit_open_tail_csv" not in paper
     assert "commit_open_tail_csv" in append
+    for record, filename in (
+        ("paper_equity", "equity_curve.csv"),
+        ("paper_trades", "trades.csv"),
+        ("paper_roundtrips", "roundtrips.csv"),
+        ("paper_skipped", "skipped.csv"),
+    ):
+        assert record in append
+        assert filename in append
     assert "commit_open_tail_csv" in sleeve
     assert "prepare_flatten_card" in live
     assert "seal_flatten_card" in live
@@ -223,6 +236,8 @@ def test_paper_and_sleeve_fills_are_locked() -> None:
     assert "not fingerprinted" in note
     assert "src.paper_trade_append" in book
     assert "src.paper_trade_append" in pre
+    assert "src.paper_trade_append" in boards
+    assert "python -m src.paper_trade_append" in finish
 
 
 def _lock_csv(record: str, old: str, new: str, column: str, manifest: Path) -> str:
