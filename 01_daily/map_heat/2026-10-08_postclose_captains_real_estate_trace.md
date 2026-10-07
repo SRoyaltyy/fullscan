@@ -12,13 +12,13 @@
 
   - VICI Properties (NYSE:VICI) - Stock Analysis - Simply Wall Street (https://news.google.com/rss/articles/CBMieEFVX3lxTE11QjdRR3ZnalNmaVZtM21tYVh3LVZ2aEtScm5LTGQ1U3hxRGpnWE4yeTI1TFlLZ3FhcG05YTRUQ19zVHB3U1RCaW5NNWY1Y3BZTW9McEU1MzhaS05qNlNWXzlPY3FUUlVia3J4eDRQMUkwRnBFTmVFaw?oc=5)
 
-  - VICI Properties trades at a deep discount with ... - Pluang (https://news.google.com/rss/articles/CBMinAFBVV95cUxNOXUwNmJ2dldyT3A0MXU0OFRONk10Z2hHUXYtWkxMcW1ER3lPYlZzaU5XejZUMzNVNk9kbmF1UEtCZ0xJeUhkT3JZZDZBbE03OEItN0tBNkc0MklDM1RwVzVqNnJSRlRBekFTSEdVTU41VGxXYWtYWHZRbV9UVXVER3BPZXJWYnRsMnpTSnZOSlYwZkFvcEgwekgxYXg?oc=5)
+  - VICI Properties Expands Experiences: Can Non-Gaming Growth Scale? - TradingView (https://news.google.com/rss/articles/CBMiugFBVV95cUxOMjhoWlBjV0lQNGpmMkdvLVFFREd2WlAzM2xZa2xza050X3p3Ul9GWW1GZUh5U205SjE3MmF3Q3JpQ1gtc1M3WklXbzNHUnRPcl8zVjBmNV94enl0WGNfd2xwVFVJdzNaN1Qtbmtvbk53NlkzeTZrSVFhcHNnWG9tcFExbEptMUdKd3NsR0huWFZUUGMwZklDV3lncE9UdWI2UzVCeVFlSnpnc3haUEJDaVVJTWRfUGRxOFE?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"Global Net Lease GNL Modiv Industrial acquisition $535M"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"Global Net Lease GNL Modiv Industrial acquisition news"* → got 6 results (via gnews_rss)
 
-  - Greenberg Traurig Advises Global Net Lease on $535M Modiv Industrial Acquisition - PR Newswire (https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZTV0NWE4cHBpUzdaYUFPdnZMUVhnbmpsTVVJTnRVUnloSUJPdlZkNExFSmZDUkktWUlWQ205YU1NTTdXeE9rZlNYbDBZa2pMN3Ffd3VVdHZFU0hQYkRJNWZsR281bm8yMjIxRkVqNlhuaVhkeHZHSFJ5QXBmalh0MFk4aE5sXzNzVzY0V1oyWXhsQ2NlbjNOaThEUDBXSUFFS1RLOERjVzhYRzRYZ3d5U2tnUE82aTRYNElVTlRlWE1LYnB2RHhrVkthS2t3M25i?oc=5)
+  - Global Net Lease to Acquire Modiv Industrial in $535 Million Transaction - Business Wire (https://news.google.com/rss/articles/CBMiywFBVV95cUxNYWZQOGNmMnFNWTlYUTJ3aHpDQWV4SVNSTHZaeXlpVndzbWJxLU5Pd2ZfbjhEaUdvdDlabEktUlVzSEQyemJvSzdtSnZ0S2c5YjZlRlZBWDNNLWo1clFwT0RDZ0FsalFfaUo3ZXdURnQ4NzdmMDZlQjVqRFhNWjlHWFBESmduRkFrMldRVDU2UFJMeGpaLTRHT0NSWDBOcW01OTdIaW1YRjhsWW03alVBQ0xiT2g0NkxLRTVNcFBleUYtd1JaZHZmNm5wcw?oc=5)
 
-  - Global Net Lease completes $535m Modiv Industrial acquisition - Investing.com (https://news.google.com/rss/articles/CBMiuAFBVV95cUxNTUJHcmJEY2w4Z0Jza0t0VmkxMUwyRkpXRGZfeXlhWUJVTmYwVDFLYy1nQXhQLU8yalFJUVVaX0l5YUxqa3pDV0dDeU44NWcyV0pCRnZTNjl6X0JQT2h1RmtMZ2daTVNUdl91S1c3NU5zaVRwb1NnQ09vblEyR2x1eWZJZ3NKZHc1TmhlM2d6ekNHeGFnMXZoVTdkUEdsUnE2eXlRM0tQQXh2bUVsOFdFcXVCQzl0ZEpr?oc=5)
+  - Global Net Lease Completes Acquisition of Modiv Industrial - GlobeNewswire (https://news.google.com/rss/articles/CBMiygFBVV95cUxPbHpFdTM2WFM4dmdVMlR2U3FabC1Fd1Z0ck94bGhhUUplRnlIZDV3WXRYbUFwTTZGWFZDdVdXT0w3QVBmbGJ0NDZROGNFMWd4bkJxVjM1aEU3OTRQczJSUmZocW1DNENBR29iTVB2VlVXNUFOcC1wSTFaTXNfZDhTaGxSUTF2anJyb3RKRXh4Zk90VjR2aUdrTVlZMmhFTUVFZ1lWLXVzcEVDeFpRdU9zR0VTdlBFNkdpQm1qdVdRNG56UVEtSi1rTFlB?oc=5)
 
   - Global Net Lease Agrees to Acquire Modiv Industrial in $535M Deal - REBusinessOnline (https://news.google.com/rss/articles/CBMikAFBVV95cUxOZ082RTFjdnVKWVljRnF0c1RtcXhOcThXZ1FmYmFFYlh5YlR5UUY2VVNTdFQySG53S0s1VnVZSjZYM2tsaUdSSy1CUkcyd3dxQ094YkJpdW1LemloYXNscjNZclI1YmUxdV95RWpzMlFWRzNhYUVqOUlHa3ltQklFMlFnQmw5R29tdGJKdm8zVmI?oc=5)
 

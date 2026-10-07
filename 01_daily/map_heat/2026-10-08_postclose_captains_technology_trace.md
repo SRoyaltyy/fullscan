@@ -14,12 +14,12 @@
 
   - CSCO Stock Price Today (October 2026) — Cisco Systems, Inc ... (https://tickzen.app/stocks/csco/overview)
 
-**Step 2 — Research.** The model wanted to know: *"MSI Motorola Solutions news October 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"MSI Motorola Solutions news October 2026"* → got 6 results (via gnews_rss)
 
-  - Investor Relations Homepage - Motorola Solutions (https://www.motorolasolutions.com/investors.html)
+  - Motorola Solutions (MSI): Showcasing Resilient Demand and Intrinsic Value in a Volatile Market - Yahoo Finance (https://news.google.com/rss/articles/CBMirAFBVV95cUxQSWRkdndZbDFya1p3NmxjWEpaVGduN2FzTjBNVTBkdHI3SVNvYTZiSkF4SW1MU252SmQ3bXNtaUJYX2ZxRVVwTmpKS2FOa2RSMDRGREZUUjFlVzMwLTBfeTNrdDdLamJrbFVOLVlWOUt4RWR5Z1ExOGxfRjFEUUh5S3ctWndZQnB4UTRiWG5RSnY0dnVSUkhmMm1CdmJWbk11NHI4SnI1dFV0N1pL?oc=5)
 
-  - Motorola Solutions News (NYQ:MSI) Oct 2026 | Stockopedia (https://www.stockopedia.com/share-prices/motorola-solutions-NYQ:MSI/news/)
+  - Is MSI Overvalued? DCF Says Worth $277 - GuruFocus (https://news.google.com/rss/articles/CBMigAFBVV95cUxNeXJDM09RamtFZ1IxT1E0NkY4TTAzVkFnMG5Kc3pldlFyTTVOODNKTG15SURjMmpaeEhKd0xiZHdUTUY5NnV0Qlhha3dMODk5TXByYlBrN1pTUEJ0cjlES3lXR1k4SjBrSU1ld2JpUXAwRDZBNm9NSEh2ZS0yYWM2WQ?oc=5)
 
-  - MSI News Today | Why did Motorola Solutions stock go down ... (https://www.marketbeat.com/stocks/NYSE/MSI/news/)
+  - $100 Invested In Motorola Solutions 20 Years Ago Would Be Worth This Much Today - Benzinga (https://news.google.com/rss/articles/CBMi1wFBVV95cUxOS0N0ZXhDSVZDVUFVVENyb3JXSUxBVlBqaTlrM0c2WmQwSGpocl9oeVlZWlJwcXZ3OUNxcXdpWVpXak5vNXNZZXEzVmhBTVMtZTR4R3lGSjNscFFvYW9lSlVvTF9oQ2ZBMXM0ekU0WC1TanFkdXI0UjdiZXFld1cxUGlYSjExUEtQYUo2bEt6dXpmRmp0R01pMmpJeXdfM0MyWk1HcmwzOWg4dEVWVFFFeWY0Znd1M0ZTQUVuei1Ea25VSnR6d2pEMDZFdlh0bkdyVGJMSnlNdw?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"EQIX Equinix news October 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"EQIX Equinix news October 2026"* → got 6 results (via gnews_rss)
 
-  - News & Events :: Equinix, Inc. (EQIX) (https://investor.equinix.com/news-events)
+  - Equinix, Inc. (EQIX) Latest Stock News & Headlines - Yahoo Finance (https://news.google.com/rss/articles/CBMiVEFVX3lxTFBza3RTWFFDd3BoOXFGdXZZME1icFJJRlduZ3FaaU96MHZBTGpZd1g4WHZoS285MncwZGtWZXVPd0ppNFFvcVBKdVpWYU9DVUVPV3IwOQ?oc=5)
 
-  - Data Center News, Press Releases & Company Updates | Equinix (https://newsroom.equinix.com/)
+  - 3 Data Center REIT Stocks Retail Investors Are Watching for AI Growth - Simply Wall Street (https://news.google.com/rss/articles/CBMixwFBVV95cUxNWkcyaEF4THBibVpoT2dMRVlQNjlaa0RzaTFzQ2ZVSWFiYVRYbFhXbGRDcFAtTG80TERCZmxNS3pCaWFfMGUxVHZFMFh4WWoxT2Q5c3FhZEtZTWdWUFhWd1M3d0pXNHhneFd2b2Z1OHQ3VHRET2txVTNVSlFwNm04bjV3ZXJVVWpWX2hTa3Z2MDZGWGh3NkVUVnJINC0ybW44eE9OWFhfSF9LdF9Zd1czamk4ODV3a2xFNDAyMXZxMFBsdVJRUWow0gHMAUFVX3lxTFBESEhKOXdmdWV5S3JRLW9xYVZnV0tOYWNob2RBcmE0SU0wRHQyYzhWRDdWMmIwZkk1YnVhQjFobjlDUUxlRW9pdkVpMVBiaXYtNmcxaS15ZUVRVkhnRmw1Mi1sSVhaa3djdGdCQ3h3UTU2ckozR2RaaktaYnFLa251SXVLdHVJZTZmTG9nVzRUV2F4LUtWVEhoVV9EUDBBOUY4TkhIM1E2Z2hUa0x1SDRDOUgyZmxQSzM1RjgzLWNFYkRQdW5PRjBsZmk2eA?oc=5)
 
-  - MEDIA ALERT: Equinix Sets Conference Call for Third-Quarter ... (https://newsroom.equinix.com/2026-10-01-MEDIA-ALERT-Equinix-Sets-Conference-Call-for-Third-Quarter-Results)
+  - MEDIA ALERT: Equinix Sets Conference Call for Third-Quarter Results - Morningstar (https://news.google.com/rss/articles/CBMixgFBVV95cUxORzVQcTBYMkZ4Z1l6bzhfNjh2TEFKdG5SVU5JZFFGc05nTVNyRmRaQ1AyemY1NHk3RXAwY3JkVl85ZXU3NFczX3JRd3U0SHFMOFRpMThlTDFjMlhpTVE3OUhDV3RNTm91NkhZU2QtZlRJM1o0MGZNWVdhNlFXejBqNkNKOGlQZFpEbVdXOGgzeDlTZ2x0T2xpYnA2Y0RSNEIzNHlGRHdjNFBfcDlQN3VST2RUVmF4bGZadjNXWFRnSllBYUhwVnc?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"AMT American Tower news October 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"AMT American Tower news October 2026"* → got 6 results (via ddg)
 
-  - American Tower (NYSE:AMT) Tower Leasing and Data Centers in Focus - Kalkine Media (https://news.google.com/rss/articles/CBMixwFBVV95cUxOalJDbTFqeklfMDJlQ1hONVJwd09mOTdSMjZYbDc3RXl6Q1Vvb3RmUTk4aHJab3hDbmN0LVRZRDN1NDVoMy1aNHhQVk90MldtbkRiVWk1VEViOHZ6UnVJckRZTHlJQjdhS2F0ZHFmbUJaaEdYeGxXZ2hVd1ZaQ1k3eExCdi1LX2VKY3JSTTUwaGQ1a3BReFdXWk00b0dFWDFoc1d0SGt6b21ZdjY2ZmxhM0Q2ZW5iVVhMRHJCY1I0dDJwZ1JsZzhR?oc=5)
+  - American Tower Sets Oct. 27 Q3 2026 Earnings Call | AMT Stock ... (https://www.stocktitan.net/news/AMT/american-tower-plans-third-quarter-2026-earnings-release-and-4xizrgmolv5s.html)
 
-  - A 16,299-unit stock grant at American Tower (AMT) vests over three years. - Stock Titan (https://news.google.com/rss/articles/CBMitgFBVV95cUxPeTVIcDk4akRuV0JYcGhiTlRtckVMa3NqbHRlcHphZUpTYXFTOTBYUVAwSktxT21jbHBET3BURWpCSGNEU25wMU9jVkdTa2hLNklkR1duNTRIZ2VHa1FIaW9ydzJ6ZzZQMmJNdmFkUmpXaUx0b1hEdjRaeXB1ZGFGejdGTC1BUTAtbV9uQ0pocndNMkM3S2tETUlJdmQ1V3VLMHNINnhfOHJWV2VyZWw1aVZxc1pLdw?oc=5)
+  - American Tower (AMT) 10K Form and Latest SEC Filings 2026 (https://www.marketbeat.com/stocks/NYSE/AMT/sec-filings/)
 
-  - Dudley & Shanley Inc. Purchases 64,400 Shares of American Tower Corporation $AMT - MarketBeat (https://news.google.com/rss/articles/CBMi0gFBVV95cUxQUzB4UVdaeXR2NTAzZnpKUS1FdTZqN2c2V1VraVp2cUVlZTNuUmRvZ2luN0x1R1hJYTVxanpQMTFnU3pjRmtwbTRBdERwT3E0NWk3b2xpRU9zY2hmd21VZ0dQVDBvbDFhV3hlTWFvNW9QMUZUeDB3U3lJWjQ5SzlfM2RlWEowQjFnbzVDQjVBdW1hc0JXYkpCcXA4N1JncU1VVUp3TEkyNmRaaDdrd3FFRTE1RUFFMmNzWVhzZHF3dVNkTnFqek9UTE1ycUtUblp5M0E?oc=5)
+  - American Tower Corporation: Official Announcements - Stock ... (https://www.marketscreener.com/quote/stock/AMERICAN-TOWER-CORPORATIO-9789139/news-press-releases/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
