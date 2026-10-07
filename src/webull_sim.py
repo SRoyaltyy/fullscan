@@ -11,6 +11,11 @@ why. Nothing here writes an existing live book.
 
 The scheduled run stays shut from 03:00 until 09:40 ET.
 
+From 2026-10-07, an excel book whose prior weekday has no final file
+sits that session out. A draft is not a plan. A sit-out day still
+exits lots the book already holds, buys nothing, and can be final
+after 16:00 ET.
+
 Theme Radar research shorts read that repo's pre-open plan file
 (``research/shadow_log/plans/plan_<entry date>.csv``), not the shadow log.
 The file's first commit has to be before 09:30 ET. A short sells the open
@@ -76,6 +81,9 @@ ACTIONS_PATH = ROOT / "data" / "prices" / "actions.parquet"
 
 FIRST_LOCKED = "2026-10-06"
 WATERMARK = "2026-10-05"
+# From this session on, a missing prior-weekday excel final is a sit-out row,
+# and a sit-out or no-plan day still exits lots already held.
+SIT_OUT_FROM = "2026-10-07"
 START_CASH = Decimal("10000")
 Q = Decimal("0.000001")
 RECORD = "webull_sim"
@@ -720,6 +728,32 @@ def next_weekday(day: str) -> str:
     return cursor.isoformat()
 
 
+def prior_weekday(day: str) -> str:
+    """Calendar weekday before ``day``. Saturday and Sunday are skipped.
+
+    This is the inverse of ``next_weekday``: a Monday session reads Friday's file.
+    """
+    cursor = date.fromisoformat(day) - timedelta(days=1)
+    while cursor.weekday() >= 5:
+        cursor -= timedelta(days=1)
+    return cursor.isoformat()
+
+
+def nyse_sessions_through(start: str, end: str) -> list[str]:
+    """NYSE sessions from ``start`` through ``end``, inclusive. Later days are omitted."""
+    if not start or not end or end < start:
+        return []
+    from .skip_if_good import _session_date
+    cursor = date.fromisoformat(start)
+    last = date.fromisoformat(end)
+    found = []
+    while cursor <= last:
+        if _session_date(cursor):
+            found.append(cursor.isoformat())
+        cursor += timedelta(days=1)
+    return found
+
+
 def book_name(strategy: str) -> str:
     stem = strategy if strategy.endswith("_webull_sim") else f"{strategy}_webull_sim"
     return stem
@@ -955,6 +989,15 @@ def run_book(
         )
         fills: list[dict] = []
         mode = resolve_sizing(plan["picks"], plan.get("sizing") or "slot")
+        # A sit-out or a day with no pre-09:30 plan buys nothing. From
+        # SIT_OUT_FROM it still runs the open exit rules on lots already held,
+        # then marks at the close. Theme books keep cover_at_close below.
+        exit_held = (
+            not tradable
+            and day >= SIT_OUT_FROM
+            and not is_theme_book(name)
+            and reason in ("no pre-09:30 plan", "sat out, 0 picks")
+        )
         if tradable:
             # One missing print does not drop the other picks. Each name is
             # sized off the same open equity. Before the final run the miss
@@ -988,6 +1031,11 @@ def run_book(
                 else:
                     if missing_picks:
                         note = (note + " open not observed: " + ",".join(missing_picks)).strip()
+        elif exit_held:
+            fills = apply_session(
+                account, [], plan["exits"], bars, schedule,
+                day, index[day], sizing=mode,
+            )
         if is_theme_book(name):
             # A late or empty day still covers shorts that were already on.
             # New picks were not opened above unless the plan was tradable.
@@ -1146,7 +1194,7 @@ def excel_universe() -> list[str]:
     return sorted(p.name for p in EXCEL_STRATS.iterdir() if (p / "card.json").is_file())
 
 
-def load_excel_plans() -> dict[str, list[dict]]:
+def load_excel_plans(today: str | None = None) -> dict[str, list[dict]]:
     books: dict[str, list[dict]] = {name: [] for name in excel_universe()}
     files = sorted(EXCEL_DIR.glob("*_excel_bot.md"))
     for path in files:
@@ -1187,7 +1235,33 @@ def load_excel_plans() -> dict[str, list[dict]]:
             books[name].append(_plan(
                 session, rel, sha, when, before, picks, [], note=note,
             ))
+    _fill_missing_excel_finals(books, today)
+    for name in books:
+        books[name].sort(key=lambda plan: plan["date"])
     return {book_name(k): v for k, v in books.items()}
+
+
+def _fill_missing_excel_finals(books: dict[str, list[dict]], today: str | None) -> None:
+    """Empty plan when the prior weekday has no excel_bot final.
+
+    A draft is not a final. Its picks are not read. Sessions before
+    SIT_OUT_FROM stay as they were, and a session after ``today`` is not written.
+    """
+    if not books:
+        return
+    if today is None:
+        today = datetime.now(ET).date().isoformat()
+    scheduled = {plan["date"] for plans in books.values() for plan in plans}
+    for session in nyse_sessions_through(SIT_OUT_FROM, today):
+        if session in scheduled:
+            continue
+        signal = prior_weekday(session)
+        if (EXCEL_DIR / f"{signal}_excel_bot.md").is_file():
+            continue
+        note = f"sat out: no excel_bot final for {signal}"
+        for name in books:
+            books[name].append(empty_plan(session, "no pre-09:30 plan", note))
+        scheduled.add(session)
 
 
 def load_ticket_plans() -> dict[str, list[dict]]:
@@ -1995,10 +2069,10 @@ def adjust_splits(bars: dict[tuple[str, str], dict]) -> dict[tuple[str, str], di
     return bars
 
 
-def collect_books() -> dict[str, list[dict]]:
+def collect_books(today: str | None = None) -> dict[str, list[dict]]:
     books: dict[str, list[dict]] = {}
     books.update(load_ticket_plans())
-    books.update(load_excel_plans())
+    books.update(load_excel_plans(today))
     books[book_name("excel_all")] = [empty_plan(
         FIRST_LOCKED,
         "no pre-09:30 plan",
@@ -2606,7 +2680,7 @@ def build(now: datetime, *, seal: bool = False) -> list[dict]:
     if in_write_freeze(now):
         raise SystemExit("webull sim: 03:00–09:40 ET is closed for writes")
     schedule = load_schedule()
-    books = collect_books()
+    books = collect_books(now.astimezone(ET).date().isoformat())
     print(f"webull sim: {len(books)} books", flush=True)
     close_marks: dict[tuple[str, str], str] = {}
     rows = simulate(books, now, schedule, books_path=BOOKS_PATH, close_marks=close_marks)
