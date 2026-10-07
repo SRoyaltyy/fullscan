@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T10:47:57.453967-04:00",
+  "generated_at": "2026-10-07T10:48:06.754990-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -1043,31 +1043,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T04:31:45.631858-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-07_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 98242,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-07_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11722,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-07\n_Generated 2026-10-07T04:20:26.921924-04:00 \u00b7 export=data/exports/finviz_2026-10-06.csv \u00b7 ticker digests=5899 \u00b7 high-signal=1849_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-07\n_Generated 2026-10-07T04:20:26.921924-04:00 \u00b7 export=data/exports/finviz_2026-10-06.csv \u00b7 ticker digests=5899 \u00b7 high-signal=1849_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -3972,6 +3947,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-07\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T10:48:05.512987-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-07_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2248137,
+          "preview": "5905 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COP, DVN, PR, OXY, TS"
+        }
+      ],
+      "preview": "5905 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COP, DVN, PR, OXY, TS"
     }
   ],
   "href": {
