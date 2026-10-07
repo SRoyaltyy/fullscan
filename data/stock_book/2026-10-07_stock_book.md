@@ -1,6 +1,6 @@
 # Stock book — 2026-10-07
 
-_Generated 2026-10-07T05:54:58.772723-04:00_
+_Generated 2026-10-07T06:05:44.829807-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -23,7 +23,7 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 - Stand-down: **no** — 2 names qualified through group_leader,catalyst,probable (2 probable)
 - Sector predicts this date: 0/11 (missing → sector layer is 0; Finviz week tape still sits in join)
 - News tickers in play: 156
-- AB coverage: 1933 names · peer RS: 1804
+- AB coverage: 1932 names · peer RS: 1804
 - Universe after liquidity: 2033
 - BUY window: $80M ADV, opportunity $400M–$20B, max 4/sector, 3/industry, 4 large/mega
 - News names after digest+judge: 82
@@ -286,7 +286,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **FCEL** (small, Industrials, $1.3B) score -0.221. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7%
 - **EOSE** (small, Industrials, $1.1B) score -0.315. SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -4.7%
 - **ENVX** (small, Industrials, $562M) score -0.202. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7%
-- **INDI** (small, Technology, $668M) score -0.288. SELL/AVOID — market=RED; red domains=parent,child,setup,flow
+- **INDI** (small, Technology, $668M) score -0.263. SELL/AVOID — market=RED; red domains=parent,child,setup,flow
 - **TE** (small, Industrials, $1.1B) score -0.373. SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -4.7%
 - **SKYX** (micro, Industrials, $158M) score -0.368. SELL/AVOID — market=RED; red domains=parent,child,setup; child lags parent -4.7%
 
@@ -359,7 +359,6 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **BAK** (micro, Basic Materials, $257M) score -0.656. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **RC** (micro, Real Estate, $218M) score -0.650. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **IMNM** (mid, Healthcare, $2.5B) score -0.646. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **INTC** (mega, Technology, $615.5B) score -0.645. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **ASPI** (small, Basic Materials, $402M) score -0.645. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **AIRS** (micro, Healthcare, $138M) score -0.637. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **PAL** (micro, Industrials, $99M) score -0.628. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
@@ -377,6 +376,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **PLAY** (micro, Communication Services, $223M) score -0.606. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **LAB** (micro, Healthcare, $286M) score -0.603. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
 - **TNYA** (micro, Healthcare, $130M) score -0.602. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **LXEO** (micro, Healthcare, $258M) score -0.601. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 
 ## Files for this run
 

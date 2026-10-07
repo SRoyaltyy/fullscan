@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T05:57:12.226289-04:00",
+  "generated_at": "2026-10-07T06:05:46.606189-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -42,7 +42,7 @@
     },
     {
       "ticker": "INDI",
-      "score": -0.2882462432599445
+      "score": -0.2625545866781168
     },
     {
       "ticker": "TE",
