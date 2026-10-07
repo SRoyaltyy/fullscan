@@ -1,12 +1,12 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T06:20:50.497695-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-10-07T10:06:26.876361-04:00",
+  "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 7,
-    "partial": 1,
+    "ok": 8,
+    "partial": 0,
     "fail": 0,
     "n": 8
   },
@@ -555,8 +555,8 @@
           "path": "01_daily/weather/2026-10-07_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10570 vix=falling yields=rising",
-          "size": 10570,
+          "reason": "sectors=11 bytes=10571 vix=falling yields=rising",
+          "size": 10571,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -617,11 +617,11 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -660,10 +660,10 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-10-07_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "usable=5/5",
+          "size": 18664,
+          "said": "5/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 GOOGL, GOOG, TSLA, NFLX, NE, RIG, SLB, BKR",
           "bullets": []
         }
       ],
@@ -774,8 +774,8 @@
           "path": "01_daily/weather/2026-10-07_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10570 vix=falling yields=rising",
-          "size": 10570,
+          "reason": "sectors=11 bytes=10571 vix=falling yields=rising",
+          "size": 10571,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -828,7 +828,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=118",
-          "size": 1010207,
+          "size": 1010341,
           "said": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI \u00b7 -0.6018",
           "bullets": []
         },
@@ -839,10 +839,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 32666,
+          "size": 32972,
           "said": "Stock book \u2014 2026-10-07",
           "bullets": [
-            "_Generated 2026-10-07T06:20:48.861069-04:00_",
+            "_Generated 2026-10-07T10:05:38.789937-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -906,7 +906,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=118",
-          "size": 1010207,
+          "size": 1010341,
           "said": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI \u00b7 -0.6018",
           "bullets": []
         },
@@ -3183,6 +3183,254 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-07\nall_ok=False  qc_all_ok=True  book_ok=False  grok_ok=True  news_mode=on  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T10:05:13.181794-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-07_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10571,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-07_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6033,
+          "preview": "# Weather report \u2014 2026-10-07\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-07\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T10:05:22.267581-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-07_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2248137,
+          "preview": "5905 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COP, DVN, PR, OXY, TS"
+        }
+      ],
+      "preview": "5905 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COP, DVN, PR, OXY, TS"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T10:05:27.801658-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-07_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T10:06:13.939962-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-07_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1010341,
+          "preview": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/2026-10-07_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-07_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2493,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-07_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7333,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7333,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "01_daily/2026-10-07_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 33858,
+          "preview": "# Stock book \u2014 2026-10-07\n_Generated 2026-10-07T10:05:38.789937-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 # Stock book \u2014 2026-10-07\n_Generated 2026-10-07T10:05:38.789937-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T10:06:19.492625-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 22365,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 876,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-07.json",
+          "ok": true,
+          "reason": "",
+          "size": 185850,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-07_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 147293,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 297089,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-07_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 243617,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 223258,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 297089,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 147293,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 297089,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 297089,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 223258,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1822,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1822,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, S"
+    },
+    {
+      "key": "paper",
+      "title": "Paper dashboard",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T10:06:25.603231-04:00",
+      "files": [
+        {
+          "path": "03_scoreboard/PAPER_TRADING.md",
+          "ok": true,
+          "reason": "",
+          "size": 1837,
+          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 | "
+        },
+        {
+          "path": "dashboard/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 10510817,
+          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b4d78;\ncolor:var(--fg);text-decoration:none}\n."
+        }
+      ],
+      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
     }
   ],
   "href": {

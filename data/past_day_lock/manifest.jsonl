@@ -717,3 +717,4 @@
 {"kind":"seed","record":"paper_trades","watermark":"2026-10-06"}
 {"kind":"seed","record":"paper_roundtrips","watermark":"2026-10-06"}
 {"kind":"seed","record":"flatten_robust","watermark":"2026-10-06"}
+{"date":"2026-10-07","kind":"day","name":"","record":"strategy_tickets","sha256":"521f47b9ba94fdf2b1d8743674ee291e53fb6018297e91d8481dc51ff7313d11"}
