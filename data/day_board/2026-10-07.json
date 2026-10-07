@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T10:37:23.824357-04:00",
+  "generated_at": "2026-10-07T10:38:08.729270-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -828,7 +828,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=118",
-          "size": 1010340,
+          "size": 1010341,
           "said": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI \u00b7 -0.6018",
           "bullets": []
         },
@@ -842,7 +842,7 @@
           "size": 32972,
           "said": "Stock book \u2014 2026-10-07",
           "bullets": [
-            "_Generated 2026-10-07T10:17:13.530371-04:00_",
+            "_Generated 2026-10-07T10:37:33.188346-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -906,7 +906,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=118",
-          "size": 1010340,
+          "size": 1010341,
           "said": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI \u00b7 -0.6018",
           "bullets": []
         },
@@ -3492,6 +3492,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-07T10:38:07.466597-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-07_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1010341,
+          "preview": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/2026-10-07_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-07_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2493,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-07_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7333,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 7333,
+          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
+        },
+        {
+          "path": "01_daily/2026-10-07_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 33858,
+          "preview": "# Stock book \u2014 2026-10-07\n_Generated 2026-10-07T10:37:33.188346-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 # Stock book \u2014 2026-10-07\n_Generated 2026-10-07T10:37:33.188346-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
