@@ -67,6 +67,12 @@ from src.webull_sim import (
     simulate,
     whole_shares,
     write_books,
+    load_excel_plans,
+    empty_plan,
+    SIT_OUT_FROM,
+    prior_weekday,
+    nyse_sessions_through,
+    EXCEL_DIR,
 )
 
 ET = ZoneInfo("America/New_York")
@@ -1749,6 +1755,299 @@ def test_next_day_sizing_uses_the_open_not_the_sealed_equity() -> None:
         write_books(rows, seal=True, path=path, manifest=manifest)
 
 
+EXCEL_BOOKS = (
+    "L1_long_green_tp8_lowvol",
+    "L2_long_green_tp3_lowvol",
+    "L3_long_green_hold2_midcap",
+    "L4_long_green_hold8_bbailike",
+    "L5_long_green_hold2_midhibeta",
+    "S1_short_red_1day_optionable",
+    "S2_short_red_1day_hivol",
+)
+SIT_NOTE = "sat out: no excel_bot final for 2026-10-06"
+
+
+def _excel_strats(folder: Path) -> None:
+    for name in EXCEL_BOOKS:
+        card = folder / name
+        card.mkdir(parents=True)
+        (card / "card.json").write_text("{}", encoding="utf-8")
+
+
+def _no_plan(day: str, note: str = SIT_NOTE, exits: list[str] | None = None) -> dict:
+    plan = empty_plan(day, "no pre-09:30 plan", note)
+    if exits:
+        plan["exits"] = list(exits)
+    return plan
+
+
+def test_draft_only_prior_day_sits_excel_books_out_without_the_draft() -> None:
+    """A weekday with only a draft, or no file, records an empty next session.
+
+    The draft's tickers are not buys. Sessions after today, and sessions
+    before 2026-10-07, are not filled in.
+    """
+    assert SIT_OUT_FROM == "2026-10-07"
+    assert prior_weekday("2026-10-07") == "2026-10-06"
+    assert prior_weekday("2026-10-05") == "2026-10-02"
+    assert nyse_sessions_through("2026-10-07", "2026-10-07") == ["2026-10-07"]
+    assert nyse_sessions_through("2026-10-07", "2026-10-06") == []
+    assert nyse_sessions_through("2026-09-04", "2026-09-08") == ["2026-09-04", "2026-09-08"]
+
+    draft = (
+        "| ticker | side | strategy | exit |\n"
+        "|---|---|---|---|\n"
+        "| DRAFTX | LONG | L1_long_green_tp8_lowvol | tp8 |\n"
+        "| DRAFTY | SHORT | S1_short_red_1day_optionable | hold1 |\n"
+    )
+
+    def sit_plans(daily: Path, today: str) -> dict:
+        with mock.patch("src.webull_sim.EXCEL_DIR", daily), mock.patch(
+            "src.webull_sim.EXCEL_STRATS", daily.parent / "strategies"
+        ):
+            return load_excel_plans(today)
+
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        daily = root / "daily"
+        daily.mkdir()
+        _excel_strats(root / "strategies")
+        (daily / "2026-10-06_excel_bot_draft.md").write_text(draft, encoding="utf-8")
+        books = sit_plans(daily, "2026-10-07")
+        assert set(books) == {book_name(name) for name in EXCEL_BOOKS}
+        for name in EXCEL_BOOKS:
+            plans = books[book_name(name)]
+            assert [plan["date"] for plan in plans] == ["2026-10-07"]
+            plan = plans[0]
+            assert plan["picks"] == []
+            assert plan["tradable"] is False
+            assert plan["reason"] == "no pre-09:30 plan"
+            assert plan["note"] == SIT_NOTE
+            assert "DRAFT" not in plan["note"]
+        assert sit_plans(daily, "2026-10-06") == {book_name(name): [] for name in EXCEL_BOOKS}
+        later = sit_plans(daily, "2026-10-09")
+        for name in EXCEL_BOOKS:
+            assert [plan["date"] for plan in later[book_name(name)]] == [
+                "2026-10-07", "2026-10-08", "2026-10-09",
+            ]
+            assert all(plan["picks"] == [] for plan in later[book_name(name)])
+        # No file at all is the same sit-out. The draft is not required.
+        (daily / "2026-10-06_excel_bot_draft.md").unlink()
+        bare = sit_plans(daily, "2026-10-07")
+        for name in EXCEL_BOOKS:
+            plan = bare[book_name(name)][0]
+            assert plan["picks"] == []
+            assert plan["note"] == SIT_NOTE
+
+    books = load_excel_plans("2026-10-07")
+    draft_text = (EXCEL_DIR / "2026-10-06_excel_bot_draft.md").read_text(encoding="utf-8")
+    draft_names = {
+        pick.ticker
+        for picks in parse_excel(draft_text).values()
+        for pick in picks
+    }
+    assert "DRAFT" not in "".join(draft_names)
+    assert draft_names
+    assert (EXCEL_DIR / "2026-10-06_excel_bot.md").is_file() is False
+    names = [book_name(name) for name in EXCEL_BOOKS]
+    assert set(names) <= set(books)
+
+    def bars_for(day, tickers):
+        return {ticker: _flat_day(10) for ticker in tickers}
+
+    now = datetime(2026, 10, 7, 16, 15, tzinfo=ET)
+    for name in names:
+        plans = books[name]
+        sit = next(plan for plan in plans if plan["date"] == "2026-10-07")
+        assert sit["picks"] == []
+        assert sit["reason"] == "no pre-09:30 plan"
+        assert sit["note"] == SIT_NOTE
+        assert sit["source"] == ""
+        held = next(plan for plan in plans if plan["date"] == "2026-10-06")
+        assert held["source"].endswith("2026-10-05_excel_bot.md")
+        assert "sat out: no excel_bot final" not in held["note"]
+        row = run_book(name, [sit], ["2026-10-07"], bars_for, schedule(), now)[0]
+        assert row["date"] == "2026-10-07"
+        assert row["picks"] == 0
+        assert row["reason"] == "no pre-09:30 plan"
+        assert row["note"] == SIT_NOTE
+        assert row["fills"] == []
+        assert row["final"] is True
+        assert row["locked_trade"] is False
+        assert not draft_names.intersection(
+            {fill.get("ticker") for fill in row["fills"]}
+        )
+    for plans in books.values():
+        for plan in plans:
+            if str(plan.get("note") or "").startswith("sat out: no excel_bot final"):
+                assert plan["date"] == "2026-10-07"
+
+
+def test_no_plan_day_sells_an_expired_hold_and_can_go_final() -> None:
+    """A hold that expires on a no-plan day sells at that open. Final waits for 16:00."""
+    fees = schedule()
+    entry = _session_plan("2026-10-06", [Pick("AAA", "long", hold_sessions=1)])
+    sit = _no_plan("2026-10-07")
+
+    def bars_for(day, tickers):
+        return {ticker: {"open": 10, "high": 11, "low": 9, "close": 10} for ticker in tickers}
+
+    morning = run_book(
+        "toy_webull_sim", [entry, sit], ["2026-10-06", "2026-10-07"],
+        bars_for, fees, datetime(2026, 10, 7, 10, 56, tzinfo=ET),
+    )[1]
+    assert morning["final"] is False
+    assert morning["picks"] == 0
+    assert morning["reason"] == "no pre-09:30 plan"
+    sold = next(fill for fill in morning["fills"] if fill["ticker"] == "AAA")
+    assert sold["reason"] == "hold" and sold["side"] == "sell" and sold["shares"] > 0
+    assert Decimal(sold["price"]) == Decimal("10")
+    assert morning["positions"] == []
+    assert all(fill.get("side") != "buy" or not fill.get("shares") for fill in morning["fills"])
+    evening = run_book(
+        "toy_webull_sim", [entry, sit], ["2026-10-06", "2026-10-07"],
+        bars_for, fees, datetime(2026, 10, 7, 16, 15, tzinfo=ET),
+    )[1]
+    assert evening["final"] is True
+    assert evening["fills"] == morning["fills"]
+    assert evening["cash"] == morning["cash"]
+    assert evening["positions"] == []
+
+    # A planned exit uses the same open rule and still buys nothing.
+    planned = _no_plan("2026-10-07", exits=["AAA"])
+    held = _session_plan("2026-10-06", [Pick("AAA", "long", hold_sessions=5)])
+    planned_row = run_book(
+        "toy_webull_sim", [held, planned], ["2026-10-06", "2026-10-07"],
+        bars_for, fees, datetime(2026, 10, 7, 16, 15, tzinfo=ET),
+    )[1]
+    assert planned_row["final"] is True
+    assert planned_row["fills"][0]["reason"] == "plan sell"
+    assert planned_row["positions"] == []
+
+    # Before 2026-10-07 a sit-out does not exit a lot the locked book already holds.
+    with mock.patch("src.webull_sim.FIRST_LOCKED", "2026-10-01"):
+        previous = _session_plan("2026-10-05", [Pick("AAA", "long", hold_sessions=1)])
+        old = _no_plan("2026-10-06", "sat out")
+        old["reason"] = "sat out, 0 picks"
+        kept = run_book(
+            "toy_webull_sim", [previous, old], ["2026-10-05", "2026-10-06"],
+            bars_for, fees, datetime(2026, 10, 6, 16, 15, tzinfo=ET),
+        )[1]
+    assert kept["final"] is True
+    assert kept["positions"] and kept["positions"][0]["ticker"] == "AAA"
+    assert all(fill["reason"] != "hold" for fill in kept["fills"])
+
+
+def test_stop_on_a_no_plan_day_fires() -> None:
+    fees = schedule()
+    entry = _session_plan("2026-10-06", [Pick("AAA", "long", stop=Decimal("9"), hold_sessions=5)])
+    sit = _no_plan("2026-10-07")
+
+    def bars_for(day, tickers):
+        if day == "2026-10-06":
+            return {ticker: _flat_day(10) for ticker in tickers}
+        return {ticker: {"open": 10, "high": 10, "low": 8, "close": 9} for ticker in tickers}
+
+    row = run_book(
+        "toy_webull_sim", [entry, sit], ["2026-10-06", "2026-10-07"],
+        bars_for, fees, datetime(2026, 10, 7, 16, 15, tzinfo=ET),
+    )[1]
+    assert row["final"] is True
+    assert row["picks"] == 0
+    stopped = next(fill for fill in row["fills"] if fill["ticker"] == "AAA")
+    assert stopped["reason"] == "stop"
+    assert Decimal(stopped["price"]) == Decimal("9")
+    assert stopped["shares"] > 0
+    assert row["positions"] == []
+    assert all(fill.get("reason") != "open" for fill in row["fills"])
+
+
+def test_existing_final_rows_stay_byte_identical() -> None:
+    """A sealed line is copied. The on-disk books and mark notes are not rewritten."""
+    days_path = ROOT / "data/webull_sim/days.jsonl"
+    notes_path = ROOT / "data/webull_sim/mark_notes.jsonl"
+    days_bytes = days_path.read_bytes()
+    notes_bytes = notes_path.read_bytes()
+    fees = schedule()
+    entry = _session_plan("2026-10-06", [Pick("AAA", "long", hold_sessions=1)])
+
+    def flat(day, tickers):
+        return {ticker: _flat_day(10) for ticker in tickers}
+
+    sealed = run_book(
+        "toy_webull_sim", [entry], ["2026-10-06"], flat, fees,
+        datetime(2026, 10, 6, 16, 15, tzinfo=ET),
+    )[0]
+    assert sealed["final"] is True
+    original = canon(sealed)
+    sit = _no_plan("2026-10-07")
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / "days.jsonl"
+        path.write_text(original + "\n", encoding="utf-8")
+        bars = {}
+        for day, close in (("2026-10-06", 80), ("2026-10-07", 10)):
+            bars[("AAA", day)] = {"open": 10, "high": close, "low": 10, "close": close}
+        rows = simulate(
+            {"toy_webull_sim": [entry, sit]},
+            datetime(2026, 10, 7, 16, 15, tzinfo=ET),
+            fees, bars, books_path=path,
+        )
+        kept = next(row for row in rows if row["date"] == "2026-10-06")
+        nxt = next(row for row in rows if row["date"] == "2026-10-07")
+        assert canon(kept) == original
+        assert kept["equity"] == sealed["equity"]
+        assert any(fill["reason"] == "hold" and fill["shares"] > 0 for fill in nxt["fills"])
+        assert nxt["final"] is True
+        assert nxt["positions"] == []
+        write_books(rows, seal=False, path=path)
+        text = path.read_text(encoding="utf-8")
+        assert original in text
+        assert notes_path.read_bytes() == notes_bytes
+    assert days_path.read_bytes() == days_bytes
+    assert notes_path.read_bytes() == notes_bytes
+    # The sealed 10-06 excel lines in the repo are still the bytes on disk.
+    for line in days_bytes.decode("utf-8").splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        if row.get("final") and row.get("date") == "2026-10-06" and row["name"].startswith("L"):
+            assert line in days_path.read_text(encoding="utf-8")
+
+
+def test_theme_sit_out_still_covers_at_the_close() -> None:
+    """Theme shorts still cover at the close. A sit-out does not sell them at the open."""
+    fees = schedule()
+    entry = "2026-10-06"
+    cover = "2026-10-07"
+    pick = Pick("AAA", "short", hold_sessions=1, exit_on=cover)
+    plan = _session_plan(entry, [pick])
+    sit = _no_plan(cover, "no theme plan")
+    sit["reason"] = "no pre-09:30 plan"
+
+    def bars_for(day, tickers):
+        opened = 10
+        close = 8 if day == cover else 10
+        return {ticker: {"open": opened, "high": opened, "low": close, "close": close} for ticker in tickers}
+
+    name = "theme_radar_cell_webull_sim"
+    morning = run_book(
+        name, [plan, sit], [entry, cover], bars_for, fees,
+        datetime(2026, 10, 7, 10, 56, tzinfo=ET),
+    )[1]
+    assert morning["final"] is False
+    assert morning["positions"] and morning["positions"][0]["side"] == "short"
+    assert all(fill["reason"] != "hold" for fill in morning["fills"])
+    evening = run_book(
+        name, [plan, sit], [entry, cover], bars_for, fees,
+        datetime(2026, 10, 7, 16, 15, tzinfo=ET),
+    )[1]
+    assert evening["final"] is True
+    covered = next(fill for fill in evening["fills"] if fill["ticker"] == "AAA")
+    assert covered["reason"] == "hold"
+    assert Decimal(covered["price"]) == Decimal("8")
+    assert evening["positions"] == []
+
+
 def test_workflow_is_after_the_freeze_and_on_ubuntu() -> None:
     text = (ROOT / ".github/workflows/webull_sim.yml").read_text(encoding="utf-8")
     assert "ubuntu-latest" in text
@@ -1804,6 +2103,11 @@ if __name__ == "__main__":
     test_intraday_mark_note_is_outside_the_sealed_row()
     test_close_equity_notes_are_add_only()
     test_next_day_sizing_uses_the_open_not_the_sealed_equity()
+    test_draft_only_prior_day_sits_excel_books_out_without_the_draft()
+    test_no_plan_day_sells_an_expired_hold_and_can_go_final()
+    test_stop_on_a_no_plan_day_fires()
+    test_existing_final_rows_stay_byte_identical()
+    test_theme_sit_out_still_covers_at_the_close()
     test_freeze_window()
     test_workflow_is_after_the_freeze_and_on_ubuntu()
     with tempfile.TemporaryDirectory() as tmp:

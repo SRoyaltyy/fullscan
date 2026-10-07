@@ -38,7 +38,8 @@ def test_dispatch_for_upstream_input_but_not_own_publication():
 
 
 def test_notify_skips_when_landed_ticket_has_the_same_fingerprint(tmp_path):
-    date = '2026-10-06'
+    # notify_changed only treats paths that contain today's ET date as relevant.
+    date = dr.datetime.now(dr.ET).date().isoformat()
     ticket = tmp_path / 'data' / 'day_board' / f'{date}_strategy_tickets.json'
     ticket.parent.mkdir(parents=True)
     ticket.write_text(json.dumps({
