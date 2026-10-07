@@ -147,6 +147,7 @@ jobs:
           if [ -f dashboard/factor-mine/index.html ]; then
             python3 scripts/patch_fm_ovcal.py pages_out/dashboard/factor-mine/index.html
             python3 scripts/patch_fm_holdup.py pages_out/dashboard/factor-mine/index.html
+            python3 scripts/patch_fm_preopen_labels.py pages_out/dashboard/factor-mine/index.html dashboard/factor-mine/replay_preopen.json
           fi
 
           for sub in boring-winners ticker-lookback gainer-lookback flatten-lookback \
