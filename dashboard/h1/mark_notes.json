@@ -1,0 +1,54 @@
+[
+  {
+    "book": "h1",
+    "close_source": "Yahoo split-adjusted 2026-10-05 daily close",
+    "date": "2026-10-05",
+    "implied_equity": "13967.076193643774",
+    "kind": "correction",
+    "note": "Correction for 2026-10-05: SDEV Yahoo split-adjusted close is 3.94. The sealed holding price 9.71 is the session open (2026-10-06 holding price 3.48), not the close inside the equity. Implied equity marking SDEV at 3.94 is 13967.076193643774, the same as the sealed equity. Sealed equity is unchanged.",
+    "sealed_equity": "13967.076193643774",
+    "tickers": [
+      {
+        "sealed_mark": 9.71,
+        "ticker": "SDEV",
+        "yahoo_close": 3.94
+      }
+    ]
+  },
+  {
+    "book": "h1",
+    "close_source": "Yahoo split-adjusted 2026-10-06 daily close",
+    "date": "2026-10-06",
+    "implied_equity": "11869.509843643777",
+    "kind": "correction",
+    "note": "Correction for 2026-10-06: PACB, DNA, and QSI sealed holding prices equal their entries (2.99 / 15.08 / 1.29). Yahoo split-adjusted closes are PACB 2.7, DNA 12.41, QSI 1.22. Implied equity at those closes is 11869.509843643777, the same as the sealed equity. Sealed equity is unchanged.",
+    "sealed_equity": "11869.509843643777",
+    "tickers": [
+      {
+        "sealed_mark": 15.08,
+        "ticker": "DNA",
+        "yahoo_close": 12.41
+      },
+      {
+        "sealed_mark": 2.99,
+        "ticker": "PACB",
+        "yahoo_close": 2.7
+      },
+      {
+        "sealed_mark": 1.29,
+        "ticker": "QSI",
+        "yahoo_close": 1.22
+      }
+    ]
+  },
+  {
+    "book": "h1",
+    "date": "2026-10-05",
+    "dates": [
+      "2026-10-05",
+      "2026-10-06"
+    ],
+    "kind": "lock_gap",
+    "note": "past_day_lock manifest has an h1_webull_sim row for 2026-10-06 and none for 2026-10-05. The 2026-10-05 lock row was not backfilled."
+  }
+]

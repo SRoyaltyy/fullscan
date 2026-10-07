@@ -28,6 +28,7 @@
  h2{font-size:14px;margin:14px 0 6px;color:#aeb9cf}
  .day{background:var(--day);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:0 0 8px}
  .day.pending,.day.open{border-color:var(--gold);background:#1c1810}
+ .warn{background:rgba(251,191,36,.14);border:1px solid var(--gold);color:var(--gold);border-radius:8px;padding:6px 8px;margin:6px 0 0;font-size:12px}
  .badge{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:999px;font-size:10px;border:1px solid var(--line);color:var(--mut);vertical-align:1px}
  .badge.pending{color:var(--gold);border-color:var(--gold)}
  .badge.filled{color:var(--pos);border-color:#166534}
@@ -196,11 +197,21 @@ function morningText(view){
   }
   return "S " + (day.morning_s == null ? "null" : day.morning_s);
 }
+let NOTES = [];
+function notesFor(date){
+  return (NOTES || []).filter(note => note && (note.date === date || (note.dates || []).indexOf(date) >= 0));
+}
+function dayNotesHtml(date){
+  const rows = notesFor(date);
+  if (!rows.length) return "";
+  return `<div class="warn">${rows.map(note => esc(note.note || "")).join("<br>")}</div>`;
+}
 function dayCard(view, prevEquity, byClose){
   if (view.mode === "missing"){
     return `<article class="day pending">
       <h3>${esc(view.date)} <span class="badge pending">no picks</span></h3>
       <div class="hd"><span>${esc(view.reason || "")}</span><span>committed ${esc(view.committed_at || "")}</span></div>
+      ${dayNotesHtml(view.date)}
     </article>`;
   }
   if (view.mode === "open"){
@@ -219,6 +230,7 @@ function dayCard(view, prevEquity, byClose){
       <div class="lab">Open positions</div>
       <div class="pills">${positionPills(day.holdings, true)}</div>
       ${(day.unfilled || []).length ? `<div class="lab">Not filled at the open</div><div class="pills">${(day.unfilled || []).map(u => `<span class="pill flat">${esc(u.side)} ${esc(u.ticker)} ${esc(u.reason)}</span>`).join("")}</div>` : ""}
+      ${dayNotesHtml(day.date)}
     </article>`;
   }
   if (view.mode === "pending"){
@@ -236,6 +248,7 @@ function dayCard(view, prevEquity, byClose){
       <div class="pills">${sells}</div>
       <div class="lab">Excluded unexplained legs</div>
       <div class="pills">${legPills(day.excluded_unexplained_legs)}</div>
+      ${dayNotesHtml(day.date)}
     </article>`;
   }
   const day = view.book;
@@ -275,6 +288,7 @@ function dayCard(view, prevEquity, byClose){
     <div class="lab">Excluded unexplained legs</div>
     <div class="pills">${legPills(legs)}</div>
     ${missed ? `<div class="lab">Unfilled</div><div class="pills">${missed}</div>` : ""}
+    ${dayNotesHtml(day.date)}
   </article>`;
 }
 
@@ -572,7 +586,10 @@ fetch("log.json").then(r => {
   if (!r.ok) throw new Error("log.json " + r.status);
   return r.json();
 }).then(rows => {
-  return fetch("status.json").then(r => r.ok ? r.json() : null).catch(() => null).then(status => render(rows, status));
+  return fetch("mark_notes.json").then(r => r.ok ? r.json() : []).catch(() => []).then(notes => {
+    NOTES = Array.isArray(notes) ? notes : [];
+    return fetch("status.json").then(r => r.ok ? r.json() : null).catch(() => null).then(status => render(rows, status));
+  });
 }).catch(err => {
   document.getElementById("days").textContent = "The log could not be read. " + err;
 });

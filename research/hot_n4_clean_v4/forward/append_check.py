@@ -22,6 +22,7 @@ RECORD_NAMES = (
     "LOG_META.json",
     "PRICE_LEDGER.jsonl",
     "price_revisions.jsonl",
+    "mark_notes.jsonl",
     "prices.jsonl",
     "skips.jsonl",
 )

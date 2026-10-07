@@ -60,3 +60,4 @@ jobs:
           PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_open_fill.py
           PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_open_fill_correction.py
           PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_snapshot_plan.py
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/test_close_mark_guard.py

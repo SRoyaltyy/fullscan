@@ -1087,6 +1087,9 @@ def fill_main() -> int:
     append_records(bodies)
     written = load()
     write_page(written, _status(target, None, None, bodies[0]["kind"]))
+    # The seal is already on disk. A Yahoo gap is a note, not a rewrite.
+    from research.hot_n4_clean_v4.forward.mark_notes import warn_sealed_close
+    warn_sealed_close(bodies[0], bars)
     if bodies[0]["kind"] == "mark":
         print(
             f"sealed mark {target} added buys {len(bodies[0]['added_buys'])} "
