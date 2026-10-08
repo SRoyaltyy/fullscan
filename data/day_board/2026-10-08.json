@@ -1,16 +1,15 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T05:44:10.419768-04:00",
+  "generated_at": "2026-10-08T05:44:35.558788-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-08_predict.md` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-10-08_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING General predict MD `01_daily/general/2026-10-08_predict.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -568,11 +567,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -580,26 +579,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-10-08_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 7573101,
+          "said": "27 rows",
+          "bullets": [
+            "SHEL, SOLS, HHH, OSCR, STM, GFS, HASI, NBIS"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-08_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8363811,
+          "said": "25 rows",
+          "bullets": [
+            "SHEL, BJ, COST, SOLS, ABBV, ISRG, BP, Q"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "SHEL, BJ, COST, SOLS, ABBV"
+      ]
     },
     {
       "key": "catalyst",
@@ -775,11 +780,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-08_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8363811,
+          "said": "25 rows",
+          "bullets": [
+            "SHEL, BJ, COST, SOLS, ABBV, ISRG, BP, Q"
+          ]
         },
         {
           "key": "join",
@@ -1651,6 +1658,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T05:44:34.431609-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-08_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7573101,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, SOLS, HHH, OSCR, STM"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-08_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8363811,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, BJ, COST, SOLS, ABBV"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, SOLS, HHH, OSCR, STM \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, BJ, COST, SOLS, ABBV"
     }
   ],
   "href": {
