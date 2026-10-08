@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T05:43:56.528112-04:00",
+  "generated_at": "2026-10-08T05:44:10.419768-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -30,24 +30,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_board",
-      "title": "Sector board",
-      "date": "2026-10-08",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-08T05:08:09.059379-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-10-08/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 6393,
-          "preview": "keys: date, generated_at, summary, sectors"
-        }
-      ],
-      "preview": "keys: date, generated_at, summary, sectors"
-    },
     {
       "key": "map_heat_research",
       "title": "Map heat morning delta refresh",
@@ -222,6 +204,24 @@
         }
       ],
       "preview": "5907 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 AMZN, VCTR, NU, SLDE, AAMI"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T05:44:09.790813-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-08_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
