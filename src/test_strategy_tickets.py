@@ -304,14 +304,26 @@ def test_evening_run_does_not_rewrite_dated_tickets(tmp_path=None) -> None:
             assert lock.get("status") == "draft"
             assert "09:30" in (lock.get("reason") or "")
         draft = tmp_path / "day" / f"{date}_strategy_tickets_draft.json"
+        draft_doc = json.loads(draft.read_text(encoding="utf-8"))
         assert "FEAM" in draft.read_text(encoding="utf-8")
-        live = (tmp_path / "day" / "strategy_tickets.json").read_text(encoding="utf-8")
-        assert "FEAM" in live
+        assert draft_doc["draft"] is True and draft_doc["not_for_trading"] is True
+        assert "09:30" in draft_doc["draft_reason"]
+        # 2026-10-07: the undated copies keep the session's send-time list.
+        for live_path in (
+            tmp_path / "day" / "strategy_tickets.json",
+            tmp_path / "fm" / "strategy_tickets.json",
+            tmp_path / "dash" / "strategy_tickets.json",
+            tmp_path / "dash" / "today_strategies.json",
+        ):
+            live = live_path.read_text(encoding="utf-8")
+            assert live == frozen.decode("utf-8"), live_path
+            assert "FEAM" not in live
         assert "INDP" not in dated.read_text(encoding="utf-8")
         assert "GLND" in dated.read_text(encoding="utf-8")
         slim = json.loads((tmp_path / "day" / "today_strategies.json").read_text())
-        assert slim["ticket_lock"]["dated_unchanged"] is True
-        assert slim["ticket_lock"]["draft"].endswith("_strategy_tickets_draft.json")
+        assert "ticket_lock" not in slim
+        assert [r["ticker"] for r in slim["strategies"]["union_hot_n4_h1"]["buy"]] == ["GLND"]
+        assert st.write.last_held
         st.write(date, revised, now=datetime(2026, 9, 23, 17, 5, tzinfo=et))
         assert st.write.last_lock is None
         assert dated.read_bytes() == frozen
