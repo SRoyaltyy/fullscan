@@ -1,72 +1,88 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:41:41.453955-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-10-08T09:28:54.799521-04:00",
+  "overall": "OK",
   "ranker_ready": true,
   "counts": {
-    "ok": 7,
+    "ok": 8,
     "partial": 0,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [
     {
-      "ticker": "NTSK",
-      "score": 0.42290632336884754
-    },
-    {
-      "ticker": "NTAP",
-      "score": 0.1993716893885885
-    },
-    {
       "ticker": "ASTH",
-      "score": 0.6230873561313384
-    },
-    {
-      "ticker": "BAND",
-      "score": 0.43966397277650293
+      "score": 0.5893255698757689
     },
     {
       "ticker": "AMN",
-      "score": 0.6219075101040625
+      "score": 0.589788771152753
     },
     {
       "ticker": "MQ",
-      "score": 0.6524273148994257
+      "score": 0.43547325705215306
+    },
+    {
+      "ticker": "TBBB",
+      "score": 0.7337393706234995
+    },
+    {
+      "ticker": "PACS",
+      "score": 0.7284202976942081
+    },
+    {
+      "ticker": "SPOT",
+      "score": 0.39771278187036607
+    },
+    {
+      "ticker": "TMUS",
+      "score": 0.41073181358788863
+    },
+    {
+      "ticker": "TDS",
+      "score": 0.5242625600205468
     }
   ],
   "sell_1d": [
     {
       "ticker": "OKLO",
-      "score": -0.05831061373887192
-    },
-    {
-      "ticker": "NEOV",
-      "score": -0.34313729552836625
+      "score": -0.29081061373887196
     },
     {
       "ticker": "FCEL",
-      "score": -0.0552228469687913
+      "score": -0.055669383263996605
     },
     {
-      "ticker": "NNDM",
-      "score": -0.133415420764612
+      "ticker": "NEOV",
+      "score": -0.31929518848492733
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.2830701146556817
+    },
+    {
+      "ticker": "NRGV",
+      "score": -0.412019364271221
     },
     {
       "ticker": "ENVX",
       "score": -0.11462581450741444
     },
     {
-      "ticker": "EOSE",
-      "score": -0.27207145820114503
-    },
-    {
-      "ticker": "NRGV",
-      "score": -0.15878955267152967
-    },
-    {
       "ticker": "INDI",
-      "score": -0.26230407247352355
+      "score": -0.5125671047159317
+    },
+    {
+      "ticker": "TE",
+      "score": -0.22459050170649347
+    },
+    {
+      "ticker": "SKYX",
+      "score": -0.2574870715122347
+    },
+    {
+      "ticker": "NNDM",
+      "score": -0.3041908624151664
     }
   ],
   "flatten": {
@@ -90,19 +106,19 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 2 down / 1 flat",
+    "said": "1 up / 6 down / 1 flat",
     "bullets": [
       "XLB DOWN -5.5",
       "XLC FLAT -8.3",
       "XLY DOWN -11.3",
       "XLP UP +5.5",
       "XLE missing",
-      "XLF missing",
+      "XLF DOWN -6.1",
       "XLV missing",
       "XLI missing",
-      "XLRE missing",
-      "XLK missing",
-      "XLU missing"
+      "XLRE DOWN -7.1",
+      "XLK DOWN -11.7",
+      "XLU DOWN -4.9"
     ]
   },
   "lands": [
@@ -1953,70 +1969,249 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Consumer Defensive (4/11)",
+      "title": "Sector predict Utilities (8/11)",
       "date": "2026-10-08",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-08T08:34:51.628602-04:00",
+      "at": "2026-10-08T09:03:33.349410-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-08/consumer_defensive_predict.md",
+          "path": "01_daily/sectors/2026-10-08/utilities_predict.md",
           "ok": true,
           "reason": "",
-          "size": 18981,
-          "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **5.519** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **1.216** (ES -0.39%, ZN -0.03%, PM:XLP +0.37%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **6.0** (raw 9.9)"
+          "size": 13760,
+          "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-4.882** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.385** (ES -0.39%, ZN -0.03%, PM:XLU -0.27%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **-1.8** (raw -1.8)"
         },
         {
-          "path": "01_daily/sectors/2026-10-08/consumer_defensive_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-08/utilities_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 15459,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (109,032 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Consumer Defensive XLP staples relative performance October 2026\"* \u2192 got 6 results (via gnews_rss)\n- Which Consumer Staples ETF Offers Better Value: XLP or IYK? - The Motley Fool (https://news.google.com/rss/articles/CBMipwFBVV95cUxQRmxkM0RoSlRoNW1ZVmFhVGJDZ0hJT0ZQTHJOemdPNHQ2cG10VVBIX0pzZnNhekJ3YnY0blZCSEJFZEFmVjRYdlgyUEZhZFBZbzgwdUcxTFpDN2xTZjZ1SVM3OGphSE1la0R4akpUMVZKOW96d1p6SERxbVdWZjBsa1J2WDdFejc5eEtqZWduYlVteWRHWjUtYVltczZOV0VoQkc2MUFVSQ?oc=5)\n- State Street or iShares: Which Consumer Staples ETF Offers Better V"
+          "size": 7531,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (98,503 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10-year Treasury yield 5.3% October 8 2026 auction utilities\"* \u2192 got 6 results (via gnews_rss)\n- Fed Minutes Put Another Hike on the Table as the 10-Year Auction Clears at 5.3% - ChartMill (https://news.google.com/rss/articles/CBMiyAFBVV95cUxOajRLbXB4c0VvY0lteWZzVjc3ZGYxLTVhOHVfZEtRUFBJN0xjUXdubUh4S1dZYjdsdDUtNWFUWEJyc3pPOW1CSEZDR1kxVFVUbzV5VXE1cmxiSGJvUE5PYTdvYnhoTkJGVjJENUpHLXlzTnJOZW9SaXpQYU1sOGNvdm11cUxRQ3ZpUGNVbWkxTUFwOWxrXzlHeUZ6X3d1LTZZMDdFSlhwS2txRWZnOVdONEtEcFdFb05xWFZTczd0RU5lSTNUTl9wbw?oc=5)\n- Brisk $39 Billion Treas"
         },
         {
-          "path": "01_daily/_transcripts/2026-10-08_sector_consumer_defensive_predict.json",
+          "path": "01_daily/_transcripts/2026-10-08_sector_utilities_predict.json",
           "ok": true,
           "reason": "",
-          "size": 182184,
+          "size": 143078,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-08_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 8400,
+          "size": 8372,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-08/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 2427,
+          "size": 2411,
           "preview": "keys: date, n_ok, n_total, required, ok, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-08/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1752,
-          "preview": "# Sector Board \u2014 2026-10-08\nGenerated: **2026-10-08T08:34:51.611561-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1938,
+          "preview": "# Sector Board \u2014 2026-10-08\nGenerated: **2026-10-08T09:03:33.333495-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-08/_board.json",
           "ok": true,
           "reason": "",
-          "size": 7081,
+          "size": 7772,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 1034503,
+          "size": 1038834,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **5.519** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **1.216** (ES -0.39%, ZN -0.03%, PM:XLP +0.37%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **6.0** (raw 9.9) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (109,032 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Consumer Defensive XLP staples relative performance October 2026\"* \u2192 got 6 results (via gnews_rss)\n- Which Consumer Staples ETF Offers Better Value: XLP or IYK? - The Motley Fool (https://news.google.com/rss/articles/CBMipwFBVV95cUxQRmxkM0RoSlRoNW1ZVmFhVGJDZ0hJT0ZQTHJOemdPNHQ2cG10VVBIX0pzZnNhekJ3YnY0blZCSEJFZEFmVjRYdlgyUEZhZFBZbzgwdUcxTFpDN2xTZjZ1SVM3OGphSE1la0R4akpUMVZKO"
+      "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-4.882** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.385** (ES -0.39%, ZN -0.03%, PM:XLU -0.27%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **-1.8** (raw -1.8) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (98,503 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10-year Treasury yield 5.3% October 8 2026 auction utilities\"* \u2192 got 6 results (via gnews_rss)\n- Fed Minutes Put Another Hike on the Table as the 10-Year Auction Clears at 5.3% - ChartMill (https://news.google.com/rss/articles/CBMiyAFBVV95cUxOajRLbXB4c0VvY0lteWZzVjc3ZGYxLTVhOHVfZEtRUFBJN0xjUXdubUh4S1dZYjdsdDUtNWFUWEJyc3pPOW1CSEZDR1kxVFVUbzV5VXE1cmxiSGJvUE5PYTdvYnhoTkJGVjJENUpHLXlzTnJOZW9SaXpQYU1s"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:03:40.200954-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-08",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "8/8 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, financial, real_estate, technology, utilities"
+        }
+      ],
+      "preview": "8/8 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, financial, real_estate, technology, utilities"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:03:45.784670-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-08/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 7747,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:03:51.514287-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-08_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 41553,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-08_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 41553,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-08\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-08\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:17:25.306562-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-10-08_dossiers.json",
+          "ok": true,
+          "reason": "",
+          "size": 22370,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-10-08_dossiers.md",
+          "ok": true,
+          "reason": "",
+          "size": 9842,
+          "preview": "# CATALYST DAILY \u2014 2026-10-08\n6/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-08\n6/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:17:42.261729-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-10-08_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 8301,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
+        },
+        {
+          "path": "01_daily/2026-10-08_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 7267,
+          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
+        },
+        {
+          "path": "01_daily/2026-10-08_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 572,
+          "preview": "# Pre-open ALL status \u2014 2026-10-08\nall_ok=True  qc_all_ok=True  book_ok=True  grok_ok=True  news_mode=on  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-08\nall_ok=True  qc_all_ok=True  book_ok=True  grok_ok=True  news_mode=on  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:28:23.757933-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-08_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10569,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -5.542, 'dir': 'down', 'conf': 0.622, 'source': 'llm'}, Communication Services={'score': -8.272, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -11.327, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Consumer Defensive={'score': 5.519, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -6.054, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Real Estate={'score': -7.057, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Technology={'score': -11.67, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Utilities={'score': -4.882, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-08_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6069,
+          "preview": "# Weather report \u2014 2026-10-08\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -5.542, 'dir': 'down', 'conf': 0.622, 'source': 'llm'}, Communication Services={'score': -8.272, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -11.327, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Consumer Defensive={'score': 5.519, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -6.054, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Real Estate={'score': -7.057, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Technology={'score': -11.67, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Utilities={'score': -4.882, 'dir': 'down', 'conf': 0.65, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-10-08\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:28:33.619262-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-08_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2271295,
+          "preview": "5907 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, ABEV, EDU, PG, PM"
+        }
+      ],
+      "preview": "5907 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, ABEV, EDU, PG, PM"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:28:42.498008-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-08_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "source": "publish_live_boards"
