@@ -1,0 +1,27 @@
+{
+  "title": "Is AI growth helping markets look past oil and rate hike scares? - Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQSzR5TmlnVDU0SWFfeVRWdFR4WjdKTkJOUnlqWFZreThQZVhNTFlPVkViZHFvRmROdTZwZlRjdG5yWnE4bEh3NUYtcG9TaEFEaGJCdkU2dms0N1ZXOGxQOEMxMnFxS2VmYVk4YWJzMVdxeUJGNUZNNlJ1RkJnOG1OallaZw?oc=5",
+  "publisher": "Yahoo Finance",
+  "body": "Is AI growth helping markets look past oil and rate hike scares? finance.yahoo.com",
+  "published_at": "2026-10-02T16:56:50+00:00",
+  "published_raw": "Fri, 02 Oct 2026 16:56:50 GMT",
+  "source": "lane_factor_impulse",
+  "primary": false,
+  "query_classes": [
+    "factor_impulse"
+  ],
+  "query": "\"rate cut\" OR \"rate hike\" OR \"FOMC decision\" OR \"payrolls\" OR \"inflation data\"",
+  "id": "60f864a5b4f4f9b731ac56be",
+  "first_seen": "2026-10-02T20:53:54.710501+00:00",
+  "observations": [
+    {
+      "source": "lane_factor_impulse",
+      "query": "\"rate cut\" OR \"rate hike\" OR \"FOMC decision\" OR \"payrolls\" OR \"inflation data\"",
+      "classes": [
+        "factor_impulse"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

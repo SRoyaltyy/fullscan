@@ -1,0 +1,23 @@
+{
+  "title": "Zelenskyy asked Trump to sanction Russian and Chinese companies over Starlink rival - The New Voice of Ukraine",
+  "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOaXhSR3B3eGloSWRaY0xKaWVzdDFEcTNSR0UzdU82Q29ZTkhPLVpvUnRzSFhzSkhmcG5hQmM3S1hWUDVRWEFRQWNfSVdPVFJ0czRkbkFLY0pLSjZST1JpZXhDUGJwMWlmX0JNRHBXS2E0ZE5XdEhDNzZ0Z0xDWHpocW5nUld0YzJNR2NkV1lvMTF3SzBiamdYcE9VY1VFM203XzBpNVIwVkxqenpZSVpIbG5VU3ZpY0paZVJNMXZfOVQtMWJ3eFBRYzRBTk9Sd1RCM3FjSNIB0AFBVV95cUxNSjNjWXFlRXdiUVBIWk1nVEtjSmxIcVVmbUpJVXVOekludzR0UGkyeXZpbVBkRXBHdU40SmpIUU5BMTBWZUIxNVM5Q0VBVXdULWpMYllsNVhzeWdGWDJkM2NsMGUyV2pGejM1VnYtV3pxTXFOLWFzcHFQa2Z1bFRzM0hLNkFUaGUyNHo3UTY1WTBZRno3eUhmdi1YdXlEbGxEUlVwS0NjZk1kekhpSW5SckxFR3BMSHQ2bEtDZ3o3SUJkMW1iTDFWTi1mclQxNU5V?oc=5",
+  "publisher": "The New Voice of Ukraine",
+  "body": "Zelenskyy asked Trump to sanction Russian and Chinese companies over Starlink rival The New Voice of Ukraine",
+  "published_at": "2026-10-03T15:58:00+00:00",
+  "published_raw": "Sat, 03 Oct 2026 15:58:00 GMT",
+  "source": "topic_geopolitics",
+  "primary": false,
+  "query_classes": [],
+  "query": "\"sanctions\" OR \"tariffs\" OR \"ceasefire\" OR \"Strait of Hormuz\"",
+  "id": "667d2ecf42ef040bd25f3aa0",
+  "first_seen": "2026-10-03T18:54:45.080626+00:00",
+  "observations": [
+    {
+      "source": "topic_geopolitics",
+      "query": "\"sanctions\" OR \"tariffs\" OR \"ceasefire\" OR \"Strait of Hormuz\"",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-03T18:54:45.080626+00:00"
+}

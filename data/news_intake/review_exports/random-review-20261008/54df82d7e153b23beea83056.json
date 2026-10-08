@@ -1,0 +1,23 @@
+{
+  "title": "Standard Chartered Reverses Call, Now Sees ECB Lifting Rates in December - finance.biggo.com",
+  "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1iY0lrY3dldW51eTVwTWVlOUt1dTJHeUR2UVRBTTlqQ3IySm9zTl9pc2FxODdFa0UxYXNRb0ZhZi1Tc1BDVTdocWUxeFFmZGppSWptb1lQMGl4a3oxR2YyWEppZkZhZnF3ZEpmRUF1R3dRUnBxMnc?oc=5",
+  "publisher": "finance.biggo.com",
+  "body": "Standard Chartered Reverses Call, Now Sees ECB Lifting Rates in December finance.biggo.com",
+  "published_at": "2026-10-02T13:05:00+00:00",
+  "published_raw": "Fri, 02 Oct 2026 13:05:00 GMT",
+  "source": "topic_central_banks",
+  "primary": false,
+  "query_classes": [],
+  "query": "\"ECB\" OR \"Bank of Japan\" OR \"Bank of England\" OR \"PBOC\"",
+  "id": "54df82d7e153b23beea83056",
+  "first_seen": "2026-10-02T16:30:15.020552+00:00",
+  "observations": [
+    {
+      "source": "topic_central_banks",
+      "query": "\"ECB\" OR \"Bank of Japan\" OR \"Bank of England\" OR \"PBOC\"",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T00:36:39.524273+00:00"
+}

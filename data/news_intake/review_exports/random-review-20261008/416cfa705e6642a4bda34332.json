@@ -1,0 +1,27 @@
+{
+  "title": "Rafael’s Trappsol Cyclo Misses Primary Endpoint, Targets 2026 FDA Filing - MarketBeat",
+  "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQlNfQjU2QUpIYkdtY2NTYzBRSU9saW9lX0t4NjFUQVRKSTFxSHVady1ZV0VqSG10V1MwbkViSXJHWEE2bDNtM3lVR3dFcmV2dVFEVlg1Wm9Ibk82V2J3MzhRM1dwRkRFMXFMU0ZSTkVoOWN4ZFBNSGU1eHJROGk2dW4wSXFoTmlJQlNGb3c5eHhLdGQwNHk5TElVakozR0swVFRZRXByQ0JOQWRDSkQwSldRcUJXNmk5VE5HUVhCcWtpejAxWE1KcHBR?oc=5",
+  "publisher": "MarketBeat",
+  "body": "Rafael’s Trappsol Cyclo Misses Primary Endpoint, Targets 2026 FDA Filing MarketBeat",
+  "published_at": "2026-10-04T06:56:15+00:00",
+  "published_raw": "Sun, 04 Oct 2026 06:56:15 GMT",
+  "source": "lane_trial_readout",
+  "primary": false,
+  "query_classes": [
+    "trial_readout"
+  ],
+  "query": "\"primary endpoint\" OR \"phase 3 results\" OR \"phase 2 results\" OR \"trial results\" OR \"trial readout\"",
+  "id": "416cfa705e6642a4bda34332",
+  "first_seen": "2026-10-04T12:34:35.203969+00:00",
+  "observations": [
+    {
+      "source": "lane_trial_readout",
+      "query": "\"primary endpoint\" OR \"phase 3 results\" OR \"phase 2 results\" OR \"trial results\" OR \"trial readout\"",
+      "classes": [
+        "trial_readout"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

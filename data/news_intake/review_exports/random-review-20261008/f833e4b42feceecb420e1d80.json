@@ -1,0 +1,27 @@
+{
+  "title": "Redco Textiles Limited Reports Earnings Results for the Full Year Ended June 30, 2026 - marketscreener.com",
+  "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPbXpNZ1F4MU9qN2pibzRLdE00d3EwMWVCRmZ1YV9yZzdEM1ZXMV9PLTlRLXVKYUNabDVYajhmcmVNczEzb2ZkMk1FSmxSR0sxV2JwaWVXTFUyZmh6SWxoclF3UWljd2RmR0tIR3BtbjJlajFUenRCSnVKQXRKY1RyaEltOVpBb1Z6ZWtCMWNDaGdhakxVcHpnd1NHT3cwQVpSQ0l1bWdJZTVRT3lQTzVTSWxCY1d0QTZpUGJWOTFPLVNJU0E1am93LXJNQVJPTFRuV01r?oc=5",
+  "publisher": "marketscreener.com",
+  "body": "Redco Textiles Limited Reports Earnings Results for the Full Year Ended June 30, 2026 marketscreener.com",
+  "published_at": "2026-10-02T13:20:31+00:00",
+  "published_raw": "Fri, 02 Oct 2026 13:20:31 GMT",
+  "source": "lane_print_vs_priced",
+  "primary": false,
+  "query_classes": [
+    "print_vs_priced"
+  ],
+  "query": "\"earnings results\" OR \"reports earnings\" OR \"quarterly results\" OR \"CPI report\" OR \"PCE inflation\" OR \"jobs report\" OR \"GDP report\"",
+  "id": "f833e4b42feceecb420e1d80",
+  "first_seen": "2026-10-02T16:30:58.602915+00:00",
+  "observations": [
+    {
+      "source": "lane_print_vs_priced",
+      "query": "\"earnings results\" OR \"reports earnings\" OR \"quarterly results\" OR \"CPI report\" OR \"PCE inflation\" OR \"jobs report\" OR \"GDP report\"",
+      "classes": [
+        "print_vs_priced"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

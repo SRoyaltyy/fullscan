@@ -1,0 +1,23 @@
+{
+  "title": "Edwards Lifesciences Receives FDA Approval For AUTUS Size-Adjustable Valve - marketscreener.com",
+  "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNbTFpeDdZQllrdE1aQm5UTVhhWHJxaGk2XzdrSGxzR25hWU1QYnhWNkx4SHFIRW9yb1d6TjRMMk5QWkUtMnFqOFRRQ0VzeHdoZDdFZml5OElQU0M2LWQxS0V5Sk8zazZQNkswaGZlN3pGeTM1eHlpX0tqUDBiaFpYb294c2RGeF9HTTVFYWs3dUpMajRoU2x3SW5VUkxYZHdqb1Q2NjQzb0NOdHFJdmI2Ti1vOVJOMWpKUFRqeVBWeGR1cnhkVlE?oc=5",
+  "publisher": "marketscreener.com",
+  "body": "Edwards Lifesciences Receives FDA Approval For AUTUS Size-Adjustable Valve marketscreener.com",
+  "published_at": "2026-10-01T20:26:00+00:00",
+  "published_raw": "Thu, 01 Oct 2026 20:26:00 GMT",
+  "source": "topic_fda",
+  "primary": false,
+  "query_classes": [],
+  "query": "FDA (approval OR clearance OR \"clinical trial\")",
+  "id": "1c1d531ccd0ee60f160c76d6",
+  "first_seen": "2026-10-02T10:39:47.686277+00:00",
+  "observations": [
+    {
+      "source": "topic_fda",
+      "query": "FDA (approval OR clearance OR \"clinical trial\")",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-03T18:54:45.080626+00:00"
+}

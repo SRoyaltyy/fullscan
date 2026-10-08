@@ -1,0 +1,23 @@
+{
+  "title": "Trump Threatens 300% Tariffs on Firms That Skip U.S. Plants - Seoul Economic Daily",
+  "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOempUZEszRm5aOFZTVE1xbEJQa1ltc3BRTHlBWGU4VzMxb1dCbjdIbkE5Ull5Ti1jVDZOb0F5ZjJxU2ZITTI4RXRMSVRvWlEyS1RYVjlBVElUeEdWZ2VpU0R0VnN4MURNSTZSNGJUZXlhNExSQzRabWZuN2JOZzdNNkZGNWgzXzZhd3o5bVdpMmhic2JuVWlPUG5mNzJxVC1OM01fUTlPTTc?oc=5",
+  "publisher": "Seoul Economic Daily",
+  "body": "Trump Threatens 300% Tariffs on Firms That Skip U.S. Plants Seoul Economic Daily",
+  "published_at": "2026-10-04T06:34:03+00:00",
+  "published_raw": "Sun, 04 Oct 2026 06:34:03 GMT",
+  "source": "topic_geopolitics",
+  "primary": false,
+  "query_classes": [],
+  "query": "\"sanctions\" OR \"tariffs\" OR \"ceasefire\" OR \"Strait of Hormuz\"",
+  "id": "802bad74fb52f53927727086",
+  "first_seen": "2026-10-04T12:58:17.234223+00:00",
+  "observations": [
+    {
+      "source": "topic_geopolitics",
+      "query": "\"sanctions\" OR \"tariffs\" OR \"ceasefire\" OR \"Strait of Hormuz\"",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Eurozone inflation hits its highest level in three years at 3.8% as energy costs soar - CNBC",
+  "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1hbWJvUF8zdkxOVi1YdGlFNkRKcTFxdVhZdE1mSmxJbm02S3R1b2NPdndza0ZXUkxtakhxalNWbTZLR2o5TFplemhyQV9DX1VvbXlRSy1IRGUwVmlISG5kM1hFXzEzNEloQzd30gFwQVVfeXFMT2llN05KRDNwbXNoYVd1TzU2UDVLNUhjYzlOWXE3UVI0Rmpzai02eDNWekhsNXh6RjRkRDNiRll4YVdGOFJTVVo4cmJWc25xVUFYVU5wWWZOLXgyTlluR1NtSGtIWUlWUnhZTEd3OFVXWg?oc=5",
+  "publisher": "CNBC",
+  "body": "Eurozone inflation hits its highest level in three years at 3.8% as energy costs soar CNBC",
+  "published_at": "2026-10-02T09:24:15+00:00",
+  "published_raw": "Fri, 02 Oct 2026 09:24:15 GMT",
+  "source": "topic_central_banks",
+  "primary": false,
+  "query_classes": [],
+  "query": "\"ECB\" OR \"Bank of Japan\" OR \"Bank of England\" OR \"PBOC\"",
+  "id": "2db71cd46e970a39d44dd096",
+  "first_seen": "2026-10-02T16:30:15.020552+00:00",
+  "observations": [
+    {
+      "source": "topic_central_banks",
+      "query": "\"ECB\" OR \"Bank of Japan\" OR \"Bank of England\" OR \"PBOC\"",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+}

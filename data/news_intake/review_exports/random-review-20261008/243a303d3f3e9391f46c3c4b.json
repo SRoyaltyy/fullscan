@@ -1,0 +1,23 @@
+{
+  "title": "Fed, ECB minutes to show inflation fears as near-term rate hike bets fade - Business Standard",
+  "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQeFg2cEpSbWkxUkhFVi1hc1VRLVg4THUzbHB4dURaOS1VMkdDVGR0OFVRUFJDdU04SndLdVdLMUJUVVpWbHQ4VXRFY1ZLZTdzbFpBR2hTMW9STU5jU1p5RUszLVRKaUhBaEQ2X2tTZzA1bnkzUGdyUG1GRlF0ZHR1SUZLNEJndUVPT3RmdXFvSGx2Z2tTS1lUeWVaNXZfZUk0bFhSeHZKU1pHemx5Q1F1b3N4aEVfRUN0aXFpazJqSjlFRmJYdWxSZXJnaVlZR3Y3b1VVelBlUTXSAdgBQVVfeXFMUHhYNnBKUm1pMVJIRVYtYXNVUS1YOEx1M2xweHVEWjktVTJHQ1RkdDhVUVBSQ3VNOEp3S3VXSzFCVFVaVmx0OFV0RWNWS2U3c2xaQUdoUzFvUk1OY1NaeUVLMy1USmlIQWhENl9rU2cwNW55M1BnclBtRkZRdGR0dUlGSzRCZ3VFT090ZnVxb0hsdmdrU0tZVHllWjV2X2VJNGxYUnh2SlNaR3pseUNRdW9zeGhFX0VDdGlxaWsyako5RUZiWHVsUmVyZ2lZWUd2N29VVXpQZVE1?oc=5",
+  "publisher": "Business Standard",
+  "body": "Fed, ECB minutes to show inflation fears as near-term rate hike bets fade Business Standard",
+  "published_at": "2026-10-04T02:26:40+00:00",
+  "published_raw": "Sun, 04 Oct 2026 02:26:40 GMT",
+  "source": "topic_central_banks",
+  "primary": false,
+  "query_classes": [],
+  "query": "\"ECB\" OR \"Bank of Japan\" OR \"Bank of England\" OR \"PBOC\"",
+  "id": "243a303d3f3e9391f46c3c4b",
+  "first_seen": "2026-10-04T06:19:40.102182+00:00",
+  "observations": [
+    {
+      "source": "topic_central_banks",
+      "query": "\"ECB\" OR \"Bank of Japan\" OR \"Bank of England\" OR \"PBOC\"",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

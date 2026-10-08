@@ -1,0 +1,27 @@
+{
+  "title": "Weak US payrolls likely to keep rate setters on the sidelines in October - Financial Times",
+  "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE82YU5fcGpycUdQd3hjbmR2WTJLVWJNc2pBQjZvUmJwcUYxUnBydzh4dGJMdEhLVEVhQ000aEY0NnlScmJGSGo3VWo2TE5yYnA5b0ROU0p0Y2RZaTlMOFJWa3N1MGppS3Q5M3BES0p2LW8?oc=5",
+  "publisher": "Financial Times",
+  "body": "Weak US payrolls likely to keep rate setters on the sidelines in October Financial Times",
+  "published_at": "2026-10-02T14:01:04+00:00",
+  "published_raw": "Fri, 02 Oct 2026 14:01:04 GMT",
+  "source": "lane_factor_impulse",
+  "primary": false,
+  "query_classes": [
+    "factor_impulse"
+  ],
+  "query": "\"rate cut\" OR \"rate hike\" OR \"FOMC decision\" OR \"payrolls\" OR \"inflation data\"",
+  "id": "de00da1e6d9f7caa0943bf89",
+  "first_seen": "2026-10-02T16:30:15.020552+00:00",
+  "observations": [
+    {
+      "source": "lane_factor_impulse",
+      "query": "\"rate cut\" OR \"rate hike\" OR \"FOMC decision\" OR \"payrolls\" OR \"inflation data\"",
+      "classes": [
+        "factor_impulse"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

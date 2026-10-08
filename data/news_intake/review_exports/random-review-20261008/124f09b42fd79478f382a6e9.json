@@ -1,0 +1,23 @@
+{
+  "title": "Ukraine calls for tighter sanctions as Russian attacks spark Kyiv gridlock - Al Jazeera",
+  "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNOHhDYkl3M3k1elhwZUJVZk5FbW5fNTJxMHlZYmdhOWkzY0E4YlNCa2JmQ0lDZ1QxbTRoemZjeHRsLWVLWllyUmJVX2RUTFREMEY1d2d0eUdXdm5QajRDMXZkbzdtYjBPbVZUcWNkM094YjAwc3ZIb1BXOVRWbzI4clVjQ3J5U3RZM0szcmstdER5V0p0MEJaVDBzcmNVN2lkVHBaMnZ5MFpVQko3Sm0zcGRRN29ld9IBuwFBVV95cUxPblUzWkpKLWZGQmxKeFQwSWo0emtiaGFlYzN4aWtQTC1XT2RkQXpEVXlnQVlPd2o2R0FYNFpNbDhUQ21uZF9SOWpCQ0lqdENUekNZM3I2QW5ISUVWZ1dLbFRNSWJhemRieFVNdE1FZ3NncVNCajVteDQ5ZXRUNnNnN05jLUVFdlk4Qm40M2hZbmMxR005T0ZqTVFRc0dpOGRqNWFnUHJFWjdLbHdxbWVyYW41LW9BWm1QZVUw?oc=5",
+  "publisher": "Al Jazeera",
+  "body": "Ukraine calls for tighter sanctions as Russian attacks spark Kyiv gridlock aljazeera.com",
+  "published_at": "2026-10-02T18:55:56+00:00",
+  "published_raw": "Fri, 02 Oct 2026 18:55:56 GMT",
+  "source": "topic_geopolitics",
+  "primary": false,
+  "query_classes": [],
+  "query": "\"sanctions\" OR \"tariffs\" OR \"ceasefire\" OR \"Strait of Hormuz\"",
+  "id": "124f09b42fd79478f382a6e9",
+  "first_seen": "2026-10-02T16:30:15.020552+00:00",
+  "observations": [
+    {
+      "source": "topic_geopolitics",
+      "query": "\"sanctions\" OR \"tariffs\" OR \"ceasefire\" OR \"Strait of Hormuz\"",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Business News | Tariffs, Export Controls Increasingly Being Used for Strategic Purposes: PK Mishra - LatestLY",
+  "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOTk9hMDJQVno2MTZqSTl2c2NpLTRVS2dnaUZVd01mNXYwdm5SdWZzOEtzcTV2UTZxVmtEZGJ4QUl2RXJvSFVUV0loaHVZRVlaZmFZYWRoQllkVDJ3MXBTWE1kdzQyaERZdHotSExZR3lOSnA4LXNoWHdDeU1xS2FLRTllYXlDYkl0UU9RcDZDSHFSeEdndHpSWkNwaGtxMmhhNVBwY3NSUG9iWjBQcmtSV185SE1lQjUyUUJ1bEI0Z0RLeG5zeDh0UkFOV0xibEpmRWE3akNjak9SeXZV0gHiAUFVX3lxTE5zZTB3MHpYenhKYlRBZlZyR3pKYmpBN1o0dkhtLVZya0pBZjhpX0YzSGNTMGl6b3REdk9JckFjREdlX0EtQkRfcklKbDJnZ3R5ci1vbWJaOFdmSkxvQVV5eWNPeGIwUHlTX2I0N29uM01iMVdSOGJUUjVmZTBLbmd2N0NWdVZ0ZUxRUmxyZWs5Y29IVUxSSDZLdzdILXJ5OWVNVHhhZ05KSlQ1UFBiazNfd0xtc3MzZHRJWlVjUFl0aUk4N0pMNmhlNHNZeldfNWdnVXZHbWpiLVFmeEZraU9uc3c?oc=5",
+  "publisher": "LatestLY",
+  "body": "Business News | Tariffs, Export Controls Increasingly Being Used for Strategic Purposes: PK Mishra LatestLY",
+  "published_at": "2026-10-03T08:28:25+00:00",
+  "published_raw": "Sat, 03 Oct 2026 08:28:25 GMT",
+  "source": "lane_access_control",
+  "primary": false,
+  "query_classes": [
+    "access_control"
+  ],
+  "query": "\"export controls\" OR \"export ban\" OR \"import ban\" OR \"license revoked\"",
+  "id": "85925401c0fca636e77e6c15",
+  "first_seen": "2026-10-04T06:30:58.699753+00:00",
+  "observations": [
+    {
+      "source": "lane_access_control",
+      "query": "\"export controls\" OR \"export ban\" OR \"import ban\" OR \"license revoked\"",
+      "classes": [
+        "access_control"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Arpak International Investments Limited Reports Earnings Results for the Full Year Ended June 30, 2026 - marketscreener.com",
+  "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNcnpvZmJiT1BVN0tlYnVXSWpoTng2X09jZ2FOV0ZtREJEeUlLX2ptTkE2dXFsSHN4Uy02VmxLNFlnb1FQdWIyM3RyNVByUEVqWVdWVXFaWFFoQ3VZQUQ2QU5McXlkc1duYmRWMEZRV2g5TXRYcV9WU2dXWV9rd25yQ290X1lSX19KNVU4ejkybGdDTHA5UzNtdF91MW5LRlVPeHRBUktfUkpQQllxMU1VYzMxYi1xbll4TGt5X0ZGbVl0SFNHQ2ljZGxBRjNBWFBKYlJSSmc2dVFaaEV5YXJraUFDd2VmTFE?oc=5",
+  "publisher": "marketscreener.com",
+  "body": "Arpak International Investments Limited Reports Earnings Results for the Full Year Ended June 30, 2026 marketscreener.com",
+  "published_at": "2026-10-02T12:36:01+00:00",
+  "published_raw": "Fri, 02 Oct 2026 12:36:01 GMT",
+  "source": "lane_print_vs_priced",
+  "primary": false,
+  "query_classes": [
+    "print_vs_priced"
+  ],
+  "query": "\"earnings results\" OR \"reports earnings\" OR \"quarterly results\" OR \"CPI report\" OR \"PCE inflation\" OR \"jobs report\" OR \"GDP report\"",
+  "id": "b63ba1d2c997123fb0911f5c",
+  "first_seen": "2026-10-02T16:30:58.602915+00:00",
+  "observations": [
+    {
+      "source": "lane_print_vs_priced",
+      "query": "\"earnings results\" OR \"reports earnings\" OR \"quarterly results\" OR \"CPI report\" OR \"PCE inflation\" OR \"jobs report\" OR \"GDP report\"",
+      "classes": [
+        "print_vs_priced"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+}

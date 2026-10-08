@@ -1,0 +1,27 @@
+{
+  "title": "Warsh Stays Silent as Fed Officials’ Caution, Soft Inflation Data Cut Odds of an October Rate Hike - bloomingbit",
+  "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4tOVBLcVZZdXQ0ZGxTb2JFSk0ya1dlREwteW9pUnpEM1Z4QjlJQmU3blFlUjdmd25hT0x5NzJtSGE0V0pWbTc0WmxwNW5sSGliaklpTQ?oc=5",
+  "publisher": "bloomingbit",
+  "body": "Warsh Stays Silent as Fed Officials’ Caution, Soft Inflation Data Cut Odds of an October Rate Hike en.bloomingbit.io",
+  "published_at": "2026-10-04T00:53:47+00:00",
+  "published_raw": "Sun, 04 Oct 2026 00:53:47 GMT",
+  "source": "lane_factor_impulse",
+  "primary": false,
+  "query_classes": [
+    "factor_impulse"
+  ],
+  "query": "\"rate cut\" OR \"rate hike\" OR \"FOMC decision\" OR \"payrolls\" OR \"inflation data\"",
+  "id": "c2617160cccb5d34f60517ba",
+  "first_seen": "2026-10-04T06:19:40.102182+00:00",
+  "observations": [
+    {
+      "source": "lane_factor_impulse",
+      "query": "\"rate cut\" OR \"rate hike\" OR \"FOMC decision\" OR \"payrolls\" OR \"inflation data\"",
+      "classes": [
+        "factor_impulse"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

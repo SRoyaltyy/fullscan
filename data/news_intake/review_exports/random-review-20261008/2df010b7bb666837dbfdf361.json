@@ -1,0 +1,32 @@
+{
+  "title": "fda approved weight loss drugs 2018 - polskieradio.pl",
+  "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOTTJ4bmtlWVZ4b1RzVzZRRXNCOWcxbE1sMVdOLWdhR3JSYWVDTjdaX2plTzhJVlFrRk8yZ2tYdXZ2NHNfQlRGenc2VUs0allZT3VUdzZWMkZnTjZPZm9nV0JTZDZxTV85a2JyN3JfVU9ydk9IQVVYeTJUbEVLNGxfQWJjcw?oc=5",
+  "publisher": "polskieradio.pl",
+  "body": "fda approved weight loss drugs 2018 polskieradio.pl",
+  "published_at": "2026-10-03T14:09:14+00:00",
+  "published_raw": "Sat, 03 Oct 2026 14:09:14 GMT",
+  "source": "lane_gate",
+  "primary": false,
+  "query_classes": [
+    "gate"
+  ],
+  "query": "\"FDA approves\" OR \"FDA approval\" OR \"FDA clears\" OR \"FDA clearance\" OR \"complete response letter\" OR \"marketing authorization\"",
+  "id": "2df010b7bb666837dbfdf361",
+  "first_seen": "2026-10-04T12:58:17.234223+00:00",
+  "observations": [
+    {
+      "source": "lane_gate",
+      "query": "\"FDA approves\" OR \"FDA approval\" OR \"FDA clears\" OR \"FDA clearance\" OR \"complete response letter\" OR \"marketing authorization\"",
+      "classes": [
+        "gate"
+      ]
+    },
+    {
+      "source": "topic_fda",
+      "query": "FDA (approval OR clearance OR \"clinical trial\")",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

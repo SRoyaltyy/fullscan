@@ -1,0 +1,28 @@
+{
+  "title": "‘Cockroach’ protesters demand India’s election chief resign over voter list changes - AP News",
+  "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVHFEQUFSN2ZDWnVPb3hfbG5nT0NTME5rbUZMd3dLQkU3eVhaWmtiVk1LdmU4SmtKZUdqVjRCQTYzSTFKeV9mWWRfclhsX2lwc1Vwb0txUXN0d0V3Z1p1clNfM29SYmFoaEVUbldyZ0FINndzTlpmZ0hKaWRpdXZSLUZQemU0Q0J4SGJTbzlKS2VYV3l2U0xVYWdMQ2t1d3h3SUhQYVc5SGdHN1lTZnRB?oc=5",
+  "publisher": "AP News",
+  "body": "‘Cockroach’ protesters demand India’s election chief resign over voter list changes apnews.com",
+  "published_at": "2026-10-02T12:48:00+00:00",
+  "published_raw": "Fri, 02 Oct 2026 12:48:00 GMT",
+  "source": "rss_ap_business:google_fallback",
+  "primary": false,
+  "query": "site:apnews.com (business OR companies OR markets)",
+  "query_classes": [],
+  "id": "88c8452aa8260c591e293700",
+  "first_seen": "2026-10-02T20:53:54.710501+00:00",
+  "observations": [
+    {
+      "source": "rss_ap_business:google_fallback",
+      "query": "site:apnews.com (business OR companies OR markets)",
+      "classes": []
+    },
+    {
+      "source": "rss_ap_topnews:google_fallback",
+      "query": "site:apnews.com (government OR technology OR economy)",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:34:35.203969+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Oil prices fall as EU deal to release diesel and crude stocks eases supply fears - thenationalnews.com",
+  "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZHlBamJIdFZNa0VsUV95V3lxc2VKTTEyTmg4U05VS0lUTjc3TnBCdDZrWUlhQm1CVnVkckprNzJ3cXptUy1LcUYwd1FwYzB1Wm8yTW1HeVZIZWxHbGtYV2dMZ1pZeGZ0TkhqU2Rzdm9Ganh0dUZSYlZBWmdRcmFrR2hZQm5keDNLdlM2Q1pWbzFNTUIyY2hVMVlHQzZydFJNNmtZVUIwTVk1Vm9UdkVONjJXbzJJdEFIRTRmeDZwTWViUQ?oc=5",
+  "publisher": "thenationalnews.com",
+  "body": "Oil prices fall as EU deal to release diesel and crude stocks eases supply fears thenationalnews.com",
+  "published_at": "2026-10-02T08:00:06+00:00",
+  "published_raw": "Fri, 02 Oct 2026 08:00:06 GMT",
+  "source": "lane_regime_state",
+  "primary": false,
+  "query_classes": [
+    "regime_state"
+  ],
+  "query": "\"yield curve\" OR \"credit spreads\" OR \"oil prices\" OR \"market volatility\"",
+  "id": "10f1281bb2c8e8884067bf1c",
+  "first_seen": "2026-10-02T10:39:47.686277+00:00",
+  "observations": [
+    {
+      "source": "lane_regime_state",
+      "query": "\"yield curve\" OR \"credit spreads\" OR \"oil prices\" OR \"market volatility\"",
+      "classes": [
+        "regime_state"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "title": "fda concerns unapproved glp-1 drugs used for weight loss 2026 - BusinessWorld Online",
+  "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxON3RkWjVIVHJUZ1Y4TG9BMWdadE85c3VFT3NaZV9YUGx4MVhQRl82enpYc1hEUWFubXhXMkktN0hsUXotei1jUms1ZjN6MnhOQ0hZYlEyM3gzQXZibTQzdldfN2VTZzRFUlJQbkp1MUtqbm5OQ3V1U3JHZEVDNU9Jbk5tNU9CT1plRWhvTUhfem51MzRrbm90ZmRid0FhY2dTYkoxYTk5QVZQemM?oc=5",
+  "publisher": "BusinessWorld Online",
+  "body": "fda concerns unapproved glp-1 drugs used for weight loss 2026 BusinessWorld Online",
+  "published_at": "2026-10-03T05:28:12+00:00",
+  "published_raw": "Sat, 03 Oct 2026 05:28:12 GMT",
+  "source": "lane_gate",
+  "primary": false,
+  "query_classes": [
+    "gate"
+  ],
+  "query": "\"FDA approves\" OR \"FDA approval\" OR \"FDA clears\" OR \"FDA clearance\" OR \"complete response letter\" OR \"marketing authorization\"",
+  "id": "8ece69aa79e20af2cb1c5403",
+  "first_seen": "2026-10-03T15:02:47.371133+00:00",
+  "observations": [
+    {
+      "source": "lane_gate",
+      "query": "\"FDA approves\" OR \"FDA approval\" OR \"FDA clears\" OR \"FDA clearance\" OR \"complete response letter\" OR \"marketing authorization\"",
+      "classes": [
+        "gate"
+      ]
+    },
+    {
+      "source": "topic_fda",
+      "query": "FDA (approval OR clearance OR \"clinical trial\")",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+}

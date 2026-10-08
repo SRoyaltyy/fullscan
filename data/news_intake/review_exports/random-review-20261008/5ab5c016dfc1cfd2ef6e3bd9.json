@@ -1,0 +1,27 @@
+{
+  "title": "Text - S.4842 - 119th Congress (2025-2026): American Food Supply Chain Resiliency Act - Congress.gov",
+  "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE44RDNaZkZ6QU5hOFQ4Sm9Ib1JvcnJ6WWc0eU9DZ0FqMHF5SkFCQUVfaklSakxackdCNm1QZHlJX001TVZ1TWVvU1hhbWt3c290aVJqT2NQTWJnMWxEeHNxRzQwTklqYng1STQ3UldZUnZUNGRV?oc=5",
+  "publisher": "Congress.gov",
+  "body": "Text - S.4842 - 119th Congress (2025-2026): American Food Supply Chain Resiliency Act Congress.gov",
+  "published_at": "2026-10-01T21:54:30+00:00",
+  "published_raw": "Thu, 01 Oct 2026 21:54:30 GMT",
+  "source": "official_congress_search",
+  "primary": false,
+  "query_classes": [
+    "tax_fiscal"
+  ],
+  "query": "site:congress.gov (passed OR enacted OR legislation)",
+  "id": "5ab5c016dfc1cfd2ef6e3bd9",
+  "first_seen": "2026-10-02T10:39:47.686277+00:00",
+  "observations": [
+    {
+      "source": "official_congress_search",
+      "query": "site:congress.gov (passed OR enacted OR legislation)",
+      "classes": [
+        "tax_fiscal"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-03T18:54:45.080626+00:00"
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Cyclospora found at Mexican farm linked to lettuce outbreak, FDA says - AP News",
+  "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQYjJzdkIxUzVRNHpESENmRkR6YTB3UUkzakxLLTZsNmI3ZnlDeXVYWEd2bXRGeFJaekJFbXQ1LTV5aEVrTy00dVRNQ2pLM0ZqZk9wOEJCMGgyaEstUkVQLU1HM2tCYWFwbG5LWk1JWjJWM0JfSW9wU1c1cWhaNU9oN2thMk00NnNJeGQxaGZqTWF5aDM3RzNULWJFWktmbDZFYjMxU1FkOA?oc=5",
+  "publisher": "AP News",
+  "body": "Cyclospora found at Mexican farm linked to lettuce outbreak, FDA says apnews.com",
+  "published_at": "2026-10-02T21:45:31+00:00",
+  "published_raw": "Fri, 02 Oct 2026 21:45:31 GMT",
+  "source": "rss_ap_business:google_fallback",
+  "primary": false,
+  "query": "site:apnews.com (business OR companies OR markets)",
+  "query_classes": [],
+  "id": "424e5b80c4746f13d115be4f",
+  "first_seen": "2026-10-03T00:49:52.761184+00:00",
+  "observations": [
+    {
+      "source": "rss_ap_business:google_fallback",
+      "query": "site:apnews.com (business OR companies OR markets)",
+      "classes": []
+    },
+    {
+      "source": "rss_ap_topnews:google_fallback",
+      "query": "site:apnews.com (government OR technology OR economy)",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

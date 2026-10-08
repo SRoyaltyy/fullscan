@@ -1,0 +1,27 @@
+{
+  "title": "Société Immobilière Balima Reports Earnings Results for the Half Year Ended June 30, 2026 - marketscreener.com",
+  "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOOEFLc1Q4YmpsaVV1Qm4zNWJ3QmY0aEtwMks5Q3NhRkd2ZFNZUTJLYVFuRkZXSkxWZGdoV1lveDdaSWdPMEdudDBxaWtXc2x2UHNWOTRkYjduZ2M0RlAwak03ckFsLVMxclJWNC1iOFpBS3NXWXItbFU0VVEzTm9OQnNKdC1YWlZVMmI1RXUydER4MTFlNWFQeVlJVDFPbWt2WTRMeVdMZE9ZaGZ5SzVjaVYxQUpRTjZMMkFPcmlqR2M5amV5Ykh3QnpWYjM2WXBWUWVwQy1PaGM?oc=5",
+  "publisher": "marketscreener.com",
+  "body": "Société Immobilière Balima Reports Earnings Results for the Half Year Ended June 30, 2026 marketscreener.com",
+  "published_at": "2026-10-02T09:09:00+00:00",
+  "published_raw": "Fri, 02 Oct 2026 09:09:00 GMT",
+  "source": "lane_print_vs_priced",
+  "primary": false,
+  "query_classes": [
+    "print_vs_priced"
+  ],
+  "query": "\"earnings results\" OR \"reports earnings\" OR \"quarterly results\" OR \"CPI report\" OR \"PCE inflation\" OR \"jobs report\" OR \"GDP report\"",
+  "id": "ed3b145d87b50a8642414396",
+  "first_seen": "2026-10-03T10:45:57.686125+00:00",
+  "observations": [
+    {
+      "source": "lane_print_vs_priced",
+      "query": "\"earnings results\" OR \"reports earnings\" OR \"quarterly results\" OR \"CPI report\" OR \"PCE inflation\" OR \"jobs report\" OR \"GDP report\"",
+      "classes": [
+        "print_vs_priced"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+}

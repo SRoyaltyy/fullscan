@@ -1,0 +1,27 @@
+{
+  "title": "Nelson Advisors: Strategic Consolidation in CareTech - Analysis of Lottie’s Acquisition of CareMaster - healthcare.digital",
+  "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNYjBveDltSlpwLWlaM0FVNUJWbkt0SWJwLVlDRGpYbTJqWVNiOFBfMC1SenAzODg0TjJ6aWdkVExQVmJxNlJ0S3lKQkRKLWpxX0RTeEhWUDJLRWdocmFXQUtmX3NoZjJMRTN0SGxBcldEcTlLQ252TTRoSThuYU9wYWNoNHZaVC1uSkRzS3ZHY0lmUTJNWVY2RlJEUGtHbm5LajBVd25SYmM3cFZIdEYzWEVoRXJ1R2hpYWdORHZEWC1QTTZPN1M3VVFGMG9HZ25ZZzhESlJGZw?oc=5",
+  "publisher": "healthcare.digital",
+  "body": "Nelson Advisors: Strategic Consolidation in CareTech - Analysis of Lottie’s Acquisition of CareMaster healthcare.digital",
+  "published_at": "2026-10-03T18:28:12+00:00",
+  "published_raw": "Sat, 03 Oct 2026 18:28:12 GMT",
+  "source": "lane_corporate_action_mna",
+  "primary": false,
+  "query_classes": [
+    "corporate_action_mna"
+  ],
+  "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+  "id": "a4e04af4539fe509004ffbf4",
+  "first_seen": "2026-10-04T00:20:15.583897+00:00",
+  "observations": [
+    {
+      "source": "lane_corporate_action_mna",
+      "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+      "classes": [
+        "corporate_action_mna"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+}

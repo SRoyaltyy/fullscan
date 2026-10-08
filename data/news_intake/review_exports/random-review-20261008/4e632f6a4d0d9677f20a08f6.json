@@ -1,0 +1,23 @@
+{
+  "title": "10-year Treasury yield hits 5.34% — a 24-year high now driving mortgage rates, car loans and your portfolio - Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPdnJTRXh1MkcyT0tzcExONDBKaGJHeU5GT2daQVBvNnNfNVAxQ2g4Y25BX0xiaGtjMmgxOW5IZHRRczBTMXd0MU9FbVZlQVlCTEVMLTFheVZsSUNzQ1VqRy1YcHdsN2N6QllxeUdySVNLeVlSYnZJZWRBLUV0SDQ0N1luTUJ5LU4yZFdPRTZPVHBkVms?oc=5",
+  "publisher": "Yahoo Finance",
+  "body": "10-year Treasury yield hits 5.34% — a 24-year high now driving mortgage rates, car loans and your portfolio finance.yahoo.com",
+  "published_at": "2026-10-03T12:30:00+00:00",
+  "published_raw": "Sat, 03 Oct 2026 12:30:00 GMT",
+  "source": "topic_government",
+  "primary": false,
+  "query_classes": [],
+  "query": "\"Treasury\" OR \"Commerce Department\" OR \"Energy Department\" OR \"executive order\"",
+  "id": "4e632f6a4d0d9677f20a08f6",
+  "first_seen": "2026-10-03T15:01:34.522557+00:00",
+  "observations": [
+    {
+      "source": "topic_government",
+      "query": "\"Treasury\" OR \"Commerce Department\" OR \"Energy Department\" OR \"executive order\"",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

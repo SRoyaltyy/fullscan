@@ -1,0 +1,27 @@
+{
+  "title": "Equity in earnings of Columbus Acquisition Corp – NASDAQ:SAIQ - tradingview.com",
+  "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQOXJOVDRka1BsMUFMZHhtV0F5UVhGT2ItOEpjdnBqdDJRSEt5c2VIWWdzSUVOclpWMVhyM1lyLXk1Y0NKaFRQWE9XXzh5QXU3Z3ltZnlMNXNUeFNRdm5jWmFYNnFYTkJpOUpzemZxVnhQSnZFVi1UVEYwRHJFQ3NoQUY5aWdMR0Q0M3dPOEdHZnU2QnZFWkNqRC1hMA?oc=5",
+  "publisher": "tradingview.com",
+  "body": "Equity in earnings of Columbus Acquisition Corp – NASDAQ:SAIQ tradingview.com",
+  "published_at": "2026-10-03T21:53:24+00:00",
+  "published_raw": "Sat, 03 Oct 2026 21:53:24 GMT",
+  "source": "lane_corporate_action_mna",
+  "primary": false,
+  "query_classes": [
+    "corporate_action_mna"
+  ],
+  "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+  "id": "dc44049add9505b9a34f98e5",
+  "first_seen": "2026-10-04T06:30:58.699753+00:00",
+  "observations": [
+    {
+      "source": "lane_corporate_action_mna",
+      "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+      "classes": [
+        "corporate_action_mna"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

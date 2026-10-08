@@ -1,0 +1,27 @@
+{
+  "title": "S&U (LON:SUS) Announces Earnings Results - MarketBeat",
+  "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOUlJfTkpjMEZXS3dZWjZzSE9BcFZuVTVyQ0JVN09oX1RwRTZjTUdmaTRQT3BKMlNuRWVOSkdTNkxpbmNmY3dpZG41MkNicjVkM2lBTk1QOWRyV25DX3QyTlVTVDZmMHNZdkdUal9mcWNZeDE0bUpaMUNub2w3dlM1U1d0WEh3eWpuNDhjQ1VGcTZXV09zaXRSXzFyVTJMWjVnYVppakVQdXFwdFMyS3pF?oc=5",
+  "publisher": "MarketBeat",
+  "body": "S&U (LON:SUS) Announces Earnings Results MarketBeat",
+  "published_at": "2026-10-02T07:00:00+00:00",
+  "published_raw": "Fri, 02 Oct 2026 07:00:00 GMT",
+  "source": "lane_print_vs_priced",
+  "primary": false,
+  "query_classes": [
+    "print_vs_priced"
+  ],
+  "query": "\"earnings results\" OR \"reports earnings\" OR \"quarterly results\" OR \"CPI report\" OR \"PCE inflation\" OR \"jobs report\" OR \"GDP report\"",
+  "id": "60edda6822428c4c5cf984b2",
+  "first_seen": "2026-10-04T06:30:58.699753+00:00",
+  "observations": [
+    {
+      "source": "lane_print_vs_priced",
+      "query": "\"earnings results\" OR \"reports earnings\" OR \"quarterly results\" OR \"CPI report\" OR \"PCE inflation\" OR \"jobs report\" OR \"GDP report\"",
+      "classes": [
+        "print_vs_priced"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+}

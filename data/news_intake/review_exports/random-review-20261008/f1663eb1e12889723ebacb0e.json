@@ -1,0 +1,28 @@
+{
+  "title": "FM Discusses Exempting Flights to Iraq’s Holy Sites from Sanctions with the U.S. Treasury Secretary - وزارة الخارجية العراقية",
+  "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1qWEY0bjgwRUFyRU5kcGJrQVY1MkpUMWtBVVhBRHZERmVQSHM5aXplbmJBVkdGN1dTZjk5Z0xQSUk1WjR3Zmc?oc=5",
+  "publisher": "وزارة الخارجية العراقية",
+  "body": "FM Discusses Exempting Flights to Iraq’s Holy Sites from Sanctions with the U.S. Treasury Secretary وزارة الخارجية العراقية",
+  "published_at": "2026-10-03T01:13:03+00:00",
+  "published_raw": "Sat, 03 Oct 2026 01:13:03 GMT",
+  "source": "topic_geopolitics",
+  "primary": false,
+  "query_classes": [],
+  "query": "\"sanctions\" OR \"tariffs\" OR \"ceasefire\" OR \"Strait of Hormuz\"",
+  "id": "f1663eb1e12889723ebacb0e",
+  "first_seen": "2026-10-03T05:55:16.025544+00:00",
+  "observations": [
+    {
+      "source": "topic_geopolitics",
+      "query": "\"sanctions\" OR \"tariffs\" OR \"ceasefire\" OR \"Strait of Hormuz\"",
+      "classes": []
+    },
+    {
+      "source": "topic_government",
+      "query": "\"Treasury\" OR \"Commerce Department\" OR \"Energy Department\" OR \"executive order\"",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-03T21:57:16.391630+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "New $850M debt deal moves Troilus copper-gold project closer to full funding - The Northern Miner",
+  "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQSHVTcUstS1dmeF95b2xpbVFVeDNNME9sdWRaUlRjU2loaDZ0RU9uT3ZmRTJoOHQ0U1oxblRhMmQtVjR0VThpNXJ5c3dtZkV1SjVIQ040TlNyRUh3SjlkQkxOSjc4cVZianM1NnRfU0FUWVd4OEFiNWl6SVlXbDhmRllsN1ZNY3JCckNwQ25ZUDl5SEFJNm05Xzg0ZkJkWDA5QVdKTUh5WGhjX1FUQlBBWWEwb2pYd3g5V2xQV2lJQQ?oc=5",
+  "publisher": "The Northern Miner",
+  "body": "New $850M debt deal moves Troilus copper-gold project closer to full funding The Northern Miner",
+  "published_at": "2026-10-02T10:48:59+00:00",
+  "published_raw": "Fri, 02 Oct 2026 10:48:59 GMT",
+  "source": "lane_credit_funding",
+  "primary": false,
+  "query_classes": [
+    "credit_funding"
+  ],
+  "query": "\"credit facility\" OR \"notes offering\" OR \"debt financing\" OR \"refinancing\"",
+  "id": "6bf49b6302daed31ae108bb3",
+  "first_seen": "2026-10-02T16:30:58.602915+00:00",
+  "observations": [
+    {
+      "source": "lane_credit_funding",
+      "query": "\"credit facility\" OR \"notes offering\" OR \"debt financing\" OR \"refinancing\"",
+      "classes": [
+        "credit_funding"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Stock Market Midday, Oct. 2: Stocks Rally as Weak Jobs Data Cools Fed Rate Hike Bets - Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOYl9ySTF0UEtIT3VwVjdHQjF3bjJSZVhLOGxlb1ByMk5uT25jc3pnaDZPQ1ZQX0tEZkJzMUgzTlRtb1FOR1ZhbG9VM2hxWGotZ2tfd20talphRGduRFhfY3JyekNfLW4wMmhHUHFJdkVmNzkwZlJFX3l4Q0tKclU5dHJKdHRSY1FqRGROWTROYnRfeUNU?oc=5",
+  "publisher": "Yahoo Finance",
+  "body": "Stock Market Midday, Oct. 2: Stocks Rally as Weak Jobs Data Cools Fed Rate Hike Bets Yahoo Finance",
+  "published_at": "2026-10-02T16:40:23+00:00",
+  "published_raw": "Fri, 02 Oct 2026 16:40:23 GMT",
+  "source": "lane_factor_impulse",
+  "primary": false,
+  "query_classes": [
+    "factor_impulse"
+  ],
+  "query": "\"rate cut\" OR \"rate hike\" OR \"FOMC decision\" OR \"payrolls\" OR \"inflation data\"",
+  "id": "cfc05dafe88f80723dd3f8f1",
+  "first_seen": "2026-10-03T05:43:55.104289+00:00",
+  "observations": [
+    {
+      "source": "lane_factor_impulse",
+      "query": "\"rate cut\" OR \"rate hike\" OR \"FOMC decision\" OR \"payrolls\" OR \"inflation data\"",
+      "classes": [
+        "factor_impulse"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T00:20:15.583897+00:00"
+}

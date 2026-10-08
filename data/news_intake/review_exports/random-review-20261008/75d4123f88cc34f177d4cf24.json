@@ -1,0 +1,27 @@
+{
+  "title": "Janus Henderson Completes Acquisition of Rantum Capital - Funds Society",
+  "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZ3VSUngwT3BZMzdWYVF3cVkzemF2anF4bV9PMG5wcUFVT1AxZmt4el80V2FMZGxmRmszUS1uQjJweXpEVGVlWjRwYXNET3ZOY1pfc3VxbVNta3RZelpuV3pvMDkwRXpDdjAxRUE1UHhfRUI0allhcFZWaWdjWWhWZkNjNG1CUUhNdXBkcDRTZHljdkc1TXc2cXM3WHNjcWFValhzTA?oc=5",
+  "publisher": "Funds Society",
+  "body": "Janus Henderson Completes Acquisition of Rantum Capital fundssociety.com",
+  "published_at": "2026-10-02T13:30:14+00:00",
+  "published_raw": "Fri, 02 Oct 2026 13:30:14 GMT",
+  "source": "lane_corporate_action_mna",
+  "primary": false,
+  "query_classes": [
+    "corporate_action_mna"
+  ],
+  "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+  "id": "75d4123f88cc34f177d4cf24",
+  "first_seen": "2026-10-02T16:30:15.020552+00:00",
+  "observations": [
+    {
+      "source": "lane_corporate_action_mna",
+      "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+      "classes": [
+        "corporate_action_mna"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

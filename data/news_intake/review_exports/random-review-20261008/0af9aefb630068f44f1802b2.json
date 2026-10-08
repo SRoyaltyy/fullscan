@@ -1,0 +1,29 @@
+{
+  "title": "Class 2 Device Recall Expressaire - accessdata.fda.gov",
+  "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9pSk9LUG8wU01ia0xFMEttbDZhbGF4cUxHc1h1WEpxOWhKME53c0VzQnZWY2lQN3pLT2djQkwycWpNc19HTllUSGZMdG9XYlpZVkx0VUVWLTdpaEo0SFVGb3pjZnVGbkFGWGVkalpSUFllYVh5UV9rZHVyb1lyVzg?oc=5",
+  "publisher": "accessdata.fda.gov",
+  "body": "Class 2 Device Recall Expressaire accessdata.fda.gov",
+  "published_at": "2026-10-02T09:36:44+00:00",
+  "published_raw": "Fri, 02 Oct 2026 09:36:44 GMT",
+  "source": "official_fda_search",
+  "primary": false,
+  "query_classes": [
+    "gate",
+    "product_harm"
+  ],
+  "query": "site:fda.gov (approval OR clearance OR recall)",
+  "id": "0af9aefb630068f44f1802b2",
+  "first_seen": "2026-10-02T20:53:54.710501+00:00",
+  "observations": [
+    {
+      "source": "official_fda_search",
+      "query": "site:fda.gov (approval OR clearance OR recall)",
+      "classes": [
+        "gate",
+        "product_harm"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+}

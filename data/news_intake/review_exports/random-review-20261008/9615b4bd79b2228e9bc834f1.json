@@ -1,0 +1,27 @@
+{
+  "title": "Paramount Closes $52 Billion Debt Financing as Century-Scale Acquisition Enters Countdown to Closing - NAI500",
+  "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOdkRxUkl5QTNPYXIxQjFORkltSmVlRXExTEdoNmFEcWpQVVprZkJlbktSVE1xZmJqNjBoY3dNVUFQNHhHUVM1ZFlHc1lJN1AtNDQyaVZ3aTFYd1JKS0luRFFNYUkxS0FEeWRpRHdMWER4N1NwWU1IbWp5cWc4VXVncVZkeXNfZkFNY01iNGU0Wm95RjVjZW1zOGlVdHVfTmZjZUUxTDM4aURIQllJdjRmck8tNDVvd1ZxQjNqS3BLWnkxR0JpLVh1cjBjMmU?oc=5",
+  "publisher": "NAI500",
+  "body": "Paramount Closes $52 Billion Debt Financing as Century-Scale Acquisition Enters Countdown to Closing nai500.com",
+  "published_at": "2026-10-03T02:31:35+00:00",
+  "published_raw": "Sat, 03 Oct 2026 02:31:35 GMT",
+  "source": "lane_credit_funding",
+  "primary": false,
+  "query_classes": [
+    "credit_funding"
+  ],
+  "query": "\"credit facility\" OR \"notes offering\" OR \"debt financing\" OR \"refinancing\"",
+  "id": "9615b4bd79b2228e9bc834f1",
+  "first_seen": "2026-10-03T05:43:55.104289+00:00",
+  "observations": [
+    {
+      "source": "lane_credit_funding",
+      "query": "\"credit facility\" OR \"notes offering\" OR \"debt financing\" OR \"refinancing\"",
+      "classes": [
+        "credit_funding"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

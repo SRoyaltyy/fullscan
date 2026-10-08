@@ -1,0 +1,27 @@
+{
+  "title": "Boeing Workers Face Strike Vote as Contract Expiration Nears - suaragarut.id",
+  "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBUT09SVjBENjRJYTlXUGhnZWJQbExMaHlMcjBIVGEta2ZQRG9MdjFjaW82S2ZvWThPZVNQZFM1cHpQekdQbVM1RG9uaGhBLVV2a3RIUXV3aERuUVZKTWpTR0tzX2h3T2M?oc=5",
+  "publisher": "suaragarut.id",
+  "body": "Boeing Workers Face Strike Vote as Contract Expiration Nears suaragarut.id",
+  "published_at": "2026-10-01T20:11:00+00:00",
+  "published_raw": "Thu, 01 Oct 2026 20:11:00 GMT",
+  "source": "lane_labor_stop",
+  "primary": false,
+  "query_classes": [
+    "labor_stop"
+  ],
+  "query": "\"workers strike\" OR \"walkout\" OR \"labor strike\" OR \"strike begins\" OR \"strike ends\"",
+  "id": "d955b4cb02c3711bff98c246",
+  "first_seen": "2026-10-02T16:30:58.602915+00:00",
+  "observations": [
+    {
+      "source": "lane_labor_stop",
+      "query": "\"workers strike\" OR \"walkout\" OR \"labor strike\" OR \"strike begins\" OR \"strike ends\"",
+      "classes": [
+        "labor_stop"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-03T18:54:45.080626+00:00"
+}

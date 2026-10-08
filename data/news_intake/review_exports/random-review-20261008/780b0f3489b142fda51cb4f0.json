@@ -1,0 +1,23 @@
+{
+  "title": "Average long-term US mortgage rate churns upward to its highest level in nearly 3 years at 7.28% - AP News",
+  "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTkg2WEtfNEcxODRObTgyemJpOGZUdkZYTUcwMlByR1pkSS1zNk5qYkdDdnBWQXVHUEJtMFRxMUkyVXN3NkE0NC1OcjhfRWx6T3RDZDBwQWkzOFJGcnRBOTVPQlIxb0VSeFduWnlMTlI2VDB2VXUtMW5tMmxjZlhpUkRLdy01YXAtdkVWYWNJZHdzVE0?oc=5",
+  "publisher": "AP News",
+  "body": "Average long-term US mortgage rate churns upward to its highest level in nearly 3 years at 7.28% AP News",
+  "published_at": "2026-10-01T19:34:00+00:00",
+  "published_raw": "Thu, 01 Oct 2026 19:34:00 GMT",
+  "source": "rss_ap_topnews:google_fallback",
+  "primary": false,
+  "query": "site:apnews.com (government OR technology OR economy)",
+  "query_classes": [],
+  "id": "780b0f3489b142fda51cb4f0",
+  "first_seen": "2026-10-03T05:43:55.104289+00:00",
+  "observations": [
+    {
+      "source": "rss_ap_topnews:google_fallback",
+      "query": "site:apnews.com (government OR technology OR economy)",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-03T18:54:45.080626+00:00"
+}

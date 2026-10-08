@@ -1,0 +1,27 @@
+{
+  "title": "Long term debt to total equity ratio of Columbus Acquisition Corp – NASDAQ:SAIQ - TradingView",
+  "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOS3E5ZGFQMnFQQUx5QUJkZGI5Z0diU3RlVlJhdVIyUWJ4SnlHZHhvTmdkNkpLeWVWVW1EdTdoWWUzZ0ZWVWNRVkRwX0xFcjV1Z2dhX0k4TTQ0T1F3WGtmc2wwbUFJcTdiTng4Q0Q4X0dJM0RGZHlRa3ltdWxMVlB6M2czLUNBSFFqdzZqS0laWG5iZ01tV3cxREJZMTJRWV9xRDNkc3dHY2Rwdw?oc=5",
+  "publisher": "TradingView",
+  "body": "Long term debt to total equity ratio of Columbus Acquisition Corp – NASDAQ:SAIQ TradingView",
+  "published_at": "2026-10-03T23:26:36+00:00",
+  "published_raw": "Sat, 03 Oct 2026 23:26:36 GMT",
+  "source": "lane_corporate_action_mna",
+  "primary": false,
+  "query_classes": [
+    "corporate_action_mna"
+  ],
+  "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+  "id": "584854b39ef7c51480b8c55f",
+  "first_seen": "2026-10-04T12:58:17.234223+00:00",
+  "observations": [
+    {
+      "source": "lane_corporate_action_mna",
+      "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+      "classes": [
+        "corporate_action_mna"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Trojan Gold Announces Definitive Agreement for Amalgamation with Tashota Resources and Strike Copper - TradingView",
+  "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQTmM0UDFlTTRPdURVcEYyMTNEcTlwbjdhc2pYekZjUnlxQmZkZGtTVjU4RjEzY3lsVWVYcTdDTFZQOW4wWDlfaXpHWVVYQU8zZ3F0Rm9NUmJPaUliMUMzV1c1ZWRxSkkwWnRlVk1rQm9BWjRFaXhhQmMzT1ItcXlkTkxOYXh5dHAtVU93SGxkRGZNRmtXZW9HS3FtRkUxQkNCQkxCOGtJV0R0Y0MtUXotdzlkeHY1TjhCcjNPanVkSVV6Um1uQnVBenpaSmsxWkc4WDNUT2J6Z2Q0VmFSSmNUeDloYVBpYzRfNG1pRURaUU50UWZP?oc=5",
+  "publisher": "TradingView",
+  "body": "Trojan Gold Announces Definitive Agreement for Amalgamation with Tashota Resources and Strike Copper TradingView",
+  "published_at": "2026-10-02T11:00:00+00:00",
+  "published_raw": "Fri, 02 Oct 2026 11:00:00 GMT",
+  "source": "lane_corporate_action_mna",
+  "primary": false,
+  "query_classes": [
+    "corporate_action_mna"
+  ],
+  "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+  "id": "1026d349e4aed9a6ca965b5b",
+  "first_seen": "2026-10-03T15:02:47.371133+00:00",
+  "observations": [
+    {
+      "source": "lane_corporate_action_mna",
+      "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+      "classes": [
+        "corporate_action_mna"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Pakistan Engineering Company Limited Reports Earnings Results for the Full Year Ended June 30, 2026 - marketscreener.com",
+  "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNQWZKSHYwbkZEWERtbkpPZi1UYlhkX003QndBdVpyX3lUcHc1QWFuZW16TXpmdG5BbHJfdEFqSzNjQ2t0UWhfYzBUWHBCcE8takk1QlFrRTZoUk9yYW5QaFo5cmJnMExKYnVXRXJWSDVqYlFRMGd6eWdmSEZ2dG9sUlVzd3JydFZwUUM1Nml1N1Q0SkVudnlJNGtXeUNuUUdpQVRqal9ZWW1HMG9TMXdjUU9kWWVqTW9ERnFGVE1OOWUteXRpeXFDbVJReTdlMGpzQW80QmMySVB4U3NRYVZzZDNoelY5QQ?oc=5",
+  "publisher": "marketscreener.com",
+  "body": "Pakistan Engineering Company Limited Reports Earnings Results for the Full Year Ended June 30, 2026 marketscreener.com",
+  "published_at": "2026-10-02T11:50:26+00:00",
+  "published_raw": "Fri, 02 Oct 2026 11:50:26 GMT",
+  "source": "lane_print_vs_priced",
+  "primary": false,
+  "query_classes": [
+    "print_vs_priced"
+  ],
+  "query": "\"earnings results\" OR \"reports earnings\" OR \"quarterly results\" OR \"CPI report\" OR \"PCE inflation\" OR \"jobs report\" OR \"GDP report\"",
+  "id": "ea8c2edd531c9740e32b95cd",
+  "first_seen": "2026-10-02T16:30:58.602915+00:00",
+  "observations": [
+    {
+      "source": "lane_print_vs_priced",
+      "query": "\"earnings results\" OR \"reports earnings\" OR \"quarterly results\" OR \"CPI report\" OR \"PCE inflation\" OR \"jobs report\" OR \"GDP report\"",
+      "classes": [
+        "print_vs_priced"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Fuel Prices Rise: Can Government’s Subsidy Programme Ease the Pressure? | PM Business (1-10-26) - modernghana.com",
+  "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1Zb2VUZWZVRXB6X3ZobWpYamh0Qk1hMVRCQUhtU0VadDJGSFNhc2FwUlBHY2VTZFplSk1fSFZhTVI1YzdOcGlsQTZsR1pfNHhMRUI4Yl9VR2NWYS13bkh1eXV5d1LSAVxBVV95cUxOUVdwWmFXSU5BQlNER19hMWkyUmpYYVBkTGJKSU1QcHVrQ3RENFJ5VE13eWxyX0J0a293UE5aYUZ2VnA5UE0wamo0S3N5RXZRLWhMMm1GVWUydnphTA?oc=5",
+  "publisher": "modernghana.com",
+  "body": "Fuel Prices Rise: Can Government’s Subsidy Programme Ease the Pressure? | PM Business (1-10-26) modernghana.com",
+  "published_at": "2026-10-02T00:00:00+00:00",
+  "published_raw": "Fri, 02 Oct 2026 00:00:00 GMT",
+  "source": "lane_subsidy",
+  "primary": false,
+  "query_classes": [
+    "subsidy"
+  ],
+  "query": "\"government grant\" OR \"subsidy\" OR \"subsidies\" OR \"tax credit awarded\"",
+  "id": "018dd98b3662ab480ac0b2fa",
+  "first_seen": "2026-10-03T18:46:42.074757+00:00",
+  "observations": [
+    {
+      "source": "lane_subsidy",
+      "query": "\"government grant\" OR \"subsidy\" OR \"subsidies\" OR \"tax credit awarded\"",
+      "classes": [
+        "subsidy"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-03T21:57:16.391630+00:00"
+}

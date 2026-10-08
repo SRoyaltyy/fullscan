@@ -1,0 +1,27 @@
+{
+  "title": "Flight cancellations: Lufthansa strike and Italian air traffic control walkout hit Luxembourg flights - RTL Today",
+  "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPWFJfZkRybUViRWlmdGlEekY3Yy1rcHlXWlo1QkM4aWR0dlMtdWlRbFljamIwNktRcWZESmJPb2xGaEFHeS1UMS1uQnlDRG5qTWlSc2ZYTXJkeURDQW1VYkZZRC10M3JiZmZxemhHMzBDZ2E3MjJLNUFKdmItWEh4MVMyWnJZVE1rd05kSFRkSmdzSHR5bnhaTVlzT01UV2FKQTRGVHhJQW1VVWZsX1BHQzVaWk85ZTZYTmRGb19lcHd4R0ty?oc=5",
+  "publisher": "RTL Today",
+  "body": "Flight cancellations: Lufthansa strike and Italian air traffic control walkout hit Luxembourg flights RTL Today",
+  "published_at": "2026-10-03T14:41:42+00:00",
+  "published_raw": "Sat, 03 Oct 2026 14:41:42 GMT",
+  "source": "lane_labor_stop",
+  "primary": false,
+  "query_classes": [
+    "labor_stop"
+  ],
+  "query": "\"workers strike\" OR \"walkout\" OR \"labor strike\" OR \"strike begins\" OR \"strike ends\"",
+  "id": "09eb2cbc4aa928633b1b8366",
+  "first_seen": "2026-10-03T21:56:28.411732+00:00",
+  "observations": [
+    {
+      "source": "lane_labor_stop",
+      "query": "\"workers strike\" OR \"walkout\" OR \"labor strike\" OR \"strike begins\" OR \"strike ends\"",
+      "classes": [
+        "labor_stop"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:19:40.102182+00:00"
+}

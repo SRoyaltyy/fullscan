@@ -1,0 +1,27 @@
+{
+  "title": "Paramount-Warner Bros Merger to Become Skydance - english.dainikjagranmpcg.com",
+  "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMWFLUlJlWF9ocGl3MDlSSUp3WXFPblY0NEhZelF4YTVuNzRTeVVYM1RfVDhab2lzLVg2Yl9HSzFxTHVaaTFaMmp5STNfZFJtZ0RCUGMtMzZlTEVmTTNOVi0wSG9oWDgtaXh6eWVBZjVTbHZZQnZWSTk2U1hYSC13aHBhUkJpV21fdlNjdFRRakZiTUs3RGxvbXREVXVsX2V3aUgtczJMNWk0LXJUUVVVUVR3?oc=5",
+  "publisher": "english.dainikjagranmpcg.com",
+  "body": "Paramount-Warner Bros Merger to Become Skydance english.dainikjagranmpcg.com",
+  "published_at": "2026-10-03T09:33:44+00:00",
+  "published_raw": "Sat, 03 Oct 2026 09:33:44 GMT",
+  "source": "lane_corporate_action_mna",
+  "primary": false,
+  "query_classes": [
+    "corporate_action_mna"
+  ],
+  "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+  "id": "da5f7ecf4cce7c85744e7f94",
+  "first_seen": "2026-10-04T00:20:15.583897+00:00",
+  "observations": [
+    {
+      "source": "lane_corporate_action_mna",
+      "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+      "classes": [
+        "corporate_action_mna"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

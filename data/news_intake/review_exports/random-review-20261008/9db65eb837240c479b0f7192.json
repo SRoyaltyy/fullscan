@@ -1,0 +1,27 @@
+{
+  "title": "RIVN Stock Slips As Recall And Insider Sale Weigh On Outlook - timothysykes.com",
+  "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxObjZsVWw4UkNNUDJfYkNmSkpsbmc3S3NrNWQzRWhLbXZfaXBJSGpmbjJvcHBCZll4SnVvUWNMMXpkaWpjcVJVVWQ1NUN2blBHZEkzZ1EwVHhSR09KdFJJbjE0WGpOZFRHR2xTRVJiMDRZVV91Q2ktTDBHTG1lOW1NR2piSQ?oc=5",
+  "publisher": "timothysykes.com",
+  "body": "RIVN Stock Slips As Recall And Insider Sale Weigh On Outlook timothysykes.com",
+  "published_at": "2026-10-02T19:02:00+00:00",
+  "published_raw": "Fri, 02 Oct 2026 19:02:00 GMT",
+  "source": "lane_insider_flow",
+  "primary": false,
+  "query_classes": [
+    "insider_flow"
+  ],
+  "query": "\"insider purchase\" OR \"insider sale\" OR \"insider buying\" OR \"insider selling\"",
+  "id": "9db65eb837240c479b0f7192",
+  "first_seen": "2026-10-02T20:53:54.710501+00:00",
+  "observations": [
+    {
+      "source": "lane_insider_flow",
+      "query": "\"insider purchase\" OR \"insider sale\" OR \"insider buying\" OR \"insider selling\"",
+      "classes": [
+        "insider_flow"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

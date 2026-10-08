@@ -1,0 +1,27 @@
+{
+  "title": "FDA Approves New Size-Adjustable Surgical Pulmonary Valve for Pediatric Patients - NewYork-Presbyterian",
+  "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQVlppaW5GbWY0UkpoaDk2RUI4QmlWaGJ5TFY4ekplTGRFOWZIUUtnU1MwX1FaSHhVc3ZadEVVNG9LdjdsOFlGb2VrZnJvZElMck5ULVBlREJBSWptYmVwQ3FxNHIxSDk4cHNMaFZBU3FIUEdLN2M3ZHVnM2JMMUt1UFpOVVp5eXkyY1EtQk0wUS1HU0JkbWRTNGo4WmhrUmVzT05XRVB5TUVaZjRHUmktbzdPTG5MRmtuTEU5V24yZnRLdEdfQ0VnYzg2OWVoUzROTXhSVQ?oc=5",
+  "publisher": "NewYork-Presbyterian",
+  "body": "FDA Approves New Size-Adjustable Surgical Pulmonary Valve for Pediatric Patients NewYork-Presbyterian",
+  "published_at": "2026-10-02T02:04:40+00:00",
+  "published_raw": "Fri, 02 Oct 2026 02:04:40 GMT",
+  "source": "lane_gate",
+  "primary": false,
+  "query_classes": [
+    "gate"
+  ],
+  "query": "\"FDA approves\" OR \"FDA approval\" OR \"FDA clears\" OR \"FDA clearance\" OR \"complete response letter\" OR \"marketing authorization\"",
+  "id": "90fc3c038f06f72b20214e8a",
+  "first_seen": "2026-10-03T05:43:55.104289+00:00",
+  "observations": [
+    {
+      "source": "lane_gate",
+      "query": "\"FDA approves\" OR \"FDA approval\" OR \"FDA clears\" OR \"FDA clearance\" OR \"complete response letter\" OR \"marketing authorization\"",
+      "classes": [
+        "gate"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T00:20:15.583897+00:00"
+}

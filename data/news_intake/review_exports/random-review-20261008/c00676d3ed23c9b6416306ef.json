@@ -1,0 +1,27 @@
+{
+  "title": "US weighs diesel export ban, urges Europe to release reserves: Why diesel is more sensitive - The Times of India",
+  "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNZ3J4RjZYV3Q3UzhSRXVhTzRDWGVhZGpLUW51bFlCVUVMeVh6OWZyNVVGZVVJcDdqSGx3U0pROVpqeDBFNFpMc2wtaWdqb3cyLUdiTEhIQTNtS3lBdTktVkdheVlQcGQydUpIN0x6bTRwS0U4d0lWZkNHb3lLQlQwdFFJb2U4cUU1MkoxWGtTNFdOOHFoSl9nZ1BfZzZMak14NjhtQTdvSHlIRHkxRnZtbFdLUXdaT0k5X2ZSRk14OEhoOXlxRUgtbHMwdkxSaXpFamxrSy00U3h6cWdrZ2hXRFRHdXJ4bWRxQVNMSmIyb0hvZ9IB9wFBVV95cUxNaVk0UElsdy1icXpwQmVoVGVhRExEZzNtMzhSTWVPcV9wTTlVTHZfQWo4NzQ5dnc3UVRzTHlDSldzN3dWQTA4Qm9ZNmd3WDZQRWYxZUJWWnV5cTl1UzctbF9uRnZKSms0Q2J3WG9YalFtTEo3eUVXSGZlSXpEZGtxUFVHQ1pBVzJjemRVTEYteTVfR0NsRzRhd0kwVFJ5cDRHaTJ1TWEwcXVvRjNRUTFZcC03aTk4LUt6X3UxTnVpd3p4b1hLMkZ1M1Y5bzI1WFFxQjNXbEJCdi1vdG94OVFMRjBwaHpVcUZyeGpDbVNfby14X3dudDV3?oc=5",
+  "publisher": "The Times of India",
+  "body": "US weighs diesel export ban, urges Europe to release reserves: Why diesel is more sensitive timesofindia.indiatimes.com",
+  "published_at": "2026-10-02T06:18:00+00:00",
+  "published_raw": "Fri, 02 Oct 2026 06:18:00 GMT",
+  "source": "lane_access_control",
+  "primary": false,
+  "query_classes": [
+    "access_control"
+  ],
+  "query": "\"export controls\" OR \"export ban\" OR \"import ban\" OR \"license revoked\"",
+  "id": "c00676d3ed23c9b6416306ef",
+  "first_seen": "2026-10-02T10:39:47.686277+00:00",
+  "observations": [
+    {
+      "source": "lane_access_control",
+      "query": "\"export controls\" OR \"export ban\" OR \"import ban\" OR \"license revoked\"",
+      "classes": [
+        "access_control"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T00:20:15.583897+00:00"
+}

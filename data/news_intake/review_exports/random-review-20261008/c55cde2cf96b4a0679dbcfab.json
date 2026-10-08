@@ -1,0 +1,32 @@
+{
+  "title": "FDA Approves Pirtobrutinib for Untreated CLL/SLL Without 17p Deletion - AJMC",
+  "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxORmZpU0drbFdrWkx0VTFNd1VsdkItVlJhakZNQW1LQm9xT0stUUV1dFFLdklUNTlrVXlOZXpOQXU4MjV5N2NaVlJ2TUd1Vm83NHlVV2VvaVoySXBjaXVzUU9ab25DN1ZiNFRqMGlINS1zdWF0ZkE4X1hwZGhRQXpqdTVsSGxsZEswM0MxT0RoUnpRUGxZd3ZKWUpMbw?oc=5",
+  "publisher": "AJMC",
+  "body": "FDA Approves Pirtobrutinib for Untreated CLL/SLL Without 17p Deletion AJMC",
+  "published_at": "2026-10-02T21:30:12+00:00",
+  "published_raw": "Fri, 02 Oct 2026 21:30:12 GMT",
+  "source": "lane_gate",
+  "primary": false,
+  "query_classes": [
+    "gate"
+  ],
+  "query": "\"FDA approves\" OR \"FDA approval\" OR \"FDA clears\" OR \"FDA clearance\" OR \"complete response letter\" OR \"marketing authorization\"",
+  "id": "c55cde2cf96b4a0679dbcfab",
+  "first_seen": "2026-10-03T00:27:32.036405+00:00",
+  "observations": [
+    {
+      "source": "lane_gate",
+      "query": "\"FDA approves\" OR \"FDA approval\" OR \"FDA clears\" OR \"FDA clearance\" OR \"complete response letter\" OR \"marketing authorization\"",
+      "classes": [
+        "gate"
+      ]
+    },
+    {
+      "source": "topic_fda",
+      "query": "FDA (approval OR clearance OR \"clinical trial\")",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

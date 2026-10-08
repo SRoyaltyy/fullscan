@@ -1,0 +1,27 @@
+{
+  "title": "Elizabeth Warren Says Fed Rate Hike Will Cost Americans $2 Billion in Extra Credit Card Interest — Blames Trump’s ‘Failed Economic Policies’ for Families Paying the Price (UPDATED) - Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNWU91U3BtdV9vOEhaanBsaldZNUxfbzhqMWxteXptNm8zcjRYcHZyMTF4VEFlOS1Ma0t3aVR5a3daR056WF9RTzRzVG1GX25MSzdiR21BdXdoei1OMzhnSXRDY1E1aTBEUk9SUmViVFhZRGQ4enJNWlVwTmNrQ0tpQ01zYTAzQjFxbnVqLW1KNU5fRHJrZ2ZOcUVOYw?oc=5",
+  "publisher": "Yahoo Finance",
+  "body": "Elizabeth Warren Says Fed Rate Hike Will Cost Americans $2 Billion in Extra Credit Card Interest — Blames Trump’s ‘Failed Economic Policies’ for Families Paying the Price (UPDATED) finance.yahoo.com",
+  "published_at": "2026-10-02T19:30:07+00:00",
+  "published_raw": "Fri, 02 Oct 2026 19:30:07 GMT",
+  "source": "lane_factor_impulse",
+  "primary": false,
+  "query_classes": [
+    "factor_impulse"
+  ],
+  "query": "\"rate cut\" OR \"rate hike\" OR \"FOMC decision\" OR \"payrolls\" OR \"inflation data\"",
+  "id": "cf80f2447fa5781987e3f1ac",
+  "first_seen": "2026-10-02T20:53:54.710501+00:00",
+  "observations": [
+    {
+      "source": "lane_factor_impulse",
+      "query": "\"rate cut\" OR \"rate hike\" OR \"FOMC decision\" OR \"payrolls\" OR \"inflation data\"",
+      "classes": [
+        "factor_impulse"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

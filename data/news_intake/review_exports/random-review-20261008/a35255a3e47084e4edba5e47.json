@@ -1,0 +1,27 @@
+{
+  "title": "Oil Prices Edge Lower as Markets Assess U.S.-Iran Risks and Recovering Supply - Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPTVNDcGxOV2JmUVpVNzBFOGUtOGU0RFVRcHZBYlI2UlIxVGJoNG5wN3ZmQ09mQWo4Yld2NzRwWXhXdVl4UFJuSFpJbndKLTFFTi1jVXplMTRJd3JMb0V0T0dFbDJsSTBKN1BvbXlNMnRXV1Z0R1duaHVWU2VzNE96dUpFTmJfSjVsMjRDcFc4TQ?oc=5",
+  "publisher": "Yahoo Finance",
+  "body": "Oil Prices Edge Lower as Markets Assess U.S.-Iran Risks and Recovering Supply Yahoo Finance",
+  "published_at": "2026-10-02T09:02:32+00:00",
+  "published_raw": "Fri, 02 Oct 2026 09:02:32 GMT",
+  "source": "lane_regime_state",
+  "primary": false,
+  "query_classes": [
+    "regime_state"
+  ],
+  "query": "\"yield curve\" OR \"credit spreads\" OR \"oil prices\" OR \"market volatility\"",
+  "id": "a35255a3e47084e4edba5e47",
+  "first_seen": "2026-10-02T10:39:47.686277+00:00",
+  "observations": [
+    {
+      "source": "lane_regime_state",
+      "query": "\"yield curve\" OR \"credit spreads\" OR \"oil prices\" OR \"market volatility\"",
+      "classes": [
+        "regime_state"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+}

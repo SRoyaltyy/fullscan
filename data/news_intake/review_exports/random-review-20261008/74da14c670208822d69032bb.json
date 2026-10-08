@@ -1,0 +1,27 @@
+{
+  "title": "Zurich completes Beazley acquisition, creating world's largest specialty insurer - Slipcase",
+  "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWElvcmxpMHVyY2JWcFhnaGtYX2VMLUhRN3Rxb2lwQ1F3Y3Ftbk9HQU81aEJ3S3Q2OG1Rbjk1UTJLbFJ3aEpHTEw0QmpOTWtOTzBDSEtNM01vZUhySENhU0FIa1o5bWRTT2lXRjRteUNwQTNxb19MS05ZVEZMbkstN0xUcFB2eElGZ2lXZEFvTkpiLWdNdUtmSmdBdlZtMUVMQ08zbWV6MVd4dWhObXc?oc=5",
+  "publisher": "Slipcase",
+  "body": "Zurich completes Beazley acquisition, creating world's largest specialty insurer Slipcase",
+  "published_at": "2026-10-02T19:41:15+00:00",
+  "published_raw": "Fri, 02 Oct 2026 19:41:15 GMT",
+  "source": "lane_corporate_action_mna",
+  "primary": false,
+  "query_classes": [
+    "corporate_action_mna"
+  ],
+  "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+  "id": "74da14c670208822d69032bb",
+  "first_seen": "2026-10-04T06:30:58.699753+00:00",
+  "observations": [
+    {
+      "source": "lane_corporate_action_mna",
+      "query": "\"definitive agreement\" OR \"acquisition\" OR \"acquires\" OR \"to acquire\" OR \"merger agreement\" OR \"tender offer\"",
+      "classes": [
+        "corporate_action_mna"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

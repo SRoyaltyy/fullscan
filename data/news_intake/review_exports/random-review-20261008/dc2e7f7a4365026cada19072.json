@@ -1,0 +1,27 @@
+{
+  "title": "Council questions annual bus subsidy as service misses part of its route - Exmouth Journal",
+  "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQUxJaVRZSlRBRHRGNjdzNU1ZUFhKMzhQc05lcUdlMURFQ2NPWXMtaXdkVlYzd3RmMS11TVRCNXNud1hOd2VTVFFTM1BDVGF2T1E5MUgzNm9RWmlieS0yNWRzMFIzcHkyemprMFRRdHFITUdpbDYwTm9BaklMUkJwN3pqOEFrTUJGQWdqV1A1UnZxYlpjTUxSa0tPSUpBZjlwcGtaVExR?oc=5",
+  "publisher": "Exmouth Journal",
+  "body": "Council questions annual bus subsidy as service misses part of its route Exmouth Journal",
+  "published_at": "2026-10-02T04:00:00+00:00",
+  "published_raw": "Fri, 02 Oct 2026 04:00:00 GMT",
+  "source": "lane_subsidy",
+  "primary": false,
+  "query_classes": [
+    "subsidy"
+  ],
+  "query": "\"government grant\" OR \"subsidy\" OR \"subsidies\" OR \"tax credit awarded\"",
+  "id": "dc2e7f7a4365026cada19072",
+  "first_seen": "2026-10-02T16:30:58.602915+00:00",
+  "observations": [
+    {
+      "source": "lane_subsidy",
+      "query": "\"government grant\" OR \"subsidy\" OR \"subsidies\" OR \"tax credit awarded\"",
+      "classes": [
+        "subsidy"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T00:20:15.583897+00:00"
+}

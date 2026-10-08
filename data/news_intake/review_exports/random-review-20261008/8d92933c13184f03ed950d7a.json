@@ -1,0 +1,27 @@
+{
+  "title": "Trump rules out U.S. diesel export ban after G7 release - Transport Topics",
+  "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1kaEVxV1JxQ3ExV3ZBTk14cVlQVTN3Ml9aSWxVbHN1UDBKOTEzWFZXbVgyblZXRUVSSURjempEbEhleFgxRUdQcHpKRzZIdFQ5cXkzekhOdVQ1Q0prQXkzWElWZVFwd0dFV3c?oc=5",
+  "publisher": "Transport Topics",
+  "body": "Trump rules out U.S. diesel export ban after G7 release Transport Topics",
+  "published_at": "2026-10-02T21:24:26+00:00",
+  "published_raw": "Fri, 02 Oct 2026 21:24:26 GMT",
+  "source": "lane_access_control",
+  "primary": false,
+  "query_classes": [
+    "access_control"
+  ],
+  "query": "\"export controls\" OR \"export ban\" OR \"import ban\" OR \"license revoked\"",
+  "id": "8d92933c13184f03ed950d7a",
+  "first_seen": "2026-10-03T00:27:32.036405+00:00",
+  "observations": [
+    {
+      "source": "lane_access_control",
+      "query": "\"export controls\" OR \"export ban\" OR \"import ban\" OR \"license revoked\"",
+      "classes": [
+        "access_control"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

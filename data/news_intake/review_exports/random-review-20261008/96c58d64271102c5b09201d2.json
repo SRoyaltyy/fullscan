@@ -1,0 +1,27 @@
+{
+  "title": "Renault Partners with Thales to Boost Drone Production Capacity - gurufocus.com",
+  "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQaG5rQ2JpUDFzRVg4TGZDOE5wRVVQaFhhMXVHYVBBenl4N1RMOU5HMldYRzB0d2J4X2dRNzZjdU8zbVdKWTB1ckxWa09lZTJlMjlIZGZmMFZBYW93UjA2Q1NDeEg3Wk1VTGtkLVNuWkJBU0ZLR2Y4ZTMzYXI1U0Q2a19lV0hyT3NfX25oWXlqd01HRWdDRjUzdkIwMlBuVFoxWFh3VA?oc=5",
+  "publisher": "gurufocus.com",
+  "body": "Renault Partners with Thales to Boost Drone Production Capacity gurufocus.com",
+  "published_at": "2026-10-04T08:11:22+00:00",
+  "published_raw": "Sun, 04 Oct 2026 08:11:22 GMT",
+  "source": "lane_capacity",
+  "primary": false,
+  "query_classes": [
+    "capacity"
+  ],
+  "query": "\"opens plant\" OR \"production capacity\" OR \"expands manufacturing\" OR \"new factory\"",
+  "id": "96c58d64271102c5b09201d2",
+  "first_seen": "2026-10-04T12:34:35.203969+00:00",
+  "observations": [
+    {
+      "source": "lane_capacity",
+      "query": "\"opens plant\" OR \"production capacity\" OR \"expands manufacturing\" OR \"new factory\"",
+      "classes": [
+        "capacity"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

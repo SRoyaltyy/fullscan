@@ -1,0 +1,27 @@
+{
+  "title": "Dow Jones Futures Rise, Oil Prices Tumble With Tesla, Jobs Due; Nike, Seagate, Western Digital Are Big Losers - Investor's Business Daily",
+  "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQTTd2a2FIVjFmYS1OOW1wTmRyRE9fVDRZQ3oybTdtWWlYUUhCTDUyU3Q5RUQtOXNTRGF5NVVYQXR5aXluWms2ZkV2c2pyeHlDaTV5MUlCY2xIS1haQzZ6RnlmWjFTaFprSkliY1lqUHllSzR3UzhQSzZFTVluQmhpOGVtZXNiUzJJbV9ZVE9SUGQtQXZFcFJBQ1Zrd0JjdmxUQUltU2lSaFpDR0NzamhhQVJaa1RxQ3JTRVRIUm52bXNMLXRBbGRxYTdnY2hraXFC?oc=5",
+  "publisher": "Investor's Business Daily",
+  "body": "Dow Jones Futures Rise, Oil Prices Tumble With Tesla, Jobs Due; Nike, Seagate, Western Digital Are Big Losers Investor's Business Daily",
+  "published_at": "2026-10-02T12:07:00+00:00",
+  "published_raw": "Fri, 02 Oct 2026 12:07:00 GMT",
+  "source": "lane_regime_state",
+  "primary": false,
+  "query_classes": [
+    "regime_state"
+  ],
+  "query": "\"yield curve\" OR \"credit spreads\" OR \"oil prices\" OR \"market volatility\"",
+  "id": "05ff4fc013043ef483d3a10a",
+  "first_seen": "2026-10-02T10:39:47.686277+00:00",
+  "observations": [
+    {
+      "source": "lane_regime_state",
+      "query": "\"yield curve\" OR \"credit spreads\" OR \"oil prices\" OR \"market volatility\"",
+      "classes": [
+        "regime_state"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Trump slaps additional 50% tariff on certain Canadian goods - ABC News - Breaking News, Latest News and Videos",
+  "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPdDZTVjFHZXBWcUoteUpOakQ0T016RDVlQWxGR19KYnhEeEdfQzV3UmVLNkdEbWVCckxFbHZsNjhpcW9HQktmWGd5RmtobE1fWTJ4TnpqQlRZZDJRTUs2QzU4eW9zNl9ZeEpfRFk0OVRRTzRBVUJYS1F0dTFWRlNqNUFNV0taQU81MnBWbHd1MG5rendjb1g1X290RdIBoAFBVV95cUxPX09ka2RKeVgzdHdOWERZWHFGNWhmeWk0bHE5b0V3T3B0X19JQzZfcVQ0SHFkNXRBLWp3Sk1QMWduVU5sdy1DektIa19VeWtwTGNuNy1lbnU0OW0wazRjN1ZQdWJZdlp1N2kwSjc3RVhBaG40eFZTN0xTbE5xTHMyenZZazdlOXdqSHhrbkZrcTlzOGZiX3BnTy1tSThqTm1G?oc=5",
+  "publisher": "ABC News - Breaking News, Latest News and Videos",
+  "body": "Trump slaps additional 50% tariff on certain Canadian goods ABC News - Breaking News, Latest News and Videos",
+  "published_at": "2026-10-03T21:14:22+00:00",
+  "published_raw": "Sat, 03 Oct 2026 21:14:22 GMT",
+  "source": "topic_geopolitics",
+  "primary": false,
+  "query_classes": [],
+  "query": "\"sanctions\" OR \"tariffs\" OR \"ceasefire\" OR \"Strait of Hormuz\"",
+  "id": "be9f4e33195a80d66a5483f1",
+  "first_seen": "2026-10-02T10:39:47.686277+00:00",
+  "observations": [
+    {
+      "source": "topic_geopolitics",
+      "query": "\"sanctions\" OR \"tariffs\" OR \"ceasefire\" OR \"Strait of Hormuz\"",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

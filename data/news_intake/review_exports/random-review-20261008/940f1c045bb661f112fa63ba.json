@@ -1,0 +1,27 @@
+{
+  "title": "Selangor expands RM30 monthly transport subsidy to KTM Komuter services, effective immediately - Malay Mail",
+  "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNYi1yWmVJRlBDeERCcFN3LWlfTUtPX2ZaM2trZl90THp5MG9CNDR2c3pvMWJjVDVDVW1kVDFsQUt1dVJ3N1JlV2NiMnRIS0ZfVU5mUW9uRUNQWnFuUWpIcm8tVHh5RzU0Q1dvUC1WZG5YOEZLcGJfZ3NYaXFNVHlya2ZLdGlMcUhMZ1NIZWxqTTZmUmZCMUhxWUp0R3ZEUkhsNkNpQWR4azFKOWlzRGtrV0xZaDRPbEpaT2d0TzEzeVJBR3JrUzkxbFN1cDBLNUh6dDZydTVnLXR0MS0tS1pxTmRPVnFTQdIB6wFBVV95cUxQdnkxX0FRTzJzVHNZTlZRSUd2cHV6bmtPMDV3Rkt1ZEdUN3VPeE9uc2hBVVlwVkRrTjlUQTMxT2hXbkU3THV4TzFWRDhJMHQzTUVRZks0YkwtS0xkQmNYTlBrMDEzYXVZVVF2QTRhQ3lTYUxMZ0E4QkJUYVJIWFEzNUVjNU0ydURPbUprdmtHM0hIcVZfVE9FMW1nYWZZRHpCYmxRSlRkNGpId2dDU3FZbHM3WEFoMXk2TGlFbkZGc1M2MzhYUDJZNHRudXhXWEJvaDMwUUE3T1VsZ2VuS1ZWNFBwMUpoVURTNjZv?oc=5",
+  "publisher": "Malay Mail",
+  "body": "Selangor expands RM30 monthly transport subsidy to KTM Komuter services, effective immediately Malay Mail",
+  "published_at": "2026-10-02T04:26:45+00:00",
+  "published_raw": "Fri, 02 Oct 2026 04:26:45 GMT",
+  "source": "lane_subsidy",
+  "primary": false,
+  "query_classes": [
+    "subsidy"
+  ],
+  "query": "\"government grant\" OR \"subsidy\" OR \"subsidies\" OR \"tax credit awarded\"",
+  "id": "940f1c045bb661f112fa63ba",
+  "first_seen": "2026-10-02T16:30:58.602915+00:00",
+  "observations": [
+    {
+      "source": "lane_subsidy",
+      "query": "\"government grant\" OR \"subsidy\" OR \"subsidies\" OR \"tax credit awarded\"",
+      "classes": [
+        "subsidy"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T00:20:15.583897+00:00"
+}

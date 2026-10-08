@@ -1,0 +1,27 @@
+{
+  "title": "FDA approves Jaypirca for first-line CLL/SLL treatment - Investing.com",
+  "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSkRkX2gycV95V1NpWkROWk9zbHdLeGhrbnFwb0FUQjF3cGhtb2d0MVFjalc5cUNucmxjNC14bTZTVjZjd19OTm5KSzh6UUgtSUwwYVB2WUlEMjZKRk9qSTUxM2pkTmVjRzBZNlEwWS0xMFlBd1FMd0pfMmdGSFBIWUZ6Sm5qRjN3eEF4NE1ZU2FKYTh5WUVpMHNZZXJ6Y2xGcGQwaDFRLU1ONVZFWXc?oc=5",
+  "publisher": "Investing.com",
+  "body": "FDA approves Jaypirca for first-line CLL/SLL treatment Investing.com",
+  "published_at": "2026-10-02T19:41:00+00:00",
+  "published_raw": "Fri, 02 Oct 2026 19:41:00 GMT",
+  "source": "lane_gate",
+  "primary": false,
+  "query_classes": [
+    "gate"
+  ],
+  "query": "\"FDA approves\" OR \"FDA approval\" OR \"FDA clears\" OR \"FDA clearance\" OR \"complete response letter\" OR \"marketing authorization\"",
+  "id": "f8342323625367307e8763aa",
+  "first_seen": "2026-10-03T05:55:16.025544+00:00",
+  "observations": [
+    {
+      "source": "lane_gate",
+      "query": "\"FDA approves\" OR \"FDA approval\" OR \"FDA clears\" OR \"FDA clearance\" OR \"complete response letter\" OR \"marketing authorization\"",
+      "classes": [
+        "gate"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

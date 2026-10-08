@@ -1,0 +1,27 @@
+{
+  "title": "American Battery Technology Company gets BIS export license for up to $100M of recycled black mass - TradingView",
+  "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxONzRJYy1UbjNuTFNGU2o1Qmtjb0Y5Q256akVlUFM3dDNKWFNzUFRCUkJ3STBQYWgwMzAxN2RVNzhBYV9YMEQyUVhTNWxJUklaUkdXaWFWcEZlcXV4YmZDVUFPbDRyY055dzRUYnpYX3h1SUFCZDBqOFAtMlkzZEZUTXdRcGlBZmlIdXB5bm9oNmNYME1xYm91OWx3X282ekNuRTRhQjExRVVUZG84bkZSLThOMkVzTjRvYllvUGhwdkxscUlwR1U4dG9hd2NNWU9pUjhqSFJQUHpjRlo5M2RjNG1lOHlBdXcxNEVkcVRtS0U?oc=5",
+  "publisher": "TradingView",
+  "body": "American Battery Technology Company gets BIS export license for up to $100M of recycled black mass TradingView",
+  "published_at": "2026-10-01T20:53:01+00:00",
+  "published_raw": "Thu, 01 Oct 2026 20:53:01 GMT",
+  "source": "lane_access_control",
+  "primary": false,
+  "query_classes": [
+    "access_control"
+  ],
+  "query": "\"export controls\" OR \"export ban\" OR \"import ban\" OR \"license revoked\"",
+  "id": "70c896216f79726c485f7f82",
+  "first_seen": "2026-10-02T16:30:58.602915+00:00",
+  "observations": [
+    {
+      "source": "lane_access_control",
+      "query": "\"export controls\" OR \"export ban\" OR \"import ban\" OR \"license revoked\"",
+      "classes": [
+        "access_control"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-03T18:54:45.080626+00:00"
+}

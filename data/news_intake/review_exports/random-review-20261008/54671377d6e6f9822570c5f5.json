@@ -1,0 +1,27 @@
+{
+  "title": "Global steel markets reflect divergent trends in Sept'26 as regional supply dynamics shape prices - BigMint",
+  "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOVnNpNE00SUhHTTFleGhUM296R21qbnZ4b1hnd1h6d2cwNXNPWjc1SUJSX0h1LUl2Z2J0YlpqUVZOZVBOTDZlRXNiVjZwRDJjaEV3cE5pU2dXa25rOVpyb3NLTU0xY1F1Y3JjWVluV2FKbEx5R282NmFJbjhuSUtWdmRETUlUZndiTHpGM3ViNndIWDNnLUZJVVUySElCcldZNFUwWWNYVUtCSVktdVdfNjFHSlZfeUpxWUtMYnVndV92X1I1blAwRlN4REp0TWswSHAyd0F3Q0ZjZw?oc=5",
+  "publisher": "BigMint",
+  "body": "Global steel markets reflect divergent trends in Sept'26 as regional supply dynamics shape prices BigMint",
+  "published_at": "2026-10-04T02:28:49+00:00",
+  "published_raw": "Sun, 04 Oct 2026 02:28:49 GMT",
+  "source": "lane_input_cost",
+  "primary": false,
+  "query_classes": [
+    "input_cost"
+  ],
+  "query": "\"input costs\" OR \"fuel surcharge\" OR \"raw material costs\"",
+  "id": "54671377d6e6f9822570c5f5",
+  "first_seen": "2026-10-04T12:34:35.203969+00:00",
+  "observations": [
+    {
+      "source": "lane_input_cost",
+      "query": "\"input costs\" OR \"fuel surcharge\" OR \"raw material costs\"",
+      "classes": [
+        "input_cost"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

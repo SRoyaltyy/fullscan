@@ -1,0 +1,27 @@
+{
+  "title": "Jabil (NYSE:JBL) Posts Quarterly Earnings Results, Beats Estimates By $0.35 EPS - MarketBeat",
+  "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQQldJNmZMbk1UNUw0cUhIRjJnNXI0anI3NTlQend0Um9kSWpxdlFpY255bnBqU0xmUEFsSWU1eTFfSHhTWnJDTzJvU1ktZHNqTXNPSVBxYjYwMGxNVHo2VWNueGtySU1WR2JGVHlyNHRtYUVTbnlkY3JLaFk4NVZWU1R3N2t5c3RjZmkxS1F4ckhNRjZWUTJfbXRsVmRTTkUwN3A3SWsxMnQwcFlIdFR6T0REWlNpUnJrMHE2d25mSVQyRWR6b0JESEtBTkd2Nlg3cUJQSHQ4aw?oc=5",
+  "publisher": "MarketBeat",
+  "body": "Jabil (NYSE:JBL) Posts Quarterly Earnings Results, Beats Estimates By $0.35 EPS MarketBeat",
+  "published_at": "2026-10-03T09:55:44+00:00",
+  "published_raw": "Sat, 03 Oct 2026 09:55:44 GMT",
+  "source": "lane_print_vs_priced",
+  "primary": false,
+  "query_classes": [
+    "print_vs_priced"
+  ],
+  "query": "\"earnings results\" OR \"reports earnings\" OR \"quarterly results\" OR \"CPI report\" OR \"PCE inflation\" OR \"jobs report\" OR \"GDP report\"",
+  "id": "ee13016086edb8a24e30a663",
+  "first_seen": "2026-10-02T16:30:58.602915+00:00",
+  "observations": [
+    {
+      "source": "lane_print_vs_priced",
+      "query": "\"earnings results\" OR \"reports earnings\" OR \"quarterly results\" OR \"CPI report\" OR \"PCE inflation\" OR \"jobs report\" OR \"GDP report\"",
+      "classes": [
+        "print_vs_priced"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

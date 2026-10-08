@@ -1,0 +1,27 @@
+{
+  "title": "Alibaba and Solaria Reportedly in Talks Over Power Supply for Spanish Data Center - 联合日报",
+  "url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxQeVNHVndzNGQwZ0RIYmVJYk9jUVhVZjEySnQ2YnNTOTNvNDdVMElzOXBTbHJCOUV5UjhmY3RzdTMzV3RfRHRLRVFac2hQTGNuU2UtVmc0dlRfemNNWExBbUVrdVkxeUdxT2dRT3p3c0trdUJqM2dfYmlnTmZzakwwLXc4aDF3RXkzbFUwd2RnZ1N1QmR1SHc0ak5ZT0dzSk91c2J4VUM3a1R5TVM3aUtXeGM4V0labDY4ZmF3ekhDQ0VnLXdWcXRaUloyQnNRRFFIOGJCRWo5MnlGa0tkZDB4VHFKaTVWdVpBbU44QWp4UDktd0lDUGZVMHV5RzJTS05laVNHT0JxeVdfemw5OXgwRFNjR2RnazkwSDVtVGJkWFliOGVZdklrSlJNaEN3LTBvaWkwdkxTMXRVak91MW9iUjlGMkdYYVpHVjR5bjUxdXdhZHdkeXNWUU1RVFkzOVBVN3IxM0ZxMko1dw?oc=5",
+  "publisher": "联合日报",
+  "body": "Alibaba and Solaria Reportedly in Talks Over Power Supply for Spanish Data Center 联合日报",
+  "published_at": "2026-10-04T03:41:20+00:00",
+  "published_raw": "Sun, 04 Oct 2026 03:41:20 GMT",
+  "source": "lane_rumor",
+  "primary": false,
+  "query_classes": [
+    "rumor"
+  ],
+  "query": "\"reportedly in talks\" OR \"rumored acquisition\" OR \"leaked filing\"",
+  "id": "ae6bf7ea71b81602b33f335c",
+  "first_seen": "2026-10-04T12:34:35.203969+00:00",
+  "observations": [
+    {
+      "source": "lane_rumor",
+      "query": "\"reportedly in talks\" OR \"rumored acquisition\" OR \"leaked filing\"",
+      "classes": [
+        "rumor"
+      ]
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}

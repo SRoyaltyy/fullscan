@@ -1,0 +1,23 @@
+{
+  "title": "Adviser-linked entities agree to buy $10 shares in Hall Chadwick (HCAC) if its REEcycle merger closes. - Stock Titan",
+  "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPaXR1UUp6a0NLcjRMSldUT2pnb0N0RDBFT3ZPazVQV2lMLURONGNubFoyLWozS0VMZVlLZ2ExZDV2ZFlzakcwY3FqY29MclBzSVJkQkdLcE9mWGJXeEpha05KYmJKUXNiX1dEYmdIMjd5YzA2TU11MmgwMGVSN3NuZnJ5LWFsX2U1QmxFTjhpTHlienZnWEE1SW5ZRWFXeEZ1alVxbE9oRU8xUUhXYTI5WWtKRVdROEtjdm9z?oc=5",
+  "publisher": "Stock Titan",
+  "body": "Adviser-linked entities agree to buy $10 shares in Hall Chadwick (HCAC) if its REEcycle merger closes. stocktitan.net",
+  "published_at": "2026-10-02T13:01:29+00:00",
+  "published_raw": "Fri, 02 Oct 2026 13:01:29 GMT",
+  "source": "sec_8-K:google_fallback",
+  "primary": false,
+  "query": "\"8-K\" (filed OR filing OR announces)",
+  "query_classes": [],
+  "id": "8b691e846214e0ada11bda6c",
+  "first_seen": "2026-10-02T16:30:15.020552+00:00",
+  "observations": [
+    {
+      "source": "sec_8-K:google_fallback",
+      "query": "\"8-K\" (filed OR filing OR announces)",
+      "classes": []
+    }
+  ],
+  "extraction_status": "feed_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+}
