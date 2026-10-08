@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T09:03:34.631371-04:00",
+  "generated_at": "2026-10-08T09:03:41.453650-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -354,7 +354,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 8372,
+          "size": 8301,
           "said": "all_ok=True \u00b7 sectors 8/11 \u00b7 4 fail",
           "bullets": [
             "finviz_market_digest:missing",
@@ -370,7 +370,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7369,
+          "size": 7337,
           "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=False",
           "bullets": []
         },
@@ -3000,6 +3000,24 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-4.882** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.385** (ES -0.39%, ZN -0.03%, PM:XLU -0.27%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **-1.8** (raw -1.8) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (98,503 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10-year Treasury yield 5.3% October 8 2026 auction utilities\"* \u2192 got 6 results (via gnews_rss)\n- Fed Minutes Put Another Hike on the Table as the 10-Year Auction Clears at 5.3% - ChartMill (https://news.google.com/rss/articles/CBMiyAFBVV95cUxOajRLbXB4c0VvY0lteWZzVjc3ZGYxLTVhOHVfZEtRUFBJN0xjUXdubUh4S1dZYjdsdDUtNWFUWEJyc3pPOW1CSEZDR1kxVFVUbzV5VXE1cmxiSGJvUE5PYTdvYnhoTkJGVjJENUpHLXlzTnJOZW9SaXpQYU1s"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:03:40.200954-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-08",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "8/8 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, financial, real_estate, technology, utilities"
+        }
+      ],
+      "preview": "8/8 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, financial, real_estate, technology, utilities"
     }
   ],
   "href": {
