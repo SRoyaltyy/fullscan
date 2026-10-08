@@ -1,12 +1,12 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T04:41:22.534481-04:00",
+  "generated_at": "2026-10-08T04:41:36.974197-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 3,
-    "partial": 3,
-    "fail": 2,
+    "partial": 4,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-10-08",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-08T04:31:30.695764-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-08_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 275105,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-08_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 19043,
-          "preview": "# MAP HEAT \u2014 2026-10-08\nExport `finviz_2026-10-07.csv` \u00b7 11616 names \u00b7 generated 2026-10-08T04:20:26.261078-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-08\nExport `finviz_2026-10-07.csv` \u00b7 11616 names \u00b7 generated 2026-10-08T04:20:26.261078-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -185,6 +160,31 @@
         }
       ],
       "preview": "15 events \u00b7 FOMC minutes signal another rate hike likely before year-end | US Treasuries spike; 30-year yield hits multi-decade high near 5.70% | Wall Street slips from records as yields and oil rise | Brent crude holds above $100 on Middle East risk | Russian strikes on Ukraine kill dozens; EU releases \u20ac1.24bn for drones | Israel marks third anniversary of October 7 attacks amid West Bank vio \u00b7 # Event Scan \u2014 2026-10-08\n- events tracked: **15** (via repair, repaired)\n- uncertainty: **elevated**\n- summary: On 2026-10-08 markets are digesting hawkish Sept FOMC minutes, a multi-decade spike in long Treasury yields, and $100+ oil while Ukraine strikes, Israel anniversary tensions, and Hurricane Isaias add geopolitical and physical-risk overlays. Near-term data are light (claims, PepsiCo), with the real macro tests still ahead: Sept CPI on Oct 14, bank earnings around Oct 13, and the Oct 27-28 FOMC."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T04:41:35.811423-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-08_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 104488,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-08_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 21340,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-08T04:41:35.775702-04:00\nraw=10443 unique_events=10 tickers=133"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-08T04:41:35.775702-04:00\nraw=10443 unique_events=10 tickers=133"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
