@@ -1402,6 +1402,64 @@ def check_pages(report: Report, date: str) -> None:
              detail=str(e)[:160], path=PAGES_URL)
 
 
+_DAY_JSON = re.compile(r"^(\d{4}-\d{2}-\d{2})\.json$")
+
+
+def _latest_json_day(folder: Path, pattern: str) -> str:
+    """Newest YYYY-MM-DD.json under folder. Sidecars such as .sha256 are ignored."""
+    if not folder.is_dir():
+        return ""
+    days = []
+    for path in folder.glob(pattern):
+        match = _DAY_JSON.match(path.name)
+        if match:
+            days.append(match.group(1))
+    return max(days) if days else ""
+
+
+def oos0914_gap() -> tuple[str, str]:
+    """Latest OOS0914 state date and ledger date. Empty when that tree is absent.
+
+    A failed append writes the new session's state and then refuses the
+    ledger, so the state date is left newer than the ledger date.
+    """
+    base = ROOT / "data" / "factor_mine" / "oos0914"
+    state = _latest_json_day(base / "state", "*/*.json")
+    ledger = _latest_json_day(base / "ledgers", "*.json")
+    return state, ledger
+
+
+def check_oos0914(report: Report) -> None:
+    """WARN when the latest OOS state date is ahead of the latest ledger date.
+
+    This is the leftover of a land_closed run that logged OOS0914_APPEND_FAILED.
+    It does not fail the health job and it is not healable.
+    """
+    print("\n== J. OOS0914 LEDGER VS STATE ==", flush=True)
+    state, ledger = oos0914_gap()
+    base = ROOT / "data" / "factor_mine" / "oos0914"
+    if state and (not ledger or state > ledger):
+        prior = ledger or "none"
+        _add(report, step="oos0914.append",
+             name=f"OOS0914 append failed {state}",
+             group="oos0914", status="WARN", required=False,
+             detail=(
+                 f"OOS0914_APPEND_FAILED {state}: "
+                 f"state {state} newer than ledger {prior}"
+             ),
+             path=str(base / "ledgers" / f"{state}.json"))
+        return
+    if state or ledger:
+        detail = f"state {state or 'none'} ledger {ledger or 'none'}"
+    else:
+        detail = "no OOS0914 state or ledger"
+    _add(report, step="oos0914.append",
+         name="OOS0914 ledger matches state",
+         group="oos0914", status="OK", required=False,
+         detail=detail,
+         path=str(base / "ledgers" / f"{ledger}.json") if ledger else str(base))
+
+
 # ---------------------------------------------------------------------------
 # Heal
 # ---------------------------------------------------------------------------
@@ -1858,6 +1916,7 @@ def audit(job: str, date: str, source: str, target: str, book: str,
         check_outcomes(report, book)
         check_learning(report, book)
         check_pages(report, book)
+    check_oos0914(report)
     return report
 
 
@@ -1871,6 +1930,16 @@ def render(report: Report, fix_actions: list[str] | None = None) -> str:
         f"**result={'PASS' if report.ok else 'FAIL'}**  "
         f"required_fails={report.n_fail}  warns={report.n_warn}",
         "",
+    ]
+    gap = next(
+        (c for c in report.checks
+         if c.step == "oos0914.append" and c.status == "WARN"),
+        None,
+    )
+    if gap:
+        lines.append(f"**WARNING** {gap.detail}")
+        lines.append("")
+    lines += [
         "Heal loop: audit → fix OpenClaw door / timers on this box → "
         "start systemd or spawn the owning ECS job (ubuntu workflows are "
         "GH-dispatched with force=true) → wait for files → re-audit. "
