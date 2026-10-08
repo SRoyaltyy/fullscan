@@ -7038,5 +7038,106 @@
       "status": "BEFORE_1330"
     },
     "sha256": "9a06c2726d42259e8e8cd2fd4c418a65c0d8b6ed4bfced35bda371816a5c5ec3"
+  },
+  {
+    "buys": [
+      {
+        "fee": 15.9186,
+        "fill": 2.0,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 23334,
+        "rank": 1,
+        "shares": 1234,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "NAUT"
+      },
+      {
+        "fee": 2.092,
+        "fill": 72.5,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 28239,
+        "rank": 4,
+        "shares": 34,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "PENG"
+      }
+    ],
+    "cash_primary": 18.41070278877669,
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-10-08",
+    "excluded_on_fill": [],
+    "holdings": [
+      {
+        "cost_primary": 2491.4358457299995,
+        "entry_date": "2026-10-07",
+        "entry_px": 91.739998,
+        "last_px": 90.010002,
+        "min_hold": 1,
+        "peak_px": 91.739998,
+        "shares": 27,
+        "ticker": "KOD"
+      },
+      {
+        "cost_primary": 2496.2585999999997,
+        "entry_date": "2026-10-08",
+        "entry_px": 2.0,
+        "last_px": 2.0,
+        "min_hold": 1,
+        "peak_px": 2.0,
+        "shares": 1234,
+        "ticker": "NAUT"
+      },
+      {
+        "cost_primary": 2479.417,
+        "entry_date": "2026-10-08",
+        "entry_px": 72.5,
+        "last_px": 72.5,
+        "min_hold": 1,
+        "peak_px": 72.5,
+        "shares": 34,
+        "ticker": "PENG"
+      },
+      {
+        "cost_primary": 3331.6608,
+        "entry_date": "2026-09-30",
+        "entry_px": 2.7,
+        "last_px": 2.47,
+        "min_hold": 1,
+        "peak_px": 9.71,
+        "shares": 1222,
+        "ticker": "SDEV"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "open_fill",
+    "morning_s": null,
+    "open_source": "yahoo_split_adjusted_daily_open",
+    "plan_sha256": "9a06c2726d42259e8e8cd2fd4c418a65c0d8b6ed4bfced35bda371816a5c5ec3",
+    "pnl_status": "pending",
+    "recipe": "union_hot_n4_h1__w0",
+    "sells": [
+      {
+        "fee": 2.0324,
+        "fill": 436.149994,
+        "reason": "hold-expired",
+        "shares": 5,
+        "ticker": "CIEN"
+      },
+      {
+        "fee": 2.2632,
+        "fill": 31.049999,
+        "reason": "hold-expired",
+        "shares": 80,
+        "ticker": "OPCH"
+      }
+    ],
+    "sha256": "e2a5b9f5950259e0479eca48de458ba8283f34032dcc5cfac08aa53de519ecba",
+    "unfilled": []
   }
 ]
