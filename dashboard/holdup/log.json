@@ -4900,5 +4900,13 @@
     "reason": "missing: plan not sealed before open",
     "recipe": "union_hot_n4_holdup__w0",
     "sha256": "a9802e1eff9eaf4ed7931624db8cd2436b856beed6dd39d1770a7e1abf64e9be"
+  },
+  {
+    "committed_at": "2026-10-08T19:12:58Z",
+    "date": "2026-09-30",
+    "kind": "missing",
+    "reason": "missing: plan not sealed before open",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "e92d13fbf826e7f423462bf1912bcd373cc98cd44534f1c911d6b0682f52fbcc"
   }
 ]
