@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-08",
+  "files": [
+    {
+      "bytes": 7807112,
+      "path": "data/factor_mine/panel.json",
+      "sha256": "7734b15c59b43f43e23c59630e3c16e7337ed0848c972ce7f2eecf4bf416b794"
+    },
+    {
+      "path": "01_daily/general/2026-10-08_predict.md",
+      "sha256": "0084c8e1995541f7c2627358f467651a82ff1d1252d1687d42a337f6e1131e03"
+    },
+    {
+      "path": "01_daily/news/2026-10-08_actions.json",
+      "sha256": "855b86cccb80ccb68ff7ae6b59d31c0dcfd8312ec694a9c168cd4b16f6b9caba"
+    },
+    {
+      "path": "01_daily/news/2026-10-08_finviz_digest.json",
+      "sha256": "ef14f19d2578fa92f272833132f03cf0929ecd8354279d3e5ce07e5bb28049e1"
+    },
+    {
+      "path": "01_daily/news/2026-10-08_judge.md",
+      "sha256": "908d55073804eabf5b89dc0a431f92e5cf24396571b75fa09f65e1f6e957c7b0"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-08/_board.json",
+      "sha256": "d3e460c89696e404189e1a4e243569f1a56791df20d7043095a1b0c749ded407"
+    },
+    {
+      "path": "01_daily/weather/2026-10-08_weather.json",
+      "sha256": "b7ab44f1d7c46b86733a655c42960db944af8e13034ac68bd54248d80588086d"
+    },
+    {
+      "path": "data/ab_checklist/2026-10-08_ab_checklist_enriched.csv",
+      "sha256": "050da07db194bcf14a0a9aa022bd0602d815d2749461e6319c5554d7cd54a5b6"
+    },
+    {
+      "path": "data/join/2026-10-08_ranked.csv",
+      "sha256": "0a7b239669f697e96a839b93d7cb00f428db6b0b54e13c7379d1ad22b40abe58"
+    },
+    {
+      "path": "data/peers/2026-10-08_peer_rs.csv",
+      "sha256": "ddfb7334677cd9faeca962d70765b32d2761a81b9eb437bd02384acd0fa85445"
+    },
+    {
+      "path": "data/sleeve_merge/today.json",
+      "sha256": "c58e254582a8fb38234d43ab36a04ab7bb4049ce8cb505ba836068a5c1d4b1ee"
+    },
+    {
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "sha256": "8b661ecd76ecc07619b468393d3a32b6e4eddc97ebf3f4be3e109f4618fdcdbc"
+    }
+  ],
+  "picks": {
+    "union_hot_n4_h1": [
+      "NAUT",
+      "KOD",
+      "SDEV",
+      "PRME"
+    ],
+    "union_hot_n4_holdup": [
+      "NAUT",
+      "KOD",
+      "SDEV",
+      "PRME"
+    ]
+  },
+  "prices": [
+    {
+      "px": 1.16,
+      "px_src": "session_export",
+      "ticker": "NAUT"
+    },
+    {
+      "px": 85.3,
+      "px_src": "session_export",
+      "ticker": "KOD"
+    },
+    {
+      "px": 1.62,
+      "px_src": "session_export",
+      "ticker": "SDEV"
+    },
+    {
+      "px": 2.88,
+      "px_src": "session_export",
+      "ticker": "PRME"
+    }
+  ],
+  "reason": "",
+  "rows": [],
+  "sha256": "8b33d9ca2792a1e6bd55291c45c5bfe2c0f4c5535791b617b6dd3f2564937a4f",
+  "source": "no_same_day_panel"
+}

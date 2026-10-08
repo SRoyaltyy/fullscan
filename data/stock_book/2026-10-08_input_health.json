@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:20:35.537987-04:00",
+  "generated_at": "2026-10-08T08:41:37.902337-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -82,16 +82,16 @@
     {
       "name": "general_predict",
       "family": "general",
-      "status": "missing",
+      "status": "ok",
       "n": null,
-      "detail": "s_general=0 \u2014 weight renormalized away"
+      "detail": ""
     },
     {
       "name": "sector_predicts",
       "family": "sector",
-      "status": "missing",
-      "n": 0,
-      "detail": "0/11 quality"
+      "status": "degraded",
+      "n": 4,
+      "detail": "4/11 quality"
     },
     {
       "name": "price_store",
@@ -107,8 +107,8 @@
     "ab": "ok",
     "peer": "ok",
     "heat": "ok",
-    "general": "missing",
-    "sector": "missing"
+    "general": "ok",
+    "sector": "degraded"
   },
   "families_present": {
     "join": true,
@@ -116,9 +116,9 @@
     "ab": true,
     "peer": true,
     "heat": true,
-    "general": false,
-    "sector": false
+    "general": true,
+    "sector": true
   },
   "learn_grade": true,
-  "worst": "missing"
+  "worst": "stale"
 }
