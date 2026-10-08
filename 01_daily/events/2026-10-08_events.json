@@ -1,0 +1,387 @@
+{
+  "scan_date": "2026-10-08",
+  "events": [
+    {
+      "title": "FOMC minutes signal another rate hike likely before year-end",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-10-07",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "financials",
+        "rates",
+        "housing",
+        "banks"
+      ],
+      "expected_direction": "bearish",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "September minutes showed a unanimous 25 bp hike and most officials seeing another increase by year-end to fight inflation still well above 2%, reinforcing a higher-for-longer path after the first hike in over three years.",
+      "what_to_watch": "Odds for the Oct 27-28 FOMC (hold vs hike), Fed speeches, and whether December remains the preferred follow-up window.",
+      "status": "new",
+      "sources": [
+        "https://www.cnbc.com/2026/10/07/fed-officials-see-another-hike-coming-but-no-sign-as-to-when-minutes-show.html",
+        "https://www.reuters.com/business/fed-minutes-could-detail-rate-hike-decision-policy-path-2026-10-07/"
+      ]
+    },
+    {
+      "title": "US Treasuries spike; 30-year yield hits multi-decade high near 5.70%",
+      "category": "macro_data",
+      "timing": "today",
+      "date_or_window": "2026-10-07/08",
+      "regions": [
+        "US",
+        "global"
+      ],
+      "sectors": [
+        "financials",
+        "housing",
+        "banks",
+        "tech"
+      ],
+      "expected_direction": "bearish",
+      "impact": 5,
+      "confidence": "high",
+      "why_it_matters": "The 10-year near 5.3% and 30-year around 5.70% pulled equities off record highs, hit banks and homebuilders, and revived inflation/debt-supply concerns after a $39bn 10-year auction.",
+      "what_to_watch": "Whether yields ease after the auction, curve steepening, and knock-on to mortgages, banks, and duration-sensitive growth stocks.",
+      "status": "new",
+      "sources": [
+        "https://hdfcsky.com/news/dow-falls-341-points-as-30-year-treasury-yield-hits-5-70percent-pressuring-us-markets-october-8-2026",
+        "https://www.freemalaysiatoday.com/category/business/2026/10/08/wall-street-ends-lower-after-record-highs-as-treasury-yields-climb"
+      ]
+    },
+    {
+      "title": "Wall Street slips from records as yields and oil rise",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-10-07",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "equities",
+        "banks",
+        "energy",
+        "housing"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Dow fell about 0.66% to ~51,180, S&P 500 and Nasdaq each ~0.22% lower, snapping winning streaks as small-caps and banks lagged; futures were steadier into Oct 8.",
+      "what_to_watch": "Intraday follow-through vs bounce, bank relative performance, and whether oil/yields keep pressuring multiples.",
+      "status": "new",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-07/stock-market-today-dow-s-p-live-updates",
+        "https://upstox.com/news/market-news/us-stocks/nasdaq-s-and-p-500-dow-jones-slip-as-bold-yields-climb-banking-stocks-down/article-201488/"
+      ]
+    },
+    {
+      "title": "Brent crude holds above $100 on Middle East risk",
+      "category": "geopolitical",
+      "timing": "ongoing",
+      "date_or_window": "2026-10-08",
+      "regions": [
+        "Middle East",
+        "global"
+      ],
+      "sectors": [
+        "energy",
+        "airlines",
+        "consumer"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "Elevated oil feeds inflation and the Fed's hawkish bias while supporting energy producers and pressuring rate-sensitive and consumer names.",
+      "what_to_watch": "Brent staying above $100, gasoline/pass-through, and any escalation that would tighten supply further.",
+      "status": "carried",
+      "sources": [
+        "https://www.bloomberg.com/news/articles/2026-10-07/stock-market-today-dow-s-p-live-updates",
+        "https://www.reuters.com/business/wall-st-futures-slip-yields-oil-rebound-fed-minutes-focus-2026-10-07/"
+      ]
+    },
+    {
+      "title": "Russian strikes on Ukraine kill dozens; EU releases €1.24bn for drones and munitions",
+      "category": "geopolitical",
+      "timing": "today",
+      "date_or_window": "2026-10-08",
+      "regions": [
+        "Ukraine",
+        "EU",
+        "Russia"
+      ],
+      "sectors": [
+        "defense",
+        "energy"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "Missile/drone attacks killed an estimated 20-28 people, Zelenskyy pressed for more Patriots, and Brussels funded Ukrainian drones/munitions, keeping European security and energy-risk premia elevated.",
+      "what_to_watch": "Air-defense deliveries, further EU/US aid, and any spillover into energy infrastructure or NATO posture.",
+      "status": "new",
+      "sources": [
+        "https://wng.org/podcasts/thursday-morning-news-october-8-2026-1791412201",
+        "https://www.youtube.com/watch?v=9E43SdD0TtE"
+      ]
+    },
+    {
+      "title": "Israel marks third anniversary of October 7 attacks amid West Bank violence",
+      "category": "geopolitical",
+      "timing": "today",
+      "date_or_window": "2026-10-07/08",
+      "regions": [
+        "Israel",
+        "Palestinian Territories",
+        "US"
+      ],
+      "sectors": [
+        "energy",
+        "defense"
+      ],
+      "expected_direction": "unclear",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "Commemorations, political controversy over Gaza, and reported settler attacks keep Middle East risk in focus alongside already-high oil prices.",
+      "what_to_watch": "Diplomatic reactions, West Bank escalation, and any disruption to regional energy or shipping.",
+      "status": "carried",
+      "sources": [
+        "https://www.dawn.com/newspaper/international/2026-10-08",
+        "https://wng.org/podcasts/thursday-morning-news-october-8-2026-1791412201"
+      ]
+    },
+    {
+      "title": "Hurricane Isaias threatens US Gulf Coast; Florida emergency for 25 counties",
+      "category": "ongoing",
+      "timing": "today",
+      "date_or_window": "2026-10-08",
+      "regions": [
+        "US Gulf Coast",
+        "Florida",
+        "Mississippi"
+      ],
+      "sectors": [
+        "insurance",
+        "energy",
+        "utilities",
+        "retail"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "First Atlantic hurricane of 2026 brings rain, surge, and outage risk to a key energy and population corridor, with DeSantis declaring emergencies across 25 counties.",
+      "what_to_watch": "Track/intensity, Gulf energy shutdowns, insured-loss estimates, and retail/utility disruption.",
+      "status": "new",
+      "sources": [
+        "https://www.wbal.com/2026/10/08"
+      ]
+    },
+    {
+      "title": "Trump expands automatic 'Trump accounts' for children born 2025-2028",
+      "category": "government",
+      "timing": "today",
+      "date_or_window": "2026-10-08",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "financials",
+        "asset managers"
+      ],
+      "expected_direction": "bullish",
+      "impact": 2,
+      "confidence": "low",
+      "why_it_matters": "Automatic enrollment and Treasury seeding for eligible US-citizen children is a long-horizon savings/fiscal signal more than a near-term market mover.",
+      "what_to_watch": "Funding size, eligibility rules, and whether Congress or Treasury operationalizes deposits at scale.",
+      "status": "new",
+      "sources": [
+        "https://wng.org/podcasts/thursday-morning-news-october-8-2026-1791412201"
+      ]
+    },
+    {
+      "title": "Weekly jobless claims and other light US data due",
+      "category": "macro_data",
+      "timing": "today",
+      "date_or_window": "2026-10-08",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "financials",
+        "consumer"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Initial claims around 197-200k and continuing claims near 1.70-1.71m are the day's labor pulse after a weak Sept payrolls print (+29k, 4.2% unemployment) on Oct 2.",
+      "what_to_watch": "Claims surprise vs ~200k, wholesale inventories, and EIA gas storage versus the already-soft labor backdrop.",
+      "status": "new",
+      "sources": [
+        "https://www.benzinga.com/calendars/economic",
+        "https://forex.tradingcharts.com/economic_calendar/2026-10-08.html?code=USD"
+      ]
+    },
+    {
+      "title": "PepsiCo Q3 2026 earnings before the open",
+      "category": "earnings",
+      "timing": "today",
+      "date_or_window": "2026-10-08",
+      "regions": [
+        "US",
+        "global"
+      ],
+      "sectors": [
+        "consumer staples",
+        "beverages"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Largest high-profile print of the day (EPS ~$2.29-$2.32, sales ~$25bn) is a read-through on pricing power, volumes, and input costs with oil elevated.",
+      "what_to_watch": "Organic sales, margins, guidance, and any consumer-trade-down commentary ahead of bank earnings next week.",
+      "status": "new",
+      "sources": [
+        "https://fn2.ai/earnings/calendar",
+        "https://finance.yahoo.com/calendar/earnings/"
+      ]
+    },
+    {
+      "title": "Southern Cross Acquisition II SPAC listing; major IPOs remain thin",
+      "category": "ipo",
+      "timing": "today",
+      "date_or_window": "2026-10-08",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "financials"
+      ],
+      "expected_direction": "unclear",
+      "impact": 1,
+      "confidence": "low",
+      "why_it_matters": "SCAT/SCATR/SCATW is a small SPAC-related listing, underscoring a still-quiet traditional IPO tape rather than a risk-on issuance wave.",
+      "what_to_watch": "Deal pricing/aftermarket and whether larger traditional IPOs reappear if yields stabilize.",
+      "status": "new",
+      "sources": [
+        "https://finance.yahoo.com/calendar/ipo/",
+        "https://www.siriusinvestors.com/stock/ipo-calendar"
+      ]
+    },
+    {
+      "title": "September CPI due Oct 14 after August 3.4% y/y",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-14",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "rates",
+        "financials",
+        "consumer"
+      ],
+      "expected_direction": "unclear",
+      "impact": 5,
+      "confidence": "high",
+      "why_it_matters": "Next inflation print is the key test of the Fed's hike-again-by-year-end message and of whether oil and yields keep inflation sticky.",
+      "what_to_watch": "Core vs headline, energy pass-through, and market odds for October vs December FOMC.",
+      "status": "carried",
+      "sources": [
+        "https://fedratecalc.com/us-economic-calendar/october-2026/",
+        "https://www.nypresswire.com/calendar/cpi-release-schedule-2026"
+      ]
+    },
+    {
+      "title": "Next FOMC decision Oct 27-28; markets lean hold, December hike live",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-27/28",
+      "regions": [
+        "US",
+        "global"
+      ],
+      "sectors": [
+        "financials",
+        "rates",
+        "housing"
+      ],
+      "expected_direction": "mixed",
+      "impact": 5,
+      "confidence": "medium",
+      "why_it_matters": "Policy rate is 3.75%-4.00% after September's 25 bp hike; minutes keep another 2026 hike on the table while near-term odds for late October are low (~18-19%).",
+      "what_to_watch": "CPI, claims, oil, and any shift in hike probability into the blackout.",
+      "status": "carried",
+      "sources": [
+        "https://www.reuters.com/world/africa/dollar-edges-back-18-month-high-after-fomc-minutes-2026-10-08/",
+        "https://therighttrader.com/economic-calendar"
+      ]
+    },
+    {
+      "title": "US bank earnings week begins around Oct 13 (JPM, GS, C, WFC)",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "week of 2026-10-13",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "banks",
+        "financials"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "Mega-cap banks will show NII, credit quality, and trading against a backdrop of surging long yields and a weaker bank tape.",
+      "what_to_watch": "Net interest income, charge-offs, deposit costs, and commentary on the curve and consumer credit.",
+      "status": "carried",
+      "sources": [
+        "https://fn2.ai/earnings/calendar"
+      ]
+    },
+    {
+      "title": "Federal judge earlier ordered restoration of CFPB funding",
+      "category": "judicial",
+      "timing": "past",
+      "date_or_window": "late September 2026",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "financials",
+        "banks"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "low",
+      "why_it_matters": "A court order restoring CFPB funding after challenges to Fed-linked funding limits is a lingering regulatory overhang for consumer-finance supervision, not a fresh Oct 8 ruling.",
+      "what_to_watch": "Appeals, operational restart of CFPB enforcement, and any follow-on Fed-independence litigation.",
+      "status": "carried",
+      "sources": [
+        "https://www.courthousenews.com/judge-orders-feds-to-restore-consumer-watchdog-funding"
+      ]
+    }
+  ],
+  "top_risks": [
+    "Higher-for-longer rates if CPI stays sticky and the 30-year remains near multi-decade highs",
+    "Oil above $100 plus Middle East/Ukraine escalation feeding inflation and risk premia",
+    "Hurricane Isaias disrupting Gulf energy, insurance, and regional activity",
+    "Bank and housing stress if long yields stay elevated into next week's earnings"
+  ],
+  "top_opportunities": [
+    "Energy producers and defense if geopolitical premia persist",
+    "A rates/equity bounce if claims are benign and yields reverse after the 10-year auction",
+    "Select consumer-staples quality if PepsiCo confirms pricing power",
+    "Duration and housing relief if October FOMC is confirmed as a hold and CPI cools on Oct 14"
+  ],
+  "uncertainty": "elevated",
+  "summary": "On 2026-10-08 markets are digesting hawkish Sept FOMC minutes, a multi-decade spike in long Treasury yields, and $100+ oil while Ukraine strikes, Israel anniversary tensions, and Hurricane Isaias add geopolitical and physical-risk overlays. Near-term data are light (claims, PepsiCo), with the real macro tests still ahead: Sept CPI on Oct 14, bank earnings around Oct 13, and the Oct 27-28 FOMC.",
+  "windows": {
+    "past": "2026-09-24..2026-10-07",
+    "today": "2026-10-08",
+    "upcoming": "2026-10-09..2026-10-22"
+  },
+  "repaired": true,
+  "provider": "repair"
+}

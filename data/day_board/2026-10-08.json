@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T04:34:34.452066-04:00",
+  "generated_at": "2026-10-08T04:41:22.534481-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -183,7 +183,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -252,11 +252,16 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-10-08_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 15253,
+          "said": "15 events \u00b7 elevated uncertainty \u00b7 On 2026-10-08 markets are digesting hawkish Sept FOMC minutes, a multi-decade spike in long Treasury yields, and $100+ oil while Ukraine str",
+          "bullets": [
+            "FOMC minutes signal another rate hike likely before year-end",
+            "US Treasuries spike; 30-year yield hits multi-decade high near 5.70%",
+            "Wall Street slips from records as yields and oil rise",
+            "Brent crude holds above $100 on Middle East risk"
+          ]
         },
         {
           "key": "judge",
@@ -331,13 +336,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7574,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "size": 7571,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
           "bullets": [
             "general_predict:missing",
-            "events:missing",
             "news_judge:missing",
-            "news_actions:missing"
+            "news_actions:missing",
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -1285,6 +1290,31 @@
         }
       ],
       "preview": "raw=10441 usable=893 single=410 \u00b7 Canadian dollar weakens as risk-off sentiment drives markets - Reuters | U.S. Stock Market Preview | The Federal Reserve's meeting minutes are set to be  | Anglo-Teck merger, nickel sale are test cases for navigating geopolitical comple | Most Gulf markets slip as geopolitical risks weigh - Reuters | TSMC\u2019s Quarterly Revenue Jumps 51% After AI Demand Holds Up - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-10-08T04:34:14.204895-04:00\nWindow\u224848h | news_mode=on | raw=10441 | usable=893 | single_name=410 | noise_dropped=8792\nusable polarity={'+': 44, '-': 281, 'mixed': 5, 'neutral': 563}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T04:41:21.281665-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-08_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 15253,
+          "preview": "15 events \u00b7 FOMC minutes signal another rate hike likely before year-end | US Treasuries spike; 30-year yield hits multi-decade high near 5.70% | Wall Street slips from records as yields and oil rise | Brent crude holds above $100 on Middle East risk | Russian strikes on Ukraine kill dozens; EU releases \u20ac1.24bn for drones | Israel marks third anniversary of October 7 attacks amid West Bank vio"
+        },
+        {
+          "path": "01_daily/events/2026-10-08_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 5924,
+          "preview": "# Event Scan \u2014 2026-10-08\n- events tracked: **15** (via repair, repaired)\n- uncertainty: **elevated**\n- summary: On 2026-10-08 markets are digesting hawkish Sept FOMC minutes, a multi-decade spike in long Treasury yields, and $100+ oil while Ukraine strikes, Israel anniversary tensions, and Hurricane Isaias add geopolitical and physical-risk overlays. Near-term data are light (claims, PepsiCo), with the real macro tests still ahead: Sept CPI on Oct 14, bank earnings around Oct 13, and the Oct 27-28 FOMC."
+        }
+      ],
+      "preview": "15 events \u00b7 FOMC minutes signal another rate hike likely before year-end | US Treasuries spike; 30-year yield hits multi-decade high near 5.70% | Wall Street slips from records as yields and oil rise | Brent crude holds above $100 on Middle East risk | Russian strikes on Ukraine kill dozens; EU releases \u20ac1.24bn for drones | Israel marks third anniversary of October 7 attacks amid West Bank vio \u00b7 # Event Scan \u2014 2026-10-08\n- events tracked: **15** (via repair, repaired)\n- uncertainty: **elevated**\n- summary: On 2026-10-08 markets are digesting hawkish Sept FOMC minutes, a multi-decade spike in long Treasury yields, and $100+ oil while Ukraine strikes, Israel anniversary tensions, and Hurricane Isaias add geopolitical and physical-risk overlays. Near-term data are light (claims, PepsiCo), with the real macro tests still ahead: Sept CPI on Oct 14, bank earnings around Oct 13, and the Oct 27-28 FOMC."
     }
   ],
   "href": {
