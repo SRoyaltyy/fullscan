@@ -26,10 +26,14 @@ publish_live_boards still writes a strip — except the clock assert.
 record. Once that date's paper send is journaled
 (``data/paper_open/<date>_submit.json``) or that session's 09:30 ET
 has arrived, the dated file stays as it is. The evening body goes to
-the undated copies and ``<date>_strategy_tickets_draft.json``. That
+``<date>_strategy_tickets_draft.json`` only, marked ``draft: true`` /
+``not_for_trading: true``. The undated copies (``data/factor_mine/
+strategy_tickets.json`` and the day-board / dashboard copies) lock on the
+same clock (``src.ticket_session_lock``): after a session's 09:30 ET they
+keep that session's bytes until the next session's first write. That
 draft is the expected path: a warning, and the publish exits 0. The
-job still fails if a locked dated file is actually modified, or if
-the draft write fails.
+job still fails if a locked dated file is actually modified, if a
+sealed live copy changed, or if the draft write fails.
 
 From 2026-09-28 the same publish freezes the inputs it read into
 ``data/factor_mine/send_inputs/<date>.json`` (file hashes, candidate
@@ -1271,12 +1275,45 @@ def log_ticket_restate(date: str, *, commit: str, prev_sha: str, send_sha: str,
     return dest
 
 
+def _live_copy_paths() -> list[Path]:
+    """Undated copies of one session's list. Locked at 09:30 like the dated file."""
+    return [
+        DAY / "strategy_tickets.json",
+        FM_DIR / "strategy_tickets.json",
+        DASH_FM / "strategy_tickets.json",
+        DASH_FM / "today_strategies.json",
+        DAY / "today_strategies.json",
+        ROOT / "dashboard" / "today_strategies.json",
+    ]
+
+
+def _write_live(path: Path, body: str, date: str, session_lock: str | None,
+                held: list[tuple[Path, str]]) -> bool:
+    """Write one undated copy unless its session has started. See ticket_session_lock."""
+    from . import ticket_session_lock as tsl
+    old = path.read_text(encoding="utf-8") if path.is_file() else None
+    ok, why = tsl.may_replace(old, body, date, session_lock)
+    if not ok:
+        held.append((path, why))
+        return False
+    if old == body:
+        return True
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(body, encoding="utf-8")
+    return True
+
+
 def write(date: str, payload: dict | None = None, now: datetime | None = None) -> list[Path]:
     payload = payload or build(date)
     assert_session_look(payload, date)
     text = json.dumps(payload, indent=2)
     dated = DAY / f"{date}_strategy_tickets.json"
     reason = dated_tickets_lock_reason(date, now) if dated.is_file() else None
+    # The undated copies use the session clock even when the dated file
+    # is missing: after 09:30 / the send journal they keep their bytes.
+    session_lock = dated_tickets_lock_reason(date, now)
+    from . import ticket_session_lock as tsl
+    tsl.assert_sealed(FM_DIR / "strategy_tickets.json")
     from . import past_day_lock as pdl
     pdl.assert_ticket(
         date, dated, text,
@@ -1290,21 +1327,24 @@ def write(date: str, payload: dict | None = None, now: datetime | None = None) -
         if frozen.decode("utf-8") != text:
             refuse = True
     draft = dated_tickets_draft(date)
-    paths = [
-        DAY / "strategy_tickets.json",
-        dated,
-        FM_DIR / "strategy_tickets.json",
-        DASH_FM / "strategy_tickets.json",
-        DASH_FM / "today_strategies.json",
-    ]
-    if refuse:
-        paths = [p for p in paths if p != dated]
-        paths.append(draft)
+    draft_text = tsl.draft_body(
+        payload, date=date, reason=reason or "", dated_name=dated.name,
+    ) if refuse else ""
+    live = _live_copy_paths()
+    full_copies = live[:4]
+    held: list[tuple[Path, str]] = []
     wrote = []
-    for p in paths:
-        p.parent.mkdir(parents=True, exist_ok=True)
-        p.write_text(text, encoding="utf-8")
-        wrote.append(p)
+    if refuse:
+        draft.parent.mkdir(parents=True, exist_ok=True)
+        draft.write_text(draft_text, encoding="utf-8")
+        wrote.append(draft)
+    else:
+        dated.parent.mkdir(parents=True, exist_ok=True)
+        dated.write_text(text, encoding="utf-8")
+        wrote.append(dated)
+    for p in full_copies:
+        if _write_live(p, text, date, session_lock, held):
+            wrote.append(p)
     slim = {
         "date": payload.get("date"),
         "generated_at": payload.get("generated_at"),
@@ -1366,8 +1406,8 @@ def write(date: str, payload: dict | None = None, now: datetime | None = None) -
                 f"locked dated file {dated.name} was modified ({reason}). "
                 "Job failed."
             )
-        draft_body = draft.read_text(encoding="utf-8") if draft.is_file() else ""
-        if draft_body != text:
+        draft_have = draft.read_text(encoding="utf-8") if draft.is_file() else ""
+        if draft_have != draft_text:
             raise DatedTicketsLocked(
                 f"draft write failed for {draft.name} ({reason}). Job failed."
             )
@@ -1388,13 +1428,19 @@ def write(date: str, payload: dict | None = None, now: datetime | None = None) -
             f"Evening body is in {draft.name}. Dated file unchanged.",
             flush=True,
         )
-    slim_path = DAY / "today_strategies.json"
-    slim_path.write_text(json.dumps(slim, indent=2), encoding="utf-8")
-    wrote.append(slim_path)
-    dash_slim = ROOT / "dashboard" / "today_strategies.json"
-    dash_slim.parent.mkdir(parents=True, exist_ok=True)
-    dash_slim.write_text(json.dumps(slim, indent=2), encoding="utf-8")
-    wrote.append(dash_slim)
+    slim_text = json.dumps(slim, indent=2)
+    for slim_path in live[4:]:
+        if _write_live(slim_path, slim_text, date, session_lock, held):
+            wrote.append(slim_path)
+    if held:
+        write.last_held = [(str(p), why) for p, why in held]
+        print(
+            f"[strategy-tickets] WARN: live copies kept ({len(held)}): "
+            f"{held[0][1]}. Not rewriting a started session.",
+            flush=True,
+        )
+    else:
+        write.last_held = []
     try:
         from . import hard_red_sit_research as hrs
         hrs.write_per_sleeve(hrs.per_sleeve_from_tickets(payload), write=True)
@@ -1412,6 +1458,10 @@ def write(date: str, payload: dict | None = None, now: datetime | None = None) -
             date, dated,
             locked=dated_tickets_lock_reason(date, now) is not None,
         )
+    tsl.seal_locked(
+        FM_DIR / "strategy_tickets.json", date,
+        lock_reason=session_lock, now=now,
+    )
     return wrote
 
 

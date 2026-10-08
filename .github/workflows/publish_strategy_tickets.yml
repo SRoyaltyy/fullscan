@@ -154,6 +154,9 @@ jobs:
           set -euo pipefail
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          # 09:30 lock on the undated copies (2026-10-07 post-close rewrite).
+          # Fails closed: a same-session rewrite after 09:30 ET never lands.
+          python3 -m src.ticket_session_lock --check-against origin/main
           bash scripts/safe_git_push.sh \
             "auto: strategy tickets $(TZ=America/New_York date +%F)" \
             "data/day_board/${DATE}_strategy_tickets.json" \
@@ -175,6 +178,7 @@ jobs:
             dashboard/strategy-board/index.html \
             dashboard/index.html \
             data/past_day_lock/ \
+            data/ticket_session_lock/ \
             "data/stock_book/" \
             "01_daily/${DATE}_stock_book.md"
           chmod +x scripts/publish_dashboard.sh || true
