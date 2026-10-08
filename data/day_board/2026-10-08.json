@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:06:41.665480-04:00",
+  "generated_at": "2026-10-08T08:08:56.726241-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -795,10 +795,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5907",
-          "size": 2216439,
-          "said": "209 rows",
+          "size": 2245636,
+          "said": "214 rows",
           "bullets": [
-            "CMBT, DVN, TEN, SM, MPC, LPG, PBR-A, RRC"
+            "AMZN, VCTR, NU, SLDE, AAMI, RGA, ANDG, HLNE"
           ]
         },
         {
@@ -876,9 +876,9 @@
           "bullets": []
         }
       ],
-      "said": "209 rows",
+      "said": "214 rows",
       "bullets": [
-        "CMBT, DVN, TEN, SM, MPC"
+        "AMZN, VCTR, NU, SLDE, AAMI"
       ]
     },
     {
@@ -2443,6 +2443,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-08\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-10-08",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-08T08:08:54.380469-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-10-08_dossiers.json",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1252,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-10-08_dossiers.md",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1252,
+          "preview": "# CATALYST DAILY \u2014 2026-10-08\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-08\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
     }
   ],
   "href": {
