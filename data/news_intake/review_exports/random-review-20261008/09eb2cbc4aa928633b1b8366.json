@@ -2,7 +2,7 @@
   "title": "Flight cancellations: Lufthansa strike and Italian air traffic control walkout hit Luxembourg flights - RTL Today",
   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPWFJfZkRybUViRWlmdGlEekY3Yy1rcHlXWlo1QkM4aWR0dlMtdWlRbFljamIwNktRcWZESmJPb2xGaEFHeS1UMS1uQnlDRG5qTWlSc2ZYTXJkeURDQW1VYkZZRC10M3JiZmZxemhHMzBDZ2E3MjJLNUFKdmItWEh4MVMyWnJZVE1rd05kSFRkSmdzSHR5bnhaTVlzT01UV2FKQTRGVHhJQW1VVWZsX1BHQzVaWk85ZTZYTmRGb19lcHd4R0ty?oc=5",
   "publisher": "RTL Today",
-  "body": "Flight cancellations: Lufthansa strike and Italian air traffic control walkout hit Luxembourg flights RTL Today",
+  "body": "Flight cancellations: Lufthansa strike and Italian air traffic control walkout hit Luxembourg flights - RTL Today Home Play Radio RTL Lëtzebuerg RTL Infos Home Play Radio News Luxembourg World Fact Check Business & Tech Think Lab Science & Environment Flight cancellations Lufthansa strike and Italian air traffic control walkout hit Luxembourg flights RTL Lëtzebuerg adapted for RTL Today Flights to and from Munich, Frankfurt, Milan, and Pescara are among those cancelled, with Luxembourg air passengers facing a disrupted Friday. Published: 10.04.26 14:22 © AFP Luxembourg travellers are facing major disruptions on Friday as two separate strike actions combine to wreak havoc on the flight schedule at Findel Airport. Lufthansa cabin crew have walked out until 10pm on Friday evening, after collective bargaining negotiations over improved working conditions failed to make progress. Hundreds of flights have already been cancelled across Germany, with departures and arrivals at Frankfurt and Munich most heavily affected, alongside Cologne-Bonn, Düsseldorf, and Berlin. Around 20,000 cabin crew members work for Lufthansa. Luxembourg flights impacted Several routes to and from Luxembourg have been cancelled as a result. The Friday morning flight to Frankfurt, scheduled for 8.20am, did not operate, nor did the 9:40am and nor will the 4.45pm services to Munich. Inbound flights have been equally affected, with the 9.05am arrival from Munich failing to land in Luxembourg, and the 4.10pm service also cancelled. The industrial action in Italy has added further complications. A strike by Italian air traffic controllers has resulted in the cancellation of the 12.20pm flight to Pescara and the 2.40pm service to Milan-Linate. Most read Uproar in Strasbourg Naked Donald Trump statue sparks debate in European Parliament Response to parliamentary question Two thirds of jobseekers losing unemployment benefits find work within three months Rising concerns Russia's plague scare: What we know 'No fees' Five Luxembourg banks launch shared ATM network, 237 machines planned by next year Video Pictures Over 400,000€ transferred Differdange mayor rejects criticism over municipal fraud case More News Preparing for autumn Government warns of increased flood risk following record summer drought Pictures Over 50,000 people Record number of participants in this year's Vëlosummer cycle campaign Pictures Accident on Wednesday Driver in custody after Pétange hit-and-run Video Pictures Interview in English Modernised expat tax regime yields 'very good results': Finance Minister Roth Video Cooperation since 1980s Cape Verde ministers in Luxembourg for annual bilateral talks Up to 10,000 daily commuters Minister Backes inaugurates new Howald multimodal exchange hub Video Pictures Back to Top Subscribe to our newsletter Ok Do you want to advertise on today.lu? Contact our advertising agency IPLuxembourg directly News Luxembourg World Fact Check Business & Tech Think Lab Science & Environment Opinion Young Voices Letters Entertainment News The Luxembourg Wurst Quizzes Lifestyle Food Travel Sport Local International F1 Results Family Matters School & Nursery What's On: Family Edition Health & Wellbeing Activities After-school The Expat Family Shopping & Supplies Know your rights TravelMatKanner Luxembourg Insider Dining & Drinking Events & Traditions Guides Healthcare History Daily Life Language Practical Information Mobility Fuel prices Autofestival Classified Culture Music Theatre & Dance Exhibitions & History Film & Books Agenda Cinema listings Pictures Jobs Jobdag Moovijob Lifelong Learning Real Estate Property Listings Articles Info Weather Emergency Services Contact us Terms Privacy policy Cookie policy Cookie settings RTL Charter Push settings © 2026 RTL Luxembourg. All rights reserved.",
   "published_at": "2026-10-03T14:41:42+00:00",
   "published_raw": "Sat, 03 Oct 2026 14:41:42 GMT",
   "source": "lane_labor_stop",
@@ -22,14 +22,30 @@
       ]
     }
   ],
-  "extraction_status": "feed_text",
+  "extraction_status": "page_text",
   "last_seen": "2026-10-04T06:19:40.102182+00:00",
   "review_enrichment": {
-    "attempted_epoch": 1791468853.17732,
-    "attempts": 1,
-    "status": "failed",
-    "network_requests": [],
+    "attempted_epoch": 1791471581.4375947,
+    "attempts": 2,
+    "status": "page_text_checked",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMixAFBVV95cUxPWFJfZkRybUViRWlmdGlEekY3Yy1rcHlXWlo1QkM4aWR0dlMtdWlRbFljamIwNktRcWZESmJPb2xGaEFHeS1UMS1uQnlDRG5qTWlSc2ZYTXJkeURDQW1VYkZZRC10M3JiZmZxemhHMzBDZ2E3MjJLNUFKdmItWEh4MVMyWnJZVE1rd05kSFRkSmdzSHR5bnhaTVlzT01UV2FKQTRGVHhJQW1VVWZsX1BHQzVaWk85ZTZYTmRGb19lcHd4R0ty"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://today.rtl.lu/news/luxembourg/lufthansa-strike-and-italian-air-traffic-control-walkout-hit-luxembourg-flights-243030265"
+      }
+    ],
     "historical_body_availability_verified": false,
-    "error": "HTTP Error 429: Too Many Requests"
-  }
+    "title_token_overlap": 1.0,
+    "note": "Visible page text may include navigation; article boundaries require review"
+  },
+  "retained_feed_body": "Flight cancellations: Lufthansa strike and Italian air traffic control walkout hit Luxembourg flights RTL Today",
+  "extracted_url": "https://today.rtl.lu/news/luxembourg/lufthansa-strike-and-italian-air-traffic-control-walkout-hit-luxembourg-flights-243030265"
 }
