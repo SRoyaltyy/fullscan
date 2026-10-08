@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T16:24:52.158534-04:00",
+  "generated_at": "2026-10-08T03:19:49.105390-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -94,11 +94,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 98242,
-          "said": "5899 tickers \u00b7 1849 signals \u00b7 top ABT, ACN, AEM, AMD, AME, AMGN, AON, APH",
+          "size": 97689,
+          "said": "5903 tickers \u00b7 1813 signals \u00b7 top ABBV, ACN, AEM, AMD, AME, AMGN, AON, APH",
           "bullets": [
-            "If The MiniMed Split-Off Stalls, What Happens To Your Medtronic Stock?",
-            "What Did Accenture's Quarter Change For Its Stock?",
+            "Why You Should Think About Eli Lilly Stock Differently Now",
+            "What Happens To IBM Stock If Its Slowdown Lasts?",
             "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11703,
+          "size": 11484,
           "said": "Finviz Daily Digest \u2014 2026-10-07",
           "bullets": [
-            "_Generated 2026-10-07T04:20:26.921924-04:00 \u00b7 export=data/exports/finviz_2026-10-06.csv \u00b7 ticker digests=5899 \u00b7 high-signal=1849_",
+            "_Generated 2026-10-08T03:19:47.150490-04:00 \u00b7 export=data/exports/finviz_2026-10-07.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1813_",
             "Major indices (live quote page)"
           ]
         },
@@ -167,10 +167,10 @@
           ]
         }
       ],
-      "said": "5899 tickers \u00b7 1849 signals \u00b7 top ABT, ACN, AEM, AMD, AME, AMGN, AON, APH",
+      "said": "5903 tickers \u00b7 1813 signals \u00b7 top ABBV, ACN, AEM, AMD, AME, AMGN, AON, APH",
       "bullets": [
-        "If The MiniMed Split-Off Stalls, What Happens To Your Medtronic Stock?",
-        "What Did Accenture's Quarter Change For Its Stock?",
+        "Why You Should Think About Eli Lilly Stock Differently Now",
+        "What Happens To IBM Stock If Its Slowdown Lasts?",
         "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
       ]
     },
@@ -192,11 +192,11 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 98242,
-          "said": "5899 tickers \u00b7 1849 signals \u00b7 top ABT, ACN, AEM, AMD, AME, AMGN, AON, APH",
+          "size": 97689,
+          "said": "5903 tickers \u00b7 1813 signals \u00b7 top ABBV, ACN, AEM, AMD, AME, AMGN, AON, APH",
           "bullets": [
-            "If The MiniMed Split-Off Stalls, What Happens To Your Medtronic Stock?",
-            "What Did Accenture's Quarter Change For Its Stock?",
+            "Why You Should Think About Eli Lilly Stock Differently Now",
+            "What Happens To IBM Stock If Its Slowdown Lasts?",
             "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
@@ -341,7 +341,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6363,
+          "size": 6085,
           "said": "0 up / 0 down / 0 flat",
           "bullets": [
             "XLB missing",
@@ -357,10 +357,10 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7558,
-          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 12 fail",
+          "size": 7554,
+          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 11 fail",
           "bullets": [
-            "finviz_market_digest:missing",
+            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
@@ -373,8 +373,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 6264,
-          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=True \u00b7 book=False",
+          "size": 6338,
+          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=False",
           "bullets": []
         },
         {
@@ -383,11 +383,11 @@
           "path": "01_daily/2026-10-07_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=True All required core artifacts are present, same-day (2026-10-07), and complete: general predict takes a clear DOWN/mild di",
-          "size": 1008,
-          "said": "ok=True \u00b7 All required core artifacts are present, same-day (2026-10-07), and complete: general predict takes a clear DOWN/mild direction with MEMORY_CONFIRM and full fac",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 309,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
-            "All required core artifacts are present, same-day (2026-10-07), and complete: general predict takes a clear DOWN/mild direction with MEMORY_CONFIRM and full factor scan; events JSON is a real scan_date=2026-10-07 scan; news judge and news parse carry proper markers and substantive content; finviz digest and map-heat tables are populated with a live futures tape. Sector predicts are 0/11 but are optional on this date and correctly excluded from fails. The map_heat_research file is phase=morning_refresh and its synthesis notes the morning delta refresh failed captain-evidence QC (0/28 coverage) and fell back to last night's post-close cards \u2014 this is a noted degradation, not a timeout/refusal/carry-forward, and the baseline is present, so it does not fail the day. The missing finviz_market_d"
+            "Grok returned an empty review"
           ]
         },
         {
@@ -544,11 +544,11 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 98242,
-          "said": "5899 tickers \u00b7 1849 signals \u00b7 top ABT, ACN, AEM, AMD, AME, AMGN, AON, APH",
+          "size": 97689,
+          "said": "5903 tickers \u00b7 1813 signals \u00b7 top ABBV, ACN, AEM, AMD, AME, AMGN, AON, APH",
           "bullets": [
-            "If The MiniMed Split-Off Stalls, What Happens To Your Medtronic Stock?",
-            "What Did Accenture's Quarter Change For Its Stock?",
+            "Why You Should Think About Eli Lilly Stock Differently Now",
+            "What Happens To IBM Stock If Its Slowdown Lasts?",
             "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
@@ -650,11 +650,11 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 98242,
-          "said": "5899 tickers \u00b7 1849 signals \u00b7 top ABT, ACN, AEM, AMD, AME, AMGN, AON, APH",
+          "size": 97689,
+          "said": "5903 tickers \u00b7 1813 signals \u00b7 top ABBV, ACN, AEM, AMD, AME, AMGN, AON, APH",
           "bullets": [
-            "If The MiniMed Split-Off Stalls, What Happens To Your Medtronic Stock?",
-            "What Did Accenture's Quarter Change For Its Stock?",
+            "Why You Should Think About Eli Lilly Stock Differently Now",
+            "What Happens To IBM Stock If Its Slowdown Lasts?",
             "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
@@ -716,7 +716,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6363,
+          "size": 6085,
           "said": "0 up / 0 down / 0 flat",
           "bullets": [
             "XLB missing",
@@ -748,11 +748,11 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 98242,
-          "said": "5899 tickers \u00b7 1849 signals \u00b7 top ABT, ACN, AEM, AMD, AME, AMGN, AON, APH",
+          "size": 97689,
+          "said": "5903 tickers \u00b7 1813 signals \u00b7 top ABBV, ACN, AEM, AMD, AME, AMGN, AON, APH",
           "bullets": [
-            "If The MiniMed Split-Off Stalls, What Happens To Your Medtronic Stock?",
-            "What Did Accenture's Quarter Change For Its Stock?",
+            "Why You Should Think About Eli Lilly Stock Differently Now",
+            "What Happens To IBM Stock If Its Slowdown Lasts?",
             "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
@@ -831,8 +831,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=118",
-          "size": 1010340,
-          "said": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI \u00b7 -0.6018",
+          "size": 1006857,
+          "said": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI",
           "bullets": []
         },
         {
@@ -842,10 +842,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 32972,
+          "size": 33057,
           "said": "Stock book \u2014 2026-10-07",
           "bullets": [
-            "_Generated 2026-10-07T15:35:48.534237-04:00_",
+            "_Generated 2026-10-07T20:32:44.948218-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -909,8 +909,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=118",
-          "size": 1010340,
-          "said": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI \u00b7 -0.6018",
+          "size": 1006857,
+          "said": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI",
           "bullets": []
         },
         {
@@ -960,45 +960,45 @@
     "buy_1d": [
       {
         "ticker": "WH",
-        "score": 0.7148452157101206
+        "score": 0.769004610898425
       },
       {
         "ticker": "SIRI",
-        "score": 0.091114254003668
+        "score": 0.10496170596373948
       }
     ],
     "sell_1d": [
       {
         "ticker": "NEOV",
-        "score": -0.4182677525064805
+        "score": -0.46199114947599995
       },
       {
         "ticker": "OKLO",
-        "score": -0.12049586074736385
+        "score": -0.12240817059223058
       },
       {
         "ticker": "FCEL",
-        "score": -0.22111687251822526
+        "score": -0.20348178435058628
       },
       {
         "ticker": "EOSE",
-        "score": -0.3154010585007891
+        "score": -0.3069785711479868
       },
       {
         "ticker": "ENVX",
-        "score": -0.20203143846195815
+        "score": -0.18254722805503037
       },
       {
         "ticker": "INDI",
-        "score": -0.2625545866781168
+        "score": -0.2489740444479433
       },
       {
         "ticker": "TE",
-        "score": -0.37256493198303836
+        "score": -0.36971468024402027
       },
       {
         "ticker": "SKYX",
-        "score": -0.3677246360202181
+        "score": -0.3605036087935186
       }
     ],
     "flatten": {
@@ -1046,31 +1046,6 @@
     }
   },
   "lands": [
-    {
-      "key": "paper",
-      "title": "Paper dashboard",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T05:42:54.041419-04:00",
-      "files": [
-        {
-          "path": "03_scoreboard/PAPER_TRADING.md",
-          "ok": true,
-          "reason": "",
-          "size": 1837,
-          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 | "
-        },
-        {
-          "path": "dashboard/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 10510801,
-          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b4d78;\ncolor:var(--fg);text-decoration:none}\n."
-        }
-      ],
-      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
-    },
     {
       "key": "flatten",
       "title": "Flatten live card",
@@ -4221,6 +4196,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-07\n**Generated:** 2026-10-07T16:24:50.990077-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks eased from record highs as Treasury yields hit multi-decade levels and Brent briefly topped $100 amid hawkish Fed minutes\n**Prior close:** SPX \u2014  Nasdaq -1.30%  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** -1.30%  **Dow:** \u2014\n**Oil:** Brent crude $100.0\n**CPI/Fed:** 4.0% hike (4.00%, saw additional work needed to tame inflation, expected another hike)\n**Leaders:** CAT, DE, BULL, ZIM, SPCX\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-08\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-07",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T03:19:47.750071-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-07_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97689,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-07_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11503,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-07\n_Generated 2026-10-08T03:19:47.150490-04:00 \u00b7 export=data/exports/finviz_2026-10-07.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1813_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-07.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11522782,
+          "preview": "11717 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11522782,
+          "preview": "11717 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-07_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 98242,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-07\n_Generated 2026-10-08T03:19:47.150490-04:00 \u00b7 export=data/exports/finviz_2026-10-07.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1813_ \u00b7 11717 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11717 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
