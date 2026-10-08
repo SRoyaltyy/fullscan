@@ -111,6 +111,12 @@
  pipeline lands dashboard copies in the same push as the tickets.
  Before the dated ticket for a session lands, every strategy shows
  <b>NOT FINAL</b> — a previous session's decisions are never substituted.
+ The <b>checks</b> column is the one-row readout:
+ <b>factor&nbsp;mine</b> = this strategy's decisions are in the factor-mine
+ dashboard copy for the date ("—" for non-factor families),
+ <b>checklist</b> = the decision is finalized (status ok/sit in the landed
+ ticket), <b>inputs</b> = every file in its needs list is present on
+ <code>main</code> — ✔ green / ✘ red (… while probes run).
  The ret column and the ★ pins come from
  <code>data/factor_mine/recipe_scorecard.json</code>: lifetime and
  last-20-session returns rebuilt daily from the per-recipe paper-trade
@@ -361,6 +367,54 @@ async function probeNeeds(d){
   for(const n of EXPANDED) paths.add(`data/factor_mine/state/${n}/${d}.json`);
   await Promise.all([...paths].map(async p => { NEEDS_STATUS[p] = (await probe(p)).ok; }));
 }
+// ---- quick per-row checks: factor mine / checklist / inputs -------------
+// factor mine = the strategy's decisions are in the factor-mine dashboard
+// copy for this date (dashboard/factor-mine/strategy_tickets.json) — "—"
+// for non-factor families. checklist = the landed ticket carries the
+// strategy with status ok/sit (decision finalized). inputs = every file in
+// the strategy's needs list is present on main for this date.
+let FM_TICKET = {date:null, names:null};
+async function loadFMTicket(d){
+  const r = await jprobe("dashboard/factor-mine/strategy_tickets.json");
+  const names = new Set();
+  if(r.ok && r.json){
+    const st = r.json.strategies || {};
+    for(const [n, s] of Object.entries(st)){
+      if(((s && s.date) || r.json.date) === d) names.add(n);
+    }
+  }
+  FM_TICKET = {date:d, names};
+}
+function needsPaths(fam, name, d){
+  const paths = [];
+  for(const [, tpl] of (FAMILY_FILES[fam] || []))
+    if(!tpl.includes("{name}")) paths.push(tpl.replace("{d}", d));
+  if(fam === "factor_mine" || fam === "factor_mine_preopen"){
+    const combo = name.startsWith("combo_") ? comboMembers(name) : null;
+    let gates = [];
+    if(combo){ for(const pr of combo.map(([m]) => parseBaseRecipe(m)).filter(Boolean)) gates.push(...pr.gates); }
+    else { const pr = parseBaseRecipe(name); if(pr) gates = pr.gates; }
+    for(const p of gateInputs(gates)) paths.push(p.replace("{d}", d));
+  }
+  return [...new Set(paths)];
+}
+function checksCell(r){
+  const isFactor = r.fam === "factor_mine" || r.fam === "factor_mine_preopen";
+  const fm = !isFactor
+    ? `<span class="dim">factor mine: —</span>`
+    : `factor mine: ${FM_TICKET.names && FM_TICKET.names.has(r.name)
+        ? '<span class="ok" title="in dashboard/factor-mine/strategy_tickets.json for this date">✔</span>'
+        : '<span class="fail" title="not in the factor-mine dashboard copy for this date yet">✘</span>'}`;
+  const chk = `checklist: ${r.final
+    ? '<span class="ok" title="decision finalized — status ok/sit in the landed ticket">✔</span>'
+    : '<span class="fail" title="decision NOT final — status is not ok/sit">✘</span>'}`;
+  const inp = `inputs: ${r.inputsOk === null
+    ? '<span class="dim" title="presence probes still running">…</span>'
+    : r.inputsOk
+      ? '<span class="ok" title="every needed input file is present on main for this date">✔</span>'
+      : '<span class="fail" title="at least one needed input file is missing on main for this date">✘</span>'}`;
+  return `<span style="font-size:10.5px;white-space:nowrap">${fm} · ${chk} · ${inp}</span>`;
+}
 async function loadTicket(d){
   const chain = [
     ["sealed", `data/day_board/${d}_strategy_tickets.json`],
@@ -494,9 +548,13 @@ async function renderTicket(tk, d){
     const why = s.why || s.note || "";
     const shortWhy = why.length > 90 ? why.slice(0,90) + "…" : why;
     const p = perfOf(name);
+    const npaths = needsPaths(s.family||"", name, d);
+    const known = npaths.every(pp => NEEDS_STATUS[pp] !== undefined);
     rows.push({name, fam:s.family||"", status:badge(s.status, s.sit, s.hard_red),
       buy:tickers(s.buy), sell:tickers(s.sell),
       why, shortWhy, s:s.s, p, pxAsof:firstPxAsof(s), panelBake:s.panel_bake_date, signalDate:s.signal_date,
+      final: s.status === "ok" || s.status === "sit",
+      inputsOk: npaths.length ? (known ? npaths.every(pp => !!NEEDS_STATUS[pp]) : null) : null,
       star: stars.has(name) ? ` <span title="top ${TOP_N} lifetime performers" style="color:var(--gold)">★</span>` : ""});
   }
   if(sortMode === "perf"){
@@ -518,7 +576,7 @@ async function renderTicket(tk, d){
       ["panel bake", r.panelBake || "—"],
       ["signal date", r.signalDate || "—"],
     ].map(([k,v]) => `<span class="kv">${k}:</span> ${v}`).join(" · ");
-    return `<tr class="detail" data-for="${r.name}"><td colspan="8"><div>
+    return `<tr class="detail" data-for="${r.name}"><td colspan="9"><div>
       <div>${per}</div>
       ${needsFor(r, d)}
       <div style="margin-top:4px"><span class="kv">exact inputs (C.10 fingerprint, ticket-wide):</span>
@@ -529,7 +587,7 @@ async function renderTicket(tk, d){
     </div></td></tr>`;
   };
   $("ticketWrap").innerHTML = `<table>
-    <tr><th></th><th>strategy</th><th>family</th><th>ret (lifetime / 20d)</th><th>decision</th><th>BUY @ open</th><th>SELL @ open</th><th>why / note</th></tr>
+    <tr><th></th><th>strategy</th><th>family</th><th>ret (lifetime / 20d)</th><th>decision</th><th>checks</th><th>BUY @ open</th><th>SELL @ open</th><th>why / note</th></tr>
     ${rows.map(r=>`<tr>
       <td><span class="xbtn" data-x="${r.name}">${EXPANDED.has(r.name) ? "⊖" : "⊕"}</span></td>
       <td class="name">${r.name}${r.s!=null?` <span class="dim">S=${r.s}</span>`:""}${r.star}
@@ -537,10 +595,11 @@ async function renderTicket(tk, d){
       <td class="mut">${r.fam}</td>
       ${perfCell(r.p)}
       <td>${r.status}</td>
+      <td>${checksCell(r)}</td>
       <td class="tk">${r.buy}</td>
       <td class="tk">${r.sell}</td>
       <td class="why" title="${String(r.why).replace(/"/g,"&quot;")}">${r.shortWhy}</td>
-    </tr>${detail(r)}`).join("") || `<tr><td colspan="8" class="mut">no strategies match the filter</td></tr>`}
+    </tr>${detail(r)}`).join("") || `<tr><td colspan="9" class="mut">no strategies match the filter</td></tr>`}
   </table>`;
   $("ticketWrap").querySelectorAll(".xbtn").forEach(b => {
     b.onclick = () => {
@@ -657,13 +716,15 @@ async function refresh(){
               push: times.pushed, dash: times.dash,
               fp: dr.fingerprint || null, inputs: dr.inputs || {}};
   NEEDS_STATUS = {};
+  FM_TICKET = {date:d, names:null};
   const needsP = probeNeeds(d);
+  const fmP = loadFMTicket(d);
   renderCards(tk, times.pushed, d);
   renderTicket(tk, d);
   renderInputs(d);
   renderAll(d);
-  await needsP;
-  renderTicket(tk, d); // repaint input chips once the presence probes resolve
+  await Promise.all([needsP, fmP]);
+  renderTicket(tk, d); // repaint chips once the probes + dash ticket resolve
   $("stamp").textContent = `updated ${hhmm(new Date().toISOString())} · ${d} (ET)` +
     (SCORECARD ? ` · perf ledger through ${SCORECARD.last_date}` : " · perf ledger: not published yet");
 }
