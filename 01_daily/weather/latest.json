@@ -1,6 +1,6 @@
 {
  "date": "2026-10-08",
- "generated_at": "2026-10-08T04:25:06.909191-04:00",
+ "generated_at": "2026-10-08T05:10:11.778224-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -20,13 +20,13 @@
   "dgs10_current": 5.27,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.03,
-  "vix_ratio": 0.88,
-  "vix_spot": 15.59,
-  "vix_delta_1d": 0.51,
+  "dxy_pct_1d": 0.1,
+  "vix_ratio": 0.884,
+  "vix_spot": 15.67,
+  "vix_delta_1d": 0.59,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": 3.56,
+  "oil_pct_1d": 4.16,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -112,9 +112,9 @@
    "Technology": -2.625,
    "Utilities": -3.43
   },
-  "events_bull": 7,
+  "events_bull": 0,
   "events_bear": 4,
-  "china_event_dir": "bear"
+  "china_event_dir": null
  },
  "stances": {
   "sector": {
@@ -149,9 +149,9 @@
     "why": "finviz sector median week -1.40% [tape]"
    },
    "Healthcare": {
-    "stance": "favorable",
+    "stance": "hostile",
     "confidence": "medium",
-    "why": "news_judge SECTOR Healthcare [bullish]"
+    "why": "finviz sector median week -2.99% [tape]"
    },
    "Industrials": {
     "stance": "hostile",
@@ -164,9 +164,9 @@
     "why": "finviz sector median week -2.49% [tape]"
    },
    "Technology": {
-    "stance": "favorable",
+    "stance": "hostile",
     "confidence": "medium",
-    "why": "news_judge SECTOR Technology [bullish]"
+    "why": "news_judge SECTOR Technology [bearish]"
    },
    "Utilities": {
     "stance": "hostile",
@@ -235,9 +235,9 @@
     "why": "mirrors general risk-unknown [general predict]"
    },
    "ADR-China": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "high-impact China event(s) lean bear [event scanner]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "no high-impact China event flagged"
    }
   },
   "beta": {

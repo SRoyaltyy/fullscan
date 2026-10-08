@@ -3538,5 +3538,7 @@
   "judge_tickers": {
     "NVDA": 4.0,
     "CEG": 5.5
-  }
+  },
+  "catalyst_tickers": 0,
+  "catalyst_date": "2026-10-08"
 }

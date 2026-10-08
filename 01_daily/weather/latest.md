@@ -5,9 +5,9 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** UNKNOWN
-- **Yields:** falling (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.88 via vix/vix3m) spot 15.59
+- **Yields:** falling (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.88 via vix/vix3m) spot 15.67
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.30
-- **High-impact events:** 7 bullish vs 4 bearish | China: bear
+- **High-impact events:** 0 bullish vs 4 bearish
 - ⚠️ **Data gaps:** general predict run, general predict factor scoreboard
 
 ## Sectors
@@ -20,10 +20,10 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 | sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -1.62% [tape] |
 | sector:Energy | 🌧️ hostile | medium | finviz sector median week -2.50% [tape] |
 | sector:Financial | ⛅ neutral | medium | finviz sector median week -1.40% [tape] |
-| sector:Healthcare | 🌤️ favorable | medium | news_judge SECTOR Healthcare [bullish] |
+| sector:Healthcare | 🌧️ hostile | medium | finviz sector median week -2.99% [tape] |
 | sector:Industrials | 🌧️ hostile | medium | finviz sector median week -1.83% [tape] |
 | sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -2.49% [tape] |
-| sector:Technology | 🌤️ favorable | medium | news_judge SECTOR Technology [bullish] |
+| sector:Technology | 🌧️ hostile | medium | news_judge SECTOR Technology [bearish] |
 | sector:Utilities | 🌧️ hostile | medium | finviz sector median week -3.43% [tape] |
 
 ## Size
@@ -111,7 +111,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
 | geo:US | ❔ unknown | low | mirrors general risk-unknown [general predict] |
-| geo:ADR-China | 🌧️ hostile | medium | high-impact China event(s) lean bear [event scanner] |
+| geo:ADR-China | ⛅ neutral | low | no high-impact China event flagged |
 
 ## Gates (always-on cautions)
 

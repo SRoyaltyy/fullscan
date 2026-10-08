@@ -1,118 +1,113 @@
-# News Judge — 2026-09-08
+# News Judge — 2026-10-08
 
 ### IMPORTANT NEWS (my ranking)
 
-1. **Blowout jobs report fans Fed rate-HIKE fears; Dow/S&P close lower, Nasdaq held up by chip strength** — dominant macro driver: a hot labor print that *raises* hike odds is the single biggest input to SPX beta and the rates spine this session. (channel: rates)
-2. **Fed Chair Warsh: inflation "too high"; Williams says a late-2026 hike "may be appropriate"; October hike odds fall to ~17.7% after soft jobs data** — the policy path is the second leg of the same rates cluster and is internally contradictory (hawkish Chair vs. market cutting odds), which is itself the tradable signal. (channel: rates)
-3. **10Y/30Y Treasury yields hit 24-year highs; mortgage rates rise as yields top 5%** — long-end term-premium shock is the transmission channel into duration-sensitive equities (REITs, utilities, small caps, unprofitable growth). (channel: rates)
-4. **Nvidia AI deal + Dell server backlog spark semis rally; AMAT +5%, NVDA at record ~$5.76T, ALAB +12% on S&P 500 inclusion speculation** — the counterweight: AI-capex complex is the one sector with independent positive force strong enough to offset the rates drag on Nasdaq. (channel: sector_fundamental)
-5. **Google signs 20-year nuclear deal with Constellation to power AI build-out** — AI-power demand is now a structural utility/IPP theme, not a single-name story; it re-rates the nuclear/PPA complex. (channel: sector_fundamental)
-6. **Gold slides >3% on Warsh hawkish comments / hike-odds repricing (offset by separate "gold rises as hike bets ease" wires)** — real-rate sensitivity is the cleanest read on how the market is pricing the Fed path; the conflicting wires themselves signal an unresolved rates regime. (channel: substitution)
-7. **AbbVie positive Phase 3 etentamig multiple myeloma data + $10.9B Apogee close, guidance reaffirmed** — large-cap Healthcare catalyst with peer sympathy (myeloma/BCMA space), sector_fundamental not pure single-name. (channel: sector_fundamental)
-8. **Fed unveils major bank-supervision overhaul (12 districts → 5 regions); judge blocks DOJ subpoenas involving Powell; Trump distances himself from Warsh** — institutional/independence noise that can move financials and the policy-risk premium at the margin. (channel: sector_policy)
-
-*(Input set is macro-heavy and thin on fresh US hard data; ranking reflects that. Single-name earnings color — BDX, APD, BNS, BBVA, AME, ARGX — is real but does not carry sector force today.)*
+1. **SPX/NDX slip from records as 10Y tests ~5.3%** — This is the live risk-appetite tape: duration shock hitting index beta, not a single-name story. Channel: rates
+2. **FOMC minutes: another hike likely this year vs persistent inflation** — Hawkish policy path is the source of the yield backup and October-hike odds. Channel: rates
+3. **10-year auction plus rising yields into FOMC text** — Coupon supply into an already-hot 10Y is a same-session rates amplifier, not duplicate color. Channel: rates
+4. **TSMC quarterly revenue +51% as AI demand holds** — Only fundamental large enough to offset (not cancel) the yield hit for semis/SPX-adjacent AI hardware. Channel: sector_fundamental
+5. **UK 30-year gilt yields at a 28-year high in a global selloff** — Confirms a global duration regime, not a local gilt curiosity; supports US 10Y/SPX pressure. Channel: rates
+6. **Samsung Q3 profit ~9x on AI memory boom** — Memory/AI-hardware earnings force for SOXX/SMH, not just a Korea print. Channel: sector_fundamental
+7. **Google–Constellation power deal; uranium miners rally** — AI load is migrating into US nuclear/uranium baskets with sector sympathy. Channel: sector_fundamental
+8. **Spot gold −$100 / miners sold on extra October hike odds** — Cross-asset confirmation the Fed path is being priced as hawkish, not a gold-only headline. Channel: rates
 
 ---
 
-### STEP 1 — FRAMEWORK SCORE
+**STEP 1 — FRAMEWORK SCORE**
 
-**1. Blowout jobs → hike fears; Dow/S&P lower, Nasdaq chip-led**
-- keep | us_relevance: high — hot labor print directly repricing the Fed path | channel: rates | geography: us_domestic | severity: regime | horizon: 1d-1w | action_object: spx | detail: SPX beta, rate-sensitive baskets | polarity: hawkish | polarity_why: strong labor → higher hike odds → discount-rate drag | confidence: 0.75
+1. **SPX/NDX off highs on soaring yields / 10Y ~5.3%**  
+   keep | us_relevance: high — index futures already down with yields up | channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: spx | action_object_detail: SPX/NDX beta, long-duration growth | polarity: bearish | polarity_why: Higher real/nominal yields compress multiples and fade record-high beta. | confidence: 0.86
 
-**2. Warsh "inflation too high" / Williams late-2026 hike / Oct odds 17.7%**
-- keep | us_relevance: high — Chair + voter guidance sets the path | channel: rates | geography: us_domestic | severity: regime | horizon: 1w-1m | action_object: spx | detail: SPX beta, 2Y/10Y | polarity: mixed | polarity_why: hawkish rhetoric vs. market cutting hike odds = unresolved two-sided | confidence: 0.7
+2. **FOMC minutes: another hike likely this year**  
+   keep | us_relevance: high — voting-committee path, not punditry | channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: spx | action_object_detail: SPX duration, hike-odds spine | polarity: hawkish | polarity_why: Minutes cluster on an additional 2026 hike to fight sticky inflation. | confidence: 0.84
 
-**3. 10Y/30Y at 24-year highs; mortgage rates >5%**
-- keep | us_relevance: high — long-end term premium is the equity-duration transmission | channel: rates | geography: us_domestic | severity: regime | horizon: 1w-1m | action_object: basket | detail: REITs, utilities, small-cap (IWM), unprofitable growth | polarity: bearish | polarity_why: higher long yields compress duration multiples | confidence: 0.75
+3. **US 10Y auction into a rising-yield tape**  
+   keep | us_relevance: high — coupon supply is a same-day rates event | channel: rates | geography: us_domestic | severity: session | horizon: 1d | action_object: spx | action_object_detail: 10Y / TLT / SPX beta | polarity: hawkish | polarity_why: Auction plus a 5.3% test is a supply/price shock, not a routine calendar note. | confidence: 0.74
 
-**4. Nvidia AI deal + Dell backlog; AMAT +5%, ALAB +12%**
-- keep | us_relevance: high — AI-capex complex is the largest SPX weight cluster | channel: sector_fundamental | geography: us_supply_chain | severity: session | horizon: 1d-1w | action_object: sector_etf | detail: SMH/SOXX, semis basket | polarity: bullish | polarity_why: fresh demand catalyst + index-inclusion flow | confidence: 0.8
+4. **TSMC revenue +51%, AI demand holds**  
+   keep | us_relevance: high — AI-capex bellwether for US semis complex | channel: sector_fundamental | geography: us_supply_chain | severity: session | horizon: 1w-1m | action_object: sector_etf | action_object_detail: SMH/SOXX, NVDA/AMD/MRVL basket | polarity: bullish | polarity_why: Confirms AI hardware pull-through even as yields hit multiples. | confidence: 0.80
 
-**5. Google 20-yr nuclear deal with Constellation**
-- conditional | us_relevance: medium — structural AI-power theme, but one deal | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1w-1m | action_object: sector_etf | detail: utilities/IPP basket (CEG, VST, nuclear/PPA names) | polarity: bullish | polarity_why: validates AI-power demand curve | confidence: 0.65
+5. **UK 30y gilts 28-year high, global bond selloff**  
+   keep | us_relevance: medium — global duration is already printing in UST | channel: rates | geography: global_priced | severity: session | horizon: 1d-1w | action_object: spx | action_object_detail: global long-end, US 10Y/30Y, SPX duration | polarity: bearish | polarity_why: Foreign long-end blowout validates a global rates shock, not an isolated gilt squeeze. | confidence: 0.73
 
-**6. Gold −3% on Warsh hawkish / +wires on easing hike bets**
-- conditional | us_relevance: medium — real-rate read-through, not direct SPX driver | channel: substitution | geography: global_priced | severity: session | horizon: 1d-1w | action_object: basket | detail: gold miners (GDX), bullion | polarity: mixed | polarity_why: conflicting wires = unresolved real-rate signal | confidence: 0.55
+6. **Samsung Q3 profit jumps ~9x on AI memory**  
+   keep | us_relevance: high — HBM/DRAM cycle is a US semis earnings factor | channel: sector_fundamental | geography: us_supply_chain | severity: session | horizon: 1w-1m | action_object: sector_etf | action_object_detail: SMH/SOXX, memory/AI-hardware basket | polarity: bullish | polarity_why: AI-memory boom is a sector earnings impulse, not a single-name Korea story. | confidence: 0.76
 
-**7. AbbVie Phase 3 etentamig MM data + Apogee close**
-- keep | us_relevance: medium — large-cap Healthcare with peer sympathy | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: sector_etf | detail: XBI/IBB, BCMA/myeloma basket | polarity: bullish | polarity_why: positive late-stage readout lifts sector sentiment | confidence: 0.7
+7. **Google power deal with Constellation; uranium rally**  
+   conditional | us_relevance: high — US nuclear offtake for AI load | channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1w-1m | action_object: basket | action_object_detail: URA/nuclear utilities, not only CCJ | polarity: bullish | polarity_why: Contracted AI power demand lifts uranium/nuclear peers, not just one miner print. | confidence: 0.66
 
-**8. Fed supervision overhaul / Powell subpoena block / Trump-Warsh rift**
-- conditional | us_relevance: medium — institutional-independence risk premium | channel: sector_policy | geography: us_domestic | severity: session | horizon: 1w | action_object: basket | detail: large-cap banks (XLF) | polarity: mixed | polarity_why: structural change = uncertainty, not clean direction | confidence: 0.5
-
----
-
-### STEP 2 — INTERACTIONS
-
-- **Fed path + weak labor → treat as ONE rates cluster.** The "blowout jobs" headline and the "soft jobs data reduces hike odds" wire are contradictory; net effect is an unresolved rates regime, not two separate signals. Do not double-count hawkish and dovish legs.
-- **Yields at 24-yr highs + cyclicals/small-caps → risk-off breadth pressure.** Long-end term premium is a headwind to IWM and rate-sensitive sectors; do not read Nasdaq strength as broad risk-on.
-- **AI chip demand + rates backup → semis mixed-to-up, but do not extrapolate to broad tech.** NVDA/AMAT/ALAB strength is idiosyncratic AI-capex; SaaS and unprofitable growth remain duration-pressured.
-- **AI power demand (Google/Constellation) + nuclear/PPA theme → do not short IPPs on rates alone.** Structural demand offsets rate drag for the nuclear-adjacent complex.
-- **Single-name biotech Phase 3 success (ABBV) + sector sympathy → Healthcare basket, not only ABBV.**
+8. **Gold −$100 / AEM sold on hawkish October hike odds**  
+   keep | us_relevance: high — same hawkish-Fed impulse hitting risk and gold | channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w | action_object: sector_etf | action_object_detail: GDX/GLD; confirms SPX rates channel | polarity: hawkish | polarity_why: Gold dump is the cross-asset tell that hike odds, not growth, are driving the tape. | confidence: 0.78
 
 ---
 
-### STEP 3 — RECLASSIFY AUDIT
+**STEP 2 — INTERACTIONS**
 
-**DROPPED from mechanical usable:**
-- "Bank of Canada rate hike case weaker than Fed's, CIBC argues" / "Bank of Canada faces weaker case…" — foreign central bank, no US equity transmission.
-- "Gold rises on expectations of Fed rate hike will ease dollar…" / "Gold price rises as oil falls…" / "Gold edges up as October rate hike bets ease" — duplicate gold wires; consolidated into one substitution item (#6).
-- "Fed Rate Hike & What It Means for Mortgage Rates" / "8 Years of History Warns What a September Rate Hike Could Mean for Stocks" — derivative commentary, no incremental driver.
-- "The Fed's Rate Hike Was a Bad Call, Not Bad Faith" / "The Federal Reserve's Nonsense Policy" / "Revised Inflation Data Don't Change The Fed's Job" — opinion/analysis, not news.
-- "Jobs report shows US unexpectedly lost jobs in February" — stale/out-of-window, contradicts today's blowout-jobs narrative; likely mis-dated.
-- "Asian shares higher as odds reduced for another Fed rate hike" — Asia session color, already priced into US open.
-- "US Fed interest rate hike: How will it impact private equity dealmaking?" — thematic, no session force.
-
-**RESCUED from noise / single_name:**
-- "Google signs 20-year nuclear deal with Constellation Energy" (single_name bucket) → **keep/conditional**: AI-power structural theme, utility/IPP sector force.
-- "Nvidia AI deal and Dell server backlog spark semis rally lifting Applied Materials 5%" (single_name bucket) → **keep**: index-relevant AI-capex catalyst, SMH/SOXX force.
-- "Nvidia Heads for $6 Trillion Value…" / "Nvidia Is Now Worth $5.76 Trillion…" (single_name) → **conditional**: confirms AI leadership breadth, supports #4.
-- "OpenAI, Anthropic, Meta, Google stop short of AI safety guarantee" (single_name) → **conditional**: regulatory-risk overhang for AI complex, watch item.
-- "OpenAI, Anthropic IPOs Could Spark a Selloff in These Struggling Stocks" (single_name) → **conditional**: sentiment/positioning risk for IBM/TSLA/APP basket.
-- "Brazilian stocks jump as Bolsonaro seen as heavy favorite" (noise) → **drop**: EM single-country, no US equity transmission.
-- "Marvell just impressed Wall Street with 'good numbers plus a better story'" (noise) → **conditional**: semis sympathy, supports #4.
+- **Fed path + 10Y 5.3% + 10Y auction → ONE rates cluster.** Do not stack minutes, auction, and gold dump as three independent macro hits.
+- **AI chip/memory demand (TSMC, Samsung, AMD/NVDA/MRVL focus) + soaring yields → semis mixed.** Do not double-count Asia AI beats as SPX risk-on while duration is the index driver.
+- **Yields up (not down) + record-high fade → no cyclicals/small-cap risk-on breadth support.** Inverse of the yields-down/IWM pattern.
+- **FOMC AI-debt discussion + Broadcom/OpenAI chip financing + SpaceX $40B Nvidia-chip raise → levered AI capex, not unlevered fundamentals.** Do not buy software/long-duration tech on dovish-hope; Accenture’s 3–6% FY27 LC guide is the multiple-compression tell, and there is no weak-labor offset to re-rate SaaS.
+- Kinetic oil patterns: **none** (Syria-as-Hormuz-bypass is not a fresh tanker/Iran attack; Vitol inventory comment is not a kinetic increment).
 
 ---
 
-### STEP 4 — B1 / SECTOR INJECT
+**STEP 3 — RECLASSIFY AUDIT**
+
+**DROP from usable (keep one rates cluster, kill satellites):**
+- CAD weakens / Gulf markets slip / Bitcoin down / DXY technicals — FX/crypto satellites of the same yield shock.
+- Anglo-Teck geopolitics, Fortescue–China iron ore — foreign materials, not US beta.
+- Syria Hormuz-bypass for Iraqi crude — speculative routing, not a fresh kinetic supply shock.
+- Musk rules out TSMC at Terafab; AMD exploring Samsung foundry — single-name color, not sector force.
+- Duplicate local-paper FOMC-minutes wires — same print as the ranked minutes item.
+
+**RESCUE from noise:**
+- UK 30-year gilt yields at 28-year high — global duration regime, false-negative.
+
+**RESCUE from single_name:**
+- Samsung AI-memory profit boom — SOXX/SMH force.
+- Google–Constellation / uranium rally — nuclear/uranium basket force.
+- Broadcom–OpenAI financing and SpaceX $40B Nvidia-chip raise — not ranked alone; folded into the AI-debt interaction (conditional, not SPX keep).
+
+**Left as noise/single_name (not rescued):** AI-bubble “worst crash since 2008” strategist note (sentiment, no tape); rupee/RBI/Peru/Argentina; gold “recovery as dollar stalls” (contradicted by AEM/gold −$100); Amazon retail job cuts; ABBV BTD / AMGN Phase 3 / BMY downgrade (name-level healthcare); BA PAC-3 (defense color).
+
+**RULES_APPLIED:** `mega-cap-earnings-over-macro-drag` (partial — TSMC/Samsung/AI hardware are real, so do not treat the session as pure-macro crash; still do not let AI beats veto a confirming yield shock). Kinetic/Hormuz lessons **do not fire**. CPI/NFP/FOMC *decision* direction-gates **do not fully fire** (minutes are an info event, partly already in the tape, not an unsigned binary). Ops/predict-file lessons **none**.
+
+---
+
+**STEP 4 — B1 / SECTOR INJECT**
 
 ```
 NEWS_JUDGE: n=8 rescued=3
-MACRO rates: [hawkish] Blowout jobs + Warsh "inflation too high" vs. Oct hike odds cut to 17.7% — unresolved Fed path (regime/1w-1m)
-MACRO rates: [bearish] 10Y/30Y at 24-yr highs, mortgage >5% — duration drag on REITs/utilities/IWM (regime/1w-1m)
-SECTOR semis: [bullish] NVDA AI deal + Dell backlog, AMAT +5%, ALAB +12% on S&P inclusion — SMH/SOXX leadership (session/1d-1w)
-SECTOR utilities/IPP: [bullish] Google 20-yr nuclear PPA with Constellation — AI-power demand re-rate (session/1w-1m)
-SECTOR healthcare: [bullish] ABBV Phase 3 etentamig MM data + Apogee close — XBI/IBB sympathy (session/1d-1w)
-SECTOR financials: [mixed] Fed supervision overhaul (12→5 regions), Powell subpoena block — XLF policy uncertainty (session/1w)
-INTERACTION: Fed path + weak labor = ONE rates cluster (do not double-count); AI-capex strength does NOT imply broad tech risk-on while long yields back up
-WATCH: contradictory jobs wires (blowout vs. soft) — treat rates regime as unresolved; do not emit directional SPX call off the labor headline alone
+MACRO rates: [hawkish] 10Y tests 5.3%, minutes flag another 2026 hike, 10Y auction (session/1d-1w)
+MACRO risk: [bearish] SPX/NDX off records on duration; gold −$100 confirms hike odds (session/1d)
+SECTOR semis: [mixed] TSMC +51% and Samsung AI-memory boom vs yield compression (SMH/SOXX)
+SECTOR nuclear/uranium: [bullish] Google–Constellation power offtake lifts URA/nuclear basket (URA)
+SECTOR software: [bearish] ACN 3–6% FY27 LC guide into higher yields — duration, not a beat (IGV)
+INTERACTION: Minutes+10Y+auction = one rates cluster; do not buy semis/software on AI beats while 10Y is at 5.3%
+WATCH: Auction stop-through vs tail; AI-debt language can extend multiple compression even if TSMC holds
 ```
-
----
 
 NEWS_PARSE_BEGIN
 IMPORTANT_COUNT: 8
 TOP_ITEMS:
-- Blowout jobs report fans Fed rate-hike fears; Dow/S&P lower, Nasdaq chip-led | keep=keep | channel=rates | severity=regime | horizon=1d-1w | object=spx:SPX beta | pol=hawkish | conf=0.75
-- Warsh "inflation too high" / Williams late-2026 hike / Oct odds 17.7% | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=spx:SPX beta, 2Y/10Y | pol=mixed | conf=0.7
-- 10Y/30Y at 24-year highs; mortgage rates top 5% | keep=keep | channel=rates | severity=regime | horizon=1w-1m | object=basket:REITs, utilities, IWM, unprofitable growth | pol=bearish | conf=0.75
-- Nvidia AI deal + Dell backlog; AMAT +5%, ALAB +12% | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:SMH/SOXX | pol=bullish | conf=0.8
-- Google 20-yr nuclear deal with Constellation | keep=conditional | channel=sector_fundamental | severity=session | horizon=1w-1m | object=sector_etf:utilities/IPP (CEG, VST) | pol=bullish | conf=0.65
-- Gold −3% on Warsh hawkish vs. +wires on easing hike bets | keep=conditional | channel=substitution | severity=session | horizon=1d-1w | object=basket:GDX, bullion | pol=mixed | conf=0.55
-- AbbVie Phase 3 etentamig MM data + $10.9B Apogee close | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XBI/IBB | pol=bullish | conf=0.7
-- Fed supervision overhaul / Powell subpoena block / Trump-Warsh rift | keep=conditional | channel=sector_policy | severity=session | horizon=1w | object=basket:XLF large-cap banks | pol=mixed | conf=0.5
-INTERACTIONS: Fed path + weak labor = ONE rates cluster (do not double-count); yields at 24-yr highs + cyclicals/small-caps = risk-off breadth pressure; AI chip demand + rates backup = semis mixed-to-up but do not extrapolate to broad tech; AI power demand + nuclear/PPA = do not short IPPs on rates alone; ABBV Phase 3 + sector sympathy = Healthcare basket not only ABBV
-RESCUED_FROM_NOISE: Google 20-yr nuclear deal with Constellation; Nvidia AI deal + Dell backlog spark semis rally (AMAT +5%); Marvell "good numbers plus a better story"
-DROPPED_FROM_USABLE: Bank of Canada rate hike case weaker than Fed's (CIBC) x2; Gold rises on expectations of Fed rate hike will ease dollar; Gold price rises as oil falls; Gold edges up as October rate hike bets ease; Fed Rate Hike & What It Means for Mortgage Rates; 8 Years of History Warns What a September Rate Hike Could Mean for Stocks; The Fed's Rate Hike Was a Bad Call Not Bad Faith; The Federal Reserve's Nonsense Policy; Revised Inflation Data Don't Change The Fed's Job; Jobs report shows US unexpectedly lost jobs in February (stale); Asian shares higher as odds reduced for another Fed rate hike; US Fed interest rate hike: How will it impact private equity dealmaking
+- SPX/NDX slip from records as 10Y tests 5.3% | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:SPX/NDX duration beta | pol=bearish | conf=0.86
+- FOMC minutes: another hike likely this year | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:hike-odds spine | pol=hawkish | conf=0.84
+- US 10Y auction into rising yields | keep=keep | channel=rates | severity=session | horizon=1d | object=spx:10Y/TLT | pol=hawkish | conf=0.74
+- TSMC quarterly revenue +51% AI demand holds | keep=keep | channel=sector_fundamental | severity=session | horizon=1w-1m | object=sector_etf:SMH/SOXX | pol=bullish | conf=0.80
+- UK 30y gilt yields 28-year high in global selloff | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:global long-end | pol=bearish | conf=0.73
+- Samsung Q3 profit ~9x on AI memory | keep=keep | channel=sector_fundamental | severity=session | horizon=1w-1m | object=sector_etf:SMH/SOXX memory | pol=bullish | conf=0.76
+- Google-Constellation power deal; uranium miners rally | keep=conditional | channel=sector_fundamental | severity=session | horizon=1w-1m | object=basket:URA/nuclear utilities | pol=bullish | conf=0.66
+- Gold -$100 / miners sold on extra October hike odds | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=sector_etf:GDX/GLD | pol=hawkish | conf=0.78
+INTERACTIONS: Fed minutes+10Y 5.3%+auction=ONE rates cluster; AI chip/memory demand+yield backup=semis mixed do not double-count; yields-up+record fade=NO cyclicals/IWM risk-on; FOMC AI-debt+OpenAI/Broadcom financing+SpaceX $40B Nvidia chips=levered AI capex not unlevered buy; kinetic oil=none
+RESCUED_FROM_NOISE: UK 30-year gilt yields hit 28-year high in global selloff
+DROPPED_FROM_USABLE: CAD weakens risk-off; Gulf markets slip; Bitcoin falls on yields; DXY technicals ahead of minutes; Anglo-Teck geopolitical merger; Fortescue China iron-ore dispute; Syria Hormuz-bypass for Iraqi crude; Musk rules out TSMC Terafab; AMD exploring Samsung foundry; duplicate local FOMC-minutes wires
 B1_INJECT:
 NEWS_JUDGE: n=8 rescued=3
-MACRO rates: [hawkish] Blowout jobs + Warsh "inflation too high" vs. Oct hike odds cut to 17.7% — unresolved Fed path (regime/1w-1m)
-MACRO rates: [bearish] 10Y/30Y at 24-yr highs, mortgage >5% — duration drag on REITs/utilities/IWM (regime/1w-1m)
-SECTOR semis: [bullish] NVDA AI deal + Dell backlog, AMAT +5%, ALAB +12% on S&P inclusion — SMH/SOXX leadership (session/1d-1w)
-SECTOR utilities/IPP: [bullish] Google 20-yr nuclear PPA with Constellation — AI-power demand re-rate (session/1w-1m)
-SECTOR healthcare: [bullish] ABBV Phase 3 etentamig MM data + Apogee close — XBI/IBB sympathy (session/1d-1w)
-SECTOR financials: [mixed] Fed supervision overhaul (12→5 regions), Powell subpoena block — XLF policy uncertainty (session/1w)
-INTERACTION: Fed path + weak labor = ONE rates cluster (do not double-count); AI-capex strength does NOT imply broad tech risk-on while long yields back up
-WATCH: contradictory jobs wires (blowout vs. soft) — treat rates regime as unresolved; do not emit directional SPX call off the labor headline alone
+MACRO rates: [hawkish] 10Y tests 5.3%, minutes flag another 2026 hike, 10Y auction (session/1d-1w)
+MACRO risk: [bearish] SPX/NDX off records on duration; gold -$100 confirms hike odds (session/1d)
+SECTOR semis: [mixed] TSMC +51% and Samsung AI-memory boom vs yield compression (SMH/SOXX)
+SECTOR nuclear/uranium: [bullish] Google-Constellation power offtake lifts URA/nuclear basket (URA)
+SECTOR software: [bearish] ACN 3-6% FY27 LC guide into higher yields - duration, not a beat (IGV)
+INTERACTION: Minutes+10Y+auction = one rates cluster; do not buy semis/software on AI beats while 10Y is at 5.3%
+WATCH: Auction stop-through vs tail; AI-debt language can extend multiple compression even if TSMC holds
 NEWS_PARSE_END

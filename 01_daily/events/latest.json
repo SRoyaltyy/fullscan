@@ -1,1329 +1,387 @@
 {
-  "scan_date": "2026-10-05",
+  "scan_date": "2026-10-08",
   "events": [
     {
-      "title": "China Golden Week (National Day) travel vs spend",
-      "category": "ongoing",
-      "timing": "today",
-      "date_or_window": "2026-10-01..2026-10-07",
-      "regions": [
-        "China"
-      ],
-      "sectors": [
-        "Consumer Cyclical",
-        "Consumer Defensive",
-        "Real Estate"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "Holiday volume is the live read on whether PBoC/mortgage support is thawing households, or whether property-scarred consumers still travel more and spend less.",
-      "what_to_watch": "Official trips/revenue after Oct 7; per-capita spend vs 2025's ~911 yuan; outbound vs domestic mix.",
-      "status": "new",
-      "sources": [
-        "https://www.reuters.com/world/asia-pacific/chinas-golden-week-travel-surge-masks-cautious-consumer-spending-2026-09-29/",
-        "https://english.news.cn/20261005/06f31cbca9e241f181f196af88a83b88/c.html"
-      ]
-    },
-    {
-      "title": "California record heat wave / wildfire-smoke risk",
-      "category": "ongoing",
-      "timing": "today",
-      "date_or_window": "2026-10-02..2026-10-08",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Utilities",
-        "Energy",
-        "Real Estate"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Late-season extreme heat lifts power demand and fire risk into SEMICON West week, a local but tradeable utilities/insurance overlay.",
-      "what_to_watch": "Warnings through Oct 8, Bouquet Fire containment, and CAISO load/price spikes versus a Friday cooling trend.",
-      "status": "carried",
-      "sources": [
-        "https://news.cgtn.com/news/2026-10-05/California-heat-wave-breaks-records-raises-wildfire-concerns-1QZbz8nffUY/p.html",
-        "https://watchers.news/2026/10/03/california-heat-wave-triggers-heat-advisories-and-extreme-heat-warnings-through-october-8/"
-      ]
-    },
-    {
-      "title": "September NFP miss: +29k, U3 4.2%, wages +3.0% y/y",
+      "title": "FOMC minutes signal another rate hike likely before year-end",
       "category": "macro_data",
       "timing": "past",
-      "date_or_window": "2026-10-02",
+      "date_or_window": "2026-10-07",
       "regions": [
         "US"
       ],
       "sectors": [
-        "BROAD",
-        "Financial"
+        "financials",
+        "rates",
+        "housing",
+        "banks"
       ],
-      "expected_direction": "mixed",
+      "expected_direction": "bearish",
       "impact": 4,
       "confidence": "high",
-      "why_it_matters": "Payrolls badly missed ~+90k consensus, prior months were revised down, and wage growth slowed — collapsing October hike odds while leaving a growth-scare tail.",
-      "what_to_watch": "Whether Oct 7 minutes and Oct 14 CPI confirm a hold, or energy CPI reopens the hike debate into the Oct 27–28 FOMC (just outside this window).",
-      "status": "carried",
-      "sources": [
-        "https://www.bls.gov/news.release/empsit.nr0.htm",
-        "https://www.cnbc.com/2026/10/02/fed-rate-hike-odds-decline-after-september-jobs-report.html"
-      ]
-    },
-    {
-      "title": "Eurozone September flash HICP 3.8% y/y (energy spike)",
-      "category": "macro_data",
-      "timing": "past",
-      "date_or_window": "2026-10-02",
-      "regions": [
-        "EU"
-      ],
-      "sectors": [
-        "BROAD",
-        "Financial",
-        "Energy",
-        "Consumer Defensive"
-      ],
-      "expected_direction": "bearish",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "Hottest headline since 2023, energy 18.8% y/y, tests the ECB's post-September 25 bp hike 'hold' into the Oct 29 meeting.",
-      "what_to_watch": "Final HICP on Oct 16 and whether core stays near 2.5% or services re-accelerate with energy.",
-      "status": "carried",
-      "sources": [
-        "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-02102026-ap",
-        "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Inflation_in_the_euro_area"
-      ]
-    },
-    {
-      "title": "OPEC+ holds November output targets unchanged",
-      "category": "geopolitical",
-      "timing": "past",
-      "date_or_window": "2026-10-04",
-      "regions": [
-        "Middle East"
-      ],
-      "sectors": [
-        "Energy"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "Core producers paused after finishing the 1.65 mb/d unwind; actual barrels remain far below quotas because of the Iran war, so the signal is 'no extra supply'.",
-      "what_to_watch": "Nov 1 eight-country follow-up and whether Saudi/Iraq actuals stay war-constrained even if quotas are unchanged.",
-      "status": "carried",
-      "sources": [
-        "https://www.reuters.com/business/energy/opec-agrees-principle-keep-november-oil-output-targets-steady-sources-say-2026-10-04/",
-        "https://www.worldoil.com/news/2026/10/4/opec-holds-november-oil-production-targets-steady-as-supply-remains-constrained/"
-      ]
-    },
-    {
-      "title": "Camp David Iran 'war council' after Hormuz rejection",
-      "category": "geopolitical",
-      "timing": "past",
-      "date_or_window": "2026-10-03..2026-10-04",
-      "regions": [
-        "US",
-        "Middle East"
-      ],
-      "sectors": [
-        "Energy",
-        "BROAD",
-        "Industrials"
-      ],
-      "expected_direction": "unclear",
-      "impact": 4,
-      "confidence": "medium",
-      "why_it_matters": "Senior US principals met as Iran restated Hormuz stays shut; raises odds of a military or sanctions step before US midterms rather than a 7-day reopen deal.",
-      "what_to_watch": "Third-carrier/amphibious deployments, Yemen/Houthi track, and any White House decision after the closed-door session.",
-      "status": "carried",
-      "sources": [
-        "https://www.cbsnews.com/live-updates/trump-iran-war-us-midterm-elections-troops-deployment/",
-        "https://www.jpost.com/international/article-910444"
-      ]
-    },
-    {
-      "title": "Tokyo September core CPI +2.7% y/y (hot lead for national CPI)",
-      "category": "macro_data",
-      "timing": "past",
-      "date_or_window": "2026-10-01",
-      "regions": [
-        "Japan"
-      ],
-      "sectors": [
-        "BROAD",
-        "Financial"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Well above ~2.3% consensus after BoJ's Sept hike to 1.25%, keeping another hike in play at the Oct 29–30 meeting (just outside this window).",
-      "what_to_watch": "Whether the Oct 30 Outlook declares trend inflation at 2% and JGB/yen reaction into that meeting.",
-      "status": "carried",
-      "sources": [
-        "https://asia.nikkei.com/economy/inflation/tokyo-core-inflation-rate-jumps-bolsters-case-for-more-boj-hikes",
-        "https://www.japantimes.co.jp/business/2026/10/05/economy/bank-of-japan-underlying-inflation-rate/"
-      ]
-    },
-    {
-      "title": "US August goods-and-services trade balance",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-06",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD",
-        "Industrials"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "Deficit print is a read on tariff-front-running vs oil import bill after the truce extension.",
-      "what_to_watch": "Goods deficit vs oil; China-related import volumes.",
+      "why_it_matters": "September minutes showed a unanimous 25 bp hike and most officials seeing another increase by year-end to fight inflation still well above 2%, reinforcing a higher-for-longer path after the first hike in over three years.",
+      "what_to_watch": "Odds for the Oct 27-28 FOMC (hold vs hike), Fed speeches, and whether December remains the preferred follow-up window.",
       "status": "new",
       "sources": [
-        "https://www.eoption.com/weekly-event-calendar-10-05-2026-10-09-2026/",
-        "https://fedratecalc.com/us-economic-calendar/october-2026/"
+        "https://www.cnbc.com/2026/10/07/fed-officials-see-another-hike-coming-but-no-sign-as-to-when-minutes-show.html",
+        "https://www.reuters.com/business/fed-minutes-could-detail-rate-hike-decision-policy-path-2026-10-07/"
       ]
     },
     {
-      "title": "Delta Air Lines Q3 2026 earnings (jet-fuel stress test)",
-      "category": "earnings",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-09",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Industrials",
-        "Energy",
-        "Consumer Cyclical"
-      ],
-      "expected_direction": "bearish",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "Bellwether airline vs Brent >$100; Q3 plan assumed jet fuel ~$3.15/gal after a record $3.93 in Q2.",
-      "what_to_watch": "Unit fuel, premium demand, Q4 margin guide, capacity cuts.",
-      "status": "new",
-      "sources": [
-        "https://ir.delta.com/events-and-presentations/events-calendar/event-details/2026/Delta-Air-Lines-3Q-2026-Earnings-Webcast/default.aspx",
-        "https://www.marketbeat.com/instant-alerts/upcoming-delta-air-lines-dal-set-to-release-earnings-on-friday-2026-10-02/"
-      ]
-    },
-    {
-      "title": "SEMICON West 2026 (San Francisco)",
-      "category": "ongoing",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-13..2026-10-15",
-      "regions": [
-        "US",
-        "South Korea",
-        "Japan"
-      ],
-      "sectors": [
-        "Technology",
-        "Industrials"
-      ],
-      "expected_direction": "bullish",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "Industry gathering as the sector crosses a $1tn revenue narrative; capex/tool commentary will be read against ASML/TSMC prints the same week.",
-      "what_to_watch": "High-NA EUV, CoWoS/HBM tool demand, and China-export-control asides from equipment vendors.",
-      "status": "new",
-      "sources": [
-        "https://www.emsnow.com/semicon-west-2026-to-spotlight-key-innovations-and-market-drivers-powering-the-semiconductor-industry-beyond-1-trillion/",
-        "https://semiengineering.com/ev_categories/events/"
-      ]
-    },
-    {
-      "title": "September PPI and advance retail sales",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-15",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD",
-        "Consumer Cyclical",
-        "Financial"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "medium",
-      "why_it_matters": "PPI (~+0.5% m/m expected) is the pipeline into CPI/PCE; retail sales test whether $100 oil is already destroying goods demand after the NFP miss.",
-      "what_to_watch": "Core PPI vs control-group retail; gasoline-ex sales.",
-      "status": "new",
-      "sources": [
-        "https://www.bls.gov/schedule/2026/10_sched_list.htm",
-        "https://fedratecalc.com/us-economic-calendar/october-2026/"
-      ]
-    },
-    {
-      "title": "Eurozone September HICP final",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-16",
-      "regions": [
-        "EU"
-      ],
-      "sectors": [
-        "BROAD",
-        "Financial",
-        "Energy"
-      ],
-      "expected_direction": "bearish",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Confirms or revises the 3.8% flash that already challenged the ECB's measured hold.",
-      "what_to_watch": "Revisions to energy/services; any core uptick from 2.5%.",
-      "status": "new",
-      "sources": [
-        "https://tradingeconomics.com/euro-area/inflation-cpi",
-        "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-02102026-ap"
-      ]
-    },
-    {
-      "title": "Taiwan gray-zone pressure vs silicon-shield (no invasion priced as imminent)",
-      "category": "geopolitical",
-      "timing": "today",
-      "date_or_window": "2026-10-01..2026-10-05",
-      "regions": [
-        "Taiwan",
-        "China",
-        "US"
-      ],
-      "sectors": [
-        "Technology",
-        "Industrials"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "medium",
-      "why_it_matters": "US sources still see full invasion unlikely near-term, but coast-guard quarantine tactics are the slow-burn risk to TSMC power/shipping — a chip-supply tail, not the base case.",
-      "what_to_watch": "ADIZ/coast-guard counts; any arms-sale delay after the Trump–Xi summit.",
-      "status": "new",
-      "sources": [
-        "https://www.reuters.com/world/china/us-sees-chinese-invasion-taiwan-unlikely-next-year-despite-2027-timeline-sources-2026-10-01/",
-        "https://www.reuters.com/world/china/taiwan-transfers-naval-commander-coast-guard-boost-deterrence-against-china-2026-10-01/"
-      ]
-    },
-    {
-      "title": "ISM Services PMI (September)",
+      "title": "US Treasuries spike; 30-year yield hits multi-decade high near 5.70%",
       "category": "macro_data",
       "timing": "today",
-      "date_or_window": "2026-10-05",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD",
-        "Industrials",
-        "Financial"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "First activity print after Friday's +29k NFP miss; services are most of US GDP and test whether labor slowing is demand-wide or a hiring freeze.",
-      "what_to_watch": "Consensus ~55.1–55.7 vs August 55.4; employment and prices-paid subindexes vs the growth-scare vs sticky-inflation split.",
-      "status": "carried",
-      "sources": [
-        "https://www.financecalendar.com/us-ism-services-pmi/",
-        "https://www.fxstreet.com/news/us-data-week-ism-labor-and-sentiment-in-focus-td-securities-202610050325"
-      ]
-    },
-    {
-      "title": "US–Iran war: Iran says Hormuz stays closed until US meets 7 conditions",
-      "category": "geopolitical",
-      "timing": "today",
-      "date_or_window": "2026-10-05",
+      "date_or_window": "2026-10-07/08",
       "regions": [
         "US",
-        "Middle East"
+        "global"
       ],
       "sectors": [
-        "Energy",
-        "BROAD",
-        "Industrials",
-        "Consumer Cyclical"
+        "financials",
+        "housing",
+        "banks",
+        "tech"
       ],
       "expected_direction": "bearish",
       "impact": 5,
       "confidence": "high",
-      "why_it_matters": "Seven-month war plus a contested Strait of Hormuz keeps a regime-level oil, shipping, and inflation premium in US and global risk assets.",
-      "what_to_watch": "Whether Tehran's seven Islamabad-memo conditions are met, escort/bypass flows, and any post–Camp David military step before midterms.",
-      "status": "carried",
-      "sources": [
-        "https://www.aljazeera.com/news/2026/10/4/iran-says-strait-of-hormuz-to-remain-closed-until-us-meets-conditions",
-        "https://www.iranintl.com/en/liveblog/202610033293"
-      ]
-    },
-    {
-      "title": "Brent holds ~$102 as Hormuz logistics, not just barrels, bite",
-      "category": "ongoing",
-      "timing": "today",
-      "date_or_window": "2026-10-05",
-      "regions": [
-        "US",
-        "Middle East"
-      ],
-      "sectors": [
-        "Energy",
-        "BROAD",
-        "Consumer Cyclical",
-        "Utilities"
-      ],
-      "expected_direction": "mixed",
-      "impact": 4,
-      "confidence": "high",
-      "why_it_matters": "Crude transits have partially recovered via escorts/bypasses, but tanker rates, insurance, and refined-product tightness keep a consumer-tax and CPI input in place.",
-      "what_to_watch": "Brent staying above $100, diesel/product cracks, and any resurgence of tanker attacks after last week's flow rebound.",
-      "status": "carried",
-      "sources": [
-        "https://www.reuters.com/commentary/reuters-open-interest/oils-new-problem-isnt-supply-its-logistics-2026-10-05/",
-        "https://www.wsj.com/world/middle-east/oil-was-pouring-through-the-strait-of-hormuz-again-then-attacks-on-shipping-resurged-fe9f0dd9"
-      ]
-    },
-    {
-      "title": "China Golden Week travel vs spend",
-      "category": "ongoing",
-      "timing": "today",
-      "date_or_window": "2026-10-01..2026-10-07",
-      "regions": [
-        "China"
-      ],
-      "sectors": [
-        "Consumer Cyclical",
-        "Consumer Defensive",
-        "Real Estate"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "Holiday volume is the live read on whether PBoC/mortgage support is thawing households, or whether property-scarred consumers still travel more and spend less.",
-      "what_to_watch": "Oct 8 mainland reopen, full-week tourism revenue vs trip counts, and early retail/catering prints after the holiday.",
-      "status": "carried",
-      "sources": [
-        "https://www.globaltimes.cn/page/202610/1371686.shtml",
-        "https://www.reuters.com/world/asia-pacific/chinas-golden-week-travel-surge-masks-cautious-consumer-spending-2026-09-29/"
-      ]
-    },
-    {
-      "title": "US–China Busan truce extended to Jan 10, 2027",
-      "category": "geopolitical",
-      "timing": "past",
-      "date_or_window": "2026-09-23..2026-09-25",
-      "regions": [
-        "US",
-        "China"
-      ],
-      "sectors": [
-        "BROAD",
-        "Industrials",
-        "Consumer Cyclical",
-        "Technology"
-      ],
-      "expected_direction": "bullish",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "Two-month extension past Nov 10 removes the near-term tariff cliff through holiday shipping, without resolving chips, EVs, or the 2027 expiry.",
-      "what_to_watch": "Whether the Board of Trade turns the pause into a broader deal, or talks stall into the January cliff.",
-      "status": "carried",
-      "sources": [
-        "https://www.straitstimes.com/world/united-states/us-treasury-chief-says-to-extend-china-trade-truce-until-january",
-        "https://www.tariffstool.com/guides/us-china-trade-truce-extended-january-2027"
-      ]
-    },
-    {
-      "title": "US–China $60bn '30-for-30' tariff-relief lists",
-      "category": "government",
-      "timing": "past",
-      "date_or_window": "2026-09-27..2026-09-29",
-      "regions": [
-        "US",
-        "China"
-      ],
-      "sectors": [
-        "Consumer Cyclical",
-        "Consumer Defensive",
-        "Industrials",
-        "Energy"
-      ],
-      "expected_direction": "bullish",
-      "impact": 3,
-      "confidence": "medium",
-      "why_it_matters": "Recommended MFN-style cuts on ~$30bn each way (US consumer goods vs China ag/energy/medical) would ease goods inflation and farm exports if implemented.",
-      "what_to_watch": "Domestic legal implementation and start dates; chips, EVs, batteries, and soybeans remain excluded.",
-      "status": "carried",
-      "sources": [
-        "https://www.cnn.com/2026/09/28/business/us-china-tariff-cuts-60-billion-intl",
-        "https://www.whitehouse.gov/wp-content/uploads/2026/09/Terms-of-Reference-for-30-for-30-Framework.pdf"
-      ]
-    },
-    {
-      "title": "China factory PMI back above 50; PBoC PSL cut + mortgage subsidy",
-      "category": "macro_data",
-      "timing": "past",
-      "date_or_window": "2026-09-29..2026-09-30",
-      "regions": [
-        "China"
-      ],
-      "sectors": [
-        "BROAD",
-        "Industrials",
-        "Real Estate",
-        "Technology"
-      ],
-      "expected_direction": "bullish",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "Official manufacturing PMI 50.1 plus a 25 bp PSL cut, bigger relending quotas, and a 1 ppt first-home subsidy (from Oct 1) is the latest counter-cyclical push amid property drag.",
-      "what_to_watch": "Whether Golden Week spending and Oct 19 activity data confirm the PMI bounce or show another property-led fade.",
-      "status": "carried",
-      "sources": [
-        "https://www.reuters.com/world/china/chinese-factory-activity-returns-growth-september-amid-ai-boom-2026-09-30/",
-        "https://www.reuters.com/world/asia-pacific/china-unveils-rate-cut-mortgage-subsidies-spur-growth-2026-09-29/"
-      ]
-    },
-    {
-      "title": "Korea September exports record $120.9bn, chips +263% y/y",
-      "category": "macro_data",
-      "timing": "past",
-      "date_or_window": "2026-10-01",
-      "regions": [
-        "South Korea",
-        "US",
-        "China"
-      ],
-      "sectors": [
-        "Technology",
-        "Industrials"
-      ],
-      "expected_direction": "bullish",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "Semiconductor exports $60.3bn validate the AI-memory boom already signaled by Micron and keep Korea/Taiwan tech as a global growth engine even with $100 oil.",
-      "what_to_watch": "Samsung Oct 8 prelims and TSMC Oct 15 for confirmation that HBM/foundry pricing is still accelerating.",
-      "status": "carried",
-      "sources": [
-        "https://www.businesskorea.co.kr/news/articleView.html?idxno=278017",
-        "https://english.hani.co.kr/arti/english_edition/e_business/1280654.html"
-      ]
-    },
-    {
-      "title": "Micron FQ4 beat and ~$61.5bn FQ1 revenue guide",
-      "category": "earnings",
-      "timing": "past",
-      "date_or_window": "2026-09-30",
-      "regions": [
-        "US",
-        "South Korea"
-      ],
-      "sectors": [
-        "Technology"
-      ],
-      "expected_direction": "bullish",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "Memory pricing/AI capex confirmation is the strongest corporate offset to oil-and-tariff stagflation fears in the tape.",
-      "what_to_watch": "Whether Samsung/TSMC/ASML prints this month ratify Micron's 86%+ GM and HBM-sold-out 2027 message.",
-      "status": "carried",
-      "sources": [
-        "https://www.reuters.com/business/micron-forecasts-quarterly-revenue-above-estimates-2026-09-30/",
-        "https://www.cnbc.com/2026/09/30/micron-mu-q4-earnings-report-2026.html"
-      ]
-    },
-    {
-      "title": "FCC opens 12.7 GHz and 42 GHz for satellite broadband",
-      "category": "government",
-      "timing": "past",
-      "date_or_window": "2026-09-30",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Communication Services",
-        "Technology"
-      ],
-      "expected_direction": "bullish",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "More than 1,000 MHz of new satellite-broadband spectrum is a multi-year capacity tailwind for LEO/broadband names, not a same-week tape mover.",
-      "what_to_watch": "Federal Register effective dates, auction/licensing design, and incumbent-interference fights.",
+      "why_it_matters": "The 10-year near 5.3% and 30-year around 5.70% pulled equities off record highs, hit banks and homebuilders, and revived inflation/debt-supply concerns after a $39bn 10-year auction.",
+      "what_to_watch": "Whether yields ease after the auction, curve steepening, and knock-on to mortgages, banks, and duration-sensitive growth stocks.",
       "status": "new",
       "sources": [
-        "https://www.fcc.gov/document/fcc-acts-bring-thousands-megahertz-spectrum-marketplace",
-        "https://www.radioworld.com/news-and-business/business-and-law/fcc-unleashes-spectrum-abundance-for-new-uses"
+        "https://hdfcsky.com/news/dow-falls-341-points-as-30-year-treasury-yield-hits-5-70percent-pressuring-us-markets-october-8-2026",
+        "https://www.freemalaysiatoday.com/category/business/2026/10/08/wall-street-ends-lower-after-record-highs-as-treasury-yields-climb"
       ]
     },
     {
-      "title": "September FOMC minutes",
+      "title": "Wall Street slips from records as yields and oil rise",
       "category": "macro_data",
-      "timing": "upcoming",
+      "timing": "past",
       "date_or_window": "2026-10-07",
       "regions": [
         "US"
       ],
       "sectors": [
-        "BROAD",
-        "Financial"
+        "equities",
+        "banks",
+        "energy",
+        "housing"
       ],
-      "expected_direction": "mixed",
+      "expected_direction": "bearish",
       "impact": 3,
       "confidence": "high",
-      "why_it_matters": "Markets need to know if the Sept 25 bp hike to 3.75–4.00% was a one-and-done into weak jobs, or if the committee still wanted more hikes against 3.7% PCE.",
-      "what_to_watch": "Dissent language, inflation-upside vs labor-downside balance, and any hint that October is a hold (now ~17–20% hike odds).",
+      "why_it_matters": "Dow fell about 0.66% to ~51,180, S&P 500 and Nasdaq each ~0.22% lower, snapping winning streaks as small-caps and banks lagged; futures were steadier into Oct 8.",
+      "what_to_watch": "Intraday follow-through vs bounce, bank relative performance, and whether oil/yields keep pressuring multiples.",
       "status": "new",
       "sources": [
-        "https://fedratecalc.com/fomc-minutes-release-schedule/",
-        "https://www.bloomberg.com/news/articles/2026-10-03/fed-ecb-minutes-to-show-inflation-fears-as-hike-bets-fade"
+        "https://www.bloomberg.com/news/articles/2026-10-07/stock-market-today-dow-s-p-live-updates",
+        "https://upstox.com/news/market-news/us-stocks/nasdaq-s-and-p-500-dow-jones-slip-as-bold-yields-climb-banking-stocks-down/article-201488/"
       ]
     },
     {
-      "title": "PepsiCo Q3 earnings",
-      "category": "earnings",
-      "timing": "upcoming",
+      "title": "Brent crude holds above $100 on Middle East risk",
+      "category": "geopolitical",
+      "timing": "ongoing",
       "date_or_window": "2026-10-08",
       "regions": [
-        "US"
+        "Middle East",
+        "global"
       ],
       "sectors": [
-        "Consumer Defensive",
-        "Consumer Cyclical"
+        "energy",
+        "airlines",
+        "consumer"
       ],
       "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "First mega-cap consumer print of Q3 season; volumes vs price mix will show whether $100 oil and tariffs are hitting grocery demand.",
-      "what_to_watch": "EPS vs ~$2.29–$2.30, North America volume, and FY guidance after a high-cost input quarter.",
-      "status": "new",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "Elevated oil feeds inflation and the Fed's hawkish bias while supporting energy producers and pressuring rate-sensitive and consumer names.",
+      "what_to_watch": "Brent staying above $100, gasoline/pass-through, and any escalation that would tighten supply further.",
+      "status": "carried",
       "sources": [
-        "https://www.pepsico.com/newsroom/press-releases/2026/pepsico-announces-timing-and-availability-of-third-quarter-2026-financial-results",
-        "https://findfin.app/en/tools/us-earnings-calendar"
+        "https://www.bloomberg.com/news/articles/2026-10-07/stock-market-today-dow-s-p-live-updates",
+        "https://www.reuters.com/business/wall-st-futures-slip-yields-oil-rebound-fed-minutes-focus-2026-10-07/"
       ]
     },
     {
-      "title": "Samsung Electronics Q3 preliminary operating profit",
-      "category": "earnings",
-      "timing": "upcoming",
+      "title": "Russian strikes on Ukraine kill dozens; EU releases €1.24bn for drones and munitions",
+      "category": "geopolitical",
+      "timing": "today",
       "date_or_window": "2026-10-08",
       "regions": [
-        "South Korea",
+        "Ukraine",
+        "EU",
+        "Russia"
+      ],
+      "sectors": [
+        "defense",
+        "energy"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "Missile/drone attacks killed an estimated 20-28 people, Zelenskyy pressed for more Patriots, and Brussels funded Ukrainian drones/munitions, keeping European security and energy-risk premia elevated.",
+      "what_to_watch": "Air-defense deliveries, further EU/US aid, and any spillover into energy infrastructure or NATO posture.",
+      "status": "new",
+      "sources": [
+        "https://wng.org/podcasts/thursday-morning-news-october-8-2026-1791412201",
+        "https://www.youtube.com/watch?v=9E43SdD0TtE"
+      ]
+    },
+    {
+      "title": "Israel marks third anniversary of October 7 attacks amid West Bank violence",
+      "category": "geopolitical",
+      "timing": "today",
+      "date_or_window": "2026-10-07/08",
+      "regions": [
+        "Israel",
+        "Palestinian Territories",
         "US"
       ],
       "sectors": [
-        "Technology"
+        "energy",
+        "defense"
+      ],
+      "expected_direction": "unclear",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "Commemorations, political controversy over Gaza, and reported settler attacks keep Middle East risk in focus alongside already-high oil prices.",
+      "what_to_watch": "Diplomatic reactions, West Bank escalation, and any disruption to regional energy or shipping.",
+      "status": "carried",
+      "sources": [
+        "https://www.dawn.com/newspaper/international/2026-10-08",
+        "https://wng.org/podcasts/thursday-morning-news-october-8-2026-1791412201"
+      ]
+    },
+    {
+      "title": "Hurricane Isaias threatens US Gulf Coast; Florida emergency for 25 counties",
+      "category": "ongoing",
+      "timing": "today",
+      "date_or_window": "2026-10-08",
+      "regions": [
+        "US Gulf Coast",
+        "Florida",
+        "Mississippi"
+      ],
+      "sectors": [
+        "insurance",
+        "energy",
+        "utilities",
+        "retail"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "First Atlantic hurricane of 2026 brings rain, surge, and outage risk to a key energy and population corridor, with DeSantis declaring emergencies across 25 counties.",
+      "what_to_watch": "Track/intensity, Gulf energy shutdowns, insured-loss estimates, and retail/utility disruption.",
+      "status": "new",
+      "sources": [
+        "https://www.wbal.com/2026/10/08"
+      ]
+    },
+    {
+      "title": "Trump expands automatic 'Trump accounts' for children born 2025-2028",
+      "category": "government",
+      "timing": "today",
+      "date_or_window": "2026-10-08",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "financials",
+        "asset managers"
       ],
       "expected_direction": "bullish",
-      "impact": 3,
-      "confidence": "medium",
-      "why_it_matters": "First Korea memory readout after Micron's blowout; a record OP print would confirm the AI-HBM supercycle is company-wide, not MU-specific.",
-      "what_to_watch": "Prelim OP vs >100tn won forecasts and any commentary that DX/consumer is still the offset to memory strength.",
+      "impact": 2,
+      "confidence": "low",
+      "why_it_matters": "Automatic enrollment and Treasury seeding for eligible US-citizen children is a long-horizon savings/fiscal signal more than a near-term market mover.",
+      "what_to_watch": "Funding size, eligibility rules, and whether Congress or Treasury operationalizes deposits at scale.",
       "status": "new",
       "sources": [
-        "https://www.koreaherald.com/article/10893284",
-        "https://www.ajupress.com/view/20261005142622669"
+        "https://wng.org/podcasts/thursday-morning-news-october-8-2026-1791412201"
       ]
     },
     {
-      "title": "SpaceX (SPCX) Day-120 lockup tranche",
+      "title": "Weekly jobless claims and other light US data due",
+      "category": "macro_data",
+      "timing": "today",
+      "date_or_window": "2026-10-08",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "financials",
+        "consumer"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Initial claims around 197-200k and continuing claims near 1.70-1.71m are the day's labor pulse after a weak Sept payrolls print (+29k, 4.2% unemployment) on Oct 2.",
+      "what_to_watch": "Claims surprise vs ~200k, wholesale inventories, and EIA gas storage versus the already-soft labor backdrop.",
+      "status": "new",
+      "sources": [
+        "https://www.benzinga.com/calendars/economic",
+        "https://forex.tradingcharts.com/economic_calendar/2026-10-08.html?code=USD"
+      ]
+    },
+    {
+      "title": "PepsiCo Q3 2026 earnings before the open",
+      "category": "earnings",
+      "timing": "today",
+      "date_or_window": "2026-10-08",
+      "regions": [
+        "US",
+        "global"
+      ],
+      "sectors": [
+        "consumer staples",
+        "beverages"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Largest high-profile print of the day (EPS ~$2.29-$2.32, sales ~$25bn) is a read-through on pricing power, volumes, and input costs with oil elevated.",
+      "what_to_watch": "Organic sales, margins, guidance, and any consumer-trade-down commentary ahead of bank earnings next week.",
+      "status": "new",
+      "sources": [
+        "https://fn2.ai/earnings/calendar",
+        "https://finance.yahoo.com/calendar/earnings/"
+      ]
+    },
+    {
+      "title": "Southern Cross Acquisition II SPAC listing; major IPOs remain thin",
       "category": "ipo",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-09",
+      "timing": "today",
+      "date_or_window": "2026-10-08",
       "regions": [
         "US"
       ],
       "sectors": [
-        "Industrials",
-        "Technology",
-        "Communication Services"
+        "financials"
       ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "Up to ~328m shares become eligible 120 days after the June 12 IPO; supply overhang can spill into high-beta growth even if selling is not mandatory.",
-      "what_to_watch": "Actual float vs eligible shares and whether the Oct 24/26 second tranche is already being positioned.",
+      "expected_direction": "unclear",
+      "impact": 1,
+      "confidence": "low",
+      "why_it_matters": "SCAT/SCATR/SCATW is a small SPAC-related listing, underscoring a still-quiet traditional IPO tape rather than a risk-on issuance wave.",
+      "what_to_watch": "Deal pricing/aftermarket and whether larger traditional IPOs reappear if yields stabilize.",
       "status": "new",
       "sources": [
-        "https://www.alphapilot.tech/discover/spacex-spcx-lockup-expirations-oct-9-oct-24-q3-unlock-and-dec-8-explained",
-        "https://financefeeds.com/spacexs-lock-up-runs-to-8-december/"
+        "https://finance.yahoo.com/calendar/ipo/",
+        "https://www.siriusinvestors.com/stock/ipo-calendar"
       ]
     },
     {
-      "title": "Delta Air Lines Q3 earnings",
-      "category": "earnings",
+      "title": "September CPI due Oct 14 after August 3.4% y/y",
+      "category": "macro_data",
       "timing": "upcoming",
-      "date_or_window": "2026-10-09",
+      "date_or_window": "2026-10-14",
       "regions": [
         "US"
       ],
       "sectors": [
-        "Industrials",
-        "Energy",
-        "Consumer Cyclical"
+        "rates",
+        "financials",
+        "consumer"
       ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "Airline bellwether for jet-fuel costs at $100+ Brent and for consumer/business travel demand after the labor miss.",
-      "what_to_watch": "CASM-ex, fuel hedge/guide, and unit-revenue commentary versus ~$1.96 EPS consensus.",
-      "status": "new",
-      "sources": [
-        "https://findfin.app/en/tools/us-earnings-calendar",
-        "https://dipsonar.com/earnings-calendar/"
-      ]
-    },
-    {
-      "title": "Q3 bank kickoff plus UNH and JNJ",
-      "category": "earnings",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-13",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Financial",
-        "Healthcare"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
+      "expected_direction": "unclear",
+      "impact": 5,
       "confidence": "high",
-      "why_it_matters": "JPM/GS/C plus UNH/JNJ open earnings season on credit, NII, trading, and medical-cost trend — the cleanest read on whether stagflation is hitting loans or just headlines.",
-      "what_to_watch": "NII/credit-card delinquencies, trading revenue, UNH medical-loss ratio, and any oil-shock commentary.",
-      "status": "new",
+      "why_it_matters": "Next inflation print is the key test of the Fed's hike-again-by-year-end message and of whether oil and yields keep inflation sticky.",
+      "what_to_watch": "Core vs headline, energy pass-through, and market odds for October vs December FOMC.",
+      "status": "carried",
       "sources": [
-        "https://dipsonar.com/earnings-calendar/",
+        "https://fedratecalc.com/us-economic-calendar/october-2026/",
+        "https://www.nypresswire.com/calendar/cpi-release-schedule-2026"
+      ]
+    },
+    {
+      "title": "Next FOMC decision Oct 27-28; markets lean hold, December hike live",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-27/28",
+      "regions": [
+        "US",
+        "global"
+      ],
+      "sectors": [
+        "financials",
+        "rates",
+        "housing"
+      ],
+      "expected_direction": "mixed",
+      "impact": 5,
+      "confidence": "medium",
+      "why_it_matters": "Policy rate is 3.75%-4.00% after September's 25 bp hike; minutes keep another 2026 hike on the table while near-term odds for late October are low (~18-19%).",
+      "what_to_watch": "CPI, claims, oil, and any shift in hike probability into the blackout.",
+      "status": "carried",
+      "sources": [
+        "https://www.reuters.com/world/africa/dollar-edges-back-18-month-high-after-fomc-minutes-2026-10-08/",
+        "https://therighttrader.com/economic-calendar"
+      ]
+    },
+    {
+      "title": "US bank earnings week begins around Oct 13 (JPM, GS, C, WFC)",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "week of 2026-10-13",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "banks",
+        "financials"
+      ],
+      "expected_direction": "mixed",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "Mega-cap banks will show NII, credit quality, and trading against a backdrop of surging long yields and a weaker bank tape.",
+      "what_to_watch": "Net interest income, charge-offs, deposit costs, and commentary on the curve and consumer credit.",
+      "status": "carried",
+      "sources": [
         "https://fn2.ai/earnings/calendar"
       ]
     },
     {
-      "title": "US existing-home sales (September)",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-13",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Real Estate",
-        "Financial",
-        "Consumer Cyclical"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "Housing is the rate-sensitive sector most exposed if 10-year yields stay elevated even as hike odds fall.",
-      "what_to_watch": "Volumes vs pending-sales trend and median price; a miss would reinforce the growth-scare side of the NFP print.",
-      "status": "new",
-      "sources": [
-        "https://www.scotiabank.com/ca/en/about/economics/economics-publications/post.other-publications.calendar-of-economic-release-dates.calendar-of-economic-release-dates--october-2026-.html",
-        "https://fedratecalc.com/us-economic-calendar/october-2026/"
-      ]
-    },
-    {
-      "title": "US September CPI",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-14",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD",
-        "Financial",
-        "Consumer Defensive",
-        "Energy"
-      ],
-      "expected_direction": "mixed",
-      "impact": 4,
-      "confidence": "high",
-      "why_it_matters": "Headline is expected hot (~+0.5–0.6% m/m, ~3.7% y/y) on gasoline while core is seen cooling to ~+0.2% m/m — the print that decides if October is a hold or a re-hike scare.",
-      "what_to_watch": "Gasoline/energy contribution vs core services; a hot core would fight the NFP-driven collapse in hike odds.",
-      "status": "new",
-      "sources": [
-        "https://www.bls.gov/schedule/2026/10_sched_list.htm",
-        "https://continuumeconomics.com/a/6181aa7c/preview-due-october-14-us-september-cpi-stronger-but-with-a-slower-core-rate"
-      ]
-    },
-    {
-      "title": "ASML Q3 plus BAC/MS/WFC/BLK",
-      "category": "earnings",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-14",
-      "regions": [
-        "US",
-        "EU"
-      ],
-      "sectors": [
-        "Technology",
-        "Financial"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "ASML is the capex gate for AI foundry; same-day remaining megabanks complete the NII/credit mosaic after JPM.",
-      "what_to_watch": "ASML 2027 demand/China mix vs ~$13.1bn sales consensus, and BAC/WFC consumer-credit quality.",
-      "status": "new",
-      "sources": [
-        "https://www.tipranks.com/stocks/asml/earnings",
-        "https://www.marketbeat.com/earnings/reports/2026-10-14-asml-holding-stock/"
-      ]
-    },
-    {
-      "title": "US September PPI",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-15",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD",
-        "Industrials",
-        "Financial"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "Pipeline inflation after the energy shock; a hot PPI the day after CPI would keep the Fed from fully pivoting off the Sept hike.",
-      "what_to_watch": "Core PPI and energy pass-through into intermediate goods versus the softer-core CPI narrative.",
-      "status": "new",
-      "sources": [
-        "https://www.bls.gov/schedule/2026/10_sched_list.htm",
-        "https://fedratecalc.com/us-economic-calendar/october-2026/"
-      ]
-    },
-    {
-      "title": "US September retail sales",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-15",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Consumer Cyclical",
-        "Consumer Defensive",
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "medium",
-      "why_it_matters": "Demand-side check on whether households are still spending through $100 oil after the jobs miss; control-group sales feed Q3 GDP (Oct 29, outside window).",
-      "what_to_watch": "Headline vs ex-auto/gas; a gasoline-inflated headline with weak real goods would be stagflationary.",
-      "status": "new",
-      "sources": [
-        "https://fedratecalc.com/us-economic-calendar/october-2026/",
-        "https://www.scotiabank.com/ca/en/about/economics/economics-publications/post.other-publications.calendar-of-economic-release-dates.calendar-of-economic-release-dates--october-2026-.html"
-      ]
-    },
-    {
-      "title": "TSMC Q3 earnings",
-      "category": "earnings",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-15",
-      "regions": [
-        "US",
-        "China"
-      ],
-      "sectors": [
-        "Technology"
-      ],
-      "expected_direction": "bullish",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "Foundry bellwether for AI GPUs; guided $44.6–45.8bn revenue and 65–67% GM is the demand confirmation the whole semiconductor complex is priced on.",
-      "what_to_watch": "N3/N2 mix, CoWoS, capex, and any China/export-control language versus the guide midpoint.",
-      "status": "new",
-      "sources": [
-        "https://www.wallstreethorizon.com/taiwan-semiconductor-earnings-calendar",
-        "https://www.trendforce.com/news/2026/10/05/news-tsmc-earnings-preview-terafab-talks-price-hikes-and-a14-intel-race-lead-five-key-themes/"
-      ]
-    },
-    {
-      "title": "CIT supplemental briefs on global Section 301 forced-labor tariffs",
+      "title": "Federal judge earlier ordered restoration of CFPB funding",
       "category": "judicial",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-16",
+      "timing": "past",
+      "date_or_window": "late September 2026",
       "regions": [
         "US"
       ],
       "sectors": [
-        "BROAD",
-        "Industrials",
-        "Consumer Cyclical",
-        "Technology"
+        "financials",
+        "banks"
       ],
       "expected_direction": "mixed",
-      "impact": 4,
-      "confidence": "medium",
-      "why_it_matters": "Duties covering ~99% of US imports (generally +10–12.5% from July 24) are in court; a vacatur would be a multi-sector inflation/margin shock in reverse.",
-      "what_to_watch": "Oct 16 10,000-word briefs on statutory basis and standing after the Sept 30 oral argument; ruling date still unannounced.",
+      "impact": 2,
+      "confidence": "low",
+      "why_it_matters": "A court order restoring CFPB funding after challenges to Fed-linked funding limits is a lingering regulatory overhang for consumer-finance supervision, not a fresh Oct 8 ruling.",
+      "what_to_watch": "Appeals, operational restart of CFPB enforcement, and any follow-on Fed-independence litigation.",
       "status": "carried",
       "sources": [
-        "https://tradelawdaily.com/article/2026/10/05/cit-orders-parties-in-section-301-case-to-file-briefs-answering-judges-questions-2610020071?BC=bc_6978efcccf172",
-        "https://www.cnbc.com/2026/09/30/trump-tariffs-trade-lawsuit.html"
+        "https://www.courthousenews.com/judge-orders-feds-to-restore-consumer-watchdog-funding"
       ]
-    },
-    {
-      "title": "Graham Act 30-day Russia/secondary-tariff clock",
-      "category": "government",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-08..2026-10-18",
-      "regions": [
-        "US",
-        "Middle East",
-        "China"
-      ],
-      "sectors": [
-        "Energy",
-        "BROAD",
-        "Industrials",
-        "Financial"
-      ],
-      "expected_direction": "bearish",
-      "impact": 4,
-      "confidence": "medium",
-      "why_it_matters": "Law signed Sept 18 requires up to 500% tariffs on Russian goods and up to 100% secondary tariffs on top buyers of Russian oil/gas / evasion facilitators — a binary trade shock if implemented at the cap.",
-      "what_to_watch": "USTR/presidential notices around Oct 8 and the Oct 18 (Sunday) 30-day deadline; waivers, rate, and which 'top five' countries are named.",
-      "status": "carried",
-      "sources": [
-        "https://www.paulweiss.com/insights/client-memos/president-signs-bipartisan-russia-and-iran-sanctions-bill-into-law-key-provisions-of-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026",
-        "https://www.fddaction.org/action-center-search/policy-alerts/2026/09/28/deadlines-for-graham-sanctions-law-fall-2026-oversight-guide/"
-      ]
-    },
-    {
-      "title": "China September retail sales / activity cluster",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-19",
-      "regions": [
-        "China"
-      ],
-      "sectors": [
-        "Consumer Cyclical",
-        "Consumer Defensive",
-        "Real Estate",
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "First hard activity print after Golden Week and the late-September easing package; August retail was already weak.",
-      "what_to_watch": "Retail YoY vs the ~0.4% August run-rate, plus any accompanying industrial production/fixed-asset prints.",
-      "status": "new",
-      "sources": [
-        "https://tradingeconomics.com/china/retail-sales-annual",
-        "https://fedratecalc.com/us-economic-calendar/october-2026/"
-      ]
-    },
-    {
-      "title": "Europe aviation/ATC strike cluster",
-      "category": "ongoing",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-05..2026-10-14",
-      "regions": [
-        "EU"
-      ],
-      "sectors": [
-        "Industrials",
-        "Consumer Cyclical"
-      ],
-      "expected_direction": "mixed",
-      "impact": 1,
-      "confidence": "medium",
-      "why_it_matters": "Charleroi ATC, easyJet Portugal crew, and Italian transport actions are a niche traffic/cost overlay, not a market-wide shock.",
-      "what_to_watch": "Whether actions spread into a wider October 14 Italian general strike or stay local.",
-      "status": "new",
-      "sources": [
-        "https://aerosillage.com/en/october-2026-aviation-strikes-dates-travelers/",
-        "https://www.travelandleisureasia.com/sea/news/october-2026-strikes-in-europe-dates-belgium-italy-france/"
-      ]
-    },
-    {
-      "title": "H-1B $100k entry restriction extended 12 months",
-      "category": "government",
-      "timing": "past",
-      "date_or_window": "2026-09-18..2026-09-21",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Technology",
-        "Industrials",
-        "Communication Services"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "White House extended Proclamation 10973 so most new H-1B entries still need a $100,000 payment through 2027-09-21, tightening STEM labor supply for IT outsourcers and large tech sponsors.",
-      "what_to_watch": "Whether USCIS/State actually collect the fee given prior litigation, and DOL Wage-and-Hour review of LCAs due ~mid-October.",
-      "status": "new",
-      "sources": [
-        "https://www.whitehouse.gov/presidential-actions/2026/09/restriction-on-entry-of-certain-nonimmigrant-workers-faad/",
-        "https://www.whitehouse.gov/presidential-actions/2026/09/enhancing-program-integrity-and-integrity-and-interagency-coordination-in-the-administration-of-the-h-1b-nonimmigrant-visa-program/"
-      ],
-      "origin": "catcher"
-    },
-    {
-      "title": "FTC opens probe of OpenAI, Anthropic and other AI firms",
-      "category": "government",
-      "timing": "past",
-      "date_or_window": "2026-09-30",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Technology",
-        "Communication Services"
-      ],
-      "expected_direction": "bearish",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "First major Trump-era consumer-protection case against frontier AI agents, using existing FTC Act unfair/deceptive-practice authority rather than a new AI statute.",
-      "what_to_watch": "Civil investigative demands and executive testimony in coming weeks; any product, safety, or data-use constraints that hit AI capex narratives.",
-      "status": "new",
-      "sources": [
-        "https://www.nytimes.com/2026/09/30/technology/ftc-openai-anthropic-investigation.html",
-        "https://apnews.com/article/ftc-ai-investigation-anthropic-openai-89ac416717adbfb1d72f2d85e6ce83d1",
-        "https://www.reuters.com/business/ftc-opens-probe-into-ai-giants-including-anthropic-openai-new-york-post-reports-2026-09-30/"
-      ],
-      "origin": "catcher"
-    },
-    {
-      "title": "OFAC sanctions Iran MODAFL weapons-procurement networks",
-      "category": "government",
-      "timing": "past",
-      "date_or_window": "2026-09-29",
-      "regions": [
-        "US",
-        "China",
-        "Middle East"
-      ],
-      "sectors": [
-        "Energy",
-        "Industrials",
-        "Financial"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Operation Economic Outcast designated 10 people/entities (China/HK/Pakistan/Saudi/Türkiye nodes) supplying Iran's MODAFL, adding secondary-sanctions risk on top of the live Hormuz war premium.",
-      "what_to_watch": "Follow-on designations of banks, electronics, and dual-use intermediaries in China and the Gulf.",
-      "status": "new",
-      "sources": [
-        "https://home.treasury.gov/news/press-releases/sb0637",
-        "https://ofac.treasury.gov/recent-actions/20260929"
-      ],
-      "origin": "catcher"
-    },
-    {
-      "title": "SEC proposes rescinding Rule 14a-8 shareholder proposals",
-      "category": "government",
-      "timing": "past",
-      "date_or_window": "2026-09-16..2026-09-21",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Financial",
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Killing the federal shareholder-proposal rule would shift ESG/governance fights to state law and cut a long-running cost and activism channel for public companies.",
-      "what_to_watch": "Comment period into ~2026-11-20 and whether a final rule is in place before the 2027 proxy season.",
-      "status": "new",
-      "sources": [
-        "https://www.sec.gov/newsroom/press-releases/2026-89-sec-proposes-rescission-shareholder-proposal-rule-reforms-proxy-solicitation-process",
-        "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19260.pdf"
-      ],
-      "origin": "catcher"
-    },
-    {
-      "title": "SCOTUS OT2026 opens with Suncor/Exxon v Boulder climate-tort case",
-      "category": "judicial",
-      "timing": "today",
-      "date_or_window": "2026-10-05",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Energy",
-        "Industrials",
-        "Utilities"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "high",
-      "why_it_matters": "Argument on whether federal law preempts state climate-damage suits is a binary for energy-majors' litigation overhang; Alito recused, SG arguing as amicus.",
-      "what_to_watch": "Justices' appetite for preemption vs leaving claims in state court; opinion likely months out, but argument tone can move energy lawyers' risk premia immediately.",
-      "status": "new",
-      "sources": [
-        "https://www.scotusblog.com/cases/suncor-energy-inc-v-county-commissioners-of-boulder-county/",
-        "https://bouldercounty.gov/news/u-s-supreme-court-to-hear-boulder-climate-case-monday/",
-        "https://www.supremecourt.gov/oral_arguments/hearinglists/HearingList-October2026.pdf"
-      ],
-      "origin": "catcher"
-    },
-    {
-      "title": "Šefčovič Beijing trip tests EU-China trade de-escalation",
-      "category": "government",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-08..2026-10-16",
-      "regions": [
-        "EU",
-        "China"
-      ],
-      "sectors": [
-        "Industrials",
-        "Technology",
-        "Consumer Cyclical",
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 3,
-      "confidence": "medium",
-      "why_it_matters": "Commissioner Šefčovič's Oct 8–9 Beijing meetings are the proof-of-concept before the Oct 15–16 European Council; failure raises odds of broader machinery/electrical safeguards on China.",
-      "what_to_watch": "Any VER, purchase-commitment, or rare-earth access deal vs a Council green light for harsher trade-defense tools.",
-      "status": "new",
-      "sources": [
-        "https://www.politico.eu/article/talks-eu-china-have-yet-to-deliver-eu-trade-chief-says/",
-        "https://www.euronews.com/2026/10/03/china-opens-anti-dumping-probe-into-eu-days-before-beijing-trade-talks"
-      ],
-      "origin": "catcher"
-    },
-    {
-      "title": "UMich September sentiment 48.1; 1-year inflation expectations 4.6%",
-      "category": "macro_data",
-      "timing": "past",
-      "date_or_window": "2026-09-25",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD",
-        "Consumer Cyclical",
-        "Financial"
-      ],
-      "expected_direction": "bearish",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Four-month-low sentiment plus a jump in year-ahead inflation expectations to 4.6% is the household read that $100 oil and tariffs are already hitting both demand and inflation psychology.",
-      "what_to_watch": "October preliminary on 2026-10-09, especially the inflation-expectations component into CPI week.",
-      "status": "new",
-      "sources": [
-        "https://qz.com/university-michigan-consumer-sentiment-september-2026-092526",
-        "https://www.reuters.com/world/us/us-consumer-sentiment-eases-four-month-low-september-2026-09-25/"
-      ],
-      "origin": "catcher"
-    },
-    {
-      "title": "August JOLTS openings fall to 7.079 million",
-      "category": "macro_data",
-      "timing": "past",
-      "date_or_window": "2026-09-29",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "BROAD",
-        "Financial"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "A 256k drop in openings with still-low layoffs was the pre-NFP signal of cooling labor demand, reinforcing the growth-scare side of the +29k payroll miss.",
-      "what_to_watch": "September JOLTS not until November; near-term labor path is claims (Oct 8) not the next JOLTS print.",
-      "status": "new",
-      "sources": [
-        "https://www.bls.gov/jlt/",
-        "https://www.bls.gov/news.release/jolts.htm"
-      ],
-      "origin": "catcher"
-    },
-    {
-      "title": "Treasury 10-year and 30-year reopenings",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-07..2026-10-08",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Financial",
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "$39bn 10s (Oct 7) and $22bn 30s (Oct 8) test duration demand after the NFP miss crushed hike odds while oil keeps a term-premium bid.",
-      "what_to_watch": "Tail, bid-to-cover, and indirect share versus September's 30-year stop at 5.308%.",
-      "status": "new",
-      "sources": [
-        "https://www.cmegroup.com/education/events/econoday/692907",
-        "https://www.cmegroup.com/education/events/econoday/692910"
-      ],
-      "origin": "catcher"
-    },
-    {
-      "title": "EIA weekly crude inventories (week of Oct 2)",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-07",
-      "regions": [
-        "US",
-        "Middle East"
-      ],
-      "sectors": [
-        "Energy"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "With Brent ~$102 on Hormuz logistics, the first full post-war-week stock print is a check on whether US commercial crude (last 427.3 mb, +0.92 mb) is tightening or just reshuffling.",
-      "what_to_watch": "Crude vs product draws and Cushing; gasoline/distillate tightness matters more than crude if refining logistics stay impaired.",
-      "status": "new",
-      "sources": [
-        "https://ir.eia.gov/wpsr/table1.csv",
-        "https://research.titanfx.com/tool/crude-oil-inventory"
-      ],
-      "origin": "catcher"
-    },
-    {
-      "title": "Costco FY2026 Q4 beat, IEEPA tariff-refund EPS kicker",
-      "category": "earnings",
-      "timing": "past",
-      "date_or_window": "2026-09-24",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Consumer Cyclical",
-        "Consumer Defensive"
-      ],
-      "expected_direction": "bullish",
-      "impact": 2,
-      "confidence": "high",
-      "why_it_matters": "Warehouse bellwether printed $6.75 EPS on $93.9bn sales, including ~$0.15 from IEEPA tariff refunds — a live read on consumer resilience and how IEEPA-invalidated duties recycle into prices.",
-      "what_to_watch": "Whether peers guide similar refund/reinvestment and if membership/traffic hold as jet fuel and goods inflation stay high.",
-      "status": "new",
-      "sources": [
-        "https://s201.q4cdn.com/287523651/files/doc_news/Costco-Wholesale-Corporation-Reports-Fourth-Quarter-and-Fiscal-Year-2026-Operating-Results-2026.pdf",
-        "https://qz.com/costco-earnings-fourth-quarter-2026-tariff-refund-092526"
-      ],
-      "origin": "catcher"
-    },
-    {
-      "title": "Empire State and Philly Fed October manufacturing surveys",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-15",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Industrials",
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "Same-morning regional factory prints land with PPI/retail sales and are the first activity surveys after the NFP miss and $100 oil.",
-      "what_to_watch": "New orders, prices-paid, and employment diffusion versus ISM manufacturing's already-soft tone.",
-      "status": "new",
-      "sources": [
-        "https://www.philadelphiafed.org/surveys-and-data/mbos-charts",
-        "https://www.scotiabank.com/ca/en/about/economics/economics-publications/post.other-publications.calendar-of-economic-release-dates.calendar-of-economic-release-dates--october-2026-.html"
-      ],
-      "origin": "catcher"
-    },
-    {
-      "title": "US industrial production and capacity utilization (September)",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-16",
-      "regions": [
-        "US"
-      ],
-      "sectors": [
-        "Industrials",
-        "Energy",
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "Fed G.17 is the hard output check on whether energy-price shock and labor cooling are already cutting factory and utilities production.",
-      "what_to_watch": "Manufacturing vs mining/utilities split and capacity utilization as a late-cycle inflation/slack signal.",
-      "status": "new",
-      "sources": [
-        "https://www.scotiabank.com/ca/en/about/economics/economics-publications/post.other-publications.calendar-of-economic-release-dates.calendar-of-economic-release-dates--october-2026-.html",
-        "https://www.bls.gov/schedule/2026/10_sched_list.htm"
-      ],
-      "origin": "catcher"
-    },
-    {
-      "title": "China October LPR decision",
-      "category": "macro_data",
-      "timing": "upcoming",
-      "date_or_window": "2026-10-19..2026-10-20",
-      "regions": [
-        "China"
-      ],
-      "sectors": [
-        "Financial",
-        "Real Estate",
-        "BROAD"
-      ],
-      "expected_direction": "mixed",
-      "impact": 2,
-      "confidence": "medium",
-      "why_it_matters": "1Y LPR has been stuck at 3.00% and 5Y at 3.50%; a hold versus a cut is the rate-path complement to the primary's Oct 19 activity cluster and the Oct 1 mortgage subsidy.",
-      "what_to_watch": "5Y LPR (mortgages) more than 1Y; any accompanying RRR/PSL signal if Golden Week spend disappoints.",
-      "status": "new",
-      "sources": [
-        "https://ycharts.com/indicators/china_loan_prime_rate",
-        "https://tradingeconomics.com/china/interest-rate"
-      ],
-      "origin": "catcher"
     }
   ],
   "top_risks": [
-    "Hormuz stays shut or shipping attacks re-accelerate, keeping Brent ≥$100 and feeding US/EU headline CPI.",
-    "Graham Act secondary tariffs on Oct 18 hit top buyers of Russian oil (China and others), undoing the Busan truce's near-term calm.",
-    "September CPI prints a hot core, not just gasoline, forcing October FOMC hike odds back up after the NFP collapse.",
-    "CIT upholds July global Section 301 forced-labor duties, locking in a broad import-cost regime covering ~99% of US goods.",
-    "Camp David follow-through (third carrier / Yemen offensive) before midterms turns the Iran war from a logistics premium into a new kinetic leg."
+    "Higher-for-longer rates if CPI stays sticky and the 30-year remains near multi-decade highs",
+    "Oil above $100 plus Middle East/Ukraine escalation feeding inflation and risk premia",
+    "Hurricane Isaias disrupting Gulf energy, insurance, and regional activity",
+    "Bank and housing stress if long yields stay elevated into next week's earnings"
   ],
   "top_opportunities": [
-    "AI-memory/foundry complex (Micron already printed; Samsung Oct 8, ASML Oct 14, TSMC Oct 15, SEMICON West) remains the growth offset to $100 oil.",
-    "Busan truce through Jan 10 plus unimplemented 30-for-30 lists if paperwork actually cuts consumer-goods and ag tariffs.",
-    "Fed hold into Oct 27–28 is now the base case (~80%+) after +29k NFP; minutes Oct 7 can lock that in if they sound two-sided.",
-    "China policy easing (PSL, mortgage subsidy) plus a Golden Week spend beat would support EM/cyclicals into the Oct 19 data.",
-    "Energy producers and defense if OPEC+ stays on hold and Hormuz risk premium does not fade."
+    "Energy producers and defense if geopolitical premia persist",
+    "A rates/equity bounce if claims are benign and yields reverse after the 10-year auction",
+    "Select consumer-staples quality if PepsiCo confirms pricing power",
+    "Duration and housing relief if October FOMC is confirmed as a hold and CPI cools on Oct 14"
   ],
   "uncertainty": "elevated",
-  "summary": "The tape is still a two-factor regime: a live US–Iran war with Hormuz restricted and Brent near $102, versus a labor-market miss (+29k) that crushed October FOMC hike odds to ~20%. Policy is two-sided — a US–China truce to Jan 10 and $60bn relief lists cut the near-term China tariff cliff, while the Graham Act's Oct 8/18 secondary-tariff clock and the CIT challenge to global Section 301 duties keep trade risk binary. Q3 earnings open with PepsiCo then banks/UNH/ASML/TSMC against an AI-memory boom Korea and Micron have already validated.",
+  "summary": "On 2026-10-08 markets are digesting hawkish Sept FOMC minutes, a multi-decade spike in long Treasury yields, and $100+ oil while Ukraine strikes, Israel anniversary tensions, and Hurricane Isaias add geopolitical and physical-risk overlays. Near-term data are light (claims, PepsiCo), with the real macro tests still ahead: Sept CPI on Oct 14, bank earnings around Oct 13, and the Oct 27-28 FOMC.",
   "windows": {
-    "past": "2026-09-21..2026-10-04",
-    "today": "2026-10-05",
-    "upcoming": "2026-10-06..2026-10-19"
+    "past": "2026-09-24..2026-10-07",
+    "today": "2026-10-08",
+    "upcoming": "2026-10-09..2026-10-22"
   },
-  "repaired": false,
-  "provider": "openclaw",
-  "merged_with_prior_run": true,
-  "catcher": {
-    "ran": true,
-    "replaced_primary": false,
-    "found": 14,
-    "duplicates_dropped": 0,
-    "coverage_assessment": "Primary was strong on the two-factor tape (Hormuz/Brent vs NFP/FOMC), the US–China truce/tariff lists, and the mega-cap Q3 calendar. It was blind on executive/agency actions (H-1B, OFAC, FTC, SEC), today's SCOTUS climate argument, and the usual second-tier macro/FI stack (UMich inflation expectations, JOLTS, Treasury auctions, EIA).",
-    "biggest_gap": "SCOTUS oral argument today in Suncor/Exxon v Boulder County — a term-opening climate-liability case that can reprice energy litigation risk and was entirely absent from the primary list."
-  }
+  "repaired": true,
+  "provider": "repair"
 }
