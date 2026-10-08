@@ -1,11 +1,11 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T04:18:41.318220-04:00",
+  "generated_at": "2026-10-08T04:19:29.965172-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 1,
-    "partial": 3,
+    "ok": 2,
+    "partial": 2,
     "fail": 4,
     "n": 8
   },
@@ -174,6 +174,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-08\n**Generated:** 2026-10-08T04:18:41.084339-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as oil rises on supply concerns ahead of jobless claims data and PepsiCo earnings\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** PEP, CMCSA, TRI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** PEP\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-08\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T04:19:29.795676-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-08_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 275105,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-08_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 19043,
+          "preview": "# MAP HEAT \u2014 2026-10-08\nExport `finviz_2026-10-08.csv` \u00b7 11616 names \u00b7 generated 2026-10-08T04:19:29.758619-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-08\nExport `finviz_2026-10-08.csv` \u00b7 11616 names \u00b7 generated 2026-10-08T04:19:29.758619-04:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
