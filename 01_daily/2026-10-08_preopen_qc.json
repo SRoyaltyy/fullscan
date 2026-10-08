@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T04:44:49.575845-04:00",
+  "generated_at": "2026-10-08T05:11:25.629509-04:00",
   "items": [
     {
       "ok": false,
@@ -51,7 +51,7 @@
       "kind": "news_actions",
       "path": "01_daily/news/2026-10-08_actions.json",
       "reason": "",
-      "size": 104488,
+      "size": 104546,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -113,14 +113,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "map_heat_research",
       "path": "01_daily/map_heat/2026-10-08_research.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 41553,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -251,77 +251,99 @@
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     },
     {
       "sector": "Communication Services",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     },
     {
       "sector": "Consumer Cyclical",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     },
     {
       "sector": "Consumer Defensive",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     },
     {
       "sector": "Energy",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     },
     {
       "sector": "Financial",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     },
     {
       "sector": "Healthcare",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     },
     {
       "sector": "Industrials",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     },
     {
       "sector": "Real Estate",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     },
     {
       "sector": "Technology",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     },
     {
       "sector": "Utilities",
       "ok": false,
       "reason": "missing",
       "size": 0,
-      "status": "FAIL"
+      "status": "DEGRADED",
+      "provider": "openclaw",
+      "fallback_reason": "openclaw_timeout"
     }
   ],
   "sector_n_ok": 0,

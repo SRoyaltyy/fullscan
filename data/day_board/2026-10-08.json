@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T05:11:17.935941-04:00",
+  "generated_at": "2026-10-08T05:11:40.596519-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -180,7 +180,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 6,
+      "n_req_ok": 8,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -352,12 +352,12 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8435,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
+          "size": 8432,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
             "general_predict:missing",
             "finviz_market_digest:missing",
-            "map_heat_research:missing",
+            "sector_predict:missing",
             "sector_predict:missing"
           ]
         },
@@ -366,10 +366,10 @@
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-10-08_preopen_status.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "all_ok=False missing=['general_predict']",
+          "size": 7178,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing general_predict",
           "bullets": []
         },
         {
@@ -377,11 +377,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-10-08_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 309,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -1554,6 +1556,38 @@
         }
       ],
       "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-08\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T05:11:39.105764-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-10-08_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 8432,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
+        },
+        {
+          "path": "01_daily/2026-10-08_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 7178,
+          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
+        },
+        {
+          "path": "01_daily/2026-10-08_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 591,
+          "preview": "# Pre-open ALL status \u2014 2026-10-08\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 1\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-08\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 1\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
     }
   ],
   "href": {
