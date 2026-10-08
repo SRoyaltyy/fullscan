@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Strategy status — today's open decisions</title>
-<meta http-equiv="refresh" content="90">
+<meta http-equiv="refresh" content="120">
 <style>
  :root{
   --bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;
@@ -44,6 +44,13 @@
  .why{color:var(--dim);font-size:11px}
  .sh{font-family:ui-monospace,Menlo,monospace;color:var(--neg);font-size:11.5px}
  .lo{font-family:ui-monospace,Menlo,monospace;color:var(--gold);font-size:11.5px}
+ .xbtn{cursor:pointer;color:var(--blue);font-family:ui-monospace,Menlo,monospace;
+   padding:0 6px;border:1px solid var(--line);border-radius:6px;background:var(--day);user-select:none}
+ .times{font-size:10.5px;line-height:1.5;white-space:nowrap}
+ tr.detail td{background:var(--day);font-size:11.5px}
+ tr.detail ul{margin:4px 0 4px 16px;padding:0;font-family:ui-monospace,Menlo,monospace;font-size:11px}
+ tr.detail code{color:var(--blue)}
+ .kv{color:var(--mut)}
 </style></head><body><div class="wrap">
 <h1>Strategy status — decisions for today's open</h1>
 <div class="sub">Per-strategy BUY/SELL for the session, straight from the
@@ -80,8 +87,19 @@
  dated ticket on main (GitHub API, best-effort). The dated file locks at
  09:30 ET or the paper send; later publishes land in the draft and the
  evening copy is labelled as such. Input presence is a raw-file
- 200/404 probe of <code>main</code> — presence, not QC. The ret column
- and the ★ pins come from
+ 200/404 probe of <code>main</code> — presence, not QC. <b>fin / push</b>
+ under each strategy is the exact finalize and push time (ET, seconds):
+ the ticket publishes all strategies atomically, so per-strategy finalize
+ is the ticket seal clock and per-strategy push is the dated file's last
+ commit on main — identical across rows by design; the quote snapshot
+ time (px) is per-strategy inside the ⊕ panel. Click <b>⊕</b> to expand a
+ strategy: its per-strategy record (px time, panel bake, signal date) and
+ the <b>exact hashed inputs</b> — every sha256 in the C.10 decision
+ fingerprint, identical ticket-wide, with absence hashed too. The
+ "factor-mine dash updated" card is the last commit that touched
+ <code>dashboard/factor-mine/strategy_tickets.json</code>: the publish
+ pipeline lands dashboard copies in the same push as the tickets. The
+ ret column and the ★ pins come from
  <code>data/factor_mine/recipe_scorecard.json</code>: lifetime and
  last-20-session returns rebuilt daily from the per-recipe paper-trade
  ledgers (<code>data/factor_mine/ledgers/</code>, $10k start, fees
@@ -106,6 +124,13 @@ function hhmm(iso){
   if(isNaN(d)) return "—";
   return d.toLocaleString("en-US",{timeZone:"America/New_York",hour12:false,
     month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});
+}
+function hhmmss(iso){
+  if(!iso) return "—";
+  const d = new Date(iso);
+  if(isNaN(d)) return "—";
+  return d.toLocaleString("en-US",{timeZone:"America/New_York",hour12:false,
+    month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit"});
 }
 async function probe(path){
   try{
@@ -163,11 +188,34 @@ async function loadTicket(d){
   }
   return null;
 }
-async function pushTime(d){
+// Commit times for the sealed ticket + the factor-mine dashboard copy.
+// The commits API is rate-limited (60/hr anonymous), so refetch at most
+// every 4th refresh (~8 min at the 120s auto-refresh) or on a date change.
+const TIMES = {date:null, pushed:null, dash:null, tick:0};
+async function commitTime(path){
   try{
-    const r = await fetch(`${API}/commits?path=data/day_board/${d}_strategy_tickets.json&per_page=1`);
+    const r = await fetch(`${API}/commits?path=${encodeURIComponent(path)}&per_page=1`);
     if(r.ok){ const j = await r.json(); if(j && j.length) return j[0].commit.committer.date; }
   }catch(e){}
+  return null;
+}
+async function timesFor(d){
+  TIMES.tick++;
+  if(TIMES.date === d && TIMES.tick % 4 !== 0) return TIMES;
+  const [pushed, dash] = await Promise.all([
+    commitTime(`data/day_board/${d}_strategy_tickets.json`),
+    commitTime("dashboard/factor-mine/strategy_tickets.json")]);
+  TIMES.date = d; TIMES.pushed = pushed; TIMES.dash = dash; TIMES.tick = 0;
+  return TIMES;
+}
+// Ticket-wide facts every table row shows: finalized = decision_readiness
+// completed_at (the atomic seal clock), pushed = last commit of the dated
+// ticket on main. Identical for all strategies in a ticket by design.
+let TK_FACTS = {fin:null, push:null, dash:null, fp:null, inputs:{}};
+const EXPANDED = new Set();
+function firstPxAsof(s){
+  const rows = [].concat(s.buy||[], s.sell||[]);
+  for(const r of rows){ if(r && r.px_asof) return r.px_asof; }
   return null;
 }
 function etCutoff(d){ // 09:30 ET on YYYY-MM-DD d, DST-safe
@@ -203,8 +251,10 @@ function renderCards(tk, pushed, d){
   add("SIT", sit, sit?"part":"");
   add("not final", bad, bad?"fail":"");
   const gen = tk.json.generated_at, comp = (tk.json.decision_readiness||{}).completed_at;
-  add("finalized (ET)", hhmm(gen), "mut");
-  add("pushed (ET)", pushed ? hhmm(pushed) : "n/a", "mut");
+  add("finalized (ET)", hhmmss(comp || gen), "mut");
+  add("pushed (ET)", pushed ? hhmmss(pushed) : "n/a", "mut");
+  add("factor-mine dash updated (ET)", TK_FACTS.dash ? hhmmss(TK_FACTS.dash) : "n/a",
+      TK_FACTS.dash ? "mut" : "fail");
   if(pushed){
     const before = new Date(pushed) < etCutoff(d);
     add("before 09:30", before ? "YES" : "NO", before ? "ok" : "fail");
@@ -241,7 +291,7 @@ function renderTicket(tk, d){
     const p = perfOf(name);
     rows.push({name, fam:s.family||"", status:badge(s.status, s.sit, s.hard_red),
       buy:tickers(s.buy), sell:tickers(s.sell),
-      why, shortWhy, s:s.s, p,
+      why, shortWhy, s:s.s, p, pxAsof:firstPxAsof(s), panelBake:s.panel_bake_date, signalDate:s.signal_date,
       star: stars.has(name) ? ` <span title="top ${TOP_N} lifetime performers" style="color:var(--gold)">★</span>` : ""});
   }
   if(sortMode === "perf"){
@@ -250,18 +300,49 @@ function renderTicket(tk, d){
   } else {
     rows.sort((a,b) => a.name.localeCompare(b.name));
   }
+  const detail = r => {
+    if(!EXPANDED.has(r.name)) return "";
+    const inp = Object.entries(TK_FACTS.inputs||{}).map(([rel,dg]) =>
+      `<li><span class="kv">${rel}</span> — ${dg === "absent"
+        ? `<span class="part">absent (hashed as absent)</span>`
+        : `<code title="sha256">${String(dg).slice(0,16)}…</code>`}</li>`).join("");
+    const per = [
+      ["px snapshotted", r.pxAsof ? hhmmss(r.pxAsof) : "—"],
+      ["finalized (ticket seal)", TK_FACTS.fin ? hhmmss(TK_FACTS.fin) : "—"],
+      ["pushed (commit)", TK_FACTS.push ? hhmmss(TK_FACTS.push) : "—"],
+      ["panel bake", r.panelBake || "—"],
+      ["signal date", r.signalDate || "—"],
+    ].map(([k,v]) => `<span class="kv">${k}:</span> ${v}`).join(" · ");
+    return `<tr class="detail" data-for="${r.name}"><td colspan="8"><div>
+      <div>${per}</div>
+      <div style="margin-top:4px"><span class="kv">exact inputs (C.10 fingerprint, ticket-wide):</span>
+        fingerprint <code title="full sha256">${String(TK_FACTS.fp||"").slice(0,16)}…</code>
+        · ${Object.keys(TK_FACTS.inputs||{}).length} hashed files</div>
+      <ul>${inp}</ul>
+      ${r.why ? `<div class="kv">why: ${String(r.why).replace(/</g,"&lt;")}</div>` : ""}
+    </div></td></tr>`;
+  };
   $("ticketWrap").innerHTML = `<table>
-    <tr><th>strategy</th><th>family</th><th>ret (lifetime / 20d)</th><th>decision</th><th>BUY @ open</th><th>SELL @ open</th><th>why / note</th></tr>
+    <tr><th></th><th>strategy</th><th>family</th><th>ret (lifetime / 20d)</th><th>decision</th><th>BUY @ open</th><th>SELL @ open</th><th>why / note</th></tr>
     ${rows.map(r=>`<tr>
-      <td class="name">${r.name}${r.s!=null?` <span class="dim">S=${r.s}</span>`:""}${r.star}</td>
+      <td><span class="xbtn" data-x="${r.name}">${EXPANDED.has(r.name) ? "⊖" : "⊕"}</span></td>
+      <td class="name">${r.name}${r.s!=null?` <span class="dim">S=${r.s}</span>`:""}${r.star}
+        <div class="times dim">fin ${TK_FACTS.fin ? hhmmss(TK_FACTS.fin).split(", ")[1] : "—"}<br>push ${TK_FACTS.push ? hhmmss(TK_FACTS.push).split(", ")[1] : "—"}</div></td>
       <td class="mut">${r.fam}</td>
       ${perfCell(r.p)}
       <td>${r.status}</td>
       <td class="tk">${r.buy}</td>
       <td class="tk">${r.sell}</td>
       <td class="why" title="${String(r.why).replace(/"/g,"&quot;")}">${r.shortWhy}</td>
-    </tr>`).join("") || `<tr><td colspan="7" class="mut">no strategies match the filter</td></tr>`}
+    </tr>${detail(r)}`).join("") || `<tr><td colspan="8" class="mut">no strategies match the filter</td></tr>`}
   </table>`;
+  $("ticketWrap").querySelectorAll(".xbtn").forEach(b => {
+    b.onclick = () => {
+      const n = b.getAttribute("data-x");
+      if(EXPANDED.has(n)) EXPANDED.delete(n); else EXPANDED.add(n);
+      renderTicket(tk, d);
+    };
+  });
 }
 async function renderInputs(d){
   const groups = [
@@ -346,16 +427,21 @@ async function renderAll(d){
   }
   const stars = topSet();
   const b = st => st==="OK" ? `<span class="badge b-ok">OK</span>` : st==="SIT" ? `<span class="badge b-sit">SIT</span>` : `<span class="badge b-fail">MISSING</span>`;
-  $("allWrap").innerHTML = `<table><tr><th>strategy</th><th>family</th><th>ret (lifetime / 20d)</th><th>status</th><th>BUY</th><th>SELL</th><th>note</th></tr>` +
-    rows.map(x=>`<tr><td class="name">${x.name}${stars.has(x.name) ? ` <span title="top ${TOP_N} lifetime performers" style="color:var(--gold)">★</span>` : ""}</td><td>${x.family}</td>${perfCell(perfOf(x.name))}<td>${b(x.status)}</td><td>${x.buys.join(", ")||"—"}</td><td>${x.sells.join(", ")||"—"}</td><td class="mut">${x.note||""}</td></tr>`).join("") + `</table>`;
+  const tcell = `<div class="times dim">fin ${TK_FACTS.fin ? hhmmss(TK_FACTS.fin).split(", ")[1] : "—"}<br>push ${TK_FACTS.push ? hhmmss(TK_FACTS.push).split(", ")[1] : "—"}</div>`;
+  $("allWrap").innerHTML = `<table><tr><th>strategy</th><th>family</th><th>ret (lifetime / 20d)</th><th>status</th><th>BUY</th><th>SELL</th><th>note</th><th>fin / push (ET)</th></tr>` +
+    rows.map(x=>`<tr><td class="name">${x.name}${stars.has(x.name) ? ` <span title="top ${TOP_N} lifetime performers" style="color:var(--gold)">★</span>` : ""}</td><td>${x.family}</td>${perfCell(perfOf(x.name))}<td>${b(x.status)}</td><td>${x.buys.join(", ")||"—"}</td><td>${x.sells.join(", ")||"—"}</td><td class="mut">${x.note||""}</td><td>${tcell}</td></tr>`).join("") + `</table>`;
 }
 async function refresh(){
   const d = $("dateSel").value || todayET();
   $("stamp").textContent = `loading ${d} …`;
   const sc = await jprobe("data/factor_mine/recipe_scorecard.json");
   SCORECARD = (sc.ok && sc.json && sc.json.recipes) ? sc.json : null;
-  const [tk, pushed] = await Promise.all([loadTicket(d), pushTime(d)]);
-  renderCards(tk, pushed, d);
+  const [tk, times] = await Promise.all([loadTicket(d), timesFor(d)]);
+  const dr = (tk && tk.json && tk.json.decision_readiness) || {};
+  TK_FACTS = {fin: dr.completed_at || (tk && tk.json.generated_at) || null,
+              push: times.pushed, dash: times.dash,
+              fp: dr.fingerprint || null, inputs: dr.inputs || {}};
+  renderCards(tk, times.pushed, d);
   renderTicket(tk, d);
   renderInputs(d);
   renderAll(d);
