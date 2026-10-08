@@ -47,7 +47,7 @@
   }
  },
  "date": "2026-10-08",
- "generated_at": "2026-10-08T08:05:13-04:00",
+ "generated_at": "2026-10-08T08:10:09-04:00",
  "strategies": [
   {
    "buys": [
@@ -5574,11 +5574,19 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NAUT",
+    "KOD",
+    "SDEV",
+    "PENG"
+   ],
    "family": "h1",
    "name": "h1",
-   "note": "missing 01_daily/general/2026-10-08_predict.md; no sealed plan row",
-   "sells": [],
+   "note": "missing 01_daily/general/2026-10-08_predict.md; sealed 2026-10-08T12:08:43Z",
+   "sells": [
+    "CIEN 5",
+    "OPCH 80"
+   ],
    "source": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
    "status": "MISSING"
   },
