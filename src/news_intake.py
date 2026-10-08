@@ -712,13 +712,27 @@ def main():
     ap.add_argument("--workers", type=int, default=12)
     ap.add_argument("--extract", type=int, default=40)
     ap.add_argument("--hours", type=int, default=48)
+    ap.add_argument("--context-vault", type=Path, help="CompanyResearch checkout; run exposure/Lane research after intake")
+    ap.add_argument("--context-model", help="Optional installed local Ollama model; rules otherwise")
+    ap.add_argument("--context-limit", type=int, help="Explicit cap for a bounded context check")
     args = ap.parse_args()
+    if args.context_model and not args.context_vault:
+        ap.error("--context-model requires --context-vault")
+    if args.context_limit is not None and args.context_limit < 1:
+        ap.error("--context-limit must be positive")
     datetime.fromisoformat(args.date)
     if not 1 <= args.workers <= 24 or not 1 <= args.hours <= 168 or args.extract < 0:
         ap.error("workers 1..24, hours 1..168, extract >=0")
     if args.parse_only:
         args.extract = 0
     report = run(ROOT, args.date, args.force, args.workers, args.extract, args.hours, parse_only=args.parse_only, quick=args.quick)
+    if args.context_vault:
+        from news_context_check import run_context
+        report["news_context"] = run_context(ROOT, args.date, args.context_vault,
+                                              args.context_model, args.context_limit)
+        write_json(ROOT / "data/news_intake" / args.date / "parsed.json", report)
+        write_json(ROOT / "dashboard/news-intake/latest.json",
+                   {k:v for k,v in report.items() if k != "all_items"})
     print(json.dumps({k:v for k,v in report.items() if k not in {"all_items", "sources"}}, indent=2))
     if not report["document_count"]:
         raise SystemExit("No documents collected")

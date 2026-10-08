@@ -10,3 +10,8 @@ venv/
 vendor/theme-radar/
 grids_deep/
 data/factor_mine/oppset_clock_b/*.csv
+
+# Local news context activity index
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
