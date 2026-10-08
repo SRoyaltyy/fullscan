@@ -239,19 +239,33 @@ def _sealed_records_match_main() -> None:
         json.loads(line) for line in MANIFEST.read_text(encoding="utf-8").splitlines() if line.strip()
     ]
     h1_locks = [row for row in locks if row.get("name") == "h1_webull_sim"]
-    if [row.get("date") for row in h1_locks] != ["2026-10-06"]:
+    # The manifest is append-only: later sessions add rows after 2026-10-06.
+    # The 2026-10-06 row stays first and 2026-10-05 is never backfilled.
+    lock_dates = [row.get("date") for row in h1_locks]
+    if (
+        not lock_dates
+        or lock_dates[0] != "2026-10-06"
+        or "2026-10-05" in lock_dates
+        or lock_dates != sorted(set(lock_dates))
+    ):
         raise SystemExit(f"h1_webull_sim lock dates changed {h1_locks}")
     if h1_locks[0].get("sha256") != LOCK_SHA:
         raise SystemExit("h1_webull_sim 2026-10-06 lock hash changed")
 
 
 def _historical_notes() -> None:
-    rows = load_notes(NOTES)
-    if len(rows) != 3:
-        raise SystemExit(f"historical notes {len(rows)}")
+    every = load_notes(NOTES)
+    if len(every) < 3:
+        raise SystemExit(f"historical notes {len(every)}")
     rendered = json.loads(PAGE_NOTES.read_text(encoding="utf-8"))
-    if rendered != rows:
+    if rendered != every:
         raise SystemExit("h1 dashboard notes are not the log")
+    # The notes file is add-only. The first three lines are the close-mark
+    # notes this test pins; later lines (for example open_price_revision
+    # notes) are appended after them and are not close-mark corrections.
+    rows = every[:3]
+    if any(row["kind"] == "correction" for row in every[3:]):
+        raise SystemExit("a later close-mark correction needs its own check")
     by_kind = {}
     for row in rows:
         by_kind.setdefault(row["kind"], []).append(row)
