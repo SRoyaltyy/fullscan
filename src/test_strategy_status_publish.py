@@ -4,7 +4,10 @@ import json
 import tempfile
 from pathlib import Path
 
-from src.strategy_status_publish import build
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+from src.strategy_status_publish import FetchError, build
 
 D = "2030-01-02"
 
@@ -43,12 +46,59 @@ def test_every_family_ok_or_missing_by_name() -> None:
     assert st["union_hot_n4_h1_preopen"]["buys"] == ["CIEN"]
     assert st["union_hot_n4_holdup_preopen"]["status"] == "MISSING"
     assert st["x_webull_sim"]["buys"] == ["ZZZ 1"]
-    assert st["theme_radar:c1"]["buys"] == ["TTT"]
+    assert st["theme_radar:c1"]["shorts"] == ["TTT"] and st["theme_radar:c1"]["buys"] == []
+    assert st["theme_radar:c1"]["research_only"] is True
 
 
-def test_theme_radar_missing_file_is_missing() -> None:
-    st = {r["name"]: r for r in build(_root(), D, fetch=lambda u: None)["strategies"]}
-    assert st["theme_radar"]["status"] == "MISSING"
+ET = ZoneInfo("America/New_York")
+CELLS = ("fpe_delta_t3_earn_today_3d", "fresh_dcp_t1_ep_ge03_2d", "fresh_dcp_t1_avoid_ah_3d")
+HDR = "cell,signal_date,ticker,entry_date,hold_days,rules_sha256,source\n"
+
+
+def _tr(fetch, hh=8, mm=0):
+    now = datetime(2030, 1, 2, hh, mm, tzinfo=ET)
+    doc = build(_root(), D, fetch=fetch, now=now)
+    return {r["name"]: r for r in doc["strategies"] if r["family"] == "theme_radar"}, doc
+
+
+def test_theme_radar_one_row_per_cell_ok_and_sit() -> None:
+    plan = (HDR + f"{CELLS[0]},2030-01-01,bbb,{D},3,x,x\n{CELLS[0]},2030-01-01,AAA,{D},3,x,x\n"
+            f"# status=fires rows=2 {CELLS[0]}=2 {CELLS[1]}=0 {CELLS[2]}=0\n"
+            f"# built_at_utc=2030-01-02T10:20:00Z signal_date=2030-01-01\n")
+    st, doc = _tr(lambda u: plan)
+    assert set(st) == {f"theme_radar:{c}" for c in CELLS}
+    ok = st[f"theme_radar:{CELLS[0]}"]
+    assert ok["status"] == "OK" and ok["shorts"] == ["AAA", "BBB"] and ok["buys"] == []
+    assert "RESEARCH ONLY" in ok["note"] and "05:20 ET" in ok["note"]
+    assert st[f"theme_radar:{CELLS[1]}"]["status"] == "SIT"
+    assert doc["counts"]["theme_radar"] == {"OK": 1, "SIT": 2, "MISSING": 0}
+
+
+def test_theme_radar_no_fires_is_sit() -> None:
+    st, _ = _tr(lambda u: HDR + "# status=no_fires rows=0\n")
+    assert [r["status"] for r in st.values()] == ["SIT"] * 3
+    assert all(r["shorts"] == [] and r["research_only"] for r in st.values())
+
+
+def test_theme_radar_missing_file_waits_until_0900_then_missing() -> None:
+    st, doc = _tr(lambda u: None, 8, 59)
+    assert [r["status"] for r in st.values()] == ["WAIT"] * 3
+    assert doc["counts"]["theme_radar"]["WAIT"] == 3
+    st, _ = _tr(lambda u: None, 9, 0)
+    assert [r["status"] for r in st.values()] == ["MISSING"] * 3
+
+
+def test_theme_radar_fetch_error_is_not_ok() -> None:
+    def boom(u):
+        raise FetchError("HTTP 500")
+    st, _ = _tr(boom, 9, 5)
+    assert all(r["status"] == "MISSING" and "HTTP 500" in r["note"] for r in st.values())
+
+
+def test_theme_radar_plan_built_after_open_is_missing() -> None:
+    plan = HDR + f"{CELLS[0]},x,AAA,{D},3,x,x\n# status=fires rows=1\n# built_at_utc=2030-01-02T14:31:00Z\n"
+    st, _ = _tr(lambda u: plan, 10, 0)
+    assert st[f"theme_radar:{CELLS[0]}"]["status"] == "MISSING"
 
 
 def test_never_writes_outside_status_dir() -> None:

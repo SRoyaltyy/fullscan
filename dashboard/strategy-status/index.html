@@ -107,7 +107,12 @@
  ledgers (<code>data/factor_mine/ledgers/</code>, $10k start, fees
  included). "top performers" sort pins the best lifetime recipes at the
  top; strategies without a ledger (stock_book / paper / excel / flatten)
- keep alphabetical order below them.</p>
+ keep alphabetical order below them. <b>theme_radar</b> rows (one per
+ Theme Radar cell, read from SRoyaltyy/theme-radar
+ <code>research/shadow_log/plans/plan_&lt;date&gt;.csv</code>) are
+ <b>research-only shorts, never traded</b>: OK lists the shorts, SIT = the
+ plan landed with no fires for that cell, WAIT = no plan yet (due about
+ 05:20 ET), MISSING = no plan file by 09:00 ET.</p>
 </div>
 <script>
 const LOCAL = location.hostname === "localhost" || location.hostname === "127.0.0.1"
@@ -295,9 +300,8 @@ async function renderTicket(tk, d){
   const st = tk.json.strategies || {};
   const fams = [...new Set(Object.values(st).map(s=>s.family||""))].sort();
   const famSel = $("famSel");
-  if(famSel.options.length !== fams.length + 1){
-    famSel.innerHTML = `<option value="">all</option>` + fams.map(f=>`<option>${f}</option>`).join("");
-  }
+  const haveF = new Set([...famSel.options].map(o=>o.value)); // add-only: keeps status-file families + the pick
+  fams.filter(f => f && !haveF.has(f)).forEach(f => { const o = document.createElement("option"); o.textContent = f; famSel.appendChild(o); });
   const famF = famSel.value, txt = ($("flt").value||"").toLowerCase();
   const sortMode = $("sortSel").value || "perf";
   const stars = topSet();
@@ -433,10 +437,19 @@ async function renderAll(d){
   const r = await jprobe(`data/strategy_status/${d}.json`);
   if(!r.ok){ $("allStamp").textContent = `data/strategy_status/${d}.json not published yet — every strategy MISSING`; $("allWrap").innerHTML=""; return; }
   const doc = r.json, fam = $("famSel").value, q = ($("flt").value||"").toUpperCase();
+  // Families that only exist in the status file (theme_radar, h1, webull_sim …)
+  // must be selectable too; the ticket-driven list above does not carry them.
+  const famSel = $("famSel"), have = new Set([...famSel.options].map(o=>o.value));
+  [...new Set((doc.strategies||[]).map(x=>x.family))].sort().forEach(f => {
+    if(f && !have.has(f)){ const o = document.createElement("option"); o.textContent = f; famSel.appendChild(o); }
+  });
   $("allStamp").textContent = `published ${hhmm(doc.generated_at)} ET · ` +
-    Object.entries(doc.counts||{}).map(([f,c])=>`${f}: ${c.OK} OK / ${c.SIT} SIT / ${c.MISSING} MISSING`).join(" · ");
+    Object.entries(doc.counts||{}).map(([f,c])=>`${f}: ${c.OK} OK / ${c.SIT} SIT / ${c.MISSING} MISSING${c.WAIT?` / ${c.WAIT} WAIT`:""}`).join(" · ");
+  // Theme Radar rows are research-only shorts; older status files kept them in buys.
+  const shortsOf = x => x.shorts || (x.family==="theme_radar" ? (x.buys||[]) : []);
+  const buysOf = x => (x.family==="theme_radar" && !x.shorts) ? [] : (x.buys||[]);
   const rows = (doc.strategies||[]).filter(x => (!fam || x.family===fam || (fam==="factor_mine" && x.family==="factor_mine_preopen"))
-    && (!q || (x.name+" "+x.buys.join(" ")+" "+x.sells.join(" ")).toUpperCase().includes(q)));
+    && (!q || (x.name+" "+buysOf(x).join(" ")+" "+(x.sells||[]).join(" ")+" "+shortsOf(x).join(" ")).toUpperCase().includes(q)));
   const sortMode = $("sortSel").value || "perf";
   if(sortMode === "perf"){
     rows.sort((a,b) => ((perfOf(b.name)||{}).total_ret_pct ?? -Infinity)
@@ -446,10 +459,17 @@ async function renderAll(d){
     rows.sort((a,b) => a.name.localeCompare(b.name));
   }
   const stars = topSet();
-  const b = st => st==="OK" ? `<span class="badge b-ok">OK</span>` : st==="SIT" ? `<span class="badge b-sit">SIT</span>` : `<span class="badge b-fail">MISSING</span>`;
+  const b = st => st==="OK" ? `<span class="badge b-ok">OK</span>` : st==="SIT" ? `<span class="badge b-sit">SIT</span>`
+    : st==="WAIT" ? `<span class="badge b-wait" title="plan not landed yet; MISSING from 09:00 ET">WAIT</span>` : `<span class="badge b-fail">MISSING</span>`;
+  const research = x => (x.research_only || x.family==="theme_radar")
+    ? ` <span class="badge b-wait" title="Theme Radar research short: logged by theme-radar, never sent to Webull">research only · not traded</span>` : "";
+  const sellCell = x => {
+    const sh = shortsOf(x).map(t=>`<span class="sh">short ${t}</span>`);
+    return [...(x.sells||[]), ...sh].join(", ") || "—";
+  };
   const tcell = `<div class="times dim">fin ${TK_FACTS.fin ? hhmmss(TK_FACTS.fin).split(", ")[1] : "—"}<br>push ${TK_FACTS.push ? hhmmss(TK_FACTS.push).split(", ")[1] : "—"}</div>`;
   $("allWrap").innerHTML = `<table><tr><th>strategy</th><th>family</th><th>ret (lifetime / 20d)</th><th>status</th><th>BUY</th><th>SELL</th><th>note</th><th>fin / push (ET)</th></tr>` +
-    rows.map(x=>`<tr><td class="name">${x.name}${stars.has(x.name) ? ` <span title="top ${TOP_N} lifetime performers" style="color:var(--gold)">★</span>` : ""}</td><td>${x.family}</td>${perfCell(perfOf(x.name))}<td>${b(x.status)}</td><td>${x.buys.join(", ")||"—"}</td><td>${x.sells.join(", ")||"—"}</td><td class="mut">${x.note||""}</td><td>${tcell}</td></tr>`).join("") + `</table>`;
+    rows.map(x=>`<tr><td class="name">${x.name}${stars.has(x.name) ? ` <span title="top ${TOP_N} lifetime performers" style="color:var(--gold)">★</span>` : ""}${research(x)}</td><td>${x.family}</td>${perfCell(perfOf(x.name))}<td>${b(x.status)}</td><td>${buysOf(x).join(", ")||"—"}</td><td class="tk">${sellCell(x)}</td><td class="mut">${x.note||""}</td><td>${tcell}</td></tr>`).join("") + `</table>`;
 }
 async function refresh(){
   const d = $("dateSel").value || todayET();
