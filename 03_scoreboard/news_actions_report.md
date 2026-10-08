@@ -1,20 +1,20 @@
 # News Actions — Backtest Report
 
-_Generated 2026-10-07 20:15 EDT_
+_Generated 2026-10-07 20:17 EDT_
 
 How to read this: each section is one prediction day. **Entry** is the open of the first trading day at/after the signal timestamp (same day if the signal ran pre-market, next day otherwise). A buy is `ever ✓` if price traded ABOVE the entry open at any point within the tracked window (up to 14 trading days); a sell/short is `ever ✓` if price traded BELOW it. `now%` is the return at the latest close in the window.
 
 ## Overall
 
-- suggestions graded: **2091**
-- ever profitable within window: **98.9%** (2068/2091)
+- suggestions graded: **2089**
+- ever profitable within window: **98.9%** (2066/2089)
 
-- close @ 1 trading days: win rate **53.5%** (1053/1967), avg 0.27%
-- close @ 3 trading days: win rate **54.8%** (1008/1840), avg 0.41%
-- close @ 5 trading days: win rate **52.4%** (907/1730), avg 0.35%
-- close @ 10 trading days: win rate **46.4%** (654/1410), avg -0.15%
-- close @ 14 trading days: win rate **47.0%** (573/1219), avg 0.38%
-- **buy**: n=1220, ever-profitable 100.0%, 5d close win rate 43.5%
+- close @ 1 trading days: win rate **53.5%** (1052/1965), avg 0.27%
+- close @ 3 trading days: win rate **54.8%** (1007/1838), avg 0.41%
+- close @ 5 trading days: win rate **52.4%** (906/1728), avg 0.35%
+- close @ 10 trading days: win rate **46.4%** (654/1408), avg -0.14%
+- close @ 14 trading days: win rate **47.0%** (573/1218), avg 0.39%
+- **buy**: n=1218, ever-profitable 100.0%, 5d close win rate 43.5%
 - **sell**: n=871, ever-profitable 100.0%, 5d close win rate 65.5%
 
 ## Predictions made 2026-10-06 (signal 2026-10-06 04:39 ET)
@@ -844,7 +844,7 @@ Entry: **2026-09-22** open — window through **2026-10-06** (still open)
 ## Predictions made 2026-09-21 (signal 2026-09-21 04:33 ET)
 
 Entry: **2026-09-21** open — window through **2026-10-06** (still open)
-- 52 suggestions; ever-profitable **98.1%**
+- 51 suggestions; ever-profitable **98.0%**
 
 | ticker | side | net | entry | entry date | now% | MFE% (day) | ever |
 |---|---|---|---|---|---|---|---|
@@ -854,7 +854,6 @@ Entry: **2026-09-21** open — window through **2026-10-06** (still open)
 | RRC | buy | +6.8 | 38.0 | 2026-09-21 | +5.32 | +5.37 (2026-10-06) | ✓ |
 | SM | buy | +6.8 | 35.91 | 2026-09-21 | -2.26 | +0.86 (2026-09-21) | ✓ |
 | REPX | buy | +6.8 | 43.0 | 2026-09-21 | -0.30 | +0.95 (2026-10-05) | ✓ |
-| TXO | buy | +6.8 | 14.67 | 2026-09-21 | -4.84 | +1.04 (2026-09-21) | ✓ |
 | OXY | buy | +6.8 | 58.07 | 2026-09-21 | +0.45 | +2.15 (2026-10-05) | ✓ |
 | FANG | buy | +6.8 | 189.88 | 2026-09-21 | -2.58 | +0.80 (2026-09-24) | ✓ |
 | BAC | sell | -6.5 | 58.05 | 2026-09-21 | +7.32 | +9.76 (2026-10-01) | ✓ |
@@ -1413,7 +1412,7 @@ Entry: **2026-09-04** open — window through **2026-09-25**
 ## Predictions made 2026-09-03 (signal 2026-09-03 04:52 ET)
 
 Entry: **2026-09-03** open — window through **2026-09-24**
-- 23 suggestions; ever-profitable **100.0%**
+- 22 suggestions; ever-profitable **100.0%**
 
 | ticker | side | net | entry | entry date | now% | MFE% (day) | ever |
 |---|---|---|---|---|---|---|---|
@@ -1423,7 +1422,6 @@ Entry: **2026-09-03** open — window through **2026-09-24**
 | RRC | buy | +6.0 | 42.43 | 2026-09-03 | -7.75 | +1.48 (2026-09-03) | ✓ |
 | SM | buy | +6.0 | 37.72 | 2026-09-03 | -6.95 | +10.18 (2026-09-15) | ✓ |
 | REPX | buy | +6.0 | 41.14 | 2026-09-03 | +1.34 | +10.14 (2026-09-15) | ✓ |
-| TXO | buy | +6.0 | 14.92 | 2026-09-03 | -4.29 | +4.42 (2026-09-14) | ✓ |
 | OXY | buy | +6.0 | 60.97 | 2026-09-03 | -4.79 | +4.59 (2026-09-15) | ✓ |
 | FANG | buy | +6.0 | 203.31 | 2026-09-03 | -7.03 | +4.92 (2026-09-15) | ✓ |
 | XOM | buy | +4.2 | 164.43 | 2026-09-03 | -1.39 | +3.17 (2026-09-15) | ✓ |
