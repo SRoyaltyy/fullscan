@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T09:28:24.873934-04:00",
+  "generated_at": "2026-10-08T09:28:34.673145-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -106,24 +106,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-10-08",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-08T08:29:50.495171-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-10-08_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 11416,
-          "preview": "# Premarket Prediction \u2014 2026-10-08\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.787 (uncertainty multiplier \u00d71.1) | confidence 0.65\n>\n> **Good news vs bad news:** good +0.5 pts vs bad -7.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Waller dovish-leaning skip-October\n> - TSMC +51% revenue\n> - Samsung ~9x profit\n> - oil offered CL -1.59%\n> - DXY flat\n>\n> **Bad news driving this:**\n> - hawkish Sept FOMC minutes\n> - 30Y ~5.70% multi-decade high\n> - Asia tech selloff Kospi -2.62%\n> - Iran ramping Hormuz attacks\n> - UK 30Y gilt 28-yr high\n>\n> **market uncertainty: **elevated** | VIX 15.7 | policy-uncertainty index 984.78 (1d +576.46)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \ud83d\udd34 Europe session: -0.5 \u00d7 2.0 = -1.0\n> - \ud83d\udd34 Overnight news & catalyst"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-10-08\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.787 (uncertainty multiplier \u00d71.1) | confidence 0.65\n>\n> **Good news vs bad news:** good +0.5 pts vs bad -7.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Waller dovish-leaning skip-October\n> - TSMC +51% revenue\n> - Samsung ~9x profit\n> - oil offered CL -1.59%\n> - DXY flat\n>\n> **Bad news driving this:**\n> - hawkish Sept FOMC minutes\n> - 30Y ~5.70% multi-decade high\n> - Asia tech selloff Kospi -2.62%\n> - Iran ramping Hormuz attacks\n> - UK 30Y gilt 28-yr high\n>\n> **market uncertainty: **elevated** | VIX 15.7 | policy-uncertainty index 984.78 (1d +576.46)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \ud83d\udd34 Europe session: -0.5 \u00d7 2.0 = -1.0\n> - \ud83d\udd34 Overnight news & catalyst"
-    },
     {
       "key": "sector_one",
       "title": "Sector predict Utilities (8/11)",
@@ -333,6 +315,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -5.542, 'dir': 'down', 'conf': 0.622, 'source': 'llm'}, Communication Services={'score': -8.272, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -11.327, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Consumer Defensive={'score': 5.519, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -6.054, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Real Estate={'score': -7.057, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Technology={'score': -11.67, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Utilities={'score': -4.882, 'dir': 'down', 'conf': 0.65, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-10-08\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:28:33.619262-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-08_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2271295,
+          "preview": "5907 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, ABEV, EDU, PG, PM"
+        }
+      ],
+      "preview": "5907 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 TAL, ABEV, EDU, PG, PM"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
