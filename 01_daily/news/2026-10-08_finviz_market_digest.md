@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-08
 
-**Generated:** 2026-10-08T04:17:43.642084-04:00 (America/New_York)
+**Generated:** 2026-10-08T04:18:41.084339-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US equity futures point to a lower open as oil rises on supply concerns ahead of jobless claims data and PepsiCo earnings
 **Prior close:** SPX —  Nasdaq —  Dow —
