@@ -1428,3 +1428,7 @@
 {"date":"2026-10-07","kind":"day","name":"yday_gainer_h1","record":"factor_mine","sha256":"2d421eea161c22a7d3f160fcead3f60d686a425c5985d0bc0690c88aa49acc30"}
 {"date":"2026-10-07","kind":"day","name":"yday_gainer_h3","record":"factor_mine","sha256":"f44953d0e8c6ce16152ed53f92cba389431e987de49c016ce8cfa24d2d5f8ecd"}
 {"date":"2026-10-07","kind":"day","name":"yday_gainer_h5","record":"factor_mine","sha256":"7e4869eb3e849a653aae48ce3290ee5e34cf5390309cc9b8fe9bb55ebe16b689"}
+{"date":"2026-10-07","kind":"day","name":"","record":"paper_equity","sha256":"087e3afea80fc2d3138631e3423df8f9bcd71b0b64befbfc6a6c0611b4a4ce36"}
+{"date":"2026-10-07","kind":"day","name":"","record":"paper_trades","sha256":"61eac112b79f713353818cfce71914c62411322a8e3f59691b82c0dff6daa201"}
+{"kind":"seed","record":"paper_skipped","watermark":"2026-10-06"}
+{"date":"2026-10-07","kind":"day","name":"","record":"flatten_robust","sha256":"5b28cda85e8c1c6ee9d0332171912a581d9b708d2a2b209110abd8fef67b978d"}
