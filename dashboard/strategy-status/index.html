@@ -98,8 +98,10 @@
  fingerprint, identical ticket-wide, with absence hashed too. The
  "factor-mine dash updated" card is the last commit that touched
  <code>dashboard/factor-mine/strategy_tickets.json</code>: the publish
- pipeline lands dashboard copies in the same push as the tickets. The
- ret column and the ★ pins come from
+ pipeline lands dashboard copies in the same push as the tickets.
+ Before the dated ticket for a session lands, every strategy shows
+ <b>NOT FINAL</b> — a previous session's decisions are never substituted.
+ The ret column and the ★ pins come from
  <code>data/factor_mine/recipe_scorecard.json</code>: lifetime and
  last-20-session returns rebuilt daily from the per-recipe paper-trade
  ledgers (<code>data/factor_mine/ledgers/</code>, $10k start, fees
@@ -182,9 +184,12 @@ async function loadTicket(d){
   ];
   for(const [label, path] of chain){
     const r = await jprobe(path);
-    if(r.ok && r.json && (r.json.date === d || label === "evening")){
-      return {label, json:r.json, path};
-    }
+    if(!r.ok || !r.json) continue;
+    // Never substitute a previous session's record for date d: the
+    // undated evening copy only counts once it has ROLLED to date d.
+    // Before that, no ticket for d means no decision for d — full stop.
+    if(r.json.date !== d) continue;
+    return {label, json:r.json, path};
   }
   return null;
 }
@@ -263,13 +268,28 @@ function renderCards(tk, pushed, d){
   }
   $("cards").innerHTML = cards.join("");
 }
-function renderTicket(tk, d){
+async function renderTicket(tk, d){
   if(!tk){
-    $("ticketWrap").innerHTML = `<div class="proc"><h3>No decision ticket for ${d} yet</h3>
-      <table><tr><td class="mut">The dated, draft and evening ticket files are all absent from
-      <code>main</code>. Decisions cannot be final until
-      <code>src.decision_ready</code> says the required inputs are ready (see below) and
-      <code>publish_strategy_tickets</code> runs. Nothing here is final until the ticket lands.</td></tr></table></div>`;
+    // No ticket for d: every known strategy is NOT FINAL. Never paint a
+    // previous session's decisions here — list the roster as undecided.
+    let missRows = "";
+    const r = await jprobe("data/day_board/today_strategies.json");
+    if(r.ok && r.json && r.json.date === d && r.json.strategies){
+      missRows = `<table style="margin-top:8px">
+        <tr><th>strategy</th><th>family</th><th>decision</th><th>BUY @ open</th><th>SELL @ open</th><th>why / note</th></tr>` +
+        Object.entries(r.json.strategies).map(([n, s]) => `<tr>
+          <td class="name">${n}</td><td class="mut">${(s&&s.family)||""}</td>
+          <td><span class="badge b-wait">NOT FINAL</span></td>
+          <td class="tk">—</td><td class="tk">—</td>
+          <td class="why">no ticket for ${d} yet — decision not made</td></tr>`).join("") + `</table>`;
+    }
+    $("ticketWrap").innerHTML = `<div class="proc"><h3>No decision ticket for ${d} yet — nothing below is final</h3>
+      <table><tr><td class="mut">The sealed, draft and (rolled) evening ticket files for
+      <b>${d}</b> are all absent from <code>main</code>, so every strategy is
+      <b>NOT FINAL</b> for this session. A previous session's decisions are never
+      shown in their place. Decisions become final only when
+      <code>src.decision_ready</code> says the required inputs are ready (see below)
+      and <code>publish_strategy_tickets</code> seals the dated ticket.</td></tr></table>${missRows}</div>`;
     return;
   }
   const st = tk.json.strategies || {};
