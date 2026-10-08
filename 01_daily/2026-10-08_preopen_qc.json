@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:29:50.325352-04:00",
+  "generated_at": "2026-10-08T08:31:15.701011-04:00",
   "items": [
     {
       "ok": true,
@@ -124,14 +124,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-10-08/basic_materials_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 17539,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -248,9 +248,9 @@
   "sectors": [
     {
       "sector": "Basic Materials",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 17539,
       "status": "DEGRADED",
       "provider": "openclaw",
       "fallback_reason": "openclaw_timeout"
@@ -346,7 +346,7 @@
       "fallback_reason": "openclaw_timeout"
     }
   ],
-  "sector_n_ok": 0,
+  "sector_n_ok": 1,
   "sector_n_total": 11,
   "sectors_required": false,
   "all_ok": true
