@@ -21362,6 +21362,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-08",
+          "actual_pct": 1.69,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -28138,6 +28150,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-10-08",
+          "actual_pct": 0.79,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -30033,6 +30057,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-10-08",
+          "actual_pct": 1.29,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -31239,7 +31275,20 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
       "outlier_watch": "NDX/SPX decoupled from rising 10Y and from Asia −0.54%/Hang Seng −2.6%; ISM Prices 74 ignored by cap-weighted stocks; gold did not rally with hike-odds fade",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-10-08",
+          "actual_pct": -0.11,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.46
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -31505,7 +31554,7 @@
           "status": "miss"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-08_lesson.md",
       "sources_used": [
         {
           "url": "https://www.cnbc.com/2026/10/07/stock-market-today-live-updates-.html",
@@ -31592,7 +31641,9 @@
       "key_interaction": "Offsetting/masking — the AI-specific selloff (OpenAI) hit a record-high tech complex while geopolitical relief (Trump \"no strikes before midterms\") plus energy/defensive rotation lifted the Dow, netting to a misleadingly calm SPX -0.47% that concealed a ~135 bp Dow/NDX internal spread",
       "knowable_at_9am": "partially — the dominant driver (OpenAI revenue shock) was unforeseeable mid-session, but the second driver (Waller hawkish) was fully knowable premarket and was actively misread as dovish",
       "attribution_contested": "yes — CNBC/Yahoo lead with the AI selloff, Reuters/Bloomberg with oil and bonds, Fortune/WaPo with Iran geopolitics, TheStreet/Benzinga with the OpenAI revenue gap",
-      "outlier_watch": "Dow closed GREEN (+0.10%) while NDX fell 1.25%, and VIX barely moved (15.41, +0.33) — a rotation, not a risk-off day; bonds rallied (yields retreated) even as equities fell"
+      "outlier_watch": "Dow closed GREEN (+0.10%) while NDX fell 1.25%, and VIX barely moved (15.41, +0.33) — a rotation, not a risk-off day; bonds rallied (yields retreated) even as equities fell",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-10-08",
