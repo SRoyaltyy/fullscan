@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T09:17:43.524015-04:00",
+  "generated_at": "2026-10-08T09:28:24.873934-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -846,9 +846,9 @@
           "path": "data/stock_book/2026-10-08_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=216",
-          "size": 1463292,
-          "said": "1d BUY HITI, ASTH, CON, AMN, PACS, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE",
+          "reason": "horizons=5 names=194",
+          "size": 1481718,
+          "said": "1d BUY NTSK, NTAP, ASTH, BAND, AMN, MQ \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE \u00b7 -0.5525",
           "bullets": []
         },
         {
@@ -858,10 +858,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 84050,
+          "size": 73459,
           "said": "Stock book \u2014 2026-10-08",
           "bullets": [
-            "_Generated 2026-10-08T06:05:49.842532-04:00_",
+            "_Generated 2026-10-08T08:41:39.792640-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -924,9 +924,9 @@
           "path": "data/stock_book/2026-10-08_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=216",
-          "size": 1463292,
-          "said": "1d BUY HITI, ASTH, CON, AMN, PACS, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE",
+          "reason": "horizons=5 names=194",
+          "size": 1481718,
+          "said": "1d BUY NTSK, NTAP, ASTH, BAND, AMN, MQ \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE \u00b7 -0.5525",
           "bullets": []
         },
         {
@@ -975,70 +975,62 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "HITI",
-        "score": 0.5521247958025313
-      },
-      {
-        "ticker": "ASTH",
-        "score": 0.7273197072274897
-      },
-      {
-        "ticker": "CON",
-        "score": 0.6953401293518459
-      },
-      {
-        "ticker": "AMN",
-        "score": 0.7070091326370284
-      },
-      {
-        "ticker": "PACS",
-        "score": 0.8082817215208906
+        "ticker": "NTSK",
+        "score": 0.42290632336884754
       },
       {
         "ticker": "NTAP",
-        "score": 0.3711981333358339
+        "score": 0.1993716893885885
       },
       {
-        "ticker": "MQ",
-        "score": 0.7677078447313719
+        "ticker": "ASTH",
+        "score": 0.6230873561313384
       },
       {
         "ticker": "BAND",
-        "score": 0.5961939935247551
+        "score": 0.43966397277650293
+      },
+      {
+        "ticker": "AMN",
+        "score": 0.6219075101040625
+      },
+      {
+        "ticker": "MQ",
+        "score": 0.6524273148994257
       }
     ],
     "sell_1d": [
       {
         "ticker": "OKLO",
-        "score": -0.03802248770767257
+        "score": -0.05831061373887192
       },
       {
         "ticker": "NEOV",
-        "score": -0.3867198550283089
+        "score": -0.34313729552836625
       },
       {
         "ticker": "FCEL",
-        "score": -0.06828783179383778
+        "score": -0.0552228469687913
       },
       {
         "ticker": "NNDM",
-        "score": -0.1796522468102289
+        "score": -0.133415420764612
       },
       {
         "ticker": "ENVX",
-        "score": -0.07978983372072344
+        "score": -0.11462581450741444
       },
       {
         "ticker": "EOSE",
-        "score": -0.2717673099162472
+        "score": -0.27207145820114503
       },
       {
         "ticker": "NRGV",
-        "score": -0.1605669909624048
+        "score": -0.15878955267152967
       },
       {
         "ticker": "INDI",
-        "score": -0.2598602515440931
+        "score": -0.26230407247352355
       }
     ],
     "flatten": {
@@ -3116,6 +3108,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-08\nall_ok=True  qc_all_ok=True  book_ok=True  grok_ok=True  news_mode=on  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:28:23.757933-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-08_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10569,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -5.542, 'dir': 'down', 'conf': 0.622, 'source': 'llm'}, Communication Services={'score': -8.272, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -11.327, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Consumer Defensive={'score': 5.519, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -6.054, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Real Estate={'score': -7.057, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Technology={'score': -11.67, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Utilities={'score': -4.882, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-08_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6069,
+          "preview": "# Weather report \u2014 2026-10-08\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -5.542, 'dir': 'down', 'conf': 0.622, 'source': 'llm'}, Communication Services={'score': -8.272, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -11.327, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Consumer Defensive={'score': 5.519, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -6.054, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Real Estate={'score': -7.057, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Technology={'score': -11.67, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Utilities={'score': -4.882, 'dir': 'down', 'conf': 0.65, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-10-08\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
