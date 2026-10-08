@@ -23,5 +23,26 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "review_enrichment": {
+    "attempted_epoch": 1791454515.3991523,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMirgFBVV95cUxPWElvcmxpMHVyY2JWcFhnaGtYX2VMLUhRN3Rxb2lwQ1F3Y3Ftbk9HQU81aEJ3S3Q2OG1Rbjk1UTJLbFJ3aEpHTEw0QmpOTWtOTzBDSEtNM01vZUhySENhU0FIa1o5bWRTT2lXRjRteUNwQTNxb19MS05ZVEZMbkstN0xUcFB2eElGZ2lXZEFvTkpiLWdNdUtmSmdBdlZtMUVMQ08zbWV6MVd4dWhObXc"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.slipcase.com/view/zurich-completes-beazley-acquisition-creating-world-s-largest-specialty-insurer"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "error": "Thin or mismatched publisher text"
+  }
 }

@@ -19,5 +19,26 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "review_enrichment": {
+    "attempted_epoch": 1791454522.986806,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMiuwFBVV95cUxPaXR1UUp6a0NLcjRMSldUT2pnb0N0RDBFT3ZPazVQV2lMLURONGNubFoyLWozS0VMZVlLZ2ExZDV2ZFlzakcwY3FqY29MclBzSVJkQkdLcE9mWGJXeEpha05KYmJKUXNiX1dEYmdIMjd5YzA2TU11MmgwMGVSN3NuZnJ5LWFsX2U1QmxFTjhpTHlienZnWEE1SW5ZRWFXeEZ1alVxbE9oRU8xUUhXYTI5WWtKRVdROEtjdm9z"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.stocktitan.net/sec-filings/HCAC/8-k-hall-chadwick-acquisition-corp-reports-material-event-e55ac3fe5210.html"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "error": "HTTP Error 403: Forbidden"
+  }
 }

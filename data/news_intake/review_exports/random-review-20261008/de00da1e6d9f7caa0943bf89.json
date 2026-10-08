@@ -23,5 +23,26 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "review_enrichment": {
+    "attempted_epoch": 1791454522.1578517,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMicEFVX3lxTE82YU5fcGpycUdQd3hjbmR2WTJLVWJNc2pBQjZvUmJwcUYxUnBydzh4dGJMdEhLVEVhQ000aEY0NnlScmJGSGo3VWo2TE5yYnA5b0ROU0p0Y2RZaTlMOFJWa3N1MGppS3Q5M3BES0p2LW8"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.ft.com/content/906051fc-c116-4803-b395-2d56d1bcbf28"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "error": "HTTP Error 403: Forbidden"
+  }
 }

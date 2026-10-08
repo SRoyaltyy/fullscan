@@ -19,5 +19,26 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+  "last_seen": "2026-10-04T06:30:58.699753+00:00",
+  "review_enrichment": {
+    "attempted_epoch": 1791454511.2167168,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMizgFBVV95cUxNY1NHVHZOUXZjdE1sYnlsaWNkZ3Jqb202N2h3S2pRWVFvcWNxN1hLRURxdjJXNWRjNDJENGRhOUtIWE9yellrTURTcTNuN2ZiR3ltM0xmZ2sweWlvOG9VM21yYTVmX0JJMnNVQ19KdGlGSnpCWlE3VW80cExqYU9ibHB0dS1lbTI0cEE4WEljSzUybVdfM05Ta09WbEp6SDFucTRKQ0VwaDl1SUxZZUZRUzlDNVZXZnZvdXF6S2hlZU9Oc1ZBbngySkd1cmlKdw"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.aa.com.tr/en/middle-east/-israeli-strike-kills-2-christian-women-lecturer-her-mother-in-new-gaza-ceasefire-breach/4077193"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "error": "Thin or mismatched publisher text"
+  }
 }

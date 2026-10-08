@@ -2,7 +2,7 @@
   "title": "Long term debt to total equity ratio of Columbus Acquisition Corp – NASDAQ:SAIQ - TradingView",
   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOS3E5ZGFQMnFQQUx5QUJkZGI5Z0diU3RlVlJhdVIyUWJ4SnlHZHhvTmdkNkpLeWVWVW1EdTdoWWUzZ0ZWVWNRVkRwX0xFcjV1Z2dhX0k4TTQ0T1F3WGtmc2wwbUFJcTdiTng4Q0Q4X0dJM0RGZHlRa3ltdWxMVlB6M2czLUNBSFFqdzZqS0laWG5iZ01tV3cxREJZMTJRWV9xRDNkc3dHY2Rwdw?oc=5",
   "publisher": "TradingView",
-  "body": "Long term debt to total equity ratio of Columbus Acquisition Corp – NASDAQ:SAIQ TradingView",
+  "body": "Long term debt to total equity ratio of WISeSat.Space Holdings Corp. – NASDAQ:SAIQ – TradingView Search Products Community Markets Brokers More EN Get started Markets / USA / Stocks / Finance / Financial Conglomerates / SAIQ / Financials S S S WISeSat.Space Holdings Corp. SAIQ Nasdaq Stock Market SAIQ Nasdaq Stock Market Market closed No trades No trades Overview Financials Documents News Community Technicals Seasonals ETFs More Back Long term debt to total equity ratio of WISeSat.Space Holdings Corp. Period Value Change Change % Made by humans English Select market data provided by ICE Data Services . Select reference data provided by FactSet. Copyright © 2026 FactSet Research Systems Inc. Copyright © 2026, American Bankers Association. CUSIP Database provided by FactSet Research Systems Inc. All rights reserved. SEC filings and other documents provided by Quartr . © 2026 TradingView, Inc. SOC 2\nCompliant GDPR\nCompliant More than a product Supercharts Screeners Stocks ETFs Bonds Crypto coins CEX pairs DEX pairs Pine Heatmaps Stocks ETFs Crypto coins Calendars Economic Earnings Dividends IPOs More products News Flow Portfolios Fundamental Graphs Yield Curves Options Macro Maps Pine Script® MCP Server Apps Mobile Desktop Community Social network Wall of Love Refer a friend Creator program House Rules Moderators Ideas Trading Education Editors' picks Pine Script Indicators & strategies Wizards Freelancers Marketplace Tools & subscriptions Features Pricing Market data Gift plans Trading Overview Brokers Brokers comparison The Leap Special offers CME Group futures Eurex futures US stocks bundle About company Who we are Space mission Blog Help Center Careers Media kit Merch TradingView store Tarot cards for traders The C63 TradeTime Policies & security Terms of Use Disclaimer Privacy Policy Cookies Policy Accessibility Statement Trust Center Security tips Bug Bounty program Status page Business solutions Widgets Charting libraries Lightweight Charts™ Advanced Charts Trading Platform Growth opportunities Advertising Brokerage integration Partner program Education program Community Social network Wall of Love Refer a friend Creator program House Rules Moderators Ideas Trading Education Editors' picks Pine Script Indicators & strategies Wizards Freelancers Marketplace Business solutions Widgets Charting libraries Lightweight Charts™ Advanced Charts Trading Platform Growth opportunities Advertising Brokerage integration Partner program Education program",
   "published_at": "2026-10-03T23:26:36+00:00",
   "published_raw": "Sat, 03 Oct 2026 23:26:36 GMT",
   "source": "lane_corporate_action_mna",
@@ -22,6 +22,30 @@
       ]
     }
   ],
-  "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "extraction_status": "page_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "retained_feed_body": "Long term debt to total equity ratio of Columbus Acquisition Corp – NASDAQ:SAIQ TradingView",
+  "extracted_url": "https://www.tradingview.com/symbols/NASDAQ-SAIQ/financials-statistics-and-ratios/long-term-debt-to-equity/",
+  "review_enrichment": {
+    "attempted_epoch": 1791454521.7078028,
+    "attempts": 1,
+    "status": "page_text_checked",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMiqgFBVV95cUxOS3E5ZGFQMnFQQUx5QUJkZGI5Z0diU3RlVlJhdVIyUWJ4SnlHZHhvTmdkNkpLeWVWVW1EdTdoWWUzZ0ZWVWNRVkRwX0xFcjV1Z2dhX0k4TTQ0T1F3WGtmc2wwbUFJcTdiTng4Q0Q4X0dJM0RGZHlRa3ltdWxMVlB6M2czLUNBSFFqdzZqS0laWG5iZ01tV3cxREJZMTJRWV9xRDNkc3dHY2Rwdw"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.tradingview.com/symbols/NASDAQ-SAIQ/financials-statistics-and-ratios/long-term-debt-to-equity/"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "title_token_overlap": 0.833,
+    "note": "Visible page text may include navigation; article boundaries require review"
+  }
 }
