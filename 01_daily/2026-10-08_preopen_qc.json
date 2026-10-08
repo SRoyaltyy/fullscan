@@ -1,16 +1,16 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:28:10.873104-04:00",
+  "generated_at": "2026-10-08T08:29:50.325352-04:00",
   "items": [
     {
-      "ok": false,
+      "ok": true,
       "kind": "general_predict",
       "path": "01_daily/general/2026-10-08_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 11416,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -349,5 +349,5 @@
   "sector_n_ok": 0,
   "sector_n_total": 11,
   "sectors_required": false,
-  "all_ok": false
+  "all_ok": true
 }

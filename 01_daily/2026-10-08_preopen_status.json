@@ -1,10 +1,10 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:28:11.016087-04:00",
+  "generated_at": "2026-10-08T08:29:50.476899-04:00",
   "run_id": "37767400909",
   "runner": "ecs-openclaw",
   "all_ok": false,
-  "qc_all_ok": false,
+  "qc_all_ok": true,
   "book_ok": false,
   "grok_ok": false,
   "grok_fails": [
@@ -13,9 +13,7 @@
       "reason": "empty_review_reply"
     }
   ],
-  "missing_required": [
-    "general_predict"
-  ],
+  "missing_required": [],
   "attempts": [
     {
       "key": "weather",
@@ -151,10 +149,10 @@
     "items": [
       {
         "kind": "general_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/general/2026-10-08_predict.md",
-        "size": 0
+        "size": 11416
       },
       {
         "kind": "events",

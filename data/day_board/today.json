@@ -1,11 +1,11 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:28:17.363912-04:00",
+  "generated_at": "2026-10-08T08:29:51.700401-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
-    "ok": 6,
-    "partial": 1,
+    "ok": 7,
+    "partial": 0,
     "fail": 1,
     "n": 8
   },
@@ -85,7 +85,18 @@
       "morning S missing"
     ]
   },
-  "general": {},
+  "general": {
+    "said": "DOWN  -6.787",
+    "bullets": [
+      "bad: hawkish Sept FOMC minutes",
+      "bad: 30Y ~5.70% multi-decade high",
+      "bad: Asia tech selloff Kospi -2.62%",
+      "good: Waller dovish-leaning skip-October",
+      "good: TSMC +51% revenue"
+    ],
+    "score": "-6.787",
+    "direction": "down"
+  },
   "sectors": {
     "said": "0 up / 0 down / 0 flat",
     "bullets": [
@@ -103,24 +114,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-08",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-08T08:20:29.717452-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-08_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -435,6 +428,24 @@
         }
       ],
       "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-08\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T08:29:50.495171-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-10-08_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 11416,
+          "preview": "# Premarket Prediction \u2014 2026-10-08\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.787 (uncertainty multiplier \u00d71.1) | confidence 0.65\n>\n> **Good news vs bad news:** good +0.5 pts vs bad -7.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Waller dovish-leaning skip-October\n> - TSMC +51% revenue\n> - Samsung ~9x profit\n> - oil offered CL -1.59%\n> - DXY flat\n>\n> **Bad news driving this:**\n> - hawkish Sept FOMC minutes\n> - 30Y ~5.70% multi-decade high\n> - Asia tech selloff Kospi -2.62%\n> - Iran ramping Hormuz attacks\n> - UK 30Y gilt 28-yr high\n>\n> **market uncertainty: **elevated** | VIX 15.7 | policy-uncertainty index 984.78 (1d +576.46)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \ud83d\udd34 Europe session: -0.5 \u00d7 2.0 = -1.0\n> - \ud83d\udd34 Overnight news & catalyst"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-10-08\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.787 (uncertainty multiplier \u00d71.1) | confidence 0.65\n>\n> **Good news vs bad news:** good +0.5 pts vs bad -7.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Waller dovish-leaning skip-October\n> - TSMC +51% revenue\n> - Samsung ~9x profit\n> - oil offered CL -1.59%\n> - DXY flat\n>\n> **Bad news driving this:**\n> - hawkish Sept FOMC minutes\n> - 30Y ~5.70% multi-decade high\n> - Asia tech selloff Kospi -2.62%\n> - Iran ramping Hormuz attacks\n> - UK 30Y gilt 28-yr high\n>\n> **market uncertainty: **elevated** | VIX 15.7 | policy-uncertainty index 984.78 (1d +576.46)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \ud83d\udd34 Europe session: -0.5 \u00d7 2.0 = -1.0\n> - \ud83d\udd34 Overnight news & catalyst"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

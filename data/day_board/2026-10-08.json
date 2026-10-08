@@ -1,14 +1,12 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:28:17.363912-04:00",
+  "generated_at": "2026-10-08T08:29:51.700401-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-08_predict.md` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
-    "ok": 6,
-    "partial": 1,
+    "ok": 7,
+    "partial": 0,
     "fail": 1,
     "n": 8
   },
@@ -177,9 +175,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 8,
+      "n_req_ok": 9,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -322,11 +320,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-08_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11416,
+          "said": "DOWN -6.787",
+          "bullets": [
+            "bad: hawkish Sept FOMC minutes",
+            "bad: 30Y ~5.70% multi-decade high",
+            "bad: Asia tech selloff Kospi -2.62%",
+            "good: Waller dovish-leaning skip-October"
+          ]
         },
         {
           "key": "board",
@@ -350,12 +353,12 @@
           "path": "01_daily/2026-10-08_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 8432,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
+          "reason": "all_ok=True",
+          "size": 8428,
+          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 12 fail",
           "bullets": [
-            "general_predict:missing",
             "finviz_market_digest:missing",
+            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
           ]
@@ -366,9 +369,9 @@
           "path": "01_daily/2026-10-08_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False missing=['general_predict']",
-          "size": 7399,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing general_predict",
+          "reason": "all_ok=False",
+          "size": 7369,
+          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=False",
           "bullets": []
         },
         {
@@ -506,14 +509,18 @@
           "bullets": []
         }
       ],
-      "said": "sectors 0 up / 0 down / 0 flat",
+      "said": "general DOWN  -6.787 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
+        "bad: hawkish Sept FOMC minutes",
+        "bad: 30Y ~5.70% multi-decade high",
+        "bad: Asia tech selloff Kospi -2.62%",
+        "good: Waller dovish-leaning skip-October",
+        "good: TSMC +51% revenue",
         "XLB missing",
         "XLC missing",
         "XLY missing",
         "XLP missing",
-        "XLE missing",
-        "XLF missing"
+        "XLE missing"
       ]
     },
     {
@@ -682,7 +689,7 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "OK",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
@@ -693,11 +700,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-08_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11416,
+          "said": "DOWN -6.787",
+          "bullets": [
+            "bad: hawkish Sept FOMC minutes",
+            "bad: 30Y ~5.70% multi-decade high",
+            "bad: Asia tech selloff Kospi -2.62%",
+            "good: Waller dovish-leaning skip-October"
+          ]
         },
         {
           "key": "in_board",
@@ -1023,7 +1035,18 @@
         "morning S missing"
       ]
     },
-    "general": {},
+    "general": {
+      "said": "DOWN  -6.787",
+      "bullets": [
+        "bad: hawkish Sept FOMC minutes",
+        "bad: 30Y ~5.70% multi-decade high",
+        "bad: Asia tech selloff Kospi -2.62%",
+        "good: Waller dovish-leaning skip-October",
+        "good: TSMC +51% revenue"
+      ],
+      "score": "-6.787",
+      "direction": "down"
+    },
     "sectors": {
       "said": "0 up / 0 down / 0 flat",
       "bullets": [
@@ -2876,6 +2899,24 @@
         }
       ],
       "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-08\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T08:29:50.495171-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-10-08_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 11416,
+          "preview": "# Premarket Prediction \u2014 2026-10-08\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.787 (uncertainty multiplier \u00d71.1) | confidence 0.65\n>\n> **Good news vs bad news:** good +0.5 pts vs bad -7.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Waller dovish-leaning skip-October\n> - TSMC +51% revenue\n> - Samsung ~9x profit\n> - oil offered CL -1.59%\n> - DXY flat\n>\n> **Bad news driving this:**\n> - hawkish Sept FOMC minutes\n> - 30Y ~5.70% multi-decade high\n> - Asia tech selloff Kospi -2.62%\n> - Iran ramping Hormuz attacks\n> - UK 30Y gilt 28-yr high\n>\n> **market uncertainty: **elevated** | VIX 15.7 | policy-uncertainty index 984.78 (1d +576.46)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \ud83d\udd34 Europe session: -0.5 \u00d7 2.0 = -1.0\n> - \ud83d\udd34 Overnight news & catalyst"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-10-08\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.787 (uncertainty multiplier \u00d71.1) | confidence 0.65\n>\n> **Good news vs bad news:** good +0.5 pts vs bad -7.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Waller dovish-leaning skip-October\n> - TSMC +51% revenue\n> - Samsung ~9x profit\n> - oil offered CL -1.59%\n> - DXY flat\n>\n> **Bad news driving this:**\n> - hawkish Sept FOMC minutes\n> - 30Y ~5.70% multi-decade high\n> - Asia tech selloff Kospi -2.62%\n> - Iran ramping Hormuz attacks\n> - UK 30Y gilt 28-yr high\n>\n> **market uncertainty: **elevated** | VIX 15.7 | policy-uncertainty index 984.78 (1d +576.46)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \ud83d\udd34 Europe session: -0.5 \u00d7 2.0 = -1.0\n> - \ud83d\udd34 Overnight news & catalyst"
     }
   ],
   "href": {
