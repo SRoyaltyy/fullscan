@@ -2,7 +2,7 @@
   "title": "Janus Henderson Completes Acquisition of Rantum Capital - Funds Society",
   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZ3VSUngwT3BZMzdWYVF3cVkzemF2anF4bV9PMG5wcUFVT1AxZmt4el80V2FMZGxmRmszUS1uQjJweXpEVGVlWjRwYXNET3ZOY1pfc3VxbVNta3RZelpuV3pvMDkwRXpDdjAxRUE1UHhfRUI0allhcFZWaWdjWWhWZkNjNG1CUUhNdXBkcDRTZHljdkc1TXc2cXM3WHNjcWFValhzTA?oc=5",
   "publisher": "Funds Society",
-  "body": "Janus Henderson Completes Acquisition of Rantum Capital fundssociety.com",
+  "body": "Janus Henderson Acquires Rantum Capital 02 Oct 2026 International English International English Internacional Español OffShore Español LATAM Español España Español Brasil Português Subscribe to our Newsletter Menu Menu News Business Regulation Markets ETF Appointments Alternatives Private Banking Pensions Fórmate a fondo Diccionario financiero Taxation Advice Financial education Magazines Opinion Agenda Style Collaborators Who We Are News: Alternatives Appointments ETF Business Markets Private Banking Pensions Regulation News Business Janus Henderson Completes Acquisition of Rantum Capital Following Regulatory Approvals Date: 02 Oct 2026 · 15:30 Share Ali Dibadj, Chief Executive Officer of Janus Henderson. Author: Funds Society Rantum Capital is a private markets investment firm specializing in private credit and private equity solutions across the DACH region, headquartered in Frankfurt The acquisition strengthens Janus Henderson’s capabilities in private markets and expands its footprint in Europe This transaction builds on Janus Henderson’s recent acquisitions and strategic partnerships with Privacore, Victory Park Capital, and NBK Capital Partners Janus Henderson has announced the receipt of all necessary regulatory approvals to complete the acquisition of Rantum Capital, a Frankfurt-headquartered private markets investment firm specializing in private credit and private equity solutions across the DACH region. According to the firm, the acquisition strengthens Janus Henderson’s capabilities in private markets and expands its footprint in Europe, an important institutional market for the company. “We are delighted to welcome the Rantum team to Janus Henderson. The completion of this acquisition reinforces our capabilities in private markets and enhances our ability to meet growing client demand for private credit and private equity solutions in a market of significant strategic importance,” noted Ali Dibadj, Chief Executive Officer of Janus Henderson. For his part, Dirk Notheis, Co-Founder and Managing Director of Rantum Capital, stated: “The entire Rantum team is excited to become part of Janus Henderson. We share a strong entrepreneurial culture and client commitment, and by combining our local expertise in private markets with Janus Henderson’s global reach, we believe we are well positioned to create long-term value for investors across Europe.” The asset manager highlighted that the acquisition of Rantum further expands Janus Henderson’s private markets platform, leveraging capabilities added through recent acquisitions and strategic partnerships, including Privacore, Victory Park Capital, and NBK Capital Partners. “Combined with the firm’s established fixed income franchise, these capabilities strengthen Janus Henderson’s ability to offer clients access to opportunities across both public and private markets,” they stated. Europe Janus Henderson M&A private credit private debt Related Posts News The Janus Henderson International Core ... Janus Henderson Launches International Core Alpha ETF By Funds Society ETFs Internacional Janus ... News In London Columbia Threadneedle Reinforces Investment Team with Three Appointments By Funds Society Appointments Columbia ... London News Long-Term Strategic Alliance Janus Henderson Announces the Acquisition of Australian Firm Insignia Financial’s Investment Businesses By Funds Society AUM Australia Equities Most popular Business Following Regulatory Approvals Janus Henderson Completes Acquisition of Rantum Capital Markets MFS Iberia Summit 2026 Pilar Gómez Bravo (MFS): “’Buy the Dip’ No Longer Makes as Much Sense as Before in Credit; We Are Seeing the Floor for Spreads” Business Following New Hires and Office Openings Snowden Lane Partners Surpasses $15 Billion in Client Assets ETF Following Regulatory Approval Capital Group Enters the Active UCITS ETF Business Opinion Opinion by Josh Rubin Thornburg: What Santa Fe Teaches Us About Disciplined Investing In a Narrow Market Josh Rubin By Josh Rubin, Client Portfolio Manager Thornburg: If Valuations Stop Doing the Heavy Lifting, What’s Next for Equity Investors? Josh Rubin Opinion column by Arturo Hanono AFOREs: More Capacity to Invest, But Where Are the Local Opportunities? Arturo Hanono Contributors Thornburg Investment Management EXAN Capital Matthews Asia About us Head of Marketing Madina Kurbanova Marketing Associate Carmen Navas Style Estilo AI Was One of the Central Themes ReachingU Celebrates 25 Years with a Night of Philanthropy, Art, and Reflection in Miami By Funds Society Estilo According to the Julius Baer ranking of Singapore, Zurich, and Monaco, the Most Expensive Cities for a Premium Lifestyle By Funds Society Estilo From Zurich To San Francisco Quality Of Life, Salaries, And Housing: The New Map Of Global Metropolises By Funds Society × News Alternatives Appointments ETF Business Markets Private Banking Pensions Regulation Magazines Opinion Agenda Style Contributors Subscribe to our Newsletter About us Contact and Help International English International English Internacional Español OffShore Español LATAM Español España Español Brasil Português Terms and Conditions Privacy Policy Cookies",
   "published_at": "2026-10-02T13:30:14+00:00",
   "published_raw": "Fri, 02 Oct 2026 13:30:14 GMT",
   "source": "lane_corporate_action_mna",
@@ -22,6 +22,30 @@
       ]
     }
   ],
-  "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "extraction_status": "page_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "retained_feed_body": "Janus Henderson Completes Acquisition of Rantum Capital fundssociety.com",
+  "extracted_url": "https://www.fundssociety.com/en/news/business/janus-henderson-completes-acquisition-of-rantum-capital/",
+  "review_enrichment": {
+    "attempted_epoch": 1791492363.4507658,
+    "attempts": 1,
+    "status": "page_text_checked",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMipAFBVV95cUxQZ3VSUngwT3BZMzdWYVF3cVkzemF2anF4bV9PMG5wcUFVT1AxZmt4el80V2FMZGxmRmszUS1uQjJweXpEVGVlWjRwYXNET3ZOY1pfc3VxbVNta3RZelpuV3pvMDkwRXpDdjAxRUE1UHhfRUI0allhcFZWaWdjWWhWZkNjNG1CUUhNdXBkcDRTZHljdkc1TXc2cXM3WHNjcWFValhzTA"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.fundssociety.com/en/news/business/janus-henderson-completes-acquisition-of-rantum-capital/"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "title_token_overlap": 1.0,
+    "note": "Visible page text may include navigation; article boundaries require review"
+  }
 }
