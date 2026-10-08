@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T05:11:15.224498-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": false,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 0,
+  "status": "FAIL",
+  "targets": [
+    {
+      "ticker": "TSLA",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "NFLX",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "NE",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling"
+    },
+    {
+      "ticker": "RIG",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling"
+    },
+    {
+      "ticker": "SLB",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "BKR",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "KGS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "UBER",
+      "role": "conflict",
+      "why": "actions sell net=-7.03 vs heat buy"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "TSLA",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA"
+    },
+    {
+      "ticker": "NFLX",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NFLX"
+    },
+    {
+      "ticker": "NE",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NE"
+    },
+    {
+      "ticker": "RIG",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG"
+    },
+    {
+      "ticker": "SLB",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB"
+    },
+    {
+      "ticker": "BKR",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR"
+    },
+    {
+      "ticker": "KGS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS"
+    },
+    {
+      "ticker": "UBER",
+      "role": "conflict",
+      "why": "actions sell net=-7.03 vs heat buy",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UBER"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T05:10:14.812159-04:00",
+  "generated_at": "2026-10-08T05:11:17.935941-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -9,8 +9,8 @@
   ],
   "counts": {
     "ok": 3,
-    "partial": 4,
-    "fail": 1,
+    "partial": 3,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -309,7 +309,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 104488,
+          "size": 104546,
           "said": "133 ticker actions \u00b7 10 events \u00b7 10443 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
@@ -603,7 +603,7 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
@@ -617,7 +617,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 104488,
+          "size": 104546,
           "said": "133 ticker actions \u00b7 10 events \u00b7 10443 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
@@ -646,11 +646,16 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-10-08_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=8)",
+          "size": 2792,
+          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 TSLA, NFLX, NE, RIG, SLB, BKR, KGS, UBER",
+          "bullets": [
+            "TSLA: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA",
+            "NFLX: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NFLX",
+            "NE: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NE",
+            "RIG: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG"
+          ]
         }
       ],
       "said": "133 ticker actions \u00b7 10 events \u00b7 10443 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
@@ -710,7 +715,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 104488,
+          "size": 104546,
           "said": "133 ticker actions \u00b7 10 events \u00b7 10443 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
@@ -1524,6 +1529,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-10-08",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-08T05:11:16.421721-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-10-08_dossiers.json",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1252,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-10-08_dossiers.md",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1252,
+          "preview": "# CATALYST DAILY \u2014 2026-10-08\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-08\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
     }
   ],
   "href": {
