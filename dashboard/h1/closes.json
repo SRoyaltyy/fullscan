@@ -1304,5 +1304,42 @@
       "open": 3.48,
       "prior_close": 3.94
     }
+  },
+  "2026-10-07": {
+    "CIEN": {
+      "close": 446.450012,
+      "open": 428.980011,
+      "prior_close": 443.649994
+    },
+    "DNA": {
+      "close": 11.47,
+      "open": 11.805,
+      "prior_close": 12.41
+    },
+    "KOD": {
+      "close": 91.080002,
+      "open": 91.739998,
+      "prior_close": 92.339996
+    },
+    "OPCH": {
+      "close": 31.01,
+      "open": 31.030001,
+      "prior_close": 31.0
+    },
+    "PACB": {
+      "close": 2.72,
+      "open": 2.62,
+      "prior_close": 2.7
+    },
+    "QSI": {
+      "close": 1.28,
+      "open": 1.17,
+      "prior_close": 1.22
+    },
+    "SDEV": {
+      "close": 2.78,
+      "open": 3.27,
+      "prior_close": 3.25
+    }
   }
 }
