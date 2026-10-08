@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T09:00:48.005887-04:00",
+  "generated_at": "2026-10-08T09:03:33.300688-04:00",
   "items": [
     {
       "ok": true,
@@ -234,14 +234,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-10-08/utilities_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 13760,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     }
   ],
@@ -338,15 +338,15 @@
     },
     {
       "sector": "Utilities",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 13760,
       "status": "DEGRADED",
       "provider": "openclaw",
       "fallback_reason": "openclaw_timeout"
     }
   ],
-  "sector_n_ok": 7,
+  "sector_n_ok": 8,
   "sector_n_total": 11,
   "sectors_required": false,
   "all_ok": true
