@@ -1,419 +1,44 @@
 {
-  "date": "2026-10-07",
-  "generated_at": "2026-10-08T03:19:49.105390-04:00",
-  "overall": "OK",
-  "ranker_ready": true,
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T04:17:25.613232-04:00",
+  "overall": "FAIL",
+  "ranker_ready": false,
   "counts": {
-    "ok": 8,
-    "partial": 0,
-    "fail": 0,
+    "ok": 0,
+    "partial": 2,
+    "fail": 6,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "WH",
-      "score": 0.769004610898425
-    },
-    {
-      "ticker": "SIRI",
-      "score": 0.10496170596373948
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "NEOV",
-      "score": -0.46199114947599995
-    },
-    {
-      "ticker": "OKLO",
-      "score": -0.12240817059223058
-    },
-    {
-      "ticker": "FCEL",
-      "score": -0.20348178435058628
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.3069785711479868
-    },
-    {
-      "ticker": "ENVX",
-      "score": -0.18254722805503037
-    },
-    {
-      "ticker": "INDI",
-      "score": -0.2489740444479433
-    },
-    {
-      "ticker": "TE",
-      "score": -0.36971468024402027
-    },
-    {
-      "ticker": "SKYX",
-      "score": -0.3605036087935186
-    }
-  ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $540.22",
-    "bullets": [
-      "0 priced buys",
-      "cash $540.22"
-    ]
-  },
-  "general": {
-    "said": "DOWN  -5.211",
-    "bullets": [
-      "bad: FOMC minutes 14:00 ET unsigned",
-      "bad: Hormuz On Peace + Houthi Aden increment",
-      "bad: Asia composite -0.66%",
-      "good: leftover SPX/NDX record closes",
-      "good: Oct hike odds faded ~20% hold"
-    ],
-    "score": "-5.211",
-    "direction": "down"
-  },
-  "sectors": {
-    "said": "0 up / 0 down / 0 flat",
-    "bullets": [
-      "XLB missing",
-      "XLC missing",
-      "XLY missing",
-      "XLP missing",
-      "XLE missing",
-      "XLF missing",
-      "XLV missing",
-      "XLI missing",
-      "XLRE missing",
-      "XLK missing",
-      "XLU missing"
-    ]
-  },
+  "buy_1d": [],
+  "sell_1d": [],
+  "flatten": {},
+  "general": {},
+  "sectors": {},
   "lands": [
     {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-07",
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-10-08",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-07T15:25:12.335069-04:00",
+      "at": "2026-10-08T04:17:25.344001-04:00",
       "files": [
         {
-          "path": "01_daily/weather/2026-10-07_weather.json",
+          "path": "01_daily/news/2026-10-08_finviz_market_digest.json",
           "ok": true,
           "reason": "",
-          "size": 10569,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-07_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 6032,
-          "preview": "# Weather report \u2014 2026-10-07\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-07\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T15:25:19.980104-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-07_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2248137,
-          "preview": "5905 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COP, DVN, PR, OXY, TS"
-        }
-      ],
-      "preview": "5905 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 COP, DVN, PR, OXY, TS"
-    },
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T15:25:25.414829-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-07_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T15:25:50.528985-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-10-07_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1010341,
-          "preview": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
-        },
-        {
-          "path": "data/stock_book/2026-10-07_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-10-07_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2493,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-10-07_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 7333,
-          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 7333,
-          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
-        },
-        {
-          "path": "01_daily/2026-10-07_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 33858,
-          "preview": "# Stock book \u2014 2026-10-07\n_Generated 2026-10-07T15:25:32.843542-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 # Stock book \u2014 2026-10-07\n_Generated 2026-10-07T15:25:32.843542-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T15:25:54.767081-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 20301,
-          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 876,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-10-07.json",
-          "ok": true,
-          "reason": "",
-          "size": 241996,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-10-07_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 204173,
-          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2600935,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-10-07_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 243617,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/factor_mine/morning_look/2026-10-07.json",
-          "ok": true,
-          "reason": "",
-          "size": 167425,
-          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 2891204,
-          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2600935,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 204173,
-          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2600935,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 2600935,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 2891204,
-          "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1822,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1822,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-07 BUY WH, SIRI \u00b7 SELL NEOV, OKLO, FCEL, EOSE, ENVX, INDI, TE, SKYX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_ope"
-    },
-    {
-      "key": "paper",
-      "title": "Paper dashboard",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T15:25:59.809889-04:00",
-      "files": [
-        {
-          "path": "03_scoreboard/PAPER_TRADING.md",
-          "ok": true,
-          "reason": "",
-          "size": 1837,
-          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 | "
-        },
-        {
-          "path": "dashboard/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 10510817,
-          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b4d78;\ncolor:var(--fg);text-decoration:none}\n."
-        }
-      ],
-      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
-    },
-    {
-      "key": "finviz_market_digest_close",
-      "title": "Finviz homepage market digest (close)",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-07T16:24:51.076013-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-07_finviz_market_digest_close.json",
-          "ok": true,
-          "reason": "",
-          "size": 7571,
+          "size": 4756,
           "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
         },
         {
-          "path": "01_daily/news/2026-10-07_finviz_market_digest_close.md",
+          "path": "01_daily/news/2026-10-08_finviz_market_digest.md",
           "ok": true,
           "reason": "",
-          "size": 3778,
-          "preview": "# Finviz homepage market digest (close) \u2014 2026-10-07\n**Generated:** 2026-10-07T16:24:50.990077-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks eased from record highs as Treasury yields hit multi-decade levels and Brent briefly topped $100 amid hawkish Fed minutes\n**Prior close:** SPX \u2014  Nasdaq -1.30%  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** -1.30%  **Dow:** \u2014\n**Oil:** Brent crude $100.0\n**CPI/Fed:** 4.0% hike (4.00%, saw additional work needed to tame inflation, expected another hike)\n**Leaders:** CAT, DE, BULL, ZIM, SPCX\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-08\n**Clock use:** `next_open`"
+          "size": 2303,
+          "preview": "# Finviz homepage market digest \u2014 2026-10-08\n**Generated:** 2026-10-08T04:17:25.324722-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as oil rises on supply concerns ahead of jobless claims data and PepsiCo earnings\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** PEP, CMCSA, TRI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** PEP\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-08\n**Clock use:** `same_morning`"
         }
       ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-07\n**Generated:** 2026-10-07T16:24:50.990077-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks eased from record highs as Treasury yields hit multi-decade levels and Brent briefly topped $100 amid hawkish Fed minutes\n**Prior close:** SPX \u2014  Nasdaq -1.30%  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** -1.30%  **Dow:** \u2014\n**Oil:** Brent crude $100.0\n**CPI/Fed:** 4.0% hike (4.00%, saw additional work needed to tame inflation, expected another hike)\n**Leaders:** CAT, DE, BULL, ZIM, SPCX\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-08\n**Clock use:** `next_open`"
-    },
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-07",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-08T03:19:47.750071-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-07_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97689,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-07_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11503,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-07\n_Generated 2026-10-08T03:19:47.150490-04:00 \u00b7 export=data/exports/finviz_2026-10-07.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1813_"
-        },
-        {
-          "path": "data/exports/finviz_2026-10-07.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11522782,
-          "preview": "11717 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11522782,
-          "preview": "11717 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        },
-        {
-          "path": "01_daily/news/2026-10-07_finviz_digest_preopen.json",
-          "ok": true,
-          "reason": "",
-          "size": 98242,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-07\n_Generated 2026-10-08T03:19:47.150490-04:00 \u00b7 export=data/exports/finviz_2026-10-07.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1813_ \u00b7 11717 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11717 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-08\n**Generated:** 2026-10-08T04:17:25.324722-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as oil rises on supply concerns ahead of jobless claims data and PepsiCo earnings\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** PEP, CMCSA, TRI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** PEP\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-08\n**Clock use:** `same_morning`"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
