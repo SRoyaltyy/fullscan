@@ -51,6 +51,11 @@
  tr.detail ul{margin:4px 0 4px 16px;padding:0;font-family:ui-monospace,Menlo,monospace;font-size:11px}
  tr.detail code{color:var(--blue)}
  .kv{color:var(--mut)}
+ .needs{margin-top:6px;border-top:1px dashed var(--line);padding-top:6px}
+ .needs .nt{color:var(--mut);font-size:10.5px;font-weight:700;text-transform:uppercase;
+   letter-spacing:.05em}
+ .needs table{width:auto;margin:2px 0 4px}
+ .needs td{border-top:0;padding:1px 14px 1px 0;font-size:11px}
 </style></head><body><div class="wrap">
 <h1>Strategy status — decisions for today's open</h1>
 <div class="sub">Per-strategy BUY/SELL for the session, straight from the
@@ -93,9 +98,14 @@
  is the ticket seal clock and per-strategy push is the dated file's last
  commit on main — identical across rows by design; the quote snapshot
  time (px) is per-strategy inside the ⊕ panel. Click <b>⊕</b> to expand a
- strategy: its per-strategy record (px time, panel bake, signal date) and
- the <b>exact hashed inputs</b> — every sha256 in the C.10 decision
- fingerprint, identical ticket-wide, with absence hashed too. The
+ strategy: its per-strategy record (px time, panel bake, signal date), the
+ <b>needs</b> panel — every file the strategy reads, with its workflow role,
+ a live OK/MISSING probe of <code>main</code>, the C.10 sha when the file is
+ fingerprinted, and for factor recipes the parsed factor mix (universe,
+ hold sessions, gates; combo members resolved to their sleeve recipes with
+ weights, legend from <code>src/factor_mine_combo.py</code>) — and the
+ <b>exact hashed inputs</b>: every sha256 in the C.10 decision fingerprint,
+ identical ticket-wide, with absence hashed too. The
  "factor-mine dash updated" card is the last commit that touched
  <code>dashboard/factor-mine/strategy_tickets.json</code>: the publish
  pipeline lands dashboard copies in the same push as the tickets.
@@ -107,12 +117,7 @@
  ledgers (<code>data/factor_mine/ledgers/</code>, $10k start, fees
  included). "top performers" sort pins the best lifetime recipes at the
  top; strategies without a ledger (stock_book / paper / excel / flatten)
- keep alphabetical order below them. <b>theme_radar</b> rows (one per
- Theme Radar cell, read from SRoyaltyy/theme-radar
- <code>research/shadow_log/plans/plan_&lt;date&gt;.csv</code>) are
- <b>research-only shorts, never traded</b>: OK lists the shorts, SIT = the
- plan landed with no fires for that cell, WAIT = no plan yet (due about
- 05:20 ET), MISSING = no plan file by 09:00 ET.</p>
+ keep alphabetical order below them.</p>
 </div>
 <script>
 const LOCAL = location.hostname === "localhost" || location.hostname === "127.0.0.1"
@@ -180,6 +185,181 @@ function topSet(){
   return new Set(Object.entries(SCORECARD.recipes)
     .sort((a,b) => b[1].total_ret_pct - a[1].total_ret_pct)
     .slice(0, TOP_N).map(kv => kv[0]));
+}
+// ---- per-strategy input needs -------------------------------------------
+// Grounded in repo sources: src/stock_book_diag.py workflow_specs (roles),
+// src/decision_ready.py (C.10 fingerprint paths), src/factor_mine.py
+// build_recipes (name tokens), src/factor_mine_combo.py combo_specs
+// (letter legend + weights). Unknown tokens render raw, never invented.
+const STOCK_BOOK_FILES = [
+  ["general predict", "01_daily/general/{d}_predict.md", "input"],
+  ["sector board",    "01_daily/sectors/{d}/_board.json", "input"],
+  ["news actions",    "01_daily/news/{d}_actions.json", "input"],
+  ["finviz digest",   "01_daily/news/{d}_finviz_digest.json", "input"],
+  ["news judge",      "01_daily/news/{d}_judge.md", "input"],
+  ["weather",         "01_daily/weather/{d}_weather.json", "input"],
+  ["AB enriched",     "data/ab_checklist/{d}_ab_checklist_enriched.csv", "input"],
+  ["join ranked",     "data/join/{d}_ranked.csv", "required"],
+  ["peer RS",         "data/peers/{d}_peer_rs.csv", "required"],
+  ["stock book",      "data/stock_book/{d}_stock_book.json", "required"],
+  ["book report",     "01_daily/{d}_stock_book.md", "required"],
+];
+const FACTOR_FILES = [
+  ["factor panel",       "data/factor_mine/panel.json", "required"],
+  ["send-inputs freeze", "data/factor_mine/send_inputs/{d}.json", "freeze"],
+];
+const FAMILY_FILES = {
+  stock_book: STOCK_BOOK_FILES,
+  paper: STOCK_BOOK_FILES,
+  excel: [["excel suggestions", "excel_bot/suggestions/suggestions.csv", "required"]],
+  flatten: [["sleeve-merge card", "data/sleeve_merge/today.json", "required"]],
+  factor_mine: FACTOR_FILES,
+  factor_mine_preopen: FACTOR_FILES,
+};
+// combo member letters: src/factor_mine_combo.py combo_specs()
+const COMBO_LETTER = {s:"short_news_r_h3", e:"union_e_fresh_h3", h:"union_hot_n4_h1",
+  n:"union_news_g_h1", j:"union_join_vol_green_h1", f:"flatten_h5",
+  e1:"union_e_fresh_h1", er:"union_earn_react_h3"};
+const COMBO_SPECIAL = {
+  combo_sh_macd_5050_shared: [["short_news_r_macd_h3",50],["union_hot_n4_h1",50]],
+  combo_p2s_5050_shared:     [["union_news_pack_net2_h1",50],["short_news_r_h3",50]],
+  combo_oh_5050_shared:      [["overnight_mega_h1",50],["union_hot_n4_holdup",50]],
+};
+function comboMembers(name){
+  if(COMBO_SPECIAL[name]) return COMBO_SPECIAL[name];
+  const m = /^combo_([a-z0-9]+)_(\d+)(?:_(shared|split))?(?:_(skip|weather))?$/.exec(name);
+  if(!m) return null;
+  const letters = m[1], digits = m[2];
+  const toks = []; let i = 0;
+  while(i < letters.length){
+    const two = letters.slice(i, i + 2);
+    if(COMBO_LETTER[two]){ toks.push(two); i += 2; }
+    else if(COMBO_LETTER[letters[i]]){ toks.push(letters[i]); i += 1; }
+    else return null; // unknown letter — bail, caller shows raw name
+  }
+  let weights = null;
+  if(/^(\d)\1\1$/.test(digits) && toks.length === 3) weights = [33.3, 33.3, 33.4];
+  else if(digits.length === 2 * toks.length)
+    weights = toks.map((_, k) => parseInt(digits.slice(2 * k, 2 * k + 2), 10));
+  if(!weights) return null;
+  return toks.map((t, k) => [COMBO_LETTER[t], weights[k]]);
+}
+const UNIVERSES = ["union","flatten","probable","yday_gainer","ohlc_hot","overnight","short"];
+const GATE_LEGEND = {
+  vol_g:"vol ✅", vol_missing:"vol missing", ab_g:"AB ✅", join_g:"join ✅",
+  join_present:"join present", join_vol_green:"join+vol+green ✅",
+  news_g:"news 🟢", news_present:"news present", news_missing:"news missing",
+  news:"news", news_pack:"packet 🟢", news_head:"headline 🟢",
+  news_or:"packet🟢 OR headline🟢", news_both:"packet🟢 AND headline🟢",
+  catal_present:"catalyst present", blue:"🔵", white:"zero-red",
+  last_green:"last candle green", last_red:"last candle red",
+  candle:"candle capture", cond:"+G−R condition", hot:"hot rank",
+  ret_5:"5-day return", coil_off:"coil-off (5m flat, RVOL 0.7–2.2)",
+  earn_react:"earnings reaction", overnight:"overnight gap",
+  e_fresh:"fresh-E (≤1d)", r_up:"R-flag up", break10:"10-day break",
+  rsi_os:"RSI oversold", macd:"MACD>0", macd_up:"MACD rising",
+  macd_xup:"MACD cross-up", flow_in:"money flow in",
+  n1:"top-1", n4:"top-4", net2:"camera net ≥2", net3:"camera net ≥3",
+  net4:"camera net ≥4", net5:"camera net ≥5", cam71:"cameras +7/−≤1",
+  cam61:"cameras +6/−≤1", cam91:"cameras +9/−1",
+  rw:"rank-weighted sizing", conv:"conviction sizing",
+  mega:"mega gap", missing:"missing", alarm:"🚨 exit", exit_alarm:"🚨 exit alarm",
+  exit:"exit", sizeup:"size-up", time:"time exit", topheavy:"top-heavy",
+  holdup:"hold-up", shared:"shared pile", split:"split pile",
+  skip:"net=skip", weather:"weather net", green:"green",
+  fresh:"fresh", e:"fresh-E flag", r:"R-flag", er:"earn-react",
+  sx:"short-side", lg:"long-side"
+};
+// multi-word gates that an underscore split breaks apart; longest first
+const MULTI_GATES = ["join_vol_green","news_pack","news_head","news_or","news_both",
+  "news_g","news_present","news_missing","e_fresh","r_up","coil_off","macd_up",
+  "macd_xup","flow_in","last_green","last_red","catal_present","join_present",
+  "exit_alarm","vol_missing","vol_g","ab_g","join_g","ret_5","rsi_os","earn_react"];
+function splitGates(s){
+  const toks = s.split("_").filter(Boolean);
+  for(const mt of MULTI_GATES){
+    const parts = mt.split("_");
+    for(let i = 0; i + parts.length <= toks.length; i++){
+      if(parts.every((p, k) => toks[i + k] === p)){ toks.splice(i, parts.length, mt); i = Math.max(i - 2, -1); }
+    }
+  }
+  return toks;
+}
+function parseBaseRecipe(name){
+  if(name.startsWith("combo_")) return null;
+  let rest = name, hold = null;
+  const hh = /_h(\d+)$/.exec(rest);
+  if(hh){ hold = hh[1] + " session" + (hh[1] === "1" ? "" : "s"); rest = rest.slice(0, hh.index); }
+  else if(rest.endsWith("_holdup")){ hold = "hold-up"; rest = rest.slice(0, -7); }
+  const uni = UNIVERSES.find(u => rest === u || rest.startsWith(u + "_")) || null;
+  const gates = uni && rest !== uni ? splitGates(rest.slice(uni.length + 1)) : [];
+  return {universe: uni || rest || "—", hold: hold || "?", gates};
+}
+// gate → the daily file the factor-panel column is baked from
+const GATE_INPUTS = [
+  [["news_g","news_pack","news_head","news_or","news_both","news_present","news_missing","news","catal_present"],
+    ["01_daily/news/{d}_actions.json", "01_daily/news/{d}_judge.md"]],
+  [["ab_g"], ["data/ab_checklist/{d}_ab_checklist_enriched.csv"]],
+  [["join_g","join_present","join_vol_green","join"], ["data/join/{d}_ranked.csv"]],
+  [["weather"], ["01_daily/weather/{d}_weather.json"]],
+];
+function gateInputs(gates){
+  const out = [];
+  for(const [ks, paths] of GATE_INPUTS) if(ks.some(k => gates.includes(k))) out.push(...paths);
+  return out;
+}
+let NEEDS_STATUS = {}; // repo-relative path -> bool, probed once per refresh
+function fileChip(path){
+  const st = NEEDS_STATUS[path];
+  const sha = (TK_FACTS.inputs || {})[path];
+  const stat = st === undefined ? `<span class="dim">probing…</span>`
+    : st ? `<span class="ok">OK</span>` : `<span class="fail">MISSING</span>`;
+  const shaH = sha ? (sha === "absent" ? ` <span class="part" title="hashed as absent">absent@hash</span>`
+      : ` <code title="sha256 in C.10 fingerprint">${String(sha).slice(0,10)}…</code>`) : "";
+  return stat + shaH;
+}
+function needsFor(r, d){
+  const isFactor = r.fam === "factor_mine" || r.fam === "factor_mine_preopen";
+  const rows = []; const seen = new Set();
+  const push = (label, path, role) => {
+    if(seen.has(path)) return; seen.add(path);
+    rows.push(`<tr><td class="kv" style="white-space:nowrap">${label}${role ? ` <span class="dim">(${role})</span>` : ""}</td>` +
+      `<td style="white-space:nowrap">${fileChip(path)}</td><td class="name">${path}</td></tr>`);
+  };
+  for(const [label, tpl, role] of (FAMILY_FILES[r.fam] || [])) push(label, tpl.replace("{d}", d), role);
+  let recipeHtml = "";
+  if(isFactor){
+    push("recipe state", `data/factor_mine/state/${r.name}/${d}.json`, "positions");
+    const combo = r.name.startsWith("combo_") ? comboMembers(r.name) : null;
+    let gates = [];
+    if(combo){
+      recipeHtml = `<div style="margin-top:2px"><span class="kv">combo mix (src/factor_mine_combo.py):</span> ` +
+        combo.map(([m, w]) => `<code>${m}</code> <b>${w}%</b>`).join(" + ") + `</div>`;
+      for(const pr of combo.map(([m]) => parseBaseRecipe(m)).filter(Boolean)) gates.push(...pr.gates);
+      recipeHtml += `<div><span class="kv">member gates:</span> ${[...new Set(gates)].map(g =>
+          GATE_LEGEND[g] ? `<span title="${g}">${GATE_LEGEND[g]}</span>` : `<code>${g}</code>`).join(", ") || "none"}</div>`;
+    } else {
+      const pr = parseBaseRecipe(r.name);
+      if(pr){
+        gates = pr.gates;
+        recipeHtml = `<div style="margin-top:2px"><span class="kv">recipe parse:</span> universe <code>${pr.universe}</code>` +
+          ` · hold <code>${pr.hold}</code> · gates: ${pr.gates.map(g =>
+            GATE_LEGEND[g] ? `<span title="${g}">${GATE_LEGEND[g]}</span>` : `<code>${g}</code>`).join(", ") || "<span class='dim'>none (baseline list)</span>"}</div>`;
+      }
+    }
+    for(const p of gateInputs(gates)) push("gate input", p.replace("{d}", d), "panel bake");
+  }
+  if(!rows.length && !recipeHtml) return "";
+  return `<div class="needs"><div class="nt">needs — inputs for this strategy</div>` +
+    (rows.length ? `<table>${rows.join("")}</table>` : "") + recipeHtml + `</div>`;
+}
+async function probeNeeds(d){
+  const paths = new Set();
+  for(const list of Object.values(FAMILY_FILES)) for(const [, tpl] of list)
+    if(!tpl.includes("{name}")) paths.add(tpl.replace("{d}", d));
+  for(const [, ps] of GATE_INPUTS) for(const p of ps) paths.add(p.replace("{d}", d));
+  for(const n of EXPANDED) paths.add(`data/factor_mine/state/${n}/${d}.json`);
+  await Promise.all([...paths].map(async p => { NEEDS_STATUS[p] = (await probe(p)).ok; }));
 }
 async function loadTicket(d){
   const chain = [
@@ -300,8 +480,9 @@ async function renderTicket(tk, d){
   const st = tk.json.strategies || {};
   const fams = [...new Set(Object.values(st).map(s=>s.family||""))].sort();
   const famSel = $("famSel");
-  const haveF = new Set([...famSel.options].map(o=>o.value)); // add-only: keeps status-file families + the pick
-  fams.filter(f => f && !haveF.has(f)).forEach(f => { const o = document.createElement("option"); o.textContent = f; famSel.appendChild(o); });
+  if(famSel.options.length !== fams.length + 1){
+    famSel.innerHTML = `<option value="">all</option>` + fams.map(f=>`<option>${f}</option>`).join("");
+  }
   const famF = famSel.value, txt = ($("flt").value||"").toLowerCase();
   const sortMode = $("sortSel").value || "perf";
   const stars = topSet();
@@ -339,6 +520,7 @@ async function renderTicket(tk, d){
     ].map(([k,v]) => `<span class="kv">${k}:</span> ${v}`).join(" · ");
     return `<tr class="detail" data-for="${r.name}"><td colspan="8"><div>
       <div>${per}</div>
+      ${needsFor(r, d)}
       <div style="margin-top:4px"><span class="kv">exact inputs (C.10 fingerprint, ticket-wide):</span>
         fingerprint <code title="full sha256">${String(TK_FACTS.fp||"").slice(0,16)}…</code>
         · ${Object.keys(TK_FACTS.inputs||{}).length} hashed files</div>
@@ -363,7 +545,16 @@ async function renderTicket(tk, d){
   $("ticketWrap").querySelectorAll(".xbtn").forEach(b => {
     b.onclick = () => {
       const n = b.getAttribute("data-x");
-      if(EXPANDED.has(n)) EXPANDED.delete(n); else EXPANDED.add(n);
+      if(EXPANDED.has(n)){ EXPANDED.delete(n); }
+      else {
+        EXPANDED.add(n);
+        const row = rows.find(x => x.name === n);
+        if(row && (row.fam === "factor_mine" || row.fam === "factor_mine_preopen")){
+          const p = `data/factor_mine/state/${n}/${d}.json`;
+          if(NEEDS_STATUS[p] === undefined)
+            probe(p).then(r => { NEEDS_STATUS[p] = r.ok; renderTicket(tk, d); });
+        }
+      }
       renderTicket(tk, d);
     };
   });
@@ -437,19 +628,10 @@ async function renderAll(d){
   const r = await jprobe(`data/strategy_status/${d}.json`);
   if(!r.ok){ $("allStamp").textContent = `data/strategy_status/${d}.json not published yet — every strategy MISSING`; $("allWrap").innerHTML=""; return; }
   const doc = r.json, fam = $("famSel").value, q = ($("flt").value||"").toUpperCase();
-  // Families that only exist in the status file (theme_radar, h1, webull_sim …)
-  // must be selectable too; the ticket-driven list above does not carry them.
-  const famSel = $("famSel"), have = new Set([...famSel.options].map(o=>o.value));
-  [...new Set((doc.strategies||[]).map(x=>x.family))].sort().forEach(f => {
-    if(f && !have.has(f)){ const o = document.createElement("option"); o.textContent = f; famSel.appendChild(o); }
-  });
   $("allStamp").textContent = `published ${hhmm(doc.generated_at)} ET · ` +
-    Object.entries(doc.counts||{}).map(([f,c])=>`${f}: ${c.OK} OK / ${c.SIT} SIT / ${c.MISSING} MISSING${c.WAIT?` / ${c.WAIT} WAIT`:""}`).join(" · ");
-  // Theme Radar rows are research-only shorts; older status files kept them in buys.
-  const shortsOf = x => x.shorts || (x.family==="theme_radar" ? (x.buys||[]) : []);
-  const buysOf = x => (x.family==="theme_radar" && !x.shorts) ? [] : (x.buys||[]);
+    Object.entries(doc.counts||{}).map(([f,c])=>`${f}: ${c.OK} OK / ${c.SIT} SIT / ${c.MISSING} MISSING`).join(" · ");
   const rows = (doc.strategies||[]).filter(x => (!fam || x.family===fam || (fam==="factor_mine" && x.family==="factor_mine_preopen"))
-    && (!q || (x.name+" "+buysOf(x).join(" ")+" "+(x.sells||[]).join(" ")+" "+shortsOf(x).join(" ")).toUpperCase().includes(q)));
+    && (!q || (x.name+" "+x.buys.join(" ")+" "+x.sells.join(" ")).toUpperCase().includes(q)));
   const sortMode = $("sortSel").value || "perf";
   if(sortMode === "perf"){
     rows.sort((a,b) => ((perfOf(b.name)||{}).total_ret_pct ?? -Infinity)
@@ -459,17 +641,10 @@ async function renderAll(d){
     rows.sort((a,b) => a.name.localeCompare(b.name));
   }
   const stars = topSet();
-  const b = st => st==="OK" ? `<span class="badge b-ok">OK</span>` : st==="SIT" ? `<span class="badge b-sit">SIT</span>`
-    : st==="WAIT" ? `<span class="badge b-wait" title="plan not landed yet; MISSING from 09:00 ET">WAIT</span>` : `<span class="badge b-fail">MISSING</span>`;
-  const research = x => (x.research_only || x.family==="theme_radar")
-    ? ` <span class="badge b-wait" title="Theme Radar research short: logged by theme-radar, never sent to Webull">research only · not traded</span>` : "";
-  const sellCell = x => {
-    const sh = shortsOf(x).map(t=>`<span class="sh">short ${t}</span>`);
-    return [...(x.sells||[]), ...sh].join(", ") || "—";
-  };
+  const b = st => st==="OK" ? `<span class="badge b-ok">OK</span>` : st==="SIT" ? `<span class="badge b-sit">SIT</span>` : `<span class="badge b-fail">MISSING</span>`;
   const tcell = `<div class="times dim">fin ${TK_FACTS.fin ? hhmmss(TK_FACTS.fin).split(", ")[1] : "—"}<br>push ${TK_FACTS.push ? hhmmss(TK_FACTS.push).split(", ")[1] : "—"}</div>`;
   $("allWrap").innerHTML = `<table><tr><th>strategy</th><th>family</th><th>ret (lifetime / 20d)</th><th>status</th><th>BUY</th><th>SELL</th><th>note</th><th>fin / push (ET)</th></tr>` +
-    rows.map(x=>`<tr><td class="name">${x.name}${stars.has(x.name) ? ` <span title="top ${TOP_N} lifetime performers" style="color:var(--gold)">★</span>` : ""}${research(x)}</td><td>${x.family}</td>${perfCell(perfOf(x.name))}<td>${b(x.status)}</td><td>${buysOf(x).join(", ")||"—"}</td><td class="tk">${sellCell(x)}</td><td class="mut">${x.note||""}</td><td>${tcell}</td></tr>`).join("") + `</table>`;
+    rows.map(x=>`<tr><td class="name">${x.name}${stars.has(x.name) ? ` <span title="top ${TOP_N} lifetime performers" style="color:var(--gold)">★</span>` : ""}</td><td>${x.family}</td>${perfCell(perfOf(x.name))}<td>${b(x.status)}</td><td>${x.buys.join(", ")||"—"}</td><td>${x.sells.join(", ")||"—"}</td><td class="mut">${x.note||""}</td><td>${tcell}</td></tr>`).join("") + `</table>`;
 }
 async function refresh(){
   const d = $("dateSel").value || todayET();
@@ -481,10 +656,14 @@ async function refresh(){
   TK_FACTS = {fin: dr.completed_at || (tk && tk.json.generated_at) || null,
               push: times.pushed, dash: times.dash,
               fp: dr.fingerprint || null, inputs: dr.inputs || {}};
+  NEEDS_STATUS = {};
+  const needsP = probeNeeds(d);
   renderCards(tk, times.pushed, d);
   renderTicket(tk, d);
   renderInputs(d);
   renderAll(d);
+  await needsP;
+  renderTicket(tk, d); // repaint input chips once the presence probes resolve
   $("stamp").textContent = `updated ${hhmm(new Date().toISOString())} · ${d} (ET)` +
     (SCORECARD ? ` · perf ledger through ${SCORECARD.last_date}` : " · perf ledger: not published yet");
 }
