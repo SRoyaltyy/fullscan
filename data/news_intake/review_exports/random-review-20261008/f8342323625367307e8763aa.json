@@ -23,5 +23,26 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "review_enrichment": {
+    "attempted_epoch": 1791468754.4779463,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMirgFBVV95cUxNSkRkX2gycV95V1NpWkROWk9zbHdLeGhrbnFwb0FUQjF3cGhtb2d0MVFjalc5cUNucmxjNC14bTZTVjZjd19OTm5KSzh6UUgtSUwwYVB2WUlEMjZKRk9qSTUxM2pkTmVjRzBZNlEwWS0xMFlBd1FMd0pfMmdGSFBIWUZ6Sm5qRjN3eEF4NE1ZU2FKYTh5WUVpMHNZZXJ6Y2xGcGQwaDFRLU1ONVZFWXc"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.investing.com/news/company-news/fda-approves-jaypirca-for-firstline-cllsll-treatment-93CH-4930326"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "error": "HTTP Error 403: Forbidden"
+  }
 }

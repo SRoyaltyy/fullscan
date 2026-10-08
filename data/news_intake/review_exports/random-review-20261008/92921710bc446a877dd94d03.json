@@ -2,7 +2,7 @@
   "title": "Zurich completes $10.8B Beazley acquisition - businessinsurance.com",
   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPcUFkYWNJQk5yLVRId043TkUwQzE3TmE2dmdJVFRGcUJ0LWpGdUxHakplVlYwRDFNMTNxZ2FPZTBvVTlxX0JObWMxdWZXM3pQR1ZpZHlCOEJXem9Bc0VfVUhaTDdFeVNETl9PTHQ5bldZVlpnR2tWRHcyYnFsbmdNNXJLRQ?oc=5",
   "publisher": "businessinsurance.com",
-  "body": "Zurich completes $10.8B Beazley acquisition businessinsurance.com",
+  "body": "Zurich completes $10.8B Beazley acquisition - Business Insurance Skip to content Register for free Search Search Log In Risk Management Cyber Risks Pricing Trends Mergers & Acquisitions Technology Sponsored Content WSIA RISKWORLD Workers Comp & Safety Workers Comp Cost Control Pain Management Workplace Safety International EMEA Asia-Pacific Latin America People Events BI Intelligence Top 100 Agents & Brokers Best Places to Work 2026 Lists Directories Insurance Pricing BI Stock Index Magazine Current Issue Past Issues Subscribe Women to Watch ALL INsurance Resources Risk Perspectives Sponsored Content Webinars White Papers Risk Management Cyber Risks Pricing Trends Mergers & Acquisitions Technology Sponsored Content WSIA RISKWORLD Workers Comp & Safety Workers Comp Cost Control Pain Management Workplace Safety International EMEA Asia-Pacific Latin America People Events BI Intelligence Top 100 Agents & Brokers Best Places to Work 2026 Lists Directories Insurance Pricing BI Stock Index Magazine Current Issue Past Issues Subscribe Women to Watch ALL INsurance Resources Risk Perspectives Sponsored Content Webinars White Papers Risk Management Cyber Risks Pricing Trends Mergers & Acquisitions Technology Sponsored Content WSIA RISKWORLD Workers Comp & Safety Workers Comp Cost Control Pain Management Workplace Safety International EMEA Asia-Pacific Latin America People Events BI Intelligence Top 100 Agents & Brokers Best Places to Work 2026 Lists Directories Insurance Pricing BI Stock Index Magazine Current Issue Past Issues Subscribe Women to Watch ALL INsurance Resources Risk Perspectives Sponsored Content Webinars White Papers Risk Management Cyber Risks Pricing Trends Mergers & Acquisitions Technology Sponsored Content WSIA RISKWORLD Workers Comp & Safety Workers Comp Cost Control Pain Management Workplace Safety International EMEA Asia-Pacific Latin America People Events BI Intelligence Top 100 Agents & Brokers Best Places to Work 2026 Lists Directories Insurance Pricing BI Stock Index Magazine Current Issue Past Issues Subscribe Women to Watch ALL INsurance Resources Risk Perspectives Sponsored Content Webinars White Papers Zurich completes $10.8B Beazley acquisition Oct 2, 2026 Switzerland-headquartered Zurich Insurance Group AG has completed its $10.8 billion acquisition of U.K.-based Beazley plc, The Royal Gazette reported. The transaction creates a specialty insurance business with about $15 billion in pro-forma gross written premiums. Read more Related News Watchdog seeks tighter oversight of private equity-backed insurers October 8, 2026 Three vessels struck by drones in two days in Black Sea October 8, 2026 Flooding threatens supply chains October 8, 2026 More older vessels on seas raise underwriting risks October 8, 2026 Alliant buys New Hampshire brokerage October 8, 2026 Business interruption claims soar: Allianz report October 8, 2026 Data center boom brings premium growth, aggregation risks October 7, 2026 Insurers must defend Walmart in opioid lawsuits: appeals court October 7, 2026 AI exclusions struggle to gain traction October 7, 2026 Facebook-f X-twitter Linkedin-in Business Insurance is a singular, authoritative news and information source for executives focused upon risk management, risk transfer and risk financing. Never miss important news: Become a Business Insurance Online subscriber today Subscribe Now Information About Us Contact Advertise Privacy Policy Terms & Conditions Copyright 2026. BUSINESS INSURANCE HOLDINGS Member, Beacon International Group, Ltd.",
   "published_at": "2026-10-02T14:16:44+00:00",
   "published_raw": "Fri, 02 Oct 2026 14:16:44 GMT",
   "source": "lane_corporate_action_mna",
@@ -22,6 +22,30 @@
       ]
     }
   ],
-  "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "extraction_status": "page_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "retained_feed_body": "Zurich completes $10.8B Beazley acquisition businessinsurance.com",
+  "extracted_url": "https://www.businessinsurance.com/zurich-completes-10-8b-beazley-acquisition/",
+  "review_enrichment": {
+    "attempted_epoch": 1791468752.7287548,
+    "attempts": 1,
+    "status": "page_text_checked",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMigwFBVV95cUxPcUFkYWNJQk5yLVRId043TkUwQzE3TmE2dmdJVFRGcUJ0LWpGdUxHakplVlYwRDFNMTNxZ2FPZTBvVTlxX0JObWMxdWZXM3pQR1ZpZHlCOEJXem9Bc0VfVUhaTDdFeVNETl9PTHQ5bldZVlpnR2tWRHcyYnFsbmdNNXJLRQ"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.businessinsurance.com/zurich-completes-10-8b-beazley-acquisition/"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "title_token_overlap": 0.8,
+    "note": "Visible page text may include navigation; article boundaries require review"
+  }
 }

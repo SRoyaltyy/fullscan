@@ -2,7 +2,7 @@
   "title": "Eurozone inflation hits its highest level in three years at 3.8% as energy costs soar - CNBC",
   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1hbWJvUF8zdkxOVi1YdGlFNkRKcTFxdVhZdE1mSmxJbm02S3R1b2NPdndza0ZXUkxtakhxalNWbTZLR2o5TFplemhyQV9DX1VvbXlRSy1IRGUwVmlISG5kM1hFXzEzNEloQzd30gFwQVVfeXFMT2llN05KRDNwbXNoYVd1TzU2UDVLNUhjYzlOWXE3UVI0Rmpzai02eDNWekhsNXh6RjRkRDNiRll4YVdGOFJTVVo4cmJWc25xVUFYVU5wWWZOLXgyTlluR1NtSGtIWUlWUnhZTEd3OFVXWg?oc=5",
   "publisher": "CNBC",
-  "body": "Eurozone inflation hits its highest level in three years at 3.8% as energy costs soar CNBC",
+  "body": "Eurozone inflation hits three-year high at 3.8%, energy costs soar Skip Navigation Markets Pre-Markets U.S. Markets Currencies Prediction Markets Cryptocurrency Futures & Commodities Bonds Funds & ETFs Business Economy Finance Health & Science Media Real Estate Energy Climate Transportation Investigations Industrials Retail Wealth Sports Life Small Business Investing Personal Finance Fintech Financial Advisors Options Action ETF Street Buffett Archive Earnings Trader Talk Tech Cybersecurity AI Enterprise Internet Media Mobile Social Media CNBC Disruptor 50 Tech Guide Politics & Policy White House Policy Defense Congress Expanding Opportunity Video Latest Video Full Episodes Livestream Live Audio Live TV Schedule CNBC Podcasts CEO Interviews CNBC Documentaries Digital Originals Watchlist Investing Club Trust Portfolio Analysis Trade Alerts Meeting Videos Homestretch Jim's Columns Education Subscribe PRO Pro News Josh Brown Mike Santoli Calls of the Day My Portfolio Livestream Full Episodes Stock Screener Market Forecast Options Investing Chart Investing Subscribe Livestream Menu Make It select USA INTL Livestream Search quotes, news & videos Livestream Watchlist SIGN IN Create free account Markets Business Investing Tech Politics & Policy Video Watchlist Investing Club PRO Livestream Menu Markets Eurozone inflation hits its highest level in three years at 3.8% as energy costs soar Published Fri, Oct 2 2026 5:24 AM EDT Updated Fri, Oct 2 2026 5:39 AM EDT Hugh Leask WATCH LIVE Key Points Annual euro zone inflation reached 3.8%, as oil price increases pushed costs in the bloc to their highest level in three years. Last month's print is well ahead of the European Central Bank's 2% target. A projection of a Euro currency sign is pictured on the facade of the European Central Bank (ECB) headquarters in Frankfurt am Main, western Germany, on Dec. 30, 2025. Kirill Kudryavtsev | Afp | Getty Images Annual inflation in the euro zone rose to 3.8% in September, beating market expectations to hit its highest level since September 2023. Last month's print is up from the 3.2% recorded in August, above the 3.6% forecast by markets and well ahead of the European Central Bank's 2% target. Core inflation came in at 2.5%, in line with expectations. Energy inflation reached its highest level since January 2023, at 18.8%, as the ongoing Middle East conflict continues to drive prices higher. Harry Woolman, global capital markets analyst at Validus Risk Management, said that while energy remains the main driver, September's jump suggests it is now \"more than an energy story\" —making the next ECB meeting on Oct. 29 critical. \"Markets had pared back expectations of consecutive rate rises in recent days, after President Lagarde suggested that higher bond yields were doing some of the tightening for the ECB. Today's inflation reading makes that argument harder to sustain,\" Woolman said. \"A central bank mindful of the experience of 2022 will not want to wait for second-round effects to become entrenched before acting.\" Choose CNBC as your preferred source on Google and never miss a moment from the most trusted name in business news. Subscribe to CNBC PRO Subscribe to Investing Club Licensing & Reprints CNBC Councils Select Personal Finance Join the CNBC Panel Closed Captioning Digital Products News Releases Internships Corrections About CNBC Site Map Podcasts Careers Help Contact News Tips Got a confidential news tip? We want to hear from you. Get In Touch CNBC Newsletters Sign up for free newsletters and get more CNBC delivered to your inbox Sign Up Now Get this delivered to your inbox, and more info about our products and services. Advertise With Us Please Contact Us Ad Choices Privacy Policy Your Privacy Choices CA Notice Terms of Service © 2026 Versant Media, LLC. All Rights Reserved. A Versant Media Company. Data is a real-time snapshot *Data is delayed at least 15 minutes.\n      Global Business and Financial News, Stock Quotes, and Market Data\n      and Analysis. Market Data Terms of Use and Disclaimers Data also provided by",
   "published_at": "2026-10-02T09:24:15+00:00",
   "published_raw": "Fri, 02 Oct 2026 09:24:15 GMT",
   "source": "topic_central_banks",
@@ -18,6 +18,30 @@
       "classes": []
     }
   ],
-  "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+  "extraction_status": "page_text",
+  "last_seen": "2026-10-04T06:30:58.699753+00:00",
+  "retained_feed_body": "Eurozone inflation hits its highest level in three years at 3.8% as energy costs soar CNBC",
+  "extracted_url": "https://www.cnbc.com/2026/10/02/eurozone-inflation-ecb.html",
+  "review_enrichment": {
+    "attempted_epoch": 1791468756.3485532,
+    "attempts": 1,
+    "status": "page_text_checked",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMia0FVX3lxTE1hbWJvUF8zdkxOVi1YdGlFNkRKcTFxdVhZdE1mSmxJbm02S3R1b2NPdndza0ZXUkxtakhxalNWbTZLR2o5TFplemhyQV9DX1VvbXlRSy1IRGUwVmlISG5kM1hFXzEzNEloQzd30gFwQVVfeXFMT2llN05KRDNwbXNoYVd1TzU2UDVLNUhjYzlOWXE3UVI0Rmpzai02eDNWekhsNXh6RjRkRDNiRll4YVdGOFJTVVo4cmJWc25xVUFYVU5wWWZOLXgyTlluR1NtSGtIWUlWUnhZTEd3OFVXWg"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.cnbc.com/2026/10/02/eurozone-inflation-ecb.html"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "title_token_overlap": 1.0,
+    "note": "Visible page text may include navigation; article boundaries require review"
+  }
 }
