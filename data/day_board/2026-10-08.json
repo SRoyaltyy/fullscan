@@ -1,13 +1,13 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T09:03:52.757971-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-10-08T09:17:26.543832-04:00",
+  "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 7,
+    "ok": 8,
     "partial": 0,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -306,8 +306,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 104546,
-          "said": "133 ticker actions \u00b7 10 events \u00b7 10443 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 108249,
+          "said": "138 ticker actions \u00b7 10 events \u00b7 10443 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -571,18 +571,18 @@
           "path": "01_daily/weather/2026-10-08_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9336 vix=falling yields=falling",
-          "size": 9336,
-          "said": "hostile 9 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=10569 vix=falling yields=falling",
+          "size": 10569,
+          "said": "favorable 1 \u00b7 hostile 10",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities",
             "events bull 0 / bear 4"
           ]
         }
       ],
-      "said": "hostile 9 \u00b7 neutral 2",
+      "said": "favorable 1 \u00b7 hostile 10",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities",
         "events bull 0 / bear 4"
       ]
     },
@@ -633,11 +633,11 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -647,8 +647,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 104546,
-          "said": "133 ticker actions \u00b7 10 events \u00b7 10443 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 108249,
+          "said": "138 ticker actions \u00b7 10 events \u00b7 10443 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -676,19 +676,17 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-10-08_dossiers.json",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "zero usable dossiers (n=8)",
-          "size": 2792,
-          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 TSLA, NFLX, NE, RIG, SLB, BKR, KGS, UBER",
+          "status": "OK",
+          "reason": "usable=6/8",
+          "size": 22370,
+          "said": "6/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 TSLA, NFLX, NE, RIG, SLB, BKR, KGS, UBER",
           "bullets": [
-            "TSLA: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA",
-            "NFLX: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NFLX",
-            "NE: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NE",
-            "RIG: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG"
+            "KGS: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS",
+            "UBER: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UBER"
           ]
         }
       ],
-      "said": "133 ticker actions \u00b7 10 events \u00b7 10443 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+      "said": "138 ticker actions \u00b7 10 events \u00b7 10443 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
       "bullets": [
         "SELL DAL",
         "SELL UAL",
@@ -750,8 +748,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 104546,
-          "said": "133 ticker actions \u00b7 10 events \u00b7 10443 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 108249,
+          "said": "138 ticker actions \u00b7 10 events \u00b7 10443 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -795,11 +793,11 @@
           "path": "01_daily/weather/2026-10-08_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9336 vix=falling yields=falling",
-          "size": 9336,
-          "said": "hostile 9 \u00b7 neutral 2",
+          "reason": "sectors=11 bytes=10569 vix=falling yields=falling",
+          "size": 10569,
+          "said": "favorable 1 \u00b7 hostile 10",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities",
             "events bull 0 / bear 4"
           ]
         },
@@ -823,10 +821,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5907",
-          "size": 2245636,
-          "said": "214 rows",
+          "size": 2271295,
+          "said": "211 rows",
           "bullets": [
-            "AMZN, VCTR, NU, SLDE, AAMI, RGA, ANDG, HLNE"
+            "TAL, ABEV, EDU, PG, PM, MNST, LOPE, CHD"
           ]
         },
         {
@@ -904,9 +902,9 @@
           "bullets": []
         }
       ],
-      "said": "214 rows",
+      "said": "211 rows",
       "bullets": [
-        "AMZN, VCTR, NU, SLDE, AAMI"
+        "TAL, ABEV, EDU, PG, PM"
       ]
     },
     {
@@ -1081,9 +1079,9 @@
     },
     "news": {},
     "weather": {
-      "said": "hostile 9 \u00b7 neutral 2",
+      "said": "favorable 1 \u00b7 hostile 10",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities",
         "events bull 0 / bear 4"
       ]
     }
@@ -3061,6 +3059,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-08\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:17:25.306562-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-10-08_dossiers.json",
+          "ok": true,
+          "reason": "",
+          "size": 22370,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-10-08_dossiers.md",
+          "ok": true,
+          "reason": "",
+          "size": 9842,
+          "preview": "# CATALYST DAILY \u2014 2026-10-08\n6/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-08\n6/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
     }
   ],
   "href": {

@@ -1,12 +1,12 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T09:03:52.757971-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-10-08T09:17:26.543832-04:00",
+  "overall": "OK",
   "ranker_ready": true,
   "counts": {
-    "ok": 7,
+    "ok": 8,
     "partial": 0,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [
@@ -114,31 +114,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-08",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-08T08:28:04.902534-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-08_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97689,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-08_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11503,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-08\n_Generated 2026-10-08T04:18:31.924510-04:00 \u00b7 export=data/exports/finviz_2026-10-07.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1813_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-08\n_Generated 2026-10-08T04:18:31.924510-04:00 \u00b7 export=data/exports/finviz_2026-10-07.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1813_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -334,6 +309,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-08\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:17:25.306562-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-10-08_dossiers.json",
+          "ok": true,
+          "reason": "",
+          "size": 22370,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-10-08_dossiers.md",
+          "ok": true,
+          "reason": "",
+          "size": 9842,
+          "preview": "# CATALYST DAILY \u2014 2026-10-08\n6/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-08\n6/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
