@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:22:53.644784-04:00",
+  "generated_at": "2026-10-08T08:28:06.164873-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -367,8 +367,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['general_predict']",
-          "size": 7398,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=True \u00b7 missing general_predict",
+          "size": 7399,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing general_predict",
           "bullets": []
         },
         {
@@ -548,8 +548,8 @@
           "path": "01_daily/weather/2026-10-08_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9334 vix=falling yields=falling",
-          "size": 9334,
+          "reason": "sectors=11 bytes=9336 vix=falling yields=falling",
+          "size": 9336,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -767,8 +767,8 @@
           "path": "01_daily/weather/2026-10-08_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9334 vix=falling yields=falling",
-          "size": 9334,
+          "reason": "sectors=11 bytes=9336 vix=falling yields=falling",
+          "size": 9336,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -835,7 +835,7 @@
           "size": 84050,
           "said": "Stock book \u2014 2026-10-08",
           "bullets": [
-            "_Generated 2026-10-08T08:20:38.703139-04:00_",
+            "_Generated 2026-10-08T06:05:49.842532-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -2801,6 +2801,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-08\n_Generated 2026-10-08T12:22:51 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$103,033.45** (after 09:30 $103,033.45 \u00b7 after 16:00 $103,033.45)\n- Prior close **$103,033.45** \u00b7 09:30 **$103,033.45** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$103,033.45**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$103,033.45** \u00b7 2026-10-08 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_over"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T08:28:04.902534-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-08_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97689,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-08_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11503,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-08\n_Generated 2026-10-08T04:18:31.924510-04:00 \u00b7 export=data/exports/finviz_2026-10-07.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1813_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-08\n_Generated 2026-10-08T04:18:31.924510-04:00 \u00b7 export=data/exports/finviz_2026-10-07.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1813_"
     }
   ],
   "href": {
