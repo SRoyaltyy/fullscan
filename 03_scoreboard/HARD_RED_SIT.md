@@ -26,13 +26,290 @@ Clock split: (A) short-only is a pre-open policy call — shorts fire at the clo
 
 ## RESEARCH per sleeve (paper, not a wire)
 
-**2026-10-08** — `1` sit sleeves with looked names / `1` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
+**2026-10-08** — `278` sit sleeves with looked names / `340` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
 
 Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP bar unchanged. (A) short-only fires the short kid at the 09:30 open. (B) dip-scoop longs wait for open−X% (session low / Elite live). Close does not trigger.
 
 | Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |
 |---|---|---|---|
 | `flatten_robust` | long | — | DVN miss; CDNA miss; RRC miss; ETON miss |
+| `union_h1` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h3` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h5` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `flatten_h1` | long | — | WH miss; SIRI miss |
+| `flatten_h3` | long | — | WH miss; SIRI miss |
+| `flatten_h5` | long | — | WH miss; SIRI miss |
+| `probable_h1` | long | — | SSTK miss; JANX miss; AVBP miss; TJGC miss; RC miss; VSTM miss; GKOS miss; FIP miss |
+| `probable_h3` | long | — | SSTK miss; JANX miss; AVBP miss; TJGC miss; RC miss; VSTM miss; GKOS miss; FIP miss |
+| `probable_h5` | long | — | SSTK miss; JANX miss; AVBP miss; TJGC miss; RC miss; VSTM miss; GKOS miss; FIP miss |
+| `yday_gainer_h1` | long | — | SSTK miss; JANX miss; BKH miss; AVBP miss; TJGC miss; RC miss; VSTM miss; GKOS miss |
+| `yday_gainer_h3` | long | — | SSTK miss; JANX miss; BKH miss; AVBP miss; TJGC miss; RC miss; VSTM miss; GKOS miss |
+| `yday_gainer_h5` | long | — | SSTK miss; JANX miss; BKH miss; AVBP miss; TJGC miss; RC miss; VSTM miss; GKOS miss |
+| `ohlc_hot_h1` | long | — | SDEV miss; KSS miss; SUJA miss; SMCI miss; GCT miss; ADCT miss; BRZE miss; BKV miss |
+| `ohlc_hot_h3` | long | — | SDEV miss; KSS miss; SUJA miss; SMCI miss; GCT miss; ADCT miss; BRZE miss; BKV miss |
+| `ohlc_hot_h5` | long | — | SDEV miss; KSS miss; SUJA miss; SMCI miss; GCT miss; ADCT miss; BRZE miss; BKV miss |
+| `union_vol_g_h1` | long | — | ANGO miss; APLD miss; PEP miss; BKH miss; SDEV miss; GCT miss; LEVI miss; AVBP miss |
+| `union_vol_g_h3` | long | — | ANGO miss; APLD miss; PEP miss; BKH miss; SDEV miss; GCT miss; LEVI miss; AVBP miss |
+| `union_ab_g_h1` | long | — | WH miss; PEP miss; BKH miss; KSS miss; SUJA miss; SMCI miss; GCT miss; LEVI miss |
+| `union_ab_g_h3` | long | — | WH miss; PEP miss; BKH miss; KSS miss; SUJA miss; SMCI miss; GCT miss; LEVI miss |
+| `union_join_g_h1` | long | — | WH miss; ANGO miss; GLND miss; KSS miss; LEVI miss; SIRI miss; GKOS miss; BKV miss |
+| `union_join_g_h3` | long | — | WH miss; ANGO miss; GLND miss; KSS miss; LEVI miss; SIRI miss; GKOS miss; BKV miss |
+| `union_join_present_h1` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_join_present_h3` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_news_g_h1` | long | — | WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss |
+| `union_news_g_h3` | long | — | WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss |
+| `union_news_present_h1` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_news_present_h3` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_blue_h1` | long | — | ANGO miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss; BKH miss; GLND miss |
+| `union_blue_h3` | long | — | ANGO miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss; BKH miss; GLND miss |
+| `union_white_h1` | long | — | ANGO miss |
+| `union_white_h3` | long | — | ANGO miss |
+| `union_last_green_h1` | long | — | WH miss; ANGO miss; SSTK miss; JANX miss; BKH miss; KSS miss; SUJA miss; SMCI miss |
+| `union_last_green_h3` | long | — | WH miss; ANGO miss; SSTK miss; JANX miss; BKH miss; KSS miss; SUJA miss; SMCI miss |
+| `union_last_red_h1` | long | — | APLD miss; NG miss; PEP miss; TLRY miss; SDEV miss; GLND miss; LEVI miss; SIRI miss |
+| `union_last_red_h3` | long | — | APLD miss; NG miss; PEP miss; TLRY miss; SDEV miss; GLND miss; LEVI miss; SIRI miss |
+| `union_candle_h1` | long | — | SSTK miss; JANX miss; KSS miss; SUJA miss; SMCI miss; GCT miss; AVBP miss; RC miss |
+| `union_candle_h3` | long | — | SSTK miss; JANX miss; KSS miss; SUJA miss; SMCI miss; GCT miss; AVBP miss; RC miss |
+| `union_coil_off_h1` | long | — | WH miss; SSTK miss; JANX miss; SDEV miss; KSS miss; SMCI miss; GCT miss; SIRI miss |
+| `union_coil_off_h3` | long | — | WH miss; SSTK miss; JANX miss; SDEV miss; KSS miss; SMCI miss; GCT miss; SIRI miss |
+| `union_earn_react_h1` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `union_earn_react_h3` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `union_e_fresh_h1` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `union_e_fresh_h3` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `union_break10_h1` | long | — | JANX miss; BKH miss; KSS miss; SUJA miss; SMCI miss; GCT miss; GKOS miss; BSP miss |
+| `union_break10_h3` | long | — | JANX miss; BKH miss; KSS miss; SUJA miss; SMCI miss; GCT miss; GKOS miss; BSP miss |
+| `union_rsi_os_h1` | long | — | PEP miss; AVBP miss; FHTX miss; BULL miss; HESM miss; XNDU miss |
+| `union_rsi_os_h3` | long | — | PEP miss; AVBP miss; FHTX miss; BULL miss; HESM miss; XNDU miss |
+| `union_macd_up_h1` | long | — | WH miss; SSTK miss; JANX miss; BKH miss; SDEV miss; KSS miss; SUJA miss; SMCI miss |
+| `union_macd_up_h3` | long | — | WH miss; SSTK miss; JANX miss; BKH miss; SDEV miss; KSS miss; SUJA miss; SMCI miss |
+| `union_macd_xup_h1` | long | — | SSTK miss; JANX miss; GCT miss; FIP miss; BSP miss; QUCY miss; BKV miss |
+| `union_macd_xup_h3` | long | — | SSTK miss; JANX miss; GCT miss; FIP miss; BSP miss; QUCY miss; BKV miss |
+| `union_flow_in_h1` | long | — | CEG miss |
+| `union_flow_in_h3` | long | — | CEG miss |
+| `union_vol_g_h5` | long | — | ANGO miss; APLD miss; PEP miss; BKH miss; SDEV miss; GCT miss; LEVI miss; AVBP miss |
+| `union_coil_off_h5` | long | — | WH miss; SSTK miss; JANX miss; SDEV miss; KSS miss; SMCI miss; GCT miss; SIRI miss |
+| `union_last_green_h5` | long | — | WH miss; ANGO miss; SSTK miss; JANX miss; BKH miss; KSS miss; SUJA miss; SMCI miss |
+| `union_news_g_h5` | long | — | WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss |
+| `union_white_h5` | long | — | ANGO miss |
+| `union_rsi_os_h5` | long | — | PEP miss; AVBP miss; FHTX miss; BULL miss; HESM miss; XNDU miss |
+| `union_flow_in_h5` | long | — | CEG miss |
+| `union_news_pack_h1` | long | — | WH miss; CEG miss |
+| `union_news_head_h1` | long | — | BKH miss; GLND miss; SSTK miss; ADCT miss |
+| `union_news_or_h1` | long | — | WH miss; BKH miss; GLND miss; SSTK miss; CEG miss; ADCT miss |
+| `union_news_g_cond_h1` | long | — | WH miss; BKH miss; GLND miss; SSTK miss; CEG miss; ADCT miss |
+| `union_news_g_cam61_h1` | long | — | WH miss; CEG miss |
+| `union_news_or_net2_h1` | long | — | WH miss; CEG miss; ADCT miss |
+| `union_news_or_net3_h1` | long | — | WH miss; CEG miss |
+| `union_news_or_net4_h1` | long | — | WH miss; CEG miss |
+| `union_news_or_net5_h1` | long | — | WH miss; CEG miss |
+| `union_news_pack_net3_h1` | long | — | WH miss; CEG miss |
+| `union_news_pack_net2_h1` | long | — | WH miss; CEG miss |
+| `union_news_pack_h3` | long | — | WH miss; CEG miss |
+| `union_news_head_h3` | long | — | BKH miss; GLND miss; SSTK miss; ADCT miss |
+| `union_news_or_h3` | long | — | WH miss; BKH miss; GLND miss; SSTK miss; CEG miss; ADCT miss |
+| `union_news_g_cond_h3` | long | — | WH miss; BKH miss; GLND miss; SSTK miss; CEG miss; ADCT miss |
+| `union_news_g_cam61_h3` | long | — | WH miss; CEG miss |
+| `union_news_or_net2_h3` | long | — | WH miss; CEG miss; ADCT miss |
+| `union_news_or_net3_h3` | long | — | WH miss; CEG miss |
+| `union_news_or_net4_h3` | long | — | WH miss; CEG miss |
+| `union_news_or_net5_h3` | long | — | WH miss; CEG miss |
+| `union_news_pack_net3_h3` | long | — | WH miss; CEG miss |
+| `union_news_pack_net2_h3` | long | — | WH miss; CEG miss |
+| `union_news_or_net4_rw_h1` | long | — | WH miss; CEG miss |
+| `union_news_or_net4_conv_h1` | long | — | WH miss; CEG miss |
+| `union_news_g_conv_h1` | long | — | WH miss; BKH miss; GLND miss; SSTK miss |
+| `union_news_g_conv_h3` | long | — | WH miss; BKH miss; GLND miss; SSTK miss |
+| `union_vol_ab_h1` | long | — | PEP miss; BKH miss; GCT miss; LEVI miss; VSTM miss; BSP miss; BKV miss; PGNY miss |
+| `union_vol_ab_h3` | long | — | PEP miss; BKH miss; GCT miss; LEVI miss; VSTM miss; BSP miss; BKV miss; PGNY miss |
+| `union_blue_vol_h1` | long | — | ANGO miss; PEP miss; BKH miss; AVBP miss; RC miss; VSTM miss; GKOS miss; PRME miss |
+| `union_blue_vol_h3` | long | — | ANGO miss; PEP miss; BKH miss; AVBP miss; RC miss; VSTM miss; GKOS miss; PRME miss |
+| `union_news_vol_h1` | long | — | BKH miss; CEG miss |
+| `union_news_vol_h3` | long | — | BKH miss; CEG miss |
+| `union_e_green_h1` | long | — | ANGO miss |
+| `union_e_green_h3` | long | — | ANGO miss |
+| `probable_probable_ok_h1` | long | — | SSTK miss; JANX miss; AVBP miss; TJGC miss; RC miss; VSTM miss; GKOS miss; FIP miss |
+| `probable_probable_ok_h3` | long | — | SSTK miss; JANX miss; AVBP miss; TJGC miss; RC miss; VSTM miss; GKOS miss; FIP miss |
+| `union_vol_green_h1` | long | — | ANGO miss; BKH miss; GCT miss; AVBP miss; RC miss; VSTM miss; GKOS miss; BSP miss |
+| `union_vol_green_h3` | long | — | ANGO miss; BKH miss; GCT miss; AVBP miss; RC miss; VSTM miss; GKOS miss; BSP miss |
+| `union_coil_green_h1` | long | — | WH miss; SSTK miss; JANX miss; KSS miss; SMCI miss; GCT miss; RC miss; VSTM miss |
+| `union_coil_green_h3` | long | — | WH miss; SSTK miss; JANX miss; KSS miss; SMCI miss; GCT miss; RC miss; VSTM miss |
+| `union_blue_coil_h1` | long | — | ANGO miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss; BKH miss; GLND miss |
+| `union_blue_coil_h3` | long | — | ANGO miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss; BKH miss; GLND miss |
+| `union_join_vol_green_h1` | long | — | ANGO miss; GKOS miss; BKV miss; BULL miss; CEG miss |
+| `union_join_vol_green_h3` | long | — | ANGO miss; GKOS miss; BKV miss; BULL miss; CEG miss |
+| `union_white_coil_h1` | long | — | ANGO miss |
+| `union_white_coil_h3` | long | — | ANGO miss |
+| `ohlc_hot_coil_h1` | long | — | SDEV miss; KSS miss; SUJA miss; SMCI miss; GCT miss; PGNY miss |
+| `union_hot_score_h1` | long | — | WH miss; APLD miss; ANGO miss; PEP miss; TLRY miss; NG miss; SDEV miss; BKH miss |
+| `union_hot_score_h3` | long | — | WH miss; APLD miss; ANGO miss; PEP miss; TLRY miss; NG miss; SDEV miss; BKH miss |
+| `union_candle_score_h1` | long | — | ANGO miss; WH miss; NG miss; APLD miss; TLRY miss; PEP miss; KSS miss; JANX miss |
+| `union_candle_score_h3` | long | — | ANGO miss; WH miss; NG miss; APLD miss; TLRY miss; PEP miss; KSS miss; JANX miss |
+| `union_ret_5_h1` | long | — | WH miss; TLRY miss; NG miss; APLD miss; PEP miss; ANGO miss; SMCI miss; KSS miss |
+| `union_ret_5_h3` | long | — | WH miss; TLRY miss; NG miss; APLD miss; PEP miss; ANGO miss; SMCI miss; KSS miss |
+| `union_cond_h1` | long | — | WH miss; ANGO miss; PEP miss; APLD miss; TLRY miss; NG miss; GCT miss; LEVI miss |
+| `union_cond_h3` | long | — | WH miss; ANGO miss; PEP miss; APLD miss; TLRY miss; NG miss; GCT miss; LEVI miss |
+| `union_w_hot_cond_h1` | long | — | WH miss; ANGO miss; PEP miss; APLD miss; TLRY miss; NG miss; SDEV miss; GCT miss |
+| `union_w_hot_cond_h3` | long | — | WH miss; ANGO miss; PEP miss; APLD miss; TLRY miss; NG miss; SDEV miss; GCT miss |
+| `union_w_hot_candle_h1` | long | — | WH miss; ANGO miss; APLD miss; PEP miss; NG miss; TLRY miss; KSS miss; SDEV miss |
+| `union_w_hot_candle_h3` | long | — | WH miss; ANGO miss; APLD miss; PEP miss; NG miss; TLRY miss; KSS miss; SDEV miss |
+| `union_rsi_h1` | long | — | PEP miss; ANGO miss; NG miss; TLRY miss; APLD miss; WH miss; LEVI miss; SSTK miss |
+| `union_rsi_h3` | long | — | PEP miss; ANGO miss; NG miss; TLRY miss; APLD miss; WH miss; LEVI miss; SSTK miss |
+| `union_macd_hist_h1` | long | — | WH miss; TLRY miss; NG miss; APLD miss; ANGO miss; PEP miss; BKH miss; KSS miss |
+| `union_macd_hist_h3` | long | — | WH miss; TLRY miss; NG miss; APLD miss; ANGO miss; PEP miss; BKH miss; KSS miss |
+| `union_hot_n4_h1` | long | — | NAUT miss; KOD miss; SDEV miss; PRME miss |
+| `union_hot_n4_holdup` | long | — | NAUT miss; KOD miss; SDEV miss; PRME miss |
+| `union_hot_n12_h1` | long | — | WH miss; APLD miss; ANGO miss; PEP miss; TLRY miss; NG miss; SDEV miss; BKH miss; KSS miss; SUJA miss; SMCI miss; GCT miss |
+| `union_cond_n4_h3` | long | — | WH miss; ANGO miss; PEP miss; APLD miss |
+| `union_h3_exit_alarm` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h5_exit_alarm` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h3_exit_red` | long | — | WH miss; ANGO miss; SSTK miss; JANX miss; BKH miss; KSS miss; SUJA miss; SMCI miss |
+| `union_h3_exit_news_r` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `coil_h3_exit_alarm` | long | — | WH miss; SSTK miss; JANX miss; SDEV miss; KSS miss; SUJA miss; SMCI miss; GCT miss |
+| `short_alarm_h1` | short | PENG @—; ALIT @—; SECZ @—; P @—; FN @—; NTAP @—; EXTR @—; HPE @— | — |
+| `short_alarm_h3` | short | PENG @—; ALIT @—; SECZ @—; P @—; FN @—; NTAP @—; EXTR @—; HPE @— | — |
+| `short_extended_h1` | short | BSP @—; PENG @—; ADCT @—; PRME @—; NAUT @—; EVH @—; CCOI @—; P @— | — |
+| `short_extended_h3` | short | BSP @—; PENG @—; ADCT @—; PRME @—; NAUT @—; EVH @—; CCOI @—; P @— | — |
+| `short_last_red_h1` | short | APLD @—; NG @—; PEP @—; TLRY @—; SDEV @—; GLND @—; LEVI @—; SIRI @— | — |
+| `short_last_red_h3` | short | APLD @—; NG @—; PEP @—; TLRY @—; SDEV @—; GLND @—; LEVI @—; SIRI @— | — |
+| `short_rsi_ob_h1` | short | PENG @—; NAUT @—; KOD @—; PACB @—; P @—; NTAP @—; HPE @—; MPC @— | — |
+| `short_rsi_ob_h3` | short | PENG @—; NAUT @—; KOD @—; PACB @—; P @—; NTAP @—; HPE @—; MPC @— | — |
+| `short_macd_dn_h1` | short | ANGO @—; APLD @—; NG @—; PEP @—; TLRY @—; GLND @—; SIRI @—; AVBP @— | — |
+| `short_macd_dn_h3` | short | ANGO @—; APLD @—; NG @—; PEP @—; TLRY @—; GLND @—; SIRI @—; AVBP @— | — |
+| `flatten_h5_rankw` | long | — | WH miss; SIRI miss |
+| `flatten_h5_topheavy` | long | — | WH miss; SIRI miss |
+| `flatten_h5_half` | long | — | WH miss; SIRI miss |
+| `flatten_h5_time` | long | — | WH miss; SIRI miss |
+| `flatten_h5_cut` | long | — | WH miss; SIRI miss |
+| `flatten_h5_trail` | long | — | WH miss; SIRI miss |
+| `flatten_h5_sboost` | long | — | WH miss; SIRI miss |
+| `flatten_h5_sizeup` | long | — | WH miss; SIRI miss |
+| `flatten_h3_rankw` | long | — | WH miss; SIRI miss |
+| `flatten_h3_topheavy` | long | — | WH miss; SIRI miss |
+| `flatten_h3_half` | long | — | WH miss; SIRI miss |
+| `flatten_h3_time` | long | — | WH miss; SIRI miss |
+| `flatten_h3_cut` | long | — | WH miss; SIRI miss |
+| `flatten_h3_trail` | long | — | WH miss; SIRI miss |
+| `flatten_h3_sboost` | long | — | WH miss; SIRI miss |
+| `flatten_h3_sizeup` | long | — | WH miss; SIRI miss |
+| `union_h5_rankw` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h5_topheavy` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h5_half` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h5_time` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h5_cut` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h5_trail` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h5_sboost` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h5_sizeup` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h3_rankw` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h3_topheavy` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h3_half` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h3_time` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h3_cut` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h3_trail` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h3_sboost` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h3_sizeup` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h1_rankw` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h1_topheavy` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h1_half` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h1_time` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h1_cut` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h1_trail` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h1_sboost` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_h1_sizeup` | long | — | WH miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; SSTK miss; JANX miss |
+| `union_white_yday_h1` | long | — | ANGO miss |
+| `union_white_yday_h3` | long | — | ANGO miss |
+| `union_white_any_h1` | long | — | ANGO miss |
+| `union_white_any_h2` | long | — | ANGO miss |
+| `union_white_any_h3` | long | — | ANGO miss |
+| `union_white_any_h5` | long | — | ANGO miss |
+| `union_white_both_n4_h1` | long | — | ANGO miss |
+| `union_white_both_n4_h2` | long | — | ANGO miss |
+| `union_white_both_n4_h3` | long | — | ANGO miss |
+| `union_white_both_n4_h5` | long | — | ANGO miss |
+| `union_white_both_n4_h5_s12` | long | — | ANGO miss |
+| `flatten_h5_s8` | long | — | WH miss; SIRI miss |
+| `union_clk_mom_break_peer_h1` | long | — | BKH miss; KSS miss; SMCI miss; GCT miss; JANX miss |
+| `union_clk_fresh_cat_coil_h1` | long | — | WH miss; ANGO miss; PEP miss; APLD miss; TLRY miss; NG miss; GLND miss; SSTK miss |
+| `short_clk_ext_veto_h3` | short | NAUT @—; KOD @—; PACB @—; P @— | — |
+| `union_clk_nr7_mom_h1` | long | — | WH miss; SDEV miss; SUJA miss |
+| `combo_seh_333_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_seh_333_split` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_seh_502525_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_seh_502525_split` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_seh_404020_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_seh_403525_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_seh_451540_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_seh_601525_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_se_5050_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_se_7030_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_eh_5050_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_sh_5050_shared` | mixed | — | WH miss; APLD miss; ANGO miss; PEP miss |
+| `combo_sh_macd_5050_shared` | mixed | — | WH miss; APLD miss; ANGO miss; PEP miss |
+| `combo_se_5050_skip` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_seh_333_skip` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_seh_333_weather` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_se_5050_weather` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_se_5050_split` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_es_8020_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_es_9010_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_ehs_702010_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_ehs_601525_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_ps_5050_shared` | mixed | — | WH miss; CEG miss |
+| `combo_ps_7030_shared` | mixed | — | WH miss; CEG miss |
+| `combo_p2s_5050_shared` | mixed | — | WH miss; CEG miss |
+| `combo_oh_5050_shared` | long | — | WH miss; APLD miss; ANGO miss; PEP miss |
+| `combo_sn_5050_shared` | mixed | — | WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss |
+| `combo_sj_5050_shared` | mixed | — | ANGO miss; GKOS miss; BKV miss; BULL miss; CEG miss |
+| `combo_sf_5050_shared` | mixed | — | WH miss; SIRI miss |
+| `combo_snj_333_shared` | mixed | — | WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss; ANGO miss; GKOS miss; BKV miss; BULL miss |
+| `combo_nse_333_shared` | mixed | — | WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_jse_333_shared` | mixed | — | ANGO miss; GKOS miss; BKV miss; BULL miss; CEG miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_fse_333_shared` | mixed | — | WH miss; SIRI miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_e1s_7030_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_ers_7030_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_eh_7030_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_fh_7030_shared` | long | — | WH miss; SIRI miss; APLD miss; ANGO miss; PEP miss |
+| `combo_fe_5050_shared` | long | — | WH miss; SIRI miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_fes_403030_shared` | mixed | — | WH miss; SIRI miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_se1_5050_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_ser_5050_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_en_5050_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss |
+| `combo_ej_5050_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; GKOS miss; BKV miss; BULL miss; CEG miss |
+| `combo_ef_5050_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss; SIRI miss |
+| `combo_ee1_5050_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_eer_5050_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_hn_5050_shared` | long | — | WH miss; APLD miss; ANGO miss; PEP miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss |
+| `combo_hj_5050_shared` | long | — | WH miss; APLD miss; ANGO miss; PEP miss; GKOS miss; BKV miss; BULL miss; CEG miss |
+| `combo_hf_5050_shared` | long | — | WH miss; APLD miss; ANGO miss; PEP miss; SIRI miss |
+| `combo_he1_5050_shared` | long | — | WH miss; APLD miss; ANGO miss; PEP miss; NG miss; TLRY miss; LEVI miss |
+| `combo_her_5050_shared` | long | — | WH miss; APLD miss; ANGO miss; PEP miss; NG miss; TLRY miss; LEVI miss |
+| `combo_nj_5050_shared` | long | — | WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss; ANGO miss; GKOS miss; BKV miss; BULL miss |
+| `combo_nf_5050_shared` | long | — | WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss; SIRI miss |
+| `combo_ne1_5050_shared` | long | — | WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_ner_5050_shared` | long | — | WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_jf_5050_shared` | long | — | ANGO miss; GKOS miss; BKV miss; BULL miss; CEG miss; WH miss; SIRI miss |
+| `combo_je1_5050_shared` | long | — | ANGO miss; GKOS miss; BKV miss; BULL miss; CEG miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_jer_5050_shared` | long | — | ANGO miss; GKOS miss; BKV miss; BULL miss; CEG miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_fe1_5050_shared` | long | — | WH miss; SIRI miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_fer_5050_shared` | long | — | WH miss; SIRI miss; ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_e1er_5050_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_se_3070_shared` | mixed | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_sh_7030_shared` | mixed | — | WH miss; APLD miss; ANGO miss; PEP miss |
+| `combo_sh_3070_shared` | mixed | — | WH miss; APLD miss; ANGO miss; PEP miss |
+| `combo_eh_3070_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss |
+| `combo_sn_7030_shared` | mixed | — | WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss |
+| `combo_sn_3070_shared` | mixed | — | WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss |
+| `combo_sj_7030_shared` | mixed | — | ANGO miss; GKOS miss; BKV miss; BULL miss; CEG miss |
+| `combo_sj_3070_shared` | mixed | — | ANGO miss; GKOS miss; BKV miss; BULL miss; CEG miss |
+| `combo_sf_7030_shared` | mixed | — | WH miss; SIRI miss |
+| `combo_sf_3070_shared` | mixed | — | WH miss; SIRI miss |
+| `combo_en_7030_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss |
+| `combo_en_3070_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss |
+| `combo_ef_7030_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss; SIRI miss |
+| `combo_ef_3070_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss; WH miss; SIRI miss |
+| `combo_hn_7030_shared` | long | — | WH miss; APLD miss; ANGO miss; PEP miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss |
+| `combo_hn_3070_shared` | long | — | WH miss; APLD miss; ANGO miss; PEP miss; SSTK miss; BKH miss; GLND miss; ADCT miss; CEG miss |
+| `combo_ee1_7030_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
+| `combo_ee1_3070_shared` | long | — | ANGO miss; APLD miss; NG miss; PEP miss; TLRY miss; LEVI miss |
 
 Scoop trigger = official open + session low (Elite live only when the low has not printed). Close / last / Theme Radar never trigger. #236 KILL of global short-only / dip-scoop stands — this table is display/paper only.
 
