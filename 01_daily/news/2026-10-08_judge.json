@@ -1,0 +1,20 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "bearish",
+  "hawkish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Technology": "bearish",
+  "Nuclear/Uranium": "bullish"
+ },
+ "tickers": {
+  "URA": 4.0,
+  "CEG": 5.5,
+  "IGV": -4.0
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] 10Y tests 5.3%, minutes flag another 2026 hike, 10Y auction (session/1d-1w)\nMACRO risk: [bearish] SPX/NDX off records on duration; gold -$100 confirms hike odds (session/1d)\nSECTOR semis: [mixed] TSMC +51% and Samsung AI-memory boom vs yield compression (SMH/SOXX)\nSECTOR nuclear/uranium: [bullish] Google-Constellation power offtake lifts URA/nuclear basket (URA)\nSECTOR software: [bearish] ACN 3-6% FY27 LC guide into higher yields - duration, not a beat (IGV)\nINTERACTION: Minutes+10Y+auction = one rates cluster; do not buy semis/software on AI beats while 10Y is at 5.3%\nWATCH: Auction stop-through vs tail; AI-debt language can extend multiple compression even if TSMC holds",
+ "date": "2026-10-08"
+}
