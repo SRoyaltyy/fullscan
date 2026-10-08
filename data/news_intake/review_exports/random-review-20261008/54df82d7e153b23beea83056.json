@@ -19,5 +19,13 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T00:36:39.524273+00:00"
+  "last_seen": "2026-10-04T00:36:39.524273+00:00",
+  "review_enrichment": {
+    "attempted_epoch": 1791468862.669316,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [],
+    "historical_body_availability_verified": false,
+    "error": "HTTP Error 429: Too Many Requests"
+  }
 }
