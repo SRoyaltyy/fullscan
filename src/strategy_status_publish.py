@@ -13,7 +13,14 @@ Sources, in page order:
                dropped out shows MISSING by name)
   *_preopen    data/factor_mine/preopen/seals/D.json
   h1           research/hot_n4_clean_v4/forward_h1/h1_log.jsonl kind=plan
-  flatten / paper / excel / stock_book   same ticket file
+  flatten / paper / stock_book   same ticket file
+  excel_bot    excel_bot/freeze_manifest.json prior session kind:lock,
+               committed before 09:30 ET on the session date. Does not
+               read the general predict.
+  A row that requires a file refuses OK (and SIT) when that file is not
+  on main, and the note names the path. Presence only.
+  factor_mine and h1 require 01_daily/general/<session>_predict.md.
+  theme_radar requires only its plan CSV on the theme-radar repo.
   webull_sim   data/webull_sim/days.jsonl rows for D
   theme_radar  SRoyaltyy/theme-radar research/shadow_log/plans/plan_D.csv
                one row per cell (THEME_RADAR_CELLS); research-only shorts,
@@ -27,9 +34,11 @@ deadline on D has not passed; after 09:00 ET a missing file is MISSING.
 from __future__ import annotations
 
 import argparse
+import base64
 import csv
 import io
 import json
+import subprocess
 import sys
 import urllib.error
 import urllib.request
@@ -44,6 +53,11 @@ ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo("America/New_York")
 OUT_DIR = Path("data/strategy_status")
 WEBULL_DAYS = Path("data/webull_sim/days.jsonl")
+EXCEL_MANIFEST = Path("excel_bot/freeze_manifest.json")
+PREDICT_REL = "01_daily/general/{day}_predict.md"
+NEEDS_PREDICT = frozenset({"factor_mine", "h1"})
+EXCEL_OPEN = time(9, 30)  # lock must be committed before the session open
+FULLSCAN_API = "https://api.github.com/repos/SRoyaltyy/fullscan"
 THEME_RADAR_URL = ("https://raw.githubusercontent.com/SRoyaltyy/theme-radar/main/"
                    "research/shadow_log/plans/plan_{d}.csv")
 # Theme Radar's three research cells (theme-radar research/shadow_log/
@@ -101,9 +115,269 @@ def from_tickets(root: Path, day: str) -> list[dict]:
         if isinstance(v, dict) and v.get("family") in TICKET_FAMILY:
             rows.append(_ticket_row(k, TICKET_FAMILY[v["family"]], v, str(path), doc))
     if doc is None:
-        for fam in ("flatten_robust", "paper", "excel_bot"):
+        for fam in ("flatten_robust", "paper"):
             rows.append(_row(fam, fam, "MISSING", source=str(path), note="no sealed ticket"))
+    # Ticket excel rows look for signal_date == session day. excel_bot seals
+    # the night before, so that read is SIT/no_session_signals on a real lock.
+    rows = [r for r in rows if r.get("family") != "excel_bot"]
+    rows.append(from_excel_lock(root, day))
     return rows
+
+
+def _git(root: Path, args: list[str], timeout: int = 20) -> subprocess.CompletedProcess | None:
+    try:
+        return subprocess.run(
+            ["git", *args], cwd=root, capture_output=True, timeout=timeout, check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+
+
+def _has_ref(root: Path, ref: str) -> bool:
+    proc = _git(root, ["rev-parse", "--verify", ref])
+    return bool(proc and proc.returncode == 0)
+
+
+def _is_shallow(root: Path) -> bool:
+    proc = _git(root, ["rev-parse", "--is-shallow-repository"])
+    return bool(proc and proc.returncode == 0 and proc.stdout.strip() == b"true")
+
+
+def blob_on_main(root: Path, rel: str) -> bytes | None:
+    """Bytes of ``rel`` on origin/main, or None if that path is absent.
+
+    Presence only. A working-tree copy does not count once origin/main
+    exists. With no origin/main (tests, offline), the checkout file is
+    the only evidence. A git error that is not "path absent" falls back
+    to the GitHub contents API so a sparse checkout can still see main.
+    """
+    if _has_ref(root, "origin/main"):
+        proc = _git(root, ["show", f"origin/main:{rel}"], timeout=30)
+        if proc is not None and proc.returncode == 0:
+            return proc.stdout
+        err = ((proc.stderr if proc else b"") or b"").decode("utf-8", "replace").lower()
+        if "does not exist" in err or "exists on disk, but not in" in err:
+            return None
+        return _api_file(rel)
+    path = root / rel
+    if path.is_file():
+        try:
+            return path.read_bytes()
+        except OSError:
+            return None
+    return None
+
+
+def _api_json(url: str):
+    """GET a GitHub API URL via gh, which already holds the repo credential."""
+    path = url.split("api.github.com/", 1)[-1]
+    try:
+        proc = subprocess.run(
+            ["gh", "api", "--method", "GET", path],
+            capture_output=True, timeout=30, check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired) as e:
+        raise RuntimeError("github api unavailable") from e
+    if proc.returncode != 0:
+        err = (proc.stderr or b"").decode("utf-8", "replace")
+        if "404" in err:
+            raise urllib.error.HTTPError(url, 404, "not found", None, None)
+        raise RuntimeError("github api failed")
+    return json.loads(proc.stdout.decode("utf-8"))
+
+
+def _api_file(rel: str, ref: str = "main") -> bytes | None:
+    url = f"{FULLSCAN_API}/contents/{rel}?ref={ref}"
+    try:
+        meta = _api_json(url)
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return None
+        return None
+    except Exception:
+        return None
+    if not isinstance(meta, dict) or "content" not in meta:
+        return None
+    try:
+        return base64.b64decode(meta["content"])
+    except (ValueError, TypeError):
+        return None
+
+
+def _lock_in(doc, signal_date: str, sha: str) -> bool:
+    if not isinstance(doc, dict) or not sha:
+        return False
+    for entry in doc.get("entries") or []:
+        if (isinstance(entry, dict) and entry.get("kind") == "lock"
+                and str(entry.get("signal_date") or "") == signal_date
+                and str(entry.get("sha256") or "") == sha):
+            return True
+    return False
+
+
+def _local_lock_commit(root: Path, ref: str, signal_date: str, sha: str) -> datetime | None:
+    """Earliest commit on ``ref`` that contains this lock. None if unproven."""
+    proc = _git(root, ["log", ref, "--format=%H%x09%cI", "--", str(EXCEL_MANIFEST)], timeout=30)
+    if proc is None or proc.returncode != 0:
+        return None
+    lines = [ln for ln in proc.stdout.decode("utf-8", "replace").splitlines() if ln.strip()]
+    if not lines:
+        return None
+    # Shallow history that already contains the lock at its oldest commit
+    # did not see the commit that introduced it.
+    oldest = lines[-1].split("\t", 1)[0]
+    if _is_shallow(root):
+        show = _git(root, ["show", f"{oldest}:{EXCEL_MANIFEST}"], timeout=30)
+        if show is not None and show.returncode == 0:
+            try:
+                doc = json.loads(show.stdout.decode("utf-8", "replace"))
+            except ValueError:
+                doc = None
+            if _lock_in(doc, signal_date, sha):
+                return None
+    found = None
+    for ln in reversed(lines):
+        commit, _, iso = ln.partition("\t")
+        if not commit or not iso:
+            continue
+        show = _git(root, ["show", f"{commit}:{EXCEL_MANIFEST}"], timeout=30)
+        if show is None or show.returncode != 0:
+            continue
+        try:
+            doc = json.loads(show.stdout.decode("utf-8", "replace"))
+        except ValueError:
+            continue
+        if not _lock_in(doc, signal_date, sha):
+            continue
+        try:
+            found = datetime.fromisoformat(iso.strip())
+        except ValueError:
+            return None
+        if found.tzinfo is None:
+            found = found.replace(tzinfo=ET)
+        return found
+    return None
+
+
+def _api_lock_commit(signal_date: str, sha: str) -> datetime | None:
+    """Earliest main commit of the manifest that contains this lock."""
+    url = (f"{FULLSCAN_API}/commits?path={EXCEL_MANIFEST}"
+           "&per_page=100")
+    try:
+        commits = _api_json(url)
+    except Exception:
+        return None
+    if not isinstance(commits, list):
+        return None
+    for c in reversed(commits):
+        if not isinstance(c, dict):
+            continue
+        ref = str(c.get("sha") or "")
+        iso = str(((c.get("commit") or {}).get("committer") or {}).get("date") or "")
+        if not ref or not iso:
+            continue
+        raw = _api_file(str(EXCEL_MANIFEST), ref)
+        if not raw:
+            continue
+        try:
+            doc = json.loads(raw.decode("utf-8", "replace"))
+        except ValueError:
+            continue
+        if not _lock_in(doc, signal_date, sha):
+            continue
+        try:
+            when = datetime.fromisoformat(iso.replace("Z", "+00:00"))
+        except ValueError:
+            return None
+        if when.tzinfo is None:
+            when = when.replace(tzinfo=ET)
+        return when
+    return None
+
+
+def lock_committed_at(root: Path, signal_date: str, sha: str) -> datetime | None:
+    """When this lock landed on main. None if that time cannot be proven."""
+    if _has_ref(root, "origin/main") and not _is_shallow(root):
+        return _local_lock_commit(root, "origin/main", signal_date, sha)
+    if not _has_ref(root, "origin/main") and _has_ref(root, "HEAD") and not _is_shallow(root):
+        return _local_lock_commit(root, "HEAD", signal_date, sha)
+    return _api_lock_commit(signal_date, sha)
+
+
+def from_excel_lock(root: Path, day: str) -> dict:
+    """Orders for ``day`` are the previous session's kind:lock, read-only.
+
+    The lock must be on main and committed before 09:30 ET on ``day``.
+    Does not read the general predict and does not rewrite the manifest.
+    """
+    from src.skip_if_good import _prev_weekday
+    prior = _prev_weekday(day)
+    src = str(EXCEL_MANIFEST)
+    raw = blob_on_main(root, src)
+    if raw is None:
+        return _row("excel_all", "excel_bot", "MISSING", source=src,
+                    note=f"missing {src}")
+    try:
+        doc = json.loads(raw.decode("utf-8", "replace"))
+    except ValueError:
+        return _row("excel_all", "excel_bot", "MISSING", source=src,
+                    note=f"missing {src}")
+    locks = [e for e in (doc.get("entries") or [])
+             if isinstance(e, dict) and e.get("kind") == "lock"
+             and str(e.get("signal_date") or "") == prior]
+    if not locks:
+        return _row("excel_all", "excel_bot", "MISSING", source=src,
+                    note=f"missing prior-session kind:lock for {prior} in {src}")
+    entry = locks[-1]
+    buys: list[str] = []
+    for item in entry.get("pick_ids") or []:
+        if isinstance(item, (list, tuple)) and item:
+            ticker = str(item[0] or "").strip().upper()
+            card = str(item[1]).strip() if len(item) > 1 and item[1] else ""
+            if ticker:
+                buys.append(f"{ticker} {card}".strip())
+        elif isinstance(item, str) and item.strip():
+            buys.append(item.strip().upper())
+    sha = str(entry.get("sha256") or "")
+    n = entry.get("n_picks")
+    when = lock_committed_at(root, prior, sha)
+    cutoff = datetime.combine(datetime.fromisoformat(day).date(), EXCEL_OPEN, tzinfo=ET)
+    if when is None or when.astimezone(ET) >= cutoff:
+        if when is None:
+            why = "commit time not proven before 09:30 ET"
+        else:
+            why = ("committed " + when.astimezone(ET).strftime("%Y-%m-%d %H:%M ET")
+                   + ", not before 09:30 ET")
+        return _row("excel_all", "excel_bot", "MISSING", buys, (), src,
+                    note=f"{src} prior-session kind:lock {why}")
+    status = "OK" if buys else "SIT"
+    note = f"{src} prior-session kind:lock n_picks={n} sha={sha[:12]} before 09:30 ET"
+    return _row("excel_all", "excel_bot", status, buys, (), src, note)
+
+
+def apply_required_files(root: Path, day: str, rows: list[dict]) -> list[dict]:
+    """Refuse OK and SIT when a strategy's own required file is not on main.
+
+    factor_mine and h1 need the general predict. excel_bot and theme_radar
+    do not. SIT stands only when that file is present and nothing was traded.
+    """
+    rel = PREDICT_REL.format(day=day)
+    if blob_on_main(root, rel) is not None:
+        return rows
+    out = []
+    for row in rows:
+        if row.get("family") not in NEEDS_PREDICT and row.get("name") not in NEEDS_PREDICT:
+            out.append(row)
+            continue
+        row = dict(row)
+        if row.get("status") in ("OK", "SIT"):
+            row["status"] = "MISSING"
+        tag = f"missing {rel}"
+        note = row.get("note") or ""
+        if tag not in note:
+            row["note"] = (f"{tag}; {note}" if note else tag)[:200]
+        out.append(row)
+    return out
 
 
 def _ticket_row(name, family, v, src, doc):
@@ -281,6 +555,7 @@ def build(root: Path, day: str, fetch=_fetch, now: datetime | None = None) -> di
     now = now or datetime.now(ET)
     rows = (from_tickets(root, day) + from_preopen(root, day) + from_h1(root, day)
             + from_webull_sim(root, day) + from_theme_radar(day, fetch, now))
+    rows = apply_required_files(root, day, rows)
     counts: dict[str, dict[str, int]] = {}
     for r in rows:
         c = counts.setdefault(r["family"], {"OK": 0, "SIT": 0, "MISSING": 0})
