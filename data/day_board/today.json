@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:28:12.246809-04:00",
+  "generated_at": "2026-10-08T08:28:17.363912-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -103,24 +103,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-08",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-08T08:20:25.025376-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-08_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2245636,
-          "preview": "5907 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 AMZN, VCTR, NU, SLDE, AAMI"
-        }
-      ],
-      "preview": "5907 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 AMZN, VCTR, NU, SLDE, AAMI"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -428,6 +410,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-08\nExport `finviz_2026-10-07.csv` \u00b7 11616 names \u00b7 generated 2026-10-08T04:20:26.261078-04:00"
+    },
+    {
+      "key": "map_heat_baseline",
+      "title": "Map heat night baseline",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T08:28:16.168679-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-08_research_baseline.json",
+          "ok": true,
+          "reason": "",
+          "size": 412110,
+          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-08_research_baseline.md",
+          "ok": true,
+          "reason": "",
+          "size": 41351,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-08\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-08\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
