@@ -3,12 +3,18 @@
 A plan uses the locked rank and sell functions and no print from session
 D. A fill is the plan's buys and sells at D's open. It does not edit the
 plan. Fees and the liquidity cap are the same functions the v4 score uses.
+
+From 2026-10-09 the h1 book's new-buy share count is the count locked at
+send time (``forward.share_lock``). Price, cost, and fees still use the
+session open. Earlier open fills, including 2026-10-08, stay sized from
+that open.
 """
 from __future__ import annotations
 
 import bisect
 import math
 
+from research.hot_n4_clean_v4.forward.share_lock import AUTO, resolve_share_lock
 from research.hot_n4_clean_v4.forward.step import _recipe, _variant, sell_reason, state_from_session
 from research.hot_n4_clean_v4.protocol import (
     ADV_SHARE_SCALE,
@@ -181,8 +187,15 @@ def _halt_on(stored: dict, session: str, held: set[str]) -> None:
             )
 
 
-def fill_book(plan: dict, state: dict, bars: dict, fees: dict, index: dict[str, int]):
-    """Fill ``plan`` at D's open. Raises Halt when a held name or IWM jumps."""
+def fill_book(plan: dict, state: dict, bars: dict, fees: dict, index: dict[str, int], *, share_lock=AUTO):
+    """Fill ``plan`` at D's open. Raises Halt when a held name or IWM jumps.
+
+    ``share_lock`` is the sent share count. When it is set, a different
+    open changes the fill price, cost, and fee, not the share count.
+    Carries are not in the lock and are not resized. ``AUTO`` reads the
+    h1 send journal from 2026-10-09 on and leaves every earlier session
+    on the open-price size.
+    """
     if abs(float(state["cash"]) - float(plan["cash_before"])) > 1e-4:
         raise RuntimeError("cash does not match the plan")
     stored = bars["stored"]
@@ -269,6 +282,16 @@ def fill_book(plan: dict, state: dict, bars: dict, fees: dict, index: dict[str, 
         for pick in new:
             unfilled.append({"reason": "gap day", "side": "buy", "ticker": pick["ticker"]})
         new = []
+    lock = resolve_share_lock(session, share_lock)
+    if lock is not None:
+        carry = {pick["ticker"] for pick in picks} & set(pos)
+        overlap = sorted(set(lock) & carry)
+        if overlap:
+            raise RuntimeError(
+                "sent share lock includes carry "
+                + ", ".join(overlap)
+                + "; refusing to resize"
+            )
     budgets = split_budgets(new, cash, "leftover") if new else []
     buys = []
     for pick, budget in zip(new, budgets):
@@ -279,16 +302,37 @@ def fill_book(plan: dict, state: dict, bars: dict, fees: dict, index: dict[str, 
         if blocked:
             unfilled.append({"reason": blocked, "side": "buy", "ticker": ticker})
             continue
-        shares, why = buy_shares(
-            budget, cash, op, pick.get("fv_price"), pick.get("fv_avg_volume"), fees,
-        )
-        if why:
-            row = {"reason": why, "side": "buy", "ticker": ticker}
-            if cap is not None:
-                row["liquidity_cap_shares"] = cap
-            unfilled.append(row)
-            continue
+        if lock is None:
+            shares, why = buy_shares(
+                budget, cash, op, pick.get("fv_price"), pick.get("fv_avg_volume"), fees,
+            )
+            if why:
+                row = {"reason": why, "side": "buy", "ticker": ticker}
+                if cap is not None:
+                    row["liquidity_cap_shares"] = cap
+                unfilled.append(row)
+                continue
+        else:
+            if ticker not in lock:
+                raise RuntimeError(
+                    f"sent share lock has no count for {ticker}; refusing to size from the open"
+                )
+            try:
+                shares = int(lock[ticker])
+            except (TypeError, ValueError) as exc:
+                raise RuntimeError(
+                    f"sent share lock for {ticker} is not a share count"
+                ) from exc
+            if shares < 1:
+                raise RuntimeError(
+                    f"sent share lock for {ticker} is {shares}; refusing to size from the open"
+                )
         cost = schedule_buy_cost(shares, op, fees)
+        if lock is not None and cost[SLIP_PRIMARY] > cash + 1e-6:
+            raise RuntimeError(
+                f"sent share lock {ticker} {shares} at open {op} costs "
+                f"{cost[SLIP_PRIMARY]} and book cash is {cash}; refusing to resize"
+            )
         cash -= cost[SLIP_PRIMARY]
         fee = order_fees(int(shares), op, "buy", fees)
         pos[ticker] = {
