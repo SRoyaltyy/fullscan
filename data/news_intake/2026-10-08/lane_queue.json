@@ -1,5 +1,39 @@
 [
   {
+    "document_id": "e4d88e458469dbf01a2c388b",
+    "title": "How kidnappings are hitting Nigeria’s Borno families hard",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/8/how-kidnappings-are-hitting-nigerias-borno-families-hard?traffic_source=rss",
+    "published_at": "2026-10-08T00:47:32+00:00",
+    "known_at": "2026-10-08T00:47:32+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "2aeeaf4b4bbe82488e9096e7",
+    "title": "US stocks slide as oil prices fluctuate over renewed Iran war fears",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/8/us-stocks-slide-as-oil-prices-fluctuate-over-renewed-iran-war-fears?traffic_source=rss",
+    "published_at": "2026-10-08T00:33:03+00:00",
+    "known_at": "2026-10-08T00:33:03+00:00",
+    "candidate_classes": [
+      "regime_state"
+    ],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "c907736193d43bddf806cb91",
     "title": "Form 4 SKYWORKS SOLUTIONS, INC. For: Oct 05 Filed by: CLEMMER RICHARD L - StreetInsider",
     "evidence_file": "documents.json",
@@ -214,6 +248,38 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "88f4a3a372c5c98f18fdde43",
+    "title": "Russia dismisses reports of second plague case as ‘false information’",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/news/2026/10/8/russia-dismisses-reports-of-second-plague-case-as-false-information?traffic_source=rss",
+    "published_at": "2026-10-08T00:16:41+00:00",
+    "known_at": "2026-10-08T00:16:41+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "c0d2afac2d5453ad9d7ba767",
+    "title": "Saudi Arabia confirms three dead in Houthi strikes on its airports",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.aljazeera.com/video/newsfeed/2026/10/8/saudi-arabia-confirms-three-dead-in-houthi-strikes-on-its-airports?traffic_source=rss",
+    "published_at": "2026-10-08T00:16:25+00:00",
+    "known_at": "2026-10-08T00:16:25+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "3b06a17c5c8c4ee97ec728f0",
     "title": "Hutchinson vice mayor resigns from council - KWCH",
     "evidence_file": "documents.json",
@@ -229,6 +295,22 @@
     "analyst_family": "firm",
     "routing_class": "key_person",
     "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "0da8e86a453a1084056c5ee1",
+    "title": "China races to build AI data centres across energy-rich hinterland",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.ft.com/content/e1dd8bff-b06d-4a40-bbb7-c0a6a36f1c8e?syn-25a6b1a6=1",
+    "published_at": "2026-10-08T00:15:04+00:00",
+    "known_at": "2026-10-08T00:15:04+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
   {
@@ -12126,22 +12208,6 @@
     "known_at": "2026-10-07T20:54:00+00:00",
     "candidate_classes": [],
     "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
-    "document_id": "19af62c179bc7b7122cbeb74",
-    "title": "Treasury Announces Enforcement Penalty for Violation of Outbound Program",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://home.treasury.gov/news/press-releases/sb0652/",
-    "published_at": "2026-10-07T15:15:00+00:00",
-    "known_at": "2026-10-07T15:15:00+00:00",
-    "candidate_classes": [],
-    "state": "candidate",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
@@ -45281,6 +45347,22 @@
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
     "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "19af62c179bc7b7122cbeb74",
+    "title": "Treasury Announces Enforcement Penalty for Violation of Outbound Program",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://home.treasury.gov/news/press-releases/sb0652/",
+    "published_at": "2026-10-07T15:15:00+00:00",
+    "known_at": "2026-10-07T15:15:00+00:00",
+    "candidate_classes": [],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
   {
@@ -123706,22 +123788,6 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
-    "document_id": "e295003e86544773cb4053da",
-    "title": "Treasury Reports Major Progress in Preventing Fraud and Improper Payments",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://home.treasury.gov/news/press-releases/sb0651/",
-    "published_at": "2026-10-06T14:00:00+00:00",
-    "known_at": "2026-10-06T14:00:00+00:00",
-    "candidate_classes": [],
-    "state": "candidate",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
     "document_id": "f61b348ff9fc58e4018db6c6",
     "title": "Higher Input Costs Become Top Concern as Farmer Sentiment Falls - Grain Journal",
     "evidence_file": "documents.json",
@@ -133509,6 +133575,22 @@
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
     "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "e295003e86544773cb4053da",
+    "title": "Treasury Reports Major Progress in Preventing Fraud and Improper Payments",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://home.treasury.gov/news/press-releases/sb0651/",
+    "published_at": "2026-10-06T14:00:00+00:00",
+    "known_at": "2026-10-06T14:00:00+00:00",
+    "candidate_classes": [],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
   {
@@ -161278,7 +161360,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "regime_state",
@@ -161296,7 +161378,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "regime_state",
@@ -161314,7 +161396,7 @@
     "candidate_classes": [
       "insider_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "insider_flow",
@@ -161412,7 +161494,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
@@ -161448,7 +161530,7 @@
     "candidate_classes": [
       "distress_restruct"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "distress_restruct",
@@ -161466,7 +161548,7 @@
     "candidate_classes": [
       "tax_fiscal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "tax_fiscal",
@@ -161484,7 +161566,7 @@
     "candidate_classes": [
       "flow_index"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "flow_index",
@@ -161502,7 +161584,7 @@
     "candidate_classes": [
       "flow_index"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "flow_index",
@@ -161552,7 +161634,7 @@
     "candidate_classes": [
       "flow_index"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "flow_index",
@@ -161570,7 +161652,7 @@
     "candidate_classes": [
       "flow_index"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "flow_index",
@@ -161588,7 +161670,7 @@
     "candidate_classes": [
       "input_cost"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "input_cost",
@@ -161622,7 +161704,7 @@
     "candidate_classes": [
       "dilution"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "dilution",
@@ -161640,7 +161722,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -161658,7 +161740,7 @@
     "candidate_classes": [
       "key_person"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "key_person",
@@ -161676,7 +161758,7 @@
     "candidate_classes": [
       "key_person"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "key_person",
@@ -161694,7 +161776,7 @@
     "candidate_classes": [
       "demand"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "demand",
@@ -161728,7 +161810,7 @@
     "candidate_classes": [
       "distress_restruct"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "distress_restruct",
@@ -161746,7 +161828,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -161764,7 +161846,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -161814,7 +161896,7 @@
     "candidate_classes": [
       "labor_stop"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
@@ -161832,7 +161914,7 @@
     "candidate_classes": [
       "tax_fiscal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "tax_fiscal",
@@ -161851,7 +161933,7 @@
       "corporate_action_mna",
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -161869,7 +161951,7 @@
     "candidate_classes": [
       "distress_restruct"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "distress_restruct",
@@ -161903,7 +161985,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -161921,7 +162003,7 @@
     "candidate_classes": [
       "factor_impulse"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "factor_impulse",
@@ -162003,7 +162085,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
@@ -162037,7 +162119,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -162055,7 +162137,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -162089,7 +162171,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "dilution",
@@ -162123,7 +162205,7 @@
     "candidate_classes": [
       "tax_fiscal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "tax_fiscal",
@@ -162157,7 +162239,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -162223,7 +162305,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -162273,7 +162355,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
@@ -162327,7 +162409,7 @@
     "candidate_classes": [
       "reserve_revision"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "reserve_revision",
@@ -162361,7 +162443,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -162379,7 +162461,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -164804,8 +164886,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://home.treasury.gov/news/press-releases/sb0650/",
-    "published_at": "",
-    "known_at": "2026-10-05T23:01:37.655117+00:00",
+    "published_at": "2026-10-05T20:00:00+00:00",
+    "known_at": "2026-10-05T20:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -174658,8 +174740,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://www.fda.gov/news-events/press-announcements/fda-seeks-public-input-support-ibogaine-research",
-    "published_at": "",
-    "known_at": "2026-10-05T16:31:03.093469+00:00",
+    "published_at": "2026-10-05T12:45:00+00:00",
+    "known_at": "2026-10-05T12:45:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -174758,8 +174840,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://home.treasury.gov/news/press-releases/sb0649/",
-    "published_at": "",
-    "known_at": "2026-10-03T18:46:42.074757+00:00",
+    "published_at": "2026-10-01T22:00:00+00:00",
+    "known_at": "2026-10-01T22:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -174774,8 +174856,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://home.treasury.gov/news/press-releases/sb0648/",
-    "published_at": "",
-    "known_at": "2026-10-02T20:53:54.710501+00:00",
+    "published_at": "2026-10-02T19:30:00+00:00",
+    "known_at": "2026-10-02T19:30:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -174790,8 +174872,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://home.treasury.gov/news/press-releases/sb0646/",
-    "published_at": "",
-    "known_at": "2026-10-02T16:30:15.020552+00:00",
+    "published_at": "2026-10-02T14:00:00+00:00",
+    "known_at": "2026-10-02T14:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -174806,8 +174888,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://home.treasury.gov/news/press-releases/sb0647/",
-    "published_at": "",
-    "known_at": "2026-10-02T16:30:15.020552+00:00",
+    "published_at": "2026-10-02T15:30:00+00:00",
+    "known_at": "2026-10-02T15:30:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
