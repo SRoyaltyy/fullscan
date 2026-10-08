@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T04:32:30.113759-04:00",
+  "generated_at": "2026-10-08T04:34:17.120367-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,49 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-10-08",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-08T04:20:26.308884-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-08_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 275105,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-08_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 19043,
-          "preview": "# MAP HEAT \u2014 2026-10-08\nExport `finviz_2026-10-07.csv` \u00b7 11616 names \u00b7 generated 2026-10-08T04:20:26.261078-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-08\nExport `finviz_2026-10-07.csv` \u00b7 11616 names \u00b7 generated 2026-10-08T04:20:26.261078-04:00"
-    },
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-10-08",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-08T04:24:52.090073-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-10-08_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1122943,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -193,6 +150,41 @@
         }
       ],
       "preview": "5907 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, HALO, ONC, TER, KEYS"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-08",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-08T04:33:55.971179-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T04:34:15.916649-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-08_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 7502293,
+          "preview": "raw=10441 usable=893 single=410 \u00b7 Canadian dollar weakens as risk-off sentiment drives markets - Reuters | U.S. Stock Market Preview | The Federal Reserve's meeting minutes are set to be  | Anglo-Teck merger, nickel sale are test cases for navigating geopolitical comple | Most Gulf markets slip as geopolitical risks weigh - Reuters | TSMC\u2019s Quarterly Revenue Jumps 51% After AI Demand Holds Up - Bloomberg.com"
+        },
+        {
+          "path": "01_daily/news/2026-10-08_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 13777,
+          "preview": "# News Parse v2 \u2014 2026-10-08T04:34:14.204895-04:00\nWindow\u224848h | news_mode=on | raw=10441 | usable=893 | single_name=410 | noise_dropped=8792\nusable polarity={'+': 44, '-': 281, 'mixed': 5, 'neutral': 563}"
+        }
+      ],
+      "preview": "raw=10441 usable=893 single=410 \u00b7 Canadian dollar weakens as risk-off sentiment drives markets - Reuters | U.S. Stock Market Preview | The Federal Reserve's meeting minutes are set to be  | Anglo-Teck merger, nickel sale are test cases for navigating geopolitical comple | Most Gulf markets slip as geopolitical risks weigh - Reuters | TSMC\u2019s Quarterly Revenue Jumps 51% After AI Demand Holds Up - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-10-08T04:34:14.204895-04:00\nWindow\u224848h | news_mode=on | raw=10441 | usable=893 | single_name=410 | noise_dropped=8792\nusable polarity={'+': 44, '-': 281, 'mixed': 5, 'neutral': 563}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
