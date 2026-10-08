@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-08",
+  "inputs": [
+    {
+      "commit": "eb87a3160f862e7886bc71b5626489269a77e3d6",
+      "committed_at": "2026-10-08T08:20:19-04:00",
+      "ok": true,
+      "path": "01_daily/weather/2026-10-08_weather.json",
+      "reason": "",
+      "sha256": "b7ab44f1d7c46b86733a655c42960db944af8e13034ac68bd54248d80588086d"
+    },
+    {
+      "commit": "c1b6661e07996170bc9d066b35516cb91e471eec",
+      "committed_at": "2026-10-08T08:41:57-04:00",
+      "ok": true,
+      "path": "data/day_board/2026-10-08_strategy_tickets.json",
+      "reason": "",
+      "sha256": "580b14995bff60e309042b12aae55a520d1f5b7d461714a843edcf0779b3b4ef"
+    }
+  ],
+  "inputs_rule": "tickets look.source=look, weather general_score, prior state; last commit before 09:30 ET only",
+  "log": [
+    "tickets commit c1b6661e07996170bc9d066b35516cb91e471eec at 2026-10-08T08:41:57-04:00 is before 09:30 ET",
+    "weather commit eb87a3160f862e7886bc71b5626489269a77e3d6 at 2026-10-08T08:20:19-04:00 is before 09:30 ET",
+    "weather has no general_score",
+    "no morning weather S committed before 09:30 ET"
+  ],
+  "open_cutoff_et": "2026-10-08T09:30:00-04:00",
+  "s": null,
+  "s_source": "",
+  "sha256": "a1a8348e217eb8dde6dc97221cca29b04eda203a2cfcb951494071b2f2c69be2",
+  "sleeves": {
+    "union_hot_n4_h1_preopen": {
+      "parent": "union_hot_n4_h1",
+      "pick_source": "tickets_look",
+      "picks": [],
+      "reasons": [
+        "no pre-open weather S: no buys"
+      ],
+      "sit": true,
+      "would_pick": [
+        "NAUT",
+        "KOD",
+        "SDEV",
+        "PRME"
+      ]
+    },
+    "union_hot_n4_holdup_preopen": {
+      "parent": "union_hot_n4_holdup",
+      "pick_source": "tickets_look",
+      "picks": [],
+      "reasons": [
+        "no pre-open weather S: no buys"
+      ],
+      "sit": true,
+      "would_pick": [
+        "NAUT",
+        "KOD",
+        "SDEV",
+        "PRME"
+      ]
+    }
+  },
+  "start": "2026-10-08"
+}
