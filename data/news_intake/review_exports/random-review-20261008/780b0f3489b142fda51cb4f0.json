@@ -21,11 +21,24 @@
   "extraction_status": "feed_text",
   "last_seen": "2026-10-03T18:54:45.080626+00:00",
   "review_enrichment": {
-    "attempted_epoch": 1791468860.8477023,
-    "attempts": 1,
+    "attempted_epoch": 1791490833.10453,
+    "attempts": 2,
     "status": "failed",
-    "network_requests": [],
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMikwFBVV95cUxQTkg2WEtfNEcxODRObTgyemJpOGZUdkZYTUcwMlByR1pkSS1zNk5qYkdDdnBWQXVHUEJtMFRxMUkyVXN3NkE0NC1OcjhfRWx6T3RDZDBwQWkzOFJGcnRBOTVPQlIxb0VSeFduWnlMTlI2VDB2VXUtMW5tMmxjZlhpUkRLdy01YXAtdkVWYWNJZHdzVE0"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://apnews.com/article/mortgage-interest-rate-30year-2d682abb8e97740e1058a6956a9c99f0"
+      }
+    ],
     "historical_body_availability_verified": false,
-    "error": "HTTP Error 429: Too Many Requests"
+    "error": "HTTP Error 403: Forbidden"
   }
 }

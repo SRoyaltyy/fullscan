@@ -2,7 +2,7 @@
   "title": "FM Discusses Exempting Flights to Iraq’s Holy Sites from Sanctions with the U.S. Treasury Secretary - وزارة الخارجية العراقية",
   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1qWEY0bjgwRUFyRU5kcGJrQVY1MkpUMWtBVVhBRHZERmVQSHM5aXplbmJBVkdGN1dTZjk5Z0xQSUk1WjR3Zmc?oc=5",
   "publisher": "وزارة الخارجية العراقية",
-  "body": "FM Discusses Exempting Flights to Iraq’s Holy Sites from Sanctions with the U.S. Treasury Secretary وزارة الخارجية العراقية",
+  "body": "FM Discusses Exempting Flights to Iraq’s Holy Sites from Sanctions with the U.S. Treasury Secretary – Ministry of Foreign Affairs of the Republic of IRAQ Home The Minister Curriculum Vitae The Ministry Undersecretaries Ministry Departments Iraqi Ambassadors Previous MOFA Ministers Martyrs of the Ministry of Foreign Affair Official Spokesperson Ministry’s Publications Questions & Answers Ministry’s Announcements Useful Links About Iraq About Iraq The Constitution Iraq Encyclopedia Tourist Guide Retrieve Diplomacy Pictures from IRAQ Ministry’s Strategy Ministry Strategy Diplomatic Missions Foreign Missions in IRAQ Iraqi’s Missions Abroad Missions News Consular Services Accomplished Authenticated Documents Authorization Ratifications Birth Certificate Death Certificate Visa Passports Passport Issuance Extension of Passports Loss of Passports Pass Doc The Civil Status ID Nationality Cert Marriage Divorces Registration Non Conviction Certificate Approving Corpse Entry To Iraq Certificate of Origin Forms Fees Indigent Deportation Lawsuits General Affairs Foreign Service Institute Minsistry and Missions News اللغة العربية English FM Discusses Exempting Flights to Iraq’s Holy Sites from Sanctions with the U.S. Treasury Secretary 03 Oct Minister News 46 Minister of Foreign Affairs, Mr Fuad Hussein, met on Thursday, 1 October 2026, with U.S. Secretary of the Treasury, Mr Scott Bessent, in Washington, D.C., to discuss a number of issues related to Iraqi-American relations and economic and security developments in the region. The meeting addressed the repercussions of the sanctions imposed on Iran and their potential impact on Iraq, particularly their implications for Najaf International Airport, given its vital importance in facilitating the movement of visitors to the holy sites. In this context, Mr Scott Bessent expressed understanding of the Iraqi request and agreed to exempt flights bound for the holy sites from the sanctions, thereby ensuring the continuation of visitor travel and facilitating their access. For his part, Mr Fuad Hussein expressed Iraq’s appreciation for the support provided by the United States and the International Coalition to the Iraqi forces during their war against the terrorist organisation ISIS, commending the sacrifices that contributed to achieving victories over the organisation, affirming the Iraqi Government’s commitment to placing weapons, as well as decisions of war and peace, under the authority of the state and its constitutional institutions. The Minister also expressed appreciation for the understanding shown by the U.S. Government and the U.S. Department of the Treasury regarding the importance of respecting religious freedom, facilitating visitors’ access to the holy sites, and resuming flights to them, affirming that this step reflects shared values based on tolerance and respect and contributes to strengthening the Iraqi-American partnership on the basis of mutual respect and shared interests. © 2026 Ministry of Foreign Affairs of the Republic of IRAQ All Rights Reserved",
   "published_at": "2026-10-03T01:13:03+00:00",
   "published_raw": "Sat, 03 Oct 2026 01:13:03 GMT",
   "source": "topic_geopolitics",
@@ -23,6 +23,30 @@
       "classes": []
     }
   ],
-  "extraction_status": "feed_text",
-  "last_seen": "2026-10-03T21:57:16.391630+00:00"
+  "extraction_status": "page_text",
+  "last_seen": "2026-10-03T21:57:16.391630+00:00",
+  "retained_feed_body": "FM Discusses Exempting Flights to Iraq’s Holy Sites from Sanctions with the U.S. Treasury Secretary وزارة الخارجية العراقية",
+  "extracted_url": "https://mofa.gov.iq/2026/64673/",
+  "review_enrichment": {
+    "attempted_epoch": 1791490836.1521404,
+    "attempts": 1,
+    "status": "page_text_checked",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMiRkFVX3lxTE1qWEY0bjgwRUFyRU5kcGJrQVY1MkpUMWtBVVhBRHZERmVQSHM5aXplbmJBVkdGN1dTZjk5Z0xQSUk1WjR3Zmc"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://mofa.gov.iq/2026/64673/"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "title_token_overlap": 0.786,
+    "note": "Visible page text may include navigation; article boundaries require review"
+  }
 }

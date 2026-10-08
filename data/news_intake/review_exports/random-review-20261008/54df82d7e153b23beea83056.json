@@ -2,7 +2,7 @@
   "title": "Standard Chartered Reverses Call, Now Sees ECB Lifting Rates in December - finance.biggo.com",
   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1iY0lrY3dldW51eTVwTWVlOUt1dTJHeUR2UVRBTTlqQ3IySm9zTl9pc2FxODdFa0UxYXNRb0ZhZi1Tc1BDVTdocWUxeFFmZGppSWptb1lQMGl4a3oxR2YyWEppZkZhZnF3ZEpmRUF1R3dRUnBxMnc?oc=5",
   "publisher": "finance.biggo.com",
-  "body": "Standard Chartered Reverses Call, Now Sees ECB Lifting Rates in December finance.biggo.com",
+  "body": "Standard Chartered Reverses Call, Now Sees ECB Lifting Rates in December — BigGo Finance Ask AI Real-time News Market Earnings Call Event Calendar Watchlist Podcast Earnings Call Event Calendar Watchlist Podcast More Ask AI Real-time News Watchlist Holdings Market Earnings Call Event Calendar Podcast Standard Chartered Reverses Call, Now Sees ECB Lifting Rates in December Add preferred source Standard Chartered now expects the European Central Bank to raise its deposit rate by 25 basis points to 2.75 percent in December, reversing an earlier call for a pause. The change follows stronger-than-expected euro zone inflation in September, driven largely by energy prices, and business activity data showing a more resilient economy. The bank's economists said policymakers may want insurance against energy costs feeding into wages and broader price pressures. The revised view aligns Standard Chartered with major Wall Street banks that broadly anticipate another ECB hike. Money markets currently price a roughly 65 percent probability of a December increase, according to LSEG data. Key Elements Standard Chartered European Central Bank LSEG Standard Chartered has abandoned its forecast for a pause in European Central Bank policy, now projecting that officials will raise the deposit rate by 25 basis points to 2.75 percent at their December meeting. The revision, disclosed in a note to clients, follows September inflation data for the euro zone that surprised to the upside, with energy prices accounting for much of the acceleration. Recent business activity figures also pointed to an economy that is withstanding tighter policy better than the bank's economists had previously assumed. The shift puts Standard Chartered in line with the consensus forming among major Wall Street banks, which have broadly coalesced around expectations for another ECB hike before the end of the year. \"We think the ECB will opt to take rates slightly into restrictive territory,\" the brokerage's economists wrote, adding that policymakers may be seeking insurance against the risk that higher energy costs feed through to wages and broader price pressures. The ECB raised interest rates last month alongside several other major central banks as policymakers moved to contain inflation risks tied to elevated energy costs and resilient growth. The central bank's next meeting falls on October 29, but Standard Chartered views a December move as more probable. By then, officials will have updated economic projections and an additional round of inflation data, even though signs of second-round price effects remain limited. Money markets are assigning a roughly 65 percent probability to a quarter-point ECB rate increase in December, according to data from LSEG. Add preferred source Like Favorite Share ‌ ‌ ‌ ‌ ‌ ‌ More Related News ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ English The news and data on this website are for reference only and do not constitute investment advice or an offer to buy or sell. Information is sourced from exchanges and public sources, and may be delayed, interrupted, or updated. While we strive for accuracy, we do not guarantee timeliness, correctness, or completeness. Content may include external links for which we are not responsible. By using this site, you agree that we and our partners are not liable for any losses. Investment carries full responsibility; please carefully assess risks and consult professionals. If there are errors in the content, please contact us for correction.",
   "published_at": "2026-10-02T13:05:00+00:00",
   "published_raw": "Fri, 02 Oct 2026 13:05:00 GMT",
   "source": "topic_central_banks",
@@ -18,14 +18,30 @@
       "classes": []
     }
   ],
-  "extraction_status": "feed_text",
+  "extraction_status": "page_text",
   "last_seen": "2026-10-04T00:36:39.524273+00:00",
   "review_enrichment": {
-    "attempted_epoch": 1791468862.669316,
-    "attempts": 1,
-    "status": "failed",
-    "network_requests": [],
+    "attempted_epoch": 1791490833.5365953,
+    "attempts": 2,
+    "status": "page_text_checked",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMidkFVX3lxTE1iY0lrY3dldW51eTVwTWVlOUt1dTJHeUR2UVRBTTlqQ3IySm9zTl9pc2FxODdFa0UxYXNRb0ZhZi1Tc1BDVTdocWUxeFFmZGppSWptb1lQMGl4a3oxR2YyWEppZkZhZnF3ZEpmRUF1R3dRUnBxMnc"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://finance.biggo.com/news/c07edb1f-2691-4ed3-9d07-791ae2cf5faa"
+      }
+    ],
     "historical_body_availability_verified": false,
-    "error": "HTTP Error 429: Too Many Requests"
-  }
+    "title_token_overlap": 1.0,
+    "note": "Visible page text may include navigation; article boundaries require review"
+  },
+  "retained_feed_body": "Standard Chartered Reverses Call, Now Sees ECB Lifting Rates in December finance.biggo.com",
+  "extracted_url": "https://finance.biggo.com/news/c07edb1f-2691-4ed3-9d07-791ae2cf5faa"
 }
