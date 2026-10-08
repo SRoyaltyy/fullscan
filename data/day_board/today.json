@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T13:07:11.553707-04:00",
+  "generated_at": "2026-10-08T13:12:50.319089-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -428,13 +428,13 @@
       "date": "2026-10-08",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-08T13:07:10.257334-04:00",
+      "at": "2026-10-08T13:12:48.980893-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 25744,
+          "size": 29070,
           "preview": "2026-10-08 BUY ASTH, AMN, MQ, TBBB, PACS, SPOT, TMUS, TDS \u00b7 SELL OKLO, FCEL, NEOV, EOSE, NRGV, ENVX, INDI, TE"
         },
         {
@@ -448,14 +448,14 @@
           "path": "data/day_board/2026-10-08.json",
           "ok": true,
           "reason": "",
-          "size": 190597,
+          "size": 196316,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-10-08_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 154497,
+          "size": 160216,
           "preview": "2026-10-08 BUY ASTH, AMN, MQ, TBBB, PACS, SPOT, TMUS, TDS \u00b7 SELL OKLO, FCEL, NEOV, EOSE, NRGV, ENVX, INDI, TE"
         },
         {
@@ -497,7 +497,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 154497,
+          "size": 160216,
           "preview": "2026-10-08 BUY ASTH, AMN, MQ, TBBB, PACS, SPOT, TMUS, TDS \u00b7 SELL OKLO, FCEL, NEOV, EOSE, NRGV, ENVX, INDI, TE"
         },
         {
