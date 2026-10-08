@@ -47,7 +47,7 @@
   }
  },
  "date": "2026-10-08",
- "generated_at": "2026-10-08T06:02:27-04:00",
+ "generated_at": "2026-10-08T06:08:32-04:00",
  "strategies": [
   {
    "buys": [
@@ -5046,9 +5046,9 @@
   {
    "buys": [
     "HITI",
+    "ASTH",
     "CON",
     "AMN",
-    "ASTH",
     "PACS",
     "NTAP",
     "MQ",
@@ -5073,9 +5073,9 @@
   {
    "buys": [
     "HITI",
+    "ASTH",
     "CON",
     "AMN",
-    "ASTH",
     "PACS",
     "NTAP",
     "MQ",
@@ -5111,7 +5111,7 @@
     "ETON",
     "MQ",
     "SIG",
-    "BLFS",
+    "CRON",
     "SM",
     "YOU"
    ],
@@ -5152,7 +5152,7 @@
     "ETON",
     "MQ",
     "SIG",
-    "BLFS",
+    "CRON",
     "SM",
     "YOU"
    ],
@@ -5436,24 +5436,15 @@
   },
   {
    "buys": [
-    "WH",
-    "SIRI"
+    "DVN",
+    "CDNA",
+    "RRC",
+    "ETON"
    ],
    "family": "flatten_robust",
    "name": "flatten_robust",
    "note": "live flatten_robust card",
-   "sells": [
-    "AVPT",
-    "TWLO",
-    "GWRE",
-    "OKTA",
-    "BB",
-    "EPAM",
-    "IOT",
-    "KSPI",
-    "PANW",
-    "PAYS"
-   ],
+   "sells": [],
    "source": "data/day_board/2026-10-08_strategy_tickets.json",
    "status": "OK"
   },
