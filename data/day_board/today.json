@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:41:41.453955-04:00",
+  "generated_at": "2026-10-08T08:43:00.866571-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,62 +11,70 @@
   },
   "buy_1d": [
     {
-      "ticker": "NTSK",
-      "score": 0.42290632336884754
-    },
-    {
-      "ticker": "NTAP",
-      "score": 0.1993716893885885
+      "ticker": "HITI",
+      "score": 0.5521247958025313
     },
     {
       "ticker": "ASTH",
-      "score": 0.6230873561313384
+      "score": 0.7273197072274897
     },
     {
-      "ticker": "BAND",
-      "score": 0.43966397277650293
+      "ticker": "CON",
+      "score": 0.6953401293518459
     },
     {
       "ticker": "AMN",
-      "score": 0.6219075101040625
+      "score": 0.7070091326370284
+    },
+    {
+      "ticker": "PACS",
+      "score": 0.8082817215208906
+    },
+    {
+      "ticker": "NTAP",
+      "score": 0.3711981333358339
     },
     {
       "ticker": "MQ",
-      "score": 0.6524273148994257
+      "score": 0.7677078447313719
+    },
+    {
+      "ticker": "BAND",
+      "score": 0.5961939935247551
     }
   ],
   "sell_1d": [
     {
       "ticker": "OKLO",
-      "score": -0.05831061373887192
+      "score": -0.03802248770767257
     },
     {
       "ticker": "NEOV",
-      "score": -0.34313729552836625
+      "score": -0.3867198550283089
     },
     {
       "ticker": "FCEL",
-      "score": -0.0552228469687913
+      "score": -0.06828783179383778
     },
     {
       "ticker": "NNDM",
-      "score": -0.133415420764612
+      "score": -0.1796522468102289
     },
     {
       "ticker": "ENVX",
-      "score": -0.11462581450741444
+      "score": -0.07978983372072344
     },
     {
       "ticker": "EOSE",
-      "score": -0.27207145820114503
+      "score": -0.2717673099162472
     },
     {
       "ticker": "NRGV",
-      "score": -0.15878955267152967
+      "score": -0.1605669909624048
     },
     {
       "ticker": "INDI",
-      "score": -0.26230407247352355
+      "score": -0.2598602515440931
     }
   ],
   "flatten": {
@@ -90,14 +98,14 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 2 down / 1 flat",
+    "said": "1 up / 3 down / 1 flat",
     "bullets": [
       "XLB DOWN -5.5",
       "XLC FLAT -8.3",
       "XLY DOWN -11.3",
       "XLP UP +5.5",
       "XLE missing",
-      "XLF missing",
+      "XLF DOWN -6.1",
       "XLV missing",
       "XLI missing",
       "XLRE missing",
@@ -388,70 +396,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Consumer Defensive (4/11)",
+      "title": "Sector predict Financial (5/11)",
       "date": "2026-10-08",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-08T08:34:51.628602-04:00",
+      "at": "2026-10-08T08:42:59.610143-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-08/consumer_defensive_predict.md",
+          "path": "01_daily/sectors/2026-10-08/financial_predict.md",
           "ok": true,
           "reason": "",
-          "size": 18981,
-          "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **5.519** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **1.216** (ES -0.39%, ZN -0.03%, PM:XLP +0.37%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **6.0** (raw 9.9)"
+          "size": 21028,
+          "preview": "# Sector Prediction \u2014 Financial \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-6.054** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-3.007** (ES -0.39%, ZN -0.03%, PM:XLF -0.59%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **-1.35** (raw -1.35)"
         },
         {
-          "path": "01_daily/sectors/2026-10-08/consumer_defensive_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-08/financial_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 15459,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (109,032 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Consumer Defensive XLP staples relative performance October 2026\"* \u2192 got 6 results (via gnews_rss)\n- Which Consumer Staples ETF Offers Better Value: XLP or IYK? - The Motley Fool (https://news.google.com/rss/articles/CBMipwFBVV95cUxQRmxkM0RoSlRoNW1ZVmFhVGJDZ0hJT0ZQTHJOemdPNHQ2cG10VVBIX0pzZnNhekJ3YnY0blZCSEJFZEFmVjRYdlgyUEZhZFBZbzgwdUcxTFpDN2xTZjZ1SVM3OGphSE1la0R4akpUMVZKOW96d1p6SERxbVdWZjBsa1J2WDdFejc5eEtqZWduYlVteWRHWjUtYVltczZOV0VoQkc2MUFVSQ?oc=5)\n- State Street or iShares: Which Consumer Staples ETF Offers Better V"
+          "size": 12520,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Financial 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (98,214 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"2s10s yield curve steepening October 2026 bank NIM\"* \u2192 got 6 results (via ddg)\n- US Treasury Yield Curve 2026 | 2s10s Spread, 3m10y Spread ... (https://centralbank.watch/tools/yield-curve/us-yield-curve/)\n- Treasury Curve Steepens to +46 Bps: What 5.24% Yields Mean ... (https://ecmsource.com/treasury-curve-steepens-46-bps-october-2026-corporate-debt/)\n- U.S. Treasury Yield Curve Today (Oct 5, 2026) | Yield Curves ... (http://yieldcurvestoday.com/)\n**Step 2 \u2014 Research.** The model wanted to know: *\"HY IG credit spreads October 8"
         },
         {
-          "path": "01_daily/_transcripts/2026-10-08_sector_consumer_defensive_predict.json",
+          "path": "01_daily/_transcripts/2026-10-08_sector_financial_predict.json",
           "ok": true,
           "reason": "",
-          "size": 182184,
+          "size": 172849,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-08_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 8400,
+          "size": 8393,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-08/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 2427,
+          "size": 2423,
           "preview": "keys: date, n_ok, n_total, required, ok, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-08/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1752,
-          "preview": "# Sector Board \u2014 2026-10-08\nGenerated: **2026-10-08T08:34:51.611561-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1811,
+          "preview": "# Sector Board \u2014 2026-10-08\nGenerated: **2026-10-08T08:42:59.592500-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-08/_board.json",
           "ok": true,
           "reason": "",
-          "size": 7081,
+          "size": 7256,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 1034503,
+          "size": 1035586,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Consumer Defensive \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLP**\n- rubric: `00_grounding/sectors/consumer_defensive.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **5.519** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **1.216** (ES -0.39%, ZN -0.03%, PM:XLP +0.37%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **6.0** (raw 9.9) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Consumer Defensive 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (109,032 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Consumer Defensive XLP staples relative performance October 2026\"* \u2192 got 6 results (via gnews_rss)\n- Which Consumer Staples ETF Offers Better Value: XLP or IYK? - The Motley Fool (https://news.google.com/rss/articles/CBMipwFBVV95cUxQRmxkM0RoSlRoNW1ZVmFhVGJDZ0hJT0ZQTHJOemdPNHQ2cG10VVBIX0pzZnNhekJ3YnY0blZCSEJFZEFmVjRYdlgyUEZhZFBZbzgwdUcxTFpDN2xTZjZ1SVM3OGphSE1la0R4akpUMVZKO"
+      "preview": "# Sector Prediction \u2014 Financial \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-6.054** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-3.007** (ES -0.39%, ZN -0.03%, PM:XLF -0.59%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **-1.35** (raw -1.35) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Financial 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (98,214 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"2s10s yield curve steepening October 2026 bank NIM\"* \u2192 got 6 results (via ddg)\n- US Treasury Yield Curve 2026 | 2s10s Spread, 3m10y Spread ... (https://centralbank.watch/tools/yield-curve/us-yield-curve/)\n- Treasury Curve Steepens to +46 Bps: What 5.24% Yields Mean ... (https://ecmsource.com/treasury-curve-steepens-46-bps-october-2026-corporate-debt/)\n- U.S. Treasury Yield Curve Today (Oct 5"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
