@@ -111,12 +111,15 @@
  pipeline lands dashboard copies in the same push as the tickets.
  Before the dated ticket for a session lands, every strategy shows
  <b>NOT FINAL</b> — a previous session's decisions are never substituted.
- The <b>checks</b> column is the one-row readout:
- <b>factor&nbsp;mine</b> = this strategy's decisions are in the factor-mine
- dashboard copy for the date ("—" for non-factor families),
- <b>checklist</b> = the decision is finalized (status ok/sit in the landed
- ticket), <b>inputs</b> = every file in its needs list is present on
- <code>main</code> — ✔ green / ✘ red (… while probes run).
+ The <b>checks</b> column is the one-row checklist of this strategy's own
+ requirements — the item list differs per strategy: a news-gated factor
+ recipe checks <code>panel · freeze · state · news · judge</code>, an
+ AB-gated one checks <code>ab</code> instead, a stock_book strategy checks
+ all 11 morning files. <b>decision</b> = the buy/sell is finalized (ok/sit
+ in the landed ticket); every other item is one required input probed on
+ <code>main</code> for the date — ✔ green = present, ✘ red = missing,
+ … while probes run. Hover any mark for the full path; the ⊕ needs panel
+ lists the same files with their workflow roles.
  The ret column and the ★ pins come from
  <code>data/factor_mine/recipe_scorecard.json</code>: lifetime and
  last-20-session returns rebuilt daily from the per-recipe paper-trade
@@ -305,7 +308,7 @@ function parseBaseRecipe(name){
 const GATE_INPUTS = [
   [["news_g","news_pack","news_head","news_or","news_both","news_present","news_missing","news","catal_present"],
     ["01_daily/news/{d}_actions.json", "01_daily/news/{d}_judge.md"]],
-  [["ab_g"], ["data/ab_checklist/{d}_ab_checklist_enriched.csv"]],
+  [["ab_g","ab"], ["data/ab_checklist/{d}_ab_checklist_enriched.csv"]],
   [["join_g","join_present","join_vol_green","join"], ["data/join/{d}_ranked.csv"]],
   [["weather"], ["01_daily/weather/{d}_weather.json"]],
 ];
@@ -325,17 +328,12 @@ function fileChip(path){
   return stat + shaH;
 }
 function needsFor(r, d){
-  const isFactor = r.fam === "factor_mine" || r.fam === "factor_mine_preopen";
-  const rows = []; const seen = new Set();
-  const push = (label, path, role) => {
-    if(seen.has(path)) return; seen.add(path);
-    rows.push(`<tr><td class="kv" style="white-space:nowrap">${label}${role ? ` <span class="dim">(${role})</span>` : ""}</td>` +
-      `<td style="white-space:nowrap">${fileChip(path)}</td><td class="name">${path}</td></tr>`);
-  };
-  for(const [label, tpl, role] of (FAMILY_FILES[r.fam] || [])) push(label, tpl.replace("{d}", d), role);
+  const spec = checklistSpec(r.fam, r.name, d);
+  const rows = spec.map(c =>
+    `<tr><td class="kv" style="white-space:nowrap">${c.label}${c.role ? ` <span class="dim">(${c.role})</span>` : ""}</td>` +
+    `<td style="white-space:nowrap">${fileChip(c.path)}</td><td class="name">${c.path}</td></tr>`);
   let recipeHtml = "";
-  if(isFactor){
-    push("recipe state", `data/factor_mine/state/${r.name}/${d}.json`, "positions");
+  if(r.fam === "factor_mine" || r.fam === "factor_mine_preopen"){
     const combo = r.name.startsWith("combo_") ? comboMembers(r.name) : null;
     let gates = [];
     if(combo){
@@ -353,67 +351,92 @@ function needsFor(r, d){
             GATE_LEGEND[g] ? `<span title="${g}">${GATE_LEGEND[g]}</span>` : `<code>${g}</code>`).join(", ") || "<span class='dim'>none (baseline list)</span>"}</div>`;
       }
     }
-    for(const p of gateInputs(gates)) push("gate input", p.replace("{d}", d), "panel bake");
   }
-  if(!rows.length && !recipeHtml) return "";
+  if(!spec.length && !recipeHtml) return "";
   return `<div class="needs"><div class="nt">needs — inputs for this strategy</div>` +
     (rows.length ? `<table>${rows.join("")}</table>` : "") + recipeHtml + `</div>`;
 }
-async function probeNeeds(d){
+// State-file probes for all factor strategies are cached per date and
+// re-probed at most every 4th refresh — 339 tiny GETs per refresh is
+// wasteful when presence for a settled date never changes.
+const STATE_PROBE = {date:null, tick:0, status:{}};
+async function probeStateFiles(d, factorNames){
+  STATE_PROBE.tick++;
+  if(STATE_PROBE.date === d && Object.keys(STATE_PROBE.status).length && STATE_PROBE.tick % 4 !== 0){
+    Object.assign(NEEDS_STATUS, STATE_PROBE.status);
+    return;
+  }
+  const status = {};
+  await Promise.all(factorNames.map(async n => {
+    const p = `data/factor_mine/state/${n}/${d}.json`;
+    status[p] = (await probe(p)).ok;
+  }));
+  STATE_PROBE.date = d; STATE_PROBE.status = status; STATE_PROBE.tick = 0;
+  Object.assign(NEEDS_STATUS, status);
+}
+async function probeNeeds(d, factorNames){
   const paths = new Set();
   for(const list of Object.values(FAMILY_FILES)) for(const [, tpl] of list)
     if(!tpl.includes("{name}")) paths.add(tpl.replace("{d}", d));
   for(const [, ps] of GATE_INPUTS) for(const p of ps) paths.add(p.replace("{d}", d));
-  for(const n of EXPANDED) paths.add(`data/factor_mine/state/${n}/${d}.json`);
   await Promise.all([...paths].map(async p => { NEEDS_STATUS[p] = (await probe(p)).ok; }));
+  await probeStateFiles(d, factorNames || []);
 }
-// ---- quick per-row checks: factor mine / checklist / inputs -------------
-// factor mine = the strategy's decisions are in the factor-mine dashboard
-// copy for this date (dashboard/factor-mine/strategy_tickets.json) — "—"
-// for non-factor families. checklist = the landed ticket carries the
-// strategy with status ok/sit (decision finalized). inputs = every file in
-// the strategy's needs list is present on main for this date.
-let FM_TICKET = {date:null, names:null};
-async function loadFMTicket(d){
-  const r = await jprobe("dashboard/factor-mine/strategy_tickets.json");
-  const names = new Set();
-  if(r.ok && r.json){
-    const st = r.json.strategies || {};
-    for(const [n, s] of Object.entries(st)){
-      if(((s && s.date) || r.json.date) === d) names.add(n);
-    }
-  }
-  FM_TICKET = {date:d, names};
-}
-function needsPaths(fam, name, d){
-  const paths = [];
-  for(const [, tpl] of (FAMILY_FILES[fam] || []))
-    if(!tpl.includes("{name}")) paths.push(tpl.replace("{d}", d));
+// ---- quick per-row checklist --------------------------------------------
+// The items ARE the strategy's own required inputs — the list differs per
+// strategy (family files + recipe-gate inputs + the recipe's state file),
+// each probed on main for the selected date. decision = the buy/sell is
+// final (ok/sit in the landed ticket). Short labels map to the full path
+// in the hover tooltip; the ⊕ needs panel shows the same list with roles.
+const SHORT_LABELS = {
+  "01_daily/general/{d}_predict.md": "predict",
+  "01_daily/sectors/{d}/_board.json": "board",
+  "01_daily/news/{d}_actions.json": "news",
+  "01_daily/news/{d}_finviz_digest.json": "finviz",
+  "01_daily/news/{d}_judge.md": "judge",
+  "01_daily/weather/{d}_weather.json": "weather",
+  "data/ab_checklist/{d}_ab_checklist_enriched.csv": "ab",
+  "data/join/{d}_ranked.csv": "join",
+  "data/peers/{d}_peer_rs.csv": "peers",
+  "data/stock_book/{d}_stock_book.json": "book",
+  "01_daily/{d}_stock_book.md": "report",
+  "data/factor_mine/panel.json": "panel",
+  "data/factor_mine/send_inputs/{d}.json": "freeze",
+  "data/factor_mine/state/{name}/{d}.json": "state",
+  "excel_bot/suggestions/suggestions.csv": "suggestions",
+  "data/sleeve_merge/today.json": "sleeve",
+};
+function checklistSpec(fam, name, d){
+  const out = []; const seen = new Set();
+  const push = (label, tpl, role) => {
+    const path = tpl.replace("{d}", d).replace("{name}", name);
+    if(seen.has(path)) return; seen.add(path);
+    out.push({label: SHORT_LABELS[tpl] || label, path, role: role || ""});
+  };
+  for(const [label, tpl, role] of (FAMILY_FILES[fam] || [])) push(label, tpl, role);
   if(fam === "factor_mine" || fam === "factor_mine_preopen"){
+    push("state", "data/factor_mine/state/{name}/{d}.json", "positions");
     const combo = name.startsWith("combo_") ? comboMembers(name) : null;
     let gates = [];
     if(combo){ for(const pr of combo.map(([m]) => parseBaseRecipe(m)).filter(Boolean)) gates.push(...pr.gates); }
     else { const pr = parseBaseRecipe(name); if(pr) gates = pr.gates; }
-    for(const p of gateInputs(gates)) paths.push(p.replace("{d}", d));
+    for(const p of gateInputs(gates)) push("gate input", p, "panel bake");
   }
-  return [...new Set(paths)];
+  return out;
 }
 function checksCell(r){
-  const isFactor = r.fam === "factor_mine" || r.fam === "factor_mine_preopen";
-  const fm = !isFactor
-    ? `<span class="dim">factor mine: —</span>`
-    : `factor mine: ${FM_TICKET.names && FM_TICKET.names.has(r.name)
-        ? '<span class="ok" title="in dashboard/factor-mine/strategy_tickets.json for this date">✔</span>'
-        : '<span class="fail" title="not in the factor-mine dashboard copy for this date yet">✘</span>'}`;
-  const chk = `checklist: ${r.final
-    ? '<span class="ok" title="decision finalized — status ok/sit in the landed ticket">✔</span>'
-    : '<span class="fail" title="decision NOT final — status is not ok/sit">✘</span>'}`;
-  const inp = `inputs: ${r.inputsOk === null
-    ? '<span class="dim" title="presence probes still running">…</span>'
-    : r.inputsOk
-      ? '<span class="ok" title="every needed input file is present on main for this date">✔</span>'
-      : '<span class="fail" title="at least one needed input file is missing on main for this date">✘</span>'}`;
-  return `<span style="font-size:10.5px;white-space:nowrap">${fm} · ${chk} · ${inp}</span>`;
+  const okS  = t => `<span class="ok" title="${t.replace(/"/g,"&quot;")}">✔</span>`;
+  const failS = t => `<span class="fail" title="${t.replace(/"/g,"&quot;")}">✘</span>`;
+  const pend = `<span class="dim" title="presence probe still running">…</span>`;
+  const items = [`decision: ${r.final
+    ? okS("decision finalized — status ok/sit in the landed ticket")
+    : failS("decision NOT final — status is not ok/sit")}`];
+  for(const c of (r.checks || [])){
+    const st = NEEDS_STATUS[c.path];
+    const tip = `${c.path}${c.role ? ` (${c.role})` : ""}`;
+    items.push(`${c.label}: ${st === undefined ? pend : st ? okS(tip) : failS(tip)}`);
+  }
+  return `<span style="font-size:10.5px;line-height:1.7">${items.join(" · ")}</span>`;
 }
 async function loadTicket(d){
   const chain = [
@@ -548,13 +571,11 @@ async function renderTicket(tk, d){
     const why = s.why || s.note || "";
     const shortWhy = why.length > 90 ? why.slice(0,90) + "…" : why;
     const p = perfOf(name);
-    const npaths = needsPaths(s.family||"", name, d);
-    const known = npaths.every(pp => NEEDS_STATUS[pp] !== undefined);
     rows.push({name, fam:s.family||"", status:badge(s.status, s.sit, s.hard_red),
       buy:tickers(s.buy), sell:tickers(s.sell),
       why, shortWhy, s:s.s, p, pxAsof:firstPxAsof(s), panelBake:s.panel_bake_date, signalDate:s.signal_date,
       final: s.status === "ok" || s.status === "sit",
-      inputsOk: npaths.length ? (known ? npaths.every(pp => !!NEEDS_STATUS[pp]) : null) : null,
+      checks: checklistSpec(s.family||"", name, d),
       star: stars.has(name) ? ` <span title="top ${TOP_N} lifetime performers" style="color:var(--gold)">★</span>` : ""});
   }
   if(sortMode === "perf"){
@@ -716,15 +737,15 @@ async function refresh(){
               push: times.pushed, dash: times.dash,
               fp: dr.fingerprint || null, inputs: dr.inputs || {}};
   NEEDS_STATUS = {};
-  FM_TICKET = {date:d, names:null};
-  const needsP = probeNeeds(d);
-  const fmP = loadFMTicket(d);
+  const factorNames = tk ? Object.entries(tk.json.strategies||{})
+    .filter(([, s]) => (s.family||"").startsWith("factor_mine")).map(([n]) => n) : [];
+  const needsP = probeNeeds(d, factorNames);
   renderCards(tk, times.pushed, d);
   renderTicket(tk, d);
   renderInputs(d);
   renderAll(d);
-  await Promise.all([needsP, fmP]);
-  renderTicket(tk, d); // repaint chips once the probes + dash ticket resolve
+  await needsP;
+  renderTicket(tk, d); // repaint input chips once the presence probes resolve
   $("stamp").textContent = `updated ${hhmm(new Date().toISOString())} · ${d} (ET)` +
     (SCORECARD ? ` · perf ledger through ${SCORECARD.last_date}` : " · perf ledger: not published yet");
 }
