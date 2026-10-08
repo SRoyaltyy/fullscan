@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T04:17:43.824657-04:00",
+  "generated_at": "2026-10-08T04:18:32.368189-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -110,6 +110,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-08\n**Generated:** 2026-10-08T04:17:43.642084-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as oil rises on supply concerns ahead of jobless claims data and PepsiCo earnings\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** PEP, CMCSA, TRI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** PEP\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-08\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T04:18:32.089850-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-08_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97689,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-08_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11503,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-08\n_Generated 2026-10-08T04:18:31.924510-04:00 \u00b7 export=data/exports/finviz_2026-10-07.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1813_"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11522782,
+          "preview": "11717 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-08_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97689,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-08\n_Generated 2026-10-08T04:18:31.924510-04:00 \u00b7 export=data/exports/finviz_2026-10-07.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1813_ \u00b7 11717 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
