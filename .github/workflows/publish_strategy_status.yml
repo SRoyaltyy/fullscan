@@ -56,6 +56,11 @@ jobs:
       - name: Build status (read-only over sealed records)
         env:
           RUN_DATE: ${{ github.event.inputs.run_date }}
+          # fetch-depth 1 is shallow, so the excel lock time is proven via
+          # `gh api`. Without this, gh is unauthenticated and a real prior
+          # lock fails closed as "commit time not proven". A missing time
+          # is still not OK.
+          GH_TOKEN: ${{ github.token }}
         run: python -m src.strategy_status_publish ${RUN_DATE:+--date "$RUN_DATE"}
       - name: Commit data/strategy_status only
         run: |
@@ -82,3 +87,5 @@ jobs:
           echo "::error::push failed"; exit 1
         env:
           RUN_DATE: ${{ github.event.inputs.run_date }}
+          # Rebuild above calls strategy_status_publish again; same token.
+          GH_TOKEN: ${{ github.token }}
