@@ -152,6 +152,120 @@
  canvas{width:100%;max-width:100%;height:560px;background:var(--card);border:1px solid var(--line);border-radius:10px}
 /* fm-ovcal-end */
 </style></head><body><div class="wrap">
+<!-- fm-preopen-labels v1 -->
+<section id="fm-preopen-labels" style="border:1px solid #fbbf24;padding:8px 12px;margin:8px 0">
+<h3>Pre-open sleeves</h3>
+<p class="mut">Same recipe, selection, and exits as the parent. Candidates come only from inputs committed before 09:30 ET: the pre-open strategy tickets (<code>look.source=look</code>), the morning weather S gate, and the prior day's state. A missing or late input sits, and the reason is logged. The evening candidate file is not an input.</p>
+<div id="fm-preopen-books">
+<table><thead><tr><th>sleeve</th><th>label</th><th>parent</th><th>equity</th><th>days</th><th>last session</th></tr></thead><tbody><tr><td><code>union_hot_n4_h1_preopen</code></td><td>starts 10-08 open, no past days</td><td><code>union_hot_n4_h1</code></td><td>$10,000.00</td><td>0</td><td>no sessions yet</td></tr><tr><td><code>union_hot_n4_holdup_preopen</code></td><td>starts 10-08 open, no past days</td><td><code>union_hot_n4_holdup</code></td><td>$10,000.00</td><td>0</td><td>no sessions yet</td></tr></tbody></table><p class='mut'>No past days. Each sleeve starts at $10,000 at the 2026-10-08 open. The day table stays empty until that session is sealed before 09:30 ET and booked after the close.</p>
+</div>
+<ul>
+<li><code>union_hot_n4_h1_preopen</code> — starts 10-08 open, no past days. Same recipe as union_hot_n4_h1, candidates only from inputs committed before 09:30 ET.</li>
+<li><code>union_hot_n4_holdup_preopen</code> — starts 10-08 open, no past days. Same recipe as union_hot_n4_holdup, candidates only from inputs committed before 09:30 ET.</li>
+<li><code>union_hot_n4_h1</code> — picked after the close (evening list) — not knowable at 09:30. Factor Mine recipe union_hot_n4_h1, not the separate IRONCLAD h1 book (research/hot_n4_clean_v4/forward_h1).</li>
+<li><code>union_hot_n4_holdup</code> — picked after the close (evening list) — not knowable at 09:30.</li>
+</ul>
+</section>
+<section id="fm-replay-preopen" style="border:2px dashed #b80;padding:8px 12px;margin:8px 0">
+<h3>Replay from pre-open inputs, not sealed</h3>
+<p class="mut">Research replay through the real engine (factor_mine_book.simulate_book), 09-29 to 10-06, one day at a time from the 09-28 end state on the scoreboard. Buys only from each day's first-saved pre-open ticket list (git show of its first commit, before 09:30 ET). No ticket is rebuilt. Red mornings (S≤-3) buy nothing. Fills at the 09:30 Yahoo open with Futubull fees. Not a scoreboard row and not in the past-day lock.</p>
+<h4>union_hot_n4_h1 <span class='mut'>from the 2026-09-28 end state $12236.0, held none</span></h4>
+<table><thead><tr><th>date</th><th>first-saved pre-open list</th><th>ticket commit (ET)</th><th>S</th><th>buys</th><th>sells</th><th>fees</th><th>equity</th></tr></thead><tbody>
+<tr><td>2026-09-29</td><td><b>no pre-open picks saved</b> — no same-day panel rows for 2026-09-29 — sitting, no live lookup</td><td>2026-09-29T05:41:31-04:00 <code>856b556ed</code></td><td>1.292</td><td>—</td><td>—</td><td>0</td><td>$12236.0</td></tr>
+<tr><td>2026-09-30</td><td><b>no pre-open picks saved</b> — no same-day panel rows for 2026-09-30 — sitting, no live lookup</td><td>2026-09-30T05:40:36-04:00 <code>229f0ac41</code></td><td>2.009</td><td>—</td><td>—</td><td>0</td><td>$12236.0</td></tr>
+<tr><td>2026-10-01</td><td><b>no pre-open picks saved</b> — no same-day panel rows for 2026-10-01 — sitting, no live lookup</td><td>2026-10-01T05:44:50-04:00 <code>9c845e9eb</code></td><td>-1.343</td><td>—</td><td>—</td><td>0</td><td>$12236.0</td></tr>
+<tr><td>2026-10-02</td><td><b>no pre-open picks saved</b> — no same-day panel rows for 2026-10-02 — sitting, no live lookup</td><td>2026-10-02T05:47:59-04:00 <code>2de34bfd9</code></td><td>4.365</td><td>—</td><td>—</td><td>0</td><td>$12236.0</td></tr>
+<tr><td>2026-10-05</td><td><b>no pre-open picks saved</b> — no same-day panel rows for 2026-10-05 — sitting, no live lookup</td><td>2026-10-05T05:41:54-04:00 <code>325b603ef</code></td><td>0.517</td><td>—</td><td>—</td><td>0</td><td>$12236.0</td></tr>
+<tr><td>2026-10-06</td><td><b>no pre-open picks saved</b> — no same-day panel rows for 2026-10-06 — sitting, no live lookup</td><td>2026-10-06T05:40:28-04:00 <code>60b691501</code></td><td>2.623</td><td>—</td><td>—</td><td>0</td><td>$12236.0</td></tr>
+</tbody></table>
+<h4>union_hot_n4_holdup <span class='mut'>from the 2026-09-28 end state $14828.73, held SECZ, TJGC, USDE</span></h4>
+<table><thead><tr><th>date</th><th>first-saved pre-open list</th><th>ticket commit (ET)</th><th>S</th><th>buys</th><th>sells</th><th>fees</th><th>equity</th></tr></thead><tbody>
+<tr><td>2026-09-29</td><td><b>no pre-open picks saved</b> — no same-day panel rows for 2026-09-29 — sitting, no live lookup</td><td>2026-09-29T05:41:31-04:00 <code>856b556ed</code></td><td>1.292</td><td>—</td><td>SECZ 50@16.59, TJGC 27@27.68, USDE 52@16.15</td><td>6.417</td><td>$14827.77</td></tr>
+<tr><td>2026-09-30</td><td><b>no pre-open picks saved</b> — no same-day panel rows for 2026-09-30 — sitting, no live lookup</td><td>2026-09-30T05:40:36-04:00 <code>229f0ac41</code></td><td>2.009</td><td>—</td><td>—</td><td>0</td><td>$14827.77</td></tr>
+<tr><td>2026-10-01</td><td><b>no pre-open picks saved</b> — no same-day panel rows for 2026-10-01 — sitting, no live lookup</td><td>2026-10-01T05:44:50-04:00 <code>9c845e9eb</code></td><td>-1.343</td><td>—</td><td>—</td><td>0</td><td>$14827.77</td></tr>
+<tr><td>2026-10-02</td><td><b>no pre-open picks saved</b> — no same-day panel rows for 2026-10-02 — sitting, no live lookup</td><td>2026-10-02T05:47:59-04:00 <code>2de34bfd9</code></td><td>4.365</td><td>—</td><td>—</td><td>0</td><td>$14827.77</td></tr>
+<tr><td>2026-10-05</td><td><b>no pre-open picks saved</b> — no same-day panel rows for 2026-10-05 — sitting, no live lookup</td><td>2026-10-05T05:41:54-04:00 <code>325b603ef</code></td><td>0.517</td><td>—</td><td>—</td><td>0</td><td>$14827.77</td></tr>
+<tr><td>2026-10-06</td><td><b>no pre-open picks saved</b> — no same-day panel rows for 2026-10-06 — sitting, no live lookup</td><td>2026-10-06T05:40:28-04:00 <code>60b691501</code></td><td>2.623</td><td>—</td><td>—</td><td>0</td><td>$14827.77</td></tr>
+</tbody></table>
+</section>
+<script>
+(function(){
+  var L={"union_hot_n4_h1_preopen": "starts 10-08 open, no past days", "union_hot_n4_holdup_preopen": "starts 10-08 open, no past days", "union_hot_n4_h1": "picked after the close (evening list) \u2014 not knowable at 09:30. Factor Mine recipe union_hot_n4_h1, not the separate IRONCLAD h1 book (research/hot_n4_clean_v4/forward_h1)", "union_hot_n4_holdup": "picked after the close (evening list) \u2014 not knowable at 09:30"};
+  var EMBED={"labels": {"union_hot_n4_h1": "picked after the close (evening list) \u2014 not knowable at 09:30", "union_hot_n4_h1__not_ironclad": "Factor Mine recipe union_hot_n4_h1, not the separate IRONCLAD h1 book (research/hot_n4_clean_v4/forward_h1)", "union_hot_n4_h1_preopen": "starts 10-08 open, no past days", "union_hot_n4_holdup": "picked after the close (evening list) \u2014 not knowable at 09:30", "union_hot_n4_holdup_preopen": "starts 10-08 open, no past days"}, "sleeves": {"union_hot_n4_h1_preopen": {"days": [], "label": "starts 10-08 open, no past days", "parent": "union_hot_n4_h1"}, "union_hot_n4_holdup_preopen": {"days": [], "label": "starts 10-08 open, no past days", "parent": "union_hot_n4_holdup"}}, "start": "2026-10-08"};
+  function esc(x){
+    return String(x==null?'':x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});
+  }
+  function paint(doc){
+    var host=document.getElementById('fm-preopen-books');
+    if(!host || !doc) return;
+    var sleeves=doc.sleeves||{};
+    var names=['union_hot_n4_h1_preopen','union_hot_n4_holdup_preopen'];
+    var html='<table><thead><tr><th>sleeve</th><th>label</th><th>parent</th><th>equity</th><th>days</th><th>last session</th></tr></thead><tbody>';
+    var any=false;
+    names.forEach(function(n){
+      var s=sleeves[n]||{};
+      var days=s.days||[];
+      if(days.length) any=true;
+      var last=days.length?days[days.length-1]:null;
+      var eq=last&&last.equity!=null?Number(last.equity):10000;
+      var why=last?(String(last.date||'')+(last.sit?' · sit':'')+((last.picks||[]).length?' · picks '+(last.picks||[]).join(', '):'')+((last.reasons||[]).length?' · '+(last.reasons||[]).join('; '):'')):'no sessions yet';
+      html+='<tr><td><code>'+esc(n)+'</code></td><td>'+esc(s.label||L[n]||'')+'</td><td><code>'+esc(s.parent||'')+'</code></td><td>$'+eq.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})+'</td><td>'+days.length+'</td><td>'+esc(why)+'</td></tr>';
+    });
+    html+='</tbody></table>';
+    if(!any) html+='<p class="mut">No past days. Each sleeve starts at $10,000 at the 2026-10-08 open. The day table stays empty until that session is sealed before 09:30 ET and booked after the close.</p>';
+    host.innerHTML=html;
+  }
+  function nameOf(el){
+    if(!el || (el.closest && el.closest('#fm-preopen-labels,#fm-replay-preopen'))) return '';
+    if(el.dataset && el.dataset.fmlab) return '';
+    var t='';
+    if(el.tagName==='OPTION' || !el.children || el.children.length===0) t=(el.textContent||'').trim();
+    else if(el.childNodes && el.childNodes[0] && el.childNodes[0].nodeType===3) t=el.childNodes[0].textContent.trim();
+    return Object.prototype.hasOwnProperty.call(L,t) ? t : '';
+  }
+  function tag(el){
+    var t=nameOf(el);
+    if(!t) return;
+    el.dataset.fmlab='1';
+    if(el.tagName==='OPTION'){ el.textContent=t+' — '+L[t]; return; }
+    var s=document.createElement('span');
+    s.className='mut'; s.style.fontSize='0.85em'; s.textContent=' ('+L[t]+')';
+    el.appendChild(s);
+  }
+  function tagAll(){
+    document.querySelectorAll('code,td,th,option,b,a,span,h2,h3,h4,button,div').forEach(tag);
+  }
+  function addChips(){
+    var bar=document.getElementById('sleeveBar');
+    if(!bar || bar.querySelector('[data-fmpre]')) return;
+    ['union_hot_n4_h1_preopen','union_hot_n4_holdup_preopen'].forEach(function(n){
+      var b=document.createElement('button');
+      b.type='button'; b.className='chip'; b.dataset.fmpre='1';
+      b.textContent=n+' — '+(L[n]||'');
+      b.onclick=function(ev){
+        ev.stopPropagation();
+        var box=document.getElementById('fm-preopen-labels');
+        if(box) box.scrollIntoView({block:'nearest'});
+      };
+      bar.appendChild(b);
+    });
+  }
+  function run(){ tagAll(); addChips(); }
+  var busy=false;
+  function later(){ if(busy) return; busy=true; setTimeout(function(){busy=false; run();},200); }
+  function boot(){
+    paint(EMBED);
+    run();
+    fetch('preopen.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(doc){
+      if(doc && doc.sleeves) paint(doc);
+    }).catch(function(){});
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot); else boot();
+  new MutationObserver(later).observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script>
+
+
 <h1>Factor strategy mine <span class="mut" id="sessionHead"></span></h1>
 <div class="sub" id="packStamp"></div>
 <div class="sub" id="gen"></div>

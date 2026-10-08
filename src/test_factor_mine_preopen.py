@@ -40,8 +40,8 @@ def _tickets(day: str, source: str, buys: list[str]) -> str:
     return json.dumps({"date": day, "look": {"source": source}, "strategies": strat})
 
 
-def _predict(s: float) -> str:
-    return f"Prediction: UP (total score {s})\n"
+def _weather(s) -> str:
+    return json.dumps({"signals": {"general_score": s}})
 
 
 def test_gate_uses_last_pre_open_commit() -> None:
@@ -61,26 +61,62 @@ def test_seal_fails_closed() -> None:
     repo = _repo()
     _commit(repo, fp.tickets_rel(D1), _tickets(D1, "no_same_day_panel", []),
             "2026-10-08T05:40:00-04:00")
-    _commit(repo, fp.predict_rel(D1), _predict(1.0), "2026-10-08T05:00:00-04:00")
+    _commit(repo, fp.weather_rel(D1), _weather(1.0), "2026-10-08T05:00:00-04:00")
     doc = fp.build_seal(D1, clock=fp.GitClock(repo))
     for n in NAMES:
         e = doc["sleeves"][n]
         assert e["sit"] and e["picks"] == []
         assert any("look.source=no_same_day_panel" in r for r in e["reasons"])
-    # red morning
+    # red morning weather
     repo = _repo()
     _commit(repo, fp.tickets_rel(D1), _tickets(D1, "look", ["AAA"]),
             "2026-10-08T05:40:00-04:00")
-    _commit(repo, fp.predict_rel(D1), _predict(-3.5), "2026-10-08T05:00:00-04:00")
+    _commit(repo, fp.weather_rel(D1), _weather(-3.5), "2026-10-08T05:00:00-04:00")
     doc = fp.build_seal(D1, clock=fp.GitClock(repo))
     assert all(doc["sleeves"][n]["sit"] for n in NAMES)
-    # S committed after the open is not used
+    # weather committed after the open is not used, even if predict was early
     repo = _repo()
     _commit(repo, fp.tickets_rel(D1), _tickets(D1, "look", ["AAA"]),
             "2026-10-08T05:40:00-04:00")
-    _commit(repo, fp.predict_rel(D1), _predict(2.0), "2026-10-08T09:45:00-04:00")
+    _commit(repo, f"01_daily/general/{D1}_predict.md",
+            "Prediction: UP (total score 9.0)\n", "2026-10-08T05:10:00-04:00")
+    _commit(repo, fp.weather_rel(D1), _weather(2.0), "2026-10-08T09:45:00-04:00")
+    doc = fp.build_seal(D1, clock=fp.GitClock(repo))
+    assert doc["s"] is None and doc["s_source"] == ""
+    assert all(doc["sleeves"][n]["sit"] for n in NAMES)
+    assert any("not before 09:30" in r for r in doc["log"])
+    # weather file with no score sits
+    repo = _repo()
+    _commit(repo, fp.tickets_rel(D1), _tickets(D1, "look", ["AAA"]),
+            "2026-10-08T05:40:00-04:00")
+    _commit(repo, fp.weather_rel(D1), json.dumps({"signals": {}}),
+            "2026-10-08T05:00:00-04:00")
     doc = fp.build_seal(D1, clock=fp.GitClock(repo))
     assert doc["s"] is None and all(doc["sleeves"][n]["sit"] for n in NAMES)
+    assert any("general_score" in r for r in doc["log"])
+
+
+def test_candidates_and_predict_are_not_inputs() -> None:
+    repo = _repo()
+    _commit(repo, fp.tickets_rel(D1),
+            _tickets(D1, "look", ["AAA", "BBB", "CCC", "DDD", "EEE"]),
+            "2026-10-08T05:40:00-04:00")
+    _commit(repo, f"data/factor_mine/candidates/{D1}.json",
+            json.dumps({"rows": [{"ticker": "ZZZ", "date": D1,
+                                  "ohlc_hot_score": 99, "sources": ["union"]}]}),
+            "2026-10-08T05:00:00-04:00")
+    _commit(repo, f"01_daily/general/{D1}_predict.md",
+            "Prediction: UP (total score 9.0)\n", "2026-10-08T05:10:00-04:00")
+    _commit(repo, fp.weather_rel(D1), _weather(1.25), "2026-10-08T05:20:00-04:00")
+    doc = fp.build_seal(D1, clock=fp.GitClock(repo))
+    paths = " ".join(i["path"] for i in doc["inputs"])
+    assert "candidates" not in paths and "predict" not in paths
+    assert doc["s"] == 1.25 and doc["s_source"] == "weather"
+    assert any("before 09:30 ET" in line for line in doc["log"])
+    picks = doc["sleeves"]["union_hot_n4_h1_preopen"]["picks"]
+    assert picks == ["AAA", "BBB", "CCC", "DDD"]
+    assert "ZZZ" not in picks and "EEE" not in picks
+    assert doc["sleeves"]["union_hot_n4_holdup_preopen"]["picks"] == picks
 
 
 def test_seal_refuses_after_open_and_before_start() -> None:
@@ -96,7 +132,7 @@ def test_book_sequential_append_only() -> None:
     repo = _repo()
     _commit(repo, fp.tickets_rel(D1), _tickets(D1, "look", ["AAA", "BBB"]),
             "2026-10-08T05:40:00-04:00")
-    _commit(repo, fp.predict_rel(D1), _predict(1.0), "2026-10-08T05:00:00-04:00")
+    _commit(repo, fp.weather_rel(D1), _weather(1.0), "2026-10-08T05:00:00-04:00")
     clock = fp.GitClock(repo)
     seal = fp.build_seal(D1, clock=clock)
     assert seal["sleeves"][NAMES[0]]["picks"] == ["AAA", "BBB"]
@@ -138,6 +174,7 @@ def test_book_sequential_append_only() -> None:
 def main() -> None:
     test_gate_uses_last_pre_open_commit()
     test_seal_fails_closed()
+    test_candidates_and_predict_are_not_inputs()
     test_seal_refuses_after_open_and_before_start()
     test_book_sequential_append_only()
     print("ok factor_mine_preopen")

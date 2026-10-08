@@ -274,6 +274,7 @@ def render_sequential_html(pack: dict) -> str:
  #days {{ margin-top:12px }}
 </style></head><body><div class="wrap">
 <h1>Factor Mine sequential rebuild</h1>
+<p class="note" id="fm-preopen-seq-note"><code>union_hot_n4_h1</code> — picked after the close (evening list) — not knowable at 09:30. Factor Mine recipe, not the IRONCLAD h1 book (research/hot_n4_clean_v4/forward_h1). <code>union_hot_n4_holdup</code> — picked after the close (evening list) — not knowable at 09:30. <code>union_hot_n4_h1_preopen</code> and <code>union_hot_n4_holdup_preopen</code> start at the 2026-10-08 open, no past days; they are on the mine page.</p>
 <p class="note">Session percents come from <code>data/factor_mine/daily_returns.csv</code>.
 Book equity is the last file under <code>data/factor_mine/state/&lt;recipe&gt;/</code>.
 A day before <code>created_on</code> is <b>designed_after</b> and is not in the real total.
@@ -324,13 +325,13 @@ function baseMean(name, fee, start) {{
 const cards = [];
 if (hot.name) {{
   cards.push(card("HOT4 sequential book", [
-    {{value: hot.book_pct, text: pct(hot.book_pct), note: "state equity " + (hot.state_equity ?? "")}},
+    {{value: hot.book_pct, text: pct(hot.book_pct), note: "state equity " + (hot.state_equity ?? "") + " · picked after the close (evening list) — not knowable at 09:30 · Factor Mine recipe, not the IRONCLAD h1 book"}},
     {{value: hot.timing_real && hot.timing_real.futubull, text: pct(hot.timing_real.futubull), note: "timing_clean real futubull"}},
   ]));
 }}
 if (hold.name) {{
   cards.push(card("holdup real (from created_on)", [
-    {{value: hold.real && hold.real.futubull, text: pct(hold.real.futubull), note: "real futubull, designed_after excluded"}},
+    {{value: hold.real && hold.real.futubull, text: pct(hold.real.futubull), note: "real futubull, designed_after excluded · picked after the close (evening list) — not knowable at 09:30"}},
     {{value: hold.designed_after && hold.designed_after.futubull, text: pct(hold.designed_after.futubull), note: "designed_after futubull"}},
   ]));
 }}
@@ -351,12 +352,20 @@ const baseBody = bases.map(r => `<tr>
 document.getElementById("base").innerHTML =
   `<thead><tr><th>baseline</th><th>fee</th><th>universe</th><th>window</th>
    <th>mean %</th><th>p5</th><th>p50</th><th>p95</th><th>trades</th></tr></thead><tbody>${{baseBody}}</tbody>`;
+const FM_LABELS = {{
+  "union_hot_n4_h1": "picked after the close (evening list) — not knowable at 09:30. Factor Mine recipe, not the IRONCLAD h1 book",
+  "union_hot_n4_holdup": "picked after the close (evening list) — not knowable at 09:30"
+}};
+function fmLabel(name) {{
+  const t = FM_LABELS[name];
+  return t ? `<div class="mut">${{esc(t)}}</div>` : "";
+}}
 function rowHtml(r) {{
   const real = r.real || {{}};
   const des = r.designed_after || {{}};
   const tim = r.timing_real || {{}};
   return `<tr class="pick" data-name="${{esc(r.name)}}">
-    <td>${{esc(r.name)}}</td>
+    <td>${{esc(r.name)}}${{fmLabel(r.name)}}</td>
     <td>${{esc(r.created_on)}}</td>
     <td>${{r.untestable ? "true" : ""}}</td>
     <td class="${{cls(r.book_pct)}}">${{pct(r.book_pct)}}</td>
