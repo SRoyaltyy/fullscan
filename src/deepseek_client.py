@@ -191,6 +191,22 @@ def last_provider() -> str:
     return str(getattr(_CALL_STATE, "provider", "") or "")
 
 
+def last_model() -> str:
+    """Model id of the latest chat() call, e.g. xai/grok-4.6 or deepseek/deepseek-chat."""
+    return str(getattr(_CALL_STATE, "model", "") or "")
+
+
+def _remember_model(provider: str, model: str = "") -> None:
+    if provider == "openclaw":
+        _CALL_STATE.model = (model or config.OPENCLAW_BACKEND_MODEL or "xai/grok-4.6").strip()
+        return
+    if provider == "deepseek":
+        raw = (model or "deepseek-chat").strip()
+        _CALL_STATE.model = raw if raw.startswith("deepseek/") else f"deepseek/{raw}"
+        return
+    _CALL_STATE.model = (model or "").strip()
+
+
 def last_fallback_reason() -> str:
     return str(getattr(_CALL_STATE, "fallback_reason", "") or "")
 
@@ -307,8 +323,16 @@ def _sector_grok_retry_s() -> float:
 
 def _sector_deepseek_allowed(pct: float | None) -> bool:
     """DeepSeek sector essays only when a human forced the backend, or
-    SuperGrok remaining is known and at least 80%."""
+    SuperGrok remaining is known and at least 80%.
+
+    sector_predict.yml sets SECTOR_PREDICT_AUTO_FALLBACK=1 for
+    llm_backend=auto so an empty/timeout Grok hop may fall through.
+    Other jobs keep the 80% gate.
+    """
     if config.prefer_deepseek():
+        return True
+    flag = (os.environ.get("SECTOR_PREDICT_AUTO_FALLBACK") or "").strip().lower()
+    if flag in ("1", "true", "yes", "on") and config.llm_backend() == "auto":
         return True
     return pct is not None and pct >= config.SUPERGROK_FALLBACK_MIN_PCT
 
@@ -828,6 +852,7 @@ def _sector_after_miss(stage_label: str, retry_grok) -> str | None:
         text = retry_grok() or ""
         if text:
             _set_last_provider("openclaw")
+            _remember_model("openclaw", config.OPENCLAW_BACKEND_MODEL)
             _CALL_STATE.sector_degraded = False
             _log_backend_decision(stage_label, "openclaw")
             return text
@@ -872,6 +897,7 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     import os
 
     _set_last_provider("")
+    _CALL_STATE.model = ""
     _CALL_STATE.fallback_reason = ""
     _CALL_STATE.sector_degraded = False
     sector_predict = _is_sector_predict_stage(stage_label)
@@ -910,6 +936,7 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                               backend_model=backend_model)
         if text:
             _set_last_provider("openclaw")
+            _remember_model("openclaw", backend_model or "")
             if sector_predict:
                 _log_backend_decision(stage_label, "openclaw")
             return text
@@ -985,9 +1012,10 @@ def chat(messages: list[dict], model: str, tools: bool = False,
         trace.append(f"fallback_reason: {reason}")
         trace.append("")
     sys_chars = sum(len(str(m.get('content') or '')) for m in messages)
+    _ds_label = model if str(model).startswith("deepseek/") else f"deepseek/{model}"
     trace.append(f"**Step 0 — Setup.** Loaded the rubric, standing lessons, "
                  f"and Channel 1 data ({sys_chars:,} characters of input). "
-                 f"Model: `{model}`. "
+                 f"Model: `{_ds_label}`. "
                  + ("Web search is ENABLED; the model must research current "
                     "events before judging." if tools else
                     "Web search is disabled for this stage; the model works "
@@ -1164,6 +1192,10 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                 body = {"model": model, "messages": copy.deepcopy(messages)}
                 if _is_sector_predict_stage(stage_label):
                     body["provider"] = "deepseek"
+                    body["backend_model"] = (
+                        model if str(model).startswith("deepseek/")
+                        else f"deepseek/{model}"
+                    )
                     body["fallback_reason"] = last_fallback_reason() or "prefer_deepseek"
                 json.dump(body, fh, indent=2, ensure_ascii=False, default=str)
         except OSError as e:
@@ -1176,6 +1208,7 @@ def chat(messages: list[dict], model: str, tools: bool = False,
         except OSError as e:
             print(f"[trace] save failed: {e}")
     _set_last_provider("deepseek")
+    _remember_model("deepseek", model)
     return final
 
 
