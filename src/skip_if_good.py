@@ -682,12 +682,44 @@ def other_preopen_running(date: str) -> dict | None:
     return None
 
 
+def _origin_main_visible() -> bool:
+    """True when this checkout can resolve origin/main (file absence is real)."""
+    import subprocess
+    try:
+        proc = subprocess.run(
+            ["git", "rev-parse", "--verify", "origin/main"],
+            cwd=ROOT, capture_output=True, timeout=15, check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return False
+    return proc.returncode == 0
+
+
+def general_predict_on_main(date: str) -> bool:
+    """True only when ``01_daily/general/<date>_predict.md`` landed on main.
+
+    A done stamp is not that file. 2026-10-08's pass stamp skipped the
+    predictive step while the markdown was never committed. When origin/main
+    is readable, a working-tree copy does not count. Offline (no origin/main),
+    the checkout file is the only evidence.
+    """
+    rel = f"01_daily/general/{date}_predict.md"
+    blob = _git_show_main(rel)
+    if blob is not None:
+        return output_qc.qc_text_general_predict(blob, rel).ok
+    if _origin_main_visible():
+        return False
+    return output_qc.qc_general_predict(ROOT / "01_daily" / "general" / f"{date}_predict.md").ok
+
+
 def check_preopen_pass(date: str, force: bool = False) -> bool:
     """True = a completed Pre-Open ALL pass already landed today → no-op.
 
     Evidence is ``01_daily/<date>_preopen_status.json`` with ``generated_at``
-    on that date, written by a different ``run_id``. An in-progress twin
-    also no-ops. ``force=True`` is the only bypass.
+    on that date, written by a different ``run_id``, AND that day's general
+    predict markdown actually on main (quality-ok). A stamp with no predict
+    file does not skip. An in-progress twin also no-ops. ``force=True`` is
+    the only bypass.
     """
     if force:
         print(f"twin guard: force=true — running {date}", flush=True)
@@ -700,13 +732,20 @@ def check_preopen_pass(date: str, force: bool = False) -> bool:
         if not same:
             when = str(data.get("generated_at") or "")
             who = rid or "?"
-            print(
-                f"twin guard: pass by run {who} at {when} already landed "
-                f"— no-op (use force=true)",
-                flush=True,
-            )
-            return _log(True, "preopen_pass", date,
-                        f"run {who} at {when} runner={data.get('runner') or ''}")
+            if not general_predict_on_main(date):
+                print(
+                    f"twin guard: pass by run {who} at {when} has no "
+                    f"01_daily/general/{date}_predict.md on main — not skipping",
+                    flush=True,
+                )
+            else:
+                print(
+                    f"twin guard: pass by run {who} at {when} already landed "
+                    f"— no-op (use force=true)",
+                    flush=True,
+                )
+                return _log(True, "preopen_pass", date,
+                            f"run {who} at {when} runner={data.get('runner') or ''}")
     other = other_preopen_running(date)
     if other:
         oid = other.get("id") or "?"
