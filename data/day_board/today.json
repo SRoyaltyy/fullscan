@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T09:36:41.234936-04:00",
+  "generated_at": "2026-10-08T13:07:11.553707-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -86,10 +86,10 @@
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $103,033.45",
+    "said": "0 priced buys \u00b7 cash $108,970.65",
     "bullets": [
       "0 priced buys",
-      "cash $103,033.45"
+      "cash $108,970.65"
     ]
   },
   "general": {
@@ -121,38 +121,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "status",
-      "title": "Pre-open status packet",
-      "date": "2026-10-08",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-08T09:17:42.261729-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-10-08_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 8301,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
-        },
-        {
-          "path": "01_daily/2026-10-08_preopen_status.json",
-          "ok": true,
-          "reason": "",
-          "size": 7267,
-          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
-        },
-        {
-          "path": "01_daily/2026-10-08_preopen_status.md",
-          "ok": true,
-          "reason": "",
-          "size": 572,
-          "preview": "# Pre-open ALL status \u2014 2026-10-08\nall_ok=True  qc_all_ok=True  book_ok=True  grok_ok=True  news_mode=on  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
-        }
-      ],
-      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-08\nall_ok=True  qc_all_ok=True  book_ok=True  grok_ok=True  news_mode=on  missing=none\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 0\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -453,6 +421,122 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-08\n_Generated 2026-10-08T13:30:53 \u2014 live `flatten_robust`._\n**S=-6.79; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-6.79** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$103,033.45** (after 09:30 $103,033.45 \u00b7 after 16:00 $103,033.45)\n- Prior close **$103,033.45** \u00b7 09:30 **$103,033.45** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$103,033.45**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$103,033.45** \u00b7 2026-10-08 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, "
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T13:07:10.257334-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 25744,
+          "preview": "2026-10-08 BUY ASTH, AMN, MQ, TBBB, PACS, SPOT, TMUS, TDS \u00b7 SELL OKLO, FCEL, NEOV, EOSE, NRGV, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 894,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-08.json",
+          "ok": true,
+          "reason": "",
+          "size": 190597,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-08_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 154497,
+          "preview": "2026-10-08 BUY ASTH, AMN, MQ, TBBB, PACS, SPOT, TMUS, TDS \u00b7 SELL OKLO, FCEL, NEOV, EOSE, NRGV, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2367294,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-08_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2367294,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-08.json",
+          "ok": true,
+          "reason": "",
+          "size": 156223,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2611297,
+          "preview": "2026-10-08 BUY NTSK, NTAP, ASTH, BAND, AMN, MQ \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2367294,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 154497,
+          "preview": "2026-10-08 BUY ASTH, AMN, MQ, TBBB, PACS, SPOT, TMUS, TDS \u00b7 SELL OKLO, FCEL, NEOV, EOSE, NRGV, ENVX, INDI, TE"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2367294,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2367294,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2611297,
+          "preview": "2026-10-08 BUY NTSK, NTAP, ASTH, BAND, AMN, MQ \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1390,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1390,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-08 BUY ASTH, AMN, MQ, TBBB, PACS, SPOT, TMUS, TDS \u00b7 SELL OKLO, FCEL, NEOV, EOSE, NRGV, ENVX, INDI, TE \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-08 BUY ASTH, AMN, MQ, TBBB, PACS, SPOT, TMUS, TDS \u00b7 SELL OKLO, FCEL, NEOV, EOSE, NRGV, ENVX, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-08 BUY NTSK, NTAP, ASTH, BAND, AMN, MQ \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, NRGV, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-08 BUY ASTH, AMN, MQ, TBBB, PACS, SPOT, TMUS, TDS \u00b7 SELL OKLO, FCEL, NEOV, EOSE, NRGV, ENVX, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, sessi"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
