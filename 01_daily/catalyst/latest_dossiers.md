@@ -49,5 +49,7 @@
   - positive Contract win/expansion 2026-09-04: announced Friday a significant award from bp to provide offshore stimulation services acro
   - positive Earnings guidance raise 2026-09-09: raised its financial guidance for the full year on Wednesday after factoring in a boost fr
   - negative Earnings guidance cut 2026-09-09: the company lowered its expected free-cash-flow conversion target for 2026 to a range of 4
+- **KGS** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS
+- **UBER** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 UBER
 
 CATALYST_DAILY_OK

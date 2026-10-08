@@ -2417,6 +2417,26 @@
       "size": "mid"
     },
     {
+      "ticker": "RIG",
+      "buy_score": 2.85,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 2.85,
+          "bucket": "override_captain",
+          "net_signal": "Strong Bullish",
+          "conviction": 95
+        }
+      ],
+      "net": 2.85,
+      "side": "buy",
+      "catalyst_signal": "Strong Bullish",
+      "catalyst_conviction": 95,
+      "catalyst_stack": "Transocean stacked multi-year backlog through 2026, capped by the June 30 Equinor package of more than $1 billion across seven rig-years, after the April 14 Petrobras Corcovado extension, June 16 Norge/Equinox awards, August 20 ONGC KG2 letter of award, and the October 8 Conquero"
+    },
+    {
       "ticker": "JOBY",
       "buy_score": 0.0,
       "sell_score": 2.8,
@@ -2769,6 +2789,26 @@
       "size": "large"
     },
     {
+      "ticker": "SLB",
+      "buy_score": 1.86,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 1.86,
+          "bucket": "override_captain",
+          "net_signal": "Strong Bullish",
+          "conviction": 62
+        }
+      ],
+      "net": 1.86,
+      "side": "buy",
+      "catalyst_signal": "Strong Bullish",
+      "catalyst_conviction": 62,
+      "catalyst_stack": "On 2026-08-31 SLB agreed to acquire Kelvion for $3.4B cash plus $0.7B of assumed debt to expand data-center thermal management (close targeted H1 2027), after completing HydraWell on 2026-08-03 and S&P Global’s upstream software portfolio on 2026-09-01. Q2 2026 results on 2026-07"
+    },
+    {
       "ticker": "PNC",
       "buy_score": 1.6,
       "sell_score": 0.0,
@@ -3029,6 +3069,26 @@
       "size": "large"
     },
     {
+      "ticker": "BKR",
+      "buy_score": 1.26,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 1.26,
+          "bucket": "override_captain",
+          "net_signal": "Strong Bullish",
+          "conviction": 42
+        }
+      ],
+      "net": 1.26,
+      "side": "buy",
+      "catalyst_signal": "Strong Bullish",
+      "catalyst_conviction": 42,
+      "catalyst_stack": "Baker Hughes closed Chart Industries on 2026-07-16 as a third segment targeting $325 million of annualized cost synergies, then on 2026-09-09 raised 2026 revenue guidance to $28.5–$30.3 billion to include the deal. Second-quarter results on 2026-07-26 showed $10.5 billion of orde"
+    },
+    {
       "ticker": "NEM",
       "buy_score": 1.68,
       "sell_score": 2.83,
@@ -3203,6 +3263,46 @@
       "net": -1.15,
       "side": "sell",
       "size": "large"
+    },
+    {
+      "ticker": "TSLA",
+      "buy_score": 0.0,
+      "sell_score": 0.45,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "sell",
+          "weight": 0.45,
+          "bucket": "earnings",
+          "net_signal": "Bearish",
+          "conviction": 24
+        }
+      ],
+      "net": -0.45,
+      "side": "sell",
+      "catalyst_signal": "Bearish",
+      "catalyst_conviction": 24,
+      "catalyst_stack": "Tesla converted autonomy from promise to product: Dutch FSD Supervised type approval on April 10, 2026, a Nevada permit for up to 5,000 robotaxis on August 20, and paid Austin Cybercab rides from September 4. Volume prints stayed constructive, with record Q2 deliveries of 480,126"
+    },
+    {
+      "ticker": "NFLX",
+      "buy_score": 0.0,
+      "sell_score": 0.45,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "sell",
+          "weight": 0.45,
+          "bucket": "earnings",
+          "net_signal": "Bearish",
+          "conviction": 21
+        }
+      ],
+      "net": -0.45,
+      "side": "sell",
+      "catalyst_signal": "Bearish",
+      "catalyst_conviction": 21,
+      "catalyst_stack": "On April 16, 2026 Netflix posted a Q1 revenue beat at $12.25 billion, though EPS was inflated by a $2.8 billion Warner Bros. Discovery termination fee and shares still dropped on a softer Q2 setup. The board added a $25 billion buyback on April 22 and then executed a record $4.7 "
     },
     {
       "ticker": "AVGO",
@@ -3539,6 +3639,6 @@
     "NVDA": 4.0,
     "CEG": 5.5
   },
-  "catalyst_tickers": 0,
+  "catalyst_tickers": 5,
   "catalyst_date": "2026-10-08"
 }
