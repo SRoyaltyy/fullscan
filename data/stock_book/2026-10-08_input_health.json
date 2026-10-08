@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:41:37.902337-04:00",
+  "generated_at": "2026-10-08T09:28:49.359237-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -21,13 +21,13 @@
       "family": "join",
       "status": "ok",
       "n": 5907,
-      "detail": "std=0.980"
+      "detail": "std=0.947"
     },
     {
       "name": "news_actions",
       "family": "news",
       "status": "ok",
-      "n": 133,
+      "n": 138,
       "detail": ""
     },
     {
@@ -90,8 +90,8 @@
       "name": "sector_predicts",
       "family": "sector",
       "status": "degraded",
-      "n": 4,
-      "detail": "4/11 quality"
+      "n": 8,
+      "detail": "8/11 quality"
     },
     {
       "name": "price_store",
