@@ -16,19 +16,18 @@ Two steps, both append-only:
 
 1. ``seal`` (morning, before 09:30 ET on session D). Reads, at the last
    commit before 09:30 ET on D (``git show <sha>:<path>``, never the
-   working tree):
+   working tree), and nothing else:
      - ``data/day_board/<D>_strategy_tickets.json``; its parent buy list
-       is used only when ``look.source == "look"``;
-     - ``data/factor_mine/candidates/<D>.json``; its rows are run through
-       the parent ``pick_day`` only when they carry rank fields;
-     - ``01_daily/weather/<D>_weather.json`` for the morning S
+       is the candidate list only when ``look.source == "look"``;
+     - ``01_daily/weather/<D>_weather.json`` for the morning S gate
        (``signals.general_score``). S <= -3 means no buys. Missing S
        means no buys;
      - the prior session's carried state for the sleeve.
+   The evening candidate file and the predict markdown are not inputs.
    Any input that has no commit before 09:30 ET on D is not used and
-   the reason is logged in the seal. With no usable candidate source,
-   with no S, or with a prior state that was not committed before the
-   open, the sleeve sits (no buys; held lots still follow the exit
+   the reason is logged in the seal. With no usable ticket list, with
+   no weather S, or with a prior state that was not committed before
+   the open, the sleeve sits (no buys; held lots still follow the exit
    rules). Writes ``data/factor_mine/preopen/seals/<D>.json`` once.
    The seal refuses at or after 09:30 ET.
 
@@ -71,7 +70,8 @@ DASH_JSON = ROOT / "dashboard" / "factor-mine" / "preopen.json"
 STATE_DIR = ROOT / "data" / "factor_mine" / "state"
 SCORE_DIR = ROOT / "03_scoreboard" / "factor_mine"
 NEW_LABEL = "starts 10-08 open, no past days"
-PARENT_LABEL = "picked after the close (evening list), not knowable at 09:30"
+PARENT_LABEL = ("picked after the close (evening list) — "
+                "not knowable at 09:30")
 H1_NOT_IRONCLAD = ("Factor Mine recipe union_hot_n4_h1, not the separate "
                    "IRONCLAD h1 book (research/hot_n4_clean_v4/forward_h1)")
 
@@ -85,10 +85,6 @@ class PreopenRefused(SystemExit):
 
 def tickets_rel(day: str) -> str:
     return f"data/day_board/{day}_strategy_tickets.json"
-
-
-def candidates_rel(day: str) -> str:
-    return f"data/factor_mine/candidates/{day}.json"
 
 
 def weather_rel(day: str) -> str:
@@ -237,32 +233,6 @@ def ticket_rows(doc: dict | None, parent: str) -> tuple[list[dict], str]:
     return rows, "" if rows else "tickets look list empty"
 
 
-def candidate_picks(doc: dict | None, rec: dict, day: str) -> tuple[list[str], str]:
-    if not isinstance(doc, dict):
-        return [], "candidates unreadable"
-    rows = [dict(r) for r in (doc.get("rows") or []) if isinstance(r, dict)
-            and str(r.get("date") or day)[:10] == day and r.get("ticker")]
-    if not rows:
-        return [], "candidates carry no ranked rows (names only)"
-    from . import factor_mine as fm
-    for r in rows:
-        r["date"] = day
-    return [str(r["ticker"]).upper() for r in fm.pick_day(rows, rec)], ""
-
-
-def predict_s(raw: bytes | None):
-    import re
-    if not raw:
-        return None
-    m = re.search(r"Prediction:\s*(UP|DOWN|FLAT).*?total score\s*(-?[\d.]+)",
-                  raw.decode("utf-8", errors="replace"))
-    return float(m.group(2)) if m else None
-
-
-def predict_rel(day: str) -> str:
-    return f"01_daily/general/{day}_predict.md"
-
-
 def weather_s(doc: dict | None):
     if not isinstance(doc, dict):
         return None
@@ -278,26 +248,25 @@ def build_seal(day: str, *, clock: GitClock | None = None) -> dict:
     clock = clock or GitClock()
     cut = open_at(day)
     tick = clock.before(tickets_rel(day), cut)
-    cand = clock.before(candidates_rel(day), cut)
     wx = clock.before(weather_rel(day), cut)
-    pr = clock.before(predict_rel(day), cut)
-    inputs = [_public(tick), _public(cand), _public(wx), _public(pr)]
-    s = predict_s(pr["raw"]) if pr["ok"] else None
-    s_source = "predict_md" if s is not None else ""
-    if s is None and wx["ok"]:
-        s = weather_s(_json(wx))
-        s_source = "weather" if s is not None else ""
+    inputs = [_public(tick), _public(wx)]
+    s = weather_s(_json(wx)) if wx["ok"] else None
+    s_source = "weather" if s is not None else ""
     log: list[str] = []
-    if not tick["ok"]:
+    if tick["ok"]:
+        log.append(f"tickets commit {tick['commit']} at {tick['committed_at']} "
+                   "is before 09:30 ET")
+    else:
         log.append(f"tickets not used: {tick['reason']}")
-    if not cand["ok"]:
-        log.append(f"candidates not used: {cand['reason']}")
-    if not wx["ok"]:
+    if wx["ok"]:
+        log.append(f"weather commit {wx['commit']} at {wx['committed_at']} "
+                   "is before 09:30 ET")
+        if s is None:
+            log.append("weather has no general_score")
+    else:
         log.append(f"weather not used: {wx['reason']}")
-    if not pr["ok"]:
-        log.append(f"predict md not used: {pr['reason']}")
     if s is None:
-        log.append("no morning S committed before 09:30 ET")
+        log.append("no morning weather S committed before 09:30 ET")
     sleeves = {}
     for name, parent in SLEEVES.items():
         rec = sleeve_recipe(name)
@@ -307,7 +276,11 @@ def build_seal(day: str, *, clock: GitClock | None = None) -> dict:
         if prev:
             prior = clock.before(state_rel(name, prev), cut)
             inputs.append(_public(prior))
-            if not prior["ok"]:
+            if prior["ok"]:
+                log.append(
+                    f"{name} prior state {prev} commit {prior['commit']} at "
+                    f"{prior['committed_at']} is before 09:30 ET")
+            else:
                 reasons.append(f"prior state {prev} not committed before "
                                f"09:30 ET: {prior['reason']}")
         rows: list[dict] = []
@@ -315,20 +288,12 @@ def build_seal(day: str, *, clock: GitClock | None = None) -> dict:
             rows, why = ticket_rows(_json(tick), parent)
             if why:
                 reasons.append(why)
-        picks_c: list[str] = []
-        if cand["ok"]:
-            picks_c, why = candidate_picks(_json(cand), rec, day)
-            if why:
-                reasons.append(why)
-        if picks_c:
-            picks, source = picks_c, "candidates"
-        else:
-            picks = [r["ticker"] for r in rows][: int(rec.get("top_n") or 4)]
-            source = "tickets_look" if picks else "none"
+        picks = [r["ticker"] for r in rows][: int(rec.get("top_n") or 4)]
+        source = "tickets_look" if picks else "none"
         sit = False
         if s is None:
             sit = True
-            reasons.append("no pre-open S: no buys")
+            reasons.append("no pre-open weather S: no buys")
         elif s <= HARD_RED:
             sit = True
             reasons.append(f"S={s:+.2f} <= -3: no buys")
@@ -348,6 +313,8 @@ def build_seal(day: str, *, clock: GitClock | None = None) -> dict:
     doc = {
         "date": day,
         "start": START,
+        "inputs_rule": ("tickets look.source=look, weather general_score, "
+                        "prior state; last commit before 09:30 ET only"),
         "open_cutoff_et": cut.isoformat(),
         "s": s,
         "s_source": s_source,

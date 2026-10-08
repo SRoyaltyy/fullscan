@@ -3,9 +3,11 @@ name: Factor Mine pre-open sleeves
 # union_hot_n4_h1_preopen / union_hot_n4_holdup_preopen (src/factor_mine_preopen.py).
 # Start: $10k at the 2026-10-08 open. No backfill, no day before 10-08.
 #
-# seal: morning, BEFORE 09:30 ET. Reads tickets / candidates / predict md /
-#   weather / prior state at their last commit before 09:30 ET on the
-#   session and writes data/factor_mine/preopen/seals/<D>.json once. The
+# seal: morning, BEFORE 09:30 ET. Reads only the pre-open tickets
+#   (look.source=look), the morning weather S gate, and the prior state,
+#   each at its last commit before 09:30 ET on the session, and writes
+#   data/factor_mine/preopen/seals/<D>.json once. The evening candidate
+#   file and the predict markdown are not inputs. The
 #   code refuses at or after 09:30 ET; this job also stops at 09:25 ET so
 #   the push lands before the open. A seal committed at or after 09:30 ET
 #   is treated as a sit by the book. The window is 09:00-09:25 ET so the
