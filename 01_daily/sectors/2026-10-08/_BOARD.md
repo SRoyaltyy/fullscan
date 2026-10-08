@@ -1,15 +1,15 @@
 # Sector Board — 2026-10-08
 
-Generated: **2026-10-08T08:42:59.592500-04:00** (America/New_York)
+Generated: **2026-10-08T08:55:57.548247-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
 ## Summary
 
-- Predicts present: **5/11**
+- Predicts present: **6/11**
 - Outcomes graded: **0/11**
 - Direction hits (when graded): **0/0**
-- Predicted up / down / flat-or-missing: **1** / **3** / **7**
+- Predicted up / down / flat-or-missing: **1** / **4** / **6**
 
 ## Full table
 
@@ -23,7 +23,7 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 | Financial | XLF | down | mild | -6.05 | 0.65 | — | — | — | P |
 | Healthcare | XLV | — | — | — | — | — | — | — | — |
 | Industrials | XLI | — | — | — | — | — | — | — | — |
-| Real Estate | XLRE | — | — | — | — | — | — | — | — |
+| Real Estate | XLRE | down | mild | -7.06 | 0.65 | — | — | — | P |
 | Technology | XLK | — | — | — | — | — | — | — | — |
 | Utilities | XLU | — | — | — | — | — | — | — | — |
 
@@ -34,6 +34,7 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 ## Predicted laggards (down)
 
 - **Consumer Cyclical** (XLY): score=-11.33, mag=mild, conf=0.65
+- **Real Estate** (XLRE): score=-7.06, mag=mild, conf=0.65
 - **Financial** (XLF): score=-6.05, mag=mild, conf=0.65
 - **Basic Materials** (XLB): score=-5.54, mag=mild, conf=0.62
 

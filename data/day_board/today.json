@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:43:00.866571-04:00",
+  "generated_at": "2026-10-08T08:55:58.838994-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -98,7 +98,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 3 down / 1 flat",
+    "said": "1 up / 4 down / 1 flat",
     "bullets": [
       "XLB DOWN -5.5",
       "XLC FLAT -8.3",
@@ -108,7 +108,7 @@
       "XLF DOWN -6.1",
       "XLV missing",
       "XLI missing",
-      "XLRE missing",
+      "XLRE DOWN -7.1",
       "XLK missing",
       "XLU missing"
     ]
@@ -396,70 +396,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Financial (5/11)",
+      "title": "Sector predict Real Estate (6/11)",
       "date": "2026-10-08",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-08T08:42:59.610143-04:00",
+      "at": "2026-10-08T08:55:57.564257-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-08/financial_predict.md",
+          "path": "01_daily/sectors/2026-10-08/real_estate_predict.md",
           "ok": true,
           "reason": "",
-          "size": 21028,
-          "preview": "# Sector Prediction \u2014 Financial \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-6.054** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-3.007** (ES -0.39%, ZN -0.03%, PM:XLF -0.59%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **-1.35** (raw -1.35)"
+          "size": 15197,
+          "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-7.057** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.685** (ES -0.39%, ZN -0.03%, PM:XLRE -0.07%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **-4.675** (raw -4.675)"
         },
         {
-          "path": "01_daily/sectors/2026-10-08/financial_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-08/real_estate_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 12520,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Financial 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (98,214 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"2s10s yield curve steepening October 2026 bank NIM\"* \u2192 got 6 results (via ddg)\n- US Treasury Yield Curve 2026 | 2s10s Spread, 3m10y Spread ... (https://centralbank.watch/tools/yield-curve/us-yield-curve/)\n- Treasury Curve Steepens to +46 Bps: What 5.24% Yields Mean ... (https://ecmsource.com/treasury-curve-steepens-46-bps-october-2026-corporate-debt/)\n- U.S. Treasury Yield Curve Today (Oct 5, 2026) | Yield Curves ... (http://yieldcurvestoday.com/)\n**Step 2 \u2014 Research.** The model wanted to know: *\"HY IG credit spreads October 8"
+          "size": 12915,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (98,522 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10-year Treasury yield 5.3% October 8 2026 REITs selloff\"* \u2192 got 6 results (via ddg)\n- Treasury Yields & Bond Market \u2014 Monthly Report October 2026 (https://stockmarketwatch.com/bonds/reports/october-2026)\n- Treasury Yield Curve Today: October 8, 2026 \u2502 Rates & Spread ... (https://primerates.com/primerate/treasury-yield-curve/)\n- 10-YEAR TREASURY YIELD FORECAST 2026, 2027, 2028 (https://longforecast.com/10y-treasury)\n**Step 2 \u2014 Research.** The model wanted to know: *\"FOMC minutes October 2026 another rate hike likely inflation"
         },
         {
-          "path": "01_daily/_transcripts/2026-10-08_sector_financial_predict.json",
+          "path": "01_daily/_transcripts/2026-10-08_sector_real_estate_predict.json",
           "ok": true,
           "reason": "",
-          "size": 172849,
+          "size": 169599,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-08_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 8393,
+          "size": 8386,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-08/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 2423,
+          "size": 2419,
           "preview": "keys: date, n_ok, n_total, required, ok, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-08/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1811,
-          "preview": "# Sector Board \u2014 2026-10-08\nGenerated: **2026-10-08T08:42:59.592500-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1873,
+          "preview": "# Sector Board \u2014 2026-10-08\nGenerated: **2026-10-08T08:55:57.548247-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-08/_board.json",
           "ok": true,
           "reason": "",
-          "size": 7256,
+          "size": 7428,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 1035586,
+          "size": 1036673,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Financial \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-6.054** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-3.007** (ES -0.39%, ZN -0.03%, PM:XLF -0.59%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **-1.35** (raw -1.35) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Financial 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (98,214 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"2s10s yield curve steepening October 2026 bank NIM\"* \u2192 got 6 results (via ddg)\n- US Treasury Yield Curve 2026 | 2s10s Spread, 3m10y Spread ... (https://centralbank.watch/tools/yield-curve/us-yield-curve/)\n- Treasury Curve Steepens to +46 Bps: What 5.24% Yields Mean ... (https://ecmsource.com/treasury-curve-steepens-46-bps-october-2026-corporate-debt/)\n- U.S. Treasury Yield Curve Today (Oct 5"
+      "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-7.057** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.685** (ES -0.39%, ZN -0.03%, PM:XLRE -0.07%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **-4.675** (raw -4.675) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (98,522 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10-year Treasury yield 5.3% October 8 2026 REITs selloff\"* \u2192 got 6 results (via ddg)\n- Treasury Yields & Bond Market \u2014 Monthly Report October 2026 (https://stockmarketwatch.com/bonds/reports/october-2026)\n- Treasury Yield Curve Today: October 8, 2026 \u2502 Rates & Spread ... (https://primerates.com/primerate/treasury-yield-curve/)\n- 10-YEAR TREASURY YIELD FORECAST 2026, 2027, 2028 (https"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

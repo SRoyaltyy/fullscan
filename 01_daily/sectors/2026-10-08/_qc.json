@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "n_ok": 5,
+  "n_ok": 6,
   "n_total": 11,
   "required": false,
   "ok": true,
@@ -80,9 +80,9 @@
     },
     {
       "sector": "Real Estate",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 15197,
       "status": "DEGRADED",
       "provider": "openclaw",
       "fallback_reason": "openclaw_timeout"
