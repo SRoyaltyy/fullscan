@@ -726,6 +726,8 @@ def main():
     if args.parse_only:
         args.extract = 0
     report = run(ROOT, args.date, args.force, args.workers, args.extract, args.hours, parse_only=args.parse_only, quick=args.quick)
+    from .news_intake_review_export import export_review_request
+    report['review_export'] = export_review_request(ROOT)
     if args.context_vault:
         from news_context_check import run_context
         report["news_context"] = run_context(ROOT, args.date, args.context_vault,

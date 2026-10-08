@@ -1,0 +1,398 @@
+{
+  "session_id": "random-review-20261008",
+  "selection": {
+    "seed": 20261008174613,
+    "pool_size": 1589,
+    "scope": "broad_economic_keyword_prefilter_false_positives_are_recorded_not_passes",
+    "source_blob": "2a56f5fc8a58e111b03d7cfedf335b373ee2c8ec",
+    "ordering": "sorted_titles_then_seeded_shuffle",
+    "deduplication": "normalised_headline_group",
+    "previously_inspected": "must_be_marked_development_not_holdout"
+  },
+  "cases": [
+    {
+      "position": 1,
+      "archive_date": "2026-10-04",
+      "document_id": "a4e04af4539fe509004ffbf4",
+      "normalised_title": "nelson advisors strategic consolidation in caretech analysis of lottie s acquisition of caremaster"
+    },
+    {
+      "position": 2,
+      "archive_date": "2026-10-04",
+      "document_id": "5c450ebc3f6229b2e78dd44f",
+      "normalised_title": "israeli strike kills 2 christian women lecturer her mother in new gaza ceasefire breach"
+    },
+    {
+      "position": 3,
+      "archive_date": "2026-10-04",
+      "document_id": "74da14c670208822d69032bb",
+      "normalised_title": "zurich completes beazley acquisition creating world s largest specialty insurer"
+    },
+    {
+      "position": 4,
+      "archive_date": "2026-10-04",
+      "document_id": "9615b4bd79b2228e9bc834f1",
+      "normalised_title": "paramount closes 52 billion debt financing as century scale acquisition enters countdown to closing"
+    },
+    {
+      "position": 5,
+      "archive_date": "2026-10-04",
+      "document_id": "584854b39ef7c51480b8c55f",
+      "normalised_title": "long term debt to total equity ratio of columbus acquisition corp nasdaq saiq"
+    },
+    {
+      "position": 6,
+      "archive_date": "2026-10-04",
+      "document_id": "de00da1e6d9f7caa0943bf89",
+      "normalised_title": "weak us payrolls likely to keep rate setters on the sidelines in october"
+    },
+    {
+      "position": 7,
+      "archive_date": "2026-10-04",
+      "document_id": "1026d349e4aed9a6ca965b5b",
+      "normalised_title": "trojan gold announces definitive agreement for amalgamation with tashota resources and strike copper"
+    },
+    {
+      "position": 8,
+      "archive_date": "2026-10-04",
+      "document_id": "8b691e846214e0ada11bda6c",
+      "normalised_title": "adviser linked entities agree to buy 10 shares in hall chadwick hcac if its reecycle merger closes"
+    },
+    {
+      "position": 9,
+      "archive_date": "2026-10-04",
+      "document_id": "92921710bc446a877dd94d03",
+      "normalised_title": "zurich completes 10 8b beazley acquisition"
+    },
+    {
+      "position": 10,
+      "archive_date": "2026-10-04",
+      "document_id": "f8342323625367307e8763aa",
+      "normalised_title": "fda approves jaypirca for first line cll sll treatment"
+    },
+    {
+      "position": 11,
+      "archive_date": "2026-10-04",
+      "document_id": "b63ba1d2c997123fb0911f5c",
+      "normalised_title": "arpak international investments limited reports earnings results for the full year ended june 30 2026"
+    },
+    {
+      "position": 12,
+      "archive_date": "2026-10-04",
+      "document_id": "2db71cd46e970a39d44dd096",
+      "normalised_title": "eurozone inflation hits its highest level in three years at 3 8 as energy costs soar"
+    },
+    {
+      "position": 13,
+      "archive_date": "2026-10-04",
+      "document_id": "9db65eb837240c479b0f7192",
+      "normalised_title": "rivn stock slips as recall and insider sale weigh on outlook"
+    },
+    {
+      "position": 14,
+      "archive_date": "2026-10-04",
+      "document_id": "09eb2cbc4aa928633b1b8366",
+      "normalised_title": "flight cancellations lufthansa strike and italian air traffic control walkout hit luxembourg flights"
+    },
+    {
+      "position": 15,
+      "archive_date": "2026-10-04",
+      "document_id": "416cfa705e6642a4bda34332",
+      "normalised_title": "rafael s trappsol cyclo misses primary endpoint targets 2026 fda filing"
+    },
+    {
+      "position": 16,
+      "archive_date": "2026-10-04",
+      "document_id": "14632dd1689e859738109e4e",
+      "normalised_title": "5 aggravating ways tariffs are chipping away at your paycheck"
+    },
+    {
+      "position": 17,
+      "archive_date": "2026-10-04",
+      "document_id": "6bf49b6302daed31ae108bb3",
+      "normalised_title": "new 850m debt deal moves troilus copper gold project closer to full funding"
+    },
+    {
+      "position": 18,
+      "archive_date": "2026-10-04",
+      "document_id": "780b0f3489b142fda51cb4f0",
+      "normalised_title": "average long term us mortgage rate churns upward to its highest level in nearly 3 years at 7 28"
+    },
+    {
+      "position": 19,
+      "archive_date": "2026-10-04",
+      "document_id": "54df82d7e153b23beea83056",
+      "normalised_title": "standard chartered reverses call now sees ecb lifting rates in december"
+    },
+    {
+      "position": 20,
+      "archive_date": "2026-10-04",
+      "document_id": "940f1c045bb661f112fa63ba",
+      "normalised_title": "selangor expands rm30 monthly transport subsidy to ktm komuter services effective immediately"
+    },
+    {
+      "position": 21,
+      "archive_date": "2026-10-04",
+      "document_id": "f1663eb1e12889723ebacb0e",
+      "normalised_title": "fm discusses exempting flights to iraq s holy sites from sanctions with the u s treasury secretary"
+    },
+    {
+      "position": 22,
+      "archive_date": "2026-10-04",
+      "document_id": "1c1d531ccd0ee60f160c76d6",
+      "normalised_title": "edwards lifesciences receives fda approval for autus size adjustable valve"
+    },
+    {
+      "position": 23,
+      "archive_date": "2026-10-04",
+      "document_id": "c00676d3ed23c9b6416306ef",
+      "normalised_title": "us weighs diesel export ban urges europe to release reserves why diesel is more sensitive"
+    },
+    {
+      "position": 24,
+      "archive_date": "2026-10-04",
+      "document_id": "243a303d3f3e9391f46c3c4b",
+      "normalised_title": "fed ecb minutes to show inflation fears as near term rate hike bets fade"
+    },
+    {
+      "position": 25,
+      "archive_date": "2026-10-04",
+      "document_id": "4e632f6a4d0d9677f20a08f6",
+      "normalised_title": "10 year treasury yield hits 5 34 a 24 year high now driving mortgage rates car loans and your portfolio"
+    },
+    {
+      "position": 26,
+      "archive_date": "2026-10-04",
+      "document_id": "0af9aefb630068f44f1802b2",
+      "normalised_title": "class 2 device recall expressaire"
+    },
+    {
+      "position": 27,
+      "archive_date": "2026-10-04",
+      "document_id": "96c58d64271102c5b09201d2",
+      "normalised_title": "renault partners with thales to boost drone production capacity"
+    },
+    {
+      "position": 28,
+      "archive_date": "2026-10-04",
+      "document_id": "dc2e7f7a4365026cada19072",
+      "normalised_title": "council questions annual bus subsidy as service misses part of its route"
+    },
+    {
+      "position": 29,
+      "archive_date": "2026-10-04",
+      "document_id": "124f09b42fd79478f382a6e9",
+      "normalised_title": "ukraine calls for tighter sanctions as russian attacks spark kyiv gridlock"
+    },
+    {
+      "position": 30,
+      "archive_date": "2026-10-04",
+      "document_id": "60edda6822428c4c5cf984b2",
+      "normalised_title": "s u lon sus announces earnings results"
+    },
+    {
+      "position": 31,
+      "archive_date": "2026-10-04",
+      "document_id": "75d4123f88cc34f177d4cf24",
+      "normalised_title": "janus henderson completes acquisition of rantum capital"
+    },
+    {
+      "position": 32,
+      "archive_date": "2026-10-04",
+      "document_id": "d955b4cb02c3711bff98c246",
+      "normalised_title": "boeing workers face strike vote as contract expiration nears"
+    },
+    {
+      "position": 33,
+      "archive_date": "2026-10-04",
+      "document_id": "ee13016086edb8a24e30a663",
+      "normalised_title": "jabil nyse jbl posts quarterly earnings results beats estimates by 0 35 eps"
+    },
+    {
+      "position": 34,
+      "archive_date": "2026-10-04",
+      "document_id": "88c8452aa8260c591e293700",
+      "normalised_title": "cockroach protesters demand india s election chief resign over voter list changes"
+    },
+    {
+      "position": 35,
+      "archive_date": "2026-10-04",
+      "document_id": "802bad74fb52f53927727086",
+      "normalised_title": "trump threatens 300 tariffs on firms that skip u s plants"
+    },
+    {
+      "position": 36,
+      "archive_date": "2026-10-04",
+      "document_id": "10f1281bb2c8e8884067bf1c",
+      "normalised_title": "oil prices fall as eu deal to release diesel and crude stocks eases supply fears"
+    },
+    {
+      "position": 37,
+      "archive_date": "2026-10-04",
+      "document_id": "a35255a3e47084e4edba5e47",
+      "normalised_title": "oil prices edge lower as markets assess u s iran risks and recovering supply"
+    },
+    {
+      "position": 38,
+      "archive_date": "2026-10-04",
+      "document_id": "8ece69aa79e20af2cb1c5403",
+      "normalised_title": "fda concerns unapproved glp 1 drugs used for weight loss 2026"
+    },
+    {
+      "position": 39,
+      "archive_date": "2026-10-04",
+      "document_id": "05ff4fc013043ef483d3a10a",
+      "normalised_title": "dow jones futures rise oil prices tumble with tesla jobs due nike seagate western digital are big losers"
+    },
+    {
+      "position": 40,
+      "archive_date": "2026-10-04",
+      "document_id": "ae6bf7ea71b81602b33f335c",
+      "normalised_title": "alibaba and solaria reportedly in talks over power supply for spanish data center"
+    },
+    {
+      "position": 41,
+      "archive_date": "2026-10-04",
+      "document_id": "cfc05dafe88f80723dd3f8f1",
+      "normalised_title": "stock market midday oct 2 stocks rally as weak jobs data cools fed rate hike bets"
+    },
+    {
+      "position": 42,
+      "archive_date": "2026-10-04",
+      "document_id": "70c896216f79726c485f7f82",
+      "normalised_title": "american battery technology company gets bis export license for up to 100m of recycled black mass"
+    },
+    {
+      "position": 43,
+      "archive_date": "2026-10-04",
+      "document_id": "cf80f2447fa5781987e3f1ac",
+      "normalised_title": "elizabeth warren says fed rate hike will cost americans 2 billion in extra credit card interest blames trump s failed economic policies for families paying the price updated"
+    },
+    {
+      "position": 44,
+      "archive_date": "2026-10-04",
+      "document_id": "c2617160cccb5d34f60517ba",
+      "normalised_title": "warsh stays silent as fed officials caution soft inflation data cut odds of an october rate hike"
+    },
+    {
+      "position": 45,
+      "archive_date": "2026-10-04",
+      "document_id": "ea8c2edd531c9740e32b95cd",
+      "normalised_title": "pakistan engineering company limited reports earnings results for the full year ended june 30 2026"
+    },
+    {
+      "position": 46,
+      "archive_date": "2026-10-04",
+      "document_id": "45292045f6f6fe6b13bcb11f",
+      "normalised_title": "fda approved diabetes drug for weight loss"
+    },
+    {
+      "position": 47,
+      "archive_date": "2026-10-04",
+      "document_id": "667d2ecf42ef040bd25f3aa0",
+      "normalised_title": "zelenskyy asked trump to sanction russian and chinese companies over starlink rival"
+    },
+    {
+      "position": 48,
+      "archive_date": "2026-10-04",
+      "document_id": "2df010b7bb666837dbfdf361",
+      "normalised_title": "fda approved weight loss drugs 2018"
+    },
+    {
+      "position": 49,
+      "archive_date": "2026-10-04",
+      "document_id": "90fc3c038f06f72b20214e8a",
+      "normalised_title": "fda approves new size adjustable surgical pulmonary valve for pediatric patients"
+    },
+    {
+      "position": 50,
+      "archive_date": "2026-10-04",
+      "document_id": "60f864a5b4f4f9b731ac56be",
+      "normalised_title": "is ai growth helping markets look past oil and rate hike scares"
+    },
+    {
+      "position": 51,
+      "archive_date": "2026-10-04",
+      "document_id": "8d92933c13184f03ed950d7a",
+      "normalised_title": "trump rules out u s diesel export ban after g7 release"
+    },
+    {
+      "position": 52,
+      "archive_date": "2026-10-04",
+      "document_id": "dc44049add9505b9a34f98e5",
+      "normalised_title": "equity in earnings of columbus acquisition corp nasdaq saiq"
+    },
+    {
+      "position": 53,
+      "archive_date": "2026-10-04",
+      "document_id": "c55cde2cf96b4a0679dbcfab",
+      "normalised_title": "fda approves pirtobrutinib for untreated cll sll without 17p deletion"
+    },
+    {
+      "position": 54,
+      "archive_date": "2026-10-04",
+      "document_id": "f833e4b42feceecb420e1d80",
+      "normalised_title": "redco textiles limited reports earnings results for the full year ended june 30 2026"
+    },
+    {
+      "position": 55,
+      "archive_date": "2026-10-04",
+      "document_id": "85925401c0fca636e77e6c15",
+      "normalised_title": "business news tariffs export controls increasingly being used for strategic purposes pk mishra"
+    },
+    {
+      "position": 56,
+      "archive_date": "2026-10-04",
+      "document_id": "424e5b80c4746f13d115be4f",
+      "normalised_title": "cyclospora found at mexican farm linked to lettuce outbreak fda says"
+    },
+    {
+      "position": 57,
+      "archive_date": "2026-10-04",
+      "document_id": "364341443c73091652c71f23",
+      "normalised_title": "fda approval today september 29 2025 weight loss drug"
+    },
+    {
+      "position": 58,
+      "archive_date": "2026-10-04",
+      "document_id": "5ab5c016dfc1cfd2ef6e3bd9",
+      "normalised_title": "text s 4842 119th congress 2025 2026 american food supply chain resiliency act"
+    },
+    {
+      "position": 59,
+      "archive_date": "2026-10-04",
+      "document_id": "be9f4e33195a80d66a5483f1",
+      "normalised_title": "trump slaps additional 50 tariff on certain canadian goods abc news"
+    },
+    {
+      "position": 60,
+      "archive_date": "2026-10-04",
+      "document_id": "54671377d6e6f9822570c5f5",
+      "normalised_title": "global steel markets reflect divergent trends in sept 26 as regional supply dynamics shape prices"
+    },
+    {
+      "position": 61,
+      "archive_date": "2026-10-04",
+      "document_id": "ed3b145d87b50a8642414396",
+      "normalised_title": "soci\u00e9t\u00e9 immobili\u00e8re balima reports earnings results for the half year ended june 30 2026"
+    },
+    {
+      "position": 62,
+      "archive_date": "2026-10-04",
+      "document_id": "b535952ca34afd9745f321b5",
+      "normalised_title": "nasdaq hits record high after softer jobs data tempers rate hike bets"
+    },
+    {
+      "position": 63,
+      "archive_date": "2026-10-04",
+      "document_id": "da5f7ecf4cce7c85744e7f94",
+      "normalised_title": "paramount warner bros merger to become skydance"
+    },
+    {
+      "position": 64,
+      "archive_date": "2026-10-04",
+      "document_id": "018dd98b3662ab480ac0b2fa",
+      "normalised_title": "fuel prices rise can government s subsidy programme ease the pressure pm business 1 10 26"
+    }
+  ]
+}
