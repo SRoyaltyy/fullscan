@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T09:03:41.453650-04:00",
+  "generated_at": "2026-10-08T09:03:47.039753-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -338,7 +338,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7772,
+          "size": 7747,
           "said": "1 up / 6 down / 1 flat",
           "bullets": [
             "XLB DOWN -5.5",
@@ -734,7 +734,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7772,
+          "size": 7747,
           "said": "1 up / 6 down / 1 flat",
           "bullets": [
             "XLB DOWN -5.5",
@@ -3018,6 +3018,24 @@
         }
       ],
       "preview": "8/8 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, financial, real_estate, technology, utilities"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T09:03:45.784670-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-08/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 7747,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "href": {
