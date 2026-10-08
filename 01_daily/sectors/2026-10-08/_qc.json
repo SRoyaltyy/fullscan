@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "n_ok": 2,
+  "n_ok": 3,
   "n_total": 11,
   "required": false,
   "ok": true,
@@ -26,9 +26,9 @@
     },
     {
       "sector": "Consumer Cyclical",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 17047,
       "status": "DEGRADED",
       "provider": "openclaw",
       "fallback_reason": "openclaw_timeout"
