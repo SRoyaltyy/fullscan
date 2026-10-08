@@ -1,0 +1,232 @@
+{
+  "ticker": "NFLX",
+  "analysis_date": "2026-10-08",
+  "current_price": "69.70",
+  "net_signal": "Bearish",
+  "conviction": 21,
+  "catalyst_stack": "On April 16, 2026 Netflix posted a Q1 revenue beat at $12.25 billion, though EPS was inflated by a $2.8 billion Warner Bros. Discovery termination fee and shares still dropped on a softer Q2 setup. The board added a $25 billion buyback on April 22 and then executed a record $4.7 billion of repurchases in Q2, while the July 16 print only in-lined $12.56 billion of revenue and tightened full-year sales to $51.0\u2013$51.4 billion. Legal risk built from May 11 through September 28 as Texas and Florida attorneys general plus an Ohio class action targeted ads, kids\u2019 data, and alleged dark patterns. Into October 8 the Street is split: Wells Fargo, HSBC, Barclays, and Goldman cut ratings or targets on engagement, Deutsche Bank and Guggenheim stayed buyers, and Disney licensing plus exclusive WWE Japan added only modest content support.",
+  "key_assumption": "The October 20 Q3 print does not cut the $51.0\u2013$51.4 billion revenue or 31.5% margin targets, and the state AG/privacy cases stay filing-stage costs rather than a structural hit to the ads and data model.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-16",
+      "evidence_excerpt": "Revenue reached $12.25 billion, up 16.2% from the comparable 2025 quarter.",
+      "source_urls": [
+        "https://variety.com/2026/tv/news/netflix-earnings-q1-2026-1236723851/",
+        "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000137/ex991_q126.htm"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 5,
+      "event_ids": [
+        17
+      ],
+      "event_date": "2026-10-01",
+      "evidence_excerpt": "Beginning October 1, 2026, Netflix becomes the exclusive home for all WWE programming in Japan",
+      "source_urls": [
+        "https://www.sportsvideo.org/2026/09/30/netflix-to-stream-wwe-exclusively-in-japan-beginning-october-1/",
+        "https://help.netflix.com/en/node/129840"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        3,
+        9
+      ],
+      "event_date": "2026-04-22",
+      "evidence_excerpt": "on April 22, 2026, Netflix\u2019s board of directors authorized an additional $25 billion share repurchase program (with no expiration date).",
+      "source_urls": [
+        "https://www.reuters.com/business/media-telecom/netflix-announces-25-billion-share-buyback-2026-04-23/",
+        "https://www.wsj.com/business/media/netflix-boosts-stock-buyback-program-by-25-billion-b8a66c9e"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 4,
+      "event_ids": [
+        6,
+        20
+      ],
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "Disney Entertainment and Netflix have entered into an expansive new content licensing agreement",
+      "source_urls": [
+        "https://variety.com/2026/tv/news/disney-licenses-titles-netflix-ice-age-movies-will-trent-percy-jackson-and-the-olympians-felicity-1236897256/",
+        "https://www.reuters.com/business/media-telecom/disney-licenses-lineup-movies-tv-shows-netflix-including-ice-age-will-trent-2026-10-02/"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        16,
+        19
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "Deutsche Bank called a bottom to Netflix's (NFLX) slide on Tuesday, upgrading shares of the streaming video leader to buy from neutral.",
+      "source_urls": [
+        "https://www.investors.com/news/technology/netflix-stock-upgraded-to-buy-as-investors-miss-big-picture/",
+        "https://finance.yahoo.com/markets/stocks/articles/deutsche-bank-says-investors-miss-181956484.html"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/antitrust",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        4,
+        12,
+        15
+      ],
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "Attorney General James Uthmeier filed a lawsuit against Netflix, alleging the streaming company spent years promising Florida families a paid, ad-free service that would not collect or sell their data",
+      "source_urls": [
+        "https://www.myfloridalegal.com/newsrelease/attorney-general-james-uthmeier-takes-legal-action-against-netflix-deceiving-florida",
+        "https://www.sun-sentinel.com/2026/09/09/florida-attorney-general-sues-netflix-as-crackdown-widens-on-big-tech/"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        0,
+        14,
+        21,
+        22
+      ],
+      "event_date": "2026-09-18",
+      "evidence_excerpt": "Wells Fargo downgrades Netflix to underweight on engagement risks",
+      "source_urls": [
+        "https://seekingalpha.com/news/4644248-wells-fargo-downgrades-netflix-to-underweight-on-engagement-risks",
+        "https://finance.yahoo.com/markets/stocks/articles/wells-fargo-cuts-netflix-nflx-205315969.html"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Operational setback",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        18
+      ],
+      "event_date": "2026-10-01",
+      "evidence_excerpt": "Co-CEO Ted Sarandos noted the company is \u201cnot growing as fast as I want\u201d amid moderated engagement growth",
+      "source_urls": [
+        "https://www.bloomberg.com/news/articles/2026-10-01/sarandos-says-netflix-not-growing-as-fast-as-i-want"
+      ],
+      "confidence": 72
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/antitrust",
+      "type": "negative",
+      "event_date": "2026-05-11",
+      "evidence_excerpt": "Texas Attorney General Ken Paxton has filed a lawsuit against Netflix, accusing the company of turning its back on its promise to remain ad-free",
+      "source_urls": [
+        "https://www.theverge.com/streaming/928071/texas-netflix-lawsuit-privacy"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Operational setback",
+      "type": "negative",
+      "event_date": "2026-07-16",
+      "evidence_excerpt": "But it issued weaker-than-expected guidance for Q3, driving the stock price down.",
+      "source_urls": [
+        "https://variety.com/2026/tv/news/netflix-q2-2026-earnings-1236812558/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "workforce reductions",
+      "type": "negative",
+      "event_date": "2026-08-14",
+      "evidence_excerpt": "Netflix said it is in the process of closing two of its gaming studios, as the division is making another round of organizational changes.",
+      "source_urls": [
+        "https://www.latimes.com/entertainment-arts/business/story/2026-08-14/la-fi-hi-netflix-gaming-layoffs"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT cut",
+      "type": "negative",
+      "event_date": "2026-09-22",
+      "evidence_excerpt": "This week, HSBC followed that up by cutting its rating to hold and lowering its price target from $96 to $76.",
+      "source_urls": [
+        "https://www.fool.com/investing/2026/09/25/1-wall-street-analyst-just-called-netlfix-a-sell-is-it-time-to-dump-the-streaming-stock/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/antitrust",
+      "type": "negative",
+      "event_date": "2026-09-28",
+      "evidence_excerpt": "Netflix Inc. was accused in a new proposed class action of using the same surveillance technology that made social media addictive",
+      "source_urls": [
+        "https://news.bloomberglaw.com/litigation/netflix-sued-over-addictive-design-surveillance-of-child-users"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-08",
+  "cutoff_date": null,
+  "role": "earnings"
+}

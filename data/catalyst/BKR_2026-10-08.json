@@ -1,0 +1,222 @@
+{
+  "ticker": "BKR",
+  "analysis_date": "2026-10-08",
+  "current_price": "N/A",
+  "net_signal": "Strong Bullish",
+  "conviction": 42,
+  "catalyst_stack": "Baker Hughes closed Chart Industries on 2026-07-16 as a third segment targeting $325 million of annualized cost synergies, then on 2026-09-09 raised 2026 revenue guidance to $28.5\u2013$30.3 billion to include the deal. Second-quarter results on 2026-07-26 showed $10.5 billion of orders, $6.7 billion of revenue, $0.64 adjusted EPS and record $37.1 billion IET RPO, after a Q1 beat on 2026-04-23. Order flow stayed heavy with Dynamis\u2019s 76 NovaLT16 turbines (~1.3 GW) on 2026-07-29, bp\u2019s UK North Sea StimFORCE award on 2026-09-04, Venture Global compression and Plaquemines LNG blocks on 2026-09-13, and a 2026-10-05 PDVSA/Fulcrum LNG alliance. Goldman Sachs resumed coverage at Buy/$71 on 2026-09-29, while BofA and Jefferies kept Buys but cut targets on 2026-10-02 and 2026-09-29.",
+  "key_assumption": "Chart delivers the $325 million cost-synergy plan and record IET RPO \u2014 including data-center turbines, LNG equipment, and Venezuela gas awards \u2014 converts to revenue and FCF without a sharp OFSE downturn or integration slip.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 10,
+      "event_ids": [
+        13
+      ],
+      "event_date": "2026-07-16",
+      "evidence_excerpt": "today announced the successful completion of its acquisition of Chart Industries, Inc. (NYSE: GTLS)",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/baker-hughes-completes-acquisition-chart-industries-2026-07-16"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 8,
+      "event_ids": [
+        5,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "event_date": "2026-09-04",
+      "evidence_excerpt": "announced Friday a significant award from bp to provide offshore stimulation services across the company\u2019s UK North Sea operations",
+      "source_urls": [
+        "https://seekingalpha.com/pr/20640993-baker-hughes-awarded-offshore-production-enhancement-and-stimulation-services-contract-by-bp",
+        "https://www.advfn.com/stock-market/NASDAQ/BKR/stock-news/99253189/baker-hughes-awarded-offshore-production-enhanceme"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 7,
+      "event_ids": [
+        6
+      ],
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "raised its financial guidance for the full year on Wednesday after factoring in a boost from its recent acquisition of Chart Industries",
+      "source_urls": [
+        "https://seekingalpha.com/news/4641160-baker-hughes-hikes-guidance-for-2026-revenue-ebitda-to-reflect-chart-industries-deal",
+        "https://www.reuters.com/business/energy/baker-hughes-raises-annual-forecasts-after-chart-acquisition-2026-09-09/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Deleveraging/sale of toxic assets/spin-off",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        17
+      ],
+      "event_date": "2026-04-13",
+      "evidence_excerpt": "entered into an agreement to sell its Waygate Technologies business to Hexagon",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2026/04/13/3272196/0/en/Baker-Hughes-Announces-Sale-of-Waygate-Technologies-to-Hexagon.html",
+        "https://www.turbomachinerymag.com/view/baker-hughes-divests-waygate-technologies-doubles-down-on-rotating-equipment-and-lng"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        1,
+        14,
+        15
+      ],
+      "event_date": "2026-10-05",
+      "evidence_excerpt": "Monday announced the signing of two strategic agreements to accelerate the revitalization of Venezuela\u2019s energy infrastructure",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/baker-hughes-signs-agreements-expand-venezuela-gas-infrastructure-2026-10-05/",
+        "https://seekingalpha.com/pr/20673909-baker-hughes-signs-two-agreements-to-develop-venezuelas-natural-gas-and-energy-infrastructure"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        12,
+        16
+      ],
+      "event_date": "2026-07-26",
+      "evidence_excerpt": "Orders of $10.5 billion, including $7.1 billion of IET orders.",
+      "source_urls": [
+        "https://seekingalpha.com/pr/20595243-baker-hughes-announces-second-quarter-2026-results",
+        "https://www.sec.gov/Archives/edgar/data/0001701605/000170160526000021/earningsreleaseex991063020.htm"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "resumed coverage on Baker Hughes (NASDAQ: BKR) with a Buy rating and a $71 price target",
+      "source_urls": [
+        "https://www.investing.com/news/analyst-ratings/goldman-sachs-resumes-baker-hughes-stock-coverage-with-buy-rating-93CH-4922557",
+        "https://www.tipranks.com/news/the-fly/baker-hughes-reinstated-with-a-buy-at-goldman-sachs-thefly-news"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        2,
+        4
+      ],
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "BofA Securities (Oct 2): Maintains Buy; lowers PT to $73 from $74",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/baker-hughes-price-target-lowered-to-73-from-74-at-bofa-thefly-news",
+        "https://www.benzinga.com/news/26/09/62056732/jefferies-maintains-buy-baker-hughes-lowers-price-target-77"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "workforce reductions",
+      "type": "negative",
+      "event_date": "2026-07-09",
+      "evidence_excerpt": "Baker Hughes, a major oilfield services corporation, is laying off 174 employees as it closes its Emmott Road facility in northwest Houston",
+      "source_urls": [
+        "https://www.houstonpublicmedia.org/articles/news/energy-environment/2026/07/09/556695/baker-hughes-to-layoff-174-workers-at-northwest-houston-plant/",
+        "https://www.click2houston.com/news/local/2026/07/09/baker-hughes-to-close-houston-facility-lay-off-174-employees/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "insider selling",
+      "type": "negative",
+      "event_date": "2026-06-22",
+      "evidence_excerpt": "Lorenzo Simonelli Jun 22, 2026 Sell 181,411 $58.43 $11M",
+      "source_urls": [
+        "https://altindex.com/ticker/bkr/insider-transactions",
+        "https://www.sec.gov/Archives/edgar/data/1701605/0001709160-26-000016.txt"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings guidance cut",
+      "type": "negative",
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "the company lowered its expected free-cash-flow conversion target for 2026 to a range of 40 to 45 percent",
+      "source_urls": [
+        "https://www.ad-hoc-news.de/boerse/news/corporate-news/baker-hughes-stock-falls-after-guidance-cut-and-integration-concerns/70088981"
+      ],
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT cut",
+      "type": "negative",
+      "event_date": "2026-09-30",
+      "evidence_excerpt": "9/30/2026 UBS Group Lower Target Neutral \u279d Neutral $72.00 \u279d $69.00",
+      "source_urls": [
+        "https://www.pricetargets.com/NASDAQ/BKR/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-08",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

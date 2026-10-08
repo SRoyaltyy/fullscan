@@ -1,0 +1,294 @@
+{
+  "ticker": "SLB",
+  "analysis_date": "2026-10-08",
+  "current_price": "47.98",
+  "net_signal": "Strong Bullish",
+  "conviction": 62,
+  "catalyst_stack": "On 2026-08-31 SLB agreed to acquire Kelvion for $3.4B cash plus $0.7B of assumed debt to expand data-center thermal management (close targeted H1 2027), after completing HydraWell on 2026-08-03 and S&P Global\u2019s upstream software portfolio on 2026-09-01. Q2 2026 results on 2026-07-24 beat estimates (non-GAAP EPS $0.55, revenue $8.97B) and guided 3\u20134% sequential Q3 revenue growth with about 75 bps of EBITDA margin expansion, reversing the 2026-04-24 Q1 profit hit from Middle East disruption. Order intake firmed into late September with OQEP\u2019s Bisat-B facility expansion (2026-09-22) and OneSubsea\u2019s Rovuma LNG award from ExxonMobil Mozambique (2026-09-29), alongside the 2026-07-14 Liberty Energy data-center power alliance and Chevron joining the Arena digital collaboration on 2026-10-07. Offsets are routine CEO 10b5-1 sales (2026-05-27 and 2026-09-01), a 2026-10-02 BofA trim of the PT to $56, and a 2026-10-07 break of the 200-day average near $48 on heavy volume.",
+  "key_assumption": "Kelvion closes on announced terms in H1 2027 without cutting the >$4B 2026 cash-return plan, Q1 Middle East disruption does not re-accelerate, and Q2\u2019s beat plus September awards show up in H2 results rather than remaining one-off prints.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        6,
+        9,
+        10
+      ],
+      "event_date": "2026-08-31",
+      "evidence_excerpt": "SLB to acquire Kelvion for $3.4B in cash, assuming $0.7B in debt",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/slb-acquire-kelvion-34-billion-2026-08-31/?outputType=chromeless",
+        "https://www.sec.gov/Archives/edgar/data/87347/000119312526375358/d106278dex99.htm"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 7,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-08-24",
+      "evidence_excerpt": "SLB has launched its ExaCT electrical downhole coiled tubing control system, which provides real-time electrical control, telemetry, and downhole measurements",
+      "source_urls": [
+        "https://www.autobound.ai/companies/slb/news/slb-launches-exact-platform-for-electrically-controlled-well-aacfea9e"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 6,
+      "event_ids": [
+        14,
+        16
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "HOUSTON, September 29, 2026 \u2014 Global energy technology company SLB (NYSE: SLB) today announced that its OneSubsea\u2122 joint venture has been awarded a contract",
+      "source_urls": [
+        "https://www.onesubsea.slb.com/resources/news/2026/slb-onesubsea-awarded-major-subsea-systems-contract-for-rovuma-basin-development",
+        "https://www.nasdaq.com/articles/slb-onesubsea-secures-rovuma-basin-subsea-production-systems-deal"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 6,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "Q2 Non-GAAP EPS of $0.55 beats by $0.03. Revenue of $8.97B (+4.9% Y/Y) beats by $290M.",
+      "source_urls": [
+        "https://seekingalpha.com/news/4618011-slb-non-gaap-eps-of-0_55-beats-by-0_03-revenue-of-8_97b-beats-by-290m",
+        "https://www.businesswire.com/news/home/20260722694386/en/SLB-Announces-Second-Quarter-2026-Results"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 6,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "guided Q3 sequential revenue growth of 3\u20134% with about 75 bps of EBITDA margin expansion",
+      "source_urls": [
+        "https://www.businesswire.com/news/home/20260722694386/en/SLB-Announces-Second-Quarter-2026-Results",
+        "https://investorcenter.slb.com/static-files/b5556335-a86a-48f3-8ab5-6f7470178112"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        4,
+        22
+      ],
+      "event_date": "2026-10-07",
+      "evidence_excerpt": "Chevron Technical Center, a division of Chevron U.S.A. Inc. (Chevron), has joined the long-term digital subsurface collaboration established by SLB and TotalEnergies in 2024",
+      "source_urls": [
+        "https://www.slb.com/newsroom/updates/2026/2026-1006-digital-subsurface-collaboration",
+        "https://seekingalpha.com/news/4613533-slb-liberty-energy-form-partnership-to-sell-power-to-data-centers"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        8,
+        13,
+        15
+      ],
+      "event_date": "2026-09-14",
+      "evidence_excerpt": "On Sep 14, 2026, maintained Buy and raised PT from $72 to $75.",
+      "source_urls": [
+        "https://www.benzinga.com/quote/SLB/price-targets",
+        "https://www.pricetargets.com/NYSE/SLB/"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Positive personnel change (new CEO, CFO, board members)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 4,
+      "adjusted_weight": 3,
+      "event_ids": [
+        21
+      ],
+      "event_date": "2026-10-05",
+      "evidence_excerpt": "appointment of Jing Ulrich to SLB\u2019s Board of Directors, effective October 5, 2026",
+      "source_urls": [
+        "https://www.stocktitan.net/sec-filings/SLB/8-k-slb-limited-nv-reports-material-event-3ac2d0e97d91.html",
+        "https://www.tipranks.com/news/company-announcements/slb-appoints-jing-ulrich-to-board-committees"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Patent grant/IP protection",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 4,
+      "adjusted_weight": 3,
+      "event_ids": [
+        17
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "On September 29, 2026, Schlumberger Technology Corporation was granted a U.S. Patent No. US12,747,651",
+      "source_urls": [
+        "https://www.autobound.ai/companies/slb/signals/schlumberger-was-granted-a-patent-for-measuring-mineral-07711061"
+      ],
+      "confidence": 72
+    },
+    {
+      "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
+      "type": "negative",
+      "category": "internal",
+      "status": "MISS",
+      "base_weight": 8,
+      "adjusted_weight": 0,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-04-24",
+      "evidence_excerpt": "It was a challenging start to the year, marked by severe disruption in the Middle East that impacted our first quarter revenue and earnings",
+      "source_urls": [
+        "https://www.fool.com/earnings/call-transcripts/2026/04/24/slb-slb-q1-2026-earnings-call-transcript/",
+        "https://www.reuters.com/business/energy/oilfield-services-provider-slb-posts-lower-quarterly-profit-iran-war-hit-2026-04-24/"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 5,
+      "event_ids": [
+        3,
+        11
+      ],
+      "event_date": "2026-09-01",
+      "evidence_excerpt": "Sep 1, 2026: Sold 35,000 shares at $60.00 (~$2.1 million); remaining direct holdings: 1,296,328 shares (10b5-1 plan)",
+      "source_urls": [
+        "https://www.secform4.com/insider-trading/87347.htm",
+        "https://www.earningswhispers.com/whales/SLB/insiders"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        20
+      ],
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "Bank of America (Saurabh Pant): Oct 2, 2026 \u2014 Maintained Buy but lowered PT slightly from $57 to $56.",
+      "source_urls": [
+        "https://stockanalysis.com/stocks/slb/forecast/"
+      ],
+      "confidence": 72
+    },
+    {
+      "taxonomy": "Technical breakdown (below support, \"death cross\")",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 2,
+      "event_ids": [
+        23
+      ],
+      "event_date": "2026-10-07",
+      "evidence_excerpt": "Price: ~$47.96\u2013$48.00 (down ~4% on the day amid heavy volume).",
+      "source_urls": [
+        "https://www.nasdaq.com/articles/slb-makes-notable-cross-below-critical-moving-average",
+        "https://www.marketbeat.com/stocks/NYSE/SLB/chart/"
+      ],
+      "confidence": 68
+    },
+    {
+      "taxonomy": "regulatory actions",
+      "type": "negative",
+      "event_date": "2026-10-07",
+      "evidence_excerpt": "The Norwegian Competition Authority (NCA) has today issued a NOK 30 million administrative fine to SLB for providing incorrect information",
+      "source_urls": [
+        "https://konkurransetilsynet.no/norwegian-competition-authority-issues-nok-30-million-fine-to-slb/?lang=en"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "lawsuits",
+      "type": "negative",
+      "event_date": "2026-04-20",
+      "evidence_excerpt": "Schlumberger Technology Corp. mismanages its 401(k) plan by using forfeited contributions to make its own payments to the plan",
+      "source_urls": [
+        "https://news.bloomberglaw.com/employee-benefits/schlumbergers-handling-of-401k-forfeitures-drives-new-lawsuit"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "event_date": "2026-07-14",
+      "evidence_excerpt": "SLB and Liberty Energy have announced a strategic alliance to provide modular infrastructure and integrated power generation solutions",
+      "source_urls": [
+        "https://tradearabia.com/News/465133/SLB-Liberty-Energy-form-alliance-to-support-AI-data-centre-growth",
+        "https://www.reuters.com/business/energy/slb-partners-with-liberty-energy-supply-modular-parts-power-data-centers-2026-07-14/"
+      ],
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-08",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

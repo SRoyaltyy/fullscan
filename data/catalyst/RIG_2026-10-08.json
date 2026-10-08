@@ -1,0 +1,271 @@
+{
+  "ticker": "RIG",
+  "analysis_date": "2026-10-08",
+  "current_price": "5.40",
+  "net_signal": "Strong Bullish",
+  "conviction": 95,
+  "catalyst_stack": "Transocean stacked multi-year backlog through 2026, capped by the June 30 Equinor package of more than $1 billion across seven rig-years, after the April 14 Petrobras Corcovado extension, June 16 Norge/Equinox awards, August 20 ONGC KG2 letter of award, and the October 8 Conqueror Equatorial Guinea add. U.S. merger gates cleared with CFIUS approval on June 29 and DOJ/HSR antitrust clearance on September 30 for the $5.8 billion Valaris all-stock deal, and a September 24 SDNY ruling dismissed the idle-rig securities class action without prejudice. Operations printed a May 4 Q1 revenue beat to $1.08 billion and an August 5 Q2 EPS beat to $0.03, while Barclays (May 7), Fearnley (August 7), and Zacks (October 7) upgraded the stock against a short float still above 20%. The May 4 DOJ Second Request was the principal negative catalyst and has been overtaken by the September 30 clearance.",
+  "key_assumption": "Remaining Valaris closing conditions (especially Brazil CADE) are satisfied and the Equinor/Petrobras/ONGC backlog converts at contracted dayrates without an oil-price FID stall.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        0,
+        1,
+        6,
+        8,
+        11,
+        13
+      ],
+      "event_date": "2026-06-30",
+      "evidence_excerpt": "Transocean has secured a drilling agreement with Equinor valued at more than $1 billion in contract backlog",
+      "source_urls": [
+        "https://worldoil.com/news/2026/6/30/transocean-lands-seven-year-1-billion-equinor-rig-deal/",
+        "https://www.bairdmaritime.com/offshore/vessels-rigs/transocean-secures-1b-rig-agreement-with-equinor-for-norway-shelf"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-09-24",
+      "evidence_excerpt": "Transocean Ltd. investors fell short in pleading that top executives intended to publicly overvalue two oil and gas rigs later sold at a loss, a federal court ruled.",
+      "source_urls": [
+        "https://news.bloomberglaw.com/securities-law/transocean-dodges-investor-suit-over-rust-bucket-rig-valuation",
+        "https://www.courtlistener.com/docket/69499211/in-re-transocean-ltd-securities-litigation/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "event_ids": [
+        2,
+        10
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "reported $0.03 earnings per share (EPS) for the quarter, beating analysts' consensus estimates of $0.01 by $0.02.",
+      "source_urls": [
+        "https://www.marketbeat.com/stocks/NYSE/RIG/",
+        "https://seekingalpha.com/article/4932704-transocean-ltd-rig-q2-2026-earnings-call-transcript"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        4,
+        12,
+        16
+      ],
+      "event_date": "2026-10-07",
+      "evidence_excerpt": "Transocean (NYSE:RIG) Upgraded to \"Strong-Buy\" at Zacks Research",
+      "source_urls": [
+        "https://www.marketbeat.com/stocks/NYSE/RIG/",
+        "https://www.themarketsdaily.com/2026/10/07/transocean-nyserig-stock-rating-upgraded-by-zacks-research.html"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Regulatory approval",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        7,
+        15
+      ],
+      "event_date": "2026-09-30",
+      "evidence_excerpt": "Transocean (RIG) disclosed that it received Dept. of Justice approval for its planned $5.8 billion all-stock purchase of Valaris.",
+      "source_urls": [
+        "https://seekingalpha.com/news/4648807-transocean-gets-doj-approval-for-valaris-acquisition",
+        "https://www.boardroomalpha.com/sec/rig-8-k-2026-09-30-0001104659-26-112402"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Adverse litigation/antitrust",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-05-04",
+      "evidence_excerpt": "Both companies received a DOJ Second Request on May 4, 2026 and agreed not to certify substantial compliance before July 31, 2026.",
+      "source_urls": [
+        "https://www.tradingview.com/news/tradingview:6467e3480c0bd:0-valaris-receives-cfius-approval-doj-hsr-review-continues-ahead-of-planned-2h-2026-close/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Short squeeze potential",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 3,
+      "event_ids": [
+        2,
+        8,
+        10,
+        15,
+        16
+      ],
+      "event_date": "2026-10-08",
+      "evidence_excerpt": "Short float >20% and DTC >4; positive catalyst cluster (backlog awards, Valaris clearances, earnings beats) can force covering.",
+      "source_urls": [
+        "https://seekingalpha.com/news/4648807-transocean-gets-doj-approval-for-valaris-acquisition",
+        "https://worldoil.com/news/2026/6/30/transocean-lands-seven-year-1-billion-equinor-rig-deal/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Earnings miss",
+      "type": "negative",
+      "event_date": "2026-05-04",
+      "evidence_excerpt": "Transocean Ltd. RIG reported a first-quarter 2026 adjusted loss of 3 cents per share, in contrast to the Zacks Consensus Estimate of earnings of 7 cents.",
+      "source_urls": [
+        "https://www.tradingview.com/news/zacks:be2f3813c094b:0-transocean-q1-earnings-miss-estimates-revenues-beat-both-up-y-y/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Guidance cut",
+      "type": "negative",
+      "event_date": "2026-05-04",
+      "evidence_excerpt": "the upper end of the full-year revenue outlook was reduced by $50 million, primarily reflecting the passage of time",
+      "source_urls": [
+        "https://www.tradingview.com/news/zacks:be2f3813c094b:0-transocean-q1-earnings-miss-estimates-revenues-beat-both-up-y-y/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT decrease",
+      "type": "negative",
+      "event_date": "2026-07-08",
+      "evidence_excerpt": "Susquehanna lowered their price objective on Transocean from $8.00 to $7.00 and set a \"positive\" rating on the stock",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-transocean-nyse-rig-stock-rating-upgraded-by-zacks-research-2026-10-07/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT decrease",
+      "type": "negative",
+      "event_date": "2026-08-12",
+      "evidence_excerpt": "Barclays decreased their price objective on Transocean from $8.00 to $7.00 and set an \"overweight\" rating",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-transocean-nyse-rig-stock-rating-upgraded-by-zacks-research-2026-10-07/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-05-04",
+      "evidence_excerpt": "the company added five new fixtures, representing nearly $1.6 billion of incremental backlog at a weighted average day rate of about $410,000",
+      "source_urls": [
+        "https://www.tradingview.com/news/zacks:be2f3813c094b:0-transocean-q1-earnings-miss-estimates-revenues-beat-both-up-y-y/"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Regulatory approval",
+      "type": "positive",
+      "event_date": "2026-06-29",
+      "evidence_excerpt": "CFIUS issued written approval on June 29, 2026, satisfying the CFIUS condition to the Transocean merger.",
+      "source_urls": [
+        "https://www.tradingview.com/news/tradingview:6467e3480c0bd:0-valaris-receives-cfius-approval-doj-hsr-review-continues-ahead-of-planned-2h-2026-close/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "event_date": "2026-08-07",
+      "evidence_excerpt": "Fearnley Fonds raised shares of Transocean from a \"hold\" rating to a \"strong-buy\" rating in a research note on Friday, August 7th.",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-transocean-nyse-rig-stock-rating-upgraded-by-zacks-research-2026-10-07/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "Added $292 million in contract backlog(2) at a weighted average dayrate of about $461,000.",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/transocean-ltd-reports-second-quarter-2026-results-2026-08-05"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-09-15",
+      "evidence_excerpt": "Transocean (RIG) rises 8.6% in Tuesday's trading after saying its Deepwater Conqueror ultra-deepwater drillship was awarded a two-well contract",
+      "source_urls": [
+        "https://seekingalpha.com/news/4643122-transocean-jumps-after-securing-80m-ultra-deepwater-rig-contract"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-08",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

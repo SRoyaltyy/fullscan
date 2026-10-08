@@ -1,0 +1,290 @@
+{
+  "ticker": "TSLA",
+  "analysis_date": "2026-10-08",
+  "current_price": "377.81",
+  "net_signal": "Bearish",
+  "conviction": 24,
+  "catalyst_stack": "Tesla converted autonomy from promise to product: Dutch FSD Supervised type approval on April 10, 2026, a Nevada permit for up to 5,000 robotaxis on August 20, and paid Austin Cybercab rides from September 4. Volume prints stayed constructive, with record Q2 deliveries of 480,126 on July 2 and a Q3 beat at 486,532 on October 2, plus a Q1 earnings beat on April 22. Fundamentals cracked on July 22 when Q2 non-GAAP EPS of $0.33 missed and free cash flow went about $1.1 billion negative, after which Tesla lined up $30 billion of credit on September 29. Safety and regulatory overhangs rose with a July 29 NHTSA probe covering about 1.2 million vehicles and a September 3 Cybercab FMVSS audit, while the Street split into October 8 between UBS at $391 and JPMorgan\u2019s cut to $415.",
+  "key_assumption": "The Cybercab NHTSA audit remains an inquiry rather than a service halt or FMVSS block, and Q3 results do not extend Q2\u2019s margin and free-cash-flow miss.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        16,
+        1
+      ],
+      "event_date": "2026-09-04",
+      "evidence_excerpt": "Tesla began offering paid public rides in its Cybercab ... in Austin, Texas, on September 4, 2026.",
+      "source_urls": [
+        "https://insideevs.com/news/807100/tesla-cybercab-robotaxi-public-rides-austin-official/",
+        "https://www.axios.com/2026/09/04/tesla-cybercab-launch-austin"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Operational milestone",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        21,
+        8,
+        18
+      ],
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "Tesla (TSLA) delivered 486,532 vehicles in the third quarter of 2026, down 2.1% from the record 497,099",
+      "source_urls": [
+        "https://electrek.co/2026/10/02/tesla-q3-2026-deliveries-486532/",
+        "https://ir.tesla.com/press-release/tesla-third-quarter-2026-production-deliveries-and-deployments"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 6,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "acquired an AI hardware company in an asset acquisition for $1.95 billion in Tesla common stock and equity awards",
+      "source_urls": [
+        "https://electrek.co/2026/07/24/tesla-secret-2-billion-ai-hardware-acquisition-closes/",
+        "https://driveteslacanada.ca/news/tesla-ai-hardware-acquisition-complete/"
+      ],
+      "confidence": 91
+    },
+    {
+      "taxonomy": "Regulatory approval",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        14,
+        7
+      ],
+      "event_date": "2026-08-20",
+      "evidence_excerpt": "The NTA unanimously approved the commercial permits ... lifting Tesla\u2019s cap to up to 5,000 vehicles",
+      "source_urls": [
+        "https://techcrunch.com/2026/08/20/tesla-uber-and-waymo-all-get-the-ok-to-operate-thousands-of-robotaxis-in-nevada/",
+        "https://www.business.nv.gov/news-media/press-releases/2026/ntata/nevada-transportation-authority-approves-autonomous-vehicle-network-applications-for-tesla-waymo-and-aviari/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-04-22",
+      "evidence_excerpt": "beat expectations with earnings of $0.41 per share (non-GAAP), and it delivered revenue expectations with $22.38 billion",
+      "source_urls": [
+        "https://electrek.co/2026/04/22/tesla-tsla-q1-2026-financial-results/",
+        "https://seekingalpha.com/article/4893107-tesla-inc-tsla-q1-2026-earnings-call-transcript"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-06-16",
+      "evidence_excerpt": "YPF signed a non-binding letter of intent (carta de intenci\u00f3n or marco agreement) with Tesla to explore collaboration",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/argentinas-ypf-tesla-explore-ev-charging-energy-storage-collaboration-2026-06-16/",
+        "https://buenosairesherald.com/business/tesla-to-team-up-with-ypf-to-compete-in-the-argentine-ev-market"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        24
+      ],
+      "event_date": "2026-10-07",
+      "evidence_excerpt": "UBS analyst Joseph Spak raised his price target on Tesla (TSLA) to $391 (from $385 previously)",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/tesla-price-target-raised-to-391-from-385-at-ubs-thefly-news",
+        "https://247wallst.com/investing/2026/10/07/ubs-flags-a-bullish-setup-in-tesla-stock-and-lifts-its-price-target/"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Product delay/failure/rejection/safety recall",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        12,
+        13
+      ],
+      "event_date": "2026-07-29",
+      "evidence_excerpt": "A July 29, 2026, preliminary evaluation into front lower lateral link detachment on ~1.2 million",
+      "source_urls": [
+        "https://driveteslacanada.ca/news/tesla-model-3-model-y-suspension-investigation-nhtsa/"
+      ],
+      "confidence": 84
+    },
+    {
+      "taxonomy": "Regulatory denial or delay/antitrust block",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        15,
+        25
+      ],
+      "event_date": "2026-09-03",
+      "evidence_excerpt": "NHTSA opened Audit Query AQ26002 on September 3, 2026, into Tesla\u2019s self-certification of the Cybercab",
+      "source_urls": [
+        "https://techcrunch.com/2026/09/04/feds-launch-investigation-into-teslas-cybercab-deployment/",
+        "https://electrek.co/2026/09/04/tesla-cybercab-nhtsa-investigation-fmvss-certification/"
+      ],
+      "confidence": 91
+    },
+    {
+      "taxonomy": "Earnings miss",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "record $28.24 billion in revenue... non-GAAP earnings came in at just $0.33 per share, well short of the $0.53",
+      "source_urls": [
+        "https://electrek.co/2026/07/22/tesla-tsla-q2-2026-financial-results/",
+        "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/07/tesla-postq-revenue-beat-overshadowed-by-margin-pressure"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Accumulation of debt/retention or deepening of toxic assets/failed divestiture",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        19
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "Tesla opened $30 billion in lines of credit according to a regulatory filing today.",
+      "source_urls": [
+        "https://electrek.co/2026/09/29/tesla-takes-on-30-billion-in-credit-as-it-approaches-unprofitability/",
+        "https://www.sec.gov/Archives/edgar/data/1318605/000162828026063820/tsla-20260929.htm"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        0,
+        17,
+        22
+      ],
+      "event_date": "2026-10-08",
+      "evidence_excerpt": "J.P. Morgan Drops Sharp Take on Magnificent 7 Stocks",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/j-p-morgan-drops-sharp-080910133.html"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Product delay/failure/rejection/safety recall",
+      "type": "negative",
+      "event_date": "2026-08-04",
+      "evidence_excerpt": "Tesla has issued a recall on over 20,349 Model 3 and Model Y vehicles which have low-beam headlights that exceed the maximum brightness.",
+      "source_urls": [
+        "https://electrek.co/2026/08/11/tesla-recall-20000-model-3-y-for-headlights-that-are-too-bright/"
+      ],
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "event_date": "2026-09-27",
+      "evidence_excerpt": "J.P. Morgan cuts PT to $415 from $445, representing an 11.5% upside to the stock's last close",
+      "source_urls": [
+        "https://www.stockopedia.com/share-prices/tesla-NSQ:TSLA/news/tesla-falls-jp-morgan-cuts-pt-lowers-q3-delivery-estimates-01a0e723-282d-7612-aee1-c67f821323a4/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "Seven research firms cut their Tesla price targets on Friday, July 24, 2026, less than 48 hours after the stock's worst single-day crash",
+      "source_urls": [
+        "https://phemex.com/blogs/tesla-stock-hits-11-month-low-seven-firms-cut-price-targets"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Product delay/failure/rejection/safety recall",
+      "type": "negative",
+      "event_date": "2026-04-22",
+      "evidence_excerpt": "Tesla seems to say Robotaxi launch will be pushed back in 5 US cities",
+      "source_urls": [
+        "https://electrek.co/2026/04/22/tesla-seems-to-say-robotaxi-launch-will-be-pushed-back-in-5-us-cities/"
+      ],
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-08",
+  "cutoff_date": null,
+  "role": "earnings"
+}
