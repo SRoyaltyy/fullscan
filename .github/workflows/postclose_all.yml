@@ -16,14 +16,14 @@ on:
   # This agent cannot workflow_dispatch (403). A merge of healer code
   # must start ubuntu last-closed the same way book push starts a skip.
   # Do not match 01_daily (GITHUB_TOKEN persist must not retrigger).
+  # src/run_sector_outcome.py and this workflow file are not path
+  # triggers: a sector-outcome split must not start Post-Close ALL.
   push:
     branches: [main]
     paths:
-      - ".github/workflows/postclose_all.yml"
       - "src/run_postclose_all.py"
       - "src/run_outcome.py"
       - "src/run_reflect.py"
-      - "src/run_sector_outcome.py"
       - "src/run_sector_reflect.py"
       - "src/learn_cycle.py"
       - "src/map_heat_postclose.py"

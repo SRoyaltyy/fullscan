@@ -2,6 +2,11 @@
 
 CLI:
   python -m src.run_sector_outcome [--date YYYY-MM-DD] [--sectors Technology]
+                                   [--skip-scoreboard]
+
+--skip-scoreboard writes each sector's outcome markdown and does not load
+or save 03_scoreboard/scoreboard.json. Post-Close ALL omits the flag, so
+that path still grades the scoreboard.
 """
 from __future__ import annotations
 
@@ -125,6 +130,12 @@ def _etf_actual(etf: str, date_str: str) -> dict:
     return out
 
 
+def _skip_scoreboard() -> bool:
+    """True when this run writes outcome markdown and leaves the scoreboard."""
+    return os.environ.get("SECTOR_OUTCOME_SKIP_SCOREBOARD", "") in (
+        "1", "true", "yes")
+
+
 def _persist(date_str: str) -> None:
     """Land this sector before the next Grok call or a job-timeout kill."""
     try:
@@ -132,6 +143,32 @@ def _persist(date_str: str) -> None:
         _push_pack(date_str)
     except Exception as e:  # noqa: BLE001
         print(f"[sector-outcome] persist warn: {e}")
+
+
+def _persist_markdown(path: str) -> None:
+    """Land one outcome markdown file. Does not include the scoreboard."""
+    try:
+        from .run_postclose_all import ROOT, _run
+        script = ROOT / "scripts" / "safe_git_push.sh"
+        if not script.is_file():
+            print("[sector-outcome] persist warn: safe_git_push.sh missing")
+            return
+        code = _run(
+            ["bash", str(script), "auto: sector outcome markdown", path],
+            timeout_s=180,
+        )
+        if code != 0:
+            print(f"[sector-outcome] persist warn: {path} exited {code}")
+    except Exception as e:  # noqa: BLE001
+        print(f"[sector-outcome] persist warn: {e}")
+
+
+def _land_written(date_str: str, md_path: str) -> None:
+    """Full path pushes the post-close pack. Markdown-only pushes that file."""
+    if _skip_scoreboard():
+        _persist_markdown(md_path)
+        return
+    _persist(date_str)
 
 
 def _write_outcome(sector: str, date_str: str, out_dir: str, slug: str,
@@ -142,6 +179,11 @@ def _write_outcome(sector: str, date_str: str, out_dir: str, slug: str,
         fh.write(f"# Sector Outcome — {sector} — {date_str}\n\n")
         fh.write(f"Actuals: {actual}\n\n")
         fh.write(text)
+
+    if _skip_scoreboard():
+        print(f"[sector-outcome] {sector}: outcome markdown only "
+              "— scoreboard unchanged")
+        return
 
     board = scoreboard.load()
     entry = scoreboard.get_or_create(board, date_str, topic_for(sector))
@@ -198,7 +240,7 @@ def run_one(sector: str, date_str: str) -> None:
         print(f"[sector-outcome] {sector}: reuse transcript "
               f"({len(reused)} chars) — no LLM")
         _write_outcome(sector, date_str, out_dir, slug, actual, reused)
-        _persist(date_str)
+        _land_written(date_str, existing)
         return
 
     config.require_llm()
@@ -232,7 +274,7 @@ def run_one(sector: str, date_str: str) -> None:
               "that would skip the next heal", flush=True)
         return
     _write_outcome(sector, date_str, out_dir, slug, actual, text)
-    _persist(date_str)
+    _land_written(date_str, existing)
 
 
 def _one_timeout_s(default: int = 600) -> int:
@@ -256,6 +298,8 @@ def _run_one_bounded(sector: str, date_str: str) -> None:
     timeout_s = _one_timeout_s()
     cmd = [sys.executable, "-m", "src.run_sector_outcome",
            "--date", date_str, "--sectors", sector]
+    if _skip_scoreboard():
+        cmd.append("--skip-scoreboard")
     try:
         r = subprocess.run(cmd, timeout=timeout_s, env=env)
     except subprocess.TimeoutExpired:
@@ -271,7 +315,15 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
     ap.add_argument("--sectors", default=None)
+    ap.add_argument(
+        "--skip-scoreboard",
+        action="store_true",
+        help="Write sector outcome markdown only; do not load or save "
+             "the scoreboard",
+    )
     args = ap.parse_args()
+    if args.skip_scoreboard:
+        os.environ["SECTOR_OUTCOME_SKIP_SCOREBOARD"] = "1"
     date_str = args.date or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
     sectors = ([s.strip() for s in args.sectors.split(",") if s.strip()]
                if args.sectors else list(FINVIZ_SECTORS))
