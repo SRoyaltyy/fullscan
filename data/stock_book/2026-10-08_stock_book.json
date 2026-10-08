@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-08",
-    "generated_at": "2026-10-08T09:28:56.579653-04:00",
+    "generated_at": "2026-10-08T09:36:38.100846-04:00",
     "general_bias": -0.5525,
     "sector_bias": {
       "Basic Materials": -0.5287,
@@ -2777,13 +2777,13 @@
           "region": "bad"
         },
         {
-          "ticker": "VELO",
-          "sector": "Technology",
-          "industry": "Computer Hardware",
-          "size": "micro",
+          "ticker": "DGXX",
+          "sector": "Utilities",
+          "industry": "Utilities - Independent Power Producers",
+          "size": "small",
           "lane": "blocked",
           "eligible": false,
-          "bull_rank": -1.429,
+          "bull_rank": -1.9,
           "bear_rank": 16.9866,
           "domains": {
             "market": "bad",
@@ -2791,7 +2791,7 @@
             "child": "bad",
             "company": "neutral",
             "setup": "bad",
-            "flow": "good"
+            "flow": "neutral"
           },
           "source_boxes": {
             "join": "bad",
@@ -2811,12 +2811,12 @@
           "company_direct": false,
           "company_fresh": false,
           "company_price_confirmed": false,
-          "group": "Computer Hardware",
-          "child_d1": -4.74,
-          "child_w1": -5.14,
-          "child_residual": -3.07,
-          "bull_decision": "BLOCK BUY \u2014 HARD_RED: no company / child-outperform / lookback clock; parent sector RED; child industry/theme RED; setup RED; legacy Cond red; legacy region red; v2 domain region red | market=HARD_RED; parent=RED; child=RED/rel=RED; company=YELLOW(0.00); setup=RED; flow=GREEN",
-          "bear_decision": "SELL/AVOID \u2014 market=HARD_RED; red domains=parent,child,setup; child lags parent -3.1%",
+          "group": "Utilities - Independent Power Producers",
+          "child_d1": -5.99,
+          "child_w1": -9.46,
+          "child_residual": -6.28,
+          "bull_decision": "BLOCK BUY \u2014 HARD_RED: no company / child-outperform / lookback clock; parent sector RED; child industry/theme RED; setup RED; legacy Cond red; legacy region red; v2 domain region red | market=HARD_RED; parent=RED; child=RED/rel=RED; company=YELLOW(0.00); setup=RED; flow=YELLOW",
+          "bear_decision": "SELL/AVOID \u2014 market=HARD_RED; red domains=parent,child,setup; child lags parent -6.3%",
           "blue": false,
           "white": false,
           "alarm": false,

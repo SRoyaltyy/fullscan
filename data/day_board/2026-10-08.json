@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T09:30:55.154760-04:00",
+  "generated_at": "2026-10-08T09:36:41.234936-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -847,7 +847,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=186",
-          "size": 1472086,
+          "size": 1472085,
           "said": "1d BUY ASTH, AMN, MQ, TBBB, PACS, SPOT, TMUS, TDS \u00b7 SELL OKLO, FCEL, NEOV, EOSE, NRGV, ENVX \u00b7 -0.5525",
           "bullets": []
         },
@@ -861,7 +861,7 @@
           "size": 72732,
           "said": "Stock book \u2014 2026-10-08",
           "bullets": [
-            "_Generated 2026-10-08T09:28:51.978331-04:00_",
+            "_Generated 2026-10-08T09:36:38.100846-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -925,7 +925,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=186",
-          "size": 1472086,
+          "size": 1472085,
           "said": "1d BUY ASTH, AMN, MQ, TBBB, PACS, SPOT, TMUS, TDS \u00b7 SELL OKLO, FCEL, NEOV, EOSE, NRGV, ENVX \u00b7 -0.5525",
           "bullets": []
         },
