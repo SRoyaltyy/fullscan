@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:55:58.838994-04:00",
+  "generated_at": "2026-10-08T09:00:49.330164-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -98,7 +98,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 4 down / 1 flat",
+    "said": "1 up / 5 down / 1 flat",
     "bullets": [
       "XLB DOWN -5.5",
       "XLC FLAT -8.3",
@@ -109,7 +109,7 @@
       "XLV missing",
       "XLI missing",
       "XLRE DOWN -7.1",
-      "XLK missing",
+      "XLK DOWN -11.7",
       "XLU missing"
     ]
   },
@@ -396,70 +396,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Real Estate (6/11)",
+      "title": "Sector predict Technology (7/11)",
       "date": "2026-10-08",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-08T08:55:57.564257-04:00",
+      "at": "2026-10-08T09:00:48.032182-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-08/real_estate_predict.md",
+          "path": "01_daily/sectors/2026-10-08/technology_predict.md",
           "ok": true,
           "reason": "",
-          "size": 15197,
-          "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-7.057** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.685** (ES -0.39%, ZN -0.03%, PM:XLRE -0.07%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **-4.675** (raw -4.675)"
+          "size": 16886,
+          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-11.67** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-4.661** (NQ -0.67%, ES -0.39%, PM:XLK -0.83%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **-5.312** (raw -5.312)"
         },
         {
-          "path": "01_daily/sectors/2026-10-08/real_estate_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-08/technology_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 12915,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (98,522 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10-year Treasury yield 5.3% October 8 2026 REITs selloff\"* \u2192 got 6 results (via ddg)\n- Treasury Yields & Bond Market \u2014 Monthly Report October 2026 (https://stockmarketwatch.com/bonds/reports/october-2026)\n- Treasury Yield Curve Today: October 8, 2026 \u2502 Rates & Spread ... (https://primerates.com/primerate/treasury-yield-curve/)\n- 10-YEAR TREASURY YIELD FORECAST 2026, 2027, 2028 (https://longforecast.com/10y-treasury)\n**Step 2 \u2014 Research.** The model wanted to know: *\"FOMC minutes October 2026 another rate hike likely inflation"
+          "size": 14988,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (119,446 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"TSMC Q3 2026 revenue +51% AI demand October 2026\"* \u2192 got 6 results (via gnews_rss)\n- TSMC's quarterly revenue jumped 51 percent as AI chip demand held firm - Startup Fortune (https://news.google.com/rss/articles/CBMingFBVV95cUxPcF9MalNHSVljSlY3a1hNRkY1Y19tdlJ4TGRDeTZuRGhZczhOMDgtbUsyZGpmY05ZNXBVRUhYelVHdVVNSnM0YWRDSTRkOWVnaWM0RmNyWm40b3BsYVBvRS1HWWdjR3FBM1JZZXVrMnprNTlVbFpxNDNHazhoZE5YSTJwdUVDNmFxNUFXSVFtRTdlTXNWdmJtZDY2bVNDZw?oc=5)\n- Daily US Equity Opening News - TSM Q3 revenue up on strong AI demand; SSNLF slips after prel"
         },
         {
-          "path": "01_daily/_transcripts/2026-10-08_sector_real_estate_predict.json",
+          "path": "01_daily/_transcripts/2026-10-08_sector_technology_predict.json",
           "ok": true,
           "reason": "",
-          "size": 169599,
+          "size": 190431,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-08_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 8386,
+          "size": 8379,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-08/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 2419,
+          "size": 2415,
           "preview": "keys: date, n_ok, n_total, required, ok, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-08/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1873,
-          "preview": "# Sector Board \u2014 2026-10-08\nGenerated: **2026-10-08T08:55:57.548247-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1935,
+          "preview": "# Sector Board \u2014 2026-10-08\nGenerated: **2026-10-08T09:00:48.015741-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-08/_board.json",
           "ok": true,
           "reason": "",
-          "size": 7428,
+          "size": 7601,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 1036673,
+          "size": 1037757,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-7.057** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.685** (ES -0.39%, ZN -0.03%, PM:XLRE -0.07%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **-4.675** (raw -4.675) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (98,522 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10-year Treasury yield 5.3% October 8 2026 REITs selloff\"* \u2192 got 6 results (via ddg)\n- Treasury Yields & Bond Market \u2014 Monthly Report October 2026 (https://stockmarketwatch.com/bonds/reports/october-2026)\n- Treasury Yield Curve Today: October 8, 2026 \u2502 Rates & Spread ... (https://primerates.com/primerate/treasury-yield-curve/)\n- 10-YEAR TREASURY YIELD FORECAST 2026, 2027, 2028 (https"
+      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-10-08\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-11.67** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-4.661** (NQ -0.67%, ES -0.39%, PM:XLK -0.83%) \u00b7 index_carry **-1.697** (general -6.787) \u00b7 llm_overlay **-5.312** (raw -5.312) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-10-08\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (119,446 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"TSMC Q3 2026 revenue +51% AI demand October 2026\"* \u2192 got 6 results (via gnews_rss)\n- TSMC's quarterly revenue jumped 51 percent as AI chip demand held firm - Startup Fortune (https://news.google.com/rss/articles/CBMingFBVV95cUxPcF9MalNHSVljSlY3a1hNRkY1Y19tdlJ4TGRDeTZuRGhZczhOMDgtbUsyZGpmY05ZNXBVRUhYelVHdVVNSnM0YWRDSTRkOWVnaWM0RmNyWm40b3BsYVBvRS1HWWdjR3FBM1JZZXVrMnprNTlVbFpxNDNHazhoZE5"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

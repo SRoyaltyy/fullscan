@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "n_ok": 6,
+  "n_ok": 7,
   "n_total": 11,
   "required": false,
   "ok": true,
@@ -89,9 +89,9 @@
     },
     {
       "sector": "Technology",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
+      "ok": true,
+      "reason": "",
+      "size": 16886,
       "status": "DEGRADED",
       "provider": "openclaw",
       "fallback_reason": "openclaw_timeout"
