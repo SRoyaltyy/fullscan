@@ -1,8 +1,8 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T04:19:29.758619-04:00",
+  "generated_at": "2026-10-08T04:20:26.261078-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-08.csv",
+  "export": "finviz_2026-10-07.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,7 +8935,7 @@
   ],
   "ticker_news": [
     {
-      "time": "16 min",
+      "time": "17 min",
       "title": "BE Stock Falls Premarket: Bernstein Says Bloom Energy Is Already Positioned For Broader Power Buildout",
       "url": "https://finance.yahoo.com/markets/stocks/articles/stock-falls-premarket-bernstein-says-080247327.html",
       "source": "Stocktwits",
@@ -8944,7 +8944,7 @@
       ]
     },
     {
-      "time": "19 min",
+      "time": "20 min",
       "title": "Biohaven Enters Strategic Licensing Agreement with Ono Pharma for Extracellular IgG Degraders in Japan and Select Asian Regions, Lead Candidate BHV-1300 in Phase 3 for Graves' Disease",
       "url": "/news/400137/biohaven-enters-strategic-licensing-agreement-with-ono-pharma-for-extracellular-igg-degraders-in-japan-and-select-asian-regions-lead-candidate-bhv-1300-in-phase-3-for-graves-disease",
       "source": "PR Newswire",
@@ -8953,7 +8953,7 @@
       ]
     },
     {
-      "time": "27 min",
+      "time": "28 min",
       "title": "FTSE 100 today: Stocks fall, weighed by miners; oil up on Hormuz supply worries",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/ftse-100-today-stocks-fall-075209704.html",
       "source": "Investing.com",
@@ -8962,7 +8962,7 @@
       ]
     },
     {
-      "time": "27 min",
+      "time": "28 min",
       "title": "AI startup Manus raises $500m after Meta acquisition blocked by China",
       "url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-manus-raises-500m-075135971.html",
       "source": "AFP",
@@ -8971,7 +8971,7 @@
       ]
     },
     {
-      "time": "34 min",
+      "time": "35 min",
       "title": "Michael Burry Warns Anthropics Valuation Could Buy 78 Profitable S&P 500 Companies: Fun Game in Times Like These",
       "url": "https://finance.yahoo.com/markets/stocks/articles/michael-burry-warns-anthropic-valuation-074513150.html",
       "source": "Benzinga Private Markets",
@@ -8984,7 +8984,7 @@
       ]
     },
     {
-      "time": "37 min",
+      "time": "38 min",
       "title": "Lam Research launches South Korea chip fund after 15,000-chamber milestone",
       "url": "https://www.digitimes.com/news/a20261008VL222/lam-research-manufacturing-equipment-technology-investment.html",
       "source": "DigiTimes",
@@ -8993,7 +8993,7 @@
       ]
     },
     {
-      "time": "38 min",
+      "time": "39 min",
       "title": "Citi reiterates these 2 medtech stocks as its top picks in the sector",
       "url": "https://finance.yahoo.com/healthcare/articles/citi-reiterates-2-medtech-stocks-074030919.html",
       "source": "Investing.com",
@@ -9003,18 +9003,18 @@
       ]
     },
     {
-      "time": "42 min",
+      "time": "43 min",
       "title": "SpaceX pursues US$40 billion Nvidia chip financing while Terafab charts path to AI compute independence",
       "url": "https://www.digitimes.com/news/a20261008PD235/spacex-financing-infrastructure-nvidia.html",
       "source": "DigiTimes",
       "tickers": [
-        "NVDA",
         "TSLA",
+        "NVDA",
         "SPCX"
       ]
     },
     {
-      "time": "44 min",
+      "time": "45 min",
       "title": "Stock Market Today: Dow set for 300-point drop, S&P 500 and Nasdaq to decline as oil prices jump on threat of war resuming in Iran",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-oil-prices-brent-crude-attack-tanker-off-qatar?mod=mw_FV",
       "source": "MarketWatch",
@@ -9027,7 +9027,7 @@
       ]
     },
     {
-      "time": "45 min",
+      "time": "46 min",
       "title": "IBRX Stock Under Pressure: Retail Sees 'Ridiculously Cheap' Bargain As Founder Touts Sister Firm NantIQ's Aetna Work",
       "url": "https://finance.yahoo.com/healthcare/articles/ibrx-stock-under-pressure-retail-073336720.html",
       "source": "Stocktwits",
@@ -9037,7 +9037,7 @@
       ]
     },
     {
-      "time": "49 min",
+      "time": "50 min",
       "title": "Kaplan Fox Encourages Coastal Financial Corporation (CCB) Investors with Significant Losses to Contact the Firm Before December 1, 2026",
       "url": "https://www.newsfilecorp.com/release/317771/Kaplan-Fox-Encourages-Coastal-Financial-Corporation-CCB-Investors-with-Significant-Losses-to-Contact-the-Firm-Before-December-1-2026",
       "source": "Newsfile",
@@ -9046,7 +9046,7 @@
       ]
     },
     {
-      "time": "49 min",
+      "time": "50 min",
       "title": "Oracle Courts Apollo and Goldman for AI Chip Financing as Debt Tops $169 Billion",
       "url": "https://finance.yahoo.com/technology/ai/articles/oracle-courts-apollo-goldman-ai-072925320.html",
       "source": "TIKR",
@@ -9056,7 +9056,7 @@
       ]
     },
     {
-      "time": "52 min",
+      "time": "53 min",
       "title": "MU, TSM Stocks Dip Overnight As Samsung Forecasts Record $80B Operating Profit In Q3",
       "url": "https://finance.yahoo.com/markets/stocks/articles/mu-tsm-stocks-dip-overnight-072645570.html",
       "source": "Stocktwits",
@@ -9071,8 +9071,8 @@
       "url": "https://www.newsfilecorp.com/release/317770/Kaplan-Fox-Encourages-Alphabet-Inc.-GOOGL-GOOG-Investors-with-Significant-Losses-to-Contact-the-Firm-Before-December-1-2026",
       "source": "Newsfile",
       "tickers": [
-        "GOOG",
-        "GOOGL"
+        "GOOGL",
+        "GOOG"
       ]
     },
     {
@@ -9170,8 +9170,8 @@
       "url": "https://finance.yahoo.com/media-advertising/articles/blackbird-roll-elevate-video-editor-063600414.html",
       "source": "Proactive",
       "tickers": [
-        "GOOG",
         "GOOGL",
+        "GOOG",
         "BIRD"
       ]
     },
@@ -9326,8 +9326,8 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/spcx-stock-eyes-2-week-052842876.html",
       "source": "Stocktwits",
       "tickers": [
-        "SPCX",
         "AMZN",
+        "SPCX",
         "GSAT"
       ]
     },
@@ -9444,8 +9444,8 @@
       "url": "https://finance.yahoo.com/healthcare/articles/alphabet-isomorphic-labs-funding-talks-040000989.html",
       "source": "Bloomberg",
       "tickers": [
-        "GOOG",
-        "GOOGL"
+        "GOOGL",
+        "GOOG"
       ]
     },
     {
@@ -10633,7 +10633,7 @@
       "company": "Blackstone Inc",
       "datetime": "2026-10-22T08:30:00",
       "session": "BMO",
-      "mcap": 136614.47726656188,
+      "mcap": 136889.78622585462,
       "eps_est": 1.3164
     },
     {
@@ -10737,5 +10737,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 153,
   "earnings_window_count": 252,
-  "overlay_at": "2026-10-08T04:19:29.758619-04:00"
+  "overlay_at": "2026-10-08T04:20:26.261078-04:00"
 }

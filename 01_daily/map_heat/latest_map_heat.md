@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-08
 
-Export `finviz_2026-10-08.csv` · 11616 names · generated 2026-10-08T04:19:29.758619-04:00
+Export `finviz_2026-10-07.csv` · 11616 names · generated 2026-10-08T04:20:26.261078-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -280,20 +280,20 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 16 min **BE** BE Stock Falls Premarket: Bernstein Says Bloom Energy Is Already Positioned For Broader Power Buildout (Stocktwits)
-- 19 min **BHVN** Biohaven Enters Strategic Licensing Agreement with Ono Pharma for Extracellular IgG Degraders in Japan and Select Asian Regions, Lead Candidate BHV-1300 in Phase 3 for Graves' Disease (PR Newswire)
-- 27 min **RIO** FTSE 100 today: Stocks fall, weighed by miners; oil up on Hormuz supply worries (Investing.com)
-- 27 min **META** AI startup Manus raises $500m after Meta acquisition blocked by China (AFP)
-- 34 min **LULU,TSCO,DECK,MKC,CLX** Michael Burry Warns Anthropics Valuation Could Buy 78 Profitable S&P 500 Companies: Fun Game in Times Like These (Benzinga Private Markets)
-- 37 min **LRCX** Lam Research launches South Korea chip fund after 15,000-chamber milestone (DigiTimes)
-- 38 min **DXCM,ABT** Citi reiterates these 2 medtech stocks as its top picks in the sector (Investing.com)
-- 42 min **NVDA,TSLA,SPCX** SpaceX pursues US$40 billion Nvidia chip financing while Terafab charts path to AI compute independence (DigiTimes)
-- 44 min **ANGO,TLRY,PEP,NG,HELE** Stock Market Today: Dow set for 300-point drop, S&P 500 and Nasdaq to decline as oil prices jump on threat of war resuming in Iran (MarketWatch)
-- 45 min **CVS,IBRX** IBRX Stock Under Pressure: Retail Sees 'Ridiculously Cheap' Bargain As Founder Touts Sister Firm NantIQ's Aetna Work (Stocktwits)
-- 49 min **CCB** Kaplan Fox Encourages Coastal Financial Corporation (CCB) Investors with Significant Losses to Contact the Firm Before December 1, 2026 (Newsfile)
-- 49 min **ORCL,NVDA** Oracle Courts Apollo and Goldman for AI Chip Financing as Debt Tops $169 Billion (TIKR)
-- 52 min **MU,TSM** MU, TSM Stocks Dip Overnight As Samsung Forecasts Record $80B Operating Profit In Q3 (Stocktwits)
-- 1 hour **GOOG,GOOGL** Kaplan Fox Encourages Alphabet Inc. (GOOGL, GOOG) Investors with Significant Losses to Contact the Firm Before December 1, 2026 (Newsfile)
+- 17 min **BE** BE Stock Falls Premarket: Bernstein Says Bloom Energy Is Already Positioned For Broader Power Buildout (Stocktwits)
+- 20 min **BHVN** Biohaven Enters Strategic Licensing Agreement with Ono Pharma for Extracellular IgG Degraders in Japan and Select Asian Regions, Lead Candidate BHV-1300 in Phase 3 for Graves' Disease (PR Newswire)
+- 28 min **RIO** FTSE 100 today: Stocks fall, weighed by miners; oil up on Hormuz supply worries (Investing.com)
+- 28 min **META** AI startup Manus raises $500m after Meta acquisition blocked by China (AFP)
+- 35 min **LULU,TSCO,DECK,MKC,CLX** Michael Burry Warns Anthropics Valuation Could Buy 78 Profitable S&P 500 Companies: Fun Game in Times Like These (Benzinga Private Markets)
+- 38 min **LRCX** Lam Research launches South Korea chip fund after 15,000-chamber milestone (DigiTimes)
+- 39 min **DXCM,ABT** Citi reiterates these 2 medtech stocks as its top picks in the sector (Investing.com)
+- 43 min **TSLA,NVDA,SPCX** SpaceX pursues US$40 billion Nvidia chip financing while Terafab charts path to AI compute independence (DigiTimes)
+- 45 min **ANGO,TLRY,PEP,NG,HELE** Stock Market Today: Dow set for 300-point drop, S&P 500 and Nasdaq to decline as oil prices jump on threat of war resuming in Iran (MarketWatch)
+- 46 min **CVS,IBRX** IBRX Stock Under Pressure: Retail Sees 'Ridiculously Cheap' Bargain As Founder Touts Sister Firm NantIQ's Aetna Work (Stocktwits)
+- 50 min **CCB** Kaplan Fox Encourages Coastal Financial Corporation (CCB) Investors with Significant Losses to Contact the Firm Before December 1, 2026 (Newsfile)
+- 50 min **ORCL,NVDA** Oracle Courts Apollo and Goldman for AI Chip Financing as Debt Tops $169 Billion (TIKR)
+- 53 min **MU,TSM** MU, TSM Stocks Dip Overnight As Samsung Forecasts Record $80B Operating Profit In Q3 (Stocktwits)
+- 1 hour **GOOGL,GOOG** Kaplan Fox Encourages Alphabet Inc. (GOOGL, GOOG) Investors with Significant Losses to Contact the Firm Before December 1, 2026 (Newsfile)
 - 1 hour **CME** CME Group's International Average Daily Volume Rises 22% to 9 Million Contracts in Q3 2026 (PR Newswire)
 - 1 hour **CELH** Kaplan Fox Encourages Celsius Holdings, Inc. (CELH) Investors with Significant Losses to Contact the Firm Before November 3, 2026 (Newsfile)
 - 1 hour **C,COIN** Citi Just Connected Its $6 Trillion Payment Network to Stablecoin Rails  and Every eCommerce Platform Is Now a Potential On-Ramp (Forkast News)
@@ -303,7 +303,7 @@ COLD (1w):
 - 1 hour **NIO** NIO Stock Eyes End To 5-Week Slump: Retail Loads Up As Onvo Hits 200,000 Deliveries, Battery Swaps Smash Record (Stocktwits)
 - 1 hour **AVAV,KTOS,ARKK** Cathie Woods ARK Invest Adds Kratos Defense, AeroVironment Stocks As Pentagon Bets On Drones To Drive Future Warfare (Stocktwits)
 - 1 hour **NVDA,MSFT,CRWD,AAPL,PLTR** Dan Ives Names 5 Tech Stocks for 2027, Including One That Doubled in 2026 (BeInCrypto)
-- 1 hour **GOOG,GOOGL,BIRD** Blackbird to roll out elevate video editor to Google Chromebook perks (Proactive)
+- 1 hour **GOOGL,GOOG,BIRD** Blackbird to roll out elevate video editor to Google Chromebook perks (Proactive)
 - 1 hour **SPGI,MCO** Moodys Just Rated a Stablecoin Protocol for the First Time  and the Numbers Are Uncomfortable (Forkast News)
 
 ## NOTES
