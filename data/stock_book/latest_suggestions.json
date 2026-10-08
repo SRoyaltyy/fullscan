@@ -8,16 +8,16 @@
           "score": 0.5521247958025313
         },
         {
+          "ticker": "ASTH",
+          "score": 0.7273197072274897
+        },
+        {
           "ticker": "CON",
           "score": 0.6953401293518459
         },
         {
           "ticker": "AMN",
           "score": 0.7070091326370284
-        },
-        {
-          "ticker": "ASTH",
-          "score": 0.5330248793167367
         },
         {
           "ticker": "PACS",
@@ -122,8 +122,8 @@
           "score": 0.8255009979912147
         },
         {
-          "ticker": "BLFS",
-          "score": 0.8157654572175774
+          "ticker": "CRON",
+          "score": 0.80866591020912
         },
         {
           "ticker": "SM",
@@ -578,9 +578,9 @@
   },
   "buy_1d": [
     "HITI",
+    "ASTH",
     "CON",
     "AMN",
-    "ASTH",
     "PACS",
     "NTAP",
     "MQ",
