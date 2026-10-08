@@ -1,0 +1,353 @@
+{
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T09:17:48.127683-04:00",
+  "items": [
+    {
+      "ok": true,
+      "kind": "general_predict",
+      "path": "01_daily/general/2026-10-08_predict.md",
+      "reason": "",
+      "size": 11416,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "events",
+      "path": "01_daily/events/2026-10-08_events.json",
+      "reason": "",
+      "size": 15253,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "news_judge",
+      "path": "01_daily/news/2026-10-08_judge.md",
+      "reason": "",
+      "size": 11294,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "news_parse",
+      "path": "01_daily/news/2026-10-08_parsed.json",
+      "reason": "",
+      "size": 7502293,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "news_actions",
+      "path": "01_daily/news/2026-10-08_actions.json",
+      "reason": "",
+      "size": 108249,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "finviz_digest",
+      "path": "01_daily/news/2026-10-08_finviz_digest.json",
+      "reason": "",
+      "size": 97689,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "finviz_market_digest",
+      "path": "01_daily/news/2026-10-08_finviz_market_digest.json",
+      "reason": "",
+      "size": 4756,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": false,
+      "kind": "finviz_market_digest",
+      "path": "01_daily/news/2026-10-08_finviz_market_digest_close.json",
+      "reason": "missing",
+      "size": 0,
+      "carried": false,
+      "timeout": false,
+      "empty": true,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "map_heat",
+      "path": "01_daily/map_heat/2026-10-08_map_heat.json",
+      "reason": "",
+      "size": 275105,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "map_heat_baseline",
+      "path": "01_daily/map_heat/2026-10-08_research_baseline.json",
+      "reason": "",
+      "size": 412110,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "map_heat_research",
+      "path": "01_daily/map_heat/2026-10-08_research.md",
+      "reason": "",
+      "size": 41553,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "sector_predict",
+      "path": "01_daily/sectors/2026-10-08/basic_materials_predict.md",
+      "reason": "",
+      "size": 17539,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "sector_predict",
+      "path": "01_daily/sectors/2026-10-08/communication_services_predict.md",
+      "reason": "",
+      "size": 20308,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "sector_predict",
+      "path": "01_daily/sectors/2026-10-08/consumer_cyclical_predict.md",
+      "reason": "",
+      "size": 17047,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "sector_predict",
+      "path": "01_daily/sectors/2026-10-08/consumer_defensive_predict.md",
+      "reason": "",
+      "size": 18981,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": false,
+      "kind": "sector_predict",
+      "path": "01_daily/sectors/2026-10-08/energy_predict.md",
+      "reason": "missing",
+      "size": 0,
+      "carried": false,
+      "timeout": false,
+      "empty": true,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "sector_predict",
+      "path": "01_daily/sectors/2026-10-08/financial_predict.md",
+      "reason": "",
+      "size": 21028,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": false,
+      "kind": "sector_predict",
+      "path": "01_daily/sectors/2026-10-08/healthcare_predict.md",
+      "reason": "missing",
+      "size": 0,
+      "carried": false,
+      "timeout": false,
+      "empty": true,
+      "missing_markers": []
+    },
+    {
+      "ok": false,
+      "kind": "sector_predict",
+      "path": "01_daily/sectors/2026-10-08/industrials_predict.md",
+      "reason": "missing",
+      "size": 0,
+      "carried": false,
+      "timeout": false,
+      "empty": true,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "sector_predict",
+      "path": "01_daily/sectors/2026-10-08/real_estate_predict.md",
+      "reason": "",
+      "size": 15197,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "sector_predict",
+      "path": "01_daily/sectors/2026-10-08/technology_predict.md",
+      "reason": "",
+      "size": 16886,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
+      "kind": "sector_predict",
+      "path": "01_daily/sectors/2026-10-08/utilities_predict.md",
+      "reason": "",
+      "size": 13760,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    }
+  ],
+  "sectors": [
+    {
+      "sector": "Basic Materials",
+      "ok": true,
+      "reason": "",
+      "size": 17539,
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Communication Services",
+      "ok": true,
+      "reason": "",
+      "size": 20308,
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Consumer Cyclical",
+      "ok": true,
+      "reason": "",
+      "size": 17047,
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Consumer Defensive",
+      "ok": true,
+      "reason": "",
+      "size": 18981,
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Energy",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Financial",
+      "ok": true,
+      "reason": "",
+      "size": 21028,
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Healthcare",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Industrials",
+      "ok": false,
+      "reason": "missing",
+      "size": 0,
+      "status": "FAIL",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Real Estate",
+      "ok": true,
+      "reason": "",
+      "size": 15197,
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Technology",
+      "ok": true,
+      "reason": "",
+      "size": 16886,
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Utilities",
+      "ok": true,
+      "reason": "",
+      "size": 13760,
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    }
+  ],
+  "sector_n_ok": 8,
+  "sector_n_total": 11,
+  "sectors_required": false,
+  "all_ok": true
+}

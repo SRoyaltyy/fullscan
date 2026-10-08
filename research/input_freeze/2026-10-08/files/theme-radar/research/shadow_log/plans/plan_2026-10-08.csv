@@ -1,0 +1,16 @@
+cell,signal_date,ticker,entry_date,hold_days,rules_sha256,source
+fpe_delta_t3_earn_today_3d,2026-10-07,BLK,2026-10-08,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-08
+fpe_delta_t3_earn_today_3d,2026-10-07,CMC,2026-10-08,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-08
+fpe_delta_t3_earn_today_3d,2026-10-07,DAL,2026-10-08,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-08
+fpe_delta_t3_earn_today_3d,2026-10-07,DPZ,2026-10-08,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-08
+fpe_delta_t3_earn_today_3d,2026-10-07,ERIC,2026-10-08,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-08
+fpe_delta_t3_earn_today_3d,2026-10-07,JNJ,2026-10-08,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-08
+fpe_delta_t3_earn_today_3d,2026-10-07,MRSH,2026-10-08,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-08
+fpe_delta_t3_earn_today_3d,2026-10-07,PGR,2026-10-08,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-08
+fpe_delta_t3_earn_today_3d,2026-10-07,RELL,2026-10-08,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-08
+fpe_delta_t3_earn_today_3d,2026-10-07,UNH,2026-10-08,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-08
+fpe_delta_t3_earn_today_3d,2026-10-07,WSE,2026-10-08,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-08
+fresh_dcp_t1_avoid_ah_3d,2026-10-07,AIB,2026-10-08,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-08
+# status=fires rows=12 fpe_delta_t3_earn_today_3d=11 fresh_dcp_t1_ep_ge03_2d=0 fresh_dcp_t1_avoid_ah_3d=1
+# built_at_utc=2026-10-08T09:23:58Z signal_date=2026-10-07 entry_date=2026-10-08 builder_sha256=9e70523ee355d655b125ffd46f8ccd08a25fe762fccfa6ee08c97eb3c5d52840
+# inputs: {"dcp_candidates":["AIB","DLR","DUK","IREN","LSCC"],"dcp_prior_snapshot":"2026-10-06","earn_gate_n":59,"fails":"[]","features_T_sha256":"b89605af8eeff8529d8e472db86e46dc0042ffa81c38c15446baaa722c9a3371","fpe_prior_snapshot":"2026-10-02","fpe_signal_n":1270,"letters_log":"rows 5 skipped {'2026-10-08': 0} FAILS []","letters_rows":5,"letters_sha256":"09f5e83dba3b9bb7a12372232a292231464a76c7ba60c719669bc96825231222","membership":"fullscan@d5b4886fe (committed 2026-10-08T08:32:00Z) sha256=b0af580dd8af400c4d4393b1e65501a163fd67f99b079c7905b284fe4b3666d5","skipped":"{'2026-10-08': 0}","snapshot_T_sha256":"5c084ea81c391613f5da4ce6e6c9c189f72a5896afc958b5ba91c5bd224a90d8","snapshots_after_T_ignored":[],"tr_head":"722218e24","universe_log":"2026-10-08 cand 5 in membership 5 liquid 5 universe 5 excluded []"}

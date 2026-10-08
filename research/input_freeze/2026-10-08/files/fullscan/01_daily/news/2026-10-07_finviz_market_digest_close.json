@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-07",
+  "generated_at": "2026-10-07T16:24:50.990077-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-08",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-08) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks eased from record highs as Treasury yields hit multi-decade levels and Brent briefly topped $100 amid hawkish Fed minutes",
+  "raw_text": "- The S&P 500 ($SPX) closed at 7,798.84, down 0.26%, the Dow Jones Industrial Average ($DJI) at 51,196.54, down 0.63%, the Nasdaq Composite ($COMP) at 27,489.08, down 0.40%, and the Russell 2000 (IWM) fell 1.3%, with Dow futures (@YM) off roughly 0.72% in extended trading.\n- The 30-year Treasury yield briefly touched a 24-year high near 5.70% before retreating after a strong $39 billion 10-year auction, helping major indexes recover from intraday lows.\n- Brent crude (@QA) briefly topped $100 per barrel on attacks in the Strait of Hormuz and rising Gulf storm risks.\n- Federal Reserve minutes showed policymakers unanimously raised rates in September to 3.75%-4.00%, saw additional work needed to tame inflation, expected another hike this year, and were divided on the impact of energy shocks versus demand pressures.\n- Caterpillar (CAT) shares fell over 5.5% after the FTC and USDA opened a broad inquiry into business practices and repair restrictions in the agricultural equipment market.\n- Deere & Co. (DE) declined after the FTC and USDA opened an inquiry into practices in the farm equipment market.\n- Webull (BULL) plunged about 20% following congressional concerns over the broker’s ties to China.\n- ZIM Integrated Shipping Services (ZIM) climbed after the company raised its 2026 full-year guidance.\n- SpaceX (SPCX) slipped 2.8% on reports it plans to build and run a Texas Terafab AI chip complex.\n- Eight of 11 S&P 500 ($SPX) sectors closed lower, led by materials and industrials, while housing stocks fell about 3.1%.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) closed at **7,798.84, down 0.26%**, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) at **51,196.54, down 0.63%**, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) at **27,489.08, down 0.40%**, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) fell **1.3%**, with **Dow futures** ([@YM](https://finviz.com/futures_charts?t=YM)) off roughly **0.72%** in extended trading.\n- The **30-year Treasury yield** briefly touched a **24-year high near 5.70%** before retreating after a strong **$39 billion 10-year auction**, helping major indexes recover from intraday lows.\n- **Brent crude** ([@QA](https://finviz.com/futures_charts?t=QA)) briefly topped **$100 per barrel** on attacks in the **Strait of Hormuz** and rising Gulf storm risks.\n- **Federal Reserve minutes** showed policymakers **unanimously** raised rates in September to **3.75%-4.00%**, saw additional work needed to tame inflation, expected **another hike this year**, and were divided on the impact of energy shocks versus demand pressures.\n- **Caterpillar** ([CAT](https://finviz.com/quote?t=CAT)) shares fell over **5.5%** after the **FTC and USDA** opened a broad inquiry into business practices and repair restrictions in the agricultural equipment market.\n- **Deere & Co.** ([DE](https://finviz.com/quote?t=DE)) declined after the **FTC and USDA** opened an inquiry into practices in the farm equipment market.\n- **Webull** ([BULL](https://finviz.com/quote?t=BULL)) plunged about **20%** following congressional concerns over the broker’s **ties to China**.\n- **ZIM Integrated Shipping Services** ([ZIM](https://finviz.com/quote?t=ZIM)) climbed after the company **raised its 2026 full-year guidance**.\n- **SpaceX** ([SPCX](https://finviz.com/quote?t=SPCX)) slipped **2.8%** on reports it plans to build and run a **Texas Terafab AI chip complex**.\n- **Eight of 11 S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) sectors closed lower, led by materials and industrials, while **housing stocks fell about 3.1%**.",
+  "index_moves": [
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -1.3,
+      "verb": "fell"
+    }
+  ],
+  "oil": {
+    "name": "Brent crude",
+    "price": 100.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": {
+    "pct": 4.0,
+    "action": "hike",
+    "text": "4.00%, saw additional work needed to tame inflation, expected another hike"
+  },
+  "named_tickers": [
+    "CAT",
+    "DE",
+    "BULL",
+    "ZIM",
+    "SPCX"
+  ],
+  "named_leaders": [
+    "CAT",
+    "DE",
+    "BULL",
+    "ZIM",
+    "SPCX"
+  ],
+  "calendar": [
+    "The 30-year Treasury yield briefly touched a 24-year high near 5.70% before retreating after a strong $39 billion 10-year auction, helping major indexes recover from intraday lows."
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": -1.3,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 4.0,
+      "action": "hike",
+      "text": "4.00%, saw additional work needed to tame inflation, expected another hike"
+    }
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "The 30-year Treasury yield briefly touched a 24-year high near 5.70% before retreating after a strong $39 billion 10-year auction, helping major indexes recover from intraday lows.",
+      "Federal Reserve minutes showed policymakers unanimously raised rates in September to 3.75%-4.00%, saw additional work needed to tame inflation, expected another hike this year, and were divided on the impact of energy shocks versus demand pressures.",
+      "Eight of 11 S&P 500 ($SPX) sectors closed lower, led by materials and industrials, while housing stocks fell about 3.1%."
+    ],
+    "text": "The 30-year Treasury yield briefly touched a 24-year high near 5.70% before retreating after a strong $39 billion 10-year auction, helping major indexes recover from intraday lows. Federal Reserve minutes showed policymakers unanimously raised rates in September to 3.75%-4.00%, saw additional work needed to tame inflation, expected another hike this year, and were divided on the impact of energy shocks versus demand pressures. Eight of 11 S&P 500 ($SPX) sectors closed lower, led by materials and industrials, while housing stocks fell about 3.1%."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Brent crude (@QA) briefly topped $100 per barrel on attacks in the Strait of Hormuz and rising Gulf storm risks."
+  },
+  "finviz_id": 303970,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-07T16:06:32.217",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
