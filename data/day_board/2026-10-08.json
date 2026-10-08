@@ -1,21 +1,20 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T04:17:25.613232-04:00",
-  "overall": "FAIL",
+  "generated_at": "2026-10-08T04:17:37.098176-04:00",
+  "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-08_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-10-08/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-10-08_actions.json` \u2014 missing",
-    "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-10-08_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-10-08_judge.md` \u2014 missing",
     "MISSING Weather JSON `01_daily/weather/2026-10-08_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-08_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 0,
-    "partial": 2,
-    "fail": 6,
+    "ok": 1,
+    "partial": 3,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -88,11 +87,11 @@
       "key": "finviz",
       "name": "Finviz scrape",
       "yaml": "finviz_preopen_scrape.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 5,
       "files": [
         {
@@ -100,32 +99,39 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-08_finviz_digest.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97028,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
+          ]
         },
         {
           "key": "digest_md",
           "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-10-08_finviz_digest.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11840,
+          "said": "Finviz Daily Digest \u2014 2026-10-08",
+          "bullets": [
+            "_Generated 2026-10-08T04:17:36.530506-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "Major indices (live quote page)"
+          ]
         },
         {
           "key": "market_digest_json",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-10-08_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 4756,
-          "said": "US equity futures point to a lower open as oil rises on supply concerns ahead of jobless claims data and PepsiCo earnings \u00b7 leaders PEP, CMCSA, TRI \u00b7 bad",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -133,14 +139,11 @@
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-10-08_finviz_market_digest.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 2303,
-          "said": "Finviz homepage market digest \u2014 2026-10-08",
-          "bullets": [
-            "Generated:** 2026-10-08T04:17:25.324722-04:00 (America/New_York)",
-            "Source:** `live`"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_close_json",
@@ -165,18 +168,22 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "bullets": [
+        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+        "Banks have profited from idle cash for years. AI agents could change that."
+      ]
     },
     {
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 14,
       "files": [
         {
@@ -184,21 +191,25 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-08_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97028,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
+          ]
         },
         {
           "key": "in_market_digest",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-10-08_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 4756,
-          "said": "US equity futures point to a lower open as oil rises on supply concerns ahead of jobless claims data and PepsiCo earnings \u00b7 leaders PEP, CMCSA, TRI \u00b7 bad",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -316,11 +327,16 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-10-08_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 7592,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
+          "bullets": [
+            "general_predict:missing",
+            "events:missing",
+            "news_judge:missing",
+            "news_parse:missing"
+          ]
         },
         {
           "key": "status",
@@ -338,11 +354,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-10-08_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -474,7 +492,7 @@
       "name": "Label + weather",
       "yaml": "label_weather.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
@@ -485,11 +503,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-08_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97028,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
+          ]
         },
         {
           "key": "weather",
@@ -570,11 +592,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-08_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97028,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
+          ]
         },
         {
           "key": "dossiers",
@@ -640,11 +666,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-08_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97028,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "bullets": [
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
+          ]
         },
         {
           "key": "in_judge",
@@ -862,6 +892,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-08\n**Generated:** 2026-10-08T04:17:25.324722-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a lower open as oil rises on supply concerns ahead of jobless claims data and PepsiCo earnings\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** PEP, CMCSA, TRI\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** PEP\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-08\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-08T04:17:36.885060-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-08_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97028,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-08_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11864,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-08\n_Generated 2026-10-08T04:17:36.530506-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-08.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11522782,
+          "preview": "11717 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-08_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97028,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-08\n_Generated 2026-10-08T04:17:36.530506-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11717 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
