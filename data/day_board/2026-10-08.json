@@ -1,6 +1,6 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T20:21:37.462469-04:00",
+  "generated_at": "2026-10-09T03:22:39.453801-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -94,12 +94,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97689,
-          "said": "5903 tickers \u00b7 1813 signals \u00b7 top ABBV, ACN, AEM, AMD, AME, AMGN, AON, APH",
+          "size": 98672,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "Why You Should Think About Eli Lilly Stock Differently Now",
-            "What Happens To IBM Stock If Its Slowdown Lasts?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11484,
+          "size": 11616,
           "said": "Finviz Daily Digest \u2014 2026-10-08",
           "bullets": [
-            "_Generated 2026-10-08T04:18:31.924510-04:00 \u00b7 export=data/exports/finviz_2026-10-07.csv \u00b7 ticker digests=5903 \u00b7 high-signal=1813_",
+            "_Generated 2026-10-09T03:22:37.882764-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_",
             "Major indices (live quote page)"
           ]
         },
@@ -167,11 +167,11 @@
           ]
         }
       ],
-      "said": "5903 tickers \u00b7 1813 signals \u00b7 top ABBV, ACN, AEM, AMD, AME, AMGN, AON, APH",
+      "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
       "bullets": [
-        "Why You Should Think About Eli Lilly Stock Differently Now",
-        "What Happens To IBM Stock If Its Slowdown Lasts?",
-        "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+        "Should You Be Worried About Pfizer Stock?",
+        "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+        "AMETEK Completes Acquisition of Indicor Instrumentation"
       ]
     },
     {
@@ -192,12 +192,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97689,
-          "said": "5903 tickers \u00b7 1813 signals \u00b7 top ABBV, ACN, AEM, AMD, AME, AMGN, AON, APH",
+          "size": 98672,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "Why You Should Think About Eli Lilly Stock Differently Now",
-            "What Happens To IBM Stock If Its Slowdown Lasts?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -357,10 +357,9 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 8301,
-          "said": "all_ok=True \u00b7 sectors 8/11 \u00b7 4 fail",
+          "size": 8297,
+          "said": "all_ok=True \u00b7 sectors 8/11 \u00b7 3 fail",
           "bullets": [
-            "finviz_market_digest:missing",
             "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
@@ -372,9 +371,9 @@
           "path": "01_daily/2026-10-08_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=True",
-          "size": 7267,
-          "said": "all_ok=True \u00b7 qc=True \u00b7 grok=True \u00b7 book=True",
+          "reason": "all_ok=False",
+          "size": 7342,
+          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=True",
           "bullets": []
         },
         {
@@ -383,11 +382,11 @@
           "path": "01_daily/2026-10-08_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=True All required core artifacts are present, same-day (2026-10-08), and complete: general predict takes a clear DOWN/mild di",
-          "size": 963,
-          "said": "ok=True \u00b7 All required core artifacts are present, same-day (2026-10-08), and complete: general predict takes a clear DOWN/mild direction with MEMORY_CONFIRM/SCORES_BEGIN",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 309,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
-            "All required core artifacts are present, same-day (2026-10-08), and complete: general predict takes a clear DOWN/mild direction with MEMORY_CONFIRM/SCORES_BEGIN markers; events JSON is a real scan_date=2026-10-08 scan; news judge and news parse carry NEWS_PARSE_BEGIN/END; finviz digest and map-heat tables are populated with a live futures tape (non-empty). The map_heat_research file is phase=morning_refresh but has 142 captain cards with supported sentiment and no timeout text, so it passes; the baseline is present. Sector predicts are optional on this date \u2014 8 of 11 present and substantive, and the 3 missing (energy, healthcare, industrials) are correctly excluded from fails. No carry-forward, refusal, truncation, or copy-paste essays detected."
+            "Grok returned an empty review"
           ]
         },
         {
@@ -560,12 +559,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97689,
-          "said": "5903 tickers \u00b7 1813 signals \u00b7 top ABBV, ACN, AEM, AMD, AME, AMGN, AON, APH",
+          "size": 98672,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "Why You Should Think About Eli Lilly Stock Differently Now",
-            "What Happens To IBM Stock If Its Slowdown Lasts?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -666,12 +665,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97689,
-          "said": "5903 tickers \u00b7 1813 signals \u00b7 top ABBV, ACN, AEM, AMD, AME, AMGN, AON, APH",
+          "size": 98672,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "Why You Should Think About Eli Lilly Stock Differently Now",
-            "What Happens To IBM Stock If Its Slowdown Lasts?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -767,12 +766,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97689,
-          "said": "5903 tickers \u00b7 1813 signals \u00b7 top ABBV, ACN, AEM, AMD, AME, AMGN, AON, APH",
+          "size": 98672,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "Why You Should Think About Eli Lilly Stock Differently Now",
-            "What Happens To IBM Stock If Its Slowdown Lasts?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -864,7 +863,7 @@
           "size": 72708,
           "said": "Stock book \u2014 2026-10-08",
           "bullets": [
-            "_Generated 2026-10-08T17:08:31.465466-04:00_",
+            "_Generated 2026-10-08T20:59:28.293309-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -3568,6 +3567,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-08\n**Generated:** 2026-10-08T20:21:36.705899-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as AI revenue concerns pressured chipmakers while oil gains on Middle East risks lifted energy and firm labor data kept yields elevated\n**Prior close:** SPX -0.47%  Nasdaq -1.25%  Dow +0.10%\n**SPX:** -0.47%  **Nasdaq:** -1.25%  **Dow:** +0.10%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** NVDA, INTC, MU, AMD, ORCL, CMG, SBUX, PEP, DAL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-09\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T03:22:38.368077-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-08_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 98672,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-08_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11637,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-08\n_Generated 2026-10-09T03:22:37.882764-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-08.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11519306,
+          "preview": "11718 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11519306,
+          "preview": "11718 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-08_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97689,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-08\n_Generated 2026-10-09T03:22:37.882764-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_ \u00b7 11718 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11718 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {

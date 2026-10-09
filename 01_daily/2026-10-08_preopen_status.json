@@ -1,13 +1,18 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T09:17:42.074606-04:00",
+  "generated_at": "2026-10-09T03:22:38.340788-04:00",
   "run_id": "37775756426",
   "runner": "GitHub Actions 1000024815",
-  "all_ok": true,
+  "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
-  "grok_ok": true,
-  "grok_fails": [],
+  "grok_ok": false,
+  "grok_fails": [
+    {
+      "path": "(review)",
+      "reason": "empty_review_reply"
+    }
+  ],
   "missing_required": [],
   "attempts": [
     {
@@ -182,7 +187,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-08_finviz_digest.json",
-        "size": 97689
+        "size": 98672
       },
       {
         "kind": "finviz_market_digest",
@@ -193,10 +198,10 @@
       },
       {
         "kind": "finviz_market_digest",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-10-08_finviz_market_digest_close.json",
-        "size": 0
+        "size": 6961
       },
       {
         "kind": "map_heat",

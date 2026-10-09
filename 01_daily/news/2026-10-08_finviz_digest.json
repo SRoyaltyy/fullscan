@@ -1,28 +1,28 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T04:18:31.924510-04:00",
-  "export_used": "data/exports/finviz_2026-10-07.csv",
-  "ticker_digest_count": 5903,
-  "signal_count": 1813,
+  "generated_at": "2026-10-09T03:22:37.882764-04:00",
+  "export_used": "data/exports/finviz_2026-10-08.csv",
+  "ticker_digest_count": 5904,
+  "signal_count": 1796,
   "index_digests": [
     {
       "ticker": "SPY",
       "index": "S&P 500",
-      "digest": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "digest": "Michael Burry Says Trump Will Pull Out All The Stops For AI  Dean Of Valuation Holds 5 Mag Seven Stocks, Adds Cash",
       "source": "finviz_elite_news",
       "error": null
     },
     {
       "ticker": "QQQ",
       "index": "Nasdaq-100",
-      "digest": "S&P 500 And Nasdaq 100 Slip From Record Highs Amid Pressure From Soaring Treasury Yields  SPCX, AMD, NVDA, MRVL In Focus",
+      "digest": "Michael Burry Says Trump Will Pull Out All The Stops For AI  Dean Of Valuation Holds 5 Mag Seven Stocks, Adds Cash",
       "source": "finviz_elite_news",
       "error": null
     },
     {
       "ticker": "DIA",
       "index": "Dow Jones",
-      "digest": "S&P 500 And Nasdaq 100 Slip From Record Highs Amid Pressure From Soaring Treasury Yields  SPCX, AMD, NVDA, MRVL In Focus",
+      "digest": "Michael Burry Says Trump Will Pull Out All The Stops For AI  Dean Of Valuation Holds 5 Mag Seven Stocks, Adds Cash",
       "source": "finviz_elite_news",
       "error": null
     },
@@ -38,26 +38,14 @@
     {
       "ticker": "ABBV",
       "digest": "FDA grants two Breakthrough Therapy Designations to AbbVie investigational ADC telisotuzumab adizutecan (Temab-A) in colorectal and non-small cell lung cancer",
-      "news_title": "Why You Should Think About Eli Lilly Stock Differently Now",
+      "news_title": "Should You Be Worried About Pfizer Stock?",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "ACN",
-      "digest": "Accenture beats Q4 revenue guidance with 7% growth, sets FY27 revenue outlook for 3–6% local-currency growth",
-      "news_title": "What Happens To IBM Stock If Its Slowdown Lasts?",
-      "sector": "Technology",
-      "industry": "Information Technology Services",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "AEM",
@@ -69,19 +57,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "AMD",
-      "digest": "Citi lifts AMD price target to $800, Mizuho also raises target on AI hardware demand optimism",
-      "news_title": "TSMC Q3 sales beat estimates on surging AI chip demand",
-      "sector": "Technology",
-      "industry": "Semiconductors",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "AME",
@@ -93,19 +69,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "AMGN",
       "digest": "Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic Sjögren's disease",
-      "news_title": "Is Exelixis Stock Engineered To Make You Money?",
+      "news_title": "What Is Going On With Regeneron Stock?",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "AON",
@@ -117,43 +93,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "APH",
       "digest": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
-      "news_title": "Generac Holdings Inc. stock outperforms competitors on strong trading day",
+      "news_title": "When Amphenol's CEO And The Chart Say The Same Thing, Pay Attention",
       "sector": "Technology",
       "industry": "Electronic Components",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
-      "ticker": "BA",
-      "digest": "Boeing announces it has been awarded an approximately $14.7 billion undefinitized seven-year contract from Lockheed Martin to triple production of PAC-3 MSE missile seekers.",
-      "news_title": "Rogue Pilots Have Become One of the Biggest Threats to Airline Safety",
-      "sector": "Industrials",
-      "industry": "Aerospace & Defense",
+      "ticker": "AXP",
+      "digest": "American Express says previously reserved portion of $350 million AML penalty will not affect 2026-2027 guidance",
+      "news_title": "American Express fined $350 million for insufficient anti-money laundering program",
+      "sector": "Financial",
+      "industry": "Credit Services",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "BMY",
-      "digest": "Leerink downgraded Bristol Myers Squibb to Market Perform from Outperform and cut its price target to $59 from $73 after reassessing key pipeline candidates.",
-      "news_title": "Is Exelixis Stock Engineered To Make You Money?",
-      "sector": "Healthcare",
-      "industry": "Drug Manufacturers - General",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "BNS",
@@ -165,7 +129,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "BNY",
@@ -177,7 +141,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "BP",
+      "digest": "UBS raises BP price target to 700p, sees Q3 adjusted net income and cash flow above consensus",
+      "news_title": "UBS flags five energy stocks to buy as refining margins jump 83% in a quarter",
+      "sector": "Energy",
+      "industry": "Oil & Gas Integrated",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "BTI",
@@ -189,31 +165,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
-      "ticker": "CAH",
-      "digest": "Cardinal Health extends CVS pharmaceutical distribution pact through June 2032, reaffirms FY 2027 and long-term non-GAAP EPS growth guidance",
-      "news_title": "Cardinal Health rises on extended CVS distribution deal",
-      "sector": "Healthcare",
-      "industry": "Medical Distribution",
+      "ticker": "BUD",
+      "digest": "RBC’s €95 target raise and bullish valuation case lift Anheuser-Busch InBev 3.8% intraday",
+      "news_title": "Indulgence Spending Is Still Growing, and These 4 Companies Are Building on It (TRWD, RICK, BUD, MO)",
+      "sector": "Consumer Defensive",
+      "industry": "Beverages - Brewers",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "CI",
       "digest": "Cigna Healthcare unveils Health Sense platform, targeting 10% cut in inefficient health care spending by 2030",
-      "news_title": "Cigna Healthcare Introduces Health Sense To Connect Guidance, Benefits and Clinical Support Around Each Person, Improving Affordability and Outcomes",
+      "news_title": "Is Hims & Hers Stock Ready For A Longer Cash Burn?",
       "sector": "Healthcare",
       "industry": "Healthcare Plans",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "CM",
@@ -225,19 +201,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "CMCSA",
-      "digest": "Barclays cuts Comcast price target to $24, keeps Equal Weight on broadband competition, NBCUniversal/Sky separation uncertainty",
-      "news_title": "Should You Worry That Verizon Stopped Leading With This One Metric?",
+      "digest": "SpaceX deal to acquire nationwide 800 MHz spectrum from Grain Management raises competition concerns for Comcast’s Xfinity Mobile, broadband",
+      "news_title": "Is SpaceXs Starlink About To Change The Telecom Game? Experts Weigh In",
       "sector": "Communication Services",
       "industry": "Telecom Services",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "CNQ",
@@ -249,19 +225,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "CSX",
-      "digest": "CSX delivers record revenue, raises 2026 margin and free cash flow outlook",
-      "news_title": "New $100M inland rail terminal will handle 60,000 TEUs a year",
-      "sector": "Industrials",
-      "industry": "Railroads",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "CTAS",
@@ -273,43 +237,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "DAL",
       "digest": "Bernstein cuts Delta Air Lines price target to $100 from $106, trims earnings estimates on higher fuel costs",
-      "news_title": "DAL Stock Faces A Fuel-Driven Reality Check Ahead Of Q3 Earnings: What Investors Need To Know",
+      "news_title": "Delta Air Lines Stock Has Risen Above Sector Turbulence. Its Earnings Face 1 Big Question.",
       "sector": "Industrials",
       "industry": "Airlines",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "DDOG",
       "digest": "Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog",
-      "news_title": "Datadogs Growth Is Expected to Slow From 36% to Around 29% in Q3. Heres the CFOs Plan to Protect Margins",
+      "news_title": "Trump August disclosure: Meta stock, SpaceX debt purchases",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "E",
-      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
-      "news_title": "Is the Wests 100-Year Venezuela Oil Bet About To Backfire?",
-      "sector": "Energy",
-      "industry": "Oil & Gas Integrated",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "ELV",
@@ -321,7 +273,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "EPD",
+      "digest": "Enterprise Products Partners raises Q3 2026 distribution to $0.56 per unit, reports $387M YTD repurchases under $5B authorization",
+      "news_title": "Enterprise Declares Quarterly Distribution",
+      "sector": "Energy",
+      "industry": "Oil & Gas Midstream",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "EQIX",
@@ -333,19 +297,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "EQNR",
-      "digest": "Equinor says Q3 marketing, midstream and processing division will exceed prior $400 million guidance in trading update",
-      "news_title": "Europes Fuel Squeeze Is Turning Into a Q3 Windfall for Equinor",
-      "sector": "Energy",
-      "industry": "Oil & Gas Integrated",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "FAST",
@@ -357,7 +309,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "FCX",
@@ -369,7 +321,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "GE",
@@ -381,19 +333,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "GSK",
       "digest": "Positive Jideytro ARROS-1 trial data for first-line ROS1+ NSCLC drives GSK premarket surge",
-      "news_title": "GSK retains buy rating at Jefferies as B7H3 cancer programme seen as underappreciated",
+      "news_title": "Viola Davis partners with GSK to educate adults 50 and older about their shingles risk",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "HCA",
@@ -405,43 +357,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "HD",
-      "digest": "Melius Research today initiated coverage of Home Depot with a Buy rating as part of a broader housing sector call.",
-      "news_title": "Why Are Investors Discounting The High Cash Yield On Lowe's Stock?",
-      "sector": "Consumer Cyclical",
-      "industry": "Home Improvement Retail",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "HON",
       "digest": "Honeywell wins approximately $300 million technology and equipment contract from Dangote for planned 700,000 bpd Kenya refinery",
-      "news_title": "Dow's 350-point drop led by losses in shares of Caterpillar, Honeywell",
+      "news_title": "Is Eaton Still The Business You Bought?",
       "sector": "Industrials",
       "industry": "Conglomerates",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "HSBC",
       "digest": "FT report on sweeping AI-driven UK wealth cuts sinks HSBC ADR 4% pre-market",
-      "news_title": "HSBCs AI Push Comes for the Advisers",
+      "news_title": "HSBC plans deep UK wealth redundancies in AI expansion  report",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "HWM",
@@ -453,7 +393,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "ITW",
@@ -465,7 +405,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "JCI",
@@ -477,91 +417,115 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "KMI",
       "digest": "KMI rebounds on pipeline project momentum and raised 2026 guidance",
-      "news_title": "Pipelines Are Pumping AI's Power. Two Winners to Buy.",
+      "news_title": "Better Dividend Stock: Kinder Morgan vs. Energy Transfer",
       "sector": "Energy",
       "industry": "Oil & Gas Midstream",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "LIN",
       "digest": "Soft September payrolls and falling yields lift Linde 2.2% alongside materials peers",
-      "news_title": "Linde Announces Third Quarter 2026 Earnings and Conference Call Schedule",
+      "news_title": "What Did Bloom Energy Stock Investors Miss Before The Run?",
       "sector": "Basic Materials",
       "industry": "Specialty Chemicals",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "LITE",
+      "digest": "Lumentum CEO says optoelectronic products sold out through early 2029 on surging AI data center demand",
+      "news_title": "LITE, COHR, AAOI, POET Rise Overnight After Lumentum CEO Says Optical Parts Are Completely Sold Out Through Early 2029",
+      "sector": "Technology",
+      "industry": "Communication Equipment",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "LMT",
       "digest": "Lockheed Martin awards Boeing seven-year, about $14.7 billion PAC-3 MSE seeker contract for Patriot system",
-      "news_title": "Should You Sell Your RKLB Stock Now, Before Neutron Flies?",
+      "news_title": "Is The Market Underpricing Lockheed Martin Stock?",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "LOW",
-      "digest": "Melius Research today initiated coverage of Lowe’s with a Buy rating as part of a broader launch on the housing sector and home center stocks.",
-      "news_title": "Why Are Investors Discounting The High Cash Yield On Lowe's Stock?",
-      "sector": "Consumer Cyclical",
-      "industry": "Home Improvement Retail",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "LRCX",
       "digest": "Morgan Stanley raises Lam Research price target to $385, reiterates Overweight on durable logic share gains outlook",
-      "news_title": "What Would You Have Needed To Notice In Applied Materials Stock?",
+      "news_title": "What Was KLA Telling You Before Its Stock Ran?",
       "sector": "Technology",
       "industry": "Semiconductor Equipment & Materials",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "MA",
       "digest": "Mastercard launches AI tools to verify AI-initiated purchases, pilots US scoring system, partners with Cloudflare and Skyfire",
-      "news_title": "SAP Just Added Stablecoin Settlement to the Software That Runs 84% of Global Commerce",
+      "news_title": "Stocktwits Fintech Pulse: US Fintech Weekly Briefing & Market Drivers",
       "sector": "Financial",
       "industry": "Credit Services",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "MCD",
+      "digest": "Bernstein cuts McDonald's price target to $250 from $295, keeps Market Perform on sales growth and NEXT initiative concerns",
+      "news_title": "Are You Overpaying For Starbucks Stock Versus Its Rivals?",
+      "sector": "Consumer Cyclical",
+      "industry": "Restaurants",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "MNST",
       "digest": "Q2 earnings momentum and recent stock split fuel MNST 4.09% gain",
-      "news_title": "Has Coca-Cola Stock Become A Different Bet?",
+      "news_title": "Why Is Everyone Ignoring Celsius Stock's High Cash Yield?",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "MRK",
+      "digest": "Cantor Fitzgerald raises Merck price target to $145 from $120, reiterates Neutral rating ahead key ESMO cancer-drug data",
+      "news_title": "Should You Be Worried About Pfizer Stock?",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - General",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "MRSH",
@@ -573,19 +537,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "MRVL",
-      "digest": "Marvell gains broad analyst price target hikes after analyst day as BofA raises target to $400 and reiterates Buy",
-      "news_title": "Amazon stock is trading at its lowest trailing PE ratio in years despite AI boom",
+      "digest": "Oil and Treasury-yield surge drives chip selloff, pulling Marvell down 5.9% by 13:01 ET",
+      "news_title": "Amazon stock is trading at its lowest trailing P/E ratio in years despite AI boom",
       "sector": "Technology",
       "industry": "Semiconductors",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "MU",
+      "digest": "Micron Technology in focus after Financial Times reports OpenAI’s annualized revenue $20B below earlier estimate and Samsung preliminary Q3 misses estimates",
+      "news_title": "Stocktwits AI Roundup: OpenAI Revenue Woes Rattle Chip Stocks, SoftBank Hunts $100B, Microsoft Goes AI-First",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "MUFG",
@@ -597,19 +573,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "NKE",
       "digest": "Berenberg downgrades Nike to Sell, cuts price target to $27.50 on weaker demand, China and margin risks",
-      "news_title": "These 7 major S&P 500 stocks need to rally at least 200% to reclaim their peaks",
+      "news_title": "This Heritage Boot Player and a Chinese Sneaker Brand Are Among the Fastest Growing U.S. TikTok Shoe Shops",
       "sector": "Consumer Cyclical",
       "industry": "Footwear & Accessories",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "NSC",
@@ -621,31 +597,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "NTES",
-      "digest": "Goldman Sachs conviction buy and PT hike fuel NTES premarket rebound after mixed Q2 earnings",
-      "news_title": "Produced by a World-Class International Team! Adam Fan's Official New Album SKYFALL Makes Exclusive Debut on NetEase Cloud Music",
-      "sector": "Communication Services",
-      "industry": "Electronic Gaming & Multimedia",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "NVO",
-      "digest": "Novo Nordisk FDA extends review of haemophilia A drug denecimig, delaying U.S. launch to first half of 2027",
-      "news_title": "Merck's Keytruda Is Dealt a Legal Setback. It's Good News for This Biotech Stock.",
+      "digest": "Citi cuts Novo Nordisk price target to 296 Danish crowns after CMD signals broadly stable margins through 2030",
+      "news_title": "Novo Nordisk stock target cut at Citi on lack of margin growth",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "NXPI",
+      "digest": "Citi downgrades NXP Semiconductors to Neutral, cuts price target to $260 from $370 on cautious valuation and near-term prospects",
+      "news_title": "Palantir upgraded, Xerox downgraded: Wall Street's top analyst calls",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "O",
@@ -657,7 +633,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "OKE",
@@ -669,7 +645,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "ORLY",
@@ -681,43 +657,43 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "OXY",
       "digest": "Goldman Sachs adds Occidental Petroleum to U.S. Conviction List, upgrades to Buy and raises price target to $69",
-      "news_title": "Has The Story Under ExxonMobil Stock Run Out?",
+      "news_title": "Is Occidental Petroleum Stock A Real Bargain?",
       "sector": "Energy",
       "industry": "Oil & Gas E&P",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "P",
       "digest": "BofA and Northland raise Everpure price targets to $180 and $167 after bullish preliminary 2028 outlook",
-      "news_title": "Everpure Stock Rides 10-Day Winning Streak. What's Driving the Rally.",
+      "news_title": "What Are Everpure Investors Betting On?",
       "sector": "Technology",
       "industry": "Computer Hardware",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
-      "ticker": "PFE",
-      "digest": "Pfizer wins U.S. FDA approval for TUKYSA combo as frontline maintenance in unresectable or metastatic HER2-positive breast cancer",
-      "news_title": "Is Exelixis Stock Engineered To Make You Money?",
-      "sector": "Healthcare",
-      "industry": "Drug Manufacturers - General",
+      "ticker": "PEP",
+      "digest": "PepsiCo beats Q3 estimates but cuts Q4 and 2026 core EPS outlook as Goldman trims price target to $165, keeps Buy",
+      "news_title": "PEP Stock Looks To Snap 6-Week Losing Streak: Goldman Sachs Trims Price Target But Sees Decade Of Growth For PepsiCo",
+      "sector": "Consumer Defensive",
+      "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "PGR",
@@ -729,7 +705,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "RACE",
@@ -741,7 +717,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "RCL",
+      "digest": "Jefferies upgrades Royal Caribbean to Buy from Hold, raises price target to $330",
+      "news_title": "ROYAL CARIBBEAN GROUP TO HOLD CONFERENCE CALL ON THIRD QUARTER 2026 EARNINGS",
+      "sector": "Consumer Cyclical",
+      "industry": "Travel Services",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "RELX",
@@ -753,7 +741,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "RIO",
+      "digest": "Rio Tinto ADRs fall after copper retreats from a record high amid uncertainty over potential U.S. tariffs on refined copper.",
+      "news_title": "Graphene Manufacturing Group battery cells complete 1,000 cycles with no performance loss",
+      "sector": "Basic Materials",
+      "industry": "Other Industrial Metals & Mining",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     }
   ],
   "by_sector": {
@@ -768,31 +768,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      },
-      {
-        "ticker": "BA",
-        "digest": "Boeing announces it has been awarded an approximately $14.7 billion undefinitized seven-year contract from Lockheed Martin to triple production of PAC-3 MSE missile seekers.",
-        "news_title": "Rogue Pilots Have Become One of the Biggest Threats to Airline Safety",
-        "sector": "Industrials",
-        "industry": "Aerospace & Defense",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      },
-      {
-        "ticker": "CSX",
-        "digest": "CSX delivers record revenue, raises 2026 margin and free cash flow outlook",
-        "news_title": "New $100M inland rail terminal will handle 60,000 TEUs a year",
-        "sector": "Industrials",
-        "industry": "Railroads",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "CTAS",
@@ -804,19 +780,19 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "DAL",
         "digest": "Bernstein cuts Delta Air Lines price target to $100 from $106, trims earnings estimates on higher fuel costs",
-        "news_title": "DAL Stock Faces A Fuel-Driven Reality Check Ahead Of Q3 Earnings: What Investors Need To Know",
+        "news_title": "Delta Air Lines Stock Has Risen Above Sector Turbulence. Its Earnings Face 1 Big Question.",
         "sector": "Industrials",
         "industry": "Airlines",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "FAST",
@@ -828,7 +804,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "GE",
@@ -840,117 +816,43 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "HON",
         "digest": "Honeywell wins approximately $300 million technology and equipment contract from Dangote for planned 700,000 bpd Kenya refinery",
-        "news_title": "Dow's 350-point drop led by losses in shares of Caterpillar, Honeywell",
+        "news_title": "Is Eaton Still The Business You Bought?",
         "sector": "Industrials",
         "industry": "Conglomerates",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      }
-    ],
-    "Healthcare": [
-      {
-        "ticker": "ABBV",
-        "digest": "FDA grants two Breakthrough Therapy Designations to AbbVie investigational ADC telisotuzumab adizutecan (Temab-A) in colorectal and non-small cell lung cancer",
-        "news_title": "Why You Should Think About Eli Lilly Stock Differently Now",
-        "sector": "Healthcare",
-        "industry": "Drug Manufacturers - General",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
-        "ticker": "AMGN",
-        "digest": "Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic Sjögren's disease",
-        "news_title": "Is Exelixis Stock Engineered To Make You Money?",
-        "sector": "Healthcare",
-        "industry": "Drug Manufacturers - General",
+        "ticker": "HWM",
+        "digest": "GE Aerospace's $11.75B CPP acquisition pressures Howmet Aerospace shares",
+        "news_title": "Howmet Aerospace Inc. stock underperforms Wednesday when compared to competitors",
+        "sector": "Industrials",
+        "industry": "Aerospace & Defense",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
-        "ticker": "BMY",
-        "digest": "Leerink downgraded Bristol Myers Squibb to Market Perform from Outperform and cut its price target to $59 from $73 after reassessing key pipeline candidates.",
-        "news_title": "Is Exelixis Stock Engineered To Make You Money?",
-        "sector": "Healthcare",
-        "industry": "Drug Manufacturers - General",
+        "ticker": "ITW",
+        "digest": "Deutsche target cut compounds ex-dividend and industrial pressure as ITW falls 2.6%",
+        "news_title": "Is The Buyback The Reason To Own Lincoln Electric Stock?",
+        "sector": "Industrials",
+        "industry": "Specialty Industrial Machinery",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      },
-      {
-        "ticker": "CAH",
-        "digest": "Cardinal Health extends CVS pharmaceutical distribution pact through June 2032, reaffirms FY 2027 and long-term non-GAAP EPS growth guidance",
-        "news_title": "Cardinal Health rises on extended CVS distribution deal",
-        "sector": "Healthcare",
-        "industry": "Medical Distribution",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      },
-      {
-        "ticker": "CI",
-        "digest": "Cigna Healthcare unveils Health Sense platform, targeting 10% cut in inefficient health care spending by 2030",
-        "news_title": "Cigna Healthcare Introduces Health Sense To Connect Guidance, Benefits and Clinical Support Around Each Person, Improving Affordability and Outcomes",
-        "sector": "Healthcare",
-        "industry": "Healthcare Plans",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      },
-      {
-        "ticker": "ELV",
-        "digest": "Elevance Health disclosed in an SEC filing that it reaffirmed its 2026 guidance for at least $27.00 in adjusted EPS and a 90.2% benefit expense ratio.",
-        "news_title": "Elevance Health to Hold Conference Call and Webcast to Discuss Third Quarter 2026 Results on October 21, 2026",
-        "sector": "Healthcare",
-        "industry": "Healthcare Plans",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      },
-      {
-        "ticker": "GSK",
-        "digest": "Positive Jideytro ARROS-1 trial data for first-line ROS1+ NSCLC drives GSK premarket surge",
-        "news_title": "GSK retains buy rating at Jefferies as B7H3 cancer programme seen as underappreciated",
-        "sector": "Healthcare",
-        "industry": "Drug Manufacturers - General",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      },
-      {
-        "ticker": "HCA",
-        "digest": "HCA Healthcare announces it has completed the previously announced acquisition of The College of Health Care Professions, expanding its healthcare education platform.",
-        "news_title": "HCA Healthcare, Inc. 3rd Quarter 2026 Earnings Conference Call",
-        "sector": "Healthcare",
-        "industry": "Medical Care Facilities",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       }
     ],
     "Financial": [
@@ -964,7 +866,19 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "AXP",
+        "digest": "American Express says previously reserved portion of $350 million AML penalty will not affect 2026-2027 guidance",
+        "news_title": "American Express fined $350 million for insufficient anti-money laundering program",
+        "sector": "Financial",
+        "industry": "Credit Services",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "BNS",
@@ -976,7 +890,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "BNY",
@@ -988,7 +902,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "CM",
@@ -1000,31 +914,31 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "HSBC",
         "digest": "FT report on sweeping AI-driven UK wealth cuts sinks HSBC ADR 4% pre-market",
-        "news_title": "HSBCs AI Push Comes for the Advisers",
+        "news_title": "HSBC plans deep UK wealth redundancies in AI expansion  report",
         "sector": "Financial",
         "industry": "Banks - Diversified",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "MA",
         "digest": "Mastercard launches AI tools to verify AI-initiated purchases, pilots US scoring system, partners with Cloudflare and Skyfire",
-        "news_title": "SAP Just Added Stablecoin Settlement to the Software That Runs 84% of Global Commerce",
+        "news_title": "Stocktwits Fintech Pulse: US Fintech Weekly Briefing & Market Drivers",
         "sector": "Financial",
         "industry": "Credit Services",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "MRSH",
@@ -1036,108 +950,218 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      },
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      }
+    ],
+    "Healthcare": [
       {
-        "ticker": "MUFG",
-        "digest": "Japanese yield surge and faster BOJ hike bets lift MUFG ADR 6% premarket",
-        "news_title": "Hailey Orr Named to American Banker's 2026 Most Powerful Women in Banking: NEXT List",
-        "sector": "Financial",
-        "industry": "Banks - Diversified",
+        "ticker": "ABBV",
+        "digest": "FDA grants two Breakthrough Therapy Designations to AbbVie investigational ADC telisotuzumab adizutecan (Temab-A) in colorectal and non-small cell lung cancer",
+        "news_title": "Should You Be Worried About Pfizer Stock?",
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers - General",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "AMGN",
+        "digest": "Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic Sjögren's disease",
+        "news_title": "What Is Going On With Regeneron Stock?",
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers - General",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "CI",
+        "digest": "Cigna Healthcare unveils Health Sense platform, targeting 10% cut in inefficient health care spending by 2030",
+        "news_title": "Is Hims & Hers Stock Ready For A Longer Cash Burn?",
+        "sector": "Healthcare",
+        "industry": "Healthcare Plans",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "ELV",
+        "digest": "Elevance Health disclosed in an SEC filing that it reaffirmed its 2026 guidance for at least $27.00 in adjusted EPS and a 90.2% benefit expense ratio.",
+        "news_title": "Elevance Health to Hold Conference Call and Webcast to Discuss Third Quarter 2026 Results on October 21, 2026",
+        "sector": "Healthcare",
+        "industry": "Healthcare Plans",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "GSK",
+        "digest": "Positive Jideytro ARROS-1 trial data for first-line ROS1+ NSCLC drives GSK premarket surge",
+        "news_title": "Viola Davis partners with GSK to educate adults 50 and older about their shingles risk",
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers - General",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "HCA",
+        "digest": "HCA Healthcare announces it has completed the previously announced acquisition of The College of Health Care Professions, expanding its healthcare education platform.",
+        "news_title": "HCA Healthcare, Inc. 3rd Quarter 2026 Earnings Conference Call",
+        "sector": "Healthcare",
+        "industry": "Medical Care Facilities",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "MRK",
+        "digest": "Cantor Fitzgerald raises Merck price target to $145 from $120, reiterates Neutral rating ahead key ESMO cancer-drug data",
+        "news_title": "Should You Be Worried About Pfizer Stock?",
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers - General",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "NVO",
+        "digest": "Citi cuts Novo Nordisk price target to 296 Danish crowns after CMD signals broadly stable margins through 2030",
+        "news_title": "Novo Nordisk stock target cut at Citi on lack of margin growth",
+        "sector": "Healthcare",
+        "industry": "Drug Manufacturers - General",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       }
     ],
     "Technology": [
       {
-        "ticker": "ACN",
-        "digest": "Accenture beats Q4 revenue guidance with 7% growth, sets FY27 revenue outlook for 3–6% local-currency growth",
-        "news_title": "What Happens To IBM Stock If Its Slowdown Lasts?",
-        "sector": "Technology",
-        "industry": "Information Technology Services",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      },
-      {
-        "ticker": "AMD",
-        "digest": "Citi lifts AMD price target to $800, Mizuho also raises target on AI hardware demand optimism",
-        "news_title": "TSMC Q3 sales beat estimates on surging AI chip demand",
-        "sector": "Technology",
-        "industry": "Semiconductors",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      },
-      {
         "ticker": "APH",
         "digest": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
-        "news_title": "Generac Holdings Inc. stock outperforms competitors on strong trading day",
+        "news_title": "When Amphenol's CEO And The Chart Say The Same Thing, Pay Attention",
         "sector": "Technology",
         "industry": "Electronic Components",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "DDOG",
         "digest": "Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog",
-        "news_title": "Datadogs Growth Is Expected to Slow From 36% to Around 29% in Q3. Heres the CFOs Plan to Protect Margins",
+        "news_title": "Trump August disclosure: Meta stock, SpaceX debt purchases",
         "sector": "Technology",
         "industry": "Software - Application",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "LITE",
+        "digest": "Lumentum CEO says optoelectronic products sold out through early 2029 on surging AI data center demand",
+        "news_title": "LITE, COHR, AAOI, POET Rise Overnight After Lumentum CEO Says Optical Parts Are Completely Sold Out Through Early 2029",
+        "sector": "Technology",
+        "industry": "Communication Equipment",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "LRCX",
         "digest": "Morgan Stanley raises Lam Research price target to $385, reiterates Overweight on durable logic share gains outlook",
-        "news_title": "What Would You Have Needed To Notice In Applied Materials Stock?",
+        "news_title": "What Was KLA Telling You Before Its Stock Ran?",
         "sector": "Technology",
         "industry": "Semiconductor Equipment & Materials",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "MRVL",
-        "digest": "Marvell gains broad analyst price target hikes after analyst day as BofA raises target to $400 and reiterates Buy",
-        "news_title": "Amazon stock is trading at its lowest trailing PE ratio in years despite AI boom",
+        "digest": "Oil and Treasury-yield surge drives chip selloff, pulling Marvell down 5.9% by 13:01 ET",
+        "news_title": "Amazon stock is trading at its lowest trailing P/E ratio in years despite AI boom",
         "sector": "Technology",
         "industry": "Semiconductors",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "MU",
+        "digest": "Micron Technology in focus after Financial Times reports OpenAI’s annualized revenue $20B below earlier estimate and Samsung preliminary Q3 misses estimates",
+        "news_title": "Stocktwits AI Roundup: OpenAI Revenue Woes Rattle Chip Stocks, SoftBank Hunts $100B, Microsoft Goes AI-First",
+        "sector": "Technology",
+        "industry": "Semiconductors",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "NXPI",
+        "digest": "Citi downgrades NXP Semiconductors to Neutral, cuts price target to $260 from $370 on cautious valuation and near-term prospects",
+        "news_title": "Palantir upgraded, Xerox downgraded: Wall Street's top analyst calls",
+        "sector": "Technology",
+        "industry": "Semiconductors",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "P",
         "digest": "BofA and Northland raise Everpure price targets to $180 and $167 after bullish preliminary 2028 outlook",
-        "news_title": "Everpure Stock Rides 10-Day Winning Streak. What's Driving the Rally.",
+        "news_title": "What Are Everpure Investors Betting On?",
         "sector": "Technology",
         "industry": "Computer Hardware",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       }
     ],
     "Energy": [
+      {
+        "ticker": "BP",
+        "digest": "UBS raises BP price target to 700p, sees Q3 adjusted net income and cash flow above consensus",
+        "news_title": "UBS flags five energy stocks to buy as refining margins jump 83% in a quarter",
+        "sector": "Energy",
+        "industry": "Oil & Gas Integrated",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
       {
         "ticker": "CNQ",
         "digest": "Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders",
@@ -1148,43 +1172,31 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
-        "ticker": "E",
-        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
-        "news_title": "Is the Wests 100-Year Venezuela Oil Bet About To Backfire?",
-        "sector": "Energy",
-        "industry": "Oil & Gas Integrated",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      },
-      {
-        "ticker": "EQNR",
-        "digest": "Equinor says Q3 marketing, midstream and processing division will exceed prior $400 million guidance in trading update",
-        "news_title": "Europes Fuel Squeeze Is Turning Into a Q3 Windfall for Equinor",
-        "sector": "Energy",
-        "industry": "Oil & Gas Integrated",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      },
-      {
-        "ticker": "KMI",
-        "digest": "KMI rebounds on pipeline project momentum and raised 2026 guidance",
-        "news_title": "Pipelines Are Pumping AI's Power. Two Winners to Buy.",
+        "ticker": "EPD",
+        "digest": "Enterprise Products Partners raises Q3 2026 distribution to $0.56 per unit, reports $387M YTD repurchases under $5B authorization",
+        "news_title": "Enterprise Declares Quarterly Distribution",
         "sector": "Energy",
         "industry": "Oil & Gas Midstream",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "KMI",
+        "digest": "KMI rebounds on pipeline project momentum and raised 2026 guidance",
+        "news_title": "Better Dividend Stock: Kinder Morgan vs. Energy Transfer",
+        "sector": "Energy",
+        "industry": "Oil & Gas Midstream",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "OKE",
@@ -1196,57 +1208,45 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "OXY",
         "digest": "Goldman Sachs adds Occidental Petroleum to U.S. Conviction List, upgrades to Buy and raises price target to $69",
-        "news_title": "Has The Story Under ExxonMobil Stock Run Out?",
+        "news_title": "Is Occidental Petroleum Stock A Real Bargain?",
         "sector": "Energy",
         "industry": "Oil & Gas E&P",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       }
     ],
     "Consumer Cyclical": [
       {
-        "ticker": "HD",
-        "digest": "Melius Research today initiated coverage of Home Depot with a Buy rating as part of a broader housing sector call.",
-        "news_title": "Why Are Investors Discounting The High Cash Yield On Lowe's Stock?",
+        "ticker": "MCD",
+        "digest": "Bernstein cuts McDonald's price target to $250 from $295, keeps Market Perform on sales growth and NEXT initiative concerns",
+        "news_title": "Are You Overpaying For Starbucks Stock Versus Its Rivals?",
         "sector": "Consumer Cyclical",
-        "industry": "Home Improvement Retail",
+        "industry": "Restaurants",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      },
-      {
-        "ticker": "LOW",
-        "digest": "Melius Research today initiated coverage of Lowe’s with a Buy rating as part of a broader launch on the housing sector and home center stocks.",
-        "news_title": "Why Are Investors Discounting The High Cash Yield On Lowe's Stock?",
-        "sector": "Consumer Cyclical",
-        "industry": "Home Improvement Retail",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "NKE",
         "digest": "Berenberg downgrades Nike to Sell, cuts price target to $27.50 on weaker demand, China and margin risks",
-        "news_title": "These 7 major S&P 500 stocks need to rally at least 200% to reclaim their peaks",
+        "news_title": "This Heritage Boot Player and a Chinese Sneaker Brand Are Among the Fastest Growing U.S. TikTok Shoe Shops",
         "sector": "Consumer Cyclical",
         "industry": "Footwear & Accessories",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "ORLY",
@@ -1258,7 +1258,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "RACE",
@@ -1270,7 +1270,19 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "RCL",
+        "digest": "Jefferies upgrades Royal Caribbean to Buy from Hold, raises price target to $330",
+        "news_title": "ROYAL CARIBBEAN GROUP TO HOLD CONFERENCE CALL ON THIRD QUARTER 2026 EARNINGS",
+        "sector": "Consumer Cyclical",
+        "industry": "Travel Services",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       }
     ],
     "Basic Materials": [
@@ -1284,7 +1296,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "FCX",
@@ -1296,19 +1308,31 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "LIN",
         "digest": "Soft September payrolls and falling yields lift Linde 2.2% alongside materials peers",
-        "news_title": "Linde Announces Third Quarter 2026 Earnings and Conference Call Schedule",
+        "news_title": "What Did Bloom Energy Stock Investors Miss Before The Run?",
         "sector": "Basic Materials",
         "industry": "Specialty Chemicals",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "RIO",
+        "digest": "Rio Tinto ADRs fall after copper retreats from a record high amid uncertainty over potential U.S. tariffs on refined copper.",
+        "news_title": "Graphene Manufacturing Group battery cells complete 1,000 cycles with no performance loss",
+        "sector": "Basic Materials",
+        "industry": "Other Industrial Metals & Mining",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       }
     ],
     "Consumer Defensive": [
@@ -1322,45 +1346,43 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      },
+      {
+        "ticker": "BUD",
+        "digest": "RBC’s €95 target raise and bullish valuation case lift Anheuser-Busch InBev 3.8% intraday",
+        "news_title": "Indulgence Spending Is Still Growing, and These 4 Companies Are Building on It (TRWD, RICK, BUD, MO)",
+        "sector": "Consumer Defensive",
+        "industry": "Beverages - Brewers",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "MNST",
         "digest": "Q2 earnings momentum and recent stock split fuel MNST 4.09% gain",
-        "news_title": "Has Coca-Cola Stock Become A Different Bet?",
+        "news_title": "Why Is Everyone Ignoring Celsius Stock's High Cash Yield?",
         "sector": "Consumer Defensive",
         "industry": "Beverages - Non-Alcoholic",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-      }
-    ],
-    "Communication Services": [
-      {
-        "ticker": "CMCSA",
-        "digest": "Barclays cuts Comcast price target to $24, keeps Equal Weight on broadband competition, NBCUniversal/Sky separation uncertainty",
-        "news_title": "Should You Worry That Verizon Stopped Leading With This One Metric?",
-        "sector": "Communication Services",
-        "industry": "Telecom Services",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
-        "ticker": "NTES",
-        "digest": "Goldman Sachs conviction buy and PT hike fuel NTES premarket rebound after mixed Q2 earnings",
-        "news_title": "Produced by a World-Class International Team! Adam Fan's Official New Album SKYFALL Makes Exclusive Debut on NetEase Cloud Music",
-        "sector": "Communication Services",
-        "industry": "Electronic Gaming & Multimedia",
+        "ticker": "PEP",
+        "digest": "PepsiCo beats Q3 estimates but cuts Q4 and 2026 core EPS outlook as Goldman trims price target to $165, keeps Buy",
+        "news_title": "PEP Stock Looks To Snap 6-Week Losing Streak: Goldman Sachs Trims Price Target But Sees Decade Of Growth For PepsiCo",
+        "sector": "Consumer Defensive",
+        "industry": "Beverages - Non-Alcoholic",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       }
     ],
     "Real Estate": [
@@ -1374,7 +1396,7 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       },
       {
         "ticker": "O",
@@ -1386,35 +1408,37 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export",
-        "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+      }
+    ],
+    "Communication Services": [
+      {
+        "ticker": "CMCSA",
+        "digest": "SpaceX deal to acquire nationwide 800 MHz spectrum from Grain Management raises competition concerns for Comcast’s Xfinity Mobile, broadband",
+        "news_title": "Is SpaceXs Starlink About To Change The Telecom Game? Experts Weigh In",
+        "sector": "Communication Services",
+        "industry": "Telecom Services",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export",
+        "scraped_at": "2026-10-08T04:20:32.829124-04:00"
       }
     ]
   },
-  "scraped_at": "2026-10-07T04:22:21.717486-04:00",
+  "scraped_at": "2026-10-08T04:20:32.829124-04:00",
   "all_ticker_digests_sample": [
     {
       "ticker": "ABBV",
       "digest": "FDA grants two Breakthrough Therapy Designations to AbbVie investigational ADC telisotuzumab adizutecan (Temab-A) in colorectal and non-small cell lung cancer",
-      "news_title": "Why You Should Think About Eli Lilly Stock Differently Now",
+      "news_title": "Should You Be Worried About Pfizer Stock?",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "ACN",
-      "digest": "Accenture beats Q4 revenue guidance with 7% growth, sets FY27 revenue outlook for 3–6% local-currency growth",
-      "news_title": "What Happens To IBM Stock If Its Slowdown Lasts?",
-      "sector": "Technology",
-      "industry": "Information Technology Services",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "AEM",
@@ -1426,19 +1450,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "AMD",
-      "digest": "Citi lifts AMD price target to $800, Mizuho also raises target on AI hardware demand optimism",
-      "news_title": "TSMC Q3 sales beat estimates on surging AI chip demand",
-      "sector": "Technology",
-      "industry": "Semiconductors",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "AME",
@@ -1450,19 +1462,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "AMGN",
       "digest": "Jefferies raises Amgen price target to $410 after positive Phase 3 dazodalibep data in systemic Sjögren's disease",
-      "news_title": "Is Exelixis Stock Engineered To Make You Money?",
+      "news_title": "What Is Going On With Regeneron Stock?",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "AON",
@@ -1474,43 +1486,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "APH",
       "digest": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
-      "news_title": "Generac Holdings Inc. stock outperforms competitors on strong trading day",
+      "news_title": "When Amphenol's CEO And The Chart Say The Same Thing, Pay Attention",
       "sector": "Technology",
       "industry": "Electronic Components",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
-      "ticker": "BA",
-      "digest": "Boeing announces it has been awarded an approximately $14.7 billion undefinitized seven-year contract from Lockheed Martin to triple production of PAC-3 MSE missile seekers.",
-      "news_title": "Rogue Pilots Have Become One of the Biggest Threats to Airline Safety",
-      "sector": "Industrials",
-      "industry": "Aerospace & Defense",
+      "ticker": "AXP",
+      "digest": "American Express says previously reserved portion of $350 million AML penalty will not affect 2026-2027 guidance",
+      "news_title": "American Express fined $350 million for insufficient anti-money laundering program",
+      "sector": "Financial",
+      "industry": "Credit Services",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "BMY",
-      "digest": "Leerink downgraded Bristol Myers Squibb to Market Perform from Outperform and cut its price target to $59 from $73 after reassessing key pipeline candidates.",
-      "news_title": "Is Exelixis Stock Engineered To Make You Money?",
-      "sector": "Healthcare",
-      "industry": "Drug Manufacturers - General",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "BNS",
@@ -1522,7 +1522,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "BNY",
@@ -1534,7 +1534,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "BP",
+      "digest": "UBS raises BP price target to 700p, sees Q3 adjusted net income and cash flow above consensus",
+      "news_title": "UBS flags five energy stocks to buy as refining margins jump 83% in a quarter",
+      "sector": "Energy",
+      "industry": "Oil & Gas Integrated",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "BTI",
@@ -1546,31 +1558,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
-      "ticker": "CAH",
-      "digest": "Cardinal Health extends CVS pharmaceutical distribution pact through June 2032, reaffirms FY 2027 and long-term non-GAAP EPS growth guidance",
-      "news_title": "Cardinal Health rises on extended CVS distribution deal",
-      "sector": "Healthcare",
-      "industry": "Medical Distribution",
+      "ticker": "BUD",
+      "digest": "RBC’s €95 target raise and bullish valuation case lift Anheuser-Busch InBev 3.8% intraday",
+      "news_title": "Indulgence Spending Is Still Growing, and These 4 Companies Are Building on It (TRWD, RICK, BUD, MO)",
+      "sector": "Consumer Defensive",
+      "industry": "Beverages - Brewers",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "CI",
       "digest": "Cigna Healthcare unveils Health Sense platform, targeting 10% cut in inefficient health care spending by 2030",
-      "news_title": "Cigna Healthcare Introduces Health Sense To Connect Guidance, Benefits and Clinical Support Around Each Person, Improving Affordability and Outcomes",
+      "news_title": "Is Hims & Hers Stock Ready For A Longer Cash Burn?",
       "sector": "Healthcare",
       "industry": "Healthcare Plans",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "CM",
@@ -1582,19 +1594,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "CMCSA",
-      "digest": "Barclays cuts Comcast price target to $24, keeps Equal Weight on broadband competition, NBCUniversal/Sky separation uncertainty",
-      "news_title": "Should You Worry That Verizon Stopped Leading With This One Metric?",
+      "digest": "SpaceX deal to acquire nationwide 800 MHz spectrum from Grain Management raises competition concerns for Comcast’s Xfinity Mobile, broadband",
+      "news_title": "Is SpaceXs Starlink About To Change The Telecom Game? Experts Weigh In",
       "sector": "Communication Services",
       "industry": "Telecom Services",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "CNQ",
@@ -1606,19 +1618,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "CSX",
-      "digest": "CSX delivers record revenue, raises 2026 margin and free cash flow outlook",
-      "news_title": "New $100M inland rail terminal will handle 60,000 TEUs a year",
-      "sector": "Industrials",
-      "industry": "Railroads",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "CTAS",
@@ -1630,43 +1630,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "DAL",
       "digest": "Bernstein cuts Delta Air Lines price target to $100 from $106, trims earnings estimates on higher fuel costs",
-      "news_title": "DAL Stock Faces A Fuel-Driven Reality Check Ahead Of Q3 Earnings: What Investors Need To Know",
+      "news_title": "Delta Air Lines Stock Has Risen Above Sector Turbulence. Its Earnings Face 1 Big Question.",
       "sector": "Industrials",
       "industry": "Airlines",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "DDOG",
       "digest": "Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog",
-      "news_title": "Datadogs Growth Is Expected to Slow From 36% to Around 29% in Q3. Heres the CFOs Plan to Protect Margins",
+      "news_title": "Trump August disclosure: Meta stock, SpaceX debt purchases",
       "sector": "Technology",
       "industry": "Software - Application",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "E",
-      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
-      "news_title": "Is the Wests 100-Year Venezuela Oil Bet About To Backfire?",
-      "sector": "Energy",
-      "industry": "Oil & Gas Integrated",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "ELV",
@@ -1678,7 +1666,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "EPD",
+      "digest": "Enterprise Products Partners raises Q3 2026 distribution to $0.56 per unit, reports $387M YTD repurchases under $5B authorization",
+      "news_title": "Enterprise Declares Quarterly Distribution",
+      "sector": "Energy",
+      "industry": "Oil & Gas Midstream",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "EQIX",
@@ -1690,19 +1690,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "EQNR",
-      "digest": "Equinor says Q3 marketing, midstream and processing division will exceed prior $400 million guidance in trading update",
-      "news_title": "Europes Fuel Squeeze Is Turning Into a Q3 Windfall for Equinor",
-      "sector": "Energy",
-      "industry": "Oil & Gas Integrated",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "FAST",
@@ -1714,7 +1702,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "FCX",
@@ -1726,7 +1714,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "GE",
@@ -1738,19 +1726,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "GSK",
       "digest": "Positive Jideytro ARROS-1 trial data for first-line ROS1+ NSCLC drives GSK premarket surge",
-      "news_title": "GSK retains buy rating at Jefferies as B7H3 cancer programme seen as underappreciated",
+      "news_title": "Viola Davis partners with GSK to educate adults 50 and older about their shingles risk",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "HCA",
@@ -1762,43 +1750,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "HD",
-      "digest": "Melius Research today initiated coverage of Home Depot with a Buy rating as part of a broader housing sector call.",
-      "news_title": "Why Are Investors Discounting The High Cash Yield On Lowe's Stock?",
-      "sector": "Consumer Cyclical",
-      "industry": "Home Improvement Retail",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "HON",
       "digest": "Honeywell wins approximately $300 million technology and equipment contract from Dangote for planned 700,000 bpd Kenya refinery",
-      "news_title": "Dow's 350-point drop led by losses in shares of Caterpillar, Honeywell",
+      "news_title": "Is Eaton Still The Business You Bought?",
       "sector": "Industrials",
       "industry": "Conglomerates",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "HSBC",
       "digest": "FT report on sweeping AI-driven UK wealth cuts sinks HSBC ADR 4% pre-market",
-      "news_title": "HSBCs AI Push Comes for the Advisers",
+      "news_title": "HSBC plans deep UK wealth redundancies in AI expansion  report",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "HWM",
@@ -1810,7 +1786,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "ITW",
@@ -1822,7 +1798,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "JCI",
@@ -1834,91 +1810,115 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "KMI",
       "digest": "KMI rebounds on pipeline project momentum and raised 2026 guidance",
-      "news_title": "Pipelines Are Pumping AI's Power. Two Winners to Buy.",
+      "news_title": "Better Dividend Stock: Kinder Morgan vs. Energy Transfer",
       "sector": "Energy",
       "industry": "Oil & Gas Midstream",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "LIN",
       "digest": "Soft September payrolls and falling yields lift Linde 2.2% alongside materials peers",
-      "news_title": "Linde Announces Third Quarter 2026 Earnings and Conference Call Schedule",
+      "news_title": "What Did Bloom Energy Stock Investors Miss Before The Run?",
       "sector": "Basic Materials",
       "industry": "Specialty Chemicals",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "LITE",
+      "digest": "Lumentum CEO says optoelectronic products sold out through early 2029 on surging AI data center demand",
+      "news_title": "LITE, COHR, AAOI, POET Rise Overnight After Lumentum CEO Says Optical Parts Are Completely Sold Out Through Early 2029",
+      "sector": "Technology",
+      "industry": "Communication Equipment",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "LMT",
       "digest": "Lockheed Martin awards Boeing seven-year, about $14.7 billion PAC-3 MSE seeker contract for Patriot system",
-      "news_title": "Should You Sell Your RKLB Stock Now, Before Neutron Flies?",
+      "news_title": "Is The Market Underpricing Lockheed Martin Stock?",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "LOW",
-      "digest": "Melius Research today initiated coverage of Lowe’s with a Buy rating as part of a broader launch on the housing sector and home center stocks.",
-      "news_title": "Why Are Investors Discounting The High Cash Yield On Lowe's Stock?",
-      "sector": "Consumer Cyclical",
-      "industry": "Home Improvement Retail",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "LRCX",
       "digest": "Morgan Stanley raises Lam Research price target to $385, reiterates Overweight on durable logic share gains outlook",
-      "news_title": "What Would You Have Needed To Notice In Applied Materials Stock?",
+      "news_title": "What Was KLA Telling You Before Its Stock Ran?",
       "sector": "Technology",
       "industry": "Semiconductor Equipment & Materials",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "MA",
       "digest": "Mastercard launches AI tools to verify AI-initiated purchases, pilots US scoring system, partners with Cloudflare and Skyfire",
-      "news_title": "SAP Just Added Stablecoin Settlement to the Software That Runs 84% of Global Commerce",
+      "news_title": "Stocktwits Fintech Pulse: US Fintech Weekly Briefing & Market Drivers",
       "sector": "Financial",
       "industry": "Credit Services",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "MCD",
+      "digest": "Bernstein cuts McDonald's price target to $250 from $295, keeps Market Perform on sales growth and NEXT initiative concerns",
+      "news_title": "Are You Overpaying For Starbucks Stock Versus Its Rivals?",
+      "sector": "Consumer Cyclical",
+      "industry": "Restaurants",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "MNST",
       "digest": "Q2 earnings momentum and recent stock split fuel MNST 4.09% gain",
-      "news_title": "Has Coca-Cola Stock Become A Different Bet?",
+      "news_title": "Why Is Everyone Ignoring Celsius Stock's High Cash Yield?",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "MRK",
+      "digest": "Cantor Fitzgerald raises Merck price target to $145 from $120, reiterates Neutral rating ahead key ESMO cancer-drug data",
+      "news_title": "Should You Be Worried About Pfizer Stock?",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - General",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "MRSH",
@@ -1930,19 +1930,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "MRVL",
-      "digest": "Marvell gains broad analyst price target hikes after analyst day as BofA raises target to $400 and reiterates Buy",
-      "news_title": "Amazon stock is trading at its lowest trailing PE ratio in years despite AI boom",
+      "digest": "Oil and Treasury-yield surge drives chip selloff, pulling Marvell down 5.9% by 13:01 ET",
+      "news_title": "Amazon stock is trading at its lowest trailing P/E ratio in years despite AI boom",
       "sector": "Technology",
       "industry": "Semiconductors",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "MU",
+      "digest": "Micron Technology in focus after Financial Times reports OpenAI’s annualized revenue $20B below earlier estimate and Samsung preliminary Q3 misses estimates",
+      "news_title": "Stocktwits AI Roundup: OpenAI Revenue Woes Rattle Chip Stocks, SoftBank Hunts $100B, Microsoft Goes AI-First",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "MUFG",
@@ -1954,19 +1966,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "NKE",
       "digest": "Berenberg downgrades Nike to Sell, cuts price target to $27.50 on weaker demand, China and margin risks",
-      "news_title": "These 7 major S&P 500 stocks need to rally at least 200% to reclaim their peaks",
+      "news_title": "This Heritage Boot Player and a Chinese Sneaker Brand Are Among the Fastest Growing U.S. TikTok Shoe Shops",
       "sector": "Consumer Cyclical",
       "industry": "Footwear & Accessories",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "NSC",
@@ -1978,31 +1990,31 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "NTES",
-      "digest": "Goldman Sachs conviction buy and PT hike fuel NTES premarket rebound after mixed Q2 earnings",
-      "news_title": "Produced by a World-Class International Team! Adam Fan's Official New Album SKYFALL Makes Exclusive Debut on NetEase Cloud Music",
-      "sector": "Communication Services",
-      "industry": "Electronic Gaming & Multimedia",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "NVO",
-      "digest": "Novo Nordisk FDA extends review of haemophilia A drug denecimig, delaying U.S. launch to first half of 2027",
-      "news_title": "Merck's Keytruda Is Dealt a Legal Setback. It's Good News for This Biotech Stock.",
+      "digest": "Citi cuts Novo Nordisk price target to 296 Danish crowns after CMD signals broadly stable margins through 2030",
+      "news_title": "Novo Nordisk stock target cut at Citi on lack of margin growth",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "NXPI",
+      "digest": "Citi downgrades NXP Semiconductors to Neutral, cuts price target to $260 from $370 on cautious valuation and near-term prospects",
+      "news_title": "Palantir upgraded, Xerox downgraded: Wall Street's top analyst calls",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "O",
@@ -2014,7 +2026,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "OKE",
@@ -2026,7 +2038,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "ORLY",
@@ -2038,43 +2050,43 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "OXY",
       "digest": "Goldman Sachs adds Occidental Petroleum to U.S. Conviction List, upgrades to Buy and raises price target to $69",
-      "news_title": "Has The Story Under ExxonMobil Stock Run Out?",
+      "news_title": "Is Occidental Petroleum Stock A Real Bargain?",
       "sector": "Energy",
       "industry": "Oil & Gas E&P",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "P",
       "digest": "BofA and Northland raise Everpure price targets to $180 and $167 after bullish preliminary 2028 outlook",
-      "news_title": "Everpure Stock Rides 10-Day Winning Streak. What's Driving the Rally.",
+      "news_title": "What Are Everpure Investors Betting On?",
       "sector": "Technology",
       "industry": "Computer Hardware",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
-      "ticker": "PFE",
-      "digest": "Pfizer wins U.S. FDA approval for TUKYSA combo as frontline maintenance in unresectable or metastatic HER2-positive breast cancer",
-      "news_title": "Is Exelixis Stock Engineered To Make You Money?",
-      "sector": "Healthcare",
-      "industry": "Drug Manufacturers - General",
+      "ticker": "PEP",
+      "digest": "PepsiCo beats Q3 estimates but cuts Q4 and 2026 core EPS outlook as Goldman trims price target to $165, keeps Buy",
+      "news_title": "PEP Stock Looks To Snap 6-Week Losing Streak: Goldman Sachs Trims Price Target But Sees Decade Of Growth For PepsiCo",
+      "sector": "Consumer Defensive",
+      "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "PGR",
@@ -2086,7 +2098,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "RACE",
@@ -2098,7 +2110,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "RCL",
+      "digest": "Jefferies upgrades Royal Caribbean to Buy from Hold, raises price target to $330",
+      "news_title": "ROYAL CARIBBEAN GROUP TO HOLD CONFERENCE CALL ON THIRD QUARTER 2026 EARNINGS",
+      "sector": "Consumer Cyclical",
+      "industry": "Travel Services",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "RELX",
@@ -2110,19 +2134,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "RIO",
       "digest": "Rio Tinto ADRs fall after copper retreats from a record high amid uncertainty over potential U.S. tariffs on refined copper.",
-      "news_title": "Energy Shock Wipes $264 Billion Off the World's Top Mining Stocks",
+      "news_title": "Graphene Manufacturing Group battery cells complete 1,000 cycles with no performance loss",
       "sector": "Basic Materials",
       "industry": "Other Industrial Metals & Mining",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "ROST",
@@ -2134,7 +2158,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "RSG",
@@ -2146,43 +2170,43 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "RTX",
-      "digest": "RTX's Raytheon wins up to $24.4 billion U.S. Navy SM-6 interceptor supply contract for five years plus two option years",
-      "news_title": "Nasdaq and S&P Hold Weekly Gains as Small Caps and Dow Slip Midweek",
+      "digest": "RTX’s Raytheon business announces a new five-year contract with two option years valued up to $6.3 billion for production and sustainment of SM-3 Block IB missile interceptors",
+      "news_title": "Is The Market Underpricing Lockheed Martin Stock?",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "SBUX",
-      "digest": "Starbucks board raises quarterly dividend to $0.63 per share, payable November 27, 2026, marking 16th consecutive annual increase",
-      "news_title": "Starbucks Announces Increase in Quarterly Cash Dividend",
+      "digest": "Financial Times: Starbucks has explored potential Chipotle acquisition with advisers in recent months",
+      "news_title": "CMG Stock Paces Toward Second Green Week: Retail Can't Stop Buzzing About Starbucks' Chipotle Buyout Chance",
       "sector": "Consumer Cyclical",
       "industry": "Restaurants",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "SCHW",
       "digest": "Charles Schwab said it has initiated a secondary listing of its shares on the Texas Stock Exchange.",
-      "news_title": "Wall St. Bonuses Head for a New Record. Bank Earnings Will Hint at How Much.",
+      "news_title": "What Could Lift Robinhood Stock?",
       "sector": "Financial",
       "industry": "Capital Markets",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "SE",
@@ -2194,91 +2218,79 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "SHEL",
-      "digest": "Shell Q3 2026 update flags record $42/bbl refining margin and higher gas production guidance after ARC Resources acquisition",
-      "news_title": "Shell refining margins reach record highs as wars hit supply",
-      "sector": "Energy",
-      "industry": "Oil & Gas Integrated",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "SLB",
-      "digest": "SLB's OneSubsea JV wins major subsea systems contract from ExxonMobil Moçambique for Phase 1 Rovuma LNG project",
-      "news_title": "SLB Ltd. stock underperforms Wednesday when compared to competitors",
+      "digest": "SLB announces it has been awarded a digital drilling contract by TotalEnergies.",
+      "news_title": "SLB Awarded Digital Drilling Contract by TotalEnergies",
       "sector": "Energy",
       "industry": "Oil & Gas Equipment & Services",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "SNDK",
+      "digest": "Oil surge and 24-year-high yields drive memory-sector selling, pulling Sandisk down 5.9%",
+      "news_title": "Is SanDisk Stock's Fall A Bargain Or A Warning?",
+      "sector": "Technology",
+      "industry": "Computer Hardware",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "SNPS",
       "digest": "Synopsys announces a $1 billion accelerated share repurchase agreement with JPMorgan, receiving an initial delivery of approximately 1.7 million shares of its stock.",
-      "news_title": "Is PTC Stock Increasing Your Market Risk?",
+      "news_title": "Synopsys (SNPS): The Next Big AI Stock Breakout?",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "TMUS",
-      "digest": "Scotiabank cuts T-Mobile US price target to $217 from $232, keeps Outperform rating",
-      "news_title": "Should You Worry That Verizon Stopped Leading With This One Metric?",
-      "sector": "Communication Services",
-      "industry": "Telecom Services",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "TSM",
-      "digest": "Taiwan Semiconductor posts preliminary Q3 revenue about T$1.49 trillion, beats estimates on surging AI chip demand, September sales jump 55% YoY",
-      "news_title": "TSMC Q3 sales beat estimates on surging AI chip demand",
+      "digest": "Taiwan Semiconductor preliminary Q3 revenue about T$1.49 trillion beats estimates on surging AI chip demand",
+      "news_title": "TSMC September sales beat estimates by 3%",
       "sector": "Technology",
       "industry": "Semiconductors",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "TXN",
       "digest": "Soft September payrolls lower yields, lifting Texas Instruments 4.2% alongside analog-chip peers",
-      "news_title": "What Are AVGO Stock Investors Betting On?",
+      "news_title": "Siebert CIO Says Micron Stock Is a Buy, Just Not Forever",
       "sector": "Technology",
       "industry": "Semiconductors",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "URI",
       "digest": "September consumer-confidence plunge drives United Rentals 4.8% lower intraday alongside equipment-rental peers",
-      "news_title": "United Rentals Inc. stock outperforms competitors despite losses on the day",
+      "news_title": "United Rentals, Inc. Third Quarter 2026 Conference Call and Audio Webcast Thursday, October 22, 2026 at 8:30 a.m. (ET)",
       "sector": "Industrials",
       "industry": "Rental & Leasing Services",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "USB",
@@ -2290,31 +2302,19 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
-    },
-    {
-      "ticker": "VZ",
-      "digest": "Scotiabank cuts Verizon price target to $51.50 from $52.50, reiterates Outperform rating",
-      "news_title": "Verizon readies network for Tropical Storm Isaias",
-      "sector": "Communication Services",
-      "industry": "Telecom Services",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "WBD",
       "digest": "Barron’s reports $110 billion Paramount–Warner Bros. Discovery merger has closed",
-      "news_title": "Skydance gains streaming scale but faces high leverage and TV exposure, UBS says",
+      "news_title": "Is Netflix Stock Cheap Enough Yet?",
       "sector": "Communication Services",
       "industry": "Entertainment",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "WMB",
@@ -2326,7 +2326,7 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "WPM",
@@ -2338,19 +2338,55 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     },
     {
       "ticker": "AA",
       "digest": "Alcoa closes $2.6 billion senior notes offering to fund $3.1 billion cash portion of South32 asset acquisition",
-      "news_title": "Alcoa Corporation Announces Closing of Debt Offering to Finance Cash Consideration for Acquisition of South32s Bauxite, Alumina and Aluminum Assets",
+      "news_title": "The Week Ahead: Big Banks Set to Kick Off Earnings Season",
       "sector": "Basic Materials",
       "industry": "Aluminum",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.4,
       "source": "finviz_export",
-      "scraped_at": "2026-10-07T04:22:21.717486-04:00"
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "AES",
+      "digest": "AES Corp reports fiscal Q2 2026 results with non-GAAP EPS $0.41 (-19% YoY) and revenue $3.4B (+20% YoY), misses EPS but beats revenue estimates",
+      "news_title": "The AES Corp's Dividend Analysis",
+      "sector": "Utilities",
+      "industry": "Utilities - Diversified",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.4,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "ALGN",
+      "digest": "Evercore ISI downgrades Align Technology to In Line from Outperform, cuts price target to $155 from $220",
+      "news_title": "Microsoft upgraded, HubSpot downgraded: Wall Street's top analyst calls",
+      "sector": "Healthcare",
+      "industry": "Medical Instruments & Supplies",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.4,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
+    },
+    {
+      "ticker": "ALLY",
+      "digest": "Wells Fargo downgrades Ally Financial to Equal Weight, cuts price target to $42 from $55",
+      "news_title": "Why Should General Motors Stock Holders Watch This Number?",
+      "sector": "Financial",
+      "industry": "Credit Services",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.4,
+      "source": "finviz_export",
+      "scraped_at": "2026-10-08T04:20:32.829124-04:00"
     }
   ]
 }
