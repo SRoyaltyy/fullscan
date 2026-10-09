@@ -1,18 +1,19 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T05:44:47.836483-04:00",
+  "generated_at": "2026-10-09T05:46:47.660578-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-09_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-10-09/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-10-09_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-09_judge.md` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-10-09_judge.md` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-10-09_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
+    "ok": 3,
     "partial": 3,
-    "fail": 1,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -539,11 +540,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -551,32 +552,26 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-10-09_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2629",
-          "size": 7574344,
-          "said": "27 rows",
-          "bullets": [
-            "SHEL, SOLS, HASI, NBIS, HHH, STM, OSCR, GFS"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-09_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=2629",
-          "size": 8395676,
-          "said": "25 rows",
-          "bullets": [
-            "SHEL, BJ, COST, ISRG, ABBV, PFE, LLY, KRP"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "25 rows",
-      "bullets": [
-        "SHEL, BJ, COST, ISRG, ABBV"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "catalyst",
@@ -636,7 +631,7 @@
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -719,13 +714,11 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-09_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "OK",
-          "reason": "rows=2629",
-          "size": 8395676,
-          "said": "25 rows",
-          "bullets": [
-            "SHEL, BJ, COST, ISRG, ABBV, PFE, LLY, KRP"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "join",
@@ -734,10 +727,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5907",
-          "size": 2213603,
-          "said": "223 rows",
+          "size": 2176899,
+          "said": "214 rows",
           "bullets": [
-            "PLMR, GLBE, VCTR, NU, ANF, SKWD, HCI, AAMI"
+            "DVN, LNG, PR, RRC, CNQ, SM, TAL, CHRD"
           ]
         },
         {
@@ -745,13 +738,11 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-10-09_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5096",
-          "size": 821534,
-          "said": "489 rows",
-          "bullets": [
-            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "book_json",
@@ -812,9 +803,9 @@
           "bullets": []
         }
       ],
-      "said": "223 rows",
+      "said": "214 rows",
       "bullets": [
-        "PLMR, GLBE, VCTR, NU, ANF"
+        "DVN, LNG, PR, RRC, CNQ"
       ]
     },
     {
@@ -1464,6 +1455,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, SOLS, HASI, NBIS, HHH \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, BJ, COST, ISRG, ABBV"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T05:46:47.253568-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-09_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 98656,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-09_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11621,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_"
     }
   ],
   "href": {

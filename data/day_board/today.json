@@ -1,12 +1,12 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T05:44:47.836483-04:00",
+  "generated_at": "2026-10-09T05:46:47.660578-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
+    "ok": 3,
     "partial": 3,
-    "fail": 1,
+    "fail": 2,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-09T04:41:51.287580-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-09_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 7109911,
-          "preview": "raw=9872 usable=741 single=476 \u00b7 US jobless claims hover near 57-year low for fourth consecutive week - Reuters | Watch Oil Spoils the Global Stock Rally as Brent Tops $102 - Bloomberg.com | Soaring freight rates threaten Asia's appetite for US crude - Reuters | GlobalFoundries Rallies After Announcing $2 Billion TSMC Deal - Bloomberg.com | TSMC\u2019s Quarterly Revenue Jumps 51% After AI Demand Holds Up - Bloomberg.com"
-        },
-        {
-          "path": "01_daily/news/2026-10-09_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 13143,
-          "preview": "# News Parse v2 \u2014 2026-10-09T04:41:32.324313-04:00\nWindow\u224848h | news_mode=on | raw=9872 | usable=741 | single_name=476 | noise_dropped=8320\nusable polarity={'+': 31, '-': 176, 'mixed': 1, 'neutral': 533}"
-        }
-      ],
-      "preview": "raw=9872 usable=741 single=476 \u00b7 US jobless claims hover near 57-year low for fourth consecutive week - Reuters | Watch Oil Spoils the Global Stock Rally as Brent Tops $102 - Bloomberg.com | Soaring freight rates threaten Asia's appetite for US crude - Reuters | GlobalFoundries Rallies After Announcing $2 Billion TSMC Deal - Bloomberg.com | TSMC\u2019s Quarterly Revenue Jumps 51% After AI Demand Holds Up - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-10-09T04:41:32.324313-04:00\nWindow\u224848h | news_mode=on | raw=9872 | usable=741 | single_name=476 | noise_dropped=8320\nusable polarity={'+': 31, '-': 176, 'mixed': 1, 'neutral': 533}"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -207,6 +182,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, SOLS, HASI, NBIS, HHH \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, BJ, COST, ISRG, ABBV"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T05:46:47.253568-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-09_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 98656,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-09_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11621,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
