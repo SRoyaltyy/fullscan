@@ -23,5 +23,18 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "review_enrichment": {
+    "attempted_epoch": 1791554751.4552336,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMisgFBVV95cUxOMWFLUlJlWF9ocGl3MDlSSUp3WXFPblY0NEhZelF4YTVuNzRTeVVYM1RfVDhab2lzLVg2Yl9HSzFxTHVaaTFaMmp5STNfZFJtZ0RCUGMtMzZlTEVmTTNOVi0wSG9oWDgtaXh6eWVBZjVTbHZZQnZWSTk2U1hYSC13aHBhUkJpV21fdlNjdFRRakZiTUs3RGxvbXREVXVsX2V3aUgtczJMNWk0LXJUUVVVUVR3"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "error": "HTTP Error 429: Too Many Requests"
+  }
 }

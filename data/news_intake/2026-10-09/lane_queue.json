@@ -1,14 +1,46 @@
 [
   {
+    "document_id": "0d84bbab316fddb29a8359e7",
+    "title": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+    "published_at": "2026-10-09T14:00:00+00:00",
+    "known_at": "2026-10-09T14:00:00+00:00",
+    "candidate_classes": [],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "regime_state",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "9fbec73575069872d3cd98c1",
+    "title": "As AT&T, Verizon and T-Mobile shares fall, Wall Street assesses the growing SpaceX threat",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.marketwatch.com/story/as-at-t-verizon-and-t-mobile-shares-fall-wall-street-assesses-the-growing-spacex-threat-e869ef9e?mod=mw_rss_topstories",
+    "published_at": "2026-10-09T13:59:00+00:00",
+    "known_at": "2026-10-09T13:59:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "10e3a2b4bf664a7cadb41f4f",
     "title": "United States Department of the Treasury Announces New Appointment",
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://home.treasury.gov/news/press-releases/sb0654/",
-    "published_at": "",
-    "known_at": "2026-10-09T13:57:51.399883+00:00",
+    "published_at": "2026-10-09T12:06:00+00:00",
+    "known_at": "2026-10-09T12:06:00+00:00",
     "candidate_classes": [],
-    "state": "review",
+    "state": "candidate",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
@@ -15167,6 +15199,22 @@
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
     "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "ae4a1c4ec1eaf3c63c356741",
+    "title": "‘Switzerland has spoken’. Will UBS leave?",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.ft.com/content/2adb9508-6874-400e-adc3-231a7daebfd6?syn-25a6b1a6=1",
+    "published_at": "2026-10-09T04:00:21+00:00",
+    "known_at": "2026-10-09T04:00:21+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
   {
@@ -161961,7 +162009,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -162011,7 +162059,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -162043,7 +162091,7 @@
     "published_at": "2026-10-07T14:00:00+00:00",
     "known_at": "2026-10-07T14:00:00+00:00",
     "candidate_classes": [],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
@@ -162077,7 +162125,7 @@
     "candidate_classes": [
       "blast_legal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -162095,7 +162143,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -162113,7 +162161,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -162131,7 +162179,7 @@
     "candidate_classes": [
       "corporate_action_mna"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
@@ -162149,7 +162197,7 @@
     "candidate_classes": [
       "cat_weather"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "cat_weather",
@@ -162183,7 +162231,7 @@
     "candidate_classes": [
       "print_vs_priced"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
@@ -162233,7 +162281,7 @@
     "candidate_classes": [
       "factor_impulse"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "regime_state",
@@ -319555,8 +319603,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://www.fda.gov/news-events/press-announcements/fda-updates-regulations-advance-innovative-alternatives-animal-testing",
-    "published_at": "",
-    "known_at": "2026-10-02T10:39:47.686277+00:00",
+    "published_at": "2026-09-21T04:00:00+00:00",
+    "known_at": "2026-09-21T04:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -319747,8 +319795,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://www.fda.gov/news-events/press-announcements/fda-intends-evaluate-changes-pmta-regulatory-framework",
-    "published_at": "",
-    "known_at": "2026-10-02T10:39:47.686277+00:00",
+    "published_at": "2026-09-28T21:00:00+00:00",
+    "known_at": "2026-09-28T21:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",

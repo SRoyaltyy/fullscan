@@ -11,7 +11,7 @@
     "previously_inspected": "must_be_marked_development_not_holdout"
   },
   "source": "retained_documents_with_explicit_optional_publisher_enrichment",
-  "enrichment_attempts": 8,
+  "enrichment_attempts": 2,
   "cases": [
     {
       "position": 1,
@@ -825,8 +825,8 @@
       "document_id": "da5f7ecf4cce7c85744e7f94",
       "normalised_title": "paramount warner bros merger to become skydance",
       "status": "exported_exact",
-      "sha256": "ee957c7f5cfdc1dd03cc7547c1d10041055e37ed022967905ca9bcf4a4b52b8d",
-      "bytes": 1336,
+      "sha256": "2c05f824f2299de2d7fea5aa548d92adf658da649b17ffbdf2326d9078e8397a",
+      "bytes": 1922,
       "has_body": true,
       "legacy_generated": false,
       "extraction_status": "feed_text",
@@ -838,8 +838,8 @@
       "document_id": "018dd98b3662ab480ac0b2fa",
       "normalised_title": "fuel prices rise can government s subsidy programme ease the pressure pm business 1 10 26",
       "status": "exported_exact",
-      "sha256": "779e6debbabf24d983a4746d2e9bf8cc888d726c8c3c14cc8c7ad5c6461a98f0",
-      "bytes": 1281,
+      "sha256": "f8c3db68ab95e44718b4f382225d1c275b6e20e007df634f1d1bcfa29157209a",
+      "bytes": 1889,
       "has_body": true,
       "legacy_generated": false,
       "extraction_status": "feed_text",
