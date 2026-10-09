@@ -1,0 +1,5127 @@
+{
+  "date": "2026-10-12",
+  "source_heat_date": "2026-10-09",
+  "phase": "postclose_baseline",
+  "generated_at": "2026-10-09T16:18:58.714156-04:00",
+  "n_targets": 142,
+  "n_cards": 142,
+  "coverage": 1.0,
+  "validation_errors": [
+    "Basic Materials:coverage:0/8<required:1",
+    "Basic Materials:retry:coverage:0/8<required:1",
+    "Basic Materials:json:coverage:0/8<required:1",
+    "Basic Materials:coverage:0/5<required:1",
+    "Basic Materials:retry:coverage:0/5<required:1",
+    "Basic Materials:json:coverage:0/5<required:1",
+    "Communication Services:coverage:0/7<required:1",
+    "Communication Services:retry:coverage:0/7<required:1",
+    "Communication Services:json:coverage:0/7<required:1",
+    "Consumer Cyclical:coverage:0/8<required:1",
+    "Consumer Cyclical:retry:coverage:0/8<required:1",
+    "Consumer Cyclical:json:coverage:0/8<required:1",
+    "Consumer Cyclical:coverage:0/8<required:1",
+    "Consumer Cyclical:retry:coverage:0/8<required:1",
+    "Consumer Cyclical:json:coverage:0/8<required:1",
+    "Consumer Cyclical:coverage:0/7<required:1",
+    "Consumer Cyclical:retry:coverage:0/7<required:1",
+    "Consumer Cyclical:json:coverage:0/7<required:1",
+    "Consumer Defensive:coverage:0/8<required:1",
+    "Consumer Defensive:retry:coverage:0/8<required:1",
+    "Consumer Defensive:json:coverage:0/8<required:1",
+    "Consumer Defensive:coverage:0/4<required:1",
+    "Consumer Defensive:retry:coverage:0/4<required:1",
+    "Consumer Defensive:json:coverage:0/4<required:1",
+    "Energy:coverage:0/8<required:1",
+    "Energy:retry:coverage:0/8<required:1",
+    "Energy:json:coverage:0/8<required:1",
+    "Financial:coverage:0/8<required:1",
+    "Financial:retry:coverage:0/8<required:1",
+    "Financial:json:coverage:0/8<required:1",
+    "Financial:coverage:0/7<required:1",
+    "Financial:retry:coverage:0/7<required:1",
+    "Financial:json:coverage:0/7<required:1",
+    "Healthcare:coverage:0/8<required:1",
+    "Healthcare:retry:coverage:0/8<required:1",
+    "Healthcare:json:coverage:0/8<required:1",
+    "Healthcare:coverage:0/2<required:1",
+    "Healthcare:retry:coverage:0/2<required:1",
+    "Healthcare:json:coverage:0/2<required:1",
+    "Industrials:coverage:0/8<required:1",
+    "Industrials:retry:coverage:0/8<required:1",
+    "Industrials:json:coverage:0/8<required:1",
+    "Industrials:coverage:0/8<required:1",
+    "Industrials:retry:coverage:0/8<required:1",
+    "Industrials:json:coverage:0/8<required:1",
+    "Industrials:coverage:0/8<required:1",
+    "Industrials:retry:coverage:0/8<required:1",
+    "Industrials:json:coverage:0/8<required:1",
+    "Real Estate:coverage:0/8<required:1",
+    "Real Estate:retry:coverage:0/8<required:1",
+    "Real Estate:json:coverage:0/8<required:1",
+    "Real Estate:coverage:0/4<required:1",
+    "Real Estate:retry:coverage:0/4<required:1",
+    "Real Estate:json:coverage:0/4<required:1",
+    "Technology:coverage:0/8<required:1",
+    "Technology:retry:coverage:0/8<required:1",
+    "Technology:json:coverage:0/8<required:1",
+    "Technology:coverage:0/4<required:1",
+    "Technology:retry:coverage:0/4<required:1",
+    "Technology:json:coverage:0/4<required:1",
+    "Utilities:coverage:0/6<required:1",
+    "Utilities:retry:coverage:0/6<required:1",
+    "Utilities:json:coverage:0/6<required:1"
+  ],
+  "source_calendar_results": [],
+  "source_market_reaction_pct": {
+    "SPY": 0.6,
+    "QQQ": 0.494,
+    "IWM": 0.49,
+    "XLB": 0.325,
+    "XLC": -1.508,
+    "XLY": 1.02,
+    "XLP": 0.012,
+    "XLE": -0.23,
+    "XLF": 0.922,
+    "XLV": 1.576,
+    "XLI": 0.505,
+    "XLRE": 1.86,
+    "XLK": 0.506,
+    "XLU": 0.828
+  },
+  "cards": [
+    {
+      "industry": "Agricultural Inputs",
+      "sector": "Basic Materials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CTVA",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Corteva Categorically Rejects Unfounded, Unprecedented Allegations by State Attorneys G\u2026"
+        },
+        {
+          "ticker": "CF",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Top Analyst Reports for Amazon, AbbVie & Alibaba"
+        },
+        {
+          "ticker": "FMC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Tessenderlo Group NV (XBRU:TESB) (H1 2026) Earnings Call Highlights: Strong Agro Perfor\u2026"
+        },
+        {
+          "ticker": "IPI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: What Makes Intrepid Potash (IPI) a Strong Momentum Stock: Buy Now?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Aluminum",
+      "sector": "Basic Materials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CENX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: U.S. steel and materials stocks swing amid U.S.-Canada trade war"
+        },
+        {
+          "ticker": "CSTM",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Pentagon War Game Exposed a Critical US Aluminum Risk Months Before Iran Attacks"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Building Materials",
+      "sector": "Basic Materials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CRH",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Arcosa Stockholders Approve Acquisition by CRH"
+        },
+        {
+          "ticker": "MLM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Uber initiated, Thermo Fisher upgraded: Wall Street's top analyst calls"
+        },
+        {
+          "ticker": "USLM",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: United States Lime: Q2 Earnings Snapshot"
+        },
+        {
+          "ticker": "KNF",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Sirius XM upgraded, Toast downgraded: Wall Street's top analyst calls"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Chemicals",
+      "sector": "Basic Materials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "DOW",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Dow to participate in the 14th Annual Morgan Stanley Laguna Conference"
+        },
+        {
+          "ticker": "HUN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: OLIN and HUNTSMAN Announce Expiration of Hart-Scott-Rodino Waiting Period for Proposed \u2026"
+        },
+        {
+          "ticker": "REX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: REXs Record 2Q EPS, CCS Project Advances  Quarterly Update Report"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Coking Coal",
+      "sector": "Basic Materials",
+      "action": "SPLIT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "HCC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Mohnish Pabrai's Top Q2 2026 Move: Trimming Alpha Metallurgical Resources Inc at a -3. ..."
+        },
+        {
+          "ticker": "AMR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Mohnish Pabrai's Top Q2 2026 Move: Trimming Alpha Metallurgical Resources Inc at a -3. ..."
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Copper",
+      "sector": "Basic Materials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "FCX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Why Did Freeport-McMoRan Stock Drop On Doubts Over A Tariff It Would Gain From?"
+        },
+        {
+          "ticker": "IE",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 4 Mining Stocks Call Traders Are Targeting Today"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Gold",
+      "sector": "Basic Materials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "NEM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Why Did Freeport-McMoRan Stock Drop On Doubts Over A Tariff It Would Gain From?"
+        },
+        {
+          "ticker": "SSRM",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Why a Major Gold Producer Invested $5.4M Before Phenoms First Drill Hole"
+        },
+        {
+          "ticker": "NG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: US data centers to use more natural gas than most countries - report"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Lumber & Wood Production",
+      "sector": "Basic Materials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "UFPI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: ProWood Brings Products and Expertise to Hispanic Contractors at AVANCE Global 2026"
+        },
+        {
+          "ticker": "BCC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: James Hardie Industries PLC (JHIUF) (Q1 2027) Earnings Call Highlights: Record Growth a\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Other Industrial Metals & Mining",
+      "sector": "Basic Materials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "USAR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Stocks pop when the Trump administration invests, but the gains often fade fast"
+        },
+        {
+          "ticker": "MTRN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Jefferies sees bottlenecks in critical minerals as electrification demand builds"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Other Precious Metals & Mining",
+      "sector": "Basic Materials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "PPTA",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Mines Do Not Usually Fail on Geology. They Stall on Land Access"
+        },
+        {
+          "ticker": "MUX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: TNR Gold royalty project Los Azules advances as McEwen Copper secures $240M term loan"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Paper & Paper Products",
+      "sector": "Basic Materials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "SLVM",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Sylvamo Announces Dividend"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Specialty Chemicals",
+      "sector": "Basic Materials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "LIN",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The Bloom Energy Stock Signal Hiding Behind The Demand Story"
+        },
+        {
+          "ticker": "SHW",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Is LOW Stock A Buy As EPS Grows While Sales Shrink?"
+        },
+        {
+          "ticker": "SXT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Beyond Oil: Record Revenue & U.S. Direct-Sales Expansion Fuel Scaling Phase  Quarterly \u2026"
+        },
+        {
+          "ticker": "BCPC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Balchem Corporation to Participate in the 9th Annual Wells Fargo Consumer Conference on\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Steel",
+      "sector": "Basic Materials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "NUE",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The Top 3 Value Stocks to Buy in Berkshire Hathaway's Portfolio"
+        },
+        {
+          "ticker": "STLD",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Steel Dynamics Inc. stock outperforms competitors on strong trading day"
+        },
+        {
+          "ticker": "WS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Worthington Steel Signs Domination and Profit and Loss Transfer Agreement with Kloeckne\u2026"
+        },
+        {
+          "ticker": "NWPX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: NWPX Infrastructure Announces Acquisition of Serpentix Conveyor, LLC"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Advertising Agencies",
+      "sector": "Communication Services",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "APP",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Should You Buy AppLovin Stock For Its Widening Margin?"
+        },
+        {
+          "ticker": "OMC",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: CEO Switch At Omnicom Advertising As Robertson Succeeds Ruhanen"
+        },
+        {
+          "ticker": "MGNI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Should You Buy AppLovin Stock For Its Widening Margin?"
+        },
+        {
+          "ticker": "STGW",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Stagwell (STGW) Strengthens Assembly Leadership with Two Key CEO Appointments"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Broadcasting",
+      "sector": "Communication Services",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "NMAX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Newsmax, Inc. Q2 2026 Earnings Call Summary"
+        },
+        {
+          "ticker": "FUBO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: TBL Team Boxing League Announces Multi-Year Streaming Agreement with Fubo Sports Networ\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Electronic Gaming & Multimedia",
+      "sector": "Communication Services",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "TTWO",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: How Far Could Take-Two Stock Fall In A Market Shock, With Grand Theft Auto VI Still To \u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Entertainment",
+      "sector": "Communication Services",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "NFLX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, O\u2026"
+        },
+        {
+          "ticker": "DIS",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Walt Disney borrowed $60,000 against his life insurance to build Disneyland  how policy\u2026"
+        },
+        {
+          "ticker": "SPHR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Oprah Winfrey to Host 'Immersive' Live Show at Las Vegas Sphere"
+        },
+        {
+          "ticker": "CNK",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Ride This Roller Coaster if You Dare. Consider the 6% REIT That Bought It, Too."
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Internet Content & Information",
+      "sector": "Communication Services",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "GOOGL",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Maryland Seeks To Reinstate Digital Ad Tax"
+        },
+        {
+          "ticker": "GOOG",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Maryland Seeks To Reinstate Digital Ad Tax"
+        },
+        {
+          "ticker": "RUM",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: RUM's $13.7B Compute Win Contradicts AI Safety Concerns"
+        },
+        {
+          "ticker": "CARG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: CarGurus Appoints Matthew Mandel as Chief Financial Officer"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Publishing",
+      "sector": "Communication Services",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "WLY",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: John Wiley & Sons Inc (WLY) (Q1 2027) Earnings Call Highlights: AI Revenue Surges 40% A\u2026"
+        },
+        {
+          "ticker": "TDAY",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Data showed hiring rebound in August. Where were all the jobs?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Telecom Services",
+      "sector": "Communication Services",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "VZ",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Is Verizon Stock Counting On Money That Has Not Arrived Yet?"
+        },
+        {
+          "ticker": "TMUS",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Is Verizon Stock Counting On Money That Has Not Arrived Yet?"
+        },
+        {
+          "ticker": "LUMN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Is Verizon Stock Counting On Money That Has Not Arrived Yet?"
+        },
+        {
+          "ticker": "TDS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Telephone and Data Systems Announces It Is No Longer Pursuing the Acquisition of Public\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Apparel Manufacturing",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "RL",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Ralph Lauren Corporation Declares Quarterly Dividend"
+        },
+        {
+          "ticker": "ZGN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Ermenegildo Zegna NV (ZGN) (H1 2026) Earnings Call Highlights: Adjusted EBIT Rises to E\u2026"
+        },
+        {
+          "ticker": "KTB",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Helly Hansen Sees Big Opportunity in Work Footwear, Plots Move Into Outdoor"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Apparel Retail",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "TJX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The Inflation Nightmare Will Hit the Stock Market-Sooner or Later"
+        },
+        {
+          "ticker": "ROST",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: What off-price retailers are saying about tariff refunds"
+        },
+        {
+          "ticker": "URBN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Reformation Reports Double-Digit Income & Revenue Growth"
+        },
+        {
+          "ticker": "ANF",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Review & Preview: AI Is At It Again"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Auto & Truck Dealerships",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CVNA",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Copart Inc. stock outperforms competitors despite losses on the day"
+        },
+        {
+          "ticker": "RUSHA",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Rush Enterprises Inc's Dividend Analysis"
+        },
+        {
+          "ticker": "OPLN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: OPENLANE Announces Pricing of Secondary Offering of Common Stock, Including Concurrent \u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Auto Manufacturers",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "TSLA",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Tesla Roadster Reveal Could Be Musk's Biggest Test Yet"
+        },
+        {
+          "ticker": "GM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: General Motors digital business could be worth more than Wall Street thinks"
+        },
+        {
+          "ticker": "LCID",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Is Tesla Stock Priced For Its Earnings Or Its Robots?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Auto Parts",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "ORLY",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Copart Inc. stock outperforms competitors on strong trading day"
+        },
+        {
+          "ticker": "AZO",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: AutoZone Celebrates Opening of 8,000th Store, Globally"
+        },
+        {
+          "ticker": "GTX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Garrett Motion Announces Participation at Jefferies Global Industrials Conference"
+        },
+        {
+          "ticker": "DORM",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Dorman Products Inc (DORM) (Q2 2026) Earnings Call Highlights: Record Sales and EPS Fue\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Department Stores",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "KSS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Kohls turns to Babies R Us as Sephora falters"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Footwear & Accessories",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "NKE",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Baird Downgrades Nike, adidas and Dick's on Oil and Rates"
+        },
+        {
+          "ticker": "DECK",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: BMO cautious on softlines, bearish on athletic names"
+        },
+        {
+          "ticker": "SHOO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Steven Madden Ltd's Dividend Analysis"
+        },
+        {
+          "ticker": "WWW",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Wolverine World Wide, Inc. Q2 2026 Earnings Call Summary"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Furnishings, Fixtures & Appliances",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "ALH",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Alliance Receives Credit Ratings Upgrade from S&P Global Ratings"
+        },
+        {
+          "ticker": "HNI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Allsteel Elevates Office Materiality with Zero-Waste Knit Innovation"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Gambling",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "SGHC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Super Group (SGHC) Ltd (SGHC) (Q2 2026) Earnings Call Highlights: Record Revenue and Ra\u2026"
+        },
+        {
+          "ticker": "RSI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: A Big S&P 500 Pullback Isn't Far-Fetched. What the Market Is Telling Us."
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Home Improvement Retail",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "HD",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: What Happens To Home Depot Stock If Shoppers Keep Visiting Less?"
+        },
+        {
+          "ticker": "LOW",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The biggest threat to your retirement is based on a myth  it could rip through your nes\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Internet Retail",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "AMZN",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Prime Big Deal Days is Back October 6-7, Kicking Off the Season with Two Days of Exclus\u2026"
+        },
+        {
+          "ticker": "DASH",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Is Uber Stock Cheap, Or Is The Cash Already Spent?"
+        },
+        {
+          "ticker": "PTRN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Pattern to Present at Upcoming Investor Conference"
+        },
+        {
+          "ticker": "RVLV",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Kristin Ess Hair Makes Its Debut at REVOLVE"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Leisure",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "HAS",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Passing on a $1B idea was his key to success: Spin Master Chair"
+        },
+        {
+          "ticker": "LTH",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Life Time Expands Ultra Fit Class Across North America as Science-Backed Sprint Trainin\u2026"
+        },
+        {
+          "ticker": "GOLF",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Acushnet Holdings Corp (GOLF) (Q2 2026) Earnings Call Highlights: Strong Q2 Results and\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Lodging",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "MAR",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Former Marriott exec Liam Brown joins Chatham Lodging Trust board"
+        },
+        {
+          "ticker": "HLT",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Summer Travel Season May Be Ending, but Marriott's Stock Is Worth Checking In For"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Luxury Goods",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "TPR",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Multi-Billion Dollar Luxury and Lifestyle Apparel Market Set for Forecasted Gain and In\u2026"
+        },
+        {
+          "ticker": "SIG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Rent the Runway Names Paige Thomas CEO"
+        },
+        {
+          "ticker": "CPRI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Capri Holdings Limited Announces Participation in the Goldman Sachs Global Consumer and\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Packaging & Containers",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "SW",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Smurfit Westrock, Pratt seek investigation into unfairly traded pizza box imports"
+        },
+        {
+          "ticker": "PKG",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Packaging Corporation of America's Chief Executive Officer to Speak at 2026 Jefferies G\u2026"
+        },
+        {
+          "ticker": "GEF",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Greif, Inc. Declares Quarterly Dividend"
+        },
+        {
+          "ticker": "AMBP",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Ardagh Metal Packaging SA's Dividend Analysis"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Personal Services",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "ROL",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: HomeTeam Pest Defense Surpasses 2 Million Taexx Built-In Pest Control System Installations"
+        },
+        {
+          "ticker": "FTDR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Frontdoor, Inc. to Attend and Present at the KeyBanc Technology Leadership Forum"
+        },
+        {
+          "ticker": "CSV",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Carriage Services: Q2 Earnings Snapshot"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Recreational Vehicles",
+      "sector": "Consumer Cyclical",
+      "action": "SPLIT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "PII",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 3 Top-Rated Auto Stocks with Dividend Yields Above 3%"
+        },
+        {
+          "ticker": "HOG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Should You Buy Ford Motor Stock Because It Is Selling Fewer Vehicles At Better Prices?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Residential Construction",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "DHI",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 3 ETFs to Own-and 3 to Avoid-if Interest Rates Keep Rising"
+        },
+        {
+          "ticker": "PHM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 3 ETFs to Own-and 3 to Avoid-if Interest Rates Keep Rising"
+        },
+        {
+          "ticker": "IBP",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The Real Cost of a New Home Isn't Just the House. It's Everyone Who Has to Touch It Alo\u2026"
+        },
+        {
+          "ticker": "SKY",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Affordable Housing Demand Is Rising and Factory Supply Is Following"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Resorts & Casinos",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "LVS",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The Parisian Macao Celebrates 10th Anniversary"
+        },
+        {
+          "ticker": "MGM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: BetMGM Debuts Comprehensive Slate of Product and Pricing Enhancements for Football Season"
+        },
+        {
+          "ticker": "RRR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: This Las Vegas casino just gave almost 10,000 workers more than $70 million in company \u2026"
+        },
+        {
+          "ticker": "VAC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Marriott Vacations Worldwide Corporation Announces Quarterly Cash Dividend"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Restaurants",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "MCD",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Why Did OPEN, OKLO, MCD Stocks Plunge To 52-Week Lows?"
+        },
+        {
+          "ticker": "SBUX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The Side Hustle She Started After Age 60 Hit $2 Million and Landed in Starbucks: Time t\u2026"
+        },
+        {
+          "ticker": "EAT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Chili's Announces Historic $150 Million Commitment to St. Jude Children's Research Hosp\u2026"
+        },
+        {
+          "ticker": "CAKE",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Are Retail-Wholesale Stocks Lagging  The Cheesecake Factory (CAKE) This Year?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Specialty Retail",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "WSM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: This week in 5 numbers: The right personality could make up for a skills gap"
+        },
+        {
+          "ticker": "ULTA",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Walmart, Ulta and Other Retailers That Can Win With AI"
+        },
+        {
+          "ticker": "ASO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Academy Sports + Outdoors Delivers Great Value on Fall Workwear Favorites with Deals on\u2026"
+        },
+        {
+          "ticker": "RH",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: RH (RH) (Q2 2026) Earnings Call Highlights: RH Estates Launch and International Expansi\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Textile Manufacturing",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "AIN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Albany Engineered Composites Secures Contract Extension on Boeing 787 Components"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Travel Services",
+      "sector": "Consumer Cyclical",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "BKNG",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Booking Holdings Inc. stock outperforms competitors despite losses on the day"
+        },
+        {
+          "ticker": "ABNB",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Airbnb Takes Unexpected Step Into Housing Crisis"
+        },
+        {
+          "ticker": "GBTG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: What Expedia's Shrinking Share Count Is Still Worth"
+        },
+        {
+          "ticker": "LIND",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Lindblad Expeditions Holdings, Inc. Q2 2026 Earnings Call Summary"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Beverages - Brewers",
+      "sector": "Consumer Defensive",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "STZ",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The Winners and Losers of Trump's Canada Import Ban-For Now"
+        },
+        {
+          "ticker": "TAP",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Bloom Energy Stock Rallies on News of S&P 500 Addition"
+        },
+        {
+          "ticker": "SAM",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Dogfish Head Announces Lineup of Fall-Favorite Beverages"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Beverages - Non-Alcoholic",
+      "sector": "Consumer Defensive",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "KO",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: KO Stock Near Highs: Has Momentum Outrun Value?"
+        },
+        {
+          "ticker": "PEP",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: How Will General Mills Stock React To Its Upcoming Earnings?"
+        },
+        {
+          "ticker": "COCO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Revisiting Former Stock Picks Vita Coco, Idacorp, Subaru"
+        },
+        {
+          "ticker": "FIZZ",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: KO Stock Near Highs: Has Momentum Outrun Value?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Beverages - Wineries & Distilleries",
+      "sector": "Consumer Defensive",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "BF-B",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The Winners and Losers of Trump's Canada Import Ban-For Now"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Confectioners",
+      "sector": "Consumer Defensive",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "MDLZ",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: How Will General Mills Stock React To Its Upcoming Earnings?"
+        },
+        {
+          "ticker": "HSY",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: How Will General Mills Stock React To Its Upcoming Earnings?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Discount Stores",
+      "sector": "Consumer Defensive",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "WMT",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: CVS Stock Returned $24B In Cash: Why Did It Still Lag The Market?"
+        },
+        {
+          "ticker": "COST",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: AI Safety Fears Drive Investors to J&J, Costco, and CrowdStrike for Cybersecurity"
+        },
+        {
+          "ticker": "PSMT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: PriceSmart Announces Earnings Release and Conference Call Details for the Fourth Quarte\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Education & Training Services",
+      "sector": "Consumer Defensive",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "LAUR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Covista Expands and Strengthens Leadership Bench to Accelerate Purpose at Scale"
+        },
+        {
+          "ticker": "CVSA",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Chamberlain University Names Jason Dunne Chief Academic Officer"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Farm Products",
+      "sector": "Consumer Defensive",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "ADM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Did Archer-Daniels-Midland Company Insiders Breach their Fiduciary Duties to Shareholders?"
+        },
+        {
+          "ticker": "BG",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Bunge Announces the Sale of its Two Sugarcane Mills in Brazil"
+        },
+        {
+          "ticker": "CALM",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Cal-Maine Foods Schedules First Quarter Fiscal 2027 Earnings Release, Conference Call a\u2026"
+        },
+        {
+          "ticker": "DMC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The Brand That Fed America for 130 Years Just Went Bankrupt"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Food Distribution",
+      "sector": "Consumer Defensive",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "SYY",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Sysco Announces Pricing of Common Stock Offering"
+        },
+        {
+          "ticker": "CHEF",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Here is Why Growth Investors Should Buy Chefs' Warehouse (CHEF) Now"
+        },
+        {
+          "ticker": "UNFI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Earnings Calendar and Analysis for This Week (September 7-11)"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Grocery Stores",
+      "sector": "Consumer Defensive",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "KR",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Eating Healthier Is Easier with Peak-Season Produce"
+        },
+        {
+          "ticker": "WMK",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: WEIS MARKETS REPORTS SECOND QUARTER 2026 RESULTS"
+        },
+        {
+          "ticker": "IMKTA",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Ingles posts 3.1% decline in comp-store grocery sales"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Household & Personal Products",
+      "sector": "Consumer Defensive",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "PG",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: DesignRush Podcast Examines Ad Spend Decisions with Shuttlerock's Mack Reynolds"
+        },
+        {
+          "ticker": "CL",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Canadas inflation picture is getting complicated  what analysts see ahead"
+        },
+        {
+          "ticker": "IPAR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Interparfums Inc (IPAR) (Q2 2026) Earnings Call Highlights: Resilient Growth Amid Regio\u2026"
+        },
+        {
+          "ticker": "NWL",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Hamilton Beach Brands Core Recovery, Premiumization & Adjacent Growth  Initiation Report"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Packaged Foods",
+      "sector": "Consumer Defensive",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "KHC",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: How Will General Mills Stock React To Its Upcoming Earnings?"
+        },
+        {
+          "ticker": "GIS",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: How Will General Mills Stock React To Its Upcoming Earnings?"
+        },
+        {
+          "ticker": "MZTI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The Marzetti Co (MZTI) (Q4 2026) Earnings Call Highlights: Record Year Fueled by Bachan\u2026"
+        },
+        {
+          "ticker": "CENTA",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Should Value Investors Buy Central Garden & Pet (CENTA) Stock?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Tobacco",
+      "sector": "Consumer Defensive",
+      "action": "SPLIT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "PM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Philip Morris CEO Is 'Optimistic' About Zyn Potential"
+        },
+        {
+          "ticker": "MO",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 15 of the Highest-Yielding Dividend Stocks in the S&P 500"
+        },
+        {
+          "ticker": "TPB",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Bear of the Day: Turning Point Brands (TPB)"
+        },
+        {
+          "ticker": "UVV",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: USI advances optical interconnect push with ELSFP laser module"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Oil & Gas Drilling",
+      "sector": "Energy",
+      "action": "OVERRIDE",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "NE",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 3 Dividend Stocks From a Value Pro"
+        },
+        {
+          "ticker": "RIG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: ONGC, Transocean sign LoA for Dhirubhai drill-ship in India"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Oil & Gas E&P",
+      "sector": "Energy",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "COP",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Should You Buy ExxonMobil Stock For What Guyana Pays Next?"
+        },
+        {
+          "ticker": "EOG",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: EOG Resources to Present at Upcoming Conference"
+        },
+        {
+          "ticker": "SM",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: SM Energy Declares Quarterly Cash Dividend"
+        },
+        {
+          "ticker": "MGY",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Magnolia Oil & Gas Completes Acquisition of WildFire Energy"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Oil & Gas Equipment & Services",
+      "sector": "Energy",
+      "action": "OVERRIDE",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "SLB",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: SLB Ltd. stock underperforms Tuesday when compared to competitors"
+        },
+        {
+          "ticker": "BKR",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Baker Hughes and Venture Global Advance Next Phase of U.S. Gas Infrastructure Growth"
+        },
+        {
+          "ticker": "KGS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Kodiak Gas Services Inc's Dividend Analysis"
+        },
+        {
+          "ticker": "WHD",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Etsy upgraded, TJX downgraded: Wall Street's top analyst calls"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Oil & Gas Integrated",
+      "sector": "Energy",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "XOM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Global Fuel Squeeze Triggers U.S. Refiners Stocks Rally"
+        },
+        {
+          "ticker": "CVX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Global Fuel Squeeze Triggers U.S. Refiners Stocks Rally"
+        },
+        {
+          "ticker": "DEC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: At $100 Oil, the Deal Flow Moved to Pipelines and Producing Wells"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Oil & Gas Midstream",
+      "sector": "Energy",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "WMB",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: At $100 Oil, the Deal Flow Moved to Pipelines and Producing Wells"
+        },
+        {
+          "ticker": "KMI",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Trump oil and gas holdings gained up to $4.4M during Iran war"
+        },
+        {
+          "ticker": "KNTK",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Why Is KNTK Stock Up 5% After-Hours?"
+        },
+        {
+          "ticker": "INSW",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: International Seaways Inc's Dividend Analysis"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Oil & Gas Refining & Marketing",
+      "sector": "Energy",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "MPC",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Global Fuel Squeeze Triggers U.S. Refiners Stocks Rally"
+        },
+        {
+          "ticker": "VLO",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Global Fuel Squeeze Triggers U.S. Refiners Stocks Rally"
+        },
+        {
+          "ticker": "PBF",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: PBF Energy Announces Pricing of $500 Million of 0% Exchangeable Notes due 2032"
+        },
+        {
+          "ticker": "CVI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Carl Icahn Trims Stakes in JetBlue and American Electric Power"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Thermal Coal",
+      "sector": "Energy",
+      "action": "OVERRIDE",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CNR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Core Natural Resources Expands President's Responsibilities and Appoints New CFO"
+        },
+        {
+          "ticker": "BTU",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Peabody Energy Corporation Sued for Securities Law Violations - Contact the DJS Law Gro\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Uranium",
+      "sector": "Energy",
+      "action": "OVERRIDE",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "UEC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Russia accuses Ukraine of Zaporizhzhia fuel attack as Odesa strikes continue"
+        },
+        {
+          "ticker": "UUUU",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: USAR, MP, UUUU, CRML Stocks Drop Overnight: Why China's Threat To Scrap Trump-Xi Summit\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Asset Management",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "BLK",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: ETF League Tables: VanEck Sees Outflows"
+        },
+        {
+          "ticker": "BX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Brookfield in Talks to Acquire PGP Glass From Blackstone for Up to $1.5 Billion, ET Rep\u2026"
+        },
+        {
+          "ticker": "VCTR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Victory Capital Reports August 2026 Total Client Assets"
+        },
+        {
+          "ticker": "STEP",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Amulet Capital Partners Closes Continuation Vehicle to Support Continued Growth of US F\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Banks - Diversified",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "JPM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Bank of America CEO Sparks Bank Stock Selloff With One Small Word"
+        },
+        {
+          "ticker": "BAC",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Stock-picking, multi-manager hedge funds attract more capital from investors in 2026, B\u2026"
+        },
+        {
+          "ticker": "NTB",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Earnings Calendar and Analysis for This Week (August 3-7)"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Banks - Regional",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "USB",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Weekly Wrap: Rate Hike Expectations Pressure Crypto"
+        },
+        {
+          "ticker": "PNC",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: PNC Workplace Advantage to Help Employers Strengthen Benefit Offerings While Supporting\u2026"
+        },
+        {
+          "ticker": "UMBF",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: UMB Financial Corp's Dividend Analysis"
+        },
+        {
+          "ticker": "ONB",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Video Opportunity: 'Better Together Days' volunteer blitz"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Capital Markets",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "MS",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: This One Stock Looks Bullish Amid Morgan Stanley's 30-Day Crash Warning"
+        },
+        {
+          "ticker": "GS",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Fashions Battle for Culture: Brands Seek Connection"
+        },
+        {
+          "ticker": "HUT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: How Far Can Applied Digital Stock Fall If The Business Keeps Growing?"
+        },
+        {
+          "ticker": "SNEX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: StoneX and DeltaTerra Develop New Synthetic Structure for Agency Credit Risk Transfer"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Credit Services",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "V",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Visa Research: The Rise of the \"Couch Economy\" Is Reshaping Consumer Spending"
+        },
+        {
+          "ticker": "MA",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: KEO Capital Announces Strategic Partnership with Mastercard to Expand Cross-Border Card\u2026"
+        },
+        {
+          "ticker": "FCFS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: FirstCash Upsizes and Extends Term of Unsecured Bank Credit Facility; Size of Committed\u2026"
+        },
+        {
+          "ticker": "ENVA",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Enova Withdraws Bank Regulatory Applications"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Financial Conglomerates",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "HTH",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: A Texas Banking Billionaire and His Children Are Locked in a Bitter Succession Drama"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Financial Data & Stock Exchanges",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "SPGI",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Verdant Rock Secures 30% Quota Share Reinsurance Treaty with A+ Rated Panel, Expanding \u2026"
+        },
+        {
+          "ticker": "CME",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Should You Buy Coinbase Stock While Its Revenue Is Shrinking?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Insurance - Diversified",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "BRK-B",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Are Value ETFs the New AI Trade?"
+        },
+        {
+          "ticker": "AIG",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Steve Eisman Owns AIG as Cantor Calls Stock Really, Really Cheap"
+        },
+        {
+          "ticker": "PLGO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Pelagos Insurance Capital Ltd's Dividend Analysis"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Insurance - Life",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "MET",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Principal Financial Group Inc. stock outperforms competitors on strong trading day"
+        },
+        {
+          "ticker": "AFL",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: From Lumber to Lifelines: Aflac Employees Help Ensure No Child Sleeps on the Floor"
+        },
+        {
+          "ticker": "JXN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Jackson Financial Inc (JXN) (Q2 2026) Earnings Call Highlights: Record Earnings and Str\u2026"
+        },
+        {
+          "ticker": "CNO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Should Value Investors Buy CNO Financial Group (CNO) Stock?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Insurance - Property & Casualty",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CB",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Chubb Ltd's Dividend Analysis"
+        },
+        {
+          "ticker": "PGR",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Can PGR's Telematics Edge Strengthen Its Underwriting Advantage?"
+        },
+        {
+          "ticker": "MCY",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Mercury Insurance Named One of America's Greatest Companies for 2026 by Newsweek"
+        },
+        {
+          "ticker": "SIGI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Selective to Present at the 2026 Keefe, Bruyette & Woods Insurance Conference"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Insurance - Reinsurance",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "EG",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Everest Group Ltd's Dividend Analysis"
+        },
+        {
+          "ticker": "HG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Why Canadian copper stocks are plunging after copper hit a record high?"
+        },
+        {
+          "ticker": "SPNT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: SiriusPoint Ltd (SPNT) (Q2 2026) Earnings Call Highlights: Strong Underwriting Profitab\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Insurance - Specialty",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "ACT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Afrocentric Investment Corp Ltd (JSE:ACT) (H1 2026) Earnings Call Highlights: Navigatin\u2026"
+        },
+        {
+          "ticker": "ESNT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Essent Group Ltd's Dividend Analysis"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Insurance Brokers",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "MRSH",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Employers Expect Health Benefit Costs to Jump 8.2% in 2027, and the Impact Will Likely \u2026"
+        },
+        {
+          "ticker": "AJG",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: As Employers Plan for Growth, Workforce Pressures Continue to Mount"
+        },
+        {
+          "ticker": "BWIN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Are BWIN, ACVA, SWMR Obtaining Fair Deals for their Shareholders?"
+        },
+        {
+          "ticker": "ARX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Are CHMI, ARX, HHS Obtaining Fair Deals for their Shareholders?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Mortgage Finance",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "PFSI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Pennymac Launches \"Welcome Home\" a Video Series Pairing Team USA Athletes With Home Loa\u2026"
+        },
+        {
+          "ticker": "WD",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Walker & Dunlop Grows Hospitality and European Capital Markets Platform"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Shell Companies",
+      "sector": "Financial",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "LION",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Drift Invites Fans Back to Forks with an Exclusive Twilight x Drift Scent Collection"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Biotechnology",
+      "sector": "Healthcare",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "VRTX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Strong Core Business, Raised Guidance Push Vertex Pharmaceuticals Higher"
+        },
+        {
+          "ticker": "REGN",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Trailing rivals, AbbVie scores win with dual-acting myeloma drug"
+        },
+        {
+          "ticker": "CYTK",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Cytokinetics Announces Call for Proposals for Ninth Annual Communications Grant Program"
+        },
+        {
+          "ticker": "KRYS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Krystal Biotech to Present at 2026 Cantor Global Healthcare Conference"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Diagnostics & Research",
+      "sector": "Healthcare",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "TMO",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Uber initiated, Thermo Fisher upgraded: Wall Street's top analyst calls"
+        },
+        {
+          "ticker": "DHR",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: ILMN Stock Keeps Climbing. Should You Climb On?"
+        },
+        {
+          "ticker": "RDNT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: RadNet, Inc. to Present at the Morgan Stanley 24th Annual Global Healthcare Conference \u2026"
+        },
+        {
+          "ticker": "ADPT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Adaptive Biotechnologies to Participate in the Morgan Stanley 24th Annual Global Health\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Drug Manufacturers - General",
+      "sector": "Healthcare",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "LLY",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: AI Safety Fears Drive Investors to J&J, Costco, and CrowdStrike for Cybersecurity"
+        },
+        {
+          "ticker": "JNJ",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: AI Safety Fears Drive Investors to J&J, Costco, and CrowdStrike for Cybersecurity"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Drug Manufacturers - Specialty & Generic",
+      "sector": "Healthcare",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "ZTS",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Michael Burry Sells FLUT To Pile Into LULU Under $100  Plus A New Bet On ZTS"
+        },
+        {
+          "ticker": "VTRS",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Cavendish reiterates 'buy' rating on Shield Therapeutics after US deal with Viatris"
+        },
+        {
+          "ticker": "ALKS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Alkermes Announces Launch of 9th Annual Alkermes Pathways Research Awards Program"
+        },
+        {
+          "ticker": "HIMS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: HIMS Bulls Should Heed This Historic Chart Signal"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Health Information Services",
+      "sector": "Healthcare",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "VEEV",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Michael Burry Warns Red-Hot AI Stock Is Overvalued"
+        },
+        {
+          "ticker": "BTSG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: William Blair Says These Stocks Are Must-Own Picks"
+        },
+        {
+          "ticker": "HQY",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: HealthEquity Inc (HQY) (Q2 2027) Earnings Call Highlights: Record Revenue and Margin Ex\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Healthcare Plans",
+      "sector": "Healthcare",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "UNH",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: CVS Stock Returned $24B In Cash: Why Did It Still Lag The Market?"
+        },
+        {
+          "ticker": "CVS",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Why CVS Healths Tech Chief Says He's 'Allergic' to the 'Chief AI Officer' Title"
+        },
+        {
+          "ticker": "OSCR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Apple, Taiwan Semi Lead 5 Top Stocks Near Buy Points"
+        },
+        {
+          "ticker": "CLOV",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Clover Health to Participate in Upcoming Investor Conferences"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Medical Care Facilities",
+      "sector": "Healthcare",
+      "action": "OVERRIDE",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "HCA",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: HCA Healthcare Inc. stock outperforms competitors on strong trading day"
+        },
+        {
+          "ticker": "DVA",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: DaVita Community Care Report 2025: Empowering Teammates Through Career Development and \u2026"
+        },
+        {
+          "ticker": "PACS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: PACS Group, Inc. to Present at the 2026 Jefferies Healthcare Services and Technology Co\u2026"
+        },
+        {
+          "ticker": "LFST",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: These Two Healthcare Stocks\u00a0Hit Key Milestones Today  Why Is Wall Street Bullish\u00a0On Them?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Medical Devices",
+      "sector": "Healthcare",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "ABT",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Abbott agrees to settlement over closure of largest baby formula plant in the US"
+        },
+        {
+          "ticker": "MDT",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Get Paid To Wait For ISRG Stock To Go On Sale"
+        },
+        {
+          "ticker": "GKOS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Glaukos Announces Participation in Wells Fargo Healthcare Conference"
+        },
+        {
+          "ticker": "TXG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 10x Genomics Wins Patent Infringement Verdict Against Parse Biosciences"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Medical Distribution",
+      "sector": "Healthcare",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "MCK",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: McKesson confirms data theft in cyberattack involving third-party apps"
+        },
+        {
+          "ticker": "COR",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Cencora Inc. stock underperforms Wednesday when compared to competitors"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Medical Instruments & Supplies",
+      "sector": "Healthcare",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "ISRG",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Get Paid To Wait For ISRG Stock To Go On Sale"
+        },
+        {
+          "ticker": "BDX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: BD Advances Intelligent Robotics to Transform the Future of Pharmacy Care at Fairview"
+        },
+        {
+          "ticker": "MMED",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: MiniMed Files Form S-4 Registration Statement in Connection with Medtronic Exchange Off\u2026"
+        },
+        {
+          "ticker": "MMSI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Merit Medical to Participate in Upcoming Investors Conferences in September"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Aerospace & Defense",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "GE",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Stocks Slip on AI Safety Worries, Rising Oil Prices: Stock Market Today"
+        },
+        {
+          "ticker": "RTX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: U.S. links Chinese satellite imagery to deadly Iranian strike - WSJ"
+        },
+        {
+          "ticker": "MOG-A",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Moog Inc. to Participate in Upcoming Investor Conferences"
+        },
+        {
+          "ticker": "VSEC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: VSE Corporation Announces August 2026 Investor Conference Schedule"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Airlines",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "DAL",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: UAL, AAL, DAL Stocks Suffer Weekly Loss: Barclays Cuts Price Targets But Sees A Silver \u2026"
+        },
+        {
+          "ticker": "UAL",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: UAL, AAL, DAL Stocks Suffer Weekly Loss: Barclays Cuts Price Targets But Sees A Silver \u2026"
+        },
+        {
+          "ticker": "SKYW",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Airline stocks bounce back in a big way as oil prices drop"
+        },
+        {
+          "ticker": "ALGT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Nike downgraded, Affirm upgraded: Wall Street's top analyst calls"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Airports & Air Services",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "JOBY",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: JOBY Stock In Focus: Joby Aviation Starts Texas Air Taxi Flights As FAA Certification N\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Building Products & Equipment",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "TT",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Trane Technologies to Present at the Morgan Stanley Laguna Conference"
+        },
+        {
+          "ticker": "JCI",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Johnson Controls Announces Quarterly Dividend"
+        },
+        {
+          "ticker": "GFF",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Griffon Corporation Announces Closing of Senior Notes Offering and Amended Credit Facility"
+        },
+        {
+          "ticker": "ARLO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Arlo Technologies to Present at Upcoming Investor Conferences"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Business Equipment & Supplies",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CXT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Crane NXT to Participate in the 2026 Jefferies Global Industrial Conference"
+        },
+        {
+          "ticker": "XRX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Xerox, Dynatrace, and 2 More Stocks See Action From Activist Investors"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Conglomerates",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "MMM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Goldman Sachs, Caterpillar share losses contribute to Dow's nearly 150-point drop"
+        },
+        {
+          "ticker": "HON",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Why Today's GE Downgrade Wasn't Just a Downgrade"
+        },
+        {
+          "ticker": "BBUC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Brookfield Business Corporation Announces Renewal of Normal Course Issuer Bid"
+        },
+        {
+          "ticker": "GHC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Graham Holdings Company Declares Regular Quarterly Dividend"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Consulting Services",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "VRSK",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Unmasking Fraud: Verisk Releases Fraud Discovery, connecting intelligence, analytics an\u2026"
+        },
+        {
+          "ticker": "EFX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Canadian Businesses Carrying More Debt As Tariffs and Payment Stress Deepens"
+        },
+        {
+          "ticker": "HURN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Huron Consulting Group Inc. Q2 2026 Earnings Call Summary"
+        },
+        {
+          "ticker": "ICFI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: ICF Named OpenAI Select Partner"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials",
+      "action": "SPLIT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "VRT",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 3 Stocks That Offer AI Exposure and Dividends"
+        },
+        {
+          "ticker": "HUBB",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Why Is Eaton Priced Above Peers That Earn More Per Sale?"
+        },
+        {
+          "ticker": "ENS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: EnerSys to Participate in Jefferies Renewables, Clean Energy, & Construction Conference"
+        },
+        {
+          "ticker": "ATKR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Are SMTI, LAB, ATKR, VAL Obtaining Fair Deals for their Shareholders?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Engineering & Construction",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "PWR",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Quanta Services Inc. stock outperforms competitors on strong trading day"
+        },
+        {
+          "ticker": "FIX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme"
+        },
+        {
+          "ticker": "FLR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Fluor Shares Rise 6.1% Following Earnings Beat and Analyst Actions"
+        },
+        {
+          "ticker": "ACA",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Arcosa Stockholders Approve Acquisition by CRH"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Farm & Heavy Construction Machinery",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CAT",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 3 Stocks That Offer AI Exposure and Dividends"
+        },
+        {
+          "ticker": "DE",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Caterpillar Stock Looks Expensive Until You Price The Backlog, And Then The Margins"
+        },
+        {
+          "ticker": "FSS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The Takeover Case for Miller Industries: A Cash-Gushing Niche Leader"
+        },
+        {
+          "ticker": "TEX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Caterpillar Stock Looks Expensive Until You Price The Backlog, And Then The Margins"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Industrial Distribution",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "GWW",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: GRAINGER ACQUIRES TECHNOLOGY ASSETS FROM ADROIT WORLDWIDE MEDIA"
+        },
+        {
+          "ticker": "FAST",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Ferguson Added to S&P 500 and the Plumbing Stock Pops. Where It Can Go Next."
+        },
+        {
+          "ticker": "XMTR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Meta's AI Agent for Consumers Has Arrived. Alphabet and Amazon Should Watch Out."
+        },
+        {
+          "ticker": "REZI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Resideo To Participate at Upcoming Investor Conferences"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Integrated Freight & Logistics",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "UPS",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 15 of the Highest-Yielding Dividend Stocks in the S&P 500"
+        },
+        {
+          "ticker": "FDX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Why FedExs CEO says AI strategy must start at the top"
+        },
+        {
+          "ticker": "PBI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Pitney Bowes Presort Services Expands Capacity with Automation and Facility Investments\u2026"
+        },
+        {
+          "ticker": "HUBG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Hub Group names new CFO: provides accounting error update"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Marine Shipping",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "MATX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: China export frontloading fuels Transpacific trade, Matson says"
+        },
+        {
+          "ticker": "SFL",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: SFL - Charter Extension for 6 x 15,400 TEU vessels adding $750 Million Backlog"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Metal Fabrication",
+      "sector": "Industrials",
+      "action": "SPLIT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CMC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: CMC Named to Newsweek's America's Greatest Companies 2026 List"
+        },
+        {
+          "ticker": "GPGI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Kaplan Fox Urges GPGI, Inc. (GPGI) Investors Seeking Recovery to Contact the Firm Befor\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Pollution & Treatment Controls",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "VLTO",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Veralto Signs Agreement to Acquire Cleanwater1"
+        },
+        {
+          "ticker": "ZWS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Zurn Elkay Water Solutions Named One of America's Greatest Companies 2026 by Newsweek"
+        },
+        {
+          "ticker": "CECO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: CECO Environmental Corp (CECO) (Q2 2026) Earnings Call Highlights: Record Orders and Ba\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Railroads",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "UNP",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Myriad Uranium Announces Further Phase II Drill Results from Copper Mountain"
+        },
+        {
+          "ticker": "CSX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: CSX Corp's Dividend Analysis"
+        },
+        {
+          "ticker": "TRN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Trinity Industries, Inc. Declares Quarterly Dividend"
+        },
+        {
+          "ticker": "GBX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Greenbrier tabs new CEO in leadership succession"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Rental & Leasing Services",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "URI",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Diesel Sets a Record $5.90 a Gallon as the Generator Market Heads Toward $25.6 Billion"
+        },
+        {
+          "ticker": "GATX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Rented Fleets Are Winning the Infrastructure Buildout as Mega Projects Multiply"
+        },
+        {
+          "ticker": "HRI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Rented Fleets Are Winning the Infrastructure Buildout as Mega Projects Multiply"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Security & Protection Services",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "ALLE",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Allegion to Attend 2026 Morgan Stanley Annual Laguna Conference"
+        },
+        {
+          "ticker": "BCO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: UK regulator opens probe into Brinks $6.6bn\u00a0takeover of NCR Atleos"
+        },
+        {
+          "ticker": "GEO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The GEO Group, Inc. Q2 2026 Earnings Call Summary"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Specialty Business Services",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CTAS",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Cintas Corporation Announces Webcast for First Quarter Fiscal Year 2027 Results"
+        },
+        {
+          "ticker": "CPRT",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: ACV Auctions Soars 40% as Copart Strikes $1.9B Deal"
+        },
+        {
+          "ticker": "UNF",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: UniFirst Launches Always U Workwear Collection Designed for the Active Workforce"
+        },
+        {
+          "ticker": "AZZ",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: AZZ Inc. Announces September Investor Conference and Non-Deal Roadshow Schedule"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "GEV",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: GEV Stock Plunges After New Sell Rating, But Retail Investors Smell A Buying Opportunity"
+        },
+        {
+          "ticker": "ETN",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Vertiv Has Guided Itself Into A Steep Second Half"
+        },
+        {
+          "ticker": "NPO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: EnPro Industries, Inc. Q2 2026 Earnings Call Summary"
+        },
+        {
+          "ticker": "JBTM",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: AMD upgraded, Five Below downgraded: Wall Street's top analyst calls"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Staffing & Employment Services",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "KFY",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Korn Ferry (KFY) (Q1 2027) Earnings Call Highlights: Record Growth Fueled by AMS Acquis\u2026"
+        },
+        {
+          "ticker": "TNET",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: TriNet Announces Quarterly Dividend"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Tools & Accessories",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "SNA",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Snap-on Incorporated Declares Quarterly Dividend"
+        },
+        {
+          "ticker": "SWK",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Stanley Black & Decker to Present at the Morgan Stanley 14th Annual Laguna Conference"
+        },
+        {
+          "ticker": "KMT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Kennametal Named Official Tooling Supplier for NASCAR"
+        },
+        {
+          "ticker": "HLMN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Hillman Completes Acquisition of Kanebridge"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Trucking",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "ODFL",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Citi turns more bullish on trucking stocks"
+        },
+        {
+          "ticker": "RXO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Is Uber Stock Cheap, Or Is The Cash Already Spent?"
+        },
+        {
+          "ticker": "ARCB",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: ArcBest sees tonnage growth accelerate in August; raises Q3 asset-light guide"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Waste Management",
+      "sector": "Industrials",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "WM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Waste Management Inc's Dividend Analysis"
+        },
+        {
+          "ticker": "RSG",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Judge sets date for Colgate toothpaste tube recyclability trial"
+        },
+        {
+          "ticker": "CWST",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Casella Waste Systems Recognizes 2026 Sustainability Leaders"
+        },
+        {
+          "ticker": "ONT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Onterris Awarded C$9 Million Environmental Services Contract for Major Canadian Natural\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "REIT - Diversified",
+      "sector": "Real Estate",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "VICI",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 15 of the Highest-Yielding Dividend Stocks in the S&P 500"
+        },
+        {
+          "ticker": "BNL",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Ride This Roller Coaster if You Dare. Consider the 6% REIT That Bought It, Too."
+        },
+        {
+          "ticker": "GNL",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Greenberg Traurig Advises Global Net Lease on $535M Modiv Industrial Acquisition"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "REIT - Healthcare Facilities",
+      "sector": "Real Estate",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "WELL",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Discovery Senior Living to Participate in Evercore ISI Healthcare Investment Conference"
+        },
+        {
+          "ticker": "VTR",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Ventas Declares Quarterly Dividend of $0.52 Per Common Share"
+        },
+        {
+          "ticker": "CTRE",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: CareTrust REIT Inc (CTRE) (Q2 2026) Earnings Call Highlights: Record $900M Investment Q\u2026"
+        },
+        {
+          "ticker": "SBRA",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Sabra Health Care REIT, Inc., Issues Business Update and will Participate in the BofA S\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "REIT - Hotel & Motel",
+      "sector": "Real Estate",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "HST",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Host Hotels & Resorts Announces Third Quarter 2026 Earnings Call to be Held on November\u2026"
+        },
+        {
+          "ticker": "RHP",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Greenberg Traurig Advises Ryman Hospitality Properties on $1.38B Grande Lakes Orlando R\u2026"
+        },
+        {
+          "ticker": "APLE",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Apple Hospitality REIT Announces Dates for Third Quarter 2026 Earnings Release and Conf\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "REIT - Industrial",
+      "sector": "Real Estate",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "PLD",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Prologis Plans 1M SF Chicago Logistics Development"
+        },
+        {
+          "ticker": "PSA",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Public Storage Prices Public Offering of C$400 Million Senior Notes in its Inaugural Of\u2026"
+        },
+        {
+          "ticker": "TRNO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Terreno Realty Corporation Announces Leases in Sunnyvale, CA"
+        },
+        {
+          "ticker": "LXP",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Are SOLS, LXP, ATAI Obtaining Fair Deals for their Shareholders?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "REIT - Mortgage",
+      "sector": "Real Estate",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "DX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Loonie holds near 12-day low as oil support fails to offset dollar strength"
+        },
+        {
+          "ticker": "BXMT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Blackstone Mortgage REIT Tumbles on $1B Office Loan Strain"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "REIT - Office",
+      "sector": "Real Estate",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "BXP",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The Office Boom Is Back. Can REITs Be Far Behind?"
+        },
+        {
+          "ticker": "ARE",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Alexandria Real Estate Equities, Inc. Highlights Its Role in Advancing Blood Cancer Inn\u2026"
+        },
+        {
+          "ticker": "CDP",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: COPT Defense Provides an Update on Leasing Activity and Capital Commitments to New Inve\u2026"
+        },
+        {
+          "ticker": "SLG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The Office Boom Is Back. Can REITs Be Far Behind?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "REIT - Residential",
+      "sector": "Real Estate",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "VMRK",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Vivmark Residential to Participate in Bank of America Global Real Estate Conference"
+        },
+        {
+          "ticker": "UDR",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: UDR to Participate in Upcoming Real Estate Conferences"
+        },
+        {
+          "ticker": "IRT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: IRTs purchase of Centerspace driven by scale, diversification"
+        },
+        {
+          "ticker": "UMH",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: UMH PROPERTIES, INC. WILL ATTEND AND SHOWCASE TWO HOMES AT THE U.S. DEPARTMENT OF HOUSI\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "REIT - Retail",
+      "sector": "Real Estate",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "SPG",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Simon to Present at the BofA Securities 2026 Global Real Estate Conference"
+        },
+        {
+          "ticker": "O",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Realty Income to Present at Bank of America's 2026 Global Real Estate Conference"
+        },
+        {
+          "ticker": "MAC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Macerich Co's Dividend Analysis"
+        },
+        {
+          "ticker": "EPRT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Essential Properties Realty Trust Announces Executive Appointments and Promotions"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "REIT - Specialty",
+      "sector": "Real Estate",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "EQIX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: CoreWeave Shares Sink After Bernstein Warns Of Slower AI Training"
+        },
+        {
+          "ticker": "AMT",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 5 Safe Dividend Stocks for High, Reliable Income"
+        },
+        {
+          "ticker": "OUT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Omnicom Group Inc. stock underperforms Wednesday when compared to competitors"
+        },
+        {
+          "ticker": "UNIT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Kinetic Achieves 40,000 Fiber Homes in Sugar Land"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Real Estate - Development",
+      "sector": "Real Estate",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CCS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: As Mortgage Rates Hit 7%, Home Builders Flash a Buy Signal"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Real Estate - Diversified",
+      "sector": "Real Estate",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "JOE",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The St. Joe Company Announces the Creation of a New Business, Watersound Weddings & Events"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Real Estate Services",
+      "sector": "Real Estate",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CBRE",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: NYLIM CBRE Global Infrastructure Megatrends Term Fund (NYSE: MEGI) Declares Monthly Dis\u2026"
+        },
+        {
+          "ticker": "CSGP",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: CoStar Group Names Felix Kusch President of Homes.com"
+        },
+        {
+          "ticker": "COMP",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Coldwell Banker Marks 120 Years with \"The Letter,\" a New National Advertising Campaign \u2026"
+        },
+        {
+          "ticker": "CWK",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Lower Manhattan Office Leasing Surges as Rents Rise"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CSCO",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Is HPE Stock Now A Bet On Memory Prices?"
+        },
+        {
+          "ticker": "MSI",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Louisiana Modernizes Statewide Public Safety Response with $139 Million Motorola Soluti\u2026"
+        },
+        {
+          "ticker": "VSAT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: ViaSat Stock Soared on Hopes of a Big Deal. The Company Has Other Ideas."
+        },
+        {
+          "ticker": "BDC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Belden Recognized with Two 2026 GEN IMPACT Awards from the Global ERG Network"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "DELL",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 5 Top AI Stocks to Buy on the Dip as Slowdown Fears Hit Markets"
+        },
+        {
+          "ticker": "ANET",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 5 Top AI Stocks to Buy on the Dip as Slowdown Fears Hit Markets"
+        },
+        {
+          "ticker": "QBTS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: D-Wave Quantum (QBTS) Finalizes Definitive Agreement With U.S. Department of Commerce f\u2026"
+        },
+        {
+          "ticker": "RGTI",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Quantum Is the 'Next Fire Moment,' BofA Says. Why It Could Eclipse the AI Revolution."
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Consumer Electronics",
+      "sector": "Technology",
+      "action": "OVERRIDE",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "AAPL",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Going Beyond Apple's Presentation: Interesting Tidbits and Observations From Apple's 'S\u2026"
+        },
+        {
+          "ticker": "SONO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Sonos Launches New Global Brand Campaign \"Love the Sound. Feel the System\""
+        },
+        {
+          "ticker": "GPRO",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 3 Stocks Seeing Explosive Options Volume Today"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "APH",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Top Stock Reports for Meta Platforms, Marvell & Amphenol"
+        },
+        {
+          "ticker": "GLW",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Corning Stock Is One of Today's Worst in the S&P 500. It's Not Just the AI Selloff."
+        },
+        {
+          "ticker": "PLXS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: What TTMI's Peer-Beating Numbers Cost You"
+        },
+        {
+          "ticker": "BELFB",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Bel Announces Richard E. Hamilton as Senior Vice President, General Counsel and Corpora\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Electronics & Computer Distribution",
+      "sector": "Technology",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "NSIT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Does Arrow Electronics Still Buy Back Enough Stock To Matter?"
+        },
+        {
+          "ticker": "CNXN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Should You Buy Cirrus Logic Stock Because Its Buyback Got Cheaper?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Information Technology Services",
+      "sector": "Technology",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "IBM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Accenture's Stock Fell Like A Shrinking Business, But Its Revenue Grew"
+        },
+        {
+          "ticker": "ACN",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Accenture to pay $25 million to settle US government allegations over DEI"
+        },
+        {
+          "ticker": "CIFR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Cipher Digital, Fluidstack, and Anthropic Commit $10 Million to Repair and Expand Color\u2026"
+        },
+        {
+          "ticker": "PENG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Penguin Solutions Tackles AI Data Center Power Challenge"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Scientific & Technical Instruments",
+      "sector": "Technology",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "GRMN",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Garmin Ltd's Dividend Analysis"
+        },
+        {
+          "ticker": "KEYS",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: What Kind Of Swing Are You Signing Up For With Synopsys Stock?"
+        },
+        {
+          "ticker": "ESE",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: What Lumentum Stock Adds To A Portfolio Is Not Safety"
+        },
+        {
+          "ticker": "NOVT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Novanta to Present at Baird Global Healthcare Conference on Tuesday, September 15, 2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "action": "SPLIT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "LRCX",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Lam Research Corp. stock underperforms Monday when compared to competitors"
+        },
+        {
+          "ticker": "AMAT",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Applied Materials Inc. stock underperforms Monday when compared to competitors"
+        },
+        {
+          "ticker": "ACMR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Most Active Options Report: SNOW, CPB, CIEN, ACMR, SCHD"
+        },
+        {
+          "ticker": "KLIC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Kulicke & Soffa Advances AI Infrastructure Through Co-Packaged Optics (CPO) and Advance\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "NVDA",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Softbank Group shares rebound as data center unit SB Energy pushes ahead with IPO"
+        },
+        {
+          "ticker": "AVGO",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: AI Slowdown Debate Splits Tech CEOs: Nvidia, Broadcom Dismiss Any Threat While Elon Mus\u2026"
+        },
+        {
+          "ticker": "SLAB",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Silicon Labs Opens New Austin Innovation Center with Support from Texas CHIPS Act"
+        },
+        {
+          "ticker": "MXL",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: MXL's AI Optical Growth Accelerates: Can It Challenge AVGO & MRVL?"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CRM",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: NOW, INTU, ADBE, CRM Stocks Surge As AI Pacing Debate Hammers Chips: Analyst Says Hardw\u2026"
+        },
+        {
+          "ticker": "UBER",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Ubers CEO hints at cheaper rides after the company announced 3,300 corporate jobs"
+        },
+        {
+          "ticker": "FROG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: JFrog Partners with Wiz to Close the Gap on AI-Era Threats, Keeping Global Businesses S\u2026"
+        },
+        {
+          "ticker": "IDCC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: InterDigital Declares Increase in Quarterly Cash Dividend"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "MSFT",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Australia's AI Regulation Debate"
+        },
+        {
+          "ticker": "ORCL",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: HPE Stock Drops 11% To Worst Day In Over A Year After Evercore Downgrades On Lack Of Ne\u2026"
+        },
+        {
+          "ticker": "ZETA",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Why Did DELL, VOD, ZETA Stocks Surge To 52-Week Highs Last Week?"
+        },
+        {
+          "ticker": "QLYS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: 2 Top Cybersecurity Stocks to Buy Amid AI Safety Fears: FTNT, QLYS"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Solar",
+      "sector": "Technology",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "FSLR",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Renewable-energy mandates are actually bad for consumers. They're not great for solar s\u2026"
+        },
+        {
+          "ticker": "RUN",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Is Tesla Stock Priced For Its Earnings Or Its Robots?"
+        },
+        {
+          "ticker": "SHLS",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Shoals Technologies Group Prevails in Patent Infringement Case Against Voltage in North\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Utilities - Diversified",
+      "sector": "Utilities",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "SRE",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Sempra Locks In Petrobras for 20-Year U.S. LNG Supply Deal"
+        },
+        {
+          "ticker": "AES",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: The AES Corp's Dividend Analysis"
+        },
+        {
+          "ticker": "AVA",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: AVA- A Cheap Utility Stock with an Attractive Yield"
+        },
+        {
+          "ticker": "UTL",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Unitil Corp (UTL) (Q2 2026) Earnings Call Highlights: Strong Margin Growth and Strategi\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Utilities - Independent Power Producers",
+      "sector": "Utilities",
+      "action": "SPLIT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "CEG",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Constellation Energy Corp. stock falls Monday, underperforms market"
+        },
+        {
+          "ticker": "VST",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Can VST's Diversified Power Generation Fleet Drive Long-Term Growth?"
+        },
+        {
+          "ticker": "HNRG",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Hallador Energy Company Q2 2026 Earnings Call Summary"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Utilities - Regulated Electric",
+      "sector": "Utilities",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "NEE",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: NextEra and Dominion Sweeten Merger Deal With Bill Credits and New Jobs"
+        },
+        {
+          "ticker": "SO",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: PowerSecure Builds Standby Power for Keel's Data Center Campus"
+        },
+        {
+          "ticker": "TXNM",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Blackstone-TXNM deal faces fresh questions from New Mexico DOJ"
+        },
+        {
+          "ticker": "POR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Portland General Electric Company Q2 2026 Earnings Call Summary"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Utilities - Regulated Gas",
+      "sector": "Utilities",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "ATO",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Atmos Energy Corporation Announces Retirement of John S. McDill and Appointment of Jeff\u2026"
+        },
+        {
+          "ticker": "NI",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: NiSource releases 2025 Sustainability Report, highlighting progress to shape a more sus\u2026"
+        },
+        {
+          "ticker": "SWX",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Southwest Gas Holdings Releases 2025 Sustainability Report"
+        },
+        {
+          "ticker": "NJR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: New Jersey Resources Raises Dividend for the 31st Consecutive Year"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Utilities - Regulated Water",
+      "sector": "Utilities",
+      "action": "HEAT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "AWK",
+          "index": "SPX",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Kentucky American Water Completes Major Infrastructure Improvement Projects on North Li\u2026"
+        },
+        {
+          "ticker": "AWR",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: American States Water Co's Dividend Analysis"
+        },
+        {
+          "ticker": "CWT",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: WUTC Issues Decision in Washington Water's Application to Recover Costs for Investments\u2026"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    },
+    {
+      "industry": "Utilities - Renewable",
+      "sector": "Utilities",
+      "action": "SPLIT",
+      "subsector_dir": "flat",
+      "conviction": "low",
+      "captains": [
+        {
+          "ticker": "ORA",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: UiPath downgraded, Shell upgraded: Wall Street's top analyst calls"
+        },
+        {
+          "ticker": "FLNC",
+          "index": "RUT",
+          "sent": "none",
+          "why": "no validated evidence in captain close",
+          "evidence": [],
+          "search_note": "close truncated/invalid; Finviz stub: Trump Declares Bulk Power 'Emergency'; These Energy Storage Players Benefit"
+        }
+      ],
+      "one_line": "honest none \u2014 captain close did not land a valid card"
+    }
+  ],
+  "size_gate": false,
+  "size_gate_reason": "set by pre-open refresh",
+  "parent_splits": [],
+  "opportunities": [],
+  "vetoes": [],
+  "one_paragraph": ""
+}
