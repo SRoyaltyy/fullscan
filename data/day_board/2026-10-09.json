@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T04:26:29.342426-04:00",
+  "generated_at": "2026-10-09T04:26:51.964622-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -75,7 +75,7 @@
           "size": 18060,
           "said": "MAP HEAT \u2014 2026-10-09",
           "bullets": [
-            "Export `finviz_2026-10-09.csv` \u00b7 11616 names \u00b7 generated 2026-10-09T04:26:29.088215-04:00",
+            "Export `finviz_2026-10-08.csv` \u00b7 11616 names \u00b7 generated 2026-10-09T04:26:51.705949-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -101,12 +101,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97065,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 98656,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -116,10 +116,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11877,
+          "size": 11600,
           "said": "Finviz Daily Digest \u2014 2026-10-09",
           "bullets": [
-            "_Generated 2026-10-09T04:24:44.639790-04:00 \u00b7 export=data/exports/finviz_2026-10-09.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_",
             "Major indices (live quote page)"
           ]
         },
@@ -144,7 +144,7 @@
           "size": 2039,
           "said": "Finviz homepage market digest \u2014 2026-10-09",
           "bullets": [
-            "Generated:** 2026-10-09T04:24:50.486638-04:00 (America/New_York)",
+            "Generated:** 2026-10-09T04:25:11.263348-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -171,11 +171,11 @@
           "bullets": []
         }
       ],
-      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
       "bullets": [
-        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-        "Banks have profited from idle cash for years. AI agents could change that."
+        "Should You Be Worried About Pfizer Stock?",
+        "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+        "AMETEK Completes Acquisition of Indicor Instrumentation"
       ]
     },
     {
@@ -196,12 +196,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97065,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 98656,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -508,12 +508,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97065,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 98656,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -597,12 +597,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97065,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 98656,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -671,12 +671,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97065,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 98656,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -1055,6 +1055,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-09\nExport `finviz_2026-10-09.csv` \u00b7 11616 names \u00b7 generated 2026-10-09T04:26:29.088215-04:00"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T04:26:51.757255-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-09_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 274936,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-09_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18415,
+          "preview": "# MAP HEAT \u2014 2026-10-09\nExport `finviz_2026-10-08.csv` \u00b7 11616 names \u00b7 generated 2026-10-09T04:26:51.705949-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-09\nExport `finviz_2026-10-08.csv` \u00b7 11616 names \u00b7 generated 2026-10-09T04:26:51.705949-04:00"
     }
   ],
   "href": {

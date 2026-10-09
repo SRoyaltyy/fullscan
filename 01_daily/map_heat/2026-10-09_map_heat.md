@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-09
 
-Export `finviz_2026-10-09.csv` · 11616 names · generated 2026-10-09T04:26:29.088215-04:00
+Export `finviz_2026-10-08.csv` · 11616 names · generated 2026-10-09T04:26:51.705949-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -286,13 +286,13 @@ COLD (1w):
 - 26 min **ALMS** Alumis Announces New Phase 3 Data Demonstrating Envudeucitinib Rapidly and Durably Improved Psoriasis Burden Across Scalp, Itch, and Quality of Life Measures (GlobeNewswire)
 - 26 min **OBDC,FSK,ARCC,BIZD** Why Private-Credit Funds Deserve a Second Look at 15% Yields (Barrons.com)
 - 27 min **CMBT** MINERAL EUROPA: A GAME CHANGER FOR SHIPPING (GlobeNewswire)
-- 28 min **AAPL,AMZN** Amazons New Alexa Tablets Cost Up to $550. Can It Keep Buyers Coming Back? (TIKR)
+- 29 min **AAPL,AMZN** Amazons New Alexa Tablets Cost Up to $550. Can It Keep Buyers Coming Back? (TIKR)
 - 30 min **T,VZ,TMUS,VOD,SPCX** EU telecom stocks fall after SpaceXs move to become a wireless carrier (Investing.com)
 - 32 min **DAL** DAL Stock Rises Overnight: Analysts Back Delta Ahead Of Q3 Earnings Despite Fuel Cost Pressures (Stocktwits)
 - 48 min **AAPL** Stock Market Today: Dow, S&P 500 and Nasdaq set to climb after selloff in chip stocks on OpenAI revenue concerns; Apple stock falls on report of cut in iPhone orders (MarketWatch)
 - 48 min **AAPL** Nasdaq poised to rise following Thursday's selloff in chip stocks (MarketWatch)
 - 50 min **GFS,TSM** GlobalFoundries and TSMC agree on $2bn US silicon interposer supply deal (Verdict)
-- 50 min **RYAAY** Barclays downgrades 2 European airline stocks into September quarter results (Investing.com)
+- 51 min **RYAAY** Barclays downgrades 2 European airline stocks into September quarter results (Investing.com)
 - 55 min **NVDA** Asian stocks mostly up as traders weigh AI, oil dips after surge (AFP)
 - 55 min **SPCX** Oil relief lifts European stocks, telecoms a weak spot (Reuters)
 - 57 min **TRMD** TORM plc Announces Change to the Board (PR Newswire)

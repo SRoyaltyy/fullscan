@@ -1,8 +1,8 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T04:26:29.088215-04:00",
+  "generated_at": "2026-10-09T04:26:51.705949-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-09.csv",
+  "export": "finviz_2026-10-08.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8992,7 +8992,7 @@
       ]
     },
     {
-      "time": "28 min",
+      "time": "29 min",
       "title": "Amazons New Alexa Tablets Cost Up to $550. Can It Keep Buyers Coming Back?",
       "url": "https://finance.yahoo.com/technology/articles/amazon-alexa-tablets-cost-550-075721760.html",
       "source": "TIKR",
@@ -9052,7 +9052,7 @@
       ]
     },
     {
-      "time": "50 min",
+      "time": "51 min",
       "title": "Barclays downgrades 2 European airline stocks into September quarter results",
       "url": "https://finance.yahoo.com/markets/stocks/articles/barclays-downgrades-2-european-airline-073533995.html",
       "source": "Investing.com",
@@ -10781,5 +10781,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 141,
   "earnings_window_count": 248,
-  "overlay_at": "2026-10-09T04:26:29.088215-04:00"
+  "overlay_at": "2026-10-09T04:26:51.705949-04:00"
 }
