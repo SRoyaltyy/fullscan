@@ -1,7 +1,5 @@
 {
   "date": "2026-10-09",
-  "latest_skip": null,
-  "pending": "2026-10-09",
-  "phase": "plan",
+  "latest_skip": "sent share lock missing for 2026-10-09; refusing to size buys from the open",
   "recipe": "union_hot_n4_h1__w0"
 }

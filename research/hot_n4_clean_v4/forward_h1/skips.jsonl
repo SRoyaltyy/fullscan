@@ -1,1 +1,2 @@
 {"at":"2026-10-02T04:45:50Z","date":"2026-09-29","reason":"stored open for GLND on 2026-09-29 no longer matches the session open","recipe":"union_hot_n4_h1__w0"}
+{"at":"2026-10-09T19:00:38Z","date":"2026-10-09","reason":"sent share lock missing for 2026-10-09; refusing to size buys from the open","recipe":"union_hot_n4_h1__w0"}
