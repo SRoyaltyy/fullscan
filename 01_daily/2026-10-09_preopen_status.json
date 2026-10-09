@@ -1,16 +1,24 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T05:52:29.252155-04:00",
-  "run_id": "37912534234",
-  "runner": "GitHub Actions 1000025554",
+  "generated_at": "2026-10-09T07:06:19.380237-04:00",
+  "run_id": "37904467740",
+  "runner": "ecs-openclaw",
   "all_ok": false,
   "qc_all_ok": false,
   "book_ok": false,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "(review)",
-      "reason": "empty_review_reply"
+      "path": "01_daily/general/2026-10-09_predict.md",
+      "reason": "required general predict missing"
+    },
+    {
+      "path": "01_daily/events/2026-10-09_events.json",
+      "reason": "required events JSON missing"
+    },
+    {
+      "path": "01_daily/news/2026-10-09_judge.md",
+      "reason": "required news judge missing"
     }
   ],
   "missing_required": [
@@ -34,13 +42,13 @@
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 2,
+      "n_today": 1,
       "latest": {
-        "id": 37912534234,
+        "id": 37904467740,
         "status": "in_progress",
         "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37912534234"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37904467740"
       }
     },
     {
@@ -81,14 +89,8 @@
     },
     {
       "workflow": "catalyst_daily.yml",
-      "n_today": 1,
-      "latest": {
-        "id": 37912536284,
-        "status": "in_progress",
-        "conclusion": null,
-        "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37912536284"
-      }
+      "n_today": 0,
+      "latest": null
     },
     {
       "workflow": "daily_pipeline.yml",
@@ -140,10 +142,10 @@
       },
       {
         "kind": "news_actions",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-10-09_actions.json",
-        "size": 0
+        "size": 77574
       },
       {
         "kind": "finviz_digest",

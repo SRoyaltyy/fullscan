@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T07:02:29.012494-04:00",
+  "generated_at": "2026-10-09T07:06:21.571604-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -11,16 +11,24 @@
   },
   "buy_1d": [
     {
+      "ticker": "HITI",
+      "score": 0.5745267164960003
+    },
+    {
       "ticker": "CON",
-      "score": 0.7236392220140228
+      "score": 0.7117534364955
     },
     {
       "ticker": "AMN",
-      "score": 0.6669116350299842
+      "score": 0.678797420548507
     },
     {
       "ticker": "PACS",
-      "score": 0.8345842063277717
+      "score": 0.826863664515342
+    },
+    {
+      "ticker": "ASTH",
+      "score": 0.5769995922100218
     },
     {
       "ticker": "NTAP",
@@ -28,37 +36,29 @@
     },
     {
       "ticker": "MQ",
-      "score": 0.7623677873411694
+      "score": 0.7092688066195303
     },
     {
       "ticker": "BAND",
-      "score": 0.5434365991904481
-    },
-    {
-      "ticker": "IT",
-      "score": 0.5538582959307676
+      "score": 0.5716345332861978
     }
   ],
   "sell_1d": [
     {
       "ticker": "OKLO",
-      "score": -0.2647641730503968
+      "score": -0.0957829576344038
     },
     {
       "ticker": "NEOV",
-      "score": -0.3774732485354357
+      "score": -0.36359434516177597
     },
     {
       "ticker": "FCEL",
-      "score": -0.2729360612644935
-    },
-    {
-      "ticker": "POWL",
-      "score": -0.16326967663639574
+      "score": -0.050855865126861396
     },
     {
       "ticker": "NNDM",
-      "score": -0.13709457804790176
+      "score": -0.21081587543960056
     },
     {
       "ticker": "ENVX",
@@ -66,11 +66,15 @@
     },
     {
       "ticker": "EOSE",
-      "score": -0.3116275391560773
+      "score": -0.2870680789175202
     },
     {
       "ticker": "TE",
-      "score": -0.2749286192985113
+      "score": -0.2221712249642045
+    },
+    {
+      "ticker": "NRGV",
+      "score": -0.31005458321867824
     }
   ],
   "flatten": {
@@ -84,31 +88,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "date": "2026-10-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-09T06:33:26.384361-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-09_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 77574,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-10-09_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 16481,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-09T06:33:26.356476-04:00\nraw=10114 unique_events=7 tickers=82"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-09T06:33:26.356476-04:00\nraw=10114 unique_events=7 tickers=82"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -409,6 +388,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-09\n_Generated 2026-10-09T11:02:26 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$103,033.45** (after 09:30 $103,033.45 \u00b7 after 16:00 $103,033.45)\n- Prior close **$103,033.45** \u00b7 09:30 **$103,033.45** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$103,033.45**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$103,033.45** \u00b7 2026-10-09 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_over"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T07:06:19.430243-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-09_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 98656,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-09_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11621,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
