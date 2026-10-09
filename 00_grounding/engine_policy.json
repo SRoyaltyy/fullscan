@@ -373,8 +373,8 @@
       }
     }
   },
-  "version": 71,
-  "updated": "2026-10-09T06:58:27-04:00",
+  "version": 72,
+  "updated": "2026-10-09T16:18:04-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -383,14 +383,6 @@
     "bonus_mult": 1.25
   },
   "history": [
-    {
-      "at": "2026-09-17T17:37:14-04:00",
-      "changes": [
-        "Consumer Defensive.S0_SHARED_MACRO: 1.25 -> 1.0 (n=10, hit=0.6)",
-        "Consumer Defensive.S1_SECTOR_FACTORS: 1.0 -> 0.5 (n=19, hit=0.526)",
-        "Healthcare.S0_SHARED_MACRO: 0.5 -> 0.0 (n=12, hit=0.417)"
-      ]
-    },
     {
       "at": "2026-09-17T18:41:32-04:00",
       "changes": [
@@ -791,6 +783,12 @@
     },
     {
       "at": "2026-10-09T06:58:27-04:00",
+      "changes": [
+        "hold"
+      ]
+    },
+    {
+      "at": "2026-10-09T16:18:04-04:00",
       "changes": [
         "hold"
       ]
