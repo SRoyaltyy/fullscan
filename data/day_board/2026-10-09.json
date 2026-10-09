@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T12:45:52.198765-04:00",
+  "generated_at": "2026-10-09T12:46:22.134837-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -796,7 +796,7 @@
           "size": 83741,
           "said": "Stock book \u2014 2026-10-09",
           "bullets": [
-            "_Generated 2026-10-09T07:44:54.667947-04:00_",
+            "_Generated 2026-10-09T12:46:00.540743-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -992,31 +992,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-10-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-09T04:24:50.498695-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-09_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 4175,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-10-09_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2039,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-09\n**Generated:** 2026-10-09T04:24:50.486638-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set to open higher as easing oil and yields support futures ahead of Delta earnings and sentiment data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** HUM, DAL, BKR\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** DAL\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-09\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-09\n**Generated:** 2026-10-09T04:24:50.486638-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set to open higher as easing oil and yields support futures ahead of Delta earnings and sentiment data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** HUM, DAL, BKR\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** DAL\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-09\n**Clock use:** `same_morning`"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -3732,6 +3707,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T12:46:21.280709-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1462138,
+          "preview": "1d BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE"
+        },
+        {
+          "path": "data/stock_book/2026-10-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2590,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-09_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12344,
+          "preview": "2026-10-09 BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12344,
+          "preview": "2026-10-09 BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE"
+        },
+        {
+          "path": "01_daily/2026-10-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84843,
+          "preview": "# Stock book \u2014 2026-10-09\n_Generated 2026-10-09T12:46:00.540743-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-09 BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE \u00b7 2026-10-09 BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE \u00b7 # Stock book \u2014 2026-10-09\n_Generated 2026-10-09T12:46:00.540743-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
