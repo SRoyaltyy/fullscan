@@ -155,8 +155,12 @@ def _h1_replay() -> None:
         raise SystemExit(f"expected 24 revisions from run 37674833077, found {len(bars)}")
     records = [json.loads(line) for line in (H1 / "h1_log.jsonl").read_text().splitlines()]
     real_acks = load_acks(H1)
-    if len(real_acks) != 3:
-        raise SystemExit("forward_h1 ack file should hold three lines")
+    # Add-only: later sessions append more acks after the three that clear
+    # run 37674833077 (KOD open/high, PACB open). Those three stay first.
+    if len(real_acks) < 3:
+        raise SystemExit(f"forward_h1 ack file should hold at least three lines, found {len(real_acks)}")
+    if [a.get("ticker") for a in real_acks[:3]] != ["KOD", "KOD", "PACB"]:
+        raise SystemExit(f"first three h1 acks changed {[a.get('ticker') for a in real_acks[:3]]}")
     with tempfile.TemporaryDirectory() as tmp:
         folder = Path(tmp)
         shutil.copyfile(H1 / "prices.jsonl", prices_path(folder))
