@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T07:29:41.620889-04:00",
+  "generated_at": "2026-10-09T07:29:54.808916-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -3364,6 +3364,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat tables",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T07:29:52.098751-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-09_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 274936,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-09_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18415,
+          "preview": "# MAP HEAT \u2014 2026-10-09\nExport `finviz_2026-10-08.csv` \u00b7 11616 names \u00b7 generated 2026-10-09T04:26:51.705949-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-09\nExport `finviz_2026-10-08.csv` \u00b7 11616 names \u00b7 generated 2026-10-09T04:26:51.705949-04:00"
     }
   ],
   "href": {
