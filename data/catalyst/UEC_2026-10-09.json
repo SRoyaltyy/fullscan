@@ -1,0 +1,188 @@
+{
+  "ticker": "UEC",
+  "analysis_date": "2026-10-09",
+  "current_price": "9.14",
+  "net_signal": "Bullish",
+  "conviction": 28,
+  "catalyst_stack": "On April 8, 2026 UEC received TCEQ approval and commenced production at Burke Hollow, the first new U.S. ISR uranium mine in more than a decade. Fiscal 2026 results on September 29 showed 229,294 pounds produced and Q4 output up 157% to 82,744 pounds, even as Q4 EPS of ($0.12) missed estimates, while September 28 final approvals for four Christensen Ranch header houses keep the ramp going. Post-print research split, with HC Wainwright ($26.75) and Roth ($17) reiterating Buys on September 30 versus National Bank\u2019s October 5 cut to $15 and Zacks\u2019 drop to Strong Sell. The May 28 government-affairs hire and Segra Capital\u2019s October 6 550,000-share stake are secondary to whether the Texas and Wyoming wellfields convert permits into repeatable volume without another lumpy miss.",
+  "key_assumption": "Burke Hollow and the Christensen Ranch header houses continue ramping without permit slippage, and the Q4 EPS miss reflects lumpy inventory-sale accounting rather than weaker uranium demand or cost inflation.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-08",
+      "evidence_excerpt": "received approval from the Texas Commission on Environmental Quality (\"TCEQ\") and commenced production at its Burke Hollow project",
+      "source_urls": [
+        "https://www.newswire.ca/news-releases/uranium-energy-corp-commences-production-at-burke-hollow-the-world-s-newest-operating-isr-uranium-mine-801687969.html",
+        "https://www.mining-technology.com/news/uec-begins-production-burke-hollow-project/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Operational milestone",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        1,
+        3,
+        8
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "fiscal 2026 results with 229,294 pounds produced, Q4 production up 157% to 82,744 pounds",
+      "source_urls": [
+        "https://www.stockwatch.com/News/Item/U-C7361-U!UEC-20260929/U/UEC",
+        "https://www.streetwisereports.com/article/2026/10/01/uranium-production-jumps-157-as-costs-fall-and-a-second-u-s-mine-ramps-up.html"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Regulatory approval",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-09-28",
+      "evidence_excerpt": "On September 28, 2026, final regulatory approvals were issued for four of these.",
+      "source_urls": [
+        "https://www.stockwatch.com/News/Item/U-C7361-U!UEC-20260929/U/UEC",
+        "https://www.streetwisereports.com/article/2026/10/01/uranium-production-jumps-157-as-costs-fall-and-a-second-u-s-mine-ramps-up.html"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        10,
+        11
+      ],
+      "event_date": "2026-09-30",
+      "evidence_excerpt": "HC Wainwright reissued a \"buy\" rating and issued a $26.75 target price on shares of Uranium Energy",
+      "source_urls": [
+        "https://www.streetwisereports.com/article/2026/10/01/uranium-production-jumps-157-as-costs-fall-and-a-second-u-s-mine-ramps-up.html"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Positive personnel change",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-05-28",
+      "evidence_excerpt": "is pleased to announce the appointment of Bradley Williams as Vice President of Government Affairs.",
+      "source_urls": [
+        "https://www.newswire.ca/news-releases/uranium-energy-corp-announces-appointment-of-vice-president-government-affairs-824999560.html",
+        "https://www.boardroomalpha.com/sec/uec-8-k-2026-05-28-0001437749-26-018759"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Institutional ownership increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        15
+      ],
+      "event_date": "2026-10-06",
+      "evidence_excerpt": "The fund bought 550,000 shares of the basic materials company's stock, valued at approximately $5,198,000.",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/filing-uranium-energy-corp-uec-shares-newly-acquired-by-segra-capital-management-llc-2026-10-06/",
+        "https://www.themarketsdaily.com/2026/10/06/uranium-energy-corp-uec-shares-newly-acquired-by-segra-capital-management-llc.html"
+      ],
+      "confidence": 83
+    },
+    {
+      "taxonomy": "Earnings miss",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "Q4 EPS of ($0.12) missing estimates",
+      "source_urls": [
+        "https://www.fool.com/earnings/call-transcripts/2026/09/30/uranium-energy-uec-q4-2026-earnings-call-transcript/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        13,
+        14
+      ],
+      "event_date": "2026-10-05",
+      "evidence_excerpt": "downgraded by stock analysts at Zacks Research from a \"hold\" rating to a \"strong sell\" rating",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-uranium-energy-nyseamerican-uec-rating-lowered-to-strong-sell-at-zacks-research-2026-10-07/",
+        "https://www.marketbeat.com/instant-alerts/analyst-uranium-energy-nyseamerican-uec-given-new-1500-price-target-at-national-bank-financial-2026-10-05/"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Dilutive offering",
+      "type": "negative",
+      "event_date": "2026-07-31",
+      "evidence_excerpt": "During Fiscal 2026, we issued 10,077,186 and 11,100,047 shares of our common stock under the 2024 ATM Offering Agreement",
+      "source_urls": [
+        "https://www.boardroomalpha.com/sec/uec-10-k-2026-09-29-0001437749-26-031414"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "event_date": "2026-10-05",
+      "evidence_excerpt": "had its price objective lowered by National Bank Financial from $16.00 to $15.00 in a report released on Monday",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-uranium-energy-nyseamerican-uec-given-new-1500-price-target-at-national-bank-financial-2026-10-05/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-09",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

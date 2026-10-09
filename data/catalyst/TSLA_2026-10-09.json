@@ -1,0 +1,289 @@
+{
+  "ticker": "TSLA",
+  "analysis_date": "2026-10-09",
+  "current_price": "N/A",
+  "net_signal": "Neutral",
+  "conviction": 9,
+  "catalyst_stack": "Tesla opened paid Cybercab service in Austin on 2026-09-03 after Dutch RDW FSD Supervised type approval on 2026-04-10 and a Lithuania rollout on 2026-05-20, but NHTSA opened AQ26002 the same day and issued a 2026-09-10 Special Order on FMVSS certification while the EU FSD vote slipped toward December. Auto prints were split: Q1 2026 (2026-04-22) beat with $0.41 non-GAAP EPS and 21.1% gross margin, Q2 (2026-07-22) missed at $0.33 vs ~$0.53 with a 1.4% operating margin and -$1.09B FCF, and Q3 deliveries on 2026-10-02 were 486,532, about 25,000 above consensus but down 2.1% YoY. Industrial optionality added a 2026-09-24 Semi volume-production start in Nevada, a 2026-09-22 ZET SCALE 2,500-truck supplier award, a closed $1.95B AI-hardware deal, and Intel joining Terafab on 2026-04-07. Offsetting that, Tesla recalled 20,349 Model 3/Y units on 2026-08-04 for headlight brightness, went to trial on 2026-09-21 over Fremont racial-harassment claims, and saw JPMorgan cut its PT to $415 on 2026-10-09.",
+  "key_assumption": "Robotaxi/FSD optionality remains intact despite NHTSA Cybercab certification risk, and the Q2 margin/FCF collapse is transitory rather than a structural re-rating of the auto business.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        2,
+        5,
+        13
+      ],
+      "event_date": "2026-09-03",
+      "evidence_excerpt": "Tesla launched the Cybercab commercially in Austin yesterday",
+      "source_urls": [
+        "https://www.axios.com/2026/09/04/tesla-cybercab-launch-austin",
+        "https://www.rdw.nl/en/news/2026/rdw-explanation-of-european-type-approval-tesla-with-provisional-validity-in-the-netherlands"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Regulatory denial or delay/antitrust block",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        14,
+        15,
+        20,
+        24
+      ],
+      "event_date": "2026-09-10",
+      "evidence_excerpt": "The agency issued a formal Special Order on September 10 demanding that the company show, under oath, how a vehicle with no steering wheel, no pedals, and no mirrors complies",
+      "source_urls": [
+        "https://electrek.co/2026/09/15/nhtsa-tesla-cybercab-special-order-fmvss-certification/",
+        "https://www.nhtsa.gov/?nhtsaId=AQ26002"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Product delay/failure/rejection/safety recall",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-08-04",
+      "evidence_excerpt": "Tesla has issued a recall on over 20,349 Model 3 and Model Y vehicles which have low-beam headlights that exceed the maximum brightness.",
+      "source_urls": [
+        "https://electrek.co/2026/08/11/tesla-recall-20000-model-3-y-for-headlights-that-are-too-bright/",
+        "https://static.nhtsa.gov/odi/rcl/2026/RCLRPT-26V507-2774.pdf"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-04-22",
+      "evidence_excerpt": "beat expectations with earnings of $0.41 per share (non-GAAP), and it delivered revenue expectations with $22.38 billion",
+      "source_urls": [
+        "https://electrek.co/2026/04/22/tesla-tsla-q1-2026-financial-results/",
+        "https://www.sec.gov/Archives/edgar/data/1318605/000162828026026551/exhibit991.htm"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Operational milestone",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        7,
+        19,
+        23
+      ],
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "Tesla delivered 486,532 vehicles in Q3 2026, about 25,000 above consensus; Q2 was a record 480,126, up 25% YoY.",
+      "source_urls": [
+        "https://electrek.co/2026/10/02/tesla-q3-2026-deliveries-486532/",
+        "https://ir.tesla.com/press-release/tesla-third-quarter-2026-production-deliveries-and-deployments"
+      ],
+      "confidence": 96
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 6,
+      "event_ids": [
+        17
+      ],
+      "event_date": "2026-09-22",
+      "evidence_excerpt": "the ZET SCALE alliance picked Tesla as primary supplier for 2,500 electric trucks",
+      "source_urls": [
+        "https://electrek.co/2026/09/22/tesla-semi-2500-truck-order-zet-scale-largest-us/",
+        "https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Earnings miss",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "non-GAAP EPS of $0.33 versus ~$0.53 expected, 1.4% operating margin, and negative $1.09 billion free cash flow",
+      "source_urls": [
+        "https://electrek.co/2026/07/22/tesla-tsla-q2-2026-financial-results/",
+        "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/07/tesla-postq-revenue-beat-overshadowed-by-margin-pressure"
+      ],
+      "confidence": 96
+    },
+    {
+      "taxonomy": "Capacity expansion announced",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        18
+      ],
+      "event_date": "2026-09-24",
+      "evidence_excerpt": "Tesla officially launched high-volume production of the Tesla Semi last night at its new dedicated factory in Nevada, a plant it says can build 50,000 electric trucks per year.",
+      "source_urls": [
+        "https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 5,
+      "event_ids": [
+        4,
+        10
+      ],
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "acquired an AI hardware company in an asset acquisition for $1.95 billion in Tesla common stock and equity awards",
+      "source_urls": [
+        "https://electrek.co/2026/07/24/tesla-secret-2-billion-ai-hardware-acquisition-closes/",
+        "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/R11.htm"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-07",
+      "evidence_excerpt": "Intel is proud to join the Terafab project with @SpaceX, @xAI, and @Tesla to help refactor silicon fab technology.",
+      "source_urls": [
+        "https://electrek.co/2026/04/07/tesla-terafab-intel-joins-foundry/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-10-09",
+      "evidence_excerpt": "JPMorgan cuts Tesla's price target to $415 from $445 and lowers its Q3 delivery and margin estimates",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/j-p-morgan-drops-sharp-080910133.html"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "ESG controversy/exclusion from green funds/carbon tax",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 4,
+      "adjusted_weight": 3,
+      "event_ids": [
+        16
+      ],
+      "event_date": "2026-09-21",
+      "evidence_excerpt": "Tesla goes on trial today over allegations that its flagship Fremont factory subjected thousands of Black workers to racial slurs, segregation, and lower pay.",
+      "source_urls": [
+        "https://electrek.co/2026/09/21/tesla-racism-trial-california-fremont-black-workers/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Product delay/failure/rejection/safety recall",
+      "type": "negative",
+      "event_date": "2026-04-22",
+      "evidence_excerpt": "Tesla listed its robotaxi services in Phoenix, Miami, Orlando, Tampa, and Las Vegas as \"preparations underway,\" without a defined timeline.",
+      "source_urls": [
+        "https://www.businessinsider.com/teslas-robotaxi-timeline-just-got-a-little-fuzzier-2026-4"
+      ],
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-08-18",
+      "evidence_excerpt": "A month ago, Einride\u2019s 500-truck deal was the largest Tesla Semi order yet",
+      "source_urls": [
+        "https://electrek.co/2026/09/22/tesla-semi-2500-truck-order-zet-scale-largest-us/",
+        "https://electrek.co/2026/08/18/einride-500-tesla-semi-deployment-largest-order/"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 6,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Regulatory denial or delay/antitrust block",
+      "type": "negative",
+      "event_date": "2026-07-02",
+      "evidence_excerpt": "NHTSA is now demanding a Tesla internal document titled \u201cRadar Saves Us\u201d as part of its investigation into \u201cFull Self-Driving\u201d crashes",
+      "source_urls": [
+        "https://electrek.co/2026/07/21/nhtsa-tesla-radar-saves-us-document-fsd-probe/"
+      ],
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "event_date": "2026-04-08",
+      "evidence_excerpt": "Analyst Ryan Brinkman reiterated his Underweight rating this week and stuck with a $145 price target \u2014 implying another ~60% downside",
+      "source_urls": [
+        "https://electrek.co/2026/04/08/tesla-jpmorgan-145-price-target-60-percent-downside/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-09",
+  "cutoff_date": null,
+  "role": "earnings"
+}
