@@ -1,11 +1,11 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T07:09:40.472349-04:00",
+  "generated_at": "2026-10-09T07:29:39.484548-04:00",
   "run_id": "37920672579",
   "runner": "ecs-openclaw",
   "all_ok": false,
   "qc_all_ok": false,
-  "book_ok": true,
+  "book_ok": false,
   "grok_ok": false,
   "grok_fails": [
     {
