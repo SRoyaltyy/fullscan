@@ -1,18 +1,17 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T05:59:41.598260-04:00",
+  "generated_at": "2026-10-09T06:33:27.487196-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-09_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-10-09/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-10-09_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-10-09_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 6,
-    "partial": 1,
-    "fail": 1,
+    "partial": 2,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -184,7 +183,7 @@
       "inputs_ready": true,
       "n_req_ok": 4,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 14,
       "files": [
         {
@@ -295,11 +294,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-09_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 77574,
+          "said": "82 ticker actions \u00b7 7 events \u00b7 10114 headlines \u00b7 CEG BUY, COP BUY, EOG BUY, RRC BUY, SM BUY, REPX BUY, INR BUY, OXY BUY",
+          "bullets": [
+            "BUY CEG",
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC"
+          ]
         },
         {
           "key": "general",
@@ -553,10 +557,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 7574344,
+          "size": 7579459,
           "said": "27 rows",
           "bullets": [
-            "SHEL, SOLS, HASI, RMD, OSCR, NBIS, GFS, HHH"
+            "AAPL, SB, ESTC, MDLN, AUPH, ANET, GCT, AMCR"
           ]
         },
         {
@@ -566,24 +570,24 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8395676,
+          "size": 8400841,
           "said": "25 rows",
           "bullets": [
-            "SHEL, BJ, COST, ISRG, ABBV, PFE, SOLS, AMGN"
+            "MDLN, BJ, SU, DG, AAPL, AUPH, MICC, SHEL"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "SHEL, BJ, COST, ISRG, ABBV"
+        "MDLN, BJ, SU, DG, AAPL"
       ]
     },
     {
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -594,11 +598,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-09_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 77574,
+          "said": "82 ticker actions \u00b7 7 events \u00b7 10114 headlines \u00b7 CEG BUY, COP BUY, EOG BUY, RRC BUY, SM BUY, REPX BUY, INR BUY, OXY BUY",
+          "bullets": [
+            "BUY CEG",
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC"
+          ]
         },
         {
           "key": "in_digest",
@@ -627,8 +636,17 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "82 ticker actions \u00b7 7 events \u00b7 10114 headlines \u00b7 CEG BUY, COP BUY, EOG BUY, RRC BUY, SM BUY, REPX BUY, INR BUY, OXY BUY",
+      "bullets": [
+        "BUY CEG",
+        "BUY COP",
+        "BUY EOG",
+        "BUY RRC",
+        "BUY SM",
+        "BUY REPX",
+        "BUY INR",
+        "BUY OXY"
+      ]
     },
     {
       "key": "stock_book",
@@ -668,11 +686,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-10-09_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 77574,
+          "said": "82 ticker actions \u00b7 7 events \u00b7 10114 headlines \u00b7 CEG BUY, COP BUY, EOG BUY, RRC BUY, SM BUY, REPX BUY, INR BUY, OXY BUY",
+          "bullets": [
+            "BUY CEG",
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC"
+          ]
         },
         {
           "key": "in_digest",
@@ -721,10 +744,10 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8395676,
+          "size": 8400841,
           "said": "25 rows",
           "bullets": [
-            "SHEL, BJ, COST, ISRG, ABBV, PFE, SOLS, AMGN"
+            "MDLN, BJ, SU, DG, AAPL, AUPH, MICC, SHEL"
           ]
         },
         {
@@ -2557,6 +2580,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-09\n_Generated 2026-10-09T09:59:39 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$103,033.45** (after 09:30 $103,033.45 \u00b7 after 16:00 $103,033.45)\n- Prior close **$103,033.45** \u00b7 09:30 **$103,033.45** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$103,033.45**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$103,033.45** \u00b7 2026-10-09 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_over"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T06:33:26.384361-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-09_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 77574,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-09_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 16481,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-09T06:33:26.356476-04:00\nraw=10114 unique_events=7 tickers=82"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-09T06:33:26.356476-04:00\nraw=10114 unique_events=7 tickers=82"
     }
   ],
   "href": {
