@@ -1,6 +1,7 @@
 {
   "date": "2026-10-09",
-  "status": "blocked",
-  "error": "required inputs are not validated",
-  "standing": true
+  "status": "missed_deadline",
+  "observed_at": "2026-10-09T12:59:02.589274-04:00",
+  "submit": false,
+  "standing": false
 }
