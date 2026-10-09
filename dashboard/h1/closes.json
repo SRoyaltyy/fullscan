@@ -1341,5 +1341,37 @@
       "open": 3.27,
       "prior_close": 3.25
     }
+  },
+  "2026-10-08": {
+    "CIEN": {
+      "close": 425.929993,
+      "open": 436.149994,
+      "prior_close": 446.450012
+    },
+    "KOD": {
+      "close": 94.260002,
+      "open": 90.010002,
+      "prior_close": 91.080002
+    },
+    "NAUT": {
+      "close": 1.82,
+      "open": 2.0,
+      "prior_close": 1.96
+    },
+    "OPCH": {
+      "close": 31.049999,
+      "open": 31.049999,
+      "prior_close": 31.01
+    },
+    "PENG": {
+      "close": 71.57,
+      "open": 72.529999,
+      "prior_close": 72.610001
+    },
+    "SDEV": {
+      "close": 1.99,
+      "open": 2.47,
+      "prior_close": 2.78
+    }
   }
 }
