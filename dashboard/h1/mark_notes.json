@@ -86,5 +86,23 @@
         "yahoo_open": 3.02
       }
     ]
+  },
+  {
+    "book": "h1",
+    "date": "2026-10-06",
+    "kind": "open_price_revision",
+    "note": "Correction for 2026-10-06: the NAUT sell of 1668 shares was sealed at the stored open 1.87. Yahoo later revised the 2026-10-06 NAUT open to 1.89; close 1.77, high and low are unchanged and Yahoo shows no split or dividend, so this is a data revision, not an adjustment. At the revised open the sell proceeds are 33.36 higher before fees. First seen 2026-10-08 19:26 UTC (run 37869146407 / later fills). The sealed fill, close record, and equity are unchanged.",
+    "open_source": "Yahoo split-adjusted 2026-10-06 daily open",
+    "sealed_record_sha256": "4c0dad2cc3a4d67f4a9880da7f3dd5d42e4698f844b381f0b39c6ee41742c165",
+    "tickers": [
+      {
+        "proceeds_gap": 33.36,
+        "sealed_fill": 1.87,
+        "shares": 1668,
+        "side": "sell",
+        "ticker": "NAUT",
+        "yahoo_open": 1.89
+      }
+    ]
   }
 ]
