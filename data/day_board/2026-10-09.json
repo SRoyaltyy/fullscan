@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T04:25:02.998581-04:00",
+  "generated_at": "2026-10-09T04:25:11.488782-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -91,7 +91,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 5,
       "files": [
         {
@@ -128,10 +128,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-10-09_finviz_market_digest.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 4175,
+          "said": "US stocks set to open higher as easing oil and yields support futures ahead of Delta earnings and sentiment data \u00b7 leaders HUM, DAL, BKR \u00b7 good",
           "bullets": []
         },
         {
@@ -139,11 +139,14 @@
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-10-09_finviz_market_digest.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 2039,
+          "said": "Finviz homepage market digest \u2014 2026-10-09",
+          "bullets": [
+            "Generated:** 2026-10-09T04:25:11.263348-04:00 (America/New_York)",
+            "Source:** `live`"
+          ]
         },
         {
           "key": "market_digest_close_json",
@@ -183,7 +186,7 @@
       "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 14,
       "files": [
         {
@@ -206,10 +209,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-10-09_finviz_market_digest.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 4175,
+          "said": "US stocks set to open higher as easing oil and yields support futures ahead of Delta earnings and sentiment data \u00b7 leaders HUM, DAL, BKR \u00b7 good",
           "bullets": []
         },
         {
@@ -1002,6 +1005,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_ \u00b7 11718 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T04:25:11.275560-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-09_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 4175,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-09_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 2039,
+          "preview": "# Finviz homepage market digest \u2014 2026-10-09\n**Generated:** 2026-10-09T04:25:11.263348-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set to open higher as easing oil and yields support futures ahead of Delta earnings and sentiment data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** HUM, DAL, BKR\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** DAL\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-09\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-09\n**Generated:** 2026-10-09T04:25:11.263348-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set to open higher as easing oil and yields support futures ahead of Delta earnings and sentiment data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** HUM, DAL, BKR\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** DAL\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-09\n**Clock use:** `same_morning`"
     }
   ],
   "href": {

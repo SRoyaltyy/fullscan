@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-09
 
-**Generated:** 2026-10-09T04:24:50.486638-04:00 (America/New_York)
+**Generated:** 2026-10-09T04:25:11.263348-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks set to open higher as easing oil and yields support futures ahead of Delta earnings and sentiment data
 **Prior close:** SPX —  Nasdaq —  Dow —
