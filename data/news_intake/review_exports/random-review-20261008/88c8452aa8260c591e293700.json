@@ -26,11 +26,24 @@
   "extraction_status": "feed_text",
   "last_seen": "2026-10-04T12:34:35.203969+00:00",
   "review_enrichment": {
-    "attempted_epoch": 1791506973.8243127,
-    "attempts": 2,
+    "attempted_epoch": 1791528904.4573538,
+    "attempts": 3,
     "status": "failed",
-    "network_requests": [],
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMirwFBVV95cUxOVHFEQUFSN2ZDWnVPb3hfbG5nT0NTME5rbUZMd3dLQkU3eVhaWmtiVk1LdmU4SmtKZUdqVjRCQTYzSTFKeV9mWWRfclhsX2lwc1Vwb0txUXN0d0V3Z1p1clNfM29SYmFoaEVUbldyZ0FINndzTlpmZ0hKaWRpdXZSLUZQemU0Q0J4SGJTbzlKS2VYV3l2U0xVYWdMQ2t1d3h3SUhQYVc5SGdHN1lTZnRB"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://apnews.com/article/india-sir-cjp-election-commission-gyanesh-protests-1d43de28dfd6fa920133d98e9d0e8e35"
+      }
+    ],
     "historical_body_availability_verified": false,
-    "error": "HTTP Error 429: Too Many Requests"
+    "error": "HTTP Error 403: Forbidden"
   }
 }

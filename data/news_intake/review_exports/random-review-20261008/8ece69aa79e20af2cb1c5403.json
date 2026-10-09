@@ -30,11 +30,24 @@
   "extraction_status": "feed_text",
   "last_seen": "2026-10-04T06:30:58.699753+00:00",
   "review_enrichment": {
-    "attempted_epoch": 1791506975.6836758,
-    "attempts": 2,
+    "attempted_epoch": 1791528904.6868992,
+    "attempts": 3,
     "status": "failed",
-    "network_requests": [],
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMiqwFBVV95cUxON3RkWjVIVHJUZ1Y4TG9BMWdadE85c3VFT3NaZV9YUGx4MVhQRl82enpYc1hEUWFubXhXMkktN0hsUXotei1jUms1ZjN6MnhOQ0hZYlEyM3gzQXZibTQzdldfN2VTZzRFUlJQbkp1MUtqbm5OQ3V1U3JHZEVDNU9Jbk5tNU9CT1plRWhvTUhfem51MzRrbm90ZmRid0FhY2dTYkoxYTk5QVZQemM"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://bworldonline.com/health-library/en-SK/fda-concerns-unapproved-glp-1-drugs-used-for-weight-loss-2026"
+      }
+    ],
     "historical_body_availability_verified": false,
-    "error": "HTTP Error 429: Too Many Requests"
+    "error": "HTTP Error 404: Not Found"
   }
 }

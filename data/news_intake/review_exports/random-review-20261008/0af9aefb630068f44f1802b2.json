@@ -27,8 +27,8 @@
   "extraction_status": "feed_text",
   "last_seen": "2026-10-04T06:30:58.699753+00:00",
   "review_enrichment": {
-    "attempted_epoch": 1791506895.7338843,
-    "attempts": 2,
+    "attempted_epoch": 1791528903.3644953,
+    "attempts": 3,
     "status": "failed",
     "network_requests": [
       {

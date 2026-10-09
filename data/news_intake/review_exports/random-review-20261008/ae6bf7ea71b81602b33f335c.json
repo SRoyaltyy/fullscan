@@ -25,11 +25,24 @@
   "extraction_status": "feed_text",
   "last_seen": "2026-10-04T12:58:17.234223+00:00",
   "review_enrichment": {
-    "attempted_epoch": 1791506979.4746888,
-    "attempts": 1,
+    "attempted_epoch": 1791528906.1226258,
+    "attempts": 2,
     "status": "failed",
-    "network_requests": [],
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMi6gJBVV95cUxQeVNHVndzNGQwZ0RIYmVJYk9jUVhVZjEySnQ2YnNTOTNvNDdVMElzOXBTbHJCOUV5UjhmY3RzdTMzV3RfRHRLRVFac2hQTGNuU2UtVmc0dlRfemNNWExBbUVrdVkxeUdxT2dRT3p3c0trdUJqM2dfYmlnTmZzakwwLXc4aDF3RXkzbFUwd2RnZ1N1QmR1SHc0ak5ZT0dzSk91c2J4VUM3a1R5TVM3aUtXeGM4V0labDY4ZmF3ekhDQ0VnLXdWcXRaUloyQnNRRFFIOGJCRWo5MnlGa0tkZDB4VHFKaTVWdVpBbU44QWp4UDktd0lDUGZVMHV5RzJTS05laVNHT0JxeVdfemw5OXgwRFNjR2RnazkwSDVtVGJkWFliOGVZdklrSlJNaEN3LTBvaWkwdkxTMXRVak91MW9iUjlGMkdYYVpHVjR5bjUxdXdhZHdkeXNWUU1RVFkzOVBVN3IxM0ZxMko1dw"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://uniteddaily.my/en/8771959d-f063-46cf-bfb5-7e53367491d5/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E4%B8%8ESolaria%E6%8D%AE%E6%82%89%E6%B4%BD%E8%B0%88%E8%A5%BF%E7%8F%AD%E7%89%99%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E4%BE%9B%E7%94%B5%E4%BA%8B%E5%AE%9C"
+      }
+    ],
     "historical_body_availability_verified": false,
-    "error": "HTTP Error 429: Too Many Requests"
+    "error": "HTTP Error 403: Forbidden"
   }
 }
