@@ -1,23 +1,15 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T07:09:28.340174-04:00",
+  "generated_at": "2026-10-09T12:50:40.043251-04:00",
   "ok": false,
   "fails": [
     {
-      "path": "01_daily/general/2026-10-09_predict.md",
-      "reason": "required general predict missing"
-    },
-    {
-      "path": "01_daily/events/2026-10-09_events.json",
-      "reason": "required events JSON missing"
-    },
-    {
-      "path": "01_daily/news/2026-10-09_judge.md",
-      "reason": "required news judge missing"
+      "path": "(review)",
+      "reason": "empty_review_reply"
     }
   ],
-  "notes": "Core packet fails on three missing required files (general predict, events scan, news judge). Same-day news parse, optional news actions, finviz digest, and map-heat tables (live futures tape present, MAP_HEAT_OK) look like real 2026-10-09 artifacts. Sectors 0/11 are optional this date and are not fails. Missing research.md and close-digest are noted only; baseline is a no-signal captain-close packet and does not fail the day.",
+  "notes": "Grok returned an empty review",
   "prompt_chars": 70970,
-  "reply_chars": 980,
+  "reply_chars": 0,
   "reviewer": "grok-4.6-text"
 }

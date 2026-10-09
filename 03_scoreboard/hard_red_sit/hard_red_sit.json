@@ -2929,7 +2929,7 @@
             "side": "long",
             "open": null,
             "px": 64.95,
-            "px_src": "session_export",
+            "px_src": "session_export+no_elite_auth",
             "low": null,
             "scoops": {
               "0.5": {
@@ -2965,7 +2965,7 @@
             "side": "long",
             "open": null,
             "px": 37.86,
-            "px_src": "session_export",
+            "px_src": "session_export+no_elite_auth",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3001,7 +3001,7 @@
             "side": "long",
             "open": null,
             "px": 42.84,
-            "px_src": "session_export",
+            "px_src": "session_export+no_elite_auth",
             "low": null,
             "scoops": {
               "0.5": {
@@ -3037,7 +3037,7 @@
             "side": "long",
             "open": null,
             "px": 59.18,
-            "px_src": "session_export",
+            "px_src": "session_export+no_elite_auth",
             "low": null,
             "scoops": {
               "0.5": {
