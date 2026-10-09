@@ -6,7 +6,7 @@
    "SIT": 0
   },
   "factor_mine": {
-   "MISSING": 339,
+   "MISSING": 341,
    "OK": 0,
    "SIT": 0
   },
@@ -16,8 +16,8 @@
    "SIT": 0
   },
   "flatten_robust": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "h1": {
@@ -26,15 +26,19 @@
    "SIT": 0
   },
   "paper": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 5,
+   "SIT": 0
+  },
+  "stock_book": {
+   "MISSING": 0,
+   "OK": 5,
    "SIT": 0
   },
   "theme_radar": {
    "MISSING": 0,
-   "OK": 0,
-   "SIT": 0,
-   "WAIT": 3
+   "OK": 3,
+   "SIT": 0
   },
   "webull_sim": {
    "MISSING": 372,
@@ -43,904 +47,1657 @@
   }
  },
  "date": "2026-10-09",
- "generated_at": "2026-10-09T05:10:30-04:00",
+ "generated_at": "2026-10-09T05:54:01-04:00",
  "strategies": [
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "SMMT",
+    "PACS",
+    "BYRN",
+    "MAX",
+    "FLUT",
+    "RC"
+   ],
    "family": "factor_mine",
    "name": "coil_h3_exit_alarm",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_e1er_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "NTLA",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "combo_e1s_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_ee1_3070_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_ee1_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_ee1_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_eer_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "combo_ef_3070_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "combo_ef_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "combo_ef_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA"
+   ],
    "family": "factor_mine",
    "name": "combo_eh_3070_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA"
+   ],
    "family": "factor_mine",
    "name": "combo_eh_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA"
+   ],
    "family": "factor_mine",
    "name": "combo_eh_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA",
+    "NTLA",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "combo_ehs_601525_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA",
+    "NTLA",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "combo_ehs_702010_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX",
+    "GKOS"
+   ],
    "family": "factor_mine",
    "name": "combo_ej_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "FLUT",
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "combo_en_3070_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "FLUT",
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "combo_en_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "FLUT",
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "combo_en_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "NTLA",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "combo_ers_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "NTLA",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "combo_es_8020_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "NTLA",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "combo_es_9010_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN",
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_fe1_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN",
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_fe_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN",
+    "DAL",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "combo_fer_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN",
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "NTLA",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "combo_fes_403030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN",
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "combo_fh_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN",
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_fse_333_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_he1_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "combo_her_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "combo_hf_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX",
+    "GKOS"
+   ],
    "family": "factor_mine",
    "name": "combo_hj_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "FLUT",
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "combo_hn_3070_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "FLUT",
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "combo_hn_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "FLUT",
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "combo_hn_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX",
+    "GKOS",
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_je1_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX",
+    "GKOS",
+    "DAL",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "combo_jer_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX",
+    "GKOS",
+    "SMMT",
+    "PACS",
+    "BLFS"
+   ],
    "family": "factor_mine",
    "name": "combo_jf_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX",
+    "GKOS",
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_jse_333_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "FLUT",
+    "CEG",
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_ne1_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "FLUT",
+    "CEG",
+    "DAL",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "combo_ner_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "FLUT",
+    "CEG",
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "combo_nf_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "FLUT",
+    "CEG",
+    "ONON",
+    "AMN",
+    "PCRX",
+    "GKOS"
+   ],
    "family": "factor_mine",
    "name": "combo_nj_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "FLUT",
+    "CEG",
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_nse_333_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "combo_oh_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG",
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "combo_p2s_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG",
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "combo_ps_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG",
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "combo_ps_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_se1_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_se_3070_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_se_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_se_5050_skip",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_se_5050_split",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_se_5050_weather",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "combo_se_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_333_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_333_skip",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_333_split",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_333_weather",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_403525_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_404020_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_451540_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_502525_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_502525_split",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR",
+    "BYRN",
+    "ANGO",
+    "KSS",
+    "SUJA"
+   ],
    "family": "factor_mine",
    "name": "combo_seh_601525_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "combo_ser_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "combo_sf_3070_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "combo_sf_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "combo_sf_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "KSS",
+    "SUJA",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "combo_sh_3070_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "KSS",
+    "SUJA",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "combo_sh_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "KSS",
+    "SUJA",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "combo_sh_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "KSS",
+    "SUJA",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "combo_sh_macd_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX",
+    "GKOS"
+   ],
    "family": "factor_mine",
    "name": "combo_sj_3070_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX",
+    "GKOS"
+   ],
    "family": "factor_mine",
    "name": "combo_sj_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX",
+    "GKOS"
+   ],
    "family": "factor_mine",
    "name": "combo_sj_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "FLUT",
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "combo_sn_3070_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "FLUT",
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "combo_sn_5050_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "FLUT",
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "combo_sn_7030_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT",
+    "FLUT",
+    "CEG",
+    "ONON",
+    "AMN",
+    "PCRX",
+    "GKOS"
+   ],
    "family": "factor_mine",
    "name": "combo_snj_333_shared",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; combo shopping list = member 09:30 lists (union); fills still need the cash-book roll \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_cut",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_half",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_rankw",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_sboost",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_sizeup",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_time",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_topheavy",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h3_trail",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_cut",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_half",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_rankw",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_s8",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_sboost",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_sizeup",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_time",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_topheavy",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_h5_trail",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -949,7 +1706,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -958,7 +1715,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_cut",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -967,7 +1724,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_half",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -976,7 +1733,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_rankw",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -985,7 +1742,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_sboost",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -994,7 +1751,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_sizeup",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1003,7 +1760,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_time",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1012,7 +1769,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_topheavy",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1021,7 +1778,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h1_trail",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1030,7 +1787,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1039,16 +1796,18 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_live_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "flatten_vol_g_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1057,43 +1816,76 @@
    "buys": [],
    "family": "factor_mine",
    "name": "flatten_white_yday_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "SDEV",
+    "PGNY",
+    "GKOS"
+   ],
    "family": "factor_mine",
    "name": "ohlc_hot_coil_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "SDEV",
+    "FN",
+    "FNKO",
+    "NTAP"
+   ],
    "family": "factor_mine",
    "name": "ohlc_hot_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "SDEV",
+    "FN",
+    "FNKO",
+    "NTAP"
+   ],
    "family": "factor_mine",
    "name": "ohlc_hot_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "SDEV",
+    "FN",
+    "FNKO",
+    "NTAP"
+   ],
    "family": "factor_mine",
    "name": "ohlc_hot_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1102,7 +1894,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "oppset_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1111,7 +1903,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1120,7 +1912,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1129,7 +1921,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1138,7 +1930,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_mega_green_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1147,7 +1939,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_mega_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1156,79 +1948,133 @@
    "buys": [],
    "family": "factor_mine",
    "name": "overnight_mega_h2",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BYRN",
+    "PCRX",
+    "HAE",
+    "MANE",
+    "IPSC",
+    "ACRS",
+    "OIG",
+    "SECZ"
+   ],
    "family": "factor_mine",
    "name": "probable_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BYRN",
+    "PCRX",
+    "HAE",
+    "MANE",
+    "IPSC",
+    "ACRS",
+    "OIG",
+    "SECZ"
+   ],
    "family": "factor_mine",
    "name": "probable_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BYRN",
+    "PCRX",
+    "HAE",
+    "MANE",
+    "IPSC",
+    "ACRS",
+    "OIG",
+    "SECZ"
+   ],
    "family": "factor_mine",
    "name": "probable_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "PCRX",
+    "MANE"
+   ],
    "family": "factor_mine",
    "name": "probable_probable_ok_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "PCRX",
+    "MANE"
+   ],
    "family": "factor_mine",
    "name": "probable_probable_ok_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "SMCI",
+    "FN",
+    "NTAP",
+    "EXTR",
+    "HPE",
+    "PAYS",
+    "ADTN"
+   ],
    "family": "factor_mine",
    "name": "short_alarm_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "SMCI",
+    "FN",
+    "NTAP",
+    "EXTR",
+    "HPE",
+    "PAYS",
+    "ADTN"
+   ],
    "family": "factor_mine",
    "name": "short_alarm_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "P",
+    "KOD"
+   ],
    "family": "factor_mine",
    "name": "short_clk_ext_veto_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1237,16 +2083,18 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_clk_ext_veto_opp_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA"
+   ],
    "family": "factor_mine",
    "name": "short_clk_neg_weak_fail_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1255,115 +2103,195 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_clk_neg_weak_fail_opp_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "MXL",
+    "P",
+    "FN",
+    "FNKO",
+    "CEG",
+    "ADCT",
+    "SES",
+    "AAOI"
+   ],
    "family": "factor_mine",
    "name": "short_extended_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "MXL",
+    "P",
+    "FN",
+    "FNKO",
+    "CEG",
+    "ADCT",
+    "SES",
+    "AAOI"
+   ],
    "family": "factor_mine",
    "name": "short_extended_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "BYRN",
+    "FLUT",
+    "SDEV",
+    "ANGO",
+    "HAE",
+    "IPSC",
+    "ACRS"
+   ],
    "family": "factor_mine",
    "name": "short_last_red_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "BYRN",
+    "FLUT",
+    "SDEV",
+    "ANGO",
+    "HAE",
+    "IPSC",
+    "ACRS"
+   ],
    "family": "factor_mine",
    "name": "short_last_red_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "HOVR",
+    "FLUT",
+    "RC",
+    "ANGO",
+    "ORBS",
+    "BLFS",
+    "HAE",
+    "MANE"
+   ],
    "family": "factor_mine",
    "name": "short_macd_dn_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "HOVR",
+    "FLUT",
+    "RC",
+    "ANGO",
+    "ORBS",
+    "BLFS",
+    "HAE",
+    "MANE"
+   ],
    "family": "factor_mine",
    "name": "short_macd_dn_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "short_news_head_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "short_news_or_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL"
+   ],
    "family": "factor_mine",
    "name": "short_news_pack_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "short_news_r_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "short_news_r_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "NTLA",
+    "DAL",
+    "DXC",
+    "EQPT"
+   ],
    "family": "factor_mine",
    "name": "short_news_r_macd_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1372,7 +2300,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_r_down_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1381,151 +2309,295 @@
    "buys": [],
    "family": "factor_mine",
    "name": "short_r_down_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BYRN",
+    "P",
+    "NTAP",
+    "ONON",
+    "PCRX",
+    "HAE",
+    "ADCT",
+    "ECO"
+   ],
    "family": "factor_mine",
    "name": "short_rsi_ob_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BYRN",
+    "P",
+    "NTAP",
+    "ONON",
+    "PCRX",
+    "HAE",
+    "ADCT",
+    "ECO"
+   ],
    "family": "factor_mine",
    "name": "short_rsi_ob_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "MXL",
+    "ORBS"
+   ],
    "family": "factor_mine",
    "name": "union_ab_g_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "MXL",
+    "ORBS"
+   ],
    "family": "factor_mine",
    "name": "union_ab_g_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "ANGO",
+    "ORBS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "union_blue_coil_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "ANGO",
+    "ORBS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "factor_mine",
    "name": "union_blue_coil_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "DAL",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "ANGO",
+    "ORBS",
+    "ONON"
+   ],
    "family": "factor_mine",
    "name": "union_blue_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "DAL",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "ANGO",
+    "ORBS",
+    "ONON"
+   ],
    "family": "factor_mine",
    "name": "union_blue_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "MAX",
+    "ANGO",
+    "ORBS",
+    "ONON",
+    "AMN",
+    "PCRX",
+    "HAE",
+    "IPSC"
+   ],
    "family": "factor_mine",
    "name": "union_blue_vol_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "MAX",
+    "ANGO",
+    "ORBS",
+    "ONON",
+    "AMN",
+    "PCRX",
+    "HAE",
+    "IPSC"
+   ],
    "family": "factor_mine",
    "name": "union_blue_vol_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "FNKO",
+    "BRZE",
+    "NRG",
+    "WING",
+    "DXC",
+    "ONON"
+   ],
    "family": "factor_mine",
    "name": "union_break10_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "FNKO",
+    "BRZE",
+    "NRG",
+    "WING",
+    "DXC",
+    "ONON"
+   ],
    "family": "factor_mine",
    "name": "union_break10_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "RC",
+    "FNKO",
+    "BRZE"
+   ],
    "family": "factor_mine",
    "name": "union_candle_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "RC",
+    "FNKO",
+    "BRZE"
+   ],
    "family": "factor_mine",
    "name": "union_candle_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "HOVR",
+    "DAL",
+    "FNKO",
+    "ONON",
+    "WING",
+    "DXC"
+   ],
    "family": "factor_mine",
    "name": "union_candle_score_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "HOVR",
+    "DAL",
+    "FNKO",
+    "ONON",
+    "WING",
+    "DXC"
+   ],
    "family": "factor_mine",
    "name": "union_candle_score_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1534,7 +2606,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_catal_present_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1543,7 +2615,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_catal_present_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1552,7 +2624,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_earn_guide_react_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1561,16 +2633,20 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_flow_coil_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "FLUT"
+   ],
    "family": "factor_mine",
    "name": "union_clk_fresh_cat_coil_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1579,16 +2655,25 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_fresh_cat_coil_opp_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "CEG",
+    "ONON",
+    "ORBS",
+    "FNKO",
+    "BRZE",
+    "DXC",
+    "WING"
+   ],
    "family": "factor_mine",
    "name": "union_clk_hold_vs_sector_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1597,7 +2682,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_hold_vs_sector_opp_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1606,16 +2691,21 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_insider_cash_stab_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_clk_mom_break_peer_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1624,16 +2714,20 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_mom_break_peer_opp_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SUJA",
+    "SDEV",
+    "MAX"
+   ],
    "family": "factor_mine",
    "name": "union_clk_nr7_mom_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1642,7 +2736,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_nr7_mom_opp_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1651,97 +2745,175 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_clk_r_up_coil_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "RC",
+    "AMN",
+    "PCRX",
+    "NRDS"
+   ],
    "family": "factor_mine",
    "name": "union_coil_green_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "RC",
+    "AMN",
+    "PCRX",
+    "NRDS"
+   ],
    "family": "factor_mine",
    "name": "union_coil_green_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SMMT",
+    "PACS",
+    "BYRN",
+    "MAX",
+    "FLUT",
+    "RC",
+    "SDEV"
+   ],
    "family": "factor_mine",
    "name": "union_coil_off_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SMMT",
+    "PACS",
+    "BYRN",
+    "MAX",
+    "FLUT",
+    "RC",
+    "SDEV"
+   ],
    "family": "factor_mine",
    "name": "union_coil_off_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SMMT",
+    "PACS",
+    "BYRN",
+    "MAX",
+    "FLUT",
+    "RC",
+    "SDEV"
+   ],
    "family": "factor_mine",
    "name": "union_coil_off_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SUJA",
+    "DAL",
+    "KSS",
+    "HOVR",
+    "PACS",
+    "CEG",
+    "ANGO",
+    "SMMT"
+   ],
    "family": "factor_mine",
    "name": "union_cond_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SUJA",
+    "DAL",
+    "KSS",
+    "HOVR",
+    "PACS",
+    "CEG",
+    "ANGO",
+    "SMMT"
+   ],
    "family": "factor_mine",
    "name": "union_cond_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SUJA",
+    "DAL",
+    "KSS",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "union_cond_n4_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "union_e_fresh_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR",
+    "BYRN",
+    "ANGO"
+   ],
    "family": "factor_mine",
    "name": "union_e_fresh_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1750,7 +2922,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_e_green_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1759,52 +2931,64 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_e_green_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "union_earn_react_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "HOVR"
+   ],
    "family": "factor_mine",
    "name": "union_earn_react_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_flow_in_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_flow_in_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_flow_in_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1813,7 +2997,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_flow_in_white_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -1822,484 +3006,977 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_flow_in_white_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h1_cut",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h1_half",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h1_rankw",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h1_sboost",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h1_sizeup",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h1_time",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h1_topheavy",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h1_trail",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h3_cut",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS",
+    "BYRN",
+    "MAX"
+   ],
    "family": "factor_mine",
    "name": "union_h3_exit_alarm",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "HOVR",
+    "SMMT",
+    "PACS",
+    "BYRN",
+    "MAX",
+    "FLUT"
+   ],
    "family": "factor_mine",
    "name": "union_h3_exit_news_r",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "RC",
+    "MXL"
+   ],
    "family": "factor_mine",
    "name": "union_h3_exit_red",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h3_half",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h3_rankw",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h3_sboost",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h3_sizeup",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h3_time",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h3_topheavy",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h3_trail",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h5_cut",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS",
+    "BYRN",
+    "MAX"
+   ],
    "family": "factor_mine",
    "name": "union_h5_exit_alarm",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h5_half",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h5_rankw",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h5_sboost",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h5_sizeup",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h5_time",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h5_topheavy",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
    "family": "factor_mine",
    "name": "union_h5_trail",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "SDEV",
+    "FNKO",
+    "BRZE",
+    "NRG",
+    "WING",
+    "DXC",
+    "MXL",
+    "ONON"
+   ],
    "family": "factor_mine",
    "name": "union_hot_n12_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KOD",
+    "SDEV",
+    "PACB",
+    "P"
+   ],
    "family": "factor_mine",
    "name": "union_hot_n4_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; factor-mine cash-start recipe (pick_day on the session panel); sells are the continuous $10k book list-drop after min-hold; Clock-B/oppset do not widen ",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
+   "family": "factor_mine",
+   "name": "union_hot_n4_h1_preopen",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "sells": [],
+   "source": "data/day_board/2026-10-09_strategy_tickets.json",
+   "status": "MISSING"
+  },
+  {
+   "buys": [
+    "KOD",
+    "SDEV",
+    "PACB",
+    "P"
+   ],
    "family": "factor_mine",
    "name": "union_hot_n4_holdup",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "GCT",
+    "KSS",
+    "SUJA",
+    "SMCI",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS"
+   ],
+   "family": "factor_mine",
+   "name": "union_hot_n4_holdup_preopen",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
+   "sells": [],
+   "source": "data/day_board/2026-10-09_strategy_tickets.json",
+   "status": "MISSING"
+  },
+  {
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "SDEV",
+    "FNKO",
+    "BRZE",
+    "NRG"
+   ],
    "family": "factor_mine",
    "name": "union_hot_score_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "SDEV",
+    "FNKO",
+    "BRZE",
+    "NRG"
+   ],
    "family": "factor_mine",
    "name": "union_hot_score_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SUJA",
+    "DAL",
+    "SMMT",
+    "PACS",
+    "ANGO",
+    "FNKO",
+    "BRZE",
+    "ONON"
+   ],
    "family": "factor_mine",
    "name": "union_join_g_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SUJA",
+    "DAL",
+    "SMMT",
+    "PACS",
+    "ANGO",
+    "FNKO",
+    "BRZE",
+    "ONON"
+   ],
    "family": "factor_mine",
    "name": "union_join_g_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS",
+    "BYRN",
+    "MAX"
+   ],
    "family": "factor_mine",
    "name": "union_join_present_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS",
+    "BYRN",
+    "MAX"
+   ],
    "family": "factor_mine",
    "name": "union_join_present_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX",
+    "GKOS"
+   ],
    "family": "factor_mine",
    "name": "union_join_vol_green_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX",
+    "GKOS"
+   ],
    "family": "factor_mine",
    "name": "union_join_vol_green_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "RC",
+    "MXL"
+   ],
    "family": "factor_mine",
    "name": "union_last_green_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "RC",
+    "MXL"
+   ],
    "family": "factor_mine",
    "name": "union_last_green_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "SMMT",
+    "PACS",
+    "MAX",
+    "RC",
+    "MXL"
+   ],
    "family": "factor_mine",
    "name": "union_last_green_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BYRN",
+    "FLUT",
+    "SDEV",
+    "ANGO",
+    "HAE",
+    "IPSC",
+    "ACRS",
+    "SECZ"
+   ],
    "family": "factor_mine",
    "name": "union_last_red_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BYRN",
+    "FLUT",
+    "SDEV",
+    "ANGO",
+    "HAE",
+    "IPSC",
+    "ACRS",
+    "SECZ"
+   ],
    "family": "factor_mine",
    "name": "union_last_red_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "DAL",
+    "SUJA",
+    "HOVR",
+    "CEG",
+    "MXL",
+    "WING",
+    "NRG"
+   ],
    "family": "factor_mine",
    "name": "union_macd_hist_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "DAL",
+    "SUJA",
+    "HOVR",
+    "CEG",
+    "MXL",
+    "WING",
+    "NRG"
+   ],
    "family": "factor_mine",
    "name": "union_macd_hist_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "SMMT",
+    "PACS",
+    "BYRN",
+    "MAX",
+    "SDEV"
+   ],
    "family": "factor_mine",
    "name": "union_macd_up_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "SMMT",
+    "PACS",
+    "BYRN",
+    "MAX",
+    "SDEV"
+   ],
    "family": "factor_mine",
    "name": "union_macd_up_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PCRX",
+    "BORR"
+   ],
    "family": "factor_mine",
    "name": "union_macd_xup_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SMMT",
+    "PCRX",
+    "BORR"
+   ],
    "family": "factor_mine",
    "name": "union_macd_xup_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2308,7 +3985,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_both_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2317,7 +3994,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_both_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2326,7 +4003,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam61_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2335,7 +4012,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam61_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2344,7 +4021,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_conv_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2353,7 +4030,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2362,7 +4039,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2371,7 +4048,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam71_n2_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2380,88 +4057,113 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_g_cam91_n1_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG",
+    "FLUT"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_cond_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG",
+    "FLUT"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_cond_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG",
+    "FLUT"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_conv_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG",
+    "FLUT"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_conv_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "FLUT",
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "FLUT",
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "FLUT",
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_g_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "FLUT"
+   ],
    "family": "factor_mine",
    "name": "union_news_head_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "FLUT"
+   ],
    "family": "factor_mine",
    "name": "union_news_head_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2470,7 +4172,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_missing_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2479,61 +4181,75 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_missing_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG",
+    "FLUT"
+   ],
    "family": "factor_mine",
    "name": "union_news_or_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG",
+    "FLUT"
+   ],
    "family": "factor_mine",
    "name": "union_news_or_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_or_net2_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_or_net2_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_or_net3_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_or_net3_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2542,7 +4258,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_conv_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2551,7 +4267,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2560,7 +4276,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2569,7 +4285,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net4_rw_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2578,7 +4294,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net5_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2587,97 +4303,131 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_news_or_net5_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_pack_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_pack_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_pack_net2_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_pack_net2_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_pack_net3_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_pack_net3_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS",
+    "BYRN",
+    "MAX"
+   ],
    "family": "factor_mine",
    "name": "union_news_present_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "SMMT",
+    "PACS",
+    "BYRN",
+    "MAX"
+   ],
    "family": "factor_mine",
    "name": "union_news_present_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_vol_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "CEG"
+   ],
    "family": "factor_mine",
    "name": "union_news_vol_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2686,7 +4436,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_oppset_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2695,7 +4445,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_overnight_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2704,7 +4454,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_overnight_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2713,7 +4463,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_r_up_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2722,70 +4472,115 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_r_up_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "MXL",
+    "CEG",
+    "FNKO",
+    "NRG"
+   ],
    "family": "factor_mine",
    "name": "union_ret_5_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "DAL",
+    "HOVR",
+    "MXL",
+    "CEG",
+    "FNKO",
+    "NRG"
+   ],
    "family": "factor_mine",
    "name": "union_ret_5_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "HOVR",
+    "DAL",
+    "SUJA",
+    "KSS",
+    "ANGO",
+    "FLUT",
+    "RC",
+    "ORBS"
+   ],
    "family": "factor_mine",
    "name": "union_rsi_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "HOVR",
+    "DAL",
+    "SUJA",
+    "KSS",
+    "ANGO",
+    "FLUT",
+    "RC",
+    "ORBS"
+   ],
    "family": "factor_mine",
    "name": "union_rsi_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "ANGO",
+    "GLAS"
+   ],
    "family": "factor_mine",
    "name": "union_rsi_os_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "ANGO",
+    "GLAS"
+   ],
    "family": "factor_mine",
    "name": "union_rsi_os_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "ANGO",
+    "GLAS"
+   ],
    "family": "factor_mine",
    "name": "union_rsi_os_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2794,7 +4589,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_rsi_os_macd_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2803,70 +4598,133 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_rsi_os_macd_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "MAX",
+    "ORBS",
+    "NRG",
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX",
+    "HAE"
+   ],
    "family": "factor_mine",
    "name": "union_vol_ab_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "MAX",
+    "ORBS",
+    "NRG",
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX",
+    "HAE"
+   ],
    "family": "factor_mine",
    "name": "union_vol_ab_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "BYRN",
+    "MAX",
+    "RC",
+    "SDEV",
+    "ANGO",
+    "ORBS",
+    "NRG"
+   ],
    "family": "factor_mine",
    "name": "union_vol_g_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "BYRN",
+    "MAX",
+    "RC",
+    "SDEV",
+    "ANGO",
+    "ORBS",
+    "NRG"
+   ],
    "family": "factor_mine",
    "name": "union_vol_g_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "DAL",
+    "BYRN",
+    "MAX",
+    "RC",
+    "SDEV",
+    "ANGO",
+    "ORBS",
+    "NRG"
+   ],
    "family": "factor_mine",
    "name": "union_vol_g_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "MAX",
+    "RC",
+    "ORBS",
+    "NRG",
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX"
+   ],
    "family": "factor_mine",
    "name": "union_vol_green_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "MAX",
+    "RC",
+    "ORBS",
+    "NRG",
+    "ONON",
+    "CEG",
+    "AMN",
+    "PCRX"
+   ],
    "family": "factor_mine",
    "name": "union_vol_green_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2875,7 +4733,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_missing_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2884,43 +4742,79 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_vol_missing_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "HOVR",
+    "DAL",
+    "FNKO",
+    "WING",
+    "ONON",
+    "SDEV"
+   ],
    "family": "factor_mine",
    "name": "union_w_hot_candle_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "KSS",
+    "SUJA",
+    "HOVR",
+    "DAL",
+    "FNKO",
+    "WING",
+    "ONON",
+    "SDEV"
+   ],
    "family": "factor_mine",
    "name": "union_w_hot_candle_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SUJA",
+    "KSS",
+    "DAL",
+    "HOVR",
+    "SDEV",
+    "CEG",
+    "PACS",
+    "ONON"
+   ],
    "family": "factor_mine",
    "name": "union_w_hot_cond_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "SUJA",
+    "KSS",
+    "DAL",
+    "HOVR",
+    "SDEV",
+    "CEG",
+    "PACS",
+    "ONON"
+   ],
    "family": "factor_mine",
    "name": "union_w_hot_cond_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2929,7 +4823,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2938,7 +4832,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h2",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2947,7 +4841,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2956,7 +4850,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_any_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2965,7 +4859,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2974,7 +4868,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h2",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2983,7 +4877,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -2992,7 +4886,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -3001,7 +4895,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_both_n4_h5_s12",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -3010,7 +4904,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_coil_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -3019,7 +4913,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_coil_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -3028,7 +4922,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -3037,7 +4931,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -3046,7 +4940,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -3055,7 +4949,7 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_yday_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
@@ -3064,55 +4958,460 @@
    "buys": [],
    "family": "factor_mine",
    "name": "union_white_yday_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BYRN",
+    "MAX",
+    "FLUT",
+    "RC",
+    "PCRX",
+    "HAE",
+    "MANE",
+    "IPSC"
+   ],
    "family": "factor_mine",
    "name": "yday_gainer_h1",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BYRN",
+    "MAX",
+    "FLUT",
+    "RC",
+    "PCRX",
+    "HAE",
+    "MANE",
+    "IPSC"
+   ],
    "family": "factor_mine",
    "name": "yday_gainer_h3",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BYRN",
+    "MAX",
+    "FLUT",
+    "RC",
+    "PCRX",
+    "HAE",
+    "MANE",
+    "IPSC"
+   ],
    "family": "factor_mine",
    "name": "yday_gainer_h5",
-   "note": "missing 01_daily/general/2026-10-09_predict.md; no sealed ticket",
+   "note": "missing 01_daily/general/2026-10-09_predict.md; would-buy at 09:30; sells need cash-book lots \u00b7 look look",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "HITI",
+    "CON",
+    "AMN",
+    "PACS",
+    "ASTH",
+    "NTAP",
+    "MQ",
+    "BAND"
+   ],
+   "family": "stock_book",
+   "name": "stock_book_1d",
+   "note": "weighted ranker horizon",
+   "sells": [
+    "OKLO",
+    "NEOV",
+    "FCEL",
+    "NNDM",
+    "ENVX",
+    "EOSE",
+    "TE",
+    "NRGV"
+   ],
+   "source": "data/day_board/2026-10-09_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "HITI",
+    "CON",
+    "AMN",
+    "PACS",
+    "ASTH",
+    "NTAP",
+    "MQ",
+    "BAND"
+   ],
+   "family": "paper",
+   "name": "1d_top",
+   "note": "paper sleeve = same ranker list",
+   "sells": [
+    "OKLO",
+    "NEOV",
+    "FCEL",
+    "NNDM",
+    "ENVX",
+    "EOSE",
+    "TE",
+    "NRGV"
+   ],
+   "source": "data/day_board/2026-10-09_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "CBRL",
+    "PRCH",
+    "CDNA",
+    "PACS",
+    "AVPT",
+    "PVH",
+    "FIGS",
+    "LAUR",
+    "BLFS",
+    "SHOO",
+    "ETON",
+    "CNK",
+    "MQ",
+    "SLDE",
+    "OLLI"
+   ],
+   "family": "stock_book",
+   "name": "stock_book_3d",
+   "note": "weighted ranker horizon",
+   "sells": [
+    "GH",
+    "SBS",
+    "ROIV",
+    "INTC",
+    "RVMD",
+    "BIDU",
+    "AIRS",
+    "PCT",
+    "IBRX",
+    "TIGO",
+    "IBM",
+    "BNTX",
+    "WVE",
+    "IMNM",
+    "ALMS"
+   ],
+   "source": "data/day_board/2026-10-09_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "CBRL",
+    "PRCH",
+    "CDNA",
+    "PACS",
+    "AVPT",
+    "PVH",
+    "FIGS",
+    "LAUR",
+    "BLFS",
+    "SHOO",
+    "ETON",
+    "CNK",
+    "MQ",
+    "SLDE",
+    "OLLI"
+   ],
+   "family": "paper",
+   "name": "3d_top",
+   "note": "paper sleeve = same ranker list",
+   "sells": [
+    "GH",
+    "SBS",
+    "ROIV",
+    "INTC",
+    "RVMD",
+    "BIDU",
+    "AIRS",
+    "PCT",
+    "IBRX",
+    "TIGO",
+    "IBM",
+    "BNTX",
+    "WVE",
+    "IMNM",
+    "ALMS"
+   ],
+   "source": "data/day_board/2026-10-09_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "CBRL",
+    "PRCH",
+    "CDNA",
+    "PACS",
+    "AVPT",
+    "PVH",
+    "FIGS",
+    "LAUR",
+    "BLFS",
+    "SHOO",
+    "ETON",
+    "CNK",
+    "SLDE",
+    "MQ",
+    "OLLI"
+   ],
+   "family": "stock_book",
+   "name": "stock_book_1w",
+   "note": "weighted ranker horizon",
+   "sells": [
+    "GH",
+    "SBS",
+    "ROIV",
+    "RVMD",
+    "BIDU",
+    "INTC",
+    "PCT",
+    "AIRS",
+    "IMNM",
+    "WVE",
+    "BNTX",
+    "ALMS",
+    "TMC",
+    "TYRA",
+    "IBM"
+   ],
+   "source": "data/day_board/2026-10-09_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "CBRL",
+    "PRCH",
+    "CDNA",
+    "PACS",
+    "AVPT",
+    "PVH",
+    "FIGS",
+    "LAUR",
+    "BLFS",
+    "SHOO",
+    "ETON",
+    "CNK",
+    "SLDE",
+    "MQ",
+    "OLLI"
+   ],
+   "family": "paper",
+   "name": "1w_top",
+   "note": "paper sleeve = same ranker list",
+   "sells": [
+    "GH",
+    "SBS",
+    "ROIV",
+    "RVMD",
+    "BIDU",
+    "INTC",
+    "PCT",
+    "AIRS",
+    "IMNM",
+    "WVE",
+    "BNTX",
+    "ALMS",
+    "TMC",
+    "TYRA",
+    "IBM"
+   ],
+   "source": "data/day_board/2026-10-09_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "CBRL",
+    "PRCH",
+    "CDNA",
+    "PACS",
+    "AVPT",
+    "PVH",
+    "FIGS",
+    "LAUR",
+    "SHOO",
+    "BLFS",
+    "ETON",
+    "CNK",
+    "SLDE",
+    "RRC",
+    "MQ"
+   ],
+   "family": "stock_book",
+   "name": "stock_book_2w",
+   "note": "weighted ranker horizon",
+   "sells": [
+    "GH",
+    "SBS",
+    "ROIV",
+    "BIDU",
+    "RVMD",
+    "PCT",
+    "IMNM",
+    "WVE",
+    "AIRS",
+    "BNTX",
+    "ALMS",
+    "INTC",
+    "TMC",
+    "TYRA",
+    "PRM"
+   ],
+   "source": "data/day_board/2026-10-09_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "CBRL",
+    "PRCH",
+    "CDNA",
+    "PACS",
+    "AVPT",
+    "PVH",
+    "FIGS",
+    "LAUR",
+    "SHOO",
+    "BLFS",
+    "ETON",
+    "CNK",
+    "SLDE",
+    "RRC",
+    "MQ"
+   ],
+   "family": "paper",
+   "name": "2w_top",
+   "note": "paper sleeve = same ranker list",
+   "sells": [
+    "GH",
+    "SBS",
+    "ROIV",
+    "BIDU",
+    "RVMD",
+    "PCT",
+    "IMNM",
+    "WVE",
+    "AIRS",
+    "BNTX",
+    "ALMS",
+    "INTC",
+    "TMC",
+    "TYRA",
+    "PRM"
+   ],
+   "source": "data/day_board/2026-10-09_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "CBRL",
+    "PRCH",
+    "CDNA",
+    "PACS",
+    "AVPT",
+    "FIGS",
+    "PVH",
+    "LAUR",
+    "SHOO",
+    "BLFS",
+    "ETON",
+    "SLDE",
+    "CNK",
+    "RRC",
+    "TAL"
+   ],
+   "family": "stock_book",
+   "name": "stock_book_1m",
+   "note": "weighted ranker horizon",
+   "sells": [
+    "GH",
+    "SBS",
+    "ROIV",
+    "BIDU",
+    "PCT",
+    "IMNM",
+    "RVMD",
+    "WVE",
+    "TMC",
+    "BNTX",
+    "ALMS",
+    "AIRS",
+    "PRM",
+    "TYRA",
+    "LWLG"
+   ],
+   "source": "data/day_board/2026-10-09_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "CBRL",
+    "PRCH",
+    "CDNA",
+    "PACS",
+    "AVPT",
+    "FIGS",
+    "PVH",
+    "LAUR",
+    "SHOO",
+    "BLFS",
+    "ETON",
+    "SLDE",
+    "CNK",
+    "RRC",
+    "TAL"
+   ],
+   "family": "paper",
+   "name": "1m_top",
+   "note": "paper sleeve = same ranker list",
+   "sells": [
+    "GH",
+    "SBS",
+    "ROIV",
+    "BIDU",
+    "PCT",
+    "IMNM",
+    "RVMD",
+    "WVE",
+    "TMC",
+    "BNTX",
+    "ALMS",
+    "AIRS",
+    "PRM",
+    "TYRA",
+    "LWLG"
+   ],
+   "source": "data/day_board/2026-10-09_strategy_tickets.json",
+   "status": "OK"
+  },
+  {
+   "buys": [
+    "SMMT",
+    "PACS",
+    "BLFS",
+    "AMN"
+   ],
    "family": "flatten_robust",
    "name": "flatten_robust",
-   "note": "no sealed ticket",
+   "note": "live flatten_robust card",
    "sells": [],
    "source": "data/day_board/2026-10-09_strategy_tickets.json",
-   "status": "MISSING"
-  },
-  {
-   "buys": [],
-   "family": "paper",
-   "name": "paper",
-   "note": "no sealed ticket",
-   "sells": [],
-   "source": "data/day_board/2026-10-09_strategy_tickets.json",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [
@@ -6591,34 +8890,55 @@
    "buys": [],
    "family": "theme_radar",
    "name": "theme_radar:fpe_delta_t3_earn_today_3d",
-   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). no plan file yet (due ~05:20 ET, MISSING at 09:00 ET)",
+   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). plan built 05:23 ET; 16 short(s) at the open",
    "research_only": true,
    "sells": [],
-   "shorts": [],
+   "shorts": [
+    "BLK",
+    "DAL",
+    "DPZ",
+    "ERIC",
+    "FBK",
+    "JBHT",
+    "JNJ",
+    "MAN",
+    "MRSH",
+    "PEP",
+    "PGR",
+    "PLD",
+    "RF",
+    "TRV",
+    "WFC",
+    "WSE"
+   ],
    "source": "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/main/research/shadow_log/plans/plan_2026-10-09.csv",
-   "status": "WAIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "theme_radar",
    "name": "theme_radar:fresh_dcp_t1_ep_ge03_2d",
-   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). no plan file yet (due ~05:20 ET, MISSING at 09:00 ET)",
+   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). plan built 05:23 ET; 1 short(s) at the open",
    "research_only": true,
    "sells": [],
-   "shorts": [],
+   "shorts": [
+    "FNGR"
+   ],
    "source": "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/main/research/shadow_log/plans/plan_2026-10-09.csv",
-   "status": "WAIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "theme_radar",
    "name": "theme_radar:fresh_dcp_t1_avoid_ah_3d",
-   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). no plan file yet (due ~05:20 ET, MISSING at 09:00 ET)",
+   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). plan built 05:23 ET; 1 short(s) at the open",
    "research_only": true,
    "sells": [],
-   "shorts": [],
+   "shorts": [
+    "FNGR"
+   ],
    "source": "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/main/research/shadow_log/plans/plan_2026-10-09.csv",
-   "status": "WAIT"
+   "status": "OK"
   }
  ]
 }
