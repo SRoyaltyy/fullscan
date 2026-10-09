@@ -11038,5 +11038,165 @@
     },
     "delta": -0.457,
     "dry_run": false
+  },
+  {
+    "at": "2026-10-09T06:58:27-04:00",
+    "lesson": "a-fresh-top-holding-legal-regulatory-catalyst-e-g-a-trial-op.md",
+    "topic": "sector:Communication Services",
+    "active_since": "2026-08-19",
+    "before": {
+      "hit": 0.429,
+      "n": 7
+    },
+    "after": {
+      "hit": 0.0,
+      "n": 7
+    },
+    "delta": -0.429,
+    "dry_run": false
+  },
+  {
+    "at": "2026-10-09T06:58:27-04:00",
+    "lesson": "a-cyclical-industrials-etf-xli-like-posts-an-all-zero-s0-s4.md",
+    "topic": "sector:Industrials",
+    "active_since": "2026-09-17",
+    "before": {
+      "hit": 0.714,
+      "n": 7
+    },
+    "after": {
+      "hit": 0.286,
+      "n": 7
+    },
+    "delta": -0.428,
+    "dry_run": false
+  },
+  {
+    "at": "2026-10-09T06:58:27-04:00",
+    "lesson": "a-defensive-bond-proxy-sector-utilities-faces-a-risk-off-tap.md",
+    "topic": "sector:Utilities",
+    "active_since": "2026-08-19",
+    "before": {
+      "hit": 0.571,
+      "n": 7
+    },
+    "after": {
+      "hit": 0.143,
+      "n": 7
+    },
+    "delta": -0.428,
+    "dry_run": false
+  },
+  {
+    "at": "2026-10-09T06:58:27-04:00",
+    "lesson": "a-healthcare-xlv-call-with-s0-0-flat-mixed-es-nq-leftover-te.md",
+    "topic": "sector:Healthcare",
+    "active_since": "2026-08-28",
+    "before": {
+      "hit": 0.714,
+      "n": 7
+    },
+    "after": {
+      "hit": 0.286,
+      "n": 7
+    },
+    "delta": -0.428,
+    "dry_run": false
+  },
+  {
+    "at": "2026-10-09T06:58:27-04:00",
+    "lesson": "a-live-macro-shock-oil-geopolitical-is-present-at-the-open-t.md",
+    "topic": "sector:Consumer Cyclical",
+    "active_since": "2026-09-10",
+    "before": {
+      "hit": 0.571,
+      "n": 7
+    },
+    "after": {
+      "hit": 0.143,
+      "n": 7
+    },
+    "delta": -0.428,
+    "dry_run": false
+  },
+  {
+    "at": "2026-10-09T06:58:27-04:00",
+    "lesson": "a-long-duration-rate-sensitive-sector-reits-faces-a-live-rat.md",
+    "topic": "sector:Real Estate",
+    "active_since": "2026-08-19",
+    "before": {
+      "hit": 0.714,
+      "n": 7
+    },
+    "after": {
+      "hit": 0.286,
+      "n": 7
+    },
+    "delta": -0.428,
+    "dry_run": false
+  },
+  {
+    "at": "2026-10-09T06:58:27-04:00",
+    "lesson": "a-single-macro-shock-oil-rates-is-scored-as-multiple-indepen.md",
+    "topic": "sector:Consumer Cyclical",
+    "active_since": "2026-09-10",
+    "before": {
+      "hit": 0.571,
+      "n": 7
+    },
+    "after": {
+      "hit": 0.143,
+      "n": 7
+    },
+    "delta": -0.428,
+    "dry_run": false
+  },
+  {
+    "at": "2026-10-09T06:58:27-04:00",
+    "lesson": "a-technology-xlk-down-call-has-strongly-negative-leading-com.md",
+    "topic": "sector:Technology",
+    "active_since": "2026-08-19",
+    "before": {
+      "hit": 0.571,
+      "n": 7
+    },
+    "after": {
+      "hit": 0.143,
+      "n": 7
+    },
+    "delta": -0.428,
+    "dry_run": false
+  },
+  {
+    "at": "2026-10-09T06:58:27-04:00",
+    "lesson": "sector-etf-prediction-where-the-prior-session-had-a-modest-p.md",
+    "topic": "sector:Healthcare",
+    "active_since": "2026-09-04",
+    "before": {
+      "hit": 0.714,
+      "n": 7
+    },
+    "after": {
+      "hit": 0.286,
+      "n": 7
+    },
+    "delta": -0.428,
+    "dry_run": false
+  },
+  {
+    "at": "2026-10-09T06:58:27-04:00",
+    "lesson": "sector-prediction-emits-flat-flat-when-broad-market-tape-is.md",
+    "topic": "sector:Healthcare",
+    "active_since": "2026-09-04",
+    "before": {
+      "hit": 0.714,
+      "n": 7
+    },
+    "after": {
+      "hit": 0.286,
+      "n": 7
+    },
+    "delta": -0.428,
+    "dry_run": false
   }
 ]
