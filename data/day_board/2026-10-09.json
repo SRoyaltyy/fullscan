@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T12:49:44.872286-04:00",
+  "generated_at": "2026-10-09T12:49:50.241891-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -3945,7 +3945,7 @@
       "date": "2026-10-09",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-09T12:49:43.849206-04:00",
+      "at": "2026-10-09T12:49:49.219059-04:00",
       "files": [
         {
           "path": "03_scoreboard/PAPER_TRADING.md",
