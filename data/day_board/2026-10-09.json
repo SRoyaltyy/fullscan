@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T05:47:32.489929-04:00",
+  "generated_at": "2026-10-09T05:47:50.202377-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -734,10 +734,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5907",
-          "size": 2176899,
-          "said": "214 rows",
+          "size": 2213603,
+          "said": "223 rows",
           "bullets": [
-            "DVN, LNG, PR, RRC, CNQ, SM, TAL, CHRD"
+            "PLMR, GLBE, VCTR, NU, ANF, SKWD, AAMI, RGA"
           ]
         },
         {
@@ -812,9 +812,9 @@
           "bullets": []
         }
       ],
-      "said": "214 rows",
+      "said": "223 rows",
       "bullets": [
-        "DVN, LNG, PR, RRC, CNQ"
+        "PLMR, GLBE, VCTR, NU, ANF"
       ]
     },
     {
@@ -1589,6 +1589,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, SOLS, HASI, RMD, OSCR \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SHEL, BJ, COST, ISRG, ABBV"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T05:47:49.411800-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-09_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9271,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-09_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5006,
+          "preview": "# Weather report \u2014 2026-10-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
