@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-26.85%** ($7,315) · signal-only (no cash/fees) was -22.27%. Starts YES **0/30**. Fills 167 · skips 128 · realized $-1374.07.
+Cash book **-26.86%** ($7,314) · signal-only (no cash/fees) was -22.27%. Starts YES **0/30**. Fills 169 · skips 128 · realized $-1374.07.
 
 ## How this sleeve decides (like you are 10)
 
@@ -322,6 +322,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,075.14 | ▼ close $7,315.44 vs 09:30 $7,331.00 (session -0.16) | 16:00 close · cash $6,075.14 · equity $7,315.44 vs 09:30 $7,331.00 (-15.56; session marks -0.16) · 3 name(s) marked open→close (per-name table). AVPT×8 09:30 $14.51 → close $14.28 -1.84; BLFS×26 09:30 $38.61 → close $38.61 +0.00; TOST×4 09:30 $30.13 → close $30.55 +1.68 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,075.14 | ▲ 09:30 equity $7,315.44 vs yday $7,315.44 (+0.00) | 09:30 open · cash $6,075.14 (unchanged overnight, no fees) · equity $7,315.44 vs prior close $7,315.44 (+0.00) · 3 name(s) re-marked at the open (per-name table). AVPT×8 yday $14.28 → 09:30 $14.28 +0.00; BLFS×26 yday $38.61 → 09:30 $38.61 +0.00; TOST×4 yday $30.55 → 09:30 $30.55 +0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,075.14 | ▲ close $7,315.44 vs 09:30 $7,315.44 (session +0.00) | 16:00 close · cash $6,075.14 · equity $7,315.44 vs 09:30 $7,315.44 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). AVPT×8 09:30 $14.28 → close $14.28 +0.00; BLFS×26 09:30 $38.61 → close $38.61 +0.00; TOST×4 09:30 $30.55 → close $30.55 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,075.14 | ▲ 09:30 equity $7,316.96 vs yday $7,315.44 (+1.52) | 09:30 open · cash $6,075.14 (unchanged overnight, no fees) · equity $7,316.96 vs prior close $7,315.44 (+1.52) · 3 name(s) re-marked at the open (per-name table). AVPT×8 yday $14.28 → 09:30 $14.44 +1.28; BLFS×26 yday $38.61 → 09:30 $38.61 +0.00; TOST×4 yday $30.55 → 09:30 $30.61 +0.24 | — |
+| 2026-10-09 09:30 ET | **SELL** | `AVPT` | 8 | $14.44 | $1.20 | $-5.04 | $6,189.46 | ▼ -5.04 after sell → book $7,315.76; vs 09:30 mark -1.20 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **SELL** | `TOST` | 4 | $30.61 | $1.26 | $-0.31 | $6,310.64 | ▼ -0.31 after sell → book $7,314.50; vs 09:30 mark -1.26 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,310.64 | ▲ close $7,314.50 vs 09:30 $7,316.96 (session +0.00) | 16:00 close · cash $6,310.64 · equity $7,314.50 vs 09:30 $7,316.96 (-2.46; session marks +0.00) · 1 name(s) marked open→close (per-name table). BLFS×26 09:30 $38.61 → close $38.61 +0.00 | — |
 
 ## Not taken
 

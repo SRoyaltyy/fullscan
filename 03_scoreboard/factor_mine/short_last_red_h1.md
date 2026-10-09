@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **+1.07%** ($10,107) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 335 · skips 107 · realized $-717.78.
+Cash book **+2.87%** ($10,287) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 343 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -485,6 +485,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,596.50 | ▲ close $10,107.22 vs 09:30 $10,041.08 (session +86.24) | 16:00 close · cash $10,596.50 · equity $10,107.22 vs 09:30 $10,041.08 (+66.14; session marks +86.24) · 1 name(s) marked open→close (per-name table). SDEV×176 09:30 $3.27 → close $2.78 +86.24 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,596.50 | ▲ 09:30 equity $10,107.22 vs yday $10,107.22 (+0.00) | 09:30 open · cash $10,596.50 (unchanged overnight, no fees) · equity $10,107.22 vs prior close $10,107.22 (+0.00) · 1 name(s) re-marked at the open (per-name table). SDEV×176 yday $2.78 → 09:30 $2.78 -0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,596.50 | ▲ close $10,107.22 vs 09:30 $10,107.22 (session +0.00) | 16:00 close · cash $10,596.50 · equity $10,107.22 vs 09:30 $10,107.22 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). SDEV×176 09:30 $2.78 → close $2.78 -0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,596.50 | ▲ 09:30 equity $10,246.26 vs yday $10,107.22 (+139.04) | 09:30 open · cash $10,596.50 (unchanged overnight, no fees) · equity $10,246.26 vs prior close $10,107.22 (+139.04) · 1 name(s) re-marked at the open (per-name table). SDEV×176 yday $2.78 → 09:30 $1.99 +139.04 | — |
+| 2026-10-09 09:30 ET | **COVER** | `SDEV` | 176 | $1.99 | $2.52 | $+257.15 | $10,243.74 | ▲ +257.15 after sell → book $10,243.74; vs 09:30 mark -2.52 | exit unpriced hold on first bar after 3 sess | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `ANGO` | 66 | $11.06 | $2.23 | — | $10,971.47 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-25.7; leftover $731.70 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `PACB` | 311 | $2.35 | $4.09 | — | $11,698.23 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-8.4; leftover $731.70 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `GLAS` | 166 | $4.39 | $2.55 | — | $12,424.42 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-17.1; leftover $731.70 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `AAOI` | 6 | $112.64 | $2.05 | — | $13,098.22 | — | last bar red; gate last_red=True; list yday_mover; ret5=-1.3; leftover $731.70 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `SHAZ` | 19 | $38.35 | $2.09 | — | $13,824.78 | — | last bar red; gate last_red=True; list yday_mover; ret5=-21.7; leftover $731.70 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `MXL` | 7 | $97.09 | $2.05 | — | $14,502.36 | — | last bar red; gate last_red=True; list yday_mover; ret5=+1.7; leftover $731.70 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `NUAI` | 149 | $4.91 | $2.49 | — | $15,230.71 | — | last bar red; gate last_red=True; list yday_mover; ret5=-24.2; leftover $731.70 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,230.71 | ▲ close $10,287.42 vs 09:30 $10,246.26 (session +61.22) | 16:00 close · cash $15,230.71 · equity $10,287.42 vs 09:30 $10,246.26 (+41.16; session marks +61.22) · 7 name(s) marked open→close (per-name table). ANGO×66 09:30 $11.06 → close $11.52 -30.36; PACB×311 09:30 $2.35 → close $2.33 +6.22; GLAS×166 09:30 $4.39 → close $4.26 +21.58; AAOI×6 09:30 $112.64 → close $109.64 +18.00; SHAZ×19 09:30 $38.35 → close $37.93 +7.98; MXL×7 09:30 $97.09 → close $96.16 +6.51; NUAI×149 09:30 $4.91 → close $4.70 +31.29 | — |
 
 ## Not taken
 

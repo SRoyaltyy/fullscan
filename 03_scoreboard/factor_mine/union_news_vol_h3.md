@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-32.83%** ($6,717) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 108 · skips 133 · realized $-1334.78.
+Cash book **-34.63%** ($6,537) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 110 · skips 133 · realized $-1334.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -262,6 +262,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $141.88 | ▼ close $6,716.83 vs 09:30 $6,925.13 (session -208.23) | 16:00 close · cash $141.88 · equity $6,716.83 vs 09:30 $6,925.13 (-208.30; session marks -208.23) · 2 name(s) marked open→close (per-name table). ALVO×645 09:30 $6.10 → close $5.85 -161.25; TWST×18 09:30 $158.26 → close $155.65 -46.98 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $141.88 | ▲ 09:30 equity $6,716.83 vs yday $6,716.83 (+0.00) | 09:30 open · cash $141.88 (unchanged overnight, no fees) · equity $6,716.83 vs prior close $6,716.83 (+0.00) · 2 name(s) re-marked at the open (per-name table). ALVO×645 yday $5.85 → 09:30 $5.85 +0.00; TWST×18 yday $155.65 → 09:30 $155.65 +0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $141.88 | ▲ close $6,716.83 vs 09:30 $6,716.83 (session +0.00) | 16:00 close · cash $141.88 · equity $6,716.83 vs 09:30 $6,716.83 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). ALVO×645 09:30 $5.85 → close $5.85 +0.00; TWST×18 09:30 $155.65 → close $155.65 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $141.88 | ▼ 09:30 equity $6,547.45 vs yday $6,716.83 (-169.38) | 09:30 open · cash $141.88 (unchanged overnight, no fees) · equity $6,547.45 vs prior close $6,716.83 (-169.38) · 2 name(s) re-marked at the open (per-name table). ALVO×645 yday $5.85 → 09:30 $5.67 -116.10; TWST×18 yday $155.65 → 09:30 $152.69 -53.28 | — |
+| 2026-10-09 09:30 ET | **SELL** | `ALVO` | 645 | $5.67 | $8.46 | $-274.78 | $3,790.57 | ▼ -274.78 after sell → book $6,538.99; vs 09:30 mark -8.46 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **SELL** | `TWST` | 18 | $152.69 | $2.08 | $-1027.60 | $6,536.92 | ▼ -1,027.60 after sell → book $6,536.92; vs 09:30 mark -2.07 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,536.92 | ▲ close $6,536.92 vs 09:30 $6,547.45 (session +0.00) | 16:00 close · cash $6,536.92 · no lots left · equity $6,536.92. | — |
 
 ## Not taken
 

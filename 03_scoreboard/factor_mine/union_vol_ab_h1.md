@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-7.05%** ($9,295) · signal-only (no cash/fees) was +53.27%. Starts YES **26/30**. Fills 288 · skips 65 · realized $+1139.59.
+Cash book **-8.02%** ($9,198) · signal-only (no cash/fees) was +53.27%. Starts YES **26/30**. Fills 296 · skips 65 · realized $+1139.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -442,6 +442,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,295.32 | ▲ close $9,295.32 vs 09:30 $9,313.63 (session +0.00) | 16:00 close · cash $9,295.32 · no lots left · equity $9,295.32. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,295.32 | ▲ 09:30 equity $9,295.32 vs yday $9,295.32 (+0.00) | 09:30 open · cash $9,295.32 · no holdings · equity $9,295.32 vs prior close $9,295.32 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,295.32 | ▲ close $9,295.32 vs 09:30 $9,295.32 (session +0.00) | 16:00 close · cash $9,295.32 · no lots left · equity $9,295.32. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,295.32 | ▲ 09:30 equity $9,295.32 vs yday $9,295.32 (+0.00) | 09:30 open · cash $9,295.32 · no holdings · equity $9,295.32 vs prior close $9,295.32 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 31 | $36.33 | $2.08 | — | $8,167.01 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $1161.91 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HAE` | 9 | $119.81 | $2.02 | — | $7,086.70 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $1161.91 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ADCT` | 735 | $1.58 | $9.48 | — | $5,915.92 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $1161.91 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `MAX` | 108 | $10.68 | $2.31 | — | $4,760.16 | — | combo gate; gate ab=good,vol=good; list yday_gainer,ohlc_hot; 🔵; ret5=+10.3; leftover $1161.91 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `NRDS` | 118 | $9.78 | $2.34 | — | $3,603.78 | — | combo gate; gate ab=good,vol=good; list yday_gainer,ohlc_hot; 🔵; ret5=+14.2; leftover $1161.91 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `GAU` | 540 | $2.15 | $6.97 | — | $2,435.81 | — | combo gate; gate ab=good,vol=good; list yday_gainer; 🔵; ret5=+7.7; leftover $1161.91 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ECO` | 12 | $93.64 | $2.03 | — | $1,310.11 | — | combo gate; gate ab=good,vol=good; list yday_gainer,ohlc_hot; ret5=+10.1; leftover $1161.91 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ORBS` | 1262 | $0.92 | $15.40 | — | $133.67 | — | combo gate; gate ab=good,vol=good; list yday_mover; 🔵; ret5=-19.2; leftover $1161.91 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $133.67 | ▼ close $9,198.08 vs 09:30 $9,295.32 (session -54.61) | 16:00 close · cash $133.67 · equity $9,198.08 vs 09:30 $9,295.32 (-97.24; session marks -54.61) · 8 name(s) marked open→close (per-name table). PCRX×31 09:30 $36.33 → close $36.31 -0.62; HAE×9 09:30 $119.81 → close $118.69 -10.08; ADCT×735 09:30 $1.58 → close $1.73 +110.25; MAX×108 09:30 $10.68 → close $10.09 -63.72; NRDS×118 09:30 $9.78 → close $9.74 -4.72; GAU×540 09:30 $2.15 → close $2.19 +21.60; ECO×12 09:30 $93.64 → close $93.11 -6.36; ORBS×1262 09:30 $0.92 → close $0.84 -100.96 | — |
 
 ## Not taken
 

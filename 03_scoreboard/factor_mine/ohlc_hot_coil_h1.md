@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-17.56%** ($8,244) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 211 · skips 74 · realized $-1849.08.
+Cash book **-19.23%** ($8,078) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 219 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -365,6 +365,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,244.01 | ▲ close $8,244.01 vs 09:30 $8,246.17 (session +0.00) | 16:00 close · cash $8,244.01 · no lots left · equity $8,244.01. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,244.01 | ▲ 09:30 equity $8,244.01 vs yday $8,244.01 (+0.00) | 09:30 open · cash $8,244.01 · no holdings · equity $8,244.01 vs prior close $8,244.01 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,244.01 | ▲ close $8,244.01 vs 09:30 $8,244.01 (session +0.00) | 16:00 close · cash $8,244.01 · no lots left · equity $8,244.01. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,244.01 | ▲ 09:30 equity $8,244.01 vs yday $8,244.01 (+0.00) | 09:30 open · cash $8,244.01 · no holdings · equity $8,244.01 vs prior close $8,244.01 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `XRPN` | 49 | $20.88 | $2.14 | — | $7,218.75 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+3.3; leftover $1030.50 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `FIGS` | 68 | $14.99 | $2.19 | — | $6,197.24 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+6.4; leftover $1030.50 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `FRO` | 18 | $56.16 | $2.04 | — | $5,184.32 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+9.2; leftover $1030.50 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HAFN` | 97 | $10.56 | $2.28 | — | $4,157.71 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+7.7; leftover $1030.50 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `PBF` | 11 | $88.29 | $2.02 | — | $3,184.50 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+8.5; leftover $1030.50 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `STZ` | 8 | $123.25 | $2.01 | — | $2,196.49 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+9.4; leftover $1030.50 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `MMS` | 17 | $58.29 | $2.04 | — | $1,203.52 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.8; leftover $1030.50 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `JANX` | 55 | $18.42 | $2.15 | — | $188.26 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+9.1; leftover $1030.50 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $188.26 | ▼ close $8,077.52 vs 09:30 $8,244.01 (session -149.60) | 16:00 close · cash $188.26 · equity $8,077.52 vs 09:30 $8,244.01 (-166.49; session marks -149.60) · 8 name(s) marked open→close (per-name table). XRPN×49 09:30 $20.88 → close $17.09 -185.71; FIGS×68 09:30 $14.99 → close $15.78 +53.72; FRO×18 09:30 $56.16 → close $56.10 -1.08; HAFN×97 09:30 $10.56 → close $10.72 +15.52; PBF×11 09:30 $88.29 → close $84.27 -44.22; STZ×8 09:30 $123.25 → close $122.64 -4.88; MMS×17 09:30 $58.29 → close $59.39 +18.70; JANX×55 09:30 $18.42 → close $18.39 -1.65 | — |
 
 ## Not taken
 

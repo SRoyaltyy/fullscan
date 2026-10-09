@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-31.67%** ($6,833) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 211 · skips 65 · realized $-814.48.
+Cash book **-33.65%** ($6,635) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 214 · skips 65 · realized $-814.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -364,6 +364,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,965.64 | ▼ close $6,833.44 vs 09:30 $6,872.62 (session -31.32) | 16:00 close · cash $4,965.64 · equity $6,833.44 vs 09:30 $6,872.62 (-39.18; session marks -31.32) · 1 name(s) marked open→close (per-name table). TWST×12 09:30 $158.26 → close $155.65 -31.32 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,965.64 | ▲ 09:30 equity $6,833.44 vs yday $6,833.44 (+0.00) | 09:30 open · cash $4,965.64 (unchanged overnight, no fees) · equity $6,833.44 vs prior close $6,833.44 (+0.00) · 1 name(s) re-marked at the open (per-name table). TWST×12 yday $155.65 → 09:30 $155.65 +0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,965.64 | ▲ close $6,833.44 vs 09:30 $6,833.44 (session +0.00) | 16:00 close · cash $4,965.64 · equity $6,833.44 vs 09:30 $6,833.44 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). TWST×12 09:30 $155.65 → close $155.65 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,965.64 | ▼ 09:30 equity $6,797.92 vs yday $6,833.44 (-35.52) | 09:30 open · cash $4,965.64 (unchanged overnight, no fees) · equity $6,797.92 vs prior close $6,833.44 (-35.52) · 1 name(s) re-marked at the open (per-name table). TWST×12 yday $155.65 → 09:30 $152.69 -35.52 | — |
+| 2026-10-09 09:30 ET | **SELL** | `TWST` | 12 | $152.69 | $2.05 | $-686.40 | $6,795.87 | ▼ -686.40 after sell → book $6,795.87; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **BUY** | `GENI` | 500 | $6.79 | $6.45 | — | $3,394.42 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+16.7; leftover $3397.93 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `FLUT` | 41 | $81.79 | $2.11 | — | $38.92 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer; ret5=+6.7; leftover $3397.93 | join🔴 sector🔴 gen🔴 news🟢 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $38.92 | ▼ close $6,634.90 vs 09:30 $6,797.92 (session -152.41) | 16:00 close · cash $38.92 · equity $6,634.90 vs 09:30 $6,797.92 (-163.02; session marks -152.41) · 2 name(s) marked open→close (per-name table). GENI×500 09:30 $6.79 → close $6.65 -70.00; FLUT×41 09:30 $81.79 → close $79.78 -82.41 | — |
 
 ## Not taken
 

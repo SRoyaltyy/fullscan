@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-13.87%** ($8,613) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 253 · skips 96 · realized $+387.41.
+Cash book **-15.45%** ($8,455) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 261 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -407,6 +407,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,613.10 | ▲ close $8,613.10 vs 09:30 $8,631.59 (session +0.00) | 16:00 close · cash $8,613.10 · no lots left · equity $8,613.10. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,613.10 | ▲ 09:30 equity $8,613.10 vs yday $8,613.10 (+0.00) | 09:30 open · cash $8,613.10 · no holdings · equity $8,613.10 vs prior close $8,613.10 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,613.10 | ▲ close $8,613.10 vs 09:30 $8,613.10 (session +0.00) | 16:00 close · cash $8,613.10 · no lots left · equity $8,613.10. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,613.10 | ▲ 09:30 equity $8,613.10 vs yday $8,613.10 (+0.00) | 09:30 open · cash $8,613.10 · no holdings · equity $8,613.10 vs prior close $8,613.10 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `FIGS` | 71 | $14.99 | $2.20 | — | $7,546.61 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+6.4; leftover $1076.64 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ONON` | 31 | $34.03 | $2.08 | — | $6,489.59 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+12.7; leftover $1076.64 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `FINV` | 341 | $3.15 | $4.40 | — | $5,411.05 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; 🔵; ret5=+4.0; leftover $1076.64 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `CSGP` | 35 | $30.02 | $2.10 | — | $4,358.25 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; ret5=+7.5; leftover $1076.64 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `XRPN` | 51 | $20.88 | $2.14 | — | $3,291.23 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+3.3; leftover $1076.64 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `FNKO` | 165 | $6.50 | $2.48 | — | $2,216.24 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+16.1; leftover $1076.64 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `GAU` | 500 | $2.15 | $6.45 | — | $1,134.79 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; 🔵; ret5=+7.7; leftover $1076.64 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `SG` | 112 | $9.60 | $2.33 | — | $57.27 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+10.3; leftover $1076.64 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $57.27 | ▼ close $8,455.10 vs 09:30 $8,613.10 (session -133.82) | 16:00 close · cash $57.27 · equity $8,455.10 vs 09:30 $8,613.10 (-158.00; session marks -133.82) · 8 name(s) marked open→close (per-name table). FIGS×71 09:30 $14.99 → close $15.78 +56.09; ONON×31 09:30 $34.03 → close $35.09 +32.86; FINV×341 09:30 $3.15 → close $3.06 -30.69; CSGP×35 09:30 $30.02 → close $29.67 -12.25; XRPN×51 09:30 $20.88 → close $17.09 -193.29; FNKO×165 09:30 $6.50 → close $6.44 -9.90; GAU×500 09:30 $2.15 → close $2.19 +20.00; SG×112 09:30 $9.60 → close $9.63 +3.36 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-15.13%** ($8,487) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 338 · skips 107 · realized $-305.80.
+Cash book **-13.75%** ($8,625) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 345 · skips 107 · realized $-305.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -486,6 +486,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,486.61 | ▲ close $8,486.61 vs 09:30 $8,520.26 (session +0.00) | 16:00 close · cash $8,486.61 · no lots left · equity $8,486.61. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,486.61 | ▲ 09:30 equity $8,486.61 vs yday $8,486.61 (+0.00) | 09:30 open · cash $8,486.61 · no holdings · equity $8,486.61 vs prior close $8,486.61 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,486.61 | ▲ close $8,486.61 vs 09:30 $8,486.61 (session +0.00) | 16:00 close · cash $8,486.61 · no lots left · equity $8,486.61. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,486.61 | ▲ 09:30 equity $8,486.61 vs yday $8,486.61 (+0.00) | 09:30 open · cash $8,486.61 · no holdings · equity $8,486.61 vs prior close $8,486.61 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `IPSC` | 830 | $1.46 | $10.71 | — | $7,264.10 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-9.3; leftover $1212.37 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ACRS` | 322 | $3.76 | $4.15 | — | $6,049.23 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.1; leftover $1212.37 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `SECZ` | 91 | $13.20 | $2.26 | — | $4,845.77 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-7.9; leftover $1212.37 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `CLVT` | 753 | $1.61 | $9.71 | — | $3,623.72 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+1.9; leftover $1212.37 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `COCO` | 21 | $55.38 | $2.05 | — | $2,458.69 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-1.8; leftover $1212.37 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `CATX` | 447 | $2.71 | $5.77 | — | $1,241.55 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-0.4; leftover $1212.37 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ERAS` | 78 | $15.42 | $2.22 | — | $36.57 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+6.0; leftover $1212.37 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $36.57 | ▲ close $8,625.43 vs 09:30 $8,486.61 (session +175.70) | 16:00 close · cash $36.57 · equity $8,625.43 vs 09:30 $8,486.61 (+138.82; session marks +175.70) · 7 name(s) marked open→close (per-name table). IPSC×830 09:30 $1.46 → close $1.47 +8.30; ACRS×322 09:30 $3.76 → close $3.83 +22.54; SECZ×91 09:30 $13.20 → close $13.82 +56.42; CLVT×753 09:30 $1.61 → close $1.61 +0.00; COCO×21 09:30 $55.38 → close $58.39 +63.21; CATX×447 09:30 $2.71 → close $2.66 -22.35; ERAS×78 09:30 $15.42 → close $16.03 +47.58 | — |
 
 ## Not taken
 

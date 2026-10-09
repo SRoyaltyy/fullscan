@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-34.61%** ($6,539) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 136 · skips 20 · realized $-3180.18.
+Cash book **-34.35%** ($6,565) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 138 · skips 20 · realized $-3180.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -288,6 +288,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,538.89 | ▲ close $6,538.89 vs 09:30 $6,563.34 (session +0.00) | 16:00 close · cash $6,538.89 · no lots left · equity $6,538.89. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,538.89 | ▲ 09:30 equity $6,538.89 vs yday $6,538.89 (+0.00) | 09:30 open · cash $6,538.89 · no holdings · equity $6,538.89 vs prior close $6,538.89 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,538.89 | ▲ close $6,538.89 vs 09:30 $6,538.89 (session +0.00) | 16:00 close · cash $6,538.89 · no lots left · equity $6,538.89. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,538.89 | ▲ 09:30 equity $6,538.89 vs yday $6,538.89 (+0.00) | 09:30 open · cash $6,538.89 · no holdings · equity $6,538.89 vs prior close $6,538.89 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `ANGO` | 295 | $11.06 | $3.81 | — | $3,272.38 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-25.7; leftover $3269.45 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `GLAS` | 743 | $4.39 | $9.58 | — | $1.03 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-17.1; leftover $3269.45 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.03 | ▲ close $6,564.61 vs 09:30 $6,538.89 (session +39.11) | 16:00 close · cash $1.03 · equity $6,564.61 vs 09:30 $6,538.89 (+25.72; session marks +39.11) · 2 name(s) marked open→close (per-name table). ANGO×295 09:30 $11.06 → close $11.52 +135.70; GLAS×743 09:30 $4.39 → close $4.26 -96.59 | — |
 
 ## Not taken
 

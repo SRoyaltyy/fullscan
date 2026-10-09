@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **+0.44%** ($10,044) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 226 · skips 270 · realized $-967.53.
+Cash book **+1.30%** ($10,131) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 228 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -376,6 +376,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,947.72 | ▲ close $10,043.80 vs 09:30 $9,994.66 (session +49.14) | 16:00 close · cash $14,947.72 · equity $10,043.80 vs 09:30 $9,994.66 (+49.14; session marks +49.14) · 1 name(s) marked open→close (per-name table). TRMD×126 09:30 $39.31 → close $38.92 +49.14 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,947.72 | ▲ 09:30 equity $10,043.80 vs yday $10,043.80 (+0.00) | 09:30 open · cash $14,947.72 (unchanged overnight, no fees) · equity $10,043.80 vs prior close $10,043.80 (+0.00) · 1 name(s) re-marked at the open (per-name table). TRMD×126 yday $38.92 → 09:30 $38.92 -0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,947.72 | ▲ close $10,043.80 vs 09:30 $10,043.80 (session +0.00) | 16:00 close · cash $14,947.72 · equity $10,043.80 vs 09:30 $10,043.80 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). TRMD×126 09:30 $38.92 → close $38.92 -0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,947.72 | ▼ 09:30 equity $9,910.24 vs yday $10,043.80 (-133.56) | 09:30 open · cash $14,947.72 (unchanged overnight, no fees) · equity $9,910.24 vs prior close $10,043.80 (-133.56) · 1 name(s) re-marked at the open (per-name table). TRMD×126 yday $38.92 → 09:30 $39.98 -133.56 | — |
+| 2026-10-09 09:30 ET | **COVER** | `TRMD` | 126 | $39.98 | $2.37 | $-83.05 | $9,907.87 | ▼ -83.05 after sell → book $9,907.87; vs 09:30 mark -2.37 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **SHORT** | `EQPT` | 313 | $15.81 | $4.26 | — | $14,852.14 | — | Clock-B #4 neg catalyst + weakness + failed recovery; gate clk_neg_weak_fail=True; list yday_mover; ret5=-10.4; leftover $4953.94 | join🔴 sector🟡 gen🔴 news🔴 digest🟡 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,852.14 | ▲ close $10,130.53 vs 09:30 $9,910.24 (session +226.92) | 16:00 close · cash $14,852.14 · equity $10,130.53 vs 09:30 $9,910.24 (+220.29; session marks +226.92) · 1 name(s) marked open→close (per-name table). EQPT×313 09:30 $15.81 → close $15.09 +226.92 | — |
 
 ## Not taken
 

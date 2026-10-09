@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-17.07%** ($8,293) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 106 · skips 88 · realized $-2389.72.
+Cash book **-16.20%** ($8,380) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 110 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -258,6 +258,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $124.47 | ▲ close $8,292.75 vs 09:30 $8,217.83 (session +75.16) | 16:00 close · cash $124.47 · equity $8,292.75 vs 09:30 $8,217.83 (+74.92; session marks +75.16) · 2 name(s) marked open→close (per-name table). NXH×2134 09:30 $1.81 → close $1.77 -74.69; STZ×37 09:30 $114.34 → close $118.39 +149.85 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $124.47 | ▲ 09:30 equity $8,292.75 vs yday $8,292.75 (+0.00) | 09:30 open · cash $124.47 (unchanged overnight, no fees) · equity $8,292.75 vs prior close $8,292.75 (+0.00) · 2 name(s) re-marked at the open (per-name table). NXH×2134 yday $1.77 → 09:30 $1.77 +0.00; STZ×37 yday $118.39 → 09:30 $118.39 +0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $124.47 | ▲ close $8,292.75 vs 09:30 $8,292.75 (session +0.00) | 16:00 close · cash $124.47 · equity $8,292.75 vs 09:30 $8,292.75 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). NXH×2134 09:30 $1.77 → close $1.77 +0.00; STZ×37 09:30 $118.39 → close $118.39 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $124.47 | ▲ 09:30 equity $8,376.54 vs yday $8,292.75 (+83.79) | 09:30 open · cash $124.47 (unchanged overnight, no fees) · equity $8,376.54 vs prior close $8,292.75 (+83.79) · 2 name(s) re-marked at the open (per-name table). NXH×2134 yday $1.77 → 09:30 $1.73 -96.03; STZ×37 yday $118.39 → 09:30 $123.25 +179.82 | — |
+| 2026-10-09 09:30 ET | **SELL** | `NXH` | 2134 | $1.73 | $27.91 | $-716.98 | $3,788.38 | ▼ -716.98 after sell → book $8,348.63; vs 09:30 mark -27.91 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **SELL** | `STZ` | 37 | $123.25 | $2.15 | $+344.29 | $8,346.48 | ▲ +344.29 after sell → book $8,346.48; vs 09:30 mark -2.15 | exit unpriced hold on first bar after 3 sess | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ANGO` | 377 | $11.06 | $4.86 | — | $4,172.00 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-25.7; leftover $4173.24 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `GLAS` | 947 | $4.39 | $12.22 | — | $2.45 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-17.1; leftover $4173.24 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.45 | ▲ close $8,379.71 vs 09:30 $8,376.54 (session +50.31) | 16:00 close · cash $2.45 · equity $8,379.71 vs 09:30 $8,376.54 (+3.17; session marks +50.31) · 2 name(s) marked open→close (per-name table). ANGO×377 09:30 $11.06 → close $11.52 +173.42; GLAS×947 09:30 $4.39 → close $4.26 -123.11 | — |
 
 ## Not taken
 

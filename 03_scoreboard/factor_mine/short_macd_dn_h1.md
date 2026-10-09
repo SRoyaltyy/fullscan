@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **+0.70%** ($10,070) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 346 · skips 108 · realized $-743.47.
+Cash book **-0.40%** ($9,960) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 354 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -496,6 +496,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,069.99 | ▲ close $10,069.99 vs 09:30 $10,095.68 (session +0.00) | 16:00 close · cash $10,069.99 · no lots left · equity $10,069.99. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,069.99 | ▲ 09:30 equity $10,069.99 vs yday $10,069.99 (+0.00) | 09:30 open · cash $10,069.99 · no holdings · equity $10,069.99 vs prior close $10,069.99 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,069.99 | ▲ close $10,069.99 vs 09:30 $10,069.99 (session +0.00) | 16:00 close · cash $10,069.99 · no lots left · equity $10,069.99. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,069.99 | ▲ 09:30 equity $10,069.99 vs yday $10,069.99 (+0.00) | 09:30 open · cash $10,069.99 · no holdings · equity $10,069.99 vs prior close $10,069.99 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **SHORT** | `CDNA` | 10 | $62.21 | $2.06 | — | $10,690.03 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ret5=-6.1; leftover $629.37 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `ETON` | 11 | $54.86 | $2.06 | — | $11,291.43 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ret5=+5.3; leftover $629.37 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `IPSC` | 431 | $1.46 | $5.66 | — | $11,915.03 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-9.3; leftover $629.37 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `ACRS` | 167 | $3.76 | $2.55 | — | $12,540.41 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.1; leftover $629.37 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `SECZ` | 47 | $13.20 | $2.17 | — | $13,158.64 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-7.9; leftover $629.37 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `CLVT` | 390 | $1.61 | $5.12 | — | $13,781.42 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=+1.9; leftover $629.37 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `COCO` | 11 | $55.38 | $2.06 | — | $14,388.54 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=-1.8; leftover $629.37 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `CATX` | 232 | $2.71 | $3.06 | — | $15,014.20 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=-0.4; leftover $629.37 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,014.20 | ▼ close $9,960.16 vs 09:30 $10,069.99 (session -85.10) | 16:00 close · cash $15,014.20 · equity $9,960.16 vs 09:30 $10,069.99 (-109.83; session marks -85.10) · 8 name(s) marked open→close (per-name table). CDNA×10 09:30 $62.21 → close $63.67 -14.60; ETON×11 09:30 $54.86 → close $55.21 -3.85; IPSC×431 09:30 $1.46 → close $1.47 -4.31; ACRS×167 09:30 $3.76 → close $3.83 -11.69; SECZ×47 09:30 $13.20 → close $13.82 -29.14; CLVT×390 09:30 $1.61 → close $1.61 -0.00; COCO×11 09:30 $55.38 → close $58.39 -33.11; CATX×232 09:30 $2.71 → close $2.66 +11.60 | — |
 
 ## Not taken
 

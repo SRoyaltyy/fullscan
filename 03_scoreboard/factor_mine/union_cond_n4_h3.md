@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-16.55%** ($8,345) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 118 · skips 159 · realized $-515.67.
+Cash book **-13.33%** ($8,667) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 125 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -269,6 +269,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,058.03 | ▼ close $8,344.87 vs 09:30 $8,372.21 (session -24.49) | 16:00 close · cash $2,058.03 · equity $8,344.87 vs 09:30 $8,372.21 (-27.34; session marks -24.49) · 3 name(s) marked open→close (per-name table). GWRE×13 09:30 $162.01 → close $163.98 +25.61; IOT×50 09:30 $41.60 → close $40.51 -54.50; PTC×11 09:30 $193.20 → close $193.60 +4.40 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,058.03 | ▲ 09:30 equity $8,344.87 vs yday $8,344.87 (+0.00) | 09:30 open · cash $2,058.03 (unchanged overnight, no fees) · equity $8,344.87 vs prior close $8,344.87 (+0.00) · 3 name(s) re-marked at the open (per-name table). GWRE×13 yday $163.98 → 09:30 $163.98 +0.00; IOT×50 yday $40.51 → 09:30 $40.51 +0.00; PTC×11 yday $193.60 → 09:30 $193.60 +0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,058.03 | ▲ close $8,344.87 vs 09:30 $8,344.87 (session +0.00) | 16:00 close · cash $2,058.03 · equity $8,344.87 vs 09:30 $8,344.87 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). GWRE×13 09:30 $163.98 → close $163.98 +0.00; IOT×50 09:30 $40.51 → close $40.51 +0.00; PTC×11 09:30 $193.60 → close $193.60 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,058.03 | ▲ 09:30 equity $8,432.80 vs yday $8,344.87 (+87.93) | 09:30 open · cash $2,058.03 (unchanged overnight, no fees) · equity $8,432.80 vs prior close $8,344.87 (+87.93) · 3 name(s) re-marked at the open (per-name table). GWRE×13 yday $163.98 → 09:30 $165.90 +24.96; IOT×50 yday $40.51 → 09:30 $41.71 +60.00; PTC×11 yday $193.60 → 09:30 $193.87 +2.97 | — |
+| 2026-10-09 09:30 ET | **SELL** | `GWRE` | 13 | $165.90 | $2.06 | $+7.61 | $4,212.67 | ▲ +7.61 after sell → book $8,430.74; vs 09:30 mark -2.06 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **SELL** | `IOT` | 50 | $41.71 | $2.17 | $-53.81 | $6,296.01 | ▼ -53.81 after sell → book $8,428.58; vs 09:30 mark -2.16 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **SELL** | `PTC` | 11 | $193.87 | $2.05 | $+5.50 | $8,426.53 | ▲ +5.50 after sell → book $8,426.53; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **BUY** | `PACS` | 48 | $43.75 | $2.13 | — | $6,324.39 | — | top 4 by cond; rank cond; list flatten; 🔵; ret5=+6.6; leftover $2106.63 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 57 | $36.33 | $2.16 | — | $4,251.42 | — | top 4 by cond; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $2106.63 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ADCT` | 1333 | $1.58 | $17.20 | — | $2,128.09 | — | top 4 by cond; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $2106.63 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ANGO` | 190 | $11.06 | $2.56 | — | $24.13 | — | top 4 by cond; rank cond; list yday_mover; 🔵; ret5=-25.7; leftover $2106.63 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.13 | ▲ close $8,667.09 vs 09:30 $8,432.80 (session +264.61) | 16:00 close · cash $24.13 · equity $8,667.09 vs 09:30 $8,432.80 (+234.29; session marks +264.61) · 4 name(s) marked open→close (per-name table). PACS×48 09:30 $43.75 → close $43.30 -21.60; PCRX×57 09:30 $36.33 → close $36.31 -1.14; ADCT×1333 09:30 $1.58 → close $1.73 +199.95; ANGO×190 09:30 $11.06 → close $11.52 +87.40 | — |
 
 ## Not taken
 

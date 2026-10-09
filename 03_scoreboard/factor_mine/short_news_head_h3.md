@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short prior-export headline🔴
 
-Cash book **-15.05%** ($8,495) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 91 · skips 94 · realized $+602.64.
+Cash book **-18.53%** ($8,147) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 96 · skips 94 · realized $+602.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -241,6 +241,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,927.61 | ▼ close $8,494.61 vs 09:30 $8,522.78 (session -28.17) | 16:00 close · cash $16,927.61 · equity $8,494.61 vs 09:30 $8,522.78 (-28.17; session marks -28.17) · 2 name(s) marked open→close (per-name table). SG×466 09:30 $9.01 → close $9.16 -69.90; TRMD×107 09:30 $39.31 → close $38.92 +41.73 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,927.61 | ▲ 09:30 equity $8,494.61 vs yday $8,494.61 (+0.00) | 09:30 open · cash $16,927.61 (unchanged overnight, no fees) · equity $8,494.61 vs prior close $8,494.61 (+0.00) · 2 name(s) re-marked at the open (per-name table). SG×466 yday $9.16 → 09:30 $9.16 -0.00; TRMD×107 yday $38.92 → 09:30 $38.92 -0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,927.61 | ▲ close $8,494.61 vs 09:30 $8,494.61 (session +0.00) | 16:00 close · cash $16,927.61 · equity $8,494.61 vs 09:30 $8,494.61 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). SG×466 09:30 $9.16 → close $9.16 -0.00; TRMD×107 09:30 $38.92 → close $38.92 -0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,927.61 | ▼ 09:30 equity $8,176.15 vs yday $8,494.61 (-318.46) | 09:30 open · cash $16,927.61 (unchanged overnight, no fees) · equity $8,176.15 vs prior close $8,494.61 (-318.46) · 2 name(s) re-marked at the open (per-name table). SG×466 yday $9.16 → 09:30 $9.60 -205.04; TRMD×107 yday $38.92 → 09:30 $39.98 -113.42 | — |
+| 2026-10-09 09:30 ET | **COVER** | `SG` | 466 | $9.60 | $6.01 | $-180.01 | $12,448.00 | ▼ -180.01 after sell → book $8,170.14; vs 09:30 mark -6.01 | exit unpriced hold on first bar after 4 sess | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **COVER** | `TRMD` | 107 | $39.98 | $2.31 | $-71.13 | $8,167.83 | ▼ -71.13 after sell → book $8,167.83; vs 09:30 mark -2.31 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **SHORT** | `NTLA` | 109 | $12.39 | $2.38 | — | $9,515.95 | — | short prior-export headline🔴; gate headline=bad; list yday_gainer; 🔵; ret5=+4.0; leftover $1361.30 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `EQPT` | 86 | $15.81 | $2.31 | — | $10,873.30 | — | short prior-export headline🔴; gate headline=bad; list yday_mover; ret5=-10.4; leftover $1361.30 | join🔴 sector🟡 gen🔴 news🔴 digest🟡 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `DXC` | 109 | $12.38 | $2.38 | — | $12,220.34 | — | short prior-export headline🔴; gate headline=bad; list ohlc_hot; ret5=+6.3; leftover $1361.30 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,220.34 | ▼ close $8,146.80 vs 09:30 $8,176.15 (session -13.95) | 16:00 close · cash $12,220.34 · equity $8,146.80 vs 09:30 $8,176.15 (-29.35; session marks -13.95) · 3 name(s) marked open→close (per-name table). NTLA×109 09:30 $12.39 → close $13.07 -74.12; EQPT×86 09:30 $15.81 → close $15.09 +62.35; DXC×109 09:30 $12.38 → close $12.40 -2.18 | — |
 
 ## Not taken
 

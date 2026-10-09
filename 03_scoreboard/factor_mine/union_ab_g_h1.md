@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ ab_g, no 🚨
 
-Cash book **-16.19%** ($8,381) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 288 · skips 92 · realized $-226.14.
+Cash book **-15.83%** ($8,417) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 296 · skips 92 · realized $-226.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -440,6 +440,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,381.39 | ▲ close $8,381.39 vs 09:30 $8,398.83 (session +0.00) | 16:00 close · cash $8,381.39 · no lots left · equity $8,381.39. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,381.39 | ▲ 09:30 equity $8,381.39 vs yday $8,381.39 (+0.00) | 09:30 open · cash $8,381.39 · no holdings · equity $8,381.39 vs prior close $8,381.39 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,381.39 | ▲ close $8,381.39 vs 09:30 $8,381.39 (session +0.00) | 16:00 close · cash $8,381.39 · no lots left · equity $8,381.39. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,381.39 | ▲ 09:30 equity $8,381.39 vs yday $8,381.39 (+0.00) | 09:30 open · cash $8,381.39 · no holdings · equity $8,381.39 vs prior close $8,381.39 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `CDNA` | 16 | $62.21 | $2.04 | — | $7,383.99 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ret5=-6.1; leftover $1047.67 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `RRC` | 25 | $40.62 | $2.06 | — | $6,366.43 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=+8.4; leftover $1047.67 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `PACS` | 23 | $43.75 | $2.06 | — | $5,358.12 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ret5=+6.6; leftover $1047.67 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-09 09:30 ET | **BUY** | `ETON` | 19 | $54.86 | $2.05 | — | $4,313.73 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ret5=+5.3; leftover $1047.67 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 28 | $36.33 | $2.07 | — | $3,294.42 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $1047.67 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HAE` | 8 | $119.81 | $2.01 | — | $2,333.92 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $1047.67 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ADCT` | 663 | $1.58 | $8.55 | — | $1,277.83 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $1047.67 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `MAX` | 98 | $10.68 | $2.28 | — | $228.91 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,ohlc_hot; 🔵; ret5=+10.3; leftover $1047.67 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $228.91 | ▲ close $8,416.78 vs 09:30 $8,381.39 (session +58.52) | 16:00 close · cash $228.91 · equity $8,416.78 vs 09:30 $8,381.39 (+35.39; session marks +58.52) · 8 name(s) marked open→close (per-name table). CDNA×16 09:30 $62.21 → close $63.67 +23.36; RRC×25 09:30 $40.62 → close $40.89 +6.75; PACS×23 09:30 $43.75 → close $43.30 -10.35; ETON×19 09:30 $54.86 → close $55.21 +6.65; PCRX×28 09:30 $36.33 → close $36.31 -0.56; HAE×8 09:30 $119.81 → close $118.69 -8.96; ADCT×663 09:30 $1.58 → close $1.73 +99.45; MAX×98 09:30 $10.68 → close $10.09 -57.82 | — |
 
 ## Not taken
 

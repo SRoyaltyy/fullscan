@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 fresh catalyst + limited extension (research; not KEEP)
 
-Cash book **-11.87%** ($8,813) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 288 · skips 106 · realized $-137.13.
+Cash book **-12.77%** ($8,723) · signal-only (no cash/fees) was -4.91%. Starts YES **13/30**. Fills 292 · skips 106 · realized $-137.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -442,6 +442,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,812.65 | ▲ close $8,812.65 vs 09:30 $8,818.69 (session +0.00) | 16:00 close · cash $8,812.65 · no lots left · equity $8,812.65. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,812.65 | ▲ 09:30 equity $8,812.65 vs yday $8,812.65 (+0.00) | 09:30 open · cash $8,812.65 · no holdings · equity $8,812.65 vs prior close $8,812.65 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,812.65 | ▲ close $8,812.65 vs 09:30 $8,812.65 (session +0.00) | 16:00 close · cash $8,812.65 · no lots left · equity $8,812.65. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,812.65 | ▲ 09:30 equity $8,812.65 vs yday $8,812.65 (+0.00) | 09:30 open · cash $8,812.65 · no holdings · equity $8,812.65 vs prior close $8,812.65 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `RRC` | 54 | $40.62 | $2.15 | — | $6,617.02 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ret5=+8.4; leftover $2203.16 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `DAL` | 27 | $79.68 | $2.07 | — | $4,463.59 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; 🔵; ret5=-2.4; leftover $2203.16 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `FLUT` | 26 | $81.79 | $2.07 | — | $2,334.98 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_gainer; ret5=+6.7; leftover $2203.16 | join🔴 sector🔴 gen🔴 news🟢 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HOVR` | 1359 | $1.62 | $17.53 | — | $115.87 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list earn_react; ret5=-8.4; leftover $2203.16 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $115.87 | ▼ close $8,723.25 vs 09:30 $8,812.65 (session -65.58) | 16:00 close · cash $115.87 · equity $8,723.25 vs 09:30 $8,812.65 (-89.40; session marks -65.58) · 4 name(s) marked open→close (per-name table). RRC×54 09:30 $40.62 → close $40.89 +14.58; DAL×27 09:30 $79.68 → close $82.17 +67.23; FLUT×26 09:30 $81.79 → close $79.78 -52.26; HOVR×1359 09:30 $1.62 → close $1.55 -95.13 | — |
 
 ## Not taken
 

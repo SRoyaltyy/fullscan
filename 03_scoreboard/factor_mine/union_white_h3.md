@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ white, no 🚨
 
-Cash book **-20.43%** ($7,957) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 188 · skips 157 · realized $-1586.47.
+Cash book **-20.48%** ($7,952) · signal-only (no cash/fees) was +12.04%. Starts YES **3/30**. Fills 190 · skips 157 · realized $-1586.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -340,6 +340,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,664.48 | ▲ close $7,957.00 vs 09:30 $7,973.77 (session +3.54) | 16:00 close · cash $6,664.48 · equity $7,957.00 vs 09:30 $7,973.77 (-16.77; session marks +3.54) · 3 name(s) marked open→close (per-name table). AVPT×1 09:30 $14.51 → close $14.28 -0.23; BLFS×27 09:30 $38.61 → close $38.61 +0.00; NTAP×1 09:30 $232.00 → close $235.77 +3.77 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,664.48 | ▲ 09:30 equity $7,957.00 vs yday $7,957.00 (+0.00) | 09:30 open · cash $6,664.48 (unchanged overnight, no fees) · equity $7,957.00 vs prior close $7,957.00 (+0.00) · 3 name(s) re-marked at the open (per-name table). AVPT×1 yday $14.28 → 09:30 $14.28 +0.00; BLFS×27 yday $38.61 → 09:30 $38.61 +0.00; NTAP×1 yday $235.77 → 09:30 $235.77 +0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,664.48 | ▲ close $7,957.00 vs 09:30 $7,957.00 (session +0.00) | 16:00 close · cash $6,664.48 · equity $7,957.00 vs 09:30 $7,957.00 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). AVPT×1 09:30 $14.28 → close $14.28 +0.00; BLFS×27 09:30 $38.61 → close $38.61 +0.00; NTAP×1 09:30 $235.77 → close $235.77 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,664.48 | ▼ 09:30 equity $7,954.40 vs yday $7,957.00 (-2.60) | 09:30 open · cash $6,664.48 (unchanged overnight, no fees) · equity $7,954.40 vs prior close $7,957.00 (-2.60) · 3 name(s) re-marked at the open (per-name table). AVPT×1 yday $14.28 → 09:30 $14.44 +0.16; BLFS×27 yday $38.61 → 09:30 $38.61 +0.00; NTAP×1 yday $235.77 → 09:30 $233.01 -2.76 | — |
+| 2026-10-09 09:30 ET | **SELL** | `AVPT` | 1 | $14.44 | $0.17 | $-0.65 | $6,678.75 | ▼ -0.65 after sell → book $7,954.23; vs 09:30 mark -0.17 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **SELL** | `NTAP` | 1 | $233.01 | $2.01 | $+3.53 | $6,909.75 | ▲ +3.53 after sell → book $7,952.22; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,909.75 | ▲ close $7,952.22 vs 09:30 $7,954.40 (session +0.00) | 16:00 close · cash $6,909.75 · equity $7,952.22 vs 09:30 $7,954.40 (-2.18; session marks +0.00) · 1 name(s) marked open→close (per-name table). BLFS×27 09:30 $38.61 → close $38.61 +0.00 | — |
 
 ## Not taken
 

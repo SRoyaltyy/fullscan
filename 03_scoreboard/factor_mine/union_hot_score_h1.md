@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+26.95%** ($12,696) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 332 · skips 90 · realized $+477.92.
+Cash book **+28.56%** ($12,856) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 340 · skips 90 · realized $+477.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -483,6 +483,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,695.52 | ▲ close $12,695.52 vs 09:30 $12,734.38 (session +0.00) | 16:00 close · cash $12,695.52 · no lots left · equity $12,695.52. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,695.52 | ▲ 09:30 equity $12,695.52 vs yday $12,695.52 (+0.00) | 09:30 open · cash $12,695.52 · no holdings · equity $12,695.52 vs prior close $12,695.52 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,695.52 | ▲ close $12,695.52 vs 09:30 $12,695.52 (session +0.00) | 16:00 close · cash $12,695.52 · no lots left · equity $12,695.52. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,695.52 | ▲ 09:30 equity $12,695.52 vs yday $12,695.52 (+0.00) | 09:30 open · cash $12,695.52 · no holdings · equity $12,695.52 vs prior close $12,695.52 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 43 | $36.33 | $2.12 | — | $11,131.21 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $1586.94 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `KOD` | 16 | $94.64 | $2.04 | — | $9,614.93 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=-4.3; leftover $1586.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ADCT` | 1004 | $1.58 | $12.95 | — | $8,015.66 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $1586.94 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `BYRN` | 337 | $4.70 | $4.35 | — | $6,427.41 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; ret5=+35.9; leftover $1586.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `XRPN` | 76 | $20.88 | $2.22 | — | $4,838.32 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+3.3; leftover $1586.94 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `NAUT` | 830 | $1.91 | $10.71 | — | $3,241.48 | — | rank by hot_score; rank hot_score; list ohlc_hot; 🔵; ret5=+15.9; leftover $1586.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HAE` | 13 | $119.81 | $2.03 | — | $1,681.92 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $1586.94 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `SUJA` | 150 | $10.54 | $2.44 | — | $98.48 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+16.4; leftover $1586.94 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $98.48 | ▲ close $12,856.20 vs 09:30 $12,695.52 (session +199.53) | 16:00 close · cash $98.48 · equity $12,856.20 vs 09:30 $12,695.52 (+160.68; session marks +199.53) · 8 name(s) marked open→close (per-name table). PCRX×43 09:30 $36.33 → close $36.31 -0.86; KOD×16 09:30 $94.64 → close $99.87 +83.68; ADCT×1004 09:30 $1.58 → close $1.73 +150.60; BYRN×337 09:30 $4.70 → close $4.52 -60.66; XRPN×76 09:30 $20.88 → close $17.09 -288.04; NAUT×830 09:30 $1.91 → close $2.25 +281.37; HAE×13 09:30 $119.81 → close $118.69 -14.56; SUJA×150 09:30 $10.54 → close $10.86 +48.00 | — |
 
 ## Not taken
 

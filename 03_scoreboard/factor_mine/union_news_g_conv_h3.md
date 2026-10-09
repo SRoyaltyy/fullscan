@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-20.36%** ($7,964) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 114 · skips 137 · realized $-233.27.
+Cash book **-23.88%** ($7,612) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 122 · skips 137 · realized $-233.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -267,6 +267,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $615.23 | ▼ close $7,964.09 vs 09:30 $8,167.95 (session -201.04) | 16:00 close · cash $615.23 · equity $7,964.09 vs 09:30 $8,167.95 (-203.86; session marks -201.04) · 6 name(s) marked open→close (per-name table). ALVO×639 09:30 $6.10 → close $5.85 -159.75; COP×1 09:30 $131.29 → close $129.84 -1.45; ELMT×2 09:30 $22.56 → close $21.62 -1.88; RRC×1 09:30 $40.20 → close $39.83 -0.37; SIBN×129 09:30 $19.27 → close $19.10 -21.93; TWST×6 09:30 $158.26 → close $155.65 -15.66 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $615.23 | ▲ 09:30 equity $7,964.09 vs yday $7,964.09 (-0.00) | 09:30 open · cash $615.23 (unchanged overnight, no fees) · equity $7,964.09 vs prior close $7,964.09 (-0.00) · 6 name(s) re-marked at the open (per-name table). ALVO×639 yday $5.85 → 09:30 $5.85 +0.00; COP×1 yday $129.84 → 09:30 $129.84 +0.00; ELMT×2 yday $21.62 → 09:30 $21.62 +0.00; RRC×1 yday $39.83 → 09:30 $39.83 +0.00; SIBN×129 yday $19.10 → 09:30 $19.10 +0.00; TWST×6 yday $155.65 → 09:30 $155.65 +0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $615.23 | ▲ close $7,964.09 vs 09:30 $7,964.09 (session +0.00) | 16:00 close · cash $615.23 · equity $7,964.09 vs 09:30 $7,964.09 (-0.00; session marks +0.00) · 6 name(s) marked open→close (per-name table). ALVO×639 09:30 $5.85 → close $5.85 +0.00; COP×1 09:30 $129.84 → close $129.84 +0.00; ELMT×2 09:30 $21.62 → close $21.62 +0.00; RRC×1 09:30 $39.83 → close $39.83 +0.00; SIBN×129 09:30 $19.10 → close $19.10 +0.00; TWST×6 09:30 $155.65 → close $155.65 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $615.23 | ▼ 09:30 equity $7,808.05 vs yday $7,964.09 (-156.04) | 09:30 open · cash $615.23 (unchanged overnight, no fees) · equity $7,808.05 vs prior close $7,964.09 (-156.04) · 6 name(s) re-marked at the open (per-name table). ALVO×639 yday $5.85 → 09:30 $5.67 -115.02; COP×1 yday $129.84 → 09:30 $133.85 +4.01; ELMT×2 yday $21.62 → 09:30 $20.49 -2.26; RRC×1 yday $39.83 → 09:30 $40.62 +0.79; SIBN×129 yday $19.10 → 09:30 $18.90 -25.80; TWST×6 yday $155.65 → 09:30 $152.69 -17.76 | — |
+| 2026-10-09 09:30 ET | **SELL** | `ALVO` | 639 | $5.67 | $8.38 | $-272.22 | $4,229.98 | ▼ -272.22 after sell → book $7,799.67; vs 09:30 mark -8.38 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **SELL** | `COP` | 1 | $133.85 | $1.36 | $+4.22 | $4,362.47 | ▲ +4.22 after sell → book $7,798.31; vs 09:30 mark -1.36 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-09 09:30 ET | **SELL** | `ELMT` | 2 | $20.49 | $0.44 | $-3.98 | $4,403.01 | ▼ -3.98 after sell → book $7,797.87; vs 09:30 mark -0.44 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-09 09:30 ET | **SELL** | `RRC` | 1 | $40.62 | $0.43 | $+1.71 | $4,443.21 | ▲ +1.71 after sell → book $7,797.45; vs 09:30 mark -0.42 | exit unpriced hold on first bar after 4 sess | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **SELL** | `SIBN` | 129 | $18.90 | $2.42 | $-146.69 | $6,878.89 | ▼ -146.69 after sell → book $7,795.03; vs 09:30 mark -2.42 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **SELL** | `TWST` | 6 | $152.69 | $2.03 | $-345.20 | $7,793.00 | ▼ -345.20 after sell → book $7,793.00; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **BUY** | `GENI` | 765 | $6.79 | $9.87 | — | $2,588.78 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; ret5=+16.7; leftover $5195.33 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `FLUT` | 31 | $81.79 | $2.08 | — | $51.21 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer; ret5=+6.7; leftover $2597.67 | join🔴 sector🔴 gen🔴 news🟢 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $51.21 | ▼ close $7,611.64 vs 09:30 $7,808.05 (session -169.41) | 16:00 close · cash $51.21 · equity $7,611.64 vs 09:30 $7,808.05 (-196.41; session marks -169.41) · 2 name(s) marked open→close (per-name table). GENI×765 09:30 $6.79 → close $6.65 -107.10; FLUT×31 09:30 $81.79 → close $79.78 -62.31 | — |
 
 ## Not taken
 

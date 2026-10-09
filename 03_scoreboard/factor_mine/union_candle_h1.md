@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-9.00%** ($9,100) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 342 · skips 106 · realized $-563.17.
+Cash book **-8.92%** ($9,108) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 350 · skips 106 · realized $-563.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -494,6 +494,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,100.10 | ▲ close $9,100.10 vs 09:30 $9,121.47 (session +0.00) | 16:00 close · cash $9,100.10 · no lots left · equity $9,100.10. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,100.10 | ▲ 09:30 equity $9,100.10 vs yday $9,100.10 (+0.00) | 09:30 open · cash $9,100.10 · no holdings · equity $9,100.10 vs prior close $9,100.10 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,100.10 | ▲ close $9,100.10 vs 09:30 $9,100.10 (session +0.00) | 16:00 close · cash $9,100.10 · no lots left · equity $9,100.10. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,100.10 | ▲ 09:30 equity $9,100.10 vs yday $9,100.10 (+0.00) | 09:30 open · cash $9,100.10 · no holdings · equity $9,100.10 vs prior close $9,100.10 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `RRC` | 28 | $40.62 | $2.07 | — | $7,960.67 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; ret5=+8.4; leftover $1137.51 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `PACS` | 26 | $43.75 | $2.07 | — | $6,821.10 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; 🔵; ret5=+6.6; leftover $1137.51 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-09 09:30 ET | **BUY** | `IPSC` | 779 | $1.46 | $10.05 | — | $5,673.71 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-9.3; leftover $1137.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ACRS` | 302 | $3.76 | $3.90 | — | $4,534.29 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.1; leftover $1137.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `CATX` | 419 | $2.71 | $5.41 | — | $3,393.40 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer; 🔵; ret5=-0.4; leftover $1137.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ERAS` | 73 | $15.42 | $2.21 | — | $2,265.53 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer; 🔵; ret5=+6.0; leftover $1137.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 31 | $36.33 | $2.08 | — | $1,137.22 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $1137.51 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HAE` | 9 | $119.81 | $2.02 | — | $56.91 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $1137.51 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.91 | ▲ close $9,107.97 vs 09:30 $9,100.10 (session +37.67) | 16:00 close · cash $56.91 · equity $9,107.97 vs 09:30 $9,100.10 (+7.87; session marks +37.67) · 8 name(s) marked open→close (per-name table). RRC×28 09:30 $40.62 → close $40.89 +7.56; PACS×26 09:30 $43.75 → close $43.30 -11.70; IPSC×779 09:30 $1.46 → close $1.47 +7.79; ACRS×302 09:30 $3.76 → close $3.83 +21.14; CATX×419 09:30 $2.71 → close $2.66 -20.95; ERAS×73 09:30 $15.42 → close $16.03 +44.53; PCRX×31 09:30 $36.33 → close $36.31 -0.62; HAE×9 09:30 $119.81 → close $118.69 -10.08 | — |
 
 ## Not taken
 

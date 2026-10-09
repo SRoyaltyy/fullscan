@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-19.02%** ($8,098) · signal-only (no cash/fees) was -5.26%. Starts YES **0/30**. Fills 304 · skips 56 · realized $-1650.33.
+Cash book **-17.49%** ($8,251) · signal-only (no cash/fees) was -5.26%. Starts YES **0/30**. Fills 312 · skips 56 · realized $-1650.33.
 
 ## How this sleeve decides (like you are 10)
 
@@ -458,6 +458,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,097.53 | ▲ close $8,097.53 vs 09:30 $8,122.37 (session +0.00) | 16:00 close · cash $8,097.53 · no lots left · equity $8,097.53. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,097.53 | ▲ 09:30 equity $8,097.53 vs yday $8,097.53 (+0.00) | 09:30 open · cash $8,097.53 · no holdings · equity $8,097.53 vs prior close $8,097.53 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,097.53 | ▲ close $8,097.53 vs 09:30 $8,097.53 (session +0.00) | 16:00 close · cash $8,097.53 · no lots left · equity $8,097.53. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,097.53 | ▲ 09:30 equity $8,097.53 vs yday $8,097.53 (+0.00) | 09:30 open · cash $8,097.53 · no holdings · equity $8,097.53 vs prior close $8,097.53 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `IPSC` | 693 | $1.46 | $8.94 | — | $7,076.81 | — | combo gate; gate blue=True,vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-9.3; leftover $1012.19 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ACRS` | 269 | $3.76 | $3.47 | — | $6,061.90 | — | combo gate; gate blue=True,vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.1; leftover $1012.19 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `COCO` | 18 | $55.38 | $2.04 | — | $5,063.02 | — | combo gate; gate blue=True,vol=good; list probable,yday_gainer; 🔵; ret5=-1.8; leftover $1012.19 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `CATX` | 373 | $2.71 | $4.81 | — | $4,047.37 | — | combo gate; gate blue=True,vol=good; list probable,yday_gainer; 🔵; ret5=-0.4; leftover $1012.19 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ERAS` | 65 | $15.42 | $2.19 | — | $3,042.89 | — | combo gate; gate blue=True,vol=good; list probable,yday_gainer; 🔵; ret5=+6.0; leftover $1012.19 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 27 | $36.33 | $2.07 | — | $2,059.91 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $1012.19 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HAE` | 8 | $119.81 | $2.01 | — | $1,099.41 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $1012.19 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ADCT` | 640 | $1.58 | $8.26 | — | $79.96 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $1012.19 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $79.96 | ▲ close $8,251.18 vs 09:30 $8,097.53 (session +187.44) | 16:00 close · cash $79.96 · equity $8,251.18 vs 09:30 $8,097.53 (+153.65; session marks +187.44) · 8 name(s) marked open→close (per-name table). IPSC×693 09:30 $1.46 → close $1.47 +6.93; ACRS×269 09:30 $3.76 → close $3.83 +18.83; COCO×18 09:30 $55.38 → close $58.39 +54.18; CATX×373 09:30 $2.71 → close $2.66 -18.65; ERAS×65 09:30 $15.42 → close $16.03 +39.65; PCRX×27 09:30 $36.33 → close $36.31 -0.54; HAE×8 09:30 $119.81 → close $118.69 -8.96; ADCT×640 09:30 $1.58 → close $1.73 +96.00 | — |
 
 ## Not taken
 

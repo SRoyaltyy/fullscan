@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-12.75%** ($8,725) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 340 · skips 104 · realized $-563.45.
+Cash book **-13.06%** ($8,694) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 349 · skips 104 · realized $-563.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -491,6 +491,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,656.64 | ▲ close $8,725.26 vs 09:30 $8,685.74 (session +56.56) | 16:00 close · cash $7,656.64 · equity $8,725.26 vs 09:30 $8,685.74 (+39.52; session marks +56.56) · 1 name(s) marked open→close (per-name table). P×7 09:30 $144.58 → close $152.66 +56.56 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,656.64 | ▲ 09:30 equity $8,725.26 vs yday $8,725.26 (+0.00) | 09:30 open · cash $7,656.64 (unchanged overnight, no fees) · equity $8,725.26 vs prior close $8,725.26 (+0.00) · 1 name(s) re-marked at the open (per-name table). P×7 yday $152.66 → 09:30 $152.66 +0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,656.64 | ▲ close $8,725.26 vs 09:30 $8,725.26 (session +0.00) | 16:00 close · cash $7,656.64 · equity $8,725.26 vs 09:30 $8,725.26 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). P×7 09:30 $152.66 → close $152.66 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,656.64 | ▼ 09:30 equity $8,720.64 vs yday $8,725.26 (-4.62) | 09:30 open · cash $7,656.64 (unchanged overnight, no fees) · equity $8,720.64 vs prior close $8,725.26 (-4.62) · 1 name(s) re-marked at the open (per-name table). P×7 yday $152.66 → 09:30 $152.00 -4.62 | — |
+| 2026-10-09 09:30 ET | **SELL** | `P` | 7 | $152.00 | $2.03 | $+37.96 | $8,718.61 | ▲ +37.96 after sell → book $8,718.61; vs 09:30 mark -2.03 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **BUY** | `HAFN` | 103 | $10.56 | $2.30 | — | $7,628.63 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+7.7; leftover $1089.83 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `BYRN` | 231 | $4.70 | $2.98 | — | $6,539.95 | — | rank by candle_score; rank candle_score; list yday_gainer,yday_mover; ret5=+35.9; leftover $1089.83 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `FRPT` | 16 | $65.24 | $2.04 | — | $5,494.07 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+12.9; leftover $1089.83 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ONON` | 32 | $34.03 | $2.09 | — | $4,403.03 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+12.7; leftover $1089.83 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `SG` | 113 | $9.60 | $2.33 | — | $3,315.90 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+10.3; leftover $1089.83 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `SHAK` | 16 | $66.72 | $2.04 | — | $2,246.34 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+11.8; leftover $1089.83 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `DXC` | 88 | $12.38 | $2.25 | — | $1,154.65 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+6.3; leftover $1089.83 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `STZ` | 8 | $123.25 | $2.01 | — | $166.63 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+9.4; leftover $1089.83 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $166.63 | ▼ close $8,693.82 vs 09:30 $8,720.64 (session -6.75) | 16:00 close · cash $166.63 · equity $8,693.82 vs 09:30 $8,720.64 (-26.82; session marks -6.75) · 8 name(s) marked open→close (per-name table). HAFN×103 09:30 $10.56 → close $10.72 +16.48; BYRN×231 09:30 $4.70 → close $4.52 -41.58; FRPT×16 09:30 $65.24 → close $64.07 -18.72; ONON×32 09:30 $34.03 → close $35.09 +33.92; SG×113 09:30 $9.60 → close $9.63 +3.39; SHAK×16 09:30 $66.72 → close $66.90 +2.88; DXC×88 09:30 $12.38 → close $12.40 +1.76; STZ×8 09:30 $123.25 → close $122.64 -4.88 | — |
 
 ## Not taken
 

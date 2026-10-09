@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · union looker hold 3: 0 red + yesterday up
 
-Cash book **-11.45%** ($8,855) · signal-only (no cash/fees) was -11.78%. Starts YES **2/30**. Fills 160 · skips 140 · realized $-1313.49.
+Cash book **-11.50%** ($8,850) · signal-only (no cash/fees) was -11.78%. Starts YES **2/30**. Fills 161 · skips 140 · realized $-1313.49.
 
 ## How this sleeve decides (like you are 10)
 
@@ -314,6 +314,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,619.24 | ▲ close $8,855.01 vs 09:30 $8,875.36 (session +3.77) | 16:00 close · cash $8,619.24 · equity $8,855.01 vs 09:30 $8,875.36 (-20.35; session marks +3.77) · 1 name(s) marked open→close (per-name table). NTAP×1 09:30 $232.00 → close $235.77 +3.77 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,619.24 | ▲ 09:30 equity $8,855.01 vs yday $8,855.01 (+0.00) | 09:30 open · cash $8,619.24 (unchanged overnight, no fees) · equity $8,855.01 vs prior close $8,855.01 (+0.00) · 1 name(s) re-marked at the open (per-name table). NTAP×1 yday $235.77 → 09:30 $235.77 +0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,619.24 | ▲ close $8,855.01 vs 09:30 $8,855.01 (session +0.00) | 16:00 close · cash $8,619.24 · equity $8,855.01 vs 09:30 $8,855.01 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). NTAP×1 09:30 $235.77 → close $235.77 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,619.24 | ▼ 09:30 equity $8,852.25 vs yday $8,855.01 (-2.76) | 09:30 open · cash $8,619.24 (unchanged overnight, no fees) · equity $8,852.25 vs prior close $8,855.01 (-2.76) · 1 name(s) re-marked at the open (per-name table). NTAP×1 yday $235.77 → 09:30 $233.01 -2.76 | — |
+| 2026-10-09 09:30 ET | **SELL** | `NTAP` | 1 | $233.01 | $2.01 | $+3.53 | $8,850.24 | ▲ +3.53 after sell → book $8,850.24; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,850.24 | ▲ close $8,850.24 vs 09:30 $8,852.25 (session +0.00) | 16:00 close · cash $8,850.24 · no lots left · equity $8,850.24. | — |
 
 ## Not taken
 

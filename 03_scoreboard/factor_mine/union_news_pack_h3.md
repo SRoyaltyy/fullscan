@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **-14.78%** ($8,522) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 49 · skips 85 · realized $-1342.35.
+Cash book **-14.24%** ($8,576) · signal-only (no cash/fees) was -16.54%. Starts YES **11/30**. Fills 50 · skips 85 · realized $-1342.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -202,6 +202,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,521.77 | ▲ close $8,521.77 vs 09:30 $8,521.77 (session +0.00) | 16:00 close · cash $8,521.77 · no lots left · equity $8,521.77. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,521.77 | ▲ 09:30 equity $8,521.77 vs yday $8,521.77 (+0.00) | 09:30 open · cash $8,521.77 · no holdings · equity $8,521.77 vs prior close $8,521.77 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,521.77 | ▲ close $8,521.77 vs 09:30 $8,521.77 (session +0.00) | 16:00 close · cash $8,521.77 · no lots left · equity $8,521.77. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,521.77 | ▲ 09:30 equity $8,521.77 vs yday $8,521.77 (+0.00) | 09:30 open · cash $8,521.77 · no holdings · equity $8,521.77 vs prior close $8,521.77 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `RRC` | 209 | $40.62 | $2.70 | — | $29.49 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list flatten; ret5=+8.4; leftover $8521.77 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $29.49 | ▲ close $8,575.50 vs 09:30 $8,521.77 (session +56.43) | 16:00 close · cash $29.49 · equity $8,575.50 vs 09:30 $8,521.77 (+53.73; session marks +56.43) · 1 name(s) marked open→close (per-name table). RRC×209 09:30 $40.62 → close $40.89 +56.43 | — |
 
 ## Not taken
 

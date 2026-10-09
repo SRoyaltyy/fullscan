@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-11.91%** ($8,809) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 347 · skips 100 · realized $-529.03.
+Cash book **-11.33%** ($8,867) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 355 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -499,6 +499,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,808.56 | ▲ close $8,808.56 vs 09:30 $8,832.95 (session +0.00) | 16:00 close · cash $8,808.56 · no lots left · equity $8,808.56. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,808.56 | ▲ 09:30 equity $8,808.56 vs yday $8,808.56 (+0.00) | 09:30 open · cash $8,808.56 · no holdings · equity $8,808.56 vs prior close $8,808.56 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,808.56 | ▲ close $8,808.56 vs 09:30 $8,808.56 (session +0.00) | 16:00 close · cash $8,808.56 · no lots left · equity $8,808.56. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,808.56 | ▲ 09:30 equity $8,808.56 vs yday $8,808.56 (+0.00) | 09:30 open · cash $8,808.56 · no holdings · equity $8,808.56 vs prior close $8,808.56 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `RRC` | 27 | $40.62 | $2.07 | — | $7,709.75 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten; ret5=+8.4; leftover $1101.07 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ERAS` | 71 | $15.42 | $2.20 | — | $6,612.73 | — | union ∩ break10, no 🚨; gate break_10=True; list probable,yday_gainer; 🔵; ret5=+6.0; leftover $1101.07 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 30 | $36.33 | $2.08 | — | $5,520.75 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $1101.07 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HAE` | 9 | $119.81 | $2.02 | — | $4,440.44 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $1101.07 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `BYRN` | 234 | $4.70 | $3.02 | — | $3,337.62 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; ret5=+35.9; leftover $1101.07 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `MANE` | 8 | $125.71 | $2.01 | — | $2,329.93 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; ret5=+8.0; leftover $1101.07 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ADCT` | 696 | $1.58 | $8.98 | — | $1,221.27 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $1101.07 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `MAX` | 103 | $10.68 | $2.30 | — | $118.93 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,ohlc_hot; 🔵; ret5=+10.3; leftover $1101.07 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $118.93 | ▲ close $8,866.83 vs 09:30 $8,808.56 (session +82.95) | 16:00 close · cash $118.93 · equity $8,866.83 vs 09:30 $8,808.56 (+58.27; session marks +82.95) · 8 name(s) marked open→close (per-name table). RRC×27 09:30 $40.62 → close $40.89 +7.29; ERAS×71 09:30 $15.42 → close $16.03 +43.31; PCRX×30 09:30 $36.33 → close $36.31 -0.60; HAE×9 09:30 $119.81 → close $118.69 -10.08; BYRN×234 09:30 $4.70 → close $4.52 -42.12; MANE×8 09:30 $125.71 → close $130.90 +41.52; ADCT×696 09:30 $1.58 → close $1.73 +104.40; MAX×103 09:30 $10.68 → close $10.09 -60.77 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **-8.00%** ($9,200) · signal-only (no cash/fees) was +4.74%. Starts YES **24/30**. Fills 200 · skips 56 · realized $+1231.21.
+Cash book **-8.52%** ($9,148) · signal-only (no cash/fees) was +4.74%. Starts YES **24/30**. Fills 204 · skips 56 · realized $+1231.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -353,6 +353,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,200.13 | ▲ close $9,200.13 vs 09:30 $9,202.49 (session +0.00) | 16:00 close · cash $9,200.13 · no lots left · equity $9,200.13. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,200.13 | ▲ 09:30 equity $9,200.13 vs yday $9,200.13 (+0.00) | 09:30 open · cash $9,200.13 · no holdings · equity $9,200.13 vs prior close $9,200.13 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,200.13 | ▲ close $9,200.13 vs 09:30 $9,200.13 (session +0.00) | 16:00 close · cash $9,200.13 · no lots left · equity $9,200.13. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,200.13 | ▲ 09:30 equity $9,200.13 vs yday $9,200.13 (+0.00) | 09:30 open · cash $9,200.13 · no holdings · equity $9,200.13 vs prior close $9,200.13 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `BYRN` | 489 | $4.70 | $6.31 | — | $6,895.52 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list yday_gainer,yday_mover; ret5=+35.9; leftover $2300.03 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ANGO` | 207 | $11.06 | $2.67 | — | $4,603.43 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list yday_mover; 🔵; ret5=-25.7; leftover $2300.03 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `DAL` | 28 | $79.68 | $2.07 | — | $2,370.32 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-2.4; leftover $2300.03 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HOVR` | 1419 | $1.62 | $18.31 | — | $53.23 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.4; leftover $2300.03 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $53.23 | ▼ close $9,148.36 vs 09:30 $9,200.13 (session -22.41) | 16:00 close · cash $53.23 · equity $9,148.36 vs 09:30 $9,200.13 (-51.77; session marks -22.41) · 4 name(s) marked open→close (per-name table). BYRN×489 09:30 $4.70 → close $4.52 -88.02; ANGO×207 09:30 $11.06 → close $11.52 +95.22; DAL×28 09:30 $79.68 → close $82.17 +69.72; HOVR×1419 09:30 $1.62 → close $1.55 -99.33 | — |
 
 ## Not taken
 

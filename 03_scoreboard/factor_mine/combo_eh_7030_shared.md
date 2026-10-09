@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_hot_n4_h1 w=0.7,0.3 net=priority
 
-Cash book **+13.47%** ($11,347) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 333 · skips 270 · realized $+3272.06.
+Cash book **+14.86%** ($11,486) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 341 · skips 270 · realized $+3272.06.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,823.85.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $44.35.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -486,6 +486,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,823.85 | ▲ close $11,347.03 vs 09:30 $11,349.45 (session +10.58) | 16:00 close · cash $6,823.85 · equity $11,347.03 vs 09:30 $11,349.45 (-2.42; session marks +10.58) · 1 name(s) marked open→close (per-name table). RPM×46 09:30 $98.10 → close $98.33 +10.58 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,823.85 | ▲ 09:30 equity $11,347.03 vs yday $11,347.03 (+0.00) | 09:30 open · cash $6,823.85 (unchanged overnight, no fees) · equity $11,347.03 vs prior close $11,347.03 (+0.00) | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,823.85 | ▲ close $11,347.03 vs 09:30 $11,347.03 (session +0.00) | 16:00 close · cash $6,823.85 · equity $11,347.03 vs 09:30 $11,347.03 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). RPM×46 09:30 $98.33 → close $98.33 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,823.85 | ▲ 09:30 equity $11,375.55 vs yday $11,347.03 (+28.52) | 09:30 open · cash $6,823.85 (unchanged overnight, no fees) · equity $11,375.55 vs prior close $11,347.03 (+28.52) | — |
+| 2026-10-09 09:30 ET | **SELL** | `RPM` | 46 | $98.95 | $2.17 | $+119.90 | $11,373.38 | ▲ +119.90 after sell → book $11,373.38; vs 09:30 mark -2.17 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-09 09:30 ET | **BUY** | `BYRN` | 423 | $4.70 | $5.46 | — | $9,379.82 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list yday_gainer,yday_mover; ret5=+35.9; combo leftover $1990.34; owner union_e_fresh_h3 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ANGO` | 179 | $11.06 | $2.53 | — | $7,397.55 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list yday_mover; 🔵; ret5=-25.7; combo leftover $1990.34; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `DAL` | 24 | $79.68 | $2.06 | — | $5,483.17 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-2.4; combo leftover $1990.34; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HOVR` | 1228 | $1.62 | $15.84 | — | $3,477.97 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.4; combo leftover $1990.34; owner union_e_fresh_h3 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 31 | $36.33 | $2.08 | — | $2,349.66 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+45.5; combo leftover $1159.32; owner union_hot_n4_h1 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `KOD` | 12 | $94.64 | $2.03 | — | $1,211.95 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=-4.3; combo leftover $1159.32; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ADCT` | 733 | $1.58 | $9.46 | — | $44.35 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+47.2; combo leftover $1159.32; owner union_hot_n4_h1 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $44.35 | ▲ close $11,486.01 vs 09:30 $11,375.55 (session +152.09) | 16:00 close · cash $44.35 · equity $11,486.01 vs 09:30 $11,375.55 (+110.46; session marks +152.09) · 7 name(s) marked open→close (per-name table). BYRN×423 09:30 $4.70 → close $4.52 -76.14; ANGO×179 09:30 $11.06 → close $11.52 +82.34; DAL×24 09:30 $79.68 → close $82.17 +59.76; HOVR×1228 09:30 $1.62 → close $1.55 -85.96; PCRX×31 09:30 $36.33 → close $36.31 -0.62; KOD×12 09:30 $94.64 → close $99.87 +62.76; ADCT×733 09:30 $1.58 → close $1.73 +109.95 | — |
 
 ## Not taken
 

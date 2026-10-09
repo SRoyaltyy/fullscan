@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + (yday up or major catalyst), then Score
 
-Cash book **-21.38%** ($7,862) · signal-only (no cash/fees) was -4.29%. Starts YES **2/30**. Fills 176 · skips 149 · realized $-1383.61.
+Cash book **-21.38%** ($7,862) · signal-only (no cash/fees) was -4.29%. Starts YES **2/30**. Fills 177 · skips 149 · realized $-1383.61.
 
 ## How this sleeve decides (like you are 10)
 
@@ -330,6 +330,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,848.21 | ▼ close $7,862.49 vs 09:30 $7,885.72 (session -0.23) | 16:00 close · cash $7,848.21 · equity $7,862.49 vs 09:30 $7,885.72 (-23.23; session marks -0.23) · 1 name(s) marked open→close (per-name table). AVPT×1 09:30 $14.51 → close $14.28 -0.23 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,848.21 | ▲ 09:30 equity $7,862.49 vs yday $7,862.49 (+0.00) | 09:30 open · cash $7,848.21 (unchanged overnight, no fees) · equity $7,862.49 vs prior close $7,862.49 (+0.00) · 1 name(s) re-marked at the open (per-name table). AVPT×1 yday $14.28 → 09:30 $14.28 +0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,848.21 | ▲ close $7,862.49 vs 09:30 $7,862.49 (session +0.00) | 16:00 close · cash $7,848.21 · equity $7,862.49 vs 09:30 $7,862.49 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). AVPT×1 09:30 $14.28 → close $14.28 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,848.21 | ▲ 09:30 equity $7,862.65 vs yday $7,862.49 (+0.16) | 09:30 open · cash $7,848.21 (unchanged overnight, no fees) · equity $7,862.65 vs prior close $7,862.49 (+0.16) · 1 name(s) re-marked at the open (per-name table). AVPT×1 yday $14.28 → 09:30 $14.44 +0.16 | — |
+| 2026-10-09 09:30 ET | **SELL** | `AVPT` | 1 | $14.44 | $0.17 | $-0.65 | $7,862.48 | ▼ -0.65 after sell → book $7,862.48; vs 09:30 mark -0.17 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,862.48 | ▲ close $7,862.48 vs 09:30 $7,862.65 (session +0.00) | 16:00 close · cash $7,862.48 · no lots left · equity $7,862.48. | — |
 
 ## Not taken
 

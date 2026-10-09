@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 12 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 12 by hot
 
-Cash book **+12.90%** ($11,290) · signal-only (no cash/fees) was +34.72%. Starts YES **29/30**. Fills 493 · skips 145 · realized $-34.73.
+Cash book **+13.74%** ($11,374) · signal-only (no cash/fees) was +34.72%. Starts YES **29/30**. Fills 505 · skips 145 · realized $-34.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -644,6 +644,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,289.73 | ▲ close $11,289.73 vs 09:30 $11,324.67 (session +0.00) | 16:00 close · cash $11,289.73 · no lots left · equity $11,289.73. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,289.73 | ▲ 09:30 equity $11,289.73 vs yday $11,289.73 (+0.00) | 09:30 open · cash $11,289.73 · no holdings · equity $11,289.73 vs prior close $11,289.73 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,289.73 | ▲ close $11,289.73 vs 09:30 $11,289.73 (session +0.00) | 16:00 close · cash $11,289.73 · no lots left · equity $11,289.73. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,289.73 | ▲ 09:30 equity $11,289.73 vs yday $11,289.73 (+0.00) | 09:30 open · cash $11,289.73 · no holdings · equity $11,289.73 vs prior close $11,289.73 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 25 | $36.33 | $2.06 | — | $10,379.41 | — | top 12 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $940.81 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `KOD` | 9 | $94.64 | $2.02 | — | $9,525.64 | — | top 12 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=-4.3; leftover $940.81 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ADCT` | 595 | $1.58 | $7.68 | — | $8,577.86 | — | top 12 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $940.81 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `BYRN` | 200 | $4.70 | $2.59 | — | $7,635.27 | — | top 12 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+35.9; leftover $940.81 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `XRPN` | 45 | $20.88 | $2.12 | — | $6,693.55 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+3.3; leftover $940.81 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `NAUT` | 492 | $1.91 | $6.35 | — | $5,746.99 | — | top 12 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+15.9; leftover $940.81 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HAE` | 7 | $119.81 | $2.01 | — | $4,906.31 | — | top 12 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $940.81 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `SUJA` | 89 | $10.54 | $2.26 | — | $3,965.99 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+16.4; leftover $940.81 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `FNKO` | 144 | $6.50 | $2.42 | — | $3,027.57 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+16.1; leftover $940.81 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `NRDS` | 96 | $9.78 | $2.28 | — | $2,086.41 | — | top 12 by hot; rank hot_score; list yday_gainer,ohlc_hot; 🔵; ret5=+14.2; leftover $940.81 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `JBS` | 72 | $12.94 | $2.21 | — | $1,152.52 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+17.4; leftover $940.81 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `WING` | 7 | $120.32 | $2.01 | — | $308.27 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+13.5; leftover $940.81 | join🟡 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $308.27 | ▲ close $11,374.40 vs 09:30 $11,289.73 (session +120.68) | 16:00 close · cash $308.27 · equity $11,374.40 vs 09:30 $11,289.73 (+84.67; session marks +120.68) · 12 name(s) marked open→close (per-name table). PCRX×25 09:30 $36.33 → close $36.31 -0.50; KOD×9 09:30 $94.64 → close $99.87 +47.07; ADCT×595 09:30 $1.58 → close $1.73 +89.25; BYRN×200 09:30 $4.70 → close $4.52 -36.00; XRPN×45 09:30 $20.88 → close $17.09 -170.55; NAUT×492 09:30 $1.91 → close $2.25 +166.79; HAE×7 09:30 $119.81 → close $118.69 -7.84; SUJA×89 09:30 $10.54 → close $10.86 +28.48; FNKO×144 09:30 $6.50 → close $6.44 -8.64; NRDS×96 09:30 $9.78 → close $9.74 -3.84; JBS×72 09:30 $12.94 → close $12.98 +2.88; WING×7 09:30 $120.32 → close $122.26 +13.58 | — |
 
 ## Not taken
 

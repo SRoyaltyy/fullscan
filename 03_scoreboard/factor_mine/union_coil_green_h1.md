@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-13.64%** ($8,636) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 332 · skips 101 · realized $-768.45.
+Cash book **-13.64%** ($8,636) · signal-only (no cash/fees) was -12.21%. Starts YES **0/30**. Fills 340 · skips 101 · realized $-768.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -489,6 +489,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,636.40 | ▲ close $8,636.40 vs 09:30 $8,656.27 (session +0.00) | 16:00 close · cash $8,636.40 · no lots left · equity $8,636.40. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,636.40 | ▲ 09:30 equity $8,636.40 vs yday $8,636.40 (+0.00) | 09:30 open · cash $8,636.40 · no holdings · equity $8,636.40 vs prior close $8,636.40 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,636.40 | ▲ close $8,636.40 vs 09:30 $8,636.40 (session +0.00) | 16:00 close · cash $8,636.40 · no lots left · equity $8,636.40. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,636.40 | ▲ 09:30 equity $8,636.40 vs yday $8,636.40 (+0.00) | 09:30 open · cash $8,636.40 · no holdings · equity $8,636.40 vs prior close $8,636.40 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `RRC` | 26 | $40.62 | $2.07 | — | $7,578.21 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; ret5=+8.4; leftover $1079.55 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `PACS` | 24 | $43.75 | $2.06 | — | $6,526.15 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+6.6; leftover $1079.55 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-09 09:30 ET | **BUY** | `ETON` | 19 | $54.86 | $2.05 | — | $5,481.76 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list flatten; 🔵; ret5=+5.3; leftover $1079.55 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `CLVT` | 670 | $1.61 | $8.64 | — | $4,394.42 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; ret5=+1.9; leftover $1079.55 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ERAS` | 70 | $15.42 | $2.20 | — | $3,312.82 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; 🔵; ret5=+6.0; leftover $1079.55 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `CSGP` | 35 | $30.02 | $2.10 | — | $2,260.02 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+7.5; leftover $1079.55 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `GAU` | 502 | $2.15 | $6.48 | — | $1,174.25 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; 🔵; ret5=+7.7; leftover $1079.55 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `FLUT` | 13 | $81.79 | $2.03 | — | $108.95 | — | combo gate; gate last_green=True,ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list yday_gainer; ret5=+6.7; leftover $1079.55 | join🔴 sector🔴 gen🔴 news🟢 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $108.95 | ▲ close $8,636.05 vs 09:30 $8,636.40 (session +27.27) | 16:00 close · cash $108.95 · equity $8,636.05 vs 09:30 $8,636.40 (-0.35; session marks +27.27) · 8 name(s) marked open→close (per-name table). RRC×26 09:30 $40.62 → close $40.89 +7.02; PACS×24 09:30 $43.75 → close $43.30 -10.80; ETON×19 09:30 $54.86 → close $55.21 +6.65; CLVT×670 09:30 $1.61 → close $1.61 +0.00; ERAS×70 09:30 $15.42 → close $16.03 +42.70; CSGP×35 09:30 $30.02 → close $29.67 -12.25; GAU×502 09:30 $2.15 → close $2.19 +20.08; FLUT×13 09:30 $81.79 → close $79.78 -26.13 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+20.74%** ($12,074) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 333 · skips 100 · realized $+370.60.
+Cash book **+21.20%** ($12,120) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 341 · skips 100 · realized $+370.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -484,6 +484,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,073.59 | ▲ close $12,073.59 vs 09:30 $12,110.85 (session +0.00) | 16:00 close · cash $12,073.59 · no lots left · equity $12,073.59. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,073.59 | ▲ 09:30 equity $12,073.59 vs yday $12,073.59 (+0.00) | 09:30 open · cash $12,073.59 · no holdings · equity $12,073.59 vs prior close $12,073.59 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,073.59 | ▲ close $12,073.59 vs 09:30 $12,073.59 (session +0.00) | 16:00 close · cash $12,073.59 · no lots left · equity $12,073.59. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,073.59 | ▲ 09:30 equity $12,073.59 vs yday $12,073.59 (+0.00) | 09:30 open · cash $12,073.59 · no holdings · equity $12,073.59 vs prior close $12,073.59 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `ADCT` | 955 | $1.58 | $12.32 | — | $10,552.37 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $1509.20 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 41 | $36.33 | $2.11 | — | $9,060.73 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $1509.20 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `BYRN` | 321 | $4.70 | $4.14 | — | $7,547.89 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; ret5=+35.9; leftover $1509.20 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `RC` | 1160 | $1.30 | $14.96 | — | $6,024.92 | — | rank by ret_5; rank ret_5; list yday_gainer; ret5=+21.1; leftover $1509.20 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `JBS` | 116 | $12.94 | $2.34 | — | $4,521.54 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+17.4; leftover $1509.20 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `GENI` | 222 | $6.79 | $2.86 | — | $3,011.30 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.7; leftover $1509.20 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `SUJA` | 143 | $10.54 | $2.42 | — | $1,501.66 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.4; leftover $1509.20 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `FNKO` | 230 | $6.50 | $2.97 | — | $3.69 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.1; leftover $1509.20 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.69 | ▲ close $12,119.63 vs 09:30 $12,073.59 (session +90.17) | 16:00 close · cash $3.69 · equity $12,119.63 vs 09:30 $12,073.59 (+46.04; session marks +90.17) · 8 name(s) marked open→close (per-name table). ADCT×955 09:30 $1.58 → close $1.73 +143.25; PCRX×41 09:30 $36.33 → close $36.31 -0.82; BYRN×321 09:30 $4.70 → close $4.52 -57.78; RC×1160 09:30 $1.30 → close $1.30 +0.00; JBS×116 09:30 $12.94 → close $12.98 +4.64; GENI×222 09:30 $6.79 → close $6.65 -31.08; SUJA×143 09:30 $10.54 → close $10.86 +45.76; FNKO×230 09:30 $6.50 → close $6.44 -13.80 | — |
 
 ## Not taken
 

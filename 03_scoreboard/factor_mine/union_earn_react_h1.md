@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **-10.71%** ($8,929) · signal-only (no cash/fees) was -3.08%. Starts YES **4/30**. Fills 198 · skips 54 · realized $-117.67.
+Cash book **-11.61%** ($8,839) · signal-only (no cash/fees) was -3.08%. Starts YES **4/30**. Fills 200 · skips 54 · realized $-117.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -350,6 +350,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,928.66 | ▲ close $8,928.66 vs 09:30 $8,931.01 (session +0.00) | 16:00 close · cash $8,928.66 · no lots left · equity $8,928.66. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,928.66 | ▲ 09:30 equity $8,928.66 vs yday $8,928.66 (+0.00) | 09:30 open · cash $8,928.66 · no holdings · equity $8,928.66 vs prior close $8,928.66 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,928.66 | ▲ close $8,928.66 vs 09:30 $8,928.66 (session +0.00) | 16:00 close · cash $8,928.66 · no lots left · equity $8,928.66. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,928.66 | ▲ 09:30 equity $8,928.66 vs yday $8,928.66 (+0.00) | 09:30 open · cash $8,928.66 · no holdings · equity $8,928.66 vs prior close $8,928.66 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `DAL` | 56 | $79.68 | $2.16 | — | $4,464.42 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-2.4; leftover $4464.33 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HOVR` | 2733 | $1.62 | $35.26 | — | $1.71 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-8.4; leftover $4464.33 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.71 | ▼ close $8,839.38 vs 09:30 $8,928.66 (session -51.87) | 16:00 close · cash $1.71 · equity $8,839.38 vs 09:30 $8,928.66 (-89.28; session marks -51.87) · 2 name(s) marked open→close (per-name table). DAL×56 09:30 $79.68 → close $82.17 +139.44; HOVR×2733 09:30 $1.62 → close $1.55 -191.31 | — |
 
 ## Not taken
 

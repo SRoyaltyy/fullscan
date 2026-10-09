@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-33.13%** ($6,687) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 148 · skips 51 · realized $+1398.96.
+Cash book **-33.71%** ($6,629) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 151 · skips 51 · realized $+1398.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -301,6 +301,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,687.35 | ▲ close $6,687.35 vs 09:30 $6,699.35 (session +0.00) | 16:00 close · cash $6,687.35 · no lots left · equity $6,687.35. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,687.35 | ▲ 09:30 equity $6,687.35 vs yday $6,687.35 (+0.00) | 09:30 open · cash $6,687.35 · no holdings · equity $6,687.35 vs prior close $6,687.35 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,687.35 | ▲ close $6,687.35 vs 09:30 $6,687.35 (session +0.00) | 16:00 close · cash $6,687.35 · no lots left · equity $6,687.35. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,687.35 | ▲ 09:30 equity $6,687.35 vs yday $6,687.35 (+0.00) | 09:30 open · cash $6,687.35 · no holdings · equity $6,687.35 vs prior close $6,687.35 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `RRC` | 82 | $40.62 | $2.24 | — | $3,354.27 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list flatten; ret5=+8.4; leftover $3343.68 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `GENI` | 328 | $6.79 | $4.23 | — | $1,122.92 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; ret5=+16.7; leftover $2229.12 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `FLUT` | 13 | $81.79 | $2.03 | — | $57.62 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer; ret5=+6.7; leftover $1114.56 | join🔴 sector🔴 gen🔴 news🟢 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $57.62 | ▼ close $6,628.94 vs 09:30 $6,687.35 (session -49.91) | 16:00 close · cash $57.62 · equity $6,628.94 vs 09:30 $6,687.35 (-58.41; session marks -49.91) · 3 name(s) marked open→close (per-name table). RRC×82 09:30 $40.62 → close $40.89 +22.14; GENI×328 09:30 $6.79 → close $6.65 -45.92; FLUT×13 09:30 $81.79 → close $79.78 -26.13 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-17.00%** ($8,300) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 99 · skips 176 · realized $-1797.14.
+Cash book **-13.58%** ($8,642) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 102 · skips 176 · realized $-1797.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -251,6 +251,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.89 | ▲ close $8,299.81 vs 09:30 $8,167.08 (session +132.73) | 16:00 close · cash $71.89 · equity $8,299.81 vs 09:30 $8,167.08 (+132.73; session marks +132.73) · 3 name(s) marked open→close (per-name table). NEOG×204 09:30 $12.61 → close $11.68 -189.72; PENG×43 09:30 $67.28 → close $72.61 +229.30; STZ×23 09:30 $114.34 → close $118.39 +93.15 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $71.89 | ▲ 09:30 equity $8,299.81 vs yday $8,299.81 (+0.00) | 09:30 open · cash $71.89 (unchanged overnight, no fees) · equity $8,299.81 vs prior close $8,299.81 (+0.00) · 3 name(s) re-marked at the open (per-name table). NEOG×204 yday $11.68 → 09:30 $11.68 +0.00; PENG×43 yday $72.61 → 09:30 $72.61 +0.00; STZ×23 yday $118.39 → 09:30 $118.39 +0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $71.89 | ▲ close $8,299.81 vs 09:30 $8,299.81 (session +0.00) | 16:00 close · cash $71.89 · equity $8,299.81 vs 09:30 $8,299.81 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). NEOG×204 09:30 $11.68 → close $11.68 +0.00; PENG×43 09:30 $72.61 → close $72.61 +0.00; STZ×23 09:30 $118.39 → close $118.39 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $71.89 | ▲ 09:30 equity $8,648.96 vs yday $8,299.81 (+349.15) | 09:30 open · cash $71.89 (unchanged overnight, no fees) · equity $8,648.96 vs prior close $8,299.81 (+349.15) · 3 name(s) re-marked at the open (per-name table). NEOG×204 yday $11.68 → 09:30 $11.71 +6.12; PENG×43 yday $72.61 → 09:30 $77.99 +231.25; STZ×23 yday $118.39 → 09:30 $123.25 +111.78 | — |
+| 2026-10-09 09:30 ET | **SELL** | `NEOG` | 204 | $11.71 | $2.68 | $-280.72 | $2,458.05 | ▼ -280.72 after sell → book $8,646.28; vs 09:30 mark -2.68 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **SELL** | `PENG` | 43 | $77.99 | $2.16 | $+700.41 | $5,809.37 | ▲ +700.41 after sell → book $8,644.12; vs 09:30 mark -2.16 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **SELL** | `STZ` | 23 | $123.25 | $2.09 | $+212.51 | $8,642.03 | ▲ +212.51 after sell → book $8,642.03; vs 09:30 mark -2.09 | exit unpriced hold on first bar after 3 sess | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,642.03 | ▲ close $8,642.03 vs 09:30 $8,648.96 (session +0.00) | 16:00 close · cash $8,642.03 · no lots left · equity $8,642.03. | — |
 
 ## Not taken
 

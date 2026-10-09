@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `yday_gainer` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-29.14%** ($7,086) · signal-only (no cash/fees) was -1.36%. Starts YES **6/30**. Fills 346 · skips 103 · realized $+133.85.
+Cash book **-28.17%** ($7,183) · signal-only (no cash/fees) was -1.36%. Starts YES **6/30**. Fills 354 · skips 103 · realized $+133.85.
 
 ## How this sleeve decides (like you are 10)
 
@@ -494,6 +494,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,086.22 | ▲ close $7,086.22 vs 09:30 $7,118.98 (session +0.00) | 16:00 close · cash $7,086.22 · no lots left · equity $7,086.22. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,086.22 | ▲ 09:30 equity $7,086.22 vs yday $7,086.22 (+0.00) | 09:30 open · cash $7,086.22 · no holdings · equity $7,086.22 vs prior close $7,086.22 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,086.22 | ▲ close $7,086.22 vs 09:30 $7,086.22 (session +0.00) | 16:00 close · cash $7,086.22 · no lots left · equity $7,086.22. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,086.22 | ▲ 09:30 equity $7,086.22 vs yday $7,086.22 (+0.00) | 09:30 open · cash $7,086.22 · no holdings · equity $7,086.22 vs prior close $7,086.22 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `IPSC` | 606 | $1.46 | $7.82 | — | $6,193.64 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-9.3; leftover $885.78 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ACRS` | 235 | $3.76 | $3.03 | — | $5,307.01 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.1; leftover $885.78 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `SECZ` | 67 | $13.20 | $2.19 | — | $4,420.42 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-7.9; leftover $885.78 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `CLVT` | 550 | $1.61 | $7.09 | — | $3,527.83 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+1.9; leftover $885.78 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `COCO` | 15 | $55.38 | $2.04 | — | $2,695.09 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-1.8; leftover $885.78 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `CATX` | 326 | $2.71 | $4.21 | — | $1,807.42 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-0.4; leftover $885.78 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ERAS` | 57 | $15.42 | $2.16 | — | $926.32 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+6.0; leftover $885.78 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 24 | $36.33 | $2.06 | — | $52.34 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $885.78 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $52.34 | ▲ close $7,182.81 vs 09:30 $7,086.22 (session +127.19) | 16:00 close · cash $52.34 · equity $7,182.81 vs 09:30 $7,086.22 (+96.59; session marks +127.19) · 8 name(s) marked open→close (per-name table). IPSC×606 09:30 $1.46 → close $1.47 +6.06; ACRS×235 09:30 $3.76 → close $3.83 +16.45; SECZ×67 09:30 $13.20 → close $13.82 +41.54; CLVT×550 09:30 $1.61 → close $1.61 +0.00; COCO×15 09:30 $55.38 → close $58.39 +45.15; CATX×326 09:30 $2.71 → close $2.66 -16.30; ERAS×57 09:30 $15.42 → close $16.03 +34.77; PCRX×24 09:30 $36.33 → close $36.31 -0.48 | — |
 
 ## Not taken
 

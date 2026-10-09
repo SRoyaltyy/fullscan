@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+22.43%** ($12,244) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 342 · skips 96 · realized $-9.27.
+Cash book **+26.48%** ($12,648) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 350 · skips 96 · realized $-9.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -493,6 +493,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,243.53 | ▲ close $12,243.53 vs 09:30 $12,275.78 (session +0.00) | 16:00 close · cash $12,243.53 · no lots left · equity $12,243.53. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,243.53 | ▲ 09:30 equity $12,243.53 vs yday $12,243.53 (+0.00) | 09:30 open · cash $12,243.53 · no holdings · equity $12,243.53 vs prior close $12,243.53 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,243.53 | ▲ close $12,243.53 vs 09:30 $12,243.53 (session +0.00) | 16:00 close · cash $12,243.53 · no lots left · equity $12,243.53. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,243.53 | ▲ 09:30 equity $12,243.53 vs yday $12,243.53 (+0.00) | 09:30 open · cash $12,243.53 · no holdings · equity $12,243.53 vs prior close $12,243.53 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 42 | $36.33 | $2.12 | — | $10,715.55 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $1530.44 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ADCT` | 968 | $1.58 | $12.49 | — | $9,173.63 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $1530.44 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `KOD` | 16 | $94.64 | $2.04 | — | $7,657.35 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=-4.3; leftover $1530.44 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `NAUT` | 800 | $1.91 | $10.32 | — | $6,118.23 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+15.9; leftover $1530.44 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `BYRN` | 325 | $4.70 | $4.19 | — | $4,586.54 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; ret5=+35.9; leftover $1530.44 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HAE` | 12 | $119.81 | $2.03 | — | $3,146.79 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $1530.44 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ECO` | 16 | $93.64 | $2.04 | — | $1,646.51 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,ohlc_hot; ret5=+10.1; leftover $1530.44 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HAFN` | 144 | $10.56 | $2.42 | — | $123.45 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+7.7; leftover $1530.44 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $123.45 | ▲ close $12,647.75 vs 09:30 $12,243.53 (session +441.86) | 16:00 close · cash $123.45 · equity $12,647.75 vs 09:30 $12,243.53 (+404.22; session marks +441.86) · 8 name(s) marked open→close (per-name table). PCRX×42 09:30 $36.33 → close $36.31 -0.84; ADCT×968 09:30 $1.58 → close $1.73 +145.20; KOD×16 09:30 $94.64 → close $99.87 +83.68; NAUT×800 09:30 $1.91 → close $2.25 +271.20; BYRN×325 09:30 $4.70 → close $4.52 -58.50; HAE×12 09:30 $119.81 → close $118.69 -13.44; ECO×16 09:30 $93.64 → close $93.11 -8.48; HAFN×144 09:30 $10.56 → close $10.72 +23.04 | — |
 
 ## Not taken
 

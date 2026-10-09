@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · split short_news_r_h3/union_e_fresh_h3/union_hot_n4_h1 w=0.5,0.25,0.25 net=priority
 
-Cash book **-0.19%** ($9,981) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 409 · skips 360 · realized $+1618.27.
+Cash book **+0.28%** ($10,028) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 426 · skips 360 · realized $+1618.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12,625.89.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,499.76.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -683,6 +683,25 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `XP` | 34 | $29.44 | $2.11 | $+3.96 | $3,547.16 | ▲ +3.96 after sell → book $3,547.16; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,357.79 | ▲ close $4,336.43 vs 09:30 $4,336.43 (session +0.00) | 16:00 close · cash $8,357.79 · equity $4,336.43 vs 09:30 $4,336.43 (+0.00; session marks +0.00) · 5 name(s) marked open→close (per-name table). AXTI×6 09:30 $79.79 → close $79.79 -0.00; MXL×5 09:30 $107.36 → close $107.36 -0.00; SG×58 09:30 $9.16 → close $9.16 -0.00; TER×1 09:30 $411.78 → close $411.78 -0.00; TRMD×53 09:30 $38.92 → close $38.92 -0.00 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,357.79 | ▲ 09:30 equity $4,336.43 vs yday $4,336.43 (+0.00) | 09:30 open · cash $8,357.79 (unchanged overnight, no fees) · equity $4,336.43 vs prior close $4,336.43 (+0.00) · 5 name(s) re-marked at the open (per-name table). AXTI×6 yday $79.79 → 09:30 $79.79 -0.00; MXL×5 yday $107.36 → 09:30 $107.36 -0.00; SG×58 yday $9.16 → 09:30 $9.16 -0.00; TER×1 yday $411.78 → 09:30 $411.78 -0.00; TRMD×53 yday $38.92 → 09:30 $38.92 -0.00 | — |
+| 2026-10-09 09:30 ET | **BUY** | `ADCT` | 561 | $1.58 | $7.24 | — | $925.78 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $886.79 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ANGO` | 47 | $11.06 | $2.13 | — | $1,058.21 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list yday_mover; 🔵; ret5=-25.7; leftover $526.05 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `BYRN` | 111 | $4.70 | $2.32 | — | $1,580.16 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list yday_gainer,yday_mover; ret5=+35.9; leftover $526.05 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `DAL` | 6 | $79.68 | $2.01 | — | $578.12 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-2.4; leftover $526.05 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HOVR` | 324 | $1.62 | $4.18 | — | $49.07 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.4; leftover $526.05 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `KOD` | 9 | $94.64 | $2.02 | — | $1,819.40 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=-4.3; leftover $886.79 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 24 | $36.33 | $2.06 | — | $2,673.18 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $886.79 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,411.06 | ▼ close $4,309.94 vs 09:30 $4,349.12 (session -20.39) | 16:00 close · cash $6,411.06 · equity $4,309.94 vs 09:30 $4,349.12 (-39.18; session marks -20.39) · 4 name(s) marked open→close (per-name table). NTLA×43 09:30 $12.39 → close $13.07 -29.24; EQPT×34 09:30 $15.81 → close $15.09 +24.65; DXC×43 09:30 $12.38 → close $12.40 -0.86; DAL×6 09:30 $79.68 → close $82.17 -14.94 | — |
+| 2026-10-09 09:30 ET | **COVER** | `AXTI` | 6 | $73.72 | $2.01 | $+75.63 | $7,913.49 | ▲ +75.63 after sell → book $4,347.11; vs 09:30 mark -2.01 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-09 09:30 ET | **COVER** | `MXL` | 5 | $97.09 | $2.00 | $+40.51 | $7,426.04 | ▲ +40.51 after sell → book $4,345.11; vs 09:30 mark -2.00 | exit unpriced hold on first bar after 4 sess | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **COVER** | `SG` | 58 | $9.60 | $2.16 | $-25.24 | $6,867.07 | ▼ -25.24 after sell → book $4,342.94; vs 09:30 mark -2.17 | exit unpriced hold on first bar after 4 sess | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **COVER** | `TER` | 1 | $405.19 | $1.99 | $+38.00 | $6,459.89 | ▲ +38.00 after sell → book $4,340.95; vs 09:30 mark -1.99 | exit unpriced hold on first bar after 4 sess | — |
+| 2026-10-09 09:30 ET | **COVER** | `TRMD` | 53 | $39.98 | $2.15 | $-37.24 | $4,338.80 | ▼ -37.24 after sell → book $4,338.80; vs 09:30 mark -2.15 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,357.79 | ▲ 09:30 equity $4,349.12 vs yday $4,336.43 (+12.69) | 09:30 open · cash $8,357.79 (unchanged overnight, no fees) · equity $4,349.12 vs prior close $4,336.43 (+12.69) · 5 name(s) re-marked at the open (per-name table). AXTI×6 yday $79.79 → 09:30 $73.72 +36.45; MXL×5 yday $107.36 → 09:30 $97.09 +51.35; SG×58 yday $9.16 → 09:30 $9.60 -25.52; TER×1 yday $411.78 → 09:30 $405.19 +6.59; TRMD×53 yday $38.92 → 09:30 $39.98 -56.18 | — |
+| 2026-10-09 09:30 ET | **SELL** | `RPM` | 14 | $98.95 | $2.05 | $+33.71 | $2,104.19 | ▲ +33.71 after sell → book $2,104.19; vs 09:30 mark -2.05 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **SHORT** | `DAL` | 6 | $79.68 | $2.04 | — | $6,411.06 | — | news🔴; gate news=bad; list earn_react; 🔵; ret5=-2.4; leftover $542.35 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `DXC` | 43 | $12.38 | $2.15 | — | $5,935.02 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+6.3; leftover $542.35 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `EQPT` | 34 | $15.81 | $2.13 | — | $5,404.83 | — | news🔴; gate news=bad; list yday_mover; ret5=-10.4; leftover $542.35 | join🔴 sector🟡 gen🔴 news🔴 digest🟡 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **SHORT** | `NTLA` | 43 | $12.39 | $2.15 | — | $4,869.42 | — | news🔴; gate news=bad; list yday_gainer; 🔵; ret5=+4.0; leftover $542.35 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 
 ## Not taken
 

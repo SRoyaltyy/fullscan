@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **-22.59%** ($7,741) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 144 · skips 198 · realized $+2100.34.
+Cash book **-23.01%** ($7,699) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 147 · skips 198 · realized $+2100.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -296,6 +296,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,054.19 | ▲ close $7,740.63 vs 09:30 $7,727.09 (session +15.64) | 16:00 close · cash $1,054.19 · equity $7,740.63 vs 09:30 $7,727.09 (+13.54; session marks +15.64) · 1 name(s) marked open→close (per-name table). RPM×68 09:30 $98.10 → close $98.33 +15.64 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,054.19 | ▲ 09:30 equity $7,740.63 vs yday $7,740.63 (-0.00) | 09:30 open · cash $1,054.19 (unchanged overnight, no fees) · equity $7,740.63 vs prior close $7,740.63 (-0.00) · 1 name(s) re-marked at the open (per-name table). RPM×68 yday $98.33 → 09:30 $98.33 +0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,054.19 | ▲ close $7,740.63 vs 09:30 $7,740.63 (session +0.00) | 16:00 close · cash $1,054.19 · equity $7,740.63 vs 09:30 $7,740.63 (-0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). RPM×68 09:30 $98.33 → close $98.33 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,054.19 | ▲ 09:30 equity $7,782.79 vs yday $7,740.63 (+42.16) | 09:30 open · cash $1,054.19 (unchanged overnight, no fees) · equity $7,782.79 vs prior close $7,740.63 (+42.16) · 1 name(s) re-marked at the open (per-name table). RPM×68 yday $98.33 → 09:30 $98.95 +42.16 | — |
+| 2026-10-09 09:30 ET | **SELL** | `RPM` | 68 | $98.95 | $2.26 | $+179.15 | $7,780.53 | ▲ +179.15 after sell → book $7,780.53; vs 09:30 mark -2.26 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **BUY** | `DAL` | 48 | $79.68 | $2.13 | — | $3,953.76 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-2.4; leftover $3890.27 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HOVR` | 2401 | $1.62 | $30.97 | — | $33.16 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-8.4; leftover $3890.27 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.16 | ▼ close $7,698.87 vs 09:30 $7,782.79 (session -48.55) | 16:00 close · cash $33.16 · equity $7,698.87 vs 09:30 $7,782.79 (-83.92; session marks -48.55) · 2 name(s) marked open→close (per-name table). DAL×48 09:30 $79.68 → close $82.17 +119.52; HOVR×2401 09:30 $1.62 → close $1.55 -168.07 | — |
 
 ## Not taken
 

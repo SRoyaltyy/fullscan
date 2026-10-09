@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-13.10%** ($8,690) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 355 · skips 105 · realized $-723.91.
+Cash book **-11.55%** ($8,845) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 364 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -506,6 +506,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,600.66 | ▼ close $8,690.31 vs 09:30 $8,730.63 (session -25.73) | 16:00 close · cash $7,600.66 · equity $8,690.31 vs 09:30 $8,730.63 (-40.32; session marks -25.73) · 1 name(s) marked open→close (per-name table). BSY×31 09:30 $35.98 → close $35.15 -25.73 | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,600.66 | ▲ 09:30 equity $8,690.31 vs yday $8,690.31 (+0.00) | 09:30 open · cash $7,600.66 (unchanged overnight, no fees) · equity $8,690.31 vs prior close $8,690.31 (+0.00) · 1 name(s) re-marked at the open (per-name table). BSY×31 yday $35.15 → 09:30 $35.15 +0.00 | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,600.66 | ▲ close $8,690.31 vs 09:30 $8,690.31 (session +0.00) | 16:00 close · cash $7,600.66 · equity $8,690.31 vs 09:30 $8,690.31 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). BSY×31 09:30 $35.15 → close $35.15 +0.00 | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,600.66 | ▲ 09:30 equity $8,691.86 vs yday $8,690.31 (+1.55) | 09:30 open · cash $7,600.66 (unchanged overnight, no fees) · equity $8,691.86 vs prior close $8,690.31 (+1.55) · 1 name(s) re-marked at the open (per-name table). BSY×31 yday $35.15 → 09:30 $35.20 +1.55 | — |
+| 2026-10-09 09:30 ET | **SELL** | `BSY` | 31 | $35.20 | $2.10 | $+4.49 | $8,689.76 | ▲ +4.49 after sell → book $8,689.76; vs 09:30 mark -2.10 | exit unpriced hold on first bar after 3 sess | — |
+| 2026-10-09 09:30 ET | **BUY** | `PACS` | 24 | $43.75 | $2.06 | — | $7,637.69 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+6.6; leftover $1086.22 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-09 09:30 ET | **BUY** | `PCRX` | 29 | $36.33 | $2.08 | — | $6,582.05 | — | rank by cond; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $1086.22 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ADCT` | 687 | $1.58 | $8.86 | — | $5,487.73 | — | rank by cond; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $1086.22 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ANGO` | 98 | $11.06 | $2.28 | — | $4,401.56 | — | rank by cond; rank cond; list yday_mover; 🔵; ret5=-25.7; leftover $1086.22 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `CDNA` | 17 | $62.21 | $2.04 | — | $3,341.95 | — | rank by cond; rank cond; list flatten; 🔵; ret5=-6.1; leftover $1086.22 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ECO` | 11 | $93.64 | $2.02 | — | $2,309.89 | — | rank by cond; rank cond; list yday_gainer,ohlc_hot; ret5=+10.1; leftover $1086.22 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ETON` | 19 | $54.86 | $2.05 | — | $1,265.50 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+5.3; leftover $1086.22 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `HAFN` | 102 | $10.56 | $2.30 | — | $186.08 | — | rank by cond; rank cond; list ohlc_hot; ret5=+7.7; leftover $1086.22 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $186.08 | ▲ close $8,844.77 vs 09:30 $8,691.86 (session +178.71) | 16:00 close · cash $186.08 · equity $8,844.77 vs 09:30 $8,691.86 (+152.91; session marks +178.71) · 8 name(s) marked open→close (per-name table). PACS×24 09:30 $43.75 → close $43.30 -10.80; PCRX×29 09:30 $36.33 → close $36.31 -0.58; ADCT×687 09:30 $1.58 → close $1.73 +103.05; ANGO×98 09:30 $11.06 → close $11.52 +45.08; CDNA×17 09:30 $62.21 → close $63.67 +24.82; ECO×11 09:30 $93.64 → close $93.11 -5.83; ETON×19 09:30 $54.86 → close $55.21 +6.65; HAFN×102 09:30 $10.56 → close $10.72 +16.32 | — |
 
 ## Not taken
 

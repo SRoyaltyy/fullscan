@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-15.80%** ($8,420) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 334 · skips 107 · realized $-24.70.
+Cash book **-15.15%** ($8,485) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 342 · skips 107 · realized $-24.70.
 
 ## How this sleeve decides (like you are 10)
 
@@ -482,6 +482,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,419.82 | ▲ close $8,419.82 vs 09:30 $8,436.62 (session +0.00) | 16:00 close · cash $8,419.82 · no lots left · equity $8,419.82. | — |
 | 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,419.82 | ▲ 09:30 equity $8,419.82 vs yday $8,419.82 (+0.00) | 09:30 open · cash $8,419.82 · no holdings · equity $8,419.82 vs prior close $8,419.82 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,419.82 | ▲ close $8,419.82 vs 09:30 $8,419.82 (session +0.00) | 16:00 close · cash $8,419.82 · no lots left · equity $8,419.82. | — |
+| 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,419.82 | ▲ 09:30 equity $8,419.82 vs yday $8,419.82 (+0.00) | 09:30 open · cash $8,419.82 · no holdings · equity $8,419.82 vs prior close $8,419.82 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-09 09:30 ET | **BUY** | `CDNA` | 30 | $62.21 | $2.08 | — | $6,551.44 | — | rank-weighted leftover; list flatten; 🔵; ret5=-6.1; leftover $1871.07 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `RRC` | 40 | $40.62 | $2.11 | — | $4,924.53 | — | rank-weighted leftover; list flatten; ret5=+8.4; leftover $1637.19 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `PACS` | 32 | $43.75 | $2.09 | — | $3,522.44 | — | rank-weighted leftover; list flatten; 🔵; ret5=+6.6; leftover $1403.30 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-09 09:30 ET | **BUY** | `ETON` | 21 | $54.86 | $2.05 | — | $2,368.33 | — | rank-weighted leftover; list flatten; 🔵; ret5=+5.3; leftover $1169.42 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `IPSC` | 640 | $1.46 | $8.26 | — | $1,425.67 | — | rank-weighted leftover; list probable,yday_gainer,yday_mover; 🔵; ret5=-9.3; leftover $935.54 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `ACRS` | 186 | $3.76 | $2.55 | — | $723.77 | — | rank-weighted leftover; list probable,yday_gainer,yday_mover; 🔵; ret5=-14.1; leftover $701.65 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `SECZ` | 35 | $13.20 | $2.10 | — | $259.67 | — | rank-weighted leftover; list probable,yday_gainer; ret5=-7.9; leftover $467.77 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-09 09:30 ET | **BUY** | `CLVT` | 145 | $1.61 | $2.42 | — | $23.80 | — | rank-weighted leftover; list probable,yday_gainer; ret5=+1.9; leftover $233.88 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.80 | ▲ close $8,484.84 vs 09:30 $8,419.82 (session +88.67) | 16:00 close · cash $23.80 · equity $8,484.84 vs 09:30 $8,419.82 (+65.02; session marks +88.67) · 8 name(s) marked open→close (per-name table). CDNA×30 09:30 $62.21 → close $63.67 +43.80; RRC×40 09:30 $40.62 → close $40.89 +10.80; PACS×32 09:30 $43.75 → close $43.30 -14.40; ETON×21 09:30 $54.86 → close $55.21 +7.35; IPSC×640 09:30 $1.46 → close $1.47 +6.40; ACRS×186 09:30 $3.76 → close $3.83 +13.02; SECZ×35 09:30 $13.20 → close $13.82 +21.70; CLVT×145 09:30 $1.61 → close $1.61 +0.00 | — |
 
 ## Not taken
 
