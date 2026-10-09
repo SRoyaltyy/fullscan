@@ -8,12 +8,40 @@
   },
   "sleeves": {
     "union_hot_n4_h1_preopen": {
-      "days": [],
+      "days": [
+        {
+          "buys": [],
+          "date": "2026-10-08",
+          "equity": 10000.0,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "no pre-open weather S: no buys"
+          ],
+          "s": null,
+          "sells": [],
+          "sit": true
+        }
+      ],
       "label": "starts 10-08 open, no past days",
       "parent": "union_hot_n4_h1"
     },
     "union_hot_n4_holdup_preopen": {
-      "days": [],
+      "days": [
+        {
+          "buys": [],
+          "date": "2026-10-08",
+          "equity": 10000.0,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "no pre-open weather S: no buys"
+          ],
+          "s": null,
+          "sells": [],
+          "sit": true
+        }
+      ],
       "label": "starts 10-08 open, no past days",
       "parent": "union_hot_n4_holdup"
     }
