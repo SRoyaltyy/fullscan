@@ -41,6 +41,10 @@ name: h1 append-only forward
 # deploy-dashboard.yml (its gh-pages-deploy group queues and never cancels
 # an in-flight deploy) because a GITHUB_TOKEN push does not trigger it.
 # The 13:05 UTC cron and workflow_dispatch stay as fallbacks.
+# PREDICT GATE (2026-10-09). The seal step refuses while
+# 01_daily/general/<D>_predict.md is not on origin/main: it prints the
+# reason, writes no plan line and no missing line, and fails the job. A
+# later run inside the window seals once the predict lands. Presence only.
 
 on:
   schedule:
@@ -289,7 +293,13 @@ jobs:
           HOLDUP_GIT_REF: origin/main
           HOLDUP_MODE: plan
           PLAN_SESSION: ${{ github.event.inputs.session_date }}
-        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/forward.py
+        # The gate exits 1 (no plan line, the day stays missing) while
+        # 01_daily/general/<D>_predict.md is not on origin/main. Present:
+        # forward.py runs exactly as before.
+        run: |
+          set -euo pipefail
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_seal_gate.py --check
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/forward.py
       - name: Refresh the h1 close display
         id: closes
         if: success() && steps.window.outputs.go == 'true'
