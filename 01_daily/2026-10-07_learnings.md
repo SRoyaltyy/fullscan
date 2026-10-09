@@ -1,6 +1,6 @@
 # Learnings report — 2026-10-07
 
-Generated: **2026-10-08T06:59:40.918470-04:00** by `src/learn_cycle.py`.
+Generated: **2026-10-08T20:23:41.427425-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -13,21 +13,21 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Item | Value |
 |------|-------|
 | Graded runs mined | 180 |
-| Hypotheses written | 181 (wins=79, losses=102) |
+| Hypotheses written | 181 (wins=78, losses=103) |
 | News hypotheses | 1 |
 | Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
-| Active lesson files now | 198 |
-| Engine policy version | 65 |
+| Active lesson files now | 208 |
+| Engine policy version | 67 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
 | Topic | Direction HIT% | hits/n | Read |
 |-------|----------------|--------|------|
 | general | 53% | 8/15 | weak — priority |
-| sector:Basic Materials | 33% | 5/15 | weak — priority |
+| sector:Basic Materials | 27% | 4/15 | weak — priority |
 | sector:Communication Services | 20% | 3/15 | weak — priority |
-| sector:Consumer Cyclical | 27% | 4/15 | weak — priority |
+| sector:Consumer Cyclical | 20% | 3/15 | weak — priority |
 | sector:Consumer Defensive | 60% | 9/15 | ok |
 | sector:Energy | 53% | 8/15 | weak — priority |
 | sector:Financial | 60% | 9/15 | ok |
@@ -35,20 +35,13 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | sector:Industrials | 47% | 7/15 | weak — priority |
 | sector:Real Estate | 60% | 9/15 | ok |
 | sector:Technology | 33% | 5/15 | weak — priority |
-| sector:Utilities | 40% | 6/15 | weak — priority |
+| sector:Utilities | 47% | 7/15 | weak — priority |
 
 ## 3. What we learned (by scope)
 
 Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the **experiment** to run next, and the **policy candidate** (do instead).
 
 ### `general` — 8 wins, 7 losses
-
-#### WIN — 2026-09-28
-- **When:** [general] Predicted down, market/sector went down (pct=-0.77, score=-6.14, sector=).
-- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
-- **Experiment:** [general] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
-- **Do instead:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
-- **Wrong if:** [general] Wrong if milder bands hurt direction accuracy over 10 runs.
 
 #### LOSS — 2026-09-29
 - **When:** [general] Predicted up but went down (pct=-0.17, score=1.292, sector=).
@@ -78,6 +71,13 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 - **Do instead:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **Wrong if:** [general] Wrong if this hedge reduces direction accuracy over 10 runs.
 
+#### WIN — 2026-10-08
+- **When:** [general] Predicted down, market/sector went down (pct=-0.47, score=-6.787, sector=).
+- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
+- **Experiment:** [general] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
+- **Do instead:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **Wrong if:** [general] Wrong if milder bands hurt direction accuracy over 10 runs.
+
 ### `news` — 0 wins, 1 losses
 
 #### LOSS — news
@@ -87,14 +87,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 - **Do instead:** [news] Only emit actions with |net| above a higher floor.
 - **Wrong if:** [news] Wrong if higher floor reduces 1d win rate further.
 
-### `sector_basic_materials` — 5 wins, 10 losses
-
-#### WIN — 2026-09-24
-- **When:** [sector_basic_materials] Predicted down, market/sector went down (pct=-1.1933144166426435, score=-2.88, sector=Basic Materials).
-- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
-- **Experiment:** [sector_basic_materials] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
-- **Do instead:** [sector_basic_materials] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
-- **Wrong if:** [sector_basic_materials] Wrong if milder bands hurt direction accuracy over 10 runs.
+### `sector_basic_materials` — 4 wins, 11 losses
 
 #### LOSS — 2026-09-25
 - **When:** [sector_basic_materials] Predicted flat but went up (pct=0.24154374224563124, score=1.377, sector=Basic Materials).
@@ -124,14 +117,14 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 - **Do instead:** [sector_basic_materials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **Wrong if:** [sector_basic_materials] Wrong if this hedge reduces direction accuracy over 10 runs.
 
-### `sector_communication_services` — 3 wins, 12 losses
-
-#### LOSS — 2026-09-24
-- **When:** [sector_communication_services] Predicted down but went up (pct=1.2704338452312003, score=-11.341, sector=Communication Services).
+#### LOSS — 2026-10-08
+- **When:** [sector_basic_materials] Predicted down but went up (pct=0.5920802740662978, score=-5.542, sector=Basic Materials).
 - **Ask:** Dominant factor family? Regime misread vs sector-specific shock? Shared macro S0 wrong or sector factors S1 wrong?
-- **Experiment:** [sector_communication_services] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
-- **Do instead:** [sector_communication_services] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
-- **Wrong if:** [sector_communication_services] Wrong if this hedge reduces direction accuracy over 10 runs.
+- **Experiment:** [sector_basic_materials] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
+- **Do instead:** [sector_basic_materials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **Wrong if:** [sector_basic_materials] Wrong if this hedge reduces direction accuracy over 10 runs.
+
+### `sector_communication_services` — 3 wins, 12 losses
 
 #### LOSS — 2026-09-25
 - **When:** [sector_communication_services] Predicted flat but went down (pct=-0.9035869800856022, score=-0.386, sector=Communication Services).
@@ -161,14 +154,14 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 - **Do instead:** [sector_communication_services] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **Wrong if:** [sector_communication_services] Wrong if milder bands hurt direction accuracy over 10 runs.
 
-### `sector_consumer_cyclical` — 4 wins, 11 losses
+#### LOSS — 2026-10-08
+- **When:** [sector_communication_services] Predicted flat but went up (pct=0.7280222389371982, score=-8.272, sector=Communication Services).
+- **Ask:** Dominant factor family? Regime misread vs sector-specific shock? Shared macro S0 wrong or sector factors S1 wrong?
+- **Experiment:** [sector_communication_services] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
+- **Do instead:** [sector_communication_services] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **Wrong if:** [sector_communication_services] Wrong if this hedge reduces direction accuracy over 10 runs.
 
-#### WIN — 2026-09-24
-- **When:** [sector_consumer_cyclical] Predicted down, market/sector went down (pct=-0.2982393371025016, score=-8.472, sector=Consumer Cyclical).
-- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
-- **Experiment:** [sector_consumer_cyclical] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
-- **Do instead:** [sector_consumer_cyclical] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
-- **Wrong if:** [sector_consumer_cyclical] Wrong if milder bands hurt direction accuracy over 10 runs.
+### `sector_consumer_cyclical` — 3 wins, 12 losses
 
 #### LOSS — 2026-09-25
 - **When:** [sector_consumer_cyclical] Predicted down but went up (pct=0.21754701272065358, score=-3.2, sector=Consumer Cyclical).
@@ -198,14 +191,14 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 - **Do instead:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **Wrong if:** [sector_consumer_cyclical] Wrong if this hedge reduces direction accuracy over 10 runs.
 
-### `sector_consumer_defensive` — 9 wins, 6 losses
+#### LOSS — 2026-10-08
+- **When:** [sector_consumer_cyclical] Predicted down but went up (pct=0.3142946050671558, score=-11.327, sector=Consumer Cyclical).
+- **Ask:** Dominant factor family? Regime misread vs sector-specific shock? Shared macro S0 wrong or sector factors S1 wrong?
+- **Experiment:** [sector_consumer_cyclical] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
+- **Do instead:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **Wrong if:** [sector_consumer_cyclical] Wrong if this hedge reduces direction accuracy over 10 runs.
 
-#### WIN — 2026-09-23
-- **When:** [sector_consumer_defensive] Predicted up, market/sector went up (pct=0.6225612153685445, score=0.282, sector=Consumer Defensive).
-- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
-- **Experiment:** [sector_consumer_defensive] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
-- **Do instead:** [sector_consumer_defensive] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
-- **Wrong if:** [sector_consumer_defensive] Wrong if milder bands hurt direction accuracy over 10 runs.
+### `sector_consumer_defensive` — 9 wins, 6 losses
 
 #### WIN — 2026-09-25
 - **When:** [sector_consumer_defensive] Predicted up, market/sector went up (pct=0.4406372384317514, score=2.978, sector=Consumer Defensive).
@@ -230,6 +223,13 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 #### WIN — 2026-10-02
 - **When:** [sector_consumer_defensive] Predicted up, market/sector went up (pct=0.24896918172965243, score=3.994, sector=Consumer Defensive).
+- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
+- **Experiment:** [sector_consumer_defensive] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
+- **Do instead:** [sector_consumer_defensive] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **Wrong if:** [sector_consumer_defensive] Wrong if milder bands hurt direction accuracy over 10 runs.
+
+#### WIN — 2026-10-08
+- **When:** [sector_consumer_defensive] Predicted up, market/sector went up (pct=2.1052647306618155, score=5.519, sector=Consumer Defensive).
 - **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
 - **Experiment:** [sector_consumer_defensive] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
 - **Do instead:** [sector_consumer_defensive] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
@@ -457,14 +457,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 - **Do instead:** [sector_technology] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **Wrong if:** [sector_technology] Wrong if this hedge reduces direction accuracy over 10 runs.
 
-### `sector_utilities` — 6 wins, 9 losses
-
-#### LOSS — 2026-09-23
-- **When:** [sector_utilities] Predicted flat but went down (pct=-2.2380714481729846, score=0.717, sector=Utilities).
-- **Ask:** Dominant factor family? Regime misread vs sector-specific shock? Shared macro S0 wrong or sector factors S1 wrong?
-- **Experiment:** [sector_utilities] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
-- **Do instead:** [sector_utilities] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
-- **Wrong if:** [sector_utilities] Wrong if this hedge reduces direction accuracy over 10 runs.
+### `sector_utilities` — 7 wins, 8 losses
 
 #### WIN — 2026-09-24
 - **When:** [sector_utilities] Predicted down, market/sector went down (pct=-0.9811305399960668, score=-5.818, sector=Utilities).
@@ -494,6 +487,13 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 - **Do instead:** [sector_utilities] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **Wrong if:** [sector_utilities] Wrong if this hedge reduces direction accuracy over 10 runs.
 
+#### WIN — 2026-10-08
+- **When:** [sector_utilities] Predicted down, market/sector went down (pct=-0.1944151350866341, score=-4.882, sector=Utilities).
+- **Ask:** Could magnitude/conviction have been better? Double-count in factors? Missing confirming source?
+- **Experiment:** [sector_utilities] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
+- **Do instead:** [sector_utilities] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **Wrong if:** [sector_utilities] Wrong if milder bands hurt direction accuracy over 10 runs.
+
 ## 4. Promoted standing rules (this cycle)
 
 _No new promotions this cycle (candidates incomplete, not yet recurring, or already active)._
@@ -502,37 +502,37 @@ Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`
 
 ## 4b. Retired this cycle (topic got worse after the lesson went live)
 
-- `a-fresh-top-holding-legal-regulatory-catalyst-e-g-a-trial-op.md` (sector:Communication Services): 43% → 0% (-43%) → `02_lessons/retired/`
-- `a-cyclical-industrials-etf-xli-like-posts-an-all-zero-s0-s4.md` (sector:Industrials): 71% → 29% (-43%) → `02_lessons/retired/`
-- `a-defensive-bond-proxy-sector-utilities-faces-a-risk-off-tap.md` (sector:Utilities): 57% → 14% (-43%) → `02_lessons/retired/`
-- `a-healthcare-xlv-call-with-s0-0-flat-mixed-es-nq-leftover-te.md` (sector:Healthcare): 71% → 29% (-43%) → `02_lessons/retired/`
-- `a-live-macro-shock-oil-geopolitical-is-present-at-the-open-t.md` (sector:Consumer Cyclical): 57% → 14% (-43%) → `02_lessons/retired/`
-- `a-long-duration-rate-sensitive-sector-reits-faces-a-live-rat.md` (sector:Real Estate): 71% → 29% (-43%) → `02_lessons/retired/`
-- `a-single-macro-shock-oil-rates-is-scored-as-multiple-indepen.md` (sector:Consumer Cyclical): 57% → 14% (-43%) → `02_lessons/retired/`
-- `a-technology-xlk-down-call-has-strongly-negative-leading-com.md` (sector:Technology): 57% → 14% (-43%) → `02_lessons/retired/`
-- `sector-etf-prediction-where-the-prior-session-had-a-modest-p.md` (sector:Healthcare): 71% → 29% (-43%) → `02_lessons/retired/`
-- `sector-prediction-emits-flat-flat-when-broad-market-tape-is.md` (sector:Healthcare): 71% → 29% (-43%) → `02_lessons/retired/`
+- `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities): 80% → 14% (-66%) → `02_lessons/retired/`
+- `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial): 75% → 14% (-61%) → `02_lessons/retired/`
+- `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities): 75% → 14% (-61%) → `02_lessons/retired/`
+- `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical): 86% → 29% (-57%) → `02_lessons/retired/`
+- `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md` (sector:Consumer Cyclical): 71% → 14% (-57%) → `02_lessons/retired/`
+- `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy): 71% → 14% (-57%) → `02_lessons/retired/`
+- `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical): 83% → 29% (-55%) → `02_lessons/retired/`
+- `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities): 67% → 14% (-52%) → `02_lessons/retired/`
+- `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy): 67% → 14% (-52%) → `02_lessons/retired/`
+- `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial): 60% → 14% (-46%) → `02_lessons/retired/`
 
 ## 4c. Numeric factor weights (engine_policy.json)
 
 These are applied by `compute_scores` / `compute_sector_scores` regardless of what the LLM writes — the part of learning that cannot be ignored.
 
 General (B0–B7 LLM components; multiplier applied by compute_scores):
-- B0_ASIA: n=21 sign-hit=0.57 → ×1.0
-- B0_EUROPE: n=13 sign-hit=0.85 → ×1.25
-- B1_CATALYSTS: n=26 sign-hit=0.77 → ×1.25
-- B2_BONDS: n=36 sign-hit=0.36 → ×0.0
+- B0_ASIA: n=22 sign-hit=0.59 → ×1.0
+- B0_EUROPE: n=14 sign-hit=0.86 → ×1.25
+- B1_CATALYSTS: n=27 sign-hit=0.78 → ×1.25
+- B2_BONDS: n=37 sign-hit=0.38 → ×0.0
 - B3_FEDPATH: n=31 sign-hit=0.45 → ×0.5
 - B4_VIX: n=13 sign-hit=0.54 → ×0.5
 - B5_SENTIMENT: n=22 sign-hit=0.32 → ×0.0
-- B6_FUTURES: n=26 sign-hit=0.77 → ×1.25
-- B7_OIL_DOLLAR: n=35 sign-hit=0.63 → ×1.0
+- B6_FUTURES: n=27 sign-hit=0.78 → ×1.25
+- B7_OIL_DOLLAR: n=36 sign-hit=0.61 → ×1.0
 Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
-- S0_SHARED_MACRO: n=188 sign-hit=0.60 → ×1.0
-- S1_SECTOR_FACTORS: n=212 sign-hit=0.57 → ×1.0
-- S2_BREADTH: n=161 sign-hit=0.60 → ×1.0
-- S3_FLOWS_POSITIONING: n=117 sign-hit=0.51 → ×0.5
-- S4_ETF_TAPE: n=173 sign-hit=0.61 → ×1.0
+- S0_SHARED_MACRO: n=193 sign-hit=0.59 → ×1.0
+- S1_SECTOR_FACTORS: n=216 sign-hit=0.56 → ×1.0
+- S2_BREADTH: n=166 sign-hit=0.60 → ×1.0
+- S3_FLOWS_POSITIONING: n=118 sign-hit=0.51 → ×0.5
+- S4_ETF_TAPE: n=177 sign-hit=0.60 → ×1.0
 Last change: hold
 
 Progress vs baselines: `03_scoreboard/IMPROVEMENT_TRACKER.md`.
