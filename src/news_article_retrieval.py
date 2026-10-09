@@ -117,7 +117,9 @@ def enrich_document(doc,resolver,fetch=get_page):
         if re.search(r'\b(?:verify you are human|captcha|enable javascript and cookies)\b',body,re.I):raise ValueError('Access challenge; no bypass')
         words={w for w in re.findall(r'\w+',doc['title'].lower()) if len(w)>3}
         overlap=len(words&set(re.findall(r'\w+',body.lower())))/max(len(words),1)
-        if len(body)<600 or overlap<.65:raise ValueError('Thin or mismatched publisher text')
+        minimum=250 if method=='structured_article_body' else 600
+        novel_words=set(re.findall(r'\w+',body.lower()))-set(re.findall(r'\w+',doc['title'].lower()))
+        if len(body)<minimum or len(novel_words)<15 or overlap<.65:raise ValueError('Thin or mismatched publisher text')
         out.update(retained_feed_body=doc.get('retained_feed_body',doc.get('body','')),body=body,
                    extraction_status='page_text',extracted_url=url)
         out.update(publication_metadata(page))
