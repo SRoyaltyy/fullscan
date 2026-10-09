@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T04:24:50.707560-04:00",
+  "generated_at": "2026-10-09T04:25:02.998581-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -91,7 +91,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 5,
       "files": [
         {
@@ -101,12 +101,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97065,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 98656,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -116,10 +116,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11877,
+          "size": 11600,
           "said": "Finviz Daily Digest \u2014 2026-10-09",
           "bullets": [
-            "_Generated 2026-10-09T04:24:44.639790-04:00 \u00b7 export=data/exports/finviz_2026-10-09.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_",
             "Major indices (live quote page)"
           ]
         },
@@ -128,10 +128,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-10-09_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 4175,
-          "said": "US stocks set to open higher as easing oil and yields support futures ahead of Delta earnings and sentiment data \u00b7 leaders HUM, DAL, BKR \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -139,14 +139,11 @@
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-10-09_finviz_market_digest.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 2039,
-          "said": "Finviz homepage market digest \u2014 2026-10-09",
-          "bullets": [
-            "Generated:** 2026-10-09T04:24:50.486638-04:00 (America/New_York)",
-            "Source:** `live`"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_close_json",
@@ -171,11 +168,11 @@
           "bullets": []
         }
       ],
-      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
       "bullets": [
-        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-        "Banks have profited from idle cash for years. AI agents could change that."
+        "Should You Be Worried About Pfizer Stock?",
+        "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+        "AMETEK Completes Acquisition of Indicor Instrumentation"
       ]
     },
     {
@@ -186,7 +183,7 @@
       "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 14,
       "files": [
         {
@@ -196,12 +193,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97065,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 98656,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -209,10 +206,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-10-09_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 4175,
-          "said": "US stocks set to open higher as easing oil and yields support futures ahead of Delta earnings and sentiment data \u00b7 leaders HUM, DAL, BKR \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -508,12 +505,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97065,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 98656,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -597,12 +594,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97065,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 98656,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -671,12 +668,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97065,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 98656,
+          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Should You Be Worried About Pfizer Stock?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
           ]
         },
         {
@@ -966,6 +963,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-09\n**Generated:** 2026-10-09T04:24:50.486638-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set to open higher as easing oil and yields support futures ahead of Delta earnings and sentiment data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** HUM, DAL, BKR\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** DAL\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-09\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T04:25:02.692626-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-09_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 98656,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-09_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11621,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11519306,
+          "preview": "11718 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-09_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 98656,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_ \u00b7 11718 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
