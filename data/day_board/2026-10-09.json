@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T07:09:43.449462-04:00",
+  "generated_at": "2026-10-09T07:21:48.267618-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -9,8 +9,8 @@
     "MISSING News judge MD `01_daily/news/2026-10-09_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 6,
-    "partial": 2,
+    "ok": 7,
+    "partial": 1,
     "fail": 0,
     "n": 8
   },
@@ -524,8 +524,8 @@
           "path": "01_daily/weather/2026-10-09_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9269 vix=falling yields=flat",
-          "size": 9269,
+          "reason": "sectors=11 bytes=9270 vix=falling yields=flat",
+          "size": 9270,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -586,11 +586,11 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -629,10 +629,10 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-10-09_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "usable=3/3",
+          "size": 11127,
+          "said": "3/7 usable \u00b7 Grok \u2192 DeepSeek \u00b7 TSLA, NFLX, UEC, UUUU, SLB, BKR, KGS",
           "bullets": []
         }
       ],
@@ -729,8 +729,8 @@
           "path": "01_daily/weather/2026-10-09_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9269 vix=falling yields=flat",
-          "size": 9269,
+          "reason": "sectors=11 bytes=9270 vix=falling yields=flat",
+          "size": 9270,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -760,7 +760,7 @@
           "size": 2213603,
           "said": "223 rows",
           "bullets": [
-            "PLMR, GLBE, VCTR, NU, ANF, SKWD, AAMI, RGA"
+            "PLMR, GLBE, VCTR, NU, ANF, SKWD, HCI, AAMI"
           ]
         },
         {
@@ -782,9 +782,9 @@
           "path": "data/stock_book/2026-10-09_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=216",
-          "size": 1460753,
-          "said": "1d BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE",
+          "reason": "horizons=5 names=215",
+          "size": 1462028,
+          "said": "1d BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX",
           "bullets": []
         },
         {
@@ -794,10 +794,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 83714,
+          "size": 83660,
           "said": "Stock book \u2014 2026-10-09",
           "bullets": [
-            "_Generated 2026-10-09T05:57:19.784143-04:00_",
+            "_Generated 2026-10-09T07:00:01.632006-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -860,9 +860,9 @@
           "path": "data/stock_book/2026-10-09_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=216",
-          "size": 1460753,
-          "said": "1d BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE",
+          "reason": "horizons=5 names=215",
+          "size": 1462028,
+          "said": "1d BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX",
           "bullets": []
         },
         {
@@ -911,24 +911,16 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "HITI",
-        "score": 0.5745267164960003
-      },
-      {
         "ticker": "CON",
-        "score": 0.7117534364955
+        "score": 0.7236392220140228
       },
       {
         "ticker": "AMN",
-        "score": 0.678797420548507
+        "score": 0.6669116350299842
       },
       {
         "ticker": "PACS",
-        "score": 0.826863664515342
-      },
-      {
-        "ticker": "ASTH",
-        "score": 0.5769995922100218
+        "score": 0.8345842063277717
       },
       {
         "ticker": "NTAP",
@@ -936,29 +928,37 @@
       },
       {
         "ticker": "MQ",
-        "score": 0.7092688066195303
+        "score": 0.7623677873411694
       },
       {
         "ticker": "BAND",
-        "score": 0.5716345332861978
+        "score": 0.5434365991904481
+      },
+      {
+        "ticker": "IT",
+        "score": 0.5538582959307676
       }
     ],
     "sell_1d": [
       {
         "ticker": "OKLO",
-        "score": -0.0957829576344038
+        "score": -0.2647641730503968
       },
       {
         "ticker": "NEOV",
-        "score": -0.36359434516177597
+        "score": -0.3774732485354357
       },
       {
         "ticker": "FCEL",
-        "score": -0.050855865126861396
+        "score": -0.2729360612644935
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.16326967663639574
       },
       {
         "ticker": "NNDM",
-        "score": -0.21081587543960056
+        "score": -0.13709457804790176
       },
       {
         "ticker": "ENVX",
@@ -966,15 +966,11 @@
       },
       {
         "ticker": "EOSE",
-        "score": -0.2870680789175202
+        "score": -0.3116275391560773
       },
       {
         "ticker": "TE",
-        "score": -0.2221712249642045
-      },
-      {
-        "ticker": "NRGV",
-        "score": -0.31005458321867824
+        "score": -0.2749286192985113
       }
     ],
     "flatten": {
@@ -3038,6 +3034,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-09\nall_ok=False  qc_all_ok=False  book_ok=True  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T07:21:47.121682-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-09_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9270,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-09_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5006,
+          "preview": "# Weather report \u2014 2026-10-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
