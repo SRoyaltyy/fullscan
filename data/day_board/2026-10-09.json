@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T12:54:57.298603-04:00",
+  "generated_at": "2026-10-09T12:55:26.798140-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -796,7 +796,7 @@
           "size": 83741,
           "said": "Stock book \u2014 2026-10-09",
           "bullets": [
-            "_Generated 2026-10-09T12:49:10.477903-04:00_",
+            "_Generated 2026-10-09T12:55:04.892953-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -992,38 +992,6 @@
     }
   },
   "lands": [
-    {
-      "key": "status",
-      "title": "Pre-open status packet",
-      "date": "2026-10-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-09T04:46:20.361883-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-10-09_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7574,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
-        },
-        {
-          "path": "01_daily/2026-10-09_preopen_status.json",
-          "ok": true,
-          "reason": "",
-          "size": 6578,
-          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
-        },
-        {
-          "path": "01_daily/2026-10-09_preopen_status.md",
-          "ok": true,
-          "reason": "",
-          "size": 360,
-          "preview": "# Pre-open ALL status \u2014 2026-10-09\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0"
-        }
-      ],
-      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-09\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -3971,6 +3939,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T12:55:25.891312-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1462138,
+          "preview": "1d BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE"
+        },
+        {
+          "path": "data/stock_book/2026-10-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2590,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-09_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12344,
+          "preview": "2026-10-09 BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12344,
+          "preview": "2026-10-09 BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE"
+        },
+        {
+          "path": "01_daily/2026-10-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84843,
+          "preview": "# Stock book \u2014 2026-10-09\n_Generated 2026-10-09T12:55:04.892953-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-09 BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE \u00b7 2026-10-09 BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE \u00b7 # Stock book \u2014 2026-10-09\n_Generated 2026-10-09T12:55:04.892953-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
