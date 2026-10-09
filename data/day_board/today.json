@@ -1,12 +1,12 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T04:39:20.342993-04:00",
+  "generated_at": "2026-10-09T04:39:35.996789-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 2,
+    "ok": 3,
     "partial": 2,
-    "fail": 4,
+    "fail": 3,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-10-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-09T04:25:11.275560-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-09_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 4175,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-10-09_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2039,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-09\n**Generated:** 2026-10-09T04:25:11.263348-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set to open higher as easing oil and yields support futures ahead of Delta earnings and sentiment data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** HUM, DAL, BKR\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** DAL\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-09\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-09\n**Generated:** 2026-10-09T04:25:11.263348-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks set to open higher as easing oil and yields support futures ahead of Delta earnings and sentiment data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** HUM, DAL, BKR\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** DAL\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-09\n**Clock use:** `same_morning`"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -200,6 +175,31 @@
         }
       ],
       "preview": "5907 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T04:39:35.543059-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-09_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9260,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.37, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.76, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.2, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 2.18, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 2.87, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.2, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -3.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.95, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-09_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 4999,
+          "preview": "# Weather report \u2014 2026-10-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.37, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.76, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.2, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 2.18, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 2.87, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.2, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -3.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -0.95, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
