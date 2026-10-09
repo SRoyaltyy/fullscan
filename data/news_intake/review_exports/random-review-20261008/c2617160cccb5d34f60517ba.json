@@ -2,7 +2,7 @@
   "title": "Warsh Stays Silent as Fed Officials’ Caution, Soft Inflation Data Cut Odds of an October Rate Hike - bloomingbit",
   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4tOVBLcVZZdXQ0ZGxTb2JFSk0ya1dlREwteW9pUnpEM1Z4QjlJQmU3blFlUjdmd25hT0x5NzJtSGE0V0pWbTc0WmxwNW5sSGliaklpTQ?oc=5",
   "publisher": "bloomingbit",
-  "body": "Warsh Stays Silent as Fed Officials’ Caution, Soft Inflation Data Cut Odds of an October Rate Hike en.bloomingbit.io",
+  "body": "Warsh Stays Silent as Fed Officials’ Caution, Soft Inflation Data Cut Odds of an October Rate Hike Check out the fastest breaking news News Community Trending 한국어 English 日本語 Warsh Stays Silent as Fed Officials’ Caution, Soft Inflation Data Cut Odds of an October Rate Hike Published 5:53 PM Oct 3, 2026 Source Korea Economic Daily Summary About STAT AI This AI analysis is provided for reference only and its accuracy is not guaranteed. \n It is not investment advice, and you are solely responsible for any investment decisions you make. \nFor more details, see STAT AI’s analysis criteria. The report said expectations for an October rate hike retreated quickly after senior Federal Reserve officials signaled a slower pace and inflation data came in weaker than expected. It said the probability of an October rate hike fell quickly after remarks from New York Fed President John Williams and Fed Vice Chair Philip Jefferson, alongside weaker-than-expected inflation data . Market experts said the speeches were an attempt to recalibrate market expectations and showed the Fed is taking a more cautious approach to future policy decisions . Forecast Trend Report by Period See more mid- to long-term trend analysis Photo: Shutterstock Expectations for a Federal Reserve interest-rate increase in October have retreated quickly as softer-than-expected inflation data compounded remarks from senior Fed officials signaling a slower pace of tightening. With Fed Chair Kevin Warsh avoiding signals on the future path of rates, comments from other Fed leaders have effectively served as policy signals for markets. John Williams, president of the Federal Reserve Bank of New York, said on Sept. 29 that one more rate increase by the end of this year could be appropriate, but there was no need to rush. Two days later, on Oct. 1, Fed Vice Chair Philip Jefferson said policymakers need to carefully assess trends in the data and the outlook when adjusting policy, and that reaching a judgment could take more time. Markets interpreted the remarks as a sign the Fed may slow the pace of rate increases. The probability of an October hike, which had been around 70% before Williams spoke, fell quickly after the comments and weaker-than-expected inflation data. Warsh’s communication style is one reason the two officials’ remarks drew such close attention. He has avoided forward guidance and maintained a data-dependent stance. With little direct signaling from the chair, markets have turned to other members of the Fed leadership for clues on policy. The New York Fed president holds a permanent vote on the Federal Open Market Committee and, by convention, also serves as the FOMC’s vice chair. Alongside the Fed chair and vice chair, the post is considered part of a monetary-policy “troika.” In the past, remarks from the Fed vice chair or the New York Fed president have often been interpreted as signals conveying the broader view of that troika. Market experts viewed the speeches as a clear attempt to recalibrate expectations, indicating the Fed is taking a more cautious approach to future policy decisions. Bloomberg reported on Oct. 2 that Goldman Sachs economists, after weighing the two officials’ remarks, had solidified their view that an October rate hike would be difficult. Krishna Guha, vice chairman of Evercore ISI, called the remarks an “authoritative” message. Michael Feroli, chief U.S. economist at JPMorgan Chase, also viewed the two speeches as an effort to manage market expectations. Both speeches carried the message that the Fed does not need to keep raising rates at every meeting and can now adjust the interval between hikes somewhat, he said. Still, views differ on whether the remarks should be seen as a typical form of forward guidance. Ellen Meade, a professor in Duke University’s Department of Economics, said there is a subtle but clear distinction between forward guidance that presents a rate move as a near certainty and guidance that slows the pace by saying officials will decide after reviewing enough data. There is no evidence that Williams and Jefferson coordinated their speeches with each other or with Warsh in advance. Even so, the episode again showed that markets will try to infer the direction of policy one way or another, even when the Fed chair avoids commenting on the rate path. Shin Yong-hyun, Hankyung.com reporter yonghyun@hankyung.com #Interest Rate Korea Economic Daily hankyung@bloomingbit.io The Korea Economic Daily Global is a digital media where latest news on Korean companies, industries, and financial markets. What do you think about this news? ‌ ‌ ‌ ‌ ‌ ‌ ‌ PiCK News ‌ ‌ ‌ ‌ ‌ Hashtag News #Interest Rate ‌ ‌ ‌ ‌ The Korea Economic Media Group Announcement Reporters Community operation policy Terms of Service Privacy Policy Code of Ethics Youth Protection Policy Contact Us help@bloomingbit.io bloomingbit 10F, 217 Teheran-ro, Gangnam-gu, Seoul Business registration No: 484-81-02340 Mail order number: 2024-서울강남-01131 | Online newspaper registration No: 서울,아53765 | Registration date: 2021.06.14 | Publisher/Editor: Sanha Kim Representative Name: Sanha Kim | Contact number: +82-2-554-7002 | Juvenile Protection Manager: Hanna Yang News Community Trending My Page",
   "published_at": "2026-10-04T00:53:47+00:00",
   "published_raw": "Sun, 04 Oct 2026 00:53:47 GMT",
   "source": "lane_factor_impulse",
@@ -22,6 +22,30 @@
       ]
     }
   ],
-  "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "extraction_status": "page_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "retained_feed_body": "Warsh Stays Silent as Fed Officials’ Caution, Soft Inflation Data Cut Odds of an October Rate Hike en.bloomingbit.io",
+  "extracted_url": "https://en.bloomingbit.io/feed/news/121548",
+  "review_enrichment": {
+    "attempted_epoch": 1791508554.4861364,
+    "attempts": 1,
+    "status": "page_text_checked",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMiVEFVX3lxTE4tOVBLcVZZdXQ0ZGxTb2JFSk0ya1dlREwteW9pUnpEM1Z4QjlJQmU3blFlUjdmd25hT0x5NzJtSGE0V0pWbTc0WmxwNW5sSGliaklpTQ"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://en.bloomingbit.io/feed/news/121548"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "title_token_overlap": 1.0,
+    "note": "Visible page text may include navigation; article boundaries require review"
+  }
 }

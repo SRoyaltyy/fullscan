@@ -26,5 +26,26 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "review_enrichment": {
+    "attempted_epoch": 1791508557.1168783,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMiiwFBVV95cUxQN29la0ZHUDA0T2xEeHNtYVhlaEhORU50aDlEcHNyOVA5ekhvT2Q4SDI4Z0VDNlIwQVJ6OW9qd2tzUHBIdmpYdXY4RnIwZ0RTUTVhUFZ4UzdpYXR2RzBwVWZzTUdwSTZobV90MUZlbHZyU0tQRVUtYjYxRGFiMnJqTmJCbVhSZTFaQ2U0"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://bworldonline.com/body-care-guide/fda-approved-diabetes-drug-for-weight-loss"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "error": "HTTP Error 404: Not Found"
+  }
 }
