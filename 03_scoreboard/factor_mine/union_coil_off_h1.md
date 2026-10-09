@@ -486,6 +486,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `XERS` | 104 | $10.00 | $2.33 | $-28.55 | $7,132.76 | ▼ -28.55 after sell → book $8,132.16; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `ZNTL` | 380 | $2.63 | $4.98 | $-78.28 | $8,127.18 | ▼ -78.28 after sell → book $8,127.18; vs 09:30 mark -4.98 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,127.18 | ▲ close $8,127.18 vs 09:30 $8,147.64 (session +0.00) | 16:00 close · cash $8,127.18 · no lots left · equity $8,127.18. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,127.18 | ▲ 09:30 equity $8,127.18 vs yday $8,127.18 (+0.00) | 09:30 open · cash $8,127.18 · no holdings · equity $8,127.18 vs prior close $8,127.18 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,127.18 | ▲ close $8,127.18 vs 09:30 $8,127.18 (session +0.00) | 16:00 close · cash $8,127.18 · no lots left · equity $8,127.18. | — |
 
 ## Not taken
 

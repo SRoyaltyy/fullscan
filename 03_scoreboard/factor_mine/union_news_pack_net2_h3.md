@@ -198,6 +198,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-06 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,602.30 | ▲ close $8,682.34 vs 09:30 $8,681.81 (session +2.62) | 16:00 close · cash $8,602.30 · equity $8,682.34 vs 09:30 $8,681.81 (+0.53; session marks +2.62) · 1 name(s) marked open→close (per-name table). RRC×2 09:30 $38.71 → close $40.02 +2.62 | — |
 | 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,602.30 | ▲ 09:30 equity $8,682.70 vs yday $8,682.34 (+0.36) | 09:30 open · cash $8,602.30 (unchanged overnight, no fees) · equity $8,682.70 vs prior close $8,682.34 (+0.36) · 1 name(s) re-marked at the open (per-name table). RRC×2 yday $40.02 → 09:30 $40.20 +0.36 | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,602.30 | ▼ close $8,681.96 vs 09:30 $8,682.70 (session -0.74) | 16:00 close · cash $8,602.30 · equity $8,681.96 vs 09:30 $8,682.70 (-0.74; session marks -0.74) · 1 name(s) marked open→close (per-name table). RRC×2 09:30 $40.20 → close $39.83 -0.74 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,602.30 | ▲ 09:30 equity $8,681.96 vs yday $8,681.96 (+0.00) | 09:30 open · cash $8,602.30 (unchanged overnight, no fees) · equity $8,681.96 vs prior close $8,681.96 (+0.00) · 1 name(s) re-marked at the open (per-name table). RRC×2 yday $39.83 → 09:30 $39.83 +0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,602.30 | ▲ close $8,681.96 vs 09:30 $8,681.96 (session +0.00) | 16:00 close · cash $8,602.30 · equity $8,681.96 vs 09:30 $8,681.96 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). RRC×2 09:30 $39.83 → close $39.83 +0.00 | — |
 
 ## Not taken
 

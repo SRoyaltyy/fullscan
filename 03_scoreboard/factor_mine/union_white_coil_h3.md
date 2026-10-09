@@ -320,6 +320,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `INOD` | 13 | $64.63 | $2.05 | $-113.51 | $5,167.96 | ▼ -113.51 after sell → book $7,317.72; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 09:30 ET | **SELL** | `WRBY` | 35 | $25.98 | $2.12 | $-61.96 | $6,075.14 | ▼ -61.96 after sell → book $7,315.60; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,075.14 | ▼ close $7,315.44 vs 09:30 $7,331.00 (session -0.16) | 16:00 close · cash $6,075.14 · equity $7,315.44 vs 09:30 $7,331.00 (-15.56; session marks -0.16) · 3 name(s) marked open→close (per-name table). AVPT×8 09:30 $14.51 → close $14.28 -1.84; BLFS×26 09:30 $38.61 → close $38.61 +0.00; TOST×4 09:30 $30.13 → close $30.55 +1.68 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,075.14 | ▲ 09:30 equity $7,315.44 vs yday $7,315.44 (+0.00) | 09:30 open · cash $6,075.14 (unchanged overnight, no fees) · equity $7,315.44 vs prior close $7,315.44 (+0.00) · 3 name(s) re-marked at the open (per-name table). AVPT×8 yday $14.28 → 09:30 $14.28 +0.00; BLFS×26 yday $38.61 → 09:30 $38.61 +0.00; TOST×4 yday $30.55 → 09:30 $30.55 +0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,075.14 | ▲ close $7,315.44 vs 09:30 $7,315.44 (session +0.00) | 16:00 close · cash $6,075.14 · equity $7,315.44 vs 09:30 $7,315.44 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). AVPT×8 09:30 $14.28 → close $14.28 +0.00; BLFS×26 09:30 $38.61 → close $38.61 +0.00; TOST×4 09:30 $30.55 → close $30.55 +0.00 | — |
 
 ## Not taken
 

@@ -256,6 +256,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `LUCD` | 5 | $0.59 | $0.06 | $-0.33 | $121.27 | ▼ -0.33 after sell → book $8,217.64; vs 09:30 mark -0.07 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 09:30 ET | **SELL** | `VIVO` | 1 | $3.25 | $0.06 | $-0.08 | $124.47 | ▼ -0.08 after sell → book $8,217.59; vs 09:30 mark -0.05 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $124.47 | ▲ close $8,292.75 vs 09:30 $8,217.83 (session +75.16) | 16:00 close · cash $124.47 · equity $8,292.75 vs 09:30 $8,217.83 (+74.92; session marks +75.16) · 2 name(s) marked open→close (per-name table). NXH×2134 09:30 $1.81 → close $1.77 -74.69; STZ×37 09:30 $114.34 → close $118.39 +149.85 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $124.47 | ▲ 09:30 equity $8,292.75 vs yday $8,292.75 (+0.00) | 09:30 open · cash $124.47 (unchanged overnight, no fees) · equity $8,292.75 vs prior close $8,292.75 (+0.00) · 2 name(s) re-marked at the open (per-name table). NXH×2134 yday $1.77 → 09:30 $1.77 +0.00; STZ×37 yday $118.39 → 09:30 $118.39 +0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $124.47 | ▲ close $8,292.75 vs 09:30 $8,292.75 (session +0.00) | 16:00 close · cash $124.47 · equity $8,292.75 vs 09:30 $8,292.75 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). NXH×2134 09:30 $1.77 → close $1.77 +0.00; STZ×37 09:30 $118.39 → close $118.39 +0.00 | — |
 
 ## Not taken
 

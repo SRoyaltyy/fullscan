@@ -440,6 +440,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12.30 | ▼ 09:30 equity $8,818.69 vs yday $8,946.65 (-127.96) | 09:30 open · cash $12.30 (unchanged overnight, no fees) · equity $8,818.69 vs prior close $8,946.65 (-127.96) · 1 name(s) re-marked at the open (per-name table). SIBN×457 yday $19.55 → 09:30 $19.27 -127.96 | — |
 | 2026-10-07 09:30 ET | **SELL** | `SIBN` | 457 | $19.27 | $6.04 | $-345.55 | $8,812.65 | ▼ -345.55 after sell → book $8,812.65; vs 09:30 mark -6.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,812.65 | ▲ close $8,812.65 vs 09:30 $8,818.69 (session +0.00) | 16:00 close · cash $8,812.65 · no lots left · equity $8,812.65. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,812.65 | ▲ 09:30 equity $8,812.65 vs yday $8,812.65 (+0.00) | 09:30 open · cash $8,812.65 · no holdings · equity $8,812.65 vs prior close $8,812.65 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,812.65 | ▲ close $8,812.65 vs 09:30 $8,812.65 (session +0.00) | 16:00 close · cash $8,812.65 · no lots left · equity $8,812.65. | — |
 
 ## Not taken
 

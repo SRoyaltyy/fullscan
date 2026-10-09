@@ -304,6 +304,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `ACN` | 21 | $195.00 | $2.10 | $-340.57 | $4,160.10 | ▼ -340.57 after sell → book $8,871.53; vs 09:30 mark -2.10 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 09:30 ET | **SELL** | `NKE` | 137 | $34.39 | $2.46 | $+246.81 | $8,869.07 | ▲ +246.81 after sell → book $8,869.07; vs 09:30 mark -2.46 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,869.07 | ▲ close $8,869.07 vs 09:30 $8,873.63 (session +0.00) | 16:00 close · cash $8,869.07 · no lots left · equity $8,869.07. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,869.07 | ▲ 09:30 equity $8,869.07 vs yday $8,869.07 (+0.00) | 09:30 open · cash $8,869.07 (unchanged overnight, no fees) · equity $8,869.07 vs prior close $8,869.07 (+0.00) | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,869.07 | ▲ close $8,869.07 vs 09:30 $8,869.07 (session +0.00) | 16:00 close · cash $8,869.07 · no lots left · equity $8,869.07. | — |
 
 ## Not taken
 

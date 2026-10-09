@@ -483,6 +483,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **COVER** | `RXO` | 21 | $28.34 | $2.05 | $+3.94 | $11,147.50 | ▲ +3.94 after sell → book $10,022.98; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **COVER** | `SN` | 3 | $183.00 | $2.00 | $-2.62 | $10,596.50 | ▼ -2.62 after sell → book $10,020.98; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,596.50 | ▲ close $10,107.22 vs 09:30 $10,041.08 (session +86.24) | 16:00 close · cash $10,596.50 · equity $10,107.22 vs 09:30 $10,041.08 (+66.14; session marks +86.24) · 1 name(s) marked open→close (per-name table). SDEV×176 09:30 $3.27 → close $2.78 +86.24 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,596.50 | ▲ 09:30 equity $10,107.22 vs yday $10,107.22 (+0.00) | 09:30 open · cash $10,596.50 (unchanged overnight, no fees) · equity $10,107.22 vs prior close $10,107.22 (+0.00) · 1 name(s) re-marked at the open (per-name table). SDEV×176 yday $2.78 → 09:30 $2.78 -0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,596.50 | ▲ close $10,107.22 vs 09:30 $10,107.22 (session +0.00) | 16:00 close · cash $10,596.50 · equity $10,107.22 vs 09:30 $10,107.22 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). SDEV×176 09:30 $2.78 → close $2.78 -0.00 | — |
 
 ## Not taken
 

@@ -281,6 +281,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,491.92 | ▼ 09:30 equity $9,010.58 vs yday $9,040.22 (-29.64) | 09:30 open · cash $13,491.92 (unchanged overnight, no fees) · equity $9,010.58 vs prior close $9,040.22 (-29.64) · 1 name(s) re-marked at the open (per-name table). TRMD×114 yday $39.05 → 09:30 $39.31 -29.64 | — |
 | 2026-10-07 09:30 ET | **COVER** | `TRMD` | 114 | $39.31 | $2.33 | $+0.86 | $9,008.25 | ▲ +0.86 after sell → book $9,008.25; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,008.25 | ▲ close $9,008.25 vs 09:30 $9,010.58 (session +0.00) | 16:00 close · cash $9,008.25 · no lots left · equity $9,008.25. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,008.25 | ▲ 09:30 equity $9,008.25 vs yday $9,008.25 (+0.00) | 09:30 open · cash $9,008.25 · no holdings · equity $9,008.25 vs prior close $9,008.25 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,008.25 | ▲ close $9,008.25 vs 09:30 $9,008.25 (session +0.00) | 16:00 close · cash $9,008.25 · no lots left · equity $9,008.25. | — |
 
 ## Not taken
 

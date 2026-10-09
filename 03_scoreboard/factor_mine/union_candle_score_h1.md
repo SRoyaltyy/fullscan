@@ -489,6 +489,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `RXRX` | 241 | $4.50 | $3.16 | $-77.36 | $6,510.61 | ▼ -77.36 after sell → book $8,670.83; vs 09:30 mark -3.16 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `XP` | 39 | $29.44 | $2.13 | $+5.13 | $7,656.64 | ▲ +5.13 after sell → book $8,668.70; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,656.64 | ▲ close $8,725.26 vs 09:30 $8,685.74 (session +56.56) | 16:00 close · cash $7,656.64 · equity $8,725.26 vs 09:30 $8,685.74 (+39.52; session marks +56.56) · 1 name(s) marked open→close (per-name table). P×7 09:30 $144.58 → close $152.66 +56.56 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,656.64 | ▲ 09:30 equity $8,725.26 vs yday $8,725.26 (+0.00) | 09:30 open · cash $7,656.64 (unchanged overnight, no fees) · equity $8,725.26 vs prior close $8,725.26 (+0.00) · 1 name(s) re-marked at the open (per-name table). P×7 yday $152.66 → 09:30 $152.66 +0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,656.64 | ▲ close $8,725.26 vs 09:30 $8,725.26 (session +0.00) | 16:00 close · cash $7,656.64 · equity $8,725.26 vs 09:30 $8,725.26 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). P×7 09:30 $152.66 → close $152.66 +0.00 | — |
 
 ## Not taken
 

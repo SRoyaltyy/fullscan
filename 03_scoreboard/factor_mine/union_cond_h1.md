@@ -504,6 +504,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `SHOP` | 6 | $162.57 | $2.03 | $-24.74 | $6,518.10 | ▼ -24.74 after sell → book $8,718.16; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `TOST` | 36 | $30.13 | $2.12 | $-2.06 | $7,600.66 | ▼ -2.06 after sell → book $8,716.04; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,600.66 | ▼ close $8,690.31 vs 09:30 $8,730.63 (session -25.73) | 16:00 close · cash $7,600.66 · equity $8,690.31 vs 09:30 $8,730.63 (-40.32; session marks -25.73) · 1 name(s) marked open→close (per-name table). BSY×31 09:30 $35.98 → close $35.15 -25.73 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,600.66 | ▲ 09:30 equity $8,690.31 vs yday $8,690.31 (+0.00) | 09:30 open · cash $7,600.66 (unchanged overnight, no fees) · equity $8,690.31 vs prior close $8,690.31 (+0.00) · 1 name(s) re-marked at the open (per-name table). BSY×31 yday $35.15 → 09:30 $35.15 +0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,600.66 | ▲ close $8,690.31 vs 09:30 $8,690.31 (session +0.00) | 16:00 close · cash $7,600.66 · equity $8,690.31 vs 09:30 $8,690.31 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). BSY×31 09:30 $35.15 → close $35.15 +0.00 | — |
 
 ## Not taken
 

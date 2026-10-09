@@ -328,6 +328,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `PDFS` | 18 | $52.54 | $2.06 | $-52.71 | $6,839.53 | ▼ -52.71 after sell → book $7,864.74; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 09:30 ET | **SELL** | `SNPS` | 2 | $505.35 | $2.02 | $+10.98 | $7,848.21 | ▲ +10.98 after sell → book $7,862.72; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,848.21 | ▼ close $7,862.49 vs 09:30 $7,885.72 (session -0.23) | 16:00 close · cash $7,848.21 · equity $7,862.49 vs 09:30 $7,885.72 (-23.23; session marks -0.23) · 1 name(s) marked open→close (per-name table). AVPT×1 09:30 $14.51 → close $14.28 -0.23 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,848.21 | ▲ 09:30 equity $7,862.49 vs yday $7,862.49 (+0.00) | 09:30 open · cash $7,848.21 (unchanged overnight, no fees) · equity $7,862.49 vs prior close $7,862.49 (+0.00) · 1 name(s) re-marked at the open (per-name table). AVPT×1 yday $14.28 → 09:30 $14.28 +0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,848.21 | ▲ close $7,862.49 vs 09:30 $7,862.49 (session +0.00) | 16:00 close · cash $7,848.21 · equity $7,862.49 vs 09:30 $7,862.49 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). AVPT×1 09:30 $14.28 → close $14.28 +0.00 | — |
 
 ## Not taken
 

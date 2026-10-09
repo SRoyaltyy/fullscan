@@ -489,6 +489,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `SDEV` | 345 | $3.27 | $4.52 | $-81.42 | $5,857.30 | ▼ -81.42 after sell → book $11,743.70; vs 09:30 mark -4.51 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-10-07 09:30 ET | **SELL** | `XP` | 40 | $29.44 | $2.13 | $+5.36 | $7,032.77 | ▲ +5.36 after sell → book $11,741.57; vs 09:30 mark -2.13 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,032.77 | ▲ close $11,752.61 vs 09:30 $11,761.94 (session +11.04) | 16:00 close · cash $7,032.77 · equity $11,752.61 vs 09:30 $11,761.94 (-9.33; session marks +11.04) · 1 name(s) marked open→close (per-name table). RPM×48 09:30 $98.10 → close $98.33 +11.04 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,032.77 | ▲ 09:30 equity $11,752.61 vs yday $11,752.61 (+0.00) | 09:30 open · cash $7,032.77 (unchanged overnight, no fees) · equity $11,752.61 vs prior close $11,752.61 (+0.00) | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,032.77 | ▲ close $11,752.61 vs 09:30 $11,752.61 (session +0.00) | 16:00 close · cash $7,032.77 · equity $11,752.61 vs 09:30 $11,752.61 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). RPM×48 09:30 $98.33 → close $98.33 +0.00 | — |
 
 ## Not taken
 

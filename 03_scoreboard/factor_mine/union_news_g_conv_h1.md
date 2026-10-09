@@ -299,6 +299,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `SIBN` | 117 | $19.27 | $2.38 | $-90.13 | $5,898.08 | ▼ -90.13 after sell → book $6,689.38; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `TWST` | 5 | $158.26 | $2.02 | $-260.48 | $6,687.35 | ▼ -260.48 after sell → book $6,687.35; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,687.35 | ▲ close $6,687.35 vs 09:30 $6,699.35 (session +0.00) | 16:00 close · cash $6,687.35 · no lots left · equity $6,687.35. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,687.35 | ▲ 09:30 equity $6,687.35 vs yday $6,687.35 (+0.00) | 09:30 open · cash $6,687.35 · no holdings · equity $6,687.35 vs prior close $6,687.35 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,687.35 | ▲ close $6,687.35 vs 09:30 $6,687.35 (session +0.00) | 16:00 close · cash $6,687.35 · no lots left · equity $6,687.35. | — |
 
 ## Not taken
 

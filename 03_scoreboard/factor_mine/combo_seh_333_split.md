@@ -692,6 +692,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `QTEX` | 805 | $1.38 | $10.53 | $-286.56 | $2,185.61 | ▼ -286.56 after sell → book $4,828.23; vs 09:30 mark -10.53 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `SDEV` | 394 | $3.27 | $5.16 | $-92.98 | $3,468.84 | ▼ -92.98 after sell → book $4,823.08; vs 09:30 mark -5.15 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-10-07 09:30 ET | **SELL** | `XP` | 46 | $29.44 | $2.15 | $+6.76 | $4,820.93 | ▲ +6.76 after sell → book $4,820.93; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,197.19 | ▲ close $2,845.67 vs 09:30 $2,845.67 (session +0.00) | 16:00 close · cash $5,197.19 · equity $2,845.67 vs 09:30 $2,845.67 (-0.00; session marks +0.00) · 4 name(s) marked open→close (per-name table). AXTI×4 09:30 $79.79 → close $79.79 -0.00; MXL×3 09:30 $107.36 → close $107.36 -0.00; SG×38 09:30 $9.16 → close $9.16 -0.00; TRMD×35 09:30 $38.92 → close $38.92 -0.00 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,197.19 | ▲ 09:30 equity $2,845.67 vs yday $2,845.67 (-0.00) | 09:30 open · cash $5,197.19 (unchanged overnight, no fees) · equity $2,845.67 vs prior close $2,845.67 (-0.00) · 4 name(s) re-marked at the open (per-name table). AXTI×4 yday $79.79 → 09:30 $79.79 -0.00; MXL×3 yday $107.36 → 09:30 $107.36 -0.00; SG×38 yday $9.16 → 09:30 $9.16 -0.00; TRMD×35 yday $38.92 → 09:30 $38.92 -0.00 | — |
 
 ## Not taken
 

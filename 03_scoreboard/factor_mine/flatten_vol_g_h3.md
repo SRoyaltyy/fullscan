@@ -212,6 +212,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9.67 | ▼ 09:30 equity $6,930.94 vs yday $6,969.10 (-38.16) | 09:30 open · cash $9.67 (unchanged overnight, no fees) · equity $6,930.94 vs prior close $6,969.10 (-38.16) · 1 name(s) re-marked at the open (per-name table). AVPT×477 yday $14.59 → 09:30 $14.51 -38.16 | — |
 | 2026-10-07 09:30 ET | **SELL** | `AVPT` | 477 | $14.51 | $6.29 | $+102.04 | $6,924.65 | ▲ +102.04 after sell → book $6,924.65; vs 09:30 mark -6.29 | dropped from list after 4 sess (min 3) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,924.65 | ▲ close $6,924.65 vs 09:30 $6,930.94 (session +0.00) | 16:00 close · cash $6,924.65 · no lots left · equity $6,924.65. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,924.65 | ▲ 09:30 equity $6,924.65 vs yday $6,924.65 (+0.00) | 09:30 open · cash $6,924.65 · no holdings · equity $6,924.65 vs prior close $6,924.65 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,924.65 | ▲ close $6,924.65 vs 09:30 $6,924.65 (session +0.00) | 16:00 close · cash $6,924.65 · no lots left · equity $6,924.65. | — |
 
 ## Not taken
 

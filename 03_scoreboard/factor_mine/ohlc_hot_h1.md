@@ -459,6 +459,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `TJGC` | 33 | $26.61 | $2.11 | $-215.07 | $6,113.46 | ▼ -215.07 after sell → book $7,913.90; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟡 digest🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-07 09:30 ET | **SELL** | `TWST` | 5 | $158.26 | $2.02 | $-260.48 | $6,902.73 | ▼ -260.48 after sell → book $7,911.87; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,902.73 | ▼ close $7,904.61 vs 09:30 $7,930.53 (session -7.26) | 16:00 close · cash $6,902.73 · equity $7,904.61 vs 09:30 $7,930.53 (-25.92; session marks -7.26) · 1 name(s) marked open→close (per-name table). KOD×11 09:30 $91.74 → close $91.08 -7.26 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,902.73 | ▲ 09:30 equity $7,904.61 vs yday $7,904.61 (+0.00) | 09:30 open · cash $6,902.73 (unchanged overnight, no fees) · equity $7,904.61 vs prior close $7,904.61 (+0.00) · 1 name(s) re-marked at the open (per-name table). KOD×11 yday $91.08 → 09:30 $91.08 +0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,902.73 | ▲ close $7,904.61 vs 09:30 $7,904.61 (session +0.00) | 16:00 close · cash $6,902.73 · equity $7,904.61 vs 09:30 $7,904.61 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). KOD×11 09:30 $91.08 → close $91.08 +0.00 | — |
 
 ## Not taken
 

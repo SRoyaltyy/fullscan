@@ -602,6 +602,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `STNE` | 30 | $11.56 | $2.10 | $-7.48 | $6,108.13 | ▼ -7.48 after sell → book $9,306.31; vs 09:30 mark -2.10 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `XP` | 12 | $29.44 | $2.05 | $-1.19 | $6,459.37 | ▼ -1.19 after sell → book $9,304.27; vs 09:30 mark -2.04 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,459.37 | ▲ close $9,310.94 vs 09:30 $9,324.15 (session +6.67) | 16:00 close · cash $6,459.37 · equity $9,310.94 vs 09:30 $9,324.15 (-13.21; session marks +6.67) · 1 name(s) marked open→close (per-name table). RPM×29 09:30 $98.10 → close $98.33 +6.67 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,459.37 | ▲ 09:30 equity $9,310.94 vs yday $9,310.94 (+0.00) | 09:30 open · cash $6,459.37 (unchanged overnight, no fees) · equity $9,310.94 vs prior close $9,310.94 (+0.00) | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,459.37 | ▲ close $9,310.94 vs 09:30 $9,310.94 (session +0.00) | 16:00 close · cash $6,459.37 · equity $9,310.94 vs 09:30 $9,310.94 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). RPM×29 09:30 $98.33 → close $98.33 +0.00 | — |
 
 ## Not taken
 

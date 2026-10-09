@@ -293,6 +293,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $44.50 | ▼ 09:30 equity $8,554.95 vs yday $8,573.90 (-18.95) | 09:30 open · cash $44.50 (unchanged overnight, no fees) · equity $8,554.95 vs prior close $8,573.90 (-18.95) · 2 name(s) re-marked at the open (per-name table). NKE×5 yday $34.61 → 09:30 $34.39 -1.10; RPM×85 yday $98.31 → 09:30 $98.10 -17.85 | — |
 | 2026-10-07 09:30 ET | **SELL** | `NKE` | 5 | $34.39 | $1.75 | $+5.79 | $214.70 | ▲ +5.79 after sell → book $8,553.20; vs 09:30 mark -1.75 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $214.70 | ▲ close $8,572.75 vs 09:30 $8,554.95 (session +19.55) | 16:00 close · cash $214.70 · equity $8,572.75 vs 09:30 $8,554.95 (+17.80; session marks +19.55) · 1 name(s) marked open→close (per-name table). RPM×85 09:30 $98.10 → close $98.33 +19.55 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $214.70 | ▲ 09:30 equity $8,572.75 vs yday $8,572.75 (+0.00) | 09:30 open · cash $214.70 (unchanged overnight, no fees) · equity $8,572.75 vs prior close $8,572.75 (+0.00) · 1 name(s) re-marked at the open (per-name table). RPM×85 yday $98.33 → 09:30 $98.33 +0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $214.70 | ▲ close $8,572.75 vs 09:30 $8,572.75 (session +0.00) | 16:00 close · cash $214.70 · equity $8,572.75 vs 09:30 $8,572.75 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). RPM×85 09:30 $98.33 → close $98.33 +0.00 | — |
 
 ## Not taken
 

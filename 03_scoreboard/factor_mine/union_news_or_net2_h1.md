@@ -366,6 +366,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `ALVO` | 608 | $6.10 | $7.97 | $+2.42 | $3,712.42 | ▲ +2.42 after sell → book $7,258.10; vs 09:30 mark -7.97 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `SIBN` | 184 | $19.27 | $2.60 | $-139.46 | $7,255.50 | ▼ -139.46 after sell → book $7,255.50; vs 09:30 mark -2.60 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,255.50 | ▲ close $7,255.50 vs 09:30 $7,266.07 (session +0.00) | 16:00 close · cash $7,255.50 · no lots left · equity $7,255.50. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,255.50 | ▲ 09:30 equity $7,255.50 vs yday $7,255.50 (+0.00) | 09:30 open · cash $7,255.50 · no holdings · equity $7,255.50 vs prior close $7,255.50 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,255.50 | ▲ close $7,255.50 vs 09:30 $7,255.50 (session +0.00) | 16:00 close · cash $7,255.50 · no lots left · equity $7,255.50. | — |
 
 ## Not taken
 

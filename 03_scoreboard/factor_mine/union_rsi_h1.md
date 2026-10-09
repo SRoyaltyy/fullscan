@@ -478,6 +478,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `VELO` | 84 | $9.12 | $2.27 | $-59.11 | $4,719.03 | ▼ -59.11 after sell → book $6,292.63; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `ZNTL` | 294 | $2.63 | $3.85 | $-60.56 | $5,488.40 | ▼ -60.56 after sell → book $6,288.78; vs 09:30 mark -3.85 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,488.40 | ▲ close $6,317.13 vs 09:30 $6,308.56 (session +28.35) | 16:00 close · cash $5,488.40 · equity $6,317.13 vs 09:30 $6,308.56 (+8.57; session marks +28.35) · 1 name(s) marked open→close (per-name table). STZ×7 09:30 $114.34 → close $118.39 +28.35 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,488.40 | ▲ 09:30 equity $6,317.13 vs yday $6,317.13 (-0.00) | 09:30 open · cash $5,488.40 (unchanged overnight, no fees) · equity $6,317.13 vs prior close $6,317.13 (-0.00) · 1 name(s) re-marked at the open (per-name table). STZ×7 yday $118.39 → 09:30 $118.39 +0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,488.40 | ▲ close $6,317.13 vs 09:30 $6,317.13 (session +0.00) | 16:00 close · cash $5,488.40 · equity $6,317.13 vs 09:30 $6,317.13 (-0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). STZ×7 09:30 $118.39 → close $118.39 +0.00 | — |
 
 ## Not taken
 

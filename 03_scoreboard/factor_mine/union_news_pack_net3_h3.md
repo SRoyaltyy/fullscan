@@ -198,6 +198,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `ACN` | 18 | $195.00 | $2.08 | $-292.49 | $3,564.12 | ▼ -292.49 after sell → book $7,495.44; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 09:30 ET | **SELL** | `SNPS` | 7 | $505.35 | $2.05 | $+48.40 | $7,099.52 | ▲ +48.40 after sell → book $7,493.39; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,099.52 | ▼ close $7,489.04 vs 09:30 $7,497.52 (session -4.35) | 16:00 close · cash $7,099.52 · equity $7,489.04 vs 09:30 $7,497.52 (-8.48; session marks -4.35) · 1 name(s) marked open→close (per-name table). COP×3 09:30 $131.29 → close $129.84 -4.35 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,099.52 | ▲ 09:30 equity $7,489.04 vs yday $7,489.04 (+0.00) | 09:30 open · cash $7,099.52 (unchanged overnight, no fees) · equity $7,489.04 vs prior close $7,489.04 (+0.00) · 1 name(s) re-marked at the open (per-name table). COP×3 yday $129.84 → 09:30 $129.84 +0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,099.52 | ▲ close $7,489.04 vs 09:30 $7,489.04 (session +0.00) | 16:00 close · cash $7,099.52 · equity $7,489.04 vs 09:30 $7,489.04 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). COP×3 09:30 $129.84 → close $129.84 +0.00 | — |
 
 ## Not taken
 

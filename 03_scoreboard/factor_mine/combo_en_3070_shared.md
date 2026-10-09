@@ -521,6 +521,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `NKE` | 59 | $34.39 | $2.19 | $+104.02 | $3,678.61 | ▲ +104.02 after sell → book $7,879.51; vs 09:30 mark -2.20 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 09:30 ET | **SELL** | `SIBN` | 72 | $19.27 | $2.23 | $-57.00 | $5,063.82 | ▼ -57.00 after sell → book $7,877.28; vs 09:30 mark -2.23 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,063.82 | ▼ close $7,865.99 vs 09:30 $7,884.84 (session -11.29) | 16:00 close · cash $5,063.82 · equity $7,865.99 vs 09:30 $7,884.84 (-18.85; session marks -11.29) · 2 name(s) marked open→close (per-name table). RPM×19 09:30 $98.10 → close $98.33 +4.37; TWST×6 09:30 $158.26 → close $155.65 -15.66 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,063.82 | ▲ 09:30 equity $7,865.99 vs yday $7,865.99 (+0.00) | 09:30 open · cash $5,063.82 (unchanged overnight, no fees) · equity $7,865.99 vs prior close $7,865.99 (+0.00) | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,063.82 | ▲ close $7,865.99 vs 09:30 $7,865.99 (session +0.00) | 16:00 close · cash $5,063.82 · equity $7,865.99 vs 09:30 $7,865.99 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). RPM×19 09:30 $98.33 → close $98.33 +0.00; TWST×6 09:30 $155.65 → close $155.65 +0.00 | — |
 
 ## Not taken
 

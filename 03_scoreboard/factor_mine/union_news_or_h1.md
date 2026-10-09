@@ -408,6 +408,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `ALVO` | 419 | $6.10 | $5.50 | $+1.67 | $2,584.67 | ▲ +1.67 after sell → book $6,931.08; vs 09:30 mark -5.50 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `SIBN` | 127 | $19.27 | $2.41 | $-97.49 | $5,029.55 | ▼ -97.49 after sell → book $6,928.67; vs 09:30 mark -2.41 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,029.55 | ▼ close $6,897.35 vs 09:30 $6,936.58 (session -31.32) | 16:00 close · cash $5,029.55 · equity $6,897.35 vs 09:30 $6,936.58 (-39.23; session marks -31.32) · 1 name(s) marked open→close (per-name table). TWST×12 09:30 $158.26 → close $155.65 -31.32 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,029.55 | ▲ 09:30 equity $6,897.35 vs yday $6,897.35 (+0.00) | 09:30 open · cash $5,029.55 (unchanged overnight, no fees) · equity $6,897.35 vs prior close $6,897.35 (+0.00) · 1 name(s) re-marked at the open (per-name table). TWST×12 yday $155.65 → 09:30 $155.65 +0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,029.55 | ▲ close $6,897.35 vs 09:30 $6,897.35 (session +0.00) | 16:00 close · cash $5,029.55 · equity $6,897.35 vs 09:30 $6,897.35 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). TWST×12 09:30 $155.65 → close $155.65 +0.00 | — |
 
 ## Not taken
 

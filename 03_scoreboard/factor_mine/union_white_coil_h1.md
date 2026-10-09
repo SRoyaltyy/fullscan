@@ -353,3 +353,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `AVPT` | 269 | $14.51 | $3.55 | $-76.96 | $3,900.85 | ▼ -76.96 after sell → book $7,878.01; vs 09:30 mark -3.55 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `TOST` | 132 | $30.13 | $2.44 | $+3.09 | $7,875.57 | ▲ +3.09 after sell → book $7,875.57; vs 09:30 mark -2.44 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,875.57 | ▲ close $7,875.57 vs 09:30 $7,881.56 (session +0.00) | 16:00 close · cash $7,875.57 · no lots left · equity $7,875.57. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,875.57 | ▲ 09:30 equity $7,875.57 vs yday $7,875.57 (+0.00) | 09:30 open · cash $7,875.57 · no holdings · equity $7,875.57 vs prior close $7,875.57 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,875.57 | ▲ close $7,875.57 vs 09:30 $7,875.57 (session +0.00) | 16:00 close · cash $7,875.57 · no lots left · equity $7,875.57. | — |

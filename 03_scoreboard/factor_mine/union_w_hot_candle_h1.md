@@ -488,6 +488,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `SDEV` | 478 | $3.27 | $6.26 | $-112.80 | $10,463.94 | ▼ -112.80 after sell → book $12,112.58; vs 09:30 mark -6.25 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-10-07 09:30 ET | **SELL** | `XP` | 56 | $29.44 | $2.18 | $+9.10 | $12,110.39 | ▲ +9.10 after sell → book $12,110.39; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,110.39 | ▲ close $12,110.39 vs 09:30 $12,148.73 (session +0.00) | 16:00 close · cash $12,110.39 · no lots left · equity $12,110.39. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,110.39 | ▲ 09:30 equity $12,110.39 vs yday $12,110.39 (+0.00) | 09:30 open · cash $12,110.39 · no holdings · equity $12,110.39 vs prior close $12,110.39 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,110.39 | ▲ close $12,110.39 vs 09:30 $12,110.39 (session +0.00) | 16:00 close · cash $12,110.39 · no lots left · equity $12,110.39. | — |
 
 ## Not taken
 

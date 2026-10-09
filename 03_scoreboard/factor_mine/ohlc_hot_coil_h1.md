@@ -363,6 +363,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $97.87 | ▼ 09:30 equity $8,246.17 vs yday $8,304.07 (-57.90) | 09:30 open · cash $97.87 (unchanged overnight, no fees) · equity $8,246.17 vs prior close $8,304.07 (-57.90) · 1 name(s) re-marked at the open (per-name table). ILMN×30 yday $273.54 → 09:30 $271.61 -57.90 | — |
 | 2026-10-07 09:30 ET | **SELL** | `ILMN` | 30 | $271.61 | $2.16 | $-903.34 | $8,244.01 | ▼ -903.34 after sell → book $8,244.01; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,244.01 | ▲ close $8,244.01 vs 09:30 $8,246.17 (session +0.00) | 16:00 close · cash $8,244.01 · no lots left · equity $8,244.01. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,244.01 | ▲ 09:30 equity $8,244.01 vs yday $8,244.01 (+0.00) | 09:30 open · cash $8,244.01 · no holdings · equity $8,244.01 vs prior close $8,244.01 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,244.01 | ▲ close $8,244.01 vs 09:30 $8,244.01 (session +0.00) | 16:00 close · cash $8,244.01 · no lots left · equity $8,244.01. | — |
 
 ## Not taken
 

@@ -267,6 +267,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `AVPT` | 137 | $14.51 | $2.44 | $+28.04 | $2,039.90 | ▲ +28.04 after sell → book $8,369.60; vs 09:30 mark -2.43 | dropped from list after 4 sess (min 3) | — |
 | 2026-10-07 09:30 ET | **SELL** | `NAUT` | 11 | $1.67 | $0.24 | $-0.40 | $2,058.03 | ▼ -0.40 after sell → book $8,369.36; vs 09:30 mark -0.24 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,058.03 | ▼ close $8,344.87 vs 09:30 $8,372.21 (session -24.49) | 16:00 close · cash $2,058.03 · equity $8,344.87 vs 09:30 $8,372.21 (-27.34; session marks -24.49) · 3 name(s) marked open→close (per-name table). GWRE×13 09:30 $162.01 → close $163.98 +25.61; IOT×50 09:30 $41.60 → close $40.51 -54.50; PTC×11 09:30 $193.20 → close $193.60 +4.40 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,058.03 | ▲ 09:30 equity $8,344.87 vs yday $8,344.87 (+0.00) | 09:30 open · cash $2,058.03 (unchanged overnight, no fees) · equity $8,344.87 vs prior close $8,344.87 (+0.00) · 3 name(s) re-marked at the open (per-name table). GWRE×13 yday $163.98 → 09:30 $163.98 +0.00; IOT×50 yday $40.51 → 09:30 $40.51 +0.00; PTC×11 yday $193.60 → 09:30 $193.60 +0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,058.03 | ▲ close $8,344.87 vs 09:30 $8,344.87 (session +0.00) | 16:00 close · cash $2,058.03 · equity $8,344.87 vs 09:30 $8,344.87 (+0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). GWRE×13 09:30 $163.98 → close $163.98 +0.00; IOT×50 09:30 $40.51 → close $40.51 +0.00; PTC×11 09:30 $193.60 → close $193.60 +0.00 | — |
 
 ## Not taken
 

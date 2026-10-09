@@ -239,6 +239,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,652.74 | ▼ 09:30 equity $7,667.30 vs yday $7,667.71 (-0.41) | 09:30 open · cash $7,652.74 (unchanged overnight, no fees) · equity $7,667.30 vs prior close $7,667.71 (-0.41) · 1 name(s) re-marked at the open (per-name table). CMPX×15 yday $1.00 → 09:30 $0.97 -0.41 | — |
 | 2026-10-07 09:30 ET | **SELL** | `CMPX` | 15 | $0.97 | $0.21 | $+0.06 | $7,667.09 | ▲ +0.06 after sell → book $7,667.09; vs 09:30 mark -0.21 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,667.09 | ▲ close $7,667.09 vs 09:30 $7,667.30 (session +0.00) | 16:00 close · cash $7,667.09 · no lots left · equity $7,667.09. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,667.09 | ▲ 09:30 equity $7,667.09 vs yday $7,667.09 (+0.00) | 09:30 open · cash $7,667.09 · no holdings · equity $7,667.09 vs prior close $7,667.09 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,667.09 | ▲ close $7,667.09 vs 09:30 $7,667.09 (session +0.00) | 16:00 close · cash $7,667.09 · no lots left · equity $7,667.09. | — |
 
 ## Not taken
 

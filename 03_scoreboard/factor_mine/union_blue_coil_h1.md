@@ -460,6 +460,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `RPM` | 43 | $98.10 | $2.16 | $+75.27 | $4,266.75 | ▲ +75.27 after sell → book $8,170.11; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `VELO` | 428 | $9.12 | $5.62 | $-289.34 | $8,164.48 | ▼ -289.34 after sell → book $8,164.48; vs 09:30 mark -5.63 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,164.48 | ▲ close $8,164.48 vs 09:30 $8,172.27 (session +0.00) | 16:00 close · cash $8,164.48 · no lots left · equity $8,164.48. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,164.48 | ▲ 09:30 equity $8,164.48 vs yday $8,164.48 (+0.00) | 09:30 open · cash $8,164.48 · no holdings · equity $8,164.48 vs prior close $8,164.48 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,164.48 | ▲ close $8,164.48 vs 09:30 $8,164.48 (session +0.00) | 16:00 close · cash $8,164.48 · no lots left · equity $8,164.48. | — |
 
 ## Not taken
 

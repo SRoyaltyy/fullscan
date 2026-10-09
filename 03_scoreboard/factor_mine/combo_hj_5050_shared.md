@@ -558,6 +558,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `STNE` | 99 | $11.56 | $2.31 | $-15.49 | $11,315.40 | ▼ -15.49 after sell → book $13,052.36; vs 09:30 mark -2.31 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `XP` | 59 | $29.44 | $2.19 | $+9.80 | $13,050.16 | ▲ +9.80 after sell → book $13,050.16; vs 09:30 mark -2.20 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,050.16 | ▲ close $13,050.16 vs 09:30 $13,089.70 (session +0.00) | 16:00 close · cash $13,050.16 · no lots left · equity $13,050.16. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,050.16 | ▲ 09:30 equity $13,050.16 vs yday $13,050.16 (+0.00) | 09:30 open · cash $13,050.16 (unchanged overnight, no fees) · equity $13,050.16 vs prior close $13,050.16 (+0.00) | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,050.16 | ▲ close $13,050.16 vs 09:30 $13,050.16 (session +0.00) | 16:00 close · cash $13,050.16 · no lots left · equity $13,050.16. | — |
 
 ## Not taken
 

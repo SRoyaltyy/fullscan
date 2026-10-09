@@ -466,6 +466,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **COVER** | `RXO` | 20 | $28.34 | $2.05 | $+3.56 | $10,343.30 | ▲ +3.56 after sell → book $9,754.50; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **COVER** | `XP` | 20 | $29.44 | $2.05 | $-8.94 | $9,752.45 | ▼ -8.94 after sell → book $9,752.45; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,752.45 | ▲ close $9,752.45 vs 09:30 $9,771.08 (session +0.00) | 16:00 close · cash $9,752.45 · no lots left · equity $9,752.45. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,752.45 | ▲ 09:30 equity $9,752.45 vs yday $9,752.45 (+0.00) | 09:30 open · cash $9,752.45 · no holdings · equity $9,752.45 vs prior close $9,752.45 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,752.45 | ▲ close $9,752.45 vs 09:30 $9,752.45 (session +0.00) | 16:00 close · cash $9,752.45 · no lots left · equity $9,752.45. | — |
 
 ## Not taken
 

@@ -440,6 +440,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `PTC` | 6 | $193.20 | $2.03 | $-2.84 | $8,090.42 | ▼ -2.84 after sell → book $9,297.46; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `XP` | 41 | $29.44 | $2.13 | $+5.59 | $9,295.32 | ▲ +5.59 after sell → book $9,295.32; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,295.32 | ▲ close $9,295.32 vs 09:30 $9,313.63 (session +0.00) | 16:00 close · cash $9,295.32 · no lots left · equity $9,295.32. | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,295.32 | ▲ 09:30 equity $9,295.32 vs yday $9,295.32 (+0.00) | 09:30 open · cash $9,295.32 · no holdings · equity $9,295.32 vs prior close $9,295.32 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,295.32 | ▲ close $9,295.32 vs 09:30 $9,295.32 (session +0.00) | 16:00 close · cash $9,295.32 · no lots left · equity $9,295.32. | — |
 
 ## Not taken
 

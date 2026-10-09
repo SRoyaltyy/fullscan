@@ -469,6 +469,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-07 09:30 ET | **SELL** | `SHOP` | 7 | $162.57 | $2.03 | $-28.19 | $7,507.22 | ▼ -28.19 after sell → book $9,613.42; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-07 09:30 ET | **SELL** | `TWST` | 6 | $158.26 | $2.03 | $-311.78 | $8,454.75 | ▼ -311.78 after sell → book $9,611.39; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟡 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-07 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,454.75 | ▲ close $9,676.03 vs 09:30 $9,625.58 (session +64.64) | 16:00 close · cash $8,454.75 · equity $9,676.03 vs 09:30 $9,625.58 (+50.45; session marks +64.64) · 1 name(s) marked open→close (per-name table). P×8 09:30 $144.58 → close $152.66 +64.64 | — |
+| 2026-10-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,454.75 | ▲ 09:30 equity $9,676.03 vs yday $9,676.03 (+0.00) | 09:30 open · cash $8,454.75 (unchanged overnight, no fees) · equity $9,676.03 vs prior close $9,676.03 (+0.00) · 1 name(s) re-marked at the open (per-name table). P×8 yday $152.66 → 09:30 $152.66 +0.00 | — |
+| 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,454.75 | ▲ close $9,676.03 vs 09:30 $9,676.03 (session +0.00) | 16:00 close · cash $8,454.75 · equity $9,676.03 vs 09:30 $9,676.03 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). P×8 09:30 $152.66 → close $152.66 +0.00 | — |
 
 ## Not taken
 
