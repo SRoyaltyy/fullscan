@@ -1,6 +1,44 @@
 """Free bounded publisher retrieval with exact provenance and explicit failure."""
-import json,re,time,urllib.request
+import json,re,time,urllib.request,hashlib
+from datetime import datetime,timezone
 from html.parser import HTMLParser
+from urllib.parse import urljoin,urlsplit,urlunsplit
+
+class SourceLinks(HTMLParser):
+    def __init__(self):
+        super().__init__();self.hidden=0;self.article=0;self.anchor=None;self.links=[]
+    def handle_starttag(self,tag,attrs):
+        if tag in ('script','style','noscript','nav','aside','footer'):self.hidden+=1
+        if tag=='article':self.article+=1
+        if tag=='a' and not self.hidden:
+            href=dict(attrs).get('href')
+            if href:self.anchor={'href':href,'text':[],'article':bool(self.article)}
+    def handle_data(self,data):
+        if self.anchor and not self.hidden:self.anchor['text'].append(data)
+    def handle_endtag(self,tag):
+        if tag=='a' and self.anchor:
+            self.links.append(self.anchor);self.anchor=None
+        if tag in ('script','style','noscript','nav','aside','footer'):self.hidden=max(0,self.hidden-1)
+        if tag=='article':self.article=max(0,self.article-1)
+
+def source_links(page,base_url):
+    """Preserve publisher citations, never assert their truth or authority."""
+    parser=SourceLinks();parser.feed(page)
+    rows=[x for x in parser.links if x['article']] or parser.links
+    out=[];seen=set()
+    for row in rows:
+        url=urlsplit(urljoin(base_url,row['href']))
+        label=' '.join(' '.join(row['text']).split())
+        if url.scheme not in ('http','https') or not url.hostname or url.username or url.password or not label:continue
+        absolute=urlunsplit((url.scheme,url.netloc,url.path,url.query,''))
+        if absolute in seen:continue
+        seen.add(absolute)
+        host=url.hostname.lower()
+        official=host.endswith(('.gov','.gov.uk','.europa.eu'))
+        out.append({'url':absolute,'anchor_text':label[:400],
+            'link_scope':'article_element' if row['article'] else 'visible_page_candidate',
+            'official_domain_candidate':official,'source_verified':False})
+    return out[:100]
 
 class PublicationMetadata(HTMLParser):
     def __init__(self):super().__init__();self.times=[]
@@ -83,8 +121,39 @@ def enrich_document(doc,resolver,fetch=get_page):
         out.update(retained_feed_body=doc.get('retained_feed_body',doc.get('body','')),body=body,
                    extraction_status='page_text',extracted_url=url)
         out.update(publication_metadata(page))
+        out['publisher_source_links']=source_links(page,url)
         attempt.update(status='page_text_checked',method=method,title_token_overlap=round(overlap,3),
                        note='Retrieved now; boundary candidate requires independent review')
     except Exception as exc:attempt.update(status='failed',error=str(exc)[:300])
     out['review_enrichment']=attempt
+    return out
+
+def retrieve_linked_primary_sources(doc,fetch=get_page,limit=2):
+    """Fetch bounded official-domain article citations as unverified evidence.
+
+    Raw text is kept separate from curated facts. A cited government page can
+    still be outdated or irrelevant; neither a link nor its domain resolves that.
+    """
+    out=dict(doc);sources=[];audit=[];seen=set()
+    for link in doc.get('publisher_source_links',[]):
+        if len(audit)>=limit:break
+        url=link.get('url','');parts=urlsplit(url);host=(parts.hostname or '').lower()
+        if parts.scheme!='https' or parts.username or parts.password:continue
+        if not host.endswith(('.gov','.gov.uk','.europa.eu')) or link.get('link_scope')!='article_element':continue
+        if url in seen:continue
+        seen.add(url);attempt={'method':'GET','url':url,'status':'attempted'};audit.append(attempt)
+        try:
+            data,mime=fetch(url)
+            if 'html' not in mime:raise ValueError('Linked source is not HTML')
+            page=data.decode('utf-8','replace');text,method=extract_page(page)
+            if len(text)<250 or re.search(r'\b(?:verify you are human|captcha|enable javascript and cookies)\b',text,re.I):raise ValueError('Thin source or access challenge')
+            sources.append({'source_url':url,'cited_by':doc.get('extracted_url') or doc.get('url'),
+                'anchor_text':link.get('anchor_text'),'known_at':datetime.now(timezone.utc).isoformat(),
+                'text':text[:6000],'original_text_characters':len(text),'truncated':len(text)>6000,
+                'fetched_page_sha256':hashlib.sha256(data).hexdigest(),'extraction_method':method,
+                'relevance_verified':False,'claims_verified':False,
+                'status':'linked_official_domain_source_candidate',**publication_metadata(page)})
+            attempt['status']='retrieved_candidate'
+        except Exception as exc:attempt.update(status='failed',error=str(exc)[:300])
+    out['linked_primary_source_candidates']=sources;out['linked_primary_source_requests']=audit
     return out
