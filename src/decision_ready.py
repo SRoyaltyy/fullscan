@@ -120,6 +120,11 @@ def evaluate(date):
     for item in required:
         check = diag._check_file(item, date)
         path = ROOT / item['rel']
+        if getattr(check, 'role', item['role']) == 'optional':
+            # _check_file drops an optional-era sector board that is not OK
+            # to optional. It never blocks the tickets. Not hashed, the same
+            # as before when it was missing.
+            continue
         if check.status != 'OK':
             missing.append({'path': item['rel'], 'reason': check.reason or check.status})
         elif path.is_file():
