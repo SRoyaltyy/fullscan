@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-09",
+  "generated_at": "2026-10-09T04:24:27.682268-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-09",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks set to open higher as easing oil and yields support futures ahead of Delta earnings and sentiment data",
+  "raw_text": "- HUM (HUM) rises sharply pre-market on company-specific developments alongside strength in select small-cap names.\n- S&P 500 futures (@ES) rise 0.37%, Dow Jones futures (@YM) gain 0.15%, Nasdaq 100 futures (@NQ) climb 0.81%, and Russell 2000 futures (@ER2) edge 0.33% higher ahead of the cash open.\n- Delta Air Lines (DAL) reports earnings before the bell with consensus EPS near $1.77 on roughly $17.7B in revenue.\n- Oil (@CL) prices pull back around 1% while Treasury yields ease, supporting the rebound tone in equities.\n- European equity markets traded firmer overnight while Asian markets closed mixed.\n- University of Michigan consumer sentiment is due at 10:00 AM ET today.\n- Baker Hughes (BKR) rig count is scheduled for 1:00 PM ET with no major data releases before the open.",
+  "raw_summary_md": "- **HUM** ([HUM](https://finviz.com/quote?t=HUM)) **rises sharply pre-market** on company-specific developments alongside strength in select small-cap names.\n- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) **rise 0.37%**, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) **gain 0.15%**, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) **climb 0.81%**, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) **edge 0.33% higher** ahead of the cash open.\n- **Delta Air Lines** ([DAL](https://finviz.com/quote?t=DAL)) **reports earnings before the bell** with consensus EPS near **$1.77** on roughly **$17.7B in revenue**.\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices **pull back around 1%** while **Treasury yields ease**, supporting the rebound tone in equities.\n- **European equity markets traded firmer overnight** while **Asian markets closed mixed**.\n- **University of Michigan consumer sentiment** is due at **10:00 AM ET today**.\n- **Baker Hughes** ([BKR](https://finviz.com/quote?t=BKR)) **rig count** is scheduled for **1:00 PM ET** with no major data releases before the open.",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "HUM",
+    "DAL",
+    "BKR"
+  ],
+  "named_leaders": [
+    "HUM",
+    "DAL",
+    "BKR"
+  ],
+  "calendar": [
+    "University of Michigan consumer sentiment is due at 10:00 AM ET today."
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "DAL"
+    ],
+    "text": "Delta Air Lines (DAL) reports earnings before the bell with consensus EPS near $1.77 on roughly $17.7B in revenue."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 305551,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-09T04:06:21.91",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
