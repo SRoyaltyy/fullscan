@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-10-09T13:01:16.365608-04:00",
+  "fetched_at": "2026-10-09T14:54:19.297434-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -52,11 +52,11 @@
     },
     "RRPONTSYD": {
       "available": true,
-      "date": "2026-10-08",
-      "current": 0.335,
-      "delta_1d": -2.003,
-      "delta_1w": -0.015,
-      "delta_1m": -0.097
+      "date": "2026-10-09",
+      "current": 0.3,
+      "delta_1d": -0.035,
+      "delta_1w": -1.201,
+      "delta_1m": -4.436
     },
     "USEPUINDXD": {
       "available": true,
@@ -70,59 +70,59 @@
   "vix": {
     "vix": {
       "date": "2026-10-09",
-      "current": 14.84,
-      "delta_1d": -0.57,
-      "delta_1w": -0.47
+      "current": 14.87,
+      "delta_1d": -0.54,
+      "delta_1w": -0.44
     },
     "vix3m": {
       "date": "2026-10-09",
       "current": 17.84,
       "source": "^VIX3M"
     },
-    "ratio": 0.832,
+    "ratio": 0.834,
     "ratio_source": "vix/vix3m",
-    "vix_ma20": 15.65,
-    "ratio_ma20": 0.948
+    "vix_ma20": 15.66,
+    "ratio_ma20": 0.95
   },
   "commodities_fx": {
     "CL=F": {
       "available": true,
       "date": "2026-10-09",
-      "last": 91.22,
-      "pct_1d": -0.3
+      "last": 91.58,
+      "pct_1d": 0.1
     },
     "BZ=F": {
       "available": true,
       "date": "2026-10-09",
-      "last": 103.89,
-      "pct_1d": -0.37
+      "last": 104.42,
+      "pct_1d": 0.13
     },
     "GC=F": {
       "available": true,
       "date": "2026-10-09",
-      "last": 4216.6,
-      "pct_1d": 1.43
+      "last": 4222.9,
+      "pct_1d": 1.59
     },
     "DXY": {
       "available": true,
       "date": "2026-10-09",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.16,
-      "pct_1m": 3.24
+      "pct_1d": 0.1,
+      "pct_1m": 3.18
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-10-09",
-      "last": 7861.25,
-      "pct_1d": 0.58
+      "last": 7860.75,
+      "pct_1d": 0.57
     },
     "NQ=F": {
       "available": true,
       "date": "2026-10-09",
-      "last": 31109.0,
-      "pct_1d": 0.45
+      "last": 31103.5,
+      "pct_1d": 0.43
     }
   },
   "finviz_futures_tape": {
@@ -632,7 +632,7 @@
   },
   "yield_spx_corr": {
     "available": true,
-    "corr_5d": 0.443,
+    "corr_5d": 0.474,
     "window": "2026-10-02..2026-10-09"
   },
   "fear_greed": {
