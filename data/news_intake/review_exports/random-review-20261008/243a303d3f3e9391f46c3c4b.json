@@ -21,11 +21,24 @@
   "extraction_status": "feed_text",
   "last_seen": "2026-10-04T12:58:17.234223+00:00",
   "review_enrichment": {
-    "attempted_epoch": 1791490926.8073611,
-    "attempts": 1,
+    "attempted_epoch": 1791506894.8905025,
+    "attempts": 2,
     "status": "failed",
-    "network_requests": [],
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMi2AFBVV95cUxQeFg2cEpSbWkxUkhFVi1hc1VRLVg4THUzbHB4dURaOS1VMkdDVGR0OFVRUFJDdU04SndLdVdLMUJUVVpWbHQ4VXRFY1ZLZTdzbFpBR2hTMW9STU5jU1p5RUszLVRKaUhBaEQ2X2tTZzA1bnkzUGdyUG1GRlF0ZHR1SUZLNEJndUVPT3RmdXFvSGx2Z2tTS1lUeWVaNXZfZUk0bFhSeHZKU1pHemx5Q1F1b3N4aEVfRUN0aXFpazJqSjlFRmJYdWxSZXJnaVlZR3Y3b1VVelBlUTXSAdgBQVVfeXFMUHhYNnBKUm1pMVJIRVYtYXNVUS1YOEx1M2xweHVEWjktVTJHQ1RkdDhVUVBSQ3VNOEp3S3VXSzFCVFVaVmx0OFV0RWNWS2U3c2xaQUdoUzFvUk1OY1NaeUVLMy1USmlIQWhENl9rU2cwNW55M1BnclBtRkZRdGR0dUlGSzRCZ3VFT090ZnVxb0hsdmdrU0tZVHllWjV2X2VJNGxYUnh2SlNaR3pseUNRdW9zeGhFX0VDdGlxaWsyako5RUZiWHVsUmVyZ2lZWUd2N29VVXpQZVE1"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.business-standard.com/amp/world-news/fed-ecb-minutes-to-show-inflation-fears-as-near-term-rate-hike-bets-fade-126100400046_1.html"
+      }
+    ],
     "historical_body_availability_verified": false,
-    "error": "HTTP Error 429: Too Many Requests"
+    "error": "HTTP Error 403: Forbidden"
   }
 }

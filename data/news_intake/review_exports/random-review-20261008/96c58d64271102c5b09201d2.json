@@ -25,11 +25,24 @@
   "extraction_status": "feed_text",
   "last_seen": "2026-10-04T12:58:17.234223+00:00",
   "review_enrichment": {
-    "attempted_epoch": 1791490932.008538,
-    "attempts": 1,
+    "attempted_epoch": 1791506896.063346,
+    "attempts": 2,
     "status": "failed",
-    "network_requests": [],
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMipAFBVV95cUxQaG5rQ2JpUDFzRVg4TGZDOE5wRVVQaFhhMXVHYVBBenl4N1RMOU5HMldYRzB0d2J4X2dRNzZjdU8zbVdKWTB1ckxWa09lZTJlMjlIZGZmMFZBYW93UjA2Q1NDeEg3Wk1VTGtkLVNuWkJBU0ZLR2Y4ZTMzYXI1U0Q2a19lV0hyT3NfX25oWXlqd01HRWdDRjUzdkIwMlBuVFoxWFh3VA"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.gurufocus.com/news/9108847/renault-partners-with-thales-to-boost-drone-production-capacity"
+      }
+    ],
     "historical_body_availability_verified": false,
-    "error": "HTTP Error 429: Too Many Requests"
+    "error": "HTTP Error 403: Forbidden"
   }
 }

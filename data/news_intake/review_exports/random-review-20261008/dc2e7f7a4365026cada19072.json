@@ -2,7 +2,7 @@
   "title": "Council questions annual bus subsidy as service misses part of its route - Exmouth Journal",
   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQUxJaVRZSlRBRHRGNjdzNU1ZUFhKMzhQc05lcUdlMURFQ2NPWXMtaXdkVlYzd3RmMS11TVRCNXNud1hOd2VTVFFTM1BDVGF2T1E5MUgzNm9RWmlieS0yNWRzMFIzcHkyemprMFRRdHFITUdpbDYwTm9BaklMUkJwN3pqOEFrTUJGQWdqV1A1UnZxYlpjTUxSa0tPSUpBZjlwcGtaVExR?oc=5",
   "publisher": "Exmouth Journal",
-  "body": "Council questions annual bus subsidy as service misses part of its route Exmouth Journal",
+  "body": "Exmouth councillors question subsidy for Stagecoach 99E bus | Exmouth Journal Public notices Newsletters Jobs Book an ad Cars Homes Local listings Local info More Public notices Newsletters Jobs Book an ad Cars Homes Local listings Local info E-editions Close Featured newsletters In Brief daily newsletter Breaking News Alerts Sport Headlines Search News Crime Traffic & Travel Local Council Business Weather Health Housing Education Obituaries UK News Sport UK Sport News Things to do Local Events Days Out Food & Drink UK Entertainment Lifestyle Property Heritage Property Notices Bereavement Guide E-editions E-editions Public notices Newsletters Jobs Book an ad Cars Homes Local listings Local info News Sport Things to do Lifestyle Property Notices E-editions News Crime Traffic & Travel Local Council Business Weather Health Housing Education Obituaries UK News Local government Exmouth Exmouth councillors question subsidy for Stagecoach 99E bus Local government Exmouth By \n            Lewis Clarke Reporter Share 0 Comments (Image: Unsplash) This article is brought to you by our exclusive subscriber partnership with our sister title USA Today,\n        and has been written by our American colleagues.\n        It does not necessarily reflect the view of The Herald. Councillors have called for a bus subsidy approaching £10,000 a year to be reviewed after hearing the service no longer covers part of its intended route. The funding was questioned at Exmouth Town Council’s meeting on Monday, September 21, when councillors discussed the 99E service and wider disruption affecting local passengers. Cllr Steve Gazzard said a weak bridge in Moorfield Road had prevented the bus from serving that section of its route and urged the council to examine its financial support. “We need to be looking at the subsidy that we give Stagecoach for the 99E because it doesn’t go to where it’s supposed to be going,” he said. Cllr Gazzard initially put the annual subsidy at £7,000, but Cllr Tim Dumper said the amount was higher. “Actually, the subsidy is rather more than you said, Steve,” Cllr Dumper said. “It’s something like 9,700 or something approaching 10,000 a year.” Cllr Maddy Chapman said the issue had already been raised at a previous council meeting, when town clerk Lisa Bowman had said she would look into it. “We do pay for that route,” Cllr Chapman said. Cllr Dumper said the matter had not yet been taken forward, but action was planned. The discussion followed his report on an Exmouth Transport Partnership Working Party meeting held on September 15. That meeting had been inquorate, meaning it could not take formal decisions. Cllr Dumper said representatives from Stagecoach, Great Western Railway and the county council’s public transport department had not attended. He also highlighted difficulties affecting passengers during road diversions associated with the Dinan Way link road. Cllr Dumper said concerns had been passed on from residents in the Rivermead area about reaching diverted bus services. He had undertaken to write to Stagecoach and the county council’s public transport team. Councillors also heard concerns about the replacement of Sunday and evening 99E journeys by the 98 service. Cllr Dumper said the 99E was useful to some residents travelling into town, although he acknowledged that the 98 could offer a better replacement for others. No decision to reduce or withdraw the subsidy was recorded at the meeting. Local government Exmouth Share 0 Comments Get involved with the news Send your news & photos Loading... Show more articles Get in Touch Contact Us Advertise Newspaper Home Delivery Send Us Your News Add Your Event For Free Our Publications Follow Us Facebook Twitter Useful Links Subscriptions Newsletters Death Notices Announcements Public Notices Exchange and Mart Photo Sales Archive | Sitemap Manage Consent AI Notice This website and associated newspapers adhere to the Independent Press Standards Organisation's\n    Editors' Code of Practice. If you have a complaint about the editorial content which relates to\n    inaccuracy or intrusion, then please contact the editor here .\n    If you are dissatisfied with the response provided you can contact IPSO here © 2001-2026. The Exmouth Journal is owned and operated by Newsquest Media Group Ltd, an audited local newspaper network. Visit newsquest.co.uk to view our policies , terms and legal agreements . The Echo Building, 18 Albert Road, Bournemouth, England BH1 1BZ. Registered in England & Wales | 01676637 Modal headline Close Automatically injected HTML goes here Submit Cancel Deactivate Piano meter debugger Data returned from the Piano 'meterActive/meterExpired' callback event . As a subscriber, you are shown 80% less display advertising when reading our\n                    articles. Those ads you do see are predominantly from local businesses promoting local\n                        services . These adverts enable local businesses to get in front of their target audience – the local\n                        community . It is important that we continue to promote these adverts as our local businesses need\n                    as much support as possible during these challenging times. Close",
   "published_at": "2026-10-02T04:00:00+00:00",
   "published_raw": "Fri, 02 Oct 2026 04:00:00 GMT",
   "source": "lane_subsidy",
@@ -22,14 +22,30 @@
       ]
     }
   ],
-  "extraction_status": "feed_text",
+  "extraction_status": "page_text",
   "last_seen": "2026-10-04T00:20:15.583897+00:00",
   "review_enrichment": {
-    "attempted_epoch": 1791490933.7771673,
-    "attempts": 1,
-    "status": "failed",
-    "network_requests": [],
+    "attempted_epoch": 1791506896.3303647,
+    "attempts": 2,
+    "status": "page_text_checked",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMipgFBVV95cUxOQUxJaVRZSlRBRHRGNjdzNU1ZUFhKMzhQc05lcUdlMURFQ2NPWXMtaXdkVlYzd3RmMS11TVRCNXNud1hOd2VTVFFTM1BDVGF2T1E5MUgzNm9RWmlieS0yNWRzMFIzcHkyemprMFRRdHFITUdpbDYwTm9BaklMUkJwN3pqOEFrTUJGQWdqV1A1UnZxYlpjTUxSa0tPSUpBZjlwcGtaVExR"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.exmouthjournal.co.uk/news/26598016.exmouth-councillors-question-subsidy-stagecoach-99e-bus/"
+      }
+    ],
     "historical_body_availability_verified": false,
-    "error": "HTTP Error 429: Too Many Requests"
-  }
+    "title_token_overlap": 0.8,
+    "note": "Visible page text may include navigation; article boundaries require review"
+  },
+  "retained_feed_body": "Council questions annual bus subsidy as service misses part of its route Exmouth Journal",
+  "extracted_url": "https://www.exmouthjournal.co.uk/news/26598016.exmouth-councillors-question-subsidy-stagecoach-99e-bus/"
 }
