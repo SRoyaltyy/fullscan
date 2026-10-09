@@ -2,11 +2,11 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-10-08T21:03:04.015134-04:00 · 2026-08-13 → 2026-10-08 · live sit **untouched**.
+Generated 2026-10-09T05:17:44.319101-04:00 · 2026-08-13 → 2026-10-08 · live sit **untouched**.
 
 ## Latest morning
 
-- Date **2026-10-08** S=-6.787 hard-red=True · 71 investigator cards · 28 long-ok · 24 short-ok
+- Date **2026-10-08** S=-6.787 hard-red=True · 71 investigator cards · 27 long-ok · 25 short-ok
 
 ### Longs weather sat on (top)
 
@@ -33,10 +33,10 @@ Generated 2026-10-08T21:03:04.015134-04:00 · 2026-08-13 → 2026-10-08 · live 
 ## If we had taken them on hard-red sits (research)
 
 - Hard-red mornings in window: 15
-- long hold-1: n=104 win=53.8% mean 0.282%
+- long hold-1: n=112 win=53.6% mean 0.243%
 - long hold-3: n=104 win=46.2% mean -0.548%
-- short hold-1: n=104 win=61.5% mean 0.905%
-- short hold-3: n=104 win=58.7% mean 0.5%
+- short hold-1: n=112 win=60.7% mean 0.67%
+- short hold-3: n=103 win=58.2% mean 0.425%
 
 KEEP still wants >55% after fees and n≥30. Thin n is not a wire.
 
