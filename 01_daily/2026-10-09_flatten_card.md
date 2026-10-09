@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-10-09
 
-_Generated 2026-10-09T18:56:38 — live `flatten_robust`._
+_Generated 2026-10-09T19:04:10 — live `flatten_robust`._
 
 **morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -40,9 +40,9 @@ Sized from marked equity **$108,970.65** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | CDNA | io_core | 425 | $64.02 | $27,208.50 | cash tied |
-| 16:00 ET | RRC | io_core | 663 | $41.05 | $27,216.15 | cash tied |
-| 16:00 ET | PACS | io_core | 622 | $43.74 | $27,206.28 | cash tied |
-| 16:00 ET | ETON | io_core | 493 | $55.19 | $27,208.67 | cash tied |
+| 16:00 ET | CDNA | io_core | 426 | $63.88 | $27,215.01 | cash tied |
+| 16:00 ET | RRC | io_core | 663 | $41.06 | $27,226.09 | cash tied |
+| 16:00 ET | PACS | io_core | 622 | $43.77 | $27,224.94 | cash tied |
+| 16:00 ET | ETON | io_core | 493 | $55.16 | $27,193.88 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
