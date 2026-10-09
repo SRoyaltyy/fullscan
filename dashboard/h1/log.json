@@ -7222,5 +7222,86 @@
     "sha256": "ace1979c5b56d9cda4c853b16b2eae4a2ae958e60d7d9e961d21105582e57f33",
     "shares": 80,
     "ticker": "OPCH"
+  },
+  {
+    "bar_cutoff": "2026-10-08",
+    "cash_before": 18.41070278877669,
+    "committed_at": "2026-10-09T12:10:27Z",
+    "date": "2026-10-09",
+    "excluded_unexplained_legs": [],
+    "finviz_source": {
+      "commit": "871a0bb7cbd10c6695474d34f1fb53ea0cceacb0",
+      "commit_time": "2026-10-08T21:32:59Z",
+      "file_sha256": "bcb10e51ccf1995faf7da5068768514d8fdb22334e0da1358a89b0a3a20a5e8a",
+      "path": "data/snapshots/2026-10-08.csv",
+      "snapshot_date": "2026-10-08",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": null,
+    "picks": [
+      {
+        "fv_avg_volume": 1553.93,
+        "fv_price": 94.26,
+        "rank": 1,
+        "sources": [
+          "ohlc_hot",
+          "probable",
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "KOD"
+      },
+      {
+        "fv_avg_volume": 10011.9,
+        "fv_price": 2.3,
+        "rank": 2,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "PACB"
+      },
+      {
+        "fv_avg_volume": 2563.85,
+        "fv_price": 1.82,
+        "rank": 3,
+        "sources": [
+          "ohlc_hot",
+          "yday_mover"
+        ],
+        "ticker": "NAUT"
+      },
+      {
+        "fv_avg_volume": 4508.7,
+        "fv_price": 150.57,
+        "rank": 4,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "P"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 34,
+        "ticker": "PENG"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 1222,
+        "ticker": "SDEV"
+      }
+    ],
+    "recipe": "union_hot_n4_h1__w0",
+    "s_source": {
+      "blob_sha": "598e8fa65b8a808f62f7ca976c53c6090be905f8",
+      "kind": "weather",
+      "path": "01_daily/weather/2026-10-09_weather.json",
+      "server_time_utc": "2026-10-09T11:44:29Z",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "6731f04041fff7bddb4e21fd953b0ba5af9c553468afd2279375a954376773b0"
   }
 ]
