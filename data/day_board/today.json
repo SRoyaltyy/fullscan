@@ -1,45 +1,86 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T05:48:00.250115-04:00",
+  "generated_at": "2026-10-09T05:48:17.111434-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "HITI",
+      "score": 0.5745267164960003
+    },
+    {
+      "ticker": "CON",
+      "score": 0.7117534364955
+    },
+    {
+      "ticker": "AMN",
+      "score": 0.678797420548507
+    },
+    {
+      "ticker": "PACS",
+      "score": 0.826863664515342
+    },
+    {
+      "ticker": "ASTH",
+      "score": 0.5769995922100218
+    },
+    {
+      "ticker": "NTAP",
+      "score": 0.31465925310396414
+    },
+    {
+      "ticker": "MQ",
+      "score": 0.7092688066195303
+    },
+    {
+      "ticker": "BAND",
+      "score": 0.5716345332861978
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "OKLO",
+      "score": -0.0957829576344038
+    },
+    {
+      "ticker": "NEOV",
+      "score": -0.36359434516177597
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.050855865126861396
+    },
+    {
+      "ticker": "NNDM",
+      "score": -0.21081587543960056
+    },
+    {
+      "ticker": "ENVX",
+      "score": -0.09528983372072346
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.2870680789175202
+    },
+    {
+      "ticker": "TE",
+      "score": -0.2221712249642045
+    },
+    {
+      "ticker": "NRGV",
+      "score": -0.31005458321867824
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-09T05:46:47.253568-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-09_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 98656,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-09_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11621,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -200,6 +241,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T05:48:16.244348-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1460753,
+          "preview": "1d BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, TE, NRGV"
+        },
+        {
+          "path": "data/stock_book/2026-10-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2594,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-09_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12437,
+          "preview": "2026-10-09 BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, TE, NRGV"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12437,
+          "preview": "2026-10-09 BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, TE, NRGV"
+        },
+        {
+          "path": "01_daily/2026-10-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84830,
+          "preview": "# Stock book \u2014 2026-10-09\n_Generated 2026-10-09T05:48:07.488730-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, TE, NRGV \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-09 BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, TE, NRGV \u00b7 2026-10-09 BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, TE, NRGV \u00b7 # Stock book \u2014 2026-10-09\n_Generated 2026-10-09T05:48:07.488730-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
