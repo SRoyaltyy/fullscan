@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T12:49:01.842594-04:00",
+  "generated_at": "2026-10-09T12:49:34.217847-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -796,7 +796,7 @@
           "size": 83741,
           "said": "Stock book \u2014 2026-10-09",
           "bullets": [
-            "_Generated 2026-10-09T07:44:54.667947-04:00_",
+            "_Generated 2026-10-09T12:49:10.477903-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -992,24 +992,6 @@
     }
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-10-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-09T04:39:19.881155-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-10-09_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1124944,
-          "preview": "5907 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5907 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime (offline retry)",
@@ -3830,6 +3812,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T12:49:33.187174-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-09_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1462138,
+          "preview": "1d BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE"
+        },
+        {
+          "path": "data/stock_book/2026-10-09_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-09_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2590,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-09_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12344,
+          "preview": "2026-10-09 BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12344,
+          "preview": "2026-10-09 BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE"
+        },
+        {
+          "path": "01_daily/2026-10-09_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84843,
+          "preview": "# Stock book \u2014 2026-10-09\n_Generated 2026-10-09T12:49:10.477903-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-09 BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE \u00b7 2026-10-09 BUY CON, AMN, PACS, NTAP, MQ, BAND, IT \u00b7 SELL OKLO, NEOV, FCEL, POWL, NNDM, ENVX, EOSE, TE \u00b7 # Stock book \u2014 2026-10-09\n_Generated 2026-10-09T12:49:10.477903-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
