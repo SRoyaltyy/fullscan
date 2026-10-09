@@ -1,14 +1,14 @@
 # flatten_robust card — 2026-10-09
 
-_Generated 2026-10-09T11:47:21 — live `flatten_robust`._
+_Generated 2026-10-09T17:00:51 — live `flatten_robust`._
 
 **morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
 - Score **—** (—) · route **io**
-- Cash leftover **$103,033.45** (after 09:30 $103,033.45 · after 16:00 $103,033.45)
-- Prior close **$103,033.45** · 09:30 **$103,033.45** · overnight **$+0.00** · session **$+0.00** · 16:00 **$103,033.45**
+- Cash leftover **$108,970.65** (after 09:30 $108,970.65 · after 16:00 $108,970.65)
+- Prior close **$108,970.65** · 09:30 **$108,970.65** · overnight **$+0.00** · session **$+0.00** · 16:00 **$108,970.65**
 - Overnight lots **0** · priced mover BUYs **0** · prior book yes
-- Planned buy cost **$0.00** ≤ leftover after sells **$103,033.45**
+- Planned buy cost **$0.00** ≤ leftover after sells **$108,970.65**
 
 ## Overnight holds (into 09:30)
 
@@ -36,13 +36,13 @@ _Generated 2026-10-09T11:47:21 — live `flatten_robust`._
 
 ## Would have bought — holdings disregarded
 
-Sized from marked equity **$103,033.45** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
+Sized from marked equity **$108,970.65** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | CDNA | io_core | 414 | $62.20 | $25,752.87 | cash tied |
-| 16:00 ET | RRC | io_core | 631 | $40.77 | $25,725.87 | cash tied |
-| 16:00 ET | PACS | io_core | 599 | $42.97 | $25,739.03 | cash tied |
-| 16:00 ET | ETON | io_core | 470 | $54.75 | $25,732.50 | cash tied |
+| 16:00 ET | CDNA | io_core | 429 | $63.41 | $27,202.89 | cash tied |
+| 16:00 ET | RRC | io_core | 662 | $41.11 | $27,214.82 | cash tied |
+| 16:00 ET | PACS | io_core | 630 | $43.19 | $27,209.70 | cash tied |
+| 16:00 ET | ETON | io_core | 493 | $55.25 | $27,238.25 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
