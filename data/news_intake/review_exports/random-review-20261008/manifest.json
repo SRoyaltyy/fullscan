@@ -11,7 +11,7 @@
     "previously_inspected": "must_be_marked_development_not_holdout"
   },
   "source": "retained_documents_with_explicit_optional_publisher_enrichment",
-  "enrichment_attempts": 2,
+  "enrichment_attempts": 0,
   "cases": [
     {
       "position": 1,
