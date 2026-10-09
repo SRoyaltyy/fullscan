@@ -1,0 +1,297 @@
+{
+  "date": "2026-10-09",
+  "generated_at": "2026-10-09T07:30:47.651063-04:00",
+  "run_id": "37922779126",
+  "runner": "ecs-openclaw",
+  "all_ok": false,
+  "qc_all_ok": false,
+  "book_ok": true,
+  "grok_ok": false,
+  "grok_fails": [
+    {
+      "path": "01_daily/general/2026-10-09_predict.md",
+      "reason": "required general predict missing"
+    },
+    {
+      "path": "01_daily/events/2026-10-09_events.json",
+      "reason": "required events JSON missing"
+    },
+    {
+      "path": "01_daily/news/2026-10-09_judge.md",
+      "reason": "required news judge missing"
+    }
+  ],
+  "missing_required": [
+    "events",
+    "news_judge",
+    "map_heat_research",
+    "general_predict"
+  ],
+  "attempts": [
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "returncode": 0
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "returncode": 0
+    }
+  ],
+  "github_runs": [
+    {
+      "workflow": "preopen_all.yml",
+      "n_today": 5,
+      "latest": {
+        "id": 37922779126,
+        "status": "in_progress",
+        "conclusion": null,
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37922779126"
+      }
+    },
+    {
+      "workflow": "finviz_preopen_scrape.yml",
+      "n_today": 1,
+      "latest": {
+        "id": 37904455444,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37904455444"
+      }
+    },
+    {
+      "workflow": "finviz_digest.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "events_daily.yml",
+      "n_today": 1,
+      "latest": {
+        "id": 37917984822,
+        "status": "completed",
+        "conclusion": "cancelled",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37917984822"
+      }
+    },
+    {
+      "workflow": "news_parse.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "news_judge.yml",
+      "n_today": 1,
+      "latest": {
+        "id": 37917987325,
+        "status": "completed",
+        "conclusion": "failure",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37917987325"
+      }
+    },
+    {
+      "workflow": "news_actions.yml",
+      "n_today": 1,
+      "latest": {
+        "id": 37917990426,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37917990426"
+      }
+    },
+    {
+      "workflow": "catalyst_daily.yml",
+      "n_today": 1,
+      "latest": {
+        "id": 37912536284,
+        "status": "completed",
+        "conclusion": "cancelled",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37912536284"
+      }
+    },
+    {
+      "workflow": "daily_pipeline.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "sector_daily.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "map_heat_postclose.yml",
+      "n_today": 0,
+      "latest": null
+    }
+  ],
+  "qc": {
+    "sector_n_ok": 0,
+    "sector_n_total": 11,
+    "items": [
+      {
+        "kind": "general_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/general/2026-10-09_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "events",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/events/2026-10-09_events.json",
+        "size": 0
+      },
+      {
+        "kind": "news_judge",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/news/2026-10-09_judge.md",
+        "size": 0
+      },
+      {
+        "kind": "news_parse",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-10-09_parsed.json",
+        "size": 7109911
+      },
+      {
+        "kind": "news_actions",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-10-09_actions.json",
+        "size": 77574
+      },
+      {
+        "kind": "finviz_digest",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-10-09_finviz_digest.json",
+        "size": 98656
+      },
+      {
+        "kind": "finviz_market_digest",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-10-09_finviz_market_digest.json",
+        "size": 4175
+      },
+      {
+        "kind": "finviz_market_digest",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/news/2026-10-09_finviz_market_digest_close.json",
+        "size": 0
+      },
+      {
+        "kind": "map_heat",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/map_heat/2026-10-09_map_heat.json",
+        "size": 274936
+      },
+      {
+        "kind": "map_heat_baseline",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/map_heat/2026-10-09_research_baseline.json",
+        "size": 187519
+      },
+      {
+        "kind": "map_heat_research",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/map_heat/2026-10-09_research.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-10-09/basic_materials_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-10-09/communication_services_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-10-09/consumer_cyclical_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-10-09/consumer_defensive_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-10-09/energy_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-10-09/financial_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-10-09/healthcare_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-10-09/industrials_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-10-09/real_estate_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-10-09/technology_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-10-09/utilities_predict.md",
+        "size": 0
+      }
+    ]
+  },
+  "news_mode": "on",
+  "news_mode_reason": ""
+}

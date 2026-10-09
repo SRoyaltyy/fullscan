@@ -1,0 +1,22 @@
+cell,signal_date,ticker,entry_date,hold_days,rules_sha256,source
+fpe_delta_t3_earn_today_3d,2026-10-08,BLK,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,DAL,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,DPZ,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,ERIC,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,FBK,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,JBHT,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,JNJ,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,MAN,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,MRSH,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,PEP,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,PGR,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,PLD,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,RF,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,TRV,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,WFC,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fpe_delta_t3_earn_today_3d,2026-10-08,WSE,2026-10-09,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-09
+fresh_dcp_t1_ep_ge03_2d,2026-10-08,FNGR,2026-10-09,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-09
+fresh_dcp_t1_avoid_ah_3d,2026-10-08,FNGR,2026-10-09,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-09
+# status=fires rows=18 fpe_delta_t3_earn_today_3d=16 fresh_dcp_t1_ep_ge03_2d=1 fresh_dcp_t1_avoid_ah_3d=1
+# built_at_utc=2026-10-09T09:23:13Z signal_date=2026-10-08 entry_date=2026-10-09 builder_sha256=9e70523ee355d655b125ffd46f8ccd08a25fe762fccfa6ee08c97eb3c5d52840
+# inputs: {"dcp_candidates":["EMR","ETN","FNGR","VRT"],"dcp_prior_snapshot":"2026-10-07","earn_gate_n":59,"fails":"[]","features_T_sha256":"283b0915d8b80a37a0336073f62c2d0cbac410bba507f6b8ca65c19755676056","fpe_prior_snapshot":"2026-10-05","fpe_signal_n":1384,"letters_log":"rows 4 skipped {'2026-10-09': 0} FAILS []","letters_rows":4,"letters_sha256":"38a52f1d604894a7dfb07a288c9f26c436e5cb1ea4fb0454f1bf8cc1920ea7dc","membership":"fullscan@6e09d3388 (committed 2026-10-09T08:39:25Z) sha256=47709bbe376ab7eee6815395432c2c2f38cf94a025eebe33aec090aefca3a3d7","skipped":"{'2026-10-09': 0}","snapshot_T_sha256":"bcb10e51ccf1995faf7da5068768514d8fdb22334e0da1358a89b0a3a20a5e8a","snapshots_after_T_ignored":[],"tr_head":"b1834324b","universe_log":"2026-10-09 cand 4 in membership 4 liquid 4 universe 4 excluded []"}

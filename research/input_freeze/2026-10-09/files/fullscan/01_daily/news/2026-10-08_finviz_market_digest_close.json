@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-08",
+  "generated_at": "2026-10-08T20:21:36.705899-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-09",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-09) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended mixed as AI revenue concerns pressured chipmakers while oil gains on Middle East risks lifted energy and firm labor data kept yields elevated",
+  "raw_text": "- The S&P 500 ($SPX) fell 0.47% to 7,765.36, the Dow Jones Industrial Average ($DJI) rose 0.10% to 51,231.64, and the Nasdaq Composite ($COMP) dropped 1.25% to 27,193.34.\n- Chip stocks declined after the Financial Times reported OpenAI’s annualized revenue was $20 billion below prior signals, with Nvidia (NVDA) down nearly 3%, Intel (INTC) off 5.3%, Micron Technology (MU) down over 4%, AMD (AMD) nearly 4% lower, and the broader chip sector off 3.4%.\n- Oracle (ORCL) fell more than 5% as part of the broader technology selloff tied to AI revenue concerns.\n- Chipotle Mexican Grill (CMG) rose 6.2% to $32.68 after reports that Starbucks (SBUX) had explored acquiring the chain, while Starbucks (SBUX) declined 0.4%.\n- Energy names outperformed as oil (@CL) prices climbed on a fresh tanker attack in the Middle East, U.S. output cuts, and Hurricane Isaias threatening about 500,000 barrels per day of refining capacity.\n- U.S. initial jobless claims held near a 57-year low for a fourth straight week, underscoring continued labor-market strength.\n- The 10-year Treasury yield rose intraday before closing near 5.23%, while a 30-year Treasury auction passed a key test of investor confidence.\n- PepsiCo (PEP) beat estimates with Q3 EPS of $2.34 versus $2.30 expected as it faces pressure from shifting eating habits and weighs options including a potential split.\n- Investors looked ahead to Delta Air Lines (DAL)’ earnings and the University of Michigan consumer sentiment data due Friday.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) fell **0.47%** to **7,765.36**, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) rose **0.10%** to **51,231.64**, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) dropped **1.25%** to **27,193.34**.\n- **Chip stocks declined** after the **Financial Times** reported **OpenAI’s annualized revenue was $20 billion below prior signals**, with **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) down nearly **3%**, **Intel** ([INTC](https://finviz.com/quote?t=INTC)) off **5.3%**, **Micron Technology** ([MU](https://finviz.com/quote?t=MU)) down over **4%**, **AMD** ([AMD](https://finviz.com/quote?t=AMD)) nearly **4%** lower, and the broader chip sector off **3.4%**.\n- **Oracle** ([ORCL](https://finviz.com/quote?t=ORCL)) fell more than **5%** as part of the broader technology selloff tied to **AI revenue concerns**.\n- **Chipotle Mexican Grill** ([CMG](https://finviz.com/quote?t=CMG)) rose **6.2%** to **$32.68** after reports that **Starbucks** ([SBUX](https://finviz.com/quote?t=SBUX)) had explored acquiring the chain, while **Starbucks** ([SBUX](https://finviz.com/quote?t=SBUX)) declined **0.4%**.\n- **Energy names outperformed** as **oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices climbed on a **fresh tanker attack in the Middle East**, **U.S. output cuts**, and **Hurricane Isaias** threatening about **500,000 barrels per day** of refining capacity.\n- U.S. initial jobless claims held near a **57-year low** for a **fourth straight week**, underscoring continued **labor-market strength**.\n- The **10-year Treasury yield** rose intraday before closing near **5.23%**, while a **30-year Treasury auction** passed a key test of **investor confidence**.\n- **PepsiCo** ([PEP](https://finviz.com/quote?t=PEP)) beat estimates with **Q3 EPS of $2.34 versus $2.30 expected** as it faces pressure from shifting eating habits and weighs options including a **potential split**.\n- Investors looked ahead to **Delta Air Lines** ([DAL](https://finviz.com/quote?t=DAL))’ earnings and the **University of Michigan consumer sentiment data** due **Friday**.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.47,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 0.1,
+      "verb": "rose"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -1.25,
+      "verb": "dropped"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "NVDA",
+    "INTC",
+    "MU",
+    "AMD",
+    "ORCL",
+    "CMG",
+    "SBUX",
+    "PEP",
+    "DAL"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "INTC",
+    "MU",
+    "AMD",
+    "ORCL",
+    "CMG",
+    "SBUX",
+    "PEP",
+    "DAL"
+  ],
+  "calendar": [
+    "The 10-year Treasury yield rose intraday before closing near 5.23%, while a 30-year Treasury auction passed a key test of investor confidence.",
+    "Investors looked ahead to Delta Air Lines (DAL)’ earnings and the University of Michigan consumer sentiment data due Friday."
+  ],
+  "prior_close": {
+    "spx": -0.47,
+    "nasdaq": -1.25,
+    "dow": 0.1
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "The 10-year Treasury yield rose intraday before closing near 5.23%, while a 30-year Treasury auction passed a key test of investor confidence."
+    ],
+    "text": "The 10-year Treasury yield rose intraday before closing near 5.23%, while a 30-year Treasury auction passed a key test of investor confidence."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Energy names outperformed as oil (@CL) prices climbed on a fresh tanker attack in the Middle East, U.S. output cuts, and Hurricane Isaias threatening about 500,000 barrels per day of refining capacity."
+  },
+  "finviz_id": 305391,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-08T20:06:46.017",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}
