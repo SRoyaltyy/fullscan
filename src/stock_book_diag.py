@@ -763,6 +763,9 @@ def aggregate_status(files: list[FileCheck]) -> tuple[str, bool, int, int, int, 
     return status, inputs_ready, n_req_ok, len(req), n_opt_ok, len(opt)
 
 
+SECTOR_BOARD_OPTIONAL = "optional — sector board not required"
+
+
 def _check_file(spec: dict, date: str) -> FileCheck:
     path = _p(spec["rel"])
     role = spec["role"]
@@ -787,6 +790,20 @@ def _check_file(spec: dict, date: str) -> FileCheck:
             and status == "MISSING"):
         status = "SKIP"
         reason = "optional — sector predict not required"
+    # The sector predict board (01_daily/sectors/<date>/_board.json) is
+    # optional on the same dates as the essays. When it is not OK it is
+    # never a hole and never a blocker: an absent board is SKIP, and an
+    # input-role board drops to optional so no inputs_ready, ranker_ready,
+    # day-board blocker or decision_ready check counts it. A board that is
+    # OK keeps its role, so it is still hashed into the ticket fingerprint.
+    # The general predict is not touched and stays required.
+    if (spec.get("kind") == "sector_board" and status != "OK"
+            and role in ("optional", "input")
+            and not output_qc.sector_predicts_required(date)):
+        role = "optional"
+        if status == "MISSING":
+            status = "SKIP"
+            reason = SECTOR_BOARD_OPTIONAL
     return FileCheck(
         key=spec["key"],
         name=spec["name"],
