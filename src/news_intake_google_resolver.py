@@ -16,12 +16,14 @@ def post_form(url,form):
         if len(data)>2_000_000:raise ValueError('Resolver response exceeds byte limit')
         return data.decode('utf-8')
 
-def resolve_google_url(url,fetch,post=post_form):
+def resolve_google_url(url,fetch,post=post_form,audit=None):
+    audit=[] if audit is None else audit
     parsed=urllib.parse.urlparse(url)
     if parsed.hostname!='news.google.com':return url,[]
     m=re.search(r'/(?:articles|read)/([a-zA-Z0-9_-]+)',parsed.path)
     if not m:raise ValueError('Unsupported Google News URL')
     article_id=m[1];page='https://news.google.com/articles/'+article_id
+    audit.append({'method':'GET','url':page})
     data,_=fetch(page);text=data.decode('utf-8')
     sg=re.search(r'data-n-a-sg=["\']([^"\']+)',text)
     ts=re.search(r'data-n-a-ts=["\'](\d+)',text)
@@ -29,6 +31,7 @@ def resolve_google_url(url,fetch,post=post_form):
     args=['garturlreq',[["X","X",["X","X"],None,None,1,1,"US:en",None,1,None,None,None,None,None,0,1],
                        "X","X",1,[1,1,1],1,1,None,0,0,None,0],article_id,int(ts[1]),html.unescape(sg[1])]
     endpoint='https://news.google.com/_/DotsSplashUi/data/batchexecute'
+    audit.append({'method':'POST','url':endpoint})
     response=post(endpoint,{'f.req':json.dumps([[["Fbv4je",json.dumps(args)]]])})
     # Search JSON lines/chunks; verify the expected RPC rather than a random URL.
     for line in response.splitlines():
@@ -43,5 +46,5 @@ def resolve_google_url(url,fetch,post=post_form):
                 target=inner[1];p=urllib.parse.urlparse(target)
                 if p.scheme!='https' or not p.hostname or p.hostname.endswith('google.com'):
                     raise ValueError('Resolver did not return an HTTPS publisher URL')
-                return target,[{'method':'GET','url':page},{'method':'POST','url':endpoint}]
+                return target,audit
     raise ValueError('Publisher URL absent from decoding response')

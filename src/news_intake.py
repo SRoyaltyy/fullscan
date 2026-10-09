@@ -530,7 +530,12 @@ def extract_documents(docs: list[dict], limit: int, fetch=get) -> dict:
                 return doc, 'page_text', body
             if "html" not in mime and "text/plain" not in mime:
                 return doc, "unsupported_format", ""
-            body = clean(data.decode("utf-8", "replace"))
+            page=data.decode("utf-8", "replace")
+            if "html" in mime:
+                from .news_article_retrieval import extract_page,publication_metadata
+                body,method=extract_page(page)
+                doc.update(publication_metadata(page));doc['extraction_method']=method
+            else:body=page
             if len(body) < 200:
                 return doc, "thin_text", ""
             parser = TextExtractor()
@@ -551,6 +556,7 @@ def extract_documents(docs: list[dict], limit: int, fetch=get) -> dict:
             doc["extraction_attempted_at"] = stamp()
             doc['extraction_attempts'] = doc.get('extraction_attempts', 0) + 1
             if state == "page_text":
+                doc.setdefault('retained_feed_body',doc.get('body',''))
                 doc["body"] = body  # preserve all extracted text, no 800-char loss
             else:
                 doc["extraction_error"] = body
@@ -729,7 +735,7 @@ def main():
     from .news_intake_review_export import export_review_request
     report['review_export'] = export_review_request(ROOT, get, clean)
     if args.context_vault:
-        from news_context_check import run_context
+        from .news_context_check import run_context
         report["news_context"] = run_context(ROOT, args.date, args.context_vault,
                                               args.context_model, args.context_limit)
         write_json(ROOT / "data/news_intake" / args.date / "parsed.json", report)

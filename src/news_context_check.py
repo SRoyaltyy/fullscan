@@ -4,7 +4,7 @@ import argparse,json,os,subprocess,sys
 from datetime import datetime,timezone
 from pathlib import Path
 
-def run_context(root,date,vault,model=None,limit=None,document_ids=None,asof=None):
+def run_context(root,date,vault,model=None,limit=None,document_ids=None,asof=None,semantic_model=None,semantic_budget=4):
     root=Path(root);vault=Path(vault)
     source=root/'data/news_intake'/date/'documents.json'
     documents=json.loads(source.read_text(encoding='utf-8'))
@@ -25,7 +25,8 @@ def run_context(root,date,vault,model=None,limit=None,document_ids=None,asof=Non
         '--database',str(root/'data/news_context/context.sqlite'),
         '--asof',asof or datetime.now(timezone.utc).isoformat(),'--output',str(output)]
     if model:args+=['--model',model]
-    subprocess.run(args,check=True)
+    if semantic_model:args+=['--semantic-model',semantic_model,'--semantic-budget',str(semantic_budget)]
+    subprocess.run(args,check=True,stdout=subprocess.PIPE)
     result=json.loads(output.read_text(encoding='utf-8'))
     summary={k:v for k,v in result.items() if k not in ('results','model_calls')}
     summary.update({'input_file':str(source.relative_to(root)),'output_file':str(output.relative_to(root)),
@@ -42,8 +43,11 @@ def main():
     p.add_argument('--date',required=True);p.add_argument('--vault',type=Path,required=True)
     p.add_argument('--model');p.add_argument('--limit',type=int);p.add_argument('--ids',nargs='+')
     p.add_argument('--asof')
+    p.add_argument('--semantic-model',help='Experimental local routing candidate backend; not full impact reasoning')
+    p.add_argument('--semantic-budget',type=int,default=4)
     a=p.parse_args()
     if a.limit is not None and a.limit<1:p.error('--limit must be positive')
-    print(json.dumps(run_context(a.root,a.date,a.vault,a.model,a.limit,a.ids,a.asof),indent=2))
+    if a.semantic_budget<0:p.error('--semantic-budget must be nonnegative')
+    print(json.dumps(run_context(a.root,a.date,a.vault,a.model,a.limit,a.ids,a.asof,a.semantic_model,a.semantic_budget),indent=2))
 
 if __name__=='__main__':main()
