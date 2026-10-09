@@ -86,6 +86,71 @@ def inject_opens(bars: dict, session: str, opens: dict[str, float]) -> dict:
     return out
 
 
+def pin_sealed_opens(
+    bars: dict,
+    records: list[dict],
+    ignore_dates: set[str] | None = None,
+) -> dict:
+    """In-memory: sealed open-fill prints win over a later Yahoo open reprint.
+
+    The morning open-fill is the buy/sell authority. When the first final
+    daily bar lands with a different open, keep ``prices.jsonl`` as written
+    and pin the sealed fill into this copy so ``_history_ok`` and
+    ``close_mark`` still match. Nothing here is written to disk.
+    ``ignore_dates`` skips sessions this run is about to correct.
+    """
+    ignore = ignore_dates or set()
+    out: dict = {"feat": {}, "stored": {}}
+    for side in ("feat", "stored"):
+        for ticker, blob in (bars.get(side) or {}).items():
+            copied = {}
+            for key, value in blob.items():
+                if key == "date":
+                    copied[key] = list(value)
+                elif key == "adjusted":
+                    copied[key] = value
+                else:
+                    copied[key] = [float(item) for item in value]
+            out[side][ticker] = copied
+    days = sorted(
+        {
+            row["date"]
+            for row in records
+            if row.get("kind") in ("open_fill", "open_fill_correction")
+        }
+    )
+    for day in days:
+        if day in ignore:
+            continue
+        opened = effective_open_fill(records, day)
+        if opened is None:
+            continue
+        for row in (opened.get("buys") or []) + (opened.get("sells") or []):
+            ticker = str(row["ticker"]).upper()
+            try:
+                fill = float(row["fill"])
+            except (TypeError, ValueError):
+                continue
+            if not math.isfinite(fill) or fill <= 0:
+                continue
+            blob = out["stored"].get(ticker)
+            if not blob:
+                continue
+            dates = blob.get("date") or []
+            if day not in dates:
+                continue
+            i = dates.index(day)
+            old = float(blob["open"][i])
+            if _same_print(old, fill):
+                continue
+            blob["open"][i] = fill
+            print(
+                f"pin sealed open: {ticker} {day} open {old} -> sealed fill {fill}",
+                flush=True,
+            )
+    return out
+
+
 def _same_fill(old: dict, new: dict) -> bool:
     if int(old["shares"]) != int(new["shares"]):
         return False

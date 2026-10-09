@@ -54,6 +54,7 @@ from research.hot_n4_clean_v4.forward.openfill import (  # noqa: E402
     decide_open_correction,
     decide_open_fill,
     open_legs,
+    pin_sealed_opens,
     refuse_stale_open,
 )
 from research.hot_n4_clean_v4.forward.opens import fetched_bars, session_opens  # noqa: E402
@@ -678,6 +679,7 @@ def _bars(records: list[dict], target: str) -> tuple[dict | None, int]:
     except Exception as exc:  # noqa: BLE001 — a missing price file is an input gap
         _log_skip(target, f"price store could not be read ({exc})", records)
         return None, 0
+    bars = pin_sealed_opens(bars, records)
     drifted = _history_ok(records, bars)
     if drifted:
         _fail(drifted)
@@ -1189,6 +1191,7 @@ def correct_open_main() -> int:
     except Exception as exc:  # noqa: BLE001 — a missing price file is an input gap
         _fail(f"price store could not be read ({exc})")
         return 1
+    bars = pin_sealed_opens(bars, records, ignore_dates={session})
     plan = plan_on(records, session)
     if plan is None:
         _fail(f"no plan for {session}")
