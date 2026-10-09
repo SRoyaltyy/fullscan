@@ -30,24 +30,11 @@
   "extraction_status": "feed_text",
   "last_seen": "2026-10-04T12:58:17.234223+00:00",
   "review_enrichment": {
-    "attempted_epoch": 1791508558.8838706,
-    "attempts": 1,
+    "attempted_epoch": 1791529003.1434178,
+    "attempts": 2,
     "status": "failed",
-    "network_requests": [
-      {
-        "method": "GET",
-        "url": "https://news.google.com/articles/CBMigwFBVV95cUxOTTJ4bmtlWVZ4b1RzVzZRRXNCOWcxbE1sMVdOLWdhR3JSYWVDTjdaX2plTzhJVlFrRk8yZ2tYdXZ2NHNfQlRGenc2VUs0allZT3VUdzZWMkZnTjZPZm9nV0JTZDZxTV85a2JyN3JfVU9ydk9IQVVYeTJUbEVLNGxfQWJjcw"
-      },
-      {
-        "method": "POST",
-        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
-      },
-      {
-        "method": "GET",
-        "url": "https://www2.polskieradio.pl/health-guide/fda-approved-weight-loss-drugs-2018"
-      }
-    ],
+    "network_requests": [],
     "historical_body_availability_verified": false,
-    "error": "HTTP Error 404: Not Found"
+    "error": "HTTP Error 429: Too Many Requests"
   }
 }
