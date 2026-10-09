@@ -47,7 +47,7 @@
   }
  },
  "date": "2026-10-09",
- "generated_at": "2026-10-09T07:17:25-04:00",
+ "generated_at": "2026-10-09T07:22:57-04:00",
  "strategies": [
   {
    "buys": [
@@ -5400,11 +5400,9 @@
   {
    "buys": [
     "CDNA",
+    "RRC",
     "PACS",
-    "BLFS",
-    "SN",
-    "TOST",
-    "ONON"
+    "ETON"
    ],
    "family": "flatten_robust",
    "name": "flatten_robust",
