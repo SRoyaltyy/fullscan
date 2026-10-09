@@ -251,7 +251,15 @@ def _land(date: str, key: str, title: str = "") -> None:
 
 
 def _deepseek_credits_ok() -> bool:
-    """Do not start essays if DeepSeek is already 402 / no key on ubuntu."""
+    """Do not start essays if DeepSeek is already 402 / no key on ubuntu.
+
+    Grok-only runs (llm_backend=grok, GROK_ONLY=1) never spend DeepSeek, so
+    a DeepSeek 402 must not empty the Grok essays.
+    """
+    if os.environ.get("GROK_ONLY") == "1":
+        print("[preopen-all] GROK_ONLY=1 — skip DeepSeek preflight "
+              "(Grok essays do not need DeepSeek credits)", flush=True)
+        return True
     try:
         from . import deepseek_client as dc
         hit = dc.credits_preflight()
