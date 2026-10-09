@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T06:59:45.456029-04:00",
+  "generated_at": "2026-10-09T06:59:52.581073-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -88,24 +88,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-09T05:57:10.440160-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-09_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -413,6 +395,24 @@
         }
       ],
       "preview": "5907 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 PLMR, GLBE, VCTR, NU, ANF"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T06:59:51.535768-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-09_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
