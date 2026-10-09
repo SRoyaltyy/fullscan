@@ -1,11 +1,11 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T07:06:32.133616-04:00",
-  "run_id": "37904467740",
+  "generated_at": "2026-10-09T07:09:40.472349-04:00",
+  "run_id": "37920672579",
   "runner": "ecs-openclaw",
   "all_ok": false,
   "qc_all_ok": false,
-  "book_ok": false,
+  "book_ok": true,
   "grok_ok": false,
   "grok_fails": [
     {
@@ -42,13 +42,13 @@
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 1,
+      "n_today": 4,
       "latest": {
-        "id": 37904467740,
+        "id": 37920672579,
         "status": "in_progress",
         "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37904467740"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37920672579"
       }
     },
     {
@@ -69,8 +69,14 @@
     },
     {
       "workflow": "events_daily.yml",
-      "n_today": 0,
-      "latest": null
+      "n_today": 1,
+      "latest": {
+        "id": 37917984822,
+        "status": "completed",
+        "conclusion": "cancelled",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37917984822"
+      }
     },
     {
       "workflow": "news_parse.yml",
@@ -79,18 +85,36 @@
     },
     {
       "workflow": "news_judge.yml",
-      "n_today": 0,
-      "latest": null
+      "n_today": 1,
+      "latest": {
+        "id": 37917987325,
+        "status": "completed",
+        "conclusion": "failure",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37917987325"
+      }
     },
     {
       "workflow": "news_actions.yml",
-      "n_today": 0,
-      "latest": null
+      "n_today": 1,
+      "latest": {
+        "id": 37917990426,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37917990426"
+      }
     },
     {
       "workflow": "catalyst_daily.yml",
-      "n_today": 0,
-      "latest": null
+      "n_today": 1,
+      "latest": {
+        "id": 37912536284,
+        "status": "completed",
+        "conclusion": "cancelled",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37912536284"
+      }
     },
     {
       "workflow": "daily_pipeline.yml",

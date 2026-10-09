@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T07:07:02.606650-04:00",
+  "generated_at": "2026-10-09T07:09:43.449462-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -350,8 +350,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
-          "size": 6574,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
+          "size": 7453,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=True \u00b7 missing events, news_judge, map_heat_research, general_predict",
           "bullets": []
         },
         {
@@ -360,11 +360,11 @@
           "path": "01_daily/2026-10-09_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Core packet fails on three missing required artifacts (general predict, events scan, news judge). Same-day news_parse, f",
-          "size": 938,
+          "reason": "ok=False Core packet fails on three missing required files (general predict, events scan, news judge). Same-day news parse, optio",
+          "size": 981,
           "said": "ok=False \u00b7 required general predict missing 01_daily/general/2026-10-09_predict.md",
           "bullets": [
-            "Core packet fails on three missing required artifacts (general predict, events scan, news judge). Same-day news_parse, finviz digest, and map-heat tables with a live futures tape look usable; news_actions is optional. Sector essays are optional this date (0/11) and are not fails. Missing research.md is noted only; baseline is a no-signal captain-close packet and does not fail the day."
+            "Core packet fails on three missing required files (general predict, events scan, news judge). Same-day news parse, optional news actions, finviz digest, and map-heat tables (live futures tape present, MAP_HEAT_OK) look like real 2026-10-09 artifacts. Sectors 0/11 are optional this date and are not fails. Missing research.md and close-digest are noted only; baseline is a no-signal captain-close packet and does not fail the day."
           ]
         },
         {
@@ -524,8 +524,8 @@
           "path": "01_daily/weather/2026-10-09_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9271 vix=falling yields=flat",
-          "size": 9271,
+          "reason": "sectors=11 bytes=9269 vix=falling yields=flat",
+          "size": 9269,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -729,8 +729,8 @@
           "path": "01_daily/weather/2026-10-09_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9271 vix=falling yields=flat",
-          "size": 9271,
+          "reason": "sectors=11 bytes=9269 vix=falling yields=flat",
+          "size": 9269,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities",
@@ -757,10 +757,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5907",
-          "size": 2176899,
-          "said": "214 rows",
+          "size": 2213603,
+          "said": "223 rows",
           "bullets": [
-            "DVN, LNG, PR, RRC, CNQ, SM, TAL, CHRD"
+            "PLMR, GLBE, VCTR, NU, ANF, SKWD, AAMI, RGA"
           ]
         },
         {
@@ -838,9 +838,9 @@
           "bullets": []
         }
       ],
-      "said": "214 rows",
+      "said": "223 rows",
       "bullets": [
-        "DVN, LNG, PR, RRC, CNQ"
+        "PLMR, GLBE, VCTR, NU, ANF"
       ]
     },
     {
@@ -3006,6 +3006,38 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T07:09:41.329989-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-10-09_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7571,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
+        },
+        {
+          "path": "01_daily/2026-10-09_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 7453,
+          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
+        },
+        {
+          "path": "01_daily/2026-10-09_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 359,
+          "preview": "# Pre-open ALL status \u2014 2026-10-09\nall_ok=False  qc_all_ok=False  book_ok=True  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-09\nall_ok=False  qc_all_ok=False  book_ok=True  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0"
     }
   ],
   "href": {
