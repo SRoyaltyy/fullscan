@@ -42,11 +42,13 @@ def export_review_request(root,fetch_page=None,extract_text=None):
                             'status':'attempted','network_requests':[],'historical_body_availability_verified':False}
                 try:
                     from .news_intake_google_resolver import resolve_google_url
-                    url,requests=resolve_google_url(doc['url'],fetch_page)
+                    url,requests=resolve_google_url(doc['url'],fetch_page,audit=enrichment['network_requests'])
                     enrichment['network_requests']=requests+[{'method':'GET','url':url}]
                     data,mime=fetch_page(url)
                     if 'html' not in mime:raise ValueError('Publisher response is not HTML')
-                    page=data.decode('utf-8','replace');body=extract_text(page)
+                    from .news_article_retrieval import extract_page,publication_metadata
+                    page=data.decode('utf-8','replace');body,method=extract_page(page)
+                    doc.update(publication_metadata(page))
                     title_words={w for w in re.findall(r'\w+',doc['title'].lower()) if len(w)>3}
                     body_words=set(re.findall(r'\w+',body.lower()))
                     overlap=len(title_words&body_words)/max(len(title_words),1)
@@ -55,8 +57,8 @@ def export_review_request(root,fetch_page=None,extract_text=None):
                         raise ValueError('Access challenge; no bypass attempted')
                     doc['retained_feed_body']=doc.get('body','');doc['body']=body
                     doc['extraction_status']='page_text';doc['extracted_url']=url
-                    enrichment.update(status='page_text_checked',title_token_overlap=round(overlap,3),
-                                      note='Visible page text may include navigation; article boundaries require review')
+                    enrichment.update(status='page_text_checked',method=method,title_token_overlap=round(overlap,3),
+                                      note='Structured body preferred; HTML boundaries remain candidates requiring review')
                 except Exception as exc:enrichment.update(status='failed',error=str(exc)[:300])
                 doc['review_enrichment']=enrichment
             raw=json.dumps(doc,ensure_ascii=False,indent=2)+'\n'

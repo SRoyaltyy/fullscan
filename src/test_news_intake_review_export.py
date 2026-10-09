@@ -33,5 +33,17 @@ class ReviewExportTests(unittest.TestCase):
             root=Path(directory);(root/'config').mkdir()
             (root/'config/news_review_request.json').write_text(json.dumps({'session_id':'../bad','cases':[]}))
             with self.assertRaises(ValueError):export_review_request(root)
+    def test_export_prefers_article_body_and_keeps_publisher_date_separate(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);(root/'config').mkdir();archive=root/'data/news_intake/2026-10-04';archive.mkdir(parents=True)
+            request={'session_id':'test','resolve_full_text':True,'fulltext_budget':1,'cases':[{'archive_date':'2026-10-04','document_id':'abc'}]}
+            (root/'config/news_review_request.json').write_text(json.dumps(request))
+            (archive/'documents.json').write_text(json.dumps([{'id':'abc','title':'Example agreement','body':'Feed text','url':'https://publisher.example/a','published_at':'2026-10-03T00:00:00Z','extraction_status':'feed_text'}]))
+            article='Example agreement. '+('Actual deal terms and closing conditions. '*30)
+            page='<script type="application/ld+json">'+json.dumps({'@type':'NewsArticle','articleBody':article,'datePublished':'2026-04-10T00:00:00Z'})+'</script><aside>Unrelated copper mine halted.</aside>'
+            export_review_request(root,lambda url:(page.encode(),'text/html'),lambda text:self.fail('Whole-page extractor must not be used'))
+            saved=json.loads((root/'data/news_intake/review_exports/test/abc.json').read_text())
+            self.assertEqual(saved['body'],article);self.assertEqual(saved['publisher_published_at'],'2026-04-10T00:00:00Z')
+            self.assertEqual(saved['published_at'],'2026-10-03T00:00:00Z');self.assertEqual(saved['retained_feed_body'],'Feed text')
 
 if __name__=='__main__':unittest.main()
