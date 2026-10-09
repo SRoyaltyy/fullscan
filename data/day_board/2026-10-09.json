@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T12:48:44.866943-04:00",
+  "generated_at": "2026-10-09T12:48:56.993257-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -992,31 +992,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-10-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-09T04:38:55.616882-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-09_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 274936,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-09_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18415,
-          "preview": "# MAP HEAT \u2014 2026-10-09\nExport `finviz_2026-10-08.csv` \u00b7 11616 names \u00b7 generated 2026-10-09T04:26:51.705949-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-09\nExport `finviz_2026-10-08.csv` \u00b7 11616 names \u00b7 generated 2026-10-09T04:26:51.705949-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -3844,6 +3819,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T12:48:55.969185-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-09_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2213603,
+          "preview": "5907 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 PLMR, GLBE, VCTR, NU, ANF"
+        }
+      ],
+      "preview": "5907 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 PLMR, GLBE, VCTR, NU, ANF"
     }
   ],
   "href": {
