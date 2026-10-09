@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T12:50:46.035317-04:00",
+  "generated_at": "2026-10-09T12:54:44.807523-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -759,7 +759,7 @@
           "size": 2213603,
           "said": "223 rows",
           "bullets": [
-            "PLMR, GLBE, VCTR, NU, ANF, SKWD, HCI, AAMI"
+            "PLMR, GLBE, VCTR, NU, ANF, SKWD, AAMI, RGA"
           ]
         },
         {
@@ -992,31 +992,6 @@
     }
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-09T04:41:51.287580-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-09_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 7109911,
-          "preview": "raw=9872 usable=741 single=476 \u00b7 US jobless claims hover near 57-year low for fourth consecutive week - Reuters | Watch Oil Spoils the Global Stock Rally as Brent Tops $102 - Bloomberg.com | Soaring freight rates threaten Asia's appetite for US crude - Reuters | GlobalFoundries Rallies After Announcing $2 Billion TSMC Deal - Bloomberg.com | TSMC\u2019s Quarterly Revenue Jumps 51% After AI Demand Holds Up - Bloomberg.com"
-        },
-        {
-          "path": "01_daily/news/2026-10-09_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 13143,
-          "preview": "# News Parse v2 \u2014 2026-10-09T04:41:32.324313-04:00\nWindow\u224848h | news_mode=on | raw=9872 | usable=741 | single_name=476 | noise_dropped=8320\nusable polarity={'+': 31, '-': 176, 'mixed': 1, 'neutral': 533}"
-        }
-      ],
-      "preview": "raw=9872 usable=741 single=476 \u00b7 US jobless claims hover near 57-year low for fourth consecutive week - Reuters | Watch Oil Spoils the Global Stock Rally as Brent Tops $102 - Bloomberg.com | Soaring freight rates threaten Asia's appetite for US crude - Reuters | GlobalFoundries Rallies After Announcing $2 Billion TSMC Deal - Bloomberg.com | TSMC\u2019s Quarterly Revenue Jumps 51% After AI Demand Holds Up - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-10-09T04:41:32.324313-04:00\nWindow\u224848h | news_mode=on | raw=9872 | usable=741 | single_name=476 | noise_dropped=8320\nusable polarity={'+': 31, '-': 176, 'mixed': 1, 'neutral': 533}"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -3985,6 +3960,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-09\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'map_heat_research', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T12:54:43.847116-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-09_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9273,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-09_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5008,
+          "preview": "# Weather report \u2014 2026-10-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-09\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
