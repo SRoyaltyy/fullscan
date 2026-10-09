@@ -3,5 +3,15 @@
   "status": "missed_deadline",
   "observed_at": "2026-10-09T12:59:02.589274-04:00",
   "submit": false,
-  "standing": false
+  "standing": false,
+  "events": [
+    {
+      "at": "2026-10-09T14:54:02.724735-04:00",
+      "status": "missed_deadline",
+      "submit": false,
+      "standing": false,
+      "source": "run",
+      "note": "day record kept; no order sent"
+    }
+  ]
 }
