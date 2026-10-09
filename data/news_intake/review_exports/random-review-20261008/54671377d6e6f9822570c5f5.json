@@ -23,5 +23,26 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "review_enrichment": {
+    "attempted_epoch": 1791539352.4259741,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMi2gFBVV95cUxOVnNpNE00SUhHTTFleGhUM296R21qbnZ4b1hnd1h6d2cwNXNPWjc1SUJSX0h1LUl2Z2J0YlpqUVZOZVBOTDZlRXNiVjZwRDJjaEV3cE5pU2dXa25rOVpyb3NLTU0xY1F1Y3JjWVluV2FKbEx5R282NmFJbjhuSUtWdmRETUlUZndiTHpGM3ViNndIWDNnLUZJVVUySElCcldZNFUwWWNYVUtCSVktdVdfNjFHSlZfeUpxWUtMYnVndV92X1I1blAwRlN4REp0TWswSHAyd0F3Q0ZjZw"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.bigmint.co/insights/detail/global-steel-markets-reflect-divergent-trends-in-sept26-as-regional-supply-dynamics-shape-prices-795293"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "error": "HTTP Error 403: Forbidden"
+  }
 }

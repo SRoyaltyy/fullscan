@@ -23,5 +23,26 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "review_enrichment": {
+    "attempted_epoch": 1791539322.8808582,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMi3AFBVV95cUxOTk9hMDJQVno2MTZqSTl2c2NpLTRVS2dnaUZVd01mNXYwdm5SdWZzOEtzcTV2UTZxVmtEZGJ4QUl2RXJvSFVUV0loaHVZRVlaZmFZYWRoQllkVDJ3MXBTWE1kdzQyaERZdHotSExZR3lOSnA4LXNoWHdDeU1xS2FLRTllYXlDYkl0UU9RcDZDSHFSeEdndHpSWkNwaGtxMmhhNVBwY3NSUG9iWjBQcmtSV185SE1lQjUyUUJ1bEI0Z0RLeG5zeDh0UkFOV0xibEpmRWE3akNjak9SeXZV0gHiAUFVX3lxTE5zZTB3MHpYenhKYlRBZlZyR3pKYmpBN1o0dkhtLVZya0pBZjhpX0YzSGNTMGl6b3REdk9JckFjREdlX0EtQkRfcklKbDJnZ3R5ci1vbWJaOFdmSkxvQVV5eWNPeGIwUHlTX2I0N29uM01iMVdSOGJUUjVmZTBLbmd2N0NWdVZ0ZUxRUmxyZWs5Y29IVUxSSDZLdzdILXJ5OWVNVHhhZ05KSlQ1UFBiazNfd0xtc3MzZHRJWlVjUFl0aUk4N0pMNmhlNHNZeldfNWdnVXZHbWpiLVFmeEZraU9uc3c"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.latestly.com/agency-news/business-news-tariffs-export-controls-increasingly-being-used-for-strategic-purposes-pk-mishra-7631030.html"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "error": "HTTP Error 403: Forbidden"
+  }
 }

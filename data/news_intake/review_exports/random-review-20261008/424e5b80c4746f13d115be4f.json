@@ -24,5 +24,26 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "review_enrichment": {
+    "attempted_epoch": 1791539323.597202,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMipwFBVV95cUxQYjJzdkIxUzVRNHpESENmRkR6YTB3UUkzakxLLTZsNmI3ZnlDeXVYWEd2bXRGeFJaekJFbXQ1LTV5aEVrTy00dVRNQ2pLM0ZqZk9wOEJCMGgyaEstUkVQLU1HM2tCYWFwbG5LWk1JWjJWM0JfSW9wU1c1cWhaNU9oN2thMk00NnNJeGQxaGZqTWF5aDM3RzNULWJFWktmbDZFYjMxU1FkOA"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://apnews.com/article/lettuce-cyclospora-outbreak-fda-taylor-farms-be4d04bfac36426fc341703fa7636892"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "error": "HTTP Error 403: Forbidden"
+  }
 }

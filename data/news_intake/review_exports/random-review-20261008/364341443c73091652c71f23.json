@@ -19,5 +19,26 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-03T21:57:16.391630+00:00"
+  "last_seen": "2026-10-03T21:57:16.391630+00:00",
+  "review_enrichment": {
+    "attempted_epoch": 1791539324.174318,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMif0FVX3lxTFBuVndXMGRlQjRXNVhKV2VFYmVwMm5Idmk1UDRqRTU1Z2xMamp4UVMwSlgwUXpfNHpoN3ZJV2djc3h5ZXA5blNhc25pWDhYSm1DbDh0TzdROE9ranpqYU1lNG15VndTVG1ZUXpjT2tWTjJybV8wMVRhaTVTLXNjeDA"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.polskieradio.pl/bonusesr/en-GR/fulltbet-copa-america-download/"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "error": "<urlopen error timed out>"
+  }
 }

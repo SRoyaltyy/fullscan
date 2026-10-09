@@ -2,7 +2,7 @@
   "title": "Trump slaps additional 50% tariff on certain Canadian goods - ABC News - Breaking News, Latest News and Videos",
   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPdDZTVjFHZXBWcUoteUpOakQ0T016RDVlQWxGR19KYnhEeEdfQzV3UmVLNkdEbWVCckxFbHZsNjhpcW9HQktmWGd5RmtobE1fWTJ4TnpqQlRZZDJRTUs2QzU4eW9zNl9ZeEpfRFk0OVRRTzRBVUJYS1F0dTFWRlNqNUFNV0taQU81MnBWbHd1MG5rendjb1g1X290RdIBoAFBVV95cUxPX09ka2RKeVgzdHdOWERZWHFGNWhmeWk0bHE5b0V3T3B0X19JQzZfcVQ0SHFkNXRBLWp3Sk1QMWduVU5sdy1DektIa19VeWtwTGNuNy1lbnU0OW0wazRjN1ZQdWJZdlp1N2kwSjc3RVhBaG40eFZTN0xTbE5xTHMyenZZazdlOXdqSHhrbkZrcTlzOGZiX3BnTy1tSThqTm1G?oc=5",
   "publisher": "ABC News - Breaking News, Latest News and Videos",
-  "body": "Trump slaps additional 50% tariff on certain Canadian goods ABC News - Breaking News, Latest News and Videos",
+  "body": "Trump slaps additional 50% tariff on certain Canadian goods - ABC News Trump slaps additional 50% tariff on certain Canadian goods The tariffs will take effect 30 days from now. By Michelle Stoddart July 20, 2026, 6:04 PM The Trump administration announced Monday it will hit Canada with a 50% tariff on many goods imported into the United States, citing Canada's retaliation to Trump's tariffs in 2025. In a call with reporters this afternoon announcing the tariffs, a senior administration official said that this action is to \"hold\" Canada \"accountable\" for their \"substantial retaliation against the United States as the U.S. imposes trade actions to reindustrialize, reshore, and support its manufacturing.\" \"For example, one of the things that has happened is that all but two Canadian provinces and territories have halted the purchase, distribution, or retailing of U.S. alcoholic beverages, but they have not imposed similar restrictions on other countries,\" the senior administration official said. Related Trump admin sent $20.6B in tariff refunds so far: Court filing The senior administration official also pointed to Canada's tariffs on some American cars and tariffs and trade quotas related to dairy. The list of goods covered by the new duties is very wide-ranging, from dairy products, alcohol and alcohol-related products to some food products. The tariffs also cover construction materials, clothing, furniture and technology, among other things. The president signed three proclamations today under Section 338 of the Tariff Act of 1930, which impose \"additional 50% tariffs on certain goods of Canada in response to these discriminatory measures,\" the senior administration official said. President Donald Trump speaks to reporters after landing in Air Force One, July 19, 2026 in Joint Base Andrews, Maryland. Andrew Harnik/Getty Images \"By doing this, President Trump is leveling the playing field for crucial American exports: motor vehicles, alcohol, and dairy,\" the senior administration official said. The tariffs will take effect 30 days from now. Popular Reads Christa Pike asked 'Where am I?' after waking up following botched execution: Lawyer 2 days ago ISIS-inspired mass shooting plot at Mall of America thwarted, FBI says 2 days ago Christa Pike unconscious and on ventilator after botched execution: Attorneys Oct 2 \"Each Section 338 proclamation imposes a 50% tariff on a different set of Canadian imports, covering products ranging from wine to hockey sticks to cement,\" the senior administration official said. The official noted that the tariffs apply even to goods covered by the U.S.-Mexico-Canada Agreement (USMCA). There are some goods which are exempted, according to the U.S. official, those include: \"energy, potash products subject to tariffs under Section 232, and certain other goods such as fish or critical minerals.\" \"So, so we are trying to be again very. very tailored to the volume of trade and the and the harm that that affects that that is that affects U.S. trade under these discriminatory rules,\" the senior administration official said when asked what goods are covered. Related Trump admin proposes broad new tariffs on top trading partners The 50% tariff is a pretty hefty duty on Canadian goods – the senior administration official noted that it's the highest rate the president can impose under Section 338. When asked where trade talks between the U.S. and Canada currently stand, the U.S. official said that while teams have \"substantive discussions,\" there are not currently any formal negotiations. \"We've certainly shared ideas with them regarding Canadian trade barriers or practices that the United States would like to see remedied. They've shared ideas with us on the future of the trade relationship and how to enhance economic security in North America. So we certainly have had discussions, including substantive discussions. That being said, we're not in a formal negotiating stage at this point,\" the senior administration official said. These are not the tariffs that Trump called for in a social media post on Friday, criticizing America's northern neighbors for the smoke that covered American cities, coming from Canadian wildfires. The senior administration official said that the president has \"asked for options on that, and options are being shared with him.\" Related Topics Trump tariffs President Trump Canada Sponsored Content by Taboola Popular Reads Christa Pike asked 'Where am I?' after waking up following botched execution: Lawyer 2 days ago Christa Pike unconscious and on ventilator after botched execution: Attorneys Oct 2 ISIS-inspired mass shooting plot at Mall of America thwarted, FBI says 2 days ago Hurricane Isaias latest: Storm strengthens to Category 2 7 hours ago ABC News Live 24/7 coverage of breaking news and live events",
   "published_at": "2026-10-03T21:14:22+00:00",
   "published_raw": "Sat, 03 Oct 2026 21:14:22 GMT",
   "source": "topic_geopolitics",
@@ -18,6 +18,36 @@
       "classes": []
     }
   ],
-  "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T12:58:17.234223+00:00"
+  "extraction_status": "page_text",
+  "last_seen": "2026-10-04T12:58:17.234223+00:00",
+  "publisher_publication_candidates": [
+    "2026-07-20T22:04:00.000Z"
+  ],
+  "publisher_published_at": "2026-07-20T22:04:00.000Z",
+  "publisher_publication_status": "unique_structured_candidate",
+  "retained_feed_body": "Trump slaps additional 50% tariff on certain Canadian goods ABC News - Breaking News, Latest News and Videos",
+  "extracted_url": "https://abcnews.com/Politics/trump-slaps-additional-50-tariff-canadian-goods/story?id=134929955",
+  "review_enrichment": {
+    "attempted_epoch": 1791539351.6753237,
+    "attempts": 1,
+    "status": "page_text_checked",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMimwFBVV95cUxPdDZTVjFHZXBWcUoteUpOakQ0T016RDVlQWxGR19KYnhEeEdfQzV3UmVLNkdEbWVCckxFbHZsNjhpcW9HQktmWGd5RmtobE1fWTJ4TnpqQlRZZDJRTUs2QzU4eW9zNl9ZeEpfRFk0OVRRTzRBVUJYS1F0dTFWRlNqNUFNV0taQU81MnBWbHd1MG5rendjb1g1X290RdIBoAFBVV95cUxPX09ka2RKeVgzdHdOWERZWHFGNWhmeWk0bHE5b0V3T3B0X19JQzZfcVQ0SHFkNXRBLWp3Sk1QMWduVU5sdy1DektIa19VeWtwTGNuNy1lbnU0OW0wazRjN1ZQdWJZdlp1N2kwSjc3RVhBaG40eFZTN0xTbE5xTHMyenZZazdlOXdqSHhrbkZrcTlzOGZiX3BnTy1tSThqTm1G"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://abcnews.com/Politics/trump-slaps-additional-50-tariff-canadian-goods/story?id=134929955"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "method": "visible_page_candidate",
+    "title_token_overlap": 0.909,
+    "note": "Structured body preferred; HTML boundaries remain candidates requiring review"
+  }
 }

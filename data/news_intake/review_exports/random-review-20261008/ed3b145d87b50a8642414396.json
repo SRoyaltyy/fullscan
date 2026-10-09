@@ -23,5 +23,32 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+  "last_seen": "2026-10-04T06:30:58.699753+00:00",
+  "publisher_publication_candidates": [
+    "2026-10-02T05:09:00-04:00",
+    "2026-10-02T11:09:00+02:00"
+  ],
+  "publisher_published_at": null,
+  "publisher_publication_status": "ambiguous_or_absent",
+  "review_enrichment": {
+    "attempted_epoch": 1791539353.0698276,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMi2AFBVV95cUxOOEFLc1Q4YmpsaVV1Qm4zNWJ3QmY0aEtwMks5Q3NhRkd2ZFNZUTJLYVFuRkZXSkxWZGdoV1lveDdaSWdPMEdudDBxaWtXc2x2UHNWOTRkYjduZ2M0RlAwak03ckFsLVMxclJWNC1iOFpBS3NXWXItbFU0VVEzTm9OQnNKdC1YWlZVMmI1RXUydER4MTFlNWFQeVlJVDFPbWt2WTRMeVdMZE9ZaGZ5SzVjaVYxQUpRTjZMMkFPcmlqR2M5amV5Ykh3QnpWYjM2WXBWUWVwQy1PaGM"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.marketscreener.com/news/societe-immobiliere-balima-reports-earnings-results-for-the-half-year-ended-june-30-2026-ce785ddbdd88ff21"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "error": "Thin or mismatched publisher text"
+  }
 }

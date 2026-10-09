@@ -25,11 +25,30 @@
   "extraction_status": "feed_text",
   "last_seen": "2026-10-04T12:58:17.234223+00:00",
   "review_enrichment": {
-    "attempted_epoch": 1791529008.3992825,
-    "attempts": 1,
+    "attempted_epoch": 1791539321.2526476,
+    "attempts": 2,
     "status": "failed",
-    "network_requests": [],
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMi0wFBVV95cUxPbXpNZ1F4MU9qN2pibzRLdE00d3EwMWVCRmZ1YV9yZzdEM1ZXMV9PLTlRLXVKYUNabDVYajhmcmVNczEzb2ZkMk1FSmxSR0sxV2JwaWVXTFUyZmh6SWxoclF3UWljd2RmR0tIR3BtbjJlajFUenRCSnVKQXRKY1RyaEltOVpBb1Z6ZWtCMWNDaGdhakxVcHpnd1NHT3cwQVpSQ0l1bWdJZTVRT3lQTzVTSWxCY1d0QTZpUGJWOTFPLVNJU0E1am93LXJNQVJPTFRuV01r"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.marketscreener.com/news/redco-textiles-limited-reports-earnings-results-for-the-full-year-ended-june-30-2026-ce785ddad08bf626"
+      }
+    ],
     "historical_body_availability_verified": false,
-    "error": "HTTP Error 429: Too Many Requests"
-  }
+    "error": "Thin or mismatched publisher text"
+  },
+  "publisher_publication_candidates": [
+    "2026-10-02T09:20:31-04:00",
+    "2026-10-02T15:20:31+02:00"
+  ],
+  "publisher_published_at": null,
+  "publisher_publication_status": "ambiguous_or_absent"
 }
