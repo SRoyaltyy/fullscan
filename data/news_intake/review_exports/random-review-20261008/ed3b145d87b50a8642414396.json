@@ -31,8 +31,8 @@
   "publisher_published_at": null,
   "publisher_publication_status": "ambiguous_or_absent",
   "review_enrichment": {
-    "attempted_epoch": 1791539353.0698276,
-    "attempts": 1,
+    "attempted_epoch": 1791554492.8656545,
+    "attempts": 2,
     "status": "failed",
     "network_requests": [
       {

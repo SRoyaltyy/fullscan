@@ -23,5 +23,31 @@
     }
   ],
   "extraction_status": "feed_text",
-  "last_seen": "2026-10-04T06:30:58.699753+00:00"
+  "last_seen": "2026-10-04T06:30:58.699753+00:00",
+  "publisher_publication_candidates": [
+    "2026-10-02T20:23:27Z"
+  ],
+  "publisher_published_at": "2026-10-02T20:23:27Z",
+  "publisher_publication_status": "unique_structured_candidate",
+  "review_enrichment": {
+    "attempted_epoch": 1791554496.2667177,
+    "attempts": 1,
+    "status": "failed",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMilwFBVV95cUxOd29DQmQzN21UUVZHMWRrNUJIZDJoY0ZVRFV2cm9mWVd2QUREQmFfM2t1TkExeGhaM3lRZ0pQTlRKNFdHaWduTmFGVHA3Z0dEQUo5UGJ4QUlKNlVxaWw1Z3hSNVhnUndQTXdQT280cjZ2Y3ZsWnVmRlg1Vm45ZDZPcjFNRzdrNlA5a2VGWnJseVpoRlJkdFNn"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-gain-yields-093507094.html"
+      }
+    ],
+    "historical_body_availability_verified": false,
+    "error": "Thin or mismatched publisher text"
+  }
 }
