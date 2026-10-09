@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T04:41:52.838484-04:00",
+  "generated_at": "2026-10-09T04:43:22.874953-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1285,6 +1285,31 @@
         }
       ],
       "preview": "raw=9872 usable=741 single=476 \u00b7 US jobless claims hover near 57-year low for fourth consecutive week - Reuters | Watch Oil Spoils the Global Stock Rally as Brent Tops $102 - Bloomberg.com | Soaring freight rates threaten Asia's appetite for US crude - Reuters | GlobalFoundries Rallies After Announcing $2 Billion TSMC Deal - Bloomberg.com | TSMC\u2019s Quarterly Revenue Jumps 51% After AI Demand Holds Up - Bloomberg.com \u00b7 # News Parse v2 \u2014 2026-10-09T04:41:32.324313-04:00\nWindow\u224848h | news_mode=on | raw=9872 | usable=741 | single_name=476 | noise_dropped=8320\nusable polarity={'+': 31, '-': 176, 'mixed': 1, 'neutral': 533}"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-09T04:43:21.760932-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-10-09.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11519306,
+          "preview": "11718 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11718 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
