@@ -1,24 +1,16 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T12:48:16.170309-04:00",
-  "run_id": "37922779126",
-  "runner": "ecs-openclaw",
+  "generated_at": "2026-10-09T12:50:44.852602-04:00",
+  "run_id": "37960545283",
+  "runner": "GitHub Actions 1000025965",
   "all_ok": false,
   "qc_all_ok": false,
   "book_ok": false,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "01_daily/general/2026-10-09_predict.md",
-      "reason": "required general predict missing"
-    },
-    {
-      "path": "01_daily/events/2026-10-09_events.json",
-      "reason": "required events JSON missing"
-    },
-    {
-      "path": "01_daily/news/2026-10-09_judge.md",
-      "reason": "required news judge missing"
+      "path": "(review)",
+      "reason": "empty_review_reply"
     }
   ],
   "missing_required": [
@@ -42,24 +34,24 @@
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 5,
+      "n_today": 6,
       "latest": {
-        "id": 37922779126,
+        "id": 37960545283,
         "status": "in_progress",
         "conclusion": null,
-        "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37922779126"
+        "event": "schedule",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37960545283"
       }
     },
     {
       "workflow": "finviz_preopen_scrape.yml",
-      "n_today": 1,
+      "n_today": 2,
       "latest": {
-        "id": 37904455444,
+        "id": 37959672725,
         "status": "completed",
         "conclusion": "success",
-        "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37904455444"
+        "event": "schedule",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37959672725"
       }
     },
     {
