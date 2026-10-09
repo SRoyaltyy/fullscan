@@ -1,11 +1,11 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T07:29:52.059220-04:00",
-  "run_id": "37920672579",
+  "generated_at": "2026-10-09T07:30:47.651063-04:00",
+  "run_id": "37922779126",
   "runner": "ecs-openclaw",
   "all_ok": false,
   "qc_all_ok": false,
-  "book_ok": false,
+  "book_ok": true,
   "grok_ok": false,
   "grok_fails": [
     {
@@ -42,13 +42,13 @@
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 4,
+      "n_today": 5,
       "latest": {
-        "id": 37920672579,
+        "id": 37922779126,
         "status": "in_progress",
         "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37920672579"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/37922779126"
       }
     },
     {
