@@ -1,13 +1,54 @@
 {
  "strategy": "updown_rel1_hv_v1",
  "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
- "days_locked": 0,
- "days_realized": 0,
+ "days_locked": 2,
+ "days_realized": 1,
  "days_missed": 0,
- "status": "collecting",
+ "missed_dates": [],
  "rule": {
   "kill": "KILL if, after >= 60 realized locked days, cumulative net return at 10bp/side is negative; early KILL if after >= 20 days the Newey-West t of daily net at 10bp/side is <= -2.5. A killed strategy stops freezing new days; its record stays untouched.",
   "promote": "PROMOTION REVIEW (by Cyrus; never automatic) only after >= 120 realized locked days AND the live Newey-West t of daily net at 10bp/side >= 3.37 (the cumulative multiple-testing bar) AND it beats the RANDOM4 median and IWM over the same days, also without its single best stock.",
   "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
- }
+ },
+ "gross": {
+  "cum": 0.0126517643,
+  "mean_bp": 126.5176426944,
+  "t_nw": null
+ },
+ "net5": {
+  "cum": 0.0116517643,
+  "mean_bp": 116.5176426944,
+  "t_nw": null
+ },
+ "net10": {
+  "cum": 0.0106517643,
+  "mean_bp": 106.5176426944,
+  "t_nw": null
+ },
+ "net15": {
+  "cum": 0.0096517643,
+  "mean_bp": 96.5176426944,
+  "t_nw": null
+ },
+ "hedged_net10": {
+  "cum": -0.0046037509,
+  "mean_bp": -46.0375085619,
+  "t_nw": null
+ },
+ "iwm_oo1": {
+  "cum": -0.0069361821,
+  "mean_bp": -69.361821232,
+  "t_nw": null
+ },
+ "rand_med_net10": {
+  "cum": -0.0020700788,
+  "mean_bp": -20.7007875506,
+  "t_nw": null
+ },
+ "best_stock": "AAOI",
+ "best_stock_contrib": 0.0013764669,
+ "net10_ex_best_cum": 0.0092752974,
+ "mean_turnover": 2.0,
+ "status": "collecting (1 realized days; kill check from day 20/60, promotion review not before day 120)",
+ "killed": false
 }

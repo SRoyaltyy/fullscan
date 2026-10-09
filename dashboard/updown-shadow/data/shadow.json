@@ -1046,16 +1046,117 @@
  "summary": {
   "strategy": "updown_rel1_hv_v1",
   "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
-  "days_locked": 0,
-  "days_realized": 0,
+  "days_locked": 2,
+  "days_realized": 1,
   "days_missed": 0,
-  "status": "collecting",
+  "missed_dates": [],
   "rule": {
    "kill": "KILL if, after >= 60 realized locked days, cumulative net return at 10bp/side is negative; early KILL if after >= 20 days the Newey-West t of daily net at 10bp/side is <= -2.5. A killed strategy stops freezing new days; its record stays untouched.",
    "promote": "PROMOTION REVIEW (by Cyrus; never automatic) only after >= 120 realized locked days AND the live Newey-West t of daily net at 10bp/side >= 3.37 (the cumulative multiple-testing bar) AND it beats the RANDOM4 median and IWM over the same days, also without its single best stock.",
    "missed": "Missed days (not frozen before 09:25 ET) are recorded in MISSED.jsonl, never back-filled, and earn nothing."
-  }
+  },
+  "gross": {
+   "cum": 0.0126517643,
+   "mean_bp": 126.5176426944,
+   "t_nw": null
+  },
+  "net5": {
+   "cum": 0.0116517643,
+   "mean_bp": 116.5176426944,
+   "t_nw": null
+  },
+  "net10": {
+   "cum": 0.0106517643,
+   "mean_bp": 106.5176426944,
+   "t_nw": null
+  },
+  "net15": {
+   "cum": 0.0096517643,
+   "mean_bp": 96.5176426944,
+   "t_nw": null
+  },
+  "hedged_net10": {
+   "cum": -0.0046037509,
+   "mean_bp": -46.0375085619,
+   "t_nw": null
+  },
+  "iwm_oo1": {
+   "cum": -0.0069361821,
+   "mean_bp": -69.361821232,
+   "t_nw": null
+  },
+  "rand_med_net10": {
+   "cum": -0.0020700788,
+   "mean_bp": -20.7007875506,
+   "t_nw": null
+  },
+  "best_stock": "AAOI",
+  "best_stock_contrib": 0.0013764669,
+  "net10_ex_best_cum": 0.0092752974,
+  "mean_turnover": 2.0,
+  "status": "collecting (1 realized days; kill check from day 20/60, promotion review not before day 120)",
+  "killed": false
  },
- "realized_cols": [],
- "realized": []
+ "realized_cols": [
+  "date",
+  "exit_date",
+  "n_long",
+  "n_short",
+  "gross",
+  "turnover",
+  "ex_ante_beta",
+  "ew_l1000_oo1",
+  "hedged_gross",
+  "spy_oo1",
+  "iwm_oo1",
+  "missing_fills",
+  "jump_flags",
+  "net5",
+  "hedged_net5",
+  "net10",
+  "hedged_net10",
+  "net15",
+  "hedged_net15",
+  "spy_hedged_net10",
+  "rand_med_net5",
+  "rand_p95_net5",
+  "rand_med_net10",
+  "rand_p95_net10",
+  "rand_med_net15",
+  "rand_p95_net15",
+  "rand_pctile_net10",
+  "net10_ex_best"
+ ],
+ "realized": [
+  [
+   "2026-10-07",
+   "2026-10-08",
+   50,
+   50,
+   0.012651764,
+   2,
+   -2.0096621,
+   -0.0075910845,
+   -0.0026037509,
+   -0.0011730721,
+   -0.0069361821,
+   null,
+   null,
+   0.011651764,
+   -0.0036037509,
+   0.010651764,
+   -0.0046037509,
+   0.0096517643,
+   -0.0056037509,
+   0.0082942856,
+   -0.0010700788,
+   0.005863629,
+   -0.0020700788,
+   0.004863629,
+   -0.0030700788,
+   0.003863629,
+   1,
+   0.0092752974
+  ]
+ ]
 }
