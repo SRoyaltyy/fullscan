@@ -47,7 +47,7 @@
   }
  },
  "date": "2026-10-09",
- "generated_at": "2026-10-09T05:54:01-04:00",
+ "generated_at": "2026-10-09T06:00:21-04:00",
  "strategies": [
   {
    "buys": [
@@ -5401,10 +5401,12 @@
   },
   {
    "buys": [
-    "SMMT",
+    "CDNA",
     "PACS",
     "BLFS",
-    "AMN"
+    "SN",
+    "TOST",
+    "ONON"
    ],
    "family": "flatten_robust",
    "name": "flatten_robust",
