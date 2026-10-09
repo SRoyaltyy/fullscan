@@ -2,7 +2,7 @@
   "title": "American Battery Technology Company gets BIS export license for up to $100M of recycled black mass - TradingView",
   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxONzRJYy1UbjNuTFNGU2o1Qmtjb0Y5Q256akVlUFM3dDNKWFNzUFRCUkJ3STBQYWgwMzAxN2RVNzhBYV9YMEQyUVhTNWxJUklaUkdXaWFWcEZlcXV4YmZDVUFPbDRyY055dzRUYnpYX3h1SUFCZDBqOFAtMlkzZEZUTXdRcGlBZmlIdXB5bm9oNmNYME1xYm91OWx3X282ekNuRTRhQjExRVVUZG84bkZSLThOMkVzTjRvYllvUGhwdkxscUlwR1U4dG9hd2NNWU9pUjhqSFJQUHpjRlo5M2RjNG1lOHlBdXcxNEVkcVRtS0U?oc=5",
   "publisher": "TradingView",
-  "body": "American Battery Technology Company gets BIS export license for up to $100M of recycled black mass TradingView",
+  "body": "American Battery Technology Company gets BIS export license for up to $100M of recycled black mass — TradingView News Search Products Community Markets Brokers More EN Get started News / TradingView / American Battery Technology Company gets BIS export license for up to $100M of recycled black mass American Battery Technology Company gets BIS export license for up to $100M of recycled black mass Less than 1 min read ABAT American Battery Technology Company received a U.S. Department of Commerce license to export up to $100 million of recycled black mass, supporting its commercial scale-up. Key Highlights: BIS granted a license to export up to $100 million of recycled black mass under new federal export controls, enabling international sales. License supports the company’s commercial recycling operations and strengthens its position in critical mineral supply chains. Company reported over 400% year-over-year revenue growth and is scaling a second recycling facility backed by $150M in DOE grants. First commercial-scale recycling facility near Reno began operations in 2023 and produces lithium-rich intermediates and other recovered materials. Original SEC Filing: AMERICAN BATTERY TECHNOLOGY Co [ ABAT ] - 8-K - Oct. 01, 2026 Disclaimer This is an AI-powered summary. It may contain inaccuracies. Consider verifying important information with the source. Please note this summary is solely based on documents filed with the SEC. Strategy, business, and products TradingView US stocks ABAT chart Analyze on Supercharts Latest news More news from TradingView Made by humans English Select market data provided by ICE Data Services . Select reference data provided by FactSet. Copyright © 2026 FactSet Research Systems Inc. Copyright © 2026, American Bankers Association. CUSIP Database provided by FactSet Research Systems Inc. All rights reserved. SEC filings and other documents provided by Quartr . © 2026 TradingView, Inc. SOC 2\nCompliant GDPR\nCompliant More than a product Supercharts Screeners Stocks ETFs Bonds Crypto coins CEX pairs DEX pairs Pine Heatmaps Stocks ETFs Crypto coins Calendars Economic Earnings Dividends IPOs More products News Flow Portfolios Fundamental Graphs Yield Curves Options Macro Maps Pine Script® MCP Server Apps Mobile Desktop Community Social network Wall of Love Refer a friend Creator program House Rules Moderators Ideas Trading Education Editors' picks Pine Script Indicators & strategies Wizards Freelancers Marketplace Tools & subscriptions Features Pricing Market data Gift plans Trading Overview Brokers Brokers comparison The Leap Special offers CME Group futures Eurex futures US stocks bundle About company Who we are Space mission Blog Help Center Careers Media kit Merch TradingView store Tarot cards for traders The C63 TradeTime Policies & security Terms of Use Disclaimer Privacy Policy Cookies Policy Accessibility Statement Trust Center Security tips Bug Bounty program Status page Business solutions Widgets Charting libraries Lightweight Charts™ Advanced Charts Trading Platform Growth opportunities Advertising Brokerage integration Partner program Education program Community Social network Wall of Love Refer a friend Creator program House Rules Moderators Ideas Trading Education Editors' picks Pine Script Indicators & strategies Wizards Freelancers Marketplace Business solutions Widgets Charting libraries Lightweight Charts™ Advanced Charts Trading Platform Growth opportunities Advertising Brokerage integration Partner program Education program",
   "published_at": "2026-10-01T20:53:01+00:00",
   "published_raw": "Thu, 01 Oct 2026 20:53:01 GMT",
   "source": "lane_access_control",
@@ -22,14 +22,30 @@
       ]
     }
   ],
-  "extraction_status": "feed_text",
+  "extraction_status": "page_text",
   "last_seen": "2026-10-03T18:54:45.080626+00:00",
   "review_enrichment": {
-    "attempted_epoch": 1791528998.230642,
-    "attempts": 2,
-    "status": "failed",
-    "network_requests": [],
+    "attempted_epoch": 1791531235.2633417,
+    "attempts": 3,
+    "status": "page_text_checked",
+    "network_requests": [
+      {
+        "method": "GET",
+        "url": "https://news.google.com/articles/CBMi8AFBVV95cUxONzRJYy1UbjNuTFNGU2o1Qmtjb0Y5Q256akVlUFM3dDNKWFNzUFRCUkJ3STBQYWgwMzAxN2RVNzhBYV9YMEQyUVhTNWxJUklaUkdXaWFWcEZlcXV4YmZDVUFPbDRyY055dzRUYnpYX3h1SUFCZDBqOFAtMlkzZEZUTXdRcGlBZmlIdXB5bm9oNmNYME1xYm91OWx3X282ekNuRTRhQjExRVVUZG84bkZSLThOMkVzTjRvYllvUGhwdkxscUlwR1U4dG9hd2NNWU9pUjhqSFJQUHpjRlo5M2RjNG1lOHlBdXcxNEVkcVRtS0U"
+      },
+      {
+        "method": "POST",
+        "url": "https://news.google.com/_/DotsSplashUi/data/batchexecute"
+      },
+      {
+        "method": "GET",
+        "url": "https://www.tradingview.com/news/tradingview:c743709213e11:0-american-battery-technology-company-gets-bis-export-license-for-up-to-100m-of-recycled-black-mass/"
+      }
+    ],
     "historical_body_availability_verified": false,
-    "error": "HTTP Error 429: Too Many Requests"
-  }
+    "title_token_overlap": 1.0,
+    "note": "Visible page text may include navigation; article boundaries require review"
+  },
+  "retained_feed_body": "American Battery Technology Company gets BIS export license for up to $100M of recycled black mass TradingView",
+  "extracted_url": "https://www.tradingview.com/news/tradingview:c743709213e11:0-american-battery-technology-company-gets-bis-export-license-for-up-to-100m-of-recycled-black-mass/"
 }
