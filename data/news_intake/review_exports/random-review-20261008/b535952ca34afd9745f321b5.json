@@ -30,8 +30,8 @@
   "publisher_published_at": "2026-10-02T20:23:27Z",
   "publisher_publication_status": "unique_structured_candidate",
   "review_enrichment": {
-    "attempted_epoch": 1791557001.0119395,
-    "attempts": 2,
+    "attempted_epoch": 1791575320.417985,
+    "attempts": 3,
     "status": "failed",
     "network_requests": [
       {
