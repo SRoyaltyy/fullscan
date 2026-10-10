@@ -1,0 +1,63 @@
+name: Free public Lane article analysis
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/lane_public_articles.py'
+      - 'scripts/test_lane_public_articles.py'
+      - '.github/workflows/lane_public_articles.yml'
+  schedule:
+    - cron: '5,20,35,50 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: free-public-lane-articles
+  cancel-in-progress: false
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            src
+            scripts
+            data/news_intake
+            data/lane_public_analysis
+            00_grounding
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Load latest public company index
+        run: |
+          python - <<'PY_INDEX'
+          import datetime, pathlib, re, subprocess
+          root = pathlib.Path('.')
+          names = subprocess.check_output(['git', '-C', str(root), 'ls-tree', '-r', '--name-only', 'HEAD', '--', 'data/exports'], text=True).splitlines()
+          today = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+          paths = [name for name in names if re.fullmatch(r'data/exports/finviz_20[0-9]{2}-[0-9]{2}-[0-9]{2}\.csv', name) and name[-14:-4] <= today]
+          if not paths: raise SystemExit('No dated public Finviz company index available')
+          selected = max(paths)
+          target = root / selected
+          target.parent.mkdir(parents=True, exist_ok=True)
+          with target.open('wb') as output:
+              subprocess.run(['git', '-C', str(root), 'show', 'HEAD:' + selected], stdout=output, check=True)
+          print('Loaded', selected, target.stat().st_size, 'bytes from the checked-out public revision')
+          PY_INDEX
+      - name: Verify public input boundary
+        run: python -m unittest discover -s scripts -p 'test_lane_public_articles.py'
+      - name: Analyze retained public articles with existing free credentials
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python scripts/lane_public_articles.py --root . --limit 3 --document-id f4f5a55b36ef8ca1676c597f
+      - name: Retain public research outputs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/lane_public_analysis/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'research: public free Lane article outputs [skip ci]'
+          git pull --rebase origin main
+          git push origin HEAD:main
