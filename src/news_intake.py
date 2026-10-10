@@ -533,7 +533,7 @@ def extract_documents(docs: list[dict], limit: int, fetch=get) -> dict:
             page=data.decode("utf-8", "replace")
             if "html" in mime:
                 from .news_article_retrieval import extract_page,publication_metadata
-                body,method=extract_page(page)
+                body,method=extract_page(page,doc.get('title'))
                 doc.update(publication_metadata(page));doc['extraction_method']=method
             else:body=page
             if len(body) < 200:
