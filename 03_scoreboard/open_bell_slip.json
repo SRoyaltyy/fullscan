@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T20:27:13.276659-04:00",
+  "generated_at": "2026-10-10T13:21:11.207568-04:00",
   "order_sent": "09:30 ET",
   "live_wire": false,
   "live_untouched": [
@@ -228,24 +228,24 @@
         "ideal": {
           "reality": "ideal",
           "n_fires": 245,
-          "n_filled": 244,
-          "n_miss": 1,
+          "n_filled": 245,
+          "n_miss": 0,
           "n_wins": 43,
           "n_adverse": 0,
-          "win_rate": 0.1762,
+          "win_rate": 0.1755,
           "adverse_rate": 0.0,
-          "pnl": -324.59
+          "pnl": -325.39
         },
         "market": {
           "reality": "market",
           "n_fires": 245,
-          "n_filled": 244,
-          "n_miss": 1,
+          "n_filled": 245,
+          "n_miss": 0,
           "n_wins": 18,
           "n_adverse": 231,
-          "win_rate": 0.0738,
-          "adverse_rate": 0.9467,
-          "pnl": -445.11
+          "win_rate": 0.0735,
+          "adverse_rate": 0.9429,
+          "pnl": -445.91
         },
         "limit_open": {
           "reality": "limit_open",
@@ -261,57 +261,57 @@
         "limit_prior": {
           "reality": "limit_prior",
           "n_fires": 245,
-          "n_filled": 196,
-          "n_miss": 49,
+          "n_filled": 197,
+          "n_miss": 48,
           "n_wins": 28,
           "n_adverse": 0,
-          "win_rate": 0.1429,
+          "win_rate": 0.1421,
           "adverse_rate": 0.0,
-          "pnl": -245.06
+          "pnl": -245.86
         }
       },
       "verdicts": {
         "ideal": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL flatten_would / ideal: 244 filled fires but after-fee win 17.6% \u2264 55%.",
+          "why": "KILL flatten_would / ideal: 245 filled fires but after-fee win 17.5% \u2264 55%.",
           "n_fires": 245,
-          "n_filled": 244,
-          "win_rate": 0.1762,
-          "pnl": -324.59,
+          "n_filled": 245,
+          "win_rate": 0.1755,
+          "pnl": -325.39,
           "vs_ideal_pnl": null,
           "thin": false
         },
         "market": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL flatten_would / market: 244 filled fires but after-fee win 7.4% \u2264 55%; vs ideal-open $-120.52.",
+          "why": "KILL flatten_would / market: 245 filled fires but after-fee win 7.3% \u2264 55%; vs ideal-open $-120.52.",
           "n_fires": 245,
-          "n_filled": 244,
-          "win_rate": 0.0738,
-          "pnl": -445.11,
+          "n_filled": 245,
+          "win_rate": 0.0735,
+          "pnl": -445.91,
           "vs_ideal_pnl": -120.52,
           "thin": false
         },
         "limit_open": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL flatten_would / limit_open: 235 filled fires but after-fee win 16.6% \u2264 55%; vs ideal-open $-3.54.",
+          "why": "KILL flatten_would / limit_open: 235 filled fires but after-fee win 16.6% \u2264 55%; vs ideal-open $-2.74.",
           "n_fires": 245,
           "n_filled": 235,
           "win_rate": 0.166,
           "pnl": -328.13,
-          "vs_ideal_pnl": -3.54,
+          "vs_ideal_pnl": -2.74,
           "thin": false
         },
         "limit_prior": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL flatten_would / limit_prior: 196 filled fires but after-fee win 14.3% \u2264 55%; vs ideal-open $+79.53.",
+          "why": "KILL flatten_would / limit_prior: 197 filled fires but after-fee win 14.2% \u2264 55%; vs ideal-open $+79.53.",
           "n_fires": 245,
-          "n_filled": 196,
-          "win_rate": 0.1429,
-          "pnl": -245.06,
+          "n_filled": 197,
+          "win_rate": 0.1421,
+          "pnl": -245.86,
           "vs_ideal_pnl": 79.53,
           "thin": false
         }
