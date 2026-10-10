@@ -79,6 +79,29 @@ class PageText(HTMLParser):
             self.parts.append(data.strip())
             if self.article:self.article_parts.append(data.strip())
 
+class SemanticArticleText(HTMLParser):
+    """Keep a declared articleBody, excluding nested navigation containers."""
+    def __init__(self):
+        super().__init__();self.depth=0;self.root=None;self.skip=None;self.hidden=0;self.parts=[];self.bodies=[];self.headlines=[]
+    def handle_starttag(self,tag,attrs):
+        a=dict(attrs)
+        if tag in ('script','style','noscript','nav','aside','footer'):self.hidden+=1
+        if tag=='meta' and a.get('property')=='og:title':self.headlines.append(a.get('content',''))
+        if tag in ('div','article'):
+            self.depth+=1
+            if self.root is None and 'articleBody' in a.get('itemprop','').split():self.root=self.depth;self.parts=[]
+            # This publisher inserts a recommendation widget inside articleBody.
+            if self.root is not None and self.skip is None and 'mainnews_add' in a.get('class','').split():self.skip=self.depth
+    def handle_endtag(self,tag):
+        if tag in ('script','style','noscript','nav','aside','footer'):self.hidden=max(0,self.hidden-1)
+        if tag in ('div','article'):
+            if self.skip==self.depth:self.skip=None
+            if self.root==self.depth:
+                self.bodies.append(' '.join(self.parts));self.root=None
+            self.depth=max(0,self.depth-1)
+    def handle_data(self,data):
+        if self.root is not None and self.skip is None and not self.hidden and data.strip():self.parts.append(data.strip())
+
 def get_page(url):
     req=urllib.request.Request(url,headers={'User-Agent':'FullscanNewsIntake/1.0 (+https://github.com/SRoyaltyy/fullscan)','Accept':'text/html,application/json,*/*'})
     with urllib.request.urlopen(req,timeout=12) as response:
@@ -86,18 +109,31 @@ def get_page(url):
         if len(data)>8_000_000:raise ValueError('Response exceeds byte cap')
         return data,response.headers.get('Content-Type','')
 
-def extract_page(page):
+def extract_page(page,expected_title=None):
     p=PageText();p.feed(page)
-    candidates=[]
+    candidates=[];bound=[]
+    headline=re.findall(r'\w+',expected_title.rsplit(' - ',1)[0].casefold()) if expected_title else None
     def visit(value):
         if isinstance(value,dict):
-            if value.get('articleBody') and isinstance(value['articleBody'],str):candidates.append(value['articleBody'])
+            if value.get('articleBody') and isinstance(value['articleBody'],str):
+                candidates.append(value['articleBody'])
+                types=value.get('@type',[]);types=[types] if isinstance(types,str) else types
+                if headline and isinstance(value.get('headline'),str) and any(t in ('Article','NewsArticle','ReportageNewsArticle') for t in types) and re.findall(r'\w+',value['headline'].casefold())==headline:
+                    bound.append(value['articleBody'])
             for child in value.values():visit(child)
         elif isinstance(value,list):
             for child in value:visit(child)
     for m in re.finditer(r'<script\b[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',page,re.S|re.I):
         try:visit(json.loads(m[1]))
         except ValueError:pass
+    if bound:
+        if len(set(bound))!=1:raise ValueError('Conflicting structured article bodies for the exact headline')
+        return bound[0],'structured_headline_bound_article_body'
+    semantic=SemanticArticleText();semantic.feed(page)
+    if headline and any(re.findall(r'\w+',h.rsplit(' - ',1)[0].casefold())==headline for h in semantic.headlines):
+        bodies=set(b for b in semantic.bodies if len(b)>=250)
+        if len(bodies)==1:return bodies.pop(),'structured_headline_bound_semantic_article_body'
+        if len(bodies)>1:raise ValueError('Conflicting semantic article bodies for the exact headline')
     if candidates:return max(candidates,key=len),'structured_article_body'
     if len(' '.join(p.article_parts))>=600:return ' '.join(p.article_parts),'html_article_candidate'
     return ' '.join(p.parts),'visible_page_candidate'
@@ -113,18 +149,20 @@ def enrich_document(doc,resolver,fetch=get_page):
         attempt['network_requests'].append({'method':'GET','url':url})
         data,mime=fetch(url)
         if 'html' not in mime:raise ValueError('Publisher response is not HTML')
-        page=data.decode('utf-8','replace');body,method=extract_page(page)
+        page=data.decode('utf-8','replace');body,method=extract_page(page,doc['title'])
         if re.search(r'\b(?:verify you are human|captcha|enable javascript and cookies)\b',body,re.I):raise ValueError('Access challenge; no bypass')
         words={w for w in re.findall(r'\w+',doc['title'].lower()) if len(w)>3}
         overlap=len(words&set(re.findall(r'\w+',body.lower())))/max(len(words),1)
-        minimum=250 if method=='structured_article_body' else 600
+        minimum=250 if method.startswith('structured_') else 600
+        exact_binding=method in ('structured_headline_bound_article_body','structured_headline_bound_semantic_article_body')
         novel_words=set(re.findall(r'\w+',body.lower()))-set(re.findall(r'\w+',doc['title'].lower()))
-        if len(body)<minimum or len(novel_words)<15 or overlap<.65:raise ValueError('Thin or mismatched publisher text')
+        if len(body)<minimum or len(novel_words)<15 or (overlap<.65 and not exact_binding):raise ValueError('Thin or mismatched publisher text')
         out.update(retained_feed_body=doc.get('retained_feed_body',doc.get('body','')),body=body,
                    extraction_status='page_text',extracted_url=url)
         out.update(publication_metadata(page))
         out['publisher_source_links']=source_links(page,url)
         attempt.update(status='page_text_checked',method=method,title_token_overlap=round(overlap,3),
+                       exact_structured_headline_binding=exact_binding,
                        note='Retrieved now; boundary candidate requires independent review')
     except Exception as exc:attempt.update(status='failed',error=str(exc)[:300])
     out['review_enrichment']=attempt
