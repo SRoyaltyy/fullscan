@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-10-09T17:14:57.313630-04:00",
+  "generated_at": "2026-10-09T20:31:44.412427-04:00",
   "from_date": "2026-08-13",
   "to_date": "2026-10-09",
   "n_days": 41,
@@ -1844,9 +1844,9 @@
       "mean": -0.548
     },
     "short_h1": {
-      "n": 120,
-      "win": 0.5917,
-      "mean": 0.442
+      "n": 119,
+      "win": 0.5882,
+      "mean": 0.439
     },
     "short_h3": {
       "n": 103,
@@ -71835,7 +71835,7 @@
           "weather": [
             "gen bad"
           ],
-          "h1": 0.83,
+          "h1": null,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -71853,7 +71853,7 @@
             "Tape RSI 62 \u00b7 MACD hist 0.0168",
             "Side lean: short \u00b7 idio -13"
           ],
-          "h1_px": 1.19,
+          "h1_px": null,
           "h1_date": "2026-10-09",
           "h3_px": null,
           "h3_date": null,
