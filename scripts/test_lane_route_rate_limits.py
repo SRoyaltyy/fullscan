@@ -42,5 +42,11 @@ class OpenRouterLimits(unittest.TestCase):
         self.assertEqual(len(calls), 1); self.assertIsNone(result[0])
     def test_structured_shared_pool_marker_is_upstream(self):
         self.assertTrue(lane._or_upstream_rate_limit({'metadata': {'limit_source': 'upstream_provider_shared_pool'}}))
+    def test_current_floor_keeps_free_and_quality_guards(self):
+        models = lane.primary_models_for('openrouter', 'news_classify')
+        self.assertIn('qwen/qwen3.8-27b:free', models)
+        self.assertTrue(all(lane._or_is_free(model) and not lane.is_classify_banned(model) for model in models))
+        self.assertNotIn('z-ai/glm-5.2:free', lane.OR_MODELS)
+        self.assertNotIn('minimax/minimax-m3:free', lane.OR_MODELS)
 
 if __name__ == '__main__': unittest.main()
