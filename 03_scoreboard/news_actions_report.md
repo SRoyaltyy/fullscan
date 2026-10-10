@@ -1,6 +1,6 @@
 # News Actions — Backtest Report
 
-_Generated 2026-10-10 06:11 EDT_
+_Generated 2026-10-10 06:12 EDT_
 
 How to read this: each section is one prediction day. **Entry** is the open of the first trading day at/after the signal timestamp (same day if the signal ran pre-market, next day otherwise). A buy is `ever ✓` if price traded ABOVE the entry open at any point within the tracked window (up to 14 trading days); a sell/short is `ever ✓` if price traded BELOW it. `now%` is the return at the latest close in the window.
 
@@ -9,7 +9,7 @@ How to read this: each section is one prediction day. **Entry** is the open of t
 - suggestions graded: **2435**
 - ever profitable within window: **98.8%** (2405/2435)
 
-- close @ 1 trading days: win rate **53.4%** (1256/2353), avg 0.22%
+- close @ 1 trading days: win rate **53.3%** (1252/2348), avg 0.22%
 - close @ 3 trading days: win rate **55.9%** (1167/2086), avg 0.53%
 - close @ 5 trading days: win rate **53.7%** (1012/1884), avg 0.46%
 - close @ 10 trading days: win rate **48.6%** (771/1585), avg 0.03%
@@ -1587,7 +1587,7 @@ Entry: **2026-09-14** open — window through **2026-10-02**
 
 ## Predictions made 2026-09-11 (signal 2026-09-11 05:10 ET)
 
-Entry: **2026-09-11** open (some 2026-09-14) — window through **2026-10-05** (still open)
+Entry: **2026-09-11** open (some 2026-09-14) — window through **2026-10-01** (still open)
 - 103 suggestions; ever-profitable **98.1%**
 
 | ticker | side | net | entry | entry date | now% | MFE% (day) | ever |
@@ -1656,7 +1656,7 @@ Entry: **2026-09-11** open (some 2026-09-14) — window through **2026-10-05** (
 | JBHT | buy | +2.6 | 271.5 | 2026-09-11 | -16.32 | +1.58 (2026-09-15) | ✓ |
 | EXPD | buy | +2.6 | 189.78 | 2026-09-11 | -1.07 | +2.53 (2026-09-15) | ✓ |
 | AVGO | sell | -2.5 | 364.85 | 2026-09-11 | +6.17 | +8.65 (2026-09-16) | ✓ |
-| QRVO | sell | -2.5 | 114.11 | 2026-09-14 | -0.05 | +5.81 (2026-09-14) | ✓ |
+| QRVO | sell | -2.5 | 114.11 | 2026-09-14 | +5.68 | +5.81 (2026-09-14) | ✓ |
 | RMBS | sell | -2.5 | 86.63 | 2026-09-11 | -19.26 | +8.29 (2026-09-14) | ✓ |
 | CEVA | sell | -2.5 | 28.49 | 2026-09-11 | -19.79 | +5.99 (2026-09-16) | ✓ |
 | INDI | sell | -2.5 | 3.39 | 2026-09-11 | +17.71 | +19.79 (2026-10-01) | ✓ |
@@ -1811,7 +1811,7 @@ Entry: **2026-09-03** open — window through **2026-09-24**
 
 ## Predictions made 2026-09-02 (signal 2026-09-02 07:13 ET)
 
-Entry: **2026-09-02** open (some 2026-09-14) — window through **2026-10-05** (still open)
+Entry: **2026-09-02** open (some 2026-09-14) — window through **2026-09-23** (still open)
 - 72 suggestions; ever-profitable **100.0%**
 
 | ticker | side | net | entry | entry date | now% | MFE% (day) | ever |
@@ -1850,7 +1850,7 @@ Entry: **2026-09-02** open (some 2026-09-14) — window through **2026-10-05** (
 | NVDA | buy | +2.5 | 218.79 | 2026-09-02 | +3.07 | +7.30 (2026-09-04) | ✓ |
 | AVGO | buy | +2.5 | 369.68 | 2026-09-02 | -3.97 | +0.82 (2026-09-08) | ✓ |
 | RMBS | buy | +2.5 | 84.05 | 2026-09-02 | +23.11 | +27.00 (2026-09-22) | ✓ |
-| QRVO | buy | +2.5 | 114.11 | 2026-09-14 | +0.05 | +0.85 (2026-09-14) | ✓ |
+| QRVO | buy | +2.5 | 114.11 | 2026-09-14 | -5.37 | +0.85 (2026-09-14) | ✓ |
 | INDI | buy | +2.5 | 3.55 | 2026-09-02 | -13.52 | +6.48 (2026-09-08) | ✓ |
 | CEVA | buy | +2.5 | 25.88 | 2026-09-02 | +29.91 | +33.15 (2026-09-23) | ✓ |
 | MU | buy | +2.5 | 930.83 | 2026-09-02 | +15.15 | +18.76 (2026-09-23) | ✓ |
@@ -1891,7 +1891,7 @@ Entry: **2026-09-02** open (some 2026-09-14) — window through **2026-10-05** (
 
 ## Predictions made 2026-09-01 (signal 2026-09-01 06:35 ET)
 
-Entry: **2026-09-01** open (some 2026-09-14) — window through **2026-10-05** (still open)
+Entry: **2026-09-01** open (some 2026-09-14) — window through **2026-09-22** (still open)
 - 68 suggestions; ever-profitable **100.0%**
 
 | ticker | side | net | entry | entry date | now% | MFE% (day) | ever |
@@ -1929,7 +1929,7 @@ Entry: **2026-09-01** open (some 2026-09-14) — window through **2026-10-05** (
 | NVDA | buy | +2.5 | 216.75 | 2026-09-01 | +5.59 | +8.31 (2026-09-04) | ✓ |
 | AVGO | buy | +2.5 | 364.25 | 2026-09-01 | +0.08 | +2.32 (2026-09-08) | ✓ |
 | RMBS | buy | +2.5 | 84.96 | 2026-09-01 | +23.87 | +25.64 (2026-09-22) | ✓ |
-| QRVO | buy | +2.5 | 114.11 | 2026-09-14 | +0.05 | +0.85 (2026-09-14) | ✓ |
+| QRVO | buy | +2.5 | 114.11 | 2026-09-14 | -5.37 | +0.85 (2026-09-14) | ✓ |
 | INDI | buy | +2.5 | 3.59 | 2026-09-01 | -10.86 | +5.29 (2026-09-08) | ✓ |
 | CEVA | buy | +2.5 | 26.35 | 2026-09-01 | +26.60 | +26.87 (2026-09-22) | ✓ |
 | MU | buy | +2.5 | 941.13 | 2026-09-01 | +16.47 | +16.59 (2026-09-22) | ✓ |
@@ -2046,7 +2046,7 @@ Entry: **2026-09-01** open — window through **2026-09-22**
 
 ## Predictions made 2026-08-28 (signal 2026-08-28 02:09 ET)
 
-Entry: **2026-08-28** open (some 2026-09-14) — window through **2026-10-05** (still open)
+Entry: **2026-08-28** open (some 2026-09-14) — window through **2026-09-18** (still open)
 - 84 suggestions; ever-profitable **98.8%**
 
 | ticker | side | net | entry | entry date | now% | MFE% (day) | ever |
@@ -2130,7 +2130,7 @@ Entry: **2026-08-28** open (some 2026-09-14) — window through **2026-10-05** (
 | KLAC | sell | -0.2 | 182.04 | 2026-08-28 | +2.85 | +9.74 (2026-09-16) | ✓ |
 | AVGO | buy | +0.1 | 373.6 | 2026-08-28 | -4.28 | +0.80 (2026-08-28) | ✓ |
 | ALGM | buy | +0.1 | 37.51 | 2026-08-28 | -9.09 | +0.44 (2026-09-08) | ✓ |
-| QRVO | buy | +0.1 | 114.11 | 2026-09-14 | +0.05 | +0.85 (2026-09-14) | ✓ |
+| QRVO | buy | +0.1 | 114.11 | 2026-09-14 | -5.37 | +0.85 (2026-09-14) | ✓ |
 | INDI | buy | +0.1 | 4.02 | 2026-08-28 | -23.63 | +1.99 (2026-08-28) | ✓ |
 | MRAM | buy | +0.1 | 17.29 | 2026-08-28 | -11.63 | +0.93 (2026-09-09) | ✓ |
 | MU | buy | +0.1 | 919.29 | 2026-08-28 | +10.50 | +13.39 (2026-09-09) | ✓ |
@@ -2138,7 +2138,7 @@ Entry: **2026-08-28** open (some 2026-09-14) — window through **2026-10-05** (
 
 ## Predictions made 2026-08-27 (signal 2026-08-27 01:15 ET)
 
-Entry: **2026-08-27** open (some 2026-09-14) — window through **2026-10-05** (still open)
+Entry: **2026-08-27** open (some 2026-09-14) — window through **2026-09-17** (still open)
 - 78 suggestions; ever-profitable **97.4%**
 
 | ticker | side | net | entry | entry date | now% | MFE% (day) | ever |
@@ -2206,7 +2206,7 @@ Entry: **2026-08-27** open (some 2026-09-14) — window through **2026-10-05** (
 | NVDA | buy | +2.5 | 222.86 | 2026-08-27 | -1.58 | +5.34 (2026-09-04) | ✓ |
 | AVGO | buy | +2.5 | 361.79 | 2026-08-27 | -4.01 | +4.09 (2026-08-28) | ✓ |
 | ALGM | buy | +2.5 | 37.8 | 2026-08-27 | -12.41 | +1.22 (2026-08-27) | ✓ |
-| QRVO | buy | +2.5 | 114.11 | 2026-09-14 | +0.05 | +0.85 (2026-09-14) | ✓ |
+| QRVO | buy | +2.5 | 114.11 | 2026-09-14 | -5.37 | +0.85 (2026-09-14) | ✓ |
 | INDI | buy | +2.5 | 3.99 | 2026-08-27 | -21.55 | +2.76 (2026-08-28) | ✓ |
 | MRAM | buy | +2.5 | 18.5 | 2026-08-27 | -19.95 | +0.00 (None) | ✗ |
 | MU | buy | +2.5 | 967.01 | 2026-08-27 | +1.08 | +7.80 (2026-09-09) | ✓ |

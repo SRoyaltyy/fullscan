@@ -373,8 +373,8 @@
       }
     }
   },
-  "version": 75,
-  "updated": "2026-10-10T06:11:54-04:00",
+  "version": 76,
+  "updated": "2026-10-10T06:12:46-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -383,15 +383,6 @@
     "bonus_mult": 1.25
   },
   "history": [
-    {
-      "at": "2026-09-21T16:18:36-04:00",
-      "changes": [
-        "Basic Materials.S2_BREADTH: 0.5 -> 1.0 (n=12, hit=0.583)",
-        "Consumer Defensive.S0_SHARED_MACRO: 1.0 -> 1.25 (n=12, hit=0.667)",
-        "Healthcare.S0_SHARED_MACRO: 0.5 -> 0.0 (n=14, hit=0.429)",
-        "Real Estate.S4_ETF_TAPE: 1.0 -> 0.5 (n=15, hit=0.533)"
-      ]
-    },
     {
       "at": "2026-09-21T17:22:03-04:00",
       "changes": [
@@ -785,6 +776,12 @@
     },
     {
       "at": "2026-10-10T06:11:54-04:00",
+      "changes": [
+        "hold"
+      ]
+    },
+    {
+      "at": "2026-10-10T06:12:46-04:00",
       "changes": [
         "hold"
       ]
