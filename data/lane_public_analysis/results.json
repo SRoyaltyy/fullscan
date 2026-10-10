@@ -718,8 +718,8 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "dc778e5920eaea0615ab9ff7baa62ef7384ba2cc95bf55a077b1f03b592d4097",
-      "started_at": "2026-10-10T18:58:03.657405+00:00",
-      "completed_at": "2026-10-10T18:58:05.933234+00:00",
+      "started_at": "2026-10-10T22:28:30.019504+00:00",
+      "completed_at": "2026-10-10T22:28:32.444024+00:00",
       "status": "executed",
       "model_stages": [
         {
@@ -777,7 +777,63 @@
       "fresh_acceptance_pass": false,
       "frontier_verified": false,
       "review_status": "pending_source_backed_four_axis_review",
-      "attempts": []
+      "attempts": [
+        {
+          "started_at": "2026-10-10T18:58:03.657405+00:00",
+          "completed_at": "2026-10-10T18:58:05.933234+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "",
+              "model": "",
+              "returned_json": false
+            }
+          ],
+          "analysis": {
+            "article_id": "69ba0d37ad37883441fe2d90",
+            "title": "Headmaster detained after BBC investigation into alleged sexual abuse of students",
+            "body": "Headmaster detained after BBC investigation into alleged sexual abuse of students Image source, BBC Indonesia Image caption, Ex-headmaster Ahmad Imanuddin Sumar, known to students as Abah, has been accused of sexual abuse By Endang Nurdin , Rebecca Henschke , BBC Eye Investigations and BBC Indonesia Published 3 hours ago A former headmaster of an Islamic boarding school in Indonesia has been named as a suspect in a sexual abuse investigation and detained by police, following a BBC Eye report. Ahmad Imanuddin Sumar, known to students as Abah, led the Abul Barokat boarding school on the island of Lombok. Police reopened the case after the BBC World Service revealed accusations of sexual abuse against him , and documented how former students had gathered evidence in an effort to bring the all",
+            "known_at": "2026-10-10T12:28:51+00:00",
+            "harvest_source": "https://www.bbc.co.uk/news/articles/cwy8lx1r2vrro?at_medium=RSS&at_campaign=rss",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_classify_missing",
+            "questions": [],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [],
+            "watermark": "",
+            "action": "",
+            "q5": "",
+            "event_class": "",
+            "sign": null,
+            "history": {
+              "history_state": "n/a",
+              "state_locked": false,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "low",
+              "transmission": "book",
+              "transmission_locked": false,
+              "salience_only": false,
+              "y_required": false
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "fed7d23228977a2f4a761b33b1ae658f56bf3d285c0bf632b28f5c7bac489e05",
+                "bytes": 6859,
+                "lines": 24
+              }
+            ]
+          }
+        }
+      ]
     },
     "e82653f72be1048d7d32ac5d4f325e7b8946cf8f42d855c1cba37bd9503101c4": {
       "public_input": {
@@ -789,8 +845,8 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "e82653f72be1048d7d32ac5d4f325e7b8946cf8f42d855c1cba37bd9503101c4",
-      "started_at": "2026-10-10T18:58:05.933251+00:00",
-      "completed_at": "2026-10-10T18:58:05.937364+00:00",
+      "started_at": "2026-10-10T22:28:32.444055+00:00",
+      "completed_at": "2026-10-10T22:28:32.450872+00:00",
       "status": "executed",
       "model_stages": [
         {
@@ -848,7 +904,63 @@
       "fresh_acceptance_pass": false,
       "frontier_verified": false,
       "review_status": "pending_source_backed_four_axis_review",
-      "attempts": []
+      "attempts": [
+        {
+          "started_at": "2026-10-10T18:58:05.933251+00:00",
+          "completed_at": "2026-10-10T18:58:05.937364+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "",
+              "model": "",
+              "returned_json": false
+            }
+          ],
+          "analysis": {
+            "article_id": "cd92b9bc979530ea8644e954",
+            "title": "US midterms: Women candidates could make history",
+            "body": "Politics United States of America US midterms: Women candidates could make history Carla Bleiker 10/10/2026 October 10, 2026 The US is holding Congress and state governors elections. At all levels of US politics, women are underrepresented — but they may win some historic victories in the midterms on November 3. https://p.dw.com/p/5O695 The US is holding midterm elections on November 3 Image: Framed/Pond5 Images/IMAGO Advertisement Around 51% of the population of the United States is female, but that is not reflected in the make-up of the US Congress, where only 28.4% of the members are women . Nevertheless, with 152 women in total sitting in the House of Representatives and Senate, the number is higher than it has ever been in the history of the United States. The number of female governo",
+            "known_at": "2026-10-10T11:11:00+00:00",
+            "harvest_source": "https://www.dw.com/en/us-midterms-women-candidates-could-make-history/a-79625179?maca=en-rss-en-world-4025-rdf",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_classify_missing",
+            "questions": [],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [],
+            "watermark": "",
+            "action": "",
+            "q5": "",
+            "event_class": "",
+            "sign": null,
+            "history": {
+              "history_state": "first_print",
+              "state_locked": false,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "high",
+              "transmission": "node",
+              "transmission_locked": false,
+              "salience_only": false,
+              "y_required": true
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "0c211d8e43d18db88ca1cceb619e6ce0ae27dbb9a09f79a776d95db579851d1f",
+                "bytes": 8745,
+                "lines": 24
+              }
+            ]
+          }
+        }
+      ]
     },
     "5ca559ebe63c53744cbdec1c5259725940e2cb936d2eac326000c5c67e605346": {
       "public_input": {
@@ -860,8 +972,8 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "5ca559ebe63c53744cbdec1c5259725940e2cb936d2eac326000c5c67e605346",
-      "started_at": "2026-10-10T18:58:05.937371+00:00",
-      "completed_at": "2026-10-10T18:58:05.943277+00:00",
+      "started_at": "2026-10-10T22:28:32.450892+00:00",
+      "completed_at": "2026-10-10T22:28:32.460331+00:00",
       "status": "executed",
       "model_stages": [
         {
@@ -919,11 +1031,67 @@
       "fresh_acceptance_pass": false,
       "frontier_verified": false,
       "review_status": "pending_source_backed_four_axis_review",
-      "attempts": []
+      "attempts": [
+        {
+          "started_at": "2026-10-10T18:58:05.937371+00:00",
+          "completed_at": "2026-10-10T18:58:05.943277+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "",
+              "model": "",
+              "returned_json": false
+            }
+          ],
+          "analysis": {
+            "article_id": "250fbbb758d843b208d5d2e5",
+            "title": "Schools crisis in France: Investment fails to inspire confidence",
+            "body": "Education France French students decry failures of education system Andreas Noll 10/09/2026 October 9, 2026 For weeks, schoolchildren in France have been protesting the failing education system. Compared to many other countries, France invests heavily in education but critics say that the funds are not distributed fairly. https://p.dw.com/p/5O5IS University students have joined in on the protests to support schoolchildren Image: Christophe Agostinis/MAXPPP/picture alliance Advertisement Rats in the toilets, leaking roofs, broken heating systems: Cellphone videos filmed by French schoolchildren and circulating on social media bear witness to the dilapidated infrastructure in many educational institutions across France. At the Lycee Paul Eluard in the Parisian suburb of Saint-Denis, a center",
+            "known_at": "2026-10-09T19:52:00+00:00",
+            "harvest_source": "https://www.dw.com/en/schools-crisis-in-france-investment-fails-to-inspire-confidence/a-79621916?maca=en-rss-en-world-4025-rdf",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_classify_missing",
+            "questions": [],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [],
+            "watermark": "",
+            "action": "",
+            "q5": "",
+            "event_class": "",
+            "sign": null,
+            "history": {
+              "history_state": "n/a",
+              "state_locked": false,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "low",
+              "transmission": "book",
+              "transmission_locked": false,
+              "salience_only": false,
+              "y_required": false
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "e55951e59a6a8fd09953834481814204b8d264f40211ed76c8f409948c60f1a3",
+                "bytes": 10815,
+                "lines": 24
+              }
+            ]
+          }
+        }
+      ]
     }
   },
   "schema_version": 1,
   "runtime_status": "ready",
-  "updated_at": "2026-10-10T18:58:05.943282+00:00",
+  "updated_at": "2026-10-10T22:28:32.460347+00:00",
   "last_run_processed": 3
 }
