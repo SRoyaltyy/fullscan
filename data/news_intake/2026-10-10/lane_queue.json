@@ -1,5 +1,71 @@
 [
   {
+    "document_id": "99e28f4ab45d3e7c179a4f03",
+    "title": "Your debt, my inflation: The role of trust in the ECB - CEPR",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB5REhDQV9oeXdHcElpQ1NtZWlvWUQxaVBUZUxNU2FkZEp2bEdzSUtRNDlGVVJPejdkd0lnSTdTTUk2d2hySkFoVmEtNlhkX3R1Vlp3RWF0Q19PZ0lDZFVPOGZSSzhVdGxnSVJVZDJENVZqeE5nb2pN?oc=5",
+    "published_at": "2026-10-09T23:53:17+00:00",
+    "known_at": "2026-10-09T23:53:17+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "5763931d1feac7930b9d74ca",
+    "title": "Under a preset trading plan, a CEO-affiliated trust sold 30,000 BETA Technologies (BETA) shares. - Stock Titan",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNUUk0eEFoX2NiXzZYNFZXYXRwYXZZT05YMnNsYzgxaHJPazVhbFFNaVl4X3dYbUxWVVo5Zkt3UW5vb0k2TW1CQ3ZwT2RZUTY5TFdJc21UTkVhS1RRb293NzVSZWR6QXppNnF2OXB0NFdMUlpiem1OUmowOURjSG1raHVKTG5XY3c2VTNtNnRxNTF6SDdDeTd3NGtkdkJwdGN5dEJqY2EyVmlPV0JFRHpvVTJTbnNYQQ?oc=5",
+    "published_at": "2026-10-09T23:52:38+00:00",
+    "known_at": "2026-10-09T23:52:38+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "f493468f4a39639c7c1f327c",
+    "title": "Midterm Election Updates: James Talarico's Absence Rattles Texas Senate Race - The New York Times",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBPc2NOTmVTTjdyM092d2VoNnRrWlNnQjlMQUVlYXJqUE9FWWg0TmNhaFZPZ3o4NVZMSmI0Mk0wRnVHYWc4VVNqcGlPcWhaU2w0TFJGNmdZeXhfamNnN3RvLTllNXYwekUzc1ROVGVR?oc=5",
+    "published_at": "2026-10-09T23:52:26+00:00",
+    "known_at": "2026-10-09T23:52:26+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "8b0ee17d7e1e26c33c27cc22",
+    "title": "Nebraska governor signs executive order restricting TANF Funds from nonessential purchases - KOLN | Nebraska Local News, Weather, Sports | Lincoln, NE",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZjk3dnpwNENxa2ZMRHpTVWVhbTNOOUtoUldqR096U3JRVW90UlJ2Y2lKWjE2SzYwLVpMcVExamV3NjBQRHFaX1lLWmFtZDd5NkxYY1YwQ19zTG1sNEdKSTZqelNiTHZwNEMxczlkUGJaZzJ2RXp4dE1xY2pjYm05RE92QXEtWlVLZ0ZXQnBoSGFFS2EyYU1aVUt1NVUzd3lfa3V3RGhZb01mdWxjVDY5UTN1cDduUGFhNHRRT0V30gHSAUFVX3lxTFBIZDY5QUhhdWJJdjJxU3dEQmtkNWgySkYzSGpiRkxLODNmeHRpRmM0TVR5dTl4c3Z1MmFpMTlrZFJtOElsVzJxanRMek5yLTNXM1N4bTRWQ2RsMlZia1h3RzNkam9jY1JJVTZGRGRWaHV1TWppWVNLbUFhNWtOeExVbmNjUlI2ZXdyQ2tON1VYd1YxOF9jMDhhQTFBRVpZVENDVEdkYVpPckMtYVpRWkNaeUpRRXgyd0pNRmJ5akRlMWdQdFdCSEhnOXRxMzlGdkJOZw?oc=5",
+    "published_at": "2026-10-09T23:49:00+00:00",
+    "known_at": "2026-10-09T23:49:00+00:00",
+    "candidate_classes": [
+      "tax_fiscal"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "structure",
+    "routing_class": "tax_fiscal",
+    "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "f40ba292e0a1df79c1e97c9e",
     "title": "Pitts v. Mississippi",
     "evidence_file": "documents.json",
@@ -642,6 +708,38 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "bf826304c38514a73d1ba8b1",
+    "title": "Gunna Launches SB The Label Imprint & Releases ‘Pop It’ Video With Tennis Star Coco Gauff: ‘A New Chapter for Me’ - Billboard",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPMVBieEx5bzFMS1oxcHE4dnIwRGtQNXdGSnhOLU1UeEZOYkZqWktpbTAxYl9ZOV9ZX2FSeEYtOE16MGpHOFJPcXM4M1JZMmpIM1VHN3BycEEwbVJwOExaUjk5cG1PZVZBVVlUOXI0NXVsN2p0YzJkaGNwUTBtTFRmbk90WjBxN2x6ejgtRVhGVTQ?oc=5",
+    "published_at": "2026-10-09T23:25:17+00:00",
+    "known_at": "2026-10-09T23:25:17+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "f2c7f6b9daee3f4293f8766c",
+    "title": "SKYBOUND LAUNCHES SKYBOUND VISIONS IMPRINT - ICv2",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWFM2dS1ITWdLV3lWaDhIX3pVbzN5dTdXWVJXcms4aWI2NzRwVVhiQVNybWptbTAtdlNCNGxLdkRpelFERVpVc3ZINkdqN1pvSURtVWpJSy1yUzg5MG9TaC1CckEzNTVRMVVkeUFQZWMxTkJueWtDSmRXRG5GNmExcEdJVzh5MU1DOV9VdA?oc=5",
+    "published_at": "2026-10-09T23:25:00+00:00",
+    "known_at": "2026-10-09T23:25:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "38560902f91d751fff00d3c8",
     "title": "Atrium Health-Lincoln looks to acquire $10.8M MRI scanner - Queen City News",
     "evidence_file": "documents.json",
@@ -952,6 +1050,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "920c797a1ca0d42195477337",
+    "title": "Hurricane Isaias lashes the US Gulf Coast with wind and rain as it nears the Florida Panhandle - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZVBiRWJSeWNWZEpGNmRjR3lPblNnZ0xDTXJ6RHRTOVdlbDJELUM1TXFOSUx4dGR5ekxhSUNFNmV3czlUYnJiV2tpTEUzRGJ6WW5qbldudTA1OVRnWEd4a1QzczJGbE80ZExTYXdhdjU2N0Exb3IzcmFKM3Mwb2k3U0x6TzJXczBSNHd5Wml0TmRERV9iQ2RRRzBfT3dhRXRUYU9TZUlhTWxPendla3gw?oc=5",
+    "published_at": "2026-10-09T23:12:00+00:00",
+    "known_at": "2026-10-09T23:12:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "5ca309a242eaac5130a0d847",
     "title": "Taiwan Semi's report could control most semiconductor stocks if it's weak, says Jim Cramer - CNBC",
     "evidence_file": "documents.json",
@@ -1039,6 +1153,24 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPZDQ3MTRlcEgxOFpnOUR2Uy0yVWtCRHU4TFBmSm1ySG1vdko1YTRYTl9mNkNBTEFxTEtmdWZtQ01zZE4tcWxZYUdrTWJ0MHktYkpOaGU2TUxWSzNReDFQSFIxbkZzdERyZ3RONjhxTmtNWFVTZllITDNSSmVsSENGRzdnSGNvbVRSWlRLeEJHdElndU9nai0za2NycW16eUlzNS1rdGZnZDlocmc4NzBF?oc=5",
+    "published_at": "2026-10-09T23:07:00+00:00",
+    "known_at": "2026-10-09T23:07:00+00:00",
+    "candidate_classes": [
+      "tax_fiscal"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "structure",
+    "routing_class": "tax_fiscal",
+    "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "41180e0d4accfa223d8e55a9",
+    "title": "Montana executive order temporarily lifts dyed diesel ban for ag, timber industry vehicles - Billings Gazette",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQajBIREZ0Q3NMVjBULXBJTmdEYWxPZzRYRU0wNzBUbjFqYW9LeFZocGJLMGFlel83YzVQN2x0bDZlS2NNYzZINE5kazlHdTJmRmREVnlSeTlaSnFhMGF0RWFTQzNpLXhBMWY3M2hLamc4QUxrenp0ZnlmeGwwbFk3UFFKU1piNWJZVVZaTGtFdjlPOVFweDFGMGFjcU53QkZ1emxNVmpvV08xeGI4LUduOUk3R2JlY1hy?oc=5",
     "published_at": "2026-10-09T23:07:00+00:00",
     "known_at": "2026-10-09T23:07:00+00:00",
     "candidate_classes": [
@@ -1468,6 +1600,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "be3739f7df74c6968375d3db",
+    "title": "CrowdStrike Recommends Stockholders Reject the \"Mini-Tender\" Offer by Tutanota LLC - Investing News Network",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPLTlxU01uTGZ3bE5oMmktamV4cEI5SDRtRGY4QUQzWjRvbkEtblc4TVhjOHdKeWF0cEpuVlJWZDZrRnQyQm0zVVZ0NmQzS3Q5NFlvZlExdGJ3WkNnZy1uQnh0RllZU0swbmY1SnFnZGFUcXZtRmhpbFZqa1BkRV9KZEEyWDdydVBUc1NJX1lxSkNpeGdoQjZiRTNzT3NfeWMzTEFVWktLRWFJQlk?oc=5",
+    "published_at": "2026-10-09T22:57:36+00:00",
+    "known_at": "2026-10-09T22:57:36+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "82cc200ef2462002586322d9",
     "title": "Major earthquake shakes Panama - NBC News",
     "evidence_file": "documents.json",
@@ -1499,6 +1647,24 @@
     "analyst_family": "time",
     "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "48ff91c15a057a0d6e1e6c74",
+    "title": "Lt. Gov. Juras Issues Executive Order to Temporarily Suspend Enforcement of Dyed-Fuel Provisions for Commercial Vehicles - Northern Ag Network",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNdWhES0VtRno0c09PX3FwQ0pLRnlEem84U1BjTWJFUkh6c0hDWTlxNTJkUmxxSHJycUJVN3pteW9rQU5hR0ZMR05IVkxubFF2c2RyZktVMlZRQkY3NGtreGJSOGR6em85TVhKdngtVXFlS0FOM0tuOGFvTVFIaUxUUXVHaHgtdGtmby1jMXdLaG1Zek5weEkwUUN4VllvWEozVU5tRFVfb1BWMTdFQ28zUVoxc2Z3ZGkxbXoyRG56cFNYT3BGTGR2S19hdVlBcmZseEdibE0wVHV0WmJMVnJz?oc=5",
+    "published_at": "2026-10-09T22:55:38+00:00",
+    "known_at": "2026-10-09T22:55:38+00:00",
+    "candidate_classes": [
+      "tax_fiscal"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "structure",
+    "routing_class": "tax_fiscal",
+    "routing_basis": "coverage_hint_requires_confirmation",
     "prompt_version": "2026-09-23-full-v1"
   },
   {
@@ -2590,6 +2756,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "dbe7e82486aafa0314ee32e7",
+    "title": "Teenage figure skaters increasingly targeted by social media abuse as campaign launches - The Citizens' Voice",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOaDBnOGx3OEhLZE85b2dkTUU2aHBIWWRDTG96MXRZc3N0YWFybFF0Sll6RF8tTkVaRnFoNHNKaUdVVUE3YnlrQTctc1ljOXB4Ty1EX0xJN2RyZEx3VmNxS2M5QzNoWS1VTFN5QzhDRVYwXzN0VXc0MzJiemtUYmtiNw?oc=5",
+    "published_at": "2026-10-09T22:20:54+00:00",
+    "known_at": "2026-10-09T22:20:54+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "4a1784f378c3d438efe610d7",
     "title": "Gaza Ceasefire Exists in Name Only, Say More Than 100 Organizations - Save the Children US",
     "evidence_file": "documents.json",
@@ -2654,6 +2836,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "9806c64442c91fa9afcf39c1",
+    "title": "Teenage figure skaters increasingly targeted by social media abuse as campaign launches - San Bernardino Sun",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5zZFczdTRfZS1WNmwxeWhSczcxdWRfWDBxYkdDbk9GeXRGcVZVOTlpdldRcWU1ejdWZzE4ZDZPQ0VOemFNMGEyX3VDUkVON0kxbF9MNGFNdXVabFIyQTRBNWR5MWxNbGs?oc=5",
+    "published_at": "2026-10-09T22:19:17+00:00",
+    "known_at": "2026-10-09T22:19:17+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "db671ca35aca785ca6a83c57",
     "title": "Denison entrepreneur launches denim brand made from family farm’s cotton - KXII",
     "evidence_file": "documents.json",
@@ -2661,6 +2859,22 @@
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYzNJREM1MW5qSVFyc2xuelF1SVdtYUU5M19wR2RXZF9YOFhOdVl1UzY0eEJJQm9GYi1FRDNFMjQ1RjJsWkZLNXZfV081NmhNV2dkM1JjcHlmMVRnOVpDdkY1SnJNSTY2cE1OY2FiZ3psWEtSQXlGcDl4SDRsMklzMGtWdTl4QVBPa1BLWm5KTzZ2SVFFZGRpNnlUaW52VXg4?oc=5",
     "published_at": "2026-10-09T22:19:00+00:00",
     "known_at": "2026-10-09T22:19:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "58695275d60af8bc37037e74",
+    "title": "City of Amarillo launches program to speed up dangerous structure demolitions - MyHighPlains.com",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTU9nYUFXMzBuanItek8zV212eWZWZmNOb3pLSnhmcVp6YWpaRmxXZXk3bG5BTTJFa2ZyZ0g5TUQyQlZvRHdweDFFZXp6VWZ2N1I4RWdqakJOMG50WUFlNklmaEY2ZDhuQ0dKbmd6NEpMQlV3YjNVay1jUFlEakJsLVdVWmFRTDhTdEJ4a09vcHljRmtDMEswRWdQQmdpYl9kaFNSa1RwNGMzVEhlNDRvOEM5aVJaMnRWWGZ4d1cyMGxNbDNGX2lJUHZ3RFNxY2py0gHWAUFVX3lxTE9KUFFkMFZEOTVMV0pBdzExNjNORnNsekM2MVRKMU1HSVBfUThoSGRFQXkzaWJINnNBX0hEeE5zY2J1dFhyT2VWcFJfRHBKX3FpYUhENjRaWmJyVUxRLUVwRFkxQW5aQU1leXJrTllTM0pzZmdwejRiUVdhSlhrN0lYelY4aXl2b2wwZ2pMZmh4R09WbGFRc3VzRWppLWhqbVM5Rjhkd3dxalV4Z3FpX005cUhwXzhHRVVfYTF3a0JkZTZzaWtvNTZYM3NsbnlhcEdILVlocVE?oc=5",
+    "published_at": "2026-10-09T22:18:24+00:00",
+    "known_at": "2026-10-09T22:18:24+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -2793,6 +3007,24 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNOTlENTF3SmpyeHpCeHJMREJSYjFOWDJKV2ZjU1BQSWhqS1FLdWhyd2YzSWJPLUlWMVhqc2ZlbDBIMmNHQmw3cURPWnZ2M0tacGUwMHZhR3JuWkl4T0FFdUJDajZkYlRpMmFHSmx0dGhaMkxFZ0F6UktSMy0zR1NLaldrZDBUT3Q5RnNwSHJYWng4cXNQRFNFd0EwTUxhU0ZQTFJYMWJZbWU3TDh6RnhPdEhKam9MT2ZHX29rWGpkYw?oc=5",
+    "published_at": "2026-10-09T22:13:08+00:00",
+    "known_at": "2026-10-09T22:13:08+00:00",
+    "candidate_classes": [
+      "blast_legal"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "blast",
+    "routing_class": "blast_legal",
+    "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "0f2ab0f589d5428cbc11d925",
+    "title": "No Proof of Authority, No Termination, Germany’s Federal Labor Court Rules - Ogletree",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQRkhzZy01dk9NMkl3ekEtcTFKWm9nTDhHOGFEWS1nUjB4R0RKRVJraHpVaDNiaDVhVzZJWnpNcUVYY205c21Qcnc5ald2TTVhbWdtQTR6ZmdEVXV1emJnWEZmaWJjVjdZS01VWGlnLUNIbmh1S3Azb3U0el9Hb3BaWjZRTFN3NjJ0WGNFRkNMbWlTZVlVU1RBeUxkcVZPQTRwMld1cmVBbkYzVE5FTi12QzZpb2VqZGc3LUtJUU1rWlg?oc=5",
     "published_at": "2026-10-09T22:13:08+00:00",
     "known_at": "2026-10-09T22:13:08+00:00",
     "candidate_classes": [
@@ -3232,6 +3464,22 @@
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "44aaf43ae92de1d09b9263c9",
+    "title": "Shawn Fain Claims Victory in UAW Election Rout - WSJ",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQVGxFU2dWdElJNE1hejhaOEU1Y1N2TmpaT3VKVTExQjBQelBkU1BOZjFSSVJia0p6OHhFUmZDMmcxcjgyUWxuQXJOQmRka2hlTWVOaWtKNExaWVZyY1pxeDNrMW4zZ0lmem1mSFZHX3FaV0gxR25rbjdHZHF1OWRDZDBNcU1XQUVVbkpGUVBkVVNobWh1?oc=5",
+    "published_at": "2026-10-09T22:06:00+00:00",
+    "known_at": "2026-10-09T22:06:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "blast",
+    "routing_class": "labor_stop",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -4942,6 +5190,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "376922b1acd6fab139a6cbbd",
+    "title": "United States Sanctions International Criminal Court After Navi Pillay Nobel Peace Prize: how 64 outlets framed it - NewsCord",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQUkhraGk0ZEQwY2JIUzhoZGFfUzljMTJRRUR2UUVVZk1vclJnMkZNOTc1bHpqWmdQVExvTWhqYl9tQWRtQmRxT19IYjFWRURiVXFzWElZY0piVVlmZGJlNnZtR0Jla2ZaYWFoeUJwRVRKbkxTWnlXMEI5SE1rdEREWXRhWlI4UG1TMjdQZW1GT01RUDBqRERsUkpBVFRHUHRFc3NrZHlwRmpyRnNPamVpVlo0STlsdEpqRXZpS1AzaC15YjItUnBCM1N0V2JWU2liUVVYTGQ2MndadGtJWnNJdUFRX0dMa3pyYXc?oc=5",
+    "published_at": "2026-10-09T21:50:38+00:00",
+    "known_at": "2026-10-09T21:50:38+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "structure",
+    "routing_class": "access_control",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "8f19ec1ca9fe25587059f145",
     "title": "Financials Up as Treasury Market Volatility Eases -- Financials Roundup - marketscreener.com",
     "evidence_file": "documents.json",
@@ -5178,6 +5442,24 @@
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "tax_fiscal",
+    "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "e27a22014bcd0377116d8b74",
+    "title": "Columbus Gun Control Injunction Upheld By Ohio Appeals Court - Bloomberg Law News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPYTZVamc0QTR2OFJ5enVaWlpZYm95OTY3RDlOMDJMV2FQSXZYeXF1cEJoSmxEQlZoODAxLWVfVzBMT2d3QUtueWlvOE5zZnYtY2twbmpZNGxYdFZOTmRiLTlVdnhKTEJPc2hWb1lSY3p3a2hOSUlkNnRBeWRHem9CZzNjZTBxdU11ajFTREJvTXRtQXFvWV9iTDlNNG9ibmlBNktN?oc=5",
+    "published_at": "2026-10-09T21:43:00+00:00",
+    "known_at": "2026-10-09T21:43:00+00:00",
+    "candidate_classes": [
+      "blast_legal"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "blast",
+    "routing_class": "blast_legal",
     "routing_basis": "coverage_hint_requires_confirmation",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -5734,6 +6016,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "1695f25288bd14564626d383",
+    "title": "Gilgo Beach murders case highlights push for advanced DNA technology - WABC-TV New York",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdDlHVUhBOGI1TWFETGdEcG95OTh1ZDh5Yk4ySUItWTBBOWRiNVJrZkVxUUVvbHZTbjQycDZtSXVRSE5uUEdLNzBiUlpsRVBFMXZNeEFfbllYODVrQ1BjU0I5bV9vN0JBMzI4Z2Z1T0xIdkFtdEJLVEpuR0ZWdTFMMVcyby1Wa09JVFZLc0tYWmJ1QWw2ekhtZmpVRHFVT0NxbUNmd9IBpAFBVV95cUxPdDlHVUhBOGI1TWFETGdEcG95OTh1ZDh5Yk4ySUItWTBBOWRiNVJrZkVxUUVvbHZTbjQycDZtSXVRSE5uUEdLNzBiUlpsRVBFMXZNeEFfbllYODVrQ1BjU0I5bV9vN0JBMzI4Z2Z1T0xIdkFtdEJLVEpuR0ZWdTFMMVcyby1Wa09JVFZLc0tYWmJ1QWw2ekhtZmpVRHFVT0NxbUNmdw?oc=5",
+    "published_at": "2026-10-09T21:32:42+00:00",
+    "known_at": "2026-10-09T21:32:42+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "c67caa4776073c0fda4a2a7c",
     "title": "TD SYNNEX To Acquire BlueStar - Pulse 2.0",
     "evidence_file": "documents.json",
@@ -5764,6 +6062,22 @@
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "access_control",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "243271fdd2af47e662c75dd7",
+    "title": "Form S-1 BIO-Key International Inc For: 9 October By Investing.com - Investing.com UK",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOWVY0OWFZcUozMmtYUUFOVGh4a0g3ai1FRXNXNUVpS2FBekV2NUxYX3pVU3VMalgzZmZYUVk2TWlXWnozNU92dzNDNkRldUIzUGlZa3JHd3phRDFrS3ZDODNOZ3lyVnB1Umo1VGxSak1qV2ttRnBjMVVyc3Nqc1M3dU1fOVNFeHB5ZF9TakY4NWpGWTBuQ3lHTjhQU0pwVjBodUhlY1l5T0NEMmc?oc=5",
+    "published_at": "2026-10-09T21:32:00+00:00",
+    "known_at": "2026-10-09T21:32:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -5861,6 +6175,22 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQOUFyUzJKQUJfa0kzc19ramJXLU5TbU1ERUhLQ3o0R2RyZ0N6SUFtZGFRQnpEVzd6OGYwX1NDaDZldjRpYkNvWkJKTTFDankwc1RRdWIxQUVFdml3cXU2clZzSm9jcEwyU2xtTmxlS2hWRDlaNHQ4Z1VBQVc0Z1BBTmpxMXJlSmRhZmNhejZyT2dJMXVVRW1EWFp6cGZNVjVvWnc?oc=5",
+    "published_at": "2026-10-09T21:30:00+00:00",
+    "known_at": "2026-10-09T21:30:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "71aa1739fb51900748d0fda2",
+    "title": "AI Youth Summit introduces children to new technology - NBC4 WCMH-TV",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxONGZVTm1CS0ZpX0t0bFBfejZJbVFpOXpadUQ4NjNiS25MV0RnX2NaeVk5VHU4bWVlTmQ3UWctODhWVUhIWXZmS1NrR3A5bzJTRHUwMjZyZU12akVsMUpXT05FV3dlVV85RGVpU2Y1bWZZTzh4UTFQamdLVEFVS0l0OVE0TnZENm5EUE51emJOc0RHUDdWN1ZUOGVUUGlKN2FqRzJR0gGoAUFVX3lxTE9MSVhicjdCdHE4RWVHQ2k2NlFBWG5haTV1N2Fvdnh2WUtVVjcyczBnUDAyNUFGT09WR3pZWG1pV1c0dTdsR3NraTNNWk1rTkdIOGNtTTBjOEhBOUZFcDVUVXNMS096OGgxdjhhWWZsS3hXVlVaS0JGcnd4azFOYjFXTEg0eWc4N04xaVJRMHpKT3NhLVJLMlU2QTlIQ2RzTzN2cy03Q0xJQQ?oc=5",
     "published_at": "2026-10-09T21:30:00+00:00",
     "known_at": "2026-10-09T21:30:00+00:00",
     "candidate_classes": [],
@@ -7647,6 +7977,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "aae91161d6363c5eb37fddee",
+    "title": "Mike Ditka, the quintessential Chicago Bear and a Pro Football Hall of Famer, dies at 86 - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPQVF0bkFNLVZ4Zk1STV9nRHRfN1dqVDZRWVNXWHNxcmRJT0FLUWJmMGFOVml2cnZSVWJqUzZqTkZhQ3NJS095dDFjbF81OFQ3NXNleTVqRWJsUXc0SUhsTnMxendfWXlOVS1GdTFaa2ZlMjBhNW1YV3VZdDRRM0F6RlJIeGFuUHZO?oc=5",
+    "published_at": "2026-10-09T21:12:00+00:00",
+    "known_at": "2026-10-09T21:12:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "8ab9c25609d6c2c463178fc4",
     "title": "Two powerful earthquakes and multiple aftershocks rock Panama - WEAU",
     "evidence_file": "documents.json",
@@ -7757,6 +8103,22 @@
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "91bfd31f8ad1c5451123e35a",
+    "title": "Tims China (THCH) locks in new 2029 note funding and eyes more through 2027 - Stock Titan",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxORFpwNlVFS3V1bkFHR2ZnUFdncTlpTUNYdnNld09wZFM3ekFwdkVUdnhVYjgyOElCdTlSTFFuTVpnTUtZVGpKb3dsdzZoZ191WG1qQkVfc2Y1eXhHX0g2cXdZeUQ0Y0dmNU1aTHp4LVlxWnZzOUxGQWozUkNEbktSODIxcEFKbS1zeXdCYzdZSjJnSzk5QlZqVm8xdkNZX3MtSnR6YW5Cd3hfVW1nai00eXhIcllxcWc?oc=5",
+    "published_at": "2026-10-09T21:09:30+00:00",
+    "known_at": "2026-10-09T21:09:30+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -10281,6 +10643,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "56c6cc76ff733511f4ca4891",
+    "title": "Visa (V) Beats Stock Market Upswing: What Investors Need to Know - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNVG82cUFpcmFMMzZMTU1OVllLVlhBSHVLX2Q5WXJmUHA2VmZmX2xiLVVuNzV0ZjZSMWJHMGJoTmoyTkptNVhlQVAyWGRPZ01GdGZLN2twdm01Y2pHRnNSWjM3YzlzSi1DVkdBODBiaDNIdDYxaTV6M25kcGl1TGd1WXhUWTJNUWl6YnVnZmxxZkZlal9H?oc=5",
+    "published_at": "2026-10-09T20:45:07+00:00",
+    "known_at": "2026-10-09T20:45:07+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "2ff68e6677764bcdb0e64809",
     "title": "OneSpan (OSPN) Outpaces Stock Market Gains: What You Should Know - Yahoo Finance",
     "evidence_file": "documents.json",
@@ -11198,6 +11576,22 @@
     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQb3ZreERycVczZnRqQmZNZDhKamN0R0dqZWJNbW5xb2lTd19uaVJEclhRQTBvUUZzelB4a0Vsb2w5cEUxNjZGZmJadV9JS2phbU03andJckR2Ym10ZUtKaG1QLXhleGRLb3lJc2JWV0hvQlF4QlpzeWk5MHJlVU9vNUZZVDRGc0QtbDVBSVY2Q29uRlRqb1JBZkRVeUxPM1ZrRF81ZE1wLXljRG9zZnJVMDBITHRWb3Z4QS1vZ00tNG8?oc=5",
     "published_at": "2026-10-09T20:35:47+00:00",
     "known_at": "2026-10-09T20:35:47+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "e4ac3f0fe123b02b659f1665",
+    "title": "Form S-3 Dermata Therapeutics Inc For: 9 October By Investing.com - Investing.com Canada",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT2lRUFZjcHpBQkl0NWxEUWgxZFlLdjlGcm9ITWVKOEZDenNpdnI4M2RtaGFJRVU0bmdzaUozTXZQQXZfdTU0bERRdV8zckhoaFZFZzBHWF9hclhpWHBiLV9OMXc0T2d2SnkxSkdMNnhyVUpHX0g0NHdhRHRZOEhHWkpPMTlqc25WdVA5WDFWUnQtdnlIYkg5cklNUmpLUUk2UkNDWXJKWGIzMFk?oc=5",
+    "published_at": "2026-10-09T20:35:34+00:00",
+    "known_at": "2026-10-09T20:35:34+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -12485,6 +12879,24 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "9d20f84676a52efe96103d45",
+    "title": "DOJ says it won't enforce provisions of 1934 firearms law that were gutted by court ruling - CBS News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB6ZjAxRVI0dWpLdWVrX1hsaVpYS2NwWFJ6cmNuZy1rZjh2d2FKRHZzdUZEQ2VMUERYU0NJUmlOSFlGbUd6UFFWZGQzUE1JLUZuWElxbmJhcmRqcUdqanl2N1FfSm12VG4tQkZCQlhpT3ZERnNZeFg5cA?oc=5",
+    "published_at": "2026-10-09T20:20:35+00:00",
+    "known_at": "2026-10-09T20:20:35+00:00",
+    "candidate_classes": [
+      "blast_legal"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "blast",
+    "routing_class": "blast_legal",
+    "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "6bc9d9fd9715634d1d5e1870",
     "title": "Alpine Income Property Trust to acquire 13-property portfolio for $117.3m - Investing.com Canada",
     "evidence_file": "documents.json",
@@ -13069,6 +13481,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "b57f7978627b1aceaf3916c1",
+    "title": "Trump administration takes aim at ICC with sweeping sanctions - KTUL",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQX2lWTGM0MkhlbS1pclRnZDB1WWhtV0hLSG5ZX3JmcGtMYWlpSHc3OTRFUmdFeHpBSC1GbGd3UHFSZE96eU9qQ19rQjFVOVduaGhwT3gzVk1JMmhyMldqdmxpR3hpcnRvSmYwazlRV3ZWS1RxWlIwSldHbHU2ekIybmRteEhCT2M0c0Y3UlRYQ1drYUpMb282c0FKSlhSSnFIYzc2OURRYkFyLUxSdm05U1QzOEFiVUJ0aklR?oc=5",
+    "published_at": "2026-10-09T20:15:14+00:00",
+    "known_at": "2026-10-09T20:15:14+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "structure",
+    "routing_class": "access_control",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "fc24d2179c7d63baeab81601",
     "title": "At $166.73 per share, Medpace (MEDP) EVP Susan E. Burwig exercises options for 2,000 shares. - Stock Titan",
     "evidence_file": "documents.json",
@@ -13187,6 +13615,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "5913c404f8c1d463ecb39e5d",
+    "title": "Is Treasury’s Child Trump Accounts SPYM Mandate Altering The Investment Case For State Street (STT)? - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYmtqdl9ZSVZyXzkwcjdBS25rYWh3SUVWNnpIbm9KM3FFdlRhR3MzT25BUmRMclprcF8wQ01qeVduRHV3Z1E1cC1wSHJlYm5zbHZPU2pLN25EY3lhQ2FxSWNCcVJVTnJtQ3pIR3Zpb0dycmpZTFRJMjJfR1lqTGE0M1pxSUhZSWVIbjNMMjE4RFQxX19WOGNpR1ZqcEs1dFd5?oc=5",
+    "published_at": "2026-10-09T20:13:55+00:00",
+    "known_at": "2026-10-09T20:13:55+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "51be34dc237067de6788092a",
     "title": "Moderna stock hits 4-year high on planned national cancer vaccine effort - Yahoo Finance",
     "evidence_file": "documents.json",
@@ -13194,13 +13638,11 @@
     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPS3ZFLWNabVJIcjUzVVN0Xzl4QkMtSmJSZmhISnZOODhjcDNLMVFLUlI1NEdSR04zbk9jRnNyMnBKSTliQXVsVGJFc3JURTl3VWxGZndfRmhZaEdveE5uMGRKRXFFQ1BlNloxcVNaUmtGeWp5UUR5TEtBSGUyMWxIM2pWdXktVWR1Z2pUNTQ0VlhiemdITmhTMUs4LVh0ZUFGVGN3R3ZPTXdWVWJocjZGNGRFblpIR0p1dnNJalJHUEZRaUNjdVNzR3F2TTlxcnpreEE?oc=5",
     "published_at": "2026-10-09T20:13:51+00:00",
     "known_at": "2026-10-09T20:13:51+00:00",
-    "candidate_classes": [
-      "trial_readout"
-    ],
-    "state": "candidate",
+    "candidate_classes": [],
+    "state": "review",
     "status": "pending_analysis",
-    "analyst_family": "permission",
-    "routing_class": "trial_readout",
+    "analyst_family": "time",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -13815,6 +14257,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "855a21e11a9abf86340bb3a0",
+    "title": "Blantyre Capital II Secures Board Seat at National CineMedia with 28.9% Stake - TradingView",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPVVpNQzBMWko0LUQtMjQycXlMbllFdTdjWHlxVDBTNlhLazFDMTJjT19tb3dSMmxoRFFNWFJWdWtFX0FfLUNMMkRwQzZHMzRTNDNWdy14WHhRcFhQVzBabnRSTUdPaFpJZ3Z5ME5sWjlETWFSRWZ2S2laQWVyWUR0bVRKOFZmcF93ZkluQVRJZTEzTTczV0x4RTVNRXMwakptUkJqT0lsS2xVd1o2OXNSZjNUczRvQW1BUjVQWTdGYmdLYm9MX1ZXcVpmTlFQU2RVLTQwMQ?oc=5",
+    "published_at": "2026-10-09T20:06:00+00:00",
+    "known_at": "2026-10-09T20:06:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "6b296c1a9ef75347541bf226",
     "title": "Judge's ruling gives former Purdue player 6th year of college basketball eligibility, for now - IndyStar",
     "evidence_file": "documents.json",
@@ -14300,6 +14758,38 @@
     "analyst_family": "print",
     "routing_class": "factor_impulse",
     "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "ff1df1beb3579364938a0964",
+    "title": "Stock market today: Dow, S&P 500, Nasdaq rally to cap volatile week as earnings season nears - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdmNFVEJGaFByaVNnbUNON1BBd0MwM1JiR2x6SGJvYVJ4Qm9LdXhjbTRzcXpuZlhCQzBIY1hkSmxQTGJqYkc1ckhBR0tGbUYyRk9ybFAwRTZCbVRRS0QtWE03a2RzUEtwbGlYMHItc0xEd2RJTGJCSHI5Y2xUY2dObWxPWmgzN1M4dFM2dTdXNE45WDlJOTFBWEhObXNDOEg2LTh3NllkMGZFNjQ?oc=5",
+    "published_at": "2026-10-09T20:02:02+00:00",
+    "known_at": "2026-10-09T20:02:02+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "3080f20a0934a9ea5251b999",
+    "title": "The fish behind America’s fish sticks is fueling a fight over trawling in Alaska - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQU0RiU2EyeU4wU0dZWnFQQXloOHdwaGtqVzVOdXVQS3ZvYVgzV08tNkRHWXdqUmgyb3lNdll4TF92R0JoZUFLTEhGTU9vY0JJTC1JTFludi1OSTlPc3cwVnlfcHdWTXNRVFEtM1h4d0ttR0laR0lWUlI5aE1VMTQxTjYzWkhIZnZZWDRFTkhJcS1lZTlaNjlkc053?oc=5",
+    "published_at": "2026-10-09T20:02:00+00:00",
+    "known_at": "2026-10-09T20:02:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
   {
@@ -16291,6 +16781,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "90178bd60304f2339503ef97",
+    "title": "Thieves steal 30,000 bottles of Italy's most prized wines in $5.8 million heist - CBS News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPYkJ5ZzZPZTNWME5Lbm5XdXZtYkllMzNzY01EZXlRSXlFV2lKVmdhS2lxdWR3Ul9saWxkcG1QV1c5NDhWTVJYR1dUNThpRTdMMDltbFRXN1pPWDRLTE12eXdsczMtenpGYmRrOWNPTnhkZ0RHRHF1Y2tUOEZVb09jdklQSnZ2QQ?oc=5",
+    "published_at": "2026-10-09T19:33:00+00:00",
+    "known_at": "2026-10-09T19:33:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "e6eb864b318efa30565b7662",
     "title": "Manus Raises More Than $500 Million After Unwinding Meta Acquisition - Pulse 2.0",
     "evidence_file": "documents.json",
@@ -18191,6 +18697,22 @@
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "print_vs_priced",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "6cff9023056827dc29922fac",
+    "title": "Is Cognizant Technology Solutions (CTSH) Undervalued Following Its New Credit Facilities? - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQaHVwZk5BWWVpLTNsNlhnWVJPM2g3R1JRcm5LUjNfbGJDVDk1NWZUSzY4WGhYOVpVdkNyRndLZ1ZUTEIxZGpkRVhER0FiREVpNlBwaldSRGt0Z3JhZkRsNWJzejFnakJ4X0ZrakxabXRIMng0VzFHdDRGbncyZm5SMzBiZmhtZHl2ZTJMVzJPWUQ4YzdQbVFMeEIxXzlEZ092NE53UGZ0cG9iV0pkYWkteFpR?oc=5",
+    "published_at": "2026-10-09T19:14:39+00:00",
+    "known_at": "2026-10-09T19:14:39+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -21446,6 +21968,22 @@
     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPRWtMNXhzWms3SXp6bUdkZkt6WkRwWlp5aFVOcTFjdVZJRDQ2S191LVRwNHgzZm45LXIyTkFlbFkzeHRWeXNUYTkyNjViLXZ0Snl4OU9DU2UzeEdzcHZIZkt4OGpwWm9sc3E1SDhFdWxjVlB5MDNwdHFwNkNoWnJCTTJuSGU3dFdYdnNtVGlNbmNYZzZRRFIxbnE5dm9hNGMtd3FxRmVvLVhfenlIaFZYSHFuQ0tnbnQxT2IxUW1vSUIzUVlKdXVjaw?oc=5",
     "published_at": "2026-10-09T18:40:13+00:00",
     "known_at": "2026-10-09T18:40:13+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "structure",
+    "routing_class": "access_control",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "adc7c1959d9abfd08f761b6b",
+    "title": "US unveils sanctions on ICC in move court condemns as 'assault on rule of law' - BBC",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9WSElxQ2l1VzJ2ZTNTQ2N1VHFLbXNzbmRvV3FMOEVyMm83ZDFxMmdxWmZuWHM5TmtGbXIya3c3U0kyYTcySW8yTzY2VGF1Q0h3TlAyVmZPbmp6d2s?oc=5",
+    "published_at": "2026-10-09T18:40:10+00:00",
+    "known_at": "2026-10-09T18:40:10+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -27848,6 +28386,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "2fa5cbfd3781913913b49f23",
+    "title": "Palm Desert Considers Citywide Policy for Artificial Intelligence Use at City Hall - NBC Palm Springs",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOLW8ta2RaU2JMV2N3U2FyQURDeW1IYVFsSko3NElvM2Z0Z2VnVWg3aEtNWmRxbE5Wak1PTnJreF9QU1RzVEN4T3hnZ3NuTFl0QjZSWjhLSV9YYkUtYjdtYWx5MVVsZWZRQUZMN0JzMFBsNzBIeTlaeEE5RE9BMzB0RG90M0dTVUsycVVXenIxdDEwZ1RMUnowTTA4eFNrY0VwOTVsMmFoSXJuRW9qdzZIcTlmci1wZzhLZ3R2NFRTZjF6ZUVBQlhZMkdSc29yWVljSk9CRXFhc0xCaXZ4OEwyWXVSMGI?oc=5",
+    "published_at": "2026-10-09T17:35:00+00:00",
+    "known_at": "2026-10-09T17:35:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "1f5325219a95c17be23e6ba1",
     "title": "GameStop Gains as Insider Buying Momentum Keeps Traders Engaged - Quiver Quantitative",
     "evidence_file": "documents.json",
@@ -28386,6 +28940,22 @@
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "access_control",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "05b1c22965f28056bbb2b163",
+    "title": "EU inflation runs hot, but is contained to energy so far amid ECB’s hawkish - ISI Markets",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbW1KSzh4RzVCZ3ZXMkkxMWZHZ0o0eGFzemxCR0hUb2U2YWF6RlU3Q3VzeXJ5VjN3MUM1RUhmNUx6ajJPZ3hEa1U5UDZMNmJkZ1lnY0VWUzhIQWM2M0U4N0V2dk9nT2htLWVCTXU4SlVhTUkyNjBZVHRNNnpwejN0UDJLSnlMcUtoWWZ4LXFlSldxWk85RHpvU3hJRU1TSGYzRGFhQ29Bd0Y1QQ?oc=5",
+    "published_at": "2026-10-09T17:28:25+00:00",
+    "known_at": "2026-10-09T17:28:25+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -29580,6 +30150,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "cc72aebeea1ac7d3a62a85b8",
+    "title": "Hurricane Isaias approaches the Gulf Coast, in photos - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQdVNSVUZnNlpodldhQ2hZTUtHY0hxeFBUeEJMODBKQ21Zb2NLcm9WbUlCckhrSzljWk11NHp2SUdaWkcyMkZRR3pxaVJFbHVuMm1xU2lNaVI5UnlLanpWUXRSTXEzQzBpOUREOUpQNGdBaDVqS21qTUl1b2p6c3E5cnIyUUNqZHUxaWw1dTl6U3ladVVWUFFOSDF3NE1QdTBBdklFUGJieW1SS2taRGloeQ?oc=5",
+    "published_at": "2026-10-09T17:12:00+00:00",
+    "known_at": "2026-10-09T17:12:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "8ccda845d057a5ba92bc0170",
     "title": "Cash App settlement payments of up to $2,500 are landing. Here's who gets paid. - Yahoo Finance",
     "evidence_file": "documents.json",
@@ -29799,6 +30385,22 @@
     "analyst_family": "structure",
     "routing_class": "tax_fiscal",
     "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "422cb80f7681e20cdba9a5df",
+    "title": "Spaghetti models, rapid intensification, storm surge. Confused? Here's what hurricane terms mean - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOaXRlTHBFNmVIaDBuSFBUUGVGVFlJaDNPVURaWk82elpQR2NFNHJhbFJMMDd4TTI2UmpQa2RZSTZrRkRRSTZ1WHFrRFRmZlJSd2xmVVpCMEI2VjR3MU9GVGV2a3ExU1hnU3Jib0JjVllncjlBc0cwcXk3aHItdm9Hdi1HZnFmQkNyT0ktYUlSZlhRWGJtYXN6Ykh3SVNRRS1UcTZTVm5TTl9rbmFLS0RIVQ?oc=5",
+    "published_at": "2026-10-09T17:07:40+00:00",
+    "known_at": "2026-10-09T17:07:40+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
   {
@@ -31078,6 +31680,22 @@
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "labor_stop",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "052dcd5dd62f684fdce2ba72",
+    "title": "NYC's Famous 'Naked Cowboy' Breaks Down How Much He Actually Makes - Business Insider",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQbVNTc0Etc1djVG5EZHNhZjhaUUNOdUFZM3ROMnZHOWJFOF8ydmZNa3AzMGU0TTNSMHpMUkNCdGJTb1FxaVBKZUFodUZmdnF2UmtMdGYwTkJZXzdTMnFISld2SzRyNXlXV2Fra1Y2UHc3dU5WZmZpVjR4YzNaUHZwdnNzZXlzUWxlQTNJTjdTVGNqOHVWYVF0djA5cGttdU1KLUZLOEthV0JyalFhWllsY0tGRWhrMVlvc3MzdGw1NA?oc=5",
+    "published_at": "2026-10-09T16:52:31+00:00",
+    "known_at": "2026-10-09T16:52:31+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -33924,6 +34542,22 @@
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_mna",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "cf41848270293f88df647f1b",
+    "title": "Top Democrats and allies join the wealthiest to fight a California billionaire tax - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMXhPOGFoX0J1WHFYNUJUQkV3TjNXSWVQOUVVanI1WGNMNS1rWlZpNDR4MWQzT29GbTFiT3pfZXRFRmJHTGdCUXNhX25LVER4MFpwUXFZUm1vampoNUhwZi1UNzFCVnZsV2hteUx3OUZQX2sxSXRHZVhBOUJ6Yi15ZWJWUDQ1eFl1Y1VWS2tIUmZCSl9Ha25XcHJDU2NFTlZ6c2kyczB5c3ZQUkNj?oc=5",
+    "published_at": "2026-10-09T16:19:00+00:00",
+    "known_at": "2026-10-09T16:19:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -38162,6 +38796,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "af610b105d4c3965fcc7e19d",
+    "title": "Police shoot, kill armed man on Ben Franklin Parkway, officials say - NBC10 Philadelphia",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPaTdWRHdXU2ozTWZEX1pKcmVnTE1YbFRmaThOTHFpMmdPbjZKclR2R0sxRW1haDVzUFVGbmZQekROc2tlTGQxVDZKdTJkZU56MTgzOEtOSVdaeDdyOF9KcS12ZmlncWZmbHFFMUpESXJoY0xnMmNqb2JQcVV5VWhGUUdXZnJsZGR6UEhTLUxNZWlqcGRCNTJLUnJCUExXeXU5bjhRTzFiOV9OaTlx0gG0AUFVX3lxTE1STm0zdDRtY1NudEdOUHdhMHQ5RFdFRG1pcTUwSktuOHp3MlZOSVJaNjlpeGM5Vk4wQU9TTlFabHlLTll2XzhuR0NtTlRuRmk2R1JTcndPeklTV2ZpcE9CdUFkTnBUNjhwN1l3bkZkU1lNWkNXTTVveFNYMXRnSFZ6RHowRl9TYWVyZnRNS2RZMlBkcTF1RWMzcnF4dlltajFDZVBfdzZlOGdPcmJ0RGpFYmMxdQ?oc=5",
+    "published_at": "2026-10-09T15:32:05+00:00",
+    "known_at": "2026-10-09T15:32:05+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "d8943f0a3136cd9ccde5f095",
     "title": "Sandy Springs holds millage at 4.731, sets tax hearings - Appen Media",
     "evidence_file": "documents.json",
@@ -38560,6 +39210,22 @@
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "product_harm",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "cbdb090ce158aedbcf6a0f52",
+    "title": "Jon Ossoff puts Mike Collins on ‘trial’ in fiery U.S. Senate debate - The Atlanta Journal-Constitution",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObjFsSzFTa0dkT1RaelpCc2xRX3hNRmNUMC1ZZEFnM3BOQnFxY0tRS0tSYUViUUFQblNLV0t0aXpScG1oakpVZVlrVm8wbktLRERDSHlVeWpJWEo3RDBCWEVXcEM2NEN0TGU5M1dLSFh3MXBZSGY1WWhwemNZZDhNcE9pS1lMVS1Dc2F3VU53X0tDbXJsc1BuRzhaTEVwbDhocFJ3?oc=5",
+    "published_at": "2026-10-09T15:27:10+00:00",
+    "known_at": "2026-10-09T15:27:10+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -43361,6 +44027,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "44481fcab27142f932793423",
+    "title": "Trump establishes committee to investigate Federal Reserve's Lisa Cook in latest effort to fire her - Daily Jefferson County Union",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxPT2FzeGVIYmxOemJqNVlNTE9oWHdYV1pEaEt2VlFWaW85QkZaNWR0OC1Sa1Z3cE9mMGZSNVFFRkhtNEVWVkdVbUROZmMwdGdpeDNoeGRFelNsbGlZVXZYTDJZdTlyQ2VEdW9ZQUVmUTcwYkh0N3BROHIwMTZGa195Rlhpc3VOOHZNZG9FbGdBT2JiSUQ5d2g2d0xxa3lzeDVsSHdSa0pkQVpPbVhUNmZ5UEd4bDI4dkhxd2kyaXJtck5ZVW1CVFY4bHg3MTFQMVdkZmxwWnYzRHRrV0hvOGlhcUlnb1g4QVYyQ1Q4YmgxQndNUE5JUU5ZOFZhZnJRRGJRZDB0cVVYS1BMX2JpQVJLT2w1Sk0tcmFEWVlQUFNB?oc=5",
+    "published_at": "2026-10-09T14:29:39+00:00",
+    "known_at": "2026-10-09T14:29:39+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "regime_state",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "14fb36c9849a3b7716144e17",
     "title": "Trump establishes committee to investigate Federal Reserve’s Lisa Cook in latest effort to fire her - Durango Herald",
     "evidence_file": "documents.json",
@@ -46896,6 +47578,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "d6e643befb71441518c6ebad",
+    "title": "Las Vegas Sands Earnings Preview: What to Expect - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQYnlKZzZ3U3UzOWotTVExMkMxZ2tGakZDa1d4alhkY3lfalVVandrRGN3eGMyMEhRcHpsbFRLTkVmSTFVbV9xUjhtc3NlRjY0T0M1TGZUT1g2eGFGLWluUTJhcHJaT0xzSGNuaFQxVS1oRjhTRWJWcExjS1lyMEp3RmNtdVh4QVg3Q1NDNnQ5OE9ZQ3Qtb2luOXNBR1VCZw?oc=5",
+    "published_at": "2026-10-09T13:53:32+00:00",
+    "known_at": "2026-10-09T13:53:32+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "3d1d56f083a9c8cdbde94e6a",
     "title": "Roche’s Genentech Secures FDA Approval for Tecentriq in Stage III Colon Cancer - Yahoo Finance",
     "evidence_file": "documents.json",
@@ -48426,6 +49124,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "b78068bb42216267805f7783",
+    "title": "Nvidia and Micron stocks bounce on OpenAI $70B revenue target - Yahoo Finance",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZ1BTdlBkbFduZklfak9TdWc5M2EzZFlMR29Ra005U2g1cExTVDU0N2dpbWhHYTFoYUdTNDhCdVNNX1FibGZ6QkxKbTdPSkQ5SUp3TFVnT0xZMW1FbERoNERuanFycDNMeUpGUWJqNUhtd3M3UmI0cWJZQUw1bDdmSHc1Z2s1RF9fLUpRdXQyNEJvdHlOVU1yR2JobWhaVWxz?oc=5",
+    "published_at": "2026-10-09T13:34:35+00:00",
+    "known_at": "2026-10-09T13:34:35+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "print",
+    "routing_class": "print_vs_priced",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "fbeff1c8f85913dfd69b4908",
     "title": "Allen County deputy resigns after sheriff seeks firing over ‘immoral conduct’ - WBOI",
     "evidence_file": "documents.json",
@@ -49436,6 +50150,22 @@
     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcm51RHFTMGNQcnB2aFl5bjNQQzFXUVVHckh1eW1IVktpM0lfaXlCQ2p6RF9nYWxkajlxb2R2V0lkRi1FNnljalUwMlhaU2FFT2dCUDBwem9tVG14Y1FXZGVKbWJvSm0xNlVVZ1BwdTItWnJkOTF3TnFTU2FQLWZibmhXRXlnX2RJY25leTB2ekVVUHZMZS1zbjBhWkNJLWs?oc=5",
     "published_at": "2026-10-09T13:21:21+00:00",
     "known_at": "2026-10-09T13:21:21+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "f653373acb346179902c7344",
+    "title": "what weight loss drug was just approved by the fda - www.polskieradio.pl",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQVDBJTnRFWEhFMlR4dHlqTmRWcWRJWkFqT3JKdm5DYjdzYXJBYTdQU3hfcUluUmpCTWNIUGZkQXRTMXdIWElUZy1jQTludzZuTU9HQnczeDZvUWlFVGZqc3NULTJFLTh0YmxmT3Q4RmFEYUJXNHZMWEc2SXVRQUk1NmJVRnlqekdjdV9hTGZqLUx1a1FBclZ1bWZQamY2dVk2VFlmQmZ3?oc=5",
+    "published_at": "2026-10-09T13:21:17+00:00",
+    "known_at": "2026-10-09T13:21:17+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -52017,6 +52747,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "170207902d0ecdcfb77ab5ce",
+    "title": "How Texas landowners are fighting back against Trump’s border wall - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPdktfQ2V4UVN3WEdFNlU0R21GZE9mYmxGc0lpb1BRaTdzcWwtS05mRElUU3ZzNzJlVV9RWDRQT0Q2WUpQUVFENTJIVUE4X291N3FYa3VRb2o5VVp1eEtmTGo1VkNVQ2lNdDl6QzJRejV3U1ZyR0lOS185aG9fMVdBNEZBWHhxeXhDZUZmNS1UVVEySkRWZ1dXclJxMldqMTIyZ0VaeVBBZTZWbGI0aUUxMjhzTmlNb2ZBbUE?oc=5",
+    "published_at": "2026-10-09T12:54:05+00:00",
+    "known_at": "2026-10-09T12:54:05+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "a0cf84277c21f4117148878e",
     "title": "FDA Approves Tecentriq for Stage III dMMR Colon Cancer - Pharmaceutical Executive",
     "evidence_file": "documents.json",
@@ -53425,6 +54171,22 @@
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "d3451e1debfa9bec99682c8d",
+    "title": "Anthropic bans users from being 'cruel' to its AI systems - BBC",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9ramZhSWMyQlZTRHhlTjVYOXNuNkw0Ty1RYkF4dTQ5aVZtSUgtRjQ5SWpkTllONG5VYlVHaS1Mb1VsRXpTT2dvUUZ0RmxYczVWT0E0c0VvN3h3WW8?oc=5",
+    "published_at": "2026-10-09T12:34:27+00:00",
+    "known_at": "2026-10-09T12:34:27+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -57107,6 +57869,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "17b69bd639272672fc544589",
+    "title": "Pricing contradictions emerge behind the pound: As the Bank of England adopts an increasingly hawkish stance, does the logic governing the exchange rate become more complex? - Moomoo",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOOFVWcVV6WlpZLVB5b1J2ZWROTUVsMVRLOE42TmFPOFZPVVpKRzBNQXh5bXhfcXd0b3BQYzV5NEZZSTcxb21nLVQ5cHhLOFBXanNQQzdjdEpBRnc4WE5lRzR6LXE2VGR4Q3JzRzliYWxJQVptX0ppeW5Fa3FRUWliTm1HaVcyQUlZZjk1X19jcTdRckVNaWZpRkJsc3p0Zzc0a0dJbTZuN1Y?oc=5",
+    "published_at": "2026-10-09T11:43:26+00:00",
+    "known_at": "2026-10-09T11:43:26+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "2a7258faaf1c6723eaa1ca91",
     "title": "Israel Envoy Affirms Strong Ties with Philippines Despite UN Walkout - Daily Tribune",
     "evidence_file": "documents.json",
@@ -58104,6 +58882,22 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQOTN6ZHVZZloyN0Njd01vbzZQS3NFYW44TWQwdGU3ekJRbXVLbDJ6YU50eFVVbkZsZE9RcDlVU2dKUkNEOGE2UnZESXhiYnhaSWxVVVJlVnZlUFhGd0daV3JvdTRlaHplTDFWbnNsY3ZDaXVHZjc3S1oyeUREMEFncWhYTExSRlk?oc=5",
+    "published_at": "2026-10-09T11:30:00+00:00",
+    "known_at": "2026-10-09T11:30:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "12f09371240a0fc168e2b445",
+    "title": "Colombia Billionaire Set for $500 Million Venezuela Oil Windfall - Bloomberg.com",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNN2twcDNGcUpXOHY2NUNrMjFvUnJzX1BreDdNT3V2SmxqM0F5VEZDVXQyTGVPQmZVeEZrM1NsOENqaUlCVzhscDVwSEtQR0VWMjlHZjctN2dxbUJrajBDNjJPNV9jRFpYY1VnMDgzMjlKOWk2NmlHVFRsVnB0WHJFRHYtSFBuaDNHVk5nemFsQWxHVlpJS1ZiOGljSGFETjJrc283NEJ2VnhJNkdQWmY5NXRiajJ1T2E5YkFybFdn?oc=5",
     "published_at": "2026-10-09T11:30:00+00:00",
     "known_at": "2026-10-09T11:30:00+00:00",
     "candidate_classes": [],
@@ -59563,6 +60357,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "f77b70419f74278a9e030e1a",
+    "title": "First suicide memorial by a US archdiocese signals a compassionate shift by the Catholic Church - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOM1BhTC1qSmt2ckowYWtBQzhhRUJKSmZzcG5yWG5lWGpuT1FELVBQWjMyRkJIRTdsT01LcmhYUVFfRGQ4MWphRFFVeElkNGcwYXQyWDBscDY0WFczdVhJaERXa2pKMW5JQzRvaGh1VExqM3Zvc0tJa1dSckxlNVVkRWpTcFJDN1JxOGkxbHlyUHJyMGxxcVpFN082ZG9hWmRUWkhhVDBqOUgxS0tCWlE?oc=5",
+    "published_at": "2026-10-09T11:03:00+00:00",
+    "known_at": "2026-10-09T11:03:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "859f9c1fbb948008b3ac1605",
     "title": "These Aren't the Decryption Keys You're Looking For: Ransomware, Ransoms and the Illusion of Alternatives - Security Boulevard",
     "evidence_file": "documents.json",
@@ -60817,6 +61627,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "67b9ea812f975c4c66a0aa33",
+    "title": "The SEC Just Broke the 2x Ceiling on Leveraged Crypto ETFs — and the First 3x Products Are One Form Away From Trading - Forkast News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQVWI0UWtfTmRLcFFBUHFSdF91TjFhcUtOYjBaZklPTm9HbXRBYVNFYmNRQk1EdWRzWEhGQXFwbWp2WTJyNE5FOHQwNjdpUU96X3NCTm1LQ2hRcjZGdC1RU1RjRURfcEhocjQ5YkhoQWtGWjlkdGdfS2l4YV9HQ2ZJUlNDM0pfMkV0UTVrcFE0SU9pQmhvM3F0cVZpUUpGa3pYNnhPWnZOWmp6d01pNG50Vk5mODBkOWtrZDZtR0RiRUlXZnFWOTlNMTZfTWtES3BQdDJn?oc=5",
+    "published_at": "2026-10-09T10:42:56+00:00",
+    "known_at": "2026-10-09T10:42:56+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "b89544152158810425767e98",
     "title": "CMP Group appoints Michael Szwez as CEO - Marine Industry News",
     "evidence_file": "documents.json",
@@ -61396,6 +62222,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "24fc89ad02e6182f6125b185",
+    "title": "PHOTO ESSAY: A border wall rises in Texas’ Big Bend region but opponents push back - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUUZ4TERaZmNlUVZCOGFhMDdUcHYyT0xsZGo0ZXZwQkJfbV9VNFZySnRuS3RvbFJuUThPZ3hCeTl6ckZuU0I5blF0eGJPQTltZFhiZ2kzU1FFdENfYkF0VEZfOUF2NElKM3hhWkQ1dmhnc3FsMFBISHRmLU5ES1hPcHREWVIyeVhFenVvVXRXMlZqQkdrRUVyNUY0bWZvRmpYWlh6OA?oc=5",
+    "published_at": "2026-10-09T10:31:00+00:00",
+    "known_at": "2026-10-09T10:31:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "69d26d272126a16a04614429",
     "title": "Hedging AI Risks with Common Sense - National Review",
     "evidence_file": "documents.json",
@@ -61579,6 +62421,22 @@
     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZnpUc1hPbmxuQ1pHQUFzcmFYb1M1V1VYODdlbk5oMlNGdGV3VEFjYjRYWDlpdzFCb1RWVDh4VW5YQnl5all0R3pxUWdnRm9VeWdVZHF6NHBRMHAxMDlpN1Z5cEtvMkl6XzVkSjh3eVdUQmtSTzdFSkRFeDAzNF9RYzloS2pRU0lvVUxYNVVUQTI0NEE2SWtXVDNzYkhaQWhoU0pBTVR4YUhOanhrMmk0R2VqWXRFV3dudXFmRlFNSk3SAcABQVVfeXFMT2Z6VHNYT25sbkNaR0FBc3JhWG9TNVdVWDg3ZW5OaDJTRnRld1RBY2I0WFg5aXcxQm9UVlQ4eFVuWEJ5eWpZdEd6cVFnZ0ZvVXlnVWRxejRwUTBwMTA5aTdWeXBLbzJJel81ZEo4d3lXVEJrUk83RUpERXgwMzRfUWM5aEtqUVNJb1VMWDVVVEEyNDRBNklrV1Qzc2JIWkFoaFNKQU1UeGFITmp4azJpNEdlall0RVd3bnVxZkZRTUpN?oc=5",
     "published_at": "2026-10-09T10:28:30+00:00",
     "known_at": "2026-10-09T10:28:30+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "5fc3520d66d4a71f72b43c7b",
+    "title": "Intel CEO Lip-Bu Tan invests $12 million in $20 billion stock offering - scanx.trade",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPcEJSekozT081WWhrSHRmX3dBUnNtSm80MjlySkVPUVE3dUJzTnBLNGkwNlRjU3FxdWU1LVMtNVhsazhGMzNIZExTcDV6MFlSSHFhdTRpc19FaFh2NU44VlhnTnJYaTViY1Z2UG1aQXNOTUU2TDk4clk1Q094bi1jLWROLWExVTNvaUhONlRxVEJscXlrZERiX29VcUdaUHk5dm9qYVZ6TEh0Njl4bjFkeGdtQ3IyQTNSalpv?oc=5",
+    "published_at": "2026-10-09T10:28:28+00:00",
+    "known_at": "2026-10-09T10:28:28+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -68688,6 +69546,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "f6f4b885474170e7b8c8eb6a",
+    "title": "View / Saudi Arabia faces its toughest moment of war - Semafor",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOaEpyYXFGSi1CVDhIZklfQTFsRkR4bTFiUENDSEZlaTQ1Um1uRVJqZUF3cmdxcHY4N2lsTnFpbGRHR0F3OHJLUEFySmRCY3VieXhjTkYyR3ZjZlZTOXdLMG1oUUt4cEdvV094d0Y3MjQ2Tkg3MTlnZUFxejVOaWxYSDNWVzlFYjdhZWpFWnlHd1U0UQ?oc=5",
+    "published_at": "2026-10-09T08:29:00+00:00",
+    "known_at": "2026-10-09T08:29:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "aac7b9554673d24bf54e7c2a",
     "title": "Cars torched and shops looted as anti-migrant violence erupts in South Africa",
     "evidence_file": "documents.json",
@@ -73652,6 +74526,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "e252d5afaea6e16593446e3e",
+    "title": "UNII - YU5CMV56YZ | UNII Search Service - precisionFDA (.gov)",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5DQ0swMWpsQVlqc2Y5YU83dzNuMnFfY0ZKNWtvRGFGZ0hvdDh5ajNuY3lIelRna0FPZVpzODNZcDVlMFZmYWZJbHhkelNfeWhiTFN1c0xoS0RXWjUyMjZZOWxhMDZkMVU?oc=5",
+    "published_at": "2026-10-09T06:30:50+00:00",
+    "known_at": "2026-10-09T06:30:50+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "ede33be755e8bdd9fcf11bc7",
     "title": "Economic Calendar: Canada’s Jobs Report in Focus - XTB.com",
     "evidence_file": "documents.json",
@@ -74335,6 +75225,22 @@
     "analyst_family": "firm",
     "routing_class": "sovereign_credit",
     "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "2f9760cdb2a5e973a5b578cb",
+    "title": "Dr. Reddy’s (NYSE: RDY) schedules analyst and investor meetings for September 2026 - Stock Titan",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPUmZUV0xHTXFwa21WMkU0RU5jb1BuMm1FYTB1S1ROTjQ4bjd3SXhRZXVxbjhNZXRQV1N3ak5CM2dKWS1jY1Vfb3pkS0NOWXRWaDhvNGlHTE9WSWtmdDIwLWh1bzdmNU94TzNrenlEd0tFWk82NFBTVFlYeGVKMFZXWk5uRnIwTVRfcTFjdURqemhsdkJYTzBjY1VmV2JOeFVLLVIweDV4elJuekoyMlVoQ3ptS2pweFZVNEtYMW5B?oc=5",
+    "published_at": "2026-10-09T06:10:05+00:00",
+    "known_at": "2026-10-09T06:10:05+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
   {
@@ -77956,6 +78862,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "881a2068fa2decef5ffe78ff",
+    "title": "Prison riot in Mexico’s violence-plagued Sinaloa state kills 10 and leaves 16 injured - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOd0I5M1pCV0p1amhfVERWemVPVDIwWHNkQlI5NTU2c3FjbHpiZ3B3Z1IzZlEyYnp6aEYzQTlPTXNSWHlEblFSV3FfSDVTcDZmR3dKSzFyckpiVjlzS281M3drWlVsbVU1VTdKUkRHVmE0dE5VWFhXeEg3TWszTkxSX2lBemN1U1lYWUJheDlSSTVTMkZkMjFXalp5U1F2eV8zNnhCSHVKX2dZV2xjcGdUZUdBR00?oc=5",
+    "published_at": "2026-10-09T04:23:00+00:00",
+    "known_at": "2026-10-09T04:23:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "fd468197e31779ee6c89cea8",
     "title": "The Inflation Illusion: How Government Formulas Shape the Data - Gold Eagle",
     "evidence_file": "documents.json",
@@ -79187,6 +80109,22 @@
     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOVW1jTnc4V2NpUUNEVTd2WDhpVFJjUEJCLUF3bFVrcURNS0V4bWdadFZjc3FXVHlLaHBCR1V4TVNISFpFYmVraktObkVQZVVGd0h1aG9zQ2Vuc2xLb1VyX0ViMEUwZXJSd2pydXJ3eFN6WDg1S0NORHdnZlJ4VEE1OVQzSzVZZGhORGZnUi1INWRKTUZhSXc0VmR5LTJUbGc1bXloN0Nsc0tjYUYtaGgyTzZtNTBHbWV4V0E?oc=5",
     "published_at": "2026-10-09T03:40:13+00:00",
     "known_at": "2026-10-09T03:40:13+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "86997d79321ba2cba94c64a8",
+    "title": "Public executions in the US were once a community spectacle and then they stopped - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNazY1Ymh2SDF4cWdEYkJsa3RYeThtNXAtRE5BUmpGSEh4amRBV2szSmtrT2lybDNMN2tVTEViNmNPWjFfUEZzNGdaLS1qSlhRSkxIN1RWaWdnbWk0N3ZPazhnNng4ODZoTzlYOXN3WnJwNkRWZEJQcGw5eTh5NDFicDRHTjNtaE5lUEtsNmZlM1lFWEtFTU1WZHRYeGpYU2RuOVRDVGRqRnM?oc=5",
+    "published_at": "2026-10-09T03:40:00+00:00",
+    "known_at": "2026-10-09T03:40:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -80541,6 +81479,22 @@
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "f5921076a992617fe7143401",
+    "title": "South Korea to recall its ambassador to Ukraine over North Korean POW dispute - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZWc3ZnozVU9FZTV2VHZxNHFGN3ZUYUh4a041Qm5FVDlOUGZFMlVTSWpPcm1pZmhMS1piX1JGUVFJWldGcENZNjFyRzlhelZPWGFPMTJiYUR5NXlOdE9BY0FKMnhRaktBYzBQU01KUDU5VU1kbmpnZjVTQ2xFSnpIM21nZzd2d2Z1ejY4U2F6LUt6QmVEOGlXaXQxaXVOZw?oc=5",
+    "published_at": "2026-10-09T03:01:00+00:00",
+    "known_at": "2026-10-09T03:01:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "blast",
+    "routing_class": "product_harm",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -88717,7 +89671,9 @@
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPLTluWFV5cWFfM2xBV243NUduZW80Q3dmYnFLa1Y4Nmhha2RNNHVGTS1sM2NYZ0ZCeWJlazZpSndKOWM0OVUxTmx2M3luSDdpbVgzNnYtanQtb2VkWV9tU2NQaU03ejAxZy1NU1JhWkMwLXRNbmJUY2pWaTBrVE9XbGRXa2VFekh1LTVZbVNGUVRKTVhIU0NnSUZqdXI?oc=5",
     "published_at": "2026-10-08T23:09:38+00:00",
     "known_at": "2026-10-08T23:09:38+00:00",
-    "candidate_classes": [],
+    "candidate_classes": [
+      "regime_state"
+    ],
     "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
@@ -90072,6 +91028,22 @@
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "0520ef934239afbc5a551b7f",
+    "title": "A’ja Wilson wins her third straight WNBA MVP and record fifth overall - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPRWNYa0JNSnNINGFsX3U4VUgyR0txXzc1eEtqTzFlNWF1U1BTTkpQMHJYRmVhSVNLdWhkX1A5WEFOSjhobnRFaHd2VWNiZVR6TUhZQ2hxSE02Y0RmY2V5ZTgwRXRXTkVmdEMzbm1XUHdjYmZDZVptVnNwcHp2UXZLTw?oc=5",
+    "published_at": "2026-10-08T22:32:00+00:00",
+    "known_at": "2026-10-08T22:32:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -92886,6 +93858,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "6019b1dcf836d3b3c9c41013",
+    "title": "CEO sells 48,199 shares under a trading plan at Relay Therapeutics (RLAY). - Stock Titan",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWE9tYWVfQzgwUkM5NUdMa1NUUks1VkpLdFlDekc5aFRya2lJemw1UGpGcWczUngybjROSWhqcG1ZVzVxLUZ2Z01PTnIxN3d3STcwX0gzU0dSQ2pMckREcEp4VjFXVjlFRXJ6TGQtUktnZ2pBVkRLV1NDcTBXSmV0bmpsY2hrVjl2bmRMam9DSWMtTVJBX1IzYmFrcTNYSklxdHFFZXEyblJpakZFVE8wZ2dEeHo5a0E?oc=5",
+    "published_at": "2026-10-08T21:29:49+00:00",
+    "known_at": "2026-10-08T21:29:49+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "efe4f5a407ed0e09c2afe15e",
     "title": "FDA clears path for oral fluid, hair drug tests - Transport Topics",
     "evidence_file": "documents.json",
@@ -95082,6 +96070,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "e20cf553573d0456334088d0",
+    "title": "Iraq rejects Syrian request to repatriate 4,000 suspected IS detainees, official says - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNRGVyVjBjUXZMVUJVbHlSQTFySmZVTVFDdDBVZzNwSF9icFBYazRnOHVxYk1OSzFFMGF0aERhay1IZHgtU1ZxQjZ4SlpLcmNhcmJieEFNby1jU2w5RUszcGI5bmZMRHZoLVdUcXU5UC1sZGEya2tRT0kyeXg1QUFwOUotNzE1TXlqY194TEdvcXdCRHRTcjVxNzBn?oc=5",
+    "published_at": "2026-10-08T20:52:00+00:00",
+    "known_at": "2026-10-08T20:52:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "619f986392d29583f8c4b48d",
     "title": "American Express fined $350 million for insufficient anti-money laundering program - Reuters",
     "evidence_file": "documents.json",
@@ -95787,6 +96791,22 @@
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPU2ZBaWRiSTQ0MVQzcVhQcEN2R1pEMXNXQXV1S2xpaHJIYmdXOVg1V3lVeVdJR2ZxZjhqX0RzQzVyaVV2YjFlZGEwUzdnblNYaERzY3pDaVRMNjlHb3lUMzhLcS15eU52V1VkbzhqV1NTSFQtQ0x1TFFMc210aTRNbDcybEx1cDZIU2lpZWx0ZGlqUkdFUzNpSnRsU1Z4VkxSblpzejNHNGduWXVmN1E?oc=5",
     "published_at": "2026-10-08T20:40:57+00:00",
     "known_at": "2026-10-08T20:40:57+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "0beb8990840a5ef6a9643e70",
+    "title": "Atlantic hurricanes starting with ‘I’ typically bring death and destruction. Isaias is up next - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQcHdRcFluM1ZnYjQ0VUhta0lDcFZKWkFLQTh3aEc3dTdXUXdSWjltdDV0WlcwUXFKNUFSdk9RcDV0ZXlZQmtVWWNZRjR6NzBXbjcyTkN4R09iT1R3ZXZRRmhLOGp3X2dlQl9xa3MwTGVLaGQtc1E0OV93VWszazhoU2s5VzA3WXAxaDJJSXdRUThFZnJ2LVFzVVhGNA?oc=5",
+    "published_at": "2026-10-08T20:40:00+00:00",
+    "known_at": "2026-10-08T20:40:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -97461,6 +98481,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "71a8100856bc1d8238cc9f70",
+    "title": "Advisory clients sold 30,909 Herzfeld Credit Income Fund (HERZ) shares as a group reports its stake. - Stock Titan",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPZ1RGTWgydXNraUY2VXJySDJiRmtPRjZRQy1FZlVRdzI4U3JYZnhXRmJZbi1VY2F2cGQwMGh0QkhaSHBQVVpmcGk0aVF5Z0ZpUnRwMS1QWXZtS2FLV2N3TDNkWWphSE9MdVR3VlhHU3BHcVd4ei1Xa0VZZTNUbTlMZ1Fmdl8zQ3p6ZTY2SEt6U3VOQWhCOUhLYUFOQldoTUlWNTlqMVRRMzAxN095eWYxeWpLZkluY293WXFSaWJTUVFOeFJSS3RHbWhBYw?oc=5",
+    "published_at": "2026-10-08T20:16:01+00:00",
+    "known_at": "2026-10-08T20:16:01+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "5fd8c9957d744667b66314f4",
     "title": "The chief legal officer at Gartner (IT) will step down to pursue a new senior executive opportunity. - Stock Titan",
     "evidence_file": "documents.json",
@@ -97500,6 +98536,22 @@
     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOZnhzbk1hRlJ2VGFEVW40M3Y1RFhhVDVnRzR3UEdrSkdnR01tY0Fmbm9JR3FVY0dURFk1WjRIZ0VCUFBrbHFxWXNPbXVmb2lQZ0VhaGthUXBTZTd5WF8xM0FMUG84aTNyTHhIRUw5ZEV0YU5OZFo2R2twUUVqTmJQQWMzU2hRMHoxSDNYVFZEQXM0bkdXQzB0WjlIRV9OUQ?oc=5",
     "published_at": "2026-10-08T20:15:51+00:00",
     "known_at": "2026-10-08T20:15:51+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "4dbfdb2bc519231d84e77bb1",
+    "title": "187,169 warrant shares are part of ASP Isotopes' stake in ENDRA Life Sciences (NDRA). - Stock Titan",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQV2hsTDBWQ2pnZFdfZnZQWldKS0dTZTJPTkxBaHl1VXlfS0VuQng3THYxb0xWQkI4VnhkWUtPcHAzMTZIRHo3c0pfZS1pemtOa1dRU2JQOXZrbFBvaHJTck1YSzQ5QnJ0Z1NEdV80X2M1N2R3VThQVjVQbllfVzhnRlZlN1FrWElvdkNrZVFUT2p1NU5sb0pkVzhPSTJBSHVKcXkxUTl0ZFZ1RzF3aS1nU3NKeHF0a3hqcmNabU1nUkxkTTFENWtKaWpB?oc=5",
+    "published_at": "2026-10-08T20:15:48+00:00",
+    "known_at": "2026-10-08T20:15:48+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -101325,6 +102377,22 @@
     "analyst_family": "quantity",
     "routing_class": "input_cost",
     "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "a16404a4c813bde231f80e2d",
+    "title": "Mortgage rates rise for seventh straight week, squeezing homebuyers - Fox Business",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5iZGlMUUNqdHRGUEJhTGV1QjBtS29PZWdCWHctT2RXUXlwcFR2WVYyTlZZLUNMVE0xWm9PRS1aQXp5N2ZIUzRCQzh6U3dzcUN2Z3FSWjQ3WDgwakVhZ1Jpa3kycnVYM1U2eU5pctIBckFVX3lxTE80NE9mcEJEYVhvS3dDbEpVSXNVcXVZNVBSM1J5Ri1GWk5OcV9sY2VXM3JzZktQOXhvVlB0WWlCOXFiSTI3NGctRnNPejczRVpZbXMxUU8ydk8zZ0lkYllsM0ZNUzZlNTFTeVBFck52d1Zpdw?oc=5",
+    "published_at": "2026-10-08T18:51:00+00:00",
+    "known_at": "2026-10-08T18:51:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
   {
@@ -105980,6 +107048,38 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "0cd2bdbedd7cb9525e620609",
+    "title": "UK arrest 2 Latvians inside perimeter of RAF base housing U.S., NATO intelligence operations - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUWoyRGZwYmxNNFNLTnFxZFN6d3N0Vk1QXzF4czFrMVVwSnBDa3Z2VllzS19Nd3FqNTZZUW12N2NXbk52em40Y2U3SE96VjBZcVo4eHROdFNMVU9CbEtHT2hiZXJVbkM3bno3NTlJdXZJM0lwR0pjakh1akdPQkYwS0dDSHh6TUI1bW5HVXZsYWpkcnpBSWc?oc=5",
+    "published_at": "2026-10-08T17:08:00+00:00",
+    "known_at": "2026-10-08T17:08:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "f17b5706c09fab9cc5544282",
+    "title": "Industriales become first Cuban baseball team to wear a private sponsor logo - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUVlJZmI1eGt4akEta1lRNEVic1R4Rl9tZnBmb2ZLZXA5WjFTX0w5Y0ZheUI0M1JhSFg0dzBaZ0l6ZHBqSENHRkE0b2xWYnk5X0M4VXZ6eVFESjNfMUJrTjJjQTctUDRPeFZmSE9Nc20xejhKcmVjV3hzcGpOVVJlZlRWTmJSZWREWXFBU2w1QQ?oc=5",
+    "published_at": "2026-10-08T17:07:00+00:00",
+    "known_at": "2026-10-08T17:07:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "33a83dcf29268514868bcf2c",
     "title": "As AI Workloads Grow, 83% of Enterprises Look to Private Cloud Repatriation - Broadcom",
     "evidence_file": "documents.json",
@@ -106657,6 +107757,22 @@
     "analyst_family": "firm",
     "routing_class": "key_person",
     "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "4bfbed7c70a3c891b874b4a6",
+    "title": "Afghan women facing arrest for wearing makeup and alleged dress code violations, UN says - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNNUotUm9mRV9YMzZSVDNVWlZ1YTBZbTVWaTdTNkhUb0JpZVZzNC1XekFDaWl6aURCZ1JQSngxaWxVZ05uc19CZS1QTFRzbS1OdVVwbW56eHR1MmxyYmhZd29pNUFBZHdkT0JUeHFkSk0xY2RzRmhTNVRKMzNuTFUyc0txNEJzWW9kMU9zazZUU0g0SlFPek1CMXM4WnpzOXFaNkRjbkZ3?oc=5",
+    "published_at": "2026-10-08T16:49:00+00:00",
+    "known_at": "2026-10-08T16:49:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
   {
@@ -109785,6 +110901,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "ea00687a3170769f3fa9e991",
+    "title": "Michigan Files Antitrust Suit Against Blue Cross Blue Shield Over Rising Costs - WSJ",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQR3hlUGd2TkNJTzAtd1Q3M1h1Z0ZFWGxuRHNmVkdrTEEzelNQVXVDdy15eHRYZFU3VG5WSlJrS256cGR0VHdNZ2FSVzR0Q1RqSGdqN2JHQ2dMOFh2REhaZUNKN0txaWozdFVtdnBIaV9QaGxqeVd0WUF2UmNzVFlQN0tnUXRBajctOGp3YTJ0S0ctR2ppa1NRN2I0eF9KN1REWWhQMjRIbTF5RXg1dkd3VkRjVmVLVUFuMTlhMGF1MjZCRVE?oc=5",
+    "published_at": "2026-10-08T15:51:00+00:00",
+    "known_at": "2026-10-08T15:51:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "blast",
+    "routing_class": "blast_legal",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "e91e91d23f39b0bed5218f9a",
     "title": "Cardiff European Championships will leave long-term legacy, claims British Fencing CEO - Wales Online",
     "evidence_file": "documents.json",
@@ -110068,6 +111200,22 @@
     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9YUHNFb3pvOVJka2huRG1rWm5MWG85ZGNpLVE5YnBEcUk5RklQbmFfTHo5Q2RyMTBpdi1RQnJuUy1tZy02ZkxUa2F2YW52SW1zSjV5aktLUUZDeVhIamdZMnBHRHQzanVSQ09NamdjY3hBcEdpbEE?oc=5",
     "published_at": "2026-10-08T15:48:36+00:00",
     "known_at": "2026-10-08T15:48:36+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "835918aa6250ef8fe9866f68",
+    "title": "Form 13D/A AGM Group Holdings Inc. For: 8 October By Investing.com - Investing.com Canada",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcUp2enBiMmRHZGMwRGtkQldvb0l1RlFpR1ZHakFIYms0Skc3OXctdTdoMXlaX3dvakdRSThVWWFRbUFaM2g1WXVlMEJXTFhFelhGWkNYQmNHRUFBNEh3RFR5Y1U1VmdZbGEtZ1llVHFMakZyVEVQdFdaM2l3VzVGRGxCSjVBSVBiY2Z3ZnRoYnpvRzgtZmhOV2RSWktHdHBldndjRFJwV3pRb0k?oc=5",
+    "published_at": "2026-10-08T15:48:28+00:00",
+    "known_at": "2026-10-08T15:48:28+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -110800,6 +111948,24 @@
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "85a0ec41f46adb0873905875",
+    "title": "Anthropic Q3 Profit Projected To Top $1B As IPO Filing Nears - Yellow.com",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0wSDRyWVZWdWNDRFpKaFg3RlZXWGU1WUpIcXdBSVRhakJ0cTFWWVBfZXp5RFFfcmVCSVJuc241OXRjb1FOTThQQUU2YnlOaXd6ZmJrRWxmVEQtMjFtWEJYVTFlYkc5NFlZdW02cHYyRQ?oc=5",
+    "published_at": "2026-10-08T15:37:02+00:00",
+    "known_at": "2026-10-08T15:37:02+00:00",
+    "candidate_classes": [
+      "listing_flow"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "flow",
+    "routing_class": "listing_flow",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -114614,6 +115780,22 @@
     "analyst_family": "flow",
     "routing_class": "listing_flow",
     "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "1db6c27824f0688305ffacf2",
+    "title": "Moscow’s secrecy about a suspected plague case follows a pattern from the Soviet era - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTmU5WG1obFd1aWZJc0dmZXFWLXVackR1MEMzcGpGMTQ2NEtiMkIxYzVQQ181NXNTdDJNZU9STk1qZldScDYwRUUyX0hhU3lQeTJLZW9mcmt5Qk1FdENucnZ0N0REOVZjbkd0X013OHJNR0pGY2lLS1VZSHdWVC13VWFkM3BEcDQ1dUpMRGNIMEdjMnZSbEticWN2dWpCWTUxbm9jRGRrUnJETDRVN0FFTjFtY1I?oc=5",
+    "published_at": "2026-10-08T14:32:00+00:00",
+    "known_at": "2026-10-08T14:32:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
   {
@@ -119795,6 +120977,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "47c21150628e357bbdd6543e",
+    "title": "Dodgers will have time to reset rotation, bullpen and struggling Ohtani for NLCS - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMTJmNTNFN0p3Y3FaMmFGUTd0c0FBS05qaFV3X3hlRW1GMlZQVld1ZVZLNzY4TGtsLXhrWVh3cVA2TTdTbWV2ZlVoWEdyVXhqZjI3X0pGcF9uQ2k2NUtSUVAzMEVBV00xM0pQZ3AxczgwS0x0NmlZaTZSZlE5VDgwSlNkYThuOHUyYkJpYkZkWUVoQQ?oc=5",
+    "published_at": "2026-10-08T13:08:00+00:00",
+    "known_at": "2026-10-08T13:08:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "3c6a2a671097c46d2ecab0dd",
     "title": "Truist reiterates Mohawk Industries stock rating on input costs - Investing.com",
     "evidence_file": "documents.json",
@@ -120803,6 +122001,22 @@
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "regime_state",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "b921361406723b5f0e6c0fee",
+    "title": "Texas socialists are building a movement, one sandwich at a time - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPaEdQOTB3NlBFWVZTamNmSlpFQnBTMy1URHRJcmtqRWVkaW5UQU5IUWxRc3hDRGUtcDlyVFlqN2FDWDNhR0RwN0pJWW5MMC1Pd3ZFNHRzOThWczlhS0MzUm9KVi0zdngzN3hpWHNDS1NOYWlpdVhtbnNqQW9qTHgteDFBbzU3c3Vzc0xkWlB4dFpZTnJ1UU9HZjlUekl5NUFTMkdtVTM0dm4?oc=5",
+    "published_at": "2026-10-08T12:55:36+00:00",
+    "known_at": "2026-10-08T12:55:36+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -123431,6 +124645,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "9e172705f8abca8efdc553a0",
+    "title": "Jose Corrales, In the Matter of (timeline item) - October 8, 2026 - Federal Trade Commission (.gov)",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxORnFlaGFFNWtmS1dWLTV2X1J0R2loN1lPVzVhd3ZOa2E5TUxfdzFuMUFiLTMwbnJfaUJ0c09nWTJhb3JzX0hzekd3clNBVXotZW5UNXkyYjZfQW1zQ2pjNUJtV3JTUDFkWldSUndxNVFYRjFBaVlod3k4TGZWeXdrOWZWbzdrNFJ0ekZ5bWZBb2Q2eW5iMWNOZ3pEOTNFbUZWc1R2MmprSQ?oc=5",
+    "published_at": "2026-10-08T12:00:00+00:00",
+    "known_at": "2026-10-08T12:00:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "96a9186a214bc928eb3f282e",
     "title": "DeFi Development Corp. recap: 2.5M SOL and equivalents | DFDV Stock News - Stock Titan",
     "evidence_file": "documents.json",
@@ -125230,6 +126460,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "a873a6969def92776f88a713",
+    "title": "Gruesome injuries throw spotlight on France’s policing of high school protests - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWnFldnE4czE1SkFvLU95N0tzT242eVpEazA0U0hSa2VKSkpNcFNESXJhLVJMNDdSbnMtbHBwVkE1azdrZWo5NWd5SnQ4X2FQN2ljQVJzbU5wNWtWZzJiamE3Xy0wMkI4YkxGak13OTZZVElpSlVZbk1kRVkwRmpUdlNJOVFNMUNNcjM5QTZBRW9aaDJib09v?oc=5",
+    "published_at": "2026-10-08T11:22:00+00:00",
+    "known_at": "2026-10-08T11:22:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "5afd71f1366f069f9f00d46a",
     "title": "\"Mortgage puke\" could be a factor in rate rise - Axios",
     "evidence_file": "documents.json",
@@ -125293,6 +126539,22 @@
     "analyst_family": "blast",
     "routing_class": "blast_legal",
     "routing_basis": "coverage_hint_requires_confirmation",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "0205cf73747d65b74150a351",
+    "title": "South Korea test-flies its first domestically developed hypersonic weapon - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSTJLVmlucFIxVDdXN0FoMmFLRHRfWFhob1FjNXdoVmZBMm8xdEl1bDl5ajZKZmR2WDRqSGkwMGlVUDZ0c0lQamJIUkgxSm5KdDJlQW80eVo5YTZsN25DVDlPNmZLWjMxSmVWNFFyMHRNR1NoVGhqSEl3T05ZSUJSUTlqOVU5M2lnamVIMXhSQ1dwUm5SYTN2UW9iV2tZNHhrLXhuM2dMSENxUQ?oc=5",
+    "published_at": "2026-10-08T11:20:00+00:00",
+    "known_at": "2026-10-08T11:20:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
   {
@@ -125719,6 +126981,24 @@
     "analyst_family": "time",
     "routing_class": "discard",
     "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "f368ed1d8547514f9fa81dde",
+    "title": "If You Invested $5,000 in SpaceX at Its IPO, Here Is What It Is Worth Today - The Globe and Mail",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPUUJlNEM1N2F5MmtNQVotcW4tMk04ZGZlc2U5WG1wZ2FhOUx1Q0VsSHlqLTE2cUh4VGhRNkhtMzhLNTJjVG5obGpUMWo4QldtUmNiT05HOW50THpoR1psNUtLdld3YS1MbFg2cENTcHNHTFNJZU9DRU5Cb09tanRyODl6aERUcXBzR3NjUmlQX05LN1dMRHVrOWJGa1BTcFF5SFhYaVFndFY4MWZNNkt2VXNWdzlEajJKeGQyWUtjSGloOUhpVldvU19Pa1BNbW5qSHlHOHZDZlA5aDA5WjRaSktIN3hEYVk?oc=5",
+    "published_at": "2026-10-08T11:10:13+00:00",
+    "known_at": "2026-10-08T11:10:13+00:00",
+    "candidate_classes": [
+      "listing_flow"
+    ],
+    "state": "candidate",
+    "status": "pending_analysis",
+    "analyst_family": "flow",
+    "routing_class": "listing_flow",
+    "routing_basis": "coverage_hint_requires_confirmation",
     "prompt_version": "2026-09-23-full-v1"
   },
   {
@@ -129778,6 +131058,22 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
+    "document_id": "fc3f530411c3dfe52ee9df11",
+    "title": "Calendar Year 2026 | Voluntary Lot Withdrawals of IGIV and IGSC - U.S. Food and Drug Administration (.gov)",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPalFJNDdCVnFIVERfUVZkTzd4T2NlMFBvZTF0ZGtKMllWS3UwTmhuZ0kwSXdHRERIanZ2TlQ2Q01JZFo2T0RLQ3U3bFRZN011cm1Nd00tVGN1M3p1ei02X25YS0FDMVVGaG9aenBTM0tCUEpjMmU1anFmNFJpTVIyVWlUblpJMzRvUHBOeHpqTTBxNFVKaWZTUnhldUVweEhZbDdRcVJycGwzV1RnWmU0YVBRdFkzWHRQYWd4eEdVZUVRMnRhVXNmTXhYcWR5U3hXbTh0dHhNM0I4clBhdXdqeE13STlORlJyUUlPMldKYllnZFdLM21peXR0UFFPemYt?oc=5",
+    "published_at": "2026-10-08T09:40:29+00:00",
+    "known_at": "2026-10-08T09:40:29+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
     "document_id": "5acf7060aa0125136b089f72",
     "title": "Tesco Plc Stock Gains On H1 Profit Growth, FY27 Outlook Upgrade, Addl. Buyback - RTTNews",
     "evidence_file": "documents.json",
@@ -133372,6 +134668,22 @@
     "url": "https://news.google.com/rss/articles/CBMiugJBVV95cUxNOVJxMkpETnJDZTVDN0xtXy1MY19zZVlsbXZuX2JyOVhZN01reERhdi1IaUxXMUFDRVZyaE9qeURHcm1rLUdvY0RMbVFlVTlVY0d1TjJZMUVCX1NRcmxiRm1xRU02Q0VNV2lFRFJoNC1WWnE1VkVCYTBMeDFSakZRMkFTSFNDOFhLVTNDMnRQMUtveGI4TlNJQnFORnlYRnBWdlphN056Rkdtb1B4bGViRjl6ZzVNaWJqSkx4aWlYUEVGdENHZ0ExOGJTaGZEVkkyenBwU28wd0FabzcxSU5icVBFWUtDbXVkaFg0T0dNbUJxZVNVblR2ejYyX3M2NG9xcTBjRkVra09sb3BlWTdSV3BmbC1weFp1TWR4MS0yREZRdkFrY2h2a3FFVk1jcEpHc2dZbzZFdDQ5UdIBvwJBVV95cUxNdk9uLWVoR1lWQUFiZG04c2hRVkNGQnZOTkktMTN4ZGFXWDFwbEJka19JczREWmdBUERxS2Vlb3lMazBuVGIzcmZGVFZHU21DcFQ2YktLNVRIdG9nOE1GX01GTllraC1YRmQ3UWhlLVNwMWJ4OXZfaThnVDZBSURVQ00xcmpRenRnZHI1Z0pkRTl4S1A0QmVtUnl1UndIQ3I5dktDWnlMNThyX2s3cWp1TldNQVFmbjRDQlRHOVByZGU4ejhVWXdfbkxSWmxCQVlValBlUkZXMHdBX056UW4xdG1WY3dGdmlMS2hFT1JtZkxnQVJZRmRVdWp3ZDNKcUFmWERucUk0OG1UX0kyU0xscktucU1GOHFxRFN4Zm1FZURWRHd3WkRCQVNDTEZKR3pGUVpxdGdwWjF5UEhtd1VZ?oc=5",
     "published_at": "2026-10-08T07:45:02+00:00",
     "known_at": "2026-10-08T07:45:02+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "7e415ce0f7392dfc58daf0f6",
+    "title": "Fan interference denies Anthony Volpe a tying homer as Yankees get swept by Rays in ALDS - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOclJoTmdIMGM1OGVQYjZGeFFfYXg2WUxkZjU0Q1poY0NDTER4VnMwU1BXYmc1Rmhfa2l1Zk1aVm9vVFBKWWJobFlVUzJjNnZ2UGF1XzhVdlJUc0pLNHo3dHJHUlZ0UWtIVEpFVnNQaXlWaS1jTHRCMzNvUXBkZWdYUTVFUVB2YVlvYTRqZE83bE11TmVTdWp4UDBURU0xMW4wM3c?oc=5",
+    "published_at": "2026-10-08T07:45:00+00:00",
+    "known_at": "2026-10-08T07:45:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -137811,6 +139123,22 @@
     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYmd5VFU3bGtsTU9PSE4xZTh0YjFva0huNkR1TkpWR3NXSV9XZmMzMHJJdnl1ZjBDaVF1b0dVSGJlUmZJU2NtNkJCYm84cF9uWXRiUkpldzNpanh6bG5jVFhnYmxxT19fbjZodlBtLVNvUlgxU3ZWZ2ZVdzF6cjlnQURKa2hNalV2YU1VOVgtRWxmcDRuR2V4anFGeWhBMnZiZ09wSGxDZGxXZzQ?oc=5",
     "published_at": "2026-10-08T04:49:29+00:00",
     "known_at": "2026-10-08T04:49:29+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "9dcd7c9afd2c396877125fa0",
+    "title": "Burton's 3-pointer with 41 seconds left helps send Valkyries past Aces 83-81 for 2-0 semifinals lead - AP News",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOVmR1b3JSZzJqY2FOMDZzWGhOR0tDS0dXVFBsbFgwaUdQLUVXYy1uN29GcUZsWW1SRnhXV1A4d0piVzBOaHVnNU1TYWVQVFZKbTdIaUFiU2RZSWhIcnlBZlVwWjltTHNkMGh5RDBTTERwYVJJSnQ2S1cwa2ZWTXlCc0ZQVHVjcTJHejZIWnN0eERSeHVlSXEzSHdn?oc=5",
+    "published_at": "2026-10-08T04:48:00+00:00",
+    "known_at": "2026-10-08T04:48:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -143641,7 +144969,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -143675,7 +145003,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -143691,7 +145019,7 @@
     "published_at": "2026-10-08T00:01:00+00:00",
     "known_at": "2026-10-08T00:01:00+00:00",
     "candidate_classes": [],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
@@ -143709,7 +145037,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -143727,7 +145055,7 @@
     "candidate_classes": [
       "activist_campaign"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "activist_campaign",
@@ -143759,7 +145087,7 @@
     "published_at": "2026-10-08T00:00:00+00:00",
     "known_at": "2026-10-08T00:00:00+00:00",
     "candidate_classes": [],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
@@ -143777,7 +145105,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -143925,7 +145253,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
@@ -143943,7 +145271,7 @@
     "candidate_classes": [
       "blast_cyber"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_cyber",
@@ -143977,7 +145305,7 @@
     "candidate_classes": [
       "credit_funding"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "credit_funding",
@@ -144013,7 +145341,7 @@
     "candidate_classes": [
       "gate"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "permission",
     "routing_class": "gate",
@@ -144031,7 +145359,7 @@
     "candidate_classes": [
       "listing_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "flow",
     "routing_class": "listing_flow",
@@ -144049,7 +145377,7 @@
     "candidate_classes": [
       "corporate_action_spinoff"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "corporate_action_spinoff",
@@ -144067,7 +145395,7 @@
     "candidate_classes": [
       "tax_fiscal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "blast",
     "routing_class": "blast_legal",
@@ -144085,7 +145413,7 @@
     "candidate_classes": [
       "demand"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "quantity",
     "routing_class": "demand",
@@ -144103,7 +145431,7 @@
     "candidate_classes": [
       "tax_fiscal"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "tax_fiscal",
@@ -144121,7 +145449,7 @@
     "candidate_classes": [
       "insider_flow"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "insider_flow",
@@ -144267,7 +145595,7 @@
     "candidate_classes": [
       "capital_return"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "capital_return",
@@ -144335,7 +145663,7 @@
     "candidate_classes": [
       "factor_impulse"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "factor_impulse",
@@ -144353,7 +145681,7 @@
     "candidate_classes": [
       "factor_impulse"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "print",
     "routing_class": "factor_impulse",
@@ -152111,13 +153439,13 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
-    "document_id": "b8350c75b17282b0409def30",
-    "title": "The Financial Literacy and Education Commission Releases the 2026 Update to the U.S. National Strategy for Financial Literacy",
+    "document_id": "150ee476e27d9a602ea6fd88",
+    "title": "Chatrie v. United States",
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
-    "url": "https://home.treasury.gov/news/press-releases/sb0646/",
-    "published_at": "2026-10-02T14:00:00+00:00",
-    "known_at": "2026-10-02T14:00:00+00:00",
+    "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r64_7mio.pdf",
+    "published_at": "",
+    "known_at": "2026-10-02T16:30:15.020552+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -152143,29 +153471,13 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
-    "document_id": "150ee476e27d9a602ea6fd88",
-    "title": "Chatrie v. United States",
+    "document_id": "b8350c75b17282b0409def30",
+    "title": "The Financial Literacy and Education Commission Releases the 2026 Update to the U.S. National Strategy for Financial Literacy",
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
-    "url": "https://www.supremecourt.gov/opinions/25pdf/609us2r64_7mio.pdf",
-    "published_at": "",
-    "known_at": "2026-10-02T16:30:15.020552+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
-    "document_id": "ff895c2dbf2499d65dec1d73",
-    "title": "September 15, 2026 - FDA Launches Expedited IND Pilot, Begins Accepting Applications",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-expedited-ind-pilot-begins-accepting-applications",
-    "published_at": "2026-09-15T04:00:00+00:00",
-    "known_at": "2026-09-15T04:00:00+00:00",
+    "url": "https://home.treasury.gov/news/press-releases/sb0646/",
+    "published_at": "2026-10-02T14:00:00+00:00",
+    "known_at": "2026-10-02T14:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -152255,22 +153567,6 @@
     "prompt_version": "2026-09-23-full-v1"
   },
   {
-    "document_id": "eb6d04ae8d35ebbaefc130a1",
-    "title": "September 23, 2026 - Federal Court Enters Consent Decree Against Gold Star Distribution, Inc. Following Persistent Insanitary Warehouse Conditions",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.fda.gov/news-events/press-announcements/federal-court-enters-consent-decree-against-gold-star-distribution-inc-following-persistent",
-    "published_at": "2026-09-23T04:00:00+00:00",
-    "known_at": "2026-09-23T04:00:00+00:00",
-    "candidate_classes": [],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "time",
-    "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
     "document_id": "e0c9171bbf0272815c3abead",
     "title": "Landor v. Louisiana Dept of Corrections and Public Safety",
     "evidence_file": "documents.json",
@@ -152283,24 +153579,6 @@
     "status": "pending_analysis",
     "analyst_family": "time",
     "routing_class": "discard",
-    "routing_basis": "existing_lane_rules",
-    "prompt_version": "2026-09-23-full-v1"
-  },
-  {
-    "document_id": "d2674c5a4f395eda7822e36c",
-    "title": "September 28, 2026 - FDA Approves First Treatment for MCT8 Deficiency",
-    "evidence_file": "documents.json",
-    "parse_file": "parsed.json",
-    "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-mct8-deficiency",
-    "published_at": "2026-09-28T21:45:00+00:00",
-    "known_at": "2026-09-28T21:45:00+00:00",
-    "candidate_classes": [
-      "gate"
-    ],
-    "state": "review",
-    "status": "pending_analysis",
-    "analyst_family": "permission",
-    "routing_class": "gate",
     "routing_basis": "existing_lane_rules",
     "prompt_version": "2026-09-23-full-v1"
   },
@@ -152534,8 +153812,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-nationwide-effort-expand-scientific-expertise-and-consumer-voices-advisory-committees",
-    "published_at": "",
-    "known_at": "2026-10-02T10:39:47.686277+00:00",
+    "published_at": "2026-09-30T04:00:00+00:00",
+    "known_at": "2026-09-30T04:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
@@ -152582,8 +153860,8 @@
     "evidence_file": "documents.json",
     "parse_file": "parsed.json",
     "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-heart-valve-designed-grow-children",
-    "published_at": "",
-    "known_at": "2026-10-02T10:39:47.686277+00:00",
+    "published_at": "2026-10-01T04:00:00+00:00",
+    "known_at": "2026-10-01T04:00:00+00:00",
     "candidate_classes": [
       "gate"
     ],
@@ -153100,6 +154378,56 @@
     "url": "https://home.treasury.gov/news/press-releases/sb0649/",
     "published_at": "2026-10-01T22:00:00+00:00",
     "known_at": "2026-10-01T22:00:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "d2674c5a4f395eda7822e36c",
+    "title": "September 28, 2026 - FDA Approves First Treatment for MCT8 Deficiency",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-treatment-mct8-deficiency",
+    "published_at": "2026-09-28T21:45:00+00:00",
+    "known_at": "2026-09-28T21:45:00+00:00",
+    "candidate_classes": [
+      "gate"
+    ],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "permission",
+    "routing_class": "gate",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "eb6d04ae8d35ebbaefc130a1",
+    "title": "September 23, 2026 - Federal Court Enters Consent Decree Against Gold Star Distribution, Inc. Following Persistent Insanitary Warehouse Conditions",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.fda.gov/news-events/press-announcements/federal-court-enters-consent-decree-against-gold-star-distribution-inc-following-persistent",
+    "published_at": "2026-09-23T04:00:00+00:00",
+    "known_at": "2026-09-23T04:00:00+00:00",
+    "candidate_classes": [],
+    "state": "review",
+    "status": "pending_analysis",
+    "analyst_family": "time",
+    "routing_class": "discard",
+    "routing_basis": "existing_lane_rules",
+    "prompt_version": "2026-09-23-full-v1"
+  },
+  {
+    "document_id": "ff895c2dbf2499d65dec1d73",
+    "title": "September 15, 2026 - FDA Launches Expedited IND Pilot, Begins Accepting Applications",
+    "evidence_file": "documents.json",
+    "parse_file": "parsed.json",
+    "url": "https://www.fda.gov/news-events/press-announcements/fda-launches-expedited-ind-pilot-begins-accepting-applications",
+    "published_at": "2026-09-15T04:00:00+00:00",
+    "known_at": "2026-09-15T04:00:00+00:00",
     "candidate_classes": [],
     "state": "review",
     "status": "pending_analysis",
