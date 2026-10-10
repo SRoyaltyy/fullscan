@@ -12,96 +12,96 @@
     }
   },
   "watermark": {
-    "deterministic::news_impact_v2::theme_radar_elite": 45988
+    "deterministic::news_impact_v2::theme_radar_elite": 46687
   },
   "funnel": {
-    "elite_raw_titles": 417124,
-    "unique": 45988,
-    "non_weather": 20825,
-    "reaction_in_title": 732,
-    "impulse_updown_listed": 11402,
+    "elite_raw_titles": 426661,
+    "unique": 46687,
+    "non_weather": 21080,
+    "reaction_in_title": 739,
+    "impulse_updown_listed": 11527,
     "graded_articles": {
-      "0-1d": 1390,
-      "2d": 1339,
-      "3d": 1313,
-      "4d": 1283,
-      "5d": 1265,
-      "1-4w": 5968
+      "0-1d": 1411,
+      "2d": 1353,
+      "3d": 1334,
+      "4d": 1306,
+      "5d": 1277,
+      "1-4w": 6049
     }
   },
   "hit_rates": {
     "0-1d": {
-      "hits": 1235,
-      "n_calls": 2585,
-      "hit_rate": 0.4778,
-      "graded_articles": 1390
+      "hits": 1270,
+      "n_calls": 2635,
+      "hit_rate": 0.482,
+      "graded_articles": 1411
     },
     "2d": {
-      "hits": 1275,
-      "n_calls": 2496,
-      "hit_rate": 0.5108,
-      "graded_articles": 1339
+      "hits": 1288,
+      "n_calls": 2521,
+      "hit_rate": 0.5109,
+      "graded_articles": 1353
     },
     "3d": {
-      "hits": 1206,
-      "n_calls": 2439,
-      "hit_rate": 0.4945,
-      "graded_articles": 1313
+      "hits": 1243,
+      "n_calls": 2489,
+      "hit_rate": 0.4994,
+      "graded_articles": 1334
     },
     "4d": {
-      "hits": 1204,
-      "n_calls": 2392,
-      "hit_rate": 0.5033,
-      "graded_articles": 1283
+      "hits": 1230,
+      "n_calls": 2432,
+      "hit_rate": 0.5058,
+      "graded_articles": 1306
     },
     "5d": {
-      "hits": 1185,
-      "n_calls": 2360,
-      "hit_rate": 0.5021,
-      "graded_articles": 1265
+      "hits": 1202,
+      "n_calls": 2386,
+      "hit_rate": 0.5038,
+      "graded_articles": 1277
     },
     "1-4w": {
-      "hits": 4049,
-      "n_calls": 8787,
-      "hit_rate": 0.4608,
-      "graded_articles": 5968
+      "hits": 4137,
+      "n_calls": 8939,
+      "hit_rate": 0.4628,
+      "graded_articles": 6049
     }
   },
   "hit_rates_broad_short": {
     "0-1d": {
-      "hits": 5965,
-      "n_calls": 12371,
-      "hit_rate": 0.4822,
-      "graded_articles": 7844
+      "hits": 6034,
+      "n_calls": 12496,
+      "hit_rate": 0.4829,
+      "graded_articles": 7905
     },
     "2d": {
-      "hits": 5901,
-      "n_calls": 12062,
-      "hit_rate": 0.4892,
-      "graded_articles": 7674
+      "hits": 5944,
+      "n_calls": 12149,
+      "hit_rate": 0.4893,
+      "graded_articles": 7724
     },
     "3d": {
-      "hits": 5815,
-      "n_calls": 11884,
+      "hits": 5887,
+      "n_calls": 12032,
       "hit_rate": 0.4893,
-      "graded_articles": 7573
+      "graded_articles": 7646
     },
     "4d": {
-      "hits": 5754,
-      "n_calls": 11753,
-      "hit_rate": 0.4896,
-      "graded_articles": 7490
+      "hits": 5808,
+      "n_calls": 11859,
+      "hit_rate": 0.4898,
+      "graded_articles": 7551
     },
     "5d": {
-      "hits": 5614,
-      "n_calls": 11628,
-      "hit_rate": 0.4828,
-      "graded_articles": 7405
+      "hits": 5665,
+      "n_calls": 11727,
+      "hit_rate": 0.4831,
+      "graded_articles": 7462
     }
   },
   "rippers": {
     "0-1d": {
-      "ge_5_n": 541,
+      "ge_5_n": 543,
       "ge_10_n": 293,
       "ge_5": [
         {
@@ -1239,6 +1239,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "PENG",
+          "direction": "up",
+          "ret": 7.93,
+          "entry_date": "2026-10-07",
+          "published_at": "2026-10-06 16:32:00",
+          "title": "Penguin Solutions Trumpets AI-Driven Beat-And-Raise Report",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "FROG",
           "direction": "up",
           "ret": 7.91,
@@ -1371,15 +1380,6 @@
           "entry_date": "2026-08-21",
           "published_at": "2026-08-21 01:01:58",
           "title": "Flux Power Holdings Inc (FLUX) (Q4 2026) Earnings Call Highlights: Strategic Pivots and New ...",
-          "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "PENG",
-          "direction": "up",
-          "ret": 7.84,
-          "entry_date": "2026-10-07",
-          "published_at": "2026-10-06 16:32:00",
-          "title": "Penguin Solutions Trumpets AI-Driven Beat-And-Raise Report",
           "event_class": "print_vs_priced"
         },
         {
@@ -4047,6 +4047,24 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "ZS",
+          "direction": "up",
+          "ret": 5.53,
+          "entry_date": "2026-10-09",
+          "published_at": "2026-10-08 17:08:02",
+          "title": "OpenAI Takes Another Executive from Musks SpaceX as It Pushes into Global Sales",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "ZS",
+          "direction": "up",
+          "ret": 5.53,
+          "entry_date": "2026-10-09",
+          "published_at": "2026-10-08 17:08:02",
+          "title": "OpenAI Takes Another Executive from Musks SpaceX as It Pushes into Global Sales",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "VICR",
           "direction": "up",
           "ret": 5.51,
@@ -5183,15 +5201,6 @@
           "event_class": "guidance"
         },
         {
-          "ticker": "NIVF",
-          "direction": "down",
-          "ret": -28.0,
-          "entry_date": "2026-09-29",
-          "published_at": "2026-09-28 22:30:00",
-          "title": "NewGen Announces Pricing of $1.25 Million Public Offering",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "ZONE",
           "direction": "down",
           "ret": -27.85,
@@ -5660,6 +5669,24 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "NIVF",
+          "direction": "down",
+          "ret": -18.41,
+          "entry_date": "2026-10-08",
+          "published_at": "2026-09-28 22:30:00",
+          "title": "NewGen Announces Pricing of $1.25 Million Public Offering",
+          "event_class": "dilution"
+        },
+        {
+          "ticker": "NIVF",
+          "direction": "down",
+          "ret": -18.41,
+          "entry_date": "2026-10-08",
+          "published_at": "2026-09-30 14:10:00",
+          "title": "NewGen Announces Closing of $1.25 Million Public Offering",
+          "event_class": "dilution"
+        },
+        {
           "ticker": "CCOI",
           "direction": "down",
           "ret": -18.4,
@@ -5901,15 +5928,6 @@
           "published_at": "2026-08-25 08:00:00",
           "title": "Richtech Robotics Announces Stock Repurchase Program",
           "event_class": "capital_return"
-        },
-        {
-          "ticker": "NIVF",
-          "direction": "down",
-          "ret": -15.83,
-          "entry_date": "2026-10-01",
-          "published_at": "2026-09-30 14:10:00",
-          "title": "NewGen Announces Closing of $1.25 Million Public Offering",
-          "event_class": "dilution"
         },
         {
           "ticker": "DVLT",
@@ -7615,8 +7633,8 @@
       ]
     },
     "2d": {
-      "ge_5_n": 1019,
-      "ge_10_n": 575,
+      "ge_5_n": 1021,
+      "ge_10_n": 576,
       "ge_5": [
         {
           "ticker": "BBDC",
@@ -8825,6 +8843,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "AVNT",
+          "direction": "down",
+          "ret": -8.63,
+          "entry_date": "2026-10-07",
+          "published_at": "2026-10-06 17:22:00",
+          "title": "Avient Announces Sixteenth Consecutive Annual Dividend Increase",
+          "event_class": "capital_return"
+        },
+        {
           "ticker": "MENS",
           "direction": "down",
           "ret": -8.62,
@@ -9147,15 +9174,6 @@
           "published_at": "2026-09-18 08:00:00",
           "title": "Here to Report Fourth Fiscal Quarter and Full Fiscal Year 2026 Financial Results on September 22, 2026",
           "event_class": "guidance"
-        },
-        {
-          "ticker": "NIVF",
-          "direction": "down",
-          "ret": -8.33,
-          "entry_date": "2026-10-01",
-          "published_at": "2026-09-30 14:10:00",
-          "title": "NewGen Announces Closing of $1.25 Million Public Offering",
-          "event_class": "dilution"
         },
         {
           "ticker": "DRTS",
@@ -14513,6 +14531,15 @@
           "event_class": "capital_return"
         },
         {
+          "ticker": "SBUX",
+          "direction": "down",
+          "ret": -5.68,
+          "entry_date": "2026-10-07",
+          "published_at": "2026-10-06 15:55:04",
+          "title": "Starbucks sued over sugar-free protein drink labeling",
+          "event_class": "blast_legal"
+        },
+        {
           "ticker": "BCML",
           "direction": "down",
           "ret": -5.67,
@@ -15464,6 +15491,15 @@
           "entry_date": "2026-09-14",
           "published_at": "2026-09-11 15:38:41",
           "title": "DFW Multifamily Distress Creates Opening For Investors As Development Slows",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "AIR",
+          "direction": "up",
+          "ret": 5.38,
+          "entry_date": "2026-09-18",
+          "published_at": "2026-09-15 16:05:00",
+          "title": "AAR to announce first quarter fiscal year 2027 results on September 29, 2026",
           "event_class": "print_vs_priced"
         },
         {
@@ -19834,6 +19870,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "PENG",
+          "direction": "up",
+          "ret": 13.38,
+          "entry_date": "2026-10-07",
+          "published_at": "2026-10-06 16:32:00",
+          "title": "Penguin Solutions Trumpets AI-Driven Beat-And-Raise Report",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "SECZ",
           "direction": "up",
           "ret": 13.36,
@@ -21969,8 +22014,8 @@
       ]
     },
     "3d": {
-      "ge_5_n": 1150,
-      "ge_10_n": 675,
+      "ge_5_n": 1164,
+      "ge_10_n": 678,
       "ge_5": [
         {
           "ticker": "HOOD",
@@ -22168,6 +22213,24 @@
           "entry_date": "2026-08-26",
           "published_at": "2026-08-26 09:00:00",
           "title": "Five9 Named a Leader in the 2026 IDC MarketScape: Worldwide Agentic Contact Center-as-a-Service Platforms",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CBOE",
+          "direction": "up",
+          "ret": 9.85,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-05 16:30:00",
+          "title": "Cboe Global Markets Reports Trading Volume for September 2026",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CBOE",
+          "direction": "up",
+          "ret": 9.85,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-06 00:02:00",
+          "title": "SEC Lets Cboe List 3x Products",
           "event_class": "print_vs_priced"
         },
         {
@@ -24070,6 +24133,15 @@
           "event_class": "dilution"
         },
         {
+          "ticker": "TORM",
+          "direction": "down",
+          "ret": -8.44,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-06 08:15:00",
+          "title": "TORM plc announces pricing of secondary public offering of its class A common shares",
+          "event_class": "dilution"
+        },
+        {
           "ticker": "PRTA",
           "direction": "up",
           "ret": 8.43,
@@ -25897,6 +25969,24 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "SPT",
+          "direction": "up",
+          "ret": 7.42,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-05 16:05:00",
+          "title": "Sprout Social to Announce Third Quarter 2026 Financial Results on November 3, 2026",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "SPT",
+          "direction": "up",
+          "ret": 7.42,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-06 09:20:00",
+          "title": "Over half of Americans say social media posts have influenced their voting decisions during election season, according to new Sprout Social research",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "TWLO",
           "direction": "up",
           "ret": 7.41,
@@ -26626,6 +26716,42 @@
           "event_class": "capital_return"
         },
         {
+          "ticker": "ACN",
+          "direction": "up",
+          "ret": 6.97,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-05 10:20:24",
+          "title": "How To Create Income From IBM Stock",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "ACN",
+          "direction": "up",
+          "ret": 6.97,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-06 08:54:05",
+          "title": "What Did Accenture's Quarter Change For Its Stock?",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "ACN",
+          "direction": "up",
+          "ret": 6.97,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-06 08:54:05",
+          "title": "What Did Accenture's Quarter Change For Its Stock?",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "ACN",
+          "direction": "up",
+          "ret": 6.97,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-06 08:54:05",
+          "title": "What Did Accenture's Quarter Change For Its Stock?",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "JOE",
           "direction": "up",
           "ret": 6.95,
@@ -26678,6 +26804,15 @@
           "published_at": "2026-08-18 14:24:00",
           "title": "Convertible Bonds Are the New AI Bet. The High Returns Hide Bigger Risks.",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SYRE",
+          "direction": "down",
+          "ret": -6.94,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-05 16:01:00",
+          "title": "Spyre Therapeutics Announces Proposed Public Offering of its Common Stock",
+          "event_class": "dilution"
         },
         {
           "ticker": "CYTK",
@@ -26750,6 +26885,24 @@
           "published_at": "2026-08-29 06:00:00",
           "title": "Retailers feel the sting as cautious consumers weigh their options",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "AIR",
+          "direction": "up",
+          "ret": 6.91,
+          "entry_date": "2026-09-18",
+          "published_at": "2026-09-15 16:05:00",
+          "title": "AAR to announce first quarter fiscal year 2027 results on September 29, 2026",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PSKY",
+          "direction": "down",
+          "ret": -6.91,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-05 13:20:45",
+          "title": "Paramount names Skydance leadership team before Warner Bros. merger",
+          "event_class": "access_control"
         },
         {
           "ticker": "MENS",
@@ -28568,6 +28721,15 @@
           "published_at": "2026-10-01 09:15:00",
           "title": "BioCardia Files Revised De Novo Pre-Submission for FDA Approval of Helix Catheter",
           "event_class": "gate"
+        },
+        {
+          "ticker": "THO",
+          "direction": "down",
+          "ret": -6.0,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-06 09:17:30",
+          "title": "FedExs $300M Electric Truck Bet Comes as Diesel Costs Soar",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "OTLK",
@@ -31846,6 +32008,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "MRCY",
+          "direction": "down",
+          "ret": -5.14,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-06 08:00:00",
+          "title": "Mercury Introduces RES One, a Rugged Edge Server Engineered for Rapid Deployment and Superior Lifecycle Management",
+          "event_class": "blast_legal"
+        },
+        {
           "ticker": "COLM",
           "direction": "up",
           "ret": 5.12,
@@ -34485,15 +34656,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "NIVF",
-          "direction": "down",
-          "ret": -17.5,
-          "entry_date": "2026-10-01",
-          "published_at": "2026-09-30 14:10:00",
-          "title": "NewGen Announces Closing of $1.25 Million Public Offering",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "ARXS",
           "direction": "up",
           "ret": 17.48,
@@ -34879,6 +35041,33 @@
           "published_at": "2026-08-06 16:05:00",
           "title": "Csquare Reports Record Second Quarter 2026 Results",
           "event_class": "listing_flow"
+        },
+        {
+          "ticker": "SECZ",
+          "direction": "up",
+          "ret": 16.13,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-05 09:50:00",
+          "title": "Strive Expands Bitcoin Holdings With 2,000 BTC Purchase",
+          "event_class": "market_structure"
+        },
+        {
+          "ticker": "SECZ",
+          "direction": "up",
+          "ret": 16.13,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-05 09:50:00",
+          "title": "Strive Expands Bitcoin Holdings With 2,000 BTC Purchase",
+          "event_class": "market_structure"
+        },
+        {
+          "ticker": "SECZ",
+          "direction": "up",
+          "ret": 16.13,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-06 06:45:00",
+          "title": "Bullish releases September 2026 monthly metrics",
+          "event_class": "market_structure"
         },
         {
           "ticker": "USIO",
@@ -37608,6 +37797,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "VOYG",
+          "direction": "down",
+          "ret": -10.8,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-06 09:00:00",
+          "title": "Voyager Awarded Cancer Research Mission Management Contract",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "CRCL",
           "direction": "up",
           "ret": 10.77,
@@ -38402,8 +38600,8 @@
       ]
     },
     "4d": {
-      "ge_5_n": 1203,
-      "ge_10_n": 844,
+      "ge_5_n": 1218,
+      "ge_10_n": 848,
       "ge_5": [
         {
           "ticker": "RGEN",
@@ -39162,6 +39360,51 @@
           "event_class": "input_cost"
         },
         {
+          "ticker": "CHYM",
+          "direction": "up",
+          "ret": 9.44,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 12:16:28",
+          "title": "Top Bank Names 6 Stocks With Major Catalysts Ahead",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "CHYM",
+          "direction": "up",
+          "ret": 9.44,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 12:16:28",
+          "title": "Top Bank Names 6 Stocks With Major Catalysts Ahead",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "CHYM",
+          "direction": "up",
+          "ret": 9.44,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 12:16:28",
+          "title": "Top Bank Names 6 Stocks With Major Catalysts Ahead",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "CHYM",
+          "direction": "up",
+          "ret": 9.44,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 12:16:28",
+          "title": "Top Bank Names 6 Stocks With Major Catalysts Ahead",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "CHYM",
+          "direction": "up",
+          "ret": 9.44,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 12:16:28",
+          "title": "Top Bank Names 6 Stocks With Major Catalysts Ahead",
+          "event_class": "guidance"
+        },
+        {
           "ticker": "SGI",
           "direction": "up",
           "ret": 9.43,
@@ -39321,6 +39564,15 @@
           "entry_date": "2026-07-24",
           "published_at": "2026-07-24 08:30:00",
           "title": "Bread Financial Holdings, Inc. Q2 2026 Earnings Call Summary",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SITC",
+          "direction": "down",
+          "ret": -9.17,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-02 09:00:00",
+          "title": "Immuneering to Present at the 41st Annual Meeting of the Society for Immunotherapy of Cancer (SITC)",
           "event_class": "print_vs_priced"
         },
         {
@@ -41133,6 +41385,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "AIR",
+          "direction": "up",
+          "ret": 7.89,
+          "entry_date": "2026-09-18",
+          "published_at": "2026-09-15 16:05:00",
+          "title": "AAR to announce first quarter fiscal year 2027 results on September 29, 2026",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "RES",
           "direction": "up",
           "ret": 7.88,
@@ -41229,6 +41490,15 @@
           "entry_date": "2026-07-30",
           "published_at": "2026-07-29 17:03:09",
           "title": "Monro Inc (MNRO) Q1 2027 Earnings Call Highlights: Navigating Challenges with Strategic Improvements",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "FDS",
+          "direction": "up",
+          "ret": 7.8,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 16:30:00",
+          "title": "FactSet Research Systems Inc. stock underperforms Friday when compared to competitors",
           "event_class": "print_vs_priced"
         },
         {
@@ -42409,6 +42679,24 @@
           "published_at": "2026-09-18 08:00:00",
           "title": "Here to Report Fourth Fiscal Quarter and Full Fiscal Year 2026 Financial Results on September 22, 2026",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "KSS",
+          "direction": "up",
+          "ret": 7.22,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 13:40:41",
+          "title": "Waterstone Properties buys Charlotte-area shopping center for $87M",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "KSS",
+          "direction": "up",
+          "ret": 7.22,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-05 00:01:00",
+          "title": "The Bots Are Ready to Shop But Are the Humans?",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "MAZE",
@@ -43669,6 +43957,42 @@
           "published_at": "2026-08-17 05:19:58",
           "title": "Mainetti unveils M-Film flexible packaging range",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "MDB",
+          "direction": "up",
+          "ret": 6.69,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 14:34:16",
+          "title": "Investing.coms stocks of the week",
+          "event_class": "capital_return"
+        },
+        {
+          "ticker": "MDB",
+          "direction": "up",
+          "ret": 6.69,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 14:34:16",
+          "title": "Investing.coms stocks of the week",
+          "event_class": "capital_return"
+        },
+        {
+          "ticker": "MDB",
+          "direction": "up",
+          "ret": 6.69,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 14:34:16",
+          "title": "Investing.coms stocks of the week",
+          "event_class": "capital_return"
+        },
+        {
+          "ticker": "MDB",
+          "direction": "up",
+          "ret": 6.69,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-05 09:20:00",
+          "title": "Meta Muse: Sparking the AI Revolution",
+          "event_class": "capital_return"
         },
         {
           "ticker": "UNM",
@@ -48531,6 +48855,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "EPAM",
+          "direction": "up",
+          "ret": 5.19,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 16:00:00",
+          "title": "EPAM Announces Date for Third Quarter Earnings Release and Conference Call",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "VIST",
           "direction": "up",
           "ret": 5.18,
@@ -51512,6 +51845,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "YSS",
+          "direction": "down",
+          "ret": -18.93,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-05 09:00:00",
+          "title": "York Space Systems Expands into GEO to Support Space Domain Awareness Missions",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "TRNR",
           "direction": "down",
           "ret": -18.89,
@@ -52077,6 +52419,15 @@
           "published_at": "2026-09-18 17:00:00",
           "title": "Lument Finance Trust Suspends Common Stock Dividend, and Declares Q3 Preferred Stock Dividend",
           "event_class": "capital_return"
+        },
+        {
+          "ticker": "AVXL",
+          "direction": "down",
+          "ret": -16.76,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-05 01:38:00",
+          "title": "Anavex Life Sciences Corp. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - AVXL",
+          "event_class": "blast_legal"
         },
         {
           "ticker": "RBNE",
@@ -53427,6 +53778,24 @@
           "published_at": "2026-08-11 03:37:15",
           "title": "Singapore-based Data Center Operator Is Said to Confidentially File for $5 Billion IPO in US",
           "event_class": "listing_flow"
+        },
+        {
+          "ticker": "ONON",
+          "direction": "up",
+          "ret": 13.47,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 14:05:00",
+          "title": "Nike Is Burning Cash to Pay a 5% Dividend. How Long Can It Last?",
+          "event_class": "capital_return"
+        },
+        {
+          "ticker": "ONON",
+          "direction": "up",
+          "ret": 13.47,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 14:05:00",
+          "title": "Nike Is Burning Cash to Pay a 5% Dividend. How Long Can It Last?",
+          "event_class": "capital_return"
         },
         {
           "ticker": "TNC",
@@ -55038,15 +55407,6 @@
           "published_at": "2026-09-14 10:43:52",
           "title": "IonQ Presents Nine Peer-Reviewed Quantum Computing Papers at IEEE Quantum Week 2026",
           "event_class": "guidance"
-        },
-        {
-          "ticker": "NIVF",
-          "direction": "down",
-          "ret": -11.67,
-          "entry_date": "2026-10-01",
-          "published_at": "2026-09-30 14:10:00",
-          "title": "NewGen Announces Closing of $1.25 Million Public Offering",
-          "event_class": "dilution"
         },
         {
           "ticker": "CHYM",
@@ -56669,6 +57029,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "ABAT",
+          "direction": "down",
+          "ret": -10.05,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-02 10:27:57",
+          "title": "American Battery granted export license for $100M in black mass",
+          "event_class": "access_control"
+        },
+        {
           "ticker": "AVPT",
           "direction": "up",
           "ret": 10.04,
@@ -56833,8 +57202,8 @@
       ]
     },
     "5d": {
-      "ge_5_n": 1253,
-      "ge_10_n": 897,
+      "ge_5_n": 1269,
+      "ge_10_n": 898,
       "ge_5": [
         {
           "ticker": "SGI",
@@ -57357,6 +57726,69 @@
           "published_at": "2026-09-15 09:25:00",
           "title": "Robinhood To Offer Share Redemptions And Voting Rights On Tokenized Stocks",
           "event_class": "market_structure"
+        },
+        {
+          "ticker": "FRPT",
+          "direction": "up",
+          "ret": 9.5,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 09:38:06",
+          "title": "Exxon Mobil downgraded, BP upgraded: Wall Street's top analyst calls",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "FRPT",
+          "direction": "up",
+          "ret": 9.5,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 09:38:06",
+          "title": "Exxon Mobil downgraded, BP upgraded: Wall Street's top analyst calls",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "FRPT",
+          "direction": "up",
+          "ret": 9.5,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 09:38:06",
+          "title": "Exxon Mobil downgraded, BP upgraded: Wall Street's top analyst calls",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "FRPT",
+          "direction": "up",
+          "ret": 9.5,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 09:38:06",
+          "title": "Exxon Mobil downgraded, BP upgraded: Wall Street's top analyst calls",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "FRPT",
+          "direction": "up",
+          "ret": 9.5,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 09:38:06",
+          "title": "Exxon Mobil downgraded, BP upgraded: Wall Street's top analyst calls",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "FRPT",
+          "direction": "up",
+          "ret": 9.5,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 09:38:06",
+          "title": "Exxon Mobil downgraded, BP upgraded: Wall Street's top analyst calls",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "FRPT",
+          "direction": "up",
+          "ret": 9.5,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 09:38:06",
+          "title": "Exxon Mobil downgraded, BP upgraded: Wall Street's top analyst calls",
+          "event_class": "guidance"
         },
         {
           "ticker": "ELE",
@@ -59735,6 +60167,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "PYXS",
+          "direction": "down",
+          "ret": -8.14,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-02 07:00:00",
+          "title": "Pyxis Oncology Announces Closing of Up to $282.6 Million Public Offering",
+          "event_class": "dilution"
+        },
+        {
           "ticker": "IONS",
           "direction": "up",
           "ret": 8.13,
@@ -60041,6 +60482,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "MAN",
+          "direction": "down",
+          "ret": -7.94,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 09:31:00",
+          "title": "ManpowerGroup to Announce 3rd Quarter 2026 Earnings Results",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "SECZ",
           "direction": "up",
           "ret": 7.93,
@@ -60093,6 +60543,15 @@
           "published_at": "2026-08-24 21:29:00",
           "title": "Webull Sees Bitcoin, ETH Buy Orders Jump Nearly 300% After Rule Repeal",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "ADRX",
+          "direction": "down",
+          "ret": -7.92,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 16:15:00",
+          "title": "ADARx Pharmaceuticals Announces the Closing of Full Exercise of Underwriters' Option to Purchase Additional Shares Granted in Its Initial Public Offering",
+          "event_class": "dilution"
         },
         {
           "ticker": "AVBP",
@@ -62669,6 +63128,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "NMRK",
+          "direction": "down",
+          "ret": -6.7,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-02 08:45:00",
+          "title": "Newmark Group's Third Quarter 2026 Financial Results Announcement to be Issued Prior to Market Open on Thursday, October 29th, 2026",
+          "event_class": "blast_legal"
+        },
+        {
           "ticker": "KOS",
           "direction": "up",
           "ret": 6.67,
@@ -63621,6 +64089,15 @@
           "published_at": "2026-09-04 11:21:00",
           "title": "Are PSNL, MKTX, BZH, HOWL Obtaining Fair Deals for their Shareholders?",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "WHR",
+          "direction": "down",
+          "ret": -6.4,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-02 08:00:00",
+          "title": "Calling All Culinary Enthusiasts: KitchenAid Brand Launches The KitchenAid Makers Club, Giving Creators a New Way to Make, Share and Inspire",
+          "event_class": "guidance"
         },
         {
           "ticker": "FATN",
@@ -65576,6 +66053,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "CME",
+          "direction": "up",
+          "ret": 5.71,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 12:19:00",
+          "title": "CME Group Sets New Open Interest Record in Soybean Futures",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "PI",
           "direction": "up",
           "ret": 5.7,
@@ -66204,6 +66690,15 @@
           "published_at": "2026-08-13 21:06:22",
           "title": "American Integrity Insurance Group Inc (AII) (Q2 2026) Earnings Call Highlights: Record Pre-Tax ...",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "VRSN",
+          "direction": "up",
+          "ret": 5.53,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 16:05:00",
+          "title": "Verisign to Report Third Quarter 2026 Financial Results",
+          "event_class": "guidance"
         },
         {
           "ticker": "BAC",
@@ -67862,6 +68357,15 @@
           "event_class": "dilution"
         },
         {
+          "ticker": "COR",
+          "direction": "up",
+          "ret": 5.05,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-02 08:00:00",
+          "title": "Cencora Announces Date and Time for Fourth Quarter Fiscal 2026 Earnings Release",
+          "event_class": "peer_spill"
+        },
+        {
           "ticker": "AR",
           "direction": "up",
           "ret": 5.04,
@@ -67949,6 +68453,15 @@
           "entry_date": "2026-09-29",
           "published_at": "2026-09-29 08:00:00",
           "title": "KitchenAid Brand Expands its Cordless Countertop Appliance System with New Innovation for Fresh Food Prep and Preservation",
+          "event_class": "guidance"
+        },
+        {
+          "ticker": "RSG",
+          "direction": "up",
+          "ret": 5.04,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-02 07:01:35",
+          "title": "Republic Services Inc's Dividend Analysis",
           "event_class": "guidance"
         },
         {
@@ -68987,15 +69500,6 @@
           "published_at": "2026-08-10 16:12:00",
           "title": "Orchestra BioMed Reports Second Quarter 2026 Financial Results and Highlights Recent Business Updates",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "NIVF",
-          "direction": "down",
-          "ret": -32.5,
-          "entry_date": "2026-10-01",
-          "published_at": "2026-09-30 14:10:00",
-          "title": "NewGen Announces Closing of $1.25 Million Public Offering",
-          "event_class": "dilution"
         },
         {
           "ticker": "AMIX",
@@ -75019,6 +75523,15 @@
           "event_class": "market_structure"
         },
         {
+          "ticker": "SITC",
+          "direction": "down",
+          "ret": -11.17,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-02 09:00:00",
+          "title": "Immuneering to Present at the 41st Annual Meeting of the Society for Immunotherapy of Cancer (SITC)",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "CCLD",
           "direction": "up",
           "ret": 11.16,
@@ -75901,6 +76414,15 @@
           "event_class": "listing_flow"
         },
         {
+          "ticker": "SHAK",
+          "direction": "up",
+          "ret": 10.2,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 09:49:42",
+          "title": "Inside Applegreens first Colorado travel plaza",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "ENTG",
           "direction": "up",
           "ret": 10.18,
@@ -76220,58 +76742,58 @@
     "agree_5d": true,
     "ret_20d": null,
     "agree_20d": null,
-    "note": "window open (1-6m not elapsed; through 2026-10-08)",
+    "note": "window open (1-6m not elapsed; through 2026-10-09)",
     "clock_rule": "Friday 2026-09-18 16:01 is after the cash close. Entry is Monday 2026-09-21 open→close for 0-1d, never Friday cash. Published at/after 09:30 ET (09:30+30m included) waits for the next RTH."
   },
   "harvest_source_mix": {
     "raw": {
-      "theme_radar_elite": 417124
+      "theme_radar_elite": 426661
     },
     "unique": {
-      "theme_radar_elite": 45988
+      "theme_radar_elite": 46687
     }
   },
   "ledger": {
     "counts": {
-      "singleton": 7189,
-      "converge": 593,
+      "singleton": 7252,
+      "converge": 599,
       "clash": 79,
-      "converge_up": 408,
-      "converge_down": 185
+      "converge_up": 412,
+      "converge_down": 187
     },
     "hit_rates": {
       "singleton": {
         "0-1d": {
-          "hits": 602,
-          "n": 1279,
-          "hit_rate": 0.4707
+          "hits": 607,
+          "n": 1293,
+          "hit_rate": 0.4695
         },
         "2d": {
-          "hits": 621,
-          "n": 1226,
-          "hit_rate": 0.5065
+          "hits": 627,
+          "n": 1240,
+          "hit_rate": 0.5056
         },
         "3d": {
-          "hits": 604,
-          "n": 1200,
-          "hit_rate": 0.5033
+          "hits": 619,
+          "n": 1221,
+          "hit_rate": 0.507
         },
         "4d": {
-          "hits": 594,
-          "n": 1171,
-          "hit_rate": 0.5073
+          "hits": 606,
+          "n": 1193,
+          "hit_rate": 0.508
         },
         "5d": {
-          "hits": 594,
-          "n": 1155,
-          "hit_rate": 0.5143
+          "hits": 602,
+          "n": 1167,
+          "hit_rate": 0.5159
         }
       },
       "converge": {
         "0-1d": {
-          "hits": 75,
-          "n": 147,
-          "hit_rate": 0.5102
+          "hits": 80,
+          "n": 152,
+          "hit_rate": 0.5263
         },
         "2d": {
           "hits": 68,
@@ -76279,19 +76801,19 @@
           "hit_rate": 0.4755
         },
         "3d": {
+          "hits": 73,
+          "n": 143,
+          "hit_rate": 0.5105
+        },
+        "4d": {
           "hits": 69,
           "n": 137,
           "hit_rate": 0.5036
         },
-        "4d": {
-          "hits": 67,
-          "n": 134,
-          "hit_rate": 0.5
-        },
         "5d": {
           "hits": 67,
-          "n": 132,
-          "hit_rate": 0.5076
+          "n": 133,
+          "hit_rate": 0.5038
         }
       },
       "clash": {
@@ -76837,7 +77359,7 @@
         ]
       }
     ],
-    "n_name_groups": 7861,
+    "n_name_groups": 7930,
     "n_theme_groups": 12,
     "theme_note": "Theme groups are router factor/macro keys only. They are not a second trade. The Elite Sector column is not a key.",
     "amrx_week": {
