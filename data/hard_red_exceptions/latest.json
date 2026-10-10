@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-10-09T20:31:44.412427-04:00",
+  "generated_at": "2026-10-10T13:26:42.488641-04:00",
   "from_date": "2026-08-13",
   "to_date": "2026-10-09",
   "n_days": 41,
@@ -1844,9 +1844,9 @@
       "mean": -0.548
     },
     "short_h1": {
-      "n": 119,
-      "win": 0.5882,
-      "mean": 0.439
+      "n": 120,
+      "win": 0.5917,
+      "mean": 0.442
     },
     "short_h3": {
       "n": 103,
@@ -1870,7 +1870,7 @@
         "e_label": "beat \u00b7 EPS surprise +17.4% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Did PACS Group, Inc. Insiders Breach their Fiduciary Duties to Shareholders?",
+        "headline": "Omega to Transition Operations of 32 Facilities in Florida to PACS Group",
         "yday_ret": 1.25,
         "rsi": 55.73,
         "macd_hist": 0.2605,
@@ -1953,7 +1953,7 @@
           "+1 peer green",
           "+1 yday +1.2%",
           "Weather cameras (not in idio score): gen bad",
-          "News: neutral \u2014 Did PACS Group, Inc. Insiders Breach their Fiduciary Duties to Shareholders?",
+          "News: neutral \u2014 Omega to Transition Operations of 32 Facilities in Florida to PACS Group",
           "beat \u00b7 EPS surprise +17.4% (morning export)",
           "Tape RSI 56 \u00b7 MACD hist 0.2605",
           "Side lean: long \u00b7 idio +20"
@@ -1972,10 +1972,10 @@
         "n_pos": 5,
         "n_neg": 1,
         "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +22.0% (morning export)",
+        "e_label": "beat \u00b7 EPS surprise +64.4% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "AngioDynamics to Report Fiscal 2027 First Quarter Results on October 8, 2026",
+        "headline": "AngioDynamics, Inc. Q1 2027 Earnings Call Summary",
         "yday_ret": -20.86,
         "rsi": 16.88,
         "macd_hist": -0.3588,
@@ -2014,7 +2014,7 @@
           {
             "k": "E",
             "pts": 4,
-            "why": "beat \u00b7 EPS surprise +22.0% (morning export)"
+            "why": "beat \u00b7 EPS surprise +64.4% (morning export)"
           },
           {
             "k": "R",
@@ -2052,14 +2052,14 @@
         "why": [
           "Weather S=None. Not a sit morning \u2014 still ranked.",
           "+8 +5 \u22121 cameras",
-          "+4 beat \u00b7 EPS surprise +22.0% (morning export)",
+          "+4 beat \u00b7 EPS surprise +64.4% (morning export)",
           "+2 buy-side recom 1.0 (level, not a change \u00b7 morning export)",
           "+1 join green",
           "+1 peer green",
           "-1 yday -20.9%",
           "Weather cameras (not in idio score): gen bad",
-          "News: neutral \u2014 AngioDynamics to Report Fiscal 2027 First Quarter Results on October 8, 2026",
-          "beat \u00b7 EPS surprise +22.0% (morning export)",
+          "News: neutral \u2014 AngioDynamics, Inc. Q1 2027 Earnings Call Summary",
+          "beat \u00b7 EPS surprise +64.4% (morning export)",
           "Tape RSI 17 OS \u00b7 MACD hist -0.3588",
           "Side lean: long \u00b7 idio +16"
         ],
@@ -2124,7 +2124,7 @@
           {
             "k": "R",
             "pts": 2,
-            "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
+            "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
           },
           {
             "k": "join",
@@ -2153,7 +2153,7 @@
           "Weather S=None. Not a sit morning \u2014 still ranked.",
           "+8 +5 \u22121 cameras",
           "+4 beat \u00b7 EPS surprise +59.4% (morning export)",
-          "+2 buy-side recom 1.8 (level, not a change \u00b7 morning export)",
+          "+2 buy-side recom 1.6 (level, not a change \u00b7 morning export)",
           "+1 join green",
           "+1 peer green",
           "-1 yday -1.3%",
@@ -2280,7 +2280,7 @@
         "e_label": "beat \u00b7 EPS surprise +49.1% (morning export)",
         "r_pol": "neutral",
         "news_tone": "neutral",
-        "headline": "These beaten-down stocks could bounce back in January, if history is any guide",
+        "headline": "ADC Therapeutics Announces Comprehensive Strategic Financial Restructuring Marking Key Capital Structure Improvements",
         "yday_ret": 11.97,
         "rsi": 70.81,
         "macd_hist": 0.0325,
@@ -2364,7 +2364,7 @@
           "+1 yday +12.0%",
           "+1 MACD hist + / X+",
           "Weather cameras (not in idio score): gen bad",
-          "News: neutral \u2014 These beaten-down stocks could bounce back in January, if history is any guide",
+          "News: neutral \u2014 ADC Therapeutics Announces Comprehensive Strategic Financial Restructuring Marking Key Capital Structure Improvements",
           "beat \u00b7 EPS surprise +49.1% (morning export)",
           "Tape RSI 71 OB \u00b7 MACD hist 0.0325",
           "Side lean: long \u00b7 idio +14"
@@ -2598,7 +2598,7 @@
         "e_label": "beat \u00b7 EPS surprise +5.9% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "HAE, TWST Stocks Jump To Over 5-Year Highs  Whats Driving The Gains Today?",
+        "headline": "HAE, PCRX Stocks Hit Multi-Year Highs Amid Broader Market Selloff  Whats Driving The Momentum Today?",
         "yday_ret": 17.46,
         "rsi": 76.59,
         "macd_hist": 0.1316,
@@ -2692,7 +2692,7 @@
           "+1 join green",
           "-1 peer red",
           "Weather cameras (not in idio score): gen bad",
-          "News: neutral \u2014 HAE, TWST Stocks Jump To Over 5-Year Highs  Whats Driving The Gains Today?",
+          "News: neutral \u2014 HAE, PCRX Stocks Hit Multi-Year Highs Amid Broader Market Selloff  Whats Driving The Momentum Today?",
           "beat \u00b7 EPS surprise +5.9% (morning export)",
           "Tape RSI 77 OB \u00b7 MACD hist 0.1316",
           "Side lean: long \u00b7 idio +13"
@@ -2822,7 +2822,7 @@
         "e_label": "miss \u00b7 EPS surprise -8477.0% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Sharon AI Collaborates with VAST Data on the Launch of DataEnclave, Bringing Leading AI Models to Customer Controlled Infrastructure",
+        "headline": "Sharon AI Enters Into GPU-Backed Debt Facility, Expanding Funding Flexibility for AI Factory Deployments",
         "yday_ret": -13.45,
         "rsi": 30.09,
         "macd_hist": -1.3872,
@@ -2901,7 +2901,7 @@
           "-1 join red",
           "-1 yday -13.4%",
           "Weather cameras (not in idio score): gen bad, sector bad",
-          "News: neutral \u2014 Sharon AI Collaborates with VAST Data on the Launch of DataEnclave, Bringing Leading AI Models to Customer Controlled In",
+          "News: neutral \u2014 Sharon AI Enters Into GPU-Backed Debt Facility, Expanding Funding Flexibility for AI Factory Deployments",
           "miss \u00b7 EPS surprise -8477.0% (morning export)",
           "Tape RSI 30 \u00b7 MACD hist -1.3872",
           "Side lean: short \u00b7 idio -17"
@@ -2923,7 +2923,7 @@
         "e_label": "miss \u00b7 EPS surprise -730.8% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Why Wall Street is Bullish On The AI Service Market",
+        "headline": "Boost Run Soars 11% on $526 Million Sovereign AI Cloud Deal: An Important Step",
         "yday_ret": -12.0,
         "rsi": 32.73,
         "macd_hist": -0.2583,
@@ -3002,7 +3002,7 @@
           "-1 join red",
           "-1 yday -12.0%",
           "Weather cameras (not in idio score): gen bad, sector bad",
-          "News: neutral \u2014 Why Wall Street is Bullish On The AI Service Market",
+          "News: neutral \u2014 Boost Run Soars 11% on $526 Million Sovereign AI Cloud Deal: An Important Step",
           "miss \u00b7 EPS surprise -730.8% (morning export)",
           "Tape RSI 33 \u00b7 MACD hist -0.2583",
           "Side lean: short \u00b7 idio -15"
@@ -3024,7 +3024,7 @@
         "e_label": "miss \u00b7 EPS surprise -19.0% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Montana 'Exporter of the Year' Proves Global Trade Drives Local Success",
+        "headline": "What Could Send MercadoLibre Stock Higher?",
         "yday_ret": 4.05,
         "rsi": 61.05,
         "macd_hist": 0.1936,
@@ -3108,7 +3108,7 @@
           "-1 peer red",
           "+1 yday +4.0%",
           "Weather cameras (not in idio score): gen bad, sector bad",
-          "News: neutral \u2014 Montana 'Exporter of the Year' Proves Global Trade Drives Local Success",
+          "News: neutral \u2014 What Could Send MercadoLibre Stock Higher?",
           "miss \u00b7 EPS surprise -19.0% (morning export)",
           "Tape RSI 61 \u00b7 MACD hist 0.1936",
           "Side lean: short \u00b7 idio -14"
@@ -3130,7 +3130,7 @@
         "e_label": "miss \u00b7 EPS surprise -3.3% (morning export)",
         "r_pol": "neutral",
         "news_tone": "bad",
-        "headline": "What Are Accenture Stock Bears Missing?",
+        "headline": "What Would It Take For AI Price Cuts To Break Accenture Stock?",
         "yday_ret": 2.91,
         "rsi": 64.22,
         "macd_hist": 0.1386,
@@ -3214,7 +3214,7 @@
           "-1 peer red",
           "+1 yday +2.9%",
           "Weather cameras (not in idio score): gen bad, sector bad",
-          "News: bad \u2014 What Are Accenture Stock Bears Missing?",
+          "News: bad \u2014 What Would It Take For AI Price Cuts To Break Accenture Stock?",
           "miss \u00b7 EPS surprise -3.3% (morning export)",
           "Tape RSI 64 \u00b7 MACD hist 0.1386",
           "Side lean: short \u00b7 idio -12"
@@ -3331,7 +3331,7 @@
         "e_label": "miss \u00b7 EPS surprise -8.9% (morning export)",
         "r_pol": "good",
         "news_tone": "good",
-        "headline": "Flutter Stock Sinks After Brazil Bans Online Betting",
+        "headline": "Beaten-Down Flutter Entertainment Stock Upgraded",
         "yday_ret": 7.55,
         "rsi": 42.99,
         "macd_hist": 0.0336,
@@ -3375,7 +3375,7 @@
           {
             "k": "R",
             "pts": 2,
-            "why": "buy-side recom 1.7 (level, not a change \u00b7 morning export)"
+            "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
           },
           {
             "k": "news",
@@ -3415,12 +3415,12 @@
           "Weather S=None. Not a sit morning \u2014 still ranked.",
           "-10 +1 \u22126 cameras",
           "-4 miss \u00b7 EPS surprise -8.9% (morning export)",
-          "+2 buy-side recom 1.7 (level, not a change \u00b7 morning export)",
+          "+2 buy-side recom 1.6 (level, not a change \u00b7 morning export)",
           "+2 news camera green",
           "-1 join red",
           "-1 peer red",
           "Weather cameras (not in idio score): gen bad, sector bad",
-          "News: good \u2014 Flutter Stock Sinks After Brazil Bans Online Betting",
+          "News: good \u2014 Beaten-Down Flutter Entertainment Stock Upgraded",
           "miss \u00b7 EPS surprise -8.9% (morning export)",
           "Tape RSI 43 \u00b7 MACD hist 0.0336",
           "Side lean: short \u00b7 idio -10"
@@ -3442,7 +3442,7 @@
         "e_label": "miss \u00b7 EPS surprise -1450.0% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Cathie Wood Brings $1.3 Billion Fund Holding SpaceX and OpenAI Onchain",
+        "headline": "Securitize Soars 12% on Onchain US Stocks Launch: More Than a Price on a Wrapper",
         "yday_ret": 11.05,
         "rsi": 54.58,
         "macd_hist": -0.4045,
@@ -3487,7 +3487,7 @@
           {
             "k": "R",
             "pts": 2,
-            "why": "buy-side recom 1.0 (level, not a change \u00b7 morning export)"
+            "why": "buy-side recom 1.3 (level, not a change \u00b7 morning export)"
           },
           {
             "k": "join",
@@ -3512,11 +3512,11 @@
           "Weather S=None. Not a sit morning \u2014 still ranked.",
           "-8 +2 \u22126 cameras",
           "-4 miss \u00b7 EPS surprise -1450.0% (morning export)",
-          "+2 buy-side recom 1.0 (level, not a change \u00b7 morning export)",
+          "+2 buy-side recom 1.3 (level, not a change \u00b7 morning export)",
           "-1 join red",
           "+1 yday +11.1%",
           "Weather cameras (not in idio score): gen bad, sector bad",
-          "News: neutral \u2014 Cathie Wood Brings $1.3 Billion Fund Holding SpaceX and OpenAI Onchain",
+          "News: neutral \u2014 Securitize Soars 12% on Onchain US Stocks Launch: More Than a Price on a Wrapper",
           "miss \u00b7 EPS surprise -1450.0% (morning export)",
           "Tape RSI 55 \u00b7 MACD hist -0.4045",
           "Side lean: short \u00b7 idio -10"
@@ -3529,7 +3529,7 @@
         "h5_date": null
       }
     ],
-    "n_long_ok": 35,
+    "n_long_ok": 33,
     "n_short_ok": 20,
     "all_top": [
       {
@@ -3542,7 +3542,7 @@
         "e_label": "beat \u00b7 EPS surprise +17.4% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Did PACS Group, Inc. Insiders Breach their Fiduciary Duties to Shareholders?",
+        "headline": "Omega to Transition Operations of 32 Facilities in Florida to PACS Group",
         "yday_ret": 1.25,
         "rsi": 55.73,
         "macd_hist": 0.2605,
@@ -3626,7 +3626,7 @@
         "e_label": "beat \u00b7 EPS surprise +12.9% (morning export)",
         "r_pol": "neutral",
         "news_tone": "neutral",
-        "headline": "Pacira BioSciences Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+        "headline": "Viatris to acquire Pacira BioSciences for $1.65 billion",
         "yday_ret": 44.4,
         "rsi": 85.07,
         "macd_hist": 0.7342,
@@ -3713,10 +3713,10 @@
         "n_pos": 5,
         "n_neg": 1,
         "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +22.0% (morning export)",
+        "e_label": "beat \u00b7 EPS surprise +64.4% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "AngioDynamics to Report Fiscal 2027 First Quarter Results on October 8, 2026",
+        "headline": "AngioDynamics, Inc. Q1 2027 Earnings Call Summary",
         "yday_ret": -20.86,
         "rsi": 16.88,
         "macd_hist": -0.3588,
@@ -3755,7 +3755,7 @@
           {
             "k": "E",
             "pts": 4,
-            "why": "beat \u00b7 EPS surprise +22.0% (morning export)"
+            "why": "beat \u00b7 EPS surprise +64.4% (morning export)"
           },
           {
             "k": "R",
@@ -3844,7 +3844,7 @@
           {
             "k": "R",
             "pts": 2,
-            "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
+            "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
           },
           {
             "k": "join",
@@ -3958,7 +3958,7 @@
         "e_label": "beat \u00b7 EPS surprise +49.1% (morning export)",
         "r_pol": "neutral",
         "news_tone": "neutral",
-        "headline": "These beaten-down stocks could bounce back in January, if history is any guide",
+        "headline": "ADC Therapeutics Announces Comprehensive Strategic Financial Restructuring Marking Key Capital Structure Improvements",
         "yday_ret": 11.97,
         "rsi": 70.81,
         "macd_hist": 0.0325,
@@ -4213,7 +4213,7 @@
         "e_label": "beat \u00b7 EPS surprise +5.9% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "HAE, TWST Stocks Jump To Over 5-Year Highs  Whats Driving The Gains Today?",
+        "headline": "HAE, PCRX Stocks Hit Multi-Year Highs Amid Broader Market Selloff  Whats Driving The Momentum Today?",
         "yday_ret": 17.46,
         "rsi": 76.59,
         "macd_hist": 0.1316,
@@ -4308,7 +4308,7 @@
         "e_label": "beat \u00b7 EPS surprise +2.8% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Nike Stock Has Dropped 44% This Year. Why Jefferies Says to Buy the Dip.",
+        "headline": "Nike and LVMH Took China for Granted-and Both Stocks Are Paying the Price",
         "yday_ret": 2.47,
         "rsi": 73.61,
         "macd_hist": 0.6945,
@@ -4403,7 +4403,7 @@
         "e_label": "beat \u00b7 EPS surprise +20.5% (morning export)",
         "r_pol": "neutral",
         "news_tone": "good",
-        "headline": "WhiteHawk Completes Acquisition of Appalachia, Haynesville Gas Assets",
+        "headline": "Range Announces Conference Call to Discuss Third Quarter 2026 Financial Results",
         "yday_ret": 2.36,
         "rsi": 58.68,
         "macd_hist": 0.2609,
@@ -4650,7 +4650,7 @@
         "e_label": "beat \u00b7 EPS surprise +75.0% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Freshpet, Inc. to Participate in the Barclays 19th Annual Global Consumer Conference",
+        "headline": "Exxon Mobil downgraded, BP upgraded: Wall Street's top analyst calls",
         "yday_ret": 3.05,
         "rsi": 60.05,
         "macd_hist": 0.8591,
@@ -4694,7 +4694,7 @@
           {
             "k": "R",
             "pts": 2,
-            "why": "buy-side recom 1.7 (level, not a change \u00b7 morning export)"
+            "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
           },
           {
             "k": "join",
@@ -4811,100 +4811,16 @@
         "h5": null
       },
       {
-        "ticker": "PBF",
-        "date": "2026-10-09",
-        "idio": 10,
-        "n_pos": 4,
-        "n_neg": 2,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +49.9% (morning export)",
-        "r_pol": "neutral",
-        "news_tone": "neutral",
-        "headline": "PBF Energy to Release Third Quarter 2026 Earnings Results",
-        "yday_ret": 6.76,
-        "rsi": 70.85,
-        "macd_hist": 1.1702,
-        "flow_in": false,
-        "white": false,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "ohlc_hot"
-        ],
-        "open": 88.29,
-        "close": 84.2699966430664,
-        "day_pct": -4.55,
-        "boxes": {
-          "join": "good",
-          "sector": "neutral",
-          "gen": "bad",
-          "news": "neutral",
-          "digest": "good",
-          "judge": "missing",
-          "ab": "good",
-          "peer": "good",
-          "heat": "bad",
-          "vol": "neutral",
-          "catal": "missing",
-          "buy": "neutral",
-          "yday": "missing"
-        },
-        "domains": null,
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": 4,
-            "why": "+4 \u22122 cameras"
-          },
-          {
-            "k": "E",
-            "pts": 4,
-            "why": "beat \u00b7 EPS surprise +49.9% (morning export)"
-          },
-          {
-            "k": "join",
-            "pts": 1,
-            "why": "join green"
-          },
-          {
-            "k": "peer",
-            "pts": 1,
-            "why": "peer green"
-          },
-          {
-            "k": "yday",
-            "pts": 1,
-            "why": "yday +6.8%"
-          },
-          {
-            "k": "macd",
-            "pts": 1,
-            "why": "MACD hist + / X+"
-          },
-          {
-            "k": "rsi",
-            "pts": -2,
-            "why": "RSI 71 OB \u2014 pause longs"
-          }
-        ],
-        "weather": [
-          "gen bad"
-        ],
-        "h1": null,
-        "h3": null,
-        "h5": null
-      },
-      {
         "ticker": "STZ",
         "date": "2026-10-09",
         "idio": 10,
         "n_pos": 5,
         "n_neg": 3,
         "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +7.4% (morning export)",
+        "e_label": "beat \u00b7 EPS surprise +5.3% (morning export)",
         "r_pol": "neutral",
         "news_tone": "neutral",
-        "headline": "6 food manufacturers talk supply chain tactics",
+        "headline": "Stocktwits Wall Street Wrap: Analysts Turn Bullish On Palantir, Marvell And Cava As Nike Faces Downgrade",
         "yday_ret": 4.43,
         "rsi": 59.08,
         "macd_hist": 1.1239,
@@ -4943,7 +4859,7 @@
           {
             "k": "E",
             "pts": 4,
-            "why": "beat \u00b7 EPS surprise +7.4% (morning export)"
+            "why": "beat \u00b7 EPS surprise +5.3% (morning export)"
           },
           {
             "k": "join",
@@ -5144,7 +5060,7 @@
         "e_label": "beat \u00b7 EPS surprise +47.4% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Revisiting Former Stock Picks Vita Coco, Idacorp, Subaru",
+        "headline": "Exxon Mobil downgraded, BP upgraded: Wall Street's top analyst calls",
         "yday_ret": 10.52,
         "rsi": 47.25,
         "macd_hist": -0.0486,
@@ -5189,7 +5105,7 @@
           {
             "k": "R",
             "pts": 2,
-            "why": "buy-side recom 1.7 (level, not a change \u00b7 morning export)"
+            "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
           },
           {
             "k": "join",
@@ -5269,7 +5185,7 @@
           {
             "k": "R",
             "pts": 2,
-            "why": "buy-side recom 1.5 (level, not a change \u00b7 morning export)"
+            "why": "buy-side recom 1.7 (level, not a change \u00b7 morning export)"
           },
           {
             "k": "join",
@@ -5306,100 +5222,6 @@
         "h5": null
       },
       {
-        "ticker": "DAL",
-        "date": "2026-10-09",
-        "idio": 8,
-        "n_pos": 4,
-        "n_neg": 4,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +4.5% (morning export)",
-        "r_pol": "good",
-        "news_tone": "bad",
-        "headline": "DAL Stock In Focus: Elon Musk Takes Aim At Delta Over Starlink As United Airlines Expands In-Flight WiFi",
-        "yday_ret": -1.0,
-        "rsi": 48.17,
-        "macd_hist": 0.1215,
-        "flow_in": false,
-        "white": false,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "earn_react"
-        ],
-        "open": 79.68,
-        "close": 82.16999816894531,
-        "day_pct": 3.12,
-        "boxes": {
-          "join": "good",
-          "sector": "neutral",
-          "gen": "bad",
-          "news": "bad",
-          "digest": "bad",
-          "judge": "missing",
-          "ab": "good",
-          "peer": "good",
-          "heat": "bad",
-          "vol": "good",
-          "catal": "missing",
-          "buy": "neutral",
-          "yday": "missing"
-        },
-        "domains": null,
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": 0,
-            "why": "+4 \u22124 cameras"
-          },
-          {
-            "k": "E",
-            "pts": 4,
-            "why": "beat \u00b7 EPS surprise +4.5% (morning export)"
-          },
-          {
-            "k": "R",
-            "pts": 2,
-            "why": "buy-side recom 1.3 (level, not a change \u00b7 morning export)"
-          },
-          {
-            "k": "news",
-            "pts": -2,
-            "why": "news camera red"
-          },
-          {
-            "k": "join",
-            "pts": 1,
-            "why": "join green"
-          },
-          {
-            "k": "peer",
-            "pts": 1,
-            "why": "peer green"
-          },
-          {
-            "k": "catalyst",
-            "pts": 2,
-            "why": "catalyst / earn-react"
-          },
-          {
-            "k": "yday",
-            "pts": -1,
-            "why": "yday -1.0%"
-          },
-          {
-            "k": "macd",
-            "pts": 1,
-            "why": "MACD hist + / X+"
-          }
-        ],
-        "weather": [
-          "gen bad"
-        ],
-        "h1": null,
-        "h3": null,
-        "h5": null
-      },
-      {
         "ticker": "HAFN",
         "date": "2026-10-09",
         "idio": 8,
@@ -5409,7 +5231,7 @@
         "e_label": "miss \u00b7 EPS surprise -10.0% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "HAFNIA LIMITED: Public Filing of Prospectus Supplement in Connection with the Offering",
+        "headline": "HAFNIA LIMITED: Share Capital Increase Registered",
         "yday_ret": 5.03,
         "rsi": 73.76,
         "macd_hist": 0.056,
@@ -5453,7 +5275,7 @@
           {
             "k": "R",
             "pts": 2,
-            "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
+            "why": "buy-side recom 1.4 (level, not a change \u00b7 morning export)"
           },
           {
             "k": "join",
@@ -5489,81 +5311,6 @@
         "h5": null
       },
       {
-        "ticker": "CSGP",
-        "date": "2026-10-09",
-        "idio": 7,
-        "n_pos": 3,
-        "n_neg": 3,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +12.0% (morning export)",
-        "r_pol": "neutral",
-        "news_tone": "neutral",
-        "headline": "Tampa, Columbus Lead US Small-Bay Industrial Ranking",
-        "yday_ret": 8.01,
-        "rsi": 55.86,
-        "macd_hist": 0.1396,
-        "flow_in": false,
-        "white": false,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "yday_gainer"
-        ],
-        "open": 30.02,
-        "close": 29.670000076293945,
-        "day_pct": -1.17,
-        "boxes": {
-          "join": "good",
-          "sector": "bad",
-          "gen": "bad",
-          "news": "neutral",
-          "digest": "bad",
-          "judge": "missing",
-          "ab": "good",
-          "peer": "neutral",
-          "heat": "good",
-          "vol": "neutral",
-          "catal": "missing",
-          "buy": "neutral",
-          "yday": "missing"
-        },
-        "domains": null,
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": 0,
-            "why": "+3 \u22123 cameras"
-          },
-          {
-            "k": "E",
-            "pts": 4,
-            "why": "beat \u00b7 EPS surprise +12.0% (morning export)"
-          },
-          {
-            "k": "join",
-            "pts": 1,
-            "why": "join green"
-          },
-          {
-            "k": "yday",
-            "pts": 1,
-            "why": "yday +8.0%"
-          },
-          {
-            "k": "macd",
-            "pts": 1,
-            "why": "MACD hist + / X+"
-          }
-        ],
-        "weather": [
-          "gen bad",
-          "sector bad"
-        ],
-        "h1": null,
-        "h3": null,
-        "h5": null
-      },
-      {
         "ticker": "GAU",
         "date": "2026-10-09",
         "idio": 7,
@@ -5573,7 +5320,7 @@
         "e_label": "beat \u00b7 EPS surprise +135.9% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Galiano Gold Inc (GAU) (Q2 2026) Earnings Call Highlights: Record Revenue and Strategic ...",
+        "headline": "Galiano Gold Secures Long-Term Extension of Key Mining Leases at the Asanko Gold Mine",
         "yday_ret": 7.69,
         "rsi": 52.31,
         "macd_hist": 0.0018,
@@ -5818,7 +5565,7 @@
         "e_label": "beat \u00b7 EPS surprise +0.7% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Maximus, Inc. Q3 2026 Earnings Call Summary",
+        "headline": "Maximus Schedules Fiscal 2026 Fourth Quarter and Year End Conference Call",
         "yday_ret": 5.61,
         "rsi": 62.88,
         "macd_hist": 0.4861,
@@ -5893,6 +5640,85 @@
         "h5": null
       },
       {
+        "ticker": "PBF",
+        "date": "2026-10-09",
+        "idio": 6,
+        "n_pos": 4,
+        "n_neg": 2,
+        "e_pol": "neutral",
+        "e_label": "E 71 sess ago \u00b7 polarity unknown (export stamped the date, not beat/miss)",
+        "r_pol": "neutral",
+        "news_tone": "neutral",
+        "headline": "Insiders Are Selling Refiners and Skipping Banks. What Should Investors Do?",
+        "yday_ret": 6.76,
+        "rsi": 70.85,
+        "macd_hist": 1.1702,
+        "flow_in": false,
+        "white": false,
+        "alarm": false,
+        "on_list": true,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "open": 88.29,
+        "close": 84.2699966430664,
+        "day_pct": -4.55,
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "bad",
+          "news": "neutral",
+          "digest": "good",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "bad",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "missing"
+        },
+        "domains": null,
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 4,
+            "why": "+4 \u22122 cameras"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": 1,
+            "why": "yday +6.8%"
+          },
+          {
+            "k": "macd",
+            "pts": 1,
+            "why": "MACD hist + / X+"
+          },
+          {
+            "k": "rsi",
+            "pts": -2,
+            "why": "RSI 71 OB \u2014 pause longs"
+          }
+        ],
+        "weather": [
+          "gen bad"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null
+      },
+      {
         "ticker": "GLAS",
         "date": "2026-10-09",
         "idio": 5,
@@ -5902,7 +5728,7 @@
         "e_label": "beat \u00b7 EPS surprise +8.7% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Glass House Brands Releases Mama Sue Professional Athlete Balm for Sale in California",
+        "headline": "Glass House Brands Announces Planned Retirement of Chief Financial Officer",
         "yday_ret": -14.04,
         "rsi": 14.31,
         "macd_hist": -0.1808,
@@ -6061,7 +5887,7 @@
         "e_label": "beat \u00b7 EPS surprise +40.8% (morning export)",
         "r_pol": "neutral",
         "news_tone": "neutral",
-        "headline": "What Are You Actually Paying For In Cava Stock?",
+        "headline": "The Chipotle Effect: Jersey Mike's, Shake Shack Stocks Rise on Rival's Takeover Report",
         "yday_ret": 4.89,
         "rsi": 63.05,
         "macd_hist": 1.3276,
@@ -6259,7 +6085,7 @@
           {
             "k": "R",
             "pts": 2,
-            "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
+            "why": "buy-side recom 1.7 (level, not a change \u00b7 morning export)"
           },
           {
             "k": "join",
@@ -6291,91 +6117,6 @@
         "h5": null
       },
       {
-        "ticker": "WING",
-        "date": "2026-10-09",
-        "idio": 4,
-        "n_pos": 2,
-        "n_neg": 4,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +15.4% (morning export)",
-        "r_pol": "good",
-        "news_tone": "neutral",
-        "headline": "Wingstop Announces the Game Day Punch Card",
-        "yday_ret": 1.56,
-        "rsi": 61.21,
-        "macd_hist": 2.3123,
-        "flow_in": false,
-        "white": false,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "ohlc_hot"
-        ],
-        "open": 120.32,
-        "close": 122.26000213623047,
-        "day_pct": 1.61,
-        "boxes": {
-          "join": "neutral",
-          "sector": "bad",
-          "gen": "bad",
-          "news": "neutral",
-          "digest": "bad",
-          "judge": "missing",
-          "ab": "good",
-          "peer": "bad",
-          "heat": "good",
-          "vol": "neutral",
-          "catal": "missing",
-          "buy": "neutral",
-          "yday": "missing"
-        },
-        "domains": null,
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": -4,
-            "why": "+2 \u22124 cameras"
-          },
-          {
-            "k": "E",
-            "pts": 4,
-            "why": "beat \u00b7 EPS surprise +15.4% (morning export)"
-          },
-          {
-            "k": "R",
-            "pts": 2,
-            "why": "buy-side recom 1.5 (level, not a change \u00b7 morning export)"
-          },
-          {
-            "k": "peer",
-            "pts": -1,
-            "why": "peer red"
-          },
-          {
-            "k": "yday",
-            "pts": 1,
-            "why": "yday +1.6%"
-          },
-          {
-            "k": "macd",
-            "pts": 1,
-            "why": "MACD hist + / X+"
-          },
-          {
-            "k": "burst",
-            "pts": 1,
-            "why": "parabolic prior tape"
-          }
-        ],
-        "weather": [
-          "gen bad",
-          "sector bad"
-        ],
-        "h1": null,
-        "h3": null,
-        "h5": null
-      },
-      {
         "ticker": "CATX",
         "date": "2026-10-09",
         "idio": 3,
@@ -6385,7 +6126,7 @@
         "e_label": "beat \u00b7 EPS surprise +12.4% (morning export)",
         "r_pol": "good",
         "news_tone": "neutral",
-        "headline": "Perspective Therapeutics Announces Clinical Collaboration and Supply Agreement with Merck to Evaluate [212Pb]PSV359 in Combination with Keytruda (Pembrolizumab)",
+        "headline": "Perspective Therapeutics Granted Fast Track Designation for [212Pb]PSV359 for the Treatment of Adult Patients with Locally Advanced Unresectable and/or Metastat",
         "yday_ret": 10.16,
         "rsi": 48.35,
         "macd_hist": -0.0004,
@@ -6456,6 +6197,76 @@
         "h5": null
       },
       {
+        "ticker": "CSGP",
+        "date": "2026-10-09",
+        "idio": 3,
+        "n_pos": 3,
+        "n_neg": 3,
+        "e_pol": "neutral",
+        "e_label": "E 73 sess ago \u00b7 polarity unknown (export stamped the date, not beat/miss)",
+        "r_pol": "neutral",
+        "news_tone": "neutral",
+        "headline": "U.S. Office Leasing Volume Lags Historical Norm Despite Recent Recovery",
+        "yday_ret": 8.01,
+        "rsi": 55.86,
+        "macd_hist": 0.1396,
+        "flow_in": false,
+        "white": false,
+        "alarm": false,
+        "on_list": true,
+        "sources": [
+          "yday_gainer"
+        ],
+        "open": 30.02,
+        "close": 29.670000076293945,
+        "day_pct": -1.17,
+        "boxes": {
+          "join": "good",
+          "sector": "bad",
+          "gen": "bad",
+          "news": "neutral",
+          "digest": "bad",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "neutral",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "missing"
+        },
+        "domains": null,
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 0,
+            "why": "+3 \u22123 cameras"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "yday",
+            "pts": 1,
+            "why": "yday +8.0%"
+          },
+          {
+            "k": "macd",
+            "pts": 1,
+            "why": "MACD hist + / X+"
+          }
+        ],
+        "weather": [
+          "gen bad",
+          "sector bad"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null
+      },
+      {
         "ticker": "GENI",
         "date": "2026-10-09",
         "idio": 3,
@@ -6465,7 +6276,7 @@
         "e_label": "miss \u00b7 EPS surprise -306.4% (morning export)",
         "r_pol": "good",
         "news_tone": "good",
-        "headline": "Genius Sports Notes Limited Impact from Brazil's New Betting Regulations and Reaffirms 2026 Guidance",
+        "headline": "Snorkel AI Raises $350 Million to Help Push the Frontier: NYSE Content Update",
         "yday_ret": 4.57,
         "rsi": 52.86,
         "macd_hist": 0.0912,
@@ -6727,7 +6538,7 @@
         "e_label": "inline \u00b7 EPS surprise +0.0% (morning export)",
         "r_pol": "neutral",
         "news_tone": "neutral",
-        "headline": "PacBio to Participate in the Morgan Stanley 24?? Annual Global Healthcare Conference",
+        "headline": "PacBio Sinks 8% as TychoBio Endorses Its Highest Quality Biological Data  the Real Story Is More Complicated",
         "yday_ret": -15.44,
         "rsi": 61.79,
         "macd_hist": 0.0861,
@@ -6801,7 +6612,7 @@
         "e_label": "beat \u00b7 EPS surprise +24.3% (morning export)",
         "r_pol": "neutral",
         "news_tone": "neutral",
-        "headline": "These Energy Stocks Just Delivered Massive September Gains",
+        "headline": "Why Did VLO, MPC, PSX Stocks Jump To 52-Week Highs Today?",
         "yday_ret": 4.77,
         "rsi": 79.58,
         "macd_hist": 3.8004,
@@ -6871,6 +6682,179 @@
             "k": "rsi",
             "pts": -2,
             "why": "RSI 80 OB \u2014 pause longs"
+          }
+        ],
+        "weather": [
+          "gen bad"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null
+      },
+      {
+        "ticker": "DAL",
+        "date": "2026-10-09",
+        "idio": 0,
+        "n_pos": 4,
+        "n_neg": 4,
+        "e_pol": "bad",
+        "e_label": "miss \u00b7 EPS surprise -3.1% (morning export)",
+        "r_pol": "good",
+        "news_tone": "bad",
+        "headline": "Delta Air Lines Stock Has Risen Above Sector Turbulence. Its Earnings Face 1 Big Question.",
+        "yday_ret": -1.0,
+        "rsi": 48.17,
+        "macd_hist": 0.1215,
+        "flow_in": false,
+        "white": false,
+        "alarm": false,
+        "on_list": true,
+        "sources": [
+          "earn_react"
+        ],
+        "open": 79.68,
+        "close": 82.16999816894531,
+        "day_pct": 3.12,
+        "boxes": {
+          "join": "good",
+          "sector": "neutral",
+          "gen": "bad",
+          "news": "bad",
+          "digest": "bad",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "bad",
+          "vol": "good",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "missing"
+        },
+        "domains": null,
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 0,
+            "why": "+4 \u22124 cameras"
+          },
+          {
+            "k": "E",
+            "pts": -4,
+            "why": "miss \u00b7 EPS surprise -3.1% (morning export)"
+          },
+          {
+            "k": "R",
+            "pts": 2,
+            "why": "buy-side recom 1.3 (level, not a change \u00b7 morning export)"
+          },
+          {
+            "k": "news",
+            "pts": -2,
+            "why": "news camera red"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "catalyst",
+            "pts": 2,
+            "why": "catalyst / earn-react"
+          },
+          {
+            "k": "yday",
+            "pts": -1,
+            "why": "yday -1.0%"
+          },
+          {
+            "k": "macd",
+            "pts": 1,
+            "why": "MACD hist + / X+"
+          }
+        ],
+        "weather": [
+          "gen bad"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null
+      },
+      {
+        "ticker": "EQPT",
+        "date": "2026-10-09",
+        "idio": 0,
+        "n_pos": 2,
+        "n_neg": 3,
+        "e_pol": "good",
+        "e_label": "beat \u00b7 EPS surprise +403.0% (morning export)",
+        "r_pol": "good",
+        "news_tone": "bad",
+        "headline": "EquipmentShare Breaks Ground on Headquarters Expansion in Columbia, Missouri",
+        "yday_ret": -11.43,
+        "rsi": 37.53,
+        "macd_hist": -0.0838,
+        "flow_in": false,
+        "white": false,
+        "alarm": false,
+        "on_list": true,
+        "sources": [
+          "yday_mover"
+        ],
+        "open": 15.81,
+        "close": 15.085000038146973,
+        "day_pct": -4.59,
+        "boxes": {
+          "join": "bad",
+          "sector": "neutral",
+          "gen": "bad",
+          "news": "bad",
+          "digest": "neutral",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "missing",
+          "heat": "bad",
+          "vol": "good",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "missing"
+        },
+        "domains": null,
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": -2,
+            "why": "+2 \u22123 cameras"
+          },
+          {
+            "k": "E",
+            "pts": 4,
+            "why": "beat \u00b7 EPS surprise +403.0% (morning export)"
+          },
+          {
+            "k": "R",
+            "pts": 2,
+            "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
+          },
+          {
+            "k": "news",
+            "pts": -2,
+            "why": "news camera red"
+          },
+          {
+            "k": "join",
+            "pts": -1,
+            "why": "join red"
+          },
+          {
+            "k": "yday",
+            "pts": -1,
+            "why": "yday -11.4%"
           }
         ],
         "weather": [
@@ -71835,7 +71819,7 @@
           "weather": [
             "gen bad"
           ],
-          "h1": null,
+          "h1": 0.83,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -71853,7 +71837,7 @@
             "Tape RSI 62 \u00b7 MACD hist 0.0168",
             "Side lean: short \u00b7 idio -13"
           ],
-          "h1_px": null,
+          "h1_px": 1.19,
           "h1_date": "2026-10-09",
           "h3_px": null,
           "h3_date": null,
@@ -72192,7 +72176,7 @@
           "e_label": "beat \u00b7 EPS surprise +17.4% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Did PACS Group, Inc. Insiders Breach their Fiduciary Duties to Shareholders?",
+          "headline": "Omega to Transition Operations of 32 Facilities in Florida to PACS Group",
           "yday_ret": 1.25,
           "rsi": 55.73,
           "macd_hist": 0.2605,
@@ -72275,7 +72259,7 @@
             "+1 peer green",
             "+1 yday +1.2%",
             "Weather cameras (not in idio score): gen bad",
-            "News: neutral \u2014 Did PACS Group, Inc. Insiders Breach their Fiduciary Duties to Shareholders?",
+            "News: neutral \u2014 Omega to Transition Operations of 32 Facilities in Florida to PACS Group",
             "beat \u00b7 EPS surprise +17.4% (morning export)",
             "Tape RSI 56 \u00b7 MACD hist 0.2605",
             "Side lean: long \u00b7 idio +20"
@@ -72294,10 +72278,10 @@
           "n_pos": 5,
           "n_neg": 1,
           "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +22.0% (morning export)",
+          "e_label": "beat \u00b7 EPS surprise +64.4% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "AngioDynamics to Report Fiscal 2027 First Quarter Results on October 8, 2026",
+          "headline": "AngioDynamics, Inc. Q1 2027 Earnings Call Summary",
           "yday_ret": -20.86,
           "rsi": 16.88,
           "macd_hist": -0.3588,
@@ -72336,7 +72320,7 @@
             {
               "k": "E",
               "pts": 4,
-              "why": "beat \u00b7 EPS surprise +22.0% (morning export)"
+              "why": "beat \u00b7 EPS surprise +64.4% (morning export)"
             },
             {
               "k": "R",
@@ -72374,14 +72358,14 @@
           "why": [
             "Weather S=None. Not a sit morning \u2014 still ranked.",
             "+8 +5 \u22121 cameras",
-            "+4 beat \u00b7 EPS surprise +22.0% (morning export)",
+            "+4 beat \u00b7 EPS surprise +64.4% (morning export)",
             "+2 buy-side recom 1.0 (level, not a change \u00b7 morning export)",
             "+1 join green",
             "+1 peer green",
             "-1 yday -20.9%",
             "Weather cameras (not in idio score): gen bad",
-            "News: neutral \u2014 AngioDynamics to Report Fiscal 2027 First Quarter Results on October 8, 2026",
-            "beat \u00b7 EPS surprise +22.0% (morning export)",
+            "News: neutral \u2014 AngioDynamics, Inc. Q1 2027 Earnings Call Summary",
+            "beat \u00b7 EPS surprise +64.4% (morning export)",
             "Tape RSI 17 OS \u00b7 MACD hist -0.3588",
             "Side lean: long \u00b7 idio +16"
           ],
@@ -72446,7 +72430,7 @@
             {
               "k": "R",
               "pts": 2,
-              "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
+              "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
             },
             {
               "k": "join",
@@ -72475,7 +72459,7 @@
             "Weather S=None. Not a sit morning \u2014 still ranked.",
             "+8 +5 \u22121 cameras",
             "+4 beat \u00b7 EPS surprise +59.4% (morning export)",
-            "+2 buy-side recom 1.8 (level, not a change \u00b7 morning export)",
+            "+2 buy-side recom 1.6 (level, not a change \u00b7 morning export)",
             "+1 join green",
             "+1 peer green",
             "-1 yday -1.3%",
@@ -72602,7 +72586,7 @@
           "e_label": "beat \u00b7 EPS surprise +49.1% (morning export)",
           "r_pol": "neutral",
           "news_tone": "neutral",
-          "headline": "These beaten-down stocks could bounce back in January, if history is any guide",
+          "headline": "ADC Therapeutics Announces Comprehensive Strategic Financial Restructuring Marking Key Capital Structure Improvements",
           "yday_ret": 11.97,
           "rsi": 70.81,
           "macd_hist": 0.0325,
@@ -72686,7 +72670,7 @@
             "+1 yday +12.0%",
             "+1 MACD hist + / X+",
             "Weather cameras (not in idio score): gen bad",
-            "News: neutral \u2014 These beaten-down stocks could bounce back in January, if history is any guide",
+            "News: neutral \u2014 ADC Therapeutics Announces Comprehensive Strategic Financial Restructuring Marking Key Capital Structure Improvements",
             "beat \u00b7 EPS surprise +49.1% (morning export)",
             "Tape RSI 71 OB \u00b7 MACD hist 0.0325",
             "Side lean: long \u00b7 idio +14"
@@ -72920,7 +72904,7 @@
           "e_label": "beat \u00b7 EPS surprise +5.9% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "HAE, TWST Stocks Jump To Over 5-Year Highs  Whats Driving The Gains Today?",
+          "headline": "HAE, PCRX Stocks Hit Multi-Year Highs Amid Broader Market Selloff  Whats Driving The Momentum Today?",
           "yday_ret": 17.46,
           "rsi": 76.59,
           "macd_hist": 0.1316,
@@ -73014,7 +72998,7 @@
             "+1 join green",
             "-1 peer red",
             "Weather cameras (not in idio score): gen bad",
-            "News: neutral \u2014 HAE, TWST Stocks Jump To Over 5-Year Highs  Whats Driving The Gains Today?",
+            "News: neutral \u2014 HAE, PCRX Stocks Hit Multi-Year Highs Amid Broader Market Selloff  Whats Driving The Momentum Today?",
             "beat \u00b7 EPS surprise +5.9% (morning export)",
             "Tape RSI 77 OB \u00b7 MACD hist 0.1316",
             "Side lean: long \u00b7 idio +13"
@@ -73144,7 +73128,7 @@
           "e_label": "miss \u00b7 EPS surprise -8477.0% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Sharon AI Collaborates with VAST Data on the Launch of DataEnclave, Bringing Leading AI Models to Customer Controlled Infrastructure",
+          "headline": "Sharon AI Enters Into GPU-Backed Debt Facility, Expanding Funding Flexibility for AI Factory Deployments",
           "yday_ret": -13.45,
           "rsi": 30.09,
           "macd_hist": -1.3872,
@@ -73223,7 +73207,7 @@
             "-1 join red",
             "-1 yday -13.4%",
             "Weather cameras (not in idio score): gen bad, sector bad",
-            "News: neutral \u2014 Sharon AI Collaborates with VAST Data on the Launch of DataEnclave, Bringing Leading AI Models to Customer Controlled In",
+            "News: neutral \u2014 Sharon AI Enters Into GPU-Backed Debt Facility, Expanding Funding Flexibility for AI Factory Deployments",
             "miss \u00b7 EPS surprise -8477.0% (morning export)",
             "Tape RSI 30 \u00b7 MACD hist -1.3872",
             "Side lean: short \u00b7 idio -17"
@@ -73245,7 +73229,7 @@
           "e_label": "miss \u00b7 EPS surprise -730.8% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Why Wall Street is Bullish On The AI Service Market",
+          "headline": "Boost Run Soars 11% on $526 Million Sovereign AI Cloud Deal: An Important Step",
           "yday_ret": -12.0,
           "rsi": 32.73,
           "macd_hist": -0.2583,
@@ -73324,7 +73308,7 @@
             "-1 join red",
             "-1 yday -12.0%",
             "Weather cameras (not in idio score): gen bad, sector bad",
-            "News: neutral \u2014 Why Wall Street is Bullish On The AI Service Market",
+            "News: neutral \u2014 Boost Run Soars 11% on $526 Million Sovereign AI Cloud Deal: An Important Step",
             "miss \u00b7 EPS surprise -730.8% (morning export)",
             "Tape RSI 33 \u00b7 MACD hist -0.2583",
             "Side lean: short \u00b7 idio -15"
@@ -73346,7 +73330,7 @@
           "e_label": "miss \u00b7 EPS surprise -19.0% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Montana 'Exporter of the Year' Proves Global Trade Drives Local Success",
+          "headline": "What Could Send MercadoLibre Stock Higher?",
           "yday_ret": 4.05,
           "rsi": 61.05,
           "macd_hist": 0.1936,
@@ -73430,7 +73414,7 @@
             "-1 peer red",
             "+1 yday +4.0%",
             "Weather cameras (not in idio score): gen bad, sector bad",
-            "News: neutral \u2014 Montana 'Exporter of the Year' Proves Global Trade Drives Local Success",
+            "News: neutral \u2014 What Could Send MercadoLibre Stock Higher?",
             "miss \u00b7 EPS surprise -19.0% (morning export)",
             "Tape RSI 61 \u00b7 MACD hist 0.1936",
             "Side lean: short \u00b7 idio -14"
@@ -73452,7 +73436,7 @@
           "e_label": "miss \u00b7 EPS surprise -3.3% (morning export)",
           "r_pol": "neutral",
           "news_tone": "bad",
-          "headline": "What Are Accenture Stock Bears Missing?",
+          "headline": "What Would It Take For AI Price Cuts To Break Accenture Stock?",
           "yday_ret": 2.91,
           "rsi": 64.22,
           "macd_hist": 0.1386,
@@ -73536,7 +73520,7 @@
             "-1 peer red",
             "+1 yday +2.9%",
             "Weather cameras (not in idio score): gen bad, sector bad",
-            "News: bad \u2014 What Are Accenture Stock Bears Missing?",
+            "News: bad \u2014 What Would It Take For AI Price Cuts To Break Accenture Stock?",
             "miss \u00b7 EPS surprise -3.3% (morning export)",
             "Tape RSI 64 \u00b7 MACD hist 0.1386",
             "Side lean: short \u00b7 idio -12"
@@ -73653,7 +73637,7 @@
           "e_label": "miss \u00b7 EPS surprise -8.9% (morning export)",
           "r_pol": "good",
           "news_tone": "good",
-          "headline": "Flutter Stock Sinks After Brazil Bans Online Betting",
+          "headline": "Beaten-Down Flutter Entertainment Stock Upgraded",
           "yday_ret": 7.55,
           "rsi": 42.99,
           "macd_hist": 0.0336,
@@ -73697,7 +73681,7 @@
             {
               "k": "R",
               "pts": 2,
-              "why": "buy-side recom 1.7 (level, not a change \u00b7 morning export)"
+              "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
             },
             {
               "k": "news",
@@ -73737,12 +73721,12 @@
             "Weather S=None. Not a sit morning \u2014 still ranked.",
             "-10 +1 \u22126 cameras",
             "-4 miss \u00b7 EPS surprise -8.9% (morning export)",
-            "+2 buy-side recom 1.7 (level, not a change \u00b7 morning export)",
+            "+2 buy-side recom 1.6 (level, not a change \u00b7 morning export)",
             "+2 news camera green",
             "-1 join red",
             "-1 peer red",
             "Weather cameras (not in idio score): gen bad, sector bad",
-            "News: good \u2014 Flutter Stock Sinks After Brazil Bans Online Betting",
+            "News: good \u2014 Beaten-Down Flutter Entertainment Stock Upgraded",
             "miss \u00b7 EPS surprise -8.9% (morning export)",
             "Tape RSI 43 \u00b7 MACD hist 0.0336",
             "Side lean: short \u00b7 idio -10"
@@ -73764,7 +73748,7 @@
           "e_label": "miss \u00b7 EPS surprise -1450.0% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Cathie Wood Brings $1.3 Billion Fund Holding SpaceX and OpenAI Onchain",
+          "headline": "Securitize Soars 12% on Onchain US Stocks Launch: More Than a Price on a Wrapper",
           "yday_ret": 11.05,
           "rsi": 54.58,
           "macd_hist": -0.4045,
@@ -73809,7 +73793,7 @@
             {
               "k": "R",
               "pts": 2,
-              "why": "buy-side recom 1.0 (level, not a change \u00b7 morning export)"
+              "why": "buy-side recom 1.3 (level, not a change \u00b7 morning export)"
             },
             {
               "k": "join",
@@ -73834,11 +73818,11 @@
             "Weather S=None. Not a sit morning \u2014 still ranked.",
             "-8 +2 \u22126 cameras",
             "-4 miss \u00b7 EPS surprise -1450.0% (morning export)",
-            "+2 buy-side recom 1.0 (level, not a change \u00b7 morning export)",
+            "+2 buy-side recom 1.3 (level, not a change \u00b7 morning export)",
             "-1 join red",
             "+1 yday +11.1%",
             "Weather cameras (not in idio score): gen bad, sector bad",
-            "News: neutral \u2014 Cathie Wood Brings $1.3 Billion Fund Holding SpaceX and OpenAI Onchain",
+            "News: neutral \u2014 Securitize Soars 12% on Onchain US Stocks Launch: More Than a Price on a Wrapper",
             "miss \u00b7 EPS surprise -1450.0% (morning export)",
             "Tape RSI 55 \u00b7 MACD hist -0.4045",
             "Side lean: short \u00b7 idio -10"
@@ -73851,7 +73835,7 @@
           "h5_date": null
         }
       ],
-      "n_long_ok": 35,
+      "n_long_ok": 33,
       "n_short_ok": 20,
       "all_top": [
         {
@@ -73864,7 +73848,7 @@
           "e_label": "beat \u00b7 EPS surprise +17.4% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Did PACS Group, Inc. Insiders Breach their Fiduciary Duties to Shareholders?",
+          "headline": "Omega to Transition Operations of 32 Facilities in Florida to PACS Group",
           "yday_ret": 1.25,
           "rsi": 55.73,
           "macd_hist": 0.2605,
@@ -73948,7 +73932,7 @@
           "e_label": "beat \u00b7 EPS surprise +12.9% (morning export)",
           "r_pol": "neutral",
           "news_tone": "neutral",
-          "headline": "Pacira BioSciences Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
+          "headline": "Viatris to acquire Pacira BioSciences for $1.65 billion",
           "yday_ret": 44.4,
           "rsi": 85.07,
           "macd_hist": 0.7342,
@@ -74035,10 +74019,10 @@
           "n_pos": 5,
           "n_neg": 1,
           "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +22.0% (morning export)",
+          "e_label": "beat \u00b7 EPS surprise +64.4% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "AngioDynamics to Report Fiscal 2027 First Quarter Results on October 8, 2026",
+          "headline": "AngioDynamics, Inc. Q1 2027 Earnings Call Summary",
           "yday_ret": -20.86,
           "rsi": 16.88,
           "macd_hist": -0.3588,
@@ -74077,7 +74061,7 @@
             {
               "k": "E",
               "pts": 4,
-              "why": "beat \u00b7 EPS surprise +22.0% (morning export)"
+              "why": "beat \u00b7 EPS surprise +64.4% (morning export)"
             },
             {
               "k": "R",
@@ -74166,7 +74150,7 @@
             {
               "k": "R",
               "pts": 2,
-              "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
+              "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
             },
             {
               "k": "join",
@@ -74280,7 +74264,7 @@
           "e_label": "beat \u00b7 EPS surprise +49.1% (morning export)",
           "r_pol": "neutral",
           "news_tone": "neutral",
-          "headline": "These beaten-down stocks could bounce back in January, if history is any guide",
+          "headline": "ADC Therapeutics Announces Comprehensive Strategic Financial Restructuring Marking Key Capital Structure Improvements",
           "yday_ret": 11.97,
           "rsi": 70.81,
           "macd_hist": 0.0325,
@@ -74535,7 +74519,7 @@
           "e_label": "beat \u00b7 EPS surprise +5.9% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "HAE, TWST Stocks Jump To Over 5-Year Highs  Whats Driving The Gains Today?",
+          "headline": "HAE, PCRX Stocks Hit Multi-Year Highs Amid Broader Market Selloff  Whats Driving The Momentum Today?",
           "yday_ret": 17.46,
           "rsi": 76.59,
           "macd_hist": 0.1316,
@@ -74630,7 +74614,7 @@
           "e_label": "beat \u00b7 EPS surprise +2.8% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Nike Stock Has Dropped 44% This Year. Why Jefferies Says to Buy the Dip.",
+          "headline": "Nike and LVMH Took China for Granted-and Both Stocks Are Paying the Price",
           "yday_ret": 2.47,
           "rsi": 73.61,
           "macd_hist": 0.6945,
@@ -74725,7 +74709,7 @@
           "e_label": "beat \u00b7 EPS surprise +20.5% (morning export)",
           "r_pol": "neutral",
           "news_tone": "good",
-          "headline": "WhiteHawk Completes Acquisition of Appalachia, Haynesville Gas Assets",
+          "headline": "Range Announces Conference Call to Discuss Third Quarter 2026 Financial Results",
           "yday_ret": 2.36,
           "rsi": 58.68,
           "macd_hist": 0.2609,
@@ -74972,7 +74956,7 @@
           "e_label": "beat \u00b7 EPS surprise +75.0% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Freshpet, Inc. to Participate in the Barclays 19th Annual Global Consumer Conference",
+          "headline": "Exxon Mobil downgraded, BP upgraded: Wall Street's top analyst calls",
           "yday_ret": 3.05,
           "rsi": 60.05,
           "macd_hist": 0.8591,
@@ -75016,7 +75000,7 @@
             {
               "k": "R",
               "pts": 2,
-              "why": "buy-side recom 1.7 (level, not a change \u00b7 morning export)"
+              "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
             },
             {
               "k": "join",
@@ -75133,100 +75117,16 @@
           "h5": null
         },
         {
-          "ticker": "PBF",
-          "date": "2026-10-09",
-          "idio": 10,
-          "n_pos": 4,
-          "n_neg": 2,
-          "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +49.9% (morning export)",
-          "r_pol": "neutral",
-          "news_tone": "neutral",
-          "headline": "PBF Energy to Release Third Quarter 2026 Earnings Results",
-          "yday_ret": 6.76,
-          "rsi": 70.85,
-          "macd_hist": 1.1702,
-          "flow_in": false,
-          "white": false,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "ohlc_hot"
-          ],
-          "open": 88.29,
-          "close": 84.2699966430664,
-          "day_pct": -4.55,
-          "boxes": {
-            "join": "good",
-            "sector": "neutral",
-            "gen": "bad",
-            "news": "neutral",
-            "digest": "good",
-            "judge": "missing",
-            "ab": "good",
-            "peer": "good",
-            "heat": "bad",
-            "vol": "neutral",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": null,
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": 4,
-              "why": "+4 \u22122 cameras"
-            },
-            {
-              "k": "E",
-              "pts": 4,
-              "why": "beat \u00b7 EPS surprise +49.9% (morning export)"
-            },
-            {
-              "k": "join",
-              "pts": 1,
-              "why": "join green"
-            },
-            {
-              "k": "peer",
-              "pts": 1,
-              "why": "peer green"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +6.8%"
-            },
-            {
-              "k": "macd",
-              "pts": 1,
-              "why": "MACD hist + / X+"
-            },
-            {
-              "k": "rsi",
-              "pts": -2,
-              "why": "RSI 71 OB \u2014 pause longs"
-            }
-          ],
-          "weather": [
-            "gen bad"
-          ],
-          "h1": null,
-          "h3": null,
-          "h5": null
-        },
-        {
           "ticker": "STZ",
           "date": "2026-10-09",
           "idio": 10,
           "n_pos": 5,
           "n_neg": 3,
           "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +7.4% (morning export)",
+          "e_label": "beat \u00b7 EPS surprise +5.3% (morning export)",
           "r_pol": "neutral",
           "news_tone": "neutral",
-          "headline": "6 food manufacturers talk supply chain tactics",
+          "headline": "Stocktwits Wall Street Wrap: Analysts Turn Bullish On Palantir, Marvell And Cava As Nike Faces Downgrade",
           "yday_ret": 4.43,
           "rsi": 59.08,
           "macd_hist": 1.1239,
@@ -75265,7 +75165,7 @@
             {
               "k": "E",
               "pts": 4,
-              "why": "beat \u00b7 EPS surprise +7.4% (morning export)"
+              "why": "beat \u00b7 EPS surprise +5.3% (morning export)"
             },
             {
               "k": "join",
@@ -75466,7 +75366,7 @@
           "e_label": "beat \u00b7 EPS surprise +47.4% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Revisiting Former Stock Picks Vita Coco, Idacorp, Subaru",
+          "headline": "Exxon Mobil downgraded, BP upgraded: Wall Street's top analyst calls",
           "yday_ret": 10.52,
           "rsi": 47.25,
           "macd_hist": -0.0486,
@@ -75511,7 +75411,7 @@
             {
               "k": "R",
               "pts": 2,
-              "why": "buy-side recom 1.7 (level, not a change \u00b7 morning export)"
+              "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
             },
             {
               "k": "join",
@@ -75591,7 +75491,7 @@
             {
               "k": "R",
               "pts": 2,
-              "why": "buy-side recom 1.5 (level, not a change \u00b7 morning export)"
+              "why": "buy-side recom 1.7 (level, not a change \u00b7 morning export)"
             },
             {
               "k": "join",
@@ -75628,100 +75528,6 @@
           "h5": null
         },
         {
-          "ticker": "DAL",
-          "date": "2026-10-09",
-          "idio": 8,
-          "n_pos": 4,
-          "n_neg": 4,
-          "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +4.5% (morning export)",
-          "r_pol": "good",
-          "news_tone": "bad",
-          "headline": "DAL Stock In Focus: Elon Musk Takes Aim At Delta Over Starlink As United Airlines Expands In-Flight WiFi",
-          "yday_ret": -1.0,
-          "rsi": 48.17,
-          "macd_hist": 0.1215,
-          "flow_in": false,
-          "white": false,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "earn_react"
-          ],
-          "open": 79.68,
-          "close": 82.16999816894531,
-          "day_pct": 3.12,
-          "boxes": {
-            "join": "good",
-            "sector": "neutral",
-            "gen": "bad",
-            "news": "bad",
-            "digest": "bad",
-            "judge": "missing",
-            "ab": "good",
-            "peer": "good",
-            "heat": "bad",
-            "vol": "good",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": null,
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": 0,
-              "why": "+4 \u22124 cameras"
-            },
-            {
-              "k": "E",
-              "pts": 4,
-              "why": "beat \u00b7 EPS surprise +4.5% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.3 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "news",
-              "pts": -2,
-              "why": "news camera red"
-            },
-            {
-              "k": "join",
-              "pts": 1,
-              "why": "join green"
-            },
-            {
-              "k": "peer",
-              "pts": 1,
-              "why": "peer green"
-            },
-            {
-              "k": "catalyst",
-              "pts": 2,
-              "why": "catalyst / earn-react"
-            },
-            {
-              "k": "yday",
-              "pts": -1,
-              "why": "yday -1.0%"
-            },
-            {
-              "k": "macd",
-              "pts": 1,
-              "why": "MACD hist + / X+"
-            }
-          ],
-          "weather": [
-            "gen bad"
-          ],
-          "h1": null,
-          "h3": null,
-          "h5": null
-        },
-        {
           "ticker": "HAFN",
           "date": "2026-10-09",
           "idio": 8,
@@ -75731,7 +75537,7 @@
           "e_label": "miss \u00b7 EPS surprise -10.0% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "HAFNIA LIMITED: Public Filing of Prospectus Supplement in Connection with the Offering",
+          "headline": "HAFNIA LIMITED: Share Capital Increase Registered",
           "yday_ret": 5.03,
           "rsi": 73.76,
           "macd_hist": 0.056,
@@ -75775,7 +75581,7 @@
             {
               "k": "R",
               "pts": 2,
-              "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
+              "why": "buy-side recom 1.4 (level, not a change \u00b7 morning export)"
             },
             {
               "k": "join",
@@ -75811,81 +75617,6 @@
           "h5": null
         },
         {
-          "ticker": "CSGP",
-          "date": "2026-10-09",
-          "idio": 7,
-          "n_pos": 3,
-          "n_neg": 3,
-          "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +12.0% (morning export)",
-          "r_pol": "neutral",
-          "news_tone": "neutral",
-          "headline": "Tampa, Columbus Lead US Small-Bay Industrial Ranking",
-          "yday_ret": 8.01,
-          "rsi": 55.86,
-          "macd_hist": 0.1396,
-          "flow_in": false,
-          "white": false,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "yday_gainer"
-          ],
-          "open": 30.02,
-          "close": 29.670000076293945,
-          "day_pct": -1.17,
-          "boxes": {
-            "join": "good",
-            "sector": "bad",
-            "gen": "bad",
-            "news": "neutral",
-            "digest": "bad",
-            "judge": "missing",
-            "ab": "good",
-            "peer": "neutral",
-            "heat": "good",
-            "vol": "neutral",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": null,
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": 0,
-              "why": "+3 \u22123 cameras"
-            },
-            {
-              "k": "E",
-              "pts": 4,
-              "why": "beat \u00b7 EPS surprise +12.0% (morning export)"
-            },
-            {
-              "k": "join",
-              "pts": 1,
-              "why": "join green"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +8.0%"
-            },
-            {
-              "k": "macd",
-              "pts": 1,
-              "why": "MACD hist + / X+"
-            }
-          ],
-          "weather": [
-            "gen bad",
-            "sector bad"
-          ],
-          "h1": null,
-          "h3": null,
-          "h5": null
-        },
-        {
           "ticker": "GAU",
           "date": "2026-10-09",
           "idio": 7,
@@ -75895,7 +75626,7 @@
           "e_label": "beat \u00b7 EPS surprise +135.9% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Galiano Gold Inc (GAU) (Q2 2026) Earnings Call Highlights: Record Revenue and Strategic ...",
+          "headline": "Galiano Gold Secures Long-Term Extension of Key Mining Leases at the Asanko Gold Mine",
           "yday_ret": 7.69,
           "rsi": 52.31,
           "macd_hist": 0.0018,
@@ -76140,7 +75871,7 @@
           "e_label": "beat \u00b7 EPS surprise +0.7% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Maximus, Inc. Q3 2026 Earnings Call Summary",
+          "headline": "Maximus Schedules Fiscal 2026 Fourth Quarter and Year End Conference Call",
           "yday_ret": 5.61,
           "rsi": 62.88,
           "macd_hist": 0.4861,
@@ -76215,6 +75946,85 @@
           "h5": null
         },
         {
+          "ticker": "PBF",
+          "date": "2026-10-09",
+          "idio": 6,
+          "n_pos": 4,
+          "n_neg": 2,
+          "e_pol": "neutral",
+          "e_label": "E 71 sess ago \u00b7 polarity unknown (export stamped the date, not beat/miss)",
+          "r_pol": "neutral",
+          "news_tone": "neutral",
+          "headline": "Insiders Are Selling Refiners and Skipping Banks. What Should Investors Do?",
+          "yday_ret": 6.76,
+          "rsi": 70.85,
+          "macd_hist": 1.1702,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "ohlc_hot"
+          ],
+          "open": 88.29,
+          "close": 84.2699966430664,
+          "day_pct": -4.55,
+          "boxes": {
+            "join": "good",
+            "sector": "neutral",
+            "gen": "bad",
+            "news": "neutral",
+            "digest": "good",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "good",
+            "heat": "bad",
+            "vol": "neutral",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 4,
+              "why": "+4 \u22122 cameras"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "yday +6.8%"
+            },
+            {
+              "k": "macd",
+              "pts": 1,
+              "why": "MACD hist + / X+"
+            },
+            {
+              "k": "rsi",
+              "pts": -2,
+              "why": "RSI 71 OB \u2014 pause longs"
+            }
+          ],
+          "weather": [
+            "gen bad"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
           "ticker": "GLAS",
           "date": "2026-10-09",
           "idio": 5,
@@ -76224,7 +76034,7 @@
           "e_label": "beat \u00b7 EPS surprise +8.7% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Glass House Brands Releases Mama Sue Professional Athlete Balm for Sale in California",
+          "headline": "Glass House Brands Announces Planned Retirement of Chief Financial Officer",
           "yday_ret": -14.04,
           "rsi": 14.31,
           "macd_hist": -0.1808,
@@ -76383,7 +76193,7 @@
           "e_label": "beat \u00b7 EPS surprise +40.8% (morning export)",
           "r_pol": "neutral",
           "news_tone": "neutral",
-          "headline": "What Are You Actually Paying For In Cava Stock?",
+          "headline": "The Chipotle Effect: Jersey Mike's, Shake Shack Stocks Rise on Rival's Takeover Report",
           "yday_ret": 4.89,
           "rsi": 63.05,
           "macd_hist": 1.3276,
@@ -76581,7 +76391,7 @@
             {
               "k": "R",
               "pts": 2,
-              "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
+              "why": "buy-side recom 1.7 (level, not a change \u00b7 morning export)"
             },
             {
               "k": "join",
@@ -76613,91 +76423,6 @@
           "h5": null
         },
         {
-          "ticker": "WING",
-          "date": "2026-10-09",
-          "idio": 4,
-          "n_pos": 2,
-          "n_neg": 4,
-          "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +15.4% (morning export)",
-          "r_pol": "good",
-          "news_tone": "neutral",
-          "headline": "Wingstop Announces the Game Day Punch Card",
-          "yday_ret": 1.56,
-          "rsi": 61.21,
-          "macd_hist": 2.3123,
-          "flow_in": false,
-          "white": false,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "ohlc_hot"
-          ],
-          "open": 120.32,
-          "close": 122.26000213623047,
-          "day_pct": 1.61,
-          "boxes": {
-            "join": "neutral",
-            "sector": "bad",
-            "gen": "bad",
-            "news": "neutral",
-            "digest": "bad",
-            "judge": "missing",
-            "ab": "good",
-            "peer": "bad",
-            "heat": "good",
-            "vol": "neutral",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": null,
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": -4,
-              "why": "+2 \u22124 cameras"
-            },
-            {
-              "k": "E",
-              "pts": 4,
-              "why": "beat \u00b7 EPS surprise +15.4% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.5 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "peer",
-              "pts": -1,
-              "why": "peer red"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +1.6%"
-            },
-            {
-              "k": "macd",
-              "pts": 1,
-              "why": "MACD hist + / X+"
-            },
-            {
-              "k": "burst",
-              "pts": 1,
-              "why": "parabolic prior tape"
-            }
-          ],
-          "weather": [
-            "gen bad",
-            "sector bad"
-          ],
-          "h1": null,
-          "h3": null,
-          "h5": null
-        },
-        {
           "ticker": "CATX",
           "date": "2026-10-09",
           "idio": 3,
@@ -76707,7 +76432,7 @@
           "e_label": "beat \u00b7 EPS surprise +12.4% (morning export)",
           "r_pol": "good",
           "news_tone": "neutral",
-          "headline": "Perspective Therapeutics Announces Clinical Collaboration and Supply Agreement with Merck to Evaluate [212Pb]PSV359 in Combination with Keytruda (Pembrolizumab)",
+          "headline": "Perspective Therapeutics Granted Fast Track Designation for [212Pb]PSV359 for the Treatment of Adult Patients with Locally Advanced Unresectable and/or Metastat",
           "yday_ret": 10.16,
           "rsi": 48.35,
           "macd_hist": -0.0004,
@@ -76778,6 +76503,76 @@
           "h5": null
         },
         {
+          "ticker": "CSGP",
+          "date": "2026-10-09",
+          "idio": 3,
+          "n_pos": 3,
+          "n_neg": 3,
+          "e_pol": "neutral",
+          "e_label": "E 73 sess ago \u00b7 polarity unknown (export stamped the date, not beat/miss)",
+          "r_pol": "neutral",
+          "news_tone": "neutral",
+          "headline": "U.S. Office Leasing Volume Lags Historical Norm Despite Recent Recovery",
+          "yday_ret": 8.01,
+          "rsi": 55.86,
+          "macd_hist": 0.1396,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "yday_gainer"
+          ],
+          "open": 30.02,
+          "close": 29.670000076293945,
+          "day_pct": -1.17,
+          "boxes": {
+            "join": "good",
+            "sector": "bad",
+            "gen": "bad",
+            "news": "neutral",
+            "digest": "bad",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "neutral",
+            "heat": "good",
+            "vol": "neutral",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 0,
+              "why": "+3 \u22123 cameras"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "yday +8.0%"
+            },
+            {
+              "k": "macd",
+              "pts": 1,
+              "why": "MACD hist + / X+"
+            }
+          ],
+          "weather": [
+            "gen bad",
+            "sector bad"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
           "ticker": "GENI",
           "date": "2026-10-09",
           "idio": 3,
@@ -76787,7 +76582,7 @@
           "e_label": "miss \u00b7 EPS surprise -306.4% (morning export)",
           "r_pol": "good",
           "news_tone": "good",
-          "headline": "Genius Sports Notes Limited Impact from Brazil's New Betting Regulations and Reaffirms 2026 Guidance",
+          "headline": "Snorkel AI Raises $350 Million to Help Push the Frontier: NYSE Content Update",
           "yday_ret": 4.57,
           "rsi": 52.86,
           "macd_hist": 0.0912,
@@ -77049,7 +76844,7 @@
           "e_label": "inline \u00b7 EPS surprise +0.0% (morning export)",
           "r_pol": "neutral",
           "news_tone": "neutral",
-          "headline": "PacBio to Participate in the Morgan Stanley 24?? Annual Global Healthcare Conference",
+          "headline": "PacBio Sinks 8% as TychoBio Endorses Its Highest Quality Biological Data  the Real Story Is More Complicated",
           "yday_ret": -15.44,
           "rsi": 61.79,
           "macd_hist": 0.0861,
@@ -77123,7 +76918,7 @@
           "e_label": "beat \u00b7 EPS surprise +24.3% (morning export)",
           "r_pol": "neutral",
           "news_tone": "neutral",
-          "headline": "These Energy Stocks Just Delivered Massive September Gains",
+          "headline": "Why Did VLO, MPC, PSX Stocks Jump To 52-Week Highs Today?",
           "yday_ret": 4.77,
           "rsi": 79.58,
           "macd_hist": 3.8004,
@@ -77193,6 +76988,179 @@
               "k": "rsi",
               "pts": -2,
               "why": "RSI 80 OB \u2014 pause longs"
+            }
+          ],
+          "weather": [
+            "gen bad"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
+          "ticker": "DAL",
+          "date": "2026-10-09",
+          "idio": 0,
+          "n_pos": 4,
+          "n_neg": 4,
+          "e_pol": "bad",
+          "e_label": "miss \u00b7 EPS surprise -3.1% (morning export)",
+          "r_pol": "good",
+          "news_tone": "bad",
+          "headline": "Delta Air Lines Stock Has Risen Above Sector Turbulence. Its Earnings Face 1 Big Question.",
+          "yday_ret": -1.0,
+          "rsi": 48.17,
+          "macd_hist": 0.1215,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "earn_react"
+          ],
+          "open": 79.68,
+          "close": 82.16999816894531,
+          "day_pct": 3.12,
+          "boxes": {
+            "join": "good",
+            "sector": "neutral",
+            "gen": "bad",
+            "news": "bad",
+            "digest": "bad",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "good",
+            "heat": "bad",
+            "vol": "good",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 0,
+              "why": "+4 \u22124 cameras"
+            },
+            {
+              "k": "E",
+              "pts": -4,
+              "why": "miss \u00b7 EPS surprise -3.1% (morning export)"
+            },
+            {
+              "k": "R",
+              "pts": 2,
+              "why": "buy-side recom 1.3 (level, not a change \u00b7 morning export)"
+            },
+            {
+              "k": "news",
+              "pts": -2,
+              "why": "news camera red"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "catalyst",
+              "pts": 2,
+              "why": "catalyst / earn-react"
+            },
+            {
+              "k": "yday",
+              "pts": -1,
+              "why": "yday -1.0%"
+            },
+            {
+              "k": "macd",
+              "pts": 1,
+              "why": "MACD hist + / X+"
+            }
+          ],
+          "weather": [
+            "gen bad"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
+          "ticker": "EQPT",
+          "date": "2026-10-09",
+          "idio": 0,
+          "n_pos": 2,
+          "n_neg": 3,
+          "e_pol": "good",
+          "e_label": "beat \u00b7 EPS surprise +403.0% (morning export)",
+          "r_pol": "good",
+          "news_tone": "bad",
+          "headline": "EquipmentShare Breaks Ground on Headquarters Expansion in Columbia, Missouri",
+          "yday_ret": -11.43,
+          "rsi": 37.53,
+          "macd_hist": -0.0838,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "yday_mover"
+          ],
+          "open": 15.81,
+          "close": 15.085000038146973,
+          "day_pct": -4.59,
+          "boxes": {
+            "join": "bad",
+            "sector": "neutral",
+            "gen": "bad",
+            "news": "bad",
+            "digest": "neutral",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "missing",
+            "heat": "bad",
+            "vol": "good",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": -2,
+              "why": "+2 \u22123 cameras"
+            },
+            {
+              "k": "E",
+              "pts": 4,
+              "why": "beat \u00b7 EPS surprise +403.0% (morning export)"
+            },
+            {
+              "k": "R",
+              "pts": 2,
+              "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
+            },
+            {
+              "k": "news",
+              "pts": -2,
+              "why": "news camera red"
+            },
+            {
+              "k": "join",
+              "pts": -1,
+              "why": "join red"
+            },
+            {
+              "k": "yday",
+              "pts": -1,
+              "why": "yday -11.4%"
             }
           ],
           "weather": [
