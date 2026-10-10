@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-09",
+  "generated_at": "2026-10-09T20:01:45.790973-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-12",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-12) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed higher for the week as tech rebounded and Trump-Putin diesel deal eased fuel concerns despite 10-year yields climbing above 5%",
+  "raw_text": "- The Dow Jones Industrial Average ($DJI) rose 423 points, or 0.83%, to 51,654.95, the S&P 500 ($SPX) gained 0.59% to 7,811.54 near its record high, and the Nasdaq Composite ($COMP) added 0.64% to 27,366.17 for a fourth straight weekly advance as technology shares rebounded and AI concerns eased.\n- President Trump’s agreement with Vladimir Putin paused some sanctions and secured the immediate release of 2.2 million barrels of Russian diesel fuel to ease price pressures tied to Hurricane Isaias.\n- Real estate led sector gains with a 1.9% advance as Crown Castle (CCI) climbed 15.6% and American Tower (AMT) rose 9.3%.\n- Humana (HUM) jumped 11.6% after improving its Medicare Advantage star ratings, which should boost future revenue, and receiving an analyst upgrade.\n- Biotech names rallied, with Moderna (MRNA) up 14.1% and Novavax (NVAX) up 15.9%.\n- Delta Air Lines (DAL) traded roughly flat after reporting Q3 EPS of $1.72 versus $1.76 expected and cutting full-year guidance, citing roughly $500 million in extra fuel costs from higher oil (@CL) prices linked to Hurricane Isaias and Middle East tensions.\n- Communication services lagged with a 1.4% decline as telecom stocks fell, including AT&T (T) down 9.8%, T-Mobile US (TMUS) off 13.3%, and Verizon (VZ) lower by about 10% on fears that SpaceX (SPCX)’s acquisition of nationwide 800 MHz low-band spectrum will intensify wireless competition.\n- Nine of 11 S&P 500 ($SPX) sectors advanced on the day.\n- The 10-year Treasury yield rose to 5.24% as the national debt exceeded $40.3 trillion and consumer sentiment slipped to its lowest level since May.\n- After-hours trading was muted with no major earnings moves above 2%, and investors are looking ahead to big bank earnings next week from firms including JPMorgan Chase (JPM) and Goldman Sachs (GS).",
+  "raw_summary_md": "- The **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) **rose 423 points, or 0.83%, to 51,654.95**, the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **gained 0.59% to 7,811.54 near its record high**, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) **added 0.64% to 27,366.17 for a fourth straight weekly advance** as technology shares rebounded and **AI concerns eased**.\n- President **Trump’s agreement with Vladimir Putin** paused some sanctions and secured the **immediate release of 2.2 million barrels of Russian diesel fuel** to ease price pressures tied to **Hurricane Isaias**.\n- **Real estate led sector gains** with a **1.9% advance** as **Crown Castle** ([CCI](https://finviz.com/quote?t=CCI)) **climbed 15.6%** and **American Tower** ([AMT](https://finviz.com/quote?t=AMT)) **rose 9.3%**.\n- **Humana** ([HUM](https://finviz.com/quote?t=HUM)) **jumped 11.6%** after improving its **Medicare Advantage star ratings**, which should boost future revenue, and receiving an **analyst upgrade**.\n- **Biotech names rallied**, with **Moderna** ([MRNA](https://finviz.com/quote?t=MRNA)) **up 14.1%** and **Novavax** ([NVAX](https://finviz.com/quote?t=NVAX)) **up 15.9%**.\n- **Delta Air Lines** ([DAL](https://finviz.com/quote?t=DAL)) **traded roughly flat** after reporting **Q3 EPS of $1.72 versus $1.76 expected** and cutting full-year guidance, citing roughly **$500 million in extra fuel costs** from higher oil ([@CL](https://finviz.com/futures_charts?t=CL)) prices linked to **Hurricane Isaias** and **Middle East tensions**.\n- **Communication services lagged** with a **1.4% decline** as telecom stocks fell, including **AT&T** ([T](https://finviz.com/quote?t=T)) **down 9.8%**, **T-Mobile US** ([TMUS](https://finviz.com/quote?t=TMUS)) **off 13.3%**, and **Verizon** ([VZ](https://finviz.com/quote?t=VZ)) lower by about **10%** on fears that **SpaceX** ([SPCX](https://finviz.com/quote?t=SPCX))’s acquisition of **nationwide 800 MHz low-band spectrum** will **intensify wireless competition**.\n- **Nine of 11 S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **sectors advanced on the day**.\n- The **10-year Treasury yield rose to 5.24%** as the national debt exceeded **$40.3 trillion** and **consumer sentiment slipped to its lowest level since May**.\n- **After-hours trading was muted** with **no major earnings moves above 2%**, and investors are looking ahead to **big bank earnings next week** from firms including **JPMorgan Chase** ([JPM](https://finviz.com/quote?t=JPM)) and **Goldman Sachs** ([GS](https://finviz.com/quote?t=GS)).",
+  "index_moves": [
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 0.83,
+      "verb": "rose"
+    },
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 0.59,
+      "verb": "gained"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 0.64,
+      "verb": "added"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "CCI",
+    "AMT",
+    "HUM",
+    "MRNA",
+    "NVAX",
+    "DAL",
+    "T",
+    "TMUS",
+    "VZ",
+    "SPCX",
+    "JPM",
+    "GS"
+  ],
+  "named_leaders": [
+    "CCI",
+    "AMT",
+    "HUM",
+    "MRNA",
+    "NVAX",
+    "DAL",
+    "T",
+    "TMUS",
+    "VZ",
+    "SPCX",
+    "JPM",
+    "GS"
+  ],
+  "calendar": [
+    "After-hours trading was muted with no major earnings moves above 2%, and investors are looking ahead to big bank earnings next week from firms including JPMorgan Chase (JPM) and Goldman Sachs (GS)."
+  ],
+  "prior_close": {
+    "spx": 0.59,
+    "nasdaq": 0.64,
+    "dow": 0.83
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "After-hours trading was muted with no major earnings moves above 2%, and investors are looking ahead to big bank earnings next week from firms including JPMorgan Chase (JPM) and Goldman Sachs (GS)."
+    ],
+    "text": "After-hours trading was muted with no major earnings moves above 2%, and investors are looking ahead to big bank earnings next week from firms including JPMorgan Chase (JPM) and Goldman Sachs (GS)."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Delta Air Lines (DAL) traded roughly flat after reporting Q3 EPS of $1.72 versus $1.76 expected and cutting full-year guidance, citing roughly $500 million in extra fuel costs from higher oil (@CL) prices linked to Hurricane Isaias and Middle East tensions."
+  },
+  "finviz_id": 306218,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-09T19:37:19.103",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
