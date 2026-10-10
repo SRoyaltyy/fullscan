@@ -148,7 +148,7 @@ _RULES: list[tuple[str, re.Pattern, str | None, str, str]] = [
           "lift", "regime_break", "verified change in the strait constraint"),
     # --- blast / harm ---
     _rule("blast_legal",
-          r"(?i)(class[- ]action|antitrust lawsuit|sued |lawsuit.{0,40}(accus|"
+          r"(?i)(class[- ]action|antitrust lawsuit|\bsued\s|lawsuit.{0,40}(accus|"
           r"against|filed)|v\.\s+\w+.{0,20}(antitrust|conspira)|illegal agreement)",
           None, "impulse", "filed complaint / named defendants"),
     _rule("blast_cyber",
