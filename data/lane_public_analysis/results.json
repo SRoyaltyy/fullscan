@@ -10,8 +10,8 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "98148af5a787e244cef8eef648647685e735e427c8db3b7d222a2804e1e2f783",
-      "started_at": "2026-10-10T14:48:11.086922+00:00",
-      "completed_at": "2026-10-10T14:48:13.365020+00:00",
+      "started_at": "2026-10-10T14:55:34.960278+00:00",
+      "completed_at": "2026-10-10T14:55:37.197994+00:00",
       "status": "executed",
       "model_stages": [
         {
@@ -182,6 +182,61 @@
               }
             ]
           }
+        },
+        {
+          "started_at": "2026-10-10T14:48:11.086922+00:00",
+          "completed_at": "2026-10-10T14:48:13.365020+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "",
+              "model": "",
+              "returned_json": false
+            }
+          ],
+          "analysis": {
+            "article_id": "0d84bbab316fddb29a8359e7",
+            "title": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
+            "body": "﻿ Federal Reserve Board - Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families Skip to main content An official website of the United States Government Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( Lock Locked padlock icon ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. Back to Home Board of Governors of the Federal Reserve System Stay Connected Federal Reserve Facebook Page Federal Reserve Instagram Page Federal Reserve YouTube Page Federal Reserve",
+            "known_at": "2026-10-09T14:00:00+00:00",
+            "harvest_source": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_classify_missing",
+            "questions": [],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [],
+            "watermark": "",
+            "action": "",
+            "q5": "",
+            "event_class": "",
+            "sign": null,
+            "history": {
+              "history_state": "n/a",
+              "state_locked": false,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "low",
+              "transmission": "book",
+              "transmission_locked": false,
+              "salience_only": false,
+              "y_required": false
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "6a3a8670e31546f78662a7f4789ba59edda890853e955911b343abe563f1bf27",
+                "bytes": 7171,
+                "lines": 27
+              }
+            ]
+          }
         }
       ]
     },
@@ -195,8 +250,8 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "cf67232e8813d68704d4a02cf7ce443b685a70ceb994d88bd2a5b702474e9b0c",
-      "started_at": "2026-10-10T14:48:13.365044+00:00",
-      "completed_at": "2026-10-10T14:48:13.367618+00:00",
+      "started_at": "2026-10-10T14:55:37.198017+00:00",
+      "completed_at": "2026-10-10T14:55:37.199419+00:00",
       "status": "executed",
       "model_stages": [
         {
@@ -361,6 +416,61 @@
               }
             ]
           }
+        },
+        {
+          "started_at": "2026-10-10T14:48:13.365044+00:00",
+          "completed_at": "2026-10-10T14:48:13.367618+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "",
+              "model": "",
+              "returned_json": false
+            }
+          ],
+          "analysis": {
+            "article_id": "10e3a2b4bf664a7cadb41f4f",
+            "title": "United States Department of the Treasury Announces New Appointment",
+            "body": "October 9, 2026 WASHINGTON — Secretary of the Treasury Scott Bessent announced today a key senior appointment at the U.S. Department of the Treasury. Dr. Judy Shelton will serve as a Counselor in the Office of the Secretary. Shelton is an economist and author specializing in international financial and currency issues. She previously served as U.S. Director of the European Bank for Reconstruction and Development and as Chairman of the National Endowment for Democracy. She has testified numerous times before Congress as an expert witness on international financial relations and has consulted with national security officials on global economic developments. At Treasury, Shelton will advise the Secretary on currency policy, with a particular focus on evaluating financial conditions in China. ",
+            "known_at": "2026-10-09T12:06:00+00:00",
+            "harvest_source": "https://home.treasury.gov/news/press-releases/sb0654/",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_classify_missing",
+            "questions": [],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [],
+            "watermark": "",
+            "action": "",
+            "q5": "",
+            "event_class": "",
+            "sign": null,
+            "history": {
+              "history_state": "n/a",
+              "state_locked": false,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "low",
+              "transmission": "book",
+              "transmission_locked": false,
+              "salience_only": false,
+              "y_required": false
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "9d0843a8dff6391b1f42859a443e2bab0ec65404d95e8c00894d9015f5bb7081",
+                "bytes": 3391,
+                "lines": 24
+              }
+            ]
+          }
         }
       ]
     },
@@ -374,8 +484,8 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "fcf612546529eed61efd7d1a025a7a54ba1ac48fb9f796ce70c363cb822de436",
-      "started_at": "2026-10-10T14:48:13.367629+00:00",
-      "completed_at": "2026-10-10T14:48:13.372777+00:00",
+      "started_at": "2026-10-10T14:55:37.199426+00:00",
+      "completed_at": "2026-10-10T14:55:37.202249+00:00",
       "status": "executed",
       "model_stages": [
         {
@@ -540,12 +650,67 @@
               }
             ]
           }
+        },
+        {
+          "started_at": "2026-10-10T14:48:13.367629+00:00",
+          "completed_at": "2026-10-10T14:48:13.372777+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "",
+              "model": "",
+              "returned_json": false
+            }
+          ],
+          "analysis": {
+            "article_id": "fd75595c82bda0a38b114693",
+            "title": "District of Arizona Charges 345 Individuals for Immigration-Related Criminal Conduct this Week",
+            "body": "Press Release District of Arizona Charges 345 Individuals for Immigration-Related Criminal Conduct this Week Friday, October 9, 2026 Share Facebook X LinkedIn Email For Immediate Release U.S. Attorney's Office,               District of Arizona PHOENIX, Ariz. – During the week of enforcement operations from Oct. 3 through Oct. 9, 2026, the U.S. Attorney’s Office for the District of Arizona brought immigration-related criminal charges against 345 individuals. Specifically, the United States filed 151 cases in which aliens illegally re-entered the United States, and the United States also charged 172 aliens for illegally entering the United States. In its ongoing effort to deter unlawful immigration, the United States filed 21 cases against 22 individuals responsible for smuggling illegal al",
+            "known_at": "2026-10-09T12:00:00+00:00",
+            "harvest_source": "https://www.justice.gov/usao-az/pr/district-arizona-charges-345-individuals-immigration-related-criminal-conduct-week",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_classify_missing",
+            "questions": [],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [],
+            "watermark": "",
+            "action": "",
+            "q5": "",
+            "event_class": "",
+            "sign": null,
+            "history": {
+              "history_state": "n/a",
+              "state_locked": false,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "low",
+              "transmission": "book",
+              "transmission_locked": false,
+              "salience_only": false,
+              "y_required": false
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "fd8fcb5bc842fa560adb400104dd8ad9c03e1db85a0e86f75ea02a0c1137985e",
+                "bytes": 5567,
+                "lines": 24
+              }
+            ]
+          }
         }
       ]
     }
   },
   "schema_version": 1,
   "runtime_status": "ready",
-  "updated_at": "2026-10-10T14:48:13.372788+00:00",
+  "updated_at": "2026-10-10T14:55:37.202257+00:00",
   "last_run_processed": 3
 }
