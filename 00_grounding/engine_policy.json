@@ -373,8 +373,8 @@
       }
     }
   },
-  "version": 74,
-  "updated": "2026-10-09T20:08:56-04:00",
+  "version": 75,
+  "updated": "2026-10-10T06:11:54-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -383,16 +383,6 @@
     "bonus_mult": 1.25
   },
   "history": [
-    {
-      "at": "2026-09-18T18:42:38-04:00",
-      "changes": [
-        "general.B0_ASIA: 0.0 -> 0.5 (n=17, hit=0.471)",
-        "Basic Materials.S0_SHARED_MACRO: 1.25 -> 1.0 (n=16, hit=0.625)",
-        "Consumer Defensive.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=20, hit=0.55)",
-        "Healthcare.S0_SHARED_MACRO: 0.0 -> 0.5 (n=13, hit=0.462)",
-        "Technology.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=16, hit=0.562)"
-      ]
-    },
     {
       "at": "2026-09-21T16:18:36-04:00",
       "changes": [
@@ -789,6 +779,12 @@
     },
     {
       "at": "2026-10-09T20:08:56-04:00",
+      "changes": [
+        "hold"
+      ]
+    },
+    {
+      "at": "2026-10-10T06:11:54-04:00",
       "changes": [
         "hold"
       ]
