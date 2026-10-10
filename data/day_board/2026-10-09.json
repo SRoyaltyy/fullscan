@@ -1,8 +1,8 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T20:01:46.539667-04:00",
+  "generated_at": "2026-10-10T03:01:58.222997-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-09_predict.md` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-10-09_judge.md` \u2014 missing"
@@ -97,12 +97,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 98656,
-          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
+          "size": 97499,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
           "bullets": [
-            "Should You Be Worried About Pfizer Stock?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -112,10 +112,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11600,
+          "size": 11609,
           "said": "Finviz Daily Digest \u2014 2026-10-09",
           "bullets": [
-            "_Generated 2026-10-09T04:25:02.568859-04:00 \u00b7 export=data/exports/finviz_2026-10-08.csv \u00b7 ticker digests=5904 \u00b7 high-signal=1796_",
+            "_Generated 2026-10-10T03:01:56.637705-04:00 \u00b7 export=data/exports/finviz_2026-10-09.csv \u00b7 ticker digests=5906 \u00b7 high-signal=1780_",
             "Major indices (live quote page)"
           ]
         },
@@ -170,11 +170,11 @@
           ]
         }
       ],
-      "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
+      "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
       "bullets": [
-        "Should You Be Worried About Pfizer Stock?",
-        "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
-        "AMETEK Completes Acquisition of Indicor Instrumentation"
+        "Black British Business Awards 2026 winners revealed",
+        "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+        "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
       ]
     },
     {
@@ -195,12 +195,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 98656,
-          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
+          "size": 97499,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
           "bullets": [
-            "Should You Be Worried About Pfizer Stock?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -341,13 +341,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7571,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "size": 7567,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 15 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "finviz_market_digest:missing"
+            "map_heat_research:missing"
           ]
         },
         {
@@ -357,7 +357,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['events', 'news_judge', 'map_heat_research', 'general_predict']",
-          "size": 7179,
+          "size": 7174,
           "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, map_heat_research, general_predict",
           "bullets": []
         },
@@ -524,12 +524,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 98656,
-          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
+          "size": 97499,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
           "bullets": [
-            "Should You Be Worried About Pfizer Stock?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -630,12 +630,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 98656,
-          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
+          "size": 97499,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
           "bullets": [
-            "Should You Be Worried About Pfizer Stock?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -723,12 +723,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 98656,
-          "said": "5904 tickers \u00b7 1796 signals \u00b7 top ABBV, AEM, AME, AMGN, AON, APH, AXP, BNS",
+          "size": 97499,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
           "bullets": [
-            "Should You Be Worried About Pfizer Stock?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free",
-            "AMETEK Completes Acquisition of Indicor Instrumentation"
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -1027,59 +1027,6 @@
     }
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-10-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-09T05:48:27.282314-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-10-09_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1460753,
-          "preview": "1d BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, TE, NRGV"
-        },
-        {
-          "path": "data/stock_book/2026-10-09_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-10-09_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2594,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-10-09_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12437,
-          "preview": "2026-10-09 BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, TE, NRGV"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12437,
-          "preview": "2026-10-09 BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, TE, NRGV"
-        },
-        {
-          "path": "01_daily/2026-10-09_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 84830,
-          "preview": "# Stock book \u2014 2026-10-09\n_Generated 2026-10-09T05:44:59.392529-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, TE, NRGV \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-09 BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, TE, NRGV \u00b7 2026-10-09 BUY HITI, CON, AMN, PACS, ASTH, NTAP, MQ, BAND \u00b7 SELL OKLO, NEOV, FCEL, NNDM, ENVX, EOSE, TE, NRGV \u00b7 # Stock book \u2014 2026-10-09\n_Generated 2026-10-09T05:44:59.392529-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -4244,6 +4191,52 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-09\n**Generated:** 2026-10-09T20:01:45.790973-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher for the week as tech rebounded and Trump-Putin diesel deal eased fuel concerns despite 10-year yields climbing above 5%\n**Prior close:** SPX +0.59%  Nasdaq +0.64%  Dow +0.83%\n**SPX:** +0.59%  **Nasdaq:** +0.64%  **Dow:** +0.83%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** CCI, AMT, HUM, MRNA, NVAX, DAL, T, TMUS, VZ, SPCX, JPM, GS\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-12\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-10T03:01:57.081164-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-09_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97499,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-09_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11630,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-10T03:01:56.637705-04:00 \u00b7 export=data/exports/finviz_2026-10-09.csv \u00b7 ticker digests=5906 \u00b7 high-signal=1780_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-09.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11488051,
+          "preview": "11725 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11488051,
+          "preview": "11725 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-09_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 98656,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-09\n_Generated 2026-10-10T03:01:56.637705-04:00 \u00b7 export=data/exports/finviz_2026-10-09.csv \u00b7 ticker digests=5906 \u00b7 high-signal=1780_ \u00b7 11725 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11725 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {

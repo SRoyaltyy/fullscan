@@ -1,6 +1,6 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T12:50:44.852602-04:00",
+  "generated_at": "2026-10-10T03:01:57.060889-04:00",
   "run_id": "37960545283",
   "runner": "GitHub Actions 1000025965",
   "all_ok": false,
@@ -168,7 +168,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-09_finviz_digest.json",
-        "size": 98656
+        "size": 97499
       },
       {
         "kind": "finviz_market_digest",
@@ -179,10 +179,10 @@
       },
       {
         "kind": "finviz_market_digest",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-10-09_finviz_market_digest_close.json",
-        "size": 0
+        "size": 7845
       },
       {
         "kind": "map_heat",
