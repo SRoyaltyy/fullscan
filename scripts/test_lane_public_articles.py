@@ -22,5 +22,7 @@ class PublicInputs(unittest.TestCase):
             path.write_text(json.dumps([good, {**good, 'id': 'thin', 'extraction_status': 'feed_text'}]))
             self.assertEqual(len(worker.pending(root, {})), 1)
             self.assertEqual(worker.pending(root, {worker.input_key(good): {}}), [])
+            unavailable = {'analysis': {'reject_reason': 'lane_classify_missing'}}
+            self.assertEqual(len(worker.pending(root, {worker.input_key(good): unavailable})), 1)
 
 if __name__ == '__main__': unittest.main()

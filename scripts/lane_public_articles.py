@@ -38,7 +38,8 @@ def pending(root, completed, limit=3, days=8, requested=None):
             if document.get('extraction_status') in {'feed_text', 'headline_only', 'failed', 'unresolved'}:
                 continue
             key = input_key(document)
-            if key in completed:
+            previous = completed.get(key)
+            if key in completed and (previous.get('analysis') or {}).get('reject_reason') != 'lane_classify_missing':
                 continue
             rows[key] = (public_input(document), path.relative_to(root).as_posix())
     candidates = sorted(rows.items(), key=lambda item: (item[1][0].get('published_at') or '', item[0]), reverse=True)
@@ -88,16 +89,23 @@ def run(root, output, limit=3, requested=None):
                    'source_file': source, 'harvest_source': document['url']}
         try:
             analysis = process_article(article, audited, axioms=load_axioms(), root=root, index_names=index.title_names)
+            # Full prompts can be reconstructed from the public source input
+            # and runtime; retain their hashes without duplicating article text.
+            analysis['prompt_log'] = [{k: item.get(k) for k in ('stage', 'sha256', 'bytes', 'lines')}
+                                      for item in analysis.get('prompt_log', [])]
             status = 'executed'
         except Exception as exc:
             analysis = None
             status = 'execution_failed:' + type(exc).__name__
+        previous = state['records'].get(key)
+        attempts = (previous.get('attempts', []) + [{k: previous.get(k) for k in
+                    ('started_at', 'completed_at', 'status', 'model_stages', 'analysis')}]) if previous else []
         state['records'][key] = {'public_input': document, 'source_file': source, 'input_sha256': key,
             'started_at': started, 'completed_at': datetime.now(timezone.utc).isoformat(),
             'status': status, 'model_stages': stages, 'analysis': analysis,
             'index_source': index.source, 'index_sha256': index_sha, 'index_rows': len(index.rows),
             'fresh_acceptance_pass': False, 'frontier_verified': False,
-            'review_status': 'pending_source_backed_four_axis_review'}
+            'review_status': 'pending_source_backed_four_axis_review', 'attempts': attempts}
     state['updated_at'] = datetime.now(timezone.utc).isoformat()
     state['last_run_processed'] = len(chosen)
     path.parent.mkdir(parents=True, exist_ok=True)

@@ -322,7 +322,8 @@ _MODEL_DENIED: set[str] = set()
 # bodies stop the rest of the qwen list. Not an incorrect-API-key skip.
 _QWEN_STANDING_HITS = 0
 _QWEN_STANDING_STOP = 2
-# OpenRouter :free daily cap. One 429 ends the OR walk for this process.
+# OpenRouter platform/unknown quota stops this process. A confirmed upstream
+# model limit only cools down that ID; siblings remain available.
 _OR_DAY_CAPPED = False
 _QWEN_PROBE: dict[str, bool] = {}
 
@@ -1287,6 +1288,22 @@ def _or_capped() -> bool:
     return _OR_DAY_CAPPED
 
 
+def _or_upstream_rate_limit(info) -> bool:
+    """Recognize a provider-specific 429, not a platform request quota.
+
+    openai_compat currently retains the error as a string; support both that
+    representation and structured bodies. Unknown 429s stay conservative.
+    https://openrouter.ai/docs/api_reference/limits#handling-429-errors
+    """
+    raw = str(info or "").lower()
+    if any(token in raw for token in (
+        "free-models-per-day", "free-models-per-min", "free_model_daily_requests",
+        "openrouter_free_daily", "openrouter_free_per_minute",
+    )):
+        return False
+    return "temporarily rate-limited upstream" in raw or "upstream_provider_shared_pool" in raw
+
+
 def _reject_detail(parsed) -> str:
     if not isinstance(parsed, dict):
         return ""
@@ -1413,9 +1430,9 @@ def hop_models(lane, models, call, abandon_404=False, accept=None):
             saw_live = True
             print(f"  {lane}/{model} 429 — next allowlisted model")
             _RATE_LIMITED.add(rl_key)
-            if lane == "openrouter":
+            if lane == "openrouter" and not _or_upstream_rate_limit(info):
                 _OR_DAY_CAPPED = True
-                print("  openrouter :free daily cap — not walking the rest this hour")
+                print("  openrouter platform/unknown quota — not walking sibling IDs")
                 return None, None
             time.sleep(2)
             continue
@@ -2039,3 +2056,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
