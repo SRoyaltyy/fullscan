@@ -18,7 +18,8 @@
     "2026-10-05",
     "2026-10-06",
     "2026-10-07",
-    "2026-10-08"
+    "2026-10-08",
+    "2026-10-09"
   ],
   "rules": [
     {
@@ -696,14 +697,53 @@
           "equity": 9161.43,
           "mean": -0.0103,
           "mean_flat_15bp": -0.0061
+        },
+        {
+          "date": "2026-10-09",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 36.33,
+              "shares": 63,
+              "side": "BUY",
+              "ticker": "PCRX"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.58,
+              "shares": 1449,
+              "side": "BUY",
+              "ticker": "ADCT"
+            },
+            {
+              "fill_rule": "open",
+              "price": 4.7,
+              "shares": 487,
+              "side": "BUY",
+              "ticker": "BYRN"
+            },
+            {
+              "fill_rule": "open",
+              "price": 119.81,
+              "shares": 18,
+              "side": "BUY",
+              "ticker": "HAE"
+            }
+          ],
+          "sells": [],
+          "fees": 29.1974,
+          "cash": 108.54,
+          "equity": 9240.5,
+          "mean": 0.8631,
+          "mean_flat_15bp": 1.0682
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -8.386,
-      "start_day_win_rate": 0.1053,
+      "after_fees_return": -7.595,
+      "start_day_win_rate": 0.25,
       "best_stock": "SDGR",
-      "without_best_stock_return": -11.891
+      "without_best_stock_return": -11.138
     },
     {
       "name": "oos0914_rvol_lg_h1_sx",
@@ -1595,14 +1635,53 @@
           "equity": 11456.7,
           "mean": 0.0,
           "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-10-09",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 36.33,
+              "shares": 78,
+              "side": "BUY",
+              "ticker": "PCRX"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.58,
+              "shares": 1812,
+              "side": "BUY",
+              "ticker": "ADCT"
+            },
+            {
+              "fill_rule": "open",
+              "price": 4.7,
+              "shares": 609,
+              "side": "BUY",
+              "ticker": "BYRN"
+            },
+            {
+              "fill_rule": "open",
+              "price": 119.81,
+              "shares": 23,
+              "side": "BUY",
+              "ticker": "HAE"
+            }
+          ],
+          "sells": [],
+          "fees": 35.5139,
+          "cash": 106.56,
+          "equity": 11556.05,
+          "mean": 0.8672,
+          "mean_flat_15bp": 1.0339
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": 14.567,
-      "start_day_win_rate": 0.7895,
+      "after_fees_return": 15.56,
+      "start_day_win_rate": 0.85,
       "best_stock": "SDEV",
-      "without_best_stock_return": -5.074
+      "without_best_stock_return": -4.257
     },
     {
       "name": "oos0914_break10_h1_sx",
@@ -2493,14 +2572,53 @@
           "equity": 7549.6,
           "mean": 0.0,
           "mean_flat_15bp": 0.0
+        },
+        {
+          "date": "2026-10-09",
+          "buys": [
+            {
+              "fill_rule": "open",
+              "price": 36.33,
+              "shares": 51,
+              "side": "BUY",
+              "ticker": "PCRX"
+            },
+            {
+              "fill_rule": "open",
+              "price": 1.58,
+              "shares": 1194,
+              "side": "BUY",
+              "ticker": "ADCT"
+            },
+            {
+              "fill_rule": "open",
+              "price": 4.7,
+              "shares": 401,
+              "side": "BUY",
+              "ticker": "BYRN"
+            },
+            {
+              "fill_rule": "open",
+              "price": 119.81,
+              "shares": 15,
+              "side": "BUY",
+              "ticker": "HAE"
+            }
+          ],
+          "sells": [],
+          "fees": 24.7535,
+          "cash": 103.65,
+          "equity": 7613.95,
+          "mean": 0.8524,
+          "mean_flat_15bp": 1.0228
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
-      "after_fees_return": -24.504,
-      "start_day_win_rate": 0.0,
+      "after_fees_return": -23.861,
+      "start_day_win_rate": 0.1,
       "best_stock": "QSI",
-      "without_best_stock_return": -27.902
+      "without_best_stock_return": -27.298
     },
     {
       "name": "oos0914_zero_candle_h2_sx",
@@ -3133,12 +3251,22 @@
           "equity": 10269.61,
           "mean": -0.8056,
           "mean_flat_15bp": -0.7872
+        },
+        {
+          "date": "2026-10-09",
+          "buys": [],
+          "sells": [],
+          "fees": 0,
+          "cash": 10269.61,
+          "equity": 10269.61,
+          "mean": 0.0,
+          "mean_flat_15bp": 0.0
         }
       ],
       "keep_bar_met": false,
       "keep_bar_note": "12 train fires against the 30-fire bar. Excel's luck test p=0.87.",
       "after_fees_return": 2.696,
-      "start_day_win_rate": 0.4737,
+      "start_day_win_rate": 0.45,
       "best_stock": "NAUT",
       "without_best_stock_return": -0.241
     }

@@ -1,0 +1,147 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 36.33,
+      "shares": 51,
+      "side": "BUY",
+      "ticker": "PCRX"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.58,
+      "shares": 1194,
+      "side": "BUY",
+      "ticker": "ADCT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 4.7,
+      "shares": 401,
+      "side": "BUY",
+      "ticker": "BYRN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 119.81,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "HAE"
+    }
+  ],
+  "cash": 103.65,
+  "date": "2026-10-09",
+  "equity": 7613.95,
+  "fees": 24.7535,
+  "fills": [
+    {
+      "fees": 2.143,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 36.33,
+      "shares": 51,
+      "side": "BUY",
+      "ticker": "PCRX"
+    },
+    {
+      "fees": 15.4026,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.58,
+      "shares": 1194,
+      "side": "BUY",
+      "ticker": "ADCT"
+    },
+    {
+      "fees": 5.1729,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 4.7,
+      "shares": 401,
+      "side": "BUY",
+      "ticker": "BYRN"
+    },
+    {
+      "fees": 2.035,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 119.81,
+      "shares": 15,
+      "side": "BUY",
+      "ticker": "HAE"
+    }
+  ],
+  "holdings": [
+    "ADCT",
+    "BYRN",
+    "HAE",
+    "PCRX"
+  ],
+  "mean": 0.8524,
+  "n_trades_today": 4,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-10-09",
+    "cash": 103.65,
+    "pos": {
+      "ADCT": {
+        "close_px": 1.73,
+        "cost": 1901.9225999999999,
+        "entry_date": "2026-10-09",
+        "entry_px": 1.58,
+        "fee_in": 15.4026,
+        "last_px": 1.58,
+        "min_hold": 1,
+        "notional": 1886.52,
+        "peak_px": 1.58,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+47.2; leftover $1887.40",
+        "shares": 1194,
+        "ticker": "ADCT"
+      },
+      "BYRN": {
+        "close_px": 4.52,
+        "cost": 1889.8729,
+        "entry_date": "2026-10-09",
+        "entry_px": 4.7,
+        "fee_in": 5.1729,
+        "last_px": 4.7,
+        "min_hold": 1,
+        "notional": 1884.7,
+        "peak_px": 4.7,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+35.9; leftover $1887.40",
+        "shares": 401,
+        "ticker": "BYRN"
+      },
+      "HAE": {
+        "close_px": 118.69,
+        "cost": 1799.1850000000002,
+        "entry_date": "2026-10-09",
+        "entry_px": 119.81,
+        "fee_in": 2.035,
+        "last_px": 119.81,
+        "min_hold": 1,
+        "notional": 1797.15,
+        "peak_px": 119.81,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+14.5; leftover $1887.40",
+        "shares": 15,
+        "ticker": "HAE"
+      },
+      "PCRX": {
+        "close_px": 36.31,
+        "cost": 1854.973,
+        "entry_date": "2026-10-09",
+        "entry_px": 36.33,
+        "fee_in": 2.143,
+        "last_px": 36.33,
+        "min_hold": 1,
+        "notional": 1852.83,
+        "peak_px": 36.33,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.5; leftover $1887.40",
+        "shares": 51,
+        "ticker": "PCRX"
+      }
+    },
+    "yday_equity": 7613.95
+  }
+}
