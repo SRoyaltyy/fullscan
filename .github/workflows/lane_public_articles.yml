@@ -3,6 +3,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'src/lane_route.py'
       - 'scripts/lane_public_articles.py'
       - 'scripts/test_lane_public_articles.py'
       - '.github/workflows/lane_public_articles.yml'

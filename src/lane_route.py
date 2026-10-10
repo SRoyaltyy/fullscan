@@ -118,14 +118,14 @@ POLLINATIONS_MODELS = [
 ]
 POLLINATIONS_URL = "https://gen.pollinations.ai/v1/chat/completions"
 # $0 only: documented free router and/or :free suffix. Never paid IDs.
-# CN-origin :free first (GLM / InclusionAI Ling). Live OpenRouter catalog
-# has no Qwen/DeepSeek :free right now — those go through native hoppers.
+# Catalog checked 2026-10-10: Qwen3.8 27B is a current dense free floor.
+# GLM-5.2 and MiniMax-M3 :free returned explicit paid-only 404s and stay off.
+# https://openrouter.ai/qwen/qwen3.8-27b:free
 _OR_CANDIDATES = [
     "openrouter/free",
-    "z-ai/glm-5.2:free",
+    "qwen/qwen3.8-27b:free",
     "inclusionai/ling-3.0-flash-fin:free",
     "inclusionai/ling-3.0-flash-sante:free",
-    "minimax/minimax-m3:free",
     "google/gemma-4-31b-it:free",
     "google/gemma-4-26b-a4b-it:free",
     "nvidia/nemotron-3.5-lightning:free",
@@ -167,9 +167,8 @@ QWEN_PROBE_MODELS = (
 # OpenRouter classify floor. Ling-3 flash and the free router are not
 # classify — they are 8B-class and may run planner / filter / analyst.
 OR_CLASSIFY_MODELS = [
+    "qwen/qwen3.8-27b:free",
     "google/gemma-4-31b-it:free",
-    "z-ai/glm-5.2:free",
-    "minimax/minimax-m3:free",
 ]
 # Public DashScope OpenAI-compatible fallbacks. DASHSCOPE_BASE_URL (env/secret)
 # is prepended by qwen_urls() — never log or commit that value.
