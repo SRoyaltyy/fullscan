@@ -1,8 +1,8 @@
 {
  "strategy": "updown_rel1_hv_v1",
  "label": "paper only \u2014 failed multiple-testing haircut (t 2.02 vs 3.37)",
- "days_locked": 2,
- "days_realized": 1,
+ "days_locked": 4,
+ "days_realized": 2,
  "days_missed": 0,
  "missed_dates": [],
  "rule": {
@@ -12,43 +12,43 @@
  },
  "gross": {
   "cum": 0.0126517643,
-  "mean_bp": 126.5176426944,
+  "mean_bp": 63.2588213472,
   "t_nw": null
  },
  "net5": {
-  "cum": 0.0116517643,
-  "mean_bp": 116.5176426944,
+  "cum": 0.0103163839,
+  "mean_bp": 51.6588213472,
   "t_nw": null
  },
  "net10": {
-  "cum": 0.0106517643,
-  "mean_bp": 106.5176426944,
+  "cum": 0.0079836436,
+  "mean_bp": 40.0588213472,
   "t_nw": null
  },
  "net15": {
-  "cum": 0.0096517643,
-  "mean_bp": 96.5176426944,
+  "cum": 0.0056535433,
+  "mean_bp": 28.4588213472,
   "t_nw": null
  },
  "hedged_net10": {
-  "cum": -0.0046037509,
-  "mean_bp": -46.0375085619,
+  "cum": -0.0066656228,
+  "mean_bp": -33.3763114126,
   "t_nw": null
  },
  "iwm_oo1": {
-  "cum": -0.0069361821,
-  "mean_bp": -69.361821232,
+  "cum": null,
+  "mean_bp": null,
   "t_nw": null
  },
  "rand_med_net10": {
-  "cum": -0.0020700788,
-  "mean_bp": -20.7007875506,
+  "cum": -0.0057025437,
+  "mean_bp": -28.5503937753,
   "t_nw": null
  },
  "best_stock": "AAOI",
  "best_stock_contrib": 0.0013764669,
- "net10_ex_best_cum": 0.0092752974,
- "mean_turnover": 2.0,
- "status": "collecting (1 realized days; kill check from day 20/60, promotion review not before day 120)",
+ "net10_ex_best_cum": 0.0066108106,
+ "mean_turnover": 2.32,
+ "status": "collecting (2 realized days; kill check from day 20/60, promotion review not before day 120)",
  "killed": false
 }
