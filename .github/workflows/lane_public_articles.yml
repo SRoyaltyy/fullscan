@@ -32,6 +32,7 @@ jobs:
           sparse-checkout: |
             src
             scripts
+            .github/workflows
             data/news_intake
             data/lane_public_analysis
             00_grounding
