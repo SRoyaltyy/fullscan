@@ -1660,27 +1660,12 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "c6caf0414c6b211fd837fe54f2b62e9d666effcde8ca1a65a0d77ddafb37bbda",
-      "started_at": "2026-10-11T05:11:38.783116+00:00",
-      "completed_at": "2026-10-11T05:14:59.632285+00:00",
+      "started_at": "2026-10-11T05:21:52.933008+00:00",
+      "completed_at": "2026-10-11T05:21:53.062444+00:00",
       "status": "executed",
       "model_stages": [
         {
           "stage": "classify",
-          "provider": "openrouter",
-          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
-          "returned_json": true,
-          "response_json": {
-            "event_class": "regime_break",
-            "sign": null,
-            "q5": "regime_break",
-            "constraint": "Eritrean troop deployment into Ethiopia's Tigray region",
-            "split": false,
-            "split_facts": [],
-            "why": "Verified Eritrean troop deployment (5,000-8,000) into Ethiopia's Tigray region confirmed by multiple sources, prompting UN Security Council letter and escalating rhetoric, constituting a physical constraint change."
-          }
-        },
-        {
-          "stage": "meta",
           "provider": "",
           "model": "",
           "returned_json": false,
@@ -1705,68 +1690,17 @@
         "gold_id": "",
         "ticker_hint": "",
         "keep": false,
-        "reject_reason": "lane_meta_missing",
-        "questions": [
-          {
-            "id": "q1",
-            "family": "time",
-            "event_class": "regime_break",
-            "question": "Did the physical or legal constraint change, or is this a reprint?",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "q2",
-            "family": "time",
-            "event_class": "regime_break",
-            "question": "If it is a regime break, which prior book flips sign?",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "q3",
-            "family": "time",
-            "event_class": "regime_break",
-            "question": "If it is weather, why is a 0-1d entity illegal?",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "y_s",
-            "family": "time",
-            "event_class": "regime_break",
-            "question": "Y-S salience: What standing axiom about {place|order} just became false? When was the last analog in the same consciousness class (year)? Audience: street / city / world tape?",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "y_t",
-            "family": "time",
-            "event_class": "regime_break",
-            "question": "Y-T transmission: Which listed pipe, book, or forced flow changed BECAUSE that axiom died? If the same deaths or arrest happened with no pipe, which ticker still moves? If none, transmission=none and there is no ACTION from salience alone.",
-            "status": "pending",
-            "note": ""
-          }
-        ],
+        "reject_reason": "lane_classify_missing",
+        "questions": [],
         "instruments": [],
         "entities": [],
         "pack_facts": [],
-        "watermarks": [
-          {
-            "stage": "classify",
-            "watermark": "lane::openrouter::nvidia/nemotron-3-ultra-550b-a55b:free"
-          },
-          {
-            "stage": "meta",
-            "watermark": ""
-          }
-        ],
+        "watermarks": [],
         "watermark": "",
         "action": "",
-        "q5": "regime_break",
-        "event_class": "regime_break",
+        "q5": "",
+        "event_class": "",
         "sign": null,
-        "family": "time",
         "history": {
           "history_state": "first_print",
           "state_locked": false,
@@ -1785,12 +1719,6 @@
             "sha256": "efd81822cd1775e09991852c3a010bf456f99e50fad5c33e3caa0f90327e107f",
             "bytes": 8678,
             "lines": 24
-          },
-          {
-            "stage": "meta",
-            "sha256": "ebd60f4f78266775048497cc7af204f835d6fb7dc1491a5fea451f3e0e2684d0",
-            "bytes": 8552,
-            "lines": 26
           }
         ]
       },
@@ -2022,6 +1950,144 @@
             }
           ],
           "execution_error": null
+        },
+        {
+          "started_at": "2026-10-11T05:11:38.783116+00:00",
+          "completed_at": "2026-10-11T05:14:59.632285+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "openrouter",
+              "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+              "returned_json": true,
+              "response_json": {
+                "event_class": "regime_break",
+                "sign": null,
+                "q5": "regime_break",
+                "constraint": "Eritrean troop deployment into Ethiopia's Tigray region",
+                "split": false,
+                "split_facts": [],
+                "why": "Verified Eritrean troop deployment (5,000-8,000) into Ethiopia's Tigray region confirmed by multiple sources, prompting UN Security Council letter and escalating rhetoric, constituting a physical constraint change."
+              }
+            },
+            {
+              "stage": "meta",
+              "provider": "",
+              "model": "",
+              "returned_json": false,
+              "response_json": null
+            }
+          ],
+          "analysis": {
+            "article_id": "8c4c0a18b5a6fc1db0484e28",
+            "title": "Eritrean troops in Ethiopia raise fears of a regional war",
+            "body": "Conflicts Eritrea Eritrean troops in Ethiopia raise fears of a regional war Philipp Sandner 10/09/2026 October 9, 2026 Ethiopia and Eritrea are trading blame for confrontations in Tigray amid international calls for restraint. Their respective allies have the potential to catapult the conflict into a regional war. https://p.dw.com/p/5O3Vx ENDF patrol on October 7: The airport of Mekelle is under Ethiopian government control. But witnesses have reported Eritrean troops towards Tigray's northern border. Image: REUTERS Advertisement Various sources have confirmed the presence of Eritrean armed forces in Ethiopia . An AFP report quoted a foreign security source, speaking on condition of anonymity, as estimating that 5,000 to 8,000 Eritrean soldiers were present in the northenmost state of Ethi",
+            "analysis_body_scope": {
+              "source_body_start": 0,
+              "source_body_end": 6724,
+              "rules": [],
+              "original_body_sha256": "a104c95ed12627cc2d643bbf204bc6c1c732e052b2f9887015985166434e07ef",
+              "analysis_body_sha256": "a104c95ed12627cc2d643bbf204bc6c1c732e052b2f9887015985166434e07ef",
+              "excluded_characters": 0
+            },
+            "known_at": "2026-10-09T15:20:00+00:00",
+            "harvest_source": "https://www.dw.com/en/eritrean-troops-in-ethiopia-raise-fears-of-a-regional-war/a-79615065?maca=en-rss-en-world-4025-rdf",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_meta_missing",
+            "questions": [
+              {
+                "id": "q1",
+                "family": "time",
+                "event_class": "regime_break",
+                "question": "Did the physical or legal constraint change, or is this a reprint?",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "q2",
+                "family": "time",
+                "event_class": "regime_break",
+                "question": "If it is a regime break, which prior book flips sign?",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "q3",
+                "family": "time",
+                "event_class": "regime_break",
+                "question": "If it is weather, why is a 0-1d entity illegal?",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "y_s",
+                "family": "time",
+                "event_class": "regime_break",
+                "question": "Y-S salience: What standing axiom about {place|order} just became false? When was the last analog in the same consciousness class (year)? Audience: street / city / world tape?",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "y_t",
+                "family": "time",
+                "event_class": "regime_break",
+                "question": "Y-T transmission: Which listed pipe, book, or forced flow changed BECAUSE that axiom died? If the same deaths or arrest happened with no pipe, which ticker still moves? If none, transmission=none and there is no ACTION from salience alone.",
+                "status": "pending",
+                "note": ""
+              }
+            ],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [
+              {
+                "stage": "classify",
+                "watermark": "lane::openrouter::nvidia/nemotron-3-ultra-550b-a55b:free"
+              },
+              {
+                "stage": "meta",
+                "watermark": ""
+              }
+            ],
+            "watermark": "",
+            "action": "",
+            "q5": "regime_break",
+            "event_class": "regime_break",
+            "sign": null,
+            "family": "time",
+            "history": {
+              "history_state": "first_print",
+              "state_locked": false,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "high",
+              "transmission": "none",
+              "transmission_locked": true,
+              "salience_only": true,
+              "y_required": true
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "efd81822cd1775e09991852c3a010bf456f99e50fad5c33e3caa0f90327e107f",
+                "bytes": 8678,
+                "lines": 24
+              },
+              {
+                "stage": "meta",
+                "sha256": "ebd60f4f78266775048497cc7af204f835d6fb7dc1491a5fea451f3e0e2684d0",
+                "bytes": 8552,
+                "lines": 26
+              }
+            ]
+          },
+          "rejected_model_json": [],
+          "execution_error": null
         }
       ]
     },
@@ -2121,27 +2187,12 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "ba64be8ef2d7c17107a4b0c923b12c1a861acaa86284136804bcd5fbced29cf2",
-      "started_at": "2026-10-11T05:14:59.632308+00:00",
-      "completed_at": "2026-10-11T05:18:55.646439+00:00",
+      "started_at": "2026-10-11T05:21:53.062456+00:00",
+      "completed_at": "2026-10-11T05:21:53.066743+00:00",
       "status": "executed",
       "model_stages": [
         {
           "stage": "classify",
-          "provider": "openrouter",
-          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
-          "returned_json": true,
-          "response_json": {
-            "event_class": "access_control",
-            "sign": null,
-            "q5": "impulse",
-            "constraint": "US sanctions on ICC restricting transactions and resources",
-            "split": false,
-            "split_facts": [],
-            "why": "New US sanctions on ICC announced today, cutting off transactions and resources, imposing a new constraint on the court's operations."
-          }
-        },
-        {
-          "stage": "meta",
           "provider": "",
           "model": "",
           "returned_json": false,
@@ -2168,84 +2219,17 @@
         "gold_id": "",
         "ticker_hint": "",
         "keep": false,
-        "reject_reason": "lane_meta_missing",
-        "questions": [
-          {
-            "id": "q1",
-            "family": "structure",
-            "event_class": "access_control",
-            "question": "Who collects the old venue rent (exchange or broker)?",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "q2",
-            "family": "structure",
-            "event_class": "access_control",
-            "question": "Which new venue just received permission, and is that name on the Finviz hit list?",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "q3",
-            "family": "structure",
-            "event_class": "access_control",
-            "question": "Is the incumbent already building the same rail (then mixed, not a clean down)?",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "q4",
-            "family": "structure",
-            "event_class": "access_control",
-            "question": "How durable is the rule (hours / weeks / exemption / statute)?",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "q5",
-            "family": "structure",
-            "event_class": "access_control",
-            "question": "Does any hit sit in Energy even though the title never names that firm? Drop it.",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "y_s",
-            "family": "structure",
-            "event_class": "access_control",
-            "question": "Y-S salience: What standing axiom about {place|order} just became false? When was the last analog in the same consciousness class (year)? Audience: street / city / world tape?",
-            "status": "skipped",
-            "note": "lede is not a history trigger"
-          },
-          {
-            "id": "y_t",
-            "family": "structure",
-            "event_class": "access_control",
-            "question": "Y-T transmission: Which listed pipe, book, or forced flow changed BECAUSE that axiom died? If the same deaths or arrest happened with no pipe, which ticker still moves? If none, transmission=none and there is no ACTION from salience alone.",
-            "status": "pending",
-            "note": ""
-          }
-        ],
+        "reject_reason": "lane_classify_missing",
+        "questions": [],
         "instruments": [],
         "entities": [],
         "pack_facts": [],
-        "watermarks": [
-          {
-            "stage": "classify",
-            "watermark": "lane::openrouter::nvidia/nemotron-3-ultra-550b-a55b:free"
-          },
-          {
-            "stage": "meta",
-            "watermark": ""
-          }
-        ],
+        "watermarks": [],
         "watermark": "",
         "action": "",
-        "q5": "impulse",
-        "event_class": "access_control",
+        "q5": "",
+        "event_class": "",
         "sign": null,
-        "family": "structure",
         "history": {
           "history_state": "reprint",
           "state_locked": true,
@@ -2264,29 +2248,10 @@
             "sha256": "cdbb74185efa1264bd0614adc6fe5fd44c9c4140ee7c61da007d349230051f6a",
             "bytes": 10146,
             "lines": 24
-          },
-          {
-            "stage": "meta",
-            "sha256": "c6018b3933c5db509e00cec0fe9cbd0a995ddc09d77a598ed1406d6c1fd438c7",
-            "bytes": 10030,
-            "lines": 26
           }
         ]
       },
-      "rejected_model_json": [
-        {
-          "stage": "classify",
-          "parsed": {
-            "event_class": "impulse",
-            "sign": null,
-            "q5": "impulse|regime|regime_break",
-            "constraint": "US imposes sanctions on the International Criminal Court",
-            "split": false,
-            "split_facts": [],
-            "why": "New dated fact (Oct 9, 2026) announcing US sanctions that changes a legal constraint regarding the ICC."
-          }
-        }
-      ],
+      "rejected_model_json": [],
       "execution_error": null,
       "index_source": "data/exports/finviz_2026-10-09.csv",
       "index_sha256": "fb58669543f1d9b3f835061e91a0f6280e80a8a8b95a9a1dcac6a12f7b6c0535",
@@ -2443,6 +2408,175 @@
             }
           ],
           "execution_error": null
+        },
+        {
+          "started_at": "2026-10-11T05:14:59.632308+00:00",
+          "completed_at": "2026-10-11T05:18:55.646439+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "openrouter",
+              "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+              "returned_json": true,
+              "response_json": {
+                "event_class": "access_control",
+                "sign": null,
+                "q5": "impulse",
+                "constraint": "US sanctions on ICC restricting transactions and resources",
+                "split": false,
+                "split_facts": [],
+                "why": "New US sanctions on ICC announced today, cutting off transactions and resources, imposing a new constraint on the court's operations."
+              }
+            },
+            {
+              "stage": "meta",
+              "provider": "",
+              "model": "",
+              "returned_json": false,
+              "response_json": null
+            }
+          ],
+          "analysis": {
+            "article_id": "5155d6492b47e37d62872eb6",
+            "title": "US imposes sanctions aiming to 'dismantle' International Criminal Court",
+            "body": "Politics United States of America US announces sanctions on the International Criminal Court Mark Hallam with Reuters, AP, AFP 10/09/2026 October 9, 2026 The US has announced new sanctions on the International Criminal Court. It's the latest in a series of steps by the Donald Trump administration as it seeks to \"dismantle\" the intergovernmental organization. https://p.dw.com/p/5O4Qb The US has had the ICC on its radar more or less throughout the second Trump term Image: John Thys/AFP Advertisement US President Donald Trump 's administration imposed sanctions on the International Criminal Court (ICC) on Friday, hours after one of its former judges won the Nobel Peace Prize. This comes as the US has in recent months made no bones about pursuing what Secretary of State Marco Rubio has called ",
+            "analysis_body_scope": {
+              "source_body_start": 0,
+              "source_body_end": 8200,
+              "rules": [
+                "terminal_publisher_preferred_source_promotion"
+              ],
+              "original_body_sha256": "1f04bf890082f262c227bd909cc17c6e93dcbeb5cb465e1d039a0a4b2e62bb72",
+              "analysis_body_sha256": "10b19ef83a9952ff76898a8c792befc0b9399d3708a9fbed52d9ed48a92cb7bf",
+              "excluded_characters": 201
+            },
+            "known_at": "2026-10-09T14:53:00+00:00",
+            "harvest_source": "https://www.dw.com/en/us-imposes-sanctions-aiming-to-dismantle-international-criminal-court/a-79618577?maca=en-rss-en-world-4025-rdf",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_meta_missing",
+            "questions": [
+              {
+                "id": "q1",
+                "family": "structure",
+                "event_class": "access_control",
+                "question": "Who collects the old venue rent (exchange or broker)?",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "q2",
+                "family": "structure",
+                "event_class": "access_control",
+                "question": "Which new venue just received permission, and is that name on the Finviz hit list?",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "q3",
+                "family": "structure",
+                "event_class": "access_control",
+                "question": "Is the incumbent already building the same rail (then mixed, not a clean down)?",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "q4",
+                "family": "structure",
+                "event_class": "access_control",
+                "question": "How durable is the rule (hours / weeks / exemption / statute)?",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "q5",
+                "family": "structure",
+                "event_class": "access_control",
+                "question": "Does any hit sit in Energy even though the title never names that firm? Drop it.",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "y_s",
+                "family": "structure",
+                "event_class": "access_control",
+                "question": "Y-S salience: What standing axiom about {place|order} just became false? When was the last analog in the same consciousness class (year)? Audience: street / city / world tape?",
+                "status": "skipped",
+                "note": "lede is not a history trigger"
+              },
+              {
+                "id": "y_t",
+                "family": "structure",
+                "event_class": "access_control",
+                "question": "Y-T transmission: Which listed pipe, book, or forced flow changed BECAUSE that axiom died? If the same deaths or arrest happened with no pipe, which ticker still moves? If none, transmission=none and there is no ACTION from salience alone.",
+                "status": "pending",
+                "note": ""
+              }
+            ],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [
+              {
+                "stage": "classify",
+                "watermark": "lane::openrouter::nvidia/nemotron-3-ultra-550b-a55b:free"
+              },
+              {
+                "stage": "meta",
+                "watermark": ""
+              }
+            ],
+            "watermark": "",
+            "action": "",
+            "q5": "impulse",
+            "event_class": "access_control",
+            "sign": null,
+            "family": "structure",
+            "history": {
+              "history_state": "reprint",
+              "state_locked": true,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "medium",
+              "transmission": "node",
+              "transmission_locked": false,
+              "salience_only": false,
+              "y_required": true
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "cdbb74185efa1264bd0614adc6fe5fd44c9c4140ee7c61da007d349230051f6a",
+                "bytes": 10146,
+                "lines": 24
+              },
+              {
+                "stage": "meta",
+                "sha256": "c6018b3933c5db509e00cec0fe9cbd0a995ddc09d77a598ed1406d6c1fd438c7",
+                "bytes": 10030,
+                "lines": 26
+              }
+            ]
+          },
+          "rejected_model_json": [
+            {
+              "stage": "classify",
+              "parsed": {
+                "event_class": "impulse",
+                "sign": null,
+                "q5": "impulse|regime|regime_break",
+                "constraint": "US imposes sanctions on the International Criminal Court",
+                "split": false,
+                "split_facts": [],
+                "why": "New dated fact (Oct 9, 2026) announcing US sanctions that changes a legal constraint regarding the ICC."
+              }
+            }
+          ],
+          "execution_error": null
         }
       ]
     },
@@ -2456,8 +2590,8 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "df746789bd5e8f8a54514446b2eaa9cdd8e923e6915f8804d11cd5761bdb07cc",
-      "started_at": "2026-10-11T05:18:55.646458+00:00",
-      "completed_at": "2026-10-11T05:18:55.649284+00:00",
+      "started_at": "2026-10-11T05:21:53.066757+00:00",
+      "completed_at": "2026-10-11T05:21:53.069021+00:00",
       "status": "executed",
       "model_stages": [
         {
@@ -2526,11 +2660,78 @@
       "fresh_acceptance_pass": false,
       "frontier_verified": false,
       "review_status": "pending_source_backed_four_axis_review",
-      "attempts": []
+      "attempts": [
+        {
+          "started_at": "2026-10-11T05:18:55.646458+00:00",
+          "completed_at": "2026-10-11T05:18:55.649284+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "",
+              "model": "",
+              "returned_json": false,
+              "response_json": null
+            }
+          ],
+          "analysis": {
+            "article_id": "efe88f2522211c053eefe207",
+            "title": "Poland: Lifeline for Ukrainian refugees confronts donor fatigue and online abuse as anti-Ukrainian sentiment grows",
+            "body": "Society Poland Poland: Refugee lifeline faces funding drop and online abuse Adam Easton in Krakow, Poland 10/09/2026 October 9, 2026 A Ukrainian woman who fled the war in her country built a lifeline for refugees in Poland. Now her organization faces donor fatigue, funding cuts and rising hostility as support for Ukrainians in Poland wanes. https://p.dw.com/p/5O33M Nastya Podorozhnya was a 24-year-old Ukrainian graduate living in Poland when Russia invaded her native country in 2022 Image: Adam Easton/DW Advertisement Hours after Vladimir Putin announced his \"special military operation\" in Ukraine on February 24, 2022, Russian troops began attacking Kyiv's Antonov Airport close to the home of Nastya Podorozhnya's family. Nastya was 24 at the time and living in Krakow in neighboring Poland ",
+            "analysis_body_scope": {
+              "source_body_start": 0,
+              "source_body_end": 8107,
+              "rules": [],
+              "original_body_sha256": "70be7c8132e5c39065c2d80b777cdd9a0bf24a8d396b8b7624f8c5da451d8cd1",
+              "analysis_body_sha256": "70be7c8132e5c39065c2d80b777cdd9a0bf24a8d396b8b7624f8c5da451d8cd1",
+              "excluded_characters": 0
+            },
+            "known_at": "2026-10-09T12:50:00+00:00",
+            "harvest_source": "https://www.dw.com/en/poland-lifeline-for-ukrainian-refugees-confronts-donor-fatigue-and-online-abuse-as-anti-ukrainian-sentiment-grows/a-79613292?maca=en-rss-en-world-4025-rdf",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_classify_missing",
+            "questions": [],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [],
+            "watermark": "",
+            "action": "",
+            "q5": "",
+            "event_class": "",
+            "sign": null,
+            "history": {
+              "history_state": "first_print",
+              "state_locked": false,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "high",
+              "transmission": "none",
+              "transmission_locked": true,
+              "salience_only": true,
+              "y_required": true
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "eed0353697ae321c7cd928326a6314389d03970e12ede2d07f49a9062b89b7bd",
+                "bytes": 10088,
+                "lines": 24
+              }
+            ]
+          },
+          "rejected_model_json": [],
+          "execution_error": null
+        }
+      ]
     }
   },
   "schema_version": 1,
   "runtime_status": "ready",
-  "updated_at": "2026-10-11T05:18:55.649296+00:00",
+  "updated_at": "2026-10-11T05:21:53.069026+00:00",
   "last_run_processed": 3
 }
