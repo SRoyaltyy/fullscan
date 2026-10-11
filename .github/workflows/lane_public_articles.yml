@@ -4,6 +4,9 @@ on:
     branches: [main]
     paths:
       - 'src/lane_route.py'
+      - 'src/news_impact/meta_hop.py'
+      - 'src/news_impact/one_shot_stack.py'
+      - 'src/lane_one_shot.py'
       - 'scripts/lane_public_articles.py'
       - 'scripts/test_lane_public_articles.py'
       - '.github/workflows/lane_public_articles.yml'
@@ -49,8 +52,7 @@ jobs:
           PY_INDEX
       - name: Verify public input boundary
         run: |
-          python -m unittest discover -s scripts -p 'test_lane_public_articles.py'
-          python -m unittest discover -s scripts -p 'test_lane_route_rate_limits.py'
+          python -m unittest discover -s scripts -p 'test_lane*py'
       - name: Analyze retained public articles with existing free credentials
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}

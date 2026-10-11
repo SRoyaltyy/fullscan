@@ -46,11 +46,14 @@ def _bullshit(question: str, article: str) -> str:
 
 def _noun_in(noun: str, question: str, nouns: set[str], article: str) -> bool:
     token = (noun or "").strip().lower()
-    if len(token) < 3 or token not in nouns:
+    terms = article_nouns(token)
+    if len(token) < 3 or not terms or not terms.issubset(nouns):
         return False
-    if token not in (article or "").lower():
-        return False
-    return bool(re.search(rf"(?i)\b{re.escape(token)}\b", question or ""))
+    # Names and product nouns can contain several words. Require the entire
+    # phrase in both places; separate matching words do not establish binding.
+    phrase = r"\s+".join(re.escape(part) for part in token.split())
+    pattern = rf"(?i)(?<!\w){phrase}(?!\w)"
+    return bool(re.search(pattern, article or "") and re.search(pattern, question or ""))
 
 
 def normalize_meta(
