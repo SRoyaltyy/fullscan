@@ -44,9 +44,16 @@ class OpenRouterLimits(unittest.TestCase):
         self.assertTrue(lane._or_upstream_rate_limit({'metadata': {'limit_source': 'upstream_provider_shared_pool'}}))
     def test_current_floor_keeps_free_and_quality_guards(self):
         models = lane.primary_models_for('openrouter', 'news_classify')
-        self.assertIn('qwen/qwen3.8-27b:free', models)
+        self.assertIn('nvidia/nemotron-3-ultra-550b-a55b:free', models)
         self.assertTrue(all(lane._or_is_free(model) and not lane.is_classify_banned(model) for model in models))
         self.assertNotIn('z-ai/glm-5.2:free', lane.OR_MODELS)
         self.assertNotIn('minimax/minimax-m3:free', lane.OR_MODELS)
+        self.assertNotIn('qwen/qwen3.8-27b:free', lane.OR_MODELS)
+    def test_transport_retains_upstream_scope_before_clipping_error(self):
+        error = {'message': 'Provider returned error', 'metadata': {'raw': 'x' * 240 + ' temporarily rate-limited upstream'}}
+        with patch.object(lane, 'http_json', return_value=(429, {'error': error}, {})):
+            parsed, status, info = lane.openai_chat('https://openrouter.ai/api/v1/chat/completions', 'synthetic-key', 'synthetic:free', 'Synthetic public prompt')
+        self.assertEqual(status, 429); self.assertIsNone(parsed)
+        self.assertTrue(lane._or_upstream_rate_limit(info))
 
 if __name__ == '__main__': unittest.main()
