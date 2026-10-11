@@ -5,6 +5,8 @@ on:
     paths:
       - 'src/lane_route.py'
       - 'src/news_impact/meta_hop.py'
+      - 'src/news_impact/prompts.py'
+      - 'src/news_impact/emission_schema.py'
       - 'src/news_impact/one_shot_stack.py'
       - 'src/lane_one_shot.py'
       - 'src/news_reporting_scope.py'

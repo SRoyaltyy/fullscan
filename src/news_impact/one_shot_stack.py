@@ -36,6 +36,8 @@ from src.news_impact.prompts import (
     CLASSIFIER_SYSTEM,
     FAMILY_TESTS,
     FLIP_QUESTIONS,
+    event_family_test,
+    event_flip_questions,
     family_block,
     HISTORY_SLOT,
     LANREOTIDE_CLOCK_Q,
@@ -252,7 +254,7 @@ def gate0(title: str, body: str = "") -> str | None:
 def plan_questions(family: str, event_class: str, title: str) -> list[dict]:
     fam = family if family in FLIP_QUESTIONS else "time"
     rows = []
-    for i, text in enumerate(FLIP_QUESTIONS[fam], 1):
+    for i, text in enumerate(event_flip_questions(fam, event_class), 1):
         rows.append({
             "id": f"q{i}",
             "family": fam,
@@ -535,7 +537,7 @@ def analyst_prompt(
     pack_facts: list[dict],
     axioms: list[dict],
 ) -> str:
-    test = FAMILY_TESTS.get(family, FAMILY_TESTS["time"])
+    test = event_family_test(family, event_class)
     q_lines = "\n".join(f"- {q['id']}: {q['question']}" for q in questions) or "(none)"
     inst = "\n".join(
         f"- {r.get('ticker')} | {r.get('entity_name')} | {r.get('industry')} | {r.get('sector')}"
@@ -566,7 +568,7 @@ def analyst_prompt(
         f"sign={sign} q5={q5}.\n"
         f"Constraint: {constraint}\n"
         f"{clock_note}\n"
-        f"{family_block(family)}\n"
+        f"{family_block(family, event_class)}\n"
         "Roles you may use: harm_set direction=down; "
         "substitute; unscathed_rival; arms_dealer. No scores.\n"
         "A second-order role (substitute, unscathed_rival, arms_dealer) "
