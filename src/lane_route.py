@@ -118,12 +118,14 @@ POLLINATIONS_MODELS = [
 ]
 POLLINATIONS_URL = "https://gen.pollinations.ai/v1/chat/completions"
 # $0 only: documented free router and/or :free suffix. Never paid IDs.
-# Catalog checked 2026-10-10: Qwen3.8 27B is a current dense free floor.
-# GLM-5.2 and MiniMax-M3 :free returned explicit paid-only 404s and stay off.
-# https://openrouter.ai/qwen/qwen3.8-27b:free
+# Current usage-ranked free roster checked 2026-10-10. Legacy model pages
+# retained zero-price listings after their endpoints became paid-only.
+# https://openrouter.ai/collections/free-models
 _OR_CANDIDATES = [
     "openrouter/free",
-    "qwen/qwen3.8-27b:free",
+    "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "thinkingmachines/inkling:free",
     "inclusionai/ling-3.0-flash-fin:free",
     "inclusionai/ling-3.0-flash-sante:free",
     "google/gemma-4-31b-it:free",
@@ -167,7 +169,9 @@ QWEN_PROBE_MODELS = (
 # OpenRouter classify floor. Ling-3 flash and the free router are not
 # classify — they are 8B-class and may run planner / filter / analyst.
 OR_CLASSIFY_MODELS = [
-    "qwen/qwen3.8-27b:free",
+    "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "thinkingmachines/inkling:free",
     "google/gemma-4-31b-it:free",
 ]
 # Public DashScope OpenAI-compatible fallbacks. DASHSCOPE_BASE_URL (env/secret)
@@ -1099,7 +1103,11 @@ def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None
         text = _choice_text(body) if status == 200 else ""
         parsed = extract_json(text) if status == 200 else None
     if status != 200:
-        err = str(body.get("error") or body.get("message") or body)[:180]
+        error_info = body.get("error") or body.get("message") or body
+        err = str(error_info)[:180]
+        # Preserve quota scope before long model IDs/error details are clipped.
+        if status == 429 and "openrouter.ai/" in url and _or_upstream_rate_limit(error_info):
+            err = "upstream_provider_shared_pool: " + err[:150]
         err = re.sub(r"(?i)bearer\s+\S+", "bearer [redacted]", err)
         return None, status, err
     if parsed is None:
