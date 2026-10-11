@@ -1660,8 +1660,8 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "c6caf0414c6b211fd837fe54f2b62e9d666effcde8ca1a65a0d77ddafb37bbda",
-      "started_at": "2026-10-11T05:21:52.933008+00:00",
-      "completed_at": "2026-10-11T05:21:53.062444+00:00",
+      "started_at": "2026-10-11T05:31:53.373957+00:00",
+      "completed_at": "2026-10-11T05:31:53.546619+00:00",
       "status": "executed",
       "model_stages": [
         {
@@ -1716,9 +1716,9 @@
         "prompt_log": [
           {
             "stage": "classify",
-            "sha256": "efd81822cd1775e09991852c3a010bf456f99e50fad5c33e3caa0f90327e107f",
-            "bytes": 8678,
-            "lines": 24
+            "sha256": "7adab809a6535d882b0dd165c7073600a227d72408db74f32346e1bb6837878f",
+            "bytes": 9035,
+            "lines": 25
           }
         ]
       },
@@ -2088,6 +2088,72 @@
           },
           "rejected_model_json": [],
           "execution_error": null
+        },
+        {
+          "started_at": "2026-10-11T05:21:52.933008+00:00",
+          "completed_at": "2026-10-11T05:21:53.062444+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "",
+              "model": "",
+              "returned_json": false,
+              "response_json": null
+            }
+          ],
+          "analysis": {
+            "article_id": "8c4c0a18b5a6fc1db0484e28",
+            "title": "Eritrean troops in Ethiopia raise fears of a regional war",
+            "body": "Conflicts Eritrea Eritrean troops in Ethiopia raise fears of a regional war Philipp Sandner 10/09/2026 October 9, 2026 Ethiopia and Eritrea are trading blame for confrontations in Tigray amid international calls for restraint. Their respective allies have the potential to catapult the conflict into a regional war. https://p.dw.com/p/5O3Vx ENDF patrol on October 7: The airport of Mekelle is under Ethiopian government control. But witnesses have reported Eritrean troops towards Tigray's northern border. Image: REUTERS Advertisement Various sources have confirmed the presence of Eritrean armed forces in Ethiopia . An AFP report quoted a foreign security source, speaking on condition of anonymity, as estimating that 5,000 to 8,000 Eritrean soldiers were present in the northenmost state of Ethi",
+            "analysis_body_scope": {
+              "source_body_start": 0,
+              "source_body_end": 6724,
+              "rules": [],
+              "original_body_sha256": "a104c95ed12627cc2d643bbf204bc6c1c732e052b2f9887015985166434e07ef",
+              "analysis_body_sha256": "a104c95ed12627cc2d643bbf204bc6c1c732e052b2f9887015985166434e07ef",
+              "excluded_characters": 0
+            },
+            "known_at": "2026-10-09T15:20:00+00:00",
+            "harvest_source": "https://www.dw.com/en/eritrean-troops-in-ethiopia-raise-fears-of-a-regional-war/a-79615065?maca=en-rss-en-world-4025-rdf",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_classify_missing",
+            "questions": [],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [],
+            "watermark": "",
+            "action": "",
+            "q5": "",
+            "event_class": "",
+            "sign": null,
+            "history": {
+              "history_state": "first_print",
+              "state_locked": false,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "high",
+              "transmission": "none",
+              "transmission_locked": true,
+              "salience_only": true,
+              "y_required": true
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "efd81822cd1775e09991852c3a010bf456f99e50fad5c33e3caa0f90327e107f",
+                "bytes": 8678,
+                "lines": 24
+              }
+            ]
+          },
+          "rejected_model_json": [],
+          "execution_error": null
         }
       ]
     },
@@ -2187,8 +2253,8 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "ba64be8ef2d7c17107a4b0c923b12c1a861acaa86284136804bcd5fbced29cf2",
-      "started_at": "2026-10-11T05:21:53.062456+00:00",
-      "completed_at": "2026-10-11T05:21:53.066743+00:00",
+      "started_at": "2026-10-11T05:31:53.546644+00:00",
+      "completed_at": "2026-10-11T05:31:53.549907+00:00",
       "status": "executed",
       "model_stages": [
         {
@@ -2245,9 +2311,9 @@
         "prompt_log": [
           {
             "stage": "classify",
-            "sha256": "cdbb74185efa1264bd0614adc6fe5fd44c9c4140ee7c61da007d349230051f6a",
-            "bytes": 10146,
-            "lines": 24
+            "sha256": "6d6f4032899d213e4398b9889c83c51788eb81cb9ab0e69ac981b3b8a754269a",
+            "bytes": 10503,
+            "lines": 25
           }
         ]
       },
@@ -2577,6 +2643,74 @@
             }
           ],
           "execution_error": null
+        },
+        {
+          "started_at": "2026-10-11T05:21:53.062456+00:00",
+          "completed_at": "2026-10-11T05:21:53.066743+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "",
+              "model": "",
+              "returned_json": false,
+              "response_json": null
+            }
+          ],
+          "analysis": {
+            "article_id": "5155d6492b47e37d62872eb6",
+            "title": "US imposes sanctions aiming to 'dismantle' International Criminal Court",
+            "body": "Politics United States of America US announces sanctions on the International Criminal Court Mark Hallam with Reuters, AP, AFP 10/09/2026 October 9, 2026 The US has announced new sanctions on the International Criminal Court. It's the latest in a series of steps by the Donald Trump administration as it seeks to \"dismantle\" the intergovernmental organization. https://p.dw.com/p/5O4Qb The US has had the ICC on its radar more or less throughout the second Trump term Image: John Thys/AFP Advertisement US President Donald Trump 's administration imposed sanctions on the International Criminal Court (ICC) on Friday, hours after one of its former judges won the Nobel Peace Prize. This comes as the US has in recent months made no bones about pursuing what Secretary of State Marco Rubio has called ",
+            "analysis_body_scope": {
+              "source_body_start": 0,
+              "source_body_end": 8200,
+              "rules": [
+                "terminal_publisher_preferred_source_promotion"
+              ],
+              "original_body_sha256": "1f04bf890082f262c227bd909cc17c6e93dcbeb5cb465e1d039a0a4b2e62bb72",
+              "analysis_body_sha256": "10b19ef83a9952ff76898a8c792befc0b9399d3708a9fbed52d9ed48a92cb7bf",
+              "excluded_characters": 201
+            },
+            "known_at": "2026-10-09T14:53:00+00:00",
+            "harvest_source": "https://www.dw.com/en/us-imposes-sanctions-aiming-to-dismantle-international-criminal-court/a-79618577?maca=en-rss-en-world-4025-rdf",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_classify_missing",
+            "questions": [],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [],
+            "watermark": "",
+            "action": "",
+            "q5": "",
+            "event_class": "",
+            "sign": null,
+            "history": {
+              "history_state": "reprint",
+              "state_locked": true,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "medium",
+              "transmission": "node",
+              "transmission_locked": false,
+              "salience_only": false,
+              "y_required": true
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "cdbb74185efa1264bd0614adc6fe5fd44c9c4140ee7c61da007d349230051f6a",
+                "bytes": 10146,
+                "lines": 24
+              }
+            ]
+          },
+          "rejected_model_json": [],
+          "execution_error": null
         }
       ]
     },
@@ -2590,8 +2724,8 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "df746789bd5e8f8a54514446b2eaa9cdd8e923e6915f8804d11cd5761bdb07cc",
-      "started_at": "2026-10-11T05:21:53.066757+00:00",
-      "completed_at": "2026-10-11T05:21:53.069021+00:00",
+      "started_at": "2026-10-11T05:31:53.549915+00:00",
+      "completed_at": "2026-10-11T05:31:53.551260+00:00",
       "status": "executed",
       "model_stages": [
         {
@@ -2646,9 +2780,9 @@
         "prompt_log": [
           {
             "stage": "classify",
-            "sha256": "eed0353697ae321c7cd928326a6314389d03970e12ede2d07f49a9062b89b7bd",
-            "bytes": 10088,
-            "lines": 24
+            "sha256": "a4ceae4793920b07e7c784466480f74ada1565f78130798f49a2e1e26ef08873",
+            "bytes": 10445,
+            "lines": 25
           }
         ]
       },
@@ -2726,12 +2860,78 @@
           },
           "rejected_model_json": [],
           "execution_error": null
+        },
+        {
+          "started_at": "2026-10-11T05:21:53.066757+00:00",
+          "completed_at": "2026-10-11T05:21:53.069021+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "",
+              "model": "",
+              "returned_json": false,
+              "response_json": null
+            }
+          ],
+          "analysis": {
+            "article_id": "efe88f2522211c053eefe207",
+            "title": "Poland: Lifeline for Ukrainian refugees confronts donor fatigue and online abuse as anti-Ukrainian sentiment grows",
+            "body": "Society Poland Poland: Refugee lifeline faces funding drop and online abuse Adam Easton in Krakow, Poland 10/09/2026 October 9, 2026 A Ukrainian woman who fled the war in her country built a lifeline for refugees in Poland. Now her organization faces donor fatigue, funding cuts and rising hostility as support for Ukrainians in Poland wanes. https://p.dw.com/p/5O33M Nastya Podorozhnya was a 24-year-old Ukrainian graduate living in Poland when Russia invaded her native country in 2022 Image: Adam Easton/DW Advertisement Hours after Vladimir Putin announced his \"special military operation\" in Ukraine on February 24, 2022, Russian troops began attacking Kyiv's Antonov Airport close to the home of Nastya Podorozhnya's family. Nastya was 24 at the time and living in Krakow in neighboring Poland ",
+            "analysis_body_scope": {
+              "source_body_start": 0,
+              "source_body_end": 8107,
+              "rules": [],
+              "original_body_sha256": "70be7c8132e5c39065c2d80b777cdd9a0bf24a8d396b8b7624f8c5da451d8cd1",
+              "analysis_body_sha256": "70be7c8132e5c39065c2d80b777cdd9a0bf24a8d396b8b7624f8c5da451d8cd1",
+              "excluded_characters": 0
+            },
+            "known_at": "2026-10-09T12:50:00+00:00",
+            "harvest_source": "https://www.dw.com/en/poland-lifeline-for-ukrainian-refugees-confronts-donor-fatigue-and-online-abuse-as-anti-ukrainian-sentiment-grows/a-79613292?maca=en-rss-en-world-4025-rdf",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_classify_missing",
+            "questions": [],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [],
+            "watermark": "",
+            "action": "",
+            "q5": "",
+            "event_class": "",
+            "sign": null,
+            "history": {
+              "history_state": "first_print",
+              "state_locked": false,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "high",
+              "transmission": "none",
+              "transmission_locked": true,
+              "salience_only": true,
+              "y_required": true
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "eed0353697ae321c7cd928326a6314389d03970e12ede2d07f49a9062b89b7bd",
+                "bytes": 10088,
+                "lines": 24
+              }
+            ]
+          },
+          "rejected_model_json": [],
+          "execution_error": null
         }
       ]
     }
   },
   "schema_version": 1,
   "runtime_status": "ready",
-  "updated_at": "2026-10-11T05:21:53.069026+00:00",
+  "updated_at": "2026-10-11T05:31:53.551264+00:00",
   "last_run_processed": 3
 }
