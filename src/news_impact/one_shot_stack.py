@@ -681,6 +681,25 @@ def classify_acceptable(parsed: dict | None, title: str, body: str, gold_id: str
     return True
 
 
+def classify_schema_repair_note(parsed: dict | None) -> str:
+    """Explain invalid enum fields without selecting an article interpretation."""
+    if not isinstance(parsed, dict):
+        return ""
+    event_class = str(parsed.get("event_class") or "").strip()
+    q5 = str(parsed.get("q5") or "").strip()
+    if event_class not in EVENT_CLASSES or q5 not in {"impulse", "regime", "regime_break"}:
+        return (
+            "PREVIOUS JSON WAS NOT ACCEPTED: invalid classification enum.\n"
+            f"event_class was {event_class!r}; q5 was {q5!r}.\n"
+            "Choose exactly ONE event_class from: " + ", ".join(sorted(EVENT_CLASSES)) + ".\n"
+            "Choose exactly ONE q5: impulse, regime, or regime_break.\n"
+            "A pipe-separated list is a schema example, never an answer.\n"
+            "Re-evaluate the original article; do not infer a new fact or ticker. "
+            "Return ONE JSON object satisfying the original instructions."
+        )
+    return ""
+
+
 def classify_repair_note(parsed: dict | None, title: str, body: str = "") -> str:
     """One correction when the enum is a near-miss. Empty means do not re-ask.
 
@@ -691,6 +710,9 @@ def classify_repair_note(parsed: dict | None, title: str, body: str = "") -> str
         return ""
     event_class = str(parsed.get("event_class") or "").strip()
     q5 = str(parsed.get("q5") or "").strip()
+    schema_note = classify_schema_repair_note(parsed)
+    if schema_note:
+        return schema_note
     text = f"{title or ''}\n{body or ''}"
     if _OPS_NOT_STRIKE.search(text) and not _STRIKE.search(text):
         if event_class == "blast_ops" and q5 == "impulse":
