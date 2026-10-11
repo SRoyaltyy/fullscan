@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'src/lane_route.py'
+      - 'src/lane_source_identity.py'
       - 'src/news_impact/meta_hop.py'
       - 'src/news_impact/prompts.py'
       - 'src/news_impact/emission_schema.py'

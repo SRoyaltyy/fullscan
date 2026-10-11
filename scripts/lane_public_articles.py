@@ -14,6 +14,20 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 FIELDS = ('id', 'title', 'body', 'published_at', 'url')
+ATTEMPT_FIELDS = ('started_at', 'completed_at', 'status', 'model_stages', 'analysis',
+                  'rejected_model_json', 'execution_error', 'producer_source', 'producer_environment')
+
+def retain_attempt(previous, row):
+    """A quota block is not a new semantic result. Keep earlier results labeled."""
+    if previous and row['status'] == 'blocked_free_daily_quota':
+        return {**previous, 'attempts': previous.get('attempts', []) + [
+            {k: row.get(k) for k in ATTEMPT_FIELDS}],
+            'latest_attempt': {'status': row['status'], 'completed_at': row['completed_at'],
+                               'producer_source_sha256': row['producer_source']['sha256']}}
+    attempts = previous.get('attempts', []) + [{k: previous.get(k) for k in ATTEMPT_FIELDS}] if previous else []
+    return {**row, 'attempts': attempts,
+            'latest_attempt': {'status': row['status'], 'completed_at': row['completed_at'],
+                               'producer_source_sha256': row['producer_source']['sha256']}}
 
 def public_input(document):
     return {key: document.get(key, '') for key in FIELDS}
@@ -33,7 +47,7 @@ def audit_acceptance(stage, accept, rejected):
     return check
 
 
-def pending(root, completed, limit=3, days=8, requested=None):
+def pending(root, completed, limit=3, days=8, requested=None, source_sha256=None):
     now = datetime.now(timezone.utc).date()
     cutoff = (now - timedelta(days=days)).isoformat()
     rows = {}
@@ -51,7 +65,9 @@ def pending(root, completed, limit=3, days=8, requested=None):
                 continue
             key = input_key(document)
             previous = completed.get(key)
-            if key in completed and not str(previous.get('status', '')).startswith('execution_failed:') and (previous.get('analysis') or {}).get('reject_reason') not in {'lane_classify_missing', 'lane_meta_missing', 'lane_filter_missing'}:
+            previous_source = (previous or {}).get('producer_source')
+            same_source = source_sha256 is None or (isinstance(previous_source, dict) and previous_source.get('sha256') == source_sha256)
+            if key in completed and same_source and previous.get('status') != 'blocked_free_daily_quota' and not str(previous.get('status', '')).startswith('execution_failed:') and (previous.get('analysis') or {}).get('reject_reason') not in {'lane_classify_missing', 'lane_meta_missing', 'lane_filter_missing'}:
                 continue
             rows[key] = (public_input(document), path.relative_to(root).as_posix())
     candidates = sorted(rows.items(), key=lambda item: (item[1][0].get('published_at') or '', item[0]), reverse=True)
@@ -65,11 +81,21 @@ def run(root, output, limit=3, requested=None):
     from src.news_impact.one_shot_stack import process_article
     from src.news_impact.finviz_linker import get_index
     from src.news_impact.axioms import load_axioms
+    from src.lane_source_identity import source_identity
+    import importlib.metadata
     root = Path(root)
     path = Path(output)
     state = json.loads(path.read_text()) if path.exists() else {'records': {}, 'schema_version': 1}
     if not 1 <= limit <= 3:
         raise ValueError('One to three public articles per run')
+    producer_source = source_identity(root)
+    environment = {'python': sys.version.split()[0], 'packages': {}}
+    for package in ('requests', 'urllib3', 'certifi', 'charset-normalizer', 'idna'):
+        try:
+            environment['packages'][package] = importlib.metadata.version(package)
+        except importlib.metadata.PackageNotFoundError:
+            environment['packages'][package] = None
+    state['current_source'] = producer_source
     models = [m for template in ('news_classify', 'news_filter', 'news_impact')
               for m in lane_route.primary_models_for('openrouter', template)]
     if not models or any(not lane_route._or_is_free(model) for model in models):
@@ -84,13 +110,16 @@ def run(root, output, limit=3, requested=None):
     if not live.ctx['keys']:
         chosen = []
     else:
-        chosen = pending(root, state['records'], limit, requested=requested)
+        chosen = pending(root, state['records'], limit, requested=requested, source_sha256=producer_source['sha256'])
     index = get_index(root)
     if not index.rows:
         state['runtime_status'] = 'company_index_missing'
         chosen = []
     index_sha = hashlib.sha256(Path(index.source).read_bytes()).hexdigest() if index.source else ''
+    attempted = 0
+    responses = 0
     for key, (document, source) in chosen:
+        attempted += 1
         stages = []
         rejected = []
         def audited(stage, prompt, system, accept=None):
@@ -116,22 +145,28 @@ def run(root, output, limit=3, requested=None):
             execution_error['frames'] = [{'file': Path(frame.filename).name,
                 'line': frame.lineno, 'function': frame.name}
                 for frame in traceback.extract_tb(exc.__traceback__)[-6:]]
-        previous = state['records'].get(key)
-        attempts = (previous.get('attempts', []) + [{k: previous.get(k) for k in
-                    ('started_at', 'completed_at', 'status', 'model_stages', 'analysis', 'rejected_model_json', 'execution_error')}]) if previous else []
-        state['records'][key] = {'public_input': document, 'source_file': source, 'input_sha256': key,
+        responses += sum(s['returned_json'] for s in stages)
+        if lane_route._OR_DAY_CAPPED:
+            status = 'blocked_free_daily_quota'
+            state['runtime_status'] = 'free_model_daily_quota_exhausted'
+        row = {'public_input': document, 'source_file': source, 'input_sha256': key,
             'started_at': started, 'completed_at': datetime.now(timezone.utc).isoformat(),
             'status': status, 'model_stages': stages, 'analysis': analysis, 'rejected_model_json': rejected,
             'execution_error': execution_error,
             'index_source': index.source, 'index_sha256': index_sha, 'index_rows': len(index.rows),
+            'producer_source': producer_source, 'producer_environment': environment,
             'fresh_acceptance_pass': False, 'frontier_verified': False,
-            'review_status': 'pending_source_backed_four_axis_review', 'attempts': attempts}
+            'review_status': 'pending_source_backed_four_axis_review'}
+        state['records'][key] = retain_attempt(state['records'].get(key), row)
+        if lane_route._OR_DAY_CAPPED:
+            break
     state['updated_at'] = datetime.now(timezone.utc).isoformat()
-    state['last_run_processed'] = len(chosen)
+    state['last_run_processed'] = attempted
+    state['last_run_model_stage_responses'] = responses
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2))
-    print(json.dumps({'runtime_status': state['runtime_status'], 'processed': len(chosen),
-        'model_stage_responses': sum(s['returned_json'] for key, _ in chosen for s in state['records'][key]['model_stages']),
+    print(json.dumps({'runtime_status': state['runtime_status'], 'processed': attempted,
+        'model_stage_responses': responses,
         'frontier_passes': 0}))
     return state
 
