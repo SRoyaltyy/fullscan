@@ -1,0 +1,4920 @@
+[
+  {
+    "bar_cutoff": "2026-08-12",
+    "buys": [
+      {
+        "fill": 21.75,
+        "fill_basis": "open",
+        "rank": 1,
+        "shares": 114,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "QMCO"
+      },
+      {
+        "fill": 2.680000066757202,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 923,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "HTZ"
+      },
+      {
+        "fill": 4.570000171661377,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 542,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "MVIS"
+      },
+      {
+        "fill": 14.90999984741211,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 166,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "EROC"
+      }
+    ],
+    "cash_primary": 21.61567002558877,
+    "date": "2026-08-13",
+    "day_card_sha256": "22a5dc41d69e6d61e467ccd1742bd943f70122138144e33dd8dde36e5055246a",
+    "equity_primary": 9642.47069555545,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2489.9232745437616,
+        "entry_date": "2026-08-13",
+        "entry_px": 14.90999984741211,
+        "last_px": 14.90999984741211,
+        "min_hold": 2,
+        "peak_px": 14.90999984741211,
+        "shares": 166,
+        "ticker": "EROC"
+      },
+      {
+        "cost_primary": 2497.914961924982,
+        "entry_date": "2026-08-13",
+        "entry_px": 2.680000066757202,
+        "last_px": 2.680000066757202,
+        "min_hold": 2,
+        "peak_px": 2.680000066757202,
+        "shares": 923,
+        "ticker": "HTZ"
+      },
+      {
+        "cost_primary": 2496.316593505668,
+        "entry_date": "2026-08-13",
+        "entry_px": 4.570000171661377,
+        "last_px": 4.570000171661377,
+        "min_hold": 2,
+        "peak_px": 4.570000171661377,
+        "shares": 542,
+        "ticker": "MVIS"
+      },
+      {
+        "cost_primary": 2494.2294999999995,
+        "entry_date": "2026-08-13",
+        "entry_px": 21.75,
+        "last_px": 21.75,
+        "min_hold": 2,
+        "peak_px": 21.75,
+        "shares": 114,
+        "ticker": "QMCO"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 8.525,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [],
+    "sha256": "fba100374b31a73cdf1f06e1d6ceb25637d3ef22b0aa50a21946cde7af14464f",
+    "unfilled": []
+  },
+  {
+    "bar_cutoff": "2026-08-13",
+    "buys": [
+      {
+        "fill": 2.200000047683716,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 4,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "ZENA"
+      }
+    ],
+    "cash_primary": 12.671669833900234,
+    "date": "2026-08-14",
+    "day_card_sha256": "10b94047b384a76b4e61ea877a820363f6f0ec87bbdafa487f13d4dcbee59f46",
+    "equity_primary": 9054.89163982177,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2489.9232745437616,
+        "entry_date": "2026-08-13",
+        "entry_px": 14.90999984741211,
+        "last_px": 16.049999237060547,
+        "min_hold": 2,
+        "peak_px": 16.049999237060547,
+        "shares": 166,
+        "ticker": "EROC"
+      },
+      {
+        "cost_primary": 2497.914961924982,
+        "entry_date": "2026-08-13",
+        "entry_px": 2.680000066757202,
+        "last_px": 2.440000057220459,
+        "min_hold": 2,
+        "peak_px": 2.680000066757202,
+        "shares": 923,
+        "ticker": "HTZ"
+      },
+      {
+        "cost_primary": 2496.316593505668,
+        "entry_date": "2026-08-13",
+        "entry_px": 4.570000171661377,
+        "last_px": 2.309999942779541,
+        "min_hold": 2,
+        "peak_px": 4.570000171661377,
+        "shares": 542,
+        "ticker": "MVIS"
+      },
+      {
+        "cost_primary": 2494.2294999999995,
+        "entry_date": "2026-08-13",
+        "entry_px": 21.75,
+        "last_px": 24.68000030517578,
+        "min_hold": 2,
+        "peak_px": 24.68000030517578,
+        "shares": 114,
+        "ticker": "QMCO"
+      },
+      {
+        "cost_primary": 8.944000191688536,
+        "entry_date": "2026-08-14",
+        "entry_px": 2.200000047683716,
+        "last_px": 2.200000047683716,
+        "min_hold": 2,
+        "peak_px": 2.200000047683716,
+        "shares": 4,
+        "ticker": "ZENA"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 5.5,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [],
+    "sha256": "10bee1644e397f09cc1671a8f3191cc850c934d988bf52413c10985ed9a6aa30",
+    "unfilled": [
+      {
+        "reason": "cannot buy one share",
+        "side": "buy",
+        "ticker": "ARX"
+      }
+    ]
+  },
+  {
+    "bar_cutoff": "2026-08-14",
+    "buys": [
+      {
+        "fill": 6.869999885559082,
+        "fill_basis": "open",
+        "rank": 1,
+        "shares": 319,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CAPR"
+      },
+      {
+        "fill": 1.0700000524520874,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 2032,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "INO"
+      },
+      {
+        "fill": 13.640000343322754,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 161,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "STDN"
+      },
+      {
+        "fill": 41.22999954223633,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 53,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "HTFL"
+      }
+    ],
+    "cash_primary": 22.71511246962882,
+    "date": "2026-08-17",
+    "day_card_sha256": "5d2e03bb85baa1f58b9ac5a6c22173ad38c185ce531298eecb768f5607416edc",
+    "equity_primary": 9109.994997761682,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2206.6027133108137,
+        "entry_date": "2026-08-17",
+        "entry_px": 6.869999885559082,
+        "last_px": 6.869999885559082,
+        "min_hold": 2,
+        "peak_px": 6.869999885559082,
+        "shares": 319,
+        "ticker": "CAPR"
+      },
+      {
+        "cost_primary": 2198.2649256172176,
+        "entry_date": "2026-08-17",
+        "entry_px": 41.22999954223633,
+        "last_px": 41.22999954223633,
+        "min_hold": 2,
+        "peak_px": 41.22999954223633,
+        "shares": 53,
+        "ticker": "HTFL"
+      },
+      {
+        "cost_primary": 2211.3241071155544,
+        "entry_date": "2026-08-17",
+        "entry_px": 1.0700000524520874,
+        "last_px": 1.0700000524520874,
+        "min_hold": 2,
+        "peak_px": 1.0700000524520874,
+        "shares": 2032,
+        "ticker": "INO"
+      },
+      {
+        "cost_primary": 2209.493255551338,
+        "entry_date": "2026-08-17",
+        "entry_px": 13.640000343322754,
+        "last_px": 13.640000343322754,
+        "min_hold": 2,
+        "peak_px": 13.640000343322754,
+        "shares": 161,
+        "ticker": "STDN"
+      },
+      {
+        "cost_primary": 8.944000191688536,
+        "entry_date": "2026-08-14",
+        "entry_px": 2.200000047683716,
+        "last_px": 2.0850000381469727,
+        "min_hold": 2,
+        "peak_px": 2.200000047683716,
+        "shares": 4,
+        "ticker": "ZENA"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 2.25,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 17.149999618530273,
+        "reason": "holdup extension",
+        "shares": 166,
+        "ticker": "EROC"
+      },
+      {
+        "fill": 2.2100000381469727,
+        "reason": "holdup extension",
+        "shares": 923,
+        "ticker": "HTZ"
+      },
+      {
+        "fill": 2.190000057220459,
+        "reason": "holdup extension",
+        "shares": 542,
+        "ticker": "MVIS"
+      },
+      {
+        "fill": 24.829999923706055,
+        "reason": "holdup extension",
+        "shares": 114,
+        "ticker": "QMCO"
+      }
+    ],
+    "sha256": "a65c6b7d206881e3bde97b88aae3bcd9792579da84183ef4881814a2b3e85450",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-17",
+    "entry_date": "2026-08-13",
+    "entry_px": 14.90999984741211,
+    "fill": 17.149999618530273,
+    "kind": "close",
+    "pnl_primary": 340.2038624488832,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "8960c5a95d645fe183ed87bd58ee065c36f197a80b655d95f049a612661a0f85",
+    "shares": 166,
+    "ticker": "EROC"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-17",
+    "entry_date": "2026-08-13",
+    "entry_px": 2.680000066757202,
+    "fill": 2.2100000381469727,
+    "kind": "close",
+    "pnl_primary": -480.3602768913745,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "091376278a7d39ae376b75f183714556638066d43a2d8d5ee697d4f90cade2be",
+    "shares": 923,
+    "ticker": "HTZ"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-17",
+    "entry_date": "2026-08-13",
+    "entry_px": 4.570000171661377,
+    "fill": 2.190000057220459,
+    "kind": "close",
+    "pnl_primary": -1322.3632626472468,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "2dff8ade52283ee0434fdcdfe6e2de83fba57c037d2c45c80bea81bba30f3a2d",
+    "shares": 542,
+    "ticker": "MVIS"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-17",
+    "entry_date": "2026-08-13",
+    "entry_px": 21.75,
+    "fill": 24.829999923706055,
+    "kind": "close",
+    "pnl_primary": 319.86379134597837,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "e136843c8ea6d1eabede80ef70c186f77f965ad17ba7fb2736593724a4b5d833",
+    "shares": 114,
+    "ticker": "QMCO"
+  },
+  {
+    "bar_cutoff": "2026-08-17",
+    "buys": [
+      {
+        "fill": 3.8399999141693115,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 2,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "OABI"
+      }
+    ],
+    "cash_primary": 22.545212850907813,
+    "date": "2026-08-18",
+    "day_card_sha256": "7eddc4de0f5b5f0dfa5647bb3f72d370423fdf39e51636119d3d768ecd4f8552",
+    "equity_primary": 9088.69523058925,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2206.6027133108137,
+        "entry_date": "2026-08-17",
+        "entry_px": 6.869999885559082,
+        "last_px": 7.5,
+        "min_hold": 2,
+        "peak_px": 7.5,
+        "shares": 319,
+        "ticker": "CAPR"
+      },
+      {
+        "cost_primary": 2198.2649256172176,
+        "entry_date": "2026-08-17",
+        "entry_px": 41.22999954223633,
+        "last_px": 41.5,
+        "min_hold": 2,
+        "peak_px": 41.5,
+        "shares": 53,
+        "ticker": "HTFL"
+      },
+      {
+        "cost_primary": 2211.3241071155544,
+        "entry_date": "2026-08-17",
+        "entry_px": 1.0700000524520874,
+        "last_px": 1.1399999856948853,
+        "min_hold": 2,
+        "peak_px": 1.1399999856948853,
+        "shares": 2032,
+        "ticker": "INO"
+      },
+      {
+        "cost_primary": 7.801199827480315,
+        "entry_date": "2026-08-18",
+        "entry_px": 3.8399999141693115,
+        "last_px": 3.8399999141693115,
+        "min_hold": 1,
+        "peak_px": 3.8399999141693115,
+        "shares": 2,
+        "ticker": "OABI"
+      },
+      {
+        "cost_primary": 2209.493255551338,
+        "entry_date": "2026-08-17",
+        "entry_px": 13.640000343322754,
+        "last_px": 13.3100004196167,
+        "min_hold": 2,
+        "peak_px": 13.640000343322754,
+        "shares": 161,
+        "ticker": "STDN"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": -6.2,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 1.9450000524520874,
+        "reason": "holdup extension",
+        "shares": 4,
+        "ticker": "ZENA"
+      }
+    ],
+    "sha256": "bc359a565c1080d0b6d2ac001e9dff2d15eeef2d5c97db4427a0dff730b7c979",
+    "unfilled": [
+      {
+        "reason": "cannot buy one share",
+        "side": "buy",
+        "ticker": "SNDK"
+      },
+      {
+        "reason": "cannot buy one share",
+        "side": "buy",
+        "ticker": "FDMT"
+      }
+    ]
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-18",
+    "entry_date": "2026-08-14",
+    "entry_px": 2.200000047683716,
+    "fill": 1.9450000524520874,
+    "kind": "close",
+    "pnl_primary": -1.312699982929228,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "da90c14d50c8be89aa8baa87f117a46d55a3ff7e23301d7819e3ae805a3c43ae",
+    "shares": 4,
+    "ticker": "ZENA"
+  },
+  {
+    "bar_cutoff": "2026-08-18",
+    "buys": [
+      {
+        "fill": 36.130001068115234,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 61,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "AMLX"
+      },
+      {
+        "fill": 0.8880000114440918,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 2478,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "IVVD"
+      },
+      {
+        "fill": 11.520000457763672,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 193,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "DUOT"
+      }
+    ],
+    "cash_primary": 29.150397291520676,
+    "date": "2026-08-19",
+    "day_card_sha256": "4cf425c4d048cc26832794ec171731c3dc0dd71a0418add2f5def51562aba22c",
+    "equity_primary": 9250.47018634353,
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-08-13",
+        "leg": "close_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      },
+      {
+        "bar_date": "2026-08-13",
+        "leg": "open_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      }
+    ],
+    "holdings": [
+      {
+        "cost_primary": 2217.122715480804,
+        "entry_date": "2026-08-19",
+        "entry_px": 36.130001068115234,
+        "last_px": 36.130001068115234,
+        "min_hold": 1,
+        "peak_px": 36.130001068115234,
+        "shares": 61,
+        "ticker": "AMLX"
+      },
+      {
+        "cost_primary": 2237.0458887901304,
+        "entry_date": "2026-08-19",
+        "entry_px": 11.520000457763672,
+        "last_px": 11.520000457763672,
+        "min_hold": 1,
+        "peak_px": 11.520000457763672,
+        "shares": 193,
+        "ticker": "DUOT"
+      },
+      {
+        "cost_primary": 2198.2649256172176,
+        "entry_date": "2026-08-17",
+        "entry_px": 41.22999954223633,
+        "last_px": 46.02000045776367,
+        "min_hold": 2,
+        "peak_px": 46.02000045776367,
+        "shares": 53,
+        "ticker": "HTFL"
+      },
+      {
+        "cost_primary": 2240.9049485002515,
+        "entry_date": "2026-08-19",
+        "entry_px": 0.8880000114440918,
+        "last_px": 0.8880000114440918,
+        "min_hold": 1,
+        "peak_px": 0.8880000114440918,
+        "shares": 2478,
+        "ticker": "IVVD"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": -7.2,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 7.190000057220459,
+        "reason": "holdup extension",
+        "shares": 319,
+        "ticker": "CAPR"
+      },
+      {
+        "fill": 1.2200000286102295,
+        "reason": "holdup extension",
+        "shares": 2032,
+        "ticker": "INO"
+      },
+      {
+        "fill": 3.950000047683716,
+        "reason": "hold-expired",
+        "shares": 2,
+        "ticker": "OABI"
+      },
+      {
+        "fill": 12.350000381469727,
+        "reason": "holdup extension",
+        "shares": 161,
+        "ticker": "STDN"
+      }
+    ],
+    "sha256": "060d06a1c0811c1536537f77eb683fbbd72405b9f56f2f16a7b82d8da6209ca9",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-19",
+    "entry_date": "2026-08-17",
+    "entry_px": 6.869999885559082,
+    "fill": 7.190000057220459,
+    "kind": "close",
+    "pnl_primary": 71.35285485124587,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "c32d10581dbb122b20fbb227e6c41642636ade54b92e176c2cb90229f8013c31",
+    "shares": 319,
+    "ticker": "CAPR"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-19",
+    "entry_date": "2026-08-17",
+    "entry_px": 1.0700000524520874,
+    "fill": 1.2200000286102295,
+    "kind": "close",
+    "pnl_primary": 228.75085072975207,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "57f0b01e54e50e8b97e5f4cb359f1e443a03296dc3b2728d5a703bdde7fbb2d2",
+    "shares": 2032,
+    "ticker": "INO"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-19",
+    "entry_date": "2026-08-18",
+    "entry_px": 3.8399999141693115,
+    "fill": 3.950000047683716,
+    "kind": "close",
+    "pnl_primary": -0.045699732589721265,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "724752e2eae117523e225f799eb6c0a2ab02a6bf268ad0422265aa41c1df7405",
+    "shares": 2,
+    "ticker": "OABI"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-19",
+    "entry_date": "2026-08-17",
+    "entry_px": 13.640000343322754,
+    "fill": 12.350000381469727,
+    "kind": "close",
+    "pnl_primary": -233.6005444417949,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "f428a48448cd2abd82b50841fe67a9552b53888a374d736cffdcfbe0f5fe1284",
+    "shares": 161,
+    "ticker": "STDN"
+  },
+  {
+    "bar_cutoff": "2026-08-19",
+    "buys": [
+      {
+        "fill": 150.13999938964844,
+        "fill_basis": "open",
+        "rank": 1,
+        "shares": 15,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "MRNA"
+      },
+      {
+        "fill": 1.149999976158142,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 1976,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CYPH"
+      },
+      {
+        "fill": 9.550000190734863,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 240,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "PURR"
+      },
+      {
+        "fill": 11.8149995803833,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 194,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "ABCL"
+      }
+    ],
+    "cash_primary": 53.84935613689868,
+    "date": "2026-08-20",
+    "day_card_sha256": "d760e8b32e021572fcbe987c43139813a96deee2b6985559c95ce120ac72595f",
+    "equity_primary": 9068.86950155316,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2306.142468187332,
+        "entry_date": "2026-08-20",
+        "entry_px": 11.8149995803833,
+        "last_px": 11.8149995803833,
+        "min_hold": 2,
+        "peak_px": 11.8149995803833,
+        "shares": 194,
+        "ticker": "ABCL"
+      },
+      {
+        "cost_primary": 2309.252352652931,
+        "entry_date": "2026-08-20",
+        "entry_px": 1.149999976158142,
+        "last_px": 1.149999976158142,
+        "min_hold": 2,
+        "peak_px": 1.149999976158142,
+        "shares": 1976,
+        "ticker": "CYPH"
+      },
+      {
+        "cost_primary": 2265.3954907989496,
+        "entry_date": "2026-08-20",
+        "entry_px": 150.13999938964844,
+        "last_px": 150.13999938964844,
+        "min_hold": 2,
+        "peak_px": 150.13999938964844,
+        "shares": 15,
+        "ticker": "MRNA"
+      },
+      {
+        "cost_primary": 2306.556046005249,
+        "entry_date": "2026-08-20",
+        "entry_px": 9.550000190734863,
+        "last_px": 9.550000190734863,
+        "min_hold": 2,
+        "peak_px": 9.550000190734863,
+        "shares": 240,
+        "ticker": "PURR"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 1.125,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 37.4900016784668,
+        "reason": "hold-expired",
+        "shares": 61,
+        "ticker": "AMLX"
+      },
+      {
+        "fill": 10.6899995803833,
+        "reason": "hold-expired",
+        "shares": 193,
+        "ticker": "DUOT"
+      },
+      {
+        "fill": 45.900001525878906,
+        "reason": "hold-expired",
+        "shares": 53,
+        "ticker": "HTFL"
+      },
+      {
+        "fill": 1.0149999856948853,
+        "reason": "hold-expired",
+        "shares": 2478,
+        "ticker": "IVVD"
+      }
+    ],
+    "sha256": "31ea3fac0de35ba5a11d7cfb8e59cdffa8b6851653de4dfd32f7bc83a1be85a6",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-20",
+    "entry_date": "2026-08-19",
+    "entry_px": 36.130001068115234,
+    "fill": 37.4900016784668,
+    "kind": "close",
+    "pnl_primary": 56.131536393738315,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "9e39be8e0343494376cbbb7ccac26bebbaf097f4ea09105222683e492bf7a86f",
+    "shares": 61,
+    "ticker": "AMLX"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-20",
+    "entry_date": "2026-08-19",
+    "entry_px": 11.520000457763672,
+    "fill": 10.6899995803833,
+    "kind": "close",
+    "pnl_primary": -186.80931937122295,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "d1490d01c01f0bc98dfec288416d09e56d41678974d472695963cb483de5b97f",
+    "shares": 193,
+    "ticker": "DUOT"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-20",
+    "entry_date": "2026-08-17",
+    "entry_px": 41.22999954223633,
+    "fill": 45.900001525878906,
+    "kind": "close",
+    "pnl_primary": 220.0931548500066,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "81c4d954c93e3a63357194b052b8f2f0cd7995010aff4c039db64d6c8f643aa2",
+    "shares": 53,
+    "ticker": "HTFL"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-20",
+    "entry_date": "2026-08-19",
+    "entry_px": 0.8880000114440918,
+    "fill": 1.0149999856948853,
+    "kind": "close",
+    "pnl_primary": 229.2914662289145,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "687caba0f182dd1500cd6dae009418997d9b1cf5bdf0db7ec0d818d72beb0da0",
+    "shares": 2478,
+    "ticker": "IVVD"
+  },
+  {
+    "bar_cutoff": "2026-08-20",
+    "buys": [
+      {
+        "fill": 5.039999961853027,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 5,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "USDE"
+      },
+      {
+        "fill": 6.809999942779541,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 3,
+        "sources": [
+          "yday_mover"
+        ],
+        "ticker": "CAPR"
+      }
+    ],
+    "cash_primary": 7.510906501106906,
+    "date": "2026-08-21",
+    "day_card_sha256": "55f6045b5364336d9ffdb56e6268830f0f752fcd0a32e95149e85fd87923c328",
+    "equity_primary": 9781.580816550546,
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-08-13",
+        "leg": "close_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      },
+      {
+        "bar_date": "2026-08-13",
+        "leg": "open_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      }
+    ],
+    "holdings": [
+      {
+        "cost_primary": 2306.142468187332,
+        "entry_date": "2026-08-20",
+        "entry_px": 11.8149995803833,
+        "last_px": 11.569999694824219,
+        "min_hold": 2,
+        "peak_px": 11.8149995803833,
+        "shares": 194,
+        "ticker": "ABCL"
+      },
+      {
+        "cost_primary": 20.745449827480314,
+        "entry_date": "2026-08-21",
+        "entry_px": 6.809999942779541,
+        "last_px": 6.809999942779541,
+        "min_hold": 2,
+        "peak_px": 6.809999942779541,
+        "shares": 3,
+        "ticker": "CAPR"
+      },
+      {
+        "cost_primary": 2309.252352652931,
+        "entry_date": "2026-08-20",
+        "entry_px": 1.149999976158142,
+        "last_px": 1.3200000524520874,
+        "min_hold": 2,
+        "peak_px": 1.3200000524520874,
+        "shares": 1976,
+        "ticker": "CYPH"
+      },
+      {
+        "cost_primary": 2265.3954907989496,
+        "entry_date": "2026-08-20",
+        "entry_px": 150.13999938964844,
+        "last_px": 133.11000061035156,
+        "min_hold": 2,
+        "peak_px": 150.13999938964844,
+        "shares": 15,
+        "ticker": "MRNA"
+      },
+      {
+        "cost_primary": 2306.556046005249,
+        "entry_date": "2026-08-20",
+        "entry_px": 9.550000190734863,
+        "last_px": 10.520000457763672,
+        "min_hold": 2,
+        "peak_px": 10.520000457763672,
+        "shares": 240,
+        "ticker": "PURR"
+      },
+      {
+        "cost_primary": 25.592999808311458,
+        "entry_date": "2026-08-21",
+        "entry_px": 5.039999961853027,
+        "last_px": 5.039999961853027,
+        "min_hold": 2,
+        "peak_px": 5.039999961853027,
+        "shares": 5,
+        "ticker": "USDE"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 3.25,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [],
+    "sha256": "72dfd592e138510f6b9a73111654413a9999e887ecb1ed1523f93da4e56bb9f7",
+    "unfilled": []
+  },
+  {
+    "bar_cutoff": "2026-08-21",
+    "buys": [
+      {
+        "fill": 13.329999923706055,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 256,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "ARCT"
+      },
+      {
+        "fill": 0.382999986410141,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 8764,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CAN"
+      }
+    ],
+    "cash_primary": 0.5455555906100926,
+    "date": "2026-08-24",
+    "day_card_sha256": "59997a3ca71069074e18ff60aef6ef46ecefdf0ed902e41edbaa1fa7f730a0dd",
+    "equity_primary": 10198.055616854648,
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-08-13",
+        "leg": "close_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      },
+      {
+        "bar_date": "2026-08-13",
+        "leg": "open_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      }
+    ],
+    "holdings": [
+      {
+        "cost_primary": 3432.8447803710933,
+        "entry_date": "2026-08-24",
+        "entry_px": 13.329999923706055,
+        "last_px": 13.329999923706055,
+        "min_hold": 1,
+        "peak_px": 13.329999923706055,
+        "shares": 256,
+        "ticker": "ARCT"
+      },
+      {
+        "cost_primary": 3433.2530403029677,
+        "entry_date": "2026-08-24",
+        "entry_px": 0.382999986410141,
+        "last_px": 0.382999986410141,
+        "min_hold": 1,
+        "peak_px": 0.382999986410141,
+        "shares": 8764,
+        "ticker": "CAN"
+      },
+      {
+        "cost_primary": 20.745449827480314,
+        "entry_date": "2026-08-21",
+        "entry_px": 6.809999942779541,
+        "last_px": 8.029999732971191,
+        "min_hold": 2,
+        "peak_px": 8.029999732971191,
+        "shares": 3,
+        "ticker": "CAPR"
+      },
+      {
+        "cost_primary": 2309.252352652931,
+        "entry_date": "2026-08-20",
+        "entry_px": 1.149999976158142,
+        "last_px": 1.8300000429153442,
+        "min_hold": 2,
+        "peak_px": 1.8300000429153442,
+        "shares": 1976,
+        "ticker": "CYPH"
+      },
+      {
+        "cost_primary": 25.592999808311458,
+        "entry_date": "2026-08-21",
+        "entry_px": 5.039999961853027,
+        "last_px": 7.800000190734863,
+        "min_hold": 2,
+        "peak_px": 7.800000190734863,
+        "shares": 5,
+        "ticker": "USDE"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": 0.0,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 10.970000267028809,
+        "reason": "holdup extension",
+        "shares": 194,
+        "ticker": "ABCL"
+      },
+      {
+        "fill": 142.6999969482422,
+        "reason": "holdup extension",
+        "shares": 15,
+        "ticker": "MRNA"
+      },
+      {
+        "fill": 10.970000267028809,
+        "reason": "holdup extension",
+        "shares": 240,
+        "ticker": "PURR"
+      }
+    ],
+    "sha256": "80ec4ccf3cd87f62f20ff5fa49d1fdb0b263e210e78d7845ac4cb3dfbaec1ad0",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-24",
+    "entry_date": "2026-08-20",
+    "entry_px": 11.8149995803833,
+    "fill": 10.970000267028809,
+    "kind": "close",
+    "pnl_primary": -191.22451664276105,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "59075f441ca4307e30b083e6bc614ce87dd1d6926198ce51ec149941bfa9ded3",
+    "shares": 194,
+    "ticker": "ABCL"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-24",
+    "entry_date": "2026-08-20",
+    "entry_px": 150.13999938964844,
+    "fill": 142.6999969482422,
+    "kind": "close",
+    "pnl_primary": -137.66013634643514,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "81261ae3ffab8710290e2c105f85266246cf24e7e7267c96527fdebb5fb8a7c5",
+    "shares": 15,
+    "ticker": "MRNA"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-24",
+    "entry_date": "2026-08-20",
+    "entry_px": 9.550000190734863,
+    "fill": 10.970000267028809,
+    "kind": "close",
+    "pnl_primary": 309.9231177612305,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "2c0cc1393903b942812042f9b20789db77592b7629454cd2ff37b5754a48a2a8",
+    "shares": 240,
+    "ticker": "PURR"
+  },
+  {
+    "bar_cutoff": "2026-08-24",
+    "buys": [
+      {
+        "fill": 19.040000915527344,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 174,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "ASST"
+      },
+      {
+        "fill": 5.239999771118164,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 634,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "ALVO"
+      }
+    ],
+    "cash_primary": 16.16908692176912,
+    "date": "2026-08-25",
+    "day_card_sha256": "4d414bbb8feaad507dec0b71244bce0e29344f3cec0097bdbd8fbc450d88bab9",
+    "equity_primary": 10210.669073093492,
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-08-13",
+        "leg": "close_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      },
+      {
+        "bar_date": "2026-08-13",
+        "leg": "open_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      }
+    ],
+    "holdings": [
+      {
+        "cost_primary": 3346.9492541633604,
+        "entry_date": "2026-08-25",
+        "entry_px": 5.239999771118164,
+        "last_px": 5.239999771118164,
+        "min_hold": 1,
+        "peak_px": 5.239999771118164,
+        "shares": 634,
+        "ticker": "ALVO"
+      },
+      {
+        "cost_primary": 3332.0369600982663,
+        "entry_date": "2026-08-25",
+        "entry_px": 19.040000915527344,
+        "last_px": 19.040000915527344,
+        "min_hold": 1,
+        "peak_px": 19.040000915527344,
+        "shares": 174,
+        "ticker": "ASST"
+      },
+      {
+        "cost_primary": 2309.252352652931,
+        "entry_date": "2026-08-20",
+        "entry_px": 1.149999976158142,
+        "last_px": 1.559999942779541,
+        "min_hold": 2,
+        "peak_px": 1.8300000429153442,
+        "shares": 1976,
+        "ticker": "CYPH"
+      },
+      {
+        "cost_primary": 25.592999808311458,
+        "entry_date": "2026-08-21",
+        "entry_px": 5.039999961853027,
+        "last_px": 5.46999979019165,
+        "min_hold": 2,
+        "peak_px": 7.800000190734863,
+        "shares": 5,
+        "ticker": "USDE"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": null,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 14.119999885559082,
+        "reason": "hold-expired",
+        "shares": 256,
+        "ticker": "ARCT"
+      },
+      {
+        "fill": 0.36000001430511475,
+        "reason": "hold-expired",
+        "shares": 8764,
+        "ticker": "CAN"
+      },
+      {
+        "fill": 7.25,
+        "reason": "holdup extension",
+        "shares": 3,
+        "ticker": "CAPR"
+      }
+    ],
+    "sha256": "d0d33ffd9c45bca2a2dd39d2124f717e51adfe343bbc41959dd441769d3b76c6",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-25",
+    "entry_date": "2026-08-24",
+    "entry_px": 13.329999923706055,
+    "fill": 14.119999885559082,
+    "kind": "close",
+    "pnl_primary": 160.42779047851627,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "ef1f4069f0122af4633f2fbc3f97e7f803caa17f00b4c7360445f290fb410a8f",
+    "shares": 256,
+    "ticker": "ARCT"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-25",
+    "entry_date": "2026-08-24",
+    "entry_px": 0.382999986410141,
+    "fill": 0.36000001430511475,
+    "kind": "close",
+    "pnl_primary": -353.3106155597925,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "2837384ad23b4fbbeb50cfb3d9583b94bb90d5373dd0a587fa55e2b76b5a69a4",
+    "shares": 8764,
+    "ticker": "CAN"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-25",
+    "entry_date": "2026-08-21",
+    "entry_px": 6.809999942779541,
+    "fill": 7.25,
+    "kind": "close",
+    "pnl_primary": 0.6493001725196841,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "b14a6ae84925141e698d85aa79412d0a5b9d6e7bf121e5aaaf1baca51d9da1a4",
+    "shares": 3,
+    "ticker": "CAPR"
+  },
+  {
+    "bar_cutoff": "2026-08-25",
+    "buys": [
+      {
+        "fill": 154.1999969482422,
+        "fill_basis": "open",
+        "rank": 1,
+        "shares": 15,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "MRNA"
+      },
+      {
+        "fill": 0.3970000147819519,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 6086,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CAN"
+      },
+      {
+        "fill": 11.585000038146973,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 211,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "PURR"
+      },
+      {
+        "fill": 4.349999904632568,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 563,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "DFDV"
+      }
+    ],
+    "cash_primary": 157.42564312978448,
+    "date": "2026-08-26",
+    "day_card_sha256": "80ac35b4d23cf223da563674abb775dfc1aada4e27133c68216e6fe2a2ed568f",
+    "equity_primary": 9797.213798208672,
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-08-13",
+        "leg": "close_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      },
+      {
+        "bar_date": "2026-08-13",
+        "leg": "open_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      }
+    ],
+    "holdings": [
+      {
+        "cost_primary": 2470.642200412774,
+        "entry_date": "2026-08-26",
+        "entry_px": 0.3970000147819519,
+        "last_px": 0.3970000147819519,
+        "min_hold": 2,
+        "peak_px": 0.3970000147819519,
+        "shares": 6086,
+        "ticker": "CAN"
+      },
+      {
+        "cost_primary": 2468.5578960396765,
+        "entry_date": "2026-08-26",
+        "entry_px": 4.349999904632568,
+        "last_px": 4.349999904632568,
+        "min_hold": 2,
+        "peak_px": 4.349999904632568,
+        "shares": 563,
+        "ticker": "DFDV"
+      },
+      {
+        "cost_primary": 2326.5999539947506,
+        "entry_date": "2026-08-26",
+        "entry_px": 154.1999969482422,
+        "last_px": 154.1999969482422,
+        "min_hold": 2,
+        "peak_px": 154.1999969482422,
+        "shares": 15,
+        "ticker": "MRNA"
+      },
+      {
+        "cost_primary": 2459.3790830892563,
+        "entry_date": "2026-08-26",
+        "entry_px": 11.585000038146973,
+        "last_px": 11.585000038146973,
+        "min_hold": 2,
+        "peak_px": 11.585000038146973,
+        "shares": 211,
+        "ticker": "PURR"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 2.025,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 4.980000019073486,
+        "reason": "hold-expired",
+        "shares": 634,
+        "ticker": "ALVO"
+      },
+      {
+        "fill": 20.719999313354492,
+        "reason": "hold-expired",
+        "shares": 174,
+        "ticker": "ASST"
+      },
+      {
+        "fill": 1.600000023841858,
+        "reason": "hold-expired",
+        "shares": 1976,
+        "ticker": "CYPH"
+      },
+      {
+        "fill": 5.809999942779541,
+        "reason": "hold-expired",
+        "shares": 5,
+        "ticker": "USDE"
+      }
+    ],
+    "sha256": "d80ec838601874f1e2fc9597f5b168cda04b73cfd2989ef76603d3a48e13f26f",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-26",
+    "entry_date": "2026-08-25",
+    "entry_px": 5.239999771118164,
+    "fill": 4.980000019073486,
+    "kind": "close",
+    "pnl_primary": -213.7249421312331,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "04b2075e9b299b843215b500e1420cf51cca35ec1818773e59fc02ce6bfcccf2",
+    "shares": 634,
+    "ticker": "ALVO"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-26",
+    "entry_date": "2026-08-25",
+    "entry_px": 19.040000915527344,
+    "fill": 20.719999313354492,
+    "kind": "close",
+    "pnl_primary": 252.64682102279676,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "90816e3170f99bc45461d707c2a3908e88991f2feba3a632e246d9abe43a02e1",
+    "shares": 174,
+    "ticker": "ASST"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-26",
+    "entry_date": "2026-08-20",
+    "entry_px": 1.149999976158142,
+    "fill": 1.600000023841858,
+    "kind": "close",
+    "pnl_primary": 810.6959942230224,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "abb03c0733a07700b13b8b49cf4968f3c465616c2a004725d20457ebc62cbae3",
+    "shares": 1976,
+    "ticker": "CYPH"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-26",
+    "entry_date": "2026-08-21",
+    "entry_px": 5.039999961853027,
+    "fill": 5.809999942779541,
+    "kind": "close",
+    "pnl_primary": 2.986249907016756,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "81d0c9263db92aafe9febeaf26208353f31c46d077b4bff1eb348c6ed8e5e234",
+    "shares": 5,
+    "ticker": "USDE"
+  },
+  {
+    "bar_cutoff": "2026-08-26",
+    "buys": [
+      {
+        "fill": 9.1899995803833,
+        "fill_basis": "open",
+        "rank": 1,
+        "shares": 5,
+        "sources": [
+          "ohlc_hot",
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CAPR"
+      },
+      {
+        "fill": 1.059999942779541,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 48,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "OPTU"
+      }
+    ],
+    "cash_primary": 58.984197998673345,
+    "date": "2026-08-27",
+    "day_card_sha256": "b53c29f817bf8e399a73392ec4d6c2fab06a0d25f6e261fe983d27c01591bde5",
+    "equity_primary": 10675.662297094495,
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-08-13",
+        "leg": "close_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      },
+      {
+        "bar_date": "2026-08-13",
+        "leg": "open_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      }
+    ],
+    "holdings": [
+      {
+        "cost_primary": 2470.642200412774,
+        "entry_date": "2026-08-26",
+        "entry_px": 0.3970000147819519,
+        "last_px": 0.4059999883174896,
+        "min_hold": 2,
+        "peak_px": 0.4059999883174896,
+        "shares": 6086,
+        "ticker": "CAN"
+      },
+      {
+        "cost_primary": 46.65424789142608,
+        "entry_date": "2026-08-27",
+        "entry_px": 9.1899995803833,
+        "last_px": 9.1899995803833,
+        "min_hold": 1,
+        "peak_px": 9.1899995803833,
+        "shares": 5,
+        "ticker": "CAPR"
+      },
+      {
+        "cost_primary": 2468.5578960396765,
+        "entry_date": "2026-08-26",
+        "entry_px": 4.349999904632568,
+        "last_px": 4.809999942779541,
+        "min_hold": 2,
+        "peak_px": 4.809999942779541,
+        "shares": 563,
+        "ticker": "DFDV"
+      },
+      {
+        "cost_primary": 2326.5999539947506,
+        "entry_date": "2026-08-26",
+        "entry_px": 154.1999969482422,
+        "last_px": 144.17999267578125,
+        "min_hold": 2,
+        "peak_px": 154.1999969482422,
+        "shares": 15,
+        "ticker": "MRNA"
+      },
+      {
+        "cost_primary": 51.78719723968505,
+        "entry_date": "2026-08-27",
+        "entry_px": 1.059999942779541,
+        "last_px": 1.059999942779541,
+        "min_hold": 1,
+        "peak_px": 1.059999942779541,
+        "shares": 48,
+        "ticker": "OPTU"
+      },
+      {
+        "cost_primary": 2459.3790830892563,
+        "entry_date": "2026-08-26",
+        "entry_px": 11.585000038146973,
+        "last_px": 12.180000305175781,
+        "min_hold": 2,
+        "peak_px": 12.180000305175781,
+        "shares": 211,
+        "ticker": "PURR"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": null,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [],
+    "sha256": "0ed150d1f648807b9781e359b8d23897463850ad82c1ddbd87db70c1dcee8e07",
+    "unfilled": [
+      {
+        "reason": "cannot buy one share",
+        "side": "buy",
+        "ticker": "ANF"
+      }
+    ]
+  },
+  {
+    "bar_cutoff": "2026-08-27",
+    "buys": [],
+    "cash_primary": 10343.399554188174,
+    "date": "2026-08-28",
+    "day_card_sha256": "ba2069d6723e11f69657d6d3ef2c7b01fa8ca702a75e680cd4782181997c5a72",
+    "equity_primary": 10343.399554188174,
+    "excluded_unexplained_legs": [],
+    "holdings": [],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 0.75,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 0.42800000309944153,
+        "reason": "holdup extension",
+        "shares": 6086,
+        "ticker": "CAN"
+      },
+      {
+        "fill": 9.729999542236328,
+        "reason": "hold-expired",
+        "shares": 5,
+        "ticker": "CAPR"
+      },
+      {
+        "fill": 5.260000228881836,
+        "reason": "holdup extension",
+        "shares": 563,
+        "ticker": "DFDV"
+      },
+      {
+        "fill": 137.19000244140625,
+        "reason": "holdup extension",
+        "shares": 15,
+        "ticker": "MRNA"
+      },
+      {
+        "fill": 1.0,
+        "reason": "hold-expired",
+        "shares": 48,
+        "ticker": "OPTU"
+      },
+      {
+        "fill": 12.675000190734863,
+        "reason": "holdup extension",
+        "shares": 211,
+        "ticker": "PURR"
+      }
+    ],
+    "sha256": "25d333da3fd7d4eff5036bb4126f7cecf2f3f5ce1ffee8ec48c7edada92fe2b4",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-28",
+    "entry_date": "2026-08-26",
+    "entry_px": 0.3970000147819519,
+    "fill": 0.42800000309944153,
+    "kind": "close",
+    "pnl_primary": 75.80457835611105,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "7a05f897a2e6d2233ece29ec2c80d2f357afef448640e9f37754d2d1c76cb222",
+    "shares": 6086,
+    "ticker": "CAN"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-28",
+    "entry_date": "2026-08-27",
+    "entry_px": 9.1899995803833,
+    "fill": 9.729999542236328,
+    "kind": "close",
+    "pnl_primary": 1.2309998311996466,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "cfa9eb559860929ddfceb504d5c003dd99b47e69ad7f933b4c6ac5accc318cd5",
+    "shares": 5,
+    "ticker": "CAPR"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-28",
+    "entry_date": "2026-08-26",
+    "entry_px": 4.349999904632568,
+    "fill": 5.260000228881836,
+    "kind": "close",
+    "pnl_primary": 470.6355321764945,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "f38ade9d7296768a71939fcdd0741704d77a46753097419f904844501de1cc74",
+    "shares": 563,
+    "ticker": "DFDV"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-28",
+    "entry_date": "2026-08-26",
+    "entry_px": 154.1999969482422,
+    "fill": 137.19000244140625,
+    "kind": "close",
+    "pnl_primary": -281.10066755676235,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "4a44133cf31e6296ccba613329e1b68c2d8317d2509b2681ca7ddadd40277956",
+    "shares": 15,
+    "ticker": "MRNA"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-28",
+    "entry_date": "2026-08-27",
+    "entry_px": 1.059999942779541,
+    "fill": 1.0,
+    "kind": "close",
+    "pnl_primary": -4.67119723968505,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "952cbf07fe3c1342690267e322f1ca18c45a2c97815c331c23bb41eac4937de6",
+    "shares": 48,
+    "ticker": "OPTU"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-08-28",
+    "entry_date": "2026-08-26",
+    "entry_px": 11.585000038146973,
+    "fill": 12.675000190734863,
+    "kind": "close",
+    "pnl_primary": 198.89553195457484,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "52d610aeac8e86d8fcf9a1ec872765e4420f1de3345311b2940d036cd7d28863",
+    "shares": 211,
+    "ticker": "PURR"
+  },
+  {
+    "bar_cutoff": "2026-08-28",
+    "buys": [
+      {
+        "fill": 6.760000228881836,
+        "fill_basis": "open",
+        "rank": 1,
+        "shares": 379,
+        "sources": [
+          "ohlc_hot",
+          "yday_mover"
+        ],
+        "ticker": "USDE"
+      },
+      {
+        "fill": 134.10000610351562,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 19,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "MRNA"
+      },
+      {
+        "fill": 15.0,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 171,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "ARCT"
+      },
+      {
+        "fill": 9.34000015258789,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 275,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "XHLD"
+      }
+    ],
+    "cash_primary": 35.75550829011854,
+    "date": "2026-08-31",
+    "day_card_sha256": "5e894cfd165c7d1cf8b1aa4fc4b0d04c2da9d3824bbdf389dc5011fac0c21fb7",
+    "equity_primary": 11087.655476437396,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2580.328,
+        "entry_date": "2026-08-31",
+        "entry_px": 15.0,
+        "last_px": 15.0,
+        "min_hold": 1,
+        "peak_px": 15.0,
+        "shares": 171,
+        "ticker": "ARCT"
+      },
+      {
+        "cost_primary": 2562.686616546631,
+        "entry_date": "2026-08-31",
+        "entry_px": 134.10000610351562,
+        "last_px": 134.10000610351562,
+        "min_hold": 1,
+        "peak_px": 134.10000610351562,
+        "shares": 19,
+        "ticker": "MRNA"
+      },
+      {
+        "cost_primary": 2579.7393871799463,
+        "entry_date": "2026-08-31",
+        "entry_px": 6.760000228881836,
+        "last_px": 6.760000228881836,
+        "min_hold": 1,
+        "peak_px": 6.760000228881836,
+        "shares": 379,
+        "ticker": "USDE"
+      },
+      {
+        "cost_primary": 2584.890042171478,
+        "entry_date": "2026-08-31",
+        "entry_px": 9.34000015258789,
+        "last_px": 9.34000015258789,
+        "min_hold": 1,
+        "peak_px": 9.34000015258789,
+        "shares": 275,
+        "ticker": "XHLD"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": -5.85,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [],
+    "sha256": "4b0b76ca6d1e01c9a5eff2147143904fd3ce3fd6add346d8fb9aec753a337cca",
+    "unfilled": []
+  },
+  {
+    "bar_cutoff": "2026-08-31",
+    "buys": [
+      {
+        "fill": 1.350000023841858,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 1861,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "GPRO"
+      },
+      {
+        "fill": 1.7400000095367432,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 1446,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "CYPH"
+      },
+      {
+        "fill": 23.459999084472656,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 108,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "ASST"
+      }
+    ],
+    "cash_primary": 2.1391879874176993,
+    "date": "2026-09-01",
+    "day_card_sha256": "3743f25998405131d221e2168bb88937739a1ea76ebad473d97d9d15236a98a9",
+    "equity_primary": 10524.269148524374,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2548.662300628662,
+        "entry_date": "2026-09-01",
+        "entry_px": 23.459999084472656,
+        "last_px": 23.459999084472656,
+        "min_hold": 1,
+        "peak_px": 23.459999084472656,
+        "shares": 108,
+        "ticker": "ASST"
+      },
+      {
+        "cost_primary": 2547.2736138590813,
+        "entry_date": "2026-09-01",
+        "entry_px": 1.7400000095367432,
+        "last_px": 1.7400000095367432,
+        "min_hold": 1,
+        "peak_px": 1.7400000095367432,
+        "shares": 1446,
+        "ticker": "CYPH"
+      },
+      {
+        "cost_primary": 2548.918694591546,
+        "entry_date": "2026-09-01",
+        "entry_px": 1.350000023841858,
+        "last_px": 1.350000023841858,
+        "min_hold": 1,
+        "peak_px": 1.350000023841858,
+        "shares": 1861,
+        "ticker": "GPRO"
+      },
+      {
+        "cost_primary": 2579.7393871799463,
+        "entry_date": "2026-08-31",
+        "entry_px": 6.760000228881836,
+        "last_px": 8.149999618530273,
+        "min_hold": 1,
+        "peak_px": 8.149999618530273,
+        "shares": 379,
+        "ticker": "USDE"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": -6.3,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 14.869999885559082,
+        "reason": "hold-expired",
+        "shares": 171,
+        "ticker": "ARCT"
+      },
+      {
+        "fill": 140.25,
+        "reason": "hold-expired",
+        "shares": 19,
+        "ticker": "MRNA"
+      },
+      {
+        "fill": 8.90999984741211,
+        "reason": "hold-expired",
+        "shares": 275,
+        "ticker": "XHLD"
+      }
+    ],
+    "sha256": "ffb262434a8d0fb99845ca9c3e11cc001edde966a8c19aee6ecfb84e54c29c57",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-01",
+    "entry_date": "2026-08-31",
+    "entry_px": 15.0,
+    "fill": 14.869999885559082,
+    "kind": "close",
+    "pnl_primary": -52.823569471549945,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "9a83a345eb360915311f20dd0539cceedf0e0966b1a0d7983c6a6934665f8871",
+    "shares": 171,
+    "ticker": "ARCT"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-01",
+    "entry_date": "2026-08-31",
+    "entry_px": 134.10000610351562,
+    "fill": 140.25,
+    "kind": "close",
+    "pnl_primary": 86.66133345336902,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "3ba49ee9b90a671df73f6b0feafd425a4f357992fe710efcbb89b004f27b96e7",
+    "shares": 19,
+    "ticker": "MRNA"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-01",
+    "entry_date": "2026-08-31",
+    "entry_px": 9.34000015258789,
+    "fill": 8.90999984741211,
+    "kind": "close",
+    "pnl_primary": -150.5041339233394,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "3042401cb4f13f3cd7a2087dfac26435dfc0002683ce9ef4561fff98813e9807",
+    "shares": 275,
+    "ticker": "XHLD"
+  },
+  {
+    "bar_cutoff": "2026-09-01",
+    "buys": [
+      {
+        "fill": 151.39999389648438,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 17,
+        "sources": [
+          "ohlc_hot",
+          "probable",
+          "yday_gainer"
+        ],
+        "ticker": "MRNA"
+      },
+      {
+        "fill": 31.799999237060547,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 85,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "CNXC"
+      }
+    ],
+    "cash_primary": 159.92606096267264,
+    "date": "2026-09-02",
+    "day_card_sha256": "a786e8b8c2d83857ab33e3cc5f519274291689c5fd3d4363ae778348c51b8e83",
+    "equity_primary": 11246.796002197261,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2548.662300628662,
+        "entry_date": "2026-09-01",
+        "entry_px": 23.459999084472656,
+        "last_px": 23.06999969482422,
+        "min_hold": 1,
+        "peak_px": 23.459999084472656,
+        "shares": 108,
+        "ticker": "ASST"
+      },
+      {
+        "cost_primary": 2718.759934825897,
+        "entry_date": "2026-09-02",
+        "entry_px": 31.799999237060547,
+        "last_px": 31.799999237060547,
+        "min_hold": 1,
+        "peak_px": 31.799999237060547,
+        "shares": 85,
+        "ticker": "CNXC"
+      },
+      {
+        "cost_primary": 2548.918694591546,
+        "entry_date": "2026-09-01",
+        "entry_px": 1.350000023841858,
+        "last_px": 1.2200000286102295,
+        "min_hold": 1,
+        "peak_px": 1.350000023841858,
+        "shares": 1861,
+        "ticker": "GPRO"
+      },
+      {
+        "cost_primary": 2588.7098957214353,
+        "entry_date": "2026-09-02",
+        "entry_px": 151.39999389648438,
+        "last_px": 151.39999389648438,
+        "min_hold": 1,
+        "peak_px": 151.39999389648438,
+        "shares": 17,
+        "ticker": "MRNA"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": -3.825,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 1.7000000476837158,
+        "reason": "hold-expired",
+        "shares": 1446,
+        "ticker": "CYPH"
+      },
+      {
+        "fill": 8.069999694824219,
+        "reason": "hold-expired",
+        "shares": 379,
+        "ticker": "USDE"
+      }
+    ],
+    "sha256": "63f9d09db6daf6cf6483c5ac2fa3c75455ad2120a9ef0b5d1080c54541a8bf41",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-02",
+    "entry_date": "2026-09-01",
+    "entry_px": 1.7400000095367432,
+    "fill": 1.7000000476837158,
+    "kind": "close",
+    "pnl_primary": -120.27764525318162,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "128328f1ba82a54415e829bde1e40849fa7eb1a884c61eedefd45f249fcece1a",
+    "shares": 1446,
+    "ticker": "CYPH"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-02",
+    "entry_date": "2026-08-31",
+    "entry_px": 6.760000228881836,
+    "fill": 8.069999694824219,
+    "kind": "close",
+    "pnl_primary": 458.5213477367406,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "01efb9c42e7038ae5c8ed1e694a82fb969b59e5d79757e13f4c7c2540af56d12",
+    "shares": 379,
+    "ticker": "USDE"
+  },
+  {
+    "bar_cutoff": "2026-09-02",
+    "buys": [
+      {
+        "fill": 13.710000038146973,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 197,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "CNH"
+      },
+      {
+        "fill": 13.300000190734863,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 203,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "FMC"
+      },
+      {
+        "fill": 1.3600000143051147,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 1970,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "SID"
+      }
+    ],
+    "cash_primary": 5.385425400397253,
+    "date": "2026-09-03",
+    "day_card_sha256": "ec3455a723288b96848a8e6f6689c4a39c5aef143afb11103ff2725fdac04fc0",
+    "equity_primary": 10435.795317124983,
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-07-09",
+        "leg": "close_over_open",
+        "reason": "no filing",
+        "ticker": "JLHL"
+      },
+      {
+        "bar_date": "2026-07-09",
+        "leg": "close_over_prev_close",
+        "reason": "no filing",
+        "ticker": "JLHL"
+      },
+      {
+        "bar_date": "2026-06-16",
+        "leg": "open_over_prev_close",
+        "reason": "20-F de-SPAC exchange ratio, unverified share change",
+        "ticker": "SLBT"
+      }
+    ],
+    "holdings": [
+      {
+        "cost_primary": 2716.9553575525283,
+        "entry_date": "2026-09-03",
+        "entry_px": 13.710000038146973,
+        "last_px": 13.710000038146973,
+        "min_hold": 1,
+        "peak_px": 13.710000038146973,
+        "shares": 197,
+        "ticker": "CNH"
+      },
+      {
+        "cost_primary": 2716.0182389127726,
+        "entry_date": "2026-09-03",
+        "entry_px": 13.300000190734863,
+        "last_px": 13.300000190734863,
+        "min_hold": 1,
+        "peak_px": 13.300000190734863,
+        "shares": 203,
+        "ticker": "FMC"
+      },
+      {
+        "cost_primary": 2548.918694591546,
+        "entry_date": "2026-09-01",
+        "entry_px": 1.350000023841858,
+        "last_px": 1.7799999713897705,
+        "min_hold": 1,
+        "peak_px": 1.7799999713897705,
+        "shares": 1861,
+        "ticker": "GPRO"
+      },
+      {
+        "cost_primary": 2718.009028321981,
+        "entry_date": "2026-09-03",
+        "entry_px": 1.3600000143051147,
+        "last_px": 1.3600000143051147,
+        "min_hold": 1,
+        "peak_px": 1.3600000143051147,
+        "shares": 1970,
+        "ticker": "SID"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": -0.9,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 25.625,
+        "reason": "hold-expired",
+        "shares": 108,
+        "ticker": "ASST"
+      },
+      {
+        "fill": 32.880001068115234,
+        "reason": "hold-expired",
+        "shares": 85,
+        "ticker": "CNXC"
+      },
+      {
+        "fill": 145.94500732421875,
+        "reason": "hold-expired",
+        "shares": 17,
+        "ticker": "MRNA"
+      }
+    ],
+    "sha256": "9bac05c8e2e4e757966eedf2080ef067b9cf830c608bffbd345442dac8dd9745",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-03",
+    "entry_date": "2026-09-01",
+    "entry_px": 23.459999084472656,
+    "fill": 25.625,
+    "kind": "close",
+    "pnl_primary": 202.6460993713381,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "7e7dfe6095c13d5d8674ad82f9a71024e5f310bc7bb172c277ac20cc348a23d2",
+    "shares": 108,
+    "ticker": "ASST"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-03",
+    "entry_date": "2026-09-02",
+    "entry_px": 31.799999237060547,
+    "fill": 32.880001068115234,
+    "kind": "close",
+    "pnl_primary": 59.78465550994906,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "0553de320111272f6228a5a9a230bf23fe04baa71f127ab03683b1ad254dafa8",
+    "shares": 85,
+    "ticker": "CNXC"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-03",
+    "entry_date": "2026-09-02",
+    "entry_px": 151.39999389648438,
+    "fill": 145.94500732421875,
+    "kind": "close",
+    "pnl_primary": -122.12089683227487,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "82ca6e6ee8331cc7ef4c28134701f1768aa515fb59f8f3fc595e7c0637f75fe3",
+    "shares": 17,
+    "ticker": "MRNA"
+  },
+  {
+    "bar_cutoff": "2026-09-03",
+    "buys": [
+      {
+        "fill": 82.83999633789062,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 30,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "APH"
+      },
+      {
+        "fill": 9.279999732971191,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 275,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CHPT"
+      },
+      {
+        "fill": 6.360000133514404,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 401,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "DPRO"
+      }
+    ],
+    "cash_primary": 87.35762196383394,
+    "date": "2026-09-04",
+    "day_card_sha256": "288fb928defede6e1f355e9d7261d7d3bcbc9393a6ba63ed4fdf5d7cc976e3fe",
+    "equity_primary": 10908.327722605085,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2499.705889587402,
+        "entry_date": "2026-09-04",
+        "entry_px": 82.83999633789062,
+        "last_px": 82.83999633789062,
+        "min_hold": 2,
+        "peak_px": 82.83999633789062,
+        "shares": 30,
+        "ticker": "APH"
+      },
+      {
+        "cost_primary": 2568.3074261999127,
+        "entry_date": "2026-09-04",
+        "entry_px": 9.279999732971191,
+        "last_px": 9.279999732971191,
+        "min_hold": 2,
+        "peak_px": 9.279999732971191,
+        "shares": 275,
+        "ticker": "CHPT"
+      },
+      {
+        "cost_primary": 2568.2847538069723,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.360000133514404,
+        "last_px": 6.360000133514404,
+        "min_hold": 2,
+        "peak_px": 6.360000133514404,
+        "shares": 401,
+        "ticker": "DPRO"
+      },
+      {
+        "cost_primary": 2548.918694591546,
+        "entry_date": "2026-09-01",
+        "entry_px": 1.350000023841858,
+        "last_px": 1.4800000190734863,
+        "min_hold": 1,
+        "peak_px": 1.7799999713897705,
+        "shares": 1861,
+        "ticker": "GPRO"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 2.25,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 13.890000343322754,
+        "reason": "hold-expired",
+        "shares": 197,
+        "ticker": "CNH"
+      },
+      {
+        "fill": 12.949999809265137,
+        "reason": "hold-expired",
+        "shares": 203,
+        "ticker": "FMC"
+      },
+      {
+        "fill": 1.2300000190734863,
+        "reason": "hold-expired",
+        "shares": 1970,
+        "ticker": "SID"
+      }
+    ],
+    "sha256": "75ab020a6833b9880335fbe3793659bed8c4230eae6728601d90b464e72ce1f0",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-04",
+    "entry_date": "2026-09-03",
+    "entry_px": 13.710000038146973,
+    "fill": 13.890000343322754,
+    "kind": "close",
+    "pnl_primary": 3.0574597438812816,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "1a8ebd4d3c780a258d4690b2037b2cd37c663795b817073ed03b862825b6d004",
+    "shares": 197,
+    "ticker": "CNH"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-04",
+    "entry_date": "2026-09-03",
+    "entry_px": 13.300000190734863,
+    "fill": 12.949999809265137,
+    "kind": "close",
+    "pnl_primary": -102.98592743835434,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "671d7a0c92ff5ccd66cee6d6bc4f6aa9ddedc46aaa268072dd80c43921c71ce4",
+    "shares": 203,
+    "ticker": "FMC"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-04",
+    "entry_date": "2026-09-03",
+    "entry_px": 1.3600000143051147,
+    "fill": 1.2300000190734863,
+    "kind": "close",
+    "pnl_primary": -332.7838909350867,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "353bdaefdb5872759db732863691a9c3283704dbc6767cd64409e93c0ff95742",
+    "shares": 1970,
+    "ticker": "SID"
+  },
+  {
+    "bar_cutoff": "2026-09-04",
+    "buys": [
+      {
+        "fill": 10.454999923706055,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 4,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "TJGC"
+      },
+      {
+        "fill": 2.0,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 21,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "BMEA"
+      }
+    ],
+    "cash_primary": 2.2053222705356106,
+    "date": "2026-09-08",
+    "day_card_sha256": "461ab939459ceb839f4dace41a1ce2f05278a854094a2a462ae8af339b91b537",
+    "equity_primary": 10236.100426917219,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2499.705889587402,
+        "entry_date": "2026-09-04",
+        "entry_px": 82.83999633789062,
+        "last_px": 83.55999755859375,
+        "min_hold": 2,
+        "peak_px": 83.55999755859375,
+        "shares": 30,
+        "ticker": "APH"
+      },
+      {
+        "cost_primary": 42.69299999999999,
+        "entry_date": "2026-09-08",
+        "entry_px": 2.0,
+        "last_px": 2.0,
+        "min_hold": 1,
+        "peak_px": 2.0,
+        "shares": 21,
+        "ticker": "BMEA"
+      },
+      {
+        "cost_primary": 2568.3074261999127,
+        "entry_date": "2026-09-04",
+        "entry_px": 9.279999732971191,
+        "last_px": 9.90999984741211,
+        "min_hold": 2,
+        "peak_px": 9.90999984741211,
+        "shares": 275,
+        "ticker": "CHPT"
+      },
+      {
+        "cost_primary": 2568.2847538069723,
+        "entry_date": "2026-09-04",
+        "entry_px": 6.360000133514404,
+        "last_px": 6.070000171661377,
+        "min_hold": 2,
+        "peak_px": 6.360000133514404,
+        "shares": 401,
+        "ticker": "DPRO"
+      },
+      {
+        "cost_primary": 2548.918694591546,
+        "entry_date": "2026-09-01",
+        "entry_px": 1.350000023841858,
+        "last_px": 1.565000057220459,
+        "min_hold": 1,
+        "peak_px": 1.7799999713897705,
+        "shares": 1861,
+        "ticker": "GPRO"
+      },
+      {
+        "cost_primary": 42.459299693298334,
+        "entry_date": "2026-09-08",
+        "entry_px": 10.454999923706055,
+        "last_px": 10.454999923706055,
+        "min_hold": 1,
+        "peak_px": 10.454999923706055,
+        "shares": 4,
+        "ticker": "TJGC"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": null,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [],
+    "sha256": "fd6ee1d99cf53819e443c134bfa6553d441da4003a6a7b62991e804c7bfd6ec4",
+    "unfilled": []
+  },
+  {
+    "bar_cutoff": "2026-09-08",
+    "buys": [
+      {
+        "fill": 1.9199999570846558,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 1280,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "INDP"
+      },
+      {
+        "fill": 1.1200000047683716,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 2184,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "ORBS"
+      },
+      {
+        "fill": 6.559999942779541,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 376,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "NUAI"
+      }
+    ],
+    "cash_primary": 4.127924846411588,
+    "date": "2026-09-09",
+    "day_card_sha256": "4080272581616a052ac3da96335c1b5ddf078fee3d77a561c0d31ea00f445c7b",
+    "equity_primary": 10007.682680057289,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2548.918694591546,
+        "entry_date": "2026-09-01",
+        "entry_px": 1.350000023841858,
+        "last_px": 1.4500000476837158,
+        "min_hold": 1,
+        "peak_px": 1.7799999713897705,
+        "shares": 1861,
+        "ticker": "GPRO"
+      },
+      {
+        "cost_primary": 2486.3999447937013,
+        "entry_date": "2026-09-09",
+        "entry_px": 1.9199999570846558,
+        "last_px": 1.9199999570846558,
+        "min_hold": 1,
+        "peak_px": 1.9199999570846558,
+        "shares": 1280,
+        "ticker": "INDP"
+      },
+      {
+        "cost_primary": 2483.7431783775323,
+        "entry_date": "2026-09-09",
+        "entry_px": 6.559999942779541,
+        "last_px": 6.559999942779541,
+        "min_hold": 1,
+        "peak_px": 6.559999942779541,
+        "shares": 376,
+        "ticker": "NUAI"
+      },
+      {
+        "cost_primary": 2486.484010466194,
+        "entry_date": "2026-09-09",
+        "entry_px": 1.1200000047683716,
+        "last_px": 1.1200000047683716,
+        "min_hold": 1,
+        "peak_px": 1.1200000047683716,
+        "shares": 2184,
+        "ticker": "ORBS"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": null,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 80.9800033569336,
+        "reason": "holdup extension",
+        "shares": 30,
+        "ticker": "APH"
+      },
+      {
+        "fill": 1.940000057220459,
+        "reason": "hold-expired",
+        "shares": 21,
+        "ticker": "BMEA"
+      },
+      {
+        "fill": 9.390000343322754,
+        "reason": "holdup extension",
+        "shares": 275,
+        "ticker": "CHPT"
+      },
+      {
+        "fill": 6.019999980926514,
+        "reason": "holdup extension",
+        "shares": 401,
+        "ticker": "DPRO"
+      },
+      {
+        "fill": 10.399999618530273,
+        "reason": "hold-expired",
+        "shares": 4,
+        "ticker": "TJGC"
+      }
+    ],
+    "sha256": "7921359a081649daa0a4352a5f18acc64a3e1dfcecbe9cbc806e52b8622b4864",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-09",
+    "entry_date": "2026-09-04",
+    "entry_px": 82.83999633789062,
+    "fill": 80.9800033569336,
+    "kind": "close",
+    "pnl_primary": -84.56218938293387,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "0e958c0c1781e3cb808043220fa57d794dc6fef66ddcad156bdb80fce37afd2e",
+    "shares": 30,
+    "ticker": "APH"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-09",
+    "entry_date": "2026-09-08",
+    "entry_px": 2.0,
+    "fill": 1.940000057220459,
+    "kind": "close",
+    "pnl_primary": -2.6470988043785013,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "9c16b166420908e713d68380cdca6f99952d8aae9f08bc47017f004b581f487d",
+    "shares": 21,
+    "ticker": "BMEA"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-09",
+    "entry_date": "2026-09-04",
+    "entry_px": 9.279999732971191,
+    "fill": 9.390000343322754,
+    "kind": "close",
+    "pnl_primary": -2.582382258224243,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "82478c1c9d4b159f654490582cdf8a11007134df0dca245fd035b67930163ea4",
+    "shares": 275,
+    "ticker": "CHPT"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-09",
+    "entry_date": "2026-09-04",
+    "entry_px": 6.360000133514404,
+    "fill": 6.019999980926514,
+    "kind": "close",
+    "pnl_primary": -171.59366141719784,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "ad645c2ba3ad383046464d741e9a5729c6be7249816437a78cadb71d38479786",
+    "shares": 401,
+    "ticker": "DPRO"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-09",
+    "entry_date": "2026-09-08",
+    "entry_px": 10.454999923706055,
+    "fill": 10.399999618530273,
+    "kind": "close",
+    "pnl_primary": -1.5153012115478433,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "bb0ce67fa4fd341562c4a0e2c72d9fa533f45c8ca557f8b53d67441eedae9233",
+    "shares": 4,
+    "ticker": "TJGC"
+  },
+  {
+    "bar_cutoff": "2026-09-09",
+    "buys": [
+      {
+        "fill": 5.869999885559082,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 369,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "IRD"
+      },
+      {
+        "fill": 4.570000171661377,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 473,
+        "sources": [
+          "yday_mover"
+        ],
+        "ticker": "BNC"
+      }
+    ],
+    "cash_primary": 5.3563241772180845,
+    "date": "2026-09-10",
+    "day_card_sha256": "e9d23b4d23635cc5451f0a2768fb8be99466256f96aa5bb2f9d5e889c61fc53e",
+    "equity_primary": 10487.656161647272,
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-08-13",
+        "leg": "close_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      },
+      {
+        "bar_date": "2026-08-13",
+        "leg": "open_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      }
+    ],
+    "holdings": [
+      {
+        "cost_primary": 2178.5198316018104,
+        "entry_date": "2026-09-10",
+        "entry_px": 4.570000171661377,
+        "last_px": 4.570000171661377,
+        "min_hold": 1,
+        "peak_px": 4.570000171661377,
+        "shares": 473,
+        "ticker": "BNC"
+      },
+      {
+        "cost_primary": 2548.918694591546,
+        "entry_date": "2026-09-01",
+        "entry_px": 1.350000023841858,
+        "last_px": 1.3700000047683716,
+        "min_hold": 1,
+        "peak_px": 1.7799999713897705,
+        "shares": 1861,
+        "ticker": "GPRO"
+      },
+      {
+        "cost_primary": 2486.3999447937013,
+        "entry_date": "2026-09-09",
+        "entry_px": 1.9199999570846558,
+        "last_px": 2.0,
+        "min_hold": 1,
+        "peak_px": 2.0,
+        "shares": 1280,
+        "ticker": "INDP"
+      },
+      {
+        "cost_primary": 2181.6202075601577,
+        "entry_date": "2026-09-10",
+        "entry_px": 5.869999885559082,
+        "last_px": 5.869999885559082,
+        "min_hold": 1,
+        "peak_px": 5.869999885559082,
+        "shares": 369,
+        "ticker": "IRD"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": -13.275,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 6.059999942779541,
+        "reason": "hold-expired",
+        "shares": 376,
+        "ticker": "NUAI"
+      },
+      {
+        "fill": 0.9789999723434448,
+        "reason": "hold-expired",
+        "shares": 2184,
+        "ticker": "ORBS"
+      }
+    ],
+    "sha256": "97608d6efe1ee47589c64fa53ee2601191faf7a87f3ecbff9e010212be91b9b3",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-10",
+    "entry_date": "2026-09-09",
+    "entry_px": 6.559999942779541,
+    "fill": 6.059999942779541,
+    "kind": "close",
+    "pnl_primary": -221.50699978485045,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "a1bb2adcf8afa76b5245afcb488f761dcf71d40751c61bf481676345dcd3b728",
+    "shares": 376,
+    "ticker": "NUAI"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-10",
+    "entry_date": "2026-09-09",
+    "entry_px": 1.1200000047683716,
+    "fill": 0.9789999723434448,
+    "kind": "close",
+    "pnl_primary": -387.35175056610115,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "d6b9dd20c012f8a212e26cecd3024ca75eb1e6a5e7166351160374ee4350b104",
+    "shares": 2184,
+    "ticker": "ORBS"
+  },
+  {
+    "bar_cutoff": "2026-09-10",
+    "buys": [
+      {
+        "fill": 3.130000114440918,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 814,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CMRC"
+      }
+    ],
+    "cash_primary": 2.3327864086877526,
+    "date": "2026-09-11",
+    "day_card_sha256": "6ee5d8faad63d2cc2ea46f3610e3b3e29469d19e5ca3c8d287b1bc7b41c24c42",
+    "equity_primary": 10900.16293129089,
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-06-16",
+        "leg": "open_over_prev_close",
+        "reason": "20-F de-SPAC exchange ratio, unverified share change",
+        "ticker": "SLBT"
+      }
+    ],
+    "holdings": [
+      {
+        "cost_primary": 2178.5198316018104,
+        "entry_date": "2026-09-10",
+        "entry_px": 4.570000171661377,
+        "last_px": 4.909999847412109,
+        "min_hold": 1,
+        "peak_px": 4.909999847412109,
+        "shares": 473,
+        "ticker": "BNC"
+      },
+      {
+        "cost_primary": 2571.0597936206814,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.130000114440918,
+        "last_px": 3.130000114440918,
+        "min_hold": 2,
+        "peak_px": 3.130000114440918,
+        "shares": 814,
+        "ticker": "CMRC"
+      },
+      {
+        "cost_primary": 2486.3999447937013,
+        "entry_date": "2026-09-09",
+        "entry_px": 1.9199999570846558,
+        "last_px": 2.700000047683716,
+        "min_hold": 1,
+        "peak_px": 2.700000047683716,
+        "shares": 1280,
+        "ticker": "INDP"
+      },
+      {
+        "cost_primary": 2181.6202075601577,
+        "entry_date": "2026-09-10",
+        "entry_px": 5.869999885559082,
+        "last_px": 6.159999847412109,
+        "min_hold": 1,
+        "peak_px": 6.159999847412109,
+        "shares": 369,
+        "ticker": "IRD"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 0.5,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 1.399999976158142,
+        "reason": "hold-expired",
+        "shares": 1861,
+        "ticker": "GPRO"
+      }
+    ],
+    "sha256": "8a72d2fa7c8f8e241cebe8f5736448a0415afe54deacbaf6dc0ad227853adc24",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-11",
+    "entry_date": "2026-09-01",
+    "entry_px": 1.350000023841858,
+    "fill": 1.399999976158142,
+    "kind": "close",
+    "pnl_primary": 19.11756126060527,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "b0eb2903ae37dc12e98377e88217ce2d6c3c16a11a740369aa24c1f34926ba7e",
+    "shares": 1861,
+    "ticker": "GPRO"
+  },
+  {
+    "bar_cutoff": "2026-09-11",
+    "buys": [
+      {
+        "fill": 10.420000076293945,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 217,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "ACVA"
+      },
+      {
+        "fill": 12.420000076293945,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 182,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "XHLD"
+      }
+    ],
+    "cash_primary": 19.3383975554234,
+    "date": "2026-09-14",
+    "day_card_sha256": "4a023ea549b245726dceda744ab7a1ea09099c791f8afccb580e4f5d8edbdef5",
+    "equity_primary": 10883.908597998692,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2275.245016638565,
+        "entry_date": "2026-09-14",
+        "entry_px": 10.420000076293945,
+        "last_px": 10.420000076293945,
+        "min_hold": 1,
+        "peak_px": 10.420000076293945,
+        "shares": 217,
+        "ticker": "ACVA"
+      },
+      {
+        "cost_primary": 2571.0597936206814,
+        "entry_date": "2026-09-11",
+        "entry_px": 3.130000114440918,
+        "last_px": 3.509999990463257,
+        "min_hold": 2,
+        "peak_px": 3.509999990463257,
+        "shares": 814,
+        "ticker": "CMRC"
+      },
+      {
+        "cost_primary": 2486.3999447937013,
+        "entry_date": "2026-09-09",
+        "entry_px": 1.9199999570846558,
+        "last_px": 2.799999952316284,
+        "min_hold": 1,
+        "peak_px": 2.799999952316284,
+        "shares": 1280,
+        "ticker": "INDP"
+      },
+      {
+        "cost_primary": 2274.2782139549254,
+        "entry_date": "2026-09-14",
+        "entry_px": 12.420000076293945,
+        "last_px": 12.420000076293945,
+        "min_hold": 1,
+        "peak_px": 12.420000076293945,
+        "shares": 182,
+        "ticker": "XHLD"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": -11.002,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 5.03000020980835,
+        "reason": "hold-expired",
+        "shares": 473,
+        "ticker": "BNC"
+      },
+      {
+        "fill": 6.019999980926514,
+        "reason": "hold-expired",
+        "shares": 369,
+        "ticker": "IRD"
+      }
+    ],
+    "sha256": "73b020ea85206a9b174c09068c1e5bd0938ce871d5d5d64248f47471ff5f8af3",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-14",
+    "entry_date": "2026-09-10",
+    "entry_px": 4.570000171661377,
+    "fill": 5.03000020980835,
+    "kind": "close",
+    "pnl_primary": 182.57501714134196,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "320b4c72d9318b2b6a94bf86b655126b5d58bd12bdd6384b71ec994400c6fc05",
+    "shares": 473,
+    "ticker": "BNC"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-14",
+    "entry_date": "2026-09-10",
+    "entry_px": 5.869999885559082,
+    "fill": 6.019999980926514,
+    "kind": "close",
+    "pnl_primary": 23.813785436916078,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "a4a1dc1e72db8f90440c4232798479e14ffbd6a5955ab0c76abd3424f1a9fbda",
+    "shares": 369,
+    "ticker": "IRD"
+  },
+  {
+    "bar_cutoff": "2026-09-14",
+    "buys": [
+      {
+        "fill": 6.5,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 343,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "DBI"
+      },
+      {
+        "fill": 1.3450000286102295,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 1647,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "GPRO"
+      },
+      {
+        "fill": 0.6110000014305115,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 3607,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "SES"
+      }
+    ],
+    "cash_primary": 4.095927318395752,
+    "date": "2026-09-15",
+    "day_card_sha256": "6f40136c16ad37e231cc10a344d057a1ea4fde4eb3fbd1e7146ec8ad92d6f63e",
+    "equity_primary": 11202.998135944667,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2245.0721999999996,
+        "entry_date": "2026-09-15",
+        "entry_px": 6.5,
+        "last_px": 6.5,
+        "min_hold": 1,
+        "peak_px": 6.5,
+        "shares": 343,
+        "ticker": "DBI"
+      },
+      {
+        "cost_primary": 2247.5374223566528,
+        "entry_date": "2026-09-15",
+        "entry_px": 1.3450000286102295,
+        "last_px": 1.3450000286102295,
+        "min_hold": 1,
+        "peak_px": 1.3450000286102295,
+        "shares": 1647,
+        "ticker": "GPRO"
+      },
+      {
+        "cost_primary": 2486.3999447937013,
+        "entry_date": "2026-09-09",
+        "entry_px": 1.9199999570846558,
+        "last_px": 3.4000000953674316,
+        "min_hold": 1,
+        "peak_px": 3.4000000953674316,
+        "shares": 1280,
+        "ticker": "INDP"
+      },
+      {
+        "cost_primary": 2247.7561901856543,
+        "entry_date": "2026-09-15",
+        "entry_px": 0.6110000014305115,
+        "last_px": 0.6110000014305115,
+        "min_hold": 1,
+        "peak_px": 0.6110000014305115,
+        "shares": 3607,
+        "ticker": "SES"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": -6.215,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 10.430000305175781,
+        "reason": "hold-expired",
+        "shares": 217,
+        "ticker": "ACVA"
+      },
+      {
+        "fill": 3.640000104904175,
+        "reason": "holdup extension",
+        "shares": 814,
+        "ticker": "CMRC"
+      },
+      {
+        "fill": 8.510000228881836,
+        "reason": "hold-expired",
+        "shares": 182,
+        "ticker": "XHLD"
+      }
+    ],
+    "sha256": "bf0e63ff95c9e0d24194a6f16377f5aa7145254d260612583e4f1aad663c5f98",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-15",
+    "entry_date": "2026-09-14",
+    "entry_px": 10.420000076293945,
+    "fill": 10.430000305175781,
+    "kind": "close",
+    "pnl_primary": -26.10490074653626,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "12f148d790d282ee75337ecffb561942e293001f72b790b3169213a243156307",
+    "shares": 217,
+    "ticker": "ACVA"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-15",
+    "entry_date": "2026-09-11",
+    "entry_px": 3.130000114440918,
+    "fill": 3.640000104904175,
+    "kind": "close",
+    "pnl_primary": 366.4260913443568,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "bc716459ee7fbb54533c960b07d23995ec18de634a2e8b73315842d81e84ffb5",
+    "shares": 814,
+    "ticker": "CMRC"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-15",
+    "entry_date": "2026-09-14",
+    "entry_px": 12.420000076293945,
+    "fill": 8.510000228881836,
+    "kind": "close",
+    "pnl_primary": -735.7808725067139,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "ba91f32b858d1444b6bdc71952329a12ad6878728bdb8b90aa73fde31686b23c",
+    "shares": 182,
+    "ticker": "XHLD"
+  },
+  {
+    "bar_cutoff": "2026-09-15",
+    "buys": [
+      {
+        "fill": 1.7999999523162842,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 1182,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "HLP"
+      },
+      {
+        "fill": 23.290000915527344,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 91,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "SDGR"
+      },
+      {
+        "fill": 14.619999885559082,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 146,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "SSL"
+      }
+    ],
+    "cash_primary": 30.08587946033731,
+    "date": "2026-09-16",
+    "day_card_sha256": "550815938ac9c322483e45370d16366a0042993862c537a1f26be96a0bb5d0f7",
+    "equity_primary": 10849.595871582987,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2153.485743356037,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "last_px": 1.7999999523162842,
+        "min_hold": 2,
+        "peak_px": 1.7999999523162842,
+        "shares": 1182,
+        "ticker": "HLP"
+      },
+      {
+        "cost_primary": 2486.3999447937013,
+        "entry_date": "2026-09-09",
+        "entry_px": 1.9199999570846558,
+        "last_px": 3.6600000858306885,
+        "min_hold": 1,
+        "peak_px": 3.6600000858306885,
+        "shares": 1280,
+        "ticker": "INDP"
+      },
+      {
+        "cost_primary": 2132.250033729553,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "last_px": 23.290000915527344,
+        "min_hold": 2,
+        "peak_px": 23.290000915527344,
+        "shares": 91,
+        "ticker": "SDGR"
+      },
+      {
+        "cost_primary": 2147.6205832080836,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.619999885559082,
+        "last_px": 14.619999885559082,
+        "min_hold": 2,
+        "peak_px": 14.619999885559082,
+        "shares": 146,
+        "ticker": "SSL"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 5.297,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 6.25,
+        "reason": "hold-expired",
+        "shares": 343,
+        "ticker": "DBI"
+      },
+      {
+        "fill": 1.309999942779541,
+        "reason": "hold-expired",
+        "shares": 1647,
+        "ticker": "GPRO"
+      },
+      {
+        "fill": 0.6240000128746033,
+        "reason": "hold-expired",
+        "shares": 3607,
+        "ticker": "SES"
+      }
+    ],
+    "sha256": "df1706fd67696ddee9e1534807f8a2e242d9f3324d4950cabcc86c2fd8fa5929",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-16",
+    "entry_date": "2026-09-15",
+    "entry_px": 6.5,
+    "fill": 6.25,
+    "kind": "close",
+    "pnl_primary": -116.53974999999946,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "b10fe598fdd33570603c9dbdf54f7da2b430e7d5354e2e1340de575b310da084",
+    "shares": 343,
+    "ticker": "DBI"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-16",
+    "entry_date": "2026-09-15",
+    "entry_px": 1.3450000286102295,
+    "fill": 1.309999942779541,
+    "kind": "close",
+    "pnl_primary": -122.29236612753812,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "c671c3f445958c920eb9290c887f30a9a240059fe39aa3776e3807d642916cfc",
+    "shares": 1647,
+    "ticker": "GPRO"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-16",
+    "entry_date": "2026-09-15",
+    "entry_px": 0.6110000014305115,
+    "fill": 0.6240000128746033,
+    "kind": "close",
+    "pnl_primary": -42.187383979153765,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "0b39e607edd64983adf3f92448dd1ddcdf20a8939056a3e8c6ef691803014c22",
+    "shares": 3607,
+    "ticker": "SES"
+  },
+  {
+    "bar_cutoff": "2026-09-16",
+    "buys": [],
+    "cash_primary": 30.08587946033731,
+    "date": "2026-09-17",
+    "day_card_sha256": "ced415d74557711aa23a2f335443974d709c5c215982340955bec3b252c8f2cf",
+    "equity_primary": 12264.40597166157,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2153.485743356037,
+        "entry_date": "2026-09-16",
+        "entry_px": 1.7999999523162842,
+        "last_px": 2.0999999046325684,
+        "min_hold": 2,
+        "peak_px": 2.0999999046325684,
+        "shares": 1182,
+        "ticker": "HLP"
+      },
+      {
+        "cost_primary": 2486.3999447937013,
+        "entry_date": "2026-09-09",
+        "entry_px": 1.9199999570846558,
+        "last_px": 3.299999952316284,
+        "min_hold": 1,
+        "peak_px": 3.6600000858306885,
+        "shares": 1280,
+        "ticker": "INDP"
+      },
+      {
+        "cost_primary": 2132.250033729553,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "last_px": 24.09000015258789,
+        "min_hold": 2,
+        "peak_px": 24.09000015258789,
+        "shares": 91,
+        "ticker": "SDGR"
+      },
+      {
+        "cost_primary": 2147.6205832080836,
+        "entry_date": "2026-09-16",
+        "entry_px": 14.619999885559082,
+        "last_px": 13.770000457763672,
+        "min_hold": 2,
+        "peak_px": 14.619999885559082,
+        "shares": 146,
+        "ticker": "SSL"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 7.383,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [],
+    "sha256": "6dea6a9a3e80c94732340344cb59a84f9dbd0ccd49f426e931fb9e089087ef7d",
+    "unfilled": [
+      {
+        "reason": "cannot buy one share",
+        "side": "buy",
+        "ticker": "BBNX"
+      },
+      {
+        "reason": "cannot buy one share",
+        "side": "buy",
+        "ticker": "FPS"
+      }
+    ]
+  },
+  {
+    "bar_cutoff": "2026-09-17",
+    "buys": [
+      {
+        "fill": 3.0350000858306885,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 708,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "CYPH"
+      },
+      {
+        "fill": 81.4000015258789,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 26,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "TEM"
+      }
+    ],
+    "cash_primary": 43.195267714312195,
+    "date": "2026-09-18",
+    "day_card_sha256": "f5debd81472934509a86e5088d3c379409284b2c095359bff5260a8bd288baa5",
+    "equity_primary": 11800.655085600665,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2168.657161071968,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.0350000858306885,
+        "last_px": 3.0350000858306885,
+        "min_hold": 2,
+        "peak_px": 3.0350000858306885,
+        "shares": 708,
+        "ticker": "CYPH"
+      },
+      {
+        "cost_primary": 2486.3999447937013,
+        "entry_date": "2026-09-09",
+        "entry_px": 1.9199999570846558,
+        "last_px": 3.8499999046325684,
+        "min_hold": 1,
+        "peak_px": 3.8499999046325684,
+        "shares": 1280,
+        "ticker": "INDP"
+      },
+      {
+        "cost_primary": 2132.250033729553,
+        "entry_date": "2026-09-16",
+        "entry_px": 23.290000915527344,
+        "last_px": 29.31999969482422,
+        "min_hold": 2,
+        "peak_px": 29.31999969482422,
+        "shares": 91,
+        "ticker": "SDGR"
+      },
+      {
+        "cost_primary": 2129.0500398712156,
+        "entry_date": "2026-09-18",
+        "entry_px": 81.4000015258789,
+        "last_px": 81.4000015258789,
+        "min_hold": 2,
+        "peak_px": 81.4000015258789,
+        "shares": 26,
+        "ticker": "TEM"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 4.861,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 1.9600000381469727,
+        "reason": "holdup extension",
+        "shares": 1182,
+        "ticker": "HLP"
+      },
+      {
+        "fill": 13.930000305175781,
+        "reason": "holdup extension",
+        "shares": 146,
+        "ticker": "SSL"
+      }
+    ],
+    "sha256": "8d19bf6c79134ca4f08c5a0b12b1dcb4e1013416a92f4c56dcc5d3c07c406f8c",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-18",
+    "entry_date": "2026-09-16",
+    "entry_px": 1.7999999523162842,
+    "fill": 1.9600000381469727,
+    "kind": "close",
+    "pnl_primary": 136.18820150823603,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "a143e0a0360c5a1bc4170e225e1153a379b2bb4a68f98859c1290cb9fdbd643a",
+    "shares": 1182,
+    "ticker": "HLP"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-18",
+    "entry_date": "2026-09-16",
+    "entry_px": 14.619999885559082,
+    "fill": 13.930000305175781,
+    "kind": "close",
+    "pnl_primary": -126.47793887519788,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "07d81079f576c65336cfaba1ec8952d83ee841e9e7460889f66082bab0a6aff2",
+    "shares": 146,
+    "ticker": "SSL"
+  },
+  {
+    "bar_cutoff": "2026-09-18",
+    "buys": [
+      {
+        "fill": 2.4700000286102295,
+        "fill_basis": "open",
+        "rank": 1,
+        "shares": 963,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "FEAM"
+      },
+      {
+        "fill": 16.90999984741211,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 141,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "TJGC"
+      },
+      {
+        "fill": 1.649999976158142,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 1438,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "LVWR"
+      }
+    ],
+    "cash_primary": 5.470313005546359,
+    "date": "2026-09-21",
+    "day_card_sha256": "cdcf06a08d707c0d5cb2cb5e3228f85467a9b38d87c0537740620b355895cff1",
+    "equity_primary": 11508.610315256217,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2168.657161071968,
+        "entry_date": "2026-09-18",
+        "entry_px": 3.0350000858306885,
+        "last_px": 4.0,
+        "min_hold": 2,
+        "peak_px": 4.0,
+        "shares": 708,
+        "ticker": "CYPH"
+      },
+      {
+        "cost_primary": 2402.925777689409,
+        "entry_date": "2026-09-21",
+        "entry_px": 2.4700000286102295,
+        "last_px": 2.4700000286102295,
+        "min_hold": 2,
+        "peak_px": 2.4700000286102295,
+        "shares": 963,
+        "ticker": "FEAM"
+      },
+      {
+        "cost_primary": 2403.1136655439855,
+        "entry_date": "2026-09-21",
+        "entry_px": 1.649999976158142,
+        "last_px": 1.649999976158142,
+        "min_hold": 2,
+        "peak_px": 1.649999976158142,
+        "shares": 1438,
+        "ticker": "LVWR"
+      },
+      {
+        "cost_primary": 2129.0500398712156,
+        "entry_date": "2026-09-18",
+        "entry_px": 81.4000015258789,
+        "last_px": 79.08000183105469,
+        "min_hold": 2,
+        "peak_px": 81.4000015258789,
+        "shares": 26,
+        "ticker": "TEM"
+      },
+      {
+        "cost_primary": 2398.644528377533,
+        "entry_date": "2026-09-21",
+        "entry_px": 16.90999984741211,
+        "last_px": 16.90999984741211,
+        "min_hold": 2,
+        "peak_px": 16.90999984741211,
+        "shares": 141,
+        "ticker": "TJGC"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 12.871,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 3.549999952316284,
+        "reason": "hold-expired",
+        "shares": 1280,
+        "ticker": "INDP"
+      },
+      {
+        "fill": 29.43000030517578,
+        "reason": "hold-expired",
+        "shares": 91,
+        "ticker": "SDGR"
+      }
+    ],
+    "sha256": "169514365ee006c1381c32955f7badbfa9f394732a8fcc4661fb8e851cec53dc",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-21",
+    "entry_date": "2026-09-09",
+    "entry_px": 1.9199999570846558,
+    "fill": 3.549999952316284,
+    "kind": "close",
+    "pnl_primary": 2018.1191944763186,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "4e9ffa44351459996e22869d738acf4b5a2e2768b461d170d5004c829d00c648",
+    "shares": 1280,
+    "ticker": "INDP"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-21",
+    "entry_date": "2026-09-16",
+    "entry_px": 23.290000915527344,
+    "fill": 29.43000030517578,
+    "kind": "close",
+    "pnl_primary": 530.1898439025881,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "d5439ba3f7ca60c645f89d8a3bf1de1313e6d964f9764ecd0195df4bced3fca4",
+    "shares": 91,
+    "ticker": "SDGR"
+  },
+  {
+    "bar_cutoff": "2026-09-21",
+    "buys": [
+      {
+        "fill": 2.940000057220459,
+        "fill_basis": "open",
+        "rank": 1,
+        "shares": 377,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "GLND"
+      },
+      {
+        "fill": 12.960000038146973,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 85,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "SECZ"
+      },
+      {
+        "fill": 12.989999771118164,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 85,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "USDE"
+      },
+      {
+        "fill": 106.75,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 10,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "GRAL"
+      }
+    ],
+    "cash_primary": 69.44989563656213,
+    "date": "2026-09-22",
+    "day_card_sha256": "8cadf3ff7f4e5adb12b405a631e0e886d8df7423f64e41cb19001983597e1db5",
+    "equity_primary": 11656.039925114635,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2402.925777689409,
+        "entry_date": "2026-09-21",
+        "entry_px": 2.4700000286102295,
+        "last_px": 2.4700000286102295,
+        "min_hold": 2,
+        "peak_px": 2.4700000286102295,
+        "shares": 963,
+        "ticker": "FEAM"
+      },
+      {
+        "cost_primary": 1118.7852216799736,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.940000057220459,
+        "last_px": 2.940000057220459,
+        "min_hold": 1,
+        "peak_px": 2.940000057220459,
+        "shares": 377,
+        "ticker": "GLND"
+      },
+      {
+        "cost_primary": 1074.8574999999998,
+        "entry_date": "2026-09-22",
+        "entry_px": 106.75,
+        "last_px": 106.75,
+        "min_hold": 1,
+        "peak_px": 106.75,
+        "shares": 10,
+        "ticker": "GRAL"
+      },
+      {
+        "cost_primary": 2403.1136655439855,
+        "entry_date": "2026-09-21",
+        "entry_px": 1.649999976158142,
+        "last_px": 1.5,
+        "min_hold": 2,
+        "peak_px": 1.649999976158142,
+        "shares": 1438,
+        "ticker": "LVWR"
+      },
+      {
+        "cost_primary": 1109.3530032587048,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.960000038146973,
+        "last_px": 12.960000038146973,
+        "min_hold": 1,
+        "peak_px": 12.960000038146973,
+        "shares": 85,
+        "ticker": "SECZ"
+      },
+      {
+        "cost_primary": 2398.644528377533,
+        "entry_date": "2026-09-21",
+        "entry_px": 16.90999984741211,
+        "last_px": 17.579999923706055,
+        "min_hold": 2,
+        "peak_px": 17.579999923706055,
+        "shares": 141,
+        "ticker": "TJGC"
+      },
+      {
+        "cost_primary": 1111.915730447769,
+        "entry_date": "2026-09-22",
+        "entry_px": 12.989999771118164,
+        "last_px": 12.989999771118164,
+        "min_hold": 1,
+        "peak_px": 12.989999771118164,
+        "shares": 85,
+        "ticker": "USDE"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": -0.497,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 3.509999990463257,
+        "reason": "holdup extension",
+        "shares": 708,
+        "ticker": "CYPH"
+      },
+      {
+        "fill": 77.98999786376953,
+        "reason": "holdup extension",
+        "shares": 26,
+        "ticker": "TEM"
+      }
+    ],
+    "sha256": "ba7eaa7aadb049f91051c5f9d0ca6eca3194a7f1b466f195021e0ebd505fd3be",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-22",
+    "entry_date": "2026-09-18",
+    "entry_px": 3.0350000858306885,
+    "fill": 3.509999990463257,
+    "kind": "close",
+    "pnl_primary": 294.72683220977797,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "1063b57b343de587f1e1329b54d633a7651d5cb9237d19e395160471da1fd216",
+    "shares": 708,
+    "ticker": "CYPH"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-22",
+    "entry_date": "2026-09-18",
+    "entry_px": 81.4000015258789,
+    "fill": 77.98999786376953,
+    "kind": "close",
+    "pnl_primary": -113.5429951354979,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "85bc2b325fa7c0bcdc05e428fc2fd46db119b32210d6d89a0910f5340a61c094",
+    "shares": 26,
+    "ticker": "TEM"
+  },
+  {
+    "bar_cutoff": "2026-09-22",
+    "buys": [
+      {
+        "fill": 4.489999771118164,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 852,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "SVIA"
+      },
+      {
+        "fill": 266.5,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 14,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "VICR"
+      }
+    ],
+    "cash_primary": 105.9750598780206,
+    "date": "2026-09-23",
+    "day_card_sha256": "7266e1a36a2dad3c4d083da00541551516fd7c2dc1f690f5552e09decadbb4c0",
+    "equity_primary": 11143.165423285156,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 2402.925777689409,
+        "entry_date": "2026-09-21",
+        "entry_px": 2.4700000286102295,
+        "last_px": 2.9200000762939453,
+        "min_hold": 2,
+        "peak_px": 2.9200000762939453,
+        "shares": 963,
+        "ticker": "FEAM"
+      },
+      {
+        "cost_primary": 1118.7852216799736,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.940000057220459,
+        "last_px": 2.700000047683716,
+        "min_hold": 1,
+        "peak_px": 2.940000057220459,
+        "shares": 377,
+        "ticker": "GLND"
+      },
+      {
+        "cost_primary": 3855.5980040176387,
+        "entry_date": "2026-09-23",
+        "entry_px": 4.489999771118164,
+        "last_px": 4.489999771118164,
+        "min_hold": 2,
+        "peak_px": 4.489999771118164,
+        "shares": 852,
+        "ticker": "SVIA"
+      },
+      {
+        "cost_primary": 3751.687,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "last_px": 266.5,
+        "min_hold": 2,
+        "peak_px": 266.5,
+        "shares": 14,
+        "ticker": "VICR"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 2.293,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 108.5199966430664,
+        "reason": "hold-expired",
+        "shares": 10,
+        "ticker": "GRAL"
+      },
+      {
+        "fill": 1.409999966621399,
+        "reason": "holdup extension",
+        "shares": 1438,
+        "ticker": "LVWR"
+      },
+      {
+        "fill": 12.800000190734863,
+        "reason": "hold-expired",
+        "shares": 85,
+        "ticker": "SECZ"
+      },
+      {
+        "fill": 16.920000076293945,
+        "reason": "holdup extension",
+        "shares": 141,
+        "ticker": "TJGC"
+      },
+      {
+        "fill": 13.220000267028809,
+        "reason": "hold-expired",
+        "shares": 85,
+        "ticker": "USDE"
+      }
+    ],
+    "sha256": "ef4bb2b82ef2292b5536935970bcc2423ed0fd3dfb19b0948bb4ac6b3814dd01",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-23",
+    "entry_date": "2026-09-22",
+    "entry_px": 106.75,
+    "fill": 108.5199966430664,
+    "kind": "close",
+    "pnl_primary": 2.8764665985108877,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "a486877f18fe7e70382d51bf3cbfd912bb4c28d8476776a22faf17c55e0852a5",
+    "shares": 10,
+    "ticker": "GRAL"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-23",
+    "entry_date": "2026-09-21",
+    "entry_px": 1.649999976158142,
+    "fill": 1.409999966621399,
+    "kind": "close",
+    "pnl_primary": -404.4767133024218,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "d9fa7ad6600c48740bea1fc8f0d8ef72ab77232ea2cb3504c656c253f7b3c8b9",
+    "shares": 1438,
+    "ticker": "LVWR"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-23",
+    "entry_date": "2026-09-22",
+    "entry_px": 12.960000038146973,
+    "fill": 12.800000190734863,
+    "kind": "close",
+    "pnl_primary": -29.062087127303812,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "e82ebad90ee69b87b72525a490236b8961a0bd509f326489445787192599a26d",
+    "shares": 85,
+    "ticker": "SECZ"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-23",
+    "entry_date": "2026-09-21",
+    "entry_px": 16.90999984741211,
+    "fill": 16.920000076293945,
+    "kind": "close",
+    "pnl_primary": -27.30861767387387,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "3fb8bbbb131f380ef2c88f2c57bdbcd9a5daa92f05a4a0f6a09f636678e52512",
+    "shares": 141,
+    "ticker": "TJGC"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-23",
+    "entry_date": "2026-09-22",
+    "entry_px": 12.989999771118164,
+    "fill": 13.220000267028809,
+    "kind": "close",
+    "pnl_primary": 3.8966921361925415,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "853ab6173d08023283bd2e8c4ecb377f3182562e6243b087d0ce7c9b176d9760",
+    "shares": 85,
+    "ticker": "USDE"
+  },
+  {
+    "bar_cutoff": "2026-09-23",
+    "buys": [
+      {
+        "fill": 24.030000686645508,
+        "fill_basis": "open",
+        "rank": 2,
+        "shares": 35,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "TJGC"
+      },
+      {
+        "fill": 14.670000076293945,
+        "fill_basis": "open",
+        "rank": 3,
+        "shares": 58,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "SECZ"
+      },
+      {
+        "fill": 0.890999972820282,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 953,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "SRFM"
+      }
+    ],
+    "cash_primary": 24.88774179226698,
+    "date": "2026-09-24",
+    "day_card_sha256": "550bdb9ca5920bf6e6916dd4d26cdfe539c80f3b15d5bae6b3311d87d71c96f1",
+    "equity_primary": 12105.003762054508,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 1118.7852216799736,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.940000057220459,
+        "last_px": 3.2200000286102295,
+        "min_hold": 1,
+        "peak_px": 3.2200000286102295,
+        "shares": 377,
+        "ticker": "GLND"
+      },
+      {
+        "cost_primary": 857.2783044471739,
+        "entry_date": "2026-09-24",
+        "entry_px": 14.670000076293945,
+        "last_px": 14.670000076293945,
+        "min_hold": 1,
+        "peak_px": 14.670000076293945,
+        "shares": 58,
+        "ticker": "SECZ"
+      },
+      {
+        "cost_primary": 864.7187889682173,
+        "entry_date": "2026-09-24",
+        "entry_px": 0.890999972820282,
+        "last_px": 0.890999972820282,
+        "min_hold": 1,
+        "peak_px": 0.890999972820282,
+        "shares": 953,
+        "ticker": "SRFM"
+      },
+      {
+        "cost_primary": 3855.5980040176387,
+        "entry_date": "2026-09-23",
+        "entry_px": 4.489999771118164,
+        "last_px": 3.924999952316284,
+        "min_hold": 2,
+        "peak_px": 4.489999771118164,
+        "shares": 852,
+        "ticker": "SVIA"
+      },
+      {
+        "cost_primary": 847.3502741527557,
+        "entry_date": "2026-09-24",
+        "entry_px": 24.030000686645508,
+        "last_px": 24.030000686645508,
+        "min_hold": 1,
+        "peak_px": 24.030000686645508,
+        "shares": 35,
+        "ticker": "TJGC"
+      },
+      {
+        "cost_primary": 3751.687,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "last_px": 274.45001220703125,
+        "min_hold": 2,
+        "peak_px": 274.45001220703125,
+        "shares": 14,
+        "ticker": "VICR"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "session",
+    "morning_s": -7.659,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 2.609999895095825,
+        "reason": "hold-expired",
+        "shares": 963,
+        "ticker": "FEAM"
+      }
+    ],
+    "sha256": "c66b2be6a75c508935a5b120946e636e9456141a75798e84d5261610ea48d514",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-24",
+    "entry_date": "2026-09-21",
+    "entry_px": 2.4700000286102295,
+    "fill": 2.609999895095825,
+    "kind": "close",
+    "pnl_primary": 85.33427179298405,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "e78229bd1704de04e62874fc2311c6c119e9e3dbec479bd65b4225cd3ec1b3c6",
+    "shares": 963,
+    "ticker": "FEAM"
+  },
+  {
+    "bar_cutoff": "2026-09-24",
+    "buys": [
+      {
+        "fill": 15.581100463867188,
+        "fill_basis": "open",
+        "rank": 4,
+        "shares": 520,
+        "sources": [
+          "yday_gainer"
+        ],
+        "ticker": "USDE"
+      }
+    ],
+    "cash_primary": 11.685590021509597,
+    "date": "2026-09-25",
+    "day_card_sha256": "02349627b564ca710571f73d992072b3f5636dc7a7c6c95bd009a0f5d4c0bcb8",
+    "equity_primary": 12914.34556984176,
+    "excluded_unexplained_legs": [],
+    "holdings": [
+      {
+        "cost_primary": 1118.7852216799736,
+        "entry_date": "2026-09-22",
+        "entry_px": 2.940000057220459,
+        "last_px": 6.059999942779541,
+        "min_hold": 1,
+        "peak_px": 6.059999942779541,
+        "shares": 377,
+        "ticker": "GLND"
+      },
+      {
+        "cost_primary": 857.2783044471739,
+        "entry_date": "2026-09-24",
+        "entry_px": 14.670000076293945,
+        "last_px": 16.209999084472656,
+        "min_hold": 1,
+        "peak_px": 16.209999084472656,
+        "shares": 58,
+        "ticker": "SECZ"
+      },
+      {
+        "cost_primary": 847.3502741527557,
+        "entry_date": "2026-09-24",
+        "entry_px": 24.030000686645508,
+        "last_px": 29.760000228881836,
+        "min_hold": 1,
+        "peak_px": 29.760000228881836,
+        "shares": 35,
+        "ticker": "TJGC"
+      },
+      {
+        "cost_primary": 8149.391102416991,
+        "entry_date": "2026-09-25",
+        "entry_px": 15.581100463867188,
+        "last_px": 15.581100463867188,
+        "min_hold": 2,
+        "peak_px": 15.581100463867188,
+        "shares": 520,
+        "ticker": "USDE"
+      }
+    ],
+    "holdup_on": true,
+    "kind": "session",
+    "morning_s": 2.706,
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fill": 0.9438999891281128,
+        "reason": "hold-expired",
+        "shares": 953,
+        "ticker": "SRFM"
+      },
+      {
+        "fill": 3.940000057220459,
+        "reason": "holdup extension",
+        "shares": 852,
+        "ticker": "SVIA"
+      },
+      {
+        "fill": 281.8599853515625,
+        "reason": "holdup extension",
+        "shares": 14,
+        "ticker": "VICR"
+      }
+    ],
+    "sha256": "3fb0609ce27ab4cc6d18537f06d2b99cfc4cb30c9b9214c7452f3a2b0083ac37",
+    "unfilled": []
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-25",
+    "entry_date": "2026-09-24",
+    "entry_px": 0.890999972820282,
+    "fill": 0.9438999891281128,
+    "kind": "close",
+    "pnl_primary": 18.297617222678696,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "83842b1f002a0397167606912413e0ad0077f2589421372bd191fec417c8b5a4",
+    "shares": 953,
+    "ticker": "SRFM"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-25",
+    "entry_date": "2026-09-23",
+    "entry_px": 4.489999771118164,
+    "fill": 3.940000057220459,
+    "kind": "close",
+    "pnl_primary": -526.6614555095666,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "c1fd69b6256d55527902e9d71478a241b40a2d8093abef52d33bae16c5d731da",
+    "shares": 852,
+    "ticker": "SVIA"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-25",
+    "entry_date": "2026-09-23",
+    "entry_px": 266.5,
+    "fill": 281.8599853515625,
+    "kind": "close",
+    "pnl_primary": 172.54899594726567,
+    "reason": "holdup extension",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "4503c386f9ebcfbd05fb46fe4018ce4703564a08fed6e6131f95b98532d2ea0f",
+    "shares": 14,
+    "ticker": "VICR"
+  },
+  {
+    "bar_cutoff": "2026-09-25",
+    "cash_before": 11.685590021509597,
+    "committed_at": "2026-09-28T12:36:56Z",
+    "date": "2026-09-28",
+    "excluded_unexplained_legs": [
+      {
+        "bar_date": "2026-08-13",
+        "leg": "close_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      },
+      {
+        "bar_date": "2026-08-13",
+        "leg": "open_over_prev_close",
+        "reason": "no filing",
+        "ticker": "XHG"
+      }
+    ],
+    "finviz_source": {
+      "commit": "c420fb2abd57db441bac1c687ab9c9da599d480f",
+      "commit_time": "2026-09-25T20:45:01Z",
+      "file_sha256": "d3a366b29ba6b19e5ec7154eb4364ab911f0d60f3b4be08e663a1f506394ce3c",
+      "path": "data/snapshots/2026-09-25.csv",
+      "snapshot_date": "2026-09-25",
+      "status": "BEFORE_OPEN"
+    },
+    "holdup_on": false,
+    "kind": "plan",
+    "morning_s": -6.14,
+    "picks": [
+      {
+        "fv_avg_volume": 5373.97,
+        "fv_price": 17.25,
+        "rank": 1,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "USDE"
+      },
+      {
+        "fv_avg_volume": 6563.62,
+        "fv_price": 1.11,
+        "rank": 2,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "SRFM"
+      },
+      {
+        "fv_avg_volume": 600.04,
+        "fv_price": 4.37,
+        "rank": 3,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "SHMD"
+      },
+      {
+        "fv_avg_volume": 712.81,
+        "fv_price": 2.8,
+        "rank": 4,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "FEAM"
+      }
+    ],
+    "planned_sells": [
+      {
+        "reason": "hold-expired",
+        "shares": 377,
+        "ticker": "GLND"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 58,
+        "ticker": "SECZ"
+      },
+      {
+        "reason": "hold-expired",
+        "shares": 35,
+        "ticker": "TJGC"
+      }
+    ],
+    "recipe": "union_hot_n4_holdup__w0",
+    "s_source": {
+      "blob_sha": "ffadf6f82d9ced6b4f7652b2c5c445a63367988e",
+      "kind": "predict",
+      "path": "01_daily/general/2026-09-28_predict.md",
+      "server_time_utc": "2026-09-28T16:51:00+08:00",
+      "status": "BEFORE_1330"
+    },
+    "sha256": "b129d5505394941231f1e2c61c37949b9bad920fff9c9b09df3b51e6dd7b6951"
+  },
+  {
+    "buys": [
+      {
+        "fee": 16.3324,
+        "fill": 0.9439,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 77186,
+        "rank": 2,
+        "shares": 1313,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "SRFM"
+      },
+      {
+        "fee": 3.4443,
+        "fill": 4.68,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 5602,
+        "rank": 3,
+        "shares": 267,
+        "sources": [
+          "yday_gainer",
+          "yday_mover"
+        ],
+        "ticker": "SHMD"
+      },
+      {
+        "fee": 5.8566,
+        "fill": 2.75,
+        "fill_basis": "open",
+        "liquidity_cap_shares": 7257,
+        "rank": 4,
+        "shares": 454,
+        "sources": [
+          "ohlc_hot"
+        ],
+        "ticker": "FEAM"
+      }
+    ],
+    "cash_primary": 6.406598811510094,
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-28",
+    "excluded_on_fill": [],
+    "holdings": [
+      {
+        "cost_primary": 1260.5991,
+        "entry_date": "2026-09-28",
+        "entry_px": 2.75,
+        "last_px": 2.75,
+        "min_hold": 1,
+        "peak_px": 2.75,
+        "shares": 454,
+        "ticker": "FEAM"
+      },
+      {
+        "cost_primary": 1259.2521,
+        "entry_date": "2026-09-28",
+        "entry_px": 4.68,
+        "last_px": 4.68,
+        "min_hold": 1,
+        "peak_px": 4.68,
+        "shares": 267,
+        "ticker": "SHMD"
+      },
+      {
+        "cost_primary": 1261.8698034999998,
+        "entry_date": "2026-09-28",
+        "entry_px": 0.9439,
+        "last_px": 0.9439,
+        "min_hold": 1,
+        "peak_px": 0.9439,
+        "shares": 1313,
+        "ticker": "SRFM"
+      },
+      {
+        "cost_primary": 8149.391102416991,
+        "entry_date": "2026-09-25",
+        "entry_px": 15.581100463867188,
+        "last_px": 16.85,
+        "min_hold": 2,
+        "peak_px": 16.85,
+        "shares": 520,
+        "ticker": "USDE"
+      }
+    ],
+    "holdup_on": false,
+    "kind": "open_fill",
+    "morning_s": -6.14,
+    "open_source": "yahoo_split_adjusted_daily_open",
+    "plan_sha256": "b129d5505394941231f1e2c61c37949b9bad920fff9c9b09df3b51e6dd7b6951",
+    "pnl_status": "pending",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sells": [
+      {
+        "fee": 4.9414,
+        "fill": 5.138,
+        "reason": "hold-expired",
+        "shares": 377,
+        "ticker": "GLND"
+      },
+      {
+        "fee": 2.184,
+        "fill": 16.209999,
+        "reason": "hold-expired",
+        "shares": 58,
+        "ticker": "SECZ"
+      },
+      {
+        "fee": 2.115,
+        "fill": 26.5,
+        "reason": "hold-expired",
+        "shares": 35,
+        "ticker": "TJGC"
+      }
+    ],
+    "sha256": "c6b9e4e1532585c94acb57a632d98a153f6cca6dcca49031359795d6436acfd9",
+    "unfilled": []
+  },
+  {
+    "approved_by": "Cyrus 2026-09-28 21:02 ET",
+    "changed_legs": [
+      {
+        "corrected": {
+          "fee": 5.8437,
+          "fill": 2.75,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 7257,
+          "rank": 4,
+          "shares": 453,
+          "sources": [
+            "ohlc_hot"
+          ],
+          "ticker": "FEAM"
+        },
+        "sealed": {
+          "fee": 5.8566,
+          "fill": 2.75,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 7257,
+          "rank": 4,
+          "shares": 454,
+          "sources": [
+            "ohlc_hot"
+          ],
+          "ticker": "FEAM"
+        },
+        "side": "buy",
+        "ticker": "FEAM"
+      },
+      {
+        "corrected": {
+          "fee": 3.4314,
+          "fill": 4.68,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 5602,
+          "rank": 3,
+          "shares": 266,
+          "sources": [
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "ticker": "SHMD"
+        },
+        "sealed": {
+          "fee": 3.4443,
+          "fill": 4.68,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 5602,
+          "rank": 3,
+          "shares": 267,
+          "sources": [
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "ticker": "SHMD"
+        },
+        "side": "buy",
+        "ticker": "SHMD"
+      },
+      {
+        "corrected": {
+          "fee": 14.19,
+          "fill": 1.125,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 64761,
+          "rank": 2,
+          "shares": 1100,
+          "sources": [
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "ticker": "SRFM"
+        },
+        "sealed": {
+          "fee": 16.3324,
+          "fill": 0.9439,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 77186,
+          "rank": 2,
+          "shares": 1313,
+          "sources": [
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "ticker": "SRFM"
+        },
+        "side": "buy",
+        "ticker": "SRFM"
+      },
+      {
+        "corrected": {
+          "fee": 2.184,
+          "fill": 16.0,
+          "reason": "hold-expired",
+          "shares": 58,
+          "ticker": "SECZ"
+        },
+        "sealed": {
+          "fee": 2.184,
+          "fill": 16.209999,
+          "reason": "hold-expired",
+          "shares": 58,
+          "ticker": "SECZ"
+        },
+        "side": "sell",
+        "ticker": "SECZ"
+      }
+    ],
+    "corrected": {
+      "buys": [
+        {
+          "fee": 14.19,
+          "fill": 1.125,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 64761,
+          "rank": 2,
+          "shares": 1100,
+          "sources": [
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "ticker": "SRFM"
+        },
+        {
+          "fee": 3.4314,
+          "fill": 4.68,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 5602,
+          "rank": 3,
+          "shares": 266,
+          "sources": [
+            "yday_gainer",
+            "yday_mover"
+          ],
+          "ticker": "SHMD"
+        },
+        {
+          "fee": 5.8437,
+          "fill": 2.75,
+          "fill_basis": "open",
+          "liquidity_cap_shares": 7257,
+          "rank": 4,
+          "shares": 453,
+          "sources": [
+            "ohlc_hot"
+          ],
+          "ticker": "FEAM"
+        }
+      ],
+      "cash_primary": 5.77281002151085,
+      "cost_model": "futubull+0.5%/side",
+      "date": "2026-09-28",
+      "excluded_on_fill": [],
+      "holdings": [
+        {
+          "cost_primary": 1257.8224499999997,
+          "entry_date": "2026-09-28",
+          "entry_px": 2.75,
+          "last_px": 2.75,
+          "min_hold": 1,
+          "peak_px": 2.75,
+          "shares": 453,
+          "ticker": "FEAM"
+        },
+        {
+          "cost_primary": 1254.5357999999997,
+          "entry_date": "2026-09-28",
+          "entry_px": 4.68,
+          "last_px": 4.68,
+          "min_hold": 1,
+          "peak_px": 4.68,
+          "shares": 266,
+          "ticker": "SHMD"
+        },
+        {
+          "cost_primary": 1257.8774999999998,
+          "entry_date": "2026-09-28",
+          "entry_px": 1.125,
+          "last_px": 1.125,
+          "min_hold": 1,
+          "peak_px": 1.125,
+          "shares": 1100,
+          "ticker": "SRFM"
+        },
+        {
+          "cost_primary": 8149.391102416991,
+          "entry_date": "2026-09-25",
+          "entry_px": 15.581100463867188,
+          "last_px": 16.85,
+          "min_hold": 2,
+          "peak_px": 16.85,
+          "shares": 520,
+          "ticker": "USDE"
+        }
+      ],
+      "holdup_on": false,
+      "kind": "open_fill",
+      "morning_s": -6.14,
+      "open_source": "yahoo_split_adjusted_daily_open",
+      "plan_sha256": "b129d5505394941231f1e2c61c37949b9bad920fff9c9b09df3b51e6dd7b6951",
+      "pnl_status": "pending",
+      "recipe": "union_hot_n4_holdup__w0",
+      "sells": [
+        {
+          "fee": 4.9414,
+          "fill": 5.138,
+          "reason": "hold-expired",
+          "shares": 377,
+          "ticker": "GLND"
+        },
+        {
+          "fee": 2.184,
+          "fill": 16.0,
+          "reason": "hold-expired",
+          "shares": 58,
+          "ticker": "SECZ"
+        },
+        {
+          "fee": 2.115,
+          "fill": 26.5,
+          "reason": "hold-expired",
+          "shares": 35,
+          "ticker": "TJGC"
+        }
+      ],
+      "unfilled": []
+    },
+    "date": "2026-09-28",
+    "kind": "open_fill_correction",
+    "open_fill_sha256": "c6b9e4e1532585c94acb57a632d98a153f6cca6dcca49031359795d6436acfd9",
+    "plan_sha256": "b129d5505394941231f1e2c61c37949b9bad920fff9c9b09df3b51e6dd7b6951",
+    "reason": "stale_bar: previous-session bar used for SRFM, SECZ",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "f62b7e79975736e924ad8f852fafbbad72ac930f7957ebb9885fe1ae44885bd4"
+  },
+  {
+    "added_buys": [],
+    "added_sells": [],
+    "cash_primary": 5.77281002151085,
+    "date": "2026-09-28",
+    "equity_primary": 11833.592810021513,
+    "holdings": [
+      {
+        "cost_primary": 1257.8224499999997,
+        "entry_date": "2026-09-28",
+        "entry_px": 2.75,
+        "last_px": 2.75,
+        "min_hold": 1,
+        "peak_px": 2.75,
+        "shares": 453,
+        "ticker": "FEAM"
+      },
+      {
+        "cost_primary": 1254.5357999999997,
+        "entry_date": "2026-09-28",
+        "entry_px": 4.68,
+        "last_px": 4.68,
+        "min_hold": 1,
+        "peak_px": 4.68,
+        "shares": 266,
+        "ticker": "SHMD"
+      },
+      {
+        "cost_primary": 1257.8774999999998,
+        "entry_date": "2026-09-28",
+        "entry_px": 1.125,
+        "last_px": 1.125,
+        "min_hold": 1,
+        "peak_px": 1.125,
+        "shares": 1100,
+        "ticker": "SRFM"
+      },
+      {
+        "cost_primary": 8149.391102416991,
+        "entry_date": "2026-09-25",
+        "entry_px": 15.581100463867188,
+        "last_px": 16.85,
+        "min_hold": 2,
+        "peak_px": 16.85,
+        "shares": 520,
+        "ticker": "USDE"
+      }
+    ],
+    "kind": "mark",
+    "open_fill_sha256": "f62b7e79975736e924ad8f852fafbbad72ac930f7957ebb9885fe1ae44885bd4",
+    "plan_sha256": "b129d5505394941231f1e2c61c37949b9bad920fff9c9b09df3b51e6dd7b6951",
+    "pnl_status": "marked",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "b68caf1becabf9e4b65010ee6c9da9f9247ee1d95c1fbb399f081985434282d7"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-28",
+    "entry_date": "2026-09-22",
+    "entry_px": 2.940000057220459,
+    "fill": 5.138,
+    "kind": "close",
+    "pnl_primary": 803.6142483200265,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "ac84fbec6b7867fa7a14892ed8dd0bba751b50dd13c9d21c513791804558094d",
+    "shares": 377,
+    "ticker": "GLND"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-28",
+    "entry_date": "2026-09-24",
+    "entry_px": 14.670000076293945,
+    "fill": 16.0,
+    "kind": "close",
+    "pnl_primary": 63.89769555282612,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "036057372b63d0ba2d2af9c814e15a4e53011c25e11edb48151ab3168c4584f6",
+    "shares": 58,
+    "ticker": "SECZ"
+  },
+  {
+    "cost_model": "futubull+0.5%/side",
+    "date": "2026-09-28",
+    "entry_date": "2026-09-24",
+    "entry_px": 24.030000686645508,
+    "fill": 26.5,
+    "kind": "close",
+    "pnl_primary": 73.39722584724427,
+    "reason": "hold-expired",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "e407b89288c65bbf1a9995681029e6dbe9f9776b9614deb3e5ce5f74a59de549",
+    "shares": 35,
+    "ticker": "TJGC"
+  },
+  {
+    "committed_at": "2026-10-07T19:16:56Z",
+    "date": "2026-09-29",
+    "kind": "missing",
+    "reason": "missing: plan not sealed before open",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "a9802e1eff9eaf4ed7931624db8cd2436b856beed6dd39d1770a7e1abf64e9be"
+  },
+  {
+    "committed_at": "2026-10-08T19:12:58Z",
+    "date": "2026-09-30",
+    "kind": "missing",
+    "reason": "missing: plan not sealed before open",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "e92d13fbf826e7f423462bf1912bcd373cc98cd44534f1c911d6b0682f52fbcc"
+  },
+  {
+    "committed_at": "2026-10-09T18:43:45Z",
+    "date": "2026-10-01",
+    "kind": "missing",
+    "reason": "missing: plan not sealed before open",
+    "recipe": "union_hot_n4_holdup__w0",
+    "sha256": "9c03c9f9082ec9523c5bbd58da27798dda63fffafeaf53449bbaf160aaffb22e"
+  }
+]

@@ -1,0 +1,76 @@
+{
+  "labels": {
+    "union_hot_n4_h1": "picked after the close (evening list) \u2014 not knowable at 09:30",
+    "union_hot_n4_h1__not_ironclad": "Factor Mine recipe union_hot_n4_h1, not the separate IRONCLAD h1 book (research/hot_n4_clean_v4/forward_h1)",
+    "union_hot_n4_h1_preopen": "starts 10-08 open, no past days",
+    "union_hot_n4_holdup": "picked after the close (evening list) \u2014 not knowable at 09:30",
+    "union_hot_n4_holdup_preopen": "starts 10-08 open, no past days"
+  },
+  "sleeves": {
+    "union_hot_n4_h1_preopen": {
+      "days": [
+        {
+          "buys": [],
+          "date": "2026-10-08",
+          "equity": 10000.0,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "no pre-open weather S: no buys"
+          ],
+          "s": null,
+          "sells": [],
+          "sit": true
+        },
+        {
+          "buys": [],
+          "date": "2026-10-09",
+          "equity": 10000.0,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "seal not committed before 09:30 ET: never committed"
+          ],
+          "s": null,
+          "sells": [],
+          "sit": true
+        }
+      ],
+      "label": "starts 10-08 open, no past days",
+      "parent": "union_hot_n4_h1"
+    },
+    "union_hot_n4_holdup_preopen": {
+      "days": [
+        {
+          "buys": [],
+          "date": "2026-10-08",
+          "equity": 10000.0,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "no pre-open weather S: no buys"
+          ],
+          "s": null,
+          "sells": [],
+          "sit": true
+        },
+        {
+          "buys": [],
+          "date": "2026-10-09",
+          "equity": 10000.0,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "seal not committed before 09:30 ET: never committed"
+          ],
+          "s": null,
+          "sells": [],
+          "sit": true
+        }
+      ],
+      "label": "starts 10-08 open, no past days",
+      "parent": "union_hot_n4_holdup"
+    }
+  },
+  "start": "2026-10-08"
+}
