@@ -718,21 +718,24 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "dc778e5920eaea0615ab9ff7baa62ef7384ba2cc95bf55a077b1f03b592d4097",
-      "started_at": "2026-10-11T03:42:49.863230+00:00",
-      "completed_at": "2026-10-11T03:44:59.924430+00:00",
+      "started_at": "2026-10-11T03:52:10.516443+00:00",
+      "completed_at": "2026-10-11T03:52:26.303889+00:00",
       "status": "executed",
       "model_stages": [
         {
           "stage": "classify",
           "provider": "openrouter",
           "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
-          "returned_json": true
-        },
-        {
-          "stage": "meta",
-          "provider": "",
-          "model": "",
-          "returned_json": false
+          "returned_json": true,
+          "response_json": {
+            "event_class": "discard",
+            "sign": null,
+            "q5": "impulse",
+            "constraint": "",
+            "split": false,
+            "split_facts": [],
+            "why": "No market constraint; criminal detention of school headmaster after BBC investigation."
+          }
         }
       ],
       "analysis": {
@@ -745,65 +748,8 @@
         "gold_id": "",
         "ticker_hint": "",
         "keep": false,
-        "reject_reason": "lane_meta_missing",
-        "questions": [
-          {
-            "id": "q1",
-            "family": "blast",
-            "event_class": "blast_legal",
-            "question": "Who is in the harm set (cannot operate, sued, or breached)?",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "q2",
-            "family": "blast",
-            "event_class": "blast_legal",
-            "question": "If the buyer still wants the end-use and the primary channel is blocked, which listed substitute is on the Finviz hit list?",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "q3",
-            "family": "blast",
-            "event_class": "blast_legal",
-            "question": "Which listed rival competes and is outside the harm set (unscathed_rival)?",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "q4",
-            "family": "blast",
-            "event_class": "blast_legal",
-            "question": "Who sells the input both sides still buy (arms_dealer)? If unanswered, direction is not_determined.",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "q5",
-            "family": "blast",
-            "event_class": "blast_legal",
-            "question": "Did winning or losing the case still leave a headache for the named set (wins_either_outcome on the stay-out name)?",
-            "status": "pending",
-            "note": ""
-          },
-          {
-            "id": "y_s",
-            "family": "blast",
-            "event_class": "blast_legal",
-            "question": "Y-S salience: What standing axiom about {place|order} just became false? When was the last analog in the same consciousness class (year)? Audience: street / city / world tape?",
-            "status": "skipped",
-            "note": "lede is not a history trigger"
-          },
-          {
-            "id": "y_t",
-            "family": "blast",
-            "event_class": "blast_legal",
-            "question": "Y-T transmission: Which listed pipe, book, or forced flow changed BECAUSE that axiom died? If the same deaths or arrest happened with no pipe, which ticker still moves? If none, transmission=none and there is no ACTION from salience alone.",
-            "status": "pending",
-            "note": ""
-          }
-        ],
+        "reject_reason": "lane_discard",
+        "questions": [],
         "instruments": [],
         "entities": [],
         "pack_facts": [],
@@ -811,18 +757,13 @@
           {
             "stage": "classify",
             "watermark": "lane::openrouter::nvidia/nemotron-3-ultra-550b-a55b:free"
-          },
-          {
-            "stage": "meta",
-            "watermark": ""
           }
         ],
         "watermark": "",
         "action": "",
         "q5": "impulse",
-        "event_class": "blast_legal",
+        "event_class": "discard",
         "sign": null,
-        "family": "blast",
         "history": {
           "history_state": "n/a",
           "state_locked": false,
@@ -830,7 +771,7 @@
           "last_analog": null,
           "years_since": null,
           "salience": "low",
-          "transmission": "node",
+          "transmission": "book",
           "transmission_locked": false,
           "salience_only": false,
           "y_required": false
@@ -841,15 +782,10 @@
             "sha256": "fed7d23228977a2f4a761b33b1ae658f56bf3d285c0bf632b28f5c7bac489e05",
             "bytes": 6859,
             "lines": 24
-          },
-          {
-            "stage": "meta",
-            "sha256": "ee975ca4c44705a3e87cec0c8b41e53c381491a7ca0f4ef33007c9a96e20a8e4",
-            "bytes": 6762,
-            "lines": 26
           }
         ]
       },
+      "rejected_model_json": [],
       "index_source": "data/exports/finviz_2026-10-09.csv",
       "index_sha256": "fb58669543f1d9b3f835061e91a0f6280e80a8a8b95a9a1dcac6a12f7b6c0535",
       "index_rows": 11725,
@@ -1021,6 +957,141 @@
               }
             ]
           }
+        },
+        {
+          "started_at": "2026-10-11T03:42:49.863230+00:00",
+          "completed_at": "2026-10-11T03:44:59.924430+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "openrouter",
+              "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+              "returned_json": true
+            },
+            {
+              "stage": "meta",
+              "provider": "",
+              "model": "",
+              "returned_json": false
+            }
+          ],
+          "analysis": {
+            "article_id": "69ba0d37ad37883441fe2d90",
+            "title": "Headmaster detained after BBC investigation into alleged sexual abuse of students",
+            "body": "Headmaster detained after BBC investigation into alleged sexual abuse of students Image source, BBC Indonesia Image caption, Ex-headmaster Ahmad Imanuddin Sumar, known to students as Abah, has been accused of sexual abuse By Endang Nurdin , Rebecca Henschke , BBC Eye Investigations and BBC Indonesia Published 3 hours ago A former headmaster of an Islamic boarding school in Indonesia has been named as a suspect in a sexual abuse investigation and detained by police, following a BBC Eye report. Ahmad Imanuddin Sumar, known to students as Abah, led the Abul Barokat boarding school on the island of Lombok. Police reopened the case after the BBC World Service revealed accusations of sexual abuse against him , and documented how former students had gathered evidence in an effort to bring the all",
+            "known_at": "2026-10-10T12:28:51+00:00",
+            "harvest_source": "https://www.bbc.co.uk/news/articles/cwy8lx1r2vrro?at_medium=RSS&at_campaign=rss",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_meta_missing",
+            "questions": [
+              {
+                "id": "q1",
+                "family": "blast",
+                "event_class": "blast_legal",
+                "question": "Who is in the harm set (cannot operate, sued, or breached)?",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "q2",
+                "family": "blast",
+                "event_class": "blast_legal",
+                "question": "If the buyer still wants the end-use and the primary channel is blocked, which listed substitute is on the Finviz hit list?",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "q3",
+                "family": "blast",
+                "event_class": "blast_legal",
+                "question": "Which listed rival competes and is outside the harm set (unscathed_rival)?",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "q4",
+                "family": "blast",
+                "event_class": "blast_legal",
+                "question": "Who sells the input both sides still buy (arms_dealer)? If unanswered, direction is not_determined.",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "q5",
+                "family": "blast",
+                "event_class": "blast_legal",
+                "question": "Did winning or losing the case still leave a headache for the named set (wins_either_outcome on the stay-out name)?",
+                "status": "pending",
+                "note": ""
+              },
+              {
+                "id": "y_s",
+                "family": "blast",
+                "event_class": "blast_legal",
+                "question": "Y-S salience: What standing axiom about {place|order} just became false? When was the last analog in the same consciousness class (year)? Audience: street / city / world tape?",
+                "status": "skipped",
+                "note": "lede is not a history trigger"
+              },
+              {
+                "id": "y_t",
+                "family": "blast",
+                "event_class": "blast_legal",
+                "question": "Y-T transmission: Which listed pipe, book, or forced flow changed BECAUSE that axiom died? If the same deaths or arrest happened with no pipe, which ticker still moves? If none, transmission=none and there is no ACTION from salience alone.",
+                "status": "pending",
+                "note": ""
+              }
+            ],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [
+              {
+                "stage": "classify",
+                "watermark": "lane::openrouter::nvidia/nemotron-3-ultra-550b-a55b:free"
+              },
+              {
+                "stage": "meta",
+                "watermark": ""
+              }
+            ],
+            "watermark": "",
+            "action": "",
+            "q5": "impulse",
+            "event_class": "blast_legal",
+            "sign": null,
+            "family": "blast",
+            "history": {
+              "history_state": "n/a",
+              "state_locked": false,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "low",
+              "transmission": "node",
+              "transmission_locked": false,
+              "salience_only": false,
+              "y_required": false
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "fed7d23228977a2f4a761b33b1ae658f56bf3d285c0bf632b28f5c7bac489e05",
+                "bytes": 6859,
+                "lines": 24
+              },
+              {
+                "stage": "meta",
+                "sha256": "ee975ca4c44705a3e87cec0c8b41e53c381491a7ca0f4ef33007c9a96e20a8e4",
+                "bytes": 6762,
+                "lines": 26
+              }
+            ]
+          },
+          "rejected_model_json": null
         }
       ]
     },
@@ -1507,10 +1578,182 @@
           }
         }
       ]
+    },
+    "c6caf0414c6b211fd837fe54f2b62e9d666effcde8ca1a65a0d77ddafb37bbda": {
+      "public_input": {
+        "id": "8c4c0a18b5a6fc1db0484e28",
+        "title": "Eritrean troops in Ethiopia raise fears of a regional war",
+        "body": "Conflicts Eritrea Eritrean troops in Ethiopia raise fears of a regional war Philipp Sandner 10/09/2026 October 9, 2026 Ethiopia and Eritrea are trading blame for confrontations in Tigray amid international calls for restraint. Their respective allies have the potential to catapult the conflict into a regional war. https://p.dw.com/p/5O3Vx ENDF patrol on October 7: The airport of Mekelle is under Ethiopian government control. But witnesses have reported Eritrean troops towards Tigray's northern border. Image: REUTERS Advertisement Various sources have confirmed the presence of Eritrean armed forces in Ethiopia . An AFP report quoted a foreign security source, speaking on condition of anonymity, as estimating that 5,000 to 8,000 Eritrean soldiers were present in the northenmost state of Ethiopia, Tigray. Meanwhile, Ethiopia and Eritrea have ramped up their war talk. According to Reuters, the government of Ethiopia has written to the UN Security Council, calling for the immediate withdrawal of Eritrean troops from its territory. In the letter, dated ‌Oct. 8, Ethiopian ‌Foreign Minister Gedion Timothewos said the presence of Eritrean troops in Ethiopia left \"no option but to defend itself against Eritrea,\" in a post on X on October 7, Eritrean Minister of Information Yemane Meskel had accused Ethiopia of \"incessantly beating the drums of war.\" Two days later, he wrote in Tigrinya, a working language of Eritrea and the main language of Tigray, that \"the sovereign state of Eritrea is bound by blood and law.\" adding \"woe to those who touch it.\" This comes as the regional conflict in Tigray has deteriorated rapidly in recent weeks. Some experts have suggested that Ethiopia may have intentionally triggered the escalation. Just last week, it expelled diplomats from Egypt and Eritrea, causing the latter to sever diplomatic ties altogether. On Monday, when Abiy Ahmed was sworn in for another five years as Ethiopian prime minister , he stated that access to the sea was a priority. The statement fueled fresh speculation that he intends to take Eritrea's strategic port of Assab by force and prompted fierce reactions from the Eritrean side. Why can't Ethiopia and Eritrea be friends? To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video Abiy's internal opposition: Tsimdo and the Alliance for Survival While the Ethiopian National Defence Forces (ENDF), aided by the Tigray Peace Force milita, have made significant advances and notably recaptured the Tigray federal state capital of Mekelle , opposition to Ethiopia has found new formats for collaboration. One is the Tsimdo movement, named after a Tigrinya term that loosely translates as \"engagement.\" \"The Tsimdo concept initially surfaced through cross-border peace initiatives involving activists, religious figures, and local communities in the Tigray and Eritrea border villages in 2025,\" Dr. Jalale Getachew Birru, senior East Africa analyst with the US-based conflict monitor ACLED, told DW. It has since undergone several reconfigurations and now encompasses diverse groups within Ethiopia, mostly defined along ethnic lines and with long-standing grievances against the federal government. The Ethiopian Peoples' Forces Alliance for Survival, or simply Alliance for Survival, that was proclaimed in September, stems from this movement. According to Jalale, the alliance aims at removing the current government and initiating a constitutional dialogue. The new rebel alliance transforming the Tigray conflict To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video The new alliance says a lot about the long history of unresolved conflict in Ethiopia, said Abdurahman Sayed, an analyst at the Horn of Africa Centre for Regional Integration. \"The fighting inside Ethiopia has never stopped,\" Sayed told DW. \"With the Oromo Liberation Army, it's been going on for decades, with the Amhara, it's been going on for the last three years, at least. With the Tigrayans, the Pretoria agreement about three years ago was just a cessation of hostility that would have led to some kind of sustainable peace by addressing the root causes of the conflict — but it failed to do that, so they're back to the conflict situation now.\" However, of the seven groups in the alliance, ACLED data shows that only three were involved in recent fighting: The Tigrayan Defence Forces (TDF), the Amhara Fano National Movement (AFNM), and a fairly recently formed ethnic Afar group called Ugugumo. Amhara Fano fighters (pictured here in 2021) who fought in the two-year Tigray War are part of the new Ethiopian Peoples' Forces Alliance for Survival Image: Solan Kolli/AFP Joint declaration by Sudan, Egypt, Eritrea, Somalia The success of the Alliance for Survival would depend in large part on the support they get through external actors, according to ACLED. Those could include neighboring Sudan , Egypt , Eritrea, and Somalia . \"All these four countries have grievances against Prime Minister Abiy Ahmed's government,\" Sayed said. \"The Egyptians have issues with the Nile River and how it should be administered, including the dams that are already there and those planned to be built around the Nile River. The Sudanese also have their own concerns that Ethiopians are supporting the [Rapid Support Forces] militia , which is fighting the Sudanese army.\" In the case of Somalia, the issue of sea access has sparked tensions. Landlocked Ethiopia has negotiated access to the port of Berbera in Somaliland . In 2024, it signed a memorandum of understanding with the breakaway region, causing uproar in Somalia , which considers the deal a violation of its national sovereignty. Turkish mediation was needed to calm things down. Somaliland: Somalia's breakaway 'nation' To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video \"So all those neighboring countries have their own concerns and they feel this threat that is coming from Ethiopia needs to be tackled collectively.\" On October 4, the leaders of the four countries issued a joint declaration that didn't mention Ethiopia but seemed to send a strong signal. The leaders stressed the importance of international law, \"particularly respect for the sovereignty, independence and territorial integrity of the states of the region.\" And they maintained that \"the governance of the Red Sea is the exclusive responsibility of the littoral states.\" Although the leaders of Sudan, Egypt, Eritrea and Somalia vowed to promote \"peaceful solutions to conflicts,\" the reality on the ground may prove otherwise. Edited by: Benita van Eyssen Advertisement",
+        "published_at": "2026-10-09T15:20:00+00:00",
+        "url": "https://www.dw.com/en/eritrean-troops-in-ethiopia-raise-fears-of-a-regional-war/a-79615065?maca=en-rss-en-world-4025-rdf"
+      },
+      "source_file": "data/news_intake/2026-10-10/documents.json",
+      "input_sha256": "c6caf0414c6b211fd837fe54f2b62e9d666effcde8ca1a65a0d77ddafb37bbda",
+      "started_at": "2026-10-11T03:52:26.303913+00:00",
+      "completed_at": "2026-10-11T03:53:24.095456+00:00",
+      "status": "executed",
+      "model_stages": [
+        {
+          "stage": "classify",
+          "provider": "",
+          "model": "",
+          "returned_json": false,
+          "response_json": null
+        }
+      ],
+      "analysis": {
+        "article_id": "8c4c0a18b5a6fc1db0484e28",
+        "title": "Eritrean troops in Ethiopia raise fears of a regional war",
+        "body": "Conflicts Eritrea Eritrean troops in Ethiopia raise fears of a regional war Philipp Sandner 10/09/2026 October 9, 2026 Ethiopia and Eritrea are trading blame for confrontations in Tigray amid international calls for restraint. Their respective allies have the potential to catapult the conflict into a regional war. https://p.dw.com/p/5O3Vx ENDF patrol on October 7: The airport of Mekelle is under Ethiopian government control. But witnesses have reported Eritrean troops towards Tigray's northern border. Image: REUTERS Advertisement Various sources have confirmed the presence of Eritrean armed forces in Ethiopia . An AFP report quoted a foreign security source, speaking on condition of anonymity, as estimating that 5,000 to 8,000 Eritrean soldiers were present in the northenmost state of Ethi",
+        "known_at": "2026-10-09T15:20:00+00:00",
+        "harvest_source": "https://www.dw.com/en/eritrean-troops-in-ethiopia-raise-fears-of-a-regional-war/a-79615065?maca=en-rss-en-world-4025-rdf",
+        "source_file": "data/news_intake/2026-10-10/documents.json",
+        "gold_id": "",
+        "ticker_hint": "",
+        "keep": false,
+        "reject_reason": "lane_classify_missing",
+        "questions": [],
+        "instruments": [],
+        "entities": [],
+        "pack_facts": [],
+        "watermarks": [],
+        "watermark": "",
+        "action": "",
+        "q5": "",
+        "event_class": "",
+        "sign": null,
+        "history": {
+          "history_state": "first_print",
+          "state_locked": false,
+          "axiom_broken": "",
+          "last_analog": null,
+          "years_since": null,
+          "salience": "high",
+          "transmission": "none",
+          "transmission_locked": true,
+          "salience_only": true,
+          "y_required": true
+        },
+        "prompt_log": [
+          {
+            "stage": "classify",
+            "sha256": "efd81822cd1775e09991852c3a010bf456f99e50fad5c33e3caa0f90327e107f",
+            "bytes": 8678,
+            "lines": 24
+          }
+        ]
+      },
+      "rejected_model_json": [
+        {
+          "stage": "classify",
+          "parsed": {
+            "event_class": "regime",
+            "sign": null,
+            "q5": "impulse|regime|regime_break",
+            "constraint": "",
+            "split": false,
+            "split_facts": [],
+            "why": "Article describes ongoing geopolitical tensions and fears of regional war without a new dated fact that changes a constraint or a verified change in physical/legal constraint; it is a reprint of an existing situation."
+          }
+        }
+      ],
+      "index_source": "data/exports/finviz_2026-10-09.csv",
+      "index_sha256": "fb58669543f1d9b3f835061e91a0f6280e80a8a8b95a9a1dcac6a12f7b6c0535",
+      "index_rows": 11725,
+      "fresh_acceptance_pass": false,
+      "frontier_verified": false,
+      "review_status": "pending_source_backed_four_axis_review",
+      "attempts": []
+    },
+    "ba92c3502243117fc6e4fbd7e601448a196c3eff7abdc56917367a41b758f19b": {
+      "public_input": {
+        "id": "99ed132ec26d1ea0da8db4b8",
+        "title": "Macron and Steinmeier struggle to revive Franco-German ties",
+        "body": "Politics Germany Steinmeier and Macron struggle to revive Franco-German ties Rosalia Romaniec 10/09/2026 October 9, 2026 Presidents Frank-Walter Steinmeier and Emmanuel Macron are about to step down from their offices. Their meeting in France made it clear how urgently the Franco-German partnership needs new momentum. https://p.dw.com/p/5O4RX Presidents Steinmeier (l) and Macron and their wives met in Paris for a farewell Image: Bernd von Jutrczenka/dpa/picture alliance Advertisement The German delegation passed through Paris without being hindered by the student strikes taking place on the streets of Paris . The motorcades moved through the French capital without disruption. Around the Arc de Triomphe and the Champs-Elysees, however, traffic was at a standstill for hours. Due to the high-profile visit, the streets were cordoned off over a wide area. Emmanuel Macron had decided on a special gesture to send off Frank-Walter Steinmeier , his German guest: The military honors took place under the Arc de Triomphe. And so, early in the morning, the German national anthem rang out in the heart of Paris — amid sunshine and bitter cold. It was a generous gesture of friendship and symbolism, yet it seemed to be from a bygone era. In both countries, populists on the political fringes are gaining support. In Germany, the far-right Alternative for Germany (AfD) ranks first in nationwide polls.  In France, Emmanuel Macron could soon be succeeded by either Jean-Luc Melenchon of the far left or Marine Le Pen of the far right. Added to this is an economic crisis that threatens prosperity. Unresolved issues of social justice are driving younger generations into the streets.  At the same time, social media is increasingly becoming a tool of disinformation and \"accelerating doubts about democracy,\" Macron said in Paris. While the AfD may soon form its first state government in Saxony-Anhalt , President Steinmeier remained confident. He insisted that Germany would continue to \"play a leading role in Europe\" in the future and that Germans would remain good Europeans. But he did not say where he drew this certainty from. Questions from journalists were not permitted at the joint press conference at the Elysee Palace. A future, but no plan Political scientist Jacob Ross isn't surprised by this. Both Macron and Steinmeier lack a \"genuine agenda for Germany, France, and Europe.\" Both represent political systems that \"seek to respond to 21st-century crises with 20th-century solutions,\" said the expert on German-French relations at the German Council on Foreign Relations (DGAP). Even though Steinmeier and Macron have different political styles, Ross sees parallels — especially where their policies have failed. One example of this is strategic foreign policy issues, such as dealing with Russia . \"For a long time, they pursued a policy based on integrating Russia into Europe, and then both were overwhelmed by the events of 2022 and had to adjust their course,\" said Ross. Since then, both have merely reacted to current affairs, according to the political scientist. Little support for Macron's ideas Emmanuel Macron has made some bold moves for Europe, but without support from Berlin, says Ross. Germany's political leadership has long reacted with caution to proposals from Paris. A joint initiative that both countries recently promoted to the European Commission is aimed at combating unfair competition. Countries that gain an advantage through unfair practices should face strict European measures. Macron joined German Chancellor Friedrich Merz in speaking out in favor of this. Although China was not explicitly named, the initiative is seen to be primarily aimed at that country. Beijing uses enormous subsidies to support its companies, whose products flood the European market, while European firms continue to face barriers when trying to access the Chinese market. How Europe's defense sector is trying to gear up To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video Germany and France have also long sought greater cooperation in the defense sector. Yet major joint defense projects are making little progress. When the planned joint fighter jet, the FCAS, fell through in June, officials emphasized ongoing cooperation on the future MGCS main battle tank. And yet differences on this became apparent during the state visit. As German Defense Minister Boris Pistorius arrived in Paris, French Chief of the General Staff Fabien Mandon stated during a hearing in the French National Assembly that Germany had decided to withdraw from the tank project. A day later, Mandon clarified that he had expressed himself ambiguously. But some observers believe that such misunderstandings are a sign of dissatisfaction on both sides — below the political level — regarding cooperation with the other partner. It is this political level that often ends up having to set the record straight in such cases. This time was no exception: Pistorius firmly refuted the claim that the project was on the verge of being scrapped. \"The MGCS project is not over ; it is not dead; it has not been terminated by anyone — quite the contrary. It is a core project of Franco-German cooperation on land systems,\" said the German defense minister. The focus is primarily on digital information processing in combat, as well as unmanned and automated systems. Germany and France would continue their cooperation, Pistorius insisted, and MGCS is an important future project for both countries and their armed forces. The French and German Presidents took part in a ceremony in the heart of Paris Image: Abdul Saboor/REUTERS/dpa/picture alliance The future of defense and space On Friday, the presidents of France and Germany visited several facilities near Bordeaux that are closely linked to space exploration and nuclear deterrence. These include ArianeGroup, a Franco-German company that, among other things, manufactures the nuclear-capable M51 missiles for French nuclear submarines. The itinerary also included visits to startups that are looking far into the future. It was unofficially reported during the visit that this focus of the trip was a personal priority for Macron. The French president has long spoken of a European dimension to France's nuclear deterrent. Considering announcements from the US saying it would reduce its commitment to Europe, his views are gaining increasing traction. As early as 2020, Macron proposed a strategic dialogue on the role of French nuclear weapons in European security. Several countries, including Germany, have since expressed interest. Now, further steps are being considered. The focus is on what Macron once called \"forward deterrence,\" such as joint military exercises and visits to strategically important locations. A permanent deployment of French nuclear weapons in other countries remains off the table. Furthermore, according to French nuclear doctrine, France always retains sole decision-making authority over the use of its nuclear weapons. Steinmeier's two-day state visit to France ended on Friday afternoon. So far, there has been little sign of new momentum in Franco-German relations. This makes it all the more urgent for the successors to the two presidents to develop a shared vision for the future of the relationship between the two countries starting next year. Macron and Steinmeier will step down from their posts almost simultaneously in 2027 after ten years in office. The state visit to France thus also served as a final joint meeting, marked by some ceremonial farewells. This article was originally written in German. Advertisement",
+        "published_at": "2026-10-09T15:17:00+00:00",
+        "url": "https://www.dw.com/en/macron-and-steinmeier-struggle-to-revive-franco-german-ties/a-79618635?maca=en-rss-en-world-4025-rdf"
+      },
+      "source_file": "data/news_intake/2026-10-10/documents.json",
+      "input_sha256": "ba92c3502243117fc6e4fbd7e601448a196c3eff7abdc56917367a41b758f19b",
+      "started_at": "2026-10-11T03:53:24.095478+00:00",
+      "completed_at": "2026-10-11T03:53:28.089206+00:00",
+      "status": "executed",
+      "model_stages": [
+        {
+          "stage": "classify",
+          "provider": "openrouter",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "returned_json": true,
+          "response_json": {
+            "event_class": "regime_state",
+            "sign": null,
+            "q5": "regime",
+            "constraint": "Franco-German political and defense cooperation",
+            "split": false,
+            "split_facts": [],
+            "why": "Article describes ongoing state of Franco-German relations with no new constraint change."
+          }
+        }
+      ],
+      "analysis": {
+        "article_id": "99ed132ec26d1ea0da8db4b8",
+        "title": "Macron and Steinmeier struggle to revive Franco-German ties",
+        "body": "Politics Germany Steinmeier and Macron struggle to revive Franco-German ties Rosalia Romaniec 10/09/2026 October 9, 2026 Presidents Frank-Walter Steinmeier and Emmanuel Macron are about to step down from their offices. Their meeting in France made it clear how urgently the Franco-German partnership needs new momentum. https://p.dw.com/p/5O4RX Presidents Steinmeier (l) and Macron and their wives met in Paris for a farewell Image: Bernd von Jutrczenka/dpa/picture alliance Advertisement The German delegation passed through Paris without being hindered by the student strikes taking place on the streets of Paris . The motorcades moved through the French capital without disruption. Around the Arc de Triomphe and the Champs-Elysees, however, traffic was at a standstill for hours. Due to the high-",
+        "known_at": "2026-10-09T15:17:00+00:00",
+        "harvest_source": "https://www.dw.com/en/macron-and-steinmeier-struggle-to-revive-franco-german-ties/a-79618635?maca=en-rss-en-world-4025-rdf",
+        "source_file": "data/news_intake/2026-10-10/documents.json",
+        "gold_id": "",
+        "ticker_hint": "",
+        "keep": false,
+        "reject_reason": "q5_regime",
+        "questions": [],
+        "instruments": [],
+        "entities": [],
+        "pack_facts": [],
+        "watermarks": [
+          {
+            "stage": "classify",
+            "watermark": "lane::openrouter::nvidia/nemotron-3-ultra-550b-a55b:free"
+          }
+        ],
+        "watermark": "",
+        "action": "",
+        "q5": "regime",
+        "event_class": "regime_state",
+        "sign": null,
+        "history": {
+          "history_state": "n/a",
+          "state_locked": false,
+          "axiom_broken": "",
+          "last_analog": null,
+          "years_since": null,
+          "salience": "low",
+          "transmission": "book",
+          "transmission_locked": false,
+          "salience_only": false,
+          "y_required": false
+        },
+        "prompt_log": [
+          {
+            "stage": "classify",
+            "sha256": "f753bc79a5ef0998003a2206c0a8c6fad0d8cebe4c9b91b9ac1b8237bc9b758f",
+            "bytes": 9609,
+            "lines": 24
+          }
+        ]
+      },
+      "rejected_model_json": [],
+      "index_source": "data/exports/finviz_2026-10-09.csv",
+      "index_sha256": "fb58669543f1d9b3f835061e91a0f6280e80a8a8b95a9a1dcac6a12f7b6c0535",
+      "index_rows": 11725,
+      "fresh_acceptance_pass": false,
+      "frontier_verified": false,
+      "review_status": "pending_source_backed_four_axis_review",
+      "attempts": []
     }
   },
   "schema_version": 1,
   "runtime_status": "ready",
-  "updated_at": "2026-10-11T03:45:16.943657+00:00",
+  "updated_at": "2026-10-11T03:53:28.089229+00:00",
   "last_run_processed": 3
 }
