@@ -95,7 +95,7 @@ def run(root, output, limit=3, requested=None):
         rejected = []
         def audited(stage, prompt, system, accept=None):
             parsed, provider, model = live(stage, prompt, system, accept=audit_acceptance(stage, accept, rejected))
-            stages.append({'stage': stage, 'provider': provider, 'model': model, 'returned_json': parsed is not None})
+            stages.append({'stage': stage, 'provider': provider, 'model': model, 'returned_json': parsed is not None, 'response_json': parsed})
             return parsed, provider, model
         started = datetime.now(timezone.utc).isoformat()
         article = {**document, 'article_id': document['id'], 'known_at': document['published_at'],
