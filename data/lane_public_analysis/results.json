@@ -8,17 +8,26 @@
         "published_at": "2026-10-09T14:00:00+00:00",
         "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm"
       },
-      "source_file": "data/news_intake/2026-10-10/documents.json",
+      "source_file": "data/news_intake/2026-10-11/documents.json",
       "input_sha256": "98148af5a787e244cef8eef648647685e735e427c8db3b7d222a2804e1e2f783",
-      "started_at": "2026-10-10T14:55:34.960278+00:00",
-      "completed_at": "2026-10-10T14:55:37.197994+00:00",
+      "started_at": "2026-10-11T04:08:06.121945+00:00",
+      "completed_at": "2026-10-11T04:08:37.372607+00:00",
       "status": "executed",
       "model_stages": [
         {
           "stage": "classify",
-          "provider": "",
-          "model": "",
-          "returned_json": false
+          "provider": "openrouter",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "returned_json": true,
+          "response_json": {
+            "event_class": "statement_public",
+            "sign": null,
+            "q5": "regime",
+            "constraint": "Fed policy framework uses SCF data",
+            "split": false,
+            "split_facts": [],
+            "why": "Scheduled triennial Survey of Consumer Finances release provides household balance-sheet data for policymakers; does not alter monetary policy constraint, only updates the information set."
+          }
         }
       ],
       "analysis": {
@@ -27,20 +36,25 @@
         "body": "﻿ Federal Reserve Board - Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families Skip to main content An official website of the United States Government Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( Lock Locked padlock icon ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. Back to Home Board of Governors of the Federal Reserve System Stay Connected Federal Reserve Facebook Page Federal Reserve Instagram Page Federal Reserve YouTube Page Federal Reserve",
         "known_at": "2026-10-09T14:00:00+00:00",
         "harvest_source": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
-        "source_file": "data/news_intake/2026-10-10/documents.json",
+        "source_file": "data/news_intake/2026-10-11/documents.json",
         "gold_id": "",
         "ticker_hint": "",
         "keep": false,
-        "reject_reason": "lane_classify_missing",
+        "reject_reason": "q5_regime",
         "questions": [],
         "instruments": [],
         "entities": [],
         "pack_facts": [],
-        "watermarks": [],
+        "watermarks": [
+          {
+            "stage": "classify",
+            "watermark": "lane::openrouter::nvidia/nemotron-3-ultra-550b-a55b:free"
+          }
+        ],
         "watermark": "",
         "action": "",
-        "q5": "",
-        "event_class": "",
+        "q5": "regime",
+        "event_class": "statement_public",
         "sign": null,
         "history": {
           "history_state": "n/a",
@@ -63,6 +77,7 @@
           }
         ]
       },
+      "rejected_model_json": [],
       "index_source": "data/exports/finviz_2026-10-09.csv",
       "index_sha256": "fb58669543f1d9b3f835061e91a0f6280e80a8a8b95a9a1dcac6a12f7b6c0535",
       "index_rows": 11725,
@@ -237,6 +252,62 @@
               }
             ]
           }
+        },
+        {
+          "started_at": "2026-10-10T14:55:34.960278+00:00",
+          "completed_at": "2026-10-10T14:55:37.197994+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "",
+              "model": "",
+              "returned_json": false
+            }
+          ],
+          "analysis": {
+            "article_id": "0d84bbab316fddb29a8359e7",
+            "title": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
+            "body": "﻿ Federal Reserve Board - Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families Skip to main content An official website of the United States Government Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( Lock Locked padlock icon ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. Back to Home Board of Governors of the Federal Reserve System Stay Connected Federal Reserve Facebook Page Federal Reserve Instagram Page Federal Reserve YouTube Page Federal Reserve",
+            "known_at": "2026-10-09T14:00:00+00:00",
+            "harvest_source": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_classify_missing",
+            "questions": [],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [],
+            "watermark": "",
+            "action": "",
+            "q5": "",
+            "event_class": "",
+            "sign": null,
+            "history": {
+              "history_state": "n/a",
+              "state_locked": false,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "low",
+              "transmission": "book",
+              "transmission_locked": false,
+              "salience_only": false,
+              "y_required": false
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "6a3a8670e31546f78662a7f4789ba59edda890853e955911b343abe563f1bf27",
+                "bytes": 7171,
+                "lines": 27
+              }
+            ]
+          },
+          "rejected_model_json": null
         }
       ]
     },
@@ -1589,12 +1660,27 @@
       },
       "source_file": "data/news_intake/2026-10-10/documents.json",
       "input_sha256": "c6caf0414c6b211fd837fe54f2b62e9d666effcde8ca1a65a0d77ddafb37bbda",
-      "started_at": "2026-10-11T03:52:26.303913+00:00",
-      "completed_at": "2026-10-11T03:53:24.095456+00:00",
+      "started_at": "2026-10-11T04:00:12.981318+00:00",
+      "completed_at": "2026-10-11T04:04:55.378452+00:00",
       "status": "executed",
       "model_stages": [
         {
           "stage": "classify",
+          "provider": "openrouter",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "returned_json": true,
+          "response_json": {
+            "event_class": "regime_state",
+            "sign": null,
+            "q5": "impulse",
+            "constraint": "Horn of Africa regional stability / Ethiopia-Eritrea border security",
+            "split": false,
+            "split_facts": [],
+            "why": "New confirmed reports of 5,000-8,000 Eritrean troops in Tigray, Ethiopia's UN Security Council letter demanding withdrawal, and a joint declaration by Sudan, Egypt, Eritrea, and Somalia signaling collective opposition to Ethiopia alter the geopolitical constraint today."
+          }
+        },
+        {
+          "stage": "meta",
           "provider": "",
           "model": "",
           "returned_json": false,
@@ -1611,17 +1697,68 @@
         "gold_id": "",
         "ticker_hint": "",
         "keep": false,
-        "reject_reason": "lane_classify_missing",
-        "questions": [],
+        "reject_reason": "lane_meta_missing",
+        "questions": [
+          {
+            "id": "q1",
+            "family": "time",
+            "event_class": "regime_state",
+            "question": "Did the physical or legal constraint change, or is this a reprint?",
+            "status": "pending",
+            "note": ""
+          },
+          {
+            "id": "q2",
+            "family": "time",
+            "event_class": "regime_state",
+            "question": "If it is a regime break, which prior book flips sign?",
+            "status": "pending",
+            "note": ""
+          },
+          {
+            "id": "q3",
+            "family": "time",
+            "event_class": "regime_state",
+            "question": "If it is weather, why is a 0-1d entity illegal?",
+            "status": "pending",
+            "note": ""
+          },
+          {
+            "id": "y_s",
+            "family": "time",
+            "event_class": "regime_state",
+            "question": "Y-S salience: What standing axiom about {place|order} just became false? When was the last analog in the same consciousness class (year)? Audience: street / city / world tape?",
+            "status": "pending",
+            "note": ""
+          },
+          {
+            "id": "y_t",
+            "family": "time",
+            "event_class": "regime_state",
+            "question": "Y-T transmission: Which listed pipe, book, or forced flow changed BECAUSE that axiom died? If the same deaths or arrest happened with no pipe, which ticker still moves? If none, transmission=none and there is no ACTION from salience alone.",
+            "status": "pending",
+            "note": ""
+          }
+        ],
         "instruments": [],
         "entities": [],
         "pack_facts": [],
-        "watermarks": [],
+        "watermarks": [
+          {
+            "stage": "classify",
+            "watermark": "lane::openrouter::nvidia/nemotron-3-ultra-550b-a55b:free"
+          },
+          {
+            "stage": "meta",
+            "watermark": ""
+          }
+        ],
         "watermark": "",
         "action": "",
-        "q5": "",
-        "event_class": "",
+        "q5": "impulse",
+        "event_class": "regime_state",
         "sign": null,
+        "family": "time",
         "history": {
           "history_state": "first_print",
           "state_locked": false,
@@ -1640,20 +1777,33 @@
             "sha256": "efd81822cd1775e09991852c3a010bf456f99e50fad5c33e3caa0f90327e107f",
             "bytes": 8678,
             "lines": 24
+          },
+          {
+            "stage": "meta",
+            "sha256": "afe74e0082a4ba55d5d93eab2378414eeecce6d19fa50aa6fcb6f76b9680ef4e",
+            "bytes": 8565,
+            "lines": 26
           }
         ]
       },
       "rejected_model_json": [
         {
-          "stage": "classify",
+          "stage": "meta",
           "parsed": {
-            "event_class": "regime",
-            "sign": null,
-            "q5": "impulse|regime|regime_break",
-            "constraint": "",
-            "split": false,
-            "split_facts": [],
-            "why": "Article describes ongoing geopolitical tensions and fears of regional war without a new dated fact that changes a constraint or a verified change in physical/legal constraint; it is a reprint of an existing situation."
+            "question": "Which stock should I buy to profit from this?",
+            "why": "who_should_i_buy"
+          }
+        },
+        {
+          "stage": "meta",
+          "parsed": {
+            "slot": "Y-S",
+            "noun": "concerns",
+            "question": "How salient are the neighboring countries' concerns regarding Ethiopia's sea access ambitions?",
+            "changes": "direction",
+            "blocks": [
+              "direction"
+            ]
           }
         }
       ],
@@ -1663,7 +1813,78 @@
       "fresh_acceptance_pass": false,
       "frontier_verified": false,
       "review_status": "pending_source_backed_four_axis_review",
-      "attempts": []
+      "attempts": [
+        {
+          "started_at": "2026-10-11T03:52:26.303913+00:00",
+          "completed_at": "2026-10-11T03:53:24.095456+00:00",
+          "status": "executed",
+          "model_stages": [
+            {
+              "stage": "classify",
+              "provider": "",
+              "model": "",
+              "returned_json": false,
+              "response_json": null
+            }
+          ],
+          "analysis": {
+            "article_id": "8c4c0a18b5a6fc1db0484e28",
+            "title": "Eritrean troops in Ethiopia raise fears of a regional war",
+            "body": "Conflicts Eritrea Eritrean troops in Ethiopia raise fears of a regional war Philipp Sandner 10/09/2026 October 9, 2026 Ethiopia and Eritrea are trading blame for confrontations in Tigray amid international calls for restraint. Their respective allies have the potential to catapult the conflict into a regional war. https://p.dw.com/p/5O3Vx ENDF patrol on October 7: The airport of Mekelle is under Ethiopian government control. But witnesses have reported Eritrean troops towards Tigray's northern border. Image: REUTERS Advertisement Various sources have confirmed the presence of Eritrean armed forces in Ethiopia . An AFP report quoted a foreign security source, speaking on condition of anonymity, as estimating that 5,000 to 8,000 Eritrean soldiers were present in the northenmost state of Ethi",
+            "known_at": "2026-10-09T15:20:00+00:00",
+            "harvest_source": "https://www.dw.com/en/eritrean-troops-in-ethiopia-raise-fears-of-a-regional-war/a-79615065?maca=en-rss-en-world-4025-rdf",
+            "source_file": "data/news_intake/2026-10-10/documents.json",
+            "gold_id": "",
+            "ticker_hint": "",
+            "keep": false,
+            "reject_reason": "lane_classify_missing",
+            "questions": [],
+            "instruments": [],
+            "entities": [],
+            "pack_facts": [],
+            "watermarks": [],
+            "watermark": "",
+            "action": "",
+            "q5": "",
+            "event_class": "",
+            "sign": null,
+            "history": {
+              "history_state": "first_print",
+              "state_locked": false,
+              "axiom_broken": "",
+              "last_analog": null,
+              "years_since": null,
+              "salience": "high",
+              "transmission": "none",
+              "transmission_locked": true,
+              "salience_only": true,
+              "y_required": true
+            },
+            "prompt_log": [
+              {
+                "stage": "classify",
+                "sha256": "efd81822cd1775e09991852c3a010bf456f99e50fad5c33e3caa0f90327e107f",
+                "bytes": 8678,
+                "lines": 24
+              }
+            ]
+          },
+          "rejected_model_json": [
+            {
+              "stage": "classify",
+              "parsed": {
+                "event_class": "regime",
+                "sign": null,
+                "q5": "impulse|regime|regime_break",
+                "constraint": "",
+                "split": false,
+                "split_facts": [],
+                "why": "Article describes ongoing geopolitical tensions and fears of regional war without a new dated fact that changes a constraint or a verified change in physical/legal constraint; it is a reprint of an existing situation."
+              }
+            }
+          ]
+        }
+      ]
     },
     "ba92c3502243117fc6e4fbd7e601448a196c3eff7abdc56917367a41b758f19b": {
       "public_input": {
@@ -1750,10 +1971,174 @@
       "frontier_verified": false,
       "review_status": "pending_source_backed_four_axis_review",
       "attempts": []
+    },
+    "ba64be8ef2d7c17107a4b0c923b12c1a861acaa86284136804bcd5fbced29cf2": {
+      "public_input": {
+        "id": "5155d6492b47e37d62872eb6",
+        "title": "US imposes sanctions aiming to 'dismantle' International Criminal Court",
+        "body": "Politics United States of America US announces sanctions on the International Criminal Court Mark Hallam with Reuters, AP, AFP 10/09/2026 October 9, 2026 The US has announced new sanctions on the International Criminal Court. It's the latest in a series of steps by the Donald Trump administration as it seeks to \"dismantle\" the intergovernmental organization. https://p.dw.com/p/5O4Qb The US has had the ICC on its radar more or less throughout the second Trump term Image: John Thys/AFP Advertisement US President Donald Trump 's administration imposed sanctions on the International Criminal Court (ICC) on Friday, hours after one of its former judges won the Nobel Peace Prize. This comes as the US has in recent months made no bones about pursuing what Secretary of State Marco Rubio has called a \"sweeping campaign to dismantle the threat posed by the International Criminal Court.\" The United States and Israel had both strongly opposed the court's arrest warrants for top Israeli officials, including Prime Minister Benjamin Netanyahu . Since 2020 and the back end of Trump's first term, the US had also opposed investigations into military actions in Afghanistan that \"deprioritize\" alleged US wrongdoings, focusing on the Taliban, but can nevertheless include them. ICC judges living under US sanctions To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video What did the State Department say about the ICC sanctions? \"President Trump will never allow the International Court to prosecute Americans,\" Rubio said in a statement . \"That is why, today, the United States is sanctioning the International Criminal Court. We will ban transactions with this rogue court, cutting off their resources and crippling its ability to operate,\" he said. Rubio said that both US political parties had long agreed that the ICC should not have jurisdiction over US citizens, but said \"only President Trump\" resolved to take action. \"Either the ICC will end its threats, or we will end the ICC. We expect our allies, many of whom are part of the ICC and that rely on American servicemembers for their defense, to rein in the court,\" Rubio said. \"If they do not, the United States will continue its campaign to dismantle the ICC, brick by brick, until Americans are threatened no longer.\" ICC President Tomoko Akane was sanctioned by the US in August Image: Eva Plevier/ANP/AFP How did the ICC respond? The ICC said the US sanctions aimed to obstruct an independent international court supported by more than half of the UN's members. \"The court will continue to fully discharge its mandate, with independence and impartiality, acting only on the basis of the law and the evidence, for the sake of the countless victims of grave crimes,\" said ICC President Tomoko Akane, who already faces US sanctions . The ICC called the Rome Statute, which underpins membership of the court, a \"collective promise\" that the most serious international crimes must not go unpunished. \"That promise is only as strong as the resolve of those who made it,\" the court said. It appealed to members to take \"concrete actions\" to ensure the court would still have the necessary means to continue its work. \"No one should be punished for serving the cause of justice,\" it said. \"History will judge this moment. Future generations, and above all the victims of mass atrocities, will ask how we responded when an insitution created to protect them came under attack.\" The US announcement came just hours after Navi Pillay, a former ICC judge, was given this year's Nobel Peace Prize Image: Daniel Karmann/dpa/picture alliance What did other countries say about the US sanctions? A collection of US allies that are full members of the ICC including Germany issued a joint statement reaffirming their \"continued and unwavering support for the independence, impartiality, and integrity of the ICC.\" \"As committed supporters of the ICC we regret and strongly disagree with the announcement of sanctions to be imposed upon the Court by the United States,\" the governments of Canada, Denmark, Germany, France, Italy, Japan, the Netherlands and the UK said . They said that, despite the ICC's best efforts to prepare and mitigate their effect, the sanctions \"will have a significant impact on the Court's work, its dedicated staff and their families.\" Israeli Prime Minister Benjamin Netanyahu thanked the US government for its \"leadership\" in issuing the sanctions. \"The ICC is not a court. It is a political body that poses a mortal threat to law abiding democracies worldwide and to the very idea of national sovereignty,\" he said. Sanctions announced shortly after former ICC judge's Nobel Peace Prize The State Department released the announcement a few hours after the 2026 Nobel Peace Prize was awarded to Navi Pillay, who was an ICC judge from 2003 to 2012. Last year Trump repeatedly complained that he should have won the accolade for promoting world peace, prompting Venezuelan opposition leader Maria Corina Machado to present him with her trophy as a gift . Without naming names, the Nobel Committee clearly referenced US sanctions against the ICC when announcing Pillay as this year's laureate. \"The Norwegian Nobel Committee wants to remind the world that the rule of law  national and international — underpins the system we have set up to ensure peace and resolve conflicts non-violently,\" the Committee wrote. It said judges like Pillay \"guard the thin red line between order and chaos,\" but lamented that \"today ... these same judges are sanctioned, and their institutions are attacked.\" What is the ICC? The International Criminal Court is an intergovernmental organization and international tribunal based in the Dutch city of The Hague. It's the only permanent international court with the theoretical jurisdiction to prosecute individuals for international crimes like genocide , crimes against humanity, war crimes and illegal aggression. The ICC was established in 2002 and is governed by the Rome Statute. More than half the countries in the world, 125 in total, are full parties to the Rome Statute, having signed and ratified it. Several of the world's most significant powers, including China, India, Israel, Russia and the United States, do not recognize the court's jurisdiction and are not parties to the statute. A grey area, however, remains since the court accepts challenges from ratified members against individuals from countries that do not recognize it. That is why high-profile arrest warrants against Russian officials, including President Vladimir Putin, and Israeli officials, including Prime Minister Benjamin Netanyahu, have been issued in recent years — following respective complaints from Ukrainians and Palestinians. What were the prior signs of Trump administration pressure on the ICC? The US has been increasingly critical of the ICC during Trump's second term. Rubio has often led the charge. In July, he wrote an op-ed for the Wall Street Journal saying, \"America never agreed to a world tribunal that can override our own courts and the Constitution.\" He argued it was possible for US \"soldiers, police officers, Border Patrol agents and elected leaders\" to be \"dragged before an international court\" and tried by judges \"from random countries across the globe.\" Just over a week later, on July 25, Venezuela's new administration — transformed after the US abduction of Nicolas Maduro in January — announced that it planned to withdraw from the Rome Statute and the ICC. A few days later, the military junta in Chad announced that it was withdrawing from the ICC following a US request. The recent sexual misconduct scandal surrounding the ICC's chief prosecutor Karim Khan , who was dismissed in July, provided more ammunition the US could aim at the court. In August, the US imposed sanctions on the ICC's president, Japanese judge Tomoko Akane, and Abdoulaye Seye, a Senegalese trial lawyer at the court. Speaking at the UN General Assembly last month, Donald Trump branded the ICC 'evil,' but stopped short of announcing sanctions even as reports of the plan circulated Image: Julia Demaree Nikhinson/AP Photo/picture alliance If you rely on our team for trusted reporting, please take a moment to select us as your Preferred Source on Google , so you'll always see our verified news first. Edited by: Sean Sinico Advertisement",
+        "published_at": "2026-10-09T14:53:00+00:00",
+        "url": "https://www.dw.com/en/us-imposes-sanctions-aiming-to-dismantle-international-criminal-court/a-79618577?maca=en-rss-en-world-4025-rdf"
+      },
+      "source_file": "data/news_intake/2026-10-10/documents.json",
+      "input_sha256": "ba64be8ef2d7c17107a4b0c923b12c1a861acaa86284136804bcd5fbced29cf2",
+      "started_at": "2026-10-11T04:04:55.378474+00:00",
+      "completed_at": "2026-10-11T04:08:06.121913+00:00",
+      "status": "execution_failed:ModuleNotFoundError",
+      "model_stages": [
+        {
+          "stage": "classify",
+          "provider": "openrouter",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "returned_json": true,
+          "response_json": {
+            "event_class": "blast_legal",
+            "sign": null,
+            "q5": "impulse",
+            "constraint": "US sanctions on ICC cutting off resources and crippling ability to operate",
+            "split": false,
+            "split_facts": [],
+            "why": "New sanctions imposed today, changing constraint on ICC operations"
+          }
+        },
+        {
+          "stage": "meta",
+          "provider": "openrouter",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "returned_json": true,
+          "response_json": {
+            "m1": {
+              "need_context": "no"
+            },
+            "m2": [
+              {
+                "slot": "H",
+                "noun": "ICC operations",
+                "question": "What is the quantified financial loss to ICC operations from the US transaction ban?",
+                "changes": "direction",
+                "blocks": [
+                  "direction"
+                ]
+              },
+              {
+                "slot": "D",
+                "noun": "sanctions",
+                "question": "What is the expected duration of the US sanctions on the ICC?",
+                "changes": "direction",
+                "blocks": [
+                  "direction"
+                ]
+              },
+              {
+                "slot": "P",
+                "noun": "ICC",
+                "question": "Has the market priced the probability of ICC operational collapse into any tradeable instrument?",
+                "changes": "tradeable_expression",
+                "blocks": [
+                  "direction"
+                ]
+              },
+              {
+                "slot": "Y-S",
+                "noun": "ICC",
+                "question": "What is the salience of this sanctions event relative to prior ICC funding crises?",
+                "changes": "direction",
+                "blocks": [
+                  "direction"
+                ]
+              },
+              {
+                "slot": "Y-T",
+                "noun": "transactions",
+                "question": "Through which specific financial channels will the transaction ban cut off ICC resources?",
+                "changes": "direction",
+                "blocks": [
+                  "direction"
+                ]
+              },
+              {
+                "slot": "S",
+                "noun": "resources",
+                "question": "What alternative funding sources can the ICC access to replace US-blocked transactions?",
+                "changes": "direction",
+                "blocks": [
+                  "direction"
+                ]
+              }
+            ],
+            "m3_dropped": [
+              {
+                "question": "What is the AI angle on ICC sanctions?",
+                "why": "ai_angle"
+              },
+              {
+                "question": "Who should I buy to profit from ICC dismantling?",
+                "why": "who_should_i_buy"
+              },
+              {
+                "question": "What are the broader themes of international justice?",
+                "why": "theme_fishing"
+              },
+              {
+                "question": "What is the weather in The Hague?",
+                "why": "undated_weather"
+              },
+              {
+                "question": "What did the article say about Rubio's statement?",
+                "why": "already_in_article"
+              },
+              {
+                "question": "Does this change the event class?",
+                "why": "no_direction_change"
+              }
+            ]
+          }
+        },
+        {
+          "stage": "filter",
+          "provider": "openrouter",
+          "model": "openrouter/free",
+          "returned_json": true,
+          "response_json": {
+            "core": [
+              "GOOG",
+              "GOOGL",
+              "META"
+            ],
+            "tangent": [
+              "GOOG",
+              "GOOGL",
+              "META"
+            ]
+          }
+        }
+      ],
+      "analysis": null,
+      "rejected_model_json": [
+        {
+          "stage": "classify",
+          "parsed": {
+            "event_class": "impulse",
+            "sign": null,
+            "q5": "impulse|regime|regime_break",
+            "constraint": "US sanctions on International Criminal Court",
+            "split": false,
+            "split_facts": [],
+            "why": "New dated fact (US sanctions) changes a legal constraint today."
+          }
+        }
+      ],
+      "index_source": "data/exports/finviz_2026-10-09.csv",
+      "index_sha256": "fb58669543f1d9b3f835061e91a0f6280e80a8a8b95a9a1dcac6a12f7b6c0535",
+      "index_rows": 11725,
+      "fresh_acceptance_pass": false,
+      "frontier_verified": false,
+      "review_status": "pending_source_backed_four_axis_review",
+      "attempts": []
     }
   },
   "schema_version": 1,
   "runtime_status": "ready",
-  "updated_at": "2026-10-11T03:53:28.089229+00:00",
+  "updated_at": "2026-10-11T04:08:37.372626+00:00",
   "last_run_processed": 3
 }
