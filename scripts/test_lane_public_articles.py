@@ -25,6 +25,8 @@ class PublicInputs(unittest.TestCase):
             for reason in ('lane_classify_missing', 'lane_meta_missing', 'lane_filter_missing'):
                 unavailable = {'analysis': {'reject_reason': reason}}
                 self.assertEqual(len(worker.pending(root, {worker.input_key(good): unavailable})), 1)
+            failed = {'status': 'execution_failed:ModuleNotFoundError', 'analysis': None}
+            self.assertEqual(len(worker.pending(root, {worker.input_key(good): failed})), 1)
 
     def test_rejected_json_is_retained_without_accepting_it(self):
         rows = []
