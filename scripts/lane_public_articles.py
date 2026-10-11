@@ -51,7 +51,7 @@ def pending(root, completed, limit=3, days=8, requested=None):
                 continue
             key = input_key(document)
             previous = completed.get(key)
-            if key in completed and (previous.get('analysis') or {}).get('reject_reason') not in {'lane_classify_missing', 'lane_meta_missing', 'lane_filter_missing'}:
+            if key in completed and not str(previous.get('status', '')).startswith('execution_failed:') and (previous.get('analysis') or {}).get('reject_reason') not in {'lane_classify_missing', 'lane_meta_missing', 'lane_filter_missing'}:
                 continue
             rows[key] = (public_input(document), path.relative_to(root).as_posix())
     candidates = sorted(rows.items(), key=lambda item: (item[1][0].get('published_at') or '', item[0]), reverse=True)
@@ -98,6 +98,7 @@ def run(root, output, limit=3, requested=None):
             stages.append({'stage': stage, 'provider': provider, 'model': model, 'returned_json': parsed is not None, 'response_json': parsed})
             return parsed, provider, model
         started = datetime.now(timezone.utc).isoformat()
+        execution_error = None
         article = {**document, 'article_id': document['id'], 'known_at': document['published_at'],
                    'source_file': source, 'harvest_source': document['url']}
         try:
@@ -110,12 +111,18 @@ def run(root, output, limit=3, requested=None):
         except Exception as exc:
             analysis = None
             status = 'execution_failed:' + type(exc).__name__
+            execution_error = {'type': type(exc).__name__, 'missing_module': getattr(exc, 'name', None)}
+            import traceback
+            execution_error['frames'] = [{'file': Path(frame.filename).name,
+                'line': frame.lineno, 'function': frame.name}
+                for frame in traceback.extract_tb(exc.__traceback__)[-6:]]
         previous = state['records'].get(key)
         attempts = (previous.get('attempts', []) + [{k: previous.get(k) for k in
-                    ('started_at', 'completed_at', 'status', 'model_stages', 'analysis', 'rejected_model_json')}]) if previous else []
+                    ('started_at', 'completed_at', 'status', 'model_stages', 'analysis', 'rejected_model_json', 'execution_error')}]) if previous else []
         state['records'][key] = {'public_input': document, 'source_file': source, 'input_sha256': key,
             'started_at': started, 'completed_at': datetime.now(timezone.utc).isoformat(),
             'status': status, 'model_stages': stages, 'analysis': analysis, 'rejected_model_json': rejected,
+            'execution_error': execution_error,
             'index_source': index.source, 'index_sha256': index_sha, 'index_rows': len(index.rows),
             'fresh_acceptance_pass': False, 'frontier_verified': False,
             'review_status': 'pending_source_backed_four_axis_review', 'attempts': attempts}

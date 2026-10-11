@@ -890,6 +890,12 @@ def _filter_payload(parsed: dict | None) -> dict | None:
 
 def linker_acceptable(parsed: dict | None, candidates: list[dict], gold_id: str = "") -> bool:
     """Empty confirm JSON is a miss. Gold rows must keep the linked names."""
+    if isinstance(parsed, dict) and isinstance(parsed.get("core"), list) and isinstance(parsed.get("tangent"), list):
+        core = {str(t) for t in parsed["core"]}
+        tangent = {str(t) for t in parsed["tangent"]}
+        known = {str(row.get("ticker") or "") for row in candidates}
+        if core & tangent or (core | tangent) - known:
+            return False
     ticks = {
         str(row.get("ticker") or "")
         for row in confirm_instruments(_filter_payload(parsed), candidates)
@@ -1563,8 +1569,8 @@ def _retrieve_overview(query: str, title: str, body: str, use_pack: bool, pack_f
 
 
 def _web_facts(query: str) -> list[dict]:
-    from src import websearch
     try:
+        from src import websearch
         _backend, items, _errors = websearch.search_results(query, 6)
     except Exception:  # noqa: BLE001
         return []
@@ -1638,12 +1644,16 @@ def process_article(
     _PROMPT_LOG.clear()
     title = str(art.get("title") or "")
     body = str(art.get("body") or "")
+    from src.news_reporting_scope import reporting_scope
+    body_scope = reporting_scope(body)
+    body = body_scope.pop("body")
     known = str(art.get("known_at") or art.get("published_at") or "")
     aid = art.get("article_id") or article_id(title, known)
     base = {
         "article_id": aid,
         "title": title[:300],
         "body": body[:800],
+        "analysis_body_scope": body_scope,
         "known_at": known,
         "harvest_source": art.get("harvest_source") or "",
         "source_file": art.get("source_file") or "",
@@ -1748,6 +1758,21 @@ def process_article(
         root=root,
     )
     candidates = linked["instruments"]
+    if not candidates:
+        base.update({
+            "q5": q5, "event_class": event_class, "sign": sign,
+            "family": family, "constraint": constraint, "questions": questions,
+            "history": history, "meta": meta, "instrument_candidates": [],
+            "rejected_hints": linked.get("rejected_hints") or [],
+            "pack_facts": _quote_facts(pack),
+            "watermarks": [{"stage": "classify", "watermark": mark},
+                           {"stage": "meta", "watermark": meta_mark}],
+            "reject_reason": "no_instrument_candidates",
+            "listed_exposure_status": "unresolved_by_current_linker",
+            "required_next_step": "Research legal ownership and exposures outside the current candidate index",
+            "finviz_file": linked.get("finviz_file") or "",
+        })
+        return _attach_prompt_log(_stamp_extra(base))
     conf, c_provider, c_model = _call_lane(
         lane, "filter",
         filter_prompt(title, body, event_class, candidates),
