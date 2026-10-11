@@ -21,6 +21,18 @@ def public_input(document):
 def input_key(document):
     return hashlib.sha256(json.dumps(public_input(document), sort_keys=True, ensure_ascii=False).encode()).hexdigest()
 
+def audit_acceptance(stage, accept, rejected):
+    """Retain rejected public model JSON without weakening acceptance."""
+    if accept is None:
+        return None
+    def check(parsed):
+        accepted = accept(parsed)
+        if not accepted and len(rejected) < 12:
+            rejected.append({'stage': stage, 'parsed': parsed})
+        return accepted
+    return check
+
+
 def pending(root, completed, limit=3, days=8, requested=None):
     now = datetime.now(timezone.utc).date()
     cutoff = (now - timedelta(days=days)).isoformat()
@@ -39,7 +51,7 @@ def pending(root, completed, limit=3, days=8, requested=None):
                 continue
             key = input_key(document)
             previous = completed.get(key)
-            if key in completed and (previous.get('analysis') or {}).get('reject_reason') != 'lane_classify_missing':
+            if key in completed and (previous.get('analysis') or {}).get('reject_reason') not in {'lane_classify_missing', 'lane_meta_missing', 'lane_filter_missing'}:
                 continue
             rows[key] = (public_input(document), path.relative_to(root).as_posix())
     candidates = sorted(rows.items(), key=lambda item: (item[1][0].get('published_at') or '', item[0]), reverse=True)
@@ -80,9 +92,10 @@ def run(root, output, limit=3, requested=None):
     index_sha = hashlib.sha256(Path(index.source).read_bytes()).hexdigest() if index.source else ''
     for key, (document, source) in chosen:
         stages = []
+        rejected = []
         def audited(stage, prompt, system, accept=None):
-            parsed, provider, model = live(stage, prompt, system, accept=accept)
-            stages.append({'stage': stage, 'provider': provider, 'model': model, 'returned_json': parsed is not None})
+            parsed, provider, model = live(stage, prompt, system, accept=audit_acceptance(stage, accept, rejected))
+            stages.append({'stage': stage, 'provider': provider, 'model': model, 'returned_json': parsed is not None, 'response_json': parsed})
             return parsed, provider, model
         started = datetime.now(timezone.utc).isoformat()
         article = {**document, 'article_id': document['id'], 'known_at': document['published_at'],
@@ -99,10 +112,10 @@ def run(root, output, limit=3, requested=None):
             status = 'execution_failed:' + type(exc).__name__
         previous = state['records'].get(key)
         attempts = (previous.get('attempts', []) + [{k: previous.get(k) for k in
-                    ('started_at', 'completed_at', 'status', 'model_stages', 'analysis')}]) if previous else []
+                    ('started_at', 'completed_at', 'status', 'model_stages', 'analysis', 'rejected_model_json')}]) if previous else []
         state['records'][key] = {'public_input': document, 'source_file': source, 'input_sha256': key,
             'started_at': started, 'completed_at': datetime.now(timezone.utc).isoformat(),
-            'status': status, 'model_stages': stages, 'analysis': analysis,
+            'status': status, 'model_stages': stages, 'analysis': analysis, 'rejected_model_json': rejected,
             'index_source': index.source, 'index_sha256': index_sha, 'index_rows': len(index.rows),
             'fresh_acceptance_pass': False, 'frontier_verified': False,
             'review_status': 'pending_source_backed_four_axis_review', 'attempts': attempts}

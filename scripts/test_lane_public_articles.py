@@ -22,7 +22,20 @@ class PublicInputs(unittest.TestCase):
             path.write_text(json.dumps([good, {**good, 'id': 'thin', 'extraction_status': 'feed_text'}]))
             self.assertEqual(len(worker.pending(root, {})), 1)
             self.assertEqual(worker.pending(root, {worker.input_key(good): {}}), [])
-            unavailable = {'analysis': {'reject_reason': 'lane_classify_missing'}}
-            self.assertEqual(len(worker.pending(root, {worker.input_key(good): unavailable})), 1)
+            for reason in ('lane_classify_missing', 'lane_meta_missing', 'lane_filter_missing'):
+                unavailable = {'analysis': {'reject_reason': reason}}
+                self.assertEqual(len(worker.pending(root, {worker.input_key(good): unavailable})), 1)
+
+    def test_rejected_json_is_retained_without_accepting_it(self):
+        rows = []
+        check = worker.audit_acceptance('meta', lambda blob: bool(blob.get('valid')), rows)
+        rejected = {'m1': {'need_context': 'no'}, 'm2': []}
+        self.assertFalse(check(rejected))
+        self.assertEqual(rows, [{'stage': 'meta', 'parsed': rejected}])
+        self.assertTrue(check({'valid': True}))
+        self.assertEqual(len(rows), 1)
+        for _ in range(20): check(rejected)
+        self.assertEqual(len(rows), 12)
+        self.assertIsNone(worker.audit_acceptance('classify', None, rows))
 
 if __name__ == '__main__': unittest.main()
