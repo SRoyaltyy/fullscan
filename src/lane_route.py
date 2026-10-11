@@ -1057,7 +1057,10 @@ def _choice_text(body: dict) -> str:
 
 def _emitted_result(body):
     """Read exactly one declared result function. Never execute model tools."""
-    message = ((body.get('choices') or [{}])[0].get('message') or {})
+    choice = (body.get('choices') or [{}])[0]
+    if choice.get('finish_reason') != 'tool_calls':
+        return None
+    message = choice.get('message') or {}
     calls = message.get('tool_calls')
     if not isinstance(calls, list) or len(calls) != 1 or not isinstance(calls[0], dict):
         return None

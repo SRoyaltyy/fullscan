@@ -15,7 +15,7 @@ URL = 'https://openrouter.ai/api/v1/chat/completions'
 MODEL = 'nvidia/nemotron-3-ultra-550b-a55b:free'
 
 def result(blob, name='emit_lane_result'):
-    return {'choices': [{'message': {'content': None, 'tool_calls': [{
+    return {'choices': [{'finish_reason': 'tool_calls', 'message': {'content': None, 'tool_calls': [{
         'type': 'function', 'function': {'name': name, 'arguments': json.dumps(blob)}}]}}]}
 
 class FunctionEmission(unittest.TestCase):
@@ -47,6 +47,9 @@ class FunctionEmission(unittest.TestCase):
         malformed = result({})
         malformed['choices'][0]['message']['tool_calls'][0]['function']['arguments'] = '{bad'
         self.assertIsNone(lane._emitted_result(malformed))
+        truncated = result({'event_class': 'discard'})
+        truncated['choices'][0]['finish_reason'] = 'length'
+        self.assertIsNone(lane._emitted_result(truncated))
 
     def test_token_retry_keeps_schema_and_exact_free_model(self):
         parsed, request = self.call({'choices': [{'message': {'content': ''}}]})
