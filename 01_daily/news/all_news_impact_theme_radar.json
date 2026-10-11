@@ -17,92 +17,92 @@
   "funnel": {
     "elite_raw_titles": 426661,
     "unique": 46687,
-    "non_weather": 21080,
+    "non_weather": 21029,
     "reaction_in_title": 739,
-    "impulse_updown_listed": 11527,
+    "impulse_updown_listed": 11462,
     "graded_articles": {
-      "0-1d": 1411,
-      "2d": 1353,
-      "3d": 1334,
-      "4d": 1306,
-      "5d": 1277,
-      "1-4w": 6049
+      "0-1d": 1386,
+      "2d": 1331,
+      "3d": 1308,
+      "4d": 1283,
+      "5d": 1253,
+      "1-4w": 6077
     }
   },
   "hit_rates": {
     "0-1d": {
-      "hits": 1270,
-      "n_calls": 2635,
-      "hit_rate": 0.482,
-      "graded_articles": 1411
+      "hits": 1239,
+      "n_calls": 2569,
+      "hit_rate": 0.4823,
+      "graded_articles": 1386
     },
     "2d": {
-      "hits": 1288,
-      "n_calls": 2521,
-      "hit_rate": 0.5109,
-      "graded_articles": 1353
+      "hits": 1263,
+      "n_calls": 2456,
+      "hit_rate": 0.5143,
+      "graded_articles": 1331
     },
     "3d": {
-      "hits": 1243,
-      "n_calls": 2489,
-      "hit_rate": 0.4994,
-      "graded_articles": 1334
+      "hits": 1218,
+      "n_calls": 2424,
+      "hit_rate": 0.5025,
+      "graded_articles": 1308
     },
     "4d": {
-      "hits": 1230,
-      "n_calls": 2432,
-      "hit_rate": 0.5058,
-      "graded_articles": 1306
+      "hits": 1203,
+      "n_calls": 2368,
+      "hit_rate": 0.508,
+      "graded_articles": 1283
     },
     "5d": {
-      "hits": 1202,
-      "n_calls": 2386,
-      "hit_rate": 0.5038,
-      "graded_articles": 1277
+      "hits": 1177,
+      "n_calls": 2321,
+      "hit_rate": 0.5071,
+      "graded_articles": 1253
     },
     "1-4w": {
-      "hits": 4137,
-      "n_calls": 8939,
-      "hit_rate": 0.4628,
-      "graded_articles": 6049
+      "hits": 4147,
+      "n_calls": 8950,
+      "hit_rate": 0.4634,
+      "graded_articles": 6077
     }
   },
   "hit_rates_broad_short": {
     "0-1d": {
-      "hits": 6034,
-      "n_calls": 12496,
-      "hit_rate": 0.4829,
-      "graded_articles": 7905
+      "hits": 6014,
+      "n_calls": 12456,
+      "hit_rate": 0.4828,
+      "graded_articles": 7899
     },
     "2d": {
-      "hits": 5944,
-      "n_calls": 12149,
-      "hit_rate": 0.4893,
-      "graded_articles": 7724
+      "hits": 5936,
+      "n_calls": 12108,
+      "hit_rate": 0.4903,
+      "graded_articles": 7721
     },
     "3d": {
-      "hits": 5887,
-      "n_calls": 12032,
-      "hit_rate": 0.4893,
-      "graded_articles": 7646
+      "hits": 5868,
+      "n_calls": 11988,
+      "hit_rate": 0.4895,
+      "graded_articles": 7641
     },
     "4d": {
-      "hits": 5808,
-      "n_calls": 11859,
-      "hit_rate": 0.4898,
-      "graded_articles": 7551
+      "hits": 5793,
+      "n_calls": 11812,
+      "hit_rate": 0.4904,
+      "graded_articles": 7542
     },
     "5d": {
-      "hits": 5665,
-      "n_calls": 11727,
-      "hit_rate": 0.4831,
-      "graded_articles": 7462
+      "hits": 5646,
+      "n_calls": 11683,
+      "hit_rate": 0.4833,
+      "graded_articles": 7459
     }
   },
   "rippers": {
     "0-1d": {
-      "ge_5_n": 543,
-      "ge_10_n": 293,
+      "ge_5_n": 541,
+      "ge_10_n": 297,
       "ge_5": [
         {
           "ticker": "ORBS",
@@ -292,15 +292,6 @@
           "published_at": "2026-08-06 19:15:25",
           "title": "Appian Corp (APPN) (Q2 2026) Earnings Call Highlights: Cloud Revenue Accelerates 23% as AI ...",
           "event_class": "guidance"
-        },
-        {
-          "ticker": "FEMY",
-          "direction": "down",
-          "ret": -9.62,
-          "entry_date": "2026-08-12",
-          "published_at": "2026-08-12 09:00:00",
-          "title": "Femasys Strengthens and Extends Global Patent Protection for FemBloc with First Issued Blended Polymer Patents",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "AIRJ",
@@ -3444,24 +3435,6 @@
           "event_class": "market_structure"
         },
         {
-          "ticker": "NXH",
-          "direction": "down",
-          "ret": -5.76,
-          "entry_date": "2026-09-25",
-          "published_at": "2026-09-24 16:44:00",
-          "title": "Fathom Holdings and Neighborhood Intelligence Announce Proposed Restructured Transaction Focused on Real Estate and Digital Assets",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NXH",
-          "direction": "down",
-          "ret": -5.76,
-          "entry_date": "2026-09-25",
-          "published_at": "2026-09-24 16:44:00",
-          "title": "Fathom Holdings and Neighborhood Intelligence Announce Proposed Restructured Transaction Focused on Real Estate and Digital Assets",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "XPEV",
           "direction": "down",
           "ret": -5.75,
@@ -3730,6 +3703,15 @@
           "published_at": "2026-09-16 12:15:04",
           "title": "Asana CEO Dan Rogers Talks AI Game Plan Following 10% YoY Rev. Growth in Q2",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "CCB",
+          "direction": "down",
+          "ret": -5.65,
+          "entry_date": "2026-10-09",
+          "published_at": "2026-10-08 14:48:00",
+          "title": "Coastal Financial Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - CCB",
+          "event_class": "blast_legal"
         },
         {
           "ticker": "SOHU",
@@ -4994,6 +4976,24 @@
       ],
       "ge_10": [
         {
+          "ticker": "JZ",
+          "direction": "up",
+          "ret": 60.0,
+          "entry_date": "2026-10-09",
+          "published_at": "2026-10-08 10:37:00",
+          "title": "Jianzhi Education Announces Share Repurchase Program",
+          "event_class": "capital_return"
+        },
+        {
+          "ticker": "DKI",
+          "direction": "down",
+          "ret": -44.84,
+          "entry_date": "2026-10-09",
+          "published_at": "2026-10-08 10:43:01",
+          "title": "DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution",
+          "event_class": "dilution"
+        },
+        {
           "ticker": "OLB",
           "direction": "up",
           "ret": 44.19,
@@ -5201,6 +5201,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "NIVF",
+          "direction": "down",
+          "ret": -28.0,
+          "entry_date": "2026-09-29",
+          "published_at": "2026-09-28 22:30:00",
+          "title": "NewGen Announces Pricing of $1.25 Million Public Offering",
+          "event_class": "dilution"
+        },
+        {
           "ticker": "ZONE",
           "direction": "down",
           "ret": -27.85,
@@ -5252,6 +5261,15 @@
           "entry_date": "2026-08-11",
           "published_at": "2026-08-10 16:38:25",
           "title": "Alamar: Q2 Earnings Snapshot",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "PLCE",
+          "direction": "down",
+          "ret": -25.26,
+          "entry_date": "2026-10-09",
+          "published_at": "2026-10-08 16:30:00",
+          "title": "The Children's Place Announces Appointment to Its Board of Directors",
           "event_class": "print_vs_priced"
         },
         {
@@ -5669,24 +5687,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "NIVF",
-          "direction": "down",
-          "ret": -18.41,
-          "entry_date": "2026-10-08",
-          "published_at": "2026-09-28 22:30:00",
-          "title": "NewGen Announces Pricing of $1.25 Million Public Offering",
-          "event_class": "dilution"
-        },
-        {
-          "ticker": "NIVF",
-          "direction": "down",
-          "ret": -18.41,
-          "entry_date": "2026-10-08",
-          "published_at": "2026-09-30 14:10:00",
-          "title": "NewGen Announces Closing of $1.25 Million Public Offering",
-          "event_class": "dilution"
-        },
-        {
           "ticker": "CCOI",
           "direction": "down",
           "ret": -18.4,
@@ -5930,6 +5930,15 @@
           "event_class": "capital_return"
         },
         {
+          "ticker": "NIVF",
+          "direction": "down",
+          "ret": -15.83,
+          "entry_date": "2026-10-01",
+          "published_at": "2026-09-30 14:10:00",
+          "title": "NewGen Announces Closing of $1.25 Million Public Offering",
+          "event_class": "dilution"
+        },
+        {
           "ticker": "DVLT",
           "direction": "down",
           "ret": -15.79,
@@ -5955,6 +5964,15 @@
           "published_at": "2026-08-13 01:01:05",
           "title": "A2Z Cust2Mate Solutions Corp (AZ) (Q2 2026) Earnings Call Highlights: Smart Cart Deliveries ...",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "SBFM",
+          "direction": "down",
+          "ret": -15.71,
+          "entry_date": "2026-10-09",
+          "published_at": "2026-10-08 10:40:01",
+          "title": "Sunshine Biopharma Prices $6 Million Public Offering at $0.55 Per Unit, Raising Dilution Concerns",
+          "event_class": "dilution"
         },
         {
           "ticker": "IMMR",
@@ -7633,8 +7651,8 @@
       ]
     },
     "2d": {
-      "ge_5_n": 1021,
-      "ge_10_n": 576,
+      "ge_5_n": 1018,
+      "ge_10_n": 573,
       "ge_5": [
         {
           "ticker": "BBDC",
@@ -8510,15 +8528,6 @@
           "event_class": "labor_stop"
         },
         {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -8.95,
-          "entry_date": "2026-08-14",
-          "published_at": "2026-08-13 22:30:27",
-          "title": "Why Did PANW, NET, HPQ Stocks Jump To 52-Week Highs Today?",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "HL",
           "direction": "up",
           "ret": 8.94,
@@ -9176,6 +9185,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "NIVF",
+          "direction": "down",
+          "ret": -8.33,
+          "entry_date": "2026-10-01",
+          "published_at": "2026-09-30 14:10:00",
+          "title": "NewGen Announces Closing of $1.25 Million Public Offering",
+          "event_class": "dilution"
+        },
+        {
           "ticker": "DRTS",
           "direction": "up",
           "ret": 8.32,
@@ -9399,51 +9417,6 @@
           "published_at": "2026-08-05 23:30:03",
           "title": "Vanda Pharmaceuticals Inc. Q2 2026 Earnings Call Summary",
           "event_class": "gate"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -8.19,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -8.19,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -8.19,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -8.19,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -8.19,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "GXAI",
@@ -10101,6 +10074,15 @@
           "published_at": "2026-08-07 08:30:00",
           "title": "The Beauty Health Company Q2 2026 Earnings Call Summary",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "SVRN",
+          "direction": "up",
+          "ret": 7.53,
+          "entry_date": "2026-10-07",
+          "published_at": "2026-10-06 11:42:34",
+          "title": "NEAR Treasury Firm CEO Says Buybacks Are 'Still Real,' But Issuance Runs Six Times Higher",
+          "event_class": "capital_return"
         },
         {
           "ticker": "GAP",
@@ -11325,6 +11307,15 @@
           "published_at": "2026-08-20 09:52:00",
           "title": "Hovnanian Swings to a Loss Amid Continually Challenging Housing Market",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "SOTK",
+          "direction": "up",
+          "ret": 6.95,
+          "entry_date": "2026-10-07",
+          "published_at": "2026-10-07 07:00:00",
+          "title": "Sono-Tek Announces Fiscal Second Quarter and First Half 2027 Earnings Conference Call",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "MNTS",
@@ -12882,15 +12873,6 @@
           "published_at": "2026-08-07 08:30:00",
           "title": "Consensus Cloud Solutions, Inc. Q2 2026 Earnings Call Summary",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "MRCY",
-          "direction": "down",
-          "ret": -6.3,
-          "entry_date": "2026-10-06",
-          "published_at": "2026-10-06 08:00:00",
-          "title": "Mercury Introduces RES One, a Rugged Edge Server Engineered for Rapid Deployment and Superior Lifecycle Management",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "FMFC",
@@ -14762,6 +14744,15 @@
           "entry_date": "2026-08-07",
           "published_at": "2026-08-06 19:19:17",
           "title": "VSE Corp (VSEC) (Q2 2026) Earnings Call Highlights: Record Revenue and EBITDA Soar 65% and 98%",
+          "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "AXIL",
+          "direction": "down",
+          "ret": -5.62,
+          "entry_date": "2026-10-07",
+          "published_at": "2026-10-06 16:20:00",
+          "title": "AXIL Brands, Inc. Reports First Quarter Fiscal 2027 Financial Results",
           "event_class": "print_vs_priced"
         },
         {
@@ -16889,6 +16880,15 @@
           "published_at": "2026-08-17 14:54:02",
           "title": "Behind the Ticker: How VFLO Beats Growth at Its Own Game",
           "event_class": "gate"
+        },
+        {
+          "ticker": "OLB",
+          "direction": "up",
+          "ret": 84.43,
+          "entry_date": "2026-10-07",
+          "published_at": "2026-10-06 09:30:00",
+          "title": "The OLB Group Launches Share Buyback; Suspends ATM Program",
+          "event_class": "capital_return"
         },
         {
           "ticker": "ALGS",
@@ -19186,15 +19186,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "AIXC",
-          "direction": "down",
-          "ret": -14.71,
-          "entry_date": "2026-08-26",
-          "published_at": "2026-08-25 11:58:00",
-          "title": "AIxCrypto Provides Additional Context on Schedule 14C Filing and Disciplined Capital Strategy to Advance RoboShare's Next Stage of Growth",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "RR",
           "direction": "up",
           "ret": 14.71,
@@ -19517,24 +19508,6 @@
           "published_at": "2026-08-19 09:00:00",
           "title": "Cosmos Health Reports Q2 2026 Results: Record Q2 and H1 Revenue of $19.0M and $36.9M, Up 29% and 30%; Q2 Adjusted Gross Profit Up 58%; Total Liabilities Reduced 13%; Stockholders' ",
           "event_class": "capital_return"
-        },
-        {
-          "ticker": "NXH",
-          "direction": "down",
-          "ret": -13.83,
-          "entry_date": "2026-09-25",
-          "published_at": "2026-09-24 16:44:00",
-          "title": "Fathom Holdings and Neighborhood Intelligence Announce Proposed Restructured Transaction Focused on Real Estate and Digital Assets",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NXH",
-          "direction": "down",
-          "ret": -13.83,
-          "entry_date": "2026-09-25",
-          "published_at": "2026-09-24 16:44:00",
-          "title": "Fathom Holdings and Neighborhood Intelligence Announce Proposed Restructured Transaction Focused on Real Estate and Digital Assets",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "JFIN",
@@ -20660,15 +20633,6 @@
           "published_at": "2026-08-27 01:01:23",
           "title": "Veeva Systems Inc (VEEV) (Q2 2027) Earnings Call Highlights: Record CRM Quarter and AI Momentum ...",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "FEMY",
-          "direction": "down",
-          "ret": -11.92,
-          "entry_date": "2026-08-12",
-          "published_at": "2026-08-12 09:00:00",
-          "title": "Femasys Strengthens and Extends Global Patent Protection for FemBloc with First Issued Blended Polymer Patents",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "ZKH",
@@ -22014,8 +21978,8 @@
       ]
     },
     "3d": {
-      "ge_5_n": 1164,
-      "ge_10_n": 678,
+      "ge_5_n": 1159,
+      "ge_10_n": 675,
       "ge_5": [
         {
           "ticker": "HOOD",
@@ -24130,15 +24094,6 @@
           "entry_date": "2026-09-08",
           "published_at": "2026-09-08 01:38:20",
           "title": "BIRK Stock Rises Overnight: Michael Burry Says Hes Been A 'Proud Birkie Since '87'  And Now Owns 5.2% Of Birkenstock",
-          "event_class": "dilution"
-        },
-        {
-          "ticker": "TORM",
-          "direction": "down",
-          "ret": -8.44,
-          "entry_date": "2026-10-06",
-          "published_at": "2026-10-06 08:15:00",
-          "title": "TORM plc announces pricing of secondary public offering of its class A common shares",
           "event_class": "dilution"
         },
         {
@@ -27463,24 +27418,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -6.58,
-          "entry_date": "2026-08-19",
-          "published_at": "2026-08-19 09:18:00",
-          "title": "Google Just Paid $10 Million for Spirit Airlines Data. Inside the Race to Feed AI Models.",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -6.58,
-          "entry_date": "2026-08-19",
-          "published_at": "2026-08-19 09:18:00",
-          "title": "Google Just Paid $10 Million for Spirit Airlines Data. Inside the Race to Feed AI Models.",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "HOOD",
           "direction": "up",
           "ret": 6.57,
@@ -28397,15 +28334,6 @@
           "published_at": "2026-08-07 08:30:00",
           "title": "Tecnoglass Inc. Q2 2026 Earnings Call Summary",
           "event_class": "guidance"
-        },
-        {
-          "ticker": "NMRK",
-          "direction": "down",
-          "ret": -6.12,
-          "entry_date": "2026-10-02",
-          "published_at": "2026-10-02 08:45:00",
-          "title": "Newmark Group's Third Quarter 2026 Financial Results Announcement to be Issued Prior to Market Open on Thursday, October 29th, 2026",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "BMI",
@@ -32008,15 +31936,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "MRCY",
-          "direction": "down",
-          "ret": -5.14,
-          "entry_date": "2026-10-06",
-          "published_at": "2026-10-06 08:00:00",
-          "title": "Mercury Introduces RES One, a Rugged Edge Server Engineered for Rapid Deployment and Superior Lifecycle Management",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "COLM",
           "direction": "up",
           "ret": 5.12,
@@ -34656,6 +34575,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "NIVF",
+          "direction": "down",
+          "ret": -17.5,
+          "entry_date": "2026-10-01",
+          "published_at": "2026-09-30 14:10:00",
+          "title": "NewGen Announces Closing of $1.25 Million Public Offering",
+          "event_class": "dilution"
+        },
+        {
           "ticker": "ARXS",
           "direction": "up",
           "ret": 17.48,
@@ -34834,15 +34762,6 @@
           "published_at": "2026-09-15 08:30:00",
           "title": "Ocean Power Technologies grows defense footprint as backlog rises in fiscal Q1",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "FEMY",
-          "direction": "down",
-          "ret": -16.92,
-          "entry_date": "2026-08-12",
-          "published_at": "2026-08-12 09:00:00",
-          "title": "Femasys Strengthens and Extends Global Patent Protection for FemBloc with First Issued Blended Polymer Patents",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "NCNO",
@@ -35304,24 +35223,6 @@
           "event_class": "guidance"
         },
         {
-          "ticker": "NXH",
-          "direction": "down",
-          "ret": -15.27,
-          "entry_date": "2026-09-25",
-          "published_at": "2026-09-24 16:44:00",
-          "title": "Fathom Holdings and Neighborhood Intelligence Announce Proposed Restructured Transaction Focused on Real Estate and Digital Assets",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NXH",
-          "direction": "down",
-          "ret": -15.27,
-          "entry_date": "2026-09-25",
-          "published_at": "2026-09-24 16:44:00",
-          "title": "Fathom Holdings and Neighborhood Intelligence Announce Proposed Restructured Transaction Focused on Real Estate and Digital Assets",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "VERI",
           "direction": "down",
           "ret": -15.26,
@@ -35482,6 +35383,15 @@
           "published_at": "2026-08-18 07:00:00",
           "title": "Virtu Financial Announces New Notional Order Capabilities for 10b-18 Corporate Buyback Execution",
           "event_class": "capital_return"
+        },
+        {
+          "ticker": "PWCM",
+          "direction": "down",
+          "ret": -14.75,
+          "entry_date": "2026-10-06",
+          "published_at": "2026-10-06 08:30:00",
+          "title": "PowerCompute Increases Contracted Power at Mississippi Site to 11 Megawatts Under TVA's New Data Center Tariff",
+          "event_class": "print_vs_priced"
         },
         {
           "ticker": "NEPH",
@@ -36906,15 +36816,6 @@
           "event_class": "blast_legal"
         },
         {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -11.82,
-          "entry_date": "2026-08-14",
-          "published_at": "2026-08-13 22:30:27",
-          "title": "Why Did PANW, NET, HPQ Stocks Jump To 52-Week Highs Today?",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "ALK",
           "direction": "down",
           "ret": -11.81,
@@ -37237,15 +37138,6 @@
           "published_at": "2026-08-06 07:00:00",
           "title": "Climb Bio Reports Second Quarter 2026 Financial Results and Provides Business Updates",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "AIXC",
-          "direction": "down",
-          "ret": -11.33,
-          "entry_date": "2026-08-26",
-          "published_at": "2026-08-25 11:58:00",
-          "title": "AIxCrypto Provides Additional Context on Schedule 14C Filing and Disciplined Capital Strategy to Advance RoboShare's Next Stage of Growth",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "BSET",
@@ -38600,8 +38492,8 @@
       ]
     },
     "4d": {
-      "ge_5_n": 1218,
-      "ge_10_n": 848,
+      "ge_5_n": 1211,
+      "ge_10_n": 845,
       "ge_5": [
         {
           "ticker": "RGEN",
@@ -41574,51 +41466,6 @@
           "event_class": "guidance"
         },
         {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -7.71,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -7.71,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -7.71,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -7.71,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -7.71,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "PHR",
           "direction": "down",
           "ret": -7.71,
@@ -42130,24 +41977,6 @@
           "published_at": "2026-08-14 08:00:00",
           "title": "Replimune Reports Fiscal First Quarter 2027 Financial Results and Provides Corporate Update",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -7.5,
-          "entry_date": "2026-08-19",
-          "published_at": "2026-08-19 09:18:00",
-          "title": "Google Just Paid $10 Million for Spirit Airlines Data. Inside the Race to Feed AI Models.",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -7.5,
-          "entry_date": "2026-08-19",
-          "published_at": "2026-08-19 09:18:00",
-          "title": "Google Just Paid $10 Million for Spirit Airlines Data. Inside the Race to Feed AI Models.",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "AMGN",
@@ -45633,6 +45462,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "CAR",
+          "direction": "down",
+          "ret": -6.15,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-04 19:00:00",
+          "title": "Fuel Price Shock Pushes Global Gas Car Sales Below 50% for First Time",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "INIO",
           "direction": "up",
           "ret": 6.14,
@@ -46000,24 +45838,6 @@
           "published_at": "2026-09-24 09:25:10",
           "title": "Can Doximity Keep Shrinking Its Share Count Through Its AI Investment Year?",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -6.05,
-          "entry_date": "2026-08-27",
-          "published_at": "2026-08-26 16:30:00",
-          "title": "NetApp Inc. stock outperforms competitors on strong trading day",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -6.05,
-          "entry_date": "2026-08-27",
-          "published_at": "2026-08-26 16:30:00",
-          "title": "NetApp Inc. stock outperforms competitors on strong trading day",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "AAOI",
@@ -46504,6 +46324,15 @@
           "published_at": "2026-09-28 12:24:17",
           "title": "Homebuilding stocks are feeling the bite of higher mortgage rates",
           "event_class": "guidance"
+        },
+        {
+          "ticker": "DLHC",
+          "direction": "up",
+          "ret": 5.9,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-05 08:30:00",
+          "title": "DLH Wins $2 Million NIH Data Governance Pilot Task Order",
+          "event_class": "gate"
         },
         {
           "ticker": "EYE",
@@ -51926,24 +51755,6 @@
           "event_class": "capital_return"
         },
         {
-          "ticker": "NXH",
-          "direction": "down",
-          "ret": -18.44,
-          "entry_date": "2026-09-25",
-          "published_at": "2026-09-24 16:44:00",
-          "title": "Fathom Holdings and Neighborhood Intelligence Announce Proposed Restructured Transaction Focused on Real Estate and Digital Assets",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NXH",
-          "direction": "down",
-          "ret": -18.44,
-          "entry_date": "2026-09-25",
-          "published_at": "2026-09-24 16:44:00",
-          "title": "Fathom Holdings and Neighborhood Intelligence Announce Proposed Restructured Transaction Focused on Real Estate and Digital Assets",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "TE",
           "direction": "down",
           "ret": -18.42,
@@ -52358,6 +52169,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "RYDE",
+          "direction": "down",
+          "ret": -17.15,
+          "entry_date": "2026-10-05",
+          "published_at": "2026-10-05 03:05:00",
+          "title": "Ryde Group Ltd. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - RYDE",
+          "event_class": "blast_legal"
+        },
+        {
           "ticker": "APPN",
           "direction": "up",
           "ret": 17.12,
@@ -52736,15 +52556,6 @@
           "event_class": "dilution"
         },
         {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -15.74,
-          "entry_date": "2026-08-14",
-          "published_at": "2026-08-13 22:30:27",
-          "title": "Why Did PANW, NET, HPQ Stocks Jump To 52-Week Highs Today?",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "III",
           "direction": "up",
           "ret": 15.73,
@@ -52878,15 +52689,6 @@
           "published_at": "2026-08-06 08:30:00",
           "title": "Coherus Oncology, Inc. Q2 2026 Earnings Call Summary",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "FEMY",
-          "direction": "down",
-          "ret": -15.38,
-          "entry_date": "2026-08-12",
-          "published_at": "2026-08-12 09:00:00",
-          "title": "Femasys Strengthens and Extends Global Patent Protection for FemBloc with First Issued Blended Polymer Patents",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "NWTG",
@@ -53094,15 +52896,6 @@
           "published_at": "2026-08-06 08:30:00",
           "title": "Roundhill Investments Launches First-Ever Neocloud ETF (NCLD) and Photonics & Optics ETF (LYTE)",
           "event_class": "print_vs_priced"
-        },
-        {
-          "ticker": "AIXC",
-          "direction": "down",
-          "ret": -15.03,
-          "entry_date": "2026-08-26",
-          "published_at": "2026-08-25 11:58:00",
-          "title": "AIxCrypto Provides Additional Context on Schedule 14C Filing and Disciplined Capital Strategy to Advance RoboShare's Next Stage of Growth",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "PRLB",
@@ -55409,6 +55202,15 @@
           "event_class": "guidance"
         },
         {
+          "ticker": "NIVF",
+          "direction": "down",
+          "ret": -11.67,
+          "entry_date": "2026-10-01",
+          "published_at": "2026-09-30 14:10:00",
+          "title": "NewGen Announces Closing of $1.25 Million Public Offering",
+          "event_class": "dilution"
+        },
+        {
           "ticker": "CHYM",
           "direction": "up",
           "ret": 11.66,
@@ -57202,8 +57004,8 @@
       ]
     },
     "5d": {
-      "ge_5_n": 1269,
-      "ge_10_n": 898,
+      "ge_5_n": 1261,
+      "ge_10_n": 896,
       "ge_5": [
         {
           "ticker": "SGI",
@@ -58763,6 +58565,15 @@
           "event_class": "print_vs_priced"
         },
         {
+          "ticker": "BSET",
+          "direction": "up",
+          "ret": 8.83,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 21:00:38",
+          "title": "Bassett Furniture Industries Inc (BSET) (Q3 2026) Earnings Call Highlights: Revenue Growth and ...",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "GOSS",
           "direction": "down",
           "ret": -8.82,
@@ -59157,51 +58968,6 @@
           "published_at": "2026-08-25 09:05:00",
           "title": "Thryv Named to Selling Power Magazine's 60 Best Companies to Sell For 2026 List",
           "event_class": "guidance"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -8.62,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -8.62,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -8.62,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -8.62,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -8.62,
-          "entry_date": "2026-08-18",
-          "published_at": "2026-08-17 16:05:18",
-          "title": "Cathie Wood Pours $27 Million Into Major AI Stock",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "NWTG",
@@ -63128,15 +62894,6 @@
           "event_class": "guidance"
         },
         {
-          "ticker": "NMRK",
-          "direction": "down",
-          "ret": -6.7,
-          "entry_date": "2026-10-02",
-          "published_at": "2026-10-02 08:45:00",
-          "title": "Newmark Group's Third Quarter 2026 Financial Results Announcement to be Issued Prior to Market Open on Thursday, October 29th, 2026",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "KOS",
           "direction": "up",
           "ret": 6.67,
@@ -66845,15 +66602,6 @@
           "event_class": "gate"
         },
         {
-          "ticker": "MRCY",
-          "direction": "down",
-          "ret": -5.48,
-          "entry_date": "2026-09-16",
-          "published_at": "2026-09-16 08:00:00",
-          "title": "Mercury Systems Announces Extension of Employment Contract with Chairman and CEO Bill Ballhaus and Reaffirms Prior Guidance",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "AAOI",
           "direction": "up",
           "ret": 5.47,
@@ -68285,24 +68033,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -5.07,
-          "entry_date": "2026-08-19",
-          "published_at": "2026-08-19 09:18:00",
-          "title": "Google Just Paid $10 Million for Spirit Airlines Data. Inside the Race to Feed AI Models.",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -5.07,
-          "entry_date": "2026-08-19",
-          "published_at": "2026-08-19 09:18:00",
-          "title": "Google Just Paid $10 Million for Spirit Airlines Data. Inside the Race to Feed AI Models.",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "VRSN",
           "direction": "up",
           "ret": 5.06,
@@ -69500,6 +69230,15 @@
           "published_at": "2026-08-10 16:12:00",
           "title": "Orchestra BioMed Reports Second Quarter 2026 Financial Results and Highlights Recent Business Updates",
           "event_class": "print_vs_priced"
+        },
+        {
+          "ticker": "NIVF",
+          "direction": "down",
+          "ret": -32.5,
+          "entry_date": "2026-10-01",
+          "published_at": "2026-09-30 14:10:00",
+          "title": "NewGen Announces Closing of $1.25 Million Public Offering",
+          "event_class": "dilution"
         },
         {
           "ticker": "AMIX",
@@ -70834,24 +70573,6 @@
           "event_class": "dilution"
         },
         {
-          "ticker": "NXH",
-          "direction": "down",
-          "ret": -20.46,
-          "entry_date": "2026-09-25",
-          "published_at": "2026-09-24 16:44:00",
-          "title": "Fathom Holdings and Neighborhood Intelligence Announce Proposed Restructured Transaction Focused on Real Estate and Digital Assets",
-          "event_class": "blast_legal"
-        },
-        {
-          "ticker": "NXH",
-          "direction": "down",
-          "ret": -20.46,
-          "entry_date": "2026-09-25",
-          "published_at": "2026-09-24 16:44:00",
-          "title": "Fathom Holdings and Neighborhood Intelligence Announce Proposed Restructured Transaction Focused on Real Estate and Digital Assets",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "PARA",
           "direction": "down",
           "ret": -20.44,
@@ -72119,15 +71840,6 @@
           "published_at": "2026-09-12 12:22:00",
           "title": "Apple, Taiwan Semi Lead 5 Top Stocks Near Buy Points",
           "event_class": "guidance"
-        },
-        {
-          "ticker": "AIXC",
-          "direction": "down",
-          "ret": -16.01,
-          "entry_date": "2026-08-26",
-          "published_at": "2026-08-25 11:58:00",
-          "title": "AIxCrypto Provides Additional Context on Schedule 14C Filing and Disciplined Capital Strategy to Advance RoboShare's Next Stage of Growth",
-          "event_class": "blast_legal"
         },
         {
           "ticker": "SOC",
@@ -75316,15 +75028,6 @@
           "event_class": "print_vs_priced"
         },
         {
-          "ticker": "NET",
-          "direction": "down",
-          "ret": -11.44,
-          "entry_date": "2026-08-14",
-          "published_at": "2026-08-13 22:30:27",
-          "title": "Why Did PANW, NET, HPQ Stocks Jump To 52-Week Highs Today?",
-          "event_class": "blast_legal"
-        },
-        {
           "ticker": "PRCT",
           "direction": "down",
           "ret": -11.43,
@@ -76207,6 +75910,15 @@
           "event_class": "blast_legal"
         },
         {
+          "ticker": "JAKK",
+          "direction": "up",
+          "ret": 10.49,
+          "entry_date": "2026-10-02",
+          "published_at": "2026-10-01 18:00:00",
+          "title": "JAKKS Pacific, Inc. Announces Third Quarter 2026 Earnings Call",
+          "event_class": "print_vs_priced"
+        },
+        {
           "ticker": "BTQ",
           "direction": "down",
           "ret": -10.48,
@@ -76755,92 +76467,92 @@
   },
   "ledger": {
     "counts": {
-      "singleton": 7252,
+      "singleton": 7222,
       "converge": 599,
-      "clash": 79,
-      "converge_up": 412,
-      "converge_down": 187
+      "clash": 78,
+      "converge_up": 413,
+      "converge_down": 186
     },
     "hit_rates": {
       "singleton": {
         "0-1d": {
-          "hits": 607,
-          "n": 1293,
-          "hit_rate": 0.4695
+          "hits": 596,
+          "n": 1272,
+          "hit_rate": 0.4686
         },
         "2d": {
-          "hits": 627,
-          "n": 1240,
-          "hit_rate": 0.5056
+          "hits": 612,
+          "n": 1217,
+          "hit_rate": 0.5029
         },
         "3d": {
-          "hits": 619,
-          "n": 1221,
-          "hit_rate": 0.507
+          "hits": 604,
+          "n": 1196,
+          "hit_rate": 0.505
         },
         "4d": {
-          "hits": 606,
-          "n": 1193,
-          "hit_rate": 0.508
+          "hits": 593,
+          "n": 1171,
+          "hit_rate": 0.5064
         },
         "5d": {
-          "hits": 602,
-          "n": 1167,
-          "hit_rate": 0.5159
+          "hits": 588,
+          "n": 1142,
+          "hit_rate": 0.5149
         }
       },
       "converge": {
         "0-1d": {
           "hits": 80,
-          "n": 152,
-          "hit_rate": 0.5263
+          "n": 150,
+          "hit_rate": 0.5333
         },
         "2d": {
           "hits": 68,
-          "n": 143,
-          "hit_rate": 0.4755
+          "n": 142,
+          "hit_rate": 0.4789
         },
         "3d": {
-          "hits": 73,
-          "n": 143,
-          "hit_rate": 0.5105
+          "hits": 72,
+          "n": 141,
+          "hit_rate": 0.5106
         },
         "4d": {
-          "hits": 69,
-          "n": 137,
-          "hit_rate": 0.5036
+          "hits": 68,
+          "n": 135,
+          "hit_rate": 0.5037
         },
         "5d": {
-          "hits": 67,
-          "n": 133,
-          "hit_rate": 0.5038
+          "hits": 66,
+          "n": 132,
+          "hit_rate": 0.5
         }
       },
       "clash": {
         "0-1d": {
-          "hits": 4,
-          "n": 12,
-          "hit_rate": 0.3333
+          "hits": 3,
+          "n": 11,
+          "hit_rate": 0.2727
         },
         "2d": {
           "hits": 4,
-          "n": 12,
-          "hit_rate": 0.3333
+          "n": 11,
+          "hit_rate": 0.3636
         },
         "3d": {
           "hits": 7,
-          "n": 12,
-          "hit_rate": 0.5833
+          "n": 11,
+          "hit_rate": 0.6364
         },
         "4d": {
           "hits": 3,
-          "n": 12,
-          "hit_rate": 0.25
+          "n": 11,
+          "hit_rate": 0.2727
         },
         "5d": {
           "hits": 3,
-          "n": 12,
-          "hit_rate": 0.25
+          "n": 11,
+          "hit_rate": 0.2727
         }
       }
     },
@@ -77359,7 +77071,7 @@
         ]
       }
     ],
-    "n_name_groups": 7930,
+    "n_name_groups": 7899,
     "n_theme_groups": 12,
     "theme_note": "Theme groups are router factor/macro keys only. They are not a second trade. The Elite Sector column is not a key.",
     "amrx_week": {
