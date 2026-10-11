@@ -1055,8 +1055,28 @@ def _choice_text(body: dict) -> str:
     return ""
 
 
+def _emitted_result(body):
+    """Read exactly one declared result function. Never execute model tools."""
+    choice = (body.get('choices') or [{}])[0]
+    if choice.get('finish_reason') != 'tool_calls':
+        return None
+    message = choice.get('message') or {}
+    calls = message.get('tool_calls')
+    if not isinstance(calls, list) or len(calls) != 1 or not isinstance(calls[0], dict):
+        return None
+    call = calls[0]
+    function = call.get('function') or {}
+    if call.get('type') != 'function' or not isinstance(function, dict) or function.get('name') != 'emit_lane_result':
+        return None
+    try:
+        parsed = json.loads(function['arguments'])
+    except (KeyError, TypeError, ValueError):
+        return None
+    return parsed if isinstance(parsed, dict) else None
+
+
 def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None,
-                timeout=None):
+                timeout=None, response_schema=None):
     system = SYSTEM if system is None else system
     if timeout is None:
         timeout = 90 if max_tokens > 400 else 45
@@ -1064,44 +1084,50 @@ def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None
     if key:
         headers["Authorization"] = "Bearer " + key
 
-    def _post(use_format: bool):
+    # Confirmed capability of this free endpoint only. Do not spoof an agentic
+    # harness or enable restricted models; this function merely emits JSON.
+    use_tools = bool(response_schema and url == 'https://openrouter.ai/api/v1/chat/completions'
+                     and model == 'nvidia/nemotron-3-ultra-550b-a55b:free')
+
+    def _post(use_format: bool, budget=None):
         payload = {
             "model": model,
             "messages": [
                 {"role": "system", "content": system},
                 {"role": "user", "content": prompt},
             ],
-            "max_tokens": max_tokens,
+            "max_tokens": max_tokens if budget is None else budget,
             "temperature": 0.1,
         }
-        if use_format:
+        if use_tools:
+            payload['tools'] = [{'type': 'function', 'function': {
+                'name': 'emit_lane_result',
+                'description': 'Return the complete requested analysis result; no external action is performed.',
+                'parameters': response_schema}}]
+            payload['tool_choice'] = {'type': 'function', 'function': {'name': 'emit_lane_result'}}
+            payload['parallel_tool_calls'] = False
+        elif use_format:
             payload["response_format"] = {"type": "json_object"}
         return http_json(url, payload, headers, timeout=timeout)
 
     status, body, _ = _post(True)
     text = _choice_text(body) if status == 200 else ""
+    parsed = (_emitted_result(body) if use_tools else extract_json(text)) if status == 200 else None
     # 400: host rejected response_format. 200 with an empty body: a thinking
     # model spent the budget before the JSON, or ignored json_object.
     # A 200 is live — retry without json mode, strip <think>, then raise
     # max_tokens once. Do not treat that 200 as a dead provider.
-    if status == 400 or (status == 200 and not extract_json(text)):
+    if status == 400 or (status == 200 and parsed is None):
+        if status == 400:
+            use_tools = False
         status, body, _ = _post(False)
         text = _choice_text(body) if status == 200 else ""
-    parsed = extract_json(text) if status == 200 else None
+        parsed = (_emitted_result(body) if use_tools else extract_json(text)) if status == 200 else None
     if status == 200 and parsed is None and max_tokens < 1600:
         bumped = max(int(max_tokens) * 2, 1200)
-        payload = {
-            "model": model,
-            "messages": [
-                {"role": "system", "content": system},
-                {"role": "user", "content": prompt},
-            ],
-            "max_tokens": bumped,
-            "temperature": 0.1,
-        }
-        status, body, _ = http_json(url, payload, headers, timeout=timeout)
+        status, body, _ = _post(False, bumped)
         text = _choice_text(body) if status == 200 else ""
-        parsed = extract_json(text) if status == 200 else None
+        parsed = (_emitted_result(body) if use_tools else extract_json(text)) if status == 200 else None
     if status != 200:
         error_info = body.get("error") or body.get("message") or body
         err = str(error_info)[:180]
@@ -1696,7 +1722,7 @@ def load_keys():
     return keys, ollama_url, gh_direct
 
 
-def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom", accept=None):
+def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom", accept=None, response_schema=None):
     """Try one $0 hopper. Returns (parsed, info) or (None, None)."""
     keys = ctx["keys"]
     ollama_url = ctx["ollama_url"]
@@ -1710,6 +1736,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom", acce
     def oc(url, key, model, extra=None):
         return openai_chat(
             url, key, model, prompt, extra, max_tokens=max_tokens, system=system,
+            **({'response_schema': response_schema} if response_schema is not None else {}),
         )
 
     def flu(urls, key, model):
