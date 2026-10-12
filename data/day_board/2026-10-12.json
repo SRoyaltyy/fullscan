@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T04:32:26.056358-04:00",
+  "generated_at": "2026-10-12T04:34:10.251394-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -182,7 +182,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -240,10 +240,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-10-12_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 4249468,
+          "said": "4249468B on disk",
           "bullets": []
         },
         {
@@ -330,13 +330,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7575,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7574,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1245,6 +1245,41 @@
         }
       ],
       "preview": "5910 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 DVN, LNG, RRC, SM, CNQ"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-12",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-12T04:33:52.857277-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T04:34:09.518809-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-12_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 4249468,
+          "preview": "raw=5840 usable=499 single=330 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | China Passenger Vehicle Retail Sales Drop 24% in September - Bloomberg.com | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O"
+        },
+        {
+          "path": "01_daily/news/2026-10-12_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12828,
+          "preview": "# News Parse v2 \u2014 2026-10-12T04:34:08.744682-04:00\nWindow\u224848h | news_mode=on | raw=5840 | usable=499 | single_name=330 | noise_dropped=4753\nusable polarity={'+': 11, '-': 72, 'mixed': 5, 'neutral': 411}"
+        }
+      ],
+      "preview": "raw=5840 usable=499 single=330 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | China Passenger Vehicle Retail Sales Drop 24% in September - Bloomberg.com | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O \u00b7 # News Parse v2 \u2014 2026-10-12T04:34:08.744682-04:00\nWindow\u224848h | news_mode=on | raw=5840 | usable=499 | single_name=330 | noise_dropped=4753\nusable polarity={'+': 11, '-': 72, 'mixed': 5, 'neutral': 411}"
     }
   ],
   "href": {
