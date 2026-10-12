@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T08:40:43.324314-04:00",
+  "generated_at": "2026-10-12T08:40:51.740981-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -99,31 +99,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T08:09:51.373945-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-12_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 4011976,
-          "preview": "raw=5511 usable=473 single=320 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O | Stein\u2019s Latest: Sixers, Black, Miller, Wallace, Powell - Hoops Rumors"
-        },
-        {
-          "path": "01_daily/news/2026-10-12_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 12702,
-          "preview": "# News Parse v2 \u2014 2026-10-12T08:09:39.355529-04:00\nWindow\u224848h | news_mode=on | raw=5511 | usable=473 | single_name=320 | noise_dropped=4469\nusable polarity={'+': 11, '-': 70, 'mixed': 5, 'neutral': 387}"
-        }
-      ],
-      "preview": "raw=5511 usable=473 single=320 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O | Stein\u2019s Latest: Sixers, Black, Miller, Wallace, Powell - Hoops Rumors \u00b7 # News Parse v2 \u2014 2026-10-12T08:09:39.355529-04:00\nWindow\u224848h | news_mode=on | raw=5511 | usable=473 | single_name=320 | noise_dropped=4469\nusable polarity={'+': 11, '-': 70, 'mixed': 5, 'neutral': 387}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -276,6 +251,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T08:40:50.751023-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-12_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2242326,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
