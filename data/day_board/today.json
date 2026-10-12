@@ -1,16 +1,78 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T05:48:38.919450-04:00",
+  "generated_at": "2026-10-12T05:48:45.488712-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
-    "partial": 3,
-    "fail": 2,
+    "ok": 6,
+    "partial": 1,
+    "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "ASTH",
+      "score": 0.706426341090431
+    },
+    {
+      "ticker": "CON",
+      "score": 0.639955708762995
+    },
+    {
+      "ticker": "AMN",
+      "score": 0.5920779365287303
+    },
+    {
+      "ticker": "KSPI",
+      "score": 0.3890022679416772
+    },
+    {
+      "ticker": "PACS",
+      "score": 0.7093787919305283
+    },
+    {
+      "ticker": "NET",
+      "score": 0.039196999757480214
+    },
+    {
+      "ticker": "TLS",
+      "score": 0.4176187622161986
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "OKLO",
+      "score": -0.26472807610778865
+    },
+    {
+      "ticker": "NEOV",
+      "score": -0.3778499454769789
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.25580112343935557
+    },
+    {
+      "ticker": "NNDM",
+      "score": -0.15510592095588355
+    },
+    {
+      "ticker": "POWL",
+      "score": -0.046123991740222386
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.333815224957611
+    },
+    {
+      "ticker": "TE",
+      "score": -0.34040464175501434
+    },
+    {
+      "ticker": "CRML",
+      "score": -0.22864236952546318
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {
@@ -30,24 +92,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T05:44:46.815931-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-12_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -334,6 +378,59 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T05:48:44.439198-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-12_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1444754,
+          "preview": "1d BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-12_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2538,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12337,
+          "preview": "2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12337,
+          "preview": "2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML"
+        },
+        {
+          "path": "01_daily/2026-10-12_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84326,
+          "preview": "# Stock book \u2014 2026-10-12\n_Generated 2026-10-12T05:45:18.127538-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 # Stock book \u2014 2026-10-12\n_Generated 2026-10-12T05:45:18.127538-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
