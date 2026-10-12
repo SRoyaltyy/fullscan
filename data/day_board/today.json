@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T09:24:50.844356-04:00",
+  "generated_at": "2026-10-12T09:31:11.190083-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -11,70 +11,66 @@
   },
   "buy_1d": [
     {
-      "ticker": "SGRY",
-      "score": 0.4278799023745674
+      "ticker": "ASTH",
+      "score": 0.706426341090431
     },
     {
       "ticker": "CON",
-      "score": 0.6447394658922468
+      "score": 0.639955708762995
     },
     {
       "ticker": "AMN",
-      "score": 0.6024309857271279
-    },
-    {
-      "ticker": "FIS",
-      "score": 0.4698654821938251
+      "score": 0.5920779365287303
     },
     {
       "ticker": "KSPI",
-      "score": 0.33809160034308045
+      "score": 0.3890022679416772
     },
     {
       "ticker": "PACS",
-      "score": 0.6648840344805036
+      "score": 0.7093787919305283
     },
     {
       "ticker": "NET",
-      "score": 0.03810872213428017
+      "score": 0.039196999757480214
     },
     {
-      "ticker": "PRGS",
-      "score": 0.5812704940764608
+      "ticker": "TLS",
+      "score": 0.4176187622161986
     }
   ],
   "sell_1d": [
-    {
-      "ticker": "EOSE",
-      "score": -0.35408584322590325
-    },
-    {
-      "ticker": "TE",
-      "score": -0.34881123193049873
-    },
-    {
-      "ticker": "PLUG",
-      "score": -0.26559283515589366
-    },
     {
       "ticker": "OKLO",
       "score": -0.26472807610778865
     },
     {
       "ticker": "NEOV",
-      "score": -0.38168906523251367
+      "score": -0.3778499454769789
     },
     {
       "ticker": "FCEL",
-      "score": -0.2570600830846822
+      "score": -0.25580112343935557
     },
     {
-      "ticker": "QBTS",
-      "score": -0.24854771292904831
+      "ticker": "NNDM",
+      "score": -0.15510592095588355
     },
     {
-      "ticker": "QUBT",
-      "score": -0.12954762468929365
+      "ticker": "POWL",
+      "score": -0.046123991740222386
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.333815224957611
+    },
+    {
+      "ticker": "TE",
+      "score": -0.34040464175501434
+    },
+    {
+      "ticker": "CRML",
+      "score": -0.22864236952546318
     }
   ],
   "flatten": {
@@ -103,56 +99,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T09:20:14.626879-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-12_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 3927278,
-          "preview": "raw=5398 usable=467 single=313 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O | Stein\u2019s Latest: Sixers, Black, Miller, Wallace, Powell - Hoops Rumors"
-        },
-        {
-          "path": "01_daily/news/2026-10-12_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 12631,
-          "preview": "# News Parse v2 \u2014 2026-10-12T09:20:02.667333-04:00\nWindow\u224848h | news_mode=on | raw=5398 | usable=467 | single_name=313 | noise_dropped=4373\nusable polarity={'+': 11, '-': 70, 'mixed': 5, 'neutral': 381}"
-        }
-      ],
-      "preview": "raw=5398 usable=467 single=313 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O | Stein\u2019s Latest: Sixers, Black, Miller, Wallace, Powell - Hoops Rumors \u00b7 # News Parse v2 \u2014 2026-10-12T09:20:02.667333-04:00\nWindow\u224848h | news_mode=on | raw=5398 | usable=467 | single_name=313 | noise_dropped=4373\nusable polarity={'+': 11, '-': 70, 'mixed': 5, 'neutral': 381}"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T09:21:58.286907-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-12_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9335,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-12_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5076,
-          "preview": "# Weather report \u2014 2026-10-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -428,6 +374,41 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-12\n_Generated 2026-10-12T13:24:48 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$103,033.45** (after 09:30 $103,033.45 \u00b7 after 16:00 $103,033.45)\n- Prior close **$103,033.45** \u00b7 09:30 **$103,033.45** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$103,033.45**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$103,033.45** \u00b7 2026-10-12 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_over"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-10-12",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-12T09:31:05.867643-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-10-12",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-12T09:31:09.538450-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-12_events.json",
+          "ok": false,
+          "reason": "zero_events",
+          "size": 212,
+          "preview": "0 events \u00b7 "
+        },
+        {
+          "path": "01_daily/events/2026-10-12_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 205,
+          "preview": "# Event Scan \u2014 2026-10-12 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+        }
+      ],
+      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-12 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
