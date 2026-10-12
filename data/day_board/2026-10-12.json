@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T07:35:35.884090-04:00",
+  "generated_at": "2026-10-12T07:35:39.470234-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1030,31 +1030,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T04:15:46.228947-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-12_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 8249,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-10-12_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 3715,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-12\n**Generated:** 2026-10-12T04:15:46.214602-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks\n**Prior close:** SPX +0.20%  Nasdaq \u2014  Dow \u2014\n**SPX:** +0.20%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal R\n**Leaders:** AMZN, JPM, GS, WFC, C, BAC, MS\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-12\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-12\n**Generated:** 2026-10-12T04:15:46.214602-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks\n**Prior close:** SPX +0.20%  Nasdaq \u2014  Dow \u2014\n**SPX:** +0.20%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal R\n**Leaders:** AMZN, JPM, GS, WFC, C, BAC, MS\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-12\n**Clock use:** `same_morning`"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -3502,6 +3477,24 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T07:35:38.775690-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-12_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "href": {
