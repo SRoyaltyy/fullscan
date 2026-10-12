@@ -373,8 +373,8 @@
       }
     }
   },
-  "version": 77,
-  "updated": "2026-10-12T16:37:14-04:00",
+  "version": 78,
+  "updated": "2026-10-12T18:39:26-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -383,17 +383,6 @@
     "bonus_mult": 1.25
   },
   "history": [
-    {
-      "at": "2026-09-22T18:16:39-04:00",
-      "changes": [
-        "general.B3_FEDPATH: 0.5 -> 0.0 (n=29, hit=0.448)",
-        "Basic Materials.S2_BREADTH: 1.0 -> 0.5 (n=13, hit=0.538)",
-        "Healthcare.S4_ETF_TAPE: 1.25 -> 1.0 (n=14, hit=0.643)",
-        "Industrials.S2_BREADTH: 0.5 -> 0.0 (n=16, hit=0.438)",
-        "Real Estate.S4_ETF_TAPE: 0.5 -> 1.0 (n=16, hit=0.562)",
-        "Utilities.S4_ETF_TAPE: 1.0 -> 1.25 (n=15, hit=0.667)"
-      ]
-    },
     {
       "at": "2026-09-22T18:57:41-04:00",
       "changes": [
@@ -782,6 +771,12 @@
     },
     {
       "at": "2026-10-12T16:37:14-04:00",
+      "changes": [
+        "hold"
+      ]
+    },
+    {
+      "at": "2026-10-12T18:39:26-04:00",
       "changes": [
         "hold"
       ]

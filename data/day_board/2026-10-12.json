@@ -4198,5 +4198,15 @@
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
     "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
-  }
+  },
+  "frozen_write_skips": [
+    {
+      "path": "01_daily/sectors/2026-10-12/_board.json",
+      "at": "2026-10-12T18:39:27-04:00",
+      "commit_msg": "auto: post-close ALL [2026-10-12]",
+      "workflow": "Post-Close last-closed (ubuntu/DeepSeek sidecar)",
+      "run_id": "38317121185",
+      "manifest": "research/input_freeze/2026-10-12/manifest.json"
+    }
+  ]
 }

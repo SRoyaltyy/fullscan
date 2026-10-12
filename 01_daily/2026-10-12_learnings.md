@@ -1,6 +1,6 @@
 # Learnings report — 2026-10-12
 
-Generated: **2026-10-12T16:37:14.407973-04:00** by `src/learn_cycle.py`.
+Generated: **2026-10-12T18:39:26.331878-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -15,10 +15,10 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Graded runs mined | 180 |
 | Hypotheses written | 181 (wins=78, losses=103) |
 | News hypotheses | 1 |
-| Lessons promoted to active | 1 |
+| Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
 | Active lesson files now | 209 |
-| Engine policy version | 77 |
+| Engine policy version | 78 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -81,7 +81,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 ### `news` — 0 wins, 1 losses
 
 #### LOSS — news
-- **When:** [news] Global 1d close win rate 53.7% (n=2430).
+- **When:** [news] Global 1d close win rate 53.8% (n=2435).
 - **Ask:** Entry timing, side mix, or event taxonomy noise?
 - **Experiment:** [news] Raise min net weight to map a ticker; drop weak edges.
 - **Do instead:** [news] Only emit actions with |net| above a higher floor.
@@ -496,7 +496,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 ## 4. Promoted standing rules (this cycle)
 
-- `scheduled-us-cash-equities-session-including-bond-holiday-eq.md`
+_No new promotions this cycle (candidates incomplete, not yet recurring, or already active)._
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 
