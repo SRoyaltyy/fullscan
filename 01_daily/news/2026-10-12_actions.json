@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-12T04:43:40.262256-04:00",
+  "generated_at": "2026-10-12T07:03:36.549031-04:00",
   "hours": 48,
-  "raw_headlines": 5828,
+  "raw_headlines": 5606,
   "news_source": "local_files:empty+free_intake",
   "news_mode": "on",
   "unique_events": 7,
@@ -91,7 +91,7 @@
     },
     {
       "event": "hormuz_energy_risk",
-      "headline_count": 99,
+      "headline_count": 98,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -107,7 +107,7 @@
         "confidence": 0.92,
         "drop_reason": "",
         "notes": [
-          "headline_count=99 supports non-noise severity",
+          "headline_count=98 supports non-noise severity",
           "transit/tanker/fuel language → higher severity"
         ]
       },
@@ -212,7 +212,7 @@
     },
     {
       "event": "port_labor_disruption",
-      "headline_count": 3,
+      "headline_count": 2,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -247,18 +247,12 @@
           "source": "lane_labor_stop",
           "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNQ0UzZGs0N0xsS3VseHZuWldiZndPNy1SMjRTZEt4NWxIQjUwWWVSQU14cUxSbE9UZjhvOHR6VnpKNzVMOGd2N1dSdHpXYUl3VTdMS0lRSkJubzlKSGV4TTUyMTNHYmJTVk10TUtNaGdWdHBad0loRVRpeGpfMUVTZDZ2WTZ3dGFiMlJiRw?oc=5",
           "published_at": "2026-10-11T18:41:09+00:00"
-        },
-        {
-          "title": "Belgium Transport Strike on October 12 to Disrupt Trains and Buses - FTN news",
-          "source": "lane_labor_stop",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQW1RZkFwMTJ1VFVKUV9rQUZLRUppMXhvRmFzYUlWNU9Hem13Z3ZNUVYxQlBrYzVQa08wZ0JseFZXcGJTN18zcEhvemN1cGI3bmJfRXdRZ04tUXI0VFJoT2FHdXJ4T1JrWUh6cEk5bHVZeGFyU2JITXBEZ0FPZ2FtaVNobms?oc=5",
-          "published_at": "2026-10-10T10:17:34+00:00"
         }
       ]
     },
     {
       "event": "fed_rate_path",
-      "headline_count": 237,
+      "headline_count": 224,
       "framework": {
         "keep": "conditional",
         "us_relevance": "high",
@@ -274,7 +268,7 @@
         "confidence": 0.55,
         "drop_reason": "",
         "notes": [
-          "headline_count=237 supports non-noise severity",
+          "headline_count=224 supports non-noise severity",
           "rates polarity unclear → lower confidence / soft book"
         ]
       },
@@ -329,10 +323,10 @@
           "published_at": "2026-10-10T18:39:00+00:00"
         },
         {
-          "title": "FOMC Wall, PERM Suspension, Hospital Stocks | Talking Points This Week - NDTV Profit",
-          "source": "topic_fed",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOQ21FSngwVjZUNjNPQW5lX1lKSEk4eEVYZElOVFF6TG9JUUNvTVp0NzhwcnN3T1RRYmFOZmtIVGVlNnZiNDRzUkFxTHhrcFhpSGhlb204OUJ1YXFXWHB6NTdlM1pMMl9hUkgtWUd2bGlkd05ZODdRNWY5aHNiZnFFa2NmUWl3NnpqMGw2TkwtekFheGZmM1haUUdLemhZQ3lOM0gtNWE5c0R4ZHNTZ28yWtIBuAFBVV95cUxPMDJfVFE1Sk1lLWpLN3pwb1hXRVpHRFp0SENfVU5PLW12X25yOHdHcGgtUTVqVjdpTWo1QjVGWHdVX1lIaVlSY0Z1MFFzMVlGUWtDaXFveEl0QnVaTnFEUURNQ2ZNdnhsenFHSHZZeXJzZUdvYlo0SjMwS0JRZ19MQ3FwbzBpOGNfbk1OQ0JVWVhLR1ZuNmI4M21Wb0RRMENXN3JUTnNEUFFiRWNqTEs3eFZEQ1Z4OEg5?oc=5",
-          "published_at": "2026-10-10T10:32:47+00:00"
+          "title": "Agnico Eagle shares fall after spot gold drops more than $100 as hawkish Federal Reserve comments boost expectations of an additional October rate hike.",
+          "source": "finviz_export",
+          "url": "",
+          "published_at": ""
         }
       ]
     },
@@ -379,7 +373,7 @@
     },
     {
       "event": "weak_labor_print",
-      "headline_count": 11,
+      "headline_count": 9,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -395,7 +389,7 @@
         "confidence": 0.6,
         "drop_reason": "",
         "notes": [
-          "headline_count=11 supports non-noise severity",
+          "headline_count=9 supports non-noise severity",
           "rates polarity unclear → lower confidence / soft book"
         ]
       },
@@ -407,12 +401,6 @@
         "Institutional policy (Fed rate cut, QE, stimulus)"
       ],
       "evidence": [
-        {
-          "title": "Canadian Dollar futures hit 18-month low on weak jobs report. - CME Group",
-          "source": "lane_print_vs_priced",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOHhmUmVHUlVJNTNHM1F6enA4aldiS09NN0d6MVBDbDhGQURENThYTWwxcU5NenhHSzEyQ0MxN3ZES2hZOVBxY3hoUWN3Zk5BNXdBbTZvcDJNa0lVLXJ4QmpHZTAxc0JPWjF0TXJHei1ac3lqYXJKZDdrVmszTDJSYWFpc2ZmRW5tZGdPZld5S2ZXQm5xVnZyWEw0cGtHREw0amZlT0VVU1Z6V2I1TVZFZw?oc=5",
-          "published_at": "2026-10-10T09:26:24+00:00"
-        },
         {
           "title": "Canada jobs report in focus as US tariffs bite, BoC holds and USD/CAD hovers near 1.42 - VT Markets",
           "source": "lane_print_vs_priced",
@@ -454,6 +442,12 @@
           "source": "lane_print_vs_priced",
           "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOc0RDZ0J3U3hJaGZoMnZuNXdjY2xGaTVmZzhscld2RnR5OE5XeWhaeG9kSkFfNFltOE8taGRUV2Y4dk0xTFU3R3hPblBBYkpOdklEeWc2TUg5cXljbUlsdmpyNTR2YVpDSGVXTldKVTMyS0pzekc5LThrc0lUZExlVzlXTHB1cXRUQkt3ekVKMFA1Y0cwdk5xN2owei16bU5QMVRXOXpWbnlXcGlVMUMzbFdoWmIySnQ4b3oxSXk2WkVLSzJpTHR2NzhUOGhjYnc?oc=5",
           "published_at": "2026-10-10T14:48:00+00:00"
+        },
+        {
+          "title": "Kevin Hassett Says Jobs Report ‘Way Better’ Than Expected — Favorable CPI Could Make ‘Strong’ Argument To Hold Rates Steady - Stocktwits",
+          "source": "lane_print_vs_priced",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOU3lOR0VIQVZuTlhCUnVkQ3dMYUNCaHVPb3pBOHJreENyd0lzU1VKeVJrN3JYMHhGcGhKUnNWLUN1aUx3SGVGX2Z0eENXMWRZVFRhWG96cm95cDdKczRnWW14c2Z0SWxKSEpzRFpudWV5d0x3b0ZsTzB3SFVGaV9vRlNHN1Y2RVpwNHZnZVkxbkRBQnVsR1RTUC1WLW5kaVllWGphNGlNMTNqaXlfMmtHMjY3WGpsNGtyLVlXcUgzaEhBS05Qekpn?oc=5",
+          "published_at": "2026-10-10T12:09:37+00:00"
         }
       ]
     }
@@ -1231,7 +1225,7 @@
       ],
       "net": 6.72,
       "side": "buy",
-      "size": "mid"
+      "size": "large"
     },
     {
       "ticker": "UHAL-B",
@@ -1247,7 +1241,7 @@
       ],
       "net": 6.72,
       "side": "buy",
-      "size": "mid"
+      "size": "large"
     },
     {
       "ticker": "WLFC",
@@ -2676,7 +2670,5 @@
     "URA": 4.0,
     "CEG": 5.5,
     "IGV": -4.0
-  },
-  "catalyst_tickers": 0,
-  "catalyst_date": "2026-10-12"
+  }
 }
