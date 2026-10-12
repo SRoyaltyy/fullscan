@@ -250,6 +250,45 @@ def _land(date: str, key: str, title: str = "") -> None:
         print(f"[preopen-all] WARN: land {key} failed: {e}", flush=True)
 
 
+def _heal_general_predict(date: str, cmd: list[str], timeout_s: int) -> None:
+    """Grok-only hard-restart + retry of the general predict (max 2, <09:00 ET).
+    A still-missing predict stays missing so the REQUIRED check goes red."""
+    from . import predict_grok_heal as heal
+    log_p = Path(persist_dir()) / f"{date}_predict_heal.log"
+
+    def _ok() -> bool:
+        return output_qc.qc_general_predict(
+            _p("01_daily", "general", f"{date}_predict.md")).ok
+
+    def _log() -> str:
+        try:
+            return log_p.read_text(encoding="utf-8", errors="replace")[-20000:]
+        except OSError:
+            return ""
+
+    def _rerun(env: dict) -> int:
+        r = subprocess.run(cmd, env=env, capture_output=True, text=True,
+                           timeout=timeout_s)
+        txt = (r.stdout or "") + (r.stderr or "")
+        print(txt[-4000:], flush=True)
+        try:
+            log_p.write_text(txt, encoding="utf-8")
+        except OSError:
+            pass
+        return r.returncode
+
+    try:
+        res = heal.heal(date, _ok, _rerun, log_text=_log)
+    except Exception as e:  # noqa: BLE001
+        print(f"[preopen-all] predict heal crashed: {e}", flush=True)
+        return
+    print(f"[preopen-all] predict heal: ok={res['ok']} "
+          f"retries={res['retries']} {res.get('reason') or ''}", flush=True)
+    if res["ok"] and res["retries"]:
+        snapshot_persist(date)
+        _land(date, "general_predict", "General market predict (Grok heal)")
+
+
 def _deepseek_credits_ok() -> bool:
     """Do not start essays if DeepSeek is already 402 / no key on ubuntu.
 
@@ -721,6 +760,8 @@ def run(date: str | None = None, force: bool = False,
             step("general_predict", "General market predict",
                  [py, "-m", "src.run_predict", "--date", date, *fa],
                  timeout_s=llm_sub_t)
+            _heal_general_predict(date, [py, "-m", "src.run_predict",
+                                         "--date", date, *fa], llm_sub_t)
             step("sector_predict", "Per-sector predict (all 11)",
                  [py, "-m", "src.run_sector_predict", "--date", date, *fa],
                  timeout_s=2400)
