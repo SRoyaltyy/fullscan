@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-12
 
-Export `finviz_2026-10-12.csv` · 11616 names · generated 2026-10-12T09:15:43.567597-04:00
+Export `finviz_2026-10-12.csv` · 11616 names · generated 2026-10-12T11:56:05.059226-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -121,8 +121,8 @@ Mega-cap earnings:
 - BMO **ASML**  EPS est 12.2018  (ASML Holding NV)
 - BMO **JNJ**  EPS est 2.5224  (Johnson & Johnson)
 - AMC **LRCX**  EPS est 2.1771  (Lam Research Corp)
-- BMO **BAC**  EPS est 1.0979  (Bank Of America Corp)
 - BMO **KO**  EPS est 0.8799  (Coca-Cola Co)
+- BMO **BAC**  EPS est 1.0979  (Bank Of America Corp)
 - BMO **PG**  EPS est 1.8832  (Procter & Gamble Co)
 - BMO **UNH**  EPS est 4.138  (Unitedhealth Group Inc)
 - BMO **HSBC**  EPS est 2.2073  (HSBC Holdings plc ADR)
@@ -133,10 +133,10 @@ Mega-cap earnings:
 - BMO **GEV**  EPS est 4.0164  (GE Vernova Inc)
 - BMO **GS**  EPS est 12.8648  (Goldman Sachs Group Inc)
 - AMC **TXN**  EPS est 2.416  (Texas Instruments Inc)
-- AMC **KLAC**  EPS est 1.1838  (KLA Corp)
 - BMO **WFC**  EPS est 1.847  (Wells Fargo & Co)
 - BMO **RTX**  EPS est 1.7719  (RTX Corp)
 - AMC **SAP**  EPS est 2.0816  (Sap SE ADR)
+- AMC **KLAC**  EPS est 1.1838  (KLA Corp)
 - BMO **TMO**  EPS est 6.4032  (Thermo Fisher Scientific Inc)
 - BMO **C**  EPS est 2.6494  (Citigroup Inc)
 - BMO **APH**  EPS est 0.7211  (Amphenol Corp)
@@ -153,14 +153,14 @@ Mega-cap earnings:
 - BMO **DHR**  EPS est 1.9158  (Danaher Corp)
 
 Options event-vol flags (NOT direction):
-- **GOOG** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI 0.526
-- **GOOGL** exp 2026-10-12 ATM IV 0.0078 implied move +0.0% put/call OI 0.198
-- **MSFT** exp 2026-10-12 ATM IV 0.0005 implied move 0.0% put/call OI 0.515
-- **TSM** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI 1.264
-- **TSLA** exp 2026-10-12 ATM IV 0.002 implied move +0.0% put/call OI 0.849
-- **JPM** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI 0.736
-- **V** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI 0.103
-- **ASML** exp 2026-10-16 ATM IV 0.0003 implied move 0.0% put/call OI 0.68
+- **GOOG** exp 2026-10-16 ATM IV 0.2941 implied move +3.1% put/call OI 1.307
+- **GOOGL** exp 2026-10-12 ATM IV 0.1547 implied move +0.8% put/call OI 0.171
+- **MSFT** exp 2026-10-12 ATM IV 0.1106 implied move +0.6% put/call OI 0.079
+- **TSM** exp 2026-10-16 ATM IV 0.4324 implied move +4.5% put/call OI 3.541
+- **TSLA** exp 2026-10-12 ATM IV 0.1405 implied move +0.7% put/call OI 2.234
+- **JPM** exp 2026-10-16 ATM IV 0.3741 implied move +3.9% put/call OI 0.801
+- **V** exp 2026-10-16 ATM IV 0.2028 implied move +2.1% put/call OI 0.013
+- **ASML** exp 2026-10-16 ATM IV 0.6052 implied move +6.3% put/call OI 3.385
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 1 min **DJIA** Nasdaq Futures Slip as Middle East Worries Resume (Schaeffer's Research)
-- 4 min **STE** Steris to Acquire Xodus Medical for $2.1 Billion (The Wall Street Journal)
-- 9 min **MKSI** MKS Inc. Announces Third Quarter 2026 Earnings Conference Call (GlobeNewswire)
-- 10 min **SPCX,RS** Musk vows affordable Starlink pricing in India ahead of Jio IPO (Quartz)
-- 10 min **FLEX** Flex Expands Prefabricated Modular Data Center Portfolio to Accelerate AI Factory Deployment (PR Newswire)
-- 10 min **CSX** CSX Announces Retirement of Chief Operating Officer Mike Cory (GlobeNewswire)
-- 11 min **MRNA** Moderna Stock Has Been on a Winning Streak (The Wall Street Journal)
-- 12 min **HUT,ABTC** American Bitcoin's Mining Economics Could Be Its Edge  This Analyst Sees A Potential 185% Upside (Stocktwits)
-- 13 min **SPCX,TMUS,T,VZ** T-Mobile stock worst day since 2013 after SpaceX spectrum deal (Quartz)
-- 13 min **RILY** B. Riley Securities Adds Senior Banker to Expand Technology, Media and Sports Advisory (PR Newswire)
-- 14 min **NVDA** Microsoft plans huge deployment of its own AI chips, with an eye on saving costs (Reuters)
-- 14 min **SNOW** Pioneer Jeff Naughton, One of the Most Influential Database Scientists of This Generation, Joins Snowflake to Advance Data Systems for the Agentic Enterprise (Business Wire)
-- 15 min **SBC** SBC Medical to Present at Cantor Fitzgerald Hong Kong's Inaugural Asia Longevity Forum (GlobeNewswire)
-- 15 min **TXN** TI unveils new ADC to enable nanosecond-level telemetry and minimize downtime in AI data centers (PR Newswire)
-- 15 min **SSD** Simpson Manufacturing Co., Inc. to Announce Third Quarter 2026 Financial Results on Monday, October 26th (PR Newswire)
-- 15 min **KR** Kroger helps keep families healthy this fall (PR Newswire)
-- 15 min **RTX** RTX's Raytheon completes three successful tests of new Coyote upgrades (PR Newswire)
-- 15 min **CNVS** Cineverse to Launch New 24/7 German Soccer Network, Available Exclusively on LG Channels (PR Newswire)
-- 15 min **FMN,FHI** Federated Hermes Premier Municipal Income Fund declares dividend (PR Newswire)
-- 15 min **PSIX** Power Solutions International Sets Date for Third Quarter 2026 Earnings Release and Conference Call (GlobeNewswire)
-- 15 min **ALAB** Astera Labs Unveils Orion: A Compute-Agnostic Rack-Scale Architecture for Token-Efficient AI Factories (GlobeNewswire)
-- 15 min **AMD** Introducing AMD Helion, Agentic AI Compute at Rack Scale (GlobeNewswire)
-- 15 min **PLTK** Kevin Bacon invites players to help build his farm in Solitaire Grand Harvest (GlobeNewswire)
-- 15 min **CISS** C3is Inc. Announces Attractive Voyage Charter Contract for its Aframax Tanker, Delivery of the Second MR Product Tanker and Robust NAV/Share (GlobeNewswire)
-- 15 min **CXDO** Crexendo Announces Participation in Upcoming Investor Conferences (ACCESSWIRE)
+- 7 min **MIRM** Mirum tees up Livmarli label expansion on Phase III liver disease study success (Clinical Trials Arena)
+- 10 min **LCID** Lucid Sets Plan for First Retail and Service Locations in France (PR Newswire)
+- 11 min **OHI,VICI** Better High-Yield Dividend Stock: Omega Healthcare vs. VICI Properties (TIKR)
+- 12 min **SN** SharkNinja Attacks A Breakout; Senses This Technical Shift (Investor's Business Daily)
+- 14 min **CIGI** Miami Retail Pipeline Hits 1.3M SF, Highest Since Early 2023 (CRE Daily)
+- 16 min **MKC,PEP** 3 charts sum up why many US households are struggling right now (Yahoo Finance)
+- 16 min **ONDS,PLTR** Ondas, Palantir Partner To Launch New AI Company For Defense Missions  Everything To Know About Regna AI (Stocktwits)
+- 17 min **BHR,CBRE** Braemar Puts Four Seasons Scottsdale Under Contract at $372M (CRE Daily)
+- 21 min **ARES** 1800 Avenue of the Stars Lands $550M Century City Refinancing (CRE Daily)
+- 21 min **SKYD,NFLX,DIS** Skydance Shareholders Get Free Warrants Tuesday. Index Selling Could Hurt the Price. (Barrons.com)
+- 24 min **AI** C3.ai Soars 10% as Northland Upgrade Sees New Growth Engine and Easing Comps (TIKR)
+- 25 min **FDX** Congratulations to the 2026 Picture Proof of Planting Contest Winners (ACCESSWIRE)
+- 28 min **PSNY** Polestar reports record Q3, YTD global sales as it faces US ban (Wards Auto)
+- 29 min **TTMI,FN,CLS,FLEX,SPGI** How Much Have Buybacks Lifted Sanminas Earnings Per Share? (Trefis)
+- 29 min **KR** Senator raises concerns over Krogers plan to buy Giant Eagle (Grocery Dive)
+- 32 min **MTZ,TFC,FLR,PWR** Truist Names Top Infrastructure Services Stocks (Investing.com)
+- 35 min **XOM,BLK** SEC closes CA100+ probe, signals increased scrutiny on climate groups (ESG Dive)
+- 37 min **ROST** Ross opens 51 new stores (Retail Dive)
+- 44 min **MFG** Fannie Mae, Freddie Mac Stocks Sink on Fading Privatization Hopes (Barrons.com)
+- 46 min **CRM** 'AI 3.0 is the interface': Salesforce stock pops on BoA upgrade (Yahoo Finance)
+- 48 min **SPGI,COST,WMT,TGT,HD** What Cheaper Gas Would Mean For Costcos Sales And Margins (Trefis)
+- 48 min **FCEL** FuelCell Energy Appoints Manufacturing Executive to Lead Expansion Toward 500 MW Annual Capacity (InvestorsHub)
+- 48 min **HOG,GM** FuelCell Energy Appoints Manufacturing Executive to Lead Expansion Toward 500 MW Annual Capacity (InvestorsHub)
+- 49 min **GOOG,GOOGL** Google expands wearables lineup with $180 Fitbit Edge to boost digital health push (Investing.com)
+- 49 min **DPC** DPC Holdings Agrees to Dispose of Ivostud to DUBAG Group (Business Wire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
