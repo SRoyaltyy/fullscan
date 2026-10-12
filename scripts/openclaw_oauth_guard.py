@@ -147,6 +147,10 @@ def renew(result: dict) -> bool:
     out = (call.stdout or "") + (call.stderr or "")
     result["renew_call_rc"] = call.returncode
     result["renew_call_answer_ok"] = "42" in (call.stdout or "")
+    # Redacted tail so a failed refresh shows its real reason (no tokens:
+    # strip anything that looks like a bearer/JWT).
+    tail = re.sub(r"\s+", " ", out)[-400:]
+    result["renew_call_tail"] = re.sub(r"(eyJ[\w.-]{10,}|[A-Za-z0-9_\-]{40,})", "<redacted>", tail)
     exp2, _, _ = xai_oauth_expiry()
     left2 = (exp2 - datetime.now(timezone.utc)).total_seconds() / 60 if exp2 else None
     result["expires_after"] = exp2.isoformat() if exp2 else None
