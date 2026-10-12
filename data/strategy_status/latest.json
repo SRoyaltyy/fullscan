@@ -32,9 +32,8 @@
   },
   "theme_radar": {
    "MISSING": 0,
-   "OK": 0,
-   "SIT": 0,
-   "WAIT": 3
+   "OK": 3,
+   "SIT": 0
   },
   "webull_sim": {
    "MISSING": 374,
@@ -43,7 +42,7 @@
   }
  },
  "date": "2026-10-12",
- "generated_at": "2026-10-12T05:21:41-04:00",
+ "generated_at": "2026-10-12T05:41:24-04:00",
  "strategies": [
   {
    "buys": [],
@@ -6602,34 +6601,62 @@
    "buys": [],
    "family": "theme_radar",
    "name": "theme_radar:fpe_delta_t3_earn_today_3d",
-   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). no plan file yet (due ~05:20 ET, MISSING at 09:00 ET)",
+   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). plan built 05:25 ET; 23 short(s) at the open",
    "research_only": true,
    "sells": [],
-   "shorts": [],
+   "shorts": [
+    "AGNC",
+    "BAC",
+    "BLK",
+    "C",
+    "CCK",
+    "CLF",
+    "DPZ",
+    "DX",
+    "ERIC",
+    "FAST",
+    "JBHT",
+    "JNJ",
+    "JPM",
+    "MAN",
+    "MRSH",
+    "PGR",
+    "PLD",
+    "TRV",
+    "UNH",
+    "WFC",
+    "WIT",
+    "WRB",
+    "WSE"
+   ],
    "source": "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/main/research/shadow_log/plans/plan_2026-10-12.csv",
-   "status": "WAIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "theme_radar",
    "name": "theme_radar:fresh_dcp_t1_ep_ge03_2d",
-   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). no plan file yet (due ~05:20 ET, MISSING at 09:00 ET)",
+   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). plan built 05:25 ET; 1 short(s) at the open",
    "research_only": true,
    "sells": [],
-   "shorts": [],
+   "shorts": [
+    "VBIO"
+   ],
    "source": "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/main/research/shadow_log/plans/plan_2026-10-12.csv",
-   "status": "WAIT"
+   "status": "OK"
   },
   {
    "buys": [],
    "family": "theme_radar",
    "name": "theme_radar:fresh_dcp_t1_avoid_ah_3d",
-   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). no plan file yet (due ~05:20 ET, MISSING at 09:00 ET)",
+   "note": "RESEARCH ONLY, not traded (Theme Radar shadow short). plan built 05:25 ET; 1 short(s) at the open",
    "research_only": true,
    "sells": [],
-   "shorts": [],
+   "shorts": [
+    "VBIO"
+   ],
    "source": "https://raw.githubusercontent.com/SRoyaltyy/theme-radar/main/research/shadow_log/plans/plan_2026-10-12.csv",
-   "status": "WAIT"
+   "status": "OK"
   }
  ]
 }
