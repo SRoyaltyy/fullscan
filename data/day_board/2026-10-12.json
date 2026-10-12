@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T10:41:05.666718-04:00",
+  "generated_at": "2026-10-12T11:56:06.406592-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -57,7 +57,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 274741,
+          "size": 273451,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -68,10 +68,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18067,
+          "size": 17797,
           "said": "MAP HEAT \u2014 2026-10-12",
           "bullets": [
-            "Export `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T09:15:43.567597-04:00",
+            "Export `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T11:56:05.059226-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -229,7 +229,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 274741,
+          "size": 273451,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -359,8 +359,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['events', 'news_judge', 'general_predict']",
-          "size": 7653,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=True \u00b7 missing events, news_judge, general_predict",
+          "size": 7654,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, general_predict",
           "bullets": []
         },
         {
@@ -1034,122 +1034,6 @@
     }
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T08:41:46.287660-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 13434,
-          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 936,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-10-12.json",
-          "ok": true,
-          "reason": "",
-          "size": 201359,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-10-12_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 161069,
-          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 622524,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-10-12_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 622524,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/factor_mine/morning_look/2026-10-12.json",
-          "ok": true,
-          "reason": "",
-          "size": 146738,
-          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 847952,
-          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 622524,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 166956,
-          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 622524,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 622524,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 845443,
-          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1533,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1533,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL, TE, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys:"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -4138,6 +4022,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T11:56:05.277890-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-12_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 273451,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-12_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18142,
+          "preview": "# MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T11:56:05.059226-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T11:56:05.059226-04:00"
     }
   ],
   "href": {
