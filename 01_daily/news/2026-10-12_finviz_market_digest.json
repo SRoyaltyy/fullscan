@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-12",
+  "generated_at": "2026-10-12T04:15:46.214602-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-12",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks",
+  "raw_text": "- S&P 500 futures (@ES) rose about 0.2% and Nasdaq futures (@NQ) gained more after a solid week that left the S&P 500 near 7,811, the Dow ($DJI) around 51,655, and the Nasdaq near 27,366 on Friday\n- Amazon (AMZN) is in focus after reports from the Wall Street Journal, Reuters, and Bloomberg that it is in talks to acquire AI startup Decart for around $7 billion to bolster its AI chip optimization and infrastructure capabilities\n- Oil (@CL) prices initially climbed then gave back gains following renewed Houthi attacks on Saudi airports and tankers, raising supply risks and geopolitical risk premia\n- President Trump commented on potential U.S. involvement against Iran-backed groups and on a possible Russia-Ukraine energy ceasefire, adding to uncertainty around energy markets\n- Energy stocks may see support from higher risk premia even as broader equities and inflation expectations face pressure from elevated geopolitical tensions\n- Third-quarter earnings season begins in earnest Tuesday with major banks including JPMorgan Chase (JPM), Goldman Sachs (GS), Wells Fargo (WFC), Citigroup (C), Bank of America (BAC), and Morgan Stanley (MS) set to report\n- Consensus expects roughly 30% S&P 500 profit growth in Q3, with bank results offering read-throughs on consumer spending, the impact of higher rates, and capital markets activity\n- Wednesday’s US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal Reserve’s policy path\n- The current bull market approaches its fourth anniversary while contending with bond yields near multi-year highs and surging mortgage rates",
+  "raw_summary_md": "- S&P 500 futures ([@ES](https://finviz.com/futures_charts?t=ES)) rose about **0.2%** and **Nasdaq futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) gained more after a solid week that left the **S&P 500 near 7,811**, the **Dow** ([$DJI](https://finviz.com/index/DJI?p=d)) **around 51,655**, and the **Nasdaq near 27,366** on Friday\n- **Amazon** ([AMZN](https://finviz.com/quote?t=AMZN)) is in focus after reports from the Wall Street Journal, Reuters, and Bloomberg that it is in talks to **acquire AI startup Decart for around $7 billion** to bolster its **AI chip optimization and infrastructure capabilities**\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices initially climbed then gave back gains following **renewed Houthi attacks on Saudi airports and tankers**, raising **supply risks and geopolitical risk premia**\n- **President Trump** commented on potential **U.S. involvement against Iran-backed groups** and on a possible **Russia-Ukraine energy ceasefire**, adding to **uncertainty around energy markets**\n- **Energy stocks may see support from higher risk premia** even as **broader equities and inflation expectations face pressure** from elevated geopolitical tensions\n- **Third-quarter earnings season begins in earnest Tuesday** with major banks including **JPMorgan Chase** ([JPM](https://finviz.com/quote?t=JPM)), **Goldman Sachs** ([GS](https://finviz.com/quote?t=GS)), **Wells Fargo** ([WFC](https://finviz.com/quote?t=WFC)), **Citigroup** ([C](https://finviz.com/quote?t=C)), **Bank of America** ([BAC](https://finviz.com/quote?t=BAC)), and **Morgan Stanley** ([MS](https://finviz.com/quote?t=MS)) set to report\n- **Consensus expects roughly 30% S&P 500 profit growth in Q3**, with bank results offering read-throughs on consumer spending, the impact of higher rates, and capital markets activity\n- **Wednesday’s US CPI report**, along with **retail sales** and other data later in the week, is due to provide fresh signals on the **economic outlook and the Federal Reserve’s policy path**\n- The **current bull market approaches its fourth anniversary** while contending with **bond yields near multi-year highs** and **surging mortgage rates**",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 0.2,
+      "verb": "rose"
+    }
+  ],
+  "oil": null,
+  "cpi": {
+    "text": "US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal R",
+    "hotter": false
+  },
+  "fed_odds": null,
+  "named_tickers": [
+    "AMZN",
+    "JPM",
+    "GS",
+    "WFC",
+    "C",
+    "BAC",
+    "MS"
+  ],
+  "named_leaders": [
+    "AMZN",
+    "JPM",
+    "GS",
+    "WFC",
+    "C",
+    "BAC",
+    "MS"
+  ],
+  "calendar": [
+    "S&P 500 futures (@ES) rose about 0.2% and Nasdaq futures (@NQ) gained more after a solid week that left the S&P 500 near 7,811, the Dow ($DJI) around 51,655, and the Nasdaq near 27,366 on Friday",
+    "Third-quarter earnings season begins in earnest Tuesday with major banks including JPMorgan Chase (JPM), Goldman Sachs (GS), Wells Fargo (WFC), Citigroup (C), Bank of America (BAC), and Morgan Stanley (MS) set to report",
+    "Wednesday’s US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal Reserve’s policy path"
+  ],
+  "prior_close": {
+    "spx": 0.2,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": {
+      "text": "US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal R",
+      "hotter": false
+    },
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": true,
+    "fed": true,
+    "bullets": [
+      "Third-quarter earnings season begins in earnest Tuesday with major banks including JPMorgan Chase (JPM), Goldman Sachs (GS), Wells Fargo (WFC), Citigroup (C), Bank of America (BAC), and Morgan Stanley (MS) set to report",
+      "Wednesday’s US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal Reserve’s policy path"
+    ],
+    "text": "Third-quarter earnings season begins in earnest Tuesday with major banks including JPMorgan Chase (JPM), Goldman Sachs (GS), Wells Fargo (WFC), Citigroup (C), Bank of America (BAC), and Morgan Stanley (MS) set to report Wednesday’s US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal Reserve’s policy path"
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Oil (@CL) prices initially climbed then gave back gains following renewed Houthi attacks on Saudi airports and tankers, raising supply risks and geopolitical risk premia President Trump commented on potential U.S. involvement against Iran-backed groups and on a possible Russia-Ukraine energy ceasefire, adding to uncertainty around energy markets"
+  },
+  "finviz_id": 306591,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-11T20:06:24.277",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
