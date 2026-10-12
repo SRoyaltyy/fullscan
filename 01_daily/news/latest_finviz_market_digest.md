@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-12
 
-**Generated:** 2026-10-12T04:15:46.214602-04:00 (America/New_York)
+**Generated:** 2026-10-12T04:16:59.228261-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks
 **Prior close:** SPX +0.20%  Nasdaq —  Dow —

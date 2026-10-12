@@ -1,11 +1,11 @@
-# Finviz Daily Digest — 2026-10-09
+# Finviz Daily Digest — 2026-10-12
 
-_Generated 2026-10-10T03:01:56.637705-04:00 · export=data/exports/finviz_2026-10-09.csv · ticker digests=5906 · high-signal=1780_
+_Generated 2026-10-12T04:16:50.629049-04:00 · export=data/exports/finviz_2026-10-09.csv · ticker digests=5906 · high-signal=1780_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: S&P 500, Nasdaq 100, Dow End Week Higher With Traders Eyeing Earnings Season  MSFT, NFLX, SPCX, ASTS In Focus
-- **Nasdaq-100 (QQQ)**: S&P 500, Nasdaq 100, Dow End Week Higher With Traders Eyeing Earnings Season  MSFT, NFLX, SPCX, ASTS In Focus
+- **S&P 500 (SPY)**: Stock Market: Will S&P 500 Open Up or Down Today?
+- **Nasdaq-100 (QQQ)**: Stocktwits Pharma Pulse: JNJ Earnings, Cancer Updates And Two FDA Target Dates  The Weeks Biotech Watchlist
 - **Dow Jones (DIA)**: S&P 500, Nasdaq 100, Dow End Week Higher With Traders Eyeing Earnings Season  MSFT, NFLX, SPCX, ASTS In Focus
 - **Russell 2000 (IWM)**: 351 Exchanges: So Hot Right Now
 
