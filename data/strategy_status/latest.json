@@ -47,7 +47,7 @@
   }
  },
  "date": "2026-10-12",
- "generated_at": "2026-10-12T08:37:46-04:00",
+ "generated_at": "2026-10-12T08:45:02-04:00",
  "strategies": [
   {
    "buys": [
@@ -5109,12 +5109,10 @@
   },
   {
    "buys": [
-    "CDNA",
+    "FANG",
     "ARQT",
-    "ETON",
-    "PINS",
-    "TRU",
-    "TOST"
+    "CDNA",
+    "ETON"
    ],
    "family": "flatten_robust",
    "name": "flatten_robust",
