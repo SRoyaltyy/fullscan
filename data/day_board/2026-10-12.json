@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T06:54:15.455658-04:00",
+  "generated_at": "2026-10-12T06:54:29.928558-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -3249,6 +3249,31 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T06:54:28.222902-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-12_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7576443,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ELV, AAPL, AVPT, ATRC, CXT"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-12_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8367271,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 BIIB, ATRC, CXT, HTHT, RGEN"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ELV, AAPL, AVPT, ATRC, CXT \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 BIIB, ATRC, CXT, HTHT, RGEN"
     }
   ],
   "href": {
