@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T04:43:50.700529-04:00",
+  "generated_at": "2026-10-12T05:03:42.193052-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -183,7 +183,7 @@
       "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 14,
       "files": [
         {
@@ -321,11 +321,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-12/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6393,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -334,13 +339,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7580,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "size": 8446,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
           "bullets": [
             "general_predict:missing",
             "events:zero_events",
             "news_judge:missing",
-            "news_actions:missing"
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -487,8 +492,15 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "sectors 0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing"
+      ]
     },
     {
       "key": "weather",
@@ -647,7 +659,7 @@
       "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
-      "n_opt": 4,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -664,12 +676,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-12/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6393,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -895,7 +912,22 @@
     "sell_1d": [],
     "flatten": {},
     "general": {},
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {},
     "weather": {
       "said": "favorable 1 \u00b7 hostile 2 \u00b7 neutral 8",
@@ -1363,6 +1395,24 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-12T04:43:40.262256-04:00\nraw=5828 unique_events=7 tickers=112"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T05:03:41.374801-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-12/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6393,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "href": {
