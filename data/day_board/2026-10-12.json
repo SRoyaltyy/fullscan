@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T08:19:47.578170-04:00",
+  "generated_at": "2026-10-12T08:20:15.455136-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -300,8 +300,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 84328,
-          "said": "113 ticker actions \u00b7 7 events \u00b7 5606 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 82920,
+          "said": "112 ticker actions \u00b7 7 events \u00b7 5489 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -614,8 +614,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 84328,
-          "said": "113 ticker actions \u00b7 7 events \u00b7 5606 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 82920,
+          "said": "112 ticker actions \u00b7 7 events \u00b7 5489 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -655,7 +655,7 @@
           ]
         }
       ],
-      "said": "113 ticker actions \u00b7 7 events \u00b7 5606 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+      "said": "112 ticker actions \u00b7 7 events \u00b7 5489 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
       "bullets": [
         "SELL DAL",
         "SELL UAL",
@@ -712,8 +712,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 84328,
-          "said": "113 ticker actions \u00b7 7 events \u00b7 5606 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 82920,
+          "said": "112 ticker actions \u00b7 7 events \u00b7 5489 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -1030,16 +1030,6 @@
     }
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-10-12",
-      "ok": false,
-      "pushed": false,
-      "at": "2026-10-12T04:43:23.351872-04:00",
-      "files": [],
-      "preview": "no files"
-    },
     {
       "key": "events_catcher",
       "title": "Event catcher (gap hunt, no carry)",
@@ -3607,6 +3597,31 @@
         }
       ],
       "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-12 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T08:20:13.632007-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-12_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 82920,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-12_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 16381,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-12T08:20:13.604699-04:00\nraw=5489 unique_events=7 tickers=112"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-12T08:20:13.604699-04:00\nraw=5489 unique_events=7 tickers=112"
     }
   ],
   "href": {

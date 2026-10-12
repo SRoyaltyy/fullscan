@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-12T07:03:36.549031-04:00",
+  "generated_at": "2026-10-12T08:20:13.604699-04:00",
   "hours": 48,
-  "raw_headlines": 5606,
+  "raw_headlines": 5489,
   "news_source": "local_files:empty+free_intake",
   "news_mode": "on",
   "unique_events": 7,
@@ -91,7 +91,7 @@
     },
     {
       "event": "hormuz_energy_risk",
-      "headline_count": 98,
+      "headline_count": 97,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -107,7 +107,7 @@
         "confidence": 0.92,
         "drop_reason": "",
         "notes": [
-          "headline_count=98 supports non-noise severity",
+          "headline_count=97 supports non-noise severity",
           "transit/tanker/fuel language → higher severity"
         ]
       },
@@ -252,7 +252,7 @@
     },
     {
       "event": "fed_rate_path",
-      "headline_count": 224,
+      "headline_count": 219,
       "framework": {
         "keep": "conditional",
         "us_relevance": "high",
@@ -268,7 +268,7 @@
         "confidence": 0.55,
         "drop_reason": "",
         "notes": [
-          "headline_count=224 supports non-noise severity",
+          "headline_count=219 supports non-noise severity",
           "rates polarity unclear → lower confidence / soft book"
         ]
       },
@@ -373,7 +373,7 @@
     },
     {
       "event": "weak_labor_print",
-      "headline_count": 9,
+      "headline_count": 8,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -389,7 +389,7 @@
         "confidence": 0.6,
         "drop_reason": "",
         "notes": [
-          "headline_count=9 supports non-noise severity",
+          "headline_count=8 supports non-noise severity",
           "rates polarity unclear → lower confidence / soft book"
         ]
       },
@@ -442,12 +442,6 @@
           "source": "lane_print_vs_priced",
           "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOc0RDZ0J3U3hJaGZoMnZuNXdjY2xGaTVmZzhscld2RnR5OE5XeWhaeG9kSkFfNFltOE8taGRUV2Y4dk0xTFU3R3hPblBBYkpOdklEeWc2TUg5cXljbUlsdmpyNTR2YVpDSGVXTldKVTMyS0pzekc5LThrc0lUZExlVzlXTHB1cXRUQkt3ekVKMFA1Y0cwdk5xN2owei16bU5QMVRXOXpWbnlXcGlVMUMzbFdoWmIySnQ4b3oxSXk2WkVLSzJpTHR2NzhUOGhjYnc?oc=5",
           "published_at": "2026-10-10T14:48:00+00:00"
-        },
-        {
-          "title": "Kevin Hassett Says Jobs Report ‘Way Better’ Than Expected — Favorable CPI Could Make ‘Strong’ Argument To Hold Rates Steady - Stocktwits",
-          "source": "lane_print_vs_priced",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOU3lOR0VIQVZuTlhCUnVkQ3dMYUNCaHVPb3pBOHJreENyd0lzU1VKeVJrN3JYMHhGcGhKUnNWLUN1aUx3SGVGX2Z0eENXMWRZVFRhWG96cm95cDdKczRnWW14c2Z0SWxKSEpzRFpudWV5d0x3b0ZsTzB3SFVGaV9vRlNHN1Y2RVpwNHZnZVkxbkRBQnVsR1RTUC1WLW5kaVllWGphNGlNMTNqaXlfMmtHMjY3WGpsNGtyLVlXcUgzaEhBS05Qekpn?oc=5",
-          "published_at": "2026-10-10T12:09:37+00:00"
         }
       ]
     }
@@ -2664,33 +2658,11 @@
       "net": 1.05,
       "side": "buy",
       "size": "large"
-    },
-    {
-      "ticker": "GOOGL",
-      "buy_score": 0.45,
-      "sell_score": 0.0,
-      "events": [
-        {
-          "event": "catalyst",
-          "side": "buy",
-          "weight": 0.45,
-          "bucket": "earnings",
-          "net_signal": "Bullish",
-          "conviction": 17
-        }
-      ],
-      "net": 0.45,
-      "side": "buy",
-      "catalyst_signal": "Bullish",
-      "catalyst_conviction": 17,
-      "catalyst_stack": "On 2026-04-29 Alphabet beat Q1 with $109.9B revenue, raised the dividend to $0.22 and lifted 2026 capex to $180-190B; on 2026-07-22 Q2 printed $119.8B revenue and a $514B Cloud backlog, pushing capex to $195-205B even as adjusted EPS of $2.85 missed about $2.89. Product momentum "
     }
   ],
   "judge_tickers": {
     "URA": 4.0,
     "CEG": 5.5,
     "IGV": -4.0
-  },
-  "catalyst_tickers": 1,
-  "catalyst_date": "2026-10-12"
+  }
 }
