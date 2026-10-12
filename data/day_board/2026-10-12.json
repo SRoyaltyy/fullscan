@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T15:50:47.502481-04:00",
+  "generated_at": "2026-10-12T15:51:22.819172-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -820,7 +820,7 @@
           "size": 83503,
           "said": "Stock book \u2014 2026-10-12",
           "bullets": [
-            "_Generated 2026-10-12T15:41:33.188427-04:00_",
+            "_Generated 2026-10-12T15:50:56.635427-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -1034,31 +1034,6 @@
     }
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T09:20:14.626879-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-12_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 3927278,
-          "preview": "raw=5398 usable=467 single=313 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O | Stein\u2019s Latest: Sixers, Black, Miller, Wallace, Powell - Hoops Rumors"
-        },
-        {
-          "path": "01_daily/news/2026-10-12_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 12631,
-          "preview": "# News Parse v2 \u2014 2026-10-12T09:20:02.667333-04:00\nWindow\u224848h | news_mode=on | raw=5398 | usable=467 | single_name=313 | noise_dropped=4373\nusable polarity={'+': 11, '-': 70, 'mixed': 5, 'neutral': 381}"
-        }
-      ],
-      "preview": "raw=5398 usable=467 single=313 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O | Stein\u2019s Latest: Sixers, Black, Miller, Wallace, Powell - Hoops Rumors \u00b7 # News Parse v2 \u2014 2026-10-12T09:20:02.667333-04:00\nWindow\u224848h | news_mode=on | raw=5398 | usable=467 | single_name=313 | noise_dropped=4373\nusable polarity={'+': 11, '-': 70, 'mixed': 5, 'neutral': 381}"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -4075,6 +4050,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T15:51:21.839142-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-12_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1464314,
+          "preview": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-12_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2538,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "01_daily/2026-10-12_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84596,
+          "preview": "# Stock book \u2014 2026-10-12\n_Generated 2026-10-12T15:50:56.635427-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 # Stock book \u2014 2026-10-12\n_Generated 2026-10-12T15:50:56.635427-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
