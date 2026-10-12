@@ -98,7 +98,8 @@ def test_open_pack_stamps_session_open_and_restamps_pages() -> None:
     st = (ROOT / "src" / "strategy_tickets.py").read_text(encoding="utf-8")
     yml = (WF / "open_0930.yml").read_text(encoding="utf-8")
     dep = (WF / "deploy-dashboard.yml").read_text(encoding="utf-8")
-    assert "src.strategy_tickets --date" in script
+    # morning_look wraps strategy_tickets (pre-open commit look).
+    assert "src.morning_look tickets --date" in script
     assert "--write" in script
     assert "set -euo pipefail" in script
     assert "clock_legal_for" in script

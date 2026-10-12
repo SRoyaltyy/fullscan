@@ -26,6 +26,77 @@ def test_inputs_not_existing_outputs_control_readiness(tmp_path):
         assert dr.evaluate('2026-09-17')['fingerprint'] != ready['fingerprint']
 
 
+def test_extra_decision_inputs_join_the_fingerprint(tmp_path):
+    """Excel + sleeve-merge inputs are part of the decision input set.
+
+    IRONCLAD C.10: live tickets and the record use the same input set.
+    A change in either file must change the fingerprint; absence is
+    hashed so the file appearing later is an input change, not a no-op.
+    Absence never blocks `ready`.
+    """
+    specs = [{'key': 'stock_book', 'files': [
+        {'key': 'in_a', 'role': 'input', 'rel': 'a.json'},
+        {'key': 'join', 'role': 'required', 'rel': 'join.csv'},
+        {'key': 'peers', 'role': 'required', 'rel': 'peers.csv'}]}]
+    panel = tmp_path/'data/factor_mine/panel.json'
+    panel.parent.mkdir(parents=True); panel.write_text('{}')
+    (tmp_path/'a.json').write_text('{}')
+    (tmp_path/'join.csv').write_text('ticker\nABC\n')
+    (tmp_path/'peers.csv').write_text('ticker\nXYZ\n')
+    excel = tmp_path/'excel_bot/suggestions'
+    excel.mkdir(parents=True)
+    sleeve = tmp_path/'data/sleeve_merge'
+    sleeve.mkdir(parents=True)
+
+    def check(item, date):
+        exists = (tmp_path/item['rel']).exists()
+        return SimpleNamespace(status='OK' if exists else 'MISSING', reason='')
+
+    with patch.object(dr, 'ROOT', tmp_path), \
+         patch.object(diag, 'workflow_specs', return_value=specs), \
+         patch.object(diag, '_check_file', side_effect=check):
+        absent = dr.evaluate('2026-10-07')
+        assert absent['inputs']['excel_bot/suggestions/suggestions.csv'] == dr.ABSENT
+        assert absent['inputs']['data/sleeve_merge/today.json'] == dr.ABSENT
+        fp_absent = absent['fingerprint']
+
+        (excel/'suggestions.csv').write_text('strategy,ticker,side,signal_date\n')
+        excel_only = dr.evaluate('2026-10-07')
+        assert excel_only['fingerprint'] != fp_absent
+
+        (sleeve/'today.json').write_text('{"tickets": []}')
+        both = dr.evaluate('2026-10-07')
+        assert both['fingerprint'] != excel_only['fingerprint']
+
+        (excel/'suggestions.csv').write_text(
+            'strategy,ticker,side,signal_date\nx,ABC,LONG,2026-10-07\n')
+        changed = dr.evaluate('2026-10-07')
+        assert changed['fingerprint'] != both['fingerprint']
+        # extra inputs fingerprint only — they never block readiness
+        assert changed['ready']
+
+
+def test_main_gate_ignores_absent_inputs_but_enforces_present_ones():
+    proof = {
+        'ready': True,
+        'fingerprint': 'abc',
+        'inputs': {
+            'excel_bot/suggestions/suggestions.csv': dr.ABSENT,
+            'data/sleeve_merge/today.json': 'deadbeef',
+        },
+        'blockers': [],
+    }
+    with patch.object(dr, 'blob_sha256_on_main', return_value=False):
+        gated = dr.apply_main_gate(dict(proof))
+    # absent file: not main-gated (nothing can land a file that does not
+    # exist yet). present file: must be that same blob on main.
+    assert gated['ready'] is False
+    assert gated['main_missing'] == ['data/sleeve_merge/today.json']
+
+    with patch.object(dr, 'blob_sha256_on_main', return_value='deadbeef'):
+        assert dr.apply_main_gate(dict(proof))['ready'] is True
+
+
 def test_dispatch_for_upstream_input_but_not_own_publication():
     date = dr.datetime.now(dr.ET).date().isoformat()
     with patch.object(dr, 'dispatch', return_value=True) as dispatch, \
@@ -35,6 +106,16 @@ def test_dispatch_for_upstream_input_but_not_own_publication():
         assert not dr.notify_changed(['dashboard/factor-mine/today.json',
                                       f'data/day_board/{date}_strategy_tickets.json'])
         assert dispatch.call_count == 1
+
+
+def test_notify_new_exact_input_paths_dispatch():
+    """A change in the extra fingerprinted inputs wakes the publisher."""
+    date = dr.datetime.now(dr.ET).date().isoformat()
+    with patch.object(dr, 'dispatch', return_value=True) as dispatch, \
+         patch.object(dr, 'inputs_match_landed_ticket', return_value=False):
+        assert dr.notify_changed(['excel_bot/suggestions/suggestions.csv'])
+        assert dr.notify_changed(['data/sleeve_merge/today.json'])
+        assert dispatch.call_count == 2
 
 
 def test_notify_skips_when_landed_ticket_has_the_same_fingerprint(tmp_path):

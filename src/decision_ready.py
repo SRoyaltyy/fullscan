@@ -25,6 +25,18 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo('America/New_York')
 
+# Decision-adjacent inputs the tickets read that the stock_book spec does
+# not list. IRONCLAD C.10: live tickets and the record use the same input
+# set, so a change in either file must change the fingerprint — otherwise
+# the publish gate can call two different decisions "same inputs".
+# Absence is hashed too: a file that appears later is an input change,
+# not a no-op. Absence never blocks `ready`; it only fingerprints.
+ABSENT = "absent"
+EXTRA_INPUTS = (
+    "excel_bot/suggestions/suggestions.csv",  # excel_strats()
+    "data/sleeve_merge/today.json",           # flatten_strat()
+)
+
 
 def _require_main_proof() -> bool:
     flag = (os.environ.get("FULLSCAN_REQUIRE_MAIN") or "").strip().lower()
@@ -70,7 +82,9 @@ def apply_main_gate(proof: dict) -> dict:
     """ready=true only when every hashed input is that same blob on main.
 
     A local ``data/peers/<date>_peer_rs.csv`` that never landed must not
-    stamp the morning tickets ready.
+    stamp the morning tickets ready. Absent-marked extra inputs are not
+    main-gated: nothing can land a file that does not exist yet. Once the
+    file exists its sha joins the fingerprint and the gate applies.
     """
     if not isinstance(proof, dict):
         return proof
@@ -80,6 +94,8 @@ def apply_main_gate(proof: dict) -> dict:
     blockers = list(proof.get("blockers") or [])
     extra = []
     for rel, digest in inputs.items():
+        if digest == ABSENT:
+            continue
         on_main = blob_sha256_on_main(str(rel))
         if on_main is None:
             if _require_main_proof():
@@ -104,6 +120,11 @@ def evaluate(date):
     for item in required:
         check = diag._check_file(item, date)
         path = ROOT / item['rel']
+        if getattr(check, 'role', item['role']) == 'optional':
+            # _check_file drops an optional-era sector board that is not OK
+            # to optional. It never blocks the tickets. Not hashed, the same
+            # as before when it was missing.
+            continue
         if check.status != 'OK':
             missing.append({'path': item['rel'], 'reason': check.reason or check.status})
         elif path.is_file():
@@ -113,6 +134,12 @@ def evaluate(date):
         missing.append({'path': 'data/factor_mine/panel.json', 'reason': 'missing historical panel'})
     else:
         hashes['data/factor_mine/panel.json'] = hashlib.sha256(panel.read_bytes()).hexdigest()
+    for rel in EXTRA_INPUTS:
+        path = ROOT / rel
+        if path.is_file():
+            hashes[rel] = hashlib.sha256(path.read_bytes()).hexdigest()
+        else:
+            hashes[rel] = ABSENT
     fingerprint = hashlib.sha256(json.dumps(hashes, sort_keys=True).encode()).hexdigest()
     return {'date': date, 'ready': bool(required) and not missing,
             'fingerprint': fingerprint, 'inputs': hashes, 'blockers': missing}
@@ -207,13 +234,47 @@ def notify_changed(paths):
     prefixes = ('01_daily/general/', '01_daily/sectors/', '01_daily/news/',
                 '01_daily/weather/', '01_daily/map_heat/', 'data/join/',
                 'data/peers/', 'data/ab_checklist/')
-    relevant = any((date in p and p.startswith(prefixes)) or p == 'data/factor_mine/panel.json'
+    exact = ('data/factor_mine/panel.json',
+             'excel_bot/suggestions/suggestions.csv',
+             'data/sleeve_merge/today.json')
+    relevant = any((date in p and p.startswith(prefixes)) or p in exact
                    for p in paths)
     if not relevant:
         return False
+    # Churn fix (2026-10-07: 34 ticket-publish runs before 07:00 ET, most
+    # cancelled). Inside a Pre-Open packet every sector/news/map land fired
+    # its own dispatch; the packet's workflow_run trigger publishes once
+    # when the stage completes, so stay quiet here.
+    if (os.environ.get('PREOPEN_IN_PACKET') or '').strip() == '1':
+        print('[decision] in Pre-Open packet — stage-end workflow_run publishes', flush=True)
+        return False
     if inputs_match_landed_ticket(date):
         return False
+    if publish_already_pending():
+        print('[decision] publish already queued — it reads the newer tree', flush=True)
+        return False
     return dispatch(date)
+
+
+def publish_already_pending():
+    """True when a publish_strategy_tickets run is already queued/waiting."""
+    token = os.environ.get('GITHUB_TOKEN')
+    if not token:
+        return False
+    repo = os.environ.get('GITHUB_REPOSITORY', 'SRoyaltyy/fullscan')
+    for status in ('queued', 'waiting', 'pending'):
+        req = urllib.request.Request(
+            f'https://api.github.com/repos/{repo}/actions/workflows/'
+            f'publish_strategy_tickets.yml/runs?status={status}&per_page=1',
+            headers={'Authorization': f'Bearer {token}',
+                     'Accept': 'application/vnd.github+json'})
+        try:
+            with urllib.request.urlopen(req, timeout=10) as r:
+                if json.loads(r.read() or b'{}').get('total_count', 0):
+                    return True
+        except Exception:
+            return False
+    return False
 
 
 def publish(date):

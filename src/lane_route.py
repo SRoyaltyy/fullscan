@@ -118,14 +118,16 @@ POLLINATIONS_MODELS = [
 ]
 POLLINATIONS_URL = "https://gen.pollinations.ai/v1/chat/completions"
 # $0 only: documented free router and/or :free suffix. Never paid IDs.
-# CN-origin :free first (GLM / InclusionAI Ling). Live OpenRouter catalog
-# has no Qwen/DeepSeek :free right now — those go through native hoppers.
+# Current usage-ranked free roster checked 2026-10-10. Legacy model pages
+# retained zero-price listings after their endpoints became paid-only.
+# https://openrouter.ai/collections/free-models
 _OR_CANDIDATES = [
     "openrouter/free",
-    "z-ai/glm-5.2:free",
+    "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "thinkingmachines/inkling:free",
     "inclusionai/ling-3.0-flash-fin:free",
     "inclusionai/ling-3.0-flash-sante:free",
-    "minimax/minimax-m3:free",
     "google/gemma-4-31b-it:free",
     "google/gemma-4-26b-a4b-it:free",
     "nvidia/nemotron-3.5-lightning:free",
@@ -167,9 +169,10 @@ QWEN_PROBE_MODELS = (
 # OpenRouter classify floor. Ling-3 flash and the free router are not
 # classify — they are 8B-class and may run planner / filter / analyst.
 OR_CLASSIFY_MODELS = [
+    "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "thinkingmachines/inkling:free",
     "google/gemma-4-31b-it:free",
-    "z-ai/glm-5.2:free",
-    "minimax/minimax-m3:free",
 ]
 # Public DashScope OpenAI-compatible fallbacks. DASHSCOPE_BASE_URL (env/secret)
 # is prepended by qwen_urls() — never log or commit that value.
@@ -322,7 +325,8 @@ _MODEL_DENIED: set[str] = set()
 # bodies stop the rest of the qwen list. Not an incorrect-API-key skip.
 _QWEN_STANDING_HITS = 0
 _QWEN_STANDING_STOP = 2
-# OpenRouter :free daily cap. One 429 ends the OR walk for this process.
+# OpenRouter platform/unknown quota stops this process. A confirmed upstream
+# model limit only cools down that ID; siblings remain available.
 _OR_DAY_CAPPED = False
 _QWEN_PROBE: dict[str, bool] = {}
 
@@ -1051,8 +1055,28 @@ def _choice_text(body: dict) -> str:
     return ""
 
 
+def _emitted_result(body):
+    """Read exactly one declared result function. Never execute model tools."""
+    choice = (body.get('choices') or [{}])[0]
+    if choice.get('finish_reason') != 'tool_calls':
+        return None
+    message = choice.get('message') or {}
+    calls = message.get('tool_calls')
+    if not isinstance(calls, list) or len(calls) != 1 or not isinstance(calls[0], dict):
+        return None
+    call = calls[0]
+    function = call.get('function') or {}
+    if call.get('type') != 'function' or not isinstance(function, dict) or function.get('name') != 'emit_lane_result':
+        return None
+    try:
+        parsed = json.loads(function['arguments'])
+    except (KeyError, TypeError, ValueError):
+        return None
+    return parsed if isinstance(parsed, dict) else None
+
+
 def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None,
-                timeout=None):
+                timeout=None, response_schema=None):
     system = SYSTEM if system is None else system
     if timeout is None:
         timeout = 90 if max_tokens > 400 else 45
@@ -1060,46 +1084,56 @@ def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None
     if key:
         headers["Authorization"] = "Bearer " + key
 
-    def _post(use_format: bool):
+    # Confirmed capability of this free endpoint only. Do not spoof an agentic
+    # harness or enable restricted models; this function merely emits JSON.
+    use_tools = bool(response_schema and url == 'https://openrouter.ai/api/v1/chat/completions'
+                     and model == 'nvidia/nemotron-3-ultra-550b-a55b:free')
+
+    def _post(use_format: bool, budget=None):
         payload = {
             "model": model,
             "messages": [
                 {"role": "system", "content": system},
                 {"role": "user", "content": prompt},
             ],
-            "max_tokens": max_tokens,
+            "max_tokens": max_tokens if budget is None else budget,
             "temperature": 0.1,
         }
-        if use_format:
+        if use_tools:
+            payload['tools'] = [{'type': 'function', 'function': {
+                'name': 'emit_lane_result',
+                'description': 'Return the complete requested analysis result; no external action is performed.',
+                'parameters': response_schema}}]
+            payload['tool_choice'] = {'type': 'function', 'function': {'name': 'emit_lane_result'}}
+            payload['parallel_tool_calls'] = False
+        elif use_format:
             payload["response_format"] = {"type": "json_object"}
         return http_json(url, payload, headers, timeout=timeout)
 
     status, body, _ = _post(True)
     text = _choice_text(body) if status == 200 else ""
+    parsed = (_emitted_result(body) if use_tools else extract_json(text)) if status == 200 else None
     # 400: host rejected response_format. 200 with an empty body: a thinking
     # model spent the budget before the JSON, or ignored json_object.
     # A 200 is live — retry without json mode, strip <think>, then raise
     # max_tokens once. Do not treat that 200 as a dead provider.
-    if status == 400 or (status == 200 and not extract_json(text)):
+    if status == 400 or (status == 200 and parsed is None):
+        if status == 400:
+            use_tools = False
         status, body, _ = _post(False)
         text = _choice_text(body) if status == 200 else ""
-    parsed = extract_json(text) if status == 200 else None
+        parsed = (_emitted_result(body) if use_tools else extract_json(text)) if status == 200 else None
     if status == 200 and parsed is None and max_tokens < 1600:
         bumped = max(int(max_tokens) * 2, 1200)
-        payload = {
-            "model": model,
-            "messages": [
-                {"role": "system", "content": system},
-                {"role": "user", "content": prompt},
-            ],
-            "max_tokens": bumped,
-            "temperature": 0.1,
-        }
-        status, body, _ = http_json(url, payload, headers, timeout=timeout)
+        status, body, _ = _post(False, bumped)
         text = _choice_text(body) if status == 200 else ""
-        parsed = extract_json(text) if status == 200 else None
+        parsed = (_emitted_result(body) if use_tools else extract_json(text)) if status == 200 else None
     if status != 200:
-        err = str(body.get("error") or body.get("message") or body)[:180]
+        error_info = body.get("error") or body.get("message") or body
+        err = str(error_info)[:180]
+        # Preserve quota scope before long model IDs/error details are clipped.
+        if status == 429 and "openrouter.ai/" in url and _or_upstream_rate_limit(error_info):
+            err = "upstream_provider_shared_pool: " + err[:150]
         err = re.sub(r"(?i)bearer\s+\S+", "bearer [redacted]", err)
         return None, status, err
     if parsed is None:
@@ -1287,6 +1321,22 @@ def _or_capped() -> bool:
     return _OR_DAY_CAPPED
 
 
+def _or_upstream_rate_limit(info) -> bool:
+    """Recognize a provider-specific 429, not a platform request quota.
+
+    openai_compat currently retains the error as a string; support both that
+    representation and structured bodies. Unknown 429s stay conservative.
+    https://openrouter.ai/docs/api_reference/limits#handling-429-errors
+    """
+    raw = str(info or "").lower()
+    if any(token in raw for token in (
+        "free-models-per-day", "free-models-per-min", "free_model_daily_requests",
+        "openrouter_free_daily", "openrouter_free_per_minute",
+    )):
+        return False
+    return "temporarily rate-limited upstream" in raw or "upstream_provider_shared_pool" in raw
+
+
 def _reject_detail(parsed) -> str:
     if not isinstance(parsed, dict):
         return ""
@@ -1413,9 +1463,9 @@ def hop_models(lane, models, call, abandon_404=False, accept=None):
             saw_live = True
             print(f"  {lane}/{model} 429 — next allowlisted model")
             _RATE_LIMITED.add(rl_key)
-            if lane == "openrouter":
+            if lane == "openrouter" and not _or_upstream_rate_limit(info):
                 _OR_DAY_CAPPED = True
-                print("  openrouter :free daily cap — not walking the rest this hour")
+                print("  openrouter platform/unknown quota — not walking sibling IDs")
                 return None, None
             time.sleep(2)
             continue
@@ -1672,7 +1722,7 @@ def load_keys():
     return keys, ollama_url, gh_direct
 
 
-def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom", accept=None):
+def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom", accept=None, response_schema=None):
     """Try one $0 hopper. Returns (parsed, info) or (None, None)."""
     keys = ctx["keys"]
     ollama_url = ctx["ollama_url"]
@@ -1686,6 +1736,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom", acce
     def oc(url, key, model, extra=None):
         return openai_chat(
             url, key, model, prompt, extra, max_tokens=max_tokens, system=system,
+            **({'response_schema': response_schema} if response_schema is not None else {}),
         )
 
     def flu(urls, key, model):
@@ -2039,3 +2090,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

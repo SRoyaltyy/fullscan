@@ -141,16 +141,17 @@ def test_preopen_and_book_publish_strip_without_paper() -> None:
     pre = (root / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
     book = (root / "src" / "run_stock_book_all.py").read_text(encoding="utf-8")
     sb = (root / "src" / "stock_book.py").read_text(encoding="utf-8")
-    assert "src.publish_live_boards" in pre
+    # morning_look wraps publish_live_boards (pre-open commit look).
+    assert '"src.morning_look", "live_boards"' in pre
     assert "--no-extras" in pre
     assert "live_boards" in pre
-    live_idx = pre.index("src.publish_live_boards")
+    live_idx = pre.index('"src.morning_look", "live_boards"')
     paper_idx = pre.index("src.paper_trade")
     assert live_idx < paper_idx
-    assert "src.publish_live_boards" in book
-    assert book.index("src.publish_live_boards") < book.index("src.paper_trade")
+    assert '"src.morning_look", "live_boards"' in book
+    assert book.index('"src.morning_look", "live_boards"') < book.index("src.paper_trade")
     assert "append after the last printed date" in book
-    assert "timeout_s=180" in book
+    assert "timeout_s=480" in book
     assert "book_suggestions.write" in sb
     assert "ensure_dashboard_poller" in sb
 

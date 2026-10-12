@@ -36,6 +36,8 @@ from src.news_impact.prompts import (
     CLASSIFIER_SYSTEM,
     FAMILY_TESTS,
     FLIP_QUESTIONS,
+    event_family_test,
+    event_flip_questions,
     family_block,
     HISTORY_SLOT,
     LANREOTIDE_CLOCK_Q,
@@ -252,7 +254,7 @@ def gate0(title: str, body: str = "") -> str | None:
 def plan_questions(family: str, event_class: str, title: str) -> list[dict]:
     fam = family if family in FLIP_QUESTIONS else "time"
     rows = []
-    for i, text in enumerate(FLIP_QUESTIONS[fam], 1):
+    for i, text in enumerate(event_flip_questions(fam, event_class), 1):
         rows.append({
             "id": f"q{i}",
             "family": fam,
@@ -535,7 +537,7 @@ def analyst_prompt(
     pack_facts: list[dict],
     axioms: list[dict],
 ) -> str:
-    test = FAMILY_TESTS.get(family, FAMILY_TESTS["time"])
+    test = event_family_test(family, event_class)
     q_lines = "\n".join(f"- {q['id']}: {q['question']}" for q in questions) or "(none)"
     inst = "\n".join(
         f"- {r.get('ticker')} | {r.get('entity_name')} | {r.get('industry')} | {r.get('sector')}"
@@ -566,7 +568,7 @@ def analyst_prompt(
         f"sign={sign} q5={q5}.\n"
         f"Constraint: {constraint}\n"
         f"{clock_note}\n"
-        f"{family_block(family)}\n"
+        f"{family_block(family, event_class)}\n"
         "Roles you may use: harm_set direction=down; "
         "substitute; unscathed_rival; arms_dealer. No scores.\n"
         "A second-order role (substitute, unscathed_rival, arms_dealer) "
@@ -681,6 +683,25 @@ def classify_acceptable(parsed: dict | None, title: str, body: str, gold_id: str
     return True
 
 
+def classify_schema_repair_note(parsed: dict | None) -> str:
+    """Explain invalid enum fields without selecting an article interpretation."""
+    if not isinstance(parsed, dict):
+        return ""
+    event_class = str(parsed.get("event_class") or "").strip()
+    q5 = str(parsed.get("q5") or "").strip()
+    if event_class not in EVENT_CLASSES or q5 not in {"impulse", "regime", "regime_break"}:
+        return (
+            "PREVIOUS JSON WAS NOT ACCEPTED: invalid classification enum.\n"
+            f"event_class was {event_class!r}; q5 was {q5!r}.\n"
+            "Choose exactly ONE event_class from: " + ", ".join(sorted(EVENT_CLASSES)) + ".\n"
+            "Choose exactly ONE q5: impulse, regime, or regime_break.\n"
+            "A pipe-separated list is a schema example, never an answer.\n"
+            "Re-evaluate the original article; do not infer a new fact or ticker. "
+            "Return ONE JSON object satisfying the original instructions."
+        )
+    return ""
+
+
 def classify_repair_note(parsed: dict | None, title: str, body: str = "") -> str:
     """One correction when the enum is a near-miss. Empty means do not re-ask.
 
@@ -691,6 +712,9 @@ def classify_repair_note(parsed: dict | None, title: str, body: str = "") -> str
         return ""
     event_class = str(parsed.get("event_class") or "").strip()
     q5 = str(parsed.get("q5") or "").strip()
+    schema_note = classify_schema_repair_note(parsed)
+    if schema_note:
+        return schema_note
     text = f"{title or ''}\n{body or ''}"
     if _OPS_NOT_STRIKE.search(text) and not _STRIKE.search(text):
         if event_class == "blast_ops" and q5 == "impulse":
@@ -868,6 +892,12 @@ def _filter_payload(parsed: dict | None) -> dict | None:
 
 def linker_acceptable(parsed: dict | None, candidates: list[dict], gold_id: str = "") -> bool:
     """Empty confirm JSON is a miss. Gold rows must keep the linked names."""
+    if isinstance(parsed, dict) and isinstance(parsed.get("core"), list) and isinstance(parsed.get("tangent"), list):
+        core = {str(t) for t in parsed["core"]}
+        tangent = {str(t) for t in parsed["tangent"]}
+        known = {str(row.get("ticker") or "") for row in candidates}
+        if core & tangent or (core | tangent) - known:
+            return False
     ticks = {
         str(row.get("ticker") or "")
         for row in confirm_instruments(_filter_payload(parsed), candidates)
@@ -1541,8 +1571,8 @@ def _retrieve_overview(query: str, title: str, body: str, use_pack: bool, pack_f
 
 
 def _web_facts(query: str) -> list[dict]:
-    from src import websearch
     try:
+        from src import websearch
         _backend, items, _errors = websearch.search_results(query, 6)
     except Exception:  # noqa: BLE001
         return []
@@ -1616,12 +1646,16 @@ def process_article(
     _PROMPT_LOG.clear()
     title = str(art.get("title") or "")
     body = str(art.get("body") or "")
+    from src.news_reporting_scope import reporting_scope
+    body_scope = reporting_scope(body)
+    body = body_scope.pop("body")
     known = str(art.get("known_at") or art.get("published_at") or "")
     aid = art.get("article_id") or article_id(title, known)
     base = {
         "article_id": aid,
         "title": title[:300],
         "body": body[:800],
+        "analysis_body_scope": body_scope,
         "known_at": known,
         "harvest_source": art.get("harvest_source") or "",
         "source_file": art.get("source_file") or "",
@@ -1726,6 +1760,21 @@ def process_article(
         root=root,
     )
     candidates = linked["instruments"]
+    if not candidates:
+        base.update({
+            "q5": q5, "event_class": event_class, "sign": sign,
+            "family": family, "constraint": constraint, "questions": questions,
+            "history": history, "meta": meta, "instrument_candidates": [],
+            "rejected_hints": linked.get("rejected_hints") or [],
+            "pack_facts": _quote_facts(pack),
+            "watermarks": [{"stage": "classify", "watermark": mark},
+                           {"stage": "meta", "watermark": meta_mark}],
+            "reject_reason": "no_instrument_candidates",
+            "listed_exposure_status": "unresolved_by_current_linker",
+            "required_next_step": "Research legal ownership and exposures outside the current candidate index",
+            "finviz_file": linked.get("finviz_file") or "",
+        })
+        return _attach_prompt_log(_stamp_extra(base))
     conf, c_provider, c_model = _call_lane(
         lane, "filter",
         filter_prompt(title, body, event_class, candidates),

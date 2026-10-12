@@ -31,6 +31,7 @@ from src.news_impact.one_shot_stack import (
     GOLD_REJECT,
     analyst_repair_note,
     classify_repair_note,
+    classify_schema_repair_note,
     filter_repair_note,
     gate0,
     process_article,
@@ -429,6 +430,7 @@ class LiveLane:
                 hop, prompt, self.ctx,
                 max_tokens=budget, system=system, tmpl="news_classify",
                 accept=accept,
+                **self._emission_options(hop, stage),
             )
             if parsed is None or lane.is_classify_banned(str(model or "")):
                 notes.append(self._fail_note(hop, model))
@@ -490,15 +492,16 @@ class LiveLane:
                 hop, prompt, system, accept, budget,
             )
             if (
-                hop == "openclaw"
+                hop in {"openclaw", "openrouter"}
                 and (parsed is None or lane.is_classify_banned(str(model or "")))
                 and accept is not None
             ):
                 rejected = self._rejected_classify
-                repair = classify_repair_note(rejected, prompt, "")
+                repair = (classify_schema_repair_note(rejected) if hop == "openrouter"
+                          else classify_repair_note(rejected, prompt, ""))
                 if repair:
                     print(
-                        "[lane_one_shot] openclaw classify near-miss "
+                        f"[lane_one_shot] {hop} classify near-miss "
                         "— one repair before the hopper"
                     )
                     parsed, model = self._ask_classify(
@@ -507,7 +510,7 @@ class LiveLane:
                     )
                 # OpenClaw returned an enum and the floor rejected it.
                 # Do not let a later hopper ID lock the class.
-                if self._rejected_classify is not None and (
+                if hop == "openclaw" and self._rejected_classify is not None and (
                     parsed is None
                     or lane.is_classify_banned(str(model or ""))
                     or not accept(parsed)
@@ -556,6 +559,13 @@ class LiveLane:
         time.sleep(0.4)
         return winner
 
+    def _emission_options(self, hop, stage):
+        if hop != 'openrouter':
+            return {}
+        from src.news_impact.emission_schema import emission_schema
+        schema = emission_schema(stage)
+        return {'response_schema': schema} if schema is not None else {}
+
     def _ask_classify(self, hop, prompt, system, accept, budget, capture=True):
         """One classify hop. A rejected JSON is kept for the OpenClaw repair."""
         rejected = {}
@@ -570,6 +580,7 @@ class LiveLane:
             hop, prompt, self.ctx,
             max_tokens=budget, system=system, tmpl="news_classify",
             accept=_watch if accept is not None else None,
+            **self._emission_options(hop, 'classify'),
         )
         if capture:
             self._rejected_classify = rejected.get("blob")
@@ -1085,3 +1096,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
