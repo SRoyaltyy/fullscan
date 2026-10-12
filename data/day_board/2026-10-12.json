@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T09:31:53.790017-04:00",
+  "generated_at": "2026-10-12T09:32:17.486329-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -57,7 +57,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 274833,
+          "size": 274741,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -68,10 +68,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18390,
+          "size": 18067,
           "said": "MAP HEAT \u2014 2026-10-12",
           "bullets": [
-            "Export `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T04:19:38.311321-04:00",
+            "Export `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T09:15:43.567597-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -115,7 +115,7 @@
           "size": 11816,
           "said": "Finviz Daily Digest \u2014 2026-10-12",
           "bullets": [
-            "_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-12T09:13:15.337989-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -229,7 +229,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 274833,
+          "size": 274741,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -300,8 +300,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 82920,
-          "said": "112 ticker actions \u00b7 7 events \u00b7 5379 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 83705,
+          "said": "113 ticker actions \u00b7 7 events \u00b7 5489 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -540,8 +540,8 @@
           "path": "01_daily/weather/2026-10-12_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9335 vix=falling yields=falling",
-          "size": 9335,
+          "reason": "sectors=11 bytes=9336 vix=falling yields=falling",
+          "size": 9336,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities"
@@ -614,8 +614,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 82920,
-          "said": "112 ticker actions \u00b7 7 events \u00b7 5379 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 83705,
+          "said": "113 ticker actions \u00b7 7 events \u00b7 5489 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -655,7 +655,7 @@
           ]
         }
       ],
-      "said": "112 ticker actions \u00b7 7 events \u00b7 5379 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+      "said": "113 ticker actions \u00b7 7 events \u00b7 5489 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
       "bullets": [
         "SELL DAL",
         "SELL UAL",
@@ -712,8 +712,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 82920,
-          "said": "112 ticker actions \u00b7 7 events \u00b7 5379 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 83705,
+          "said": "113 ticker actions \u00b7 7 events \u00b7 5489 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -753,8 +753,8 @@
           "path": "01_daily/weather/2026-10-12_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9335 vix=falling yields=falling",
-          "size": 9335,
+          "reason": "sectors=11 bytes=9336 vix=falling yields=falling",
+          "size": 9336,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities"
@@ -783,7 +783,7 @@
           "size": 2242326,
           "said": "214 rows",
           "bullets": [
-            "GLBE, SHOO, HLNE, VCTR, WT, HOOD, AAMI, RGA"
+            "GLBE, SHOO, HLNE, VCTR, WT, HOOD, RGA, AAMI"
           ]
         },
         {
@@ -805,9 +805,9 @@
           "path": "data/stock_book/2026-10-12_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1444754,
-          "said": "1d BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE",
+          "reason": "horizons=5 names=216",
+          "size": 1464314,
+          "said": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL",
           "bullets": []
         },
         {
@@ -817,10 +817,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 83221,
+          "size": 83503,
           "said": "Stock book \u2014 2026-10-12",
           "bullets": [
-            "_Generated 2026-10-12T05:55:59.480803-04:00_",
+            "_Generated 2026-10-12T09:22:21.600285-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -883,9 +883,9 @@
           "path": "data/stock_book/2026-10-12_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1444754,
-          "said": "1d BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE",
+          "reason": "horizons=5 names=216",
+          "size": 1464314,
+          "said": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL",
           "bullets": []
         },
         {
@@ -934,66 +934,70 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "ASTH",
-        "score": 0.706426341090431
+        "ticker": "SGRY",
+        "score": 0.4278799023745674
       },
       {
         "ticker": "CON",
-        "score": 0.639955708762995
+        "score": 0.6447394658922468
       },
       {
         "ticker": "AMN",
-        "score": 0.5920779365287303
+        "score": 0.6024309857271279
+      },
+      {
+        "ticker": "FIS",
+        "score": 0.4698654821938251
       },
       {
         "ticker": "KSPI",
-        "score": 0.3890022679416772
+        "score": 0.33809160034308045
       },
       {
         "ticker": "PACS",
-        "score": 0.7093787919305283
+        "score": 0.6648840344805036
       },
       {
         "ticker": "NET",
-        "score": 0.039196999757480214
+        "score": 0.03810872213428017
       },
       {
-        "ticker": "TLS",
-        "score": 0.4176187622161986
+        "ticker": "PRGS",
+        "score": 0.5812704940764608
       }
     ],
     "sell_1d": [
+      {
+        "ticker": "EOSE",
+        "score": -0.35408584322590325
+      },
+      {
+        "ticker": "TE",
+        "score": -0.34881123193049873
+      },
+      {
+        "ticker": "PLUG",
+        "score": -0.26559283515589366
+      },
       {
         "ticker": "OKLO",
         "score": -0.26472807610778865
       },
       {
         "ticker": "NEOV",
-        "score": -0.3778499454769789
+        "score": -0.38168906523251367
       },
       {
         "ticker": "FCEL",
-        "score": -0.25580112343935557
+        "score": -0.2570600830846822
       },
       {
-        "ticker": "NNDM",
-        "score": -0.15510592095588355
+        "ticker": "QBTS",
+        "score": -0.24854771292904831
       },
       {
-        "ticker": "POWL",
-        "score": -0.046123991740222386
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.333815224957611
-      },
-      {
-        "ticker": "TE",
-        "score": -0.34040464175501434
-      },
-      {
-        "ticker": "CRML",
-        "score": -0.22864236952546318
+        "ticker": "QUBT",
+        "score": -0.12954762468929365
       }
     ],
     "flatten": {
@@ -1030,31 +1034,6 @@
     }
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T06:55:05.409990-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-12_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 4099637,
-          "preview": "raw=5631 usable=479 single=321 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O | Stein\u2019s Latest: Sixers, Black, Miller, Wallace, Powell - Hoops Rumors"
-        },
-        {
-          "path": "01_daily/news/2026-10-12_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 12702,
-          "preview": "# News Parse v2 \u2014 2026-10-12T06:54:51.969245-04:00\nWindow\u224848h | news_mode=on | raw=5631 | usable=479 | single_name=321 | noise_dropped=4581\nusable polarity={'+': 11, '-': 71, 'mixed': 5, 'neutral': 392}"
-        }
-      ],
-      "preview": "raw=5631 usable=479 single=321 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O | Stein\u2019s Latest: Sixers, Black, Miller, Wallace, Powell - Hoops Rumors \u00b7 # News Parse v2 \u2014 2026-10-12T06:54:51.969245-04:00\nWindow\u224848h | news_mode=on | raw=5631 | usable=479 | single_name=321 | noise_dropped=4581\nusable polarity={'+': 11, '-': 71, 'mixed': 5, 'neutral': 392}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -3712,6 +3691,24 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-12T09:31:40.067429-04:00\nraw=5379 unique_events=7 tickers=112"
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T09:32:16.474788-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-12_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2242326,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
     }
   ],
   "href": {
