@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-12",
-    "generated_at": "2026-10-12T09:32:37.585638-04:00",
+    "generated_at": "2026-10-12T09:41:48.268486-04:00",
     "general_bias": 0.0,
     "sector_bias": {},
     "accuracy_gates": {
@@ -68,7 +68,7 @@
     },
     "news_mode": "on",
     "news_mode_reason": "",
-    "n_news_tickers": 155,
+    "n_news_tickers": 154,
     "n_ab": 1938,
     "n_peer": 1804,
     "same_day_general": false,
