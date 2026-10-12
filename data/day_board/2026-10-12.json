@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T04:16:59.457736-04:00",
+  "generated_at": "2026-10-12T04:17:19.243371-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -100,12 +100,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97437,
-          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
+          "size": 97004,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Black British Business Awards 2026 winners revealed",
-            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -115,10 +115,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11547,
+          "size": 11816,
           "said": "Finviz Daily Digest \u2014 2026-10-12",
           "bullets": [
-            "_Generated 2026-10-12T04:16:50.629049-04:00 \u00b7 export=data/exports/finviz_2026-10-09.csv \u00b7 ticker digests=5906 \u00b7 high-signal=1780_",
+            "_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -143,7 +143,7 @@
           "size": 3715,
           "said": "Finviz homepage market digest \u2014 2026-10-12",
           "bullets": [
-            "Generated:** 2026-10-12T04:16:59.228261-04:00 (America/New_York)",
+            "Generated:** 2026-10-12T04:17:19.005802-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -170,11 +170,11 @@
           "bullets": []
         }
       ],
-      "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
+      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
       "bullets": [
-        "Black British Business Awards 2026 winners revealed",
-        "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
-        "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+        "Banks have profited from idle cash for years. AI agents could change that."
       ]
     },
     {
@@ -195,12 +195,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97437,
-          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
+          "size": 97004,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Black British Business Awards 2026 winners revealed",
-            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -507,12 +507,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97437,
-          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
+          "size": 97004,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Black British Business Awards 2026 winners revealed",
-            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -596,12 +596,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97437,
-          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
+          "size": 97004,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Black British Business Awards 2026 winners revealed",
-            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -670,12 +670,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97437,
-          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
+          "size": 97004,
+          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
-            "Black British Business Awards 2026 winners revealed",
-            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
-            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
+            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
+            "Banks have profited from idle cash for years. AI agents could change that."
           ]
         },
         {
@@ -986,7 +986,7 @@
       "date": "2026-10-12",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-12T04:16:59.244619-04:00",
+      "at": "2026-10-12T04:17:19.031036-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-10-12_finviz_market_digest.json",
@@ -1000,10 +1000,10 @@
           "ok": true,
           "reason": "",
           "size": 3715,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-12\n**Generated:** 2026-10-12T04:16:59.228261-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks\n**Prior close:** SPX +0.20%  Nasdaq \u2014  Dow \u2014\n**SPX:** +0.20%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal R\n**Leaders:** AMZN, JPM, GS, WFC, C, BAC, MS\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-12\n**Clock use:** `same_morning`"
+          "preview": "# Finviz homepage market digest \u2014 2026-10-12\n**Generated:** 2026-10-12T04:17:19.005802-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks\n**Prior close:** SPX +0.20%  Nasdaq \u2014  Dow \u2014\n**SPX:** +0.20%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal R\n**Leaders:** AMZN, JPM, GS, WFC, C, BAC, MS\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-12\n**Clock use:** `same_morning`"
         }
       ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-12\n**Generated:** 2026-10-12T04:16:59.228261-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks\n**Prior close:** SPX +0.20%  Nasdaq \u2014  Dow \u2014\n**SPX:** +0.20%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal R\n**Leaders:** AMZN, JPM, GS, WFC, C, BAC, MS\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-12\n**Clock use:** `same_morning`"
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-12\n**Generated:** 2026-10-12T04:17:19.005802-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks\n**Prior close:** SPX +0.20%  Nasdaq \u2014  Dow \u2014\n**SPX:** +0.20%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal R\n**Leaders:** AMZN, JPM, GS, WFC, C, BAC, MS\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-12\n**Clock use:** `same_morning`"
     }
   ],
   "href": {
