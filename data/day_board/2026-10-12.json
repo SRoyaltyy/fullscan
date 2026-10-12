@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T09:18:18.562598-04:00",
+  "generated_at": "2026-10-12T09:18:27.850859-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1030,38 +1030,6 @@
     }
   },
   "lands": [
-    {
-      "key": "status",
-      "title": "Pre-open status packet",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T05:51:06.498588-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-10-12_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 8443,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
-        },
-        {
-          "path": "01_daily/2026-10-12_preopen_status.json",
-          "ok": true,
-          "reason": "",
-          "size": 6510,
-          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
-        },
-        {
-          "path": "01_daily/2026-10-12_preopen_status.md",
-          "ok": true,
-          "reason": "",
-          "size": 339,
-          "preview": "# Pre-open ALL status \u2014 2026-10-12\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0"
-        }
-      ],
-      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-12\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0"
-    },
     {
       "key": "flatten",
       "title": "Flatten live card",
@@ -3776,6 +3744,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T04:19:38.311321-04:00"
+    },
+    {
+      "key": "map_heat_baseline",
+      "title": "Map heat night baseline",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T09:18:26.172607-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-12_research_baseline.json",
+          "ok": true,
+          "reason": "",
+          "size": 187511,
+          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-12_research_baseline.md",
+          "ok": true,
+          "reason": "",
+          "size": 25855,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-12\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-12\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
     }
   ],
   "href": {
