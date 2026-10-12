@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-10-12T15:34:53.964902-04:00",
+  "fetched_at": "2026-10-12T15:41:09.827063-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -70,38 +70,38 @@
   "vix": {
     "vix": {
       "date": "2026-10-12",
-      "current": 15.34,
-      "delta_1d": 0.5,
-      "delta_1w": -0.18
+      "current": 15.32,
+      "delta_1d": 0.48,
+      "delta_1w": -0.2
     },
     "vix3m": {
       "date": "2026-10-12",
-      "current": 18.0,
+      "current": 17.99,
       "source": "^VIX3M"
     },
     "ratio": 0.852,
     "ratio_source": "vix/vix3m",
-    "vix_ma20": 15.57,
-    "ratio_ma20": 0.986
+    "vix_ma20": 15.56,
+    "ratio_ma20": 0.984
   },
   "commodities_fx": {
     "CL=F": {
       "available": true,
       "date": "2026-10-12",
-      "last": 93.6,
-      "pct_1d": 1.91
+      "last": 93.55,
+      "pct_1d": 1.85
     },
     "BZ=F": {
       "available": true,
       "date": "2026-10-12",
-      "last": 106.55,
-      "pct_1d": 1.75
+      "last": 106.49,
+      "pct_1d": 1.69
     },
     "GC=F": {
       "available": true,
       "date": "2026-10-12",
-      "last": 4188.0,
-      "pct_1d": -0.67
+      "last": 4191.7,
+      "pct_1d": -0.58
     },
     "DXY": {
       "available": true,
@@ -115,14 +115,14 @@
     "ES=F": {
       "available": true,
       "date": "2026-10-12",
-      "last": 7848.75,
-      "pct_1d": -0.14
+      "last": 7850.0,
+      "pct_1d": -0.12
     },
     "NQ=F": {
       "available": true,
       "date": "2026-10-12",
-      "last": 30867.75,
-      "pct_1d": -0.77
+      "last": 30876.75,
+      "pct_1d": -0.75
     }
   },
   "finviz_futures_tape": {
@@ -554,10 +554,10 @@
   "etf_premarket": {
     "XLB": {
       "available": true,
-      "prev_close": 49.41,
+      "prev_close": 49.42,
       "last": 49.37,
       "as_of": "2026-10-12T08:25:00-04:00",
-      "pct_vs_prev_close": -0.08
+      "pct_vs_prev_close": -0.09
     },
     "XLC": {
       "available": true,
@@ -629,7 +629,7 @@
   },
   "yield_spx_corr": {
     "available": true,
-    "corr_5d": 0.165,
+    "corr_5d": 0.17,
     "window": "2026-10-05..2026-10-12"
   },
   "fear_greed": {
