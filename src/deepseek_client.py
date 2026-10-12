@@ -93,7 +93,11 @@ def credits_preflight() -> dict:
             json=payload, timeout=(10, 20),
         )
     except requests.RequestException as e:
+        if activate_fallback("preflight network"):
+            return credits_preflight()
         return {"ok": False, "reason": "network", "detail": str(e)[:200]}
+    if r.status_code >= 400 and activate_fallback(f"preflight http_{r.status_code}"):
+        return credits_preflight()
     if r.status_code == 402:
         return {"ok": False, "reason": "402",
                 "detail": (r.text or "")[:200]}
@@ -116,6 +120,17 @@ def web_search(query: str, max_results: int = 6) -> str:
 
 
 def _post(payload: dict, retries: int = 4) -> dict:
+    try:
+        return _post_once(payload, retries)
+    except RuntimeError as e:
+        if activate_fallback(f"primary error: {str(e)[:120]}"):
+            payload = dict(payload)
+            payload["model"] = os.environ.get("LLM_MODEL_OVERRIDE") or payload.get("model")
+            return _post_once(payload, retries)
+        raise
+
+
+def _post_once(payload: dict, retries: int = 4) -> dict:
     if not config.DEEPSEEK_API_KEY:
         raise RuntimeError("DEEPSEEK_API_KEY not set (fallback unavailable)")
     url = f"{config.DEEPSEEK_BASE_URL}/chat/completions"
@@ -845,7 +860,7 @@ def _sector_after_miss(stage_label: str, retry_grok) -> str | None:
     return None
 
 
-def chat(messages: list[dict], model: str, tools: bool = False,
+def _chat_impl(messages: list[dict], model: str, tools: bool = False,
          max_tokens: int = 8000, temperature: float = 0.2,
          transcript_path: str | None = None,
          trace_path: str | None = None, stage_label: str = "",
@@ -1186,6 +1201,46 @@ def chat(messages: list[dict], model: str, tools: bool = False,
             print(f"[trace] save failed: {e}")
     _set_last_provider("deepseek")
     return final
+
+
+# ---------------------------------------------------------------------------
+# Provider fallback (2026-10-12): primary = Zhipu glm-5.3-flash (free package),
+# fallback = TokenHub glm-5.3. Set LLM_FALLBACK_API_KEY / _BASE_URL / _MODEL.
+# Swaps once per process on HTTP error, empty output, or caller QC fail.
+# ---------------------------------------------------------------------------
+_FALLBACK = {"active": False}
+
+
+def fallback_active() -> bool:
+    return _FALLBACK["active"]
+
+
+def activate_fallback(reason: str = "") -> bool:
+    if _FALLBACK["active"]:
+        return False
+    k = (os.environ.get("LLM_FALLBACK_API_KEY") or "").strip()
+    u = (os.environ.get("LLM_FALLBACK_BASE_URL") or "").strip()
+    m = (os.environ.get("LLM_FALLBACK_MODEL") or "").strip()
+    if not k or not u:
+        return False
+    _FALLBACK["active"] = True
+    config.DEEPSEEK_API_KEY = k
+    config.DEEPSEEK_BASE_URL = u.rstrip("/")
+    if m:
+        os.environ["LLM_MODEL_OVERRIDE"] = m
+    print(f"[llm] FALLBACK provider engaged ({reason}) -> model="
+          f"{os.environ.get('LLM_MODEL_OVERRIDE') or '?'}", flush=True)
+    return True
+
+
+def chat(messages: list[dict], model: str, *args, **kwargs) -> str:
+    out = _chat_impl(messages, model, *args, **kwargs)
+    if ((not out or len(out.strip()) < 40)
+            and (os.environ.get("LLM_MODEL_OVERRIDE") or "").strip()
+            and not last_sector_degraded()
+            and activate_fallback("empty/short output")):
+        out = _chat_impl(messages, model, *args, **kwargs)
+    return out
 
 
 def chat_nonempty(messages: list[dict], ladder: list[tuple[str, int]],

@@ -8,7 +8,7 @@ on:
       llm_provider:
         description: "deepseek = api.deepseek.com · openrouter-glm = OpenRouter z-ai/glm-5.3 (top tier)"
         required: false
-        default: "tokenhub-glm"
+        default: "zhipu-glm-flash"
         type: choice
         options:
           - deepseek
@@ -16,10 +16,15 @@ on:
           - openrouter-sonnet
           - zhipu-glm
           - tokenhub-glm
+          - zhipu-glm-flash
       run_date:
         description: "YYYY-MM-DD of mechanical parse to judge (blank = latest)"
         required: false
         default: ""
+      dry_run:
+        description: "true = test only: no git push, no DB, no land (judge printed in log)"
+        required: false
+        default: "false"
       force:
         description: "Ignore 09:25 ET cutoff and skip-if-good"
         required: false
@@ -71,13 +76,17 @@ jobs:
       - name: Run news judge
         if: env.skip != 'yes'
         env:
-          DEEPSEEK_API_KEY: ${{ ((github.event.inputs.llm_provider || 'tokenhub-glm') == 'tokenhub-glm') && secrets.TOKENHUB_API_KEY || (github.event.inputs.llm_provider == 'zhipu-glm') && secrets.ZHIPU_API_KEY || startsWith(github.event.inputs.llm_provider, 'openrouter') && secrets.OPENROUTER_API_KEY || secrets.DEEPSEEK_API_KEY }}
-          DEEPSEEK_BASE_URL: ${{ ((github.event.inputs.llm_provider || 'tokenhub-glm') == 'tokenhub-glm') && secrets.TOKENHUB_BASE_URL || (github.event.inputs.llm_provider == 'zhipu-glm') && 'https://open.bigmodel.cn/api/paas/v4' || startsWith(github.event.inputs.llm_provider, 'openrouter') && 'https://openrouter.ai/api/v1' || 'https://api.deepseek.com' }}
-          LLM_MODEL_OVERRIDE: ${{ ((github.event.inputs.llm_provider || 'tokenhub-glm') == 'tokenhub-glm') && 'glm-5.3' || (github.event.inputs.llm_provider == 'zhipu-glm') && 'glm-5.3' || (github.event.inputs.llm_provider == 'openrouter-glm') && 'z-ai/glm-5.3' || (github.event.inputs.llm_provider == 'openrouter-sonnet') && 'anthropic/claude-sonnet-4.6' || '' }}
+          DEEPSEEK_API_KEY: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && secrets.ZHIPU_API_KEY || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'tokenhub-glm') && secrets.TOKENHUB_API_KEY || (github.event.inputs.llm_provider == 'zhipu-glm') && secrets.ZHIPU_API_KEY || startsWith(github.event.inputs.llm_provider, 'openrouter') && secrets.OPENROUTER_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_BASE_URL: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && 'https://open.bigmodel.cn/api/paas/v4' || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'tokenhub-glm') && secrets.TOKENHUB_BASE_URL || (github.event.inputs.llm_provider == 'zhipu-glm') && 'https://open.bigmodel.cn/api/paas/v4' || startsWith(github.event.inputs.llm_provider, 'openrouter') && 'https://openrouter.ai/api/v1' || 'https://api.deepseek.com' }}
+          LLM_MODEL_OVERRIDE: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && 'glm-5.3-flash' || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'tokenhub-glm') && 'glm-5.3' || (github.event.inputs.llm_provider == 'zhipu-glm') && 'glm-5.3' || (github.event.inputs.llm_provider == 'openrouter-glm') && 'z-ai/glm-5.3' || (github.event.inputs.llm_provider == 'openrouter-sonnet') && 'anthropic/claude-sonnet-4.6' || '' }}
+          LLM_FALLBACK_API_KEY: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && secrets.TOKENHUB_API_KEY || '' }}
+          LLM_FALLBACK_BASE_URL: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && secrets.TOKENHUB_BASE_URL || '' }}
+          LLM_FALLBACK_MODEL: glm-5.3
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_URL: ${{ github.event.inputs.dry_run != 'true' && secrets.DATABASE_URL || '' }}
+          FULLSCAN_LAND_NOPUSH: ${{ github.event.inputs.dry_run == 'true' && '1' || '' }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
         run: |
           set -e
@@ -96,7 +105,7 @@ jobs:
             head -120 "$latest"
           fi
       - name: Commit
-        if: env.skip != 'yes'
+        if: env.skip != 'yes' && github.event.inputs.dry_run != 'true'
         run: |
           bash scripts/safe_git_push.sh "auto: news judge" \
             01_daily/news/ 01_daily/_transcripts/

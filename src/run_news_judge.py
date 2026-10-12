@@ -279,6 +279,8 @@ def main() -> None:
         print(f"[news_judge] attempt {attempt + 1} QC FAIL ({last_qc.reason}) "
               "— throwing out")
         output_qc.reject(path)
+        if deepseek_client.activate_fallback(f"judge QC fail: {last_qc.reason}"):
+            print("[news_judge] retrying on fallback provider", flush=True)
 
     print(f"[news_judge] FAIL-CLOSED ({getattr(last_qc, 'reason', '')})")
     if backup:
