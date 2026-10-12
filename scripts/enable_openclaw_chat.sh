@@ -261,13 +261,22 @@ if command -v openclaw >/dev/null 2>&1; then
 fi
 
 # --- 2. if already answering, leave the running process alone ---
+# Soft skip (port up + short PONG) is not enough: on 2026-10-06 and
+# 2026-10-12 the gateway still answered PONG while every real LLM call
+# hung at read-timeout 240s. OPENCLAW_FORCE_RESTART=1 always bounces.
+FORCE_RESTART="${OPENCLAW_FORCE_RESTART:-0}"
 if port_up; then
   echo "port 18789 already listening — ping before restart"
   if chat_ping; then
-    echo "CLASSROOM_OPEN=yes (no restart needed)"
-    exit 0
+    if [ "$FORCE_RESTART" = "1" ] || [ "$FORCE_RESTART" = "true" ] || [ "$FORCE_RESTART" = "yes" ]; then
+      echo "CLASSROOM_OPEN=yes but OPENCLAW_FORCE_RESTART=$FORCE_RESTART — hard restart"
+    else
+      echo "CLASSROOM_OPEN=yes (no restart needed)"
+      exit 0
+    fi
+  else
+    echo "port up but chat not 200 — restart required to load chatCompletions"
   fi
-  echo "port up but chat not 200 — restart required to load chatCompletions"
 fi
 
 # --- 3. bounce or start ---
