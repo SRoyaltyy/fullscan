@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T05:44:45.866264-04:00",
+  "generated_at": "2026-10-12T05:44:50.504067-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -92,38 +92,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "status",
-      "title": "Pre-open status packet",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T05:07:03.149056-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-10-12_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 8443,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
-        },
-        {
-          "path": "01_daily/2026-10-12_preopen_status.json",
-          "ok": true,
-          "reason": "",
-          "size": 7223,
-          "preview": "keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs"
-        },
-        {
-          "path": "01_daily/2026-10-12_preopen_status.md",
-          "ok": true,
-          "reason": "",
-          "size": 615,
-          "preview": "# Pre-open ALL status \u2014 2026-10-12\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 1\n- General market predict: exit 1\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
-        }
-      ],
-      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-12\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 1\n- General market predict: exit 1\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 4"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -305,6 +273,122 @@
         }
       ],
       "preview": "1d BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 # Stock book \u2014 2026-10-12\n_Generated 2026-10-12T05:41:52.132484-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T05:44:49.834388-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 14955,
+          "preview": "2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 936,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-12.json",
+          "ok": true,
+          "reason": "",
+          "size": 83424,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-12_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 44787,
+          "preview": "2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 622301,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-12_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 622301,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-12.json",
+          "ok": true,
+          "reason": "",
+          "size": 146738,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 845214,
+          "preview": "2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 622301,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 44787,
+          "preview": "2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 622301,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 622301,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 845214,
+          "preview": "2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1533,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1533,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys:"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
