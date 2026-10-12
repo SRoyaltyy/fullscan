@@ -1,6 +1,6 @@
 # Stock book — 2026-10-12
 
-_Generated 2026-10-12T08:41:06.727002-04:00_
+_Generated 2026-10-12T08:51:49.672753-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -22,7 +22,7 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 - General predict (same-day): +0.00  (MISSING → 0)
 - Stand-down: **no** — 352 names qualified through standard,group_leader,catalyst (23 probable)
 - Sector predicts this date: 0/11 (missing → sector layer is 0; Finviz week tape still sits in join)
-- News tickers in play: 154
+- News tickers in play: 155
 - AB coverage: 1938 names · peer RS: 1804
 - Universe after liquidity: 2035
 - BUY window: $80M ADV, opportunity $400M–$20B, max 4/sector, 3/industry, 4 large/mega
