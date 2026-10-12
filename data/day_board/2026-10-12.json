@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T08:09:03.725498-04:00",
+  "generated_at": "2026-10-12T08:09:17.405653-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1030,31 +1030,6 @@
     }
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime (offline retry)",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T04:32:15.525283-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-12_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9399,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.8, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.3, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 1.4849999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.92, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.25, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -1.3599999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.72, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-12_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5072,
-          "preview": "# Weather report \u2014 2026-10-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -0.8, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.0, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -0.3, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': 1.4849999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': 1.92, 'dir': 'up', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.25, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -1.3599999999999999, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.72, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -3600,6 +3575,31 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T08:09:15.726346-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-12_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7576443,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ELV, AAPL, AVPT, ATRC, CXT"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-12_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8367271,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 BIIB, ATRC, CXT, HTHT, RGEN"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ELV, AAPL, AVPT, ATRC, CXT \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 BIIB, ATRC, CXT, HTHT, RGEN"
     }
   ],
   "href": {
