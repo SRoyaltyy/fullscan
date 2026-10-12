@@ -1,6 +1,6 @@
 {
- "date": "2026-10-09",
- "generated_at": "2026-10-09T14:54:19.389122-04:00",
+ "date": "2026-10-12",
+ "generated_at": "2026-10-12T04:23:11.538225-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -8,29 +8,29 @@
   "unknown"
  ],
  "signals": {
-  "date": "2026-10-09",
+  "date": "2026-10-12",
   "risk": "unknown",
   "yields_score": null,
   "fed_score": null,
   "dollar_oil_score": null,
   "futures_score": null,
-  "yields": "flat",
+  "yields": "falling",
   "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": 0.01,
-  "dgs10_current": 5.28,
+  "dgs10_delta_1d": -0.06,
+  "dgs10_current": 5.22,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.1,
-  "vix_ratio": 0.834,
-  "vix_spot": 14.87,
-  "vix_delta_1d": -0.54,
+  "dxy_pct_1d": 0.09,
+  "vix_ratio": 0.865,
+  "vix_spot": 15.37,
+  "vix_delta_1d": 0.53,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": 0.1,
+  "oil_pct_1d": -0.29,
   "oil": "flat",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": 0.474,
+  "regime_corr": 0.441,
   "sectors": {
    "Basic Materials": {
     "score": -4.97,
@@ -113,7 +113,7 @@
    "Utilities": -3.43
   },
   "events_bull": 0,
-  "events_bear": 4,
+  "events_bear": 0,
   "china_event_dir": null
  },
  "stances": {
@@ -337,14 +337,14 @@
   },
   "style": {
    "growth": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "stance": "favorable",
+    "confidence": "medium",
+    "why": "yields falling — duration/growth re-rates [factor: Bond yields]"
    },
    "value": {
     "stance": "neutral",
     "confidence": "low",
-    "why": "yields flat/unknown"
+    "why": "value lags duration rallies"
    },
    "blend": {
     "stance": "neutral",
@@ -437,6 +437,7 @@
  },
  "data_gaps": [
   "general predict run",
-  "general predict factor scoreboard"
+  "general predict factor scoreboard",
+  "event scanner output"
  ]
 }
