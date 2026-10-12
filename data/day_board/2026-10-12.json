@@ -1815,6 +1815,24 @@
       "preview": "1d BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 # Stock book \u2014 2026-10-12\n_Generated 2026-10-12T05:41:52.132484-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     },
     {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T05:44:46.815931-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-12_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
       "date": "2026-10-12",
