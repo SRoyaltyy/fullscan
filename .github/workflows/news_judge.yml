@@ -8,7 +8,7 @@ on:
       llm_provider:
         description: "deepseek = api.deepseek.com · openrouter-glm = OpenRouter z-ai/glm-5.3 (top tier)"
         required: false
-        default: "deepseek"
+        default: "zhipu-glm"
         type: choice
         options:
           - deepseek
@@ -70,9 +70,9 @@ jobs:
       - name: Run news judge
         if: env.skip != 'yes'
         env:
-          DEEPSEEK_API_KEY: ${{ (github.event.inputs.llm_provider == 'zhipu-glm') && secrets.ZHIPU_API_KEY || startsWith(github.event.inputs.llm_provider, 'openrouter') && secrets.OPENROUTER_API_KEY || secrets.DEEPSEEK_API_KEY }}
-          DEEPSEEK_BASE_URL: ${{ (github.event.inputs.llm_provider == 'zhipu-glm') && 'https://open.bigmodel.cn/api/paas/v4' || startsWith(github.event.inputs.llm_provider, 'openrouter') && 'https://openrouter.ai/api/v1' || 'https://api.deepseek.com' }}
-          LLM_MODEL_OVERRIDE: ${{ (github.event.inputs.llm_provider == 'zhipu-glm') && 'glm-5.3' || (github.event.inputs.llm_provider == 'openrouter-glm') && 'z-ai/glm-5.3' || (github.event.inputs.llm_provider == 'openrouter-sonnet') && 'anthropic/claude-sonnet-4.6' || '' }}
+          DEEPSEEK_API_KEY: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm') == 'zhipu-glm') && secrets.ZHIPU_API_KEY || startsWith(github.event.inputs.llm_provider, 'openrouter') && secrets.OPENROUTER_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_BASE_URL: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm') == 'zhipu-glm') && 'https://open.bigmodel.cn/api/paas/v4' || startsWith(github.event.inputs.llm_provider, 'openrouter') && 'https://openrouter.ai/api/v1' || 'https://api.deepseek.com' }}
+          LLM_MODEL_OVERRIDE: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm') == 'zhipu-glm') && 'glm-5.3' || (github.event.inputs.llm_provider == 'openrouter-glm') && 'z-ai/glm-5.3' || (github.event.inputs.llm_provider == 'openrouter-sonnet') && 'anthropic/claude-sonnet-4.6' || '' }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
