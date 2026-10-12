@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T04:17:19.243371-04:00",
+  "generated_at": "2026-10-12T04:19:18.029475-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -11,8 +11,8 @@
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-12_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
-    "partial": 3,
+    "ok": 2,
+    "partial": 2,
     "fail": 4,
     "n": 8
   },
@@ -21,9 +21,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -58,10 +58,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-10-12_map_heat.json",
           "role": "required",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 274833,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -71,10 +71,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18060,
-          "said": "MAP HEAT \u2014 2026-10-09",
+          "size": 18390,
+          "said": "MAP HEAT \u2014 2026-10-12",
           "bullets": [
-            "Export `finviz_2026-10-08.csv` \u00b7 11616 names \u00b7 generated 2026-10-09T04:26:51.705949-04:00",
+            "Export `finviz_2026-10-09.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T04:19:17.773227-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -100,12 +100,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97004,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97437,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -115,10 +115,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11816,
+          "size": 11547,
           "said": "Finviz Daily Digest \u2014 2026-10-12",
           "bullets": [
-            "_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-12T04:16:50.629049-04:00 \u00b7 export=data/exports/finviz_2026-10-09.csv \u00b7 ticker digests=5906 \u00b7 high-signal=1780_",
             "Major indices (live quote page)"
           ]
         },
@@ -143,7 +143,7 @@
           "size": 3715,
           "said": "Finviz homepage market digest \u2014 2026-10-12",
           "bullets": [
-            "Generated:** 2026-10-12T04:17:19.005802-04:00 (America/New_York)",
+            "Generated:** 2026-10-12T04:16:59.228261-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -170,11 +170,11 @@
           "bullets": []
         }
       ],
-      "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+      "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
       "bullets": [
-        "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-        "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-        "Banks have profited from idle cash for years. AI agents could change that."
+        "Black British Business Awards 2026 winners revealed",
+        "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+        "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
       ]
     },
     {
@@ -182,7 +182,7 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
@@ -195,12 +195,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97004,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97437,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -230,10 +230,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-10-12_map_heat.json",
           "role": "input",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 274833,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -331,8 +331,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7592,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
+          "size": 7575,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
@@ -507,12 +507,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97004,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97437,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -596,12 +596,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97004,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97437,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -670,12 +670,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97004,
-          "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
+          "size": 97437,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
           "bullets": [
-            "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
-            "Agnico Eagle Shares Fall 4.9% as Gold Prices Decline",
-            "Banks have profited from idle cash for years. AI agents could change that."
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
           ]
         },
         {
@@ -986,6 +986,31 @@
       "date": "2026-10-12",
       "ok": true,
       "pushed": true,
+      "at": "2026-10-12T04:16:59.244619-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-12_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 8249,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-10-12_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 3715,
+          "preview": "# Finviz homepage market digest \u2014 2026-10-12\n**Generated:** 2026-10-12T04:16:59.228261-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks\n**Prior close:** SPX +0.20%  Nasdaq \u2014  Dow \u2014\n**SPX:** +0.20%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal R\n**Leaders:** AMZN, JPM, GS, WFC, C, BAC, MS\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-12\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-12\n**Generated:** 2026-10-12T04:16:59.228261-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks\n**Prior close:** SPX +0.20%  Nasdaq \u2014  Dow \u2014\n**SPX:** +0.20%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal R\n**Leaders:** AMZN, JPM, GS, WFC, C, BAC, MS\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-12\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
       "at": "2026-10-12T04:17:19.031036-04:00",
       "files": [
         {
@@ -1004,6 +1029,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-12\n**Generated:** 2026-10-12T04:17:19.005802-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks\n**Prior close:** SPX +0.20%  Nasdaq \u2014  Dow \u2014\n**SPX:** +0.20%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal R\n**Leaders:** AMZN, JPM, GS, WFC, C, BAC, MS\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-12\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T04:19:17.819881-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-12_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 274833,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-12_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18753,
+          "preview": "# MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-09.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T04:19:17.773227-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-09.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T04:19:17.773227-04:00"
     }
   ],
   "href": {
