@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T09:57:18.852615-04:00",
+  "generated_at": "2026-10-12T09:57:40.248753-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -805,9 +805,9 @@
           "path": "data/stock_book/2026-10-12_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1444754,
-          "said": "1d BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE",
+          "reason": "horizons=5 names=216",
+          "size": 1464314,
+          "said": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL",
           "bullets": []
         },
         {
@@ -817,10 +817,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 83221,
+          "size": 83503,
           "said": "Stock book \u2014 2026-10-12",
           "bullets": [
-            "_Generated 2026-10-12T05:55:59.480803-04:00_",
+            "_Generated 2026-10-12T09:57:24.820322-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -883,9 +883,9 @@
           "path": "data/stock_book/2026-10-12_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1444754,
-          "said": "1d BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE",
+          "reason": "horizons=5 names=216",
+          "size": 1464314,
+          "said": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL",
           "bullets": []
         },
         {
@@ -934,66 +934,70 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "ASTH",
-        "score": 0.706426341090431
+        "ticker": "SGRY",
+        "score": 0.4278799023745674
       },
       {
         "ticker": "CON",
-        "score": 0.639955708762995
+        "score": 0.6447394658922468
       },
       {
         "ticker": "AMN",
-        "score": 0.5920779365287303
+        "score": 0.6024309857271279
+      },
+      {
+        "ticker": "FIS",
+        "score": 0.4698654821938251
       },
       {
         "ticker": "KSPI",
-        "score": 0.3890022679416772
+        "score": 0.33809160034308045
       },
       {
         "ticker": "PACS",
-        "score": 0.7093787919305283
+        "score": 0.6648840344805036
       },
       {
         "ticker": "NET",
-        "score": 0.039196999757480214
+        "score": 0.03810872213428017
       },
       {
-        "ticker": "TLS",
-        "score": 0.4176187622161986
+        "ticker": "PRGS",
+        "score": 0.5812704940764608
       }
     ],
     "sell_1d": [
+      {
+        "ticker": "EOSE",
+        "score": -0.35408584322590325
+      },
+      {
+        "ticker": "TE",
+        "score": -0.34881123193049873
+      },
+      {
+        "ticker": "PLUG",
+        "score": -0.26559283515589366
+      },
       {
         "ticker": "OKLO",
         "score": -0.26472807610778865
       },
       {
         "ticker": "NEOV",
-        "score": -0.3778499454769789
+        "score": -0.38168906523251367
       },
       {
         "ticker": "FCEL",
-        "score": -0.25580112343935557
+        "score": -0.2570600830846822
       },
       {
-        "ticker": "NNDM",
-        "score": -0.15510592095588355
+        "ticker": "QBTS",
+        "score": -0.24854771292904831
       },
       {
-        "ticker": "POWL",
-        "score": -0.046123991740222386
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.333815224957611
-      },
-      {
-        "ticker": "TE",
-        "score": -0.34040464175501434
-      },
-      {
-        "ticker": "CRML",
-        "score": -0.22864236952546318
+        "ticker": "QUBT",
+        "score": -0.12954762468929365
       }
     ],
     "flatten": {
@@ -1030,31 +1034,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T08:08:15.529910-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-12_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 187511,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-12_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 25855,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-12\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-12\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -3797,6 +3776,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T09:57:39.725170-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-12_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1464314,
+          "preview": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-12_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2538,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "01_daily/2026-10-12_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84596,
+          "preview": "# Stock book \u2014 2026-10-12\n_Generated 2026-10-12T09:57:24.820322-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 # Stock book \u2014 2026-10-12\n_Generated 2026-10-12T09:57:24.820322-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
