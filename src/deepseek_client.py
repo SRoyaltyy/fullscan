@@ -44,7 +44,7 @@ from .websearch import search_results
 
 # DeepSeek read timeout per call. 2026-09-04: 90s × 3 variants × retries
 # ate a parse slot; 120s is the 09-09 setting and the deadline can shrink it.
-DEEPSEEK_READ_TIMEOUT_S = 120
+DEEPSEEK_READ_TIMEOUT_S = int(os.environ.get("LLM_READ_TIMEOUT_S") or 120)
 # Seconds an OpenClaw call must leave for the DeepSeek fallback (one read
 # plus the forced no-tool close) when FULLSCAN_STEP_DEADLINE is set.
 FALLBACK_RESERVE_S = 240
@@ -119,6 +119,23 @@ def web_search(query: str, max_results: int = 6) -> str:
                        "results": items}, ensure_ascii=False)
 
 
+def _glm_tune(payload: dict) -> dict:
+    """GLM knobs by model. glm-5.3 thinks by default -> disable (28-char stub
+    2026-10-12). glm-5.3-flash ALWAYS thinks and 400s (code 1210) on
+    thinking=disabled -> reasoning_effort=low plus a roomy token budget."""
+    m = str(payload.get("model") or "").lower()
+    payload.pop("thinking", None)
+    payload.pop("reasoning_effort", None)
+    if "glm" not in m:
+        return payload
+    if "flash" in m:
+        payload["reasoning_effort"] = "low"
+        payload["max_tokens"] = max(int(payload.get("max_tokens") or 0), 16000)
+    else:
+        payload["thinking"] = {"type": "disabled"}
+    return payload
+
+
 def _post(payload: dict, retries: int = 4) -> dict:
     try:
         return _post_once(payload, retries)
@@ -126,6 +143,7 @@ def _post(payload: dict, retries: int = 4) -> dict:
         if activate_fallback(f"primary error: {str(e)[:120]}"):
             payload = dict(payload)
             payload["model"] = os.environ.get("LLM_MODEL_OVERRIDE") or payload.get("model")
+            _glm_tune(payload)
             return _post_once(payload, retries)
         raise
 
@@ -994,10 +1012,7 @@ def _chat_impl(messages: list[dict], model: str, tools: bool = False,
     payload = {"model": model, "messages": messages,
                "max_tokens": deepseek_max_tokens,
                "temperature": temperature}
-    if _ovr and "glm" in _ovr.lower():
-        # GLM 5.x thinks by default: hidden reasoning ate the budget and the
-        # judge landed a 28-char stub (2026-10-12). Ask for plain content.
-        payload["thinking"] = {"type": "disabled"}
+    _glm_tune(payload)
     if tools:
         payload["tools"] = [SEARCH_TOOL]
         payload["tool_choice"] = "auto"
