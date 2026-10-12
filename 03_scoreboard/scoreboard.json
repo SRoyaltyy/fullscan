@@ -21670,6 +21670,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "notable",
           "confidence": 0.52
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-10-12",
+          "actual_pct": 2.84,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -28810,6 +28822,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-10-12",
+          "actual_pct": 0.82,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.52
         }
       },
       "lesson_schema_ok": true
@@ -30738,6 +30762,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.48
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-10-12",
+          "actual_pct": 1.09,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.52
         }
       },
       "lesson_schema_ok": true
@@ -32031,7 +32067,7 @@
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-12_lesson.md",
       "sources_used": [
         {
           "url": "https://www.thestar.com.my/news/world/2026/10/13/us-stocks-close-mixed",
@@ -32088,7 +32124,8 @@
       "key_interaction": "Geo-oil bid and tech/duration offer cancelled in a 0.32% SPX box while Nasdaq trended to the low — offsetting/masking, not calm",
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
-      "outlier_watch": "8/11 sectors up and Dow never red vs NDX closing on the low; KOSPI -3.65% vs Hang Seng green; VIX ~15 and gold down despite wars"
+      "outlier_watch": "8/11 sectors up and Dow never red vs NDX closing on the low; KOSPI -3.65% vs Hang Seng green; VIX ~15 and gold down despite wars",
+      "lesson_schema_ok": true
     }
   ]
 }
