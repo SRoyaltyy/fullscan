@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T08:40:11.570359-04:00",
+  "generated_at": "2026-10-12T09:51:40.644454-04:00",
   "max_n": 8,
   "routing": "Grok \u2192 DeepSeek",
   "grok": true,
@@ -188,7 +188,7 @@
       "ticker": "NFLX",
       "role": "earnings",
       "why": "earnings AMC",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NFLX"
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NFLX"
     },
     {
       "ticker": "NE",
