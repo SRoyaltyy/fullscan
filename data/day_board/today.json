@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T09:17:53.483760-04:00",
+  "generated_at": "2026-10-12T09:18:18.562598-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -99,31 +99,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T09:14:55.376993-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-12_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9336,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-12_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5076,
-          "preview": "# Weather report \u2014 2026-10-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -403,6 +378,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat tables",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T09:18:16.871025-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-12_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 274833,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-12_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18753,
+          "preview": "# MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T04:19:38.311321-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T04:19:38.311321-04:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
