@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-10.23%** ($8,977) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 320 · skips 96 · realized $-120.43.
+Cash book **-10.83%** ($8,917) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 329 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -476,6 +476,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `RRC` | 31 | $40.62 | $2.08 | — | $1,408.02 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; ret5=+8.4; leftover $1279.14 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `PACS` | 29 | $43.75 | $2.08 | — | $137.20 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; 🔵; ret5=+6.6; leftover $1279.14 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $137.20 | ▲ close $8,977.44 vs 09:30 $8,953.95 (session +38.28) | 16:00 close · cash $137.20 · equity $8,977.44 vs 09:30 $8,953.95 (+23.49; session marks +38.28) · 7 name(s) marked open→close (per-name table). FIGS×85 09:30 $14.99 → close $15.78 +67.15; FRO×22 09:30 $56.16 → close $56.10 -1.32; STZ×10 09:30 $123.25 → close $122.64 -6.10; JANX×69 09:30 $18.42 → close $18.39 -2.07; CSGP×42 09:30 $30.02 → close $29.67 -14.70; RRC×31 09:30 $40.62 → close $40.89 +8.37; PACS×29 09:30 $43.75 → close $43.30 -13.05 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $137.20 | ▲ 09:30 equity $9,038.52 vs yday $8,977.44 (+61.08) | 09:30 open · cash $137.20 (unchanged overnight, no fees) · equity $9,038.52 vs prior close $8,977.44 (+61.08) · 7 name(s) re-marked at the open (per-name table). CSGP×42 yday $29.67 → 09:30 $29.67 +0.00; FIGS×85 yday $15.78 → 09:30 $15.89 +9.35; FRO×22 yday $56.10 → 09:30 $58.28 +47.96; JANX×69 yday $18.39 → 09:30 $18.29 -6.90; PACS×29 yday $43.30 → 09:30 $43.20 -2.90; RRC×31 yday $40.89 → 09:30 $41.16 +8.37; STZ×10 yday $122.64 → 09:30 $123.16 +5.20 | — |
+| 2026-10-12 09:30 ET | **SELL** | `CSGP` | 42 | $29.67 | $2.14 | $-18.95 | $1,381.20 | ▼ -18.95 after sell → book $9,036.38; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `FIGS` | 85 | $15.89 | $2.27 | $+71.99 | $2,729.58 | ▲ +71.99 after sell → book $9,034.11; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-12 09:30 ET | **SELL** | `FRO` | 22 | $58.28 | $2.08 | $+42.51 | $4,009.67 | ▲ +42.51 after sell → book $9,032.04; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `JANX` | 69 | $18.29 | $2.22 | $-13.39 | $5,269.46 | ▼ -13.39 after sell → book $9,029.82; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PACS` | 29 | $43.20 | $2.10 | $-20.12 | $6,520.16 | ▼ -20.12 after sell → book $9,027.72; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `RRC` | 31 | $41.16 | $2.10 | $+12.55 | $7,794.02 | ▲ +12.55 after sell → book $9,025.62; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `STZ` | 10 | $123.16 | $2.04 | $-4.96 | $9,023.58 | ▼ -4.96 after sell → book $9,023.58; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `DNA` | 355 | $12.69 | $4.58 | — | $4,514.05 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; leftover $4511.79 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `LVWR` | 2816 | $1.59 | $36.33 | — | $0.28 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list yday_gainer; ret5=+2.5; leftover $4511.79 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.28 | ▼ close $8,916.61 vs 09:30 $9,038.52 (session -66.06) | 16:00 close · cash $0.28 · equity $8,916.61 vs 09:30 $9,038.52 (-121.91; session marks -66.06) · 2 name(s) marked open→close (per-name table). DNA×355 09:30 $12.69 → close $11.79 -319.50; LVWR×2816 09:30 $1.59 → close $1.68 +253.44 | — |
 
 ## Not taken
 

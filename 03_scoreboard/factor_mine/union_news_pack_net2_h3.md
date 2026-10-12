@@ -203,6 +203,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,602.30 | ▲ 09:30 equity $8,683.54 vs yday $8,681.96 (+1.58) | 09:30 open · cash $8,602.30 (unchanged overnight, no fees) · equity $8,683.54 vs prior close $8,681.96 (+1.58) · 1 name(s) re-marked at the open (per-name table). RRC×2 yday $39.83 → 09:30 $40.62 +1.58 | — |
 | 2026-10-09 09:30 ET | **SELL** | `RRC` | 2 | $40.62 | $0.84 | $+3.43 | $8,682.70 | ▲ +3.43 after sell → book $8,682.70; vs 09:30 mark -0.84 | exit unpriced hold on first bar after 4 sess | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,682.70 | ▲ close $8,682.70 vs 09:30 $8,683.54 (session +0.00) | 16:00 close · cash $8,682.70 · no lots left · equity $8,682.70. | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,682.70 | ▲ 09:30 equity $8,682.70 vs yday $8,682.70 (+0.00) | 09:30 open · cash $8,682.70 · no holdings · equity $8,682.70 vs prior close $8,682.70 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,682.70 | ▲ close $8,682.70 vs 09:30 $8,682.70 (session +0.00) | 16:00 close · cash $8,682.70 · no lots left · equity $8,682.70. | — |
 
 ## Not taken
 

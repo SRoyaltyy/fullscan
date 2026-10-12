@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-21.85%** ($7,815) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 249 · skips 269 · realized $-1699.80.
+Cash book **-24.34%** ($7,566) · signal-only (no cash/fees) was -34.58%. Starts YES **0/30**. Fills 249 · skips 269 · realized $-1699.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -402,6 +402,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `EQPT` | 62 | $15.81 | $2.18 | — | $990.14 | — | rank by rsi; rank rsi; list yday_mover; ret5=-10.4; leftover $993.27 | join🔴 sector🟡 gen🔴 news🔴 digest🟡 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `CLVT` | 610 | $1.61 | $7.87 | — | $0.17 | — | rank by rsi; rank rsi; list probable,yday_gainer; ret5=+1.9; leftover $993.27 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.17 | ▼ close $7,814.84 vs 09:30 $7,970.54 (session -93.44) | 16:00 close · cash $0.17 · equity $7,814.84 vs 09:30 $7,970.54 (-155.70; session marks -93.44) · 8 name(s) marked open→close (per-name table). GLAS×226 09:30 $4.39 → close $4.26 -29.38; ANGO×89 09:30 $11.06 → close $11.52 +40.94; ACRS×264 09:30 $3.76 → close $3.83 +18.48; HOVR×613 09:30 $1.62 → close $1.55 -42.91; NUAI×202 09:30 $4.91 → close $4.70 -42.42; IPSC×680 09:30 $1.46 → close $1.47 +6.80; EQPT×62 09:30 $15.81 → close $15.09 -44.95; CLVT×610 09:30 $1.61 → close $1.61 +0.00 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.17 | ▼ 09:30 equity $7,741.35 vs yday $7,814.84 (-73.49) | 09:30 open · cash $0.17 (unchanged overnight, no fees) · equity $7,741.35 vs prior close $7,814.84 (-73.49) · 8 name(s) re-marked at the open (per-name table). ACRS×264 yday $3.83 → 09:30 $3.80 -7.92; ANGO×89 yday $11.52 → 09:30 $11.42 -8.90; CLVT×610 yday $1.61 → 09:30 $1.60 -6.10; EQPT×62 yday $15.09 → 09:30 $14.86 -13.95; GLAS×226 yday $4.26 → 09:30 $4.21 -11.30; HOVR×613 yday $1.55 → 09:30 $1.54 -6.13; IPSC×680 yday $1.47 → 09:30 $1.47 +0.00; NUAI×202 yday $4.70 → 09:30 $4.60 -19.19 | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.17 | ▼ close $7,565.98 vs 09:30 $7,741.35 (session -175.37) | 16:00 close · cash $0.17 · equity $7,565.98 vs 09:30 $7,741.35 (-175.37; session marks -175.37) · 8 name(s) marked open→close (per-name table). ACRS×264 09:30 $3.80 → close $3.60 -52.80; ANGO×89 09:30 $11.42 → close $11.40 -1.78; CLVT×610 09:30 $1.60 → close $1.61 +6.10; EQPT×62 09:30 $14.86 → close $14.76 -6.20; GLAS×226 09:30 $4.21 → close $4.08 -29.38; HOVR×613 09:30 $1.54 → close $1.51 -18.39; IPSC×680 09:30 $1.47 → close $1.44 -20.40; NUAI×202 09:30 $4.60 → close $4.34 -52.52 | — |
 
 ## Not taken
 

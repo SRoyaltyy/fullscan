@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-34.82%** ($6,518) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 251 · skips 295 · realized $+93.52.
+Cash book **-38.30%** ($6,170) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 255 · skips 295 · realized $+93.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -405,6 +405,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `NUAI` | 195 | $4.91 | $2.58 | — | $1,088.48 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=-24.2; leftover $957.35 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `ORBS` | 1040 | $0.92 | $12.69 | — | $118.99 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; 🔵; ret5=-19.2; leftover $957.35 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $118.99 | ▼ close $6,518.39 vs 09:30 $6,732.80 (session -153.44) | 16:00 close · cash $118.99 · equity $6,518.39 vs 09:30 $6,732.80 (-214.41; session marks -153.44) · 7 name(s) marked open→close (per-name table). ANGO×86 09:30 $11.06 → close $11.52 +39.56; PACB×407 09:30 $2.35 → close $2.33 -8.14; GLAS×218 09:30 $4.39 → close $4.26 -28.34; AAOI×8 09:30 $112.64 → close $109.64 -24.00; MXL×9 09:30 $97.09 → close $96.16 -8.37; NUAI×195 09:30 $4.91 → close $4.70 -40.95; ORBS×1040 09:30 $0.92 → close $0.84 -83.20 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $118.99 | ▼ 09:30 equity $6,406.36 vs yday $6,518.39 (-112.03) | 09:30 open · cash $118.99 (unchanged overnight, no fees) · equity $6,406.36 vs prior close $6,518.39 (-112.03) · 7 name(s) re-marked at the open (per-name table). AAOI×8 yday $109.64 → 09:30 $106.12 -28.14; ANGO×86 yday $11.52 → 09:30 $11.42 -8.60; GLAS×218 yday $4.26 → 09:30 $4.21 -10.90; MXL×9 yday $96.16 → 09:30 $93.53 -23.70; NUAI×195 yday $4.70 → 09:30 $4.60 -18.53; ORBS×1040 yday $0.84 → 09:30 $0.85 +10.40; PACB×407 yday $2.33 → 09:30 $2.25 -32.56 | — |
+| 2026-10-12 09:30 ET | **BUY** | `XRPN` | 1 | $16.68 | $0.17 | — | $102.14 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; 🔵; ret5=-56.6; leftover $19.83 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `ZENA` | 18 | $1.08 | $0.25 | — | $82.36 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; 🔵; ret5=-16.5; leftover $19.83 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `AEHL` | 1 | $10.22 | $0.11 | — | $72.04 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; 🔵; ret5=-1.3; leftover $19.83 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `JELD` | 13 | $1.52 | $0.24 | — | $52.04 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; 🔵; ret5=-18.5; leftover $19.83 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $52.04 | ▼ close $6,170.34 vs 09:30 $6,406.36 (session -235.26) | 16:00 close · cash $52.04 · equity $6,170.34 vs 09:30 $6,406.36 (-236.02; session marks -235.26) · 11 name(s) marked open→close (per-name table). AAOI×8 09:30 $106.12 → close $100.68 -43.54; ANGO×86 09:30 $11.42 → close $11.40 -1.72; GLAS×218 09:30 $4.21 → close $4.08 -28.34; MXL×9 09:30 $93.53 → close $88.99 -40.83; NUAI×195 09:30 $4.60 → close $4.34 -50.70; ORBS×1040 09:30 $0.85 → close $0.85 -4.68; PACB×407 09:30 $2.25 → close $2.10 -61.05; XRPN×1 09:30 $16.68 → close $16.91 +0.23; ZENA×18 09:30 $1.08 → close $1.09 +0.09; AEHL×1 09:30 $10.22 → close $9.27 -0.95; JELD×13 09:30 $1.52 → close $1.23 -3.77 | — |
 
 ## Not taken
 

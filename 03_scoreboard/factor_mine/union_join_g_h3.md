@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ join_g, no 🚨
 
-Cash book **-22.84%** ($7,716) · signal-only (no cash/fees) was +0.61%. Starts YES **2/30**. Fills 270 · skips 306 · realized $-674.41.
+Cash book **-22.54%** ($7,746) · signal-only (no cash/fees) was +0.61%. Starts YES **2/30**. Fills 272 · skips 306 · realized $-674.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -424,6 +424,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `HAE` | 8 | $119.81 | $2.01 | — | $1,099.67 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $959.66 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `CSGP` | 31 | $30.02 | $2.08 | — | $166.97 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer; ret5=+7.5; leftover $959.66 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $166.97 | ▲ close $7,716.34 vs 09:30 $7,697.61 (session +55.45) | 16:00 close · cash $166.97 · equity $7,716.34 vs 09:30 $7,697.61 (+18.73; session marks +55.45) · 8 name(s) marked open→close (per-name table). CDNA×15 09:30 $62.21 → close $63.67 +21.90; RRC×23 09:30 $40.62 → close $40.89 +6.21; PACS×21 09:30 $43.75 → close $43.30 -9.45; ETON×17 09:30 $54.86 → close $55.21 +5.95; COCO×17 09:30 $55.38 → close $58.39 +51.17; PCRX×26 09:30 $36.33 → close $36.31 -0.52; HAE×8 09:30 $119.81 → close $118.69 -8.96; CSGP×31 09:30 $30.02 → close $29.67 -10.85 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $166.97 | ▲ 09:30 equity $7,721.74 vs yday $7,716.34 (+5.40) | 09:30 open · cash $166.97 (unchanged overnight, no fees) · equity $7,721.74 vs prior close $7,716.34 (+5.40) · 8 name(s) re-marked at the open (per-name table). CDNA×15 yday $63.67 → 09:30 $63.28 -5.85; COCO×17 yday $58.39 → 09:30 $58.50 +1.87; CSGP×31 yday $29.67 → 09:30 $29.67 +0.00; ETON×17 yday $55.21 → 09:30 $55.50 +4.93; HAE×8 yday $118.69 → 09:30 $118.70 +0.08; PACS×21 yday $43.30 → 09:30 $43.20 -2.10; PCRX×26 yday $36.31 → 09:30 $36.32 +0.26; RRC×23 yday $40.89 → 09:30 $41.16 +6.21 | — |
+| 2026-10-12 09:30 ET | **BUY** | `LVWR` | 17 | $1.59 | $0.32 | — | $139.62 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer; ret5=+2.5; leftover $27.83 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `XRPN` | 1 | $16.68 | $0.17 | — | $122.77 | — | union ∩ join_g, no 🚨; gate join=good; list yday_mover; 🔵; ret5=-56.6; leftover $27.83 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $122.77 | ▲ close $7,745.58 vs 09:30 $7,721.74 (session +24.33) | 16:00 close · cash $122.77 · equity $7,745.58 vs 09:30 $7,721.74 (+23.84; session marks +24.33) · 10 name(s) marked open→close (per-name table). CDNA×15 09:30 $63.28 → close $63.12 -2.40; COCO×17 09:30 $58.50 → close $57.72 -13.26; CSGP×31 09:30 $29.67 → close $29.21 -14.26; ETON×17 09:30 $55.50 → close $55.25 -4.25; HAE×8 09:30 $118.70 → close $122.06 +26.88; PACS×21 09:30 $43.20 → close $44.30 +23.10; PCRX×26 09:30 $36.32 → close $36.35 +0.78; RRC×23 09:30 $41.16 → close $41.42 +5.98; LVWR×17 09:30 $1.59 → close $1.68 +1.53; XRPN×1 09:30 $16.68 → close $16.91 +0.23 | — |
 
 ## Not taken
 

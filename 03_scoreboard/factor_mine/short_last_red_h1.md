@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **+2.87%** ($10,287) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 343 · skips 107 · realized $-717.78.
+Cash book **+4.98%** ($10,498) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 358 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -495,6 +495,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SHORT** | `MXL` | 7 | $97.09 | $2.05 | — | $14,502.36 | — | last bar red; gate last_red=True; list yday_mover; ret5=+1.7; leftover $731.70 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-09 09:30 ET | **SHORT** | `NUAI` | 149 | $4.91 | $2.49 | — | $15,230.71 | — | last bar red; gate last_red=True; list yday_mover; ret5=-24.2; leftover $731.70 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,230.71 | ▲ close $10,287.42 vs 09:30 $10,246.26 (session +61.22) | 16:00 close · cash $15,230.71 · equity $10,287.42 vs 09:30 $10,246.26 (+41.16; session marks +61.22) · 7 name(s) marked open→close (per-name table). ANGO×66 09:30 $11.06 → close $11.52 -30.36; PACB×311 09:30 $2.35 → close $2.33 +6.22; GLAS×166 09:30 $4.39 → close $4.26 +21.58; AAOI×6 09:30 $112.64 → close $109.64 +18.00; SHAZ×19 09:30 $38.35 → close $37.93 +7.98; MXL×7 09:30 $97.09 → close $96.16 +6.51; NUAI×149 09:30 $4.91 → close $4.70 +31.29 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,230.71 | ▲ 09:30 equity $10,400.27 vs yday $10,287.42 (+112.85) | 09:30 open · cash $15,230.71 (unchanged overnight, no fees) · equity $10,400.27 vs prior close $10,287.42 (+112.85) · 7 name(s) re-marked at the open (per-name table). AAOI×6 yday $109.64 → 09:30 $106.12 +21.11; ANGO×66 yday $11.52 → 09:30 $11.42 +6.60; GLAS×166 yday $4.26 → 09:30 $4.21 +8.30; MXL×7 yday $96.16 → 09:30 $93.53 +18.43; NUAI×149 yday $4.70 → 09:30 $4.60 +14.16; PACB×311 yday $2.33 → 09:30 $2.25 +24.88; SHAZ×19 yday $37.93 → 09:30 $36.91 +19.38 | — |
+| 2026-10-12 09:30 ET | **COVER** | `AAOI` | 6 | $106.12 | $2.01 | $+35.05 | $14,591.97 | ▲ +35.05 after sell → book $10,398.26; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `ANGO` | 66 | $11.42 | $2.19 | $-28.18 | $13,836.06 | ▼ -28.18 after sell → book $10,396.07; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `GLAS` | 166 | $4.21 | $2.49 | $+24.85 | $13,134.71 | ▲ +24.85 after sell → book $10,393.59; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `MXL` | 7 | $93.53 | $2.01 | $+20.88 | $12,478.01 | ▲ +20.88 after sell → book $10,391.57; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `NUAI` | 149 | $4.60 | $2.44 | $+40.52 | $11,790.18 | ▲ +40.52 after sell → book $10,389.14; vs 09:30 mark -2.43 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `PACB` | 311 | $2.25 | $4.01 | $+22.99 | $11,086.42 | ▲ +22.99 after sell → book $10,385.13; vs 09:30 mark -4.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `SHAZ` | 19 | $36.91 | $2.05 | $+23.23 | $10,383.08 | ▲ +23.23 after sell → book $10,383.08; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SHORT** | `HUM` | 1 | $434.57 | $2.02 | — | $10,815.62 | — | last bar red; gate last_red=True; list yday_gainer,yday_mover; ret5=+11.2; leftover $648.94 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `XRPN` | 38 | $16.68 | $2.14 | — | $11,447.32 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-56.6; leftover $648.94 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `ZENA` | 598 | $1.08 | $7.84 | — | $12,088.31 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-16.5; leftover $648.94 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `CDNL` | 30 | $21.01 | $2.12 | — | $12,716.49 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-31.3; leftover $648.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `TMUS` | 4 | $149.58 | $2.04 | — | $13,312.78 | — | last bar red; gate last_red=True; list yday_mover; ret5=-9.2; leftover $648.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 63 | $10.22 | $2.22 | — | $13,954.42 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-1.3; leftover $648.94 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `WYHG` | 204 | $3.18 | $2.69 | — | $14,600.45 | — | last bar red; gate last_red=True; list yday_mover; ret5=-16.5; leftover $648.94 | join🔴 sector🟢 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `JELD` | 426 | $1.52 | $5.59 | — | $15,242.37 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-18.5; leftover $648.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,242.37 | ▲ close $10,498.20 vs 09:30 $10,400.27 (session +141.79) | 16:00 close · cash $15,242.37 · equity $10,498.20 vs 09:30 $10,400.27 (+97.93; session marks +141.79) · 8 name(s) marked open→close (per-name table). HUM×1 09:30 $434.57 → close $433.50 +1.07; XRPN×38 09:30 $16.68 → close $16.91 -8.74; ZENA×598 09:30 $1.08 → close $1.09 -2.99; CDNL×30 09:30 $21.01 → close $20.92 +2.70; TMUS×4 09:30 $149.58 → close $151.87 -9.16; AEHL×63 09:30 $10.22 → close $9.27 +59.85; WYHG×204 09:30 $3.18 → close $3.30 -24.48; JELD×426 09:30 $1.52 → close $1.23 +123.54 | — |
 
 ## Not taken
 

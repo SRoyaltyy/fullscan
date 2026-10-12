@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-37.57%** ($6,243) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 338 · skips 98 · realized $-2571.92.
+Cash book **-39.83%** ($6,017) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 354 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -491,6 +491,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `EQPT` | 50 | $15.81 | $2.14 | — | $789.75 | — | rank by rsi; rank rsi; list yday_mover; ret5=-10.4; leftover $793.64 | join🔴 sector🟡 gen🔴 news🔴 digest🟡 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `CLVT` | 486 | $1.61 | $6.27 | — | $1.02 | — | rank by rsi; rank rsi; list probable,yday_gainer; ret5=+1.9; leftover $793.64 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.02 | ▼ close $6,242.64 vs 09:30 $6,351.15 (session -74.83) | 16:00 close · cash $1.02 · equity $6,242.64 vs 09:30 $6,351.15 (-108.51; session marks -74.83) · 8 name(s) marked open→close (per-name table). GLAS×180 09:30 $4.39 → close $4.26 -23.40; ANGO×71 09:30 $11.06 → close $11.52 +32.66; ACRS×211 09:30 $3.76 → close $3.83 +14.77; HOVR×489 09:30 $1.62 → close $1.55 -34.23; NUAI×161 09:30 $4.91 → close $4.70 -33.81; IPSC×543 09:30 $1.46 → close $1.47 +5.43; EQPT×50 09:30 $15.81 → close $15.09 -36.25; CLVT×486 09:30 $1.61 → close $1.61 +0.00 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.02 | ▼ 09:30 equity $6,183.91 vs yday $6,242.64 (-58.73) | 09:30 open · cash $1.02 (unchanged overnight, no fees) · equity $6,183.91 vs prior close $6,242.64 (-58.73) · 8 name(s) re-marked at the open (per-name table). ACRS×211 yday $3.83 → 09:30 $3.80 -6.33; ANGO×71 yday $11.52 → 09:30 $11.42 -7.10; CLVT×486 yday $1.61 → 09:30 $1.60 -4.86; EQPT×50 yday $15.09 → 09:30 $14.86 -11.25; GLAS×180 yday $4.26 → 09:30 $4.21 -9.00; HOVR×489 yday $1.55 → 09:30 $1.54 -4.89; IPSC×543 yday $1.47 → 09:30 $1.47 +0.00; NUAI×161 yday $4.70 → 09:30 $4.60 -15.30 | — |
+| 2026-10-12 09:30 ET | **SELL** | `ACRS` | 211 | $3.80 | $2.77 | $+2.95 | $800.05 | ▲ +2.95 after sell → book $6,181.14; vs 09:30 mark -2.77 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `ANGO` | 71 | $11.42 | $2.22 | $+21.13 | $1,608.65 | ▲ +21.13 after sell → book $6,178.92; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `CLVT` | 486 | $1.60 | $6.36 | $-17.49 | $2,379.89 | ▼ -17.49 after sell → book $6,172.56; vs 09:30 mark -6.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `EQPT` | 50 | $14.86 | $2.16 | $-51.80 | $3,120.73 | ▼ -51.80 after sell → book $6,170.40; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `GLAS` | 180 | $4.21 | $2.57 | $-37.50 | $3,875.96 | ▼ -37.50 after sell → book $6,167.83; vs 09:30 mark -2.57 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `HOVR` | 489 | $1.54 | $6.40 | $-51.83 | $4,622.62 | ▼ -51.83 after sell → book $6,161.43; vs 09:30 mark -6.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `IPSC` | 543 | $1.47 | $7.10 | $-8.68 | $5,413.72 | ▼ -8.68 after sell → book $6,154.32; vs 09:30 mark -7.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `NUAI` | 161 | $4.60 | $2.51 | $-54.09 | $6,151.81 | ▼ -54.09 after sell → book $6,151.81; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `CDNL` | 36 | $21.01 | $2.10 | — | $5,393.36 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-31.3; leftover $768.98 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `TMUS` | 5 | $149.58 | $2.00 | — | $4,643.45 | — | rank by rsi; rank rsi; list yday_mover; ret5=-9.2; leftover $768.98 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `ALHC` | 102 | $7.49 | $2.30 | — | $3,877.18 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-5.0; leftover $768.98 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `ZENA` | 708 | $1.08 | $9.13 | — | $3,099.86 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-16.5; leftover $768.98 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `JELD` | 505 | $1.52 | $6.51 | — | $2,325.75 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-18.5; leftover $768.98 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `KLRA` | 67 | $11.39 | $2.19 | — | $1,560.43 | — | rank by rsi; rank rsi; list yday_gainer,yday_mover; ret5=+11.7; leftover $768.98 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `CCCC` | 243 | $3.16 | $3.13 | — | $789.41 | — | rank by rsi; rank rsi; list probable,yday_gainer; 🔵; ret5=+7.1; leftover $768.98 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `ETON` | 13 | $55.50 | $2.03 | — | $65.88 | — | rank by rsi; rank rsi; list flatten; ret5=-0.3; leftover $768.98 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $65.88 | ▼ close $6,017.34 vs 09:30 $6,183.91 (session -105.07) | 16:00 close · cash $65.88 · equity $6,017.34 vs 09:30 $6,183.91 (-166.57; session marks -105.07) · 8 name(s) marked open→close (per-name table). CDNL×36 09:30 $21.01 → close $20.92 -3.24; TMUS×5 09:30 $149.58 → close $151.87 +11.45; ALHC×102 09:30 $7.49 → close $8.09 +61.20; ZENA×708 09:30 $1.08 → close $1.09 +3.54; JELD×505 09:30 $1.52 → close $1.23 -146.45; KLRA×67 09:30 $11.39 → close $11.33 -4.02; CCCC×243 09:30 $3.16 → close $3.06 -24.30; ETON×13 09:30 $55.50 → close $55.25 -3.25 | — |
 
 ## Not taken
 

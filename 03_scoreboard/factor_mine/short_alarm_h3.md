@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+0.28%** ($10,027) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 179 · skips 221 · realized $+639.78.
+Cash book **+2.77%** ($10,277) · signal-only (no cash/fees) was -2.80%. Starts YES **2/30**. Fills 187 · skips 221 · realized $+639.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -331,6 +331,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SHORT** | `ESRT` | 183 | $4.57 | $2.60 | — | $13,806.14 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+10.9; leftover $837.35 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **SHORT** | `IMXI` | 67 | $12.36 | $2.23 | — | $14,632.02 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+8.2; leftover $837.35 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,632.02 | ▼ close $10,027.46 vs 09:30 $10,087.98 (session -6.85) | 16:00 close · cash $14,632.02 · equity $10,027.46 vs 09:30 $10,087.98 (-60.52; session marks -6.85) · 6 name(s) marked open→close (per-name table). SHAZ×21 09:30 $38.35 → close $37.93 +8.82; BRUN×67 09:30 $12.43 → close $13.18 -50.25; AGNT×208 09:30 $4.01 → close $3.72 +60.32; MPC×1 09:30 $461.04 → close $455.03 +6.01; ESRT×183 09:30 $4.57 → close $4.63 -10.98; IMXI×67 09:30 $12.36 → close $12.67 -20.77 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,632.02 | ▲ 09:30 equity $10,089.11 vs yday $10,027.46 (+61.65) | 09:30 open · cash $14,632.02 (unchanged overnight, no fees) · equity $10,089.11 vs prior close $10,027.46 (+61.65) · 6 name(s) re-marked at the open (per-name table). AGNT×208 yday $3.72 → 09:30 $3.69 +6.24; BRUN×67 yday $13.18 → 09:30 $12.83 +23.45; ESRT×183 yday $4.63 → 09:30 $4.59 +7.32; IMXI×67 yday $12.67 → 09:30 $12.52 +10.05; MPC×1 yday $455.03 → 09:30 $461.86 -6.83; SHAZ×21 yday $37.93 → 09:30 $36.91 +21.42 | — |
+| 2026-10-12 09:30 ET | **SHORT** | `FANG` | 3 | $195.01 | $2.04 | — | $15,215.01 | — | alarm; gate alarm=True; list flatten; ret5=+4.0; leftover $630.57 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `FEAM` | 174 | $3.62 | $2.57 | — | $15,842.33 | — | alarm; gate alarm=True; list probable,yday_gainer; ret5=-6.2; leftover $630.57 | join🟡 sector🔴 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `HUM` | 1 | $434.57 | $2.02 | — | $16,274.87 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+11.2; leftover $630.57 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `PCVX` | 8 | $70.85 | $2.05 | — | $16,839.62 | — | alarm; gate alarm=True; list yday_gainer; ret5=+26.4; leftover $630.57 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `WYHG` | 198 | $3.18 | $2.64 | — | $17,466.62 | — | alarm; gate alarm=True; list yday_mover; ret5=-16.5; leftover $630.57 | join🔴 sector🟢 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `PBR` | 24 | $25.44 | $2.10 | — | $18,075.08 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+16.9; leftover $630.57 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `ZIP` | 150 | $4.18 | $2.49 | — | $18,699.59 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+17.5; leftover $630.57 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `SUJA` | 57 | $10.89 | $2.20 | — | $19,318.12 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+12.0; leftover $630.57 | join🔴 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,318.12 | ▲ close $10,276.55 vs 09:30 $10,089.11 (session +205.55) | 16:00 close · cash $19,318.12 · equity $10,276.55 vs 09:30 $10,089.11 (+187.44; session marks +205.55) · 14 name(s) marked open→close (per-name table). AGNT×208 09:30 $3.69 → close $3.71 -4.16; BRUN×67 09:30 $12.83 → close $11.79 +69.68; ESRT×183 09:30 $4.59 → close $4.73 -25.62; IMXI×67 09:30 $12.52 → close $10.87 +110.55; MPC×1 09:30 $461.86 → close $458.81 +3.05; SHAZ×21 09:30 $36.91 → close $35.69 +25.62; FANG×3 09:30 $195.01 → close $195.11 -0.30; FEAM×174 09:30 $3.62 → close $3.34 +48.72; HUM×1 09:30 $434.57 → close $433.50 +1.07; PCVX×8 09:30 $70.85 → close $70.65 +1.60; WYHG×198 09:30 $3.18 → close $3.30 -23.76; PBR×24 09:30 $25.44 → close $25.42 +0.48; ZIP×150 09:30 $4.18 → close $4.25 -10.50; SUJA×57 09:30 $10.89 → close $10.73 +9.12 | — |
 
 ## Not taken
 

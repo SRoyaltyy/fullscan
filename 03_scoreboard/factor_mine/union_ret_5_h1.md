@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+21.20%** ($12,120) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 341 · skips 100 · realized $+370.60.
+Cash book **+19.63%** ($11,963) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 357 · skips 100 · realized $+370.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -494,6 +494,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `SUJA` | 143 | $10.54 | $2.42 | — | $1,501.66 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.4; leftover $1509.20 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `FNKO` | 230 | $6.50 | $2.97 | — | $3.69 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+16.1; leftover $1509.20 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.69 | ▲ close $12,119.63 vs 09:30 $12,073.59 (session +90.17) | 16:00 close · cash $3.69 · equity $12,119.63 vs 09:30 $12,073.59 (+46.04; session marks +90.17) · 8 name(s) marked open→close (per-name table). ADCT×955 09:30 $1.58 → close $1.73 +143.25; PCRX×41 09:30 $36.33 → close $36.31 -0.82; BYRN×321 09:30 $4.70 → close $4.52 -57.78; RC×1160 09:30 $1.30 → close $1.30 +0.00; JBS×116 09:30 $12.94 → close $12.98 +4.64; GENI×222 09:30 $6.79 → close $6.65 -31.08; SUJA×143 09:30 $10.54 → close $10.86 +45.76; FNKO×230 09:30 $6.50 → close $6.44 -13.80 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.69 | ▼ 09:30 equity $12,069.22 vs yday $12,119.63 (-50.41) | 09:30 open · cash $3.69 (unchanged overnight, no fees) · equity $12,069.22 vs prior close $12,119.63 (-50.41) · 8 name(s) re-marked at the open (per-name table). ADCT×955 yday $1.73 → 09:30 $1.70 -28.65; BYRN×321 yday $4.52 → 09:30 $4.50 -6.42; FNKO×230 yday $6.44 → 09:30 $6.40 -9.20; GENI×222 yday $6.65 → 09:30 $6.69 +8.88; JBS×116 yday $12.98 → 09:30 $12.91 -8.12; PCRX×41 yday $36.31 → 09:30 $36.32 +0.41; RC×1160 yday $1.30 → 09:30 $1.29 -11.60; SUJA×143 yday $10.86 → 09:30 $10.89 +4.29 | — |
+| 2026-10-12 09:30 ET | **SELL** | `ADCT` | 955 | $1.70 | $12.49 | $+89.79 | $1,614.70 | ▲ +89.79 after sell → book $12,056.73; vs 09:30 mark -12.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `BYRN` | 321 | $4.50 | $4.21 | $-72.55 | $3,054.99 | ▼ -72.55 after sell → book $12,052.52; vs 09:30 mark -4.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `FNKO` | 230 | $6.40 | $3.02 | $-28.98 | $4,523.98 | ▼ -28.98 after sell → book $12,049.51; vs 09:30 mark -3.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `GENI` | 222 | $6.69 | $2.91 | $-27.98 | $6,006.24 | ▼ -27.98 after sell → book $12,046.59; vs 09:30 mark -2.92 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `JBS` | 116 | $12.91 | $2.37 | $-8.19 | $7,501.43 | ▼ -8.19 after sell → book $12,044.22; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PCRX` | 41 | $36.32 | $2.13 | $-4.66 | $8,988.42 | ▼ -4.66 after sell → book $12,042.09; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `RC` | 1160 | $1.29 | $15.17 | $-41.73 | $10,469.65 | ▼ -41.73 after sell → book $12,026.92; vs 09:30 mark -15.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `SUJA` | 143 | $10.89 | $2.46 | $+45.18 | $12,024.47 | ▲ +45.18 after sell → book $12,024.47; vs 09:30 mark -2.45 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `WFF` | 101 | $14.78 | $2.29 | — | $10,529.39 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+411.0; leftover $1503.06 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `QTEX` | 868 | $1.73 | $11.20 | — | $9,016.56 | — | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ret5=+70.0; leftover $1503.06 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `PRME` | 380 | $3.95 | $4.90 | — | $7,510.65 | — | rank by ret_5; rank ret_5; list yday_gainer; 🔵; ret5=+33.9; leftover $1503.06 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NVAX` | 119 | $12.61 | $2.35 | — | $6,007.72 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+21.9; leftover $1503.06 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `CCI` | 18 | $79.50 | $2.04 | — | $4,574.67 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+19.9; leftover $1503.06 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SEZL` | 11 | $127.75 | $2.02 | — | $3,167.40 | — | rank by ret_5; rank ret_5; list yday_gainer; ret5=+19.8; leftover $1503.06 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `MRNA` | 6 | $224.24 | $2.01 | — | $1,819.98 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+18.4; leftover $1503.06 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NTSK` | 71 | $21.00 | $2.20 | — | $326.78 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+16.9; leftover $1503.06 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $326.78 | ▼ close $11,963.18 vs 09:30 $12,069.22 (session -32.27) | 16:00 close · cash $326.78 · equity $11,963.18 vs 09:30 $12,069.22 (-106.04; session marks -32.27) · 8 name(s) marked open→close (per-name table). WFF×101 09:30 $14.78 → close $17.28 +252.50; QTEX×868 09:30 $1.73 → close $1.58 -130.20; PRME×380 09:30 $3.95 → close $3.61 -129.20; NVAX×119 09:30 $12.61 → close $12.66 +5.95; CCI×18 09:30 $79.50 → close $81.01 +27.18; SEZL×11 09:30 $127.75 → close $130.48 +30.03; MRNA×6 09:30 $224.24 → close $213.74 -62.97; NTSK×71 09:30 $21.00 → close $20.64 -25.56 | — |
 
 ## Not taken
 

@@ -333,6 +333,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,848.21 | ▲ 09:30 equity $7,862.65 vs yday $7,862.49 (+0.16) | 09:30 open · cash $7,848.21 (unchanged overnight, no fees) · equity $7,862.65 vs prior close $7,862.49 (+0.16) · 1 name(s) re-marked at the open (per-name table). AVPT×1 yday $14.28 → 09:30 $14.44 +0.16 | — |
 | 2026-10-09 09:30 ET | **SELL** | `AVPT` | 1 | $14.44 | $0.17 | $-0.65 | $7,862.48 | ▼ -0.65 after sell → book $7,862.48; vs 09:30 mark -0.17 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,862.48 | ▲ close $7,862.48 vs 09:30 $7,862.65 (session +0.00) | 16:00 close · cash $7,862.48 · no lots left · equity $7,862.48. | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,862.48 | ▲ 09:30 equity $7,862.48 vs yday $7,862.48 (+0.00) | 09:30 open · cash $7,862.48 · no holdings · equity $7,862.48 vs prior close $7,862.48 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,862.48 | ▲ close $7,862.48 vs 09:30 $7,862.48 (session +0.00) | 16:00 close · cash $7,862.48 · no lots left · equity $7,862.48. | — |
 
 ## Not taken
 

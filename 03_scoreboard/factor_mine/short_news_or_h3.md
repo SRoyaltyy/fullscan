@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short packet🔴 OR headline🔴
 
-Cash book **-12.94%** ($8,706) · signal-only (no cash/fees) was -1.39%. Starts YES **0/30**. Fills 131 · skips 120 · realized $+434.23.
+Cash book **-8.14%** ($9,186) · signal-only (no cash/fees) was -1.39%. Starts YES **0/30**. Fills 132 · skips 120 · realized $+434.23.
 
 ## How this sleeve decides (like you are 10)
 
@@ -283,6 +283,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SHORT** | `DXC` | 88 | $12.38 | $2.31 | — | $12,022.60 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list ohlc_hot; ret5=+6.3; leftover $1094.85 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **SHORT** | `DAL` | 13 | $79.68 | $2.08 | — | $13,056.36 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list earn_react; 🔵; ret5=-2.4; leftover $1094.85 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,056.36 | ▼ close $8,705.93 vs 09:30 $8,769.51 (session -43.95) | 16:00 close · cash $13,056.36 · equity $8,705.93 vs 09:30 $8,769.51 (-63.58; session marks -43.95) · 4 name(s) marked open→close (per-name table). NTLA×88 09:30 $12.39 → close $13.07 -59.84; EQPT×69 09:30 $15.81 → close $15.09 +50.02; DXC×88 09:30 $12.38 → close $12.40 -1.76; DAL×13 09:30 $79.68 → close $82.17 -32.37 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,056.36 | ▲ 09:30 equity $8,728.97 vs yday $8,705.93 (+23.04) | 09:30 open · cash $13,056.36 (unchanged overnight, no fees) · equity $8,728.97 vs prior close $8,705.93 (+23.04) · 4 name(s) re-marked at the open (per-name table). DAL×13 yday $82.17 → 09:30 $81.05 +14.56; DXC×88 yday $12.40 → 09:30 $12.47 -6.16; EQPT×69 yday $15.09 → 09:30 $14.86 +15.53; NTLA×88 yday $13.07 → 09:30 $13.08 -0.88 | — |
+| 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 427 | $10.22 | $5.73 | — | $17,414.57 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list yday_mover; 🔵; ret5=-1.3; leftover $4364.49 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,414.57 | ▲ close $9,185.85 vs 09:30 $8,728.97 (session +462.61) | 16:00 close · cash $17,414.57 · equity $9,185.85 vs 09:30 $8,728.97 (+456.88; session marks +462.61) · 5 name(s) marked open→close (per-name table). DAL×13 09:30 $81.05 → close $80.11 +12.22; DXC×88 09:30 $12.47 → close $12.54 -6.16; EQPT×69 09:30 $14.86 → close $14.76 +6.90; NTLA×88 09:30 $13.08 → close $12.58 +44.00; AEHL×427 09:30 $10.22 → close $9.27 +405.65 | — |
 
 ## Not taken
 

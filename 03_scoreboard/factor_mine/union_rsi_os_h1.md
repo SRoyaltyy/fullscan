@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-34.35%** ($6,565) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 138 · skips 20 · realized $-3180.18.
+Cash book **-33.28%** ($6,672) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 143 · skips 20 · realized $-3180.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -292,6 +292,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `ANGO` | 295 | $11.06 | $3.81 | — | $3,272.38 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-25.7; leftover $3269.45 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `GLAS` | 743 | $4.39 | $9.58 | — | $1.03 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-17.1; leftover $3269.45 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.03 | ▲ close $6,564.61 vs 09:30 $6,538.89 (session +39.11) | 16:00 close · cash $1.03 · equity $6,564.61 vs 09:30 $6,538.89 (+25.72; session marks +39.11) · 2 name(s) marked open→close (per-name table). ANGO×295 09:30 $11.06 → close $11.52 +135.70; GLAS×743 09:30 $4.39 → close $4.26 -96.59 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.03 | ▼ 09:30 equity $6,497.96 vs yday $6,564.61 (-66.65) | 09:30 open · cash $1.03 (unchanged overnight, no fees) · equity $6,497.96 vs prior close $6,564.61 (-66.65) · 2 name(s) re-marked at the open (per-name table). ANGO×295 yday $11.52 → 09:30 $11.42 -29.50; GLAS×743 yday $4.26 → 09:30 $4.21 -37.15 | — |
+| 2026-10-12 09:30 ET | **SELL** | `ANGO` | 295 | $11.42 | $3.88 | $+98.51 | $3,366.05 | ▲ +98.51 after sell → book $6,494.08; vs 09:30 mark -3.88 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `GLAS` | 743 | $4.21 | $9.73 | $-153.06 | $6,484.35 | ▼ -153.06 after sell → book $6,484.35; vs 09:30 mark -9.73 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `CDNL` | 102 | $21.01 | $2.30 | — | $4,339.03 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-31.3; leftover $2161.45 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `ALHC` | 288 | $7.49 | $3.72 | — | $2,178.19 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-5.0; leftover $2161.45 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `TMUS` | 14 | $149.58 | $2.03 | — | $82.04 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-9.2; leftover $2161.45 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $82.04 | ▲ close $6,671.98 vs 09:30 $6,497.96 (session +195.68) | 16:00 close · cash $82.04 · equity $6,671.98 vs 09:30 $6,497.96 (+174.02; session marks +195.68) · 3 name(s) marked open→close (per-name table). CDNL×102 09:30 $21.01 → close $20.92 -9.18; ALHC×288 09:30 $7.49 → close $8.09 +172.80; TMUS×14 09:30 $149.58 → close $151.87 +32.06 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-9.80%** ($9,020) · signal-only (no cash/fees) was +81.51%. Starts YES **27/30**. Fills 252 · skips 225 · realized $+477.57.
+Cash book **-7.94%** ($9,206) · signal-only (no cash/fees) was +81.51%. Starts YES **27/30**. Fills 256 · skips 225 · realized $+477.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -408,6 +408,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `ECO` | 12 | $93.64 | $2.03 | — | $1,215.91 | — | combo gate; gate ab=good,vol=good; list yday_gainer,ohlc_hot; ret5=+10.1; leftover $1139.53 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `ORBS` | 1238 | $0.92 | $15.10 | — | $61.85 | — | combo gate; gate ab=good,vol=good; list yday_mover; 🔵; ret5=-19.2; leftover $1139.53 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $61.85 | ▼ close $9,020.32 vs 09:30 $9,135.20 (session -53.93) | 16:00 close · cash $61.85 · equity $9,020.32 vs 09:30 $9,135.20 (-114.88; session marks -53.93) · 8 name(s) marked open→close (per-name table). PCRX×31 09:30 $36.33 → close $36.31 -0.62; HAE×9 09:30 $119.81 → close $118.69 -10.08; ADCT×721 09:30 $1.58 → close $1.73 +108.15; MAX×106 09:30 $10.68 → close $10.09 -62.54; NRDS×116 09:30 $9.78 → close $9.74 -4.64; GAU×530 09:30 $2.15 → close $2.19 +21.20; ECO×12 09:30 $93.64 → close $93.11 -6.36; ORBS×1238 09:30 $0.92 → close $0.84 -99.04 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $61.85 | ▲ 09:30 equity $9,047.23 vs yday $9,020.32 (+26.91) | 09:30 open · cash $61.85 (unchanged overnight, no fees) · equity $9,047.23 vs prior close $9,020.32 (+26.91) · 8 name(s) re-marked at the open (per-name table). ADCT×721 yday $1.73 → 09:30 $1.70 -21.63; ECO×12 yday $93.11 → 09:30 $96.86 +45.00; GAU×530 yday $2.19 → 09:30 $2.16 -15.90; HAE×9 yday $118.69 → 09:30 $118.70 +0.09; MAX×106 yday $10.09 → 09:30 $10.12 +3.18; NRDS×116 yday $9.74 → 09:30 $9.77 +3.48; ORBS×1238 yday $0.84 → 09:30 $0.85 +12.38; PCRX×31 yday $36.31 → 09:30 $36.32 +0.31 | — |
+| 2026-10-12 09:30 ET | **BUY** | `QSI` | 5 | $1.48 | $0.09 | — | $54.39 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=-1.3; leftover $7.73 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NAUT` | 3 | $2.17 | $0.07 | — | $47.82 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; leftover $7.73 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SVC` | 1 | $7.30 | $0.08 | — | $40.44 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+12.1; leftover $7.73 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `PRME` | 1 | $3.95 | $0.04 | — | $36.45 | — | combo gate; gate ab=good,vol=good; list yday_gainer; 🔵; ret5=+33.9; leftover $7.73 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $36.45 | ▲ close $9,206.32 vs 09:30 $9,047.23 (session +159.37) | 16:00 close · cash $36.45 · equity $9,206.32 vs 09:30 $9,047.23 (+159.09; session marks +159.37) · 12 name(s) marked open→close (per-name table). ADCT×721 09:30 $1.70 → close $1.86 +115.36; ECO×12 09:30 $96.86 → close $98.63 +21.24; GAU×530 09:30 $2.16 → close $2.16 +0.00; HAE×9 09:30 $118.70 → close $122.06 +30.24; MAX×106 09:30 $10.12 → close $10.06 -6.36; NRDS×116 09:30 $9.77 → close $9.82 +5.80; ORBS×1238 09:30 $0.85 → close $0.85 -5.57; PCRX×31 09:30 $36.32 → close $36.35 +0.93; QSI×5 09:30 $1.48 → close $1.36 -0.57; NAUT×3 09:30 $2.17 → close $2.17 +0.01; SVC×1 09:30 $7.30 → close $5.93 -1.37; PRME×1 09:30 $3.95 → close $3.61 -0.34 | — |
 
 ## Not taken
 

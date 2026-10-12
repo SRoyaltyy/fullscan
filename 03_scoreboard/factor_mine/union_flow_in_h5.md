@@ -216,6 +216,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SELL** | `ETON` | 77 | $54.86 | $2.27 | $+183.39 | $4,226.06 | ▲ +183.39 after sell → book $8,513.98; vs 09:30 mark -2.27 | exit unpriced hold on first bar after 5 sess | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 09:30 ET | **SELL** | `NKE` | 124 | $34.58 | $2.42 | $+246.57 | $8,511.57 | ▲ +246.57 after sell → book $8,511.57; vs 09:30 mark -2.41 | exit unpriced hold on first bar after 5 sess | — |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,511.57 | ▲ close $8,511.57 vs 09:30 $8,516.25 (session +0.00) | 16:00 close · cash $8,511.57 · no lots left · equity $8,511.57. | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,511.57 | ▲ 09:30 equity $8,511.57 vs yday $8,511.57 (+0.00) | 09:30 open · cash $8,511.57 · no holdings · equity $8,511.57 vs prior close $8,511.57 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,511.57 | ▲ close $8,511.57 vs 09:30 $8,511.57 (session +0.00) | 16:00 close · cash $8,511.57 · no lots left · equity $8,511.57. | — |
 
 ## Not taken
 

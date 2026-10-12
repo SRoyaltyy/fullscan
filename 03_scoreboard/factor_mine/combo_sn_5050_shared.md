@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_news_g_h1 w=0.5,0.5 net=priority
 
-Cash book **-39.44%** ($6,056) · signal-only (no cash/fees) was —. Starts YES **0/30**. Fills 382 · skips 197 · realized $-335.14.
+Cash book **-37.26%** ($6,274) · signal-only (no cash/fees) was —. Starts YES **0/30**. Fills 388 · skips 197 · realized $-335.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,096.15.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,586.29.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -537,6 +537,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SHORT** | `DXC` | 61 | $12.38 | $2.21 | — | $5,381.09 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+6.3; combo leftover $766.67; owner short_news_r_h3 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **SHORT** | `DAL` | 9 | $79.68 | $2.06 | — | $6,096.15 | — | news🔴; gate news=bad; list earn_react; 🔵; ret5=-2.4; combo leftover $766.67; owner short_news_r_h3 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,096.15 | ▼ close $6,055.98 vs 09:30 $6,152.40 (session -68.68) | 16:00 close · cash $6,096.15 · equity $6,055.98 vs 09:30 $6,152.40 (-96.42; session marks -68.68) · 7 name(s) marked open→close (per-name table). RRC×25 09:30 $40.62 → close $40.89 +6.75; FLUT×12 09:30 $81.79 → close $79.78 -24.12; GENI×150 09:30 $6.79 → close $6.65 -21.00; NTLA×61 09:30 $12.39 → close $13.07 -41.48; EQPT×48 09:30 $15.81 → close $15.09 +34.80; DXC×61 09:30 $12.38 → close $12.40 -1.22; DAL×9 09:30 $79.68 → close $82.17 -22.41 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,096.15 | ▲ 09:30 equity $6,081.13 vs yday $6,055.98 (+25.15) | 09:30 open · cash $6,096.15 (unchanged overnight, no fees) · equity $6,081.13 vs prior close $6,055.98 (+25.15) | — |
+| 2026-10-12 09:30 ET | **SELL** | `FLUT` | 12 | $79.48 | $2.05 | $-31.79 | $7,047.86 | ▼ -31.79 after sell → book $6,079.08; vs 09:30 mark -2.05 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `GENI` | 150 | $6.69 | $2.47 | $-19.91 | $8,048.89 | ▼ -19.91 after sell → book $6,076.61; vs 09:30 mark -2.47 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `RRC` | 25 | $41.16 | $2.08 | $+9.35 | $9,075.80 | ▲ +9.35 after sell → book $6,074.52; vs 09:30 mark -2.09 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `DNA` | 178 | $12.69 | $2.52 | — | $6,814.46 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; combo leftover $2268.95; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `AUGO` | 25 | $89.89 | $2.06 | — | $4,565.15 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+11.4; combo leftover $2268.95; owner union_news_g_h1 | join🟢 sector🔴 gen🔴 news🟢 digest🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 296 | $10.22 | $3.97 | — | $7,586.29 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; combo leftover $3034.97; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,586.29 | ▲ close $6,274.20 vs 09:30 $6,081.13 (session +208.24) | 16:00 close · cash $7,586.29 · equity $6,274.20 vs 09:30 $6,081.13 (+193.07; session marks +208.24) · 7 name(s) marked open→close (per-name table). DAL×9 09:30 $81.05 → close $80.11 +8.46; DXC×61 09:30 $12.47 → close $12.54 -4.27; EQPT×48 09:30 $14.86 → close $14.76 +4.80; NTLA×61 09:30 $13.08 → close $12.58 +30.50; DNA×178 09:30 $12.69 → close $11.79 -160.20; AUGO×25 09:30 $89.89 → close $91.80 +47.75; AEHL×296 09:30 $10.22 → close $9.27 +281.20 | — |
 
 ## Not taken
 

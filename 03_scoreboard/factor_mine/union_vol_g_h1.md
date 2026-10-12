@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-16.71%** ($8,329) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 338 · skips 87 · realized $-1273.21.
+Cash book **-18.94%** ($8,106) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 354 · skips 87 · realized $-1273.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -492,6 +492,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `PCRX` | 28 | $36.33 | $2.07 | — | $1,063.22 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=+45.5; leftover $1027.17 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `HAE` | 8 | $119.81 | $2.01 | — | $102.73 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $1027.17 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $102.73 | ▲ close $8,329.21 vs 09:30 $8,217.38 (session +139.85) | 16:00 close · cash $102.73 · equity $8,329.21 vs 09:30 $8,217.38 (+111.83; session marks +139.85) · 8 name(s) marked open→close (per-name table). IPSC×703 09:30 $1.46 → close $1.47 +7.03; ACRS×273 09:30 $3.76 → close $3.83 +19.11; SECZ×77 09:30 $13.20 → close $13.82 +47.74; COCO×18 09:30 $55.38 → close $58.39 +54.18; CATX×379 09:30 $2.71 → close $2.66 -18.95; ERAS×66 09:30 $15.42 → close $16.03 +40.26; PCRX×28 09:30 $36.33 → close $36.31 -0.56; HAE×8 09:30 $119.81 → close $118.69 -8.96 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $102.73 | ▼ 09:30 equity $8,298.25 vs yday $8,329.21 (-30.96) | 09:30 open · cash $102.73 (unchanged overnight, no fees) · equity $8,298.25 vs prior close $8,329.21 (-30.96) · 8 name(s) re-marked at the open (per-name table). ACRS×273 yday $3.83 → 09:30 $3.80 -8.19; CATX×379 yday $2.66 → 09:30 $2.61 -18.95; COCO×18 yday $58.39 → 09:30 $58.50 +1.98; ERAS×66 yday $16.03 → 09:30 $15.96 -4.62; HAE×8 yday $118.69 → 09:30 $118.70 +0.08; IPSC×703 yday $1.47 → 09:30 $1.47 +0.00; PCRX×28 yday $36.31 → 09:30 $36.32 +0.28; SECZ×77 yday $13.82 → 09:30 $13.80 -1.54 | — |
+| 2026-10-12 09:30 ET | **SELL** | `ACRS` | 273 | $3.80 | $3.58 | $+3.82 | $1,136.55 | ▲ +3.82 after sell → book $8,294.67; vs 09:30 mark -3.58 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `CATX` | 379 | $2.61 | $4.96 | $-47.75 | $2,120.78 | ▼ -47.75 after sell → book $8,289.71; vs 09:30 mark -4.96 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `COCO` | 18 | $58.50 | $2.06 | $+52.05 | $3,171.72 | ▲ +52.05 after sell → book $8,287.65; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `ERAS` | 66 | $15.96 | $2.21 | $+31.24 | $4,222.87 | ▲ +31.24 after sell → book $8,285.44; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `HAE` | 8 | $118.70 | $2.03 | $-12.93 | $5,170.43 | ▼ -12.93 after sell → book $8,283.40; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `IPSC` | 703 | $1.47 | $9.20 | $-11.23 | $6,194.65 | ▼ -11.23 after sell → book $8,274.21; vs 09:30 mark -9.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PCRX` | 28 | $36.32 | $2.09 | $-4.45 | $7,209.51 | ▼ -4.45 after sell → book $8,272.11; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `SECZ` | 77 | $13.80 | $2.24 | $+41.74 | $8,269.87 | ▲ +41.74 after sell → book $8,269.87; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `DNA` | 81 | $12.69 | $2.23 | — | $7,239.75 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; leftover $1033.73 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `RXRX` | 239 | $4.31 | $3.08 | — | $6,206.57 | — | union ∩ vol_g, no 🚨; gate vol=good; list probable,yday_gainer; ret5=+5.8; leftover $1033.73 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `WFF` | 69 | $14.78 | $2.20 | — | $5,184.56 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=+411.0; leftover $1033.73 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `QSI` | 700 | $1.48 | $9.03 | — | $4,143.03 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=-1.3; leftover $1033.73 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NAUT` | 477 | $2.17 | $6.15 | — | $3,104.17 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; leftover $1033.73 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `KLRA` | 90 | $11.39 | $2.26 | — | $2,076.81 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; ret5=+11.7; leftover $1033.73 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `FSLY` | 35 | $28.79 | $2.10 | — | $1,067.06 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.5; leftover $1033.73 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NVAX` | 81 | $12.61 | $2.23 | — | $43.42 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=+21.9; leftover $1033.73 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.42 | ▼ close $8,106.42 vs 09:30 $8,298.25 (session -134.17) | 16:00 close · cash $43.42 · equity $8,106.42 vs 09:30 $8,298.25 (-191.83; session marks -134.17) · 8 name(s) marked open→close (per-name table). DNA×81 09:30 $12.69 → close $11.79 -72.90; RXRX×239 09:30 $4.31 → close $4.01 -71.70; WFF×69 09:30 $14.78 → close $17.28 +172.50; QSI×700 09:30 $1.48 → close $1.36 -80.50; NAUT×477 09:30 $2.17 → close $2.17 +2.38; KLRA×90 09:30 $11.39 → close $11.33 -5.40; FSLY×35 09:30 $28.79 → close $26.43 -82.60; NVAX×81 09:30 $12.61 → close $12.66 +4.05 | — |
 
 ## Not taken
 

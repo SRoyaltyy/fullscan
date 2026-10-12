@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+19.73%** ($11,973) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 347 · skips 97 · realized $+14.68.
+Cash book **+19.36%** ($11,936) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 361 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -500,6 +500,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `NRDS` | 154 | $9.78 | $2.45 | — | $1,628.43 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,ohlc_hot; 🔵; ret5=+14.2; leftover $1513.80 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `HAFN` | 143 | $10.56 | $2.42 | — | $115.93 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; ret5=+7.7; leftover $1513.80 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $115.93 | ▼ close $11,972.95 vs 09:30 $12,110.39 (session -106.71) | 16:00 close · cash $115.93 · equity $11,972.95 vs 09:30 $12,110.39 (-137.44; session marks -106.71) · 8 name(s) marked open→close (per-name table). KOD×15 09:30 $94.64 → close $99.87 +78.45; BYRN×322 09:30 $4.70 → close $4.52 -57.96; ADCT×958 09:30 $1.58 → close $1.73 +143.70; PCRX×41 09:30 $36.33 → close $36.31 -0.82; XRPN×72 09:30 $20.88 → close $17.09 -272.88; FNKO×232 09:30 $6.50 → close $6.44 -13.92; NRDS×154 09:30 $9.78 → close $9.74 -6.16; HAFN×143 09:30 $10.56 → close $10.72 +22.88 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $115.93 | ▼ 09:30 equity $11,948.32 vs yday $11,972.95 (-24.63) | 09:30 open · cash $115.93 (unchanged overnight, no fees) · equity $11,948.32 vs prior close $11,972.95 (-24.63) · 8 name(s) re-marked at the open (per-name table). ADCT×958 yday $1.73 → 09:30 $1.70 -28.74; BYRN×322 yday $4.52 → 09:30 $4.50 -6.44; FNKO×232 yday $6.44 → 09:30 $6.40 -9.28; HAFN×143 yday $10.72 → 09:30 $11.01 +41.47; KOD×15 yday $99.87 → 09:30 $100.06 +2.85; NRDS×154 yday $9.74 → 09:30 $9.77 +4.62; PCRX×41 yday $36.31 → 09:30 $36.32 +0.41; XRPN×72 yday $17.09 → 09:30 $16.68 -29.52 | — |
+| 2026-10-12 09:30 ET | **SELL** | `ADCT` | 958 | $1.70 | $12.53 | $+90.07 | $1,732.00 | ▲ +90.07 after sell → book $11,935.79; vs 09:30 mark -12.53 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `BYRN` | 322 | $4.50 | $4.22 | $-72.77 | $3,176.78 | ▼ -72.77 after sell → book $11,931.57; vs 09:30 mark -4.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `FNKO` | 232 | $6.40 | $3.04 | $-29.24 | $4,658.54 | ▼ -29.24 after sell → book $11,928.53; vs 09:30 mark -3.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `HAFN` | 143 | $11.01 | $2.46 | $+59.48 | $6,230.51 | ▲ +59.48 after sell → book $11,926.07; vs 09:30 mark -2.46 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `NRDS` | 154 | $9.77 | $2.49 | $-6.48 | $7,732.60 | ▼ -6.48 after sell → book $11,923.58; vs 09:30 mark -2.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PCRX` | 41 | $36.32 | $2.13 | $-4.66 | $9,219.59 | ▼ -4.66 after sell → book $11,921.45; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `XRPN` | 72 | $16.68 | $2.23 | $-306.83 | $10,418.32 | ▼ -306.83 after sell → book $11,919.22; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `WFF` | 100 | $14.78 | $2.29 | — | $8,938.03 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; 🔵; ret5=+411.0; leftover $1488.33 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `QTEX` | 860 | $1.73 | $11.09 | — | $7,439.14 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; 🔵; ret5=+70.0; leftover $1488.33 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NAUT` | 687 | $2.17 | $8.86 | — | $5,942.92 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; leftover $1488.33 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SEZL` | 11 | $127.75 | $2.02 | — | $4,535.65 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; ret5=+19.8; leftover $1488.33 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `MRNA` | 6 | $224.24 | $2.01 | — | $3,188.23 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; 🔵; ret5=+18.4; leftover $1488.33 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `CCI` | 18 | $79.50 | $2.04 | — | $1,755.18 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; 🔵; ret5=+19.9; leftover $1488.33 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `TENB` | 35 | $42.48 | $2.10 | — | $266.29 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+12.9; leftover $1488.33 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $266.29 | ▲ close $11,935.63 vs 09:30 $11,948.32 (session +46.82) | 16:00 close · cash $266.29 · equity $11,935.63 vs 09:30 $11,948.32 (-12.69; session marks +46.82) · 8 name(s) marked open→close (per-name table). KOD×15 09:30 $100.06 → close $99.26 -12.00; WFF×100 09:30 $14.78 → close $17.28 +250.00; QTEX×860 09:30 $1.73 → close $1.58 -129.00; NAUT×687 09:30 $2.17 → close $2.17 +3.43; SEZL×11 09:30 $127.75 → close $130.48 +30.03; MRNA×6 09:30 $224.24 → close $213.74 -62.97; CCI×18 09:30 $79.50 → close $81.01 +27.18; TENB×35 09:30 $42.48 → close $40.77 -59.85 | — |
 
 ## Not taken
 

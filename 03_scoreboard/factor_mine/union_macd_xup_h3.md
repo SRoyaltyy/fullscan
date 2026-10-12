@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-7.21%** ($9,279) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 186 · skips 209 · realized $-2117.42.
+Cash book **-9.15%** ($9,085) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 190 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -340,6 +340,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `GAU` | 723 | $2.15 | $9.33 | — | $1,711.78 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ret5=+7.7; leftover $1555.70 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `FLUT` | 19 | $81.79 | $2.05 | — | $155.72 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; ret5=+6.7; leftover $1555.70 | join🔴 sector🔴 gen🔴 news🟢 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $155.72 | ▼ close $9,279.01 vs 09:30 $9,352.96 (session -17.93) | 16:00 close · cash $155.72 · equity $9,279.01 vs 09:30 $9,352.96 (-73.95; session marks -17.93) · 6 name(s) marked open→close (per-name table). HAE×12 09:30 $119.81 → close $118.69 -13.44; MANE×12 09:30 $125.71 → close $130.90 +62.28; LCTX×1525 09:30 $1.02 → close $0.99 -39.65; CSGP×51 09:30 $30.02 → close $29.67 -17.85; GAU×723 09:30 $2.15 → close $2.19 +28.92; FLUT×19 09:30 $81.79 → close $79.78 -38.19 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $155.72 | ▼ 09:30 equity $9,246.77 vs yday $9,279.01 (-32.24) | 09:30 open · cash $155.72 (unchanged overnight, no fees) · equity $9,246.77 vs prior close $9,279.01 (-32.24) · 6 name(s) re-marked at the open (per-name table). CSGP×51 yday $29.67 → 09:30 $29.67 +0.00; FLUT×19 yday $79.78 → 09:30 $79.48 -5.70; GAU×723 yday $2.19 → 09:30 $2.16 -21.69; HAE×12 yday $118.69 → 09:30 $118.70 +0.12; LCTX×1525 yday $0.99 → 09:30 $1.00 +5.95; MANE×12 yday $130.90 → 09:30 $129.99 -10.92 | — |
+| 2026-10-12 09:30 ET | **BUY** | `CCCC` | 7 | $3.16 | $0.24 | — | $133.36 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer; 🔵; ret5=+7.1; leftover $22.25 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `WFF` | 1 | $14.78 | $0.15 | — | $118.43 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; 🔵; ret5=+411.0; leftover $22.25 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `KLRA` | 1 | $11.39 | $0.12 | — | $106.92 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; ret5=+11.7; leftover $22.25 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `LVWR` | 13 | $1.59 | $0.25 | — | $86.00 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; ret5=+2.5; leftover $22.25 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $86.00 | ▼ close $9,085.11 vs 09:30 $9,246.77 (session -160.91) | 16:00 close · cash $86.00 · equity $9,085.11 vs 09:30 $9,246.77 (-161.66; session marks -160.91) · 10 name(s) marked open→close (per-name table). CSGP×51 09:30 $29.67 → close $29.21 -23.46; FLUT×19 09:30 $79.48 → close $78.28 -22.80; GAU×723 09:30 $2.16 → close $2.16 +0.00; HAE×12 09:30 $118.70 → close $122.06 +40.32; LCTX×1525 09:30 $1.00 → close $0.95 -66.80; MANE×12 09:30 $129.99 → close $122.40 -91.08; CCCC×7 09:30 $3.16 → close $3.06 -0.70; WFF×1 09:30 $14.78 → close $17.28 +2.50; KLRA×1 09:30 $11.39 → close $11.33 -0.06; LVWR×13 09:30 $1.59 → close $1.68 +1.17 | — |
 
 ## Not taken
 

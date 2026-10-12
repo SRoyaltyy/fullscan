@@ -377,6 +377,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SELL** | `SHOP` | 8 | $166.04 | $2.03 | $-3.85 | $7,682.51 | ▼ -3.85 after sell → book $9,029.35; vs 09:30 mark -2.04 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-10-09 09:30 ET | **SELL** | `TOST` | 44 | $30.61 | $2.14 | $+19.50 | $9,027.21 | ▲ +19.50 after sell → book $9,027.21; vs 09:30 mark -2.14 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,027.21 | ▲ close $9,027.21 vs 09:30 $9,039.84 (session +0.00) | 16:00 close · cash $9,027.21 · no lots left · equity $9,027.21. | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,027.21 | ▲ 09:30 equity $9,027.21 vs yday $9,027.21 (+0.00) | 09:30 open · cash $9,027.21 · no holdings · equity $9,027.21 vs prior close $9,027.21 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,027.21 | ▲ close $9,027.21 vs 09:30 $9,027.21 (session +0.00) | 16:00 close · cash $9,027.21 · no lots left · equity $9,027.21. | — |
 
 ## Not taken
 

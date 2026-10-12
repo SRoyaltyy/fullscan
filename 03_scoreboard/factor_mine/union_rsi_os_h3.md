@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-16.20%** ($8,380) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 110 · skips 88 · realized $-2389.72.
+Cash book **-18.36%** ($8,164) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 110 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -264,6 +264,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `ANGO` | 377 | $11.06 | $4.86 | — | $4,172.00 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-25.7; leftover $4173.24 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `GLAS` | 947 | $4.39 | $12.22 | — | $2.45 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-17.1; leftover $4173.24 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.45 | ▲ close $8,379.71 vs 09:30 $8,376.54 (session +50.31) | 16:00 close · cash $2.45 · equity $8,379.71 vs 09:30 $8,376.54 (+3.17; session marks +50.31) · 2 name(s) marked open→close (per-name table). ANGO×377 09:30 $11.06 → close $11.52 +173.42; GLAS×947 09:30 $4.39 → close $4.26 -123.11 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.45 | ▼ 09:30 equity $8,294.66 vs yday $8,379.71 (-85.05) | 09:30 open · cash $2.45 (unchanged overnight, no fees) · equity $8,294.66 vs prior close $8,379.71 (-85.05) · 2 name(s) re-marked at the open (per-name table). ANGO×377 yday $11.52 → 09:30 $11.42 -37.70; GLAS×947 yday $4.26 → 09:30 $4.21 -47.35 | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.45 | ▼ close $8,164.01 vs 09:30 $8,294.66 (session -130.65) | 16:00 close · cash $2.45 · equity $8,164.01 vs 09:30 $8,294.66 (-130.65; session marks -130.65) · 2 name(s) marked open→close (per-name table). ANGO×377 09:30 $11.42 → close $11.40 -7.54; GLAS×947 09:30 $4.21 → close $4.08 -123.11 | — |
 
 ## Not taken
 

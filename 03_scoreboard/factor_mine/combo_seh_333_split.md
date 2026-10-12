@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · split short_news_r_h3/union_e_fresh_h3/union_hot_n4_h1 w=0.33,0.33,0.33 net=priority
 
-Cash book **+5.50%** ($10,550) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 436 · skips 367 · realized $+2181.46.
+Cash book **+7.02%** ($10,702) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 443 · skips 367 · realized $+2181.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $4,320.89.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $5,667.14.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -712,6 +712,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SHORT** | `DXC` | 28 | $12.38 | $2.10 | — | $3,873.85 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+6.3; leftover $354.84 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **SHORT** | `EQPT` | 22 | $15.81 | $2.09 | — | $3,529.31 | — | news🔴; gate news=bad; list yday_mover; ret5=-10.4; leftover $354.84 | join🔴 sector🟡 gen🔴 news🔴 digest🟡 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **SHORT** | `NTLA` | 28 | $12.39 | $2.10 | — | $3,183.58 | — | news🔴; gate news=bad; list yday_gainer; 🔵; ret5=+4.0; leftover $354.84 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NAUT` | 562 | $2.17 | $7.25 | — | $0.32 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; leftover $1230.83 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `QTEX` | 711 | $1.73 | $9.17 | — | $1,224.30 | — | top 4 by hot; rank hot_score; list yday_gainer; 🔵; ret5=+70.0; leftover $1230.83 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `WFF` | 83 | $14.78 | $2.24 | — | $2,463.50 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+411.0; leftover $1230.83 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,598.42 | ▲ close $2,970.64 vs 09:30 $2,824.02 (session +149.10) | 16:00 close · cash $5,598.42 · equity $2,970.64 vs 09:30 $2,824.02 (+146.62; session marks +149.10) · 5 name(s) marked open→close (per-name table). DAL×4 09:30 $81.05 → close $80.11 +3.76; DXC×28 09:30 $12.47 → close $12.54 -1.96; EQPT×22 09:30 $14.86 → close $14.76 +2.20; NTLA×28 09:30 $13.08 → close $12.58 +14.00; AEHL×138 09:30 $10.22 → close $9.27 +131.10 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,190.54 | ▲ 09:30 equity $2,824.02 vs yday $2,816.83 (+7.19) | 09:30 open · cash $4,190.54 (unchanged overnight, no fees) · equity $2,824.02 vs prior close $2,816.83 (+7.19) · 4 name(s) re-marked at the open (per-name table). DAL×4 yday $82.17 → 09:30 $81.05 +4.48; DXC×28 yday $12.40 → 09:30 $12.47 -1.96; EQPT×22 yday $15.09 → 09:30 $14.86 +4.95; NTLA×28 yday $13.07 → 09:30 $13.08 -0.28 | — |
+| 2026-10-12 09:30 ET | **SELL** | `ADCT` | 762 | $1.70 | $9.97 | $+71.64 | $1,347.38 | ▲ +71.64 after sell → book $4,898.66; vs 09:30 mark -9.97 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `BYRN` | 256 | $4.50 | $3.35 | $-57.86 | $2,496.03 | ▼ -57.86 after sell → book $4,895.31; vs 09:30 mark -3.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PCRX` | 33 | $36.32 | $2.11 | $-4.53 | $3,692.48 | ▼ -4.53 after sell → book $4,893.20; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 138 | $10.22 | $2.48 | — | $5,598.42 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; leftover $1412.01 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 
 ## Not taken
 

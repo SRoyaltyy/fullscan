@@ -242,6 +242,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,656.14 | ▲ 09:30 equity $8,734.13 vs yday $8,728.75 (+5.38) | 09:30 open · cash $8,656.14 (unchanged overnight, no fees) · equity $8,734.13 vs prior close $8,728.75 (+5.38) · 1 name(s) re-marked at the open (per-name table). PENG×1 yday $72.61 → 09:30 $77.99 +5.38 | — |
 | 2026-10-09 09:30 ET | **SELL** | `PENG` | 1 | $77.99 | $0.80 | $+14.97 | $8,733.33 | ▲ +14.97 after sell → book $8,733.33; vs 09:30 mark -0.80 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,733.33 | ▲ close $8,733.33 vs 09:30 $8,734.13 (session +0.00) | 16:00 close · cash $8,733.33 · no lots left · equity $8,733.33. | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,733.33 | ▲ 09:30 equity $8,733.33 vs yday $8,733.33 (+0.00) | 09:30 open · cash $8,733.33 · no holdings · equity $8,733.33 vs prior close $8,733.33 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,733.33 | ▲ close $8,733.33 vs 09:30 $8,733.33 (session +0.00) | 16:00 close · cash $8,733.33 · no lots left · equity $8,733.33. | — |
 
 ## Not taken
 

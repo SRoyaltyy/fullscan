@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **-23.01%** ($7,699) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 147 · skips 198 · realized $+2100.34.
+Cash book **-24.96%** ($7,504) · signal-only (no cash/fees) was -14.12%. Starts YES **25/30**. Fills 147 · skips 198 · realized $+2100.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -301,6 +301,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `DAL` | 48 | $79.68 | $2.13 | — | $3,953.76 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-2.4; leftover $3890.27 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `HOVR` | 2401 | $1.62 | $30.97 | — | $33.16 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-8.4; leftover $3890.27 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.16 | ▼ close $7,698.87 vs 09:30 $7,782.79 (session -48.55) | 16:00 close · cash $33.16 · equity $7,698.87 vs 09:30 $7,782.79 (-83.92; session marks -48.55) · 2 name(s) marked open→close (per-name table). DAL×48 09:30 $79.68 → close $82.17 +119.52; HOVR×2401 09:30 $1.62 → close $1.55 -168.07 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $33.16 | ▼ 09:30 equity $7,621.10 vs yday $7,698.87 (-77.77) | 09:30 open · cash $33.16 (unchanged overnight, no fees) · equity $7,621.10 vs prior close $7,698.87 (-77.77) · 2 name(s) re-marked at the open (per-name table). DAL×48 yday $82.17 → 09:30 $81.05 -53.76; HOVR×2401 yday $1.55 → 09:30 $1.54 -24.01 | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.16 | ▼ close $7,503.95 vs 09:30 $7,621.10 (session -117.15) | 16:00 close · cash $33.16 · equity $7,503.95 vs 09:30 $7,621.10 (-117.15; session marks -117.15) · 2 name(s) marked open→close (per-name table). DAL×48 09:30 $81.05 → close $80.11 -45.12; HOVR×2401 09:30 $1.54 → close $1.51 -72.03 | — |
 
 ## Not taken
 

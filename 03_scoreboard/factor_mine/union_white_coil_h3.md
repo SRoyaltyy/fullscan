@@ -326,6 +326,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SELL** | `AVPT` | 8 | $14.44 | $1.20 | $-5.04 | $6,189.46 | ▼ -5.04 after sell → book $7,315.76; vs 09:30 mark -1.20 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-10-09 09:30 ET | **SELL** | `TOST` | 4 | $30.61 | $1.26 | $-0.31 | $6,310.64 | ▼ -0.31 after sell → book $7,314.50; vs 09:30 mark -1.26 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,310.64 | ▲ close $7,314.50 vs 09:30 $7,316.96 (session +0.00) | 16:00 close · cash $6,310.64 · equity $7,314.50 vs 09:30 $7,316.96 (-2.46; session marks +0.00) · 1 name(s) marked open→close (per-name table). BLFS×26 09:30 $38.61 → close $38.61 +0.00 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,310.64 | ▲ 09:30 equity $7,314.50 vs yday $7,314.50 (+0.00) | 09:30 open · cash $6,310.64 (unchanged overnight, no fees) · equity $7,314.50 vs prior close $7,314.50 (+0.00) · 1 name(s) re-marked at the open (per-name table). BLFS×26 yday $38.61 → 09:30 $38.61 +0.00 | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,310.64 | ▲ close $7,314.50 vs 09:30 $7,314.50 (session +0.00) | 16:00 close · cash $6,310.64 · equity $7,314.50 vs 09:30 $7,314.50 (+0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). BLFS×26 09:30 $38.61 → close $38.61 +0.00 | — |
 
 ## Not taken
 

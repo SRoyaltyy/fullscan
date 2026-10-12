@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g, no 🚨
 
-Cash book **-33.20%** ($6,680) · signal-only (no cash/fees) was +177.31%. Starts YES **1/30**. Fills 211 · skips 234 · realized $-2132.89.
+Cash book **-34.03%** ($6,597) · signal-only (no cash/fees) was +177.31%. Starts YES **1/30**. Fills 212 · skips 234 · realized $-2132.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -365,6 +365,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `FLUT` | 41 | $81.79 | $2.11 | — | $3,486.39 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; ret5=+6.7; leftover $3420.94 | join🔴 sector🔴 gen🔴 news🟢 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `GENI` | 503 | $6.79 | $6.49 | — | $64.53 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+16.7; leftover $3420.94 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $64.53 | ▼ close $6,680.46 vs 09:30 $6,857.41 (session -152.83) | 16:00 close · cash $64.53 · equity $6,680.46 vs 09:30 $6,857.41 (-176.95; session marks -152.83) · 2 name(s) marked open→close (per-name table). FLUT×41 09:30 $81.79 → close $79.78 -82.41; GENI×503 09:30 $6.79 → close $6.65 -70.42 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $64.53 | ▲ 09:30 equity $6,688.28 vs yday $6,680.46 (+7.82) | 09:30 open · cash $64.53 (unchanged overnight, no fees) · equity $6,688.28 vs prior close $6,680.46 (+7.82) · 2 name(s) re-marked at the open (per-name table). FLUT×41 yday $79.78 → 09:30 $79.48 -12.30; GENI×503 yday $6.65 → 09:30 $6.69 +20.12 | — |
+| 2026-10-12 09:30 ET | **BUY** | `DNA` | 2 | $12.69 | $0.26 | — | $38.89 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; leftover $32.27 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $38.89 | ▼ close $6,596.78 vs 09:30 $6,688.28 (session -91.24) | 16:00 close · cash $38.89 · equity $6,596.78 vs 09:30 $6,688.28 (-91.50; session marks -91.24) · 3 name(s) marked open→close (per-name table). FLUT×41 09:30 $79.48 → close $78.28 -49.20; GENI×503 09:30 $6.69 → close $6.61 -40.24; DNA×2 09:30 $12.69 → close $11.79 -1.80 | — |
 
 ## Not taken
 

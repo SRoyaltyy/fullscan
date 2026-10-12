@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ ab_g, no 🚨
 
-Cash book **-26.64%** ($7,336) · signal-only (no cash/fees) was -10.05%. Starts YES **2/30**. Fills 230 · skips 241 · realized $-1471.05.
+Cash book **-25.50%** ($7,450) · signal-only (no cash/fees) was -10.05%. Starts YES **2/30**. Fills 236 · skips 241 · realized $-1471.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -384,6 +384,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `ADCT` | 578 | $1.58 | $7.46 | — | $1,109.64 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $913.36 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `MAX` | 85 | $10.68 | $2.25 | — | $199.59 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,ohlc_hot; 🔵; ret5=+10.3; leftover $913.36 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $199.59 | ▲ close $7,336.08 vs 09:30 $7,321.99 (session +51.19) | 16:00 close · cash $199.59 · equity $7,336.08 vs 09:30 $7,321.99 (+14.09; session marks +51.19) · 8 name(s) marked open→close (per-name table). CDNA×14 09:30 $62.21 → close $63.67 +20.44; RRC×22 09:30 $40.62 → close $40.89 +5.94; PACS×20 09:30 $43.75 → close $43.30 -9.00; ETON×16 09:30 $54.86 → close $55.21 +5.60; PCRX×25 09:30 $36.33 → close $36.31 -0.50; HAE×7 09:30 $119.81 → close $118.69 -7.84; ADCT×578 09:30 $1.58 → close $1.73 +86.70; MAX×85 09:30 $10.68 → close $10.09 -50.15 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $199.59 | ▼ 09:30 equity $7,324.73 vs yday $7,336.08 (-11.35) | 09:30 open · cash $199.59 (unchanged overnight, no fees) · equity $7,324.73 vs prior close $7,336.08 (-11.35) · 8 name(s) re-marked at the open (per-name table). ADCT×578 yday $1.73 → 09:30 $1.70 -17.34; CDNA×14 yday $63.67 → 09:30 $63.28 -5.46; ETON×16 yday $55.21 → 09:30 $55.50 +4.64; HAE×7 yday $118.69 → 09:30 $118.70 +0.07; MAX×85 yday $10.09 → 09:30 $10.12 +2.55; PACS×20 yday $43.30 → 09:30 $43.20 -2.00; PCRX×25 yday $36.31 → 09:30 $36.32 +0.25; RRC×22 yday $40.89 → 09:30 $41.16 +5.94 | — |
+| 2026-10-12 09:30 ET | **BUY** | `ARQT` | 1 | $26.57 | $0.27 | — | $172.75 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; 🔵; ret5=+5.6; leftover $33.27 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `CCCC` | 10 | $3.16 | $0.35 | — | $140.81 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer; 🔵; ret5=+7.1; leftover $33.27 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `IOVA` | 2 | $14.45 | $0.29 | — | $111.61 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer; ret5=+2.8; leftover $33.27 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `QSI` | 22 | $1.48 | $0.39 | — | $78.77 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,yday_mover; 🔵; ret5=-1.3; leftover $33.27 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NAUT` | 15 | $2.17 | $0.37 | — | $45.93 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; leftover $33.27 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `FSLY` | 1 | $28.79 | $0.29 | — | $16.84 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.5; leftover $33.27 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16.84 | ▲ close $7,449.95 vs 09:30 $7,324.73 (session +127.18) | 16:00 close · cash $16.84 · equity $7,449.95 vs 09:30 $7,324.73 (+125.22; session marks +127.18) · 14 name(s) marked open→close (per-name table). ADCT×578 09:30 $1.70 → close $1.86 +92.48; CDNA×14 09:30 $63.28 → close $63.12 -2.24; ETON×16 09:30 $55.50 → close $55.25 -4.00; HAE×7 09:30 $118.70 → close $122.06 +23.52; MAX×85 09:30 $10.12 → close $10.06 -5.10; PACS×20 09:30 $43.20 → close $44.30 +22.00; PCRX×25 09:30 $36.32 → close $36.35 +0.75; RRC×22 09:30 $41.16 → close $41.42 +5.72; ARQT×1 09:30 $26.57 → close $26.22 -0.35; CCCC×10 09:30 $3.16 → close $3.06 -1.00; IOVA×2 09:30 $14.45 → close $14.56 +0.22; QSI×22 09:30 $1.48 → close $1.36 -2.53; NAUT×15 09:30 $2.17 → close $2.17 +0.07; FSLY×1 09:30 $28.79 → close $26.43 -2.36 | — |
 
 ## Not taken
 

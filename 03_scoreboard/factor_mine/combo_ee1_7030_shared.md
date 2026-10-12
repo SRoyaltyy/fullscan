@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_e_fresh_h1 w=0.7,0.3 net=priority
 
-Cash book **-11.81%** ($8,819) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 139 · skips 250 · realized $+4004.41.
+Cash book **-12.98%** ($8,702) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 139 · skips 250 · realized $+4004.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -294,6 +294,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `DAL` | 27 | $79.68 | $2.07 | — | $2,281.27 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-2.4; combo leftover $2217.27; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `HOVR` | 1368 | $1.62 | $17.65 | — | $47.47 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.4; combo leftover $2217.27; owner union_e_fresh_h3 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $47.47 | ▼ close $8,819.38 vs 09:30 $8,869.07 (session -21.31) | 16:00 close · cash $47.47 · equity $8,819.38 vs 09:30 $8,869.07 (-49.69; session marks -21.31) · 4 name(s) marked open→close (per-name table). BYRN×471 09:30 $4.70 → close $4.52 -84.78; ANGO×200 09:30 $11.06 → close $11.52 +92.00; DAL×27 09:30 $79.68 → close $82.17 +67.23; HOVR×1368 09:30 $1.62 → close $1.55 -95.76 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $47.47 | ▼ 09:30 equity $8,746.04 vs yday $8,819.38 (-73.34) | 09:30 open · cash $47.47 (unchanged overnight, no fees) · equity $8,746.04 vs prior close $8,819.38 (-73.34) | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $47.47 | ▼ close $8,701.52 vs 09:30 $8,746.04 (session -44.52) | 16:00 close · cash $47.47 · equity $8,701.52 vs 09:30 $8,746.04 (-44.52; session marks -44.52) · 4 name(s) marked open→close (per-name table). ANGO×200 09:30 $11.42 → close $11.40 -4.00; BYRN×471 09:30 $4.50 → close $4.55 +25.90; DAL×27 09:30 $81.05 → close $80.11 -25.38; HOVR×1368 09:30 $1.54 → close $1.51 -41.04 | — |
 
 ## Not taken
 

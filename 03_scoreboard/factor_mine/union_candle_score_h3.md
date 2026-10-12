@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-12.96%** ($8,704) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 262 · skips 288 · realized $+91.50.
+Cash book **-11.35%** ($8,865) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 266 · skips 288 · realized $+91.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -415,6 +415,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `DXC` | 88 | $12.38 | $2.25 | — | $1,160.38 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+6.3; leftover $1091.13 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `STZ` | 8 | $123.25 | $2.01 | — | $172.37 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+9.4; leftover $1091.13 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $172.37 | ▼ close $8,704.08 vs 09:30 $8,748.10 (session -6.93) | 16:00 close · cash $172.37 · equity $8,704.08 vs 09:30 $8,748.10 (-44.02; session marks -6.93) · 8 name(s) marked open→close (per-name table). HAFN×103 09:30 $10.56 → close $10.72 +16.48; BYRN×232 09:30 $4.70 → close $4.52 -41.76; FRPT×16 09:30 $65.24 → close $64.07 -18.72; ONON×32 09:30 $34.03 → close $35.09 +33.92; SG×113 09:30 $9.60 → close $9.63 +3.39; SHAK×16 09:30 $66.72 → close $66.90 +2.88; DXC×88 09:30 $12.38 → close $12.40 +1.76; STZ×8 09:30 $123.25 → close $122.64 -4.88 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $172.37 | ▲ 09:30 equity $8,728.22 vs yday $8,704.08 (+24.14) | 09:30 open · cash $172.37 (unchanged overnight, no fees) · equity $8,728.22 vs prior close $8,704.08 (+24.14) · 8 name(s) re-marked at the open (per-name table). BYRN×232 yday $4.52 → 09:30 $4.50 -4.64; DXC×88 yday $12.40 → 09:30 $12.47 +6.16; FRPT×16 yday $64.07 → 09:30 $64.17 +1.60; HAFN×103 yday $10.72 → 09:30 $11.01 +29.87; ONON×32 yday $35.09 → 09:30 $34.91 -5.76; SG×113 yday $9.63 → 09:30 $9.58 -5.65; SHAK×16 yday $66.90 → 09:30 $66.80 -1.60; STZ×8 yday $122.64 → 09:30 $123.16 +4.16 | — |
+| 2026-10-12 09:30 ET | **BUY** | `PAX` | 1 | $11.65 | $0.12 | — | $160.60 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+14.3; leftover $21.55 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `KLAR` | 1 | $14.05 | $0.14 | — | $146.40 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+12.4; leftover $21.55 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SFIX` | 7 | $2.85 | $0.22 | — | $126.23 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+8.8; leftover $21.55 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SNAP` | 3 | $6.38 | $0.20 | — | $106.89 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+11.6; leftover $21.55 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $106.89 | ▲ close $8,865.20 vs 09:30 $8,728.22 (session +137.67) | 16:00 close · cash $106.89 · equity $8,865.20 vs 09:30 $8,728.22 (+136.98; session marks +137.67) · 12 name(s) marked open→close (per-name table). BYRN×232 09:30 $4.50 → close $4.55 +12.76; DXC×88 09:30 $12.47 → close $12.54 +6.16; FRPT×16 09:30 $64.17 → close $65.26 +17.44; HAFN×103 09:30 $11.01 → close $10.92 -9.27; ONON×32 09:30 $34.91 → close $35.35 +14.08; SG×113 09:30 $9.58 → close $9.85 +30.51; SHAK×16 09:30 $66.80 → close $69.34 +40.64; STZ×8 09:30 $123.16 → close $126.40 +25.92; PAX×1 09:30 $11.65 → close $11.87 +0.22; KLAR×1 09:30 $14.05 → close $13.86 -0.19; SFIX×7 09:30 $2.85 → close $2.70 -1.05; SNAP×3 09:30 $6.38 → close $6.53 +0.45 | — |
 
 ## Not taken
 

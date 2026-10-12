@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-34.63%** ($6,537) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 110 · skips 133 · realized $-1334.78.
+Cash book **-39.32%** ($6,068) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 111 · skips 133 · realized $-1334.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -266,6 +266,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SELL** | `ALVO` | 645 | $5.67 | $8.46 | $-274.78 | $3,790.57 | ▼ -274.78 after sell → book $6,538.99; vs 09:30 mark -8.46 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-10-09 09:30 ET | **SELL** | `TWST` | 18 | $152.69 | $2.08 | $-1027.60 | $6,536.92 | ▼ -1,027.60 after sell → book $6,536.92; vs 09:30 mark -2.07 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,536.92 | ▲ close $6,536.92 vs 09:30 $6,547.45 (session +0.00) | 16:00 close · cash $6,536.92 · no lots left · equity $6,536.92. | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,536.92 | ▲ 09:30 equity $6,536.92 vs yday $6,536.92 (+0.00) | 09:30 open · cash $6,536.92 · no holdings · equity $6,536.92 vs prior close $6,536.92 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-12 09:30 ET | **BUY** | `DNA` | 514 | $12.69 | $6.63 | — | $7.63 | — | combo gate; gate news=good,vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; leftover $6536.92 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.63 | ▼ close $6,067.69 vs 09:30 $6,536.92 (session -462.60) | 16:00 close · cash $7.63 · equity $6,067.69 vs 09:30 $6,536.92 (-469.23; session marks -462.60) · 1 name(s) marked open→close (per-name table). DNA×514 09:30 $12.69 → close $11.79 -462.60 | — |
 
 ## Not taken
 

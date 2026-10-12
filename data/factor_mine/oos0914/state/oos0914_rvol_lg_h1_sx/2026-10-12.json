@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 14.78,
+      "shares": 193,
+      "side": "BUY",
+      "ticker": "WFF"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.165,
+      "shares": 1322,
+      "side": "BUY",
+      "ticker": "NAUT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.95,
+      "shares": 724,
+      "side": "BUY",
+      "ticker": "PRME"
+    },
+    {
+      "fill_rule": "open",
+      "price": 79.5,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "CCI"
+    }
+  ],
+  "cash": 66.46,
+  "date": "2026-10-12",
+  "equity": 11719.23,
+  "fees": 67.0871,
+  "fills": [
+    {
+      "fees": 23.7002,
+      "fill_rule": "open",
+      "pnl": 170.37,
+      "price": 1.7,
+      "shares": 1812,
+      "side": "SELL",
+      "ticker": "ADCT"
+    },
+    {
+      "fees": 7.9791,
+      "fill_rule": "open",
+      "pnl": -137.64,
+      "price": 4.5,
+      "shares": 609,
+      "side": "SELL",
+      "ticker": "BYRN"
+    },
+    {
+      "fees": 2.0908,
+      "fill_rule": "open",
+      "pnl": -29.68,
+      "price": 118.7,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "HAE"
+    },
+    {
+      "fees": 2.2596,
+      "fill_rule": "open",
+      "pnl": -5.26,
+      "price": 36.32,
+      "shares": 78,
+      "side": "SELL",
+      "ticker": "PCRX"
+    },
+    {
+      "fees": 2.569,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 14.78,
+      "shares": 193,
+      "side": "BUY",
+      "ticker": "WFF"
+    },
+    {
+      "fees": 17.0538,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 2.165,
+      "shares": 1322,
+      "side": "BUY",
+      "ticker": "NAUT"
+    },
+    {
+      "fees": 9.3396,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 3.95,
+      "shares": 724,
+      "side": "BUY",
+      "ticker": "PRME"
+    },
+    {
+      "fees": 2.095,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 79.5,
+      "shares": 35,
+      "side": "BUY",
+      "ticker": "CCI"
+    }
+  ],
+  "holdings": [
+    "CCI",
+    "NAUT",
+    "PRME",
+    "WFF"
+  ],
+  "mean": 1.4121,
+  "n_trades_today": 8,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 1.7,
+      "shares": 1812,
+      "side": "SELL",
+      "ticker": "ADCT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 4.5,
+      "shares": 609,
+      "side": "SELL",
+      "ticker": "BYRN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 118.7,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "HAE"
+    },
+    {
+      "fill_rule": "open",
+      "price": 36.32,
+      "shares": 78,
+      "side": "SELL",
+      "ticker": "PCRX"
+    }
+  ],
+  "state": {
+    "after": "2026-10-12",
+    "cash": 66.46,
+    "pos": {
+      "CCI": {
+        "close_px": 81.01,
+        "cost": 2784.595,
+        "entry_date": "2026-10-12",
+        "entry_px": 79.5,
+        "fee_in": 2.095,
+        "last_px": 79.5,
+        "min_hold": 1,
+        "notional": 2782.5,
+        "peak_px": 79.5,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+19.9; leftover $2863.62",
+        "shares": 35,
+        "ticker": "CCI"
+      },
+      "NAUT": {
+        "close_px": 2.17,
+        "cost": 2879.1838000000002,
+        "entry_date": "2026-10-12",
+        "entry_px": 2.165,
+        "fee_in": 17.0538,
+        "last_px": 2.165,
+        "min_hold": 1,
+        "notional": 2862.13,
+        "peak_px": 2.165,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; leftover $2863.62",
+        "shares": 1322,
+        "ticker": "NAUT"
+      },
+      "PRME": {
+        "close_px": 3.61,
+        "cost": 2869.1396,
+        "entry_date": "2026-10-12",
+        "entry_px": 3.95,
+        "fee_in": 9.3396,
+        "last_px": 3.95,
+        "min_hold": 1,
+        "notional": 2859.8,
+        "peak_px": 3.95,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer; \ud83d\udd35; ret5=+33.9; leftover $2863.62",
+        "shares": 724,
+        "ticker": "PRME"
+      },
+      "WFF": {
+        "close_px": 17.28,
+        "cost": 2855.109,
+        "entry_date": "2026-10-12",
+        "entry_px": 14.78,
+        "fee_in": 2.569,
+        "last_px": 14.78,
+        "min_hold": 1,
+        "notional": 2852.54,
+        "peak_px": 14.78,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate last_green=True,rvol_min=1.5; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+411.0; leftover $2863.62",
+        "shares": 193,
+        "ticker": "WFF"
+      }
+    },
+    "yday_equity": 11719.23
+  }
+}

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 2
 
-Cash book **-26.99%** ($7,301) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 215 · skips 55 · realized $-720.09.
+Cash book **-31.81%** ($6,819) · signal-only (no cash/fees) was -3.45%. Starts YES **0/30**. Fills 217 · skips 55 · realized $-720.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -371,6 +371,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,255.50 | ▲ 09:30 equity $7,255.50 vs yday $7,255.50 (+0.00) | 09:30 open · cash $7,255.50 · no holdings · equity $7,255.50 vs prior close $7,255.50 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-09 09:30 ET | **BUY** | `RRC` | 178 | $40.62 | $2.52 | — | $22.62 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list flatten; ret5=+8.4; leftover $7255.50 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.62 | ▲ close $7,301.04 vs 09:30 $7,255.50 (session +48.06) | 16:00 close · cash $22.62 · equity $7,301.04 vs 09:30 $7,255.50 (+45.54; session marks +48.06) · 1 name(s) marked open→close (per-name table). RRC×178 09:30 $40.62 → close $40.89 +48.06 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $22.62 | ▲ 09:30 equity $7,349.10 vs yday $7,301.04 (+48.06) | 09:30 open · cash $22.62 (unchanged overnight, no fees) · equity $7,349.10 vs prior close $7,301.04 (+48.06) · 1 name(s) re-marked at the open (per-name table). RRC×178 yday $40.89 → 09:30 $41.16 +48.06 | — |
+| 2026-10-12 09:30 ET | **SELL** | `RRC` | 178 | $41.16 | $2.61 | $+90.98 | $7,346.49 | ▲ +90.98 after sell → book $7,346.49; vs 09:30 mark -2.61 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `DNA` | 578 | $12.69 | $7.46 | — | $4.21 | — | packet🟢 OR headline🟢 and camera net ≥ 2; gate cam_net_min=2,news_or_headline=True; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; leftover $7346.49 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.21 | ▼ close $6,818.83 vs 09:30 $7,349.10 (session -520.20) | 16:00 close · cash $4.21 · equity $6,818.83 vs 09:30 $7,349.10 (-530.27; session marks -520.20) · 1 name(s) marked open→close (per-name table). DNA×578 09:30 $12.69 → close $11.79 -520.20 | — |
 
 ## Not taken
 

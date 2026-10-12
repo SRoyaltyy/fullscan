@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 4 by hot
 
-Cash book **+25.37%** ($12,537) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 123 · skips 47 · realized $+2978.17.
+Cash book **+26.28%** ($12,628) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 129 · skips 47 · realized $+2978.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -276,6 +276,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `ADCT` | 1936 | $1.58 | $24.97 | — | $3,067.62 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $3059.00 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `BYRN` | 650 | $4.70 | $8.38 | — | $4.23 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; ret5=+35.9; leftover $3059.00 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.23 | ▲ close $12,537.39 vs 09:30 $12,236.00 (session +339.08) | 16:00 close · cash $4.23 · equity $12,537.39 vs 09:30 $12,236.00 (+301.39; session marks +339.08) · 4 name(s) marked open→close (per-name table). PCRX×84 09:30 $36.33 → close $36.31 -1.68; KOD×32 09:30 $94.64 → close $99.87 +167.36; ADCT×1936 09:30 $1.58 → close $1.73 +290.40; BYRN×650 09:30 $4.70 → close $4.52 -117.00 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.23 | ▼ 09:30 equity $12,473.23 vs yday $12,537.39 (-64.16) | 09:30 open · cash $4.23 (unchanged overnight, no fees) · equity $12,473.23 vs prior close $12,537.39 (-64.16) · 4 name(s) re-marked at the open (per-name table). ADCT×1936 yday $1.73 → 09:30 $1.70 -58.08; BYRN×650 yday $4.52 → 09:30 $4.50 -13.00; KOD×32 yday $99.87 → 09:30 $100.06 +6.08; PCRX×84 yday $36.31 → 09:30 $36.32 +0.84 | — |
+| 2026-10-12 09:30 ET | **SELL** | `ADCT` | 1936 | $1.70 | $25.32 | $+182.02 | $3,270.11 | ▲ +182.02 after sell → book $12,447.91; vs 09:30 mark -25.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `BYRN` | 650 | $4.50 | $8.52 | $-146.90 | $6,186.59 | ▼ -146.90 after sell → book $12,439.39; vs 09:30 mark -8.52 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PCRX` | 84 | $36.32 | $2.28 | $-5.36 | $9,235.19 | ▼ -5.36 after sell → book $12,437.11; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `WFF` | 208 | $14.78 | $2.68 | — | $6,158.27 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+411.0; leftover $3078.40 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `QTEX` | 1779 | $1.73 | $22.95 | — | $3,057.65 | — | top 4 by hot; rank hot_score; list yday_gainer; 🔵; ret5=+70.0; leftover $3078.40 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NAUT` | 1403 | $2.17 | $18.10 | — | $2.06 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; leftover $3078.40 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.06 | ▲ close $12,627.95 vs 09:30 $12,473.23 (session +234.56) | 16:00 close · cash $2.06 · equity $12,627.95 vs 09:30 $12,473.23 (+154.72; session marks +234.56) · 4 name(s) marked open→close (per-name table). KOD×32 09:30 $100.06 → close $99.26 -25.60; WFF×208 09:30 $14.78 → close $17.28 +520.00; QTEX×1779 09:30 $1.73 → close $1.58 -266.85; NAUT×1403 09:30 $2.17 → close $2.17 +7.01 | — |
 
 ## Not taken
 

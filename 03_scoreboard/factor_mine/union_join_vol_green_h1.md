@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+5.17%** ($10,517) · signal-only (no cash/fees) was +14.99%. Starts YES **24/30**. Fills 310 · skips 55 · realized $+1581.44.
+Cash book **-0.53%** ($9,948) · signal-only (no cash/fees) was +14.99%. Starts YES **24/30**. Fills 321 · skips 55 · realized $+1581.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -467,6 +467,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `FIGS` | 87 | $14.99 | $2.25 | — | $1,542.20 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+6.4; leftover $1304.71 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `FRO` | 23 | $56.16 | $2.06 | — | $248.46 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; 🔵; ret5=+9.2; leftover $1304.71 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $248.46 | ▲ close $10,516.75 vs 09:30 $10,437.65 (session +104.77) | 16:00 close · cash $248.46 · equity $10,516.75 vs 09:30 $10,437.65 (+79.10; session marks +104.77) · 8 name(s) marked open→close (per-name table). COCO×23 09:30 $55.38 → close $58.39 +69.23; PCRX×35 09:30 $36.33 → close $36.31 -0.70; HAE×10 09:30 $119.81 → close $118.69 -11.20; GAU×606 09:30 $2.15 → close $2.19 +24.24; ECO×13 09:30 $93.64 → close $93.11 -6.89; FINV×414 09:30 $3.15 → close $3.06 -37.26; FIGS×87 09:30 $14.99 → close $15.78 +68.73; FRO×23 09:30 $56.16 → close $56.10 -1.38 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $248.46 | ▲ 09:30 equity $10,593.45 vs yday $10,516.75 (+76.70) | 09:30 open · cash $248.46 (unchanged overnight, no fees) · equity $10,593.45 vs prior close $10,516.75 (+76.70) · 8 name(s) re-marked at the open (per-name table). COCO×23 yday $58.39 → 09:30 $58.50 +2.53; ECO×13 yday $93.11 → 09:30 $96.86 +48.75; FIGS×87 yday $15.78 → 09:30 $15.89 +9.57; FINV×414 yday $3.06 → 09:30 $3.02 -16.56; FRO×23 yday $56.10 → 09:30 $58.28 +50.14; GAU×606 yday $2.19 → 09:30 $2.16 -18.18; HAE×10 yday $118.69 → 09:30 $118.70 +0.10; PCRX×35 yday $36.31 → 09:30 $36.32 +0.35 | — |
+| 2026-10-12 09:30 ET | **SELL** | `COCO` | 23 | $58.50 | $2.08 | $+67.62 | $1,591.88 | ▲ +67.62 after sell → book $10,591.37; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `ECO` | 13 | $96.86 | $2.05 | $+37.78 | $2,849.01 | ▲ +37.78 after sell → book $10,589.32; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `FIGS` | 87 | $15.89 | $2.28 | $+73.77 | $4,229.16 | ▲ +73.77 after sell → book $10,587.04; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-12 09:30 ET | **SELL** | `FINV` | 414 | $3.02 | $5.42 | $-64.58 | $5,474.03 | ▼ -64.58 after sell → book $10,581.63; vs 09:30 mark -5.41 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `FRO` | 23 | $58.28 | $2.08 | $+44.62 | $6,812.39 | ▲ +44.62 after sell → book $10,579.55; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `GAU` | 606 | $2.16 | $7.93 | $-9.69 | $8,113.42 | ▼ -9.69 after sell → book $10,571.62; vs 09:30 mark -7.93 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `HAE` | 10 | $118.70 | $2.04 | $-15.16 | $9,298.38 | ▼ -15.16 after sell → book $10,569.58; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PCRX` | 35 | $36.32 | $2.12 | $-4.56 | $10,567.46 | ▼ -4.56 after sell → book $10,567.46; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `FSLY` | 122 | $28.79 | $2.36 | — | $7,052.73 | — | combo gate; gate join=good,last_green=True,vol=good; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.5; leftover $3522.49 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `CIEN` | 7 | $443.53 | $2.01 | — | $3,946.00 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+14.9; leftover $3522.49 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `MNSO` | 356 | $9.88 | $4.59 | — | $424.13 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+8.7; leftover $3522.49 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $424.13 | ▼ close $9,947.54 vs 09:30 $10,593.45 (session -610.96) | 16:00 close · cash $424.13 · equity $9,947.54 vs 09:30 $10,593.45 (-645.91; session marks -610.96) · 3 name(s) marked open→close (per-name table). FSLY×122 09:30 $28.79 → close $26.43 -287.92; CIEN×7 09:30 $443.53 → close $405.01 -269.64; MNSO×356 09:30 $9.88 → close $9.73 -53.40 | — |
 
 ## Not taken
 

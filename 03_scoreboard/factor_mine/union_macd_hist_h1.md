@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-5.77%** ($9,423) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 329 · skips 94 · realized $-657.32.
+Cash book **-6.66%** ($9,334) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 341 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -482,6 +482,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `PBF` | 13 | $88.29 | $2.03 | — | $1,485.14 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+8.5; leftover $1208.59 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `STZ` | 9 | $123.25 | $2.02 | — | $373.87 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+9.4; leftover $1208.59 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $373.87 | ▼ close $9,422.83 vs 09:30 $9,670.75 (session -229.54) | 16:00 close · cash $373.87 · equity $9,422.83 vs 09:30 $9,670.75 (-247.92; session marks -229.54) · 8 name(s) marked open→close (per-name table). KOD×12 09:30 $94.64 → close $99.87 +62.76; WING×10 09:30 $120.32 → close $122.26 +19.40; AAOI×10 09:30 $112.64 → close $109.64 -30.00; SHAK×18 09:30 $66.72 → close $66.90 +3.24; XRPN×57 09:30 $20.88 → close $17.09 -216.03; MXL×12 09:30 $97.09 → close $96.16 -11.16; PBF×13 09:30 $88.29 → close $84.27 -52.26; STZ×9 09:30 $123.25 → close $122.64 -5.49 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $373.87 | ▼ 09:30 equity $9,358.60 vs yday $9,422.83 (-64.23) | 09:30 open · cash $373.87 (unchanged overnight, no fees) · equity $9,358.60 vs prior close $9,422.83 (-64.23) · 8 name(s) re-marked at the open (per-name table). AAOI×10 yday $109.64 → 09:30 $106.12 -35.18; KOD×12 yday $99.87 → 09:30 $100.06 +2.28; MXL×12 yday $96.16 → 09:30 $93.53 -31.60; PBF×13 yday $84.27 → 09:30 $85.99 +22.36; SHAK×18 yday $66.90 → 09:30 $66.80 -1.80; STZ×9 yday $122.64 → 09:30 $123.16 +4.68; WING×10 yday $122.26 → 09:30 $122.10 -1.60; XRPN×57 yday $17.09 → 09:30 $16.68 -23.37 | — |
+| 2026-10-12 09:30 ET | **SELL** | `AAOI` | 10 | $106.12 | $2.04 | $-69.24 | $1,433.05 | ▼ -69.24 after sell → book $9,356.56; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `MXL` | 12 | $93.53 | $2.05 | $-46.83 | $2,553.33 | ▼ -46.83 after sell → book $9,354.52; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PBF` | 13 | $85.99 | $2.05 | $-33.98 | $3,669.15 | ▼ -33.98 after sell → book $9,352.47; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `SHAK` | 18 | $66.80 | $2.06 | $-2.67 | $4,869.48 | ▼ -2.67 after sell → book $9,350.40; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `STZ` | 9 | $123.16 | $2.04 | $-4.86 | $5,975.89 | ▼ -4.86 after sell → book $9,348.37; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `XRPN` | 57 | $16.68 | $2.18 | $-243.74 | $6,924.47 | ▼ -243.74 after sell → book $9,346.19; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `CIEN` | 2 | $443.53 | $2.00 | — | $6,035.41 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.9; leftover $1154.08 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SHOP` | 6 | $173.90 | $2.01 | — | $4,990.00 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+12.9; leftover $1154.08 | join🟡 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SEZL` | 9 | $127.75 | $2.02 | — | $3,838.23 | — | rank by macd_hist; rank macd_hist; list yday_gainer; ret5=+19.8; leftover $1154.08 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SBAC` | 6 | $181.77 | $2.01 | — | $2,745.61 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+15.1; leftover $1154.08 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `AFRM` | 14 | $80.49 | $2.03 | — | $1,616.71 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.0; leftover $1154.08 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `AMT` | 6 | $182.25 | $2.01 | — | $521.21 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+12.4; leftover $1154.08 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $521.21 | ▼ close $9,334.05 vs 09:30 $9,358.60 (session -0.07) | 16:00 close · cash $521.21 · equity $9,334.05 vs 09:30 $9,358.60 (-24.55; session marks -0.07) · 8 name(s) marked open→close (per-name table). KOD×12 09:30 $100.06 → close $99.26 -9.60; WING×10 09:30 $122.10 → close $126.02 +39.20; CIEN×2 09:30 $443.53 → close $405.01 -77.04; SHOP×6 09:30 $173.90 → close $179.22 +31.92; SEZL×9 09:30 $127.75 → close $130.48 +24.57; SBAC×6 09:30 $181.77 → close $184.28 +15.06; AFRM×14 09:30 $80.49 → close $78.63 -26.04; AMT×6 09:30 $182.25 → close $182.56 +1.86 | — |
 
 ## Not taken
 

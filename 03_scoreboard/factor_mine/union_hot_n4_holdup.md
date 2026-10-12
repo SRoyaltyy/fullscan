@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `holdup` · hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book
 
-Cash book **+51.96%** ($15,196) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 102 · skips 79 · realized $+4974.44.
+Cash book **+53.04%** ($15,304) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 108 · skips 79 · realized $+4974.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -256,6 +256,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `ADCT` | 2346 | $1.58 | $30.26 | — | $3,689.80 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $3706.94 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `BYRN` | 782 | $4.70 | $10.09 | — | $4.32 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; ret5=+35.9; leftover $3706.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.32 | ▲ close $15,196.09 vs 09:30 $14,827.77 (session +413.07) | 16:00 close · cash $4.32 · equity $15,196.09 vs 09:30 $14,827.77 (+368.32; session marks +413.07) · 4 name(s) marked open→close (per-name table). PCRX×102 09:30 $36.33 → close $36.31 -2.04; KOD×39 09:30 $94.64 → close $99.87 +203.97; ADCT×2346 09:30 $1.58 → close $1.73 +351.90; BYRN×782 09:30 $4.70 → close $4.52 -140.76 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.32 | ▼ 09:30 equity $15,118.50 vs yday $15,196.09 (-77.59) | 09:30 open · cash $4.32 (unchanged overnight, no fees) · equity $15,118.50 vs prior close $15,196.09 (-77.59) · 4 name(s) re-marked at the open (per-name table). ADCT×2346 yday $1.73 → 09:30 $1.70 -70.38; BYRN×782 yday $4.52 → 09:30 $4.50 -15.64; KOD×39 yday $99.87 → 09:30 $100.06 +7.41; PCRX×102 yday $36.31 → 09:30 $36.32 +1.02 | — |
+| 2026-10-12 09:30 ET | **SELL** | `ADCT` | 2346 | $1.70 | $30.68 | $+220.57 | $3,961.84 | ▲ +220.57 after sell → book $15,087.82; vs 09:30 mark -30.68 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `BYRN` | 782 | $4.50 | $10.25 | $-176.73 | $7,470.59 | ▼ -176.73 after sell → book $15,077.57; vs 09:30 mark -10.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PCRX` | 102 | $36.32 | $2.34 | $-5.66 | $11,172.89 | ▼ -5.66 after sell → book $15,075.23; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `WFF` | 251 | $14.78 | $3.24 | — | $7,459.87 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+411.0; leftover $3724.30 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `QTEX` | 2152 | $1.73 | $27.76 | — | $3,709.15 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer; 🔵; ret5=+70.0; leftover $3724.30 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NAUT` | 1702 | $2.17 | $21.96 | — | $2.36 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; leftover $3724.30 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.36 | ▲ close $15,304.28 vs 09:30 $15,118.50 (session +282.01) | 16:00 close · cash $2.36 · equity $15,304.28 vs 09:30 $15,118.50 (+185.78; session marks +282.01) · 4 name(s) marked open→close (per-name table). KOD×39 09:30 $100.06 → close $99.26 -31.20; WFF×251 09:30 $14.78 → close $17.28 +627.50; QTEX×2152 09:30 $1.73 → close $1.58 -322.80; NAUT×1702 09:30 $2.17 → close $2.17 +8.51 | — |
 
 ## Not taken
 

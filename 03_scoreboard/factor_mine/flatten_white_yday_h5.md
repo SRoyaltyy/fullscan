@@ -233,6 +233,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SELL** | `CDNA` | 70 | $62.21 | $2.25 | $-292.85 | $4,384.67 | ▼ -292.85 after sell → book $9,267.21; vs 09:30 mark -2.25 | exit unpriced hold on first bar after 5 sess | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 09:30 ET | **SELL** | `ETON` | 89 | $54.86 | $2.31 | $+212.59 | $9,264.90 | ▲ +212.59 after sell → book $9,264.90; vs 09:30 mark -2.31 | exit unpriced hold on first bar after 5 sess | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,264.90 | ▲ close $9,264.90 vs 09:30 $9,269.46 (session +0.00) | 16:00 close · cash $9,264.90 · no lots left · equity $9,264.90. | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,264.90 | ▲ 09:30 equity $9,264.90 vs yday $9,264.90 (+0.00) | 09:30 open · cash $9,264.90 · no holdings · equity $9,264.90 vs prior close $9,264.90 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,264.90 | ▲ close $9,264.90 vs 09:30 $9,264.90 (session +0.00) | 16:00 close · cash $9,264.90 · no lots left · equity $9,264.90. | — |
 
 ## Not taken
 

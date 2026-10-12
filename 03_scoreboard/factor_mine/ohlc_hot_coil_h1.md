@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-19.23%** ($8,078) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 219 · skips 74 · realized $-1849.08.
+Cash book **-21.52%** ($7,848) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 229 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -375,6 +375,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `MMS` | 17 | $58.29 | $2.04 | — | $1,203.52 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.8; leftover $1030.50 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `JANX` | 55 | $18.42 | $2.15 | — | $188.26 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+9.1; leftover $1030.50 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $188.26 | ▼ close $8,077.52 vs 09:30 $8,244.01 (session -149.60) | 16:00 close · cash $188.26 · equity $8,077.52 vs 09:30 $8,244.01 (-166.49; session marks -149.60) · 8 name(s) marked open→close (per-name table). XRPN×49 09:30 $20.88 → close $17.09 -185.71; FIGS×68 09:30 $14.99 → close $15.78 +53.72; FRO×18 09:30 $56.16 → close $56.10 -1.08; HAFN×97 09:30 $10.56 → close $10.72 +15.52; PBF×11 09:30 $88.29 → close $84.27 -44.22; STZ×8 09:30 $123.25 → close $122.64 -4.88; MMS×17 09:30 $58.29 → close $59.39 +18.70; JANX×55 09:30 $18.42 → close $18.39 -1.65 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $188.26 | ▲ 09:30 equity $8,131.16 vs yday $8,077.52 (+53.64) | 09:30 open · cash $188.26 (unchanged overnight, no fees) · equity $8,131.16 vs prior close $8,077.52 (+53.64) · 8 name(s) re-marked at the open (per-name table). FIGS×68 yday $15.78 → 09:30 $15.89 +7.48; FRO×18 yday $56.10 → 09:30 $58.28 +39.24; HAFN×97 yday $10.72 → 09:30 $11.01 +28.13; JANX×55 yday $18.39 → 09:30 $18.29 -5.50; MMS×17 yday $59.39 → 09:30 $58.29 -18.70; PBF×11 yday $84.27 → 09:30 $85.99 +18.92; STZ×8 yday $122.64 → 09:30 $123.16 +4.16; XRPN×49 yday $17.09 → 09:30 $16.68 -20.09 | — |
+| 2026-10-12 09:30 ET | **SELL** | `FIGS` | 68 | $15.89 | $2.22 | $+56.79 | $1,266.56 | ▲ +56.79 after sell → book $8,128.94; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-12 09:30 ET | **SELL** | `FRO` | 18 | $58.28 | $2.06 | $+34.05 | $2,313.54 | ▲ +34.05 after sell → book $8,126.88; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `HAFN` | 97 | $11.01 | $2.31 | $+39.06 | $3,379.20 | ▲ +39.06 after sell → book $8,124.57; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `JANX` | 55 | $18.29 | $2.17 | $-11.48 | $4,382.98 | ▼ -11.48 after sell → book $8,122.40; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `MMS` | 17 | $58.29 | $2.06 | $-4.10 | $5,371.85 | ▼ -4.10 after sell → book $8,120.34; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PBF` | 11 | $85.99 | $2.04 | $-29.37 | $6,315.69 | ▼ -29.37 after sell → book $8,118.29; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `STZ` | 8 | $123.16 | $2.03 | $-4.77 | $7,298.94 | ▼ -4.77 after sell → book $8,116.26; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `XRPN` | 49 | $16.68 | $2.16 | $-210.09 | $8,114.10 | ▼ -210.09 after sell → book $8,114.10; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `KOD` | 40 | $100.06 | $2.11 | — | $4,109.59 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+5.7; leftover $4057.05 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SFIX` | 1423 | $2.85 | $18.36 | — | $35.69 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+8.8; leftover $4057.05 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $35.69 | ▼ close $7,848.19 vs 09:30 $8,131.16 (session -245.45) | 16:00 close · cash $35.69 · equity $7,848.19 vs 09:30 $8,131.16 (-282.97; session marks -245.45) · 2 name(s) marked open→close (per-name table). KOD×40 09:30 $100.06 → close $99.26 -32.00; SFIX×1423 09:30 $2.85 → close $2.70 -213.45 | — |
 
 ## Not taken
 

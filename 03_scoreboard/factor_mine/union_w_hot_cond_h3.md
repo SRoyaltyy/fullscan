@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+21.93%** ($12,193) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 268 · skips 286 · realized $+834.44.
+Cash book **+24.06%** ($12,406) · signal-only (no cash/fees) was +337.30%. Starts YES **29/30**. Fills 273 · skips 286 · realized $+834.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -421,6 +421,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `ECO` | 15 | $93.64 | $2.04 | — | $1,635.72 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,ohlc_hot; ret5=+10.1; leftover $1475.70 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `HAFN` | 139 | $10.56 | $2.41 | — | $165.48 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+7.7; leftover $1475.70 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $165.48 | ▲ close $12,192.79 vs 09:30 $11,829.87 (session +423.82) | 16:00 close · cash $165.48 · equity $12,192.79 vs 09:30 $11,829.87 (+362.92; session marks +423.82) · 8 name(s) marked open→close (per-name table). PCRX×40 09:30 $36.33 → close $36.31 -0.80; ADCT×933 09:30 $1.58 → close $1.73 +139.95; KOD×15 09:30 $94.64 → close $99.87 +78.45; NAUT×772 09:30 $1.91 → close $2.25 +261.71; BYRN×313 09:30 $4.70 → close $4.52 -56.34; HAE×12 09:30 $119.81 → close $118.69 -13.44; ECO×15 09:30 $93.64 → close $93.11 -7.95; HAFN×139 09:30 $10.56 → close $10.72 +22.24 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $165.48 | ▲ 09:30 equity $12,192.85 vs yday $12,192.79 (+0.06) | 09:30 open · cash $165.48 (unchanged overnight, no fees) · equity $12,192.85 vs prior close $12,192.79 (+0.06) · 8 name(s) re-marked at the open (per-name table). ADCT×933 yday $1.73 → 09:30 $1.70 -27.99; BYRN×313 yday $4.52 → 09:30 $4.50 -6.26; ECO×15 yday $93.11 → 09:30 $96.86 +56.25; HAE×12 yday $118.69 → 09:30 $118.70 +0.12; HAFN×139 yday $10.72 → 09:30 $11.01 +40.31; KOD×15 yday $99.87 → 09:30 $100.06 +2.85; NAUT×772 yday $2.25 → 09:30 $2.17 -65.62; PCRX×40 yday $36.31 → 09:30 $36.32 +0.40 | — |
+| 2026-10-12 09:30 ET | **BUY** | `WFF` | 1 | $14.78 | $0.15 | — | $150.55 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+411.0; leftover $27.58 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `QTEX` | 15 | $1.73 | $0.30 | — | $124.29 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; 🔵; ret5=+70.0; leftover $27.58 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `FIGS` | 1 | $15.89 | $0.16 | — | $108.24 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; ret5=+16.7; leftover $27.58 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-12 09:30 ET | **BUY** | `PRME` | 6 | $3.95 | $0.26 | — | $84.29 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; 🔵; ret5=+33.9; leftover $27.58 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NVAX` | 2 | $12.61 | $0.26 | — | $58.81 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+21.9; leftover $27.58 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $58.81 | ▲ close $12,405.79 vs 09:30 $12,192.85 (session +214.07) | 16:00 close · cash $58.81 · equity $12,405.79 vs 09:30 $12,192.85 (+212.94; session marks +214.07) · 13 name(s) marked open→close (per-name table). ADCT×933 09:30 $1.70 → close $1.86 +149.28; BYRN×313 09:30 $4.50 → close $4.55 +17.21; ECO×15 09:30 $96.86 → close $98.63 +26.55; HAE×12 09:30 $118.70 → close $122.06 +40.32; HAFN×139 09:30 $11.01 → close $10.92 -12.51; KOD×15 09:30 $100.06 → close $99.26 -12.00; NAUT×772 09:30 $2.17 → close $2.17 +3.86; PCRX×40 09:30 $36.32 → close $36.35 +1.20; WFF×1 09:30 $14.78 → close $17.28 +2.50; QTEX×15 09:30 $1.73 → close $1.58 -2.25; FIGS×1 09:30 $15.89 → close $17.74 +1.85; PRME×6 09:30 $3.95 → close $3.61 -2.04; NVAX×2 09:30 $12.61 → close $12.66 +0.10 | — |
 
 ## Not taken
 

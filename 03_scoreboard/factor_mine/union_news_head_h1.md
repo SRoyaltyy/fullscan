@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · prior-export headline🟢 only
 
-Cash book **-33.65%** ($6,635) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 214 · skips 65 · realized $-814.48.
+Cash book **-38.43%** ($6,157) · signal-only (no cash/fees) was +13.09%. Starts YES **0/30**. Fills 217 · skips 65 · realized $-814.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -369,6 +369,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `GENI` | 500 | $6.79 | $6.45 | — | $3,394.42 | — | prior-export headline🟢 only; gate headline=good; rank cond; list ohlc_hot; ret5=+16.7; leftover $3397.93 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `FLUT` | 41 | $81.79 | $2.11 | — | $38.92 | — | prior-export headline🟢 only; gate headline=good; rank cond; list yday_gainer; ret5=+6.7; leftover $3397.93 | join🔴 sector🔴 gen🔴 news🟢 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $38.92 | ▼ close $6,634.90 vs 09:30 $6,797.92 (session -152.41) | 16:00 close · cash $38.92 · equity $6,634.90 vs 09:30 $6,797.92 (-163.02; session marks -152.41) · 2 name(s) marked open→close (per-name table). GENI×500 09:30 $6.79 → close $6.65 -70.00; FLUT×41 09:30 $81.79 → close $79.78 -82.41 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $38.92 | ▲ 09:30 equity $6,642.60 vs yday $6,634.90 (+7.70) | 09:30 open · cash $38.92 (unchanged overnight, no fees) · equity $6,642.60 vs prior close $6,634.90 (+7.70) · 2 name(s) re-marked at the open (per-name table). FLUT×41 yday $79.78 → 09:30 $79.48 -12.30; GENI×500 yday $6.65 → 09:30 $6.69 +20.00 | — |
+| 2026-10-12 09:30 ET | **SELL** | `FLUT` | 41 | $79.48 | $2.15 | $-98.97 | $3,295.45 | ▼ -98.97 after sell → book $6,640.45; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `GENI` | 500 | $6.69 | $6.56 | $-63.01 | $6,633.89 | ▼ -63.01 after sell → book $6,633.89; vs 09:30 mark -6.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `DNA` | 522 | $12.69 | $6.73 | — | $2.98 | — | prior-export headline🟢 only; gate headline=good; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; leftover $6633.89 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.98 | ▼ close $6,157.36 vs 09:30 $6,642.60 (session -469.80) | 16:00 close · cash $2.98 · equity $6,157.36 vs 09:30 $6,642.60 (-485.24; session marks -469.80) · 1 name(s) marked open→close (per-name table). DNA×522 09:30 $12.69 → close $11.79 -469.80 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_hot_n4_h1 w=0.3,0.7 net=priority
 
-Cash book **+35.92%** ($13,592) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 340 · skips 269 · realized $+2681.43.
+Cash book **+35.84%** ($13,584) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 345 · skips 269 · realized $+2681.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $63.28.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $1.99.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -495,6 +495,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `KOD` | 32 | $94.64 | $2.09 | — | $3,172.62 | — | top 4 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=-4.3; combo leftover $3085.72; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `ADCT` | 1952 | $1.58 | $25.18 | — | $63.28 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+47.2; combo leftover $3085.72; owner union_hot_n4_h1 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $63.28 | ▲ close $13,592.14 vs 09:30 $13,189.86 (session +448.80) | 16:00 close · cash $63.28 · equity $13,592.14 vs 09:30 $13,189.86 (+402.28; session marks +448.80) · 7 name(s) marked open→close (per-name table). BYRN×210 09:30 $4.70 → close $4.52 -37.80; ANGO×89 09:30 $11.06 → close $11.52 +40.94; DAL×12 09:30 $79.68 → close $82.17 +29.88; HOVR×610 09:30 $1.62 → close $1.55 -42.70; PCRX×84 09:30 $36.33 → close $36.31 -1.68; KOD×32 09:30 $94.64 → close $99.87 +167.36; ADCT×1952 09:30 $1.58 → close $1.73 +292.80 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $63.28 | ▼ 09:30 equity $13,507.86 vs yday $13,592.14 (-84.28) | 09:30 open · cash $63.28 (unchanged overnight, no fees) · equity $13,507.86 vs prior close $13,592.14 (-84.28) | — |
+| 2026-10-12 09:30 ET | **SELL** | `ADCT` | 1952 | $1.70 | $25.53 | $+183.53 | $3,356.15 | ▲ +183.53 after sell → book $13,482.33; vs 09:30 mark -25.53 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PCRX` | 84 | $36.32 | $2.28 | $-5.36 | $6,404.75 | ▼ -5.36 after sell → book $13,480.05; vs 09:30 mark -2.28 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `WFF` | 144 | $14.78 | $2.42 | — | $4,274.01 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+411.0; combo leftover $2134.92; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `QTEX` | 1234 | $1.73 | $15.92 | — | $2,123.27 | — | top 4 by hot; rank hot_score; list yday_gainer; 🔵; ret5=+70.0; combo leftover $2134.92; owner union_hot_n4_h1 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NAUT` | 974 | $2.17 | $12.56 | — | $1.99 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; combo leftover $2134.92; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.99 | ▲ close $13,583.50 vs 09:30 $13,507.86 (session +134.36) | 16:00 close · cash $1.99 · equity $13,583.50 vs 09:30 $13,507.86 (+75.64; session marks +134.36) · 8 name(s) marked open→close (per-name table). ANGO×89 09:30 $11.42 → close $11.40 -1.78; BYRN×210 09:30 $4.50 → close $4.55 +11.55; DAL×12 09:30 $81.05 → close $80.11 -11.28; HOVR×610 09:30 $1.54 → close $1.51 -18.30; KOD×32 09:30 $100.06 → close $99.26 -25.60; WFF×144 09:30 $14.78 → close $17.28 +360.00; QTEX×1234 09:30 $1.73 → close $1.58 -185.10; NAUT×974 09:30 $2.17 → close $2.17 +4.87 | — |
 
 ## Not taken
 

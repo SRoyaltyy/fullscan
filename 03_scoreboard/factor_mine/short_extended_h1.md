@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-3.79%** ($9,621) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 324 · skips 88 · realized $-1484.16.
+Cash book **-3.71%** ($9,629) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 340 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -476,6 +476,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SHORT** | `FNKO` | 94 | $6.50 | $2.31 | — | $14,030.62 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; ret5=+16.1; leftover $612.83 | join🟢 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-09 09:30 ET | **SHORT** | `JBS` | 47 | $12.94 | $2.17 | — | $14,636.63 | — | ret_5>15; gate ret_5_min=15.0; list ohlc_hot; ret5=+17.4; leftover $612.83 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,636.63 | ▼ close $9,620.96 vs 09:30 $9,805.23 (session -157.61) | 16:00 close · cash $14,636.63 · equity $9,620.96 vs 09:30 $9,805.23 (-184.27; session marks -157.61) · 8 name(s) marked open→close (per-name table). PCRX×16 09:30 $36.33 → close $36.31 +0.32; BYRN×130 09:30 $4.70 → close $4.52 +23.40; ADCT×387 09:30 $1.58 → close $1.73 -58.05; RC×471 09:30 $1.30 → close $1.30 -0.00; NAUT×320 09:30 $1.91 → close $2.25 -108.48; SUJA×58 09:30 $10.54 → close $10.86 -18.56; FNKO×94 09:30 $6.50 → close $6.44 +5.64; JBS×47 09:30 $12.94 → close $12.98 -1.88 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,636.63 | ▲ 09:30 equity $9,672.23 vs yday $9,620.96 (+51.27) | 09:30 open · cash $14,636.63 (unchanged overnight, no fees) · equity $9,672.23 vs prior close $9,620.96 (+51.27) · 8 name(s) re-marked at the open (per-name table). ADCT×387 yday $1.73 → 09:30 $1.70 +11.61; BYRN×130 yday $4.52 → 09:30 $4.50 +2.60; FNKO×94 yday $6.44 → 09:30 $6.40 +3.76; JBS×47 yday $12.98 → 09:30 $12.91 +3.29; NAUT×320 yday $2.25 → 09:30 $2.17 +27.20; PCRX×16 yday $36.31 → 09:30 $36.32 -0.16; RC×471 yday $1.30 → 09:30 $1.29 +4.71; SUJA×58 yday $10.86 → 09:30 $10.89 -1.74 | — |
+| 2026-10-12 09:30 ET | **COVER** | `ADCT` | 387 | $1.70 | $4.99 | $-56.52 | $13,973.74 | ▼ -56.52 after sell → book $9,667.24; vs 09:30 mark -4.99 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `BYRN` | 130 | $4.50 | $2.38 | $+21.19 | $13,386.36 | ▲ +21.19 after sell → book $9,664.86; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `FNKO` | 94 | $6.40 | $2.27 | $+4.81 | $12,782.49 | ▲ +4.81 after sell → book $9,662.59; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `JBS` | 47 | $12.91 | $2.13 | $-2.89 | $12,173.58 | ▼ -2.89 after sell → book $9,660.45; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `NAUT` | 320 | $2.17 | $4.13 | $-89.62 | $11,476.66 | ▼ -89.62 after sell → book $9,656.33; vs 09:30 mark -4.12 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **COVER** | `PCRX` | 16 | $36.32 | $2.04 | $-3.95 | $10,893.50 | ▼ -3.95 after sell → book $9,654.29; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `RC` | 471 | $1.29 | $6.08 | $-7.55 | $10,279.83 | ▼ -7.55 after sell → book $9,648.21; vs 09:30 mark -6.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `SUJA` | 58 | $10.89 | $2.16 | $-24.66 | $9,646.05 | ▼ -24.66 after sell → book $9,646.05; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `WFF` | 40 | $14.78 | $2.15 | — | $10,235.10 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+411.0; leftover $602.88 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `NVAX` | 47 | $12.61 | $2.17 | — | $10,825.61 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+21.9; leftover $602.88 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `CCI` | 7 | $79.50 | $2.05 | — | $11,380.06 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+19.9; leftover $602.88 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `MRNA` | 2 | $224.24 | $2.03 | — | $11,826.50 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer,yday_mover; 🔵; ret5=+18.4; leftover $602.88 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `PRME` | 152 | $3.95 | $2.50 | — | $12,424.40 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; 🔵; ret5=+33.9; leftover $602.88 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `QTEX` | 348 | $1.73 | $4.57 | — | $13,021.87 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; 🔵; ret5=+70.0; leftover $602.88 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `PCVX` | 8 | $70.85 | $2.05 | — | $13,586.62 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; ret5=+26.4; leftover $602.88 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `SEZL` | 4 | $127.75 | $2.04 | — | $14,095.58 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; ret5=+19.8; leftover $602.88 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,095.58 | ▲ close $9,629.13 vs 09:30 $9,672.23 (session +2.63) | 16:00 close · cash $14,095.58 · equity $9,629.13 vs 09:30 $9,672.23 (-43.10; session marks +2.63) · 8 name(s) marked open→close (per-name table). WFF×40 09:30 $14.78 → close $17.28 -100.00; NVAX×47 09:30 $12.61 → close $12.66 -2.35; CCI×7 09:30 $79.50 → close $81.01 -10.57; MRNA×2 09:30 $224.24 → close $213.74 +20.99; PRME×152 09:30 $3.95 → close $3.61 +51.68; QTEX×348 09:30 $1.73 → close $1.58 +52.20; PCVX×8 09:30 $70.85 → close $70.65 +1.60; SEZL×4 09:30 $127.75 → close $130.48 -10.92 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+4.29%** ($10,429) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 178 · skips 96 · realized $+54.59.
+Cash book **+4.89%** ($10,489) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 192 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -330,6 +330,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SHORT** | `ESRT` | 190 | $4.57 | $2.63 | — | $14,351.90 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+10.9; leftover $870.87 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **SHORT** | `IMXI` | 70 | $12.36 | $2.25 | — | $15,214.85 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+8.2; leftover $870.87 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,214.85 | ▼ close $10,428.92 vs 09:30 $10,450.45 (session -7.42) | 16:00 close · cash $15,214.85 · equity $10,428.92 vs 09:30 $10,450.45 (-21.53; session marks -7.42) · 6 name(s) marked open→close (per-name table). SHAZ×22 09:30 $38.35 → close $37.93 +9.24; BRUN×70 09:30 $12.43 → close $13.18 -52.50; AGNT×217 09:30 $4.01 → close $3.72 +62.93; MPC×1 09:30 $461.04 → close $455.03 +6.01; ESRT×190 09:30 $4.57 → close $4.63 -11.40; IMXI×70 09:30 $12.36 → close $12.67 -21.70 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,214.85 | ▲ 09:30 equity $10,493.64 vs yday $10,428.92 (+64.72) | 09:30 open · cash $15,214.85 (unchanged overnight, no fees) · equity $10,493.64 vs prior close $10,428.92 (+64.72) · 6 name(s) re-marked at the open (per-name table). AGNT×217 yday $3.72 → 09:30 $3.69 +6.51; BRUN×70 yday $13.18 → 09:30 $12.83 +24.50; ESRT×190 yday $4.63 → 09:30 $4.59 +7.60; IMXI×70 yday $12.67 → 09:30 $12.52 +10.50; MPC×1 yday $455.03 → 09:30 $461.86 -6.83; SHAZ×22 yday $37.93 → 09:30 $36.91 +22.44 | — |
+| 2026-10-12 09:30 ET | **COVER** | `AGNT` | 217 | $3.69 | $2.80 | $+63.77 | $14,411.32 | ▲ +63.77 after sell → book $10,490.84; vs 09:30 mark -2.80 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `BRUN` | 70 | $12.83 | $2.20 | $-32.45 | $13,511.02 | ▼ -32.45 after sell → book $10,488.64; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `ESRT` | 190 | $4.59 | $2.56 | $-8.99 | $12,636.36 | ▼ -8.99 after sell → book $10,486.08; vs 09:30 mark -2.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `IMXI` | 70 | $12.52 | $2.20 | $-15.65 | $11,757.76 | ▼ -15.65 after sell → book $10,483.88; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `MPC` | 1 | $461.86 | $1.99 | $-4.84 | $11,293.91 | ▼ -4.84 after sell → book $10,481.89; vs 09:30 mark -1.99 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `SHAZ` | 22 | $36.91 | $2.06 | $+27.52 | $10,479.83 | ▲ +27.52 after sell → book $10,479.83; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SHORT** | `FANG` | 3 | $195.01 | $2.04 | — | $11,062.83 | — | alarm; gate alarm=True; list flatten; ret5=+4.0; leftover $654.99 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `FEAM` | 180 | $3.62 | $2.59 | — | $11,711.84 | — | alarm; gate alarm=True; list probable,yday_gainer; ret5=-6.2; leftover $654.99 | join🟡 sector🔴 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `HUM` | 1 | $434.57 | $2.02 | — | $12,144.38 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+11.2; leftover $654.99 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `PCVX` | 9 | $70.85 | $2.05 | — | $12,779.98 | — | alarm; gate alarm=True; list yday_gainer; ret5=+26.4; leftover $654.99 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `WYHG` | 205 | $3.18 | $2.71 | — | $13,429.17 | — | alarm; gate alarm=True; list yday_mover; ret5=-16.5; leftover $654.99 | join🔴 sector🟢 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `PBR` | 25 | $25.44 | $2.10 | — | $14,063.07 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+16.9; leftover $654.99 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `ZIP` | 156 | $4.18 | $2.51 | — | $14,712.64 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+17.5; leftover $654.99 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `SUJA` | 60 | $10.89 | $2.21 | — | $15,363.83 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+12.0; leftover $654.99 | join🔴 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,363.83 | ▲ close $10,489.15 vs 09:30 $10,493.64 (session +27.55) | 16:00 close · cash $15,363.83 · equity $10,489.15 vs 09:30 $10,493.64 (-4.49; session marks +27.55) · 8 name(s) marked open→close (per-name table). FANG×3 09:30 $195.01 → close $195.11 -0.30; FEAM×180 09:30 $3.62 → close $3.34 +50.40; HUM×1 09:30 $434.57 → close $433.50 +1.07; PCVX×9 09:30 $70.85 → close $70.65 +1.80; WYHG×205 09:30 $3.18 → close $3.30 -24.60; PBR×25 09:30 $25.44 → close $25.42 +0.50; ZIP×156 09:30 $4.18 → close $4.25 -10.92; SUJA×60 09:30 $10.89 → close $10.73 +9.60 | — |
 
 ## Not taken
 

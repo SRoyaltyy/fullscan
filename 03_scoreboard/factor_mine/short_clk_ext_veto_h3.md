@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #5 extreme ext + fade/fail-break as a short
 
-Cash book **-6.51%** ($9,349) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 256 · skips 219 · realized $-964.15.
+Cash book **-5.32%** ($9,468) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 260 · skips 219 · realized $-964.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -408,6 +408,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SHORT** | `HAFN` | 112 | $10.56 | $2.39 | — | $13,018.51 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+7.7; leftover $1191.77 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **SHORT** | `PBF` | 13 | $88.29 | $2.08 | — | $14,164.20 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; 🔵; ret5=+8.5; leftover $1191.77 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,164.20 | ▼ close $9,348.98 vs 09:30 $9,554.65 (session -170.50) | 16:00 close · cash $14,164.20 · equity $9,348.98 vs 09:30 $9,554.65 (-205.67; session marks -170.50) · 4 name(s) marked open→close (per-name table). ECO×12 09:30 $93.64 → close $93.11 +6.36; NAUT×623 09:30 $1.91 → close $2.25 -211.20; HAFN×112 09:30 $10.56 → close $10.72 -17.92; PBF×13 09:30 $88.29 → close $84.27 +52.26 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,164.20 | ▼ 09:30 equity $9,302.10 vs yday $9,348.98 (-46.88) | 09:30 open · cash $14,164.20 (unchanged overnight, no fees) · equity $9,302.10 vs prior close $9,348.98 (-46.88) · 4 name(s) re-marked at the open (per-name table). ECO×12 yday $93.11 → 09:30 $96.86 -45.00; HAFN×112 yday $10.72 → 09:30 $11.01 -32.48; NAUT×623 yday $2.25 → 09:30 $2.17 +52.95; PBF×13 yday $84.27 → 09:30 $85.99 -22.36 | — |
+| 2026-10-12 09:30 ET | **SHORT** | `IOVA` | 80 | $14.45 | $2.28 | — | $15,317.92 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list probable,yday_gainer; ret5=+2.8; leftover $1162.76 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `QSI` | 788 | $1.48 | $10.34 | — | $16,469.88 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer,yday_mover; 🔵; ret5=-1.3; leftover $1162.76 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `QTEX` | 672 | $1.73 | $8.82 | — | $17,623.61 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer; 🔵; ret5=+70.0; leftover $1162.76 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `KOD` | 11 | $100.06 | $2.07 | — | $18,722.20 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list ohlc_hot; ret5=+5.7; leftover $1162.76 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18,722.20 | ▲ close $9,468.33 vs 09:30 $9,302.10 (session +189.76) | 16:00 close · cash $18,722.20 · equity $9,468.33 vs 09:30 $9,302.10 (+166.23; session marks +189.76) · 8 name(s) marked open→close (per-name table). ECO×12 09:30 $96.86 → close $98.63 -21.24; HAFN×112 09:30 $11.01 → close $10.92 +10.08; NAUT×623 09:30 $2.17 → close $2.17 -3.11; PBF×13 09:30 $85.99 → close $85.02 +12.61; IOVA×80 09:30 $14.45 → close $14.56 -8.80; QSI×788 09:30 $1.48 → close $1.36 +90.62; QTEX×672 09:30 $1.73 → close $1.58 +100.80; KOD×11 09:30 $100.06 → close $99.26 +8.80 | — |
 
 ## Not taken
 

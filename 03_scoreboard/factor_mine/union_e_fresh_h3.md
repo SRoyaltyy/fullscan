@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **-14.23%** ($8,577) · signal-only (no cash/fees) was +7.74%. Starts YES **29/30**. Fills 147 · skips 198 · realized $+4004.41.
+Cash book **-15.39%** ($8,461) · signal-only (no cash/fees) was +7.74%. Starts YES **29/30**. Fills 147 · skips 198 · realized $+4004.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -302,6 +302,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `DAL` | 27 | $79.68 | $2.07 | — | $2,162.97 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-2.4; leftover $2155.78 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `HOVR` | 1324 | $1.62 | $17.08 | — | $1.01 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.4; leftover $2155.78 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.01 | ▼ close $8,576.84 vs 09:30 $8,625.45 (session -18.65) | 16:00 close · cash $1.01 · equity $8,576.84 vs 09:30 $8,625.45 (-48.61; session marks -18.65) · 4 name(s) marked open→close (per-name table). BYRN×458 09:30 $4.70 → close $4.52 -82.44; ANGO×194 09:30 $11.06 → close $11.52 +89.24; DAL×27 09:30 $79.68 → close $82.17 +67.23; HOVR×1324 09:30 $1.62 → close $1.55 -92.68 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.01 | ▼ 09:30 equity $8,504.80 vs yday $8,576.84 (-72.04) | 09:30 open · cash $1.01 (unchanged overnight, no fees) · equity $8,504.80 vs prior close $8,576.84 (-72.04) · 4 name(s) re-marked at the open (per-name table). ANGO×194 yday $11.52 → 09:30 $11.42 -19.40; BYRN×458 yday $4.52 → 09:30 $4.50 -9.16; DAL×27 yday $82.17 → 09:30 $81.05 -30.24; HOVR×1324 yday $1.55 → 09:30 $1.54 -13.24 | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.01 | ▼ close $8,461.01 vs 09:30 $8,504.80 (session -43.79) | 16:00 close · cash $1.01 · equity $8,461.01 vs 09:30 $8,504.80 (-43.79; session marks -43.79) · 4 name(s) marked open→close (per-name table). ANGO×194 09:30 $11.42 → close $11.40 -3.88; BYRN×458 09:30 $4.50 → close $4.55 +25.19; DAL×27 09:30 $81.05 → close $80.11 -25.38; HOVR×1324 09:30 $1.54 → close $1.51 -39.72 | — |
 
 ## Not taken
 

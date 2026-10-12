@@ -256,6 +256,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SELL** | `PENG` | 43 | $77.99 | $2.16 | $+700.41 | $5,809.37 | ▲ +700.41 after sell → book $8,644.12; vs 09:30 mark -2.16 | exit unpriced hold on first bar after 3 sess | — |
 | 2026-10-09 09:30 ET | **SELL** | `STZ` | 23 | $123.25 | $2.09 | $+212.51 | $8,642.03 | ▲ +212.51 after sell → book $8,642.03; vs 09:30 mark -2.09 | exit unpriced hold on first bar after 3 sess | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,642.03 | ▲ close $8,642.03 vs 09:30 $8,648.96 (session +0.00) | 16:00 close · cash $8,642.03 · no lots left · equity $8,642.03. | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,642.03 | ▲ 09:30 equity $8,642.03 vs yday $8,642.03 (+0.00) | 09:30 open · cash $8,642.03 · no holdings · equity $8,642.03 vs prior close $8,642.03 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,642.03 | ▲ close $8,642.03 vs 09:30 $8,642.03 (session +0.00) | 16:00 close · cash $8,642.03 · no lots left · equity $8,642.03. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hold 3d, sell next 09:30 if 🚨
 
-Cash book **-22.52%** ($7,748) · signal-only (no cash/fees) was +1.45%. Starts YES **1/30**. Fills 277 · skips 293 · realized $-284.89.
+Cash book **-24.50%** ($7,550) · signal-only (no cash/fees) was +1.45%. Starts YES **1/30**. Fills 281 · skips 293 · realized $-284.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -429,6 +429,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `SECZ` | 72 | $13.20 | $2.21 | — | $1,074.62 | — | hold 3d, sell next 09:30 if 🚨; list probable,yday_gainer; ret5=-7.9; leftover $960.50 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `CLVT` | 596 | $1.61 | $7.69 | — | $107.38 | — | hold 3d, sell next 09:30 if 🚨; list probable,yday_gainer; ret5=+1.9; leftover $960.50 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.38 | ▲ close $7,747.81 vs 09:30 $7,699.91 (session +93.67) | 16:00 close · cash $107.38 · equity $7,747.81 vs 09:30 $7,699.91 (+47.90; session marks +93.67) · 8 name(s) marked open→close (per-name table). CDNA×15 09:30 $62.21 → close $63.67 +21.90; RRC×23 09:30 $40.62 → close $40.89 +6.21; PACS×21 09:30 $43.75 → close $43.30 -9.45; ETON×17 09:30 $54.86 → close $55.21 +5.95; IPSC×657 09:30 $1.46 → close $1.47 +6.57; ACRS×255 09:30 $3.76 → close $3.83 +17.85; SECZ×72 09:30 $13.20 → close $13.82 +44.64; CLVT×596 09:30 $1.61 → close $1.61 +0.00 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $107.38 | ▼ 09:30 equity $7,735.95 vs yday $7,747.81 (-11.86) | 09:30 open · cash $107.38 (unchanged overnight, no fees) · equity $7,735.95 vs prior close $7,747.81 (-11.86) · 8 name(s) re-marked at the open (per-name table). ACRS×255 yday $3.83 → 09:30 $3.80 -7.65; CDNA×15 yday $63.67 → 09:30 $63.28 -5.85; CLVT×596 yday $1.61 → 09:30 $1.60 -5.96; ETON×17 yday $55.21 → 09:30 $55.50 +4.93; IPSC×657 yday $1.47 → 09:30 $1.47 +0.00; PACS×21 yday $43.30 → 09:30 $43.20 -2.10; RRC×23 yday $40.89 → 09:30 $41.16 +6.21; SECZ×72 yday $13.82 → 09:30 $13.80 -1.44 | — |
+| 2026-10-12 09:30 ET | **BUY** | `DNA` | 1 | $12.69 | $0.13 | — | $94.56 | — | hold 3d, sell next 09:30 if 🚨; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; leftover $17.90 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `ABSI` | 1 | $10.06 | $0.10 | — | $84.39 | — | hold 3d, sell next 09:30 if 🚨; list probable,yday_gainer,yday_mover; ret5=-8.2; leftover $17.90 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `CCCC` | 5 | $3.16 | $0.17 | — | $68.42 | — | hold 3d, sell next 09:30 if 🚨; list probable,yday_gainer; 🔵; ret5=+7.1; leftover $17.90 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `RXRX` | 4 | $4.31 | $0.18 | — | $50.99 | — | hold 3d, sell next 09:30 if 🚨; list probable,yday_gainer; ret5=+5.8; leftover $17.90 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $50.99 | ▼ close $7,550.36 vs 09:30 $7,735.95 (session -184.99) | 16:00 close · cash $50.99 · equity $7,550.36 vs 09:30 $7,735.95 (-185.59; session marks -184.99) · 12 name(s) marked open→close (per-name table). ACRS×255 09:30 $3.80 → close $3.60 -51.00; CDNA×15 09:30 $63.28 → close $63.12 -2.40; CLVT×596 09:30 $1.60 → close $1.61 +5.96; ETON×17 09:30 $55.50 → close $55.25 -4.25; IPSC×657 09:30 $1.47 → close $1.44 -19.71; PACS×21 09:30 $43.20 → close $44.30 +23.10; RRC×23 09:30 $41.16 → close $41.42 +5.98; SECZ×72 09:30 $13.80 → close $11.86 -139.68; DNA×1 09:30 $12.69 → close $11.79 -0.90; ABSI×1 09:30 $10.06 → close $9.67 -0.39; CCCC×5 09:30 $3.16 → close $3.06 -0.50; RXRX×4 09:30 $4.31 → close $4.01 -1.20 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ blue, no 🚨
 
-Cash book **-19.76%** ($8,024) · signal-only (no cash/fees) was -5.21%. Starts YES **0/30**. Fills 328 · skips 91 · realized $-561.25.
+Cash book **-21.61%** ($7,839) · signal-only (no cash/fees) was -5.21%. Starts YES **0/30**. Fills 342 · skips 91 · realized $-561.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -482,6 +482,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `CATX` | 366 | $2.71 | $4.72 | — | $1,113.82 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer; 🔵; ret5=-0.4; leftover $991.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `ERAS` | 64 | $15.42 | $2.18 | — | $124.76 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer; 🔵; ret5=+6.0; leftover $991.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $124.76 | ▲ close $8,023.72 vs 09:30 $7,935.54 (session +115.41) | 16:00 close · cash $124.76 · equity $8,023.72 vs 09:30 $7,935.54 (+88.18; session marks +115.41) · 8 name(s) marked open→close (per-name table). CDNA×15 09:30 $62.21 → close $63.67 +21.90; PACS×22 09:30 $43.75 → close $43.30 -9.90; ETON×18 09:30 $54.86 → close $55.21 +6.30; IPSC×679 09:30 $1.46 → close $1.47 +6.79; ACRS×263 09:30 $3.76 → close $3.83 +18.41; COCO×17 09:30 $55.38 → close $58.39 +51.17; CATX×366 09:30 $2.71 → close $2.66 -18.30; ERAS×64 09:30 $15.42 → close $16.03 +39.04 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $124.76 | ▼ 09:30 equity $7,992.09 vs yday $8,023.72 (-31.63) | 09:30 open · cash $124.76 (unchanged overnight, no fees) · equity $7,992.09 vs prior close $8,023.72 (-31.63) · 8 name(s) re-marked at the open (per-name table). ACRS×263 yday $3.83 → 09:30 $3.80 -7.89; CATX×366 yday $2.66 → 09:30 $2.61 -18.30; CDNA×15 yday $63.67 → 09:30 $63.28 -5.85; COCO×17 yday $58.39 → 09:30 $58.50 +1.87; ERAS×64 yday $16.03 → 09:30 $15.96 -4.48; ETON×18 yday $55.21 → 09:30 $55.50 +5.22; IPSC×679 yday $1.47 → 09:30 $1.47 +0.00; PACS×22 yday $43.30 → 09:30 $43.20 -2.20 | — |
+| 2026-10-12 09:30 ET | **SELL** | `ACRS` | 263 | $3.80 | $3.45 | $+3.68 | $1,120.71 | ▲ +3.68 after sell → book $7,988.64; vs 09:30 mark -3.45 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `CATX` | 366 | $2.61 | $4.79 | $-46.11 | $2,071.18 | ▼ -46.11 after sell → book $7,983.85; vs 09:30 mark -4.79 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `COCO` | 17 | $58.50 | $2.06 | $+48.94 | $3,063.62 | ▲ +48.94 after sell → book $7,981.79; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `ERAS` | 64 | $15.96 | $2.20 | $+30.18 | $4,082.86 | ▲ +30.18 after sell → book $7,979.59; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `ETON` | 18 | $55.50 | $2.06 | $+7.41 | $5,079.79 | ▲ +7.41 after sell → book $7,977.52; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-12 09:30 ET | **SELL** | `IPSC` | 679 | $1.47 | $8.88 | $-10.85 | $6,069.04 | ▼ -10.85 after sell → book $7,968.64; vs 09:30 mark -8.88 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PACS` | 22 | $43.20 | $2.08 | $-16.23 | $7,017.37 | ▼ -16.23 after sell → book $7,966.57; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `ARQT` | 37 | $26.57 | $2.10 | — | $6,032.18 | — | union ∩ blue, no 🚨; gate blue=True; list flatten; 🔵; ret5=+5.6; leftover $1002.48 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `DNA` | 78 | $12.69 | $2.22 | — | $5,040.13 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; leftover $1002.48 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `CCCC` | 317 | $3.16 | $4.09 | — | $4,034.32 | — | union ∩ blue, no 🚨; gate blue=True; list probable,yday_gainer; 🔵; ret5=+7.1; leftover $1002.48 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `WFF` | 67 | $14.78 | $2.19 | — | $3,041.87 | — | union ∩ blue, no 🚨; gate blue=True; list yday_gainer,yday_mover; 🔵; ret5=+411.0; leftover $1002.48 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `QSI` | 679 | $1.48 | $8.76 | — | $2,031.59 | — | union ∩ blue, no 🚨; gate blue=True; list yday_gainer,yday_mover; 🔵; ret5=-1.3; leftover $1002.48 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `FSLY` | 34 | $28.79 | $2.09 | — | $1,050.63 | — | union ∩ blue, no 🚨; gate blue=True; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.5; leftover $1002.48 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NVAX` | 79 | $12.61 | $2.23 | — | $52.22 | — | union ∩ blue, no 🚨; gate blue=True; list yday_gainer,yday_mover; 🔵; ret5=+21.9; leftover $1002.48 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $52.22 | ▼ close $7,838.76 vs 09:30 $7,992.09 (session -104.12) | 16:00 close · cash $52.22 · equity $7,838.76 vs 09:30 $7,992.09 (-153.33; session marks -104.12) · 8 name(s) marked open→close (per-name table). CDNA×15 09:30 $63.28 → close $63.12 -2.40; ARQT×37 09:30 $26.57 → close $26.22 -12.95; DNA×78 09:30 $12.69 → close $11.79 -70.20; CCCC×317 09:30 $3.16 → close $3.06 -31.70; WFF×67 09:30 $14.78 → close $17.28 +167.50; QSI×679 09:30 $1.48 → close $1.36 -78.08; FSLY×34 09:30 $28.79 → close $26.43 -80.24; NVAX×79 09:30 $12.61 → close $12.66 +3.95 | — |
 
 ## Not taken
 

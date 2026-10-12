@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_news_g_h1 w=0.5,0.5 net=priority
 
-Cash book **-17.24%** ($8,276) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 381 · skips 300 · realized $+2521.08.
+Cash book **-18.83%** ($8,117) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 386 · skips 300 · realized $+2521.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12.25.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $89.54.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -536,6 +536,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `FLUT` | 17 | $81.79 | $2.04 | — | $1,406.84 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; ret5=+6.7; combo leftover $1394.16; owner union_news_g_h1 | join🔴 sector🔴 gen🔴 news🟢 digest🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `GENI` | 205 | $6.79 | $2.64 | — | $12.25 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+16.7; combo leftover $1394.16; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12.25 | ▼ close $8,276.30 vs 09:30 $8,365.87 (session -63.19) | 16:00 close · cash $12.25 · equity $8,276.30 vs 09:30 $8,365.87 (-89.57; session marks -63.19) · 7 name(s) marked open→close (per-name table). BYRN×222 09:30 $4.70 → close $4.52 -39.96; ANGO×94 09:30 $11.06 → close $11.52 +43.24; DAL×13 09:30 $79.68 → close $82.17 +32.37; HOVR×645 09:30 $1.62 → close $1.55 -45.15; RRC×34 09:30 $40.62 → close $40.89 +9.18; FLUT×17 09:30 $81.79 → close $79.78 -34.17; GENI×205 09:30 $6.79 → close $6.65 -28.70 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12.25 | ▼ 09:30 equity $8,253.73 vs yday $8,276.30 (-22.57) | 09:30 open · cash $12.25 (unchanged overnight, no fees) · equity $8,253.73 vs prior close $8,276.30 (-22.57) | — |
+| 2026-10-12 09:30 ET | **SELL** | `FLUT` | 17 | $79.48 | $2.06 | $-43.37 | $1,361.35 | ▼ -43.37 after sell → book $8,251.67; vs 09:30 mark -2.06 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `GENI` | 205 | $6.69 | $2.69 | $-25.83 | $2,730.11 | ▼ -25.83 after sell → book $8,248.98; vs 09:30 mark -2.69 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `RRC` | 34 | $41.16 | $2.11 | $+14.15 | $4,127.44 | ▲ +14.15 after sell → book $8,246.87; vs 09:30 mark -2.11 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `DNA` | 162 | $12.69 | $2.48 | — | $2,069.18 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; combo leftover $2063.72; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `AUGO` | 22 | $89.89 | $2.06 | — | $89.54 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+11.4; combo leftover $2063.72; owner union_news_g_h1 | join🟢 sector🔴 gen🔴 news🟢 digest🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $89.54 | ▼ close $8,117.31 vs 09:30 $8,253.73 (session -125.02) | 16:00 close · cash $89.54 · equity $8,117.31 vs 09:30 $8,253.73 (-136.42; session marks -125.02) · 6 name(s) marked open→close (per-name table). ANGO×94 09:30 $11.42 → close $11.40 -1.88; BYRN×222 09:30 $4.50 → close $4.55 +12.21; DAL×13 09:30 $81.05 → close $80.11 -12.22; HOVR×645 09:30 $1.54 → close $1.51 -19.35; DNA×162 09:30 $12.69 → close $11.79 -145.80; AUGO×22 09:30 $89.89 → close $91.80 +42.02 | — |
 
 ## Not taken
 

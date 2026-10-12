@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h3/union_hot_n4_h1 w=0.33,0.33,0.33 net=priority
 
-Cash book **+72.90%** ($17,290) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 455 · skips 369 · realized $+2544.60.
+Cash book **+81.24%** ($18,124) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 461 · skips 369 · realized $+2544.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,464.51.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $15,322.65.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -611,6 +611,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SHORT** | `EQPT` | 121 | $15.81 | $2.44 | — | $9,560.54 | — | news🔴; gate news=bad; list yday_mover; ret5=-10.4; combo leftover $1914.82; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟡 ab🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **SHORT** | `DXC` | 154 | $12.38 | $2.55 | — | $11,464.51 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+6.3; combo leftover $1914.82; owner short_news_r_h3 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,464.51 | ▲ close $17,289.60 vs 09:30 $17,100.87 (session +250.07) | 16:00 close · cash $11,464.51 · equity $17,289.60 vs 09:30 $17,100.87 (+188.73; session marks +250.07) · 10 name(s) marked open→close (per-name table). DAL×17 09:30 $79.68 → close $82.17 +42.33; BYRN×302 09:30 $4.70 → close $4.52 -54.36; ANGO×128 09:30 $11.06 → close $11.52 +58.88; HOVR×878 09:30 $1.62 → close $1.55 -61.46; PCRX×52 09:30 $36.33 → close $36.31 -1.04; KOD×20 09:30 $94.64 → close $99.87 +104.60; ADCT×1208 09:30 $1.58 → close $1.73 +181.20; NTLA×154 09:30 $12.39 → close $13.07 -104.72; EQPT×121 09:30 $15.81 → close $15.09 +87.72; DXC×154 09:30 $12.38 → close $12.40 -3.08 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,464.51 | ▼ 09:30 equity $17,225.92 vs yday $17,289.60 (-63.68) | 09:30 open · cash $11,464.51 (unchanged overnight, no fees) · equity $17,225.92 vs prior close $17,289.60 (-63.68) | — |
+| 2026-10-12 09:30 ET | **SELL** | `ADCT` | 1208 | $1.70 | $15.80 | $+113.58 | $13,502.31 | ▲ +113.58 after sell → book $17,210.12; vs 09:30 mark -15.80 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PCRX` | 52 | $36.32 | $2.17 | $-4.84 | $15,388.78 | ▼ -4.84 after sell → book $17,207.95; vs 09:30 mark -2.17 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `WFF` | 173 | $14.78 | $2.51 | — | $12,829.33 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+411.0; combo leftover $2564.80; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `QTEX` | 1482 | $1.73 | $19.12 | — | $10,246.35 | — | top 4 by hot; rank hot_score; list yday_gainer; 🔵; ret5=+70.0; combo leftover $2564.80; owner union_hot_n4_h1 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NAUT` | 1184 | $2.17 | $15.27 | — | $7,667.72 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; combo leftover $2564.80; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 750 | $10.22 | $10.07 | — | $15,322.65 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; combo leftover $7667.72; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,322.65 | ▲ close $18,123.65 vs 09:30 $17,225.92 (session +962.67) | 16:00 close · cash $15,322.65 · equity $18,123.65 vs 09:30 $17,225.92 (+897.73; session marks +962.67) · 12 name(s) marked open→close (per-name table). ANGO×128 09:30 $11.42 → close $11.40 -2.56; BYRN×302 09:30 $4.50 → close $4.55 +16.61; DAL×17 09:30 $81.05 → close $80.11 -15.98; DXC×154 09:30 $12.47 → close $12.54 -10.78; EQPT×121 09:30 $14.86 → close $14.76 +12.10; HOVR×878 09:30 $1.54 → close $1.51 -26.34; KOD×20 09:30 $100.06 → close $99.26 -16.00; NTLA×154 09:30 $13.08 → close $12.58 +77.00; WFF×173 09:30 $14.78 → close $17.28 +432.50; QTEX×1482 09:30 $1.73 → close $1.58 -222.30; NAUT×1184 09:30 $2.17 → close $2.17 +5.92; AEHL×750 09:30 $10.22 → close $9.27 +712.50 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-13.50%** ($8,650) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 268 · skips 271 · realized $-671.83.
+Cash book **-13.09%** ($8,691) · signal-only (no cash/fees) was +107.52%. Starts YES **4/30**. Fills 268 · skips 271 · realized $-671.83.
 
 ## How this sleeve decides (like you are 10)
 
@@ -418,6 +418,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `NAUT` | 647 | $1.91 | $8.35 | — | $1,262.18 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+15.9; leftover $1237.95 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `SUJA` | 117 | $10.54 | $2.34 | — | $26.66 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.4; leftover $1237.95 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $26.66 | ▲ close $8,649.96 vs 09:30 $8,685.85 (session +7.38) | 16:00 close · cash $26.66 · equity $8,649.96 vs 09:30 $8,685.85 (-35.89; session marks +7.38) · 7 name(s) marked open→close (per-name table). MAX×115 09:30 $10.68 → close $10.09 -67.85; NRDS×126 09:30 $9.78 → close $9.74 -5.04; ECO×13 09:30 $93.64 → close $93.11 -6.89; BORR×270 09:30 $4.58 → close $4.78 +54.00; XRPN×59 09:30 $20.88 → close $17.09 -223.61; NAUT×647 09:30 $1.91 → close $2.25 +219.33; SUJA×117 09:30 $10.54 → close $10.86 +37.44 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $26.66 | ▲ 09:30 equity $8,670.76 vs yday $8,649.96 (+20.81) | 09:30 open · cash $26.66 (unchanged overnight, no fees) · equity $8,670.76 vs prior close $8,649.96 (+20.81) · 7 name(s) re-marked at the open (per-name table). BORR×270 yday $4.78 → 09:30 $4.93 +40.50; ECO×13 yday $93.11 → 09:30 $96.86 +48.75; MAX×115 yday $10.09 → 09:30 $10.12 +3.45; NAUT×647 yday $2.25 → 09:30 $2.17 -54.99; NRDS×126 yday $9.74 → 09:30 $9.77 +3.78; SUJA×117 yday $10.86 → 09:30 $10.89 +3.51; XRPN×59 yday $17.09 → 09:30 $16.68 -24.19 | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $26.66 | ▲ close $8,691.26 vs 09:30 $8,670.76 (session +20.49) | 16:00 close · cash $26.66 · equity $8,691.26 vs 09:30 $8,670.76 (+20.50; session marks +20.49) · 7 name(s) marked open→close (per-name table). BORR×270 09:30 $4.93 → close $4.93 +0.00; ECO×13 09:30 $96.86 → close $98.63 +23.01; MAX×115 09:30 $10.12 → close $10.06 -6.90; NAUT×647 09:30 $2.17 → close $2.17 +3.23; NRDS×126 09:30 $9.77 → close $9.82 +6.30; SUJA×117 09:30 $10.89 → close $10.73 -18.72; XRPN×59 09:30 $16.68 → close $16.91 +13.57 | — |
 
 ## Not taken
 

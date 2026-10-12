@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `half` · sell `list` · S-boost `none` · deploy half leftover
 
-Cash book **-11.27%** ($8,873) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 323 · skips 313 · realized $-594.04.
+Cash book **-13.52%** ($8,648) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 329 · skips 313 · realized $-594.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -473,6 +473,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `SECZ` | 46 | $13.20 | $2.13 | — | $4,992.23 | — | deploy half leftover; list probable,yday_gainer; ret5=-7.9; leftover $612.03 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `CLVT` | 380 | $1.61 | $4.90 | — | $4,375.53 | — | deploy half leftover; list probable,yday_gainer; ret5=+1.9; leftover $612.03 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,375.53 | ▲ close $8,872.95 vs 09:30 $8,863.11 (session +55.19) | 16:00 close · cash $4,375.53 · equity $8,872.95 vs 09:30 $8,863.11 (+9.84; session marks +55.19) · 8 name(s) marked open→close (per-name table). BLFS×7 09:30 $38.61 → close $38.61 +0.00; CDNA×9 09:30 $62.21 → close $63.67 +13.14; PACS×13 09:30 $43.75 → close $43.30 -5.85; ETON×11 09:30 $54.86 → close $55.21 +3.85; IPSC×419 09:30 $1.46 → close $1.47 +4.19; ACRS×162 09:30 $3.76 → close $3.83 +11.34; SECZ×46 09:30 $13.20 → close $13.82 +28.52; CLVT×380 09:30 $1.61 → close $1.61 +0.00 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,375.53 | ▼ 09:30 equity $8,861.75 vs yday $8,872.95 (-11.20) | 09:30 open · cash $4,375.53 (unchanged overnight, no fees) · equity $8,861.75 vs prior close $8,872.95 (-11.20) · 8 name(s) re-marked at the open (per-name table). ACRS×162 yday $3.83 → 09:30 $3.80 -4.86; BLFS×7 yday $38.61 → 09:30 $38.61 +0.00; CDNA×9 yday $63.67 → 09:30 $63.28 -3.51; CLVT×380 yday $1.61 → 09:30 $1.60 -3.80; ETON×11 yday $55.21 → 09:30 $55.50 +3.19; IPSC×419 yday $1.47 → 09:30 $1.47 +0.00; PACS×13 yday $43.30 → 09:30 $43.20 -1.30; SECZ×46 yday $13.82 → 09:30 $13.80 -0.92 | — |
+| 2026-10-12 09:30 ET | **BUY** | `FANG` | 1 | $195.01 | $1.95 | — | $4,178.57 | — | deploy half leftover; list flatten; ret5=+4.0; leftover $364.63 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `ARQT` | 13 | $26.57 | $2.03 | — | $3,831.13 | — | deploy half leftover; list flatten; 🔵; ret5=+5.6; leftover $364.63 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `DNA` | 28 | $12.69 | $2.07 | — | $3,473.73 | — | deploy half leftover; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; leftover $364.63 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `ABSI` | 36 | $10.06 | $2.10 | — | $3,109.30 | — | deploy half leftover; list probable,yday_gainer,yday_mover; ret5=-8.2; leftover $364.63 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `CCCC` | 115 | $3.16 | $2.33 | — | $2,743.56 | — | deploy half leftover; list probable,yday_gainer; 🔵; ret5=+7.1; leftover $364.63 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `RXRX` | 84 | $4.31 | $2.24 | — | $2,379.28 | — | deploy half leftover; list probable,yday_gainer; ret5=+5.8; leftover $364.63 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,379.28 | ▼ close $8,648.15 vs 09:30 $8,861.75 (session -200.87) | 16:00 close · cash $2,379.28 · equity $8,648.15 vs 09:30 $8,861.75 (-213.60; session marks -200.87) · 14 name(s) marked open→close (per-name table). ACRS×162 09:30 $3.80 → close $3.60 -32.40; BLFS×7 09:30 $38.61 → close $38.61 +0.00; CDNA×9 09:30 $63.28 → close $63.12 -1.44; CLVT×380 09:30 $1.60 → close $1.61 +3.80; ETON×11 09:30 $55.50 → close $55.25 -2.75; IPSC×419 09:30 $1.47 → close $1.44 -12.57; PACS×13 09:30 $43.20 → close $44.30 +14.30; SECZ×46 09:30 $13.80 → close $11.86 -89.24; FANG×1 09:30 $195.01 → close $195.11 +0.10; ARQT×13 09:30 $26.57 → close $26.22 -4.55; DNA×28 09:30 $12.69 → close $11.79 -25.20; ABSI×36 09:30 $10.06 → close $9.67 -14.22; CCCC×115 09:30 $3.16 → close $3.06 -11.50; RXRX×84 09:30 $4.31 → close $4.01 -25.20 | — |
 
 ## Not taken
 

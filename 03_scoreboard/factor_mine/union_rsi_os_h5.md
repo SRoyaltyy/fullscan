@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os hold 5, no 🚨
 
-Cash book **-21.57%** ($7,843) · signal-only (no cash/fees) was -62.78%. Starts YES **4/30**. Fills 107 · skips 145 · realized $-2687.08.
+Cash book **-22.39%** ($7,762) · signal-only (no cash/fees) was -62.78%. Starts YES **4/30**. Fills 107 · skips 145 · realized $-2687.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -261,6 +261,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SELL** | `VIVO` | 1 | $3.20 | $0.06 | $-0.13 | $7,539.11 | ▼ -0.13 after sell → book $7,539.11; vs 09:30 mark -0.05 | exit unpriced hold on first bar after 5 sess | — |
 | 2026-10-09 09:30 ET | **BUY** | `ANGO` | 680 | $11.06 | $8.77 | — | $9.54 | — | union ∩ rsi_os hold 5, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-25.7; leftover $7539.11 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.54 | ▲ close $7,843.14 vs 09:30 $7,561.09 (session +312.80) | 16:00 close · cash $9.54 · equity $7,843.14 vs 09:30 $7,561.09 (+282.05; session marks +312.80) · 1 name(s) marked open→close (per-name table). ANGO×680 09:30 $11.06 → close $11.52 +312.80 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9.54 | ▼ 09:30 equity $7,775.14 vs yday $7,843.14 (-68.00) | 09:30 open · cash $9.54 (unchanged overnight, no fees) · equity $7,775.14 vs prior close $7,843.14 (-68.00) · 1 name(s) re-marked at the open (per-name table). ANGO×680 yday $11.52 → 09:30 $11.42 -68.00 | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.54 | ▼ close $7,761.54 vs 09:30 $7,775.14 (session -13.60) | 16:00 close · cash $9.54 · equity $7,761.54 vs 09:30 $7,775.14 (-13.60; session marks -13.60) · 1 name(s) marked open→close (per-name table). ANGO×680 09:30 $11.42 → close $11.40 -13.60 | — |
 
 ## Not taken
 

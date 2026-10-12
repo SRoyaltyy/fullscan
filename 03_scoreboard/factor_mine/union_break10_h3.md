@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **+6.08%** ($10,607) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 262 · skips 298 · realized $+167.97.
+Cash book **+6.38%** ($10,639) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 264 · skips 298 · realized $+167.97.
 
 ## How this sleeve decides (like you are 10)
 
@@ -416,6 +416,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `ADCT` | 833 | $1.58 | $10.75 | — | $1,501.62 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $1316.53 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `MAX` | 123 | $10.68 | $2.36 | — | $185.62 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,ohlc_hot; 🔵; ret5=+10.3; leftover $1316.53 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $185.62 | ▲ close $10,607.47 vs 09:30 $10,557.13 (session +102.45) | 16:00 close · cash $185.62 · equity $10,607.47 vs 09:30 $10,557.13 (+50.34; session marks +102.45) · 8 name(s) marked open→close (per-name table). RRC×32 09:30 $40.62 → close $40.89 +8.64; ERAS×85 09:30 $15.42 → close $16.03 +51.85; PCRX×36 09:30 $36.33 → close $36.31 -0.72; HAE×10 09:30 $119.81 → close $118.69 -11.20; BYRN×280 09:30 $4.70 → close $4.52 -50.40; MANE×10 09:30 $125.71 → close $130.90 +51.90; ADCT×833 09:30 $1.58 → close $1.73 +124.95; MAX×123 09:30 $10.68 → close $10.09 -72.57 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $185.62 | ▼ 09:30 equity $10,574.62 vs yday $10,607.47 (-32.85) | 09:30 open · cash $185.62 (unchanged overnight, no fees) · equity $10,574.62 vs prior close $10,607.47 (-32.85) · 8 name(s) re-marked at the open (per-name table). ADCT×833 yday $1.73 → 09:30 $1.70 -24.99; BYRN×280 yday $4.52 → 09:30 $4.50 -5.60; ERAS×85 yday $16.03 → 09:30 $15.96 -5.95; HAE×10 yday $118.69 → 09:30 $118.70 +0.10; MANE×10 yday $130.90 → 09:30 $129.99 -9.10; MAX×123 yday $10.09 → 09:30 $10.12 +3.69; PCRX×36 yday $36.31 → 09:30 $36.32 +0.36; RRC×32 yday $40.89 → 09:30 $41.16 +8.64 | — |
+| 2026-10-12 09:30 ET | **BUY** | `WFF` | 1 | $14.78 | $0.15 | — | $170.69 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; 🔵; ret5=+411.0; leftover $23.20 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SVC` | 3 | $7.30 | $0.23 | — | $148.56 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; 🔵; ret5=+12.1; leftover $23.20 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $148.56 | ▲ close $10,638.53 vs 09:30 $10,574.62 (session +64.29) | 16:00 close · cash $148.56 · equity $10,638.53 vs 09:30 $10,574.62 (+63.91; session marks +64.29) · 10 name(s) marked open→close (per-name table). ADCT×833 09:30 $1.70 → close $1.86 +133.28; BYRN×280 09:30 $4.50 → close $4.55 +15.40; ERAS×85 09:30 $15.96 → close $15.46 -42.50; HAE×10 09:30 $118.70 → close $122.06 +33.60; MANE×10 09:30 $129.99 → close $122.40 -75.90; MAX×123 09:30 $10.12 → close $10.06 -7.38; PCRX×36 09:30 $36.32 → close $36.35 +1.08; RRC×32 09:30 $41.16 → close $41.42 +8.32; WFF×1 09:30 $14.78 → close $17.28 +2.50; SVC×3 09:30 $7.30 → close $5.93 -4.11 | — |
 
 ## Not taken
 

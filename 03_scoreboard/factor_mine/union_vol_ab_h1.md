@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-8.02%** ($9,198) · signal-only (no cash/fees) was +53.27%. Starts YES **26/30**. Fills 296 · skips 65 · realized $+1139.59.
+Cash book **-13.95%** ($8,605) · signal-only (no cash/fees) was +53.27%. Starts YES **26/30**. Fills 312 · skips 65 · realized $+1139.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -452,6 +452,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `ECO` | 12 | $93.64 | $2.03 | — | $1,310.11 | — | combo gate; gate ab=good,vol=good; list yday_gainer,ohlc_hot; ret5=+10.1; leftover $1161.91 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `ORBS` | 1262 | $0.92 | $15.40 | — | $133.67 | — | combo gate; gate ab=good,vol=good; list yday_mover; 🔵; ret5=-19.2; leftover $1161.91 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $133.67 | ▼ close $9,198.08 vs 09:30 $9,295.32 (session -54.61) | 16:00 close · cash $133.67 · equity $9,198.08 vs 09:30 $9,295.32 (-97.24; session marks -54.61) · 8 name(s) marked open→close (per-name table). PCRX×31 09:30 $36.33 → close $36.31 -0.62; HAE×9 09:30 $119.81 → close $118.69 -10.08; ADCT×735 09:30 $1.58 → close $1.73 +110.25; MAX×108 09:30 $10.68 → close $10.09 -63.72; NRDS×118 09:30 $9.78 → close $9.74 -4.72; GAU×540 09:30 $2.15 → close $2.19 +21.60; ECO×12 09:30 $93.64 → close $93.11 -6.36; ORBS×1262 09:30 $0.92 → close $0.84 -100.96 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $133.67 | ▲ 09:30 equity $9,224.63 vs yday $9,198.08 (+26.55) | 09:30 open · cash $133.67 (unchanged overnight, no fees) · equity $9,224.63 vs prior close $9,198.08 (+26.55) · 8 name(s) re-marked at the open (per-name table). ADCT×735 yday $1.73 → 09:30 $1.70 -22.05; ECO×12 yday $93.11 → 09:30 $96.86 +45.00; GAU×540 yday $2.19 → 09:30 $2.16 -16.20; HAE×9 yday $118.69 → 09:30 $118.70 +0.09; MAX×108 yday $10.09 → 09:30 $10.12 +3.24; NRDS×118 yday $9.74 → 09:30 $9.77 +3.54; ORBS×1262 yday $0.84 → 09:30 $0.85 +12.62; PCRX×31 yday $36.31 → 09:30 $36.32 +0.31 | — |
+| 2026-10-12 09:30 ET | **SELL** | `ADCT` | 735 | $1.70 | $9.61 | $+69.11 | $1,373.56 | ▲ +69.11 after sell → book $9,215.02; vs 09:30 mark -9.61 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `ECO` | 12 | $96.86 | $2.05 | $+34.57 | $2,533.83 | ▲ +34.57 after sell → book $9,212.97; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `GAU` | 540 | $2.16 | $7.07 | $-8.63 | $3,693.16 | ▼ -8.63 after sell → book $9,205.90; vs 09:30 mark -7.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `HAE` | 9 | $118.70 | $2.04 | $-14.04 | $4,759.43 | ▼ -14.04 after sell → book $9,203.87; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `MAX` | 108 | $10.12 | $2.34 | $-65.14 | $5,850.05 | ▼ -65.14 after sell → book $9,201.53; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `NRDS` | 118 | $9.77 | $2.37 | $-5.90 | $7,000.53 | ▼ -5.90 after sell → book $9,199.15; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `ORBS` | 1262 | $0.85 | $14.73 | $-118.47 | $8,058.50 | ▼ -118.47 after sell → book $9,184.42; vs 09:30 mark -14.73 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `PCRX` | 31 | $36.32 | $2.10 | $-4.50 | $9,182.32 | ▼ -4.50 after sell → book $9,182.32; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `QSI` | 778 | $1.48 | $10.04 | — | $8,024.73 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=-1.3; leftover $1147.79 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NAUT` | 530 | $2.17 | $6.84 | — | $6,870.44 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; leftover $1147.79 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `FSLY` | 39 | $28.79 | $2.11 | — | $5,745.53 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.5; leftover $1147.79 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NVAX` | 91 | $12.61 | $2.26 | — | $4,595.75 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+21.9; leftover $1147.79 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SVC` | 157 | $7.30 | $2.46 | — | $3,447.19 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+12.1; leftover $1147.79 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `MRNA` | 5 | $224.24 | $2.00 | — | $2,324.01 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+18.4; leftover $1147.79 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `PRME` | 290 | $3.95 | $3.74 | — | $1,174.77 | — | combo gate; gate ab=good,vol=good; list yday_gainer; 🔵; ret5=+33.9; leftover $1147.79 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `CDNL` | 54 | $21.01 | $2.15 | — | $38.08 | — | combo gate; gate ab=good,vol=good; list yday_mover; 🔵; ret5=-31.3; leftover $1147.79 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $38.08 | ▼ close $8,605.38 vs 09:30 $9,224.63 (session -545.34) | 16:00 close · cash $38.08 · equity $8,605.38 vs 09:30 $9,224.63 (-619.25; session marks -545.34) · 8 name(s) marked open→close (per-name table). QSI×778 09:30 $1.48 → close $1.36 -89.47; NAUT×530 09:30 $2.17 → close $2.17 +2.65; FSLY×39 09:30 $28.79 → close $26.43 -92.04; NVAX×91 09:30 $12.61 → close $12.66 +4.55; SVC×157 09:30 $7.30 → close $5.93 -215.09; MRNA×5 09:30 $224.24 → close $213.74 -52.48; PRME×290 09:30 $3.95 → close $3.61 -98.60; CDNL×54 09:30 $21.01 → close $20.92 -4.86 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-22.02%** ($7,798) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 244 · skips 290 · realized $-875.40.
+Cash book **-22.94%** ($7,706) · signal-only (no cash/fees) was -4.92%. Starts YES **0/30**. Fills 244 · skips 290 · realized $-875.40.
 
 ## How this sleeve decides (like you are 10)
 
@@ -394,6 +394,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `SECZ` | 42 | $13.20 | $2.12 | — | $309.35 | — | rank-weighted leftover; list probable,yday_gainer; ret5=-7.9; leftover $554.89 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `CLVT` | 172 | $1.61 | $2.51 | — | $29.92 | — | rank-weighted leftover; list probable,yday_gainer; ret5=+1.9; leftover $277.45 | join🔴 sector🔴 gen🔴 news🟡 digest🔴 judge🔴 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $29.92 | ▲ close $7,798.39 vs 09:30 $7,783.11 (session +53.45) | 16:00 close · cash $29.92 · equity $7,798.39 vs 09:30 $7,783.11 (+15.28; session marks +53.45) · 7 name(s) marked open→close (per-name table). RRC×47 09:30 $40.62 → close $40.89 +12.69; PACS×38 09:30 $43.75 → close $43.30 -17.10; ETON×25 09:30 $54.86 → close $55.21 +8.75; IPSC×760 09:30 $1.46 → close $1.47 +7.60; ACRS×221 09:30 $3.76 → close $3.83 +15.47; SECZ×42 09:30 $13.20 → close $13.82 +26.04; CLVT×172 09:30 $1.61 → close $1.61 +0.00 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $29.92 | ▲ 09:30 equity $7,805.34 vs yday $7,798.39 (+6.95) | 09:30 open · cash $29.92 (unchanged overnight, no fees) · equity $7,805.34 vs prior close $7,798.39 (+6.95) · 7 name(s) re-marked at the open (per-name table). ACRS×221 yday $3.83 → 09:30 $3.80 -6.63; CLVT×172 yday $1.61 → 09:30 $1.60 -1.72; ETON×25 yday $55.21 → 09:30 $55.50 +7.25; IPSC×760 yday $1.47 → 09:30 $1.47 +0.00; PACS×38 yday $43.30 → 09:30 $43.20 -3.80; RRC×47 yday $40.89 → 09:30 $41.16 +12.69; SECZ×42 yday $13.82 → 09:30 $13.80 -0.84 | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $29.92 | ▼ close $7,706.35 vs 09:30 $7,805.34 (session -98.99) | 16:00 close · cash $29.92 · equity $7,706.35 vs 09:30 $7,805.34 (-98.99; session marks -98.99) · 7 name(s) marked open→close (per-name table). ACRS×221 09:30 $3.80 → close $3.60 -44.20; CLVT×172 09:30 $1.60 → close $1.61 +1.72; ETON×25 09:30 $55.50 → close $55.25 -6.25; IPSC×760 09:30 $1.47 → close $1.44 -22.80; PACS×38 09:30 $43.20 → close $44.30 +41.80; RRC×47 09:30 $41.16 → close $41.42 +12.22; SECZ×42 09:30 $13.80 → close $11.86 -81.48 | — |
 
 ## Not taken
 

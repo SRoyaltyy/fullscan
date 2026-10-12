@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-3.33%** ($9,667) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 326 · skips 95 · realized $-976.57.
+Cash book **-4.07%** ($9,593) · signal-only (no cash/fees) was -20.71%. Starts YES **6/30**. Fills 340 · skips 95 · realized $-976.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -478,6 +478,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **SHORT** | `FRO` | 10 | $56.16 | $2.06 | — | $13,820.92 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; 🔵; ret5=+9.2; leftover $609.53 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **SHORT** | `HAFN` | 57 | $10.56 | $2.20 | — | $14,420.64 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+7.7; leftover $609.53 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,420.64 | ▼ close $9,667.18 vs 09:30 $9,752.45 (session -65.33) | 16:00 close · cash $14,420.64 · equity $9,667.18 vs 09:30 $9,752.45 (-85.27; session marks -65.33) · 8 name(s) marked open→close (per-name table). PCRX×16 09:30 $36.33 → close $36.31 +0.32; HAE×5 09:30 $119.81 → close $118.69 +5.60; BYRN×129 09:30 $4.70 → close $4.52 +23.22; ADCT×385 09:30 $1.58 → close $1.73 -57.75; ECO×6 09:30 $93.64 → close $93.11 +3.18; KOD×6 09:30 $94.64 → close $99.87 -31.38; FRO×10 09:30 $56.16 → close $56.10 +0.60; HAFN×57 09:30 $10.56 → close $10.72 -9.12 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,420.64 | ▼ 09:30 equity $9,619.13 vs yday $9,667.18 (-48.05) | 09:30 open · cash $14,420.64 (unchanged overnight, no fees) · equity $9,619.13 vs prior close $9,667.18 (-48.05) · 8 name(s) re-marked at the open (per-name table). ADCT×385 yday $1.73 → 09:30 $1.70 +11.55; BYRN×129 yday $4.52 → 09:30 $4.50 +2.58; ECO×6 yday $93.11 → 09:30 $96.86 -22.50; FRO×10 yday $56.10 → 09:30 $58.28 -21.80; HAE×5 yday $118.69 → 09:30 $118.70 -0.05; HAFN×57 yday $10.72 → 09:30 $11.01 -16.53; KOD×6 yday $99.87 → 09:30 $100.06 -1.14; PCRX×16 yday $36.31 → 09:30 $36.32 -0.16 | — |
+| 2026-10-12 09:30 ET | **COVER** | `ADCT` | 385 | $1.70 | $4.97 | $-56.22 | $13,761.17 | ▼ -56.22 after sell → book $9,614.16; vs 09:30 mark -4.97 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `BYRN` | 129 | $4.50 | $2.38 | $+21.00 | $13,178.30 | ▲ +21.00 after sell → book $9,611.79; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `ECO` | 6 | $96.86 | $2.01 | $-23.37 | $12,595.13 | ▼ -23.37 after sell → book $9,609.78; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `FRO` | 10 | $58.28 | $2.02 | $-25.28 | $12,010.31 | ▼ -25.28 after sell → book $9,607.76; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `HAE` | 5 | $118.70 | $2.00 | $+1.50 | $11,414.80 | ▲ +1.50 after sell → book $9,605.75; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `HAFN` | 57 | $11.01 | $2.16 | $-30.01 | $10,785.07 | ▼ -30.01 after sell → book $9,603.59; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **COVER** | `PCRX` | 16 | $36.32 | $2.04 | $-3.95 | $10,201.91 | ▼ -3.95 after sell → book $9,601.55; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SHORT** | `IOVA` | 47 | $14.45 | $2.17 | — | $10,878.89 | — | RSI overbought; gate rsi_ob=True; list probable,yday_gainer; ret5=+2.8; leftover $685.83 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `WFF` | 46 | $14.78 | $2.17 | — | $11,556.61 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+411.0; leftover $685.83 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `QSI` | 464 | $1.48 | $6.09 | — | $12,234.92 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=-1.3; leftover $685.83 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `NAUT` | 316 | $2.17 | $4.16 | — | $12,914.90 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; leftover $685.83 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `CCI` | 8 | $79.50 | $2.05 | — | $13,548.85 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+19.9; leftover $685.83 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `MRNA` | 3 | $224.24 | $2.04 | — | $14,219.52 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+18.4; leftover $685.83 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **SHORT** | `QTEX` | 396 | $1.73 | $5.20 | — | $14,899.39 | — | RSI overbought; gate rsi_ob=True; list yday_gainer; 🔵; ret5=+70.0; leftover $685.83 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,899.39 | ▲ close $9,592.89 vs 09:30 $9,619.13 (session +15.22) | 16:00 close · cash $14,899.39 · equity $9,592.89 vs 09:30 $9,619.13 (-26.24; session marks +15.22) · 8 name(s) marked open→close (per-name table). KOD×6 09:30 $100.06 → close $99.26 +4.80; IOVA×47 09:30 $14.45 → close $14.56 -5.17; WFF×46 09:30 $14.78 → close $17.28 -115.00; QSI×464 09:30 $1.48 → close $1.36 +53.36; NAUT×316 09:30 $2.17 → close $2.17 -1.58; CCI×8 09:30 $79.50 → close $81.01 -12.08; MRNA×3 09:30 $224.24 → close $213.74 +31.49; QTEX×396 09:30 $1.73 → close $1.58 +59.40 | — |
 
 ## Not taken
 

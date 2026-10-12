@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-13.28%** ($8,672) · signal-only (no cash/fees) was -21.78%. Starts YES **2/30**. Fills 240 · skips 248 · realized $-1054.91.
+Cash book **-14.10%** ($8,590) · signal-only (no cash/fees) was -21.78%. Starts YES **2/30**. Fills 244 · skips 248 · realized $-1054.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -396,6 +396,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `HAE` | 8 | $119.81 | $2.01 | — | $1,184.40 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+14.5; leftover $1063.65 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `ADCT` | 673 | $1.58 | $8.68 | — | $112.38 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+47.2; leftover $1063.65 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $112.38 | ▲ close $8,671.57 vs 09:30 $8,534.27 (session +197.50) | 16:00 close · cash $112.38 · equity $8,671.57 vs 09:30 $8,534.27 (+137.30; session marks +197.50) · 8 name(s) marked open→close (per-name table). IPSC×728 09:30 $1.46 → close $1.47 +7.28; ACRS×282 09:30 $3.76 → close $3.83 +19.74; COCO×19 09:30 $55.38 → close $58.39 +57.19; CATX×392 09:30 $2.71 → close $2.66 -19.60; ERAS×68 09:30 $15.42 → close $16.03 +41.48; PCRX×29 09:30 $36.33 → close $36.31 -0.58; HAE×8 09:30 $119.81 → close $118.69 -8.96; ADCT×673 09:30 $1.58 → close $1.73 +100.95 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $112.38 | ▼ 09:30 equity $8,621.02 vs yday $8,671.57 (-50.55) | 09:30 open · cash $112.38 (unchanged overnight, no fees) · equity $8,621.02 vs prior close $8,671.57 (-50.55) · 8 name(s) re-marked at the open (per-name table). ACRS×282 yday $3.83 → 09:30 $3.80 -8.46; ADCT×673 yday $1.73 → 09:30 $1.70 -20.19; CATX×392 yday $2.66 → 09:30 $2.61 -19.60; COCO×19 yday $58.39 → 09:30 $58.50 +2.09; ERAS×68 yday $16.03 → 09:30 $15.96 -4.76; HAE×8 yday $118.69 → 09:30 $118.70 +0.08; IPSC×728 yday $1.47 → 09:30 $1.47 +0.00; PCRX×29 yday $36.31 → 09:30 $36.32 +0.29 | — |
+| 2026-10-12 09:30 ET | **BUY** | `DNA` | 1 | $12.69 | $0.13 | — | $99.56 | — | combo gate; gate blue=True,vol=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; leftover $14.05 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `QSI` | 9 | $1.48 | $0.16 | — | $86.13 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=-1.3; leftover $14.05 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `NVAX` | 1 | $12.61 | $0.13 | — | $73.39 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+21.9; leftover $14.05 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SVC` | 1 | $7.30 | $0.08 | — | $66.01 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+12.1; leftover $14.05 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $66.01 | ▼ close $8,590.36 vs 09:30 $8,621.02 (session -30.16) | 16:00 close · cash $66.01 · equity $8,590.36 vs 09:30 $8,621.02 (-30.66; session marks -30.16) · 12 name(s) marked open→close (per-name table). ACRS×282 09:30 $3.80 → close $3.60 -56.40; ADCT×673 09:30 $1.70 → close $1.86 +107.68; CATX×392 09:30 $2.61 → close $2.52 -35.28; COCO×19 09:30 $58.50 → close $57.72 -14.82; ERAS×68 09:30 $15.96 → close $15.46 -34.00; HAE×8 09:30 $118.70 → close $122.06 +26.88; IPSC×728 09:30 $1.47 → close $1.44 -21.84; PCRX×29 09:30 $36.32 → close $36.35 +0.87; DNA×1 09:30 $12.69 → close $11.79 -0.90; QSI×9 09:30 $1.48 → close $1.36 -1.03; NVAX×1 09:30 $12.61 → close $12.66 +0.05; SVC×1 09:30 $7.30 → close $5.93 -1.37 | — |
 
 ## Not taken
 

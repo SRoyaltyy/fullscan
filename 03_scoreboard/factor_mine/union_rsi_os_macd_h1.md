@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+3.68%** ($10,368) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 10 · skips 0 · realized $-826.45.
+Cash book **+11.79%** ($11,179) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 11 · skips 0 · realized $-826.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -166,3 +166,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,367.74 | ▲ close $10,367.74 vs 09:30 $10,367.74 (session +0.00) | 16:00 close · cash $10,367.74 · no lots left · equity $10,367.74. | — |
 | 2026-10-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,367.74 | ▲ 09:30 equity $10,367.74 vs yday $10,367.74 (+0.00) | 09:30 open · cash $10,367.74 · no holdings · equity $10,367.74 vs prior close $10,367.74 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,367.74 | ▲ close $10,367.74 vs 09:30 $10,367.74 (session +0.00) | 16:00 close · cash $10,367.74 · no lots left · equity $10,367.74. | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,367.74 | ▲ 09:30 equity $10,367.74 vs yday $10,367.74 (+0.00) | 09:30 open · cash $10,367.74 · no holdings · equity $10,367.74 vs prior close $10,367.74 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-12 09:30 ET | **BUY** | `ALHC` | 1381 | $7.49 | $17.81 | — | $6.24 | — | combo gate; gate macd_up=True,rsi_os=True; list yday_mover; 🔵; ret5=-5.0; leftover $10367.74 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.24 | ▲ close $11,178.53 vs 09:30 $10,367.74 (session +828.60) | 16:00 close · cash $6.24 · equity $11,178.53 vs 09:30 $10,367.74 (+810.79; session marks +828.60) · 1 name(s) marked open→close (per-name table). ALHC×1381 09:30 $7.49 → close $8.09 +828.60 | — |

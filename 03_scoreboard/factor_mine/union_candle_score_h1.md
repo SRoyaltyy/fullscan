@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-13.06%** ($8,694) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 349 · skips 104 · realized $-563.45.
+Cash book **-14.15%** ($8,585) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 365 · skips 104 · realized $-563.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -502,6 +502,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `DXC` | 88 | $12.38 | $2.25 | — | $1,154.65 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+6.3; leftover $1089.83 | join🔴 sector🔴 gen🔴 news🔴 digest🔴 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `STZ` | 8 | $123.25 | $2.01 | — | $166.63 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+9.4; leftover $1089.83 | join🟢 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $166.63 | ▼ close $8,693.82 vs 09:30 $8,720.64 (session -6.75) | 16:00 close · cash $166.63 · equity $8,693.82 vs 09:30 $8,720.64 (-26.82; session marks -6.75) · 8 name(s) marked open→close (per-name table). HAFN×103 09:30 $10.56 → close $10.72 +16.48; BYRN×231 09:30 $4.70 → close $4.52 -41.58; FRPT×16 09:30 $65.24 → close $64.07 -18.72; ONON×32 09:30 $34.03 → close $35.09 +33.92; SG×113 09:30 $9.60 → close $9.63 +3.39; SHAK×16 09:30 $66.72 → close $66.90 +2.88; DXC×88 09:30 $12.38 → close $12.40 +1.76; STZ×8 09:30 $123.25 → close $122.64 -4.88 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $166.63 | ▲ 09:30 equity $8,717.98 vs yday $8,693.82 (+24.16) | 09:30 open · cash $166.63 (unchanged overnight, no fees) · equity $8,717.98 vs prior close $8,693.82 (+24.16) · 8 name(s) re-marked at the open (per-name table). BYRN×231 yday $4.52 → 09:30 $4.50 -4.62; DXC×88 yday $12.40 → 09:30 $12.47 +6.16; FRPT×16 yday $64.07 → 09:30 $64.17 +1.60; HAFN×103 yday $10.72 → 09:30 $11.01 +29.87; ONON×32 yday $35.09 → 09:30 $34.91 -5.76; SG×113 yday $9.63 → 09:30 $9.58 -5.65; SHAK×16 yday $66.90 → 09:30 $66.80 -1.60; STZ×8 yday $122.64 → 09:30 $123.16 +4.16 | — |
+| 2026-10-12 09:30 ET | **SELL** | `BYRN` | 231 | $4.50 | $3.03 | $-52.21 | $1,203.10 | ▼ -52.21 after sell → book $8,714.95; vs 09:30 mark -3.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `DXC` | 88 | $12.47 | $2.28 | $+3.39 | $2,298.18 | ▲ +3.39 after sell → book $8,712.67; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `FRPT` | 16 | $64.17 | $2.06 | $-21.22 | $3,322.85 | ▼ -21.22 after sell → book $8,710.62; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `HAFN` | 103 | $11.01 | $2.33 | $+41.72 | $4,454.55 | ▲ +41.72 after sell → book $8,708.29; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `ONON` | 32 | $34.91 | $2.11 | $+23.97 | $5,569.56 | ▲ +23.97 after sell → book $8,706.18; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **SELL** | `SG` | 113 | $9.58 | $2.36 | $-6.95 | $6,649.75 | ▼ -6.95 after sell → book $8,703.83; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `SHAK` | 16 | $66.80 | $2.06 | $-2.82 | $7,716.49 | ▼ -2.82 after sell → book $8,701.77; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `STZ` | 8 | $123.16 | $2.03 | $-4.77 | $8,699.73 | ▼ -4.77 after sell → book $8,699.73; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **BUY** | `PAX` | 93 | $11.65 | $2.27 | — | $7,614.01 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+14.3; leftover $1087.47 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SEZL` | 8 | $127.75 | $2.01 | — | $6,590.00 | — | rank by candle_score; rank candle_score; list yday_gainer; ret5=+19.8; leftover $1087.47 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `MRNA` | 4 | $224.24 | $2.00 | — | $5,691.06 | — | rank by candle_score; rank candle_score; list yday_gainer,yday_mover; 🔵; ret5=+18.4; leftover $1087.47 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `KLAR` | 77 | $14.05 | $2.22 | — | $4,606.68 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+12.4; leftover $1087.47 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `PLNT` | 22 | $48.16 | $2.06 | — | $3,545.10 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+13.1; leftover $1087.47 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `TENB` | 25 | $42.48 | $2.06 | — | $2,481.04 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+12.9; leftover $1087.47 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SFIX` | 381 | $2.85 | $4.91 | — | $1,390.27 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+8.8; leftover $1087.47 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-10-12 09:30 ET | **BUY** | `SNAP` | 170 | $6.38 | $2.50 | — | $303.17 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+11.6; leftover $1087.47 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $303.17 | ▼ close $8,584.73 vs 09:30 $8,717.98 (session -94.96) | 16:00 close · cash $303.17 · equity $8,584.73 vs 09:30 $8,717.98 (-133.25; session marks -94.96) · 8 name(s) marked open→close (per-name table). PAX×93 09:30 $11.65 → close $11.87 +20.46; SEZL×8 09:30 $127.75 → close $130.48 +21.84; MRNA×4 09:30 $224.24 → close $213.74 -41.98; KLAR×77 09:30 $14.05 → close $13.86 -14.94; PLNT×22 09:30 $48.16 → close $47.89 -5.94; TENB×25 09:30 $42.48 → close $40.77 -42.75; SFIX×381 09:30 $2.85 → close $2.70 -57.15; SNAP×170 09:30 $6.38 → close $6.53 +25.50 | — |
 
 ## Not taken
 

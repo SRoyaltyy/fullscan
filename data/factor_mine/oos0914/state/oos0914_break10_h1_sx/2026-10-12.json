@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 14.78,
+      "shares": 127,
+      "side": "BUY",
+      "ticker": "WFF"
+    },
+    {
+      "fill_rule": "open",
+      "price": 79.5,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "CCI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 443.53,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CIEN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 127.75,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "SEZL"
+    }
+  ],
+  "cash": 269.03,
+  "date": "2026-10-12",
+  "equity": 7773.58,
+  "fees": 33.5619,
+  "fills": [
+    {
+      "fees": 15.617,
+      "fill_rule": "open",
+      "pnl": 112.26,
+      "price": 1.7,
+      "shares": 1194,
+      "side": "SELL",
+      "ticker": "ADCT"
+    },
+    {
+      "fees": 5.2539,
+      "fill_rule": "open",
+      "pnl": -90.63,
+      "price": 4.5,
+      "shares": 401,
+      "side": "SELL",
+      "ticker": "BYRN"
+    },
+    {
+      "fees": 2.0592,
+      "fill_rule": "open",
+      "pnl": -20.74,
+      "price": 118.7,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "HAE"
+    },
+    {
+      "fees": 2.1678,
+      "fill_rule": "open",
+      "pnl": -4.82,
+      "price": 36.32,
+      "shares": 51,
+      "side": "SELL",
+      "ticker": "PCRX"
+    },
+    {
+      "fees": 2.371,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 14.78,
+      "shares": 127,
+      "side": "BUY",
+      "ticker": "WFF"
+    },
+    {
+      "fees": 2.059,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 79.5,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "CCI"
+    },
+    {
+      "fees": 2.002,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 443.53,
+      "shares": 4,
+      "side": "BUY",
+      "ticker": "CIEN"
+    },
+    {
+      "fees": 2.032,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 127.75,
+      "shares": 14,
+      "side": "BUY",
+      "ticker": "SEZL"
+    }
+  ],
+  "holdings": [
+    "CCI",
+    "CIEN",
+    "SEZL",
+    "WFF"
+  ],
+  "mean": 2.0965,
+  "n_trades_today": 8,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 1.7,
+      "shares": 1194,
+      "side": "SELL",
+      "ticker": "ADCT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 4.5,
+      "shares": 401,
+      "side": "SELL",
+      "ticker": "BYRN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 118.7,
+      "shares": 15,
+      "side": "SELL",
+      "ticker": "HAE"
+    },
+    {
+      "fill_rule": "open",
+      "price": 36.32,
+      "shares": 51,
+      "side": "SELL",
+      "ticker": "PCRX"
+    }
+  ],
+  "state": {
+    "after": "2026-10-12",
+    "cash": 269.03,
+    "pos": {
+      "CCI": {
+        "close_px": 81.01,
+        "cost": 1830.559,
+        "entry_date": "2026-10-12",
+        "entry_px": 79.5,
+        "fee_in": 2.059,
+        "last_px": 79.5,
+        "min_hold": 1,
+        "notional": 1828.5,
+        "peak_px": 79.5,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+19.9; leftover $1886.42",
+        "shares": 23,
+        "ticker": "CCI"
+      },
+      "CIEN": {
+        "close_px": 405.01,
+        "cost": 1776.1219999999998,
+        "entry_date": "2026-10-12",
+        "entry_px": 443.53,
+        "fee_in": 2.002,
+        "last_px": 443.53,
+        "min_hold": 1,
+        "notional": 1774.12,
+        "peak_px": 443.53,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+14.9; leftover $1886.42",
+        "shares": 4,
+        "ticker": "CIEN"
+      },
+      "SEZL": {
+        "close_px": 130.48,
+        "cost": 1790.532,
+        "entry_date": "2026-10-12",
+        "entry_px": 127.75,
+        "fee_in": 2.032,
+        "last_px": 127.75,
+        "min_hold": 1,
+        "notional": 1788.5,
+        "peak_px": 127.75,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer; ret5=+19.8; leftover $1886.42",
+        "shares": 14,
+        "ticker": "SEZL"
+      },
+      "WFF": {
+        "close_px": 17.28,
+        "cost": 1879.431,
+        "entry_date": "2026-10-12",
+        "entry_px": 14.78,
+        "fee_in": 2.371,
+        "last_px": 14.78,
+        "min_hold": 1,
+        "notional": 1877.06,
+        "peak_px": 14.78,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+411.0; leftover $1886.42",
+        "shares": 127,
+        "ticker": "WFF"
+      }
+    },
+    "yday_equity": 7773.58
+  }
+}

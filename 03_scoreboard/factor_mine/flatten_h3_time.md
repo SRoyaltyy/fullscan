@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `time` · S-boost `none` · sell at min-hold even if still listed
 
-Cash book **-22.65%** ($7,735) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 192 · skips 219 · realized $-788.42.
+Cash book **-21.72%** ($7,828) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 193 · skips 219 · realized $-788.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -342,6 +342,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `PACS` | 58 | $43.75 | $2.16 | — | $2,633.91 | — | sell at min-hold even if still listed; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+6.6; leftover $2578.27 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-10-09 09:30 ET | **BUY** | `ETON` | 46 | $54.86 | $2.13 | — | $108.22 | — | sell at min-hold even if still listed; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+5.3; leftover $2578.27 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $108.22 | ▲ close $7,735.35 vs 09:30 $7,747.93 (session +7.01) | 16:00 close · cash $108.22 · equity $7,735.35 vs 09:30 $7,747.93 (-12.58; session marks +7.01) · 3 name(s) marked open→close (per-name table). RRC×63 09:30 $40.62 → close $40.89 +17.01; PACS×58 09:30 $43.75 → close $43.30 -26.10; ETON×46 09:30 $54.86 → close $55.21 +16.10 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $108.22 | ▲ 09:30 equity $7,759.90 vs yday $7,735.35 (+24.55) | 09:30 open · cash $108.22 (unchanged overnight, no fees) · equity $7,759.90 vs prior close $7,735.35 (+24.55) · 3 name(s) re-marked at the open (per-name table). ETON×46 yday $55.21 → 09:30 $55.50 +13.34; PACS×58 yday $43.30 → 09:30 $43.20 -5.80; RRC×63 yday $40.89 → 09:30 $41.16 +17.01 | — |
+| 2026-10-12 09:30 ET | **BUY** | `ARQT` | 1 | $26.57 | $0.27 | — | $81.38 | — | sell at min-hold even if still listed; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+5.6; leftover $36.07 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $81.38 | ▲ close $7,827.96 vs 09:30 $7,759.90 (session +68.33) | 16:00 close · cash $81.38 · equity $7,827.96 vs 09:30 $7,759.90 (+68.06; session marks +68.33) · 4 name(s) marked open→close (per-name table). ETON×46 09:30 $55.50 → close $55.25 -11.50; PACS×58 09:30 $43.20 → close $44.30 +63.80; RRC×63 09:30 $41.16 → close $41.42 +16.38; ARQT×1 09:30 $26.57 → close $26.22 -0.35 | — |
 
 ## Not taken
 

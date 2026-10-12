@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **-11.61%** ($8,839) · signal-only (no cash/fees) was -3.08%. Starts YES **4/30**. Fills 200 · skips 54 · realized $-117.67.
+Cash book **-12.89%** ($8,711) · signal-only (no cash/fees) was -3.08%. Starts YES **4/30**. Fills 202 · skips 54 · realized $-117.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -354,6 +354,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 09:30 ET | **BUY** | `DAL` | 56 | $79.68 | $2.16 | — | $4,464.42 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; 🔵; ret5=-2.4; leftover $4464.33 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-09 09:30 ET | **BUY** | `HOVR` | 2733 | $1.62 | $35.26 | — | $1.71 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-8.4; leftover $4464.33 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.71 | ▼ close $8,839.38 vs 09:30 $8,928.66 (session -51.87) | 16:00 close · cash $1.71 · equity $8,839.38 vs 09:30 $8,928.66 (-89.28; session marks -51.87) · 2 name(s) marked open→close (per-name table). DAL×56 09:30 $79.68 → close $82.17 +139.44; HOVR×2733 09:30 $1.62 → close $1.55 -191.31 | — |
+| 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.71 | ▼ 09:30 equity $8,749.33 vs yday $8,839.38 (-90.05) | 09:30 open · cash $1.71 (unchanged overnight, no fees) · equity $8,749.33 vs prior close $8,839.38 (-90.05) · 2 name(s) re-marked at the open (per-name table). DAL×56 yday $82.17 → 09:30 $81.05 -62.72; HOVR×2733 yday $1.55 → 09:30 $1.54 -27.33 | — |
+| 2026-10-12 09:30 ET | **SELL** | `DAL` | 56 | $81.05 | $2.20 | $+72.36 | $4,538.31 | ▲ +72.36 after sell → book $8,747.13; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 09:30 ET | **SELL** | `HOVR` | 2733 | $1.54 | $35.74 | $-289.64 | $8,711.38 | ▼ -289.64 after sell → book $8,711.38; vs 09:30 mark -35.75 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,711.38 | ▲ close $8,711.38 vs 09:30 $8,749.33 (session +0.00) | 16:00 close · cash $8,711.38 · no lots left · equity $8,711.38. | — |
 
 ## Not taken
 
