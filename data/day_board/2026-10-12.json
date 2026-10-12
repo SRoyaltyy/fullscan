@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T05:58:23.106934-04:00",
+  "generated_at": "2026-10-12T06:48:24.660744-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,9 +8,9 @@
     "MISSING News judge MD `01_daily/news/2026-10-12_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 6,
+    "ok": 7,
     "partial": 1,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -115,7 +115,7 @@
           "size": 11816,
           "said": "Finviz Daily Digest \u2014 2026-10-12",
           "bullets": [
-            "_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-12T06:48:23.564021-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -571,10 +571,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 7576035,
+          "size": 7576443,
           "said": "27 rows",
           "bullets": [
-            "ELV, AAPL, AVPT, ATRC, MH, HTHT, CXT, NWBI"
+            "ELV, AAPL, AVPT, ATRC, CXT, MH, HTHT, CBRL"
           ]
         },
         {
@@ -584,27 +584,27 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8366872,
+          "size": 8367271,
           "said": "25 rows",
           "bullets": [
-            "BIIB, RGEN, ATRC, HTHT, CXT, WAT, SHO, MDLN"
+            "BIIB, ATRC, CXT, HTHT, RGEN, AAPL, MDLN, PFE"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "BIIB, RGEN, ATRC, HTHT, CXT"
+        "BIIB, ATRC, CXT, HTHT, RGEN"
       ]
     },
     {
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -643,16 +643,11 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-10-12_dossiers.json",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "zero usable dossiers (n=8)",
-          "size": 2674,
-          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 GOOG, GOOGL, TSLA, NFLX, NE, RIG, SLB, BKR",
-          "bullets": [
-            "GOOG: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 GOOG",
-            "GOOGL: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOGL",
-            "TSLA: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA",
-            "NFLX: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NFLX"
-          ]
+          "status": "OK",
+          "reason": "usable=2/2",
+          "size": 8132,
+          "said": "2/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 GOOG, GOOGL, TSLA, NFLX, NE, RIG, SLB, BKR",
+          "bullets": []
         }
       ],
       "said": "112 ticker actions \u00b7 7 events \u00b7 5828 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
@@ -767,10 +762,10 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8366872,
+          "size": 8367271,
           "said": "25 rows",
           "bullets": [
-            "BIIB, RGEN, ATRC, HTHT, CXT, WAT, SHO, MDLN"
+            "BIIB, ATRC, CXT, HTHT, RGEN, AAPL, MDLN, PFE"
           ]
         },
         {
@@ -3042,6 +3037,52 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-12\n_Generated 2026-10-12T09:58:20 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$103,033.45** (after 09:30 $103,033.45 \u00b7 after 16:00 $103,033.45)\n- Prior close **$103,033.45** \u00b7 09:30 **$103,033.45** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$103,033.45**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$103,033.45** \u00b7 2026-10-12 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_over"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T06:48:23.812165-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-12_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97004,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-12_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11840,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T06:48:23.564021-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-12.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11488051,
+          "preview": "11725 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-12_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97004,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T06:48:23.564021-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11725 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
