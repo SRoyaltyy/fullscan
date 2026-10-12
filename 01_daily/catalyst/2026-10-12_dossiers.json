@@ -1,10 +1,10 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T06:26:20.301933-04:00",
+  "generated_at": "2026-10-12T07:25:01.159592-04:00",
   "max_n": 8,
   "routing": "Grok \u2192 DeepSeek",
   "grok": true,
-  "deepseek_fallback": true,
+  "deepseek_fallback": false,
   "gemini": false,
   "n_targets": 8,
   "n_ok": 2,
@@ -177,6 +177,42 @@
         }
       ],
       "error": null
+    },
+    {
+      "ticker": "TSLA",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA"
+    },
+    {
+      "ticker": "NFLX",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NFLX"
+    },
+    {
+      "ticker": "NE",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE"
+    },
+    {
+      "ticker": "RIG",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG"
+    },
+    {
+      "ticker": "SLB",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 SLB"
+    },
+    {
+      "ticker": "BKR",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 BKR"
     }
   ]
 }

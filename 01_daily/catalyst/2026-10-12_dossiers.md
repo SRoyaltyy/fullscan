@@ -25,5 +25,11 @@
   - positive Product launch/FDA approval/regulatory greenlight 2026-08-12: Google held its annual hardware event on August 12, 2026, unveiling the Pixel 11 series (a
   - negative Adverse litigation/antitrust 2026-07-02: On July 2, 2026, the Court of Justice of the European Union (CJEU, the EU’s highest court)
   - negative Adverse litigation/antitrust 2026-10-02: the Gemini 3.5 Pro was delivering disappointing training results
+- **TSLA** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA
+- **NFLX** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NFLX
+- **NE** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE
+- **RIG** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG
+- **SLB** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 SLB
+- **BKR** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 BKR
 
 CATALYST_DAILY_OK
