@@ -2664,11 +2664,33 @@
       "net": 1.05,
       "side": "buy",
       "size": "large"
+    },
+    {
+      "ticker": "GOOGL",
+      "buy_score": 0.45,
+      "sell_score": 0.0,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "buy",
+          "weight": 0.45,
+          "bucket": "earnings",
+          "net_signal": "Bullish",
+          "conviction": 17
+        }
+      ],
+      "net": 0.45,
+      "side": "buy",
+      "catalyst_signal": "Bullish",
+      "catalyst_conviction": 17,
+      "catalyst_stack": "On 2026-04-29 Alphabet beat Q1 with $109.9B revenue, raised the dividend to $0.22 and lifted 2026 capex to $180-190B; on 2026-07-22 Q2 printed $119.8B revenue and a $514B Cloud backlog, pushing capex to $195-205B even as adjusted EPS of $2.85 missed about $2.89. Product momentum "
     }
   ],
   "judge_tickers": {
     "URA": 4.0,
     "CEG": 5.5,
     "IGV": -4.0
-  }
+  },
+  "catalyst_tickers": 1,
+  "catalyst_date": "2026-10-12"
 }
