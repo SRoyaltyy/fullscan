@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T09:22:12.130517-04:00",
+  "generated_at": "2026-10-12T09:22:48.348765-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -37,9 +37,25 @@
     {
       "ticker": "NET",
       "score": 0.03810872213428017
+    },
+    {
+      "ticker": "PRGS",
+      "score": 0.5812704940764608
     }
   ],
   "sell_1d": [
+    {
+      "ticker": "EOSE",
+      "score": -0.35408584322590325
+    },
+    {
+      "ticker": "TE",
+      "score": -0.34881123193049873
+    },
+    {
+      "ticker": "PLUG",
+      "score": -0.26559283515589366
+    },
     {
       "ticker": "OKLO",
       "score": -0.26472807610778865
@@ -53,24 +69,12 @@
       "score": -0.2570600830846822
     },
     {
-      "ticker": "EOSE",
-      "score": -0.35408584322590325
+      "ticker": "QBTS",
+      "score": -0.24854771292904831
     },
     {
-      "ticker": "NNDM",
-      "score": -0.14343794270604965
-    },
-    {
-      "ticker": "POWL",
-      "score": -0.03178576780956627
-    },
-    {
-      "ticker": "TE",
-      "score": -0.34881123193049873
-    },
-    {
-      "ticker": "INDI",
-      "score": -0.22548820622943078
+      "ticker": "QUBT",
+      "score": -0.12954762468929365
     }
   ],
   "flatten": {
@@ -99,24 +103,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T09:18:43.475860-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-10-12_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1122966,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -270,6 +256,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T09:22:47.333969-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-12_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1464314,
+          "preview": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-12_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2538,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "01_daily/2026-10-12_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84596,
+          "preview": "# Stock book \u2014 2026-10-12\n_Generated 2026-10-12T09:22:21.600285-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 # Stock book \u2014 2026-10-12\n_Generated 2026-10-12T09:22:21.600285-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T09:22:12.130517-04:00",
+  "generated_at": "2026-10-12T09:22:48.348765-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -805,9 +805,9 @@
           "path": "data/stock_book/2026-10-12_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1440953,
-          "said": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL",
+          "reason": "horizons=5 names=216",
+          "size": 1464314,
+          "said": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL",
           "bullets": []
         },
         {
@@ -817,10 +817,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 81985,
+          "size": 83503,
           "said": "Stock book \u2014 2026-10-12",
           "bullets": [
-            "_Generated 2026-10-12T09:15:22.000645-04:00_",
+            "_Generated 2026-10-12T09:22:21.600285-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -883,9 +883,9 @@
           "path": "data/stock_book/2026-10-12_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1440953,
-          "said": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL",
+          "reason": "horizons=5 names=216",
+          "size": 1464314,
+          "said": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL",
           "bullets": []
         },
         {
@@ -960,9 +960,25 @@
       {
         "ticker": "NET",
         "score": 0.03810872213428017
+      },
+      {
+        "ticker": "PRGS",
+        "score": 0.5812704940764608
       }
     ],
     "sell_1d": [
+      {
+        "ticker": "EOSE",
+        "score": -0.35408584322590325
+      },
+      {
+        "ticker": "TE",
+        "score": -0.34881123193049873
+      },
+      {
+        "ticker": "PLUG",
+        "score": -0.26559283515589366
+      },
       {
         "ticker": "OKLO",
         "score": -0.26472807610778865
@@ -976,24 +992,12 @@
         "score": -0.2570600830846822
       },
       {
-        "ticker": "EOSE",
-        "score": -0.35408584322590325
+        "ticker": "QBTS",
+        "score": -0.24854771292904831
       },
       {
-        "ticker": "NNDM",
-        "score": -0.14343794270604965
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.03178576780956627
-      },
-      {
-        "ticker": "TE",
-        "score": -0.34881123193049873
-      },
-      {
-        "ticker": "INDI",
-        "score": -0.22548820622943078
+        "ticker": "QUBT",
+        "score": -0.12954762468929365
       }
     ],
     "flatten": {
@@ -1030,52 +1034,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T06:48:23.812165-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-12_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97004,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-12_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11840,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T06:48:23.564021-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        },
-        {
-          "path": "data/exports/finviz_2026-10-12.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11030866,
-          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11488051,
-          "preview": "11725 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        },
-        {
-          "path": "01_daily/news/2026-10-12_finviz_digest_preopen.json",
-          "ok": true,
-          "reason": "",
-          "size": 97004,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T06:48:23.564021-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11725 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -3594,6 +3552,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T09:22:47.333969-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-12_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1464314,
+          "preview": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-12_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2538,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "01_daily/2026-10-12_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84596,
+          "preview": "# Stock book \u2014 2026-10-12\n_Generated 2026-10-12T09:22:21.600285-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 # Stock book \u2014 2026-10-12\n_Generated 2026-10-12T09:22:21.600285-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
