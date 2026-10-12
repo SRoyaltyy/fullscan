@@ -1,14 +1,14 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T05:06:41.043314-04:00",
+  "generated_at": "2026-10-12T06:26:20.301933-04:00",
   "max_n": 8,
   "routing": "Grok \u2192 DeepSeek",
   "grok": true,
-  "deepseek_fallback": false,
+  "deepseek_fallback": true,
   "gemini": false,
   "n_targets": 8,
-  "n_ok": 0,
-  "status": "FAIL",
+  "n_ok": 2,
+  "status": "OK",
   "targets": [
     {
       "ticker": "GOOG",
@@ -56,49 +56,127 @@
       "ticker": "GOOG",
       "role": "earnings",
       "why": "earnings AMC",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 GOOG"
+      "net_signal": "Neutral",
+      "conviction": 14,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 2026-07-22 Alphabet reported Q2 revenue of $119.80B, beating estimates as Google Cloud surged 82% to $24.8B, after a similar Q1 beat on 2026-04-29 that also lifted the quarterly dividend to $0.22. Capacity and power commitments stacked through the year: 2026 capex was raised to $195\u2013$205B, a May 19 Blackstone TPU-cloud JV targeted 500 MW, a September 9 \u20ac13B Finland build added a Fortum nuclear PPA, and on 2026-10-06 Google locked 890 MW of PJM nuclear uprates with Constellation. Product and legal catalysts stayed constructive, with Gemini Omni (May 19), Gemini 4 Argon (September 30) and the Gemini Agent (October 8) plus Judge Brinkema\u2019s September 2 rejection of a DOJ AdX divestiture, while Street targets clustered up to $485. The offset is funding and Europe: an ~$80\u201385B equity raise on 2026-06-01, a record \u20ac9B euro bond on 2026-05-05, Waymo\u2019s first $5B term loan on 2026-10-08, the July 2 CJEU uphold of the \u20ac4.1B Android fine, and a July 23 \u20ac890M DMA penalty.",
+      "key_assumption": "AI/Cloud growth continues to absorb $195\u2013205B of 2026 capex and the June equity raise without a structural FCF disappointment, and U.S. ad-tech remedies remain behavioral rather than a breakup.",
+      "n_pos": 8,
+      "n_neg": 6,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-09-02",
+          "headline": "google-defeats-us-bid-force-ad-tech-sale-2026-09-02",
+          "weight": 10,
+          "confidence": 91
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+          "event_date": "2026-07-23",
+          "headline": "the European Commission fined Google (Alphabet) a total of \u20ac890 million for two breaches of the Digital Markets Act (DMA)",
+          "weight": 10,
+          "confidence": 92
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+          "event_date": "2026-10-10",
+          "headline": "a federal securities class action that has been filed against the Company.",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Dilutive offering/distressed fundraising/down round",
+          "event_date": "2026-06-01",
+          "headline": "Alphabet (Google\u2019s parent) announced and executed a major equity capital raise of approximately $80\u201385 billion",
+          "weight": 8,
+          "confidence": 91
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-07-22",
+          "headline": "Revenue: $119.80 billion vs $116.93 billion expected by LSEG",
+          "weight": 7,
+          "confidence": 93
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Strategic partnership/alliance",
+          "event_date": "2026-10-06",
+          "headline": "Google and Constellation Energy today announced a long-term strategic clean energy collaboration to bring 890 megawatts (MW) of new, reliable nuclear capacity",
+          "weight": 7,
+          "confidence": 93
+        }
+      ],
+      "error": null
     },
     {
       "ticker": "GOOGL",
       "role": "earnings",
       "why": "earnings AMC",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOGL"
-    },
-    {
-      "ticker": "TSLA",
-      "role": "earnings",
-      "why": "earnings AMC",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA"
-    },
-    {
-      "ticker": "NFLX",
-      "role": "earnings",
-      "why": "earnings AMC",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NFLX"
-    },
-    {
-      "ticker": "NE",
-      "role": "override_captain",
-      "why": "OVERRIDE card Oil & Gas Drilling",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE"
-    },
-    {
-      "ticker": "RIG",
-      "role": "override_captain",
-      "why": "OVERRIDE card Oil & Gas Drilling",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 RIG"
-    },
-    {
-      "ticker": "SLB",
-      "role": "override_captain",
-      "why": "OVERRIDE card Oil & Gas Equipment & Services",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB"
-    },
-    {
-      "ticker": "BKR",
-      "role": "override_captain",
-      "why": "OVERRIDE card Oil & Gas Equipment & Services",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR"
+      "net_signal": "Bullish",
+      "conviction": 17,
+      "search_backend": "grok_native",
+      "catalyst_stack": "On 2026-04-29 Alphabet beat Q1 with $109.9B revenue, raised the dividend to $0.22 and lifted 2026 capex to $180-190B; on 2026-07-22 Q2 printed $119.8B revenue and a $514B Cloud backlog, pushing capex to $195-205B even as adjusted EPS of $2.85 missed about $2.89. Product momentum followed with Gemini 3.5 Flash at I/O on 2026-05-19 and Pixel 11 on 2026-08-12, while the 2026-06-01 ~$80-85B equity raise, including Berkshire, funded AI capacity at the cost of dilution. The 2026-07-02 EU loss upholding the \u20ac4.125B Android fine was offset on 2026-09-02 when Judge Brinkema rejected a forced AdX breakup and ordered six-year behavioral remedies. Berkshire\u2019s 2026-08-14 13F and October PT hikes to as high as $485 add sponsorship, but DMA-style EU AI/search-data demands dated 2026-10-12 and MoffettNathanson\u2019s cut to $370 remain the main overhangs.",
+      "key_assumption": "The $514B Cloud backlog absorbs $195-205B of 2026 AI capex at high utilization, U.S. ad-tech remedies stay behavioral rather than a breakup, and the equity raise does not permanently compress FCF or the multiple.",
+      "n_pos": 9,
+      "n_neg": 9,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-09-02",
+          "headline": "On September 2, 2026, the judge rejected DOJ/state plaintiffs\u2019 push for structural relief (e.g., sale/divestiture of AdX).",
+          "weight": 10,
+          "confidence": 93
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+          "event_date": "2026-08-12",
+          "headline": "Google held its annual hardware event on August 12, 2026, unveiling the Pixel 11 series (announced and pre-orders opened that day; available August 20)",
+          "weight": 7,
+          "confidence": 90
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation/antitrust",
+          "event_date": "2026-07-02",
+          "headline": "On July 2, 2026, the Court of Justice of the European Union (CJEU, the EU\u2019s highest court) dismissed Google and Alphabet\u2019s appeal in Case C-738/22 P, upholding ",
+          "weight": 7,
+          "confidence": 94
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation/antitrust",
+          "event_date": "2026-10-02",
+          "headline": "the Gemini 3.5 Pro was delivering disappointing training results",
+          "weight": 7,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Capacity expansion",
+          "event_date": "2026-07-22",
+          "headline": "Google Cloud at $24.8B (+82%), a $514B cloud backlog, and raised 2026 capex guidance to $195-205B",
+          "weight": 6,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-07-22",
+          "headline": "Google Cloud at $24.8B (+82%), a $514B cloud backlog, and raised 2026 capex guidance to $195-205B",
+          "weight": 6,
+          "confidence": 95
+        }
+      ],
+      "error": null
     }
   ]
 }
