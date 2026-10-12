@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T09:31:11.190083-04:00",
+  "generated_at": "2026-10-12T09:31:41.882342-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -300,8 +300,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 83705,
-          "said": "113 ticker actions \u00b7 7 events \u00b7 5489 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 82920,
+          "said": "112 ticker actions \u00b7 7 events \u00b7 5379 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -614,8 +614,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 83705,
-          "said": "113 ticker actions \u00b7 7 events \u00b7 5489 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 82920,
+          "said": "112 ticker actions \u00b7 7 events \u00b7 5379 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -655,7 +655,7 @@
           ]
         }
       ],
-      "said": "113 ticker actions \u00b7 7 events \u00b7 5489 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+      "said": "112 ticker actions \u00b7 7 events \u00b7 5379 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
       "bullets": [
         "SELL DAL",
         "SELL UAL",
@@ -712,8 +712,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 83705,
-          "said": "113 ticker actions \u00b7 7 events \u00b7 5489 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 82920,
+          "said": "112 ticker actions \u00b7 7 events \u00b7 5379 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -1030,31 +1030,6 @@
     }
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T06:54:01.643128-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-12_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9334,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-12_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5074,
-          "preview": "# Weather report \u2014 2026-10-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -3705,6 +3680,31 @@
         }
       ],
       "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-12 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T09:31:40.093783-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-12_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 82920,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-12_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 16381,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-12T09:31:40.067429-04:00\nraw=5379 unique_events=7 tickers=112"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-12T09:31:40.067429-04:00\nraw=5379 unique_events=7 tickers=112"
     }
   ],
   "href": {
