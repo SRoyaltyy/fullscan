@@ -171,6 +171,54 @@ if [ "${#CAND[@]}" -eq 0 ]; then
   exit 0
 fi
 
+fetch_main() {
+  local n
+  for n in 1 2 3; do
+    if git fetch -q origin main; then return 0; fi
+    echo "[safe-push] fetch failed (${n}/3) — retry"
+    sleep $((5 * n))
+  done
+  return 1
+}
+
+# ---------------------------------------------------------------------
+# 1b. decision freeze guard (2026-10-12: frozen weather re-landed 15x).
+# A file listed in research/input_freeze/<date>/manifest.json on main is
+# never re-landed: drop it, warn loudly (log + step summary + day board
+# frozen_write_skips). Fail-open; never fails the run.
+# ---------------------------------------------------------------------
+apply_freeze_guard() {
+  [ "${FULLSCAN_FREEZE_GUARD:-1}" = "0" ] && return 0
+  [ -f src/freeze_guard.py ] || return 0
+  fetch_main || { echo "[safe-push] WARN: freeze guard could not fetch main — not guarding"; return 0; }
+  local ref blocked f keep=() b
+  ref=$(git rev-parse origin/main 2>/dev/null || git rev-parse FETCH_HEAD 2>/dev/null) || return 0
+  blocked=$(python3 src/freeze_guard.py filter --ref "$ref" --msg "$MSG" -- "${CAND[@]}") \
+    || { echo "[safe-push] WARN: freeze guard error — not guarding"; return 0; }
+  [ -z "$blocked" ] && return 0
+  declare -A DROP=()
+  while IFS= read -r b; do [ -n "$b" ] && DROP["$b"]=1; done <<< "$blocked"
+  for f in "${CAND[@]}"; do
+    if [ -n "${DROP[$f]+x}" ]; then
+      echo "[safe-push] FROZEN — skipping $f (listed in its freeze manifest)"
+      unset 'OURS[$f]'
+    else
+      keep+=("$f")
+    fi
+  done
+  CAND=("${keep[@]}")
+  # The guard noted the skip on data/day_board/<date>.json — land that too.
+  while IFS= read -r -d '' f; do add_candidate "$f"; done \
+    < <(git ls-files -z --others --exclude-standard -- data/day_board 2>/dev/null; \
+        git diff -z --name-only -- data/day_board 2>/dev/null)
+}
+
+apply_freeze_guard
+if [ "${#CAND[@]}" -eq 0 ]; then
+  echo "[safe-push] every candidate is frozen — nothing to land"
+  exit 0
+fi
+
 hash_ours() {
   # Bulk hash the work tree copies into the object DB.
   local out
@@ -265,15 +313,6 @@ union_day_board() {
 # ---------------------------------------------------------------------
 # 2-4. one attempt against the current origin/main
 # ---------------------------------------------------------------------
-fetch_main() {
-  local n
-  for n in 1 2 3; do
-    if git fetch -q origin main; then return 0; fi
-    echo "[safe-push] fetch failed (${n}/3) — retry"
-    sleep $((5 * n))
-  done
-  return 1
-}
 
 load_upstream() {
   local upsha="$1" rec meta path sha

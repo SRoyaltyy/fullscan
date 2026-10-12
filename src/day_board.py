@@ -162,7 +162,14 @@ def build(date: str, lands: list[dict] | None = None) -> dict:
         elif w.status == "PARTIAL":
             n_partial += 1
     news_dec = _news_mode(date)
-    return {
+    out = _build_dict(date, overall, ranker_ready, blockers, n_ok, n_partial,
+                      n_fail, processes, lands, news_dec, prev)
+    return out
+
+
+def _build_dict(date, overall, ranker_ready, blockers, n_ok, n_partial,
+                n_fail, processes, lands, news_dec, prev):
+    out = {
         "date": date,
         "generated_at": datetime.now(ET).isoformat(),
         "overall": overall,
@@ -189,6 +196,10 @@ def build(date: str, lands: list[dict] | None = None) -> dict:
             "paper": "https://sroyaltyy.github.io/fullscan/dashboard/",
         },
     }
+    # Add-only: rows written by src.freeze_guard survive every rebuild.
+    if isinstance(prev, dict) and prev.get("frozen_write_skips"):
+        out["frozen_write_skips"] = list(prev["frozen_write_skips"])
+    return out
 
 
 def _latest_dates(extra: str) -> list[str]:
@@ -232,6 +243,9 @@ def merge_boards(theirs: dict, ours: dict) -> dict:
         out["selections"] = osel
     if newer.get("ranker_ready") or older.get("ranker_ready"):
         out["ranker_ready"] = True
+    if newer.get("frozen_write_skips") or older.get("frozen_write_skips"):
+        from .freeze_guard import merge_skips
+        out["frozen_write_skips"] = merge_skips(older, newer)
     return out
 
 
