@@ -86,3 +86,24 @@ def test_restart_fails_auth_red(monkeypatch):
     r = h.heal("d", lambda: False, lambda e: 0, log_text=lambda: "HTTP 403",
                guard=G(ok=False), now=_early)
     assert not r["ok"] and "device login" in r["reason"]
+
+
+def test_grok_backend_skips_deepseek_preflight(monkeypatch):
+    from src import run_preopen_all as rpa
+    from src import deepseek_client as dc
+    monkeypatch.setenv("LLM_BACKEND", "grok")
+    monkeypatch.delenv("GROK_ONLY", raising=False)
+    monkeypatch.setattr(dc, "credits_preflight",
+                        lambda: {"ok": False, "reason": "402"})
+    assert rpa._deepseek_credits_ok() is True
+    monkeypatch.setenv("LLM_BACKEND", "auto")
+    monkeypatch.setenv("GROK_ONLY", "0")
+    assert rpa._deepseek_credits_ok() is False
+
+
+def test_ecs_preopen_exports_grok_before_run():
+    from pathlib import Path
+    s = (Path(__file__).resolve().parent.parent / "scripts" / "ecs_preopen.sh").read_text()
+    i = s.index('export LLM_BACKEND="${LLM_BACKEND:-grok}"')
+    assert 'export GROK_ONLY="${GROK_ONLY:-1}"' in s
+    assert i < s.index('-m src.run_preopen_all')

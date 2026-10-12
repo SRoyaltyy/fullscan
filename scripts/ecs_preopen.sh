@@ -168,6 +168,12 @@ dispatch_ubuntu_book() {
 }
 dispatch_ubuntu_book
 
+# Grok first, no paid inference (Cyrus rule): ECS Pre-Open is Grok-only
+# unless the env file / caller already chose a backend.
+export LLM_BACKEND="${LLM_BACKEND:-grok}"
+export GROK_ONLY="${GROK_ONLY:-1}"
+echo "[ecs-preopen] LLM_BACKEND=$LLM_BACKEND GROK_ONLY=$GROK_ONLY"
+
 PY="${FULLSCAN_PYTHON:-python3}"
 if [ -x "$ROOT/.venv/bin/python" ]; then
   PY="$ROOT/.venv/bin/python"
