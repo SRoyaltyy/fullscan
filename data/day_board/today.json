@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T09:42:25.386995-04:00",
+  "generated_at": "2026-10-12T09:49:20.509688-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -11,77 +11,73 @@
   },
   "buy_1d": [
     {
-      "ticker": "SGRY",
-      "score": 0.4278799023745674
+      "ticker": "ASTH",
+      "score": 0.706426341090431
     },
     {
       "ticker": "CON",
-      "score": 0.6447394658922468
+      "score": 0.639955708762995
     },
     {
       "ticker": "AMN",
-      "score": 0.6024309857271279
-    },
-    {
-      "ticker": "FIS",
-      "score": 0.4698654821938251
+      "score": 0.5920779365287303
     },
     {
       "ticker": "KSPI",
-      "score": 0.33809160034308045
+      "score": 0.3890022679416772
     },
     {
       "ticker": "PACS",
-      "score": 0.6648840344805036
+      "score": 0.7093787919305283
     },
     {
       "ticker": "NET",
-      "score": 0.03810872213428017
+      "score": 0.039196999757480214
     },
     {
-      "ticker": "PRGS",
-      "score": 0.5812704940764608
+      "ticker": "TLS",
+      "score": 0.4176187622161986
     }
   ],
   "sell_1d": [
-    {
-      "ticker": "EOSE",
-      "score": -0.35408584322590325
-    },
-    {
-      "ticker": "TE",
-      "score": -0.34881123193049873
-    },
-    {
-      "ticker": "PLUG",
-      "score": -0.26559283515589366
-    },
     {
       "ticker": "OKLO",
       "score": -0.26472807610778865
     },
     {
       "ticker": "NEOV",
-      "score": -0.38168906523251367
+      "score": -0.3778499454769789
     },
     {
       "ticker": "FCEL",
-      "score": -0.2570600830846822
+      "score": -0.25580112343935557
     },
     {
-      "ticker": "QBTS",
-      "score": -0.24854771292904831
+      "ticker": "NNDM",
+      "score": -0.15510592095588355
     },
     {
-      "ticker": "QUBT",
-      "score": -0.12954762468929365
+      "ticker": "POWL",
+      "score": -0.046123991740222386
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.333815224957611
+    },
+    {
+      "ticker": "TE",
+      "score": -0.34040464175501434
+    },
+    {
+      "ticker": "CRML",
+      "score": -0.22864236952546318
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $108,970.65 \u00b7 morning S missing",
+    "said": "0 priced buys \u00b7 cash $103,033.45 \u00b7 morning S missing",
     "bullets": [
       "0 priced buys",
-      "cash $108,970.65",
+      "cash $103,033.45",
       "morning S missing"
     ]
   },
@@ -103,122 +99,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T09:33:08.530243-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 11847,
-          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 936,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-10-12.json",
-          "ok": true,
-          "reason": "",
-          "size": 205797,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-10-12_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 171150,
-          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 622853,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-10-12_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 622853,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/factor_mine/morning_look/2026-10-12.json",
-          "ok": true,
-          "reason": "",
-          "size": 146738,
-          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 846306,
-          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 622853,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 171150,
-          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 622853,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 622853,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 846306,
-          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1567,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1567,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_f"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -498,6 +378,24 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T09:49:18.773654-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-12/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6393,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
