@@ -979,6 +979,10 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     payload = {"model": model, "messages": messages,
                "max_tokens": deepseek_max_tokens,
                "temperature": temperature}
+    if _ovr and "glm" in _ovr.lower():
+        # GLM 5.x thinks by default: hidden reasoning ate the budget and the
+        # judge landed a 28-char stub (2026-10-12). Ask for plain content.
+        payload["thinking"] = {"type": "disabled"}
     if tools:
         payload["tools"] = [SEARCH_TOOL]
         payload["tool_choice"] = "auto"
