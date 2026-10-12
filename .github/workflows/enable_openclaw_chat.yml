@@ -2,6 +2,15 @@ name: Enable OpenClaw chat classroom
 
 on:
   workflow_dispatch:
+    inputs:
+      force_restart:
+        description: "true = always bounce gateway even if short PONG works (hung sessions)"
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
 
 permissions:
   contents: write
@@ -26,4 +35,5 @@ jobs:
         env:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_FORCE_RESTART: ${{ github.event.inputs.force_restart || 'true' }}
         run: bash scripts/enable_openclaw_chat.sh
