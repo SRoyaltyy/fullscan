@@ -1,20 +1,19 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T04:15:46.401187-04:00",
-  "overall": "FAIL",
+  "generated_at": "2026-10-12T04:16:51.001325-04:00",
+  "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-12_predict.md` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-10-12_actions.json` \u2014 missing",
-    "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-10-12_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-10-12_judge.md` \u2014 missing",
     "MISSING Weather JSON `01_daily/weather/2026-10-12_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-10-12_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 0,
-    "partial": 2,
-    "fail": 6,
+    "ok": 1,
+    "partial": 3,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -87,11 +86,11 @@
       "key": "finviz",
       "name": "Finviz scrape",
       "yaml": "finviz_preopen_scrape.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 5,
       "files": [
         {
@@ -99,32 +98,39 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-12_finviz_digest.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97437,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
+          "bullets": [
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+          ]
         },
         {
           "key": "digest_md",
           "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-10-12_finviz_digest.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11547,
+          "said": "Finviz Daily Digest \u2014 2026-10-12",
+          "bullets": [
+            "_Generated 2026-10-12T04:16:50.629049-04:00 \u00b7 export=data/exports/finviz_2026-10-09.csv \u00b7 ticker digests=5906 \u00b7 high-signal=1780_",
+            "Major indices (live quote page)"
+          ]
         },
         {
           "key": "market_digest_json",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-10-12_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 8249,
-          "said": "Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks \u00b7 leaders AMZN, JPM, GS, WFC, C, BAC \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -132,14 +138,11 @@
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-10-12_finviz_market_digest.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 3715,
-          "said": "Finviz homepage market digest \u2014 2026-10-12",
-          "bullets": [
-            "Generated:** 2026-10-12T04:15:46.214602-04:00 (America/New_York)",
-            "Source:** `live`"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_close_json",
@@ -164,18 +167,22 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
+      "bullets": [
+        "Black British Business Awards 2026 winners revealed",
+        "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+        "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+      ]
     },
     {
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 9,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 14,
       "files": [
         {
@@ -183,21 +190,25 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-12_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97437,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
+          "bullets": [
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+          ]
         },
         {
           "key": "in_market_digest",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-10-12_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 8249,
-          "said": "Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks \u00b7 leaders AMZN, JPM, GS, WFC, C, BAC \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -315,11 +326,16 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-10-12_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 7592,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
+          "bullets": [
+            "general_predict:missing",
+            "events:missing",
+            "news_judge:missing",
+            "news_parse:missing"
+          ]
         },
         {
           "key": "status",
@@ -337,11 +353,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-10-12_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -473,7 +491,7 @@
       "name": "Label + weather",
       "yaml": "label_weather.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
@@ -484,11 +502,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-12_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97437,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
+          "bullets": [
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+          ]
         },
         {
           "key": "weather",
@@ -569,11 +591,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-12_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97437,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
+          "bullets": [
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+          ]
         },
         {
           "key": "dossiers",
@@ -639,11 +665,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-10-12_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 97437,
+          "said": "5906 tickers \u00b7 1780 signals \u00b7 top AAPL, ABBV, AEM, AME, AMGN, APH, AXP, BABA",
+          "bullets": [
+            "Black British Business Awards 2026 winners revealed",
+            "Why Is Everyone Ignoring Gilead Stock's High Cash Yield?",
+            "Gunnison Copper adds former Hudbay operations chief to board, becomes debt-free"
+          ]
         },
         {
           "key": "in_judge",
@@ -861,6 +891,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-12\n**Generated:** 2026-10-12T04:15:46.214602-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** Weekend Brief: US equity futures edge higher ahead bank earnings and CPI as oil swings on renewed Middle East tensions and policy risks\n**Prior close:** SPX +0.20%  Nasdaq \u2014  Dow \u2014\n**SPX:** +0.20%  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** US CPI report, along with retail sales and other data later in the week, is due to provide fresh signals on the economic outlook and the Federal R\n**Leaders:** AMZN, JPM, GS, WFC, C, BAC, MS\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-10-12\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T04:16:50.751049-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-12_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97437,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-12_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11568,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T04:16:50.629049-04:00 \u00b7 export=data/exports/finviz_2026-10-09.csv \u00b7 ticker digests=5906 \u00b7 high-signal=1780_"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11488051,
+          "preview": "11725 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-12_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97437,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T04:16:50.629049-04:00 \u00b7 export=data/exports/finviz_2026-10-09.csv \u00b7 ticker digests=5906 \u00b7 high-signal=1780_ \u00b7 11725 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
