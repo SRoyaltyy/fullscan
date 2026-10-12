@@ -1,0 +1,58 @@
+name: OpenClaw OAuth renew + gateway guard
+
+# Keeps OpenClaw on the SuperGrok OAuth login (no XAI_API_KEY, no paid
+# inference) and proves the gateway answers a real completion before the
+# 05:55 ET Pre-Open. Red run = renewal or guard failed -> DM Cyrus.
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/openclaw_oauth_guard.py
+      - scripts/install_openclaw_oauth_timer.sh
+      - scripts/systemd/fullscan-openclaw-oauth.service
+      - scripts/systemd/fullscan-openclaw-oauth.timer
+  schedule:
+    # 09:40 UTC = 05:40 EDT / 04:40 EST, Mon-Fri; after the 05:30 ET timer,
+    # before 05:55 ET Pre-Open. Backup for the ECS timer.
+    - cron: "40 9 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "renew | guard | all"
+        default: "all"
+        type: choice
+        options: [all, renew, guard]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: openclaw-oauth-guard
+  cancel-in-progress: false
+
+jobs:
+  guard:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+      - name: Full tree after leftover sparse-checkout
+        run: git sparse-checkout disable || true
+      - name: Install / refresh ECS timer (fullscan-openclaw-oauth.timer)
+        run: sudo -n bash scripts/install_openclaw_oauth_timer.sh
+      - name: Last ECS timer result (red if it failed)
+        run: |
+          f=/home/gha/fullscan-logs/openclaw_guard_status.json
+          if [ ! -f "$f" ]; then echo "no prior timer run yet"; exit 0; fi
+          cat "$f"
+          python3 -c 'import json,sys; d=json.load(open(sys.argv[1])); sys.exit(0 if d.get("ok") else "last ECS OAuth/guard run FAILED: %s %s" % (d.get("renew"), d.get("guard")))' "$f" \
+            || echo "::warning::previous ECS timer run failed; this run re-checks"
+      - name: Renew xAI OAuth + guard gateway (fails red)
+        env:
+          FULLSCAN_HOME: /home/gha
+        run: |
+          MODE="${{ github.event.inputs.mode || 'all' }}"
+          sudo -n env -u XAI_API_KEY FULLSCAN_HOME=/home/gha \
+            python3 scripts/openclaw_oauth_guard.py "$MODE"
