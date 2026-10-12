@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T06:48:23.798077-04:00",
+  "generated_at": "2026-10-12T06:50:53.309079-04:00",
   "run_id": "38231128046",
   "runner": "GitHub Actions 1000026755",
   "all_ok": false,
@@ -170,7 +170,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-10-12_map_heat.json",
-        "size": 274833
+        "size": 273590
       },
       {
         "kind": "map_heat_baseline",
