@@ -1,11 +1,11 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T07:03:21.320317-04:00",
-  "run_id": "38222244313",
+  "generated_at": "2026-10-12T07:25:25.618164-04:00",
+  "run_id": "38238275134",
   "runner": "ecs-openclaw",
   "all_ok": false,
   "qc_all_ok": false,
-  "book_ok": false,
+  "book_ok": true,
   "grok_ok": false,
   "grok_fails": [
     {
@@ -67,21 +67,21 @@
     {
       "key": "catalyst",
       "title": "Catalyst dossiers (after book)",
-      "returncode": 4,
-      "status": "FAIL",
-      "detail": "0/8 dossiers (grok timeout x0, deepseek empty)"
+      "returncode": 0,
+      "status": "OK",
+      "detail": "2/8 dossiers (grok timeout x0, deepseek empty)"
     }
   ],
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 1,
+      "n_today": 3,
       "latest": {
-        "id": 38222244313,
+        "id": 38238275134,
         "status": "in_progress",
         "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38222244313"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38238275134"
       }
     },
     {
@@ -122,8 +122,14 @@
     },
     {
       "workflow": "catalyst_daily.yml",
-      "n_today": 0,
-      "latest": null
+      "n_today": 1,
+      "latest": {
+        "id": 38231129586,
+        "status": "completed",
+        "conclusion": "cancelled",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38231129586"
+      }
     },
     {
       "workflow": "daily_pipeline.yml",
@@ -178,7 +184,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-12_actions.json",
-        "size": 84443
+        "size": 84328
       },
       {
         "kind": "finviz_digest",
