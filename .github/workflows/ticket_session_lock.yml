@@ -1,0 +1,73 @@
+name: ticket-session lock
+
+# Live strategy-ticket copies lock at their session's 09:30 ET
+# (2026-10-07: data/factor_mine/strategy_tickets.json was rewritten after
+# the close from that day's own close panel). Append-only manifest +
+# no same-session rewrite generated at or after 09:30 ET + no step back.
+# Does not call OpenClaw or Grok. Stays on GitHub-hosted runners.
+
+on:
+  pull_request:
+    paths:
+      - "src/ticket_session_lock.py"
+      - "src/test_ticket_session_lock.py"
+      - "src/strategy_tickets.py"
+      - "src/test_strategy_tickets.py"
+      - "data/ticket_session_lock/**"
+      - "data/factor_mine/strategy_tickets.json"
+      - "data/day_board/strategy_tickets.json"
+      - "data/day_board/today_strategies.json"
+      - "dashboard/factor-mine/strategy_tickets.json"
+      - "dashboard/factor-mine/today_strategies.json"
+      - "dashboard/today_strategies.json"
+      - ".github/workflows/ticket_session_lock.yml"
+      - ".github/workflows/publish_strategy_tickets.yml"
+  push:
+    branches: [main]
+    paths:
+      - "src/ticket_session_lock.py"
+      - "src/test_ticket_session_lock.py"
+      - "src/strategy_tickets.py"
+      - "data/ticket_session_lock/**"
+      - "data/factor_mine/strategy_tickets.json"
+      - "data/day_board/strategy_tickets.json"
+      - "data/day_board/today_strategies.json"
+      - "dashboard/factor-mine/strategy_tickets.json"
+      - "dashboard/factor-mine/today_strategies.json"
+      - "dashboard/today_strategies.json"
+      - ".github/workflows/ticket_session_lock.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  append-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas numpy pyarrow requests
+      - name: Live ticket 09:30 lock
+        env:
+          EVENT: ${{ github.event_name }}
+          BASE_REF: ${{ github.base_ref }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT" = "pull_request" ]; then
+            git fetch --no-tags origin "$BASE_REF"
+            BASE="origin/$BASE_REF"
+          elif [ -n "${BEFORE:-}" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            BASE="$BEFORE"
+          else
+            BASE="HEAD^"
+          fi
+          python3 -m src.ticket_session_lock --check-against "$BASE"
+          PYTHONPATH=. python3 -m src.test_ticket_session_lock

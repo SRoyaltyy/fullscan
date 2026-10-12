@@ -16,6 +16,8 @@ on:
       - "src/factor_mine.py"
       - "src/factor_mine_past_lock.py"
       - "src/test_factor_mine_past_lock.py"
+      - "src/factor_mine_preopen.py"
+      - "src/test_factor_mine_preopen.py"
       - "src/ohlc_ripper.py"
       - "src/gainer_capture.py"
       - "src/gainer_asof.py"
@@ -49,6 +51,8 @@ on:
       - "src/factor_mine.py"
       - "src/factor_mine_past_lock.py"
       - "src/test_factor_mine_past_lock.py"
+      - "src/factor_mine_preopen.py"
+      - "src/test_factor_mine_preopen.py"
       - "src/ohlc_ripper.py"
       - "src/gainer_capture.py"
       - "src/gainer_asof.py"
@@ -94,4 +98,6 @@ jobs:
       - name: Install the Factor Mine wrapper test
         run: pip install pandas numpy
       - name: Factor Mine past-day wrapper
-        run: python3 -m src.test_factor_mine_past_lock
+        run: |
+          python3 -m src.test_factor_mine_past_lock
+          python3 -m src.test_factor_mine_preopen

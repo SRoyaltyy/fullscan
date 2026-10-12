@@ -1,0 +1,44 @@
+name: Pre-open plan check (fail by name)
+
+# Read-only. Fails red, naming each strategy (every Factor Mine recipe,
+# holdup, h1, *_preopen) that has no pre-09:30 ET plan on main.
+# 08:45 ET pass: FM tickets + h1 seal. 09:27 ET pass adds the
+# *_preopen seal (fm_preopen.yml seals 09:02-09:25 ET).
+# Crons are EDT; the ET guard below skips off-hour EST duplicates.
+on:
+  schedule:
+    - cron: "45 12 * * 1-5"   # 08:45 EDT
+    - cron: "45 13 * * 1-5"   # 08:45 EST
+    - cron: "27 13 * * 1-5"   # 09:27 EDT (+preopen)
+    - cron: "27 14 * * 1-5"   # 09:27 EST (+preopen)
+  workflow_dispatch:
+    inputs:
+      date: {description: "YYYY-MM-DD (empty = today ET)", required: false, default: ""}
+      preopen: {description: "also check *_preopen seal", type: boolean, default: false}
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Plan check
+        env:
+          D: ${{ github.event.inputs.date }}
+          P: ${{ github.event.inputs.preopen }}
+        run: |
+          hhmm=$(TZ=America/New_York date +%H%M); hhmm=$((10#$hhmm))
+          flag=""
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            if [ $hhmm -ge 840 ] && [ $hhmm -lt 900 ]; then flag="";
+            elif [ $hhmm -ge 920 ] && [ $hhmm -lt 940 ]; then flag="--preopen";
+            else echo "off-hour duplicate cron ($hhmm ET); skip"; exit 0; fi
+          elif [ "$P" = "true" ]; then flag="--preopen"; fi
+          python3 -m src.preopen_plan_check ${D:+--date "$D"} $flag | tee -a "$GITHUB_STEP_SUMMARY"
+          exit ${PIPESTATUS[0]}
+      - name: Self-test
+        if: always()
+        run: python3 -m src.test_preopen_plan_check

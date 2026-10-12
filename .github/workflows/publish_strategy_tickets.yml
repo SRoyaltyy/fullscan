@@ -9,6 +9,11 @@ name: Publish strategy tickets
 # only write tickets. The sealed h1 paper send is webull_paper.yml before
 # 09:30 ET, with the ECS backstop as the other sender. A missed send
 # stays missed.
+#
+# Push paths must cover every file the decision fingerprint hashes
+# (src/decision_ready.py): stock-book inputs + factor-mine panel +
+# excel suggestions + the sleeve-merge flatten card. A change in any of
+# them wakes the gate so "inputs unchanged" stays meaningful.
 on:
   workflow_dispatch:
     inputs:
@@ -18,7 +23,7 @@ on:
         default: ""
   push:
     branches: [main]
-    paths: ['01_daily/**', 'data/join/**', 'data/peers/**', 'data/ab_checklist/**', 'data/factor_mine/panel.json']
+    paths: ['01_daily/**', 'data/join/**', 'data/peers/**', 'data/ab_checklist/**', 'data/factor_mine/panel.json', 'excel_bot/suggestions/suggestions.csv', 'data/sleeve_merge/today.json']
   workflow_run:
     workflows:
       - "Stock Book ALL (one-shot)"
@@ -29,6 +34,13 @@ on:
 permissions:
   contents: write
   actions: write
+
+# Trigger debounce (2026-10-07 churn): one run + at most one pending per
+# trigger source and date. A newer pending dispatch replaces the older
+# pending one instead of starting and being cancelled mid-publish.
+concurrency:
+  group: tickets-trigger-${{ github.event_name == 'workflow_run' && github.event.workflow_run.name || 'dispatch' }}-${{ github.event.inputs.run_date || 'today' }}
+  cancel-in-progress: false
 
 # Concurrency sits on the publish job, not the whole workflow. A duplicate
 # trigger whose input hash already matches the landed ticket never joins
@@ -82,7 +94,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 1
+          # morning_look proves commit times; a shallow clone refuses.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -118,7 +131,7 @@ jobs:
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
           set -euo pipefail
-          python3 -m src.decision_ready --date "$DATE" --publish
+          python3 -m src.morning_look decision_ready --date "$DATE" --publish
           python3 - <<'PY'
           import json
           from pathlib import Path
@@ -141,11 +154,15 @@ jobs:
           set -euo pipefail
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          # 09:30 lock on the undated copies (2026-10-07 post-close rewrite).
+          # Fails closed: a same-session rewrite after 09:30 ET never lands.
+          python3 -m src.ticket_session_lock --check-against origin/main
           bash scripts/safe_git_push.sh \
             "auto: strategy tickets $(TZ=America/New_York date +%F)" \
             "data/day_board/${DATE}_strategy_tickets.json" \
             "data/day_board/${DATE}_strategy_tickets_draft.json" \
             "data/factor_mine/send_inputs/${DATE}.json" \
+            "data/factor_mine/morning_look/${DATE}.json" \
             dashboard/factor-mine/index.html \
             data/day_board/strategy_tickets.json \
             data/day_board/today_strategies.json \
@@ -161,6 +178,7 @@ jobs:
             dashboard/strategy-board/index.html \
             dashboard/index.html \
             data/past_day_lock/ \
+            data/ticket_session_lock/ \
             "data/stock_book/" \
             "01_daily/${DATE}_stock_book.md"
           chmod +x scripts/publish_dashboard.sh || true

@@ -72,9 +72,18 @@ def test_missed_deadline_status_is_not_an_attempt() -> None:
 
 
 def test_unsealed_day_does_not_send() -> None:
-    clock = datetime.fromisoformat("2026-10-07T09:12:00-04:00")
-    rec = decide(clock, H1_LOG)
-    assert rec["date"] == "2026-10-07"
+    """Hermetic: a fixture log holding only the 2026-10-06 plan, asked
+    about a future date that can never be sealed in that fixture."""
+    import tempfile
+    log = Path(tempfile.mkdtemp()) / "h1_log.jsonl"
+    keep = [ln for ln in H1_LOG.read_text(encoding="utf-8").splitlines()
+            if ln.strip() and json.loads(ln).get("kind") == "plan"
+            and json.loads(ln).get("date") == "2026-10-06"]
+    assert len(keep) == 1
+    log.write_text(keep[0] + "\n", encoding="utf-8")
+    clock = datetime.fromisoformat("2030-01-02T09:12:00-05:00")
+    rec = decide(clock, log)
+    assert rec["date"] == "2030-01-02"
     assert rec["sealed"] is False
     assert rec["action"] == "skipped_unsealed"
     assert rec["late"] is False

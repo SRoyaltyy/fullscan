@@ -72,7 +72,9 @@ jobs:
           filter: blob:none
           sparse-checkout: research/input_freeze
       - name: Unit tests
-        run: python3 research/input_freeze/tool/test_freeze_inputs.py
+        run: |
+          python3 research/input_freeze/tool/test_freeze_inputs.py
+          python3 research/input_freeze/tool/test_check_decision_freeze.py
       - name: IRONCLAD — fail if any past day folder changed
         env:
           BASE: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}

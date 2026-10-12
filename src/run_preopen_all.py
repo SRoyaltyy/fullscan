@@ -108,12 +108,34 @@ def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
 
+def _run_group(cmd: list[str], timeout_s: int | None):
+    """Run in its own process group; on timeout SIGKILL the whole group so
+    grandchildren can't keep the step alive (10-07: a 420s timeout took
+    20 min to return)."""
+    import os as _os
+    import signal as _signal
+    p = subprocess.Popen(cmd, cwd=str(ROOT),
+                         env=step_deadline.child_env(timeout_s),
+                         start_new_session=True)
+    try:
+        p.wait(timeout=timeout_s)
+    except subprocess.TimeoutExpired:
+        try:
+            _os.killpg(p.pid, _signal.SIGKILL)
+        except (ProcessLookupError, PermissionError):
+            p.kill()
+        try:
+            p.wait(timeout=30)
+        except subprocess.TimeoutExpired:
+            pass
+        raise
+    return p
+
+
 def _run(cmd: list[str], timeout_s: int | None = None) -> int:
     print(f"\n>>> {' '.join(cmd)}", flush=True)
     try:
-        r = subprocess.run(
-            cmd, cwd=str(ROOT), env=step_deadline.child_env(timeout_s),
-            timeout=timeout_s)
+        r = _run_group(cmd, timeout_s)
     except subprocess.TimeoutExpired:
         print(f"[preopen-all] WARN: timed out after {timeout_s}s: "
               f"{' '.join(cmd)}", flush=True)
@@ -229,7 +251,15 @@ def _land(date: str, key: str, title: str = "") -> None:
 
 
 def _deepseek_credits_ok() -> bool:
-    """Do not start essays if DeepSeek is already 402 / no key on ubuntu."""
+    """Do not start essays if DeepSeek is already 402 / no key on ubuntu.
+
+    Grok-only runs (llm_backend=grok, GROK_ONLY=1) never spend DeepSeek, so
+    a DeepSeek 402 must not empty the Grok essays.
+    """
+    if os.environ.get("GROK_ONLY") == "1":
+        print("[preopen-all] GROK_ONLY=1 — skip DeepSeek preflight "
+              "(Grok essays do not need DeepSeek credits)", flush=True)
+        return True
     try:
         from . import deepseek_client as dc
         hit = dc.credits_preflight()
@@ -772,8 +802,10 @@ def run(date: str | None = None, force: bool = False,
             # Names on .io come from raw JSON. Do this even after 09:25 —
             # paper_trade must not gate the live BUY/SELL strip.
             print("[preopen-all] → live 1d BUY/SELL strip (dashboards poll main)")
-            _run([py, "-m", "src.publish_live_boards",
-                  "--date", date, "--write", "--no-extras"], timeout_s=180)
+            # morning_look wraps publish_live_boards: factor-mine rows from
+            # the last commit before 09:30 ET instead of the evening panel.
+            _run([py, "-m", "src.morning_look", "live_boards",
+                  "--date", date, "--write", "--no-extras"], timeout_s=480)
             _land(date, "live_boards", "Live 1d BUY/SELL strip")
             if force or not preopen.past_predict_cutoff():
                 print("[preopen-all] → sleeve (after book is on main)")

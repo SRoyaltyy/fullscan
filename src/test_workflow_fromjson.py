@@ -713,9 +713,13 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert 'endswith(":free")' in py
 
     or_ids = re.findall(r'"([^"]+:free)"', candidates)
-    cn_needles = ("qwen", "deepseek", "glm", "z-ai", "minimax", "inclusionai", "ling-")
+    # Availability changes; provider country is not a cost or quality guard.
+    from src.lane_route import OR_MODELS, _or_is_free, primary_models_for, is_classify_banned
     first_named = next((m for m in or_ids if m != "openrouter/free"), None)
-    assert first_named and any(n in first_named.lower() for n in cn_needles), first_named
+    floor = primary_models_for("openrouter", "news_classify")
+    assert first_named and first_named in floor, first_named
+    assert all(_or_is_free(m) for m in OR_MODELS), OR_MODELS
+    assert floor and all(_or_is_free(m) and not is_classify_banned(m) for m in floor), floor
     sf_ids = re.findall(r'"(Qwen/[^"]+|THUDM/[^"]+|deepseek-ai/[^"]+)"', py.split("SF_MODELS")[1].split("SF_URLS")[0])
     assert sf_ids and not any(m.startswith("Pro/") for m in sf_ids), sf_ids
     zhipu_block = py.split("ZHIPU_MODELS")[1].split("ZHIPU_URLS")[0]

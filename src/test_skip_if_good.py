@@ -475,23 +475,81 @@ def test_thin_pile_fallback_is_legit_only_when_graded_and_core_fired() -> None:
         assert skip_if_good.green_pile_fallback_is_legit(green) is False
 
 
+def _predict_ok() -> str:
+    body = "\n".join([
+        "MEMORY_CONFIRM yesterday.",
+        "SCORES_BEGIN",
+        "B0_A: 1",
+        "B1_B: -2",
+        "B2_C: 3",
+        "B3_D: 4",
+        "SCORES_END",
+        ("essay " * 400).strip(),
+    ]) + "\n"
+    assert len(body) >= 2000
+    return body
+
+
+def _stamp(root: Path, date: str) -> None:
+    daily = root / "01_daily"
+    daily.mkdir(parents=True, exist_ok=True)
+    (daily / f"{date}_preopen_status.json").write_text(json.dumps({
+        "generated_at": f"{date}T09:40:00-04:00",
+        "run_id": "111",
+        "runner": "ecs",
+    }), encoding="utf-8")
+
+
 def test_preopen_pass_prior_not_forced_is_noop() -> None:
     date = "2026-09-25"
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
-        daily = root / "01_daily"
-        daily.mkdir()
-        (daily / f"{date}_preopen_status.json").write_text(json.dumps({
-            "generated_at": "2026-09-25T09:40:00-04:00",
-            "run_id": "111",
-            "runner": "ecs",
-        }), encoding="utf-8")
+        _stamp(root, date)
+        pred = root / "01_daily" / "general"
+        pred.mkdir()
+        (pred / f"{date}_predict.md").write_text(_predict_ok(), encoding="utf-8")
         with mock.patch.object(skip_if_good, "ROOT", root), \
                 mock.patch.object(skip_if_good, "_git_show_main", return_value=None), \
+                mock.patch.object(skip_if_good, "_origin_main_visible", return_value=False), \
                 mock.patch.object(skip_if_good, "other_preopen_running", return_value=None), \
                 mock.patch.dict(os.environ, {"GITHUB_RUN_ID": "222"}, clear=False):
             assert skip_if_good.check_preopen_pass(date) is True
             assert skip_if_good.check_preopen_pass(date, force=True) is False
+
+
+def test_preopen_pass_stamp_without_predict_does_not_skip() -> None:
+    """A completed pass stamp is not done until the general predict is on main."""
+    date = "2026-10-08"
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        _stamp(root, date)
+        with mock.patch.object(skip_if_good, "ROOT", root), \
+                mock.patch.object(skip_if_good, "_git_show_main", return_value=None), \
+                mock.patch.object(skip_if_good, "_origin_main_visible", return_value=False), \
+                mock.patch.object(skip_if_good, "other_preopen_running", return_value=None), \
+                mock.patch.dict(os.environ, {"GITHUB_RUN_ID": "222"}, clear=False):
+            assert skip_if_good.check_preopen_pass(date) is False
+        # A working-tree copy must not count once origin/main is readable
+        # and the blob is absent there.
+        pred = root / "01_daily" / "general"
+        pred.mkdir()
+        (pred / f"{date}_predict.md").write_text(_predict_ok(), encoding="utf-8")
+        with mock.patch.object(skip_if_good, "ROOT", root), \
+                mock.patch.object(skip_if_good, "_git_show_main", return_value=None), \
+                mock.patch.object(skip_if_good, "_origin_main_visible", return_value=True), \
+                mock.patch.object(skip_if_good, "other_preopen_running", return_value=None), \
+                mock.patch.dict(os.environ, {"GITHUB_RUN_ID": "222"}, clear=False):
+            assert skip_if_good.check_preopen_pass(date) is False
+        def show(rel: str):
+            if rel.endswith(f"{date}_predict.md"):
+                return _predict_ok()
+            return None
+        with mock.patch.object(skip_if_good, "ROOT", root), \
+                mock.patch.object(skip_if_good, "_git_show_main", side_effect=show), \
+                mock.patch.object(skip_if_good, "_origin_main_visible", return_value=True), \
+                mock.patch.object(skip_if_good, "other_preopen_running", return_value=None), \
+                mock.patch.dict(os.environ, {"GITHUB_RUN_ID": "222"}, clear=False):
+            assert skip_if_good.check_preopen_pass(date) is True
 
 
 def test_stock_book_requires_todays_peer_rs() -> None:
@@ -663,6 +721,7 @@ if __name__ == "__main__":
     test_postclose_all_cli_yields_to_sidecar_only_for_all_workflow()
     test_degraded_book_is_not_good()
     test_preopen_pass_prior_not_forced_is_noop()
+    test_preopen_pass_stamp_without_predict_does_not_skip()
     test_stock_book_requires_todays_peer_rs()
     test_past_write_refuses_older_peer_and_ab_files()
     test_peer_rs_run_does_not_overwrite_earlier_file()

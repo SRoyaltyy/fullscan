@@ -70,6 +70,7 @@ def classifier_prompt(title: str, body: str = "", known_at: str = "") -> str:
         "- Second order is a role, not a class.\n"
         "- Analyst PT is discard unless it smuggles a print or guidance number.\n"
         "- If no constraint, event_class=discard.\n"
+        "- Operative government sanctions, export controls, and counterparty transaction restrictions are access_control; lifting them is sanction_lift. A proposal or speech alone is statement_public, not an operative restriction. Litigation and corporate liability shocks are blast_legal. Do not confuse the mechanisms or infer implementation from an announcement.\n"
         "- Do not dump Buist / AMRX / a listicle into regime_break.\n\n"
         f"known_at: {known_at or ''}\n"
         f"Title: {title or '(untitled)'}\n"
@@ -248,6 +249,29 @@ FLIP_QUESTIONS = {
     ],
 }
 
+ACCESS_CLASSES = frozenset({'access_control', 'sanction_lift'})
+ACCESS_TEST = (
+    'ACCESS RESTRICTIONS / RELIEF: identify the legally covered entities, transactions, products and jurisdictions.\n'
+    'Separate announcements from operative restrictions. Check effective dates, general licenses, exemptions, wind-down periods and prior restrictions using primary documents.\n'
+    'Harm or benefit follows an evidenced affected business relationship, not an exchange-venue or new-rail analogy.\n'
+    'Authorized services are not automatically prohibited. Relief is not automatically positive if demand, implementation or materiality is unverified.\n'
+    'A covered institution or private business need not have a stock ticker. Require verified supplier/customer/ownership exposure before naming a listed parent.\n'
+    'Unknown scope, authorization, relationship or materiality blocks direction; do not invent a beneficiary.\n'
+)
+ACCESS_QUESTIONS = [
+    'Which entities, transactions, products and jurisdictions are legally covered, and what changed from the prior restrictions?',
+    'Is the action proposed, announced or operative; what are its effective dates and wind-down periods?',
+    'Which general licenses, exemptions or other authorizations permit affected services despite the headline restriction?',
+    'Which verified supplier, customer or ownership relationships transmit the change, and is each affected entity listed or private?',
+    'How material is the covered business to the listed parent, and what evidence establishes a substitute or beneficiary rather than a thematic peer?',
+]
+
+def event_family_test(family, event_class=''):
+    return ACCESS_TEST if event_class in ACCESS_CLASSES else FAMILY_TESTS.get(family, FAMILY_TESTS['time'])
+
+def event_flip_questions(family, event_class=''):
+    return ACCESS_QUESTIONS if event_class in ACCESS_CLASSES else FLIP_QUESTIONS.get(family, FLIP_QUESTIONS['time'])
+
 Y_S_QUESTION = (
     "Y-S salience: What standing axiom about {place|order} just became false? "
     "When was the last analog in the same consciousness class (year)? "
@@ -270,7 +294,7 @@ LANREOTIDE_CLOCK_Q = (
 )
 
 
-def family_block(family: str) -> str:
+def family_block(family: str, event_class: str = '') -> str:
     """Family text the one-shot analyst hop actually sends.
 
     One family's winner/loser test and flip questions, plus the shared
@@ -278,7 +302,7 @@ def family_block(family: str) -> str:
     """
     fam = family if family in FAMILY_TESTS else "time"
     flips = "\n".join(
-        f"- {q}" for q in FLIP_QUESTIONS.get(fam, FLIP_QUESTIONS["time"])
+        f"- {q}" for q in event_flip_questions(fam, event_class)
     )
     return (
         f"PROMPT_VERSION={PROMPT_VERSION}\n"
@@ -286,7 +310,7 @@ def family_block(family: str) -> str:
         f"{ROLES}\n"
         f"{HISTORY_SLOT}\n"
         f"{GOLD_RULES}\n"
-        f"WINNER/LOSER TEST FOR THIS FAMILY ONLY:\n{FAMILY_TESTS[fam]}\n\n"
+        f"WINNER/LOSER TEST FOR THIS FAMILY ONLY:\n{event_family_test(fam, event_class)}\n\n"
         f"FLIP QUESTIONS (answer or mark blocked; blocked → not_determined):\n{flips}\n"
     )
 
@@ -301,8 +325,8 @@ def analyst_prompt(
     constraint: str,
     pack_facts: list[dict] | None = None,
 ) -> str:
-    tests = FAMILY_TESTS.get(family, FAMILY_TESTS["time"])
-    flips = "\n".join(f"- {q}" for q in FLIP_QUESTIONS.get(family, FLIP_QUESTIONS["time"]))
+    tests = event_family_test(family, event_class)
+    flips = "\n".join(f"- {q}" for q in event_flip_questions(family, event_class))
     facts = pack_facts or []
     fact_lines = "\n".join(
         f"- {f.get('text', '')} ({f.get('source', '')} {f.get('url', '')})"
@@ -360,12 +384,14 @@ def meta_prompt(
     constraint: str,
 ) -> str:
     """M1–M3. Runs after class is locked and before any lookup."""
+    access_context = ("ACCESS CONTROL CONTEXT: ask article-noun-bound questions about covered transactions and entities, operative dates, licenses/exemptions, wind-down periods, prior restrictions, verified business relationships and materiality whenever unanswered. Do not infer a blanket services ban or an exchange/new-rail beneficiary. Do not invent the answers.\n\n" if event_class in ACCESS_CLASSES else "")
     text = (
         f"PROMPT_VERSION={PROMPT_VERSION}\n"
         "The event_class is locked. Do not change it. Do not name a ticker.\n"
         f"family={family}\n"
         f"event_class={event_class}\n"
         f"constraint={constraint}\n\n"
+        f"{access_context}"
         "These five meta-gates are mandatory.\n\n"
         "M1 need_context: If you believe ONLY the sentences on the page, can you "
         "name the constraint, the harm set, and a listed expression? "
