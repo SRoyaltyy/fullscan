@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-12
 
-Export `finviz_2026-10-12.csv` · 11616 names · generated 2026-10-12T04:19:38.311321-04:00
+Export `finviz_2026-10-12.csv` · 11616 names · generated 2026-10-12T06:50:53.179839-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -111,56 +111,56 @@ Econ (importance ≥ 2):
 - 08:30 ET  Building Permits Prel  actual —  cons 1.36M  surprise —  prev —
 
 Mega-cap earnings:
-- AMC **GOOG**  EPS est 3.0379  (Alphabet Inc)
 - AMC **GOOGL**  EPS est 3.0388  (Alphabet Inc)
+- AMC **GOOG**  EPS est 3.0379  (Alphabet Inc)
+- AMC **MSFT**  EPS est 4.7154  (Microsoft Corp)
 - BMO **TSM**  EPS est 4.4279  (Taiwan Semiconductor Manufacturing ADR)
 - AMC **TSLA**  EPS est 0.4538  (Tesla Inc)
 - BMO **JPM**  EPS est 5.9275  (JPMorgan Chase & Co)
-- BMO **ASML**  EPS est 12.1292  (ASML Holding NV)
-- BMO **JNJ**  EPS est 2.5018  (Johnson & Johnson)
+- AMC **V**  EPS est 3.4365  (Visa Inc)
+- BMO **ASML**  EPS est 12.2018  (ASML Holding NV)
+- BMO **JNJ**  EPS est 2.5224  (Johnson & Johnson)
 - AMC **LRCX**  EPS est 2.1771  (Lam Research Corp)
 - BMO **BAC**  EPS est 1.0979  (Bank Of America Corp)
 - BMO **KO**  EPS est 0.8799  (Coca-Cola Co)
 - BMO **PG**  EPS est 1.8832  (Procter & Gamble Co)
 - BMO **UNH**  EPS est 4.138  (Unitedhealth Group Inc)
+- BMO **HSBC**  EPS est 2.2073  (HSBC Holdings plc ADR)
 - BMO **GE**  EPS est 1.994  (GE Aerospace)
-- BMO **HSBC**  EPS est 2.211  (HSBC Holdings plc ADR)
 - BMO **PM**  EPS est 2.2973  (Philip Morris International Inc)
 - BMO **MS**  EPS est 2.9273  (Morgan Stanley)
 - AMC **NFLX**  EPS est 0.8209  (Netflix Inc)
 - BMO **GEV**  EPS est 4.0164  (GE Vernova Inc)
 - BMO **GS**  EPS est 12.8648  (Goldman Sachs Group Inc)
 - AMC **TXN**  EPS est 2.416  (Texas Instruments Inc)
+- AMC **KLAC**  EPS est 1.1838  (KLA Corp)
 - BMO **WFC**  EPS est 1.847  (Wells Fargo & Co)
+- AMC **SAP**  EPS est 2.0816  (Sap SE ADR)
 - BMO **RTX**  EPS est 1.7719  (RTX Corp)
-- AMC **SAP**  EPS est 2.0801  (Sap SE ADR)
 - BMO **TMO**  EPS est 6.4032  (Thermo Fisher Scientific Inc)
 - BMO **C**  EPS est 2.6494  (Citigroup Inc)
-- BMO **APH**  EPS est 0.721  (Amphenol Corp)
 - AMC **IBM**  EPS est 2.8606  (International Business Machines Corp)
+- BMO **APH**  EPS est 0.7211  (Amphenol Corp)
 - BMO **AXP**  EPS est 4.5983  (American Express Co)
 - BMO **BLK**  EPS est 14.3326  (Blackrock Inc)
 - BMO **VZ**  EPS est 1.2778  (Verizon Communications Inc)
 - BMO **ABT**  EPS est 1.4199  (Abbott Laboratories)
 - BMO **SCHW**  EPS est 1.6592  (Charles Schwab Corp)
 - BMO **UNP**  EPS est 3.4653  (Union Pacific Corp)
-- AMC **WELL**  EPS est 0.645  (Welltower Inc)
 - BMO **NEE**  EPS est 1.1852  (NextEra Energy Inc)
 - AMC **TMUS**  EPS est 2.8866  (T-Mobile US Inc)
+- AMC **WELL**  EPS est 0.645  (Welltower Inc)
 - BMO **DHR**  EPS est 1.9158  (Danaher Corp)
-- BMO **T**  EPS est 0.6012  (AT&T Inc)
-- BMO **BA**  EPS est -0.2293  (Boeing Co)
-- AMC **ISRG**  EPS est 2.6458  (Intuitive Surgical Inc)
 
 Options event-vol flags (NOT direction):
-- **GOOG** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI —
 - **GOOGL** exp 2026-10-12 ATM IV 0.0078 implied move +0.0% put/call OI —
+- **GOOG** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI —
+- **MSFT** exp 2026-10-12 ATM IV 0.0005 implied move 0.0% put/call OI 0.0
 - **TSM** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI —
 - **TSLA** exp 2026-10-12 ATM IV 0.002 implied move +0.0% put/call OI —
-- **JPM** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI —
+- **JPM** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI 0.736
+- **V** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI —
 - **ASML** exp 2026-10-16 ATM IV 0.0003 implied move 0.0% put/call OI —
-- **JNJ** exp 2026-10-16 ATM IV 0.0039 implied move +0.0% put/call OI —
-- **LRCX** exp 2026-10-16 ATM IV 0.0039 implied move +0.0% put/call OI —
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 4 min **HGTY** BROAD ARROW ZOUTE CONCOURS SALE BECOMES THE HIGHEST GROSSING COLLECTOR CAR AUCTION IN BELGIAN HISTORY (GlobeNewswire)
-- 19 min **NAVN** Navan Selected by Investec to Modernize Global Travel Program (Business Wire)
-- 27 min **AXP** American Express National Bank fined $350m by OCC over AML controls (Electronic Payments)
-- 35 min **LCO** European stocks inch higher as Trumps Russia-Ukraine ceasefire softens crude (Investing.com)
-- 37 min **AVGO** Broadcom CEO Flags Capital as AIs Biggest Constraint. Can Broadcom Fund Its $42 Billion Anthropic Loan Commitment? (TIKR)
-- 49 min **DOC** Better High-Yield Dividend Stock: W. P. Carey vs. Healthpeak (TIKR)
-- 49 min **GCO** Genesco-owned Retailer Schuh Names New CFO Amid Turnaround Efforts (Footwear News)
-- 52 min **RKLB** RKLB Stock Rises Overnight: NASA Chief Warns Moon Race With China Is Months, Not Years As Neutron Opportunity Grows (Stocktwits)
-- 1 hour **ASML** European shares rise on lower oil prices, bank strength ahead of earnings (Reuters)
-- 1 hour **SBUX,CMG** CMG Stock Ticks Higher Overnight: Chipotles Digital Strategy Could Support Growth Despite Margin Squeeze, Says Analyst (Stocktwits)
-- 1 hour **TSM** TSMCs Q3 Earnings Preview: 65% Profit Growth, But Net Margin Seen Slipping to 50% (TIKR)
-- 1 hour **AVGO** Broadcom CEO says biggest hurdle in AI-fuelled tech growth is capital, not memory chips (Reuters)
-- 1 hour **MU,SKHY** Micron, SK Hynix Stocks Slip Overnight: Chinas CXMT Advances Next-Gen DRAM Technology (Stocktwits)
-- 1 hour **ASX** ASE Technology Holding Co., Ltd. Announces Monthly Net Revenues* (PR Newswire)
-- 1 hour **KKR** TotalEnergies SE UK Regulatory Announcement: United States: TotalEnergies Expands its Joint Venture with KKR with the Addition of a 700 MW Renewables Portfolio (Business Wire)
-- 1 hour **KKR** United States: TotalEnergies Expands its Joint Venture with KKR with the Addition of a 700 MW Renewables Portfolio (Business Wire)
-- 1 hour **TSLA** TSLA Stock Climbs Overnight As Cybercab Eyes Dallas  Musk Recalls When Shorts Had Tesla In Checkmate (Stocktwits)
-- 1 hour **DVN,VTRS,PCRX,CRGY,KO** Stocktwits M&A Watch: Viatris-Pacira Deal, Coca-Colas Costa Coffee Sale, Devons Eagle Ford Divestiture In Focus (Stocktwits)
-- 1 hour **AARD** Aardvark Therapeutics, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - AARD (PR Newswire)
-- 1 hour **SMPL** The Simply Good Foods Company Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - SMPL (PR Newswire)
-- 1 hour **SPY** Stock Market: Will S&P 500 Open Up or Down Today? (Benzinga Prediction Markets)
-- 2 hours **AVXL** Anavex Life Sciences Corp. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - AVXL (PR Newswire)
-- 2 hours **AAPL** New Apple TV and HomePod Mini Expected: What Matters for AAPL Stock (TIKR)
-- 2 hours **CCB** Coastal Financial Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - CCB (PR Newswire)
-- 2 hours **BULL** Webull Corporation Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BULL (PR Newswire)
+- 4 min **NVDA** Nuvacore seeks funding at $2.5bn valuation to develop CPUs (Verdict)
+- 5 min **LAZ** Lazard Reports September 2026 Assets Under Management (PR Newswire)
+- 5 min **BHC,BLCO** Bausch + Lomb and Bausch Health Announce Appointment of Thomas J. Appio as Interim Bausch + Lomb CEO, Expect to Raise Full-Year 2026 Guidance (Business Wire)
+- 10 min **AVY** Avery Dennison Names Helen Sheirbon President, Solutions Group (Business Wire)
+- 11 min **KKR** TotalEnergies and KKR Plan to Add 700 MW of US Solar Capacity to Joint Venture (InvestorsHub)
+- 14 min **VST,NEE,D** Stocktwits Power Watch: CEG Bags Google Deal, VST Secures Government Funding, Utility Merger Draws Fire (Stocktwits)
+- 15 min **INTC** Intel CEO Highlights Rapid Adoption of Chinese AI Models and Potential for Quantum Computing (InvestorsHub)
+- 16 min **AVGO** Broadcom CEO Sees Capital as Main Constraint on AI Growth Despite Easing Chip Shortages (InvestorsHub)
+- 20 min **GPUS** Hyperscale Data Announces a Two Hundred Million Dollar Reduction in the Amount of Sales that May Be Made under the Sales Agreement Providing for Its Current ATM Offering (PR Newswire)
+- 20 min **BESS** Bimergen Energy to Present its $400 Million Battery Energy Storage Growth Strategy at ThinkEquity Conference (GlobeNewswire)
+- 20 min **TTMI** TTM Technologies Announces $400 Million in Planned Strategic Investments to Accelerate AI Infrastructure Capacity in China and Malaysia (GlobeNewswire)
+- 20 min **CABO** Cable One Provides Update on the Pending Purchase of Mega Broadband (Business Wire)
+- 20 min **TFX** Enrollment Completed in BIOMAG-LL Clinical Study Evaluating Longer Lengths for Freesolve Resorbable Magnesium Scaffold (Business Wire)
+- 22 min **RCAT** Red Cat Launches Red Cat Aerial, Unifying Its UAS Portfolio Under One Brand, and Unveils TRICHON Long-Endurance VTOL ISR System at AUSA 2026 (GlobeNewswire)
+- 22 min **IREN,MU,SKHY,SNDK,AMZN** Sandisk, IREN, SK Hynix, Amazon, and More Stocks That Explain Today's Market (Barrons.com)
+- 24 min **META,GOOG,GOOGL,AMZN** S&P 500 Profits Set to Surge More Than 30% in Q3 With AI Giants Dominating Growth (International Business Times)
+- 26 min **NVDA** Has Nvidia Stock Already Peaked? How to Spot the Warning Signs. (Barrons.com)
+- 30 min **HLN** Only Excedrin Brings Digital Pet Nostalgia Back with a Headache You Can't Ignore (PR Newswire)
+- 40 min **IREN,STLA,MU,GDDY** Premarket movers: Iren jumps on Anthropic deal, CCC surges on buyout talks (Investing.com)
+- 44 min **TTE** TotalEnergies Expands U.S. Solar Venture With KKR in $1.2 Billion Deal (Oilprice.com)
+- 48 min **LTH** Life Time Opens More Than 180,000-Square-Foot Athletic Country Club in Lakewood Ranch on Oct. 12 (PR Newswire)
+- 50 min **LDOS** Leidos Selects X-Bow to Provide Rocket Motors for U.S. Army's Low-Cost Cruise Missile (PR Newswire)
+- 50 min **AIIO** Robo.ai Plans ALIF Composites with 10 Million Square Meters of Annual Capacity Targeted for 2027 (PR Newswire)
+- 50 min **MNOV** MediciNova CEO Provides Shareholder Update (GlobeNewswire)
+- 50 min **ETD** Ethan Allen Mails Letter to Shareholders Detailing its Highly Qualified Nominees and Executable Growth Plan (GlobeNewswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
