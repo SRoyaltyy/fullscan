@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-12
 
-Export `finviz_2026-10-09.csv` · 11616 names · generated 2026-10-12T04:19:17.773227-04:00
+Export `finviz_2026-10-12.csv` · 11616 names · generated 2026-10-12T04:19:38.311321-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -283,12 +283,12 @@ COLD (1w):
 - 4 min **HGTY** BROAD ARROW ZOUTE CONCOURS SALE BECOMES THE HIGHEST GROSSING COLLECTOR CAR AUCTION IN BELGIAN HISTORY (GlobeNewswire)
 - 19 min **NAVN** Navan Selected by Investec to Modernize Global Travel Program (Business Wire)
 - 27 min **AXP** American Express National Bank fined $350m by OCC over AML controls (Electronic Payments)
-- 34 min **LCO** European stocks inch higher as Trumps Russia-Ukraine ceasefire softens crude (Investing.com)
+- 35 min **LCO** European stocks inch higher as Trumps Russia-Ukraine ceasefire softens crude (Investing.com)
 - 37 min **AVGO** Broadcom CEO Flags Capital as AIs Biggest Constraint. Can Broadcom Fund Its $42 Billion Anthropic Loan Commitment? (TIKR)
 - 49 min **DOC** Better High-Yield Dividend Stock: W. P. Carey vs. Healthpeak (TIKR)
 - 49 min **GCO** Genesco-owned Retailer Schuh Names New CFO Amid Turnaround Efforts (Footwear News)
 - 52 min **RKLB** RKLB Stock Rises Overnight: NASA Chief Warns Moon Race With China Is Months, Not Years As Neutron Opportunity Grows (Stocktwits)
-- 59 min **ASML** European shares rise on lower oil prices, bank strength ahead of earnings (Reuters)
+- 1 hour **ASML** European shares rise on lower oil prices, bank strength ahead of earnings (Reuters)
 - 1 hour **SBUX,CMG** CMG Stock Ticks Higher Overnight: Chipotles Digital Strategy Could Support Growth Despite Margin Squeeze, Says Analyst (Stocktwits)
 - 1 hour **TSM** TSMCs Q3 Earnings Preview: 65% Profit Growth, But Net Margin Seen Slipping to 50% (TIKR)
 - 1 hour **AVGO** Broadcom CEO says biggest hurdle in AI-fuelled tech growth is capital, not memory chips (Reuters)

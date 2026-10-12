@@ -1,8 +1,8 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T04:19:17.773227-04:00",
+  "generated_at": "2026-10-12T04:19:38.311321-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-09.csv",
+  "export": "finviz_2026-10-12.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8962,7 +8962,7 @@
       ]
     },
     {
-      "time": "34 min",
+      "time": "35 min",
       "title": "European stocks inch higher as Trumps Russia-Ukraine ceasefire softens crude",
       "url": "https://finance.yahoo.com/markets/stocks/articles/european-stocks-inch-higher-trump-074425887.html",
       "source": "Investing.com",
@@ -9007,7 +9007,7 @@
       ]
     },
     {
-      "time": "59 min",
+      "time": "1 hour",
       "title": "European shares rise on lower oil prices, bank strength ahead of earnings",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/european-shares-rise-lower-oil-071913141.html",
       "source": "Reuters",
@@ -9285,8 +9285,8 @@
       "url": "https://finance.yahoo.com/technology/articles/stocktwits-tech-watch-asml-tsmc-050342095.html",
       "source": "Stocktwits",
       "tickers": [
-        "ASML",
         "TSM",
+        "ASML",
         "NVDA",
         "AAPL"
       ]
@@ -10677,5 +10677,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 195,
   "earnings_window_count": 376,
-  "overlay_at": "2026-10-12T04:19:17.773227-04:00"
+  "overlay_at": "2026-10-12T04:19:38.311321-04:00"
 }
