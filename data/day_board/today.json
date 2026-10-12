@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T04:34:23.282977-04:00",
+  "generated_at": "2026-10-12T04:43:28.030254-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,56 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T04:31:15.930470-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-12_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97004,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-12_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11840,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-    },
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T04:31:25.162136-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-12_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 274833,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-12_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18753,
-          "preview": "# MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T04:19:38.311321-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T04:19:38.311321-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -185,6 +135,41 @@
         }
       ],
       "preview": "raw=5840 usable=499 single=330 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | China Passenger Vehicle Retail Sales Drop 24% in September - Bloomberg.com | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O \u00b7 # News Parse v2 \u2014 2026-10-12T04:34:08.744682-04:00\nWindow\u224848h | news_mode=on | raw=5840 | usable=499 | single_name=330 | noise_dropped=4753\nusable polarity={'+': 11, '-': 72, 'mixed': 5, 'neutral': 411}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-10-12",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-12T04:43:23.351872-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-10-12",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-12T04:43:26.690358-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-12_events.json",
+          "ok": false,
+          "reason": "zero_events",
+          "size": 212,
+          "preview": "0 events \u00b7 "
+        },
+        {
+          "path": "01_daily/events/2026-10-12_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 205,
+          "preview": "# Event Scan \u2014 2026-10-12 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+        }
+      ],
+      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-12 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
