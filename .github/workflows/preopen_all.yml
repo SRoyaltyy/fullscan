@@ -47,6 +47,14 @@ on:
       - ".github/workflows/preopen_all.yml"
   workflow_dispatch:
     inputs:
+      llm_provider:
+        description: "deepseek = api.deepseek.com · openrouter-glm = OpenRouter z-ai/glm-5.3 (top tier)"
+        required: false
+        default: "deepseek"
+        type: choice
+        options:
+          - deepseek
+          - openrouter-glm
       runner:
         description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok."
         required: false
@@ -412,7 +420,9 @@ jobs:
       - name: Pre-Open ALL (predictive + QC + workflow check)
         if: env.skip != 'yes' && env.skip_python != 'yes'
         env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ (github.event.inputs.llm_provider == 'openrouter-glm') && secrets.OPENROUTER_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_BASE_URL: ${{ (github.event.inputs.llm_provider == 'openrouter-glm') && 'https://openrouter.ai/api/v1' || 'https://api.deepseek.com' }}
+          LLM_MODEL_OVERRIDE: ${{ (github.event.inputs.llm_provider == 'openrouter-glm') && 'z-ai/glm-5.3' || '' }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           SEARXNG_URL: ${{ secrets.SEARXNG_URL }}

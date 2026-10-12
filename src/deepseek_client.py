@@ -80,7 +80,7 @@ def credits_preflight() -> dict:
                 "detail": "DEEPSEEK_API_KEY empty"}
     url = f"{config.DEEPSEEK_BASE_URL}/chat/completions"
     payload = {
-        "model": "deepseek-chat",
+        "model": (os.environ.get("LLM_MODEL_OVERRIDE") or "deepseek-chat"),
         "messages": [{"role": "user", "content": "ping"}],
         "max_tokens": 1,
         "temperature": 0,
@@ -960,8 +960,13 @@ def chat(messages: list[dict], model: str, tools: bool = False,
         return ""
 
     # ---- fallback: DeepSeek + SearXNG tool loop (original client) ----
+    # Operator override (2026-10-12): route the DeepSeek-compatible path to
+    # another OpenAI-compatible provider/model (e.g. OpenRouter GLM 5.3).
+    _ovr = (os.environ.get("LLM_MODEL_OVERRIDE") or "").strip()
+    if _ovr:
+        model = _ovr
     deepseek_max_tokens = max_tokens
-    if model == "deepseek-chat":
+    if model == "deepseek-chat" or _ovr:
         deepseek_max_tokens = min(
             max_tokens,
             config.DEEPSEEK_CHAT_MAX_TOKENS,
