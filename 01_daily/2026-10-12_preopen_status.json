@@ -1,11 +1,11 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T09:31:09.499464-04:00",
-  "run_id": "38246214798",
+  "generated_at": "2026-10-12T09:52:03.173764-04:00",
+  "run_id": "38253762357",
   "runner": "ecs-openclaw",
   "all_ok": false,
   "qc_all_ok": false,
-  "book_ok": false,
+  "book_ok": true,
   "grok_ok": false,
   "grok_fails": [
     {
@@ -75,13 +75,13 @@
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 5,
+      "n_today": 8,
       "latest": {
-        "id": 38248752036,
-        "status": "completed",
-        "conclusion": "cancelled",
+        "id": 38257047540,
+        "status": "pending",
+        "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38248752036"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38257047540"
       }
     },
     {
@@ -107,17 +107,18 @@
     },
     {
       "workflow": "news_parse.yml",
-      "error": "HTTP Error 502: Bad Gateway"
+      "n_today": 0,
+      "latest": null
     },
     {
       "workflow": "news_judge.yml",
-      "n_today": 1,
+      "n_today": 8,
       "latest": {
-        "id": 38248754245,
-        "status": "completed",
-        "conclusion": "failure",
+        "id": 38258308149,
+        "status": "in_progress",
+        "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38248754245"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38258308149"
       }
     },
     {
