@@ -2676,5 +2676,7 @@
     "URA": 4.0,
     "CEG": 5.5,
     "IGV": -4.0
-  }
+  },
+  "catalyst_tickers": 0,
+  "catalyst_date": "2026-10-12"
 }

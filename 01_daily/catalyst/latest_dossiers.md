@@ -1,34 +1,25 @@
-# CATALYST DAILY — 2026-10-09
+# CATALYST DAILY — 2026-10-12
 
-3/7 dossiers · max=8 · routing=Grok → DeepSeek
+0/8 dossiers · max=8 · routing=Grok → DeepSeek
 
 ## TARGETS
+- **GOOG** [earnings] earnings AMC
+- **GOOGL** [earnings] earnings AMC
 - **TSLA** [earnings] earnings AMC
 - **NFLX** [earnings] earnings AMC
-- **UEC** [override_captain] OVERRIDE Uranium
-- **UUUU** [override_captain] OVERRIDE Uranium
-- **SLB** [override_captain] OVERRIDE Oil & Gas Equipment & Services
-- **BKR** [override_captain] OVERRIDE Oil & Gas Equipment & Services
-- **KGS** [override_captain] OVERRIDE Oil & Gas Equipment & Services
+- **NE** [override_captain] OVERRIDE card Oil & Gas Drilling
+- **RIG** [override_captain] OVERRIDE card Oil & Gas Drilling
+- **SLB** [override_captain] OVERRIDE card Oil & Gas Equipment & Services
+- **BKR** [override_captain] OVERRIDE card Oil & Gas Equipment & Services
 
 ## DOSSIERS
-- **TSLA** Neutral conv=9 +8/-8 [earnings] backend=grok_native
-  Tesla opened paid Cybercab service in Austin on 2026-09-03 after Dutch RDW FSD Supervised type approval on 2026-04-10 and a Lithuania rollout on 2026-05-20, but NHTSA opened AQ26002 the same day and issued a 2026-09-10 Special Order on FMVSS certification while the EU FSD vote slipped toward December. Auto prints were split: Q1 2026 (2026-04-22) beat with $0.41 non-GAAP EPS and 21.1% gross margin, Q2 (2026-07-22) missed at $0.33 vs ~$0.53 with a 1.4% operating margin and -$1.09B FCF, and Q3 deliveries on 2026-10-02 were 486,532, about 25,000 above consensus but down 2.1% YoY. Industrial optionality added a 2026-09-24 Semi volume-production start in Nevada, a 2026-09-22 ZET SCALE 2,500-truck supplier award, a closed $1.95B AI-hardware deal, and Intel joining Terafab on 2026-04-07. Offsetting that, Tesla recalled 20,349 Model 3/Y units on 2026-08-04 for headlight brightness, went to trial on 2026-09-21 over Fremont racial-harassment claims, and saw JPMorgan cut its PT to $415 on 2026-10-09.
-  - positive Product launch/FDA approval/regulatory greenlight 2026-09-03: Tesla launched the Cybercab commercially in Austin yesterday
-  - negative Regulatory denial or delay/antitrust block 2026-09-10: The agency issued a formal Special Order on September 10 demanding that the company show, 
-  - negative Product delay/failure/rejection/safety recall 2026-08-04: Tesla has issued a recall on over 20,349 Model 3 and Model Y vehicles which have low-beam 
-  - negative Product delay/failure/rejection/safety recall 2026-04-22: Tesla listed its robotaxi services in Phoenix, Miami, Orlando, Tampa, and Las Vegas as "pr
-- **NFLX** Bearish conv=27 +5/-8 [earnings] backend=grok_native
-  On 2026-04-16 Netflix reported Q1 revenue of $12.25 billion and a headline EPS beat that included a $2.8 billion WBD termination fee, and on 2026-04-22 the board authorized an additional $25 billion buyback. On 2026-07-16 Q2 revenue of $12.56 billion slightly missed consensus even as management narrowed full-year sales to $51.0-$51.4 billion. On 2026-09-18 Wells Fargo cut NFLX to Underweight with a $57 target on engagement, a move only partly offset when Deutsche Bank upgraded to Buy on 2026-09-29 and Evercore raised its target to $110. By 2026-09-30 Co-CEO Ted Sarandos said H1 engagement grew only about 2% and that Netflix is not growing as fast as he wants, while a 2026-09-15 UPC injunction, clustered August Form 4 sales, and early-October PT cuts from Goldman, Barclays, and Morgan Stanley kept the tape defensive.
-  - positive Earnings beat (revenue, EBITDA, EPS) 2026-04-16: Revenue reached $12.25 billion, up 16.2% from the comparable 2025 quarter.
-  - negative Earnings miss (revenue, EBITDA, EPS) 2026-07-16: Netflix booked revenue of $12.56 billion, for year-over-year growth of 13%
-  - positive Share repurchase program/increased dividend 2026-04-22: on April 22, 2026, Netflix's board of directors authorized an additional $25 billion share
-  - negative Insider selling (especially by CEO/CFO, or clustered sales) 2026-08-03: Sarandos sold a total of 133,162 shares at a weighted average price of approximately $73.1
-- **UEC** Bullish conv=28 +6/-4 [override_captain] backend=grok_native
-  On April 8, 2026 UEC received TCEQ approval and commenced production at Burke Hollow, the first new U.S. ISR uranium mine in more than a decade. Fiscal 2026 results on September 29 showed 229,294 pounds produced and Q4 output up 157% to 82,744 pounds, even as Q4 EPS of ($0.12) missed estimates, while September 28 final approvals for four Christensen Ranch header houses keep the ramp going. Post-print research split, with HC Wainwright ($26.75) and Roth ($17) reiterating Buys on September 30 versus National Bank’s October 5 cut to $15 and Zacks’ drop to Strong Sell. The May 28 government-affairs hire and Segra Capital’s October 6 550,000-share stake are secondary to whether the Texas and Wyoming wellfields convert permits into repeatable volume without another lumpy miss.
-  - positive Product launch/FDA approval/regulatory greenlight 2026-04-08: received approval from the Texas Commission on Environmental Quality ("TCEQ") and commence
-  - positive Operational milestone 2026-09-29: fiscal 2026 results with 229,294 pounds produced, Q4 production up 157% to 82,744 pounds
-  - positive Regulatory approval 2026-09-28: On September 28, 2026, final regulatory approvals were issued for four of these.
-  - negative Earnings miss 2026-09-29: Q4 EPS of ($0.12) missing estimates
+- **GOOG** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 GOOG
+- **GOOGL** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOGL
+- **TSLA** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA
+- **NFLX** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NFLX
+- **NE** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE
+- **RIG** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 RIG
+- **SLB** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB
+- **BKR** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR
 
-CATALYST_DAILY_OK
+CATALYST_DAILY_FAIL 0/8
