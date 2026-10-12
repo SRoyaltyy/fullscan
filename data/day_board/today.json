@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T06:54:29.928558-04:00",
+  "generated_at": "2026-10-12T06:54:55.000237-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -99,31 +99,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T06:50:53.322820-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-12_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 273590,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-12_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18734,
-          "preview": "# MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T06:50:53.179839-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T06:50:53.179839-04:00"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -284,6 +259,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ELV, AAPL, AVPT, ATRC, CXT \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 BIIB, ATRC, CXT, HTHT, RGEN"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T06:54:52.792953-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-12_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 4099637,
+          "preview": "raw=5631 usable=479 single=321 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O | Stein\u2019s Latest: Sixers, Black, Miller, Wallace, Powell - Hoops Rumors"
+        },
+        {
+          "path": "01_daily/news/2026-10-12_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12702,
+          "preview": "# News Parse v2 \u2014 2026-10-12T06:54:51.969245-04:00\nWindow\u224848h | news_mode=on | raw=5631 | usable=479 | single_name=321 | noise_dropped=4581\nusable polarity={'+': 11, '-': 71, 'mixed': 5, 'neutral': 392}"
+        }
+      ],
+      "preview": "raw=5631 usable=479 single=321 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O | Stein\u2019s Latest: Sixers, Black, Miller, Wallace, Powell - Hoops Rumors \u00b7 # News Parse v2 \u2014 2026-10-12T06:54:51.969245-04:00\nWindow\u224848h | news_mode=on | raw=5631 | usable=479 | single_name=321 | noise_dropped=4581\nusable polarity={'+': 11, '-': 71, 'mixed': 5, 'neutral': 392}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

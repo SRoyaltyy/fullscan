@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T06:53:17.037626-04:00",
+  "generated_at": "2026-10-12T06:54:52.753050-04:00",
   "run_id": "38222244313",
   "runner": "ecs-openclaw",
   "all_ok": false,
@@ -171,7 +171,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-12_parsed.json",
-        "size": 4249468
+        "size": 4099637
       },
       {
         "kind": "news_actions",
