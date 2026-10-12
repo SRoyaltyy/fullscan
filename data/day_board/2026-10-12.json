@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T06:50:54.133565-04:00",
+  "generated_at": "2026-10-12T06:53:05.116100-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,9 +8,9 @@
     "MISSING News judge MD `01_daily/news/2026-10-12_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 7,
+    "ok": 6,
     "partial": 1,
-    "fail": 0,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -57,7 +57,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 273590,
+          "size": 274833,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -68,10 +68,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18375,
+          "size": 18390,
           "said": "MAP HEAT \u2014 2026-10-12",
           "bullets": [
-            "Export `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T06:50:53.179839-04:00",
+            "Export `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T04:19:38.311321-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -115,7 +115,7 @@
           "size": 11816,
           "said": "Finviz Daily Digest \u2014 2026-10-12",
           "bullets": [
-            "_Generated 2026-10-12T06:48:23.564021-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -229,7 +229,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 273590,
+          "size": 274833,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -359,7 +359,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['events', 'news_judge', 'general_predict']",
-          "size": 6510,
+          "size": 7223,
           "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events, news_judge, general_predict",
           "bullets": []
         },
@@ -540,8 +540,8 @@
           "path": "01_daily/weather/2026-10-12_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9333 vix=falling yields=falling",
-          "size": 9333,
+          "reason": "sectors=11 bytes=9331 vix=falling yields=falling",
+          "size": 9331,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities"
@@ -600,11 +600,11 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -643,11 +643,16 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-10-12_dossiers.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "usable=2/2",
-          "size": 8132,
-          "said": "2/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 GOOG, GOOGL, TSLA, NFLX, NE, RIG, SLB, BKR",
-          "bullets": []
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=8)",
+          "size": 2674,
+          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 GOOG, GOOGL, TSLA, NFLX, NE, RIG, SLB, BKR",
+          "bullets": [
+            "GOOG: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 GOOG",
+            "GOOGL: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOGL",
+            "TSLA: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA",
+            "NFLX: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NFLX"
+          ]
         }
       ],
       "said": "112 ticker actions \u00b7 7 events \u00b7 5828 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
@@ -748,8 +753,8 @@
           "path": "01_daily/weather/2026-10-12_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9333 vix=falling yields=falling",
-          "size": 9333,
+          "reason": "sectors=11 bytes=9331 vix=falling yields=falling",
+          "size": 9331,
           "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities"
@@ -775,10 +780,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5910",
-          "size": 2234079,
-          "said": "217 rows",
+          "size": 2189199,
+          "said": "211 rows",
           "bullets": [
-            "AMZN, VCTR, GLBE, SKWD, RGA, HAS, AAMI, ANDG"
+            "DVN, LNG, RRC, SM, CNQ, TEN, BKV, CMBT"
           ]
         },
         {
@@ -856,9 +861,9 @@
           "bullets": []
         }
       ],
-      "said": "217 rows",
+      "said": "211 rows",
       "bullets": [
-        "AMZN, VCTR, GLBE, SKWD, RGA"
+        "DVN, LNG, RRC, SM, CNQ"
       ]
     },
     {
@@ -3108,6 +3113,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T06:50:53.179839-04:00"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T06:53:03.248199-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-12_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97004,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-12_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11840,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
     }
   ],
   "href": {

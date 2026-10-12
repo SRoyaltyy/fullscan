@@ -7,3 +7,11 @@ Outcome / learn / tonight's captain research = Post-Close ALL.
 
 - Weather / regime: exit 0
 - News parse: exit 0
+- Event scanner (primary): exit 0
+- Event catcher (gap hunt, no carry): exit 0
+- News actions: exit 0
+- News judge: exit 1
+- General market predict: exit 1
+- Per-sector predict (all 11): exit 1
+- Map heat morning delta refresh: exit 0
+- Catalyst dossiers (after book): exit 4
