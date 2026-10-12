@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T10:36:17.442857-04:00",
+  "generated_at": "2026-10-12T10:40:04.663563-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -382,7 +382,7 @@
       "date": "2026-10-12",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-12T10:36:16.138799-04:00",
+      "at": "2026-10-12T10:40:03.584803-04:00",
       "files": [
         {
           "path": "01_daily/weather/2026-10-12_weather.json",
@@ -395,7 +395,7 @@
           "path": "01_daily/weather/2026-10-12_weather.md",
           "ok": true,
           "reason": "",
-          "size": 5075,
+          "size": 5076,
           "preview": "# Weather report \u2014 2026-10-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
         }
       ],
