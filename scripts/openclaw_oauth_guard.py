@@ -41,7 +41,7 @@ GW = os.environ.get("OPENCLAW_GUARD_URL", "http://127.0.0.1:18789").rstrip("/")
 STATUS = Path(os.environ.get("OPENCLAW_GUARD_STATUS",
                              f"{HOME}/fullscan-logs/openclaw_guard_status.json"))
 RENEW_WINDOW_MIN = int(os.environ.get("OPENCLAW_RENEW_WINDOW_MIN", "90"))
-MIN_LEFT_MIN = int(os.environ.get("OPENCLAW_MIN_LEFT_MIN", "30"))
+MIN_LEFT_MIN = int(os.environ.get("OPENCLAW_MIN_LEFT_MIN", "0"))
 CALL_TIMEOUT = int(os.environ.get("OPENCLAW_GUARD_CALL_TIMEOUT", "90"))
 MODEL = os.environ.get("OPENCLAW_BACKEND_MODEL", "xai/grok-4.3")
 PAID_ENV = ("XAI_API_KEY", "OPENCLAW_XAI_API_KEY", "GROK_API_KEY")
@@ -142,27 +142,32 @@ def renew(result: dict) -> bool:
     # runtime on the next xAI call and written back to its store. To renew
     # ahead of the window we wait out nothing - we make the call now; if the
     # token is still valid but close, the post-check below decides.
-    call = as_gha(["openclaw", "infer", "model", "run", "--local", "--model", MODEL,
-                   "Reply with only the number: 17+25"], 180)
-    out = (call.stdout or "") + (call.stderr or "")
-    result["renew_call_rc"] = call.returncode
-    result["renew_call_answer_ok"] = "42" in (call.stdout or "")
-    # Redacted tail so a failed refresh shows its real reason (no tokens:
-    # strip anything that looks like a bearer/JWT).
-    tail = re.sub(r"\s+", " ", out)[-400:]
-    result["renew_call_tail"] = re.sub(r"(eyJ[\w.-]{10,}|[A-Za-z0-9_\-]{40,})", "<redacted>", tail)
+    # Proven on ECS 2026-10-12 (OpenClaw 2026.7.1-2): one real completion
+    # through the gateway with an expired profile refreshed it unattended
+    # (new expiry = call time + 6h). `openclaw infer --local` returned rc=1
+    # and did not refresh, so we renew through the gateway first and only
+    # fall back to the CLI.
+    gw_ok = real_completion(result, "renew")
+    out = ""
+    if not gw_ok:
+        call = as_gha(["openclaw", "infer", "model", "run", "--local", "--model", MODEL,
+                       "Reply with only the number: 17+25"], 180)
+        out = (call.stdout or "") + (call.stderr or "")
+        result["renew_call_rc"] = call.returncode
+        tail = re.sub(r"\s+", " ", out)[-400:]
+        result["renew_call_tail"] = re.sub(r"(eyJ[\w.-]{10,}|[A-Za-z0-9_\-]{40,})", "<redacted>", tail)
     exp2, _, _ = xai_oauth_expiry()
     left2 = (exp2 - datetime.now(timezone.utc)).total_seconds() / 60 if exp2 else None
     result["expires_after"] = exp2.isoformat() if exp2 else None
     result["minutes_left_after"] = round(left2, 1) if left2 is not None else None
-    log(f"after call rc={call.returncode} expires={result['expires_after']} left_min={result['minutes_left_after']}")
+    log(f"after renew call gw_ok={gw_ok} expires={result['expires_after']} left_min={result['minutes_left_after']}")
     if re.search(r"cloudflare|captcha|invalid_grant|re-?auth|refresh.*fail", out, re.I):
         result["renew"] = "FAIL: refresh rejected - interactive device login needed"
         result["renew_error_hint"] = re.sub(r"\s+", " ", out)[-240:]
         return False
-    if left2 is None or left2 < MIN_LEFT_MIN:
-        result["renew"] = ("FAIL: token not extended (OpenClaw refreshes only after expiry; "
-                           "re-run after expiry or do device login)")
+    if left2 is None or left2 <= MIN_LEFT_MIN:
+        # Still expired after a real call = refresh failed -> device login.
+        result["renew"] = "FAIL: token still expired after a real call - interactive device login needed"
         return False
     result["renew"] = "OK" if (exp2 and exp and exp2 > exp) else "OK: still valid"
     return True
