@@ -1,0 +1,61 @@
+name: LLM key probe (names + status only)
+on: workflow_dispatch
+permissions: {contents: read}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe
+        env:
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          DASHSCOPE_BASE_URL: ${{ secrets.DASHSCOPE_BASE_URL }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          NVIDIA_NIM_API_KEY: ${{ secrets.NVIDIA_NIM_API_KEY }}
+          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+          HUNYUAN_API_KEY: ${{ secrets.HUNYUAN_API_KEY }}
+          TENCENT_API_KEY: ${{ secrets.TENCENT_API_KEY }}
+          TENCENT_BASE_URL: ${{ secrets.TENCENT_BASE_URL }}
+          TOKENHUB_API_KEY: ${{ secrets.TOKENHUB_API_KEY }}
+          TOKENHUB_BASE_URL: ${{ secrets.TOKENHUB_BASE_URL }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import os, requests, concurrent.futures as cf
+          D=os.environ.get
+          T=[("ZHIPU_API_KEY","https://open.bigmodel.cn/api/paas/v4","glm-5.3"),
+             ("GLM_API_KEY","https://open.bigmodel.cn/api/paas/v4","glm-5.3"),
+             ("GLM_API_KEY","https://api.z.ai/api/paas/v4","glm-5.3"),
+             ("DASHSCOPE_API_KEY",(D("DASHSCOPE_BASE_URL") or "https://dashscope-intl.aliyuncs.com/compatible-mode/v1"),"qwen3-max"),
+             ("QWEN_API_KEY","https://dashscope-intl.aliyuncs.com/compatible-mode/v1","qwen3-max"),
+             ("QWEN_API_KEY","https://dashscope.aliyuncs.com/compatible-mode/v1","qwen3-max"),
+             ("GEMINI_API_KEY","https://generativelanguage.googleapis.com/v1beta/openai","gemini-2.5-pro"),
+             ("GOOGLE_AI_STUDIO_API_KEY","https://generativelanguage.googleapis.com/v1beta/openai","gemini-2.5-pro"),
+             ("MISTRAL_API_KEY","https://api.mistral.ai/v1","mistral-large-latest"),
+             ("NVIDIA_API_KEY","https://integrate.api.nvidia.com/v1","moonshotai/kimi-k2-instruct"),
+             ("NVIDIA_NIM_API_KEY","https://integrate.api.nvidia.com/v1","moonshotai/kimi-k2-instruct"),
+             ("SILICONFLOW_API_KEY","https://api.siliconflow.cn/v1","moonshotai/Kimi-K2-Instruct"),
+             ("HUNYUAN_API_KEY","https://api.hunyuan.cloud.tencent.com/v1","hunyuan-turbos-latest"),
+             ("TENCENT_API_KEY",(D("TENCENT_BASE_URL") or "https://api.lkeap.cloud.tencent.com/v1"),"deepseek-v3.1"),
+             ("TOKENHUB_API_KEY",(D("TOKENHUB_BASE_URL") or ""),"glm-5.3"),
+             ("OPENROUTER_API_KEY","https://openrouter.ai/api/v1","z-ai/glm-5.3"),
+             ("DEEPSEEK_API_KEY","https://api.deepseek.com","deepseek-chat")]
+          def go(t):
+              n,u,m=t; k=(D(n) or "").strip()
+              if not k: return (n,u,m,"no secret")
+              if not u: return (n,u,m,"no base url")
+              try:
+                  r=requests.post(u.rstrip("/")+"/chat/completions",headers={"Authorization":"Bearer "+k},
+                    json={"model":m,"messages":[{"role":"user","content":"Reply OK"}],"max_tokens":16},timeout=40)
+                  msg=r.text[:120].replace(k,"***")
+                  return (n,u,m,f"HTTP {r.status_code} {'' if r.ok else msg}")
+              except Exception as e: return (n,u,m,"err "+type(e).__name__)
+          with cf.ThreadPoolExecutor(20) as ex:
+              for row in ex.map(go,T): print("PROBE|"+"|".join(row))
+          PY
