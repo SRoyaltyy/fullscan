@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-12
 
-Export `finviz_2026-10-12.csv` · 11616 names · generated 2026-10-12T06:50:53.179839-04:00
+Export `finviz_2026-10-12.csv` · 11616 names · generated 2026-10-12T08:05:39.422420-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -72,47 +72,47 @@ Econ (importance ≥ 2):
 - 12:50 ET  Fed Hammack Speech  actual —  cons —  surprise —  prev —
 - 03:45 ET  Fed Waller Speech  actual —  cons —  surprise —  prev —
 - 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev 23.75K
-- 10:00 ET  Existing Home Sales  actual —  cons 3.97M  surprise —  prev 3.98M
+- 10:00 ET  Existing Home Sales  actual —  cons 3.96M  surprise —  prev 3.98M
 - 10:00 ET  Existing Home Sales MoM  actual —  cons -0.3%  surprise —  prev -2%
 - 13:00 ET  Fed Barkin Speech  actual —  cons —  surprise —  prev —
-- 14:00 ET  Monthly Budget Statement  actual —  cons $210.0B  surprise —  prev -$167B
+- 14:00 ET  Monthly Budget Statement  actual —  cons -$28B  surprise —  prev -$167B
 - 16:00 ET  Fed Collins Speech  actual —  cons —  surprise —  prev —
 - 05:40 ET  Fed Bowman Speech  actual —  cons —  surprise —  prev —
 - 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev 7.49%
 - 08:30 ET  Core Inflation Rate MoM  actual —  cons 0.2%  surprise —  prev 0.3%
 - 08:30 ET  Core Inflation Rate YoY  actual —  cons 2.5%  surprise —  prev 2.4%
 - 08:30 ET  Inflation Rate MoM  actual —  cons 0.6%  surprise —  prev 0.4%
-- 08:30 ET  Inflation Rate YoY  actual —  cons 3.6%  surprise —  prev 3.4%
-- 08:30 ET  CPI  actual —  cons 336.5  surprise —  prev 334.98
+- 08:30 ET  Inflation Rate YoY  actual —  cons 3.7%  surprise —  prev 3.4%
+- 08:30 ET  CPI  actual —  cons 336.67  surprise —  prev 334.98
 - 08:30 ET  CPI s.a  actual —  cons 335.8  surprise —  prev 334.131
 - 13:30 ET  Fed Barkin Speech  actual —  cons —  surprise —  prev —
 - 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev -2.09M
 - 22:55 ET  Fed Bowman Speech  actual —  cons —  surprise —  prev —
 - 08:30 ET  PPI MoM  actual —  cons 0.5%  surprise —  prev 0.4%
+- 08:30 ET  Retail Sales MoM  actual —  cons 0.3%  surprise —  prev 1.2%
 - 08:30 ET  Core PPI MoM  actual —  cons 0.3%  surprise —  prev 0.2%
-- 08:30 ET  Initial Jobless Claims  actual —  cons 197K  surprise —  prev 197K
-- 08:30 ET  NY Empire State Manufacturing Index  actual —  cons 3.2  surprise —  prev 7.60
-- 08:30 ET  Philadelphia Fed Manufacturing Index  actual —  cons 26.5  surprise —  prev 37.8
-- 08:30 ET  Retail Sales Control Group MoM  actual —  cons 0.2%  surprise —  prev 1.4%
-- 09:30 ET  Retail Sales MoM  actual —  cons 0.3%  surprise —  prev 1.2%
-- 09:30 ET  Retail Sales Ex Autos MoM  actual —  cons 0.5%  surprise —  prev 1.4%
+- 08:30 ET  Initial Jobless Claims  actual —  cons 200K  surprise —  prev 197K
+- 08:30 ET  NY Empire State Manufacturing Index  actual —  cons 12  surprise —  prev 7.60
+- 08:30 ET  Philadelphia Fed Manufacturing Index  actual —  cons 27.8  surprise —  prev 37.8
+- 08:30 ET  Retail Sales Control Group MoM  actual —  cons 0.3%  surprise —  prev 1.4%
+- 08:30 ET  Retail Sales Ex Autos MoM  actual —  cons 0.5%  surprise —  prev 1.4%
 - 10:00 ET  Business Inventories MoM  actual —  cons 0.4%  surprise —  prev 0.8%
 - 11:00 ET  Atlanta Fed GDPNow  actual —  cons 3.6%  surprise —  prev 3.6%
 - 12:00 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev -3.186M
 - 12:00 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev 0.382M
 - 16:30 ET  Fed Hammack Speech  actual —  cons —  surprise —  prev —
 - 23:30 ET  Fed Chair Warsh Speech  actual —  cons —  surprise —  prev —
-- 08:30 ET  Export Prices MoM  actual —  cons 0.7%  surprise —  prev 0.6%
-- 08:30 ET  Import Prices MoM  actual —  cons 0.6%  surprise —  prev 0.7%
-- 09:15 ET  Industrial Production MoM  actual —  cons 0.3%  surprise —  prev 0%
+- 08:30 ET  Export Prices MoM  actual —  cons 1%  surprise —  prev 0.6%
+- 08:30 ET  Import Prices MoM  actual —  cons 0.7%  surprise —  prev 0.7%
+- 09:15 ET  Industrial Production MoM  actual —  cons 0.4%  surprise —  prev 0%
 - 16:00 ET  Net Long-term TIC Flows  actual —  cons $125.7B  surprise —  prev -$27.9B
-- 10:00 ET  NAHB Housing Market Index  actual —  cons —  surprise —  prev 32
+- 10:00 ET  NAHB Housing Market Index  actual —  cons 31  surprise —  prev 32
 - 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev —
 - 08:30 ET  Building Permits Prel  actual —  cons 1.36M  surprise —  prev —
 
 Mega-cap earnings:
-- AMC **GOOGL**  EPS est 3.0388  (Alphabet Inc)
 - AMC **GOOG**  EPS est 3.0379  (Alphabet Inc)
+- AMC **GOOGL**  EPS est 3.0388  (Alphabet Inc)
 - AMC **MSFT**  EPS est 4.7154  (Microsoft Corp)
 - BMO **TSM**  EPS est 4.4279  (Taiwan Semiconductor Manufacturing ADR)
 - AMC **TSLA**  EPS est 0.4538  (Tesla Inc)
@@ -133,10 +133,10 @@ Mega-cap earnings:
 - BMO **GEV**  EPS est 4.0164  (GE Vernova Inc)
 - BMO **GS**  EPS est 12.8648  (Goldman Sachs Group Inc)
 - AMC **TXN**  EPS est 2.416  (Texas Instruments Inc)
-- AMC **KLAC**  EPS est 1.1838  (KLA Corp)
 - BMO **WFC**  EPS est 1.847  (Wells Fargo & Co)
-- AMC **SAP**  EPS est 2.0816  (Sap SE ADR)
+- AMC **KLAC**  EPS est 1.1838  (KLA Corp)
 - BMO **RTX**  EPS est 1.7719  (RTX Corp)
+- AMC **SAP**  EPS est 2.0816  (Sap SE ADR)
 - BMO **TMO**  EPS est 6.4032  (Thermo Fisher Scientific Inc)
 - BMO **C**  EPS est 2.6494  (Citigroup Inc)
 - AMC **IBM**  EPS est 2.8606  (International Business Machines Corp)
@@ -147,20 +147,20 @@ Mega-cap earnings:
 - BMO **ABT**  EPS est 1.4199  (Abbott Laboratories)
 - BMO **SCHW**  EPS est 1.6592  (Charles Schwab Corp)
 - BMO **UNP**  EPS est 3.4653  (Union Pacific Corp)
+- AMC **WELL**  EPS est 0.645  (Welltower Inc)
 - BMO **NEE**  EPS est 1.1852  (NextEra Energy Inc)
 - AMC **TMUS**  EPS est 2.8866  (T-Mobile US Inc)
-- AMC **WELL**  EPS est 0.645  (Welltower Inc)
 - BMO **DHR**  EPS est 1.9158  (Danaher Corp)
 
 Options event-vol flags (NOT direction):
-- **GOOGL** exp 2026-10-12 ATM IV 0.0078 implied move +0.0% put/call OI —
-- **GOOG** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI —
-- **MSFT** exp 2026-10-12 ATM IV 0.0005 implied move 0.0% put/call OI 0.0
-- **TSM** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI —
-- **TSLA** exp 2026-10-12 ATM IV 0.002 implied move +0.0% put/call OI —
+- **GOOG** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI 0.526
+- **GOOGL** exp 2026-10-12 ATM IV 0.0078 implied move +0.0% put/call OI 0.198
+- **MSFT** exp 2026-10-12 ATM IV 0.0005 implied move 0.0% put/call OI 0.515
+- **TSM** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI 1.264
+- **TSLA** exp 2026-10-12 ATM IV 0.002 implied move +0.0% put/call OI 0.849
 - **JPM** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI 0.736
-- **V** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI —
-- **ASML** exp 2026-10-16 ATM IV 0.0003 implied move 0.0% put/call OI —
+- **V** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI 0.103
+- **ASML** exp 2026-10-16 ATM IV 0.0003 implied move 0.0% put/call OI 0.68
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 4 min **NVDA** Nuvacore seeks funding at $2.5bn valuation to develop CPUs (Verdict)
-- 5 min **LAZ** Lazard Reports September 2026 Assets Under Management (PR Newswire)
-- 5 min **BHC,BLCO** Bausch + Lomb and Bausch Health Announce Appointment of Thomas J. Appio as Interim Bausch + Lomb CEO, Expect to Raise Full-Year 2026 Guidance (Business Wire)
-- 10 min **AVY** Avery Dennison Names Helen Sheirbon President, Solutions Group (Business Wire)
-- 11 min **KKR** TotalEnergies and KKR Plan to Add 700 MW of US Solar Capacity to Joint Venture (InvestorsHub)
-- 14 min **VST,NEE,D** Stocktwits Power Watch: CEG Bags Google Deal, VST Secures Government Funding, Utility Merger Draws Fire (Stocktwits)
-- 15 min **INTC** Intel CEO Highlights Rapid Adoption of Chinese AI Models and Potential for Quantum Computing (InvestorsHub)
-- 16 min **AVGO** Broadcom CEO Sees Capital as Main Constraint on AI Growth Despite Easing Chip Shortages (InvestorsHub)
-- 20 min **GPUS** Hyperscale Data Announces a Two Hundred Million Dollar Reduction in the Amount of Sales that May Be Made under the Sales Agreement Providing for Its Current ATM Offering (PR Newswire)
-- 20 min **BESS** Bimergen Energy to Present its $400 Million Battery Energy Storage Growth Strategy at ThinkEquity Conference (GlobeNewswire)
-- 20 min **TTMI** TTM Technologies Announces $400 Million in Planned Strategic Investments to Accelerate AI Infrastructure Capacity in China and Malaysia (GlobeNewswire)
-- 20 min **CABO** Cable One Provides Update on the Pending Purchase of Mega Broadband (Business Wire)
-- 20 min **TFX** Enrollment Completed in BIOMAG-LL Clinical Study Evaluating Longer Lengths for Freesolve Resorbable Magnesium Scaffold (Business Wire)
-- 22 min **RCAT** Red Cat Launches Red Cat Aerial, Unifying Its UAS Portfolio Under One Brand, and Unveils TRICHON Long-Endurance VTOL ISR System at AUSA 2026 (GlobeNewswire)
-- 22 min **IREN,MU,SKHY,SNDK,AMZN** Sandisk, IREN, SK Hynix, Amazon, and More Stocks That Explain Today's Market (Barrons.com)
-- 24 min **META,GOOG,GOOGL,AMZN** S&P 500 Profits Set to Surge More Than 30% in Q3 With AI Giants Dominating Growth (International Business Times)
-- 26 min **NVDA** Has Nvidia Stock Already Peaked? How to Spot the Warning Signs. (Barrons.com)
-- 30 min **HLN** Only Excedrin Brings Digital Pet Nostalgia Back with a Headache You Can't Ignore (PR Newswire)
-- 40 min **IREN,STLA,MU,GDDY** Premarket movers: Iren jumps on Anthropic deal, CCC surges on buyout talks (Investing.com)
-- 44 min **TTE** TotalEnergies Expands U.S. Solar Venture With KKR in $1.2 Billion Deal (Oilprice.com)
-- 48 min **LTH** Life Time Opens More Than 180,000-Square-Foot Athletic Country Club in Lakewood Ranch on Oct. 12 (PR Newswire)
-- 50 min **LDOS** Leidos Selects X-Bow to Provide Rocket Motors for U.S. Army's Low-Cost Cruise Missile (PR Newswire)
-- 50 min **AIIO** Robo.ai Plans ALIF Composites with 10 Million Square Meters of Annual Capacity Targeted for 2027 (PR Newswire)
-- 50 min **MNOV** MediciNova CEO Provides Shareholder Update (GlobeNewswire)
-- 50 min **ETD** Ethan Allen Mails Letter to Shareholders Detailing its Highly Qualified Nominees and Executable Growth Plan (GlobeNewswire)
+- 2 min **PLTR** Palantir's Price Tag Scared Wall Street. Why More Analysts Are Bullish. (Investor's Business Daily)
+- 2 min **IONQ** Quantum Computing Stocks: Darpa Spreads Its Bets As Industry Shakeout Looms (Investor's Business Daily)
+- 4 min **ARDX** Ardelyx Presents Real-World Data at ACG 2026 Showing Reduced Healthcare Resource Utilization Following IBSRELA Initiation in Adults with IBS-C (GlobeNewswire)
+- 4 min **FSLR,ENPH,TAN,RUN,NXT** Why First Solar Stock Just Got Upgraded (Barrons.com)
+- 4 min **OSCR** Oscar Health, Inc. 2026 Third Quarter Earnings Conference Call (Business Wire)
+- 5 min **PODC,LVO** LiveOne (NASDAQ:LVO) Partners With METAvivor to Fund Metastatic Breast Cancer Research, Live Streaming #LightUpMBC Live on October 13, 2026 (ACCESSWIRE)
+- 5 min **ONDS** Ondas Announces Regna AI, Powered by Palantir, to Advance Sovereign AI (ACCESSWIRE)
+- 5 min **BTLN** Brightline Interactive to Attend the 2026 Maxim Growth Summit (ACCESSWIRE)
+- 5 min **POM** POMDOCTOR LIMITED Highlights the Shift from Reactive Treatment to Predictive Healthcare (PR Newswire)
+- 5 min **RTX** RTX's Raytheon to advance target-detection capabilities for naval radars (PR Newswire)
+- 5 min **HLIT** Cablenet Selects Harmonic's cOS Broadband Platform to Deliver Multi-Gigabit Speeds in Cyprus (PR Newswire)
+- 5 min **ADNT** Adient to Discuss Fourth Quarter and Full-Year Fiscal 2026 Financial Results on Nov. 4, 2026 (PR Newswire)
+- 5 min **DCH** Dauch Corporation Announces Financial Leadership Succession Plan and Executive Realignment (PR Newswire)
+- 5 min **RKT** U.S. Pending Home Sales Sink Near 12-Year Low (PR Newswire)
+- 5 min **BHC** Six-Month Pilot Study Demonstrates Improved Guideline Adherence Following Implementation of Standardized Cirrhosis Clinical Pathway (PR Newswire)
+- 5 min **VLTO** Veralto Schedules Third Quarter 2026 Earnings Call (PR Newswire)
+- 5 min **STM** STMicroelectronics announces status of common share repurchase program (GlobeNewswire)
+- 5 min **ASML** ASML reports transactions under its current share buyback program (GlobeNewswire)
+- 5 min **NA** Nano Labs Announces Annual General Meeting (GlobeNewswire)
+- 5 min **DFDV** DFDV Continues Accumulating SOL as Treasury Growth Rises to 12% since August 12; CHAD Hits Record Highs Despite Crypto Selloff (GlobeNewswire)
+- 5 min **RZLV** Rezolve Ai to Participate in the Maxim Growth Summit 2026 (GlobeNewswire)
+- 5 min **STE** STERIS Expands Healthcare Consumables Offering with Definitive Agreement to Acquire  Xodus Medical, a Specialty Surgical Products Business Focused on Patient and OR Staff Safety (GlobeNewswire)
+- 5 min **FRSH** Freshworks to Extend Freshservice into AI and Software Spend Governance with Agreement to Acquire Torii (GlobeNewswire)
+- 5 min **XRPN** Evernorth Names Hugo Jeandesboz Chief Investment Officer (GlobeNewswire)
+- 5 min **PHAT** Phathom Pharmaceuticals Highlights New Cost-Effectiveness Data and Growing Clinical Interest in VOQUEZNA (vonoprazan) at ACG 2026 (GlobeNewswire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
