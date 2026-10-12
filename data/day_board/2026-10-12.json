@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T09:32:28.197197-04:00",
+  "generated_at": "2026-10-12T09:33:04.496540-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -820,7 +820,7 @@
           "size": 83503,
           "said": "Stock book \u2014 2026-10-12",
           "bullets": [
-            "_Generated 2026-10-12T09:22:21.600285-04:00_",
+            "_Generated 2026-10-12T09:32:37.585638-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -1034,31 +1034,6 @@
     }
   },
   "lands": [
-    {
-      "key": "events_catcher",
-      "title": "Event catcher (gap hunt, no carry)",
-      "date": "2026-10-12",
-      "ok": false,
-      "pushed": true,
-      "at": "2026-10-12T07:03:21.361077-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-10-12_events.json",
-          "ok": false,
-          "reason": "zero_events",
-          "size": 212,
-          "preview": "0 events \u00b7 "
-        },
-        {
-          "path": "01_daily/events/2026-10-12_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 205,
-          "preview": "# Event Scan \u2014 2026-10-12 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
-        }
-      ],
-      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-12 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -3717,6 +3692,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T09:33:03.487191-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-12_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1464314,
+          "preview": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-12_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2538,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12444,
+          "preview": "2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT"
+        },
+        {
+          "path": "01_daily/2026-10-12_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84596,
+          "preview": "# Stock book \u2014 2026-10-12\n_Generated 2026-10-12T09:32:37.585638-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 2026-10-12 BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET, PRGS \u00b7 SELL EOSE, TE, PLUG, OKLO, NEOV, FCEL, QBTS, QUBT \u00b7 # Stock book \u2014 2026-10-12\n_Generated 2026-10-12T09:32:37.585638-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
