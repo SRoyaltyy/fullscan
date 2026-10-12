@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T08:09:17.405653-04:00",
+  "generated_at": "2026-10-12T08:09:41.812921-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -240,8 +240,8 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 4099637,
-          "said": "4099637B on disk",
+          "size": 4011976,
+          "said": "4011976B on disk",
           "bullets": []
         },
         {
@@ -1030,24 +1030,6 @@
     }
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T04:32:25.565215-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-12_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2189199,
-          "preview": "5910 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 DVN, LNG, RRC, SM, CNQ"
-        }
-      ],
-      "preview": "5910 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 DVN, LNG, RRC, SM, CNQ"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -3600,6 +3582,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ELV, AAPL, AVPT, ATRC, CXT \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 BIIB, ATRC, CXT, HTHT, RGEN"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T08:09:40.153889-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-12_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 4011976,
+          "preview": "raw=5511 usable=473 single=320 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O | Stein\u2019s Latest: Sixers, Black, Miller, Wallace, Powell - Hoops Rumors"
+        },
+        {
+          "path": "01_daily/news/2026-10-12_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12702,
+          "preview": "# News Parse v2 \u2014 2026-10-12T08:09:39.355529-04:00\nWindow\u224848h | news_mode=on | raw=5511 | usable=473 | single_name=320 | noise_dropped=4469\nusable polarity={'+': 11, '-': 70, 'mixed': 5, 'neutral': 387}"
+        }
+      ],
+      "preview": "raw=5511 usable=473 single=320 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O | Stein\u2019s Latest: Sixers, Black, Miller, Wallace, Powell - Hoops Rumors \u00b7 # News Parse v2 \u2014 2026-10-12T08:09:39.355529-04:00\nWindow\u224848h | news_mode=on | raw=5511 | usable=473 | single_name=320 | noise_dropped=4469\nusable polarity={'+': 11, '-': 70, 'mixed': 5, 'neutral': 387}"
     }
   ],
   "href": {
