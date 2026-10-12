@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T08:37:50.166992-04:00",
+  "generated_at": "2026-10-12T08:38:02.488832-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1030,31 +1030,6 @@
     }
   },
   "lands": [
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T04:43:49.940547-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-12_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 84385,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-10-12_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 16412,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-12T04:43:40.262256-04:00\nraw=5828 unique_events=7 tickers=112"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-12T04:43:40.262256-04:00\nraw=5828 unique_events=7 tickers=112"
-    },
     {
       "key": "sector_board",
       "title": "Sector board",
@@ -3615,6 +3590,31 @@
         }
       ],
       "preview": "keys: date, generated_at, summary, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T08:38:00.775937-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-12_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 26057,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-12_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 26057,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-12\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-12\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "href": {
