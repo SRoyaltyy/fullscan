@@ -1,0 +1,65 @@
+name: fullscan.env backend diag
+
+# Prints ONLY LLM_BACKEND / GROK_ONLY / OPENCLAW_BREAKER_FILE / OPENCLAW_READ_CAP_S
+# lines from /home/gha/.fullscan.env and the preopen systemd unit. Never other lines.
+# mode=fix: backs the file up, then rewrites LLM_BACKEND=auto|deepseek -> grok
+# and GROK_ONLY=0 -> 1 in place. Nothing else changes.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "check or fix"
+        required: false
+        default: "check"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fullscan-env-diag
+  cancel-in-progress: false
+
+jobs:
+  diag:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 5
+    steps:
+      - name: Report / fix backend keys
+        env:
+          MODE: ${{ github.event.inputs.mode }}
+        run: |
+          set -uo pipefail
+          F=/home/gha/.fullscan.env
+          RE='^[[:space:]]*(export[[:space:]]+)?(LLM_BACKEND|GROK_ONLY|OPENCLAW_BREAKER_FILE|OPENCLAW_READ_CAP_S)='
+          show() {
+            echo "== $1: $F matched lines =="
+            if [ -r "$F" ]; then
+              grep -nE "$RE" "$F" || echo "(no matching lines)"
+            else
+              echo "(file missing or unreadable)"
+            fi
+          }
+          echo "whoami=$(whoami)"
+          show BEFORE
+          echo "== systemd units: Environment/EnvironmentFile for the four keys =="
+          for u in fullscan-preopen.service fullscan-preopen.timer; do
+            echo "-- $u --"
+            systemctl cat "$u" 2>/dev/null | grep -nE '^[[:space:]]*(#[[:space:]]*/|EnvironmentFile=)' || true
+            systemctl cat "$u" 2>/dev/null | grep -E '^[[:space:]]*Environment=' \
+              | grep -oE '(LLM_BACKEND|GROK_ONLY|OPENCLAW_BREAKER_FILE|OPENCLAW_READ_CAP_S)=[^[:space:]"]*' \
+              || echo "(no Environment= for these keys)"
+            systemctl show "$u" -p EnvironmentFiles 2>/dev/null || true
+          done
+          if [ "${MODE:-check}" = "fix" ] && [ -w "$F" ]; then
+            if grep -qE '^[[:space:]]*(export[[:space:]]+)?(LLM_BACKEND=["'"'"']?(auto|deepseek)|GROK_ONLY=["'"'"']?0)' "$F"; then
+              B="$F.bak.$(date -u +%Y%m%dT%H%M%SZ)"
+              cp -p "$F" "$B" && echo "backup: $B"
+              sed -i -E \
+                -e 's/^([[:space:]]*(export[[:space:]]+)?)LLM_BACKEND=["'"'"']?(auto|deepseek)["'"'"']?[[:space:]]*$/\1LLM_BACKEND=grok/' \
+                -e 's/^([[:space:]]*(export[[:space:]]+)?)GROK_ONLY=["'"'"']?0["'"'"']?[[:space:]]*$/\1GROK_ONLY=1/' "$F"
+              show AFTER
+            else
+              echo "fix: nothing overriding Grok-only; no change"
+            fi
+          fi
