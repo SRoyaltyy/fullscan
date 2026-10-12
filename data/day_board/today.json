@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T09:20:16.410469-04:00",
+  "generated_at": "2026-10-12T09:21:59.371322-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -11,32 +11,32 @@
   },
   "buy_1d": [
     {
-      "ticker": "ASTH",
-      "score": 0.706426341090431
+      "ticker": "SGRY",
+      "score": 0.4278799023745674
     },
     {
       "ticker": "CON",
-      "score": 0.639955708762995
+      "score": 0.6447394658922468
     },
     {
       "ticker": "AMN",
-      "score": 0.5920779365287303
+      "score": 0.6024309857271279
+    },
+    {
+      "ticker": "FIS",
+      "score": 0.4698654821938251
     },
     {
       "ticker": "KSPI",
-      "score": 0.3890022679416772
+      "score": 0.33809160034308045
     },
     {
       "ticker": "PACS",
-      "score": 0.7093787919305283
+      "score": 0.6648840344805036
     },
     {
       "ticker": "NET",
-      "score": 0.039196999757480214
-    },
-    {
-      "ticker": "TLS",
-      "score": 0.4176187622161986
+      "score": 0.03810872213428017
     }
   ],
   "sell_1d": [
@@ -46,31 +46,31 @@
     },
     {
       "ticker": "NEOV",
-      "score": -0.3778499454769789
+      "score": -0.38168906523251367
     },
     {
       "ticker": "FCEL",
-      "score": -0.25580112343935557
-    },
-    {
-      "ticker": "NNDM",
-      "score": -0.15510592095588355
-    },
-    {
-      "ticker": "POWL",
-      "score": -0.046123991740222386
+      "score": -0.2570600830846822
     },
     {
       "ticker": "EOSE",
-      "score": -0.333815224957611
+      "score": -0.35408584322590325
+    },
+    {
+      "ticker": "NNDM",
+      "score": -0.14343794270604965
+    },
+    {
+      "ticker": "POWL",
+      "score": -0.03178576780956627
     },
     {
       "ticker": "TE",
-      "score": -0.34040464175501434
+      "score": -0.34881123193049873
     },
     {
-      "ticker": "CRML",
-      "score": -0.22864236952546318
+      "ticker": "INDI",
+      "score": -0.22548820622943078
     }
   ],
   "flatten": {
@@ -99,31 +99,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T09:17:51.679269-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-12_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97004,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-12_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11840,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -284,6 +259,31 @@
         }
       ],
       "preview": "raw=5398 usable=467 single=313 \u00b7 US CPI to Show Overall Inflation Boosted by Higher Gasoline Prices - Bloomberg.c | Bank earnings to shed the first light on how higher yields are affecting the eco | Fed Crypto Events This Week: Will CPI, PPI and Fed Move Bitcoin Price? - Coin Ga | Harding and Powell compete on future vision for Nebraska CD2 in first debate - O | Stein\u2019s Latest: Sixers, Black, Miller, Wallace, Powell - Hoops Rumors \u00b7 # News Parse v2 \u2014 2026-10-12T09:20:02.667333-04:00\nWindow\u224848h | news_mode=on | raw=5398 | usable=467 | single_name=313 | noise_dropped=4373\nusable polarity={'+': 11, '-': 70, 'mixed': 5, 'neutral': 381}"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T09:21:58.286907-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-12_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9335,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-12_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5076,
+          "preview": "# Weather report \u2014 2026-10-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-12\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
