@@ -1,16 +1,78 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T05:44:40.936497-04:00",
+  "generated_at": "2026-10-12T05:44:45.866264-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "ASTH",
+      "score": 0.706426341090431
+    },
+    {
+      "ticker": "CON",
+      "score": 0.639955708762995
+    },
+    {
+      "ticker": "AMN",
+      "score": 0.5920779365287303
+    },
+    {
+      "ticker": "KSPI",
+      "score": 0.3890022679416772
+    },
+    {
+      "ticker": "PACS",
+      "score": 0.7093787919305283
+    },
+    {
+      "ticker": "NET",
+      "score": 0.039196999757480214
+    },
+    {
+      "ticker": "TLS",
+      "score": 0.4176187622161986
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "OKLO",
+      "score": -0.26472807610778865
+    },
+    {
+      "ticker": "NEOV",
+      "score": -0.3778499454769789
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.25580112343935557
+    },
+    {
+      "ticker": "NNDM",
+      "score": -0.15510592095588355
+    },
+    {
+      "ticker": "POWL",
+      "score": -0.046123991740222386
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.333815224957611
+    },
+    {
+      "ticker": "TE",
+      "score": -0.34040464175501434
+    },
+    {
+      "ticker": "CRML",
+      "score": -0.22864236952546318
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {
@@ -30,31 +92,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "catalyst",
-      "title": "Catalyst dossiers (after book)",
-      "date": "2026-10-12",
-      "ok": false,
-      "pushed": true,
-      "at": "2026-10-12T05:06:41.832183-04:00",
-      "files": [
-        {
-          "path": "01_daily/catalyst/2026-10-12_dossiers.json",
-          "ok": false,
-          "reason": "catalyst_fail n_ok=0/8",
-          "size": 1196,
-          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers"
-        },
-        {
-          "path": "01_daily/catalyst/2026-10-12_dossiers.md",
-          "ok": false,
-          "reason": "catalyst_fail n_ok=0/8",
-          "size": 1196,
-          "preview": "# CATALYST DAILY \u2014 2026-10-12\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-        }
-      ],
-      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-12\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-    },
     {
       "key": "status",
       "title": "Pre-open status packet",
@@ -215,6 +252,59 @@
         }
       ],
       "preview": "5910 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 AMZN, VCTR, GLBE, SKWD, RGA"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T05:44:45.134769-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-12_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1444754,
+          "preview": "1d BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-12_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2538,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-12_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12337,
+          "preview": "2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12337,
+          "preview": "2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML"
+        },
+        {
+          "path": "01_daily/2026-10-12_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84326,
+          "preview": "# Stock book \u2014 2026-10-12\n_Generated 2026-10-12T05:41:52.132484-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 2026-10-12 BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE, TE, CRML \u00b7 # Stock book \u2014 2026-10-12\n_Generated 2026-10-12T05:41:52.132484-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
