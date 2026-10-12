@@ -13,6 +13,7 @@ on:
         options:
           - deepseek
           - openrouter-glm
+          - openrouter-sonnet
       run_date:
         description: "YYYY-MM-DD of mechanical parse to judge (blank = latest)"
         required: false
@@ -68,9 +69,9 @@ jobs:
       - name: Run news judge
         if: env.skip != 'yes'
         env:
-          DEEPSEEK_API_KEY: ${{ (github.event.inputs.llm_provider == 'openrouter-glm') && secrets.OPENROUTER_API_KEY || secrets.DEEPSEEK_API_KEY }}
-          DEEPSEEK_BASE_URL: ${{ (github.event.inputs.llm_provider == 'openrouter-glm') && 'https://openrouter.ai/api/v1' || 'https://api.deepseek.com' }}
-          LLM_MODEL_OVERRIDE: ${{ (github.event.inputs.llm_provider == 'openrouter-glm') && 'z-ai/glm-5.3' || '' }}
+          DEEPSEEK_API_KEY: ${{ startsWith(github.event.inputs.llm_provider, 'openrouter') && secrets.OPENROUTER_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_BASE_URL: ${{ startsWith(github.event.inputs.llm_provider, 'openrouter') && 'https://openrouter.ai/api/v1' || 'https://api.deepseek.com' }}
+          LLM_MODEL_OVERRIDE: ${{ (github.event.inputs.llm_provider == 'openrouter-glm') && 'z-ai/glm-5.3' || (github.event.inputs.llm_provider == 'openrouter-sonnet') && 'anthropic/claude-sonnet-4.6' || '' }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"

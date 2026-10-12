@@ -966,7 +966,7 @@ def chat(messages: list[dict], model: str, tools: bool = False,
     if _ovr:
         model = _ovr
     deepseek_max_tokens = max_tokens
-    if model == "deepseek-chat" or _ovr:
+    if model == "deepseek-chat" and not _ovr:
         deepseek_max_tokens = min(
             max_tokens,
             config.DEEPSEEK_CHAT_MAX_TOKENS,
