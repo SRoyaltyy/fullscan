@@ -1,8 +1,8 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T15:34:22.848703-04:00",
-  "run_id": "38253762357",
-  "runner": "ecs-openclaw",
+  "generated_at": "2026-10-12T15:36:48.078445-04:00",
+  "run_id": "38297366169",
+  "runner": "GitHub Actions 1000027640",
   "all_ok": false,
   "qc_all_ok": false,
   "book_ok": false,
@@ -28,48 +28,6 @@
       "key": "news_parse",
       "title": "News parse",
       "returncode": 0
-    },
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "returncode": 0
-    },
-    {
-      "key": "events_catcher",
-      "title": "Event catcher (gap hunt, no carry)",
-      "returncode": 0
-    },
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "returncode": 0
-    },
-    {
-      "key": "news_judge",
-      "title": "News judge",
-      "returncode": 1
-    },
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "returncode": 1
-    },
-    {
-      "key": "sector_predict",
-      "title": "Per-sector predict (all 11)",
-      "returncode": 1
-    },
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "returncode": 0
-    },
-    {
-      "key": "catalyst",
-      "title": "Catalyst dossiers (after book)",
-      "returncode": 0,
-      "status": "OK",
-      "detail": "2/8 dossiers (grok timeout x0, deepseek empty)"
     }
   ],
   "github_runs": [
@@ -77,22 +35,22 @@
       "workflow": "preopen_all.yml",
       "n_today": 8,
       "latest": {
-        "id": 38257047540,
-        "status": "pending",
+        "id": 38297366169,
+        "status": "in_progress",
         "conclusion": null,
-        "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38257047540"
+        "event": "schedule",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38297366169"
       }
     },
     {
       "workflow": "finviz_preopen_scrape.yml",
-      "n_today": 1,
+      "n_today": 2,
       "latest": {
-        "id": 38222236518,
+        "id": 38296561189,
         "status": "completed",
         "conclusion": "success",
-        "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38222236518"
+        "event": "schedule",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38296561189"
       }
     },
     {
@@ -114,11 +72,11 @@
       "workflow": "news_judge.yml",
       "n_today": 8,
       "latest": {
-        "id": 38258308149,
-        "status": "in_progress",
-        "conclusion": null,
+        "id": 38263544573,
+        "status": "completed",
+        "conclusion": "success",
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38258308149"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38263544573"
       }
     },
     {
