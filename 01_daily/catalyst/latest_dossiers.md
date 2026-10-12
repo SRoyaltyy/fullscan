@@ -26,7 +26,7 @@
   - negative Adverse litigation/antitrust 2026-07-02: On July 2, 2026, the Court of Justice of the European Union (CJEU, the EU’s highest court)
   - negative Adverse litigation/antitrust 2026-10-02: the Gemini 3.5 Pro was delivering disappointing training results
 - **TSLA** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA
-- **NFLX** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NFLX
+- **NFLX** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NFLX
 - **NE** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE
 - **RIG** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG
 - **SLB** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB
