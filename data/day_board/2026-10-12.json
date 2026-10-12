@@ -1,6 +1,6 @@
 {
   "date": "2026-10-12",
-  "generated_at": "2026-10-12T08:05:40.787067-04:00",
+  "generated_at": "2026-10-12T08:07:53.914581-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -57,7 +57,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 274546,
+          "size": 274833,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -68,10 +68,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18212,
+          "size": 18390,
           "said": "MAP HEAT \u2014 2026-10-12",
           "bullets": [
-            "Export `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T08:05:39.422420-04:00",
+            "Export `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T04:19:38.311321-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -115,7 +115,7 @@
           "size": 11816,
           "said": "Finviz Daily Digest \u2014 2026-10-12",
           "bullets": [
-            "_Generated 2026-10-12T06:48:23.564021-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -229,7 +229,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 274546,
+          "size": 274833,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -806,8 +806,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=215",
-          "size": 1440953,
-          "said": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL",
+          "size": 1444754,
+          "said": "1d BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -817,10 +817,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 81985,
+          "size": 83221,
           "said": "Stock book \u2014 2026-10-12",
           "bullets": [
-            "_Generated 2026-10-12T07:35:46.053764-04:00_",
+            "_Generated 2026-10-12T05:55:59.480803-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -884,8 +884,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=215",
-          "size": 1440953,
-          "said": "1d BUY SGRY, CON, AMN, FIS, KSPI, PACS, NET \u00b7 SELL OKLO, NEOV, FCEL, EOSE, NNDM, POWL",
+          "size": 1444754,
+          "said": "1d BUY ASTH, CON, AMN, KSPI, PACS, NET, TLS \u00b7 SELL OKLO, NEOV, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -934,32 +934,32 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "SGRY",
-        "score": 0.4278799023745674
+        "ticker": "ASTH",
+        "score": 0.706426341090431
       },
       {
         "ticker": "CON",
-        "score": 0.6447394658922468
+        "score": 0.639955708762995
       },
       {
         "ticker": "AMN",
-        "score": 0.6024309857271279
-      },
-      {
-        "ticker": "FIS",
-        "score": 0.4698654821938251
+        "score": 0.5920779365287303
       },
       {
         "ticker": "KSPI",
-        "score": 0.33809160034308045
+        "score": 0.3890022679416772
       },
       {
         "ticker": "PACS",
-        "score": 0.6648840344805036
+        "score": 0.7093787919305283
       },
       {
         "ticker": "NET",
-        "score": 0.03810872213428017
+        "score": 0.039196999757480214
+      },
+      {
+        "ticker": "TLS",
+        "score": 0.4176187622161986
       }
     ],
     "sell_1d": [
@@ -969,31 +969,31 @@
       },
       {
         "ticker": "NEOV",
-        "score": -0.38168906523251367
+        "score": -0.3778499454769789
       },
       {
         "ticker": "FCEL",
-        "score": -0.2570600830846822
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.35408584322590325
+        "score": -0.25580112343935557
       },
       {
         "ticker": "NNDM",
-        "score": -0.14343794270604965
+        "score": -0.15510592095588355
       },
       {
         "ticker": "POWL",
-        "score": -0.03178576780956627
+        "score": -0.046123991740222386
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.333815224957611
       },
       {
         "ticker": "TE",
-        "score": -0.34881123193049873
+        "score": -0.34040464175501434
       },
       {
-        "ticker": "INDI",
-        "score": -0.22548820622943078
+        "ticker": "CRML",
+        "score": -0.22864236952546318
       }
     ],
     "flatten": {
@@ -1030,31 +1030,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-10-12",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-12T04:19:38.356275-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-12_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 274833,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-12_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18753,
-          "preview": "# MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T04:19:38.311321-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T04:19:38.311321-04:00"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -3600,6 +3575,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-12\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-12T08:05:39.422420-04:00"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-12",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-12T08:07:52.071444-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-12_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97004,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-12_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11840,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-12\n_Generated 2026-10-12T04:16:51.634443-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
     }
   ],
   "href": {
