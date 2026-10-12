@@ -82,6 +82,7 @@ jobs:
           LLM_FALLBACK_API_KEY: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && secrets.TOKENHUB_API_KEY || '' }}
           LLM_FALLBACK_BASE_URL: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && secrets.TOKENHUB_BASE_URL || '' }}
           LLM_FALLBACK_MODEL: glm-5.3
+          LLM_READ_TIMEOUT_S: "300"
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_TIMEOUT: "10800"
