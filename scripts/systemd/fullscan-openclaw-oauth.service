@@ -1,0 +1,19 @@
+[Unit]
+Description=fullscan: renew xAI OAuth (SuperGrok, no API key) + verify OpenClaw gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+# Root so the guard can hard-restart the gateway; CLI calls drop to gha.
+User=root
+WorkingDirectory=/home/gha/fullscan
+EnvironmentFile=-/home/gha/.fullscan.env
+# Never let a paid key reach OpenClaw from this unit.
+UnsetEnvironment=XAI_API_KEY OPENCLAW_XAI_API_KEY GROK_API_KEY
+Environment=FULLSCAN_HOME=/home/gha
+Environment=TZ=America/New_York
+ExecStart=/usr/bin/python3 /home/gha/fullscan/scripts/openclaw_oauth_guard.py all
+TimeoutStartSec=900
+StandardOutput=append:/home/gha/fullscan-logs/openclaw_oauth.log
+StandardError=append:/home/gha/fullscan-logs/openclaw_oauth.log

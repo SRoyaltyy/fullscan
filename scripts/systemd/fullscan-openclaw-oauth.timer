@@ -1,0 +1,14 @@
+[Unit]
+Description=fullscan: xAI OAuth renew every 5h + guaranteed 05:30 ET pre-Pre-Open check
+
+[Timer]
+# Every 5h (ahead of the ~6h xAI token life).
+OnCalendar=*-*-* 00,05,10,15,20:10:00 America/New_York
+# Guaranteed renew + gateway guard before the 05:55 ET Pre-Open.
+OnCalendar=Mon..Fri *-*-* 05:30:00 America/New_York
+Persistent=true
+AccuracySec=30s
+Unit=fullscan-openclaw-oauth.service
+
+[Install]
+WantedBy=timers.target
