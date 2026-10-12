@@ -47,7 +47,7 @@
   }
  },
  "date": "2026-10-12",
- "generated_at": "2026-10-12T09:19:16-04:00",
+ "generated_at": "2026-10-12T09:26:54-04:00",
  "strategies": [
   {
    "buys": [
@@ -4735,20 +4735,21 @@
     "FIS",
     "KSPI",
     "PACS",
-    "NET"
+    "NET",
+    "PRGS"
    ],
    "family": "stock_book",
    "name": "stock_book_1d",
    "note": "weighted ranker horizon",
    "sells": [
+    "EOSE",
+    "TE",
+    "PLUG",
     "OKLO",
     "NEOV",
     "FCEL",
-    "EOSE",
-    "NNDM",
-    "POWL",
-    "TE",
-    "INDI"
+    "QBTS",
+    "QUBT"
    ],
    "source": "data/day_board/2026-10-12_strategy_tickets.json",
    "status": "OK"
@@ -4761,20 +4762,21 @@
     "FIS",
     "KSPI",
     "PACS",
-    "NET"
+    "NET",
+    "PRGS"
    ],
    "family": "paper",
    "name": "1d_top",
    "note": "paper sleeve = same ranker list",
    "sells": [
+    "EOSE",
+    "TE",
+    "PLUG",
     "OKLO",
     "NEOV",
     "FCEL",
-    "EOSE",
-    "NNDM",
-    "POWL",
-    "TE",
-    "INDI"
+    "QBTS",
+    "QUBT"
    ],
    "source": "data/day_board/2026-10-12_strategy_tickets.json",
    "status": "OK"
