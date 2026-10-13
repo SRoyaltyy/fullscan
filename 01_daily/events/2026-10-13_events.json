@@ -1,0 +1,12 @@
+{
+  "scan_date": "2026-10-13",
+  "events": [],
+  "catcher": {
+    "ran": true,
+    "replaced_primary": true,
+    "found": 0,
+    "duplicates_dropped": 0,
+    "coverage_assessment": "",
+    "biggest_gap": ""
+  }
+}

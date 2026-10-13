@@ -1,4 +1,4 @@
-# Event Scan — 2026-10-12 (catcher as primary)
+# Event Scan — 2026-10-13 (catcher as primary)
 
 - events tracked: **0** (primary parse failed; catcher replaced it)
 
