@@ -26,3 +26,8 @@ def test_embedded_data_untouched():
     pg = page(["2026-10-12"])
     out = p.patch(pg, {"date": "2026-10-13"})
     assert p.embedded_last_date(out) == "2026-10-12"
+
+
+def test_publish_script_reapplies_pending_patch():
+    sh = (Path(__file__).resolve().parent / "publish_dashboard.sh").read_text(encoding="utf-8")
+    assert "patch_fm_pending_day.py" in sh
