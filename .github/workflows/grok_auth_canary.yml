@@ -1,0 +1,32 @@
+name: Grok auth canary (pre-05:00 ET)
+
+# Read-only: one small real Grok completion through the ECS OpenClaw gateway.
+# Red with "DEVICE LOGIN NEEDED" when xAI wants an interactive device login,
+# so it is seen before the 05:49 ET Pre-Open. No renew, no restart, no
+# XAI_API_KEY, no paid inference.
+on:
+  schedule:
+    # 08:30 UTC = 04:30 EDT / 03:30 EST, Mon-Fri.
+    - cron: "30 8 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: grok-auth-canary
+  cancel-in-progress: false
+
+jobs:
+  canary:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+      - name: Real Grok completion through the gateway
+        run: |
+          sudo -n env -u XAI_API_KEY -u OPENCLAW_XAI_API_KEY -u GROK_API_KEY \
+            FULLSCAN_HOME=/home/gha GITHUB_STEP_SUMMARY="$GITHUB_STEP_SUMMARY" \
+            python3 scripts/grok_auth_canary.py
