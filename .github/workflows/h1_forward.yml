@@ -208,6 +208,8 @@ jobs:
           from zoneinfo import ZoneInfo
 
           sys.path.insert(0, os.getcwd())
+          from research.hot_n4_clean_v4.forward.h1_fill_missing import install
+          install()
           from research.hot_n4_clean_v4.forward.forward import plan_target
           from research.hot_n4_clean_v4.forward.ledger import kind_on, load, open_plan, plan_on
 
@@ -266,7 +268,7 @@ jobs:
         if: steps.guard.outputs.go == 'true'
         env:
           FORWARD_BOOK: h1
-        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/prices.py
+        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_fill_missing.py research/hot_n4_clean_v4/forward/prices.py
       - name: Chain window re-check
         id: window
         if: always() && steps.guard.outputs.go == 'true'
@@ -298,8 +300,8 @@ jobs:
         # forward.py runs exactly as before.
         run: |
           set -euo pipefail
-          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_seal_gate.py --check
-          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/forward.py
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_fill_missing.py research/hot_n4_clean_v4/forward/h1_seal_gate.py --check
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_fill_missing.py research/hot_n4_clean_v4/forward/forward.py
       - name: Refresh the h1 close display
         id: closes
         if: success() && steps.window.outputs.go == 'true'
