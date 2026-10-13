@@ -216,7 +216,7 @@ MS_MODELS = [
 ]
 # Zhipu current free Flash only. Never glm-5.x (TokenHub) and never older
 # glm-4-flash siblings (those are last-resort, not primary / news).
-ZHIPU_MODELS = ["glm-4.7-flash"]
+ZHIPU_MODELS = ["glm-5.3-flash", "glm-4.7-flash"]
 ZHIPU_URLS = [
     "https://open.bigmodel.cn/api/paas/v4/chat/completions",
     "https://api.z.ai/api/paas/v4/chat/completions",
@@ -1099,6 +1099,12 @@ def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None
             "max_tokens": max_tokens if budget is None else budget,
             "temperature": 0.1,
         }
+        # Match the already deployed GLM Flash payload contract (#568).
+        # 5.3 Flash always thinks; disabling thinking is rejected and a
+        # small budget can leave no visible JSON after reasoning.
+        if model.lower().startswith("glm-5.3-flash"):
+            payload["reasoning_effort"] = "low"
+            payload["max_tokens"] = max(payload["max_tokens"], 16000)
         if use_tools:
             payload['tools'] = [{'type': 'function', 'function': {
                 'name': 'emit_lane_result',

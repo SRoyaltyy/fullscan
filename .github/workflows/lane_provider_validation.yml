@@ -1,0 +1,114 @@
+name: Lane GLM validation and Grok diagnosis
+on:
+  push:
+    branches: [codex/lane-provider-repair-20261014]
+    paths:
+      - '.github/workflows/lane_provider_validation.yml'
+      - 'src/lane_route.py'
+      - 'src/predict_grok_heal.py'
+      - 'scripts/diagnose_openclaw_lane.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: lane-provider-validation-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  glm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/
+            /scripts/
+            /tests/fixtures/
+            /data/exports/finviz_latest.csv
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate contracts and regression repairs
+        run: PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_semantic*.py' && PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_provider_repairs.py'
+      - name: Program-only GLM first 100-title comparison
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          DASHSCOPE_BASE_URL: ${{ secrets.DASHSCOPE_BASE_URL }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          MODELSCOPE_API_KEY: ${{ secrets.MODELSCOPE_API_KEY }}
+          MODELSCOPE_API_TOKEN: ${{ secrets.MODELSCOPE_API_TOKEN }}
+          MODELSCOPE_SDK_TOKEN: ${{ secrets.MODELSCOPE_SDK_TOKEN }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          NVIDIA_NIM_API_KEY: ${{ secrets.NVIDIA_NIM_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
+          TOKENHUB_API_KEY: ${{ secrets.TOKENHUB_API_KEY }}
+          TENCENT_API_KEY: ${{ secrets.TENCENT_API_KEY }}
+          HUNYUAN_API_KEY: ${{ secrets.HUNYUAN_API_KEY }}
+          TOKENHUB_BASE_URL: ${{ secrets.TOKENHUB_BASE_URL }}
+          TENCENT_BASE_URL: ${{ secrets.TENCENT_BASE_URL }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
+          LANE_ALLOW_PAID_DEEPSEEK: ${{ vars.LANE_ALLOW_PAID_DEEPSEEK }}
+        run: |
+          PYTHONPATH=. python scripts/run_semantic_headlines.py \
+            --input tests/fixtures/semantic_acceptance/batch_02.json \
+            --output provider_results/glm_program_outputs.json \
+            --limit 100 --budget-seconds 3600 --headline-timeout 300 \
+            --batch-size 10 --batch-interval-seconds 5 --require-catalog \
+            --providers zhipu,gemini,qwen \
+            --models glm-5.3-flash,gemini-2.5-flash,qwen-flash
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lane-glm-provider-100
+          path: provider_results/
+  grok:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 65
+    env:
+      FULLSCAN_HOME: /home/gha
+      OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+      OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+      OPENCLAW_BACKEND_MODEL: xai/grok-4.6
+      OPENCLAW_GUARD_CALL_TIMEOUT: '45'
+      OPENCLAW_LANE_TIMEOUT: '120'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+          fetch-depth: 1
+      - name: Clear inherited sparse checkout
+        run: git sparse-checkout disable
+      - name: Diagnose timer, OAuth and both Grok model paths
+        id: diagnose
+        run: PYTHONPATH=.:scripts python3 scripts/diagnose_openclaw_lane.py --output provider_results/grok_diagnostic.json
+      - name: Program-only Grok 100-title comparison when healthy and idle
+        if: steps.diagnose.outputs.ready == 'true'
+        run: |
+          PYTHONPATH=. python3 scripts/run_semantic_headlines.py \
+            --input tests/fixtures/semantic_acceptance/batch_02.json \
+            --output provider_results/grok_program_outputs.json \
+            --limit 100 --budget-seconds 3600 --headline-timeout 300 \
+            --batch-size 10 --batch-interval-seconds 5 --require-catalog \
+            --providers openclaw --models xai/grok-4.6
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lane-grok-diagnosis-and-100
+          path: provider_results/
+

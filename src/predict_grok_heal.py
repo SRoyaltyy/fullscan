@@ -19,8 +19,12 @@ from zoneinfo import ZoneInfo
 ET = ZoneInfo("America/New_York")
 MAX_RETRIES = 2
 AUTH_RE = re.compile(
-    r"\b(401|403)\b|unauthori[sz]ed|forbidden|expired|refresh[ _-]?token|"
-    r"oauth|invalid[_ ]grant|device login", re.I)
+    r"\b(?:401|403)\b|unauthori[sz]ed|forbidden|invalid[_ ]grant|"
+    r"(?:oauth|access[ _-]?token|refresh[ _-]?token|credential|auth(?:entication)?)"
+    r".{0,80}(?:expired|rejected|invalid|failed|failure)|"
+    r"(?:expired|rejected|invalid|failed|failure).{0,80}"
+    r"(?:oauth|access[ _-]?token|refresh[ _-]?token|credential)|"
+    r"device login (?:needed|required)", re.I)
 ROOT = Path(__file__).resolve().parent.parent
 
 
@@ -30,7 +34,10 @@ def before_cutoff(now: datetime | None = None) -> bool:
 
 
 def is_auth_failure(text: str) -> bool:
-    return bool(AUTH_RE.search(text or ""))
+    # Database timeout expired / search HTTP 403 are not Grok auth errors.
+    # Match individual provider lines, never an unrelated multiline blob.
+    return any(AUTH_RE.search(line) for line in (text or "").splitlines()
+               if re.search(r"openclaw|\bgrok\b|\bxai\b|oauth|invalid[_ ]grant", line, re.I))
 
 
 def breaker_opened() -> bool:
