@@ -41,13 +41,13 @@
    "SIT": 0
   },
   "webull_sim": {
-   "MISSING": 1,
+   "MISSING": 0,
    "OK": 68,
    "SIT": 305
   }
  },
  "date": "2026-10-13",
- "generated_at": "2026-10-13T17:26:58-04:00",
+ "generated_at": "2026-10-13T19:22:21-04:00",
  "strategies": [
   {
    "buys": [
@@ -6388,15 +6388,6 @@
    ],
    "source": "data/webull_sim/days.jsonl",
    "status": "OK"
-  },
-  {
-   "buys": [],
-   "family": "webull_sim",
-   "name": "excel_all_webull_sim",
-   "note": "no row for 2026-10-13",
-   "sells": [],
-   "source": "data/webull_sim/days.jsonl",
-   "status": "MISSING"
   },
   {
    "buys": [],
