@@ -26,6 +26,20 @@ class SemanticTests(unittest.TestCase):
         with patch('src.news_impact.semantic_headlines.route.load_keys',return_value=({'zhipu':'synthetic'},'', '')),patch('src.news_impact.semantic_headlines.route.ask_lane',return_value=(v,'glm-4.7-flash')):
             r=SemanticHeadlineClient(['zhipu']).analyze('FDA approves device')
         self.assertIs(r['model_output'],v)
+    def test_opt_in_existing_annotation_contract(self):
+        from src.news_impact.headline_analysis import analyse_headline
+        class Client:
+            def analyze(self,title):return {'status':'analyzed','model_output':valid()}
+        row=analyse_headline('FDA approves device',semantic_client=Client())
+        self.assertTrue(row['institutional_actions']['has_concrete_reported_action'])
+        self.assertEqual(row['sector_classification']['market_sectors'],['Healthcare'])
+        self.assertEqual(row['headline_event']['lane_class'],'gate')
+    def test_adapter_does_not_turn_unavailability_into_negative(self):
+        from src.news_impact.semantic_adapter import annotations_from_semantic
+        row=annotations_from_semantic('A headline',{'status':'unavailable','model_output':None})
+        self.assertIsNone(row['institutional_actions']['has_concrete_reported_action'])
+        self.assertEqual(row['headline_event']['status'],'unavailable')
+
     def test_primary_requires_event_evidence(self):
         v=valid();v['events']=[]
         self.assertTrue(validation_errors(v,'FDA approves device'))

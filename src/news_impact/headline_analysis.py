@@ -5,7 +5,10 @@ from .headline_sectors import identify_headline_sectors
 from .institutional_actions import identify_institutional_actions
 
 
-def analyse_headline(title, *, root=None):
+def analyse_headline(title, *, root=None, semantic_client=None):
+    if semantic_client is not None:
+        from .semantic_adapter import annotations_from_semantic
+        return annotations_from_semantic(title, semantic_client.analyze(title))
     event = identify_headline_event(title)
     sectors = identify_headline_sectors(title, root=root)
     institutions = identify_institutional_actions(title)
