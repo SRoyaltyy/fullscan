@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T13:17:00.364901-04:00",
+  "generated_at": "2026-10-13T13:23:59.139408-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -466,7 +466,7 @@
       "date": "2026-10-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-13T13:16:59.225404-04:00",
+      "at": "2026-10-13T13:23:58.490062-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
@@ -486,7 +486,7 @@
           "path": "data/day_board/2026-10-13.json",
           "ok": true,
           "reason": "",
-          "size": 236214,
+          "size": 236852,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T13:16:37.218775-04:00",
+  "generated_at": "2026-10-13T13:23:44.662512-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -3197,13 +3197,13 @@
       "date": "2026-10-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-13T09:09:25.542344-04:00",
+      "at": "2026-10-13T13:16:59.225404-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 35921,
+          "size": 35910,
           "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
         },
         {
@@ -3217,14 +3217,14 @@
           "path": "data/day_board/2026-10-13.json",
           "ok": true,
           "reason": "",
-          "size": 231049,
+          "size": 236214,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-10-13_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 195492,
+          "size": 200307,
           "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
         },
         {
@@ -3266,7 +3266,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 195492,
+          "size": 200307,
           "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
         },
         {
@@ -3294,14 +3294,14 @@
           "path": "data/day_board/hold_live_px.json",
           "ok": true,
           "reason": "",
-          "size": 1308,
+          "size": 1390,
           "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
         },
         {
           "path": "dashboard/factor-mine/hold_live_px.json",
           "ok": true,
           "reason": "",
-          "size": 1308,
+          "size": 1390,
           "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
         }
       ],
