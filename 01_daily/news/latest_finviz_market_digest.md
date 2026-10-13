@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-13
 
-**Generated:** 2026-10-13T04:16:18.784171-04:00 (America/New_York)
+**Generated:** 2026-10-13T04:16:34.787688-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a mixed open as traders position for major bank earnings, housing data and this week’s CPI report
 **Prior close:** SPX —  Nasdaq —  Dow —

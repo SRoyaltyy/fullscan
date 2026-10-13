@@ -1,8 +1,8 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T04:19:07.512421-04:00",
+  "generated_at": "2026-10-13T04:19:24.191476-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-13.csv",
+  "export": "finviz_2026-10-12.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8954,7 +8954,7 @@
       ]
     },
     {
-      "time": "17 min",
+      "time": "18 min",
       "title": "BIO-key Adds New Middle East Government Security Agency Customer, Expanding Regional Footprint",
       "url": "/news/401493/bio-key-adds-new-middle-east-government-security-agency-customer-expanding-regional-footprint",
       "source": "GlobeNewswire",
@@ -8963,7 +8963,7 @@
       ]
     },
     {
-      "time": "18 min",
+      "time": "19 min",
       "title": "Tower Semiconductor Announces Third Quarter 2026 Financial Results and Conference Call",
       "url": "/news/401491/tower-semiconductor-announces-third-quarter-2026-financial-results-and-conference-call",
       "source": "GlobeNewswire",
@@ -8972,7 +8972,7 @@
       ]
     },
     {
-      "time": "18 min",
+      "time": "19 min",
       "title": "New Research Reveals HDR is Foundational to Premium Video",
       "url": "/news/401492/new-research-reveals-hdr-is-foundational-to-premium-video",
       "source": "GlobeNewswire",
@@ -8981,7 +8981,7 @@
       ]
     },
     {
-      "time": "18 min",
+      "time": "19 min",
       "title": "European Automotive, Mobility Firms Expand AI in Operations",
       "url": "https://www.businesswire.com/news/home/20261013859332/en/",
       "source": "Business Wire",
@@ -8990,7 +8990,7 @@
       ]
     },
     {
-      "time": "20 min",
+      "time": "21 min",
       "title": "FSLR Stock Slips Overnight: First Solar's AI Power Demand Opportunity Faces Tax Credit Test, Says Analyst",
       "url": "https://finance.yahoo.com/markets/stocks/articles/fslr-stock-slips-overnight-first-075802987.html",
       "source": "Stocktwits",
@@ -8999,7 +8999,7 @@
       ]
     },
     {
-      "time": "25 min",
+      "time": "26 min",
       "title": "Tuesday's earnings calendar",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-wall-street-bank-earnings-south-korea-kospi-index/card/tuesday-s-earnings-calendar-JcQj6w4ZbrNf27JZqMjC?mod=mw_FV",
       "source": "MarketWatch",
@@ -9021,7 +9021,7 @@
       ]
     },
     {
-      "time": "39 min",
+      "time": "40 min",
       "title": "Seoul, Tokyo stocks plunge as Asia suffers fresh tech rout",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/seoul-tokyo-stocks-plunge-asia-024332072.html",
       "source": "AFP",
@@ -9039,7 +9039,7 @@
       ]
     },
     {
-      "time": "42 min",
+      "time": "43 min",
       "title": "Stock Market Today: Dow set to jump as Nasdaq set to retreat with bank earnings, AI trade in spotlight; Kospi slumps",
       "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-wall-street-bank-earnings-south-korea-kospi-index?mod=mw_FV",
       "source": "MarketWatch",
@@ -9066,7 +9066,7 @@
       ]
     },
     {
-      "time": "48 min",
+      "time": "49 min",
       "title": "Goldman to see slowest growth in EPS of the big banks reporting",
       "url": "https://www.marketwatch.com/livecoverage/banks-jpmorgan-goldman-wellsfargo-citigroup-earnings/card/goldman-to-see-slowest-growth-in-eps-of-the-big-banks-reporting-vuQCKzRXp2Z73OOmyQfY?mod=mw_FV",
       "source": "MarketWatch",
@@ -9095,7 +9095,7 @@
       ]
     },
     {
-      "time": "53 min",
+      "time": "54 min",
       "title": "Kaplan Fox Reminds Innventure, Inc. (INV) Investors That They Have Until October 27, 2026 to Move for Lead Plaintiff",
       "url": "https://www.newsfilecorp.com/release/318668/Kaplan-Fox-Reminds-Innventure-Inc.-INV-Investors-That-They-Have-Until-October-27-2026-to-Move-for-Lead-Plaintiff",
       "source": "Newsfile",
@@ -9104,7 +9104,7 @@
       ]
     },
     {
-      "time": "57 min",
+      "time": "58 min",
       "title": "Broadcoms AI Durability Warning Triggers Sharp Drop In SK Hynix, Samsung In Korea; Nvidia's China AI Chip Share Falls As Huawei Closes In",
       "url": "https://finance.yahoo.com/markets/stocks/articles/broadcom-ai-durability-warning-triggers-072109558.html",
       "source": "Stocktwits",
@@ -9112,8 +9112,8 @@
         "KORU",
         "SKHY",
         "AVGO",
-        "NVDA",
-        "INTC"
+        "INTC",
+        "NVDA"
       ]
     },
     {
@@ -9450,8 +9450,8 @@
       "source": "BeInCrypto",
       "tickers": [
         "AAPL",
-        "GOOGL",
-        "GOOG"
+        "GOOG",
+        "GOOGL"
       ]
     },
     {
@@ -10570,7 +10570,7 @@
       "company": "Novartis AG ADR",
       "datetime": "2026-10-27T08:30:00",
       "session": "BMO",
-      "mcap": 267132.14809265133,
+      "mcap": 267077.23382720945,
       "eps_est": 2.2766
     },
     {
@@ -10795,5 +10795,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 218,
   "earnings_window_count": 484,
-  "overlay_at": "2026-10-13T04:19:07.512421-04:00"
+  "overlay_at": "2026-10-13T04:19:24.191476-04:00"
 }
