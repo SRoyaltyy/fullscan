@@ -21,8 +21,8 @@
    "SIT": 0
   },
   "h1": {
-   "MISSING": 1,
-   "OK": 0,
+   "MISSING": 0,
+   "OK": 1,
    "SIT": 0
   },
   "paper": {
@@ -47,7 +47,7 @@
   }
  },
  "date": "2026-10-13",
- "generated_at": "2026-10-13T08:53:10-04:00",
+ "generated_at": "2026-10-13T08:54:43-04:00",
  "strategies": [
   {
    "buys": [
@@ -5220,13 +5220,22 @@
    "status": "MISSING"
   },
   {
-   "buys": [],
+   "buys": [
+    "BMBL",
+    "ADCT",
+    "FIGS",
+    "NAUT"
+   ],
    "family": "h1",
    "name": "h1",
-   "note": "no sealed plan row",
-   "sells": [],
+   "note": "sealed 2026-10-13T12:54:21Z",
+   "sells": [
+    "KOD 27",
+    "PENG 34",
+    "SDEV 1222"
+   ],
    "source": "research/hot_n4_clean_v4/forward_h1/h1_log.jsonl",
-   "status": "MISSING"
+   "status": "OK"
   },
   {
    "buys": [],
