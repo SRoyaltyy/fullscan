@@ -3,7 +3,7 @@
 Archive files must first be verified as public at the pinned archive commit.
 Reference assessments are authored separately, frozen before live execution.
 """
-import argparse,hashlib,html,json,pathlib,random,re
+import argparse,hashlib,html,json,pathlib,random,re,ast
 from difflib import SequenceMatcher
 
 def normal(title):
@@ -17,11 +17,14 @@ def similar(a,b):
     return matcher.real_quick_ratio()>=.85 and matcher.quick_ratio()>=.85 and matcher.ratio()>=.85
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--archive',type=pathlib.Path,required=True);p.add_argument('--exclude',type=pathlib.Path,action='append',default=[]);p.add_argument('--output',type=pathlib.Path,required=True);p.add_argument('--seed',type=int,default=202610131041);p.add_argument('--batches',type=int,default=10);args=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--archive',type=pathlib.Path,required=True);p.add_argument('--exclude',type=pathlib.Path,action='append',default=[]);p.add_argument('--controls',type=pathlib.Path);p.add_argument('--output',type=pathlib.Path,required=True);p.add_argument('--seed',type=int,default=202610131041);p.add_argument('--batches',type=int,default=10);args=p.parse_args()
     old=[];old_urls=set()
     for path in args.exclude:
         data=json.loads(path.read_text());rows=data.get('selected',data.get('records',[])) if isinstance(data,dict) else data
         old.extend(normal(r['title']) for r in rows);old_urls.update(r['source_url'] for r in rows if r.get('source_url'))
+    if args.controls:
+        node=next(n for n in ast.parse(args.controls.read_text()).body if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='CASES' for t in n.targets))
+        old.extend(normal(r[0]) for r in ast.literal_eval(node.value))
     pool={};visited=set()
     for path in sorted(args.archive.glob('*.md')):
         digest=hashlib.sha256(path.read_bytes()).hexdigest()
