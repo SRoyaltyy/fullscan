@@ -1,9 +1,10 @@
 name: Lane semantic headline pilot
 on:
   push:
-    branches: [codex/lane-semantic-headlines-20261013]
+    branches: [codex/lane-semantic-headlines-20261013, codex/lane-semantic-v2-20261013]
     paths:
       - 'src/news_impact/semantic_headlines.py'
+      - 'src/news_impact/semantic_ontology.py'
       - 'scripts/run_semantic_headlines.py'
       - 'tests/fixtures/semantic_headline_inputs.json'
       - '.github/workflows/lane_semantic_headlines.yml'
@@ -74,7 +75,7 @@ jobs:
             --input tests/fixtures/semantic_headline_inputs.json \
             --output semantic_results/program_outputs.json \
             --limit "$PILOT_LIMIT" --budget-seconds 1000 \
-            --providers zhipu,openrouter,gemini,tokenhub,mistral,pollinations,qwen
+            --providers gemini,zhipu,openrouter,tokenhub,mistral,pollinations,qwen
       - name: Preserve outputs even on timeout or provider failure
         if: always()
         uses: actions/upload-artifact@v4

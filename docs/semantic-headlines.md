@@ -1,5 +1,33 @@
 # Model-backed headline analysis pilot
 
+## V2: defined ontology and audited output
+
+The opt-in client now supplies a versioned definition for every one of the 55
+locked classes (`semantic_ontology.py`). It makes clause/actor/stage decisions
+before choosing the specific economic mechanism. It defines sector conventions
+and distinguishes reported decisions with future effective dates from intentions
+and historical summaries. No headline-specific answer lookup is introduced.
+
+By default a second model call audits the draft against the same title and
+definitions. Its complete validated JSON is the final analysis; the original
+draft and both providers/models remain in the artifact. This is program analysis,
+not the benchmark judge. A failed required audit is unavailable, not a silently
+accepted draft. `review=False` permits explicit extraction-only ablations.
+The reviewer may be the same model: this is not independent adjudication.
+
+The runner now bounds an entire headline (including provider/model hops) with
+a POSIX deadline, preserves timeout failures, and rejects duplicate input titles.
+V2 accuracy is unestablished until live results are evaluated. Passing contract
+tests or a successful workflow is not evidence of classification accuracy.
+
+Acceptance target: ten disjoint batches of 100 fresh titles, each at least 90%
+action agreement, exact primary Lane agreement and exact sector-set agreement.
+Unavailable/unprocessed answers count as failures; no failed titles are redrawn.
+Action precision/recall must also be reported to expose always-negative baselines.
+References and justified ambiguity must be frozen before seeing program answers.
+Prompt changes invalidate the acceptance streak; previously examined batches are
+development data thereafter. This target is not a claim of an achieved result.
+
 `SemanticHeadlineClient` calls the existing Lane provider router at its
 `news_classify` quality floor. It emits model-produced action records, stages,
 sectors and primary/additional Lane event classes from titles. It never imports
