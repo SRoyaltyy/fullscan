@@ -10,7 +10,7 @@ def deadline_handler(signum,frame):
     raise DeadlineExceeded()
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--input',type=pathlib.Path,required=True);p.add_argument('--output',type=pathlib.Path,required=True);p.add_argument('--limit',type=int,default=20);p.add_argument('--providers',default='');p.add_argument('--models',default='');p.add_argument('--budget-seconds',type=int,default=1000);p.add_argument('--headline-timeout',type=int,default=180);p.add_argument('--no-review',action='store_true');p.add_argument('--batch-size',type=int,default=1);p.add_argument('--batch-interval-seconds',type=int,default=0);p.add_argument('--require-catalog',action='store_true');args=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--input',type=pathlib.Path,required=True);p.add_argument('--output',type=pathlib.Path,required=True);p.add_argument('--limit',type=int,default=20);p.add_argument('--providers',default='');p.add_argument('--models',default='');p.add_argument('--budget-seconds',type=int,default=1000);p.add_argument('--headline-timeout',type=int,default=180);p.add_argument('--no-review',action='store_true');p.add_argument('--batch-size',type=int,default=10);p.add_argument('--batch-interval-seconds',type=int,default=0);p.add_argument('--require-catalog',action='store_true');args=p.parse_args()
     if args.headline_timeout<=0 or args.budget_seconds<=0:p.error('Budgets must be positive')
     if not 1<=args.batch_size<=10:p.error('Batch size must be 1..10')
     if not 0<=args.batch_interval_seconds<=60:p.error('Batch interval must be 0..60 seconds')

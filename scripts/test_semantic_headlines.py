@@ -98,12 +98,58 @@ class SemanticTests(unittest.TestCase):
         self.assertIs(result[0]['model_output'],a);self.assertIs(result[1]['model_output'],b)
         self.assertTrue(result[1]['analysis_output']['actions'][0]['concrete_public_action'])
         self.assertNotIn('concrete_public_action',b['actions'][0])
-    def test_batch_cross_headline_evidence_and_missing_ids_rejected(self):
+    def test_batch_cross_headline_evidence_and_missing_ids_isolated(self):
         rows=[{'n':1,'title':'FDA approves device'},{'n':2,'title':'Court stops construction'}]
         for response in ({'results':[{'n':1,'analysis':valid()}]}, {'results':[{'n':1,'analysis':valid()},{'n':2,'analysis':valid()}]}):
             with patch('src.news_impact.semantic_headlines.route.load_keys',return_value=({'zhipu':'synthetic'},'', '')),patch('src.news_impact.semantic_headlines.route.ask_lane',return_value=(response,'glm-4.7-flash')):
-                result=SemanticHeadlineClient(['zhipu']).analyze_many(rows)
-            self.assertTrue(all(r['status']=='unavailable' for r in result))
+                result=SemanticHeadlineClient(['zhipu'],review=False).analyze_many(rows)
+            self.assertEqual(result[0]['status'],'analyzed')
+            self.assertEqual(result[1]['status'],'unavailable')
+            self.assertIsNone(result[1]['model_output'])
+
+    def test_subset_retry_preserves_good_rows_and_shares_schema_once(self):
+        import json
+        rows=[{'n':1,'title':'FDA approves device'},{'n':2,'title':'FDA approves second device'}]
+        a=valid();b=valid();b['events'][0]['evidence']=['FDA approves second device']
+        initial={'results':[{'n':1,'analysis':a}]}
+        retry={'results':[{'n':2,'analysis':b}]}
+        with patch('src.news_impact.semantic_headlines.route.load_keys',return_value=({'zhipu':'synthetic'},'', '')),patch('src.news_impact.semantic_headlines.route.ask_lane',side_effect=[(initial,'glm-5.3-flash'),(retry,'glm-5.3-flash')]) as ask:
+            result=SemanticHeadlineClient(['zhipu'],review=False).analyze_many(rows)
+        self.assertTrue(all(r['status']=='analyzed' for r in result))
+        self.assertEqual(ask.call_count,2)
+        base=ask.call_args_list[0].args[1]
+        self.assertEqual(base.count('"primary_why"'),2) # one property and one required key
+        self.assertEqual(base.count('LOCKED LANE DEFINITIONS'),1)
+        retry_data=json.loads(ask.call_args_list[1].args[1].split('BATCH_DATA=',1)[1])
+        self.assertEqual([r['n'] for r in retry_data],[2])
+        self.assertIs(result[0]['model_output'],a)
+        self.assertTrue(result[1]['recovery_history'])
+
+    def test_duplicate_ids_never_select_an_arbitrary_answer(self):
+        response={'results':[{'n':1,'analysis':valid()},{'n':1,'analysis':valid()}]}
+        with patch('src.news_impact.semantic_headlines.route.load_keys',return_value=({'zhipu':'synthetic'},'', '')),patch('src.news_impact.semantic_headlines.route.ask_lane',return_value=(response,'glm-5.3-flash')):
+            result=SemanticHeadlineClient(['zhipu'],review=False).analyze_many([{'n':1,'title':'FDA approves device'}])
+        self.assertEqual(result[0]['status'],'unavailable')
+        self.assertTrue(result[0]['rejected_outputs'])
+
+    def test_implied_court_type_does_not_require_invented_name(self):
+        v=valid();v['actions'][0].update(actor=None,actor_evidence=None,actor_type='court')
+        self.assertFalse(validation_errors(v,'FDA approves device'))
+        self.assertTrue(derive_analysis(v)['actions'][0]['concrete_public_action'])
+
+    def test_completed_rejection_and_public_operation_are_concrete(self):
+        v=valid();v['actions'][0].update(actor_type='government',action='rejects restriction',stage='reported')
+        self.assertTrue(derive_analysis(v)['actions'][0]['concrete_public_action'])
+        v['actions'][0]['action_kind']='administrative_operation'
+        self.assertTrue(derive_analysis(v)['actions'][0]['concrete_public_action'])
+        v['actions'][0]['stage']='future'
+        self.assertFalse(derive_analysis(v)['actions'][0]['concrete_public_action'])
+
+    def test_civic_vote_type_and_unknown_actor_remain_separate(self):
+        v=valid();v['actions'][0].update(actor_type='civic_electorate',action_kind='procedural_step')
+        self.assertTrue(derive_analysis(v)['actions'][0]['concrete_public_action'])
+        v['actions'][0]['actor_type']='unknown'
+        self.assertIsNone(derive_analysis(v)['actions'][0]['concrete_public_action'])
     def test_model_pin_is_forwarded_and_does_not_introduce_model(self):
         with patch('src.news_impact.semantic_headlines.route.load_keys',return_value=({'zhipu':'synthetic'},'', '')),patch('src.news_impact.semantic_headlines.route.ask_lane',return_value=(valid(),'glm-4.7-flash')) as ask:
             r=SemanticHeadlineClient(['zhipu'],review=False,model_allowlist=['glm-4.7-flash']).analyze('FDA approves device')

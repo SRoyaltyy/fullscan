@@ -1,4 +1,4 @@
-name: Lane GLM validation and Grok diagnosis
+name: Lane batched recall development comparison
 on:
   push:
     branches: [codex/lane-provider-repair-20261014]
@@ -7,6 +7,9 @@ on:
       - 'src/lane_route.py'
       - 'src/predict_grok_heal.py'
       - 'scripts/diagnose_openclaw_lane.py'
+      - 'src/news_impact/semantic_headlines.py'
+      - 'src/news_impact/semantic_ontology.py'
+      - 'scripts/run_semantic_headlines.py'
   workflow_dispatch:
 permissions:
   contents: read
@@ -70,7 +73,7 @@ jobs:
             --input tests/fixtures/semantic_acceptance/batch_02.json \
             --output provider_results/glm_program_outputs.json \
             --limit 100 --budget-seconds 3600 --headline-timeout 300 \
-            --batch-size 10 --batch-interval-seconds 5 --require-catalog \
+            --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review \
             --providers zhipu,gemini,qwen \
             --models glm-5.3-flash,gemini-2.5-flash,qwen-flash
       - uses: actions/upload-artifact@v4
@@ -106,7 +109,7 @@ jobs:
             --input tests/fixtures/semantic_acceptance/batch_02.json \
             --output provider_results/grok_program_outputs.json \
             --limit 100 --budget-seconds 3600 --headline-timeout 300 \
-            --batch-size 10 --batch-interval-seconds 5 --require-catalog \
+            --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review \
             --providers openclaw --models xai/grok-4.3
       - uses: actions/upload-artifact@v4
         if: always()
