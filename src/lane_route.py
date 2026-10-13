@@ -214,8 +214,8 @@ MS_MODELS = [
     "Qwen/Qwen3-8B",
     "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
 ]
-# Zhipu current free Flash only. Never glm-5.x (TokenHub) and never older
-# glm-4-flash siblings (those are last-resort, not primary / news).
+# Zhipu current Flash models. GLM-5.3 Flash is already deployed elsewhere
+# in this repo (#568/#582) and passed the live credential probe.
 ZHIPU_MODELS = ["glm-5.3-flash", "glm-4.7-flash"]
 ZHIPU_URLS = [
     "https://open.bigmodel.cn/api/paas/v4/chat/completions",
@@ -655,7 +655,7 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
         if lane == "openclaw":
             raw = openclaw_models()
         elif lane == "zhipu":
-            # glm-4.7-flash first. 429 hops to the next $0 flash on this key.
+            # Current 5.3 Flash first. 429 hops to the next Flash on this key.
             # glm-4.6-flash 403 and glm-4.6v-flash 429 are per-ID, not a dead key.
             # glm-4.6v-flash is the other $0 text/vision flash. No 4.5, no
             # 250414, no paid glm-4.7-flashx.

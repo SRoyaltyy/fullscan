@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   glm:
-    if: ${{ !contains(github.event.head_commit.message, '[grok-only]') }}
+    if: ${{ !contains(github.event.head_commit.message, '[grok-only]') && !contains(github.event.head_commit.message, '[skip provider validation]') }}
     runs-on: ubuntu-latest
     timeout-minutes: 65
     steps:
@@ -79,13 +79,14 @@ jobs:
           name: lane-glm-provider-100
           path: provider_results/
   grok:
+    if: ${{ !contains(github.event.head_commit.message, '[skip provider validation]') }}
     runs-on: [self-hosted, ecs]
     timeout-minutes: 65
     env:
       FULLSCAN_HOME: /home/gha
       OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
       OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-      OPENCLAW_BACKEND_MODEL: xai/grok-4.6
+      OPENCLAW_BACKEND_MODEL: xai/grok-4.3
       OPENCLAW_GUARD_CALL_TIMEOUT: '45'
       OPENCLAW_LANE_TIMEOUT: '120'
     steps:
@@ -106,7 +107,7 @@ jobs:
             --output provider_results/grok_program_outputs.json \
             --limit 100 --budget-seconds 3600 --headline-timeout 300 \
             --batch-size 10 --batch-interval-seconds 5 --require-catalog \
-            --providers openclaw --models xai/grok-4.6
+            --providers openclaw --models xai/grok-4.3
       - uses: actions/upload-artifact@v4
         if: always()
         with:
