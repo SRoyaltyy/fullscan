@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-13",
+  "generated_at": "2026-10-13T04:16:34.787688-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-13",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to a mixed open as traders position for major bank earnings, housing data and this week’s CPI report",
+  "raw_text": "- S&P 500 Futures (@ES) edge lower by 0.02%, Dow Jones Futures (@YM) climb 0.55%, Nasdaq 100 Futures (@NQ) fall 0.58%, and Russell 2000 Futures (@ER2) gain 0.43% in early trading.\n- JPMorgan (JPM), Citigroup (C), Wells Fargo (WFC), Goldman Sachs (GS), Johnson & Johnson (JNJ), and UnitedHealth (UNH) are scheduled to report Q3 earnings before the bell, kicking off the season.\n- Oracle (ORCL) shares dip roughly 1% in pre-market trading.\n- Today’s US data calendar includes NFIB Small Business Optimism at 6:00 AM ET and Existing Home Sales at 10:00 AM ET.\n- Investors are focused on bank provisions for credit losses, net interest margins, and inflation commentary from management teams ahead of Wednesday’s CPI release.\n- Japan’s Nikkei index (@NKD) fell over 1.8% overnight, while European equity markets traded mostly higher.\n- Gold futures (@GC) edged up as oil (@CL) prices declined in overnight trading.",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) edge lower by **0.02%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) climb **0.55%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) fall **0.58%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) gain **0.43%** in early trading.\n- **JPMorgan** ([JPM](https://finviz.com/quote?t=JPM)), **Citigroup** ([C](https://finviz.com/quote?t=C)), **Wells Fargo** ([WFC](https://finviz.com/quote?t=WFC)), **Goldman Sachs** ([GS](https://finviz.com/quote?t=GS)), **Johnson & Johnson** ([JNJ](https://finviz.com/quote?t=JNJ)), and **UnitedHealth** ([UNH](https://finviz.com/quote?t=UNH)) are scheduled to report **Q3 earnings before the bell**, kicking off the season.\n- **Oracle** ([ORCL](https://finviz.com/quote?t=ORCL)) shares dip roughly **1%** in pre-market trading.\n- Today’s US data calendar includes **NFIB Small Business Optimism at 6:00 AM ET** and **Existing Home Sales at 10:00 AM ET**.\n- Investors are focused on **bank provisions for credit losses**, **net interest margins**, and **inflation commentary** from management teams ahead of **Wednesday’s CPI release**.\n- **Japan’s Nikkei index** ([@NKD](https://finviz.com/futures_charts?t=NKD)) fell over **1.8%** overnight, while **European equity markets** traded mostly higher.\n- **Gold futures** ([@GC](https://finviz.com/futures_charts?t=GC)) edged up as **oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices declined in overnight trading.",
+  "index_moves": [],
+  "oil": null,
+  "cpi": {
+    "text": "s CPI release",
+    "hotter": false
+  },
+  "fed_odds": null,
+  "named_tickers": [
+    "JPM",
+    "C",
+    "WFC",
+    "GS",
+    "JNJ",
+    "UNH",
+    "ORCL"
+  ],
+  "named_leaders": [
+    "JPM",
+    "C",
+    "WFC",
+    "GS",
+    "JNJ",
+    "UNH",
+    "ORCL"
+  ],
+  "calendar": [
+    "Today’s US data calendar includes NFIB Small Business Optimism at 6:00 AM ET and Existing Home Sales at 10:00 AM ET.",
+    "Investors are focused on bank provisions for credit losses, net interest margins, and inflation commentary from management teams ahead of Wednesday’s CPI release."
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": {
+      "text": "s CPI release",
+      "hotter": false
+    },
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "Today’s US data calendar includes NFIB Small Business Optimism at 6:00 AM ET and Existing Home Sales at 10:00 AM ET.",
+      "Investors are focused on bank provisions for credit losses, net interest margins, and inflation commentary from management teams ahead of Wednesday’s CPI release."
+    ],
+    "text": "Today’s US data calendar includes NFIB Small Business Optimism at 6:00 AM ET and Existing Home Sales at 10:00 AM ET. Investors are focused on bank provisions for credit losses, net interest margins, and inflation commentary from management teams ahead of Wednesday’s CPI release."
+  },
+  "earnings_slate": {
+    "tickers": [
+      "JPM",
+      "C",
+      "WFC",
+      "GS",
+      "JNJ",
+      "UNH"
+    ],
+    "text": "JPMorgan (JPM), Citigroup (C), Wells Fargo (WFC), Goldman Sachs (GS), Johnson & Johnson (JNJ), and UnitedHealth (UNH) are scheduled to report Q3 earnings before the bell, kicking off the season."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 307596,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-13T04:06:24.59",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}

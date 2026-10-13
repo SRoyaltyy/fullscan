@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-13",
+  "generated_at": "2026-10-13T08:42:45.902043-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 2,
+  "status": "OK",
+  "targets": [
+    {
+      "ticker": "GOOG",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "GOOGL",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "MSFT",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "META",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "TSLA",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "NFLX",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "NE",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling"
+    },
+    {
+      "ticker": "RIG",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "GOOG",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "net_signal": "Strong Bearish",
+      "conviction": 53,
+      "search_backend": "deepseek_fallback",
+      "catalyst_stack": "On 2026-07-02 the EU Court of Justice definitively upheld the \u20ac4.1B Android antitrust fine, and on 2026-07-16 the Commission issued binding DMA measures forcing Android AI interoperability and Search data sharing \u2014 both directly targeting Google's core distribution moats. On 2026-10-13 a securities fraud class action tied to Gemini 3.5 Pro disclosure issues compounded the legal overhang and explains the 4.4% July share drop. On 2026-06-02/2026-08-27 Alphabet's shift from buybacks to an $85B stock offering adds dilution pressure amid rising AI capex. The lone offset is the 2026-08-28 Q2 earnings beat with Cloud up 82%, but Gemini 4's failure to lift the stock (2026-10-05) suggests waning AI-narrative momentum ahead of Q3 earnings.",
+      "key_assumption": "The EU DMA specification measures and upheld Android fine represent durable structural constraints on Search/Android economics, and litigation risk (class action + private damages suits) keeps a persistent discount on the stock despite strong Cloud growth.",
+      "n_pos": 3,
+      "n_neg": 7,
+      "top_hits": [
+        {
+          "type": "negative",
+          "taxonomy": "Policy reversal/new regulation/tax increase",
+          "event_date": "2026-07-16",
+          "headline": "the European Commission has issued two sets of binding specification measures to Google under the Digital Markets Act.",
+          "weight": 9,
+          "confidence": 85
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation/antitrust",
+          "event_date": "2026-07-02",
+          "headline": "Europe's highest court dismissed Google's final appeal on July 2, 2026, confirming the \u20ac4.1 billion Android antitrust fine",
+          "weight": 7,
+          "confidence": 85
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation/antitrust",
+          "event_date": "2026-10-13",
+          "headline": "Alphabet AI Issues and Subsequent 4% Stock Drop Trigger Securities Fraud Class Action",
+          "weight": 7,
+          "confidence": 85
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation/antitrust",
+          "event_date": "2026-04-01",
+          "headline": "Judge Mehta's April 2026 remedy order bans Google default payments; Apple, Samsung, and Mozilla must deploy choice screens",
+          "weight": 7,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation/antitrust",
+          "event_date": "2026-09-02",
+          "headline": "A federal judge ruled on September 2, 2026, that Google must change practices in its advertising technology business",
+          "weight": 7,
+          "confidence": 80
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Workforce reduction/layoffs",
+          "event_date": "2026-09-08",
+          "headline": "Google planning layoffs in Taiwan, report says",
+          "weight": 5,
+          "confidence": 80
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "GOOGL",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "net_signal": "Neutral",
+      "conviction": 1,
+      "search_backend": "deepseek_fallback",
+      "catalyst_stack": "On 2026-04-29 and 2026-07-22 Alphabet delivered consecutive earnings beats (Q1 blowout; Q2 beat despite a capex surge that pressured shares), establishing fundamental momentum. On 2026-09-02 the ad tech antitrust ruling avoided a breakup \u2014 the single most significant positive, removing a binary structural overhang \u2014 followed immediately by the 2026-09-03 Gemini 3.8 Flash launch to rebuild AI narrative momentum. On 2026-08-19 the Marvell custom AI chip deal (with an option on a $12.2B stake) deepened the in-house silicon strategy. On 2026-10-13 Alphabet simultaneously faces renewed EU regulatory pressure on Android AI/search data sharing and a securities class action (deadline 2026-12-01), while Wells Fargo's 2026-10-06 PT raise to $417 supports valuation.",
+      "key_assumption": "The favorable September 2 ad tech ruling signals a broader regulatory de-risking (appellate relief on search remedies), and the elevated AI capex will translate into Cloud/TPU revenue growth rather than margin erosion.",
+      "n_pos": 5,
+      "n_neg": 4,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-09-02",
+          "headline": "\"Alphabet's Google escaped a breakup of its advertising technology business on Wednesday\"",
+          "weight": 10,
+          "confidence": 90
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Policy reversal/new regulation/tax increase",
+          "event_date": "2026-10-13",
+          "headline": "Alphabet's Google appeals EU requests to open Android AI features to rivals and share search data",
+          "weight": 10,
+          "confidence": 75
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Policy reversal/new regulation/tax increase",
+          "event_date": "2026-10-13",
+          "headline": "Alphabet's Google appeals EU requests to open Android AI features to rivals and share search data",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+          "event_date": "2026-09-03",
+          "headline": "\"Google has introduced Gemini 3.8 Flash, internally codenamed 'Skimaki,' with a launch expected as soon as Wednesday.\"",
+          "weight": 8,
+          "confidence": 75
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation/antitrust",
+          "event_date": "2026-10-12",
+          "headline": "\"Kaplan Fox Reminds Investors of Alphabet Inc. (NASDAQ: GOOGL, GOOG) to a Securities Class Action Deadline\" (2026-12-01)",
+          "weight": 8,
+          "confidence": 70
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Adverse litigation/antitrust",
+          "event_date": "2026-10-07",
+          "headline": "GOOGL/GOOG Shareholder Alert: December 1, 2026 Lead Plaintiff Deadline in Alphabet Inc. Securities Class Action",
+          "weight": 8,
+          "confidence": 80
+        }
+      ],
+      "error": null
+    }
+  ]
+}

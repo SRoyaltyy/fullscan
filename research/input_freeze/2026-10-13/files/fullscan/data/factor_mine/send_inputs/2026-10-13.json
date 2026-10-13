@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-13",
+  "files": [
+    {
+      "bytes": 8281893,
+      "path": "data/factor_mine/panel.json",
+      "sha256": "930b5a2eca1026d695a42b522650fc24409b18664d358e3e606a07cd36806072"
+    },
+    {
+      "path": "01_daily/general/2026-10-13_predict.md",
+      "sha256": "5fab01a20069804ec6761dba6a0946d92b9d22c7acedb5c64f77976a3956e2a2"
+    },
+    {
+      "path": "01_daily/news/2026-10-13_actions.json",
+      "sha256": "41c0dbb8ec67ed40d06a7b4ddfcd92ab80f2280125e23b97cbc9d27eced081f1"
+    },
+    {
+      "path": "01_daily/news/2026-10-13_finviz_digest.json",
+      "sha256": "b48b492d8328fc25730900108ebdd3bbbfac41fa3cb98b14c52c3b3788d76921"
+    },
+    {
+      "path": "01_daily/news/2026-10-13_judge.md",
+      "sha256": "5b7605ab5548aecdfa8fd629341c9ba9557c4986ab73c8cbf9c7a7db9cda6b7e"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-13/_board.json",
+      "sha256": "7126b36bc8761c5ff5daa6ebbea773b0ab1c4939d6887ba461f5ccdf4c6accee"
+    },
+    {
+      "path": "01_daily/weather/2026-10-13_weather.json",
+      "sha256": "b1fc8413c0cf3be58f94c4c762278ab991574b8224ec43b2f30512ee9d39c310"
+    },
+    {
+      "path": "data/ab_checklist/2026-10-13_ab_checklist_enriched.csv",
+      "sha256": "2c8ba2ec8f67bfa71492a04870010a03580690fd01e87842dd9e17b36b2f5164"
+    },
+    {
+      "path": "data/join/2026-10-13_ranked.csv",
+      "sha256": "d0f9d72827eff41b209d1429e277d982ad87db37e77ff45617ad10bf84ac2bd6"
+    },
+    {
+      "path": "data/peers/2026-10-13_peer_rs.csv",
+      "sha256": "ddfb7334677cd9faeca962d70765b32d2761a81b9eb437bd02384acd0fa85445"
+    },
+    {
+      "path": "data/sleeve_merge/today.json",
+      "sha256": "0f6dff2766c3ae90c94d40df272730c3dec9af3d920f9cfa1d72e2ed9251fe35"
+    },
+    {
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "sha256": "62934853845fa9278c8809219c66317e44dbf7fe86e970be0bfa934269382bb7"
+    }
+  ],
+  "picks": {
+    "union_hot_n4_h1": [
+      "SNAP",
+      "SHOP",
+      "SHAK",
+      "GTLB"
+    ],
+    "union_hot_n4_holdup": [
+      "SNAP",
+      "SHOP",
+      "SHAK",
+      "GTLB"
+    ]
+  },
+  "prices": [
+    {
+      "px": 5.22,
+      "px_src": "session_export",
+      "ticker": "SNAP"
+    },
+    {
+      "px": 143.14,
+      "px_src": "session_export",
+      "ticker": "SHOP"
+    },
+    {
+      "px": 58.15,
+      "px_src": "session_export",
+      "ticker": "SHAK"
+    },
+    {
+      "px": 45.99,
+      "px_src": "session_export",
+      "ticker": "GTLB"
+    },
+    {
+      "px": 85.3,
+      "px_src": "session_export",
+      "ticker": "KOD"
+    },
+    {
+      "px": 2.22,
+      "px_src": "session_export",
+      "ticker": "WFF"
+    },
+    {
+      "px": 0.7,
+      "px_src": "session_export",
+      "ticker": "QTEX"
+    },
+    {
+      "px": 1.16,
+      "px_src": "session_export",
+      "ticker": "NAUT"
+    }
+  ],
+  "reason": "",
+  "rows": [],
+  "sha256": "05be87ab399741ef1654ba196bf8f72668b1e35060843c046cf7a659422aa27c",
+  "source": "no_same_day_panel"
+}

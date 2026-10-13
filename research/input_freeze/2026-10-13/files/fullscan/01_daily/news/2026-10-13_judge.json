@@ -1,0 +1,23 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "bearish",
+  "bearish",
+  "hawkish",
+  "bearish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Financial": "mixed",
+  "Healthcare": "bullish",
+  "Industrials": "bearish",
+  "Technology": "mixed"
+ },
+ "tickers": {
+  "XLE": -1.5,
+  "AEM": -1.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO rates: [hawkish] Fed minutes flag another hike; yields surging, gold \u2212$100, CPI/Powell binary pending (session/1d)\nMACRO risk: [bearish] Fresh Hormuz tanker attack + Houthi Riyadh missiles; shipping/insurance costs surge (session/1d-1w)\nMACRO interaction: [bearish] Oil shock + hawkish Fed = stagflationary tape; mild-band cap unless futures confirm \u22650.5% down\nSECTOR financials: [mixed] Yields surge into bank earnings; BNY prime to 7.00% \u2014 NIM vs duration tug-of-war (XLF/KRE)\nSECTOR healthcare: [bullish] AMGN dazodalibep Phase 3 win; IBB/XBI sympathy (basket)\nSECTOR industrials: [bearish] Boeing MAX 10 cert halted by FAA; 31% of undelivered order book at risk (BA/XLI)\nSECTOR semis: [mixed] MSFT gigawatt in-house AI chips + NVDA China share loss to Huawei (substitution, not short trigger)\nWATCH: rates cluster dominates; do not double-count hawkish signals across Fed/yields/gold.",
+ "date": "2026-10-13"
+}
