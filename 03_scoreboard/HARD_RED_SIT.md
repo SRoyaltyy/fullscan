@@ -26,13 +26,257 @@ Clock split: (A) short-only is a pre-open policy call — shorts fire at the clo
 
 ## RESEARCH per sleeve (paper, not a wire)
 
-**2026-10-13** — `1` sit sleeves with looked names / `1` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
+**2026-10-13** — `245` sit sleeves with looked names / `342` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
 
 Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP bar unchanged. (A) short-only fires the short kid at the 09:30 open. (B) dip-scoop longs wait for open−X% (session low / Elite live). Close does not trigger.
 
 | Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |
 |---|---|---|---|
-| `flatten_robust` | long | — | FANG miss; ARQT miss; CDNA miss; ETON miss |
+| `flatten_robust` | long | — | SMMT miss; PACS miss; CON miss; MD miss; ASTH miss; AMN miss; SGRY miss |
+| `union_h1` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h3` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h5` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `flatten_h1` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h3` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h5` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `probable_h1` | long | — | NVTS miss; EPR miss; SMMT miss; PRMB miss; PDFS miss; AIP miss; CXW miss; ACRS miss |
+| `probable_h3` | long | — | NVTS miss; EPR miss; SMMT miss; PRMB miss; PDFS miss; AIP miss; CXW miss; ACRS miss |
+| `probable_h5` | long | — | NVTS miss; EPR miss; SMMT miss; PRMB miss; PDFS miss; AIP miss; CXW miss; ACRS miss |
+| `yday_gainer_h1` | long | — | TRU miss; TBBB miss; NVTS miss; EPR miss; ITW miss; AMX miss; SMMT miss; PRMB miss |
+| `yday_gainer_h3` | long | — | TRU miss; TBBB miss; NVTS miss; EPR miss; ITW miss; AMX miss; SMMT miss; PRMB miss |
+| `yday_gainer_h5` | long | — | TRU miss; TBBB miss; NVTS miss; EPR miss; ITW miss; AMX miss; SMMT miss; PRMB miss |
+| `ohlc_hot_h1` | long | — | SG miss; NTAP miss; DT miss; GME miss; OVV miss; OXSQ miss; SHOP miss; SHAK miss |
+| `ohlc_hot_h3` | long | — | SG miss; NTAP miss; DT miss; GME miss; OVV miss; OXSQ miss; SHOP miss; SHAK miss |
+| `ohlc_hot_h5` | long | — | SG miss; NTAP miss; DT miss; GME miss; OVV miss; OXSQ miss; SHOP miss; SHAK miss |
+| `union_vol_g_h1` | long | — | EGG miss |
+| `union_vol_g_h3` | long | — | EGG miss |
+| `union_ab_g_h1` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss; ARQT miss |
+| `union_ab_g_h3` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss; ARQT miss |
+| `union_join_g_h1` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; ARQT miss; ETON miss |
+| `union_join_g_h3` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; ARQT miss; ETON miss |
+| `union_join_present_h1` | long | — | C miss; JPM miss; SG miss; DBRG miss; ENHA miss; GLND miss; SHOP miss; SHAK miss |
+| `union_join_present_h3` | long | — | C miss; JPM miss; SG miss; DBRG miss; ENHA miss; GLND miss; SHOP miss; SHAK miss |
+| `union_news_g_h1` | long | — | SG miss; GLND miss |
+| `union_news_g_h3` | long | — | SG miss; GLND miss |
+| `union_news_present_h1` | long | — | C miss; JPM miss; SG miss; DBRG miss; ENHA miss; GLND miss; SHOP miss; SHAK miss |
+| `union_news_present_h3` | long | — | C miss; JPM miss; SG miss; DBRG miss; ENHA miss; GLND miss; SHOP miss; SHAK miss |
+| `union_blue_h1` | long | — | ENHA miss; EGG miss; QTTB miss |
+| `union_blue_h3` | long | — | ENHA miss; EGG miss; QTTB miss |
+| `union_last_green_h1` | long | — | C miss; SG miss; DBRG miss; ENHA miss; SHOP miss; SHAK miss; GTLB miss; PRMB miss |
+| `union_last_green_h3` | long | — | C miss; SG miss; DBRG miss; ENHA miss; SHOP miss; SHAK miss; GTLB miss; PRMB miss |
+| `union_last_red_h1` | long | — | GLND miss; ARQT miss; ETON miss; DY miss; KLRA miss; FRSH miss |
+| `union_last_red_h3` | long | — | GLND miss; ARQT miss; ETON miss; DY miss; KLRA miss; FRSH miss |
+| `union_candle_h1` | long | — | C miss; SG miss; DBRG miss; ENHA miss; SHOP miss; SHAK miss; GTLB miss; CXW miss |
+| `union_candle_h3` | long | — | C miss; SG miss; DBRG miss; ENHA miss; SHOP miss; SHAK miss; GTLB miss; CXW miss |
+| `union_coil_off_h1` | long | — | C miss; SG miss; DBRG miss; GTLB miss; KLRA miss; ENGS miss; ZIM miss |
+| `union_coil_off_h3` | long | — | C miss; SG miss; DBRG miss; GTLB miss; KLRA miss; ENGS miss; ZIM miss |
+| `union_earn_react_h1` | long | — | C miss; JPM miss |
+| `union_earn_react_h3` | long | — | C miss; JPM miss |
+| `union_e_fresh_h1` | long | — | C miss; JPM miss |
+| `union_e_fresh_h3` | long | — | C miss; JPM miss |
+| `union_break10_h1` | long | — | SG miss; SHOP miss; SHAK miss; GTLB miss; SNAP miss; RBLX miss; ENGS miss; ZIM miss |
+| `union_break10_h3` | long | — | SG miss; SHOP miss; SHAK miss; GTLB miss; SNAP miss; RBLX miss; ENGS miss; ZIM miss |
+| `union_rsi_os_h1` | long | — | DBRG miss |
+| `union_rsi_os_h3` | long | — | DBRG miss |
+| `union_macd_up_h1` | long | — | C miss; JPM miss; SG miss; DBRG miss; ENHA miss; SHOP miss; SHAK miss; GTLB miss |
+| `union_macd_up_h3` | long | — | C miss; JPM miss; SG miss; DBRG miss; ENHA miss; SHOP miss; SHAK miss; GTLB miss |
+| `union_macd_xup_h1` | long | — | C miss; JPM miss; CXW miss; ZIM miss |
+| `union_macd_xup_h3` | long | — | C miss; JPM miss; CXW miss; ZIM miss |
+| `union_vol_g_h5` | long | — | EGG miss |
+| `union_coil_off_h5` | long | — | C miss; SG miss; DBRG miss; GTLB miss; KLRA miss; ENGS miss; ZIM miss |
+| `union_last_green_h5` | long | — | C miss; SG miss; DBRG miss; ENHA miss; SHOP miss; SHAK miss; GTLB miss; PRMB miss |
+| `union_news_g_h5` | long | — | SG miss; GLND miss |
+| `union_rsi_os_h5` | long | — | DBRG miss |
+| `union_news_head_h1` | long | — | SG miss; GLND miss |
+| `union_news_or_h1` | long | — | SG miss; GLND miss |
+| `union_news_g_cond_h1` | long | — | SG miss; GLND miss |
+| `union_news_head_h3` | long | — | SG miss; GLND miss |
+| `union_news_or_h3` | long | — | SG miss; GLND miss |
+| `union_news_g_cond_h3` | long | — | SG miss; GLND miss |
+| `union_news_g_conv_h1` | long | — | SG miss; GLND miss |
+| `union_news_g_conv_h3` | long | — | SG miss; GLND miss |
+| `short_news_pack_h3` | short | WFC @—; C @—; JPM @—; ZIM @— | — |
+| `short_news_head_h3` | short | HAFN @—; RBLX @— | — |
+| `short_news_or_h3` | short | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `union_blue_vol_h1` | long | — | EGG miss |
+| `union_blue_vol_h3` | long | — | EGG miss |
+| `probable_probable_ok_h1` | long | — | PRMB miss; CXW miss |
+| `probable_probable_ok_h3` | long | — | PRMB miss; CXW miss |
+| `union_vol_green_h1` | long | — | EGG miss |
+| `union_vol_green_h3` | long | — | EGG miss |
+| `union_coil_green_h1` | long | — | SG miss; DBRG miss; GTLB miss; ENGS miss |
+| `union_coil_green_h3` | long | — | SG miss; DBRG miss; GTLB miss; ENGS miss |
+| `union_blue_coil_h1` | long | — | ENHA miss; EGG miss; QTTB miss |
+| `union_blue_coil_h3` | long | — | ENHA miss; EGG miss; QTTB miss |
+| `union_rsi_os_macd_h1` | long | — | DBRG miss |
+| `union_rsi_os_macd_h3` | long | — | DBRG miss |
+| `ohlc_hot_coil_h1` | long | — | SG miss; GTLB miss; ENGS miss; ZIM miss |
+| `union_hot_score_h1` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss; ENHA miss |
+| `union_hot_score_h3` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss; ENHA miss |
+| `union_candle_score_h1` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHAK miss; GTLB miss; SHOP miss; ENHA miss |
+| `union_candle_score_h3` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHAK miss; GTLB miss; SHOP miss; ENHA miss |
+| `union_ret_5_h1` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss; ENHA miss |
+| `union_ret_5_h3` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss; ENHA miss |
+| `union_cond_h1` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss; ENHA miss |
+| `union_cond_h3` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss; ENHA miss |
+| `union_w_hot_cond_h1` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss; ENHA miss |
+| `union_w_hot_cond_h3` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss; ENHA miss |
+| `union_w_hot_candle_h1` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHAK miss; GTLB miss; SHOP miss; ENHA miss |
+| `union_w_hot_candle_h3` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHAK miss; GTLB miss; SHOP miss; ENHA miss |
+| `union_rsi_h1` | long | — | JPM miss; C miss; SG miss; DBRG miss; ENHA miss; SHAK miss; GTLB miss; SHOP miss |
+| `union_rsi_h3` | long | — | JPM miss; C miss; SG miss; DBRG miss; ENHA miss; SHAK miss; GTLB miss; SHOP miss |
+| `union_macd_hist_h1` | long | — | JPM miss; C miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss; ENHA miss |
+| `union_macd_hist_h3` | long | — | JPM miss; C miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss; ENHA miss |
+| `union_hot_n4_h1` | long | — | SNAP miss; SHOP miss; SHAK miss; GTLB miss; KOD miss; WFF miss; QTEX miss; NAUT miss |
+| `union_hot_n4_holdup` | long | — | SNAP miss; SHOP miss; SHAK miss; GTLB miss |
+| `union_hot_n12_h1` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss; ENHA miss; GLND miss; SNAP miss; RBLX miss; ENGS miss |
+| `union_cond_n4_h3` | long | — | C miss; JPM miss; SG miss; DBRG miss |
+| `union_h3_exit_alarm` | long | — | C miss; JPM miss; SG miss; DBRG miss; ENHA miss; GLND miss; SHOP miss; SHAK miss |
+| `union_h5_exit_alarm` | long | — | C miss; JPM miss; SG miss; DBRG miss; ENHA miss; GLND miss; SHOP miss; SHAK miss |
+| `union_h3_exit_red` | long | — | C miss; SG miss; DBRG miss; ENHA miss; SHOP miss; SHAK miss; GTLB miss; PRMB miss |
+| `union_h3_exit_news_r` | long | — | SG miss; DBRG miss; ENHA miss; GLND miss; SHOP miss; SHAK miss; GTLB miss; ARQT miss |
+| `coil_h3_exit_alarm` | long | — | C miss; JPM miss; SG miss; DBRG miss; GTLB miss; ARQT miss; QTTB miss; KLRA miss |
+| `short_alarm_h1` | short | WFC @—; NTAP @—; DPZ @—; TRU @—; TBBB @—; DT @—; GME @—; OVV @— | — |
+| `short_alarm_h3` | short | WFC @—; NTAP @—; DPZ @—; TRU @—; TBBB @—; DT @—; GME @—; OVV @— | — |
+| `short_news_r_h1` | short | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `short_news_r_h3` | short | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `short_extended_h1` | short | NAUT @—; SNAP @— | — |
+| `short_extended_h3` | short | NAUT @—; SNAP @— | — |
+| `short_last_red_h1` | short | WFC @—; VEEV @—; NVTS @—; GLND @—; HAFN @—; GS @—; UNH @—; CDNA @— | — |
+| `short_last_red_h3` | short | WFC @—; VEEV @—; NVTS @—; GLND @—; HAFN @—; GS @—; UNH @—; CDNA @— | — |
+| `short_rsi_ob_h1` | short | TBBB @—; EPR @—; ITW @—; CDNA @—; EGG @—; MX @— | — |
+| `short_rsi_ob_h3` | short | TBBB @—; EPR @—; ITW @—; CDNA @—; EGG @—; MX @— | — |
+| `short_macd_dn_h1` | short | NVTS @—; EPR @—; GLND @—; JNJ @—; CDNA @—; ARQT @—; ETON @—; SMMT @— | — |
+| `short_macd_dn_h3` | short | NVTS @—; EPR @—; GLND @—; JNJ @—; CDNA @—; ARQT @—; ETON @—; SMMT @— | — |
+| `short_news_r_macd_h3` | short | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `flatten_h5_rankw` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h5_topheavy` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h5_half` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h5_time` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h5_cut` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h5_trail` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h5_sboost` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h5_sizeup` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h3_rankw` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h3_topheavy` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h3_half` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h3_time` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h3_cut` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h3_trail` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h3_sboost` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `flatten_h3_sizeup` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `union_h5_rankw` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h5_topheavy` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h5_half` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h5_time` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h5_cut` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h5_trail` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h5_sboost` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h5_sizeup` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h3_rankw` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h3_topheavy` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h3_half` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h3_time` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h3_cut` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h3_trail` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h3_sboost` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h3_sizeup` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h1_rankw` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h1_topheavy` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h1_half` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h1_time` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h1_cut` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h1_trail` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h1_sboost` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_h1_sizeup` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `flatten_h5_s8` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `union_clk_mom_break_peer_h1` | long | — | C miss; SG miss; ENHA miss |
+| `union_clk_fresh_cat_coil_h1` | long | — | C miss; JPM miss; SG miss; GLND miss |
+| `short_clk_neg_weak_fail_h3` | short | WFC @— | — |
+| `short_clk_ext_veto_h3` | short | NAUT @— | — |
+| `union_clk_hold_vs_sector_h1` | long | — | C miss; JPM miss; SG miss; DBRG miss; SHOP miss; SHAK miss; GTLB miss |
+| `union_clk_nr7_mom_h1` | long | — | JPM miss; DBRG miss |
+| `combo_seh_333_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_seh_333_split` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_seh_502525_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_seh_502525_split` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_seh_404020_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_seh_403525_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_seh_451540_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_seh_601525_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_se_5050_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_se_7030_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_eh_5050_shared` | long | — | C miss; JPM miss; SG miss; DBRG miss |
+| `combo_sh_5050_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_sh_macd_5050_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_se_5050_skip` | mixed | WFC @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_seh_333_skip` | mixed | WFC @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_seh_333_weather` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_se_5050_weather` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_se_5050_split` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_es_8020_shared` | mixed | WFC @—; HAFN @—; RBLX @—; ZIM @— | C miss; JPM miss |
+| `combo_es_9010_shared` | mixed | WFC @—; HAFN @—; RBLX @—; ZIM @— | C miss; JPM miss |
+| `combo_ehs_702010_shared` | mixed | WFC @—; HAFN @—; RBLX @—; ZIM @— | C miss; JPM miss; SG miss; DBRG miss |
+| `combo_ehs_601525_shared` | mixed | WFC @—; HAFN @—; RBLX @—; ZIM @— | C miss; JPM miss; SG miss; DBRG miss |
+| `combo_ps_5050_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_ps_7030_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_p2s_5050_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_oh_5050_shared` | long | — | C miss; JPM miss; SG miss; DBRG miss |
+| `combo_sn_5050_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; GLND miss |
+| `combo_sj_5050_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_sf_5050_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `combo_snj_333_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; GLND miss |
+| `combo_nse_333_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; GLND miss |
+| `combo_jse_333_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_fse_333_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `combo_e1s_7030_shared` | mixed | WFC @—; HAFN @—; RBLX @—; ZIM @— | C miss; JPM miss |
+| `combo_ers_7030_shared` | mixed | WFC @—; HAFN @—; RBLX @—; ZIM @— | C miss; JPM miss |
+| `combo_eh_7030_shared` | long | — | C miss; JPM miss; SG miss; DBRG miss |
+| `combo_fh_7030_shared` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss; C miss; JPM miss; SG miss; DBRG miss |
+| `combo_fe_5050_shared` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss; C miss; JPM miss |
+| `combo_fes_403030_shared` | mixed | WFC @—; HAFN @—; RBLX @—; ZIM @— | VEEV miss; CDNA miss; ARQT miss; ETON miss; C miss; JPM miss |
+| `combo_se1_5050_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_ser_5050_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_en_5050_shared` | long | — | C miss; JPM miss; SG miss; GLND miss |
+| `combo_ej_5050_shared` | long | — | C miss; JPM miss |
+| `combo_ef_5050_shared` | long | — | C miss; JPM miss; VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `combo_ee1_5050_shared` | long | — | C miss; JPM miss |
+| `combo_eer_5050_shared` | long | — | C miss; JPM miss |
+| `combo_hn_5050_shared` | long | — | C miss; JPM miss; SG miss; DBRG miss; GLND miss |
+| `combo_hj_5050_shared` | long | — | C miss; JPM miss; SG miss; DBRG miss |
+| `combo_hf_5050_shared` | long | — | C miss; JPM miss; SG miss; DBRG miss; VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `combo_he1_5050_shared` | long | — | C miss; JPM miss; SG miss; DBRG miss |
+| `combo_her_5050_shared` | long | — | C miss; JPM miss; SG miss; DBRG miss |
+| `combo_nj_5050_shared` | long | — | SG miss; GLND miss |
+| `combo_nf_5050_shared` | long | — | SG miss; GLND miss; VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `combo_ne1_5050_shared` | long | — | SG miss; GLND miss; C miss; JPM miss |
+| `combo_ner_5050_shared` | long | — | SG miss; GLND miss; C miss; JPM miss |
+| `combo_jf_5050_shared` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `combo_je1_5050_shared` | long | — | C miss; JPM miss |
+| `combo_jer_5050_shared` | long | — | C miss; JPM miss |
+| `combo_fe1_5050_shared` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss; C miss; JPM miss |
+| `combo_fer_5050_shared` | long | — | VEEV miss; CDNA miss; ARQT miss; ETON miss; C miss; JPM miss |
+| `combo_e1er_5050_shared` | long | — | C miss; JPM miss |
+| `combo_se_3070_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_sh_7030_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_sh_3070_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; DBRG miss |
+| `combo_eh_3070_shared` | long | — | C miss; JPM miss; SG miss; DBRG miss |
+| `combo_sn_7030_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; GLND miss |
+| `combo_sn_3070_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | SG miss; GLND miss |
+| `combo_sj_7030_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_sj_3070_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | — |
+| `combo_sf_7030_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `combo_sf_3070_shared` | mixed | WFC @—; C @—; JPM @—; HAFN @—; RBLX @—; ZIM @— | VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `combo_en_7030_shared` | long | — | C miss; JPM miss; SG miss; GLND miss |
+| `combo_en_3070_shared` | long | — | C miss; JPM miss; SG miss; GLND miss |
+| `combo_ef_7030_shared` | long | — | C miss; JPM miss; VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `combo_ef_3070_shared` | long | — | C miss; JPM miss; VEEV miss; CDNA miss; ARQT miss; ETON miss |
+| `combo_hn_7030_shared` | long | — | C miss; JPM miss; SG miss; DBRG miss; GLND miss |
+| `combo_hn_3070_shared` | long | — | C miss; JPM miss; SG miss; DBRG miss; GLND miss |
+| `combo_ee1_7030_shared` | long | — | C miss; JPM miss |
+| `combo_ee1_3070_shared` | long | — | C miss; JPM miss |
+| `union_hot_n4_holdup_preopen` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
+| `union_hot_n4_h1_preopen` | long | — | C miss; JPM miss; SG miss; NTAP miss; DPZ miss; TRU miss; TBBB miss; DBRG miss |
 
 Scoop trigger = official open + session low (Elite live only when the low has not printed). Close / last / Theme Radar never trigger. #236 KILL of global short-only / dip-scoop stands — this table is display/paper only.
 

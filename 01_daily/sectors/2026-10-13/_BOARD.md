@@ -1,12 +1,13 @@
 # Sector Board — 2026-10-13
 
-Generated: **2026-10-13T08:20:31.036256-04:00** (America/New_York)
+Generated: **2026-10-13T08:20:42.884453-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
 ## Summary
 
 - Predicts present: **10/11**
+- **11/11 via deepseek (fallback: prefer_deepseek)**
 - Outcomes graded: **0/11**
 - Direction hits (when graded): **0/0**
 - Predicted up / down / flat-or-missing: **2** / **6** / **3**
