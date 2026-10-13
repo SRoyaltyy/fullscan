@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-18.94%** ($8,106) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 354 · skips 87 · realized $-1273.21.
+Cash book **-21.59%** ($7,841) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 362 · skips 87 · realized $-1273.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -510,6 +510,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `FSLY` | 35 | $28.79 | $2.10 | — | $1,067.06 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.5; leftover $1033.73 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `NVAX` | 81 | $12.61 | $2.23 | — | $43.42 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=+21.9; leftover $1033.73 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.42 | ▼ close $8,106.42 vs 09:30 $8,298.25 (session -134.17) | 16:00 close · cash $43.42 · equity $8,106.42 vs 09:30 $8,298.25 (-191.83; session marks -134.17) · 8 name(s) marked open→close (per-name table). DNA×81 09:30 $12.69 → close $11.79 -72.90; RXRX×239 09:30 $4.31 → close $4.01 -71.70; WFF×69 09:30 $14.78 → close $17.28 +172.50; QSI×700 09:30 $1.48 → close $1.36 -80.50; NAUT×477 09:30 $2.17 → close $2.17 +2.38; KLRA×90 09:30 $11.39 → close $11.33 -5.40; FSLY×35 09:30 $28.79 → close $26.43 -82.60; NVAX×81 09:30 $12.61 → close $12.66 +4.05 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $43.42 | ▼ 09:30 equity $7,870.82 vs yday $8,106.42 (-235.60) | 09:30 open · cash $43.42 (unchanged overnight, no fees) · equity $7,870.82 vs prior close $8,106.42 (-235.60) · 8 name(s) re-marked at the open (per-name table). DNA×81 yday $11.79 → 09:30 $11.79 +0.00; FSLY×35 yday $26.43 → 09:30 $26.19 -8.40; KLRA×90 yday $11.33 → 09:30 $11.31 -1.80; NAUT×477 yday $2.17 → 09:30 $2.12 -23.85; NVAX×81 yday $12.66 → 09:30 $12.44 -17.82; QSI×700 yday $1.36 → 09:30 $1.35 -7.56; RXRX×239 yday $4.01 → 09:30 $3.96 -11.95; WFF×69 yday $17.28 → 09:30 $14.90 -164.22 | — |
+| 2026-10-13 09:30 ET | **SELL** | `DNA` | 81 | $11.79 | $2.26 | $-77.39 | $996.15 | ▼ -77.39 after sell → book $7,868.56; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FSLY` | 35 | $26.19 | $2.12 | $-95.21 | $1,910.69 | ▼ -95.21 after sell → book $7,866.45; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KLRA` | 90 | $11.31 | $2.28 | $-11.74 | $2,926.30 | ▼ -11.74 after sell → book $7,864.16; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-13 09:30 ET | **SELL** | `NAUT` | 477 | $2.12 | $6.24 | $-33.86 | $3,931.30 | ▼ -33.86 after sell → book $7,857.92; vs 09:30 mark -6.24 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-13 09:30 ET | **SELL** | `NVAX` | 81 | $12.44 | $2.26 | $-18.26 | $4,936.68 | ▼ -18.26 after sell → book $7,855.66; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QSI` | 700 | $1.35 | $9.16 | $-106.25 | $5,871.97 | ▼ -106.25 after sell → book $7,846.51; vs 09:30 mark -9.15 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-13 09:30 ET | **SELL** | `RXRX` | 239 | $3.96 | $3.13 | $-89.87 | $6,815.28 | ▼ -89.87 after sell → book $7,843.38; vs 09:30 mark -3.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 69 | $14.90 | $2.22 | $+3.86 | $7,841.16 | ▲ +3.86 after sell → book $7,841.16; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,841.16 | ▲ close $7,841.16 vs 09:30 $7,870.82 (session +0.00) | 16:00 close · cash $7,841.16 · no lots left · equity $7,841.16. | — |
 
 ## Not taken
 

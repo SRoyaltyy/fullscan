@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-17.73%** ($8,227) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 272 · skips 78 · realized $-357.09.
+Cash book **-17.99%** ($8,201) · signal-only (no cash/fees) was -9.51%. Starts YES **0/30**. Fills 276 · skips 78 · realized $-357.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -424,6 +424,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `FANG` | 10 | $195.01 | $2.02 | — | $2,177.44 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+4.0; leftover $2064.78 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `ARQT` | 77 | $26.57 | $2.22 | — | $129.33 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+5.6; leftover $2064.78 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $129.33 | ▼ close $8,226.58 vs 09:30 $8,275.62 (session -40.48) | 16:00 close · cash $129.33 · equity $8,226.58 vs 09:30 $8,275.62 (-49.04; session marks -40.48) · 4 name(s) marked open→close (per-name table). CDNA×33 09:30 $63.28 → close $63.12 -5.28; ETON×37 09:30 $55.50 → close $55.25 -9.25; FANG×10 09:30 $195.01 → close $195.11 +1.00; ARQT×77 09:30 $26.57 → close $26.22 -26.95 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $129.33 | ▼ 09:30 equity $8,209.98 vs yday $8,226.58 (-16.60) | 09:30 open · cash $129.33 (unchanged overnight, no fees) · equity $8,209.98 vs prior close $8,226.58 (-16.60) · 4 name(s) re-marked at the open (per-name table). ARQT×77 yday $26.22 → 09:30 $26.00 -16.94; CDNA×33 yday $63.12 → 09:30 $62.57 -18.15; ETON×37 yday $55.25 → 09:30 $55.42 +6.29; FANG×10 yday $195.11 → 09:30 $196.33 +12.20 | — |
+| 2026-10-13 09:30 ET | **SELL** | `ARQT` | 77 | $26.00 | $2.25 | $-48.36 | $2,129.08 | ▼ -48.36 after sell → book $8,207.73; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CDNA` | 33 | $62.57 | $2.12 | $+7.68 | $4,191.77 | ▲ +7.68 after sell → book $8,205.61; vs 09:30 mark -2.12 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ETON` | 37 | $55.42 | $2.13 | $+16.49 | $6,240.19 | ▲ +16.49 after sell → book $8,203.49; vs 09:30 mark -2.12 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FANG` | 10 | $196.33 | $2.05 | $+9.13 | $8,201.44 | ▲ +9.13 after sell → book $8,201.44; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,201.44 | ▲ close $8,201.44 vs 09:30 $8,209.98 (session +0.00) | 16:00 close · cash $8,201.44 · no lots left · equity $8,201.44. | — |
 
 ## Not taken
 

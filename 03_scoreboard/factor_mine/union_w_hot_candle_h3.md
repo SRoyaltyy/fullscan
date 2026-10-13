@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+2.22%** ($10,222) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 272 · skips 289 · realized $+901.34.
+Cash book **-0.55%** ($9,945) · signal-only (no cash/fees) was +319.57%. Starts YES **29/30**. Fills 272 · skips 289 · realized $+901.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -427,6 +427,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `QTEX` | 3 | $1.73 | $0.06 | — | $34.94 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer; 🔵; ret5=+70.0; leftover $5.74 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `NAUT` | 2 | $2.17 | $0.05 | — | $30.56 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; leftover $5.74 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $30.56 | ▲ close $10,222.36 vs 09:30 $10,066.75 (session +155.72) | 16:00 close · cash $30.56 · equity $10,222.36 vs 09:30 $10,066.75 (+155.61; session marks +155.72) · 10 name(s) marked open→close (per-name table). ADCT×807 09:30 $1.70 → close $1.86 +129.12; BYRN×271 09:30 $4.50 → close $4.55 +14.90; FNKO×196 09:30 $6.40 → close $6.46 +11.76; HAFN×120 09:30 $11.01 → close $10.92 -10.80; KOD×13 09:30 $100.06 → close $99.26 -10.40; NRDS×130 09:30 $9.77 → close $9.82 +6.50; PCRX×35 09:30 $36.32 → close $36.35 +1.05; XRPN×61 09:30 $16.68 → close $16.91 +14.03; QTEX×3 09:30 $1.73 → close $1.58 -0.45; NAUT×2 09:30 $2.17 → close $2.17 +0.01 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $30.56 | ▼ 09:30 equity $10,216.54 vs yday $10,222.36 (-5.82) | 09:30 open · cash $30.56 (unchanged overnight, no fees) · equity $10,216.54 vs prior close $10,222.36 (-5.82) · 10 name(s) re-marked at the open (per-name table). ADCT×807 yday $1.86 → 09:30 $1.86 +0.00; BYRN×271 yday $4.55 → 09:30 $4.47 -23.03; FNKO×196 yday $6.46 → 09:30 $6.46 +0.00; HAFN×120 yday $10.92 → 09:30 $10.70 -26.40; KOD×13 yday $99.26 → 09:30 $99.06 -2.60; NAUT×2 yday $2.17 → 09:30 $2.12 -0.10; NRDS×130 yday $9.82 → 09:30 $9.91 +11.70; PCRX×35 yday $36.35 → 09:30 $36.33 -0.70; QTEX×3 yday $1.58 → 09:30 $1.46 -0.38; XRPN×61 yday $16.91 → 09:30 $17.50 +35.69 | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $30.56 | ▼ close $9,944.79 vs 09:30 $10,216.54 (session -271.75) | 16:00 close · cash $30.56 · equity $9,944.79 vs 09:30 $10,216.54 (-271.75; session marks -271.75) · 10 name(s) marked open→close (per-name table). ADCT×807 09:30 $1.86 → close $1.70 -129.12; BYRN×271 09:30 $4.47 → close $4.55 +21.68; FNKO×196 09:30 $6.46 → close $6.52 +11.76; HAFN×120 09:30 $10.70 → close $10.85 +18.00; KOD×13 09:30 $99.06 → close $91.63 -96.59; NAUT×2 09:30 $2.12 → close $2.05 -0.14; NRDS×130 09:30 $9.91 → close $9.64 -35.10; PCRX×35 09:30 $36.33 → close $36.31 -0.70; QTEX×3 09:30 $1.46 → close $1.58 +0.38; XRPN×61 09:30 $17.50 → close $16.48 -61.92 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h3 w=0.5,0.5 net=weather
 
-Cash book **-9.74%** ($9,026) · signal-only (no cash/fees) was —. Starts YES **16/30**. Fills 302 · skips 323 · realized $+3397.90.
+Cash book **-7.66%** ($9,234) · signal-only (no cash/fees) was —. Starts YES **16/30**. Fills 302 · skips 323 · realized $+3397.90.
 
 ## How this sleeve decides (like you are 10)
 
@@ -459,6 +459,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,686.22 | ▼ 09:30 equity $8,595.27 vs yday $8,619.61 (-24.34) | 09:30 open · cash $8,686.22 (unchanged overnight, no fees) · equity $8,595.27 vs prior close $8,619.61 (-24.34) | — |
 | 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 420 | $10.22 | $5.64 | — | $12,972.98 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; combo leftover $4297.63; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,972.98 | ▲ close $9,026.06 vs 09:30 $8,595.27 (session +436.43) | 16:00 close · cash $12,972.98 · equity $9,026.06 vs 09:30 $8,595.27 (+430.79; session marks +436.43) · 8 name(s) marked open→close (per-name table). ANGO×97 09:30 $11.42 → close $11.40 -1.94; BYRN×230 09:30 $4.50 → close $4.55 +12.65; DAL×13 09:30 $81.05 → close $80.11 -12.22; DXC×116 09:30 $12.47 → close $12.54 -8.12; EQPT×91 09:30 $14.86 → close $14.76 +9.10; HOVR×668 09:30 $1.54 → close $1.51 -20.04; NTLA×116 09:30 $13.08 → close $12.58 +58.00; AEHL×420 09:30 $10.22 → close $9.27 +399.00 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,972.98 | ▲ 09:30 equity $9,116.87 vs yday $9,026.06 (+90.81) | 09:30 open · cash $12,972.98 (unchanged overnight, no fees) · equity $9,116.87 vs prior close $9,026.06 (+90.81) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,972.98 | ▲ close $9,233.92 vs 09:30 $9,116.87 (session +117.05) | 16:00 close · cash $12,972.98 · equity $9,233.92 vs 09:30 $9,116.87 (+117.05; session marks +117.05) · 8 name(s) marked open→close (per-name table). AEHL×420 09:30 $9.08 → close $8.55 +222.60; ANGO×97 09:30 $11.43 → close $10.90 -51.41; BYRN×230 09:30 $4.47 → close $4.55 +18.40; DAL×13 09:30 $80.70 → close $79.57 -14.69; DXC×116 09:30 $12.55 → close $12.77 -25.52; EQPT×91 09:30 $14.54 → close $15.37 -75.53; HOVR×668 09:30 $1.47 → close $1.46 -6.68; NTLA×116 09:30 $12.34 → close $11.91 +49.88 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_pack_net2_h1/short_news_r_h3 w=0.5,0.5 net=priority
 
-Cash book **-11.42%** ($8,858) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 210 · skips 145 · realized $+1088.80.
+Cash book **-8.42%** ($9,158) · signal-only (no cash/fees) was —. Starts YES **2/30**. Fills 210 · skips 145 · realized $+1088.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -367,6 +367,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **SELL** | `RRC` | 103 | $41.16 | $2.35 | $+50.97 | $12,599.14 | ▲ +50.97 after sell → book $8,418.53; vs 09:30 mark -2.35 | union_news_pack_net2_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 411 | $10.22 | $5.52 | — | $16,794.04 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; combo leftover $4209.26; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,794.04 | ▲ close $8,858.40 vs 09:30 $8,420.88 (session +445.39) | 16:00 close · cash $16,794.04 · equity $8,858.40 vs 09:30 $8,420.88 (+437.52; session marks +445.39) · 5 name(s) marked open→close (per-name table). DAL×13 09:30 $81.05 → close $80.11 +12.22; DXC×84 09:30 $12.47 → close $12.54 -5.88; EQPT×66 09:30 $14.86 → close $14.76 +6.60; NTLA×84 09:30 $13.08 → close $12.58 +42.00; AEHL×411 09:30 $10.22 → close $9.27 +390.45 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,794.04 | ▲ 09:30 equity $8,962.66 vs yday $8,858.40 (+104.26) | 09:30 open · cash $16,794.04 (unchanged overnight, no fees) · equity $8,962.66 vs prior close $8,858.40 (+104.26) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,794.04 | ▲ close $9,158.04 vs 09:30 $8,962.66 (session +195.38) | 16:00 close · cash $16,794.04 · equity $9,158.04 vs 09:30 $8,962.66 (+195.38; session marks +195.38) · 5 name(s) marked open→close (per-name table). AEHL×411 09:30 $9.08 → close $8.55 +217.83; DAL×13 09:30 $80.70 → close $79.57 +14.69; DXC×84 09:30 $12.55 → close $12.77 -18.48; EQPT×66 09:30 $14.54 → close $15.37 -54.78; NTLA×84 09:30 $12.34 → close $11.91 +36.12 | — |
 
 ## Not taken
 

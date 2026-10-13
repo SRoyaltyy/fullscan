@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 4 by hot
 
-Cash book **+26.28%** ($12,628) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 129 · skips 47 · realized $+2978.17.
+Cash book **+17.88%** ($11,788) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 133 · skips 47 · realized $+2978.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -284,6 +284,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `QTEX` | 1779 | $1.73 | $22.95 | — | $3,057.65 | — | top 4 by hot; rank hot_score; list yday_gainer; 🔵; ret5=+70.0; leftover $3078.40 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `NAUT` | 1403 | $2.17 | $18.10 | — | $2.06 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; leftover $3078.40 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.06 | ▲ close $12,627.95 vs 09:30 $12,473.23 (session +234.56) | 16:00 close · cash $2.06 · equity $12,627.95 vs 09:30 $12,473.23 (+154.72; session marks +234.56) · 4 name(s) marked open→close (per-name table). KOD×32 09:30 $100.06 → close $99.26 -25.60; WFF×208 09:30 $14.78 → close $17.28 +520.00; QTEX×1779 09:30 $1.73 → close $1.58 -266.85; NAUT×1403 09:30 $2.17 → close $2.17 +7.01 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.06 | ▼ 09:30 equity $11,833.99 vs yday $12,627.95 (-793.97) | 09:30 open · cash $2.06 (unchanged overnight, no fees) · equity $11,833.99 vs prior close $12,627.95 (-793.97) · 4 name(s) re-marked at the open (per-name table). KOD×32 yday $99.26 → 09:30 $99.06 -6.40; NAUT×1403 yday $2.17 → 09:30 $2.12 -70.15; QTEX×1779 yday $1.58 → 09:30 $1.46 -222.38; WFF×208 yday $17.28 → 09:30 $14.90 -495.04 | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 32 | $99.06 | $2.12 | $+137.23 | $3,169.86 | ▲ +137.23 after sell → book $11,831.86; vs 09:30 mark -2.12 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `NAUT` | 1403 | $2.12 | $18.36 | $-99.59 | $6,125.86 | ▼ -99.59 after sell → book $11,813.51; vs 09:30 mark -18.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 1779 | $1.46 | $23.27 | $-535.44 | $8,691.04 | ▼ -535.44 after sell → book $11,790.24; vs 09:30 mark -23.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 208 | $14.90 | $2.74 | $+19.53 | $11,787.50 | ▲ +19.53 after sell → book $11,787.50; vs 09:30 mark -2.74 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,787.50 | ▲ close $11,787.50 vs 09:30 $11,833.99 (session +0.00) | 16:00 close · cash $11,787.50 · no lots left · equity $11,787.50. | — |
 
 ## Not taken
 

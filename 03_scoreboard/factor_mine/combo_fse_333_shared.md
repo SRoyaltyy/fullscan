@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared flatten_h5/short_news_r_h3/union_e_fresh_h3 w=0.33,0.33,0.33 net=priority
 
-Cash book **-8.54%** ($9,146) · signal-only (no cash/fees) was —. Starts YES **15/30**. Fills 491 · skips 659 · realized $+1324.13.
+Cash book **-7.13%** ($9,287) · signal-only (no cash/fees) was —. Starts YES **15/30**. Fills 494 · skips 659 · realized $+1324.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $5,360.48.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,818.71.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -649,6 +649,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `ARQT` | 48 | $26.57 | $2.13 | — | $2,686.36 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+5.6; combo leftover $1283.98; owner flatten_h5 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 262 | $10.22 | $3.52 | — | $5,360.48 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; combo leftover $2686.36; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,360.48 | ▲ close $9,145.86 vs 09:30 $8,842.56 (session +312.78) | 16:00 close · cash $5,360.48 · equity $9,145.86 vs 09:30 $8,842.56 (+303.30; session marks +312.78) · 14 name(s) marked open→close (per-name table). ANGO×54 09:30 $11.42 → close $11.40 -1.08; BYRN×129 09:30 $4.50 → close $4.55 +7.09; CDNA×9 09:30 $63.28 → close $63.12 -1.44; DAL×7 09:30 $81.05 → close $80.11 -6.58; DXC×67 09:30 $12.47 → close $12.54 -4.69; EQPT×52 09:30 $14.86 → close $14.76 +5.20; ETON×12 09:30 $55.50 → close $55.25 -3.00; HOVR×374 09:30 $1.54 → close $1.51 -11.22; NTAP×1 09:30 $237.38 → close $239.18 +1.80; NTLA×67 09:30 $13.08 → close $12.58 +33.50; PACS×55 09:30 $43.20 → close $44.30 +60.50; FANG×6 09:30 $195.01 → close $195.11 +0.60; ARQT×48 09:30 $26.57 → close $26.22 -16.80; AEHL×262 09:30 $10.22 → close $9.27 +248.90 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,360.48 | ▲ 09:30 equity $9,215.15 vs yday $9,145.86 (+69.29) | 09:30 open · cash $5,360.48 (unchanged overnight, no fees) · equity $9,215.15 vs prior close $9,145.86 (+69.29) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CDNA` | 9 | $62.57 | $2.04 | $-37.89 | $5,921.57 | ▼ -37.89 after sell → book $9,213.11; vs 09:30 mark -2.04 | flatten_h5: dropped from list after 7 sess (min 5) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ETON` | 12 | $55.42 | $2.05 | $+31.93 | $6,584.57 | ▲ +31.93 after sell → book $9,211.07; vs 09:30 mark -2.04 | flatten_h5: dropped from list after 7 sess (min 5) | — |
+| 2026-10-13 09:30 ET | **SELL** | `NTAP` | 1 | $236.16 | $2.01 | $+7.35 | $6,818.71 | ▲ +7.35 after sell → book $9,209.05; vs 09:30 mark -2.02 | flatten_h5: dropped from list after 5 sess (min 5) | join🟡 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,818.71 | ▲ close $9,286.69 vs 09:30 $9,215.15 (session +77.64) | 16:00 close · cash $6,818.71 · equity $9,286.69 vs 09:30 $9,215.15 (+71.54; session marks +77.64) · 11 name(s) marked open→close (per-name table). AEHL×262 09:30 $9.08 → close $8.55 +138.86; ANGO×54 09:30 $11.43 → close $10.90 -28.62; ARQT×48 09:30 $26.00 → close $26.09 +4.32; BYRN×129 09:30 $4.47 → close $4.55 +10.32; DAL×7 09:30 $80.70 → close $79.57 -7.91; DXC×67 09:30 $12.55 → close $12.77 -14.74; EQPT×52 09:30 $14.54 → close $15.37 -43.16; FANG×6 09:30 $196.33 → close $198.18 +11.10; HOVR×374 09:30 $1.47 → close $1.46 -3.74; NTLA×67 09:30 $12.34 → close $11.91 +28.81; PACS×55 09:30 $44.70 → close $44.38 -17.60 | — |
 
 ## Not taken
 

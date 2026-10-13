@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-21.52%** ($7,848) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 229 · skips 74 · realized $-1849.08.
+Cash book **-21.24%** ($7,876) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 231 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -387,6 +387,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `KOD` | 40 | $100.06 | $2.11 | — | $4,109.59 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+5.7; leftover $4057.05 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `SFIX` | 1423 | $2.85 | $18.36 | — | $35.69 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+8.8; leftover $4057.05 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $35.69 | ▼ close $7,848.19 vs 09:30 $8,131.16 (session -245.45) | 16:00 close · cash $35.69 · equity $7,848.19 vs 09:30 $8,131.16 (-282.97; session marks -245.45) · 2 name(s) marked open→close (per-name table). KOD×40 09:30 $100.06 → close $99.26 -32.00; SFIX×1423 09:30 $2.85 → close $2.70 -213.45 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $35.69 | ▲ 09:30 equity $7,897.11 vs yday $7,848.19 (+48.92) | 09:30 open · cash $35.69 (unchanged overnight, no fees) · equity $7,897.11 vs prior close $7,848.19 (+48.92) · 2 name(s) re-marked at the open (per-name table). KOD×40 yday $99.26 → 09:30 $99.06 -8.00; SFIX×1423 yday $2.70 → 09:30 $2.74 +56.92 | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 40 | $99.06 | $2.15 | $-44.26 | $3,995.94 | ▼ -44.26 after sell → book $7,894.96; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SFIX` | 1423 | $2.74 | $18.62 | $-193.51 | $7,876.33 | ▼ -193.51 after sell → book $7,876.33; vs 09:30 mark -18.63 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,876.33 | ▲ close $7,876.33 vs 09:30 $7,897.11 (session +0.00) | 16:00 close · cash $7,876.33 · no lots left · equity $7,876.33. | — |
 
 ## Not taken
 

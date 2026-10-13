@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-11.35%** ($8,865) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 266 · skips 288 · realized $+91.50.
+Cash book **-10.54%** ($8,946) · signal-only (no cash/fees) was +43.18%. Starts YES **21/30**. Fills 266 · skips 288 · realized $+91.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -421,6 +421,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `SFIX` | 7 | $2.85 | $0.22 | — | $126.23 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+8.8; leftover $21.55 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `SNAP` | 3 | $6.38 | $0.20 | — | $106.89 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+11.6; leftover $21.55 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $106.89 | ▲ close $8,865.20 vs 09:30 $8,728.22 (session +137.67) | 16:00 close · cash $106.89 · equity $8,865.20 vs 09:30 $8,728.22 (+136.98; session marks +137.67) · 12 name(s) marked open→close (per-name table). BYRN×232 09:30 $4.50 → close $4.55 +12.76; DXC×88 09:30 $12.47 → close $12.54 +6.16; FRPT×16 09:30 $64.17 → close $65.26 +17.44; HAFN×103 09:30 $11.01 → close $10.92 -9.27; ONON×32 09:30 $34.91 → close $35.35 +14.08; SG×113 09:30 $9.58 → close $9.85 +30.51; SHAK×16 09:30 $66.80 → close $69.34 +40.64; STZ×8 09:30 $123.16 → close $126.40 +25.92; PAX×1 09:30 $11.65 → close $11.87 +0.22; KLAR×1 09:30 $14.05 → close $13.86 -0.19; SFIX×7 09:30 $2.85 → close $2.70 -1.05; SNAP×3 09:30 $6.38 → close $6.53 +0.45 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $106.89 | ▼ 09:30 equity $8,845.19 vs yday $8,865.20 (-20.01) | 09:30 open · cash $106.89 (unchanged overnight, no fees) · equity $8,845.19 vs prior close $8,865.20 (-20.01) · 12 name(s) re-marked at the open (per-name table). BYRN×232 yday $4.55 → 09:30 $4.47 -19.72; DXC×88 yday $12.54 → 09:30 $12.55 +0.88; FRPT×16 yday $65.26 → 09:30 $65.26 +0.00; HAFN×103 yday $10.92 → 09:30 $10.70 -22.66; KLAR×1 yday $13.86 → 09:30 $13.77 -0.09; ONON×32 yday $35.35 → 09:30 $35.53 +5.76; PAX×1 yday $11.87 → 09:30 $11.88 +0.01; SFIX×7 yday $2.70 → 09:30 $2.74 +0.28; SG×113 yday $9.85 → 09:30 $9.85 +0.00; SHAK×16 yday $69.34 → 09:30 $69.52 +2.88; SNAP×3 yday $6.53 → 09:30 $6.48 -0.15; STZ×8 yday $126.40 → 09:30 $128.00 +12.80 | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $106.89 | ▲ close $8,946.50 vs 09:30 $8,845.19 (session +101.31) | 16:00 close · cash $106.89 · equity $8,946.50 vs 09:30 $8,845.19 (+101.31; session marks +101.31) · 12 name(s) marked open→close (per-name table). BYRN×232 09:30 $4.47 → close $4.55 +18.56; DXC×88 09:30 $12.55 → close $12.77 +19.36; FRPT×16 09:30 $65.26 → close $66.16 +14.40; HAFN×103 09:30 $10.70 → close $10.85 +15.45; KLAR×1 09:30 $13.77 → close $13.38 -0.39; ONON×32 09:30 $35.53 → close $35.49 -1.28; PAX×1 09:30 $11.88 → close $11.63 -0.25; SFIX×7 09:30 $2.74 → close $2.45 -2.03; SG×113 09:30 $9.85 → close $10.03 +20.34; SHAK×16 09:30 $69.52 → close $71.06 +24.64; SNAP×3 09:30 $6.48 → close $6.49 +0.03; STZ×8 09:30 $128.00 → close $127.06 -7.52 | — |
 
 ## Not taken
 

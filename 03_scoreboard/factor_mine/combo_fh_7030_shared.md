@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared flatten_h5/union_hot_n4_h1 w=0.7,0.3 net=priority
 
-Cash book **-1.03%** ($9,896) · signal-only (no cash/fees) was —. Starts YES **17/30**. Fills 381 · skips 411 · realized $+280.04.
+Cash book **-2.12%** ($9,788) · signal-only (no cash/fees) was —. Starts YES **17/30**. Fills 387 · skips 411 · realized $+280.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $143.93.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $3,170.08.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -538,6 +538,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `FANG` | 5 | $195.01 | $2.00 | — | $1,235.42 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+4.0; combo leftover $1106.24; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `ARQT` | 41 | $26.57 | $2.11 | — | $143.93 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+5.6; combo leftover $1106.24; owner flatten_h5 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $143.93 | ▲ close $9,896.49 vs 09:30 $9,802.87 (session +128.21) | 16:00 close · cash $143.93 · equity $9,896.49 vs 09:30 $9,802.87 (+93.62; session marks +128.21) · 10 name(s) marked open→close (per-name table). CDNA×1 09:30 $63.28 → close $63.12 -0.16; ETON×2 09:30 $55.50 → close $55.25 -0.50; KOD×4 09:30 $100.06 → close $99.26 -3.20; NTAP×8 09:30 $237.38 → close $239.18 +14.40; PACS×96 09:30 $43.20 → close $44.30 +105.60; WFF×21 09:30 $14.78 → close $17.28 +52.50; QTEX×182 09:30 $1.73 → close $1.58 -27.30; NAUT×145 09:30 $2.17 → close $2.17 +0.72; FANG×5 09:30 $195.01 → close $195.11 +0.50; ARQT×41 09:30 $26.57 → close $26.22 -14.35 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $143.93 | ▼ 09:30 equity $9,826.82 vs yday $9,896.49 (-69.67) | 09:30 open · cash $143.93 (unchanged overnight, no fees) · equity $9,826.82 vs prior close $9,896.49 (-69.67) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CDNA` | 1 | $62.57 | $0.65 | $-5.08 | $205.85 | ▼ -5.08 after sell → book $9,826.17; vs 09:30 mark -0.65 | flatten_h5: dropped from list after 7 sess (min 5) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ETON` | 2 | $55.42 | $1.13 | $+3.81 | $315.56 | ▲ +3.81 after sell → book $9,825.04; vs 09:30 mark -1.13 | flatten_h5: dropped from list after 7 sess (min 5) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 4 | $99.06 | $2.02 | $+13.66 | $709.77 | ▲ +13.66 after sell → book $9,823.01; vs 09:30 mark -2.03 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `NTAP` | 8 | $236.16 | $2.04 | $+86.83 | $2,597.02 | ▲ +86.83 after sell → book $9,820.98; vs 09:30 mark -2.03 | flatten_h5: dropped from list after 5 sess (min 5) | join🟡 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 182 | $1.46 | $2.58 | $-55.16 | $2,859.25 | ▼ -55.16 after sell → book $9,818.40; vs 09:30 mark -2.58 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 21 | $14.90 | $2.07 | $-1.61 | $3,170.08 | ▼ -1.61 after sell → book $9,816.33; vs 09:30 mark -2.07 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,170.08 | ▼ close $9,788.40 vs 09:30 $9,826.82 (session -27.93) | 16:00 close · cash $3,170.08 · equity $9,788.40 vs 09:30 $9,826.82 (-38.42; session marks -27.93) · 4 name(s) marked open→close (per-name table). ARQT×41 09:30 $26.00 → close $26.09 +3.69; FANG×5 09:30 $196.33 → close $198.18 +9.25; NAUT×145 09:30 $2.12 → close $2.05 -10.15; PACS×96 09:30 $44.70 → close $44.38 -30.72 | — |
 
 ## Not taken
 

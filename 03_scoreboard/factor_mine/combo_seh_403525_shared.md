@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h3/union_hot_n4_h1 w=0.4,0.35,0.25 net=priority
 
-Cash book **+67.81%** ($16,781) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 463 · skips 369 · realized $+2687.34.
+Cash book **+66.20%** ($16,620) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 466 · skips 369 · realized $+2687.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $17,436.07.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $22,374.18.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -621,6 +621,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `NAUT` | 919 | $2.17 | $11.86 | — | $9,536.18 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; combo leftover $1990.37; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 774 | $10.22 | $10.39 | — | $17,436.07 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; combo leftover $7919.71; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,436.07 | ▲ close $16,780.56 vs 09:30 $15,881.55 (session +951.52) | 16:00 close · cash $17,436.07 · equity $16,780.56 vs 09:30 $15,881.55 (+899.01; session marks +951.52) · 12 name(s) marked open→close (per-name table). ANGO×125 09:30 $11.42 → close $11.40 -2.50; BYRN×294 09:30 $4.50 → close $4.55 +16.17; DAL×17 09:30 $81.05 → close $80.11 -15.98; DXC×172 09:30 $12.47 → close $12.54 -12.04; EQPT×135 09:30 $14.86 → close $14.76 +13.50; HOVR×854 09:30 $1.54 → close $1.51 -25.62; KOD×13 09:30 $100.06 → close $99.26 -10.40; NTLA×172 09:30 $13.08 → close $12.58 +86.00; WFF×134 09:30 $14.78 → close $17.28 +335.00; QTEX×1150 09:30 $1.73 → close $1.58 -172.50; NAUT×919 09:30 $2.17 → close $2.17 +4.59; AEHL×774 09:30 $10.22 → close $9.27 +735.30 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17,436.07 | ▼ 09:30 equity $16,440.29 vs yday $16,780.56 (-340.27) | 09:30 open · cash $17,436.07 (unchanged overnight, no fees) · equity $16,440.29 vs prior close $16,780.56 (-340.27) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 13 | $99.06 | $2.05 | $+53.38 | $18,721.80 | ▲ +53.38 after sell → book $16,438.24; vs 09:30 mark -2.05 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 1150 | $1.46 | $15.04 | $-346.12 | $20,380.01 | ▼ -346.12 after sell → book $16,423.20; vs 09:30 mark -15.04 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 134 | $14.90 | $2.43 | $+11.26 | $22,374.18 | ▲ +11.26 after sell → book $16,420.77; vs 09:30 mark -2.43 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22,374.18 | ▲ close $16,620.25 vs 09:30 $16,440.29 (session +199.48) | 16:00 close · cash $22,374.18 · equity $16,620.25 vs 09:30 $16,440.29 (+179.96; session marks +199.48) · 9 name(s) marked open→close (per-name table). AEHL×774 09:30 $9.08 → close $8.55 +410.22; ANGO×125 09:30 $11.43 → close $10.90 -66.25; BYRN×294 09:30 $4.47 → close $4.55 +23.52; DAL×17 09:30 $80.70 → close $79.57 -19.21; DXC×172 09:30 $12.55 → close $12.77 -37.84; EQPT×135 09:30 $14.54 → close $15.37 -112.05; HOVR×854 09:30 $1.47 → close $1.46 -8.54; NAUT×919 09:30 $2.12 → close $2.05 -64.33; NTLA×172 09:30 $12.34 → close $11.91 +73.96 | — |
 
 ## Not taken
 

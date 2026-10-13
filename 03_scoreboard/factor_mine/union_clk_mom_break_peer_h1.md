@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-10.83%** ($8,917) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 329 · skips 96 · realized $-120.43.
+Cash book **-12.66%** ($8,734) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 331 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -487,6 +487,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `DNA` | 355 | $12.69 | $4.58 | — | $4,514.05 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; leftover $4511.79 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `LVWR` | 2816 | $1.59 | $36.33 | — | $0.28 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list yday_gainer; ret5=+2.5; leftover $4511.79 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.28 | ▼ close $8,916.61 vs 09:30 $9,038.52 (session -66.06) | 16:00 close · cash $0.28 · equity $8,916.61 vs 09:30 $9,038.52 (-121.91; session marks -66.06) · 2 name(s) marked open→close (per-name table). DNA×355 09:30 $12.69 → close $11.79 -319.50; LVWR×2816 09:30 $1.59 → close $1.68 +253.44 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.28 | ▼ 09:30 equity $8,775.81 vs yday $8,916.61 (-140.80) | 09:30 open · cash $0.28 (unchanged overnight, no fees) · equity $8,775.81 vs prior close $8,916.61 (-140.80) · 2 name(s) re-marked at the open (per-name table). DNA×355 yday $11.79 → 09:30 $11.79 +0.00; LVWR×2816 yday $1.68 → 09:30 $1.63 -140.80 | — |
+| 2026-10-13 09:30 ET | **SELL** | `DNA` | 355 | $11.79 | $4.67 | $-328.75 | $4,181.06 | ▼ -328.75 after sell → book $8,771.14; vs 09:30 mark -4.67 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `LVWR` | 2816 | $1.63 | $36.83 | $+39.48 | $8,734.31 | ▲ +39.48 after sell → book $8,734.31; vs 09:30 mark -36.83 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,734.31 | ▲ close $8,734.31 vs 09:30 $8,775.81 (session +0.00) | 16:00 close · cash $8,734.31 · no lots left · equity $8,734.31. | — |
 
 ## Not taken
 

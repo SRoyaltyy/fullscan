@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-18.36%** ($8,164) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 110 · skips 88 · realized $-2389.72.
+Cash book **-22.42%** ($7,758) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 110 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -266,6 +266,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.45 | ▲ close $8,379.71 vs 09:30 $8,376.54 (session +50.31) | 16:00 close · cash $2.45 · equity $8,379.71 vs 09:30 $8,376.54 (+3.17; session marks +50.31) · 2 name(s) marked open→close (per-name table). ANGO×377 09:30 $11.06 → close $11.52 +173.42; GLAS×947 09:30 $4.39 → close $4.26 -123.11 | — |
 | 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.45 | ▼ 09:30 equity $8,294.66 vs yday $8,379.71 (-85.05) | 09:30 open · cash $2.45 (unchanged overnight, no fees) · equity $8,294.66 vs prior close $8,379.71 (-85.05) · 2 name(s) re-marked at the open (per-name table). ANGO×377 yday $11.52 → 09:30 $11.42 -37.70; GLAS×947 yday $4.26 → 09:30 $4.21 -47.35 | — |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.45 | ▼ close $8,164.01 vs 09:30 $8,294.66 (session -130.65) | 16:00 close · cash $2.45 · equity $8,164.01 vs 09:30 $8,294.66 (-130.65; session marks -130.65) · 2 name(s) marked open→close (per-name table). ANGO×377 09:30 $11.42 → close $11.40 -7.54; GLAS×947 09:30 $4.21 → close $4.08 -123.11 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.45 | ▼ 09:30 equity $8,090.09 vs yday $8,164.01 (-73.92) | 09:30 open · cash $2.45 (unchanged overnight, no fees) · equity $8,090.09 vs prior close $8,164.01 (-73.92) · 2 name(s) re-marked at the open (per-name table). ANGO×377 yday $11.40 → 09:30 $11.43 +11.31; GLAS×947 yday $4.08 → 09:30 $3.99 -85.23 | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.45 | ▼ close $7,757.70 vs 09:30 $8,090.09 (session -332.39) | 16:00 close · cash $2.45 · equity $7,757.70 vs 09:30 $8,090.09 (-332.39; session marks -332.39) · 2 name(s) marked open→close (per-name table). ANGO×377 09:30 $11.43 → close $10.90 -199.81; GLAS×947 09:30 $3.99 → close $3.85 -132.58 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · split short_news_r_h3/union_e_fresh_h3 w=0.5,0.5 net=priority
 
-Cash book **-12.75%** ($8,725) · signal-only (no cash/fees) was —. Starts YES **21/30**. Fills 275 · skips 315 · realized $+2068.42.
+Cash book **-12.11%** ($8,790) · signal-only (no cash/fees) was —. Starts YES **21/30**. Fills 275 · skips 315 · realized $+2068.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -492,6 +492,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,564.65 | ▲ close $4,546.02 vs 09:30 $4,320.87 (session +227.98) | 16:00 close · cash $8,564.65 · equity $4,546.02 vs 09:30 $4,320.87 (+225.15; session marks +227.98) · 5 name(s) marked open→close (per-name table). DAL×6 09:30 $81.05 → close $80.11 +5.64; DXC×43 09:30 $12.47 → close $12.54 -3.01; EQPT×34 09:30 $14.86 → close $14.76 +3.40; NTLA×43 09:30 $13.08 → close $12.58 +21.50; AEHL×211 09:30 $10.22 → close $9.27 +200.45 | — |
 | 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,411.06 | ▲ 09:30 equity $4,320.87 vs yday $4,309.94 (+10.93) | 09:30 open · cash $6,411.06 (unchanged overnight, no fees) · equity $4,320.87 vs prior close $4,309.94 (+10.93) · 4 name(s) re-marked at the open (per-name table). DAL×6 yday $82.17 → 09:30 $81.05 +6.72; DXC×43 yday $12.40 → 09:30 $12.47 -3.01; EQPT×34 yday $15.09 → 09:30 $14.86 +7.65; NTLA×43 yday $13.07 → 09:30 $13.08 -0.43 | — |
 | 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 211 | $10.22 | $2.83 | — | $8,564.65 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; leftover $2160.44 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,564.65 | ▲ close $4,699.36 vs 09:30 $4,599.94 (session +99.42) | 16:00 close · cash $8,564.65 · equity $4,699.36 vs 09:30 $4,599.94 (+99.42; session marks +99.42) · 5 name(s) marked open→close (per-name table). AEHL×211 09:30 $9.08 → close $8.55 +111.83; DAL×6 09:30 $80.70 → close $79.57 +6.78; DXC×43 09:30 $12.55 → close $12.77 -9.46; EQPT×34 09:30 $14.54 → close $15.37 -28.22; NTLA×43 09:30 $12.34 → close $11.91 +18.49 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,564.65 | ▲ 09:30 equity $4,599.94 vs yday $4,546.02 (+53.92) | 09:30 open · cash $8,564.65 (unchanged overnight, no fees) · equity $4,599.94 vs prior close $4,546.02 (+53.92) · 5 name(s) re-marked at the open (per-name table). AEHL×211 yday $9.27 → 09:30 $9.08 +40.09; DAL×6 yday $80.11 → 09:30 $80.70 -3.54; DXC×43 yday $12.54 → 09:30 $12.55 -0.43; EQPT×34 yday $14.76 → 09:30 $14.54 +7.48; NTLA×43 yday $12.58 → 09:30 $12.34 +10.32 | — |
 
 ## Not taken
 

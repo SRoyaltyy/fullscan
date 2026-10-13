@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **+6.38%** ($10,639) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 264 · skips 298 · realized $+167.97.
+Cash book **+4.49%** ($10,449) · signal-only (no cash/fees) was +49.44%. Starts YES **25/30**. Fills 264 · skips 298 · realized $+167.97.
 
 ## How this sleeve decides (like you are 10)
 
@@ -420,6 +420,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `WFF` | 1 | $14.78 | $0.15 | — | $170.69 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; 🔵; ret5=+411.0; leftover $23.20 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `SVC` | 3 | $7.30 | $0.23 | — | $148.56 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer,yday_mover; 🔵; ret5=+12.1; leftover $23.20 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $148.56 | ▲ close $10,638.53 vs 09:30 $10,574.62 (session +64.29) | 16:00 close · cash $148.56 · equity $10,638.53 vs 09:30 $10,574.62 (+63.91; session marks +64.29) · 10 name(s) marked open→close (per-name table). ADCT×833 09:30 $1.70 → close $1.86 +133.28; BYRN×280 09:30 $4.50 → close $4.55 +15.40; ERAS×85 09:30 $15.96 → close $15.46 -42.50; HAE×10 09:30 $118.70 → close $122.06 +33.60; MANE×10 09:30 $129.99 → close $122.40 -75.90; MAX×123 09:30 $10.12 → close $10.06 -7.38; PCRX×36 09:30 $36.32 → close $36.35 +1.08; RRC×32 09:30 $41.16 → close $41.42 +8.32; WFF×1 09:30 $14.78 → close $17.28 +2.50; SVC×3 09:30 $7.30 → close $5.93 -4.11 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $148.56 | ▼ 09:30 equity $10,611.05 vs yday $10,638.53 (-27.48) | 09:30 open · cash $148.56 (unchanged overnight, no fees) · equity $10,611.05 vs prior close $10,638.53 (-27.48) · 10 name(s) re-marked at the open (per-name table). ADCT×833 yday $1.86 → 09:30 $1.86 +0.00; BYRN×280 yday $4.55 → 09:30 $4.47 -23.80; ERAS×85 yday $15.46 → 09:30 $15.25 -17.85; HAE×10 yday $122.06 → 09:30 $122.80 +7.40; MANE×10 yday $122.40 → 09:30 $121.17 -12.30; MAX×123 yday $10.06 → 09:30 $10.17 +13.53; PCRX×36 yday $36.35 → 09:30 $36.33 -0.72; RRC×32 yday $41.42 → 09:30 $41.69 +8.64; SVC×3 yday $5.93 → 09:30 $5.93 +0.00; WFF×1 yday $17.28 → 09:30 $14.90 -2.38 | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $148.56 | ▼ close $10,448.99 vs 09:30 $10,611.05 (session -162.06) | 16:00 close · cash $148.56 · equity $10,448.99 vs 09:30 $10,611.05 (-162.06; session marks -162.06) · 10 name(s) marked open→close (per-name table). ADCT×833 09:30 $1.86 → close $1.70 -133.28; BYRN×280 09:30 $4.47 → close $4.55 +22.40; ERAS×85 09:30 $15.25 → close $14.78 -39.95; HAE×10 09:30 $122.80 → close $121.72 -10.80; MANE×10 09:30 $121.17 → close $116.26 -49.10; MAX×123 09:30 $10.17 → close $10.47 +36.90; PCRX×36 09:30 $36.33 → close $36.31 -0.72; RRC×32 09:30 $41.69 → close $42.48 +25.28; SVC×3 09:30 $5.93 → close $5.92 -0.01; WFF×1 09:30 $14.90 → close $2.12 -12.78 | — |
 
 ## Not taken
 

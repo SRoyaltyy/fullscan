@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_g_h1/flatten_h5 w=0.5,0.5 net=priority
 
-Cash book **-17.74%** ($8,226) · signal-only (no cash/fees) was —. Starts YES **0/30**. Fills 418 · skips 441 · realized $+14.03.
+Cash book **-17.88%** ($8,212) · signal-only (no cash/fees) was —. Starts YES **0/30**. Fills 423 · skips 441 · realized $+14.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $165.70.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $3,913.71.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -575,6 +575,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `FANG` | 4 | $195.01 | $2.00 | — | $1,071.18 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+4.0; combo leftover $926.61; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `ARQT` | 34 | $26.57 | $2.09 | — | $165.70 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+5.6; combo leftover $926.61; owner flatten_h5 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $165.70 | ▲ close $8,226.02 vs 09:30 $8,237.72 (session +14.12) | 16:00 close · cash $165.70 · equity $8,226.02 vs 09:30 $8,237.72 (-11.70; session marks +14.12) · 8 name(s) marked open→close (per-name table). CDNA×7 09:30 $63.28 → close $63.12 -1.12; ETON×9 09:30 $55.50 → close $55.25 -2.25; NTAP×5 09:30 $237.38 → close $239.18 +9.00; PACS×59 09:30 $43.20 → close $44.30 +64.90; DNA×69 09:30 $12.69 → close $11.79 -62.10; AUGO×9 09:30 $89.89 → close $91.80 +17.19; FANG×4 09:30 $195.01 → close $195.11 +0.40; ARQT×34 09:30 $26.57 → close $26.22 -11.90 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $165.70 | ▲ 09:30 equity $8,230.68 vs yday $8,226.02 (+4.66) | 09:30 open · cash $165.70 (unchanged overnight, no fees) · equity $8,230.68 vs prior close $8,226.02 (+4.66) | — |
+| 2026-10-13 09:30 ET | **SELL** | `AUGO` | 9 | $91.92 | $2.04 | $+14.22 | $990.94 | ▲ +14.22 after sell → book $8,228.64; vs 09:30 mark -2.04 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CDNA` | 7 | $62.57 | $2.03 | $-30.36 | $1,426.90 | ▼ -30.36 after sell → book $8,226.61; vs 09:30 mark -2.03 | flatten_h5: dropped from list after 7 sess (min 5) | — |
+| 2026-10-13 09:30 ET | **SELL** | `DNA` | 69 | $11.79 | $2.22 | $-66.52 | $2,238.19 | ▼ -66.52 after sell → book $8,224.39; vs 09:30 mark -2.22 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ETON` | 9 | $55.42 | $2.04 | $+22.95 | $2,734.94 | ▲ +22.95 after sell → book $8,222.36; vs 09:30 mark -2.03 | flatten_h5: dropped from list after 7 sess (min 5) | — |
+| 2026-10-13 09:30 ET | **SELL** | `NTAP` | 5 | $236.16 | $2.02 | $+52.77 | $3,913.71 | ▲ +52.77 after sell → book $8,220.33; vs 09:30 mark -2.03 | flatten_h5: dropped from list after 5 sess (min 5) | join🟡 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,913.71 | ▼ close $8,211.91 vs 09:30 $8,230.68 (session -8.42) | 16:00 close · cash $3,913.71 · equity $8,211.91 vs 09:30 $8,230.68 (-18.77; session marks -8.42) · 3 name(s) marked open→close (per-name table). ARQT×34 09:30 $26.00 → close $26.09 +3.06; FANG×4 09:30 $196.33 → close $198.18 +7.40; PACS×59 09:30 $44.70 → close $44.38 -18.88 | — |
 
 ## Not taken
 

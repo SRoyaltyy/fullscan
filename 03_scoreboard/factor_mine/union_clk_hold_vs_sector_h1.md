@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-15.88%** ($8,413) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 273 · skips 96 · realized $+387.41.
+Cash book **-15.99%** ($8,401) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 281 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -431,6 +431,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `PAX` | 88 | $11.65 | $2.25 | — | $1,121.63 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+14.3; leftover $1027.50 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `SEZL` | 8 | $127.75 | $2.01 | — | $97.61 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; ret5=+19.8; leftover $1027.50 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $97.61 | ▲ close $8,412.51 vs 09:30 $8,395.58 (session +49.83) | 16:00 close · cash $97.61 · equity $8,412.51 vs 09:30 $8,395.58 (+16.93; session marks +49.83) · 8 name(s) marked open→close (per-name table). FIGS×71 09:30 $15.89 → close $17.74 +131.35; ONON×31 09:30 $34.91 → close $35.35 +13.64; FSLY×35 09:30 $28.79 → close $26.43 -82.60; AFRM×12 09:30 $80.49 → close $78.63 -22.32; KLAR×73 09:30 $14.05 → close $13.86 -14.16; NTSK×48 09:30 $21.00 → close $20.64 -17.28; PAX×88 09:30 $11.65 → close $11.87 +19.36; SEZL×8 09:30 $127.75 → close $130.48 +21.84 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $97.61 | ▲ 09:30 equity $8,418.62 vs yday $8,412.51 (+6.11) | 09:30 open · cash $97.61 (unchanged overnight, no fees) · equity $8,418.62 vs prior close $8,412.51 (+6.11) · 8 name(s) re-marked at the open (per-name table). AFRM×12 yday $78.63 → 09:30 $78.54 -1.08; FIGS×71 yday $17.74 → 09:30 $17.80 +4.26; FSLY×35 yday $26.43 → 09:30 $26.19 -8.40; KLAR×73 yday $13.86 → 09:30 $13.77 -6.57; NTSK×48 yday $20.64 → 09:30 $20.76 +5.76; ONON×31 yday $35.35 → 09:30 $35.53 +5.58; PAX×88 yday $11.87 → 09:30 $11.88 +0.88; SEZL×8 yday $130.48 → 09:30 $131.19 +5.68 | — |
+| 2026-10-13 09:30 ET | **SELL** | `AFRM` | 12 | $78.54 | $2.05 | $-27.47 | $1,038.04 | ▼ -27.47 after sell → book $8,416.57; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FIGS` | 71 | $17.80 | $2.22 | $+195.08 | $2,299.62 | ▲ +195.08 after sell → book $8,414.35; vs 09:30 mark -2.22 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FSLY` | 35 | $26.19 | $2.12 | $-95.21 | $3,214.15 | ▼ -95.21 after sell → book $8,412.23; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KLAR` | 73 | $13.77 | $2.23 | $-25.17 | $4,217.13 | ▼ -25.17 after sell → book $8,410.00; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `NTSK` | 48 | $20.76 | $2.15 | $-15.81 | $5,211.46 | ▼ -15.81 after sell → book $8,407.85; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ONON` | 31 | $35.53 | $2.10 | $+42.31 | $6,310.79 | ▲ +42.31 after sell → book $8,405.75; vs 09:30 mark -2.10 | dropped from list after 2 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-13 09:30 ET | **SELL** | `PAX` | 88 | $11.88 | $2.28 | $+15.71 | $7,353.95 | ▲ +15.71 after sell → book $8,403.47; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SEZL` | 8 | $131.19 | $2.03 | $+23.47 | $8,401.43 | ▲ +23.47 after sell → book $8,401.43; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,401.43 | ▲ close $8,401.43 vs 09:30 $8,418.62 (session +0.00) | 16:00 close · cash $8,401.43 · no lots left · equity $8,401.43. | — |
 
 ## Not taken
 

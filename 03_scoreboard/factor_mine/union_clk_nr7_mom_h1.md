@@ -218,6 +218,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7.26 | ▲ 09:30 equity $9,803.34 vs yday $9,739.08 (+64.26) | 09:30 open · cash $7.26 (unchanged overnight, no fees) · equity $9,803.34 vs prior close $9,739.08 (+64.26) · 1 name(s) re-marked at the open (per-name table). RRC×238 yday $40.89 → 09:30 $41.16 +64.26 | — |
 | 2026-10-12 09:30 ET | **SELL** | `RRC` | 238 | $41.16 | $3.19 | $+122.26 | $9,800.15 | ▲ +122.26 after sell → book $9,800.15; vs 09:30 mark -3.19 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,800.15 | ▲ close $9,800.15 vs 09:30 $9,803.34 (session +0.00) | 16:00 close · cash $9,800.15 · no lots left · equity $9,800.15. | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,800.15 | ▲ 09:30 equity $9,800.15 vs yday $9,800.15 (+0.00) | 09:30 open · cash $9,800.15 · no holdings · equity $9,800.15 vs prior close $9,800.15 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,800.15 | ▲ close $9,800.15 vs 09:30 $9,800.15 (session +0.00) | 16:00 close · cash $9,800.15 · no lots left · equity $9,800.15. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-36.23%** ($6,377) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 156 · skips 51 · realized $+1398.96.
+Cash book **-36.27%** ($6,373) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 158 · skips 51 · realized $+1398.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -313,6 +313,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `DNA` | 349 | $12.69 | $4.50 | — | $2,218.36 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; leftover $4434.45 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `AUGO` | 24 | $89.89 | $2.06 | — | $58.94 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer; 🔵; ret5=+11.4; leftover $2217.22 | join🟢 sector🔴 gen🔴 news🟢 digest🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $58.94 | ▼ close $6,376.85 vs 09:30 $6,660.30 (session -268.26) | 16:00 close · cash $58.94 · equity $6,376.85 vs 09:30 $6,660.30 (-283.45; session marks -268.26) · 2 name(s) marked open→close (per-name table). DNA×349 09:30 $12.69 → close $11.79 -314.10; AUGO×24 09:30 $89.89 → close $91.80 +45.84 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $58.94 | ▲ 09:30 equity $6,379.73 vs yday $6,376.85 (+2.88) | 09:30 open · cash $58.94 (unchanged overnight, no fees) · equity $6,379.73 vs prior close $6,376.85 (+2.88) · 2 name(s) re-marked at the open (per-name table). AUGO×24 yday $91.80 → 09:30 $91.92 +2.88; DNA×349 yday $11.79 → 09:30 $11.79 +0.00 | — |
+| 2026-10-13 09:30 ET | **SELL** | `AUGO` | 24 | $91.92 | $2.09 | $+44.57 | $2,262.93 | ▲ +44.57 after sell → book $6,377.64; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `DNA` | 349 | $11.79 | $4.59 | $-323.20 | $6,373.05 | ▼ -323.20 after sell → book $6,373.05; vs 09:30 mark -4.59 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,373.05 | ▲ close $6,373.05 vs 09:30 $6,379.73 (session +0.00) | 16:00 close · cash $6,373.05 · no lots left · equity $6,373.05. | — |
 
 ## Not taken
 

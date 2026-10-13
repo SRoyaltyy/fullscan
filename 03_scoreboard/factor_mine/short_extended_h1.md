@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-3.71%** ($9,629) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 340 · skips 88 · realized $-1484.16.
+Cash book **-2.35%** ($9,764) · signal-only (no cash/fees) was -19.86%. Starts YES **3/30**. Fills 348 · skips 88 · realized $-1484.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -494,6 +494,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **SHORT** | `PCVX` | 8 | $70.85 | $2.05 | — | $13,586.62 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; ret5=+26.4; leftover $602.88 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **SHORT** | `SEZL` | 4 | $127.75 | $2.04 | — | $14,095.58 | — | ret_5>15; gate ret_5_min=15.0; list yday_gainer; ret5=+19.8; leftover $602.88 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,095.58 | ▲ close $9,629.13 vs 09:30 $9,672.23 (session +2.63) | 16:00 close · cash $14,095.58 · equity $9,629.13 vs 09:30 $9,672.23 (-43.10; session marks +2.63) · 8 name(s) marked open→close (per-name table). WFF×40 09:30 $14.78 → close $17.28 -100.00; NVAX×47 09:30 $12.61 → close $12.66 -2.35; CCI×7 09:30 $79.50 → close $81.01 -10.57; MRNA×2 09:30 $224.24 → close $213.74 +20.99; PRME×152 09:30 $3.95 → close $3.61 +51.68; QTEX×348 09:30 $1.73 → close $1.58 +52.20; PCVX×8 09:30 $70.85 → close $70.65 +1.60; SEZL×4 09:30 $127.75 → close $130.48 -10.92 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,095.58 | ▲ 09:30 equity $9,783.65 vs yday $9,629.13 (+154.52) | 09:30 open · cash $14,095.58 (unchanged overnight, no fees) · equity $9,783.65 vs prior close $9,629.13 (+154.52) · 8 name(s) re-marked at the open (per-name table). CCI×7 yday $81.01 → 09:30 $81.99 -6.86; MRNA×2 yday $213.74 → 09:30 $207.63 +12.22; NVAX×47 yday $12.66 → 09:30 $12.44 +10.34; PCVX×8 yday $70.65 → 09:30 $70.28 +2.96; PRME×152 yday $3.61 → 09:30 $3.61 -0.00; QTEX×348 yday $1.58 → 09:30 $1.46 +43.50; SEZL×4 yday $130.48 → 09:30 $131.19 -2.84; WFF×40 yday $17.28 → 09:30 $14.90 +95.20 | — |
+| 2026-10-13 09:30 ET | **COVER** | `CCI` | 7 | $81.99 | $2.01 | $-21.49 | $13,519.64 | ▼ -21.49 after sell → book $9,781.64; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `MRNA` | 2 | $207.63 | $2.00 | $+29.19 | $13,102.38 | ▲ +29.19 after sell → book $9,779.64; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `NVAX` | 47 | $12.44 | $2.13 | $+3.69 | $12,515.57 | ▲ +3.69 after sell → book $9,777.51; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `PCVX` | 8 | $70.28 | $2.01 | $+0.50 | $11,951.32 | ▲ +0.50 after sell → book $9,775.50; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `PRME` | 152 | $3.61 | $2.45 | $+46.74 | $11,400.15 | ▲ +46.74 after sell → book $9,773.05; vs 09:30 mark -2.45 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `QTEX` | 348 | $1.46 | $4.49 | $+86.64 | $10,889.32 | ▲ +86.64 after sell → book $9,768.56; vs 09:30 mark -4.49 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `SEZL` | 4 | $131.19 | $2.00 | $-17.80 | $10,362.56 | ▼ -17.80 after sell → book $9,766.56; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `WFF` | 40 | $14.90 | $2.11 | $-9.06 | $9,764.45 | ▼ -9.06 after sell → book $9,764.45; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,764.45 | ▲ close $9,764.45 vs 09:30 $9,783.65 (session +0.00) | 16:00 close · cash $9,764.45 · no lots left · equity $9,764.45. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_candle` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_candle
 
-Cash book **+19.36%** ($11,936) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 361 · skips 97 · realized $+14.68.
+Cash book **+14.55%** ($11,455) · signal-only (no cash/fees) was +36.45%. Starts YES **29/30**. Fills 368 · skips 97 · realized $+14.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -516,6 +516,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `CCI` | 18 | $79.50 | $2.04 | — | $1,755.18 | — | rank by w_hot_candle; rank w_hot_candle; list yday_gainer,yday_mover; 🔵; ret5=+19.9; leftover $1488.33 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `TENB` | 35 | $42.48 | $2.10 | — | $266.29 | — | rank by w_hot_candle; rank w_hot_candle; list ohlc_hot; 🔵; ret5=+12.9; leftover $1488.33 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $266.29 | ▲ close $11,935.63 vs 09:30 $11,948.32 (session +46.82) | 16:00 close · cash $266.29 · equity $11,935.63 vs 09:30 $11,948.32 (-12.69; session marks +46.82) · 8 name(s) marked open→close (per-name table). KOD×15 09:30 $100.06 → close $99.26 -12.00; WFF×100 09:30 $14.78 → close $17.28 +250.00; QTEX×860 09:30 $1.73 → close $1.58 -129.00; NAUT×687 09:30 $2.17 → close $2.17 +3.43; SEZL×11 09:30 $127.75 → close $130.48 +30.03; MRNA×6 09:30 $224.24 → close $213.74 -62.97; CCI×18 09:30 $79.50 → close $81.01 +27.18; TENB×35 09:30 $42.48 → close $40.77 -59.85 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $266.29 | ▼ 09:30 equity $11,526.87 vs yday $11,935.63 (-408.76) | 09:30 open · cash $266.29 (unchanged overnight, no fees) · equity $11,526.87 vs prior close $11,935.63 (-408.76) · 8 name(s) re-marked at the open (per-name table). CCI×18 yday $81.01 → 09:30 $81.99 +17.64; KOD×15 yday $99.26 → 09:30 $99.06 -3.00; MRNA×6 yday $213.74 → 09:30 $207.63 -36.66; NAUT×687 yday $2.17 → 09:30 $2.12 -34.35; QTEX×860 yday $1.58 → 09:30 $1.46 -107.50; SEZL×11 yday $130.48 → 09:30 $131.19 +7.81; TENB×35 yday $40.77 → 09:30 $40.35 -14.70; WFF×100 yday $17.28 → 09:30 $14.90 -238.00 | — |
+| 2026-10-13 09:30 ET | **SELL** | `CCI` | 18 | $81.99 | $2.07 | $+40.71 | $1,740.04 | ▲ +40.71 after sell → book $11,524.80; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 15 | $99.06 | $2.06 | $+62.21 | $3,223.89 | ▲ +62.21 after sell → book $11,522.75; vs 09:30 mark -2.05 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `MRNA` | 6 | $207.63 | $2.03 | $-103.67 | $4,467.64 | ▼ -103.67 after sell → book $11,520.72; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 860 | $1.46 | $11.25 | $-258.84 | $5,707.69 | ▼ -258.84 after sell → book $11,509.47; vs 09:30 mark -11.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SEZL` | 11 | $131.19 | $2.04 | $+33.77 | $7,148.74 | ▲ +33.77 after sell → book $11,507.43; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `TENB` | 35 | $40.35 | $2.12 | $-78.76 | $8,558.87 | ▼ -78.76 after sell → book $11,505.31; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 100 | $14.90 | $2.32 | $+7.39 | $10,046.55 | ▲ +7.39 after sell → book $11,502.99; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,046.55 | ▼ close $11,454.90 vs 09:30 $11,526.87 (session -48.09) | 16:00 close · cash $10,046.55 · equity $11,454.90 vs 09:30 $11,526.87 (-71.97; session marks -48.09) · 1 name(s) marked open→close (per-name table). NAUT×687 09:30 $2.12 → close $2.05 -48.09 | — |
 
 ## Not taken
 

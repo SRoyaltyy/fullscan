@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_join_vol_green_h1 w=0.5,0.5 net=priority
 
-Cash book **-5.47%** ($9,453) · signal-only (no cash/fees) was —. Starts YES **26/30**. Fills 471 · skips 283 · realized $+3654.25.
+Cash book **-6.88%** ($9,312) · signal-only (no cash/fees) was —. Starts YES **26/30**. Fills 474 · skips 283 · realized $+3654.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $327.83.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $4,635.53.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -628,6 +628,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `CIEN` | 3 | $443.53 | $2.00 | — | $1,980.28 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+14.9; combo leftover $1652.02; owner union_join_vol_green_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `MNSO` | 167 | $9.88 | $2.49 | — | $327.83 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+8.7; combo leftover $1652.02; owner union_join_vol_green_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $327.83 | ▼ close $9,452.77 vs 09:30 $9,777.84 (session -299.75) | 16:00 close · cash $327.83 · equity $9,452.77 vs 09:30 $9,777.84 (-325.07; session marks -299.75) · 7 name(s) marked open→close (per-name table). ANGO×110 09:30 $11.42 → close $11.40 -2.20; BYRN×260 09:30 $4.50 → close $4.55 +14.30; DAL×15 09:30 $81.05 → close $80.11 -14.10; HOVR×754 09:30 $1.54 → close $1.51 -22.62; FSLY×57 09:30 $28.79 → close $26.43 -134.52; CIEN×3 09:30 $443.53 → close $405.01 -115.56; MNSO×167 09:30 $9.88 → close $9.73 -25.05 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $327.83 | ▼ 09:30 equity $9,380.64 vs yday $9,452.77 (-72.13) | 09:30 open · cash $327.83 (unchanged overnight, no fees) · equity $9,380.64 vs prior close $9,452.77 (-72.13) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CIEN` | 3 | $393.33 | $2.02 | $-154.62 | $1,505.80 | ▼ -154.62 after sell → book $9,378.62; vs 09:30 mark -2.02 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FSLY` | 57 | $26.19 | $2.18 | $-152.54 | $2,996.45 | ▼ -152.54 after sell → book $9,376.44; vs 09:30 mark -2.18 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `MNSO` | 167 | $9.83 | $2.53 | $-13.37 | $4,635.53 | ▼ -13.37 after sell → book $9,373.91; vs 09:30 mark -2.53 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,635.53 | ▼ close $9,311.92 vs 09:30 $9,380.64 (session -61.99) | 16:00 close · cash $4,635.53 · equity $9,311.92 vs 09:30 $9,380.64 (-68.72; session marks -61.99) · 4 name(s) marked open→close (per-name table). ANGO×110 09:30 $11.43 → close $10.90 -58.30; BYRN×260 09:30 $4.47 → close $4.55 +20.80; DAL×15 09:30 $80.70 → close $79.57 -16.95; HOVR×754 09:30 $1.47 → close $1.46 -7.54 | — |
 
 ## Not taken
 

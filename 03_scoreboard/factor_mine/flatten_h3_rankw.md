@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-22.46%** ($7,754) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 191 · skips 213 · realized $-994.96.
+Cash book **-23.25%** ($7,675) · signal-only (no cash/fees) was -10.41%. Starts YES **1/30**. Fills 191 · skips 213 · realized $-994.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -343,6 +343,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $73.86 | ▼ close $7,636.32 vs 09:30 $7,688.95 (session -36.10) | 16:00 close · cash $73.86 · equity $7,636.32 vs 09:30 $7,688.95 (-52.63; session marks -36.10) · 2 name(s) marked open→close (per-name table). PACS×116 09:30 $43.75 → close $43.30 -52.20; ETON×46 09:30 $54.86 → close $55.21 +16.10 | — |
 | 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $73.86 | ▲ 09:30 equity $7,638.06 vs yday $7,636.32 (+1.74) | 09:30 open · cash $73.86 (unchanged overnight, no fees) · equity $7,638.06 vs prior close $7,636.32 (+1.74) · 2 name(s) re-marked at the open (per-name table). ETON×46 yday $55.21 → 09:30 $55.50 +13.34; PACS×116 yday $43.30 → 09:30 $43.20 -11.60 | — |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $73.86 | ▲ close $7,754.16 vs 09:30 $7,638.06 (session +116.10) | 16:00 close · cash $73.86 · equity $7,754.16 vs 09:30 $7,638.06 (+116.10; session marks +116.10) · 2 name(s) marked open→close (per-name table). ETON×46 09:30 $55.50 → close $55.25 -11.50; PACS×116 09:30 $43.20 → close $44.30 +127.60 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $73.86 | ▲ 09:30 equity $7,808.38 vs yday $7,754.16 (+54.22) | 09:30 open · cash $73.86 (unchanged overnight, no fees) · equity $7,808.38 vs prior close $7,754.16 (+54.22) · 2 name(s) re-marked at the open (per-name table). ETON×46 yday $55.25 → 09:30 $55.42 +7.82; PACS×116 yday $44.30 → 09:30 $44.70 +46.40 | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $73.86 | ▼ close $7,675.12 vs 09:30 $7,808.38 (session -133.26) | 16:00 close · cash $73.86 · equity $7,675.12 vs 09:30 $7,808.38 (-133.26; session marks -133.26) · 2 name(s) marked open→close (per-name table). ETON×46 09:30 $55.42 → close $53.33 -96.14; PACS×116 09:30 $44.70 → close $44.38 -37.12 | — |
 
 ## Not taken
 

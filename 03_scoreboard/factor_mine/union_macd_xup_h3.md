@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-9.15%** ($9,085) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 190 · skips 209 · realized $-2117.42.
+Cash book **-10.46%** ($8,954) · signal-only (no cash/fees) was -55.44%. Starts YES **5/30**. Fills 190 · skips 209 · realized $-2117.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -346,6 +346,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `KLRA` | 1 | $11.39 | $0.12 | — | $106.92 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer,yday_mover; ret5=+11.7; leftover $22.25 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `LVWR` | 13 | $1.59 | $0.25 | — | $86.00 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; ret5=+2.5; leftover $22.25 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $86.00 | ▼ close $9,085.11 vs 09:30 $9,246.77 (session -160.91) | 16:00 close · cash $86.00 · equity $9,085.11 vs 09:30 $9,246.77 (-161.66; session marks -160.91) · 10 name(s) marked open→close (per-name table). CSGP×51 09:30 $29.67 → close $29.21 -23.46; FLUT×19 09:30 $79.48 → close $78.28 -22.80; GAU×723 09:30 $2.16 → close $2.16 +0.00; HAE×12 09:30 $118.70 → close $122.06 +40.32; LCTX×1525 09:30 $1.00 → close $0.95 -66.80; MANE×12 09:30 $129.99 → close $122.40 -91.08; CCCC×7 09:30 $3.16 → close $3.06 -0.70; WFF×1 09:30 $14.78 → close $17.28 +2.50; KLRA×1 09:30 $11.39 → close $11.33 -0.06; LVWR×13 09:30 $1.59 → close $1.68 +1.17 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $86.00 | ▲ 09:30 equity $9,097.81 vs yday $9,085.11 (+12.70) | 09:30 open · cash $86.00 (unchanged overnight, no fees) · equity $9,097.81 vs prior close $9,085.11 (+12.70) · 10 name(s) re-marked at the open (per-name table). CCCC×7 yday $3.06 → 09:30 $3.04 -0.14; CSGP×51 yday $29.21 → 09:30 $29.48 +13.77; FLUT×19 yday $78.28 → 09:30 $78.65 +7.03; GAU×723 yday $2.16 → 09:30 $2.17 +7.23; HAE×12 yday $122.06 → 09:30 $122.80 +8.88; KLRA×1 yday $11.33 → 09:30 $11.31 -0.02; LCTX×1525 yday $0.95 → 09:30 $0.95 -6.25; LVWR×13 yday $1.68 → 09:30 $1.63 -0.65; MANE×12 yday $122.40 → 09:30 $121.17 -14.76; WFF×1 yday $17.28 → 09:30 $14.90 -2.38 | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $86.00 | ▼ close $8,954.37 vs 09:30 $9,097.81 (session -143.44) | 16:00 close · cash $86.00 · equity $8,954.37 vs 09:30 $9,097.81 (-143.44; session marks -143.44) · 10 name(s) marked open→close (per-name table). CCCC×7 09:30 $3.04 → close $2.78 -1.82; CSGP×51 09:30 $29.48 → close $30.00 +26.52; FLUT×19 09:30 $78.65 → close $78.06 -11.21; GAU×723 09:30 $2.17 → close $2.16 -7.23; HAE×12 09:30 $122.80 → close $121.72 -12.96; KLRA×1 09:30 $11.31 → close $10.77 -0.54; LCTX×1525 09:30 $0.95 → close $0.91 -63.59; LVWR×13 09:30 $1.63 → close $1.56 -0.91; MANE×12 09:30 $121.17 → close $116.26 -58.92; WFF×1 09:30 $14.90 → close $2.12 -12.78 | — |
 
 ## Not taken
 

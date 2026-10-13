@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ ab_g, no 🚨
 
-Cash book **-18.52%** ($8,148) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 308 · skips 92 · realized $-226.14.
+Cash book **-19.50%** ($8,050) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 316 · skips 92 · realized $-226.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -464,6 +464,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `NAUT` | 486 | $2.17 | $6.27 | — | $1,060.80 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; leftover $1052.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `FSLY` | 36 | $28.79 | $2.10 | — | $22.27 | — | union ∩ ab_g, no 🚨; gate ab=good; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.5; leftover $1052.94 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.27 | ▼ close $8,147.60 vs 09:30 $8,403.91 (session -210.86) | 16:00 close · cash $22.27 · equity $8,147.60 vs 09:30 $8,403.91 (-256.31; session marks -210.86) · 8 name(s) marked open→close (per-name table). CDNA×16 09:30 $63.28 → close $63.12 -2.56; ETON×19 09:30 $55.50 → close $55.25 -4.75; ARQT×39 09:30 $26.57 → close $26.22 -13.65; CCCC×333 09:30 $3.16 → close $3.06 -33.30; IOVA×72 09:30 $14.45 → close $14.56 +7.92; QSI×713 09:30 $1.48 → close $1.36 -81.99; NAUT×486 09:30 $2.17 → close $2.17 +2.43; FSLY×36 09:30 $28.79 → close $26.43 -84.96 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $22.27 | ▼ 09:30 equity $8,080.61 vs yday $8,147.60 (-66.99) | 09:30 open · cash $22.27 (unchanged overnight, no fees) · equity $8,080.61 vs prior close $8,147.60 (-66.99) · 8 name(s) re-marked at the open (per-name table). ARQT×39 yday $26.22 → 09:30 $26.00 -8.58; CCCC×333 yday $3.06 → 09:30 $3.04 -6.66; CDNA×16 yday $63.12 → 09:30 $62.57 -8.80; ETON×19 yday $55.25 → 09:30 $55.42 +3.23; FSLY×36 yday $26.43 → 09:30 $26.19 -8.64; IOVA×72 yday $14.56 → 09:30 $14.48 -5.54; NAUT×486 yday $2.17 → 09:30 $2.12 -24.30; QSI×713 yday $1.36 → 09:30 $1.35 -7.70 | — |
+| 2026-10-13 09:30 ET | **SELL** | `ARQT` | 39 | $26.00 | $2.13 | $-26.46 | $1,034.14 | ▼ -26.46 after sell → book $8,078.48; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CCCC` | 333 | $3.04 | $4.36 | $-48.62 | $2,042.10 | ▼ -48.62 after sell → book $8,074.12; vs 09:30 mark -4.36 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CDNA` | 16 | $62.57 | $2.06 | $+1.66 | $3,041.16 | ▲ +1.66 after sell → book $8,072.06; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ETON` | 19 | $55.42 | $2.07 | $+6.53 | $4,092.08 | ▲ +6.53 after sell → book $8,069.99; vs 09:30 mark -2.07 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FSLY` | 36 | $26.19 | $2.12 | $-97.82 | $5,032.80 | ▼ -97.82 after sell → book $8,067.87; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `IOVA` | 72 | $14.48 | $2.23 | $-2.06 | $6,073.35 | ▼ -2.06 after sell → book $8,065.65; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `NAUT` | 486 | $2.12 | $6.36 | $-34.50 | $7,097.31 | ▼ -34.50 after sell → book $8,059.29; vs 09:30 mark -6.36 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-13 09:30 ET | **SELL** | `QSI` | 713 | $1.35 | $9.33 | $-108.22 | $8,049.96 | ▼ -108.22 after sell → book $8,049.96; vs 09:30 mark -9.33 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,049.96 | ▲ close $8,049.96 vs 09:30 $8,080.61 (session +0.00) | 16:00 close · cash $8,049.96 · no lots left · equity $8,049.96. | — |
 
 ## Not taken
 

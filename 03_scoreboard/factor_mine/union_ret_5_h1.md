@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+19.63%** ($11,963) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 357 · skips 100 · realized $+370.60.
+Cash book **+15.56%** ($11,556) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 365 · skips 100 · realized $+370.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -512,6 +512,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `MRNA` | 6 | $224.24 | $2.01 | — | $1,819.98 | — | rank by ret_5; rank ret_5; list yday_gainer,yday_mover; 🔵; ret5=+18.4; leftover $1503.06 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `NTSK` | 71 | $21.00 | $2.20 | — | $326.78 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+16.9; leftover $1503.06 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $326.78 | ▼ close $11,963.18 vs 09:30 $12,069.22 (session -32.27) | 16:00 close · cash $326.78 · equity $11,963.18 vs 09:30 $12,069.22 (-106.04; session marks -32.27) · 8 name(s) marked open→close (per-name table). WFF×101 09:30 $14.78 → close $17.28 +252.50; QTEX×868 09:30 $1.73 → close $1.58 -130.20; PRME×380 09:30 $3.95 → close $3.61 -129.20; NVAX×119 09:30 $12.61 → close $12.66 +5.95; CCI×18 09:30 $79.50 → close $81.01 +27.18; SEZL×11 09:30 $127.75 → close $130.48 +30.03; MRNA×6 09:30 $224.24 → close $213.74 -62.97; NTSK×71 09:30 $21.00 → close $20.64 -25.56 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $326.78 | ▼ 09:30 equity $11,585.43 vs yday $11,963.18 (-377.75) | 09:30 open · cash $326.78 (unchanged overnight, no fees) · equity $11,585.43 vs prior close $11,963.18 (-377.75) · 8 name(s) re-marked at the open (per-name table). CCI×18 yday $81.01 → 09:30 $81.99 +17.64; MRNA×6 yday $213.74 → 09:30 $207.63 -36.66; NTSK×71 yday $20.64 → 09:30 $20.76 +8.52; NVAX×119 yday $12.66 → 09:30 $12.44 -26.18; PRME×380 yday $3.61 → 09:30 $3.61 +0.00; QTEX×868 yday $1.58 → 09:30 $1.46 -108.50; SEZL×11 yday $130.48 → 09:30 $131.19 +7.81; WFF×101 yday $17.28 → 09:30 $14.90 -240.38 | — |
+| 2026-10-13 09:30 ET | **SELL** | `CCI` | 18 | $81.99 | $2.07 | $+40.71 | $1,800.53 | ▲ +40.71 after sell → book $11,583.36; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `MRNA` | 6 | $207.63 | $2.03 | $-103.67 | $3,044.29 | ▼ -103.67 after sell → book $11,581.34; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `NTSK` | 71 | $20.76 | $2.23 | $-21.47 | $4,516.02 | ▼ -21.47 after sell → book $11,579.11; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `NVAX` | 119 | $12.44 | $2.38 | $-24.96 | $5,994.00 | ▼ -24.96 after sell → book $11,576.73; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `PRME` | 380 | $3.61 | $4.98 | $-139.08 | $7,360.82 | ▼ -139.08 after sell → book $11,571.75; vs 09:30 mark -4.98 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 868 | $1.46 | $11.35 | $-261.25 | $8,612.41 | ▼ -261.25 after sell → book $11,560.40; vs 09:30 mark -11.35 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SEZL` | 11 | $131.19 | $2.04 | $+33.77 | $10,053.46 | ▲ +33.77 after sell → book $11,558.36; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 101 | $14.90 | $2.32 | $+7.51 | $11,556.04 | ▲ +7.51 after sell → book $11,556.04; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,556.04 | ▲ close $11,556.04 vs 09:30 $11,585.43 (session +0.00) | 16:00 close · cash $11,556.04 · no lots left · equity $11,556.04. | — |
 
 ## Not taken
 

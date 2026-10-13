@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ coil_off, no 🚨
 
-Cash book **-22.86%** ($7,714) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 356 · skips 105 · realized $-1593.31.
+Cash book **-23.49%** ($7,651) · signal-only (no cash/fees) was -17.20%. Starts YES **0/30**. Fills 363 · skips 105 · realized $-1593.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -515,6 +515,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `IOVA` | 79 | $14.45 | $2.23 | — | $1,188.43 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list probable,yday_gainer; ret5=+2.8; leftover $1154.30 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `SFIX` | 405 | $2.85 | $5.22 | — | $28.96 | — | union ∩ coil_off, no 🚨; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2,rvol_min=0.7; list ohlc_hot; ret5=+8.8; leftover $1154.30 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $28.96 | ▼ close $7,713.93 vs 09:30 $8,107.12 (session -343.94) | 16:00 close · cash $28.96 · equity $7,713.93 vs 09:30 $8,107.12 (-393.19; session marks -343.94) · 7 name(s) marked open→close (per-name table). DNA×90 09:30 $12.69 → close $11.79 -81.00; CCCC×365 09:30 $3.16 → close $3.06 -36.50; RXRX×267 09:30 $4.31 → close $4.01 -80.10; HIMS×37 09:30 $30.92 → close $30.64 -10.36; HELP×96 09:30 $11.90 → close $11.03 -83.92; IOVA×79 09:30 $14.45 → close $14.56 +8.69; SFIX×405 09:30 $2.85 → close $2.70 -60.75 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $28.96 | ▼ 09:30 equity $7,673.43 vs yday $7,713.93 (-40.50) | 09:30 open · cash $28.96 (unchanged overnight, no fees) · equity $7,673.43 vs prior close $7,713.93 (-40.50) · 7 name(s) re-marked at the open (per-name table). CCCC×365 yday $3.06 → 09:30 $3.04 -7.30; DNA×90 yday $11.79 → 09:30 $11.79 +0.00; HELP×96 yday $11.03 → 09:30 $11.03 +0.00; HIMS×37 yday $30.64 → 09:30 $29.83 -29.97; IOVA×79 yday $14.56 → 09:30 $14.48 -6.08; RXRX×267 yday $4.01 → 09:30 $3.96 -13.35; SFIX×405 yday $2.70 → 09:30 $2.74 +16.20 | — |
+| 2026-10-13 09:30 ET | **SELL** | `CCCC` | 365 | $3.04 | $4.78 | $-53.29 | $1,133.78 | ▼ -53.29 after sell → book $7,668.65; vs 09:30 mark -4.78 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `DNA` | 90 | $11.79 | $2.28 | $-85.54 | $2,192.60 | ▼ -85.54 after sell → book $7,666.36; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `HELP` | 96 | $11.03 | $2.30 | $-88.51 | $3,249.17 | ▼ -88.51 after sell → book $7,664.06; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `HIMS` | 37 | $29.83 | $2.12 | $-44.55 | $4,350.76 | ▼ -44.55 after sell → book $7,661.94; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `IOVA` | 79 | $14.48 | $2.25 | $-1.87 | $5,492.67 | ▼ -1.87 after sell → book $7,659.69; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `RXRX` | 267 | $3.96 | $3.50 | $-100.39 | $6,546.49 | ▼ -100.39 after sell → book $7,656.19; vs 09:30 mark -3.50 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SFIX` | 405 | $2.74 | $5.30 | $-55.08 | $7,650.89 | ▼ -55.08 after sell → book $7,650.89; vs 09:30 mark -5.30 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,650.89 | ▲ close $7,650.89 vs 09:30 $7,673.43 (session +0.00) | 16:00 close · cash $7,650.89 · no lots left · equity $7,650.89. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short morning packet news🔴
 
-Cash book **+10.44%** ($11,044) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 35 · skips 26 · realized $+60.75.
+Cash book **+10.81%** ($11,081) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 35 · skips 26 · realized $+60.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -189,6 +189,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,571.56 | ▼ close $10,901.83 vs 09:30 $11,082.13 (session -171.81) | 16:00 close · cash $16,571.56 · equity $10,901.83 vs 09:30 $11,082.13 (-180.30; session marks -171.81) · 1 name(s) marked open→close (per-name table). DAL×69 09:30 $79.68 → close $82.17 -171.81 | — |
 | 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,571.56 | ▲ 09:30 equity $10,979.11 vs yday $10,901.83 (+77.28) | 09:30 open · cash $16,571.56 (unchanged overnight, no fees) · equity $10,979.11 vs prior close $10,901.83 (+77.28) · 1 name(s) re-marked at the open (per-name table). DAL×69 yday $82.17 → 09:30 $81.05 +77.28 | — |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,571.56 | ▲ close $11,043.97 vs 09:30 $10,979.11 (session +64.86) | 16:00 close · cash $16,571.56 · equity $11,043.97 vs 09:30 $10,979.11 (+64.86; session marks +64.86) · 1 name(s) marked open→close (per-name table). DAL×69 09:30 $81.05 → close $80.11 +64.86 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,571.56 | ▼ 09:30 equity $11,003.26 vs yday $11,043.97 (-40.71) | 09:30 open · cash $16,571.56 (unchanged overnight, no fees) · equity $11,003.26 vs prior close $11,043.97 (-40.71) · 1 name(s) re-marked at the open (per-name table). DAL×69 yday $80.11 → 09:30 $80.70 -40.71 | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,571.56 | ▲ close $11,081.23 vs 09:30 $11,003.26 (session +77.97) | 16:00 close · cash $16,571.56 · equity $11,081.23 vs 09:30 $11,003.26 (+77.97; session marks +77.97) · 1 name(s) marked open→close (per-name table). DAL×69 09:30 $80.70 → close $79.57 +77.97 | — |
 
 ## Not taken
 

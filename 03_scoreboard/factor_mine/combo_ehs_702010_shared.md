@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_hot_n4_h1/short_news_r_h3 w=0.7,0.2,0.1 net=priority
 
-Cash book **+56.02%** ($15,602) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 445 · skips 365 · realized $+3165.91.
+Cash book **+51.39%** ($15,139) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 448 · skips 365 · realized $+3165.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $3,598.49.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,795.27.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -603,6 +603,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `NAUT` | 556 | $2.17 | $7.17 | — | $1,802.38 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; combo leftover $1205.73; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 176 | $10.22 | $2.61 | — | $3,598.49 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; combo leftover $1802.38; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,598.49 | ▲ close $15,602.05 vs 09:30 $15,405.62 (session +228.13) | 16:00 close · cash $3,598.49 · equity $15,602.05 vs 09:30 $15,405.62 (+196.43; session marks +228.13) · 12 name(s) marked open→close (per-name table). ANGO×244 09:30 $11.42 → close $11.40 -4.88; BYRN×574 09:30 $4.50 → close $4.55 +31.57; DAL×33 09:30 $81.05 → close $80.11 -31.02; DXC×44 09:30 $12.47 → close $12.54 -3.08; EQPT×35 09:30 $14.86 → close $14.76 +3.50; HOVR×1668 09:30 $1.54 → close $1.51 -50.04; KOD×10 09:30 $100.06 → close $99.26 -8.00; NTLA×44 09:30 $13.08 → close $12.58 +22.00; WFF×81 09:30 $14.78 → close $17.28 +202.50; QTEX×696 09:30 $1.73 → close $1.58 -104.40; NAUT×556 09:30 $2.17 → close $2.17 +2.78; AEHL×176 09:30 $10.22 → close $9.27 +167.20 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,598.49 | ▼ 09:30 equity $15,255.01 vs yday $15,602.05 (-347.04) | 09:30 open · cash $3,598.49 (unchanged overnight, no fees) · equity $15,255.01 vs prior close $15,602.05 (-347.04) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 10 | $99.06 | $2.04 | $+40.14 | $4,587.05 | ▲ +40.14 after sell → book $15,252.97; vs 09:30 mark -2.04 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 696 | $1.46 | $9.10 | $-209.48 | $5,590.63 | ▼ -209.48 after sell → book $15,243.87; vs 09:30 mark -9.10 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 81 | $14.90 | $2.26 | $+5.23 | $6,795.27 | ▲ +5.23 after sell → book $15,241.61; vs 09:30 mark -2.26 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,795.27 | ▼ close $15,138.79 vs 09:30 $15,255.01 (session -102.82) | 16:00 close · cash $6,795.27 · equity $15,138.79 vs 09:30 $15,255.01 (-116.22; session marks -102.82) · 9 name(s) marked open→close (per-name table). AEHL×176 09:30 $9.08 → close $8.55 +93.28; ANGO×244 09:30 $11.43 → close $10.90 -129.32; BYRN×574 09:30 $4.47 → close $4.55 +45.92; DAL×33 09:30 $80.70 → close $79.57 -37.29; DXC×44 09:30 $12.55 → close $12.77 -9.68; EQPT×35 09:30 $14.54 → close $15.37 -29.05; HOVR×1668 09:30 $1.47 → close $1.46 -16.68; NAUT×556 09:30 $2.12 → close $2.05 -38.92; NTLA×44 09:30 $12.34 → close $11.91 +18.92 | — |
 
 ## Not taken
 

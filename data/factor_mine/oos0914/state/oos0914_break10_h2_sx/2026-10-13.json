@@ -1,0 +1,102 @@
+{
+  "buys": [],
+  "cash": 9435.22,
+  "date": "2026-10-13",
+  "equity": 9437.34,
+  "fees": 29.6143,
+  "fills": [
+    {
+      "fees": 18.9542,
+      "fill_rule": "open",
+      "pnl": 368.07,
+      "price": 1.86,
+      "shares": 1449,
+      "side": "SELL",
+      "ticker": "ADCT"
+    },
+    {
+      "fees": 6.3806,
+      "fill_rule": "open",
+      "pnl": -124.67,
+      "price": 4.47,
+      "shares": 487,
+      "side": "SELL",
+      "ticker": "BYRN"
+    },
+    {
+      "fees": 2.0717,
+      "fill_rule": "open",
+      "pnl": 49.7,
+      "price": 122.8,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "HAE"
+    },
+    {
+      "fees": 2.2078,
+      "fill_rule": "open",
+      "pnl": -4.39,
+      "price": 36.33,
+      "shares": 63,
+      "side": "SELL",
+      "ticker": "PCRX"
+    }
+  ],
+  "holdings": [
+    "WFF"
+  ],
+  "mean": -0.7791,
+  "n_trades_today": 4,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 1.86,
+      "shares": 1449,
+      "side": "SELL",
+      "ticker": "ADCT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 4.47,
+      "shares": 487,
+      "side": "SELL",
+      "ticker": "BYRN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 122.8,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "HAE"
+    },
+    {
+      "fill_rule": "open",
+      "price": 36.33,
+      "shares": 63,
+      "side": "SELL",
+      "ticker": "PCRX"
+    }
+  ],
+  "state": {
+    "after": "2026-10-13",
+    "cash": 9435.22,
+    "pos": {
+      "WFF": {
+        "close_px": 2.119999885559082,
+        "cost": 14.9308,
+        "entry_date": "2026-10-12",
+        "entry_px": 14.78,
+        "fee_in": 0.1508,
+        "last_px": 14.899999618530273,
+        "min_hold": 2,
+        "notional": 14.78,
+        "peak_px": 14.899999618530273,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+411.0; leftover $27.14",
+        "shares": 1,
+        "ticker": "WFF"
+      }
+    },
+    "yday_equity": 9437.34
+  }
+}

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `half` · sell `list` · S-boost `none` · deploy half leftover
 
-Cash book **-11.56%** ($8,844) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 352 · skips 107 · realized $-342.82.
+Cash book **-12.05%** ($8,795) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 360 · skips 107 · realized $-342.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -504,6 +504,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `CCCC` | 207 | $3.16 | $2.67 | — | $4,693.89 | — | deploy half leftover; list probable,yday_gainer; 🔵; ret5=+7.1; leftover $656.93 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `RXRX` | 152 | $4.31 | $2.45 | — | $4,036.33 | — | deploy half leftover; list probable,yday_gainer; ret5=+5.8; leftover $656.93 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,036.33 | ▼ close $8,844.30 vs 09:30 $9,026.03 (session -149.91) | 16:00 close · cash $4,036.33 · equity $8,844.30 vs 09:30 $9,026.03 (-181.73; session marks -149.91) · 8 name(s) marked open→close (per-name table). CDNA×9 09:30 $63.28 → close $63.12 -1.44; ETON×10 09:30 $55.50 → close $55.25 -2.50; FANG×3 09:30 $195.01 → close $195.11 +0.30; ARQT×24 09:30 $26.57 → close $26.22 -8.40; DNA×51 09:30 $12.69 → close $11.79 -45.90; ABSI×65 09:30 $10.06 → close $9.67 -25.67; CCCC×207 09:30 $3.16 → close $3.06 -20.70; RXRX×152 09:30 $4.31 → close $4.01 -45.60 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,036.33 | ▼ 09:30 equity $8,813.06 vs yday $8,844.30 (-31.24) | 09:30 open · cash $4,036.33 (unchanged overnight, no fees) · equity $8,813.06 vs prior close $8,844.30 (-31.24) · 8 name(s) re-marked at the open (per-name table). ABSI×65 yday $9.67 → 09:30 $9.45 -14.62; ARQT×24 yday $26.22 → 09:30 $26.00 -5.28; CCCC×207 yday $3.06 → 09:30 $3.04 -4.14; CDNA×9 yday $63.12 → 09:30 $62.57 -4.95; DNA×51 yday $11.79 → 09:30 $11.79 +0.00; ETON×10 yday $55.25 → 09:30 $55.42 +1.70; FANG×3 yday $195.11 → 09:30 $196.33 +3.66; RXRX×152 yday $4.01 → 09:30 $3.96 -7.60 | — |
+| 2026-10-13 09:30 ET | **SELL** | `ABSI` | 65 | $9.45 | $2.21 | $-44.69 | $4,648.05 | ▼ -44.69 after sell → book $8,810.86; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ARQT` | 24 | $26.00 | $2.08 | $-17.82 | $5,269.97 | ▼ -17.82 after sell → book $8,808.78; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CCCC` | 207 | $3.04 | $2.71 | $-30.23 | $5,896.53 | ▼ -30.23 after sell → book $8,806.06; vs 09:30 mark -2.72 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CDNA` | 9 | $62.57 | $2.04 | $-0.81 | $6,457.63 | ▼ -0.81 after sell → book $8,804.03; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `DNA` | 51 | $11.79 | $2.16 | $-50.21 | $7,056.75 | ▼ -50.21 after sell → book $8,801.86; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ETON` | 10 | $55.42 | $2.04 | $+1.54 | $7,608.91 | ▲ +1.54 after sell → book $8,799.82; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FANG` | 3 | $196.33 | $2.02 | $-0.06 | $8,195.88 | ▼ -0.06 after sell → book $8,797.80; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `RXRX` | 152 | $3.96 | $2.48 | $-58.13 | $8,795.32 | ▼ -58.13 after sell → book $8,795.32; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,795.32 | ▲ close $8,795.32 vs 09:30 $8,813.06 (session +0.00) | 16:00 close · cash $8,795.32 · no lots left · equity $8,795.32. | — |
 
 ## Not taken
 

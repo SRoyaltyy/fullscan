@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-21.27%** ($7,873) · signal-only (no cash/fees) was -5.26%. Starts YES **0/30**. Fills 328 · skips 56 · realized $-1650.33.
+Cash book **-23.62%** ($7,638) · signal-only (no cash/fees) was -5.26%. Starts YES **0/30**. Fills 336 · skips 56 · realized $-1650.33.
 
 ## How this sleeve decides (like you are 10)
 
@@ -486,6 +486,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `SVC` | 139 | $7.30 | $2.41 | — | $1,105.82 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+12.1; leftover $1021.10 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `MRNA` | 4 | $224.24 | $2.00 | — | $206.88 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+18.4; leftover $1021.10 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $206.88 | ▼ close $7,872.72 vs 09:30 $8,203.04 (session -271.97) | 16:00 close · cash $206.88 · equity $7,872.72 vs 09:30 $8,203.04 (-330.32; session marks -271.97) · 8 name(s) marked open→close (per-name table). DNA×80 09:30 $12.69 → close $11.79 -72.00; WFF×69 09:30 $14.78 → close $17.28 +172.50; QSI×692 09:30 $1.48 → close $1.36 -79.58; FSLY×35 09:30 $28.79 → close $26.43 -82.60; NVAX×80 09:30 $12.61 → close $12.66 +4.00; CCI×12 09:30 $79.50 → close $81.01 +18.12; SVC×139 09:30 $7.30 → close $5.93 -190.43; MRNA×4 09:30 $224.24 → close $213.74 -41.98 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $206.88 | ▼ 09:30 equity $7,662.35 vs yday $7,872.72 (-210.37) | 09:30 open · cash $206.88 (unchanged overnight, no fees) · equity $7,662.35 vs prior close $7,872.72 (-210.37) · 8 name(s) re-marked at the open (per-name table). CCI×12 yday $81.01 → 09:30 $81.99 +11.76; DNA×80 yday $11.79 → 09:30 $11.79 +0.00; FSLY×35 yday $26.43 → 09:30 $26.19 -8.40; MRNA×4 yday $213.74 → 09:30 $207.63 -24.44; NVAX×80 yday $12.66 → 09:30 $12.44 -17.60; QSI×692 yday $1.36 → 09:30 $1.35 -7.47; SVC×139 yday $5.93 → 09:30 $5.93 +0.00; WFF×69 yday $17.28 → 09:30 $14.90 -164.22 | — |
+| 2026-10-13 09:30 ET | **SELL** | `CCI` | 12 | $81.99 | $2.05 | $+25.81 | $1,188.71 | ▲ +25.81 after sell → book $7,660.30; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `DNA` | 80 | $11.79 | $2.25 | $-76.48 | $2,129.66 | ▼ -76.48 after sell → book $7,658.05; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FSLY` | 35 | $26.19 | $2.12 | $-95.21 | $3,044.20 | ▼ -95.21 after sell → book $7,655.93; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `MRNA` | 4 | $207.63 | $2.02 | $-70.44 | $3,872.69 | ▼ -70.44 after sell → book $7,653.91; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `NVAX` | 80 | $12.44 | $2.25 | $-18.08 | $4,865.64 | ▼ -18.08 after sell → book $7,651.66; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QSI` | 692 | $1.35 | $9.05 | $-105.03 | $5,790.24 | ▼ -105.03 after sell → book $7,642.61; vs 09:30 mark -9.05 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-13 09:30 ET | **SELL** | `SVC` | 139 | $5.93 | $2.44 | $-195.28 | $6,612.06 | ▼ -195.28 after sell → book $7,640.16; vs 09:30 mark -2.45 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 69 | $14.90 | $2.22 | $+3.86 | $7,637.95 | ▲ +3.86 after sell → book $7,637.95; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,637.95 | ▲ close $7,637.95 vs 09:30 $7,662.35 (session +0.00) | 16:00 close · cash $7,637.95 · no lots left · equity $7,637.95. | — |
 
 ## Not taken
 

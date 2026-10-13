@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-11.52%** ($8,848) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 376 · skips 105 · realized $-723.91.
+Cash book **-12.89%** ($8,711) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 383 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -531,6 +531,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `TMUS` | 7 | $149.58 | $2.01 | — | $1,205.02 | — | rank by cond; rank cond; list yday_mover; ret5=-9.2; leftover $1121.98 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `FSLY` | 38 | $28.79 | $2.10 | — | $108.90 | — | rank by cond; rank cond; list yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+13.5; leftover $1121.98 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $108.90 | ▲ close $8,847.76 vs 09:30 $8,881.96 (session +2.89) | 16:00 close · cash $108.90 · equity $8,847.76 vs 09:30 $8,881.96 (-34.20; session marks +2.89) · 8 name(s) marked open→close (per-name table). CDNA×17 09:30 $63.28 → close $63.12 -2.72; ETON×19 09:30 $55.50 → close $55.25 -4.75; FIGS×70 09:30 $15.89 → close $17.74 +129.50; MRNA×5 09:30 $224.24 → close $213.74 -52.48; NAUT×518 09:30 $2.17 → close $2.17 +2.59; NVAX×88 09:30 $12.61 → close $12.66 +4.40; TMUS×7 09:30 $149.58 → close $151.87 +16.03; FSLY×38 09:30 $28.79 → close $26.43 -89.68 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $108.90 | ▼ 09:30 equity $8,762.17 vs yday $8,847.76 (-85.59) | 09:30 open · cash $108.90 (unchanged overnight, no fees) · equity $8,762.17 vs prior close $8,847.76 (-85.59) · 8 name(s) re-marked at the open (per-name table). CDNA×17 yday $63.12 → 09:30 $62.57 -9.35; ETON×19 yday $55.25 → 09:30 $55.42 +3.23; FIGS×70 yday $17.74 → 09:30 $17.80 +4.20; FSLY×38 yday $26.43 → 09:30 $26.19 -9.12; MRNA×5 yday $213.74 → 09:30 $207.63 -30.55; NAUT×518 yday $2.17 → 09:30 $2.12 -25.90; NVAX×88 yday $12.66 → 09:30 $12.44 -19.36; TMUS×7 yday $151.87 → 09:30 $152.05 +1.26 | — |
+| 2026-10-13 09:30 ET | **SELL** | `CDNA` | 17 | $62.57 | $2.06 | $+2.02 | $1,170.53 | ▲ +2.02 after sell → book $8,760.11; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ETON` | 19 | $55.42 | $2.07 | $+6.53 | $2,221.44 | ▲ +6.53 after sell → book $8,758.04; vs 09:30 mark -2.07 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FIGS` | 70 | $17.80 | $2.22 | $+129.28 | $3,465.22 | ▲ +129.28 after sell → book $8,755.82; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FSLY` | 38 | $26.19 | $2.12 | $-103.03 | $4,458.32 | ▼ -103.03 after sell → book $8,753.70; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `MRNA` | 5 | $207.63 | $2.02 | $-87.06 | $5,494.44 | ▼ -87.06 after sell → book $8,751.67; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `NVAX` | 88 | $12.44 | $2.28 | $-19.49 | $6,586.88 | ▼ -19.49 after sell → book $8,749.39; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `TMUS` | 7 | $152.05 | $2.03 | $+13.25 | $7,649.20 | ▲ +13.25 after sell → book $8,747.36; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,649.20 | ▼ close $8,711.10 vs 09:30 $8,762.17 (session -36.26) | 16:00 close · cash $7,649.20 · equity $8,711.10 vs 09:30 $8,762.17 (-51.07; session marks -36.26) · 1 name(s) marked open→close (per-name table). NAUT×518 09:30 $2.12 → close $2.05 -36.26 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-14.15%** ($8,585) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 365 · skips 104 · realized $-563.45.
+Cash book **-14.56%** ($8,544) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 372 · skips 104 · realized $-563.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -520,6 +520,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `SFIX` | 381 | $2.85 | $4.91 | — | $1,390.27 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+8.8; leftover $1087.47 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `SNAP` | 170 | $6.38 | $2.50 | — | $303.17 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+11.6; leftover $1087.47 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $303.17 | ▼ close $8,584.73 vs 09:30 $8,717.98 (session -94.96) | 16:00 close · cash $303.17 · equity $8,584.73 vs 09:30 $8,717.98 (-133.25; session marks -94.96) · 8 name(s) marked open→close (per-name table). PAX×93 09:30 $11.65 → close $11.87 +20.46; SEZL×8 09:30 $127.75 → close $130.48 +21.84; MRNA×4 09:30 $224.24 → close $213.74 -41.98; KLAR×77 09:30 $14.05 → close $13.86 -14.94; PLNT×22 09:30 $48.16 → close $47.89 -5.94; TENB×25 09:30 $42.48 → close $40.77 -42.75; SFIX×381 09:30 $2.85 → close $2.70 -57.15; SNAP×170 09:30 $6.38 → close $6.53 +25.50 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $303.17 | ▼ 09:30 equity $8,559.95 vs yday $8,584.73 (-24.78) | 09:30 open · cash $303.17 (unchanged overnight, no fees) · equity $8,559.95 vs prior close $8,584.73 (-24.78) · 8 name(s) re-marked at the open (per-name table). KLAR×77 yday $13.86 → 09:30 $13.77 -6.93; MRNA×4 yday $213.74 → 09:30 $207.63 -24.44; PAX×93 yday $11.87 → 09:30 $11.88 +0.93; PLNT×22 yday $47.89 → 09:30 $48.06 +3.74; SEZL×8 yday $130.48 → 09:30 $131.19 +5.68; SFIX×381 yday $2.70 → 09:30 $2.74 +15.24; SNAP×170 yday $6.53 → 09:30 $6.48 -8.50; TENB×25 yday $40.77 → 09:30 $40.35 -10.50 | — |
+| 2026-10-13 09:30 ET | **SELL** | `KLAR` | 77 | $13.77 | $2.24 | $-26.33 | $1,361.22 | ▼ -26.33 after sell → book $8,557.71; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `MRNA` | 4 | $207.63 | $2.02 | $-70.44 | $2,189.71 | ▼ -70.44 after sell → book $8,555.68; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `PAX` | 93 | $11.88 | $2.29 | $+16.83 | $3,292.26 | ▲ +16.83 after sell → book $8,553.39; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `PLNT` | 22 | $48.06 | $2.08 | $-6.33 | $4,347.50 | ▼ -6.33 after sell → book $8,551.31; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SEZL` | 8 | $131.19 | $2.03 | $+23.47 | $5,394.99 | ▲ +23.47 after sell → book $8,549.28; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SFIX` | 381 | $2.74 | $4.99 | $-51.81 | $6,433.94 | ▼ -51.81 after sell → book $8,544.29; vs 09:30 mark -4.99 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `TENB` | 25 | $40.35 | $2.08 | $-57.40 | $7,440.61 | ▼ -57.40 after sell → book $8,542.21; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,440.61 | ▲ close $8,543.91 vs 09:30 $8,559.95 (session +1.70) | 16:00 close · cash $7,440.61 · equity $8,543.91 vs 09:30 $8,559.95 (-16.04; session marks +1.70) · 1 name(s) marked open→close (per-name table). SNAP×170 09:30 $6.48 → close $6.49 +1.70 | — |
 
 ## Not taken
 

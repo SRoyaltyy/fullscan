@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 12 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · top 12 by hot
 
-Cash book **+11.51%** ($11,151) · signal-only (no cash/fees) was +34.72%. Starts YES **29/30**. Fills 525 · skips 145 · realized $-34.73.
+Cash book **+8.42%** ($10,842) · signal-only (no cash/fees) was +34.72%. Starts YES **29/30**. Fills 535 · skips 145 · realized $-34.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -680,6 +680,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `SMWB` | 103 | $9.00 | $2.30 | — | $1,081.03 | — | top 12 by hot; rank hot_score; list ohlc_hot; 🔵; ret5=+13.7; leftover $929.42 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `FIGS` | 58 | $15.89 | $2.16 | — | $157.24 | — | top 12 by hot; rank hot_score; list ohlc_hot; ret5=+16.7; leftover $929.42 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $157.24 | ▼ close $11,151.05 vs 09:30 $11,287.94 (session -76.15) | 16:00 close · cash $157.24 · equity $11,151.05 vs 09:30 $11,287.94 (-136.89; session marks -76.15) · 12 name(s) marked open→close (per-name table). KOD×9 09:30 $100.06 → close $99.26 -7.20; NAUT×492 09:30 $2.17 → close $2.17 +2.46; WFF×62 09:30 $14.78 → close $17.28 +155.00; QTEX×537 09:30 $1.73 → close $1.58 -80.55; PRME×235 09:30 $3.95 → close $3.61 -79.90; CCI×11 09:30 $79.50 → close $81.01 +16.61; QSI×630 09:30 $1.48 → close $1.36 -72.45; CIEN×2 09:30 $443.53 → close $405.01 -77.04; SEZL×7 09:30 $127.75 → close $130.48 +19.11; MRNA×4 09:30 $224.24 → close $213.74 -41.98; SMWB×103 09:30 $9.00 → close $8.83 -17.51; FIGS×58 09:30 $15.89 → close $17.74 +107.30 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $157.24 | ▼ 09:30 equity $10,865.32 vs yday $11,151.05 (-285.73) | 09:30 open · cash $157.24 (unchanged overnight, no fees) · equity $10,865.32 vs prior close $11,151.05 (-285.73) · 12 name(s) re-marked at the open (per-name table). CCI×11 yday $81.01 → 09:30 $81.99 +10.78; CIEN×2 yday $405.01 → 09:30 $393.33 -23.36; FIGS×58 yday $17.74 → 09:30 $17.80 +3.48; KOD×9 yday $99.26 → 09:30 $99.06 -1.80; MRNA×4 yday $213.74 → 09:30 $207.63 -24.44; NAUT×492 yday $2.17 → 09:30 $2.12 -24.60; PRME×235 yday $3.61 → 09:30 $3.61 +0.00; QSI×630 yday $1.36 → 09:30 $1.35 -6.80; QTEX×537 yday $1.58 → 09:30 $1.46 -67.12; SEZL×7 yday $130.48 → 09:30 $131.19 +4.97; SMWB×103 yday $8.83 → 09:30 $8.74 -9.27; WFF×62 yday $17.28 → 09:30 $14.90 -147.56 | — |
+| 2026-10-13 09:30 ET | **SELL** | `CCI` | 11 | $81.99 | $2.04 | $+23.32 | $1,057.09 | ▲ +23.32 after sell → book $10,863.28; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CIEN` | 2 | $393.33 | $2.02 | $-104.41 | $1,841.73 | ▼ -104.41 after sell → book $10,861.26; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FIGS` | 58 | $17.80 | $2.18 | $+106.43 | $2,871.95 | ▲ +106.43 after sell → book $10,859.08; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 9 | $99.06 | $2.04 | $+35.73 | $3,761.45 | ▲ +35.73 after sell → book $10,857.04; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `MRNA` | 4 | $207.63 | $2.02 | $-70.44 | $4,589.95 | ▼ -70.44 after sell → book $10,855.02; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `PRME` | 235 | $3.61 | $3.08 | $-86.01 | $5,435.22 | ▼ -86.01 after sell → book $10,851.94; vs 09:30 mark -3.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 537 | $1.46 | $7.03 | $-161.63 | $6,209.53 | ▼ -161.63 after sell → book $10,844.91; vs 09:30 mark -7.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SEZL` | 7 | $131.19 | $2.03 | $+20.04 | $7,125.83 | ▲ +20.04 after sell → book $10,842.88; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SMWB` | 103 | $8.74 | $2.33 | $-31.41 | $8,023.72 | ▼ -31.41 after sell → book $10,840.56; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 62 | $14.90 | $2.20 | $+3.07 | $8,945.32 | ▲ +3.07 after sell → book $10,838.36; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,945.32 | ▲ close $10,842.22 vs 09:30 $10,865.32 (session +3.86) | 16:00 close · cash $8,945.32 · equity $10,842.22 vs 09:30 $10,865.32 (-23.10; session marks +3.86) · 2 name(s) marked open→close (per-name table). NAUT×492 09:30 $2.12 → close $2.05 -34.44; QSI×630 09:30 $1.35 → close $1.41 +38.30 | — |
 
 ## Not taken
 

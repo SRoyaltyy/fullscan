@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-39.83%** ($6,017) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 354 · skips 98 · realized $-2571.92.
+Cash book **-40.07%** ($5,993) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 361 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -509,6 +509,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `CCCC` | 243 | $3.16 | $3.13 | — | $789.41 | — | rank by rsi; rank rsi; list probable,yday_gainer; 🔵; ret5=+7.1; leftover $768.98 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `ETON` | 13 | $55.50 | $2.03 | — | $65.88 | — | rank by rsi; rank rsi; list flatten; ret5=-0.3; leftover $768.98 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $65.88 | ▼ close $6,017.34 vs 09:30 $6,183.91 (session -105.07) | 16:00 close · cash $65.88 · equity $6,017.34 vs 09:30 $6,183.91 (-166.57; session marks -105.07) · 8 name(s) marked open→close (per-name table). CDNL×36 09:30 $21.01 → close $20.92 -3.24; TMUS×5 09:30 $149.58 → close $151.87 +11.45; ALHC×102 09:30 $7.49 → close $8.09 +61.20; ZENA×708 09:30 $1.08 → close $1.09 +3.54; JELD×505 09:30 $1.52 → close $1.23 -146.45; KLRA×67 09:30 $11.39 → close $11.33 -4.02; CCCC×243 09:30 $3.16 → close $3.06 -24.30; ETON×13 09:30 $55.50 → close $55.25 -3.25 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $65.88 | ▲ 09:30 equity $6,056.68 vs yday $6,017.34 (+39.34) | 09:30 open · cash $65.88 (unchanged overnight, no fees) · equity $6,056.68 vs prior close $6,017.34 (+39.34) · 8 name(s) re-marked at the open (per-name table). ALHC×102 yday $8.09 → 09:30 $8.31 +22.44; CCCC×243 yday $3.06 → 09:30 $3.04 -4.86; CDNL×36 yday $20.92 → 09:30 $21.25 +11.92; ETON×13 yday $55.25 → 09:30 $55.42 +2.21; JELD×505 yday $1.23 → 09:30 $1.26 +15.15; KLRA×67 yday $11.33 → 09:30 $11.31 -1.34; TMUS×5 yday $151.87 → 09:30 $152.05 +0.90; ZENA×708 yday $1.09 → 09:30 $1.08 -7.08 | — |
+| 2026-10-13 09:30 ET | **SELL** | `ALHC` | 102 | $8.31 | $2.32 | $+79.02 | $911.18 | ▲ +79.02 after sell → book $6,054.35; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CCCC` | 243 | $3.04 | $3.19 | $-35.48 | $1,646.71 | ▼ -35.48 after sell → book $6,051.17; vs 09:30 mark -3.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CDNL` | 36 | $21.25 | $2.12 | $+4.46 | $2,409.63 | ▲ +4.46 after sell → book $6,049.05; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ETON` | 13 | $55.42 | $2.05 | $-5.12 | $3,128.04 | ▼ -5.12 after sell → book $6,047.00; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `JELD` | 505 | $1.26 | $6.61 | $-144.42 | $3,757.73 | ▼ -144.42 after sell → book $6,040.39; vs 09:30 mark -6.61 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `TMUS` | 5 | $152.05 | $2.02 | $+8.32 | $4,515.96 | ▲ +8.32 after sell → book $6,038.37; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ZENA` | 708 | $1.08 | $9.26 | $-21.93 | $5,271.34 | ▼ -21.93 after sell → book $6,029.11; vs 09:30 mark -9.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,271.34 | ▼ close $5,992.93 vs 09:30 $6,056.68 (session -36.18) | 16:00 close · cash $5,271.34 · equity $5,992.93 vs 09:30 $6,056.68 (-63.75; session marks -36.18) · 1 name(s) marked open→close (per-name table). KLRA×67 09:30 $11.31 → close $10.77 -36.18 | — |
 
 ## Not taken
 

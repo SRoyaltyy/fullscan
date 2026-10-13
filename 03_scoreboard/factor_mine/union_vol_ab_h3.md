@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-7.94%** ($9,206) · signal-only (no cash/fees) was +81.51%. Starts YES **27/30**. Fills 256 · skips 225 · realized $+477.57.
+Cash book **-9.09%** ($9,091) · signal-only (no cash/fees) was +81.51%. Starts YES **27/30**. Fills 256 · skips 225 · realized $+477.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -414,6 +414,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `SVC` | 1 | $7.30 | $0.08 | — | $40.44 | — | combo gate; gate ab=good,vol=good; list yday_gainer,yday_mover; 🔵; ret5=+12.1; leftover $7.73 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `PRME` | 1 | $3.95 | $0.04 | — | $36.45 | — | combo gate; gate ab=good,vol=good; list yday_gainer; 🔵; ret5=+33.9; leftover $7.73 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $36.45 | ▲ close $9,206.32 vs 09:30 $9,047.23 (session +159.37) | 16:00 close · cash $36.45 · equity $9,206.32 vs 09:30 $9,047.23 (+159.09; session marks +159.37) · 12 name(s) marked open→close (per-name table). ADCT×721 09:30 $1.70 → close $1.86 +115.36; ECO×12 09:30 $96.86 → close $98.63 +21.24; GAU×530 09:30 $2.16 → close $2.16 +0.00; HAE×9 09:30 $118.70 → close $122.06 +30.24; MAX×106 09:30 $10.12 → close $10.06 -6.36; NRDS×116 09:30 $9.77 → close $9.82 +5.80; ORBS×1238 09:30 $0.85 → close $0.85 -5.57; PCRX×31 09:30 $36.32 → close $36.35 +0.93; QSI×5 09:30 $1.48 → close $1.36 -0.57; NAUT×3 09:30 $2.17 → close $2.17 +0.01; SVC×1 09:30 $7.30 → close $5.93 -1.37; PRME×1 09:30 $3.95 → close $3.61 -0.34 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $36.45 | ▲ 09:30 equity $9,234.57 vs yday $9,206.32 (+28.25) | 09:30 open · cash $36.45 (unchanged overnight, no fees) · equity $9,234.57 vs prior close $9,206.32 (+28.25) · 12 name(s) re-marked at the open (per-name table). ADCT×721 yday $1.86 → 09:30 $1.86 +0.00; ECO×12 yday $98.63 → 09:30 $97.75 -10.56; GAU×530 yday $2.16 → 09:30 $2.17 +5.30; HAE×9 yday $122.06 → 09:30 $122.80 +6.66; MAX×106 yday $10.06 → 09:30 $10.17 +11.66; NAUT×3 yday $2.17 → 09:30 $2.12 -0.15; NRDS×116 yday $9.82 → 09:30 $9.91 +10.44; ORBS×1238 yday $0.85 → 09:30 $0.85 +5.57; PCRX×31 yday $36.35 → 09:30 $36.33 -0.62; PRME×1 yday $3.61 → 09:30 $3.61 +0.00; QSI×5 yday $1.36 → 09:30 $1.35 -0.05; SVC×1 yday $5.93 → 09:30 $5.93 +0.00 | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $36.45 | ▼ close $9,091.01 vs 09:30 $9,234.57 (session -143.55) | 16:00 close · cash $36.45 · equity $9,091.01 vs 09:30 $9,234.57 (-143.56; session marks -143.55) · 12 name(s) marked open→close (per-name table). ADCT×721 09:30 $1.86 → close $1.70 -115.36; ECO×12 09:30 $97.75 → close $99.26 +18.12; GAU×530 09:30 $2.17 → close $2.16 -5.30; HAE×9 09:30 $122.80 → close $121.72 -9.72; MAX×106 09:30 $10.17 → close $10.47 +31.80; NAUT×3 09:30 $2.12 → close $2.05 -0.21; NRDS×116 09:30 $9.91 → close $9.64 -31.32; ORBS×1238 09:30 $0.85 → close $0.82 -30.95; PCRX×31 09:30 $36.33 → close $36.31 -0.62; PRME×1 09:30 $3.61 → close $3.32 -0.29; QSI×5 09:30 $1.35 → close $1.41 +0.30; SVC×1 09:30 $5.93 → close $5.92 -0.00 | — |
 
 ## Not taken
 

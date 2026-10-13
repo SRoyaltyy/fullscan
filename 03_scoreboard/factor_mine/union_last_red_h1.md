@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **-32.62%** ($6,738) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 356 · skips 105 · realized $-1315.32.
+Cash book **-32.44%** ($6,756) · signal-only (no cash/fees) was +1.25%. Starts YES **0/30**. Fills 362 · skips 105 · realized $-1315.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -512,6 +512,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `AEHL` | 115 | $10.22 | $2.33 | — | $1,304.98 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; 🔵; ret5=-1.3; leftover $1178.75 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `JELD` | 775 | $1.52 | $10.00 | — | $116.98 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; 🔵; ret5=-18.5; leftover $1178.75 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $116.98 | ▼ close $6,738.33 vs 09:30 $7,107.99 (session -301.48) | 16:00 close · cash $116.98 · equity $6,738.33 vs 09:30 $7,107.99 (-369.66; session marks -301.48) · 6 name(s) marked open→close (per-name table). XRPN×70 09:30 $16.68 → close $16.91 +16.10; ZENA×1086 09:30 $1.08 → close $1.09 +5.43; CDNL×56 09:30 $21.01 → close $20.92 -5.04; TMUS×7 09:30 $149.58 → close $151.87 +16.03; AEHL×115 09:30 $10.22 → close $9.27 -109.25; JELD×775 09:30 $1.52 → close $1.23 -224.75 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $116.98 | ▲ 09:30 equity $6,789.62 vs yday $6,738.33 (+51.29) | 09:30 open · cash $116.98 (unchanged overnight, no fees) · equity $6,789.62 vs prior close $6,738.33 (+51.29) · 6 name(s) re-marked at the open (per-name table). AEHL×115 yday $9.27 → 09:30 $9.08 -21.85; CDNL×56 yday $20.92 → 09:30 $21.25 +18.54; JELD×775 yday $1.23 → 09:30 $1.26 +23.25; TMUS×7 yday $151.87 → 09:30 $152.05 +1.26; XRPN×70 yday $16.91 → 09:30 $17.50 +40.95; ZENA×1086 yday $1.09 → 09:30 $1.08 -10.86 | — |
+| 2026-10-13 09:30 ET | **SELL** | `AEHL` | 115 | $9.08 | $2.36 | $-135.80 | $1,158.82 | ▼ -135.80 after sell → book $6,787.25; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CDNL` | 56 | $21.25 | $2.18 | $+9.16 | $2,346.69 | ▲ +9.16 after sell → book $6,785.07; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `JELD` | 775 | $1.26 | $10.14 | $-221.63 | $3,313.06 | ▼ -221.63 after sell → book $6,774.94; vs 09:30 mark -10.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `TMUS` | 7 | $152.05 | $2.03 | $+13.25 | $4,375.38 | ▲ +13.25 after sell → book $6,772.91; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `XRPN` | 70 | $17.50 | $2.22 | $+52.63 | $5,597.81 | ▲ +52.63 after sell → book $6,770.69; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ZENA` | 1086 | $1.08 | $14.20 | $-33.64 | $6,756.49 | ▼ -33.64 after sell → book $6,756.49; vs 09:30 mark -14.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,756.49 | ▲ close $6,756.49 vs 09:30 $6,789.62 (session +0.00) | 16:00 close · cash $6,756.49 · no lots left · equity $6,756.49. | — |
 
 ## Not taken
 

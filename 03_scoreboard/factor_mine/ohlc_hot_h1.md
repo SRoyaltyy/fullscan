@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-21.37%** ($7,863) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 334 · skips 93 · realized $-1456.67.
+Cash book **-22.59%** ($7,741) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 341 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -486,6 +486,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `FIGS` | 59 | $15.89 | $2.17 | — | $1,101.91 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.7; leftover $949.61 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-10-12 09:30 ET | **BUY** | `SBAC` | 5 | $181.77 | $2.00 | — | $191.06 | — | baseline list, no extra gate; list ohlc_hot; ret5=+15.1; leftover $949.61 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $191.06 | ▼ close $7,862.74 vs 09:30 $7,945.60 (session -53.69) | 16:00 close · cash $191.06 · equity $7,862.74 vs 09:30 $7,945.60 (-82.86; session marks -53.69) · 8 name(s) marked open→close (per-name table). NAUT×593 09:30 $2.17 → close $2.17 +2.96; FSLY×32 09:30 $28.79 → close $26.43 -75.52; KOD×9 09:30 $100.06 → close $99.26 -7.20; PBR×37 09:30 $25.44 → close $25.42 -0.74; CIEN×2 09:30 $443.53 → close $405.01 -77.04; SMWB×105 09:30 $9.00 → close $8.83 -17.85; FIGS×59 09:30 $15.89 → close $17.74 +109.15; SBAC×5 09:30 $181.77 → close $184.28 +12.55 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $191.06 | ▼ 09:30 equity $7,797.62 vs yday $7,862.74 (-65.12) | 09:30 open · cash $191.06 (unchanged overnight, no fees) · equity $7,797.62 vs prior close $7,862.74 (-65.12) · 8 name(s) re-marked at the open (per-name table). CIEN×2 yday $405.01 → 09:30 $393.33 -23.36; FIGS×59 yday $17.74 → 09:30 $17.80 +3.54; FSLY×32 yday $26.43 → 09:30 $26.19 -7.68; KOD×9 yday $99.26 → 09:30 $99.06 -1.80; NAUT×593 yday $2.17 → 09:30 $2.12 -29.65; PBR×37 yday $25.42 → 09:30 $25.26 -5.92; SBAC×5 yday $184.28 → 09:30 $186.12 +9.20; SMWB×105 yday $8.83 → 09:30 $8.74 -9.45 | — |
+| 2026-10-13 09:30 ET | **SELL** | `CIEN` | 2 | $393.33 | $2.02 | $-104.41 | $975.70 | ▼ -104.41 after sell → book $7,795.60; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FIGS` | 59 | $17.80 | $2.19 | $+108.34 | $2,023.72 | ▲ +108.34 after sell → book $7,793.42; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FSLY` | 32 | $26.19 | $2.11 | $-87.39 | $2,859.69 | ▼ -87.39 after sell → book $7,791.31; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 9 | $99.06 | $2.04 | $-13.05 | $3,749.19 | ▼ -13.05 after sell → book $7,789.27; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `PBR` | 37 | $25.26 | $2.12 | $-10.88 | $4,681.69 | ▼ -10.88 after sell → book $7,787.15; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SBAC` | 5 | $186.12 | $2.02 | $+17.72 | $5,610.27 | ▲ +17.72 after sell → book $7,785.13; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SMWB` | 105 | $8.74 | $2.33 | $-31.94 | $6,525.64 | ▼ -31.94 after sell → book $7,782.80; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,525.64 | ▼ close $7,741.29 vs 09:30 $7,797.62 (session -41.51) | 16:00 close · cash $6,525.64 · equity $7,741.29 vs 09:30 $7,797.62 (-56.33; session marks -41.51) · 1 name(s) marked open→close (per-name table). NAUT×593 09:30 $2.12 → close $2.05 -41.51 | — |
 
 ## Not taken
 

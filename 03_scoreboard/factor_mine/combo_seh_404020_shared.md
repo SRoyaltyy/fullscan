@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h3/union_hot_n4_h1 w=0.4,0.4,0.2 net=priority
 
-Cash book **+67.55%** ($16,755) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 465 · skips 370 · realized $+2809.98.
+Cash book **+66.77%** ($16,677) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 468 · skips 370 · realized $+2809.98.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $17,865.03.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $22,003.33.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -623,6 +623,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `NAUT` | 767 | $2.17 | $9.89 | — | $9,954.93 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; combo leftover $1661.81; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 775 | $10.22 | $10.41 | — | $17,865.03 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; combo leftover $7921.05; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,865.03 | ▲ close $16,754.81 vs 09:30 $15,877.59 (session +923.11) | 16:00 close · cash $17,865.03 · equity $16,754.81 vs 09:30 $15,877.59 (+877.22; session marks +923.11) · 12 name(s) marked open→close (per-name table). ANGO×143 09:30 $11.42 → close $11.40 -2.86; BYRN×337 09:30 $4.50 → close $4.55 +18.53; DAL×19 09:30 $81.05 → close $80.11 -17.86; DXC×172 09:30 $12.47 → close $12.54 -12.04; EQPT×134 09:30 $14.86 → close $14.76 +13.40; HOVR×978 09:30 $1.54 → close $1.51 -29.34; KOD×11 09:30 $100.06 → close $99.26 -8.80; NTLA×172 09:30 $13.08 → close $12.58 +86.00; WFF×112 09:30 $14.78 → close $17.28 +280.00; QTEX×960 09:30 $1.73 → close $1.58 -144.00; NAUT×767 09:30 $2.17 → close $2.17 +3.83; AEHL×775 09:30 $10.22 → close $9.27 +736.25 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17,865.03 | ▼ 09:30 equity $16,491.73 vs yday $16,754.81 (-263.08) | 09:30 open · cash $17,865.03 (unchanged overnight, no fees) · equity $16,491.73 vs prior close $16,754.81 (-263.08) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 11 | $99.06 | $2.04 | $+44.55 | $18,952.65 | ▲ +44.55 after sell → book $16,489.69; vs 09:30 mark -2.04 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 960 | $1.46 | $12.55 | $-288.94 | $20,336.89 | ▼ -288.94 after sell → book $16,477.13; vs 09:30 mark -12.56 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 112 | $14.90 | $2.36 | $+8.76 | $22,003.33 | ▲ +8.76 after sell → book $16,474.77; vs 09:30 mark -2.36 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22,003.33 | ▲ close $16,676.65 vs 09:30 $16,491.73 (session +201.88) | 16:00 close · cash $22,003.33 · equity $16,676.65 vs 09:30 $16,491.73 (+184.92; session marks +201.88) · 9 name(s) marked open→close (per-name table). AEHL×775 09:30 $9.08 → close $8.55 +410.75; ANGO×143 09:30 $11.43 → close $10.90 -75.79; BYRN×337 09:30 $4.47 → close $4.55 +26.96; DAL×19 09:30 $80.70 → close $79.57 -21.47; DXC×172 09:30 $12.55 → close $12.77 -37.84; EQPT×134 09:30 $14.54 → close $15.37 -111.22; HOVR×978 09:30 $1.47 → close $1.46 -9.78; NAUT×767 09:30 $2.12 → close $2.05 -53.69; NTLA×172 09:30 $12.34 → close $11.91 +73.96 | — |
 
 ## Not taken
 

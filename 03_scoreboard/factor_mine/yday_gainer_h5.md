@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `yday_gainer` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-19.23%** ($8,077) · signal-only (no cash/fees) was +30.33%. Starts YES **6/30**. Fills 237 · skips 452 · realized $+2.09.
+Cash book **-22.05%** ($7,795) · signal-only (no cash/fees) was +30.33%. Starts YES **6/30**. Fills 237 · skips 452 · realized $+2.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -389,6 +389,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `RXRX` | 1 | $4.31 | $0.05 | — | $37.26 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+5.8; leftover $5.60 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `FEAM` | 1 | $3.62 | $0.04 | — | $33.60 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-6.2; leftover $5.60 | join🟡 sector🔴 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.60 | ▼ close $8,077.15 vs 09:30 $8,380.41 (session -303.14) | 16:00 close · cash $33.60 · equity $8,077.15 vs 09:30 $8,380.41 (-303.26; session marks -303.14) · 11 name(s) marked open→close (per-name table). ACRS×276 09:30 $3.80 → close $3.60 -55.20; CATX×382 09:30 $2.61 → close $2.52 -34.38; CLVT×644 09:30 $1.60 → close $1.61 +6.44; COCO×18 09:30 $58.50 → close $57.72 -14.04; ERAS×67 09:30 $15.96 → close $15.46 -33.50; IPSC×710 09:30 $1.47 → close $1.44 -21.30; PCRX×28 09:30 $36.32 → close $36.35 +0.84; SECZ×78 09:30 $13.80 → close $11.86 -151.32; CCCC×1 09:30 $3.16 → close $3.06 -0.10; RXRX×1 09:30 $4.31 → close $4.01 -0.30; FEAM×1 09:30 $3.62 → close $3.34 -0.28 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $33.60 | ▼ 09:30 equity $8,021.40 vs yday $8,077.15 (-55.75) | 09:30 open · cash $33.60 (unchanged overnight, no fees) · equity $8,021.40 vs prior close $8,077.15 (-55.75) · 11 name(s) re-marked at the open (per-name table). ACRS×276 yday $3.60 → 09:30 $3.65 +14.35; CATX×382 yday $2.52 → 09:30 $2.50 -7.64; CCCC×1 yday $3.06 → 09:30 $3.04 -0.02; CLVT×644 yday $1.61 → 09:30 $1.62 +6.44; COCO×18 yday $57.72 → 09:30 $57.70 -0.36; ERAS×67 yday $15.46 → 09:30 $15.25 -14.07; FEAM×1 yday $3.34 → 09:30 $3.32 -0.02; IPSC×710 yday $1.44 → 09:30 $1.44 +0.00; PCRX×28 yday $36.35 → 09:30 $36.33 -0.56; RXRX×1 yday $4.01 → 09:30 $3.96 -0.05; SECZ×78 yday $11.86 → 09:30 $11.17 -53.82 | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.60 | ▼ close $7,795.30 vs 09:30 $8,021.40 (session -226.10) | 16:00 close · cash $33.60 · equity $7,795.30 vs 09:30 $8,021.40 (-226.10; session marks -226.10) · 11 name(s) marked open→close (per-name table). ACRS×276 09:30 $3.65 → close $3.47 -50.23; CATX×382 09:30 $2.50 → close $2.27 -87.86; CCCC×1 09:30 $3.04 → close $2.78 -0.26; CLVT×644 09:30 $1.62 → close $1.60 -12.88; COCO×18 09:30 $57.70 → close $57.61 -1.62; ERAS×67 09:30 $15.25 → close $14.78 -31.49; FEAM×1 09:30 $3.32 → close $3.28 -0.04; IPSC×710 09:30 $1.44 → close $1.38 -42.60; PCRX×28 09:30 $36.33 → close $36.31 -0.56; RXRX×1 09:30 $3.96 → close $3.83 -0.12; SECZ×78 09:30 $11.17 → close $11.19 +1.56 | — |
 
 ## Not taken
 

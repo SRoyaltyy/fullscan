@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-0.53%** ($9,948) · signal-only (no cash/fees) was +14.99%. Starts YES **24/30**. Fills 321 · skips 55 · realized $+1581.44.
+Cash book **-1.37%** ($9,863) · signal-only (no cash/fees) was +14.99%. Starts YES **24/30**. Fills 324 · skips 55 · realized $+1581.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -480,6 +480,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `CIEN` | 7 | $443.53 | $2.01 | — | $3,946.00 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+14.9; leftover $3522.49 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `MNSO` | 356 | $9.88 | $4.59 | — | $424.13 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+8.7; leftover $3522.49 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $424.13 | ▼ close $9,947.54 vs 09:30 $10,593.45 (session -610.96) | 16:00 close · cash $424.13 · equity $9,947.54 vs 09:30 $10,593.45 (-645.91; session marks -610.96) · 3 name(s) marked open→close (per-name table). FSLY×122 09:30 $28.79 → close $26.43 -287.92; CIEN×7 09:30 $443.53 → close $405.01 -269.64; MNSO×356 09:30 $9.88 → close $9.73 -53.40 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $424.13 | ▼ 09:30 equity $9,872.10 vs yday $9,947.54 (-75.44) | 09:30 open · cash $424.13 (unchanged overnight, no fees) · equity $9,872.10 vs prior close $9,947.54 (-75.44) · 3 name(s) re-marked at the open (per-name table). CIEN×7 yday $405.01 → 09:30 $393.33 -81.76; FSLY×122 yday $26.43 → 09:30 $26.19 -29.28; MNSO×356 yday $9.73 → 09:30 $9.83 +35.60 | — |
+| 2026-10-13 09:30 ET | **SELL** | `CIEN` | 7 | $393.33 | $2.04 | $-355.45 | $3,175.40 | ▼ -355.45 after sell → book $9,870.06; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FSLY` | 122 | $26.19 | $2.40 | $-321.96 | $6,368.18 | ▼ -321.96 after sell → book $9,867.66; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `MNSO` | 356 | $9.83 | $4.68 | $-27.07 | $9,862.98 | ▼ -27.07 after sell → book $9,862.98; vs 09:30 mark -4.68 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,862.98 | ▲ close $9,862.98 vs 09:30 $9,872.10 (session +0.00) | 16:00 close · cash $9,862.98 · no lots left · equity $9,862.98. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_news_g_h1 w=0.5,0.5 net=priority
 
-Cash book **+9.13%** ($10,913) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 399 · skips 124 · realized $+1265.29.
+Cash book **+4.35%** ($10,435) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 404 · skips 124 · realized $+1265.29.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $39.65.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,930.03.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -556,6 +556,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `DNA` | 187 | $12.69 | $2.55 | — | $2,378.86 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; combo leftover $2377.22; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `AUGO` | 26 | $89.89 | $2.07 | — | $39.65 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+11.4; combo leftover $2377.22; owner union_news_g_h1 | join🟢 sector🔴 gen🔴 news🟢 digest🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $39.65 | ▲ close $10,913.00 vs 09:30 $10,962.61 (session +3.63) | 16:00 close · cash $39.65 · equity $10,913.00 vs 09:30 $10,962.61 (-49.61; session marks +3.63) · 6 name(s) marked open→close (per-name table). KOD×14 09:30 $100.06 → close $99.26 -11.20; WFF×107 09:30 $14.78 → close $17.28 +267.50; QTEX×918 09:30 $1.73 → close $1.58 -137.70; NAUT×734 09:30 $2.17 → close $2.17 +3.67; DNA×187 09:30 $12.69 → close $11.79 -168.30; AUGO×26 09:30 $89.89 → close $91.80 +49.66 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $39.65 | ▼ 09:30 equity $10,507.21 vs yday $10,913.00 (-405.79) | 09:30 open · cash $39.65 (unchanged overnight, no fees) · equity $10,507.21 vs prior close $10,913.00 (-405.79) | — |
+| 2026-10-13 09:30 ET | **SELL** | `AUGO` | 26 | $91.92 | $2.10 | $+48.61 | $2,427.47 | ▲ +48.61 after sell → book $10,505.11; vs 09:30 mark -2.10 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `DNA` | 187 | $11.79 | $2.60 | $-173.45 | $4,629.60 | ▼ -173.45 after sell → book $10,502.51; vs 09:30 mark -2.60 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 14 | $99.06 | $2.05 | $+57.79 | $6,014.39 | ▲ +57.79 after sell → book $10,500.46; vs 09:30 mark -2.05 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 918 | $1.46 | $12.01 | $-276.30 | $7,338.07 | ▼ -276.30 after sell → book $10,488.45; vs 09:30 mark -12.01 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 107 | $14.90 | $2.34 | $+8.19 | $8,930.03 | ▲ +8.19 after sell → book $10,486.11; vs 09:30 mark -2.34 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,930.03 | ▼ close $10,434.73 vs 09:30 $10,507.21 (session -51.38) | 16:00 close · cash $8,930.03 · equity $10,434.73 vs 09:30 $10,507.21 (-72.48; session marks -51.38) · 1 name(s) marked open→close (per-name table). NAUT×734 09:30 $2.12 → close $2.05 -51.38 | — |
 
 ## Not taken
 

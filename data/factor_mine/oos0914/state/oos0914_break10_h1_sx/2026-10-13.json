@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 7448.51,
+  "date": "2026-10-13",
+  "equity": 7448.51,
+  "fees": 8.5726,
+  "fills": [
+    {
+      "fees": 2.0841,
+      "fill_rule": "open",
+      "pnl": 53.13,
+      "price": 81.99,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "CCI"
+    },
+    {
+      "fees": 2.0246,
+      "fill_rule": "open",
+      "pnl": -204.83,
+      "price": 393.33,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "CIEN"
+    },
+    {
+      "fees": 2.0567,
+      "fill_rule": "open",
+      "pnl": 44.07,
+      "price": 131.19,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "SEZL"
+    },
+    {
+      "fees": 2.4072,
+      "fill_rule": "open",
+      "pnl": 10.46,
+      "price": 14.9,
+      "shares": 127,
+      "side": "SELL",
+      "ticker": "WFF"
+    }
+  ],
+  "holdings": [],
+  "mean": -4.1817,
+  "n_trades_today": 4,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 81.99,
+      "shares": 23,
+      "side": "SELL",
+      "ticker": "CCI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 393.33,
+      "shares": 4,
+      "side": "SELL",
+      "ticker": "CIEN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 131.19,
+      "shares": 14,
+      "side": "SELL",
+      "ticker": "SEZL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 14.9,
+      "shares": 127,
+      "side": "SELL",
+      "ticker": "WFF"
+    }
+  ],
+  "state": {
+    "after": "2026-10-13",
+    "cash": 7448.51,
+    "pos": {},
+    "yday_equity": 7448.51
+  }
+}

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g, no 🚨
 
-Cash book **-34.09%** ($6,591) · signal-only (no cash/fees) was +8.62%. Starts YES **0/30**. Fills 260 · skips 78 · realized $-274.79.
+Cash book **-34.10%** ($6,590) · signal-only (no cash/fees) was +8.62%. Starts YES **0/30**. Fills 262 · skips 78 · realized $-274.79.
 
 ## How this sleeve decides (like you are 10)
 
@@ -416,6 +416,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `DNA` | 266 | $12.69 | $3.43 | — | $3,386.46 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; leftover $3382.71 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `AUGO` | 37 | $89.89 | $2.10 | — | $58.42 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+11.4; leftover $3382.71 | join🟢 sector🔴 gen🔴 news🟢 digest🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $58.42 | ▼ close $6,591.16 vs 09:30 $6,774.12 (session -168.73) | 16:00 close · cash $58.42 · equity $6,591.16 vs 09:30 $6,774.12 (-182.96; session marks -168.73) · 2 name(s) marked open→close (per-name table). DNA×266 09:30 $12.69 → close $11.79 -239.40; AUGO×37 09:30 $89.89 → close $91.80 +70.67 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $58.42 | ▲ 09:30 equity $6,595.60 vs yday $6,591.16 (+4.44) | 09:30 open · cash $58.42 (unchanged overnight, no fees) · equity $6,595.60 vs prior close $6,591.16 (+4.44) · 2 name(s) re-marked at the open (per-name table). AUGO×37 yday $91.80 → 09:30 $91.92 +4.44; DNA×266 yday $11.79 → 09:30 $11.79 +0.00 | — |
+| 2026-10-13 09:30 ET | **SELL** | `AUGO` | 37 | $91.92 | $2.14 | $+70.87 | $3,457.32 | ▲ +70.87 after sell → book $6,593.46; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `DNA` | 266 | $11.79 | $3.50 | $-246.33 | $6,589.96 | ▼ -246.33 after sell → book $6,589.96; vs 09:30 mark -3.50 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,589.96 | ▲ close $6,589.96 vs 09:30 $6,595.60 (session +0.00) | 16:00 close · cash $6,589.96 · no lots left · equity $6,589.96. | — |
 
 ## Not taken
 

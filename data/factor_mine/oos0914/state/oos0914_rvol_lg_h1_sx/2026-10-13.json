@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 11196.56,
+  "date": "2026-10-13",
+  "equity": 11196.56,
+  "fees": 31.5284,
+  "fills": [
+    {
+      "fees": 2.128,
+      "fill_rule": "open",
+      "pnl": 82.93,
+      "price": 81.99,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "CCI"
+    },
+    {
+      "fees": 17.2957,
+      "fill_rule": "open",
+      "pnl": -93.84,
+      "price": 2.12,
+      "shares": 1322,
+      "side": "SELL",
+      "ticker": "NAUT"
+    },
+    {
+      "fees": 9.4807,
+      "fill_rule": "open",
+      "pnl": -264.98,
+      "price": 3.61,
+      "shares": 724,
+      "side": "SELL",
+      "ticker": "PRME"
+    },
+    {
+      "fees": 2.624,
+      "fill_rule": "open",
+      "pnl": 17.97,
+      "price": 14.9,
+      "shares": 193,
+      "side": "SELL",
+      "ticker": "WFF"
+    }
+  ],
+  "holdings": [],
+  "mean": -4.4599,
+  "n_trades_today": 4,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 81.99,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "CCI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.12,
+      "shares": 1322,
+      "side": "SELL",
+      "ticker": "NAUT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.61,
+      "shares": 724,
+      "side": "SELL",
+      "ticker": "PRME"
+    },
+    {
+      "fill_rule": "open",
+      "price": 14.9,
+      "shares": 193,
+      "side": "SELL",
+      "ticker": "WFF"
+    }
+  ],
+  "state": {
+    "after": "2026-10-13",
+    "cash": 11196.56,
+    "pos": {},
+    "yday_equity": 11196.56
+  }
+}

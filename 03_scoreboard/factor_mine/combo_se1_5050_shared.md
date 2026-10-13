@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_e_fresh_h1 w=0.5,0.5 net=priority
 
-Cash book **-15.20%** ($8,480) · signal-only (no cash/fees) was —. Starts YES **1/30**. Fills 321 · skips 162 · realized $+1198.48.
+Cash book **-12.40%** ($8,760) · signal-only (no cash/fees) was —. Starts YES **1/30**. Fills 321 · skips 162 · realized $+1198.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -478,6 +478,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **SELL** | `HOVR` | 628 | $1.54 | $8.22 | $-66.56 | $12,103.95 | ▼ -66.56 after sell → book $8,055.90; vs 09:30 mark -8.22 | union_e_fresh_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 394 | $10.22 | $5.29 | — | $16,125.34 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; combo leftover $4027.95; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,125.34 | ▲ close $8,480.28 vs 09:30 $8,071.29 (session +429.67) | 16:00 close · cash $16,125.34 · equity $8,480.28 vs 09:30 $8,071.29 (+408.99; session marks +429.67) · 4 name(s) marked open→close (per-name table). DXC×109 09:30 $12.47 → close $12.54 -7.63; EQPT×85 09:30 $14.86 → close $14.76 +8.50; NTLA×109 09:30 $13.08 → close $12.58 +54.50; AEHL×394 09:30 $10.22 → close $9.27 +374.30 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,125.34 | ▲ 09:30 equity $8,598.91 vs yday $8,480.28 (+118.63) | 09:30 open · cash $16,125.34 (unchanged overnight, no fees) · equity $8,598.91 vs prior close $8,480.28 (+118.63) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,125.34 | ▲ close $8,760.07 vs 09:30 $8,598.91 (session +161.16) | 16:00 close · cash $16,125.34 · equity $8,760.07 vs 09:30 $8,598.91 (+161.16; session marks +161.16) · 4 name(s) marked open→close (per-name table). AEHL×394 09:30 $9.08 → close $8.55 +208.82; DXC×109 09:30 $12.55 → close $12.77 -23.98; EQPT×85 09:30 $14.54 → close $15.37 -70.55; NTLA×109 09:30 $12.34 → close $11.91 +46.87 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_join_vol_green_h1 w=0.5,0.5 net=priority
 
-Cash book **+30.20%** ($13,020) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 434 · skips 100 · realized $+1412.04.
+Cash book **+23.92%** ($12,392) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 440 · skips 100 · realized $+1412.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $159.53.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,571.68.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -591,6 +591,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `CIEN` | 4 | $443.53 | $2.00 | — | $2,068.94 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+14.9; combo leftover $1915.80; owner union_join_vol_green_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `MNSO` | 193 | $9.88 | $2.57 | — | $159.53 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+8.7; combo leftover $1915.80; owner union_join_vol_green_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $159.53 | ▼ close $13,019.58 vs 09:30 $13,284.43 (session -189.75) | 16:00 close · cash $159.53 · equity $13,019.58 vs 09:30 $13,284.43 (-264.85; session marks -189.75) · 7 name(s) marked open→close (per-name table). KOD×17 09:30 $100.06 → close $99.26 -13.60; WFF×130 09:30 $14.78 → close $17.28 +325.00; QTEX×1112 09:30 $1.73 → close $1.58 -166.80; NAUT×888 09:30 $2.17 → close $2.17 +4.44; FSLY×66 09:30 $28.79 → close $26.43 -155.76; CIEN×4 09:30 $443.53 → close $405.01 -154.08; MNSO×193 09:30 $9.88 → close $9.73 -28.95 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $159.53 | ▼ 09:30 equity $12,480.12 vs yday $13,019.58 (-539.46) | 09:30 open · cash $159.53 (unchanged overnight, no fees) · equity $12,480.12 vs prior close $13,019.58 (-539.46) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CIEN` | 4 | $393.33 | $2.02 | $-204.83 | $1,730.83 | ▼ -204.83 after sell → book $12,478.10; vs 09:30 mark -2.02 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FSLY` | 66 | $26.19 | $2.21 | $-176.00 | $3,457.15 | ▼ -176.00 after sell → book $12,475.88; vs 09:30 mark -2.22 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 17 | $99.06 | $2.06 | $+71.03 | $5,139.11 | ▲ +71.03 after sell → book $12,473.82; vs 09:30 mark -2.06 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `MNSO` | 193 | $9.83 | $2.62 | $-14.84 | $7,033.68 | ▼ -14.84 after sell → book $12,471.20; vs 09:30 mark -2.62 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 1112 | $1.46 | $14.54 | $-334.69 | $8,637.10 | ▼ -334.69 after sell → book $12,456.66; vs 09:30 mark -14.54 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 130 | $14.90 | $2.42 | $+10.80 | $10,571.68 | ▲ +10.80 after sell → book $12,454.24; vs 09:30 mark -2.42 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,571.68 | ▼ close $12,392.08 vs 09:30 $12,480.12 (session -62.16) | 16:00 close · cash $10,571.68 · equity $12,392.08 vs 09:30 $12,480.12 (-88.04; session marks -62.16) · 1 name(s) marked open→close (per-name table). NAUT×888 09:30 $2.12 → close $2.05 -62.16 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · last bar red
 
-Cash book **+4.98%** ($10,498) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 358 · skips 107 · realized $-717.78.
+Cash book **+4.33%** ($10,433) · signal-only (no cash/fees) was -2.93%. Starts YES **19/30**. Fills 366 · skips 107 · realized $-717.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -512,6 +512,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **SHORT** | `WYHG` | 204 | $3.18 | $2.69 | — | $14,600.45 | — | last bar red; gate last_red=True; list yday_mover; ret5=-16.5; leftover $648.94 | join🔴 sector🟢 gen🔴 news🟡 digest🔴 ab🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-12 09:30 ET | **SHORT** | `JELD` | 426 | $1.52 | $5.59 | — | $15,242.37 | — | last bar red; gate last_red=True; list yday_mover; 🔵; ret5=-18.5; leftover $648.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,242.37 | ▲ close $10,498.20 vs 09:30 $10,400.27 (session +141.79) | 16:00 close · cash $15,242.37 · equity $10,498.20 vs 09:30 $10,400.27 (+97.93; session marks +141.79) · 8 name(s) marked open→close (per-name table). HUM×1 09:30 $434.57 → close $433.50 +1.07; XRPN×38 09:30 $16.68 → close $16.91 -8.74; ZENA×598 09:30 $1.08 → close $1.09 -2.99; CDNL×30 09:30 $21.01 → close $20.92 +2.70; TMUS×4 09:30 $149.58 → close $151.87 -9.16; AEHL×63 09:30 $10.22 → close $9.27 +59.85; WYHG×204 09:30 $3.18 → close $3.30 -24.48; JELD×426 09:30 $1.52 → close $1.23 +123.54 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,242.37 | ▼ 09:30 equity $10,458.85 vs yday $10,498.20 (-39.35) | 09:30 open · cash $15,242.37 (unchanged overnight, no fees) · equity $10,458.85 vs prior close $10,498.20 (-39.35) · 8 name(s) re-marked at the open (per-name table). AEHL×63 yday $9.27 → 09:30 $9.08 +11.97; CDNL×30 yday $20.92 → 09:30 $21.25 -9.93; HUM×1 yday $433.50 → 09:30 $439.02 -5.52; JELD×426 yday $1.23 → 09:30 $1.26 -12.78; TMUS×4 yday $151.87 → 09:30 $152.05 -0.72; WYHG×204 yday $3.30 → 09:30 $3.33 -6.12; XRPN×38 yday $16.91 → 09:30 $17.50 -22.23; ZENA×598 yday $1.09 → 09:30 $1.08 +5.98 | — |
+| 2026-10-13 09:30 ET | **COVER** | `AEHL` | 63 | $9.08 | $2.18 | $+67.42 | $14,668.15 | ▲ +67.42 after sell → book $10,456.67; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `CDNL` | 30 | $21.25 | $2.08 | $-11.43 | $14,028.54 | ▼ -11.43 after sell → book $10,454.59; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `HUM` | 1 | $439.02 | $1.99 | $-8.47 | $13,587.53 | ▼ -8.47 after sell → book $10,452.60; vs 09:30 mark -1.99 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `JELD` | 426 | $1.26 | $5.50 | $+99.67 | $13,045.27 | ▲ +99.67 after sell → book $10,447.10; vs 09:30 mark -5.50 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `TMUS` | 4 | $152.05 | $2.00 | $-13.92 | $12,435.07 | ▼ -13.92 after sell → book $10,445.10; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `WYHG` | 204 | $3.33 | $2.63 | $-35.92 | $11,753.12 | ▼ -35.92 after sell → book $10,442.47; vs 09:30 mark -2.63 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `XRPN` | 38 | $17.50 | $2.10 | $-35.22 | $11,086.20 | ▼ -35.22 after sell → book $10,440.36; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `ZENA` | 598 | $1.08 | $7.71 | $-12.57 | $10,432.65 | ▼ -12.57 after sell → book $10,432.65; vs 09:30 mark -7.72 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,432.65 | ▲ close $10,432.65 vs 09:30 $10,458.85 (session +0.00) | 16:00 close · cash $10,432.65 · no lots left · equity $10,432.65. | — |
 
 ## Not taken
 

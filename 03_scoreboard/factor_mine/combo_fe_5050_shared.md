@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared flatten_h5/union_e_fresh_h3 w=0.5,0.5 net=priority
 
-Cash book **-12.15%** ($8,785) · signal-only (no cash/fees) was —. Starts YES **16/30**. Fills 352 · skips 546 · realized $+1249.30.
+Cash book **-13.03%** ($8,697) · signal-only (no cash/fees) was —. Starts YES **16/30**. Fills 355 · skips 546 · realized $+1249.30.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $94.32.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $1,851.84.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -509,6 +509,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **SELL** | `SM` | 1 | $37.69 | $0.40 | $+1.66 | $148.00 | ▲ +1.66 after sell → book $8,708.10; vs 09:30 mark -0.40 | flatten_h5: dropped from list after 5 sess (min 5) | — |
 | 2026-10-12 09:30 ET | **BUY** | `ARQT` | 2 | $26.57 | $0.54 | — | $94.32 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+5.6; combo leftover $74.00; owner flatten_h5 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $94.32 | ▲ close $8,784.91 vs 09:30 $8,709.68 (session +77.35) | 16:00 close · cash $94.32 · equity $8,784.91 vs 09:30 $8,709.68 (+75.23; session marks +77.35) · 9 name(s) marked open→close (per-name table). ANGO×77 09:30 $11.42 → close $11.40 -1.54; BYRN×183 09:30 $4.50 → close $4.55 +10.06; CDNA×4 09:30 $63.28 → close $63.12 -0.64; DAL×10 09:30 $81.05 → close $80.11 -9.40; ETON×6 09:30 $55.50 → close $55.25 -1.50; HOVR×531 09:30 $1.54 → close $1.51 -15.93; NTAP×5 09:30 $237.38 → close $239.18 +9.00; PACS×80 09:30 $43.20 → close $44.30 +88.00; ARQT×2 09:30 $26.57 → close $26.22 -0.70 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $94.32 | ▼ 09:30 equity $8,771.61 vs yday $8,784.91 (-13.30) | 09:30 open · cash $94.32 (unchanged overnight, no fees) · equity $8,771.61 vs prior close $8,784.91 (-13.30) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CDNA` | 4 | $62.57 | $2.02 | $-19.06 | $342.58 | ▼ -19.06 after sell → book $8,769.59; vs 09:30 mark -2.02 | flatten_h5: dropped from list after 7 sess (min 5) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ETON` | 6 | $55.42 | $2.03 | $+13.96 | $673.07 | ▲ +13.96 after sell → book $8,767.56; vs 09:30 mark -2.03 | flatten_h5: dropped from list after 7 sess (min 5) | — |
+| 2026-10-13 09:30 ET | **SELL** | `NTAP` | 5 | $236.16 | $2.02 | $+52.77 | $1,851.84 | ▲ +52.77 after sell → book $8,765.53; vs 09:30 mark -2.03 | flatten_h5: dropped from list after 5 sess (min 5) | join🟡 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,851.84 | ▼ close $8,697.33 vs 09:30 $8,771.61 (session -68.20) | 16:00 close · cash $1,851.84 · equity $8,697.33 vs 09:30 $8,771.61 (-74.28; session marks -68.20) · 6 name(s) marked open→close (per-name table). ANGO×77 09:30 $11.43 → close $10.90 -40.81; ARQT×2 09:30 $26.00 → close $26.09 +0.18; BYRN×183 09:30 $4.47 → close $4.55 +14.64; DAL×10 09:30 $80.70 → close $79.57 -11.30; HOVR×531 09:30 $1.47 → close $1.46 -5.31; PACS×80 09:30 $44.70 → close $44.38 -25.60 | — |
 
 ## Not taken
 

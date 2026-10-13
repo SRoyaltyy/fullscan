@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+27.05%** ($12,705) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 362 · skips 96 · realized $-9.27.
+Cash book **+21.60%** ($12,160) · signal-only (no cash/fees) was +31.34%. Starts YES **29/30**. Fills 369 · skips 96 · realized $-9.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -517,6 +517,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `PRME` | 392 | $3.95 | $5.06 | — | $1,747.16 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer; 🔵; ret5=+33.9; leftover $1548.49 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `NVAX` | 122 | $12.61 | $2.36 | — | $206.39 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+21.9; leftover $1548.49 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $206.39 | ▲ close $12,704.63 vs 09:30 $12,649.55 (session +106.25) | 16:00 close · cash $206.39 · equity $12,704.63 vs 09:30 $12,649.55 (+55.08; session marks +106.25) · 8 name(s) marked open→close (per-name table). KOD×16 09:30 $100.06 → close $99.26 -12.80; NAUT×800 09:30 $2.17 → close $2.17 +4.00; WFF×104 09:30 $14.78 → close $17.28 +260.00; QTEX×895 09:30 $1.73 → close $1.58 -134.25; MRNA×6 09:30 $224.24 → close $213.74 -62.97; FIGS×97 09:30 $15.89 → close $17.74 +179.45; PRME×392 09:30 $3.95 → close $3.61 -133.28; NVAX×122 09:30 $12.61 → close $12.66 +6.10 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $206.39 | ▼ 09:30 equity $12,244.35 vs yday $12,704.63 (-460.27) | 09:30 open · cash $206.39 (unchanged overnight, no fees) · equity $12,244.35 vs prior close $12,704.63 (-460.27) · 8 name(s) re-marked at the open (per-name table). FIGS×97 yday $17.74 → 09:30 $17.80 +5.82; KOD×16 yday $99.26 → 09:30 $99.06 -3.20; MRNA×6 yday $213.74 → 09:30 $207.63 -36.66; NAUT×800 yday $2.17 → 09:30 $2.12 -40.00; NVAX×122 yday $12.66 → 09:30 $12.44 -26.84; PRME×392 yday $3.61 → 09:30 $3.61 +0.00; QTEX×895 yday $1.58 → 09:30 $1.46 -111.88; WFF×104 yday $17.28 → 09:30 $14.90 -247.52 | — |
+| 2026-10-13 09:30 ET | **SELL** | `FIGS` | 97 | $17.80 | $2.31 | $+180.68 | $1,930.68 | ▲ +180.68 after sell → book $12,242.04; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 16 | $99.06 | $2.06 | $+66.62 | $3,513.58 | ▲ +66.62 after sell → book $12,239.98; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `MRNA` | 6 | $207.63 | $2.03 | $-103.67 | $4,757.33 | ▼ -103.67 after sell → book $12,237.96; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `NVAX` | 122 | $12.44 | $2.39 | $-25.48 | $6,272.62 | ▼ -25.48 after sell → book $12,235.57; vs 09:30 mark -2.39 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `PRME` | 392 | $3.61 | $5.13 | $-143.47 | $7,682.61 | ▼ -143.47 after sell → book $12,230.43; vs 09:30 mark -5.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 895 | $1.46 | $11.70 | $-269.37 | $8,973.13 | ▼ -269.37 after sell → book $12,218.73; vs 09:30 mark -11.70 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 104 | $14.90 | $2.33 | $+7.85 | $10,520.40 | ▲ +7.85 after sell → book $12,216.40; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,520.40 | ▼ close $12,160.40 vs 09:30 $12,244.35 (session -56.00) | 16:00 close · cash $10,520.40 · equity $12,160.40 vs 09:30 $12,244.35 (-83.95; session marks -56.00) · 1 name(s) marked open→close (per-name table). NAUT×800 09:30 $2.12 → close $2.05 -56.00 | — |
 
 ## Not taken
 

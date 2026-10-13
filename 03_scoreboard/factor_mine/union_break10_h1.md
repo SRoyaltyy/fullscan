@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-13.67%** ($8,633) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 371 · skips 100 · realized $-529.03.
+Cash book **-15.97%** ($8,403) · signal-only (no cash/fees) was +11.56%. Starts YES **14/30**. Fills 379 · skips 100 · realized $-529.03.
 
 ## How this sleeve decides (like you are 10)
 
@@ -527,6 +527,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `SEZL` | 8 | $127.75 | $2.01 | — | $1,486.12 | — | union ∩ break10, no 🚨; gate break_10=True; list yday_gainer; ret5=+19.8; leftover $1101.85 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `CIEN` | 2 | $443.53 | $2.00 | — | $597.06 | — | union ∩ break10, no 🚨; gate break_10=True; list ohlc_hot; ret5=+14.9; leftover $1101.85 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $597.06 | ▼ close $8,633.17 vs 09:30 $8,839.79 (session -164.81) | 16:00 close · cash $597.06 · equity $8,633.17 vs 09:30 $8,839.79 (-206.62; session marks -164.81) · 8 name(s) marked open→close (per-name table). WFF×74 09:30 $14.78 → close $17.28 +185.00; FSLY×38 09:30 $28.79 → close $26.43 -89.68; CCI×13 09:30 $79.50 → close $81.01 +19.63; SVC×150 09:30 $7.30 → close $5.93 -205.50; MRNA×4 09:30 $224.24 → close $213.74 -41.98; AUGO×12 09:30 $89.89 → close $91.80 +22.92; SEZL×8 09:30 $127.75 → close $130.48 +21.84; CIEN×2 09:30 $443.53 → close $405.01 -77.04 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $597.06 | ▼ 09:30 equity $8,419.99 vs yday $8,633.17 (-213.18) | 09:30 open · cash $597.06 (unchanged overnight, no fees) · equity $8,419.99 vs prior close $8,633.17 (-213.18) · 8 name(s) re-marked at the open (per-name table). AUGO×12 yday $91.80 → 09:30 $91.92 +1.44; CCI×13 yday $81.01 → 09:30 $81.99 +12.74; CIEN×2 yday $405.01 → 09:30 $393.33 -23.36; FSLY×38 yday $26.43 → 09:30 $26.19 -9.12; MRNA×4 yday $213.74 → 09:30 $207.63 -24.44; SEZL×8 yday $130.48 → 09:30 $131.19 +5.68; SVC×150 yday $5.93 → 09:30 $5.93 +0.00; WFF×74 yday $17.28 → 09:30 $14.90 -176.12 | — |
+| 2026-10-13 09:30 ET | **SELL** | `AUGO` | 12 | $91.92 | $2.05 | $+20.29 | $1,698.05 | ▲ +20.29 after sell → book $8,417.94; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CCI` | 13 | $81.99 | $2.05 | $+28.29 | $2,761.88 | ▲ +28.29 after sell → book $8,415.90; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CIEN` | 2 | $393.33 | $2.02 | $-104.41 | $3,546.52 | ▼ -104.41 after sell → book $8,413.88; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FSLY` | 38 | $26.19 | $2.12 | $-103.03 | $4,539.61 | ▼ -103.03 after sell → book $8,411.76; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `MRNA` | 4 | $207.63 | $2.02 | $-70.44 | $5,368.11 | ▼ -70.44 after sell → book $8,409.73; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SEZL` | 8 | $131.19 | $2.03 | $+23.47 | $6,415.60 | ▲ +23.47 after sell → book $8,407.70; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SVC` | 150 | $5.93 | $2.47 | $-210.41 | $7,302.62 | ▼ -210.41 after sell → book $8,405.22; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 74 | $14.90 | $2.23 | $+4.43 | $8,402.99 | ▲ +4.43 after sell → book $8,402.99; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,402.99 | ▲ close $8,402.99 vs 09:30 $8,419.99 (session +0.00) | 16:00 close · cash $8,402.99 · no lots left · equity $8,402.99. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-18.66%** ($8,134) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 360 · skips 107 · realized $-305.80.
+Cash book **-19.71%** ($8,029) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 368 · skips 107 · realized $-305.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -512,6 +512,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `FEAM` | 295 | $3.62 | $3.81 | — | $1,082.31 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-6.2; leftover $1067.94 | join🟡 sector🔴 gen🔴 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `IOVA` | 73 | $14.45 | $2.21 | — | $25.25 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+2.8; leftover $1067.94 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $25.25 | ▼ close $8,133.93 vs 09:30 $8,580.92 (session -387.16) | 16:00 close · cash $25.25 · equity $8,133.93 vs 09:30 $8,580.92 (-446.99; session marks -387.16) · 8 name(s) marked open→close (per-name table). DNA×84 09:30 $12.69 → close $11.79 -75.60; ABSI×106 09:30 $10.06 → close $9.67 -41.87; CCCC×337 09:30 $3.16 → close $3.06 -33.70; RXRX×247 09:30 $4.31 → close $4.01 -74.10; HIMS×34 09:30 $30.92 → close $30.64 -9.52; HELP×89 09:30 $11.90 → close $11.03 -77.80; FEAM×295 09:30 $3.62 → close $3.34 -82.60; IOVA×73 09:30 $14.45 → close $14.56 +8.03 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $25.25 | ▼ 09:30 equity $8,051.93 vs yday $8,133.93 (-82.00) | 09:30 open · cash $25.25 (unchanged overnight, no fees) · equity $8,051.93 vs prior close $8,133.93 (-82.00) · 8 name(s) re-marked at the open (per-name table). ABSI×106 yday $9.67 → 09:30 $9.45 -23.85; CCCC×337 yday $3.06 → 09:30 $3.04 -6.74; DNA×84 yday $11.79 → 09:30 $11.79 +0.00; FEAM×295 yday $3.34 → 09:30 $3.32 -5.90; HELP×89 yday $11.03 → 09:30 $11.03 +0.00; HIMS×34 yday $30.64 → 09:30 $29.83 -27.54; IOVA×73 yday $14.56 → 09:30 $14.48 -5.62; RXRX×247 yday $4.01 → 09:30 $3.96 -12.35 | — |
+| 2026-10-13 09:30 ET | **SELL** | `ABSI` | 106 | $9.45 | $2.34 | $-70.36 | $1,024.08 | ▼ -70.36 after sell → book $8,049.59; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CCCC` | 337 | $3.04 | $4.41 | $-49.20 | $2,044.15 | ▼ -49.20 after sell → book $8,045.18; vs 09:30 mark -4.41 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `DNA` | 84 | $11.79 | $2.27 | $-80.11 | $3,032.25 | ▼ -80.11 after sell → book $8,042.91; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FEAM` | 295 | $3.32 | $3.86 | $-96.17 | $4,007.78 | ▼ -96.17 after sell → book $8,039.05; vs 09:30 mark -3.86 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `HELP` | 89 | $11.03 | $2.28 | $-82.34 | $4,987.17 | ▼ -82.34 after sell → book $8,036.77; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `HIMS` | 34 | $29.83 | $2.11 | $-41.26 | $5,999.28 | ▼ -41.26 after sell → book $8,034.66; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `IOVA` | 73 | $14.48 | $2.23 | $-2.03 | $7,054.30 | ▼ -2.03 after sell → book $8,032.42; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `RXRX` | 247 | $3.96 | $3.24 | $-92.87 | $8,029.19 | ▼ -92.87 after sell → book $8,029.19; vs 09:30 mark -3.23 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,029.19 | ▲ close $8,029.19 vs 09:30 $8,051.93 (session +0.00) | 16:00 close · cash $8,029.19 · no lots left · equity $8,029.19. | — |
 
 ## Not taken
 

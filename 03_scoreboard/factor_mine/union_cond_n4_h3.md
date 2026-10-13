@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-11.32%** ($8,868) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 125 · skips 159 · realized $-515.67.
+Cash book **-14.39%** ($8,561) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 125 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -280,6 +280,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.13 | ▲ close $8,667.09 vs 09:30 $8,432.80 (session +264.61) | 16:00 close · cash $24.13 · equity $8,667.09 vs 09:30 $8,432.80 (+234.29; session marks +264.61) · 4 name(s) marked open→close (per-name table). PACS×48 09:30 $43.75 → close $43.30 -21.60; PCRX×57 09:30 $36.33 → close $36.31 -1.14; ADCT×1333 09:30 $1.58 → close $1.73 +199.95; ANGO×190 09:30 $11.06 → close $11.52 +87.40 | — |
 | 2026-10-12 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24.13 | ▼ 09:30 equity $8,603.87 vs yday $8,667.09 (-63.22) | 09:30 open · cash $24.13 (unchanged overnight, no fees) · equity $8,603.87 vs prior close $8,667.09 (-63.22) · 4 name(s) re-marked at the open (per-name table). ADCT×1333 yday $1.73 → 09:30 $1.70 -39.99; ANGO×190 yday $11.52 → 09:30 $11.42 -19.00; PACS×48 yday $43.30 → 09:30 $43.20 -4.80; PCRX×57 yday $36.31 → 09:30 $36.32 +0.57 | — |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.13 | ▲ close $8,867.86 vs 09:30 $8,603.87 (session +263.99) | 16:00 close · cash $24.13 · equity $8,867.86 vs 09:30 $8,603.87 (+263.99; session marks +263.99) · 4 name(s) marked open→close (per-name table). ADCT×1333 09:30 $1.70 → close $1.86 +213.28; ANGO×190 09:30 $11.42 → close $11.40 -3.80; PACS×48 09:30 $43.20 → close $44.30 +52.80; PCRX×57 09:30 $36.32 → close $36.35 +1.71 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24.13 | ▲ 09:30 equity $8,891.62 vs yday $8,867.86 (+23.76) | 09:30 open · cash $24.13 (unchanged overnight, no fees) · equity $8,891.62 vs prior close $8,867.86 (+23.76) · 4 name(s) re-marked at the open (per-name table). ADCT×1333 yday $1.86 → 09:30 $1.86 +0.00; ANGO×190 yday $11.40 → 09:30 $11.43 +5.70; PACS×48 yday $44.30 → 09:30 $44.70 +19.20; PCRX×57 yday $36.35 → 09:30 $36.33 -1.14 | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.13 | ▼ close $8,561.14 vs 09:30 $8,891.62 (session -330.48) | 16:00 close · cash $24.13 · equity $8,561.14 vs 09:30 $8,891.62 (-330.48; session marks -330.48) · 4 name(s) marked open→close (per-name table). ADCT×1333 09:30 $1.86 → close $1.70 -213.28; ANGO×190 09:30 $11.43 → close $10.90 -100.70; PACS×48 09:30 $44.70 → close $44.38 -15.36; PCRX×57 09:30 $36.33 → close $36.31 -1.14 | — |
 
 ## Not taken
 

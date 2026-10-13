@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_news_g_h1 w=0.7,0.3 net=priority
 
-Cash book **-13.86%** ($8,614) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 378 · skips 302 · realized $+3022.82.
+Cash book **-15.18%** ($8,482) · signal-only (no cash/fees) was —. Starts YES **25/30**. Fills 380 · skips 302 · realized $+3022.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $68.27.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $2,565.14.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -535,6 +535,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `DNA` | 103 | $12.69 | $2.30 | — | $1,328.76 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; 🔵; ret5=+5.3; combo leftover $1319.07; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `AUGO` | 14 | $89.89 | $2.03 | — | $68.27 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+11.4; combo leftover $1319.07; owner union_news_g_h1 | join🟢 sector🔴 gen🔴 news🟢 digest🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $68.27 | ▼ close $8,613.67 vs 09:30 $8,721.65 (session -97.13) | 16:00 close · cash $68.27 · equity $8,613.67 vs 09:30 $8,721.65 (-107.98; session marks -97.13) · 6 name(s) marked open→close (per-name table). ANGO×139 09:30 $11.42 → close $11.40 -2.78; BYRN×329 09:30 $4.50 → close $4.55 +18.09; DAL×19 09:30 $81.05 → close $80.11 -17.86; HOVR×954 09:30 $1.54 → close $1.51 -28.62; DNA×103 09:30 $12.69 → close $11.79 -92.70; AUGO×14 09:30 $89.89 → close $91.80 +26.74 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $68.27 | ▼ 09:30 equity $8,564.60 vs yday $8,613.67 (-49.07) | 09:30 open · cash $68.27 (unchanged overnight, no fees) · equity $8,564.60 vs prior close $8,613.67 (-49.07) | — |
+| 2026-10-13 09:30 ET | **SELL** | `AUGO` | 14 | $91.92 | $2.05 | $+24.34 | $1,353.10 | ▲ +24.34 after sell → book $8,562.55; vs 09:30 mark -2.05 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `DNA` | 103 | $11.79 | $2.33 | $-97.33 | $2,565.14 | ▼ -97.33 after sell → book $8,560.22; vs 09:30 mark -2.33 | union_news_g_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,565.14 | ▼ close $8,481.86 vs 09:30 $8,564.60 (session -78.36) | 16:00 close · cash $2,565.14 · equity $8,481.86 vs 09:30 $8,564.60 (-82.74; session marks -78.36) · 4 name(s) marked open→close (per-name table). ANGO×139 09:30 $11.43 → close $10.90 -73.67; BYRN×329 09:30 $4.47 → close $4.55 +26.32; DAL×19 09:30 $80.70 → close $79.57 -21.47; HOVR×954 09:30 $1.47 → close $1.46 -9.54 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-7.66%** ($9,234) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 251 · skips 71 · realized $-1788.82.
+Cash book **-10.47%** ($8,953) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 258 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -407,6 +407,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `LVWR` | 817 | $1.59 | $10.54 | — | $1,334.31 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; ret5=+2.5; leftover $1299.29 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `AMT` | 7 | $182.25 | $2.01 | — | $56.55 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+12.4; leftover $1299.29 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.55 | ▲ close $9,234.22 vs 09:30 $9,132.34 (session +165.80) | 16:00 close · cash $56.55 · equity $9,234.22 vs 09:30 $9,132.34 (+101.88; session marks +165.80) · 7 name(s) marked open→close (per-name table). CCCC×411 09:30 $3.16 → close $3.06 -41.10; WFF×87 09:30 $14.78 → close $17.28 +217.50; KLRA×114 09:30 $11.39 → close $11.33 -6.84; FSLY×45 09:30 $28.79 → close $26.43 -106.20; AUGO×14 09:30 $89.89 → close $91.80 +26.74; LVWR×817 09:30 $1.59 → close $1.68 +73.53; AMT×7 09:30 $182.25 → close $182.56 +2.17 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $56.55 | ▼ 09:30 equity $8,980.27 vs yday $9,234.22 (-253.95) | 09:30 open · cash $56.55 (unchanged overnight, no fees) · equity $8,980.27 vs prior close $9,234.22 (-253.95) · 7 name(s) re-marked at the open (per-name table). AMT×7 yday $182.56 → 09:30 $184.50 +13.58; AUGO×14 yday $91.80 → 09:30 $91.92 +1.68; CCCC×411 yday $3.06 → 09:30 $3.04 -8.22; FSLY×45 yday $26.43 → 09:30 $26.19 -10.80; KLRA×114 yday $11.33 → 09:30 $11.31 -2.28; LVWR×817 yday $1.68 → 09:30 $1.63 -40.85; WFF×87 yday $17.28 → 09:30 $14.90 -207.06 | — |
+| 2026-10-13 09:30 ET | **SELL** | `AMT` | 7 | $184.50 | $2.03 | $+11.71 | $1,346.02 | ▲ +11.71 after sell → book $8,978.24; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-13 09:30 ET | **SELL** | `AUGO` | 14 | $91.92 | $2.05 | $+24.34 | $2,630.85 | ▲ +24.34 after sell → book $8,976.19; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CCCC` | 411 | $3.04 | $5.38 | $-60.00 | $3,874.91 | ▼ -60.00 after sell → book $8,970.81; vs 09:30 mark -5.38 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FSLY` | 45 | $26.19 | $2.15 | $-121.27 | $5,051.31 | ▼ -121.27 after sell → book $8,968.66; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KLRA` | 114 | $11.31 | $2.36 | $-13.81 | $6,338.29 | ▼ -13.81 after sell → book $8,966.30; vs 09:30 mark -2.36 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-13 09:30 ET | **SELL** | `LVWR` | 817 | $1.63 | $10.69 | $+11.46 | $7,659.31 | ▲ +11.46 after sell → book $8,955.61; vs 09:30 mark -10.69 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 87 | $14.90 | $2.28 | $+5.91 | $8,953.34 | ▲ +5.91 after sell → book $8,953.34; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,953.34 | ▲ close $8,953.34 vs 09:30 $8,980.27 (session +0.00) | 16:00 close · cash $8,953.34 · no lots left · equity $8,953.34. | — |
 
 ## Not taken
 

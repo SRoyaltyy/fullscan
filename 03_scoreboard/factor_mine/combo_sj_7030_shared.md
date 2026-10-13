@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_join_vol_green_h1 w=0.7,0.3 net=priority
 
-Cash book **+2.91%** ($10,291) · signal-only (no cash/fees) was —. Starts YES **7/30**. Fills 449 · skips 173 · realized $+799.96.
+Cash book **+6.09%** ($10,609) · signal-only (no cash/fees) was —. Starts YES **7/30**. Fills 452 · skips 173 · realized $+799.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $15,679.71.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $19,699.24.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -606,6 +606,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `MNSO` | 151 | $9.88 | $2.44 | — | $10,678.49 | — | combo gate; gate join=good,last_green=True,vol=good; list ohlc_hot; ret5=+8.7; combo leftover $1500.46; owner union_join_vol_green_h1 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 490 | $10.22 | $6.58 | — | $15,679.71 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; combo leftover $5013.90; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,679.71 | ▲ close $10,291.22 vs 09:30 $10,051.54 (session +270.00) | 16:00 close · cash $15,679.71 · equity $10,291.22 vs 09:30 $10,051.54 (+239.68; session marks +270.00) · 8 name(s) marked open→close (per-name table). DAL×15 09:30 $81.05 → close $80.11 +14.10; DXC×101 09:30 $12.47 → close $12.54 -7.07; EQPT×79 09:30 $14.86 → close $14.76 +7.90; NTLA×101 09:30 $13.08 → close $12.58 +50.50; FSLY×52 09:30 $28.79 → close $26.43 -122.72; CIEN×3 09:30 $443.53 → close $405.01 -115.56; MNSO×151 09:30 $9.88 → close $9.73 -22.65; AEHL×490 09:30 $10.22 → close $9.27 +465.50 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,679.71 | ▲ 09:30 equity $10,383.66 vs yday $10,291.22 (+92.44) | 09:30 open · cash $15,679.71 (unchanged overnight, no fees) · equity $10,383.66 vs prior close $10,291.22 (+92.44) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CIEN` | 3 | $393.33 | $2.02 | $-154.62 | $16,857.68 | ▼ -154.62 after sell → book $10,381.64; vs 09:30 mark -2.02 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FSLY` | 52 | $26.19 | $2.17 | $-139.51 | $18,217.39 | ▼ -139.51 after sell → book $10,379.47; vs 09:30 mark -2.17 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `MNSO` | 151 | $9.83 | $2.48 | $-12.47 | $19,699.24 | ▼ -12.47 after sell → book $10,376.99; vs 09:30 mark -2.48 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,699.24 | ▲ close $10,609.28 vs 09:30 $10,383.66 (session +232.29) | 16:00 close · cash $19,699.24 · equity $10,609.28 vs 09:30 $10,383.66 (+225.62; session marks +232.29) · 5 name(s) marked open→close (per-name table). AEHL×490 09:30 $9.08 → close $8.55 +259.70; DAL×15 09:30 $80.70 → close $79.57 +16.95; DXC×101 09:30 $12.55 → close $12.77 -22.22; EQPT×79 09:30 $14.54 → close $15.37 -65.57; NTLA×101 09:30 $12.34 → close $11.91 +43.43 | — |
 
 ## Not taken
 

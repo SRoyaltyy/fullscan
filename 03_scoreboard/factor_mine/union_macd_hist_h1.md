@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-6.66%** ($9,334) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 341 · skips 94 · realized $-657.32.
+Cash book **-7.30%** ($9,270) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 347 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -496,6 +496,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `AFRM` | 14 | $80.49 | $2.03 | — | $1,616.71 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+14.0; leftover $1154.08 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `AMT` | 6 | $182.25 | $2.01 | — | $521.21 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+12.4; leftover $1154.08 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $521.21 | ▼ close $9,334.05 vs 09:30 $9,358.60 (session -0.07) | 16:00 close · cash $521.21 · equity $9,334.05 vs 09:30 $9,358.60 (-24.55; session marks -0.07) · 8 name(s) marked open→close (per-name table). KOD×12 09:30 $100.06 → close $99.26 -9.60; WING×10 09:30 $122.10 → close $126.02 +39.20; CIEN×2 09:30 $443.53 → close $405.01 -77.04; SHOP×6 09:30 $173.90 → close $179.22 +31.92; SEZL×9 09:30 $127.75 → close $130.48 +24.57; SBAC×6 09:30 $181.77 → close $184.28 +15.06; AFRM×14 09:30 $80.49 → close $78.63 -26.04; AMT×6 09:30 $182.25 → close $182.56 +1.86 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $521.21 | ▼ 09:30 equity $9,308.08 vs yday $9,334.05 (-25.97) | 09:30 open · cash $521.21 (unchanged overnight, no fees) · equity $9,308.08 vs prior close $9,334.05 (-25.97) · 8 name(s) re-marked at the open (per-name table). AFRM×14 yday $78.63 → 09:30 $78.54 -1.26; AMT×6 yday $182.56 → 09:30 $184.50 +11.64; CIEN×2 yday $405.01 → 09:30 $393.33 -23.36; KOD×12 yday $99.26 → 09:30 $99.06 -2.40; SBAC×6 yday $184.28 → 09:30 $186.12 +11.04; SEZL×9 yday $130.48 → 09:30 $131.19 +6.39; SHOP×6 yday $179.22 → 09:30 $175.80 -20.52; WING×10 yday $126.02 → 09:30 $125.27 -7.50 | — |
+| 2026-10-13 09:30 ET | **SELL** | `AFRM` | 14 | $78.54 | $2.05 | $-31.38 | $1,618.72 | ▼ -31.38 after sell → book $9,306.03; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CIEN` | 2 | $393.33 | $2.02 | $-104.41 | $2,403.36 | ▼ -104.41 after sell → book $9,304.01; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 12 | $99.06 | $2.05 | $+48.97 | $3,590.04 | ▲ +48.97 after sell → book $9,301.97; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SBAC` | 6 | $186.12 | $2.03 | $+22.06 | $4,704.73 | ▲ +22.06 after sell → book $9,299.94; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `SEZL` | 9 | $131.19 | $2.04 | $+26.91 | $5,883.40 | ▲ +26.91 after sell → book $9,297.90; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WING` | 10 | $125.27 | $2.04 | $+45.44 | $7,134.06 | ▲ +45.44 after sell → book $9,295.86; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,134.06 | ▼ close $9,269.76 vs 09:30 $9,308.08 (session -26.10) | 16:00 close · cash $7,134.06 · equity $9,269.76 vs 09:30 $9,308.08 (-38.32; session marks -26.10) · 2 name(s) marked open→close (per-name table). AMT×6 09:30 $184.50 → close $179.43 -30.42; SHOP×6 09:30 $175.80 → close $176.52 +4.32 | — |
 
 ## Not taken
 

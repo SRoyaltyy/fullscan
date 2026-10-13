@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `time` · S-boost `none` · sell at min-hold even if still listed
 
-Cash book **-18.47%** ($8,153) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 394 · skips 108 · realized $-163.09.
+Cash book **-19.18%** ($8,082) · signal-only (no cash/fees) was -0.80%. Starts YES **0/30**. Fills 402 · skips 108 · realized $-163.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -546,6 +546,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `CCCC` | 332 | $3.16 | $4.28 | — | $1,238.57 | — | sell at min-hold even if still listed; list probable,yday_gainer; 🔵; ret5=+7.1; leftover $1051.85 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `RXRX` | 244 | $4.31 | $3.15 | — | $183.78 | — | sell at min-hold even if still listed; list probable,yday_gainer; ret5=+5.8; leftover $1051.85 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $183.78 | ▼ close $8,153.15 vs 09:30 $8,446.89 (session -241.49) | 16:00 close · cash $183.78 · equity $8,153.15 vs 09:30 $8,446.89 (-293.74; session marks -241.49) · 8 name(s) marked open→close (per-name table). CDNA×16 09:30 $63.28 → close $63.12 -2.56; ETON×18 09:30 $55.50 → close $55.25 -4.50; FANG×5 09:30 $195.01 → close $195.11 +0.50; ARQT×39 09:30 $26.57 → close $26.22 -13.65; DNA×82 09:30 $12.69 → close $11.79 -73.80; ABSI×104 09:30 $10.06 → close $9.67 -41.08; CCCC×332 09:30 $3.16 → close $3.06 -33.20; RXRX×244 09:30 $4.31 → close $4.01 -73.20 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $183.78 | ▼ 09:30 equity $8,102.69 vs yday $8,153.15 (-50.46) | 09:30 open · cash $183.78 (unchanged overnight, no fees) · equity $8,102.69 vs prior close $8,153.15 (-50.46) · 8 name(s) re-marked at the open (per-name table). ABSI×104 yday $9.67 → 09:30 $9.45 -23.40; ARQT×39 yday $26.22 → 09:30 $26.00 -8.58; CCCC×332 yday $3.06 → 09:30 $3.04 -6.64; CDNA×16 yday $63.12 → 09:30 $62.57 -8.80; DNA×82 yday $11.79 → 09:30 $11.79 +0.00; ETON×18 yday $55.25 → 09:30 $55.42 +3.06; FANG×5 yday $195.11 → 09:30 $196.33 +6.10; RXRX×244 yday $4.01 → 09:30 $3.96 -12.20 | — |
+| 2026-10-13 09:30 ET | **SELL** | `ABSI` | 104 | $9.45 | $2.33 | $-69.11 | $1,163.73 | ▼ -69.11 after sell → book $8,100.36; vs 09:30 mark -2.33 | time-stop after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ARQT` | 39 | $26.00 | $2.13 | $-26.46 | $2,175.60 | ▼ -26.46 after sell → book $8,098.23; vs 09:30 mark -2.13 | time-stop after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CCCC` | 332 | $3.04 | $4.35 | $-48.47 | $3,180.54 | ▼ -48.47 after sell → book $8,093.89; vs 09:30 mark -4.34 | time-stop after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CDNA` | 16 | $62.57 | $2.06 | $-15.46 | $4,179.60 | ▼ -15.46 after sell → book $8,091.83; vs 09:30 mark -2.06 | time-stop after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `DNA` | 82 | $11.79 | $2.26 | $-78.30 | $5,144.12 | ▼ -78.30 after sell → book $8,089.57; vs 09:30 mark -2.26 | time-stop after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `ETON` | 18 | $55.42 | $2.06 | $-5.55 | $6,139.61 | ▼ -5.55 after sell → book $8,087.50; vs 09:30 mark -2.07 | time-stop after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `FANG` | 5 | $196.33 | $2.02 | $+2.57 | $7,119.24 | ▲ +2.57 after sell → book $8,085.48; vs 09:30 mark -2.02 | time-stop after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `RXRX` | 244 | $3.96 | $3.20 | $-91.75 | $8,082.28 | ▼ -91.75 after sell → book $8,082.28; vs 09:30 mark -3.20 | time-stop after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,082.28 | ▲ close $8,082.28 vs 09:30 $8,102.69 (session +0.00) | 16:00 close · cash $8,082.28 · no lots left · equity $8,082.28. | — |
 
 ## Not taken
 

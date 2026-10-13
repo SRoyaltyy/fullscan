@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · rank by hot_score
 
-Cash book **+24.39%** ($12,439) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 352 · skips 90 · realized $+477.92.
+Cash book **+19.87%** ($11,987) · signal-only (no cash/fees) was +50.67%. Starts YES **29/30**. Fills 358 · skips 90 · realized $+477.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -507,6 +507,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `QSI` | 1051 | $1.48 | $13.56 | — | $1,570.51 | — | rank by hot_score; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=-1.3; leftover $1550.23 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **BUY** | `CIEN` | 3 | $443.53 | $2.00 | — | $237.93 | — | rank by hot_score; rank hot_score; list ohlc_hot; ret5=+14.9; leftover $1550.23 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $237.93 | ▼ close $12,438.69 vs 09:30 $12,725.73 (session -224.06) | 16:00 close · cash $237.93 · equity $12,438.69 vs 09:30 $12,725.73 (-287.04; session marks -224.06) · 8 name(s) marked open→close (per-name table). KOD×16 09:30 $100.06 → close $99.26 -12.80; NAUT×830 09:30 $2.17 → close $2.17 +4.15; WFF×104 09:30 $14.78 → close $17.28 +260.00; QTEX×896 09:30 $1.73 → close $1.58 -134.40; PRME×392 09:30 $3.95 → close $3.61 -133.28; CCI×19 09:30 $79.50 → close $81.01 +28.69; QSI×1051 09:30 $1.48 → close $1.36 -120.86; CIEN×3 09:30 $443.53 → close $405.01 -115.56 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $237.93 | ▼ 09:30 equity $12,006.70 vs yday $12,438.69 (-431.99) | 09:30 open · cash $237.93 (unchanged overnight, no fees) · equity $12,006.70 vs prior close $12,438.69 (-431.99) · 8 name(s) re-marked at the open (per-name table). CCI×19 yday $81.01 → 09:30 $81.99 +18.62; CIEN×3 yday $405.01 → 09:30 $393.33 -35.04; KOD×16 yday $99.26 → 09:30 $99.06 -3.20; NAUT×830 yday $2.17 → 09:30 $2.12 -41.50; PRME×392 yday $3.61 → 09:30 $3.61 +0.00; QSI×1051 yday $1.36 → 09:30 $1.35 -11.35; QTEX×896 yday $1.58 → 09:30 $1.46 -112.00; WFF×104 yday $17.28 → 09:30 $14.90 -247.52 | — |
+| 2026-10-13 09:30 ET | **SELL** | `CCI` | 19 | $81.99 | $2.07 | $+43.19 | $1,793.67 | ▲ +43.19 after sell → book $12,004.63; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `CIEN` | 3 | $393.33 | $2.02 | $-154.62 | $2,971.64 | ▼ -154.62 after sell → book $12,002.61; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 16 | $99.06 | $2.06 | $+66.62 | $4,554.54 | ▲ +66.62 after sell → book $12,000.55; vs 09:30 mark -2.06 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `PRME` | 392 | $3.61 | $5.13 | $-143.47 | $5,964.53 | ▼ -143.47 after sell → book $11,995.42; vs 09:30 mark -5.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 896 | $1.46 | $11.72 | $-269.68 | $7,256.49 | ▼ -269.68 after sell → book $11,983.70; vs 09:30 mark -11.72 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 104 | $14.90 | $2.33 | $+7.85 | $8,803.76 | ▲ +7.85 after sell → book $11,981.37; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,803.76 | ▲ close $11,987.17 vs 09:30 $12,006.70 (session +5.80) | 16:00 close · cash $8,803.76 · equity $11,987.17 vs 09:30 $12,006.70 (-19.53; session marks +5.80) · 2 name(s) marked open→close (per-name table). NAUT×830 09:30 $2.12 → close $2.05 -58.10; QSI×1051 09:30 $1.35 → close $1.41 +63.90 | — |
 
 ## Not taken
 

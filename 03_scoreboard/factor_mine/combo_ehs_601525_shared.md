@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_hot_n4_h1/short_news_r_h3 w=0.6,0.15,0.25 net=priority
 
-Cash book **+69.93%** ($16,993) · signal-only (no cash/fees) was —. Starts YES **28/30**. Fills 463 · skips 370 · realized $+3084.53.
+Cash book **+68.47%** ($16,847) · signal-only (no cash/fees) was —. Starts YES **28/30**. Fills 466 · skips 370 · realized $+3084.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12,542.71.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $15,645.66.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -621,6 +621,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **BUY** | `NAUT` | 581 | $2.17 | $7.49 | — | $6,275.87 | — | top 4 by hot; rank hot_score; list yday_gainer,yday_mover,ohlc_hot; ret5=+14.8; combo leftover $1258.36; owner union_hot_n4_h1 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 614 | $10.22 | $8.24 | — | $12,542.71 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; combo leftover $6275.87; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,542.71 | ▲ close $16,992.83 vs 09:30 $16,337.84 (session +691.25) | 16:00 close · cash $12,542.71 · equity $16,992.83 vs 09:30 $16,337.84 (+654.99; session marks +691.25) · 12 name(s) marked open→close (per-name table). ANGO×222 09:30 $11.42 → close $11.40 -4.44; BYRN×523 09:30 $4.50 → close $4.55 +28.76; DAL×30 09:30 $81.05 → close $80.11 -28.20; DXC×113 09:30 $12.47 → close $12.54 -7.91; EQPT×88 09:30 $14.86 → close $14.76 +8.80; HOVR×1517 09:30 $1.54 → close $1.51 -45.51; KOD×8 09:30 $100.06 → close $99.26 -6.40; NTLA×113 09:30 $13.08 → close $12.58 +56.50; WFF×85 09:30 $14.78 → close $17.28 +212.50; QTEX×727 09:30 $1.73 → close $1.58 -109.05; NAUT×581 09:30 $2.17 → close $2.17 +2.90; AEHL×614 09:30 $10.22 → close $9.27 +583.30 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,542.71 | ▼ 09:30 equity $16,750.24 vs yday $16,992.83 (-242.59) | 09:30 open · cash $12,542.71 (unchanged overnight, no fees) · equity $16,750.24 vs prior close $16,992.83 (-242.59) | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 8 | $99.06 | $2.03 | $+31.31 | $13,333.16 | ▲ +31.31 after sell → book $16,748.21; vs 09:30 mark -2.03 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 727 | $1.46 | $9.51 | $-218.81 | $14,381.43 | ▼ -218.81 after sell → book $16,738.70; vs 09:30 mark -9.51 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 85 | $14.90 | $2.27 | $+5.69 | $15,645.66 | ▲ +5.69 after sell → book $16,736.43; vs 09:30 mark -2.27 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,645.66 | ▲ close $16,846.98 vs 09:30 $16,750.24 (session +110.55) | 16:00 close · cash $15,645.66 · equity $16,846.98 vs 09:30 $16,750.24 (+96.74; session marks +110.55) · 9 name(s) marked open→close (per-name table). AEHL×614 09:30 $9.08 → close $8.55 +325.42; ANGO×222 09:30 $11.43 → close $10.90 -117.66; BYRN×523 09:30 $4.47 → close $4.55 +41.84; DAL×30 09:30 $80.70 → close $79.57 -33.90; DXC×113 09:30 $12.55 → close $12.77 -24.86; EQPT×88 09:30 $14.54 → close $15.37 -73.04; HOVR×1517 09:30 $1.47 → close $1.46 -15.17; NAUT×581 09:30 $2.12 → close $2.05 -40.67; NTLA×113 09:30 $12.34 → close $11.91 +48.59 | — |
 
 ## Not taken
 

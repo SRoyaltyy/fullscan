@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · split short_news_r_h3/union_e_fresh_h3/union_hot_n4_h1 w=0.33,0.33,0.33 net=priority
 
-Cash book **+7.02%** ($10,702) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 443 · skips 367 · realized $+2181.46.
+Cash book **+3.75%** ($10,375) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 446 · skips 367 · realized $+2181.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $5,667.14.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,113.46.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -721,6 +721,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **SELL** | `BYRN` | 256 | $4.50 | $3.35 | $-57.86 | $2,496.03 | ▼ -57.86 after sell → book $4,895.31; vs 09:30 mark -3.35 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-12 09:30 ET | **SELL** | `PCRX` | 33 | $36.32 | $2.11 | $-4.53 | $3,692.48 | ▼ -4.53 after sell → book $4,893.20; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-12 09:30 ET | **SHORT** | `AEHL` | 138 | $10.22 | $2.48 | — | $5,598.42 | — | news🔴; gate news=bad; list yday_mover; 🔵; ret5=-1.3; leftover $1412.01 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,598.42 | ▲ close $3,071.06 vs 09:30 $3,005.78 (session +65.28) | 16:00 close · cash $5,598.42 · equity $3,071.06 vs 09:30 $3,005.78 (+65.28; session marks +65.28) · 5 name(s) marked open→close (per-name table). AEHL×138 09:30 $9.08 → close $8.55 +73.14; DAL×4 09:30 $80.70 → close $79.57 +4.52; DXC×28 09:30 $12.55 → close $12.77 -6.16; EQPT×22 09:30 $14.54 → close $15.37 -18.26; NTLA×28 09:30 $12.34 → close $11.91 +12.04 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,598.42 | ▲ 09:30 equity $3,005.78 vs yday $2,970.64 (+35.14) | 09:30 open · cash $5,598.42 (unchanged overnight, no fees) · equity $3,005.78 vs prior close $2,970.64 (+35.14) · 5 name(s) re-marked at the open (per-name table). AEHL×138 yday $9.27 → 09:30 $9.08 +26.22; DAL×4 yday $80.11 → 09:30 $80.70 -2.36; DXC×28 yday $12.54 → 09:30 $12.55 -0.28; EQPT×22 yday $14.76 → 09:30 $14.54 +4.84; NTLA×28 yday $12.58 → 09:30 $12.34 +6.72 | — |
+| 2026-10-13 09:30 ET | **SELL** | `KOD` | 12 | $99.06 | $2.05 | $+48.97 | $1,186.99 | ▲ +48.97 after sell → book $4,649.64; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `QTEX` | 711 | $1.46 | $9.30 | $-214.00 | $2,212.20 | ▼ -214.00 after sell → book $4,640.34; vs 09:30 mark -9.30 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **SELL** | `WFF` | 83 | $14.90 | $2.26 | $+5.46 | $3,446.64 | ▲ +5.46 after sell → book $4,638.08; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
 
 ## Not taken
 

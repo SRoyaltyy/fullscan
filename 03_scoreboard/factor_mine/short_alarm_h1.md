@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+4.89%** ($10,489) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 192 · skips 96 · realized $+54.59.
+Cash book **+4.66%** ($10,466) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 200 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -346,6 +346,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 09:30 ET | **SHORT** | `ZIP` | 156 | $4.18 | $2.51 | — | $14,712.64 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+17.5; leftover $654.99 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-12 09:30 ET | **SHORT** | `SUJA` | 60 | $10.89 | $2.21 | — | $15,363.83 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+12.0; leftover $654.99 | join🔴 sector🟢 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,363.83 | ▲ close $10,489.15 vs 09:30 $10,493.64 (session +27.55) | 16:00 close · cash $15,363.83 · equity $10,489.15 vs 09:30 $10,493.64 (-4.49; session marks +27.55) · 8 name(s) marked open→close (per-name table). FANG×3 09:30 $195.01 → close $195.11 -0.30; FEAM×180 09:30 $3.62 → close $3.34 +50.40; HUM×1 09:30 $434.57 → close $433.50 +1.07; PCVX×9 09:30 $70.85 → close $70.65 +1.80; WYHG×205 09:30 $3.18 → close $3.30 -24.60; PBR×25 09:30 $25.44 → close $25.42 +0.50; ZIP×156 09:30 $4.18 → close $4.25 -10.92; SUJA×60 09:30 $10.89 → close $10.73 +9.60 | — |
+| 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,363.83 | ▼ 09:30 equity $10,483.79 vs yday $10,489.15 (-5.36) | 09:30 open · cash $15,363.83 (unchanged overnight, no fees) · equity $10,483.79 vs prior close $10,489.15 (-5.36) · 8 name(s) re-marked at the open (per-name table). FANG×3 yday $195.11 → 09:30 $196.33 -3.66; FEAM×180 yday $3.34 → 09:30 $3.32 +3.60; HUM×1 yday $433.50 → 09:30 $439.02 -5.52; PBR×25 yday $25.42 → 09:30 $25.26 +4.00; PCVX×9 yday $70.65 → 09:30 $70.28 +3.33; SUJA×60 yday $10.73 → 09:30 $10.85 -7.20; WYHG×205 yday $3.30 → 09:30 $3.33 -6.15; ZIP×156 yday $4.25 → 09:30 $4.21 +6.24 | — |
+| 2026-10-13 09:30 ET | **COVER** | `FANG` | 3 | $196.33 | $2.00 | $-7.99 | $14,772.84 | ▼ -7.99 after sell → book $10,481.79; vs 09:30 mark -2.00 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `FEAM` | 180 | $3.32 | $2.53 | $+48.88 | $14,172.71 | ▲ +48.88 after sell → book $10,479.26; vs 09:30 mark -2.53 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `HUM` | 1 | $439.02 | $1.99 | $-8.47 | $13,731.70 | ▼ -8.47 after sell → book $10,477.27; vs 09:30 mark -1.99 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `PBR` | 25 | $25.26 | $2.06 | $+0.33 | $13,098.13 | ▲ +0.33 after sell → book $10,475.20; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `PCVX` | 9 | $70.28 | $2.02 | $+1.06 | $12,463.60 | ▲ +1.06 after sell → book $10,473.19; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `SUJA` | 60 | $10.85 | $2.17 | $-1.98 | $11,810.43 | ▼ -1.98 after sell → book $10,471.02; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `WYHG` | 205 | $3.33 | $2.64 | $-36.10 | $11,125.13 | ▼ -36.10 after sell → book $10,468.37; vs 09:30 mark -2.65 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 09:30 ET | **COVER** | `ZIP` | 156 | $4.21 | $2.46 | $-9.65 | $10,465.91 | ▼ -9.65 after sell → book $10,465.91; vs 09:30 mark -2.46 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,465.91 | ▲ close $10,465.91 vs 09:30 $10,483.79 (session +0.00) | 16:00 close · cash $10,465.91 · no lots left · equity $10,465.91. | — |
 
 ## Not taken
 
