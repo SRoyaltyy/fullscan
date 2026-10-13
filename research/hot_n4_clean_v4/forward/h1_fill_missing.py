@@ -8,8 +8,9 @@ LEDGER.jsonl or h1_log.jsonl is written or rewritten for them. No backfill,
 no Webull.
 
 ``install()`` changes how the h1 book reads its own records, in memory only:
-a noted plan no longer counts as the open plan, and noted sessions count as
-passed when picking the next session. Holdings carry from the last real
+a noted plan no longer counts as the open plan, noted sessions count as
+passed when picking the next session, and a noted fill_missing day counts as
+resolved so the next plan can append. Holdings carry from the last real
 book date. Holdup (``FORWARD_BOOK`` unset) is never affected, and with no
 notes file every function is the original.
 
@@ -34,6 +35,7 @@ NOTES_NAME = "fill_missing_notes.jsonl"
 KINDS = ("fill_missing", "session_missing")
 _ORIG_OPEN_PLAN = ledger.open_plan
 _ORIG_BOOK_DATES = ledger.book_dates
+_ORIG_NOTE = ledger._note
 
 
 def notes_path() -> Path:
@@ -93,6 +95,28 @@ def book_dates(records: list[dict]) -> list[str]:
     return dates + sorted(d for d in noted if d > last)
 
 
+def _note(state: dict, obj: dict) -> None:
+    """Same as ledger._note, but a fill_missing note resolves that plan for the next seal.
+
+    open_plan / book_dates already skip noted plans when picking the next session.
+    Append still walks every sealed plan through _note, which refused 10-13 because
+    10-09's plan had no open_fill / mark. Marking the noted day resolved here is
+    memory-only for this append; the sealed ledger lines stay untouched.
+    """
+    if _active() and obj.get("kind") in ("plan", "missing"):
+        notes = load_notes()
+        # validate notes against plans already in state (sha must match sealed plan)
+        for note in notes:
+            if note["kind"] != "fill_missing":
+                continue
+            day = note["date"]
+            if day in state["plan_dates"] and day not in state["fill_dates"] and day not in state["mark_dates"]:
+                if state["plan_sha"].get(day) != note.get("plan_sha256"):
+                    raise RuntimeError(f"fill-missing note for {day} does not match the sealed plan")
+                state["fill_dates"].append(day)
+    return _ORIG_NOTE(state, obj)
+
+
 MODULES = (
     "research.hot_n4_clean_v4.forward.ledger",
     "research.hot_n4_clean_v4.forward.forward",
@@ -105,6 +129,9 @@ MODULES = (
 def install() -> None:
     import importlib
 
+    # ledger._note is the append gate; patch it on the ledger module only.
+    if getattr(ledger, "_note", None) is _ORIG_NOTE:
+        ledger._note = _note
     for name in MODULES:
         mod = importlib.import_module(name)
         if getattr(mod, "open_plan", None) is _ORIG_OPEN_PLAN:
@@ -116,6 +143,8 @@ def install() -> None:
 def uninstall() -> None:
     import importlib
 
+    if getattr(ledger, "_note", None) is _note:
+        ledger._note = _ORIG_NOTE
     for name in MODULES:
         mod = importlib.import_module(name)
         if getattr(mod, "open_plan", None) is open_plan:
