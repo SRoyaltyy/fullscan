@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:59:02.102940-04:00",
+  "generated_at": "2026-10-13T08:59:06.722340-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1089,31 +1089,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-10-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-13T04:16:34.801354-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-13_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 5822,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-10-13_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2578,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-13\n**Generated:** 2026-10-13T04:16:34.787688-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a mixed open as traders position for major bank earnings, housing data and this week\u2019s CPI report\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** s CPI release\n**Leaders:** JPM, C, WFC, GS, JNJ, UNH, ORCL\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** JPM, C, WFC, GS, JNJ, UNH\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-13\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-13\n**Generated:** 2026-10-13T04:16:34.787688-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a mixed open as traders position for major bank earnings, housing data and this week\u2019s CPI report\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** s CPI release\n**Leaders:** JPM, C, WFC, GS, JNJ, UNH, ORCL\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** JPM, C, WFC, GS, JNJ, UNH\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-13\n**Clock use:** `same_morning`"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -3863,6 +3838,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-13\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-13T07:48:48.439045-04:00"
+    },
+    {
+      "key": "map_heat_baseline",
+      "title": "Map heat night baseline",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T08:59:05.705508-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-13_research_baseline.json",
+          "ok": true,
+          "reason": "",
+          "size": 339376,
+          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-13_research_baseline.md",
+          "ok": true,
+          "reason": "",
+          "size": 36547,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-13\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-13\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
     }
   ],
   "href": {
