@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T06:22:50.284668-04:00",
+  "generated_at": "2026-10-13T06:29:35.761753-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -688,6 +688,229 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CRSR, ELV, AUPH, MRK, AVPT \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, A, CDNA, MRK, ABBV"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T06:23:40.343924-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-13_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1416252,
+          "preview": "1d BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE"
+        },
+        {
+          "path": "data/stock_book/2026-10-13_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-13_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2538,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-13_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11935,
+          "preview": "2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11935,
+          "preview": "2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE"
+        },
+        {
+          "path": "01_daily/2026-10-13_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 78398,
+          "preview": "# Stock book \u2014 2026-10-13\n_Generated 2026-10-13T06:22:44.293811-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE \u00b7 2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE \u00b7 # Stock book \u2014 2026-10-13\n_Generated 2026-10-13T06:22:44.293811-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T06:24:01.900951-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 11947,
+          "preview": "2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 954,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-13.json",
+          "ok": true,
+          "reason": "",
+          "size": 70989,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-13_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 36473,
+          "preview": "2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 284311,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-13_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 284311,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 250940,
+          "preview": "2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 284311,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 36473,
+          "preview": "2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 284311,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 284311,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 250940,
+          "preview": "2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1308,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1308,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV,"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T06:29:02.232123-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-13_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9337,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-13_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5075,
+          "preview": "# Weather report \u2014 2026-10-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T06:29:11.784265-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-13_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2242570,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GLBE, SHOO, HLNE, VCTR, WT"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T06:29:20.585747-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-13_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "source": "publish_live_boards"
