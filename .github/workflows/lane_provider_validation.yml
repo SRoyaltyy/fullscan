@@ -11,7 +11,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: lane-provider-validation-${{ github.ref }}
+  group: lane-provider-validation-${{ github.ref }}-${{ contains(github.event.head_commit.message, '[grok-only]') && 'grok' || 'glm' }}
   cancel-in-progress: false
 jobs:
   glm:
