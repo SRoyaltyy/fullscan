@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:29:44.168078-04:00",
+  "generated_at": "2026-10-13T08:30:17.618233-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,50 +11,74 @@
   },
   "buy_1d": [
     {
-      "ticker": "HITI",
-      "score": 0.3819719504034057
+      "ticker": "SGRY",
+      "score": 0.5760336740768061
     },
     {
       "ticker": "CON",
-      "score": 0.6296903633192694
+      "score": 0.6882241245758329
+    },
+    {
+      "ticker": "ASTH",
+      "score": 0.6777569267368899
     },
     {
       "ticker": "AMN",
-      "score": 0.602467082669736
+      "score": 0.6169741538679145
+    },
+    {
+      "ticker": "HITI",
+      "score": 0.4112850546475359
+    },
+    {
+      "ticker": "MD",
+      "score": 0.6247931385327086
+    },
+    {
+      "ticker": "PACS",
+      "score": 0.7843408284807218
     }
   ],
   "sell_1d": [
     {
-      "ticker": "OKLO",
-      "score": -0.25874893929055864
+      "ticker": "NEOV",
+      "score": -0.5636611617266927
     },
     {
-      "ticker": "NEOV",
-      "score": -0.4051854475070178
+      "ticker": "OKLO",
+      "score": -0.26084882704738965
     },
     {
       "ticker": "FCEL",
-      "score": -0.24244225087770904
+      "score": -0.49949551074451737
     },
     {
       "ticker": "EOSE",
-      "score": -0.34263898579393204
-    },
-    {
-      "ticker": "ENVX",
-      "score": -0.12978983372072345
+      "score": -0.5931954516187814
     },
     {
       "ticker": "NNDM",
-      "score": -0.1679974029446069
+      "score": -0.16175255222018453
     },
     {
-      "ticker": "POWL",
-      "score": -0.11617951263529552
+      "ticker": "ENVX",
+      "score": -0.3841964557797576
+    },
+    {
+      "ticker": "INDI",
+      "score": -0.2724297972064555
     },
     {
       "ticker": "TE",
-      "score": -0.31335707008410907
+      "score": -0.5675821223808694
+    },
+    {
+      "ticker": "SKYX",
+      "score": -0.5518040509099252
+    },
+    {
+      "ticker": "AMSC",
+      "score": -0.47460318713053384
     }
   ],
   "flatten": {
@@ -94,31 +118,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "date": "2026-10-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-13T08:27:27.660616-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-13_research.json",
-          "ok": true,
-          "reason": "",
-          "size": 36749,
-          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-13_research.md",
-          "ok": true,
-          "reason": "",
-          "size": 36749,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-13\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-13\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -293,6 +292,59 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-13\n_Generated 2026-10-13T08:29:42.679225-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T08:30:16.532527-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-13_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1163885,
+          "preview": "1d BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/stock_book/2026-10-13_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-13_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2456,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-13_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 8726,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 8726,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "01_daily/2026-10-13_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 45593,
+          "preview": "# Stock book \u2014 2026-10-13\n_Generated 2026-10-13T08:29:53.527893-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 # Stock book \u2014 2026-10-13\n_Generated 2026-10-13T08:29:53.527893-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
