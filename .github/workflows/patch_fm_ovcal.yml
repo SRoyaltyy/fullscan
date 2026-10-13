@@ -37,9 +37,11 @@ jobs:
           set -euo pipefail
           python3 main/scripts/patch_fm_ovcal.py pages/dashboard/factor-mine/index.html
           python3 main/scripts/patch_fm_holdup.py pages/dashboard/factor-mine/index.html
+          python3 main/scripts/patch_fm_pending_day.py pages/dashboard/factor-mine/index.html main/data/day_board/today_strategies.json
           if [ -f pages/factor-mine/index.html ]; then
             python3 main/scripts/patch_fm_ovcal.py pages/factor-mine/index.html
             python3 main/scripts/patch_fm_holdup.py pages/factor-mine/index.html
+            python3 main/scripts/patch_fm_pending_day.py pages/factor-mine/index.html main/data/day_board/today_strategies.json
           fi
 
       - name: Commit gh-pages
