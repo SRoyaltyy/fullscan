@@ -5,7 +5,7 @@ of the existing enum; they do not add classes or silently rewrite predictions.
 """
 from .schema import EVENT_CLASSES
 
-ONTOLOGY_VERSION = 'headline-ontology-v4'
+ONTOLOGY_VERSION = 'headline-ontology-v5'
 DEFINITIONS = {
     'capacity': 'Physical production/service capacity added, expanded, closed or destroyed; not share issuance or market capitalization.',
     'demand': 'Orders, bookings, consumption, sales volumes or customer demand change; not merely a share-price move.',
@@ -16,9 +16,9 @@ DEFINITIONS = {
     'trial_readout': 'Clinical study efficacy/safety/endpoints or interim/final trial results; not regulatory approval.',
     'access_control': 'Operative sanctions, import/export controls, embargoes, transaction restrictions or broad market-access bans. Not an FDA approval, meeting, proposed bill or generic court dispute.',
     'sanction_lift': 'Reported removal/easing of sanctions or broad trade/transaction restrictions; not a request or hope that they will be lifted.',
-    'standard_mandate': 'Mandatory technical, safety, environmental or compliance standard affecting how a business must operate.',
+    'standard_mandate': 'Mandatory technical, safety, environmental or compliance standard affecting how a business must operate, including binding issuer disclosure/trading controls. This class does not establish government authorship.',
     'ip_ruling': 'Patent, copyright, trademark or other intellectual-property decision/judgment; supersedes generic blast_legal for explicit IP rulings.',
-    'market_structure': 'Rules changing venue/intermediation, competition arrangements or who may collect market rents. Not a catch-all for every law; use the narrower mechanism when available.',
+    'market_structure': 'Rules changing venue/intermediation, competition arrangements or who may collect market rents; includes adopted takeover-defence/poison-pill arrangements. Not a catch-all for every law; use the narrower mechanism when available.',
     'tax_fiscal': 'Tax rates, levies, duties/tariffs, budget or fiscal spending decisions. Export/import prohibition is access_control; targeted financial support is subsidy.',
     'price_cap': 'Regulated/legal ceiling, floor or administered rate on what may be charged, including a bill advancing such a ceiling. Market prices reaching a high are never price_cap.',
     'subsidy': 'Government grant, incentive, subsidy, rebate or targeted financial support. Historical totals alone are regime_state, not a newly awarded subsidy.',
@@ -34,7 +34,7 @@ DEFINITIONS = {
     'capital_return': 'Dividend, share repurchase/buyback or distribution of capital to shareholders.',
     'listing_flow': 'IPO, listing, delisting, listing transfer or exchange admission; not ordinary exchange-hosted news.',
     'lockup_expiry': 'Expiry/release of contractual insider/investor share-selling restrictions.',
-    'credit_funding': 'Debt, loan, bond, credit facility, refinancing or lending arrangement. Equity/private placement alone is dilution.',
+    'credit_funding': 'Debt, loan, bond, credit facility, refinancing or lending arrangement, including debt/bond repurchase or repayment. Debt buyback is not shareholder capital_return. Equity/private placement alone is dilution.',
     'distress_restruct': 'Default, insolvency, bankruptcy, distressed debt restructuring or rescue recapitalization.',
     'integrity': 'Accounting fraud, restatement, audit failure or disclosure-integrity breakdown. Mere price weakness is not integrity.',
     'key_person': 'Corporate executive/board appointment, departure, death or succession. Public-office personnel are policy_personnel.',
@@ -44,7 +44,7 @@ DEFINITIONS = {
     'blast_cyber': 'Cyberattack, breach, ransomware or cyber-caused operational disruption.',
     'product_harm': 'Actual unsafe/defective product, adverse harm report, recall or withdrawal. A recall how-to/playbook is discard; clinical efficacy data are trial_readout.',
     'labor_stop': 'Strike, walkout, lockout or actual work stoppage.',
-    'cat_weather': 'Concrete natural disaster/severe weather with an operational/economic channel; a financial market storm metaphor is not weather.',
+    'cat_weather': 'Reported physical natural disaster, earthquake or severe weather. Preserve unknown damage/economic impact rather than inventing it; an actual minor quake still has this event type. A political/financial earthquake/storm metaphor is not weather.',
     'flow_index': 'Index addition/removal/rebalance with mechanical index-linked buying/selling.',
     'flow_mechanical': 'Explicit non-discretionary portfolio/vehicle flow or technical share adjustment; not ordinary price action.',
     'flow_forced_liq': 'Margin-triggered liquidation, compulsory asset selling or redemption-driven forced sale.',
@@ -76,6 +76,7 @@ DECISION_RULES = '''DECISION ORDER (reason internally, output only the requested
 8. Before submitting, test competing interpretations: price level vs legal cap; equity vs debt; clinical data vs permission; geology vs central-bank reserves; IP vs generic lawsuit; decision vs intention; completed act vs historical summary. Check every quote literally and disclose genuinely unresolvable title-only facts in unknowns. Do not invent certainty to fill fields.
 9. A scheduled earnings release/trial readout without actual released results is primary regime_state (a calendar/preview); retain the possible future print/readout only as an additional future event. preannounce requires preliminary results actually disclosed, not an earnings reminder. A review of previously released earnings numbers may retain print_vs_priced; generic upcoming/results expectations are not a print.
 10. Distinguish the main predicate from cause/background. A signed order/final issued rule is an operative procedural/decision event, not merely statement_public because a press release describes it. Choose the specific permission, mandatory standard, subsidy, tax or restriction mechanism if stated/known. A corporate financial result/guidance cut caused by input costs remains primarily results/guidance, not input_cost. A sentence/judgment after a cyberattack is primarily blast_legal, not a new cyberattack. Actual bankruptcy is distress_restruct, not generic litigation. An awarded order/contract is demand, not physical capacity already added. An activist stake is not an insider trade; routine external fund holdings do not make the manager an insider.
+11. Classify the action's economic object and stage together. An official rejection of a proposed restriction is normally statement_public, not an operative access_control; the rejected restriction may be an additional negated/proposed event. A final settlement closing an investigation is blast_legal; opening/conducting the investigation is regulatory_probe. A voluntary operating closure explicitly in bankruptcy is primarily distress_restruct. A stated new central-bank purchase/extension is factor_impulse even if it updates a multi-month streak. An adopted poison pill without actual shares issued is not dilution. A trading-halt request is statement_public with the requested listing mechanism retained as a proposal.
 '''
 
 def ontology_text():
