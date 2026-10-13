@@ -1,14 +1,14 @@
 # flatten_robust card — 2026-10-13
 
-_Generated 2026-10-13T13:03:38 — live `flatten_robust`._
+_Generated 2026-10-13T13:14:53 — live `flatten_robust`._
 
 **S=-6.77; hard-red: no new buys; holds and due 1d exits stay**
 
 - Score **-6.77** (DOWN) · route **hold** · HARD-RED
-- Cash leftover **$103,033.45** (after 09:30 $103,033.45 · after 16:00 $103,033.45)
-- Prior close **$103,033.45** · 09:30 **$103,033.45** · overnight **$+0.00** · session **$+0.00** · 16:00 **$103,033.45**
+- Cash leftover **$108,970.65** (after 09:30 $108,970.65 · after 16:00 $108,970.65)
+- Prior close **$108,970.65** · 09:30 **$108,970.65** · overnight **$+0.00** · session **$+0.00** · 16:00 **$108,970.65**
 - Overnight lots **0** · priced mover BUYs **0** · prior book yes
-- Planned buy cost **$0.00** ≤ leftover after sells **$103,033.45**
+- Planned buy cost **$0.00** ≤ leftover after sells **$108,970.65**
 
 ## Overnight holds (into 09:30)
 
@@ -42,16 +42,16 @@ _Generated 2026-10-13T13:03:38 — live `flatten_robust`._
 
 ## Would have bought — holdings disregarded
 
-Sized from marked equity **$103,033.45** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
+Sized from marked equity **$108,970.65** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | SMMT | io_core | 859 | $17.13 | $14,714.67 | hard-red |
-| 16:00 ET | PACS | io_core | 332 | $44.30 | $14,707.60 | hard-red |
-| 16:00 ET | CON | io_core | 392 | $37.54 | $14,715.68 | hard-red |
-| 16:00 ET | MD | io_core | 546 | $26.92 | $14,698.32 | hard-red |
-| 16:00 ET | ASTH | io_core | 383 | $38.40 | $14,707.20 | hard-red |
-| 16:00 ET | AMN | io_core | 405 | $36.28 | $14,693.40 | hard-red |
-| 16:00 ET | SGRY | io_core | 1033 | $14.24 | $14,709.92 | hard-red |
+| 16:00 ET | SMMT | io_core | 908 | $17.13 | $15,554.04 | hard-red |
+| 16:00 ET | PACS | io_core | 351 | $44.30 | $15,549.30 | hard-red |
+| 16:00 ET | CON | io_core | 414 | $37.54 | $15,541.56 | hard-red |
+| 16:00 ET | MD | io_core | 578 | $26.92 | $15,559.76 | hard-red |
+| 16:00 ET | ASTH | io_core | 405 | $38.40 | $15,552.00 | hard-red |
+| 16:00 ET | AMN | io_core | 429 | $36.28 | $15,564.12 | hard-red |
+| 16:00 ET | SGRY | io_core | 1093 | $14.24 | $15,564.32 | hard-red |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
