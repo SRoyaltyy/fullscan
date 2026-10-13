@@ -43,7 +43,9 @@ STATUS = Path(os.environ.get("OPENCLAW_GUARD_STATUS",
 RENEW_WINDOW_MIN = int(os.environ.get("OPENCLAW_RENEW_WINDOW_MIN", "90"))
 MIN_LEFT_MIN = int(os.environ.get("OPENCLAW_MIN_LEFT_MIN", "0"))
 CALL_TIMEOUT = int(os.environ.get("OPENCLAW_GUARD_CALL_TIMEOUT", "90"))
-MODEL = os.environ.get("OPENCLAW_BACKEND_MODEL", "xai/grok-4.3")
+# Renewal health is independent of the model selected for large essays.
+# A failing 4.6 completion must not misdiagnose a valid 4.3 OAuth route.
+MODEL = os.environ.get("OPENCLAW_GUARD_MODEL", "xai/grok-4.3")
 PAID_ENV = ("XAI_API_KEY", "OPENCLAW_XAI_API_KEY", "GROK_API_KEY")
 
 
