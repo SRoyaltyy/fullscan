@@ -1,5 +1,65 @@
 # Model-backed headline analysis pilot
 
+## V3 candidate: atomic decisions and public business facts
+
+V2 failed its first fresh 100-title test: 99/100 answered, but action agreement
+31%, primary Lane 70%, exact sectors 69%, action precision 75% and recall 69.2%.
+89 final answers used qwen-flash after Gemini quotas/failures. The reference was
+frozen before execution and is an assistant assessment, not independent truth.
+No passing streak is claimed.
+
+V3 requests actor_type, action_kind and stage rather than two independently
+guessed booleans. Python derives public/concrete flags from those atomic model
+facts and preserves the original JSON alongside analysis_output. Private actors,
+non-decisions and clearly non-completed stages cannot turn into unknown public
+actions solely because the model omits a jurisdiction. Unknown issuing authority
+for a reported public-type decision remains unknown. No title regex or reference
+labels supply those decisions.
+
+The semantic stage now loads the repository's public Finviz catalog and offers
+at most 12 possible company records (Ticker, Company, Sector, Industry only).
+The model must disambiguate candidates against the title; the catalog does not
+provide event labels, action answers, winner/loser conclusions or judge labels.
+Catalog availability, row count and content hash are recorded. The previous
+semantic workflows omitted data/exports entirely, so they did not use the
+existing stock catalog. The V3 workflow requires it explicitly.
+
+Optional batches of ten share ontology tokens and return one independently
+validated analysis per ordinal. Missing/duplicate ordinals or evidence from a
+different title invalidate a batch; failures remain unavailable. Batch pacing
+reduces free-tier quota pressure. Explicit model pins are intersected with the
+existing provider/payment/classification allowlists, never expanding them.
+Runtime fingerprints, catalog hash, batching and routing configuration must be
+identical across a ten-batch acceptance streak. V3 live accuracy is unestablished.
+
+## V2: defined ontology and audited output
+
+The opt-in client now supplies a versioned definition for every one of the 55
+locked classes (`semantic_ontology.py`). It makes clause/actor/stage decisions
+before choosing the specific economic mechanism. It defines sector conventions
+and distinguishes reported decisions with future effective dates from intentions
+and historical summaries. No headline-specific answer lookup is introduced.
+
+By default a second model call audits the draft against the same title and
+definitions. Its complete validated JSON is the final analysis; the original
+draft and both providers/models remain in the artifact. This is program analysis,
+not the benchmark judge. A failed required audit is unavailable, not a silently
+accepted draft. `review=False` permits explicit extraction-only ablations.
+The reviewer may be the same model: this is not independent adjudication.
+
+The runner now bounds an entire headline (including provider/model hops) with
+a POSIX deadline, preserves timeout failures, and rejects duplicate input titles.
+V2 accuracy is unestablished until live results are evaluated. Passing contract
+tests or a successful workflow is not evidence of classification accuracy.
+
+Acceptance target: ten disjoint batches of 100 fresh titles, each at least 90%
+action agreement, exact primary Lane agreement and exact sector-set agreement.
+Unavailable/unprocessed answers count as failures; no failed titles are redrawn.
+Action precision/recall must also be reported to expose always-negative baselines.
+References and justified ambiguity must be frozen before seeing program answers.
+Prompt changes invalidate the acceptance streak; previously examined batches are
+development data thereafter. This target is not a claim of an achieved result.
+
 `SemanticHeadlineClient` calls the existing Lane provider router at its
 `news_classify` quality floor. It emits model-produced action records, stages,
 sectors and primary/additional Lane event classes from titles. It never imports

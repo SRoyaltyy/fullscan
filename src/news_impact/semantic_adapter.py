@@ -5,7 +5,7 @@ allows callers to opt into live semantics without changing the free collector.
 """
 
 def annotations_from_semantic(title,result):
-    raw=result.get('model_output')
+    raw=result.get('analysis_output') or result.get('model_output')
     base={'semantic_analysis':result}
     if raw is None:
         return base|{'headline_event':{'status':'unavailable','lane_class':None,'stage':'unknown','event_type':None,'evidence':None},
