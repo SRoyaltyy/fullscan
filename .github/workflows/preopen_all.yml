@@ -50,7 +50,7 @@ on:
       llm_provider:
         description: "deepseek = api.deepseek.com · openrouter-glm = OpenRouter z-ai/glm-5.3 (top tier)"
         required: false
-        default: "deepseek"
+        default: "zhipu-glm-flash"
         type: choice
         options:
           - deepseek
@@ -62,7 +62,7 @@ on:
       runner:
         description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok."
         required: false
-        default: "ecs"
+        default: "ubuntu"
         type: choice
         options:
           - ecs
@@ -78,7 +78,7 @@ on:
       llm_backend:
         description: "auto = Grok then DeepSeek · grok = Grok only · deepseek = no Grok"
         required: false
-        default: "auto"
+        default: "deepseek"
         type: choice
         options:
           - auto
@@ -299,13 +299,13 @@ jobs:
   preopen:
     needs: [gate, scrape]
     if: ${{ needs.gate.outputs.go == 'yes' && always() }}
-    runs-on: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    runs-on: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner != 'ecs') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: 75
     env:
       OPENCLAW_TIMEOUT: "10800"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
-      FULLSCAN_HOME: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
-      HOME: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      FULLSCAN_HOME: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner != 'ecs') && '/home/runner' || '/home/gha' }}
+      HOME: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner != 'ecs') && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
       PREOPEN_LOCK: "/home/gha/fullscan-persist/locks/preopen.lock"
       FULLSCAN_LAND: "1"
@@ -424,12 +424,12 @@ jobs:
       - name: Pre-Open ALL (predictive + QC + workflow check)
         if: env.skip != 'yes' && env.skip_python != 'yes'
         env:
-          DEEPSEEK_API_KEY: ${{ (github.event.inputs.llm_provider == 'zhipu-glm-flash') && secrets.ZHIPU_API_KEY || (github.event.inputs.llm_provider == 'tokenhub-glm') && secrets.TOKENHUB_API_KEY || (github.event.inputs.llm_provider == 'zhipu-glm') && secrets.ZHIPU_API_KEY || startsWith(github.event.inputs.llm_provider, 'openrouter') && secrets.OPENROUTER_API_KEY || secrets.DEEPSEEK_API_KEY }}
-          DEEPSEEK_BASE_URL: ${{ (github.event.inputs.llm_provider == 'zhipu-glm-flash') && 'https://open.bigmodel.cn/api/paas/v4' || (github.event.inputs.llm_provider == 'tokenhub-glm') && secrets.TOKENHUB_BASE_URL || (github.event.inputs.llm_provider == 'zhipu-glm') && 'https://open.bigmodel.cn/api/paas/v4' || startsWith(github.event.inputs.llm_provider, 'openrouter') && 'https://openrouter.ai/api/v1' || 'https://api.deepseek.com' }}
-          LLM_MODEL_OVERRIDE: ${{ (github.event.inputs.llm_provider == 'zhipu-glm-flash') && 'glm-5.3-flash' || (github.event.inputs.llm_provider == 'tokenhub-glm') && 'glm-5.3' || (github.event.inputs.llm_provider == 'zhipu-glm') && 'glm-5.3' || (github.event.inputs.llm_provider == 'openrouter-glm') && 'z-ai/glm-5.3' || (github.event.inputs.llm_provider == 'openrouter-sonnet') && 'anthropic/claude-sonnet-4.6' || '' }}
-          LLM_FALLBACK_API_KEY: ${{ (github.event.inputs.llm_provider == 'zhipu-glm-flash') && secrets.TOKENHUB_API_KEY || '' }}
-          LLM_FALLBACK_BASE_URL: ${{ (github.event.inputs.llm_provider == 'zhipu-glm-flash') && secrets.TOKENHUB_BASE_URL || '' }}
-          LLM_FALLBACK_MODEL: ${{ github.event.inputs.llm_provider == 'zhipu-glm-flash' && 'glm-5.3' || '' }}
+          DEEPSEEK_API_KEY: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && secrets.ZHIPU_API_KEY || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'tokenhub-glm') && secrets.TOKENHUB_API_KEY || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm') && secrets.ZHIPU_API_KEY || startsWith((github.event.inputs.llm_provider || 'zhipu-glm-flash'), 'openrouter') && secrets.OPENROUTER_API_KEY || secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_BASE_URL: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && 'https://open.bigmodel.cn/api/paas/v4' || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'tokenhub-glm') && secrets.TOKENHUB_BASE_URL || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm') && 'https://open.bigmodel.cn/api/paas/v4' || startsWith((github.event.inputs.llm_provider || 'zhipu-glm-flash'), 'openrouter') && 'https://openrouter.ai/api/v1' || 'https://api.deepseek.com' }}
+          LLM_MODEL_OVERRIDE: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && 'glm-5.3-flash' || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'tokenhub-glm') && 'glm-5.3' || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm') && 'glm-5.3' || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'openrouter-glm') && 'z-ai/glm-5.3' || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'openrouter-sonnet') && 'anthropic/claude-sonnet-4.6' || '' }}
+          LLM_FALLBACK_API_KEY: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && secrets.TOKENHUB_API_KEY || '' }}
+          LLM_FALLBACK_BASE_URL: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && secrets.TOKENHUB_BASE_URL || '' }}
+          LLM_FALLBACK_MODEL: ${{ (github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash' && 'glm-5.3' || '' }}
           LLM_READ_TIMEOUT_S: "300"
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
@@ -445,7 +445,7 @@ jobs:
           OPENCLAW_BREAKER_N: "2"
           OPENCLAW_BREAKER_FILE: ${{ runner.temp }}/openclaw_breaker_${{ github.run_id }}.txt
           GROK_ONLY: "0"
-          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'auto' }}
+          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'deepseek' }}
           FINVIZ_SKIP_LIVE: "1"
           PREOPEN_LLM_TIMEOUT: "900"
         # was 180: 10-06/10-07 ECS hangs sat ~90 min here before cancel.
@@ -473,7 +473,7 @@ jobs:
           RUNNER="${{ github.event.inputs.runner }}"
           ARGS=(--llm-backend "$BACKEND")
           ON_UBUNTU=0
-          if [ "$EVENT" = "push" ] || [ "$EVENT" = "schedule" ] || [ "$RUNNER" = "ubuntu" ]; then
+          if [ "$EVENT" = "push" ] || [ "$EVENT" = "schedule" ] || [ "$RUNNER" != "ecs" ]; then
             ON_UBUNTU=1
           fi
           GW="${OPENCLAW_GATEWAY_URL:-}"
@@ -490,7 +490,7 @@ jobs:
           if [ "$FORCE" = "true" ]; then
             ARGS+=(--force)
             echo "explicit --force (rewrite quality-ok + bypass 09:25)"
-          elif [ "$ET_HM" -ge 925 ] && { [ "$EVENT" = "push" ] || [ "$EVENT" = "schedule" ] || [ "$RUNNER" = "ubuntu" ]; }; then
+          elif [ "$ET_HM" -ge 925 ] && { [ "$EVENT" = "push" ] || [ "$EVENT" = "schedule" ] || [ "$RUNNER" != "ecs" ]; }; then
             ARGS+=(--bypass-cutoff)
             echo "ubuntu late-heal --bypass-cutoff (after 09:25 ET; skip-if-good on)"
           fi
