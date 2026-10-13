@@ -53,6 +53,11 @@ ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo("America/New_York")
 OUT_DIR = Path("data/strategy_status")
 WEBULL_DAYS = Path("data/webull_sim/days.jsonl")
+# Add-only: sim names that are no longer produced. They keep their old rows in
+# days.jsonl but are not listed as MISSING for new sessions.
+# excel_all_webull_sim: one 2026-10-06 row only; not an excel_bot/strategies
+# card, so webull_sim never writes it again.
+RETIRED_WEBULL_SIM = frozenset({"excel_all_webull_sim"})
 EXCEL_MANIFEST = Path("excel_bot/freeze_manifest.json")
 PREDICT_REL = "01_daily/general/{day}_predict.md"
 NEEDS_PREDICT = frozenset({"factor_mine", "h1"})
@@ -444,7 +449,7 @@ def from_webull_sim(root: Path, day: str) -> list[dict]:
         return [_row("webull_sim", "webull_sim", "MISSING", source=str(WEBULL_DAYS),
                      note="days.jsonl unreadable")]
     rows = []
-    for n in sorted(x for x in names if x):
+    for n in sorted(x for x in names if x and (x not in RETIRED_WEBULL_SIM or x in today)):
         o = today.get(n)
         if o is None:
             rows.append(_row(n, "webull_sim", "MISSING", source=str(WEBULL_DAYS),
