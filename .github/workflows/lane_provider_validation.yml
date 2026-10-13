@@ -70,7 +70,7 @@ jobs:
           LANE_ALLOW_PAID_DEEPSEEK: ${{ vars.LANE_ALLOW_PAID_DEEPSEEK }}
         run: |
           PYTHONPATH=. python scripts/run_semantic_headlines.py \
-            --input tests/fixtures/semantic_acceptance/batch_recall_fresh_01.json \
+            --input tests/fixtures/semantic_acceptance/batch_recall_fresh_02.json \
             --output provider_results/glm_program_outputs.json \
             --limit 100 --budget-seconds 3600 --headline-timeout 300 \
             --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review \
@@ -106,7 +106,7 @@ jobs:
         if: steps.diagnose.outputs.ready == 'true'
         run: |
           PYTHONPATH=. python3 scripts/run_semantic_headlines.py \
-            --input tests/fixtures/semantic_acceptance/batch_recall_fresh_01.json \
+            --input tests/fixtures/semantic_acceptance/batch_recall_fresh_02.json \
             --output provider_results/grok_program_outputs.json \
             --limit 100 --budget-seconds 3600 --headline-timeout 300 \
             --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review \
