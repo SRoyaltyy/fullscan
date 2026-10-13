@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T05:29:34.489859-04:00",
+  "generated_at": "2026-10-13T05:38:16.917578-04:00",
   "items": [
     {
       "ok": false,
@@ -17,8 +17,8 @@
       "ok": false,
       "kind": "events",
       "path": "01_daily/events/2026-10-13_events.json",
-      "reason": "missing",
-      "size": 0,
+      "reason": "zero_events",
+      "size": 212,
       "carried": false,
       "timeout": false,
       "empty": true,
