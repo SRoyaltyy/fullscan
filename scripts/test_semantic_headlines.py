@@ -132,6 +132,24 @@ class SemanticTests(unittest.TestCase):
         self.assertEqual(result[0]['status'],'unavailable')
         self.assertTrue(result[0]['rejected_outputs'])
 
+    def test_timeout_during_recovery_retains_valid_rows_only(self):
+        class Deadline(BaseException):pass
+        initial={'results':[{'n':1,'analysis':valid()}]}
+        with patch('src.news_impact.semantic_headlines.route.load_keys',return_value=({'zhipu':'synthetic'},'', '')),patch('src.news_impact.semantic_headlines.route.ask_lane',side_effect=[(initial,'glm-5.3-flash'),Deadline()]):
+            client=SemanticHeadlineClient(['zhipu'],review=False)
+            with self.assertRaises(Deadline):
+                client.analyze_many([{'n':1,'title':'FDA approves device'},{'n':2,'title':'FDA approves another device'}])
+        self.assertEqual(set(client.batch_progress),{1})
+        self.assertEqual(client.batch_progress[1]['status'],'analyzed')
+
+    def test_pending_audit_draft_is_not_timeout_success(self):
+        class Deadline(BaseException):pass
+        initial={'results':[{'n':1,'analysis':valid()}]}
+        with patch('src.news_impact.semantic_headlines.route.load_keys',return_value=({'zhipu':'synthetic'},'', '')),patch('src.news_impact.semantic_headlines.route.ask_lane',side_effect=[(initial,'glm-5.3-flash'),Deadline()]):
+            client=SemanticHeadlineClient(['zhipu'],review=True)
+            with self.assertRaises(Deadline):client.analyze_many([{'n':1,'title':'FDA approves device'}])
+        self.assertEqual(client.batch_progress,{})
+
     def test_implied_court_type_does_not_require_invented_name(self):
         v=valid();v['actions'][0].update(actor=None,actor_evidence=None,actor_type='court')
         self.assertFalse(validation_errors(v,'FDA approves device'))

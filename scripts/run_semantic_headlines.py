@@ -39,7 +39,10 @@ def main():
         try:outs=client.analyze_many(rows) if args.batch_size>1 else [client.analyze(rows[0]['title'])]
         except DeadlineExceeded:
             out={'status':'unavailable','model_output':None,'provider':None,'model':None,'attempts':[{'status':'headline_deadline_exceeded','phase':client.phase}],'draft_analysis':client.last_draft,'elapsed_seconds':round(time.monotonic()-title_start,2)}
-            outs=[out for _ in rows]
+            # A timeout during subset recovery must not erase rows that have
+            # already passed their own schema/evidence checks (and audit, if
+            # required). Never turn an unreviewed draft into reviewed success.
+            outs=[client.batch_progress.get(row['n'],out) for row in rows] if args.batch_size>1 else [out]
         finally:signal.setitimer(signal.ITIMER_REAL,0)
         for row,out in zip(rows,outs,strict=True):
             result['outputs'].append({'n':row['n'],'title':row['title'],'program_output':out})

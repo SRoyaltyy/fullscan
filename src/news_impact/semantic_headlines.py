@@ -91,6 +91,7 @@ class SemanticHeadlineClient:
         self.model_allowlist=tuple(model_allowlist) if model_allowlist is not None else None
         if self.model_allowlist==():raise ValueError('An explicit model allowlist cannot be empty')
         self.last_draft=None
+        self.batch_progress={}
         self.phase='idle'
         self.catalog=catalog if catalog is not None else CompanyCatalog()
     def analyze(self,title):
@@ -124,6 +125,7 @@ class SemanticHeadlineClient:
         if not rows:return []
         if any(type(r['n']) is not int for r in rows):raise ValueError('Batch ids must be integers')
         if len({r['n'] for r in rows})!=len(rows):raise ValueError('Duplicate batch ids')
+        self.batch_progress={}
         data=[{'n':r['n'],'title':r['title'],'catalog_candidates':self.catalog.candidates(r['title'])} for r in rows]
         draft_records=self._batch_records(data,'extract_batch')
         self.last_draft=draft_records
@@ -178,6 +180,9 @@ class SemanticHeadlineClient:
             out.update(model_output=good.get(n),status='analyzed' if n in good else 'unavailable',batch_depth=depth)
             if n not in good:out['row_validation_errors']=errors.get(n,['No usable response'])
             outputs[n]=out
+            if n in good and (not self.review or phase=='audit_batch'):
+                row=next(r for r in data if r['n']==n)
+                self.batch_progress[n]=dict(out,analysis_output=derive_analysis(good[n]),ontology_version=ONTOLOGY_VERSION,catalog=self.catalog.metadata,catalog_candidates=row['catalog_candidates'],review_status='completed' if self.review else 'not_run')
         failed=[r for r in data if r['n'] not in good]
         can_retry=bool(failed and depth<2 and (good or len(failed)>1) and (good or any(a['status'] not in ('credential_unavailable','no_allowlisted_classification_model') for a in record['attempts'])))
         if can_retry:
