@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T07:54:43.217250-04:00",
+  "generated_at": "2026-10-13T07:55:23.500543-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -808,8 +808,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=211",
-          "size": 1416252,
-          "said": "1d BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM",
+          "size": 1420018,
+          "said": "1d BUY ASTH, HITI, CON \u00b7 SELL OKLO, FCEL, NEOV, EOSE, ENVX, TE",
           "bullets": []
         },
         {
@@ -819,10 +819,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 77327,
+          "size": 77412,
           "said": "Stock book \u2014 2026-10-13",
           "bullets": [
-            "_Generated 2026-10-13T06:29:31.992789-04:00_",
+            "_Generated 2026-10-13T07:54:57.143895-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -886,8 +886,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=211",
-          "size": 1416252,
-          "said": "1d BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM",
+          "size": 1420018,
+          "said": "1d BUY ASTH, HITI, CON \u00b7 SELL OKLO, FCEL, NEOV, EOSE, ENVX, TE",
           "bullets": []
         },
         {
@@ -936,16 +936,16 @@
   "selections": {
     "buy_1d": [
       {
+        "ticker": "ASTH",
+        "score": 0.6853849488825614
+      },
+      {
         "ticker": "HITI",
-        "score": 0.3819719504034057
+        "score": 0.42971909968837124
       },
       {
         "ticker": "CON",
-        "score": 0.6296903633192694
-      },
-      {
-        "ticker": "AMN",
-        "score": 0.602467082669736
+        "score": 0.6833472858146779
       }
     ],
     "sell_1d": [
@@ -954,32 +954,32 @@
         "score": -0.25874893929055864
       },
       {
-        "ticker": "NEOV",
-        "score": -0.4051854475070178
+        "ticker": "FCEL",
+        "score": -0.24302784953839496
       },
       {
-        "ticker": "FCEL",
-        "score": -0.24244225087770904
+        "ticker": "NEOV",
+        "score": -0.30196029192674484
       },
       {
         "ticker": "EOSE",
-        "score": -0.34263898579393204
+        "score": -0.34267152455689964
       },
       {
         "ticker": "ENVX",
-        "score": -0.12978983372072345
-      },
-      {
-        "ticker": "NNDM",
-        "score": -0.1679974029446069
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.11617951263529552
+        "score": -0.07762165273292498
       },
       {
         "ticker": "TE",
-        "score": -0.31335707008410907
+        "score": -0.3132087526267062
+      },
+      {
+        "ticker": "INDI",
+        "score": -0.25006945029725197
+      },
+      {
+        "ticker": "NNDM",
+        "score": -0.06277656440380001
       }
     ],
     "flatten": {
@@ -2316,6 +2316,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CRSR, ELV, AUPH, MRK, AVPT \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 A, PFE, CDNA, ABBV, WAT"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T07:55:22.434865-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-13_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1420018,
+          "preview": "1d BUY ASTH, HITI, CON \u00b7 SELL OKLO, FCEL, NEOV, EOSE, ENVX, TE, INDI, NNDM"
+        },
+        {
+          "path": "data/stock_book/2026-10-13_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-13_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2504,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-13_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11945,
+          "preview": "2026-10-13 BUY ASTH, HITI, CON \u00b7 SELL OKLO, FCEL, NEOV, EOSE, ENVX, TE, INDI, NNDM"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11945,
+          "preview": "2026-10-13 BUY ASTH, HITI, CON \u00b7 SELL OKLO, FCEL, NEOV, EOSE, ENVX, TE, INDI, NNDM"
+        },
+        {
+          "path": "01_daily/2026-10-13_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 78492,
+          "preview": "# Stock book \u2014 2026-10-13\n_Generated 2026-10-13T07:54:57.143895-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ASTH, HITI, CON \u00b7 SELL OKLO, FCEL, NEOV, EOSE, ENVX, TE, INDI, NNDM \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-13 BUY ASTH, HITI, CON \u00b7 SELL OKLO, FCEL, NEOV, EOSE, ENVX, TE, INDI, NNDM \u00b7 2026-10-13 BUY ASTH, HITI, CON \u00b7 SELL OKLO, FCEL, NEOV, EOSE, ENVX, TE, INDI, NNDM \u00b7 # Stock book \u2014 2026-10-13\n_Generated 2026-10-13T07:54:57.143895-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
