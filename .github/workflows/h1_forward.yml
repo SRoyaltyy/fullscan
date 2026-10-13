@@ -307,7 +307,7 @@ jobs:
         if: success() && steps.window.outputs.go == 'true'
         env:
           FORWARD_BOOK: h1
-        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_closes.py
+        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_fill_missing.py research/hot_n4_clean_v4/forward/h1_closes.py
       - name: Commit the append
         id: commit
         if: always() && steps.guard.outputs.go == 'true' && steps.window.outputs.go == 'true'
