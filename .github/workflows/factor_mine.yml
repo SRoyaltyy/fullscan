@@ -149,7 +149,9 @@ jobs:
   mine:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    # 10-12 and 10-13 post-close lands stalled after 'panel <D>' and hit 90.
+    # Normal land is 10-20 min; 150 leaves room, the mine step is capped at 120.
+    timeout-minutes: 150
     steps:
       # workflow_run/queued runs otherwise check out the sha from trigger
       # time; on 10-12 a queued land built from b070934c, before the
@@ -161,7 +163,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install
-        run: pip install pandas pyarrow openpyxl yfinance requests
+        run: pip install pandas pyarrow openpyxl yfinance requests py-spy
       - name: Unit tests
         run: |
           python -m src.test_clock_b_tells
@@ -176,7 +178,16 @@ jobs:
           python -m src.test_price_actions
           python -m src.test_factor_mine_past_lock
           python -m src.test_factor_mine_land_guard
+      - name: Stall watchdog (stack + memory every 10 min, read-only)
+        run: |
+          nohup bash -c 'while sleep 600; do
+            echo "[watchdog] $(date -u +%H:%M:%SZ) memory + python stacks"
+            free -m || true
+            for p in $(pgrep -f "src.factor_mine" || true); do sudo $(command -v py-spy) dump --pid "$p" || true; done
+          done' > /tmp/fm_watchdog.log 2>&1 &
+          echo "watchdog started"
       - name: Mine recipes (cash book)
+        timeout-minutes: 120
         env:
           FROM_DATE: ${{ inputs.from_date }}
           TO_DATE: ${{ inputs.to_date }}
@@ -268,6 +279,9 @@ jobs:
           if bad:
               raise SystemExit("oversize publish path:\n" + "\n".join(bad))
           PY
+      - name: Watchdog log (stall diagnosis)
+        if: always()
+        run: cat /tmp/fm_watchdog.log 2>/dev/null || echo "no watchdog output (run finished before 10 min)"
       - name: Re-check freeze against latest main
         # Refetch origin/main right before the push. Days already frozen on
         # main are restored byte-for-byte ("already frozen — no rewrite");
