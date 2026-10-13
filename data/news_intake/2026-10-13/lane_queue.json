@@ -127034,7 +127034,7 @@
     "candidate_classes": [
       "subsidy"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "structure",
     "routing_class": "subsidy",
@@ -127084,7 +127084,7 @@
     "candidate_classes": [
       "distress_restruct"
     ],
-    "state": "candidate",
+    "state": "review",
     "status": "pending_analysis",
     "analyst_family": "firm",
     "routing_class": "distress_restruct",
