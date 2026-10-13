@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:02:46.086432-04:00",
+  "generated_at": "2026-10-13T08:02:54.728195-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -305,8 +305,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 91318,
-          "said": "119 ticker actions \u00b7 9 events \u00b7 8495 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 90177,
+          "said": "119 ticker actions \u00b7 9 events \u00b7 8377 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -619,8 +619,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 91318,
-          "said": "119 ticker actions \u00b7 9 events \u00b7 8495 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 90177,
+          "said": "119 ticker actions \u00b7 9 events \u00b7 8377 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -655,7 +655,7 @@
           "bullets": []
         }
       ],
-      "said": "119 ticker actions \u00b7 9 events \u00b7 8495 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+      "said": "119 ticker actions \u00b7 9 events \u00b7 8377 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
       "bullets": [
         "SELL DAL",
         "SELL UAL",
@@ -712,8 +712,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 91318,
-          "said": "119 ticker actions \u00b7 9 events \u00b7 8495 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
+          "size": 90177,
+          "said": "119 ticker actions \u00b7 9 events \u00b7 8377 headlines \u00b7 DAL SELL, UAL SELL, AAL SELL, ALK SELL, RJET SELL, LUV SELL, SKYW SELL, ALGT SELL",
           "bullets": [
             "SELL DAL",
             "SELL UAL",
@@ -2790,6 +2790,31 @@
         }
       ],
       "preview": "26 events \u00b7 US CPI (September) release | FOMC rate decision (Oct 27-28) | Fed Chair Kevin Warsh speech this week | Q3 bank earnings kickoff: JPM, GS, C | Healthcare and consumer earnings: UNH, JNJ, Domino's | TSMC Q3 record revenue beat (resolved, momentum continues) \u00b7 # Event Scan \u2014 2026-10-13\n- events tracked: **20** (via openclaw)\n- uncertainty: **elevated**\n- summary: The dominant macro setup: a hawkish Fed under Warsh deciding Oct 28 with the Oct 14 CPI as the swing input, against an oil market squeezed by the ongoing Iran war and OPEC+ quota pauses. The US-China truce holds for now but is fragile, while AI-leadership equities face sentiment wobbles despite stellar TSMC/Samsung results. No shutdown in this window (CR runs to Dec 11), but midterms amplify political headline risk."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T08:02:53.654201-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-13_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 90177,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-13_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 19858,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-13T08:02:53.636650-04:00\nraw=8377 unique_events=9 tickers=119"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-13T08:02:53.636650-04:00\nraw=8377 unique_events=9 tickers=119"
     }
   ],
   "href": {

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-13T05:38:32.642854-04:00",
+  "generated_at": "2026-10-13T08:02:53.636650-04:00",
   "hours": 48,
-  "raw_headlines": 8495,
+  "raw_headlines": 8377,
   "news_source": "local_files:empty+free_intake",
   "news_mode": "on",
   "unique_events": 9,
@@ -92,8 +92,88 @@
       ]
     },
     {
+      "event": "fed_rate_path",
+      "headline_count": 250,
+      "framework": {
+        "keep": "conditional",
+        "us_relevance": "high",
+        "us_relevance_why": "Discount rate / risk appetite for all US duration and banks",
+        "channel": "rates",
+        "geography": "us_domestic",
+        "severity": "regime",
+        "horizon": "1d-1w",
+        "action_object": "spx",
+        "action_object_detail": "SPX beta + rate-sensitive baskets (not a single stock thesis)",
+        "polarity": "mixed",
+        "polarity_why": "both dovish and hawkish cues present",
+        "confidence": 0.55,
+        "drop_reason": "",
+        "notes": [
+          "headline_count=250 supports non-noise severity",
+          "rates polarity unclear → lower confidence / soft book"
+        ]
+      },
+      "mechanism": "Discount-rate channel: hawkish (hikes / higher-for-longer) pressures long-duration growth and rate-sensitive REITs, mixed for banks via curve; dovish (cuts / cooling hike odds) inverts those duration sides and often supports gold. Labor prints move Fed path expectations without being a ‘jobs ETF’ trade.",
+      "amp_damp": "Sides flip on dovish vs hawkish; unknown polarity → no hard book",
+      "mean_revert": "after FOMC / next print",
+      "taxonomy": [
+        "Institutional policy (Fed rate cut, QE, stimulus)",
+        "Rate hike/monetary tightening/liquidity withdrawal"
+      ],
+      "evidence": [
+        {
+          "title": "FOMC rate decision (Oct 27-28)",
+          "source": "events",
+          "url": "",
+          "published_at": ""
+        },
+        {
+          "title": "Are Fed officials changing their tone ahead of October’s FOMC meeting? Here’s what they’re saying - Chase Bank",
+          "source": "topic_fed",
+          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNQmxxWEp5RGVuTElTd1hhSUZIeEk5NmVmeDl0cG4yZjhjdjRUaHVhSDdxMWxva0tia3VEOWFwY2RrdmFFT3dkUERzWVZEUkVIOWhmbjdzTHRrV1NkLTUwbXYwcEVmWnNNaXFPQXl6NVdhMnBSUEg5elQ4Mjd1UXl5NTdleVFNT0pHS3QwVGR6YTNCdzNNZFVnTEdfUFJjdnY2QzBtODhmVVBrQWtGN2xWRGgxZGxZeGh4WnBUelZKN3I5R0R5N3d1aUwwclRGYlhqd0hxYzRjdXRCcUdPb1Vr?oc=5",
+          "published_at": "2026-10-12T14:34:43+00:00"
+        },
+        {
+          "title": "Canadian dollar holds near 18-month low as weak jobs data curb rate hike bets - Investing.com Canada",
+          "source": "lane_factor_impulse",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWjhNRWJJX1FYME5RZnR5S05WcE1VeU9LUWx2Zy1iQy1DcG1zSmctaTc4TGlhMUxTbWlzSzRuNnZVRm5uMDl5ME1HV0VpSjBraFhlZEc4RHc2c0pET2U1ZFJXaDdFbTBZbGMzXzM0blg5b0tWUUtjUks4Sy1zdlR1eUhZMmo2SFFKeEhyc09HeXo4V2JPMWd1eG5NcVotUWVUcnVLRks1dk9GOVNOOTBhU05LVG03SlA1aFZwM0IzazhBeGM?oc=5",
+          "published_at": "2026-10-12T13:00:13+00:00"
+        },
+        {
+          "title": "MBA expects two more Federal Reserve hikes, in December and Q1 2027 - Mortgage Professional America",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSWxBZTRkVUpzMVhoYUJ5aWRvZjVYQUx5cTVOd2xMbGNyNkZzNE1OYk83R2diQ1FEOWZZR2k1RmxWSjVzaV9zZmI0MFh6VmF4MkZ1M2tFczdpR2Z2Z1cwU1JjY0FveWM4ZTdmRmlER1VmS2l4SzVwUThoSEZDa1pYT1JGYkUtbE1EdHJhVEowNUdZUkVzWUFwLVlaN0czMXZnd0lJN1pQdTBCMWIwU0p1OTUxSXFtbjJkcFc2YnlzNkJ6ZjI5TXpYVjV2c2c?oc=5",
+          "published_at": "2026-10-12T12:06:17+00:00"
+        },
+        {
+          "title": "TradFi News | Global Bond Sell-Off Cuts Rate Hike Expectations by 178 Basis Points as Yields Tighten Financial Conditions - Binance",
+          "source": "lane_factor_impulse",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8xZGdEUTJHakVUYXNHS3U4WnE4ZGRfVTZnRi0xREFRZ2VGbWNCQ2tmb2hoSWhMZFJKZW9LVEVNMzluMXFJcl9sQUMyQlhEdkdNSXVtbGFTaFB0djJMWUdkVnlzRmQ?oc=5",
+          "published_at": "2026-10-12T09:20:48+00:00"
+        },
+        {
+          "title": "Fed Chair Kevin Warsh and the FOMC Just Fired a Warning Shot at the Second-Priciest Stock Market in History - The Motley Fool",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQTUZ1bHNfOXgzTFdmWkU1SnZmaURVTS14cjB0UWpvaXBLdVpEYkpEUnlUZ2YyUTNGSHpYbmNCY1h5WjBYdVAxT2VhbE01cGJpb3lfeHVNNlBRbDJaMURxY21kTzV1WF9MSVlnZ1h5RVBpOGpwOW5SWHYtWkhlajNJX0F1bVd1U3ZJVkk4SEkzdG56S3NHSmd0MDhTNy1JdEQ3a2IxNU94TmhaY296UVZTNG9TZ05rOGNVSjFXMHVzY3BuVzlxTXFjRm55VQ?oc=5",
+          "published_at": "2026-10-12T09:06:00+00:00"
+        },
+        {
+          "title": "Fed Chair Kevin Warsh and the FOMC Just Fired a Warning Shot at the Second-Priciest Stock Market in History - Yahoo Finance",
+          "source": "rss_google_markets",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOb0g1SXg2aFA0TDV3Y3J1T1RxSGZ4d3JEcUIwZE1IYmYxallZLXNsNUNoZWRmNDdqS19nTDEzaE1tNkxZR0lnb0VJTDM2cVlYM0l0Y0tHVkpuSlpkcG5Pb0NHNFpUSXJfS21FcHRyU3RySDBadmJldEt3SjJyVEtfRkc2bDJrYlMwZXVvdHBfcnAtMk41QWc?oc=5",
+          "published_at": "2026-10-12T08:26:02+00:00"
+        },
+        {
+          "title": "Fed Chair Kevin Warsh and the FOMC Just Fired a Warning Shot at the Second-Priciest Stock Market in History - The Globe and Mail",
+          "source": "topic_fed",
+          "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPT3B4b19COUlfdUJQVi1RZ1FBblF0RnN4dHJIQkFvQVJQT2ZWWjhYWDEwWmdvRjVNNko3NFdQUHl4Qk9FNlpOYkptckNveG5jaDJBZjhRTUZZTzlBeER5Q0tQcUx4UWk5ODVTcW5kZVlIMnZtZEZ4QUpLbTE1ZV9ZSHdfcTVQeHNRY2dVN3ZmZ0FDUERxemQxSllsN1d5NzB5Rk9uTFYtXzRIU3NEYmtpNE9MZ2tsWnJNeUo1Q3VoR1l5d0lxaGp0WE9HQTd6ME52Z2I0c1VySERxVmVZNkpDVWhfdVpqcnQ2Q21iYVByX2dKUWJYQWVMWE9hZWEyMU5sb0dQWDRkNEdnWEN0SXY4NTZjM3p6a0xXUmZEdw?oc=5",
+          "published_at": "2026-10-12T08:26:00+00:00"
+        }
+      ]
+    },
+    {
       "event": "hormuz_energy_risk",
-      "headline_count": 110,
+      "headline_count": 111,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -109,7 +189,7 @@
         "confidence": 0.92,
         "drop_reason": "",
         "notes": [
-          "headline_count=110 supports non-noise severity",
+          "headline_count=111 supports non-noise severity",
           "transit/tanker/fuel language → higher severity"
         ]
       },
@@ -121,6 +201,12 @@
         "Commodity price move favorable to the company"
       ],
       "evidence": [
+        {
+          "title": "Iran war and Strait of Hormuz oil disruption",
+          "source": "events",
+          "url": "",
+          "published_at": ""
+        },
         {
           "title": "No Extra-Regional Power Has the Right to Interfere in the Strait of Hormuz - WANA News Agency",
           "source": "topic_geopolitics",
@@ -162,12 +248,6 @@
           "source": "topic_geopolitics",
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZ3VoZElDSUFhb0lrQzlPaXVKVXpCeVN6NEFOdkpubVIzbERUby1Ib1k3VEtKT2xwOVlELXhJTEFPME1HekJWMTRKZXh0cnJTejZkVWpwYXBkMWJObnZvRjc4b0JSMFllZlhiUmVvVnRuN0xDemxnRW1vRS1RU2NnZmt1U0RKS3hPcUU3ZHI4MFJubk9ZUS1JU0hwXzBDRFU?oc=5",
           "published_at": "2026-10-12T17:08:48+00:00"
-        },
-        {
-          "title": "Oil tanker hit in the Strait of Hormuz area - WKYC",
-          "source": "topic_geopolitics",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWkpySGtpWW1WbTNNbzI4TUxRcFoyVXN4QmpVaXNXUlFBb1pVc2xjNVJ6UUtfOEdvRmtSX2k1YVBzWWFHUDRJUDhsbjlybUdBTkJGWkF3MTQtNmduazdidXBXaEwwb3NVMmtoYVMySE1kSjZ3VlF5UVZwZHRRa3FkMkE5SUV2T3Z3d1A0ZGdhQ21FeFFXSHN4WmRHN3VBYjBrM2tObVZRUUNpc3pqRGQ5a3NwQmxNdw?oc=5",
-          "published_at": "2026-10-12T15:24:00+00:00"
         }
       ]
     },
@@ -208,7 +288,7 @@
     },
     {
       "event": "weak_labor_print",
-      "headline_count": 14,
+      "headline_count": 15,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -224,7 +304,7 @@
         "confidence": 0.6,
         "drop_reason": "",
         "notes": [
-          "headline_count=14 supports non-noise severity",
+          "headline_count=15 supports non-noise severity",
           "rates polarity unclear → lower confidence / soft book"
         ]
       },
@@ -241,6 +321,12 @@
           "source": "lane_print_vs_priced",
           "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNVVMwa3NVNFA0UUwxeks2OGtoTkl3UmFfX1czT0ZIRFhiSEx5UjBHc0V4MWZQMGxLb3lpVE42cnpYVXJxLUlRY1JjYjZvdlFhLXBhUVZDd2N4T0owQ0MzcDdXRGdNS3JRbk5FQnRXajQzZl9HU0ltNkZYOGlIQ1BXckwyWnczT0VqRjlhSzRsT3UzNEI3VG5WcFcwRVdyd1dYbjVmUFJxQlhjOE5pTWVGYmxoX0ZXNVNkQ3dCV2N0S0F2Um1KTjlVcHc5LW9nb2JSZng0OHBXaTZLdkxkbi1GbGpVWFVJekQwblpuUTVmbHZIM0ZOS1J0UmVuX0kzVWtwN3ppc0x3?oc=5",
           "published_at": "2026-10-12T21:29:22+00:00"
+        },
+        {
+          "title": "Initial jobless claims fall to 197k — lowest since July",
+          "source": "events",
+          "url": "",
+          "published_at": ""
         },
         {
           "title": "What are nonfarm payrolls and how do they affect markets? - Bybit",
@@ -277,12 +363,6 @@
           "source": "lane_print_vs_priced",
           "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOTl9rakdlZmpkYnNKOFM2UE9jaUdVZThjQm5WVDRmRGpnbG5RY0tjV29Vdm5tTU5Ia2Z6QVJEOGhWZ1hjaGtldUxIMUdpczhmQVpnNmlCUDFoWVp2NXR2amh0SFRwNURLbUtVQTBIS1EwdjQ2cVRJVkdDN2k1ODNtR3M3WjZXdERUZmg1LVJBZEFrYVcyMWpRdTZMWmkzaEdwSVhhQ3REVERaSWh5cVZNMTZKb1VNRWJ4ZURQYmxJSnhUTkI1ajBFaVhQMWNnYVNjc3l2MWpVU0hrZw?oc=5",
           "published_at": "2026-10-12T11:31:25+00:00"
-        },
-        {
-          "title": "Canada jobs report in focus as US tariffs bite, BoC holds and USD/CAD hovers near 1.42 - VT Markets",
-          "source": "lane_print_vs_priced",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOZ1B2VFhjZnB0VUttc0xCUnZ3LTB0amFQTTNrQ3lwaEFQMkRhN0psM1d3dnRLSnNvMWxDMkR4UlVCV3gyRVBpc0tQVXBwSVFhdjdRbFVDVUZSc0lwVHI3cUYzb2lKTzZVdlA3TlpDRkxFeEROSVdjUDVCWVJPczJYbGgxT29IVlVDTXVZUVRXRTZGN2ZUbGpnSEU1dng2bktiZ3c3M1NYLUtBeTh2elRtLW10UE5idklQa1FGdnhMVXh5MmNGUmlDNzdETQ?oc=5",
-          "published_at": "2026-10-12T02:32:21+00:00"
         }
       ]
     },
@@ -433,86 +513,6 @@
       ]
     },
     {
-      "event": "fed_rate_path",
-      "headline_count": 251,
-      "framework": {
-        "keep": "conditional",
-        "us_relevance": "high",
-        "us_relevance_why": "Discount rate / risk appetite for all US duration and banks",
-        "channel": "rates",
-        "geography": "us_domestic",
-        "severity": "regime",
-        "horizon": "1d-1w",
-        "action_object": "spx",
-        "action_object_detail": "SPX beta + rate-sensitive baskets (not a single stock thesis)",
-        "polarity": "mixed",
-        "polarity_why": "both dovish and hawkish cues present",
-        "confidence": 0.55,
-        "drop_reason": "",
-        "notes": [
-          "headline_count=251 supports non-noise severity",
-          "rates polarity unclear → lower confidence / soft book"
-        ]
-      },
-      "mechanism": "Discount-rate channel: hawkish (hikes / higher-for-longer) pressures long-duration growth and rate-sensitive REITs, mixed for banks via curve; dovish (cuts / cooling hike odds) inverts those duration sides and often supports gold. Labor prints move Fed path expectations without being a ‘jobs ETF’ trade.",
-      "amp_damp": "Sides flip on dovish vs hawkish; unknown polarity → no hard book",
-      "mean_revert": "after FOMC / next print",
-      "taxonomy": [
-        "Institutional policy (Fed rate cut, QE, stimulus)",
-        "Rate hike/monetary tightening/liquidity withdrawal"
-      ],
-      "evidence": [
-        {
-          "title": "Are Fed officials changing their tone ahead of October’s FOMC meeting? Here’s what they’re saying - Chase Bank",
-          "source": "topic_fed",
-          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNQmxxWEp5RGVuTElTd1hhSUZIeEk5NmVmeDl0cG4yZjhjdjRUaHVhSDdxMWxva0tia3VEOWFwY2RrdmFFT3dkUERzWVZEUkVIOWhmbjdzTHRrV1NkLTUwbXYwcEVmWnNNaXFPQXl6NVdhMnBSUEg5elQ4Mjd1UXl5NTdleVFNT0pHS3QwVGR6YTNCdzNNZFVnTEdfUFJjdnY2QzBtODhmVVBrQWtGN2xWRGgxZGxZeGh4WnBUelZKN3I5R0R5N3d1aUwwclRGYlhqd0hxYzRjdXRCcUdPb1Vr?oc=5",
-          "published_at": "2026-10-12T14:34:43+00:00"
-        },
-        {
-          "title": "Canadian dollar holds near 18-month low as weak jobs data curb rate hike bets - Investing.com Canada",
-          "source": "lane_factor_impulse",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWjhNRWJJX1FYME5RZnR5S05WcE1VeU9LUWx2Zy1iQy1DcG1zSmctaTc4TGlhMUxTbWlzSzRuNnZVRm5uMDl5ME1HV0VpSjBraFhlZEc4RHc2c0pET2U1ZFJXaDdFbTBZbGMzXzM0blg5b0tWUUtjUks4Sy1zdlR1eUhZMmo2SFFKeEhyc09HeXo4V2JPMWd1eG5NcVotUWVUcnVLRks1dk9GOVNOOTBhU05LVG03SlA1aFZwM0IzazhBeGM?oc=5",
-          "published_at": "2026-10-12T13:00:13+00:00"
-        },
-        {
-          "title": "MBA expects two more Federal Reserve hikes, in December and Q1 2027 - Mortgage Professional America",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSWxBZTRkVUpzMVhoYUJ5aWRvZjVYQUx5cTVOd2xMbGNyNkZzNE1OYk83R2diQ1FEOWZZR2k1RmxWSjVzaV9zZmI0MFh6VmF4MkZ1M2tFczdpR2Z2Z1cwU1JjY0FveWM4ZTdmRmlER1VmS2l4SzVwUThoSEZDa1pYT1JGYkUtbE1EdHJhVEowNUdZUkVzWUFwLVlaN0czMXZnd0lJN1pQdTBCMWIwU0p1OTUxSXFtbjJkcFc2YnlzNkJ6ZjI5TXpYVjV2c2c?oc=5",
-          "published_at": "2026-10-12T12:06:17+00:00"
-        },
-        {
-          "title": "TradFi News | Global Bond Sell-Off Cuts Rate Hike Expectations by 178 Basis Points as Yields Tighten Financial Conditions - Binance",
-          "source": "lane_factor_impulse",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8xZGdEUTJHakVUYXNHS3U4WnE4ZGRfVTZnRi0xREFRZ2VGbWNCQ2tmb2hoSWhMZFJKZW9LVEVNMzluMXFJcl9sQUMyQlhEdkdNSXVtbGFTaFB0djJMWUdkVnlzRmQ?oc=5",
-          "published_at": "2026-10-12T09:20:48+00:00"
-        },
-        {
-          "title": "Fed Chair Kevin Warsh and the FOMC Just Fired a Warning Shot at the Second-Priciest Stock Market in History - The Motley Fool",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQTUZ1bHNfOXgzTFdmWkU1SnZmaURVTS14cjB0UWpvaXBLdVpEYkpEUnlUZ2YyUTNGSHpYbmNCY1h5WjBYdVAxT2VhbE01cGJpb3lfeHVNNlBRbDJaMURxY21kTzV1WF9MSVlnZ1h5RVBpOGpwOW5SWHYtWkhlajNJX0F1bVd1U3ZJVkk4SEkzdG56S3NHSmd0MDhTNy1JdEQ3a2IxNU94TmhaY296UVZTNG9TZ05rOGNVSjFXMHVzY3BuVzlxTXFjRm55VQ?oc=5",
-          "published_at": "2026-10-12T09:06:00+00:00"
-        },
-        {
-          "title": "Fed Chair Kevin Warsh and the FOMC Just Fired a Warning Shot at the Second-Priciest Stock Market in History - Yahoo Finance",
-          "source": "rss_google_markets",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOb0g1SXg2aFA0TDV3Y3J1T1RxSGZ4d3JEcUIwZE1IYmYxallZLXNsNUNoZWRmNDdqS19nTDEzaE1tNkxZR0lnb0VJTDM2cVlYM0l0Y0tHVkpuSlpkcG5Pb0NHNFpUSXJfS21FcHRyU3RySDBadmJldEt3SjJyVEtfRkc2bDJrYlMwZXVvdHBfcnAtMk41QWc?oc=5",
-          "published_at": "2026-10-12T08:26:02+00:00"
-        },
-        {
-          "title": "Fed Chair Kevin Warsh and the FOMC Just Fired a Warning Shot at the Second-Priciest Stock Market in History - The Globe and Mail",
-          "source": "topic_fed",
-          "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPT3B4b19COUlfdUJQVi1RZ1FBblF0RnN4dHJIQkFvQVJQT2ZWWjhYWDEwWmdvRjVNNko3NFdQUHl4Qk9FNlpOYkptckNveG5jaDJBZjhRTUZZTzlBeER5Q0tQcUx4UWk5ODVTcW5kZVlIMnZtZEZ4QUpLbTE1ZV9ZSHdfcTVQeHNRY2dVN3ZmZ0FDUERxemQxSllsN1d5NzB5Rk9uTFYtXzRIU3NEYmtpNE9MZ2tsWnJNeUo1Q3VoR1l5d0lxaGp0WE9HQTd6ME52Z2I0c1VySERxVmVZNkpDVWhfdVpqcnQ2Q21iYVByX2dKUWJYQWVMWE9hZWEyMU5sb0dQWDRkNEdnWEN0SXY4NTZjM3p6a0xXUmZEdw?oc=5",
-          "published_at": "2026-10-12T08:26:00+00:00"
-        },
-        {
-          "title": "Report pours cold water on Australia’s interest rate cut expectations - Nine.com.au",
-          "source": "lane_factor_impulse",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPOHYyVFV1c284TnBDalJRLWd3YmRSWUFyQmZ6Y09FcUhUNjlfQjhselJKdFdySU5jM1NRNy1kd0kyUFh3WHF3UUZTbFBZYVMwOEJkajk3b0pubEFXYjlObzJ6S0hITUQ1ZV9aNG1hc0hLQkExQWlLTVhPU0syYjFFWmtDbVBCVnRHekdkVm1EcVc2ZHJUNGZIYXI5YTFWWXo2dnRHcV9qUUp3MUJ1UV9XUzkycU5qRVZrcEFJb3g4bEVfbFVkNFE?oc=5",
-          "published_at": "2026-10-12T03:14:55+00:00"
-        }
-      ]
-    },
-    {
       "event": "ai_chip_demand_spike",
       "headline_count": 1,
       "framework": {
@@ -569,6 +569,50 @@
       "note": "load growth / power scarcity narrative",
       "why": "Framework keep=keep channel=sector_fundamental object=basket:CEG/VST/NRG-type power; not pollution pure-plays horizon=1w-1m severity=session conf=0.75. Edge=primary buy `utilities_power` because load growth / power scarcity narrative.",
       "framework_polarity": "bullish"
+    },
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "banks_diversified",
+      "side": "buy",
+      "weight": 1.73,
+      "tickers": [],
+      "note": "curve/NIM — polarity adjusted",
+      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary buy `banks_diversified` because curve/NIM — polarity adjusted.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "reit_office",
+      "side": "sell",
+      "weight": 2.23,
+      "tickers": [],
+      "note": "duration — polarity adjusted",
+      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary sell `reit_office` because duration — polarity adjusted.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "software_app",
+      "side": "sell",
+      "weight": 1.73,
+      "tickers": [],
+      "note": "duration growth — polarity adjusted",
+      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary sell `software_app` because duration growth — polarity adjusted.",
+      "framework_polarity": "mixed"
+    },
+    {
+      "event": "fed_rate_path",
+      "role": "primary",
+      "bucket": "gold",
+      "side": "sell",
+      "weight": 1.73,
+      "tickers": [],
+      "note": "real rate — polarity adjusted",
+      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary sell `gold` because real rate — polarity adjusted.",
+      "framework_polarity": "mixed"
     },
     {
       "event": "hormuz_energy_risk",
@@ -889,50 +933,6 @@
       "note": "expedite",
       "why": "Framework keep=keep channel=substitution object=basket:shipping / trucking / rail horizon=1w severity=session conf=0.65. Edge=substitute buy `air_freight` because expedite.",
       "framework_polarity": "neutral"
-    },
-    {
-      "event": "fed_rate_path",
-      "role": "primary",
-      "bucket": "banks_diversified",
-      "side": "buy",
-      "weight": 1.73,
-      "tickers": [],
-      "note": "curve/NIM — polarity adjusted",
-      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary buy `banks_diversified` because curve/NIM — polarity adjusted.",
-      "framework_polarity": "mixed"
-    },
-    {
-      "event": "fed_rate_path",
-      "role": "primary",
-      "bucket": "reit_office",
-      "side": "sell",
-      "weight": 2.23,
-      "tickers": [],
-      "note": "duration — polarity adjusted",
-      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary sell `reit_office` because duration — polarity adjusted.",
-      "framework_polarity": "mixed"
-    },
-    {
-      "event": "fed_rate_path",
-      "role": "primary",
-      "bucket": "software_app",
-      "side": "sell",
-      "weight": 1.73,
-      "tickers": [],
-      "note": "duration growth — polarity adjusted",
-      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary sell `software_app` because duration growth — polarity adjusted.",
-      "framework_polarity": "mixed"
-    },
-    {
-      "event": "fed_rate_path",
-      "role": "primary",
-      "bucket": "gold",
-      "side": "sell",
-      "weight": 1.73,
-      "tickers": [],
-      "note": "real rate — polarity adjusted",
-      "why": "Framework keep=conditional channel=rates object=spx:SPX beta + rate-sensitive baskets (not a single stock thesis) horizon=1d-1w severity=regime conf=0.55. Edge=primary sell `gold` because real rate — polarity adjusted.",
-      "framework_polarity": "mixed"
     },
     {
       "event": "ai_chip_demand_spike",
