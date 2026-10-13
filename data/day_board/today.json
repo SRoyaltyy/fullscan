@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:27:28.746780-04:00",
+  "generated_at": "2026-10-13T08:28:49.641305-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -94,31 +94,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events_catcher",
-      "title": "Event catcher (gap hunt, no carry)",
-      "date": "2026-10-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-13T08:02:45.008051-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-10-13_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 25747,
-          "preview": "26 events \u00b7 US CPI (September) release | FOMC rate decision (Oct 27-28) | Fed Chair Kevin Warsh speech this week | Q3 bank earnings kickoff: JPM, GS, C | Healthcare and consumer earnings: UNH, JNJ, Domino's | TSMC Q3 record revenue beat (resolved, momentum continues)"
-        },
-        {
-          "path": "01_daily/events/2026-10-13_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 12126,
-          "preview": "# Event Scan \u2014 2026-10-13\n- events tracked: **20** (via openclaw)\n- uncertainty: **elevated**\n- summary: The dominant macro setup: a hawkish Fed under Warsh deciding Oct 28 with the Oct 14 CPI as the swing input, against an oil market squeezed by the ongoing Iran war and OPEC+ quota pauses. The US-China truce holds for now but is fragile, while AI-leadership equities face sentiment wobbles despite stellar TSMC/Samsung results. No shutdown in this window (CR runs to Dec 11), but midterms amplify political headline risk."
-        }
-      ],
-      "preview": "26 events \u00b7 US CPI (September) release | FOMC rate decision (Oct 27-28) | Fed Chair Kevin Warsh speech this week | Q3 bank earnings kickoff: JPM, GS, C | Healthcare and consumer earnings: UNH, JNJ, Domino's | TSMC Q3 record revenue beat (resolved, momentum continues) \u00b7 # Event Scan \u2014 2026-10-13\n- events tracked: **20** (via openclaw)\n- uncertainty: **elevated**\n- summary: The dominant macro setup: a hawkish Fed under Warsh deciding Oct 28 with the Oct 14 CPI as the swing input, against an oil market squeezed by the ongoing Iran war and OPEC+ quota pauses. The US-China truce holds for now but is fragile, while AI-leadership equities face sentiment wobbles despite stellar TSMC/Samsung results. No shutdown in this window (CR runs to Dec 11), but midterms amplify political headline risk."
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -314,6 +289,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-13\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T08:28:48.547708-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-10-13.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11510266,
+          "preview": "11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
