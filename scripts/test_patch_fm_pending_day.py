@@ -17,9 +17,15 @@ def test_adds_pending_1013_with_ruling_label():
     assert p.patch(out, {"date": "2026-10-13"}) == out  # idempotent
 
 
-def test_no_change_when_mined():
-    pg = page(["2026-10-13"])
-    assert p.patch(pg, {"date": "2026-10-13"}) == pg
+def test_no_change_when_mined_without_ruling_note():
+    pg = page(["2026-10-14"])
+    assert p.patch(pg, {"date": "2026-10-14"}) == pg
+
+
+def test_mined_day_with_ruling_note_still_labelled():
+    out = p.patch(page(["2026-10-13"]), {"date": "2026-10-13"})
+    assert "pending ruling: GLM-written predict, not a decision yet" in out
+    assert "cells for this day are shown below" in out
 
 
 def test_embedded_data_untouched():
