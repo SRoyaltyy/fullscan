@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T19:45:56.791642-04:00",
+  "generated_at": "2026-10-13T19:55:29.698908-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -849,7 +849,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=133",
-          "size": 1163885,
+          "size": 1163883,
           "said": "1d BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX \u00b7 -0.5525",
           "bullets": []
         },
@@ -860,10 +860,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 44618,
+          "size": 44600,
           "said": "Stock book \u2014 2026-10-13",
           "bullets": [
-            "_Generated 2026-10-13T08:59:49.687747-04:00_",
+            "_Generated 2026-10-13T19:55:28.101427-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -927,7 +927,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=133",
-          "size": 1163885,
+          "size": 1163883,
           "said": "1d BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX \u00b7 -0.5525",
           "bullets": []
         },
@@ -4658,6 +4658,30 @@
       "commit_msg": "auto: post-close ALL [2026-10-13_2351]",
       "workflow": "Post-Close ALL (grade + learn + next captains)",
       "run_id": "38485869734",
+      "manifest": "research/input_freeze/2026-10-13/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-13_stock_book.md",
+      "at": "2026-10-13T19:55:49-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-13",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38486221308",
+      "manifest": "research/input_freeze/2026-10-13/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-13_input_health.json",
+      "at": "2026-10-13T19:55:49-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-13",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38486221308",
+      "manifest": "research/input_freeze/2026-10-13/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-13_stock_book.json",
+      "at": "2026-10-13T19:55:49-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-13",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38486221308",
       "manifest": "research/input_freeze/2026-10-13/manifest.json"
     }
   ]
