@@ -1,11 +1,10 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T07:45:53.148899-04:00",
+  "generated_at": "2026-10-13T07:47:23.267141-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-13_predict.md` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-13_judge.md` \u2014 missing"
+    "MISSING General predict MD `01_daily/general/2026-10-13_predict.md` \u2014 missing"
   ],
   "counts": {
     "ok": 6,
@@ -115,7 +114,7 @@
           "size": 11883,
           "said": "Finviz Daily Digest \u2014 2026-10-13",
           "bullets": [
-            "_Generated 2026-10-13T07:45:51.688489-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-13T04:16:18.836729-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -180,7 +179,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 5,
+      "n_req_ok": 6,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -260,11 +259,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-13_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9553,
+          "said": "1. **Houthi/Iran escalation: Riyadh missile attacks day 3, tanker attacked in Strait of Hormuz** \u2014 fresh kinetic oil-supply increment with energy freight/insura",
+          "bullets": [
+            "2. **Hawkish Fed comments boost October hike expectations; gold drops >$100; yields surge with mortgage hedging pressure** \u2014 the dominant rates cluster into this week's CPI + Powell; hits gold, banks, small caps, duration. Channel: rates",
+            "3. **OPEC cuts 2026 oil demand growth forecast to 400k bpd** \u2014 demand-side counterweight to the supply shock; caps XLE upside, mixed for energy. Channel: sector_fundamental",
+            "4. **EU weighs oil/gas windfall profit tax as energy prices soar** \u2014 policy overhang on European energy majors, mild substitution/read-across for US energy sentiment. Channel: sector_policy"
+          ]
         },
         {
           "key": "research_json",
@@ -343,13 +346,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7574,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 15 fail",
+          "size": 7570,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
           "bullets": [
             "general_predict:missing",
             "events:zero_events",
-            "news_judge:missing",
-            "finviz_market_digest:missing"
+            "finviz_market_digest:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -369,11 +372,11 @@
           "path": "01_daily/2026-10-13_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 308,
-          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "reason": "ok=False News judge, parse, actions, finviz digests and map-heat (with a full live futures tape and calendar) are all genuine sam",
+          "size": 1387,
+          "said": "ok=False \u00b7 missing \u2014 general market predict is a required core artifact and no same-day direction exists anywhere 01_daily/general/2026-10-13_predict.md",
           "bullets": [
-            "Grok returned an empty review"
+            "News judge, parse, actions, finviz digests and map-heat (with a full live futures tape and calendar) are all genuine same-day artifacts and pass. Sector predicts are optional on this date and are not counted. Research files claim a pre-open refresh with 142 cards but the synthesis admits the delta refresh failed captain-evidence QC and reused last night's post-close cards with no overnight re-score \u2014 noted as a quality degradation, not a fail, since a baseline exists and phase is not morning_bootstrap. The day fails on the missing general predict and the hollow zero-event events scan, both of which are required core."
           ]
         },
         {
@@ -736,11 +739,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-13_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9553,
+          "said": "1. **Houthi/Iran escalation: Riyadh missile attacks day 3, tanker attacked in Strait of Hormuz** \u2014 fresh kinetic oil-supply increment with energy freight/insura",
+          "bullets": [
+            "2. **Hawkish Fed comments boost October hike expectations; gold drops >$100; yields surge with mortgage hedging pressure** \u2014 the dominant rates cluster into this week's CPI + Powell; hits gold, banks, small caps, duration. Channel: rates",
+            "3. **OPEC cuts 2026 oil demand growth forecast to 400k bpd** \u2014 demand-side counterweight to the supply shock; caps XLE upside, mixed for energy. Channel: sector_fundamental",
+            "4. **EU weighs oil/gas windfall profit tax as energy prices soar** \u2014 policy overhang on European energy majors, mild substitution/read-across for US energy sentiment. Channel: sector_policy"
+          ]
         },
         {
           "key": "in_weather",
@@ -2130,6 +2137,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-13\n_Generated 2026-10-13T07:45:51.688489-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T07:47:22.251210-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-13_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 9553,
+          "preview": "# News Judge \u2014 2026-10-13"
+        },
+        {
+          "path": "01_daily/news/2026-10-13_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1220,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-10-13 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {

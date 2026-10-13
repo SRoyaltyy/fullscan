@@ -1,15 +1,19 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T07:45:52.003126-04:00",
+  "generated_at": "2026-10-13T07:47:22.250263-04:00",
   "ok": false,
   "fails": [
     {
-      "path": "(review)",
-      "reason": "empty_review_reply"
+      "path": "01_daily/general/2026-10-13_predict.md",
+      "reason": "missing \u2014 general market predict is a required core artifact and no same-day direction exists anywhere"
+    },
+    {
+      "path": "01_daily/events/2026-10-13_events.json",
+      "reason": "zero_events \u2014 catcher ran but found 0 events while the same-day news tape (Hormuz tanker attack, CPI day, hawkish Fed, Boeing FAA halt) clearly contained real calendar/news events; empty coverage_assessment/biggest_gap fields indicate a hollow scan, not a real one"
     }
   ],
-  "notes": "Grok returned an empty review",
-  "prompt_chars": 84212,
-  "reply_chars": 0,
+  "notes": "News judge, parse, actions, finviz digests and map-heat (with a full live futures tape and calendar) are all genuine same-day artifacts and pass. Sector predicts are optional on this date and are not counted. Research files claim a pre-open refresh with 142 cards but the synthesis admits the delta refresh failed captain-evidence QC and reused last night's post-close cards with no overnight re-score \u2014 noted as a quality degradation, not a fail, since a baseline exists and phase is not morning_bootstrap. The day fails on the missing general predict and the hollow zero-event events scan, both of which are required core.",
+  "prompt_chars": 93688,
+  "reply_chars": 1159,
   "reviewer": "grok-4.6-text"
 }

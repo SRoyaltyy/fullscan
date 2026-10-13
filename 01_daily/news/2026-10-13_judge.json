@@ -3,18 +3,22 @@
  "macros": [
   "hawkish",
   "bearish",
+  "mixed",
   "hawkish",
-  "bearish"
+  "bearish",
+  "mixed"
  ],
  "sector_tilts": {
-  "Technology": "bearish",
-  "Nuclear/Uranium": "bullish"
+  "Energy": "mixed",
+  "Industrials": "bearish",
+  "Financial": "bearish",
+  "Technology": "mixed"
  },
  "tickers": {
-  "URA": 4.0,
-  "CEG": 5.5,
-  "IGV": -4.0
+  "XLE": -3.0,
+  "XLF": -4.0,
+  "AEM": -1.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=3\nMACRO rates: [hawkish] 10Y tests 5.3%, minutes flag another 2026 hike, 10Y auction (session/1d-1w)\nMACRO risk: [bearish] SPX/NDX off records on duration; gold -$100 confirms hike odds (session/1d)\nSECTOR semis: [mixed] TSMC +51% and Samsung AI-memory boom vs yield compression (SMH/SOXX)\nSECTOR nuclear/uranium: [bullish] Google-Constellation power offtake lifts URA/nuclear basket (URA)\nSECTOR software: [bearish] ACN 3-6% FY27 LC guide into higher yields - duration, not a beat (IGV)\nINTERACTION: Minutes+10Y+auction = one rates cluster; do not buy semis/software on AI beats while 10Y is at 5.3%\nWATCH: Auction stop-through vs tail; AI-debt language can extend multiple compression even if TSMC holds",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=5\nMACRO rates: [hawkish] Hike odds building into CPI/Powell; yields surging, gold \u2212$100 (session/1d)\nMACRO risk: [bearish] Fresh Hormuz tanker attack + 3rd day Riyadh missiles; freight costs surging (session/1d-1w)\nMACRO energy: [mixed] OPEC cuts 2026 demand growth to 400k bpd (1w)\nSECTOR energy: [mixed] Supply shock vs demand cut vs EU windfall-tax risk (XLE)\nSECTOR industrials: [bearish] Boeing MAX 10 certification halted; 31% order book at risk (BA, XLI)\nSECTOR financials: [bearish] Banks correcting into earnings on yield surge (XLF)\nSECTOR semis: [mixed] MSFT custom AI chip scale-up; merchant-silicon substitution pressure (NVDA/AVGO basket)\nINTERACTION: Hawkish-rates cluster = one sleeve; oil shock + hike odds = net risk-off, XLE only hedge\nWATCH: CPI/Powell binary pending \u2014 no pre-signed lean; cap magnitude if futures flat",
  "date": "2026-10-13"
 }
