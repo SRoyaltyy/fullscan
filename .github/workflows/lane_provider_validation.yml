@@ -1,4 +1,4 @@
-name: Lane batched recall development comparison
+name: Lane fresh batched recall comparison
 on:
   push:
     branches: [codex/lane-provider-repair-20261014]
@@ -36,7 +36,7 @@ jobs:
           python-version: '3.12'
       - name: Validate contracts and regression repairs
         run: PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_semantic*.py' && PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_provider_repairs.py'
-      - name: Program-only GLM first 100-title comparison
+      - name: Program-only GLM fresh 100-title comparison
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
@@ -70,7 +70,7 @@ jobs:
           LANE_ALLOW_PAID_DEEPSEEK: ${{ vars.LANE_ALLOW_PAID_DEEPSEEK }}
         run: |
           PYTHONPATH=. python scripts/run_semantic_headlines.py \
-            --input tests/fixtures/semantic_acceptance/batch_02.json \
+            --input tests/fixtures/semantic_acceptance/batch_recall_fresh_01.json \
             --output provider_results/glm_program_outputs.json \
             --limit 100 --budget-seconds 3600 --headline-timeout 300 \
             --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review \
@@ -102,11 +102,11 @@ jobs:
       - name: Diagnose timer, OAuth and both Grok model paths
         id: diagnose
         run: PYTHONPATH=.:scripts python3 scripts/diagnose_openclaw_lane.py --output provider_results/grok_diagnostic.json
-      - name: Program-only Grok 100-title comparison when healthy and idle
+      - name: Program-only Grok fresh 100-title comparison when healthy and idle
         if: steps.diagnose.outputs.ready == 'true'
         run: |
           PYTHONPATH=. python3 scripts/run_semantic_headlines.py \
-            --input tests/fixtures/semantic_acceptance/batch_02.json \
+            --input tests/fixtures/semantic_acceptance/batch_recall_fresh_01.json \
             --output provider_results/grok_program_outputs.json \
             --limit 100 --budget-seconds 3600 --headline-timeout 300 \
             --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review \

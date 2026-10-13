@@ -24,5 +24,12 @@ class CatalogTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as f:
             rows=self.catalog(f).candidates('Acme Marine expands')
         self.assertNotIn('lane_class',rows[0]);self.assertNotIn('action',rows[0]);self.assertNotIn('direction',rows[0])
+    def test_exchange_and_ticker_prefix_are_not_issuer_tokens(self):
+        with tempfile.TemporaryDirectory() as f:
+            c=self.catalog(f)
+            self.assertEqual(c.candidates('Issuer (WAVE:XYZ) reports results'),[])
+            self.assertEqual(c.candidates('Issuer (WAVEX) reports results'),[])
+            self.assertEqual(c.candidates('Issuer (LSE:WAVE) reports results')[0]['Ticker'],'WAVE')
+            self.assertEqual(c.candidates('Issuer $WAVE.US reports results')[0]['Ticker'],'WAVE')
 
 if __name__=='__main__':unittest.main()
