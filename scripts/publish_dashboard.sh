@@ -70,6 +70,7 @@ for page in "$TMP/dashboard/factor-mine/index.html" "$TMP/factor-mine/index.html
     python3 scripts/patch_fm_ovcal.py "$page" || true
     python3 scripts/patch_fm_holdup.py "$page" || true
     python3 scripts/patch_fm_preopen_labels.py "$page" dashboard/factor-mine/replay_preopen.json || true
+    python3 scripts/patch_fm_pending_day.py "$page" data/day_board/today_strategies.json || true
   fi
 done
 git -C "$TMP" init -q
