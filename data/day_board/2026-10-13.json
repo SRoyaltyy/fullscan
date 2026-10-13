@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:20:32.188758-04:00",
+  "generated_at": "2026-10-13T08:20:38.581048-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -354,7 +354,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7448,
+          "size": 8262,
           "said": "all_ok=True \u00b7 sectors 10/11 \u00b7 2 fail",
           "bullets": [
             "finviz_market_digest:missing",
@@ -2973,6 +2973,24 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-1.619** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **1.423** (ES -0.09%, ZN -0.03%, PM:XLU +0.36%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **-1.35** (raw -1.35) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (94,334 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10-year Treasury yield today October 13 2026\"* \u2192 got 6 results (via gnews_rss)\n- 10-year Treasury yield at 5.9% would spark shift to bonds from stocks: BofA investor survey - TradingView (https://news.google.com/rss/articles/CBMi8AFBVV95cUxOTXBiZnBfZEJQenRWb1lVenFTTkxueEFYS2tyQTRNUTRURXoxYnNYUl83TndoeXZKWDhFZXc3Q2M1N3JvVmFxNFBJbGZqWGw2M1o5R2VtS3kxUlpKQWVMd1psNDlFb3F6NEtWR21ZVy1tREdFS1R4cm12NUhzUk"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T08:20:37.487126-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-13",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "10/10 sector predicts ok: basic_materials, communication_services, consumer_cyclical, energy, financial, healthcare, industrials, real_estate"
+        }
+      ],
+      "preview": "10/10 sector predicts ok: basic_materials, communication_services, consumer_cyclical, energy, financial, healthcare, industrials, real_estate"
     }
   ],
   "href": {

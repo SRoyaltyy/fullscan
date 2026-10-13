@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-13",
+  "summary": "11/11 via deepseek (fallback: prefer_deepseek)",
+  "sectors": [
+    {
+      "sector": "Basic Materials",
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Communication Services",
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Consumer Cyclical",
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Consumer Defensive",
+      "status": "FAIL",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Energy",
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Financial",
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Healthcare",
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Industrials",
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Real Estate",
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Technology",
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    },
+    {
+      "sector": "Utilities",
+      "status": "OK",
+      "provider": "deepseek",
+      "fallback_reason": "prefer_deepseek"
+    }
+  ]
+}
