@@ -5,7 +5,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** UNKNOWN
-- **Yields:** falling (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.86 via vix/vix3m) spot 15.38
+- **Yields:** falling (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.86 via vix/vix3m) spot 15.41
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.18
 - **High-impact events:** 0 bullish vs 0 bearish
 - ⚠️ **Data gaps:** general predict run, general predict factor scoreboard
@@ -19,11 +19,11 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 | sector:Consumer Cyclical | ⛅ neutral | medium | finviz sector median week -1.38% [tape] |
 | sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -1.62% [tape] |
 | sector:Energy | 🌧️ hostile | medium | finviz sector median week -2.50% [tape] |
-| sector:Financial | ⛅ neutral | medium | finviz sector median week -1.40% [tape] |
+| sector:Financial | 🌧️ hostile | medium | news_judge SECTOR Financial [bearish] |
 | sector:Healthcare | 🌧️ hostile | medium | finviz sector median week -2.99% [tape] |
-| sector:Industrials | 🌧️ hostile | medium | finviz sector median week -1.83% [tape] |
+| sector:Industrials | 🌧️ hostile | medium | news_judge SECTOR Industrials [bearish] |
 | sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -2.49% [tape] |
-| sector:Technology | 🌧️ hostile | medium | news_judge SECTOR Technology [bearish] |
+| sector:Technology | 🌧️ hostile | medium | finviz sector median week -2.62% [tape] |
 | sector:Utilities | 🌧️ hostile | medium | finviz sector median week -3.43% [tape] |
 
 ## Size

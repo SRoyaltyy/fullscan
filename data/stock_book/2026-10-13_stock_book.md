@@ -1,6 +1,6 @@
 # Stock book — 2026-10-13
 
-_Generated 2026-10-13T06:29:31.992789-04:00_
+_Generated 2026-10-13T07:54:57.143895-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -20,7 +20,7 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 
 - Weather risk: **unknown**
 - General predict (same-day): +0.00  (MISSING → 0)
-- Stand-down: **no** — 364 names qualified through standard,group_leader,catalyst (23 probable)
+- Stand-down: **no** — 390 names qualified through standard,group_leader,catalyst (49 probable)
 - Sector predicts this date: 0/11 (missing → sector layer is 0; Finviz week tape still sits in join)
 - News tickers in play: 161
 - AB coverage: 1931 names · peer RS: 1804
@@ -50,48 +50,48 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 
 | # | Ticker | Domains | Lane | Company / group | Decision |
 |---:|--------|---------|------|-----------------|----------|
-| 1 | **HITI** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Pharmaceutical Retailers +3.6% d1 / +1.0% 1w / +3.5% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪,Cond green |
-| 2 | **CON** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪,Cond green |
-| 3 | **OKTA** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 4 | **CRWD** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 5 | **BB** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 6 | **PANW** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 7 | **PLTR** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 8 | **AMN** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪,Cond green |
-| 9 | **EPAM** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 10 | **PACS** | 🟡🟡🟢🟡🟢🟡 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=⚪,Cond green |
-| 11 | **RBRK** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 12 | **NBIS** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵 |
-| 13 | **SGRY** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 14 | **PENG** | 🟡🔴🟢🟡🟢🟡 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=🔵,Cond green |
-| 15 | **BLSH** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵 |
+| 1 | **ASTH** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪,Cond green |
+| 2 | **HITI** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Pharmaceutical Retailers +3.6% d1 / +1.0% 1w / +3.5% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪,Cond green |
+| 3 | **CON** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪,Cond green |
+| 4 | **OKTA** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 5 | **CRWD** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 6 | **BB** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 7 | **PANW** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 8 | **PLTR** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 9 | **AMN** | 🟡🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪,Cond green |
+| 10 | **EPAM** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 11 | **EXLS** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 12 | **PRTH** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 13 | **PACS** | 🟡🟡🟢🟡🟢🟡 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=⚪,Cond green |
+| 14 | **GDS** | 🟡🔴🟢🟡🟢🟡 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=🔵,Cond green |
+| 15 | **RBRK** | 🟡🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 
 ### Bear decisions
 
 | # | Ticker | Domains | Industry | Decision |
 |---:|--------|---------|----------|----------|
 | 1 | **OKLO** | 🟡🔴🔴🟡🔴🔴 | Utilities - Independent Power Producers | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -6.3% |
-| 2 | **NEOV** | 🟡🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7% |
-| 3 | **FCEL** | 🟡🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7% |
+| 2 | **FCEL** | 🟡🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7% |
+| 3 | **NEOV** | 🟡🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7% |
 | 4 | **EOSE** | 🟡🔴🔴🟡🔴🟡 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -4.7% |
 | 5 | **ENVX** | 🟡🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7% |
-| 6 | **NNDM** | 🟡🔴🔴🟡🔴🔴 | Computer Hardware | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -3.1% |
-| 7 | **POWL** | 🟡🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7% |
-| 8 | **TE** | 🟡🔴🔴🟡🔴🟡 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -4.7% |
-| 9 | **INDI** | 🟡🔴🔴🟡🔴🔴 | Semiconductors | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow |
-| 10 | **NRGV** | 🟡🔴🔴🟡🔴🟡 | Utilities - Renewable | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -4.1% |
-| 11 | **HNRG** | 🟡🔴🔴🟡🔴🟡 | Utilities - Independent Power Producers | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -6.3% |
+| 6 | **TE** | 🟡🔴🔴🟡🔴🟡 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -4.7% |
+| 7 | **INDI** | 🟡🔴🔴🟡🔴🔴 | Semiconductors | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow |
+| 8 | **NNDM** | 🟡🔴🔴🟡🔴🔴 | Computer Hardware | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -3.1% |
+| 9 | **POWL** | 🟡🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7% |
+| 10 | **HNRG** | 🟡🔴🔴🟡🔴🟡 | Utilities - Independent Power Producers | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -6.3% |
+| 11 | **NRGV** | 🟡🔴🔴🟡🔴🟡 | Utilities - Renewable | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -4.1% |
 | 12 | **PLUG** | 🟡🔴🔴🟡🔴🟡 | Electrical Equipment & Parts | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -4.7% |
-| 13 | **LUNR** | 🟡🔴🔴🟡🔴🔴 | Aerospace & Defense | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow |
-| 14 | **METC** | 🟡🔴🔴🟡🔴🟡 | Coking Coal | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -5.7% |
-| 15 | **AMSC** | 🟡🔴🔴🟡🔴🔴 | Specialty Industrial Machinery | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow |
+| 13 | **METC** | 🟡🔴🔴🟡🔴🟡 | Coking Coal | SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -5.7% |
+| 14 | **LUNR** | 🟡🔴🔴🟡🔴🔴 | Aerospace & Defense | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow |
+| 15 | **SIDU** | 🟡🔴🔴🟡🔴🔴 | Aerospace & Defense | SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow |
 
 ## Finviz outperform board (industry + theme)
 
 This is the live Finviz groups tape — child industry vs parent sector, plus theme joins. Sector LLM essays are a separate (and often disagreeing) layer.
 
 - Heat into the ranker today: **captain_research** (203 captains, 5 industries → s_heat).
-- Board file: `01_daily/map_heat/2026-10-13_map_heat.json` · generated 2026-10-13T04:19:24.191476-04:00
+- Board file: `01_daily/map_heat/2026-10-13_map_heat.json` · generated 2026-10-13T07:48:48.439045-04:00
 
 ### Sector RS vs same-day LLM essay
 
@@ -242,15 +242,33 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 
 ## 1d BUY — why these names
 
-### 1. HITI · $250M micro · Healthcare
+### 1. ASTH · $1.7B small · Healthcare
 
-**1d score +0.382**
+**1d score +0.685**
+
+**ASTH** is a liquid **small-cap** Healthcare name (Medical Care Facilities) at $1.7B, ADV ~523k shares/day. Setup: still in the **mid** of its 52-week range (room left), tape is **mixed** (50/200DMA), extension **neutral**. Last earnings were a **beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.15 | +0.23 | +0.034 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
+| news / judge | 0.30 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.30 | +0.76 | +0.232 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.24 | +0.61 | +0.148 | this week vs its correlated basket |
+| map heat / captains | 1.00 | +0.02 | +0.021 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
+| **1d total** | | | **+0.685** | |
+
+### 2. HITI · $250M micro · Healthcare
+
+**1d score +0.430**
 
 **HITI** is a liquid **micro-cap** Healthcare name (Pharmaceutical Retailers) at $250M, ADV ~541k shares/day. Setup: still in the **mid** of its 52-week range (room left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.15 | +0.46 | +0.067 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.15 | +0.79 | +0.115 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.30 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
@@ -258,17 +276,17 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | peer RS | 0.24 | +0.76 | +0.185 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.08 | +0.080 | liquid small/mid, room to run |
-| **1d total** | | | **+0.382** | |
+| **1d total** | | | **+0.430** | |
 
-### 2. CON · $4.5B mid · Healthcare
+### 3. CON · $4.5B mid · Healthcare
 
-**1d score +0.630**
+**1d score +0.683**
 
-**CON** is a liquid **mid-cap** Healthcare name (Medical Care Facilities) at $4.5B, ADV ~942k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**.
+**CON** is a liquid **mid-cap** Healthcare name (Medical Care Facilities) at $4.5B, ADV ~942k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.15 | +0.35 | +0.051 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.15 | +0.71 | +0.104 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.30 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
@@ -276,139 +294,121 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | peer RS | 0.24 | +0.52 | +0.126 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.02 | +0.021 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1d total** | | | **+0.630** | |
-
-### 3. AMN · $1.3B small · Healthcare
-
-**1d score +0.602**
-
-**AMN** is a liquid **small-cap** Healthcare name (Medical Care Facilities) at $1.3B, ADV ~702k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.15 | +0.80 | +0.117 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
-| news / judge | 0.30 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.30 | +0.64 | +0.194 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.24 | +0.29 | +0.071 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.02 | +0.021 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1d total** | | | **+0.602** | |
+| **1d total** | | | **+0.683** | |
 
 
 ## 1d AVOID — bottom of the same rank
 
 - **OKLO** (mid, Utilities, $6.9B) score -0.259. SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -6.3%
-- **NEOV** (micro, Industrials, $133M) score -0.405. SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7%
-- **FCEL** (small, Industrials, $1.3B) score -0.242. SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7%
+- **FCEL** (small, Industrials, $1.3B) score -0.243. SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7%
+- **NEOV** (micro, Industrials, $133M) score -0.302. SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7%
 - **EOSE** (small, Industrials, $1.1B) score -0.343. SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -4.7%
-- **ENVX** (small, Industrials, $562M) score -0.130. SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7%
-- **NNDM** (small, Technology, $324M) score -0.168. SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -3.1%
-- **POWL** (mid, Industrials, $7.1B) score -0.116. SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7%
+- **ENVX** (small, Industrials, $562M) score -0.078. SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -4.7%
 - **TE** (small, Industrials, $1.1B) score -0.313. SELL/AVOID — market=YELLOW; red domains=parent,child,setup; child lags parent -4.7%
+- **INDI** (small, Technology, $668M) score -0.250. SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow
+- **NNDM** (small, Technology, $324M) score -0.063. SELL/AVOID — market=YELLOW; red domains=parent,child,setup,flow; child lags parent -3.1%
 
 ## 3d BUY (compact — same names, different weights)
 
 | # | Ticker | Score | Size | Sector | Why in short |
 |---|--------|------:|------|--------|--------------|
-| 1 | CBRL | +0.940 | small | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 2 | CDNA | +0.886 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
-| 3 | AVPT | +0.859 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 4 | ARQT | +0.835 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 5 | ETON | +0.834 | small | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
-| 6 | SM | +0.823 | mid | Energy | this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 7 | CAKE | +0.800 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 8 | SHOO | +0.799 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
-| 9 | FIGS | +0.798 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
-| 10 | LAUR | +0.771 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 11 | MQ | +0.768 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 12 | PACS | +0.755 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 13 | RRC | +0.716 | mid | Energy | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 14 | PAYS | +0.711 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 15 | PRCH | +0.707 | small | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 16 | SPNT | +0.694 | mid | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 17 | EZPW | +0.684 | small | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 18 | TAL | +0.678 | mid | Consumer Defensive | this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
-| 19 | AVO | +0.666 | small | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 20 | CNK | +0.663 | mid | Communication Services | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
-| 21 | SONO | +0.658 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 22 | SLDE | +0.656 | mid | Financial | the Finviz industry was **down** |
-| 23 | TBBB | +0.651 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing** |
-| 24 | BKV | +0.599 | mid | Energy | the Finviz industry was **down** |
-| 25 | IMAX | +0.564 | mid | Communication Services | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 1 | CBRL | +0.961 | small | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 2 | CDNA | +0.932 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
+| 3 | AVPT | +0.873 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 4 | SM | +0.872 | mid | Energy | this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 5 | ARQT | +0.852 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 6 | ETON | +0.847 | small | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
+| 7 | MQ | +0.842 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 8 | PACS | +0.839 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 9 | LAUR | +0.809 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 10 | PDFS | +0.806 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
+| 11 | CAKE | +0.802 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 12 | SHOO | +0.799 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
+| 13 | FIGS | +0.798 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
+| 14 | RRC | +0.796 | mid | Energy | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 15 | OLLI | +0.772 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
+| 16 | PAYS | +0.751 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 17 | CNK | +0.748 | mid | Communication Services | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
+| 18 | AVO | +0.747 | small | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 19 | TBBB | +0.746 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing** |
+| 20 | IMAX | +0.699 | mid | Communication Services | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 21 | PRCH | +0.678 | small | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 22 | SPNT | +0.665 | mid | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 23 | BKV | +0.661 | mid | Energy | the Finviz industry was **down** |
+| 24 | SLDE | +0.649 | mid | Financial | the Finviz industry was **down** |
+| 25 | EZPW | +0.608 | small | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
 
 ## 1w BUY (compact — same names, different weights)
 
 | # | Ticker | Score | Size | Sector | Why in short |
 |---|--------|------:|------|--------|--------------|
-| 1 | CBRL | +1.007 | small | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 2 | CDNA | +0.948 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
-| 3 | AVPT | +0.926 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 4 | ARQT | +0.898 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 5 | ETON | +0.897 | small | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
-| 6 | SHOO | +0.864 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
-| 7 | FIGS | +0.863 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
-| 8 | CAKE | +0.858 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 9 | LAUR | +0.826 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 10 | MQ | +0.812 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 11 | SM | +0.806 | mid | Energy | this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 12 | PACS | +0.794 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 13 | PAYS | +0.768 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 14 | SPNT | +0.754 | mid | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 15 | PRCH | +0.753 | small | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 16 | TAL | +0.738 | mid | Consumer Defensive | this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
-| 17 | EZPW | +0.737 | small | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 18 | SLDE | +0.714 | mid | Financial | the Finviz industry was **down** |
-| 19 | AVO | +0.706 | small | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 20 | SONO | +0.706 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 21 | CNK | +0.699 | mid | Communication Services | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
-| 22 | RRC | +0.687 | mid | Energy | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 23 | OLLI | +0.681 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
-| 24 | BKV | +0.646 | mid | Energy | the Finviz industry was **down** |
-| 25 | IMAX | +0.591 | mid | Communication Services | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 1 | CBRL | +1.031 | small | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 2 | CDNA | +1.001 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
+| 3 | AVPT | +0.941 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 4 | ARQT | +0.917 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 5 | ETON | +0.913 | small | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
+| 6 | MQ | +0.898 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 7 | PACS | +0.892 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 8 | LAUR | +0.870 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 9 | SHOO | +0.864 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
+| 10 | FIGS | +0.863 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
+| 11 | SM | +0.862 | mid | Energy | this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 12 | CAKE | +0.861 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 13 | PDFS | +0.848 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
+| 14 | OLLI | +0.815 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
+| 15 | PAYS | +0.813 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 16 | AVO | +0.800 | small | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 17 | CNK | +0.798 | mid | Communication Services | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
+| 18 | TBBB | +0.781 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing** |
+| 19 | RRC | +0.779 | mid | Energy | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 20 | IMAX | +0.740 | mid | Communication Services | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 21 | SPNT | +0.720 | mid | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 22 | PRCH | +0.719 | small | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 23 | BKV | +0.718 | mid | Energy | the Finviz industry was **down** |
+| 24 | SLDE | +0.706 | mid | Financial | the Finviz industry was **down** |
+| 25 | EZPW | +0.650 | small | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
 
 ## 2w BUY (compact — same names, different weights)
 
 | # | Ticker | Score | Size | Sector | Why in short |
 |---|--------|------:|------|--------|--------------|
-| 1 | CBRL | +1.052 | small | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 2 | CDNA | +0.986 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
-| 3 | AVPT | +0.970 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 4 | ARQT | +0.941 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 5 | ETON | +0.941 | small | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
-| 6 | SHOO | +0.909 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
-| 7 | FIGS | +0.908 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
-| 8 | CAKE | +0.902 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 9 | LAUR | +0.864 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 10 | MQ | +0.839 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 11 | WAY | +0.827 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 12 | PAYS | +0.803 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 13 | SPNT | +0.795 | mid | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 14 | PRCH | +0.795 | small | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 15 | SM | +0.790 | mid | Energy | this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 16 | EZPW | +0.778 | small | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 17 | TAL | +0.777 | mid | Consumer Defensive | this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
-| 18 | SLDE | +0.755 | mid | Financial | the Finviz industry was **down** |
-| 19 | SONO | +0.732 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 20 | AVO | +0.727 | small | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 21 | CNK | +0.714 | mid | Communication Services | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
-| 22 | OLLI | +0.690 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
-| 23 | BKV | +0.672 | mid | Energy | the Finviz industry was **down** |
-| 24 | RRC | +0.658 | mid | Energy | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
-| 25 | IMAX | +0.603 | mid | Communication Services | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 1 | CBRL | +1.080 | small | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 2 | CDNA | +1.047 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
+| 3 | AVPT | +0.988 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 4 | ARQT | +0.963 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 5 | ETON | +0.958 | small | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
+| 6 | MQ | +0.936 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 7 | PACS | +0.923 | mid | Healthcare | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 8 | LAUR | +0.913 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 9 | SHOO | +0.909 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
+| 10 | FIGS | +0.908 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
+| 11 | CAKE | +0.905 | mid | Consumer Cyclical | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 12 | PDFS | +0.870 | mid | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
+| 13 | PAYS | +0.855 | small | Technology | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 14 | SM | +0.854 | mid | Energy | this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 15 | OLLI | +0.836 | mid | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing** |
+| 16 | AVO | +0.833 | small | Consumer Defensive | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 17 | CNK | +0.827 | mid | Communication Services | this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
+| 18 | TAL | +0.797 | mid | Consumer Defensive | this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down** |
+| 19 | IMAX | +0.766 | mid | Communication Services | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 20 | RRC | +0.763 | mid | Energy | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 21 | SPNT | +0.756 | mid | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 22 | PRCH | +0.756 | small | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
+| 23 | BKV | +0.754 | mid | Energy | the Finviz industry was **down** |
+| 24 | SLDE | +0.745 | mid | Financial | the Finviz industry was **down** |
+| 25 | EZPW | +0.679 | small | Financial | this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down** |
 
 ## 1m BUY — why these names
 
 ### 1. CBRL · $1.2B small · Consumer Cyclical
 
-**1m score +1.126**
+**1m score +1.157**
 
 **CBRL** is a liquid **small-cap** Consumer Cyclical name (Restaurants) at $1.2B, ADV ~961k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **mixed** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.87 | +0.265 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.31 | +0.97 | +0.296 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
@@ -416,17 +416,17 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | peer RS | 0.28 | +0.99 | +0.275 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+1.126** | |
+| **1m total** | | | **+1.157** | |
 
 ### 2. CDNA · $3.4B mid · Healthcare
 
-**1m score +1.054**
+**1m score +1.122**
 
 **CDNA** is a liquid **mid-cap** Healthcare name (Diagnostics & Research) at $3.4B, ADV ~1185k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **extended**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing**. Labels × today's weather **fit** this environment.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.67 | +0.206 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.31 | +0.90 | +0.275 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
@@ -434,17 +434,17 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | peer RS | 0.28 | +0.88 | +0.246 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+1.054** | |
+| **1m total** | | | **+1.122** | |
 
 ### 3. AVPT · $2.9B mid · Technology
 
-**1m score +1.043**
+**1m score +1.064**
 
 **AVPT** is a liquid **mid-cap** Technology name (Software - Infrastructure) at $2.9B, ADV ~2025k shares/day. Setup: tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.92 | +0.280 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.31 | +0.98 | +0.301 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
@@ -452,35 +452,17 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | peer RS | 0.28 | +0.61 | +0.171 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+1.043** | |
+| **1m total** | | | **+1.064** | |
 
-### 4. ETON · $1.7B small · Healthcare
+### 4. ARQT · $3.5B mid · Healthcare
 
-**1m score +1.010**
-
-**ETON** is a liquid **small-cap** Healthcare name (Drug Manufacturers - Specialty & Generic) at $1.7B, ADV ~559k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**. Labels × today's weather **fit** this environment.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.92 | +0.280 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
-| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.42 | +0.85 | +0.353 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.28 | +0.63 | +0.176 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+1.010** | |
-
-### 5. ARQT · $3.5B mid · Healthcare
-
-**1m score +1.010**
+**1m score +1.035**
 
 **ARQT** is a liquid **mid-cap** Healthcare name (Biotechnology) at $3.5B, ADV ~2136k shares/day. Setup: tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.90 | +0.274 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.31 | +0.98 | +0.299 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
@@ -488,9 +470,45 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | peer RS | 0.28 | +0.66 | +0.182 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+1.010** | |
+| **1m total** | | | **+1.035** | |
 
-### 6. SHOO · $3.3B mid · Consumer Cyclical
+### 5. ETON · $1.7B small · Healthcare
+
+**1m score +1.030**
+
+**ETON** is a liquid **small-cap** Healthcare name (Drug Manufacturers - Specialty & Generic) at $1.7B, ADV ~559k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.31 | +0.98 | +0.301 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
+| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.42 | +0.85 | +0.353 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.28 | +0.63 | +0.176 | this week vs its correlated basket |
+| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
+| **1m total** | | | **+1.030** | |
+
+### 6. MQ · $1.8B small · Technology
+
+**1m score +0.998**
+
+**MQ** is a liquid **small-cap** Technology name (Software - Infrastructure) at $1.8B, ADV ~971k shares/day. Setup: still in the **low** of its 52-week range (room left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.31 | +0.73 | +0.222 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
+| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.42 | +0.76 | +0.317 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.28 | +0.93 | +0.259 | this week vs its correlated basket |
+| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
+| **1m total** | | | **+0.998** | |
+
+### 7. SHOO · $3.3B mid · Consumer Cyclical
 
 **1m score +0.981**
 
@@ -508,7 +526,43 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
 | **1m total** | | | **+0.981** | |
 
-### 7. FIGS · $2.3B mid · Consumer Cyclical
+### 8. PACS · $6.8B mid · Healthcare
+
+**1m score +0.981**
+
+**PACS** is a liquid **mid-cap** Healthcare name (Medical Care Facilities) at $6.8B, ADV ~830k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **mixed** (50/200DMA), extension **neutral**. Last earnings were a **beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.31 | +0.52 | +0.160 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
+| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.42 | +0.88 | +0.367 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.28 | +0.74 | +0.206 | this week vs its correlated basket |
+| map heat / captains | 1.00 | +0.05 | +0.049 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
+| **1m total** | | | **+0.981** | |
+
+### 9. LAUR · $5.2B mid · Consumer Defensive
+
+**1m score +0.981**
+
+**LAUR** is a liquid **mid-cap** Consumer Defensive name (Education & Training Services) at $5.2B, ADV ~1003k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.31 | +0.93 | +0.283 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
+| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.42 | +0.76 | +0.317 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.28 | +0.71 | +0.196 | this week vs its correlated basket |
+| map heat / captains | 1.00 | -0.02 | -0.016 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
+| **1m total** | | | **+0.981** | |
+
+### 10. FIGS · $2.3B mid · Consumer Cyclical
 
 **1m score +0.980**
 
@@ -526,15 +580,15 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
 | **1m total** | | | **+0.980** | |
 
-### 8. CAKE · $5.2B mid · Consumer Cyclical
+### 11. CAKE · $5.2B mid · Consumer Cyclical
 
-**1m score +0.967**
+**1m score +0.970**
 
 **CAKE** is a liquid **mid-cap** Consumer Cyclical name (Restaurants) at $5.2B, ADV ~1635k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.98 | +0.298 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.31 | +0.99 | +0.302 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
@@ -542,71 +596,17 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | peer RS | 0.28 | +0.73 | +0.204 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.967** | |
-
-### 9. LAUR · $5.2B mid · Consumer Defensive
-
-**1m score +0.924**
-
-**LAUR** is a liquid **mid-cap** Consumer Defensive name (Education & Training Services) at $5.2B, ADV ~1003k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.74 | +0.227 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
-| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.42 | +0.76 | +0.317 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.28 | +0.71 | +0.196 | this week vs its correlated basket |
-| map heat / captains | 1.00 | -0.02 | -0.016 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.924** | |
-
-### 10. WAY · $4.9B mid · Healthcare
-
-**1m score +0.890**
-
-**WAY** is a liquid **mid-cap** Healthcare name (Health Information Services) at $4.9B, ADV ~2551k shares/day. Setup: still in the **low** of its 52-week range (room left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.89 | +0.271 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
-| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.42 | +0.76 | +0.317 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.28 | +0.37 | +0.102 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.890** | |
-
-### 11. MQ · $1.8B small · Technology
-
-**1m score +0.888**
-
-**MQ** is a liquid **small-cap** Technology name (Software - Infrastructure) at $1.8B, ADV ~971k shares/day. Setup: still in the **low** of its 52-week range (room left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.37 | +0.112 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
-| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.42 | +0.76 | +0.317 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.28 | +0.93 | +0.259 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.888** | |
+| **1m total** | | | **+0.970** | |
 
 ### 12. PAYS · $718M small · Technology
 
-**1m score +0.865**
+**1m score +0.924**
 
 **PAYS** is a liquid **small-cap** Technology name (Software - Infrastructure) at $718M, ADV ~691k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.73 | +0.224 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.31 | +0.92 | +0.282 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
@@ -614,125 +614,35 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | peer RS | 0.28 | +0.23 | +0.065 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.865** | |
+| **1m total** | | | **+0.924** | |
 
-### 13. SPNT · $2.9B mid · Financial
+### 13. PDFS · $2.4B mid · Technology
 
-**1m score +0.861**
+**1m score +0.915**
 
-**SPNT** is a liquid **mid-cap** Financial name (Insurance - Reinsurance) at $2.9B, ADV ~801k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
+**PDFS** is a liquid **mid-cap** Technology name (Software - Application) at $2.4B, ADV ~603k shares/day. Setup: tape is **uptrend** (50/200DMA), extension **neutral**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.99 | +0.302 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.31 | +0.21 | +0.063 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
 | AB checklist | 0.42 | +0.81 | +0.337 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.28 | +0.02 | +0.006 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.02 | +0.016 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.861** | |
-
-### 14. PRCH · $1.9B small · Financial
-
-**1m score +0.846**
-
-**PRCH** is a liquid **small-cap** Financial name (Insurance - Property & Casualty) at $1.9B, ADV ~1644k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.99 | +0.302 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
-| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.42 | +0.24 | +0.102 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.28 | +0.87 | +0.242 | this week vs its correlated basket |
+| peer RS | 0.28 | +0.95 | +0.265 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.846** | |
+| **1m total** | | | **+0.915** | |
 
-### 15. TAL · $4.0B mid · Consumer Defensive
+### 14. AVO · $1.1B small · Consumer Defensive
 
-**1m score +0.843**
+**1m score +0.891**
 
-**TAL** is a liquid **mid-cap** Consumer Defensive name (Education & Training Services) at $4.0B, ADV ~4615k shares/day. Setup: tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**. Labels × today's weather **fit** this environment.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.91 | +0.277 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
-| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.42 | +0.88 | +0.367 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.28 | -0.00 | -0.001 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.843** | |
-
-### 16. EZPW · $1.9B small · Financial
-
-**1m score +0.837**
-
-**EZPW** is a liquid **small-cap** Financial name (Credit Services) at $1.9B, ADV ~974k shares/day. Setup: tape is **mixed** (50/200DMA), extension **neutral**. Last earnings were a **beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
+**AVO** is a liquid **small-cap** Consumer Defensive name (Food Distribution) at $1.1B, ADV ~881k shares/day. Setup: still in the **mid** of its 52-week range (room left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.99 | +0.302 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
-| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.42 | +0.55 | +0.231 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.28 | +0.38 | +0.105 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.837** | |
-
-### 17. SLDE · $2.7B mid · Financial
-
-**1m score +0.819**
-
-**SLDE** is a liquid **mid-cap** Financial name (Insurance - Property & Casualty) at $2.7B, ADV ~1233k shares/day. Setup: tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: the Finviz industry was **down**. Labels × today's weather **fit** this environment.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.99 | +0.302 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
-| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.42 | +0.76 | +0.317 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.28 | +0.00 | +0.000 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.819** | |
-
-### 18. SONO · $2.0B mid · Technology
-
-**1m score +0.784**
-
-**SONO** is a liquid **mid-cap** Technology name (Consumer Electronics) at $2.0B, ADV ~1940k shares/day. Setup: tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.46 | +0.141 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
-| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.42 | +0.88 | +0.367 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.28 | +0.27 | +0.076 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.784** | |
-
-### 19. AVO · $1.1B small · Consumer Defensive
-
-**1m score +0.770**
-
-**AVO** is a liquid **small-cap** Consumer Defensive name (Food Distribution) at $1.1B, ADV ~881k shares/day. Setup: still in the **mid** of its 52-week range (room left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.24 | +0.074 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.31 | +0.64 | +0.194 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
@@ -740,53 +650,17 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | peer RS | 0.28 | +0.57 | +0.159 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.770** | |
+| **1m total** | | | **+0.891** | |
 
-### 20. SM · $8.0B mid · Energy
+### 15. OLLI · $5.1B mid · Consumer Defensive
 
-**1m score +0.770**
-
-**SM** is a liquid **mid-cap** Energy name (Oil & Gas E&P) at $8.0B, ADV ~3886k shares/day. Setup: tape is **mixed** (50/200DMA), extension **neutral**. Last earnings were a **beat**. AB/peer context: this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Today's **news/judge** is a tailwind for this ticker. Labels × today's weather **fit** this environment.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.65 | +0.198 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
-| news / judge | 0.00 | +0.90 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.42 | +0.81 | +0.337 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.28 | -0.05 | -0.014 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.05 | +0.049 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.770** | |
-
-### 21. CNK · $4.4B mid · Communication Services
-
-**1m score +0.754**
-
-**CNK** is a liquid **mid-cap** Communication Services name (Entertainment) at $4.4B, ADV ~2438k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**.
-
-| Layer | Weight | Signal | Contribution | Means |
-|-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.09 | +0.026 | does this *kind* of stock fit today's regime? |
-| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
-| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
-| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
-| AB checklist | 0.42 | +0.85 | +0.353 | structure + P01–P04 peer/industry/sector |
-| peer RS | 0.28 | +0.53 | +0.146 | this week vs its correlated basket |
-| map heat / captains | 1.00 | +0.03 | +0.028 | nested OVERRIDE + captain research (additive) |
-| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.754** | |
-
-### 22. OLLI · $5.1B mid · Consumer Defensive
-
-**1m score +0.725**
+**1m score +0.884**
 
 **OLLI** is a liquid **mid-cap** Consumer Defensive name (Discount Stores) at $5.1B, ADV ~1889k shares/day. Setup: still in the **low** of its 52-week range (room left), tape is **mixed** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing**.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | -0.15 | -0.046 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.31 | +0.21 | +0.063 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
@@ -794,17 +668,89 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | peer RS | 0.28 | +0.70 | +0.193 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.725** | |
+| **1m total** | | | **+0.884** | |
 
-### 23. BKV · $2.4B mid · Energy
+### 16. CNK · $4.4B mid · Communication Services
 
-**1m score +0.723**
+**1m score +0.881**
+
+**CNK** is a liquid **mid-cap** Communication Services name (Entertainment) at $4.4B, ADV ~2438k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.31 | +0.50 | +0.153 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
+| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.42 | +0.85 | +0.353 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.28 | +0.53 | +0.146 | this week vs its correlated basket |
+| map heat / captains | 1.00 | +0.03 | +0.028 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
+| **1m total** | | | **+0.881** | |
+
+### 17. TAL · $4.0B mid · Consumer Defensive
+
+**1m score +0.866**
+
+**TAL** is a liquid **mid-cap** Consumer Defensive name (Education & Training Services) at $4.0B, ADV ~4615k shares/day. Setup: tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.31 | +0.98 | +0.300 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
+| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.42 | +0.88 | +0.367 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.28 | -0.00 | -0.001 | this week vs its correlated basket |
+| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
+| **1m total** | | | **+0.866** | |
+
+### 18. SM · $8.0B mid · Energy
+
+**1m score +0.843**
+
+**SM** is a liquid **mid-cap** Energy name (Oil & Gas E&P) at $8.0B, ADV ~3886k shares/day. Setup: tape is **mixed** (50/200DMA), extension **neutral**. Last earnings were a **beat**. AB/peer context: this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Today's **news/judge** is a tailwind for this ticker. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.31 | +0.89 | +0.271 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
+| news / judge | 0.00 | +0.90 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.42 | +0.81 | +0.337 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.28 | -0.05 | -0.014 | this week vs its correlated basket |
+| map heat / captains | 1.00 | +0.05 | +0.049 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
+| **1m total** | | | **+0.843** | |
+
+### 19. SPNT · $2.9B mid · Financial
+
+**1m score +0.817**
+
+**SPNT** is a liquid **mid-cap** Financial name (Insurance - Reinsurance) at $2.9B, ADV ~801k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.31 | +0.84 | +0.258 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
+| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.42 | +0.81 | +0.337 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.28 | +0.02 | +0.006 | this week vs its correlated basket |
+| map heat / captains | 1.00 | +0.02 | +0.016 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
+| **1m total** | | | **+0.817** | |
+
+### 20. BKV · $2.4B mid · Energy
+
+**1m score +0.817**
 
 **BKV** is a liquid **mid-cap** Energy name (Oil & Gas E&P) at $2.4B, ADV ~1407k shares/day. Setup: still in the **deep low** of its 52-week range (room left), tape is **downtrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: the Finviz industry was **down**. Labels × today's weather **fit** this environment.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.51 | +0.157 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.31 | +0.82 | +0.250 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
@@ -812,17 +758,17 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | peer RS | 0.28 | +0.00 | +0.000 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.723** | |
+| **1m total** | | | **+0.817** | |
 
-### 24. IMAX · $3.1B mid · Communication Services
+### 21. IMAX · $3.1B mid · Communication Services
 
-**1m score +0.633**
+**1m score +0.810**
 
-**IMAX** is a liquid **mid-cap** Communication Services name (Entertainment) at $3.1B, ADV ~1238k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**.
+**IMAX** is a liquid **mid-cap** Communication Services name (Entertainment) at $3.1B, ADV ~1238k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.04 | +0.013 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.31 | +0.46 | +0.140 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
@@ -830,17 +776,53 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | peer RS | 0.28 | +0.56 | +0.156 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.633** | |
+| **1m total** | | | **+0.810** | |
 
-### 25. RRC · $8.8B mid · Energy
+### 22. SLDE · $2.7B mid · Financial
 
-**1m score +0.626**
+**1m score +0.808**
 
-**RRC** is a liquid **mid-cap** Energy name (Oil & Gas E&P) at $8.8B, ADV ~2768k shares/day. Setup: still in the **low** of its 52-week range (room left), tape is **downtrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Today's **news/judge** is a tailwind for this ticker.
+**SLDE** is a liquid **mid-cap** Financial name (Insurance - Property & Casualty) at $2.7B, ADV ~1233k shares/day. Setup: tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: the Finviz industry was **down**. Labels × today's weather **fit** this environment.
 
 | Layer | Weight | Signal | Contribution | Means |
 |-------|-------:|-------:|-------------:|-------|
-| join × weather | 0.31 | +0.26 | +0.081 | does this *kind* of stock fit today's regime? |
+| join × weather | 0.31 | +0.95 | +0.290 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
+| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.42 | +0.76 | +0.317 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.28 | +0.00 | +0.000 | this week vs its correlated basket |
+| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
+| **1m total** | | | **+0.808** | |
+
+### 23. PRCH · $1.9B small · Financial
+
+**1m score +0.802**
+
+**PRCH** is a liquid **small-cap** Financial name (Insurance - Property & Casualty) at $1.9B, ADV ~1644k shares/day. Setup: already at the **top** of the 52-week range (less upside left), tape is **uptrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.31 | +0.84 | +0.258 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
+| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.42 | +0.24 | +0.102 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.28 | +0.87 | +0.242 | this week vs its correlated basket |
+| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
+| **1m total** | | | **+0.802** | |
+
+### 24. RRC · $8.8B mid · Energy
+
+**1m score +0.745**
+
+**RRC** is a liquid **mid-cap** Energy name (Oil & Gas E&P) at $8.8B, ADV ~2768k shares/day. Setup: still in the **low** of its 52-week range (room left), tape is **downtrend** (50/200DMA), extension **neutral**. Last earnings were a **big beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Today's **news/judge** is a tailwind for this ticker. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.31 | +0.65 | +0.199 | does this *kind* of stock fit today's regime? |
 | sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
 | general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
 | news / judge | 0.00 | +0.90 | +0.000 | headlines + news-judge ticker tilts |
@@ -848,36 +830,54 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | peer RS | 0.28 | +0.03 | +0.008 | this week vs its correlated basket |
 | map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
 | mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
-| **1m total** | | | **+0.626** | |
+| **1m total** | | | **+0.745** | |
+
+### 25. EZPW · $1.9B small · Financial
+
+**1m score +0.725**
+
+**EZPW** is a liquid **small-cap** Financial name (Credit Services) at $1.9B, ADV ~974k shares/day. Setup: tape is **mixed** (50/200DMA), extension **neutral**. Last earnings were a **beat**. AB/peer context: this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**. Labels × today's weather **fit** this environment.
+
+| Layer | Weight | Signal | Contribution | Means |
+|-------|-------:|-------:|-------------:|-------|
+| join × weather | 0.31 | +0.62 | +0.189 | does this *kind* of stock fit today's regime? |
+| sector predict | 0.00 | +0.00 | +0.000 | same-day sector LLM, 0 if that file is missing |
+| general predict | 0.00 | +0.00 | +0.000 | same-day SPX call × this stock's beta |
+| news / judge | 0.00 | +0.00 | +0.000 | headlines + news-judge ticker tilts |
+| AB checklist | 0.42 | +0.55 | +0.231 | structure + P01–P04 peer/industry/sector |
+| peer RS | 0.28 | +0.38 | +0.105 | this week vs its correlated basket |
+| map heat / captains | 1.00 | +0.00 | +0.000 | nested OVERRIDE + captain research (additive) |
+| mid-cap opportunity | add | +0.20 | +0.200 | liquid small/mid, room to run |
+| **1m total** | | | **+0.725** | |
 
 
 ## 1m AVOID — bottom of the same rank
 
-- **CNXC** (small, Technology, $1.5B) score -0.727. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **BAK** (micro, Basic Materials, $257M) score -0.710. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **SOC** (small, Energy, $702M) score -0.704. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **PCT** (small, Industrials, $936M) score -0.699. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **CGEM** (small, Healthcare, $962M) score -0.691. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **CNXC** (small, Technology, $1.5B) score -0.726. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **SOC** (small, Energy, $702M) score -0.696. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **PCT** (small, Industrials, $936M) score -0.689. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **PRM** (mid, Basic Materials, $4.6B) score -0.689. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **ACDC** (small, Energy, $818M) score -0.675. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **AXSM** (large, Healthcare, $10.2B) score -0.675. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **BAK** (micro, Basic Materials, $257M) score -0.674. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **AXSM** (large, Healthcare, $10.2B) score -0.672. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **ACDC** (small, Energy, $818M) score -0.672. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **CGEM** (small, Healthcare, $962M) score -0.671. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **NN** (mid, Technology, $2.4B) score -0.671. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **IBM** (mega, Technology, $208.7B) score -0.670. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **IBM** (mega, Technology, $208.7B) score -0.668. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **WVE** (small, Healthcare, $749M) score -0.663. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **ROIV** (large, Healthcare, $26.5B) score -0.657. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **AIRS** (micro, Healthcare, $138M) score -0.657. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **SSTK** (micro, Communication Services, $150M) score -0.656. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **ALMS** (small, Healthcare, $953M) score -0.649. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **LBTYK** (mid, Communication Services, $3.2B) score -0.646. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **TYRA** (small, Healthcare, $1.5B) score -0.646. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **JBIO** (small, Healthcare, $913M) score -0.643. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **DNTH** (mid, Healthcare, $5.0B) score -0.642. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **MIDD** (mid, Industrials, $4.8B) score -0.641. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **LAB** (micro, Healthcare, $286M) score -0.640. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **LXRX** (small, Healthcare, $845M) score -0.637. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **LFMD** (micro, Healthcare, $141M) score -0.635. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **EYPT** (micro, Healthcare, $287M) score -0.633. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **CRVS** (small, Healthcare, $1.0B) score -0.633. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **ROIV** (large, Healthcare, $26.5B) score -0.656. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **ALMS** (small, Healthcare, $953M) score -0.650. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **LBTYK** (mid, Communication Services, $3.2B) score -0.647. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **TYRA** (small, Healthcare, $1.5B) score -0.647. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **MIDD** (mid, Industrials, $4.8B) score -0.642. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **DNTH** (mid, Healthcare, $5.0B) score -0.637. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **CRVS** (small, Healthcare, $1.0B) score -0.634. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **SSTK** (micro, Communication Services, $150M) score -0.631. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **PLAY** (micro, Communication Services, $223M) score -0.631. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **JBIO** (small, Healthcare, $913M) score -0.631. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **PUMP** (small, Energy, $1.1B) score -0.630. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **TMC** (small, Basic Materials, $1.7B) score -0.623. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **BNTX** (large, Healthcare, $24.6B) score -0.621. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **EYPT** (micro, Healthcare, $287M) score -0.620. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 
 ## Files for this run
 
