@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T06:22:19.022124-04:00",
+  "generated_at": "2026-10-13T06:23:51.080591-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News judge MD `01_daily/news/2026-10-13_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
@@ -664,11 +664,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -797,10 +797,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-13_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=211",
+          "size": 1416252,
+          "said": "1d BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM",
           "bullets": []
         },
         {
@@ -808,21 +808,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-13_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 77327,
+          "said": "Stock book \u2014 2026-10-13",
+          "bullets": [
+            "_Generated 2026-10-13T06:22:44.293811-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-13_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -844,10 +847,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-13 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-13)",
           "size": 10510589,
-          "said": "session 2026-10-13 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-13)",
           "bullets": []
         }
       ],
@@ -860,9 +863,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -872,10 +875,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-13_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=211",
+          "size": 1416252,
+          "said": "1d BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM",
           "bullets": []
         },
         {
@@ -883,10 +886,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-13 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-13)",
           "size": 10510589,
-          "said": "session 2026-10-13 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-13)",
           "bullets": []
         },
         {
@@ -922,8 +925,54 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "HITI",
+        "score": 0.3819719504034057
+      },
+      {
+        "ticker": "CON",
+        "score": 0.6296903633192694
+      },
+      {
+        "ticker": "AMN",
+        "score": 0.602467082669736
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "OKLO",
+        "score": -0.25874893929055864
+      },
+      {
+        "ticker": "NEOV",
+        "score": -0.4051854475070178
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.24244225087770904
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.34263898579393204
+      },
+      {
+        "ticker": "ENVX",
+        "score": -0.12978983372072345
+      },
+      {
+        "ticker": "NNDM",
+        "score": -0.1679974029446069
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.11617951263529552
+      },
+      {
+        "ticker": "TE",
+        "score": -0.31335707008410907
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {
@@ -1563,6 +1612,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CRSR, ELV, AUPH, MRK, AVPT \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, A, CDNA, MRK, ABBV"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T06:23:40.343924-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-13_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1416252,
+          "preview": "1d BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE"
+        },
+        {
+          "path": "data/stock_book/2026-10-13_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-13_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2538,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-13_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11935,
+          "preview": "2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11935,
+          "preview": "2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE"
+        },
+        {
+          "path": "01_daily/2026-10-13_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 78398,
+          "preview": "# Stock book \u2014 2026-10-13\n_Generated 2026-10-13T06:22:44.293811-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE \u00b7 2026-10-13 BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM, POWL, TE \u00b7 # Stock book \u2014 2026-10-13\n_Generated 2026-10-13T06:22:44.293811-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
