@@ -3,13 +3,13 @@
   "phase": "morning_refresh",
   "passthrough": true,
   "source_baseline_generated_at": "2026-10-12T18:33:23.204945-04:00",
-  "generated_at": "2026-10-13T06:17:40.131340-04:00",
+  "generated_at": "2026-10-13T08:27:27.456343-04:00",
   "n_targets": 142,
   "n_cards": 142,
   "n_refreshed": 0,
   "evidence_errors": [],
   "morning_refresh_errors": [
-    "coverage:0/28<required:23"
+    "coverage:8/28<required:23"
   ],
   "cards": [
     {
@@ -8112,7 +8112,7 @@
   "parent_splits": [],
   "opportunities": [],
   "vetoes": [],
-  "one_paragraph": "Morning delta refresh failed captain-evidence QC (coverage:0/28<required:23). Using last night's post-close captain cards so the book still has heat. Overnight tape/news was not re-scored.",
+  "one_paragraph": "Morning delta refresh failed captain-evidence QC (coverage:8/28<required:23). Using last night's post-close captain cards so the book still has heat. Overnight tape/news was not re-scored.",
   "futures": [
     {
       "ticker": "ES",
