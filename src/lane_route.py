@@ -1722,13 +1722,16 @@ def load_keys():
     return keys, ollama_url, gh_direct
 
 
-def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom", accept=None, response_schema=None):
+def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom", accept=None, response_schema=None, model_allowlist=None):
     """Try one $0 hopper. Returns (parsed, info) or (None, None)."""
     keys = ctx["keys"]
     ollama_url = ctx["ollama_url"]
     gh_direct = ctx["gh_direct"]
 
     def hop(name, models, call, abandon_404=False):
+        # Intersect reproducibility pins with the existing allowlists.
+        if model_allowlist is not None:
+            models = [m for m in models if m in model_allowlist]
         return hop_models(
             name, models, call, abandon_404=abandon_404, accept=accept,
         )
