@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:19:22.252090-04:00",
+  "generated_at": "2026-10-13T08:20:32.188758-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -179,7 +179,7 @@
       "inputs_ready": true,
       "n_req_ok": 8,
       "n_req": 9,
-      "n_opt_ok": 12,
+      "n_opt_ok": 13,
       "n_opt": 14,
       "files": [
         {
@@ -338,8 +338,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7607,
-          "said": "2 up / 5 down / 2 flat",
+          "size": 7776,
+          "said": "2 up / 6 down / 2 flat",
           "bullets": [
             "XLB DOWN -1.9",
             "XLC FLAT -5.7",
@@ -354,11 +354,10 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7458,
-          "said": "all_ok=True \u00b7 sectors 9/11 \u00b7 3 fail",
+          "size": 7448,
+          "said": "all_ok=True \u00b7 sectors 10/11 \u00b7 2 fail",
           "bullets": [
             "finviz_market_digest:missing",
-            "sector_predict:missing",
             "sector_predict:missing"
           ]
         },
@@ -519,14 +518,16 @@
           "name": "Sector predict \u2014 utilities",
           "path": "01_daily/sectors/2026-10-13/utilities_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6473,
+          "said": "DOWN mild -1.619",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         }
       ],
-      "said": "general DOWN  -6.767 \u00b7 sectors 2 up / 5 down / 2 flat",
+      "said": "general DOWN  -6.767 \u00b7 sectors 2 up / 6 down / 2 flat",
       "bullets": [
         "bad: Hormuz tanker surge wartime high",
         "bad: Kospi -5.5% AI chip contagion",
@@ -728,8 +729,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7607,
-          "said": "2 up / 5 down / 2 flat",
+          "size": 7776,
+          "said": "2 up / 6 down / 2 flat",
           "bullets": [
             "XLB DOWN -1.9",
             "XLC FLAT -5.7",
@@ -1037,7 +1038,7 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "2 up / 5 down / 2 flat",
+      "said": "2 up / 6 down / 2 flat",
       "bullets": [
         "XLB DOWN -1.9",
         "XLC FLAT -5.7",
@@ -1049,7 +1050,7 @@
         "XLI DOWN -3.2",
         "XLRE FLAT +1.5",
         "XLK DOWN -12.9",
-        "XLU missing"
+        "XLU DOWN -1.6"
       ]
     },
     "news": {},
@@ -2908,70 +2909,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Technology (9/11)",
+      "title": "Sector predict Utilities (10/11)",
       "date": "2026-10-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-13T08:19:21.100345-04:00",
+      "at": "2026-10-13T08:20:31.049098-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-13/technology_predict.md",
+          "path": "01_daily/sectors/2026-10-13/utilities_predict.md",
           "ok": true,
           "reason": "",
-          "size": 6398,
-          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-12.866** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-5.174** (NQ -0.73%, ES -0.09%, PM:XLK -0.97%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **-6.0** (raw -11.025)"
+          "size": 6473,
+          "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-1.619** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **1.423** (ES -0.09%, ZN -0.03%, PM:XLU +0.36%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **-1.35** (raw -1.35)"
         },
         {
-          "path": "01_daily/sectors/2026-10-13/technology_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-13/utilities_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 2608,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (104,716 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLK technology stocks premarket October 13 2026 Kospi selloff AI chip selloff\"* \u2192 got 1 results (via gnews_rss)\n- The Week That Proved AI Is Real: MSFT +16%, AMZN +10%, META -10%, AAPL -4% - Winners, Losers and Key Takeaways - TradingKey (https://news.google.com/rss/articles/CBMi2AFBVV95cUxQdDlGT0RCTjZrNnJHZGpMV1BJUHY5TFVTR0RQWlBPUTV6ZUtrMy1Yd3ptRjVhcDM1WjJNMTg2T0lwS3FGM3FUN01BaWxYNUtrdDdFb1FQTXpqTWF4YXNJa1VlZUowN0lZVXc1TmkwamMwMDRJalIzZG5QS2VOVWNYVkJJOENBWjBHeGlIdlNyVzRONmo1MzdlamVZMGxqTVg3c3ZrdmNxNnd2all5OFJHbHViMjlxZllCNTA"
+          "size": 2274,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (94,334 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10-year Treasury yield today October 13 2026\"* \u2192 got 6 results (via gnews_rss)\n- 10-year Treasury yield at 5.9% would spark shift to bonds from stocks: BofA investor survey - TradingView (https://news.google.com/rss/articles/CBMi8AFBVV95cUxOTXBiZnBfZEJQenRWb1lVenFTTkxueEFYS2tyQTRNUTRURXoxYnNYUl83TndoeXZKWDhFZXc3Q2M1N3JvVmFxNFBJbGZqWGw2M1o5R2VtS3kxUlpKQWVMd1psNDlFb3F6NEtWR21ZVy1tREdFS1R4cm12NUhzUk05T3hRSmRTYVdHemVtcFNUV19teHdrVnBMaEEyOTJDaXlHY2NKOG44SXJkbVhycTNCTEc0b0ZxVWpacGZCOGRzdUJXWTNObWxPT2RSNVlYanpORnM5YnFZNnVDRzFvWmdEYU9j"
         },
         {
-          "path": "01_daily/_transcripts/2026-10-13_sector_technology_predict.json",
+          "path": "01_daily/_transcripts/2026-10-13_sector_utilities_predict.json",
           "ok": true,
           "reason": "",
-          "size": 120731,
+          "size": 108118,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-13_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7458,
+          "size": 7448,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-13/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1511,
+          "size": 1505,
           "preview": "keys: date, n_ok, n_total, required, ok, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-13/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1978,
-          "preview": "# Sector Board \u2014 2026-10-13\nGenerated: **2026-10-13T08:19:21.087567-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1982,
+          "preview": "# Sector Board \u2014 2026-10-13\nGenerated: **2026-10-13T08:20:31.036256-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-13/_board.json",
           "ok": true,
           "reason": "",
-          "size": 7607,
+          "size": 7776,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 1065929,
+          "size": 1067006,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-12.866** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-5.174** (NQ -0.73%, ES -0.09%, PM:XLK -0.97%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **-6.0** (raw -11.025) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (104,716 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLK technology stocks premarket October 13 2026 Kospi selloff AI chip selloff\"* \u2192 got 1 results (via gnews_rss)\n- The Week That Proved AI Is Real: MSFT +16%, AMZN +10%, META -10%, AAPL -4% - Winners, Losers and Key Takeaways - TradingKey (https://news.google.com/rss/articles/CBMi2AFBVV95cUxQdDlGT0RCTjZrNnJHZGpMV1BJUHY5TFVTR0RQWlBPUTV6ZUtrMy1Yd3ptRjVhcDM1WjJNMTg2T0lwS3FGM3FUN01BaWxYNUtr"
+      "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-1.619** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **1.423** (ES -0.09%, ZN -0.03%, PM:XLU +0.36%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **-1.35** (raw -1.35) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (94,334 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10-year Treasury yield today October 13 2026\"* \u2192 got 6 results (via gnews_rss)\n- 10-year Treasury yield at 5.9% would spark shift to bonds from stocks: BofA investor survey - TradingView (https://news.google.com/rss/articles/CBMi8AFBVV95cUxOTXBiZnBfZEJQenRWb1lVenFTTkxueEFYS2tyQTRNUTRURXoxYnNYUl83TndoeXZKWDhFZXc3Q2M1N3JvVmFxNFBJbGZqWGw2M1o5R2VtS3kxUlpKQWVMd1psNDlFb3F6NEtWR21ZVy1tREdFS1R4cm12NUhzUk"
     }
   ],
   "href": {
