@@ -1,8 +1,8 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:04:08.208562-04:00",
+  "generated_at": "2026-10-13T08:05:39.176186-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
     "ok": 6,
     "partial": 2,
@@ -65,7 +65,18 @@
       "morning S missing"
     ]
   },
-  "general": {},
+  "general": {
+    "said": "DOWN  -6.767",
+    "bullets": [
+      "bad: Hormuz tanker surge wartime high",
+      "bad: Kospi -5.5% AI chip contagion",
+      "bad: NQ -0.73% premarket",
+      "good: Europe partial green",
+      "good: oil offered"
+    ],
+    "score": "-6.767",
+    "direction": "down"
+  },
   "sectors": {
     "said": "0 up / 0 down / 0 flat",
     "bullets": [
@@ -83,31 +94,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-13T07:57:34.631982-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-13_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9337,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-13_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5075,
-          "preview": "# Weather report \u2014 2026-10-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -275,6 +261,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-10-13 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T08:05:38.078103-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-10-13_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 6888,
+          "preview": "# Premarket Prediction \u2014 2026-10-13\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.767 (uncertainty multiplier \u00d71.0) | confidence 0.65\n>\n> **Good news vs bad news:** good +0.5 pts vs bad -9.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Europe partial green\n> - oil offered\n> - DXY softer\n> - bank earnings day\n> - IMf WEO growth upgrade\n>\n> **Bad news driving this:**\n> - Hormuz tanker surge wartime high\n> - Kospi -5.5% AI chip contagion\n> - NQ -0.73% premarket\n> - 30Y 5.6 handle\n> - CPI binary tomorrow\n>\n> **market uncertainty: **elevated** | VIX 15.41 | policy-uncertainty index 242.69 (1d +96.0)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & catalysts: -2.0 \u00d7 3.0 = -6.0\n> - \ud83d\udd34 Bond yields"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-10-13\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.767 (uncertainty multiplier \u00d71.0) | confidence 0.65\n>\n> **Good news vs bad news:** good +0.5 pts vs bad -9.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Europe partial green\n> - oil offered\n> - DXY softer\n> - bank earnings day\n> - IMf WEO growth upgrade\n>\n> **Bad news driving this:**\n> - Hormuz tanker surge wartime high\n> - Kospi -5.5% AI chip contagion\n> - NQ -0.73% premarket\n> - 30Y 5.6 handle\n> - CPI binary tomorrow\n>\n> **market uncertainty: **elevated** | VIX 15.41 | policy-uncertainty index 242.69 (1d +96.0)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & catalysts: -2.0 \u00d7 3.0 = -6.0\n> - \ud83d\udd34 Bond yields"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

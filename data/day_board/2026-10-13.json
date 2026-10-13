@@ -1,11 +1,9 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:04:08.208562-04:00",
+  "generated_at": "2026-10-13T08:05:39.176186-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-13_predict.md` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
     "ok": 6,
     "partial": 2,
@@ -179,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 7,
+      "n_req_ok": 8,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -322,11 +320,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-13_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6888,
+          "said": "DOWN -6.767",
+          "bullets": [
+            "bad: Hormuz tanker surge wartime high",
+            "bad: Kospi -5.5% AI chip contagion",
+            "bad: NQ -0.73% premarket",
+            "good: Europe partial green"
+          ]
         },
         {
           "key": "board",
@@ -350,12 +353,12 @@
           "path": "01_daily/2026-10-13_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7562,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
+          "reason": "all_ok=True",
+          "size": 7557,
+          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 12 fail",
           "bullets": [
-            "general_predict:missing",
             "finviz_market_digest:missing",
+            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
           ]
@@ -506,14 +509,18 @@
           "bullets": []
         }
       ],
-      "said": "sectors 0 up / 0 down / 0 flat",
+      "said": "general DOWN  -6.767 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
+        "bad: Hormuz tanker surge wartime high",
+        "bad: Kospi -5.5% AI chip contagion",
+        "bad: NQ -0.73% premarket",
+        "good: Europe partial green",
+        "good: oil offered",
         "XLB missing",
         "XLC missing",
         "XLY missing",
         "XLP missing",
-        "XLE missing",
-        "XLF missing"
+        "XLE missing"
       ]
     },
     {
@@ -675,7 +682,7 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "OK",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
@@ -686,11 +693,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-13_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6888,
+          "said": "DOWN -6.767",
+          "bullets": [
+            "bad: Hormuz tanker surge wartime high",
+            "bad: Kospi -5.5% AI chip contagion",
+            "bad: NQ -0.73% premarket",
+            "good: Europe partial green"
+          ]
         },
         {
           "key": "in_board",
@@ -995,7 +1007,18 @@
         "morning S missing"
       ]
     },
-    "general": {},
+    "general": {
+      "said": "DOWN  -6.767",
+      "bullets": [
+        "bad: Hormuz tanker surge wartime high",
+        "bad: Kospi -5.5% AI chip contagion",
+        "bad: NQ -0.73% premarket",
+        "good: Europe partial green",
+        "good: oil offered"
+      ],
+      "score": "-6.767",
+      "direction": "down"
+    },
     "sectors": {
       "said": "0 up / 0 down / 0 flat",
       "bullets": [
@@ -2847,6 +2870,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-10-13 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T08:05:38.078103-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-10-13_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 6888,
+          "preview": "# Premarket Prediction \u2014 2026-10-13\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.767 (uncertainty multiplier \u00d71.0) | confidence 0.65\n>\n> **Good news vs bad news:** good +0.5 pts vs bad -9.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Europe partial green\n> - oil offered\n> - DXY softer\n> - bank earnings day\n> - IMf WEO growth upgrade\n>\n> **Bad news driving this:**\n> - Hormuz tanker surge wartime high\n> - Kospi -5.5% AI chip contagion\n> - NQ -0.73% premarket\n> - 30Y 5.6 handle\n> - CPI binary tomorrow\n>\n> **market uncertainty: **elevated** | VIX 15.41 | policy-uncertainty index 242.69 (1d +96.0)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & catalysts: -2.0 \u00d7 3.0 = -6.0\n> - \ud83d\udd34 Bond yields"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-10-13\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.767 (uncertainty multiplier \u00d71.0) | confidence 0.65\n>\n> **Good news vs bad news:** good +0.5 pts vs bad -9.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Europe partial green\n> - oil offered\n> - DXY softer\n> - bank earnings day\n> - IMf WEO growth upgrade\n>\n> **Bad news driving this:**\n> - Hormuz tanker surge wartime high\n> - Kospi -5.5% AI chip contagion\n> - NQ -0.73% premarket\n> - 30Y 5.6 handle\n> - CPI binary tomorrow\n>\n> **market uncertainty: **elevated** | VIX 15.41 | policy-uncertainty index 242.69 (1d +96.0)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -1.0 \u00d7 2.0 = -2.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & catalysts: -2.0 \u00d7 3.0 = -6.0\n> - \ud83d\udd34 Bond yields"
     }
   ],
   "href": {
