@@ -31,9 +31,9 @@ from .news_search_catalog import PHRASES, search_specs
 from .news_impact.classify import classify_text
 from .news_impact.prompts import PROMPT_VERSION
 from .news_impact.schema import family_of
-from .news_impact.institutional_actions import identify_institutional_actions
+from .news_impact.headline_analysis import analyse_headline
 
-VERSION = "free-intake-v1"
+VERSION = "free-intake-v2"
 ROOT = Path(__file__).resolve().parents[1]
 UA = "FullscanNewsIntake/1.0 (+https://github.com/SRoyaltyy/fullscan)"
 FALLBACK_QUERIES = {
@@ -475,12 +475,27 @@ def first_pass(doc: dict, now: datetime) -> dict:
     if not hits:
         reasons.append("no lexical match; open-set review")
     classification = classify_text(title, doc.get("body", "")[:1000] if doc.get("extraction_status") == "feed_text" and not doc.get("legacy_generated") else "").to_dict()
+    headline_annotations = analyse_headline(title)
     route_class = classification['event_class']
     route_basis = 'existing_lane_rules'
+    event = headline_annotations['headline_event']
     if route_class == 'discard' and concrete:
-        route_class = next(cls for cls in hits if cls in concrete)
-        route_basis = 'coverage_hint_requires_confirmation'
-        reasons.append('Lane rule router disagrees with event wording; retain for contextual review')
+        # Lexical coverage hints must not override semantic rejection (a sports
+        # walkout or customer buyback cannot choose the labor/share analyst).
+        route_basis = 'unconfirmed_coverage_hints'
+        reasons.append('Lexical hints lack a supported event classification; contextual review required')
+        state = 'review'
+    if event['status'] == 'enum_gap':
+        reasons.append('Recognized event has no supported Lane enum; taxonomy review required')
+        state = 'review'
+    if route_class != 'discard' and classification['q5'] != 'regime':
+        hits.setdefault(route_class, [classification['why']])
+        if date_status == 'dated' and not doc.get('legacy_generated') and event['stage'] not in (
+                'prospective_or_proposed', 'scheduled_readout', 'retrospective', 'negated_or_uncertain'):
+            state = 'candidate'
+    if event['stage'] in ('prospective_or_proposed','scheduled_readout','negated_or_uncertain'):
+        reasons.append('Event stage requires review: '+event['stage'])
+        state = 'review'
     return {"document_id": doc["id"], "title": title, "url": doc.get("url", ""),
             "source": doc.get("source", ""), "published_at": doc.get("published_at", ""),
             "first_seen": doc["first_seen"], "last_seen": doc.get("last_seen", ""),
@@ -490,9 +505,9 @@ def first_pass(doc: dict, now: datetime) -> dict:
             "discovery_paths": doc.get("observations", []),
             "state": state, "candidate_classes": list(hits),
             "matched_phrases": hits, "date_status": date_status, "review_reasons": reasons,
-            "parser": VERSION, "classifier": "deterministic_coverage_hints", "final_lane_class": None,
+            "parser": VERSION, "classifier": "deterministic_headline_relations_v1", "final_lane_class": None,
             "lane_rule_classification": classification,
-            "institutional_actions": identify_institutional_actions(title),
+            **headline_annotations,
             "analyst_family": family_of(route_class),
             "routing_class": route_class, "routing_basis": route_basis,
             "analyst_prompt_version": PROMPT_VERSION, "analysis_status": "pending_contextual_analysis",
@@ -700,9 +715,12 @@ def run(root: Path, date: str, force: bool = False, workers: int = 12, extract: 
                "analyst_family": p['analyst_family'],
                "routing_class": p['routing_class'], "routing_basis": p['routing_basis'],
                "prompt_version": PROMPT_VERSION,
-               "institutional_actions": p["institutional_actions"]} for d,p in zip(docs,parsed)])
+               "lane_rule_classification": p["lane_rule_classification"],
+               "institutional_actions": p["institutional_actions"],
+               "headline_event": p["headline_event"],
+               "sector_classification": p["sector_classification"]} for d,p in zip(docs,parsed)])
     news = root / "01_daily/news"
-    compact = [{k:r[k] for k in ('document_id','title','url','source','published_at','published_raw','first_seen','last_seen','parsed_at','publisher','publisher_domain','discovery_paths','state','candidate_classes','lane_rule_classification','institutional_actions','routing_class','routing_basis','final_lane_class','themes','review_reasons','extraction_status')} for r in parsed]
+    compact = [{k:r[k] for k in ('document_id','title','url','source','published_at','published_raw','first_seen','last_seen','parsed_at','publisher','publisher_domain','discovery_paths','state','candidate_classes','lane_rule_classification','institutional_actions','headline_event','sector_classification','routing_class','routing_basis','final_lane_class','themes','review_reasons','extraction_status')} for r in parsed]
     write_json(news / f"{date}_intake_parsed.json", report | {'all_items': compact})
     (news / f"{date}_intake.md").write_text(render(report, parsed, health))
     dash = root / "dashboard/news-intake"
