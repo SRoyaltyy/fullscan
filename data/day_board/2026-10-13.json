@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T07:54:33.950545-04:00",
+  "generated_at": "2026-10-13T07:54:43.217250-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -590,13 +590,13 @@
           "size": 8341543,
           "said": "25 rows",
           "bullets": [
-            "PFE, A, CDNA, MRK, ABBV, LLY, WAT, ATRC"
+            "A, PFE, CDNA, ABBV, WAT, LLY, MRK, CXT"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "PFE, A, CDNA, MRK, ABBV"
+        "A, PFE, CDNA, ABBV, WAT"
       ]
     },
     {
@@ -772,7 +772,7 @@
           "size": 8341543,
           "said": "25 rows",
           "bullets": [
-            "PFE, A, CDNA, MRK, ABBV, LLY, WAT, ATRC"
+            "A, PFE, CDNA, ABBV, WAT, LLY, MRK, CXT"
           ]
         },
         {
@@ -2291,6 +2291,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T07:54:42.153561-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-13_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7550549,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CRSR, ELV, AUPH, MRK, AVPT"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-13_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8341543,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 A, PFE, CDNA, ABBV, WAT"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CRSR, ELV, AUPH, MRK, AVPT \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 A, PFE, CDNA, ABBV, WAT"
     }
   ],
   "href": {
