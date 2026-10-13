@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "n_ok": 5,
+  "n_ok": 6,
   "n_total": 11,
   "required": false,
   "ok": true,
@@ -50,10 +50,10 @@
     },
     {
       "sector": "Healthcare",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
-      "status": "FAIL"
+      "ok": true,
+      "reason": "",
+      "size": 7116,
+      "status": "OK"
     },
     {
       "sector": "Industrials",
