@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:52:52.738222-04:00",
+  "generated_at": "2026-10-13T08:58:56.539941-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1089,31 +1089,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-10-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-13T04:16:18.797572-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-13_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 5822,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-10-13_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2578,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-13\n**Generated:** 2026-10-13T04:16:18.784171-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a mixed open as traders position for major bank earnings, housing data and this week\u2019s CPI report\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** s CPI release\n**Leaders:** JPM, C, WFC, GS, JNJ, UNH, ORCL\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** JPM, C, WFC, GS, JNJ, UNH\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-13\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-13\n**Generated:** 2026-10-13T04:16:18.784171-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a mixed open as traders position for major bank earnings, housing data and this week\u2019s CPI report\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** s CPI release\n**Leaders:** JPM, C, WFC, GS, JNJ, UNH, ORCL\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** JPM, C, WFC, GS, JNJ, UNH\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-13\n**Clock use:** `same_morning`"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -3877,6 +3852,31 @@
         }
       ],
       "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys:"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T08:58:55.464747-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-13_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97156,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-13_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 12008,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-13\n_Generated 2026-10-13T08:29:42.679225-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-13\n_Generated 2026-10-13T08:29:42.679225-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
     }
   ],
   "href": {
