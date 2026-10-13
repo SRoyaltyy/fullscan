@@ -1,10 +1,11 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T07:47:23.267141-04:00",
+  "generated_at": "2026-10-13T07:48:49.739986-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-13_predict.md` \u2014 missing"
+    "MISSING General predict MD `01_daily/general/2026-10-13_predict.md` \u2014 missing",
+    "MISSING News judge MD `01_daily/news/2026-10-13_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 6,
@@ -56,7 +57,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 275696,
+          "size": 277029,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -67,10 +68,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18042,
+          "size": 18015,
           "said": "MAP HEAT \u2014 2026-10-13",
           "bullets": [
-            "Export `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-13T04:19:24.191476-04:00",
+            "Export `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-13T07:48:48.439045-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -114,7 +115,7 @@
           "size": 11883,
           "said": "Finviz Daily Digest \u2014 2026-10-13",
           "bullets": [
-            "_Generated 2026-10-13T04:16:18.836729-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-13T07:45:51.688489-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -179,7 +180,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 6,
+      "n_req_ok": 5,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -228,7 +229,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 275696,
+          "size": 277029,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -259,15 +260,11 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-13_judge.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 9553,
-          "said": "1. **Houthi/Iran escalation: Riyadh missile attacks day 3, tanker attacked in Strait of Hormuz** \u2014 fresh kinetic oil-supply increment with energy freight/insura",
-          "bullets": [
-            "2. **Hawkish Fed comments boost October hike expectations; gold drops >$100; yields surge with mortgage hedging pressure** \u2014 the dominant rates cluster into this week's CPI + Powell; hits gold, banks, small caps, duration. Channel: rates",
-            "3. **OPEC cuts 2026 oil demand growth forecast to 400k bpd** \u2014 demand-side counterweight to the supply shock; caps XLE upside, mixed for energy. Channel: sector_fundamental",
-            "4. **EU weighs oil/gas windfall profit tax as energy prices soar** \u2014 policy overhang on European energy majors, mild substitution/read-across for US energy sentiment. Channel: sector_policy"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "research_json",
@@ -346,13 +343,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7570,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
+          "size": 7574,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 15 fail",
           "bullets": [
             "general_predict:missing",
             "events:zero_events",
-            "finviz_market_digest:missing",
-            "sector_predict:missing"
+            "news_judge:missing",
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -372,11 +369,11 @@
           "path": "01_daily/2026-10-13_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False News judge, parse, actions, finviz digests and map-heat (with a full live futures tape and calendar) are all genuine sam",
-          "size": 1387,
-          "said": "ok=False \u00b7 missing \u2014 general market predict is a required core artifact and no same-day direction exists anywhere 01_daily/general/2026-10-13_predict.md",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
-            "News judge, parse, actions, finviz digests and map-heat (with a full live futures tape and calendar) are all genuine same-day artifacts and pass. Sector predicts are optional on this date and are not counted. Research files claim a pre-open refresh with 142 cards but the synthesis admits the delta refresh failed captain-evidence QC and reused last night's post-close cards with no overnight re-score \u2014 noted as a quality degradation, not a fail, since a baseline exists and phase is not morning_bootstrap. The day fails on the missing general predict and the hollow zero-event events scan, both of which are required core."
+            "Grok returned an empty review"
           ]
         },
         {
@@ -739,15 +736,11 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-13_judge.md",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 9553,
-          "said": "1. **Houthi/Iran escalation: Riyadh missile attacks day 3, tanker attacked in Strait of Hormuz** \u2014 fresh kinetic oil-supply increment with energy freight/insura",
-          "bullets": [
-            "2. **Hawkish Fed comments boost October hike expectations; gold drops >$100; yields surge with mortgage hedging pressure** \u2014 the dominant rates cluster into this week's CPI + Powell; hits gold, banks, small caps, duration. Channel: rates",
-            "3. **OPEC cuts 2026 oil demand growth forecast to 400k bpd** \u2014 demand-side counterweight to the supply shock; caps XLE upside, mixed for energy. Channel: sector_fundamental",
-            "4. **EU weighs oil/gas windfall profit tax as energy prices soar** \u2014 policy overhang on European energy majors, mild substitution/read-across for US energy sentiment. Channel: sector_policy"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_weather",
@@ -2162,6 +2155,31 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-10-13 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T07:48:48.662285-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-13_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 277029,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-13_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18354,
+          "preview": "# MAP HEAT \u2014 2026-10-13\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-13T07:48:48.439045-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-13\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-13T07:48:48.439045-04:00"
     }
   ],
   "href": {
