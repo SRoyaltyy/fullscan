@@ -1,0 +1,33 @@
+name: Clear redundant Lane gold for provider diagnosis
+on:
+  push:
+    branches: [codex/lane-provider-repair-20261014]
+    paths: ['.github/workflows/lane_provider_clear_redundant.yml']
+permissions:
+  actions: write
+  contents: read
+jobs:
+  clear:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Cancel only this branch's redundant automatic gold run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,os,urllib.request
+          base='https://api.github.com/repos/SRoyaltyy/fullscan/actions/runs/38430746660'
+          headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json'}
+          with urllib.request.urlopen(urllib.request.Request(base,headers=headers)) as response:
+              run=json.load(response)
+          assert run['head_sha']=='6624b60b874e434e9ab3d1fa3e9af3bfddb07a82'
+          assert run['head_branch']=='codex/lane-provider-repair-20261014'
+          assert run['path']=='.github/workflows/lane_one_shot_100.yml'
+          assert run['event']=='push'
+          if run['status']=='completed':
+              print('Redundant gold already completed')
+          else:
+              with urllib.request.urlopen(urllib.request.Request(base+'/cancel',headers=headers,data=b'',method='POST')) as response:
+                  print('Cancellation requested for redundant gold:',response.status)
+          PY
