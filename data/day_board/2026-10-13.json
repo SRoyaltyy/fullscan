@@ -1,10 +1,11 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T07:57:28.675181-04:00",
+  "generated_at": "2026-10-13T07:57:35.692448-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-13_predict.md` \u2014 missing"
+    "MISSING General predict MD `01_daily/general/2026-10-13_predict.md` \u2014 missing",
+    "MISSING News judge MD `01_daily/news/2026-10-13_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 6,
@@ -56,7 +57,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 277029,
+          "size": 275696,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -67,10 +68,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18015,
+          "size": 18042,
           "said": "MAP HEAT \u2014 2026-10-13",
           "bullets": [
-            "Export `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-13T07:48:48.439045-04:00",
+            "Export `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-13T04:19:24.191476-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -114,7 +115,7 @@
           "size": 11883,
           "said": "Finviz Daily Digest \u2014 2026-10-13",
           "bullets": [
-            "_Generated 2026-10-13T07:45:51.688489-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-13T04:16:18.836729-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -179,7 +180,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 6,
+      "n_req_ok": 5,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -228,7 +229,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 277029,
+          "size": 275696,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -259,15 +260,11 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-13_judge.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 9553,
-          "said": "1. **Houthi/Iran escalation: Riyadh missile attacks day 3, tanker attacked in Strait of Hormuz** \u2014 fresh kinetic oil-supply increment with energy freight/insura",
-          "bullets": [
-            "2. **Hawkish Fed comments boost October hike expectations; gold drops >$100; yields surge with mortgage hedging pressure** \u2014 the dominant rates cluster into this week's CPI + Powell; hits gold, banks, small caps, duration. Channel: rates",
-            "3. **OPEC cuts 2026 oil demand growth forecast to 400k bpd** \u2014 demand-side counterweight to the supply shock; caps XLE upside, mixed for energy. Channel: sector_fundamental",
-            "4. **EU weighs oil/gas windfall profit tax as energy prices soar** \u2014 policy overhang on European energy majors, mild substitution/read-across for US energy sentiment. Channel: sector_policy"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "research_json",
@@ -346,8 +343,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7577,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "size": 7574,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 15 fail",
           "bullets": [
             "general_predict:missing",
             "events:zero_events",
@@ -543,17 +540,17 @@
           "path": "01_daily/weather/2026-10-13_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9335 vix=falling yields=falling",
-          "size": 9335,
-          "said": "hostile 10 \u00b7 neutral 1",
+          "reason": "sectors=11 bytes=9337 vix=falling yields=falling",
+          "size": 9337,
+          "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities"
           ]
         }
       ],
-      "said": "hostile 10 \u00b7 neutral 1",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities"
       ]
     },
     {
@@ -590,13 +587,13 @@
           "size": 8341543,
           "said": "25 rows",
           "bullets": [
-            "A, PFE, CDNA, ABBV, WAT, LLY, MRK, CXT"
+            "PFE, A, CDNA, MRK, ABBV, LLY, WAT, ATRC"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "A, PFE, CDNA, ABBV, WAT"
+        "PFE, A, CDNA, MRK, ABBV"
       ]
     },
     {
@@ -739,15 +736,11 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-13_judge.md",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 9553,
-          "said": "1. **Houthi/Iran escalation: Riyadh missile attacks day 3, tanker attacked in Strait of Hormuz** \u2014 fresh kinetic oil-supply increment with energy freight/insura",
-          "bullets": [
-            "2. **Hawkish Fed comments boost October hike expectations; gold drops >$100; yields surge with mortgage hedging pressure** \u2014 the dominant rates cluster into this week's CPI + Powell; hits gold, banks, small caps, duration. Channel: rates",
-            "3. **OPEC cuts 2026 oil demand growth forecast to 400k bpd** \u2014 demand-side counterweight to the supply shock; caps XLE upside, mixed for energy. Channel: sector_fundamental",
-            "4. **EU weighs oil/gas windfall profit tax as energy prices soar** \u2014 policy overhang on European energy majors, mild substitution/read-across for US energy sentiment. Channel: sector_policy"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_weather",
@@ -755,11 +748,11 @@
           "path": "01_daily/weather/2026-10-13_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9335 vix=falling yields=falling",
-          "size": 9335,
-          "said": "hostile 10 \u00b7 neutral 1",
+          "reason": "sectors=11 bytes=9337 vix=falling yields=falling",
+          "size": 9337,
+          "said": "hostile 9 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities"
           ]
         },
         {
@@ -772,7 +765,7 @@
           "size": 8341543,
           "said": "25 rows",
           "bullets": [
-            "A, PFE, CDNA, ABBV, WAT, LLY, MRK, CXT"
+            "PFE, A, CDNA, MRK, ABBV, LLY, WAT, ATRC"
           ]
         },
         {
@@ -782,10 +775,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2273103,
-          "said": "215 rows",
+          "size": 2242570,
+          "said": "214 rows",
           "bullets": [
-            "GLBE, SHOO, FIGS, SN, ANDG, FIVE, ANF, AMZN"
+            "GLBE, SHOO, HLNE, VCTR, WT, HOOD, RGA, AAMI"
           ]
         },
         {
@@ -808,8 +801,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=211",
-          "size": 1420018,
-          "said": "1d BUY ASTH, HITI, CON \u00b7 SELL OKLO, FCEL, NEOV, EOSE, ENVX, TE",
+          "size": 1416252,
+          "said": "1d BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM",
           "bullets": []
         },
         {
@@ -819,10 +812,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 77412,
+          "size": 77327,
           "said": "Stock book \u2014 2026-10-13",
           "bullets": [
-            "_Generated 2026-10-13T07:54:57.143895-04:00_",
+            "_Generated 2026-10-13T06:29:31.992789-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -863,9 +856,9 @@
           "bullets": []
         }
       ],
-      "said": "215 rows",
+      "said": "214 rows",
       "bullets": [
-        "GLBE, SHOO, FIGS, SN, ANDG"
+        "GLBE, SHOO, HLNE, VCTR, WT"
       ]
     },
     {
@@ -886,8 +879,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=211",
-          "size": 1420018,
-          "said": "1d BUY ASTH, HITI, CON \u00b7 SELL OKLO, FCEL, NEOV, EOSE, ENVX, TE",
+          "size": 1416252,
+          "said": "1d BUY HITI, CON, AMN \u00b7 SELL OKLO, NEOV, FCEL, EOSE, ENVX, NNDM",
           "bullets": []
         },
         {
@@ -936,16 +929,16 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "ASTH",
-        "score": 0.6853849488825614
-      },
-      {
         "ticker": "HITI",
-        "score": 0.42971909968837124
+        "score": 0.3819719504034057
       },
       {
         "ticker": "CON",
-        "score": 0.6833472858146779
+        "score": 0.6296903633192694
+      },
+      {
+        "ticker": "AMN",
+        "score": 0.602467082669736
       }
     ],
     "sell_1d": [
@@ -954,32 +947,32 @@
         "score": -0.25874893929055864
       },
       {
-        "ticker": "FCEL",
-        "score": -0.24302784953839496
+        "ticker": "NEOV",
+        "score": -0.4051854475070178
       },
       {
-        "ticker": "NEOV",
-        "score": -0.30196029192674484
+        "ticker": "FCEL",
+        "score": -0.24244225087770904
       },
       {
         "ticker": "EOSE",
-        "score": -0.34267152455689964
+        "score": -0.34263898579393204
       },
       {
         "ticker": "ENVX",
-        "score": -0.07762165273292498
-      },
-      {
-        "ticker": "TE",
-        "score": -0.3132087526267062
-      },
-      {
-        "ticker": "INDI",
-        "score": -0.25006945029725197
+        "score": -0.12978983372072345
       },
       {
         "ticker": "NNDM",
-        "score": -0.06277656440380001
+        "score": -0.1679974029446069
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.11617951263529552
+      },
+      {
+        "ticker": "TE",
+        "score": -0.31335707008410907
       }
     ],
     "flatten": {
@@ -1009,9 +1002,9 @@
     },
     "news": {},
     "weather": {
-      "said": "hostile 10 \u00b7 neutral 1",
+      "said": "hostile 9 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Financial, Healthcare, Industrials, Real Estate, Technology, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Technology, Utilities"
       ]
     }
   },
@@ -2649,6 +2642,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-13\n_Generated 2026-10-13T11:57:26 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$103,033.45** (after 09:30 $103,033.45 \u00b7 after 16:00 $103,033.45)\n- Prior close **$103,033.45** \u00b7 09:30 **$103,033.45** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$103,033.45**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$103,033.45** \u00b7 2026-10-13 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_over"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T07:57:34.631982-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-13_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9337,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-13_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5075,
+          "preview": "# Weather report \u2014 2026-10-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
