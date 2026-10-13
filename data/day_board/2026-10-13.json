@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T13:49:39.389230-04:00",
+  "generated_at": "2026-10-13T15:55:39.797605-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -846,7 +846,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=133",
-          "size": 1163884,
+          "size": 1163885,
           "said": "1d BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX \u00b7 -0.5525",
           "bullets": []
         },
@@ -860,7 +860,7 @@
           "size": 44618,
           "said": "Stock book \u2014 2026-10-13",
           "bullets": [
-            "_Generated 2026-10-13T13:49:36.710819-04:00_",
+            "_Generated 2026-10-13T08:59:49.687747-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -924,7 +924,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=133",
-          "size": 1163884,
+          "size": 1163885,
           "said": "1d BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX \u00b7 -0.5525",
           "bullets": []
         },
@@ -4260,13 +4260,13 @@
       "date": "2026-10-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-13T13:38:07.821002-04:00",
+      "at": "2026-10-13T15:55:39.142228-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 35910,
+          "size": 37953,
           "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
         },
         {
@@ -4280,14 +4280,14 @@
           "path": "data/day_board/2026-10-13.json",
           "ok": true,
           "reason": "",
-          "size": 237472,
+          "size": 245450,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-10-13_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 200307,
+          "size": 204851,
           "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
         },
         {
@@ -4329,7 +4329,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 200307,
+          "size": 204851,
           "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
         },
         {
@@ -4504,6 +4504,22 @@
       "commit_msg": "auto: strategy tickets 2026-10-13",
       "workflow": "Publish strategy tickets",
       "run_id": "38440360938",
+      "manifest": "research/input_freeze/2026-10-13/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-13.json",
+      "at": "2026-10-13T15:55:40-04:00",
+      "commit_msg": "auto: land live_boards [2026-10-13]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38458335315",
+      "manifest": "research/input_freeze/2026-10-13/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-13_tickets.json",
+      "at": "2026-10-13T15:55:40-04:00",
+      "commit_msg": "auto: land live_boards [2026-10-13]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38458335315",
       "manifest": "research/input_freeze/2026-10-13/manifest.json"
     }
   ]
