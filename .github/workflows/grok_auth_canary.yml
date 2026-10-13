@@ -25,6 +25,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           clean: false
+      - name: Full tree after leftover sparse-checkout
+        run: |
+          git sparse-checkout disable || true
+          test -f requirements.txt || {
+            echo "ERROR: requirements.txt missing. A prior job left git sparse-checkout enabled on this self-hosted runner."
+            exit 1
+          }
       - name: Real Grok completion through the gateway
         run: |
           sudo -n env -u XAI_API_KEY -u OPENCLAW_XAI_API_KEY -u GROK_API_KEY \
