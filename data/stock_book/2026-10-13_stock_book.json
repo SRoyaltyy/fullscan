@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-13",
-    "generated_at": "2026-10-13T08:29:53.527893-04:00",
+    "generated_at": "2026-10-13T08:59:00.923123-04:00",
     "general_bias": -0.5525,
     "sector_bias": {
       "Basic Materials": -0.238,
@@ -302,7 +302,7 @@
     "pile_used": false,
     "green_min": 8,
     "ranker": "decision_lattice",
-    "as_of": false,
+    "as_of": true,
     "general_direction": "down",
     "market_decision": {
       "date": "2026-10-13",
@@ -353,7 +353,7 @@
       "stand_down": false,
       "restrict_to_catalysts": true,
       "reason": "41 names qualified through catalyst_exception,probable (41 probable)",
-      "n_usable_catalysts": 0,
+      "n_usable_catalysts": 2,
       "market_state": "hard_red"
     },
     "calendar_entry_scale": 0.5,
@@ -430,7 +430,7 @@
         "stand_down": false,
         "restrict_to_catalysts": true,
         "reason": "41 names qualified through catalyst_exception,probable (41 probable)",
-        "n_usable_catalysts": 0,
+        "n_usable_catalysts": 2,
         "market_state": "hard_red"
       },
       "bull_watch": [

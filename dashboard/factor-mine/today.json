@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:51:30.747957-04:00",
+  "generated_at": "2026-10-13T08:59:04.322370-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -117,77 +117,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-10-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-13T04:15:53.339784-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-13_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 5822,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-10-13_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2578,
-          "preview": "# Finviz homepage market digest \u2014 2026-10-13\n**Generated:** 2026-10-13T04:15:53.227021-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a mixed open as traders position for major bank earnings, housing data and this week\u2019s CPI report\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** s CPI release\n**Leaders:** JPM, C, WFC, GS, JNJ, UNH, ORCL\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** JPM, C, WFC, GS, JNJ, UNH\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-13\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-10-13\n**Generated:** 2026-10-13T04:15:53.227021-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a mixed open as traders position for major bank earnings, housing data and this week\u2019s CPI report\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** s CPI release\n**Leaders:** JPM, C, WFC, GS, JNJ, UNH, ORCL\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** JPM, C, WFC, GS, JNJ, UNH\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-13\n**Clock use:** `same_morning`"
-    },
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-13T04:16:12.432839-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-13_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97071,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-13_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11907,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-13\n_Generated 2026-10-13T04:16:12.255523-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        },
-        {
-          "path": "data/exports/finviz_2026-10-13.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11030866,
-          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11510266,
-          "preview": "11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        },
-        {
-          "path": "01_daily/news/2026-10-13_finviz_digest_preopen.json",
-          "ok": true,
-          "reason": "",
-          "size": 97071,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-13\n_Generated 2026-10-13T04:16:12.255523-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-    },
     {
       "key": "finviz_market_digest",
       "title": "Finviz homepage market digest",
@@ -2744,6 +2673,238 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T08:51:52.967390-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 36646,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 953,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-13.json",
+          "ok": true,
+          "reason": "",
+          "size": 200155,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-13_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 165598,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2048273,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-13_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2048273,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-13.json",
+          "ok": true,
+          "reason": "",
+          "size": 166567,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2238252,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2048273,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 165598,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2048273,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2048273,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2238252,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1308,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1308,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys:"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T08:52:52.068706-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 36646,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 953,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-10-13.json",
+          "ok": true,
+          "reason": "",
+          "size": 200155,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-10-13_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 165598,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2048273,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-10-13_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2048273,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/factor_mine/morning_look/2026-10-13.json",
+          "ok": true,
+          "reason": "",
+          "size": 166567,
+          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2238252,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2048273,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 165598,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2048273,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2048273,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2238252,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1308,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1308,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys:"
     }
   ],
   "source": "publish_live_boards"
