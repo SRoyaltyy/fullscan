@@ -37,15 +37,17 @@ def embedded_last_date(page: str) -> str:
     return max(dates) if dates else ""
 
 
-def block(day: str, note: str, n_ok) -> str:
+def block(day: str, note: str, n_ok, mined: bool = False) -> str:
     extra = f" · {n_ok} strategies OK in today_strategies.json" if n_ok is not None else ""
     return (
         f'{MARK}<div id="fmPendingDay" class="note" data-date="{H.escape(day)}" '
         'style="margin:6px 0;padding:6px 10px;border:1px dashed #c90;border-radius:6px;'
         'background:#fff8e6;color:#704c00">'
         f'<b>Newest day {H.escape(day)}</b> — {H.escape(note)}{H.escape(extra)}. '
-        'Display note only; no record changed. The calendar below fills in once the '
-        'post-close mine publishes.</div>'
+        'Display note only; no record changed. '
+        + ('The calendar cells for this day are shown below with this label.'
+           if mined else 'The calendar below fills in once the post-close mine publishes.')
+        + '</div>'
     )
 
 
@@ -54,9 +56,12 @@ def patch(page: str, today: dict) -> str:
         return page
     day = str(today.get("date") or "")
     last = embedded_last_date(page)
-    if not day or (last and day <= last):
+    if not day:
         return page
-    snippet = block(day, PENDING_NOTES.get(day, DEFAULT_NOTE), today.get("n_ok"))
+    mined = bool(last) and day <= last
+    if mined and day not in PENDING_NOTES:
+        return page
+    snippet = block(day, PENDING_NOTES.get(day, DEFAULT_NOTE), today.get("n_ok"), mined)
     anchor = '<div id="ovCalBox"'
     i = page.find(anchor)
     if i < 0:
