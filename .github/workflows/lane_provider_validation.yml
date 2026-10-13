@@ -15,6 +15,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   glm:
+    if: ${{ !contains(github.event.head_commit.message, '[grok-only]') }}
     runs-on: ubuntu-latest
     timeout-minutes: 65
     steps:
@@ -93,7 +94,7 @@ jobs:
           clean: false
           fetch-depth: 1
       - name: Clear inherited sparse checkout
-        run: git sparse-checkout disable
+        run: git -c safe.directory="$GITHUB_WORKSPACE" sparse-checkout disable
       - name: Diagnose timer, OAuth and both Grok model paths
         id: diagnose
         run: PYTHONPATH=.:scripts python3 scripts/diagnose_openclaw_lane.py --output provider_results/grok_diagnostic.json
