@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:15:54.923542-04:00",
+  "generated_at": "2026-10-13T08:17:02.846094-04:00",
   "summary": "",
   "sectors": [
     {
@@ -182,20 +182,26 @@
     {
       "sector": "Industrials",
       "etf": "XLI",
-      "predicted_direction": null,
-      "predicted_magnitude_band": null,
-      "total_score": null,
-      "confidence_score": null,
-      "multiplier": null,
-      "divergence_flagged": null,
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "total_score": -3.228,
+      "confidence_score": 0.529,
+      "multiplier": 0.9,
+      "divergence_flagged": true,
       "actual_pct_change": null,
       "actual_direction": null,
       "direction_hit": null,
       "magnitude_hit": null,
-      "has_predict_md": false,
+      "has_predict_md": true,
       "has_outcome_md": false,
-      "components": {},
-      "status": "FAIL",
+      "components": {
+        "S0_SHARED_MACRO": -1.0,
+        "S1_SECTOR_FACTORS": -1.0,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": 0.0
+      },
+      "status": "OK",
       "provider": "",
       "fallback_reason": ""
     },

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "n_ok": 6,
+  "n_ok": 7,
   "n_total": 11,
   "required": false,
   "ok": true,
@@ -57,10 +57,10 @@
     },
     {
       "sector": "Industrials",
-      "ok": false,
-      "reason": "missing",
-      "size": 0,
-      "status": "FAIL"
+      "ok": true,
+      "reason": "",
+      "size": 6517,
+      "status": "OK"
     },
     {
       "sector": "Real Estate",

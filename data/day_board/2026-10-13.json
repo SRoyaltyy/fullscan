@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:15:56.098049-04:00",
+  "generated_at": "2026-10-13T08:17:04.018481-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -179,7 +179,7 @@
       "inputs_ready": true,
       "n_req_ok": 8,
       "n_req": 9,
-      "n_opt_ok": 9,
+      "n_opt_ok": 10,
       "n_opt": 14,
       "files": [
         {
@@ -338,8 +338,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7097,
-          "said": "2 up / 3 down / 1 flat",
+          "size": 7266,
+          "said": "2 up / 4 down / 1 flat",
           "bullets": [
             "XLB DOWN -1.9",
             "XLC FLAT -5.7",
@@ -354,8 +354,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7491,
-          "said": "all_ok=True \u00b7 sectors 6/11 \u00b7 6 fail",
+          "size": 7480,
+          "said": "all_ok=True \u00b7 sectors 7/11 \u00b7 5 fail",
           "bullets": [
             "finviz_market_digest:missing",
             "sector_predict:missing",
@@ -481,11 +481,13 @@
           "name": "Sector predict \u2014 industrials",
           "path": "01_daily/sectors/2026-10-13/industrials_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6517,
+          "said": "DOWN mild -3.228",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_real_estate",
@@ -521,7 +523,7 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -6.767 \u00b7 sectors 2 up / 3 down / 1 flat",
+      "said": "general DOWN  -6.767 \u00b7 sectors 2 up / 4 down / 1 flat",
       "bullets": [
         "bad: Hormuz tanker surge wartime high",
         "bad: Kospi -5.5% AI chip contagion",
@@ -723,8 +725,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7097,
-          "said": "2 up / 3 down / 1 flat",
+          "size": 7266,
+          "said": "2 up / 4 down / 1 flat",
           "bullets": [
             "XLB DOWN -1.9",
             "XLC FLAT -5.7",
@@ -1032,7 +1034,7 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "2 up / 3 down / 1 flat",
+      "said": "2 up / 4 down / 1 flat",
       "bullets": [
         "XLB DOWN -1.9",
         "XLC FLAT -5.7",
@@ -1041,7 +1043,7 @@
         "XLE UP +1.7",
         "XLF DOWN -0.1",
         "XLV UP +2.6",
-        "XLI missing",
+        "XLI DOWN -3.2",
         "XLRE missing",
         "XLK missing",
         "XLU missing"
@@ -2903,70 +2905,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Healthcare (6/11)",
+      "title": "Sector predict Industrials (7/11)",
       "date": "2026-10-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-13T08:15:54.936796-04:00",
+      "at": "2026-10-13T08:17:02.858724-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-13/healthcare_predict.md",
+          "path": "01_daily/sectors/2026-10-13/industrials_predict.md",
           "ok": true,
           "reason": "",
-          "size": 7116,
-          "preview": "# Sector Prediction \u2014 Healthcare \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLV**\n- rubric: `00_grounding/sectors/healthcare.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **2.601** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **1.793** (ES -0.09%, PM:XLV +0.45%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **2.5** (raw 2.5)"
+          "size": 6517,
+          "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-3.228** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **1.614** (ES -0.09%, ER2 +0.08%, HG +0.66%, PM:XLI +0.38%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **-3.15** (raw -3.15)"
         },
         {
-          "path": "01_daily/sectors/2026-10-13/healthcare_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-13/industrials_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 2398,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Healthcare 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (82,507 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"healthcare XLV Medicare Advantage drug pricing news October 13 2026\"* \u2192 got 6 results (via ddg)\n- Medicare Drug Price Negotiation: 2026 Update \u2014 IRA Impact ... (https://www.openmedicare.us/investigations/drug-price-negotiation-2026)\n- Medicare Drug Price Lookup \u2014 2026 Negotiated Prices ... (https://medicareadvantageanswers.com/drugs.html)\n- Medicare Drug Price Negotiations Yield Uneven Out-of-Pocket ... (https://www.ajmc.com/view/medicare-drug-price-negotiations-yield-uneven-out-of-pocket-savings)\n**Step 2 \u2014 Research.** The mo"
+          "size": 2500,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (89,208 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLI industrials ETF flows October 2026\"* \u2192 got 6 results (via gnews_rss)\n- These industrials stocks stand out for profitability as Q3 earnings begin (XLI:NYSEARCA) - Seeking Alpha (https://news.google.com/rss/articles/CBMisAFBVV95cUxPemlVV2ZoQzZfcmJhcHAtYUhiNEh3MXJjVHBEMmt4b19UVnVscGk5b29uNzJab3FMclc3dm52dFNjSUVKZUV6clNCMXBoYUdRRHV0THJ1ZC1DN2hrOWprTnFWd1NvRFNxRGdydVByZTgxY3puVEdUWE5idGpEOHBaeEdCQzAwRlh4N1FUZ29EWGlsS1V5a3FpVnQtaGkxdzZsZ19fNk9CN1htT0dhSGtwZA?oc=5)\n- Weekly ETFs: Six of 11 sectors record inflows; Financial secto"
         },
         {
-          "path": "01_daily/_transcripts/2026-10-13_sector_healthcare_predict.json",
+          "path": "01_daily/_transcripts/2026-10-13_sector_industrials_predict.json",
           "ok": true,
           "reason": "",
-          "size": 97020,
+          "size": 103321,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-13_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7491,
+          "size": 7480,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-13/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1532,
+          "size": 1525,
           "preview": "keys: date, n_ok, n_total, required, ok, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-13/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1853,
-          "preview": "# Sector Board \u2014 2026-10-13\nGenerated: **2026-10-13T08:15:54.923542-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1914,
+          "preview": "# Sector Board \u2014 2026-10-13\nGenerated: **2026-10-13T08:17:02.846094-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-13/_board.json",
           "ok": true,
           "reason": "",
-          "size": 7097,
+          "size": 7266,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 1062681,
+          "size": 1063764,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Healthcare \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLV**\n- rubric: `00_grounding/sectors/healthcare.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **2.601** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **1.793** (ES -0.09%, PM:XLV +0.45%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **2.5** (raw 2.5) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Healthcare 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (82,507 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"healthcare XLV Medicare Advantage drug pricing news October 13 2026\"* \u2192 got 6 results (via ddg)\n- Medicare Drug Price Negotiation: 2026 Update \u2014 IRA Impact ... (https://www.openmedicare.us/investigations/drug-price-negotiation-2026)\n- Medicare Drug Price Lookup \u2014 2026 Negotiated Prices ... (https://medicareadvantageanswers.com/drugs.html)\n- Medicare Drug Price Negotiations Yield Uneven Out-of-Pocket ... (https"
+      "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-3.228** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **1.614** (ES -0.09%, ER2 +0.08%, HG +0.66%, PM:XLI +0.38%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **-3.15** (raw -3.15) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (89,208 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLI industrials ETF flows October 2026\"* \u2192 got 6 results (via gnews_rss)\n- These industrials stocks stand out for profitability as Q3 earnings begin (XLI:NYSEARCA) - Seeking Alpha (https://news.google.com/rss/articles/CBMisAFBVV95cUxPemlVV2ZoQzZfcmJhcHAtYUhiNEh3MXJjVHBEMmt4b19UVnVscGk5b29uNzJab3FMclc3dm52dFNjSUVKZUV6clNCMXBoYUdRRHV0THJ1ZC1DN2hrOWprTnFWd1NvRFNxRGdydVByZTgxY3puVEd"
     }
   ],
   "href": {
