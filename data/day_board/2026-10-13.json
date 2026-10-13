@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T09:09:26.685688-04:00",
+  "generated_at": "2026-10-13T13:17:00.364901-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -1045,10 +1045,10 @@
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 cash $103,033.45",
+      "said": "0 priced buys \u00b7 cash $108,970.65",
       "bullets": [
         "0 priced buys",
-        "cash $103,033.45"
+        "cash $108,970.65"
       ]
     },
     "general": {
@@ -4169,13 +4169,13 @@
       "date": "2026-10-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-13T09:09:25.542344-04:00",
+      "at": "2026-10-13T13:16:59.225404-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 35921,
+          "size": 35910,
           "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
         },
         {
@@ -4189,14 +4189,14 @@
           "path": "data/day_board/2026-10-13.json",
           "ok": true,
           "reason": "",
-          "size": 231049,
+          "size": 236214,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-10-13_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 195492,
+          "size": 200307,
           "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
         },
         {
@@ -4238,7 +4238,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 195492,
+          "size": 200307,
           "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
         },
         {
@@ -4266,14 +4266,14 @@
           "path": "data/day_board/hold_live_px.json",
           "ok": true,
           "reason": "",
-          "size": 1308,
+          "size": 1390,
           "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
         },
         {
           "path": "dashboard/factor-mine/hold_live_px.json",
           "ok": true,
           "reason": "",
-          "size": 1308,
+          "size": 1390,
           "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
         }
       ],
@@ -4293,6 +4293,22 @@
       "commit_msg": "auto: catalyst daily dossiers",
       "workflow": "Catalyst daily (bounded dossiers)",
       "run_id": "38377685181",
+      "manifest": "research/input_freeze/2026-10-13/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-13.json",
+      "at": "2026-10-13T13:17:01-04:00",
+      "commit_msg": "auto: land live_boards [2026-10-13]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38436427968",
+      "manifest": "research/input_freeze/2026-10-13/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-13_tickets.json",
+      "at": "2026-10-13T13:17:01-04:00",
+      "commit_msg": "auto: land live_boards [2026-10-13]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38436427968",
       "manifest": "research/input_freeze/2026-10-13/manifest.json"
     }
   ]
