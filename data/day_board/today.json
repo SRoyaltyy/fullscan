@@ -1,12 +1,12 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T06:20:06.906503-04:00",
+  "generated_at": "2026-10-13T06:22:19.022124-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 4,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -30,31 +30,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events_catcher",
-      "title": "Event catcher (gap hunt, no carry)",
-      "date": "2026-10-13",
-      "ok": false,
-      "pushed": true,
-      "at": "2026-10-13T05:38:17.252960-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-10-13_events.json",
-          "ok": false,
-          "reason": "zero_events",
-          "size": 212,
-          "preview": "0 events \u00b7 "
-        },
-        {
-          "path": "01_daily/events/2026-10-13_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 205,
-          "preview": "# Event Scan \u2014 2026-10-13 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
-        }
-      ],
-      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-13 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -208,6 +183,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T06:22:14.739054-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-13_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7550549,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CRSR, ELV, AUPH, MRK, AVPT"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-13_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8341543,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, A, CDNA, MRK, ABBV"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CRSR, ELV, AUPH, MRK, AVPT \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, A, CDNA, MRK, ABBV"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
