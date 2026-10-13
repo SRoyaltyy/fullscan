@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T04:19:07.773950-04:00",
+  "generated_at": "2026-10-13T04:19:24.461512-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -74,7 +74,7 @@
           "size": 18042,
           "said": "MAP HEAT \u2014 2026-10-13",
           "bullets": [
-            "Export `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-13T04:19:07.512421-04:00",
+            "Export `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-13T04:19:24.191476-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -118,7 +118,7 @@
           "size": 11883,
           "said": "Finviz Daily Digest \u2014 2026-10-13",
           "bullets": [
-            "_Generated 2026-10-13T04:16:12.255523-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-13T04:16:18.836729-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -143,7 +143,7 @@
           "size": 2578,
           "said": "Finviz homepage market digest \u2014 2026-10-13",
           "bullets": [
-            "Generated:** 2026-10-13T04:16:18.784171-04:00 (America/New_York)",
+            "Generated:** 2026-10-13T04:16:34.787688-04:00 (America/New_York)",
             "Source:** `live`"
           ]
         },
@@ -1054,6 +1054,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-13\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-13T04:19:07.512421-04:00"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T04:19:24.249081-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-13_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 275696,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-13_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18399,
+          "preview": "# MAP HEAT \u2014 2026-10-13\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-13T04:19:24.191476-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-13\nExport `finviz_2026-10-12.csv` \u00b7 11616 names \u00b7 generated 2026-10-13T04:19:24.191476-04:00"
     }
   ],
   "href": {

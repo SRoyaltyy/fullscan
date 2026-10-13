@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-13
 
-Export `finviz_2026-10-13.csv` · 11616 names · generated 2026-10-13T04:19:07.512421-04:00
+Export `finviz_2026-10-12.csv` · 11616 names · generated 2026-10-13T04:19:24.191476-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -282,23 +282,23 @@ COLD (1w):
 ## TICKER-TAGGED NEWS (Finviz v=3)
 - 16 min **SKHY,AVGO** Stock market today: Dow, S&P 500, Nasdaq futures trade mixed with bank earnings on deck (Yahoo Finance)
 - 17 min **V** Visa wins approval to prepare a bank card clearing business in China (Associated Press)
-- 17 min **BKYI** BIO-key Adds New Middle East Government Security Agency Customer, Expanding Regional Footprint (GlobeNewswire)
-- 18 min **TSEM** Tower Semiconductor Announces Third Quarter 2026 Financial Results and Conference Call (GlobeNewswire)
-- 18 min **IDCC** New Research Reveals HDR is Foundational to Premium Video (GlobeNewswire)
-- 18 min **III** European Automotive, Mobility Firms Expand AI in Operations (Business Wire)
-- 20 min **FSLR** FSLR Stock Slips Overnight: First Solar's AI Power Demand Opportunity Faces Tax Credit Test, Says Analyst (Stocktwits)
-- 25 min **GS,UNH,JPM,JNJ,WFC** Tuesday's earnings calendar (MarketWatch)
+- 18 min **BKYI** BIO-key Adds New Middle East Government Security Agency Customer, Expanding Regional Footprint (GlobeNewswire)
+- 19 min **TSEM** Tower Semiconductor Announces Third Quarter 2026 Financial Results and Conference Call (GlobeNewswire)
+- 19 min **IDCC** New Research Reveals HDR is Foundational to Premium Video (GlobeNewswire)
+- 19 min **III** European Automotive, Mobility Firms Expand AI in Operations (Business Wire)
+- 21 min **FSLR** FSLR Stock Slips Overnight: First Solar's AI Power Demand Opportunity Faces Tax Credit Test, Says Analyst (Stocktwits)
+- 26 min **GS,UNH,JPM,JNJ,WFC** Tuesday's earnings calendar (MarketWatch)
 - 33 min **V** V Stock Gains Overnight  Visa Gets Chinas Nod To Prepare For Domestic Payments Market Entry (Stocktwits)
-- 39 min **SKHY** Seoul, Tokyo stocks plunge as Asia suffers fresh tech rout (AFP)
+- 40 min **SKHY** Seoul, Tokyo stocks plunge as Asia suffers fresh tech rout (AFP)
 - 40 min **LCO** Finnair shares hit three-week high as airline raises 2026 outlook (Investing.com)
-- 42 min **MU** Stock Market Today: Dow set to jump as Nasdaq set to retreat with bank earnings, AI trade in spotlight; Kospi slumps (MarketWatch)
+- 43 min **MU** Stock Market Today: Dow set to jump as Nasdaq set to retreat with bank earnings, AI trade in spotlight; Kospi slumps (MarketWatch)
 - 43 min **V** Visa wins approval to prepare for China domestic payments business (Electronic Payments)
 - 47 min **MU** S&P 500 set to dip as investors await Wall Street bank earnings and fret about tech (MarketWatch)
-- 48 min **GS** Goldman to see slowest growth in EPS of the big banks reporting (MarketWatch)
+- 49 min **GS** Goldman to see slowest growth in EPS of the big banks reporting (MarketWatch)
 - 51 min **TMUS,VZ,SPCX** SPCX Stock Slips Overnight: Analysts See T-Mobile and Verizon Holding The Edge In Starlinks Wireless Push (Stocktwits)
 - 53 min **STLA** Stellantis Q3 shipments fall 1% as American weakness offsets Europe EV growth (Investing.com)
-- 53 min **INV** Kaplan Fox Reminds Innventure, Inc. (INV) Investors That They Have Until October 27, 2026 to Move for Lead Plaintiff (Newsfile)
-- 57 min **KORU,SKHY,AVGO,NVDA,INTC** Broadcoms AI Durability Warning Triggers Sharp Drop In SK Hynix, Samsung In Korea; Nvidia's China AI Chip Share Falls As Huawei Closes In (Stocktwits)
+- 54 min **INV** Kaplan Fox Reminds Innventure, Inc. (INV) Investors That They Have Until October 27, 2026 to Move for Lead Plaintiff (Newsfile)
+- 58 min **KORU,SKHY,AVGO,INTC,NVDA** Broadcoms AI Durability Warning Triggers Sharp Drop In SK Hynix, Samsung In Korea; Nvidia's China AI Chip Share Falls As Huawei Closes In (Stocktwits)
 - 1 hour **MOVE** Whitbread beats H1 profit forecasts, urges shareholders to reject Corvex board bid (Investing.com)
 - 1 hour **STLA** Stellantis Shipments Fall on North America Summer Shutdowns (The Wall Street Journal)
 - 1 hour **CMBT** Press release: CMB.TECH fleet update (GlobeNewswire)
