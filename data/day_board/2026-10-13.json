@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T09:01:41.060168-04:00",
+  "generated_at": "2026-10-13T09:01:45.843559-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1089,31 +1089,6 @@
     }
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime (offline retry)",
-      "date": "2026-10-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-13T05:27:35.887774-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-13_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9335,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-13_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5074,
-          "preview": "# Weather report \u2014 2026-10-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -4003,6 +3978,59 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-13\n_Generated 2026-10-13T13:01:39 \u2014 live `flatten_robust`._\n**S=-6.77; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-6.77** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$103,033.45** (after 09:30 $103,033.45 \u00b7 after 16:00 $103,033.45)\n- Prior close **$103,033.45** \u00b7 09:30 **$103,033.45** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$103,033.45**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$103,033.45** \u00b7 2026-10-13 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, "
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T09:01:44.847325-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-13_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1163885,
+          "preview": "1d BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/stock_book/2026-10-13_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-13_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2456,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-13_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 8726,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 8726,
+          "preview": "2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE"
+        },
+        {
+          "path": "01_daily/2026-10-13_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 45593,
+          "preview": "# Stock book \u2014 2026-10-13\n_Generated 2026-10-13T08:59:49.687747-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 2026-10-13 BUY SGRY, CON, ASTH, AMN, HITI, MD, PACS \u00b7 SELL NEOV, OKLO, FCEL, EOSE, NNDM, ENVX, INDI, TE \u00b7 # Stock book \u2014 2026-10-13\n_Generated 2026-10-13T08:59:49.687747-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
