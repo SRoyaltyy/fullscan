@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:18:19.189028-04:00",
+  "generated_at": "2026-10-13T08:19:22.252090-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -179,7 +179,7 @@
       "inputs_ready": true,
       "n_req_ok": 8,
       "n_req": 9,
-      "n_opt_ok": 11,
+      "n_opt_ok": 12,
       "n_opt": 14,
       "files": [
         {
@@ -338,8 +338,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7434,
-          "said": "2 up / 4 down / 2 flat",
+          "size": 7607,
+          "said": "2 up / 5 down / 2 flat",
           "bullets": [
             "XLB DOWN -1.9",
             "XLC FLAT -5.7",
@@ -354,11 +354,10 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7469,
-          "said": "all_ok=True \u00b7 sectors 8/11 \u00b7 4 fail",
+          "size": 7458,
+          "said": "all_ok=True \u00b7 sectors 9/11 \u00b7 3 fail",
           "bullets": [
             "finviz_market_digest:missing",
-            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
           ]
@@ -507,11 +506,13 @@
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-10-13/technology_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6398,
+          "said": "DOWN mild -12.866",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_utilities",
@@ -525,7 +526,7 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -6.767 \u00b7 sectors 2 up / 4 down / 2 flat",
+      "said": "general DOWN  -6.767 \u00b7 sectors 2 up / 5 down / 2 flat",
       "bullets": [
         "bad: Hormuz tanker surge wartime high",
         "bad: Kospi -5.5% AI chip contagion",
@@ -727,8 +728,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7434,
-          "said": "2 up / 4 down / 2 flat",
+          "size": 7607,
+          "said": "2 up / 5 down / 2 flat",
           "bullets": [
             "XLB DOWN -1.9",
             "XLC FLAT -5.7",
@@ -1036,7 +1037,7 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "2 up / 4 down / 2 flat",
+      "said": "2 up / 5 down / 2 flat",
       "bullets": [
         "XLB DOWN -1.9",
         "XLC FLAT -5.7",
@@ -1047,7 +1048,7 @@
         "XLV UP +2.6",
         "XLI DOWN -3.2",
         "XLRE FLAT +1.5",
-        "XLK missing",
+        "XLK DOWN -12.9",
         "XLU missing"
       ]
     },
@@ -2907,70 +2908,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Real Estate (8/11)",
+      "title": "Sector predict Technology (9/11)",
       "date": "2026-10-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-13T08:18:18.013598-04:00",
+      "at": "2026-10-13T08:19:21.100345-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-13/real_estate_predict.md",
+          "path": "01_daily/sectors/2026-10-13/technology_predict.md",
           "ok": true,
           "reason": "",
-          "size": 6965,
-          "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **1.462** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **3.154** (ES -0.09%, ZN -0.03%, PM:XLRE +0.78%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **0.0** (raw 0.0)"
+          "size": 6398,
+          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-12.866** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-5.174** (NQ -0.73%, ES -0.09%, PM:XLK -0.97%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **-6.0** (raw -11.025)"
         },
         {
-          "path": "01_daily/sectors/2026-10-13/real_estate_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-13/technology_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 2160,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (93,799 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10-year Treasury yield real yields October 13 2026 CPI week REITs\"* \u2192 got 6 results (via gnews_rss)\n- TLT\u2019s Yield Edge Is Thin Over SGOV (NASDAQ:TLT) - Seeking Alpha (https://news.google.com/rss/articles/CBMif0FVX3lxTE9SWG92S0prbllxSndsWHgycGtTQlI2V3pXa2Q3WWxZRjJsU0U1ckpIOW9qZTZ6cVlxOTNXM0VkRm9HMWFGZC1FcUhBc0Z4cE16dWJjeDZYOEJGczRKZ0V1bmdmVEJ2YjlNWV81XzVHWDRsblVxNTBJTHhYM1FDckE?oc=5)\n- Bonds At 5%: Is The 10-Year Treasury Finally A Buy? - Real Investment Advice (https://news.google.com/rss/articles/CBMingFBVV95cUxNTHFVS0cxMGZh"
+          "size": 2608,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (104,716 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLK technology stocks premarket October 13 2026 Kospi selloff AI chip selloff\"* \u2192 got 1 results (via gnews_rss)\n- The Week That Proved AI Is Real: MSFT +16%, AMZN +10%, META -10%, AAPL -4% - Winners, Losers and Key Takeaways - TradingKey (https://news.google.com/rss/articles/CBMi2AFBVV95cUxQdDlGT0RCTjZrNnJHZGpMV1BJUHY5TFVTR0RQWlBPUTV6ZUtrMy1Yd3ptRjVhcDM1WjJNMTg2T0lwS3FGM3FUN01BaWxYNUtrdDdFb1FQTXpqTWF4YXNJa1VlZUowN0lZVXc1TmkwamMwMDRJalIzZG5QS2VOVWNYVkJJOENBWjBHeGlIdlNyVzRONmo1MzdlamVZMGxqTVg3c3ZrdmNxNnd2all5OFJHbHViMjlxZllCNTA"
         },
         {
-          "path": "01_daily/_transcripts/2026-10-13_sector_real_estate_predict.json",
+          "path": "01_daily/_transcripts/2026-10-13_sector_technology_predict.json",
           "ok": true,
           "reason": "",
-          "size": 107033,
+          "size": 120731,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-13_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7469,
+          "size": 7458,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-13/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1518,
+          "size": 1511,
           "preview": "keys: date, n_ok, n_total, required, ok, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-13/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1916,
-          "preview": "# Sector Board \u2014 2026-10-13\nGenerated: **2026-10-13T08:18:17.999326-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1978,
+          "preview": "# Sector Board \u2014 2026-10-13\nGenerated: **2026-10-13T08:19:21.087567-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-13/_board.json",
           "ok": true,
           "reason": "",
-          "size": 7434,
+          "size": 7607,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 1064844,
+          "size": 1065929,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **1.462** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **3.154** (ES -0.09%, ZN -0.03%, PM:XLRE +0.78%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (93,799 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10-year Treasury yield real yields October 13 2026 CPI week REITs\"* \u2192 got 6 results (via gnews_rss)\n- TLT\u2019s Yield Edge Is Thin Over SGOV (NASDAQ:TLT) - Seeking Alpha (https://news.google.com/rss/articles/CBMif0FVX3lxTE9SWG92S0prbllxSndsWHgycGtTQlI2V3pXa2Q3WWxZRjJsU0U1ckpIOW9qZTZ6cVlxOTNXM0VkRm9HMWFGZC1FcUhBc0Z4cE16dWJjeDZYOEJGczRKZ0V1bmdmVEJ2YjlNWV81XzVHWDRsblVxNTBJTHhYM1FDckE?oc=5)\n- Bonds "
+      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-12.866** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-5.174** (NQ -0.73%, ES -0.09%, PM:XLK -0.97%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **-6.0** (raw -11.025) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (104,716 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLK technology stocks premarket October 13 2026 Kospi selloff AI chip selloff\"* \u2192 got 1 results (via gnews_rss)\n- The Week That Proved AI Is Real: MSFT +16%, AMZN +10%, META -10%, AAPL -4% - Winners, Losers and Key Takeaways - TradingKey (https://news.google.com/rss/articles/CBMi2AFBVV95cUxQdDlGT0RCTjZrNnJHZGpMV1BJUHY5TFVTR0RQWlBPUTV6ZUtrMy1Yd3ptRjVhcDM1WjJNMTg2T0lwS3FGM3FUN01BaWxYNUtr"
     }
   ],
   "href": {
