@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:13:32.202797-04:00",
+  "generated_at": "2026-10-13T08:14:50.828184-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -179,7 +179,7 @@
       "inputs_ready": true,
       "n_req_ok": 8,
       "n_req": 9,
-      "n_opt_ok": 7,
+      "n_opt_ok": 8,
       "n_opt": 14,
       "files": [
         {
@@ -338,8 +338,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6764,
-          "said": "1 up / 2 down / 1 flat",
+          "size": 6932,
+          "said": "1 up / 3 down / 1 flat",
           "bullets": [
             "XLB DOWN -1.9",
             "XLC FLAT -5.7",
@@ -354,8 +354,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7513,
-          "said": "all_ok=True \u00b7 sectors 4/11 \u00b7 8 fail",
+          "size": 7502,
+          "said": "all_ok=True \u00b7 sectors 5/11 \u00b7 7 fail",
           "bullets": [
             "finviz_market_digest:missing",
             "sector_predict:missing",
@@ -455,11 +455,13 @@
           "name": "Sector predict \u2014 financial",
           "path": "01_daily/sectors/2026-10-13/financial_predict.md",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector predict not required",
-          "size": 0,
-          "said": "optional \u2014 sector predict not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6042,
+          "said": "DOWN mild -0.069",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_healthcare",
@@ -517,7 +519,7 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -6.767 \u00b7 sectors 1 up / 2 down / 1 flat",
+      "said": "general DOWN  -6.767 \u00b7 sectors 1 up / 3 down / 1 flat",
       "bullets": [
         "bad: Hormuz tanker surge wartime high",
         "bad: Kospi -5.5% AI chip contagion",
@@ -719,8 +721,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6764,
-          "said": "1 up / 2 down / 1 flat",
+          "size": 6932,
+          "said": "1 up / 3 down / 1 flat",
           "bullets": [
             "XLB DOWN -1.9",
             "XLC FLAT -5.7",
@@ -1028,14 +1030,14 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "1 up / 2 down / 1 flat",
+      "said": "1 up / 3 down / 1 flat",
       "bullets": [
         "XLB DOWN -1.9",
         "XLC FLAT -5.7",
         "XLY DOWN -7.7",
         "XLP missing",
         "XLE UP +1.7",
-        "XLF missing",
+        "XLF DOWN -0.1",
         "XLV missing",
         "XLI missing",
         "XLRE missing",
@@ -2899,70 +2901,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Energy (4/11)",
+      "title": "Sector predict Financial (5/11)",
       "date": "2026-10-13",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-13T08:13:31.044755-04:00",
+      "at": "2026-10-13T08:14:49.650224-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-13/energy_predict.md",
+          "path": "01_daily/sectors/2026-10-13/financial_predict.md",
           "ok": true,
           "reason": "",
-          "size": 6439,
-          "preview": "# Sector Prediction \u2014 Energy \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **1.668** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.81** (CL -1.59%, QA -1.02%, ES -0.09%, PM:XLE +0.52%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **2.55** (raw 2.55)"
+          "size": 6042,
+          "preview": "# Sector Prediction \u2014 Financial \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.069** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **2.423** (ES -0.09%, ZN -0.03%, PM:XLF +0.60%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **-0.8** (raw -0.8)"
         },
         {
-          "path": "01_daily/sectors/2026-10-13/energy_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-13/financial_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 1543,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Energy 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (88,835 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"WTI Brent oil price today October 13 2026\"* \u2192 got 6 results (via ddg)\n- Daily Oil Market Summary \u2014 Oct 13, 2026 (https://worldoilmonitor.com/daily-oil-market-summary)\n- Brent Crude Oil: $104.87 (Oct 13, 2026) | Convex (https://convextrade.com/metrics/brent)\n- Oil Price Charts: WTI, Brent, Natural Gas & Fuels (https://worldoilmonitor.com/oil-price-charts)\n**Step 2 \u2014 Research.** The model wanted to know: *\"Strait of Hormuz tanker attack Iran oil October 13 2026\"* \u2192 got 6 results (via ddg)\n- Strait of Hormuz attacks surge as Iran ste"
+          "size": 2195,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Financial 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (94,128 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"bank stocks XLF financials October 13 2026 earnings JPMorgan yields\"* \u2192 got 6 results (via gnews_rss)\n- Will Banks Falter in Q3 Earnings Due to High Rates? ETFs in Focus - TradingView (https://news.google.com/rss/articles/CBMivAFBVV95cUxOYm1Jb2hQc2VMemdBcWdGNXNDejFpU2U1bXNzMzctQTRYRTEtRnhPeFdzVmsyRThyeXpxXzNBUjRYY08tMm9GREp4SHBQR2M1clBNUUVBdXJ5MWs5NEo0WEtJNG5Gc1ZTYzVZNnZMNHBmUFR0M0pnSDZBbm8zWkJ6Rk0xSF9CWWtsd2xiWDd1QWxaQTgzQlNBSlQxWWpDeXk2REZJa1lwUU9KOHdqZkZkRjA2XzFkSlBsRTZ4OQ?oc=5)\n- Dear JPMorgan Stock Fans, Mark Your Calendar"
         },
         {
-          "path": "01_daily/_transcripts/2026-10-13_sector_energy_predict.json",
+          "path": "01_daily/_transcripts/2026-10-13_sector_financial_predict.json",
           "ok": true,
           "reason": "",
-          "size": 101389,
+          "size": 107945,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-13_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7513,
+          "size": 7502,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-13/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1546,
+          "size": 1539,
           "preview": "keys: date, n_ok, n_total, required, ok, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-13/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1738,
-          "preview": "# Sector Board \u2014 2026-10-13\nGenerated: **2026-10-13T08:13:31.031896-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1797,
+          "preview": "# Sector Board \u2014 2026-10-13\nGenerated: **2026-10-13T08:14:49.636852-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-13/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6764,
+          "size": 6932,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 1060533,
+          "size": 1061608,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Energy \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **1.668** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.81** (CL -1.59%, QA -1.02%, ES -0.09%, PM:XLE +0.52%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **2.55** (raw 2.55) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Energy 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (88,835 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"WTI Brent oil price today October 13 2026\"* \u2192 got 6 results (via ddg)\n- Daily Oil Market Summary \u2014 Oct 13, 2026 (https://worldoilmonitor.com/daily-oil-market-summary)\n- Brent Crude Oil: $104.87 (Oct 13, 2026) | Convex (https://convextrade.com/metrics/brent)\n- Oil Price Charts: WTI, Brent, Natural Gas & Fuels (https://worldoilmonitor.com/oil-price-charts)\n**Step 2 \u2014 Research.** The model wanted to k"
+      "preview": "# Sector Prediction \u2014 Financial \u2014 2026-10-13\n- news_mode: **on**\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.069** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **2.423** (ES -0.09%, ZN -0.03%, PM:XLF +0.60%) \u00b7 index_carry **-1.692** (general -6.767) \u00b7 llm_overlay **-0.8** (raw -0.8) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Financial 2026-10-13\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (94,128 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"bank stocks XLF financials October 13 2026 earnings JPMorgan yields\"* \u2192 got 6 results (via gnews_rss)\n- Will Banks Falter in Q3 Earnings Due to High Rates? ETFs in Focus - TradingView (https://news.google.com/rss/articles/CBMivAFBVV95cUxOYm1Jb2hQc2VMemdBcWdGNXNDejFpU2U1bXNzMzctQTRYRTEtRnhPeFdzVmsyRThyeXpxXzNBUjRYY08tMm9GREp4SHBQR2M1clBNUUVBdXJ5MWs5NEo0WEtJNG5Gc1ZTYzVZNnZMNHBmUFR0M0pnSDZBbm8zWkJ6Rk0"
     }
   ],
   "href": {
