@@ -2,77 +2,126 @@
 
 ### IMPORTANT NEWS (my ranking)
 
-1. **Houthi/Iran escalation: Riyadh missile attacks day 3, tanker attacked in Strait of Hormuz** — fresh kinetic oil-supply increment with energy freight/insurance costs surging; direct risk-appetite and energy-channel driver. Channel: risk
-2. **Hawkish Fed comments boost October hike expectations; gold drops >$100; yields surge with mortgage hedging pressure** — the dominant rates cluster into this week's CPI + Powell; hits gold, banks, small caps, duration. Channel: rates
-3. **OPEC cuts 2026 oil demand growth forecast to 400k bpd** — demand-side counterweight to the supply shock; caps XLE upside, mixed for energy. Channel: sector_fundamental
-4. **EU weighs oil/gas windfall profit tax as energy prices soar** — policy overhang on European energy majors, mild substitution/read-across for US energy sentiment. Channel: sector_policy
-5. **Boeing 737 MAX 10 certification halted by FAA, 31% of undelivered order book at risk** — Industrials sector weight and supply-chain read-across. Channel: sector_fundamental
-6. **Bank stocks mired in correction as yields surge before earnings; bank earnings begin this week** — rates + earnings binary for XLF. Channel: rates
-7. **Microsoft plans huge in-house AI chip deployment / Cisco–Nvidia data-center bottleneck coverage** — semis/AI-infra basket narrative (custom silicon substitution vs NVDA). Channel: substitution
-8. **Gold drops >$100 on hawkish Fed (AEM digest)** — sentiment/rates proxy for Materials and the crowded gold trade. Channel: sentiment
+1. **Strait of Hormuz tanker attacked; Iran targeting US-UAE oil shuttle; Houthi missiles hit Riyadh 3rd day** — fresh kinetic oil-supply escalation with energy shipping/insurance costs surging; this is the session's primary macro risk driver. (risk)
+2. **Fed minutes: another hike likely this year; officials hold off this month, CPI + Powell comments this week** — unresolved hawkish rates binary gating risk appetite; treat as one rates cluster. (rates)
+3. **US yield surge triggers mortgage hedging, adds to bond-market pressure; bank stocks mired in correction before earnings** — yields are the transmission channel hitting duration, financials, small-caps. (rates)
+4. **Gold drops >$100 on hawkish Fed comments; Agnico Eagle falls** — rescue: gold flush is a real-rates/risk-signal, hits miners basket, not noise. (rates)
+5. **Bank earnings season begins with yields surging into prints (BNY raising prime to 7.00%)** — financials sector catalyst, tests whether NIM beats offset duration pain. (sector_fundamental)
+6. **Amgen Phase 3 dazodalibep success in Sjögren's; Jefferies raises target** — large-cap biotech positive readout with XBI/IBB sympathy. (sector_fundamental)
+7. **Boeing 737 MAX 10 certification halted by FAA; 31% of undelivered 737 order book at risk** — Industrials sector weight, supply-chain certification risk. (sector_fundamental)
+8. **Microsoft deploying gigawatts of in-house AI chips; Nvidia China share eroding to Huawei** — AI capex/substitution pressure on NVDA-adjacent semi basket. (substitution)
 
-The usable set is macro-thin (geopolitics + Fed) and padded with topic_fed noise; most sector color lives in the FINVIZ digest.
+Set is not thin: usable macro (oil/Fed) plus FINVIZ elevated digests give enough to rank 8.
+
+**RULES_APPLIED:** fresh-overnight-kinetic-oil-supply-escalation (Hormuz increment — apply B1=−3 / cap magnitude by futures confirmation when pipeline runs); a-fresh-overnight-kinetic-oil-supply-escalation-iran-hormuz (force mild band unless B6 confirms ≥0.5% down). No CPI/FOMC binary directional gate applies yet beyond #2's unresolved status.
 
 ---
 
-**STEP 1 — FRAMEWORK SCORE**
+### STEP 1 — FRAMEWORK SCORES
 
-1. Hormuz/Riyadh escalation — keep | us_relevance: high (oil supply, freight/insurance, futures risk premium) | channel: risk | geography: us_supply_chain | severity: session | horizon: 1d-1w | action_object: spx | detail: SPX beta via risk premium; XLE second-order | polarity: bearish | why: fresh kinetic supply shock, standing lessons confirm down/mild scoring on confirming tape | conf: 0.8
-2. Hawkish Fed + yield surge + CPI/Powell pending — keep | high (10Y backup, mortgage hedging pressure, hike odds into binary) | rates | us_domestic | session | 1d | spx (with XLF, IWM side effects) | hawkish | why: rising discount rate + unresolved CPI/Powell binary suppresses multiple expansion | conf: 0.75
-3. OPEC demand cut — conditional | medium (global-priced but caps US energy upside) | sector_fundamental | global_priced | session | 1w | sector_etf: XLE | mixed | why: bullish for price, bearish for demand narrative | conf: 0.6
-4. EU windfall tax on oil/gas — conditional | low (foreign policy; mild US sentiment read-across) | sector_policy | global_priced | 1w-1m | sector_etf: XLE (sentiment only) | bearish | why: policy-risk template for energy | conf: 0.5
-5. Boeing MAX 10 halt — keep | medium (Industrials heavyweight, order-book risk) | sector_fundamental | us_domestic | session | 1w-1m | single_name: BA (with XLI drag) | bearish | why: FAA halt hits delivery revenue and supplier chain | conf: 0.7
-6. Bank correction pre-earnings — conditional | medium (XLF weight, earnings kicking off) | rates | us_domestic | session | 1d-1w | sector_etf: XLF | bearish | why: yield surge + NII uncertainty into prints | conf: 0.6
-7. Microsoft custom AI chips at scale — keep | medium (crowded AI-infra basket; substitution vs NVDA/AVGO) | substitution | us_domestic | session | 1w | basket: semis/AI-infra (NVDA, AVGO hyperscaler custom-silicon debate) | mixed | why: capex-save bullish for MSFT, bearish for merchant-silicon share narrative | conf: 0.6
-8. Gold >$100 drop on hawkish Fed — conditional | low-medium (sentiment proxy; crowded gold trade unwinding) | sentiment | global_priced | 1d | basket: gold miners (GDX/AEM) | bearish | why: real-rate-driven unwind, not idiosyncratic | conf: 0.6
+1. Hormuz/Iran/Houthi escalation
+   - keep | us_relevance: high — oil supply shock + shipping/insurance costs hit broad risk appetite
+   - channel: risk | geography: us_supply_chain | severity: session | horizon: 1d-1w
+   - action_object: spx (SPX beta; secondarily XLE, OIH) | polarity: bearish — kinetic supply disruption, oil shipping costs surging
+   - confidence: 0.8
 
-**STEP 2 — INTERACTIONS**
-- **Hawkish Fed/yields + Hormuz oil = one risk cluster**: oil supply shock colliding with rising hike odds into CPI — do not score as separate offsetting forces; net risk-off with XLE the only hedge leg.
-- **Yields up + banks pre-earnings + gold unwind**: same rates channel across XLF, GDX, IWM — don't double-count as three bearish signals; treat as one hawkish-rates sleeve.
-- **MSFT custom chips + Cisco/Nvidia bottleneck coverage**: substitution pressure on merchant silicon; semis mixed, not directional.
+2. Fed hike expectations + CPI/Powell pending
+   - keep | us_relevance: high — direct rate-path pricing into binary week
+   - channel: rates | geography: us_domestic | severity: session | horizon: 1d
+   - action_object: spx | polarity: hawkish — minutes flag another hike; persistence inflation narrative
+   - confidence: 0.75
 
-**STEP 3 — RECLASSIFY AUDIT**
-RESCUED from noise: "US yield surge triggers mortgage hedging" (rates, merges into item 2); "Bank Stocks Mired in Correction as Yields Surge" (XLF, item 6); "EU looking at oil and gas windfall profit tax" (sector_policy, item 4); "AEM/gold drop $100" from digest (sentiment, item 8); Boeing FAA halt from digest (item 5).
-DROPPED from usable: the entire topic_fed obituary/sports Powell padding (~20 items) — keyword collision, zero market content; Ronaldo scarf item — noise; China sanctions on Paraguay/Belize ministers — no US equity transmission; Anduril cheaper missile — single-name color, no sector force. Also dropped single_name bucket: Burry bull-trap clickbait, TikTok/Chew AI-hype warnings, Norway Xandr fine, Tesla robotaxi probe.
+3. Yield surge / mortgage hedging / bank correction
+   - keep | us_relevance: high — 10Y backup is the cross-asset driver of the week
+   - channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w
+   - action_object: sector_etf (XLF; KRE, duration-heavy baskets) | polarity: bearish — hedging flows add mechanical selling pressure
+   - confidence: 0.7
 
-RULES_APPLIED: fresh-overnight-kinetic-oil-supply-escalation (Hormuz increment — cap magnitude at mild if futures flat); a-scheduled-high-impact-macro (CPI/Powell binary pending — no pre-signed directional lean).
+4. Gold −$100 on hawkish Fed; AEM down
+   - keep (rescued) | us_relevance: medium — real-rates flush, miners basket + risk-sentiment tell
+   - channel: rates | geography: global_priced | severity: session | horizon: 1d
+   - action_object: basket (GDX/gold miners) | polarity: bearish — hawkish real-rate repricing
+   - confidence: 0.7
 
-**STEP 4 — B1 / SECTOR INJECT**
+5. Bank earnings begin / BNY prime +25bp
+   - conditional | us_relevance: high — NIM support vs credit/duration worry; earnings gate the sector
+   - channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w
+   - action_object: sector_etf (XLF, KRE) | polarity: mixed — higher prime rate helps margins, yield surge hurts
+   - confidence: 0.6
 
-NEWS_JUDGE: n=8 rescued=5
-MACRO rates: [hawkish] Hike odds building into CPI/Powell; yields surging, mortgage hedging pressure, gold −$100 (session/1d)
-MACRO risk: [bearish] Fresh Hormuz tanker attack + 3rd day Riyadh missiles; freight/insurance costs surging (session/1d-1w)
-MACRO energy: [mixed] OPEC cuts 2026 demand growth to 400k bpd — caps XLE upside despite supply shock (1w)
-SECTOR energy: [mixed] Supply shock vs demand cut vs EU windfall-tax risk (XLE)
-SECTOR industrials: [bearish] Boeing MAX 10 certification halted by FAA; 31% undelivered order book at risk (BA, XLI drag)
-SECTOR financials: [bearish] Banks correcting into earnings on yield surge; XLF + NII binary this week (XLF)
-SECTOR semis: [mixed] MSFT scaling custom AI chips — merchant-silicon substitution pressure vs NVDA/AVGO (basket)
-INTERACTION: Hawkish-rates cluster (yields+gold+banks) is one sleeve; oil shock + hike odds = net risk-off, XLE only hedge
-WATCH: CPI/Powell binary unresolved — no pre-signed directional lean; cap magnitude if futures flat.
+6. Amgen dazodalibep Phase 3 success
+   - keep | us_relevance: medium — large-cap biotech readout with sector sympathy
+   - channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d
+   - action_object: basket (IBB/XBI large-cap immunology) | polarity: bullish — positive late-stage data
+   - confidence: 0.65
+
+7. Boeing MAX 10 certification halted
+   - keep | us_relevance: high — Industrials heavyweight, order-book risk
+   - channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1w-1m
+   - action_object: single_name (BA) + XLI sympathy | polarity: bearish — certification delay hits deliveries/cash flow
+   - confidence: 0.7
+
+8. Microsoft in-house AI chips at scale / NVDA China erosion
+   - single_name (carries substitution force) | us_relevance: medium — custom-silicon substitution pressure on semi basket
+   - channel: substitution | geography: us_supply_chain | severity: session | horizon: 1w-1m
+   - action_object: basket (SOXX/NVDA-adjacent) | polarity: mixed — capex intact but share/margin risk for NVDA
+   - confidence: 0.55
+
+### STEP 2 — INTERACTIONS
+- **Fed hawkish + yield surge + gold flush** → ONE rates cluster; do not double-count across items 2/3/4. Net hawkish risk-off, CPI is the resolver.
+- **Oil shock + hawkish Fed + earnings start** → stagflationary tape: cyclicals/energy favored, duration and small-caps penalized; don't buy IWM on rate-hike hopes.
+- **Bank correction + bank earnings start** → XLF is a coin-flip into prints; no directional lean.
+- **AI power/semis + NVDA China erosion** → semis mixed; do not short SOXX on substitution alone while AI capex intact.
+
+### STEP 3 — RECLASSIFY AUDIT
+**RESCUED (from noise/single-name):**
+- Gold −$100 / AEM — real-rates signal, miners basket (keep)
+- "US yield surge triggers mortgage hedging" — core rates transmission (keep)
+- "Bank stocks mired in correction as yields surge before earnings" — financials sector driver (conditional)
+- Amgen Phase 3 — sector sympathy force beyond single name (keep)
+
+**DROPPED (from usable):**
+- All "Powell" obituary/sports/debate noise under topic_fed — parser name-matching failure, zero market relevance
+- Ronaldo / Saudi missile-alert scarf — color, not market driver
+- Dollar near 18-month high — already captured inside rates cluster
+- BNY prime rate — folded into bank-earnings item, not standalone
+
+### STEP 4 — B1 INJECT
+
+NEWS_JUDGE: n=8 rescued=4
+MACRO rates: [hawkish] Fed minutes flag another hike; yields surging, gold −$100, CPI/Powell binary pending (session/1d)
+MACRO risk: [bearish] Fresh Hormuz tanker attack + Houthi Riyadh missiles; shipping/insurance costs surge (session/1d-1w)
+MACRO interaction: [bearish] Oil shock + hawkish Fed = stagflationary tape; mild-band cap unless futures confirm ≥0.5% down
+SECTOR financials: [mixed] Yields surge into bank earnings; BNY prime to 7.00% — NIM vs duration tug-of-war (XLF/KRE)
+SECTOR healthcare: [bullish] AMGN dazodalibep Phase 3 win; IBB/XBI sympathy (basket)
+SECTOR industrials: [bearish] Boeing MAX 10 cert halted by FAA; 31% of undelivered order book at risk (BA/XLI)
+SECTOR semis: [mixed] MSFT gigawatt in-house AI chips + NVDA China share loss to Huawei (substitution, not short trigger)
+WATCH: rates cluster dominates; do not double-count hawkish signals across Fed/yields/gold.
+
+---
 
 NEWS_PARSE_BEGIN
 IMPORTANT_COUNT: 8
 TOP_ITEMS:
-- Hormuz tanker attack + Riyadh missiles day 3 | keep | channel=risk | severity=session | horizon=1d-1w | object=spx:SPX beta, XLE hedge leg | pol=bearish | conf=0.8
-- Hawkish Fed comments, October hike odds, yield surge + mortgage hedging | keep | channel=rates | severity=session | horizon=1d | object=spx:SPX duration/beta, XLF/IWM side effects | pol=hawkish | conf=0.75
-- OPEC cuts 2026 demand growth to 400k bpd | conditional | channel=sector_fundamental | severity=session | horizon=1w | object=sector_etf:XLE | pol=mixed | conf=0.6
-- EU weighs oil/gas windfall profit tax | conditional | channel=sector_policy | severity=signal horizon=1w-1m | object=sector_etf:XLE sentiment | pol=bearish | conf=0.5
-- Boeing 737 MAX 10 certification halted by FAA | keep | channel=sector_fundamental | severity=session | horizon=1w-1m | object=single_name:BA + XLI drag | pol=bearish | conf=0.7
-- Bank stocks in correction as yields surge pre-earnings | conditional | channel=rates | severity=session | horizon=1d-1w | object=sector_etf:XLF | pol=bearish | conf=0.6
-- Microsoft huge custom AI chip deployment | keep | channel=substitution | severity=session | horizon=1w | object=basket:semis/AI-infra (NVDA/AVGO) | pol=mixed | conf=0.6
-- Gold drops >$100 on hawkish Fed (AEM) | conditional | channel=sentiment | severity=session | horizon=1d | object=basket:GDX/AEM gold miners | pol=bearish | conf=0.6
-INTERACTIONS: hawkish-yields+gold+banks = one rates sleeve; oil shock + hike odds = net risk-off with XLE hedge; MSFT custom chips + Cisco/Nvidia bottleneck = semis mixed
-RESCUED_FROM_NOISE: US yield surge triggers mortgage hedging; Bank Stocks Mired in Correction as Yields Surge; EU looking at oil and gas windfall profit tax; AEM/gold drops $100 on hawkish Fed; Boeing MAX 10 FAA halt
-DROPPED_FROM_USABLE: topic_fed Powell obituary/sports padding; Ronaldo Saudi scarf item; China sanctions on Paraguay/Belize ministers; Anduril cheaper missile; Burry bull-trap clickbait; Tesla robotaxi probe; Norway Xandr fine
+- Strait of Hormuz tanker attack / Houthi Riyadh missiles | keep | channel=risk | severity=session | horizon=1d-1w | object=spx:SPX beta; XLE secondarily | pol=bearish | conf=0.8
+- Fed minutes another hike + CPI/Powell binary | keep | channel=rates | severity=session | horizon=1d | object=spx:SPX | pol=hawkish | conf=0.75
+- Yield surge / mortgage hedging / bank correction | keep | channel=rates | severity=session | horizon=1d-1w | object=sector_etf:XLF,KRE | pol=bearish | conf=0.7
+- Gold −$100 on hawkish Fed (AEM) | keep | channel=rates | severity=session | horizon=1d | object=basket:GDX gold miners | pol=bearish | conf=0.7
+- Bank earnings begin / BNY prime +25bp | conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLF | pol=mixed | conf=0.6
+- AMGN dazodalibep Phase 3 success | keep | channel=sector_fundamental | severity=session | horizon=1d | object=basket:IBB/XBI | pol=bullish | conf=0.65
+- Boeing MAX 10 certification halted | keep | channel=sector_fundamental | severity=session | horizon=1w-1m | object=single_name:BA/XLI | pol=bearish | conf=0.7
+- MSFT in-house AI chips / NVDA China erosion | single_name | channel=substitution | severity=session | horizon=1w-1m | object=basket:SOXX/NVDA | pol=mixed | conf=0.55
+INTERACTIONS: Fed+yields+gold = one rates cluster (no double-count); oil shock + hawkish Fed = stagflationary, energy/cyclicals favored over duration/small-caps; bank correction + earnings start = XLF no lean; AI capex intact so substitution not a short trigger on SOXX
+RESCUED_FROM_NOISE: Gold −$100 hawkish real-rate flush (AEM); US yield surge mortgage hedging; Bank stocks mired in correction before earnings; AMGN Phase 3 dazodalibep
+DROPPED_FROM_USABLE: Powell name-match noise (obits/sports/debates); Ronaldo scarf color; Dollar at 18-month high (folded into rates cluster); BNY prime hike (folded into bank earnings)
 B1_INJECT:
-NEWS_JUDGE: n=8 rescued=5
-MACRO rates: [hawkish] Hike odds building into CPI/Powell; yields surging, gold −$100 (session/1d)
-MACRO risk: [bearish] Fresh Hormuz tanker attack + 3rd day Riyadh missiles; freight costs surging (session/1d-1w)
-MACRO energy: [mixed] OPEC cuts 2026 demand growth to 400k bpd (1w)
-SECTOR energy: [mixed] Supply shock vs demand cut vs EU windfall-tax risk (XLE)
-SECTOR industrials: [bearish] Boeing MAX 10 certification halted; 31% order book at risk (BA, XLI)
-SECTOR financials: [bearish] Banks correcting into earnings on yield surge (XLF)
-SECTOR semis: [mixed] MSFT custom AI chip scale-up; merchant-silicon substitution pressure (NVDA/AVGO basket)
-INTERACTION: Hawkish-rates cluster = one sleeve; oil shock + hike odds = net risk-off, XLE only hedge
-WATCH: CPI/Powell binary pending — no pre-signed lean; cap magnitude if futures flat
+NEWS_JUDGE: n=8 rescued=4
+MACRO rates: [hawkish] Fed minutes flag another hike; yields surging, gold −$100, CPI/Powell binary pending (session/1d)
+MACRO risk: [bearish] Fresh Hormuz tanker attack + Houthi Riyadh missiles; shipping/insurance costs surge (session/1d-1w)
+MACRO interaction: [bearish] Oil shock + hawkish Fed = stagflationary tape; mild-band cap unless futures confirm ≥0.5% down
+SECTOR financials: [mixed] Yields surge into bank earnings; BNY prime to 7.00% — NIM vs duration tug-of-war (XLF/KRE)
+SECTOR healthcare: [bullish] AMGN dazodalibep Phase 3 win; IBB/XBI sympathy (basket)
+SECTOR industrials: [bearish] Boeing MAX 10 cert halted by FAA; 31% of undelivered order book at risk (BA/XLI)
+SECTOR semis: [mixed] MSFT gigawatt in-house AI chips + NVDA China share loss to Huawei (substitution, not short trigger)
+WATCH: rates cluster dominates; do not double-count hawkish signals across Fed/yields/gold.
 NEWS_PARSE_END

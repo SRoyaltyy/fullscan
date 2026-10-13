@@ -1,11 +1,10 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:03:00.335967-04:00",
+  "generated_at": "2026-10-13T08:04:02.029954-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-13_predict.md` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-13_judge.md` \u2014 missing"
+    "MISSING General predict MD `01_daily/general/2026-10-13_predict.md` \u2014 missing"
   ],
   "counts": {
     "ok": 6,
@@ -180,7 +179,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 6,
+      "n_req_ok": 7,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -265,11 +264,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-13_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10198,
+          "said": "1. **Strait of Hormuz tanker attacked; Iran targeting US-UAE oil shuttle; Houthi missiles hit Riyadh 3rd day** \u2014 fresh kinetic oil-supply escalation with energy",
+          "bullets": [
+            "2. **Fed minutes: another hike likely this year; officials hold off this month, CPI + Powell comments this week** \u2014 unresolved hawkish rates binary gating risk appetite; treat as one rates cluster. (rates)",
+            "3. **US yield surge triggers mortgage hedging, adds to bond-market pressure; bank stocks mired in correction before earnings** \u2014 yields are the transmission channel hitting duration, financials, small-caps. (rates)",
+            "4. **Gold drops >$100 on hawkish Fed comments; Agnico Eagle falls** \u2014 rescue: gold flush is a real-rates/risk-signal, hits miners basket, not noise. (rates)"
+          ]
         },
         {
           "key": "research_json",
@@ -348,12 +351,12 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7565,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
+          "size": 7562,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
             "general_predict:missing",
-            "news_judge:missing",
             "finviz_market_digest:missing",
+            "sector_predict:missing",
             "sector_predict:missing"
           ]
         },
@@ -741,11 +744,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-13_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10198,
+          "said": "1. **Strait of Hormuz tanker attacked; Iran targeting US-UAE oil shuttle; Houthi missiles hit Riyadh 3rd day** \u2014 fresh kinetic oil-supply escalation with energy",
+          "bullets": [
+            "2. **Fed minutes: another hike likely this year; officials hold off this month, CPI + Powell comments this week** \u2014 unresolved hawkish rates binary gating risk appetite; treat as one rates cluster. (rates)",
+            "3. **US yield surge triggers mortgage hedging, adds to bond-market pressure; bank stocks mired in correction before earnings** \u2014 yields are the transmission channel hitting duration, financials, small-caps. (rates)",
+            "4. **Gold drops >$100 on hawkish Fed comments; Agnico Eagle falls** \u2014 rescue: gold flush is a real-rates/risk-signal, hits miners basket, not noise. (rates)"
+          ]
         },
         {
           "key": "in_weather",
@@ -2815,6 +2822,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-13T08:02:53.636650-04:00\nraw=8377 unique_events=9 tickers=119"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T08:04:00.915976-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-13_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 10198,
+          "preview": "# News Judge \u2014 2026-10-13"
+        },
+        {
+          "path": "01_daily/news/2026-10-13_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1274,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-10-13 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {
