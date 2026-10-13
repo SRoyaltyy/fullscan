@@ -458,8 +458,16 @@ def main() -> None:
     for book in (HOLDUP, H1):
         _synthetic(book)
     _pages()
-    _real()
-    _noop_real_shape()
+    # The real h1 ledger reads through the add-only fill-missing notes (#577),
+    # like every h1 step. The wrapper is a no-op for holdup.
+    from research.hot_n4_clean_v4.forward import h1_fill_missing
+
+    h1_fill_missing.install()
+    try:
+        _real()
+        _noop_real_shape()
+    finally:
+        h1_fill_missing.uninstall()
     check_against("origin/main")
     print("open-fill correction ok")
 

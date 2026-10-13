@@ -219,12 +219,17 @@ def main() -> None:
     check_against("origin/main")
     _replay(records)
     print("holdup append-only ok", len(records), "records")
+    # h1 reads through the add-only fill-missing notes (#577), like every h1 step.
+    from research.hot_n4_clean_v4.forward import h1_fill_missing
+
     token = use_book(H1)
+    h1_fill_missing.install()
     try:
         h1 = load()
         _h1(h1)
         _replay(h1)
     finally:
+        h1_fill_missing.uninstall()
         reset_book(token)
     print("h1 append-only ok", "seed matches returns/")
 
