@@ -12,6 +12,7 @@ from .grok_automations import harvest_source_rank, is_macro_only
 from .hygiene import guidance_hygiene, is_reaction_title, reaction_discard_why
 from .macro import apply_macro
 from .schema import Classification, EVENT_CLASSES, family_of
+from .headline_events import identify_headline_event
 
 _STOP_TICK = frozenset(
     "THE AND FOR ARE WAS NOT BUT YOU ALL CAN OUR CEO FDA SEC ETF IPO "
@@ -161,7 +162,9 @@ _RULES: list[tuple[str, re.Pattern, str | None, str, str]] = [
           r"(grounding|fleet grounded|irregular ops))",
           None, "impulse", "ops disruption — substitutes required"),
     _rule("labor_stop",
-          r"(?i)(\bstrike\b|walkout|uaw |dock (strike|workers)|port (strike|shutdown))",
+          r"(?i)(uaw |dock (strike|workers)|port (strike|shutdown)|"
+          r"(?:workers?|union|employees?|staff) .{0,35}(?:strike|walkout)|"
+          r"(?:strike|walkout).{0,35}(?:workers?|union|employees?))",
           None, "impulse", "labor stoppage"),
     _rule("product_harm",
           r"(?i)(recall|contamination|grounded 737|max grounding)",
@@ -234,7 +237,7 @@ _RULES: list[tuple[str, re.Pattern, str | None, str, str]] = [
           r"(?i)(public offering|secondary offering|atm offering|prices \$\d.{0,20}notes)",
           None, "impulse", "new paper"),
     _rule("capital_return",
-          r"(?i)(buyback|share repurchase|cash dividend|declares? a .{0,20}dividend|"
+          r"(?i)((?:share|equity|stock) buyback|share repurchase|cash dividend|declares? a .{0,20}dividend|"
           r"quarterly cash dividend)",
           "up", "impulse", "cash out to holders"),
     _rule("integrity",
@@ -334,7 +337,20 @@ def classify_text(title: str, body: str = "") -> Classification:
             event_class="discard", sign=None, q5="regime",
             constraint="", why="empty", family="time",
         )
-    # Price-reaction titles are already in the tape — keep as ungraded context.
+    # Identify the embedded event before considering price-reaction packaging.
+    event = identify_headline_event(title)
+    if event['lane_class']:
+        ev = event['lane_class']
+        return Classification(event_class=ev, sign=event['sign'],
+            q5='regime' if ev in ('discard', 'regime_state') else 'impulse',
+            constraint=_constraint_line(ev, title), family=family_of(ev),
+            split=bool(event.get('split')), split_facts=list(event.get('split_facts') or []),
+            why=f"headline {event['event_type']}; stage={event['stage']}; evidence={event['evidence']['quote']}")
+    if event['status'] == 'enum_gap':
+        return Classification(event_class='discard', sign=None, q5='regime',
+            constraint=_constraint_line('discard', title), family='time',
+            why=f"recognized {event['event_type']}; no supported Lane enum; retain for review")
+    # Price-only reactions remain ungraded context.
     if is_reaction_title(title):
         return Classification(
             event_class="discard",
@@ -382,6 +398,9 @@ def classify_article(art: dict) -> Classification:
     body = str(art.get("body") or "")
     # 13-questions automations: factor_impulse / regime only. Never tickers.
     if is_macro_only(art=art):
+        embedded = identify_headline_event(title)
+        if embedded["lane_class"] == "factor_impulse":
+            return classify_text(title, body)
         if is_reaction_title(title):
             return Classification(
                 event_class="discard",
@@ -463,3 +482,4 @@ def rank_articles(arts: Iterable[dict]) -> list[dict]:
                                            str(a.get("body") or "")),
                        str(a.get("title") or "")),
     )
+
