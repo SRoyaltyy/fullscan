@@ -4285,5 +4285,15 @@
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
     "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
-  }
+  },
+  "frozen_write_skips": [
+    {
+      "path": "01_daily/catalyst/2026-10-13_dossiers.json",
+      "at": "2026-10-13T10:35:10-04:00",
+      "commit_msg": "auto: catalyst daily dossiers",
+      "workflow": "Catalyst daily (bounded dossiers)",
+      "run_id": "38377685181",
+      "manifest": "research/input_freeze/2026-10-13/manifest.json"
+    }
+  ]
 }

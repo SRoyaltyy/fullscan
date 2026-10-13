@@ -1,0 +1,315 @@
+{
+  "ticker": "META",
+  "analysis_date": "2026-10-13",
+  "current_price": "742.96",
+  "net_signal": "Neutral",
+  "conviction": 9,
+  "catalyst_stack": "On July 29, 2026 Meta printed $60.8B Q2 revenue (+28% YoY) after a 33% Q1 print, while the July 28 BlackRock 80/20 El Paso 1 GW JV and June 24 Qualcomm Dragonfly CPU deal extended the AI-infra build. Connect 2026 (Sep 23) plus the July 13 FDA 510(k) hearing-aid clearance and the Sep 28 Enterprise Platform launch with CJ Desai broadened the non-ads narrative, and Wells Fargo lifted its PT to $1,000 on Oct 6. Offsetting that, the Aug 26 ~$17-18B multistate youth-safety settlement, the Aug 6 $942M New Mexico child-safety tally, the Sep 25 privacy-trial verdict and Oct 1 $35-40B penalty ask, plus the Oct 7 ~$840M EU Marketplace fine, keep legal cash and product-restriction risk elevated. China's Apr 27 NDRC unwind of the $2B Manus deal and Florida's Oct 7 injunction bid add geopolitical and kids-policy overhangs even as the Jun 3 EU court win on Marketplace designation was a partial regulatory offset.",
+  "key_assumption": "Youth/privacy cash costs and remaining NM/EU claims are treated as bounded, absorbable hits rather than a lasting tax on ad targeting or AI returns, so 2026 ad growth and infra partnerships still dominate the tape.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        4
+      ],
+      "event_date": "2026-06-03",
+      "evidence_excerpt": "In a June 3, 2026, judgment (Case T-1078/23), the EU General Court partially annulled",
+      "source_urls": [
+        "https://curia.europa.eu/site/jcms/p1_1000084142",
+        "https://ppc.land/eu-court-kills-metas-marketplace-gatekeeper-status-but-keeps-messenger/"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 8,
+      "event_ids": [
+        15,
+        9
+      ],
+      "event_date": "2026-09-23",
+      "evidence_excerpt": "At Connect, we announced we're bringing Muse to our AI glasses in the coming months",
+      "source_urls": [
+        "https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/",
+        "https://www.meta.com/blog/meta-connect-2026-everything-we-announced/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Capacity expansion announced",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        11,
+        2
+      ],
+      "event_date": "2026-07-28",
+      "evidence_excerpt": "Funds managed by BlackRock will own an 80% interest in the venture, while Meta will retain the remaining 20% ownership.",
+      "source_urls": [
+        "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/",
+        "https://www.reuters.com/technology/meta-blackrock-partner-14-billion-el-paso-data-center-2026-07-28/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-06-24",
+      "evidence_excerpt": "On June 24, 2026, Qualcomm and Meta Platforms announced a strategic multi-generation agreement",
+      "source_urls": [
+        "https://www.qualcomm.com/news/releases/2026/06/qualcomm-and-meta-announce-strategic-multi-generation-agreement-",
+        "https://www.bloomberg.com/news/articles/2026-06-24/qualcomm-announces-new-ai-chips-adds-meta-as-customer"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Strategic pivot/rebranding to high-growth area",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        18
+      ],
+      "event_date": "2026-09-28",
+      "evidence_excerpt": "Today we are starting the next major pillar of our business, Meta Enterprise Platform",
+      "source_urls": [
+        "https://about.fb.com/news/2026/09/launching-meta-enterprise-platform/",
+        "https://seekingalpha.com/news/4647562-meta-establishes-new-enterprise-platform-for-corporate-clients-taps-mongodb-ceo-to-lead"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        12,
+        2
+      ],
+      "event_date": "2026-07-29",
+      "evidence_excerpt": "Revenue was $60.80 billion, an increase of 28% year-over-year.",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/meta-reports-second-quarter-2026-results-2026-07-29",
+        "https://www.tipranks.com/stocks/meta/earnings/q2-2026-report"
+      ],
+      "confidence": 96
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        20,
+        25,
+        0,
+        17
+      ],
+      "event_date": "2026-10-06",
+      "evidence_excerpt": "raised his price target on Meta Platforms (META) to $1,000 (from $796 previously), while maintaining an Overweight rating",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/meta-platforms-price-target-raised-to-1000-from-796-at-wells-fargo-thefly-news",
+        "https://www.marketscreener.com/news/wells-fargo-adjusts-price-target-on-meta-platforms-to-1-000-from-796-maintains-overweight-rating-ce785dd8d180f326"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Positive personnel change",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        8,
+        10,
+        6
+      ],
+      "event_date": "2026-07-01",
+      "evidence_excerpt": "Alex Schultz \u2014 Named Meta's first Chief Data Officer (July 2026; previously Chief Marketing Officer)",
+      "source_urls": [
+        "https://www.axios.com/2026/07/01/meta-alex-schultz-chief-data-officer"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Capital infusion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        3,
+        26
+      ],
+      "event_date": "2026-04-30",
+      "evidence_excerpt": "Meta priced a large multi-tranche investment-grade bond deal totaling around $25 billion",
+      "source_urls": [
+        "https://api.advisorperspectives.com/articles/2026/04/30/meta-raise-25-billion-jumbo-bond-sale",
+        "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001326801/afb54572-09f5-42ef-b378-28063594c62d.pdf"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        14,
+        19,
+        16,
+        13,
+        21
+      ],
+      "event_date": "2026-08-26",
+      "evidence_excerpt": "In August 2026 (announced August 26), Meta Platforms reached a major multistate settlement",
+      "source_urls": [
+        "https://arstechnica.com/tech-policy/2026/08/meta-settles-states-child-safety-claims-for-18b-florida-rejects-deal-as-peanuts/",
+        "https://oag.ca.gov/news/press-releases/attorney-general-bonta-secures-transformative-17-billion-settlement-meta"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Regulatory denial or delay/antitrust block",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        1,
+        5
+      ],
+      "event_date": "2026-04-27",
+      "evidence_excerpt": "China's National Development and Reform Commission (NDRC) formally ordered the unwinding of the deal",
+      "source_urls": [
+        "https://www.reuters.com/world/asia-pacific/china-blocks-foreign-acquisition-ai-startup-manus-2026-04-27/",
+        "https://arstechnica.com/ai/2026/04/china-kills-metas-acquisition-of-manus-as-us-china-ai-rivalry-deepens/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Policy reversal/new regulation/tax increase",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        22
+      ],
+      "event_date": "2026-10-07",
+      "evidence_excerpt": "On October 7, 2026, Florida filed a motion in Pasco County court seeking a temporary injunction",
+      "source_urls": [
+        "https://www.reuters.com/world/us/florida-asks-court-force-meta-change-facebook-instagram-teens-2026-10-07/",
+        "https://www.miamiherald.com/news/politics-government/state-politics/article317533278.html"
+      ],
+      "confidence": 87
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        24
+      ],
+      "event_date": "2026-10-12",
+      "evidence_excerpt": "Cantor Fitzgerald (Oct 12): Maintained Overweight but lowered PT to $840 from $860.",
+      "source_urls": [
+        "https://www.pricetargets.com/NASDAQ/META/"
+      ],
+      "confidence": 72
+    },
+    {
+      "taxonomy": "Workforce reductions",
+      "type": "negative",
+      "event_date": "2026-05-20",
+      "evidence_excerpt": "the layoffs are now believed to be impacting approximately 8,000 people, around 10 percent of Meta\u2019s 78,000 employees.",
+      "source_urls": [
+        "https://www.theverge.com/tech/935163/meta-layoffs-ai-investment-offset-memo",
+        "https://www.nasdaq.com/press-release/meta-reports-second-quarter-2026-results-2026-07-29"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+      "type": "negative",
+      "event_date": "2026-09-25",
+      "evidence_excerpt": "A Santa Fe jury on Friday, September 25, 2026, decided that Facebook willfully broke New Mexico's Unfair Practices Act",
+      "source_urls": [
+        "https://ppc.land/meta-loses-new-mexico-facebook-trial-as-jury-finds-43-9-million-violations/"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Short reports",
+      "type": "negative",
+      "event_date": "2026-10-09",
+      "evidence_excerpt": "Hunterbrook Capital disclosed a Meta short position on Friday, betting that early enthusiasm for Meta Muse has outpaced actual usage trends",
+      "source_urls": [
+        "https://theoutpost.ai/news-story/meta-muse-downloads-drop-8-1-week-over-week-as-hunterbrook-capital-takes-short-position-31988/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings miss",
+      "type": "negative",
+      "event_date": "2026-07-29",
+      "evidence_excerpt": "This includes $2.40 billion of charges related to legal proceedings and $1.18 billion of severance expenses in connection with the May 2026 headcount reduction.",
+      "source_urls": [
+        "https://www.nasdaq.com/press-release/meta-reports-second-quarter-2026-results-2026-07-29"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-13",
+  "cutoff_date": null,
+  "role": "earnings"
+}

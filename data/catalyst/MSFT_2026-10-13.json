@@ -1,0 +1,334 @@
+{
+  "ticker": "MSFT",
+  "analysis_date": "2026-10-13",
+  "current_price": "541.15",
+  "net_signal": "Bullish",
+  "conviction": 21,
+  "catalyst_stack": "On 2026-07-29 MSFT printed Q4 FY2026 revenue of $90.0B (+18%), said Azure annual revenue crossed $100B, and guided Q1 FY2027 Azure growth to about 45%, after a 2026-04-29 beat ($82.9B, +18%, AI ARR $37B). Capacity and product follow-through included the 2026-09-23 >$10B Middle East cloud/AI build through 2030 and the 2026-10-12 Maia 300 inference chip targeting 40% more tokens/MW and multi-GW Azure from 2027, plus Stellantis, Mistral, and Mayo Clinic AI deals. Those positives are offset by the 2026-04-27 OpenAI amendment that kept Microsoft as primary Azure partner but made the IP license non-exclusive through 2032 and let OpenAI serve customers on any cloud, alongside a 2026-05-14 UK CMA SMS probe, an 2026-10-08 EU/Italy gaming-currency case, and an 2026-10-08 DOL PERM suspension. The tape stayed mixed into mid-October as Nadella and Hood sold stock under 10b5-1 plans in September, Ryan Roslansky left on 2026-10-01, and Morgan Stanley/UBS/BNP/Phillip cut ratings on 2026-10-05\u201312 even after an 8% dividend hike to $0.98 and Ackman\u2019s new stake.",
+  "key_assumption": "Azure ~45% growth and Maia-led capacity still convert AI demand after OpenAI\u2019s multi-cloud/IP non-exclusivity, and PERM/CMA/DMA actions stay absorbable rather than structurally capping Azure/365 packaging or hiring.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Capacity expansion announced",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-09-23",
+      "evidence_excerpt": "committing more than $10 billion (capital and operating expenses) through 2030 to cloud and AI infrastructure",
+      "source_urls": [
+        "https://blogs.microsoft.com/on-the-issues/2026/09/23/microsoft-strengthens-its-commitment-to-the-middle-east-by-investing-in-technology-digital-resilience-and-people/",
+        "https://www.thenationalnews.com/future/technology/2026/09/23/microsoft-ai-middle-east-unga/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 5,
+      "event_ids": [
+        23,
+        6
+      ],
+      "event_date": "2026-10-12",
+      "evidence_excerpt": "Microsoft Corp. today pulled back the curtains on Maia 300, its newest internally developed artificial intelligence accelerator.",
+      "source_urls": [
+        "https://siliconangle.com/2026/10/12/microsoft-debuts-multichiplet-maia-300-inference-accelerator/",
+        "https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 5,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-07-29",
+      "evidence_excerpt": "This year, Azure revenue surpassed $100 billion for the first time, and Microsoft 365 Copilot reached over 30 million paid seats",
+      "source_urls": [
+        "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+        "https://seekingalpha.com/news/4621187-microsoft-outlines-q1-revenue-of-89_85b-90_95b-while-forecasting-45-percent-azure-growth"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 5,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-16",
+      "evidence_excerpt": "Stellantis and Microsoft today announced a five-year strategic collaboration aimed at accelerating Stellantis\u2019 digital transformation",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2026/04/16/3275316/0/en/Stellantis-Accelerates-AI-led-Strategy-and-Digital-Transformation-Through-Strategic-Collaboration-with-Microsoft-to-Enhance-Customer-Experiences.html",
+        "https://finance.yahoo.com/news/stellantis-microsoft-sign-five-partnership-120212213.html"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        3,
+        9
+      ],
+      "event_date": "2026-07-29",
+      "evidence_excerpt": "Revenue was $82.9 billion and increased 18% (up 15% in constant currency)",
+      "source_urls": [
+        "https://www.microsoft.com/en-us/investor/earnings/FY-2026-Q3/press-release-webcast",
+        "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 4,
+      "event_ids": [
+        8,
+        7,
+        10
+      ],
+      "event_date": "2026-07-21",
+      "evidence_excerpt": "This represents a multibillion dollar commitment from Microsoft and an important way for Microsoft customers to benefit",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control-302830202.html",
+        "https://www.nasdaq.com/press-release/microsoft-and-mistral-expand-strategic-partnership-give-enterprises-and-regulated"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        13
+      ],
+      "event_date": "2026-09-15",
+      "evidence_excerpt": "its board of directors declared a quarterly dividend of US$0.98 per share, reflecting a 7 cent or 8% increase",
+      "source_urls": [
+        "https://news.microsoft.com/source/2026/09/15/microsoft-announces-quarterly-dividend-increase-7/",
+        "https://www.securities.io/microsoft-raises-quarterly-dividend-8-to-0-98-per-share/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Activist investor accumulation",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 2,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-05-15",
+      "evidence_excerpt": "In May 2026, Ackman announced building a new MSFT position (starting February 2026 after a stock dip)",
+      "source_urls": [
+        "https://www.reuters.com/business/ackmans-pershing-square-takes-stake-microsoft-citing-compelling-valuation-2026-05-15/",
+        "https://qz.com/bill-ackman-pershing-square-microsoft-stake-051526"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 2,
+      "event_ids": [
+        18,
+        15
+      ],
+      "event_date": "2026-10-05",
+      "evidence_excerpt": "Melius Research (Oct 5, 2026): Upgraded from Hold to Buy; raised target to $665",
+      "source_urls": [
+        "https://www.tipranks.com/news/microsoft-stock-melius-upgrades-msft-to-buy-raises-target-to-665-as-ai-fears-boost-security-demand",
+        "https://www.marketscreener.com/quote/stock/MICROSOFT-CORPORATION-4835/news-broker-research/"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Policy reversal/new regulation/tax increase",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 8,
+      "event_ids": [
+        21
+      ],
+      "event_date": "2026-10-08",
+      "evidence_excerpt": "on October 8, 2026, the U.S. Department of Labor (DOL) suspended Microsoft (along with Adobe",
+      "source_urls": [
+        "https://www.reuters.com/business/us-suspending-permanent-residency-program-for-microsoft-vance-says-2026-10-08/",
+        "https://m.economictimes.com/news/international/us/microsoft-stock-msft-falls-as-us-targets-green-card-filings-for-h-1b-workers-and-italy-probes-gaming-business/articleshow/134798406.cms"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Partnership dissolution",
+      "type": "negative",
+      "category": "internal",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-04-27",
+      "evidence_excerpt": "Today, we are announcing an amended agreement to simplify our partnership and the way we work together",
+      "source_urls": [
+        "https://openai.com/index/next-phase-of-microsoft-partnership/",
+        "https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Adverse litigation/antitrust",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        4,
+        20
+      ],
+      "event_date": "2026-05-14",
+      "evidence_excerpt": "The UK Competition and Markets Authority (CMA) is conducting an SMS investigation (launched May 2026) into Microsoft\u2019s dominance in business software",
+      "source_urls": [
+        "https://www.reuters.com/legal/litigation/uk-opens-antitrust-probe-into-microsofts-business-software-2026-05-14/",
+        "https://www.reuters.com/legal/litigation/italy-launches-eu-backed-probe-into-microsoft-owned-gaming-companies-2026-10-08/"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Negative personnel change",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        17
+      ],
+      "event_date": "2026-10-01",
+      "evidence_excerpt": "After nearly 18 years at LinkedIn and Microsoft, Ryan Roslansky is leaving the company.",
+      "source_urls": [
+        "https://www.theverge.com/news/1003515/microsoft-ryan-roslansky-office-teams-linkedin-leaving",
+        "https://blogs.microsoft.com/blog/2026/10/01/microsoft-365-and-linkedin-leadership-update/"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Analyst downgrade/PT cut",
+      "type": "negative",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 5,
+      "adjusted_weight": 0,
+      "event_ids": [
+        19,
+        24
+      ],
+      "event_date": "2026-10-05",
+      "evidence_excerpt": "Morgan Stanley (Oct 5, 2026): Downgraded from Overweight to Negative.",
+      "source_urls": [
+        "https://www.defenseworld.net/2026/10/06/research-analysts-recent-ratings-updates-for-microsoft-msft.html",
+        "https://www.tipranks.com/news/blurbs/phillip-securities-downgrades-microsoft-msft-to-a-hold-blurbs-news"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Insider selling (cluster)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 2,
+      "event_ids": [
+        11,
+        12
+      ],
+      "event_date": "2026-09-01",
+      "evidence_excerpt": "September 1, 2026: Sold 86,525 shares in multiple tranches (average ~$501.46 per share; total value ~$43.39 million)",
+      "source_urls": [
+        "https://www.secform4.com/insider-trading/789019.htm",
+        "https://www.gurufocus.com/news/9083073/microsoft-corp-msft-evp-and-cfo-amy-hood-sells-41674-shares"
+      ],
+      "confidence": 84
+    },
+    {
+      "taxonomy": "workforce reductions",
+      "type": "negative",
+      "event_date": "2026-07-06",
+      "evidence_excerpt": "Microsoft cut around 4,800 roles, or 2.1% of its global workforce, on Monday",
+      "source_urls": [
+        "https://techcrunch.com/2026/07/06/microsoft-lays-off-nearly-5000-employees-across-xbox-commercial-sales/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Adverse litigation/antitrust",
+      "type": "negative",
+      "event_date": "2026-06-15",
+      "evidence_excerpt": "Microsoft accused of misrepresentations about its Copilot issues in securities fraud class action",
+      "source_urls": [
+        "https://www.reuters.com/business/microsoft-sued-by-shareholders-over-expenses-cloud-business-ai-2026-06-15/",
+        "https://www.prnewswire.com/news-releases/msft-notification-microsoft-accused-of-misrepresentations-about-its-copilot-issues-in-securities-fraud-class-action-302814085.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "event_date": "2026-04-29",
+      "evidence_excerpt": "Revenue was $82.9 billion and increased 18% (up 15% in constant currency)",
+      "source_urls": [
+        "https://www.microsoft.com/en-us/investor/earnings/FY-2026-Q3/press-release-webcast"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-13",
+  "cutoff_date": null,
+  "role": "earnings"
+}

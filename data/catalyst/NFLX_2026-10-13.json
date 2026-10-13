@@ -1,0 +1,278 @@
+{
+  "ticker": "NFLX",
+  "analysis_date": "2026-10-13",
+  "current_price": "71.20",
+  "net_signal": "Bearish",
+  "conviction": 32,
+  "catalyst_stack": "Q1 on 2026-04-16 beat revenue at $12.25B with EPS inflated by a $2.8B WBD termination fee as Reed Hastings scheduled a June board exit, and on 2026-04-22 the board added a $25B buyback before naming Jay Hoag chairman on 2026-06-05. Q2 on 2026-07-16 slightly missed revenue, co-CEOs sold stock on 2026-08-04/06, and Pershing Square disclosed a new 13.1M-share stake on 2026-08-14. Florida\u2019s AG sued on 2026-09-09 over ad-free and children\u2019s-data claims, Deutsche Bank upgraded on 2026-09-29 while most other firms cut targets, and Disney licensed a broad title package on 2026-10-02. Puck\u2019s 2026-10-09 report of a ~5% headcount cut plus KeyCorp\u2019s 2026-10-13 trim to $85 leave a slightly negative near-term mix that is not decisive versus the buyback and still-higher bull targets.",
+  "key_assumption": "Q2 is scored as a revenue miss rather than a guidance cut, clustered Street PT cuts count as one downgrade HIT, the unconfirmed layoff report is an operational setback, and upgrades stay positive because cited targets remain above the ~$71 spot price.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Earnings beat",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-16",
+      "evidence_excerpt": "The company beat Wall Street expectations for revenue, reporting $12.25 billion for the first quarter",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000137/ex991_q126.htm",
+        "https://ir.netflix.net/files/doc_financials/2026/q1/FINAL-Q1-26-Shareholder-Letter.pdf"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Negative personnel change",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-04-16",
+      "evidence_excerpt": "Reed Hastings, Netflix's co-founder and current chairman, would exit the board in June when his term expires.",
+      "source_urls": [
+        "https://www.cnbc.com/2026/04/16/netflix-nflx-earnings-q1-2026.html"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-04-22",
+      "evidence_excerpt": "On April 22, 2026, Netflix\u2019s board authorized the repurchase of an additional $25 billion of common stock",
+      "source_urls": [
+        "https://www.wsj.com/business/media/netflix-boosts-stock-buyback-program-by-25-billion-b8a66c9e",
+        "https://www.bloomberg.com/news/articles/2026-04-23/netflix-plans-to-buy-back-additional-25-billion-in-shares"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Positive personnel change",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        4
+      ],
+      "event_date": "2026-06-05",
+      "evidence_excerpt": "Netflix appointed longtime board member Jay Hoag (founding general partner of venture capital firm TCV) as chairman",
+      "source_urls": [
+        "https://www.reuters.com/legal/transactional/netflix-names-longtime-director-jay-hoag-chairman-succeeding-reed-hastings-2026-06-05/",
+        "https://www.bloomberg.com/news/articles/2026-06-05/netflix-picks-venture-capitalist-jay-hoag-as-chairman"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Earnings miss",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-07-16",
+      "evidence_excerpt": "Revenue came in at $12.56 billion, just shy of the consensus for $12.58 billion, while earnings of 80 cents a share nipped forecasts by a penny.",
+      "source_urls": [
+        "https://deadline.com/2026/07/netflix-q2-earnings-stock-drops-viewership-1236984440/",
+        "https://www.nytimes.com/2026/07/16/business/media/netflix-earnings.html"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Insider selling (cluster)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-08-04",
+      "evidence_excerpt": "CEO Theodore Sarandos sold 27,312 shares of Netflix stock in a transaction dated Tuesday, August 4th.",
+      "source_urls": [
+        "http://www.sec.gov/Archives/edgar/data/1065280/000106528026000234/xslF345X06/wk-form4_1785878104.xml",
+        "http://www.sec.gov/Archives/edgar/data/1065280/000106528026000247/xslF345X06/wk-form4_1786049108.xml"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Activist investor accumulation",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        10
+      ],
+      "event_date": "2026-08-14",
+      "evidence_excerpt": "opened a new position in Netflix (NFLX) of 13,081,465 shares valued at approximately $934 million",
+      "source_urls": [
+        "https://followthefilings.com/manager/0002026053-pershing-square-inc",
+        "https://www.thestreet.com/investing/ackman-pershing-square-netflix-position-2026-return"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/antitrust ruling",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "Attorney General James Uthmeier filed a lawsuit against Netflix, alleging the streaming company spent years promising Florida families",
+      "source_urls": [
+        "https://www.myfloridalegal.com/newsrelease/attorney-general-james-uthmeier-takes-legal-action-against-netflix-deceiving-florida",
+        "https://www.sun-sentinel.com/2026/09/09/florida-attorney-general-sues-netflix-as-crackdown-widens-on-big-tech/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        7,
+        13,
+        14
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "Deutsche Bank raised shares of Netflix from a hold rating to a buy rating and reduced the price objective from $100.00 to $95.00",
+      "source_urls": [
+        "https://www.nasdaq.com/articles/deutsche-bank-makes-contrarian-call-netflix-what-does-it-mean-investors",
+        "https://www.pricetargets.com/NASDAQ/NFLX/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        15
+      ],
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "Disney Entertainment and Netflix have entered into an expansive new content licensing agreement",
+      "source_urls": [
+        "https://variety.com/2026/tv/news/disney-licenses-titles-netflix-ice-age-movies-will-trent-percy-jackson-and-the-olympians-felicity-1236897256/",
+        "https://www.reuters.com/business/media-telecom/disney-licenses-lineup-movies-tv-shows-netflix-including-ice-age-will-trent-2026-10-02/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Operational setback",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        19
+      ],
+      "event_date": "2026-10-09",
+      "evidence_excerpt": "Netflix is planning a major round of layoffs coming as soon as next week that would cut about 5% of its headcount",
+      "source_urls": [
+        "https://variety.com/2026/tv/news/netflix-mass-layoffs-1236906567/",
+        "https://www.reuters.com/business/media-telecom/netflix-plans-cut-5-its-workforce-puck-news-reports-2026-10-09/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "event_ids": [
+        0,
+        6,
+        12,
+        16,
+        17,
+        18,
+        20
+      ],
+      "event_date": "2026-10-13",
+      "evidence_excerpt": "KeyCorp lowered their price objective on Netflix from $92.00 to $85.00 and set an overweight rating for the company",
+      "source_urls": [
+        "https://www.marketbeat.com/instant-alerts/analyst-netflix-nasdaq-nflx-given-new-8500-price-target-at-keycorp-2026-10-13/",
+        "https://www.marketscreener.com/news/keybanc-capital-adjusts-price-target-on-netflix-to-85-from-92-ce785ddddf88f52d"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "event_date": "2026-09-18",
+      "evidence_excerpt": "Wells Fargo analyst Steven Cahall cut the streaming giant to Underweight from Equal Weight and slashed his price target to $57 from $80.",
+      "source_urls": [
+        "https://prismmarketview.com/netflix-stock-downgrade-wells-fargo-cuts-nflx-underweight/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "event_date": "2026-09-22",
+      "evidence_excerpt": "HSBC followed that up by cutting its rating to hold and lowering its price target from $96 to $76.",
+      "source_urls": [
+        "https://www.fool.com/investing/2026/09/25/1-wall-street-analyst-just-called-netlfix-a-sell-is-it-time-to-dump-the-streaming-stock/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/antitrust ruling",
+      "type": "negative",
+      "event_date": "2026-09-15",
+      "evidence_excerpt": "UPC Munich LD grants DivX injunction against Netflix streaming software, departing from EPO Opposition Division\u2019s preliminary view",
+      "source_urls": [
+        "https://ipfray.com/upc-munich-ld-grants-injunction-against-netflix-streaming-software-departing-from-epo-opposition-divisions-preliminary-view/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-13",
+  "cutoff_date": null,
+  "role": "earnings"
+}

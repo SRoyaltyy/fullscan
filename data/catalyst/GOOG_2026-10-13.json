@@ -1,12 +1,90 @@
 {
   "ticker": "GOOG",
   "analysis_date": "2026-10-13",
-  "current_price": "N/A",
-  "net_signal": "Strong Bearish",
-  "conviction": 53,
-  "catalyst_stack": "On 2026-07-02 the EU Court of Justice definitively upheld the \u20ac4.1B Android antitrust fine, and on 2026-07-16 the Commission issued binding DMA measures forcing Android AI interoperability and Search data sharing \u2014 both directly targeting Google's core distribution moats. On 2026-10-13 a securities fraud class action tied to Gemini 3.5 Pro disclosure issues compounded the legal overhang and explains the 4.4% July share drop. On 2026-06-02/2026-08-27 Alphabet's shift from buybacks to an $85B stock offering adds dilution pressure amid rising AI capex. The lone offset is the 2026-08-28 Q2 earnings beat with Cloud up 82%, but Gemini 4's failure to lift the stock (2026-10-05) suggests waning AI-narrative momentum ahead of Q3 earnings.",
-  "key_assumption": "The EU DMA specification measures and upheld Android fine represent durable structural constraints on Search/Android economics, and litigation risk (class action + private damages suits) keeps a persistent discount on the stock despite strong Cloud growth.",
+  "current_price": "348.97",
+  "net_signal": "Bullish",
+  "conviction": 27,
+  "catalyst_stack": "On 2026-07-22 Alphabet beat Q2 estimates with $119.80B revenue and $24.8B Cloud, disclosed a $514B cloud backlog, and lifted 2026 capex to $195\u2013205B, extending the 2026-04-29 Q1 beat, capex hike, and dividend increase. AI capacity followed through the 2026-06-05 SpaceX GPU offtake, the 2026-09-09 Finland infrastructure plan, and the 2026-10-06 Constellation deal adding 890 MW of nuclear supply. Legal news split: on 2026-09-02 Judge Brinkema rejected an AdX breakup and later AI-Overviews suits were dismissed, but 2026-07-16 DMA specification decisions, a 2026-09-30 publisher class-action summary-judgment denial, and 2026-10-05 Polish objections keep regulation live. The 2026-06-01 $80B equity raise is the main dilution/FCF offset, while 2026-10-08 analyst targets at $450\u2013$485 remain well above ~$349.",
+  "key_assumption": "Behavioral antitrust remedies and DMA interoperability do not structurally impair Search/ads pricing power, and the $514B Cloud backlog converts at high incremental margins despite equity-funded AI capex.",
   "catalyst_grid": [
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        11,
+        15,
+        18
+      ],
+      "event_date": "2026-09-02",
+      "evidence_excerpt": "rejected the DOJ\u2019s proposed structural remedies ... including the divestiture of Google\u2019s AdX",
+      "source_urls": [
+        "https://www.bloomberg.com/news/articles/2026-09-02/google-avoids-ad-exchange-sale-as-judge-orders-tech-integration",
+        "https://www.relevantaudience.com/google-ads-en/brinkema-rejects-adx-divestiture-behavioural-remedies/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 7,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-06-16",
+      "evidence_excerpt": "Android 17 (released June 2026 with initial Gemini expansions)",
+      "source_urls": [
+        "https://techcrunch.com/2026/06/16/android-17-launches-with-new-multitasking-tools-as-google-expands-gemini-features/"
+      ],
+      "confidence": 78
+    },
+    {
+      "taxonomy": "Capacity expansion announced",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        1,
+        3,
+        7,
+        12,
+        17
+      ],
+      "event_date": "2026-10-06",
+      "evidence_excerpt": "Landmark Agreement to Bring 890 MW of New Nuclear Capacity to PJM Grid",
+      "source_urls": [
+        "https://www.constellationenergy.com/news/2026/10/google-and-constellation-announce-landmark-agreement-to-bring-890-mw-of-new-nuclear-capacity-to-pjm-grid.html",
+        "https://www.utilitydive.com/news/constellation-google-deal-will-bring-890-mw-of-new-nuclear-to-pjm/832223/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        8,
+        10
+      ],
+      "event_date": "2026-07-29",
+      "evidence_excerpt": "On July 29, 2026, the companies signed a commercial agreement for Marvell to develop custom semiconductor products",
+      "source_urls": [
+        "https://www.stocktitan.net/sec-filings/MRVL/8-k-marvell-technology-inc-reports-material-event-40642dab2018.html",
+        "https://www.bwcfoworld.com/article/marvell-tech-grants-google-option-to-buy-up-to-12-2-bn-in-shares-620041"
+      ],
+      "confidence": 90
+    },
     {
       "taxonomy": "Earnings beat",
       "type": "positive",
@@ -15,31 +93,89 @@
       "base_weight": 5,
       "adjusted_weight": 4,
       "event_ids": [
+        1,
         7
       ],
-      "event_date": "2026-08-28",
-      "evidence_excerpt": "Alphabet (GOOGL) Q2 2026 Earnings: Revenue Beats, Cloud Surges 82%",
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "Revenue: $119.80 billion vs $116.93 billion expected by LSEG",
       "source_urls": [
-        "https://www.webull.com/"
+        "https://www.cnbc.com/2026/07/22/google-earnings-q2-goog-live-updates.html",
+        "https://finance.yahoo.com/markets/stocks/articles/googl-q2-earnings-beat-estimates-153600222.html"
       ],
-      "confidence": 80
+      "confidence": 95
     },
     {
-      "taxonomy": "Adverse litigation/antitrust",
-      "type": "negative",
+      "taxonomy": "Share repurchase program/increased dividend",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-29",
+      "evidence_excerpt": "Alphabet (Google's parent company) reported its Q1 2026 earnings on April 29, 2026",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000043/googexhibit991q12026.htm",
+        "https://m.economictimes.com/markets/us-stocks/news/google-parent-alphabets-cloud-unit-beats-quarterly-revenue-estimates-on-strong-ai-demand/articleshow/130617704.cms"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Positive personnel change",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "announced August 5), Demis Hassabis ... was named Chief Scientist of Alphabet",
+      "source_urls": [
+        "https://www.reuters.com/business/google-shakes-up-ai-leadership-deepmind-chief-shifts-role-2026-08-05/",
+        "https://www.nytimes.com/2026/08/05/technology/google-ai-leadership.html"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
       "category": "external",
       "status": "HIT",
       "base_weight": 5,
-      "adjusted_weight": 7,
+      "adjusted_weight": 4,
       "event_ids": [
-        2
+        13,
+        19
       ],
-      "event_date": "2026-07-02",
-      "evidence_excerpt": "Europe's highest court dismissed Google's final appeal on July 2, 2026, confirming the \u20ac4.1 billion Android antitrust fine",
+      "event_date": "2026-10-08",
+      "evidence_excerpt": "raised its price target on Alphabet (GOOG/GOOGL) to $485 from $475 while maintaining a Buy rating",
       "source_urls": [
-        "https://lexsummary.com/google-android-cjeu-antitrust-fine-confirmed-2026/"
+        "https://www.tipranks.com/news/the-fly/alphabet-price-target-raised-to-485-from-475-at-td-cowen-thefly-news-2",
+        "https://www.gurufocus.com/news/9115499/goog-maintained-by-td-cowen-price-target-raised-to-485"
       ],
-      "confidence": 85
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-09-30",
+      "evidence_excerpt": "On September 30, 2026, U.S. District Judge P. Kevin Castel (S.D.N.Y.) largely denied Google\u2019s motion for summary judgment",
+      "source_urls": [
+        "https://bergermontague.com/news/court-denies-googles-summary-judgment-bid-against-publisher-class-refuses-to-exclude-opinions-by-publishers-experts-in-ad-tech-antitrust-case/",
+        "https://www.editorandpublisher.com/stories/publishers-clear-major-hurdle-in-google-ad-tech-antitrust-fight,263806"
+      ],
+      "confidence": 90
     },
     {
       "taxonomy": "Policy reversal/new regulation/tax increase",
@@ -49,115 +185,57 @@
       "base_weight": 7,
       "adjusted_weight": 9,
       "event_ids": [
-        3,
-        0
+        0,
+        6,
+        16
       ],
       "event_date": "2026-07-16",
-      "evidence_excerpt": "the European Commission has issued two sets of binding specification measures to Google under the Digital Markets Act.",
+      "evidence_excerpt": "issued two binding \u201cspecification\u201d decisions under the EU Digital Markets Act (DMA)",
       "source_urls": [
+        "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_26_1634/IP_26_1634_EN.pdf",
         "https://digital-markets-act.ec.europa.eu/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data-under-2026-07-16_en"
       ],
-      "confidence": 85
+      "confidence": 91
     },
     {
-      "taxonomy": "Adverse litigation/antitrust",
-      "type": "negative",
-      "category": "external",
-      "status": "HIT",
-      "base_weight": 5,
-      "adjusted_weight": 7,
-      "event_ids": [
-        1
-      ],
-      "event_date": "2026-10-13",
-      "evidence_excerpt": "Alphabet AI Issues and Subsequent 4% Stock Drop Trigger Securities Fraud Class Action",
-      "source_urls": [
-        "https://www.prnewswire.com/news-releases/goog-googl-stock-alert-alphabet-ai-issues-and-subsequent-4-stock-drop-trigger-securities-fraud-class-action-for-investors-302906001.html"
-      ],
-      "confidence": 85
-    },
-    {
-      "taxonomy": "Dilutive offering",
+      "taxonomy": "Dilutive offering/distressed fundraising/down round",
       "type": "negative",
       "category": "internal",
       "status": "HIT",
-      "base_weight": 5,
-      "adjusted_weight": 2,
-      "event_ids": [
-        5,
-        6
-      ],
-      "event_date": "2026-08-27",
-      "evidence_excerpt": "Alphabet Is Paying a Dividend While Selling $85 Billion of New Stock",
-      "source_urls": [
-        "https://www.fool.com/"
-      ],
-      "confidence": 70
-    },
-    {
-      "taxonomy": "Product delay/failure/recall",
-      "type": "negative",
-      "category": "internal",
-      "status": "MISS",
-      "base_weight": 5,
-      "adjusted_weight": 0,
-      "event_ids": [
-        8
-      ],
-      "event_date": "2026-10-05",
-      "evidence_excerpt": "Why Gemini 4 Failed To Ignite Google Stock Ahead Of Q3 Earnings",
-      "source_urls": [
-        "https://www.investors.com/"
-      ],
-      "confidence": 0
-    },
-    {
-      "taxonomy": "Adverse litigation/antitrust",
-      "type": "negative",
-      "event_date": "2026-04-01",
-      "evidence_excerpt": "Judge Mehta's April 2026 remedy order bans Google default payments; Apple, Samsung, and Mozilla must deploy choice screens",
-      "source_urls": [
-        "https://www.litigationlogic.io/legal-news/google-antitrust-default-ban-choice-screens-2026/"
-      ],
-      "status": "HIT",
-      "base_weight": 5,
+      "base_weight": 7,
       "adjusted_weight": 7,
-      "confidence": 80
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-06-01",
+      "evidence_excerpt": "announced an $80 billion equity capital raise on June 1\u20132, 2026",
+      "source_urls": [
+        "https://www.reuters.com/legal/transactional/alphabet-raise-80-billion-equity-capital-ai-spending-2026-06-01/",
+        "https://www.bloomberg.com/news/articles/2026-06-01/alphabet-to-raise-80-billion-in-equity-capital-for-ai-spending"
+      ],
+      "confidence": 92
     },
     {
-      "taxonomy": "Adverse litigation/antitrust",
+      "taxonomy": "Policy reversal/new regulation/tax increase",
       "type": "negative",
-      "event_date": "2026-09-02",
-      "evidence_excerpt": "A federal judge ruled on September 2, 2026, that Google must change practices in its advertising technology business",
+      "event_date": "2026-07-23",
+      "evidence_excerpt": "the Commission issued Google a fine of \u20ac460 million and a fine of \u20ac430 million respectively.",
       "source_urls": [
-        "https://explainx.ai/blog/google-ad-tech-antitrust-ruling-no-breakup-2026",
-        "https://www.usatoday.com/story/tech/news/2026/09/02/google-ad-tech-antitrust-breakup/91580194007/"
+        "https://digital-strategy.ec.europa.eu/en/news/commission-fines-google-eu890-million-breaches-digital-markets-act"
       ],
       "status": "HIT",
-      "base_weight": 5,
-      "adjusted_weight": 7,
+      "base_weight": 7,
+      "adjusted_weight": 9,
       "confidence": 80
     },
     {
-      "taxonomy": "Workforce reduction/layoffs",
+      "taxonomy": "Negative personnel change",
       "type": "negative",
-      "event_date": "2026-09-08",
-      "evidence_excerpt": "Google planning layoffs in Taiwan, report says",
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "Pichai also announced today that Jeff Dean is leaving Google to launch an \u201cindependent public benefit corporation",
       "source_urls": [
-        "https://www.taipeitimes.com/"
-      ],
-      "status": "HIT",
-      "base_weight": 5,
-      "adjusted_weight": 5,
-      "confidence": 80
-    },
-    {
-      "taxonomy": "Earnings beat",
-      "type": "positive",
-      "event_date": "2026-07-22",
-      "evidence_excerpt": "Google increases capex forecast again after cloud-driven quarterly beat",
-      "source_urls": [
-        "https://www.reuters.com/"
+        "https://9to5google.com/2026/08/05/demis-hassabis-deepmind/",
+        "https://timesofindia.indiatimes.com/technology/tech-news/after-27-years-and-18-desk-moves-jeff-dean-is-leaving-google-his-goodbye-email-explains-why/articleshow/132981390.cms"
       ],
       "status": "HIT",
       "base_weight": 5,
@@ -165,21 +243,21 @@
       "confidence": 80
     },
     {
-      "taxonomy": "Earnings beat",
+      "taxonomy": "Favorable court ruling/patent grant",
       "type": "positive",
-      "event_date": "2026-04-30",
-      "evidence_excerpt": "Alphabet stock rises on Q1 earnings beat, cloud growth",
+      "event_date": "2026-09-30",
+      "evidence_excerpt": "A federal judge has dismissed a pair of antitrust lawsuits filed by Chegg and Rolling Stone parent company Penske Media Corporation",
       "source_urls": [
-        "https://finance.yahoo.com/"
+        "https://www.theverge.com/tech/1003589/google-ai-overviews-chegg-penske-lawsuits-dismissed"
       ],
       "status": "HIT",
-      "base_weight": 5,
-      "adjusted_weight": 4,
+      "base_weight": 8,
+      "adjusted_weight": 10,
       "confidence": 80
     }
   ],
   "grok_verdict": "Bullish",
-  "search_backend": "deepseek_fallback",
+  "search_backend": "grok_native",
   "generated_at": "2026-10-13",
   "cutoff_date": null,
   "role": "earnings"

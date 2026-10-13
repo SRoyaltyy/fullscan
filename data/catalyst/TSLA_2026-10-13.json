@@ -1,0 +1,243 @@
+{
+  "ticker": "TSLA",
+  "analysis_date": "2026-10-13",
+  "current_price": "374.50",
+  "net_signal": "Bullish",
+  "conviction": 16,
+  "catalyst_stack": "Tesla beat Q3 delivery consensus on 2026-10-02 with 486,532 vehicles after a larger Q2 beat of 480,126 on 2026-07-02, while Q2 revenue rose 26% to $28.2 billion on 2026-07-22. Commercial Cybercab rides opened in Austin on 2026-09-03, Semi volume production started at the new Nevada plant on 2026-09-25, Megapack 3 began rolling in Brookshire on 2026-08-06, and Optimus output reached several hundred robots a week by 2026-09-25. NHTSA opened Cybercab certification audit AQ26002 on 2026-09-03 and defect petition DP26010 on 2026-10-09 over school-zone speeding, while JPMorgan cut its target to $415 from $445 on 2026-10-13. Offsets include NHTSA closing the 2022 phantom-braking probe on 2026-07-02, a $30 billion undrawn credit package on 2026-09-29, and Street PT raises from Jefferies to $400 on 2026-10-12 and Yorkville Ives\u2019 $500 initiate on 2026-10-06.",
+  "key_assumption": "NHTSA\u2019s AQ26002 Cybercab certification audit and DP26010 school-zone petition stay investigative and do not halt unsupervised robotaxi service or force a broad ADS recall.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        10,
+        11
+      ],
+      "event_date": "2026-09-03",
+      "evidence_excerpt": "Tesla said the Cybercab, a self-driving car with no steering wheel or pedals, is now available for public rides in Austin.",
+      "source_urls": [
+        "https://www.businessinsider.com/tesla-cybercab-robotaxi-launch-event-austin-self-driving-car-2026-9"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-07-02",
+      "evidence_excerpt": "NHTSA closed its 2022 Tesla phantom-braking probe covering hundreds of thousands of vehicles after complaints fell sharply and no associated crashes were found.",
+      "source_urls": [
+        "https://www.reuters.com/legal/litigation/us-closes-2022-probe-into-695000-tesla-vehicles-over-unexpected-braking-2026-07-02/",
+        "https://www.wsj.com/business/autos/safety-regulator-closes-tesla-phantom-braking-probe-after-complaints-drop-sharply-9ffc4361"
+      ],
+      "confidence": 84
+    },
+    {
+      "taxonomy": "Operational milestone (e.g., first patient dosed, satellite commissioned)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 8,
+      "event_ids": [
+        7,
+        14,
+        16
+      ],
+      "event_date": "2026-10-02",
+      "evidence_excerpt": "Tesla delivered 486,532 vehicles in Q3 2026, beating consensus of 461,974 even as deliveries slipped 2.1% from last year\u2019s record.",
+      "source_urls": [
+        "https://electrek.co/2026/10/02/tesla-q3-2026-deliveries-486532/",
+        "https://ir.tesla.com/press-release/tesla-third-quarter-2026-production-deliveries-and-deployments"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        2,
+        9
+      ],
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "Second-quarter revenue rose 26% to $28.2 billion.",
+      "source_urls": [
+        "https://www.techceodaily.com/big-tech/tesla-earnings-capex-surge-negative-cash-flow"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Capacity expansion announced (new factory, satellite constellation)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 6,
+      "event_ids": [
+        13
+      ],
+      "event_date": "2026-09-25",
+      "evidence_excerpt": "Tesla officially launched high-volume production of the Tesla Semi last night at its new dedicated factory in Nevada",
+      "source_urls": [
+        "https://electrek.co/2026/09/25/tesla-semi-volume-production-launch-nevada-factory/"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Capital infusion (PIPE, funding round, favorable terms)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 4,
+      "event_ids": [
+        15
+      ],
+      "event_date": "2026-09-29",
+      "evidence_excerpt": "Tesla has secured $30 billion in fresh credit lines that it could use to help scale the new products it is currently working on",
+      "source_urls": [
+        "https://techcrunch.com/2026/09/29/tesla-secures-30b-in-new-credit-lines-as-it-looks-to-scale-cybercab-optimus/",
+        "https://www.sec.gov/Archives/edgar/data/1318605/000162828026063820/tsla-20260929.htm"
+      ],
+      "confidence": 96
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        17,
+        18,
+        20
+      ],
+      "event_date": "2026-10-12",
+      "evidence_excerpt": "On October 12, 2026, Jefferies raised its price target on Tesla (TSLA) to $400 from $350 while maintaining a Hold rating.",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/tesla-price-target-raised-to-400-from-350-at-jefferies-thefly-news",
+        "https://news.futunn.com/en/post/1000893369/today-s-analyst-rating-tesla-price-target-raised-to-400"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Product delay/failure/rejection/safety recall",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        5,
+        19
+      ],
+      "event_date": "2026-10-09",
+      "evidence_excerpt": "The Office of Defects Investigation opened the file, DP26010, on Friday, October 9",
+      "source_urls": [
+        "https://electrek.co/2026/10/12/nhtsa-tesla-robotaxi-school-zone-speeding-petition/",
+        "https://static.nhtsa.gov/odi/inv/2026/INOA-DP26010-19159.pdf"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Regulatory denial or delay/antitrust block",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        12
+      ],
+      "event_date": "2026-09-03",
+      "evidence_excerpt": "Cybercab certification audit (AQ26002): Opened September 3, 2026 (the same day commercial Cybercab rides began in Austin).",
+      "source_urls": [
+        "https://driveteslacanada.ca/news/tesla-cybercab-nhtsa-audit-deadline-extension/",
+        "https://electrek.co/2026/10/12/nhtsa-tesla-robotaxi-school-zone-speeding-petition/"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Adverse litigation outcome/patent invalidation/antitrust ruling",
+      "type": "negative",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 8,
+      "adjusted_weight": 0,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-21",
+      "evidence_excerpt": "April 21, 2026: Musk disposed of 96,000,000 restricted shares back to the issuer (forfeiture tied to a Tornetta Decision Event)",
+      "source_urls": [
+        "https://www.stocktitan.net/sec-filings/TSLA/form-4.html",
+        "https://sec-api.io/insights/financial-analysis-of-tesla-fy2025-and-the-first-half-of-2026"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        0
+      ],
+      "event_date": "2026-10-13",
+      "evidence_excerpt": "JPMorgan cuts Tesla\u2019s price target to $415 from $445 and lowers its Q3 delivery and margin estimates",
+      "source_urls": [
+        "https://finance.yahoo.com/markets/stocks/articles/j-p-morgan-drops-sharp-080910133.html"
+      ],
+      "confidence": 75
+    },
+    {
+      "taxonomy": "Product delay/failure/rejection/safety recall",
+      "type": "negative",
+      "event_date": "2026-07-29",
+      "evidence_excerpt": "The US National Highway Traffic Safety Administration has opened an investigation into roughly 1.2 million Tesla vehicles after receiving 156 complaints",
+      "source_urls": [
+        "https://electrek.co/2026/07/31/nhtsa-probes-tesla-model-3-model-y-suspension-failures/"
+      ],
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
+      "type": "negative",
+      "event_date": "2026-07-22",
+      "evidence_excerpt": "But it missed badly on profit: non-GAAP earnings came in at just $0.33 per share, well short of the $0.53 analysts were looking for",
+      "source_urls": [
+        "https://electrek.co/2026/07/22/tesla-tsla-q2-2026-financial-results/"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 9,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-10-13",
+  "cutoff_date": null,
+  "role": "earnings"
+}
