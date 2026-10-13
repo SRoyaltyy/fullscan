@@ -212,7 +212,7 @@ def _plans() -> None:
         raise SystemExit("calendar skip changed")
     for name in ("h1_forward.yml", "holdup_forward.yml"):
         text = (ROOT / ".github" / "workflows" / name).read_text(encoding="utf-8")
-        needle = "python3 research/hot_n4_clean_v4/forward/forward.py"
+        needle = "research/hot_n4_clean_v4/forward/forward.py"
         if text.count(needle) != 1:
             raise SystemExit(f"{name} does not use the shared forward.py path")
     for page in (ROOT / "dashboard/holdup/index.html", ROOT / "dashboard/h1/index.html"):

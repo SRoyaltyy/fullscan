@@ -138,8 +138,8 @@ def test_check_mode_and_workflow_wiring():
         assert h1_seal_gate.check(target=lambda: SESSION, repo=absent, ref="HEAD") == 1
         assert h1_seal_gate.check(target=lambda: SESSION, repo=present, ref="HEAD") == 0
     text = (ROOT / ".github/workflows/h1_forward.yml").read_text(encoding="utf-8")
-    gate = "python3 research/hot_n4_clean_v4/forward/h1_seal_gate.py --check"
-    seal = "python3 research/hot_n4_clean_v4/forward/forward.py"
+    gate = "python3 research/hot_n4_clean_v4/forward/h1_fill_missing.py research/hot_n4_clean_v4/forward/h1_seal_gate.py --check"
+    seal = "python3 research/hot_n4_clean_v4/forward/h1_fill_missing.py research/hot_n4_clean_v4/forward/forward.py"
     assert text.count(gate) == 1 and text.count(seal) == 1
     assert "set -euo pipefail" in text[text.index("name: Seal the pre-open plan"):text.index(seal)]
     assert text.index(gate) < text.index(seal)
