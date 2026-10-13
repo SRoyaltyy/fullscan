@@ -1,6 +1,6 @@
 {
   "stage": "outcome",
-  "fetched_at": "2026-10-13T19:50:09.414813-04:00",
+  "fetched_at": "2026-10-13T19:50:38.375737-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -88,8 +88,8 @@
     "CL=F": {
       "available": true,
       "date": "2026-10-13",
-      "last": 94.77,
-      "pct_1d": 1.1
+      "last": 94.73,
+      "pct_1d": 1.06
     },
     "BZ=F": {
       "available": true,
@@ -100,7 +100,7 @@
     "GC=F": {
       "available": true,
       "date": "2026-10-13",
-      "last": 4179.9,
+      "last": 4179.6,
       "pct_1d": -0.26
     },
     "DXY": {
@@ -115,14 +115,14 @@
     "ES=F": {
       "available": true,
       "date": "2026-10-13",
-      "last": 7853.25,
-      "pct_1d": -0.06
+      "last": 7853.75,
+      "pct_1d": -0.05
     },
     "NQ=F": {
       "available": true,
       "date": "2026-10-13",
-      "last": 30769.75,
-      "pct_1d": -0.42
+      "last": 30775.75,
+      "pct_1d": -0.4
     }
   },
   "finviz_futures_tape": {
@@ -515,8 +515,8 @@
         "ASX200": {
           "available": true,
           "date": "2026-10-14",
-          "last": 8735.2,
-          "pct_1d": -0.55
+          "last": 8735.5,
+          "pct_1d": -0.54
         }
       },
       "composite_avg": -0.88
