@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:28:57.712623-04:00",
+  "generated_at": "2026-10-13T08:29:09.894848-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -94,31 +94,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_judge",
-      "title": "News judge",
-      "date": "2026-10-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-13T08:04:07.120448-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-13_judge.md",
-          "ok": true,
-          "reason": "",
-          "size": 10198,
-          "preview": "# News Judge \u2014 2026-10-13"
-        },
-        {
-          "path": "01_daily/news/2026-10-13_judge.json",
-          "ok": true,
-          "reason": "",
-          "size": 1274,
-          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
-        }
-      ],
-      "preview": "# News Judge \u2014 2026-10-13 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
-    },
     {
       "key": "general_predict",
       "title": "General market predict",
@@ -307,6 +282,31 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T08:29:08.792147-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-13_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10607,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.893, 'dir': 'down', 'conf': 0.476, 'source': 'llm'}, Communication Services={'score': -5.731, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -7.678, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Energy={'score': 1.668, 'dir': 'up', 'conf': 0.567, 'source': 'llm'}, Financial={'score': -0.069, 'dir': 'down', 'conf': 0.403, 'source': 'llm'}, Healthcare={'score': 2.601, 'dir': 'up', 'conf': 0.604, 'source': 'llm'}, Industrials={'score': -3.228, 'dir': 'down', 'conf': 0.529, 'source': 'llm'}, Real Estate={'score': 1.462, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-13_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6112,
+          "preview": "# Weather report \u2014 2026-10-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.893, 'dir': 'down', 'conf': 0.476, 'source': 'llm'}, Communication Services={'score': -5.731, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -7.678, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Energy={'score': 1.668, 'dir': 'up', 'conf': 0.567, 'source': 'llm'}, Financial={'score': -0.069, 'dir': 'down', 'conf': 0.403, 'source': 'llm'}, Healthcare={'score': 2.601, 'dir': 'up', 'conf': 0.604, 'source': 'llm'}, Industrials={'score': -3.228, 'dir': 'down', 'conf': 0.529, 'source': 'llm'}, Real Estate={'score': 1.462, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-10-13\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
