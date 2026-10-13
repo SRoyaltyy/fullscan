@@ -31,6 +31,7 @@ from .news_search_catalog import PHRASES, search_specs
 from .news_impact.classify import classify_text
 from .news_impact.prompts import PROMPT_VERSION
 from .news_impact.schema import family_of
+from .news_impact.institutional_actions import identify_institutional_actions
 
 VERSION = "free-intake-v1"
 ROOT = Path(__file__).resolve().parents[1]
@@ -490,7 +491,9 @@ def first_pass(doc: dict, now: datetime) -> dict:
             "state": state, "candidate_classes": list(hits),
             "matched_phrases": hits, "date_status": date_status, "review_reasons": reasons,
             "parser": VERSION, "classifier": "deterministic_coverage_hints", "final_lane_class": None,
-            "lane_rule_classification": classification, "analyst_family": family_of(route_class),
+            "lane_rule_classification": classification,
+            "institutional_actions": identify_institutional_actions(title),
+            "analyst_family": family_of(route_class),
             "routing_class": route_class, "routing_basis": route_basis,
             "analyst_prompt_version": PROMPT_VERSION, "analysis_status": "pending_contextual_analysis",
             "themes": [name for name, pattern in THEMES.items() if re.search(pattern, text, re.I)],
@@ -696,9 +699,10 @@ def run(root: Path, date: str, force: bool = False, workers: int = 12, extract: 
                "state": p["state"], "status": "pending_analysis",
                "analyst_family": p['analyst_family'],
                "routing_class": p['routing_class'], "routing_basis": p['routing_basis'],
-               "prompt_version": PROMPT_VERSION} for d,p in zip(docs,parsed)])
+               "prompt_version": PROMPT_VERSION,
+               "institutional_actions": p["institutional_actions"]} for d,p in zip(docs,parsed)])
     news = root / "01_daily/news"
-    compact = [{k:r[k] for k in ('document_id','title','url','source','published_at','published_raw','first_seen','last_seen','parsed_at','publisher','publisher_domain','discovery_paths','state','candidate_classes','lane_rule_classification','routing_class','routing_basis','final_lane_class','themes','review_reasons','extraction_status')} for r in parsed]
+    compact = [{k:r[k] for k in ('document_id','title','url','source','published_at','published_raw','first_seen','last_seen','parsed_at','publisher','publisher_domain','discovery_paths','state','candidate_classes','lane_rule_classification','institutional_actions','routing_class','routing_basis','final_lane_class','themes','review_reasons','extraction_status')} for r in parsed]
     write_json(news / f"{date}_intake_parsed.json", report | {'all_items': compact})
     (news / f"{date}_intake.md").write_text(render(report, parsed, health))
     dash = root / "dashboard/news-intake"
@@ -748,3 +752,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

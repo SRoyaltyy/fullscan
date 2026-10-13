@@ -1632,7 +1632,7 @@ def _stamp_extra(row: dict) -> dict:
     return row
 
 
-def process_article(
+def _process_article(
     art: dict,
     lane: LaneFn,
     *,
@@ -1998,3 +1998,13 @@ def process_article(
         row["gold_status"] = ""
         _stamp_extra(row)
     return _attach_prompt_log(row)
+
+
+
+def process_article(art, lane, *, axioms, use_pack=True, pack_fn=None, root=None, index_names=None):
+    """Preserve institutional recognition even when the market stack abstains."""
+    from src.news_impact.institutional_actions import identify_institutional_actions
+    result = _process_article(art, lane, axioms=axioms, use_pack=use_pack,
+                              pack_fn=pack_fn, root=root, index_names=index_names)
+    result['institutional_actions'] = identify_institutional_actions(art.get('title', ''))
+    return result
