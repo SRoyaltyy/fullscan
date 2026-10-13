@@ -151,7 +151,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
+      # workflow_run/queued runs otherwise check out the sha from trigger
+      # time; on 10-12 a queued land built from b070934c, before the
+      # first run's seal. Always build from the latest main.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -170,6 +175,7 @@ jobs:
           python -m src.test_factor_mine_gaps
           python -m src.test_price_actions
           python -m src.test_factor_mine_past_lock
+          python -m src.test_factor_mine_land_guard
       - name: Mine recipes (cash book)
         env:
           FROM_DATE: ${{ inputs.from_date }}
@@ -262,6 +268,13 @@ jobs:
           if bad:
               raise SystemExit("oversize publish path:\n" + "\n".join(bad))
           PY
+      - name: Re-check freeze against latest main
+        # Refetch origin/main right before the push. Days already frozen on
+        # main are restored byte-for-byte ("already frozen — no rewrite");
+        # a real content mismatch fails red. past_day_lock is append-only.
+        run: |
+          set -euo pipefail
+          python -m src.factor_mine_land_guard reconcile 2>&1 | tee -a /tmp/factor_mine_land.log
       - name: Publish scoreboard to main
         run: |
           bash scripts/safe_git_push.sh \

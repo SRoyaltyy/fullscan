@@ -41,6 +41,12 @@ on:
 permissions:
   contents: read
 
+# Serialize same-workflow writers of data/factor_mine / data/past_day_lock
+# (10-12 overlap incident). Queue, never cancel a land mid-flight.
+concurrency:
+  group: ticket-session-lock-writer
+  cancel-in-progress: false
+
 jobs:
   append-only:
     runs-on: ubuntu-latest
