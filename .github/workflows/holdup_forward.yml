@@ -63,7 +63,7 @@ jobs:
             || echo "theme-radar checkout failed"
       - name: Refresh forward prices
         id: prices
-        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/prices.py
+        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/holdup_restart.py research/hot_n4_clean_v4/forward/prices.py
       - name: Seal the pre-open plan
         id: plan
         if: success()
@@ -71,7 +71,7 @@ jobs:
           HOLDUP_GIT_REF: origin/main
           HOLDUP_MODE: plan
           PLAN_SESSION: ${{ github.event.inputs.session_date }}
-        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/forward.py
+        run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/holdup_restart.py research/hot_n4_clean_v4/forward/forward.py
       - name: Commit the append
         if: always()
         run: |
