@@ -1,11 +1,10 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T07:48:49.739986-04:00",
+  "generated_at": "2026-10-13T07:53:41.070232-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-13_predict.md` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-13_judge.md` \u2014 missing"
+    "MISSING General predict MD `01_daily/general/2026-10-13_predict.md` \u2014 missing"
   ],
   "counts": {
     "ok": 6,
@@ -180,7 +179,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 5,
+      "n_req_ok": 6,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -260,11 +259,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-13_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9553,
+          "said": "1. **Houthi/Iran escalation: Riyadh missile attacks day 3, tanker attacked in Strait of Hormuz** \u2014 fresh kinetic oil-supply increment with energy freight/insura",
+          "bullets": [
+            "2. **Hawkish Fed comments boost October hike expectations; gold drops >$100; yields surge with mortgage hedging pressure** \u2014 the dominant rates cluster into this week's CPI + Powell; hits gold, banks, small caps, duration. Channel: rates",
+            "3. **OPEC cuts 2026 oil demand growth forecast to 400k bpd** \u2014 demand-side counterweight to the supply shock; caps XLE upside, mixed for energy. Channel: sector_fundamental",
+            "4. **EU weighs oil/gas windfall profit tax as energy prices soar** \u2014 policy overhang on European energy majors, mild substitution/read-across for US energy sentiment. Channel: sector_policy"
+          ]
         },
         {
           "key": "research_json",
@@ -343,8 +346,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7574,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 15 fail",
+          "size": 7577,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
           "bullets": [
             "general_predict:missing",
             "events:zero_events",
@@ -736,11 +739,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-13_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9553,
+          "said": "1. **Houthi/Iran escalation: Riyadh missile attacks day 3, tanker attacked in Strait of Hormuz** \u2014 fresh kinetic oil-supply increment with energy freight/insura",
+          "bullets": [
+            "2. **Hawkish Fed comments boost October hike expectations; gold drops >$100; yields surge with mortgage hedging pressure** \u2014 the dominant rates cluster into this week's CPI + Powell; hits gold, banks, small caps, duration. Channel: rates",
+            "3. **OPEC cuts 2026 oil demand growth forecast to 400k bpd** \u2014 demand-side counterweight to the supply shock; caps XLE upside, mixed for energy. Channel: sector_fundamental",
+            "4. **EU weighs oil/gas windfall profit tax as energy prices soar** \u2014 policy overhang on European energy majors, mild substitution/read-across for US energy sentiment. Channel: sector_policy"
+          ]
         },
         {
           "key": "in_weather",
@@ -2180,6 +2187,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-13\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-13T07:48:48.439045-04:00"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T07:53:39.907435-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-10-13.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11510266,
+          "preview": "11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
