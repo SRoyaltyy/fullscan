@@ -4457,6 +4457,30 @@
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "38439683174",
       "manifest": "research/input_freeze/2026-10-13/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-13_stock_book.md",
+      "at": "2026-10-13T13:38:22-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-13",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38438422418",
+      "manifest": "research/input_freeze/2026-10-13/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-13_input_health.json",
+      "at": "2026-10-13T13:38:22-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-13",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38438422418",
+      "manifest": "research/input_freeze/2026-10-13/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-13_stock_book.json",
+      "at": "2026-10-13T13:38:22-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-13",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38438422418",
+      "manifest": "research/input_freeze/2026-10-13/manifest.json"
     }
   ]
 }
