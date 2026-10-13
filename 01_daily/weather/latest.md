@@ -1,11 +1,11 @@
-# Weather report — 2026-10-12
+# Weather report — 2026-10-13
 
 Is today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade.
 
 ## Snapshot
 
 - **Risk state:** UNKNOWN
-- **Yields:** falling (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.85 via vix/vix3m) spot 15.21
+- **Yields:** falling (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.86 via vix/vix3m) spot 15.39
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.18
 - **High-impact events:** 0 bullish vs 0 bearish
 - ⚠️ **Data gaps:** general predict run, general predict factor scoreboard
