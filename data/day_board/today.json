@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T07:57:49.518099-04:00",
+  "generated_at": "2026-10-13T07:58:11.174921-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -83,31 +83,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-13T07:57:00.079101-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-13_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97071,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-13_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11907,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-13\n_Generated 2026-10-13T04:16:18.836729-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-13\n_Generated 2026-10-13T04:16:18.836729-04:00 \u00b7 export=data/exports/finviz_2026-10-12.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -289,6 +264,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CRSR, ELV, AUPH, MRK, AVPT \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 A, PFE, CDNA, ABBV, WAT"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T07:58:10.120027-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-13_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 5998102,
+          "preview": "raw=8365 usable=679 single=395 \u00b7 Shipping and insurance costs for energy flows surge, OPEC, non-OPEC ministers sa | OPEC cuts 2026 oil demand growth forecast to 400,000 bpd, sees pent-up demand in | Dollar holds near 18-month high as geopolitical risks rise - Reuters | Anduril Challenges Defense Giants by Introducing Cheaper Missile - Bloomberg.com | China imposes sanctions on Paraguay, Belize ministers over Taiwan ties - Reuters"
+        },
+        {
+          "path": "01_daily/news/2026-10-13_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 12546,
+          "preview": "# News Parse v2 \u2014 2026-10-13T07:58:09.604178-04:00\nWindow\u224848h | news_mode=on | raw=8365 | usable=679 | single_name=395 | noise_dropped=6997\nusable polarity={'+': 25, '-': 75, 'mixed': 6, 'neutral': 573}"
+        }
+      ],
+      "preview": "raw=8365 usable=679 single=395 \u00b7 Shipping and insurance costs for energy flows surge, OPEC, non-OPEC ministers sa | OPEC cuts 2026 oil demand growth forecast to 400,000 bpd, sees pent-up demand in | Dollar holds near 18-month high as geopolitical risks rise - Reuters | Anduril Challenges Defense Giants by Introducing Cheaper Missile - Bloomberg.com | China imposes sanctions on Paraguay, Belize ministers over Taiwan ties - Reuters \u00b7 # News Parse v2 \u2014 2026-10-13T07:58:09.604178-04:00\nWindow\u224848h | news_mode=on | raw=8365 | usable=679 | single_name=395 | noise_dropped=6997\nusable polarity={'+': 25, '-': 75, 'mixed': 6, 'neutral': 573}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
