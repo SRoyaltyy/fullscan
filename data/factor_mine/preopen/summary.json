@@ -47,6 +47,19 @@
           "s": null,
           "sells": [],
           "sit": true
+        },
+        {
+          "buys": [],
+          "date": "2026-10-13",
+          "equity": 10000.0,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "S=-6.77 <= -3: no buys"
+          ],
+          "s": -6.767,
+          "sells": [],
+          "sit": true
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -90,6 +103,19 @@
             "seal not committed before 09:30 ET: never committed"
           ],
           "s": null,
+          "sells": [],
+          "sit": true
+        },
+        {
+          "buys": [],
+          "date": "2026-10-13",
+          "equity": 10000.0,
+          "mean": 0.0,
+          "picks": [],
+          "reasons": [
+            "S=-6.77 <= -3: no buys"
+          ],
+          "s": -6.767,
           "sells": [],
           "sit": true
         }

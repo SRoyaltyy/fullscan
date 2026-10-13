@@ -1,0 +1,28 @@
+{
+  "buys": [],
+  "cash": 10000.0,
+  "date": "2026-10-13",
+  "equity": 10000.0,
+  "fees": 0,
+  "fills": [],
+  "holdings": [],
+  "label": "starts 10-08 open, no past days",
+  "mean": 0.0,
+  "n_trades_today": 0,
+  "parent": "union_hot_n4_holdup",
+  "picks": [],
+  "reasons": [
+    "S=-6.77 <= -3: no buys"
+  ],
+  "recipe": "union_hot_n4_holdup_preopen",
+  "s": -6.767,
+  "seal_sha256": "8648d19a3d60e9189997f464660fdf56dc062bffea6afe12e9b73cb152451674",
+  "sells": [],
+  "sit": true,
+  "state": {
+    "after": "2026-10-13",
+    "cash": 10000.0,
+    "pos": {},
+    "yday_equity": 10000.0
+  }
+}
