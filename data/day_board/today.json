@@ -1,6 +1,6 @@
 {
   "date": "2026-10-13",
-  "generated_at": "2026-10-13T08:01:36.152943-04:00",
+  "generated_at": "2026-10-13T08:02:46.086432-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -83,31 +83,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-10-13",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-13T07:57:12.205777-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-13_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 339376,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-13_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 36547,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-13\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-13\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -289,6 +264,31 @@
         }
       ],
       "preview": "20 events \u00b7 US CPI (September) release | FOMC rate decision (Oct 27-28) | Fed Chair Kevin Warsh speech this week | Q3 bank earnings kickoff: JPM, GS, C | Healthcare and consumer earnings: UNH, JNJ, Domino's | TSMC Q3 record revenue beat (resolved, momentum continues) \u00b7 # Event Scan \u2014 2026-10-13\n- events tracked: **20** (via openclaw)\n- uncertainty: **elevated**\n- summary: The dominant macro setup: a hawkish Fed under Warsh deciding Oct 28 with the Oct 14 CPI as the swing input, against an oil market squeezed by the ongoing Iran war and OPEC+ quota pauses. The US-China truce holds for now but is fragile, while AI-leadership equities face sentiment wobbles despite stellar TSMC/Samsung results. No shutdown in this window (CR runs to Dec 11), but midterms amplify political headline risk."
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-10-13",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-13T08:02:45.008051-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-13_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 25747,
+          "preview": "26 events \u00b7 US CPI (September) release | FOMC rate decision (Oct 27-28) | Fed Chair Kevin Warsh speech this week | Q3 bank earnings kickoff: JPM, GS, C | Healthcare and consumer earnings: UNH, JNJ, Domino's | TSMC Q3 record revenue beat (resolved, momentum continues)"
+        },
+        {
+          "path": "01_daily/events/2026-10-13_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 12126,
+          "preview": "# Event Scan \u2014 2026-10-13\n- events tracked: **20** (via openclaw)\n- uncertainty: **elevated**\n- summary: The dominant macro setup: a hawkish Fed under Warsh deciding Oct 28 with the Oct 14 CPI as the swing input, against an oil market squeezed by the ongoing Iran war and OPEC+ quota pauses. The US-China truce holds for now but is fragile, while AI-leadership equities face sentiment wobbles despite stellar TSMC/Samsung results. No shutdown in this window (CR runs to Dec 11), but midterms amplify political headline risk."
+        }
+      ],
+      "preview": "26 events \u00b7 US CPI (September) release | FOMC rate decision (Oct 27-28) | Fed Chair Kevin Warsh speech this week | Q3 bank earnings kickoff: JPM, GS, C | Healthcare and consumer earnings: UNH, JNJ, Domino's | TSMC Q3 record revenue beat (resolved, momentum continues) \u00b7 # Event Scan \u2014 2026-10-13\n- events tracked: **20** (via openclaw)\n- uncertainty: **elevated**\n- summary: The dominant macro setup: a hawkish Fed under Warsh deciding Oct 28 with the Oct 14 CPI as the swing input, against an oil market squeezed by the ongoing Iran war and OPEC+ quota pauses. The US-China truce holds for now but is fragile, while AI-leadership equities face sentiment wobbles despite stellar TSMC/Samsung results. No shutdown in this window (CR runs to Dec 11), but midterms amplify political headline risk."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
