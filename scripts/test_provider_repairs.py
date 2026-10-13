@@ -1,6 +1,8 @@
 import unittest
+import io, json
 from unittest.mock import patch
 from src import lane_route, predict_grok_heal
+import openclaw_oauth_guard
 
 
 class ProviderRepairTests(unittest.TestCase):
@@ -28,6 +30,14 @@ class ProviderRepairTests(unittest.TestCase):
         self.assertEqual(payload['reasoning_effort'], 'low')
         self.assertEqual(payload['max_tokens'], 16000)
         self.assertNotIn('thinking', payload)
+
+    def test_guard_requires_exact_real_answer(self):
+        for content,expected in (('42',True),('142',False),('Error 42: timed out',False),('',False)):
+            data=json.dumps({'choices':[{'message':{'content':content}}]}).encode()
+            with patch.object(openclaw_oauth_guard,'gateway_token',return_value='synthetic'), \
+                 patch.object(openclaw_oauth_guard.urllib.request,'urlopen',return_value=io.BytesIO(data)), \
+                 patch.object(openclaw_oauth_guard,'log'):
+                self.assertIs(openclaw_oauth_guard.real_completion({},'test'),expected)
 
 
 if __name__ == '__main__':
