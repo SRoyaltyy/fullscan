@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T14:06:30.605530-04:00",
+  "generated_at": "2026-10-14T14:06:38.895198-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -805,10 +805,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2261198,
-          "said": "208 rows",
+          "size": 2292922,
+          "said": "207 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ARQT, AVAH, WAY, CORT"
+            "ONC, LLY, WAY, CORT, ARGX, INCY, NEM, HALO"
           ]
         },
         {
@@ -886,9 +886,9 @@
           "bullets": []
         }
       ],
-      "said": "208 rows",
+      "said": "207 rows",
       "bullets": [
-        "HALO, ONC, LLY, HRMY, ARQT"
+        "ONC, LLY, WAY, CORT, ARGX"
       ]
     },
     {
@@ -1069,31 +1069,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T09:24:47.280859-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-14_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 276650,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-14_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18266,
-          "preview": "# MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T04:27:00.538231-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T04:27:00.538231-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -3563,6 +3538,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T14:06:37.976662-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-14_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2292922,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, LLY, WAY, CORT, ARGX"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ONC, LLY, WAY, CORT, ARGX"
     }
   ],
   "href": {
@@ -3572,22 +3565,6 @@
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
   },
   "frozen_write_skips": [
-    {
-      "path": "01_daily/2026-10-14_preopen_qc.json",
-      "at": "2026-10-14T09:52:59-04:00",
-      "commit_msg": "auto: land sector_predict [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38569102482",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "01_daily/2026-10-14_preopen_status.json",
-      "at": "2026-10-14T09:52:59-04:00",
-      "commit_msg": "auto: land sector_predict [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38569102482",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
     {
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T09:52:59-04:00",
@@ -5168,6 +5145,22 @@
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T14:06:30-04:00",
       "commit_msg": "auto: land weather [2026-10-14]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38611802163",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T14:06:39-04:00",
+      "commit_msg": "auto: land join [2026-10-14]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38611802163",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/join/2026-10-14_ranked.csv",
+      "at": "2026-10-14T14:06:39-04:00",
+      "commit_msg": "auto: land join [2026-10-14]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "38611802163",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
