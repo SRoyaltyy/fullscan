@@ -298,9 +298,13 @@ jobs:
         # The gate exits 1 (no plan line, the day stays missing) while
         # 01_daily/general/<D>_predict.md is not on origin/main. Present:
         # forward.py runs exactly as before.
+        # GROK GATE (pending Cyrus): h1_grok_gate.py --check also exits 1
+        # unless <D>_preopen_status.json grok_ok is true AND the predict
+        # trace names a Grok model. Same fail-closed path: day stays missing.
         run: |
           set -euo pipefail
           PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_fill_missing.py research/hot_n4_clean_v4/forward/h1_seal_gate.py --check
+          PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_fill_missing.py research/hot_n4_clean_v4/forward/h1_grok_gate.py --check
           PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_fill_missing.py research/hot_n4_clean_v4/forward/forward.py
       - name: Refresh the h1 close display
         id: closes
