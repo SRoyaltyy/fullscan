@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `ret_5` · size `leftover` · sell `list` · S-boost `none` · rank by ret_5
 
-Cash book **+15.56%** ($11,556) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 365 · skips 100 · realized $+370.60.
+Cash book **+15.22%** ($11,522) · signal-only (no cash/fees) was +36.33%. Starts YES **29/30**. Fills 373 · skips 100 · realized $+370.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -522,6 +522,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `SEZL` | 11 | $131.19 | $2.04 | $+33.77 | $10,053.46 | ▲ +33.77 after sell → book $11,558.36; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `WFF` | 101 | $14.90 | $2.32 | $+7.51 | $11,556.04 | ▲ +7.51 after sell → book $11,556.04; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,556.04 | ▲ close $11,556.04 vs 09:30 $11,585.43 (session +0.00) | 16:00 close · cash $11,556.04 · no lots left · equity $11,556.04. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,556.04 | ▲ 09:30 equity $11,556.04 vs yday $11,556.04 (+0.00) | 09:30 open · cash $11,556.04 · no holdings · equity $11,556.04 vs prior close $11,556.04 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `JLHL` | 303 | $4.76 | $3.91 | — | $10,109.85 | — | rank by ret_5; rank ret_5; list yday_mover; 🔵; ret5=+22.6; leftover $1444.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ODD` | 65 | $22.22 | $2.19 | — | $8,663.37 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+14.9; leftover $1444.51 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ECO` | 14 | $99.71 | $2.03 | — | $7,265.39 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+14.3; leftover $1444.51 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `HLP` | 508 | $2.84 | $6.55 | — | $5,816.12 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+11.9; leftover $1444.51 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `PINS` | 64 | $22.23 | $2.18 | — | $4,391.22 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+11.7; leftover $1444.51 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `MNSO` | 139 | $10.37 | $2.41 | — | $2,947.38 | — | rank by ret_5; rank ret_5; list ohlc_hot; ret5=+11.3; leftover $1444.51 | join🟢 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `VFC` | 90 | $16.03 | $2.26 | — | $1,502.42 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+11.2; leftover $1444.51 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ETSY` | 18 | $78.89 | $2.04 | — | $80.36 | — | rank by ret_5; rank ret_5; list ohlc_hot; 🔵; ret5=+11.1; leftover $1444.51 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $80.36 | ▼ close $11,522.35 vs 09:30 $11,556.04 (session -10.12) | 16:00 close · cash $80.36 · equity $11,522.35 vs 09:30 $11,556.04 (-33.69; session marks -10.12) · 8 name(s) marked open→close (per-name table). JLHL×303 09:30 $4.76 → close $4.60 -48.48; ODD×65 09:30 $22.22 → close $21.63 -38.35; ECO×14 09:30 $99.71 → close $95.66 -56.70; HLP×508 09:30 $2.84 → close $2.98 +71.12; PINS×64 09:30 $22.23 → close $21.76 -30.08; MNSO×139 09:30 $10.37 → close $10.22 -20.85; VFC×90 09:30 $16.03 → close $16.48 +40.50; ETSY×18 09:30 $78.89 → close $82.93 +72.72 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #1 mom+breakout+peer/sector (research; not KEEP)
 
-Cash book **-12.66%** ($8,734) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 331 · skips 96 · realized $-120.43.
+Cash book **-13.18%** ($8,682) · signal-only (no cash/fees) was +1.42%. Starts YES **4/30**. Fills 339 · skips 96 · realized $-120.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -491,6 +491,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `DNA` | 355 | $11.79 | $4.67 | $-328.75 | $4,181.06 | ▼ -328.75 after sell → book $8,771.14; vs 09:30 mark -4.67 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `LVWR` | 2816 | $1.63 | $36.83 | $+39.48 | $8,734.31 | ▲ +39.48 after sell → book $8,734.31; vs 09:30 mark -36.83 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,734.31 | ▲ close $8,734.31 vs 09:30 $8,775.81 (session +0.00) | 16:00 close · cash $8,734.31 · no lots left · equity $8,734.31. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,734.31 | ▲ 09:30 equity $8,734.31 vs yday $8,734.31 (+0.00) | 09:30 open · cash $8,734.31 · no holdings · equity $8,734.31 vs prior close $8,734.31 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `SHAK` | 15 | $70.75 | $2.04 | — | $7,671.02 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+10.0; leftover $1091.79 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ESRT` | 226 | $4.82 | $2.92 | — | $6,578.79 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; 🔵; ret5=+9.7; leftover $1091.79 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `SG` | 109 | $10.00 | $2.32 | — | $5,486.47 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list ohlc_hot; ret5=+9.7; leftover $1091.79 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `WLY` | 20 | $52.29 | $2.05 | — | $4,438.62 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; ret5=+8.5; leftover $1091.79 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `PGR` | 5 | $206.97 | $2.00 | — | $3,401.77 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list earn_react; 🔵; ret5=+5.1; leftover $1091.79 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `TRU` | 16 | $66.42 | $2.04 | — | $2,337.01 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten,yday_gainer; 🔵; ret5=+6.4; leftover $1091.79 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `CXW` | 32 | $33.97 | $2.09 | — | $1,247.88 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list probable,yday_gainer,yday_mover; 🔵; ret5=+7.1; leftover $1091.79 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `CNK` | 28 | $37.88 | $2.07 | — | $185.17 | — | Clock-B #1 mom+breakout+peer/sector (research; not KEEP); gate clk_mom_break_peer=True; rank hot_score; list flatten; ret5=+7.5; leftover $1091.79 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $185.17 | ▼ close $8,681.92 vs 09:30 $8,734.31 (session -34.87) | 16:00 close · cash $185.17 · equity $8,681.92 vs 09:30 $8,734.31 (-52.39; session marks -34.87) · 8 name(s) marked open→close (per-name table). SHAK×15 09:30 $70.75 → close $68.77 -29.70; ESRT×226 09:30 $4.82 → close $4.78 -9.04; SG×109 09:30 $10.00 → close $10.14 +15.26; WLY×20 09:30 $52.29 → close $51.49 -16.00; PGR×5 09:30 $206.97 → close $213.46 +32.45; TRU×16 09:30 $66.42 → close $66.94 +8.32; CXW×32 09:30 $33.97 → close $32.56 -45.12; CNK×28 09:30 $37.88 → close $38.20 +8.96 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢
 
-Cash book **-34.00%** ($6,600) · signal-only (no cash/fees) was +9.53%. Starts YES **0/30**. Fills 268 · skips 79 · realized $-327.36.
+Cash book **-34.13%** ($6,587) · signal-only (no cash/fees) was +9.53%. Starts YES **0/30**. Fills 275 · skips 79 · realized $-327.36.
 
 ## How this sleeve decides (like you are 10)
 
@@ -427,6 +427,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `AUGO` | 37 | $91.92 | $2.14 | $+70.87 | $3,455.99 | ▲ +70.87 after sell → book $6,603.92; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `DNA` | 267 | $11.79 | $3.51 | $-247.26 | $6,600.41 | ▼ -247.26 after sell → book $6,600.41; vs 09:30 mark -3.51 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,600.41 | ▲ close $6,600.41 vs 09:30 $6,606.06 (session +0.00) | 16:00 close · cash $6,600.41 · no lots left · equity $6,600.41. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,600.41 | ▲ 09:30 equity $6,600.41 vs yday $6,600.41 (+0.00) | 09:30 open · cash $6,600.41 · no holdings · equity $6,600.41 vs prior close $6,600.41 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `AMX` | 38 | $21.62 | $2.10 | — | $5,776.75 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list yday_gainer; 🔵; ret5=-3.0; leftover $825.05 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `BAC` | 16 | $49.83 | $2.04 | — | $4,977.43 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list earn_react; 🔵; ret5=-0.2; leftover $825.05 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `SG` | 82 | $10.00 | $2.24 | — | $4,155.19 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list ohlc_hot; ret5=+9.7; leftover $825.05 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `TBBB` | 14 | $56.03 | $2.03 | — | $3,368.74 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list yday_gainer; 🔵; ret5=+4.1; leftover $825.05 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ITW` | 3 | $265.92 | $2.00 | — | $2,568.98 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list yday_gainer; 🔵; ret5=-0.3; leftover $825.05 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `GLND` | 199 | $4.13 | $2.59 | — | $1,743.53 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list yday_mover; ret5=-26.3; leftover $825.05 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `MNSO` | 79 | $10.37 | $2.23 | — | $922.07 | — | packet🟢 OR headline🟢; gate news_or_headline=True; rank cond; list ohlc_hot; ret5=+11.3; leftover $825.05 | join🟢 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $922.07 | ▲ close $6,586.64 vs 09:30 $6,600.41 (session +1.46) | 16:00 close · cash $922.07 · equity $6,586.64 vs 09:30 $6,600.41 (-13.77; session marks +1.46) · 7 name(s) marked open→close (per-name table). AMX×38 09:30 $21.62 → close $21.84 +8.36; BAC×16 09:30 $49.83 → close $51.39 +24.96; SG×82 09:30 $10.00 → close $10.14 +11.48; TBBB×14 09:30 $56.03 → close $56.36 +4.62; ITW×3 09:30 $265.92 → close $269.47 +10.65; GLND×199 09:30 $4.13 → close $3.90 -46.76; MNSO×79 09:30 $10.37 → close $10.22 -11.85 | — |
 
 ## Not taken
 

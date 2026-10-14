@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **-2.00%** ($9,800) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 60 · skips 16 · realized $+1589.64.
+Cash book **-1.94%** ($9,806) · signal-only (no cash/fees) was +27.44%. Starts YES **25/30**. Fills 62 · skips 16 · realized $+1589.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -220,6 +220,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,800.15 | ▲ close $9,800.15 vs 09:30 $9,803.34 (session +0.00) | 16:00 close · cash $9,800.15 · no lots left · equity $9,800.15. | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,800.15 | ▲ 09:30 equity $9,800.15 vs yday $9,800.15 (+0.00) | 09:30 open · cash $9,800.15 · no holdings · equity $9,800.15 vs prior close $9,800.15 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,800.15 | ▲ close $9,800.15 vs 09:30 $9,800.15 (session +0.00) | 16:00 close · cash $9,800.15 · no lots left · equity $9,800.15. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,800.15 | ▲ 09:30 equity $9,800.15 vs yday $9,800.15 (+0.00) | 09:30 open · cash $9,800.15 · no holdings · equity $9,800.15 vs prior close $9,800.15 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `ESRT` | 677 | $4.82 | $8.73 | — | $6,528.28 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; 🔵; ret5=+9.7; leftover $3266.72 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `SG` | 326 | $10.00 | $4.21 | — | $3,264.07 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+9.7; leftover $3266.72 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,264.07 | ▲ close $9,805.77 vs 09:30 $9,800.15 (session +18.56) | 16:00 close · cash $3,264.07 · equity $9,805.77 vs 09:30 $9,800.15 (+5.62; session marks +18.56) · 2 name(s) marked open→close (per-name table). ESRT×677 09:30 $4.82 → close $4.78 -27.08; SG×326 09:30 $10.00 → close $10.14 +45.64 | — |
 
 ## Not taken
 

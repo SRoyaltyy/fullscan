@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-10.47%** ($8,953) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 258 · skips 71 · realized $-1788.82.
+Cash book **-8.12%** ($9,188) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 260 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -416,6 +416,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `LVWR` | 817 | $1.63 | $10.69 | $+11.46 | $7,659.31 | ▲ +11.46 after sell → book $8,955.61; vs 09:30 mark -10.69 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `WFF` | 87 | $14.90 | $2.28 | $+5.91 | $8,953.34 | ▲ +5.91 after sell → book $8,953.34; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,953.34 | ▲ close $8,953.34 vs 09:30 $8,980.27 (session +0.00) | 16:00 close · cash $8,953.34 · no lots left · equity $8,953.34. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,953.34 | ▲ 09:30 equity $8,953.34 vs yday $8,953.34 (+0.00) | 09:30 open · cash $8,953.34 · no holdings · equity $8,953.34 vs prior close $8,953.34 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `CNK` | 118 | $37.88 | $2.34 | — | $4,481.16 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list flatten; ret5=+7.5; leftover $4476.67 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `HLP` | 1570 | $2.84 | $20.25 | — | $2.10 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+11.9; leftover $4476.67 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.10 | ▲ close $9,188.30 vs 09:30 $8,953.34 (session +257.56) | 16:00 close · cash $2.10 · equity $9,188.30 vs 09:30 $8,953.34 (+234.96; session marks +257.56) · 2 name(s) marked open→close (per-name table). CNK×118 09:30 $37.88 → close $38.20 +37.76; HLP×1570 09:30 $2.84 → close $2.98 +219.80 | — |
 
 ## Not taken
 

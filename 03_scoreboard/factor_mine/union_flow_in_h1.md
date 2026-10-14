@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **+9.85%** ($10,985) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 98 · skips 27 · realized $+766.09.
+Cash book **+10.24%** ($11,024) · signal-only (no cash/fees) was +17.31%. Starts YES **6/30**. Fills 100 · skips 27 · realized $+766.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -256,6 +256,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,984.95 | ▲ close $10,984.95 vs 09:30 $10,984.95 (session +0.00) | 16:00 close · cash $10,984.95 · no lots left · equity $10,984.95. | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,984.95 | ▲ 09:30 equity $10,984.95 vs yday $10,984.95 (+0.00) | 09:30 open · cash $10,984.95 · no holdings · equity $10,984.95 vs prior close $10,984.95 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,984.95 | ▲ close $10,984.95 vs 09:30 $10,984.95 (session +0.00) | 16:00 close · cash $10,984.95 · no lots left · equity $10,984.95. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,984.95 | ▲ 09:30 equity $10,984.95 vs yday $10,984.95 (+0.00) | 09:30 open · cash $10,984.95 · no holdings · equity $10,984.95 vs prior close $10,984.95 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `EPR` | 100 | $54.47 | $2.29 | — | $5,535.66 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list probable,yday_gainer,yday_mover; ret5=-0.9; leftover $5492.48 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `TBBB` | 98 | $56.03 | $2.28 | — | $42.44 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_gainer; 🔵; ret5=+4.1; leftover $5492.48 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $42.44 | ▲ close $11,023.72 vs 09:30 $10,984.95 (session +43.34) | 16:00 close · cash $42.44 · equity $11,023.72 vs 09:30 $10,984.95 (+38.77; session marks +43.34) · 2 name(s) marked open→close (per-name table). EPR×100 09:30 $54.47 → close $54.58 +11.00; TBBB×98 09:30 $56.03 → close $56.36 +32.34 | — |
 
 ## Not taken
 

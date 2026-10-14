@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **+1.43%** ($10,143) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 374 · skips 108 · realized $-743.47.
+Cash book **+2.50%** ($10,250) · signal-only (no cash/fees) was +6.85%. Starts YES **5/30**. Fills 382 · skips 108 · realized $-743.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -530,6 +530,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **COVER** | `PEPG` | 318 | $2.48 | $4.10 | $+33.05 | $10,979.31 | ▲ +33.05 after sell → book $10,153.11; vs 09:30 mark -4.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **COVER** | `ZENA` | 765 | $1.08 | $9.87 | $-16.07 | $10,143.24 | ▼ -16.07 after sell → book $10,143.24; vs 09:30 mark -9.87 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,143.24 | ▲ close $10,143.24 vs 09:30 $10,169.77 (session +0.00) | 16:00 close · cash $10,143.24 · no lots left · equity $10,143.24. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,143.24 | ▲ 09:30 equity $10,143.24 vs yday $10,143.24 (+0.00) | 09:30 open · cash $10,143.24 · no holdings · equity $10,143.24 vs prior close $10,143.24 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **SHORT** | `TMUS` | 4 | $155.00 | $2.04 | — | $10,761.20 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ret5=-7.4; leftover $633.95 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **SHORT** | `SMMT` | 41 | $15.29 | $2.15 | — | $11,385.94 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-10.3; leftover $633.95 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-14 09:30 ET | **SHORT** | `NVTS` | 63 | $9.96 | $2.22 | — | $12,011.52 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-12.7; leftover $633.95 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **SHORT** | `EPR` | 11 | $54.47 | $2.06 | — | $12,608.63 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-0.9; leftover $633.95 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **SHORT** | `PDFS` | 13 | $46.12 | $2.07 | — | $13,206.12 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-12.5; leftover $633.95 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **SHORT** | `AIP` | 30 | $20.54 | $2.12 | — | $13,820.21 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-12.3; leftover $633.95 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **SHORT** | `ACRS` | 187 | $3.38 | $2.61 | — | $14,449.66 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-6.2; leftover $633.95 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **SHORT** | `MX` | 230 | $2.75 | $3.03 | — | $15,079.13 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; ret5=-17.2; leftover $633.95 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,079.13 | ▲ close $10,250.30 vs 09:30 $10,143.24 (session +125.35) | 16:00 close · cash $15,079.13 · equity $10,250.30 vs 09:30 $10,143.24 (+107.06; session marks +125.35) · 8 name(s) marked open→close (per-name table). TMUS×4 09:30 $155.00 → close $157.79 -11.16; SMMT×41 09:30 $15.29 → close $15.13 +6.56; NVTS×63 09:30 $9.96 → close $9.36 +38.43; EPR×11 09:30 $54.47 → close $54.58 -1.21; PDFS×13 09:30 $46.12 → close $42.41 +48.23; AIP×30 09:30 $20.54 → close $19.67 +26.10; ACRS×187 09:30 $3.38 → close $3.38 -0.00; MX×230 09:30 $2.75 → close $2.67 +18.40 | — |
 
 ## Not taken
 

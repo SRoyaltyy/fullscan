@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+14.64%** ($11,464) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 12 · skips 0 · realized $-826.45.
+Cash book **+16.18%** ($11,618) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 15 · skips 0 · realized $-826.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -172,3 +172,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.24 | ▲ 09:30 equity $11,482.35 vs yday $11,178.53 (+303.82) | 09:30 open · cash $6.24 (unchanged overnight, no fees) · equity $11,482.35 vs prior close $11,178.53 (+303.82) · 1 name(s) re-marked at the open (per-name table). ALHC×1381 yday $8.09 → 09:30 $8.31 +303.82 | — |
 | 2026-10-13 09:30 ET | **SELL** | `ALHC` | 1381 | $8.31 | $18.14 | $+1096.47 | $11,464.21 | ▲ +1,096.47 after sell → book $11,464.21; vs 09:30 mark -18.14 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,464.21 | ▲ close $11,464.21 vs 09:30 $11,482.35 (session +0.00) | 16:00 close · cash $11,464.21 · no lots left · equity $11,464.21. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,464.21 | ▲ 09:30 equity $11,464.21 vs yday $11,464.21 (+0.00) | 09:30 open · cash $11,464.21 · no holdings · equity $11,464.21 vs prior close $11,464.21 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `LW` | 55 | $52.02 | $2.15 | — | $8,600.95 | — | combo gate; gate macd_up=True,rsi_os=True; list ohlc_hot; 🔵; ret5=+8.5; leftover $2866.05 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `BAC` | 57 | $49.83 | $2.16 | — | $5,758.48 | — | combo gate; gate macd_up=True,rsi_os=True; list earn_react; 🔵; ret5=-0.2; leftover $2866.05 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `MS` | 15 | $180.45 | $2.04 | — | $3,049.70 | — | combo gate; gate macd_up=True,rsi_os=True; list earn_react; 🔵; ret5=-2.3; leftover $2866.05 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,049.70 | ▲ close $11,617.68 vs 09:30 $11,464.21 (session +159.82) | 16:00 close · cash $3,049.70 · equity $11,617.68 vs 09:30 $11,464.21 (+153.47; session marks +159.82) · 3 name(s) marked open→close (per-name table). LW×55 09:30 $52.02 → close $53.02 +55.00; BAC×57 09:30 $49.83 → close $51.39 +88.92; MS×15 09:30 $180.45 → close $181.51 +15.90 | — |

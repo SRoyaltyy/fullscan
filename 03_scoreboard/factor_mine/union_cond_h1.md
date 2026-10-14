@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-12.89%** ($8,711) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 383 · skips 105 · realized $-723.91.
+Cash book **-13.17%** ($8,683) · signal-only (no cash/fees) was -4.88%. Starts YES **0/30**. Fills 392 · skips 105 · realized $-723.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -540,6 +540,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `NVAX` | 88 | $12.44 | $2.28 | $-19.49 | $6,586.88 | ▼ -19.49 after sell → book $8,749.39; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `TMUS` | 7 | $152.05 | $2.03 | $+13.25 | $7,649.20 | ▲ +13.25 after sell → book $8,747.36; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,649.20 | ▼ close $8,711.10 vs 09:30 $8,762.17 (session -36.26) | 16:00 close · cash $7,649.20 · equity $8,711.10 vs 09:30 $8,762.17 (-51.07; session marks -36.26) · 1 name(s) marked open→close (per-name table). NAUT×518 09:30 $2.12 → close $2.05 -36.26 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,649.20 | ▼ 09:30 equity $8,685.20 vs yday $8,711.10 (-25.90) | 09:30 open · cash $7,649.20 (unchanged overnight, no fees) · equity $8,685.20 vs prior close $8,711.10 (-25.90) · 1 name(s) re-marked at the open (per-name table). NAUT×518 yday $2.05 → 09:30 $2.00 -25.90 | — |
+| 2026-10-14 09:30 ET | **SELL** | `NAUT` | 518 | $2.00 | $6.78 | $-98.93 | $8,678.42 | ▼ -98.93 after sell → book $8,678.42; vs 09:30 mark -6.78 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `SMMT` | 70 | $15.29 | $2.20 | — | $7,605.92 | — | rank by cond; rank cond; list probable,yday_gainer,yday_mover; ret5=-10.3; leftover $1084.80 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-14 09:30 ET | **BUY** | `CNK` | 28 | $37.88 | $2.07 | — | $6,543.21 | — | rank by cond; rank cond; list flatten; ret5=+7.5; leftover $1084.80 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `KLRA` | 101 | $10.64 | $2.29 | — | $5,466.27 | — | rank by cond; rank cond; list yday_gainer; ret5=-0.6; leftover $1084.80 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `PINS` | 48 | $22.23 | $2.13 | — | $4,397.10 | — | rank by cond; rank cond; list ohlc_hot; 🔵; ret5=+11.7; leftover $1084.80 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `TRU` | 16 | $66.42 | $2.04 | — | $3,332.34 | — | rank by cond; rank cond; list flatten,yday_gainer; 🔵; ret5=+6.4; leftover $1084.80 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `WLY` | 20 | $52.29 | $2.05 | — | $2,284.49 | — | rank by cond; rank cond; list flatten; ret5=+8.5; leftover $1084.80 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `AMX` | 50 | $21.62 | $2.14 | — | $1,201.35 | — | rank by cond; rank cond; list yday_gainer; 🔵; ret5=-3.0; leftover $1084.80 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `BAC` | 21 | $49.83 | $2.05 | — | $152.87 | — | rank by cond; rank cond; list earn_react; 🔵; ret5=-0.2; leftover $1084.80 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $152.87 | ▲ close $8,682.82 vs 09:30 $8,685.20 (session +21.38) | 16:00 close · cash $152.87 · equity $8,682.82 vs 09:30 $8,685.20 (-2.38; session marks +21.38) · 8 name(s) marked open→close (per-name table). SMMT×70 09:30 $15.29 → close $15.13 -11.20; CNK×28 09:30 $37.88 → close $38.20 +8.96; KLRA×101 09:30 $10.64 → close $10.74 +10.10; PINS×48 09:30 $22.23 → close $21.76 -22.56; TRU×16 09:30 $66.42 → close $66.94 +8.32; WLY×20 09:30 $52.29 → close $51.49 -16.00; AMX×50 09:30 $21.62 → close $21.84 +11.00; BAC×21 09:30 $49.83 → close $51.39 +32.76 | — |
 
 ## Not taken
 

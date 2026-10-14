@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-39.48%** ($6,052) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 111 · skips 133 · realized $-1334.78.
+Cash book **-40.66%** ($5,934) · signal-only (no cash/fees) was +139.18%. Starts YES **0/30**. Fills 111 · skips 133 · realized $-1334.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -271,6 +271,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.63 | ▼ close $6,067.69 vs 09:30 $6,536.92 (session -462.60) | 16:00 close · cash $7.63 · equity $6,067.69 vs 09:30 $6,536.92 (-469.23; session marks -462.60) · 1 name(s) marked open→close (per-name table). DNA×514 09:30 $12.69 → close $11.79 -462.60 | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7.63 | ▲ 09:30 equity $6,067.69 vs yday $6,067.69 (+0.00) | 09:30 open · cash $7.63 (unchanged overnight, no fees) · equity $6,067.69 vs prior close $6,067.69 (+0.00) · 1 name(s) re-marked at the open (per-name table). DNA×514 yday $11.79 → 09:30 $11.79 +0.00 | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.63 | ▼ close $6,052.27 vs 09:30 $6,067.69 (session -15.42) | 16:00 close · cash $7.63 · equity $6,052.27 vs 09:30 $6,067.69 (-15.42; session marks -15.42) · 1 name(s) marked open→close (per-name table). DNA×514 09:30 $11.79 → close $11.76 -15.42 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7.63 | ▼ 09:30 equity $5,877.51 vs yday $6,052.27 (-174.76) | 09:30 open · cash $7.63 (unchanged overnight, no fees) · equity $5,877.51 vs prior close $6,052.27 (-174.76) · 1 name(s) re-marked at the open (per-name table). DNA×514 yday $11.76 → 09:30 $11.42 -174.76 | — |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.63 | ▲ close $5,934.05 vs 09:30 $5,877.51 (session +56.54) | 16:00 close · cash $7.63 · equity $5,934.05 vs 09:30 $5,877.51 (+56.54; session marks +56.54) · 1 name(s) marked open→close (per-name table). DNA×514 09:30 $11.42 → close $11.53 +56.54 | — |
 
 ## Not taken
 

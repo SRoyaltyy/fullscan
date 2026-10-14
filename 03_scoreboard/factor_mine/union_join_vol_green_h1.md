@@ -485,6 +485,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `FSLY` | 122 | $26.19 | $2.40 | $-321.96 | $6,368.18 | ▼ -321.96 after sell → book $9,867.66; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `MNSO` | 356 | $9.83 | $4.68 | $-27.07 | $9,862.98 | ▼ -27.07 after sell → book $9,862.98; vs 09:30 mark -4.68 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,862.98 | ▲ close $9,862.98 vs 09:30 $9,872.10 (session +0.00) | 16:00 close · cash $9,862.98 · no lots left · equity $9,862.98. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,862.98 | ▲ 09:30 equity $9,862.98 vs yday $9,862.98 (+0.00) | 09:30 open · cash $9,862.98 · no holdings · equity $9,862.98 vs prior close $9,862.98 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,862.98 | ▲ close $9,862.98 vs 09:30 $9,862.98 (session +0.00) | 16:00 close · cash $9,862.98 · no lots left · equity $9,862.98. | — |
 
 ## Not taken
 

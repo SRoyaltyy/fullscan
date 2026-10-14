@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-13.82%** ($8,618) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 374 · skips 106 · realized $-563.17.
+Cash book **-14.25%** ($8,575) · signal-only (no cash/fees) was -3.26%. Starts YES **0/30**. Fills 382 · skips 106 · realized $-563.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -532,6 +532,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `RXRX` | 262 | $3.96 | $3.43 | $-98.51 | $7,487.47 | ▼ -98.51 after sell → book $8,619.87; vs 09:30 mark -3.43 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `WFF` | 76 | $14.90 | $2.24 | $+4.66 | $8,617.63 | ▲ +4.66 after sell → book $8,617.63; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,617.63 | ▲ close $8,617.63 vs 09:30 $8,644.38 (session +0.00) | 16:00 close · cash $8,617.63 · no lots left · equity $8,617.63. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,617.63 | ▲ 09:30 equity $8,617.63 vs yday $8,617.63 (+0.00) | 09:30 open · cash $8,617.63 · no holdings · equity $8,617.63 vs prior close $8,617.63 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `TMUS` | 6 | $155.00 | $2.01 | — | $7,685.62 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; 🔵; ret5=-7.4; leftover $1077.20 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `TRU` | 16 | $66.42 | $2.04 | — | $6,620.86 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten,yday_gainer; 🔵; ret5=+6.4; leftover $1077.20 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `CNK` | 28 | $37.88 | $2.07 | — | $5,558.15 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; ret5=+7.5; leftover $1077.20 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `WLY` | 20 | $52.29 | $2.05 | — | $4,510.30 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; ret5=+8.5; leftover $1077.20 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `CXW` | 31 | $33.97 | $2.08 | — | $3,455.15 | — | union ∩ candle, no 🚨; gate candle_capture=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+7.1; leftover $1077.20 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `EGG` | 248 | $4.34 | $3.20 | — | $2,375.63 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer,yday_mover; 🔵; ret5=-5.8; leftover $1077.20 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `DY` | 4 | $266.74 | $2.00 | — | $1,306.67 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_gainer; 🔵; ret5=-7.2; leftover $1077.20 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `JLHL` | 226 | $4.76 | $2.92 | — | $227.99 | — | union ∩ candle, no 🚨; gate candle_capture=True; list yday_mover; 🔵; ret5=+22.6; leftover $1077.20 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $227.99 | ▼ close $8,574.77 vs 09:30 $8,617.63 (session -24.49) | 16:00 close · cash $227.99 · equity $8,574.77 vs 09:30 $8,617.63 (-42.86; session marks -24.49) · 8 name(s) marked open→close (per-name table). TMUS×6 09:30 $155.00 → close $157.79 +16.74; TRU×16 09:30 $66.42 → close $66.94 +8.32; CNK×28 09:30 $37.88 → close $38.20 +8.96; WLY×20 09:30 $52.29 → close $51.49 -16.00; CXW×31 09:30 $33.97 → close $32.56 -43.71; EGG×248 09:30 $4.34 → close $4.60 +64.48; DY×4 09:30 $266.74 → close $259.96 -27.12; JLHL×226 09:30 $4.76 → close $4.60 -36.16 | — |
 
 ## Not taken
 

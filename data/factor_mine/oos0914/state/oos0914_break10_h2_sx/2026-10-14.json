@@ -1,0 +1,164 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 4.76,
+      "shares": 495,
+      "side": "BUY",
+      "ticker": "JLHL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 22.22,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "ODD"
+    },
+    {
+      "fill_rule": "open",
+      "price": 99.71,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "ECO"
+    },
+    {
+      "fill_rule": "open",
+      "price": 22.23,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "PINS"
+    }
+  ],
+  "cash": 62.79,
+  "date": "2026-10-14",
+  "equity": 9139.31,
+  "fees": 13.1025,
+  "fills": [
+    {
+      "fees": 0.042,
+      "fill_rule": "open",
+      "pnl": -13.07,
+      "price": 1.905,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "WFF"
+    },
+    {
+      "fees": 6.3855,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 4.76,
+      "shares": 495,
+      "side": "BUY",
+      "ticker": "JLHL"
+    },
+    {
+      "fees": 2.308,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 22.22,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "ODD"
+    },
+    {
+      "fees": 2.059,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 99.71,
+      "shares": 23,
+      "side": "BUY",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 2.308,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 22.23,
+      "shares": 106,
+      "side": "BUY",
+      "ticker": "PINS"
+    }
+  ],
+  "holdings": [
+    "ECO",
+    "JLHL",
+    "ODD",
+    "PINS"
+  ],
+  "mean": -3.158,
+  "n_trades_today": 5,
+  "recipe": "oos0914_break10_h2_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 1.905,
+      "shares": 1,
+      "side": "SELL",
+      "ticker": "WFF"
+    }
+  ],
+  "state": {
+    "after": "2026-10-14",
+    "cash": 62.79,
+    "pos": {
+      "ECO": {
+        "close_px": 95.66,
+        "cost": 2295.389,
+        "entry_date": "2026-10-14",
+        "entry_px": 99.71,
+        "fee_in": 2.059,
+        "last_px": 99.71,
+        "min_hold": 2,
+        "notional": 2293.33,
+        "peak_px": 99.71,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+14.3; leftover $2359.27",
+        "shares": 23,
+        "ticker": "ECO"
+      },
+      "JLHL": {
+        "close_px": 4.6,
+        "cost": 2362.5854999999997,
+        "entry_date": "2026-10-14",
+        "entry_px": 4.76,
+        "fee_in": 6.3855,
+        "last_px": 4.76,
+        "min_hold": 2,
+        "notional": 2356.2,
+        "peak_px": 4.76,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_mover; \ud83d\udd35; ret5=+22.6; leftover $2359.27",
+        "shares": 495,
+        "ticker": "JLHL"
+      },
+      "ODD": {
+        "close_px": 21.63,
+        "cost": 2357.6279999999997,
+        "entry_date": "2026-10-14",
+        "entry_px": 22.22,
+        "fee_in": 2.308,
+        "last_px": 22.22,
+        "min_hold": 2,
+        "notional": 2355.3199999999997,
+        "peak_px": 22.22,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+14.9; leftover $2359.27",
+        "shares": 106,
+        "ticker": "ODD"
+      },
+      "PINS": {
+        "close_px": 21.76,
+        "cost": 2358.688,
+        "entry_date": "2026-10-14",
+        "entry_px": 22.23,
+        "fee_in": 2.308,
+        "last_px": 22.23,
+        "min_hold": 2,
+        "notional": 2356.38,
+        "peak_px": 22.23,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; \ud83d\udd35; ret5=+11.7; leftover $2359.27",
+        "shares": 106,
+        "ticker": "PINS"
+      }
+    },
+    "yday_equity": 9139.31
+  }
+}

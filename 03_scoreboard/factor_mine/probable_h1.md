@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-19.71%** ($8,029) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 368 · skips 107 · realized $-305.80.
+Cash book **-22.18%** ($7,782) · signal-only (no cash/fees) was -1.12%. Starts YES **3/30**. Fills 376 · skips 107 · realized $-305.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -522,6 +522,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `IOVA` | 73 | $14.48 | $2.23 | $-2.03 | $7,054.30 | ▼ -2.03 after sell → book $8,032.42; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `RXRX` | 247 | $3.96 | $3.24 | $-92.87 | $8,029.19 | ▼ -92.87 after sell → book $8,029.19; vs 09:30 mark -3.23 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,029.19 | ▲ close $8,029.19 vs 09:30 $8,051.93 (session +0.00) | 16:00 close · cash $8,029.19 · no lots left · equity $8,029.19. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,029.19 | ▲ 09:30 equity $8,029.19 vs yday $8,029.19 (+0.00) | 09:30 open · cash $8,029.19 · no holdings · equity $8,029.19 vs prior close $8,029.19 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `SMMT` | 65 | $15.29 | $2.19 | — | $7,033.15 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-10.3; leftover $1003.65 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-14 09:30 ET | **BUY** | `PRMB` | 53 | $18.75 | $2.15 | — | $6,037.26 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $1003.65 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `NVTS` | 100 | $9.96 | $2.29 | — | $5,038.47 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-12.7; leftover $1003.65 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `EPR` | 18 | $54.47 | $2.04 | — | $4,055.96 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-0.9; leftover $1003.65 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `PDFS` | 21 | $46.12 | $2.05 | — | $3,085.39 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-12.5; leftover $1003.65 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `AIP` | 48 | $20.54 | $2.13 | — | $2,097.33 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-12.3; leftover $1003.65 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `CXW` | 29 | $33.97 | $2.08 | — | $1,110.13 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+7.1; leftover $1003.65 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ACRS` | 296 | $3.38 | $3.82 | — | $105.83 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-6.2; leftover $1003.65 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $105.83 | ▼ close $7,782.05 vs 09:30 $8,029.19 (session -228.39) | 16:00 close · cash $105.83 · equity $7,782.05 vs 09:30 $8,029.19 (-247.14; session marks -228.39) · 8 name(s) marked open→close (per-name table). SMMT×65 09:30 $15.29 → close $15.13 -10.40; PRMB×53 09:30 $18.75 → close $18.78 +1.59; NVTS×100 09:30 $9.96 → close $9.36 -61.00; EPR×18 09:30 $54.47 → close $54.58 +1.98; PDFS×21 09:30 $46.12 → close $42.41 -77.91; AIP×48 09:30 $20.54 → close $19.67 -41.76; CXW×29 09:30 $33.97 → close $32.56 -40.89; ACRS×296 09:30 $3.38 → close $3.38 +0.00 | — |
 
 ## Not taken
 

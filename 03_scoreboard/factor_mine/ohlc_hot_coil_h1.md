@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-21.24%** ($7,876) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 231 · skips 74 · realized $-1849.08.
+Cash book **-21.92%** ($7,808) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 237 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -391,6 +391,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `KOD` | 40 | $99.06 | $2.15 | $-44.26 | $3,995.94 | ▼ -44.26 after sell → book $7,894.96; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `SFIX` | 1423 | $2.74 | $18.62 | $-193.51 | $7,876.33 | ▼ -193.51 after sell → book $7,876.33; vs 09:30 mark -18.63 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,876.33 | ▲ close $7,876.33 vs 09:30 $7,897.11 (session +0.00) | 16:00 close · cash $7,876.33 · no lots left · equity $7,876.33. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,876.33 | ▲ 09:30 equity $7,876.33 vs yday $7,876.33 (+0.00) | 09:30 open · cash $7,876.33 · no holdings · equity $7,876.33 vs prior close $7,876.33 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `SHAK` | 18 | $70.75 | $2.04 | — | $6,600.79 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+10.0; leftover $1312.72 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `NTSK` | 63 | $20.76 | $2.18 | — | $5,290.73 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+7.7; leftover $1312.72 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ESRT` | 272 | $4.82 | $3.51 | — | $3,976.18 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+9.7; leftover $1312.72 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `LW` | 25 | $52.02 | $2.06 | — | $2,673.61 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+8.5; leftover $1312.72 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `SG` | 131 | $10.00 | $2.38 | — | $1,361.23 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.7; leftover $1312.72 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `MOH` | 6 | $210.15 | $2.01 | — | $98.32 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+7.3; leftover $1312.72 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $98.32 | ▼ close $7,807.84 vs 09:30 $7,876.33 (session -54.30) | 16:00 close · cash $98.32 · equity $7,807.84 vs 09:30 $7,876.33 (-68.49; session marks -54.30) · 6 name(s) marked open→close (per-name table). SHAK×18 09:30 $70.75 → close $68.77 -35.64; NTSK×63 09:30 $20.76 → close $20.04 -45.36; ESRT×272 09:30 $4.82 → close $4.78 -10.88; LW×25 09:30 $52.02 → close $53.02 +25.00; SG×131 09:30 $10.00 → close $10.14 +18.34; MOH×6 09:30 $210.15 → close $209.19 -5.76 | — |
 
 ## Not taken
 

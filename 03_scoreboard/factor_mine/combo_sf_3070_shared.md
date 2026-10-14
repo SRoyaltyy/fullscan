@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/flatten_h5 w=0.3,0.7 net=priority
 
-Cash book **-9.64%** ($9,036) · signal-only (no cash/fees) was —. Starts YES **3/30**. Fills 298 · skips 450 · realized $+692.72.
+Cash book **-13.80%** ($8,620) · signal-only (no cash/fees) was —. Starts YES **3/30**. Fills 309 · skips 450 · realized $+692.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $4,093.94.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $1,725.61.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -457,6 +457,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `CDNA` | 8 | $62.57 | $2.03 | $-70.61 | $3,623.64 | ▼ -70.61 after sell → book $9,068.94; vs 09:30 mark -2.03 | flatten_h5: dropped from list after 5 sess (min 5) | — |
 | 2026-10-13 09:30 ET | **SELL** | `NTAP` | 2 | $236.16 | $2.02 | $+18.71 | $4,093.94 | ▲ +18.71 after sell → book $9,066.92; vs 09:30 mark -2.02 | flatten_h5: dropped from list after 5 sess (min 5) | join🟡 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4,093.94 | ▼ close $9,036.33 vs 09:30 $9,070.97 (session -30.59) | 16:00 close · cash $4,093.94 · equity $9,036.33 vs 09:30 $9,070.97 (-34.64; session marks -30.59) · 9 name(s) marked open→close (per-name table). AEHL×153 09:30 $9.08 → close $8.55 +81.09; ARQT×63 09:30 $26.00 → close $26.09 +5.67; DAL×7 09:30 $80.70 → close $79.57 +7.91; DXC×46 09:30 $12.55 → close $12.77 -10.12; EQPT×36 09:30 $14.54 → close $15.37 -29.88; ETON×48 09:30 $55.42 → close $53.33 -100.32; FANG×8 09:30 $196.33 → close $198.18 +14.80; NTLA×46 09:30 $12.34 → close $11.91 +19.78; PACS×61 09:30 $44.70 → close $44.38 -19.52 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4,093.94 | ▼ 09:30 equity $6,670.82 vs yday $9,036.33 (-2,365.51) | 09:30 open · cash $4,093.94 (unchanged overnight, no fees) · equity $6,670.82 vs prior close $9,036.33 (-2365.51) | — |
+| 2026-10-14 09:30 ET | **COVER** | `DAL` | 7 | $78.20 | $2.01 | $+6.30 | $3,544.53 | ▲ +6.30 after sell → book $6,668.81; vs 09:30 mark -2.01 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **COVER** | `DXC` | 46 | $12.83 | $2.13 | $-24.99 | $2,952.22 | ▼ -24.99 after sell → book $6,666.68; vs 09:30 mark -2.13 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **COVER** | `EQPT` | 36 | $15.02 | $2.10 | $+24.21 | $2,409.40 | ▲ +24.21 after sell → book $6,664.58; vs 09:30 mark -2.10 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **COVER** | `NTLA` | 46 | $11.83 | $2.13 | $+21.47 | $1,863.10 | ▲ +21.47 after sell → book $6,662.46; vs 09:30 mark -2.12 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **BUY** | `TMUS` | 1 | $155.00 | $1.55 | — | $1,706.54 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-7.4; combo leftover $217.36; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `TRU` | 3 | $66.42 | $2.00 | — | $1,505.29 | — | baseline list, no extra gate; list flatten,yday_gainer; wish-list (live io HOLD — not a ticket); 🔵; ret5=+6.4; combo leftover $217.36; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `CNK` | 5 | $37.88 | $1.91 | — | $1,313.98 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+7.5; combo leftover $217.36; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `AVPT` | 15 | $14.39 | $2.04 | — | $1,096.09 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=-0.4; combo leftover $217.36; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `WLY` | 4 | $52.29 | $2.00 | — | $884.93 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+8.5; combo leftover $217.36; owner flatten_h5 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **SHORT** | `NOG` | 16 | $26.53 | $2.07 | — | $1,307.34 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+10.4; combo leftover $442.47; owner short_news_r_h3 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **SHORT** | `MOH` | 2 | $210.15 | $2.03 | — | $1,725.61 | — | news🔴; gate news=bad; list ohlc_hot; ret5=+7.3; combo leftover $442.47; owner short_news_r_h3 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,725.61 | ▲ close $8,619.96 vs 09:30 $6,670.82 (session +1,971.10) | 16:00 close · cash $1,725.61 · equity $8,619.96 vs 09:30 $6,670.82 (+1949.14; session marks +1971.10) · 12 name(s) marked open→close (per-name table). AEHL×153 09:30 $24.20 → close $11.49 +1944.63; ARQT×63 09:30 $26.01 → close $26.41 +25.20; ETON×48 09:30 $53.50 → close $52.88 -29.76; FANG×8 09:30 $200.12 → close $197.51 -20.88; PACS×61 09:30 $44.17 → close $44.98 +49.41; TMUS×1 09:30 $155.00 → close $157.79 +2.79; TRU×3 09:30 $66.42 → close $66.94 +1.56; CNK×5 09:30 $37.88 → close $38.20 +1.60; AVPT×15 09:30 $14.39 → close $14.00 -5.85; WLY×4 09:30 $52.29 → close $51.49 -3.20; NOG×16 09:30 $26.53 → close $26.30 +3.68; MOH×2 09:30 $210.15 → close $209.19 +1.92 | — |
 
 ## Not taken
 

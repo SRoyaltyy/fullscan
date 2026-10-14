@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-14.39%** ($8,561) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 125 · skips 159 · realized $-515.67.
+Cash book **-15.72%** ($8,428) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 133 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -282,6 +282,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.13 | ▲ close $8,867.86 vs 09:30 $8,603.87 (session +263.99) | 16:00 close · cash $24.13 · equity $8,867.86 vs 09:30 $8,603.87 (+263.99; session marks +263.99) · 4 name(s) marked open→close (per-name table). ADCT×1333 09:30 $1.70 → close $1.86 +213.28; ANGO×190 09:30 $11.42 → close $11.40 -3.80; PACS×48 09:30 $43.20 → close $44.30 +52.80; PCRX×57 09:30 $36.32 → close $36.35 +1.71 | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24.13 | ▲ 09:30 equity $8,891.62 vs yday $8,867.86 (+23.76) | 09:30 open · cash $24.13 (unchanged overnight, no fees) · equity $8,891.62 vs prior close $8,867.86 (+23.76) · 4 name(s) re-marked at the open (per-name table). ADCT×1333 yday $1.86 → 09:30 $1.86 +0.00; ANGO×190 yday $11.40 → 09:30 $11.43 +5.70; PACS×48 yday $44.30 → 09:30 $44.70 +19.20; PCRX×57 yday $36.35 → 09:30 $36.33 -1.14 | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.13 | ▼ close $8,561.14 vs 09:30 $8,891.62 (session -330.48) | 16:00 close · cash $24.13 · equity $8,561.14 vs 09:30 $8,891.62 (-330.48; session marks -330.48) · 4 name(s) marked open→close (per-name table). ADCT×1333 09:30 $1.86 → close $1.70 -213.28; ANGO×190 09:30 $11.43 → close $10.90 -100.70; PACS×48 09:30 $44.70 → close $44.38 -15.36; PCRX×57 09:30 $36.33 → close $36.31 -1.14 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24.13 | ▼ 09:30 equity $8,491.31 vs yday $8,561.14 (-69.83) | 09:30 open · cash $24.13 (unchanged overnight, no fees) · equity $8,491.31 vs prior close $8,561.14 (-69.83) · 4 name(s) re-marked at the open (per-name table). ADCT×1333 yday $1.70 → 09:30 $1.67 -39.99; ANGO×190 yday $10.90 → 09:30 $10.79 -20.90; PACS×48 yday $44.38 → 09:30 $44.17 -10.08; PCRX×57 yday $36.31 → 09:30 $36.33 +1.14 | — |
+| 2026-10-14 09:30 ET | **SELL** | `ADCT` | 1333 | $1.67 | $17.43 | $+85.34 | $2,232.81 | ▲ +85.34 after sell → book $8,473.88; vs 09:30 mark -17.43 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **SELL** | `ANGO` | 190 | $10.79 | $2.61 | $-56.47 | $4,280.30 | ▼ -56.47 after sell → book $8,471.27; vs 09:30 mark -2.61 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **SELL** | `PACS` | 48 | $44.17 | $2.16 | $+15.86 | $6,398.30 | ▲ +15.86 after sell → book $8,469.11; vs 09:30 mark -2.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **SELL** | `PCRX` | 57 | $36.33 | $2.19 | $-4.35 | $8,466.92 | ▼ -4.35 after sell → book $8,466.92; vs 09:30 mark -2.19 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **BUY** | `SMMT` | 138 | $15.29 | $2.40 | — | $6,354.49 | — | top 4 by cond; rank cond; list probable,yday_gainer,yday_mover; ret5=-10.3; leftover $2116.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-14 09:30 ET | **BUY** | `CNK` | 55 | $37.88 | $2.15 | — | $4,268.94 | — | top 4 by cond; rank cond; list flatten; ret5=+7.5; leftover $2116.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `KLRA` | 198 | $10.64 | $2.58 | — | $2,159.64 | — | top 4 by cond; rank cond; list yday_gainer; ret5=-0.6; leftover $2116.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `PINS` | 95 | $22.23 | $2.27 | — | $45.51 | — | top 4 by cond; rank cond; list ohlc_hot; 🔵; ret5=+11.7; leftover $2116.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $45.51 | ▼ close $8,428.17 vs 09:30 $8,491.31 (session -29.33) | 16:00 close · cash $45.51 · equity $8,428.17 vs 09:30 $8,491.31 (-63.14; session marks -29.33) · 4 name(s) marked open→close (per-name table). SMMT×138 09:30 $15.29 → close $15.13 -22.08; CNK×55 09:30 $37.88 → close $38.20 +17.60; KLRA×198 09:30 $10.64 → close $10.74 +19.80; PINS×95 09:30 $22.23 → close $21.76 -44.65 | — |
 
 ## Not taken
 

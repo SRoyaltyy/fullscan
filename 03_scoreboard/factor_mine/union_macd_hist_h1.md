@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-7.30%** ($9,270) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 347 · skips 94 · realized $-657.32.
+Cash book **-6.93%** ($9,307) · signal-only (no cash/fees) was +3.37%. Starts YES **20/30**. Fills 357 · skips 94 · realized $-657.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -504,6 +504,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `SEZL` | 9 | $131.19 | $2.04 | $+26.91 | $5,883.40 | ▲ +26.91 after sell → book $9,297.90; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `WING` | 10 | $125.27 | $2.04 | $+45.44 | $7,134.06 | ▲ +45.44 after sell → book $9,295.86; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,134.06 | ▼ close $9,269.76 vs 09:30 $9,308.08 (session -26.10) | 16:00 close · cash $7,134.06 · equity $9,269.76 vs 09:30 $9,308.08 (-38.32; session marks -26.10) · 2 name(s) marked open→close (per-name table). AMT×6 09:30 $184.50 → close $179.43 -30.42; SHOP×6 09:30 $175.80 → close $176.52 +4.32 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,134.06 | ▼ 09:30 equity $9,250.80 vs yday $9,269.76 (-18.96) | 09:30 open · cash $7,134.06 (unchanged overnight, no fees) · equity $9,250.80 vs prior close $9,269.76 (-18.96) · 2 name(s) re-marked at the open (per-name table). AMT×6 yday $179.43 → 09:30 $178.24 -7.14; SHOP×6 yday $176.52 → 09:30 $174.55 -11.82 | — |
+| 2026-10-14 09:30 ET | **SELL** | `AMT` | 6 | $178.24 | $2.03 | $-28.10 | $8,201.47 | ▼ -28.10 after sell → book $9,248.77; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-14 09:30 ET | **SELL** | `SHOP` | 6 | $174.55 | $2.03 | $-0.14 | $9,246.74 | ▼ -0.14 after sell → book $9,246.74; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-14 09:30 ET | **BUY** | `CRS` | 3 | $375.51 | $2.00 | — | $8,118.22 | — | rank by macd_hist; rank macd_hist; list yday_gainer; ret5=-3.9; leftover $1155.84 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `DY` | 4 | $266.74 | $2.00 | — | $7,049.25 | — | rank by macd_hist; rank macd_hist; list yday_gainer; 🔵; ret5=-7.2; leftover $1155.84 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `MOH` | 5 | $210.15 | $2.00 | — | $5,996.50 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+7.3; leftover $1155.84 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `SHAK` | 16 | $70.75 | $2.04 | — | $4,862.46 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+10.0; leftover $1155.84 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `PGR` | 5 | $206.97 | $2.00 | — | $3,825.61 | — | rank by macd_hist; rank macd_hist; list earn_react; 🔵; ret5=+5.1; leftover $1155.84 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ETSY` | 14 | $78.89 | $2.03 | — | $2,719.11 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+11.1; leftover $1155.84 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `WSM` | 4 | $238.29 | $2.00 | — | $1,763.95 | — | rank by macd_hist; rank macd_hist; list flatten; ret5=-0.9; leftover $1155.84 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `LW` | 22 | $52.02 | $2.06 | — | $617.46 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+8.5; leftover $1155.84 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $617.46 | ▲ close $9,307.44 vs 09:30 $9,250.80 (session +76.83) | 16:00 close · cash $617.46 · equity $9,307.44 vs 09:30 $9,250.80 (+56.64; session marks +76.83) · 8 name(s) marked open→close (per-name table). CRS×3 09:30 $375.51 → close $379.73 +12.66; DY×4 09:30 $266.74 → close $259.96 -27.12; MOH×5 09:30 $210.15 → close $209.19 -4.80; SHAK×16 09:30 $70.75 → close $68.77 -31.68; PGR×5 09:30 $206.97 → close $213.46 +32.45; ETSY×14 09:30 $78.89 → close $82.93 +56.56; WSM×4 09:30 $238.29 → close $242.48 +16.76; LW×22 09:30 $52.02 → close $53.02 +22.00 | — |
 
 ## Not taken
 

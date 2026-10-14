@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 neg catalyst + weakness + failed recovery
 
-Cash book **+8.68%** ($10,868) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 229 · skips 270 · realized $-967.53.
+Cash book **-4.94%** ($9,506) · signal-only (no cash/fees) was -21.45%. Starts YES **8/30**. Fills 230 · skips 270 · realized $-967.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -385,6 +385,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,945.22 | ▲ close $10,699.61 vs 09:30 $10,200.96 (session +505.35) | 16:00 close · cash $19,945.22 · equity $10,699.61 vs 09:30 $10,200.96 (+498.65; session marks +505.35) · 2 name(s) marked open→close (per-name table). EQPT×313 09:30 $14.86 → close $14.76 +31.30; AEHL×499 09:30 $10.22 → close $9.27 +474.05 | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19,945.22 | ▲ 09:30 equity $10,863.28 vs yday $10,699.61 (+163.67) | 09:30 open · cash $19,945.22 (unchanged overnight, no fees) · equity $10,863.28 vs prior close $10,699.61 (+163.67) · 2 name(s) re-marked at the open (per-name table). AEHL×499 yday $9.27 → 09:30 $9.08 +94.81; EQPT×313 yday $14.76 → 09:30 $14.54 +68.86 | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,945.22 | ▲ close $10,867.96 vs 09:30 $10,863.28 (session +4.68) | 16:00 close · cash $19,945.22 · equity $10,867.96 vs 09:30 $10,863.28 (+4.68; session marks +4.68) · 2 name(s) marked open→close (per-name table). AEHL×499 09:30 $9.08 → close $8.55 +264.47; EQPT×313 09:30 $14.54 → close $15.37 -259.79 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19,945.22 | ▼ 09:30 equity $3,168.16 vs yday $10,867.96 (-7,699.80) | 09:30 open · cash $19,945.22 (unchanged overnight, no fees) · equity $3,168.16 vs prior close $10,867.96 (-7699.80) · 2 name(s) re-marked at the open (per-name table). AEHL×499 yday $8.55 → 09:30 $24.20 -7809.35; EQPT×313 yday $15.37 → 09:30 $15.02 +109.55 | — |
+| 2026-10-14 09:30 ET | **COVER** | `EQPT` | 313 | $15.02 | $4.04 | $+238.97 | $15,239.92 | ▲ +238.97 after sell → book $3,164.12; vs 09:30 mark -4.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,239.92 | ▲ close $9,506.41 vs 09:30 $3,168.16 (session +6,342.29) | 16:00 close · cash $15,239.92 · equity $9,506.41 vs 09:30 $3,168.16 (+6338.25; session marks +6342.29) · 1 name(s) marked open→close (per-name table). AEHL×499 09:30 $24.20 → close $11.49 +6342.29 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-23.62%** ($7,638) · signal-only (no cash/fees) was -5.26%. Starts YES **0/30**. Fills 336 · skips 56 · realized $-1650.33.
+Cash book **-19.29%** ($8,071) · signal-only (no cash/fees) was -5.26%. Starts YES **0/30**. Fills 337 · skips 56 · realized $-1650.33.
 
 ## How this sleeve decides (like you are 10)
 
@@ -496,6 +496,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `SVC` | 139 | $5.93 | $2.44 | $-195.28 | $6,612.06 | ▼ -195.28 after sell → book $7,640.16; vs 09:30 mark -2.45 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `WFF` | 69 | $14.90 | $2.22 | $+3.86 | $7,637.95 | ▲ +3.86 after sell → book $7,637.95; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,637.95 | ▲ close $7,637.95 vs 09:30 $7,662.35 (session +0.00) | 16:00 close · cash $7,637.95 · no lots left · equity $7,637.95. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,637.95 | ▲ 09:30 equity $7,637.95 vs yday $7,637.95 (+0.00) | 09:30 open · cash $7,637.95 · no holdings · equity $7,637.95 vs prior close $7,637.95 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `EGG` | 1754 | $4.34 | $22.63 | — | $2.96 | — | combo gate; gate blue=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=-5.8; leftover $7637.95 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.96 | ▲ close $8,071.36 vs 09:30 $7,637.95 (session +456.04) | 16:00 close · cash $2.96 · equity $8,071.36 vs 09:30 $7,637.95 (+433.41; session marks +456.04) · 1 name(s) marked open→close (per-name table). EGG×1754 09:30 $4.34 → close $4.60 +456.04 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-22.59%** ($7,741) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 341 · skips 93 · realized $-1456.67.
+Cash book **-23.51%** ($7,649) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 348 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -495,6 +495,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `SBAC` | 5 | $186.12 | $2.02 | $+17.72 | $5,610.27 | ▲ +17.72 after sell → book $7,785.13; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `SMWB` | 105 | $8.74 | $2.33 | $-31.94 | $6,525.64 | ▼ -31.94 after sell → book $7,782.80; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,525.64 | ▼ close $7,741.29 vs 09:30 $7,797.62 (session -41.51) | 16:00 close · cash $6,525.64 · equity $7,741.29 vs 09:30 $7,797.62 (-56.33; session marks -41.51) · 1 name(s) marked open→close (per-name table). NAUT×593 09:30 $2.12 → close $2.05 -41.51 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,525.64 | ▼ 09:30 equity $7,711.64 vs yday $7,741.29 (-29.65) | 09:30 open · cash $6,525.64 (unchanged overnight, no fees) · equity $7,711.64 vs prior close $7,741.29 (-29.65) · 1 name(s) re-marked at the open (per-name table). NAUT×593 yday $2.05 → 09:30 $2.00 -29.65 | — |
+| 2026-10-14 09:30 ET | **BUY** | `ODD` | 41 | $22.22 | $2.11 | — | $5,612.51 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+14.9; leftover $932.23 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ECO` | 9 | $99.71 | $2.02 | — | $4,713.10 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+14.3; leftover $932.23 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `DHT` | 34 | $26.91 | $2.09 | — | $3,796.07 | — | baseline list, no extra gate; list ohlc_hot; ret5=+13.1; leftover $932.23 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `QSI` | 695 | $1.34 | $8.97 | — | $2,855.80 | — | baseline list, no extra gate; list ohlc_hot; ret5=+15.6; leftover $932.23 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `DINO` | 7 | $128.51 | $2.01 | — | $1,954.22 | — | baseline list, no extra gate; list ohlc_hot; ret5=+11.9; leftover $932.23 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `CVI` | 14 | $63.30 | $2.03 | — | $1,065.99 | — | baseline list, no extra gate; list ohlc_hot; ret5=+9.9; leftover $932.23 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `PINS` | 41 | $22.23 | $2.11 | — | $152.45 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+11.7; leftover $932.23 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $152.45 | ▼ close $7,648.88 vs 09:30 $7,711.64 (session -41.42) | 16:00 close · cash $152.45 · equity $7,648.88 vs 09:30 $7,711.64 (-62.76; session marks -41.42) · 8 name(s) marked open→close (per-name table). NAUT×593 09:30 $2.00 → close $2.16 +94.88; ODD×41 09:30 $22.22 → close $21.63 -24.19; ECO×9 09:30 $99.71 → close $95.66 -36.45; DHT×34 09:30 $26.91 → close $24.95 -66.64; QSI×695 09:30 $1.34 → close $1.39 +34.75; DINO×7 09:30 $128.51 → close $127.69 -5.74; CVI×14 09:30 $63.30 → close $61.96 -18.76; PINS×41 09:30 $22.23 → close $21.76 -19.27 | — |
 
 ## Not taken
 

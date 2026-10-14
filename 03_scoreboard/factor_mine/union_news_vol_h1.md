@@ -302,6 +302,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.05 | ▲ 09:30 equity $6,746.93 vs yday $6,746.93 (-0.00) | 09:30 open · cash $3.05 (unchanged overnight, no fees) · equity $6,746.93 vs prior close $6,746.93 (-0.00) · 1 name(s) re-marked at the open (per-name table). DNA×572 yday $11.79 → 09:30 $11.79 +0.00 | — |
 | 2026-10-13 09:30 ET | **SELL** | `DNA` | 572 | $11.79 | $7.53 | $-529.71 | $6,739.40 | ▼ -529.71 after sell → book $6,739.40; vs 09:30 mark -7.53 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,739.40 | ▲ close $6,739.40 vs 09:30 $6,746.93 (session +0.00) | 16:00 close · cash $6,739.40 · no lots left · equity $6,739.40. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,739.40 | ▲ 09:30 equity $6,739.40 vs yday $6,739.40 (+0.00) | 09:30 open · cash $6,739.40 · no holdings · equity $6,739.40 vs prior close $6,739.40 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,739.40 | ▲ close $6,739.40 vs 09:30 $6,739.40 (session +0.00) | 16:00 close · cash $6,739.40 · no lots left · equity $6,739.40. | — |
 
 ## Not taken
 

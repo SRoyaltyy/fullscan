@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **-4.47%** ($9,553) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 86 · skips 29 · realized $+1396.12.
+Cash book **-2.56%** ($9,744) · signal-only (no cash/fees) was +6.91%. Starts YES **21/30**. Fills 88 · skips 29 · realized $+1396.12.
 
 ## How this sleeve decides (like you are 10)
 
@@ -245,6 +245,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $87.26 | ▲ 09:30 equity $9,555.02 vs yday $9,542.66 (+12.36) | 09:30 open · cash $87.26 (unchanged overnight, no fees) · equity $9,555.02 vs prior close $9,542.66 (+12.36) · 1 name(s) re-marked at the open (per-name table). AUGO×103 yday $91.80 → 09:30 $91.92 +12.36 | — |
 | 2026-10-13 09:30 ET | **SELL** | `AUGO` | 103 | $91.92 | $2.39 | $+204.40 | $9,552.63 | ▲ +204.40 after sell → book $9,552.63; vs 09:30 mark -2.39 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,552.63 | ▲ close $9,552.63 vs 09:30 $9,555.02 (session +0.00) | 16:00 close · cash $9,552.63 · no lots left · equity $9,552.63. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,552.63 | ▲ 09:30 equity $9,552.63 vs yday $9,552.63 (+0.00) | 09:30 open · cash $9,552.63 · no holdings · equity $9,552.63 vs prior close $9,552.63 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `AMX` | 220 | $21.62 | $2.84 | — | $4,793.39 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list yday_gainer; 🔵; ret5=-3.0; leftover $4776.31 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `BAC` | 95 | $49.83 | $2.27 | — | $57.27 | — | morning packet news🟢 only (not the merged box); gate news_box=good; rank cond; list earn_react; 🔵; ret5=-0.2; leftover $4776.31 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $57.27 | ▲ close $9,744.12 vs 09:30 $9,552.63 (session +196.60) | 16:00 close · cash $57.27 · equity $9,744.12 vs 09:30 $9,552.63 (+191.49; session marks +196.60) · 2 name(s) marked open→close (per-name table). AMX×220 09:30 $21.62 → close $21.84 +48.40; BAC×95 09:30 $49.83 → close $51.39 +148.20 | — |
 
 ## Not taken
 

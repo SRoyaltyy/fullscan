@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-25.36%** ($7,464) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 123 · skips 137 · realized $-233.27.
+Cash book **-25.41%** ($7,459) · signal-only (no cash/fees) was +282.84%. Starts YES **10/30**. Fills 128 · skips 137 · realized $-233.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -282,6 +282,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $25.57 | ▼ close $7,532.48 vs 09:30 $7,632.94 (session -100.20) | 16:00 close · cash $25.57 · equity $7,532.48 vs 09:30 $7,632.94 (-100.46; session marks -100.20) · 3 name(s) marked open→close (per-name table). FLUT×31 09:30 $79.48 → close $78.28 -37.20; GENI×765 09:30 $6.69 → close $6.61 -61.20; DNA×2 09:30 $12.69 → close $11.79 -1.80 | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $25.57 | ▲ 09:30 equity $7,612.80 vs yday $7,532.48 (+80.32) | 09:30 open · cash $25.57 (unchanged overnight, no fees) · equity $7,612.80 vs prior close $7,532.48 (+80.32) · 3 name(s) re-marked at the open (per-name table). DNA×2 yday $11.79 → 09:30 $11.79 +0.00; FLUT×31 yday $78.28 → 09:30 $78.65 +11.47; GENI×765 yday $6.61 → 09:30 $6.70 +68.85 | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $25.57 | ▼ close $7,464.40 vs 09:30 $7,612.80 (session -148.40) | 16:00 close · cash $25.57 · equity $7,464.40 vs 09:30 $7,612.80 (-148.40; session marks -148.40) · 3 name(s) marked open→close (per-name table). DNA×2 09:30 $11.79 → close $11.76 -0.06; FLUT×31 09:30 $78.65 → close $78.06 -18.29; GENI×765 09:30 $6.70 → close $6.53 -130.05 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $25.57 | ▼ 09:30 equity $7,369.24 vs yday $7,464.40 (-95.16) | 09:30 open · cash $25.57 (unchanged overnight, no fees) · equity $7,369.24 vs prior close $7,464.40 (-95.16) · 3 name(s) re-marked at the open (per-name table). DNA×2 yday $11.76 → 09:30 $11.42 -0.68; FLUT×31 yday $78.06 → 09:30 $77.48 -17.98; GENI×765 yday $6.53 → 09:30 $6.43 -76.50 | — |
+| 2026-10-14 09:30 ET | **SELL** | `FLUT` | 31 | $77.48 | $2.11 | $-137.81 | $2,425.34 | ▼ -137.81 after sell → book $7,367.13; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **SELL** | `GENI` | 765 | $6.43 | $10.03 | $-295.30 | $7,334.25 | ▼ -295.30 after sell → book $7,357.09; vs 09:30 mark -10.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **BUY** | `AMX` | 135 | $21.62 | $2.40 | — | $4,413.16 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer; 🔵; ret5=-3.0; leftover $2933.70 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `BAC` | 44 | $49.83 | $2.12 | — | $2,218.52 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list earn_react; 🔵; ret5=-0.2; leftover $2200.28 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `SG` | 73 | $10.00 | $2.21 | — | $1,486.31 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; ret5=+9.7; leftover $733.43 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,486.31 | ▲ close $7,459.15 vs 09:30 $7,369.24 (session +108.78) | 16:00 close · cash $1,486.31 · equity $7,459.15 vs 09:30 $7,369.24 (+89.91; session marks +108.78) · 4 name(s) marked open→close (per-name table). DNA×2 09:30 $11.42 → close $11.53 +0.22; AMX×135 09:30 $21.62 → close $21.84 +29.70; BAC×44 09:30 $49.83 → close $51.39 +68.64; SG×73 09:30 $10.00 → close $10.14 +10.22 | — |
 
 ## Not taken
 

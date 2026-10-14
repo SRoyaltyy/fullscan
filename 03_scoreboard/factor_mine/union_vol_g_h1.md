@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-21.59%** ($7,841) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 362 · skips 87 · realized $-1273.21.
+Cash book **-17.14%** ($8,286) · signal-only (no cash/fees) was -4.96%. Starts YES **0/30**. Fills 363 · skips 87 · realized $-1273.21.
 
 ## How this sleeve decides (like you are 10)
 
@@ -520,6 +520,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `RXRX` | 239 | $3.96 | $3.13 | $-89.87 | $6,815.28 | ▼ -89.87 after sell → book $7,843.38; vs 09:30 mark -3.13 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `WFF` | 69 | $14.90 | $2.22 | $+3.86 | $7,841.16 | ▲ +3.86 after sell → book $7,841.16; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,841.16 | ▲ close $7,841.16 vs 09:30 $7,870.82 (session +0.00) | 16:00 close · cash $7,841.16 · no lots left · equity $7,841.16. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,841.16 | ▲ 09:30 equity $7,841.16 vs yday $7,841.16 (+0.00) | 09:30 open · cash $7,841.16 · no holdings · equity $7,841.16 vs prior close $7,841.16 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `EGG` | 1801 | $4.34 | $23.23 | — | $1.59 | — | union ∩ vol_g, no 🚨; gate vol=good; list yday_gainer,yday_mover; 🔵; ret5=-5.8; leftover $7841.16 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.59 | ▲ close $8,286.19 vs 09:30 $7,841.16 (session +468.26) | 16:00 close · cash $1.59 · equity $8,286.19 vs 09:30 $7,841.16 (+445.03; session marks +468.26) · 1 name(s) marked open→close (per-name table). EGG×1801 09:30 $4.34 → close $4.60 +468.26 | — |
 
 ## Not taken
 

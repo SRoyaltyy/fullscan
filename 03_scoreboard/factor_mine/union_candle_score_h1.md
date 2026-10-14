@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `candle_score` · size `leftover` · sell `list` · S-boost `none` · rank by candle_score
 
-Cash book **-14.56%** ($8,544) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 372 · skips 104 · realized $-563.45.
+Cash book **-15.44%** ($8,456) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 381 · skips 104 · realized $-563.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -529,6 +529,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `SFIX` | 381 | $2.74 | $4.99 | $-51.81 | $6,433.94 | ▼ -51.81 after sell → book $8,544.29; vs 09:30 mark -4.99 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `TENB` | 25 | $40.35 | $2.08 | $-57.40 | $7,440.61 | ▼ -57.40 after sell → book $8,542.21; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,440.61 | ▲ close $8,543.91 vs 09:30 $8,559.95 (session +1.70) | 16:00 close · cash $7,440.61 · equity $8,543.91 vs 09:30 $8,559.95 (-16.04; session marks +1.70) · 1 name(s) marked open→close (per-name table). SNAP×170 09:30 $6.48 → close $6.49 +1.70 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,440.61 | ▼ 09:30 equity $8,521.81 vs yday $8,543.91 (-22.10) | 09:30 open · cash $7,440.61 (unchanged overnight, no fees) · equity $8,521.81 vs prior close $8,543.91 (-22.10) · 1 name(s) re-marked at the open (per-name table). SNAP×170 yday $6.49 → 09:30 $6.36 -22.10 | — |
+| 2026-10-14 09:30 ET | **SELL** | `SNAP` | 170 | $6.36 | $2.54 | $-8.44 | $8,519.27 | ▼ -8.44 after sell → book $8,519.27; vs 09:30 mark -2.54 | dropped from list after 2 sess (min 1) | — |
+| 2026-10-14 09:30 ET | **BUY** | `SG` | 106 | $10.00 | $2.31 | — | $7,456.96 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+9.7; leftover $1064.91 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `MOH` | 5 | $210.15 | $2.00 | — | $6,404.21 | — | rank by candle_score; rank candle_score; list ohlc_hot; ret5=+7.3; leftover $1064.91 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `PGR` | 5 | $206.97 | $2.00 | — | $5,367.35 | — | rank by candle_score; rank candle_score; list earn_react; 🔵; ret5=+5.1; leftover $1064.91 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ESRT` | 220 | $4.82 | $2.84 | — | $4,304.12 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+9.7; leftover $1064.91 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `JLHL` | 223 | $4.76 | $2.88 | — | $3,239.76 | — | rank by candle_score; rank candle_score; list yday_mover; 🔵; ret5=+22.6; leftover $1064.91 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `SHAK` | 15 | $70.75 | $2.04 | — | $2,176.47 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+10.0; leftover $1064.91 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `PINS` | 47 | $22.23 | $2.13 | — | $1,129.53 | — | rank by candle_score; rank candle_score; list ohlc_hot; 🔵; ret5=+11.7; leftover $1064.91 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `TRU` | 16 | $66.42 | $2.04 | — | $64.78 | — | rank by candle_score; rank candle_score; list flatten,yday_gainer; 🔵; ret5=+6.4; leftover $1064.91 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $64.78 | ▼ close $8,455.58 vs 09:30 $8,521.81 (session -45.46) | 16:00 close · cash $64.78 · equity $8,455.58 vs 09:30 $8,521.81 (-66.23; session marks -45.46) · 8 name(s) marked open→close (per-name table). SG×106 09:30 $10.00 → close $10.14 +14.84; MOH×5 09:30 $210.15 → close $209.19 -4.80; PGR×5 09:30 $206.97 → close $213.46 +32.45; ESRT×220 09:30 $4.82 → close $4.78 -8.80; JLHL×223 09:30 $4.76 → close $4.60 -35.68; SHAK×15 09:30 $70.75 → close $68.77 -29.70; PINS×47 09:30 $22.23 → close $21.76 -22.09; TRU×16 09:30 $66.42 → close $66.94 +8.32 | — |
 
 ## Not taken
 

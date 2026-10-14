@@ -290,6 +290,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `QTEX` | 1779 | $1.46 | $23.27 | $-535.44 | $8,691.04 | ▼ -535.44 after sell → book $11,790.24; vs 09:30 mark -23.27 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `WFF` | 208 | $14.90 | $2.74 | $+19.53 | $11,787.50 | ▲ +19.53 after sell → book $11,787.50; vs 09:30 mark -2.74 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,787.50 | ▲ close $11,787.50 vs 09:30 $11,833.99 (session +0.00) | 16:00 close · cash $11,787.50 · no lots left · equity $11,787.50. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,787.50 | ▲ 09:30 equity $11,787.50 vs yday $11,787.50 (+0.00) | 09:30 open · cash $11,787.50 · no holdings · equity $11,787.50 vs prior close $11,787.50 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,787.50 | ▲ close $11,787.50 vs 09:30 $11,787.50 (session +0.00) | 16:00 close · cash $11,787.50 · no lots left · equity $11,787.50. | — |
 
 ## Not taken
 

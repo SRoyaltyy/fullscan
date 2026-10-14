@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short morning packet news🔴
 
-Cash book **+10.81%** ($11,081) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 35 · skips 26 · realized $+60.75.
+Cash book **+11.74%** ($11,174) · signal-only (no cash/fees) was -6.15%. Starts YES **9/30**. Fills 36 · skips 26 · realized $+60.75.
 
 ## How this sleeve decides (like you are 10)
 
@@ -191,6 +191,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,571.56 | ▲ close $11,043.97 vs 09:30 $10,979.11 (session +64.86) | 16:00 close · cash $16,571.56 · equity $11,043.97 vs 09:30 $10,979.11 (+64.86; session marks +64.86) · 1 name(s) marked open→close (per-name table). DAL×69 09:30 $81.05 → close $80.11 +64.86 | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,571.56 | ▼ 09:30 equity $11,003.26 vs yday $11,043.97 (-40.71) | 09:30 open · cash $16,571.56 (unchanged overnight, no fees) · equity $11,003.26 vs prior close $11,043.97 (-40.71) · 1 name(s) re-marked at the open (per-name table). DAL×69 yday $80.11 → 09:30 $80.70 -40.71 | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,571.56 | ▲ close $11,081.23 vs 09:30 $11,003.26 (session +77.97) | 16:00 close · cash $16,571.56 · equity $11,081.23 vs 09:30 $11,003.26 (+77.97; session marks +77.97) · 1 name(s) marked open→close (per-name table). DAL×69 09:30 $80.70 → close $79.57 +77.97 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $16,571.56 | ▲ 09:30 equity $11,175.76 vs yday $11,081.23 (+94.53) | 09:30 open · cash $16,571.56 (unchanged overnight, no fees) · equity $11,175.76 vs prior close $11,081.23 (+94.53) · 1 name(s) re-marked at the open (per-name table). DAL×69 yday $79.57 → 09:30 $78.20 +94.53 | — |
+| 2026-10-14 09:30 ET | **COVER** | `DAL` | 69 | $78.20 | $2.20 | $+97.52 | $11,173.56 | ▲ +97.52 after sell → book $11,173.56; vs 09:30 mark -2.20 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,173.56 | ▲ close $11,173.56 vs 09:30 $11,175.76 (session +0.00) | 16:00 close · cash $11,173.56 · no lots left · equity $11,173.56. | — |
 
 ## Not taken
 

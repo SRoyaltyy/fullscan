@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os hold 5, no 🚨
 
-Cash book **-25.79%** ($7,422) · signal-only (no cash/fees) was -62.78%. Starts YES **4/30**. Fills 107 · skips 145 · realized $-2687.08.
+Cash book **-24.77%** ($7,524) · signal-only (no cash/fees) was -62.78%. Starts YES **4/30**. Fills 107 · skips 145 · realized $-2687.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -265,6 +265,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.54 | ▼ close $7,761.54 vs 09:30 $7,775.14 (session -13.60) | 16:00 close · cash $9.54 · equity $7,761.54 vs 09:30 $7,775.14 (-13.60; session marks -13.60) · 1 name(s) marked open→close (per-name table). ANGO×680 09:30 $11.42 → close $11.40 -13.60 | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9.54 | ▲ 09:30 equity $7,781.94 vs yday $7,761.54 (+20.40) | 09:30 open · cash $9.54 (unchanged overnight, no fees) · equity $7,781.94 vs prior close $7,761.54 (+20.40) · 1 name(s) re-marked at the open (per-name table). ANGO×680 yday $11.40 → 09:30 $11.43 +20.40 | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.54 | ▼ close $7,421.54 vs 09:30 $7,781.94 (session -360.40) | 16:00 close · cash $9.54 · equity $7,421.54 vs 09:30 $7,781.94 (-360.40; session marks -360.40) · 1 name(s) marked open→close (per-name table). ANGO×680 09:30 $11.43 → close $10.90 -360.40 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9.54 | ▼ 09:30 equity $7,346.74 vs yday $7,421.54 (-74.80) | 09:30 open · cash $9.54 (unchanged overnight, no fees) · equity $7,346.74 vs prior close $7,421.54 (-74.80) · 1 name(s) re-marked at the open (per-name table). ANGO×680 yday $10.90 → 09:30 $10.79 -74.80 | — |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.54 | ▲ close $7,523.54 vs 09:30 $7,346.74 (session +176.80) | 16:00 close · cash $9.54 · equity $7,523.54 vs 09:30 $7,346.74 (+176.80; session marks +176.80) · 1 name(s) marked open→close (per-name table). ANGO×680 09:30 $10.79 → close $11.05 +176.80 | — |
 
 ## Not taken
 

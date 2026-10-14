@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_g_h1/union_join_vol_green_h1 w=0.5,0.5 net=priority
 
-Cash book **-25.83%** ($7,417) · signal-only (no cash/fees) was —. Starts YES **9/30**. Fills 550 · skips 133 · realized $+83.38.
+Cash book **-26.83%** ($7,317) · signal-only (no cash/fees) was —. Starts YES **9/30**. Fills 557 · skips 133 · realized $+83.38.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,417.20.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $1,103.17.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -709,6 +709,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `FSLY` | 44 | $26.19 | $2.14 | $-118.66 | $6,141.71 | ▼ -118.66 after sell → book $7,419.61; vs 09:30 mark -2.14 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `MNSO` | 130 | $9.83 | $2.41 | $-11.29 | $7,417.20 | ▼ -11.29 after sell → book $7,417.20; vs 09:30 mark -2.41 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,417.20 | ▲ close $7,417.20 vs 09:30 $7,428.40 (session +0.00) | 16:00 close · cash $7,417.20 · no lots left · equity $7,417.20. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,417.20 | ▲ 09:30 equity $7,417.20 vs yday $7,417.20 (+0.00) | 09:30 open · cash $7,417.20 (unchanged overnight, no fees) · equity $7,417.20 vs prior close $7,417.20 (+0.00) | — |
+| 2026-10-14 09:30 ET | **BUY** | `NVTS` | 93 | $9.96 | $2.27 | — | $6,488.19 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; ret5=-12.7; combo leftover $927.15; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ITW` | 3 | $265.92 | $2.00 | — | $5,688.43 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=-0.3; combo leftover $927.15; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `AMX` | 42 | $21.62 | $2.12 | — | $4,778.27 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=-3.0; combo leftover $927.15; owner union_news_g_h1 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `TBBB` | 16 | $56.03 | $2.04 | — | $3,879.75 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+4.1; combo leftover $927.15; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `GLND` | 224 | $4.13 | $2.89 | — | $2,950.62 | — | union ∩ news_g, no 🚨; gate news=good; list yday_mover; ret5=-26.3; combo leftover $927.15; owner union_news_g_h1 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `MNSO` | 89 | $10.37 | $2.26 | — | $2,025.44 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+11.3; combo leftover $927.15; owner union_news_g_h1 | join🟢 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `SG` | 92 | $10.00 | $2.27 | — | $1,103.17 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+9.7; combo leftover $927.15; owner union_news_g_h1 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,103.17 | ▼ close $7,316.70 vs 09:30 $7,417.20 (session -84.67) | 16:00 close · cash $1,103.17 · equity $7,316.70 vs 09:30 $7,417.20 (-100.50; session marks -84.67) · 7 name(s) marked open→close (per-name table). NVTS×93 09:30 $9.96 → close $9.36 -56.73; ITW×3 09:30 $265.92 → close $269.47 +10.65; AMX×42 09:30 $21.62 → close $21.84 +9.24; TBBB×16 09:30 $56.03 → close $56.36 +5.28; GLND×224 09:30 $4.13 → close $3.90 -52.64; MNSO×89 09:30 $10.37 → close $10.22 -13.35; SG×92 09:30 $10.00 → close $10.14 +12.88 | — |
 
 ## Not taken
 

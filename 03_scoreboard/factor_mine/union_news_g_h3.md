@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g, no 🚨
 
-Cash book **-34.52%** ($6,547) · signal-only (no cash/fees) was +177.31%. Starts YES **1/30**. Fills 212 · skips 234 · realized $-2132.89.
+Cash book **-36.23%** ($6,377) · signal-only (no cash/fees) was +177.31%. Starts YES **1/30**. Fills 221 · skips 234 · realized $-2132.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -370,6 +370,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $38.89 | ▼ close $6,596.78 vs 09:30 $6,688.28 (session -91.24) | 16:00 close · cash $38.89 · equity $6,596.78 vs 09:30 $6,688.28 (-91.50; session marks -91.24) · 3 name(s) marked open→close (per-name table). FLUT×41 09:30 $79.48 → close $78.28 -49.20; GENI×503 09:30 $6.69 → close $6.61 -40.24; DNA×2 09:30 $12.69 → close $11.79 -1.80 | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $38.89 | ▲ 09:30 equity $6,657.22 vs yday $6,596.78 (+60.44) | 09:30 open · cash $38.89 (unchanged overnight, no fees) · equity $6,657.22 vs prior close $6,596.78 (+60.44) · 3 name(s) re-marked at the open (per-name table). DNA×2 yday $11.79 → 09:30 $11.79 +0.00; FLUT×41 yday $78.28 → 09:30 $78.65 +15.17; GENI×503 yday $6.61 → 09:30 $6.70 +45.27 | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $38.89 | ▼ close $6,547.46 vs 09:30 $6,657.22 (session -109.76) | 16:00 close · cash $38.89 · equity $6,547.46 vs 09:30 $6,657.22 (-109.76; session marks -109.76) · 3 name(s) marked open→close (per-name table). DNA×2 09:30 $11.79 → close $11.76 -0.06; FLUT×41 09:30 $78.65 → close $78.06 -24.19; GENI×503 09:30 $6.70 → close $6.53 -85.51 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $38.89 | ▼ 09:30 equity $6,472.70 vs yday $6,547.46 (-74.76) | 09:30 open · cash $38.89 (unchanged overnight, no fees) · equity $6,472.70 vs prior close $6,547.46 (-74.76) · 3 name(s) re-marked at the open (per-name table). DNA×2 yday $11.76 → 09:30 $11.42 -0.68; FLUT×41 yday $78.06 → 09:30 $77.48 -23.78; GENI×503 yday $6.53 → 09:30 $6.43 -50.30 | — |
+| 2026-10-14 09:30 ET | **SELL** | `FLUT` | 41 | $77.48 | $2.15 | $-180.97 | $3,213.42 | ▼ -180.97 after sell → book $6,470.55; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **SELL** | `GENI` | 503 | $6.43 | $6.60 | $-194.17 | $6,441.11 | ▼ -194.17 after sell → book $6,463.95; vs 09:30 mark -6.60 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **BUY** | `NVTS` | 80 | $9.96 | $2.23 | — | $5,641.68 | — | union ∩ news_g, no 🚨; gate news=good; list probable,yday_gainer,yday_mover; ret5=-12.7; leftover $805.14 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ITW` | 3 | $265.92 | $2.00 | — | $4,841.92 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=-0.3; leftover $805.14 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `AMX` | 37 | $21.62 | $2.10 | — | $4,039.88 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=-3.0; leftover $805.14 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `TBBB` | 14 | $56.03 | $2.03 | — | $3,253.43 | — | union ∩ news_g, no 🚨; gate news=good; list yday_gainer; 🔵; ret5=+4.1; leftover $805.14 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `GLND` | 194 | $4.13 | $2.57 | — | $2,448.67 | — | union ∩ news_g, no 🚨; gate news=good; list yday_mover; ret5=-26.3; leftover $805.14 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `MNSO` | 77 | $10.37 | $2.22 | — | $1,647.96 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+11.3; leftover $805.14 | join🟢 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `SG` | 80 | $10.00 | $2.23 | — | $845.73 | — | union ∩ news_g, no 🚨; gate news=good; list ohlc_hot; ret5=+9.7; leftover $805.14 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $845.73 | ▼ close $6,377.46 vs 09:30 $6,472.70 (session -71.11) | 16:00 close · cash $845.73 · equity $6,377.46 vs 09:30 $6,472.70 (-95.24; session marks -71.11) · 8 name(s) marked open→close (per-name table). DNA×2 09:30 $11.42 → close $11.53 +0.22; NVTS×80 09:30 $9.96 → close $9.36 -48.80; ITW×3 09:30 $265.92 → close $269.47 +10.65; AMX×37 09:30 $21.62 → close $21.84 +8.14; TBBB×14 09:30 $56.03 → close $56.36 +4.62; GLND×194 09:30 $4.13 → close $3.90 -45.59; MNSO×77 09:30 $10.37 → close $10.22 -11.55; SG×80 09:30 $10.00 → close $10.14 +11.20 | — |
 
 ## Not taken
 

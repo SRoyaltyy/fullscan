@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **-17.19%** ($8,281) · signal-only (no cash/fees) was +7.74%. Starts YES **29/30**. Fills 147 · skips 198 · realized $+4004.41.
+Cash book **-16.23%** ($8,377) · signal-only (no cash/fees) was +7.74%. Starts YES **29/30**. Fills 155 · skips 198 · realized $+4004.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -306,6 +306,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.01 | ▼ close $8,461.01 vs 09:30 $8,504.80 (session -43.79) | 16:00 close · cash $1.01 · equity $8,461.01 vs 09:30 $8,504.80 (-43.79; session marks -43.79) · 4 name(s) marked open→close (per-name table). ANGO×194 09:30 $11.42 → close $11.40 -3.88; BYRN×458 09:30 $4.50 → close $4.55 +25.19; DAL×27 09:30 $81.05 → close $80.11 -25.38; HOVR×1324 09:30 $1.54 → close $1.51 -39.72 | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.01 | ▼ 09:30 equity $8,390.87 vs yday $8,461.01 (-70.14) | 09:30 open · cash $1.01 (unchanged overnight, no fees) · equity $8,390.87 vs prior close $8,461.01 (-70.14) · 4 name(s) re-marked at the open (per-name table). ANGO×194 yday $11.40 → 09:30 $11.43 +5.82; BYRN×458 yday $4.55 → 09:30 $4.47 -38.93; DAL×27 yday $80.11 → 09:30 $80.70 +15.93; HOVR×1324 yday $1.51 → 09:30 $1.47 -52.96 | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.01 | ▼ close $8,280.94 vs 09:30 $8,390.87 (session -109.93) | 16:00 close · cash $1.01 · equity $8,280.94 vs 09:30 $8,390.87 (-109.93; session marks -109.93) · 4 name(s) marked open→close (per-name table). ANGO×194 09:30 $11.43 → close $10.90 -102.82; BYRN×458 09:30 $4.47 → close $4.55 +36.64; DAL×27 09:30 $80.70 → close $79.57 -30.51; HOVR×1324 09:30 $1.47 → close $1.46 -13.24 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.01 | ▼ 09:30 equity $8,155.41 vs yday $8,280.94 (-125.53) | 09:30 open · cash $1.01 (unchanged overnight, no fees) · equity $8,155.41 vs prior close $8,280.94 (-125.53) · 4 name(s) re-marked at the open (per-name table). ANGO×194 yday $10.90 → 09:30 $10.79 -21.34; BYRN×458 yday $4.55 → 09:30 $4.49 -27.48; DAL×27 yday $79.57 → 09:30 $78.20 -36.99; HOVR×1324 yday $1.46 → 09:30 $1.43 -39.72 | — |
+| 2026-10-14 09:30 ET | **SELL** | `ANGO` | 194 | $10.79 | $2.62 | $-57.57 | $2,091.65 | ▼ -57.57 after sell → book $8,152.79; vs 09:30 mark -2.62 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **SELL** | `BYRN` | 458 | $4.49 | $6.00 | $-108.09 | $4,142.07 | ▼ -108.09 after sell → book $8,146.79; vs 09:30 mark -6.00 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **SELL** | `DAL` | 27 | $78.20 | $2.10 | $-44.13 | $6,251.37 | ▼ -44.13 after sell → book $8,144.69; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **SELL** | `HOVR` | 1324 | $1.43 | $17.31 | $-285.95 | $8,127.38 | ▼ -285.95 after sell → book $8,127.38; vs 09:30 mark -17.31 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **BUY** | `BAC` | 32 | $49.83 | $2.09 | — | $6,530.73 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-0.2; leftover $1625.48 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `FAST` | 34 | $47.51 | $2.09 | — | $4,913.47 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.2; leftover $1625.48 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `MS` | 9 | $180.45 | $2.02 | — | $3,287.40 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-2.3; leftover $1625.48 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `PGR` | 7 | $206.97 | $2.01 | — | $1,836.60 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+5.1; leftover $1625.48 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,836.60 | ▲ close $8,376.89 vs 09:30 $8,155.41 (session +257.72) | 16:00 close · cash $1,836.60 · equity $8,376.89 vs 09:30 $8,155.41 (+221.48; session marks +257.72) · 4 name(s) marked open→close (per-name table). BAC×32 09:30 $49.83 → close $51.39 +49.92; FAST×34 09:30 $47.51 → close $52.00 +152.83; MS×9 09:30 $180.45 → close $181.51 +9.54; PGR×7 09:30 $206.97 → close $213.46 +45.43 | — |
 
 ## Not taken
 

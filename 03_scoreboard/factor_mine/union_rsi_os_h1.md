@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-32.37%** ($6,763) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 146 · skips 20 · realized $-3180.18.
+Cash book **-31.50%** ($6,850) · signal-only (no cash/fees) was -7.54%. Starts YES **0/30**. Fills 149 · skips 20 · realized $-3180.18.
 
 ## How this sleeve decides (like you are 10)
 
@@ -304,6 +304,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `CDNL` | 102 | $21.25 | $2.33 | $+19.96 | $4,636.81 | ▲ +19.96 after sell → book $6,765.51; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `TMUS` | 14 | $152.05 | $2.06 | $+30.49 | $6,763.45 | ▲ +30.49 after sell → book $6,763.45; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,763.45 | ▲ close $6,763.45 vs 09:30 $6,771.62 (session +0.00) | 16:00 close · cash $6,763.45 · no lots left · equity $6,763.45. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,763.45 | ▲ 09:30 equity $6,763.45 vs yday $6,763.45 (+0.00) | 09:30 open · cash $6,763.45 · no holdings · equity $6,763.45 vs prior close $6,763.45 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `LW` | 32 | $52.02 | $2.09 | — | $5,096.72 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+8.5; leftover $1690.86 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `BAC` | 33 | $49.83 | $2.09 | — | $3,450.25 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; 🔵; ret5=-0.2; leftover $1690.86 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `MS` | 9 | $180.45 | $2.02 | — | $1,824.18 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; 🔵; ret5=-2.3; leftover $1690.86 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,824.18 | ▲ close $6,850.28 vs 09:30 $6,763.45 (session +93.02) | 16:00 close · cash $1,824.18 · equity $6,850.28 vs 09:30 $6,763.45 (+86.83; session marks +93.02) · 3 name(s) marked open→close (per-name table). LW×32 09:30 $52.02 → close $53.02 +32.00; BAC×33 09:30 $49.83 → close $51.39 +51.48; MS×9 09:30 $180.45 → close $181.51 +9.54 | — |
 
 ## Not taken
 

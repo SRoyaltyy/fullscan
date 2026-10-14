@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-24.97%** ($7,503) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 188 · skips 214 · realized $-900.04.
+Cash book **-24.86%** ($7,514) · signal-only (no cash/fees) was -10.41%. Starts YES **2/30**. Fills 197 · skips 214 · realized $-900.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -342,6 +342,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $66.37 | ▲ close $7,499.83 vs 09:30 $7,436.73 (session +63.37) | 16:00 close · cash $66.37 · equity $7,499.83 vs 09:30 $7,436.73 (+63.10; session marks +63.37) · 4 name(s) marked open→close (per-name table). ETON×40 09:30 $55.50 → close $55.25 -10.00; PACS×50 09:30 $43.20 → close $44.30 +55.00; RRC×72 09:30 $41.16 → close $41.42 +18.72; ARQT×1 09:30 $26.57 → close $26.22 -0.35 | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $66.37 | ▲ 09:30 equity $7,545.85 vs yday $7,499.83 (+46.02) | 09:30 open · cash $66.37 (unchanged overnight, no fees) · equity $7,545.85 vs prior close $7,499.83 (+46.02) · 4 name(s) re-marked at the open (per-name table). ARQT×1 yday $26.22 → 09:30 $26.00 -0.22; ETON×40 yday $55.25 → 09:30 $55.42 +6.80; PACS×50 yday $44.30 → 09:30 $44.70 +20.00; RRC×72 yday $41.42 → 09:30 $41.69 +19.44 | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $66.37 | ▼ close $7,503.22 vs 09:30 $7,545.85 (session -42.63) | 16:00 close · cash $66.37 · equity $7,503.22 vs 09:30 $7,545.85 (-42.63; session marks -42.63) · 4 name(s) marked open→close (per-name table). ARQT×1 09:30 $26.00 → close $26.09 +0.09; ETON×40 09:30 $55.42 → close $53.33 -83.60; PACS×50 09:30 $44.70 → close $44.38 -16.00; RRC×72 09:30 $41.69 → close $42.48 +56.88 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $66.37 | ▼ 09:30 equity $7,490.08 vs yday $7,503.22 (-13.14) | 09:30 open · cash $66.37 (unchanged overnight, no fees) · equity $7,490.08 vs prior close $7,503.22 (-13.14) · 4 name(s) re-marked at the open (per-name table). ARQT×1 yday $26.09 → 09:30 $26.01 -0.08; ETON×40 yday $53.33 → 09:30 $53.50 +6.80; PACS×50 yday $44.38 → 09:30 $44.17 -10.50; RRC×72 yday $42.48 → 09:30 $42.35 -9.36 | — |
+| 2026-10-14 09:30 ET | **SELL** | `ETON` | 40 | $53.50 | $2.14 | $-58.65 | $2,204.23 | ▼ -58.65 after sell → book $7,487.94; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **SELL** | `PACS` | 50 | $44.17 | $2.17 | $+16.69 | $4,410.57 | ▲ +16.69 after sell → book $7,485.78; vs 09:30 mark -2.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **SELL** | `RRC` | 72 | $42.35 | $2.24 | $+120.11 | $7,457.52 | ▲ +120.11 after sell → book $7,483.53; vs 09:30 mark -2.25 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **BUY** | `TMUS` | 19 | $155.00 | $2.05 | — | $4,510.48 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-7.4; leftover $2983.01 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `TRU` | 13 | $66.42 | $2.03 | — | $3,644.99 | — | 40% to #1, rest split; list flatten,yday_gainer; wish-list (live io HOLD — not a ticket); 🔵; ret5=+6.4; leftover $894.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `WSM` | 3 | $238.29 | $2.00 | — | $2,928.12 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ret5=-0.9; leftover $894.90 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `CNK` | 23 | $37.88 | $2.06 | — | $2,054.82 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ret5=+7.5; leftover $894.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `AVPT` | 62 | $14.39 | $2.18 | — | $1,160.46 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ret5=-0.4; leftover $894.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `WLY` | 17 | $52.29 | $2.04 | — | $269.49 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ret5=+8.5; leftover $894.90 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $269.49 | ▲ close $7,513.50 vs 09:30 $7,490.08 (session +42.32) | 16:00 close · cash $269.49 · equity $7,513.50 vs 09:30 $7,490.08 (+23.42; session marks +42.32) · 7 name(s) marked open→close (per-name table). ARQT×1 09:30 $26.01 → close $26.41 +0.40; TMUS×19 09:30 $155.00 → close $157.79 +53.01; TRU×13 09:30 $66.42 → close $66.94 +6.76; WSM×3 09:30 $238.29 → close $242.48 +12.57; CNK×23 09:30 $37.88 → close $38.20 +7.36; AVPT×62 09:30 $14.39 → close $14.00 -24.18; WLY×17 09:30 $52.29 → close $51.49 -13.60 | — |
 
 ## Not taken
 

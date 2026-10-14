@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short news🔴 ∩ prior MACD histogram > 0
 
-Cash book **+13.23%** ($11,323) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 98 · skips 81 · realized $+1277.69.
+Cash book **-1.30%** ($9,870) · signal-only (no cash/fees) was +37.55%. Starts YES **29/30**. Fills 103 · skips 81 · realized $+1277.69.
 
 ## How this sleeve decides (like you are 10)
 
@@ -255,6 +255,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20,779.69 | ▲ close $10,886.69 vs 09:30 $10,333.85 (session +559.62) | 16:00 close · cash $20,779.69 · equity $10,886.69 vs 09:30 $10,333.85 (+552.84; session marks +559.62) · 4 name(s) marked open→close (per-name table). DAL×21 09:30 $81.05 → close $80.11 +19.74; DXC×141 09:30 $12.47 → close $12.54 -9.87; NTLA×140 09:30 $13.08 → close $12.58 +70.00; AEHL×505 09:30 $10.22 → close $9.27 +479.75 | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20,779.69 | ▲ 09:30 equity $11,002.44 vs yday $10,886.69 (+115.75) | 09:30 open · cash $20,779.69 (unchanged overnight, no fees) · equity $11,002.44 vs prior close $10,886.69 (+115.75) · 4 name(s) re-marked at the open (per-name table). AEHL×505 yday $9.27 → 09:30 $9.08 +95.95; DAL×21 yday $80.11 → 09:30 $80.70 -12.39; DXC×141 yday $12.54 → 09:30 $12.55 -1.41; NTLA×140 yday $12.58 → 09:30 $12.34 +33.60 | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20,779.69 | ▲ close $11,323.00 vs 09:30 $11,002.44 (session +320.56) | 16:00 close · cash $20,779.69 · equity $11,323.00 vs 09:30 $11,002.44 (+320.56; session marks +320.56) · 4 name(s) marked open→close (per-name table). AEHL×505 09:30 $9.08 → close $8.55 +267.65; DAL×21 09:30 $80.70 → close $79.57 +23.73; DXC×141 09:30 $12.55 → close $12.77 -31.02; NTLA×140 09:30 $12.34 → close $11.91 +60.20 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20,779.69 | ▼ 09:30 equity $3,451.26 vs yday $11,323.00 (-7,871.74) | 09:30 open · cash $20,779.69 (unchanged overnight, no fees) · equity $3,451.26 vs prior close $11,323.00 (-7871.74) · 4 name(s) re-marked at the open (per-name table). AEHL×505 yday $8.55 → 09:30 $24.20 -7903.25; DAL×21 yday $79.57 → 09:30 $78.20 +28.77; DXC×141 yday $12.77 → 09:30 $12.83 -8.46; NTLA×140 yday $11.91 → 09:30 $11.83 +11.20 | — |
+| 2026-10-14 09:30 ET | **COVER** | `DAL` | 21 | $78.20 | $2.05 | $+26.90 | $19,135.44 | ▲ +26.90 after sell → book $3,449.21; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **COVER** | `DXC` | 141 | $12.83 | $2.41 | $-68.36 | $17,323.99 | ▼ -68.36 after sell → book $3,446.79; vs 09:30 mark -2.42 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **COVER** | `NTLA` | 140 | $11.83 | $2.41 | $+73.50 | $15,665.38 | ▲ +73.50 after sell → book $3,444.38; vs 09:30 mark -2.41 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **SHORT** | `NOG` | 32 | $26.53 | $2.13 | — | $16,512.21 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list ohlc_hot; ret5=+10.4; leftover $861.10 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **SHORT** | `MOH` | 4 | $210.15 | $2.05 | — | $17,350.77 | — | short news🔴 ∩ prior MACD histogram > 0; gate macd_up=True,news=bad; list ohlc_hot; ret5=+7.3; leftover $861.10 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17,350.77 | ▲ close $9,869.96 vs 09:30 $3,451.26 (session +6,429.75) | 16:00 close · cash $17,350.77 · equity $9,869.96 vs 09:30 $3,451.26 (+6418.70; session marks +6429.75) · 3 name(s) marked open→close (per-name table). AEHL×505 09:30 $24.20 → close $11.49 +6418.55; NOG×32 09:30 $26.53 → close $26.30 +7.36; MOH×4 09:30 $210.15 → close $209.19 +3.84 | — |
 
 ## Not taken
 

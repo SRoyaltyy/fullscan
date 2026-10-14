@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-40.07%** ($5,993) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 361 · skips 98 · realized $-2571.92.
+Cash book **-39.76%** ($6,024) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 367 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -518,6 +518,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `TMUS` | 5 | $152.05 | $2.02 | $+8.32 | $4,515.96 | ▲ +8.32 after sell → book $6,038.37; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `ZENA` | 708 | $1.08 | $9.26 | $-21.93 | $5,271.34 | ▼ -21.93 after sell → book $6,029.11; vs 09:30 mark -9.26 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,271.34 | ▼ close $5,992.93 vs 09:30 $6,056.68 (session -36.18) | 16:00 close · cash $5,271.34 · equity $5,992.93 vs 09:30 $6,056.68 (-63.75; session marks -36.18) · 1 name(s) marked open→close (per-name table). KLRA×67 09:30 $11.31 → close $10.77 -36.18 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,271.34 | ▼ 09:30 equity $5,984.22 vs yday $5,992.93 (-8.71) | 09:30 open · cash $5,271.34 (unchanged overnight, no fees) · equity $5,984.22 vs prior close $5,992.93 (-8.71) · 1 name(s) re-marked at the open (per-name table). KLRA×67 yday $10.77 → 09:30 $10.64 -8.71 | — |
+| 2026-10-14 09:30 ET | **BUY** | `LW` | 14 | $52.02 | $2.03 | — | $4,541.03 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+8.5; leftover $753.05 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `BAC` | 15 | $49.83 | $2.04 | — | $3,791.54 | — | rank by rsi; rank rsi; list earn_react; 🔵; ret5=-0.2; leftover $753.05 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `MS` | 4 | $180.45 | $2.00 | — | $3,067.74 | — | rank by rsi; rank rsi; list earn_react; 🔵; ret5=-2.3; leftover $753.05 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `FRSH` | 54 | $13.82 | $2.15 | — | $2,319.31 | — | rank by rsi; rank rsi; list yday_mover; ret5=+1.0; leftover $753.05 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `JLHL` | 158 | $4.76 | $2.46 | — | $1,564.77 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=+22.6; leftover $753.05 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ETSY` | 9 | $78.89 | $2.02 | — | $852.74 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+11.1; leftover $753.05 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $852.74 | ▲ close $6,023.92 vs 09:30 $5,984.22 (session +52.40) | 16:00 close · cash $852.74 · equity $6,023.92 vs 09:30 $5,984.22 (+39.70; session marks +52.40) · 7 name(s) marked open→close (per-name table). KLRA×67 09:30 $10.64 → close $10.74 +6.70; LW×14 09:30 $52.02 → close $53.02 +14.00; BAC×15 09:30 $49.83 → close $51.39 +23.40; MS×4 09:30 $180.45 → close $181.51 +4.24; FRSH×54 09:30 $13.82 → close $13.69 -7.02; JLHL×158 09:30 $4.76 → close $4.60 -25.28; ETSY×9 09:30 $78.89 → close $82.93 +36.36 | — |
 
 ## Not taken
 

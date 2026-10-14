@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-22.42%** ($7,758) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 110 · skips 88 · realized $-2389.72.
+Cash book **-22.77%** ($7,723) · signal-only (no cash/fees) was -42.97%. Starts YES **6/30**. Fills 115 · skips 88 · realized $-2389.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -268,6 +268,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.45 | ▼ close $8,164.01 vs 09:30 $8,294.66 (session -130.65) | 16:00 close · cash $2.45 · equity $8,164.01 vs 09:30 $8,294.66 (-130.65; session marks -130.65) · 2 name(s) marked open→close (per-name table). ANGO×377 09:30 $11.42 → close $11.40 -7.54; GLAS×947 09:30 $4.21 → close $4.08 -123.11 | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.45 | ▼ 09:30 equity $8,090.09 vs yday $8,164.01 (-73.92) | 09:30 open · cash $2.45 (unchanged overnight, no fees) · equity $8,090.09 vs prior close $8,164.01 (-73.92) · 2 name(s) re-marked at the open (per-name table). ANGO×377 yday $11.40 → 09:30 $11.43 +11.31; GLAS×947 yday $4.08 → 09:30 $3.99 -85.23 | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.45 | ▼ close $7,757.70 vs 09:30 $8,090.09 (session -332.39) | 16:00 close · cash $2.45 · equity $7,757.70 vs 09:30 $8,090.09 (-332.39; session marks -332.39) · 2 name(s) marked open→close (per-name table). ANGO×377 09:30 $11.43 → close $10.90 -199.81; GLAS×947 09:30 $3.99 → close $3.85 -132.58 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.45 | ▼ 09:30 equity $7,640.47 vs yday $7,757.70 (-117.23) | 09:30 open · cash $2.45 (unchanged overnight, no fees) · equity $7,640.47 vs prior close $7,757.70 (-117.23) · 2 name(s) re-marked at the open (per-name table). ANGO×377 yday $10.90 → 09:30 $10.79 -41.47; GLAS×947 yday $3.85 → 09:30 $3.77 -75.76 | — |
+| 2026-10-14 09:30 ET | **SELL** | `ANGO` | 377 | $10.79 | $4.96 | $-111.61 | $4,065.32 | ▼ -111.61 after sell → book $7,635.51; vs 09:30 mark -4.96 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **SELL** | `GLAS` | 947 | $3.77 | $12.40 | $-611.76 | $7,623.11 | ▼ -611.76 after sell → book $7,623.11; vs 09:30 mark -12.40 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-14 09:30 ET | **BUY** | `LW` | 36 | $52.02 | $2.10 | — | $5,748.29 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list ohlc_hot; 🔵; ret5=+8.5; leftover $1905.78 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `BAC` | 38 | $49.83 | $2.10 | — | $3,852.65 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; 🔵; ret5=-0.2; leftover $1905.78 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `MS` | 10 | $180.45 | $2.02 | — | $2,046.13 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list earn_react; 🔵; ret5=-2.3; leftover $1905.78 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,046.13 | ▲ close $7,722.77 vs 09:30 $7,640.47 (session +105.88) | 16:00 close · cash $2,046.13 · equity $7,722.77 vs 09:30 $7,640.47 (+82.30; session marks +105.88) · 3 name(s) marked open→close (per-name table). LW×36 09:30 $52.02 → close $53.02 +36.00; BAC×38 09:30 $49.83 → close $51.39 +59.28; MS×10 09:30 $180.45 → close $181.51 +10.60 | — |
 
 ## Not taken
 

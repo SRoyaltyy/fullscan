@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **-15.99%** ($8,401) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 281 · skips 96 · realized $+387.41.
+Cash book **-15.08%** ($8,492) · signal-only (no cash/fees) was -2.27%. Starts YES **25/30**. Fills 288 · skips 96 · realized $+387.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -441,6 +441,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `PAX` | 88 | $11.88 | $2.28 | $+15.71 | $7,353.95 | ▲ +15.71 after sell → book $8,403.47; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `SEZL` | 8 | $131.19 | $2.03 | $+23.47 | $8,401.43 | ▲ +23.47 after sell → book $8,401.43; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,401.43 | ▲ close $8,401.43 vs 09:30 $8,418.62 (session +0.00) | 16:00 close · cash $8,401.43 · no lots left · equity $8,401.43. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,401.43 | ▲ 09:30 equity $8,401.43 vs yday $8,401.43 (+0.00) | 09:30 open · cash $8,401.43 · no holdings · equity $8,401.43 vs prior close $8,401.43 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `SHAK` | 16 | $70.75 | $2.04 | — | $7,267.39 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+10.0; leftover $1200.20 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `VFC` | 74 | $16.03 | $2.21 | — | $6,078.96 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+11.2; leftover $1200.20 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `SG` | 120 | $10.00 | $2.35 | — | $4,876.61 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+9.7; leftover $1200.20 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `WSM` | 5 | $238.29 | $2.00 | — | $3,683.16 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list flatten; ret5=-0.9; leftover $1200.20 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `BLMN` | 130 | $9.17 | $2.38 | — | $2,488.68 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+10.5; leftover $1200.20 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `ETSY` | 15 | $78.89 | $2.04 | — | $1,303.29 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; 🔵; ret5=+11.1; leftover $1200.20 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `MNSO` | 115 | $10.37 | $2.33 | — | $108.41 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+11.3; leftover $1200.20 | join🟢 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $108.41 | ▲ close $8,492.20 vs 09:30 $8,401.43 (session +106.12) | 16:00 close · cash $108.41 · equity $8,492.20 vs 09:30 $8,401.43 (+90.77; session marks +106.12) · 7 name(s) marked open→close (per-name table). SHAK×16 09:30 $70.75 → close $68.77 -31.68; VFC×74 09:30 $16.03 → close $16.48 +33.30; SG×120 09:30 $10.00 → close $10.14 +16.80; WSM×5 09:30 $238.29 → close $242.48 +20.95; BLMN×130 09:30 $9.17 → close $9.35 +23.40; ETSY×15 09:30 $78.89 → close $82.93 +60.60; MNSO×115 09:30 $10.37 → close $10.22 -17.25 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `conviction` · sell `list` · S-boost `none` · merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5
 
-Cash book **-36.27%** ($6,373) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 158 · skips 51 · realized $+1398.96.
+Cash book **-35.40%** ($6,460) · signal-only (no cash/fees) was +13.54%. Starts YES **26/30**. Fills 161 · skips 51 · realized $+1398.96.
 
 ## How this sleeve decides (like you are 10)
 
@@ -317,6 +317,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `AUGO` | 24 | $91.92 | $2.09 | $+44.57 | $2,262.93 | ▲ +44.57 after sell → book $6,377.64; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 09:30 ET | **SELL** | `DNA` | 349 | $11.79 | $4.59 | $-323.20 | $6,373.05 | ▼ -323.20 after sell → book $6,373.05; vs 09:30 mark -4.59 | dropped from list after 1 sess (min 1) | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,373.05 | ▲ close $6,373.05 vs 09:30 $6,379.73 (session +0.00) | 16:00 close · cash $6,373.05 · no lots left · equity $6,373.05. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,373.05 | ▲ 09:30 equity $6,373.05 vs yday $6,373.05 (+0.00) | 09:30 open · cash $6,373.05 · no holdings · equity $6,373.05 vs prior close $6,373.05 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `AMX` | 117 | $21.62 | $2.34 | — | $3,841.17 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list yday_gainer; 🔵; ret5=-3.0; leftover $2549.22 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `BAC` | 38 | $49.83 | $2.10 | — | $1,945.53 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list earn_react; 🔵; ret5=-0.2; leftover $1911.92 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `SG` | 63 | $10.00 | $2.18 | — | $1,313.35 | — | merged news🟢 rank cameras; 70% leftover if #1 net ≥ 5; gate news=good; rank cond; list ohlc_hot; ret5=+9.7; leftover $637.31 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,313.35 | ▲ close $6,460.27 vs 09:30 $6,373.05 (session +93.84) | 16:00 close · cash $1,313.35 · equity $6,460.27 vs 09:30 $6,373.05 (+87.22; session marks +93.84) · 3 name(s) marked open→close (per-name table). AMX×117 09:30 $21.62 → close $21.84 +25.74; BAC×38 09:30 $49.83 → close $51.39 +59.28; SG×63 09:30 $10.00 → close $10.14 +8.82 | — |
 
 ## Not taken
 

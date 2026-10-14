@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g hold 5, no 🚨
 
-Cash book **-25.88%** ($7,412) · signal-only (no cash/fees) was +99.58%. Starts YES **1/30**. Fills 180 · skips 344 · realized $-1589.16.
+Cash book **-29.95%** ($7,005) · signal-only (no cash/fees) was +99.58%. Starts YES **1/30**. Fills 180 · skips 344 · realized $-1589.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -338,6 +338,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-12 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.89 | ▼ close $7,467.75 vs 09:30 $7,569.75 (session -102.00) | 16:00 close · cash $20.89 · equity $7,467.75 vs 09:30 $7,569.75 (-102.00; session marks -102.00) · 2 name(s) marked open→close (per-name table). FLUT×47 09:30 $79.48 → close $78.28 -56.40; GENI×570 09:30 $6.69 → close $6.61 -45.60 | — |
 | 2026-10-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.89 | ▲ 09:30 equity $7,536.44 vs yday $7,467.75 (+68.69) | 09:30 open · cash $20.89 (unchanged overnight, no fees) · equity $7,536.44 vs prior close $7,467.75 (+68.69) · 2 name(s) re-marked at the open (per-name table). FLUT×47 yday $78.28 → 09:30 $78.65 +17.39; GENI×570 yday $6.61 → 09:30 $6.70 +51.30 | — |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.89 | ▼ close $7,411.81 vs 09:30 $7,536.44 (session -124.63) | 16:00 close · cash $20.89 · equity $7,411.81 vs 09:30 $7,536.44 (-124.63; session marks -124.63) · 2 name(s) marked open→close (per-name table). FLUT×47 09:30 $78.65 → close $78.06 -27.73; GENI×570 09:30 $6.70 → close $6.53 -96.90 | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.89 | ▼ 09:30 equity $7,327.55 vs yday $7,411.81 (-84.26) | 09:30 open · cash $20.89 (unchanged overnight, no fees) · equity $7,327.55 vs prior close $7,411.81 (-84.26) · 2 name(s) re-marked at the open (per-name table). FLUT×47 yday $78.06 → 09:30 $77.48 -27.26; GENI×570 yday $6.53 → 09:30 $6.43 -57.00 | — |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.89 | ▼ close $7,005.21 vs 09:30 $7,327.55 (session -322.34) | 16:00 close · cash $20.89 · equity $7,005.21 vs 09:30 $7,327.55 (-322.34; session marks -322.34) · 2 name(s) marked open→close (per-name table). FLUT×47 09:30 $77.48 → close $74.26 -151.34; GENI×570 09:30 $6.43 → close $6.13 -171.00 | — |
 
 ## Not taken
 

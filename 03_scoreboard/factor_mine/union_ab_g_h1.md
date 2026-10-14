@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ ab_g, no 🚨
 
-Cash book **-19.50%** ($8,050) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 316 · skips 92 · realized $-226.14.
+Cash book **-20.34%** ($7,966) · signal-only (no cash/fees) was -11.54%. Starts YES **0/30**. Fills 324 · skips 92 · realized $-226.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -474,6 +474,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 09:30 ET | **SELL** | `NAUT` | 486 | $2.12 | $6.36 | $-34.50 | $7,097.31 | ▼ -34.50 after sell → book $8,059.29; vs 09:30 mark -6.36 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-13 09:30 ET | **SELL** | `QSI` | 713 | $1.35 | $9.33 | $-108.22 | $8,049.96 | ▼ -108.22 after sell → book $8,049.96; vs 09:30 mark -9.33 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,049.96 | ▲ close $8,049.96 vs 09:30 $8,080.61 (session +0.00) | 16:00 close · cash $8,049.96 · no lots left · equity $8,049.96. | — |
+| 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,049.96 | ▲ 09:30 equity $8,049.96 vs yday $8,049.96 (+0.00) | 09:30 open · cash $8,049.96 · no holdings · equity $8,049.96 vs prior close $8,049.96 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-14 09:30 ET | **BUY** | `TRU` | 15 | $66.42 | $2.04 | — | $7,051.62 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten,yday_gainer; 🔵; ret5=+6.4; leftover $1006.25 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `WSM` | 4 | $238.29 | $2.00 | — | $6,096.46 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=-0.9; leftover $1006.25 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `CNK` | 26 | $37.88 | $2.07 | — | $5,109.51 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=+7.5; leftover $1006.25 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `WLY` | 19 | $52.29 | $2.05 | — | $4,113.96 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ret5=+8.5; leftover $1006.25 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `SMMT` | 65 | $15.29 | $2.19 | — | $3,117.92 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer,yday_mover; ret5=-10.3; leftover $1006.25 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-10-14 09:30 ET | **BUY** | `PRMB` | 53 | $18.75 | $2.15 | — | $2,122.02 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $1006.25 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `EPR` | 18 | $54.47 | $2.04 | — | $1,139.52 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer,yday_mover; ret5=-0.9; leftover $1006.25 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-14 09:30 ET | **BUY** | `PDFS` | 21 | $46.12 | $2.05 | — | $168.95 | — | union ∩ ab_g, no 🚨; gate ab=good; list probable,yday_gainer,yday_mover; ret5=-12.5; leftover $1006.25 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $168.95 | ▼ close $7,966.32 vs 09:30 $8,049.96 (session -67.06) | 16:00 close · cash $168.95 · equity $7,966.32 vs 09:30 $8,049.96 (-83.64; session marks -67.06) · 8 name(s) marked open→close (per-name table). TRU×15 09:30 $66.42 → close $66.94 +7.80; WSM×4 09:30 $238.29 → close $242.48 +16.76; CNK×26 09:30 $37.88 → close $38.20 +8.32; WLY×19 09:30 $52.29 → close $51.49 -15.20; SMMT×65 09:30 $15.29 → close $15.13 -10.40; PRMB×53 09:30 $18.75 → close $18.78 +1.59; EPR×18 09:30 $54.47 → close $54.58 +1.98; PDFS×21 09:30 $46.12 → close $42.41 -77.91 | — |
 
 ## Not taken
 
