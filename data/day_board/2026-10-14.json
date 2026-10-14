@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:06:18.139929-04:00",
+  "generated_at": "2026-10-14T06:08:25.098500-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News judge MD `01_daily/news/2026-10-14_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 5,
-    "partial": 2,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -571,10 +571,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 7554616,
+          "size": 7554321,
           "said": "27 rows",
           "bullets": [
-            "ARHS, ETN, ELV, AUPH, AMD, PBR-A, PBR, CDNA"
+            "ARHS, ETN, CDNA, AMD, PBR-A, PBR, ELV, CNP"
           ]
         },
         {
@@ -584,16 +584,16 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8345615,
+          "size": 8345403,
           "said": "25 rows",
           "bullets": [
-            "CDNA, ARHS, TLYS, SN, ETN, JBL, ATRC, PBR-A"
+            "CDNA, ARHS, AVT, JBL, ETN, SN, DRH, TLYS"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "CDNA, ARHS, TLYS, SN, ETN"
+        "CDNA, ARHS, AVT, JBL, ETN"
       ]
     },
     {
@@ -671,11 +671,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -767,10 +767,10 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8345615,
+          "size": 8345403,
           "said": "25 rows",
           "bullets": [
-            "CDNA, ARHS, TLYS, SN, ETN, JBL, ATRC, PBR-A"
+            "CDNA, ARHS, AVT, JBL, ETN, SN, DRH, TLYS"
           ]
         },
         {
@@ -804,10 +804,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1471985,
+          "said": "1d BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -815,21 +815,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-14_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 82593,
+          "said": "Stock book \u2014 2026-10-14",
+          "bullets": [
+            "_Generated 2026-10-14T06:01:58.362592-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-14_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -868,7 +871,7 @@
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
       "status": "OK",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
@@ -879,10 +882,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1471985,
+          "said": "1d BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -929,9 +932,78 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
-    "flatten": {},
+    "buy_1d": [
+      {
+        "ticker": "NTAP",
+        "score": 0.2843313440021954
+      },
+      {
+        "ticker": "BAND",
+        "score": 0.6611787597649168
+      },
+      {
+        "ticker": "MQ",
+        "score": 0.5459164323222052
+      },
+      {
+        "ticker": "IT",
+        "score": 0.37635451217416427
+      },
+      {
+        "ticker": "CON",
+        "score": 0.7287913963202588
+      },
+      {
+        "ticker": "AVPT",
+        "score": 0.7424881989450152
+      },
+      {
+        "ticker": "SGRY",
+        "score": 0.6603903952758077
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "NEOV",
+        "score": -0.3979840672726525
+      },
+      {
+        "ticker": "OKLO",
+        "score": -0.2666901180362591
+      },
+      {
+        "ticker": "FCEL",
+        "score": -0.2284152132262775
+      },
+      {
+        "ticker": "NNDM",
+        "score": -0.1638372495071339
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.040266310950080694
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.3581743968212493
+      },
+      {
+        "ticker": "NRGV",
+        "score": -0.2840014218486169
+      },
+      {
+        "ticker": "INDI",
+        "score": -0.2159049929401755
+      }
+    ],
+    "flatten": {
+      "said": "0 priced buys \u00b7 cash $9,606.56 \u00b7 morning S missing",
+      "bullets": [
+        "0 priced buys",
+        "cash $9,606.56",
+        "morning S missing"
+      ]
+    },
     "general": {},
     "sectors": {
       "said": "0 up / 0 down / 0 flat",
@@ -2573,6 +2645,52 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, ELV, AUPH, AMD \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, TLYS, SN, ETN"
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:08:24.366635-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-10-14_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 2996,
+          "preview": "# flatten_robust card \u2014 2026-10-14\n_Generated 2026-10-14T10:08:23 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$9,606.56** (after 09:30 $7.23 \u00b7 after 16:00 $93,930.63)\n- Prior close **$103,555.33** \u00b7 09:30 **$103,555.33** \u00b7 overnight **$+0.00** \u00b7 session **$-9,624.70** \u00b7 16:00 **$93,930.63**\n- Overnight lots **4** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$9,599.33** \u2264 leftover after sells **$103,529.96**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 10227,
+          "preview": "2026-10-14 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 161757,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 4033,
+          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 54019,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-10-14\n_Generated 2026-10-14T10:08:23 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$9,606.56** (after 09:30 $7.23 \u00b7 after 16:00 $93,930.63)\n- Prior close **$103,555.33** \u00b7 09:30 **$103,555.33** \u00b7 overnight **$+0.00** \u00b7 session **$-9,624.70** \u00b7 16:00 **$93,930.63**\n- Overnight lots **4** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$9,599.33** \u2264 leftover after sells **$103,529.96** \u00b7 2026-10-14 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overni"
     }
   ],
   "href": {
