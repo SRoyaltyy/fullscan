@@ -1,16 +1,16 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T07:24:33.170035-04:00",
+  "generated_at": "2026-10-14T09:13:04.677510-04:00",
   "items": [
     {
-      "ok": false,
+      "ok": true,
       "kind": "general_predict",
       "path": "01_daily/general/2026-10-14_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 6783,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -25,14 +25,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "news_judge",
       "path": "01_daily/news/2026-10-14_judge.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 9844,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -95,7 +95,7 @@
       "kind": "map_heat",
       "path": "01_daily/map_heat/2026-10-14_map_heat.json",
       "reason": "",
-      "size": 276650,
+      "size": 278257,
       "carried": false,
       "timeout": false,
       "empty": false,

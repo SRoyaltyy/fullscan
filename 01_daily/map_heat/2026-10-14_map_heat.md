@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-14
 
-Export `finviz_2026-10-14.csv` · 11616 names · generated 2026-10-14T06:27:40.520343-04:00
+Export `finviz_2026-10-14.csv` · 11616 names · generated 2026-10-14T09:13:04.618424-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -70,14 +70,15 @@ Export `finviz_2026-10-14.csv` · 11616 names · generated 2026-10-14T06:27:40.5
 
 Econ (importance ≥ 2):
 - 05:40 ET  Fed Bowman Speech  actual —  cons —  surprise —  prev —
-- 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev 7.49%
-- 08:30 ET  Core Inflation Rate MoM  actual —  cons 0.2%  surprise —  prev 0.3%
-- 08:30 ET  Core Inflation Rate YoY  actual —  cons 2.5%  surprise —  prev 2.4%
-- 08:30 ET  Inflation Rate MoM  actual —  cons 0.6%  surprise —  prev 0.4%
-- 08:30 ET  Inflation Rate YoY  actual —  cons 3.6%  surprise —  prev 3.4%
-- 08:30 ET  CPI  actual —  cons 336.65  surprise —  prev 334.98
-- 08:30 ET  CPI s.a  actual —  cons 335.8  surprise —  prev 334.131
+- 07:00 ET  MBA 30-Year Mortgage Rate  actual 7.5%  cons —  surprise —  prev 7.49%
+- 08:30 ET  Core Inflation Rate MoM  actual 0.3%  cons 0.2%  surprise 0.1  prev 0.3%
+- 08:30 ET  Core Inflation Rate YoY  actual 2.6%  cons 2.5%  surprise 0.1  prev 2.4%
+- 08:30 ET  Inflation Rate MoM  actual 0.6%  cons 0.6%  surprise 0.0  prev 0.4%
+- 08:30 ET  Inflation Rate YoY  actual 3.7%  cons 3.6%  surprise 0.1  prev 3.4%
+- 08:30 ET  CPI  actual 336.94  cons 336.65  surprise 0.29  prev 334.98
+- 08:30 ET  CPI s.a  actual 336.30  cons 335.8  surprise 0.5  prev 334.13
 - 13:30 ET  Fed Barkin Speech  actual —  cons —  surprise —  prev —
+- 14:00 ET  Monthly Budget Statement  actual —  cons -$29B  surprise —  prev -$167B
 - 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev -2.09M
 - 22:55 ET  Fed Bowman Speech  actual —  cons —  surprise —  prev —
 - 08:30 ET  PPI MoM  actual —  cons 0.5%  surprise —  prev 0.4%
@@ -99,7 +100,7 @@ Econ (importance ≥ 2):
 - 09:15 ET  Industrial Production MoM  actual —  cons 0.4%  surprise —  prev 0%
 - 16:00 ET  Net Long-term TIC Flows  actual —  cons $125.7B  surprise —  prev -$27.9B
 - 10:00 ET  NAHB Housing Market Index  actual —  cons 31  surprise —  prev 32
-- 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev —
+- 08:15 ET  ADP Employment Change Weekly  actual —  cons —  surprise —  prev 24.75K
 - 08:30 ET  Building Permits Prel  actual —  cons 1.39M  surprise —  prev 1.403M
 - 08:30 ET  Housing Starts  actual —  cons 1.3M  surprise —  prev 1.275M
 - 08:30 ET  Building Permits MoM Prel  actual —  cons -0.7%  surprise —  prev -2.1%
@@ -108,42 +109,41 @@ Econ (importance ≥ 2):
 - 10:00 ET  Pending Home Sales YoY  actual —  cons 1.0%  surprise —  prev -4.7%
 - 11:00 ET  Atlanta Fed GDPNow  actual —  cons —  surprise —  prev —
 - 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev —
-- 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev —
 
 Mega-cap earnings:
-- AMC **GOOG**  EPS est 3.0387  (Alphabet Inc)
-- AMC **GOOGL**  EPS est 3.0396  (Alphabet Inc)
+- AMC **GOOG**  EPS est 3.0298  (Alphabet Inc)
+- AMC **GOOGL**  EPS est 3.031  (Alphabet Inc)
 - AMC **MSFT**  EPS est 4.7154  (Microsoft Corp)
 - BMO **AMZN**  EPS est 1.8233  (Amazon.com Inc)
 - BMO **TSM**  EPS est 4.4577  (Taiwan Semiconductor Manufacturing ADR)
-- AMC **META**  EPS est 6.7623  (Meta Platforms Inc)
+- AMC **META**  EPS est 6.683  (Meta Platforms Inc)
 - AMC **TSLA**  EPS est 0.4573  (Tesla Inc)
 - BMO **LLY**  EPS est 5.5958  (Lilly(Eli) & Co)
 - AMC **V**  EPS est 3.4375  (Visa Inc)
-- BMO **ASML**  EPS est 12.1619  (ASML Holding NV)
-- AMC **INTC**  EPS est 0.3987  (Intel Corp)
+- BMO **ASML**  EPS est 12.1744  (ASML Holding NV)
 - BMO **MA**  EPS est 5.1603  (Mastercard Incorporated)
+- AMC **INTC**  EPS est 0.3987  (Intel Corp)
 - BMO **ABBV**  EPS est 3.7356  (Abbvie Inc)
 - BMO **CVX**  EPS est 4.7361  (Chevron Corp)
 - BMO **KO**  EPS est 0.8799  (Coca-Cola Co)
 - AMC **LRCX**  EPS est 2.1771  (Lam Research Corp)
-- BMO **BAC**  EPS est 1.0979  (Bank Of America Corp)
 - BMO **PG**  EPS est 1.8832  (Procter & Gamble Co)
-- BMO **CAT**  EPS est 7.0345  (Caterpillar Inc)
+- BMO **BAC**  EPS est 1.0979  (Bank Of America Corp)
 - BMO **MRK**  EPS est 2.0895  (Merck & Co Inc)
+- BMO **CAT**  EPS est 7.0345  (Caterpillar Inc)
 - BMO **HSBC**  EPS est 2.2019  (HSBC Holdings plc ADR)
 - BMO **GE**  EPS est 2.0022  (GE Aerospace)
 - BMO **PM**  EPS est 2.2933  (Philip Morris International Inc)
 - BMO **SHEL**  EPS est 3.3137  (Shell Plc ADR)
-- BMO **MS**  EPS est 2.9273  (Morgan Stanley)
 - AMC **NFLX**  EPS est 0.8208  (Netflix Inc)
-- BMO **GEV**  EPS est 3.9947  (GE Vernova Inc)
+- BMO **MS**  EPS est 2.9273  (Morgan Stanley)
 - BMO **NVS**  EPS est 2.2766  (Novartis AG ADR)
+- BMO **GEV**  EPS est 3.9947  (GE Vernova Inc)
 - AMC **TXN**  EPS est 2.416  (Texas Instruments Inc)
 - AMC **SAP**  EPS est 2.062  (Sap SE ADR)
+- BMO **TMO**  EPS est 6.4017  (Thermo Fisher Scientific Inc)
 - BMO **RTX**  EPS est 1.7772  (RTX Corp)
 - BMO **AZN**  EPS est 2.6081  (Astrazeneca plc)
-- BMO **TMO**  EPS est 6.4017  (Thermo Fisher Scientific Inc)
 - AMC **KLAC**  EPS est 1.1838  (KLA Corp)
 - BMO **LIN**  EPS est 4.5181  (Linde Plc)
 - AMC **IBM**  EPS est 2.8606  (International Business Machines Corp)
@@ -153,14 +153,14 @@ Mega-cap earnings:
 - BMO **VZ**  EPS est 1.2778  (Verizon Communications Inc)
 
 Options event-vol flags (NOT direction):
-- **GOOG** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI —
-- **GOOGL** exp 2026-10-14 ATM IV 0.0078 implied move +0.0% put/call OI —
-- **MSFT** exp 2026-10-14 ATM IV 0.0039 implied move +0.0% put/call OI —
-- **AMZN** exp 2026-10-14 ATM IV 0.0156 implied move +0.1% put/call OI —
-- **TSM** exp 2026-10-16 ATM IV 0.0005 implied move 0.0% put/call OI —
-- **META** exp 2026-10-14 ATM IV 0.0156 implied move +0.1% put/call OI —
-- **TSLA** exp 2026-10-14 ATM IV 0.002 implied move +0.0% put/call OI —
-- **LLY** exp 2026-10-16 ATM IV 0.001 implied move +0.0% put/call OI —
+- **GOOG** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI 1.113
+- **GOOGL** exp 2026-10-14 ATM IV 0.0078 implied move +0.0% put/call OI 0.304
+- **MSFT** exp 2026-10-14 ATM IV 0.0039 implied move +0.0% put/call OI 2.527
+- **AMZN** exp 2026-10-14 ATM IV 0.0156 implied move +0.1% put/call OI 1.138
+- **TSM** exp 2026-10-16 ATM IV 0.0005 implied move 0.0% put/call OI 0.993
+- **META** exp 2026-10-14 ATM IV 0.0156 implied move +0.1% put/call OI 0.946
+- **TSLA** exp 2026-10-14 ATM IV 0.002 implied move +0.0% put/call OI 1.117
+- **LLY** exp 2026-10-16 ATM IV 0.001 implied move +0.0% put/call OI 1.786
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 9 min **MU,SPCX** Micron Stock Keeps Sliding but Musk Says It's Making a 'Smart Move' (Barrons.com)
-- 14 min **BLK** BlackRock Stock Jumps as Earnings Top Estimates, Assets Climb 15% to $15.5 Trillion (Barrons.com)
-- 16 min **HIMX** Himax WiseEye Ultralow Power AI Adopted in Alibaba's Latest Qwen Glasses (GlobeNewswire)
-- 18 min **BLK** BlackRock: Q3 Earnings Snapshot (Associated Press)
-- 18 min **GME** GameStop Stock Hits Highest Level in 15 Months. What It Says About the Market. (Barrons.com)
-- 22 min **NTCT** High-Capacity DDoS Attacks Surge 1,286% in 1H 2026 According to NETSCOUT Threat Intelligence Research (Business Wire)
-- 22 min **BLK** BlackRock Grows Assets to Record $15.5 Trillion (The Wall Street Journal)
-- 23 min **VSTM** Verastem Oncology Announces Pricing of $250 Million Offering of Common Stock and Pre-Funded Warrants (Business Wire)
-- 26 min **ON** onsemi and Sungrow Advance Utility-Scale Energy Storage Performance with SiC Hybrid Technology (GlobeNewswire)
-- 26 min **VSTM** Verastem Oncology Announces Planned Chief Executive Officer Transition and Succession Plan (Business Wire)
-- 26 min **BLK,TSM,ASML** Stock market today: Dow, S&P 500, Nasdaq futures edge higher ahead of CPI inflation data, earnings (Yahoo Finance)
-- 27 min **HUYA** Huya Earns Back-to-Back Recognition from Renowned Media Brands Barron's China and Forbes China (PR Newswire)
-- 27 min **NWSA,NWS** Luxury Prices Fall for 30th Straight Month as Big Price Tags Fail to Guarantee Top School Marks, Realtor.com Finds (PR Newswire)
-- 27 min **TRI** Legal Work Crosses Borders. Now So Does CoCounsel Legal. (PR Newswire)
-- 27 min **YRD** Yiren Digital Provides Further Update on Operations (PR Newswire)
-- 27 min **GPUS** Hyperscale Data Announces Plans for up to $33.5 Million in Tokenized Series D Preferred Stock Offering (PR Newswire)
-- 27 min **IAUX** i-80 Gold Provides a Development Update; Archimedes Underground and Lone Tree Plant Refurbishment Remain on Track and Mineral Point Open Pit Prioritized in Updated Development Plan (PR Newswire)
-- 27 min **RDWR** Radware Introduces Model Context Protocol (MCP) Server Protection to Help Secure the Integration Layer of Agentic AI (GlobeNewswire)
-- 27 min **VWAV** VisionWave Advances Stratum AI, an Agentic AI Architecture for Autonomous Mission Intelligence and Orchestration (GlobeNewswire)
-- 27 min **OWLS** Owlting Group (NASDAQ: OWLS) and Decaf Open U.S. Dollar Accounts Beyond the United States on OwlPay Harbor (GlobeNewswire)
-- 27 min **GNRC** Generac Announces Third Quarter 2026 Earnings Release Date and Conference Call (GlobeNewswire)
-- 27 min **KBR** KBR Dividend Declaration (GlobeNewswire)
-- 27 min **DMC** Del Monte Corporation to Report Third Quarter 2026 Financial Results (Business Wire)
-- 27 min **BLK** BlackRock Reports Third Quarter 2026 Earnings (Business Wire)
-- 27 min **MACI** Everli's Asset-Light Marketplace Brings Italy's 13 Largest Grocers Online (Business Wire)
+- 55 sec **CCB** Shareholders who lost money in shares of acquired Coastal Financial Corporation (NASDAQ: CCB) should contact Wolf Haldenstein Immediately (PR Newswire)
+- 2 min **GOOGL,AEP** American Electric Power to Invest $4 Billion in Fuel Cell Project to Meet Energy Demand From Google (The Wall Street Journal)
+- 5 min **NFLX** Netflix Eliminates About 6% of Staff in Biggest Cuts Since 2022 (The Wall Street Journal)
+- 6 min **DAVA** Shareholders who lost money in American Depositary Receipts of Endava plc (NYSE: DAVA) should contact Wolf Haldenstein Immediately (PR Newswire)
+- 8 min **BLK,ASML,TSM,UNH,JNJ** Earnings live updates: Big bank earnings roll on (Yahoo Finance)
+- 9 min **BAC** Bank of America Q3 profit tumbles 17% as $1.2 billion fine and soft trading weigh on results (Yahoo Finance)
+- 9 min **SYK** Stryker launches Sonopet 3, delivering greater power and precision in ultrasonic tissue removal (PR Newswire)
+- 11 min **MMM** 13-Year-old Raji Doshi named America's Top Young Scientist for inventing an algae-aragonite alkalinity system to reduce CO2-driven ocean acidification (PR Newswire)
+- 11 min **SPT** "Lore" crowned the 2026 social media word of the year, according to Sprout Social (GlobeNewswire)
+- 11 min **AJG** Employers Shift Focus from Retirement Access to Financial Outcomes (PR Newswire)
+- 11 min **EXPE** UNPACK '27: EXPEDIA AND STAYZ REVEAL THE TRAVEL TRENDS INSPIRING THE WORLD IN 2027 (Business Wire)
+- 12 min **CVS** MinuteClinic earns seventh consecutive Joint Commission accreditation, including first evaluation under Medical Center standards (PR Newswire)
+- 12 min **KD** Kyndryl, Toyota Systems and Toyota Finance Modernize IT Operations with Agentic AI (PR Newswire)
+- 12 min **BCE** BCE Q3 2026 results to be announced November 5 (PR Newswire)
+- 12 min **QUAD** 75% of Americans think a simpler relationship with technology is a lifestyle upgrade (PR Newswire)
+- 12 min **FEMY** Femasys Doubles Enrolling Sites in FemBloc FINALE Pivotal Trial for Non-Surgical Permanent Birth Control (GlobeNewswire)
+- 12 min **CARL** Carlsmed Launches aprevo Lumbar Bi-lateral Posterior System (GlobeNewswire)
+- 12 min **NTSK** BT International and Netskope Expand Partnership to Deliver Integrated Security Service Edge Across Global Fabric (GlobeNewswire)
+- 12 min **BSET** Bassett Announces Regular Quarterly Dividend (GlobeNewswire)
+- 12 min **DFNS** T3 Defense Subsidiary Positech Commences Deliveries On $3.9 Million Defense Order (GlobeNewswire)
+- 12 min **CBAT** CBAK Energy Reports Approximately US$4.76 Million in Cumulative Sales from European RV Battery Collaboration (GlobeNewswire)
+- 12 min **TOP** TOP Financial Group Limited Establishes U.S. Headquarters and Restructures Board of Directors (GlobeNewswire)
+- 12 min **MNTN** MNTN Brings Tealium First-Party Data Into MNTN Matched to Advance AI-Powered TV Targeting (Business Wire)
+- 12 min **NYT** The New York Times Company to Announce Third-Quarter Financial Results on November 4, 2026 (Business Wire)
+- 12 min **AMRZ** Amrize Announces Date for Third Quarter 2026 Financial Results (Business Wire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
