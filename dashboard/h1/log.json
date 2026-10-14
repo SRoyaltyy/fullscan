@@ -7400,5 +7400,13 @@
       "status": "BEFORE_1330"
     },
     "sha256": "924253445b5dc0bb197ef7116fe64e9af7c8e88e79e8603b9f5750318785306c"
+  },
+  {
+    "committed_at": "2026-10-14T18:01:03Z",
+    "date": "2026-10-14",
+    "kind": "missing",
+    "reason": "missing: plan not sealed before open",
+    "recipe": "union_hot_n4_h1__w0",
+    "sha256": "4441cadc44a00b5f916f5cfc9a9f5601a68f835c75e45e97dcc507a7eafd1c1a"
   }
 ]
