@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T04:40:17.881834-04:00",
+  "generated_at": "2026-10-14T04:41:51.967375-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,49 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T04:27:00.567054-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-14_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 276650,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-14_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18266,
-          "preview": "# MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T04:27:00.538231-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T04:27:00.538231-04:00"
-    },
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T04:30:46.596430-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-10-14_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1123078,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -193,6 +150,41 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-14",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-14T04:41:33.437120-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T04:41:51.410936-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-14_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 462597,
+          "preview": "raw=559 usable=124 single=43 \u00b7 U.S. September CPI Due Tonight \u2014 Core Inflation at 0.3% Could Reignite October R | US Treasury Yields Fall After New York Fed\u2019s Williams Says One More 2026 Rate Hi | Gold struggles to reclaim $4,200 as Fed interest rate hike risks persist, US CPI | Fed officials want to hold off a rate hike this month. Will this week\u2019s inflatio | US 10-Year Yield Steadies Ahead of CPI Report - TradingView"
+        },
+        {
+          "path": "01_daily/news/2026-10-14_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 8558,
+          "preview": "# News Parse v2 \u2014 2026-10-14T04:41:51.304495-04:00\nWindow\u224848h | news_mode=on | raw=559 | usable=124 | single_name=43 | noise_dropped=392\nusable polarity={'+': 4, '-': 26, 'mixed': 2, 'neutral': 92}"
+        }
+      ],
+      "preview": "raw=559 usable=124 single=43 \u00b7 U.S. September CPI Due Tonight \u2014 Core Inflation at 0.3% Could Reignite October R | US Treasury Yields Fall After New York Fed\u2019s Williams Says One More 2026 Rate Hi | Gold struggles to reclaim $4,200 as Fed interest rate hike risks persist, US CPI | Fed officials want to hold off a rate hike this month. Will this week\u2019s inflatio | US 10-Year Yield Steadies Ahead of CPI Report - TradingView \u00b7 # News Parse v2 \u2014 2026-10-14T04:41:51.304495-04:00\nWindow\u224848h | news_mode=on | raw=559 | usable=124 | single_name=43 | noise_dropped=392\nusable polarity={'+': 4, '-': 26, 'mixed': 2, 'neutral': 92}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T04:40:17.881834-04:00",
+  "generated_at": "2026-10-14T04:41:51.967375-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -182,7 +182,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 9,
       "n_opt_ok": 1,
       "n_opt": 14,
@@ -240,10 +240,10 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-10-14_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 462597,
+          "said": "462597B on disk",
           "bullets": []
         },
         {
@@ -330,13 +330,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7575,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7573,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -1249,6 +1249,41 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-14",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-14T04:41:33.437120-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T04:41:51.410936-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-14_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 462597,
+          "preview": "raw=559 usable=124 single=43 \u00b7 U.S. September CPI Due Tonight \u2014 Core Inflation at 0.3% Could Reignite October R | US Treasury Yields Fall After New York Fed\u2019s Williams Says One More 2026 Rate Hi | Gold struggles to reclaim $4,200 as Fed interest rate hike risks persist, US CPI | Fed officials want to hold off a rate hike this month. Will this week\u2019s inflatio | US 10-Year Yield Steadies Ahead of CPI Report - TradingView"
+        },
+        {
+          "path": "01_daily/news/2026-10-14_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 8558,
+          "preview": "# News Parse v2 \u2014 2026-10-14T04:41:51.304495-04:00\nWindow\u224848h | news_mode=on | raw=559 | usable=124 | single_name=43 | noise_dropped=392\nusable polarity={'+': 4, '-': 26, 'mixed': 2, 'neutral': 92}"
+        }
+      ],
+      "preview": "raw=559 usable=124 single=43 \u00b7 U.S. September CPI Due Tonight \u2014 Core Inflation at 0.3% Could Reignite October R | US Treasury Yields Fall After New York Fed\u2019s Williams Says One More 2026 Rate Hi | Gold struggles to reclaim $4,200 as Fed interest rate hike risks persist, US CPI | Fed officials want to hold off a rate hike this month. Will this week\u2019s inflatio | US 10-Year Yield Steadies Ahead of CPI Report - TradingView \u00b7 # News Parse v2 \u2014 2026-10-14T04:41:51.304495-04:00\nWindow\u224848h | news_mode=on | raw=559 | usable=124 | single_name=43 | noise_dropped=392\nusable polarity={'+': 4, '-': 26, 'mixed': 2, 'neutral': 92}"
     }
   ],
   "href": {
