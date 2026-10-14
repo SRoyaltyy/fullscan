@@ -60,6 +60,27 @@
           "s": -6.767,
           "sells": [],
           "sit": true
+        },
+        {
+          "buys": [
+            "JLHL",
+            "ODD",
+            "ECO",
+            "DHT"
+          ],
+          "date": "2026-10-14",
+          "equity": 9554.92,
+          "mean": -4.4508,
+          "picks": [
+            "JLHL",
+            "ODD",
+            "ECO",
+            "DHT"
+          ],
+          "reasons": [],
+          "s": -1.645,
+          "sells": [],
+          "sit": false
         }
       ],
       "label": "starts 10-08 open, no past days",
@@ -118,6 +139,27 @@
           "s": -6.767,
           "sells": [],
           "sit": true
+        },
+        {
+          "buys": [
+            "JLHL",
+            "ODD",
+            "ECO",
+            "DHT"
+          ],
+          "date": "2026-10-14",
+          "equity": 9554.92,
+          "mean": -4.4508,
+          "picks": [
+            "JLHL",
+            "ODD",
+            "ECO",
+            "DHT"
+          ],
+          "reasons": [],
+          "s": -1.645,
+          "sells": [],
+          "sit": false
         }
       ],
       "label": "starts 10-08 open, no past days",
