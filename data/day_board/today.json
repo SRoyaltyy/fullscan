@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T09:26:42.592302-04:00",
+  "generated_at": "2026-10-14T09:30:41.467882-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,73 +12,76 @@
   "buy_1d": [
     {
       "ticker": "NTAP",
-      "score": 0.2843313440021954
+      "score": 0.18239590894266144
     },
     {
       "ticker": "BAND",
-      "score": 0.6611787597649168
+      "score": 0.5054596446690593
     },
     {
-      "ticker": "MQ",
-      "score": 0.5459164323222052
+      "ticker": "CNK",
+      "score": 0.6462022471693012
     },
     {
-      "ticker": "IT",
-      "score": 0.37635451217416427
+      "ticker": "WLY",
+      "score": 0.5881875461728525
     },
     {
-      "ticker": "CON",
-      "score": 0.7287913963202588
+      "ticker": "FIS",
+      "score": 0.22514446794935988
     },
     {
-      "ticker": "AVPT",
-      "score": 0.7424881989450152
+      "ticker": "PRCH",
+      "score": 0.5404266780690136
     },
     {
-      "ticker": "SGRY",
-      "score": 0.6603903952758077
+      "ticker": "TMUS",
+      "score": 0.4429443674043055
+    },
+    {
+      "ticker": "UPWK",
+      "score": 0.4411786722204654
     }
   ],
   "sell_1d": [
     {
+      "ticker": "EOSE",
+      "score": -0.3332996476105277
+    },
+    {
+      "ticker": "TE",
+      "score": -0.29778163594966284
+    },
+    {
       "ticker": "NEOV",
-      "score": -0.3979840672726525
+      "score": -0.357067975796452
+    },
+    {
+      "ticker": "PLUG",
+      "score": -0.21292045250555586
     },
     {
       "ticker": "OKLO",
-      "score": -0.2666901180362591
+      "score": -0.2387618044895793
     },
     {
       "ticker": "FCEL",
-      "score": -0.2284152132262775
+      "score": -0.22590146154242213
     },
     {
       "ticker": "NNDM",
-      "score": -0.1638372495071339
+      "score": -0.16961541699668248
     },
     {
-      "ticker": "POWL",
-      "score": -0.040266310950080694
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.3581743968212493
-    },
-    {
-      "ticker": "NRGV",
-      "score": -0.2840014218486169
-    },
-    {
-      "ticker": "INDI",
-      "score": -0.2159049929401755
+      "ticker": "QUBT",
+      "score": -0.17822254200443488
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $9,606.56 \u00b7 morning S missing",
+    "said": "0 priced buys \u00b7 cash $9,606.56",
     "bullets": [
       "0 priced buys",
-      "cash $9,606.56",
-      "morning S missing"
+      "cash $9,606.56"
     ]
   },
   "general": {
