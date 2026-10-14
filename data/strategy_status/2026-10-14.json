@@ -47,7 +47,7 @@
   }
  },
  "date": "2026-10-14",
- "generated_at": "2026-10-14T06:29:45-04:00",
+ "generated_at": "2026-10-14T06:40:21-04:00",
  "strategies": [
   {
    "buys": [
@@ -5115,19 +5115,19 @@
    "buys": [
     "CNK",
     "PRCH",
-    "WLY",
     "AVPT",
+    "WLY",
     "SPNT",
     "SLDE",
     "EZPW",
     "VSNT",
-    "STGW",
     "BAND",
+    "STGW",
     "CBRL",
-    "CAKE",
     "ARHS",
-    "LIND",
-    "PRGS"
+    "CAKE",
+    "PRGS",
+    "LIND"
    ],
    "family": "stock_book",
    "name": "stock_book_3d",
@@ -5137,17 +5137,17 @@
     "SFIX",
     "LCID",
     "OI",
-    "VSAT",
     "DAN",
+    "VSAT",
     "GT",
     "STLA",
     "CWH",
     "XPEV",
+    "FUN",
     "NEOV",
-    "RC",
     "TRIP",
-    "ARE",
-    "FUN"
+    "RC",
+    "ARE"
    ],
    "source": "data/day_board/2026-10-14_strategy_tickets.json",
    "status": "OK"
@@ -5156,19 +5156,19 @@
    "buys": [
     "CNK",
     "PRCH",
-    "WLY",
     "AVPT",
+    "WLY",
     "SPNT",
     "SLDE",
     "EZPW",
     "VSNT",
-    "STGW",
     "BAND",
+    "STGW",
     "CBRL",
-    "CAKE",
     "ARHS",
-    "LIND",
-    "PRGS"
+    "CAKE",
+    "PRGS",
+    "LIND"
    ],
    "family": "paper",
    "name": "3d_top",
@@ -5178,17 +5178,17 @@
     "SFIX",
     "LCID",
     "OI",
-    "VSAT",
     "DAN",
+    "VSAT",
     "GT",
     "STLA",
     "CWH",
     "XPEV",
+    "FUN",
     "NEOV",
-    "RC",
     "TRIP",
-    "ARE",
-    "FUN"
+    "RC",
+    "ARE"
    ],
    "source": "data/day_board/2026-10-14_strategy_tickets.json",
    "status": "OK"
@@ -5196,9 +5196,9 @@
   {
    "buys": [
     "CNK",
-    "WLY",
     "PRCH",
     "AVPT",
+    "WLY",
     "SPNT",
     "SLDE",
     "EZPW",
@@ -5219,17 +5219,17 @@
     "SFIX",
     "LCID",
     "OI",
-    "VSAT",
     "DAN",
+    "VSAT",
     "STLA",
     "GT",
     "CWH",
     "XPEV",
+    "TRIP",
     "NEOV",
     "RC",
-    "TRIP",
-    "PCT",
-    "FUN"
+    "FUN",
+    "PCT"
    ],
    "source": "data/day_board/2026-10-14_strategy_tickets.json",
    "status": "OK"
@@ -5237,9 +5237,9 @@
   {
    "buys": [
     "CNK",
-    "WLY",
     "PRCH",
     "AVPT",
+    "WLY",
     "SPNT",
     "SLDE",
     "EZPW",
@@ -5260,17 +5260,17 @@
     "SFIX",
     "LCID",
     "OI",
-    "VSAT",
     "DAN",
+    "VSAT",
     "STLA",
     "GT",
     "CWH",
     "XPEV",
+    "TRIP",
     "NEOV",
     "RC",
-    "TRIP",
-    "PCT",
-    "FUN"
+    "FUN",
+    "PCT"
    ],
    "source": "data/day_board/2026-10-14_strategy_tickets.json",
    "status": "OK"
@@ -5278,9 +5278,9 @@
   {
    "buys": [
     "CNK",
-    "WLY",
     "SPNT",
     "SLDE",
+    "WLY",
     "AVPT",
     "PRCH",
     "EZPW",
@@ -5288,8 +5288,8 @@
     "STGW",
     "BAND",
     "CBRL",
-    "CAKE",
     "ARHS",
+    "CAKE",
     "SIG",
     "PRGS"
    ],
@@ -5299,19 +5299,19 @@
    "sells": [
     "AUR",
     "SFIX",
-    "VSAT",
     "LCID",
     "DAN",
+    "VSAT",
     "STLA",
     "OI",
     "CWH",
+    "GT",
     "RC",
     "PCT",
-    "GT",
     "TRIP",
     "XPEV",
-    "NEOV",
-    "EOSE"
+    "EVGO",
+    "DFH"
    ],
    "source": "data/day_board/2026-10-14_strategy_tickets.json",
    "status": "OK"
@@ -5319,9 +5319,9 @@
   {
    "buys": [
     "CNK",
-    "WLY",
     "SPNT",
     "SLDE",
+    "WLY",
     "AVPT",
     "PRCH",
     "EZPW",
@@ -5329,8 +5329,8 @@
     "STGW",
     "BAND",
     "CBRL",
-    "CAKE",
     "ARHS",
+    "CAKE",
     "SIG",
     "PRGS"
    ],
@@ -5340,19 +5340,19 @@
    "sells": [
     "AUR",
     "SFIX",
-    "VSAT",
     "LCID",
     "DAN",
+    "VSAT",
     "STLA",
     "OI",
     "CWH",
+    "GT",
     "RC",
     "PCT",
-    "GT",
     "TRIP",
     "XPEV",
-    "NEOV",
-    "EOSE"
+    "EVGO",
+    "DFH"
    ],
    "source": "data/day_board/2026-10-14_strategy_tickets.json",
    "status": "OK"
@@ -5360,9 +5360,9 @@
   {
    "buys": [
     "CNK",
-    "WLY",
     "SPNT",
     "SLDE",
+    "WLY",
     "AVPT",
     "EZPW",
     "PRCH",
@@ -5381,18 +5381,18 @@
    "sells": [
     "AUR",
     "SFIX",
-    "VSAT",
     "LCID",
-    "STLA",
+    "VSAT",
     "DAN",
+    "STLA",
     "OI",
-    "RC",
     "CWH",
-    "PCT",
     "GT",
+    "RC",
+    "PCT",
     "TRIP",
-    "EOSE",
     "XPEV",
+    "EOSE",
     "NEOV"
    ],
    "source": "data/day_board/2026-10-14_strategy_tickets.json",
@@ -5401,9 +5401,9 @@
   {
    "buys": [
     "CNK",
-    "WLY",
     "SPNT",
     "SLDE",
+    "WLY",
     "AVPT",
     "EZPW",
     "PRCH",
@@ -5422,18 +5422,18 @@
    "sells": [
     "AUR",
     "SFIX",
-    "VSAT",
     "LCID",
-    "STLA",
+    "VSAT",
     "DAN",
+    "STLA",
     "OI",
-    "RC",
     "CWH",
-    "PCT",
     "GT",
+    "RC",
+    "PCT",
     "TRIP",
-    "EOSE",
     "XPEV",
+    "EOSE",
     "NEOV"
    ],
    "source": "data/day_board/2026-10-14_strategy_tickets.json",
