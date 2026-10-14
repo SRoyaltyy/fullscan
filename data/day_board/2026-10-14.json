@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T07:23:43.907824-04:00",
+  "generated_at": "2026-10-14T07:24:05.983070-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -590,16 +590,16 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8345615,
+          "size": 8355066,
           "said": "25 rows",
           "bullets": [
-            "CDNA, ARHS, TLYS, ETN, JBL, SN, TEL, ATRC"
+            "CDNA, ARHS, ETN, JBL, ATRC, SHEL, KLIC, PBR"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "CDNA, ARHS, TLYS, ETN, JBL"
+        "CDNA, ARHS, ETN, JBL, ATRC"
       ]
     },
     {
@@ -773,10 +773,10 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8345615,
+          "size": 8355066,
           "said": "25 rows",
           "bullets": [
-            "CDNA, ARHS, TLYS, ETN, JBL, SN, TEL, ATRC"
+            "CDNA, ARHS, ETN, JBL, ATRC, SHEL, KLIC, PBR"
           ]
         },
         {
@@ -1036,31 +1036,6 @@
     }
   },
   "lands": [
-    {
-      "key": "events_catcher",
-      "title": "Event catcher (gap hunt, no carry)",
-      "date": "2026-10-14",
-      "ok": false,
-      "pushed": true,
-      "at": "2026-10-14T04:50:14.427189-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-10-14_events.json",
-          "ok": false,
-          "reason": "zero_events",
-          "size": 212,
-          "preview": "0 events \u00b7 "
-        },
-        {
-          "path": "01_daily/events/2026-10-14_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 205,
-          "preview": "# Event Scan \u2014 2026-10-14 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
-        }
-      ],
-      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-14 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -3636,6 +3611,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T07:24:03.513893-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-14_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7554616,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, ELV, AUPH, AMD"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-14_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8355066,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, ETN, JBL, ATRC"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, ELV, AUPH, AMD \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, ETN, JBL, ATRC"
     }
   ],
   "href": {
