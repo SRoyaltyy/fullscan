@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T10:34:35.801800-04:00",
+  "generated_at": "2026-10-14T10:34:48.092586-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -3528,7 +3528,7 @@
       "date": "2026-10-14",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-14T10:34:34.264708-04:00",
+      "at": "2026-10-14T10:34:46.614569-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-10-14_parsed.json",
@@ -4550,6 +4550,38 @@
     {
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T10:34:38-04:00",
+      "commit_msg": "auto: land news_parse [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_preopen_qc.json",
+      "at": "2026-10-14T10:34:49-04:00",
+      "commit_msg": "auto: land news_parse [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_preopen_status.json",
+      "at": "2026-10-14T10:34:49-04:00",
+      "commit_msg": "auto: land news_parse [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-14_parsed.json",
+      "at": "2026-10-14T10:34:49-04:00",
+      "commit_msg": "auto: land news_parse [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T10:34:49-04:00",
       "commit_msg": "auto: land news_parse [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38578583308",
