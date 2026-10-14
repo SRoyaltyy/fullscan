@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T09:30:41.467882-04:00",
+  "generated_at": "2026-10-14T09:44:26.612474-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -113,81 +113,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:05:20.800053-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-14_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97004,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-14_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11840,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-14\n_Generated 2026-10-14T04:23:44.540749-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-14\n_Generated 2026-10-14T04:23:44.540749-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-    },
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:05:26.552905-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-14_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 276650,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-14_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18266,
-          "preview": "# MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T04:27:00.538231-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T04:27:00.538231-04:00"
-    },
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:05:31.435463-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-14_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 187523,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-14_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 25855,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-14\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-14\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -2608,6 +2533,66 @@
         }
       ],
       "preview": "raw=571 usable=128 single=50 \u00b7 US CPI Jumps 3.7%, Raising Federal Reserve Rate Hike Chances - \uc870\uc120\uc77c\ubcf4 | Fed rate hike seen more likely after inflation data - Reuters | Fed rate hike seen more likely after inflation data - Central Oregon Daily | What analysts are watching with key semiconductor maker TSMC set to report resul | US 10-Year Yield Steadies Ahead of CPI Report - TradingView \u00b7 # News Parse v2 \u2014 2026-10-14T09:26:30.431276-04:00\nWindow\u224848h | news_mode=on | raw=571 | usable=128 | single_name=50 | noise_dropped=393\nusable polarity={'+': 2, '-': 28, 'mixed': 2, 'neutral': 96}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-10-14",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-14T09:34:52.483052-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-10-14",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-14T09:34:55.319545-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-14_events.json",
+          "ok": false,
+          "reason": "zero_events",
+          "size": 212,
+          "preview": "0 events \u00b7 "
+        },
+        {
+          "path": "01_daily/events/2026-10-14_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 205,
+          "preview": "# Event Scan \u2014 2026-10-14 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+        }
+      ],
+      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-14 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T09:35:25.173717-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-14_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 41688,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-14_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 9569,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-14T09:35:14.208904-04:00\nraw=568 unique_events=4 tickers=61"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-14T09:35:14.208904-04:00\nraw=568 unique_events=4 tickers=61"
     }
   ],
   "source": "publish_live_boards"
