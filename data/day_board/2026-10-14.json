@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:33:13.580339-04:00",
+  "generated_at": "2026-10-14T06:33:46.161744-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -836,7 +836,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=179",
-          "size": 1423546,
+          "size": 1425369,
           "said": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.3961",
           "bullets": []
         },
@@ -847,10 +847,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 82593,
+          "size": 66038,
           "said": "Stock book \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T06:01:58.362592-04:00_",
+            "_Generated 2026-10-14T06:33:24.981805-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -914,7 +914,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=179",
-          "size": 1423546,
+          "size": 1425369,
           "said": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.3961",
           "bullets": []
         },
@@ -969,11 +969,11 @@
       },
       {
         "ticker": "CNK",
-        "score": 0.650507242212794
+        "score": 0.6407615997738609
       },
       {
         "ticker": "WLY",
-        "score": 0.5863550247741003
+        "score": 0.5744282962125962
       },
       {
         "ticker": "FIS",
@@ -985,11 +985,11 @@
       },
       {
         "ticker": "TMUS",
-        "score": 0.46090770067271086
+        "score": 0.43254801668594167
       },
       {
         "ticker": "UPWK",
-        "score": 0.49689651274871743
+        "score": 0.4767592052392412
       }
     ],
     "sell_1d": [
@@ -3383,6 +3383,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, ELV, AUPH, AMD \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, ETN, JBL, ATRC"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:33:45.410516-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-14_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1425369,
+          "preview": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/stock_book/2026-10-14_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-14_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2453,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-14_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12371,
+          "preview": "2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12371,
+          "preview": "2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "01_daily/2026-10-14_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 67129,
+          "preview": "# Stock book \u2014 2026-10-14\n_Generated 2026-10-14T06:33:24.981805-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 # Stock book \u2014 2026-10-14\n_Generated 2026-10-14T06:33:24.981805-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
