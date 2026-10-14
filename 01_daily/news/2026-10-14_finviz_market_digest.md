@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-10-14
 
-**Generated:** 2026-10-14T04:23:05.123647-04:00 (America/New_York)
+**Generated:** 2026-10-14T04:23:35.351684-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks set for modestly higher open as futures edge up ahead of September CPI data and major bank earnings
 **Prior close:** SPX —  Nasdaq —  Dow —
