@@ -32147,18 +32147,119 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": -9.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7795.27,
+      "actual_close": 7805.45,
+      "actual_pct_change": -0.02,
+      "actual_direction": "flat",
+      "actual_magnitude_band": "flat",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": -1.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -2.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": -0.5,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "neutral"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.morningstar.com/news/dow-jones/202610138290/sp-500-falls-002-to-780545-data-talk",
+          "date_accessed": "2026-10-13",
+          "summary": "Official DJ Market Data print matching Channel 1 exactly; this was a high-altitude tick lower, not a break.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.thestar.com.my/news/world/2026/10/14/us-stocks-end-lower-amid-chip-selloff",
+          "date_accessed": "2026-10-13",
+          "summary": "The sector split is the masked-day fingerprint: SPX unchanged because winners cancelled losers.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.koreatimes.co.kr/economy/20261013/kospi-plunges-546-as-foreign-selling-drives-valuations-to-record-low",
+          "date_accessed": "2026-10-13",
+          "summary": "The Asia shock the morning model scored was real; US cash imported the theme, not the magnitude.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/13/jnj-earnings-q3-2026.html",
+          "date_accessed": "2026-10-13",
+          "summary": "Largest identifiable same-day idiosyncratic shock, and the best fit for the Dow’s fade-from-highs path.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.aljazeera.com/news/2026/10/14/iran-steps-up-hormuz-surveillance-attacks-soar-oil-flows-crash-again",
+          "date_accessed": "2026-10-13",
+          "summary": "Kinetic risk was live; it priced in oil/energy, not as an SPX crash.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/12/imf-world-bank-annual-meetings-october-bangkok-asia-.html",
+          "date_accessed": "2026-10-13",
+          "summary": "Macro backdrop was a small growth upgrade plus an explicit AI-correction warning — not a Tuesday directional impulse.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.nar.realtor/newsroom/existing-home-sales-increased-1-5-in-september-according-to-nar-report",
+          "date_accessed": "2026-10-13",
+          "summary": "In-line-to-slightly-better housing print; no PATH break.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.unitedhealthgroup.com/newsroom/2026/2026-10-13-uhg-reports-third-quarter-2026-results.html",
+          "date_accessed": "2026-10-13",
+          "summary": "Same-sector, same morning, opposite sign — proof healthcare was stock-specific, not a macro health shock.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/10/13/stock-market-midday-oct-13-bank-earnings-and-chip-pressure-drives-mixed-trading/",
+          "date_accessed": "2026-10-13",
+          "summary": "Midday snapshot matches the close’s choppy/offset character; the day did not trend after 11:30.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -32188,7 +32289,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": -0.767,
-      "overlay_score": -6.0
+      "overlay_score": -6.0,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Offset — AI-chip contagion plus mixed mega-cap earnings (JNJ miss, bank sell-the-news) cancelled by energy/comms bid, leaving SPX unchanged",
+      "key_interaction": "Offsetting/masking — chips+JNJ+banks vs energy+comms made SPX look calm (-0.02% in a 0.36% box) while the Dow reversed from +0.9% to near the low",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "Energy +1.74% and gold down on a Hormuz day; UNH raise vs JNJ -6%; SPX 36 bp range after a 5.46% Kospi crash"
     },
     {
       "date": "2026-10-13",
