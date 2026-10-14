@@ -1,6 +1,6 @@
 {
  "date": "2026-10-14",
- "generated_at": "2026-10-14T07:23:07.904481-04:00",
+ "generated_at": "2026-10-14T07:40:11.678268-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -13,10 +13,10 @@
   "general_direction": "down",
   "general_confidence": 0.466,
   "risk": "off",
-  "yields_score": null,
-  "fed_score": null,
-  "dollar_oil_score": null,
-  "futures_score": null,
+  "yields_score": -1.0,
+  "fed_score": 0.0,
+  "dollar_oil_score": 0.5,
+  "futures_score": 0.0,
   "yields": "flat",
   "yields_source": "fred_dgs10",
   "dgs10_delta_1d": 0.02,
@@ -24,12 +24,12 @@
   "dollar": "flat",
   "dollar_source": "dxy",
   "dxy_pct_1d": 0.07,
-  "vix_ratio": 0.855,
-  "vix_spot": 15.35,
-  "vix_delta_1d": 0.08,
+  "vix_ratio": 0.853,
+  "vix_spot": 15.32,
+  "vix_delta_1d": 0.05,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": 1.61,
+  "oil_pct_1d": 1.89,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -440,7 +440,6 @@
   "veto_extreme_risk_off": true
  },
  "data_gaps": [
-  "general predict factor scoreboard",
   "risk tilted off by news_judge"
  ]
 }
