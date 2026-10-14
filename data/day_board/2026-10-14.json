@@ -1,8 +1,8 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T07:19:54.115896-04:00",
+  "generated_at": "2026-10-14T07:20:11.780849-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": true,
+  "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-14_predict.md` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-10-14_judge.md` \u2014 missing"
@@ -327,12 +327,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6393,
-          "said": "0 up / 0 down / 0 flat",
+          "size": 6901,
+          "said": "0 up / 1 down / 2 flat",
           "bullets": [
-            "XLB missing",
-            "XLC missing",
-            "XLY missing",
+            "XLB FLAT +7.7",
+            "XLC FLAT -0.7",
+            "XLY DOWN -0.2",
             "XLP missing"
           ]
         },
@@ -504,11 +504,11 @@
           "bullets": []
         }
       ],
-      "said": "sectors 0 up / 0 down / 0 flat",
+      "said": "sectors 0 up / 1 down / 2 flat",
       "bullets": [
-        "XLB missing",
-        "XLC missing",
-        "XLY missing",
+        "XLB FLAT +7.7",
+        "XLC FLAT -0.7",
+        "XLY DOWN -0.2",
         "XLP missing",
         "XLE missing",
         "XLF missing"
@@ -702,12 +702,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6393,
-          "said": "0 up / 0 down / 0 flat",
+          "size": 6901,
+          "said": "0 up / 1 down / 2 flat",
           "bullets": [
-            "XLB missing",
-            "XLC missing",
-            "XLY missing",
+            "XLB FLAT +7.7",
+            "XLC FLAT -0.7",
+            "XLY DOWN -0.2",
             "XLP missing"
           ]
         },
@@ -1012,11 +1012,11 @@
     },
     "general": {},
     "sectors": {
-      "said": "0 up / 0 down / 0 flat",
+      "said": "0 up / 1 down / 2 flat",
       "bullets": [
-        "XLB missing",
-        "XLC missing",
-        "XLY missing",
+        "XLB FLAT +7.7",
+        "XLC FLAT -0.7",
+        "XLY DOWN -0.2",
         "XLP missing",
         "XLE missing",
         "XLF missing",
@@ -1036,31 +1036,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T04:39:24.430329-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-14_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 187523,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-14_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 25855,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-14\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-14\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -3620,6 +3595,24 @@
         }
       ],
       "preview": "3/3 sector predicts ok: basic_materials, communication_services, consumer_cyclical"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T07:20:08.951929-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-14/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6901,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "href": {
