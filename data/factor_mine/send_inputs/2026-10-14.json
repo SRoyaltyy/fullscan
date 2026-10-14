@@ -16,7 +16,7 @@
     },
     {
       "path": "01_daily/news/2026-10-14_finviz_digest.json",
-      "sha256": "8ad5402302d389e8647ce0ee81241eb27a15d6ba56951232e4cd941b6190fdce"
+      "sha256": "55db7c520a1dbf25d3417ed671a86881b829cf7781a2e7b11eae1b05c1711a9f"
     },
     {
       "path": "01_daily/news/2026-10-14_judge.md",
@@ -24,11 +24,11 @@
     },
     {
       "path": "01_daily/sectors/2026-10-14/_board.json",
-      "sha256": "2b8e643109b793fe07e14d551374380988477987565584808c5005afcef669bb"
+      "sha256": "f4772cc2becf6d69695121b6b793aab80f7520086de620535810a535ba6c8293"
     },
     {
       "path": "01_daily/weather/2026-10-14_weather.json",
-      "sha256": "cbece8ecf22fd5c734679a2fac28fe7e1e522f61950ac1e374b18c0ea0d48a9a"
+      "sha256": "705aaa89b213ef5cdfc02684aa91dd100d8fec452d3f22888d454581c529afa3"
     },
     {
       "path": "data/ab_checklist/2026-10-14_ab_checklist_enriched.csv",
@@ -94,6 +94,6 @@
   ],
   "reason": "",
   "rows": [],
-  "sha256": "a89b2b0f449f512daae54e880e70b02f256b4b2e7e069aa9924b371ee42ce9af",
+  "sha256": "22e796181a1f26aa17ed654a94be9832586090f5020f8d801e4d66e99a4b2209",
   "source": "no_same_day_panel"
 }

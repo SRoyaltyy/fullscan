@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:54:44.280581-04:00",
+  "generated_at": "2026-10-14T07:31:24.543004-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -68,9 +68,9 @@
     {
       "name": "events",
       "family": "addon",
-      "status": "ok",
+      "status": "degraded",
       "n": null,
-      "detail": "23 events, scan_date=2026-10-14"
+      "detail": "QC fail: zero_events"
     },
     {
       "name": "map_heat",

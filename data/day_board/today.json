@@ -1,8 +1,8 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T07:24:37.277031-04:00",
+  "generated_at": "2026-10-14T07:31:31.866838-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
     "ok": 6,
     "partial": 1,
@@ -11,77 +11,87 @@
   },
   "buy_1d": [
     {
-      "ticker": "NTAP",
-      "score": 0.2843313440021954
-    },
-    {
       "ticker": "BAND",
-      "score": 0.6611787597649168
+      "score": 0.5054596446690593
     },
     {
-      "ticker": "MQ",
-      "score": 0.5459164323222052
+      "ticker": "CNK",
+      "score": 0.6407615997738609
     },
     {
-      "ticker": "IT",
-      "score": 0.37635451217416427
+      "ticker": "WLY",
+      "score": 0.5744282962125962
     },
     {
-      "ticker": "CON",
-      "score": 0.7287913963202588
+      "ticker": "FIS",
+      "score": 0.20510056948205813
     },
     {
-      "ticker": "AVPT",
-      "score": 0.7424881989450152
+      "ticker": "PRCH",
+      "score": 0.5552775179449208
     },
     {
-      "ticker": "SGRY",
-      "score": 0.6603903952758077
+      "ticker": "TMUS",
+      "score": 0.43254801668594167
+    },
+    {
+      "ticker": "UPWK",
+      "score": 0.4767592052392412
     }
   ],
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.3979840672726525
+      "score": -0.3540158220891866
     },
     {
       "ticker": "OKLO",
-      "score": -0.2666901180362591
+      "score": -0.24011378167345843
     },
     {
       "ticker": "FCEL",
-      "score": -0.2284152132262775
+      "score": -0.22470316333007573
     },
     {
       "ticker": "NNDM",
-      "score": -0.1638372495071339
+      "score": -0.1663934465190176
     },
     {
       "ticker": "POWL",
-      "score": -0.040266310950080694
+      "score": -0.058810047261321385
     },
     {
       "ticker": "EOSE",
-      "score": -0.3581743968212493
+      "score": -0.3314992425842292
     },
     {
       "ticker": "NRGV",
-      "score": -0.2840014218486169
+      "score": -0.2581204239587
     },
     {
       "ticker": "INDI",
-      "score": -0.2159049929401755
+      "score": -0.2163323933294375
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $9,606.56 \u00b7 morning S missing",
+    "said": "0 priced buys \u00b7 cash $9,606.56",
     "bullets": [
       "0 priced buys",
-      "cash $9,606.56",
-      "morning S missing"
+      "cash $9,606.56"
     ]
   },
-  "general": {},
+  "general": {
+    "said": "DOWN  -1.645",
+    "bullets": [
+      "bad: September CPI binary unsigned",
+      "bad: AI/semis unwind APH -6.5%/ASML drag",
+      "bad: 1m 10Y +29bp spine",
+      "good: China exports +36% beat",
+      "good: Europe partial +0.61%"
+    ],
+    "score": "-1.645",
+    "direction": "down"
+  },
   "sectors": {
     "said": "0 up / 1 down / 2 flat",
     "bullets": [
