@@ -13,15 +13,15 @@ Updated: 2026-10-14. Calls are graded at T+h trading days using the scoreboard's
 | sector:Basic Materials | 3d | 11 | 36% (4/11) | 18% (2/11) | -0.61% |
 | sector:Basic Materials | 1w | 11 | 18% (2/11) | 27% (3/11) | -1.18% |
 | sector:Basic Materials | 2w | 11 | 18% (2/11) | 36% (4/11) | -3.43% |
-| sector:Basic Materials | 1m | 8 | 12% (1/8) | 50% (4/8) | -5.86% |
+| sector:Basic Materials | 1m | 9 | 11% (1/9) | 44% (4/9) | -5.83% |
 | sector:Communication Services | 3d | 11 | 45% (5/11) | 45% (5/11) | -0.08% |
 | sector:Communication Services | 1w | 11 | 27% (3/11) | 55% (6/11) | +0.41% |
 | sector:Communication Services | 2w | 11 | 27% (3/11) | 45% (5/11) | +0.28% |
-| sector:Communication Services | 1m | 7 | 14% (1/7) | 14% (1/7) | +0.35% |
+| sector:Communication Services | 1m | 8 | 12% (1/8) | 25% (2/8) | +0.07% |
 | sector:Consumer Cyclical | 3d | 11 | 45% (5/11) | 36% (4/11) | -1.19% |
 | sector:Consumer Cyclical | 1w | 11 | 45% (5/11) | 45% (5/11) | -1.85% |
 | sector:Consumer Cyclical | 2w | 11 | 9% (1/11) | 27% (3/11) | -3.82% |
-| sector:Consumer Cyclical | 1m | 8 | 0% (0/8) | 38% (3/8) | -5.44% |
+| sector:Consumer Cyclical | 1m | 9 | 0% (0/9) | 44% (4/9) | -5.31% |
 | sector:Consumer Defensive | 3d | 11 | 36% (4/11) | 55% (6/11) | -0.66% |
 | sector:Consumer Defensive | 1w | 11 | 45% (5/11) | 18% (2/11) | -0.93% |
 | sector:Consumer Defensive | 2w | 11 | 0% (0/11) | 91% (10/11) | -2.44% |
@@ -62,6 +62,9 @@ Updated: 2026-10-14. Calls are graded at T+h trading days using the scoreboard's
 | 2026-10-08 | general | 3d | down/mild | -0.60% (down/mild) | ✅ | ✅ |
 | 2026-09-29 | general | 2w | down/mild | +0.63% (up/flat) | ❌ | ❌ |
 | 2026-09-14 | general | 1m | flat/mild | +1.30% (up/flat) | ❌ | ❌ |
+| 2026-09-03 | sector:Consumer Cyclical | 1m | flat/mild | -4.26% (down/mild) | ❌ | ✅ |
+| 2026-09-03 | sector:Basic Materials | 1m | flat/mild | -5.61% (down/notable) | ❌ | ❌ |
+| 2026-08-28 | sector:Communication Services | 1m | up/mild | -1.92% (down/mild) | ❌ | ✅ |
 | 2026-10-05 | general | 1w | flat/mild | +0.41% (up/flat) | ❌ | ❌ |
 | 2026-09-28 | general | 2w | flat/mild | +1.58% (up/mild) | ❌ | ✅ |
 | 2026-09-11 | general | 1m | down/mild | +1.94% (up/mild) | ❌ | ✅ |
@@ -81,9 +84,6 @@ Updated: 2026-10-14. Calls are graded at T+h trading days using the scoreboard's
 | 2026-10-01 | general | 1w | down/mild | +1.29% (up/mild) | ❌ | ✅ |
 | 2026-09-24 | general | 2w | flat/mild | +0.79% (up/flat) | ❌ | ❌ |
 | 2026-09-09 | general | 1m | flat/mild | +1.69% (up/mild) | ❌ | ✅ |
-| 2026-08-27 | sector:Consumer Cyclical | 1m | up/mild | -3.60% (down/mild) | ❌ | ✅ |
-| 2026-08-27 | sector:Basic Materials | 1m | flat/mild | -7.44% (down/notable) | ❌ | ❌ |
-| 2026-08-26 | sector:Consumer Defensive | 1m | flat/mild | -3.30% (down/mild) | ❌ | ✅ |
 
-*252 calls still maturing (T+h close not recorded yet).*
+*249 calls still maturing (T+h close not recorded yet).*
 
