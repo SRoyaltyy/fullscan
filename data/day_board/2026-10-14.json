@@ -1,9 +1,12 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T10:46:32.386517-04:00",
+  "generated_at": "2026-10-14T11:01:50.568105-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
-  "blockers": [],
+  "blockers": [
+    "MISSING General predict MD `01_daily/general/2026-10-14_predict.md` \u2014 missing",
+    "MISSING News judge MD `01_daily/news/2026-10-14_judge.md` \u2014 missing"
+  ],
   "counts": {
     "ok": 6,
     "partial": 1,
@@ -54,7 +57,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 278257,
+          "size": 276650,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -65,10 +68,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18366,
+          "size": 17913,
           "said": "MAP HEAT \u2014 2026-10-14",
           "bullets": [
-            "Export `finviz_2026-10-14.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T10:21:53.708826-04:00",
+            "Export `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T04:27:00.538231-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -94,7 +97,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97156,
+          "size": 97004,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -109,10 +112,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11984,
+          "size": 11816,
           "said": "Finviz Daily Digest \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T07:24:32.484688-04:00 \u00b7 export=data/exports/finviz_2026-10-14.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-14T04:23:44.540749-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -177,7 +180,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 8,
+      "n_req_ok": 6,
       "n_req": 9,
       "n_opt_ok": 6,
       "n_opt": 14,
@@ -189,7 +192,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
+          "size": 97004,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -226,7 +229,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 278257,
+          "size": 276650,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -237,8 +240,8 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 467185,
-          "said": "467185B on disk",
+          "size": 455123,
+          "said": "455123B on disk",
           "bullets": []
         },
         {
@@ -257,15 +260,11 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-14_judge.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 9844,
-          "said": "1. **September CPI prints tonight \u2014 consensus core +0.3%, expected to accelerate on energy** \u2014 the dominant unresolved macro binary; all positioning today is ga",
-          "bullets": [
-            "2. **Fed speak cluster: Collins \"another hike likely this year,\" Hammack backs hike path, Williams \"one more hike, none in 2027\"** \u2014 internally coherent hawkish-but-terminal messaging that has lifted October hike odds and 10Y yields. | rates",
-            "3. **Chip selloff / AI fatigue: worst stretch in 16 months; APH \u22126.5% on Fabrinet weakness + yields; ASML Q3 revenue miss (despite raised forecast) drags MU/SNDK/INTC** \u2014 crowded AI basket unwinding, direct NDX beta driver. | sentiment/sector_fundamental",
-            "4. **Gold drops >$100 on hawkish Fed; AEM falls; gold stuck under $4,200 into CPI** \u2014 real-rate-driven de-rating of the crowded metals basket (rescued from noise-adjacent status). | substitution/rates"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "research_json",
@@ -301,8 +300,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 37523,
-          "said": "61 ticker actions \u00b7 3 events \u00b7 560 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
+          "size": 41553,
+          "said": "61 ticker actions \u00b7 4 events \u00b7 567 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
             "BUY EOG",
@@ -315,16 +314,11 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-14_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 6783,
-          "said": "DOWN -1.645",
-          "bullets": [
-            "bad: September CPI binary unsigned",
-            "bad: AI/semis unwind APH -6.5%/ASML drag",
-            "bad: 1m 10Y +29bp spine",
-            "good: China exports +36% beat"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "board",
@@ -349,13 +343,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8407,
-          "said": "all_ok=False \u00b7 sectors 3/11 \u00b7 10 fail",
+          "size": 8415,
+          "said": "all_ok=False \u00b7 sectors 3/11 \u00b7 12 fail",
           "bullets": [
+            "general_predict:missing",
             "events:zero_events",
-            "finviz_market_digest:missing",
-            "sector_predict:missing",
-            "sector_predict:missing"
+            "news_judge:missing",
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -365,7 +359,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False missing=['events']",
-          "size": 7156,
+          "size": 7166,
           "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events",
           "bullets": []
         },
@@ -376,7 +370,7 @@
           "role": "required",
           "status": "OK",
           "reason": "ok=False Grok returned an empty review",
-          "size": 309,
+          "size": 308,
           "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
             "Grok returned an empty review"
@@ -510,18 +504,14 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -1.645 \u00b7 sectors 0 up / 1 down / 2 flat",
+      "said": "sectors 0 up / 1 down / 2 flat",
       "bullets": [
-        "bad: September CPI binary unsigned",
-        "bad: AI/semis unwind APH -6.5%/ASML drag",
-        "bad: 1m 10Y +29bp spine",
-        "good: China exports +36% beat",
-        "good: Europe partial +0.61%",
         "XLB FLAT +7.7",
         "XLC FLAT -0.7",
         "XLY DOWN -0.2",
         "XLP missing",
-        "XLE missing"
+        "XLE missing",
+        "XLF missing"
       ]
     },
     {
@@ -542,7 +532,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
+          "size": 97004,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -556,8 +546,8 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9676 vix=falling yields=flat",
-          "size": 9676,
+          "reason": "sectors=11 bytes=9680 vix=falling yields=flat",
+          "size": 9680,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -630,8 +620,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 37523,
-          "said": "61 ticker actions \u00b7 3 events \u00b7 560 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
+          "size": 41553,
+          "said": "61 ticker actions \u00b7 4 events \u00b7 567 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
             "BUY EOG",
@@ -646,7 +636,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
+          "size": 97004,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -671,7 +661,7 @@
           ]
         }
       ],
-      "said": "61 ticker actions \u00b7 3 events \u00b7 560 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
+      "said": "61 ticker actions \u00b7 4 events \u00b7 567 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
       "bullets": [
         "BUY COP",
         "BUY EOG",
@@ -688,7 +678,7 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "OK",
-      "inputs_ready": true,
+      "inputs_ready": false,
       "n_req_ok": 4,
       "n_req": 4,
       "n_opt_ok": 3,
@@ -699,16 +689,11 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-14_predict.md",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 6783,
-          "said": "DOWN -1.645",
-          "bullets": [
-            "bad: September CPI binary unsigned",
-            "bad: AI/semis unwind APH -6.5%/ASML drag",
-            "bad: 1m 10Y +29bp spine",
-            "good: China exports +36% beat"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_board",
@@ -733,8 +718,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 37523,
-          "said": "61 ticker actions \u00b7 3 events \u00b7 560 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
+          "size": 41553,
+          "said": "61 ticker actions \u00b7 4 events \u00b7 567 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
             "BUY EOG",
@@ -749,7 +734,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
+          "size": 97004,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -762,15 +747,11 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-14_judge.md",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 9844,
-          "said": "1. **September CPI prints tonight \u2014 consensus core +0.3%, expected to accelerate on energy** \u2014 the dominant unresolved macro binary; all positioning today is ga",
-          "bullets": [
-            "2. **Fed speak cluster: Collins \"another hike likely this year,\" Hammack backs hike path, Williams \"one more hike, none in 2027\"** \u2014 internally coherent hawkish-but-terminal messaging that has lifted October hike odds and 10Y yields. | rates",
-            "3. **Chip selloff / AI fatigue: worst stretch in 16 months; APH \u22126.5% on Fabrinet weakness + yields; ASML Q3 revenue miss (despite raised forecast) drags MU/SNDK/INTC** \u2014 crowded AI basket unwinding, direct NDX beta driver. | sentiment/sector_fundamental",
-            "4. **Gold drops >$100 on hawkish Fed; AEM falls; gold stuck under $4,200 into CPI** \u2014 real-rate-driven de-rating of the crowded metals basket (rescued from noise-adjacent status). | substitution/rates"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_weather",
@@ -778,8 +759,8 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9676 vix=falling yields=flat",
-          "size": 9676,
+          "reason": "sectors=11 bytes=9680 vix=falling yields=flat",
+          "size": 9680,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -830,9 +811,9 @@
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=184",
-          "size": 1464486,
-          "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
+          "reason": "horizons=5 names=215",
+          "size": 1471985,
+          "said": "1d BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -842,10 +823,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 69370,
+          "size": 82593,
           "said": "Stock book \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T10:46:30.020393-04:00_",
+            "_Generated 2026-10-14T06:01:58.362592-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -908,9 +889,9 @@
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=184",
-          "size": 1464486,
-          "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
+          "reason": "horizons=5 names=215",
+          "size": 1471985,
+          "said": "1d BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -960,90 +941,76 @@
     "buy_1d": [
       {
         "ticker": "NTAP",
-        "score": 0.18239590894266144
+        "score": 0.2843313440021954
       },
       {
         "ticker": "BAND",
-        "score": 0.5054596446690593
+        "score": 0.6611787597649168
       },
       {
-        "ticker": "CNK",
-        "score": 0.6462022471693012
+        "ticker": "MQ",
+        "score": 0.5459164323222052
       },
       {
-        "ticker": "WLY",
-        "score": 0.5881875461728525
+        "ticker": "IT",
+        "score": 0.37635451217416427
       },
       {
-        "ticker": "FIS",
-        "score": 0.22514446794935988
+        "ticker": "CON",
+        "score": 0.7287913963202588
       },
       {
-        "ticker": "PRCH",
-        "score": 0.5404266780690136
+        "ticker": "AVPT",
+        "score": 0.7424881989450152
       },
       {
-        "ticker": "TMUS",
-        "score": 0.4429443674043055
-      },
-      {
-        "ticker": "UPWK",
-        "score": 0.4411786722204654
+        "ticker": "SGRY",
+        "score": 0.6603903952758077
       }
     ],
     "sell_1d": [
       {
-        "ticker": "EOSE",
-        "score": -0.3332996476105277
-      },
-      {
-        "ticker": "TE",
-        "score": -0.29778163594966284
-      },
-      {
         "ticker": "NEOV",
-        "score": -0.357067975796452
-      },
-      {
-        "ticker": "PLUG",
-        "score": -0.21292045250555586
+        "score": -0.3979840672726525
       },
       {
         "ticker": "OKLO",
-        "score": -0.2387618044895793
+        "score": -0.2666901180362591
       },
       {
         "ticker": "FCEL",
-        "score": -0.22590146154242213
+        "score": -0.2284152132262775
       },
       {
         "ticker": "NNDM",
-        "score": -0.16961541699668248
+        "score": -0.1638372495071339
       },
       {
-        "ticker": "QUBT",
-        "score": -0.17822254200443488
+        "ticker": "POWL",
+        "score": -0.040266310950080694
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.3581743968212493
+      },
+      {
+        "ticker": "NRGV",
+        "score": -0.2840014218486169
+      },
+      {
+        "ticker": "INDI",
+        "score": -0.2159049929401755
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 cash $10,917.83",
+      "said": "0 priced buys \u00b7 cash $9,606.56 \u00b7 morning S missing",
       "bullets": [
         "0 priced buys",
-        "cash $10,917.83"
+        "cash $9,606.56",
+        "morning S missing"
       ]
     },
-    "general": {
-      "said": "DOWN  -1.645",
-      "bullets": [
-        "bad: September CPI binary unsigned",
-        "bad: AI/semis unwind APH -6.5%/ASML drag",
-        "bad: 1m 10Y +29bp spine",
-        "good: China exports +36% beat",
-        "good: Europe partial +0.61%"
-      ],
-      "score": "-1.645",
-      "direction": "down"
-    },
+    "general": {},
     "sectors": {
       "said": "0 up / 1 down / 2 flat",
       "bullets": [
@@ -1069,31 +1036,6 @@
     }
   },
   "lands": [
-    {
-      "key": "paper",
-      "title": "Paper dashboard",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:33:57.810417-04:00",
-      "files": [
-        {
-          "path": "03_scoreboard/PAPER_TRADING.md",
-          "ok": true,
-          "reason": "",
-          "size": 1837,
-          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 | "
-        },
-        {
-          "path": "dashboard/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 10510817,
-          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b4d78;\ncolor:var(--fg);text-decoration:none}\n."
-        }
-      ],
-      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
-    },
     {
       "key": "flatten",
       "title": "Flatten live card",
@@ -3415,6 +3357,24 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-14T10:43:22.256728-04:00\nraw=567 unique_events=4 tickers=61"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T11:01:49.099904-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-14",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "3/3 sector predicts ok: basic_materials, communication_services, consumer_cyclical"
+        }
+      ],
+      "preview": "3/3 sector predicts ok: basic_materials, communication_services, consumer_cyclical"
     }
   ],
   "href": {
@@ -4534,6 +4494,38 @@
       "commit_msg": "auto: strategy tickets 2026-10-14",
       "workflow": "Publish strategy tickets",
       "run_id": "38580688801",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_preopen_qc.json",
+      "at": "2026-10-14T11:01:52-04:00",
+      "commit_msg": "auto: land sector_predict [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_preopen_status.json",
+      "at": "2026-10-14T11:01:52-04:00",
+      "commit_msg": "auto: land sector_predict [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-14/_board.json",
+      "at": "2026-10-14T11:01:52-04:00",
+      "commit_msg": "auto: land sector_predict [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T11:01:52-04:00",
+      "commit_msg": "auto: land sector_predict [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
     }
   ]
