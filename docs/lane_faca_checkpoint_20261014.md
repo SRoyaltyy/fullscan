@@ -25,4 +25,13 @@ CI workflow self-check at 657aba passed all 23 workflow tests but failed a secon
 
 Failed-subset retries now receive per-row schema/evidence validation errors, never semantic labels or benchmark answers. Successful rows remain excluded from retries. Both extraction and independent sector stages use the same bounded recovery pattern. All 41 semantic tests pass, including failed-row isolation and error-feedback assertions. V7 live run 38510032205 retains its original df5be72bf4f2804afc8248b6cd5238d1f4f5ccf5 checkout. V8 is saved with provider validation skipped to avoid overlapping duplicate calls; performance still unmeasured.
 
-Acceptance grading also explicitly rejects diagnostic/reconstructed references and freezes catalog SHA256 alongside runtime/configuration. All 43 semantic tests passed after these safeguards. No acceptance success has been claimed.
+## Completed V7 development replay
+
+Run 38510032205, runtime df5be72bf4f2804afc8248b6cd5238d1f4f5ccf5; artifact 11869124751, ZIP SHA256 dbf5a8c8f61bfb9c41442dc527cbaddab72e44be8a34c5f9a70802a07dcdea49.
+Availability 100%; action agreement 94%; precision 92.3077% (12 TP, 1 FP); recall 92.3077% (12/13); Lane 85%; exact sectors 91%. Does not pass overall. Diagnostic only, acceptance streak 0/10.
+The recalled criminal/enforcement instruments improved; municipal supply agreement was omitted as action_kind other; a policy speech was falsely treated as official engagement. Lane errors include commentary incorrectly null, non-economic stories classified as business events, hypothetical listings, commercial promotions and corporate/public statement boundaries.
+
+## V9 candidate
+
+Preserves V8 bounded validation feedback. Clarifies public supply agreements, speech/keyword-fragment exclusions, private procedural processes, and Lane commentary/personal/forecast boundaries. 43 semantic tests passed. New independent replay started on the same diagnostic input; not acceptance.
+Unrun reserve commit d36730231711746676559187895f5bc9a1a654b9 contains 1000 source-traced input titles in ten batches, compared to 300 recoverable previous runtime inputs. References have not been judged/frozen; no exhaustive historical exclusion claim.

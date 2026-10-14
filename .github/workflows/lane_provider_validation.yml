@@ -1,4 +1,4 @@
-name: Lane focused sector development comparison
+name: Lane batched semantic development comparison
 on:
   push:
     branches: [codex/lane-provider-repair-20261014]
@@ -37,7 +37,7 @@ jobs:
           python-version: '3.12'
       - name: Validate contracts and regression repairs
         run: PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_semantic*.py' && PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_provider_repairs.py'
-      - name: Program-only GLM fresh 100-title comparison
+      - name: Program-only GLM development 100-title replay
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
@@ -106,7 +106,7 @@ jobs:
       - name: Diagnose timer, OAuth and both Grok model paths
         id: diagnose
         run: PYTHONPATH=.:scripts python3 scripts/diagnose_openclaw_lane.py --output provider_results/grok_diagnostic.json
-      - name: Program-only Grok fresh 100-title comparison when healthy and idle
+      - name: Program-only Grok development 100-title replay when healthy and idle
         if: steps.diagnose.outputs.ready == 'true'
         run: |
           PYTHONPATH=. python3 scripts/run_semantic_headlines.py \

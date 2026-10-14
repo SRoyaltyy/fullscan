@@ -14,7 +14,7 @@ from .schema import EVENT_CLASSES
 from .semantic_ontology import ONTOLOGY_VERSION, ontology_text
 from .semantic_catalog import CompanyCatalog
 
-VERSION='semantic-headlines-v8'
+VERSION='semantic-headlines-v9'
 SECTORS=('Basic Materials','Communication Services','Consumer Cyclical','Consumer Defensive','Energy','Financial','Healthcare','Industrials','Real Estate','Technology','Utilities')
 STAGES=('reported','proposal','future','negated','retrospective','uncertain')
 ACTION_KINDS=('decision','procedural_step','official_engagement','personnel_change','official_clarification','monetary_operation','administrative_operation','communication','statistical_release','historical_summary','private_business','other')
@@ -38,6 +38,7 @@ Bind each actor to its own verb/object. actor_type describes the institution; ac
 Action stage applies to the action verb, not its object. A government's completed rejection, withdrawal or refusal is a reported decision even when the rejected measure never happened. Negated means the extracted act itself did not occur. Interim decisions, completed procedural steps and issued compliance deadlines are reported, without implying finality, enactment or implementation. Unknown details (court name, jurisdiction, finality, effective date) do not make a clearly reported act uncertain. Future/proposed acts stay future/proposal. A fresh continuation or extension of operational buying is reported; a historical holdings/spending total alone is historical_summary. administrative_operation means actual operations performed by public institutions, including deployment, procurement or training; plans for these are not completed operations. Mere publication, advocacy, comments and statistics are not decisions. Do not invent an actor type where the instrument or actor is ambiguous.
 An official_clarification resolves an operative rule's scope, eligibility or conflicting instructions; generic promises that an existing programme will continue are communication, not new decisions. official_engagement requires a reported discrete meeting/visit/hearing actually held or attended; an ongoing negotiation process alone does not establish a newly completed engagement. An explicitly operative country-wide tax/tariff/subsidy instrument can establish government actor_type even when the office name is omitted; generic or employer-funded assistance cannot. An official merely reporting a programme's measured historical impact is statistical_release/communication, not official_clarification. Preserve an unknown-actor action for an actual passive approval/decision if its issuing party could be private or public; do not suppress the act to hide unresolved authority.
 Reported criminal arrest/detention is a public law-enforcement procedural_step unless the headline explicitly establishes a private/citizen arrest or another non-police meaning. A reported statutory enforcement fine for securities/accounting/audit misconduct can establish regulator type without naming the agency. Keep actor and actor_evidence null when unnamed and quote only the reported instrument in action_evidence. A private employer, sports association or contractual fine does not establish public authority; a threatened or potential fine remains proposal/future. These are instrument-based type judgments, not guesses at institution names.
+Completed service/supply/procurement agreements made by a named municipality or public authority are administrative_operation/decision, not other merely because the activity is commercial. Delivering a policy speech alone is communication, not official_engagement; extract any separately reported operative decision independently. Conference-programme selection, stock-exchange listing notices, student governance and sports discipline do not inherently establish government authority; ordinary private institutional processes stay private unless explicit public authority is supported. Do not turn every private procedural verb into an unknown public action. Search-keyword fragments and generic topic headings without a reported predicate do not establish a newly reported approval/decision.
 The program derives booleans from actor_type/action_kind/stage. Return only schema fields. Public actions remain extractable even if non-economic or without a Lane class. Sector tags remain relevant even for commentary and ticker-only issuer mentions. Before assigning sectors, identify each subject company's business activity independently of the event and publisher; a breach/financing story does not change a retailer's own sector. In a joint corporate action cover all directly participating distinct businesses, not just the first company. Pure commodity prices/inventory prints, broad bond/FX/index data and government statistics alone get no stock-sector tag; an explicit affected operating business/industry or operative sector-targeted policy can establish a sector. CATALOG_CANDIDATES supply public business facts, not event labels: use only a matching entity, distinguish namesakes/subsidiaries, ignore publishers/ticker footers, and preserve unknown identity. No speculative downstream exposures. Each quote is an exact contiguous substring of that row's title. Use short quotes and one short primary_why sentence; unknowns contain only material unresolved facts.
 ''' + ontology_text()
 
@@ -176,4 +177,75 @@ class SemanticHeadlineClient:
                 issues=validation_errors(result['analysis'],expected[n])
                 if issues:errors[n]=issues
                 else:good[n]=result['analysis']
-            for n in 
+            for n in set(expected)-seen:errors[n]=['Missing batch id']
+            return good,errors
+        def validate(blob):
+            good,errors=partition(blob)
+            return [] if good else [f'row {n}: '+e for n,issues in errors.items() for e in issues]
+        base=instructions()+'\nBATCH TASK: Analyze each BATCH_DATA row independently. Never transfer facts, evidence or catalog matches between rows. Return exactly one result for each supplied integer n. Keep explanations concise. Use BATCH_OUTPUT_SCHEMA only.\nBATCH_OUTPUT_SCHEMA='+json.dumps(batch_schema,separators=(',',':'))+'\nBATCH_DATA='+json.dumps(data,ensure_ascii=False,separators=(',',':'))
+        if drafts is not None:
+            base+='\nBATCH_DRAFT_TO_AUDIT='+json.dumps({n:drafts[n] for n in expected},ensure_ascii=False,separators=(',',':'))+'\nAUDIT: Independently check each row. Correct errors supported by the title and definitions. Do not downgrade an explicitly reported action merely because its identity, effective date or finality is unknown. Preserve justified uncertainty; return the complete schema.'
+        if retry_errors:
+            note='\nSUBSET_VALIDATION_ERRORS='+json.dumps({n:retry_errors[n] for n in expected},separators=(',',':'))+'\nThese are shape/evidence errors, not semantic labels. Return every supplied row; copy evidence literally from its own title.\n'
+            base=note+base
+        self.phase=phase
+        record=self._request(base,validate,batch_schema,min(16000,max(2000,1200*len(data))))
+        good,errors=partition(record['model_output']);outputs={}
+        for n in expected:
+            out={k:v for k,v in record.items() if k!='model_output'}
+            out.update(model_output=good.get(n),status='analyzed' if n in good else 'unavailable',batch_depth=depth)
+            if n not in good:out['row_validation_errors']=errors.get(n,['No usable response'])
+            outputs[n]=out
+            if n in good and (not self.sector_review and (not self.review or phase=='audit_batch')):
+                row=next(r for r in data if r['n']==n)
+                self.batch_progress[n]=dict(out,analysis_output=derive_analysis(good[n]),ontology_version=ONTOLOGY_VERSION,catalog=self.catalog.metadata,catalog_candidates=row['catalog_candidates'],review_status='completed' if self.review else 'not_run')
+        failed=[r for r in data if r['n'] not in good]
+        can_retry=bool(failed and depth<2 and (good or len(failed)>1) and (good or any(a['status'] not in ('credential_unavailable','no_allowlisted_classification_model') for a in record['attempts'])))
+        if can_retry:
+            groups=[failed] if good else [failed[:len(failed)//2],failed[len(failed)//2:]]
+            for group in groups:
+                recovered=self._batch_records(group,phase,drafts,depth+1,errors)
+                for n,out in recovered.items():
+                    out['recovery_history']=[{k:v for k,v in outputs[n].items() if k not in ('model_output','rejected_outputs')}]+out.get('recovery_history',[])
+                    outputs[n]=out
+        return outputs
+    def _extract(self,title,base):
+        result=self._request(base,lambda blob:validation_errors(blob,title),schema(),2000)
+        if result['status']=='analyzed':result['analysis_output']=derive_analysis(result['model_output'])
+        return result
+    def _request(self,base,validator,response_schema,max_tokens):
+        attempts=[];all_rejected=[];submitted_chars=0;started=time.monotonic()
+        for provider in self.provider_order:
+            if provider not in route.CLASSIFY_LANES:raise ValueError('Provider outside existing classification allowlist: '+provider)
+            if not self.ctx['keys'].get(provider):
+                attempts.append({'provider':provider,'status':'credential_unavailable'});continue
+            models=route.primary_models_for(provider,'news_classify')
+            if self.model_allowlist is not None:models=[m for m in models if m in self.model_allowlist]
+            if not models:
+                attempts.append({'provider':provider,'status':'no_allowlisted_classification_model'});continue
+            rejected=[]
+            def accept(blob):
+                errors=validator(blob)
+                if errors:
+                    bad={'raw_response':blob,'validation_errors':errors}
+                    rejected.append(bad);all_rejected.append(bad)
+                return not errors
+            current=base
+            for repair in range(2):
+                try:
+                    submitted_chars+=len(current)
+                    transport_log=io.StringIO()
+                    with redirect_stdout(transport_log):
+                        blob,model=route.ask_lane(provider,current,self.ctx,max_tokens=max_tokens,system=SYSTEM,tmpl='news_classify',accept=accept,response_schema=response_schema,model_allowlist=self.model_allowlist)
+                    codes=sorted(set(re.findall(r'\b(?:401|402|403|404|408|429|500|502|503|504)\b',transport_log.getvalue())))
+                    if codes:attempts.append({'provider':provider,'status':'transport_diagnostics','http_codes':codes})
+                except Exception as exc:
+                    # Never include exception messages/URLs/headers in artifacts.
+                    blob,model=None,None;attempts.append({'provider':provider,'status':'transport_exception','exception_type':type(exc).__name__})
+                if blob is not None and not route.is_classify_banned(str(model or '')) and accept(blob):
+                    return {'version':VERSION,'status':'analyzed','model_output':blob,'provider':provider,'model':str(model),'attempts':attempts,'rejected_outputs':all_rejected,'submitted_prompt_chars':submitted_chars,'requested_max_output_tokens':max_tokens,'elapsed_seconds':round(time.monotonic()-started,2)}
+                attempts.append({'provider':provider,'model':str(model) if model else None,'status':'schema_rejected' if rejected else 'no_usable_response','repair':repair})
+                if repair or not rejected:break
+                current=base+'\nSCHEMA_REPAIR: '+json.dumps(rejected[-1],ensure_ascii=False)+'\nCorrect the shape, literal evidence or internal consistency; return the entire JSON. Do not infer missing facts.'
+        return {'version':VERSION,'status':'unavailable','model_output':None,'provider':None,'model':None,'attempts':attempts,'rejected_outputs':all_rejected,'submitted_prompt_chars':submitted_chars,'requested_max_output_tokens':max_tokens,'elapsed_seconds':round(time.monotonic()-started,2)}
+
