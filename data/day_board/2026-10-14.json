@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:21:08.901151-04:00",
+  "generated_at": "2026-10-14T06:24:29.552995-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -94,7 +94,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97004,
+          "size": 97148,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11816,
+          "size": 11960,
           "said": "Finviz Daily Digest \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T04:23:44.540749-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-14T06:24:28.216215-04:00 \u00b7 export=data/exports/finviz_2026-10-14.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -189,7 +189,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97004,
+          "size": 97148,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -370,7 +370,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7144,
+          "size": 7129,
           "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=False",
           "bullets": []
         },
@@ -381,7 +381,7 @@
           "role": "required",
           "status": "OK",
           "reason": "ok=False Grok returned an empty review",
-          "size": 308,
+          "size": 309,
           "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
             "Grok returned an empty review"
@@ -547,7 +547,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97004,
+          "size": 97148,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -561,17 +561,17 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9531 vix=falling yields=flat",
-          "size": 9531,
-          "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
+          "reason": "sectors=11 bytes=9272 vix=falling yields=flat",
+          "size": 9272,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
           ]
         }
       ],
-      "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
       ]
     },
     {
@@ -651,7 +651,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97004,
+          "size": 97148,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -754,7 +754,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97004,
+          "size": 97148,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -783,11 +783,11 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9531 vix=falling yields=flat",
-          "size": 9531,
-          "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
+          "reason": "sectors=11 bytes=9272 vix=falling yields=flat",
+          "size": 9272,
+          "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
           ]
         },
         {
@@ -810,8 +810,8 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2218633,
-          "said": "207 rows",
+          "size": 2218280,
+          "said": "208 rows",
           "bullets": [
             "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, WAY"
           ]
@@ -885,13 +885,13 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-14)",
+          "reason": "live-book poller + 2026-10-14_suggestions.json (2026-10-14)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-14)",
+          "said": "live-book poller + 2026-10-14_suggestions.json (2026-10-14)",
           "bullets": []
         }
       ],
-      "said": "207 rows",
+      "said": "208 rows",
       "bullets": [
         "HALO, ONC, LLY, HRMY, ETON"
       ]
@@ -924,9 +924,9 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-14)",
+          "reason": "live-book poller + 2026-10-14_suggestions.json (2026-10-14)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-14)",
+          "said": "live-book poller + 2026-10-14_suggestions.json (2026-10-14)",
           "bullets": []
         },
         {
@@ -1064,9 +1064,9 @@
     },
     "news": {},
     "weather": {
-      "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
+      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
       ]
     }
   },
@@ -2928,6 +2928,52 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:24:28.497046-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-14_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97148,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-14_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11984,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-14\n_Generated 2026-10-14T06:24:28.216215-04:00 \u00b7 export=data/exports/finviz_2026-10-14.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        },
+        {
+          "path": "data/exports/finviz_2026-10-14.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11508010,
+          "preview": "11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "01_daily/news/2026-10-14_finviz_digest_preopen.json",
+          "ok": true,
+          "reason": "",
+          "size": 97004,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-14\n_Generated 2026-10-14T06:24:28.216215-04:00 \u00b7 export=data/exports/finviz_2026-10-14.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
     }
   ],
   "href": {
