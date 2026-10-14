@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T07:19:52.595242-04:00",
+  "generated_at": "2026-10-14T07:24:33.256249-04:00",
   "run_id": "38534415018",
   "runner": "ecs-openclaw",
   "all_ok": false,
@@ -183,7 +183,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-14_finviz_digest.json",
-        "size": 97004
+        "size": 97156
       },
       {
         "kind": "finviz_market_digest",
