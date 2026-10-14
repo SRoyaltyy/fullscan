@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T11:19:29.523785-04:00",
+  "generated_at": "2026-10-14T11:19:46.948632-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -808,7 +808,7 @@
           "size": 2261198,
           "said": "208 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ARQT, AVAH, WAY, CORT"
+            "HALO, ONC, LLY, HRMY, ARQT, AVAH, CORT, WAY"
           ]
         },
         {
@@ -1069,24 +1069,6 @@
     }
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T07:40:19.795920-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-14_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2218633,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -3493,6 +3475,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T11:19:46.013267-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-14_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2261198,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ARQT"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ARQT"
     }
   ],
   "href": {
@@ -4882,6 +4882,22 @@
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T11:19:29-04:00",
       "commit_msg": "auto: land weather [2026-10-14]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38587756171",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T11:19:47-04:00",
+      "commit_msg": "auto: land join [2026-10-14]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38587756171",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/join/2026-10-14_ranked.csv",
+      "at": "2026-10-14T11:19:47-04:00",
+      "commit_msg": "auto: land join [2026-10-14]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "38587756171",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
