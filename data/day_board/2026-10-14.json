@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T10:32:56.150925-04:00",
+  "generated_at": "2026-10-14T10:33:06.430644-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1066,31 +1066,6 @@
     }
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:31:58.195416-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-14_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 467185,
-          "preview": "raw=561 usable=133 single=41 \u00b7 US Treasury Yields Fall After New York Fed\u2019s Williams Says One More 2026 Rate Hi | Gold struggles to reclaim $4,200 as Fed interest rate hike risks persist, US CPI | Fed officials want to hold off a rate hike this month. Will this week\u2019s inflatio | US 10-Year Yield Steadies Ahead of CPI Report - TradingView | Dollar retreats from 18-month high as oil prices fall, inflation data in focus -"
-        },
-        {
-          "path": "01_daily/news/2026-10-14_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 8921,
-          "preview": "# News Parse v2 \u2014 2026-10-14T06:31:47.490571-04:00\nWindow\u224848h | news_mode=on | raw=561 | usable=133 | single_name=41 | noise_dropped=386\nusable polarity={'+': 4, '-': 26, 'mixed': 2, 'neutral': 101}"
-        }
-      ],
-      "preview": "raw=561 usable=133 single=41 \u00b7 US Treasury Yields Fall After New York Fed\u2019s Williams Says One More 2026 Rate Hi | Gold struggles to reclaim $4,200 as Fed interest rate hike risks persist, US CPI | Fed officials want to hold off a rate hike this month. Will this week\u2019s inflatio | US 10-Year Yield Steadies Ahead of CPI Report - TradingView | Dollar retreats from 18-month high as oil prices fall, inflation data in focus - \u00b7 # News Parse v2 \u2014 2026-10-14T06:31:47.490571-04:00\nWindow\u224848h | news_mode=on | raw=561 | usable=133 | single_name=41 | noise_dropped=386\nusable polarity={'+': 4, '-': 26, 'mixed': 2, 'neutral': 101}"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -3539,6 +3514,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T04:27:00.538231-04:00"
+    },
+    {
+      "key": "map_heat_baseline",
+      "title": "Map heat night baseline",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T10:33:04.939678-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-14_research_baseline.json",
+          "ok": true,
+          "reason": "",
+          "size": 187523,
+          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-14_research_baseline.md",
+          "ok": true,
+          "reason": "",
+          "size": 25855,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-14\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-14\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
     }
   ],
   "href": {
@@ -4440,6 +4440,14 @@
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T10:32:57-04:00",
       "commit_msg": "auto: land map_heat [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T10:33:07-04:00",
+      "commit_msg": "auto: land map_heat_baseline [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38578583308",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
