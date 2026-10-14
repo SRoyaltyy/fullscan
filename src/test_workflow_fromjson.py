@@ -1434,8 +1434,6 @@ def test_postclose_all_clears_leftover_sparse_checkout() -> None:
     assert sparse_on_ecs == [
         "install_paper_backstop.yml",
         "install_paper_open.yml",
-        "lane_provider_validation.yml",
-        "lane_semantic_holdout.yml",
     ]
 
 
