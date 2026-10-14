@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-14",
-    "generated_at": "2026-10-14T07:31:28.743554-04:00",
+    "generated_at": "2026-10-14T07:40:32.133033-04:00",
     "general_bias": -0.3961,
     "sector_bias": {
       "Basic Materials": 0.0,
@@ -286,7 +286,7 @@
     "pile_used": false,
     "green_min": 8,
     "ranker": "decision_lattice",
-    "as_of": true,
+    "as_of": false,
     "general_direction": "down",
     "market_decision": {
       "date": "2026-10-14",
