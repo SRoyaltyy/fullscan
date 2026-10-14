@@ -1,11 +1,11 @@
 # Finviz Daily Digest — 2026-10-14
 
-_Generated 2026-10-14T04:23:44.540749-04:00 · export=data/exports/finviz_2026-10-13.csv · ticker digests=5887 · high-signal=2046_
+_Generated 2026-10-14T06:24:28.216215-04:00 · export=data/exports/finviz_2026-10-14.csv · ticker digests=5887 · high-signal=2046_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: Catching a Turn in the Market Can Pay Off Big. Here's One Way to Do It.
-- **Nasdaq-100 (QQQ)**: Why Money Market Funds Are So Popular
+- **S&P 500 (SPY)**: Dow Futures Rise, Nasdaq Subdued Premarket Ahead Of Inflation Data: ASML, MU, SKHY, TSLA, BAC, LQDA, GME, IREN Stocks In Focus
+- **Nasdaq-100 (QQQ)**: Dow Futures Rise, Nasdaq Subdued Premarket Ahead Of Inflation Data: ASML, MU, SKHY, TSLA, BAC, LQDA, GME, IREN Stocks In Focus
 - **Dow Jones (DIA)**: Michael Burry Flags Bull Trap Risk, Holds Back On New Shorts  Why Trumps Fannie-Freddie Call Matters To His Portfolio
 - **Russell 2000 (IWM)**: Catching a Turn in the Market Can Pay Off Big. Here's One Way to Do It.
 
