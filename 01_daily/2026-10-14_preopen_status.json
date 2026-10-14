@@ -1,10 +1,10 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:27:40.641998-04:00",
+  "generated_at": "2026-10-14T06:29:52.257290-04:00",
   "run_id": "38534415018",
   "runner": "ecs-openclaw",
   "all_ok": false,
-  "qc_all_ok": true,
+  "qc_all_ok": false,
   "book_ok": false,
   "grok_ok": false,
   "grok_fails": [
@@ -13,7 +13,9 @@
       "reason": "empty_review_reply"
     }
   ],
-  "missing_required": [],
+  "missing_required": [
+    "events"
+  ],
   "attempts": [
     {
       "key": "weather",
@@ -150,10 +152,10 @@
       },
       {
         "kind": "events",
-        "ok": true,
-        "reason": "",
+        "ok": false,
+        "reason": "zero_events",
         "path": "01_daily/events/2026-10-14_events.json",
-        "size": 21812
+        "size": 212
       },
       {
         "kind": "news_judge",
@@ -174,14 +176,14 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-14_actions.json",
-        "size": 37448
+        "size": 37506
       },
       {
         "kind": "finviz_digest",
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-14_finviz_digest.json",
-        "size": 97148
+        "size": 97004
       },
       {
         "kind": "finviz_market_digest",
@@ -202,7 +204,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-10-14_map_heat.json",
-        "size": 276703
+        "size": 276650
       },
       {
         "kind": "map_heat_baseline",
