@@ -1,78 +1,16 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:05:46.990926-04:00",
+  "generated_at": "2026-10-14T06:06:18.139929-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
-    "partial": 3,
-    "fail": 2,
+    "ok": 5,
+    "partial": 2,
+    "fail": 1,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "NTAP",
-      "score": 0.2843313440021954
-    },
-    {
-      "ticker": "BAND",
-      "score": 0.6611787597649168
-    },
-    {
-      "ticker": "MQ",
-      "score": 0.5459164323222052
-    },
-    {
-      "ticker": "IT",
-      "score": 0.37635451217416427
-    },
-    {
-      "ticker": "CON",
-      "score": 0.7287913963202588
-    },
-    {
-      "ticker": "AVPT",
-      "score": 0.7424881989450152
-    },
-    {
-      "ticker": "SGRY",
-      "score": 0.6603903952758077
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "NEOV",
-      "score": -0.3979840672726525
-    },
-    {
-      "ticker": "OKLO",
-      "score": -0.2666901180362591
-    },
-    {
-      "ticker": "FCEL",
-      "score": -0.2284152132262775
-    },
-    {
-      "ticker": "NNDM",
-      "score": -0.1638372495071339
-    },
-    {
-      "ticker": "POWL",
-      "score": -0.040266310950080694
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.3581743968212493
-    },
-    {
-      "ticker": "NRGV",
-      "score": -0.2840014218486169
-    },
-    {
-      "ticker": "INDI",
-      "score": -0.2159049929401755
-    }
-  ],
+  "buy_1d": [],
+  "sell_1d": [],
   "flatten": {},
   "general": {},
   "sectors": {
@@ -92,24 +30,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:01:49.476602-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-14_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -403,6 +323,31 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:06:17.321572-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-14_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7554616,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, ELV, AUPH, AMD"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-14_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8345615,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, TLYS, SN, ETN"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, ELV, AUPH, AMD \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, TLYS, SN, ETN"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
