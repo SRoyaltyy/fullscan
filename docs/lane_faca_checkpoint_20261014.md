@@ -24,3 +24,5 @@ CI workflow self-check at 657aba passed all 23 workflow tests but failed a secon
 ## V8 reliability change prepared during V7 measurement
 
 Failed-subset retries now receive per-row schema/evidence validation errors, never semantic labels or benchmark answers. Successful rows remain excluded from retries. Both extraction and independent sector stages use the same bounded recovery pattern. All 41 semantic tests pass, including failed-row isolation and error-feedback assertions. V7 live run 38510032205 retains its original df5be72bf4f2804afc8248b6cd5238d1f4f5ccf5 checkout. V8 is saved with provider validation skipped to avoid overlapping duplicate calls; performance still unmeasured.
+
+Acceptance grading also explicitly rejects diagnostic/reconstructed references and freezes catalog SHA256 alongside runtime/configuration. All 43 semantic tests passed after these safeguards. No acceptance success has been claimed.

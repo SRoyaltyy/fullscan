@@ -1,5 +1,5 @@
 import unittest
-from evaluate_semantic_acceptance import compare
+from evaluate_semantic_acceptance import compare,acceptance_candidate
 
 class AcceptanceTests(unittest.TestCase):
     def fixture(self):
@@ -30,4 +30,19 @@ class AcceptanceTests(unittest.TestCase):
         raw['outputs'].append(raw['outputs'][0])
         with self.assertRaises(ValueError):compare(inputs,ref,raw)
 
+    def test_diagnostic_reference_never_certifies_acceptance(self):
+        raw={'runtime_sha256':{'source':'hash'},'configuration':{'batch_size':10},'catalog':{'available':True,'sha256':'catalog-a'}}
+        for ref in ({'acceptance_eligible':False},{'original_reference_bytes_available':False}):
+            with self.assertRaises(ValueError):acceptance_candidate(ref,raw)
+
+    def test_catalog_change_changes_frozen_candidate(self):
+        raw={'runtime_sha256':{'source':'hash'},'configuration':{'batch_size':10},'catalog':{'available':True,'sha256':'catalog-a'}}
+        first=acceptance_candidate({},raw)
+        raw['catalog']['sha256']='catalog-b'
+        self.assertNotEqual(first,acceptance_candidate({},raw))
+        raw['catalog']={'available':False}
+        with self.assertRaises(ValueError):acceptance_candidate({},raw)
+
 if __name__=='__main__':unittest.main()
+
+
