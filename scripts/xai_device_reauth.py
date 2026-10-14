@@ -5,14 +5,16 @@ The GH job must NOT occupy the one ECS runner for 15 minutes. This script:
 
   --check    models status; if dead and Grok is idle, daemonize a waiter
   --force    start a waiter even if status looks ok
-  --daemon   (internal) PTY-login, write 01_daily/_xai_reauth.json, git push,
-             wait ≤15 min for the human to approve, write ok/fail, push again
+  --daemon   (internal) PTY-login, write 01_daily/_xai_reauth.json, Contents-API
+             publish status=waiting + user_code, THEN wait ≤12 min for approval.
+             Git push is not the publish path (ECS returns invalid credentials).
 
 Phone app polls the public JSON and one-taps accounts.x.ai/oauth2/device?user_code=.
 """
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import os
 import re
@@ -94,7 +96,137 @@ def dump(payload: dict) -> None:
           flush=True)
 
 
+def _github_token() -> str:
+    return (os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or "").strip()
+
+
+def _contents_api_url() -> str:
+    repo = (os.environ.get("GITHUB_REPOSITORY") or "SRoyaltyy/fullscan").strip()
+    return f"https://api.github.com/repos/{repo}/contents/01_daily/_xai_reauth.json"
+
+
+def _api_headers(token: str) -> dict:
+    return {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "fullscan-xai-reauth",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+
+
+def _purge_jsdelivr() -> None:
+    try:
+        urllib.request.urlopen(
+            "https://purge.jsdelivr.net/gh/SRoyaltyy/fullscan@main/01_daily/_xai_reauth.json",
+            timeout=8,
+        ).read()
+        print("[reauth] purged jsdelivr", flush=True)
+    except (OSError, urllib.error.URLError) as e:
+        print(f"[reauth] jsdelivr purge skipped: {e}", flush=True)
+
+
+def _contents_sha(url: str, headers: dict) -> str | None:
+    req = urllib.request.Request(url, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        sha = data.get("sha")
+        return str(sha) if sha else None
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            e.close()
+            return None
+        err = e.read().decode("utf-8", "replace")[:240]
+        print(f"[reauth] contents GET HTTP {e.code}: {err}", flush=True)
+        return None
+    except (OSError, urllib.error.URLError, json.JSONDecodeError) as e:
+        print(f"[reauth] contents GET failed: {e}", flush=True)
+        return None
+
+
+def _contents_put(url: str, headers: dict, payload: dict) -> int:
+    req = urllib.request.Request(
+        url,
+        data=json.dumps(payload).encode("utf-8"),
+        method="PUT",
+        headers={**headers, "Content-Type": "application/json"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            resp.read()
+            print(f"[reauth] contents PUT {resp.status}", flush=True)
+            return int(resp.status)
+    except urllib.error.HTTPError as e:
+        err = e.read().decode("utf-8", "replace")[:240]
+        print(f"[reauth] contents PUT HTTP {e.code}: {err}", flush=True)
+        return int(e.code)
+    except (OSError, urllib.error.URLError) as e:
+        print(f"[reauth] contents PUT failed: {e}", flush=True)
+        return 0
+
+
+def publish_contents(message: str) -> bool:
+    """PUT 01_daily/_xai_reauth.json via the GitHub Contents API.
+
+    ECS git fetch/push returns invalid credentials, so this is the path that
+    lands the file on main. Call it as soon as status=waiting and user_code
+    are on disk, before wait_pid. The phone polls GitHub, not the ECS disk.
+    """
+    token = _github_token()
+    if not token:
+        print("[reauth] contents publish skipped: no GITHUB_TOKEN", flush=True)
+        return False
+    if not OUT.is_file():
+        print(f"[reauth] contents publish skipped: missing {OUT}", flush=True)
+        return False
+    try:
+        body = OUT.read_bytes()
+        preview = json.loads(body.decode("utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        print(f"[reauth] contents publish skipped: {e}", flush=True)
+        return False
+    url = _contents_api_url()
+    headers = _api_headers(token)
+    sha = _contents_sha(url, headers)
+    payload = {
+        "message": message,
+        "content": base64.b64encode(body).decode("ascii"),
+        "branch": "main",
+    }
+    if sha:
+        payload["sha"] = sha
+    status = _contents_put(url, headers, payload)
+    if status == 409:
+        sha = _contents_sha(url, headers)
+        if sha:
+            payload["sha"] = sha
+        else:
+            payload.pop("sha", None)
+        status = _contents_put(url, headers, payload)
+    if status not in (200, 201):
+        print(
+            f"[reauth] contents publish failed status={preview.get('status')} "
+            f"code={preview.get('user_code')} http={status}",
+            flush=True,
+        )
+        return False
+    print(
+        f"[reauth] contents publish ok status={preview.get('status')} "
+        f"code={preview.get('user_code')}",
+        flush=True,
+    )
+    _purge_jsdelivr()
+    return True
+
+
 def push(msg: str) -> None:
+    """Land a terminal reauth JSON. Contents API first; git push is optional.
+
+    The waiting user_code path must call publish_contents itself and must
+    not call this before wait_pid. safe_git_push from ECS blocks on
+    invalid credentials for up to 90s and still does not update main.
+    """
+    publish_contents(msg)
     if not PUSH.is_file():
         return
     env = {**os.environ, "HOME": os.environ.get("HOME") or "/home/gha"}
@@ -105,14 +237,7 @@ def push(msg: str) -> None:
     print((r.stdout or "")[-400:], flush=True)
     if r.returncode != 0:
         print((r.stderr or "")[-400:], flush=True)
-    try:
-        urllib.request.urlopen(
-            "https://purge.jsdelivr.net/gh/SRoyaltyy/fullscan@main/01_daily/_xai_reauth.json",
-            timeout=8,
-        ).read()
-        print("[reauth] purged jsdelivr", flush=True)
-    except (OSError, urllib.error.URLError) as e:
-        print(f"[reauth] jsdelivr purge skipped: {e}", flush=True)
+    _purge_jsdelivr()
 
 
 def grok_busy() -> bool:
@@ -339,7 +464,11 @@ def daemon(force: bool) -> int:
         "source": "xai_device_reauth",
         "pid": pid,
     })
-    push(f"chore: xAI device code {code}")
+    # Phone/Claw reads GitHub, not this box. Publish status=waiting +
+    # user_code + verification_uri before the ~12 minute wait_pid.
+    # Do not git-push here: ECS returns invalid credentials and that
+    # call used to run out the clock before any Contents API publish.
+    publish_contents(f"chore: xAI device code {code}")
     rc = wait_pid(pid, WAIT_S)
     try:
         os.close(fd)
