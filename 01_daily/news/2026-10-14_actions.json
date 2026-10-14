@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-14T04:50:30.349074-04:00",
+  "generated_at": "2026-10-14T06:40:31.405957-04:00",
   "hours": 48,
-  "raw_headlines": 556,
+  "raw_headlines": 560,
   "news_source": "live_rss+local_files:empty",
   "news_mode": "on",
   "unique_events": 3,
@@ -10,7 +10,7 @@
   "reasoned_events": [
     {
       "event": "hormuz_energy_risk",
-      "headline_count": 13,
+      "headline_count": 16,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -26,7 +26,7 @@
         "confidence": 0.85,
         "drop_reason": "",
         "notes": [
-          "headline_count=13 supports non-noise severity"
+          "headline_count=16 supports non-noise severity"
         ]
       },
       "mechanism": "Hormuz/Red Sea transit risk → oil risk premium → upstream producers benefit if price holds; airlines and other fuel-intensive transport are cost-shocked. Geography is global oil, but US E&P still price to WTI/Brent. Not a pure-gas trade.",
@@ -38,10 +38,16 @@
       ],
       "evidence": [
         {
-          "title": "Silver Price Today: Hormuz Tensions Lift Safe-Haven Bid - Admirals",
+          "title": "Crude oil holds above $105 as Strait of Hormuz disruptions tighten supply; coal near 3-year highs - CNBC TV18",
           "source": "rss_google_commodities",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOSzRCWGJsSGV0SUJPdFpBX2EtVV9oRE9LZi1Ld0dDVG5iY0FWZHpaaEtkQWlrcHV3bU1fRldNbG5LdXhmcDI3enVTOFQ2SzRVV1l4Qmxqc0ctUjVzTEJiZm9IZlBtRzdidm5JM2RyTVNIc0ppWWZiQllNWXlxMHdleW9TVWdfVFBDY3FZYXZ5NFg?oc=5",
-          "published_at": "Mon, 12 Oct 2026 16:33:49 GMT"
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNRm1mRTRzYXFaWGRpalRudEdXY1N2TXJHOVN6LVBPT2tGRS02SWZ5TWtkOWU1ZHlPWTBKaHgzRkQxcW14LTcwRzhkMm9ZMmxpQ3RSbVBHQjRTc2tJYkgwWkpBWk51OHY0X2tsbmM5UUFKd3Q1YVN1TXRPYnBrUWRFZEFqZ0dteF9iYjIzZFRiSUpuM3ptZmFuQlNTZDBqbl9XYUZHaXJKeFkwUkpOWlY5aS1ScnhTdlhiNkZkMnJQYnAtVlh5SkJvUG8wNA?oc=5",
+          "published_at": "Wed, 14 Oct 2026 07:18:28 GMT"
+        },
+        {
+          "title": "Iranian heavy oil price at over $105 in September: OPEC data - IranOilGas",
+          "source": "rss_google_commodities",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQcDJndGJUOV95VHRyTHIwU05BSHZOY1p2U0hLOHNMU0g0R0hxcTVOX2lTSDIwY3pXd19mcktEVDFQQW93RFFMN180eFhoS0lweVJNdllGYVVWbVlFSGRtUXdpYWN1TjdjSENYVHNYZUY0NXR2Z2JXTFNxVzVRVlh4TnNscWRKNnh2TDZQVXc1djJvMWJ5UGM0N21VdWplMFBHQkVHTklpUzMtZ3gzNUY1SXVXdjJkVVZ2SHhlU0U0YzhyUQ?oc=5",
+          "published_at": "Wed, 14 Oct 2026 05:30:36 GMT"
         },
         {
           "title": "IMF-World Bank Meetings: Trade tensions, debt and geopolitical risks threaten global economic momentum - CGTN",
@@ -62,28 +68,22 @@
           "published_at": "Tue, 13 Oct 2026 13:55:11 GMT"
         },
         {
-          "title": "Dollar slips with oil prices, geopolitical risks seen easing before midterms - Yahoo Finance",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOenhrUTVDLTdLRHNDNERzY0RWQXNJUENjME15RzhXa3FmUEZ3X2ljUjcxUmp1bURLMlpZajNFZnBFbTlpeWNlUFg4bkR5SjA3WFhsWmhvSC11SGZOV2QzSm45aVZOcF9VYlRQTW5pSUxROXJaRC1NVldVaUJITDJfN196dE5RMEpHWF9DR3BNV0thNUdDNjRpNy1QOA?oc=5",
-          "published_at": "Tue, 13 Oct 2026 11:36:59 GMT"
+          "title": "Dollar Steadies Near 18-Month Peak as Geopolitical Risks Mount - وكالة الأنباء العمانية (العمانية)",
+          "source": "rss_google_geopolitics",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBBVEh4ak9SZjNEUVk3cXFDNHNHX05xb0stX1NBNGFEaWtVRHd0OUFoekdPV1lxT05fX2JrYlNqQ0owZ2MzWk01WFhlVG00bUc0c2dQTGFiU25icHFYdHM2Y01B?oc=5",
+          "published_at": "Tue, 13 Oct 2026 13:39:10 GMT"
         },
         {
-          "title": "Bursa opens lower as geopolitical risks, oil prices weigh on sentiment - Free Malaysia Today",
+          "title": "Dollar slips with oil prices, geopolitical risks seen easing before midterms - The Lufkin Daily News",
           "source": "rss_google_geopolitics",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOalU5X2FHaHFGMzdBVmd6RUluWi0xNGpGRjV6U3J1d0U2Zk44aEYtT2R3WElZSmRuZHR5ZnZmcXliWWgyWTFDd2dZRkNTSlMxTjgyQVpEdVJKdFJHWVJwMGhwMXJpQXRzVnZoV0s4WGtGcVZueWhfRUFjRWRUMzdYVWhSeFdhb3FNR2VrOUR0U1UtRE4tcC1KdThpdjl5QndJc3haU3VDMkwxMGZBSWJYaFRDTzNkQWpGUkJpZ0pNZDF2VkI1RkVVd3JGeUE?oc=5",
-          "published_at": "Tue, 13 Oct 2026 09:40:00 GMT"
+          "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQdG5lZ2haLVU3TU5OdllfSjFsOXFEcHRIQUFyZkxEMVpVaVR2ajFVcGpvZEhuOE9GUVJkYkhWMHlKWWRiT3JKUVdXM2h3LVhLTkhGaEFpTHQyZXdRckplOUw5S2d2MERONE5rdDlINmEtUTJocFRkZ08tSUVJZm5zc1o5Nl9qSEFueVlyUW9IbmR2b3JSM3V6cGRCYmNmenotSkJ2V1dBYlNxdVctdTduUlJWZ041dVRfUTVlVGZONERLTTZSQ3E1cjB3UEx6T1JjS3ZLUzFwQlAwUnpCWmNFUHlMd0xvNXFJNmNRRmJoNUZiNGRBM2V3S0FhT1RRZnJzRkVRVkpB?oc=5",
+          "published_at": "Tue, 13 Oct 2026 12:00:51 GMT"
         },
         {
-          "title": "Japan's Nikkei slides as AI stocks tumble, geopolitical risks weigh - Business Recorder",
+          "title": "Japan's Nikkei slides as AI stocks tumble, geopolitical risks weigh - アラブニュース",
           "source": "rss_google_geopolitics",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOdDQ5TTF0Vm1JX0RDeU5DRGZXOU9EalFvNmNGdG8wb2hjQU5zUW0wYXotc1Y4VHBxaGRqNkV2YlRhRXFhUjRtQTFaVFhvQV9BQXJjSXN6SkpFN3YzR0JyNmNPUE5VU0lKZTQwQ2k3TU5DVTI5S0hBM1kzLUFmd05jeldjaUtKa3lHU093RTUtdm9vdGlQUHdFSGFERWhPMHdHTUhKWVVvX3PSAVZBVV95cUxOZ05rUlN4MmhrVkdJNnVLWTNLVDE5N01SR2RaSHBVTjFGV052X1ZmTkh2dGVSalNncG1MdWY0Z2NVNkZ0cTBUNmQteFR2Ukl6YjN6ZWhhZw?oc=5",
-          "published_at": "Tue, 13 Oct 2026 06:31:56 GMT"
-        },
-        {
-          "title": "US Dollar holds near 18-month high amid rising geopolitical risks | What does it mean for Sensex, Nifty 50? - TradingView",
-          "source": "rss_google_geopolitics",
-          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNRFdTS3Z4VzRxbUVJUzkxbmJGOHB1cmxta1V2bkhrT0ZiSTZidmltWmlMWVI4MjZRZHMxYzNCYjF1V2pNN2EzVUJNaXlkckR6S3pOTno1TW5maXZ6TXFGUnQ4eHE5TGIwSGQxQVNwclU2MV9QcFlXZUk3YlB0WGNDYmpkR2F5VllOOXY1RHl4cnpCa3FJeEo5X3RTQ0dJREJHcm9sREZ2VEdsMDRiUTNySDYyU0dndHRyWW9GZ1lOcnZ6Zm51amNQYjg0d3JHeE5od2lLTmJveFRzVU1fQk1Ha1BpWmZOblhLSnR3YWpTVVZvZw?oc=5",
-          "published_at": "Tue, 13 Oct 2026 05:55:00 GMT"
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNbEtURnRzY0stdVZVLTlxdG9MX25Ja25ZOUdqWVFQemxpZXNOV1BtMWFkYjhWV21uNTcwRXhsYVFyX2VTbGh2V0JkakNXRDE4NnZiUXVvajJqQXFXREdvdml3RHdyTU1oMzZ2ODVfQlZGN0dFNExoemY0dlJlUEZYX1AtYVZ4di1yRG8zbzI5LWJhR0c5MmZTS0tPMDV1cUZTTWhyUEVrRkFZeWxHdlE?oc=5",
+          "published_at": "Tue, 13 Oct 2026 09:41:47 GMT"
         }
       ]
     },
@@ -130,7 +130,7 @@
     },
     {
       "event": "fed_rate_path",
-      "headline_count": 40,
+      "headline_count": 39,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -146,7 +146,7 @@
         "confidence": 0.9,
         "drop_reason": "",
         "notes": [
-          "headline_count=40 supports non-noise severity",
+          "headline_count=39 supports non-noise severity",
           "rates polarity=hawkish"
         ]
       },
@@ -159,10 +159,28 @@
       ],
       "evidence": [
         {
-          "title": "Gold steady as Fed official’s remarks temper rate-hike bets - The Edge Singapore",
+          "title": "Fed's Bowman adopts wait-and-see stance after latest rate hike - FXStreet",
           "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOYTM3RGMzeXBSRXRqMG92NDE1THZiR05YS1pXOUs1WHNNMGZkSGJ4UWhuUmRoV2lJREhYdXhDdzJDNnljWXRrQTlCNzF3ZGdfWUNWRVJTYnBtLUppNFJrWDZjSUVGS0F2RHVLbXE4UzA5UEhNazJxUDF6V05iSWItSkdmNDFZUW1EblhlWmk1MkFYOHZ0UVN3a1RYdVl6bXM?oc=5",
-          "published_at": "Wed, 14 Oct 2026 05:47:15 GMT"
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPME1VMjFXXzRFWEhkdVNNSkRjTEVQOUtzWDdwZVZNZFNreVZHQkNkbEZXNmpkZ1ZscjVBb3RNMnpMb04wMnhxcUo4N0ZLcV8tN1Y4VmNBWmdSNFFkOFpOWUFzMHhNRVM4Z2k1NXQ1VVA3QjlGQWhqUlhLeEItQXg3LU5ucTlONmdmeWVvZFg1QjRwSXI2TVpnMWNzZ2tGVWtTWDNJNTdDbldkOUloN2RnbXBqbXpQUQ?oc=5",
+          "published_at": "Wed, 14 Oct 2026 10:15:31 GMT"
+        },
+        {
+          "title": "Gold Steady as Fed Official’s Remarks Temper Rate-Hike Bets - Bloomberg.com",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQazViUHl2SmRiSUdDb0dNelo2Y2JjdkNLOG40Q0FpMnFBZ1JPNUNBc3pMeGlWbE5CQlUwcEVJWE93WmlJRkZTbzllQ1pfNV9HYXVHLUV2YVdkWW1TMWVJTElsNklvSzVYdTZPXzhIV0JHdHBCQzhhcklUSHhQaTFXUUNjNVlZTVZQNWd0UHM5LTlwRmpobUdiR1RiWDhTYUNTUGloY256S1l2blk0M0JZ?oc=5",
+          "published_at": "Wed, 14 Oct 2026 09:16:57 GMT"
+        },
+        {
+          "title": "More regional Fed presidents are leaning toward another interest rate hike this year. - Vietnam.vn",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZmVQeC1hTVp6bjRFNTdiaUdUb0VnRi15Nk5DcEU5bHQ1RW5IWkZwa1VtMzd3VWd5Mk5veWU3b0pWenNYU1dxdHo0X0toN1VSRXNWYnNrdEtrOWJOXzlBNlhZZ1NYVDlHeXdYM1l0dnZtMmpNQU5lN1VSdndxTGt2Uzc2ZzhJSXBvN2lXbUh3TGVLNy0tSExNZE9OeTFfeUhFSW45UlBjYU0wTnhV?oc=5",
+          "published_at": "Wed, 14 Oct 2026 06:52:38 GMT"
+        },
+        {
+          "title": "New York Fed’s Williams sees disinflation, backs one more rate hike while monitoring AI-driven prices - VT Markets",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQMzBWdHRGa1d1cHpNXzhjWUU1RXJ3N0RCYUF2djR5M2JySUlwVUxPZ2lNV3BrU2IxZWZhMkpTc1R2Q0ZrSUUxcjVXQmxUeVEwZkx2MHFuNFlXRFdQUk54U2xIU1FDV2w2UTYzeUJJcFFvcDgzT0FYRVpfYXpPdTFYbDNySTdNelNxbmMxZXc1amtjbmREV3ZzcTE0SU5UTXdqQUZVY3gta0dqMEpJckVMUHZmeG51OUg1U1cxN0plWTRvZ2pDTEZ6cnN6MFhiTUhORXRxUkprT3pMSE4yclE?oc=5",
+          "published_at": "Wed, 14 Oct 2026 04:44:32 GMT"
         },
         {
           "title": "Bank of America: Fed October Interest Rate Hike – Biggest Bullish Catalyst for U.S. Stock Market - 36Kr",
@@ -171,22 +189,10 @@
           "published_at": "Wed, 14 Oct 2026 04:02:16 GMT"
         },
         {
-          "title": "Gold Steady as Fed Official’s Remarks Temper Rate-Hike Bets - Bloomberg.com",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQazViUHl2SmRiSUdDb0dNelo2Y2JjdkNLOG40Q0FpMnFBZ1JPNUNBc3pMeGlWbE5CQlUwcEVJWE93WmlJRkZTbzllQ1pfNV9HYXVHLUV2YVdkWW1TMWVJTElsNklvSzVYdTZPXzhIV0JHdHBCQzhhcklUSHhQaTFXUUNjNVlZTVZQNWd0UHM5LTlwRmpobUdiR1RiWDhTYUNTUGloY256S1l2blk0M0JZ?oc=5",
-          "published_at": "Wed, 14 Oct 2026 03:42:00 GMT"
-        },
-        {
           "title": "US 10-Year Yield Steadies Ahead of CPI Report - TradingView",
           "source": "rss_google_macro",
           "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNeTYwSVNQQXR2RzdWVkRzdEhjLS1qY0pfYjFMd1hTVW04OGw2YTdLUW9CbTh1RnVNRVR6RXgzbnZMTGVYc25Qd3k3Z1E0YllBYjR3X25UeDlDeV9mSmFUOXk3VTZGVDQ4NU9CQWpHSVh5S1ZiZ1hjdlFuY2xaWEpyTmJoQXlOOTNYLUlCbVZSeEFiMDhyLUR6cF9Qamk?oc=5",
           "published_at": "Wed, 14 Oct 2026 02:49:28 GMT"
-        },
-        {
-          "title": "U.S. September CPI Due Tonight — Core Inflation at 0.3% Could Reignite October Rate Hike Bets - BigGo Finance",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE81dHZNR2t3N1VpWWFLamhISVl3QmtVd2pBTWNCRHYtZ3dyeTJIanJ5VHVmNDI3V2JTTWhDZWdIbFp5c2tWM3hSdE9wMjVlZTdYZzZXUVVtM0liRjRlak9WQndmU1JPT21qbXNKY2dBVzF6OXNnTWc?oc=5",
-          "published_at": "Wed, 14 Oct 2026 00:55:00 GMT"
         },
         {
           "title": "Fed officials: Raising interest rates again this year is appropriate. - Vietnam.vn",
@@ -199,12 +205,6 @@
           "source": "rss_google_macro",
           "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZld1TDEtdExkQmJiUE5vMUtPWmNMRDQ0ZmcxUVhrRG1ndzhReGQ2NDdqanNyeUdQN3UxaHdqaVE5NTc2WEpWVWRiekQzeXgtaHlUamdRMXhvc3JtZEhQNm1Qd2pZN0ZDZGVmM3g5NDJsVVRJS05tWDdXVHZpZkVGb0YwUDV0NWxF?oc=5",
           "published_at": "Wed, 14 Oct 2026 00:08:00 GMT"
-        },
-        {
-          "title": "Three Federal Reserve officials hint that the fight against inflation is not over; Williams expects no rate hikes in 2027 - Moomoo",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOdF9kejdFNG5xM213XzVsQjhNUFdEaEdNTm5zTVhYd0tnR0xocTVLTUs5ODRWWmp3N3JKcnhvLUREOHBMNVNCOEZuV0N2N0NxbEY5UFdNTGVJMWw2Xzhzbm1neHdnYTlWTnR3ZXFtdVdyRWM2azIxaEJJZ193Nnh0Z05BVGxyMzNBYUlaRjgySHNpaGVGY2tka2JmY0c1aWN4ajZ0bEhHcjZUUFhFUEpVUE9fQQ?oc=5",
-          "published_at": "Tue, 13 Oct 2026 23:42:29 GMT"
         }
       ]
     }
