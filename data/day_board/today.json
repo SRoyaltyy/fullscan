@@ -1,18 +1,29 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:10:45.041558-04:00",
+  "generated_at": "2026-10-14T06:13:14.102703-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 5,
+    "partial": 2,
     "fail": 1,
     "n": 8
   },
   "buy_1d": [],
   "sell_1d": [],
   "flatten": {},
-  "general": {},
+  "general": {
+    "said": "DOWN  -1.645",
+    "bullets": [
+      "bad: September CPI binary unsigned",
+      "bad: AI/semis unwind APH -6.5%/ASML drag",
+      "bad: 1m 10Y +29bp spine",
+      "good: China exports +36% beat",
+      "good: Europe partial +0.61%"
+    ],
+    "score": "-1.645",
+    "direction": "down"
+  },
   "sectors": {
     "said": "0 up / 0 down / 0 flat",
     "bullets": [
@@ -30,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:05:26.552905-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-14_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 276650,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-14_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18266,
-          "preview": "# MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T04:27:00.538231-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T04:27:00.538231-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -250,6 +236,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-10-14 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:13:13.266888-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-10-14_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 6783,
+          "preview": "# Premarket Prediction \u2014 2026-10-14\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -1.645 (uncertainty multiplier \u00d71.0) | confidence 0.466\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -6.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - China exports +36% beat\n> - Europe partial +0.61%\n> - oil offered CL -1.6%\n> - DXY soft\n> - UNH beat-and-raise\n>\n> **Bad news driving this:**\n> - September CPI binary unsigned\n> - AI/semis unwind APH -6.5%/ASML drag\n> - 1m 10Y +29bp spine\n> - Boeing MAX 10 cert halted\n> - Hormuz war prolongation\n>\n> **market uncertainty: **elevated** | VIX 15.19 | policy-uncertainty index 155.29 (1d -68.81)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udd34 Overnight news & catalysts: -1.0 \u00d7 "
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-10-14\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -1.645 (uncertainty multiplier \u00d71.0) | confidence 0.466\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -6.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - China exports +36% beat\n> - Europe partial +0.61%\n> - oil offered CL -1.6%\n> - DXY soft\n> - UNH beat-and-raise\n>\n> **Bad news driving this:**\n> - September CPI binary unsigned\n> - AI/semis unwind APH -6.5%/ASML drag\n> - 1m 10Y +29bp spine\n> - Boeing MAX 10 cert halted\n> - Hormuz war prolongation\n>\n> **market uncertainty: **elevated** | VIX 15.19 | policy-uncertainty index 155.29 (1d -68.81)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udd34 Overnight news & catalysts: -1.0 \u00d7 "
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

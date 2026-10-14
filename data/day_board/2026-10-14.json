@@ -1,14 +1,12 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:10:45.041558-04:00",
+  "generated_at": "2026-10-14T06:13:14.102703-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-14_predict.md` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 5,
+    "partial": 2,
     "fail": 1,
     "n": 8
   },
@@ -177,9 +175,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 8,
+      "n_req_ok": 9,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -322,11 +320,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-14_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6783,
+          "said": "DOWN -1.645",
+          "bullets": [
+            "bad: September CPI binary unsigned",
+            "bad: AI/semis unwind APH -6.5%/ASML drag",
+            "bad: 1m 10Y +29bp spine",
+            "good: China exports +36% beat"
+          ]
         },
         {
           "key": "board",
@@ -350,12 +353,12 @@
           "path": "01_daily/2026-10-14_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 8429,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
+          "reason": "all_ok=True",
+          "size": 8424,
+          "said": "all_ok=True \u00b7 sectors 0/11 \u00b7 12 fail",
           "bullets": [
-            "general_predict:missing",
             "finviz_market_digest:missing",
+            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
           ]
@@ -366,9 +369,9 @@
           "path": "01_daily/2026-10-14_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False missing=['general_predict']",
-          "size": 7175,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing general_predict",
+          "reason": "all_ok=False",
+          "size": 7144,
+          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=False",
           "bullets": []
         },
         {
@@ -506,14 +509,18 @@
           "bullets": []
         }
       ],
-      "said": "sectors 0 up / 0 down / 0 flat",
+      "said": "general DOWN  -1.645 \u00b7 sectors 0 up / 0 down / 0 flat",
       "bullets": [
+        "bad: September CPI binary unsigned",
+        "bad: AI/semis unwind APH -6.5%/ASML drag",
+        "bad: 1m 10Y +29bp spine",
+        "good: China exports +36% beat",
+        "good: Europe partial +0.61%",
         "XLB missing",
         "XLC missing",
         "XLY missing",
         "XLP missing",
-        "XLE missing",
-        "XLF missing"
+        "XLE missing"
       ]
     },
     {
@@ -680,7 +687,7 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
@@ -691,11 +698,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-10-14_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6783,
+          "said": "DOWN -1.645",
+          "bullets": [
+            "bad: September CPI binary unsigned",
+            "bad: AI/semis unwind APH -6.5%/ASML drag",
+            "bad: 1m 10Y +29bp spine",
+            "good: China exports +36% beat"
+          ]
         },
         {
           "key": "in_board",
@@ -944,7 +956,18 @@
     "buy_1d": [],
     "sell_1d": [],
     "flatten": {},
-    "general": {},
+    "general": {
+      "said": "DOWN  -1.645",
+      "bullets": [
+        "bad: September CPI binary unsigned",
+        "bad: AI/semis unwind APH -6.5%/ASML drag",
+        "bad: 1m 10Y +29bp spine",
+        "good: China exports +36% beat",
+        "good: Europe partial +0.61%"
+      ],
+      "score": "-1.645",
+      "direction": "down"
+    },
     "sectors": {
       "said": "0 up / 0 down / 0 flat",
       "bullets": [
@@ -2681,6 +2704,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-10-14 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:13:13.266888-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-10-14_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 6783,
+          "preview": "# Premarket Prediction \u2014 2026-10-14\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -1.645 (uncertainty multiplier \u00d71.0) | confidence 0.466\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -6.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - China exports +36% beat\n> - Europe partial +0.61%\n> - oil offered CL -1.6%\n> - DXY soft\n> - UNH beat-and-raise\n>\n> **Bad news driving this:**\n> - September CPI binary unsigned\n> - AI/semis unwind APH -6.5%/ASML drag\n> - 1m 10Y +29bp spine\n> - Boeing MAX 10 cert halted\n> - Hormuz war prolongation\n>\n> **market uncertainty: **elevated** | VIX 15.19 | policy-uncertainty index 155.29 (1d -68.81)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udd34 Overnight news & catalysts: -1.0 \u00d7 "
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-10-14\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -1.645 (uncertainty multiplier \u00d71.0) | confidence 0.466\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -6.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - China exports +36% beat\n> - Europe partial +0.61%\n> - oil offered CL -1.6%\n> - DXY soft\n> - UNH beat-and-raise\n>\n> **Bad news driving this:**\n> - September CPI binary unsigned\n> - AI/semis unwind APH -6.5%/ASML drag\n> - 1m 10Y +29bp spine\n> - Boeing MAX 10 cert halted\n> - Hormuz war prolongation\n>\n> **market uncertainty: **elevated** | VIX 15.19 | policy-uncertainty index 155.29 (1d -68.81)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udd34 Overnight news & catalysts: -1.0 \u00d7 "
     }
   ],
   "href": {
