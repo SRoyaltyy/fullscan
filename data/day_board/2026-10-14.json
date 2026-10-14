@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T09:55:25.241924-04:00",
+  "generated_at": "2026-10-14T09:55:36.273946-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1036,24 +1036,6 @@
     }
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:13:13.266888-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-10-14_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 6783,
-          "preview": "# Premarket Prediction \u2014 2026-10-14\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -1.645 (uncertainty multiplier \u00d71.0) | confidence 0.466\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -6.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - China exports +36% beat\n> - Europe partial +0.61%\n> - oil offered CL -1.6%\n> - DXY soft\n> - UNH beat-and-raise\n>\n> **Bad news driving this:**\n> - September CPI binary unsigned\n> - AI/semis unwind APH -6.5%/ASML drag\n> - 1m 10Y +29bp spine\n> - Boeing MAX 10 cert halted\n> - Hormuz war prolongation\n>\n> **market uncertainty: **elevated** | VIX 15.19 | policy-uncertainty index 155.29 (1d -68.81)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udd34 Overnight news & catalysts: -1.0 \u00d7 "
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-10-14\n- news_mode: **on**\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -1.645 (uncertainty multiplier \u00d71.0) | confidence 0.466\n>\n> **Good news vs bad news:** good +1.5 pts vs bad -6.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - China exports +36% beat\n> - Europe partial +0.61%\n> - oil offered CL -1.6%\n> - DXY soft\n> - UNH beat-and-raise\n>\n> **Bad news driving this:**\n> - September CPI binary unsigned\n> - AI/semis unwind APH -6.5%/ASML drag\n> - 1m 10Y +29bp spine\n> - Boeing MAX 10 cert halted\n> - Hormuz war prolongation\n>\n> **market uncertainty: **elevated** | VIX 15.19 | policy-uncertainty index 155.29 (1d -68.81)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udd34 Overnight news & catalysts: -1.0 \u00d7 "
-    },
     {
       "key": "sector_one",
       "title": "Sector predict Consumer Cyclical (3/11)",
@@ -3474,6 +3456,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T09:55:34.855392-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-14_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2261198,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ARQT"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ARQT"
     }
   ],
   "href": {
@@ -3863,6 +3863,22 @@
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T09:55:26-04:00",
       "commit_msg": "auto: land weather [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T09:55:37-04:00",
+      "commit_msg": "auto: land join [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/join/2026-10-14_ranked.csv",
+      "at": "2026-10-14T09:55:37-04:00",
+      "commit_msg": "auto: land join [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38569102482",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
