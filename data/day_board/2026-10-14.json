@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T11:09:38.101695-04:00",
+  "generated_at": "2026-10-14T11:09:43.611860-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1069,24 +1069,6 @@
     }
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T07:23:19.787573-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-10-14_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2218633,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
-    },
     {
       "key": "peer_rs",
       "title": "Peer RS",
@@ -3388,6 +3370,24 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ARQT"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T11:09:42.698055-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-14_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "href": {
@@ -4657,6 +4657,14 @@
       "path": "data/join/2026-10-14_ranked.csv",
       "at": "2026-10-14T11:09:38-04:00",
       "commit_msg": "auto: land join [2026-10-14]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38586271842",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T11:09:44-04:00",
+      "commit_msg": "auto: land peer_rs [2026-10-14]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "38586271842",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
