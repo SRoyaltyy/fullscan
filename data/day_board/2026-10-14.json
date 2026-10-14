@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T11:02:02.682842-04:00",
+  "generated_at": "2026-10-14T11:02:13.317069-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1036,16 +1036,6 @@
     }
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-10-14",
-      "ok": false,
-      "pushed": false,
-      "at": "2026-10-14T06:40:09.319899-04:00",
-      "files": [],
-      "preview": "no files"
-    },
     {
       "key": "events_catcher",
       "title": "Event catcher (gap hunt, no carry)",
@@ -3347,6 +3337,31 @@
         }
       ],
       "preview": "keys: date, generated_at, summary, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T11:02:11.817217-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-14_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 26057,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-14_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 26057,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-14\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-14\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "href": {
@@ -4512,6 +4527,22 @@
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T11:02:03-04:00",
       "commit_msg": "auto: land sector_board [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/map_heat/2026-10-14_research.json",
+      "at": "2026-10-14T11:02:14-04:00",
+      "commit_msg": "auto: land map_heat_research [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T11:02:14-04:00",
+      "commit_msg": "auto: land map_heat_research [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38578583308",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
