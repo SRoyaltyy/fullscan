@@ -16,17 +16,17 @@ Rubric hit rates count a call only when q5=impulse, direction in {up, down}, tra
 
 | step | n |
 | --- | ---: |
-| Elite raw titles | 436193 |
-| unique (ticker + title, earliest News Time) | 47475 |
-| non-weather | 21302 |
-| reaction-in-title (killed by the router) | 746 |
-| impulse + up/down + listed | 11575 |
-| graded articles 0-1d | 1414 |
-| graded articles 2d | 1358 |
-| graded articles 3d | 1331 |
-| graded articles 4d | 1308 |
-| graded articles 5d | 1283 |
-| graded articles 1-4w | 6182 |
+| Elite raw titles | 445724 |
+| unique (ticker + title, earliest News Time) | 48369 |
+| non-weather | 21824 |
+| reaction-in-title (killed by the router) | 768 |
+| impulse + up/down + listed | 11424 |
+| graded articles 0-1d | 1315 |
+| graded articles 2d | 1266 |
+| graded articles 3d | 1233 |
+| graded articles 4d | 1212 |
+| graded articles 5d | 1194 |
+| graded articles 1-4w | 6172 |
 
 ## Hit rates
 
@@ -34,12 +34,12 @@ Rubric column skips long-horizon classes on 0-1d and 2-5d. Broad column keeps th
 
 | horizon | rubric hits | rubric n | rubric rate | broad hits | broad n | broad rate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 0-1d | 1260 | 2611 | 1260/2611 = 48.3% | 6073 | 12608 | 6073/12608 = 48.2% |
-| 2d | 1296 | 2509 | 1296/2509 = 51.7% | 6030 | 12289 | 6030/12289 = 49.1% |
-| 3d | 1233 | 2456 | 1233/2456 = 50.2% | 5931 | 12106 | 5931/12106 = 49.0% |
-| 4d | 1234 | 2424 | 1234/2424 = 50.9% | 5872 | 11987 | 5872/11987 = 49.0% |
-| 5d | 1199 | 2368 | 1199/2368 = 50.6% | 5703 | 11806 | 5703/11806 = 48.3% |
-| 1-4w | 4249 | 9155 | 4249/9155 = 46.4% | — | — | — |
+| 0-1d | 1159 | 2317 | 1159/2317 = 50.0% | 6025 | 12417 | 6025/12417 = 48.5% |
+| 2d | 1134 | 2248 | 1134/2248 = 50.4% | 5901 | 12078 | 5901/12078 = 48.9% |
+| 3d | 1107 | 2186 | 1107/2186 = 50.6% | 5830 | 11901 | 5830/11901 = 49.0% |
+| 4d | 1092 | 2144 | 1092/2144 = 50.9% | 5757 | 11760 | 5757/11760 = 49.0% |
+| 5d | 1061 | 2109 | 1061/2109 = 50.3% | 5592 | 11619 | 5592/11619 = 48.1% |
+| 1-4w | 4205 | 9067 | 4205/9067 = 46.4% | — | — | — |
 
 ## Convergence / clash ledger
 
@@ -47,21 +47,21 @@ One entity per session. n_bull / n_bear count impulse up/down stories after titl
 
 Direct = the article names the ticker. Indirect = substitute / stays_out / arms_dealer / peer / sector basket from the family template. Theme groups are router factor/macro keys only. They are not a second trade. The Elite Sector column is not a key.
 
-Router theme keys (not traded): **12**. Name groups: **7971**.
+Router theme keys (not traded): **12**. Name groups: **7980**.
 
 | bucket | groups |
 | --- | ---: |
-| singleton | 7290 |
-| converge | 603 (up 415, down 188) |
-| clash | 78 |
+| singleton | 7324 |
+| converge | 580 (up 390, down 190) |
+| clash | 76 |
 
 Hit rates grade the entity once per session. Converge uses that side. Clash uses the net side (net 0 is ungraded). Long-horizon classes are out of these denominators.
 
 | bucket | 0-1d | 2d | 3d | 4d | 5d |
 | --- | --- | --- | --- | --- | --- |
-| singleton | 611/1300 = 47.0% | 628/1248 = 50.3% | 614/1217 = 50.5% | 605/1196 = 50.6% | 600/1171 = 51.2% |
-| converge | 81/152 = 53.3% | 71/145 = 49.0% | 72/142 = 50.7% | 71/141 = 50.4% | 69/135 = 51.1% |
-| clash | 3/11 = 27.3% | 4/11 = 36.4% | 7/11 = 63.6% | 3/11 = 27.3% | 3/11 = 27.3% |
+| singleton | 587/1245 = 47.1% | 583/1190 = 49.0% | 584/1162 = 50.3% | 578/1139 = 50.7% | 564/1119 = 50.4% |
+| converge | 69/126 = 54.8% | 60/125 = 48.0% | 61/119 = 51.3% | 57/116 = 49.1% | 58/116 = 50.0% |
+| clash | 3/10 = 30.0% | 5/10 = 50.0% | 8/10 = 80.0% | 4/10 = 40.0% | 4/10 = 40.0% |
 
 ### Top converge names
 
@@ -72,19 +72,19 @@ Hit rates grade the entity once per session. Converge uses that side. Clash uses
 | CRCL | 2026-09-18 | 6 | 0 | 6 | +5.01% | +1.82% |
 | SCHW | 2026-09-18 | 0 | 6 | -6 | +0.54% | -5.40% |
 | SECZ | 2026-09-21 | 5 | 0 | 5 | +15.68% | +42.50% |
-| SECZ | 2026-09-24 | 5 | 0 | 5 | +12.68% | -6.34% |
 | CRCL | 2026-09-21 | 5 | 0 | 5 | -3.67% | -12.53% |
 | COIN | 2026-09-28 | 5 | 0 | 5 | -2.15% | -3.97% |
 | COIN | 2026-09-21 | 5 | 0 | 5 | -2.02% | -6.53% |
-| CRCL | 2026-09-24 | 5 | 0 | 5 | +1.74% | -9.29% |
-| COIN | 2026-09-24 | 5 | 0 | 5 | +1.24% | -3.80% |
 | SCHW | 2026-09-21 | 0 | 5 | -5 | +0.93% | -7.18% |
-| SCHW | 2026-09-24 | 0 | 5 | -5 | -0.16% | -1.28% |
+| SECZ | 2026-09-24 | 4 | 0 | 4 | +12.68% | -6.34% |
 | CRCL | 2026-09-25 | 4 | 0 | 4 | -3.26% | -11.68% |
 | COIN | 2026-09-25 | 4 | 0 | 4 | -2.03% | -8.11% |
+| CRCL | 2026-09-24 | 4 | 0 | 4 | +1.74% | -9.29% |
 | SECZ | 2026-09-25 | 4 | 0 | 4 | -1.54% | -19.86% |
 | ICE | 2026-08-20 | 4 | 0 | 4 | +1.39% | +3.07% |
+| COIN | 2026-09-24 | 4 | 0 | 4 | +1.24% | -3.80% |
 | SCHW | 2026-09-25 | 0 | 4 | -4 | -0.49% | -2.83% |
+| SCHW | 2026-09-24 | 0 | 4 | -4 | -0.16% | -1.28% |
 | SPY | 2026-08-17 | 0 | 4 | -4 | n/a | n/a |
 | TLT | 2026-08-17 | 4 | 0 | 4 | n/a | n/a |
 | GLD | 2026-08-17 | 4 | 0 | 4 | n/a | n/a |
@@ -99,12 +99,13 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 
 ### 0-1d
 
-- ≥5% and <10%: **543**
-- ≥10%: **298**
+- ≥5% and <10%: **558**
+- ≥10%: **303**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
 | ≥10% | JZ | 2026-10-09 | +60.00% | capital_return | Jianzhi Education Announces Share Repurchase Program |
+| ≥10% | SUNE | 2026-09-09 | +49.83% | capacity | Suniva Completes $835 Million Capital Raise to Build Second Major U.S. Solar Cell Manufacturing Facility and M |
 | ≥10% | DKI | 2026-10-09 | -44.84% | dilution | DarkIris Prices $6 Million Public Offering at $1.44 Per Unit With Potential for Significant Share Dilution |
 | ≥10% | OLB | 2026-10-07 | +44.19% | capital_return | The OLB Group Launches Share Buyback; Suspends ATM Program |
 | ≥10% | SPAI | 2026-08-14 | +43.49% | print_vs_priced | Safe Pro Reports Record 1,336% Revenue Growth in Q2 2026 Driven by Multiple Government Contracts for AI-Powere |
@@ -128,13 +129,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | AEYE | 2026-08-14 | +29.08% | guidance | AudioEye, Inc. Q2 2026 Earnings Call Summary |
 | ≥10% | OPRX | 2026-08-13 | +28.74% | print_vs_priced | OptimizeRx Corp (OPRX) (Q2 2026) Earnings Call Highlights: Navigating Revenue Headwinds with ... |
 | ≥10% | OPRX | 2026-08-13 | +28.74% | print_vs_priced | OptimizeRx Corporation Q2 2026 Earnings Call Summary |
-| ≥10% | MYO | 2026-08-06 | +28.43% | guidance | Myomo Inc (MYO) (Q2 2026) Earnings Call Highlights: Record Orders and Margin Expansion Drive ... |
-| … | | | | | 816 more in the JSON |
+| … | | | | | 836 more in the JSON |
 
 ### 2d
 
-- ≥5% and <10%: **1035**
-- ≥10%: **574**
+- ≥5% and <10%: **1041**
+- ≥10%: **594**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -163,12 +163,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SDGR | 2026-09-15 | +45.52% | guidance | AI Drug Discovery Market Projected to Reach $13.8 Billion by 2033 |
 | ≥10% | OABI | 2026-08-07 | +42.62% | guidance | VERAXA Biotech (VRXA) Advances VXA-222 Cancer Program While Expanding Patent Portfolio for Next-Generation Ant |
 | ≥10% | OABI | 2026-08-07 | +42.62% | guidance | VERAXA Biotech (VRXA) Advances VXA-222 Cancer Program While Expanding Patent Portfolio for Next-Generation Ant |
-| … | | | | | 1584 more in the JSON |
+| … | | | | | 1610 more in the JSON |
 
 ### 3d
 
-- ≥5% and <10%: **1166**
-- ≥10%: **678**
+- ≥5% and <10%: **1181**
+- ≥10%: **718**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -197,12 +197,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | Polymarket Hires Coinbase's Failed Social-Coin Architect |
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
 | ≥10% | SECZ | 2026-09-18 | +54.08% | market_structure | SEC Allows Tokenized Stocks After Clarity Act Falters |
-| … | | | | | 1819 more in the JSON |
+| … | | | | | 1874 more in the JSON |
 
 ### 4d
 
-- ≥5% and <10%: **1226**
-- ≥10%: **847**
+- ≥5% and <10%: **1249**
+- ≥10%: **865**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -231,12 +231,12 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Allows Tokenized Stocks After Clarity Act Falters |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
 | ≥10% | SECZ | 2026-09-18 | +77.36% | market_structure | SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate |
-| … | | | | | 2048 more in the JSON |
+| … | | | | | 2089 more in the JSON |
 
 ### 5d
 
-- ≥5% and <10%: **1277**
-- ≥10%: **909**
+- ≥5% and <10%: **1271**
+- ≥10%: **952**
 
 | threshold | ticker | date | ret | class | title |
 | --- | --- | --- | ---: | --- | --- |
@@ -265,7 +265,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Allows Tokenized Stocks After Clarity Act Falters |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Sends Strong Signal to Robinhood, Coinbase Investors |
 | ≥10% | SECZ | 2026-09-18 | +71.24% | market_structure | SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate |
-| … | | | | | 2161 more in the JSON |
+| … | | | | | 2198 more in the JSON |
 
 ## AMRX
 
@@ -285,7 +285,7 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | 4d | +4.27% agree=True |
 | 5d | +8.12% agree=True |
 | 1-4w | n/a agree=None |
-| note | window open (1-6m not elapsed; through 2026-10-12) |
+| note | window open (1-6m not elapsed; through 2026-10-13) |
 
 Friday 2026-09-18 16:01 is after the cash close. Entry is Monday 2026-09-21 open→close for 0-1d, never Friday cash. Published at/after 09:30 ET (09:30+30m included) waits for the next RTH.
 
@@ -306,17 +306,17 @@ Elite is in the book. `unused_readonly` applies only when no snapshot file is on
 
 | source | raw titles | unique |
 | --- | ---: | ---: |
-| theme_radar_elite | 436193 | 47475 |
+| theme_radar_elite | 445724 | 48369 |
 
-theme_radar_elite unique n = **47475**.
+theme_radar_elite unique n = **48369**.
 
 ## Hopper watermark (lane::model::source)
 
-- `deterministic::news_impact_v2::theme_radar_elite`: 47475
+- `deterministic::news_impact_v2::theme_radar_elite`: 48369
 
 ## FOMC / macro collapse
 
-- stories=13 reprints_collapsed=5
+- stories=15 reprints_collapsed=13
 - headline basket 0-1d: n/a
 
 Reprints of the same factor/session/sign are one story. They are not in the hit rates above.
