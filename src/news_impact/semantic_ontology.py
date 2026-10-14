@@ -5,11 +5,11 @@ of the existing enum; they do not add classes or silently rewrite predictions.
 """
 from .schema import EVENT_CLASSES
 
-ONTOLOGY_VERSION = 'headline-ontology-v5'
+ONTOLOGY_VERSION = 'headline-ontology-v6'
 DEFINITIONS = {
     'capacity': 'Physical production/service capacity added, expanded, closed or destroyed; not share issuance or market capitalization.',
-    'demand': 'Orders, bookings, consumption, sales volumes or customer demand change; not merely a share-price move.',
-    'input_cost': 'Operating input, fuel, freight or procurement cost change; ordinary commercial price/surcharge increases belong here when cost transmission is the stated mechanism, not price_cap.',
+    'demand': 'Orders, bookings, consumption, sales volumes or customer demand change, including signing, renewing or terminating a commercial supply/distribution contract; not merely a share-price move.',
+    'input_cost': 'Operating input, fuel, freight or procurement cost change; ordinary commercial price/surcharge increases or decreases belong here when cost transmission is the stated mechanism, not price_cap.',
     'inventory_print': 'New measured producer/commodity inventories or stockpiles; not a company stock price.',
     'channel_stock': 'Distributor/dealer/channel inventory, stocking or destocking.',
     'gate': 'Product-specific permission to sell/build/operate: FDA approval, licence, permit, certification or rejection. Clinical trial results alone are trial_readout. Broad trade prohibitions are access_control.',
@@ -83,3 +83,4 @@ def ontology_text():
     return 'LOCKED LANE DEFINITIONS (' + ONTOLOGY_VERSION + '):\n' + '\n'.join(
         name + ': ' + DEFINITIONS[name] for name in EVENT_CLASSES
     ) + '\n\n' + DECISION_RULES
+

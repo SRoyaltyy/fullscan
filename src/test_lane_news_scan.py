@@ -67,8 +67,8 @@ def test_news_scan_current_flash_order():
     assert [hop for hop, _ in plan[:4]] == NEWS_HEAD
     by_hop = dict(plan)
     assert "deepseek" not in by_hop
-    assert by_hop["zhipu"] == ["glm-4.7-flash"]
-    assert news_scan_models("zhipu") == ["glm-4.7-flash"]
+    assert by_hop["zhipu"] == ["glm-5.3-flash", "glm-4.7-flash"]
+    assert news_scan_models("zhipu") == ["glm-5.3-flash", "glm-4.7-flash"]
     assert news_scan_models("siliconflow")[0] == "Qwen/Qwen3-8B"
     assert news_scan_models("qwen") == ["qwen-flash"]
     # Native DS models remain wired for paid opt-in; free plan excludes the hop.
