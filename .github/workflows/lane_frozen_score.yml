@@ -1,0 +1,67 @@
+name: Lane offline frozen-reference scoring
+on:
+  push:
+    branches: [codex/lane-provider-repair-20261014]
+    paths: ['.github/workflows/lane_frozen_score.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/evaluate_semantic_acceptance.py
+            /docs/benchmarks/references_20261014/
+            /tests/fixtures/semantic_frozen_20261014/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download completed program-only holdout outputs
+        uses: actions/download-artifact@v4
+        with:
+          name: lane-glm-provider-100
+          run-id: 38512622813
+          github-token: ${{ github.token }}
+          path: holdout
+      - name: Download frozen candidate development fingerprints
+        uses: actions/download-artifact@v4
+        with:
+          name: lane-glm-provider-100
+          run-id: 38511496266
+          github-token: ${{ github.token }}
+          path: baseline
+      - name: Grade without classifier or model calls
+        run: |
+          PYTHONPATH=scripts python - <<'PY'
+          import json,pathlib,hashlib
+          from evaluate_semantic_acceptance import compare,acceptance_candidate
+          inp=pathlib.Path('tests/fixtures/semantic_frozen_20261014/batch_01.json')
+          rp=pathlib.Path('docs/benchmarks/references_20261014/batch_01.json')
+          raw=json.loads(next(pathlib.Path('holdout').rglob('glm_program_outputs.json')).read_text())
+          baseline=json.loads(next(pathlib.Path('baseline').rglob('glm_program_outputs.json')).read_text())
+          ref=json.loads(rp.read_text())
+          digest=hashlib.sha256(inp.read_bytes()).hexdigest()
+          assert raw['input_sha256']==ref['input_sha256']==digest, 'Input identity mismatch'
+          assert ref['frozen_before_program_execution'] and ref['frozen_at']<raw['generated_at'], 'Reference not frozen before execution'
+          candidate=acceptance_candidate(ref,raw)
+          assert candidate==acceptance_candidate({},baseline), 'Frozen candidate/catalog changed'
+          report=compare(json.loads(inp.read_text()),ref,raw)
+          report.update(acceptance_eligible=True,batch=1,candidate=candidate,reference_sha256=hashlib.sha256(rp.read_bytes()).hexdigest(),input_sha256=digest,reference_frozen_at=ref['frozen_at'],program_started_at=raw['generated_at'],known_previous_semantic_inputs=300,best_consecutive_passes=1 if report['pass'] else 0,target_consecutive_passes=10)
+          pathlib.Path('scores').mkdir()
+          pathlib.Path('scores/batch_01_comparison.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
+          print(json.dumps({k:v for k,v in report.items() if k not in ('samples','candidate')}))
+          print('ACTION_MISSES='+json.dumps([(r['n'],r['title'],r['program'],r['reference']['action']) for r in report['samples'] if not r['checks']['action']],ensure_ascii=False))
+          print('LANE_MISSES='+json.dumps([(r['n'],r['title'],r['program'],r['reference']['acceptable_lane_classes']) for r in report['samples'] if not r['checks']['lane']],ensure_ascii=False))
+          print('SECTOR_MISSES='+json.dumps([(r['n'],r['title'],r['program'],r['reference']['acceptable_sector_sets']) for r in report['samples'] if not r['checks']['sectors']],ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lane-frozen-holdout-score-01
+          path: scores/
