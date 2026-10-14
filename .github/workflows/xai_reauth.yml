@@ -51,50 +51,86 @@ jobs:
           set -uo pipefail
           export HOME=/home/gha
           ROOT=/home/gha/fullscan
-          mkdir -p /home/gha/fullscan-logs
-          TOKEN="${GITHUB_TOKEN:-}"
-          AUTH_URL="https://x-access-token:${TOKEN}@github.com/SRoyaltyy/fullscan.git"
-          ensure_tree() {
-            if [ ! -d "$ROOT/.git" ]; then
-              echo "cloning fresh $ROOT"
-              timeout 180 git clone --depth=1 "$AUTH_URL" "$ROOT" || return 1
-              return 0
-            fi
-            cd "$ROOT"
-            git config --global --add safe.directory "$ROOT" || true
-            rm -f .git/index.lock .git/shallow.lock .git/HEAD.lock 2>/dev/null || true
-            git sparse-checkout disable || true
-            if [ -n "$TOKEN" ]; then
-              git config --local http.https://github.com/.extraheader \
-                "AUTHORIZATION: bearer ${TOKEN}"
-              git remote set-url origin "$AUTH_URL" || true
-            fi
-            timeout 90 git fetch --depth=1 origin main \
-              && timeout 30 git reset --hard origin/main \
-              || echo "WARN: tip sync failed"
-            if [ ! -f scripts/xai_device_reauth.py ]; then
-              echo "on-box tree stale/missing script — recloning"
-              cd /home/gha
-              rm -rf fullscan.bak
-              mv fullscan fullscan.bak 2>/dev/null || rm -rf fullscan
-              timeout 180 git clone --depth=1 "$AUTH_URL" "$ROOT" || return 1
-            fi
-            return 0
-          }
-          ensure_tree || { echo "FATAL: cannot materialize $ROOT"; exit 1; }
+          mkdir -p /home/gha/fullscan-logs "$ROOT/scripts" "$ROOT/01_daily"
+          if [ ! -d "$ROOT/.git" ] && [ -d /home/gha/fullscan.bak/.git ]; then
+            echo "restoring fullscan.bak → fullscan"
+            mv /home/gha/fullscan.bak "$ROOT"
+            mkdir -p "$ROOT/scripts" "$ROOT/01_daily"
+          fi
+          RAW=https://raw.githubusercontent.com/SRoyaltyy/fullscan/main
+          for f in scripts/xai_device_reauth.py scripts/safe_git_push.sh \
+                   scripts/runtime_status.py scripts/enable_openclaw_chat.sh \
+                   scripts/ensure_openclaw_timeouts.sh; do
+            timeout 30 curl -fsSL -o "$ROOT/$f" "$RAW/$f" \
+              || echo "WARN: curl $f failed"
+          done
+          test -f "$ROOT/scripts/xai_device_reauth.py" || { echo "FATAL: no reauth script"; exit 1; }
+          chmod +x "$ROOT"/scripts/*.py "$ROOT"/scripts/*.sh 2>/dev/null || true
           cd "$ROOT"
-          if [ ! -f scripts/xai_device_reauth.py ]; then
-            echo "ERROR: still missing scripts/xai_device_reauth.py"; ls -la scripts | head; exit 1
+          git config --global --add safe.directory "$ROOT" || true
+          rm -f .git/index.lock .git/shallow.lock .git/HEAD.lock 2>/dev/null || true
+          if [ -d .git ]; then
+            git remote set-url origin https://github.com/SRoyaltyy/fullscan.git || true
+            if [ -n "${GITHUB_TOKEN:-}" ]; then
+              git config --local http.https://github.com/.extraheader \
+                "AUTHORIZATION: bearer ${GITHUB_TOKEN}"
+            fi
+            timeout 45 git fetch --depth=1 origin main \
+              && timeout 20 git reset --hard origin/main \
+              || echo "WARN: tip sync skipped (git flaky)"
+            for f in scripts/xai_device_reauth.py scripts/safe_git_push.sh; do
+              test -f "$f" || timeout 30 curl -fsSL -o "$f" "$RAW/$f" || true
+            done
           fi
-          chmod +x scripts/xai_device_reauth.py scripts/safe_git_push.sh \
-            scripts/runtime_status.py scripts/enable_openclaw_chat.sh \
-            scripts/ensure_openclaw_timeouts.sh || true
-          if [ -n "$TOKEN" ]; then
-            git config --local http.https://github.com/.extraheader \
-              "AUTHORIZATION: bearer ${TOKEN}"
-          fi
-          echo "OK tip=$(git rev-parse --short HEAD 2>/dev/null) root=$ROOT"
-          ls scripts/xai_device_reauth.py
+          echo "OK root=$ROOT"
+          ls -la scripts/xai_device_reauth.py
+          cat > /home/gha/fullscan-logs/publish_reauth.py <<'PY'
+          import json, os, urllib.request, base64, sys
+          path = "01_daily/_xai_reauth.json"
+          if not os.path.isfile(path):
+              print("[publish] missing", path); sys.exit(0)
+          body = open(path, "rb").read()
+          d = json.loads(body)
+          print("[publish]", d.get("status"), d.get("user_code"))
+          token = os.environ.get("GITHUB_TOKEN") or ""
+          if not token:
+              print("[publish] no token"); sys.exit(0)
+          api = "https://api.github.com/repos/SRoyaltyy/fullscan/contents/" + path
+          req = urllib.request.Request(api, headers={
+              "Authorization": "Bearer " + token,
+              "Accept": "application/vnd.github+json",
+              "User-Agent": "fullscan-xai-reauth",
+          })
+          sha = None
+          try:
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  sha = json.load(r).get("sha")
+          except Exception as e:
+              print("[publish] get sha:", e)
+          data = {
+              "message": "chore: xai reauth status (API publish)",
+              "content": base64.b64encode(body).decode(),
+              "branch": "main",
+          }
+          if sha:
+              data["sha"] = sha
+          req2 = urllib.request.Request(
+              api, data=json.dumps(data).encode(), method="PUT",
+              headers={
+                  "Authorization": "Bearer " + token,
+                  "Accept": "application/vnd.github+json",
+                  "Content-Type": "application/json",
+                  "User-Agent": "fullscan-xai-reauth",
+              },
+          )
+          try:
+              with urllib.request.urlopen(req2, timeout=45) as r:
+                  print("[publish] ok", r.status)
+          except Exception as e:
+              print("[publish] put failed:", e)
+          PY
+          # strip accidental YAML indent from heredoc body
+          sed -i 's/^          //' /home/gha/fullscan-logs/publish_reauth.py
           FORCE="${{ github.event.inputs.force }}"
           FORCE="${FORCE:-false}"
           if [ "$FORCE" = "true" ]; then
@@ -102,8 +138,9 @@ jobs:
           else
             python3 scripts/xai_device_reauth.py --check || true
           fi
-          echo "======== _xai_reauth.json ========"
+          echo "======== local _xai_reauth.json ========"
           cat 01_daily/_xai_reauth.json 2>/dev/null || echo "(missing)"
+          python3 /home/gha/fullscan-logs/publish_reauth.py || true
           exit 0
 
       - name: Snapshot runtime doors for the phone
