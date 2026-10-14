@@ -1,8 +1,13 @@
 name: xAI device reauth
 
-# Phone Claw tab + clock. Starts a DETACHED device-code waiter on this box,
-# publishes 01_daily/_xai_reauth.json, then exits so the ECS runner is not
-# held for 15 minutes.
+# Phone Claw tab + clock. In-process device-code waiter on ecs-openclaw
+# (GitHub Actions reaps a detached waiter when the job exits).
+#
+# scripts/xai_device_reauth.py writes 01_daily/_xai_reauth.json and
+# Contents-API publishes status=waiting + user_code + verification_uri
+# BEFORE wait_pid (~12 min). Git push from this box is not that path
+# (invalid credentials). The publish_reauth.py step below only refreshes
+# the terminal ok / needs_reauth file after the waiter returns.
 #
 # Dispatch only. A 20-minute ECS cron queued behind Grok and burned the runner.
 
@@ -133,6 +138,10 @@ jobs:
           sed -i 's/^          //' /home/gha/fullscan-logs/publish_reauth.py
           FORCE="${{ github.event.inputs.force }}"
           FORCE="${FORCE:-false}"
+          # --daemon / --check block in wait_pid only AFTER the script has
+          # Contents-API published the waiting user_code. This trailing
+          # publish is the terminal status (ok or needs_reauth), not the
+          # first time GitHub sees the code.
           if [ "$FORCE" = "true" ]; then
             python3 scripts/xai_device_reauth.py --daemon --force || true
           else
