@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "If someone proposed “on this pattern, official label should follow index_carry down/mild,” it is already falsified by 10-08 and 10-13 (carry-down vs small up). If someone proposed “always flatten the official label to flat here,” today is the falsifier (hawkish CPI → XLY −0.77% mild down). That two-way kill is why this is D / no new lesson."
 sector: "Consumer Cyclical"
 date: "2026-10-14"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-10-14

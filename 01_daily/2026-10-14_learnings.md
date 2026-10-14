@@ -1,6 +1,6 @@
 # Learnings report — 2026-10-14
 
-Generated: **2026-10-14T19:21:12.615809-04:00** by `src/learn_cycle.py`.
+Generated: **2026-10-14T19:21:18.869229-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -15,10 +15,10 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Graded runs mined | 180 |
 | Hypotheses written | 181 (wins=77, losses=104) |
 | News hypotheses | 1 |
-| Lessons promoted to active | 0 |
+| Lessons promoted to active | 1 |
 | Lessons retired (efficacy-gated) | 10 |
-| Active lesson files now | 209 |
-| Engine policy version | 91 |
+| Active lesson files now | 210 |
+| Engine policy version | 90 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -496,7 +496,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 ## 4. Promoted standing rules (this cycle)
 
-_No new promotions this cycle (candidates incomplete, not yet recurring, or already active)._
+- `consumer-cyclical-xly-on-a-same-session-unsigned-cpi-or-nfp.md`
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 
@@ -533,7 +533,7 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S2_BREADTH: n=173 sign-hit=0.57 → ×1.0
 - S3_FLOWS_POSITIONING: n=122 sign-hit=0.49 → ×0.5
 - S4_ETF_TAPE: n=187 sign-hit=0.58 → ×1.0
-Last change: hold
+Last change: Basic Materials.S0_SHARED_MACRO: 1.0 -> 0.5 (n=22, hit=0.545); Basic Materials.S1_SECTOR_FACTORS: 0.5 -> 0.0 (n=25, hit=0.44); Basic Materials.S3_FLOWS_POSITIONING: 1.0 -> 0.5 (n=15, hit=0.533)
 
 Progress vs baselines: `03_scoreboard/IMPROVEMENT_TRACKER.md`.
 

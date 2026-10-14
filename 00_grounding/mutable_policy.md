@@ -9,7 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-10-14**. Promoted: 0. Retired: 10. Active lessons: 209. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-10-14**. Promoted: 1. Retired: 10. Active lessons: 210. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
@@ -44,9 +44,16 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S2_BREADTH: n=173 sign-hit=0.57 → ×1.0
 - S3_FLOWS_POSITIONING: n=122 sign-hit=0.49 → ×0.5
 - S4_ETF_TAPE: n=187 sign-hit=0.58 → ×1.0
-Last change: hold
+Last change: Basic Materials.S0_SHARED_MACRO: 1.0 -> 0.5 (n=22, hit=0.545); Basic Materials.S1_SECTOR_FACTORS: 0.5 -> 0.0 (n=25, hit=0.44); Basic Materials.S3_FLOWS_POSITIONING: 1.0 -> 0.5 (n=15, hit=0.533)
 
 ## Active adjustments (newest promoted lessons, truncated)
+
+### consumer-cyclical-xly-on-a-same-session-unsigned-cpi-or-nfp.md
+## RULE
+Do not mint a new lesson from this hit. Keep the morning process: unsigned CPI in S0, live oil is not the CPI-gasoline clock, no AMZN/TSLA-as-wallet call, no leftover-anchor direction. Credit the hawkish print’s realization, not index_carry. Do not weaken 09-21 flatten or 10-02 “don’t pre-score CPI,” and do not add S1 gasoline on top of S0 (double-count).
+
+## WHEN IT FIRES
+Consumer Cyclical / XLY on a same-session unsigned CPI (or NFP/FOMC) open, leading S0–S4 all-zero, ES/NQ both inside …
 
 ### scheduled-us-cash-equities-session-including-bond-holiday-eq.md
 ## RULE
@@ -125,14 +132,7 @@ When S0–S3 net to zero BUT (a) the index backdrop is strongly positive (ES/NQ 
 ## RULE
 When the sector ETF's own live premarket print is flat (|PM| ≤ ~0.1%) and is the worst/tied-worst on the sector board while the index sleeve is strongly green, the index legs of tape_anchor must be **capped or zeroed for this sector** — an index rebound is not a participation certificate (08-27 / 09-10 / 09-16). With S0–S4 all explicitly 0 and PM:XLC = 0.00%, the correct official call is **flat/flat**, not up/mild. If the engine cannot suppress the index sleeve, the LLM overlay must emit …
 
-### a-bond-proxy-defensive-xlp-xlu-xlre-like-has-a-net-negative.md
-## RULE
-Do not let leftover Finviz 1d/1w or 3d/1w RS veto official direction when (1) live PM is not a haven (mid/red) and/or live Channel 1 1d rel is already ≤0, and (2) leading S0–S3 is net negative. Prefer Channel 1 / PM over stale Finviz RS for the veto input. Keep calendar_size_gate for unprinted FOMC so magnitude stays ≤ mild (not notable); do not also flatten direction. Do not restack a prior-session 10Y break that already printed in the ETF.
-
-## WHEN IT FIRES
-A bond-proxy defensive (XLP/ …
-
-_(+194 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
+_(+195 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
 
 ## Per-scope DO-INSTEAD
 

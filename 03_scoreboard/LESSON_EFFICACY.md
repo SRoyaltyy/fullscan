@@ -1,10 +1,10 @@
 # Lesson efficacy — did promoted lessons change outcomes?
 
-_Generated 2026-10-14T19:21:12.584678-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
+_Generated 2026-10-14T19:21:18.807207-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
 
 This is correlation, not proof — but a lesson whose topic got WORSE after promotion has no evidence of working and is a retirement candidate for the monthly distill.
 
-**Active lessons: 219 · judged (enough data both sides): 178 · improved: 67 · flat: 30 · worse: 81 · mean delta: -0.022**
+**Active lessons: 220 · judged (enough data both sides): 178 · improved: 67 · flat: 30 · worse: 81 · mean delta: -0.022**
 
 ## Retirement candidates (topic got worse after activation)
 
@@ -222,6 +222,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `before-the-open-channel-1-es-nq-is-locked-from-a` | — | 2026-10-05 | — | — | — | not market-graded |
 | `bond-proxy-utilities-with-s0-0-on-a-two-sided-sc` | sector:Utilities | 2026-08-28 | 14% (n=7) | 43% (n=7) | +29% | improved |
 | `consumer-cyclical-xly-is-called-down-mild-from-m` | sector:Consumer Cyclical | 2026-08-13 | 67% (n=3) | 57% (n=7) | — | insufficient |
+| `consumer-cyclical-xly-on-a-same-session-unsigned` | sector:Consumer Cyclical | 2026-10-14 | 29% (n=7) | — | — | insufficient |
 | `consumer-defensive-xlp-after-an-outsized-prior-s` | sector:Consumer Defensive | 2026-08-28 | 43% (n=7) | 57% (n=7) | +14% | improved |
 | `correct-severe-up-energy-call-driven-by-a-knowab` | sector:Energy | 2026-08-13 | 67% (n=3) | 57% (n=7) | — | insufficient |
 | `day-2-technology-xlk-after-a-confirmed-already-t` | sector:Technology | 2026-08-28 | 43% (n=7) | 43% (n=7) | +0% | flat |

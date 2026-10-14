@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-14T19:21:12.584678-04:00",
+  "generated_at": "2026-10-14T19:21:18.807207-04:00",
   "window": 7,
   "summary": {
-    "n_active": 219,
+    "n_active": 220,
     "n_judged": 178,
     "improved": 67,
     "flat": 30,
@@ -1986,6 +1986,21 @@
       "after": {
         "hit": 0.571,
         "n": 7
+      },
+      "verdict": "insufficient"
+    },
+    {
+      "lesson": "consumer-cyclical-xly-on-a-same-session-unsigned-cpi-or-nfp.md",
+      "topic": "sector:Consumer Cyclical",
+      "active_since": "2026-10-14",
+      "error_category": "D",
+      "before": {
+        "hit": 0.286,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
       },
       "verdict": "insufficient"
     },
