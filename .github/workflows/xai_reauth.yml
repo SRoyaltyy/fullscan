@@ -52,28 +52,49 @@ jobs:
           export HOME=/home/gha
           ROOT=/home/gha/fullscan
           mkdir -p /home/gha/fullscan-logs
-          if [ ! -d "$ROOT/.git" ]; then
-            echo "cloning into $ROOT"
-            timeout 120 git clone --depth=1 https://github.com/SRoyaltyy/fullscan.git "$ROOT" || exit 1
-          fi
+          TOKEN="${GITHUB_TOKEN:-}"
+          AUTH_URL="https://x-access-token:${TOKEN}@github.com/SRoyaltyy/fullscan.git"
+          ensure_tree() {
+            if [ ! -d "$ROOT/.git" ]; then
+              echo "cloning fresh $ROOT"
+              timeout 180 git clone --depth=1 "$AUTH_URL" "$ROOT" || return 1
+              return 0
+            fi
+            cd "$ROOT"
+            git config --global --add safe.directory "$ROOT" || true
+            rm -f .git/index.lock .git/shallow.lock .git/HEAD.lock 2>/dev/null || true
+            git sparse-checkout disable || true
+            if [ -n "$TOKEN" ]; then
+              git config --local http.https://github.com/.extraheader \
+                "AUTHORIZATION: bearer ${TOKEN}"
+              git remote set-url origin "$AUTH_URL" || true
+            fi
+            timeout 90 git fetch --depth=1 origin main \
+              && timeout 30 git reset --hard origin/main \
+              || echo "WARN: tip sync failed"
+            if [ ! -f scripts/xai_device_reauth.py ]; then
+              echo "on-box tree stale/missing script — recloning"
+              cd /home/gha
+              rm -rf fullscan.bak
+              mv fullscan fullscan.bak 2>/dev/null || rm -rf fullscan
+              timeout 180 git clone --depth=1 "$AUTH_URL" "$ROOT" || return 1
+            fi
+            return 0
+          }
+          ensure_tree || { echo "FATAL: cannot materialize $ROOT"; exit 1; }
           cd "$ROOT"
-          git config --global --add safe.directory "$ROOT" || true
-          rm -f .git/index.lock .git/shallow.lock .git/HEAD.lock 2>/dev/null || true
-          git sparse-checkout disable || true
-          timeout 60 git fetch --depth=1 origin main \
-            && timeout 30 git reset --hard origin/main \
-            || echo "WARN: tip sync skipped — using on-box tree"
           if [ ! -f scripts/xai_device_reauth.py ]; then
-            echo "ERROR: $ROOT missing xai_device_reauth.py"; ls -la; exit 1
+            echo "ERROR: still missing scripts/xai_device_reauth.py"; ls -la scripts | head; exit 1
           fi
           chmod +x scripts/xai_device_reauth.py scripts/safe_git_push.sh \
             scripts/runtime_status.py scripts/enable_openclaw_chat.sh \
             scripts/ensure_openclaw_timeouts.sh || true
-          if [ -n "${GITHUB_TOKEN:-}" ]; then
+          if [ -n "$TOKEN" ]; then
             git config --local http.https://github.com/.extraheader \
-              "AUTHORIZATION: bearer ${GITHUB_TOKEN}"
+              "AUTHORIZATION: bearer ${TOKEN}"
           fi
           echo "OK tip=$(git rev-parse --short HEAD 2>/dev/null) root=$ROOT"
+          ls scripts/xai_device_reauth.py
           FORCE="${{ github.event.inputs.force }}"
           FORCE="${FORCE:-false}"
           if [ "$FORCE" = "true" ]; then
