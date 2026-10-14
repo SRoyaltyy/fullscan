@@ -1,10 +1,10 @@
 # flatten_robust card — 2026-10-14
 
-_Generated 2026-10-14T10:08:23 — live `flatten_robust`._
+_Generated 2026-10-14T10:28:26 — live `flatten_robust`._
 
-**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
+**S=-1.65; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
-- Score **—** (—) · route **io**
+- Score **-1.65** (DOWN) · route **io**
 - Cash leftover **$9,606.56** (after 09:30 $7.23 · after 16:00 $93,930.63)
 - Prior close **$103,555.33** · 09:30 **$103,555.33** · overnight **$+0.00** · session **$-9,624.70** · 16:00 **$93,930.63**
 - Overnight lots **4** · priced mover BUYs **0** · prior book yes
@@ -51,10 +51,11 @@ Sized from marked equity **$103,555.33** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | SYK | io_core | 73 | $282.55 | $20,626.15 | cash tied |
-| 16:00 ET | VEEV | io_core | 68 | $301.63 | $20,510.84 | cash tied |
-| 16:00 ET | CDNA | io_core | 316 | $65.43 | $20,675.88 | already held |
-| 16:00 ET | PACS | io_core | 466 | $44.38 | $20,681.08 | already held |
-| 16:00 ET | BLFS | io_core | 0 | $0.00 | $0.00 | no price |
+| 16:00 ET | TMUS | io_core | 112 | $153.73 | $17,217.76 | cash tied |
+| 16:00 ET | TRU | io_core | 255 | $67.49 | $17,209.95 | cash tied |
+| 16:00 ET | WSM | io_core | 71 | $239.98 | $17,038.58 | cash tied |
+| 16:00 ET | CNK | io_core | 454 | $37.94 | $17,224.76 | cash tied |
+| 16:00 ET | WLY | io_core | 328 | $52.58 | $17,246.24 | cash tied |
+| 16:00 ET | AVPT | io_core | 1187 | $14.53 | $17,247.11 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
