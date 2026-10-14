@@ -1,4 +1,4 @@
-name: Lane fresh batched recall comparison
+name: Lane focused sector development comparison
 on:
   push:
     branches: [codex/lane-provider-repair-20261014]
@@ -10,6 +10,7 @@ on:
       - 'src/news_impact/semantic_headlines.py'
       - 'src/news_impact/semantic_ontology.py'
       - 'scripts/run_semantic_headlines.py'
+      - 'src/news_impact/sector_batch_review.py'
   workflow_dispatch:
 permissions:
   contents: read
@@ -72,8 +73,8 @@ jobs:
           PYTHONPATH=. python scripts/run_semantic_headlines.py \
             --input tests/fixtures/semantic_acceptance/batch_recall_fresh_02.json \
             --output provider_results/glm_program_outputs.json \
-            --limit 100 --budget-seconds 3600 --headline-timeout 300 \
-            --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review \
+            --limit 100 --budget-seconds 3600 --headline-timeout 450 \
+            --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review --sector-review \
             --providers zhipu,gemini,qwen \
             --models glm-5.3-flash,gemini-2.5-flash,qwen-flash
       - uses: actions/upload-artifact@v4
@@ -82,7 +83,7 @@ jobs:
           name: lane-glm-provider-100
           path: provider_results/
   grok:
-    if: ${{ !contains(github.event.head_commit.message, '[skip provider validation]') }}
+    if: ${{ contains(github.event.head_commit.message, '[grok-only]') && !contains(github.event.head_commit.message, '[skip provider validation]') }}
     runs-on: [self-hosted, ecs]
     timeout-minutes: 65
     env:
@@ -108,8 +109,8 @@ jobs:
           PYTHONPATH=. python3 scripts/run_semantic_headlines.py \
             --input tests/fixtures/semantic_acceptance/batch_recall_fresh_02.json \
             --output provider_results/grok_program_outputs.json \
-            --limit 100 --budget-seconds 3600 --headline-timeout 300 \
-            --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review \
+            --limit 100 --budget-seconds 3600 --headline-timeout 450 \
+            --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review --sector-review \
             --providers openclaw --models xai/grok-4.3
       - uses: actions/upload-artifact@v4
         if: always()
