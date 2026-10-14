@@ -40,32 +40,9 @@ jobs:
             echo "skip=yes" >> "$GITHUB_ENV"
           fi
           exit 0
-      # actions/checkout@v4 with fetch-depth:0 hung ~8min on ecs-openclaw
-      # (2026-10-14). Sync the shared workdir with a hard timeout instead.
-      - name: Sync shared ECS workdir (timeout-safe)
-        if: env.skip != 'yes'
-        run: |
-          set -euo pipefail
-          git sparse-checkout disable || true
-          git config --global --add safe.directory "$GITHUB_WORKSPACE" || true
-          # Drop leftover locks from the failed Pre-Open that left checkout wedged.
-          rm -f .git/index.lock .git/shallow.lock .git/HEAD.lock 2>/dev/null || true
-          # Shallow tip only — do not walk full history.
-          timeout 90 git fetch --depth=1 origin main || {
-            echo "WARN: git fetch timed out/failed — using existing workdir tip"
-          }
-          timeout 30 git checkout -f FETCH_HEAD 2>/dev/null \
-            || timeout 30 git checkout -f origin/main 2>/dev/null \
-            || timeout 30 git reset --hard origin/main 2>/dev/null \
-            || true
-          if [ ! -f requirements.txt ] || [ ! -f scripts/xai_device_reauth.py ]; then
-            echo "ERROR: workdir missing scripts after sync"
-            ls -la
-            exit 1
-          fi
-          echo "OK tip=$(git rev-parse --short HEAD 2>/dev/null || echo unknown)"
-
-      - name: Start or refresh xAI device login
+      # GITHUB_WORKSPACE on ecs-openclaw is an empty sparse shell (only .git);
+      # git fetch to it times out. Run from the on-box clone used by systemd.
+      - name: Start or refresh xAI device login (on-box clone)
         if: env.skip != 'yes'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -73,10 +50,30 @@ jobs:
         run: |
           set -uo pipefail
           export HOME=/home/gha
+          ROOT=/home/gha/fullscan
           mkdir -p /home/gha/fullscan-logs
+          if [ ! -d "$ROOT/.git" ]; then
+            echo "cloning into $ROOT"
+            timeout 120 git clone --depth=1 https://github.com/SRoyaltyy/fullscan.git "$ROOT" || exit 1
+          fi
+          cd "$ROOT"
+          git config --global --add safe.directory "$ROOT" || true
+          rm -f .git/index.lock .git/shallow.lock .git/HEAD.lock 2>/dev/null || true
+          git sparse-checkout disable || true
+          timeout 60 git fetch --depth=1 origin main \
+            && timeout 30 git reset --hard origin/main \
+            || echo "WARN: tip sync skipped — using on-box tree"
+          if [ ! -f scripts/xai_device_reauth.py ]; then
+            echo "ERROR: $ROOT missing xai_device_reauth.py"; ls -la; exit 1
+          fi
           chmod +x scripts/xai_device_reauth.py scripts/safe_git_push.sh \
             scripts/runtime_status.py scripts/enable_openclaw_chat.sh \
             scripts/ensure_openclaw_timeouts.sh || true
+          if [ -n "${GITHUB_TOKEN:-}" ]; then
+            git config --local http.https://github.com/.extraheader \
+              "AUTHORIZATION: bearer ${GITHUB_TOKEN}"
+          fi
+          echo "OK tip=$(git rev-parse --short HEAD 2>/dev/null) root=$ROOT"
           FORCE="${{ github.event.inputs.force }}"
           FORCE="${FORCE:-false}"
           if [ "$FORCE" = "true" ]; then
@@ -89,7 +86,7 @@ jobs:
           exit 0
 
       - name: Snapshot runtime doors for the phone
-        if: always() && env.skip != 'yes'
+        if: always()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
@@ -98,6 +95,12 @@ jobs:
         run: |
           set -uo pipefail
           export HOME=/home/gha
-          python3 scripts/runtime_status.py --write || true
-          echo "======== _runtime.json ========"
-          cat 01_daily/_runtime.json 2>/dev/null || echo "(missing)"
+          ROOT=/home/gha/fullscan
+          if [ -f "$ROOT/scripts/runtime_status.py" ]; then
+            cd "$ROOT"
+            python3 scripts/runtime_status.py --write || true
+            echo "======== _runtime.json ========"
+            cat 01_daily/_runtime.json 2>/dev/null || echo "(missing)"
+          else
+            echo "(no on-box clone for runtime snapshot)"
+          fi
