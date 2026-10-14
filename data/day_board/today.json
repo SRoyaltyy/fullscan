@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T04:50:30.913821-04:00",
+  "generated_at": "2026-10-14T04:50:40.086177-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -152,7 +152,7 @@
       "date": "2026-10-14",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-14T04:50:30.361845-04:00",
+      "at": "2026-10-14T04:50:39.530484-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-10-14_actions.json",
