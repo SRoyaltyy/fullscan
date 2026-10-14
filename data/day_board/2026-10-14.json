@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T11:29:59.689444-04:00",
+  "generated_at": "2026-10-14T11:32:01.423704-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -808,7 +808,7 @@
           "size": 2261198,
           "said": "208 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ARQT, AVAH, CORT, WAY"
+            "HALO, ONC, LLY, HRMY, ARQT, AVAH, WAY, CORT"
           ]
         },
         {
@@ -831,7 +831,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=184",
-          "size": 1464487,
+          "size": 1464419,
           "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
@@ -845,7 +845,7 @@
           "size": 69370,
           "said": "Stock book \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T11:29:22.194532-04:00_",
+            "_Generated 2026-10-14T11:31:58.147948-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -909,7 +909,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=184",
-          "size": 1464487,
+          "size": 1464419,
           "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
@@ -3573,30 +3573,6 @@
   },
   "frozen_write_skips": [
     {
-      "path": "data/stock_book/2026-10-14_stock_book.json",
-      "at": "2026-10-14T09:31:09-04:00",
-      "commit_msg": "auto: strategy tickets 2026-10-14",
-      "workflow": "Publish strategy tickets",
-      "run_id": "38570656498",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "01_daily/2026-10-14_preopen_qc.json",
-      "at": "2026-10-14T09:34:59-04:00",
-      "commit_msg": "auto: land events_catcher [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38569102482",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "01_daily/2026-10-14_preopen_status.json",
-      "at": "2026-10-14T09:34:59-04:00",
-      "commit_msg": "auto: land events_catcher [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38569102482",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T09:34:59-04:00",
       "commit_msg": "auto: land events_catcher [2026-10-14]",
@@ -5170,6 +5146,30 @@
       "commit_msg": "auto: stock book leftover sweep",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "38589137397",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_stock_book.md",
+      "at": "2026-10-14T11:32:18-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-14",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38588329055",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_input_health.json",
+      "at": "2026-10-14T11:32:18-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-14",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38588329055",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_stock_book.json",
+      "at": "2026-10-14T11:32:18-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-14",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38588329055",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
     }
   ]
