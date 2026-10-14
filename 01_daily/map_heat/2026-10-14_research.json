@@ -3,7 +3,7 @@
   "phase": "morning_refresh",
   "passthrough": true,
   "source_baseline_generated_at": "2026-10-13T16:56:40.655084-04:00",
-  "generated_at": "2026-10-14T05:26:52.756985-04:00",
+  "generated_at": "2026-10-14T07:20:25.271916-04:00",
   "n_targets": 142,
   "n_cards": 142,
   "n_refreshed": 0,
