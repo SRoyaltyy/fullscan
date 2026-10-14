@@ -2921,7 +2921,7 @@
         "sit": true,
         "hard_red": false,
         "side": "long",
-        "s": "morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held",
+        "s": -1.645,
         "short_only": [],
         "dip_scoop": [
           {
