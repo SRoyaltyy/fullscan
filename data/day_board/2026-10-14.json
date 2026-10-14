@@ -1,15 +1,14 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:09:44.041432-04:00",
+  "generated_at": "2026-10-14T06:10:39.320451-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-14_predict.md` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-14_judge.md` \u2014 missing"
+    "MISSING General predict MD `01_daily/general/2026-10-14_predict.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 5,
+    "partial": 2,
     "fail": 1,
     "n": 8
   },
@@ -180,7 +179,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 7,
+      "n_req_ok": 8,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -265,11 +264,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-14_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9844,
+          "said": "1. **September CPI prints tonight \u2014 consensus core +0.3%, expected to accelerate on energy** \u2014 the dominant unresolved macro binary; all positioning today is ga",
+          "bullets": [
+            "2. **Fed speak cluster: Collins \"another hike likely this year,\" Hammack backs hike path, Williams \"one more hike, none in 2027\"** \u2014 internally coherent hawkish-but-terminal messaging that has lifted October hike odds and 10Y yields. | rates",
+            "3. **Chip selloff / AI fatigue: worst stretch in 16 months; APH \u22126.5% on Fabrinet weakness + yields; ASML Q3 revenue miss (despite raised forecast) drags MU/SNDK/INTC** \u2014 crowded AI basket unwinding, direct NDX beta driver. | sentiment/sector_fundamental",
+            "4. **Gold drops >$100 on hawkish Fed; AEM falls; gold stuck under $4,200 into CPI** \u2014 real-rate-driven de-rating of the crowded metals basket (rescued from noise-adjacent status). | substitution/rates"
+          ]
         },
         {
           "key": "research_json",
@@ -348,12 +351,12 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8433,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
+          "size": 8429,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
             "general_predict:missing",
-            "news_judge:missing",
             "finviz_market_digest:missing",
+            "sector_predict:missing",
             "sector_predict:missing"
           ]
         },
@@ -363,9 +366,9 @@
           "path": "01_daily/2026-10-14_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False missing=['news_judge', 'general_predict']",
-          "size": 7198,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing news_judge, general_predict",
+          "reason": "all_ok=False missing=['general_predict']",
+          "size": 7175,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing general_predict",
           "bullets": []
         },
         {
@@ -680,7 +683,7 @@
       "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -746,11 +749,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-14_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9844,
+          "said": "1. **September CPI prints tonight \u2014 consensus core +0.3%, expected to accelerate on energy** \u2014 the dominant unresolved macro binary; all positioning today is ga",
+          "bullets": [
+            "2. **Fed speak cluster: Collins \"another hike likely this year,\" Hammack backs hike path, Williams \"one more hike, none in 2027\"** \u2014 internally coherent hawkish-but-terminal messaging that has lifted October hike odds and 10Y yields. | rates",
+            "3. **Chip selloff / AI fatigue: worst stretch in 16 months; APH \u22126.5% on Fabrinet weakness + yields; ASML Q3 revenue miss (despite raised forecast) drags MU/SNDK/INTC** \u2014 crowded AI basket unwinding, direct NDX beta driver. | sentiment/sector_fundamental",
+            "4. **Gold drops >$100 on hawkish Fed; AEM falls; gold stuck under $4,200 into CPI** \u2014 real-rate-driven de-rating of the crowded metals basket (rescued from noise-adjacent status). | substitution/rates"
+          ]
         },
         {
           "key": "in_weather",
@@ -856,10 +863,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-14 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-14)",
           "size": 10510589,
-          "said": "session 2026-10-14 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-14)",
           "bullets": []
         }
       ],
@@ -872,9 +879,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -895,10 +902,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-14 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-14)",
           "size": 10510589,
-          "said": "session 2026-10-14 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-14)",
           "bullets": []
         },
         {
@@ -934,78 +941,9 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "NTAP",
-        "score": 0.2843313440021954
-      },
-      {
-        "ticker": "BAND",
-        "score": 0.6611787597649168
-      },
-      {
-        "ticker": "MQ",
-        "score": 0.5459164323222052
-      },
-      {
-        "ticker": "IT",
-        "score": 0.37635451217416427
-      },
-      {
-        "ticker": "CON",
-        "score": 0.7287913963202588
-      },
-      {
-        "ticker": "AVPT",
-        "score": 0.7424881989450152
-      },
-      {
-        "ticker": "SGRY",
-        "score": 0.6603903952758077
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "NEOV",
-        "score": -0.3979840672726525
-      },
-      {
-        "ticker": "OKLO",
-        "score": -0.2666901180362591
-      },
-      {
-        "ticker": "FCEL",
-        "score": -0.2284152132262775
-      },
-      {
-        "ticker": "NNDM",
-        "score": -0.1638372495071339
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.040266310950080694
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.3581743968212493
-      },
-      {
-        "ticker": "NRGV",
-        "score": -0.2840014218486169
-      },
-      {
-        "ticker": "INDI",
-        "score": -0.2159049929401755
-      }
-    ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $9,606.56 \u00b7 morning S missing",
-      "bullets": [
-        "0 priced buys",
-        "cash $9,606.56",
-        "morning S missing"
-      ]
-    },
+    "buy_1d": [],
+    "sell_1d": [],
+    "flatten": {},
     "general": {},
     "sectors": {
       "said": "0 up / 0 down / 0 flat",
@@ -2718,6 +2656,31 @@
         }
       ],
       "preview": "23 events \u00b7 US CPI for September released | Fed Beige Book released | FOMC meeting Oct 27-28: second hike on the table | September retail sales report | Shutdown averted; CR funds government through Dec 11 | US-China Board of Trade product lists for tariff cuts \u00b7 # Event Scan \u2014 2026-10-14\n- events tracked: **23** (via openclaw)\n- uncertainty: **elevated**\n- summary: The window is dominated by inflation-vs-hike risk: today's September CPI (3.4% headline backdrop, core 2.4%) directly sets up an Oct 27-28 FOMC where a second hike is genuinely live. Geopolitical fuel-supply shocks (Houthi strikes on Saudi Arabia, Russian diesel disruption) are feeding the inflation problem while the US-China Board of Trade d\u00e9tente provides an offsetting de-escalation channel. Heavy AI-semiconductor earnings (ASML today, TSMC Oct 15) plus a dense blue-chip wave next week give constant catalysts through the window."
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:10:38.474642-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-14_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 9844,
+          "preview": "# News Judge \u2014 2026-10-14"
+        },
+        {
+          "path": "01_daily/news/2026-10-14_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1310,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-10-14 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {
