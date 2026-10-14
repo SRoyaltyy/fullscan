@@ -1,0 +1,133 @@
+Industry,n,med_total,pct_positive,med_ret,n_squeeze,n_extreme
+Utilities - Regulated Gas,15,2.69,86.7,1.52,0,0
+Utilities - Regulated Electric,40,2.66,82.5,1.34,0,0
+REIT - Hotel & Motel,15,2.33,66.7,2.82,0,0
+Oil & Gas E&P,78,2.3,76.9,3.28,1,0
+Healthcare Plans,11,2.17,63.6,1.26,0,0
+Oil & Gas Integrated,20,2.08,75.0,3.06,0,0
+Discount Stores,9,1.61,66.7,0.84,0,0
+Electronics & Computer Distribution,8,1.56,75.0,1.7,0,0
+Oil & Gas Midstream,58,1.26,70.7,1.38,0,0
+Oil & Gas Drilling,10,1.26,70.0,1.7,0,0
+Marine Shipping,38,0.95,57.9,0.65,0,0
+Beverages - Wineries & Distilleries,11,0.94,63.6,3.27,0,0
+Steel,21,0.78,57.1,0.0,0,0
+Copper,8,0.73,75.0,-2.13,0,0
+Tools & Accessories,11,0.69,63.6,0.92,0,0
+Metal Fabrication,18,0.68,55.6,0.48,0,0
+Financial Data & Stock Exchanges,14,0.64,57.1,0.06,0,0
+Utilities - Regulated Water,12,0.44,66.7,0.39,0,0
+Uranium,13,0.42,53.8,-5.73,0,0
+Shell Companies,326,0.36,63.5,0.0,0,0
+REIT - Specialty,19,0.36,57.9,-0.1,0,0
+Household & Personal Products,31,0.33,54.8,0.35,0,0
+Specialty Chemicals,62,0.32,56.5,0.48,0,0
+Apparel Manufacturing,24,0.22,50.0,1.01,0,0
+Industrial Distribution,24,0.17,54.2,1.28,0,0
+Rental & Leasing Services,20,0.17,55.0,0.8,0,0
+Utilities - Independent Power Producers,10,0.16,50.0,0.38,0,0
+Oil & Gas Equipment & Services,49,0.15,53.1,0.17,0,0
+REIT - Diversified,17,0.15,52.9,0.57,0,0
+Farm & Heavy Construction Machinery,26,0.12,53.8,0.71,0,0
+Banks - Regional,325,0.09,50.5,0.28,0,0
+Insurance - Reinsurance,8,0.06,50.0,1.02,0,0
+REIT - Office,20,0.02,50.0,0.66,0,0
+Insurance - Property & Casualty,45,-0.0,48.9,1.42,0,0
+Grocery Stores,13,-0.03,46.2,1.51,0,0
+Railroads,12,-0.16,50.0,1.06,0,0
+REIT - Retail,26,-0.17,38.5,0.06,0,0
+Oil & Gas Refining & Marketing,19,-0.26,47.4,1.31,0,0
+Farm Products,20,-0.26,40.0,-0.04,0,1
+REIT - Industrial,15,-0.3,46.7,0.17,0,0
+REIT - Healthcare Facilities,17,-0.3,47.1,1.06,0,0
+Chemicals,16,-0.3,50.0,1.3,0,0
+"Furnishings, Fixtures & Appliances",28,-0.34,39.3,1.03,0,0
+Food Distribution,11,-0.35,36.4,0.49,0,0
+Agricultural Inputs,13,-0.36,46.2,0.91,0,0
+Communication Equipment,45,-0.39,44.4,-3.84,0,0
+Building Products & Equipment,36,-0.4,44.4,0.06,0,0
+Packaged Foods,61,-0.42,45.9,0.49,0,0
+Medical Instruments & Supplies,51,-0.45,43.1,-0.35,0,0
+Apparel Retail,33,-0.48,36.4,0.0,0,0
+Footwear & Accessories,13,-0.49,46.2,1.65,0,0
+Electronic Components,44,-0.5,43.2,-2.28,0,0
+Engineering & Construction,52,-0.62,38.5,-0.87,0,0
+Education & Training Services,43,-0.65,44.2,-0.19,0,0
+Packaging & Containers,22,-0.73,31.8,0.34,0,0
+Specialty Industrial Machinery,79,-0.73,40.5,-0.46,0,0
+Specialty Business Services,44,-0.76,36.4,0.2,0,0
+Closed-End Fund - Equity,113,-0.77,23.9,-0.21,0,0
+Medical Care Facilities,48,-0.81,43.8,0.83,0,0
+Scientific & Technical Instruments,32,-0.87,46.9,-1.86,0,0
+REIT - Mortgage,38,-0.88,34.2,-1.66,0,0
+Insurance - Specialty,15,-0.92,40.0,-0.44,0,0
+Building Materials,17,-0.94,23.5,-1.17,0,0
+Personal Services,13,-0.96,30.8,0.52,0,0
+Pollution & Treatment Controls,16,-1.0,37.5,0.66,0,0
+Resorts & Casinos,17,-1.01,41.2,0.72,0,0
+Semiconductors,68,-1.02,36.8,-4.85,0,0
+Restaurants,52,-1.1,40.4,0.44,0,0
+Exchange Traded Fund,5781,-1.14,30.6,-0.02,0,0
+Medical Distribution,11,-1.15,45.5,1.21,0,0
+Insurance - Life,18,-1.16,38.9,0.34,0,0
+Diagnostics & Research,44,-1.18,31.8,-1.16,0,0
+Trucking,16,-1.2,12.5,-1.14,0,0
+Information Technology Services,79,-1.2,35.4,0.0,0,1
+Health Information Services,42,-1.2,33.3,-1.1,0,0
+Travel Services,17,-1.28,35.3,-0.07,0,0
+Tobacco,11,-1.3,36.4,-1.16,0,0
+Integrated Freight & Logistics,32,-1.32,25.0,-1.38,0,1
+Solar,23,-1.32,30.4,-1.49,0,0
+Consumer Electronics,19,-1.32,36.8,-0.26,0,0
+Insurance - Diversified,12,-1.36,25.0,0.96,0,0
+Software - Infrastructure,181,-1.38,30.9,-2.5,0,0
+Utilities - Renewable,23,-1.38,34.8,-1.89,0,0
+Staffing & Employment Services,17,-1.42,17.6,0.18,0,0
+Luxury Goods,10,-1.43,30.0,-0.9,0,0
+Security & Protection Services,22,-1.44,40.9,-0.99,1,0
+REIT - Residential,20,-1.45,40.0,-0.21,0,0
+Recreational Vehicles,17,-1.45,29.4,0.17,0,0
+Gambling,14,-1.45,28.6,1.06,0,0
+Broadcasting,14,-1.46,21.4,-1.83,0,0
+Semiconductor Equipment & Materials,29,-1.5,31.0,-5.92,0,0
+Waste Management,21,-1.56,28.6,-0.81,0,0
+Software - Application,227,-1.57,33.0,-1.4,0,0
+Consulting Services,22,-1.58,36.4,-1.2,0,0
+Aerospace & Defense,94,-1.58,25.5,-3.24,0,0
+Beverages - Non-Alcoholic,19,-1.59,36.8,-1.06,0,0
+Real Estate Services,45,-1.59,28.9,-1.4,0,0
+Telecom Services,55,-1.61,32.7,0.4,1,0
+Auto Parts,56,-1.62,41.1,-0.9,0,0
+Entertainment,48,-1.62,29.2,0.2,0,0
+Leisure,29,-1.63,24.1,-0.12,0,0
+Credit Services,52,-1.64,34.6,-0.32,0,0
+Medical Devices,142,-1.72,29.6,-0.84,0,0
+Computer Hardware,44,-1.8,25.0,-5.89,0,0
+Conglomerates,28,-1.82,42.9,-0.19,0,0
+Airlines,18,-1.82,11.1,-3.2,0,0
+Capital Markets,98,-1.83,21.4,-2.1,0,0
+Lodging,11,-1.83,36.4,0.02,0,0
+Advertising Agencies,39,-1.85,28.2,0.0,0,0
+Auto Manufacturers,27,-1.85,18.5,-0.67,0,1
+Other Industrial Metals & Mining,58,-1.88,24.1,-5.39,0,0
+Closed-End Fund - Debt,195,-1.89,4.6,-0.37,0,0
+Banks - Diversified,20,-1.94,15.0,0.46,0,0
+Asset Management,143,-1.97,20.3,-0.76,0,0
+Specialty Retail,44,-1.97,27.3,-0.02,0,1
+Drug Manufacturers - General,21,-2.02,23.8,-1.5,0,0
+Residential Construction,19,-2.05,5.3,-0.95,0,0
+Internet Retail,41,-2.06,34.1,-1.6,0,0
+Drug Manufacturers - Specialty & Generic,84,-2.09,22.6,-3.13,0,0
+Other Precious Metals & Mining,18,-2.1,11.1,-4.62,0,0
+Closed-End Fund - Foreign,29,-2.14,3.4,0.0,0,0
+Mortgage Finance,13,-2.18,23.1,-2.56,0,0
+Insurance Brokers,24,-2.19,33.3,0.58,0,0
+Electrical Equipment & Parts,56,-2.2,25.0,-4.54,0,0
+Gold,55,-2.22,23.6,-2.97,0,0
+Internet Content & Information,69,-2.24,27.5,-1.03,0,1
+Real Estate - Development,12,-2.3,25.0,-0.91,0,0
+Publishing,8,-2.46,37.5,1.27,0,0
+Biotechnology,594,-2.68,15.0,-6.52,0,1
+Airports & Air Services,9,-2.69,22.2,-6.1,0,0
+Electronic Gaming & Multimedia,21,-2.69,28.6,-1.41,0,0
+Auto & Truck Dealerships,25,-2.72,20.0,-0.88,0,0

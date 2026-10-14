@@ -1,0 +1,42 @@
+cell,signal_date,ticker,entry_date,hold_days,rules_sha256,source
+fpe_delta_t3_earn_today_3d,2026-10-13,ALLY,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,BAC,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,CCK,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,CMC,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,CME,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,CSX,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,DHR,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,EGP,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,ERIC,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,FAST,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,GE,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,GM,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,GS,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,GTY,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,HAL,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,IBKR,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,IBM,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,ISRG,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,JBHT,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,MEDP,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,MOH,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,MRSH,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,MTB,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,NPB,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,OII,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,PGR,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,PLD,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,SAP,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,SON,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,TRV,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,UNH,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,WFRD,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,WRB,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fpe_delta_t3_earn_today_3d,2026-10-13,WSE,2026-10-14,3,3e3e3a5d086d69ed92afadd655edbc49a9f2e1758e33d02d12e33f81ebb0ee69,preopen_plan_2026-10-14
+fresh_dcp_t1_ep_ge03_2d,2026-10-13,EFXT,2026-10-14,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-14
+fresh_dcp_t1_ep_ge03_2d,2026-10-13,FRSX,2026-10-14,2,187856c9db6143c2c4c2820cde8be1e3d87363478587558e296758cbf5369845,preopen_plan_2026-10-14
+fresh_dcp_t1_avoid_ah_3d,2026-10-13,DGXX,2026-10-14,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-14
+fresh_dcp_t1_avoid_ah_3d,2026-10-13,FRSX,2026-10-14,3,462719f77f2c36880f9c36d77c6591ca681e98c425c83697847463c4b3af7934,preopen_plan_2026-10-14
+# status=fires rows=38 fpe_delta_t3_earn_today_3d=34 fresh_dcp_t1_ep_ge03_2d=2 fresh_dcp_t1_avoid_ah_3d=2
+# built_at_utc=2026-10-14T09:23:15Z signal_date=2026-10-13 entry_date=2026-10-14 builder_sha256=9e70523ee355d655b125ffd46f8ccd08a25fe762fccfa6ee08c97eb3c5d52840
+# inputs: {"dcp_candidates":["DGXX","EFXT","FRSX","Q"],"dcp_prior_snapshot":"2026-10-12","earn_gate_n":84,"fails":"[]","features_T_sha256":"4517f3395cbbcaaa4fd6127e9a2eecb3ce3a3b254a0bdfd8aaf57b61bb43b67a","fpe_prior_snapshot":"2026-10-08","fpe_signal_n":1560,"letters_log":"rows 4 skipped {'2026-10-14': 0} FAILS []","letters_rows":4,"letters_sha256":"b0bc639e9d35ef8a7c77276480b03bcaf8b875a90740b0acb1c4b46186d3614c","membership":"fullscan@6b20cabd0 (committed 2026-10-14T08:30:49Z) sha256=1d97a9cec90922cef526ba5e5ce753c4f334ef15a5dfc1d836ba83a86edbd0d5","skipped":"{'2026-10-14': 0}","snapshot_T_sha256":"3a4943b7fee2b7a602b576d66fe0b3585badbc17a1e8e84b72b68b029fe73099","snapshots_after_T_ignored":[],"tr_head":"de84420fe","universe_log":"2026-10-14 cand 4 in membership 4 liquid 4 universe 4 excluded []"}
