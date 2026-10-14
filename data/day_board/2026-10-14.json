@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T11:22:26.491862-04:00",
+  "generated_at": "2026-10-14T11:22:31.713102-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1069,31 +1069,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz",
-      "title": "Finviz universe export",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T09:17:48.438659-04:00",
-      "files": [
-        {
-          "path": "data/exports/finviz_2026-10-14.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11030866,
-          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11508010,
-          "preview": "11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -3465,6 +3440,24 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ARQT"
+    },
+    {
+      "key": "peer_rs",
+      "title": "Peer RS",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T11:22:30.787281-04:00",
+      "files": [
+        {
+          "path": "data/peers/2026-10-14_peer_rs.csv",
+          "ok": true,
+          "reason": "",
+          "size": 821534,
+          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+        }
+      ],
+      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
     }
   ],
   "href": {
@@ -5006,6 +4999,14 @@
       "path": "data/join/2026-10-14_ranked.csv",
       "at": "2026-10-14T11:22:26-04:00",
       "commit_msg": "auto: land join [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38582802606",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T11:22:32-04:00",
+      "commit_msg": "auto: land peer_rs [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38582802606",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
