@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T09:26:04.446421-04:00",
+  "generated_at": "2026-10-14T09:26:32.177562-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -237,8 +237,8 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 467185,
-          "said": "467185B on disk",
+          "size": 461698,
+          "said": "461698B on disk",
           "bullets": []
         },
         {
@@ -1066,122 +1066,6 @@
     }
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:05:07.592608-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 25367,
-          "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 972,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-10-14.json",
-          "ok": true,
-          "reason": "",
-          "size": 122122,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-10-14_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 86691,
-          "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 713148,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-10-14_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 713148,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/factor_mine/morning_look/2026-10-14.json",
-          "ok": true,
-          "reason": "",
-          "size": 166518,
-          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 989121,
-          "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 713148,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 86691,
-          "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 713148,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 713148,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 989121,
-          "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1308,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1308,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 k"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -3652,6 +3536,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, ELV, AUPH, AMD \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, ETN, JBL, ATRC"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T09:26:30.663812-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-14_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 461698,
+          "preview": "raw=571 usable=128 single=50 \u00b7 US CPI Jumps 3.7%, Raising Federal Reserve Rate Hike Chances - \uc870\uc120\uc77c\ubcf4 | Fed rate hike seen more likely after inflation data - Reuters | Fed rate hike seen more likely after inflation data - Central Oregon Daily | What analysts are watching with key semiconductor maker TSMC set to report resul | US 10-Year Yield Steadies Ahead of CPI Report - TradingView"
+        },
+        {
+          "path": "01_daily/news/2026-10-14_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 7608,
+          "preview": "# News Parse v2 \u2014 2026-10-14T09:26:30.431276-04:00\nWindow\u224848h | news_mode=on | raw=571 | usable=128 | single_name=50 | noise_dropped=393\nusable polarity={'+': 2, '-': 28, 'mixed': 2, 'neutral': 96}"
+        }
+      ],
+      "preview": "raw=571 usable=128 single=50 \u00b7 US CPI Jumps 3.7%, Raising Federal Reserve Rate Hike Chances - \uc870\uc120\uc77c\ubcf4 | Fed rate hike seen more likely after inflation data - Reuters | Fed rate hike seen more likely after inflation data - Central Oregon Daily | What analysts are watching with key semiconductor maker TSMC set to report resul | US 10-Year Yield Steadies Ahead of CPI Report - TradingView \u00b7 # News Parse v2 \u2014 2026-10-14T09:26:30.431276-04:00\nWindow\u224848h | news_mode=on | raw=571 | usable=128 | single_name=50 | noise_dropped=393\nusable polarity={'+': 2, '-': 28, 'mixed': 2, 'neutral': 96}"
     }
   ],
   "href": {
@@ -3785,6 +3694,38 @@
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T09:26:06-04:00",
       "commit_msg": "auto: land ab [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_preopen_qc.json",
+      "at": "2026-10-14T09:26:33-04:00",
+      "commit_msg": "auto: land news_parse [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_preopen_status.json",
+      "at": "2026-10-14T09:26:33-04:00",
+      "commit_msg": "auto: land news_parse [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-14_parsed.json",
+      "at": "2026-10-14T09:26:33-04:00",
+      "commit_msg": "auto: land news_parse [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T09:26:33-04:00",
+      "commit_msg": "auto: land news_parse [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38569102482",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
