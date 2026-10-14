@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T09:20:14.783275-04:00",
+  "generated_at": "2026-10-14T09:24:30.987273-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -54,7 +54,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 278257,
+          "size": 276650,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -65,10 +65,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18357,
+          "size": 17913,
           "said": "MAP HEAT \u2014 2026-10-14",
           "bullets": [
-            "Export `finviz_2026-10-14.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T09:13:04.618424-04:00",
+            "Export `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T04:27:00.538231-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -94,7 +94,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 97156,
+          "size": 97004,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11984,
+          "size": 11816,
           "said": "Finviz Daily Digest \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T07:24:32.484688-04:00 \u00b7 export=data/exports/finviz_2026-10-14.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-14T04:23:44.540749-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -189,7 +189,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
+          "size": 97004,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -226,7 +226,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 278257,
+          "size": 276650,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -349,13 +349,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8415,
-          "said": "all_ok=False \u00b7 sectors 3/11 \u00b7 12 fail",
+          "size": 8407,
+          "said": "all_ok=False \u00b7 sectors 3/11 \u00b7 10 fail",
           "bullets": [
-            "general_predict:missing",
             "events:zero_events",
-            "news_judge:missing",
-            "finviz_market_digest:missing"
+            "finviz_market_digest:missing",
+            "sector_predict:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -542,7 +542,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
+          "size": 97004,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -556,8 +556,8 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9676 vix=falling yields=flat",
-          "size": 9676,
+          "reason": "sectors=11 bytes=9572 vix=falling yields=flat",
+          "size": 9572,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -600,16 +600,16 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8355066,
+          "size": 8345615,
           "said": "25 rows",
           "bullets": [
-            "CDNA, ARHS, ETN, JBL, ATRC, SHEL, KLIC, PBR"
+            "CDNA, ARHS, TLYS, ETN, JBL, SN, TEL, ATRC"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "CDNA, ARHS, ETN, JBL, ATRC"
+        "CDNA, ARHS, TLYS, ETN, JBL"
       ]
     },
     {
@@ -646,7 +646,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
+          "size": 97004,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -749,7 +749,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 97156,
+          "size": 97004,
           "said": "5887 tickers \u00b7 2046 signals \u00b7 top ABBV, AEM, AJG, AME, AMGN, AMX, AON, APH",
           "bullets": [
             "$85 Billion And Counting: JNJ Stock's Steady Cash-Return Habit",
@@ -778,8 +778,8 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9676 vix=falling yields=flat",
-          "size": 9676,
+          "reason": "sectors=11 bytes=9572 vix=falling yields=flat",
+          "size": 9572,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -792,10 +792,10 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8355066,
+          "size": 8345615,
           "said": "25 rows",
           "bullets": [
-            "CDNA, ARHS, ETN, JBL, ATRC, SHEL, KLIC, PBR"
+            "CDNA, ARHS, TLYS, ETN, JBL, SN, TEL, ATRC"
           ]
         },
         {
@@ -805,10 +805,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2261198,
-          "said": "208 rows",
+          "size": 2218633,
+          "said": "207 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ARQT, AVAH, WAY, CORT"
+            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, WAY"
           ]
         },
         {
@@ -830,9 +830,9 @@
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=184",
-          "size": 1464487,
-          "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
+          "reason": "horizons=5 names=215",
+          "size": 1471985,
+          "said": "1d BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -842,10 +842,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 69370,
+          "size": 82593,
           "said": "Stock book \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T09:18:35.516113-04:00_",
+            "_Generated 2026-10-14T06:01:58.362592-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -886,9 +886,9 @@
           "bullets": []
         }
       ],
-      "said": "208 rows",
+      "said": "207 rows",
       "bullets": [
-        "HALO, ONC, LLY, HRMY, ARQT"
+        "HALO, ONC, LLY, HRMY, ETON"
       ]
     },
     {
@@ -908,9 +908,9 @@
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=184",
-          "size": 1464487,
-          "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
+          "reason": "horizons=5 names=215",
+          "size": 1471985,
+          "said": "1d BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
         {
@@ -960,76 +960,73 @@
     "buy_1d": [
       {
         "ticker": "NTAP",
-        "score": 0.18239590894266144
+        "score": 0.2843313440021954
       },
       {
         "ticker": "BAND",
-        "score": 0.5054596446690593
+        "score": 0.6611787597649168
       },
       {
-        "ticker": "CNK",
-        "score": 0.6462022471693012
+        "ticker": "MQ",
+        "score": 0.5459164323222052
       },
       {
-        "ticker": "WLY",
-        "score": 0.5881875461728525
+        "ticker": "IT",
+        "score": 0.37635451217416427
       },
       {
-        "ticker": "FIS",
-        "score": 0.22514446794935988
+        "ticker": "CON",
+        "score": 0.7287913963202588
       },
       {
-        "ticker": "PRCH",
-        "score": 0.5404266780690136
+        "ticker": "AVPT",
+        "score": 0.7424881989450152
       },
       {
-        "ticker": "TMUS",
-        "score": 0.4429443674043055
-      },
-      {
-        "ticker": "UPWK",
-        "score": 0.4411786722204654
+        "ticker": "SGRY",
+        "score": 0.6603903952758077
       }
     ],
     "sell_1d": [
       {
-        "ticker": "EOSE",
-        "score": -0.3332996476105277
-      },
-      {
-        "ticker": "TE",
-        "score": -0.29778163594966284
-      },
-      {
         "ticker": "NEOV",
-        "score": -0.357067975796452
-      },
-      {
-        "ticker": "PLUG",
-        "score": -0.21292045250555586
+        "score": -0.3979840672726525
       },
       {
         "ticker": "OKLO",
-        "score": -0.2387618044895793
+        "score": -0.2666901180362591
       },
       {
         "ticker": "FCEL",
-        "score": -0.22590146154242213
+        "score": -0.2284152132262775
       },
       {
         "ticker": "NNDM",
-        "score": -0.16961541699668248
+        "score": -0.1638372495071339
       },
       {
-        "ticker": "QUBT",
-        "score": -0.17822254200443488
+        "ticker": "POWL",
+        "score": -0.040266310950080694
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.3581743968212493
+      },
+      {
+        "ticker": "NRGV",
+        "score": -0.2840014218486169
+      },
+      {
+        "ticker": "INDI",
+        "score": -0.2159049929401755
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 cash $9,606.56",
+      "said": "0 priced buys \u00b7 cash $9,606.56 \u00b7 morning S missing",
       "bullets": [
         "0 priced buys",
-        "cash $9,606.56"
+        "cash $9,606.56",
+        "morning S missing"
       ]
     },
     "general": {
@@ -1069,122 +1066,6 @@
     }
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T05:53:22.385019-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 25648,
-          "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 972,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-10-14.json",
-          "ok": true,
-          "reason": "",
-          "size": 101336,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-10-14_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 65831,
-          "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 711306,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-10-14_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 711306,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/factor_mine/morning_look/2026-10-14.json",
-          "ok": true,
-          "reason": "",
-          "size": 166518,
-          "preview": "keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 987300,
-          "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 711306,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 65831,
-          "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 711306,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 711306,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 987300,
-          "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1308,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1308,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: asof_commit, asof_committed_at, cutoff_et, date, n, read_from, rows \u00b7 2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_leg"
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -3795,6 +3676,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-14\n_Generated 2026-10-14T13:20:13 \u2014 live `flatten_robust`._\n**S=-1.65; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **-1.65** (DOWN) \u00b7 route **io**\n- Cash leftover **$9,606.56** (after 09:30 $7.23 \u00b7 after 16:00 $93,930.63)\n- Prior close **$103,555.33** \u00b7 09:30 **$103,555.33** \u00b7 overnight **$+0.00** \u00b7 session **$-9,624.70** \u00b7 16:00 **$93,930.63**\n- Overnight lots **4** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$9,599.33** \u2264 leftover after sells **$103,529.96** \u00b7 2026-10-14 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T09:24:29.287070-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-14_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97004,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-14_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11840,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-14\n_Generated 2026-10-14T04:23:44.540749-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-14\n_Generated 2026-10-14T04:23:44.540749-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
     }
   ],
   "href": {
@@ -3802,5 +3708,47 @@
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
     "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
-  }
+  },
+  "frozen_write_skips": [
+    {
+      "path": "01_daily/2026-10-14_preopen_qc.json",
+      "at": "2026-10-14T09:24:38-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_preopen_status.json",
+      "at": "2026-10-14T09:24:38-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-14_finviz_digest.json",
+      "at": "2026-10-14T09:24:38-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-14_finviz_digest.md",
+      "at": "2026-10-14T09:24:38-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T09:24:38-04:00",
+      "commit_msg": "auto: land finviz_digest [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    }
+  ]
 }

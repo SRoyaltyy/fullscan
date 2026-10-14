@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T09:20:14.783275-04:00",
+  "generated_at": "2026-10-14T09:24:30.987273-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,76 +12,73 @@
   "buy_1d": [
     {
       "ticker": "NTAP",
-      "score": 0.18239590894266144
+      "score": 0.2843313440021954
     },
     {
       "ticker": "BAND",
-      "score": 0.5054596446690593
+      "score": 0.6611787597649168
     },
     {
-      "ticker": "CNK",
-      "score": 0.6462022471693012
+      "ticker": "MQ",
+      "score": 0.5459164323222052
     },
     {
-      "ticker": "WLY",
-      "score": 0.5881875461728525
+      "ticker": "IT",
+      "score": 0.37635451217416427
     },
     {
-      "ticker": "FIS",
-      "score": 0.22514446794935988
+      "ticker": "CON",
+      "score": 0.7287913963202588
     },
     {
-      "ticker": "PRCH",
-      "score": 0.5404266780690136
+      "ticker": "AVPT",
+      "score": 0.7424881989450152
     },
     {
-      "ticker": "TMUS",
-      "score": 0.4429443674043055
-    },
-    {
-      "ticker": "UPWK",
-      "score": 0.4411786722204654
+      "ticker": "SGRY",
+      "score": 0.6603903952758077
     }
   ],
   "sell_1d": [
     {
-      "ticker": "EOSE",
-      "score": -0.3332996476105277
-    },
-    {
-      "ticker": "TE",
-      "score": -0.29778163594966284
-    },
-    {
       "ticker": "NEOV",
-      "score": -0.357067975796452
-    },
-    {
-      "ticker": "PLUG",
-      "score": -0.21292045250555586
+      "score": -0.3979840672726525
     },
     {
       "ticker": "OKLO",
-      "score": -0.2387618044895793
+      "score": -0.2666901180362591
     },
     {
       "ticker": "FCEL",
-      "score": -0.22590146154242213
+      "score": -0.2284152132262775
     },
     {
       "ticker": "NNDM",
-      "score": -0.16961541699668248
+      "score": -0.1638372495071339
     },
     {
-      "ticker": "QUBT",
-      "score": -0.17822254200443488
+      "ticker": "POWL",
+      "score": -0.040266310950080694
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.3581743968212493
+    },
+    {
+      "ticker": "NRGV",
+      "score": -0.2840014218486169
+    },
+    {
+      "ticker": "INDI",
+      "score": -0.2159049929401755
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $9,606.56",
+    "said": "0 priced buys \u00b7 cash $9,606.56 \u00b7 morning S missing",
     "bullets": [
       "0 priced buys",
-      "cash $9,606.56"
+      "cash $9,606.56",
+      "morning S missing"
     ]
   },
   "general": {
@@ -113,31 +110,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T09:18:07.631382-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-14_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9676,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-14_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5245,
-          "preview": "# Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -438,6 +410,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-14\n_Generated 2026-10-14T13:20:13 \u2014 live `flatten_robust`._\n**S=-1.65; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **-1.65** (DOWN) \u00b7 route **io**\n- Cash leftover **$9,606.56** (after 09:30 $7.23 \u00b7 after 16:00 $93,930.63)\n- Prior close **$103,555.33** \u00b7 09:30 **$103,555.33** \u00b7 overnight **$+0.00** \u00b7 session **$-9,624.70** \u00b7 16:00 **$93,930.63**\n- Overnight lots **4** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$9,599.33** \u2264 leftover after sells **$103,529.96** \u00b7 2026-10-14 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T09:24:29.287070-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-14_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97004,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-14_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11840,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-14\n_Generated 2026-10-14T04:23:44.540749-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-14\n_Generated 2026-10-14T04:23:44.540749-04:00 \u00b7 export=data/exports/finviz_2026-10-13.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
