@@ -1,8 +1,8 @@
 """Refuse Factor Mine's daily rows unless Grok wrote the day's general predict.
 
 PENDING CYRUS (2026-10-14). Same two-part rule as the h1 seal
-(research/hot_n4_clean_v4/forward/h1_grok_gate.py, shared via
-``reason_from``). For session D, Factor Mine rows may be written only when
+(research/hot_n4_clean_v4/forward/h1_grok_gate.py; both use
+src/grok_predict_rule.reason_from). For session D, Factor Mine rows may be written only when
 BOTH hold on origin/main:
   * 01_daily/<D>_preopen_status.json has ``grok_ok`` == true, and
   * 01_daily/general/<D>_predict_trace.md names a Grok model.
@@ -40,9 +40,7 @@ def reason(day: str, root: Path = ROOT) -> str | None:
     """None when Grok wrote D's predict (on origin/main); else why FM refuses."""
     if str(day) < FROM:
         return None
-    from research.hot_n4_clean_v4.forward.h1_grok_gate import (reason_from,
-                                                                status_rel,
-                                                                trace_rel)
+    from src.grok_predict_rule import reason_from, status_rel, trace_rel
     return reason_from(
         day, _blob(root, status_rel(day)), _blob(root, trace_rel(day)),
         "main", "Factor Mine", f"No Factor Mine rows written for {day}.",
