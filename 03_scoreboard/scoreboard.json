@@ -13729,18 +13729,6 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.42
-        },
-        "HORIZON_1M": {
-          "label": "1m",
-          "target_date": "2026-10-14",
-          "actual_pct": -1.92,
-          "actual_direction": "down",
-          "actual_magnitude_band": "mild",
-          "direction_hit": false,
-          "magnitude_hit": true,
-          "predicted_direction": "up",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.4
         }
       }
     },
@@ -17338,18 +17326,6 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
-        },
-        "HORIZON_1M": {
-          "label": "1m",
-          "target_date": "2026-10-14",
-          "actual_pct": -5.61,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "flat",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.48
         }
       }
     },
@@ -17546,18 +17522,6 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.48
-        },
-        "HORIZON_1M": {
-          "label": "1m",
-          "target_date": "2026-10-14",
-          "actual_pct": -4.26,
-          "actual_direction": "down",
-          "actual_magnitude_band": "mild",
-          "direction_hit": false,
-          "magnitude_hit": true,
-          "predicted_direction": "flat",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.45
         }
       }
     },
@@ -33139,7 +33103,7 @@
       "divergence_flagged": true,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-10-14_sector_communication_services_lesson.md",
       "sources_used": [],
       "horizon_calls": {},
       "sector": "Communication Services",
