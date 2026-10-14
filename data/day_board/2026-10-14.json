@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T11:23:19.243706-04:00",
+  "generated_at": "2026-10-14T11:23:40.863332-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -556,8 +556,8 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9679 vix=falling yields=flat",
-          "size": 9679,
+          "reason": "sectors=11 bytes=9676 vix=falling yields=flat",
+          "size": 9676,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -778,8 +778,8 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9679 vix=falling yields=flat",
-          "size": 9679,
+          "reason": "sectors=11 bytes=9676 vix=falling yields=flat",
+          "size": 9676,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -808,7 +808,7 @@
           "size": 2261198,
           "said": "208 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ARQT, AVAH, CORT, WAY"
+            "HALO, ONC, LLY, HRMY, ARQT, AVAH, WAY, CORT"
           ]
         },
         {
@@ -831,7 +831,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=184",
-          "size": 1464487,
+          "size": 1464419,
           "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
@@ -845,7 +845,7 @@
           "size": 69370,
           "said": "Stock book \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T11:22:41.637410-04:00_",
+            "_Generated 2026-10-14T11:23:38.105455-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -909,7 +909,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=184",
-          "size": 1464487,
+          "size": 1464419,
           "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
@@ -3601,30 +3601,6 @@
   },
   "frozen_write_skips": [
     {
-      "path": "01_daily/2026-10-14_preopen_status.json",
-      "at": "2026-10-14T09:24:50-04:00",
-      "commit_msg": "auto: land map_heat [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38569102482",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "01_daily/map_heat/2026-10-14_map_heat.json",
-      "at": "2026-10-14T09:24:50-04:00",
-      "commit_msg": "auto: land map_heat [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38569102482",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "data/day_board/2026-10-14.json",
-      "at": "2026-10-14T09:24:50-04:00",
-      "commit_msg": "auto: land map_heat [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38569102482",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T09:25:00-04:00",
       "commit_msg": "auto: land map_heat_baseline [2026-10-14]",
@@ -5198,6 +5174,30 @@
       "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38582802606",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_stock_book.md",
+      "at": "2026-10-14T11:24:08-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-14",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38587149841",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_input_health.json",
+      "at": "2026-10-14T11:24:08-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-14",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38587149841",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_stock_book.json",
+      "at": "2026-10-14T11:24:08-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-14",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38587149841",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
     }
   ]
