@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T04:42:03.144183-04:00",
+  "generated_at": "2026-10-14T04:50:14.956271-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -251,10 +251,10 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-10-14_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "FAIL",
+          "reason": "empty/truncated (zero_events)",
+          "size": 212,
+          "said": "empty/truncated (zero_events) \u00b7 0 events",
           "bullets": []
         },
         {
@@ -330,11 +330,11 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7573,
+          "size": 7579,
           "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
-            "events:missing",
+            "events:zero_events",
             "news_judge:missing",
             "news_actions:missing"
           ]
@@ -1284,6 +1284,41 @@
         }
       ],
       "preview": "raw=559 usable=124 single=43 \u00b7 U.S. September CPI Due Tonight \u2014 Core Inflation at 0.3% Could Reignite October R | US Treasury Yields Fall After New York Fed\u2019s Williams Says One More 2026 Rate Hi | Gold struggles to reclaim $4,200 as Fed interest rate hike risks persist, US CPI | Fed officials want to hold off a rate hike this month. Will this week\u2019s inflatio | US 10-Year Yield Steadies Ahead of CPI Report - TradingView \u00b7 # News Parse v2 \u2014 2026-10-14T04:41:51.304495-04:00\nWindow\u224848h | news_mode=on | raw=559 | usable=124 | single_name=43 | noise_dropped=392\nusable polarity={'+': 4, '-': 26, 'mixed': 2, 'neutral': 92}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-10-14",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-14T04:50:12.244451-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-10-14",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-14T04:50:14.427189-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-14_events.json",
+          "ok": false,
+          "reason": "zero_events",
+          "size": 212,
+          "preview": "0 events \u00b7 "
+        },
+        {
+          "path": "01_daily/events/2026-10-14_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 205,
+          "preview": "# Event Scan \u2014 2026-10-14 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+        }
+      ],
+      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-14 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
     }
   ],
   "href": {
