@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T11:03:42.900124-04:00",
+  "generated_at": "2026-10-14T11:04:00.603668-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1036,31 +1036,6 @@
     }
   },
   "lands": [
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:40:43.870734-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-14_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 37523,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-10-14_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 8061,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-14T06:40:31.405957-04:00\nraw=560 unique_events=3 tickers=61"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-14T06:40:31.405957-04:00\nraw=560 unique_events=3 tickers=61"
-    },
     {
       "key": "sector_predict",
       "title": "Per-sector predict (all 11)",
@@ -3362,6 +3337,24 @@
         }
       ],
       "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T11:03:59.151096-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-10-14_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1123078,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "href": {
@@ -4551,6 +4544,14 @@
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T11:03:44-04:00",
       "commit_msg": "auto: land finviz [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T11:04:01-04:00",
+      "commit_msg": "auto: land universe [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38578583308",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"

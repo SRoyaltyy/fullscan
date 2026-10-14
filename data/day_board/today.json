@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T11:03:42.900124-04:00",
+  "generated_at": "2026-10-14T11:04:00.603668-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -99,31 +99,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T10:34:46.614569-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-14_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 455123,
-          "preview": "raw=567 usable=122 single=48 \u00b7 US CPI Jumps 3.7%, Raising Federal Reserve Rate Hike Chances - \uc870\uc120\uc77c\ubcf4 | Fed rate hike seen more likely after inflation data - Yahoo Finance | Fed rate hike seen more likely after inflation data - Central Oregon Daily | US 10-Year Yield Steadies Ahead of CPI Report - TradingView | Hotter inflation could force Fed to move rate hike plans to October - HousingWir"
-        },
-        {
-          "path": "01_daily/news/2026-10-14_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 7251,
-          "preview": "# News Parse v2 \u2014 2026-10-14T10:34:34.029416-04:00\nWindow\u224848h | news_mode=on | raw=567 | usable=122 | single_name=48 | noise_dropped=397\nusable polarity={'+': 2, '-': 29, 'mixed': 1, 'neutral': 90}"
-        }
-      ],
-      "preview": "raw=567 usable=122 single=48 \u00b7 US CPI Jumps 3.7%, Raising Federal Reserve Rate Hike Chances - \uc870\uc120\uc77c\ubcf4 | Fed rate hike seen more likely after inflation data - Yahoo Finance | Fed rate hike seen more likely after inflation data - Central Oregon Daily | US 10-Year Yield Steadies Ahead of CPI Report - TradingView | Hotter inflation could force Fed to move rate hike plans to October - HousingWir \u00b7 # News Parse v2 \u2014 2026-10-14T10:34:34.029416-04:00\nWindow\u224848h | news_mode=on | raw=567 | usable=122 | single_name=48 | noise_dropped=397\nusable polarity={'+': 2, '-': 29, 'mixed': 1, 'neutral': 90}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -269,6 +244,24 @@
         }
       ],
       "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T11:03:59.151096-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-10-14_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1123078,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
