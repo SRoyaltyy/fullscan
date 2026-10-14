@@ -175,5 +175,21 @@ class SemanticTests(unittest.TestCase):
             r=SemanticHeadlineClient(['zhipu'],review=False,model_allowlist=['glm-4.7-flash']).analyze('FDA approves device')
         self.assertEqual(ask.call_args.kwargs['model_allowlist'],('glm-4.7-flash',));self.assertEqual(r['status'],'analyzed')
 
+class PrimaryStageIntegrityTests(unittest.TestCase):
+    def test_proposed_mechanism_cannot_be_only_support_for_specific_primary(self):
+        title='FDA may approve device'
+        v=valid()
+        v['events'][0].update(stage='future',evidence=[title])
+        v['actions'][0].update(stage='future',action_evidence='approve')
+        self.assertIn('primary class is supported only by proposed/future/negated events',validation_errors(v,title))
+        v['primary_lane_class']='statement_public'
+        v['events'].append({'event_type':'approval proposal','lane_class':'statement_public','stage':'future','evidence':[title]})
+        self.assertFalse(validation_errors(v,title))
+    def test_review_of_reported_historical_numbers_remains_valid(self):
+        v=valid()
+        v['events'][0].update(event_type='earnings review',lane_class='print_vs_priced',stage='retrospective',evidence=['Prior earnings review'])
+        v.update(actions=[],sectors=[],primary_lane_class='print_vs_priced')
+        self.assertFalse(validation_errors(v,'Prior earnings review'))
+
 if __name__=='__main__':unittest.main()
 

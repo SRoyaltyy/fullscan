@@ -5,7 +5,7 @@ of the existing enum; they do not add classes or silently rewrite predictions.
 """
 from .schema import EVENT_CLASSES
 
-ONTOLOGY_VERSION = 'headline-ontology-v7'
+ONTOLOGY_VERSION = 'headline-ontology-v8'
 DEFINITIONS = {
     'capacity': 'Physical production/service capacity added, expanded, closed or destroyed; not share issuance or market capitalization.',
     'demand': 'Orders, bookings, consumption, sales volumes or customer demand change, including signing, renewing or terminating a commercial supply/distribution contract; not merely a share-price move.',
@@ -39,7 +39,7 @@ DEFINITIONS = {
     'integrity': 'Accounting fraud, restatement, audit failure or disclosure-integrity breakdown. Mere price weakness is not integrity.',
     'key_person': 'Corporate executive/board appointment, departure, death or succession. Public-office personnel are policy_personnel.',
     'insider_flow': 'Reported insider purchase/sale of issuer shares; not general investor opinion.',
-    'blast_legal': 'Lawsuit, liability judgment, fine, settlement or injunction causing legal harm. IP rulings, regulatory probes and merger review use their narrower classes.',
+    'blast_legal': 'Lawsuit, criminal arrest/charge/sentence, liability judgment, fine, settlement or injunction causing legal harm. IP rulings, regulatory probes and merger review use their narrower classes.',
     'blast_ops': 'Concrete operational failure, accident, disruption or outage; planned capacity changes are capacity.',
     'blast_cyber': 'Cyberattack, breach, ransomware or cyber-caused operational disruption.',
     'product_harm': 'Actual unsafe/defective product, adverse harm report, recall or withdrawal. A recall how-to/playbook is discard; clinical efficacy data are trial_readout.',
@@ -48,14 +48,14 @@ DEFINITIONS = {
     'flow_index': 'Index addition/removal/rebalance with mechanical index-linked buying/selling.',
     'flow_mechanical': 'Explicit non-discretionary portfolio/vehicle flow or technical share adjustment; not ordinary price action.',
     'flow_forced_liq': 'Margin-triggered liquidation, compulsory asset selling or redemption-driven forced sale.',
-    'regime_state': 'Market prices, yields, trends, historical summaries, ongoing conditions or forecasts with no newly reported operative event. A price reaction with a concrete embedded event retains that event.',
+    'regime_state': 'Market prices, yields, ownership/portfolio-holding updates, trends, historical summaries, ongoing conditions or forecasts with no newly reported operative event. A price reaction with a concrete embedded event retains that event.',
     'regime_break': 'Verified broad physical/legal regime change with no more specific enum, such as an implemented ceasefire reopening a critical route. Not general geopolitical commentary.',
     'statement_public': 'Publicly made corporate or official comment, clarification, advocacy, request, warning, proposed policy or scheduled public engagement without an operative economic mechanism. Publicly made does not mean government-authored. Proposals are not enacted restrictions.',
     'rumor': 'Unconfirmed reports, speculation or attributed rumours of an event; not a documented proposal or confirmed decision.',
     'fx_translation': 'Explicit currency translation effect on company reported revenue/earnings, not generic FX market moves.',
     'regulatory_probe': 'Regulator opens/conducts an investigation, inquiry or enforcement probe; not a final judgment or product approval.',
     'activist_campaign': 'Activist shareholder demand/campaign, proxy fight or pressure for corporate change.',
-    'policy_personnel': 'Government, regulatory, judicial or central-bank official appointment, resignation, removal or succession.',
+    'policy_personnel': 'Government, regulatory, judicial, central-bank or statutory public-institution official appointment, resignation, removal or succession. Internal private party/student leadership is not public office.',
     'sovereign_credit': 'Sovereign credit rating, default, debt restructuring or creditworthiness decision; not ordinary bond yield changes.',
     'deal_review': 'Antitrust/national-security regulator or court review, approval, block or clearance of a specific acquisition/merger.',
     'labor_organize': 'Union formation, recognition, organizing election or collective-bargaining development without a work stoppage.',
@@ -78,6 +78,7 @@ DECISION_RULES = '''DECISION ORDER (reason internally, output only the requested
 10. Distinguish the main predicate from cause/background. A signed order/final issued rule is an operative procedural/decision event, not merely statement_public because a press release describes it. Choose the specific permission, mandatory standard, subsidy, tax or restriction mechanism if stated/known. A corporate financial result/guidance cut caused by input costs remains primarily results/guidance, not input_cost. A sentence/judgment after a cyberattack is primarily blast_legal, not a new cyberattack. Actual bankruptcy is distress_restruct, not generic litigation. An awarded order/contract is demand, not physical capacity already added. An activist stake is not an insider trade; routine external fund holdings do not make the manager an insider.
 11. Classify the action's economic object and stage together. An official rejection of a proposed restriction is normally statement_public, not an operative access_control; the rejected restriction may be an additional negated/proposed event. A final settlement closing an investigation is blast_legal; opening/conducting the investigation is regulatory_probe. A voluntary operating closure explicitly in bankruptcy is primarily distress_restruct. A stated new central-bank purchase/extension is factor_impulse even if it updates a multi-month streak. An adopted poison pill without actual shares issued is not dilution. A trading-halt request is statement_public with the requested listing mechanism retained as a proposal.
 12. Use primary null only for a relevant economic event genuinely outside these classes, not for ordinary commentary, market wraps or non-economic personal stories. Prices/conditions/market wraps with no newly occurring embedded event are regime_state. Personal athlete/gambling narratives, personal insolvency without an operating-business event, campus/student politics and internal party committees are discard absent a separately relevant economic/public-policy event. Party/student chairs are not corporate key_person; student votes are not workforce labor_organize. Promotional shopping discounts are discard, not measured demand. A hypothetical IPO's possible implications are regime_state/statement_public, not an actually occurring listing or an attributed rumor. Preparing/commissioning a future resource estimate is statement_public; reserve_revision requires a reported estimate. Corrections to post-offering equity counts/awards concern dilution/spinoff mechanics, not earnings prints. Explicit activist proxy-control contests are activist_campaign unless the main predicate is a separate executive appointment. Resumed administrative operations alone do not prove a broad economic regime_break; require the material physical/legal regime change. A past accident in the background does not make a currently reported legal proceeding a new operational accident.
+13. A specific primary mechanism cannot be supported only by proposed, future or negated events. Use statement_public/regime_state/rumor as appropriate without inventing a completed act. A completed committee/procedural step can have a reported event carrying the bill's mechanism; that does not mean the measure was enacted. Rebalance forecasts and negotiations for future borrowing are not executed index/funding events. Genuine current profit warnings retain preannounce even alongside stock reactions. External investors' disclosed holdings are regime_state, not insider_flow or merely a stock tip. Actual criminal proceedings use blast_legal; preserve the distinction from an accident in the background. A military incident/ceasefire violation alone does not demonstrate a new broad economic regime_break. Identify institutional office/operating changes before applying the student/personal-noise exclusion.
 '''
 
 def ontology_text():

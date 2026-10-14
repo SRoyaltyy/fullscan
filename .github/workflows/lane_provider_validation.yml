@@ -1,4 +1,4 @@
-name: Lane frozen-candidate title holdout
+name: Lane batched semantic development comparison
 on:
   push:
     branches: [codex/lane-provider-repair-20261014]
@@ -37,7 +37,7 @@ jobs:
           python-version: '3.12'
       - name: Validate contracts and regression repairs
         run: PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_semantic*.py' && PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_provider_repairs.py'
-      - name: Program-only GLM frozen-reference 100-title holdout
+      - name: Program-only GLM development 100-title replay
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
@@ -106,7 +106,7 @@ jobs:
       - name: Diagnose timer, OAuth and both Grok model paths
         id: diagnose
         run: PYTHONPATH=.:scripts python3 scripts/diagnose_openclaw_lane.py --output provider_results/grok_diagnostic.json
-      - name: Program-only Grok frozen-reference 100-title holdout when healthy and idle
+      - name: Program-only Grok development 100-title replay when healthy and idle
         if: steps.diagnose.outputs.ready == 'true'
         run: |
           PYTHONPATH=. python3 scripts/run_semantic_headlines.py \
@@ -128,3 +128,49 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git sparse-checkout disable || true
           test -f requirements.txt || { echo "requirements.txt missing after full checkout"; exit 1; }
+
+  grade_development:
+    needs: glm
+    if: ${{ always() && needs.glm.result == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/evaluate_semantic_acceptance.py
+            /docs/benchmarks/references_20261014/
+            /tests/fixtures/semantic_frozen_20261014/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: lane-glm-provider-100
+          path: scored_outputs
+      - name: Offline development comparison; no model or classifier calls
+        run: |
+          PYTHONPATH=scripts python - <<'PY'
+          import json,pathlib,hashlib
+          from evaluate_semantic_acceptance import compare
+          ip=pathlib.Path('tests/fixtures/semantic_frozen_20261014/batch_01.json')
+          rp=pathlib.Path('docs/benchmarks/references_20261014/batch_01.json')
+          raw=json.loads(next(pathlib.Path('scored_outputs').rglob('glm_program_outputs.json')).read_text())
+          ref=json.loads(rp.read_text())
+          assert raw['input_sha256']==ref['input_sha256']==hashlib.sha256(ip.read_bytes()).hexdigest()
+          report=compare(json.loads(ip.read_text()),ref,raw)
+          report.update(acceptance_eligible=False,scope='Development replay after first holdout failed; never increments acceptance streak',best_consecutive_passes=0,candidate={'runtime':raw['runtime_sha256'],'configuration':raw['configuration'],'catalog':raw['catalog']})
+          pathlib.Path('scores').mkdir()
+          pathlib.Path('scores/comparison.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
+          print(json.dumps({k:v for k,v in report.items() if k not in ('samples','candidate')}))
+          for key in ('action','lane','sectors'):
+              print(key.upper()+'_MISSES='+json.dumps([(r['n'],r['title'],r['program'],r['reference']) for r in report['samples'] if not r['checks'][key]],ensure_ascii=False))
+          failures={r['n'] for r in report['samples'] if not r['checks']['action']}
+          print('RAW_ACTION_MISSES='+json.dumps([(r['n'],r['program_output'].get('model_output',{}).get('actions')) for r in raw['outputs'] if r['n'] in failures],ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lane-semantic-development-score
+          path: scores/

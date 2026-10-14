@@ -42,3 +42,13 @@ Run 38511496266, runtime commit 2f135857222aad772209d851e28f08978545ff57, artifa
 Availability 100%; action agreement 96%; precision 100% (12 TP, 0 FP); recall 92.3077% (12/13); Lane 97%; exact sectors 91%. All five development metrics passed. Reconstructed diagnostic references still make this ineligible for acceptance.
 First independent holdout reference was frozen 2026-10-14T04:38:27.099Z at commit e396aaa813ca36d9c160e299d8276fc9c5df2fd1, before first classifier execution. Input SHA256 92c2c76f24dcc9d06693bda8e809591ca06ef2679fcfc8a6104dd3495746f632. The runtime prompt, source files, catalog and configuration are retained from V9. Only the workflow input path changes. References are outside sparse runtime checkout and never supplied to program prompts.
 Acceptance streak remains 0/10 pending the fresh score. Nine reserve batches still require independently frozen references.
+
+## V9 first independent holdout failed
+
+Program run 38512622813; scorer run 38513753936. Program artifact 11870409712 (ZIP SHA256 11e4efa52235170f8dd73209ef65e4cc8ce661e2179c02278c32991a2ecad946); score artifact 11870609116 (SHA256 371388ebc42bcf80841bdeb32267f314164243c85cb0590bf4b9b1717ad8e711).
+Source/configuration/catalog fingerprints matched V9. Reference freeze preceded execution and input SHA256 matched. Availability 100%; action agreement 93%; precision 93.3333% (14 TP,1 FP); recall 82.3529% (14/17); Lane 87%; exact sectors 86%. Acceptance streak **0/10**. This input is now development data and must never count as fresh again.
+Second independent 100-title reference was frozen at 2026-10-14T05:03:42.063Z, before any program execution, commit b150c012fa4056820d6aae7f362643842e652853; input SHA256 cf60e9b315856ede67b7de0be6932228a906cf2cdd3ed1af01ecf6ea8fba9e5f. It remains unrun.
+
+## V10 development candidate
+
+Clarifies military/security operations, strategic-reserve releases and statutory public-service restoration; distinguishes court venues/private requests from actual judicial acts and preserves unresolved authority. Adds primary-event stage consistency validation without rewriting predictions. Clarifies criminal legal events, public institutional personnel, future mechanisms, multi-clause business participants, market-data sector exclusions and physical security/education activities. No company/sample names added to runtime, no benchmark labels imported. Two new integrity tests; remote contract gate will run before the program. Same failed first holdout is replayed strictly as development, with isolated automatic offline grading and no grading LLM calls. Native local connection stalled, so source/checkpoints and grading remain in GitHub.
