@@ -1,16 +1,82 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T05:41:01.405398-04:00",
+  "generated_at": "2026-10-14T05:44:27.810831-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "NTAP",
+      "score": 0.2843313440021954
+    },
+    {
+      "ticker": "BAND",
+      "score": 0.6611787597649168
+    },
+    {
+      "ticker": "MQ",
+      "score": 0.6372269692245409
+    },
+    {
+      "ticker": "IT",
+      "score": 0.37635451217416427
+    },
+    {
+      "ticker": "CON",
+      "score": 0.7287913963202588
+    },
+    {
+      "ticker": "AVPT",
+      "score": 0.7535338980965183
+    },
+    {
+      "ticker": "SGRY",
+      "score": 0.6603903952758077
+    },
+    {
+      "ticker": "TOST",
+      "score": 0.4149437470323506
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "NEOV",
+      "score": -0.3979840672726525
+    },
+    {
+      "ticker": "OKLO",
+      "score": -0.2666901180362591
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.2284152132262775
+    },
+    {
+      "ticker": "NNDM",
+      "score": -0.1638372495071339
+    },
+    {
+      "ticker": "POWL",
+      "score": -0.040266310950080694
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.3581743968212493
+    },
+    {
+      "ticker": "NRGV",
+      "score": -0.2840014218486169
+    },
+    {
+      "ticker": "INDI",
+      "score": -0.2159049929401755
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {
@@ -30,31 +96,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz",
-      "title": "Finviz universe export",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T05:28:23.612632-04:00",
-      "files": [
-        {
-          "path": "data/exports/finviz_2026-10-14.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11030866,
-          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11508010,
-          "preview": "11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -222,6 +263,59 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, CDNA, ELV, AUPH \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, ETN, SN, JBL"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T05:44:26.968134-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-14_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1479066,
+          "preview": "1d BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/stock_book/2026-10-14_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-14_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2537,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-14_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12438,
+          "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12438,
+          "preview": "2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "01_daily/2026-10-14_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84975,
+          "preview": "# Stock book \u2014 2026-10-14\n_Generated 2026-10-14T05:41:12.182741-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 2026-10-14 BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY, TOST \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 # Stock book \u2014 2026-10-14\n_Generated 2026-10-14T05:41:12.182741-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
