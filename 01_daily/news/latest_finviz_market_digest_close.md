@@ -1,48 +1,46 @@
-# Finviz homepage market digest (close) — 2026-10-13
+# Finviz homepage market digest (close) — 2026-10-14
 
-**Generated:** 2026-10-13T19:45:55.800658-04:00 (America/New_York)
+**Generated:** 2026-10-14T16:26:38.042296-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks ended mixed as chip weakness and bank earnings offset energy gains amid Fed comments and firmer housing data ahead of September CPI report
-**Prior close:** SPX -0.35%  Nasdaq -0.15%  Dow —
-**SPX:** -0.35%  **Nasdaq:** -0.15%  **Dow:** —
+**Banner:** US stocks closed sharply lower as hotter CPI data lifted Treasury yields, boosted Fed hike odds and pressured AI and semiconductor shares
+**Prior close:** SPX -1.10%  Nasdaq -1.90%  Dow -0.10%
+**SPX:** -1.10%  **Nasdaq:** -1.90%  **Dow:** -0.10%
 **Oil:** —
-**CPI/Fed:** —
-**Leaders:** MU, AMAT, JNJ, C, WFC, JPM, GS, CVX, UNH, BAC, AZZ
-**Next session:** housing yes · retail no · Fed yes
+**CPI/Fed:** headline CPI rose 3; 0.2% hike (0.2% consensus, pushing Treasury yields higher and Fed rate-hike)
+**Leaders:** NVDA, AVGO, AMD, ORCL, DELL, BCS, CRWV, BAC, LLY, BSP, NFLX
+**Next session:** housing no · retail no · Fed yes
 **Earnings slate:** —
 **Geo/grain:** —
-**Clock legal for:** 2026-10-14
+**Clock legal for:** 2026-10-15
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-14) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-10-15) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX -0.35% · Nasdaq -0.15% · Dow —
+- **Prior close:** SPX -1.10% · Nasdaq -1.90% · Dow -0.10%
 - **Oil:** —
-- **CPI / Fed-odds:** —
-- **Named leaders:** MU, AMAT, JNJ, C, WFC, JPM, GS, CVX, UNH, BAC, AZZ
-- **Next-session calendar:** housing yes · retail no · Fed yes
-  - US existing home sales rose unexpectedly in September, adding a positive data surprise on the housing front.
-  - After the close, AZZ (AZZ) reported results that beat estimates but saw its shares move less than 2% as attention shifted to Wednesday’s September consumer inflation report and a heavier earnings calendar.
+- **CPI / Fed-odds:** headline CPI rose 3; 0.2% hike (0.2% consensus, pushing Treasury yields higher and Fed rate-hike)
+- **Named leaders:** NVDA, AVGO, AMD, ORCL, DELL, BCS, CRWV, BAC, LLY, BSP, NFLX
+- **Next-session calendar:** housing no · retail no · Fed yes
+  - Netflix (NFLX) said it would cut about 1,000 jobs, or 6% of its workforce, as part of a cost-reduction effort while remaining on track to meet its full-year earnings forecast, while after-hours index futures extended losses modestly as investors looked ahead to more financial sector results and continued Federal Reserve commentary on Thursday.
 - **Earnings slate:** —
 - **Geo / grain:** —
 
 ## Narrative
 
-**US stocks ended mixed as chip weakness and bank earnings offset energy gains amid Fed comments and firmer housing data ahead of September CPI report**
+**US stocks closed sharply lower as hotter CPI data lifted Treasury yields, boosted Fed hike odds and pressured AI and semiconductor shares**
 
-- The S&P 500 ($SPX) closed flat at 7,805.45, the Dow Jones ($DJI) fell 0.35% to 51,670.10, and the Nasdaq ($COMP) slipped 0.15% to 27,204.38, with 271 of 503 S&P names advancing.
-- Chipmakers lagged, with Micron Technology (MU) down 3.6% on reports of rising competition from China’s CXMT and AI spending concerns, Applied Materials (AMAT) off nearly 7% after withholding a near-term wafer-fab equipment spending forecast at its investor day, and the PHLX Semiconductor Index declining for a fifth straight session.
-- Johnson & Johnson (JNJ) fell about 6% after its CFO said the company now prefers spinning off its orthopedics business over selling it amid MedTech softness, and after recording a $5.5 billion talc lawsuit charge, even as it raised its annual sales outlook toward roughly $100 billion and lifted its profit outlook.
-- Bank earnings were mixed: Citigroup (C) dropped 5.6% despite a 4.3% EPS beat and about $2.85 in earnings per share, Wells Fargo (WFC) declined 3.1% after missing revenue estimates, JPMorgan Chase (JPM) slipped 0.9% on its first profit miss in nearly three years with EPS of $5.57, and Goldman Sachs (GS) ended little changed after Q3 EPS of $17.01 beat estimates by about 13% on strong dealmaking revenue.
-- Energy led the S&P 500 ($SPX) with a 1.7% gain, helped by more than 1% strength in Chevron (CVX) and other energy names.
-- Healthcare lagged with a roughly 1.3% drop as UnitedHealth Group (UNH) closed slightly lower despite an 11.9% EPS beat and a raised forecast.
-- New York Fed President John Williams said the central bank may not need to hike rates in 2027, comments that helped ease bond yields.
-- US existing home sales rose unexpectedly in September, adding a positive data surprise on the housing front.
-- In after-hours trading, Bank of America (BAC) agreed to pay $1.2 billion in penalties for money-laundering compliance failures.
-- After the close, AZZ (AZZ) reported results that beat estimates but saw its shares move less than 2% as attention shifted to Wednesday’s September consumer inflation report and a heavier earnings calendar.
+- The S&P 500 ($SPX) fell about 1.1%, the Nasdaq Composite ($COMP) dropped about 1.9% to 26,693, the Dow Jones ($DJI) lost about 0.1% and the Russell 2000 (IWM) slid about 1.9%, marking the worst session for the major indexes in roughly three months.
+- September headline CPI rose 3.7% year-over-year versus 3.6% forecast and core CPI increased 2.6% versus 2.5% expected, with monthly core up 0.3% versus 0.2% consensus, pushing Treasury yields higher and Fed rate-hike odds to around 50%.
+- AI, technology and semiconductor names led the sell-off, with Nvidia (NVDA) and Broadcom (AVGO) each losing roughly 3% and AMD (AMD) dropping about 6%.
+- Oracle (ORCL) sank about 9%, while Dell Technologies (DELL) tumbled about 11% after a downgrade from Barclays (BCS).
+- CoreWeave (CRWV) plunged about 15% after its bonds turned distressed, with yields hitting around 15% amid rising borrowing costs.
+- Bank of America (BAC) shares fell about 5% as Q3 results missed estimates due to a $1.2 billion regulatory charge tied to money laundering and sanctions violations and weaker FICC trading revenue.
+- Eight of 11 S&P sectors ended lower, while healthcare and other defensives outperformed, with Eli Lilly (LLY) climbing and select energy stocks providing relative support.
+- Bending Spoons (BSP) surged about 41% after Berkshire Hathaway (BRK-B) agreed to invest an additional $330 million in the company.
+- Netflix (NFLX) said it would cut about 1,000 jobs, or 6% of its workforce, as part of a cost-reduction effort while remaining on track to meet its full-year earnings forecast, while after-hours index futures extended losses modestly as investors looked ahead to more financial sector results and continued Federal Reserve commentary on Thursday.
