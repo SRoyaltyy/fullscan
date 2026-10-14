@@ -1,23 +1,23 @@
 # Sector Board — 2026-10-14
 
-Generated: **2026-10-14T05:26:41.015177-04:00** (America/New_York)
+Generated: **2026-10-14T07:20:08.877314-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
 ## Summary
 
-- Predicts present: **0/11**
+- Predicts present: **3/11**
 - Outcomes graded: **0/11**
 - Direction hits (when graded): **0/0**
-- Predicted up / down / flat-or-missing: **0** / **0** / **11**
+- Predicted up / down / flat-or-missing: **0** / **1** / **10**
 
 ## Full table
 
 | Sector | ETF | Dir | Mag | Score | Conf | Actual% | Dir hit | Mag hit | MD |
 |--------|-----|-----|-----|-------|------|---------|---------|---------|----|
-| Basic Materials | XLB | — | — | — | — | — | — | — | — |
-| Communication Services | XLC | — | — | — | — | — | — | — | — |
-| Consumer Cyclical | XLY | — | — | — | — | — | — | — | — |
+| Basic Materials | XLB | flat | flat | 7.70 | 0.55 | — | — | — | P |
+| Communication Services | XLC | flat | flat | -0.69 | 0.43 | — | — | — | P |
+| Consumer Cyclical | XLY | down | mild | -0.19 | 0.51 | — | — | — | P |
 | Consumer Defensive | XLP | — | — | — | — | — | — | — | — |
 | Energy | XLE | — | — | — | — | — | — | — | — |
 | Financial | XLF | — | — | — | — | — | — | — | — |
@@ -33,7 +33,7 @@ _None_
 
 ## Predicted laggards (down)
 
-_None_
+- **Consumer Cyclical** (XLY): score=-0.19, mag=mild, conf=0.51
 
 ## Files
 

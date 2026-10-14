@@ -2,21 +2,22 @@
  "risk_tilt": "off",
  "macros": [
   "hawkish",
-  "hawkish"
+  "bearish",
+  "bearish",
+  "hawkish",
+  "bearish",
+  "bearish"
  ],
  "sector_tilts": {
-  "Semis/Ai": "bearish",
-  "Metals": "bearish",
-  "Industrials": "bearish",
+  "Financial": "mixed",
   "Healthcare": "bullish",
-  "Cyclicals": "bullish"
+  "Industrials": "bearish",
+  "Technology": "mixed"
  },
  "tickers": {
-  "GDX": -4.0,
-  "BA": -4.0,
-  "XLI": 2.0,
-  "SMH": -1.5
+  "XLE": -1.5,
+  "AEM": -1.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO rates: [hawkish] CPI tonight dominant unresolved binary; Fed cluster lifted October hike odds \u2014 no directional lean pre-print (session/1d)\nMACRO risk: [neutral] 10Y steady, dollar off highs, oil/geo easing \u2014 consolidation context (session/1d)\nSECTOR semis/AI: [bearish] worst chip stretch in 16 months; ASML miss + APH \u22126.5% \u2014 AI basket unwind, NDX drag (SMH/APH)\nSECTOR metals: [bearish] gold \u2212$100 on hawkish Fed; GDX/AEM de-rating on real rates (GDX)\nSECTOR industrials: [bearish] FAA halts 737 MAX 10 certification, 31% of book at risk (BA)\nSECTOR healthcare: [bullish] UNH beats/raises, costs controlled \u2014 managed-care relief (UNH/HUM basket)\nSECTOR cyclicals: [bullish] China Sept exports/imports surge \u2014 industrial/exporter breadth (XLI)\nINTERACTION: Fed-hawkish + CPI pending = one rates cluster; yields + AI unwind compound NDX drag\nWATCH: pre-binary thin tape, low conviction until CPI prints",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO rates: [hawkish] Fed minutes flag another hike; yields surging, gold \u2212$100, CPI/Powell binary pending (session/1d)\nMACRO risk: [bearish] Fresh Hormuz tanker attack + Houthi Riyadh missiles; shipping/insurance costs surge (session/1d-1w)\nMACRO interaction: [bearish] Oil shock + hawkish Fed = stagflationary tape; mild-band cap unless futures confirm \u22650.5% down\nSECTOR financials: [mixed] Yields surge into bank earnings; BNY prime to 7.00% \u2014 NIM vs duration tug-of-war (XLF/KRE)\nSECTOR healthcare: [bullish] AMGN dazodalibep Phase 3 win; IBB/XBI sympathy (basket)\nSECTOR industrials: [bearish] Boeing MAX 10 cert halted by FAA; 31% of undelivered order book at risk (BA/XLI)\nSECTOR semis: [mixed] MSFT gigawatt in-house AI chips + NVDA China share loss to Huawei (substitution, not short trigger)\nWATCH: rates cluster dominates; do not double-count hawkish signals across Fed/yields/gold.",
  "date": "2026-10-14"
 }
