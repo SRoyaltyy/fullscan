@@ -2,7 +2,7 @@
 
 Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-10-13T20:16:01.833479-04:00 · 2026-08-13 → 2026-10-13 · live sit **untouched**.
+Generated 2026-10-14T06:59:10.502211-04:00 · 2026-08-13 → 2026-10-13 · live sit **untouched**.
 
 ## Latest morning
 
@@ -14,7 +14,7 @@ Generated 2026-10-13T20:16:01.833479-04:00 · 2026-08-13 → 2026-10-13 · live 
 - **CON** idio +22 · +8 −2 · E good · H1 None% H3 None%
 - **PACS** idio +22 · +8 −2 · E good · H1 None% H3 None%
 - **ASTH** idio +20 · +7 −2 · E good · H1 None% H3 None%
-- **UNH** idio +20 · +7 −2 · E good · H1 None% H3 None%
+- **UNH** idio +20 · +7 −2 · E good · H1 -4.94% H3 None%
 - **AMN** idio +18 · +8 −2 · E good · H1 None% H3 None%
 - **MD** idio +18 · +7 −2 · E good · H1 None% H3 None%
 - **NAUT** idio +18 · +7 −2 · E good · H1 None% H3 None%
@@ -33,10 +33,10 @@ Generated 2026-10-13T20:16:01.833479-04:00 · 2026-08-13 → 2026-10-13 · live 
 ## If we had taken them on hard-red sits (research)
 
 - Hard-red mornings in window: 16
-- long hold-1: n=120 win=55.0% mean 0.347%
-- long hold-3: n=119 win=47.9% mean -0.394%
+- long hold-1: n=121 win=54.5% mean 0.303%
+- long hold-3: n=120 win=48.3% mean -0.376%
 - short hold-1: n=120 win=59.2% mean 0.442%
-- short hold-3: n=117 win=57.3% mean 0.427%
+- short hold-3: n=119 win=58.0% mean 0.558%
 
 KEEP still wants >55% after fees and n≥30. Thin n is not a wire.
 

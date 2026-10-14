@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-10-13T20:16:01.833479-04:00",
+  "generated_at": "2026-10-14T06:59:10.502211-04:00",
   "from_date": "2026-08-13",
   "to_date": "2026-10-13",
   "n_days": 43,
@@ -1845,14 +1845,14 @@
   "backtest": {
     "n_hard_red": 16,
     "long_h1": {
-      "n": 120,
-      "win": 0.55,
-      "mean": 0.347
+      "n": 121,
+      "win": 0.5455,
+      "mean": 0.303
     },
     "long_h3": {
-      "n": 119,
-      "win": 0.479,
-      "mean": -0.394
+      "n": 120,
+      "win": 0.4833,
+      "mean": -0.376
     },
     "short_h1": {
       "n": 120,
@@ -1860,9 +1860,9 @@
       "mean": 0.442
     },
     "short_h3": {
-      "n": 117,
-      "win": 0.5726,
-      "mean": 0.427
+      "n": 119,
+      "win": 0.5798,
+      "mean": 0.558
     }
   },
   "latest": {
@@ -1976,7 +1976,7 @@
           "Side lean: long \u00b7 idio +24"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2082,7 +2082,7 @@
           "Side lean: long \u00b7 idio +22"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2188,7 +2188,7 @@
           "Side lean: long \u00b7 idio +22"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2294,7 +2294,7 @@
           "Side lean: long \u00b7 idio +20"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2386,7 +2386,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": -4.94,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -2404,8 +2404,8 @@
           "Tape RSI 42 \u00b7 MACD hist 1.4923",
           "Side lean: long \u00b7 idio +20"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 378.0,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2506,7 +2506,7 @@
           "Side lean: long \u00b7 idio +18"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2607,7 +2607,7 @@
           "Side lean: long \u00b7 idio +18"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2713,7 +2713,7 @@
           "Side lean: long \u00b7 idio +18"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2821,7 +2821,7 @@
           "Side lean: short \u00b7 idio -17"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2927,7 +2927,7 @@
           "Side lean: short \u00b7 idio -15"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3022,7 +3022,7 @@
           "Side lean: short \u00b7 idio -14"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3128,7 +3128,7 @@
           "Side lean: short \u00b7 idio -12"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3223,7 +3223,7 @@
           "Side lean: short \u00b7 idio -10"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3334,7 +3334,7 @@
           "Side lean: short \u00b7 idio -10"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3436,7 +3436,7 @@
           "Side lean: short \u00b7 idio -9"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3537,7 +3537,7 @@
           "Side lean: short \u00b7 idio -9"
         ],
         "h1_px": null,
-        "h1_date": null,
+        "h1_date": "2026-10-14",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -67071,7 +67071,7 @@
           ],
           "h1": -0.62,
           "h3": 1.41,
-          "h5": null,
+          "h5": 0.47,
           "side": "long",
           "why": [
             "Weather S=2.623. Not a sit morning \u2014 still ranked.",
@@ -67091,7 +67091,7 @@
           "h1_date": "2026-10-07",
           "h3_px": 167.32,
           "h3_date": "2026-10-09",
-          "h5_px": null,
+          "h5_px": 165.78,
           "h5_date": "2026-10-13"
         },
         {
@@ -67188,7 +67188,7 @@
           ],
           "h1": -3.32,
           "h3": -0.95,
-          "h5": null,
+          "h5": -1.62,
           "side": "long",
           "why": [
             "Weather S=2.623. Not a sit morning \u2014 still ranked.",
@@ -67208,7 +67208,7 @@
           "h1_date": "2026-10-07",
           "h3_px": 14.63,
           "h3_date": "2026-10-09",
-          "h5_px": null,
+          "h5_px": 14.53,
           "h5_date": "2026-10-13"
         },
         {
@@ -67305,7 +67305,7 @@
           ],
           "h1": -5.13,
           "h3": -2.69,
-          "h5": null,
+          "h5": -3.35,
           "side": "long",
           "why": [
             "Weather S=2.623. Not a sit morning \u2014 still ranked.",
@@ -67325,7 +67325,7 @@
           "h1_date": "2026-10-07",
           "h3_px": 41.55,
           "h3_date": "2026-10-09",
-          "h5_px": null,
+          "h5_px": 41.27,
           "h5_date": "2026-10-13"
         },
         {
@@ -67534,7 +67534,7 @@
           ],
           "h1": 1.6,
           "h3": 4.12,
-          "h5": null,
+          "h5": 2.73,
           "side": "long",
           "why": [
             "Weather S=2.623. Not a sit morning \u2014 still ranked.",
@@ -67554,7 +67554,7 @@
           "h1_date": "2026-10-07",
           "h3_px": 31.31,
           "h3_date": "2026-10-09",
-          "h5_px": null,
+          "h5_px": 30.89,
           "h5_date": "2026-10-13"
         },
         {
@@ -67768,7 +67768,7 @@
           ],
           "h1": 1.07,
           "h3": 3.67,
-          "h5": null,
+          "h5": 3.63,
           "side": "long",
           "why": [
             "Weather S=2.623. Not a sit morning \u2014 still ranked.",
@@ -67788,7 +67788,7 @@
           "h1_date": "2026-10-07",
           "h3_px": 56.21,
           "h3_date": "2026-10-09",
-          "h5_px": null,
+          "h5_px": 56.19,
           "h5_date": "2026-10-13"
         },
         {
@@ -68002,7 +68002,7 @@
           "weather": [],
           "h1": 5.56,
           "h3": 6.41,
-          "h5": null,
+          "h5": 9.83,
           "side": "short",
           "why": [
             "Weather S=2.623. Not a sit morning \u2014 still ranked.",
@@ -68021,7 +68021,7 @@
           "h1_date": "2026-10-07",
           "h3_px": 2.19,
           "h3_date": "2026-10-09",
-          "h5_px": null,
+          "h5_px": 2.11,
           "h5_date": "2026-10-13"
         },
         {
@@ -68104,7 +68104,7 @@
           ],
           "h1": 0.35,
           "h3": 3.22,
-          "h5": null,
+          "h5": 6.94,
           "side": "short",
           "why": [
             "Weather S=2.623. Not a sit morning \u2014 still ranked.",
@@ -68123,7 +68123,7 @@
           "h1_date": "2026-10-07",
           "h3_px": 13.81,
           "h3_date": "2026-10-09",
-          "h5_px": null,
+          "h5_px": 13.28,
           "h5_date": "2026-10-13"
         },
         {
@@ -68532,7 +68532,7 @@
           "weather": [],
           "h1": 11.02,
           "h3": 9.33,
-          "h5": null,
+          "h5": 4.67,
           "side": "short",
           "why": [
             "Weather S=2.623. Not a sit morning \u2014 still ranked.",
@@ -68551,7 +68551,7 @@
           "h1_date": "2026-10-07",
           "h3_px": 9.13,
           "h3_date": "2026-10-09",
-          "h5_px": null,
+          "h5_px": 9.6,
           "h5_date": "2026-10-13"
         },
         {
@@ -68900,7 +68900,7 @@
           "h3_px": 456.4,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "CEG",
@@ -69012,7 +69012,7 @@
           "h3_px": 293.89,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "HPE",
@@ -69122,7 +69122,7 @@
           "h3_px": 70.33,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "BSY",
@@ -69232,7 +69232,7 @@
           "h3_px": 35.15,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "NTSK",
@@ -69342,7 +69342,7 @@
           "h3_px": 20.64,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "CIEN",
@@ -69453,7 +69453,7 @@
           "h3_px": 405.01,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "DIOD",
@@ -69558,7 +69558,7 @@
           "h3_px": 90.62,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "PENG",
@@ -69673,7 +69673,7 @@
           "h3_px": 79.155,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         }
       ],
       "shorts": [
@@ -69776,7 +69776,7 @@
           "h3_px": 1.85,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "XPOF",
@@ -69881,7 +69881,7 @@
           "h3_px": 4.81,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "KOD",
@@ -69993,7 +69993,7 @@
           "h3_px": 99.26,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "FCEL",
@@ -70099,7 +70099,7 @@
           "h3_px": 16.37,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "LVWR",
@@ -70179,7 +70179,7 @@
           ],
           "h1": 9.26,
           "h3": -3.7,
-          "h5": null,
+          "h5": 3.7,
           "side": "short",
           "why": [
             "Weather S=-5.211 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -70199,8 +70199,8 @@
           "h1_date": "2026-10-08",
           "h3_px": 1.68,
           "h3_date": "2026-10-12",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 1.56,
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "AVBP",
@@ -70302,7 +70302,7 @@
           "h3_px": 16.46,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "FTAI",
@@ -70408,7 +70408,7 @@
           "h3_px": 165.53,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         },
         {
           "ticker": "TJGC",
@@ -70493,7 +70493,7 @@
           "h3_px": 33.23,
           "h3_date": "2026-10-12",
           "h5_px": null,
-          "h5_date": null
+          "h5_date": "2026-10-14"
         }
       ],
       "n_long_ok": 39,
@@ -71218,7 +71218,7 @@
             "gen bad"
           ],
           "h1": 1.0,
-          "h3": null,
+          "h3": 1.83,
           "h5": null,
           "side": "long",
           "why": [
@@ -71237,7 +71237,7 @@
           ],
           "h1_px": 24.24,
           "h1_date": "2026-10-09",
-          "h3_px": null,
+          "h3_px": 24.44,
           "h3_date": "2026-10-13",
           "h5_px": null,
           "h5_date": null
@@ -71542,7 +71542,7 @@
             "sector bad"
           ],
           "h1": 1.45,
-          "h3": null,
+          "h3": 8.06,
           "h5": null,
           "side": "short",
           "why": [
@@ -71561,7 +71561,7 @@
           ],
           "h1_px": 7.46,
           "h1_date": "2026-10-09",
-          "h3_px": null,
+          "h3_px": 6.96,
           "h3_date": "2026-10-13",
           "h5_px": null,
           "h5_date": null
@@ -71843,7 +71843,7 @@
             "gen bad"
           ],
           "h1": 0.83,
-          "h3": null,
+          "h3": 8.33,
           "h5": null,
           "side": "short",
           "why": [
@@ -71862,7 +71862,7 @@
           ],
           "h1_px": 1.19,
           "h1_date": "2026-10-09",
-          "h3_px": null,
+          "h3_px": 1.1,
           "h3_date": "2026-10-13",
           "h5_px": null,
           "h5_date": null
@@ -72290,7 +72290,7 @@
           "h1_px": 44.3,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -72395,7 +72395,7 @@
           "h1_px": 11.4,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -72495,7 +72495,7 @@
           "h1_px": 63.12,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -72595,7 +72595,7 @@
           "h1_px": 55.25,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -72701,7 +72701,7 @@
           "h1_px": 1.86,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -72807,7 +72807,7 @@
           "h1_px": 98.63,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -72913,7 +72913,7 @@
           "h1_px": 17.74,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -73029,7 +73029,7 @@
           "h1_px": 122.06,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         }
@@ -73137,7 +73137,7 @@
           "h1_px": 10.87,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -73238,7 +73238,7 @@
           "h1_px": 35.69,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -73339,7 +73339,7 @@
           "h1_px": 11.79,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -73445,7 +73445,7 @@
           "h1_px": 15.28,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -73551,7 +73551,7 @@
           "h1_px": 12.54,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -73646,7 +73646,7 @@
           "h1_px": 4.34,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -73757,7 +73757,7 @@
           "h1_px": 78.28,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         },
@@ -73853,7 +73853,7 @@
           "h1_px": 11.86,
           "h1_date": "2026-10-12",
           "h3_px": null,
-          "h3_date": null,
+          "h3_date": "2026-10-14",
           "h5_px": null,
           "h5_date": null
         }
@@ -75662,7 +75662,7 @@
             "Side lean: long \u00b7 idio +24"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -75768,7 +75768,7 @@
             "Side lean: long \u00b7 idio +22"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -75874,7 +75874,7 @@
             "Side lean: long \u00b7 idio +22"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -75980,7 +75980,7 @@
             "Side lean: long \u00b7 idio +20"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -76072,7 +76072,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": -4.94,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -76090,8 +76090,8 @@
             "Tape RSI 42 \u00b7 MACD hist 1.4923",
             "Side lean: long \u00b7 idio +20"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 378.0,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -76192,7 +76192,7 @@
             "Side lean: long \u00b7 idio +18"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -76293,7 +76293,7 @@
             "Side lean: long \u00b7 idio +18"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -76399,7 +76399,7 @@
             "Side lean: long \u00b7 idio +18"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -76507,7 +76507,7 @@
             "Side lean: short \u00b7 idio -17"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -76613,7 +76613,7 @@
             "Side lean: short \u00b7 idio -15"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -76708,7 +76708,7 @@
             "Side lean: short \u00b7 idio -14"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -76814,7 +76814,7 @@
             "Side lean: short \u00b7 idio -12"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -76909,7 +76909,7 @@
             "Side lean: short \u00b7 idio -10"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -77020,7 +77020,7 @@
             "Side lean: short \u00b7 idio -10"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -77122,7 +77122,7 @@
             "Side lean: short \u00b7 idio -9"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -77223,7 +77223,7 @@
             "Side lean: short \u00b7 idio -9"
           ],
           "h1_px": null,
-          "h1_date": null,
+          "h1_date": "2026-10-14",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
