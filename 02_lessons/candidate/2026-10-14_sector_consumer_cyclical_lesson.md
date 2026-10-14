@@ -1,0 +1,28 @@
+---
+trigger_pattern: "Consumer Cyclical / XLY on a same-session unsigned CPI (or NFP/FOMC) open, leading S0–S4 all-zero, ES/NQ both inside ±0.5%, XLY PM dead-flat, leftover-anchor flatten binding in the card, while v2 still publishes official down/mild from index_carry; after the print, a hawkish core miss sells AMZN/TSLA duration and the carry label grades as a hit."
+current_behavior: "Channel 2 correctly refuses to pre-score the binary and writes flat; the graded object is still engine down/mild from general index_carry. Post-close it is tempting to treat that carry hit as a sector signal (or to rewrite S1 from live WTI relief into CPI gasoline)."
+corrected_behavior: "Do not mint a new lesson from this hit. Keep the morning process: unsigned CPI in S0, live oil is not the CPI-gasoline clock, no AMZN/TSLA-as-wallet call, no leftover-anchor direction. Credit the hawkish print’s realization, not index_carry. Do not weaken 09-21 flatten or 10-02 “don’t pre-score CPI,” and do not add S1 gasoline on top of S0 (double-count)."
+evidence_cited: "Predicted down/mild vs XLY −0.77% / SPY −1.08% / rel +0.32% (dir+mag HIT). LLM leading_sum 0.0, overlay 0.0, flatten bound; engine total −0.187 from index_carry −0.411 (general −1.645) + tape_anchor +0.224. CPI 8:30 ET: core 0.3/2.6 vs 0.2/2.5, gasoline +9.1% m/m. AMZN −1.7%, TSLA −2.2%, HD +0.54%, XLK −2.98%, XLP +2.22%. Path was gap-red after CPI then grind — not a pre-open discretionary wipeout. Rolling dir=0.3 / mag=0.2 (n=10) still a down/mild bias; 10-08 and 10-13 were carry-style down/mild vs small green."
+error_category: "D"
+falsifier: "If someone proposed “on this pattern, official label should follow index_carry down/mild,” it is already falsified by 10-08 and 10-13 (carry-down vs small up). If someone proposed “always flatten the official label to flat here,” today is the falsifier (hawkish CPI → XLY −0.77% mild down). That two-way kill is why this is D / no new lesson."
+sector: "Consumer Cyclical"
+date: "2026-10-14"
+status: "candidate"
+---
+
+# Sector Reflection — Consumer Cyclical — 2026-10-14
+
+LESSON_BEGIN
+ERROR_CATEGORY: D
+TRIGGER_PATTERN: Consumer Cyclical / XLY on a same-session unsigned CPI (or NFP/FOMC) open, leading S0–S4 all-zero, ES/NQ both inside ±0.5%, XLY PM dead-flat, leftover-anchor flatten binding in the card, while v2 still publishes official down/mild from index_carry; after the print, a hawkish core miss sells AMZN/TSLA duration and the carry label grades as a hit.
+CURRENT_BEHAVIOR: Channel 2 correctly refuses to pre-score the binary and writes flat; the graded object is still engine down/mild from general index_carry. Post-close it is tempting to treat that carry hit as a sector signal (or to rewrite S1 from live WTI relief into CPI gasoline).
+CORRECTED_BEHAVIOR: Do not mint a new lesson from this hit. Keep the morning process: unsigned CPI in S0, live oil is not the CPI-gasoline clock, no AMZN/TSLA-as-wallet call, no leftover-anchor direction. Credit the hawkish print’s realization, not index_carry. Do not weaken 09-21 flatten or 10-02 “don’t pre-score CPI,” and do not add S1 gasoline on top of S0 (double-count).
+EVIDENCE: Predicted down/mild vs XLY −0.77% / SPY −1.08% / rel +0.32% (dir+mag HIT). LLM leading_sum 0.0, overlay 0.0, flatten bound; engine total −0.187 from index_carry −0.411 (general −1.645) + tape_anchor +0.224. CPI 8:30 ET: core 0.3/2.6 vs 0.2/2.5, gasoline +9.1% m/m. AMZN −1.7%, TSLA −2.2%, HD +0.54%, XLK −2.98%, XLP +2.22%. Path was gap-red after CPI then grind — not a pre-open discretionary wipeout. Rolling dir=0.3 / mag=0.2 (n=10) still a down/mild bias; 10-08 and 10-13 were carry-style down/mild vs small green.
+LESSON_MATCH_CHECK: No new CC-specific trigger. 10-02 (don’t pre-score CPI) and 09-21 (all-zero leftover-anchor flatten; ES/NQ inside ±0.5% so lean-toward-tape does not fire) already cover the morning. 10-13 CC oil-shock candidate does NOT match — live WTI −1.59% / RBOB −0.54% / PM flat, and that overlay was correctly refused. 10-14 general unsigned-CPI + ES/NQ-inside-±0.5% is the same-day parent, already applied.
+BACKWARD_CHECK: Forcing official flat would have MISSED today’s down/mild. Promoting “trust index_carry when leading is zero” would have kept the 10-08 (+0.31%) and 10-13 (+0.08%) down/mild misses. Scoring S1 from CPI gasoline would double-count S0 and still not have been knowable as a signed lean (core miss not knowable at open). No correction both fits today and repairs the rolling 0.3 dir.
+CONFLICT_CHECK: A “follow carry / pre-score hawkish CPI” lesson fights 10-02 and 09-21. A “S1 = lagged CPI gasoline because live oil was offered” lesson fights the 10-13 don’t-invent-oil-shock rule and double-counts S0. Leave active lessons unchanged.
+FALSIFIER: If someone proposed “on this pattern, official label should follow index_carry down/mild,” it is already falsified by 10-08 and 10-13 (carry-down vs small up). If someone proposed “always flatten the official label to flat here,” today is the falsifier (hawkish CPI → XLY −0.77% mild down). That two-way kill is why this is D / no new lesson.
+DIVERGENCE_VERDICT: none_flagged
+ACTIVE_LESSON_REVIEW: 10-02 don’t-pre-score-CPI — applied, process-right; realization hawkish; KEEP. 09-21 leftover-anchor flatten — applied in Channel 2, not in the graded engine label; today’s hit was the binary, not tape_anchor 0.224; do NOT weaken. Lean-toward-tape GREEN gate — correctly idle (ES +0.18% / NQ −0.06%). 10-13 CC Hormuz/oil-shock overlay — correctly not fired; KEEP. Do not restack AMZN/TSLA duration as a broad consumer-health miss; HD green and rel +0.32% vs XLK dump confirm that.
+SECTOR: Consumer Cyclical
+LESSON_END
