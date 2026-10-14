@@ -1,0 +1,31 @@
+{
+  "pass": true,
+  "metrics": {
+    "action": 0.94,
+    "lane": 0.96,
+    "sectors": 0.9,
+    "action_precision": 0.9444444444444444,
+    "action_recall": 1
+  },
+  "tp": 17,
+  "fp": 1,
+  "fn_or_unavailable": 0,
+  "availability": 1,
+  "acceptance_eligible": false,
+  "scope": "Development replay after first holdout failed; never increments acceptance streak",
+  "best_consecutive_passes": 0,
+  "run_id": 38607393547,
+  "runtime_commit": "90d53684595e655f6ee0f4c96756cb5ff657b479",
+  "artifacts": [
+    {
+      "id": 11916517588,
+      "name": "lane-semantic-development-score",
+      "digest": "sha256:8d118baff6f8e50341153f3ece015295414699bc6f2465fd9a4a560ca06d957b"
+    },
+    {
+      "id": 11916267657,
+      "name": "lane-glm-provider-100",
+      "digest": "sha256:9810f90833d81aaf2552c26fdc5d77d7809f63afe66b2687019061cc3c80cff2"
+    }
+  ]
+}
