@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:31:21.023158-04:00",
+  "generated_at": "2026-10-14T06:31:49.178863-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -237,8 +237,8 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 462597,
-          "said": "462597B on disk",
+          "size": 467185,
+          "said": "467185B on disk",
           "bullets": []
         },
         {
@@ -3456,6 +3456,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, ELV, AUPH, AMD \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, TLYS, ETN, JBL"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:31:47.692561-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-14_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 467185,
+          "preview": "raw=561 usable=133 single=41 \u00b7 US Treasury Yields Fall After New York Fed\u2019s Williams Says One More 2026 Rate Hi | Gold struggles to reclaim $4,200 as Fed interest rate hike risks persist, US CPI | Fed officials want to hold off a rate hike this month. Will this week\u2019s inflatio | US 10-Year Yield Steadies Ahead of CPI Report - TradingView | Dollar retreats from 18-month high as oil prices fall, inflation data in focus -"
+        },
+        {
+          "path": "01_daily/news/2026-10-14_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 8921,
+          "preview": "# News Parse v2 \u2014 2026-10-14T06:31:47.490571-04:00\nWindow\u224848h | news_mode=on | raw=561 | usable=133 | single_name=41 | noise_dropped=386\nusable polarity={'+': 4, '-': 26, 'mixed': 2, 'neutral': 101}"
+        }
+      ],
+      "preview": "raw=561 usable=133 single=41 \u00b7 US Treasury Yields Fall After New York Fed\u2019s Williams Says One More 2026 Rate Hi | Gold struggles to reclaim $4,200 as Fed interest rate hike risks persist, US CPI | Fed officials want to hold off a rate hike this month. Will this week\u2019s inflatio | US 10-Year Yield Steadies Ahead of CPI Report - TradingView | Dollar retreats from 18-month high as oil prices fall, inflation data in focus - \u00b7 # News Parse v2 \u2014 2026-10-14T06:31:47.490571-04:00\nWindow\u224848h | news_mode=on | raw=561 | usable=133 | single_name=41 | noise_dropped=386\nusable polarity={'+': 4, '-': 26, 'mixed': 2, 'neutral': 101}"
     }
   ],
   "href": {
