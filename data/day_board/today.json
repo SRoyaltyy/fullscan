@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:24:29.552995-04:00",
+  "generated_at": "2026-10-14T06:25:34.916390-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -110,31 +110,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:09:43.215553-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-10-14_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 21812,
-          "preview": "23 events \u00b7 US CPI for September released | Fed Beige Book released | FOMC meeting Oct 27-28: second hike on the table | September retail sales report | Shutdown averted; CR funds government through Dec 11 | US-China Board of Trade product lists for tariff cuts"
-        },
-        {
-          "path": "01_daily/events/2026-10-14_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 10027,
-          "preview": "# Event Scan \u2014 2026-10-14\n- events tracked: **23** (via openclaw)\n- uncertainty: **elevated**\n- summary: The window is dominated by inflation-vs-hike risk: today's September CPI (3.4% headline backdrop, core 2.4%) directly sets up an Oct 27-28 FOMC where a second hike is genuinely live. Geopolitical fuel-supply shocks (Houthi strikes on Saudi Arabia, Russian diesel disruption) are feeding the inflation problem while the US-China Board of Trade d\u00e9tente provides an offsetting de-escalation channel. Heavy AI-semiconductor earnings (ASML today, TSMC Oct 15) plus a dense blue-chip wave next week give constant catalysts through the window."
-        }
-      ],
-      "preview": "23 events \u00b7 US CPI for September released | Fed Beige Book released | FOMC meeting Oct 27-28: second hike on the table | September retail sales report | Shutdown averted; CR funds government through Dec 11 | US-China Board of Trade product lists for tariff cuts \u00b7 # Event Scan \u2014 2026-10-14\n- events tracked: **23** (via openclaw)\n- uncertainty: **elevated**\n- summary: The window is dominated by inflation-vs-hike risk: today's September CPI (3.4% headline backdrop, core 2.4%) directly sets up an Oct 27-28 FOMC where a second hike is genuinely live. Geopolitical fuel-supply shocks (Houthi strikes on Saudi Arabia, Russian diesel disruption) are feeding the inflation problem while the US-China Board of Trade d\u00e9tente provides an offsetting de-escalation channel. Heavy AI-semiconductor earnings (ASML today, TSMC Oct 15) plus a dense blue-chip wave next week give constant catalysts through the window."
-    },
     {
       "key": "news_judge",
       "title": "News judge",
@@ -351,6 +326,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-14\n_Generated 2026-10-14T06:24:28.216215-04:00 \u00b7 export=data/exports/finviz_2026-10-14.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_ \u00b7 11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:25:33.847025-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-14_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9530,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-14_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5138,
+          "preview": "# Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
