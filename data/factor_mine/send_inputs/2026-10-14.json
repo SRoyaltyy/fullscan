@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-14",
+  "files": [
+    {
+      "bytes": 8455093,
+      "path": "data/factor_mine/panel.json",
+      "sha256": "4e4d8ba7dcba3ed0860d4100fa6bde560d121345f015e1296f8d65b293a3840f"
+    },
+    {
+      "path": "01_daily/general/2026-10-14_predict.md",
+      "sha256": "dfdebb10a1d7a0bd3644bd1bf42d50e3be6be5657d0c2dedb0dac50b2f3905c6"
+    },
+    {
+      "path": "01_daily/news/2026-10-14_actions.json",
+      "sha256": "c251ff85fe0cac7b6eada6bc11b69fd558a8d6ab66e2094739a0b379795574b9"
+    },
+    {
+      "path": "01_daily/news/2026-10-14_finviz_digest.json",
+      "sha256": "8ad5402302d389e8647ce0ee81241eb27a15d6ba56951232e4cd941b6190fdce"
+    },
+    {
+      "path": "01_daily/news/2026-10-14_judge.md",
+      "sha256": "f9b5303b16b58724bafe6efedb4d451eb1bd66949be83d5b4340433084b6bf07"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-14/_board.json",
+      "sha256": "2b8e643109b793fe07e14d551374380988477987565584808c5005afcef669bb"
+    },
+    {
+      "path": "01_daily/weather/2026-10-14_weather.json",
+      "sha256": "68e26308dcc8a2ff1d68254489d3c67b9b6d3b01d5a46ff0612e6af474386109"
+    },
+    {
+      "path": "data/ab_checklist/2026-10-14_ab_checklist_enriched.csv",
+      "sha256": "d338bb1a65077f9e91924ed750f73519ce5c4850d3b114bc7904634188a670e3"
+    },
+    {
+      "path": "data/join/2026-10-14_ranked.csv",
+      "sha256": "340851f3a0434653b08dfcd7a1cd4f4fa6adf01ff8189b34625471a0e7fba7e1"
+    },
+    {
+      "path": "data/peers/2026-10-14_peer_rs.csv",
+      "sha256": "ddfb7334677cd9faeca962d70765b32d2761a81b9eb437bd02384acd0fa85445"
+    },
+    {
+      "path": "data/sleeve_merge/today.json",
+      "sha256": "ed9aaf7268296ac5b97d20bc36a29d08fe2ce6fe7744fa2d433d000c99b8898d"
+    },
+    {
+      "path": "excel_bot/suggestions/suggestions.csv",
+      "sha256": "7a484dafa3697cf77578fd96dd13e9e3da88e0ff0867d5885dec155892daa205"
+    }
+  ],
+  "picks": {
+    "union_hot_n4_h1": [
+      "JLHL",
+      "ODD",
+      "ECO",
+      "DHT"
+    ],
+    "union_hot_n4_holdup": [
+      "JLHL",
+      "ODD",
+      "ECO",
+      "DHT"
+    ]
+  },
+  "prices": [
+    {
+      "px": 4.7,
+      "px_src": "session_export",
+      "ticker": "JLHL"
+    },
+    {
+      "px": 17.58,
+      "px_src": "session_export",
+      "ticker": "ODD"
+    },
+    {
+      "px": 78.95,
+      "px_src": "session_export",
+      "ticker": "ECO"
+    },
+    {
+      "px": 21.9,
+      "px_src": "session_export",
+      "ticker": "DHT"
+    },
+    {
+      "px": 1.16,
+      "px_src": "session_export",
+      "ticker": "NAUT"
+    }
+  ],
+  "reason": "",
+  "rows": [],
+  "sha256": "298b782692fc33c2f7895a08a00c24148324621f9dedb1ee3c76f493b2047981",
+  "source": "no_same_day_panel"
+}
