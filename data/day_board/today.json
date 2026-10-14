@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:14:41.503970-04:00",
+  "generated_at": "2026-10-14T06:15:41.183261-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -25,10 +25,10 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "0 up / 0 down / 1 flat",
+    "said": "0 up / 0 down / 2 flat",
     "bullets": [
       "XLB FLAT +7.7",
-      "XLC missing",
+      "XLC FLAT -0.7",
       "XLY missing",
       "XLP missing",
       "XLE missing",
@@ -232,70 +232,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Basic Materials (1/11)",
+      "title": "Sector predict Communication Services (2/11)",
       "date": "2026-10-14",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-14T06:14:40.659566-04:00",
+      "at": "2026-10-14T06:15:40.338482-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-10-14/basic_materials_predict.md",
+          "path": "01_daily/sectors/2026-10-14/communication_services_predict.md",
           "ok": true,
           "reason": "",
-          "size": 7261,
-          "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-10-14\n- news_mode: **on**\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **7.7** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **4.924** (ES +0.18%, HG +0.66%, GC +0.90%, DX -0.02%, PM:XLB +1.00%) \u00b7 index_carry **-0.411** (general -1.645) \u00b7 llm_overlay **3.188** (raw 3.188)"
+          "size": 5551,
+          "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-10-14\n- news_mode: **on**\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-0.686** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.15** (NQ -0.06%, ES +0.18%, PM:XLC +0.01%) \u00b7 index_carry **-0.411** (general -1.645) \u00b7 llm_overlay **-0.425** (raw -0.425)"
         },
         {
-          "path": "01_daily/sectors/2026-10-14/basic_materials_predict_trace.md",
+          "path": "01_daily/sectors/2026-10-14/communication_services_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 1457,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-10-14\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (97,603 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLB materials stocks copper gold premarket October 14 2026\"* \u2192 got 6 results (via ddg)\n- State Street Materials Select Sector SPDR ETF (XLB) Stock ... (https://finance.yahoo.com/quote/XLB/?fr=sycsrp_catchall)\n- XLB Stock Premarket (https://stockmarketwatch.com/stock/XLB/premarket)\n- Materials Sector (XLB) ETF Forecast & Price Target (2026) (https://clearank.com/etf/materials-select-sector-xlb/)\n**Step 2 \u2014 Research.** The model wanted to know: *\"copper LME price October 2026 inventories China demand\"* \u2192 got 6 results (via "
+          "size": 2274,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-10-14\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (100,198 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Meta Alphabet news today October 14 2026\"* \u2192 got 6 results (via ddg)\n- Alphabet vs. Meta Platforms: Here's What Revenue Trends Tell ... (https://finance.yahoo.com/media-advertising/articles/alphabet-vs-meta-platforms-heres-052449727.html?fr=sycsrp_catchall)\n- Why Is Alphabet Inc. Stock Up Today? (October 14, 2026 ... (https://www.whyisstock.com/stocks/GOOGL)\n- AI News Today: Wednesday, October 14, 2026 \u2014 AIBriefs (https://aibriefs.news/ai-news-today)\n**Step 2 \u2014 Research.** The model wanted to know: *\"XLC communica"
         },
         {
-          "path": "01_daily/_transcripts/2026-10-14_sector_basic_materials_predict.json",
+          "path": "01_daily/_transcripts/2026-10-14_sector_communication_services_predict.json",
           "ok": true,
           "reason": "",
-          "size": 111094,
+          "size": 112594,
           "preview": "keys: model, messages, provider, fallback_reason"
         },
         {
           "path": "01_daily/2026-10-14_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 8415,
+          "size": 8406,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-10-14/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 2438,
+          "size": 2433,
           "preview": "keys: date, n_ok, n_total, required, ok, summary, sectors"
         },
         {
           "path": "01_daily/sectors/2026-10-14/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1568,
-          "preview": "# Sector Board \u2014 2026-10-14\nGenerated: **2026-10-14T06:14:40.646794-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1571,
+          "preview": "# Sector Board \u2014 2026-10-14\nGenerated: **2026-10-14T06:15:40.326252-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-10-14/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6560,
+          "size": 6731,
           "preview": "keys: date, generated_at, summary, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 1069796,
+          "size": 1070912,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-10-14\n- news_mode: **on**\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **7.7** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **4.924** (ES +0.18%, HG +0.66%, GC +0.90%, DX -0.02%, PM:XLB +1.00%) \u00b7 index_carry **-0.411** (general -1.645) \u00b7 llm_overlay **3.188** (raw 3.188) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-10-14\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (97,603 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLB materials stocks copper gold premarket October 14 2026\"* \u2192 got 6 results (via ddg)\n- State Street Materials Select Sector SPDR ETF (XLB) Stock ... (https://finance.yahoo.com/quote/XLB/?fr=sycsrp_catchall)\n- XLB Stock Premarket (https://stockmarketwatch.com/stock/XLB/premarket)\n- Materials Sector (XLB) ETF Forecast & Price Target (2026) (https://clearank."
+      "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-10-14\n- news_mode: **on**\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-0.686** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.15** (NQ -0.06%, ES +0.18%, PM:XLC +0.01%) \u00b7 index_carry **-0.411** (general -1.645) \u00b7 llm_overlay **-0.425** (raw -0.425) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-10-14\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (100,198 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Meta Alphabet news today October 14 2026\"* \u2192 got 6 results (via ddg)\n- Alphabet vs. Meta Platforms: Here's What Revenue Trends Tell ... (https://finance.yahoo.com/media-advertising/articles/alphabet-vs-meta-platforms-heres-052449727.html?fr=sycsrp_catchall)\n- Why Is Alphabet Inc. Stock Up Today? (October 14, 2026 ... (https://www.whyisstock.com/stocks/GOO"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
