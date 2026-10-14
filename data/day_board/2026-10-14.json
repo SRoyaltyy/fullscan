@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T09:35:15.780882-04:00",
+  "generated_at": "2026-10-14T09:35:26.703212-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -3528,7 +3528,7 @@
       "date": "2026-10-14",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-14T09:35:14.220941-04:00",
+      "at": "2026-10-14T09:35:25.173717-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-10-14_actions.json",
@@ -3806,6 +3806,22 @@
     {
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T09:35:17-04:00",
+      "commit_msg": "auto: land news_actions [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-14_actions.json",
+      "at": "2026-10-14T09:35:28-04:00",
+      "commit_msg": "auto: land news_actions [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T09:35:28-04:00",
       "commit_msg": "auto: land news_actions [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38569102482",
