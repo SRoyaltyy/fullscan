@@ -1,0 +1,2881 @@
+{
+  "pass": true,
+  "metrics": {
+    "action": 0.96,
+    "lane": 0.97,
+    "sectors": 0.91,
+    "action_precision": 1,
+    "action_recall": 0.9230769230769231
+  },
+  "tp": 12,
+  "fp": 0,
+  "fn_or_unavailable": 1,
+  "availability": 1,
+  "samples": [
+    {
+      "n": 1,
+      "title": "Krait Critical Minerals Closes Final Tranche of Private Placement; Total Gross Proceeds Reach $1.725 Million - TradingView",
+      "program": {
+        "action": false,
+        "lane": "dilution",
+        "sectors": [
+          "Basic Materials"
+        ]
+      },
+      "reference": {
+        "n": 1,
+        "title": "Krait Critical Minerals Closes Final Tranche of Private Placement; Total Gross Proceeds Reach $1.725 Million - TradingView",
+        "action": false,
+        "acceptable_lane_classes": [
+          "dilution"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Basic Materials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 2,
+      "title": "AI boom drives surge in debt financing - New Electronics",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": [
+          "Technology"
+        ]
+      },
+      "reference": {
+        "n": 2,
+        "title": "AI boom drives surge in debt financing - New Electronics",
+        "action": false,
+        "acceptable_lane_classes": [
+          "credit_funding",
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Technology"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 3,
+      "title": "Here's how much worse U.S. debt could get as Treasury yields surge to the highest levels in two decades - Fortune",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": []
+      },
+      "reference": {
+        "n": 3,
+        "title": "Here's how much worse U.S. debt could get as Treasury yields surge to the highest levels in two decades - Fortune",
+        "action": false,
+        "acceptable_lane_classes": [
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 4,
+      "title": "Product Recall: Audi Q3, Hyundai Santa FE MX5 HEV And Toyota HINO 700 Trucks - The Bulrushes",
+      "program": {
+        "action": false,
+        "lane": "product_harm",
+        "sectors": [
+          "Consumer Cyclical"
+        ]
+      },
+      "reference": {
+        "n": 4,
+        "title": "Product Recall: Audi Q3, Hyundai Santa FE MX5 HEV And Toyota HINO 700 Trucks - The Bulrushes",
+        "action": false,
+        "acceptable_lane_classes": [
+          "product_harm"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Consumer Cyclical"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 5,
+      "title": "Apple Inc (AAPL) Insider Sale: SVP, General Counsel and Governme - GuruFocus",
+      "program": {
+        "action": false,
+        "lane": "insider_flow",
+        "sectors": [
+          "Technology"
+        ]
+      },
+      "reference": {
+        "n": 5,
+        "title": "Apple Inc (AAPL) Insider Sale: SVP, General Counsel and Governme - GuruFocus",
+        "action": false,
+        "acceptable_lane_classes": [
+          "insider_flow"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Technology"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 6,
+      "title": "Interim Phase 2 Results from First-in-Class Combination of Invikafusp Alfa and TRODELVY? Selected for Oral Presentation at SITC 2026 - WyomingNews.com",
+      "program": {
+        "action": false,
+        "lane": "trial_readout",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 6,
+        "title": "Interim Phase 2 Results from First-in-Class Combination of Invikafusp Alfa and TRODELVY? Selected for Oral Presentation at SITC 2026 - WyomingNews.com",
+        "action": false,
+        "acceptable_lane_classes": [
+          "trial_readout"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 7,
+      "title": "Insider Purchase: Director at $CRESY Buys 17,000 Shares - Quiver Quantitative",
+      "program": {
+        "action": false,
+        "lane": "insider_flow",
+        "sectors": [
+          "Industrials"
+        ]
+      },
+      "reference": {
+        "n": 7,
+        "title": "Insider Purchase: Director at $CRESY Buys 17,000 Shares - Quiver Quantitative",
+        "action": false,
+        "acceptable_lane_classes": [
+          "insider_flow"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 8,
+      "title": "S&P 500, Nasdaq, Dow End Week Higher As Weak Jobs Report Cools Rate Hike Bets �� NVDA, BA, SPCX, RIVN, APLD In Focus - Stocktwits",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": []
+      },
+      "reference": {
+        "n": 8,
+        "title": "S&P 500, Nasdaq, Dow End Week Higher As Weak Jobs Report Cools Rate Hike Bets �� NVDA, BA, SPCX, RIVN, APLD In Focus - Stocktwits",
+        "action": false,
+        "acceptable_lane_classes": [
+          "print_vs_priced",
+          "factor_impulse",
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 9,
+      "title": "Including spin-off equity awards, Atrium Therapeutics (RNA) corrects its post-offering count to 21.6M. - Stock Titan",
+      "program": {
+        "action": false,
+        "lane": "dilution",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 9,
+        "title": "Including spin-off equity awards, Atrium Therapeutics (RNA) corrects its post-offering count to 21.6M. - Stock Titan",
+        "action": false,
+        "acceptable_lane_classes": [
+          "dilution",
+          "corporate_action_spinoff"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 10,
+      "title": "CMMC challenges union election as nurses continue fight for reinstatement - newscentermaine.com",
+      "program": {
+        "action": false,
+        "lane": "labor_organize",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 10,
+        "title": "CMMC challenges union election as nurses continue fight for reinstatement - newscentermaine.com",
+        "action": false,
+        "acceptable_lane_classes": [
+          "labor_organize",
+          "blast_legal"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 11,
+      "title": "Renault Partners with Thales to Boost Drone Production Capacity - gurufocus.com",
+      "program": {
+        "action": false,
+        "lane": "capacity",
+        "sectors": [
+          "Industrials"
+        ]
+      },
+      "reference": {
+        "n": 11,
+        "title": "Renault Partners with Thales to Boost Drone Production Capacity - gurufocus.com",
+        "action": false,
+        "acceptable_lane_classes": [
+          "capacity"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 12,
+      "title": "Students�� Union Election: Tension escalates at Utkal University as student groups engaged in tense face-off - KalingaTV",
+      "program": {
+        "action": false,
+        "lane": "discard",
+        "sectors": []
+      },
+      "reference": {
+        "n": 12,
+        "title": "Students�� Union Election: Tension escalates at Utkal University as student groups engaged in tense face-off - KalingaTV",
+        "action": false,
+        "acceptable_lane_classes": [
+          "discard"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 13,
+      "title": "Austrian furniture retailer XXXLutz's German deal hit by EU antitrust investigation - Reuters",
+      "program": {
+        "action": true,
+        "lane": "market_structure",
+        "sectors": [
+          "Consumer Cyclical"
+        ]
+      },
+      "reference": {
+        "n": 13,
+        "title": "Austrian furniture retailer XXXLutz's German deal hit by EU antitrust investigation - Reuters",
+        "action": true,
+        "acceptable_lane_classes": [
+          "deal_review",
+          "regulatory_probe"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Consumer Cyclical"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": false,
+        "sectors": true
+      }
+    },
+    {
+      "n": 14,
+      "title": "City Therapeutics targets $158M IPO; Iambic seeks $135M Nasdaq debut - Endpoints News",
+      "program": {
+        "action": false,
+        "lane": "listing_flow",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 14,
+        "title": "City Therapeutics targets $158M IPO; Iambic seeks $135M Nasdaq debut - Endpoints News",
+        "action": false,
+        "acceptable_lane_classes": [
+          "listing_flow"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 15,
+      "title": "BioLife Solutions Received Notice of Delisting - TradingView",
+      "program": {
+        "action": false,
+        "lane": "listing_flow",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 15,
+        "title": "BioLife Solutions Received Notice of Delisting - TradingView",
+        "action": false,
+        "acceptable_lane_classes": [
+          "listing_flow"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 16,
+      "title": "NYT: USA and Russia is negotiating a multibillion-dollar deal for Lukoil - EADaily",
+      "program": {
+        "action": false,
+        "lane": "corporate_action_mna",
+        "sectors": [
+          "Energy"
+        ]
+      },
+      "reference": {
+        "n": 16,
+        "title": "NYT: USA and Russia is negotiating a multibillion-dollar deal for Lukoil - EADaily",
+        "action": false,
+        "acceptable_lane_classes": [
+          "rumor",
+          "corporate_action_mna"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Energy"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 17,
+      "title": "HLB Resubmits Liver Cancer Drug Application to U.S. FDA After Complete Response Letter - TipRanks",
+      "program": {
+        "action": false,
+        "lane": "gate",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 17,
+        "title": "HLB Resubmits Liver Cancer Drug Application to U.S. FDA After Complete Response Letter - TipRanks",
+        "action": false,
+        "acceptable_lane_classes": [
+          "gate"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 18,
+      "title": "TIAA Data Breach Lawsuit Investigation - Claim Depot",
+      "program": {
+        "action": false,
+        "lane": "blast_cyber",
+        "sectors": [
+          "Financial"
+        ]
+      },
+      "reference": {
+        "n": 18,
+        "title": "TIAA Data Breach Lawsuit Investigation - Claim Depot",
+        "action": false,
+        "acceptable_lane_classes": [
+          "blast_legal",
+          "blast_cyber"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Financial"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 19,
+      "title": "Innovent��s SYCUME Meets Primary Endpoint in Phase III Trial for Inactive Thyroid Eye Disease in China - BioPharma APAC",
+      "program": {
+        "action": false,
+        "lane": "trial_readout",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 19,
+        "title": "Innovent��s SYCUME Meets Primary Endpoint in Phase III Trial for Inactive Thyroid Eye Disease in China - BioPharma APAC",
+        "action": false,
+        "acceptable_lane_classes": [
+          "trial_readout"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 20,
+      "title": "Cutera stock trades at USD 0.008 after Nasdaq delisting - AD HOC NEWS",
+      "program": {
+        "action": false,
+        "lane": "listing_flow",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 20,
+        "title": "Cutera stock trades at USD 0.008 after Nasdaq delisting - AD HOC NEWS",
+        "action": false,
+        "acceptable_lane_classes": [
+          "listing_flow",
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 21,
+      "title": "How much more your festive flight tickets will cost after the latest fuel surcharge hike - Firstpost",
+      "program": {
+        "action": false,
+        "lane": "input_cost",
+        "sectors": [
+          "Industrials"
+        ]
+      },
+      "reference": {
+        "n": 21,
+        "title": "How much more your festive flight tickets will cost after the latest fuel surcharge hike - Firstpost",
+        "action": false,
+        "acceptable_lane_classes": [
+          "input_cost"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 22,
+      "title": "Anthropic Has Bigger Safety and IPO Problems Than Claude's Feelings - Bloomberg.com",
+      "program": {
+        "action": false,
+        "lane": "statement_public",
+        "sectors": [
+          "Technology"
+        ]
+      },
+      "reference": {
+        "n": 22,
+        "title": "Anthropic Has Bigger Safety and IPO Problems Than Claude's Feelings - Bloomberg.com",
+        "action": false,
+        "acceptable_lane_classes": [
+          "discard",
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Technology"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": false,
+        "sectors": true
+      }
+    },
+    {
+      "n": 23,
+      "title": "(Breaking) HD Hyundai Heavy Industries' Labor-Management Agreement Rejected in Union Vote - ?????",
+      "program": {
+        "action": false,
+        "lane": "labor_organize",
+        "sectors": [
+          "Industrials"
+        ]
+      },
+      "reference": {
+        "n": 23,
+        "title": "(Breaking) HD Hyundai Heavy Industries' Labor-Management Agreement Rejected in Union Vote - ?????",
+        "action": false,
+        "acceptable_lane_classes": [
+          "labor_organize"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 24,
+      "title": "Academic Study Alleging Civil Servant Property Insider Buying Lacks Rigour - BizBeat",
+      "program": {
+        "action": false,
+        "lane": "discard",
+        "sectors": []
+      },
+      "reference": {
+        "n": 24,
+        "title": "Academic Study Alleging Civil Servant Property Insider Buying Lacks Rigour - BizBeat",
+        "action": false,
+        "acceptable_lane_classes": [
+          "discard",
+          "statement_public"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Real Estate"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": false
+      }
+    },
+    {
+      "n": 25,
+      "title": "He was banned by betting sites, and filed for bankruptcy. Then he relapsed on Kalshi - NPR",
+      "program": {
+        "action": false,
+        "lane": "discard",
+        "sectors": [
+          "Financial"
+        ]
+      },
+      "reference": {
+        "n": 25,
+        "title": "He was banned by betting sites, and filed for bankruptcy. Then he relapsed on Kalshi - NPR",
+        "action": false,
+        "acceptable_lane_classes": [
+          "discard"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Consumer Cyclical"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": false
+      }
+    },
+    {
+      "n": 26,
+      "title": "Heavy Minerals Engages Mineral Technologies for Red Hill Maiden JORC Resource Estimate as Garnet Dominates All 47 Composites - Kalkine",
+      "program": {
+        "action": false,
+        "lane": "statement_public",
+        "sectors": [
+          "Basic Materials"
+        ]
+      },
+      "reference": {
+        "n": 26,
+        "title": "Heavy Minerals Engages Mineral Technologies for Red Hill Maiden JORC Resource Estimate as Garnet Dominates All 47 Composites - Kalkine",
+        "action": false,
+        "acceptable_lane_classes": [
+          "reserve_revision",
+          "statement_public"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Basic Materials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 27,
+      "title": "Henkel completes �2.1bn acquisition of Stahl - Packaging Gateway",
+      "program": {
+        "action": false,
+        "lane": "corporate_action_mna",
+        "sectors": [
+          "Basic Materials"
+        ]
+      },
+      "reference": {
+        "n": 27,
+        "title": "Henkel completes �2.1bn acquisition of Stahl - Packaging Gateway",
+        "action": false,
+        "acceptable_lane_classes": [
+          "corporate_action_mna"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Basic Materials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 28,
+      "title": "Amgen reports Phase 3 results and Amgen stock sits at EUR 358.63 versus EUR 358.50 - AD HOC NEWS",
+      "program": {
+        "action": false,
+        "lane": "trial_readout",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 28,
+        "title": "Amgen reports Phase 3 results and Amgen stock sits at EUR 358.63 versus EUR 358.50 - AD HOC NEWS",
+        "action": false,
+        "acceptable_lane_classes": [
+          "trial_readout"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 29,
+      "title": "Ag Growth International (TSX:AFN) Stock Falls 7.72% as Traders Lock In Gains After Explosive Strategic Review Rally - kalkine.ca",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": [
+          "Industrials"
+        ]
+      },
+      "reference": {
+        "n": 29,
+        "title": "Ag Growth International (TSX:AFN) Stock Falls 7.72% as Traders Lock In Gains After Explosive Strategic Review Rally - kalkine.ca",
+        "action": false,
+        "acceptable_lane_classes": [
+          "strategic_review",
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 30,
+      "title": "Market wrap, Sept 23: SENSEX, NIFTY50 gain as metal stocks rally, crude oil price ease; Bajaj Fin, Hindalco top gainers - Upstox",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": [
+          "Basic Materials",
+          "Financial"
+        ]
+      },
+      "reference": {
+        "n": 30,
+        "title": "Market wrap, Sept 23: SENSEX, NIFTY50 gain as metal stocks rally, crude oil price ease; Bajaj Fin, Hindalco top gainers - Upstox",
+        "action": false,
+        "acceptable_lane_classes": [
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Basic Materials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": false
+      }
+    },
+    {
+      "n": 31,
+      "title": "How Investors Are Reacting To General Mills (GIS) Debt Buyback Completion - Simply Wall Street",
+      "program": {
+        "action": false,
+        "lane": "credit_funding",
+        "sectors": [
+          "Consumer Defensive"
+        ]
+      },
+      "reference": {
+        "n": 31,
+        "title": "How Investors Are Reacting To General Mills (GIS) Debt Buyback Completion - Simply Wall Street",
+        "action": false,
+        "acceptable_lane_classes": [
+          "credit_funding"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Consumer Defensive"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 32,
+      "title": "Cristiano Ronaldo confirms he��s not retiring, accepts punishment for Portugal walkout - Yahoo Sports",
+      "program": {
+        "action": false,
+        "lane": "discard",
+        "sectors": []
+      },
+      "reference": {
+        "n": 32,
+        "title": "Cristiano Ronaldo confirms he��s not retiring, accepts punishment for Portugal walkout - Yahoo Sports",
+        "action": false,
+        "acceptable_lane_classes": [
+          "discard"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 33,
+      "title": "United States Dollar Index strengthens as oil surge bolster Fed rate hike bets | FXStreet - ???? ????? ?????????",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": []
+      },
+      "reference": {
+        "n": 33,
+        "title": "United States Dollar Index strengthens as oil surge bolster Fed rate hike bets | FXStreet - ???? ????? ?????????",
+        "action": false,
+        "acceptable_lane_classes": [
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 34,
+      "title": "AG Chat - Minnesota Governor Walz makes executive order for farms - WEAU",
+      "program": {
+        "action": true,
+        "lane": "statement_public",
+        "sectors": [
+          "Consumer Defensive"
+        ]
+      },
+      "reference": {
+        "n": 34,
+        "title": "AG Chat - Minnesota Governor Walz makes executive order for farms - WEAU",
+        "action": true,
+        "acceptable_lane_classes": [
+          null,
+          "statement_public"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": false
+      }
+    },
+    {
+      "n": 35,
+      "title": "August advance retail sales",
+      "program": {
+        "action": false,
+        "lane": "print_vs_priced",
+        "sectors": []
+      },
+      "reference": {
+        "n": 35,
+        "title": "August advance retail sales",
+        "action": false,
+        "acceptable_lane_classes": [
+          "print_vs_priced"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 36,
+      "title": "Mitchell council to review $507,660 in subsidy funding requests Tuesday - Mitchell Daily Republic",
+      "program": {
+        "action": false,
+        "lane": "subsidy",
+        "sectors": []
+      },
+      "reference": {
+        "n": 36,
+        "title": "Mitchell council to review $507,660 in subsidy funding requests Tuesday - Mitchell Daily Republic",
+        "action": false,
+        "acceptable_lane_classes": [
+          "statement_public",
+          "subsidy"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 37,
+      "title": "health news today fda approval weight loss drug - polskieradio.pl",
+      "program": {
+        "action": false,
+        "lane": "discard",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 37,
+        "title": "health news today fda approval weight loss drug - polskieradio.pl",
+        "action": null,
+        "acceptable_lane_classes": [
+          "gate",
+          "discard"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": false,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 38,
+      "title": "Heavy Rare Earths Targets High-Grade HREO Mineral Resource Estimate at Subron Project by Q4 2026 - Kalkine",
+      "program": {
+        "action": false,
+        "lane": "statement_public",
+        "sectors": [
+          "Basic Materials"
+        ]
+      },
+      "reference": {
+        "n": 38,
+        "title": "Heavy Rare Earths Targets High-Grade HREO Mineral Resource Estimate at Subron Project by Q4 2026 - Kalkine",
+        "action": false,
+        "acceptable_lane_classes": [
+          "statement_public",
+          "regime_state",
+          "reserve_revision"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Basic Materials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 39,
+      "title": "Watch: Smoke pours from Powys bike factory fire - Shropshire Star",
+      "program": {
+        "action": false,
+        "lane": "blast_ops",
+        "sectors": [
+          "Consumer Cyclical"
+        ]
+      },
+      "reference": {
+        "n": 39,
+        "title": "Watch: Smoke pours from Powys bike factory fire - Shropshire Star",
+        "action": false,
+        "acceptable_lane_classes": [
+          "blast_ops"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": false
+      }
+    },
+    {
+      "n": 40,
+      "title": "Siemens Energy Wins RBC Backing for 2026 as Buyback Rolls and Board Seat Changes Hands - AD HOC NEWS",
+      "program": {
+        "action": false,
+        "lane": "capital_return",
+        "sectors": [
+          "Industrials"
+        ]
+      },
+      "reference": {
+        "n": 40,
+        "title": "Siemens Energy Wins RBC Backing for 2026 as Buyback Rolls and Board Seat Changes Hands - AD HOC NEWS",
+        "action": false,
+        "acceptable_lane_classes": [
+          "capital_return",
+          "key_person",
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 41,
+      "title": "Applied Digital (APLD) Could Be 64% Undervalued Following Its Latest Quarterly Results - Simply Wall Street",
+      "program": {
+        "action": false,
+        "lane": "discard",
+        "sectors": [
+          "Technology"
+        ]
+      },
+      "reference": {
+        "n": 41,
+        "title": "Applied Digital (APLD) Could Be 64% Undervalued Following Its Latest Quarterly Results - Simply Wall Street",
+        "action": false,
+        "acceptable_lane_classes": [
+          "discard",
+          "regime_state",
+          "print_vs_priced"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Technology"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 42,
+      "title": "After the Earthquake Pause, Deportation Flights to Venezuela Are at Full Speed �� and the Human Toll Is Rising - Latin Times",
+      "program": {
+        "action": true,
+        "lane": null,
+        "sectors": []
+      },
+      "reference": {
+        "n": 42,
+        "title": "After the Earthquake Pause, Deportation Flights to Venezuela Are at Full Speed �� and the Human Toll Is Rising - Latin Times",
+        "action": true,
+        "acceptable_lane_classes": [
+          "statement_public",
+          "regime_state",
+          null
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 43,
+      "title": "How Debt Refinancing Will Impact Churchill Downs Stock Investors - Simply Wall Street",
+      "program": {
+        "action": false,
+        "lane": "credit_funding",
+        "sectors": [
+          "Consumer Cyclical"
+        ]
+      },
+      "reference": {
+        "n": 43,
+        "title": "How Debt Refinancing Will Impact Churchill Downs Stock Investors - Simply Wall Street",
+        "action": false,
+        "acceptable_lane_classes": [
+          "credit_funding",
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Consumer Cyclical"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 44,
+      "title": "Cotton University and Gauhati University Wrapped up their Respective Student Union Election Results, with the All Assam Students' Union (AASU) Sweeping Key Posts - The Sentinel - of this Land, for its People",
+      "program": {
+        "action": false,
+        "lane": "discard",
+        "sectors": []
+      },
+      "reference": {
+        "n": 44,
+        "title": "Cotton University and Gauhati University Wrapped up their Respective Student Union Election Results, with the All Assam Students' Union (AASU) Sweeping Key Posts - The Sentinel - of this Land, for its People",
+        "action": null,
+        "acceptable_lane_classes": [
+          "labor_organize",
+          "discard"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": false,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 45,
+      "title": "Neocloud Firmus cancels IPO, blames market volatility - Data Center Dynamics",
+      "program": {
+        "action": false,
+        "lane": "listing_flow",
+        "sectors": [
+          "Technology"
+        ]
+      },
+      "reference": {
+        "n": 45,
+        "title": "Neocloud Firmus cancels IPO, blames market volatility - Data Center Dynamics",
+        "action": false,
+        "acceptable_lane_classes": [
+          "listing_flow"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Technology"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 46,
+      "title": "Josien Mercantile terminates distribution agreement with R��my Cointreau in Nigeria after strategic review - The Guardian Nigeria News",
+      "program": {
+        "action": false,
+        "lane": "demand",
+        "sectors": [
+          "Consumer Defensive"
+        ]
+      },
+      "reference": {
+        "n": 46,
+        "title": "Josien Mercantile terminates distribution agreement with R��my Cointreau in Nigeria after strategic review - The Guardian Nigeria News",
+        "action": false,
+        "acceptable_lane_classes": [
+          "demand",
+          "strategic_review"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Consumer Defensive"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 47,
+      "title": "FDA Approves Targeted Cancer Drug As First-Line Treatment For CLL That Cuts Progression Risk By 80% - Health and Me",
+      "program": {
+        "action": true,
+        "lane": "gate",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 47,
+        "title": "FDA Approves Targeted Cancer Drug As First-Line Treatment For CLL That Cuts Progression Risk By 80% - Health and Me",
+        "action": true,
+        "acceptable_lane_classes": [
+          "gate"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 48,
+      "title": "Better founder Vishal Garg regains board control after proxy fight By Investing.com - Investing.com South Africa",
+      "program": {
+        "action": false,
+        "lane": "activist_campaign",
+        "sectors": [
+          "Financial"
+        ]
+      },
+      "reference": {
+        "n": 48,
+        "title": "Better founder Vishal Garg regains board control after proxy fight By Investing.com - Investing.com South Africa",
+        "action": false,
+        "acceptable_lane_classes": [
+          "activist_campaign"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Financial"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 49,
+      "title": "Man arrested following factory fire - VicNews",
+      "program": {
+        "action": true,
+        "lane": "blast_ops",
+        "sectors": []
+      },
+      "reference": {
+        "n": 49,
+        "title": "Man arrested following factory fire - VicNews",
+        "action": true,
+        "acceptable_lane_classes": [
+          "statement_public",
+          "blast_legal"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": false,
+        "sectors": true
+      }
+    },
+    {
+      "n": 50,
+      "title": "SoftBank affiliate acquires DigitalBridge, deli... - Pluang",
+      "program": {
+        "action": false,
+        "lane": "corporate_action_mna",
+        "sectors": [
+          "Financial"
+        ]
+      },
+      "reference": {
+        "n": 50,
+        "title": "SoftBank affiliate acquires DigitalBridge, deli... - Pluang",
+        "action": false,
+        "acceptable_lane_classes": [
+          "corporate_action_mna"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Real Estate"
+          ],
+          [
+            "Financial"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 51,
+      "title": "Elon Musk Clarifies TSMC's Terafab Role; Grok Adds Rival Models - Investor's Business Daily",
+      "program": {
+        "action": false,
+        "lane": "statement_public",
+        "sectors": [
+          "Technology"
+        ]
+      },
+      "reference": {
+        "n": 51,
+        "title": "Elon Musk Clarifies TSMC's Terafab Role; Grok Adds Rival Models - Investor's Business Daily",
+        "action": false,
+        "acceptable_lane_classes": [
+          "statement_public"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Technology"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 52,
+      "title": "Nifty Snaps 25-Year Losing Streak as TCS Fuels 1.3% Rebound; RBI Rate Hike Whacks Markets Midweek - HDFC Sky",
+      "program": {
+        "action": true,
+        "lane": "factor_impulse",
+        "sectors": [
+          "Technology"
+        ]
+      },
+      "reference": {
+        "n": 52,
+        "title": "Nifty Snaps 25-Year Losing Streak as TCS Fuels 1.3% Rebound; RBI Rate Hike Whacks Markets Midweek - HDFC Sky",
+        "action": true,
+        "acceptable_lane_classes": [
+          "factor_impulse",
+          "print_vs_priced"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Technology"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 53,
+      "title": "Residents encouraged to practice earthquake safety on October 15th - KVOM 101.7",
+      "program": {
+        "action": false,
+        "lane": "statement_public",
+        "sectors": []
+      },
+      "reference": {
+        "n": 53,
+        "title": "Residents encouraged to practice earthquake safety on October 15th - KVOM 101.7",
+        "action": false,
+        "acceptable_lane_classes": [
+          "statement_public",
+          "discard"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 54,
+      "title": "US Dollar Index Price Forecast: 101.80 remains key support zone ahead of FOMC minutes - FXStreet",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": []
+      },
+      "reference": {
+        "n": 54,
+        "title": "US Dollar Index Price Forecast: 101.80 remains key support zone ahead of FOMC minutes - FXStreet",
+        "action": false,
+        "acceptable_lane_classes": [
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 55,
+      "title": "Surging Treasury yields don��t signal a U.S. 'fiscal apocalypse' �� yet - CNBC",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": []
+      },
+      "reference": {
+        "n": 55,
+        "title": "Surging Treasury yields don��t signal a U.S. 'fiscal apocalypse' �� yet - CNBC",
+        "action": false,
+        "acceptable_lane_classes": [
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 56,
+      "title": "Learning Market Structure Through DaiyumeVision Reviews for FX:XAUUSD by BullMarketVision - TradingView",
+      "program": {
+        "action": false,
+        "lane": "discard",
+        "sectors": []
+      },
+      "reference": {
+        "n": 56,
+        "title": "Learning Market Structure Through DaiyumeVision Reviews for FX:XAUUSD by BullMarketVision - TradingView",
+        "action": false,
+        "acceptable_lane_classes": [
+          "discard"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 57,
+      "title": "German Motorists Pay Less As Fuel Subsidy Takes Effect - LEADERSHIP Newspapers",
+      "program": {
+        "action": true,
+        "lane": "subsidy",
+        "sectors": [
+          "Energy"
+        ]
+      },
+      "reference": {
+        "n": 57,
+        "title": "German Motorists Pay Less As Fuel Subsidy Takes Effect - LEADERSHIP Newspapers",
+        "action": true,
+        "acceptable_lane_classes": [
+          "subsidy"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Energy"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 58,
+      "title": "Pakistan��s finance minister says fuel subsidies will continue �� The Express Tribune - UA.NEWS",
+      "program": {
+        "action": false,
+        "lane": "statement_public",
+        "sectors": [
+          "Energy"
+        ]
+      },
+      "reference": {
+        "n": 58,
+        "title": "Pakistan��s finance minister says fuel subsidies will continue �� The Express Tribune - UA.NEWS",
+        "action": false,
+        "acceptable_lane_classes": [
+          "statement_public",
+          "subsidy"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Energy"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 59,
+      "title": "Bullish Kelfred Holdings Insider Buying Worth HK$69.3m Yet To Pay Off - Simply Wall Street",
+      "program": {
+        "action": false,
+        "lane": "insider_flow",
+        "sectors": []
+      },
+      "reference": {
+        "n": 59,
+        "title": "Bullish Kelfred Holdings Insider Buying Worth HK$69.3m Yet To Pay Off - Simply Wall Street",
+        "action": false,
+        "acceptable_lane_classes": [
+          "insider_flow",
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ],
+          [
+            "Consumer Cyclical"
+          ],
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 60,
+      "title": "JCB Expands Manufacturing Capacity and Hydrogen Technology Investment - Machine Maker",
+      "program": {
+        "action": false,
+        "lane": "capacity",
+        "sectors": [
+          "Industrials",
+          "Technology"
+        ]
+      },
+      "reference": {
+        "n": 60,
+        "title": "JCB Expands Manufacturing Capacity and Hydrogen Technology Investment - Machine Maker",
+        "action": false,
+        "acceptable_lane_classes": [
+          "capacity"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": false
+      }
+    },
+    {
+      "n": 61,
+      "title": "EU-China trade talks grapple with tariffs, rare earths, and export controls - The Brussels Times",
+      "program": {
+        "action": null,
+        "lane": "statement_public",
+        "sectors": [
+          "Basic Materials"
+        ]
+      },
+      "reference": {
+        "n": 61,
+        "title": "EU-China trade talks grapple with tariffs, rare earths, and export controls - The Brussels Times",
+        "action": false,
+        "acceptable_lane_classes": [
+          "statement_public"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Basic Materials"
+          ],
+          [
+            "Basic Materials",
+            "Financial"
+          ]
+        ]
+      },
+      "checks": {
+        "action": false,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 62,
+      "title": "Beyond Air? Preannounces Preliminary Revenue for the Quarter Ended September 30, 2026 - www.marketscreener.com",
+      "program": {
+        "action": false,
+        "lane": "preannounce",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 62,
+        "title": "Beyond Air? Preannounces Preliminary Revenue for the Quarter Ended September 30, 2026 - www.marketscreener.com",
+        "action": false,
+        "acceptable_lane_classes": [
+          "preannounce"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 63,
+      "title": "Waris Punjab De announces agenda committee, Iqbal Singh Jhundan named chairman - The Tribune",
+      "program": {
+        "action": false,
+        "lane": "discard",
+        "sectors": []
+      },
+      "reference": {
+        "n": 63,
+        "title": "Waris Punjab De announces agenda committee, Iqbal Singh Jhundan named chairman - The Tribune",
+        "action": false,
+        "acceptable_lane_classes": [
+          "statement_public",
+          "discard"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 64,
+      "title": "AUD/USD edges higher as Treasury yields retreat, traders eye FOMC minutes and key support levels - VT Markets",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": []
+      },
+      "reference": {
+        "n": 64,
+        "title": "AUD/USD edges higher as Treasury yields retreat, traders eye FOMC minutes and key support levels - VT Markets",
+        "action": false,
+        "acceptable_lane_classes": [
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 65,
+      "title": "Decent Holding Completes $1.23 Million Registered Direct Offering with Concurrent Private Placement - Kalkine Media",
+      "program": {
+        "action": false,
+        "lane": "dilution",
+        "sectors": [
+          "Industrials"
+        ]
+      },
+      "reference": {
+        "n": 65,
+        "title": "Decent Holding Completes $1.23 Million Registered Direct Offering with Concurrent Private Placement - Kalkine Media",
+        "action": false,
+        "acceptable_lane_classes": [
+          "dilution"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 66,
+      "title": "AMPO awarded contract for Ruwais LNG - megaproject.com",
+      "program": {
+        "action": false,
+        "lane": "demand",
+        "sectors": [
+          "Energy",
+          "Industrials"
+        ]
+      },
+      "reference": {
+        "n": 66,
+        "title": "AMPO awarded contract for Ruwais LNG - megaproject.com",
+        "action": false,
+        "acceptable_lane_classes": [
+          "demand"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": false
+      }
+    },
+    {
+      "n": 67,
+      "title": "Trump slaps 100% tariff on some pharmaceutical drugs via executive order - ABC7 Los Angeles",
+      "program": {
+        "action": true,
+        "lane": "tax_fiscal",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 67,
+        "title": "Trump slaps 100% tariff on some pharmaceutical drugs via executive order - ABC7 Los Angeles",
+        "action": true,
+        "acceptable_lane_classes": [
+          "tax_fiscal"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 68,
+      "title": "Nvidia-Backed Firmus Pulls $5 Billion Australian IPO, Citing Market Volatility - BigGo Finance",
+      "program": {
+        "action": false,
+        "lane": "listing_flow",
+        "sectors": [
+          "Technology"
+        ]
+      },
+      "reference": {
+        "n": 68,
+        "title": "Nvidia-Backed Firmus Pulls $5 Billion Australian IPO, Citing Market Volatility - BigGo Finance",
+        "action": false,
+        "acceptable_lane_classes": [
+          "listing_flow"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Technology"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 69,
+      "title": "Denmark data breach exposes 8.8 mil people��s personal data - The Edge Malaysia",
+      "program": {
+        "action": false,
+        "lane": "blast_cyber",
+        "sectors": []
+      },
+      "reference": {
+        "n": 69,
+        "title": "Denmark data breach exposes 8.8 mil people��s personal data - The Edge Malaysia",
+        "action": false,
+        "acceptable_lane_classes": [
+          "blast_cyber"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 70,
+      "title": "Markets News, Oct. 6, 2026: S&P 500, Nasdaq Close at Record Highs as Treasury Yields Fall - Investopedia",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": []
+      },
+      "reference": {
+        "n": 70,
+        "title": "Markets News, Oct. 6, 2026: S&P 500, Nasdaq Close at Record Highs as Treasury Yields Fall - Investopedia",
+        "action": false,
+        "acceptable_lane_classes": [
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 71,
+      "title": "Wool Coats and Bamboo Sheets: Up to 30 Percent Off at Quince��s Insider Sale - New York Magazine",
+      "program": {
+        "action": false,
+        "lane": "discard",
+        "sectors": [
+          "Consumer Cyclical"
+        ]
+      },
+      "reference": {
+        "n": 71,
+        "title": "Wool Coats and Bamboo Sheets: Up to 30 Percent Off at Quince��s Insider Sale - New York Magazine",
+        "action": false,
+        "acceptable_lane_classes": [
+          "discard"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Consumer Cyclical"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 72,
+      "title": "Qatar National Bank Reports Earnings Results for the Nine Months Ended September 30, 2026 - www.marketscreener.com",
+      "program": {
+        "action": false,
+        "lane": "print_vs_priced",
+        "sectors": [
+          "Financial"
+        ]
+      },
+      "reference": {
+        "n": 72,
+        "title": "Qatar National Bank Reports Earnings Results for the Nine Months Ended September 30, 2026 - www.marketscreener.com",
+        "action": false,
+        "acceptable_lane_classes": [
+          "print_vs_priced"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Financial"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 73,
+      "title": "They survived World War II and lost decades, but not 2026. Japan's century-old businesses are disappearing at a record pace - CNBC",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": []
+      },
+      "reference": {
+        "n": 73,
+        "title": "They survived World War II and lost decades, but not 2026. Japan's century-old businesses are disappearing at a record pace - CNBC",
+        "action": false,
+        "acceptable_lane_classes": [
+          "regime_state",
+          "distress_restruct"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 74,
+      "title": "US jobs report cools Fed rate hike bets: Why October CPI and record diesel prices now matter | Hindustan Times - hindustantimes.com",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": []
+      },
+      "reference": {
+        "n": 74,
+        "title": "US jobs report cools Fed rate hike bets: Why October CPI and record diesel prices now matter | Hindustan Times - hindustantimes.com",
+        "action": false,
+        "acceptable_lane_classes": [
+          "print_vs_priced",
+          "factor_impulse",
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 75,
+      "title": "South Korea's Kumyang Hit With 9.15 Billion Won Fine for Accounting Fraud, Audit Obstruction �� Delisting Looms - BigGo Finance",
+      "program": {
+        "action": false,
+        "lane": "integrity",
+        "sectors": [
+          "Technology"
+        ]
+      },
+      "reference": {
+        "n": 75,
+        "title": "South Korea's Kumyang Hit With 9.15 Billion Won Fine for Accounting Fraud, Audit Obstruction �� Delisting Looms - BigGo Finance",
+        "action": true,
+        "acceptable_lane_classes": [
+          "integrity",
+          "blast_legal"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Basic Materials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": false,
+        "lane": true,
+        "sectors": false
+      }
+    },
+    {
+      "n": 76,
+      "title": "Sterling today: Pound edges higher as dollar holds gains before U.S. payrolls - Investing.com",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": []
+      },
+      "reference": {
+        "n": 76,
+        "title": "Sterling today: Pound edges higher as dollar holds gains before U.S. payrolls - Investing.com",
+        "action": false,
+        "acceptable_lane_classes": [
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 77,
+      "title": "Canadian Dollar Falls as Weak Jobs Data Hit BOC Hike - Briefs Finance",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": []
+      },
+      "reference": {
+        "n": 77,
+        "title": "Canadian Dollar Falls as Weak Jobs Data Hit BOC Hike - Briefs Finance",
+        "action": false,
+        "acceptable_lane_classes": [
+          "print_vs_priced",
+          "factor_impulse",
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 78,
+      "title": "Gold price experienced the biggest intraday fall in the last 3 months: What��s next? - SunCrypto",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": []
+      },
+      "reference": {
+        "n": 78,
+        "title": "Gold price experienced the biggest intraday fall in the last 3 months: What��s next? - SunCrypto",
+        "action": false,
+        "acceptable_lane_classes": [
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 79,
+      "title": "Spectrum sends notice of service outage | Local News | 2news.com - KTVN",
+      "program": {
+        "action": false,
+        "lane": "blast_ops",
+        "sectors": [
+          "Communication Services"
+        ]
+      },
+      "reference": {
+        "n": 79,
+        "title": "Spectrum sends notice of service outage | Local News | 2news.com - KTVN",
+        "action": false,
+        "acceptable_lane_classes": [
+          "blast_ops"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Communication Services"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 80,
+      "title": "Air India Reduces Fuel Surcharge on Europe and North America Routes - https://safariindia.com/",
+      "program": {
+        "action": false,
+        "lane": "input_cost",
+        "sectors": [
+          "Industrials"
+        ]
+      },
+      "reference": {
+        "n": 80,
+        "title": "Air India Reduces Fuel Surcharge on Europe and North America Routes - https://safariindia.com/",
+        "action": false,
+        "acceptable_lane_classes": [
+          "input_cost"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 81,
+      "title": "S��dzucker stock raises outlook after Q2 EBITDA jump - AD HOC NEWS",
+      "program": {
+        "action": false,
+        "lane": "guidance",
+        "sectors": [
+          "Consumer Defensive"
+        ]
+      },
+      "reference": {
+        "n": 81,
+        "title": "S��dzucker stock raises outlook after Q2 EBITDA jump - AD HOC NEWS",
+        "action": false,
+        "acceptable_lane_classes": [
+          "guidance"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Consumer Defensive"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 82,
+      "title": "Amazon's Potential $7 Billion Acquisition of AI Startup Decart - GuruFocus",
+      "program": {
+        "action": false,
+        "lane": "rumor",
+        "sectors": [
+          "Technology"
+        ]
+      },
+      "reference": {
+        "n": 82,
+        "title": "Amazon's Potential $7 Billion Acquisition of AI Startup Decart - GuruFocus",
+        "action": false,
+        "acceptable_lane_classes": [
+          "rumor",
+          "corporate_action_mna"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Technology"
+          ],
+          [
+            "Technology",
+            "Consumer Cyclical"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 83,
+      "title": "Tonbo Imaging sets Rs.852 crore IPO price band, targets Rs.4,010 crore valuation - TradingView",
+      "program": {
+        "action": false,
+        "lane": "listing_flow",
+        "sectors": [
+          "Industrials"
+        ]
+      },
+      "reference": {
+        "n": 83,
+        "title": "Tonbo Imaging sets Rs.852 crore IPO price band, targets Rs.4,010 crore valuation - TradingView",
+        "action": false,
+        "acceptable_lane_classes": [
+          "listing_flow",
+          "dilution"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 84,
+      "title": "Tegoprazan Meets Primary Endpoint in Phase 3 NERD Trial - The Clinical Trial Vanguard",
+      "program": {
+        "action": false,
+        "lane": "trial_readout",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 84,
+        "title": "Tegoprazan Meets Primary Endpoint in Phase 3 NERD Trial - The Clinical Trial Vanguard",
+        "action": false,
+        "acceptable_lane_classes": [
+          "trial_readout"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 85,
+      "title": "Court Dismisses Park Jang-beom's Injunction Request, Ruling No Flaws in KBS Board Resolution - news.sbs.co.kr",
+      "program": {
+        "action": true,
+        "lane": "blast_legal",
+        "sectors": [
+          "Communication Services"
+        ]
+      },
+      "reference": {
+        "n": 85,
+        "title": "Court Dismisses Park Jang-beom's Injunction Request, Ruling No Flaws in KBS Board Resolution - news.sbs.co.kr",
+        "action": true,
+        "acceptable_lane_classes": [
+          "blast_legal",
+          "gate"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Communication Services"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 86,
+      "title": "Weekly Recap: Fuel surcharge rise and Malaysia Airlines six?city codeshare - TradingView",
+      "program": {
+        "action": false,
+        "lane": "input_cost",
+        "sectors": [
+          "Industrials"
+        ]
+      },
+      "reference": {
+        "n": 86,
+        "title": "Weekly Recap: Fuel surcharge rise and Malaysia Airlines six?city codeshare - TradingView",
+        "action": false,
+        "acceptable_lane_classes": [
+          "input_cost",
+          "demand",
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 87,
+      "title": "Gold price forecast as crude oil and US 10-year Treasury yield surge - Invezz",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": []
+      },
+      "reference": {
+        "n": 87,
+        "title": "Gold price forecast as crude oil and US 10-year Treasury yield surge - Invezz",
+        "action": false,
+        "acceptable_lane_classes": [
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 88,
+      "title": "Looming North Sea Oil Workers Strike Could Disrupt UK Fuel Supplies - news.ssbcrack.com",
+      "program": {
+        "action": false,
+        "lane": "labor_stop",
+        "sectors": [
+          "Energy"
+        ]
+      },
+      "reference": {
+        "n": 88,
+        "title": "Looming North Sea Oil Workers Strike Could Disrupt UK Fuel Supplies - news.ssbcrack.com",
+        "action": false,
+        "acceptable_lane_classes": [
+          "statement_public",
+          "labor_stop"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Energy"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 89,
+      "title": "Odisha: 6,649 candidates in fray for Students' Union Election, polling on Oct 15 - Dailyhunt",
+      "program": {
+        "action": false,
+        "lane": "discard",
+        "sectors": []
+      },
+      "reference": {
+        "n": 89,
+        "title": "Odisha: 6,649 candidates in fray for Students' Union Election, polling on Oct 15 - Dailyhunt",
+        "action": false,
+        "acceptable_lane_classes": [
+          "statement_public",
+          "discard"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 90,
+      "title": "City of Fulshear and North Fort Bend Water Authority reach water supply agreement - Community Impact",
+      "program": {
+        "action": true,
+        "lane": "demand",
+        "sectors": [
+          "Utilities"
+        ]
+      },
+      "reference": {
+        "n": 90,
+        "title": "City of Fulshear and North Fort Bend Water Authority reach water supply agreement - Community Impact",
+        "action": true,
+        "acceptable_lane_classes": [
+          "demand"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Utilities"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 91,
+      "title": "Centre hikes price ceiling for deep-water gas; CNG, PNG, fertiliser costs may be impacted - India Today NE",
+      "program": {
+        "action": true,
+        "lane": "price_cap",
+        "sectors": [
+          "Energy"
+        ]
+      },
+      "reference": {
+        "n": 91,
+        "title": "Centre hikes price ceiling for deep-water gas; CNG, PNG, fertiliser costs may be impacted - India Today NE",
+        "action": true,
+        "acceptable_lane_classes": [
+          "price_cap"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Energy",
+            "Utilities",
+            "Basic Materials"
+          ],
+          [
+            "Energy"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 92,
+      "title": "Twilio Inc.(NYSE: TWLO) added to S&P 500 Growth - marketscreener.com",
+      "program": {
+        "action": false,
+        "lane": "flow_index",
+        "sectors": [
+          "Technology"
+        ]
+      },
+      "reference": {
+        "n": 92,
+        "title": "Twilio Inc.(NYSE: TWLO) added to S&P 500 Growth - marketscreener.com",
+        "action": false,
+        "acceptable_lane_classes": [
+          "flow_index"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Technology"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 93,
+      "title": "Dignify Therapeutics secures FDA clearance for Phase I DTI-117 trial - Clinical Trials Arena",
+      "program": {
+        "action": true,
+        "lane": "gate",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 93,
+        "title": "Dignify Therapeutics secures FDA clearance for Phase I DTI-117 trial - Clinical Trials Arena",
+        "action": true,
+        "acceptable_lane_classes": [
+          "gate"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 94,
+      "title": "NVIDIA-backed data center firm cancels $5B IPO amid market volatility - NewsBytes",
+      "program": {
+        "action": false,
+        "lane": "listing_flow",
+        "sectors": [
+          "Technology"
+        ]
+      },
+      "reference": {
+        "n": 94,
+        "title": "NVIDIA-backed data center firm cancels $5B IPO amid market volatility - NewsBytes",
+        "action": false,
+        "acceptable_lane_classes": [
+          "listing_flow"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Technology"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 95,
+      "title": "Substantial Maiden Resource Estimate at Wapouz�� - 07:00:05 06 Oct 2026 - ORR News article - London Stock Exchange",
+      "program": {
+        "action": false,
+        "lane": "reserve_revision",
+        "sectors": [
+          "Basic Materials"
+        ]
+      },
+      "reference": {
+        "n": 95,
+        "title": "Substantial Maiden Resource Estimate at Wapouz�� - 07:00:05 06 Oct 2026 - ORR News article - London Stock Exchange",
+        "action": false,
+        "acceptable_lane_classes": [
+          "reserve_revision"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Basic Materials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 96,
+      "title": "Prime Minister��s Policy Speech: It��s Time To Deliver Results for ��Strong Economy�� - The Japan News",
+      "program": {
+        "action": false,
+        "lane": "statement_public",
+        "sectors": []
+      },
+      "reference": {
+        "n": 96,
+        "title": "Prime Minister��s Policy Speech: It��s Time To Deliver Results for ��Strong Economy�� - The Japan News",
+        "action": false,
+        "acceptable_lane_classes": [
+          "statement_public"
+        ],
+        "acceptable_sector_sets": [
+          []
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 97,
+      "title": "Swiss space firm Beyond Gravity target of cyberattack - SWI swissinfo.ch",
+      "program": {
+        "action": false,
+        "lane": "blast_cyber",
+        "sectors": [
+          "Industrials"
+        ]
+      },
+      "reference": {
+        "n": 97,
+        "title": "Swiss space firm Beyond Gravity target of cyberattack - SWI swissinfo.ch",
+        "action": false,
+        "acceptable_lane_classes": [
+          "blast_cyber"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 98,
+      "title": "Blue Origin IPO Could Change Amazon's Space Story - Amazon.com (NASDAQ:AMZN) - Benzinga",
+      "program": {
+        "action": false,
+        "lane": "regime_state",
+        "sectors": [
+          "Industrials"
+        ]
+      },
+      "reference": {
+        "n": 98,
+        "title": "Blue Origin IPO Could Change Amazon's Space Story - Amazon.com (NASDAQ:AMZN) - Benzinga",
+        "action": false,
+        "acceptable_lane_classes": [
+          "statement_public",
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Industrials"
+          ],
+          [
+            "Industrials",
+            "Consumer Cyclical"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    },
+    {
+      "n": 99,
+      "title": "Bard College's Leon Botstein Resigns Amid Calls for Criminal Investigation Over Epstein Email - University Herald",
+      "program": {
+        "action": false,
+        "lane": "key_person",
+        "sectors": []
+      },
+      "reference": {
+        "n": 99,
+        "title": "Bard College's Leon Botstein Resigns Amid Calls for Criminal Investigation Over Epstein Email - University Herald",
+        "action": false,
+        "acceptable_lane_classes": [
+          "key_person",
+          "discard"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Consumer Defensive"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": false
+      }
+    },
+    {
+      "n": 100,
+      "title": "BioNTech Ends the Week Up 5.4% as Washington's Cancer Push Overshadows Insider Selling - ad-hoc-news.de",
+      "program": {
+        "action": false,
+        "lane": "insider_flow",
+        "sectors": [
+          "Healthcare"
+        ]
+      },
+      "reference": {
+        "n": 100,
+        "title": "BioNTech Ends the Week Up 5.4% as Washington's Cancer Push Overshadows Insider Selling - ad-hoc-news.de",
+        "action": false,
+        "acceptable_lane_classes": [
+          "insider_flow",
+          "regime_state"
+        ],
+        "acceptable_sector_sets": [
+          [
+            "Healthcare"
+          ]
+        ]
+      },
+      "checks": {
+        "action": true,
+        "lane": true,
+        "sectors": true
+      }
+    }
+  ],
+  "acceptance_eligible": false
+}

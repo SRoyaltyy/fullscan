@@ -35,3 +35,10 @@ The recalled criminal/enforcement instruments improved; municipal supply agreeme
 
 Preserves V8 bounded validation feedback. Clarifies public supply agreements, speech/keyword-fragment exclusions, private procedural processes, and Lane commentary/personal/forecast boundaries. 43 semantic tests passed. New independent replay started on the same diagnostic input; not acceptance.
 Unrun reserve commit d36730231711746676559187895f5bc9a1a654b9 contains 1000 source-traced input titles in ten batches, compared to 300 recoverable previous runtime inputs. References have not been judged/frozen; no exhaustive historical exclusion claim.
+
+## Completed V9 diagnostic replay; first holdout launched
+
+Run 38511496266, runtime commit 2f135857222aad772209d851e28f08978545ff57, artifact 11870447275, ZIP SHA256 7d912b66b584e3447253f306e16492571eaad61f04792446010ac80a86be2ee8.
+Availability 100%; action agreement 96%; precision 100% (12 TP, 0 FP); recall 92.3077% (12/13); Lane 97%; exact sectors 91%. All five development metrics passed. Reconstructed diagnostic references still make this ineligible for acceptance.
+First independent holdout reference was frozen 2026-10-14T04:38:27.099Z at commit e396aaa813ca36d9c160e299d8276fc9c5df2fd1, before first classifier execution. Input SHA256 92c2c76f24dcc9d06693bda8e809591ca06ef2679fcfc8a6104dd3495746f632. The runtime prompt, source files, catalog and configuration are retained from V9. Only the workflow input path changes. References are outside sparse runtime checkout and never supplied to program prompts.
+Acceptance streak remains 0/10 pending the fresh score. Nine reserve batches still require independently frozen references.
