@@ -305,6 +305,11 @@ jobs:
       - name: Refresh the h1 close display
         id: closes
         if: success() && steps.window.outputs.go == 'true'
+        # Display only. A crash here must not fail a run whose seal landed:
+        # webull_paper.yml sends only when this workflow concludes success
+        # (2026-10-13 seal at 12:54Z was followed by an h1_closes crash, the
+        # send was skipped, and the sent share lock was never written).
+        continue-on-error: true
         env:
           FORWARD_BOOK: h1
         run: PYTHONHASHSEED=0 python3 research/hot_n4_clean_v4/forward/h1_fill_missing.py research/hot_n4_clean_v4/forward/h1_closes.py
@@ -394,5 +399,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run deploy-dashboard.yml --repo "${{ github.repository }}" --ref main
       - name: Fail the job when the book halted
-        if: steps.prices.outcome == 'failure' || steps.plan.outcome == 'failure' || steps.closes.outcome == 'failure'
+        if: steps.prices.outcome == 'failure' || steps.plan.outcome == 'failure' || (steps.closes.outcome == 'failure' && steps.commit.outputs.sealed != 'true')
         run: exit 1
+      - name: Warn when the close display failed after a seal
+        if: steps.closes.outcome == 'failure' && steps.commit.outputs.sealed == 'true'
+        run: echo "::warning::h1_closes.py failed after the plan sealed; the seal stands and Webull paper still runs. Fix the display separately."
