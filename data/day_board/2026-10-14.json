@@ -1,16 +1,17 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:05:40.927541-04:00",
+  "generated_at": "2026-10-14T06:05:46.990926-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-14_predict.md` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-14_judge.md` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-10-14_judge.md` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-10-14_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 6,
-    "partial": 1,
-    "fail": 1,
+    "ok": 3,
+    "partial": 3,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -557,11 +558,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -569,32 +570,26 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-10-14_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2629",
-          "size": 7554321,
-          "said": "27 rows",
-          "bullets": [
-            "ARHS, ETN, CDNA, AMD, PBR-A, PBR, ELV, CNP"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-14_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=2629",
-          "size": 8345403,
-          "said": "25 rows",
-          "bullets": [
-            "CDNA, ARHS, AVT, JBL, ETN, SN, DRH, TLYS"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "25 rows",
-      "bullets": [
-        "CDNA, ARHS, AVT, JBL, ETN"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "catalyst",
@@ -671,11 +666,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 4,
+      "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -765,13 +760,11 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-14_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "OK",
-          "reason": "rows=2629",
-          "size": 8345403,
-          "said": "25 rows",
-          "bullets": [
-            "CDNA, ARHS, AVT, JBL, ETN, SN, DRH, TLYS"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "join",
@@ -791,23 +784,21 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-10-14_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5096",
-          "size": 821534,
-          "said": "489 rows",
-          "bullets": [
-            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "required",
-          "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1471985,
-          "said": "1d BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -815,24 +806,21 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-10-14_stock_book.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 82593,
-          "said": "Stock book \u2014 2026-10-14",
-          "bullets": [
-            "_Generated 2026-10-14T06:01:58.362592-04:00_",
-            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-10-14_green.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 585,
-          "said": "0 green \u00b7",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -854,10 +842,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-14)",
+          "status": "FAIL",
+          "reason": "session 2026-10-14 not in dashboard dates (last=2026-10-07)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-14)",
+          "said": "session 2026-10-14 not in dashboard dates (last=2026-10-07)",
           "bullets": []
         }
       ],
@@ -870,9 +858,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
-      "inputs_ready": true,
-      "n_req_ok": 2,
+      "status": "PARTIAL",
+      "inputs_ready": false,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -882,10 +870,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "input",
-          "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1471985,
-          "said": "1d BUY NTAP, BAND, MQ, IT, CON, AVPT, SGRY \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -893,10 +881,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-14)",
+          "status": "FAIL",
+          "reason": "session 2026-10-14 not in dashboard dates (last=2026-10-07)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-14)",
+          "said": "session 2026-10-14 not in dashboard dates (last=2026-10-07)",
           "bullets": []
         },
         {
@@ -2588,6 +2576,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:05:46.693507-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-14_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9272,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-14_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5008,
+          "preview": "# Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
