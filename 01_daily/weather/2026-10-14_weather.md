@@ -5,7 +5,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict down score -1.6, conf 0.466)
-- **Yields:** flat (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.85 via vix/vix3m) spot 15.32
+- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** falling (ratio 0.88 via vix/vix3m) spot 15.8
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.69
 - **High-impact events:** 0 bullish vs 0 bearish
 - ⚠️ **Data gaps:** risk tilted off by news_judge
@@ -30,8 +30,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | ⛅ neutral | low | risk-mixed, dollar flat [general predict + factors] |
-| size:small | ⛅ neutral | low | risk-mixed, dollar flat [general predict + factors] |
+| size:micro | 🌧️ hostile | medium | strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors] |
+| size:small | 🌧️ hostile | medium | strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors] |
 | size:large | ⛅ neutral | low | risk-mixed [general predict] |
 | size:mega | ⛅ neutral | low | risk-mixed [general predict] |
 | size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |
