@@ -4863,6 +4863,14 @@
       "workflow": "Post-Close last-closed (ubuntu/DeepSeek sidecar)",
       "run_id": "38624127376",
       "manifest": "research/input_freeze/2026-10-13/manifest.json"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-13/_board.json",
+      "at": "2026-10-14T15:38:14-04:00",
+      "commit_msg": "auto: post-close ALL [2026-10-13]",
+      "workflow": "Post-Close last-closed (ubuntu/DeepSeek sidecar)",
+      "run_id": "38624127376",
+      "manifest": "research/input_freeze/2026-10-13/manifest.json"
     }
   ]
 }
