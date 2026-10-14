@@ -40,21 +40,30 @@ jobs:
             echo "skip=yes" >> "$GITHUB_ENV"
           fi
           exit 0
-      - uses: actions/checkout@v4
-        if: env.skip != 'yes'
-        with:
-          clean: false
-          fetch-depth: 0
-
-      - name: Full tree after leftover sparse-checkout
+      # actions/checkout@v4 with fetch-depth:0 hung ~8min on ecs-openclaw
+      # (2026-10-14). Sync the shared workdir with a hard timeout instead.
+      - name: Sync shared ECS workdir (timeout-safe)
         if: env.skip != 'yes'
         run: |
-          # Shared ECS work dir keeps a prior job's sparse-checkout.
+          set -euo pipefail
           git sparse-checkout disable || true
-          test -f requirements.txt || {
-            echo "ERROR: requirements.txt missing. A prior job left git sparse-checkout enabled on this self-hosted runner."
-            exit 1
+          git config --global --add safe.directory "$GITHUB_WORKSPACE" || true
+          # Drop leftover locks from the failed Pre-Open that left checkout wedged.
+          rm -f .git/index.lock .git/shallow.lock .git/HEAD.lock 2>/dev/null || true
+          # Shallow tip only — do not walk full history.
+          timeout 90 git fetch --depth=1 origin main || {
+            echo "WARN: git fetch timed out/failed — using existing workdir tip"
           }
+          timeout 30 git checkout -f FETCH_HEAD 2>/dev/null \
+            || timeout 30 git checkout -f origin/main 2>/dev/null \
+            || timeout 30 git reset --hard origin/main 2>/dev/null \
+            || true
+          if [ ! -f requirements.txt ] || [ ! -f scripts/xai_device_reauth.py ]; then
+            echo "ERROR: workdir missing scripts after sync"
+            ls -la
+            exit 1
+          fi
+          echo "OK tip=$(git rev-parse --short HEAD 2>/dev/null || echo unknown)"
 
       - name: Start or refresh xAI device login
         if: env.skip != 'yes'
