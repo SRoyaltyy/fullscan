@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:31:06.528114-04:00",
+  "generated_at": "2026-10-14T06:31:21.023158-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -603,13 +603,13 @@
           "size": 8345615,
           "said": "25 rows",
           "bullets": [
-            "CDNA, ARHS, TLYS, SN, ETN, JBL, ATRC, PBR-A"
+            "CDNA, ARHS, TLYS, ETN, JBL, SN, TEL, ATRC"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "CDNA, ARHS, TLYS, SN, ETN"
+        "CDNA, ARHS, TLYS, ETN, JBL"
       ]
     },
     {
@@ -795,7 +795,7 @@
           "size": 8345615,
           "said": "25 rows",
           "bullets": [
-            "CDNA, ARHS, TLYS, SN, ETN, JBL, ATRC, PBR-A"
+            "CDNA, ARHS, TLYS, ETN, JBL, SN, TEL, ATRC"
           ]
         },
         {
@@ -3431,6 +3431,31 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:31:19.558269-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-14_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7554616,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, ELV, AUPH, AMD"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-14_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8345615,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, TLYS, ETN, JBL"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, ELV, AUPH, AMD \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, TLYS, ETN, JBL"
     }
   ],
   "href": {
