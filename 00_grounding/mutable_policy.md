@@ -13,38 +13,38 @@ Last learn_cycle: **2026-10-13**. Promoted: 0. Retired: 10. Active lessons: 209.
 
 ## Accuracy by topic (graded window)
 
-- **general**: 53% (8/15)
+- **general**: 47% (7/15)
 - **sector:Basic Materials**: 27% (4/15)
 - **sector:Communication Services**: 20% (3/15)
 - **sector:Consumer Cyclical**: 20% (3/15)
 - **sector:Consumer Defensive**: 60% (9/15)
-- **sector:Energy**: 53% (8/15)
+- **sector:Energy**: 60% (9/15)
 - **sector:Financial**: 60% (9/15)
-- **sector:Healthcare**: 40% (6/15)
-- **sector:Industrials**: 47% (7/15)
-- **sector:Real Estate**: 60% (9/15)
+- **sector:Healthcare**: 33% (5/15)
+- **sector:Industrials**: 53% (8/15)
+- **sector:Real Estate**: 53% (8/15)
 - **sector:Technology**: 33% (5/15)
 - **sector:Utilities**: 47% (7/15)
 
 ## Numeric factor weights in force (engine_policy.json — applied by code, not by you)
 
 General (B0–B7 LLM components; multiplier applied by compute_scores):
-- B0_ASIA: n=22 sign-hit=0.59 → ×1.0
+- B0_ASIA: n=23 sign-hit=0.56 → ×1.0
 - B0_EUROPE: n=14 sign-hit=0.86 → ×1.25
-- B1_CATALYSTS: n=27 sign-hit=0.78 → ×1.25
-- B2_BONDS: n=37 sign-hit=0.38 → ×0.0
+- B1_CATALYSTS: n=28 sign-hit=0.75 → ×1.25
+- B2_BONDS: n=38 sign-hit=0.37 → ×0.0
 - B3_FEDPATH: n=31 sign-hit=0.45 → ×0.5
 - B4_VIX: n=13 sign-hit=0.54 → ×0.5
 - B5_SENTIMENT: n=22 sign-hit=0.32 → ×0.0
-- B6_FUTURES: n=27 sign-hit=0.78 → ×1.25
-- B7_OIL_DOLLAR: n=36 sign-hit=0.61 → ×1.0
+- B6_FUTURES: n=28 sign-hit=0.75 → ×1.25
+- B7_OIL_DOLLAR: n=37 sign-hit=0.59 → ×1.0
 Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
-- S0_SHARED_MACRO: n=193 sign-hit=0.59 → ×1.0
-- S1_SECTOR_FACTORS: n=216 sign-hit=0.56 → ×1.0
-- S2_BREADTH: n=166 sign-hit=0.60 → ×1.0
-- S3_FLOWS_POSITIONING: n=118 sign-hit=0.51 → ×0.5
-- S4_ETF_TAPE: n=177 sign-hit=0.60 → ×1.0
-Last change: hold
+- S0_SHARED_MACRO: n=202 sign-hit=0.58 → ×1.0
+- S1_SECTOR_FACTORS: n=225 sign-hit=0.55 → ×0.5
+- S2_BREADTH: n=172 sign-hit=0.58 → ×1.0
+- S3_FLOWS_POSITIONING: n=120 sign-hit=0.50 → ×0.5
+- S4_ETF_TAPE: n=185 sign-hit=0.59 → ×1.0
+Last change: Consumer Cyclical.S0_SHARED_MACRO: 1.25 -> 1.0 (n=22, hit=0.636); Consumer Cyclical.S2_BREADTH: 1.0 -> 0.5 (n=15, hit=0.533); Healthcare.S1_SECTOR_FACTORS: 1.25 -> 1.0 (n=14, hit=0.643); Healthcare.S4_ETF_TAPE: 1.25 -> 1.0 (n=17, hit=0.647); Industrials.S0_SHARED_MACRO: 1.0 -> 1.25 (n=18, hit=0.667); Utilities.S1_SECTOR_FACTORS: 1.0 -> 0.5 (n=19, hit=0.526)
 
 ## Active adjustments (newest promoted lessons, truncated)
 
@@ -136,72 +136,71 @@ _(+194 older active lessons not excerpted; each predict receives only its own to
 
 ## Per-scope DO-INSTEAD
 
-### scope `general` — wins=8 losses=7
-- **win 2026-10-02:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `general` — wins=7 losses=8
 - **loss 2026-10-05:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **win 2026-10-08:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **loss 2026-10-13:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `news` — wins=0 losses=1
 - **loss news:** [news] Only emit actions with |net| above a higher floor.
 
 ### scope `sector_basic_materials` — wins=4 losses=11
-- **win 2026-10-01:** [sector_basic_materials] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **loss 2026-10-02:** [sector_basic_materials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-10-08:** [sector_basic_materials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-10-13:** [sector_basic_materials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `sector_communication_services` — wins=3 losses=12
-- **loss 2026-10-01:** [sector_communication_services] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **win 2026-10-02:** [sector_communication_services] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **loss 2026-10-08:** [sector_communication_services] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-10-13:** [sector_communication_services] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `sector_consumer_cyclical` — wins=3 losses=12
-- **loss 2026-10-01:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-10-02:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-10-08:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-10-13:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `sector_consumer_defensive` — wins=9 losses=6
 - **win 2026-10-01:** [sector_consumer_defensive] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **win 2026-10-02:** [sector_consumer_defensive] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **win 2026-10-08:** [sector_consumer_defensive] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
-### scope `sector_energy` — wins=8 losses=7
-- **loss 2026-09-28:** [sector_energy] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `sector_energy` — wins=9 losses=6
 - **loss 2026-10-01:** [sector_energy] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-10-02:** [sector_energy] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **win 2026-10-13:** [sector_energy] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
 ### scope `sector_financial` — wins=9 losses=6
-- **loss 2026-09-25:** [sector_financial] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-10-01:** [sector_financial] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **win 2026-10-02:** [sector_financial] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **win 2026-10-13:** [sector_financial] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
-### scope `sector_healthcare` — wins=6 losses=9
-- **win 2026-09-25:** [sector_healthcare] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `sector_healthcare` — wins=5 losses=10
 - **win 2026-10-01:** [sector_healthcare] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **loss 2026-10-02:** [sector_healthcare] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-10-13:** [sector_healthcare] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
-### scope `sector_industrials` — wins=7 losses=8
-- **loss 2026-09-25:** [sector_industrials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `sector_industrials` — wins=8 losses=7
 - **loss 2026-10-01:** [sector_industrials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-10-02:** [sector_industrials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **win 2026-10-13:** [sector_industrials] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
-### scope `sector_real_estate` — wins=9 losses=6
-- **win 2026-09-25:** [sector_real_estate] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `sector_real_estate` — wins=8 losses=7
 - **win 2026-10-01:** [sector_real_estate] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **loss 2026-10-02:** [sector_real_estate] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-10-13:** [sector_real_estate] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `sector_technology` — wins=5 losses=10
-- **win 2026-10-01:** [sector_technology] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **loss 2026-10-02:** [sector_technology] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-10-06:** [sector_technology] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-10-13:** [sector_technology] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `sector_utilities` — wins=7 losses=8
-- **loss 2026-10-01:** [sector_utilities] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-10-02:** [sector_utilities] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **win 2026-10-08:** [sector_utilities] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **loss 2026-10-13:** [sector_utilities] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ## Open experiments
 
-- **sector_utilities/loss 2026-09-16:** [sector_utilities] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
 - **sector_utilities/loss 2026-09-17:** [sector_utilities] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
 - **sector_utilities/loss 2026-09-18:** [sector_utilities] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
 - **sector_utilities/win 2026-09-21:** [sector_utilities] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
@@ -212,6 +211,7 @@ _(+194 older active lessons not excerpted; each predict receives only its own to
 - **sector_utilities/loss 2026-10-01:** [sector_utilities] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
 - **sector_utilities/loss 2026-10-02:** [sector_utilities] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
 - **sector_utilities/win 2026-10-08:** [sector_utilities] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
+- **sector_utilities/loss 2026-10-13:** [sector_utilities] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
 - **news/loss news:** [news] Raise min net weight to map a ticker; drop weak edges.
 
 ## Methodology checklist (MEMORY_CONFIRM)
