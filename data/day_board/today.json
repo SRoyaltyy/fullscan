@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:26:34.775820-04:00",
+  "generated_at": "2026-10-14T06:27:41.641937-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,66 +11,66 @@
   },
   "buy_1d": [
     {
+      "ticker": "NTAP",
+      "score": 0.2843313440021954
+    },
+    {
       "ticker": "BAND",
-      "score": 0.5054596446690593
+      "score": 0.6611787597649168
     },
     {
-      "ticker": "CNK",
-      "score": 0.650507242212794
+      "ticker": "MQ",
+      "score": 0.5459164323222052
     },
     {
-      "ticker": "WLY",
-      "score": 0.5863550247741003
+      "ticker": "IT",
+      "score": 0.37635451217416427
     },
     {
-      "ticker": "FIS",
-      "score": 0.20510056948205813
+      "ticker": "CON",
+      "score": 0.7287913963202588
     },
     {
-      "ticker": "PRCH",
-      "score": 0.5552775179449208
+      "ticker": "AVPT",
+      "score": 0.7424881989450152
     },
     {
-      "ticker": "TMUS",
-      "score": 0.46090770067271086
-    },
-    {
-      "ticker": "UPWK",
-      "score": 0.49689651274871743
+      "ticker": "SGRY",
+      "score": 0.6603903952758077
     }
   ],
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.3540158220891866
+      "score": -0.3979840672726525
     },
     {
       "ticker": "OKLO",
-      "score": -0.24011378167345843
+      "score": -0.2666901180362591
     },
     {
       "ticker": "FCEL",
-      "score": -0.22470316333007573
+      "score": -0.2284152132262775
     },
     {
       "ticker": "NNDM",
-      "score": -0.1663934465190176
+      "score": -0.1638372495071339
     },
     {
       "ticker": "POWL",
-      "score": -0.058810047261321385
+      "score": -0.040266310950080694
     },
     {
       "ticker": "EOSE",
-      "score": -0.3314992425842292
+      "score": -0.3581743968212493
     },
     {
       "ticker": "NRGV",
-      "score": -0.2581204239587
+      "score": -0.2840014218486169
     },
     {
       "ticker": "INDI",
-      "score": -0.2163323933294375
+      "score": -0.2159049929401755
     }
   ],
   "flatten": {
@@ -110,24 +110,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:21:07.536570-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-14_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -428,6 +410,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:27:40.664776-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-14_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 276703,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-14_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 18477,
+          "preview": "# MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-14.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T06:27:40.520343-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-14.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T06:27:40.520343-04:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
