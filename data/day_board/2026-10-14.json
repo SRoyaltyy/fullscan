@@ -3695,14 +3695,6 @@
   },
   "frozen_write_skips": [
     {
-      "path": "data/day_board/2026-10-14.json",
-      "at": "2026-10-14T10:27:10-04:00",
-      "commit_msg": "auto: land universe [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
       "path": "01_daily/weather/2026-10-14_weather.json",
       "at": "2026-10-14T10:27:27-04:00",
       "commit_msg": "auto: land weather [2026-10-14]",
@@ -5289,6 +5281,14 @@
     {
       "path": "01_daily/sectors/2026-10-14/_board.json",
       "at": "2026-10-14T19:21:13-04:00",
+      "commit_msg": "auto: post-close ALL [2026-10-14]",
+      "workflow": "Post-Close last-closed (ubuntu/DeepSeek sidecar)",
+      "run_id": "38652658459",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-14/_board.json",
+      "at": "2026-10-14T19:21:18-04:00",
       "commit_msg": "auto: post-close ALL [2026-10-14]",
       "workflow": "Post-Close last-closed (ubuntu/DeepSeek sidecar)",
       "run_id": "38652658459",
