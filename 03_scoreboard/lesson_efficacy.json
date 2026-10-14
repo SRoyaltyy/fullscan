@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-14T18:28:20.558943-04:00",
+  "generated_at": "2026-10-14T19:16:34.564148-04:00",
   "window": 7,
   "summary": {
     "n_active": 219,
-    "n_judged": 177,
+    "n_judged": 178,
     "improved": 67,
-    "flat": 29,
+    "flat": 30,
     "worse": 81,
-    "mean_delta": -0.021
+    "mean_delta": -0.022
   },
   "lessons": [
     {
@@ -2260,10 +2260,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 3
+        "hit": 0.25,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": -0.036,
+      "verdict": "flat"
     },
     {
       "lesson": "mega-cap-cyclical-etf-xly-amzn-tsla-hd-with-s0-0-mixed-flat.md",
@@ -3341,11 +3342,11 @@
     {
       "topic": "general",
       "last10": {
-        "hit": 0.4,
+        "hit": 0.5,
         "n": 10
       },
       "prev10": {
-        "hit": 0.7,
+        "hit": 0.6,
         "n": 10
       }
     },
@@ -3356,29 +3357,29 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.4,
+        "hit": 0.3,
         "n": 10
       }
     },
     {
       "topic": "sector:Communication Services",
       "last10": {
-        "hit": 0.2,
+        "hit": 0.1,
         "n": 10
       },
       "prev10": {
-        "hit": 0.2,
+        "hit": 0.3,
         "n": 10
       }
     },
     {
       "topic": "sector:Consumer Cyclical",
       "last10": {
-        "hit": 0.2,
+        "hit": 0.3,
         "n": 10
       },
       "prev10": {
-        "hit": 0.5,
+        "hit": 0.4,
         "n": 10
       }
     },

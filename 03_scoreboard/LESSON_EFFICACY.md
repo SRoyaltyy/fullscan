@@ -1,10 +1,10 @@
 # Lesson efficacy — did promoted lessons change outcomes?
 
-_Generated 2026-10-14T18:28:20.558943-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
+_Generated 2026-10-14T19:16:34.564148-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
 
 This is correlation, not proof — but a lesson whose topic got WORSE after promotion has no evidence of working and is a retirement candidate for the monthly distill.
 
-**Active lessons: 219 · judged (enough data both sides): 177 · improved: 67 · flat: 29 · worse: 81 · mean delta: -0.021**
+**Active lessons: 219 · judged (enough data both sides): 178 · improved: 67 · flat: 30 · worse: 81 · mean delta: -0.022**
 
 ## Retirement candidates (topic got worse after activation)
 
@@ -239,7 +239,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `in-a-utilities-xlu-call-a-second-soft-inflation-` | sector:Utilities | 2026-08-14 | 75% (n=4) | 14% (n=7) | -61% | WORSE |
 | `industrials-xli-narrative-and-sector-scores-cap-` | sector:Industrials | 2026-08-28 | 14% (n=7) | 43% (n=7) | +29% | improved |
 | `long-duration-technology-semis-prediction-turns-` | sector:Technology | 2026-08-13 | 33% (n=3) | 43% (n=7) | — | insufficient |
-| `mega-cap-concentrated-cyclical-etf-xly-like-amzn` | sector:Consumer Cyclical | 2026-10-01 | 29% (n=7) | 0% (n=3) | — | insufficient |
+| `mega-cap-concentrated-cyclical-etf-xly-like-amzn` | sector:Consumer Cyclical | 2026-10-01 | 29% (n=7) | 25% (n=4) | -4% | flat |
 | `mega-cap-cyclical-etf-xly-amzn-tsla-hd-with-s0-0` | sector:Consumer Cyclical | 2026-08-28 | 57% (n=7) | 57% (n=7) | +0% | flat |
 | `mega-cap-earnings-over-macro-drag.md` | general | 2026-07-31 | — | 71% (n=7) | — | insufficient |
 | `missed-1w-movers-show-s-news-0-despite-a-catalog` | — | 2026-09-01 | — | — | — | not market-graded |
@@ -318,10 +318,10 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 
 | Topic | prev 10 | last 10 |
 |-------|---------|---------|
-| general | 70% (n=10) | 40% (n=10) |
-| sector:Basic Materials | 40% (n=10) | 30% (n=10) |
-| sector:Communication Services | 20% (n=10) | 20% (n=10) |
-| sector:Consumer Cyclical | 50% (n=10) | 20% (n=10) |
+| general | 60% (n=10) | 50% (n=10) |
+| sector:Basic Materials | 30% (n=10) | 30% (n=10) |
+| sector:Communication Services | 30% (n=10) | 10% (n=10) |
+| sector:Consumer Cyclical | 40% (n=10) | 30% (n=10) |
 | sector:Consumer Defensive | 40% (n=10) | 70% (n=10) |
 | sector:Energy | 50% (n=10) | 60% (n=10) |
 | sector:Financial | 50% (n=10) | 60% (n=10) |
