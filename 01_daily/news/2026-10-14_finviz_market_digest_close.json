@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14T16:26:38.042296-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-10-15",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-10-15) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed sharply lower as hotter CPI data lifted Treasury yields, boosted Fed hike odds and pressured AI and semiconductor shares",
+  "raw_text": "- The S&P 500 ($SPX) fell about 1.1%, the Nasdaq Composite ($COMP) dropped about 1.9% to 26,693, the Dow Jones ($DJI) lost about 0.1% and the Russell 2000 (IWM) slid about 1.9%, marking the worst session for the major indexes in roughly three months.\n- September headline CPI rose 3.7% year-over-year versus 3.6% forecast and core CPI increased 2.6% versus 2.5% expected, with monthly core up 0.3% versus 0.2% consensus, pushing Treasury yields higher and Fed rate-hike odds to around 50%.\n- AI, technology and semiconductor names led the sell-off, with Nvidia (NVDA) and Broadcom (AVGO) each losing roughly 3% and AMD (AMD) dropping about 6%.\n- Oracle (ORCL) sank about 9%, while Dell Technologies (DELL) tumbled about 11% after a downgrade from Barclays (BCS).\n- CoreWeave (CRWV) plunged about 15% after its bonds turned distressed, with yields hitting around 15% amid rising borrowing costs.\n- Bank of America (BAC) shares fell about 5% as Q3 results missed estimates due to a $1.2 billion regulatory charge tied to money laundering and sanctions violations and weaker FICC trading revenue.\n- Eight of 11 S&P sectors ended lower, while healthcare and other defensives outperformed, with Eli Lilly (LLY) climbing and select energy stocks providing relative support.\n- Bending Spoons (BSP) surged about 41% after Berkshire Hathaway (BRK-B) agreed to invest an additional $330 million in the company.\n- Netflix (NFLX) said it would cut about 1,000 jobs, or 6% of its workforce, as part of a cost-reduction effort while remaining on track to meet its full-year earnings forecast, while after-hours index futures extended losses modestly as investors looked ahead to more financial sector results and continued Federal Reserve commentary on Thursday.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **fell about 1.1%**, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) **dropped about 1.9% to 26,693**, the **Dow Jones** ([$DJI](https://finviz.com/index/DJI?p=d)) **lost about 0.1%** and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) **slid about 1.9%**, marking **the worst session for the major indexes in roughly three months**.\n- **September headline CPI rose 3.7% year-over-year versus 3.6% forecast** and **core CPI increased 2.6% versus 2.5% expected**, with **monthly core up 0.3% versus 0.2% consensus**, pushing Treasury yields higher and **Fed rate-hike odds to around 50%**.\n- **AI, technology and semiconductor names led the sell-off**, with **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) and **Broadcom** ([AVGO](https://finviz.com/quote?t=AVGO)) **each losing roughly 3%** and **AMD** ([AMD](https://finviz.com/quote?t=AMD)) **dropping about 6%**.\n- **Oracle** ([ORCL](https://finviz.com/quote?t=ORCL)) **sank about 9%**, while **Dell Technologies** ([DELL](https://finviz.com/quote?t=DELL)) **tumbled about 11%** after a **downgrade from Barclays** ([BCS](https://finviz.com/quote?t=BCS)).\n- **CoreWeave** ([CRWV](https://finviz.com/quote?t=CRWV)) **plunged about 15%** after its **bonds turned distressed**, with **yields hitting around 15%** amid rising borrowing costs.\n- **Bank of America** ([BAC](https://finviz.com/quote?t=BAC)) shares **fell about 5%** as **Q3 results missed estimates** due to a **$1.2 billion regulatory charge** tied to money laundering and sanctions violations and **weaker FICC trading revenue**.\n- **Eight of 11 S&P sectors ended lower**, while **healthcare and other defensives outperformed**, with **Eli Lilly** ([LLY](https://finviz.com/quote?t=LLY)) climbing and **select energy stocks providing relative support**.\n- **Bending Spoons** ([BSP](https://finviz.com/quote?t=BSP)) **surged about 41%** after **Berkshire Hathaway** ([BRK-B](https://finviz.com/quote?t=BRK-B)) agreed to invest an additional **$330 million** in the company.\n- **Netflix** ([NFLX](https://finviz.com/quote?t=NFLX)) said it would **cut about 1,000 jobs, or 6% of its workforce**, as part of a cost-reduction effort while **remaining on track to meet its full-year earnings forecast**, while **after-hours index futures extended losses modestly** as investors looked ahead to more financial sector results and continued Federal Reserve commentary on **Thursday**.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -1.1,
+      "verb": "fell"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -1.9,
+      "verb": "dropped"
+    },
+    {
+      "name": "Dow Jones",
+      "code": "DJI",
+      "change_pct": -0.1,
+      "verb": "lost"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": -1.9,
+      "verb": "slid"
+    }
+  ],
+  "oil": null,
+  "cpi": {
+    "text": "headline CPI rose 3",
+    "hotter": false
+  },
+  "fed_odds": {
+    "pct": 0.2,
+    "action": "hike",
+    "text": "0.2% consensus, pushing Treasury yields higher and Fed rate-hike"
+  },
+  "named_tickers": [
+    "NVDA",
+    "AVGO",
+    "AMD",
+    "ORCL",
+    "DELL",
+    "BCS",
+    "CRWV",
+    "BAC",
+    "LLY",
+    "BSP",
+    "NFLX"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "AVGO",
+    "AMD",
+    "ORCL",
+    "DELL",
+    "BCS",
+    "CRWV",
+    "BAC",
+    "LLY",
+    "BSP",
+    "NFLX"
+  ],
+  "calendar": [
+    "September headline CPI rose 3.7% year-over-year versus 3.6% forecast and core CPI increased 2.6% versus 2.5% expected, with monthly core up 0.3% versus 0.2% consensus, pushing Treasury yields higher and Fed rate-hike odds to around 50%.",
+    "Netflix (NFLX) said it would cut about 1,000 jobs, or 6% of its workforce, as part of a cost-reduction effort while remaining on track to meet its full-year earnings forecast, while after-hours index futures extended losses modestly as investors looked ahead to more financial sector results and continued Federal Reserve commentary on Thursday."
+  ],
+  "prior_close": {
+    "spx": -1.1,
+    "nasdaq": -1.9,
+    "dow": -0.1
+  },
+  "cpi_fed": {
+    "cpi": {
+      "text": "headline CPI rose 3",
+      "hotter": false
+    },
+    "fed_odds": {
+      "pct": 0.2,
+      "action": "hike",
+      "text": "0.2% consensus, pushing Treasury yields higher and Fed rate-hike"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Netflix (NFLX) said it would cut about 1,000 jobs, or 6% of its workforce, as part of a cost-reduction effort while remaining on track to meet its full-year earnings forecast, while after-hours index futures extended losses modestly as investors looked ahead to more financial sector results and continued Federal Reserve commentary on Thursday."
+    ],
+    "text": "Netflix (NFLX) said it would cut about 1,000 jobs, or 6% of its workforce, as part of a cost-reduction effort while remaining on track to meet its full-year earnings forecast, while after-hours index futures extended losses modestly as investors looked ahead to more financial sector results and continued Federal Reserve commentary on Thursday."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 309366,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-14T16:08:17.19",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
