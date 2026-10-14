@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-14
 
-Export `finviz_2026-10-14.csv` · 11616 names · generated 2026-10-14T09:13:04.618424-04:00
+Export `finviz_2026-10-14.csv` · 11616 names · generated 2026-10-14T10:21:53.708826-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -121,18 +121,18 @@ Mega-cap earnings:
 - BMO **LLY**  EPS est 5.5958  (Lilly(Eli) & Co)
 - AMC **V**  EPS est 3.4375  (Visa Inc)
 - BMO **ASML**  EPS est 12.1744  (ASML Holding NV)
-- BMO **MA**  EPS est 5.1603  (Mastercard Incorporated)
 - AMC **INTC**  EPS est 0.3987  (Intel Corp)
+- BMO **MA**  EPS est 5.1603  (Mastercard Incorporated)
 - BMO **ABBV**  EPS est 3.7356  (Abbvie Inc)
 - BMO **CVX**  EPS est 4.7361  (Chevron Corp)
 - BMO **KO**  EPS est 0.8799  (Coca-Cola Co)
 - AMC **LRCX**  EPS est 2.1771  (Lam Research Corp)
 - BMO **PG**  EPS est 1.8832  (Procter & Gamble Co)
-- BMO **BAC**  EPS est 1.0979  (Bank Of America Corp)
 - BMO **MRK**  EPS est 2.0895  (Merck & Co Inc)
 - BMO **CAT**  EPS est 7.0345  (Caterpillar Inc)
-- BMO **HSBC**  EPS est 2.2019  (HSBC Holdings plc ADR)
+- BMO **BAC**  EPS est 1.0979  (Bank Of America Corp)
 - BMO **GE**  EPS est 2.0022  (GE Aerospace)
+- BMO **HSBC**  EPS est 2.2019  (HSBC Holdings plc ADR)
 - BMO **PM**  EPS est 2.2933  (Philip Morris International Inc)
 - BMO **SHEL**  EPS est 3.3137  (Shell Plc ADR)
 - AMC **NFLX**  EPS est 0.8208  (Netflix Inc)
@@ -141,8 +141,8 @@ Mega-cap earnings:
 - BMO **GEV**  EPS est 3.9947  (GE Vernova Inc)
 - AMC **TXN**  EPS est 2.416  (Texas Instruments Inc)
 - AMC **SAP**  EPS est 2.062  (Sap SE ADR)
-- BMO **TMO**  EPS est 6.4017  (Thermo Fisher Scientific Inc)
 - BMO **RTX**  EPS est 1.7772  (RTX Corp)
+- BMO **TMO**  EPS est 6.4017  (Thermo Fisher Scientific Inc)
 - BMO **AZN**  EPS est 2.6081  (Astrazeneca plc)
 - AMC **KLAC**  EPS est 1.1838  (KLA Corp)
 - BMO **LIN**  EPS est 4.5181  (Linde Plc)
@@ -153,14 +153,14 @@ Mega-cap earnings:
 - BMO **VZ**  EPS est 1.2778  (Verizon Communications Inc)
 
 Options event-vol flags (NOT direction):
-- **GOOG** exp 2026-10-16 ATM IV 0.002 implied move +0.0% put/call OI 1.113
-- **GOOGL** exp 2026-10-14 ATM IV 0.0078 implied move +0.0% put/call OI 0.304
-- **MSFT** exp 2026-10-14 ATM IV 0.0039 implied move +0.0% put/call OI 2.527
-- **AMZN** exp 2026-10-14 ATM IV 0.0156 implied move +0.1% put/call OI 1.138
-- **TSM** exp 2026-10-16 ATM IV 0.0005 implied move 0.0% put/call OI 0.993
-- **META** exp 2026-10-14 ATM IV 0.0156 implied move +0.1% put/call OI 0.946
-- **TSLA** exp 2026-10-14 ATM IV 0.002 implied move +0.0% put/call OI 1.117
-- **LLY** exp 2026-10-16 ATM IV 0.001 implied move +0.0% put/call OI 1.786
+- **GOOG** exp 2026-10-16 ATM IV 0.3235 implied move +2.4% put/call OI 1.113
+- **GOOGL** exp 2026-10-14 ATM IV 0.2666 implied move +1.4% put/call OI 0.785
+- **MSFT** exp 2026-10-14 ATM IV 0.1905 implied move +1.0% put/call OI 1.746
+- **AMZN** exp 2026-10-14 ATM IV 0.2911 implied move +1.5% put/call OI 3.48
+- **TSM** exp 2026-10-16 ATM IV 0.5374 implied move +4.0% put/call OI 2.082
+- **META** exp 2026-10-14 ATM IV 0.297 implied move +1.6% put/call OI 3.896
+- **TSLA** exp 2026-10-14 ATM IV 0.2566 implied move +1.3% put/call OI 8.317
+- **LLY** exp 2026-10-16 ATM IV 0.4076 implied move +3.0% put/call OI 0.088
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -280,31 +280,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 55 sec **CCB** Shareholders who lost money in shares of acquired Coastal Financial Corporation (NASDAQ: CCB) should contact Wolf Haldenstein Immediately (PR Newswire)
-- 2 min **GOOGL,AEP** American Electric Power to Invest $4 Billion in Fuel Cell Project to Meet Energy Demand From Google (The Wall Street Journal)
-- 5 min **NFLX** Netflix Eliminates About 6% of Staff in Biggest Cuts Since 2022 (The Wall Street Journal)
-- 6 min **DAVA** Shareholders who lost money in American Depositary Receipts of Endava plc (NYSE: DAVA) should contact Wolf Haldenstein Immediately (PR Newswire)
-- 8 min **BLK,ASML,TSM,UNH,JNJ** Earnings live updates: Big bank earnings roll on (Yahoo Finance)
-- 9 min **BAC** Bank of America Q3 profit tumbles 17% as $1.2 billion fine and soft trading weigh on results (Yahoo Finance)
-- 9 min **SYK** Stryker launches Sonopet 3, delivering greater power and precision in ultrasonic tissue removal (PR Newswire)
-- 11 min **MMM** 13-Year-old Raji Doshi named America's Top Young Scientist for inventing an algae-aragonite alkalinity system to reduce CO2-driven ocean acidification (PR Newswire)
-- 11 min **SPT** "Lore" crowned the 2026 social media word of the year, according to Sprout Social (GlobeNewswire)
-- 11 min **AJG** Employers Shift Focus from Retirement Access to Financial Outcomes (PR Newswire)
-- 11 min **EXPE** UNPACK '27: EXPEDIA AND STAYZ REVEAL THE TRAVEL TRENDS INSPIRING THE WORLD IN 2027 (Business Wire)
-- 12 min **CVS** MinuteClinic earns seventh consecutive Joint Commission accreditation, including first evaluation under Medical Center standards (PR Newswire)
-- 12 min **KD** Kyndryl, Toyota Systems and Toyota Finance Modernize IT Operations with Agentic AI (PR Newswire)
-- 12 min **BCE** BCE Q3 2026 results to be announced November 5 (PR Newswire)
-- 12 min **QUAD** 75% of Americans think a simpler relationship with technology is a lifestyle upgrade (PR Newswire)
-- 12 min **FEMY** Femasys Doubles Enrolling Sites in FemBloc FINALE Pivotal Trial for Non-Surgical Permanent Birth Control (GlobeNewswire)
-- 12 min **CARL** Carlsmed Launches aprevo Lumbar Bi-lateral Posterior System (GlobeNewswire)
-- 12 min **NTSK** BT International and Netskope Expand Partnership to Deliver Integrated Security Service Edge Across Global Fabric (GlobeNewswire)
-- 12 min **BSET** Bassett Announces Regular Quarterly Dividend (GlobeNewswire)
-- 12 min **DFNS** T3 Defense Subsidiary Positech Commences Deliveries On $3.9 Million Defense Order (GlobeNewswire)
-- 12 min **CBAT** CBAK Energy Reports Approximately US$4.76 Million in Cumulative Sales from European RV Battery Collaboration (GlobeNewswire)
-- 12 min **TOP** TOP Financial Group Limited Establishes U.S. Headquarters and Restructures Board of Directors (GlobeNewswire)
-- 12 min **MNTN** MNTN Brings Tealium First-Party Data Into MNTN Matched to Advance AI-Powered TV Targeting (Business Wire)
-- 12 min **NYT** The New York Times Company to Announce Third-Quarter Financial Results on November 4, 2026 (Business Wire)
-- 12 min **AMRZ** Amrize Announces Date for Third Quarter 2026 Financial Results (Business Wire)
+- 3 min **NTHI** NeOnc Strengthens Boardroom Firepower as Abu Dhabi Opens a New Path for Brain Cancer Drug Development (GlobeNewswire)
+- 3 min **CRWV** CoreWeave Stock Sinks. The Credit Market Is Flashing a Warning Sign. (Barrons.com)
+- 4 min **CELH** Celsius Holdings, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - CELH (PR Newswire)
+- 4 min **ORCL,NVDA,AMZN,CSCO** How Iran's $2 trillion threat puts your AI stocks at risk (MarketWatch)
+- 6 min **VITL** Vital Farms Launches the "Behind Every Carton" Campaign to Show Consumers the Real Farms and Farmers Who Produce the Good Eggs Every Day (Business Wire)
+- 7 min **BBNX** Beta Bionics, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights - BBNX (PR Newswire)
+- 7 min **IONQ** IonQ Stock Falls Amid Quantum Firm's $2 Billion Equity Offering (Investor's Business Daily)
+- 8 min **TSM,ASML** Stock market today: Dow gains, S&P 500, and Nasdaq decline on hot inflation data (Yahoo Finance)
+- 9 min **META,BMBL** What a $1.3 Billion Bumble Deal Says About Where AI Leaves Human Connection (BeInCrypto)
+- 9 min **SPCX** Ukraine: SpaceX is throttling Starlink again amid war with Russia (Yahoo Finance)
+- 9 min **PDYN,BBAI,VWAV,AIRO,MVIS** The Next Billion-Dollar Defense Technology Opportunity: AI-Powered Autonomous Mission Intelligence (PR Newswire)
+- 11 min **AFL** With Loving Hearts and Some Power Tools, A?ac Employees Build 40 Beds for Local Children Through Partnership With Sleep in Heavenly Peace (ACCESSWIRE)
+- 14 min **CIFR** Cipher Digital Prices $850M Zero-Coupon Convertible Notes  Heres How It Intends To Use The Proceeds (Stocktwits)
+- 15 min **DELL,HPE,NTAP** Barclays downgrades Dell stock after sharp rally (Investing.com)
+- 17 min **BSP,BRK-B** Bending Spoons Stock Surges 41% as Berkshire Hathaway Invests Another $330 Million (Barrons.com)
+- 19 min **GRMN** Garmin selects Ventura, California as newest Garmin Marathon Series location (PR Newswire)
+- 20 min **RMCO** Royalty Management Holding Corporation Announces Fourth Quarter 2026 Cash Dividend (NewMediaWire)
+- 21 min **AB** AllianceBernstein: At the Edge of Insurability: When Wildfire Risk Becomes Investment Risk (ACCESSWIRE)
+- 21 min **MTB** M&T Bank Ranks No. 1 in SBA 7(a) Lending Across Its Footprint, Achieves Record Small Business Loan Growth (PR Newswire)
+- 21 min **RCL** ROYAL CARIBBEAN UNVEILS MORE WAYS TO EXPLORE EUROPE IN 2028-29 WITH NEW YEAR-ROUND SEASON (PR Newswire)
+- 21 min **ALKT** City First Bank Partners with MANTL to Advance Its Nationwide Growth Strategy (PR Newswire)
+- 21 min **RCI** Citytv Announces Dateline Canada Special from Rogers Studios (GlobeNewswire)
+- 21 min **QTWO** Q2 Releases New Fraud Intelligence Report on Account Takeover Signals (Business Wire)
+- 21 min **CMCSA** Xfinity and Comcast Business High-Speed Internet Now Available to Nearly 2,000 Homes and Businesses in Hardee County, Florida (Business Wire)
+- 21 min **DLTR** Even high-income shoppers are turning to Dollar Tree for dupes. Are you too, in the face of economic uncertainty? (Moneywise)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.

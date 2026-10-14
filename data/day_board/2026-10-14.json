@@ -4142,6 +4142,22 @@
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38578583308",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/map_heat/2026-10-14_map_heat.json",
+      "at": "2026-10-14T10:22:07-04:00",
+      "commit_msg": "auto: finviz preopen scrape (via Pre-Open ALL) [2026-10-14_1422]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-10-14.scraped_at",
+      "at": "2026-10-14T10:22:07-04:00",
+      "commit_msg": "auto: finviz preopen scrape (via Pre-Open ALL) [2026-10-14_1422]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
     }
   ]
 }
