@@ -58,26 +58,36 @@ def trace_model(text: str) -> str | None:
     return m.group(1).strip() if m else None
 
 
+def reason_from(session: str, status_raw: str | None, trace_text: str | None,
+                where: str = "main", book: str = "h1", tail: str = "") -> str | None:
+    """Two-part check on already-read text. None when Grok wrote the predict.
+
+    Shared by the h1 seal (this file) and the Factor Mine seal wrapper
+    (src/fm_grok_gate.py) so both books apply the identical rule.
+    """
+    tail = f" {tail}" if tail else ""
+    if status_raw is None:
+        return f"{status_rel(session)} is not on {where}; cannot confirm grok_ok.{tail}"
+    try:
+        ok = json.loads(status_raw).get("grok_ok")
+    except (ValueError, AttributeError):
+        return f"{status_rel(session)} does not parse; cannot confirm grok_ok.{tail}"
+    if ok is not True:
+        return f"{status_rel(session)} has grok_ok={ok!r}; the {book} seal needs grok_ok=true.{tail}"
+    if trace_text is None:
+        return f"{trace_rel(session)} is not on {where}; cannot confirm the predict model.{tail}"
+    model = trace_model(trace_text)
+    if not model or "grok" not in model.lower():
+        return f"{trace_rel(session)} names model {model or 'none'}, not Grok; the {book} seal needs a Grok predict.{tail}"
+    return None
+
+
 def not_grok(session: str, repo: Path = ROOT, ref: str | None = None) -> str | None:
     """None when Grok wrote the predict for ``session`` on ``ref``; else the reason."""
     ref = ref or forward.GIT_REF
     tail = f"No plan line written; {session} stays missing"
-    raw = _show(repo, ref, status_rel(session))
-    if raw is None:
-        return f"{status_rel(session)} is not on {ref}; cannot confirm grok_ok. {tail}"
-    try:
-        ok = json.loads(raw).get("grok_ok")
-    except (ValueError, AttributeError):
-        return f"{status_rel(session)} does not parse; cannot confirm grok_ok. {tail}"
-    if ok is not True:
-        return f"{status_rel(session)} has grok_ok={ok!r}; the h1 seal needs grok_ok=true. {tail}"
-    text = _show(repo, ref, trace_rel(session))
-    if text is None:
-        return f"{trace_rel(session)} is not on {ref}; cannot confirm the predict model. {tail}"
-    model = trace_model(text)
-    if not model or "grok" not in model.lower():
-        return f"{trace_rel(session)} names model {model or 'none'}, not Grok; the h1 seal needs a Grok predict. {tail}"
-    return None
+    return reason_from(session, _show(repo, ref, status_rel(session)),
+                       _show(repo, ref, trace_rel(session)), ref, "h1", tail + ".")
 
 
 def check(

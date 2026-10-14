@@ -368,7 +368,17 @@ def apply_required_files(root: Path, day: str, rows: list[dict]) -> list[dict]:
     """
     rel = PREDICT_REL.format(day=day)
     if blob_on_main(root, rel) is not None:
-        return rows
+        # Pending Cyrus: presence is not enough. grok_ok must be true and
+        # the predict trace must name a Grok model (h1_grok_gate rule).
+        from src.fm_grok_gate import reason as _grok_reason
+        why = _grok_reason(day, root)
+        if why is None:
+            return rows
+        return _refuse(rows, f"not a Grok predict: {why}")
+    return _refuse(rows, f"missing {rel}")
+
+
+def _refuse(rows: list[dict], tag: str) -> list[dict]:
     out = []
     for row in rows:
         if row.get("family") not in NEEDS_PREDICT and row.get("name") not in NEEDS_PREDICT:
@@ -377,7 +387,6 @@ def apply_required_files(root: Path, day: str, rows: list[dict]) -> list[dict]:
         row = dict(row)
         if row.get("status") in ("OK", "SIT"):
             row["status"] = "MISSING"
-        tag = f"missing {rel}"
         note = row.get("note") or ""
         if tag not in note:
             row["note"] = (f"{tag}; {note}" if note else tag)[:200]

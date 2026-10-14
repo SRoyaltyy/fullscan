@@ -171,6 +171,8 @@ def load_or_build(day: str) -> dict:
 
 def install() -> None:
     from . import strategy_tickets as st
+    from .fm_grok_gate import install as _fm_grok_install
+    _fm_grok_install()  # pending Cyrus: FM rows need a Grok predict
     if getattr(st._session_look, "_morning_look", False):
         return
     original = st._session_look

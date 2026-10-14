@@ -206,11 +206,18 @@ def test_factor_mine_and_h1_require_predict_presence_only() -> None:
     path = r / rel
     path.parent.mkdir(parents=True)
     path.write_text("x", encoding="utf-8")  # presence only, not a quality check
+    _grok_files(r)  # pending Cyrus: plus grok_ok + a Grok trace (fm_grok_gate)
     st = {row["name"]: row for row in build(r, D, fetch=lambda u: None)["strategies"]}
     assert st["fm_a"]["status"] == "OK" and st["fm_a"]["buys"] == ["AAA"]
     assert st["fm_sit"]["status"] == "SIT"
     assert st["h1"]["status"] == "OK"
     assert "theme_radar:fpe_delta_t3_earn_today_3d" in st
+
+
+def _grok_files(r: Path, ok=True, model="grok-4.20-0309-reasoning") -> None:
+    (r / "01_daily/general").mkdir(parents=True, exist_ok=True)
+    (r / f"01_daily/{D}_preopen_status.json").write_text(json.dumps({"grok_ok": ok}))
+    (r / f"01_daily/general/{D}_predict_trace.md").write_text(f"Model: `{model}`\n")
 
 
 def test_predict_not_on_main_refuses_ok_even_if_worktree_has_it() -> None:
@@ -221,6 +228,7 @@ def test_predict_not_on_main_refuses_ok_even_if_worktree_has_it() -> None:
     path = r / rel
     path.parent.mkdir(parents=True)
     path.write_text("worktree only\n", encoding="utf-8")
+    _grok_files(r)
     st = {row["name"]: row for row in build(r, D, fetch=lambda u: None)["strategies"]}
     assert st["fm_a"]["status"] == "MISSING" and rel in st["fm_a"]["note"]
     assert st["h1"]["status"] == "MISSING"
