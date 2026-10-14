@@ -12,7 +12,7 @@ Use exact contiguous headline evidence. business_identity quotes the subject's n
 
 class SectorBatchReviewer:
     def __init__(self,client):self.client=client
-    def review(self,data,drafts,depth=0):
+    def review(self,data,drafts,depth=0,retry_errors=None):
         expected={r['n']:r for r in data}
         props={'n':{'type':'integer'},'sectors':schema()['properties']['sectors'],'unknowns':{'type':'array','items':{'type':'string'}}}
         row_schema={'type':'object','properties':props,'required':list(props),'additionalProperties':False}
@@ -39,6 +39,8 @@ class SectorBatchReviewer:
             good,bad=partition(blob)
             return [] if good else [f'row {n}: '+e for n,errors in bad.items() for e in errors]
         prompt=sector_prompt()+'\nOUTPUT_SCHEMA='+json.dumps(response_schema,separators=(',',':'))+'\nHEADLINES='+json.dumps(data,ensure_ascii=False,separators=(',',':'))
+        if retry_errors:
+            prompt='\nSUBSET_VALIDATION_ERRORS='+json.dumps({n:retry_errors[n] for n in expected},separators=(',',':'))+'\nThese are shape/evidence errors, not semantic labels. Return every supplied row; copy evidence literally from its own title.\n'+prompt
         self.client.phase='sector_batch'
         record=self.client._request(prompt,validate,response_schema,min(6000,max(1200,450*len(data))))
         good,bad=partition(record['model_output']);outputs={}
@@ -58,6 +60,6 @@ class SectorBatchReviewer:
         failed=[r for r in data if r['n'] not in good]
         if failed and depth<2 and (good or len(failed)>1) and (good or any(a['status'] not in ('credential_unavailable','no_allowlisted_classification_model') for a in record['attempts'])):
             groups=[failed] if good else [failed[:len(failed)//2],failed[len(failed)//2:]]
-            for group in groups:outputs.update(self.review(group,drafts,depth+1))
+            for group in groups:outputs.update(self.review(group,drafts,depth+1,bad))
         return outputs
 

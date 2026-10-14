@@ -57,3 +57,5 @@ class SectorReviewTests(unittest.TestCase):
         self.assertIn('activity explicitly affected',sector_prompt())
 
 if __name__=='__main__':unittest.main()
+
+

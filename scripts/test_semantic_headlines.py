@@ -122,6 +122,8 @@ class SemanticTests(unittest.TestCase):
         self.assertEqual(base.count('LOCKED LANE DEFINITIONS'),1)
         retry_data=json.loads(ask.call_args_list[1].args[1].split('BATCH_DATA=',1)[1])
         self.assertEqual([r['n'] for r in retry_data],[2])
+        self.assertIn('"2":["Missing batch id"]',ask.call_args_list[1].args[1])
+        self.assertNotIn('SUBSET_VALIDATION_ERRORS',base)
         self.assertIs(result[0]['model_output'],a)
         self.assertTrue(result[1]['recovery_history'])
 
@@ -174,3 +176,4 @@ class SemanticTests(unittest.TestCase):
         self.assertEqual(ask.call_args.kwargs['model_allowlist'],('glm-4.7-flash',));self.assertEqual(r['status'],'analyzed')
 
 if __name__=='__main__':unittest.main()
+

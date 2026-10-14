@@ -14,7 +14,7 @@ from .schema import EVENT_CLASSES
 from .semantic_ontology import ONTOLOGY_VERSION, ontology_text
 from .semantic_catalog import CompanyCatalog
 
-VERSION='semantic-headlines-v7'
+VERSION='semantic-headlines-v8'
 SECTORS=('Basic Materials','Communication Services','Consumer Cyclical','Consumer Defensive','Energy','Financial','Healthcare','Industrials','Real Estate','Technology','Utilities')
 STAGES=('reported','proposal','future','negated','retrospective','uncertain')
 ACTION_KINDS=('decision','procedural_step','official_engagement','personnel_change','official_clarification','monetary_operation','administrative_operation','communication','statistical_release','historical_summary','private_business','other')
@@ -158,7 +158,7 @@ class SemanticHeadlineClient:
         self.phase='idle'
         return outputs
 
-    def _batch_records(self,data,phase,drafts=None,depth=0):
+    def _batch_records(self,data,phase,drafts=None,depth=0,retry_errors=None):
         expected={r['n']:r['title'] for r in data}
         batch_schema={'type':'object','properties':{'results':{'type':'array','items':{'type':'object','properties':{'n':{'type':'integer'},'analysis':schema()},'required':['n','analysis'],'additionalProperties':False}}},'required':['results'],'additionalProperties':False}
         def partition(blob):
@@ -176,72 +176,4 @@ class SemanticHeadlineClient:
                 issues=validation_errors(result['analysis'],expected[n])
                 if issues:errors[n]=issues
                 else:good[n]=result['analysis']
-            for n in set(expected)-seen:errors[n]=['Missing batch id']
-            return good,errors
-        def validate(blob):
-            good,errors=partition(blob)
-            return [] if good else [f'row {n}: '+e for n,issues in errors.items() for e in issues]
-        base=instructions()+'\nBATCH TASK: Analyze each BATCH_DATA row independently. Never transfer facts, evidence or catalog matches between rows. Return exactly one result for each supplied integer n. Keep explanations concise. Use BATCH_OUTPUT_SCHEMA only.\nBATCH_OUTPUT_SCHEMA='+json.dumps(batch_schema,separators=(',',':'))+'\nBATCH_DATA='+json.dumps(data,ensure_ascii=False,separators=(',',':'))
-        if drafts is not None:
-            base+='\nBATCH_DRAFT_TO_AUDIT='+json.dumps({n:drafts[n] for n in expected},ensure_ascii=False,separators=(',',':'))+'\nAUDIT: Independently check each row. Correct errors supported by the title and definitions. Do not downgrade an explicitly reported action merely because its identity, effective date or finality is unknown. Preserve justified uncertainty; return the complete schema.'
-        self.phase=phase
-        record=self._request(base,validate,batch_schema,min(16000,max(2000,1200*len(data))))
-        good,errors=partition(record['model_output']);outputs={}
-        for n in expected:
-            out={k:v for k,v in record.items() if k!='model_output'}
-            out.update(model_output=good.get(n),status='analyzed' if n in good else 'unavailable',batch_depth=depth)
-            if n not in good:out['row_validation_errors']=errors.get(n,['No usable response'])
-            outputs[n]=out
-            if n in good and (not self.sector_review and (not self.review or phase=='audit_batch')):
-                row=next(r for r in data if r['n']==n)
-                self.batch_progress[n]=dict(out,analysis_output=derive_analysis(good[n]),ontology_version=ONTOLOGY_VERSION,catalog=self.catalog.metadata,catalog_candidates=row['catalog_candidates'],review_status='completed' if self.review else 'not_run')
-        failed=[r for r in data if r['n'] not in good]
-        can_retry=bool(failed and depth<2 and (good or len(failed)>1) and (good or any(a['status'] not in ('credential_unavailable','no_allowlisted_classification_model') for a in record['attempts'])))
-        if can_retry:
-            groups=[failed] if good else [failed[:len(failed)//2],failed[len(failed)//2:]]
-            for group in groups:
-                recovered=self._batch_records(group,phase,drafts,depth+1)
-                for n,out in recovered.items():
-                    out['recovery_history']=[{k:v for k,v in outputs[n].items() if k not in ('model_output','rejected_outputs')}]+out.get('recovery_history',[])
-                    outputs[n]=out
-        return outputs
-    def _extract(self,title,base):
-        result=self._request(base,lambda blob:validation_errors(blob,title),schema(),2000)
-        if result['status']=='analyzed':result['analysis_output']=derive_analysis(result['model_output'])
-        return result
-    def _request(self,base,validator,response_schema,max_tokens):
-        attempts=[];all_rejected=[];submitted_chars=0;started=time.monotonic()
-        for provider in self.provider_order:
-            if provider not in route.CLASSIFY_LANES:raise ValueError('Provider outside existing classification allowlist: '+provider)
-            if not self.ctx['keys'].get(provider):
-                attempts.append({'provider':provider,'status':'credential_unavailable'});continue
-            models=route.primary_models_for(provider,'news_classify')
-            if self.model_allowlist is not None:models=[m for m in models if m in self.model_allowlist]
-            if not models:
-                attempts.append({'provider':provider,'status':'no_allowlisted_classification_model'});continue
-            rejected=[]
-            def accept(blob):
-                errors=validator(blob)
-                if errors:
-                    bad={'raw_response':blob,'validation_errors':errors}
-                    rejected.append(bad);all_rejected.append(bad)
-                return not errors
-            current=base
-            for repair in range(2):
-                try:
-                    submitted_chars+=len(current)
-                    transport_log=io.StringIO()
-                    with redirect_stdout(transport_log):
-                        blob,model=route.ask_lane(provider,current,self.ctx,max_tokens=max_tokens,system=SYSTEM,tmpl='news_classify',accept=accept,response_schema=response_schema,model_allowlist=self.model_allowlist)
-                    codes=sorted(set(re.findall(r'\b(?:401|402|403|404|408|429|500|502|503|504)\b',transport_log.getvalue())))
-                    if codes:attempts.append({'provider':provider,'status':'transport_diagnostics','http_codes':codes})
-                except Exception as exc:
-                    # Never include exception messages/URLs/headers in artifacts.
-                    blob,model=None,None;attempts.append({'provider':provider,'status':'transport_exception','exception_type':type(exc).__name__})
-                if blob is not None and not route.is_classify_banned(str(model or '')) and accept(blob):
-                    return {'version':VERSION,'status':'analyzed','model_output':blob,'provider':provider,'model':str(model),'attempts':attempts,'rejected_outputs':all_rejected,'submitted_prompt_chars':submitted_chars,'requested_max_output_tokens':max_tokens,'elapsed_seconds':round(time.monotonic()-started,2)}
-                attempts.append({'provider':provider,'model':str(model) if model else None,'status':'schema_rejected' if rejected else 'no_usable_response','repair':repair})
-                if repair or not rejected:break
-                current=base+'\nSCHEMA_REPAIR: '+json.dumps(rejected[-1],ensure_ascii=False)+'\nCorrect the shape, literal evidence or internal consistency; return the entire JSON. Do not infer missing facts.'
-        return {'version':VERSION,'status':'unavailable','model_output':None,'provider':None,'model':None,'attempts':attempts,'rejected_outputs':all_rejected,'submitted_prompt_chars':submitted_chars,'requested_max_output_tokens':max_tokens,'elapsed_seconds':round(time.monotonic()-started,2)}
-
+            for n in 

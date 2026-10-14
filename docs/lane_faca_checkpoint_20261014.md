@@ -20,3 +20,7 @@ Clarify commercial contract changes under demand and commercial surcharge decrea
 41 semantic contract tests passed locally. Provider performance not yet measured for V7.
 
 CI workflow self-check at 657aba passed all 23 workflow tests but failed a second stale GLM allowlist expectation in src/test_lane_news_scan.py; V7 aligns that test with the exact approved Flash allowlist.
+
+## V8 reliability change prepared during V7 measurement
+
+Failed-subset retries now receive per-row schema/evidence validation errors, never semantic labels or benchmark answers. Successful rows remain excluded from retries. Both extraction and independent sector stages use the same bounded recovery pattern. All 41 semantic tests pass, including failed-row isolation and error-feedback assertions. V7 live run 38510032205 retains its original df5be72bf4f2804afc8248b6cd5238d1f4f5ccf5 checkout. V8 is saved with provider validation skipped to avoid overlapping duplicate calls; performance still unmeasured.
