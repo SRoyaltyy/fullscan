@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-10-14
 
-_Generated 2026-10-14T10:28:26 — live `flatten_robust`._
+_Generated 2026-10-14T10:35:26 — live `flatten_robust`._
 
 **S=-1.65; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -55,7 +55,7 @@ Sized from marked equity **$103,555.33** as if the book were flat. `io 3d_size (
 | 16:00 ET | TRU | io_core | 255 | $67.49 | $17,209.95 | cash tied |
 | 16:00 ET | WSM | io_core | 71 | $239.98 | $17,038.58 | cash tied |
 | 16:00 ET | CNK | io_core | 454 | $37.94 | $17,224.76 | cash tied |
-| 16:00 ET | WLY | io_core | 328 | $52.58 | $17,246.24 | cash tied |
 | 16:00 ET | AVPT | io_core | 1187 | $14.53 | $17,247.11 | cash tied |
+| 16:00 ET | WLY | io_core | 328 | $52.58 | $17,246.24 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
