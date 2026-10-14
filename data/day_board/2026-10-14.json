@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T10:34:08.247742-04:00",
+  "generated_at": "2026-10-14T10:34:35.801800-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -237,8 +237,8 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 461698,
-          "said": "461698B on disk",
+          "size": 455123,
+          "said": "455123B on disk",
           "bullets": []
         },
         {
@@ -1066,24 +1066,6 @@
     }
   },
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:33:04.889502-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-14_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -3539,6 +3521,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, ELV, AUPH, AMD \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, ETN, JBL, ATRC"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T10:34:34.264708-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-14_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 455123,
+          "preview": "raw=567 usable=122 single=48 \u00b7 US CPI Jumps 3.7%, Raising Federal Reserve Rate Hike Chances - \uc870\uc120\uc77c\ubcf4 | Fed rate hike seen more likely after inflation data - Yahoo Finance | Fed rate hike seen more likely after inflation data - Central Oregon Daily | US 10-Year Yield Steadies Ahead of CPI Report - TradingView | Hotter inflation could force Fed to move rate hike plans to October - HousingWir"
+        },
+        {
+          "path": "01_daily/news/2026-10-14_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 7251,
+          "preview": "# News Parse v2 \u2014 2026-10-14T10:34:34.029416-04:00\nWindow\u224848h | news_mode=on | raw=567 | usable=122 | single_name=48 | noise_dropped=397\nusable polarity={'+': 2, '-': 29, 'mixed': 1, 'neutral': 90}"
+        }
+      ],
+      "preview": "raw=567 usable=122 single=48 \u00b7 US CPI Jumps 3.7%, Raising Federal Reserve Rate Hike Chances - \uc870\uc120\uc77c\ubcf4 | Fed rate hike seen more likely after inflation data - Yahoo Finance | Fed rate hike seen more likely after inflation data - Central Oregon Daily | US 10-Year Yield Steadies Ahead of CPI Report - TradingView | Hotter inflation could force Fed to move rate hike plans to October - HousingWir \u00b7 # News Parse v2 \u2014 2026-10-14T10:34:34.029416-04:00\nWindow\u224848h | news_mode=on | raw=567 | usable=122 | single_name=48 | noise_dropped=397\nusable polarity={'+': 2, '-': 29, 'mixed': 1, 'neutral': 90}"
     }
   ],
   "href": {
@@ -4514,6 +4521,38 @@
       "commit_msg": "auto: strategy tickets 2026-10-14",
       "workflow": "Publish strategy tickets",
       "run_id": "38579872045",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_preopen_qc.json",
+      "at": "2026-10-14T10:34:38-04:00",
+      "commit_msg": "auto: land news_parse [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_preopen_status.json",
+      "at": "2026-10-14T10:34:38-04:00",
+      "commit_msg": "auto: land news_parse [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-14_parsed.json",
+      "at": "2026-10-14T10:34:38-04:00",
+      "commit_msg": "auto: land news_parse [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T10:34:38-04:00",
+      "commit_msg": "auto: land news_parse [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
     }
   ]
