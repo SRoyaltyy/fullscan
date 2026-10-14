@@ -7,9 +7,9 @@ Updated: 2026-10-13. Calls are graded at T+h trading days using the scoreboard's
 | Topic | Horizon | Graded | Dir hit | Mag hit | Avg actual % |
 |---|---|---|---|---|---|
 | general | 3d | 32 | 19% (6/32) | 44% (14/32) | +0.01% |
-| general | 1w | 31 | 26% (8/31) | 68% (21/31) | +0.13% |
-| general | 2w | 27 | 26% (7/27) | 37% (10/27) | +0.29% |
-| general | 1m | 16 | 6% (1/16) | 38% (6/16) | +0.06% |
+| general | 1w | 32 | 25% (8/32) | 66% (21/32) | +0.14% |
+| general | 2w | 28 | 25% (7/28) | 39% (11/28) | +0.34% |
+| general | 1m | 17 | 6% (1/17) | 41% (7/17) | +0.17% |
 | sector:Basic Materials | 3d | 11 | 36% (4/11) | 18% (2/11) | -0.61% |
 | sector:Basic Materials | 1w | 11 | 18% (2/11) | 27% (3/11) | -1.18% |
 | sector:Basic Materials | 2w | 11 | 18% (2/11) | 36% (4/11) | -3.43% |
@@ -59,6 +59,9 @@ Updated: 2026-10-13. Calls are graded at T+h trading days using the scoreboard's
 
 | Date | Topic | Horizon | Call | Actual | Dir | Mag |
 |---|---|---|---|---|---|---|
+| 2026-10-05 | general | 1w | flat/mild | +0.41% (up/flat) | ❌ | ❌ |
+| 2026-09-28 | general | 2w | flat/mild | +1.58% (up/mild) | ❌ | ✅ |
+| 2026-09-11 | general | 1m | down/mild | +1.94% (up/mild) | ❌ | ✅ |
 | 2026-10-02 | general | 1w | down/mild | +1.09% (up/mild) | ❌ | ✅ |
 | 2026-09-25 | general | 2w | down/mild | +0.82% (up/flat) | ❌ | ❌ |
 | 2026-09-10 | general | 1m | flat/mild | +2.84% (up/mild) | ❌ | ✅ |
@@ -81,9 +84,6 @@ Updated: 2026-10-13. Calls are graded at T+h trading days using the scoreboard's
 | 2026-09-28 | general | 1w | down/mild | +1.17% (up/mild) | ❌ | ✅ |
 | 2026-09-21 | general | 2w | down/mild | +0.12% (flat/flat) | ❌ | ❌ |
 | 2026-09-03 | general | 1m | down/mild | +0.34% (up/flat) | ❌ | ❌ |
-| 2026-09-29 | general | 3d | flat/mild | +0.68% (up/mild) | ❌ | ✅ |
-| 2026-09-25 | general | 1w | down/mild | -0.27% (flat/flat) | ❌ | ❌ |
-| 2026-09-18 | general | 2w | down/mild | +0.94% (up/flat) | ❌ | ❌ |
 
-*267 calls still maturing (T+h close not recorded yet).*
+*264 calls still maturing (T+h close not recorded yet).*
 
