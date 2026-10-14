@@ -47,7 +47,7 @@
   }
  },
  "date": "2026-10-14",
- "generated_at": "2026-10-14T05:49:43-04:00",
+ "generated_at": "2026-10-14T05:57:39-04:00",
  "strategies": [
   {
    "buys": [
@@ -5443,18 +5443,17 @@
   },
   {
    "buys": [
-    "SMMT",
-    "PACS",
-    "CON",
-    "MD",
-    "ASTH",
-    "AMN",
-    "SGRY"
+    "SMMT"
    ],
    "family": "flatten_robust",
    "name": "flatten_robust",
    "note": "live flatten_robust card",
-   "sells": [],
+   "sells": [
+    "CDNA",
+    "RRC",
+    "PACS",
+    "ETON"
+   ],
    "source": "data/day_board/2026-10-14_strategy_tickets.json",
    "status": "OK"
   },
