@@ -14,7 +14,7 @@ from .schema import EVENT_CLASSES
 from .semantic_ontology import ONTOLOGY_VERSION, ontology_text
 from .semantic_catalog import CompanyCatalog
 
-VERSION='semantic-headlines-v11'
+VERSION='semantic-headlines-v12'
 SECTORS=('Basic Materials','Communication Services','Consumer Cyclical','Consumer Defensive','Energy','Financial','Healthcare','Industrials','Real Estate','Technology','Utilities')
 STAGES=('reported','proposal','future','negated','retrospective','uncertain')
 ACTION_KINDS=('decision','procedural_step','official_engagement','personnel_change','official_clarification','monetary_operation','administrative_operation','communication','statistical_release','historical_summary','private_business','other')

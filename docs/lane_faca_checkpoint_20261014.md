@@ -60,3 +60,9 @@ V10 run 38515060184 analyzed 99/100. Action agreement 94%, precision 93.75% (15 
 V11 uses --action-review with --no-review. First stage extracts only Lane events; second independently extracts action atoms and sectors, without Lane definitions or the first draft. Both stages batch ten titles, preserving the normal two calls per batch. Required missing facts remain unavailable. The runner no longer treats an empty successful first-stage attempts list plus a failed second stage as missing credentials.
 
 All 50 semantic contract tests passed locally on 2026-10-14. V11 live performance is not yet measured. The workflow replays frozen batch_01 as development; no acceptance credit. Frozen batch_02 remains unrun. Acceptance streak remains 0/10. Source/configuration/catalog must stay fixed across future genuine holdouts; all five metrics must reach 90% on every pass.
+
+## V11 development measurement and V12 boundary correction
+
+V11 run 38605686197, commit d2e3947a4d9beba6544e23b21f6057505e2f36e8: availability 100%, action agreement 89%, action precision 70.8333% (17 TP, 7 FP), recall 100% (17/17), Lane 92%, exact sectors 89%. The fixed grader succeeded. This fails the goal and is development-only; acceptance remains 0/10.
+
+V12 retains the two independent stages and batches of ten. It requires a newly reported predicate before assigning public action, separates existing/background instruments from fresh operations, distinguishes campaign appearances from official engagements, and avoids inventing public executors from event venues, ordinary business stoppages or national adjectives. Claimed substantive agreements retain their own uncertain atom rather than only the communication. Sector instructions prioritize the explicitly targeted operating activity and recognize clinical workforce activity while excluding personal trading narratives. No reference labels changed. Fresh frozen batch_02 remains unrun.
