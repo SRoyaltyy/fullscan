@@ -8,24 +8,24 @@ Dashboard: `dashboard/boring-winners/index.html` → https://sroyaltyy.github.io
 
 | sleeve | source | n | hold | color | hard_red | mean day | cum | p(loss day) | final $10k | orig 8/13–8/21 |
 |---|---|---:|---:|---|---|---:|---:|---:|---:|---:|
-| `mine_25_h1` | mine | 25 | 1 | all | none | +7.40 | +325.52 | 84.1% | 737 | 70,574 (+605.74 / 7d) |
-| `book_25_h3` | book | 25 | 3 | all | none | -2.85 | -125.58 | 56.8% | 2,436 | 10,213 (+2.13 / 7d) |
-| `overlay_10_h3` | overlay | 10 | 3 | all | none | -3.62 | -159.36 | 61.4% | 1,581 | 10,493 (+4.93 / 7d) |
-| `overlay_25_h5` | overlay | 25 | 5 | all | none | -4.01 | -176.25 | 68.2% | 1,181 | 10,173 (+1.73 / 7d) |
-| `overlay_25_h3` | overlay | 25 | 3 | all | none | -4.21 | -185.34 | 72.7% | 1,281 | 10,160 (+1.60 / 7d) |
-| `overlay_25_h3_blue` | overlay | 25 | 3 | blue | none | -4.40 | -193.63 | 77.3% | 1,143 | 10,223 (+2.23 / 7d) |
-| `overlay_50_h1` | overlay | 50 | 1 | all | none | -6.03 | -265.43 | 84.1% | 296 | 9,721 (-2.79 / 7d) |
-| `overlay_25_h1_lim5` | overlay | 25 | 1 | all | limit_5 | -6.04 | -265.65 | 68.2% | 295 | 9,770 (-2.30 / 7d) |
-| `overlay_25_h1_stand` | overlay | 25 | 1 | all | stand_down | -6.14 | -270.35 | 65.9% | 276 | 9,770 (-2.30 / 7d) |
-| `overlay_25_h1` | overlay | 25 | 1 | all | none | -6.15 | -270.68 | 81.8% | 277 | 9,770 (-2.30 / 7d) |
-| `overlay_50_h1_cut5` | overlay | 50 | 1 | all | haircut_5 | -6.16 | -270.84 | 84.1% | 276 | 9,721 (-2.79 / 7d) |
-| `overlay_25_h1_cut5` | overlay | 25 | 1 | all | haircut_5 | -6.16 | -271.07 | 81.8% | 276 | 9,770 (-2.30 / 7d) |
-| `overlay_25_h1_green` | overlay | 25 | 1 | green | none | -6.25 | -274.82 | 77.3% | 229 | 9,786 (-2.14 / 7d) |
-| `overlay_10_h1` | overlay | 10 | 1 | all | none | -6.37 | -280.46 | 84.1% | 220 | 9,958 (-0.42 / 7d) |
-| `overlay_25_h1_blue` | overlay | 25 | 1 | blue | none | -6.48 | -285.15 | 84.1% | 188 | 9,632 (-3.68 / 7d) |
-| `overlay_10_h1_green` | overlay | 10 | 1 | green | none | -6.48 | -285.16 | 79.5% | 189 | 10,019 (+0.19 / 7d) |
-| `book_25_h1` | book | 25 | 1 | all | none | -7.05 | -310.27 | 79.5% | 108 | 9,915 (-0.85 / 7d) |
-| `overlay_25_h2` | overlay | 25 | 2 | all | none | -7.18 | -316.10 | 88.6% | 189 | 9,936 (-0.64 / 7d) |
+| `mine_25_h1` | mine | 25 | 1 | all | none | +6.38 | +299.85 | 85.1% | 522 | 70,574 (+605.74 / 7d) |
+| `book_25_h3` | book | 25 | 3 | all | none | -2.29 | -107.69 | 55.3% | 2,993 | 10,213 (+2.13 / 7d) |
+| `overlay_10_h3` | overlay | 10 | 3 | all | none | -3.25 | -153.00 | 57.5% | 1,667 | 10,493 (+4.93 / 7d) |
+| `overlay_25_h3_blue` | overlay | 25 | 3 | blue | none | -3.34 | -156.83 | 74.5% | 1,854 | 10,223 (+2.23 / 7d) |
+| `overlay_25_h5` | overlay | 25 | 5 | all | none | -3.71 | -174.21 | 68.1% | 1,216 | 10,173 (+1.73 / 7d) |
+| `overlay_25_h3` | overlay | 25 | 3 | all | none | -3.88 | -182.40 | 74.5% | 1,331 | 10,160 (+1.60 / 7d) |
+| `overlay_25_h1_lim5` | overlay | 25 | 1 | all | limit_5 | -5.53 | -260.12 | 72.3% | 324 | 9,770 (-2.30 / 7d) |
+| `overlay_25_h1_stand` | overlay | 25 | 1 | all | stand_down | -5.56 | -261.45 | 68.1% | 316 | 9,770 (-2.30 / 7d) |
+| `overlay_10_h1_green` | overlay | 10 | 1 | green | none | -6.02 | -282.84 | 83.0% | 196 | 10,019 (+0.19 / 7d) |
+| `overlay_25_h2` | overlay | 25 | 2 | all | none | -6.14 | -288.76 | 83.0% | 260 | 9,936 (-0.64 / 7d) |
+| `overlay_50_h1` | overlay | 50 | 1 | all | none | -6.25 | -293.70 | 85.1% | 192 | 9,721 (-2.79 / 7d) |
+| `overlay_25_h1_green` | overlay | 25 | 1 | green | none | -6.27 | -294.89 | 80.8% | 177 | 9,786 (-2.14 / 7d) |
+| `overlay_10_h1` | overlay | 10 | 1 | all | none | -6.28 | -294.93 | 85.1% | 177 | 9,958 (-0.42 / 7d) |
+| `overlay_25_h1` | overlay | 25 | 1 | all | none | -6.32 | -296.96 | 85.1% | 188 | 9,770 (-2.30 / 7d) |
+| `overlay_25_h1_cut5` | overlay | 25 | 1 | all | haircut_5 | -6.33 | -297.48 | 85.1% | 188 | 9,770 (-2.30 / 7d) |
+| `overlay_50_h1_cut5` | overlay | 50 | 1 | all | haircut_5 | -6.38 | -300.12 | 85.1% | 175 | 9,721 (-2.79 / 7d) |
+| `book_25_h1` | book | 25 | 1 | all | none | -6.87 | -323.00 | 74.5% | 63 | 9,915 (-0.85 / 7d) |
+| `overlay_25_h1_blue` | overlay | 25 | 1 | blue | none | -7.24 | -340.08 | 85.1% | 60 | 9,632 (-3.68 / 7d) |
 
 ## Original window 2026-08-13 → 2026-08-21
 
@@ -80,8 +80,11 @@ Live overlay 25 daily, pre-drawdown window before HARD_RED lattice (2026-08-31).
 | 2026-10-05 | 9 | 3 | 6 | 5 | -0.17 | 388 |
 | 2026-10-06 | 13 | 8 | 5 | 3 | -0.45 | 386 |
 | 2026-10-07 | 7 | 3 | 4 | 8 | -0.99 | 382 |
-| 2026-10-08 | 0 | 0 | 13 | 3 | -27.65 | 277 |
-| 2026-10-09 | 11 | 0 | 11 | 0 | +0.00 | 277 |
+| 2026-10-08 | 13 | 4 | 9 | 3 | -0.19 | 382 |
+| 2026-10-09 | 11 | 1 | 9 | 3 | -0.03 | 381 |
+| 2026-10-12 | 12 | 2 | 10 | 2 | -0.18 | 381 |
+| 2026-10-13 | 8 | 4 | 3 | 1 | -6.29 | 357 |
+| 2026-10-14 | 13 | 0 | 13 | 5 | -47.25 | 188 |
 
 Live book is still `overlay_25_h1`. The lab is how we pick the next default.
 
