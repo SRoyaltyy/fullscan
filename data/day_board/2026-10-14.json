@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T10:27:49.271266-04:00",
+  "generated_at": "2026-10-14T10:27:58.385662-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -603,13 +603,13 @@
           "size": 8355066,
           "said": "25 rows",
           "bullets": [
-            "CDNA, ARHS, ETN, JBL, ATRC, SHEL, KLIC, PBR"
+            "CDNA, ARHS, ETN, JBL, AUPH, SHEL, PBR, SN"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "CDNA, ARHS, ETN, JBL, ATRC"
+        "CDNA, ARHS, ETN, JBL, AUPH"
       ]
     },
     {
@@ -795,7 +795,7 @@
           "size": 8355066,
           "said": "25 rows",
           "bullets": [
-            "CDNA, ARHS, ETN, JBL, ATRC, SHEL, KLIC, PBR"
+            "CDNA, ARHS, ETN, JBL, AUPH, SHEL, PBR, SN"
           ]
         },
         {
@@ -1069,31 +1069,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:30:06.748029-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-14_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 276650,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-14_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18266,
-          "preview": "# MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T04:27:00.538231-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-13.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T04:27:00.538231-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -3409,6 +3384,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T10:27:57.465576-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-14_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7554616,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, ELV, AUPH, AMD"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-14_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8355066,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, ETN, JBL, AUPH"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ARHS, ETN, ELV, AUPH, AMD \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CDNA, ARHS, ETN, JBL, AUPH"
     }
   ],
   "href": {
@@ -4102,6 +4102,22 @@
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T10:27:49-04:00",
       "commit_msg": "auto: land peer_rs [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/ab_checklist/2026-10-14_ab_checklist_enriched.csv",
+      "at": "2026-10-14T10:27:58-04:00",
+      "commit_msg": "auto: land ab [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T10:27:58-04:00",
+      "commit_msg": "auto: land ab [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38578583308",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
