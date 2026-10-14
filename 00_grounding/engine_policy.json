@@ -373,8 +373,8 @@
       }
     }
   },
-  "version": 85,
-  "updated": "2026-10-13T19:51:45-04:00",
+  "version": 86,
+  "updated": "2026-10-14T05:07:52-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -383,24 +383,6 @@
     "bonus_mult": 1.25
   },
   "history": [
-    {
-      "at": "2026-09-25T16:45:08-04:00",
-      "changes": [
-        "Basic Materials.S3_FLOWS_POSITIONING: 1.25 -> 1.0 (n=10, hit=0.6)",
-        "Communication Services.S3_FLOWS_POSITIONING: 0.5 -> 0.0 (n=8, hit=0.375)",
-        "Consumer Cyclical.S2_BREADTH: 1.25 -> 1.0 (n=11, hit=0.636)",
-        "Energy.S0_SHARED_MACRO: 1.0 -> 1.25 (n=12, hit=0.667)",
-        "Energy.S2_BREADTH: 1.0 -> 1.25 (n=18, hit=0.667)",
-        "Financial.S0_SHARED_MACRO: 1.0 -> 0.5 (n=17, hit=0.529)",
-        "Healthcare.S4_ETF_TAPE: 1.0 -> 1.25 (n=15, hit=0.667)",
-        "Industrials.S0_SHARED_MACRO: 1.25 -> 1.0 (n=16, hit=0.625)",
-        "Industrials.S1_SECTOR_FACTORS: 1.0 -> 0.5 (n=15, hit=0.533)",
-        "Industrials.S3_FLOWS_POSITIONING: 0.5 -> 0.0 (n=8, hit=0.125)",
-        "Real Estate.S3_FLOWS_POSITIONING: 0.5 -> 1.25 (n=8, hit=0.875)",
-        "Utilities.S2_BREADTH: 1.25 -> 1.0 (n=13, hit=0.615)",
-        "Utilities.S4_ETF_TAPE: 1.25 -> 1.0 (n=17, hit=0.647)"
-      ]
-    },
     {
       "at": "2026-09-28T17:39:53-04:00",
       "changes": [
@@ -771,6 +753,12 @@
     },
     {
       "at": "2026-10-13T19:51:45-04:00",
+      "changes": [
+        "hold"
+      ]
+    },
+    {
+      "at": "2026-10-14T05:07:52-04:00",
       "changes": [
         "hold"
       ]

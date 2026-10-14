@@ -4492,6 +4492,14 @@
       "workflow": "Post-Close ALL (grade + learn + next captains)",
       "run_id": "38485869734",
       "manifest": "research/input_freeze/2026-10-12/manifest.json"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-12/_board.json",
+      "at": "2026-10-14T05:07:53-04:00",
+      "commit_msg": "auto: post-close ALL [2026-10-12]",
+      "workflow": "Post-Close ALL (grade + learn + next captains)",
+      "run_id": "38538955162",
+      "manifest": "research/input_freeze/2026-10-12/manifest.json"
     }
   ]
 }

@@ -45,7 +45,7 @@
       "horizon_returns_pct": {
         "1d": 2.77
       },
-      "mfe_pct": 5.38,
+      "mfe_pct": 5.39,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -141,7 +141,7 @@
       "horizon_returns_pct": {
         "1d": 3.82
       },
-      "mfe_pct": 7.35,
+      "mfe_pct": 7.36,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -165,7 +165,7 @@
       "horizon_returns_pct": {
         "1d": 0.97
       },
-      "mfe_pct": 4.48,
+      "mfe_pct": 4.85,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -213,7 +213,7 @@
       "horizon_returns_pct": {
         "1d": 0.27
       },
-      "mfe_pct": 3.0,
+      "mfe_pct": 3.01,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -333,8 +333,8 @@
       "window_through": "2026-10-13",
       "trading_days_elapsed": 2,
       "complete": false,
-      "latest_close": 15.405,
-      "current_return_pct": 1.46,
+      "latest_close": 15.41,
+      "current_return_pct": 1.43,
       "horizon_returns_pct": {
         "1d": 1.49
       },
@@ -461,7 +461,7 @@
       "horizon_returns_pct": {
         "1d": 1.87
       },
-      "mfe_pct": 3.66,
+      "mfe_pct": 3.67,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -557,7 +557,7 @@
       "horizon_returns_pct": {
         "1d": 2.0
       },
-      "mfe_pct": 4.66,
+      "mfe_pct": 4.68,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -629,7 +629,7 @@
       "horizon_returns_pct": {
         "1d": 2.06
       },
-      "mfe_pct": 4.21,
+      "mfe_pct": 4.34,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -893,7 +893,7 @@
       "horizon_returns_pct": {
         "1d": 2.05
       },
-      "mfe_pct": 2.83,
+      "mfe_pct": 3.02,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -917,7 +917,7 @@
       "horizon_returns_pct": {
         "1d": 1.56
       },
-      "mfe_pct": 2.9,
+      "mfe_pct": 2.91,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -941,7 +941,7 @@
       "horizon_returns_pct": {
         "1d": 1.8
       },
-      "mfe_pct": 2.77,
+      "mfe_pct": 2.78,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -965,7 +965,7 @@
       "horizon_returns_pct": {
         "1d": 1.57
       },
-      "mfe_pct": 2.65,
+      "mfe_pct": 2.72,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -1478,7 +1478,7 @@
       "horizon_returns_pct": {
         "1d": -0.47
       },
-      "mfe_pct": 2.18,
+      "mfe_pct": 2.2,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -1578,7 +1578,7 @@
       "horizon_returns_pct": {
         "1d": 2.13
       },
-      "mfe_pct": 6.79,
+      "mfe_pct": 6.76,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -1928,7 +1928,7 @@
       "horizon_returns_pct": {
         "1d": 4.59
       },
-      "mfe_pct": 8.5,
+      "mfe_pct": 8.69,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -1978,7 +1978,7 @@
       "horizon_returns_pct": {
         "1d": 5.56
       },
-      "mfe_pct": 11.75,
+      "mfe_pct": 11.76,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -2003,7 +2003,7 @@
       "horizon_returns_pct": {
         "1d": 4.09
       },
-      "mfe_pct": 7.07,
+      "mfe_pct": 7.3,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-09"
@@ -2032,7 +2032,7 @@
         "n": 34,
         "wins": 34,
         "win_rate": 100.0,
-        "avg": 3.07
+        "avg": 3.09
       },
       "close_5d": null
     },
@@ -2042,7 +2042,7 @@
         "n": 44,
         "wins": 44,
         "win_rate": 100.0,
-        "avg": 4.61
+        "avg": 4.62
       },
       "close_5d": null
     }

@@ -22,7 +22,7 @@
         "3d": 4.02,
         "5d": 7.91
       },
-      "mfe_pct": 13.43,
+      "mfe_pct": 13.44,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-01"
@@ -126,7 +126,7 @@
         "3d": 7.77,
         "5d": 12.22
       },
-      "mfe_pct": 20.25,
+      "mfe_pct": 20.26,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-01"
@@ -152,7 +152,7 @@
         "3d": 6.38,
         "5d": 5.2
       },
-      "mfe_pct": 10.24,
+      "mfe_pct": 10.64,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-01"
@@ -204,7 +204,7 @@
         "3d": 0.97,
         "5d": 4.62
       },
-      "mfe_pct": 8.43,
+      "mfe_pct": 8.44,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-01"
@@ -360,7 +360,7 @@
         "3d": -0.81,
         "5d": 3.28
       },
-      "mfe_pct": 9.01,
+      "mfe_pct": 9.03,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-01"
@@ -438,7 +438,7 @@
         "3d": 2.22,
         "5d": 3.87
       },
-      "mfe_pct": 8.25,
+      "mfe_pct": 8.38,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-01"
@@ -1088,8 +1088,8 @@
       "window_through": "2026-10-13",
       "trading_days_elapsed": 8,
       "complete": false,
-      "latest_close": 15.405,
-      "current_return_pct": 1.79,
+      "latest_close": 15.41,
+      "current_return_pct": 1.75,
       "horizon_returns_pct": {
         "1d": -1.45,
         "3d": 2.08,
@@ -1708,7 +1708,7 @@
         "3d": -2.21,
         "5d": 3.07
       },
-      "mfe_pct": 6.98,
+      "mfe_pct": 6.95,
       "mfe_day": "2026-10-13",
       "ever_profitable": true,
       "first_profitable_day": "2026-10-01"
@@ -1826,7 +1826,7 @@
         "n": 36,
         "wins": 36,
         "win_rate": 100.0,
-        "avg": 8.61
+        "avg": 8.62
       },
       "close_5d": {
         "n": 36,
