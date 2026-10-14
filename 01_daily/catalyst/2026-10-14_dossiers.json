@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14T05:29:46.896884-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": false,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 0,
+  "status": "FAIL",
+  "targets": [
+    {
+      "ticker": "GOOG",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "GOOGL",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "MSFT",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "AMZN",
+      "role": "earnings",
+      "why": "earnings BMO"
+    },
+    {
+      "ticker": "META",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "TSLA",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "NFLX",
+      "role": "earnings",
+      "why": "earnings AMC"
+    },
+    {
+      "ticker": "NE",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "GOOG",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOG"
+    },
+    {
+      "ticker": "GOOGL",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOGL"
+    },
+    {
+      "ticker": "MSFT",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 MSFT"
+    },
+    {
+      "ticker": "AMZN",
+      "role": "earnings",
+      "why": "earnings BMO",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 AMZN"
+    },
+    {
+      "ticker": "META",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 META"
+    },
+    {
+      "ticker": "TSLA",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 TSLA"
+    },
+    {
+      "ticker": "NFLX",
+      "role": "earnings",
+      "why": "earnings AMC",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NFLX"
+    },
+    {
+      "ticker": "NE",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Drilling",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE"
+    }
+  ]
+}
