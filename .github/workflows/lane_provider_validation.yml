@@ -71,11 +71,11 @@ jobs:
           LANE_ALLOW_PAID_DEEPSEEK: ${{ vars.LANE_ALLOW_PAID_DEEPSEEK }}
         run: |
           PYTHONPATH=. python scripts/run_semantic_headlines.py \
-            --input tests/fixtures/semantic_frozen_20261014/batch_01.json \
+            --input tests/fixtures/semantic_frozen_20261014/batch_02.json \
             --output provider_results/glm_program_outputs.json \
             --limit 100 --budget-seconds 3600 --headline-timeout 450 \
             --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review --sector-review --action-review \
-            --providers zhipu,gemini,qwen \
+            --providers gemini,zhipu,qwen \
             --models glm-5.3-flash,gemini-2.5-flash,qwen-flash
       - uses: actions/upload-artifact@v4
         if: always()
@@ -110,7 +110,7 @@ jobs:
         if: steps.diagnose.outputs.ready == 'true'
         run: |
           PYTHONPATH=. python3 scripts/run_semantic_headlines.py \
-            --input tests/fixtures/semantic_frozen_20261014/batch_01.json \
+            --input tests/fixtures/semantic_frozen_20261014/batch_02.json \
             --output provider_results/grok_program_outputs.json \
             --limit 100 --budget-seconds 3600 --headline-timeout 450 \
             --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review --sector-review --action-review \
@@ -154,13 +154,13 @@ jobs:
           PYTHONPATH=scripts python - <<'PY'
           import json,pathlib,hashlib
           from evaluate_semantic_acceptance import compare
-          ip=pathlib.Path('tests/fixtures/semantic_frozen_20261014/batch_01.json')
-          rp=pathlib.Path('docs/benchmarks/references_20261014/batch_01.json')
+          ip=pathlib.Path('tests/fixtures/semantic_frozen_20261014/batch_02.json')
+          rp=pathlib.Path('docs/benchmarks/references_20261014/batch_02.json')
           raw=json.loads(next(pathlib.Path('scored_outputs').rglob('glm_program_outputs.json')).read_text())
           ref=json.loads(rp.read_text())
           assert raw['input_sha256']==ref['input_sha256']==hashlib.sha256(ip.read_bytes()).hexdigest()
           report=compare(json.loads(ip.read_text()),ref,raw)
-          report.update(acceptance_eligible=False,scope='Development replay after first holdout failed; never increments acceptance streak',best_consecutive_passes=0,candidate={'runtime':raw['runtime_sha256'],'configuration':raw['configuration'],'catalog':raw['catalog']})
+          report.update(acceptance_eligible=False,scope='Development replay after second holdout failed; never increments acceptance streak',best_consecutive_passes=0,candidate={'runtime':raw['runtime_sha256'],'configuration':raw['configuration'],'catalog':raw['catalog']})
           pathlib.Path('scores').mkdir()
           pathlib.Path('scores/comparison.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
           print(json.dumps({k:v for k,v in report.items() if k not in ('samples','candidate')}))

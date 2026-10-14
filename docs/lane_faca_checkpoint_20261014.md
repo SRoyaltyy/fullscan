@@ -72,3 +72,11 @@ V12 retains the two independent stages and batches of ten. It requires a newly r
 V12 run 38607393547, runtime commit 90d53684595e655f6ee0f4c96756cb5ff657b479: availability 100%, action agreement 94%, precision 94.4444% (17 TP, 1 FP), recall 100% (17/17), Lane 96%, exact sectors 90%. All five development thresholds pass. This replay is development-only, with zero acceptance credit.
 
 Freeze this runtime/configuration/catalog for genuine acceptance. The new lane_semantic_holdout.yml runs untouched reserve batch_02, whose reference was saved before any execution at b150c012fa4056820d6aae7f362643842e652853 (2026-10-14T05:03:42.063Z; input SHA256 cf60e9b315856ede67b7de0be6932228a906cf2cdd3ed1af01ecf6ea8fba9e5f). The offline grader compares all candidate fingerprints against V12 run 38607393547 and verifies input identity and reference freeze time. No source/prompt/configuration/catalog changes accompany this holdout. Acceptance remains 0/10 until its measured result.
+
+## Completed V12 holdout 02; next reference frozen before execution
+
+Run 38608978245, execution commit 369584cfa712a6147c5615f320948ffc05df8004: all input/reference/runtime/configuration/catalog guards passed. Availability 100%; action agreement 90%, precision 94.7368% (18 TP, 1 FP), recall 90% (18/20), Lane 94%, exact sectors 87%. FAIL on exact sectors. Acceptance streak remains 0/10. Batch_02 now becomes development data permanently; do not count a tuned replay as fresh.
+
+Batch_03's 100 reference labels were independently prepared and frozen at 2026-10-14T17:53:14.580Z, before any execution of that batch. Input SHA256 13e7174383594e2f7af4bb081aa677a9e35a29e20cdf5a34e4de33252a97c83c. Official identity sources and title/ontology ambiguity notes are included. Batch_03 remains unrun.
+
+Next development comparison uses the already approved gemini-2.5-flash first, with the same two-stage batched design and bounded recovery, replaying failed batch_02. This changes provider configuration and therefore is a new acceptance candidate if it qualifies. No labels are changed; batch_03 remains withheld. Historical acceptance score artifact references remain pinned to GLM V12.
