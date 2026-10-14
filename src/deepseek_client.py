@@ -926,6 +926,13 @@ def _chat_impl(messages: list[dict], model: str, tools: bool = False,
             _log_fallback_decision(stage_label, "prefer_deepseek", pct)
             _CALL_STATE.fallback_reason = "prefer_deepseek"
     grok_only = config.grok_only()
+    if grok_only and (_FALLBACK["active"] or _FALLBACK.get("free_primary")):
+        # 2026-10-15: GROK_ONLY blocks paid native DeepSeek, not the free
+        # fallback provider. Once activate_fallback() swapped in the free
+        # GLM creds, let that provider answer (10-14 #171: Grok timed out,
+        # the GLM fallback was "engaged" but never called -> chars=0).
+        grok_only = False
+        force_deepseek = True
     if grok_only and force_deepseek:
         print(f"[llm] GROK_ONLY: ignoring force_deepseek "
               f"({stage_label or 'llm run'})")
@@ -1248,9 +1255,33 @@ def activate_fallback(reason: str = "") -> bool:
     return True
 
 
+def _free_primary_ready() -> bool:
+    """A free non-Grok provider (e.g. Zhipu glm-5.3-flash) is configured via
+    LLM_MODEL_OVERRIDE + key and is NOT native paid api.deepseek.com."""
+    if not (os.environ.get("LLM_MODEL_OVERRIDE") or "").strip():
+        return False
+    if not config.DEEPSEEK_API_KEY:
+        return False
+    return "api.deepseek.com" not in (config.DEEPSEEK_BASE_URL or "")
+
+
 def chat(messages: list[dict], model: str, *args, **kwargs) -> str:
     out = _chat_impl(messages, model, *args, **kwargs)
-    if ((not out or len(out.strip()) < 40)
+    empty = not out or len(out.strip()) < 40
+    # GROK_ONLY + Grok empty: try the configured FREE primary (glm-5.3-flash)
+    # before the fallback. Never native paid DeepSeek (needs approval).
+    if (empty and config.grok_only() and not _FALLBACK["active"]
+            and not last_sector_degraded() and _free_primary_ready()):
+        print("[llm] GROK_ONLY: Grok empty — trying free provider "
+              f"{os.environ.get('LLM_MODEL_OVERRIDE')}", flush=True)
+        _FALLBACK["free_primary"] = True
+        try:
+            out = _chat_impl(messages, model, *args,
+                             **{**kwargs, "force_deepseek": True})
+        finally:
+            _FALLBACK["free_primary"] = False
+        empty = not out or len(out.strip()) < 40
+    if (empty
             and (os.environ.get("LLM_MODEL_OVERRIDE") or "").strip()
             and not last_sector_degraded()
             and activate_fallback("empty/short output")):
