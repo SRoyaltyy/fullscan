@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:05:26.532061-04:00",
+  "generated_at": "2026-10-14T06:09:43.184017-04:00",
   "items": [
     {
       "ok": false,
@@ -14,14 +14,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "events",
       "path": "01_daily/events/2026-10-14_events.json",
-      "reason": "zero_events",
-      "size": 212,
+      "reason": "",
+      "size": 21812,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {

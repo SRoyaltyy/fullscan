@@ -1,12 +1,563 @@
 {
   "scan_date": "2026-10-14",
-  "events": [],
-  "catcher": {
-    "ran": true,
-    "replaced_primary": true,
-    "found": 0,
-    "duplicates_dropped": 0,
-    "coverage_assessment": "",
-    "biggest_gap": ""
-  }
+  "events": [
+    {
+      "title": "US CPI for September released",
+      "category": "macro_data",
+      "timing": "today",
+      "date_or_window": "2026-10-14",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financial",
+        "Real Estate",
+        "Consumer Cyclical"
+      ],
+      "expected_direction": "mixed",
+      "impact": 5,
+      "confidence": "high",
+      "why_it_matters": "Headline inflation sits at 3.4% y/y with a 7.3% gas-price spike and core at 2.4%; this print directly reprices odds of a second Fed hike at the Oct 27-28 FOMC.",
+      "what_to_watch": "Core m/m vs ~0.3% consensus and gas passthrough; a hot print pushes hike odds up and long yields higher.",
+      "status": "new",
+      "sources": [
+        "https://www.bls.gov/cpi/",
+        "https://www.stocktitan.net/articles/september-2026-cpi-inflation-report"
+      ]
+    },
+    {
+      "title": "Fed Beige Book released",
+      "category": "macro_data",
+      "timing": "today",
+      "date_or_window": "2026-10-14",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "unclear",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Regional anecdotes at 2pm ET color the FOMC backdrop two weeks before the decision.",
+      "what_to_watch": "Tone on labor softness vs price pressure in tariff-exposed sectors.",
+      "status": "new",
+      "sources": [
+        "https://finobird.com/calendar/economic/analysis/u-s-cpi-fed-beige-book-and-a-wave-of-central-bank-speakers-what-to-watch-on-october-14-2026-2026-10-14/"
+      ]
+    },
+    {
+      "title": "FOMC meeting Oct 27-28: second hike on the table",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-27..2026-10-28",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financial",
+        "Real Estate",
+        "Utilities"
+      ],
+      "expected_direction": "mixed",
+      "impact": 5,
+      "confidence": "high",
+      "why_it_matters": "With August PCE signaling 'further hikes likely' and a hawkish backdrop, prediction markets show live odds of a second hike — this meeting is the biggest scheduled macro risk of the window.",
+      "what_to_watch": "CPI (Oct 14) and jobs data into the meeting; dot-plot/presser language on further tightening.",
+      "status": "new",
+      "sources": [
+        "https://www.financecalendar.com/event/fomc-rate-decision-october-2026/",
+        "https://predictionmarketspicks.com/tools/fed-rate-tracker/october-2026"
+      ]
+    },
+    {
+      "title": "September retail sales report",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-16",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Consumer Cyclical",
+        "Consumer Defensive",
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "Consumer resilience data lands mid-window and feeds the Fed hike debate.",
+      "what_to_watch": "Control-group ex-autos sales vs modest consensus; weakness would cut hike odds.",
+      "status": "new",
+      "sources": [
+        "https://www.kiplinger.com/economic-data-week-october-12-16",
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxPb2ZDNjVsWUlqc2Y5bWd0U1RadklzTkJfNFFJMDlEQlh0QjVicUcyTzVxYkxXcklTMGpzLTRWRWFWMVV1UHV0dmhNNXFKVzh2LUd4QnJibDZDSFNua1RLWlpEVFlsU08yU3A3UHBhVmlHeEJoTm05S1g2WENObG9XSkxfX2pMMFZ6ZEVwOE9CRVZudw"
+      ]
+    },
+    {
+      "title": "Shutdown averted; CR funds government through Dec 11",
+      "category": "legislative",
+      "timing": "past",
+      "date_or_window": "2026-09-30",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bullish",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "The Oct 1 shutdown risk was resolved when Trump signed a stopgap, removing a near-term headwind but queuing a December fight.",
+      "what_to_watch": "Appropriations negotiations ahead of Dec 11; data delays if a lapse recurs.",
+      "status": "resolved",
+      "sources": [
+        "https://govtschemes.org/government-shutdown-2026-update/",
+        "https://www.cbsnews.com/news/house-vote-government-shutdown-funding-bill/"
+      ]
+    },
+    {
+      "title": "US-China Board of Trade product lists for tariff cuts",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-09-27",
+      "regions": [
+        "US",
+        "China"
+      ],
+      "sectors": [
+        "Industrials",
+        "Technology",
+        "Consumer Cyclical",
+        "Basic Materials"
+      ],
+      "expected_direction": "bullish",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "Following the Sept 24-25 Trump-Xi meeting, the White House listed goods for potential tariff cuts under the new bilateral 'Board of Trade' mechanism — a de-escalation lever for trade-sensitive sectors.",
+      "what_to_watch": "Whether lists become binding proclamations and Chinese reciprocal lists.",
+      "status": "carried",
+      "sources": [
+        "https://www.cov.com/en/news-and-insights/insights/2026/10/white-house-announces-product-lists-for-potential-tariff-cuts-under-us-china-board-of-trade-mechanism"
+      ]
+    },
+    {
+      "title": "Emergency Tax Relief on Diesel Fuel executive order",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-10-05",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Energy",
+        "Industrials",
+        "Transportation"
+      ],
+      "expected_direction": "bullish",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Diesel tax relief partially offsets the fuel-cost squeeze from the Iran/Ukraine supply shocks (EO 14435).",
+      "what_to_watch": "Revenue offsets and whether the relief is extended or converted to law.",
+      "status": "carried",
+      "sources": [
+        "https://www.whitehouse.gov/presidential-actions/executive-orders/"
+      ]
+    },
+    {
+      "title": "Houthi missile/drone attacks on Saudi airports (Oct 6-12) and Saudi response risk",
+      "category": "geopolitical",
+      "timing": "past",
+      "date_or_window": "2026-10-06..2026-10-13",
+      "regions": [
+        "Middle East"
+      ],
+      "sectors": [
+        "Energy",
+        "BROAD",
+        "Industrials"
+      ],
+      "expected_direction": "bearish",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "Deadliest Gulf attack series in a decade (20+ killed) puts Saudi oil infrastructure and the Strait of Hormuz risk premium back in play; OPEC+ cited war-limited supply in holding output steady.",
+      "what_to_watch": "Saudi retaliation, Iran proxy escalation, and attacks on Red Sea shipping routes.",
+      "status": "carried",
+      "sources": [
+        "https://en.wikipedia.org/wiki/October_2026_attacks_on_Saudi_airports",
+        "https://www.nytimes.com/2026/10/11/world/middleeast/saudi-arabia-options-houthis.html"
+      ]
+    },
+    {
+      "title": "OPEC+ holds November output targets steady",
+      "category": "geopolitical",
+      "timing": "past",
+      "date_or_window": "2026-10-04",
+      "regions": [
+        "Middle East",
+        "Global"
+      ],
+      "sectors": [
+        "Energy"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Output kept unchanged as war limits supply — no bearish quota surprise, but supply-risk premium remains in crude.",
+      "what_to_watch": "Monthly IEA/OPEC reports this week for demand-revision direction.",
+      "status": "resolved",
+      "sources": [
+        "https://www.reuters.com/business/energy/opec-plus-keeps-november-output-steady-2026-10-04/"
+      ]
+    },
+    {
+      "title": "Russia diesel export shock / Ukraine war supply risk",
+      "category": "geopolitical",
+      "timing": "ongoing",
+      "date_or_window": "2026-09-30..2026-10-28",
+      "regions": [
+        "Europe",
+        "Global"
+      ],
+      "sectors": [
+        "Energy",
+        "Basic Materials",
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Disrupted Russian diesel supply plus the Saudi-Houthi war is driving fuel inflation, a key input to the hawkish CPI/Fed story.",
+      "what_to_watch": "Refined-product inventories and whether US-Iran 'energy ceasefire' diplomacy holds.",
+      "status": "carried",
+      "sources": [
+        "https://www.bbc.com/news/which-war-diesel-iran-ukraine",
+        "https://www.marketwatch.com/trumps-energy-ceasefire-fuel-supply"
+      ]
+    },
+    {
+      "title": "IMF-World Bank annual meetings; IMF warns of global resilience limits",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-14..2026-10-18",
+      "regions": [
+        "Global"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "IMF explicitly warns the global economy 'could soon test the limits of resilience' amid tariff-driven trade deficit blowout ($105.6B) and war shocks.",
+      "what_to_watch": "World Economic Outlook growth revisions and downgrade language for the US and China.",
+      "status": "new",
+      "sources": [
+        "https://www.theguardian.com/business/2026/oct/13/imf-global-economy-resilience"
+      ]
+    },
+    {
+      "title": "ECB rate decision Oct 29 — hold at 2.50% expected",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-29",
+      "regions": [
+        "EU"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financial"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Markets price ~87% odds of no change at 2.50%; the press conference matters more than the decision for euro-area and rate-sensitive equities.",
+      "what_to_watch": "Lagarde's language on energy-driven inflation vs weak growth.",
+      "status": "new",
+      "sources": [
+        "https://www.financecalendar.com/event/ecb-rate-decision-october-2026/",
+        "https://25bp.eu/en/ecb/meeting/2026-10-29/"
+      ]
+    },
+    {
+      "title": "ASML Q3 results — record sales, AI demand surge",
+      "category": "earnings",
+      "timing": "today",
+      "date_or_window": "2026-10-14",
+      "regions": [
+        "EU",
+        "Taiwan",
+        "US"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "ASML beat with record €11.7B net sales (+55% y/y) and raised guidance — the semicap bellwether for the AI capex cycle.",
+      "what_to_watch": "Book-to-bill and 2027 EUV demand commentary; effect on US semis today.",
+      "status": "new",
+      "sources": [
+        "https://investor.asml.com/quarterly-results",
+        "https://www.tradingkey.com/analysis/stocks/us-stocks/262215608-asml-q3-earnings-beat-ai-chip-demand-revenue-surge-guidance-raised-tradingkey"
+      ]
+    },
+    {
+      "title": "TSMC Q3 earnings and Q4 guidance",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-15",
+      "regions": [
+        "Taiwan",
+        "US",
+        "Global"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "expected_direction": "bullish",
+      "impact": 4,
+      "confidence": "high",
+      "why_it_matters": "Record $46.7B September-quarter revenue is confirmed; margins and capex guidance are the single biggest read on AI chip demand for the whole sector.",
+      "what_to_watch": "Gross margin vs record mix, 2026 capex, and any tariff/export-control caution on China sales.",
+      "status": "new",
+      "sources": [
+        "https://investor.tsmc.com/english/quarterly-results/2026/q3",
+        "https://site.financialmodelingprep.com/market-news/tsmc-q3-2026-earnings-preview-ai-chip-demand"
+      ]
+    },
+    {
+      "title": "Big bank earnings: JPM, BAC, MS, BLK, GS",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-14..2026-10-15",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Financial"
+      ],
+      "expected_direction": "bullish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Kicks off Q3 earnings season and reveals trading, credit, and NIM dynamics under a higher-rate backdrop.",
+      "what_to_watch": "Credit-loss provisions and deal/trading pipeline commentary.",
+      "status": "new",
+      "sources": [
+        "https://therighttrader.com/earnings-calendar/this-week",
+        "https://www.investopedia.com/market-week-october-2026"
+      ]
+    },
+    {
+      "title": "Tesla earnings (Mon Oct 19) and Netflix (Tue Oct 20)",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-19..2026-10-20",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Consumer Cyclical",
+        "Communication Services"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Two of the most actively traded names headline next week; Tesla's margins/delivery guidance and Netflix's ads tier drive sector rotation.",
+      "what_to_watch": "Tesla auto gross margin ex-credits and Netflix subscriber/ad revenue commentary.",
+      "status": "new",
+      "sources": [
+        "https://tickerdaily.com/article/stock-market-today-october-11-2026-this-weeks-earnings-calendar-and-trading-setups"
+      ]
+    },
+    {
+      "title": "Staples & industrials mega-cap earnings wave (PG, JNJ, KO, IBM, GE-type names)",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-19..2026-10-23",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Consumer Defensive",
+        "Healthcare",
+        "Industrials",
+        "Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "57 companies report next week; a dense blue-chip wave will test whether 3.4% headline inflation is compressing consumer and input margins.",
+      "what_to_watch": "Tariff-cost and diesel/fuel cost pass-through commentary.",
+      "status": "new",
+      "sources": [
+        "https://earningscountdown.com/earnings-calendar/2026-10-19/",
+        "https://www.marketbeat.com/earnings/next-week/"
+      ]
+    },
+    {
+      "title": "Apple-Epic Supreme Court appeal (27% App Store fee) in new term",
+      "category": "judicial",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-15..2026-10-28",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Technology",
+        "Communication Services"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "SCOTUS hearing the Apple-Epic fee appeal threatens App Store economics with platform-wide implications for digital-goods margins.",
+      "what_to_watch": "Argument date confirmation on the SCOTUS calendar; DOJ split adds uncertainty.",
+      "status": "carried",
+      "sources": [
+        "https://tech-insider.org/apple-epic-supreme-court-appeal"
+      ]
+    },
+    {
+      "title": "Trump-Xi September summit and tariff de-escalation track",
+      "category": "geopolitical",
+      "timing": "past",
+      "date_or_window": "2026-09-24..2026-09-27",
+      "regions": [
+        "US",
+        "China"
+      ],
+      "sectors": [
+        "BROAD",
+        "Technology",
+        "Industrials"
+      ],
+      "expected_direction": "bullish",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "The Washington Trump-Xi meeting produced the Board of Trade mechanism — the most significant US-China thaw since tariffs began; still fragile.",
+      "what_to_watch": "Implementation of tariff-cut lists and any snapback rhetoric.",
+      "status": "carried",
+      "sources": [
+        "https://www.cov.com/en/news-and-insights/insights/2026/10/white-house-announces-product-lists-for-potential-tariff-cuts-under-us-china-board-of-trade-mechanism"
+      ]
+    },
+    {
+      "title": "US trade deficit hits $105.6B — widest since before tariffs",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-10-07",
+      "regions": [
+        "US",
+        "China"
+      ],
+      "sectors": [
+        "BROAD",
+        "Industrials"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "A record deficit undercuts the tariff strategy narrative and could trigger fresh White House trade actions.",
+      "what_to_watch": "Subsequent tariffs or Board of Trade acceleration; Q3 GDP net-exports drag.",
+      "status": "carried",
+      "sources": [
+        "https://247wallst.com/us-trade-deficit-105-6-billion"
+      ]
+    },
+    {
+      "title": "China Q3 GDP and September activity data",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-16..2026-10-20",
+      "regions": [
+        "China"
+      ],
+      "sectors": [
+        "Basic Materials",
+        "Industrials",
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "China's Q3 growth print tests whether the Trump-Xi détente is translating into domestic demand or masking continued weakness.",
+      "what_to_watch": "Property-sector investment and retail sales; any fresh stimulus announcement.",
+      "status": "new",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxORnE1TmxmdUNJZHlhX3k1UUpVbkNqVWF4SnRTZEtIQ044RFA2cThIX2EyWm8zVFhLVXVsSWY4WFZrYTBrUDlSR1pwcm5Lbi15TjU0T1E4VDJobXp0aVp2MXJzQ0lJNmp0cVQ0d3VabERobGY4bTlaakc2NmpBMnhGSzFoNDVvcEQtUHQwX1JxRnlCZ1dsdkhYTg"
+      ]
+    },
+    {
+      "title": "November 2026 midterm elections approach (4 weeks out)",
+      "category": "legislative",
+      "timing": "upcoming",
+      "date_or_window": "2026-10-15..2026-11-03",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Healthcare",
+        "Energy",
+        "Technology"
+      ],
+      "expected_direction": "unclear",
+      "impact": 4,
+      "confidence": "medium",
+      "why_it_matters": "The CR was passed in the 'final stretch of the campaign'; a possible divided or flipped Congress after Nov 3 reprices tax, tariff, and regulation expectations.",
+      "what_to_watch": "Polling trends and policy-heavy campaign rhetoric on energy, crypto, and antitrust.",
+      "status": "new",
+      "sources": [
+        "https://www.cbsnews.com/news/house-vote-government-shutdown-funding-bill/"
+      ]
+    },
+    {
+      "title": "Yemen government offensive against Houthis",
+      "category": "geopolitical",
+      "timing": "ongoing",
+      "date_or_window": "2026-10-04..2026-10-28",
+      "regions": [
+        "Middle East"
+      ],
+      "sectors": [
+        "Energy",
+        "Industrials"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "Escalating Saudi/Yemeni ground campaign against the Houthis raises the odds of wider Gulf conflict hitting oil flows.",
+      "what_to_watch": "Red Sea shipping disruption and Saudi strikes on Iranian-linked targets.",
+      "status": "carried",
+      "sources": [
+        "https://www.latintimes.com/yemens-government-launches-major-offensive-houthi-missiles-reach-saudi-arabias-capital-599812"
+      ]
+    }
+  ],
+  "top_risks": [
+    "Hot September CPI today (gas +7.3% passthrough) raising Fed second-hike odds into the Oct 27-28 FOMC — rate-sensitive sectors (Real Estate, Utilities, long-duration tech) vulnerable",
+    "Saudi-Houthi escalation: attacks on Riyadh airports plus a Saudi ground offensive create an oil-supply tail risk to Hormuz/Red Sea flows",
+    "Fed 'second hike' scenario with accompanying hawkish dots would pressure equities broadly",
+    "Russian diesel shock sustaining fuel inflation and squeezing industrials/transport margins",
+    "December 11 government funding deadline teeing up a pre-midterm fiscal fight"
+  ],
+  "top_opportunities": [
+    "AI semicap momentum: ASML record quarter (Oct 14) sets up TSMC's Oct 15 report — strong TSMC guidance would lift the whole AI complex",
+    "US-China Board of Trade tariff-cut lists: upside for industrials, retailers, and China-exposed tech if implemented",
+    "Bank earnings this week with higher-rate tailwind on net interest income",
+    "Diesel fuel tax relief EO (Oct 5) easing transport/industrial cost pressure",
+    "Netflix (Oct 20) ad-tier and subscriber growth as a Communication Services catalyst"
+  ],
+  "uncertainty": "elevated",
+  "summary": "The window is dominated by inflation-vs-hike risk: today's September CPI (3.4% headline backdrop, core 2.4%) directly sets up an Oct 27-28 FOMC where a second hike is genuinely live. Geopolitical fuel-supply shocks (Houthi strikes on Saudi Arabia, Russian diesel disruption) are feeding the inflation problem while the US-China Board of Trade détente provides an offsetting de-escalation channel. Heavy AI-semiconductor earnings (ASML today, TSMC Oct 15) plus a dense blue-chip wave next week give constant catalysts through the window.",
+  "windows": {
+    "past": "2026-09-30..2026-10-13",
+    "today": "2026-10-14",
+    "upcoming": "2026-10-15..2026-10-28"
+  },
+  "repaired": false,
+  "provider": "openclaw"
 }
