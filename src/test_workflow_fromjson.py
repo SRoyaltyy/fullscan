@@ -1416,15 +1416,26 @@ def test_postclose_all_clears_leftover_sparse_checkout() -> None:
     sparse_on_ecs = []
     for path in sorted(WF.glob("*.yml")):
         text = path.read_text(encoding="utf-8")
-        if "sparse-checkout:" not in text or "self-hosted" not in text:
-            continue
-        assert "if: always()" in text, path.name
-        assert text.rfind(disable) > text.rfind("sparse-checkout:"), path.name
-        sparse_on_ecs.append(path.name)
+        jobs = text.split("\njobs:", 1)[-1]
+        has_sparse_ecs = False
+        # An independent Ubuntu grader can follow the ECS job. Its checkout
+        # must not be compared to cleanup in another job/workspace.
+        for name, body in re.findall(
+            r"(?ms)^  ([A-Za-z_][A-Za-z0-9_-]*):\s*\n(.*?)(?=^  [A-Za-z_][A-Za-z0-9_-]*:\s*$|\Z)",
+            jobs,
+        ):
+            if "sparse-checkout:" not in body or "self-hosted" not in body:
+                continue
+            assert "if: always()" in body, (path.name, name)
+            assert body.rfind(disable) > body.rfind("sparse-checkout:"), (path.name, name)
+            has_sparse_ecs = True
+        if has_sparse_ecs:
+            sparse_on_ecs.append(path.name)
     assert sparse_on_ecs == [
         "install_paper_backstop.yml",
         "install_paper_open.yml",
         "lane_provider_validation.yml",
+        "lane_semantic_holdout.yml",
     ]
 
 
