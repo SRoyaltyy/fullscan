@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:25:47.562189-04:00",
+  "generated_at": "2026-10-14T06:26:23.551617-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,66 +11,66 @@
   },
   "buy_1d": [
     {
-      "ticker": "NTAP",
-      "score": 0.2843313440021954
-    },
-    {
       "ticker": "BAND",
-      "score": 0.6611787597649168
+      "score": 0.5054596446690593
     },
     {
-      "ticker": "MQ",
-      "score": 0.5459164323222052
+      "ticker": "CNK",
+      "score": 0.650507242212794
     },
     {
-      "ticker": "IT",
-      "score": 0.37635451217416427
+      "ticker": "WLY",
+      "score": 0.5863550247741003
     },
     {
-      "ticker": "CON",
-      "score": 0.7287913963202588
+      "ticker": "FIS",
+      "score": 0.20510056948205813
     },
     {
-      "ticker": "AVPT",
-      "score": 0.7424881989450152
+      "ticker": "PRCH",
+      "score": 0.5552775179449208
     },
     {
-      "ticker": "SGRY",
-      "score": 0.6603903952758077
+      "ticker": "TMUS",
+      "score": 0.46090770067271086
+    },
+    {
+      "ticker": "UPWK",
+      "score": 0.49689651274871743
     }
   ],
   "sell_1d": [
     {
       "ticker": "NEOV",
-      "score": -0.3979840672726525
+      "score": -0.3540158220891866
     },
     {
       "ticker": "OKLO",
-      "score": -0.2666901180362591
+      "score": -0.24011378167345843
     },
     {
       "ticker": "FCEL",
-      "score": -0.2284152132262775
+      "score": -0.22470316333007573
     },
     {
       "ticker": "NNDM",
-      "score": -0.1638372495071339
+      "score": -0.1663934465190176
     },
     {
       "ticker": "POWL",
-      "score": -0.040266310950080694
+      "score": -0.058810047261321385
     },
     {
       "ticker": "EOSE",
-      "score": -0.3581743968212493
+      "score": -0.3314992425842292
     },
     {
       "ticker": "NRGV",
-      "score": -0.2840014218486169
+      "score": -0.2581204239587
     },
     {
       "ticker": "INDI",
-      "score": -0.2159049929401755
+      "score": -0.2163323933294375
     }
   ],
   "flatten": {
@@ -110,73 +110,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_one",
-      "title": "Sector predict Consumer Cyclical (3/11)",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:16:46.053136-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-10-14/consumer_cyclical_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 6545,
-          "preview": "# Sector Prediction \u2014 Consumer Cyclical \u2014 2026-10-14\n- news_mode: **on**\n- ETF: **XLY**\n- rubric: `00_grounding/sectors/consumer_cyclical.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.187** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.224** (ES +0.18%, ER2 +0.08%, NQ -0.06%, PM:XLY -0.01%) \u00b7 index_carry **-0.411** (general -1.645) \u00b7 llm_overlay **0.0** (raw 0.0)"
-        },
-        {
-          "path": "01_daily/sectors/2026-10-14/consumer_cyclical_predict_trace.md",
-          "ok": true,
-          "reason": "",
-          "size": 2560,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Consumer Cyclical 2026-10-14\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (100,345 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"September CPI report October 14 2026 expectations core inflation market positioning\"* \u2192 got 6 results (via gnews_rss)\n- High gasoline prices expected to boost US consumer inflation in September - Reuters (https://news.google.com/rss/articles/CBMisgFBVV95cUxQWlRYZDhRQWpqTmlJcWxGcDR4RGNleVlZQ2pqYlVZaW8ya01TS1NCUFUyaElVNUdJR2x0VWRxdGtaWl9wekdEUGVHUnktVUstSXFOcHloUWtLcFlQU0EzSW4yTENYU1NYX09VMUVRU3hQZ2prRjA1dVBTdll0QjNZaXJVbE5LSVNMODNVSkxlR05IeVpydy1hRFpuWWp0OWM0TXhXclVQWHNwWlZHRGNNNmRR?oc=5)\n- FX Daily: CPI Has a Lower Bar"
-        },
-        {
-          "path": "01_daily/_transcripts/2026-10-14_sector_consumer_cyclical_predict.json",
-          "ok": true,
-          "reason": "",
-          "size": 116780,
-          "preview": "keys: model, messages, provider, fallback_reason"
-        },
-        {
-          "path": "01_daily/2026-10-14_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 8397,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok"
-        },
-        {
-          "path": "01_daily/sectors/2026-10-14/_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 2428,
-          "preview": "keys: date, n_ok, n_total, required, ok, summary, sectors"
-        },
-        {
-          "path": "01_daily/sectors/2026-10-14/_BOARD.md",
-          "ok": true,
-          "reason": "",
-          "size": 1631,
-          "preview": "# Sector Board \u2014 2026-10-14\nGenerated: **2026-10-14T06:16:46.040498-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
-        },
-        {
-          "path": "01_daily/sectors/2026-10-14/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 6901,
-          "preview": "keys: date, generated_at, summary, sectors"
-        },
-        {
-          "path": "03_scoreboard/scoreboard.json",
-          "ok": true,
-          "reason": "",
-          "size": 1072009,
-          "preview": "keys: runs"
-        }
-      ],
-      "preview": "# Sector Prediction \u2014 Consumer Cyclical \u2014 2026-10-14\n- news_mode: **on**\n- ETF: **XLY**\n- rubric: `00_grounding/sectors/consumer_cyclical.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.187** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.224** (ES +0.18%, ER2 +0.08%, NQ -0.06%, PM:XLY -0.01%) \u00b7 index_carry **-0.411** (general -1.645) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Consumer Cyclical 2026-10-14\nprovider: deepseek\nfallback_reason: prefer_deepseek\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (100,345 characters of input). Model: `glm-5.3-flash`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"September CPI report October 14 2026 expectations core inflation market positioning\"* \u2192 got 6 results (via gnews_rss)\n- High gasoline prices expected to boost US consumer inflation in September - Reuters (https://news.google.com/rss/articles/CBMisgFBVV95cUxQWlRYZDhRQWpqTmlJcWxGcDR4RGNleVlZQ2pqYlVZaW8ya01TS1NCUFUyaElVNUdJR2x0VWRxdGtaWl9wekdEUGVHUnktVUstSXFOcHloUWt"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -344,6 +277,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:26:22.631505-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-14_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1423546,
+          "preview": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/stock_book/2026-10-14_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-14_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2453,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-14_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12369,
+          "preview": "2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12369,
+          "preview": "2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI"
+        },
+        {
+          "path": "01_daily/2026-10-14_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 67122,
+          "preview": "# Stock book \u2014 2026-10-14\n_Generated 2026-10-14T06:25:57.454830-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, NRGV, INDI \u00b7 # Stock book \u2014 2026-10-14\n_Generated 2026-10-14T06:25:57.454830-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
