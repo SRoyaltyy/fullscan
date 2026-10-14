@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14T04:23:05.123647-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-10-14",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks set for modestly higher open as futures edge up ahead of September CPI data and major bank earnings",
+  "raw_text": "- S&P 500 futures (@ES) rise 0.13%, Dow Jones futures (@YM) rise 0.18%, Nasdaq 100 futures (@NQ) rise 0.05%, and Russell 2000 futures (@ER2) rise 0.25%, indicating a slightly higher open\n- September CPI is due at 8:30 AM ET and is expected to influence Federal Reserve interest rate expectations\n- Bank of America (BAC), Morgan Stanley (MS), BlackRock (BLK), Progressive (PGR), Fastenal (FAST), and State Street (STT) are scheduled to report earnings before the bell\n- ASML (ASML) is in focus after Q3 results showed a raised sales forecast but a revenue miss\n- Asian shares edged higher overnight as the recent chip-related selloff showed signs of easing\n- European equity markets opened modestly positive in early trading\n- Oil (@CL) prices ticked up amid Middle East supply concerns",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) rise **0.13%**, **Dow Jones futures** ([@YM](https://finviz.com/futures_charts?t=YM)) rise **0.18%**, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) rise **0.05%**, and **Russell 2000 futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) rise **0.25%**, indicating a **slightly higher open**\n- **September CPI** is due at **8:30 AM ET** and is expected to influence **Federal Reserve** interest rate expectations\n- **Bank of America** ([BAC](https://finviz.com/quote?t=BAC)), **Morgan Stanley** ([MS](https://finviz.com/quote?t=MS)), **BlackRock** ([BLK](https://finviz.com/quote?t=BLK)), **Progressive** ([PGR](https://finviz.com/quote?t=PGR)), **Fastenal** ([FAST](https://finviz.com/quote?t=FAST)), and **State Street** ([STT](https://finviz.com/quote?t=STT)) are scheduled to **report earnings before the bell**\n- **ASML** ([ASML](https://finviz.com/quote?t=ASML)) is in focus after **Q3 results** showed a **raised sales forecast** but a **revenue miss**\n- **Asian shares edged higher** overnight as the recent **chip-related selloff** showed **signs of easing**\n- **European equity markets** opened **modestly positive** in early trading\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices **ticked up** amid **Middle East supply concerns**",
+  "index_moves": [],
+  "oil": null,
+  "cpi": {
+    "text": "September CPI is due at 8:30 AM ET and is expected to influence Federal Reserve interest rate expectations",
+    "hotter": false
+  },
+  "fed_odds": null,
+  "named_tickers": [
+    "BAC",
+    "MS",
+    "BLK",
+    "PGR",
+    "FAST",
+    "STT",
+    "ASML"
+  ],
+  "named_leaders": [
+    "BAC",
+    "MS",
+    "BLK",
+    "PGR",
+    "FAST",
+    "STT",
+    "ASML"
+  ],
+  "calendar": [
+    "September CPI is due at 8:30 AM ET and is expected to influence Federal Reserve interest rate expectations"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": {
+      "text": "September CPI is due at 8:30 AM ET and is expected to influence Federal Reserve interest rate expectations",
+      "hotter": false
+    },
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "September CPI is due at 8:30 AM ET and is expected to influence Federal Reserve interest rate expectations"
+    ],
+    "text": "September CPI is due at 8:30 AM ET and is expected to influence Federal Reserve interest rate expectations"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "BAC",
+      "MS",
+      "BLK",
+      "PGR",
+      "FAST",
+      "STT"
+    ],
+    "text": "Bank of America (BAC), Morgan Stanley (MS), BlackRock (BLK), Progressive (PGR), Fastenal (FAST), and State Street (STT) are scheduled to report earnings before the bell"
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Oil (@CL) prices ticked up amid Middle East supply concerns"
+  },
+  "finviz_id": 308604,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-10-14T04:06:34.923",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
