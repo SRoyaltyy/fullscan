@@ -112,3 +112,4 @@
 {"committed_at":"2026-10-09T18:43:45Z","date":"2026-10-01","kind":"missing","reason":"missing: plan not sealed before open","recipe":"union_hot_n4_holdup__w0","sha256":"9c03c9f9082ec9523c5bbd58da27798dda63fffafeaf53449bbaf160aaffb22e"}
 {"committed_at":"2026-10-12T21:38:50Z","date":"2026-10-02","kind":"missing","reason":"missing: plan not sealed before open","recipe":"union_hot_n4_holdup__w0","sha256":"04fb84f28e6dbbe902a1ad5262b37e78d674fdd5ace779f3c3da3ce7f1c4caa6"}
 {"committed_at":"2026-10-13T19:49:39Z","date":"2026-10-05","kind":"missing","reason":"missing: plan not sealed before open","recipe":"union_hot_n4_holdup__w0","sha256":"f800ef767203aa6ee696f7a5e21ebf16d3810012c8601242ffddb897a6a3c3d3"}
+{"committed_at":"2026-10-14T17:52:14Z","date":"2026-10-14","kind":"missing","reason":"missing: plan not sealed before open","recipe":"union_hot_n4_holdup__w0","sha256":"62a7a58d50dd9f5628f0390d0011ec5c2b373d586231723ccf565122e1077387"}
