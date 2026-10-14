@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T09:54:49.612658-04:00",
+  "generated_at": "2026-10-14T09:55:07.474509-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1036,31 +1036,6 @@
     }
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T06:09:43.215553-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-10-14_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 21812,
-          "preview": "23 events \u00b7 US CPI for September released | Fed Beige Book released | FOMC meeting Oct 27-28: second hike on the table | September retail sales report | Shutdown averted; CR funds government through Dec 11 | US-China Board of Trade product lists for tariff cuts"
-        },
-        {
-          "path": "01_daily/events/2026-10-14_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 10027,
-          "preview": "# Event Scan \u2014 2026-10-14\n- events tracked: **23** (via openclaw)\n- uncertainty: **elevated**\n- summary: The window is dominated by inflation-vs-hike risk: today's September CPI (3.4% headline backdrop, core 2.4%) directly sets up an Oct 27-28 FOMC where a second hike is genuinely live. Geopolitical fuel-supply shocks (Houthi strikes on Saudi Arabia, Russian diesel disruption) are feeding the inflation problem while the US-China Board of Trade d\u00e9tente provides an offsetting de-escalation channel. Heavy AI-semiconductor earnings (ASML today, TSMC Oct 15) plus a dense blue-chip wave next week give constant catalysts through the window."
-        }
-      ],
-      "preview": "23 events \u00b7 US CPI for September released | Fed Beige Book released | FOMC meeting Oct 27-28: second hike on the table | September retail sales report | Shutdown averted; CR funds government through Dec 11 | US-China Board of Trade product lists for tariff cuts \u00b7 # Event Scan \u2014 2026-10-14\n- events tracked: **23** (via openclaw)\n- uncertainty: **elevated**\n- summary: The window is dominated by inflation-vs-hike risk: today's September CPI (3.4% headline backdrop, core 2.4%) directly sets up an Oct 27-28 FOMC where a second hike is genuinely live. Geopolitical fuel-supply shocks (Houthi strikes on Saudi Arabia, Russian diesel disruption) are feeding the inflation problem while the US-China Board of Trade d\u00e9tente provides an offsetting de-escalation channel. Heavy AI-semiconductor earnings (ASML today, TSMC Oct 15) plus a dense blue-chip wave next week give constant catalysts through the window."
-    },
     {
       "key": "news_judge",
       "title": "News judge",
@@ -3481,6 +3456,24 @@
         }
       ],
       "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T09:55:06.057275-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-10-14_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1123078,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "href": {
@@ -3846,6 +3839,14 @@
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T09:54:51-04:00",
       "commit_msg": "auto: land finviz [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38569102482",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T09:55:08-04:00",
+      "commit_msg": "auto: land universe [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38569102482",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
