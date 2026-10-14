@@ -52,3 +52,11 @@ Second independent 100-title reference was frozen at 2026-10-14T05:03:42.063Z, b
 ## V10 development candidate
 
 Clarifies military/security operations, strategic-reserve releases and statutory public-service restoration; distinguishes court venues/private requests from actual judicial acts and preserves unresolved authority. Adds primary-event stage consistency validation without rewriting predictions. Clarifies criminal legal events, public institutional personnel, future mechanisms, multi-clause business participants, market-data sector exclusions and physical security/education activities. No company/sample names added to runtime, no benchmark labels imported. Two new integrity tests; remote contract gate will run before the program. Same failed first holdout is replayed strictly as development, with isolated automatic offline grading and no grading LLM calls. Native local connection stalled, so source/checkpoints and grading remain in GitHub.
+
+## V10 measured development replay and V11 continuation
+
+V10 run 38515060184 analyzed 99/100. Action agreement 94%, precision 93.75% (15 TP, 1 FP), recall 88.2353% (15/17), Lane agreement 92%, exact sectors 87%. It failed the target and remains development-only. Program artifact 11872017332; score artifact 11872051466. The grader wrote the score before its raw-action reporter crashed on an unavailable model_output; V11 fixes that reporter.
+
+V11 uses --action-review with --no-review. First stage extracts only Lane events; second independently extracts action atoms and sectors, without Lane definitions or the first draft. Both stages batch ten titles, preserving the normal two calls per batch. Required missing facts remain unavailable. The runner no longer treats an empty successful first-stage attempts list plus a failed second stage as missing credentials.
+
+All 50 semantic contract tests passed locally on 2026-10-14. V11 live performance is not yet measured. The workflow replays frozen batch_01 as development; no acceptance credit. Frozen batch_02 remains unrun. Acceptance streak remains 0/10. Source/configuration/catalog must stay fixed across future genuine holdouts; all five metrics must reach 90% on every pass.

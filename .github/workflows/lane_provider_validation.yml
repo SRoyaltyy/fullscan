@@ -74,7 +74,7 @@ jobs:
             --input tests/fixtures/semantic_frozen_20261014/batch_01.json \
             --output provider_results/glm_program_outputs.json \
             --limit 100 --budget-seconds 3600 --headline-timeout 450 \
-            --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review --sector-review \
+            --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review --sector-review --action-review \
             --providers zhipu,gemini,qwen \
             --models glm-5.3-flash,gemini-2.5-flash,qwen-flash
       - uses: actions/upload-artifact@v4
@@ -113,7 +113,7 @@ jobs:
             --input tests/fixtures/semantic_frozen_20261014/batch_01.json \
             --output provider_results/grok_program_outputs.json \
             --limit 100 --budget-seconds 3600 --headline-timeout 450 \
-            --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review --sector-review \
+            --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review --sector-review --action-review \
             --providers openclaw --models xai/grok-4.3
       - uses: actions/upload-artifact@v4
         if: always()
@@ -167,7 +167,7 @@ jobs:
           for key in ('action','lane','sectors'):
               print(key.upper()+'_MISSES='+json.dumps([(r['n'],r['title'],r['program'],r['reference']) for r in report['samples'] if not r['checks'][key]],ensure_ascii=False))
           failures={r['n'] for r in report['samples'] if not r['checks']['action']}
-          print('RAW_ACTION_MISSES='+json.dumps([(r['n'],r['program_output'].get('model_output',{}).get('actions')) for r in raw['outputs'] if r['n'] in failures],ensure_ascii=False))
+          print('RAW_ACTION_MISSES='+json.dumps([(r['n'],(r['program_output'].get('analysis_output') or r['program_output'].get('model_output') or {}).get('actions')) for r in raw['outputs'] if r['n'] in failures],ensure_ascii=False))
           PY
       - uses: actions/upload-artifact@v4
         if: always()

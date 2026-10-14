@@ -12,11 +12,23 @@ Parse every independent clause and its active operating businesses before assign
 Separate a policy's directly targeted business from an unrelated background agreement. Uncertainty/future status does not erase an industry explicitly targeted by a claimed/proposed policy. Pure student politics has no sector, but an institution's actual administrative office change, operational closure or service capacity is educational activity. Cybersecurity software is Technology; physical security installation/monitoring services and industrial electrical protection equipment are Industrials. An unrelated sector-targeted agreement in a sanctions-commentary background does not automatically tag the current unspecified sanctions.
 Use exact contiguous headline evidence. business_identity quotes the subject's name; headline_activity quotes its explicit activity. Return compact JSON only: results contains one n, sectors and unknowns record per supplied headline. unknowns lists genuinely unresolved business identities. No Lane/event/action answers, no article-body facts, no benchmark judgments."""
 
+def action_prompt():
+    return """Extract public institutional action atoms independently from the headline. Bind each actor to its own verb/object, with exact short contiguous quotes. Use the supplied action schema; Python derives flags.
+Public roles: government, court, regulator, central_bank, public_official, public_institution, public_international, civic_electorate. Reliable statutory funds and public universities are public_institution. Government ownership of a commercial company alone does not establish public authority. Private companies/persons, unions and religious bodies remain private; private student/party/shareholder votes are not public elections.
+Concrete kinds: decision, procedural_step, official_engagement, personnel_change, official_clarification, monetary_operation, administrative_operation. Actual military/police/security/emergency operations, public procurement/training/service restoration, and government strategic-reserve withdrawals are administrative_operation. SPR means Strategic Petroleum Reserve; a fresh continuation of its draws is an actual public operation, distinct from inventory statistics or a historical total.
+Reported criminal arrest, conviction, sentencing, bail orders, injunctions and statutory enforcement fines establish the appropriate court/regulator/government type even without a named authority. Use actor=null and actor_evidence=null when unnamed; quote the actual instrument or predicate as action_evidence. Explicit private/citizen arrests and private club/employer discipline do not establish public authority. Court venue, a private case/request brought to court and a party's own filing alone do not establish a completed judicial act. A deposition obligation may have unresolved private/public issuing authority. Operative country-wide taxes/tariffs/subsidies establish government type; aggregate commercial exports alone do not identify a government operator.
+Stage belongs to the act, not its object. A completed rejection/withdrawal is reported even if the rejected proposal never happened. An issued decision effective later is reported; an intended/scheduled act is future/proposal. Disputed or unconfirmed claims of completed substantive public agreements are uncertain; distinguish these from the act of speaking. Unknown authority details do not make an otherwise clear reported act uncertain.
+Speeches, promises, published statistics and historical summaries are communication/statistical_release/historical_summary. A discrete official meeting actually held is official_engagement; an ongoing negotiation alone is not. Rule-scope clarification differs from generic assurance. An actual public institutional office replacement is personnel_change.
+Preserve actor_type=unknown for an actual act whose issuer genuinely could be private or public. Do not convert ordinary private procedures, conference selection or exchange listing into unknown public actions. Generic keyword/topic headings need a reported predicate or specific instrument/object to support a new act. Return actions=[] when no supported action exists, or retain supported private actions. Disclose unresolved authority/occurrence in unknowns. No article-body facts. Keep actions and explanations concise."""
+    
 class SectorBatchReviewer:
     def __init__(self,client):self.client=client
     def review(self,data,drafts,depth=0,retry_errors=None):
         expected={r['n']:r for r in data}
+        review_actions=self.client.action_review
+        review_key='fact_review' if review_actions else 'sector_review'
         props={'n':{'type':'integer'},'sectors':schema()['properties']['sectors'],'unknowns':{'type':'array','items':{'type':'string'}}}
+        if review_actions:props['actions']=schema()['properties']['actions']
         row_schema={'type':'object','properties':props,'required':list(props),'additionalProperties':False}
         response_schema={'type':'object','properties':{'results':{'type':'array','items':row_schema}},'required':['results'],'additionalProperties':False}
         def partition(blob):
@@ -31,7 +43,7 @@ class SectorBatchReviewer:
                 if type(n) is not int or n not in expected or n in seen:
                     return {},{k:['Duplicate/unknown sector id'] for k in expected}
                 seen.add(n)
-                skeleton={'events':[],'actions':[],'sectors':item['sectors'],'primary_lane_class':None,'primary_why':'sector-only pass','unknowns':item['unknowns']}
+                skeleton={'events':[],'actions':item['actions'] if review_actions else [],'sectors':item['sectors'],'primary_lane_class':None,'primary_why':'sector-only pass','unknowns':item['unknowns']}
                 errors=validation_errors(skeleton,expected[n]['title'])
                 if errors:bad[n]=errors
                 else:good[n]=item
@@ -40,24 +52,26 @@ class SectorBatchReviewer:
         def validate(blob):
             good,bad=partition(blob)
             return [] if good else [f'row {n}: '+e for n,errors in bad.items() for e in errors]
-        prompt=sector_prompt()+'\nOUTPUT_SCHEMA='+json.dumps(response_schema,separators=(',',':'))+'\nHEADLINES='+json.dumps(data,ensure_ascii=False,separators=(',',':'))
+        prompt=(action_prompt()+'\n' if review_actions else '')+sector_prompt()+'\nOUTPUT_SCHEMA='+json.dumps(response_schema,separators=(',',':'))+'\nHEADLINES='+json.dumps(data,ensure_ascii=False,separators=(',',':'))
         if retry_errors:
             prompt='\nSUBSET_VALIDATION_ERRORS='+json.dumps({n:retry_errors[n] for n in expected},separators=(',',':'))+'\nThese are shape/evidence errors, not semantic labels. Return every supplied row; copy evidence literally from its own title.\n'+prompt
-        self.client.phase='sector_batch'
-        record=self.client._request(prompt,validate,response_schema,min(6000,max(1200,450*len(data))))
+        self.client.phase='facts_batch' if review_actions else 'sector_batch'
+        record=self.client._request(prompt,validate,response_schema,min(9000,max(1600,700*len(data))) if review_actions else min(6000,max(1200,450*len(data))))
         good,bad=partition(record['model_output']);outputs={}
         for n in expected:
-            out=dict(drafts[n]);out['sector_review']={k:v for k,v in record.items() if k!='model_output'}
-            out['sector_review'].update(model_output=good.get(n),status='analyzed' if n in good else 'unavailable',depth=depth)
+            out=dict(drafts[n]);out[review_key]={k:v for k,v in record.items() if k!='model_output'}
+            out[review_key].update(model_output=good.get(n),status='analyzed' if n in good else 'unavailable',depth=depth)
             if n in good:
-                out['analysis_output']=derive_analysis(out['model_output']|{'sectors':good[n]['sectors']})
-                out['analysis_output']['unknowns_by_stage']={'classification':out['model_output']['unknowns'],'sectors':good[n]['unknowns']}
+                reviewed_fields={'sectors':good[n]['sectors']}
+                if review_actions:reviewed_fields['actions']=good[n]['actions']
+                out['analysis_output']=derive_analysis(out['model_output']|reviewed_fields)
+                out['analysis_output']['unknowns_by_stage']={'classification':out['model_output']['unknowns'],('facts_and_sectors' if review_actions else 'sectors'):good[n]['unknowns']}
                 self.client.batch_progress[n]=out
             else:
                 out['draft_analysis']=drafts[n]
                 out.update(status='unavailable',model_output=None,provider=None,model=None)
                 out.pop('analysis_output',None)
-                out['sector_review']['validation_errors']=bad.get(n,['No usable sector response'])
+                out[review_key]['validation_errors']=bad.get(n,['No usable sector response'])
             outputs[n]=out
         failed=[r for r in data if r['n'] not in good]
         if failed and depth<2 and (good or len(failed)>1) and (good or any(a['status'] not in ('credential_unavailable','no_allowlisted_classification_model') for a in record['attempts'])):
