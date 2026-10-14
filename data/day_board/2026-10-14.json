@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T09:13:05.713991-04:00",
+  "generated_at": "2026-10-14T09:17:49.043943-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -349,13 +349,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8407,
-          "said": "all_ok=False \u00b7 sectors 3/11 \u00b7 10 fail",
+          "size": 8415,
+          "said": "all_ok=False \u00b7 sectors 3/11 \u00b7 12 fail",
           "bullets": [
+            "general_predict:missing",
             "events:zero_events",
-            "finviz_market_digest:missing",
-            "sector_predict:missing",
-            "sector_predict:missing"
+            "news_judge:missing",
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -376,7 +376,7 @@
           "role": "required",
           "status": "OK",
           "reason": "ok=False Grok returned an empty review",
-          "size": 309,
+          "size": 308,
           "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
             "Grok returned an empty review"
@@ -1065,24 +1065,6 @@
     }
   },
   "lands": [
-    {
-      "key": "peer_rs",
-      "title": "Peer RS",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T05:40:36.505085-04:00",
-      "files": [
-        {
-          "path": "data/peers/2026-10-14_peer_rs.csv",
-          "ok": true,
-          "reason": "",
-          "size": 821534,
-          "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-        }
-      ],
-      "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -3819,6 +3801,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-14.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T09:13:04.618424-04:00"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T09:17:48.438659-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-10-14.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11508010,
+          "preview": "11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
