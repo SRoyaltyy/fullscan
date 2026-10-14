@@ -1,8 +1,8 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T04:26:45.272878-04:00",
+  "generated_at": "2026-10-14T04:27:00.538231-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-14.csv",
+  "export": "finviz_2026-10-13.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8944,7 +8944,7 @@
       ]
     },
     {
-      "time": "14 min",
+      "time": "15 min",
       "title": "Stock market today: Dow, S&P 500, Nasdaq futures edge higher ahead of CPI inflation data, earnings",
       "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-14-dow-sp-500-nasdaq-081136597.html",
       "source": "Yahoo Finance",
@@ -9041,7 +9041,7 @@
       ]
     },
     {
-      "time": "57 min",
+      "time": "58 min",
       "title": "AT&T Exits Mexico for $2 Billion: Why Taking Less Still Makes Sense",
       "url": "https://finance.yahoo.com/markets/stocks/articles/t-exits-mexico-2-billion-072842773.html",
       "source": "TIKR",
@@ -9359,8 +9359,8 @@
       "url": "https://finance.yahoo.com/technology/ai/articles/asml-raises-full-sales-outlook-051236633.html",
       "source": "Bloomberg",
       "tickers": [
-        "TSM",
         "AVGO",
+        "TSM",
         "INTC"
       ]
     },
@@ -10819,5 +10819,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 212,
   "earnings_window_count": 529,
-  "overlay_at": "2026-10-14T04:26:45.272878-04:00"
+  "overlay_at": "2026-10-14T04:27:00.538231-04:00"
 }

@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-14
 
-Export `finviz_2026-10-14.csv` · 11616 names · generated 2026-10-14T04:26:45.272878-04:00
+Export `finviz_2026-10-13.csv` · 11616 names · generated 2026-10-14T04:27:00.538231-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -281,7 +281,7 @@ COLD (1w):
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
 - 6 min **SKHY** Asian stocks mostly down as tech firms struggle to claw back losses (AFP)
-- 14 min **ASML,BLK,TSM** Stock market today: Dow, S&P 500, Nasdaq futures edge higher ahead of CPI inflation data, earnings (Yahoo Finance)
+- 15 min **ASML,BLK,TSM** Stock market today: Dow, S&P 500, Nasdaq futures edge higher ahead of CPI inflation data, earnings (Yahoo Finance)
 - 18 min **DPZ** DPZ Stock Risks Ending Two-Week Rally: Dominos CEO Flags Items Per Order Pressure Amid Slowing Q3 Growth (Stocktwits)
 - 19 min **ONCY,LLY,RVMD,GMAB,EXEL** Cancer Drug Spending Is Headed Past $400 Billion as Colorectal and Pancreatic Cancers Move Up the Research Agenda (PR Newswire)
 - 26 min **STI** Solidion Technology Reaffirms Commitment to Address Growing Energy Storage Needs of AI Data Centers (PR Newswire)
@@ -291,7 +291,7 @@ COLD (1w):
 - 39 min **EVO** Evotec shares jump after preliminary 9-month revenue, EBITDA top estimates (Investing.com)
 - 46 min **ASML,AVGO** Asian stocks mostly down as tech firms struggle to claw back losses (AFP)
 - 51 min **INV** Kaplan Fox Encourages Innventure, Inc. (INV) Investors With Substantial Losses to Contact the Firm Before October 27, 2026 (Newsfile)
-- 57 min **T** AT&T Exits Mexico for $2 Billion: Why Taking Less Still Makes Sense (TIKR)
+- 58 min **T** AT&T Exits Mexico for $2 Billion: Why Taking Less Still Makes Sense (TIKR)
 - 58 min **SPCX** SpaceX Could Be Worth $50 Trillion In 10 Years, Says Ron Baron: Elon Thinks Im Way Low (Stocktwits)
 - 1 hour **ASML** AI boom drives record sales at Dutch tech giant ASML (AFP)
 - 1 hour **NVDA** Nvidia pledges $250 million to UK AI safety research (Reuters)
