@@ -1,14 +1,14 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:10:39.320451-04:00",
+  "generated_at": "2026-10-14T06:10:45.041558-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-14_predict.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 5,
-    "partial": 2,
+    "ok": 4,
+    "partial": 3,
     "fail": 1,
     "n": 8
   },
@@ -683,7 +683,7 @@
       "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -863,10 +863,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-14)",
+          "status": "FAIL",
+          "reason": "session 2026-10-14 not in dashboard dates (last=2026-10-07)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-14)",
+          "said": "session 2026-10-14 not in dashboard dates (last=2026-10-07)",
           "bullets": []
         }
       ],
@@ -879,9 +879,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -902,10 +902,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-14)",
+          "status": "FAIL",
+          "reason": "session 2026-10-14 not in dashboard dates (last=2026-10-07)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-14)",
+          "said": "session 2026-10-14 not in dashboard dates (last=2026-10-07)",
           "bullets": []
         },
         {
@@ -2663,7 +2663,7 @@
       "date": "2026-10-14",
       "ok": true,
       "pushed": true,
-      "at": "2026-10-14T06:10:38.474642-04:00",
+      "at": "2026-10-14T06:10:44.209430-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-10-14_judge.md",
