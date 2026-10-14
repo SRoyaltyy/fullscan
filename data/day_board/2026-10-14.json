@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T06:31:45.834791-04:00",
+  "generated_at": "2026-10-14T06:32:21.161059-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -369,9 +369,9 @@
           "path": "01_daily/2026-10-14_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7129,
-          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=False",
+          "reason": "all_ok=False missing=['events']",
+          "size": 7156,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing events",
           "bullets": []
         },
         {
@@ -381,7 +381,7 @@
           "role": "required",
           "status": "OK",
           "reason": "ok=False Grok returned an empty review",
-          "size": 309,
+          "size": 308,
           "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
             "Grok returned an empty review"
@@ -836,7 +836,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=179",
-          "size": 1423545,
+          "size": 1423546,
           "said": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.3961",
           "bullets": []
         },
@@ -847,10 +847,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 66031,
+          "size": 82593,
           "said": "Stock book \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T06:31:43.051675-04:00_",
+            "_Generated 2026-10-14T06:01:58.362592-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -885,9 +885,9 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-14)",
+          "reason": "live-book poller + 2026-10-14_suggestions.json (2026-10-14)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-14)",
+          "said": "live-book poller + 2026-10-14_suggestions.json (2026-10-14)",
           "bullets": []
         }
       ],
@@ -914,7 +914,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=179",
-          "size": 1423545,
+          "size": 1423546,
           "said": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE \u00b7 -0.3961",
           "bullets": []
         },
@@ -924,9 +924,9 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-14)",
+          "reason": "live-book poller + 2026-10-14_suggestions.json (2026-10-14)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-14)",
+          "said": "live-book poller + 2026-10-14_suggestions.json (2026-10-14)",
           "bullets": []
         },
         {
@@ -3254,6 +3254,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-14\nExport `finviz_2026-10-14.csv` \u00b7 11616 names \u00b7 generated 2026-10-14T06:27:40.520343-04:00"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T06:32:20.344234-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-10-14.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11508010,
+          "preview": "11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
