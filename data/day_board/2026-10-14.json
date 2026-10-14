@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T11:02:13.317069-04:00",
+  "generated_at": "2026-10-14T11:03:42.900124-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -546,8 +546,8 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9680 vix=falling yields=flat",
-          "size": 9680,
+          "reason": "sectors=11 bytes=9720 vix=falling yields=flat",
+          "size": 9720,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -759,8 +759,8 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9680 vix=falling yields=flat",
-          "size": 9680,
+          "reason": "sectors=11 bytes=9720 vix=falling yields=flat",
+          "size": 9720,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -1036,31 +1036,6 @@
     }
   },
   "lands": [
-    {
-      "key": "events_catcher",
-      "title": "Event catcher (gap hunt, no carry)",
-      "date": "2026-10-14",
-      "ok": false,
-      "pushed": true,
-      "at": "2026-10-14T06:40:12.260184-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-10-14_events.json",
-          "ok": false,
-          "reason": "zero_events",
-          "size": 212,
-          "preview": "0 events \u00b7 "
-        },
-        {
-          "path": "01_daily/events/2026-10-14_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 205,
-          "preview": "# Event Scan \u2014 2026-10-14 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
-        }
-      ],
-      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-14 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -3362,6 +3337,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-14\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T11:03:41.458706-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-10-14.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11030866,
+          "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11508010,
+          "preview": "11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11686 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11727 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
@@ -4543,6 +4543,14 @@
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T11:02:14-04:00",
       "commit_msg": "auto: land map_heat_research [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38578583308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T11:03:44-04:00",
+      "commit_msg": "auto: land finviz [2026-10-14]",
       "workflow": "Pre-Open ALL (predictive one-shot)",
       "run_id": "38578583308",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
