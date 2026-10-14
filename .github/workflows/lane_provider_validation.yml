@@ -99,7 +99,10 @@ jobs:
           clean: false
           fetch-depth: 1
       - name: Clear inherited sparse checkout
-        run: git -c safe.directory="$GITHUB_WORKSPACE" sparse-checkout disable
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git sparse-checkout disable || true
+          test -f requirements.txt || { echo "requirements.txt missing after full checkout"; exit 1; }
       - name: Diagnose timer, OAuth and both Grok model paths
         id: diagnose
         run: PYTHONPATH=.:scripts python3 scripts/diagnose_openclaw_lane.py --output provider_results/grok_diagnostic.json
@@ -118,3 +121,10 @@ jobs:
           name: lane-grok-diagnosis-and-100
           path: provider_results/
 
+
+      - name: Leave full checkout for shared ECS runner
+        if: always()
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git sparse-checkout disable || true
+          test -f requirements.txt || { echo "requirements.txt missing after full checkout"; exit 1; }
