@@ -3976,38 +3976,6 @@
   },
   "frozen_write_skips": [
     {
-      "path": "01_daily/_channel1/2026-10-14_predict.json",
-      "at": "2026-10-14T11:10:56-04:00",
-      "commit_msg": "auto: stock book leftover sweep",
-      "workflow": "Stock Book ALL (one-shot)",
-      "run_id": "38586271842",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "01_daily/weather/2026-10-14_weather.json",
-      "at": "2026-10-14T11:10:56-04:00",
-      "commit_msg": "auto: stock book leftover sweep",
-      "workflow": "Stock Book ALL (one-shot)",
-      "run_id": "38586271842",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "data/join/2026-10-14_ranked.csv",
-      "at": "2026-10-14T11:10:56-04:00",
-      "commit_msg": "auto: stock book leftover sweep",
-      "workflow": "Stock Book ALL (one-shot)",
-      "run_id": "38586271842",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "data/stock_book/2026-10-14_input_health.json",
-      "at": "2026-10-14T11:10:56-04:00",
-      "commit_msg": "auto: stock book leftover sweep",
-      "workflow": "Stock Book ALL (one-shot)",
-      "run_id": "38586271842",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
       "path": "data/stock_book/2026-10-14_stock_book.json",
       "at": "2026-10-14T11:10:56-04:00",
       "commit_msg": "auto: stock book leftover sweep",
@@ -5571,6 +5539,38 @@
       "path": "data/exports/finviz_2026-10-14.csv",
       "at": "2026-10-15T02:00:17-04:00",
       "commit_msg": "auto: land finviz_digest [2026-10-14]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "38688897048",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/map_heat/2026-10-14_map_heat.json",
+      "at": "2026-10-15T02:07:54-04:00",
+      "commit_msg": "auto: finviz ALL (export+digest+groups+tape+colors) [2026-10-14]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "38688897048",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-14_finviz_digest.json",
+      "at": "2026-10-15T02:07:54-04:00",
+      "commit_msg": "auto: finviz ALL (export+digest+groups+tape+colors) [2026-10-14]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "38688897048",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/news/2026-10-14_finviz_digest.md",
+      "at": "2026-10-15T02:07:54-04:00",
+      "commit_msg": "auto: finviz ALL (export+digest+groups+tape+colors) [2026-10-14]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "38688897048",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-10-14.csv",
+      "at": "2026-10-15T02:07:54-04:00",
+      "commit_msg": "auto: finviz ALL (export+digest+groups+tape+colors) [2026-10-14]",
       "workflow": "Finviz ALL (GH-hosted Elite)",
       "run_id": "38688897048",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
