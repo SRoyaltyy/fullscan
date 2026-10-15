@@ -1,0 +1,34 @@
+name: Build public company identity snapshot
+on:
+  push:
+    branches: [codex/lane-provider-repair-20261014]
+    paths:
+      - '.github/workflows/lane_company_catalog.yml'
+      - 'scripts/build_public_company_catalog.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: lane-public-company-catalog-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/build_public_company_catalog.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build broad identity-only data; no fixture or model calls
+        run: python scripts/build_public_company_catalog.py --output catalog_build --limit 20000
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lane-public-company-identities
+          path: catalog_build/
