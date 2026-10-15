@@ -411,6 +411,24 @@ def main() -> None:
             print(f"[sector-predict] {sector}: mid-commit "
                   f"pushed={rec.get('pushed')} ok={rec.get('ok')}",
                   flush=True)
+        try:
+            from .workflow_progress import attach_from_env
+            prog = attach_from_env()
+            if prog is not None:
+                n_done = 0
+                sec_dir = os.path.join(config.DAILY_SECTORS, date_str)
+                if os.path.isdir(sec_dir):
+                    for essay_name in os.listdir(sec_dir):
+                        if not essay_name.endswith("_predict.md"):
+                            continue
+                        essay = os.path.join(sec_dir, essay_name)
+                        if output_qc.qc_sector_predict(essay).ok:
+                            n_done += 1
+                prog.counts(
+                    "sectors", n_done, len(FINVIZ_SECTORS),
+                    model=str((result or {}).get("provider") or ""))
+        except Exception as exc:  # noqa: BLE001 — progress must not stop essays
+            print(f"[sector-predict] WARN: progress {sector}: {exc}", flush=True)
         if result.get("quality") == "ok" or (
                 result.get("skipped") and result.get("quality") == "ok"):
             n_skip += 1

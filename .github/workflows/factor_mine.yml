@@ -211,6 +211,10 @@ jobs:
           FULLSCAN_OPPSET_UNION: ${{ (inputs.oppset_union == true || inputs.oppset_union == 'true') && '1' || '' }}
         run: |
           set -euo pipefail
+          DATE=$(TZ=America/New_York date +%F)
+          python3 -m src.workflow_progress beat --workflow factor_mine --date "$DATE" --stages land_closed --stage land_closed >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
           LAND_LOG=/tmp/factor_mine_land.log
           : > "$LAND_LOG"
           # Opt-in remine union. Default off so schedule/workflow_run
@@ -279,6 +283,7 @@ jobs:
           if bad:
               raise SystemExit("oversize publish path:\n" + "\n".join(bad))
           PY
+          python3 -m src.workflow_progress touch --workflow factor_mine --date "$DATE" --stage land_closed --state ok || true
       - name: Watchdog log (stall diagnosis)
         if: always()
         run: cat /tmp/fm_watchdog.log 2>/dev/null || echo "no watchdog output (run finished before 10 min)"

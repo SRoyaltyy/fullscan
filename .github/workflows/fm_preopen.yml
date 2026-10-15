@@ -100,20 +100,32 @@ jobs:
           D: ${{ github.event.inputs.date }}
         run: |
           set -euo pipefail
+          DATE="${D:-$(TZ=America/New_York date +%F)}"
+          python3 -m src.workflow_progress beat --workflow fm_preopen --date "$DATE" --stages seal,book --stage seal >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
           python3 -m src.factor_mine_preopen seal ${D:+--date "$D"}
           hhmm=$((10#$(TZ=America/New_York date +%H%M)))
           if [ "$hhmm" -ge 929 ]; then
             echo "09:29 ET passed before the push; not landing a seal at the open"
+            kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true
+            python3 -m src.workflow_progress touch --workflow fm_preopen --date "$DATE" --stage seal --state skipped --error "09:29 ET passed before the push" || true
             exit 0
           fi
           bash scripts/safe_git_push.sh "auto: factor mine pre-open seal $(TZ=America/New_York date +%F)" \
-            data/factor_mine/preopen/seals/
+            data/factor_mine/preopen/seals/ \
+            01_daily/_progress/
+          python3 -m src.workflow_progress touch --workflow fm_preopen --date "$DATE" --stage seal --state ok || true
       - name: Book (after the close)
         if: steps.pick.outputs.go == 'true' && steps.pick.outputs.step == 'book'
         env:
           D: ${{ github.event.inputs.date }}
         run: |
           set -euo pipefail
+          DATE="${D:-$(TZ=America/New_York date +%F)}"
+          python3 -m src.workflow_progress beat --workflow fm_preopen --date "$DATE" --stages seal,book --stage book >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
           python3 -m src.factor_mine_preopen book ${D:+--date "$D"}
           python3 -m src.past_day_lock --check
           bash scripts/safe_git_push.sh "auto: factor mine pre-open sleeves book" \
@@ -123,7 +135,9 @@ jobs:
             03_scoreboard/factor_mine/union_hot_n4_holdup_preopen.md \
             data/factor_mine/preopen/summary.json \
             dashboard/factor-mine/preopen.json \
-            data/past_day_lock/
+            data/past_day_lock/ \
+            01_daily/_progress/
+          python3 -m src.workflow_progress touch --workflow fm_preopen --date "$DATE" --stage book --state ok || true
       - name: Restamp GitHub Pages
         if: steps.pick.outputs.go == 'true' && steps.pick.outputs.step == 'book'
         env:

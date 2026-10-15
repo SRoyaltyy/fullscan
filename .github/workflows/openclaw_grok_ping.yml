@@ -72,8 +72,18 @@ jobs:
           set +e
           export HOME="${FULLSCAN_HOME:-/home/gha}"
           export PYTHONPATH="${GITHUB_WORKSPACE:-.}"
+          DATE=$(TZ=America/New_York date +%F)
+          python3 -m src.workflow_progress beat --workflow supergrok_ping --date "$DATE" --stages ping --stage ping >> /tmp/progress_beat.log 2>&1 &
+          echo $! > /tmp/progress_beat.pid
+          trap 'kill "$(cat /tmp/progress_beat.pid)" 2>/dev/null || true' EXIT
           python3 scripts/openclaw_grok_ping.py
           echo "ping_exit=$?" >> "$GITHUB_ENV"
+          OK=$(python3 -c 'import json; from pathlib import Path; p=Path("01_daily/_openclaw_grok_ping.json"); print("yes" if p.is_file() and json.loads(p.read_text()).get("ok") else "no")' || echo no)
+          if [ "$OK" = "yes" ]; then
+            python3 -m src.workflow_progress touch --workflow supergrok_ping --date "$DATE" --stage ping --state ok || true
+          else
+            python3 -m src.workflow_progress touch --workflow supergrok_ping --date "$DATE" --stage ping --state failed --error "no grok reply" || true
+          fi
           echo "======== _openclaw_grok_ping.json ========"
           cat 01_daily/_openclaw_grok_ping.json 2>/dev/null || echo "(missing)"
 
