@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T23:26:53.123546-04:00",
+  "generated_at": "2026-10-14T23:32:54.088367-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -834,7 +834,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=184",
-          "size": 1464416,
+          "size": 1464483,
           "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
@@ -848,7 +848,7 @@
           "size": 69352,
           "said": "Stock book \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T23:26:49.966983-04:00_",
+            "_Generated 2026-10-14T23:32:51.891326-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -912,7 +912,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=184",
-          "size": 1464416,
+          "size": 1464483,
           "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
@@ -3955,30 +3955,6 @@
   },
   "frozen_write_skips": [
     {
-      "path": "data/day_board/2026-10-14.json",
-      "at": "2026-10-14T10:43:25-04:00",
-      "commit_msg": "auto: land news_actions [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "01_daily/news/2026-10-14_actions.json",
-      "at": "2026-10-14T10:43:35-04:00",
-      "commit_msg": "auto: land news_actions [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "data/day_board/2026-10-14.json",
-      "at": "2026-10-14T10:43:35-04:00",
-      "commit_msg": "auto: land news_actions [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
       "path": "01_daily/2026-10-14_stock_book.md",
       "at": "2026-10-14T10:46:56-04:00",
       "commit_msg": "auto: strategy tickets 2026-10-14",
@@ -5552,6 +5528,30 @@
       "commit_msg": "auto: strategy tickets 2026-10-14",
       "workflow": "Publish strategy tickets",
       "run_id": "38675443495",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_stock_book.md",
+      "at": "2026-10-14T23:33:18-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-14",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38675271076",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_input_health.json",
+      "at": "2026-10-14T23:33:18-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-14",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38675271076",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_stock_book.json",
+      "at": "2026-10-14T23:33:18-04:00",
+      "commit_msg": "auto: strategy tickets 2026-10-14",
+      "workflow": "Publish strategy tickets",
+      "run_id": "38675271076",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
     }
   ]
