@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-10-15
 
-_Generated 2026-10-15T10:20:25 — live `flatten_robust`._
+_Generated 2026-10-15T10:30:12 — live `flatten_robust`._
 
 **morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -40,13 +40,12 @@ Sized from marked equity **$102,922.41** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | VEEV | io_core | 43 | $297.35 | $12,786.05 | cash tied |
-| 16:00 ET | CORT | io_core | 110 | $116.23 | $12,785.30 | cash tied |
-| 16:00 ET | SYK | io_core | 45 | $281.62 | $12,672.90 | cash tied |
-| 16:00 ET | CDNA | io_core | 198 | $64.69 | $12,808.62 | cash tied |
-| 16:00 ET | PACS | io_core | 286 | $44.98 | $12,864.28 | cash tied |
-| 16:00 ET | PRGO | io_core | 806 | $15.95 | $12,855.70 | cash tied |
+| 16:00 ET | VEEV | io_core | 49 | $297.35 | $14,570.15 | cash tied |
+| 16:00 ET | SYK | io_core | 52 | $281.62 | $14,644.24 | cash tied |
+| 16:00 ET | CDNA | io_core | 227 | $64.69 | $14,684.63 | cash tied |
+| 16:00 ET | PACS | io_core | 326 | $44.98 | $14,663.48 | cash tied |
+| 16:00 ET | CON | io_core | 392 | $37.46 | $14,684.32 | cash tied |
 | 16:00 ET | BLFS | io_core | 0 | $0.00 | $0.00 | no price |
-| 16:00 ET | PCRX | io_core | 353 | $36.40 | $12,849.20 | cash tied |
+| 16:00 ET | PCRX | io_core | 403 | $36.40 | $14,669.20 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
