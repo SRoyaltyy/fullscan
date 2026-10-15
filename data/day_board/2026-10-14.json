@@ -3696,14 +3696,6 @@
   },
   "frozen_write_skips": [
     {
-      "path": "data/ab_checklist/2026-10-14_ab_checklist_enriched.csv",
-      "at": "2026-10-14T10:28:53-04:00",
-      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
       "path": "data/day_board/2026-10-14_tickets.json",
       "at": "2026-10-14T10:28:53-04:00",
       "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-14]",
@@ -5291,6 +5283,14 @@
       "path": "01_daily/sectors/2026-10-14/_board.json",
       "at": "2026-10-14T23:15:01-04:00",
       "commit_msg": "auto: post-close ALL [2026-10-14]",
+      "workflow": "Post-Close ALL (grade + learn + next captains)",
+      "run_id": "38674627308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/sectors/2026-10-14/_board.json",
+      "at": "2026-10-14T23:15:06-04:00",
+      "commit_msg": "auto: post-close ALL [2026-10-15_0315]",
       "workflow": "Post-Close ALL (grade + learn + next captains)",
       "run_id": "38674627308",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
