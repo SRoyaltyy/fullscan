@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T08:29:47.728402-04:00",
+  "generated_at": "2026-10-15T08:50:16.929233-04:00",
   "run_id": "38731981090",
   "runner": "GitHub Actions 1000030758",
   "all_ok": false,
@@ -15,7 +15,6 @@
   ],
   "missing_required": [
     "events",
-    "news_judge",
     "general_predict"
   ],
   "attempts": [
@@ -173,10 +172,10 @@
       },
       {
         "kind": "news_judge",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-10-15_judge.md",
-        "size": 0
+        "size": 9415
       },
       {
         "kind": "news_parse",
