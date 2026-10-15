@@ -1,12 +1,12 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T05:41:27.698902-04:00",
+  "generated_at": "2026-10-15T05:41:51.360896-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 4,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [],
@@ -15,16 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-10-15",
-      "ok": false,
-      "pushed": false,
-      "at": "2026-10-15T04:39:42.629043-04:00",
-      "files": [],
-      "preview": "no files"
-    },
     {
       "key": "news_parse",
       "title": "News parse",
@@ -170,6 +160,31 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T05:41:50.725597-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-15_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7558267,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AUPH, RSG, ELV, CVLT, YPF"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-15_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8358668,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, A, CVLT, CDNA, ROST"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 AUPH, RSG, ELV, CVLT, YPF \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, A, CVLT, CDNA, ROST"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
