@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T06:58:42.908604-04:00",
+  "generated_at": "2026-10-15T07:03:18.464411-04:00",
   "run_id": "38714326944",
   "runner": "GitHub Actions 1000030400",
   "all_ok": false,
@@ -177,7 +177,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-15_parsed.json",
-        "size": 459585
+        "size": 459474
       },
       {
         "kind": "news_actions",

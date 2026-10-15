@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T07:02:42.972447-04:00",
+  "generated_at": "2026-10-15T07:03:20.196615-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -240,8 +240,8 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 459585,
-          "said": "459585B on disk",
+          "size": 459474,
+          "said": "459474B on disk",
           "bullets": []
         },
         {
@@ -1034,31 +1034,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T04:25:29.750269-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-15_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 277618,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-15_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18572,
-          "preview": "# MAP HEAT \u2014 2026-10-15\nExport `finviz_2026-10-14.csv` \u00b7 11616 names \u00b7 generated 2026-10-15T04:25:29.692568-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-15\nExport `finviz_2026-10-14.csv` \u00b7 11616 names \u00b7 generated 2026-10-15T04:25:29.692568-04:00"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -3716,6 +3691,31 @@
         }
       ],
       "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WAY, AUPH, RSG, BIIB, ATRC \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 BIIB, ICLR, ATRC, PFE, DRH"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T07:03:18.514645-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-15_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 459474,
+          "preview": "raw=563 usable=91 single=43 \u00b7 Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike  | Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike  | TSMC\u2019s CEO sees no sign of a slowdown as chip foundry reports record profit | Fed Interest Rate Hike Seems More Likely This Month After Alarming Inflation Dat | U.S. CPI exceeding expectations has heightened market anticipation of Federal Re"
+        },
+        {
+          "path": "01_daily/news/2026-10-15_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 8025,
+          "preview": "# News Parse v2 \u2014 2026-10-15T07:03:18.279067-04:00\nWindow\u224848h | news_mode=on | raw=563 | usable=91 | single_name=43 | noise_dropped=428\nusable polarity={'+': 2, '-': 15, 'mixed': 1, 'neutral': 73}"
+        }
+      ],
+      "preview": "raw=563 usable=91 single=43 \u00b7 Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike  | Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike  | TSMC\u2019s CEO sees no sign of a slowdown as chip foundry reports record profit | Fed Interest Rate Hike Seems More Likely This Month After Alarming Inflation Dat | U.S. CPI exceeding expectations has heightened market anticipation of Federal Re \u00b7 # News Parse v2 \u2014 2026-10-15T07:03:18.279067-04:00\nWindow\u224848h | news_mode=on | raw=563 | usable=91 | single_name=43 | noise_dropped=428\nusable polarity={'+': 2, '-': 15, 'mixed': 1, 'neutral': 73}"
     }
   ],
   "href": {
