@@ -1,4 +1,5 @@
 name: Lane batched semantic development comparison
+# Strict GLM development retry after rate limits; model candidate and frozen inputs unchanged.
 on:
   push:
     branches: [codex/lane-provider-repair-20261014]
