@@ -242,3 +242,16 @@ def test_wiring_strings():
     assert "user_code" in drop and "access_token" in drop
     assert "gateway_token_len" not in drop
     json.dumps(sample)
+
+
+def test_preopen_parent_is_not_another_grok_job():
+    import importlib.util
+    from pathlib import Path
+    path = Path(__file__).resolve().parent.parent / "scripts" / "openclaw_oauth_guard.py"
+    spec = importlib.util.spec_from_file_location("openclaw_oauth_guard_jobs", path)
+    guard = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(guard)
+    ancestors = {100, 200}
+    assert guard._other_grok_job("100 bash scripts/ecs_preopen.sh", ancestors) is False
+    assert guard._other_grok_job("300 python3 scripts/openclaw_oauth_guard.py renew", ancestors) is False
+    assert guard._other_grok_job("400 python -m src.run_preopen_all", ancestors) is True

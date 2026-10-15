@@ -414,9 +414,38 @@ def hard_restart(result: dict) -> None:
 GROK_JOBS = r"src.map_heat_postclose|src.run_preopen_all|ecs_preopen|ecs_map_postclose|-m src.map_heat"
 
 
+def _process_ancestors() -> set[int]:
+    """This process and its parents. ecs_preopen.sh is the parent when it renews."""
+    pids = {os.getpid()}
+    pid = os.getpid()
+    for _ in range(8):
+        try:
+            stat = Path(f"/proc/{pid}/status").read_text(encoding="utf-8")
+        except OSError:
+            break
+        match = re.search(r"^PPid:\s+(\d+)", stat, re.M)
+        if not match:
+            break
+        pid = int(match.group(1))
+        if pid <= 1 or pid in pids:
+            break
+        pids.add(pid)
+    return pids
+
+
+def _other_grok_job(line: str, ancestors: set[int]) -> bool:
+    if "pgrep" in line or "oauth_guard" in line:
+        return False
+    match = re.match(r"\s*(\d+)", line)
+    if match and int(match.group(1)) in ancestors:
+        return False
+    return True
+
+
 def grok_job_running() -> bool:
     r = subprocess.run(["pgrep", "-af", GROK_JOBS], capture_output=True, text=True)
-    lines = [l for l in r.stdout.splitlines() if "pgrep" not in l and "oauth_guard" not in l]
+    ancestors = _process_ancestors()
+    lines = [l for l in r.stdout.splitlines() if _other_grok_job(l, ancestors)]
     return bool(lines)
 
 
