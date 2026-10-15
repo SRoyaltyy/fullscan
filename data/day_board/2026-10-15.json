@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T06:04:43.381936-04:00",
+  "generated_at": "2026-10-15T06:14:30.932714-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News judge MD `01_daily/news/2026-10-15_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 5,
+    "partial": 3,
     "fail": 0,
     "n": 8
   },
@@ -182,7 +182,7 @@
       "inputs_ready": true,
       "n_req_ok": 3,
       "n_req": 9,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 14,
       "files": [
         {
@@ -320,11 +320,16 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-15/_board.json",
           "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 6382,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "qc",
@@ -333,7 +338,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7576,
+          "size": 8434,
           "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
           "bullets": [
             "general_predict:missing",
@@ -488,8 +493,15 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "sectors 0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing"
+      ]
     },
     {
       "key": "weather",
@@ -653,8 +665,8 @@
       "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 4,
-      "n_opt_ok": 1,
-      "n_opt": 4,
+      "n_opt_ok": 2,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_general",
@@ -671,12 +683,17 @@
           "key": "in_board",
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-10-15/_board.json",
-          "role": "optional",
-          "status": "SKIP",
-          "reason": "optional \u2014 sector board not required",
-          "size": 0,
-          "said": "optional \u2014 sector board not required",
-          "bullets": []
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 6382,
+          "said": "0 up / 0 down / 0 flat",
+          "bullets": [
+            "XLB missing",
+            "XLC missing",
+            "XLY missing",
+            "XLP missing"
+          ]
         },
         {
           "key": "in_actions",
@@ -824,10 +841,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-15 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-15)",
           "size": 10510589,
-          "said": "session 2026-10-15 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-15)",
           "bullets": []
         }
       ],
@@ -840,9 +857,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -863,10 +880,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-15 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-15)",
           "size": 10510589,
-          "said": "session 2026-10-15 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-15)",
           "bullets": []
         },
         {
@@ -902,84 +919,26 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "CON",
-        "score": 0.7856556108017361
-      },
-      {
-        "ticker": "SGRY",
-        "score": 0.7287287616401872
-      },
-      {
-        "ticker": "HITI",
-        "score": 0.48601836919705854
-      },
-      {
-        "ticker": "AMN",
-        "score": 0.7601225205328173
-      },
-      {
-        "ticker": "ASTH",
-        "score": 0.7019757271272404
-      },
-      {
-        "ticker": "MD",
-        "score": 0.6971374925900011
-      },
-      {
-        "ticker": "PACS",
-        "score": 0.8932406667174411
-      },
-      {
-        "ticker": "NTAP",
-        "score": 0.09630838517576984
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "NEOV",
-        "score": -0.4009564139437413
-      },
-      {
-        "ticker": "OKLO",
-        "score": -0.28823224215502663
-      },
-      {
-        "ticker": "FCEL",
-        "score": -0.23171947325900127
-      },
-      {
-        "ticker": "NNDM",
-        "score": -0.13271542898503363
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.09490889772550341
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.3553332818307756
-      },
-      {
-        "ticker": "TE",
-        "score": -0.31155503699104947
-      },
-      {
-        "ticker": "NRGV",
-        "score": -0.26083097895752283
-      }
-    ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $93,435.90 \u00b7 morning S missing",
+    "buy_1d": [],
+    "sell_1d": [],
+    "flatten": {},
+    "general": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
       "bullets": [
-        "0 priced buys",
-        "cash $93,435.90",
-        "morning S missing"
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
       ]
     },
-    "general": {},
-    "sectors": {},
     "news": {},
     "weather": {
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
@@ -2234,6 +2193,24 @@
         }
       ],
       "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-15 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T06:14:30.182721-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-15/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6382,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "href": {
