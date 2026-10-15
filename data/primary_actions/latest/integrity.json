@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-15T12:29:29.086726+00:00",
+  "official_unauthenticated_gets": 338,
+  "retained_unique_documents": 2200,
+  "sqlite_integrity": "ok",
+  "llm_calls": 0,
+  "paid_api_calls": 0,
+  "catalog_generated_at": "2026-10-15T12:24:11.273900+00:00",
+  "catalog_refresh_needed": false
+}

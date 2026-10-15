@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-15T05:13:36.520845-04:00",
+  "generated_at": "2026-10-15T07:08:35.652101-04:00",
   "hours": 48,
-  "raw_headlines": 565,
+  "raw_headlines": 561,
   "news_source": "live_rss+local_files:empty",
   "news_mode": "on",
   "unique_events": 4,
@@ -10,7 +10,7 @@
   "reasoned_events": [
     {
       "event": "fed_rate_path",
-      "headline_count": 24,
+      "headline_count": 28,
       "framework": {
         "keep": "keep",
         "us_relevance": "high",
@@ -26,7 +26,7 @@
         "confidence": 0.9,
         "drop_reason": "",
         "notes": [
-          "headline_count=24 supports non-noise severity",
+          "headline_count=28 supports non-noise severity",
           "rates polarity=hawkish"
         ]
       },
@@ -45,10 +45,34 @@
           "published_at": "Wed, 14 Oct 2026 20:16:16 GMT"
         },
         {
-          "title": "Tech stocks lead rout after US inflation fuels rate hike bets - Yahoo Finance Singapore",
+          "title": "Will the Fed hike rates in October? 50 basis points in total hikes expected, but Fed officials say there's 'no need for urgency' - Chase Bank",
           "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE01b0NaZDZIdjJ3RkVEelFpYjVEdUJIaFVydlpKOFhrcDY5MUlzNkRQbTlFbmI5ZXZyVHRpeWZIa0w1YnR3UnZMQy1kTXltVmJZOXNWSUZhOEROTkRGODhiaXE2Nm1pdEcyd0c2emJLWTAyRFlQS21WbjBjMDY?oc=5",
-          "published_at": "Thu, 15 Oct 2026 08:23:20 GMT"
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNVjZzbXEwdE1HWHlZdlJsckVxdFhvQ2pyMjVQdTYzd0VQUWV6QmNZY2E3V29aa0x4MUVRWU1uSExZRTZfZjg2RzRKOGlkWTlObnVqUFcxVWxUazVOSW83NjF5eUNjdHRNc1J5WmU3d3NPclB4eE5QVlc3aE0zMXR1TUo2YWlWc2ctek1ReHd4cDRkTUZPT0VmNzh1dW1DZ3Y5aU9nUHhKU25kZXZsblRpZk01UDQtVE1HQjF5RWpjX21jcHlFcmVCVzBHcUxjR2E5R2VF?oc=5",
+          "published_at": "Wed, 14 Oct 2026 18:55:53 GMT"
+        },
+        {
+          "title": "Rising inflation could solidify a Fed rate hike this year. Should CD buyers wait? Advisers say no - MarketWatch",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNYlFvMWtSOWNmZXVoZFk0aWFyQnBEd1dlb3d3RDhFNTYxTWNUTlZaVXJwLUprLWFhOUx5SzJZZ0NSN3lsSFRvNmJPWVhZVkR5S05HdlhucmpqR002VWZwTkp6UGxMc19RX2ROR25TZEs2Y2xucklucFdSMDRZNVRDQV95aVlGZjhlWEpkSHV1ZHF0ZFVhVE9rcVBlUDFIX01SRUsxem1IcHZ3YV84X25kTEVjT2tMUl9aOWh0OWJDWmRLOExxV1pzbUh4aEZ4YmtlTzJnaw?oc=5",
+          "published_at": "Thu, 15 Oct 2026 10:34:00 GMT"
+        },
+        {
+          "title": "UBS extends Fed tightening cycle forecast with March rate hike after inflation surprise - The Mighty 790 KFGO",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSlUxamU1a0lzdGluNWNKWHBnYW1DVVQxaHdTUHJxQ3JycTdrQ2V0MnJ1RFJxbjVCbUhpb0R2RXdhcmxPTjVSVmMxemwyMERUQUlncExNeDdhcVR0Wi11NmpzVUVpc3NXTmUyNWtoZ1pjelcyVExQMTJzOXVDWnlyX0xKQzRsWHZDaUQ5NGFBZFdwWWxsbC1IUUktbFJoMDFGMHlsLTFyUi1INFBGUFhveGtiTnVBVUk?oc=5",
+          "published_at": "Thu, 15 Oct 2026 10:01:27 GMT"
+        },
+        {
+          "title": "US, European Stocks Mixed As Inflation Boosts Odds Of Fed Rate Hike - MarketForces Africa",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOc1R1a3NuRndUakFSZ1JBUGVjdE1GRnpCUzFTNkdJUlpZdG03eThCOXZVMEhtN2hiaEZMem90aXBsTm9ybUVFd3FQRlNhSmRGX0swT2V4bDFxUnhnMWIxOWx1WEhqajdZVWNJRl9Fak5Jdlp6bDhYa2dFMXBXY0FNQlljNUliSExIQWZjdm03dVZ2NVNSZzhzdQ?oc=5",
+          "published_at": "Thu, 15 Oct 2026 09:12:11 GMT"
+        },
+        {
+          "title": "U.S. CPI exceeding expectations has heightened market anticipation of Federal Reserve rate hikes, while the USD/CAD pair continues to fluctuate at elevated levels. - Moomoo",
+          "source": "rss_google_macro",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObW85SThZbWJONUxaSU5zVm10QnVsX3dMMUdwVHh5R2RwQVNyWkNxN2R3V1RKWm91emNQQllNbE9DMkdGOTdVR0hOdVNyaXp4WFNsM3gzMElkQzBCUG9kVVJLZUhDellZYXI0OGVBZDJqcXd0UkpNWEk1OWEzX0wyT0dDbWVEQ0stZTNrTkNQd0VpMDU3aFJjVS00aHZleXJ0WUprOGxWTmVFaXdyWnlheUUzdGZyYUZYUFJr?oc=5",
+          "published_at": "Thu, 15 Oct 2026 07:38:15 GMT"
         },
         {
           "title": "Core inflation has not cooled as expected; does the Federal Reserve still have reasons to hold off on raising interest rates? - 富途牛牛",
@@ -61,30 +85,6 @@
           "source": "rss_google_macro",
           "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZXF4cHZ5b1N3TlJlQlVfUmQydG41M2VRNk9oQlFjUHpHdnpZMkdDUkNCeVNSTGV6THBSSGl3SUV5YkFwYjEweEEyY1M1SFNDX1REZUdydUVPYmdYTVFQUzY3RXpFREYwelNMQndGeGVfSkJyZWg5OFcxWnp6NzZ1WVF0NzFVZTFXM2E5UVNvaW5sZjk1N0JwQ2ZDdWxiUWVKYVlPZU1HeXlzQdIBrwFBVV95cUxNOFRfWnV4YUItU29iaF9MWFJqOUFmNnJTckRHRVBNZDRfNEk3SS1vTVJ6TG1zcmJzeWxWT1djaVQ3cm1jb1VHbnI5Q3ZZcDRGdU1yalducE5faEhOR0Jjc1FYNFBseEo3SkVpWElKX3hfcG5yQzJzVUNQQl9FakFsdjFZbTJpdDZjMC1xNENvbWdJQzAteGVraWhRREF4WTRXUUh3SXctcWlqNUMxdzdV?oc=5",
           "published_at": "Thu, 15 Oct 2026 04:33:27 GMT"
-        },
-        {
-          "title": "U.S. Inflation Rebounds; Federal Reserve Faces Dilemma Over Oil-Driven Price Pressures - BigGo Finance",
-          "source": "rss_google_commodities",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5vYk9xb0NCUlBPQWlTeHJWZ0NjTXcwTGJ4X3JiRXFzR29ZWEpoamFDcWM0cGRmUFVLQ0dKOXRaZU42VV9pcWlsdWUtY0UyeHowbHJmRkcyUm5yRUNpVGZsTV96eTdVeWh5Z1A1M2k2VW10bnIxM2c?oc=5",
-          "published_at": "Thu, 15 Oct 2026 03:15:00 GMT"
-        },
-        {
-          "title": "Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike bets - Wichita Eagle",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5NSXZqMkZaSjJtQ0otRjMtOUJVRnRLLUl4NlhfbThYbWR3bGstS1RDdjB0SWRWT0Z5akZNdlNnWmowb1kzeVNEUzNkV3Foa1ZUOThpNXVRZDF2VHBhU1RrZGtfaWJoQlBjQUE?oc=5",
-          "published_at": "Thu, 15 Oct 2026 01:51:00 GMT"
-        },
-        {
-          "title": "Dollar pulls back from 18-month high as Treasury yields fall; Fed hike bets ease - Reuters",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPbDE0ZWJRMm1PNWhpVzUwaDhHb2o1YkVXVExaeFVQWWFwcnJtemVfakY3WHV0aFFQWHR3dkR4eVN1OTZ3dXVqb0QzQ0ZuNkNhek1IbFRhVEtBXzNKcVpSQ1dHQm16ZGMxZHF1Z0txU2xHVUVsb0txUzhxLVljb0NXWWZzX2ZETk9QbHF1dm5XdmMybWFYRzl4d1VuS3J0NlU4enJvQVFuYTYydDNYUVVHM3pjandDUHdHbHhLT2otUU1HQk1PTVpReHpmTQ?oc=5",
-          "published_at": "Thu, 15 Oct 2026 01:49:00 GMT"
-        },
-        {
-          "title": "Inflation Puts Federal Reserve in a Bind; December Rate Hike Could Reach 50 Basis Points - BigGo Finance",
-          "source": "rss_google_macro",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9GQkRnUFRzSlRPN0pOWDhzTmQtUlk1VjN6RG1FTG1IUUZBUmJKZXU5ZVd6dlVfWnVQTU9tcTZXWWVTZTBpV1N0eGhJeWJ5eFhKQm80MHJoTDdJeERUd1hLUVFGcG5LZVBsM0VjZkMyLUtXeEM5Qmc?oc=5",
-          "published_at": "Thu, 15 Oct 2026 01:35:00 GMT"
         }
       ]
     },
@@ -125,22 +125,28 @@
           "published_at": "Wed, 14 Oct 2026 20:03:14 GMT"
         },
         {
+          "title": "Oil Prices Surge as Iran Adopts New Tactics Targeting Tankers - Global Banking & Finance Review",
+          "source": "rss_google_commodities",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNcWxIazJCS1JUWDZhMkxUN1BHb21TMWhSV015OFp2Q2RxczZnbHlwTzJSd181eHZjX25PWHE2dWh2VVdad3B6YlZBWllKSERLVTdPSUlkQ0F0X0J5Yzd2TTdKbmpsM3BqX1JNOTBqVm1JVzBMLVF4cHhhc0ZFa3NmcGdHaWR2cXZMd0VRWXVLMHQtNkVnaTJyOGM0cEp3QQ?oc=5",
+          "published_at": "Wed, 14 Oct 2026 07:40:57 GMT"
+        },
+        {
           "title": "Oil prices gain on attacks in Saudi Arabia, Iran's new tactics to target tankers - Reuters",
           "source": "rss_google_commodities",
           "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxON0hPaGRDOW9haXRKcUJ3WVU5dVdwSjB2ZzNMZTVWd0lRYV9ZUjRNRTI4VjVXeERGeW1XVU1GanZidjZneXhKeFh1dWM0OUJ6ZGltVXFXdHJNVk52MDN5M3NvRnhUUWN6aEFiSldFUWxfeHNPYmQ2R21JMGlhaUNaWEFNckc0T0ItSFpYcHA3MmM4UUdnTVd0VFg0NWhtbm91MllPWllha0pqdVBjZlRldDgxaG5PclVud0xtNQ?oc=5",
           "published_at": "Wed, 14 Oct 2026 01:27:00 GMT"
         },
         {
+          "title": "Geopolitical disruption is moving faster than insurance programs - Insurance Business",
+          "source": "rss_google_geopolitics",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPa2NfZnI5aFVETVc2UGNyNkJPUHhvMWh6emc1X2czWkpCeDc5d1VmUDc3X0xhMHFNdDRjZHhwMEhJcURSNEFsYTN2aGktdENIeXhYN1plOG1jY1B6cWJQRjk0M1Q2U3JGX1Z6UGJzUTlmT21DQ2RtSURHN2pxYzkzN3AyQUJURXNnNElqUURLbk10Z1FYYURZc0ZCRWFjS2l2eE1IcjF3dW9pMU95bTVCZFBMVXBPTnhtSm5Fc1UzQXBZaDdQdmRtSHg5YTF4S1ZD?oc=5",
+          "published_at": "Thu, 15 Oct 2026 09:29:58 GMT"
+        },
+        {
           "title": "Geopolitical risks drive trade diversification efforts - Bangkok Post",
           "source": "rss_google_geopolitics",
           "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNLW5FdWN3dTg2Y1o2cEVJQldCOXBkcGZrbTBkczB1Ymt3RzZ4WUxQclRvZHd1eGdHWW03OTVMUGh3Zzgxdkd6c3VxeElya2cwLXIyXzh1aFZUTzJud0NHeEw0VWxzYndaN3pFcjZYa05YVXRkQnQxQlI5dVN6OEs5MHFTNG5sRm9GamFhSjFiMGV2N3NrRnlwcFl2bmdOQUQ5eVlDREdiVWdmM1U?oc=5",
           "published_at": "Thu, 15 Oct 2026 00:06:00 GMT"
-        },
-        {
-          "title": "American Airlines cancels all flights to 3 major travel destinations — citing geopolitical unrest - New York Post",
-          "source": "rss_google_business",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPR0xlaGNkbjF3RUdiNURkYkk2VzJ0c3JoaWtFWW1sNHB0NVFfUEMyWmZ1SnY0Um0wS0E4ZmZxOExSdlVyMmVWTVVFblNmVHdEc2duc3lCRm1UUzk4bkswem12cHRfNjFybGNuN2JXTDc1eTNzTThsV0pDNzg3c3BzajdXbFBZVnNXYlZXZW82T3pYdDh3eGJNQzljU0ZaYy1rcDhtcTRDdVIxNVBiWlhsUXB3ODViMm8?oc=5",
-          "published_at": "Wed, 14 Oct 2026 15:59:00 GMT"
         },
         {
           "title": "Japan approves oil import subsidies amid geopolitical concerns - Quantum Commodity Intelligence",
@@ -159,12 +165,6 @@
           "source": "rss_google_commodities",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNU0I2eWIxYVBtN3hIS1FqekF6NGl3Zkp4U05UQlkwOGhBcW83MVo2QVduaDB5ZjhQSzJfbVc1WEhKT05SS05PVy1NbG1lOWQtblEyMTQ0Mk1HTE9GWlVpNFdwclVCZDFmM3A1WkxjUm1kaHlBSmhKeUhKWWwtQXB4RkxsczdnOVhuUlZJSkVwdmdFTlk?oc=5",
           "published_at": "Wed, 14 Oct 2026 12:06:20 GMT"
-        },
-        {
-          "title": "Iranian heavy oil price at over $105 in September: OPEC data - IranOilGas",
-          "source": "rss_google_commodities",
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQcDJndGJUOV95VHRyTHIwU05BSHZOY1p2U0hLOHNMU0g0R0hxcTVOX2lTSDIwY3pXd19mcktEVDFQQW93RFFMN180eFhoS0lweVJNdllGYVVWbVlFSGRtUXdpYWN1TjdjSENYVHNYZUY0NXR2Z2JXTFNxVzVRVlh4TnNscWRKNnh2TDZQVXc1djJvMWJ5UGM0N21VdWplMFBHQkVHTklpUzMtZ3gzNUY1SXVXdjJkVVZ2SHhlU0U0YzhyUQ?oc=5",
-          "published_at": "Wed, 14 Oct 2026 05:34:34 GMT"
         }
       ]
     },
@@ -1444,12 +1444,32 @@
       ],
       "net": -1.5,
       "side": "sell"
+    },
+    {
+      "ticker": "GOOG",
+      "buy_score": 0.0,
+      "sell_score": 0.45,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "sell",
+          "weight": 0.45,
+          "bucket": "earnings",
+          "net_signal": "Bearish",
+          "conviction": 16
+        }
+      ],
+      "net": -0.45,
+      "side": "sell",
+      "catalyst_signal": "Bearish",
+      "catalyst_conviction": 16,
+      "catalyst_stack": "On April 29 and July 22, 2026, Alphabet delivered consecutive beats, culminating in Q2 revenue of $119.8 billion (+24% YoY) and Google Cloud of $24.8 billion (+82%), and it raised the dividend 5% to $0.22 in Q1. Product cadence ran from Gemini Intelligence and I/O (May 12–19) thr"
     }
   ],
   "judge_tickers": {
     "XLE": -1.5,
     "AEM": -1.5
   },
-  "catalyst_tickers": 0,
+  "catalyst_tickers": 1,
   "catalyst_date": "2026-10-15"
 }

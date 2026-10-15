@@ -1,8 +1,8 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T06:58:42.908604-04:00",
-  "run_id": "38714326944",
-  "runner": "GitHub Actions 1000030400",
+  "generated_at": "2026-10-15T08:50:30.266188-04:00",
+  "run_id": "38731981090",
+  "runner": "GitHub Actions 1000030758",
   "all_ok": false,
   "qc_all_ok": false,
   "book_ok": false,
@@ -15,7 +15,6 @@
   ],
   "missing_required": [
     "events",
-    "news_judge",
     "general_predict"
   ],
   "attempts": [
@@ -67,21 +66,21 @@
     {
       "key": "catalyst",
       "title": "Catalyst dossiers (after book)",
-      "returncode": 4,
-      "status": "FAIL",
-      "detail": "0/8 dossiers (grok timeout x0, deepseek empty)"
+      "returncode": 3,
+      "status": "DEGRADED",
+      "detail": "1/8 dossiers (grok timeout x0, deepseek empty)"
     }
   ],
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 3,
+      "n_today": 8,
       "latest": {
-        "id": 38714326944,
+        "id": 38731981090,
         "status": "in_progress",
         "conclusion": null,
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38714326944"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38731981090"
       }
     },
     {
@@ -112,8 +111,14 @@
     },
     {
       "workflow": "news_judge.yml",
-      "n_today": 0,
-      "latest": null
+      "n_today": 2,
+      "latest": {
+        "id": 38731985715,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38731985715"
+      }
     },
     {
       "workflow": "news_actions.yml",
@@ -125,8 +130,8 @@
       "n_today": 1,
       "latest": {
         "id": 38714330459,
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "cancelled",
         "event": "workflow_dispatch",
         "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/38714330459"
       }
@@ -167,31 +172,31 @@
       },
       {
         "kind": "news_judge",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-10-15_judge.md",
-        "size": 0
+        "size": 9415
       },
       {
         "kind": "news_parse",
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-15_parsed.json",
-        "size": 459585
+        "size": 459474
       },
       {
         "kind": "news_actions",
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-15_actions.json",
-        "size": 41707
+        "size": 42982
       },
       {
         "kind": "finviz_digest",
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-15_finviz_digest.json",
-        "size": 97061
+        "size": 97156
       },
       {
         "kind": "finviz_market_digest",
@@ -212,7 +217,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-10-15_map_heat.json",
-        "size": 277618
+        "size": 278827
       },
       {
         "kind": "map_heat_baseline",

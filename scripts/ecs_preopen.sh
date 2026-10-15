@@ -168,10 +168,14 @@ dispatch_ubuntu_book() {
 }
 dispatch_ubuntu_book
 
+# Predict/news-judge cap 300s: run 38720850552 (10-15) got grok-4.6
+# HTTP 200 then "Request was aborted" at the 75s cap. Sectors stay 75s.
 # Client cap is short. The gateway's own 10800s timer stays (the runtime
 # door requires it) but a hung read restarts the gateway once so the
 # zombie does not block the next call. Breaker opens on the first timeout.
 export OPENCLAW_READ_CAP_S="${OPENCLAW_READ_CAP_S:-75}"
+# General predict + news judge only (sectors stay 75s).
+export OPENCLAW_PREDICT_READ_CAP_S="${OPENCLAW_PREDICT_READ_CAP_S:-300}"
 export OPENCLAW_BREAKER_N="${OPENCLAW_BREAKER_N:-1}"
 export OPENCLAW_RESTART_ON_TIMEOUT="${OPENCLAW_RESTART_ON_TIMEOUT:-1}"
 export PREOPEN_LLM_TIMEOUT="${PREOPEN_LLM_TIMEOUT:-420}"

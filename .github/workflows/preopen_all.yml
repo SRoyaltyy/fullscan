@@ -60,7 +60,7 @@ on:
           - tokenhub-glm
           - zhipu-glm-flash
       runner:
-        description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok. The button defaults to ecs; push and schedule stay on ubuntu."
+        description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok. The button, push, and schedule use ecs unless ubuntu is explicit."
         required: false
         default: "ecs"
         type: choice
@@ -78,7 +78,7 @@ on:
       llm_backend:
         description: "auto = Grok then the free model · grok = Grok only · deepseek = skip Grok"
         required: false
-        default: "auto"
+        default: "grok"
         type: choice
         options:
           - auto
@@ -92,6 +92,14 @@ on:
         options:
           - "true"
           - "false"
+      started_by:
+        description: "manual (a person) or orchestrator (heal; refused if a Pre-Open for the date is queued/running/succeeded)"
+        required: false
+        default: "manual"
+        type: choice
+        options:
+          - manual
+          - orchestrator
 
 permissions:
   contents: write
@@ -305,16 +313,59 @@ jobs:
             "01_daily/${DATE}_stock_book.md" \
             || echo "[warn] book sweep push failed — incremental lands already on main; see day board"
 
+  preflight:
+    # 2026-10-15: check the prerequisites before anything is written.
+    # Fails within ~60s and names each failed item in
+    # 01_daily/_progress/<date>_preopen_all_preflight.md.
+    name: Preflight (prerequisites before writing)
+    needs: gate
+    if: ${{ needs.gate.outputs.go == 'yes' }}
+    runs-on: ${{ (github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    timeout-minutes: 2
+    env:
+      HOME: ${{ (github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      PREOPEN_LOCK: "/home/gha/fullscan-persist/locks/preopen.lock"
+      # Keep these equal to the Pre-Open step env below.
+      LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
+      LLM_FALLBACK_MODEL: ""
+      OPENCLAW_PREDICT_READ_CAP_S: "300"
+      PREOPEN_STARTED_BY: ${{ github.event_name == 'workflow_dispatch' && (github.event.inputs.started_by || 'manual') || github.event_name }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      FULLSCAN_PUSH_TOKEN: ${{ secrets.FULLSCAN_PUSH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Check prerequisites
+        id: pf
+        run: |
+          D="${{ github.event.inputs.run_date }}"
+          D="${D:-$(TZ=America/New_York date +%F)}"
+          echo "date=$D" >> "$GITHUB_OUTPUT"
+          timeout 60 python3 scripts/preflight.py --workflow preopen_all --date "$D"
+      - name: Land the preflight page
+        if: always()
+        timeout-minutes: 1
+        run: |
+          D="${{ steps.pf.outputs.date }}"
+          [ -f "01_daily/_progress/${D}_preopen_all_preflight.md" ] || exit 0
+          timeout 50 bash scripts/safe_git_push.sh "auto: preflight preopen_all [${D}]" \
+            "01_daily/_progress/${D}_preopen_all_preflight.md" \
+            "01_daily/_progress/${D}_preopen_all_preflight.json" \
+            || echo "[warn] preflight page push failed; see job summary"
+
   preopen:
-    needs: [gate, scrape]
-    if: ${{ needs.gate.outputs.go == 'yes' && always() }}
-    runs-on: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner != 'ecs') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    needs: [gate, scrape, preflight]
+    if: ${{ needs.gate.outputs.go == 'yes' && needs.preflight.result == 'success' && always() }}
+    runs-on: ${{ (github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: 75
     env:
       OPENCLAW_TIMEOUT: "10800"
       FULLSCAN_PERSIST: "/home/gha/fullscan-persist"
-      FULLSCAN_HOME: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner != 'ecs') && '/home/runner' || '/home/gha' }}
-      HOME: ${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner != 'ecs') && '/home/runner' || '/home/gha' }}
+      FULLSCAN_HOME: ${{ (github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
+      HOME: ${{ (github.event.inputs.runner == 'ubuntu') && '/home/runner' || '/home/gha' }}
       FINVIZ_SKIP_LIVE: "1"
       PREOPEN_LOCK: "/home/gha/fullscan-persist/locks/preopen.lock"
       FULLSCAN_LAND: "1"
@@ -455,7 +506,8 @@ jobs:
           LLM_MODEL_OVERRIDE: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && 'glm-5.3-flash' || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'tokenhub-glm') && 'glm-5.3' || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm') && 'glm-5.3' || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'openrouter-glm') && 'z-ai/glm-5.3' || ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'openrouter-sonnet') && 'anthropic/claude-sonnet-4.6' || '' }}
           LLM_FALLBACK_API_KEY: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && secrets.TOKENHUB_API_KEY || '' }}
           LLM_FALLBACK_BASE_URL: ${{ ((github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash') && secrets.TOKENHUB_BASE_URL || '' }}
-          LLM_FALLBACK_MODEL: ${{ (github.event.inputs.llm_provider || 'zhipu-glm-flash') == 'zhipu-glm-flash' && 'glm-5.3' || '' }}
+          # Full glm-5.3 is paid and not approved (10-15: 400s). No default fallback.
+          LLM_FALLBACK_MODEL: ""
           LLM_READ_TIMEOUT_S: "300"
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
@@ -472,15 +524,18 @@ jobs:
           # otherwise blocks the next call). Gateway timeoutSeconds stays
           # 10800 — the runtime door rejects anything shorter.
           OPENCLAW_READ_CAP_S: "75"
+          # 10-15 run 38720850552: grok-4.6 answered 200 but every predict
+          # was aborted at the 75s cap. General predict + news judge only.
+          OPENCLAW_PREDICT_READ_CAP_S: "300"
           OPENCLAW_BREAKER_N: "1"
           OPENCLAW_RESTART_ON_TIMEOUT: "1"
           OPENCLAW_BREAKER_FILE: ${{ runner.temp }}/openclaw_breaker_${{ github.run_id }}.txt
           GROK_ONLY: "0"
-          # Push and schedule have no input, so this must be auto. The
-          # form default is also auto. deepseek is an explicit "skip Grok"
-          # choice. Run 38714326944 left the old default and never called
-          # OpenClaw, including when a later dispatch was already on ECS.
-          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'auto' }}
+          # Push and schedule have no input. #608 set this to grok so those
+          # runs call OpenClaw. deepseek is an explicit "skip Grok" choice.
+          # Run 38714326944 left the old deepseek default and never called
+          # OpenClaw.
+          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
           FINVIZ_SKIP_LIVE: "1"
           # 900 let five essays each hold ~16 min. Run 38704557910 died at
           # the 50-minute step kill with no general predict. 420 matches
@@ -511,7 +566,7 @@ jobs:
           RUNNER="${{ github.event.inputs.runner }}"
           ARGS=(--llm-backend "$BACKEND")
           ON_UBUNTU=0
-          if [ "$EVENT" = "push" ] || [ "$EVENT" = "schedule" ] || [ "$RUNNER" != "ecs" ]; then
+          if [ "$RUNNER" = "ubuntu" ]; then
             ON_UBUNTU=1
           fi
           GW="${OPENCLAW_GATEWAY_URL:-}"
@@ -520,13 +575,10 @@ jobs:
             GW_LOOP=1
           fi
           if [ "$ON_UBUNTU" = 1 ] && [ "$BACKEND" != "deepseek" ] && [ "$GW_LOOP" = 1 ]; then
-            ARGS+=(--skip-sectors)
-            # 127.0.0.1:18789 is the ECS box. From ubuntu-latest every essay
-            # waited out a read timeout (SearXNG 404 after that, run
-            # 38392029548). The free model is already the schedule default.
-            unset OPENCLAW_GATEWAY_URL
-            echo "ubuntu runner: loopback gateway is not reachable — essays use the free model"
-            echo "ubuntu runner: OpenClaw gateway is loopback/unset — skip sector essays (no silent DeepSeek)"
+            # Fail closed (10-15 run 38714326944 skipped Grok 108 times and
+            # fell to DeepSeek/GLM). No free-model general_predict here.
+            echo "::error::predict needs Grok: no reachable OpenClaw gateway on this runner (use runner=ecs)"
+            exit 1
           fi
           if [ "$ON_UBUNTU" = 1 ]; then
             unset OPENCLAW_RESTART_ON_TIMEOUT
@@ -537,7 +589,7 @@ jobs:
           if [ "$FORCE" = "true" ]; then
             ARGS+=(--force)
             echo "explicit --force (rewrite quality-ok + bypass 09:25)"
-          elif [ "$ET_HM" -ge 925 ] && { [ "$EVENT" = "push" ] || [ "$EVENT" = "schedule" ] || [ "$RUNNER" != "ecs" ]; }; then
+          elif [ "$ET_HM" -ge 925 ] && [ "$RUNNER" = "ubuntu" ]; then
             ARGS+=(--bypass-cutoff)
             echo "ubuntu late-heal --bypass-cutoff (after 09:25 ET; skip-if-good on)"
           fi
