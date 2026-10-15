@@ -1,0 +1,50 @@
+{
+  "archive_commit": "a62a3cc16b0a7303a7c4fa1b855566f75f23bd33",
+  "seed": 20261015,
+  "reason": "Batches 01 and 02 failed and became development data. Add 200 unrun titles so reserve 03 through 12 can supply ten fresh batches if all qualify.",
+  "source_rows": 3975,
+  "eligible_rows_before_within_selection_exclusion": 1980,
+  "selected_rows": 200,
+  "excluded_inputs": {
+    "existing_reserve_titles": 1000,
+    "recoverable_prior_runtime_titles": 300,
+    "additional_local_controls": 20
+  },
+  "method": "Python random shuffle of remaining pinned archive rows, no classifier or correctness selection. Exclude same URL, normalized publisher/number-insensitive equality, Jaccard >=0.65, or token overlap/min >=0.85 and overlap/max >=0.6 with min four tokens. Apply globally against excluded titles and within new selection.",
+  "historical_exclusion_scope": "Recoverable semantic test sets and original reserve; not exhaustive unrelated JEV archives, not a guarantee of unique underlying events.",
+  "reference_status": "Unjudged reserve only; not acceptance eligible until independently frozen reference exists.",
+  "archive_source_sha256": {
+    "01_daily/news/2026-10-02_intake.md": "f8d306f65f640e44ecfdd723f8ca9ed2adc8176d28743777163767259ac4bb8c",
+    "01_daily/news/2026-10-03_intake.md": "9522f39df1950c8337868b64c9865916cdc81e5abadfee1c40c7560e43ea9ab4",
+    "01_daily/news/2026-10-04_intake.md": "7df26e8e3794315c73bb7bac3ae0a89b0a34ccdb7e9faee239a98adbf7c76980",
+    "01_daily/news/2026-10-05_intake.md": "f631e1d3f63c5979db4acadc60366a9ab54f4dd5444f3bacdb6fcaf4188f910b",
+    "01_daily/news/2026-10-06_intake.md": "e3b58c9df1b94e14f42a3b67551762b0bb6d1ece9a0285460b7049f8744db711",
+    "01_daily/news/2026-10-07_intake.md": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "01_daily/news/2026-10-08_intake.md": "34fc130ba520d0e32e6c7f9e4b74d2f3459a02d82546485f7357a4562ab6c800",
+    "01_daily/news/2026-10-09_intake.md": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "01_daily/news/2026-10-10_intake.md": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "01_daily/news/2026-10-11_intake.md": "9b2ab0958641f20ba37df8be1661b541c4c7b199405564c28c07e3bf598e95e7",
+    "01_daily/news/2026-10-12_intake.md": "1ca8da95ddf81704e10bf6dfdda5edc0286da0dc5e2efeb2ae9e42d6690c9dff",
+    "01_daily/news/2026-10-13_intake.md": "852a654b720130ccfaa01846eb2896a03e18b35f971a1a6d80413323aaada2d1"
+  },
+  "exclusion_sha256": {
+    "tests/fixtures/semantic_reserve_20261014/batch_01.json": "ae854e17c4a2befaf8fda617b53c239f4eb854babfb60faccec53999adacf835",
+    "tests/fixtures/semantic_reserve_20261014/batch_02.json": "879656fcf9f13111ad016a7092a32cf301b424545a079ecb9c893c87c7343da8",
+    "tests/fixtures/semantic_reserve_20261014/batch_03.json": "66b9a896c4795dcc770e3f4f318a2ccabd7eaec0a37c991fecc8cc8a4c482c54",
+    "tests/fixtures/semantic_reserve_20261014/batch_04.json": "d430c7c835b4968189cc17f78bf963f4617994b121878fffbdbe27d1613d4c51",
+    "tests/fixtures/semantic_reserve_20261014/batch_05.json": "32997a9c91352b00550ebc67380b1a041299b0bde3e41ddf56eba38690e15fc0",
+    "tests/fixtures/semantic_reserve_20261014/batch_06.json": "4139cac1543cc49788781e7aa62aabdf83164e894822760b098964a6989d5759",
+    "tests/fixtures/semantic_reserve_20261014/batch_07.json": "4f789dbc846630f2512faa6a0c3a57de20b48481e45f93b6d71435a2eedc2bab",
+    "tests/fixtures/semantic_reserve_20261014/batch_08.json": "7f1e71ffa09a24d98dbaef90d6046fa4fafe6ccc91d796c3cb7731fe325d15db",
+    "tests/fixtures/semantic_reserve_20261014/batch_09.json": "1e645432dfe3d50289deef2942e540e4de91aaca567c720f4800d4ab4eb21625",
+    "tests/fixtures/semantic_reserve_20261014/batch_10.json": "3574238f5062ebb516874888048a82442694fb60e0a9bafb1d77298f63c1cf00",
+    "tests/fixtures/semantic_acceptance/batch_02.json": "5eaeaa74cf61546dc7a43f2386fb719519d2dfbeaa3fdc9641d14dbee72c6554",
+    "tests/fixtures/semantic_acceptance/batch_recall_fresh_01.json": "2e188f2f7e57dcf3fdde40d71f2646877ac5dfb3f0555e9e28162ec1952b9426",
+    "tests/fixtures/semantic_acceptance/batch_recall_fresh_02.json": "cd91e8cf4a981e13076afd1fade60dbd0f2dc0f7d1239b5a723b7969060e04df",
+    "local semantic_headline_inputs.json": "6055b67b6087138571c0f01000220598b4ec09448e6b33660418087f5c6c4454"
+  },
+  "batch_sha256": {
+    "batch_11.json": "9f3cd4458a0c0986b03e1637a76d30352f074eb8a537c3b5ce308432efdda623",
+    "batch_12.json": "65e5abb774cde094948329e6c764851f4a0d11d3f662561a2c82eb66a0326038"
+  }
+}

@@ -1,0 +1,902 @@
+[
+  {
+    "n": 1,
+    "title": "Employee resigns, boss tries to cheap out by offering $20 less per hour than what he's worth to keep him on as a contractor - yahoo.com",
+    "source_report": "01_daily/news/2026-10-04_intake.md",
+    "source_line": 46,
+    "source_sha256": "7df26e8e3794315c73bb7bac3ae0a89b0a34ccdb7e9faee239a98adbf7c76980",
+    "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOWlJpanA0VEVNSk9zMXdXYTJHc01qMGluakRiYkdGbDg0NVkxYTdzdWpQTF9mNmhFU1BmUHB0SGlzR3N4eW9DLVI3Nkx4c2lvZDE5aWNvcUh4UkNkaTJYaXJiOG5UVGVqczdSMDN0S0VCV3h2UlRoS1FVVU8wUzVmblRYZ2p5MVFCaXI0aUx6eDFuRnc?oc=5",
+    "source_published_at": "2026-10-04T12:00:00+00:00"
+  },
+  {
+    "n": 2,
+    "title": "East Hills trustee resigns, appoints new member - LI Press",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 79,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE03ZnpXUVVERFJ2MEtrMzJ4c2lic0tOQjYtQUJnOFFBd2NTbmhSUGQ0NDhsSldpX2M2QllYTUlhbUhZMUFKVWpoaTRnenlqc05QYmlJQkYtRzh2alRNV2VTMUVrVFBXbElNdmowc3dEZ2xvQU4wM3JYRF93?oc=5",
+    "source_published_at": "2026-10-07T14:19:56+00:00"
+  },
+  {
+    "n": 3,
+    "title": "11:11 Systems Acquires Select IBM VMware Cloud Service Provider Enterprise Customers - AiThority",
+    "source_report": "01_daily/news/2026-10-08_intake.md",
+    "source_line": 36,
+    "source_sha256": "34fc130ba520d0e32e6c7f9e4b74d2f3459a02d82546485f7357a4562ab6c800",
+    "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQQVI1OWNROXZhQXFJcW9lQ2xIN19KRGZIVWxuZ28wQTRHcThfNWFEa21VS3VpRVV2YTl2RkJpTl9takI1SkJiUTJUckVCdnNZcVRtekRqNTVpdlNLbnBBVXJBYVh2N25nT2RlUG50S05hN1NySWNZODBMdlBSdkJ2VXJic2M5VVJ2MzdlYkNMMzl6c3ZtVFgtWkh4SThDZFhoejZMSk5uTmRHejRZYzhJNks3UVdjbkZWVll4MUNBTDlsSWZL?oc=5",
+    "source_published_at": "2026-10-08T14:40:44+00:00"
+  },
+  {
+    "n": 4,
+    "title": "Stock Split Implementation and New Share Issuance List (Stock Split Implementation and New Share Issuance List) - Moomoo",
+    "source_report": "01_daily/news/2026-10-02_intake.md",
+    "source_line": 69,
+    "source_sha256": "f8d306f65f640e44ecfdd723f8ca9ed2adc8176d28743777163767259ac4bb8c",
+    "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQQ2FSNkxaNEFUblNTTFlBZndGNkcyRUI3cHZPeWhMaG5WRzk3aTdXNjRiR2ZvUFZBVUF0ZjlmLXF3QXdOVldJTEx6b1ZNNVlhenlvNWVsVWdsUjJnWEJSRDB1ZFpaLTR4M0dub2RvTUNUTmNoN2RhTS0tNW9xS0dSWktwdEtKazhHOUk3Z3d0MFVFdlBJei1jcHNGNDkxa3R5Q19ZbkludTFWOUt1OS0w?oc=5",
+    "source_published_at": "2026-10-02T00:44:59+00:00"
+  },
+  {
+    "n": 5,
+    "title": "The Fuel Behind India’s Nuclear Push: UCIL To Double Uranium Production Capacity By 2036 - News18",
+    "source_report": "01_daily/news/2026-10-08_intake.md",
+    "source_line": 315,
+    "source_sha256": "34fc130ba520d0e32e6c7f9e4b74d2f3459a02d82546485f7357a4562ab6c800",
+    "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxORm1nYzBtOUw3YnlxQ2dOVnFhQXkzQTZXZTRaZ3BCbThmbDhha2xyNEQ1elNFM1R1cFNFdTQxdGRLUXpKeDBhYVU5elRhOGJ4OGp6d09JNGFmTlVTZDJEaFVpWEtYVmx3bTk3UDA3aTU1ZnkyejZmdzdDeTE5WjBSblljTVpFVF91b25meURwTEtMekpkaDBIaE9NYmxoME1NOVlPZzZFWGtlVlM4S3lvZDZsbDRCdS1XWk10NDF5YnB6WHJvRmxOLTk5Q1JVNlJ60gHWAUFVX3lxTE9LdGl0cmJqZF9IbG9xMGt4NzhaeGJael81ZG1lR2l4dTVVNDNadUVWRjNfQUItWnp3aVJVWDhJLW04R0phWGRyd2xsbmZzUkc4Z0dQYXB4bnVzMXJwYlM4eE5kdnkxSW1hTUNJT2E5bFhld2h1T3Atd2VMeWJJY1paQ2NQRDhFVm1IeTBHV0hzWUlQYkRqUy1wN2tjUlQyMmpLRktDVzY3cnJZd2R1MWFqcERzM0lSUkNPbkxsZjcwc3EtcDVtbU9ScHU3YlM1MlZFbkRnaVE?oc=5",
+    "source_published_at": "2026-10-08T08:15:50+00:00"
+  },
+  {
+    "n": 6,
+    "title": "Large decline in crude inventories 🛢️📉 - XTB.com",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 401,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQOFpaWWdxVGxYZTFnclN6cHZjaF9Oc0FxYnp1ZEFfTXpCUUpnb0pqdlFialZsR3piMTQ4WXFKaXk2WEY3cWFlNG1aUGgyOTVIOVVHOERuUl9nRU02VURxTUNXbnhFUzlrT2l6eDMyWnpibUJxclk2QzFIZGNMUG56LWMtSnJMWTdZV0NCbWxzZzBZelU1SGNr?oc=5",
+    "source_published_at": "2026-10-07T15:28:30+00:00"
+  },
+  {
+    "n": 7,
+    "title": "Ruling AKP to submit 10-article bill on fund liquidation - Hürriyet Daily News",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 491,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNMVBGRlZxWFg3ekktQ29qSXhOVG9GNFNpRnFlTS1rVldFbGhJSEFiaU04M2R5cnZFUTQ0ZmxWUGt4bDVJM3E2cW9vSWgzVXJpZ19qa05aZmxhNWxTaElhYVJHb2JUWTNUVV9Bc05qTkUzSmlwb2p0VEx5ZkpodjBTSTM5OG1tR3UzZUE?oc=5",
+    "source_published_at": "2026-10-07T02:37:00+00:00"
+  },
+  {
+    "n": 8,
+    "title": "China Feihe (SEHK:6186) Could Be 50% Undervalued After Special Dividend News - Simply Wall Street",
+    "source_report": "01_daily/news/2026-10-11_intake.md",
+    "source_line": 126,
+    "source_sha256": "9b2ab0958641f20ba37df8be1661b541c4c7b199405564c28c07e3bf598e95e7",
+    "source_url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPSV9WWFZWZ0QyVzlWcWRQaUJhUno1ampwZ1NnUWQySF9kVkJmMzVzMmNBUG1QWlBtZnB4M3oza0I2ak1mQWNpTmVmeXBzWkRLendETURvTjRHbEZBRE9RczR3NFNpZFNjQnRJWjFEM3RuYWZNczhGT3RLbjctMlRkWFZCYUhXXzNWZ2NfRlBUMlBtU0lDX1FwZUFBcW85eGtBYll2ZWxWS29IbXlBZVdXck9EYk83UFhmQXRNR2F5dnNaQU1NREx4TW12b2Z6d1dtMjRkM0pEdVNDalJMTnZJTNIB5gFBVV95cUxQZEQzS2ZxeHozLXhPN1pwXzR5b2VrSHNpdjZWaXVLZDRjVmFhYjFwMDhuYUhzX1Rmcnk2N2kwblRGVnd2QlFLcWx3TzFJWkNBdzFNUXpUbU9ZMEt6WFJtNUpFVkdqVkp0QTY1bkRqLXZZQXlENDBrQlJBanFRakczR2JBYnhpVkp3MWdoQjVaTlhUOVFLZFBwMGk2WVZHNnlQbGZqMVBpa1plS1R3cmphTDByRGd5RlRwV25IbGJPdTVYSTljRHlacXFlXzd1cnpsbElZblJueU9adFB5ZUt5U2cyOV9BZw?oc=5",
+    "source_published_at": "2026-10-11T09:36:03+00:00"
+  },
+  {
+    "n": 9,
+    "title": "Fed’s Kashkari Says Inflation Still Too High, Latest Data Didn’t Change View - WSJ",
+    "source_report": "01_daily/news/2026-10-06_intake.md",
+    "source_line": 261,
+    "source_sha256": "e3b58c9df1b94e14f42a3b67551762b0bb6d1ece9a0285460b7049f8744db711",
+    "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPMExuM19vVmdfTEtaOWdfSTVMWGdqVWxVb25rNnZwTTdiajB1ZTh2UmN2X1lvUS03MGtvX0VQWUgtMVRibTltM2VYRlNCUWxSUkR2UkRJYk4tYUhobjdCY3lSYU0ySlR5MGdwLWotX2RIZUVhQkFSWHBjVFhESUktSU50MFJnR1VYUW43Sk9IZGhWQWRmM1dWRXQ0V1FvZmxaTTdGSExyWURHNzl2clVfZWd6YXF4M0lfQjYxMDRUR2JGeU5k?oc=5",
+    "source_published_at": "2026-10-06T02:22:32+00:00"
+  },
+  {
+    "n": 10,
+    "title": "Nvidia Q2 Earnings Results Send Nasdaq Soaring as FTSE 100 Slides on Inflation Fears - Financial-News.co.uk",
+    "source_report": "01_daily/news/2026-10-11_intake.md",
+    "source_line": 222,
+    "source_sha256": "9b2ab0958641f20ba37df8be1661b541c4c7b199405564c28c07e3bf598e95e7",
+    "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOME5zVkFUYmp3T3NfWjJ4aHVFSmZIY0E4cHFTemVCcktzY1ZDc2ZMeV9TNEVsaW15ejlwdHpmdVVUSWt4SVJiQ0dOVUpscVBkLXRlbHZfc0FnbnlfR1dPTVVZcUhzUVJvSTlVYWhVZlNORlVYb2lGaktOY0VDeENBYnhkOWRsSjNwUEhkOHgzT2Y4cE1ZUm5udTNwelBtOWM3Mi12RFUwNjc4UV9fMXdDMEVFaWdsMl9YNmc?oc=5",
+    "source_published_at": "2026-10-11T09:18:01+00:00"
+  },
+  {
+    "n": 11,
+    "title": "Evening recap: Tinubu's 2027 campaign, solar import ban - Punch Newspapers",
+    "source_report": "01_daily/news/2026-10-10_intake.md",
+    "source_line": 292,
+    "source_sha256": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "source_url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOTHhKdElMRGotV0dNRml0dlJjWjdWc2FQQmFqNVNJQW1qUkVvVG1lWm96TWtxb1ZXWTVCN2RXckJFeUJFUjgzcURocjVkaW4wQm9pUFNvbTg3WVFrU1hydER2QmFsRE8wd3k5MjZxZnZRRGFyaGxPOWo0d2pUWThKd0lFOU01MDdoNzc4SS1BMy1hdkdFTzBHR2FMNDg3Tm1NcWctZExhNmJ5RUQ3T1JxY2Q5aGFjQkIxYmxmcGUzaW5CTHFLOHQ3YXVtVHFRdnhaWlZKTnM0a1lnN0l1dzlUQVVMMUFpa1VuMWdZaDVVN0RTSjRNaG9QNWdDbS1PZw?oc=5",
+    "source_published_at": "2026-10-09T18:50:01+00:00"
+  },
+  {
+    "n": 12,
+    "title": "Gujarat offers MSMEs interest aid, power subsidies and support for AI adoption - EdexLive",
+    "source_report": "01_daily/news/2026-10-11_intake.md",
+    "source_line": 73,
+    "source_sha256": "9b2ab0958641f20ba37df8be1661b541c4c7b199405564c28c07e3bf598e95e7",
+    "source_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPd2g3dVZyLVZiTGNkTWUteDBlZy1FejRmZEFkT01GLXRLTnh2b3E1Z0UwWEdmbTAxaGlzR0N6RVZSajEtVWJ3SmloNWRqV2tsTGpYVWRLLXpXZnlPVzh2WUhOQzdIUG10T1Z3VDlFSENoWC1JWXk2emg1c1RtTFo3UG02MW45NU1WSkk0cUY1SXJXTWx6emFNSE9OdnlTS0RVVFNuR1dJanVNZzTSAbgBQVVfeXFMTldYYkx4VThneFJhZUlwWEdQdXdQS2JtWWdGbUhKNGhuZHhNcW42R3ZxTXdxdGtCMFNwR21uNk1Gd2w5VW1wcHlrZW1xY2xPV2RabHp2M1MtQUFXM2NNSVFPb1Y1OURkQmhkWXdGMEl6R0lxMG1UTDlINzc5UHlLYWU3ZXdVdldkVEJkeVpoTGl0Vk8yR0xjNEp5U1RQazlOakFvNFhhMmFLNlgyeGVBdnFaTmtzakhuZQ?oc=5",
+    "source_published_at": "2026-10-11T06:45:00+00:00"
+  },
+  {
+    "n": 13,
+    "title": "Newport News could pay part of your real estate tax bill. Here’s how. - The Virginian-Pilot",
+    "source_report": "01_daily/news/2026-10-05_intake.md",
+    "source_line": 203,
+    "source_sha256": "f631e1d3f63c5979db4acadc60366a9ab54f4dd5444f3bacdb6fcaf4188f910b",
+    "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUXI2N0M5MGpialo4dktfMkEyb1FsQ0RtM2ZfaDJEbG9PbVhnWWdqbG9KMEhLS040dkd2ZWJfd1ZLU0x5eDFhc0tSWEFSLVU4UlVNNjZ4NGRiaTVqOVhndGVYLVRNUW1NaEd2XzhJSThPLWVhSTdScG0yUkRocHVHckUwajZEV01RRktFdU1tVkVaVzM3Q1JfcDM5M0MyaDVmS1FUa2N3Um1ndw?oc=5",
+    "source_published_at": "2026-10-04T16:30:00+00:00"
+  },
+  {
+    "n": 14,
+    "title": "Foreign Ministry Spokesperson’s Remarks on the 7.6 Magnitude Earthquake in Panama - 驻宋卡总领事馆",
+    "source_report": "01_daily/news/2026-10-10_intake.md",
+    "source_line": 72,
+    "source_sha256": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPOFVkR0FXWFlCc2lWRTJKbFgyX1FTNlA5ejlZRUJPalNRZ0pYMDRXa2ZaV1dUejBUTXE2ZmVOQ2NqSjdDaW42Rmh1ZkM5UjFobmtpY0s2bkR0U0toUDZvdEkzdzNxS19ydWVrUHRsTnlZS3d3SmFEMlp0a2pWS09ybkI2cHNUZw?oc=5",
+    "source_published_at": "2026-10-10T14:12:00+00:00"
+  },
+  {
+    "n": 15,
+    "title": "Florence council approves electricity rate hike, budget - timesdaily.com",
+    "source_report": "01_daily/news/2026-10-10_intake.md",
+    "source_line": 161,
+    "source_sha256": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNVXV6dS1KU05aeV9CSGdYQmdhQzJ2cEd6eUZHekhLMkR3SHFQeWlIUGhPUldPNkRVTFdqUVB6eGJRLWNjSy1WNkZwcEYzUnhpeGhCWFNoT0Q4ekJXNFdya3I0ODEwc1IwR0hNbTN2SzZVWldhbDRRdXVkVXZ4b2k3UjQ3Sk9DY1JTY0FKMjdlbmVBZVZNdUxidmVyRjl2RHN0d1E2UXBiRGxtMGlUbTJCeEtfeWczNmozTXBpWFZ6ZElucUE3T0tjZFREMW1oSlVyR2c?oc=5",
+    "source_published_at": "2026-10-10T05:39:00+00:00"
+  },
+  {
+    "n": 16,
+    "title": "M Tek Copper Discloses Promoter Share Sale Under SEBI Insider Trading Rules - TipRanks",
+    "source_report": "01_daily/news/2026-10-02_intake.md",
+    "source_line": 336,
+    "source_sha256": "f8d306f65f640e44ecfdd723f8ca9ed2adc8176d28743777163767259ac4bb8c",
+    "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQcGhJeWR1cXhFLVlHTFpoa2VpTlNMTlpYUjdWVmZyMjVGWUZWS1ZmcEV1OFFLblp6WmdJemVya0hXT01pLTV2QnFzRkFaU3FWWFhNRmJmaDBfdnBOeFliVV9YenRDS2gyTGczOWtwb21JS0NYQ1RRTmxqd2NhdWMwNExVU0x1TDM0bUVseFpyMGtjc2NqeG9lSVJPRWRMWjBHd3NkRkthMjdDdEFuaV9hUTN3Y1NlUDduWUtBeFRNTlJjUy1mb3ZTYg?oc=5",
+    "source_published_at": "2026-10-01T16:21:04+00:00"
+  },
+  {
+    "n": 17,
+    "title": "Karnataka hikes car price ceiling for ministers, MPs to Rs 31 lakh - Udayavani",
+    "source_report": "01_daily/news/2026-10-11_intake.md",
+    "source_line": 261,
+    "source_sha256": "9b2ab0958641f20ba37df8be1661b541c4c7b199405564c28c07e3bf598e95e7",
+    "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNMm5aRmd4MU9zUGlyb0NfbjJKanJIYWpHYzNWUWdaeDRxMmNZOTR4OFNqd2kySjFoMk8xMUJQOXl6SlV1dFpHOEYtTHMtekhZUmsyRmk3UmNlaXVPanA4aVMwSWVkTms1QkZ6c28zM2RCa2FyVl9hamRLM2trbHpYa044c191NklNYVFYRnhxRmswalJ3LUh1Z2VDTmt5VkdFSkNyY2c5ZmUzbW5IamduU2JB?oc=5",
+    "source_published_at": "2026-10-10T06:09:50+00:00"
+  },
+  {
+    "n": 18,
+    "title": "Ben Shapiro Melts Down After MAGA Movie Production Halted - Yahoo",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 327,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPd0Y0LTVSQnBhWGlHU3pJQVBhRnlXMEkzaXp5OTF3TnVQSGxxdFN4UFBfekFBUF84MHVadGtWSkVsTTJ3a09ORVRYSzVNVFpSRG5HUGw1RnBqWjg1dzNGMHBaT1FhbDExa0R2eUJnd2JrMDVleWgzSUg1X0lHS21ORlVB?oc=5",
+    "source_published_at": "2026-10-06T22:11:18+00:00"
+  },
+  {
+    "n": 19,
+    "title": "NBK Says Omar Bouhadiba, CEO International Banking Group Resigns - TradingView",
+    "source_report": "01_daily/news/2026-10-11_intake.md",
+    "source_line": 84,
+    "source_sha256": "9b2ab0958641f20ba37df8be1661b541c4c7b199405564c28c07e3bf598e95e7",
+    "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPNFI3YWFIY2I4ZUdvYXQ1dl9QZVJxZjRfRnd1dkZIdG8xNktGY3YzdUM1ZVB2UUNab2Q1VUJSeHk2V3RZdWZzWGx2N1dFclRWVlVxU2t1d1VIMDJVYmk0cTlEV3dITUt3dDhiaTJIdkU1UXQ3bnpnaXVpZ19xQXZRTXRoMUpkUHo4S1hsN3BVOFhCYWhYQWxCR0ZHaUdfem9IY3U2enI0VmwwRDJWa3NFNUstZ3BFc2lIQlozZnd4a1NRSGNIMml0RldjeWZQUQ?oc=5",
+    "source_published_at": "2026-10-11T05:10:00+00:00"
+  },
+  {
+    "n": 20,
+    "title": "Love, actually, at 61: 'We have survived together a long time' - The Spinoff",
+    "source_report": "01_daily/news/2026-10-04_intake.md",
+    "source_line": 127,
+    "source_sha256": "7df26e8e3794315c73bb7bac3ae0a89b0a34ccdb7e9faee239a98adbf7c76980",
+    "source_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNRmxqZDRYVmg2QVNta25xaVE3TXpmSkNsbHdwMkQ5bmhsWDdUSWZrVjZJSEpnLTJweUcyYnA3UklJRUs0UFJmOE5ONFRoc01wZkc4T0d6bDJlWW92M1lYbS04RWk5ZEZmakplREFwaGt2ZE5TT1laUlp1cGRfQVJseWFIQVd4X2VJeWlOMm9zLTFmdG9qcl9HNmJaYjZyZGxYLThlbG9sNVZoMjJoU3hsaS1BekZDRUt6OEl5ZnJyWGlZYWtfMnhUY0I4LU5Ka1JIT0xZ?oc=5",
+    "source_published_at": "2026-10-04T05:28:50+00:00"
+  },
+  {
+    "n": 21,
+    "title": "South Korea Unveils Rules for Blockchain-Based Tokenized Securities - Hokanews",
+    "source_report": "01_daily/news/2026-10-04_intake.md",
+    "source_line": 303,
+    "source_sha256": "7df26e8e3794315c73bb7bac3ae0a89b0a34ccdb7e9faee239a98adbf7c76980",
+    "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9OS3Vfc2tEanZ5NkM4ajdVYWtGUG5yeFhMUXRfamg5c1MwN2lOcTZieG9qbHFQVW9IelRHSFR6QTRBa1hKNFJUVnBLWHdrUXBHYWhxelZPS2JzVlBlaHlHaWRPX2xYdEFSNmdYZWN5ckJQekltU2c?oc=5",
+    "source_published_at": "2026-10-03T03:47:00+00:00"
+  },
+  {
+    "n": 22,
+    "title": "API crude inventories for week of October 2 - TipRanks",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 404,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQekpteFhvX1J6Q2VFUUNQMDI4Z0MzWHFDQkxpM2EyRVhHbGlON3FxVE5QWFN2UUVxeXFnV3BSbmRReXRJVlVSRHQ5S3p3eXRGUHAwXzdweS05THhjRHVQWFJxdHhvZnBSNnR5T1lTUmlPWUs5NUtUY3JsZk00dHNlYkdaZUNvSmJEWEhIWFVYS2dPY25RZ1ZXag?oc=5",
+    "source_published_at": "2026-10-07T02:54:00+00:00"
+  },
+  {
+    "n": 23,
+    "title": "Terumo, CSL Plasma Mutually Terminate Supply Agreement; Terumo Expects $610 Million Loss - www.marketscreener.com",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 303,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPQzgxOTMwbmRlTG9vSDg1dW13dFdFLXpoeXhDaDBtWU5weDRpWVVNX1lHc2ttZU9CWnpMUmlQazlKN3hpSEctR0dqenBOX0tPaWwyQXJOZEFvSkJzcThzcUlxc1pQalA5dVM2UXVqWi04TVdsQnhndWJDbXVCWW05OWJmTl9vdy1vQk5jQ3VDWWhCVzQwMWRQQ1hlMHFRZWxwSTFHMjBha21uWlM5Q0xrQmlBUEZuc0NNZFdweUZjeDB3UWUtUWJkY2g5OWhDeWdmQkVvSA?oc=5",
+    "source_published_at": "2026-10-09T02:47:12+00:00"
+  },
+  {
+    "n": 24,
+    "title": "Karnataka welcomes cancer drug price cap, seeks extension to other life-saving medicines - Lokmat Times",
+    "source_report": "01_daily/news/2026-10-10_intake.md",
+    "source_line": 260,
+    "source_sha256": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPdFhFb3h5RkNRLXR4YUJHVlMwaXk2dVlEakdyMG4yNzNoR2RaWlFUUEZqLVFqR1g3eTdKaUNjdDRIX2hmaDE2a1ZERk5ES2NOTWxRYXpKU3NoZDlwVm95c3hxR0xUSGswZ1ZXRzJ5U2tDWmZzQlVQMGxZcmxJM2xKVXFEdVQxSldTUHl3RnVHcmExUlVyUFVpTGVBZWR5eWV1R2wyWklKUFpCRDB5REp6cUtjenVxdjRCdWQzYWkxYjB0LV82VWczN9IByAFBVV95cUxPdFhFb3h5RkNRLXR4YUJHVlMwaXk2dVlEakdyMG4yNzNoR2RaWlFUUEZqLVFqR1g3eTdKaUNjdDRIX2hmaDE2a1ZERk5ES2NOTWxRYXpKU3NoZDlwVm95c3hxR0xUSGswZ1ZXRzJ5U2tDWmZzQlVQMGxZcmxJM2xKVXFEdVQxSldTUHl3RnVHcmExUlVyUFVpTGVBZWR5eWV1R2wyWklKUFpCRDB5REp6cUtjenVxdjRCdWQzYWkxYjB0LV82VWczNw?oc=5",
+    "source_published_at": "2026-10-10T09:17:28+00:00"
+  },
+  {
+    "n": 25,
+    "title": "Toyota Issues 2026 RAV4 PHEV Safety Recall, Roughly 31,000 Units Affected Stateside - autoevolution",
+    "source_report": "01_daily/news/2026-10-11_intake.md",
+    "source_line": 397,
+    "source_sha256": "9b2ab0958641f20ba37df8be1661b541c4c7b199405564c28c07e3bf598e95e7",
+    "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQOFBhdU80c2MyaEl1NjFSMGV0T1R5MTV0dkJoZ2xFUk9TMlBZby1ZNTFmRGV2OUxuVkNGNjhoWXI0SGphRHFKUzJLZDJuajN0Z2dhZ0F0c1VjV2M0dEN3a2Izc1l4NTh2ZmVfamVhbmxsUTc1dHdaNk5laG1yM1dsXzB0TlRQNTd1ZjBaRkVQNXNzQ3MtdU5OSk1XcVk4MExxcFh4YXU5b2ZvQ291Tm1aSGdDMmJRSl84dDJsV3czaVFBMWdERHpZ?oc=5",
+    "source_published_at": "2026-10-11T11:12:29+00:00"
+  },
+  {
+    "n": 26,
+    "title": "Revolut data breach: the bank pays for new ID documents for 680 customers, and what you can do now - CryptoTicker",
+    "source_report": "01_daily/news/2026-10-10_intake.md",
+    "source_line": 45,
+    "source_sha256": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "source_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9jR0M0dWdMRzkwTkNRdmE0QTYwcUJ3MkFWLXFEQkVvNTlsZUw3SG90NU9PaVJPMEl3ODBDclZLYmwzTm80Z25RLTF5X1NOMUxoSEZrOVdubl81c2l6QVU0NXhnM3pBMF90T0NxU2VFdFF0eGM?oc=5",
+    "source_published_at": "2026-10-10T15:26:41+00:00"
+  },
+  {
+    "n": 27,
+    "title": "Gold price loses momentum as soft US jobs report fails to spark rebound - investingLive",
+    "source_report": "01_daily/news/2026-10-05_intake.md",
+    "source_line": 116,
+    "source_sha256": "f631e1d3f63c5979db4acadc60366a9ab54f4dd5444f3bacdb6fcaf4188f910b",
+    "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSmxKWnhIRnhpaERUZzk3M0hOTXZTSlNGVDhMOXoyMllTNlh3bVdmQ1IxNjJnRzZzUGRpZ0NaaXZuR2dRRmt1V05WUUpsTTJZQ1Q4MzBzY1owSHMwUjFHYUxrYWxJWGVFako0eGoyeUZOQVhzYTlpcnc3aDU5Ym0wRWtibThJbWRSVWlreUlXSENMN1BQVU42MGNUVS1XaGhBZ21BbGpCU1kwbVhza2RJ?oc=5",
+    "source_published_at": "2026-10-05T05:44:33+00:00"
+  },
+  {
+    "n": 28,
+    "title": "Morka: Tinubu did not single-handedly remove fuel subsidy - The Sun Nigeria",
+    "source_report": "01_daily/news/2026-10-05_intake.md",
+    "source_line": 136,
+    "source_sha256": "f631e1d3f63c5979db4acadc60366a9ab54f4dd5444f3bacdb6fcaf4188f910b",
+    "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPakV4RkxlNzBTaXV6Nk9RQWdJazVuMlBucW4ySFBlWFBWeXdxZkppWGJfUGVwYUhMRGtIaVZ3LWNrZzdQdGFIeUVYSktEWm00eExlcVluNFM3anhySXB1eXBtWDRqRDdBUFp6NjFvNS1xYlh3ZEMzaDJPZ0MydUpsRw?oc=5",
+    "source_published_at": "2026-10-05T06:34:40+00:00"
+  },
+  {
+    "n": 29,
+    "title": "Netflix confirms brand-new Bridgerton spin-off centred on beloved character - Radio Times",
+    "source_report": "01_daily/news/2026-10-08_intake.md",
+    "source_line": 157,
+    "source_sha256": "34fc130ba520d0e32e6c7f9e4b74d2f3459a02d82546485f7357a4562ab6c800",
+    "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQMzUyZU9OSk1ScFBvSUxMS2MyODBZUGhNd0NlZjEwdUtXQUxFb0Q5TVRaaGxibE1OY2VqaUZoUjZtT0NSVWJGRjdlY1NBSUZfbC1lTEF2RGVVOVB1dHVsLVFwM0toV2JDeHNaNHR5QV9KNUpSdmFYY2hvUXlVanpkWFRnZGRBR1c0T1BJbzhORmU?oc=5",
+    "source_published_at": "2026-10-08T14:24:30+00:00"
+  },
+  {
+    "n": 30,
+    "title": "Helen of Troy Limited Reports Earnings Results for the Second Quarter and Six Months Ended August 31, 2026 - www.marketscreener.com",
+    "source_report": "01_daily/news/2026-10-08_intake.md",
+    "source_line": 184,
+    "source_sha256": "34fc130ba520d0e32e6c7f9e4b74d2f3459a02d82546485f7357a4562ab6c800",
+    "source_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQWEMtSWcwd0owdzBYZVFVY2NLV0xITmlTTWhsemhIcThFOENuQno1Z2VlVEhwdjFwQ2NwU3FHaDlPaEstY2R0bk03dEdKZkYxUDJwUE50YmZIakRCVWlWTjBuaDctSk5TbmJ3ZTI5bG1ITHRuaUFyTTFSR09SMVNNT3VvNGpJTGFlQ3pxXzhVeWQ2QmNHTW92ZG1WWmhJSnVTa0VmQ0V0U01XcUc0aXFoRDVyb2dIUk5aU256eG5CZU5IUnpleURVV1lrYzdaNy1kTy1yNDhINE9wQXlSdXd0NFBKVmFPWDdR?oc=5",
+    "source_published_at": "2026-10-08T13:05:22+00:00"
+  },
+  {
+    "n": 31,
+    "title": "Becton Dickinson (BDX) Posts Strong AGILITY Trial Results, Is The Stock Still Below Fair Value? - Yahoo Finance",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 280,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxObnNSTW9GNmdnczhseXFpTktqR3hpMVdYallIY0tkNktmVVlWa2pKWnhvUkVTMDBhTlZaTzRiMXRIMEJaeDlHRjhpajlIXzJpZWhmTHM4bHdDRjRoVkFHVHlwMVktSmJDNmdUb212NFhEcDU2N09wTG1JVWJLREhDMVlRcEYxcTRSdURlbzlzdXlLM211TV9qWUhQWTFPTVE?oc=5",
+    "source_published_at": "2026-10-09T01:17:00+00:00"
+  },
+  {
+    "n": 32,
+    "title": "Where to Watch Reacher Spinoff Neagley Online - Epicstream",
+    "source_report": "01_daily/news/2026-10-13_intake.md",
+    "source_line": 137,
+    "source_sha256": "852a654b720130ccfaa01846eb2896a03e18b35f971a1a6d80413323aaada2d1",
+    "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9XWVlsMDl4ZDFIbFZ6NmV5WExTY0xkLTkxLWM2QmZ6eGtNN0pBWVNUa1R0MmtYb0cxQ0tzUHpzczVyM0dHUFdyT2xCbnV5aEhUVXdweGZWN0pwdFRMRWxteFY4bVRzbndLa09LUzdFRVFKSHEyNnJDUQ?oc=5",
+    "source_published_at": "2026-10-13T02:15:11+00:00"
+  },
+  {
+    "n": 33,
+    "title": "US Economic Growth Expected to Strengthen in Q3 GDP Report - Investing.com",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 191,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNWHVmemJEaUZqbW9FbFprbU5YR0p1UU0wa3d1Q3JPRXBmNmgyUGIyanBhSnFGbS1UVGJtUUk2NXFvWWV0eUZBWFBvVHVoQTM0SmJWMjk2TS1rd1BTYUdla2x3US1WcVB4bmEyanhyc2NaX0RVRmJzSTN3eWJsZEZaRDg4cURvbWRFYVRqWUFMLVdNS2tzSXhaMXM0QWtJZEJKUVJXdkJn?oc=5",
+    "source_published_at": "2026-10-09T10:52:07+00:00"
+  },
+  {
+    "n": 34,
+    "title": "State Audit Reveals Overseas Voting Fund Liquidation Delays and Deficiencies - Daily Tribune",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 502,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPN0lCcmxidWhXRm43YW50S2hqby1FLWwtOXFOVDdFdmFUZjd3UzE1cGNHUjYzbm11dTdyeS1DRjE2WVM1bEV2d0h0RGRCME1BMVc5YVl0eDdWeEFYUHdqR2piUncxWUpnclFKaU5HZHFlUE5QdVp1am5aTXZjcXVIMm1VV1U1Um5uS2s2TmNyWG5SbVY4U3RkRzdLR1dVSHhaeXNUdTBDYmdYN2d6MkUzYg?oc=5",
+    "source_published_at": "2026-10-07T09:03:21+00:00"
+  },
+  {
+    "n": 35,
+    "title": "Centre's price cap will make anti-cancer drugs 40-80% cheaper, says Karnataka health minister Khader - Deccan Herald",
+    "source_report": "01_daily/news/2026-10-11_intake.md",
+    "source_line": 258,
+    "source_sha256": "9b2ab0958641f20ba37df8be1661b541c4c7b199405564c28c07e3bf598e95e7",
+    "source_url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPbk5YcVBZNEluSW5LM0d2c2dRZG5RMFdLcHlNTWtEdjdSSXdYQ3BIRzlMOGQ2dHZBeTI1OFFnalUyNkFsWEZESllHaGFBeFpKcFd2aXk0Z25kb2YwVXFSSDFWZndrNllhT1lzTU94YkdEUGRnY01sSGhzZzFheHRrUFZMZ0dUendmUjNtYWVYRWd3QnUxTzBPRm5lQzlJX0xYamxDd3lvakRFdnNGd0RJblBTSmR2RXdnaXhLQUJ3MHpKX3YweTh3RHA2aVVvOW9PN2U4UVN4RkxQUkJwclg4cXpyR1c?oc=5",
+    "source_published_at": "2026-10-10T10:18:29+00:00"
+  },
+  {
+    "n": 36,
+    "title": "Trump's new war: executive order to cut invasive mosquitoes in Washington by 90% by 2028 - BurgasMedia",
+    "source_report": "01_daily/news/2026-10-02_intake.md",
+    "source_line": 193,
+    "source_sha256": "f8d306f65f640e44ecfdd723f8ca9ed2adc8176d28743777163767259ac4bb8c",
+    "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMkZjWDE4aHVybzNyai1DTHNhN1hNdUlLYWhmbGZIWVdYeVhqS29pU3A1clYtVVB4elR4VkE4VUYzNUUyZmFxYllRYnZsbEdDczh1SXkwSEVmMk9zUXFoc09RMHk2cEJ2R0prTTVORVp6TWNnNFNYSU81TzZLenZBMVdSQ0dPdFlybDJXaHY2Umx0RGlTZk5Tc2Q5bWVRMlpwNnR4THRKZW92YjZOMGNIcDdVNDFHb2vSAbcBQVVfeXFMUDJGY1gxOGh1cm8zcmotQ0xzYTdYTXVJS2FoZmxmSFlXWHlYaktvaVNwNXJWLVVQeHpUeFZBOFVGMzVFMmZhcWJZUWJ2bGxHQ3M4dUl5MEhFZjJPc1FxaHNPUTB5NnBCdkdKa001TkVaek1jZzRTWElPNU82S3p2QTFXUkNHT3RZcmwyV2h2NlJsdERpU2ZOU3NkOW1lUTJacDZ0eEx0SmVvdmI2TjBjSHA3VTQxR29r?oc=5",
+    "source_published_at": "2026-10-02T07:10:43+00:00"
+  },
+  {
+    "n": 37,
+    "title": "OpenAI Agent Escape Causes Wikimedia Service Outage - Dark Reading",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 382,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPU3FnWHVCekRKWS03bW1EOEtlV0UxVnhTMklvdEpXRFgzNklFa2pFWVk3TnVIc1VyTkZON1pUWHdXc2lEX2J0dzNzUGhFMWhaU2h3RjFjSFA1Z01Ubk56bkVhUVd0Z0VGS1JCMWlLWWtSVllBZWlwVUtRejYxQXlGeGRQTEFhMjB2RlFlWU8yQXlfY2l1NjdCOXVBS3dJXzNkVzZpblF2WWF0QQ?oc=5",
+    "source_published_at": "2026-10-07T19:56:51+00:00"
+  },
+  {
+    "n": 38,
+    "title": "Tranche Update on Telecom Plus Plc's Equity Buyback Plan announced on June 23, 2026. - marketscreener.com",
+    "source_report": "01_daily/news/2026-10-06_intake.md",
+    "source_line": 85,
+    "source_sha256": "e3b58c9df1b94e14f42a3b67551762b0bb6d1ece9a0285460b7049f8744db711",
+    "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRW5NdkxuV2xaMU1NOGJiUUN2OWhDU2ZCV0RFTmlQZzNfZHkyMEZmdTlraTBSMmxlM251cThiay1CU191T0wtaVZSZnl6QjV4b3lXT3k4dXBwR2FZZV9qaE9vRUQ3Q1FBX1gxR0JVRFVLSE4wLUNWQ0Z2WHhNZkhCOEc0X1lZVFRpWDBqbWZyWW9jOEJpMUZNLXNnUVVvRE01S3NSZXg2SmRydksxZDRPN2pkYS0yT2FySXRrX1dhTVFmaDFRWWtMb2R6OUdZN0l6?oc=5",
+    "source_published_at": "2026-10-06T12:50:27+00:00"
+  },
+  {
+    "n": 39,
+    "title": "Activist Hedge Fund Wins Appeal in Empery Proxy Fight Case (1) - Howl.Link",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 387,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTFBsQ3VtaDVRLURJdzA1dWRUNmdNQnhuY21vSDdDU3haN2pkWEpxZFFwUF9SSk5LWjRqNVdV?oc=5",
+    "source_published_at": "2026-10-08T20:19:00+00:00"
+  },
+  {
+    "n": 40,
+    "title": "Mutares Wraps Synthomer Carve-Out, Signs Steinmüller Deal as Bond Refinancing Nears - AD HOC NEWS",
+    "source_report": "01_daily/news/2026-10-04_intake.md",
+    "source_line": 222,
+    "source_sha256": "7df26e8e3794315c73bb7bac3ae0a89b0a34ccdb7e9faee239a98adbf7c76980",
+    "source_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOS3RYR3hBSnExWHRuWFRsRlM4T2RHb1YwaEVhdVZ0d0dwSHB4bURKemJHeDM1MTBKdUZPSjVVM0lhUVVqU3dQQmpzWTYtU25ORnA4UFpISFVJWS1kQVRFV2JaSFlJYmNGaWFiVHEyMk9lVmw4T3o4OVJfVnE0eGZLUGVrUDdrNlVmS0pFbjdGb0FIcVkyU3VtOHhYSktkT0xKNG81d1hJQWtXLXVtcGJyODlpcWVfZmR3UmZkYkItYnJSUjlvZWdBNWtKX1A3TFdYMm1R?oc=5",
+    "source_published_at": "2026-10-04T11:21:15+00:00"
+  },
+  {
+    "n": 41,
+    "title": "Japan September PPI Slows to 6.8%, Tempering Odds of Another BOJ Rate Hike This Month - bloomingbit",
+    "source_report": "01_daily/news/2026-10-13_intake.md",
+    "source_line": 91,
+    "source_sha256": "852a654b720130ccfaa01846eb2896a03e18b35f971a1a6d80413323aaada2d1",
+    "source_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1zeUFUTWcxUDlaS3lkemJBbi1RMGxES2szRFMtODFrTmJ4OHZxSFlsbWtfRFVpY283WWhRcHo3cUF3N3c0Vi1yTnYxdFNISmk5WnZhYQ?oc=5",
+    "source_published_at": "2026-10-13T02:49:18+00:00"
+  },
+  {
+    "n": 42,
+    "title": "Oil minister, Lokpobiri, replies Atiku, Obi over calls for subsidy return - Ripples Nigeria",
+    "source_report": "01_daily/news/2026-10-03_intake.md",
+    "source_line": 212,
+    "source_sha256": "9522f39df1950c8337868b64c9865916cdc81e5abadfee1c40c7560e43ea9ab4",
+    "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbk9lZ0dhMnVuem9Fd2hQSmNGay0xX1h1ZjYtSk90MXd0dHNXckRiUmExUWJuSEZJcUhCRkI5ckloWno4TVl1NnVxdkY1TlJtTGIxWWZ2Y0lVakJJUWNBSTV0d3JYNmU5a0tRVVBRN1FpcV9LN3drOUVfcXh4U3F6bmlJQ3NfT1U3NEZnSnVoMU1qUnNJa2x1bEluaENpWm1nV1hRNA?oc=5",
+    "source_published_at": "2026-10-03T14:01:54+00:00"
+  },
+  {
+    "n": 43,
+    "title": "Battery Fire Risk Prompts Volkswagen ID.4 Safety Recall, Root Cause Remains Unknown - autoevolution",
+    "source_report": "01_daily/news/2026-10-11_intake.md",
+    "source_line": 401,
+    "source_sha256": "9b2ab0958641f20ba37df8be1661b541c4c7b199405564c28c07e3bf598e95e7",
+    "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOc2I4U1VvVmNCdER6OFJtS0E0VmtFTklPYlI4enZhdWFyMEY3SWRSQ0V1ZWZsR0trSElUaWg0eDZpZHNyWFF5MnR3SnZ4LW11RTBVd0FQcUJqc3NTZ1piYWtuQ1JYMld0MUlVNHZ3RHZDak93SjFCWnpJdFkteEw2cXN5OC12ckM0TjBFMHNpMjJRR1ZsdWdxR2QtSVFXdEFDT25fcERpTW9hZTQxbUM2RnZ6Slo1azhFX2k0MWdHeW1Bd0Y2Q1ZJ?oc=5",
+    "source_published_at": "2026-10-09T10:57:50+00:00"
+  },
+  {
+    "n": 44,
+    "title": "Micron's $61.5 Billion Quarter Hinges on a Taiwanese Union Vote - AD HOC NEWS",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 368,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMlpLV0VNQWJ1bGxRZFJDOFZaRTNTTnJUNThCR3BRS0ZEdlQzUzZpNFFkTGNNRlBLQlREZmZ1NUhXS3lEbTlQdXBheUN5X1FPTWd1M2JBeEZQX3o3ODR6WXo3a2I2U1VObzBveWRBSmE1Vk9RVjQ3VWowVDloSENFVDNtR3U3VnNVOW9QMlNMYkZYQm4xM1Nuc2JfRDNhN21VclV2QmExTlcydlM2UEhXeTVzY0JSQjh0UGhXbUFnS3ZBSUFFeU5RWDBnWnh2LWc?oc=5",
+    "source_published_at": "2026-10-07T07:20:28+00:00"
+  },
+  {
+    "n": 45,
+    "title": "Cultiba stock reports second quarter 2026 preliminary results - AD HOC NEWS",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 348,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPaUR5MFZTRkFBZ1RUbGcxSTk0LUZscGZ4UnV4TnUwdEdXQ1VPVmYtNC1uOFJUcVR4bGJZUTZwRFZudGJuWC1vdkEtc25lWkZMR2RXOTF4LWdOUzlleWtKUVRPc21uc0ZfR2VNclRjVnp0N2REQXMza0pBdnl2TERmZXphUW02eFpOY2pTYWt2aUlIQUc3RFh4djlGc0lhLXN4Y0lTdTlsTW1MTzJKRFgyVFN6U2FQV0dLNGtFVA?oc=5",
+    "source_published_at": "2026-10-07T03:08:38+00:00"
+  },
+  {
+    "n": 46,
+    "title": "South Korea advances tokenized securities rules for 2027 market rollout - Traders Union",
+    "source_report": "01_daily/news/2026-10-02_intake.md",
+    "source_line": 332,
+    "source_sha256": "f8d306f65f640e44ecfdd723f8ca9ed2adc8176d28743777163767259ac4bb8c",
+    "source_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbWpnX3dRcEtUYnFWbzlUY0NxOWdkZnh2SmNzVzNLSGgyTWVPZjVuUUF0Tm9CYU1DTkp0MmN0UmtkRHpKLTRGeGcybS15UEwyN3FLTWI1SV9qNHpERExyc21FSGxaM3c0bTg3Qi0wNDQzUGNMUW9weW5oQWp4dncyaHNmVzZmUkFwQ0VzM2ptN1I5RHlPUUJHVkU0LWJ4X3g3bTB1Y1E4NzlkaTQ?oc=5",
+    "source_published_at": "2026-10-02T05:17:24+00:00"
+  },
+  {
+    "n": 47,
+    "title": "Vidac Pharma Holding PLC (T9G) Renews Share Issuance Authority, Backs Eutopos Strategy - TradingView",
+    "source_report": "01_daily/news/2026-10-04_intake.md",
+    "source_line": 177,
+    "source_sha256": "7df26e8e3794315c73bb7bac3ae0a89b0a34ccdb7e9faee239a98adbf7c76980",
+    "source_url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNOHBValRzWUROSVl6S2ZqUHZNbGFaR2YzRExueFpjdTZZX3Q4MHhXT1RVMjJXTnYyOUMySjFxd2ZWWFR6SkNOaHF1RTZSQU9ENldZV3E2TGdWdUo1YkhrTF9mLXdReVp2ZDB0Ty1NVU9rVzhzLVQ0TU9MOTR3bjJSbTFjOWpRZElvby01X0V4T2tNRmZHMUhUdDdJaUtFSXZJTXowSWI1UWVYRlQ0aGtvU2JyX0dDQWl3RXRVcElSdjhOQXVJd1ZiVlJpMEJyaXZZOGJPVkF5TV9ESWVlVmc?oc=5",
+    "source_published_at": "2026-10-04T08:35:22+00:00"
+  },
+  {
+    "n": 48,
+    "title": "Harrison Street, NFU and Apache seek £450m BTR refinancing - BTR News",
+    "source_report": "01_daily/news/2026-10-08_intake.md",
+    "source_line": 137,
+    "source_sha256": "34fc130ba520d0e32e6c7f9e4b74d2f3459a02d82546485f7357a4562ab6c800",
+    "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOc3hsQUR6dWs1LXRWcTV2VmVDZHlpa1hDQUVYSUZ6d2pyQ1JGbzMyZmhVZzNZMERzTkFjUGkzR2NuWGU0NHpUY3R6WWdGSURwdHkxZm1SQlN4aXZMbkVjcS1uSUJvcWMyVV9zV0VhTUJmaENFNWVWOVMySEtUTjl6T3FWdnBJUTJRMFJxTXJoWQ?oc=5",
+    "source_published_at": "2026-10-08T14:02:09+00:00"
+  },
+  {
+    "n": 49,
+    "title": "Glencore raises outlook as RBC keeps GBp 660.00 target for Glencore stock - ad-hoc-news.de",
+    "source_report": "01_daily/news/2026-10-03_intake.md",
+    "source_line": 366,
+    "source_sha256": "9522f39df1950c8337868b64c9865916cdc81e5abadfee1c40c7560e43ea9ab4",
+    "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNGxCclptZWlBRXV5TXVVTEhHaVBDZHB0N1duVU9OMXdWYlhvNVZ5eFgxdEtIdjEwVzRkYjM3UVVqeU55Y2hjRU5RYmZkMFdzQ3JlSGJyaGw3WVFrMkVYRFM5ME1pajNtYy1yS1dJaUZEbmhxOTJ1VjZFemtLcEg1M0I4ckNOb3YxbGVQWWJjaWhwNktDRUJ0dWRiMmh5R25sVEltSzNoT19EMGVnZUFiV2dmT19UUkx3b1FzWTdFOTVWclNPU1BZWmFoa2Q?oc=5",
+    "source_published_at": "2026-10-02T16:45:52+00:00"
+  },
+  {
+    "n": 50,
+    "title": "Rolls-Royce (LON: RR) Insider Buying, Saudi Engine Deal And £300M UK Investment Signal Sustained Growth Strategy - Foreign Policy Journal",
+    "source_report": "01_daily/news/2026-10-10_intake.md",
+    "source_line": 236,
+    "source_sha256": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "source_url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQMG95SWRka1h4dTdEdGQzT1psbWF0c0FHaWFlWTAxbS1kOXFZM1d1U2lYR2s1Wnd4WkdQVFd0aFVuekN4bGlHY1B1NUExczdFX2VyRDhLV0hSTDdHbXZGZlBEaG5xaU9pQkpCY29WZ0RmeHJuOTZUU0VHUy1PVTluTlJEY0tCT3lLNU56cUVSaXNLaktyRDEzUXVRSzRNbHRtNXhqOGRSdUI1ZWpOOTVLRVVPYUR1X1BRV0pRZXpoY0h6akdDU2hXZFFnT09lQ3VOWEZRSVZRSF82aEpuWG04MGptb01VTjFnWDVJcQ?oc=5",
+    "source_published_at": "2026-10-10T06:55:00+00:00"
+  },
+  {
+    "n": 51,
+    "title": "Marzetti Company Announces Leadership Change in Retail Division - TipRanks",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 256,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdm9TZURabmJWLWpsaTB1QU5lN2RLMUZWR0tIUDFLdEFabTJ0Sncya0pNV2hQRnVybk9WNkdXblhnNlJGR1d1OGx2UldSU1FvQ3FEb0xnUndvS1JNMUxtMUd0b2llbHNrQ1dFSHIxQ2FoaXVIQ2RpcHMwaG9KdXZVUkdIUnJVU3N0ckV5R1gycnBXc0daY2NZZGtXWFFlYjM0XzdYTndWbnozX3U4NWZVZV9XR0NRdw?oc=5",
+    "source_published_at": "2026-10-09T14:05:41+00:00"
+  },
+  {
+    "n": 52,
+    "title": "Interest subsidies on consumer loans fuel National Day holiday spending in China - 巴士的報",
+    "source_report": "01_daily/news/2026-10-04_intake.md",
+    "source_line": 157,
+    "source_sha256": "7df26e8e3794315c73bb7bac3ae0a89b0a34ccdb7e9faee239a98adbf7c76980",
+    "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQcUh3NDZGOEhmWjFyUUVmRUZEOVZjWEVvOGtqWWdCZV9QcUMzckI3ZktkbXY1QzNjQmNOMU8wN0llM29SancyMGZiTmFTVm9mS1A2dlBjQWpPQUlLdmNXMVg2T2tlVVpoc2xaRENFZTB4T0hFNERxUWhnc0pOVjI0bnFjY19kNDNudTMxNDFZMDdmaXZYazhCbEsyNFFyTGd4UDBRdFFNb096VUM4SmNuZ1dkSkxNbkdaUHBkQ0RGSUdVdFVrdWhPUzRzM20?oc=5",
+    "source_published_at": "2026-10-04T11:47:18+00:00"
+  },
+  {
+    "n": 53,
+    "title": "CYN Q2 2026 Earnings: Wider-Than-Expected Loss Sends Shares Lower - Profit Warning Alert - https://www.siam.in/",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 349,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZkZqVzhMTkV0VWRXVTdPYUpEbS1uQUpuUzVHempCcW5ZNF9XTnplT2IxOF84TzE1Y2NqdjVFeS1pb0c5WUVJV0hXRl9aNUFRazJsQW5vbmozM1lBX0xDQ01zSzJTcktBdV9XNGFsbVFrajhKWDJCRUNNczYteHp5SlRlWm5ZQWwzUXhDM1dVXzM5YlBSUElPZVNjYUwyMWlhRkVINWQ3S3g?oc=5",
+    "source_published_at": "2026-10-06T23:45:18+00:00"
+  },
+  {
+    "n": 54,
+    "title": "Man forced sexual acts, court rules - The Fiji Times",
+    "source_report": "01_daily/news/2026-10-13_intake.md",
+    "source_line": 167,
+    "source_sha256": "852a654b720130ccfaa01846eb2896a03e18b35f971a1a6d80413323aaada2d1",
+    "source_url": "https://news.google.com/rss/articles/CBMickFVX3lxTFAxNEtMaXczZlBuU1RreVFNVFlNMzhRRTFBeVMzSzlxTmtWRUF5Vno5S3M0Mnl2c25wQ2RZbEdqbkU2V2xVZlZhVHJfcElFVHlQNHRueUtIQ1lBY0lPN1ZaM2Vhd2hHSElHVS1POHNhUWl1UQ?oc=5",
+    "source_published_at": "2026-10-13T02:00:58+00:00"
+  },
+  {
+    "n": 55,
+    "title": "Couche-Tard's Zabka deal gets EU FSR clearance, still needs antitrust approval - MLex",
+    "source_report": "01_daily/news/2026-10-10_intake.md",
+    "source_line": 419,
+    "source_sha256": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "source_url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPZmMxYUd5NWlWQVg3TzFaNnBlLWFEeUpwVEtJN2N2OXg2YTAwcjJNMWx0d2FUdlRDeFcxSmpHRWIzbjFacU5fR0ZINlU3cjFJdjd2Mk5sTTlrbXJOYWY2ak8ydjVTa3BPOG5hbFE4WDFIcFdpSGZnNWFXTjV0QjRLMEJEd0MweE81LXFtdFlDU1pqdURfMGVHTm9jUTJNeThtS0lXSGVvSUhTVTA0aFZRMHBqSGtadmI0VUFIdklMTFUtR3RpRS03VkxycjFHdHJxMVROZTExWFnSAVpBVV95cUxOU2Y1aVd5RXJmTk9abUFqWGVfdGRWUzFzODFMZXBuWXd3MVdTMm9DNWFMczhMaGl2NXFDUHYwNkRQOTJTTk1jZjZVSUdNaThUVF9QQTRJMGRueGc?oc=5",
+    "source_published_at": "2026-10-09T13:48:05+00:00"
+  },
+  {
+    "n": 56,
+    "title": "Emaar EC CEO Resigns, Naif Saleh AlHamdan Appointed Managing Director - صحيفة مال",
+    "source_report": "01_daily/news/2026-10-11_intake.md",
+    "source_line": 83,
+    "source_sha256": "9b2ab0958641f20ba37df8be1661b541c4c7b199405564c28c07e3bf598e95e7",
+    "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5NREhiNnVBMW0xN25TdmJDU3M4a2dpTURxenkwVE52bjJuOXVUNVhabHVTSVdyYnpGcFgyZWh5bFBiZWdURXRjZmRfQXZfc3I5UF9GV3g1SUNzR1BFLW5QYnV1NDJXMjl6OVE?oc=5",
+    "source_published_at": "2026-10-11T05:31:54+00:00"
+  },
+  {
+    "n": 57,
+    "title": "Gaza Government: Israel Violated Ceasefire Agreement More Than 5,300 Times in One Year - ABNA English",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 464,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOUmdQRWJkUmxjazRPU2p5TXRBeU1HTVRaQ2hIZGE0M00wSzljdEswem5SdjdybDVQX0s3Rk5leVVLWGttYjlWMVJmMl9lM3dJSUYxVHd0RmhlT0JNcHk1TzBQbmUxSVNzZnFVcFEzZG9icVJmZlFHZGR4WER5SUJEU1ltbGxmWmFRZGtEZ1lsSEVmakhPN1l2UEVKbEw?oc=5",
+    "source_published_at": "2026-10-07T05:28:00+00:00"
+  },
+  {
+    "n": 58,
+    "title": "PNG and CNG to get costlier? Govt hikes price cap for natural gas production from THESE gas fields; check details - News24 India - news24online.com",
+    "source_report": "01_daily/news/2026-10-05_intake.md",
+    "source_line": 255,
+    "source_sha256": "f631e1d3f63c5979db4acadc60366a9ab54f4dd5444f3bacdb6fcaf4188f910b",
+    "source_url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxObDJYSFhqbEotV0tva3Q1VDVRZF9VVU1fU2ZNejJ5dXFQRzJUZHRKbmVJeGMzeWxLcWFOamZLRWdXOHNVTGFHNjVkdk5VR21SMjQ1dWNjRUpUYk5DMjZ6aVRSZjY4QmNYMVZkYmhKaGkyNjdPaExoM0xBQUo1dm9ZWVpNNVppOWYzSUhYU3J4eXV4TE9oNldFemQ4WV9lbEMtaVRTTTA3dHVDRnVIclpVYmVZeE5HVjhhQU1RZ1N2LUE5bDgtdWV3ekVURmRkdE12aTEwZGlWd1JNcWcxRHNrRkRMTjDSAegBQVVfeXFMT1l3X1RoVm5kQklPd2RlWVd5MmEta3VBVFN5V1ZVdWNaeGp4cVV1UmFkTVNzVGdnbHJDUkZUbHVBNG4xWEd4Yk1Pd0xlV0V2NHE1c2Vwc2hTZHRvUGRiOEhMMC1QTnFKNmwxM1BvdzFSMFJNWHd0bG9hM04wTEJnNHNMSUFXX0dtSFlraW5GZkJvWUlrc3VXbkVzcEg2RkxiREtBZGc5elR3WEdTQ1ItTm9KbW0tNGtlQUlLYUNKVjNCWDFYMVpjSUd1ZHhVQ3pfT3JpODNUeTZJOW9uRUlqRDhydTN4TnB6QQ?oc=5",
+    "source_published_at": "2026-10-04T15:39:59+00:00"
+  },
+  {
+    "n": 59,
+    "title": "Atiku Accuses Tinubu of Copying His Fuel Subsidy Plan - Nigeria Info FM",
+    "source_report": "01_daily/news/2026-10-10_intake.md",
+    "source_line": 107,
+    "source_sha256": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRXhYUWVEd19mZm1kY1ZjT0FhRjhhajZKb1Z6aGt3TzlEU3h1QnduSVR2bW54eFlsdC1oa3A5X3FXNGZEWVdkV1JnN1BzaGtZQVRLcldBWW83QUtpSWZrLTA0OHlvWTRNX2V5RlJHXzluUlpqZjdUd1BRblNjdUdWM1Q5N01yMlF3U3FmV05VeUpPdmk1bUJaWUJJeUZBeVFSVDlrc3d6YWh1UUJKRGc?oc=5",
+    "source_published_at": "2026-10-10T08:45:04+00:00"
+  },
+  {
+    "n": 60,
+    "title": "Kazakhstan and Russia renew duty-free fuel supply agreement - Kazakhstan Today",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 279,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQS1pVZGtqUFEwY1k3d3YtSDU4el9KdDRkT01SN0t6U2RQQ1l1Y2xCNkFoanhjeXFnUWxGX09fOXFwNHF2Vkg3YUh4aEdsUnExLXRTOU9YOEkwZXVxLUQyLVRPWlVJcXZHOUFRSUczYWYzVVlTMG9lemczZW9mMlhRVTV6OFJjSkpzaGNxQnl2cDY2QVdvU1JlZXNtT1ZTamdGbS14UEJrT1M?oc=5",
+    "source_published_at": "2026-10-07T11:57:09+00:00"
+  },
+  {
+    "n": 61,
+    "title": "Montgomery weighs new health care authority after Jackson Hospital bankruptcy - Yellowhammer News",
+    "source_report": "01_daily/news/2026-10-08_intake.md",
+    "source_line": 169,
+    "source_sha256": "34fc130ba520d0e32e6c7f9e4b74d2f3459a02d82546485f7357a4562ab6c800",
+    "source_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUVd0ZC1YenVHWE9xVFVNMWdUSFc2a2tpV0pCQzV1TENvVmJwemhiMlNfR1FZbDBEaHpVS2ZQcmd6RXZHMk00VjhVbzh4eEhDVmlVSE14NjZqV3dXU1hZaHpXaEpMQlBFOVlxUzFUdG1xNnRpbkl3RDdpN1piR0swdVJ2Y0xvU3EtQXBfY1FmZXltdUV3c0VJRF9Rd3Fkd0VLSTRVRXlWTjZwY0E?oc=5",
+    "source_published_at": "2026-10-08T13:00:34+00:00"
+  },
+  {
+    "n": 62,
+    "title": "Trump Announces Russian Diesel Supply Agreement Following Putin Talks, U.S. Eases Sanctions - Quiver Quantitative",
+    "source_report": "01_daily/news/2026-10-10_intake.md",
+    "source_line": 333,
+    "source_sha256": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQa25Ld2Z5RUNGYVdENnFOS3N5dS1TY09sUGF5YlRLOGliZEYtMnNmV3ViVS1Ud090dnM3b1E5SEV5QWxYY2QweGdpblRPZ09Sc1FYUFRMLXEyOWlud202N1RSWlByS01xNUtEQUYtMHZpcExub183azBRSlNOR0pNenIwYWZPWUlWUVpqUEx3WVNKZXhFMW1IdTJ3bTlnWWxCY2lndVNOaFBOazlsRkdUMjVORzJMWnJEVkhSM0I2ZlhzUkVl?oc=5",
+    "source_published_at": "2026-10-09T19:28:00+00:00"
+  },
+  {
+    "n": 63,
+    "title": "Chevron CEO Warns Against Diesel Export Ban Amid Supply Concerns (CVX) - GuruFocus",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 304,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPX2hoR0lMTkFfTUhNaXpab2gxczRlcDRkT1FuVlhMS0hkOXNSTUFkTUtRWjFldmRQc2Y3S1hkSDRiLVRac0RhaTNvSV9hWnp2Y2lEYTdRN0JqalBDZjFObXdLWV9KU2VYUlFEOG1tMmM4NmdXQkxPMFNGTjhVRDRGd0tsaldweXhKREVMQlU4Si13NGNiNG9JTVpNM3hfZDVITnV1Q2NwT0FNQkk?oc=5",
+    "source_published_at": "2026-10-07T10:09:26+00:00"
+  },
+  {
+    "n": 64,
+    "title": "Teva wins FDA approval for WELTRUZA - grafa.com",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 183,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOVkVoeFNHSi1NbVdsQlFrak56VFFwOXJrT3MxTmVZZHFrdXRQZWpGV3hNYUNzNTF2em43eGNWTmhjRGhhSlJsX2JTMVpDZC02WXNxS3ROaW5LcUxIVTBZTU4wVWhmUXdjaTdtN3c0VnRDQks4QVhiOENXOU8yY0t5c3laY2JkbVE?oc=5",
+    "source_published_at": "2026-10-09T13:02:45+00:00"
+  },
+  {
+    "n": 65,
+    "title": "Zionist Air Strikes and Shelling Hit Southern Lebanon, Violating Ceasefire Agreement - www.horizons.dz",
+    "source_report": "01_daily/news/2026-10-10_intake.md",
+    "source_line": 440,
+    "source_sha256": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNSG02ZzhocnBQZDJTVWZrVWo3YmZkV3pXcWhJM3pYNlk0MENYLUpoLUQyRFF5eGsyWld4cVhWZHlQNUhRaDVyYURnUXdpY2RUQzU1MVN3TDNfWWxBekZueGtWbW1ITnlTMGVvNkJGS3dvZ3F3bFlBTmU0elhxQW5DNGtCcy1PU25xeXE4ZVBQaDhYUFNiMlVodWVBWkdFeXV4Mm4xWHp5RVloZFcyRVlBNkN4RU9taDhrbWNWR2dSMHVFTEVqaVJj?oc=5",
+    "source_published_at": "2026-10-09T18:22:41+00:00"
+  },
+  {
+    "n": 66,
+    "title": "British Pound: November Bank Of England Rate Hike Expected, Says MUFG - Exchange Rates UK",
+    "source_report": "01_daily/news/2026-10-10_intake.md",
+    "source_line": 155,
+    "source_sha256": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOeDVGM3RIR0JrbDFmRWJVN1RLZVBXZkZCM1RQYXlLUmFyYnJUSEZGUnJVS3B4dGtHclBmU2NRR2s4TGtfenVrVjlScXdWcHFTZmN1MVRRdXpGVnJidTZtb1NPbm9BRnVDOHFZaG5WVVlIMF9weHgxNTBGbXE1Ynlwd09EWTYyNGVDZTg4eFNuZGp4dHhKeTd3X1JmeUQ1QXhBZU14d21NZXdKLVhBNE5TRDBBeFVTTUhHMm5fZVdNbmZJOGhtU1E?oc=5",
+    "source_published_at": "2026-10-10T14:30:00+00:00"
+  },
+  {
+    "n": 67,
+    "title": "In 2013, A Los Angeles Engineer Spent $19,000 On His First Tesla Shares. He Survived A 2018 Margin Call And A 76% Crash In 2023. Here's What Investors Can Learn From The Wild Story Of Jason DeBolt's $19,000 Purchase Turning Into $2.8 Million. - 24/7 Wall St.",
+    "source_report": "01_daily/news/2026-10-06_intake.md",
+    "source_line": 505,
+    "source_sha256": "e3b58c9df1b94e14f42a3b67551762b0bb6d1ece9a0285460b7049f8744db711",
+    "source_url": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxNMG90S3VpakM5b1Fod1FDc3hremlVZ1kyTUdnNmphOVZ5cHlweGpzM210MnR1SS1YZkdWeU1RRVF4RTcyUEw4OEdzbDVFMFV4S1BzNVdXTHJpUTNLbFdFOS1LTlpFbjRLQ0tlWklINHhxOHZRQV9IQXpNQmpNdllCdDhzREhKbXJyckJVb1lEX2pKcEVTYUpkMHhWN2k1WXJqY0Fud1hGdDI0SkxOdDhwNGxlX1dOWnI3WTAzRl9IbkwtU05UOWZfZlVNREN3ZmN4aDNWRlBJcTJudkc0bDA2UEhySnRfc0ptdm9mMXJZLWV5T3ZFX0VLdk1uNGh1SXB4NTlRbkhZVk1Pb004cHhjZkZVYy10d3JXNTB6OEMyUlhDNm15bHFTaGJJN0FWYmV5dHVQdGdNMG5VXzk4ZFEybzdqVkt1VnFSSHBCUHVaNTIzQjN1?oc=5",
+    "source_published_at": "2026-10-03T19:52:00+00:00"
+  },
+  {
+    "n": 68,
+    "title": "IndiGo Revises Fuel Surcharge Again on Rising Jet Fuel Costs - Kalkine India",
+    "source_report": "01_daily/news/2026-10-06_intake.md",
+    "source_line": 227,
+    "source_sha256": "e3b58c9df1b94e14f42a3b67551762b0bb6d1ece9a0285460b7049f8744db711",
+    "source_url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOcXo5dHR6ZlhvZ29kdlhpQy0xTkgxcktna0FDMVA3OWJORTBwWkM3LVp0eUlUc2NjYmtvREJwLTJ6TnBONnNfTGgtclA5N09WTXdfYmlvRkNiTmRTTEc1OUJSMjZ5M1NWa1R5akxzLXQtVXB4RkJ1ODFqWmhNeElOemRINTg1VFN5ZVQ5dW5zWVBIU1ZKSkg1VU9LUlN6Nk9FN0QyaS11NU0xZUZLeVRfbnY2NmFGUVhqSGVzd2wwRmNoeDctX0dsV1hfeFJmeVZpNmJzSXNNUTM?oc=5",
+    "source_published_at": "2026-10-06T07:41:00+00:00"
+  },
+  {
+    "n": 69,
+    "title": "Oxford Metrics shares sink on profit warning as entertainment and research demand weakens - UK Investor Magazine",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 337,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQdVh4RXEzMGdDS2hmbGJHODdqanA3UFJqZkdZNmNaTENVRWhVRTZOeXloaFNGQ2FobkFGR2dMdkNzT1pldXBydEhpOFc1ZTljLXBLSzFHS2pYcHBVa0FmQ21na0hLVzZqelVYNGFDaEdCRk00THMwVWh0T0lMRE1UUU40MVpoZEp5NzVYX19oOGhjYl9mOHh5aGpmZzhSRWJneWNia0tiNnNUZUhfZjE0QzNSUmlINHVHSEFickR3YzA?oc=5",
+    "source_published_at": "2026-10-09T07:13:21+00:00"
+  },
+  {
+    "n": 70,
+    "title": "(News) Samsung 3Q Preliminary Results Preview: Market Sees Historic KRW 100T Profit, Memory Margin Could Top 80% - TrendForce",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 347,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOQXFYSzE3M3c0QUMxTDBMdzRERzlWWF85UlBHX0h6YkxqNm1laXJLcGRxZ055eHY1eEJCZDdPSEhTNFVNMFFuVmhjMmNHc0lmS0tHUEZXUG8xUnJDSG5pd010RU1kS0pxQTdyeHAxTG5Pazh4ejVvQkRKSFlfNFRFQkNxbXE2VHBFcW1FUjNreE1XNVVfbHBJRGlQVk4tWlc0ZGJ6cUNoa01mVzM3QkVOUVFwdC1xeGk2ZmRvOTA5YlZXSWNNLW0za3VJakVERVBUZ3Y4Rk1uOFJOMXFCT21pTlZJenZLQQ?oc=5",
+    "source_published_at": "2026-10-07T04:07:17+00:00"
+  },
+  {
+    "n": 71,
+    "title": "Iran puts oil executive in charge as minister resigns amid war - middle-east-online.com",
+    "source_report": "01_daily/news/2026-10-05_intake.md",
+    "source_line": 49,
+    "source_sha256": "f631e1d3f63c5979db4acadc60366a9ab54f4dd5444f3bacdb6fcaf4188f910b",
+    "source_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQY3lzWjE3ZXI4aEx2eGMwNmdvcVcxV1RZUFA2b1FyLTNsMmswZkRJS1NtdDJfZ2xXbXFmU25LdUd3QlItSHlUcXdRRUttMVE3Vk9xNXpNbjJOTjRCYjZWb2N2b1RWb29vNXB4enVqSVJManJnM0ZTNlBIRHNWRGQwQnFMajNrZ1VRMXRXbnpabENzZ19H?oc=5",
+    "source_published_at": "2026-10-05T06:31:56+00:00"
+  },
+  {
+    "n": 72,
+    "title": "'Breaking Bad' Actor Dean Norris' Historic Swing Inn Cafe In Temecula Files For Chapter 11 Bankruptcy - Patch",
+    "source_report": "01_daily/news/2026-10-13_intake.md",
+    "source_line": 160,
+    "source_sha256": "852a654b720130ccfaa01846eb2896a03e18b35f971a1a6d80413323aaada2d1",
+    "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQd0NOZkFXWEdxRWpJZ2ZoZ2RGMi1BVG04SklUY25oOTFxMnZ5OFlqWUlaLTZldVVMa1BsV2M0QzFfNXE5U2d0ZDljT1Q5UThzN0hkdlZZT0dKQl9oQ1pkbW9UNTFoUWQ3d3VmbXRzU0ZjLThKcDhxV3hnSmJpWFJkalZVQmZVS1RsaWZybTVQS2VLQkZCd3I5bGlwZHRwUUFpbXlZLWtQSXlMMDJMNElNclJFamVOUkJSTUHSAeMBQVVfeXFMTW9GdUV1Q3JRTzh1Ym5XSzQxMTF3cTlhN3FqM1BRMENBZHg5SjNLWEtsRWpsWnJjRjZCdHEwanJUYWpVeS1VeGxXcVdsTFdhSXVWNjBHYURUZi1DNTBoQm53UjVjQm5aZnY0UEduRmdoR1l5R1dHUU9KaHJaa3pYNndiNTJybDVzQW9PODVqX25YM1lFU3gwb0hJRGg2MmNqX2FxREtKUUE1MmVfeFJvMldpZDBRdlJLWldfRUdacEtTXzFqYkRKdV80MU5ZMGp1MC1QUVZtNjkxU2k2dlRhTmpvSG8?oc=5",
+    "source_published_at": "2026-10-13T00:33:00+00:00"
+  },
+  {
+    "n": 73,
+    "title": "Rachel Gilmour MP steps down from WhistleblowersUK board after two months - midweekherald.co.uk",
+    "source_report": "01_daily/news/2026-10-03_intake.md",
+    "source_line": 85,
+    "source_sha256": "9522f39df1950c8337868b64c9865916cdc81e5abadfee1c40c7560e43ea9ab4",
+    "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPV3dHenBKMHphRkRyRHA2am5GYy1qNHFjVEdDeVJXYUtaQ19QMFg1VGtNTUxHTXpVMlEyb2VhMGtBWmxaeWktUlc1QWJ0OXh4Y1RFMWpRMVRWSHFUWmFRNnlwcy05dEljTGtTNGdEaXRqR3M5ckZsRFFYakhZd2t4ejk5Z2JvZjNibGpyWFNHZ1UxZFdURzBWdA?oc=5",
+    "source_published_at": "2026-10-03T11:00:00+00:00"
+  },
+  {
+    "n": 74,
+    "title": "Pulev: lifting diesel export ban brought money to Lukoil Neftochim - BurgasMedia",
+    "source_report": "01_daily/news/2026-10-08_intake.md",
+    "source_line": 288,
+    "source_sha256": "34fc130ba520d0e32e6c7f9e4b74d2f3459a02d82546485f7357a4562ab6c800",
+    "source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOc1BwdGJlai1kQk1HSGhnMDBGZHE4R0YzUnRXSEhGX2t6MnpsMnNlUzBDbWZyLTU0dzlZRGFsZ19JM2VwQnBVNHNNWWVMS2F4TXVZOTNHWW9ja09mcTlIdDlfbncyVWtQTS1wb0ZXbTlzNHhUT29wSXIwZV9zSExqMFVFX21SSDh3VWpxeFNvbU5TRXpNbms5VExaNnVzSHBBMDNoVHRDODNMd1BvdWIxTXNJUXjSAbQBQVVfeXFMTnNQcHRiZWotZEJNR0hoZzAwRmRxOEdGM1J0V0hIRl9rejJ6bDJzZVMwQ21mci01NHc5WURhbGdfSTNlcEJwVTRzTVllTEtheE11WTkzR1lvY2tPZnE5SHQ5X253MlVrUE0tcG9GV205czR4VE9vcElyMGVfc0hMajBVRV9tUkg4d1VqcXhTb21OU0V6TW5rOVRMWjZ1c0hwQTAzaFR0QzgzTHdQb3ViMU1zSVF4?oc=5",
+    "source_published_at": "2026-10-08T07:23:26+00:00"
+  },
+  {
+    "n": 75,
+    "title": "Soft US payrolls lift EM Asia stocks, Taiwan notches record closing high - marketscreener.com",
+    "source_report": "01_daily/news/2026-10-05_intake.md",
+    "source_line": 67,
+    "source_sha256": "f631e1d3f63c5979db4acadc60366a9ab54f4dd5444f3bacdb6fcaf4188f910b",
+    "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORHctV0Jyd1ZhYjcyN1Q3TkpKNUpWUWx1RlNlVkY3dFNEdkFOejM3djg5bll2ZWIxc2RtQkhFRF9MVmlKSld6em93R05ISDZXM0ZROHlKNnVOc0JvV0o0dERpWFUtSWlPVGtrcDZ0MEl1bFFBdzBmUlo4MlRsdUJJMnFLTXNuY2lMV0VmeHBlX3lNQWtGQzRIMWN1cWxTTlV5bF9acHN1YlpVU04yS1dSdjhtQ3B5R3IyeHVPSTlFR215QQ?oc=5",
+    "source_published_at": "2026-10-05T07:35:39+00:00"
+  },
+  {
+    "n": 76,
+    "title": "Wittington Investments, Fairfax to acquire Boots pharmacies in $12.7B deal - RENX.ca",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 39,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMk9tQW9vNlphbEY1Q0dLaUItS1UzV0V2ZDg3cDhjZFI0cGVLYjkyTmVxRjY4RFBjbzI2bnJELTQ1enAwYkpPb0ZYNFcxVWlQVmlseGc2TmRIVzE1VHRuZjY3NFJNNFlHajNwcWJLM2dhZkNSZnRXSjhsb2tJSFFlMkNkM044UEg0cTlES3E1VHF5Nm41WGdESg?oc=5",
+    "source_published_at": "2026-10-07T14:48:17+00:00"
+  },
+  {
+    "n": 77,
+    "title": "Apple TV’s latest acquisition signals key shift for streamer - 9to5Mac",
+    "source_report": "01_daily/news/2026-10-08_intake.md",
+    "source_line": 37,
+    "source_sha256": "34fc130ba520d0e32e6c7f9e4b74d2f3459a02d82546485f7357a4562ab6c800",
+    "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOMlJDSXhPOHg2dmtKUEEwdmx1ZzhrLUZzSGloWmFGMjlhdnEyOTlyWnRyUllESDdUbGhRV2tLVFFFQ2dzN2pYRGV5aUxETGpsb1p3SUgxaUdjUUlYLXdtZTZfLUJzRXp0ZnhFdlNsRzVzWFlfYUFGZTRHaldoMUhKcnZtSFRQZFN5UmVjRlc1RUlxeHlPUkE?oc=5",
+    "source_published_at": "2026-10-08T14:32:00+00:00"
+  },
+  {
+    "n": 78,
+    "title": "'Can't Pretend Things Are Normal With Oil Prices Hitting $100': Jaishankar On Global Energy Shock - News18",
+    "source_report": "01_daily/news/2026-10-04_intake.md",
+    "source_line": 146,
+    "source_sha256": "7df26e8e3794315c73bb7bac3ae0a89b0a34ccdb7e9faee239a98adbf7c76980",
+    "source_url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOQ2MzLUlnNGlSeVRyVkNvOHNaeDF1TzZlOERhUTRNejBnRTJrUnpSSWdlQXlPLXBZU3hCRXhfT25fQzJVdHZLd3JBVUJta1NvcVptNjRhNFlERllOVlAyd0lMRHBjbHFabWdRLWZJRDdycnZLTmpSN0hnWWxhYUpLdHlFMXd4ZGlFaGk1RWlDSHllWFFEdVRiR3RGM21OS3VVWGVPZXFYbGRJVFlxS21Ob3NMc3JyZDZNbmVnODVkdUFuTDBwZzFtYTNvRHVGV2xzd3EtUS1iMU9HNkNFRklNdG5n0gHiAUFVX3lxTE5DYzMtSWc0aVJ5VHJWQ284c1p4MXVPNmU4RGFRNE16MGdFMmtSelJJZ2VBeU8tcFlTeEJFeF9Pbl9DMlV0dkt3ckFVQm1rU29xWm02NGE0WURGWU5WUDJ3SUxEcGNscVptZ1EtZklEN3JydktOalI3SGdZbGFhSkt0eUUxd3hkaUVoaTVFaUNIeWVYUUR1VGJHdEYzbU5LdVVYZU9lcVhsZElUWXFLbU5vc0xzcnJkNk1uZWc4NWR1QW5MMHBnMW1hM29EdUZXbHN3cS1RLWIxT0c2Q0VGSU10bmc?oc=5",
+    "source_published_at": "2026-10-04T12:54:18+00:00"
+  },
+  {
+    "n": 79,
+    "title": "Ticket resale industry lobbies to stop price cap bills - Arizona Capitol Times",
+    "source_report": "01_daily/news/2026-10-06_intake.md",
+    "source_line": 345,
+    "source_sha256": "e3b58c9df1b94e14f42a3b67551762b0bb6d1ece9a0285460b7049f8744db711",
+    "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOYWNJLWNhVUhfZVo3cUl3SUdWMG14SjBGQV9WamZxU1RLSTIwRmZpQVlZME5oVEd0S3NiWEZ6Y1pxM2VkVjlNai1HcHBaQnE3TlBNTmtwYTFNWk1iUF9vQ3RkU0xVTDQ2czJWZTJmalYxN2tCSmpzcG5tQkd2WXV4NnRMSTVoTk5xdDVuMUtGN0xtcWZ2cFUxVXNrYnozc1U?oc=5",
+    "source_published_at": "2026-10-06T06:05:11+00:00"
+  },
+  {
+    "n": 80,
+    "title": "Liquidia stock rating cut to neutral by BTIG on patent ruling - Investing.com Australia",
+    "source_report": "01_daily/news/2026-10-02_intake.md",
+    "source_line": 398,
+    "source_sha256": "f8d306f65f640e44ecfdd723f8ca9ed2adc8176d28743777163767259ac4bb8c",
+    "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPTU1JcVJ2N1hIVklCUndvLTlnS19kaTJ0T254cnRxZEpDLVhGRkZ5eE9JcXV2dG93cHNNUDdwM2dhb1ZVSnEzSG4zQ2pCVGs5VlpyWldnMXlOM3NDdlRlbGpJb1gtQnVWX0N4OTNpT0NNbEc3ck9GcDBqamxzbHRPT18xSW5USkQwc3FSTWJIQkw3cnZLZUl6YnY3RmlCSXFKZFdUZWJDaExkQlRoek5Hcmk3UjJPUGMzcHVJVTIwYw?oc=5",
+    "source_published_at": "2026-10-01T18:06:40+00:00"
+  },
+  {
+    "n": 81,
+    "title": "DCM Shriram Expands Chloride Production Capacity at Bharuch, Gujarat - Chemical Industry Digest",
+    "source_report": "01_daily/news/2026-10-04_intake.md",
+    "source_line": 281,
+    "source_sha256": "7df26e8e3794315c73bb7bac3ae0a89b0a34ccdb7e9faee239a98adbf7c76980",
+    "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQY1VMQTM3VWh2Z1o5Qi1jZUU4dkVYQ0FSaHptZ1pOZlM2TDZKRlRkQTdvaDJWc0M2MUdlYk53SWYyZmlqeVB4dWEzNWcybjJOcFZjTkNaUlVnbzhEY0Y4MG51Z1p5aXZ4V0lBTUFndHdYU3pfMWdGX29DWW5CX0hZd3dkalRwVFl3aUpZVm96SE0tc1pPTndGdg?oc=5",
+    "source_published_at": "2026-10-03T06:06:13+00:00"
+  },
+  {
+    "n": 82,
+    "title": "Park Medi World: Cancer Drug Price Cap Will Barely Hurt Its Business - Ahmedabad Mirror",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 360,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNdl9tTWE5MHpzTjFCbmdqc2lqWnZsc1RQdGkzTm8tWHI5QVlPTWdiX19vTEE2bzB4SkoxMEx6N3I4QlVBdDlnZjRkSjlEM1JIb3dmUVQ2dEhocnhCTXVWb2F4cWtENkNXVEVYWTEtcExJTnlWOHMwN0tSaWVKNjBxNFFseXF4U21kbjRudHR1ZGtjaEYyVW5QeXpOa3ZJWHFPT0VQODRzWEZBYkJoazZBWDVzdw?oc=5",
+    "source_published_at": "2026-10-07T03:57:27+00:00"
+  },
+  {
+    "n": 83,
+    "title": "SJE Acquires Wilson Controls - Supply House Times",
+    "source_report": "01_daily/news/2026-10-04_intake.md",
+    "source_line": 34,
+    "source_sha256": "7df26e8e3794315c73bb7bac3ae0a89b0a34ccdb7e9faee239a98adbf7c76980",
+    "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFAzc3JFNnJnaXpiSzUwVXNXZV9tMkxYTHZMQ3AxemZCZ18tVnlHeWNkTm1rNmNzZXZTVTNTTFZWY045SXVsNlZTRWhpUjJNeno5Y0Z3MUNvODNfUmZMQk4tYTlQTkdDR1NvMjQ0SUEzUFhzTDdSUnRnbw?oc=5",
+    "source_published_at": "2026-10-04T12:00:00+00:00"
+  },
+  {
+    "n": 84,
+    "title": "First Look: Dow Drops, Amazon Cuts Jobs, PepsiCo Lowers Outlook - GuruFocus",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 370,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPTFM2dGI1VURMMXlmMXRsclQtaERCRkozb2gzSFltSmpoN1dpR1g4Tjd6RXJfRm1oTVJpZ0NiWmdoU0VxRVh5a2MxSmY3eXY0a3BCLVF5UnRBeVdRQUF5Z2VKc3NxWGtiUjdHME1GUjhlUnhiRktKZlJEczhmejV6aEJRRmNkcENxZTFGY0FuRFRUc2FHdkVNdy0zaEY4N2pU?oc=5",
+    "source_published_at": "2026-10-08T12:02:19+00:00"
+  },
+  {
+    "n": 85,
+    "title": "Konsolidator A/S (KONSOL) Calls EGM After Negative Equity, Cites Refinancing - TradingView",
+    "source_report": "01_daily/news/2026-10-05_intake.md",
+    "source_line": 221,
+    "source_sha256": "f631e1d3f63c5979db4acadc60366a9ab54f4dd5444f3bacdb6fcaf4188f910b",
+    "source_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOVllJS3RGbUdoQzV2VE0zbkEwcnJ6WUxnamxaVHFMLVRGNW82SWw5eDA5bFo5ejU2bjAyZmo4dzl1SWpaa1pGbkUweU5rNE91bUg2blo4TU1GTW1VMVBScThoRHdqV0otcUZqMkZ6T0VXTF9ZUW1OWm5CZE1aeWNKakE0T3hNdDhSN19NU2wySG96QXdISFp3V1JSN2ZOUUJpa2hkNmQyS1lQSWxnZXVXMWxPTmJGQWRoQmJhS3ZWeXQ3RVFIOGhzdEIzbnBra3Fu?oc=5",
+    "source_published_at": "2026-10-05T07:11:00+00:00"
+  },
+  {
+    "n": 86,
+    "title": "BSP may deliver fourth straight rate hike amid mounting inflation risks - BusinessWorld Online",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 107,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPR2tLS2tvN214Z0RLYkJaWTIxa2szcDlMZjJ4V0pDVHZfc3VScFNZU1pjd3hQQTE4VU5LY2Z4ZGZxTVlwamd5enhUd3NtZVVJNUxTc0Iwc29aOXZjellVLVRCX0I0RU1Zb2NSaHJfSmx2RmNJbEdIOGVzcnM3UG5zR3Y4WnFoMjdPMWl0b0VidERDcG5nS3VBak5nZXlta2NnQ0RXSkNxcVlHdHpwdTQ3X3drUnJRMlBBMC1PYUNZV2JtLV9lc0Yxdw?oc=5",
+    "source_published_at": "2026-10-07T14:07:10+00:00"
+  },
+  {
+    "n": 87,
+    "title": "India’s Biggest IPO Faces a Price Check as Investors Turn Picky - Bloomberg.com",
+    "source_report": "01_daily/news/2026-10-06_intake.md",
+    "source_line": 52,
+    "source_sha256": "e3b58c9df1b94e14f42a3b67551762b0bb6d1ece9a0285460b7049f8744db711",
+    "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNbWNXX2hBbGtURFh6U3l6Z1pndDFKOGJRdVExUFRURUlWdkp5bXNDNDZTM0FkVVhoLUxnNUVSR05rWjVCWE82VEpPSUEwM2RtN3ZnZ0ZsYjRFZlhTSDlpT0xnZUV5TVBFb2puRkVLb05DTWhUUmhrNmZuUGFaTDFsVFhSUjFuRllHVGl4Y3lqZnBKWV9vYVl1MGFvUXp2UHk0bk5ycERTU2d2U0ZNWG1CYUNxdw?oc=5",
+    "source_published_at": "2026-10-06T12:30:01+00:00"
+  },
+  {
+    "n": 88,
+    "title": "Levi Strauss Q3 Revenue Up 4%, Raises Guidance, Announces $100M Buyback - Minichart",
+    "source_report": "01_daily/news/2026-10-08_intake.md",
+    "source_line": 382,
+    "source_sha256": "34fc130ba520d0e32e6c7f9e4b74d2f3459a02d82546485f7357a4562ab6c800",
+    "source_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONnoyaFdPbF9lOWFGWXB4c3FSNDc0Ukh4Z0hfWjQ0NGRmSlhTN0VfbDhZZmhQRHZTb3Jkc2l2TXZuWVM3YlEyS09PVVRabmEzSXZ1LW9jd2hYRjkxZjZ5N0w4d2MtSWYxZWxMS1laVXVEV1pQdUVWRTlfVGxIRmlBOGxfd1JDaXdvbTV1eTJXcElXeDB4eGRVUmk2aUNhLTlpNUVPSDVOVkRjdVNS?oc=5",
+    "source_published_at": "2026-10-07T23:34:00+00:00"
+  },
+  {
+    "n": 89,
+    "title": "Quince’s Insider Sale Is Live for Only 24 Hours—Here’s How to Shop Deals for Up to 30% Off - StyleCaster",
+    "source_report": "01_daily/news/2026-10-06_intake.md",
+    "source_line": 238,
+    "source_sha256": "e3b58c9df1b94e14f42a3b67551762b0bb6d1ece9a0285460b7049f8744db711",
+    "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZjdPSGxuWDZaeWdyWWtEYVA0NXFKU24yVE9BU19VandNaXZxZFZIRnpZd0UwY0gxVk94RDNEaUpvVlFHd1JERElKeW1JMFBtcnlKY05LU3NXVW4tNFlfV05sYVRmXzlKMGJhZjBSUHBXSlQzRTl4enBuY0pqeDJGNEZ3M3pRUHcxQXNnTElNYkwxM1VIanQ1b3h6bjBLMXFKUUFlNg?oc=5",
+    "source_published_at": "2026-10-06T10:00:00+00:00"
+  },
+  {
+    "n": 90,
+    "title": "Tabung Haji resumes services after cyberattack - NST Online",
+    "source_report": "01_daily/news/2026-10-12_intake.md",
+    "source_line": 93,
+    "source_sha256": "1ca8da95ddf81704e10bf6dfdda5edc0286da0dc5e2efeb2ae9e42d6690c9dff",
+    "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbFJrLTc5TC0xS096QW10QVd3OHN1a1hqUXZxaFhSMDBoSElxX1ZiVjAzcENDbTFlaE9sMHlDN19jekpxMlBnY01rd3o2X1ZMSHlFWHlvdVo2WEREYTB0ak11MG81NVRKUm9CaDJLOVRpaElhWTdVbWhsc0xPa3NqUzU3NTczVE1jSmZ6ZVlYemY1MFdxV2FIajlLWmM2Q2Q4N2RZ0gGjAUFVX3lxTFBsUmstNzlMLTFLT3pBbXRBV3c4c3VrWGpRdnFoWFIwMGhISXFfVmJWMDNwQ0NtMWVoT2wweUM3X2N6SnEyUGdjTWt3ejZfVkxIeUVYeW91WjZYRERhMHRqTXUwbzU1VEpSb0JoMks5VGloSWFZN1VtaGxzTE9rc2pTNTc1NzNUTWNKZnplWVh6ZjUwV3FXYUhqOUtaYzZDZDg3ZFk?oc=5",
+    "source_published_at": "2026-10-12T05:01:50+00:00"
+  },
+  {
+    "n": 91,
+    "title": "BD reports nine-month AGILITY trial results for iliac artery stent - StreetInsider",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 290,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOallNbVVWZWJHZGFrYVpHOVlGaFdKLURSUGZFY3NEWTNNUmZpSkh0enNST3EyX1QwM1ZobHNLR1R0MnBBd0dXT3FXbVFKY2hka00zS25NdG40bVd4X3E1aW8wRDU0MUJpSlRzMEhRT0dpa1pDZ0Jfb3llN0M3LXBzX2JzZGhGamxuTTRnbXZyS0I0WkUwREViQlRqbmFZRlNSNXBoeHNvb2JuVGdobWQtMVdJdFVLSFFKS042REJrVlU2UUk?oc=5",
+    "source_published_at": "2026-10-07T12:04:17+00:00"
+  },
+  {
+    "n": 92,
+    "title": "Marvell posts record revenue, raises guidance, but stock lags amid AI sector pullback. - Pluang",
+    "source_report": "01_daily/news/2026-10-03_intake.md",
+    "source_line": 371,
+    "source_sha256": "9522f39df1950c8337868b64c9865916cdc81e5abadfee1c40c7560e43ea9ab4",
+    "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQM0twTGlyamM2SG16T1gzNHRmR1VQTVNvUTZHOEFYbFhHUGxqeUZua3FFN2p0M0RkMFdtZ3hIZ29pT3pNTkQ0dVliazFoVVlteUdsSGxEeVpOdjBRZDZTSEM5NWtMcXdwbzJpd2RHTzl3ZDlTcVlfTmtVZkllOFh3NnFn?oc=5",
+    "source_published_at": "2026-10-01T14:05:24+00:00"
+  },
+  {
+    "n": 93,
+    "title": "Judge to weigh bankruptcy, trustee appointment in Camp Mystic case - Dallas News",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 202,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOMzRocTRjbkpPQnVwMFFUUlozeEFlSzY3cXZnQ3gydWtuSEdoY0oteFFGdEFpUzRpVTh2dXpvWlZkY253OWZCcmNpM1ZXWDlyeGlack10LVJJU01za2NZNXYyRFdoMkctcTNpQUtwMWQ1eWxZbE85d1JCTXFkRFFIb1dVOExHSUFkM0RqUm1ualRfS1lGeXdKNjhmUnNTTVRRYWpzNGpqMA?oc=5",
+    "source_published_at": "2026-10-09T13:45:02+00:00"
+  },
+  {
+    "n": 94,
+    "title": "‘A Dark Day For Hollywood Labor’ - Paramount-Warner Brothers Mega Merger Approved - WNY Labor Today",
+    "source_report": "01_daily/news/2026-10-13_intake.md",
+    "source_line": 463,
+    "source_sha256": "852a654b720130ccfaa01846eb2896a03e18b35f971a1a6d80413323aaada2d1",
+    "source_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQWW1SOWlHZC1HcmVmSnNfdFVhanE5MXFMNVh2ZGdtZ1Rvd0FKLW84RXhSSWVra0QtaDh6YXkzMTdLS3NEdjY3OGg0LUZjWlE0cl82OGVZZjZzcmFDaVUtOWJaWTR5Y3RHWklhaUJfVUtEbmtQcUluaGl3WWxfLUF1SHI2SWxPcS0yeEIya3lzbVJkVGhxYkV0Z3p1NE4xbS1BbHowYWtqTG1pcjJRYktibURFUnVneUlJcTlVUlNaR1R5RVd6b2lhWjFsYUJrQTlYOVAzRmlGaVE4YUNj?oc=5",
+    "source_published_at": "2026-10-11T18:48:51+00:00"
+  },
+  {
+    "n": 95,
+    "title": "German Labor Minister Bärbel Bas Resigns - blue News",
+    "source_report": "01_daily/news/2026-10-12_intake.md",
+    "source_line": 107,
+    "source_sha256": "1ca8da95ddf81704e10bf6dfdda5edc0286da0dc5e2efeb2ae9e42d6690c9dff",
+    "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNWXhzd3pzQXV6R0dJR3AxZUpNajdZSkYzNmJUUDRZdVJtZnh3bjM5UXVrWmhnd05VWlhfZkhxNkNZWmU4UktZRldfcDc5MldQSmRCN01lREFMWXJRTlB2WnIwMEN6bnZFU1oxdW41Z0ZobFpaYlhlYnhmYnVCbHlJcjk3RWtaRVkzMjlJbk5JT2VHdnFCSC1BM1ZNVHI?oc=5",
+    "source_published_at": "2026-10-12T06:20:02+00:00"
+  },
+  {
+    "n": 96,
+    "title": "Alares finalizes BRL 189 million acquisition of Oquei Group - Telecompaper",
+    "source_report": "01_daily/news/2026-10-05_intake.md",
+    "source_line": 34,
+    "source_sha256": "f631e1d3f63c5979db4acadc60366a9ab54f4dd5444f3bacdb6fcaf4188f910b",
+    "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRU10WV95S2FYeGZ2SFpRMmlIa2wxbWZNNmZyZEx6WW5pdTV3a1Raek1FNXFjbVNGSDBqdWdnQmF6cWdzUHBXOTFRUlNNbXRudjg5TlRHeUZyWDRhcWRVaE9mSTZnZXZMbG1ZeEtRQ0pyOUllYU40VGFoQzB0QzRhVU03NklXMmxtdUxlazdaaWs2RW5lMXFkUlZZV0V2b1Mzc2xWSQ?oc=5",
+    "source_published_at": "2026-10-05T07:47:06+00:00"
+  },
+  {
+    "n": 97,
+    "title": "Lupin Receives US FDA Approval for Phytonadione Injectable Emulsion - Machine Maker",
+    "source_report": "01_daily/news/2026-10-10_intake.md",
+    "source_line": 166,
+    "source_sha256": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNejFOQ243dEZDcDlDeGtseWp2NDczOXAxMlVNaTlURGN3SlJna3RCTHpCeGswM2VLMV9BazUzUHI1RXUxT1diMDh3elJ5VTJ3T3VMQVF6X1VJM1YxZW1BcHNKWV9mUUlTNnVwcjhIaEdzcml0bUQ3MGQ3UjItNkJvamR4VEVVWXV5VU1hUmdKQlBJc0RUZWg3cDVjRGNfTlBnV3RB?oc=5",
+    "source_published_at": "2026-10-10T09:37:12+00:00"
+  },
+  {
+    "n": 98,
+    "title": "Critical Mineral Resources: New backer brings 'money with help' ahead of maiden resource estimate - Yahoo Finance",
+    "source_report": "01_daily/news/2026-10-07_intake.md",
+    "source_line": 422,
+    "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPeU9IbTFRWHBTX2RtbExNc0ExTS1LNzV2YmRhbHJZWnI2YzFnT1lwQzdjb3lPOGxTekVfTTBjNmFBa2RFLWo5NlpUaTJaVmJ6R0hmSDI2LTFKVEF4WDFWY1BvRDdtajN6UXYtTmVvdDBFTkFNUVhaY0tvWHd4YmZPdThkNE54XzhQdUJFaGdoYnk?oc=5",
+    "source_published_at": "2026-10-06T13:25:53+00:00"
+  },
+  {
+    "n": 99,
+    "title": "Unions call regional transport strike, threaten weekly walkout - DutchNews.nl",
+    "source_report": "01_daily/news/2026-10-09_intake.md",
+    "source_line": 233,
+    "source_sha256": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPamJHWHRTZlpCcmt6SHlaQjBUT1czamx4UjBxZVBMeFNnZkFzeUxfNmsyN1FKZkxidzd6VUVHdHBJcTNneU5JbVprTmdwamN4SFFjaGJqODY2Z1FWN1E0Q3VCdjl1T2tINXlvdTEyc0M2eFpKdWdVdXdyMmpkOWdMSU5DRmoyQmR2UHFmb1NwR05nVmpUYmQtbzBkaw?oc=5",
+    "source_published_at": "2026-10-09T13:16:14+00:00"
+  },
+  {
+    "n": 100,
+    "title": "Belden Introduces New Factory Insights Offering - marketscreener.com",
+    "source_report": "01_daily/news/2026-10-02_intake.md",
+    "source_line": 316,
+    "source_sha256": "f8d306f65f640e44ecfdd723f8ca9ed2adc8176d28743777163767259ac4bb8c",
+    "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOWHVYU0h1TEpoa1l5NHluUU81U0MzSnlrQWoxUF9lU3RGZWYzNGJEdmxzODBuYzUtQ3d4TjdVcmFDVHZmMWo4eDhUaHZ2ZFNNOGJFbzRGanhIVVNERDVaZ2FrR1NkNWlSVWtVd29hdm00dEdYUFRCakh4MDBHb0kzNk4zYkw3VllHNThyckJQczJodi1QcFdIRWdzRTZqRWxEYWc?oc=5",
+    "source_published_at": "2026-10-01T19:05:13+00:00"
+  }
+]
