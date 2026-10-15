@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T05:45:37.829217-04:00",
+  "generated_at": "2026-10-15T06:17:16.705862-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -75,9 +75,9 @@
     {
       "name": "map_heat",
       "family": "heat",
-      "status": "degraded",
-      "n": 15,
-      "detail": "morning research missing; Finviz industry residuals applied (15 OVERRIDE/SPLIT rows)"
+      "status": "ok",
+      "n": null,
+      "detail": "post-close baseline + morning evidence refresh"
     },
     {
       "name": "general_predict",
@@ -106,7 +106,7 @@
     "news": "missing",
     "ab": "ok",
     "peer": "ok",
-    "heat": "degraded",
+    "heat": "ok",
     "general": "missing",
     "sector": "missing"
   },
