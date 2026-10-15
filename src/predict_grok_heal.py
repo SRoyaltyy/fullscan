@@ -67,14 +67,22 @@ def restart_and_verify(guard=None) -> tuple[bool, dict]:
 
 
 def heal(date: str, predict_ok, run_predict, *, log_text=lambda: "",
-         guard=None, now=None, max_retries: int = MAX_RETRIES) -> dict:
+         guard=None, now=None, max_retries: int = MAX_RETRIES,
+         trace_ok=None) -> dict:
     """predict_ok() -> bool; run_predict(env) -> returncode;
-    log_text() -> recent predict-step output (auth detection)."""
-    out = {"retries": 0, "ok": bool(predict_ok()), "reason": ""}
+    log_text() -> recent predict-step output (auth detection).
+
+    trace_ok() -> bool. When the caller passes it, a quality-ok essay
+    whose trace is not Grok (the 10-13 glm-5.3-flash case) is retried
+    once the gateway proves 17+25. A failed retry must not delete the
+    essay: run_predict sees PREDICT_GROK_REWRITE=1 and keeps it.
+    """
+    trace_ok = trace_ok or (lambda: True)
     auth = is_auth_failure(log_text())
-    if out["ok"] and not breaker_opened() and not auth:
+    out = {"retries": 0, "ok": bool(predict_ok()) and bool(trace_ok())
+           and not breaker_opened() and not auth, "reason": ""}
+    if out["ok"]:
         return out
-    out["ok"] = False
     while out["retries"] < max_retries:
         if not before_cutoff(now() if callable(now) else now):
             out["reason"] = "past 09:00 ET — no retry (would be a backfill)"
@@ -87,16 +95,17 @@ def heal(date: str, predict_ok, run_predict, *, log_text=lambda: "",
             break
         reset_breaker()
         out["retries"] += 1
-        env = dict(os.environ, GROK_ONLY="1", LLM_BACKEND="grok")
+        env = dict(os.environ, GROK_ONLY="1", LLM_BACKEND="grok",
+                   PREDICT_GROK_REWRITE="1", OPENCLAW_RESTART_ON_TIMEOUT="1")
         for k in ("DEEPSEEK_API_KEY", "XAI_API_KEY", "OPENCLAW_XAI_API_KEY",
                   "GROK_API_KEY"):
             env.pop(k, None)
         run_predict(env)
-        if predict_ok() and not breaker_opened():
+        auth = is_auth_failure(log_text())
+        if predict_ok() and trace_ok() and not breaker_opened() and not auth:
             out["ok"] = True
             out["reason"] = ""
             return out
-        auth = is_auth_failure(log_text())
         out["reason"] = ("auth still failing after restart — device login needed"
-                         if auth else "predict still missing/QC fail")
+                         if auth else "predict still missing/QC fail or not a Grok trace")
     return out

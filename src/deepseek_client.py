@@ -536,6 +536,14 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
             last = f"timeout after {read_to}s: {e}"
             _breaker_note_timeout(stage_label or "llm run")
             print(f"[openclaw] {last} — not retrying a hung {read_to}s call")
+            # The gateway timer is 10800s, so this hung turn is still
+            # inside the process. Bounce it once so the next stage is
+            # not queued behind a zombie. The breaker stays open.
+            try:
+                from .openclaw_fastfail import note_hung_call
+                note_hung_call()
+            except Exception as exc:  # noqa: BLE001
+                print(f"[openclaw] hung-call restart skipped: {exc}", flush=True)
             break
         except requests.RequestException as e:
             last = str(e)

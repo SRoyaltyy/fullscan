@@ -438,11 +438,16 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DATABASE_KEY: ${{ secrets.DATABASE_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FULLSCAN_PUSH_TOKEN: ${{ secrets.FULLSCAN_PUSH_TOKEN }}
           OPENCLAW_TIMEOUT: "600"
-          # Fail fast (2026-10-07 hang): cap each OpenClaw read and stop
-          # calling the gateway after 2 timeouts across all subprocesses.
-          OPENCLAW_READ_CAP_S: "240"
-          OPENCLAW_BREAKER_N: "2"
+          # 2026-10-14: a tools=True turn sat 240s, twice, while 17+25
+          # was fine. Cap the client read, trip the breaker on the first
+          # timeout, and restart the gateway once (the 10800s zombie
+          # otherwise blocks the next call). Gateway timeoutSeconds stays
+          # 10800 — the runtime door rejects anything shorter.
+          OPENCLAW_READ_CAP_S: "75"
+          OPENCLAW_BREAKER_N: "1"
+          OPENCLAW_RESTART_ON_TIMEOUT: "1"
           OPENCLAW_BREAKER_FILE: ${{ runner.temp }}/openclaw_breaker_${{ github.run_id }}.txt
           GROK_ONLY: "0"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'deepseek' }}
@@ -485,6 +490,10 @@ jobs:
             ARGS+=(--skip-sectors)
             echo "ubuntu runner: OpenClaw gateway is loopback/unset — skip sector essays (no silent DeepSeek)"
           fi
+          if [ "$ON_UBUNTU" = 1 ]; then
+            unset OPENCLAW_RESTART_ON_TIMEOUT
+            echo "ubuntu runner: no gateway restart (OpenClaw is on the ECS box)"
+          fi
           [ -n "$DATE" ] && ARGS+=(--date "$DATE")
           [ "$BOOK" = "false" ] && ARGS+=(--no-book)
           if [ "$FORCE" = "true" ]; then
@@ -495,6 +504,9 @@ jobs:
             echo "ubuntu late-heal --bypass-cutoff (after 09:25 ET; skip-if-good on)"
           fi
           echo "CMD: python -m src.run_preopen_all ${ARGS[*]}"
+          # 40 min, under the 50m step kill. A cancel revokes GITHUB_TOKEN
+          # mid-push (2026-10-14 15:16Z). Tail steps must finish first.
+          export FULLSCAN_STEP_DEADLINE=$(( $(date +%s) + 2400 ))
           python -m src.run_preopen_all "${ARGS[@]}"
 
       - name: Show QC
@@ -509,6 +521,7 @@ jobs:
         if: "!cancelled() && env.skip != 'yes'"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FULLSCAN_PUSH_TOKEN: ${{ secrets.FULLSCAN_PUSH_TOKEN }}
         run: |
           export HOME="${HOME:-${FULLSCAN_HOME:-/home/gha}}"
           unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
@@ -520,6 +533,7 @@ jobs:
               01_daily/weather/ 01_daily/_transcripts/ 01_daily/_channel1/
               01_daily/*_preopen_qc.json 01_daily/*_preopen_status.json
               01_daily/*_preopen_status.md
+              01_daily/_openclaw_preopen_health.json
               01_daily/*_grok_review.json 01_daily/*_grok_review.md
               01_daily/*_stock_book.md
               data/catalyst/ data/stock_book/ data/paper/ data/past_day_lock/ data/join/

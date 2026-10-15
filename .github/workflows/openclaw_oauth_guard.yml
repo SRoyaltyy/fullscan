@@ -12,9 +12,14 @@ on:
       - scripts/systemd/fullscan-openclaw-oauth.service
       - scripts/systemd/fullscan-openclaw-oauth.timer
   schedule:
-    # 09:40 UTC = 05:40 EDT / 04:40 EST, Mon-Fri; after the 05:30 ET timer,
-    # before 05:55 ET Pre-Open. Backup for the ECS timer.
-    - cron: "40 9 * * 1-5"
+    # Do not use 09:40 UTC. That held the only ECS runner at 05:40 ET,
+    # fifteen minutes before Pre-Open, and collided with the finviz scrape.
+    # 01:10 UTC = 21:10 ET, an hour after the 20:10 ET systemd slot.
+    # 08:40 UTC = 04:40 ET, after the 04:10 ET systemd renew and the
+    # 04:30 ET canary, and well before the 05:55 Pre-Open.
+    # xAI tokens last about 6 hours. Do not share a minute with those timers.
+    - cron: "10 1 * * 1-5"
+    - cron: "40 8 * * 1-5"
   workflow_dispatch:
     inputs:
       mode:
@@ -24,7 +29,7 @@ on:
         options: [all, renew, guard]
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: openclaw-oauth-guard
@@ -61,3 +66,38 @@ jobs:
           MODE="${{ github.event.inputs.mode || 'all' }}"
           sudo -n env -u XAI_API_KEY FULLSCAN_HOME=/home/gha \
             python3 scripts/openclaw_oauth_guard.py "$MODE"
+      - name: Publish OAuth status (no tokens)
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FULLSCAN_PUSH_TOKEN: ${{ secrets.FULLSCAN_PUSH_TOKEN }}
+        run: |
+          f=/home/gha/fullscan-logs/openclaw_guard_status.json
+          mkdir -p 01_daily
+          if [ ! -f "$f" ]; then
+            echo "no status file to publish"
+            exit 0
+          fi
+          python3 - "$f" 01_daily/_openclaw_oauth_status.json <<'PY'
+          import json, sys
+          src, dst = sys.argv[1], sys.argv[2]
+          d = json.load(open(src, encoding="utf-8"))
+          drop = []
+          for k, v in d.items():
+              lk = k.lower()
+              if lk in ("gateway_token_len", "has_refresh_token"):
+                  continue
+              if any(w in lk for w in ("token", "secret", "user_code", "password", "authorization")):
+                  drop.append(k)
+              if isinstance(v, str) and len(v) > 80 and " " not in v:
+                  drop.append(k)
+          for k in drop:
+              d.pop(k, None)
+          with open(dst, "w", encoding="utf-8") as fh:
+              json.dump(d, fh, indent=2)
+              fh.write("\n")
+          PY
+          bash scripts/safe_git_push.sh \
+            "auto: openclaw oauth status" \
+            01_daily/_openclaw_oauth_status.json \
+            || echo "[oauth-guard] status push failed — local file still on the box"

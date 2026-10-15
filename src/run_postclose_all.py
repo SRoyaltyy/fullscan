@@ -25,7 +25,7 @@ import argparse
 import os
 import subprocess
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -35,6 +35,41 @@ from .skip_if_good import night_pack_dates
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo(config.TZ)
+
+
+def on_ecs_box() -> bool:
+    home = (os.environ.get("FULLSCAN_HOME") or os.environ.get("HOME") or "")
+    gw = os.environ.get("OPENCLAW_GATEWAY_URL") or ""
+    return home.startswith("/home/gha") or "127.0.0.1" in gw or "localhost" in gw
+
+
+def morning_box_yield(now: datetime | None = None) -> bool:
+    """True when this ECS box should stop post-close for reauth + Pre-Open.
+
+    04:00–10:30 ET. A night pack that is still running at 04:00 used to
+    sit on the only runner until the morning Grok jobs queued behind it.
+    """
+    if os.environ.get("POSTCLOSE_YIELD_MORNING", "1") != "1":
+        return False
+    if not on_ecs_box():
+        return False
+    now = (now or datetime.now(ET)).astimezone(ET)
+    hm = now.hour * 100 + now.minute
+    return 400 <= hm < 1030
+
+
+def seconds_until_yield(now: datetime | None = None) -> float | None:
+    if os.environ.get("POSTCLOSE_YIELD_MORNING", "1") != "1":
+        return None
+    if not on_ecs_box():
+        return None
+    now = (now or datetime.now(ET)).astimezone(ET)
+    if morning_box_yield(now):
+        return 0.0
+    target = now.replace(hour=4, minute=0, second=0, microsecond=0)
+    if target <= now:
+        target = target + timedelta(days=1)
+    return (target - now).total_seconds()
 
 
 def _run(cmd: list[str], timeout_s: int | None = None) -> int:
@@ -118,9 +153,16 @@ def _run_one(date: str, force: bool = False) -> None:
     def step(title: str, cmd: list[str], done: bool,
              timeout_s: int | None = None,
              llm_timeout_s: int | None = None) -> int:
+        if morning_box_yield():
+            print("[postclose-all] morning window — stopping so reauth "
+                  "and Pre-Open can use this ECS box")
+            return 0
         if done and not force:
             print(f"[postclose-all] skip {title} (already on disk)")
             return 0
+        left = seconds_until_yield()
+        if left is not None and timeout_s is not None:
+            timeout_s = min(timeout_s, max(30, int(left)))
         print(f"\n[postclose-all] → {title}")
         prev = None
         if llm_timeout_s is not None:
@@ -130,6 +172,9 @@ def _run_one(date: str, force: bool = False) -> None:
                   "(hung Grok fails over; 10800s ate the morning packet)")
             if timeout_s is None:
                 timeout_s = llm_timeout_s + 60
+            if left is not None and timeout_s is not None:
+                timeout_s = min(timeout_s, max(30, int(left)))
+                os.environ["OPENCLAW_TIMEOUT"] = str(min(llm_timeout_s, timeout_s))
         try:
             code = _run(cmd, timeout_s=timeout_s)
         finally:

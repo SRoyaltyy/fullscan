@@ -16,6 +16,11 @@ flock -n 9 || { echo "[map-postclose] lock held — skip"; exit 0; }
 
 ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
 echo "[map-postclose] et_hm=$ET_HM uid=$(id -u)"
+# 04:00–10:30 ET is xAI renew + Pre-Open. Do not sit on the only box.
+if [ "$ET_HM" -ge 400 ] && [ "$ET_HM" -lt 1030 ]; then
+  echo "[map-postclose] morning window (04:00-10:30 ET) — yield the box to xAI reauth and Pre-Open"
+  exit 0
+fi
 
 if [ -f "$ENVF" ]; then
   set -a
