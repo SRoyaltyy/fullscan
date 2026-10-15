@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T19:35:39.087184-04:00",
+  "generated_at": "2026-10-14T23:14:34.763191-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -559,8 +559,8 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9676 vix=falling yields=flat",
-          "size": 9676,
+          "reason": "sectors=11 bytes=9592 vix=falling yields=falling",
+          "size": 9592,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -781,8 +781,8 @@
           "path": "01_daily/weather/2026-10-14_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9676 vix=falling yields=flat",
-          "size": 9676,
+          "reason": "sectors=11 bytes=9592 vix=falling yields=falling",
+          "size": 9592,
           "said": "favorable 2 \u00b7 hostile 6 \u00b7 neutral 3",
           "bullets": [
             "hostile: Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -834,7 +834,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=184",
-          "size": 1464416,
+          "size": 1464487,
           "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
@@ -845,10 +845,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 69352,
+          "size": 69370,
           "said": "Stock book \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T19:35:35.924142-04:00_",
+            "_Generated 2026-10-14T09:18:35.516113-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -912,7 +912,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=184",
-          "size": 1464416,
+          "size": 1464487,
           "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
@@ -1072,31 +1072,6 @@
     }
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T09:26:41.123892-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-14_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 461698,
-          "preview": "raw=571 usable=128 single=50 \u00b7 US CPI Jumps 3.7%, Raising Federal Reserve Rate Hike Chances - \uc870\uc120\uc77c\ubcf4 | Fed rate hike seen more likely after inflation data - Reuters | Fed rate hike seen more likely after inflation data - Central Oregon Daily | What analysts are watching with key semiconductor maker TSMC set to report resul | US 10-Year Yield Steadies Ahead of CPI Report - TradingView"
-        },
-        {
-          "path": "01_daily/news/2026-10-14_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 7608,
-          "preview": "# News Parse v2 \u2014 2026-10-14T09:26:30.431276-04:00\nWindow\u224848h | news_mode=on | raw=571 | usable=128 | single_name=50 | noise_dropped=393\nusable polarity={'+': 2, '-': 28, 'mixed': 2, 'neutral': 96}"
-        }
-      ],
-      "preview": "raw=571 usable=128 single=50 \u00b7 US CPI Jumps 3.7%, Raising Federal Reserve Rate Hike Chances - \uc870\uc120\uc77c\ubcf4 | Fed rate hike seen more likely after inflation data - Reuters | Fed rate hike seen more likely after inflation data - Central Oregon Daily | What analysts are watching with key semiconductor maker TSMC set to report resul | US 10-Year Yield Steadies Ahead of CPI Report - TradingView \u00b7 # News Parse v2 \u2014 2026-10-14T09:26:30.431276-04:00\nWindow\u224848h | news_mode=on | raw=571 | usable=128 | single_name=50 | noise_dropped=393\nusable polarity={'+': 2, '-': 28, 'mixed': 2, 'neutral': 96}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -3685,6 +3660,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-10-14\n**Generated:** 2026-10-14T16:26:38.042296-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed sharply lower as hotter CPI data lifted Treasury yields, boosted Fed hike odds and pressured AI and semiconductor shares\n**Prior close:** SPX -1.10%  Nasdaq -1.90%  Dow -0.10%\n**SPX:** -1.10%  **Nasdaq:** -1.90%  **Dow:** -0.10%\n**Oil:** \u2014\n**CPI/Fed:** headline CPI rose 3; 0.2% hike (0.2% consensus, pushing Treasury yields higher and Fed rate-hike)\n**Leaders:** NVDA, AVGO, AMD, ORCL, DELL, BCS, CRWV, BAC, LLY, BSP, NFLX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-10-15\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T23:14:33.744135-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-14_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9592,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-14_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5202,
+          "preview": "# Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
@@ -3694,22 +3694,6 @@
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
   },
   "frozen_write_skips": [
-    {
-      "path": "data/stock_book/2026-10-14_input_health.json",
-      "at": "2026-10-14T10:28:36-04:00",
-      "commit_msg": "auto: land stock_book [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "data/stock_book/2026-10-14_stock_book.json",
-      "at": "2026-10-14T10:28:36-04:00",
-      "commit_msg": "auto: land stock_book [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
     {
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T10:28:42-04:00",
@@ -5292,6 +5276,22 @@
       "commit_msg": "auto: post-close ALL [2026-10-15_0121]",
       "workflow": "Post-Close ALL (grade + learn + next captains)",
       "run_id": "38631613631",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/weather/2026-10-14_weather.json",
+      "at": "2026-10-14T23:14:35-04:00",
+      "commit_msg": "auto: land weather [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38674627338",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T23:14:35-04:00",
+      "commit_msg": "auto: land weather [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38674627338",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
     }
   ]

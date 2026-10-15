@@ -5,8 +5,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** OFF (general predict down score -1.6, conf 0.466)
-- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** rising | **VIX:** spiking (ratio 0.90 via vix/vix3m) spot 17.12
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.23
+- **Yields:** falling (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** flat | **VIX:** falling (ratio 0.90 via vix/vix3m) spot 16.87
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** +0.73
 - **High-impact events:** 0 bullish vs 0 bearish
 - ⚠️ **Data gaps:** risk tilted off by news_judge
 
@@ -30,8 +30,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | 🌧️ hostile | medium | strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors] |
-| size:small | 🌧️ hostile | medium | strong dollar — small caps de-rate first; risk-mixed, dollar strong [general predict + factors] |
+| size:micro | ⛅ neutral | low | risk-mixed, dollar soft [general predict + factors] |
+| size:small | ⛅ neutral | low | risk-mixed, dollar soft [general predict + factors] |
 | size:large | ⛅ neutral | low | risk-mixed [general predict] |
 | size:mega | ⛅ neutral | low | risk-mixed [general predict] |
 | size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |
@@ -40,8 +40,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| beta:high | 🌧️ hostile | high | VIX spiking — high beta is the exit door [channel1 + general] |
-| beta:low | 🌤️ favorable | medium | defensive ballast bid in stress [general + channel1] |
+| beta:high | ⛅ neutral | low | risk-mixed, VIX falling |
+| beta:low | ⛅ neutral | low | risk-mixed, VIX falling |
 | beta:mid | ⛅ neutral | low | beta-neutral zone |
 
 ## Short interest (multiplier, not direction)
@@ -65,8 +65,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | ⛅ neutral | low | yields flat/unknown |
-| style:value | ⛅ neutral | low | yields flat/unknown |
+| style:growth | 🌤️ favorable | medium | yields falling — duration/growth re-rates [factor: Bond yields] |
+| style:value | ⛅ neutral | low | value lags duration rallies |
 | style:blend | ⛅ neutral | low | — |
 
 ## Leverage
