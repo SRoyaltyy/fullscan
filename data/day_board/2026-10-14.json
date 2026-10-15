@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T23:39:51.714699-04:00",
+  "generated_at": "2026-10-14T23:39:57.743233-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -808,10 +808,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2261198,
-          "said": "208 rows",
+          "size": 2243111,
+          "said": "204 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ARQT, AVAH, WAY, CORT"
+            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, CORT"
           ]
         },
         {
@@ -889,9 +889,9 @@
           "bullets": []
         }
       ],
-      "said": "208 rows",
+      "said": "204 rows",
       "bullets": [
-        "HALO, ONC, LLY, HRMY, ARQT"
+        "HALO, ONC, LLY, HRMY, ETON"
       ]
     },
     {
@@ -1072,31 +1072,6 @@
     }
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T10:09:48.540996-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-10-14_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9679,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-10-14_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5246,
-          "preview": "# Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -3945,6 +3920,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 7.7, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': -0.686, 'dir': 'flat', 'conf': 0.427, 'source': 'llm'}, Consumer Cyclical={'score': -0.187, 'dir': 'down', 'conf': 0.507, 'source': 'llm'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-14\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T23:39:56.828541-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-10-14_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2243111,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
     }
   ],
   "href": {
@@ -3954,22 +3947,6 @@
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
   },
   "frozen_write_skips": [
-    {
-      "path": "data/stock_book/2026-10-14_stock_book.json",
-      "at": "2026-10-14T10:46:56-04:00",
-      "commit_msg": "auto: strategy tickets 2026-10-14",
-      "workflow": "Publish strategy tickets",
-      "run_id": "38580688801",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "01_daily/2026-10-14_preopen_qc.json",
-      "at": "2026-10-14T11:01:52-04:00",
-      "commit_msg": "auto: land sector_predict [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
     {
       "path": "01_daily/2026-10-14_preopen_status.json",
       "at": "2026-10-14T11:01:52-04:00",
@@ -5550,6 +5527,22 @@
       "path": "data/day_board/2026-10-14.json",
       "at": "2026-10-14T23:39:52-04:00",
       "commit_msg": "auto: land weather [2026-10-14]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38677004092",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T23:39:58-04:00",
+      "commit_msg": "auto: land join [2026-10-14]",
+      "workflow": "Stock Book ALL (one-shot)",
+      "run_id": "38677004092",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/join/2026-10-14_ranked.csv",
+      "at": "2026-10-14T23:39:58-04:00",
+      "commit_msg": "auto: land join [2026-10-14]",
       "workflow": "Stock Book ALL (one-shot)",
       "run_id": "38677004092",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
