@@ -205,3 +205,28 @@ Surveyed 2026-10-15 from the failed and cancelled runs of Pre-Open, Post-Close, 
 Still owner-only: mode 11 (open the device URL and press Allow), mode 15 if the message is the credits/subscription 403, and mode 27 until a `FULLSCAN_PUSH_TOKEN` secret exists.
 
 Left as they are on purpose: paid DeepSeek and paid `glm-5.3` stay off (17, 18); the gateway timer stays 10800s; missed days stay missing; #598 stays unmerged.
+
+## Fix pass after the catalog
+
+These modes are changed in code now. The ones above that #597 / #599 / #600 already closed stay closed.
+
+- Mode 9 and the leftover of mode 2: a sector whose breaker file is already open does not sleep 60–120s, and a `/v1/models` 200 does not clear that file. After Grok is empty, free `glm-5.3-flash` may write the sector. Paid DeepSeek stays blocked.
+- Mode 14, the skip half: a token that expires before 06:30 ET is not "fresh", even when more than 90 minutes remain. The 00:41 ET run on 2026-10-15 had 267 minutes left and an expiry of 05:08 ET, which is before the 05:55 Pre-Open. It skipped. A later 17+25 that returns 42 without moving that expiry is not treated as a renew (mode 13). OpenClaw refreshes only an already-expired profile, so the guard nudges that expiry field, calls once more, and restores the file if the expiry still does not move. It does not touch the profile while a Grok job is running.
+- Mode 24: `openclaw config set` does not run when the timeout and `gateway.mode` are already right, so a morning job does not race the gateway (`ConfigMutationConflictError`, mode 6). A missing `gateway.mode` is set to `local` (mode 16).
+- Mode 12: the device waiter sets `XDG_RUNTIME_DIR` when `/run/user/<uid>` exists, so `systemd-run --user` is not missing a bus.
+- Mode 19: a TokenHub/DeepSeek "Read timed out" wrapped as a retry error stops on the first one.
+- Mode 29: the ubuntu Pre-Open unsets a loopback `OPENCLAW_GATEWAY_URL` and uses the free model. It does not sit on `127.0.0.1:18789`.
+- Mode 30: the scrape step exits 0 after 09:25 ET instead of going red for obeying the cutoff. It still does not write.
+- Mode 32: when today's packet is quality-ok but the trace is not Grok, and the clock is before 09:00 ET, the general predict is healed. A failed heal keeps the essay. Past days are not rewritten.
+- Mode 25, leftover: sector predict and the map-heat refresh shrink to the step deadline instead of a flat 2400s / 540s. When the map-heat refresh no longer fits, the night baseline is written through so a missing `map_heat_research` file does not fail the run after the essay (mode 33).
+- Mode 3, leftover: a forced gateway restart used to call a 60-second PONG first. The restart budget (45s) expired before `systemctl` ran, so the 10800s turn stayed up. A forced restart now skips that ping and bounces immediately. If `systemctl restart` is not allowed, it kills the listener on 18789. It also does not rewrite `openclaw.json` when chat completions are already on (mode 6 / 24 on the restart path). A failed pre-essay probe marks the run so the predict does not open a second native-search turn.
+
+Cannot be fixed from this session:
+
+- Mode 11, when the refresh token is dead. The guard will say device login. A Grok Bot on the Google account can open the verification URL and press Allow. This session cannot see that Google login, and no device code is waiting right now.
+- Mode 15, the credits/subscription 403, and modes 17 and 18. Those accounts are empty. Paying for DeepSeek, paid `glm-5.3`, or Grok credits needs Cyrus. The free `glm-5.3-flash` path is the backup.
+- Mode 27. `FULLSCAN_PUSH_TOKEN` is a GitHub secret. A Google login does not create it. Until it exists, a cancelled step still cannot push. The deadline is what keeps the normal push alive.
+- Mode 20, a second computer. Post-close already yields from 04:00–10:30 ET. This session cannot add another ECS runner.
+- Mode 34, a FRED 502. The code already falls back to the database. The upstream outage is not ours.
+- Mode 38, a person pressing Force cancel. `cancel-in-progress` stays false so a running Grok pass is not killed by a twin.
+- Modes 35, 36, and 37 are not in the current tree. The f-string is gone, those workflow files parse, and a Pre-Open run now always has a preopen job when the clock gate says go.

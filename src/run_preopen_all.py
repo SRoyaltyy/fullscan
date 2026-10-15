@@ -801,24 +801,44 @@ def run(date: str | None = None, force: bool = False,
                  timeout_s=llm_sub_t)
             _heal_general_predict(date, [py, "-m", "src.run_predict",
                                          "--date", date, *fa], llm_sub_t)
-            step("sector_predict", "Per-sector predict (all 11)",
-                 [py, "-m", "src.run_sector_predict", "--date", date, *fa],
-                 timeout_s=2400)
+            sec_s = _step_budget(600, floor=60)
+            if sec_s is None:
+                print("[preopen-all] skip sector predict — step deadline "
+                      "too close")
+            else:
+                step("sector_predict", "Per-sector predict (all 11)",
+                     [py, "-m", "src.run_sector_predict", "--date", date, *fa],
+                     timeout_s=sec_s)
             print("[preopen-all] → Sector board (rebuild after essays)")
             _run([py, "-m", "src.sector_board", "--date", date], timeout_s=60)
             _land(date, "sector_board", "Sector board")
             prev_timeout = os.environ.get("OPENCLAW_TIMEOUT")
-            map_heat_http = os.environ.get("MAP_HEAT_REFRESH_TIMEOUT", "480")
+            map_heat_http = os.environ.get("MAP_HEAT_REFRESH_TIMEOUT", "180")
+            heat_budget = _step_budget(180, floor=60)
             os.environ["OPENCLAW_TIMEOUT"] = map_heat_http
             try:
-                try:
-                    map_heat_sub = max(180, int(map_heat_http) + 60)
-                except ValueError:
-                    map_heat_sub = 540
-                heat_code = step(
-                    "map_heat_research", "Map heat morning delta refresh",
-                    [py, "-m", "src.map_heat_refresh", "--date", date, *fa],
-                    timeout_s=map_heat_sub)
+                if heat_budget is None:
+                    print("[preopen-all] skip map heat LLM refresh — step "
+                          "deadline too close")
+                    # The packet still requires map_heat_research. A skipped
+                    # LLM refresh must not fail the morning after Grok wrote
+                    # (2026-09-02 run 33618162369). Passthrough copies the
+                    # night baseline and does not call the model.
+                    if not _packet_step_done("map_heat_research", date):
+                        print("[preopen-all] writing night baseline "
+                              "passthrough (deadline)")
+                        step("map_heat_research",
+                             "Map heat passthrough after deadline",
+                             [py, "-m", "src.map_heat_refresh", "--date", date,
+                              "--passthrough", *fa],
+                             timeout_s=60)
+                    heat_code = 0
+                else:
+                    map_heat_sub = heat_budget
+                    heat_code = step(
+                        "map_heat_research", "Map heat morning delta refresh",
+                        [py, "-m", "src.map_heat_refresh", "--date", date, *fa],
+                        timeout_s=map_heat_sub)
                 if heat_code == 124:
                     print("[preopen-all] map heat refresh timed out — "
                           "writing night baseline passthrough (no 2nd 21m wait)")
@@ -834,6 +854,29 @@ def run(date: str | None = None, force: bool = False,
                 os.environ.pop("OPENCLAW_TIMEOUT", None)
             else:
                 os.environ["OPENCLAW_TIMEOUT"] = prev_llm_to
+
+    # A GLM essay that passed mechanical QC used to freeze the morning:
+    # skip_writes skipped the heal, so 05:55 never asked Grok. Heal only
+    # today's file, only before 09:00 ET, and keep the essay if Grok is empty.
+    if (skip_writes and not skip_essays and not late and not force
+            and date == _today()):
+        grok_lane = (os.environ.get("GROK_ONLY") == "1"
+                     or (os.environ.get("LLM_BACKEND") or "").strip().lower()
+                     == "grok")
+        if grok_lane and not _predict_trace_is_grok(date):
+            from . import predict_grok_heal as _pgh
+            if _pgh.before_cutoff():
+                heal_s = _step_budget(420, floor=60)
+                if heal_s is None:
+                    print("[preopen-all] skip Grok-trace heal — "
+                          "step deadline too close")
+                else:
+                    print("[preopen-all] quality-ok packet has no Grok trace "
+                          "— heal the general predict only")
+                    _heal_general_predict(
+                        date,
+                        [py, "-m", "src.run_predict", "--date", date, *fa],
+                        heal_s)
 
     # Predicts are optional weather inputs. Refresh join so s_join
     # sees the same-day general/sector essays when they landed.

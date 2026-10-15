@@ -197,9 +197,17 @@ def _post_once(payload: dict, retries: int = 4) -> dict:
             break
         except requests.RequestException as e:
             last = str(e)
+            # urllib3 wraps a hung TokenHub/DeepSeek body as "Max retries
+            # exceeded ... Read timed out", which is not requests.ReadTimeout.
+            # One of those is enough. Four of them ate the news judge.
+            if "read timed out" in last.lower() or "read timeout" in last.lower():
+                print(f"[llm] DeepSeek read timeout: {last[:180]} "
+                      "— not retrying a hung body", flush=True)
+                break
             if not _backoff(attempt):
                 break
-    raise RuntimeError(f"DeepSeek call failed after {retries} tries: {last}")
+    raise RuntimeError(
+        f"DeepSeek call failed on attempt {attempt + 1}/{retries}: {last}")
 
 
 # ---------------------------------------------------------------------------
@@ -322,7 +330,15 @@ def gateway_health_ping() -> bool:
         print(f"[openclaw] health ping failed: {exc}", flush=True)
         return False
     if ok:
-        reset_openclaw_breaker("health ping")
+        # A models-list 200 is not a finished search turn. Leave a file
+        # breaker alone so sectors 4–11 do not each sleep a minute and
+        # then skip. In-memory "down" still clears when no file breaker
+        # is open, so one recovered gateway can take the next sector.
+        if not _breaker_open():
+            reset_openclaw_breaker("health ping")
+        else:
+            print("[openclaw] health ping HTTP 200 — file breaker stays open",
+                  flush=True)
         return True
     print(f"[openclaw] health ping HTTP {resp.status_code}", flush=True)
     return False
@@ -834,15 +850,28 @@ def _retry_sector_grok(messages: list[dict], tools: bool, max_tokens: int,
                        temperature: float, transcript_path: str | None,
                        trace_path: str | None, stage_label: str,
                        backend_model: str | None) -> str:
-    """One Grok retry after a gateway health ping. No DeepSeek."""
+    """One Grok retry after a gateway health ping. No DeepSeek.
+
+    A file breaker means a search turn already hung. Sleeping 60–120s
+    per sector (11 times) is what pushed the step into the 50-minute
+    kill. Skip that retry; the free model is the backup.
+    """
+    if _breaker_open():
+        print(f"[llm] sector grok retry skipped — breaker file open "
+              f"({stage_label})", flush=True)
+        return ""
     ping_ok = gateway_health_ping()
+    if not ping_ok:
+        print(f"[llm] sector grok retry skipped — health ping failed "
+              f"({stage_label})", flush=True)
+        return ""
     pause = _sector_grok_retry_s()
     print(f"[llm] sector grok retry backoff {pause:.0f}s "
-          f"health_ping={'ok' if ping_ok else 'fail'} ({stage_label})",
+          f"health_ping=ok ({stage_label})",
           flush=True)
     if pause > 0:
         time.sleep(pause)
-    if not ping_ok and not openclaw_available():
+    if not openclaw_available():
         return ""
     return _openclaw_chat(
         messages, tools=tools, max_tokens=max_tokens, temperature=temperature,
@@ -988,7 +1017,8 @@ def _chat_impl(messages: list[dict], model: str, tools: bool = False,
     elif force_deepseek:
         print(f"[llm] force_deepseek ({stage_label or 'llm run'}) — "
               "OpenClaw skipped for this call only")
-        if sector_predict and not config.prefer_deepseek():
+        if (sector_predict and not config.prefer_deepseek()
+                and not _FALLBACK.get("free_primary")):
             pct, _src = config.supergrok_remaining()
             reason = _fail_kind() if _fail_kind() != "openclaw_timeout" else "openclaw_timeout"
             _log_fallback_decision(stage_label, reason, pct)
@@ -1279,13 +1309,16 @@ def chat(messages: list[dict], model: str, *args, **kwargs) -> str:
     # GROK_ONLY + Grok empty: try the configured FREE primary (glm-5.3-flash)
     # before the fallback. Never native paid DeepSeek (needs approval).
     if (empty and config.grok_only() and not _FALLBACK["active"]
-            and not last_sector_degraded() and _free_primary_ready()):
+            and _free_primary_ready()):
+        # Sectors used to stop at DEGRADED when SuperGrok remaining was
+        # unknown, which also blocked this free model. Paid DeepSeek stays
+        # blocked inside _chat_impl. tools=False skips the SearXNG loop.
         print("[llm] GROK_ONLY: Grok empty — trying free provider "
               f"{os.environ.get('LLM_MODEL_OVERRIDE')}", flush=True)
         _FALLBACK["free_primary"] = True
         try:
             out = _chat_impl(messages, model, *args,
-                             **{**kwargs, "force_deepseek": True})
+                             **{**kwargs, "force_deepseek": True, "tools": False})
         finally:
             _FALLBACK["free_primary"] = False
         empty = not out or len(out.strip()) < 40

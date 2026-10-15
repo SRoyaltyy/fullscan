@@ -56,11 +56,11 @@ def restart_gateway(run=None) -> bool:
             env=env,
             capture_output=True,
             text=True,
-            timeout=45,
+            timeout=75,
             check=False,
         )
     except subprocess.TimeoutExpired:
-        print("[openclaw-fastfail] gateway restart exceeded 45s", flush=True)
+        print("[openclaw-fastfail] gateway restart exceeded 75s", flush=True)
         return False
     tail = "\n".join(((getattr(proc, "stdout", "") or "")).splitlines()[-4:])
     if tail:
@@ -186,7 +186,9 @@ def ensure_before_essays(probe=None, restart=None) -> dict:
         return first
     print(f"[openclaw-fastfail] probe failed ({first.get('reason')}) "
           "— restarting gateway once", flush=True)
-    (restart or restart_gateway)()
+    # Marker so the predict spends its one no-search shot instead of
+    # opening another native-search turn on the same hung gateway.
+    note_hung_call(restart=restart or restart_gateway)
     second = do_probe()
     second["restarted"] = True
     _write_status(second)

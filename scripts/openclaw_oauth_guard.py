@@ -27,7 +27,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -42,9 +42,125 @@ STATUS = Path(os.environ.get("OPENCLAW_GUARD_STATUS",
                              f"{HOME}/fullscan-logs/openclaw_guard_status.json"))
 RENEW_WINDOW_MIN = int(os.environ.get("OPENCLAW_RENEW_WINDOW_MIN", "90"))
 MIN_LEFT_MIN = int(os.environ.get("OPENCLAW_MIN_LEFT_MIN", "0"))
+# A token with hours left can still die before 05:55 ET. The 00:41 ET run on
+# 2026-10-15 skipped (267 min left) and the expiry was 05:08 ET.
+MORNING_COVER_ET = (6, 30)
+MORNING_COVER_HORIZON = timedelta(hours=8)
 CALL_TIMEOUT = int(os.environ.get("OPENCLAW_GUARD_CALL_TIMEOUT", "90"))
 MODEL = os.environ.get("OPENCLAW_BACKEND_MODEL", "xai/grok-4.3")
 PAID_ENV = ("XAI_API_KEY", "OPENCLAW_XAI_API_KEY", "GROK_API_KEY")
+
+
+def morning_cover_deadline(now: datetime) -> datetime | None:
+    """Next 06:30 ET, when that morning is close enough that a renew helps.
+
+    A 6h token refreshed at 21:10 ET cannot reach the next 06:30, so that
+    slot keeps the plain 90-minute window. The 00:10 ET slot must renew a
+    token that would die at 05:08, before Pre-Open.
+    """
+    et_now = now.astimezone(ET)
+    hour, minute = MORNING_COVER_ET
+    target = et_now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    if et_now >= target:
+        target = target + timedelta(days=1)
+    if target - et_now > MORNING_COVER_HORIZON:
+        return None
+    return target.astimezone(timezone.utc)
+
+
+def token_is_fresh(left_min: float | None, exp: datetime | None,
+                   now: datetime | None = None) -> bool:
+    """True only when the token outlasts the 90-minute window and 06:30 ET."""
+    if exp is None or left_min is None:
+        return False
+    if left_min <= RENEW_WINDOW_MIN:
+        return False
+    now = now or datetime.now(timezone.utc)
+    if exp.tzinfo is None:
+        exp = exp.replace(tzinfo=timezone.utc)
+    cover = morning_cover_deadline(now)
+    if cover is not None and exp <= cover:
+        return False
+    return True
+
+
+def renew_verdict(exp_before: datetime | None, exp_after: datetime | None,
+                  now: datetime) -> str:
+    """OK, OK: still valid, EXPIRED, or NEEDS_FORCE.
+
+    A 17+25 that returns 42 without moving the expiry is not a renew.
+    OpenClaw only refreshes a profile that is already expired, so a token
+    that is still valid and dies before 06:30 ET has to be nudged.
+    """
+    left = None
+    if exp_after is not None:
+        left = (exp_after - now).total_seconds() / 60
+    if token_is_fresh(left, exp_after, now):
+        if exp_before and exp_after and exp_after > exp_before:
+            return "OK"
+        return "OK: still valid"
+    if left is None or left <= MIN_LEFT_MIN:
+        return "EXPIRED"
+    return "NEEDS_FORCE"
+
+
+_EXPIRE_KEYS = ("expires", "expiresat", "expires_at", "expiry")
+
+
+def _nudge_expiry(node, target: datetime, past: str) -> bool:
+    """Set an expires field that matches `target` to the past. No other fields."""
+    changed = False
+    if isinstance(node, dict):
+        for key, val in list(node.items()):
+            if key.lower() in _EXPIRE_KEYS:
+                dt = _to_dt(val)
+                if dt is not None and abs((dt - target).total_seconds()) < 2:
+                    node[key] = past if isinstance(val, str) else 0
+                    changed = True
+            elif isinstance(val, (dict, list)):
+                changed = _nudge_expiry(val, target, past) or changed
+    elif isinstance(node, list):
+        for val in node:
+            if isinstance(val, (dict, list)):
+                changed = _nudge_expiry(val, target, past) or changed
+    return changed
+
+
+def nudge_auth_expiry(exp: datetime, root: Path | None = None) -> list[tuple[Path, str]]:
+    """Make the still-valid xAI profile look expired so the next call refreshes.
+
+    Returns (path, original text) so a failed refresh can be undone.
+    Does not log file contents. Skips openclaw.json (the gateway config).
+    """
+    root = root or (Path(HOME) / ".openclaw")
+    if not root.is_dir():
+        return []
+    past = "2000-01-01T00:00:00.000Z"
+    backups: list[tuple[Path, str]] = []
+    for path in root.rglob("*.json"):
+        if path.name == "openclaw.json" or ".bak" in path.name:
+            continue
+        try:
+            if path.stat().st_size > 2_000_000:
+                continue
+            original = path.read_text(encoding="utf-8")
+            data = json.loads(original)
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not _nudge_expiry(data, exp, past):
+            continue
+        path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+        backups.append((path, original))
+        log(f"nudged expiry in {path.name} so the refresh token runs")
+    return backups
+
+
+def restore_auth(backups: list[tuple[Path, str]]) -> None:
+    for path, original in backups:
+        try:
+            path.write_text(original, encoding="utf-8")
+        except OSError as exc:
+            log(f"could not restore {path.name}: {exc}")
 
 
 def log(msg: str) -> None:
@@ -135,9 +251,12 @@ def renew(result: dict) -> bool:
     if exp is None:
         result["renew"] = "FAIL: no xAI OAuth profile readable (login missing?)"
         return False
-    if left > RENEW_WINDOW_MIN:
+    if token_is_fresh(left, exp, now):
         result["renew"] = "SKIP: token fresh"
         return True
+    if left is not None and left > RENEW_WINDOW_MIN:
+        log("token outlasts the 90-minute window but dies before 06:30 ET "
+            "— renewing so 05:55 Pre-Open is covered")
     # OpenClaw refreshes lazily: an expired profile is refreshed by the
     # runtime on the next xAI call and written back to its store. To renew
     # ahead of the window we wait out nothing - we make the call now; if the
@@ -165,12 +284,41 @@ def renew(result: dict) -> bool:
         result["renew"] = "FAIL: refresh rejected - interactive device login needed"
         result["renew_error_hint"] = re.sub(r"\s+", " ", out)[-240:]
         return False
-    if left2 is None or left2 <= MIN_LEFT_MIN:
+    now2 = datetime.now(timezone.utc)
+    verdict = renew_verdict(exp, exp2, now2)
+    if verdict in ("OK", "OK: still valid"):
+        result["renew"] = verdict
+        return True
+    if verdict == "EXPIRED":
         # Still expired after a real call = refresh failed -> device login.
         result["renew"] = "FAIL: token still expired after a real call - interactive device login needed"
         return False
-    result["renew"] = "OK" if (exp2 and exp and exp2 > exp) else "OK: still valid"
-    return True
+    # Still valid, and the 42 did not move the expiry past 06:30 ET.
+    # OpenClaw refreshes only an expired profile. Nudge that field, call
+    # once more, and put the file back if the expiry still does not move.
+    if grok_job_running():
+        result["renew"] = ("FAIL: token dies before 06:30 ET and a Grok job is "
+                           "running — profile not touched")
+        return False
+    backups = nudge_auth_expiry(exp2 or exp)
+    if not backups:
+        result["renew"] = ("FAIL: token dies before 06:30 ET and no auth profile "
+                           "expiry could be nudged — device login needed")
+        return False
+    real_completion(result, "force_refresh")
+    exp3, _, _ = xai_oauth_expiry()
+    now3 = datetime.now(timezone.utc)
+    left3 = (exp3 - now3).total_seconds() / 60 if exp3 else None
+    result["expires_after"] = exp3.isoformat() if exp3 else None
+    result["minutes_left_after"] = round(left3, 1) if left3 is not None else None
+    log(f"after forced refresh expires={result['expires_after']} left_min={result['minutes_left_after']}")
+    if renew_verdict(exp, exp3, now3) in ("OK", "OK: still valid"):
+        result["renew"] = "OK"
+        return True
+    restore_auth(backups)
+    result["renew"] = ("FAIL: refresh did not extend expiry past 06:30 ET "
+                       "— interactive device login needed")
+    return False
 
 
 # ---------------------------------------------------------------- guard

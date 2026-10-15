@@ -183,6 +183,14 @@ jobs:
           set -euo pipefail
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
+          # map_heat raises SystemExit after 09:25. That is the right guard
+          # for a predictive write. An evening dispatch must not go red for
+          # obeying it (2026-09-27 run 36345968854).
+          if [ "$ET_HM" -ge 925 ] && [ "${{ github.event.inputs.force }}" != "true" ]; then
+            echo "past 09:25 ET — scrape refuses a late map_heat (exit 0)"
+            exit 0
+          fi
           python -m src.finviz_digest --date "$DATE"
           python -m src.finviz_market_digest --date "$DATE"
           ARGS=(--date "$DATE" --overlay)
@@ -489,6 +497,11 @@ jobs:
           fi
           if [ "$ON_UBUNTU" = 1 ] && [ "$BACKEND" != "deepseek" ] && [ "$GW_LOOP" = 1 ]; then
             ARGS+=(--skip-sectors)
+            # 127.0.0.1:18789 is the ECS box. From ubuntu-latest every essay
+            # waited out a read timeout (SearXNG 404 after that, run
+            # 38392029548). The free model is already the schedule default.
+            unset OPENCLAW_GATEWAY_URL
+            echo "ubuntu runner: loopback gateway is not reachable — essays use the free model"
             echo "ubuntu runner: OpenClaw gateway is loopback/unset — skip sector essays (no silent DeepSeek)"
           fi
           if [ "$ON_UBUNTU" = 1 ]; then
