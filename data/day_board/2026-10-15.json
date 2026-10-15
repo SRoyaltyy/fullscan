@@ -1,17 +1,16 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T05:48:36.294577-04:00",
+  "generated_at": "2026-10-15T05:49:14.864154-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-10-15_predict.md` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-15_judge.md` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-10-15_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-10-15_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
-    "partial": 4,
-    "fail": 1,
+    "ok": 5,
+    "partial": 3,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -541,11 +540,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -553,26 +552,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-10-15_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 7558267,
+          "said": "27 rows",
+          "bullets": [
+            "RSG, ELV, AUPH, YPF, GCT, CVLT, SONO, MRK"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-15_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8358668,
+          "said": "25 rows",
+          "bullets": [
+            "PFE, CDNA, CVLT, A, RSG, LLY, AUPH, CXT"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "PFE, CDNA, CVLT, A, RSG"
+      ]
     },
     {
       "key": "catalyst",
@@ -646,9 +651,9 @@
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 4,
       "files": [
         {
@@ -733,11 +738,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-10-15_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2629",
+          "size": 8358668,
+          "said": "25 rows",
+          "bullets": [
+            "PFE, CDNA, CVLT, A, RSG, LLY, AUPH, CXT"
+          ]
         },
         {
           "key": "join",
@@ -757,11 +764,13 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-10-15_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5096",
+          "size": 821534,
+          "said": "489 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -815,10 +824,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-10-15 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-15)",
           "size": 10510589,
-          "said": "session 2026-10-15 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-15)",
           "bullets": []
         }
       ],
@@ -831,9 +840,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -854,10 +863,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-10-15 not in dashboard dates (last=2026-10-07)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-10-15)",
           "size": 10510589,
-          "said": "session 2026-10-15 not in dashboard dates (last=2026-10-07)",
+          "said": "live-book poller + today.json (2026-10-15)",
           "bullets": []
         },
         {
@@ -893,82 +902,9 @@
   "news_mode": "on",
   "news_mode_reason": "",
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "CON",
-        "score": 0.7856556108017361
-      },
-      {
-        "ticker": "SGRY",
-        "score": 0.7287287616401872
-      },
-      {
-        "ticker": "HITI",
-        "score": 0.48601836919705854
-      },
-      {
-        "ticker": "AMN",
-        "score": 0.7601225205328173
-      },
-      {
-        "ticker": "ASTH",
-        "score": 0.7019757271272404
-      },
-      {
-        "ticker": "MD",
-        "score": 0.6971374925900011
-      },
-      {
-        "ticker": "PACS",
-        "score": 0.8932406667174411
-      },
-      {
-        "ticker": "NTAP",
-        "score": 0.09630838517576984
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "NEOV",
-        "score": -0.4009564139437413
-      },
-      {
-        "ticker": "OKLO",
-        "score": -0.28823224215502663
-      },
-      {
-        "ticker": "FCEL",
-        "score": -0.23171947325900127
-      },
-      {
-        "ticker": "NNDM",
-        "score": -0.13271542898503363
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.09490889772550341
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.3553332818307756
-      },
-      {
-        "ticker": "TE",
-        "score": -0.31155503699104947
-      },
-      {
-        "ticker": "NRGV",
-        "score": -0.26083097895752283
-      }
-    ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $93,435.90 \u00b7 morning S missing",
-      "bullets": [
-        "0 priced buys",
-        "cash $93,435.90",
-        "morning S missing"
-      ]
-    },
+    "buy_1d": [],
+    "sell_1d": [],
+    "flatten": {},
     "general": {},
     "sectors": {},
     "news": {},
@@ -1925,6 +1861,31 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T05:49:14.111260-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-15_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7558267,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RSG, ELV, AUPH, YPF, GCT"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-15_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8358668,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, CDNA, CVLT, A, RSG"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RSG, ELV, AUPH, YPF, GCT \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, CDNA, CVLT, A, RSG"
     }
   ],
   "href": {
