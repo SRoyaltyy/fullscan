@@ -1,6 +1,6 @@
 # Stock book — 2026-10-15
 
-_Generated 2026-10-15T07:25:39.869584-04:00_
+_Generated 2026-10-15T07:49:56.462172-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -91,7 +91,7 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 This is the live Finviz groups tape — child industry vs parent sector, plus theme joins. Sector LLM essays are a separate (and often disagreeing) layer.
 
 - Heat into the ranker today: **captain_research** (178 captains, 5 industries → s_heat).
-- Board file: `01_daily/map_heat/2026-10-15_map_heat.json` · generated 2026-10-15T04:25:29.692568-04:00
+- Board file: `01_daily/map_heat/2026-10-15_map_heat.json` · generated 2026-10-15T06:37:37.848810-04:00
 
 ### Sector RS vs same-day LLM essay
 

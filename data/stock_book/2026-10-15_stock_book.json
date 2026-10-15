@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-10-15",
-    "generated_at": "2026-10-15T07:25:39.869584-04:00",
+    "generated_at": "2026-10-15T07:49:56.462172-04:00",
     "general_bias": 0.0,
     "sector_bias": {},
     "accuracy_gates": {
@@ -323,7 +323,7 @@
       "stand_down": false,
       "restrict_to_catalysts": false,
       "reason": "384 names qualified through standard,group_leader,catalyst (72 probable)",
-      "n_usable_catalysts": 0,
+      "n_usable_catalysts": 1,
       "market_state": "yellow"
     },
     "calendar_entry_scale": 0.5,
@@ -385,7 +385,7 @@
         "stand_down": false,
         "restrict_to_catalysts": false,
         "reason": "384 names qualified through standard,group_leader,catalyst (72 probable)",
-        "n_usable_catalysts": 0,
+        "n_usable_catalysts": 1,
         "market_state": "yellow"
       },
       "bull_watch": [
