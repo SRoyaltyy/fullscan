@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-10-14
 
-_Generated 2026-10-15T03:28:21 — live `flatten_robust`._
+_Generated 2026-10-15T03:45:26 — live `flatten_robust`._
 
 **S=-1.65; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
