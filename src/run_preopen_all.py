@@ -772,11 +772,14 @@ def run(date: str | None = None, force: bool = False,
         snapshot_persist(date)
         _land(date, "ab", "AB checklist")
 
-    if not skip_writes and not skip_essays and not _deepseek_credits_ok():
+    if not skip_writes and not skip_essays:
+        # Do not call the preflight when the gateway is set. A 402/429
+        # engages the TokenHub fallback inside that ping, and the free
+        # primary is then skipped for the rest of the morning.
         if _gateway_blocks_essay_skip():
-            print("[preopen-all] DeepSeek preflight failed — Grok still "
-                  "runs (gateway is set)", flush=True)
-        else:
+            print("[preopen-all] gateway is set — not running the "
+                  "DeepSeek preflight; Grok essays still run", flush=True)
+        elif not _deepseek_credits_ok():
             print("[preopen-all] skip LLM essays (DeepSeek credits); "
                   "parse still runs if missing")
             skip_essays = True

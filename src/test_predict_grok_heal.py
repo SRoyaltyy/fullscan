@@ -131,7 +131,10 @@ def test_empty_backup_does_not_skip_grok_when_gateway_is_set(monkeypatch):
     monkeypatch.setenv("LLM_BACKEND", "deepseek")
     assert rpa._gateway_blocks_essay_skip() is False
     src = Path(__file__).resolve().parent.joinpath("run_preopen_all.py").read_text()
-    assert "runs (gateway is set)" in src
+    assert "Grok essays still run" in src
+    gate = src.split("if not skip_writes and not skip_essays:", 1)[1]
+    gate = gate.split("if not skip_writes:", 1)[0]
+    assert gate.index("_gateway_blocks_essay_skip") < gate.index("_deepseek_credits_ok")
 
 
 def test_ecs_preopen_exports_grok_before_run():
