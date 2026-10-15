@@ -66,9 +66,20 @@ for path in cands:
     )
     defaults["timeoutSeconds"] = target
     sub["runTimeoutSeconds"] = target
+    popped_llm = False
     if "llm" in defaults:
         defaults.pop("llm", None)
+        popped_llm = True
         print(f"[openclaw-timeouts] stripped agents.defaults.llm from {path}")
+    gw = data.get("gateway")
+    if not isinstance(gw, dict):
+        gw = {}
+        data["gateway"] = gw
+    mode_set = False
+    if not gw.get("mode"):
+        gw["mode"] = "local"
+        mode_set = True
+        print(f"[openclaw-timeouts] set gateway.mode=local in {path}")
     for name, prov in list(providers.items()):
         if not isinstance(prov, dict):
             providers[name] = {"timeoutSeconds": target}
@@ -80,6 +91,10 @@ for path in cands:
         {k: (v.get("timeoutSeconds") if isinstance(v, dict) else None)
          for k, v in providers.items()},
     )
+    dirty = before_to != after_to or popped_llm or mode_set
+    if not dirty:
+        print(f"[openclaw-timeouts] {path} already {target}s and gateway.mode is set — not rewriting")
+        continue
     if before_to != after_to:
         timeout_changed += 1
     try:
@@ -108,7 +123,9 @@ if [ "$(id -u)" -eq 0 ] && [ -d /home/gha/.openclaw ]; then
   chown -R "$GHA_USER:$GHA_USER" /home/gha/.openclaw 2>/dev/null || true
 fi
 
-if command -v openclaw >/dev/null 2>&1; then
+if [ "$CHANGED" = "0" ]; then
+  echo "[openclaw-timeouts] config already matches — skip openclaw config set (avoids ConfigMutationConflict)"
+elif command -v openclaw >/dev/null 2>&1; then
   as_gha openclaw config set agents.defaults.timeoutSeconds "$TARGET"
   as_gha openclaw config set agents.defaults.subagents.runTimeoutSeconds "$TARGET"
   for id in xai openai anthropic; do

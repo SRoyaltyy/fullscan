@@ -93,6 +93,46 @@ def test_morning_box_yield(monkeypatch):
     assert not pc.morning_box_yield(datetime(2026, 10, 15, 5, 0, tzinfo=ET))
 
 
+def test_token_dying_before_0630_is_not_fresh():
+    import importlib.util
+    from datetime import timedelta, timezone
+    from pathlib import Path
+    path = Path(__file__).resolve().parent.parent / "scripts" / "openclaw_oauth_guard.py"
+    spec = importlib.util.spec_from_file_location("openclaw_oauth_guard", path)
+    guard = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(guard)
+    # 00:41 ET on 2026-10-15. Expiry 05:08 ET. 267 minutes left, still before Pre-Open.
+    now = datetime(2026, 10, 15, 4, 41, tzinfo=timezone.utc)
+    exp = datetime(2026, 10, 15, 9, 8, tzinfo=timezone.utc)
+    left = (exp - now).total_seconds() / 60
+    assert left > 90
+    assert guard.token_is_fresh(left, exp, now) is False
+    # 21:10 ET is more than 8 hours before the next 06:30, so a 4h token is fresh.
+    now2 = datetime(2026, 10, 14, 21, 10, tzinfo=ET).astimezone(timezone.utc)
+    exp2 = now2 + timedelta(hours=4)
+    assert guard.token_is_fresh(4 * 60, exp2, now2) is True
+
+
+def test_sector_retry_does_not_sleep_on_file_breaker(monkeypatch, tmp_path):
+    from src import deepseek_client as dc
+    marker = tmp_path / "breaker.txt"
+    marker.write_text("1 hung search\n", encoding="utf-8")
+    monkeypatch.setenv("OPENCLAW_BREAKER_FILE", str(marker))
+    monkeypatch.setenv("OPENCLAW_BREAKER_N", "1")
+    slept = []
+    monkeypatch.setattr(dc.time, "sleep", lambda s: slept.append(s))
+
+    def boom(*_a, **_k):
+        raise AssertionError("ping")
+
+    monkeypatch.setattr(dc.requests, "get", boom)
+    text = dc._retry_sector_grok(
+        [{"role": "user", "content": "hi"}], False, 32, 0.0,
+        None, None, "SECTOR PREDICT Utilities 2026-10-14", None)
+    assert text == ""
+    assert slept == []
+
+
 def test_wiring_strings():
     from pathlib import Path
     root = Path(__file__).resolve().parent.parent
@@ -119,6 +159,16 @@ def test_wiring_strings():
     assert 'cron: "40 8 * * 1-5"' in guard
     assert "_openclaw_oauth_status.json" in guard
     assert "OnCalendar=Mon..Fri *-*-* 04:10:00 America/New_York" in timer
+    assert "past 09:25 ET — scrape refuses a late map_heat (exit 0)" in yml
+    assert "loopback gateway is not reachable" in yml
+    timeouts = (root / "scripts" / "ensure_openclaw_timeouts.sh").read_text(encoding="utf-8")
+    enable = (root / "scripts" / "enable_openclaw_chat.sh").read_text(encoding="utf-8")
+    reauth = (root / "scripts" / "xai_device_reauth.py").read_text(encoding="utf-8")
+    orch = (root / "src" / "run_preopen_all.py").read_text(encoding="utf-8")
+    assert "skip openclaw config set" in timeouts
+    assert "gateway.mode set to local" in enable
+    assert "XDG_RUNTIME_DIR" in reauth
+    assert "quality-ok packet has no Grok trace" in orch
     assert "FULLSCAN_PUSH_TOKEN" in push
     assert "Invalid username or token" in push
     # The publish step must not keep a raw token. The redaction list is the contract.

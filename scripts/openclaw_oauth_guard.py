@@ -27,7 +27,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -42,9 +42,46 @@ STATUS = Path(os.environ.get("OPENCLAW_GUARD_STATUS",
                              f"{HOME}/fullscan-logs/openclaw_guard_status.json"))
 RENEW_WINDOW_MIN = int(os.environ.get("OPENCLAW_RENEW_WINDOW_MIN", "90"))
 MIN_LEFT_MIN = int(os.environ.get("OPENCLAW_MIN_LEFT_MIN", "0"))
+# A token with hours left can still die before 05:55 ET. The 00:41 ET run on
+# 2026-10-15 skipped (267 min left) and the expiry was 05:08 ET.
+MORNING_COVER_ET = (6, 30)
+MORNING_COVER_HORIZON = timedelta(hours=8)
 CALL_TIMEOUT = int(os.environ.get("OPENCLAW_GUARD_CALL_TIMEOUT", "90"))
 MODEL = os.environ.get("OPENCLAW_BACKEND_MODEL", "xai/grok-4.3")
 PAID_ENV = ("XAI_API_KEY", "OPENCLAW_XAI_API_KEY", "GROK_API_KEY")
+
+
+def morning_cover_deadline(now: datetime) -> datetime | None:
+    """Next 06:30 ET, when that morning is close enough that a renew helps.
+
+    A 6h token refreshed at 21:10 ET cannot reach the next 06:30, so that
+    slot keeps the plain 90-minute window. The 00:10 ET slot must renew a
+    token that would die at 05:08, before Pre-Open.
+    """
+    et_now = now.astimezone(ET)
+    hour, minute = MORNING_COVER_ET
+    target = et_now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    if et_now >= target:
+        target = target + timedelta(days=1)
+    if target - et_now > MORNING_COVER_HORIZON:
+        return None
+    return target.astimezone(timezone.utc)
+
+
+def token_is_fresh(left_min: float | None, exp: datetime | None,
+                   now: datetime | None = None) -> bool:
+    """True only when the token outlasts the 90-minute window and 06:30 ET."""
+    if exp is None or left_min is None:
+        return False
+    if left_min <= RENEW_WINDOW_MIN:
+        return False
+    now = now or datetime.now(timezone.utc)
+    if exp.tzinfo is None:
+        exp = exp.replace(tzinfo=timezone.utc)
+    cover = morning_cover_deadline(now)
+    if cover is not None and exp <= cover:
+        return False
+    return True
 
 
 def log(msg: str) -> None:
@@ -135,9 +172,12 @@ def renew(result: dict) -> bool:
     if exp is None:
         result["renew"] = "FAIL: no xAI OAuth profile readable (login missing?)"
         return False
-    if left > RENEW_WINDOW_MIN:
+    if token_is_fresh(left, exp, now):
         result["renew"] = "SKIP: token fresh"
         return True
+    if left is not None and left > RENEW_WINDOW_MIN:
+        log("token outlasts the 90-minute window but dies before 06:30 ET "
+            "— renewing so 05:55 Pre-Open is covered")
     # OpenClaw refreshes lazily: an expired profile is refreshed by the
     # runtime on the next xAI call and written back to its store. To renew
     # ahead of the window we wait out nothing - we make the call now; if the

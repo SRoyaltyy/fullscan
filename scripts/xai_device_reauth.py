@@ -312,6 +312,15 @@ def spawn_daemon(force: bool) -> int:
     if force:
         args.append("--force")
     env = {**os.environ, "HOME": os.environ.get("HOME") or "/home/gha"}
+    # GitHub's job has no user bus, so `systemd-run --user` dies with
+    # DBUS_SESSION_BUS_ADDRESS unset (2026-09-02 run 33597448920) and the
+    # waiter is reaped when the job exits. Point at the linger bus when
+    # it exists; the in-process fallback below still runs if it does not.
+    uid = os.getuid()
+    runtime = f"/run/user/{uid}"
+    if os.path.isdir(runtime) and not env.get("XDG_RUNTIME_DIR"):
+        env["XDG_RUNTIME_DIR"] = runtime
+        env.setdefault("DBUS_SESSION_BUS_ADDRESS", f"unix:path={runtime}/bus")
     unit = "xai-reauth"
     sysd = [
         "systemd-run", "--user", "--collect",

@@ -30,6 +30,27 @@ if [ ! -f "$CFG" ]; then
   exit 1
 fi
 
+# 2026-08-27: the process refused to start with
+# "existing config is missing gateway.mode". Set it once. Do not rewrite
+# a file that already has a mode (that races the running gateway).
+python3 - "$CFG" <<'PY'
+import json, sys
+p = sys.argv[1]
+d = json.load(open(p, encoding="utf-8"))
+gw = d.get("gateway")
+if not isinstance(gw, dict):
+    gw = {}
+    d["gateway"] = gw
+if gw.get("mode"):
+    print(f"gateway.mode={gw.get('mode')}")
+else:
+    gw["mode"] = "local"
+    with open(p, "w", encoding="utf-8") as fh:
+        json.dump(d, fh, indent=2)
+        fh.write("\n")
+    print("gateway.mode set to local")
+PY
+
 # Live token from the running gateway config (this is the source of truth).
 read_cfg() {
   python3 - "$CFG" <<'PY'
