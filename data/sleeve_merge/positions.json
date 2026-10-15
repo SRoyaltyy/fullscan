@@ -1,8 +1,39 @@
 {
   "date": "2026-10-15",
   "policy": "flatten_robust",
-  "generated": "2026-10-15T13:12:34",
-  "cash": 93435.9,
-  "io": [],
+  "generated": "2026-10-15T13:18:07",
+  "cash": 100010.69,
+  "io": [
+    {
+      "ticker": "FANG",
+      "sleeve": "io_core",
+      "shares": 25,
+      "entry_px": 195.11,
+      "entry_date": "2026-10-12",
+      "last_px": 197.51,
+      "yday_px": 197.51,
+      "open_px": 197.51,
+      "overnight": 0.0,
+      "pct": 0.0,
+      "mv": 4937.75,
+      "exit_date": "2026-10-15",
+      "reason": ""
+    },
+    {
+      "ticker": "ARQT",
+      "sleeve": "io_core",
+      "shares": 187,
+      "entry_px": 26.22,
+      "entry_date": "2026-10-12",
+      "last_px": 26.41,
+      "yday_px": 26.41,
+      "open_px": 26.41,
+      "overnight": 0.0,
+      "pct": 0.0,
+      "mv": 4938.67,
+      "exit_date": "2026-10-15",
+      "reason": ""
+    }
+  ],
   "mover": []
 }
