@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T07:07:38.719411-04:00",
+  "generated_at": "2026-10-15T07:08:37.327005-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -103,31 +103,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T06:59:19.014125-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-15_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 336767,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-15_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 35107,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -273,6 +248,31 @@
         }
       ],
       "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-15 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T07:08:35.668352-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-15_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 42193,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-15_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 9604,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-15T07:08:35.652101-04:00\nraw=561 unique_events=4 tickers=61"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-15T07:08:35.652101-04:00\nraw=561 unique_events=4 tickers=61"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

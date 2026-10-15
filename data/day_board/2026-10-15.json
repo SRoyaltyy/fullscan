@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T07:07:38.719411-04:00",
+  "generated_at": "2026-10-15T07:08:37.327005-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -300,8 +300,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 41707,
-          "said": "61 ticker actions \u00b7 4 events \u00b7 565 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
+          "size": 42193,
+          "said": "61 ticker actions \u00b7 4 events \u00b7 561 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
             "BUY EOG",
@@ -614,8 +614,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 41707,
-          "said": "61 ticker actions \u00b7 4 events \u00b7 565 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
+          "size": 42193,
+          "said": "61 ticker actions \u00b7 4 events \u00b7 561 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
             "BUY EOG",
@@ -655,7 +655,7 @@
           ]
         }
       ],
-      "said": "61 ticker actions \u00b7 4 events \u00b7 565 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
+      "said": "61 ticker actions \u00b7 4 events \u00b7 561 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
       "bullets": [
         "BUY COP",
         "BUY EOG",
@@ -712,8 +712,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 41707,
-          "said": "61 ticker actions \u00b7 4 events \u00b7 565 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
+          "size": 42193,
+          "said": "61 ticker actions \u00b7 4 events \u00b7 561 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
             "BUY EOG",
@@ -1034,31 +1034,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T04:37:26.143996-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-15_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 277618,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-15_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18572,
-          "preview": "# MAP HEAT \u2014 2026-10-15\nExport `finviz_2026-10-14.csv` \u00b7 11616 names \u00b7 generated 2026-10-15T04:25:29.692568-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-15\nExport `finviz_2026-10-14.csv` \u00b7 11616 names \u00b7 generated 2026-10-15T04:25:29.692568-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -3708,6 +3683,31 @@
         }
       ],
       "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-15 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T07:08:35.668352-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-15_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 42193,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-10-15_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 9604,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-15T07:08:35.652101-04:00\nraw=561 unique_events=4 tickers=61"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-15T07:08:35.652101-04:00\nraw=561 unique_events=4 tickers=61"
     }
   ],
   "href": {
