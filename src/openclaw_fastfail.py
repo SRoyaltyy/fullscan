@@ -56,11 +56,11 @@ def restart_gateway(run=None) -> bool:
             env=env,
             capture_output=True,
             text=True,
-            timeout=75,
+            timeout=150,
             check=False,
         )
     except subprocess.TimeoutExpired:
-        print("[openclaw-fastfail] gateway restart exceeded 75s", flush=True)
+        print("[openclaw-fastfail] gateway restart exceeded 150s", flush=True)
         return False
     tail = "\n".join(((getattr(proc, "stdout", "") or "")).splitlines()[-4:])
     if tail:

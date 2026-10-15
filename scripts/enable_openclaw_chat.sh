@@ -340,6 +340,12 @@ kill_listener() {
 # budget expired before systemctl ever ran.
 if port_up && force_on; then
   echo "FORCE_RESTART — skip hung chat ping and bounce the gateway now"
+  # systemctl restart waits for the 10800s turn to exit. Kill the listener
+  # first so the bounce returns inside the morning budget. Run 38720850552
+  # hit the 75s cap while systemctl was still blocked, so kill_listener
+  # never ran and the next probe still read-timed-out.
+  kill_listener
+  sleep 1
 elif port_up; then
   echo "port 18789 already listening — ping before restart"
   if chat_ping; then
