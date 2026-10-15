@@ -25,7 +25,7 @@ These are the primary US systems. Directory membership is not a feed. An endpoin
 
 ### Legislation
 
-Congress.gov is the status system: bill text, actions, and latest action. The API is `https://api.congress.gov/v3/bill` and requires a free api.data.gov key, so this collector does not call it. The public RSS files that do not require a key:
+Congress.gov is the status system: bill text, actions, and latest action. The collector calls `https://api.congress.gov/v3/bill` when `DATA_GOV_API_KEY` is set, and keeps the public RSS files that do not require a key:
 
 | Feed | Live result |
 |---|---|
@@ -51,7 +51,7 @@ One Federal Register API covers rules, proposed rules, notices, and presidential
 
 `https://www.federalregister.gov/api/v1/documents.json`
 
-Filter with `conditions[type][]=RULE|PRORULE|NOTICE|PRESDOCU` and `conditions[publication_date][gte]`. A presidential-document probe returned `count: 8594`. The White House feed `https://www.whitehouse.gov/presidential-actions/feed/` is the signing-day channel; the Federal Register copy is the citeable text. Regulations.gov (`api.regulations.gov`) tracks dockets and comments and needs a key. SAM.gov contract opportunities also need a key. Neither is called.
+Filter with `conditions[type][]=RULE|PRORULE|NOTICE|PRESDOCU` and `conditions[publication_date][gte]`. A presidential-document probe returned `count: 8594`. The White House feed `https://www.whitehouse.gov/presidential-actions/feed/` is the signing-day channel; the Federal Register copy is the citeable text. Regulations.gov documents are collected from `https://api.regulations.gov/v4/documents` with the same api.data.gov key: rules, proposed rules, and notices only. Supporting files and the comment-posting API are not called. SAM.gov contract opportunities still need a separate key and are not called.
 
 ### Monetary policy
 
@@ -117,16 +117,16 @@ The scheduled catalog refresh compares the seed and implementation hashes. The n
 
 ## Every requested site, checked 15 Oct 2026
 
-“Parsable” means this client received JSON, XML, or RSS/Atom with a public GET and no API key. A key requirement, a 403, or an HTML page with no feed is recorded and not treated as a working collector source. CourtListener is not a .gov host, and PACER is paid, so neither is fetched.
+“Parsable” means this client received JSON, XML, or RSS/Atom with a public GET. Congress.gov, Regulations.gov, and GovInfo public laws also accept the free api.data.gov key in the `X-Api-Key` header. The key is read from `DATA_GOV_API_KEY` and is never written into a URL, the repo, or `http_request_audit.json`. A 403 or an HTML page with no feed is recorded and not treated as a working collector source. CourtListener is not a .gov host, and PACER is paid, so neither is fetched.
 
 | Site | Parsable endpoint that answered | Collector |
 |---|---|---|
 | Federal Register | `api/v1/documents.json` and public inspection `public-inspection-documents.json` (131 documents, one page) | Both. Public inspection is the advance copy. |
-| Regulations.gov | API exists | Key required. Published rules still come through the Federal Register. |
-| GovInfo | Collection RSS already collected. `bulkdata/json/FR` is a year/folder listing | RSS for bills, laws, courts, Record, presidential documents. Bulk XML is a backfill tree, not the daily parser. API needs a key. |
+| Regulations.gov | `api.regulations.gov/v4/documents` | Collected when `DATA_GOV_API_KEY` is set. Rules, proposed rules, and notices. Comment posting is not used. |
+| GovInfo | Collection RSS already collected. `bulkdata/json/FR` is a year/folder listing | RSS for bills, laws, courts, Record, presidential documents. The PLAW collection API is collected with the same key. Bulk XML stays a backfill tree. |
 | eCFR | `ecfr.gov/api/versioner/v1/titles.json` | Codified titles, not a change feed. Amendments arrive in the Federal Register. |
 | USA.gov agency index | HTML directory | Used as an identity list, not a publication feed. |
-| Congress.gov | Three public RSS files. API v3 | RSS collected. Full bill actions need an api.data.gov key. |
+| Congress.gov | Three public RSS files. API v3 `api.congress.gov/v3/bill` | RSS collected. Bill actions in the window are collected when `DATA_GOV_API_KEY` is set. A latest action of “Became Public Law” is stored as a law; “Presented to President” stays enrolled, not enacted by inference. |
 | House.gov | No RSS at the paths tried | Floor activity is the Congress.gov House feed. |
 | Senate.gov | HTML at the guessed RSS path | Floor activity is the Congress.gov Senate feed. |
 | CBO | `cbo.gov/publications/all/rss.xml` (30 dated items) | Seeded. |
@@ -179,5 +179,5 @@ The scheduled catalog refresh compares the seed and implementation hashes. The n
 | FEC | HTML data pages. `api.open.fec.gov` needs a key | Not seeded. |
 | FMC | `fmc.gov/rss` | Parses, last item May 2024. Not seeded. |
 | SBA | `sba.gov/feed` | Seeded. |
-| Data.gov / api.data.gov | Catalog search returned 404 from here | api.data.gov is the key service for GovInfo, Congress, and Regulations.gov. |
+| Data.gov / api.data.gov | One key covers Congress.gov, Regulations.gov, and GovInfo | The collector reads `DATA_GOV_API_KEY`. A missing key leaves those three sources enabled and reports `key_not_configured` instead of calling the API. |
 | SAM.gov | Opportunities API | Key required. A solicitation is not an award. |

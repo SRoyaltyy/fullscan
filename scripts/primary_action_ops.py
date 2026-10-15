@@ -1,7 +1,7 @@
 """Offline catalog refresh, branch-aware state selection, and integrity checks."""
 import argparse,hashlib,json,pathlib,sqlite3
 from datetime import timedelta
-from src.primary_actions import now,date,iso,atomic_json,allowed_public_source
+from src.primary_actions import now,date,iso,atomic_json,public_get_audit_ok
 
 def refresh_needed(root,force=False):
     p=root/'config/primary_action_sources.json'
@@ -27,7 +27,8 @@ def audit(root):
     for p in (root/'research/http_request_audit.json',out/'http_request_audit.json'):
         if not p.exists():continue
         records=json.loads(p.read_text(encoding='utf-8'));requests+=len(records)
-        assert all(allowed_public_source(x['url']) and x['method']=='GET' and x['body_bytes']==0 and x['authorization_sent'] is False for x in records),'Non-official/authenticated/body-bearing request'
+        assert all(public_get_audit_ok(x) for x in records),'Non-official, credential-leaking, or body-bearing request'
+    keyed=sum(1 for p in (root/'research/http_request_audit.json',out/'http_request_audit.json') if p.exists() for x in json.loads(p.read_text(encoding='utf-8')) if x.get('authorization_sent'))
     state=root/'data/primary_actions_state/ledger.sqlite3'
     assert state.exists(),'Missing persistent dedup state'
     db=sqlite3.connect(state)
@@ -39,7 +40,7 @@ def audit(root):
     report=json.loads((out/'report.json').read_text(encoding='utf-8'))
     assert report['llm_calls']==report['paid_api_calls']==0
     catalog=json.loads((root/'config/primary_action_sources.json').read_text(encoding='utf-8'))
-    result={'checked_at':iso(now()),'official_unauthenticated_gets':requests,'retained_unique_documents':retained,'sqlite_integrity':'ok','llm_calls':0,'paid_api_calls':0,'catalog_generated_at':catalog['generated_at'],'catalog_refresh_needed':refresh_needed(root)}
+    result={'checked_at':iso(now()),'official_unauthenticated_gets':requests-keyed,'official_keyed_gets':keyed,'retained_unique_documents':retained,'sqlite_integrity':'ok','llm_calls':0,'paid_api_calls':0,'catalog_generated_at':catalog['generated_at'],'catalog_refresh_needed':refresh_needed(root)}
     atomic_json(out/'integrity.json',result);return result
 
 def main():

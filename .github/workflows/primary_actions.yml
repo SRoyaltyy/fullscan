@@ -78,8 +78,12 @@ jobs:
         id: catalog
         if: steps.refresh.outputs.needed == 'true'
         continue-on-error: true
+        env:
+          DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
         run: PYTHONPATH=. python scripts/build_primary_action_catalog.py
-      - name: Collect primary headlines with no LLM and no credentials
+      - name: Collect primary headlines with no LLM
+        env:
+          DATA_GOV_API_KEY: ${{ secrets.DATA_GOV_API_KEY }}
         run: PYTHONPATH=. python -m src.primary_actions --days 3 --workers 8 --state data/primary_actions_state/ledger.sqlite3 --output data/primary_actions/latest
       - name: Audit official requests, zero inference spend, and persistent state
         env:

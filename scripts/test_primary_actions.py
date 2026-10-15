@@ -1,7 +1,7 @@
-import json,pathlib,tempfile,unittest
+import json,os,pathlib,tempfile,unittest
 from datetime import datetime,timezone,timedelta
 from unittest.mock import patch
-from src.primary_actions import Ledger,collect,feed_rows,fetch_source,source_metadata,index_rows,allowed_public_source,get,OfficialRedirects
+from src.primary_actions import HTTP_AUDIT,Ledger,collect,feed_rows,fetch_source,source_metadata,index_rows,allowed_public_source,get,OfficialRedirects,public_get_audit_ok
 
 ASOF=datetime(2026,10,15,12,tzinfo=timezone.utc)
 SOURCE={'id':'agency-rss','name':'Official Agency','jurisdiction':'US','family':'decision_documents','url':'https://example.gov/rss.xml','adapter':'rss','enabled':True}
@@ -186,6 +186,60 @@ class PrimaryActionsTests(unittest.TestCase):
   def fetch(url,**kw):calls.append(kw['headers']);return 200,RSS,{},url
   fetch_source(SOURCE|{'conditional_cache':False},ASOF-timedelta(days=3),ASOF,{'etag':'tag','last_modified':'old'},fetch)
   self.assertEqual(calls,[{}])
+
+ def test_data_gov_key_parses_bills_dockets_and_laws_without_entering_the_url(self):
+  with patch.dict(os.environ,{},clear=False):
+   os.environ.pop('DATA_GOV_API_KEY',None)
+   rows,health=fetch_source(SOURCE|{'adapter':'congress_bills','url':'https://api.congress.gov/v3/bill'},ASOF-timedelta(days=3),ASOF,fetch=lambda *a,**k:(_ for _ in ()).throw(AssertionError('fetched without a key')))
+  self.assertEqual(rows,[]);self.assertEqual(health['status'],'key_not_configured');self.assertEqual(health['requests'],0)
+  calls=[]
+  def fetch(url,**kw):
+   calls.append(url)
+   self.assertNotIn('secret-value',url);self.assertNotIn('api_key',url)
+   if 'api.congress.gov' in url and 'offset' not in url:
+    body={'bills':[{'congress':119,'type':'HR','number':'1','title':'Example Act','latestAction':{'actionDate':'2026-10-14','text':'Became Public Law No: 119-1.'}},{'congress':119,'type':'S','number':'9','title':'Old bill','latestAction':{'actionDate':'2020-01-01','text':'Introduced'}},{'congress':119,'type':'S','number':'10','title':'Pending bill','latestAction':{'actionDate':'2026-10-15','text':'Presented to President.'}}],'pagination':{'next':'https://api.congress.gov/v3/bill?offset=250&api_key=secret-value&format=json'}}
+   elif 'offset=250' in url:body={'bills':[]}
+   elif 'api.regulations.gov' in url and 'page%5Bnumber%5D=2' not in url and 'page[number]=2' not in url:
+    body={'data':[{'id':'EPA-HQ-OAR-2026-0001-0001','attributes':{'title':'Methane standards','documentType':'Proposed Rule','postedDate':'2026-10-14','agencyId':'EPA'}},{'id':'EPA-HQ-OAR-2026-0001-0002','attributes':{'title':'Supporting spreadsheet','documentType':'Supporting & Related Material','postedDate':'2026-10-14','agencyId':'EPA'}}],'meta':{'hasNextPage':True}}
+   elif 'api.regulations.gov' in url:body={'data':[],'meta':{'hasNextPage':False}}
+   elif 'offsetMark=abc' in url:body={'packages':[],'nextPage':None}
+   else:body={'packages':[{'packageId':'PLAW-119publ1','title':'Example Act','dateIssued':'2026-10-14'}],'nextPage':'https://api.govinfo.gov/collections/PLAW/2026-10-12T00:00:00Z?offsetMark=abc&pageSize=100&api_key=secret-value'}
+   return 200,json.dumps(body).encode(),{},url
+  with patch.dict(os.environ,{'DATA_GOV_API_KEY':'secret-value'}):
+   rows,health=fetch_source(SOURCE|{'adapter':'congress_bills','url':'https://api.congress.gov/v3/bill'},ASOF-timedelta(days=3),ASOF,fetch=fetch)
+   self.assertEqual([r['native_id'] for r in rows],['119/HR/1','119/S/10'])
+   self.assertEqual(rows[0]['url'],'https://www.congress.gov/bill/119th-congress/house-bill/1')
+   self.assertEqual(source_metadata(SOURCE,rows[0])['document_stage'],'law_published')
+   self.assertEqual(source_metadata(SOURCE,rows[1])['document_stage'],'bill_enrolled_not_yet_law')
+   self.assertTrue(any('offset=250' in u and 'secret-value' not in u for u in calls))
+   calls.clear()
+   rows,health=fetch_source(SOURCE|{'adapter':'regulations_documents','url':'https://api.regulations.gov/v4/documents'},ASOF-timedelta(days=3),ASOF,fetch=fetch)
+   self.assertEqual(len(rows),1);self.assertEqual(rows[0]['url'],'https://www.regulations.gov/document/EPA-HQ-OAR-2026-0001-0001');self.assertEqual(source_metadata(SOURCE,rows[0])['document_stage'],'proposal_published')
+   calls.clear()
+   rows,health=fetch_source(SOURCE|{'adapter':'govinfo_packages','url':'https://api.govinfo.gov/collections/PLAW'},ASOF-timedelta(days=3),ASOF,fetch=fetch)
+   self.assertEqual(rows[0]['url'],'https://www.govinfo.gov/app/details/PLAW-119publ1');self.assertEqual(source_metadata(SOURCE,rows[0])['document_stage'],'law_published')
+   self.assertTrue(any('offsetMark=abc' in u and 'api_key' not in u for u in calls))
+
+ def test_api_key_header_is_audited_without_the_secret(self):
+  captured={}
+  class Resp:
+   status=200;headers={};url='https://api.congress.gov/v3/bill?format=json'
+   def read(self,n):return b'{}'
+   def __enter__(self):return self
+   def __exit__(self,*a):return False
+  def open(req,timeout=None):
+   captured['url']=req.full_url;captured['headers']=dict(req.header_items());return Resp()
+  HTTP_AUDIT.clear()
+  with patch.dict(os.environ,{'DATA_GOV_API_KEY':'secret-value'}):
+   with patch('urllib.request.build_opener') as opener:
+    opener.return_value.open=open
+    get('https://api.congress.gov/v3/bill?format=json&api_key=secret-value')
+   with self.assertRaises(ValueError):get('https://www.federalregister.gov/api/v1/documents.json',headers={'Authorization':'Bearer secret-value'})
+  self.assertNotIn('secret-value',HTTP_AUDIT[0]['url']);self.assertNotIn('api_key',HTTP_AUDIT[0]['url']);self.assertTrue(HTTP_AUDIT[0]['authorization_sent'])
+  self.assertNotIn('secret-value',captured['url']);self.assertEqual(captured['headers'].get('X-api-key'),'secret-value')
+  self.assertTrue(public_get_audit_ok(HTTP_AUDIT[0]))
+  self.assertFalse(public_get_audit_ok({'url':'https://api.congress.gov/v3/bill?api_key=secret-value','method':'GET','body_bytes':0,'authorization_sent':True}))
+  self.assertFalse(public_get_audit_ok({'url':'https://www.federalregister.gov/documents','method':'GET','body_bytes':0,'authorization_sent':True}))
 
 if __name__=='__main__':unittest.main()
 

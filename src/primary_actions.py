@@ -2,8 +2,9 @@
 
 Official publication is provenance, not proof that a proposed policy is enacted.
 Only source-provided document metadata is used for stage labels.
+An api.data.gov key, when set, is sent only as a header to Congress.gov, Regulations.gov, and GovInfo.
 """
-import argparse,concurrent.futures,hashlib,html,json,pathlib,re,sqlite3,threading,time,urllib.parse,urllib.request,urllib.error
+import argparse,concurrent.futures,hashlib,html,json,os,pathlib,re,sqlite3,threading,time,urllib.parse,urllib.request,urllib.error
 import xml.etree.ElementTree as ET
 from datetime import datetime,timedelta,timezone
 from email.utils import parsedate_to_datetime
@@ -15,6 +16,9 @@ MAX_BYTES=8_000_000
 HTTP_AUDIT=[]
 OFFICIAL_SUFFIXES=('.gov','.gov.uk','.gc.ca','.gov.au','.govt.nz','.gov.hk','.go.jp','.go.kr','.gov.in','.gov.cn','.europa.eu','.gov.sg','.gov.my','.go.th','.gov.ph','.go.id','.gov.br','.gov.za','.gouv.fr','.gov.tw','.parliament.uk')
 OFFICIAL_DOMAINS=('bankofengland.co.uk','bankofcanada.ca','rbi.org.in','snb.ch','riksbank.se','norges-bank.no','bundesbank.de','cnmc.es','banxico.org.mx','resbank.co.za','bis.org','wto.org','imf.org','worldbank.org','un.org','thegazette.co.uk','bot.or.th','bancaditalia.it','bnm.gov.my','newyorkfed.org','boj.or.jp','fca.org.uk','scc-csc.ca','sfc.hk','judiciary.hk','bundeskartellamt.de','autoritedelaconcurrence.fr')
+KEYED_API_HOSTS={'api.congress.gov','api.regulations.gov','api.govinfo.gov','api.data.gov'}
+BILL_SLUG={'HR':'house-bill','S':'senate-bill','HJRES':'house-joint-resolution','SJRES':'senate-joint-resolution','HCONRES':'house-concurrent-resolution','SCONRES':'senate-concurrent-resolution','HRES':'house-resolution','SRES':'senate-resolution'}
+BILL_LABEL={'HR':'H.R.','S':'S.','HJRES':'H.J.Res.','SJRES':'S.J.Res.','HCONRES':'H.Con.Res.','SCONRES':'S.Con.Res.','HRES':'H.Res.','SRES':'S.Res.'}
 
 def allowed_public_source(url):
     host=(urllib.parse.urlsplit(url).hostname or '').lower()
@@ -41,15 +45,39 @@ def canonical_url(url):
     u=urllib.parse.urlsplit(url)
     if u.scheme not in ('https','http') or not u.hostname or u.username or u.password:raise ValueError('Public HTTP URL required')
     if u.hostname in ('localhost','127.0.0.1','::1','169.254.169.254'):raise ValueError('Local/metadata URL forbidden')
-    q=[(k,v) for k,v in urllib.parse.parse_qsl(u.query,keep_blank_values=True) if not k.lower().startswith('utm_') and k.lower() not in ('fbclid','gclid','oc')]
+    q=[(k,v) for k,v in urllib.parse.parse_qsl(u.query,keep_blank_values=True) if not k.lower().startswith('utm_') and k.lower() not in ('fbclid','gclid','oc','api_key','x-api-key')]
     return urllib.parse.urlunsplit((u.scheme,u.netloc.lower(),u.path or '/',urllib.parse.urlencode(sorted(q)),''))
+
+def strip_api_key(url):
+    u=urllib.parse.urlsplit(url)
+    q=[(k,v) for k,v in urllib.parse.parse_qsl(u.query,keep_blank_values=True) if k.lower() not in ('api_key','x-api-key')]
+    return urllib.parse.urlunsplit((u.scheme,u.netloc,u.path or '/',urllib.parse.urlencode(q),''))
+
+def data_gov_api_key():return os.environ.get('DATA_GOV_API_KEY','').strip()
+
+def public_get_audit_ok(record):
+    url=record.get('url') or ''
+    if not allowed_public_source(url) or record.get('method')!='GET' or record.get('body_bytes')!=0:return False
+    if any(k.lower() in ('api_key','x-api-key') for k,_ in urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query)):return False
+    host=(urllib.parse.urlsplit(url).hostname or '').lower()
+    if record.get('authorization_sent'):return host in KEYED_API_HOSTS
+    return record.get('authorization_sent') is False
+
+def congress_ordinal(value):
+    n=int(value)
+    suffix='th' if 10<=n%100<=20 else {1:'st',2:'nd',3:'rd'}.get(n%10,'th')
+    return f'{n}{suffix}'
 
 def get(url,headers=None,timeout=20):
     canonical_url(url)
     if not allowed_public_source(url):raise ValueError('URL outside explicit official-source host policy')
     if any(k.lower() not in ('if-none-match','if-modified-since') for k in (headers or {})):raise ValueError('Only public conditional-cache headers are accepted')
-    HTTP_AUDIT.append({'url':url,'method':'GET','body_bytes':0,'authorization_sent':False})
-    request=urllib.request.Request(url,headers={'User-Agent':USER_AGENT,'Accept':'application/json, application/atom+xml, application/rss+xml, text/html;q=0.8',**(headers or {})})
+    request_url=strip_api_key(url)
+    host=(urllib.parse.urlsplit(request_url).hostname or '').lower()
+    key=data_gov_api_key()
+    extra={'X-Api-Key':key} if host in KEYED_API_HOSTS and key else {}
+    HTTP_AUDIT.append({'url':request_url,'method':'GET','body_bytes':0,'authorization_sent':bool(extra)})
+    request=urllib.request.Request(request_url,headers={'User-Agent':USER_AGENT,'Accept':'application/vnd.api+json, application/json, application/atom+xml, application/rss+xml, text/html;q=0.8',**(headers or {}),**extra})
     try:
         with urllib.request.build_opener(OfficialRedirects()).open(request,timeout=timeout) as response:
             body=response.read(MAX_BYTES+1)
@@ -174,6 +202,14 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
         url='https://www.federalregister.gov/api/v1/public-inspection-documents.json?'+urllib.parse.urlencode({'per_page':1000})
     elif adapter=='openfda_approvals':
         url=source['url']+'?'+urllib.parse.urlencode({'search':'submissions.submission_status_date:['+start.strftime('%Y%m%d')+' TO '+end.strftime('%Y%m%d')+']','limit':100})
+    elif adapter in ('congress_bills','regulations_documents','govinfo_packages') and not data_gov_api_key():
+        return [],{'status':'key_not_configured','http_status':None,'requests':0,'warnings':['DATA_GOV_API_KEY is not set'],'fetched_rows':0}
+    elif adapter=='congress_bills':
+        url=source['url']+'?'+urllib.parse.urlencode({'format':'json','limit':250,'sort':'updateDate+desc','fromDateTime':start.strftime('%Y-%m-%dT%H:%M:%SZ'),'toDateTime':end.strftime('%Y-%m-%dT%H:%M:%SZ')})
+    elif adapter=='regulations_documents':
+        url=source['url']+'?'+urllib.parse.urlencode({'filter[postedDate][ge]':start.date().isoformat(),'filter[postedDate][le]':end.date().isoformat(),'sort':'-postedDate','page[size]':250,'page[number]':1})
+    elif adapter=='govinfo_packages':
+        url=source['url'].rstrip('/')+'/'+start.strftime('%Y-%m-%dT%H:%M:%SZ')+'?'+urllib.parse.urlencode({'pageSize':100,'offsetMark':'*'})
     elif adapter=='hkma_press':
         url+='?'+urllib.parse.urlencode({'lang':'en','sortby':'date','sortorder':'desc','pagesize':source.get('page_size',100),'offset':0})
     seen_urls=set()
@@ -229,6 +265,48 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
             got=len(blob['results']);total=int(((blob.get('meta') or {}).get('results') or {}).get('total') or got);skip=int(dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query)).get('skip') or 0)
             if skip+got<total and got:url=source['url']+'?'+urllib.parse.urlencode({'search':'submissions.submission_status_date:['+start.strftime('%Y%m%d')+' TO '+end.strftime('%Y%m%d')+']','limit':100,'skip':skip+got})
             else:url=None
+        elif adapter=='congress_bills':
+            blob=json.loads(body)
+            if not isinstance(blob.get('bills'),list):raise ValueError('Expected Congress bill list')
+            for bill in blob['bills']:
+                kind=str(bill.get('type') or '').upper();number=str(bill.get('number') or '');congress=bill.get('congress')
+                action=bill.get('latestAction') or {};acted=date(action.get('actionDate'));slug=BILL_SLUG.get(kind)
+                title=clean(bill.get('title') or '')
+                if not slug or not number.isdigit() or congress is None or not acted or not title:continue
+                if acted<start or acted>end+timedelta(days=1):continue
+                text=clean(action.get('text') or '')
+                document_type='public_law' if 'became public law' in text.lower() else 'enrolled_bill' if 'presented to president' in text.lower() else 'bill'
+                rows.append({'title':f'{BILL_LABEL[kind]} {number} — {title}','url':f'https://www.congress.gov/bill/{congress_ordinal(congress)}-congress/{slug}/{int(number)}','native_id':f'{congress}/{kind}/{int(number)}','published_at':iso(acted),'published_raw':action.get('actionDate'),'document_type':document_type,'issuer':'Congress','summary':text[:1200]})
+            nxt=(blob.get('pagination') or {}).get('next')
+            nxt=urllib.parse.urljoin(resolved,nxt) if nxt else ''
+            url=strip_api_key(nxt) if nxt and (urllib.parse.urlsplit(nxt).hostname or '').lower()=='api.congress.gov' else None
+        elif adapter=='regulations_documents':
+            blob=json.loads(body)
+            if not isinstance(blob.get('data'),list):raise ValueError('Expected Regulations.gov documents')
+            for item in blob['data']:
+                attrs=item.get('attributes') or {};kind={'Rule':'Rule','Proposed Rule':'Proposed Rule','Notice':'Notice'}.get(attrs.get('documentType'))
+                ident=str(item.get('id') or '');title=clean(attrs.get('title') or '');posted=date(str(attrs.get('postedDate') or '')[:10])
+                if not kind or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]{2,120}',ident) or not title or not posted:continue
+                if posted<start or posted>end+timedelta(days=1):continue
+                rows.append({'title':title,'url':'https://www.regulations.gov/document/'+ident,'native_id':ident,'published_at':iso(posted),'published_raw':attrs.get('postedDate'),'document_type':kind,'issuer':clean(attrs.get('agencyId') or 'Regulations.gov agency'),'summary':''})
+            meta=blob.get('meta') or {};page=int(dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query)).get('page[number]') or 1)
+            if meta.get('hasNextPage') and page<20 and blob['data']:
+                query=dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query));query['page[number]']=page+1;url=source['url']+'?'+urllib.parse.urlencode(query)
+            else:url=None
+        elif adapter=='govinfo_packages':
+            blob=json.loads(body)
+            if not isinstance(blob.get('packages'),list):raise ValueError('Expected GovInfo packages')
+            collection=urllib.parse.urlsplit(source['url']).path.rstrip('/').split('/')[-1].upper()
+            for package in blob['packages']:
+                ident=str(package.get('packageId') or '');title=clean(package.get('title') or '');published=date(package.get('dateIssued')) or date(package.get('lastModified'))
+                if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9-]{2,80}',ident) or not title or not published:continue
+                if published<start or published>end+timedelta(days=1):continue
+                kind={'PLAW':'public_law','CPD':'presidential_document'}.get(collection,'bill')
+                if collection=='BILLS' and ident.lower().endswith('enr'):kind='enrolled_bill'
+                rows.append({'title':title,'url':'https://www.govinfo.gov/app/details/'+ident,'native_id':ident,'published_at':iso(published),'published_raw':package.get('dateIssued') or package.get('lastModified'),'document_type':kind,'issuer':'Government Publishing Office','summary':''})
+            nxt=blob.get('nextPage') or ''
+            nxt=urllib.parse.urljoin(resolved,nxt) if nxt else ''
+            url=strip_api_key(nxt) if nxt and (urllib.parse.urlsplit(nxt).hostname or '').lower()=='api.govinfo.gov' else None
         elif adapter=='hkma_press':
             blob=json.loads(body)
             if blob.get('header',{}).get('success') is not True or not isinstance(blob.get('result',{}).get('records'),list):raise ValueError('Expected HKMA successful structured records')
