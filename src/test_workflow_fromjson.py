@@ -528,6 +528,11 @@ def test_preopen_all_job_resolves_ubuntu_and_ecs() -> None:
     backend = text.split("llm_backend:", 1)[1].split("with_book:", 1)[0]
     assert 'default: "auto"' in backend
     assert 'default: "deepseek"' not in backend
+    # Mode 43: the morning button must reach the ECS gateway. Push and
+    # schedule still resolve to ubuntu-latest (assert_preopen_job).
+    runner = text.split("runner:", 1)[1].split("run_date:", 1)[0]
+    assert 'default: "ecs"' in runner
+    assert 'default: "ubuntu"' not in runner
 
 
 def test_stock_book_all_fromjson_resolves() -> None:

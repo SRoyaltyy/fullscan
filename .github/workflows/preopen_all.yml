@@ -60,9 +60,9 @@ on:
           - tokenhub-glm
           - zhipu-glm-flash
       runner:
-        description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok."
+        description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok. The button defaults to ecs; push and schedule stay on ubuntu."
         required: false
-        default: "ubuntu"
+        default: "ecs"
         type: choice
         options:
           - ecs

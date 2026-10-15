@@ -202,13 +202,15 @@ Surveyed 2026-10-15 from the failed and cancelled runs of Pre-Open, Post-Close, 
 
 40. **The Pre-Open button defaults to `deepseek`, so Grok is never called.** Run `38714326944` (2026-10-15, Ubuntu, `LLM_BACKEND=deepseek`) printed `OpenClaw skipped` and wrote no general predict. The same default is what a dispatch sends when the backend menu is left alone, including a dispatch whose runner is ECS. Push and schedule have no input, and the workflow used `|| 'deepseek'`, so those runs skipped Grok too.
 
+43. **The Pre-Open button defaults to `ubuntu`, so the dispatch never reaches the ECS gateway.** Run `38730699335` (2026-10-15) started on runner `GitHub Actions 1000030688`. That machine cannot call `127.0.0.1:18789`. Push and the 05:55 cron stay on ubuntu. The button default is `ecs`.
+
 41. **The nested stock-book wait ignores the step deadline.** Pre-Open calls `run_stock_book_all` in process after the essays. That orchestrator's own waits were 900s for the book, 480s for `live_boards`, and 900s for paper, and the parent `wait()` did not stop at `FULLSCAN_STEP_DEADLINE`. The parent Pre-Open call of `live_boards` was already capped (mode 26). This nested one was not, so the 50-minute step could still die before the status file landed. On 2026-10-15 run `38720850552` the book, the live strip, and paper did land. The runner then dropped (mode 42) with no `2026-10-15` general predict on main.
 
 42. **The ECS runner loses communication and the step log never uploads.** Run `38720850552` (2026-10-15) kept the preopen job until 11:46Z. GitHub then failed it: "The self-hosted runner lost communication with the server." The preopen step log was not uploaded (`log not found`). No general predict was on main. The process kept landing weather, join, and the book after GitHub had marked the runner dead.
 
 ### What is already changed, and what is not
 
-#597, #599, #600, #603, and #604 are on main. Together they change modes 1, 2, 3, 6, 8, 9, 12, 13, 14, 16, 18 (the no-balance skip), 19, 22, 24, 25, 26, 29, 30, 31, 32, 33, and 39. Modes 40 and 41 are PR #607 and are not on main yet. Mode 42 is not code: the ECS runner dropped and GitHub uploaded no step log. A dead refresh token is still mode 11. On 2026-10-15 at 06:56 ET the ECS gateway answered a no-search ping (`xai/grok-4.3`, HTTP 200, `PONG`), so mode 11 is not the current blocker.
+#597, #599, #600, #603, and #604 are on main. Together they change modes 1, 2, 3, 6, 8, 9, 12, 13, 14, 16, 18 (the no-balance skip), 19, 22, 24, 25, 26, 29, 30, 31, 32, 33, and 39. Modes 40, 41, and 43 are PR #607 and are not on main yet. Mode 42 is not code: the ECS runner dropped and GitHub uploaded no step log. A dead refresh token is still mode 11. On 2026-10-15 at 06:56 ET the ECS gateway answered a no-search ping (`xai/grok-4.3`, HTTP 200, `PONG`), so mode 11 is not the current blocker.
 
 Still owner-only: mode 11 (open the device URL and press Allow), mode 15 if the message is the credits/subscription 403, and mode 27 until a `FULLSCAN_PUSH_TOKEN` secret exists.
 
@@ -295,3 +297,4 @@ Proof is strict. A run id is listed only when a real morning Pre-Open exercised 
 | 40 | Pre-Open defaults to deepseek, so Grok is never called | auth | yes | PR #607 pending | unproven until first morning on fix |
 | 41 | Nested stock-book wait ignores the step deadline | timeout | yes | PR #607 pending | unproven until first morning on fix |
 | 42 | ECS runner drops and the step log never uploads | other | yes | not code: the ECS runner dropped; GitHub uploaded no step log | unproven until first morning on fix |
+| 43 | Pre-Open button defaults to ubuntu, so Grok is never reached | auth | yes | PR #607 pending | unproven until first morning on fix |
