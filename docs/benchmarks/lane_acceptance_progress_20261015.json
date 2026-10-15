@@ -1,0 +1,36 @@
+{
+  "updated_at": "2026-10-15T03:41:27.871Z",
+  "head_before_this_checkpoint": "57416471a02987e8d118d3fdf2d6c2f3b58832cd",
+  "goal": ">=90% action agreement, action precision, action recall, Lane agreement and exact sectors in each of ten consecutive disjoint 100-title holdouts under a fixed runtime/configuration/catalog",
+  "best_consecutive_passes": 0,
+  "latest_grok_run": 38675140169,
+  "latest_grok_qualified": false,
+  "strict_glm_retry_run": 38677069775,
+  "strict_glm_retry_status": "in_progress; final availability/metrics not yet known",
+  "frozen_unrun_references": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "unjudged_unrun_reserve": [
+    9,
+    10,
+    11,
+    12
+  ],
+  "development_only_batches": [
+    1,
+    2
+  ],
+  "new_reserve_supplement": "tests/fixtures/semantic_reserve_20261014/supplement_selection_manifest.json",
+  "prepared_not_launched_holdout": "Grok batch 03 preflight verifies baseline dev qualification plus identical runtime/configuration/catalog before calls; prepared file local only; baseline currently fails and therefore cannot advance.",
+  "tests": {
+    "local_semantic": 66,
+    "local_provider": 5,
+    "workflow_contracts": 23
+  },
+  "next": "Finish strict GLM retry. If qualified, freeze that exact candidate for untouched batch03; otherwise improve clause/sector coverage using development data and rerun development before any fresh batch."
+}

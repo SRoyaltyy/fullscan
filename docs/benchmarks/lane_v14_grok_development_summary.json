@@ -1,0 +1,69 @@
+{
+  "version": "lane-v14-grok-development-summary",
+  "commit": "277cfd96d991ed5e511bc9eec381bad397c9c891",
+  "run_id": 38675140169,
+  "input": "tests/fixtures/semantic_frozen_20261014/batch_02.json",
+  "scope": "Development replay after second holdout failed; never increments acceptance streak",
+  "pass": false,
+  "metrics": {
+    "action": 0.92,
+    "lane": 0.88,
+    "sectors": 0.79,
+    "action_precision": 0.8,
+    "action_recall": 0.8
+  },
+  "tp": 16,
+  "fp": 4,
+  "fn_or_unavailable": 4,
+  "availability": 1,
+  "acceptance_eligible": false,
+  "best_consecutive_passes": 0,
+  "provider_configuration": {
+    "providers": [
+      "openclaw"
+    ],
+    "models": [
+      "xai/grok-4.3"
+    ],
+    "review": false,
+    "sector_review": true,
+    "action_review": true,
+    "sector_roles": true,
+    "batch_size": 10,
+    "batch_interval_seconds": 30,
+    "headline_timeout": 450
+  },
+  "artifacts": {
+    "raw": {
+      "id": 11946188757,
+      "sha256": "f315edf2ddbffb7994ba3de6c531f98356df05c692ccc559019c34ffba805fa4"
+    },
+    "score": {
+      "id": 11946523625,
+      "sha256": "93c2044cec065ddc5260112d53c00073921b534afe6403557b15d76abeb3b0dd"
+    }
+  },
+  "findings": {
+    "false_negatives": [
+      7,
+      61,
+      68,
+      85
+    ],
+    "false_positives": [
+      67,
+      83,
+      99,
+      100
+    ],
+    "sector_misses": 21,
+    "lane_misses": 12,
+    "root_causes": [
+      "Secondary public act or official meeting omitted in compound titles",
+      "Private accreditation, court-recipient clause or existing policy treated as a new public act",
+      "Explicit operating activity missed even without a corporate issuer",
+      "Unresolved non-US business identities and occasional ignored catalog target issuer"
+    ]
+  },
+  "acceptance_streak": 0
+}
