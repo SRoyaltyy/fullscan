@@ -3955,14 +3955,6 @@
   },
   "frozen_write_skips": [
     {
-      "path": "data/day_board/2026-10-14.json",
-      "at": "2026-10-14T11:09:44-04:00",
-      "commit_msg": "auto: land peer_rs [2026-10-14]",
-      "workflow": "Stock Book ALL (one-shot)",
-      "run_id": "38586271842",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
       "path": "01_daily/2026-10-14_stock_book.md",
       "at": "2026-10-14T11:10:20-04:00",
       "commit_msg": "auto: land stock_book [2026-10-14]",
@@ -5552,6 +5544,14 @@
       "commit_msg": "auto: strategy tickets 2026-10-14",
       "workflow": "Publish strategy tickets",
       "run_id": "38677004147",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/exports/finviz_2026-10-14.csv",
+      "at": "2026-10-15T01:59:52-04:00",
+      "commit_msg": "auto: land finviz export [2026-10-14]",
+      "workflow": "Finviz ALL (GH-hosted Elite)",
+      "run_id": "38688897048",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
     }
   ]
