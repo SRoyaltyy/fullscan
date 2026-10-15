@@ -1,7 +1,7 @@
 # Primary-origin action documents
 
-Updated 2026-10-15T12:16:32.997656+00:00. 1879 dated documents in the configured 3-day window; 405 newly retained; 532 repeat observations.
-Source health: 339/346 checked successfully. Collection uses zero LLM calls.
+Updated 2026-10-15T12:25:40.816793+00:00. 1969 dated documents in the configured 3-day window; 0 newly retained; 852 repeat observations.
+Source health: 335/338 checked successfully. Collection uses zero LLM calls.
 
 Document stage comes from publisher metadata. Proposed rules, bills and announcements are not automatically labelled enacted policy or concrete public actions.
 
@@ -265,14 +265,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Miss Thirugnanasampanthan and Mr Shiyamalan v Irving Stores Ltd: 2300585/2026 and 6011464/2026](https://www.gov.uk/employment-tribunal-decisions/miss-thirugnanasampanthan-and-mr-shiyamalan-v-irving-stores-ltd-2300585-slash-2026-and-6011464-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:30:57+00:00
 - [Miss H Holt v Sysco GB Ltd: 6025978/2025](https://www.gov.uk/employment-tribunal-decisions/miss-h-holt-v-sysco-gb-ltd-6025978-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:28:50+00:00
 - [Creative Process Digital Ltd v Mr T Tolhurst-Cherriman: 2305206/2023](https://www.gov.uk/employment-tribunal-decisions/creative-process-digital-ltd-v-mr-t-tolhurst-cherriman-2305206-slash-2023) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:27:12+00:00
-- [Mr H Okwuchi v Sentra Solutions Ltd: 6022023/2025](https://www.gov.uk/employment-tribunal-decisions/mr-h-okwuchi-v-sentra-solutions-ltd-6022023-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:25:12+00:00
-- [Miss P Mallik v Arriva Kent and Surrey Ltd: 2303167/2021 and others](https://www.gov.uk/employment-tribunal-decisions/miss-p-mallik-v-arriva-kent-and-surrey-ltd-2303167-slash-2021-and-others) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:25:11+00:00
-- [Mr A S Sapkal v Tom Brown Wholesale Florist Ltd: 6028207/2025](https://www.gov.uk/employment-tribunal-decisions/mr-a-s-sapkal-v-tom-brown-wholesale-florist-ltd-6028207-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:22:24+00:00
-- [Mr J Mola v Barworks Ltd: 6017580/2025](https://www.gov.uk/employment-tribunal-decisions/mr-j-mola-v-barworks-ltd-6017580-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:21:55+00:00
-- [Mr F Kalkan v East Lancashire Hospitals NHS Foundation Trust: 2407790/2023](https://www.gov.uk/employment-tribunal-decisions/mr-f-kalkan-v-east-lancashire-hospitals-nhs-foundation-trust-2407790-slash-2023) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:19:38+00:00
-- [Mr M Pintus v Soho House UK Ltd: 6018829/2026](https://www.gov.uk/employment-tribunal-decisions/mr-m-pintus-v-soho-house-uk-ltd-6018829-slash-2026) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:19:16+00:00
-- [Mr AJF Cantwell v Abbey Marketing Communications Ltd (In Creditors Voluntary Liquidation): 6022963/2025](https://www.gov.uk/employment-tribunal-decisions/mr-ajf-cantwell-v-abbey-marketing-communications-ltd-in-creditors-voluntary-liquidation-6022963-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:17:53+00:00
-- [Ms E Neavin v London Borough of Southwark: 6002439/2024 and others](https://www.gov.uk/employment-tribunal-decisions/ms-e-neavin-v-london-borough-of-southwark-6002439-slash-2024-and-6004978-slash-2025) — HM Courts & Tribunals Service; Employment Tribunal; 2026-10-12T12:17:01+00:00
 
 ## judicial_opinion_published
 
@@ -1439,25 +1431,48 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [The Global Human Rights and International Humanitarian Law Sanctions (Overseas Territories) Order 2026](http://www.legislation.gov.uk/uksi/2026/1089/made) — UK legislation; 2026-10-15T10:43:20.289254+00:00
 - [Bradley John MARGACH](https://www.thegazette.co.uk/notice/5229942) — The Gazette official public record; 2026-10-15T10:40:09+00:00
 - [Rescheduling of the EU-GCC Summit](https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2172) — European Commission press and decisions; 2026-10-15T10:31:50+00:00
+- [Scam alert related to banks](https://www.info.gov.hk/gia/general/202610/15/P2026101500490.htm) — Hong Kong Government Information Services; 2026-10-15T10:00:00+00:00
 - [David Roberts CV and questionnaire for the Treasury Select Committee](https://www.bankofengland.co.uk/news/2026/october/david-roberts-tsc-reappointment) — Bank of England; 2026-10-15T09:52:41+00:00
+- [Hong Kong Customs organises Customs YES Youth International Engagement Tour to Macao (with photos)](https://www.info.gov.hk/gia/general/202610/15/P2026101500482.htm) — Hong Kong Government Information Services; 2026-10-15T09:40:00+00:00
+- [Lands Department releases figures on registered lease modifications, land exchanges, private treaty grants and lot extensions in third quarter of 2026](https://www.info.gov.hk/gia/general/202610/15/P2026101500550.htm) — Hong Kong Government Information Services; 2026-10-15T09:30:00+00:00
+- [Incoming passenger convicted and jailed for importing duty-not-paid cigarettes (with photo)](https://www.info.gov.hk/gia/general/202610/15/P2026101500555.htm) — Hong Kong Government Information Services; 2026-10-15T09:30:00+00:00
+- [Government posts land resumption and acquisition notices for development of Ngau Tam Mei New Development Area (First Batch)](https://www.info.gov.hk/gia/general/202610/15/P2026101500252.htm) — Hong Kong Government Information Services; 2026-10-15T09:17:00+00:00
+- [Tender of 2-year RMB HKSAR Institutional Government Bonds through re-opening to be held on October 22](https://www.info.gov.hk/gia/general/202610/15/P2026101500488.htm) — Hong Kong Government Information Services; 2026-10-15T09:05:00+00:00
+- [Hong Kong Customs conducts joint enforcement operations with FEHD regarding sale of hairy crabs (with photos)](https://www.info.gov.hk/gia/general/202610/15/P2026101500430.htm) — Hong Kong Government Information Services; 2026-10-15T09:00:00+00:00
 - [When less is more: behavioral effects of CBDC holding limits](https://www.ecb.europa.eu//pub/pdf/scpwps/ecb.wp3300~0277bae3af.en.pdf) — European Central Bank — Publications; 2026-10-15T09:00:00+00:00
 - [Stop believing in haircuts - at least the way you think about them](https://www.ecb.europa.eu//pub/pdf/scpwps/ecb.wp3301~1585c96063.en.pdf) — European Central Bank — Publications; 2026-10-15T09:00:00+00:00
+- [Government posts notices of land resumption and acquisition for developments at San Hing Road and Hong Po Road in Tuen Mun](https://www.info.gov.hk/gia/general/202610/15/P2026101500246.htm) — Hong Kong Government Information Services; 2026-10-15T08:53:00+00:00
+- [FEHD enhances environmental hygiene services in Lan Kwai Fong area during Halloween (with photos)](https://www.info.gov.hk/gia/general/202610/15/P2026101500448.htm) — Hong Kong Government Information Services; 2026-10-15T08:47:34+00:00
 - [The Inspectors of Education, Children’s Services and Skills (No. 3) Order 2026](http://www.legislation.gov.uk/uksi/2026/1087/made) — UK legislation; 2026-10-15T08:41:11.236801+00:00
 - [Antidepressants: new safety measures for all patients to improve communication of the risk of suicidal thoughts and behaviours and persistent sexual dysfunction](https://www.gov.uk/drug-safety-update/antidepressants-new-safety-measures-for-all-patients-to-improve-communication-of-the-risk-of-suicidal-thoughts-and-behaviours-and-persistent-sexual-dysfunction) — Medicines and Healthcare products Regulatory Agency; 2026-10-15T08:30:08+00:00
 - [PW and P Sim and Son (NPS/WR/047856): application made to abstract water](https://www.gov.uk/government/publications/pw-and-p-sim-and-son-npswr047856-application-made-to-abstract-water) — Environment Agency; 2026-10-15T08:30:03+00:00
 - [Los Tamaraos Limited (NPS/WR/046548): application made to abstract water](https://www.gov.uk/government/publications/los-tamaraos-limited-npswr046548-application-made-to-abstract-water) — Environment Agency; 2026-10-15T08:30:03+00:00
+- [Volume and price statistics of external merchandise trade in August 2026](https://www.info.gov.hk/gia/general/202610/15/P2026101500323.htm) — Hong Kong Government Information Services; 2026-10-15T08:30:00+00:00
 - [Speech by Commissioner Lahbib at the International Conference on the Protection of Aid Workers](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2171) — European Commission press and decisions; 2026-10-15T08:29:41+00:00
 - [H. Rept. 119-841](https://www.govinfo.gov/app/details/CRPT-119hrpt841) — Congressional Reports; 2026-10-15T08:28:00+00:00
 - [H. Rept. 119-834](https://www.govinfo.gov/app/details/CRPT-119hrpt834) — Congressional Reports; 2026-10-15T08:26:00+00:00
+- [Inspection of aquatic products imported from Japan](https://www.info.gov.hk/gia/general/202610/15/P2026101500492.htm) — Hong Kong Government Information Services; 2026-10-15T08:22:00+00:00
 - [Daily News 15 / 10 / 2026](https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2170) — European Commission press and decisions; 2026-10-15T08:19:59+00:00
+- [36th World Customs Organization Asia/Pacific Regional Contact Points Meeting concludes (with photos)](https://www.info.gov.hk/gia/general/202610/15/P2026101500259.htm) — Hong Kong Government Information Services; 2026-10-15T08:00:00+00:00
 - [Regulatory reporting on profit and loss: institutions will have option to report under IAS 1 or IFRS 18](https://www.bankingsupervision.europa.eu//press/pr/date/2026/html/ssm.pr261015~9c7bd1ee8e.en.html) — ECB Banking Supervision — Press releases, speeches, interviews, press conference transcripts; 2026-10-15T08:00:00+00:00
+- [Effective Exchange Rate Index](https://www.info.gov.hk/gia/general/202610/15/P2026101500173.htm) — Hong Kong Government Information Services; 2026-10-15T07:45:00+00:00
+- [Another new drug approved for registration under "1+" mechanism](https://www.info.gov.hk/gia/general/202610/15/P2026101500399.htm) — Hong Kong Government Information Services; 2026-10-15T07:40:00+00:00
 - [ESCB SSM Shared Values Charter 2026](https://www.ecb.europa.eu//pub/pdf/other/ESCB-SSM-Shared-Values-Charter-2026.en.pdf) — European Central Bank — Publications; 2026-10-15T07:30:00+00:00
 - [Steady progress on the One Europe, One Market roadmap](https://ec.europa.eu/commission/presscorner/detail/en/jp_26_2169) — European Commission press and decisions; 2026-10-15T06:36:43+00:00
+- [HKMA announces "ART" Framework to promote responsible AI adoption](https://www.info.gov.hk/gia/general/202610/15/P2026101500186.htm) — Hong Kong Government Information Services; 2026-10-15T06:30:00+00:00
 - [H. Rept. 119-840](https://www.govinfo.gov/app/details/CRPT-119hrpt840) — Congressional Reports; 2026-10-15T05:12:00+00:00
 - [Panel with Carolyn Rogers, Senior Deputy Governor of the Bank of Canada](https://www.bankofcanada.ca/2026/10/panel-with-carolyn-rogers-senior-deputy-governor-of-the-bank-of-canada-2026-10-15/) — Bank of Canada — Press; 2026-10-15T05:00:34+00:00
-- [Bowman, Supervisory Modernization After Silicon Valley Bank](https://www.federalreserve.gov/newsevents/speech/bowman20261014a.htm) — Federal Reserve Board — All Speeches; 2026-10-15T02:55:00+00:00
+- [Hong Kong Space Museum to screen new 3D dome show "Explore 3D" (with photos)](https://www.info.gov.hk/gia/general/202610/15/P2026101500251.htm) — Hong Kong Government Information Services; 2026-10-15T04:52:00+00:00
+- [Speech by SITI at Future Technology · Future Scenarios · Future Talent - Youth Scientists and Industry Application Scenario Matching Forum (English only) (with photo)](https://www.info.gov.hk/gia/general/202610/15/P2026101500293.htm) — Hong Kong Government Information Services; 2026-10-15T04:05:00+00:00
+- [Immediate return of completed requisition forms urged](https://www.info.gov.hk/gia/general/202610/15/P2026101400336.htm) — Hong Kong Government Information Services; 2026-10-15T03:00:00+00:00
+- [Major Sports Events Committee awards "M" Mark status to three events](https://www.info.gov.hk/gia/general/202610/15/P2026101500178.htm) — Hong Kong Government Information Services; 2026-10-15T03:00:00+00:00
+- [Property owner fined $100,000 for not complying with removal and repair orders](https://www.info.gov.hk/gia/general/202610/15/P2026101500193.htm) — Hong Kong Government Information Services; 2026-10-15T03:00:00+00:00
+- [Secretary for Health to lead delegation to Beijing tomorrow to attend World Conference on Traditional Medicine 2026](https://www.info.gov.hk/gia/general/202610/15/P2026101500244.htm) — Hong Kong Government Information Services; 2026-10-15T03:00:00+00:00
+- [Profiles of kindergartens posted online](https://www.info.gov.hk/gia/general/202610/15/P2026101500254.htm) — Hong Kong Government Information Services; 2026-10-15T03:00:00+00:00
+- [Red flags hoisted at several beaches](https://www.info.gov.hk/gia/general/202610/15/P2026101500195.htm) — Hong Kong Government Information Services; 2026-10-15T02:43:00+00:00
 - [The Child Minding and Day Care Exceptions (Revocation and Transitional Provision) (Wales) (Amendment) Order 2026 / Gorchymyn Eithriadau Gwarchod Plant a Gofal Dydd (Dirymu a Darpariaeth Drosiannol) (Cymru) (Diwygio) 2026](http://www.legislation.gov.uk/wsi/2026/122/made) — UK legislation; 2026-10-15T02:05:05.423787+00:00
 - [The Gas Safety (Installation and Use) (Amendment) Regulations (Northern Ireland) 2026](http://www.legislation.gov.uk/nisr/2026/178/made) — UK legislation; 2026-10-15T02:04:55.372622+00:00
+- [Reopening of Fanling Swimming Pool](https://www.info.gov.hk/gia/general/202610/15/P2026101500212.htm) — Hong Kong Government Information Services; 2026-10-15T01:54:47+00:00
 - [Speech by Board Member KOEDA in Kumamoto (Economic Activity, Prices, and Monetary Policy in Japan)](http://www.boj.or.jp/en/about/press/koen_2026/ko261015a.htm) — Bank of Japan; 2026-10-15T01:30:00+00:00
 - [Summary of the "Meeting on Market Operations" (October 2026)](http://www.boj.or.jp/en/paym/market/mkt261015a.pdf) — Bank of Japan; 2026-10-15T01:00:00+00:00
 - [Chokepoint disruptions and their macroeconomic consequences](https://www.bis.org/publications/bulletin-138-chokepoint-disruptions-and-their-macroeconomic-consequences) — Bank for International Settlements — View feed; 2026-10-15T00:00:00+00:00
@@ -1527,7 +1542,6 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [CV31 1AY, Bellway Homes Limited: environmental: permit application advertisement EPR/BP3720MH/A001](https://www.gov.uk/government/publications/cv31-1ay-bellway-homes-limited-environmental-permit-application-advertisement-eprbp3720mha001--2) — Environment Agency; 2026-10-14T14:05:26+00:00
 - [Commercialising Knowledge Assets Fund: successful projects](https://www.gov.uk/government/publications/commercialising-knowledge-assets-fund-successful-projects) — Government Office for Technology Transfer; Department for Business, Innovation, Science and Trade; 2026-10-14T14:02:11+00:00
 - [Blood Guidances](http://www.fda.gov/vaccines-blood-biologics/biologics-guidances/blood-guidances) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T14:02:04+00:00
-- [FEDS Note: The Rise of Semiliquid Funds for Retail Investors](https://www.federalreserve.gov/econres/notes/feds-notes/the-rise-of-semiliquid-funds-for-retail-investors-20261014.html) — Federal Reserve Board — FEDS Notes; 2026-10-14T14:00:00+00:00
 - [Recently Issued Guidance Documents](http://www.fda.gov/vaccines-blood-biologics/biologics-guidances/recently-issued-guidance-documents) — Food and Drug Administration — What's New: Drugs; 2026-10-14T13:58:21+00:00
 - [Roster of the Cellular, Tissue and Gene Therapies Advisory Committee](http://www.fda.gov/advisory-committees/cellular-tissue-and-gene-therapies-advisory-committee/roster-cellular-tissue-and-gene-therapies-advisory-committee) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T13:49:08+00:00
 - [Roster of the Vaccines and Related Biological Products Advisory Committee](http://www.fda.gov/advisory-committees/vaccines-and-related-biological-products-advisory-committee/roster-vaccines-and-related-biological-products-advisory-committee) — Food and Drug Administration — What's New: Vaccines, Blood and Biologics; 2026-10-14T13:48:12+00:00
@@ -1567,13 +1581,21 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [1.1195 USD = 1 EUR 2026-10-14 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-usd.en.html?date=2026-10-14&rate=1.1195) — European Central Bank — US dollar (USD); 2026-10-14T13:15:00+00:00
 - [3.4443 ILS = 1 EUR 2026-10-14 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-ils.en.html?date=2026-10-14&rate=3.4443) — European Central Bank — ILS; 2026-10-14T13:15:00+00:00
 - [Commissioners Kubilius and Lahbib strengthen global disaster risk management through space technologies](https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2164) — European Commission press and decisions; 2026-10-14T13:14:21+00:00
+- [Hong Kong Customs takes territory-wide law enforcement actions against illicit cigarette selling points (with photos)](https://www.info.gov.hk/gia/general/202610/14/P2026101400625.htm) — Hong Kong Government Information Services; 2026-10-14T13:00:00+00:00
+- [HKETO Berlin promotes Hong Kong's biotech advantages at 26th Annual Biotech in Europe Forum (with photos)](https://www.info.gov.hk/gia/general/202610/14/P2026101400735.htm) — Hong Kong Government Information Services; 2026-10-14T12:50:00+00:00
 - [Speech by Executive Vice-President Fitto at High Level Session “A Cohesion Policy for a Competitive Union”](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2163) — European Commission press and decisions; 2026-10-14T12:19:03+00:00
+- [28 more nomination forms for Election Committee Subsector Ordinary Elections received today](https://www.info.gov.hk/gia/general/202610/14/P2026101400725.htm) — Hong Kong Government Information Services; 2026-10-14T12:16:49+00:00
 - [Crown Office](https://www.thegazette.co.uk/notice/5230581) — The Gazette official public record; 2026-10-14T12:00:13+00:00
 - [NE66 3RQ, Robert Thompson, David Thompson, Kathryn Thompson and Bethan Thompson: environmental permit application advertisement - EPR/KP3326MQ/A002](https://www.gov.uk/government/publications/ne66-3rq-robert-thompson-david-thompson-kathryn-thompson-and-bethan-thompson-environmental-permit-application-advertisement-eprkp3326mqa002) — Environment Agency; 2026-10-14T11:36:46+00:00
 - [NE22 7FJ, JDR Cable Systems Limited: environmental permit application advertisement - EPR/NP3025MA/A001](https://www.gov.uk/government/publications/ne22-7fj-jdr-cable-systems-limited-environmental-permit-application-advertisement-eprnp3025maa001) — Environment Agency; 2026-10-14T11:35:07+00:00
 - [AL4 0SA, Luton Metal Recycling Limited: environmental permit application advertisement - EPR/YP3522SE/V002](https://www.gov.uk/government/publications/al4-0sa-luton-metal-recycling-limited-environmental-permit-application-advertisement-epryp3522sev002) — Environment Agency; 2026-10-14T11:33:34+00:00
 - [BL5 3JF, Frank Mercer & Sons Ltd: environmental permit application advertisement – EPR/WP3928ML/A002](https://www.gov.uk/government/publications/bl5-3jf-frank-mercer-sons-ltd-environmental-permit-application-advertisement-eprwp3928mla002) — Environment Agency; 2026-10-14T11:32:04+00:00
+- [Hong Kong Customs seizes suspected counterfeit goods worth over $7.6 million in "Time Shield" operation (with photos)](https://www.info.gov.hk/gia/general/202610/14/P2026101400679.htm) — Hong Kong Government Information Services; 2026-10-14T11:08:00+00:00
 - [The Fifteenth Tripartite Governors' Meeting among PBOC, BOJ, and BOK](http://www.boj.or.jp/en/intl_finance/cooperate/coop261014a.pdf) — Bank of Japan; 2026-10-14T11:00:00+00:00
+- [Brussels ETO continues support for Hong Kong films at renowned Sitges International Fantastic Film Festival of Catalonia (with photos)](https://www.info.gov.hk/gia/general/202610/14/P2026101300590.htm) — Hong Kong Government Information Services; 2026-10-14T10:55:00+00:00
+- [LCQ7: Concern about adolescents' addiction to the Internet](https://www.info.gov.hk/gia/general/202610/14/P2026101400568.htm) — Hong Kong Government Information Services; 2026-10-14T10:52:00+00:00
+- [CFS finds excessive Bacillus cereus in sample of bun with fresh meat and preserved vegetable](https://www.info.gov.hk/gia/general/202610/14/P2026101400675.htm) — Hong Kong Government Information Services; 2026-10-14T10:38:36+00:00
+- [Scam alert related to banks](https://www.info.gov.hk/gia/general/202610/14/P2026101400495.htm) — Hong Kong Government Information Services; 2026-10-14T10:10:00+00:00
 - [NE61 3NF, Clark Homes Limited: environmental permit application advertisement - EPR/GP3426MY/A001](https://www.gov.uk/government/publications/ne61-3nf-clark-homes-limited-environmental-permit-application-advertisement-eprgp3426mya001) — Environment Agency; 2026-10-14T10:09:59+00:00
 - [Announcing 20100084 (,), for days deadline](http://www.ecb.europa.eu/mopo/implement/omo/html/20100084.en.html) — European Central Bank — Recent open market operations and ad hoc ECB communication; 2026-10-14T10:05:37+00:00
 - [20260061 (MRO,liquidity providing):12655.30 mn EUR alloted (fixed 2.400000%, 100.000000% allotment at margin)](http://www.ecb.europa.eu/mopo/implement/omo/html/20260061.en.html) — European Central Bank — Recent open market operations and ad hoc ECB communication; 2026-10-14T10:05:37+00:00
@@ -1607,23 +1629,79 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [20260089 (OT,liquidity providing):205.00 mn USD alloted (fixed 4.130000%, 100.000000% allotment at margin)](http://www.ecb.europa.eu/mopo/implement/omo/html/20260089.en.html) — European Central Bank — Recent open market operations and ad hoc ECB communication; 2026-10-14T10:05:37+00:00
 - [20260090 (MRO,liquidity providing):18510.00 mn EUR alloted (fixed 2.650000%, 100.000000% allotment at margin)](http://www.ecb.europa.eu/mopo/implement/omo/html/20260090.en.html) — European Central Bank — Recent open market operations and ad hoc ECB communication; 2026-10-14T10:05:37+00:00
 - [20260091 (OT,liquidity providing):170.10 mn USD alloted (fixed 4.130000%, 100.000000% allotment at margin)](http://www.ecb.europa.eu/mopo/implement/omo/html/20260091.en.html) — European Central Bank — Recent open market operations and ad hoc ECB communication; 2026-10-14T10:05:37+00:00
+- [Toll rate for Central Kowloon Bypass to take effect from December 6](https://www.info.gov.hk/gia/general/202610/14/P2026101400518.htm) — Hong Kong Government Information Services; 2026-10-14T10:00:00+00:00
+- [FEHD launches second phase of "Operation Skynet" today to inspect public markets after achieving significant results in first phase (with photos)](https://www.info.gov.hk/gia/general/202610/14/P2026101400627.htm) — Hong Kong Government Information Services; 2026-10-14T09:55:00+00:00
+- [Tender of 3-year HKD HKSAR Institutional Government Bonds through re-opening to be held on October 21](https://www.info.gov.hk/gia/general/202610/14/P2026101400544.htm) — Hong Kong Government Information Services; 2026-10-14T09:46:54+00:00
+- [Tender of 10-year HKD HKSAR Institutional Government Bonds through re-opening to be held on October 21](https://www.info.gov.hk/gia/general/202610/14/P2026101400574.htm) — Hong Kong Government Information Services; 2026-10-14T09:46:00+00:00
+- [Hong Kong Customs seizes dried shark fins of suspected scheduled endangered species (with photo)](https://www.info.gov.hk/gia/general/202610/14/P2026101400623.htm) — Hong Kong Government Information Services; 2026-10-14T09:45:00+00:00
 - [Opening Remarks by Commissioner Hansen at the Farmers' Congress in Sweden](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2162) — European Commission press and decisions; 2026-10-14T09:37:47+00:00
 - [Media advisory - Tripartite Social Summit of 14 October 2026](https://www.consilium.europa.eu/en/press/press-releases/2026/10/14/media-advisory-tripartite-social-summit-of-14-october-2026/) — Council of the European Union; 2026-10-14T09:30:00+00:00
 - [Opening remarks by Executive Vice-President Teresa Ribera on the Commission decision to accept commitments by Sanofi](https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2161) — European Commission press and decisions; 2026-10-14T09:15:23+00:00
+- [FS to attend Annual Meetings of IMF and World Bank Group in Thailand](https://www.info.gov.hk/gia/general/202610/14/P2026101400449.htm) — Hong Kong Government Information Services; 2026-10-14T09:00:00+00:00
+- ["iAM Smart" introduces AI Assistant feature](https://www.info.gov.hk/gia/general/202610/14/P2026101400480.htm) — Hong Kong Government Information Services; 2026-10-14T09:00:00+00:00
 - [What analysts hear and why it matters for monetary policy](https://www.ecb.europa.eu//pub/pdf/scpwps/ecb.wp3298~06485c09a7.en.pdf) — European Central Bank — Publications; 2026-10-14T09:00:00+00:00
 - [The heterogeneous bank lending channel of monetary policy](https://www.ecb.europa.eu//pub/pdf/scpwps/ecb.wp3299~01776adb36.en.pdf) — European Central Bank — Publications; 2026-10-14T09:00:00+00:00
+- [HKMH to showcase education legacy of Hong Kong's Ta Teh Institute (with photos)](https://www.info.gov.hk/gia/general/202610/14/P2026101400252.htm) — Hong Kong Government Information Services; 2026-10-14T08:37:00+00:00
+- [Hong Kong Customs steps up enforcement operations to combat smuggling activities to Macao by river trade vessels (with photos)](https://www.info.gov.hk/gia/general/202610/14/P2026101400504.htm) — Hong Kong Government Information Services; 2026-10-14T08:35:00+00:00
+- [LCQ 6: Confluence and Elevation - School Excellence Project](https://www.info.gov.hk/gia/general/202610/14/P2026101400523.htm) — Hong Kong Government Information Services; 2026-10-14T08:35:00+00:00
 - [Notice of monetary penalty and costs recovery: ABRSM](https://www.gov.uk/government/publications/notice-of-monetary-penalty-and-costs-recovery-abrsm) — Ofqual; 2026-10-14T08:30:08+00:00
 - [Notice to exporters 2026/23: expansion of the dual-use open general export licence](https://www.gov.uk/government/publications/notice-to-exporters-202623-expansion-of-the-dual-use-open-general-export-licence) — Department for Business, Innovation, Science and Trade; 2026-10-14T08:30:06+00:00
+- [Analytical Accounts of Exchange Fund](https://www.info.gov.hk/gia/general/202610/14/P2026101400251.htm) — Hong Kong Government Information Services; 2026-10-14T08:30:00+00:00
+- [LCQ13: Expediting digitalisation of trade documents](https://www.info.gov.hk/gia/general/202610/14/P2026101400512.htm) — Hong Kong Government Information Services; 2026-10-14T08:18:00+00:00
+- [DH urges members of public to maintain hygiene amid increasing local activity of hand, foot and mouth disease](https://www.info.gov.hk/gia/general/202610/14/P2026101400516.htm) — Hong Kong Government Information Services; 2026-10-14T08:12:00+00:00
 - [Japanese Government Bonds Held by the Bank of Japan](http://www.boj.or.jp/en/statistics/boj/other/mei/release/2026/mei261009.xlsx) — Bank of Japan; 2026-10-14T08:00:00+00:00
+- [Effective Exchange Rate Index](https://www.info.gov.hk/gia/general/202610/14/P2026101400210.htm) — Hong Kong Government Information Services; 2026-10-14T08:00:00+00:00
+- [Orders on Comprehensive Avoidance of Double Taxation Agreements with six countries to be gazetted](https://www.info.gov.hk/gia/general/202610/14/P2026101400352.htm) — Hong Kong Government Information Services; 2026-10-14T08:00:00+00:00
+- [Two persons sentenced to seven and five months' imprisonment respectively for illegally importing alternative smoking products](https://www.info.gov.hk/gia/general/202610/14/P2026101400520.htm) — Hong Kong Government Information Services; 2026-10-14T07:55:49+00:00
+- [Inspection of aquatic products imported from Japan](https://www.info.gov.hk/gia/general/202610/14/P2026101400535.htm) — Hong Kong Government Information Services; 2026-10-14T07:48:00+00:00
+- [LCQ18: Support measures for carers](https://www.info.gov.hk/gia/general/202610/14/P2026101400289.htm) — Hong Kong Government Information Services; 2026-10-14T07:40:00+00:00
+- [LCQ21: Deepening patriotic education](https://www.info.gov.hk/gia/general/202610/14/P2026101400340.htm) — Hong Kong Government Information Services; 2026-10-14T07:31:45+00:00
+- [Government invites interested parties to submit expressions of interest for development of onshore power supply facility at Kai Tak Cruise Terminal](https://www.info.gov.hk/gia/general/202610/14/P2026101300358.htm) — Hong Kong Government Information Services; 2026-10-14T07:30:00+00:00
+- [HKMA welcomes launch of Chongqing-Hong Kong Cross-Boundary Data Validation Platform](https://www.info.gov.hk/gia/general/202610/14/P2026101300478.htm) — Hong Kong Government Information Services; 2026-10-14T07:30:00+00:00
+- [Fanling Swimming Pool temporarily closed](https://www.info.gov.hk/gia/general/202610/14/P2026101400500.htm) — Hong Kong Government Information Services; 2026-10-14T07:15:00+00:00
+- [LCQ17: Strengthening dog management regime and enforcement operations](https://www.info.gov.hk/gia/general/202610/14/P2026101400275.htm) — Hong Kong Government Information Services; 2026-10-14T06:55:00+00:00
+- [HKICL alerts public of fraudulent website](https://www.info.gov.hk/gia/general/202610/14/P2026101400482.htm) — Hong Kong Government Information Services; 2026-10-14T06:55:00+00:00
+- [Red flags hoisted at Big Wave Bay Beach and Cheung Chau Tung Wan Beach](https://www.info.gov.hk/gia/general/202610/14/P2026101400473.htm) — Hong Kong Government Information Services; 2026-10-14T06:47:00+00:00
+- [LCQ14: Illegal parking and illegal activities in Wan Chai District](https://www.info.gov.hk/gia/general/202610/14/P2026101400357.htm) — Hong Kong Government Information Services; 2026-10-14T06:45:00+00:00
+- [Legislative amendments to confer default mediator-appointing power on Hong Kong Mediation Accreditation Association Limited](https://www.info.gov.hk/gia/general/202610/14/P2026101400305.htm) — Hong Kong Government Information Services; 2026-10-14T06:40:00+00:00
+- [LCQ2: Celebration activities for 30th anniversary of Hong Kong's return to the motherland](https://www.info.gov.hk/gia/general/202610/14/P2026101400343.htm) — Hong Kong Government Information Services; 2026-10-14T06:33:00+00:00
+- [LCQ12: Silver Bond issued in 2026](https://www.info.gov.hk/gia/general/202610/14/P2026101400253.htm) — Hong Kong Government Information Services; 2026-10-14T06:27:00+00:00
+- [Postal services to Nepal subject to delays](https://www.info.gov.hk/gia/general/202610/14/P2026101400444.htm) — Hong Kong Government Information Services; 2026-10-14T06:15:00+00:00
+- [LCQ5: Supporting development of intelligent computing industry](https://www.info.gov.hk/gia/general/202610/14/P2026101400415.htm) — Hong Kong Government Information Services; 2026-10-14T06:08:00+00:00
+- [Assessment Committee supports nine applications under Pilot Innovation and Technology Accelerator Scheme](https://www.info.gov.hk/gia/general/202610/14/P2026100700328.htm) — Hong Kong Government Information Services; 2026-10-14T06:00:00+00:00
+- [FS concludes visit to Nanjing (with photos/video)](https://www.info.gov.hk/gia/general/202610/14/P2026101400398.htm) — Hong Kong Government Information Services; 2026-10-14T05:46:00+00:00
+- [LCQ4: Combating illegal online gambling activities](https://www.info.gov.hk/gia/general/202610/14/P2026101400376.htm) — Hong Kong Government Information Services; 2026-10-14T05:35:00+00:00
+- [LCQ3: Review of taxi service arrangements](https://www.info.gov.hk/gia/general/202610/14/P2026101400365.htm) — Hong Kong Government Information Services; 2026-10-14T05:25:00+00:00
+- [LCQ8: Rodent prevention and control](https://www.info.gov.hk/gia/general/202610/14/P2026101400325.htm) — Hong Kong Government Information Services; 2026-10-14T05:00:00+00:00
 - [115年乙類第4期（2年期）中央政府建設公債開標結果](https://www.cbc.gov.tw/tw/cp-302-193026-bb27d-1.html) — Central Bank of the Republic of China Taiwan — 訂閱電子報; 2026-10-14T04:40:00+00:00
+- [LCQ1: Foreign domestic helpers](https://www.info.gov.hk/gia/general/202610/14/P2026101400341.htm) — Hong Kong Government Information Services; 2026-10-14T04:33:48+00:00
+- [LCQ20: Strengthening promotion of vocational and professional education and training](https://www.info.gov.hk/gia/general/202610/14/P2026101400287.htm) — Hong Kong Government Information Services; 2026-10-14T04:33:00+00:00
+- [LCQ19: Providing support to centenarians](https://www.info.gov.hk/gia/general/202610/14/P2026101400298.htm) — Hong Kong Government Information Services; 2026-10-14T04:26:00+00:00
+- [LCQ15: Impact of oil price fluctuations on public ferry services](https://www.info.gov.hk/gia/general/202610/14/P2026101400237.htm) — Hong Kong Government Information Services; 2026-10-14T04:20:00+00:00
+- [LCQ11: Enhancing waterborne transport services and ancillary facilities](https://www.info.gov.hk/gia/general/202610/14/P2026101400198.htm) — Hong Kong Government Information Services; 2026-10-14T04:10:11+00:00
+- [Hong Kong Academy of Finance's 2027 intake of Financial Leaders Programme is open for application](https://www.info.gov.hk/gia/general/202610/14/P2026101300387.htm) — Hong Kong Government Information Services; 2026-10-14T04:00:00+00:00
+- [LCQ22: MTR Fare Savers](https://www.info.gov.hk/gia/general/202610/14/P2026101400227.htm) — Hong Kong Government Information Services; 2026-10-14T04:00:00+00:00
+- [Employer sanctioned for violating requirements under Enhanced Supplementary Labour Scheme](https://www.info.gov.hk/gia/general/202610/14/P2026101400301.htm) — Hong Kong Government Information Services; 2026-10-14T04:00:00+00:00
 - [CFPB Announces New Initiative to Address OCC-Uncovered Debanking by Large Banks](https://www.consumerfinance.gov/about-us/newsroom/cfpb-announces-new-initiative-to-address-occ-uncovered-debanking-by-large-banks/) — Consumer Financial Protection Bureau; 2026-10-14T04:00:00+00:00
+- [Keynote speech by PSITI at LSCM Logistics Summit 2026 (English only) (with photo)](https://www.info.gov.hk/gia/general/202610/14/P2026101400272.htm) — Hong Kong Government Information Services; 2026-10-14T03:45:00+00:00
+- [LCQ9: Licensing and regulatory regime for massage establishments](https://www.info.gov.hk/gia/general/202610/14/P2026101400297.htm) — Hong Kong Government Information Services; 2026-10-14T03:45:00+00:00
+- [LCQ10: Nuisance behaviour of passengers on public transport](https://www.info.gov.hk/gia/general/202610/14/P2026101400267.htm) — Hong Kong Government Information Services; 2026-10-14T03:42:30+00:00
+- [Speech by SITI at HKU Innovation Week 2026 (English only) (with photo)](https://www.info.gov.hk/gia/general/202610/14/P2026101400310.htm) — Hong Kong Government Information Services; 2026-10-14T03:35:00+00:00
 - [Patent Journal special notices: 7169](https://www.gov.uk/government/publications/patent-journal-special-notices-7169) — Intellectual Property Office; 2026-10-14T03:30:04+00:00
+- [Speech by DCS at LSCM Logistics Summit 2026 (English only) (with photos)](https://www.info.gov.hk/gia/general/202610/14/P2026101400317.htm) — Hong Kong Government Information Services; 2026-10-14T03:18:00+00:00
+- [LCQ16: Universal Accessibility Programme](https://www.info.gov.hk/gia/general/202610/14/P2026101400199.htm) — Hong Kong Government Information Services; 2026-10-14T03:15:00+00:00
+- [Three property owners fined nearly $320,000 in total for persistently not complying with removal orders](https://www.info.gov.hk/gia/general/202610/14/P2026101400230.htm) — Hong Kong Government Information Services; 2026-10-14T03:10:00+00:00
 - [(SHINSA)Information on biosimilars is updated](https://www.pmda.go.jp/english/review-services/reviews/0005.html) — Japan Pharmaceuticals and Medical Devices Agency; 2026-10-14T03:00:00+00:00
 - [(SHINSA)English Translation of Review Report: Tecentriq (Partial Change Approval)](https://www.pmda.go.jp/english/review-services/reviews/approved-information/drugs/0001.html) — Japan Pharmaceuticals and Medical Devices Agency; 2026-10-14T03:00:00+00:00
 - [(SHINSA)SaMD page updated (English translation of “Review Points for Medical Devices Utilizing Generative AI (Draft)” published, consultation schedule updated)](https://www.pmda.go.jp/english/review-services/reviews/0009.html) — Japan Pharmaceuticals and Medical Devices Agency; 2026-10-14T03:00:00+00:00
+- [FSTB welcomes inaugural issuance of "sidecar" insurance-linked securities in Hong Kong](https://www.info.gov.hk/gia/general/202610/14/P2026101300441.htm) — Hong Kong Government Information Services; 2026-10-14T03:00:00+00:00
+- [Red flags hoisted at Stanley Main Beach and Clear Water Bay Second Beach](https://www.info.gov.hk/gia/general/202610/14/P2026101400281.htm) — Hong Kong Government Information Services; 2026-10-14T03:00:00+00:00
 - [Appointment of Chief Risk Officer](https://www.rba.gov.au/media-releases/2026/mr-26-29.html) — Reserve Bank of Australia; 2026-10-14T03:00:00+00:00
+- [Speech by SCED at HKGCC Silver Economy Summit (English only)](https://www.info.gov.hk/gia/general/202610/14/P2026101400271.htm) — Hong Kong Government Information Services; 2026-10-14T02:31:00+00:00
 - [Fireside Chat with Tiff Macklem, Governor of the Bank of Canada](https://www.bankofcanada.ca/2026/10/fireside-chat-with-tiff-macklem-governor-of-the-bank-of-canada-2026-10-14/) — Bank of Canada — Press; 2026-10-14T02:05:41+00:00
 - [The Water Resources (Control of Agricultural Pollution) (Wales) (Amendment) Regulations 2026 / Rheoliadau Adnoddau Dŵr (Rheoli Llygredd Amaethyddol) (Cymru) (Diwygio) 2026](http://www.legislation.gov.uk/wsi/2026/121/made) — UK legislation; 2026-10-14T02:03:57.458741+00:00
+- [Special traffic arrangements for race meeting in Happy Valley](https://www.info.gov.hk/gia/general/202610/14/P2026101400218.htm) — Hong Kong Government Information Services; 2026-10-14T01:20:30+00:00
+- [Red flags hoisted at Shek O Beach and Silverstrand Beach](https://www.info.gov.hk/gia/general/202610/14/P2026101400213.htm) — Hong Kong Government Information Services; 2026-10-14T01:20:00+00:00
 - [Bank of Japan Accounts (October 10)](http://www.boj.or.jp/en/statistics/boj/other/acmai/release/2026/ac261010.htm) — Bank of Japan; 2026-10-14T01:00:00+00:00
 - [MM v The Secretary of State for the Home Department](https://caselaw.nationalarchives.gov.uk/tna.c3pxs7w7) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
 - [Josoemag Services Limited v The Commissioners for HMRC](https://caselaw.nationalarchives.gov.uk/ukut/tcc/2026/394) — The National Archives Find Case Law; 2026-10-14T00:00:00+00:00
@@ -1784,7 +1862,9 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [Product Safety Report: OOWOLF LED Light sold via Amazon (2609-0221)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-oowolf-led-light-sold-via-amazon-2609-0221) — Office for Product Safety and Standards; 2026-10-13T14:06:33+00:00
 - [OX5 1RA, OXCCU Tech Ltd: environmental permit application advertisement - EPR/UP3622MG/A002](https://www.gov.uk/government/publications/ox5-1ra-oxccu-tech-ltd-environmental-permit-application-advertisement-eprup3622mga002) — Environment Agency; 2026-10-13T13:56:38+00:00
 - [Product Safety Report: Mini Chainsaw, 4L (2609-0234)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-mini-chainsaw-4l-2609-0234) — Office for Product Safety and Standards; 2026-10-13T13:49:36+00:00
+- [Hong Kong Customs seizes suspected smuggled pharmaceutical products worth about $18 million (with photo)](https://www.info.gov.hk/gia/general/202610/13/P2026101300672.htm) — Hong Kong Government Information Services; 2026-10-13T13:48:00+00:00
 - [Product Safety Report: Eskute C100 Plus Electric Bicycle (2610-0010)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-eskute-c100-plus-electric-bicycle-2610-0010) — Office for Product Safety and Standards; 2026-10-13T13:47:36+00:00
+- [Woman holding charged with murder](https://www.info.gov.hk/gia/general/202610/13/P2026101300690.htm) — Hong Kong Government Information Services; 2026-10-13T13:46:51+00:00
 - [Product Safety Report: AutoJare Multi-Function Cordless Drill (2609-0230)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-autojare-multi-function-cordless-drill-2609-0230) — Office for Product Safety and Standards; 2026-10-13T13:45:28+00:00
 - [Product Safety Report: Frideko Home LED Floor Lamp sold via Amazon (2610-0006)](https://www.gov.uk/product-safety-alerts-reports-recalls/product-safety-report-frideko-home-led-floor-lamp-sold-via-amazon-2610-0006) — Office for Product Safety and Standards; 2026-10-13T13:42:13+00:00
 - [18.4561 ZAR = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-zar.en.html?date=2026-10-13&rate=18.4561) — European Central Bank — South African rand (ZAR); 2026-10-13T13:15:00+00:00
@@ -1818,13 +1898,23 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - [3.4404 ILS = 1 EUR 2026-10-13 ECB Reference rate](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/eurofxref-graph-ils.en.html?date=2026-10-13&rate=3.4404) — European Central Bank — ILS; 2026-10-13T13:15:00+00:00
 - [UK/Australia: Agreement on Cooperation and Mutual Administrative Assistance in Customs Matters (CS No.1/2026)](https://www.gov.uk/government/publications/ukaustralia-agreement-on-cooperation-and-mutual-administrative-assistance-in-customs-matters-cs-no12026) — Foreign, Commonwealth & Development Office; 2026-10-13T13:00:01+00:00
 - [UK/Bahrain: Agreement on Cooperation and Mutual Administrative Assistance in Customs Matters (CS No.1/2026)](https://www.gov.uk/government/publications/ukbahrain-agreement-on-cooperation-and-mutual-administrative-assistance-in-customs-matters-cs-no12026) — Foreign, Commonwealth & Development Office; 2026-10-13T13:00:01+00:00
+- [CHP investigates confirmed Mpox case and continues to take multipronged approach to break transmission chains](https://www.info.gov.hk/gia/general/202610/13/P2026101300621.htm) — Hong Kong Government Information Services; 2026-10-13T12:47:19+00:00
+- [Speech by SCST at closing reception of Hong Kong Performing Arts Expo 2026 (English only)](https://www.info.gov.hk/gia/general/202610/13/P2026101300606.htm) — Hong Kong Government Information Services; 2026-10-13T12:42:00+00:00
 - [CH64 4BL, Chris Higgins, Graham Matchet, Phil Wynne, Maragret Unsworth, Peter Wheeler, Peter Cletak and Edward Nugent: environmental permit application advertisement - EPR/BP3223UN/A001](https://www.gov.uk/government/publications/ch64-4bl-chris-higgins-graham-matchet-phil-wynne-maragret-unsworth-peter-wheeler-peter-cletak-and-edward-nugent-environmental-permit-application-adver) — Environment Agency; 2026-10-13T12:39:51+00:00
 - [Council approves conclusions on inclusive democratic participation, and societal and community resilience](https://www.consilium.europa.eu/en/press/press-releases/2026/10/13/council-approves-conclusions-on-inclusive-democratic-participation-and-societal-and-community-resilience/) — Council of the European Union; 2026-10-13T12:35:00+00:00
+- [108 more nomination forms for Election Committee Subsector Ordinary Elections received today](https://www.info.gov.hk/gia/general/202610/13/P2026101300597.htm) — Hong Kong Government Information Services; 2026-10-13T12:00:00+00:00
 - [US Labor Department finds 6 New York, New Jersey construction employers exposed workers to safety hazards, assesses combined $648K in penalties](http://www.dol.gov/newsroom/releases/osha/osha20261013) — Department of Labor; 2026-10-13T12:00:00+00:00
+- [Inter-departmental Working Group on Alternative Uses for Vacated Market Space holds first meeting (with photo)](https://www.info.gov.hk/gia/general/202610/13/P2026101300581.htm) — Hong Kong Government Information Services; 2026-10-13T11:40:00+00:00
 - [Continuous renal replacement therapy (CRRT): Consider delayed administration of concurrent echinocandins, such as caspofungin, to reduce the risk of adsorption onto new polyacrylonitrile (PAN)-based filter membranes DSI/2026/014](https://www.gov.uk/drug-device-alerts/continuous-renal-replacement-therapy-crrt-consider-delayed-administration-of-concurrent-echinocandins-such-as-caspofungin-to-reduce-the-risk-of-adsorption-onto-new-polyacrylonitrile-pan-based-filter-membranes-dsi-slash-2026-slash-) — Medicines and Healthcare products Regulatory Agency; 2026-10-13T11:38:03+00:00
 - [B98 9DT, Central Tipper Hire Ltd: environmental permit application advertisement - EPR/XP3121MJ/A001](https://www.gov.uk/government/publications/b98-9dt-central-tipper-hire-ltd-environmental-permit-application-advertisement-eprxp3121mja001) — Environment Agency; 2026-10-13T10:52:29+00:00
 - [NW9 6HD, Luton Metal Recycling Limited: environmental permit application advertisement – EPR/YP3691NW/V004](https://www.gov.uk/government/publications/nw9-6hd-luton-metal-recycling-limited-environmental-permit-application-advertisement-epryp3691nwv004) — Environment Agency; 2026-10-13T10:51:01+00:00
+- [FS continues visit to Nanjing (with photos/video)](https://www.info.gov.hk/gia/general/202610/13/P2026101300550.htm) — Hong Kong Government Information Services; 2026-10-13T10:39:00+00:00
 - [Transfer of Chiltern Railways’ services into public ownership](https://www.gov.uk/government/speeches/transfer-of-chiltern-railways-services-into-public-ownership) — Department for Transport; DfT Operator Limited; 2026-10-13T10:28:03+00:00
+- [Judiciary alerts public to suspicious emails](https://www.info.gov.hk/gia/general/202610/13/P2026101300527.htm) — Hong Kong Government Information Services; 2026-10-13T10:26:00+00:00
+- [Health risk category for Air Quality Health Index reached "Serious" level](https://www.info.gov.hk/gia/general/202610/13/P2026101300514.htm) — Hong Kong Government Information Services; 2026-10-13T09:54:21+00:00
+- [Hong Kong Customs detects duty-not-paid manufactured tobacco smuggling case at Shenzhen Bay Control Point (with photos)](https://www.info.gov.hk/gia/general/202610/13/P2026101300480.htm) — Hong Kong Government Information Services; 2026-10-13T09:05:00+00:00
+- [Exchange Fund Bills Tender Results](https://www.info.gov.hk/gia/general/202610/13/P2026101300362.htm) — Hong Kong Government Information Services; 2026-10-13T08:55:00+00:00
+- [CE commends members of "Salute to the National Flag" Beijing Visit Delegation (with photos/video)](https://www.info.gov.hk/gia/general/202610/13/P2026101300445.htm) — Hong Kong Government Information Services; 2026-10-13T08:52:00+00:00
 - [TA7 0JS, Towens of Weston Limited: environmental permit application advertisement - EPR/HB3004KS/V003](https://www.gov.uk/government/publications/ta7-0js-towens-of-weston-limited-environmental-permit-application-advertisement-eprhb3004ksv003) — Environment Agency; 2026-10-13T08:37:31+00:00
 - [TA7 0JS, Towens of Weston Limited: environmental permit application advertisement - EPR/HB3004KS/V002](https://www.gov.uk/government/publications/ta7-0js-towens-of-weston-limited-environmental-permit-application-advertisement-eprhb3004ksv002) — Environment Agency; 2026-10-13T08:20:12+00:00
 - [115年9月份許可之外匯業務](https://www.cbc.gov.tw/tw/cp-302-193016-fc7e5-1.html) — Central Bank of the Republic of China Taiwan — 訂閱電子報; 2026-10-13T08:20:00+00:00
@@ -2067,33 +2157,25 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - us-govinfo-uscourts-jpml: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - us-govinfo-uscourts-cofc: unchanged; feed_at_capacity; daily snapshots may miss overflow
 - us-white-house-0691096d16: unchanged; stale_feed_outside_requested_window
-- us-fed-a383ca0d09: fetch_failed; 
-- us-fed-1401ff4ff2: ok; stale_feed_outside_requested_window
-- us-fed-1555c8e0e5: fetch_failed; 
-- us-fed-e2ce260ae2: unchanged; stale_feed_outside_requested_window
-- us-fed-4a7a32a890: fetch_failed; 
-- us-fed-f882a1672b: fetch_failed; 
-- us-fed-4670d321e6: ok; stale_feed_outside_requested_window
-- us-fed-ee4be941fa: unchanged; stale_feed_outside_requested_window
-- us-fed-33d27b479f: fetch_failed; 
-- us-fed-eaf08177c6: unchanged; stale_feed_outside_requested_window
-- us-fed-ba8ad56252: fetch_failed; 
-- us-fed-6b4f3c67e0: fetch_failed; 
-- us-fed-9e5dd70c57: ok; stale_feed_outside_requested_window
-- us-fed-300afd9530: ok; stale_feed_outside_requested_window
-- us-fed-05c3eae44a: ok; stale_feed_outside_requested_window
+- us-fed-7cfba7c4ca: ok; stale_feed_outside_requested_window
+- us-fed-1555c8e0e5: ok; stale_feed_outside_requested_window
+- us-fed-ba8ad56252: ok; stale_feed_outside_requested_window
+- us-fed-1549fdd7e4: fetch_failed; 
+- us-fed-95066bc761: fetch_failed; 
+- us-fed-ec604ccde0: ok; stale_feed_outside_requested_window
+- us-fed-8d9ba6faea: ok; stale_feed_outside_requested_window
 - us-cftc-fda5c3631d: ok; stale_feed_outside_requested_window
-- us-fda-df70b9f330: ok; stale_feed_outside_requested_window
+- us-fda-df70b9f330: unchanged; stale_feed_outside_requested_window
 - us-fda-1a1096082f: ok; stale_feed_outside_requested_window
 - us-fda-2d9c4fc2f9: ok; stale_feed_outside_requested_window
-- us-fda-8fc09ac0a2: unchanged; stale_feed_outside_requested_window
-- us-fda-3eaddf14de: ok; stale_feed_outside_requested_window
-- us-fda-a25233bfac: ok; stale_feed_outside_requested_window
-- us-fda-1ca201e48f: unchanged; stale_feed_outside_requested_window
+- us-fda-8fc09ac0a2: ok; stale_feed_outside_requested_window
+- us-fda-3eaddf14de: unchanged; stale_feed_outside_requested_window
+- us-fda-a25233bfac: unchanged; stale_feed_outside_requested_window
+- us-fda-1ca201e48f: ok; stale_feed_outside_requested_window
 - us-fda-c7d1d1cd64: ok; stale_feed_outside_requested_window
 - us-fda-d7692535f0: ok; stale_feed_outside_requested_window
-- us-nlrb-3db5e72bf9: ok; stale_feed_outside_requested_window
-- us-nlrb-c15d588b2d: ok; stale_feed_outside_requested_window
+- us-nlrb-3db5e72bf9: unchanged; stale_feed_outside_requested_window
+- us-nlrb-c15d588b2d: unchanged; stale_feed_outside_requested_window
 - us-ca-oal-c1209cfd66: unchanged; stale_feed_outside_requested_window
 - eu-ecb-f4cd34bf25: unchanged; stale_feed_outside_requested_window
 - eu-ecb-fb5fd59aed: ok; stale_feed_outside_requested_window
@@ -2131,8 +2213,8 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - ca-boc-2fbc8b5053: unchanged; stale_feed_outside_requested_window
 - ca-boc-7b07e406da: unchanged; stale_feed_outside_requested_window
 - ca-boc-903390d96d: unchanged; stale_feed_outside_requested_window
-- ca-boc-1da610df86: ok; stale_feed_outside_requested_window
-- ca-boc-63e377340d: ok; stale_feed_outside_requested_window
+- ca-boc-1da610df86: unchanged; stale_feed_outside_requested_window
+- ca-boc-63e377340d: unchanged; stale_feed_outside_requested_window
 - ca-supreme-d329809c56: ok; stale_feed_outside_requested_window
 - au-rba-75f3866f45: unchanged; stale_feed_outside_requested_window
 - au-rba-4c2add8718: unchanged; stale_feed_outside_requested_window
@@ -2141,6 +2223,7 @@ Document stage comes from publisher metadata. Proposed rules, bills and announce
 - au-rba-5ba995e001: unchanged; stale_feed_outside_requested_window
 - au-rba-5469539a63: unchanged; stale_feed_outside_requested_window
 - au-rba-bb9b5c009f: unchanged; stale_feed_outside_requested_window
+- hk-government-a5249d2406: blocked; 
 - sg-hsa-621a78d387: unchanged; feed_at_capacity; daily snapshots may miss overflow; stale_feed_outside_requested_window
 - jp-pmda-f78c81268a: unchanged; stale_feed_outside_requested_window
 - jp-pmda-c845d5b3de: unchanged; stale_feed_outside_requested_window

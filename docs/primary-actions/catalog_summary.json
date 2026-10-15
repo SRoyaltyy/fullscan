@@ -42,13 +42,13 @@
     "transitioning": 1
   },
   "candidate_channels": 497,
-  "enabled_channels": 346,
+  "enabled_channels": 338,
   "channel_statuses": {
-    "ok": 354,
-    "invalid_feed_or_network_error": 41,
+    "ok": 358,
+    "fetch_failed": 76,
     "valid_empty": 6,
     "blocked": 15,
-    "fetch_failed": 81
+    "invalid_feed_or_network_error": 42
   },
   "directory_gaps": [
     {
@@ -67,5 +67,5 @@
     "us_states": 59,
     "curated_channel_owner": 121
   },
-  "excluded_reference_channels": 18
+  "excluded_reference_channels": 34
 }
