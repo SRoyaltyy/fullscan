@@ -526,10 +526,26 @@ def _breaker_open() -> bool:
     return bool(_breaker_file()) and _breaker_count() >= max(1, n)
 
 
-def _read_cap(read_to):
-    """Fail-fast cap on one OpenClaw read (OPENCLAW_READ_CAP_S)."""
+def _is_long_read_stage(stage_label: str) -> bool:
+    """General predict and news judge: big turns that need the long cap.
+    Sector predicts ("SECTOR PREDICT ...") and everything else do not."""
+    label = (stage_label or "").strip().upper()
+    return label.startswith("PREDICT ") or label.startswith("NEWS_JUDGE")
+
+
+def _read_cap(read_to, stage_label: str = ""):
+    """Fail-fast cap on one OpenClaw read.
+
+    OPENCLAW_READ_CAP_S for most calls (75s on Pre-Open). General predict
+    and news judge use OPENCLAW_PREDICT_READ_CAP_S when set: on 10-15 run
+    38720850552 grok-4.6 answered HTTP 200 and the 75s cap aborted every
+    predict call.
+    """
+    name = "OPENCLAW_READ_CAP_S"
+    if _is_long_read_stage(stage_label) and os.environ.get("OPENCLAW_PREDICT_READ_CAP_S"):
+        name = "OPENCLAW_PREDICT_READ_CAP_S"
     try:
-        cap = int(os.environ.get("OPENCLAW_READ_CAP_S", "0"))
+        cap = int(os.environ.get(name, "0"))
     except ValueError:
         cap = 0
     return min(read_to, cap) if cap > 0 else read_to
@@ -574,7 +590,7 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
             break
         read_to = step_deadline.bounded(config.OPENCLAW_TIMEOUT,
                                         reserve=fallback_reserve, floor=30)
-        read_to = _read_cap(read_to)
+        read_to = _read_cap(read_to, stage_label)
         if config.OPENCLAW_TOKEN:
             headers["Authorization"] = f"Bearer {config.OPENCLAW_TOKEN}"
         try:

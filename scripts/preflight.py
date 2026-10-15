@@ -117,13 +117,13 @@ def check_no_unapproved_paid_fallback(item, env, date):
 
 def check_read_cap_fits(item, env, date):
     need = int(item.get("min_s", 300))
-    raw = (env.get("OPENCLAW_READ_CAP_S") or "").strip()
+    raw = (env.get("OPENCLAW_PREDICT_READ_CAP_S") or "").strip()
     try:
         cap = int(raw)
     except ValueError:
-        return False, f"OPENCLAW_READ_CAP_S={raw or '(unset)'}"
+        return False, f"OPENCLAW_PREDICT_READ_CAP_S={raw or '(unset)'}"
     # 0 = no cap (falls back to the full read timeout), which fits.
-    return cap == 0 or cap >= need, f"OPENCLAW_READ_CAP_S={cap}, need >= {need}"
+    return cap == 0 or cap >= need, f"OPENCLAW_PREDICT_READ_CAP_S={cap}, need >= {need}"
 
 
 def check_no_twin_preopen(item, env, date):
@@ -139,21 +139,51 @@ def check_no_twin_preopen(item, env, date):
             return False, f"ECS systemd Pre-Open holds {lock}"
         except OSError as e:
             notes.append(f"lock unreadable ({e.__class__.__name__})")
-    repo, tok, me = env.get("GITHUB_REPOSITORY"), env.get("GITHUB_TOKEN"), env.get("GITHUB_RUN_ID")
-    if repo and tok:
-        url = (f"https://api.github.com/repos/{repo}/actions/workflows/"
-               "preopen_all.yml/runs?status=in_progress&per_page=20")
-        req = urllib.request.Request(url, headers={
-            "Authorization": f"Bearer {tok}", "Accept": "application/vnd.github+json"})
-        try:
-            with urllib.request.urlopen(req, timeout=min(10, _left())) as r:  # noqa: S310
-                runs = json.load(r).get("workflow_runs", [])
-            twins = [str(x["id"]) for x in runs if str(x.get("id")) != str(me)]
-            if twins:
-                return False, "in-progress Pre-Open run(s): " + ", ".join(twins)
-        except Exception as e:  # noqa: BLE001
-            notes.append(f"runs API unchecked ({type(e).__name__})")
+    me = env.get("GITHUB_RUN_ID")
+    try:
+        runs = _preopen_runs(env)
+    except Exception as e:  # noqa: BLE001
+        runs = None
+        notes.append(f"runs API unchecked ({type(e).__name__})")
+    if runs:
+        mine = next((x for x in runs if str(x.get("id")) == str(me)), None)
+        my_created = (mine or {}).get("created_at") or "9999"
+        twins = [str(x["id"]) for x in runs
+                 if str(x.get("id")) != str(me)
+                 and x.get("status") in ACTIVE
+                 and (x.get("created_at") or "") < my_created]
+        if twins:
+            return False, "earlier Pre-Open run(s) still active: " + ", ".join(twins)
+        # The orchestrator heal may not start one when today already has a
+        # success (manual and schedule starts are not limited by this).
+        if env.get("PREOPEN_STARTED_BY") == "orchestrator":
+            done = [str(x["id"]) for x in runs
+                    if str(x.get("id")) != str(me) and x.get("conclusion") == "success"
+                    and _et_date(x.get("created_at")) == date]
+            if done:
+                return False, f"orchestrator start refused: Pre-Open for {date} already succeeded ({', '.join(done)})"
     return True, "no twin" + (f"; {'; '.join(notes)}" if notes else "")
+
+
+ACTIVE = {"in_progress", "queued", "waiting", "pending", "requested"}
+
+
+def _et_date(iso: str | None) -> str:
+    if not iso:
+        return ""
+    return datetime.fromisoformat(iso.replace("Z", "+00:00")).astimezone(ET).strftime("%Y-%m-%d")
+
+
+def _preopen_runs(env) -> list | None:
+    repo, tok = env.get("GITHUB_REPOSITORY"), env.get("GITHUB_TOKEN")
+    if not (repo and tok):
+        return None
+    url = (f"https://api.github.com/repos/{repo}/actions/workflows/"
+           "preopen_all.yml/runs?per_page=30")
+    req = urllib.request.Request(url, headers={
+        "Authorization": f"Bearer {tok}", "Accept": "application/vnd.github+json"})
+    with urllib.request.urlopen(req, timeout=min(10, _left())) as r:  # noqa: S310
+        return json.load(r).get("workflow_runs", [])
 
 
 def check_predict_on_main(item, env, date):

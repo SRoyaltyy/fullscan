@@ -196,13 +196,13 @@ def test_wiring_strings():
     guard = (root / ".github" / "workflows" / "openclaw_oauth_guard.yml").read_text(encoding="utf-8")
     timer = (root / "scripts" / "systemd" / "fullscan-openclaw-oauth.timer").read_text(encoding="utf-8")
     push = (root / "scripts" / "safe_git_push.sh").read_text(encoding="utf-8")
-    assert 'OPENCLAW_READ_CAP_S="${OPENCLAW_READ_CAP_S:-300}"' in pre
+    assert 'OPENCLAW_READ_CAP_S="${OPENCLAW_READ_CAP_S:-75}"' in pre
     assert 'OPENCLAW_BREAKER_N="${OPENCLAW_BREAKER_N:-1}"' in pre
     assert 'export LLM_BACKEND="${LLM_BACKEND:-grok}"' in pre
     assert "paid DeepSeek not used" in pre
     assert "morning window (04:00-10:30 ET)" in post
     assert "preopen lock held — skip (exit 0" not in post
-    assert 'OPENCLAW_READ_CAP_S: "300"' in yml
+    assert 'OPENCLAW_READ_CAP_S: "75"' in yml
     assert 'OPENCLAW_BREAKER_N: "1"' in yml
     assert "FULLSCAN_STEP_DEADLINE" in yml
     assert "timeout-minutes: 50" in yml

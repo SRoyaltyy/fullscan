@@ -282,7 +282,7 @@
    },
    {
     "id": "read_cap_fits",
-    "plain": "OPENCLAW_READ_CAP_S is under 300s, too short for predict calls",
+    "plain": "OPENCLAW_PREDICT_READ_CAP_S (general predict + news judge) is under 300s",
     "min_s": 300
    }
   ],

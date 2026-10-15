@@ -39,8 +39,8 @@ def test_backend_must_be_grok():
 
 def test_read_cap():
     it = _item("read_cap_fits")
-    assert not pf.check_read_cap_fits(it, {"OPENCLAW_READ_CAP_S": "75"}, "d")[0]
-    assert pf.check_read_cap_fits(it, {"OPENCLAW_READ_CAP_S": "300"}, "d")[0]
+    assert not pf.check_read_cap_fits(it, {"OPENCLAW_PREDICT_READ_CAP_S": "75"}, "d")[0]
+    assert pf.check_read_cap_fits(it, {"OPENCLAW_PREDICT_READ_CAP_S": "300"}, "d")[0]
     assert not pf.check_read_cap_fits(it, {}, "d")[0]
 
 
@@ -61,7 +61,7 @@ def test_run_writes_named_failures(tmp_path, monkeypatch):
     monkeypatch.setitem(pf.CHECKS, "xai_token_outlives_run", lambda *a: (True, "300 min left"))
     monkeypatch.setitem(pf.CHECKS, "no_twin_preopen", lambda *a: (True, "no twin"))
     env = {"RUNNER_ENVIRONMENT": "github-hosted", "RUNNER_NAME": "GitHub Actions 1",
-           "LLM_BACKEND": "deepseek", "OPENCLAW_READ_CAP_S": "75", "LLM_FALLBACK_MODEL": "glm-5.3"}
+           "LLM_BACKEND": "deepseek", "OPENCLAW_PREDICT_READ_CAP_S": "75", "LLM_FALLBACK_MODEL": "glm-5.3"}
     rc = pf.run("preopen_all", "2026-10-15", env, tmp_path)
     assert rc == 1
     doc = json.loads((tmp_path / "2026-10-15_preopen_all_preflight.json").read_text())
@@ -75,7 +75,7 @@ def test_run_pass(tmp_path, monkeypatch):
     for k in ("gateway_up", "xai_token_outlives_run", "no_twin_preopen"):
         monkeypatch.setitem(pf.CHECKS, k, lambda *a: (True, "ok"))
     env = {"RUNNER_ENVIRONMENT": "self-hosted", "RUNNER_NAME": "ecs", "LLM_BACKEND": "grok",
-           "OPENCLAW_READ_CAP_S": "300", "LLM_FALLBACK_MODEL": ""}
+           "OPENCLAW_PREDICT_READ_CAP_S": "300", "LLM_FALLBACK_MODEL": ""}
     assert pf.run("preopen_all", "2026-10-15", env, tmp_path) == 0
 
 
@@ -95,11 +95,62 @@ def test_wiring():
     assert "default: \"ecs\"" in pre
     assert "llm_backend || 'grok'" in pre and "llm_backend || 'deepseek'" not in pre
     assert 'LLM_FALLBACK_MODEL: ""' in pre
-    assert 'OPENCLAW_READ_CAP_S: "300"' in pre
+    assert 'OPENCLAW_READ_CAP_S: "75"' in pre
+    assert 'OPENCLAW_PREDICT_READ_CAP_S: "300"' in pre
     assert "essays use the free model" not in pre
     orch = (WF / "daily_orchestrator.yml").read_text()
     assert "inputs[runner]=ecs" in orch and "inputs[runner]=ubuntu\" \\\n              -f \"inputs[llm_backend]=auto" not in orch
     fm = (WF / "fm_preopen.yml").read_text()
     assert "--workflow fm_preopen" in fm and "predict missing" in fm
     ecs = (ROOT / "scripts" / "ecs_preopen.sh").read_text()
-    assert 'OPENCLAW_READ_CAP_S="${OPENCLAW_READ_CAP_S:-300}"' in ecs
+    assert 'OPENCLAW_READ_CAP_S="${OPENCLAW_READ_CAP_S:-75}"' in ecs
+    assert 'OPENCLAW_PREDICT_READ_CAP_S="${OPENCLAW_PREDICT_READ_CAP_S:-300}"' in ecs
+
+
+def test_read_cap_is_per_stage(monkeypatch):
+    from src import deepseek_client as dc
+    monkeypatch.setenv("OPENCLAW_READ_CAP_S", "75")
+    monkeypatch.setenv("OPENCLAW_PREDICT_READ_CAP_S", "300")
+    assert dc._read_cap(420, "PREDICT 2026-10-16") == 300
+    assert dc._read_cap(420, "PREDICT 2026-10-16 nosearch") == 300
+    assert dc._read_cap(420, "NEWS_JUDGE 2026-10-16") == 300
+    assert dc._read_cap(420, "SECTOR PREDICT XLK") == 75
+    assert dc._read_cap(420, "grok_review") == 75
+    assert dc._read_cap(420) == 75
+    monkeypatch.delenv("OPENCLAW_PREDICT_READ_CAP_S")
+    assert dc._read_cap(420, "PREDICT 2026-10-16") == 75
+
+
+def _runs(monkeypatch, runs):
+    monkeypatch.setattr(pf, "_preopen_runs", lambda env: runs)
+
+
+def test_twin_guard_earlier_active_fails(monkeypatch, tmp_path):
+    env = {"GITHUB_RUN_ID": "2", "PREOPEN_LOCK": str(tmp_path / "x" / "l")}
+    _runs(monkeypatch, [
+        {"id": 1, "status": "in_progress", "conclusion": None, "created_at": "2026-10-15T10:31:00Z"},
+        {"id": 2, "status": "in_progress", "conclusion": None, "created_at": "2026-10-15T11:48:32Z"}])
+    ok, d = pf.check_no_twin_preopen({}, env, "2026-10-15")
+    assert not ok and "1" in d
+    # The earlier run is not stopped by a later queued twin.
+    env["GITHUB_RUN_ID"] = "1"
+    assert pf.check_no_twin_preopen({}, env, "2026-10-15")[0]
+
+
+def test_orchestrator_refused_after_success(monkeypatch, tmp_path):
+    env = {"GITHUB_RUN_ID": "3", "PREOPEN_STARTED_BY": "orchestrator",
+           "PREOPEN_LOCK": str(tmp_path / "x" / "l")}
+    runs = [{"id": 1, "status": "completed", "conclusion": "success", "created_at": "2026-10-15T10:31:00Z"},
+            {"id": 3, "status": "in_progress", "conclusion": None, "created_at": "2026-10-15T12:00:00Z"}]
+    _runs(monkeypatch, runs)
+    assert not pf.check_no_twin_preopen({}, env, "2026-10-15")[0]
+    env["PREOPEN_STARTED_BY"] = "manual"
+    assert pf.check_no_twin_preopen({}, env, "2026-10-15")[0]
+
+
+def test_orchestrator_wiring():
+    orch = (WF / "daily_orchestrator.yml").read_text()
+    assert "inputs[started_by]=orchestrator" in orch
+    assert "already queued/running/succeeded" in orch
+    pre = (WF / "preopen_all.yml").read_text()
+    assert "started_by:" in pre and "PREOPEN_STARTED_BY" in pre
