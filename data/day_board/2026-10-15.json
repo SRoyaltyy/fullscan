@@ -1,11 +1,10 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T08:29:48.749741-04:00",
+  "generated_at": "2026-10-15T08:34:42.458950-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-10-15_predict.md` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-10-15_judge.md` \u2014 missing"
+    "MISSING General predict MD `01_daily/general/2026-10-15_predict.md` \u2014 missing"
   ],
   "counts": {
     "ok": 7,
@@ -180,7 +179,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 6,
+      "n_req_ok": 7,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -260,11 +259,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-15_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9415,
+          "said": "1. **Hot September CPI revives October Fed rate-hike odds (odds as high as 70% intraday, ~33% on Kalshi)** \u2014 the single dominant macro driver; sets the entire r",
+          "bullets": [
+            "2. **Fed officials push back on October hike (Williams, Goolsbee \"discouraging but no rush\", three officials temper bets); dollar retreats from 18-month high, yields fall** \u2014 the offsetting dovish sleeve that determines whether the CPI shock becomes a sustained de-rate or a one-day fade. Channel: rates.",
+            "3. **Nasdaq ends sharply lower as hot CPI stirs rate-hike worries; leading AI shares tumble** \u2014 the risk-channel expression of #1/#2; tells us where the pain concentrates (crowded AI/tech beta). Channel: risk.",
+            "4. **Gold whipsaws: drops $100+ on hawkish Fed comments, then climbs 1% as hike bets ease** \u2014 rescued gold; real-rate proxy that confirms the intraday dovish reversal and moves the GDX/miner basket. Channel: rates/sentiment."
+          ]
         },
         {
           "key": "research_json",
@@ -540,17 +543,17 @@
           "path": "01_daily/weather/2026-10-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9330 vix=calm yields=falling",
-          "size": 9330,
+          "reason": "sectors=11 bytes=9329 vix=calm yields=falling",
+          "size": 9329,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
           ]
         }
       ],
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
       ]
     },
     {
@@ -741,11 +744,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-10-15_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 9415,
+          "said": "1. **Hot September CPI revives October Fed rate-hike odds (odds as high as 70% intraday, ~33% on Kalshi)** \u2014 the single dominant macro driver; sets the entire r",
+          "bullets": [
+            "2. **Fed officials push back on October hike (Williams, Goolsbee \"discouraging but no rush\", three officials temper bets); dollar retreats from 18-month high, yields fall** \u2014 the offsetting dovish sleeve that determines whether the CPI shock becomes a sustained de-rate or a one-day fade. Channel: rates.",
+            "3. **Nasdaq ends sharply lower as hot CPI stirs rate-hike worries; leading AI shares tumble** \u2014 the risk-channel expression of #1/#2; tells us where the pain concentrates (crowded AI/tech beta). Channel: risk.",
+            "4. **Gold whipsaws: drops $100+ on hawkish Fed comments, then climbs 1% as hike bets ease** \u2014 rescued gold; real-rate proxy that confirms the intraday dovish reversal and moves the GDX/miner basket. Channel: rates/sentiment."
+          ]
         },
         {
           "key": "in_weather",
@@ -753,11 +760,11 @@
           "path": "01_daily/weather/2026-10-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9330 vix=calm yields=falling",
-          "size": 9330,
+          "reason": "sectors=11 bytes=9329 vix=calm yields=falling",
+          "size": 9329,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+            "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
           ]
         },
         {
@@ -780,10 +787,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2241897,
-          "said": "204 rows",
+          "size": 2242367,
+          "said": "201 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, WAY"
+            "KEYS, FORM, AVPT, MU, SKHY, SMTC, NVDA, APH"
           ]
         },
         {
@@ -861,9 +868,9 @@
           "bullets": []
         }
       ],
-      "said": "204 rows",
+      "said": "201 rows",
       "bullets": [
-        "HALO, ONC, LLY, HRMY, ETON"
+        "KEYS, FORM, AVPT, MU, SKHY"
       ]
     },
     {
@@ -1029,64 +1036,11 @@
     "weather": {
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
+        "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities"
       ]
     }
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T06:45:05.289378-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-10-15_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1476285,
-          "preview": "1d BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
-        },
-        {
-          "path": "data/stock_book/2026-10-15_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-10-15_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2537,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-10-15_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12444,
-          "preview": "2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12444,
-          "preview": "2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
-        },
-        {
-          "path": "01_daily/2026-10-15_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 85473,
-          "preview": "# Stock book \u2014 2026-10-15\n_Generated 2026-10-15T06:44:39.574250-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 2026-10-15 BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 # Stock book \u2014 2026-10-15\n_Generated 2026-10-15T06:44:39.574250-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -3997,6 +3951,31 @@
         }
       ],
       "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, sectors_required, all_ok \u00b7 keys: date, generated_at, run_id, runner, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs \u00b7 # Pre-open ALL status \u2014 2026-10-15\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  news_mode=on  missing=['events', 'news_judge', 'general_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 1\n- General market predict: exit 1\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 3"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T08:34:41.382813-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-10-15_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9329,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-10-15_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5068,
+          "preview": "# Weather report \u2014 2026-10-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.97, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.38, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.62, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.4, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -2.99, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.835, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-10-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
