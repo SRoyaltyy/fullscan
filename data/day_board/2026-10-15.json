@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T07:02:04.034209-04:00",
+  "generated_at": "2026-10-15T07:02:42.972447-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -584,16 +584,16 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8359081,
+          "size": 8349619,
           "said": "25 rows",
           "bullets": [
-            "BIIB, ICLR, PFE, ATRC, CDNA, WAY, CVLT, DRH"
+            "BIIB, ICLR, ATRC, PFE, DRH, CVLT, CDNA, WAY"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "BIIB, ICLR, PFE, ATRC, CDNA"
+        "BIIB, ICLR, ATRC, PFE, DRH"
       ]
     },
     {
@@ -767,10 +767,10 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8359081,
+          "size": 8349619,
           "said": "25 rows",
           "bullets": [
-            "BIIB, ICLR, PFE, ATRC, CDNA, WAY, CVLT, DRH"
+            "BIIB, ICLR, ATRC, PFE, DRH, CVLT, CDNA, WAY"
           ]
         },
         {
@@ -1034,31 +1034,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T04:23:13.591710-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-15_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 277631,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-15_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 18572,
-          "preview": "# MAP HEAT \u2014 2026-10-15\nExport `finviz_2026-10-15.csv` \u00b7 11616 names \u00b7 generated 2026-10-15T04:23:13.556183-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-10-15\nExport `finviz_2026-10-15.csv` \u00b7 11616 names \u00b7 generated 2026-10-15T04:23:13.556183-04:00"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -3716,6 +3691,31 @@
         }
       ],
       "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, ONC, LLY, HRMY, ETON"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T07:02:41.414257-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-10-15_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7558574,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WAY, AUPH, RSG, BIIB, ATRC"
+        },
+        {
+          "path": "data/ab_checklist/2026-10-15_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8349619,
+          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 BIIB, ICLR, ATRC, PFE, DRH"
+        }
+      ],
+      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WAY, AUPH, RSG, BIIB, ATRC \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 BIIB, ICLR, ATRC, PFE, DRH"
     }
   ],
   "href": {
