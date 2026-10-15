@@ -108,18 +108,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          clean: false
           fetch-depth: 1
-      - name: Clear inherited sparse checkout
-        run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          git sparse-checkout disable || true
-          test -f requirements.txt || { echo "requirements.txt missing after full checkout"; exit 1; }
+          path: lane_grok_${{ github.run_id }}_${{ github.run_attempt }}
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/
+            /scripts/
+            /tests/fixtures/
+            /data/exports/finviz_latest.csv
+            /requirements.txt
       - name: Diagnose timer, OAuth and both Grok model paths
         id: diagnose
+        working-directory: lane_grok_${{ github.run_id }}_${{ github.run_attempt }}
         run: PYTHONPATH=.:scripts python3 scripts/diagnose_openclaw_lane.py --output provider_results/grok_diagnostic.json
       - name: Program-only Grok development 100-title replay when healthy and idle
         if: steps.diagnose.outputs.ready == 'true'
+        working-directory: lane_grok_${{ github.run_id }}_${{ github.run_attempt }}
         run: |
           PYTHONPATH=. python3 scripts/run_semantic_headlines.py \
             --input tests/fixtures/semantic_frozen_20261014/batch_02.json \
@@ -131,15 +135,10 @@ jobs:
         if: always()
         with:
           name: lane-grok-diagnosis-and-100
-          path: provider_results/
+          path: lane_grok_${{ github.run_id }}_${{ github.run_attempt }}/provider_results/
 
 
-      - name: Leave full checkout for shared ECS runner
-        if: always()
-        run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          git sparse-checkout disable || true
-          test -f requirements.txt || { echo "requirements.txt missing after full checkout"; exit 1; }
+
 
   grade_development:
     needs: glm

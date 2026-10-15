@@ -1426,14 +1426,20 @@ def test_postclose_all_clears_leftover_sparse_checkout() -> None:
         ):
             if "sparse-checkout:" not in body or "self-hosted" not in body:
                 continue
-            assert "if: always()" in body, (path.name, name)
-            assert body.rfind(disable) > body.rfind("sparse-checkout:"), (path.name, name)
+            isolated = "lane_grok_${{ github.run_id }}_${{ github.run_attempt }}"
+            if f"path: {isolated}" in body:
+                assert f"working-directory: {isolated}" in body, (path.name, name)
+                assert "clean: false" not in body, (path.name, name)
+            else:
+                assert "if: always()" in body, (path.name, name)
+                assert body.rfind(disable) > body.rfind("sparse-checkout:"), (path.name, name)
             has_sparse_ecs = True
         if has_sparse_ecs:
             sparse_on_ecs.append(path.name)
     assert sparse_on_ecs == [
         "install_paper_backstop.yml",
         "install_paper_open.yml",
+        "lane_provider_validation.yml",
     ]
 
 
