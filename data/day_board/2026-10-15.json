@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T08:18:02.775087-04:00",
+  "generated_at": "2026-10-15T08:18:27.335471-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -808,8 +808,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1476285,
-          "said": "1d BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "size": 1450660,
+          "said": "1d BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE",
           "bullets": []
         },
         {
@@ -819,10 +819,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 84353,
+          "size": 83837,
           "said": "Stock book \u2014 2026-10-15",
           "bullets": [
-            "_Generated 2026-10-15T08:02:43.704458-04:00_",
+            "_Generated 2026-10-15T08:18:09.619152-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -886,8 +886,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1476285,
-          "said": "1d BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
+          "size": 1450660,
+          "said": "1d BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE",
           "bullets": []
         },
         {
@@ -936,70 +936,70 @@
   "selections": {
     "buy_1d": [
       {
+        "ticker": "AMN",
+        "score": 0.6750506257507881
+      },
+      {
         "ticker": "HITI",
-        "score": 0.5573663097140535
+        "score": 0.37652405660275373
       },
       {
         "ticker": "CON",
-        "score": 0.7879056108017362
+        "score": 0.5830630579022049
       },
       {
         "ticker": "SGRY",
-        "score": 0.7309787616401873
-      },
-      {
-        "ticker": "AMN",
-        "score": 0.7623725205328171
-      },
-      {
-        "ticker": "ASTH",
-        "score": 0.7042257271272405
-      },
-      {
-        "ticker": "MD",
-        "score": 0.6993874925900012
-      },
-      {
-        "ticker": "PACS",
-        "score": 0.8922406667174412
+        "score": 0.5151037234562534
       },
       {
         "ticker": "NTAP",
-        "score": 0.09630838517576984
+        "score": 0.2924494562525348
+      },
+      {
+        "ticker": "MQ",
+        "score": 0.7904010382375091
+      },
+      {
+        "ticker": "ASTH",
+        "score": 0.48793905530768616
+      },
+      {
+        "ticker": "IT",
+        "score": 0.5855093291752584
       }
     ],
     "sell_1d": [
       {
         "ticker": "NEOV",
-        "score": -0.38545641394374136
+        "score": -0.3755535550153534
       },
       {
         "ticker": "OKLO",
-        "score": -0.2672322421550266
+        "score": -0.2659668014580737
       },
       {
         "ticker": "FCEL",
-        "score": -0.21621947325900126
-      },
-      {
-        "ticker": "NNDM",
-        "score": -0.13271542898503363
-      },
-      {
-        "ticker": "POWL",
-        "score": -0.0794088977255034
+        "score": -0.21380145060394223
       },
       {
         "ticker": "EOSE",
-        "score": -0.33983328183077566
+        "score": -0.3365519085866714
+      },
+      {
+        "ticker": "POWL",
+        "score": -0.07133125701012376
       },
       {
         "ticker": "TE",
-        "score": -0.2960550369910495
+        "score": -0.2926184563775822
       },
       {
         "ticker": "NRGV",
-        "score": -0.2470809789575228
+        "score": -0.23945560269184185
+      },
+      {
+        "ticker": "NNDM",
+        "score": 0.055384307494657406
       }
     ],
     "flatten": {
@@ -1036,115 +1036,6 @@
     }
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T06:17:36.166067-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 10982,
-          "preview": "2026-10-15 BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 990,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-10-15.json",
-          "ok": true,
-          "reason": "",
-          "size": 120856,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-10-15_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 86037,
-          "preview": "2026-10-15 BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 294056,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-10-15_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 294056,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 264614,
-          "preview": "2026-10-15 BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 294056,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 86037,
-          "preview": "2026-10-15 BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 294056,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 294056,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 264614,
-          "preview": "2026-10-15 BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1533,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 1533,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-10-15 BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-10-15 BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-15 BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-10-15 BUY CON, SGRY, HITI, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE, TE, NRGV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, "
-    },
     {
       "key": "paper",
       "title": "Paper dashboard",
@@ -3986,6 +3877,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T08:18:26.712491-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-15_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1450660,
+          "preview": "1d BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE, NRGV, NNDM"
+        },
+        {
+          "path": "data/stock_book/2026-10-15_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-15_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2503,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-15_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12442,
+          "preview": "2026-10-15 BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE, NRGV, NNDM"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12442,
+          "preview": "2026-10-15 BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE, NRGV, NNDM"
+        },
+        {
+          "path": "01_daily/2026-10-15_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84944,
+          "preview": "# Stock book \u2014 2026-10-15\n_Generated 2026-10-15T08:18:09.619152-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE, NRGV, NNDM \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-15 BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE, NRGV, NNDM \u00b7 2026-10-15 BUY AMN, HITI, CON, SGRY, NTAP, MQ, ASTH, IT \u00b7 SELL NEOV, OKLO, FCEL, EOSE, POWL, TE, NRGV, NNDM \u00b7 # Stock book \u2014 2026-10-15\n_Generated 2026-10-15T08:18:09.619152-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
