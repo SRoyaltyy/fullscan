@@ -76,9 +76,9 @@ on:
         required: false
         default: "false"
       llm_backend:
-        description: "auto = Grok then DeepSeek · grok = Grok only · deepseek = no Grok"
+        description: "auto = Grok then the free model · grok = Grok only · deepseek = skip Grok"
         required: false
-        default: "deepseek"
+        default: "auto"
         type: choice
         options:
           - auto
@@ -476,7 +476,11 @@ jobs:
           OPENCLAW_RESTART_ON_TIMEOUT: "1"
           OPENCLAW_BREAKER_FILE: ${{ runner.temp }}/openclaw_breaker_${{ github.run_id }}.txt
           GROK_ONLY: "0"
-          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'deepseek' }}
+          # Push and schedule have no input, so this must be auto. The
+          # form default is also auto. deepseek is an explicit "skip Grok"
+          # choice. Run 38714326944 left the old default and never called
+          # OpenClaw, including when a later dispatch was already on ECS.
+          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'auto' }}
           FINVIZ_SKIP_LIVE: "1"
           # 900 let five essays each hold ~16 min. Run 38704557910 died at
           # the 50-minute step kill with no general predict. 420 matches

@@ -521,6 +521,13 @@ def test_preopen_all_job_resolves_ubuntu_and_ecs() -> None:
     # The live file must not still carry the #242 escape.
     assert r'[\"self-hosted\"' not in text
     assert "fromJSON('[\"self-hosted\",\"ecs\"]')" in text
+    # Mode 40: the morning button calls Grok. deepseek remains a choice
+    # that skips OpenClaw; it is not the default.
+    assert "github.event.inputs.llm_backend || 'auto'" in text
+    assert "github.event.inputs.llm_backend || 'deepseek'" not in text
+    backend = text.split("llm_backend:", 1)[1].split("with_book:", 1)[0]
+    assert 'default: "auto"' in backend
+    assert 'default: "deepseek"' not in backend
 
 
 def test_stock_book_all_fromjson_resolves() -> None:
