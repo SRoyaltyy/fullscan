@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-8.12%** ($9,188) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 260 · skips 71 · realized $-1788.82.
+Cash book **-7.34%** ($9,266) · signal-only (no cash/fees) was -19.02%. Starts YES **0/30**. Fills 263 · skips 71 · realized $-1788.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -420,6 +420,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `CNK` | 118 | $37.88 | $2.34 | — | $4,481.16 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list flatten; ret5=+7.5; leftover $4476.67 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `HLP` | 1570 | $2.84 | $20.25 | — | $2.10 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list ohlc_hot; 🔵; ret5=+11.9; leftover $4476.67 | join🟢 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.10 | ▲ close $9,188.30 vs 09:30 $8,953.34 (session +257.56) | 16:00 close · cash $2.10 · equity $9,188.30 vs 09:30 $8,953.34 (+234.96; session marks +257.56) · 2 name(s) marked open→close (per-name table). CNK×118 09:30 $37.88 → close $38.20 +37.76; HLP×1570 09:30 $2.84 → close $2.98 +219.80 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.10 | ▲ 09:30 equity $9,216.62 vs yday $9,188.30 (+28.32) | 09:30 open · cash $2.10 (unchanged overnight, no fees) · equity $9,216.62 vs prior close $9,188.30 (+28.32) · 2 name(s) re-marked at the open (per-name table). CNK×118 yday $38.20 → 09:30 $38.44 +28.32; HLP×1570 yday $2.98 → 09:30 $2.98 +0.00 | — |
+| 2026-10-15 09:30 ET | **SELL** | `CNK` | 118 | $38.44 | $2.40 | $+61.34 | $4,535.62 | ▲ +61.34 after sell → book $9,214.22; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `HLP` | 1570 | $2.98 | $20.55 | $+179.00 | $9,193.67 | ▲ +179.00 after sell → book $9,193.67; vs 09:30 mark -20.55 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `SCHW` | 98 | $93.39 | $2.28 | — | $38.68 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list earn_react; ret5=+1.3; leftover $9193.67 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $38.68 | ▲ close $9,266.36 vs 09:30 $9,216.62 (session +74.97) | 16:00 close · cash $38.68 · equity $9,266.36 vs 09:30 $9,216.62 (+49.74; session marks +74.97) · 1 name(s) marked open→close (per-name table). SCHW×98 09:30 $93.39 → close $94.16 +74.97 | — |
 
 ## Not taken
 

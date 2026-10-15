@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-39.76%** ($6,024) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 367 · skips 98 · realized $-2571.92.
+Cash book **-39.67%** ($6,033) · signal-only (no cash/fees) was -22.60%. Starts YES **0/30**. Fills 379 · skips 98 · realized $-2571.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -526,6 +526,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `JLHL` | 158 | $4.76 | $2.46 | — | $1,564.77 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=+22.6; leftover $753.05 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `ETSY` | 9 | $78.89 | $2.02 | — | $852.74 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+11.1; leftover $753.05 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $852.74 | ▲ close $6,023.92 vs 09:30 $5,984.22 (session +52.40) | 16:00 close · cash $852.74 · equity $6,023.92 vs 09:30 $5,984.22 (+39.70; session marks +52.40) · 7 name(s) marked open→close (per-name table). KLRA×67 09:30 $10.64 → close $10.74 +6.70; LW×14 09:30 $52.02 → close $53.02 +14.00; BAC×15 09:30 $49.83 → close $51.39 +23.40; MS×4 09:30 $180.45 → close $181.51 +4.24; FRSH×54 09:30 $13.82 → close $13.69 -7.02; JLHL×158 09:30 $4.76 → close $4.60 -25.28; ETSY×9 09:30 $78.89 → close $82.93 +36.36 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $852.74 | ▼ 09:30 equity $5,998.64 vs yday $6,023.92 (-25.28) | 09:30 open · cash $852.74 (unchanged overnight, no fees) · equity $5,998.64 vs prior close $6,023.92 (-25.28) · 7 name(s) re-marked at the open (per-name table). BAC×15 yday $51.39 → 09:30 $51.46 +1.05; ETSY×9 yday $82.93 → 09:30 $84.47 +13.86; FRSH×54 yday $13.69 → 09:30 $13.67 -1.08; JLHL×158 yday $4.60 → 09:30 $4.34 -41.08; KLRA×67 yday $10.74 → 09:30 $10.55 -12.73; LW×14 yday $53.02 → 09:30 $53.79 +10.78; MS×4 yday $181.51 → 09:30 $182.49 +3.92 | — |
+| 2026-10-15 09:30 ET | **SELL** | `BAC` | 15 | $51.46 | $2.06 | $+20.36 | $1,622.59 | ▲ +20.36 after sell → book $5,996.59; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `ETSY` | 9 | $84.47 | $2.04 | $+46.17 | $2,380.78 | ▲ +46.17 after sell → book $5,994.55; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `FRSH` | 54 | $13.67 | $2.17 | $-12.42 | $3,116.79 | ▼ -12.42 after sell → book $5,992.38; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `JLHL` | 158 | $4.34 | $2.50 | $-71.32 | $3,800.01 | ▼ -71.32 after sell → book $5,989.88; vs 09:30 mark -2.50 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `KLRA` | 67 | $10.55 | $2.21 | $-60.68 | $4,504.64 | ▼ -60.68 after sell → book $5,987.66; vs 09:30 mark -2.22 | dropped from list after 3 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `MS` | 4 | $182.49 | $2.02 | $+4.14 | $5,232.58 | ▲ +4.14 after sell → book $5,985.64; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `DGX` | 3 | $235.85 | $2.00 | — | $4,523.03 | — | rank by rsi; rank rsi; list yday_mover; ret5=+2.8; leftover $747.51 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `BNY` | 5 | $139.81 | $2.00 | — | $3,821.98 | — | rank by rsi; rank rsi; list earn_react; ret5=-3.6; leftover $747.51 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `JBHT` | 3 | $232.93 | $2.00 | — | $3,121.19 | — | rank by rsi; rank rsi; list overnight; 🔵; ret5=+4.3; leftover $747.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `PNC` | 3 | $208.49 | $2.00 | — | $2,493.72 | — | rank by rsi; rank rsi; list earn_react; ret5=+0.0; leftover $747.51 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `FIS` | 20 | $36.40 | $2.05 | — | $1,763.67 | — | rank by rsi; rank rsi; list flatten; 🔵; ret5=+4.9; leftover $747.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-15 09:30 ET | **BUY** | `CHWY` | 35 | $21.00 | $2.10 | — | $1,026.57 | — | rank by rsi; rank rsi; list ohlc_hot; ret5=+14.3; leftover $747.51 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,026.57 | ▲ close $6,032.61 vs 09:30 $5,998.64 (session +59.12) | 16:00 close · cash $1,026.57 · equity $6,032.61 vs 09:30 $5,998.64 (+33.97; session marks +59.12) · 7 name(s) marked open→close (per-name table). LW×14 09:30 $53.79 → close $54.21 +5.88; DGX×3 09:30 $235.85 → close $239.15 +9.90; BNY×5 09:30 $139.81 → close $142.09 +11.40; JBHT×3 09:30 $232.93 → close $235.31 +7.14; PNC×3 09:30 $208.49 → close $214.94 +19.35; FIS×20 09:30 $36.40 → close $36.13 -5.40; CHWY×35 09:30 $21.00 → close $21.31 +10.85 | — |
 
 ## Not taken
 

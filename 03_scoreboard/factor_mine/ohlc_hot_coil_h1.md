@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-21.92%** ($7,808) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 237 · skips 74 · realized $-1849.08.
+Cash book **-21.84%** ($7,816) · signal-only (no cash/fees) was -11.86%. Starts YES **9/30**. Fills 251 · skips 74 · realized $-1849.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -399,6 +399,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `SG` | 131 | $10.00 | $2.38 | — | $1,361.23 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.7; leftover $1312.72 | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `MOH` | 6 | $210.15 | $2.01 | — | $98.32 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+7.3; leftover $1312.72 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $98.32 | ▼ close $7,807.84 vs 09:30 $7,876.33 (session -54.30) | 16:00 close · cash $98.32 · equity $7,807.84 vs 09:30 $7,876.33 (-68.49; session marks -54.30) · 6 name(s) marked open→close (per-name table). SHAK×18 09:30 $70.75 → close $68.77 -35.64; NTSK×63 09:30 $20.76 → close $20.04 -45.36; ESRT×272 09:30 $4.82 → close $4.78 -10.88; LW×25 09:30 $52.02 → close $53.02 +25.00; SG×131 09:30 $10.00 → close $10.14 +18.34; MOH×6 09:30 $210.15 → close $209.19 -5.76 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $98.32 | ▲ 09:30 equity $7,829.41 vs yday $7,807.84 (+21.57) | 09:30 open · cash $98.32 (unchanged overnight, no fees) · equity $7,829.41 vs prior close $7,807.84 (+21.57) · 6 name(s) re-marked at the open (per-name table). ESRT×272 yday $4.78 → 09:30 $4.82 +10.88; LW×25 yday $53.02 → 09:30 $53.79 +19.25; MOH×6 yday $209.19 → 09:30 $210.39 +7.20; NTSK×63 yday $20.04 → 09:30 $19.55 -30.87; SG×131 yday $10.14 → 09:30 $10.21 +9.17; SHAK×18 yday $68.77 → 09:30 $69.10 +5.94 | — |
+| 2026-10-15 09:30 ET | **SELL** | `ESRT` | 272 | $4.82 | $3.56 | $-7.07 | $1,405.80 | ▼ -7.07 after sell → book $7,825.85; vs 09:30 mark -3.56 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `LW` | 25 | $53.79 | $2.09 | $+40.10 | $2,748.46 | ▲ +40.10 after sell → book $7,823.76; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `MOH` | 6 | $210.39 | $2.03 | $-2.60 | $4,008.77 | ▼ -2.60 after sell → book $7,821.73; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `NTSK` | 63 | $19.55 | $2.20 | $-80.61 | $5,238.22 | ▼ -80.61 after sell → book $7,819.53; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `SG` | 131 | $10.21 | $2.42 | $+22.71 | $6,573.32 | ▲ +22.71 after sell → book $7,817.12; vs 09:30 mark -2.41 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `SHAK` | 18 | $69.10 | $2.06 | $-33.81 | $7,815.05 | ▼ -33.81 after sell → book $7,815.05; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `PBR` | 38 | $25.62 | $2.10 | — | $6,839.39 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+8.1; leftover $976.88 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `MPC` | 2 | $481.20 | $2.00 | — | $5,874.99 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.6; leftover $976.88 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `PSX` | 3 | $294.99 | $2.00 | — | $4,988.02 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.5; leftover $976.88 | join🟡 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ACHC` | 30 | $31.67 | $2.08 | — | $4,035.84 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+8.3; leftover $976.88 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `BBWI` | 50 | $19.19 | $2.14 | — | $3,074.20 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+6.4; leftover $976.88 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `DOCU` | 12 | $75.25 | $2.03 | — | $2,169.18 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+9.2; leftover $976.88 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `PBR-A` | 42 | $22.79 | $2.12 | — | $1,209.88 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+6.5; leftover $976.88 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `COP` | 6 | $143.00 | $2.01 | — | $349.87 | — | hot list ∩ not exploded; gate ret_5_max=10.0,ret_5_min=0.0,rvol_max=2.2; list ohlc_hot; ret5=+9.6; leftover $976.88 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $349.87 | ▲ close $7,816.15 vs 09:30 $7,829.41 (session +17.57) | 16:00 close · cash $349.87 · equity $7,816.15 vs 09:30 $7,829.41 (-13.26; session marks +17.57) · 8 name(s) marked open→close (per-name table). PBR×38 09:30 $25.62 → close $25.30 -12.16; MPC×2 09:30 $481.20 → close $476.92 -8.56; PSX×3 09:30 $294.99 → close $289.20 -17.37; ACHC×30 09:30 $31.67 → close $31.04 -18.90; BBWI×50 09:30 $19.19 → close $20.44 +62.50; DOCU×12 09:30 $75.25 → close $77.52 +27.24; PBR-A×42 09:30 $22.79 → close $22.61 -7.56; COP×6 09:30 $143.00 → close $141.73 -7.62 | — |
 
 ## Not taken
 

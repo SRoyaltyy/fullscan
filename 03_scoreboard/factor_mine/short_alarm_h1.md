@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+4.78%** ($10,478) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 208 · skips 96 · realized $+54.59.
+Cash book **+2.04%** ($10,204) · signal-only (no cash/fees) was +3.57%. Starts YES **5/30**. Fills 220 · skips 96 · realized $+54.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -366,6 +366,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **SHORT** | `AURA` | 105 | $6.21 | $2.35 | — | $15,001.63 | — | alarm; gate alarm=True; list yday_gainer; ret5=+1.6; leftover $654.12 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **SHORT** | `NBP` | 511 | $1.28 | $6.70 | — | $15,649.00 | — | alarm; gate alarm=True; list yday_gainer; ret5=-7.9; leftover $654.12 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,649.00 | ▲ close $10,477.50 vs 09:30 $10,465.91 (session +41.84) | 16:00 close · cash $15,649.00 · equity $10,477.50 vs 09:30 $10,465.91 (+11.59; session marks +41.84) · 8 name(s) marked open→close (per-name table). AVPT×45 09:30 $14.39 → close $14.00 +17.55; ACRS×193 09:30 $3.38 → close $3.38 -0.00; KURA×67 09:30 $9.70 → close $9.61 +6.03; RCKT×289 09:30 $2.26 → close $2.21 +14.45; QTTB×82 09:30 $7.93 → close $8.01 -6.56; TLSA×617 09:30 $1.06 → close $1.05 +6.17; AURA×105 09:30 $6.21 → close $6.17 +4.20; NBP×511 09:30 $1.28 → close $1.28 -0.00 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,649.00 | ▼ 09:30 equity $10,455.26 vs yday $10,477.50 (-22.24) | 09:30 open · cash $15,649.00 (unchanged overnight, no fees) · equity $10,455.26 vs prior close $10,477.50 (-22.24) · 8 name(s) re-marked at the open (per-name table). ACRS×193 yday $3.38 → 09:30 $3.42 -7.72; AURA×105 yday $6.17 → 09:30 $6.23 -6.30; AVPT×45 yday $14.00 → 09:30 $13.99 +0.45; KURA×67 yday $9.61 → 09:30 $9.62 -0.67; NBP×511 yday $1.28 → 09:30 $1.29 -5.11; QTTB×82 yday $8.01 → 09:30 $8.01 -0.00; RCKT×289 yday $2.21 → 09:30 $2.22 -2.89; TLSA×617 yday $1.05 → 09:30 $1.05 -0.00 | — |
+| 2026-10-15 09:30 ET | **COVER** | `ACRS` | 193 | $3.42 | $2.57 | $-12.92 | $14,986.37 | ▼ -12.92 after sell → book $10,452.69; vs 09:30 mark -2.57 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **COVER** | `AURA` | 105 | $6.23 | $2.31 | $-6.76 | $14,329.92 | ▼ -6.76 after sell → book $10,450.39; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **COVER** | `AVPT` | 45 | $13.99 | $2.12 | $+13.71 | $13,698.24 | ▲ +13.71 after sell → book $10,448.26; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **COVER** | `KURA` | 67 | $9.62 | $2.19 | $+0.94 | $13,051.51 | ▲ +0.94 after sell → book $10,446.07; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **COVER** | `NBP` | 511 | $1.29 | $6.59 | $-18.41 | $12,385.73 | ▼ -18.41 after sell → book $10,439.48; vs 09:30 mark -6.59 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **COVER** | `RCKT` | 289 | $2.22 | $3.73 | $+4.03 | $11,740.42 | ▲ +4.03 after sell → book $10,435.75; vs 09:30 mark -3.73 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SHORT** | `SHOO` | 19 | $44.74 | $2.09 | — | $12,588.39 | — | alarm; gate alarm=True; list flatten; ret5=+0.3; leftover $869.65 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SHORT** | `SMMT` | 57 | $15.09 | $2.20 | — | $13,446.32 | — | alarm; gate alarm=True; list probable,yday_gainer,yday_mover; ret5=-15.7; leftover $869.65 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-15 09:30 ET | **SHORT** | `KLRA` | 82 | $10.55 | $2.28 | — | $14,309.13 | — | alarm; gate alarm=True; list yday_gainer; ret5=+2.0; leftover $869.65 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SHORT** | `GLND` | 275 | $3.16 | $3.63 | — | $15,174.50 | — | alarm; gate alarm=True; list yday_mover; ret5=+43.9; leftover $869.65 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟡 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SHORT** | `BF-B` | 30 | $28.63 | $2.12 | — | $16,031.28 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+9.1; leftover $869.65 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SHORT** | `USB` | 15 | $56.14 | $2.08 | — | $16,871.30 | — | alarm; gate alarm=True; list earn_react; ret5=+0.2; leftover $869.65 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16,871.30 | ▼ close $10,204.44 vs 09:30 $10,455.26 (session -216.90) | 16:00 close · cash $16,871.30 · equity $10,204.44 vs 09:30 $10,455.26 (-250.82; session marks -216.90) · 8 name(s) marked open→close (per-name table). QTTB×82 09:30 $8.01 → close $7.77 +19.68; TLSA×617 09:30 $1.05 → close $1.05 -0.00; SHOO×19 09:30 $44.74 → close $46.24 -28.50; SMMT×57 09:30 $15.09 → close $15.37 -15.96; KLRA×82 09:30 $10.55 → close $11.71 -95.12; GLND×275 09:30 $3.16 → close $3.45 -79.75; BF-B×30 09:30 $28.63 → close $28.58 +1.50; USB×15 09:30 $56.14 → close $57.39 -18.75 | — |
 
 ## Not taken
 

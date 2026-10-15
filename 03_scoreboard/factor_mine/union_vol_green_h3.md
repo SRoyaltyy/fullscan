@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-12.10%** ($8,790) · signal-only (no cash/fees) was -2.67%. Starts YES **12/30**. Fills 292 · skips 272 · realized $-923.90.
+Cash book **-10.01%** ($8,999) · signal-only (no cash/fees) was -2.67%. Starts YES **12/30**. Fills 295 · skips 272 · realized $-923.90.
 
 ## How this sleeve decides (like you are 10)
 
@@ -454,6 +454,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **SELL** | `SECZ` | 84 | $10.80 | $2.27 | $-206.11 | $8,301.50 | ▼ -206.11 after sell → book $8,317.92; vs 09:30 mark -2.27 | dropped from list after 3 sess (min 3) | — |
 | 2026-10-14 09:30 ET | **BUY** | `EGG` | 1907 | $4.34 | $24.60 | — | $0.52 | — | combo gate; gate last_green=True,vol=good; list yday_gainer,yday_mover; 🔵; ret5=-5.8; leftover $8301.50 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.52 | ▲ close $8,789.89 vs 09:30 $8,347.91 (session +496.57) | 16:00 close · cash $0.52 · equity $8,789.89 vs 09:30 $8,347.91 (+441.98; session marks +496.57) · 4 name(s) marked open→close (per-name table). NAUT×3 09:30 $2.00 → close $2.16 +0.48; QSI×5 09:30 $1.34 → close $1.39 +0.25; RXRX×1 09:30 $3.72 → close $3.74 +0.02; EGG×1907 09:30 $4.34 → close $4.60 +495.82 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.52 | ▼ 09:30 equity $8,789.33 vs yday $8,789.89 (-0.56) | 09:30 open · cash $0.52 (unchanged overnight, no fees) · equity $8,789.33 vs prior close $8,789.89 (-0.56) · 4 name(s) re-marked at the open (per-name table). EGG×1907 yday $4.60 → 09:30 $4.60 +0.00; NAUT×3 yday $2.16 → 09:30 $2.07 -0.27; QSI×5 yday $1.39 → 09:30 $1.35 -0.20; RXRX×1 yday $3.74 → 09:30 $3.65 -0.09 | — |
+| 2026-10-15 09:30 ET | **SELL** | `NAUT` | 3 | $2.07 | $0.09 | $-0.45 | $6.64 | ▼ -0.45 after sell → book $8,789.24; vs 09:30 mark -0.09 | dropped from list after 3 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `QSI` | 5 | $1.35 | $0.10 | $-0.82 | $13.29 | ▼ -0.82 after sell → book $8,789.14; vs 09:30 mark -0.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `RXRX` | 1 | $3.65 | $0.06 | $-0.77 | $16.88 | ▼ -0.77 after sell → book $8,789.08; vs 09:30 mark -0.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $16.88 | ▲ close $8,998.85 vs 09:30 $8,789.33 (session +209.77) | 16:00 close · cash $16.88 · equity $8,998.85 vs 09:30 $8,789.33 (+209.52; session marks +209.77) · 1 name(s) marked open→close (per-name table). EGG×1907 09:30 $4.60 → close $4.71 +209.77 | — |
 
 ## Not taken
 

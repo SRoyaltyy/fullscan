@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · short prior-export headline🔴
 
-Cash book **-22.74%** ($7,726) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 102 · skips 94 · realized $+602.64.
+Cash book **-13.59%** ($8,641) · signal-only (no cash/fees) was +2.90%. Starts YES **2/30**. Fills 105 · skips 94 · realized $+602.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -260,6 +260,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **SHORT** | `NOG` | 24 | $26.53 | $2.10 | — | $12,940.84 | — | short prior-export headline🔴; gate headline=bad; list ohlc_hot; ret5=+10.4; leftover $662.60 | join🔴 sector🟡 gen🔴 news🔴 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **SHORT** | `MOH` | 3 | $210.15 | $2.04 | — | $13,569.25 | — | short prior-export headline🔴; gate headline=bad; list ohlc_hot; ret5=+7.3; leftover $662.60 | join🟢 sector🟡 gen🔴 news🔴 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,569.25 | ▲ close $7,725.97 vs 09:30 $2,657.30 (session +5,079.69) | 16:00 close · cash $13,569.25 · equity $7,725.97 vs 09:30 $2,657.30 (+5068.67; session marks +5079.69) · 3 name(s) marked open→close (per-name table). AEHL×399 09:30 $24.20 → close $11.49 +5071.29; NOG×24 09:30 $26.53 → close $26.30 +5.52; MOH×3 09:30 $210.15 → close $209.19 +2.88 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,569.25 | ▲ 09:30 equity $8,702.71 vs yday $7,725.97 (+976.74) | 09:30 open · cash $13,569.25 (unchanged overnight, no fees) · equity $8,702.71 vs prior close $7,725.97 (+976.74) · 3 name(s) re-marked at the open (per-name table). AEHL×399 yday $11.49 → 09:30 $9.03 +981.54; MOH×3 yday $209.19 → 09:30 $210.39 -3.60; NOG×24 yday $26.30 → 09:30 $26.35 -1.20 | — |
+| 2026-10-15 09:30 ET | **COVER** | `AEHL` | 399 | $9.03 | $5.15 | $+464.31 | $9,961.13 | ▲ +464.31 after sell → book $8,697.56; vs 09:30 mark -5.15 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SHORT** | `RELX` | 57 | $37.98 | $2.25 | — | $12,124.03 | — | short prior-export headline🔴; gate headline=bad; list ohlc_hot; ret5=+7.0; leftover $2174.39 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SHORT** | `AA` | 54 | $39.77 | $2.24 | — | $14,269.37 | — | short prior-export headline🔴; gate headline=bad; list overnight; ret5=-5.6; leftover $2174.39 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,269.37 | ▼ close $8,641.25 vs 09:30 $8,702.71 (session -51.83) | 16:00 close · cash $14,269.37 · equity $8,641.25 vs 09:30 $8,702.71 (-61.46; session marks -51.83) · 4 name(s) marked open→close (per-name table). MOH×3 09:30 $210.39 → close $212.50 -6.33; NOG×24 09:30 $26.35 → close $25.75 +14.40; RELX×57 09:30 $37.98 → close $38.42 -24.80; AA×54 09:30 $39.77 → close $40.42 -35.10 | — |
 
 ## Not taken
 

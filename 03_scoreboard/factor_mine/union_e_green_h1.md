@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-8.80%** ($9,120) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 118 · skips 17 · realized $-2405.95.
+Cash book **-8.64%** ($9,136) · signal-only (no cash/fees) was -17.92%. Starts YES **5/30**. Fills 124 · skips 17 · realized $-2405.95.
 
 ## How this sleeve decides (like you are 10)
 
@@ -280,6 +280,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `ASML` | 2 | $1676.80 | $2.00 | — | $5,686.17 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-6.3; leftover $4520.89 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `PGR` | 21 | $206.97 | $2.05 | — | $1,337.75 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=+5.1; leftover $4520.89 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,337.75 | ▲ close $9,120.41 vs 09:30 $9,041.77 (session +82.69) | 16:00 close · cash $1,337.75 · equity $9,120.41 vs 09:30 $9,041.77 (+78.64; session marks +82.69) · 2 name(s) marked open→close (per-name table). ASML×2 09:30 $1676.80 → close $1650.00 -53.60; PGR×21 09:30 $206.97 → close $213.46 +136.29 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,337.75 | ▲ 09:30 equity $9,141.40 vs yday $9,120.41 (+20.99) | 09:30 open · cash $1,337.75 (unchanged overnight, no fees) · equity $9,141.40 vs prior close $9,120.41 (+20.99) · 2 name(s) re-marked at the open (per-name table). ASML×2 yday $1650.00 → 09:30 $1615.77 -68.47; PGR×21 yday $213.46 → 09:30 $217.72 +89.46 | — |
+| 2026-10-15 09:30 ET | **SELL** | `ASML` | 2 | $1615.77 | $2.03 | $-126.10 | $4,567.25 | ▼ -126.10 after sell → book $9,139.37; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `PGR` | 21 | $217.72 | $2.10 | $+221.60 | $9,137.27 | ▲ +221.60 after sell → book $9,137.27; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `CMC` | 32 | $69.38 | $2.09 | — | $6,915.02 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+3.2; leftover $2284.32 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `FHN` | 102 | $22.34 | $2.30 | — | $4,634.05 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-1.4; leftover $2284.32 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `PNC` | 10 | $208.49 | $2.02 | — | $2,547.13 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+0.0; leftover $2284.32 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `SCHW` | 24 | $93.39 | $2.06 | — | $303.58 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+1.3; leftover $2284.32 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $303.58 | ▲ close $9,136.38 vs 09:30 $9,141.40 (session +7.58) | 16:00 close · cash $303.58 · equity $9,136.38 vs 09:30 $9,141.40 (-5.02; session marks +7.58) · 4 name(s) marked open→close (per-name table). CMC×32 09:30 $69.38 → close $65.37 -128.32; FHN×102 09:30 $22.34 → close $22.86 +53.04; PNC×10 09:30 $208.49 → close $214.94 +64.50; SCHW×24 09:30 $93.39 → close $94.16 +18.36 | — |
 
 ## Not taken
 

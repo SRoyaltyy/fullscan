@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ join_g, no 🚨
 
-Cash book **-16.37%** ($8,363) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 386 · skips 104 · realized $-96.65.
+Cash book **-13.96%** ($8,604) · signal-only (no cash/fees) was -3.42%. Starts YES **0/30**. Fills 397 · skips 104 · realized $-96.65.
 
 ## How this sleeve decides (like you are 10)
 
@@ -546,6 +546,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `AMX` | 48 | $21.62 | $2.13 | — | $1,347.61 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer; 🔵; ret5=-3.0; leftover $1041.91 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `KLRA` | 97 | $10.64 | $2.28 | — | $313.25 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer; ret5=-0.6; leftover $1041.91 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $313.25 | ▲ close $8,362.66 vs 09:30 $8,335.31 (session +44.12) | 16:00 close · cash $313.25 · equity $8,362.66 vs 09:30 $8,335.31 (+27.35; session marks +44.12) · 8 name(s) marked open→close (per-name table). TMUS×6 09:30 $155.00 → close $157.79 +16.74; TRU×15 09:30 $66.42 → close $66.94 +7.80; WSM×4 09:30 $238.29 → close $242.48 +16.76; CNK×27 09:30 $37.88 → close $38.20 +8.64; WLY×19 09:30 $52.29 → close $51.49 -15.20; SMMT×68 09:30 $15.29 → close $15.13 -10.88; AMX×48 09:30 $21.62 → close $21.84 +10.56; KLRA×97 09:30 $10.64 → close $10.74 +9.70 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $313.25 | ▲ 09:30 equity $8,419.03 vs yday $8,362.66 (+56.37) | 09:30 open · cash $313.25 (unchanged overnight, no fees) · equity $8,419.03 vs prior close $8,362.66 (+56.37) · 8 name(s) re-marked at the open (per-name table). AMX×48 yday $21.84 → 09:30 $21.92 +3.84; CNK×27 yday $38.20 → 09:30 $38.44 +6.48; KLRA×97 yday $10.74 → 09:30 $10.55 -18.43; SMMT×68 yday $15.13 → 09:30 $15.09 -2.72; TMUS×6 yday $157.79 → 09:30 $160.74 +17.70; TRU×15 yday $66.94 → 09:30 $68.55 +24.15; WLY×19 yday $51.49 → 09:30 $52.10 +11.59; WSM×4 yday $242.48 → 09:30 $245.92 +13.76 | — |
+| 2026-10-15 09:30 ET | **SELL** | `CNK` | 27 | $38.44 | $2.09 | $+10.96 | $1,349.04 | ▲ +10.96 after sell → book $8,416.94; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `KLRA` | 97 | $10.55 | $2.31 | $-13.32 | $2,370.08 | ▼ -13.32 after sell → book $8,414.63; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `SMMT` | 68 | $15.09 | $2.22 | $-18.01 | $3,393.99 | ▼ -18.01 after sell → book $8,412.42; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-10-15 09:30 ET | **SELL** | `TMUS` | 6 | $160.74 | $2.03 | $+30.40 | $4,356.40 | ▲ +30.40 after sell → book $8,410.39; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `WLY` | 19 | $52.10 | $2.07 | $-7.72 | $5,344.23 | ▼ -7.72 after sell → book $8,408.32; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `WSM` | 4 | $245.92 | $2.02 | $+26.50 | $6,325.89 | ▲ +26.50 after sell → book $8,406.30; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `ACRS` | 308 | $3.42 | $3.97 | — | $5,268.56 | — | union ∩ join_g, no 🚨; gate join=good; list probable,yday_gainer,yday_mover; ret5=-0.6; leftover $1054.31 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `KURA` | 109 | $9.62 | $2.32 | — | $4,217.66 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer,yday_mover; ret5=-9.9; leftover $1054.31 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `RCKT` | 474 | $2.22 | $6.11 | — | $3,159.26 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer; ret5=-12.8; leftover $1054.31 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `AURA` | 169 | $6.23 | $2.50 | — | $2,103.90 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer; ret5=-4.5; leftover $1054.31 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `NBP` | 817 | $1.29 | $10.54 | — | $1,039.43 | — | union ∩ join_g, no 🚨; gate join=good; list yday_gainer; ret5=-6.6; leftover $1054.31 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,039.43 | ▲ close $8,604.12 vs 09:30 $8,419.03 (session +223.26) | 16:00 close · cash $1,039.43 · equity $8,604.12 vs 09:30 $8,419.03 (+185.09; session marks +223.26) · 7 name(s) marked open→close (per-name table). AMX×48 09:30 $21.92 → close $22.43 +24.48; TRU×15 09:30 $68.55 → close $74.12 +83.55; ACRS×308 09:30 $3.42 → close $3.49 +21.56; KURA×109 09:30 $9.62 → close $9.70 +8.72; RCKT×474 09:30 $2.22 → close $2.36 +66.36; AURA×169 09:30 $6.23 → close $6.34 +18.59; NBP×817 09:30 $1.29 → close $1.29 +0.00 | — |
 
 ## Not taken
 

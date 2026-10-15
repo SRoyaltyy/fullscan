@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-39.96%** ($6,004) · signal-only (no cash/fees) was +1.46%. Starts YES **0/30**. Fills 239 · skips 201 · realized $-2103.38.
+Cash book **-40.78%** ($5,922) · signal-only (no cash/fees) was +1.46%. Starts YES **0/30**. Fills 242 · skips 201 · realized $-2103.38.
 
 ## How this sleeve decides (like you are 10)
 
@@ -401,6 +401,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `AIP` | 102 | $20.54 | $2.30 | — | $2,114.95 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=-12.3; leftover $2102.56 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `CXW` | 61 | $33.97 | $2.17 | — | $40.61 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; 🔵; ret5=+7.1; leftover $2102.56 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $40.61 | ▼ close $6,004.01 vs 09:30 $6,345.68 (session -302.94) | 16:00 close · cash $40.61 · equity $6,004.01 vs 09:30 $6,345.68 (-341.67; session marks -302.94) · 5 name(s) marked open→close (per-name table). CCCC×1 09:30 $2.72 → close $2.61 -0.11; RXRX×1 09:30 $3.72 → close $3.74 +0.02; NVTS×210 09:30 $9.96 → close $9.36 -128.10; AIP×102 09:30 $20.54 → close $19.67 -88.74; CXW×61 09:30 $33.97 → close $32.56 -86.01 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $40.61 | ▼ 09:30 equity $5,814.11 vs yday $6,004.01 (-189.90) | 09:30 open · cash $40.61 (unchanged overnight, no fees) · equity $5,814.11 vs prior close $6,004.01 (-189.90) · 5 name(s) re-marked at the open (per-name table). AIP×102 yday $19.67 → 09:30 $18.82 -86.70; CCCC×1 yday $2.61 → 09:30 $2.64 +0.03; CXW×61 yday $32.56 → 09:30 $32.47 -5.49; NVTS×210 yday $9.36 → 09:30 $8.89 -97.65; RXRX×1 yday $3.74 → 09:30 $3.65 -0.09 | — |
+| 2026-10-15 09:30 ET | **SELL** | `CCCC` | 1 | $2.64 | $0.05 | $-0.60 | $43.20 | ▼ -0.60 after sell → book $5,814.06; vs 09:30 mark -0.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `RXRX` | 1 | $3.65 | $0.06 | $-0.77 | $46.79 | ▼ -0.77 after sell → book $5,814.00; vs 09:30 mark -0.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **BUY** | `PRMB` | 1 | $18.96 | $0.19 | — | $27.64 | — | combo gate; gate last_green=True,ret_5_max=10.0; list probable,yday_gainer,yday_mover; ret5=-1.2; leftover $23.40 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.64 | ▲ close $5,921.79 vs 09:30 $5,814.11 (session +107.98) | 16:00 close · cash $27.64 · equity $5,921.79 vs 09:30 $5,814.11 (+107.68; session marks +107.98) · 4 name(s) marked open→close (per-name table). AIP×102 09:30 $18.82 → close $19.92 +112.20; CXW×61 09:30 $32.47 → close $31.23 -75.64; NVTS×210 09:30 $8.89 → close $9.23 +71.40; PRMB×1 09:30 $18.96 → close $18.98 +0.02 | — |
 
 ## Not taken
 

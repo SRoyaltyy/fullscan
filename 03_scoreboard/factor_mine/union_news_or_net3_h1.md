@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 3
 
-Cash book **-42.71%** ($5,729) · signal-only (no cash/fees) was -9.17%. Starts YES **0/30**. Fills 180 · skips 40 · realized $-1690.89.
+Cash book **-41.90%** ($5,810) · signal-only (no cash/fees) was -9.17%. Starts YES **0/30**. Fills 182 · skips 40 · realized $-1690.89.
 
 ## How this sleeve decides (like you are 10)
 
@@ -342,6 +342,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,729.23 | ▲ close $5,729.23 vs 09:30 $5,729.23 (session +0.00) | 16:00 close · cash $5,729.23 · no lots left · equity $5,729.23. | — |
 | 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,729.23 | ▲ 09:30 equity $5,729.23 vs yday $5,729.23 (+0.00) | 09:30 open · cash $5,729.23 · no holdings · equity $5,729.23 vs prior close $5,729.23 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,729.23 | ▲ close $5,729.23 vs 09:30 $5,729.23 (session +0.00) | 16:00 close · cash $5,729.23 · no lots left · equity $5,729.23. | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,729.23 | ▲ 09:30 equity $5,729.23 vs yday $5,729.23 (+0.00) | 09:30 open · cash $5,729.23 · no holdings · equity $5,729.23 vs prior close $5,729.23 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-15 09:30 ET | **BUY** | `AMX` | 130 | $21.92 | $2.38 | — | $2,877.25 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list yday_gainer; 🔵; ret5=-2.1; leftover $2864.61 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `CAH` | 11 | $252.00 | $2.02 | — | $103.23 | — | packet🟢 OR headline🟢 and camera net ≥ 3; gate cam_net_min=3,news_or_headline=True; rank cond; list ohlc_hot; ret5=+6.7; leftover $2864.61 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $103.23 | ▲ close $5,809.94 vs 09:30 $5,729.23 (session +85.11) | 16:00 close · cash $103.23 · equity $5,809.94 vs 09:30 $5,729.23 (+80.71; session marks +85.11) · 2 name(s) marked open→close (per-name table). AMX×130 09:30 $21.92 → close $22.43 +66.30; CAH×11 09:30 $252.00 → close $253.71 +18.81 | — |
 
 ## Not taken
 

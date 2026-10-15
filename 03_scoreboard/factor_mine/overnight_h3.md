@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-13.58%** ($8,642) · signal-only (no cash/fees) was -40.60%. Starts YES **0/30**. Fills 106 · skips 188 · realized $-1635.94.
+Cash book **-12.28%** ($8,772) · signal-only (no cash/fees) was -40.60%. Starts YES **0/30**. Fills 110 · skips 188 · realized $-1635.94.
 
 ## How this sleeve decides (like you are 10)
 
@@ -262,6 +262,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,642.03 | ▲ close $8,642.03 vs 09:30 $8,642.03 (session +0.00) | 16:00 close · cash $8,642.03 · no lots left · equity $8,642.03. | — |
 | 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,642.03 | ▲ 09:30 equity $8,642.03 vs yday $8,642.03 (+0.00) | 09:30 open · cash $8,642.03 · no holdings · equity $8,642.03 vs prior close $8,642.03 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,642.03 | ▲ close $8,642.03 vs 09:30 $8,642.03 (session +0.00) | 16:00 close · cash $8,642.03 · no lots left · equity $8,642.03. | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,642.03 | ▲ 09:30 equity $8,642.03 vs yday $8,642.03 (+0.00) | 09:30 open · cash $8,642.03 · no holdings · equity $8,642.03 vs prior close $8,642.03 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-15 09:30 ET | **BUY** | `AA` | 54 | $39.77 | $2.15 | — | $6,492.30 | — | baseline list, no extra gate; list overnight; ret5=-5.6; leftover $2160.51 | join🟢 sector🟡 gen🔴 news🔴 digest🔴 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `IBKR` | 26 | $82.77 | $2.07 | — | $4,338.21 | — | baseline list, no extra gate; list overnight; ret5=-4.1; leftover $2160.51 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `JBHT` | 9 | $232.93 | $2.02 | — | $2,239.82 | — | baseline list, no extra gate; list overnight; 🔵; ret5=+4.3; leftover $2160.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `WSE` | 178 | $12.11 | $2.52 | — | $81.72 | — | baseline list, no extra gate; list overnight; 🔵; ret5=+1.7; leftover $2160.51 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟡 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $81.72 | ▲ close $8,771.88 vs 09:30 $8,642.03 (session +138.61) | 16:00 close · cash $81.72 · equity $8,771.88 vs 09:30 $8,642.03 (+129.85; session marks +138.61) · 4 name(s) marked open→close (per-name table). AA×54 09:30 $39.77 → close $40.42 +35.10; IBKR×26 09:30 $82.77 → close $86.03 +84.76; JBHT×9 09:30 $232.93 → close $235.31 +21.42; WSE×178 09:30 $12.11 → close $12.10 -2.67 | — |
 
 ## Not taken
 

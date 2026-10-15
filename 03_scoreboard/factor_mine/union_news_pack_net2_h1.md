@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **-3.49%** ($9,651) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 80 · skips 28 · realized $+1837.87.
+Cash book **-2.08%** ($9,792) · signal-only (no cash/fees) was +7.99%. Starts YES **21/30**. Fills 84 · skips 28 · realized $+1837.87.
 
 ## How this sleeve decides (like you are 10)
 
@@ -242,6 +242,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `AMX` | 218 | $21.62 | $2.81 | — | $4,745.70 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list yday_gainer; 🔵; ret5=-3.0; leftover $4730.84 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `BAC` | 94 | $49.83 | $2.27 | — | $59.41 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list earn_react; 🔵; ret5=-0.2; leftover $4730.84 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $59.41 | ▲ close $9,651.19 vs 09:30 $9,461.67 (session +194.60) | 16:00 close · cash $59.41 · equity $9,651.19 vs 09:30 $9,461.67 (+189.52; session marks +194.60) · 2 name(s) marked open→close (per-name table). AMX×218 09:30 $21.62 → close $21.84 +47.96; BAC×94 09:30 $49.83 → close $51.39 +146.64 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $59.41 | ▲ 09:30 equity $9,675.21 vs yday $9,651.19 (+24.02) | 09:30 open · cash $59.41 (unchanged overnight, no fees) · equity $9,675.21 vs prior close $9,651.19 (+24.02) · 2 name(s) re-marked at the open (per-name table). AMX×218 yday $21.84 → 09:30 $21.92 +17.44; BAC×94 yday $51.39 → 09:30 $51.46 +6.58 | — |
+| 2026-10-15 09:30 ET | **SELL** | `BAC` | 94 | $51.46 | $2.33 | $+148.62 | $4,894.32 | ▲ +148.62 after sell → book $9,672.88; vs 09:30 mark -2.33 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `CAH` | 6 | $252.00 | $2.01 | — | $3,380.32 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; ret5=+6.7; leftover $1631.44 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `COP` | 11 | $143.00 | $2.02 | — | $1,805.29 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; ret5=+9.6; leftover $1631.44 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `RELX` | 42 | $37.98 | $2.12 | — | $207.81 | — | packet🟢 and camera net ≥ 2; gate cam_net_min=2,news_box=good; rank cond; list ohlc_hot; ret5=+7.0; leftover $1631.44 | join🔴 sector🟡 gen🔴 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $207.81 | ▲ close $9,792.48 vs 09:30 $9,675.21 (session +125.74) | 16:00 close · cash $207.81 · equity $9,792.48 vs 09:30 $9,675.21 (+117.27; session marks +125.74) · 4 name(s) marked open→close (per-name table). AMX×218 09:30 $21.92 → close $22.43 +111.18; CAH×6 09:30 $252.00 → close $253.71 +10.26; COP×11 09:30 $143.00 → close $141.73 -13.97; RELX×42 09:30 $37.98 → close $38.42 +18.27 | — |
 
 ## Not taken
 

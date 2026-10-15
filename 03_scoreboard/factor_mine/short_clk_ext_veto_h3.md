@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · Clock-B #5 extreme ext + fade/fail-break as a short
 
-Cash book **-3.73%** ($9,627) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 264 · skips 219 · realized $-964.15.
+Cash book **-2.59%** ($9,741) · signal-only (no cash/fees) was -97.41%. Starts YES **0/30**. Fills 269 · skips 219 · realized $-964.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -422,6 +422,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **COVER** | `PBF` | 13 | $91.73 | $2.03 | $-48.83 | $15,108.25 | ▼ -48.83 after sell → book $9,747.59; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **SHORT** | `TBBB` | 86 | $56.03 | $2.43 | — | $19,924.40 | — | Clock-B #5 extreme ext + fade/fail-break as a short; gate clk_ext_veto=True; list yday_gainer; 🔵; ret5=+4.1; leftover $4873.79 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19,924.40 | ▼ close $9,626.53 vs 09:30 $9,753.97 (session -118.63) | 16:00 close · cash $19,924.40 · equity $9,626.53 vs 09:30 $9,753.97 (-127.44; session marks -118.63) · 6 name(s) marked open→close (per-name table). IOVA×80 09:30 $14.35 → close $14.21 +11.20; KOD×11 09:30 $90.62 → close $81.09 +104.83; NAUT×623 09:30 $2.00 → close $2.16 -99.68; QSI×788 09:30 $1.34 → close $1.39 -39.40; QTEX×672 09:30 $1.36 → close $1.46 -67.20; TBBB×86 09:30 $56.03 → close $56.36 -28.38 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19,924.40 | ▲ 09:30 equity $9,745.21 vs yday $9,626.53 (+118.68) | 09:30 open · cash $19,924.40 (unchanged overnight, no fees) · equity $9,745.21 vs prior close $9,626.53 (+118.68) · 6 name(s) re-marked at the open (per-name table). IOVA×80 yday $14.21 → 09:30 $13.98 +18.24; KOD×11 yday $81.09 → 09:30 $81.30 -2.31; NAUT×623 yday $2.16 → 09:30 $2.07 +56.07; QSI×788 yday $1.39 → 09:30 $1.35 +31.52; QTEX×672 yday $1.46 → 09:30 $1.44 +13.44; TBBB×86 yday $56.36 → 09:30 $56.34 +1.72 | — |
+| 2026-10-15 09:30 ET | **COVER** | `IOVA` | 80 | $13.98 | $2.23 | $+32.93 | $18,803.61 | ▲ +32.93 after sell → book $9,742.98; vs 09:30 mark -2.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `KOD` | 11 | $81.30 | $2.02 | $+202.26 | $17,907.29 | ▲ +202.26 after sell → book $9,740.96; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `NAUT` | 623 | $2.07 | $8.04 | $-115.28 | $16,609.64 | ▼ -115.28 after sell → book $9,732.92; vs 09:30 mark -8.04 | dropped from list after 4 sess (min 3) | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **COVER** | `QSI` | 788 | $1.35 | $10.17 | $+78.00 | $15,535.68 | ▲ +78.00 after sell → book $9,722.76; vs 09:30 mark -10.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **COVER** | `QTEX` | 672 | $1.44 | $8.67 | $+177.39 | $14,559.33 | ▲ +177.39 after sell → book $9,714.09; vs 09:30 mark -8.67 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,559.33 | ▲ close $9,740.75 vs 09:30 $9,745.21 (session +26.66) | 16:00 close · cash $14,559.33 · equity $9,740.75 vs 09:30 $9,745.21 (-4.46; session marks +26.66) · 1 name(s) marked open→close (per-name table). TBBB×86 09:30 $56.34 → close $56.03 +26.66 | — |
 
 ## Not taken
 

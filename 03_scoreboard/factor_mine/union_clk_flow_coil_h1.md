@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #8 flow-in + green + not extended
 
-Cash book **-4.55%** ($9,545) · signal-only (no cash/fees) was -14.71%. Starts YES **10/30**. Fills 22 · skips 8 · realized $-732.31.
+Cash book **-2.65%** ($9,735) · signal-only (no cash/fees) was -14.71%. Starts YES **10/30**. Fills 25 · skips 8 · realized $-732.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -184,6 +184,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,545.19 | ▲ close $9,545.19 vs 09:30 $9,545.19 (session +0.00) | 16:00 close · cash $9,545.19 · no lots left · equity $9,545.19. | — |
 | 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,545.19 | ▲ 09:30 equity $9,545.19 vs yday $9,545.19 (+0.00) | 09:30 open · cash $9,545.19 · no holdings · equity $9,545.19 vs prior close $9,545.19 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,545.19 | ▲ close $9,545.19 vs 09:30 $9,545.19 (session +0.00) | 16:00 close · cash $9,545.19 · no lots left · equity $9,545.19. | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,545.19 | ▲ 09:30 equity $9,545.19 vs yday $9,545.19 (+0.00) | 09:30 open · cash $9,545.19 · no holdings · equity $9,545.19 vs prior close $9,545.19 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-15 09:30 ET | **BUY** | `FHN` | 142 | $22.34 | $2.42 | — | $6,370.49 | — | Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list earn_react; ret5=-1.4; leftover $3181.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `SCHW` | 34 | $93.39 | $2.09 | — | $3,192.97 | — | Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list earn_react; ret5=+1.3; leftover $3181.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `PNC` | 15 | $208.49 | $2.04 | — | $63.59 | — | Clock-B #8 flow-in + green + not extended; gate clk_flow_coil=True; rank cond; list earn_react; ret5=+0.0; leftover $3181.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $63.59 | ▲ close $9,735.25 vs 09:30 $9,545.19 (session +196.60) | 16:00 close · cash $63.59 · equity $9,735.25 vs 09:30 $9,545.19 (+190.06; session marks +196.60) · 3 name(s) marked open→close (per-name table). FHN×142 09:30 $22.34 → close $22.86 +73.84; SCHW×34 09:30 $93.39 → close $94.16 +26.01; PNC×15 09:30 $208.49 → close $214.94 +96.75 | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green, no 🚨
 
-Cash book **-23.67%** ($7,633) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 261 · skips 312 · realized $-335.16.
+Cash book **-22.51%** ($7,749) · signal-only (no cash/fees) was +37.42%. Starts YES **3/30**. Fills 265 · skips 312 · realized $-335.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -421,6 +421,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `CXW` | 28 | $33.97 | $2.07 | — | $1,073.68 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+7.1; leftover $961.13 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `EGG` | 221 | $4.34 | $2.85 | — | $111.69 | — | union ∩ last_green, no 🚨; gate last_green=True; list yday_gainer,yday_mover; 🔵; ret5=-5.8; leftover $961.13 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $111.69 | ▼ close $7,632.64 vs 09:30 $7,744.87 (session -63.41) | 16:00 close · cash $111.69 · equity $7,632.64 vs 09:30 $7,744.87 (-112.23; session marks -63.41) · 11 name(s) marked open→close (per-name table). ABSI×1 09:30 $8.88 → close $8.74 -0.14; CCCC×3 09:30 $2.72 → close $2.61 -0.33; RXRX×2 09:30 $3.72 → close $3.74 +0.04; TMUS×6 09:30 $155.00 → close $157.79 +16.74; TRU×14 09:30 $66.42 → close $66.94 +7.28; CNK×25 09:30 $37.88 → close $38.20 +8.00; WLY×18 09:30 $52.29 → close $51.49 -14.40; NVTS×96 09:30 $9.96 → close $9.36 -58.56; AIP×46 09:30 $20.54 → close $19.67 -40.02; CXW×28 09:30 $33.97 → close $32.56 -39.48; EGG×221 09:30 $4.34 → close $4.60 +57.46 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $111.69 | ▼ 09:30 equity $7,603.20 vs yday $7,632.64 (-29.44) | 09:30 open · cash $111.69 (unchanged overnight, no fees) · equity $7,603.20 vs prior close $7,632.64 (-29.44) · 11 name(s) re-marked at the open (per-name table). ABSI×1 yday $8.74 → 09:30 $8.43 -0.31; AIP×46 yday $19.67 → 09:30 $18.82 -39.10; CCCC×3 yday $2.61 → 09:30 $2.64 +0.09; CNK×25 yday $38.20 → 09:30 $38.44 +6.00; CXW×28 yday $32.56 → 09:30 $32.47 -2.52; EGG×221 yday $4.60 → 09:30 $4.60 +0.00; NVTS×96 yday $9.36 → 09:30 $8.89 -44.64; RXRX×2 yday $3.74 → 09:30 $3.65 -0.18; TMUS×6 yday $157.79 → 09:30 $160.74 +17.70; TRU×14 yday $66.94 → 09:30 $68.55 +22.54; WLY×18 yday $51.49 → 09:30 $52.10 +10.98 | — |
+| 2026-10-15 09:30 ET | **SELL** | `ABSI` | 1 | $8.43 | $0.11 | $-1.85 | $120.01 | ▼ -1.85 after sell → book $7,603.09; vs 09:30 mark -0.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `CCCC` | 3 | $2.64 | $0.11 | $-1.77 | $127.82 | ▼ -1.77 after sell → book $7,602.98; vs 09:30 mark -0.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `RXRX` | 2 | $3.65 | $0.10 | $-1.51 | $135.03 | ▼ -1.51 after sell → book $7,602.89; vs 09:30 mark -0.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **BUY** | `PRMB` | 1 | $18.96 | $0.19 | — | $115.87 | — | union ∩ last_green, no 🚨; gate last_green=True; list probable,yday_gainer,yday_mover; ret5=-1.2; leftover $22.50 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $115.87 | ▲ close $7,748.92 vs 09:30 $7,603.20 (session +146.23) | 16:00 close · cash $115.87 · equity $7,748.92 vs 09:30 $7,603.20 (+145.72; session marks +146.23) · 9 name(s) marked open→close (per-name table). AIP×46 09:30 $18.82 → close $19.92 +50.60; CNK×25 09:30 $38.44 → close $38.52 +2.00; CXW×28 09:30 $32.47 → close $31.23 -34.72; EGG×221 09:30 $4.60 → close $4.71 +24.31; NVTS×96 09:30 $8.89 → close $9.23 +32.64; TMUS×6 09:30 $160.74 → close $157.03 -22.26; TRU×14 09:30 $68.55 → close $74.12 +77.98; WLY×18 09:30 $52.10 → close $52.97 +15.66; PRMB×1 09:30 $18.96 → close $18.98 +0.02 | — |
 
 ## Not taken
 

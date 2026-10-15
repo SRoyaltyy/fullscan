@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-23.51%** ($7,649) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 348 · skips 93 · realized $-1456.67.
+Cash book **-23.73%** ($7,627) · signal-only (no cash/fees) was +6.95%. Starts YES **0/30**. Fills 362 · skips 93 · realized $-1456.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -504,6 +504,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `CVI` | 14 | $63.30 | $2.03 | — | $1,065.99 | — | baseline list, no extra gate; list ohlc_hot; ret5=+9.9; leftover $932.23 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `PINS` | 41 | $22.23 | $2.11 | — | $152.45 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+11.7; leftover $932.23 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $152.45 | ▼ close $7,648.88 vs 09:30 $7,711.64 (session -41.42) | 16:00 close · cash $152.45 · equity $7,648.88 vs 09:30 $7,711.64 (-62.76; session marks -41.42) · 8 name(s) marked open→close (per-name table). NAUT×593 09:30 $2.00 → close $2.16 +94.88; ODD×41 09:30 $22.22 → close $21.63 -24.19; ECO×9 09:30 $99.71 → close $95.66 -36.45; DHT×34 09:30 $26.91 → close $24.95 -66.64; QSI×695 09:30 $1.34 → close $1.39 +34.75; DINO×7 09:30 $128.51 → close $127.69 -5.74; CVI×14 09:30 $63.30 → close $61.96 -18.76; PINS×41 09:30 $22.23 → close $21.76 -19.27 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $152.45 | ▼ 09:30 equity $7,454.80 vs yday $7,648.88 (-194.08) | 09:30 open · cash $152.45 (unchanged overnight, no fees) · equity $7,454.80 vs prior close $7,648.88 (-194.08) · 8 name(s) re-marked at the open (per-name table). CVI×14 yday $61.96 → 09:30 $60.80 -16.24; DHT×34 yday $24.95 → 09:30 $23.84 -37.91; DINO×7 yday $127.69 → 09:30 $126.09 -11.20; ECO×9 yday $95.66 → 09:30 $89.67 -53.91; NAUT×593 yday $2.16 → 09:30 $2.07 -53.37; ODD×41 yday $21.63 → 09:30 $21.95 +13.12; PINS×41 yday $21.76 → 09:30 $21.59 -6.77; QSI×695 yday $1.39 → 09:30 $1.35 -27.80 | — |
+| 2026-10-15 09:30 ET | **SELL** | `CVI` | 14 | $60.80 | $2.05 | $-39.08 | $1,001.60 | ▼ -39.08 after sell → book $7,452.75; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `DHT` | 34 | $23.84 | $2.11 | $-108.75 | $1,809.88 | ▼ -108.75 after sell → book $7,450.64; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `DINO` | 7 | $126.09 | $2.03 | $-20.98 | $2,690.47 | ▼ -20.98 after sell → book $7,448.61; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `ECO` | 9 | $89.67 | $2.04 | $-94.41 | $3,495.47 | ▼ -94.41 after sell → book $7,446.57; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `ODD` | 41 | $21.95 | $2.13 | $-15.32 | $4,393.28 | ▼ -15.32 after sell → book $7,444.44; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `PINS` | 41 | $21.59 | $2.13 | $-30.28 | $5,276.55 | ▼ -30.28 after sell → book $7,442.31; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `QSI` | 695 | $1.35 | $9.09 | $-11.11 | $6,205.71 | ▼ -11.11 after sell → book $7,433.22; vs 09:30 mark -9.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `LW` | 16 | $53.79 | $2.04 | — | $5,343.03 | — | baseline list, no extra gate; list ohlc_hot; ret5=+10.3; leftover $886.53 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ETSY` | 10 | $84.47 | $2.02 | — | $4,496.31 | — | baseline list, no extra gate; list ohlc_hot; ret5=+16.0; leftover $886.53 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `BLMN` | 93 | $9.48 | $2.27 | — | $3,612.40 | — | baseline list, no extra gate; list ohlc_hot; ret5=+14.4; leftover $886.53 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `CHWY` | 42 | $21.00 | $2.12 | — | $2,728.28 | — | baseline list, no extra gate; list ohlc_hot; ret5=+14.3; leftover $886.53 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ACI` | 68 | $12.99 | $2.19 | — | $1,842.77 | — | baseline list, no extra gate; list ohlc_hot; ret5=+11.4; leftover $886.53 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `MNSO` | 85 | $10.41 | $2.25 | — | $955.67 | — | baseline list, no extra gate; list ohlc_hot; ret5=+14.3; leftover $886.53 | join🟢 sector🔴 gen🔴 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ENGS` | 253 | $3.50 | $3.26 | — | $66.91 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+12.0; leftover $886.53 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $66.91 | ▲ close $7,626.66 vs 09:30 $7,454.80 (session +209.59) | 16:00 close · cash $66.91 · equity $7,626.66 vs 09:30 $7,454.80 (+171.86; session marks +209.59) · 8 name(s) marked open→close (per-name table). NAUT×593 09:30 $2.07 → close $2.16 +53.37; LW×16 09:30 $53.79 → close $54.21 +6.72; ETSY×10 09:30 $84.47 → close $89.18 +47.10; BLMN×93 09:30 $9.48 → close $9.93 +41.85; CHWY×42 09:30 $21.00 → close $21.31 +13.02; ACI×68 09:30 $12.99 → close $13.03 +2.72; MNSO×85 09:30 $10.41 → close $10.58 +14.45; ENGS×253 09:30 $3.50 → close $3.62 +30.36 | — |
 
 ## Not taken
 

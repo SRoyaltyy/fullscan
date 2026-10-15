@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **-12.37%** ($8,763) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 90 · skips 105 · realized $-281.48.
+Cash book **-12.17%** ($8,783) · signal-only (no cash/fees) was +15.53%. Starts YES **3/30**. Fills 90 · skips 105 · realized $-281.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -250,6 +250,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `EPR` | 80 | $54.47 | $2.23 | — | $4,373.50 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list probable,yday_gainer,yday_mover; ret5=-0.9; leftover $4366.66 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `TBBB` | 77 | $56.03 | $2.22 | — | $56.97 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list yday_gainer; 🔵; ret5=+4.1; leftover $4366.66 | join🔴 sector🟡 gen🔴 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.97 | ▲ close $8,763.09 vs 09:30 $8,733.33 (session +34.21) | 16:00 close · cash $56.97 · equity $8,763.09 vs 09:30 $8,733.33 (+29.76; session marks +34.21) · 2 name(s) marked open→close (per-name table). EPR×80 09:30 $54.47 → close $54.58 +8.80; TBBB×77 09:30 $56.03 → close $56.36 +25.41 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $56.97 | ▲ 09:30 equity $8,840.75 vs yday $8,763.09 (+77.66) | 09:30 open · cash $56.97 (unchanged overnight, no fees) · equity $8,840.75 vs prior close $8,763.09 (+77.66) · 2 name(s) re-marked at the open (per-name table). EPR×80 yday $54.58 → 09:30 $55.57 +79.20; TBBB×77 yday $56.36 → 09:30 $56.34 -1.54 | — |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $56.97 | ▼ close $8,783.28 vs 09:30 $8,840.75 (session -57.47) | 16:00 close · cash $56.97 · equity $8,783.28 vs 09:30 $8,840.75 (-57.47; session marks -57.47) · 2 name(s) marked open→close (per-name table). EPR×80 09:30 $55.57 → close $55.15 -33.60; TBBB×77 09:30 $56.34 → close $56.03 -23.87 | — |
 
 ## Not taken
 

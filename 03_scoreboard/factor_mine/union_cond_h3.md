@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · rank by cond
 
-Cash book **-12.45%** ($8,755) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 284 · skips 307 · realized $-613.92.
+Cash book **-8.96%** ($9,104) · signal-only (no cash/fees) was -15.16%. Starts YES **0/30**. Fills 288 · skips 307 · realized $-613.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -443,6 +443,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `AMX` | 50 | $21.62 | $2.14 | — | $1,195.31 | — | rank by cond; rank cond; list yday_gainer; 🔵; ret5=-3.0; leftover $1085.38 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 ab🔴 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `BAC` | 21 | $49.83 | $2.05 | — | $146.83 | — | rank by cond; rank cond; list earn_react; 🔵; ret5=-0.2; leftover $1085.38 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $146.83 | ▲ close $8,755.19 vs 09:30 $8,772.21 (session +23.88) | 16:00 close · cash $146.83 · equity $8,755.19 vs 09:30 $8,772.21 (-17.02; session marks +23.88) · 11 name(s) marked open→close (per-name table). FIGS×1 09:30 $17.89 → close $18.63 +0.74; NAUT×11 09:30 $2.00 → close $2.16 +1.76; NVAX×2 09:30 $12.69 → close $12.64 -0.10; SMMT×70 09:30 $15.29 → close $15.13 -11.20; CNK×28 09:30 $37.88 → close $38.20 +8.96; KLRA×102 09:30 $10.64 → close $10.74 +10.20; PINS×48 09:30 $22.23 → close $21.76 -22.56; TRU×16 09:30 $66.42 → close $66.94 +8.32; WLY×20 09:30 $52.29 → close $51.49 -16.00; AMX×50 09:30 $21.62 → close $21.84 +11.00; BAC×21 09:30 $49.83 → close $51.39 +32.76 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $146.83 | ▲ 09:30 equity $8,773.84 vs yday $8,755.19 (+18.65) | 09:30 open · cash $146.83 (unchanged overnight, no fees) · equity $8,773.84 vs prior close $8,755.19 (+18.65) · 11 name(s) re-marked at the open (per-name table). AMX×50 yday $21.84 → 09:30 $21.92 +4.00; BAC×21 yday $51.39 → 09:30 $51.46 +1.47; CNK×28 yday $38.20 → 09:30 $38.44 +6.72; FIGS×1 yday $18.63 → 09:30 $18.50 -0.13; KLRA×102 yday $10.74 → 09:30 $10.55 -19.38; NAUT×11 yday $2.16 → 09:30 $2.07 -0.99; NVAX×2 yday $12.64 → 09:30 $12.50 -0.28; PINS×48 yday $21.76 → 09:30 $21.59 -7.92; SMMT×70 yday $15.13 → 09:30 $15.09 -2.80; TRU×16 yday $66.94 → 09:30 $68.55 +25.76; WLY×20 yday $51.49 → 09:30 $52.10 +12.20 | — |
+| 2026-10-15 09:30 ET | **SELL** | `FIGS` | 1 | $18.50 | $0.21 | $+2.24 | $165.12 | ▲ +2.24 after sell → book $8,773.63; vs 09:30 mark -0.21 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **SELL** | `NVAX` | 2 | $12.50 | $0.28 | $-0.75 | $189.84 | ▼ -0.75 after sell → book $8,773.35; vs 09:30 mark -0.28 | dropped from list after 3 sess (min 3) | — |
+| 2026-10-15 09:30 ET | **BUY** | `FIS` | 1 | $36.40 | $0.37 | — | $153.07 | — | rank by cond; rank cond; list flatten; 🔵; ret5=+4.9; leftover $37.97 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-15 09:30 ET | **BUY** | `KURA` | 3 | $9.62 | $0.30 | — | $123.92 | — | rank by cond; rank cond; list yday_gainer,yday_mover; ret5=-9.9; leftover $37.97 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $123.92 | ▲ close $9,104.39 vs 09:30 $8,773.84 (session +331.70) | 16:00 close · cash $123.92 · equity $9,104.39 vs 09:30 $8,773.84 (+330.55; session marks +331.70) · 11 name(s) marked open→close (per-name table). AMX×50 09:30 $21.92 → close $22.43 +25.50; BAC×21 09:30 $51.46 → close $51.70 +5.04; CNK×28 09:30 $38.44 → close $38.52 +2.24; KLRA×102 09:30 $10.55 → close $11.71 +118.32; NAUT×11 09:30 $2.07 → close $2.16 +0.99; PINS×48 09:30 $21.59 → close $22.71 +53.52; SMMT×70 09:30 $15.09 → close $15.37 +19.60; TRU×16 09:30 $68.55 → close $74.12 +89.12; WLY×20 09:30 $52.10 → close $52.97 +17.40; FIS×1 09:30 $36.40 → close $36.13 -0.27; KURA×3 09:30 $9.62 → close $9.70 +0.24 | — |
 
 ## Not taken
 

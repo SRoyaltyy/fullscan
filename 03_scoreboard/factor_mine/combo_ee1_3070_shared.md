@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_e_fresh_h1 w=0.3,0.7 net=priority
 
-Cash book **-13.79%** ($8,621) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 147 · skips 250 · realized $+4004.41.
+Cash book **-14.30%** ($8,570) · signal-only (no cash/fees) was —. Starts YES **29/30**. Fills 154 · skips 250 · realized $+4004.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $1,764.01.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $385.41.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -308,6 +308,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `MS` | 9 | $180.45 | $2.02 | — | $3,421.78 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-2.3; combo leftover $1671.82; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `PGR` | 8 | $206.97 | $2.01 | — | $1,764.01 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+5.1; combo leftover $1671.82; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟡 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,764.01 | ▲ close $8,621.15 vs 09:30 $8,387.90 (session +270.26) | 16:00 close · cash $1,764.01 · equity $8,621.15 vs 09:30 $8,387.90 (+233.25; session marks +270.26) · 4 name(s) marked open→close (per-name table). BAC×33 09:30 $49.83 → close $51.39 +51.48; FAST×35 09:30 $47.51 → close $52.00 +157.32; MS×9 09:30 $180.45 → close $181.51 +9.54; PGR×8 09:30 $206.97 → close $213.46 +51.92 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,764.01 | ▲ 09:30 equity $8,673.01 vs yday $8,621.15 (+51.86) | 09:30 open · cash $1,764.01 (unchanged overnight, no fees) · equity $8,673.01 vs prior close $8,621.15 (+51.86) | — |
+| 2026-10-15 09:30 ET | **BUY** | `BNY` | 1 | $139.81 | $1.40 | — | $1,622.80 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-3.6; combo leftover $252.00; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟢 digest🟡 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `CMC` | 3 | $69.38 | $2.00 | — | $1,412.66 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+3.2; combo leftover $252.00; owner union_e_fresh_h3 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ERIC` | 23 | $10.65 | $2.06 | — | $1,165.68 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=+1.3; combo leftover $252.00; owner union_e_fresh_h3 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `FHN` | 11 | $22.34 | $2.02 | — | $917.92 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-1.4; combo leftover $252.00; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `PLD` | 1 | $132.04 | $1.32 | — | $784.55 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+2.5; combo leftover $252.00; owner union_e_fresh_h3 | join🔴 sector🟡 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟡 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `PNC` | 1 | $208.49 | $1.99 | — | $574.07 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+0.0; combo leftover $252.00; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `SCHW` | 2 | $93.39 | $1.87 | — | $385.41 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.3; combo leftover $252.00; owner union_e_fresh_h3 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $385.41 | ▼ close $8,569.90 vs 09:30 $8,673.01 (session -90.44) | 16:00 close · cash $385.41 · equity $8,569.90 vs 09:30 $8,673.01 (-103.11; session marks -90.44) · 11 name(s) marked open→close (per-name table). BAC×33 09:30 $51.46 → close $51.70 +7.92; FAST×35 09:30 $52.19 → close $50.38 -63.35; MS×9 09:30 $182.49 → close $182.10 -3.51; PGR×8 09:30 $217.72 → close $213.75 -31.76; BNY×1 09:30 $139.81 → close $142.09 +2.28; CMC×3 09:30 $69.38 → close $65.37 -12.03; ERIC×23 09:30 $10.65 → close $10.71 +1.41; FHN×11 09:30 $22.34 → close $22.86 +5.72; PLD×1 09:30 $132.04 → close $126.94 -5.10; PNC×1 09:30 $208.49 → close $214.94 +6.45; SCHW×2 09:30 $93.39 → close $94.16 +1.53 | — |
 
 ## Not taken
 

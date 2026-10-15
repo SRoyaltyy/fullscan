@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · top 4 by cond
 
-Cash book **-15.72%** ($8,428) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 133 · skips 159 · realized $-515.67.
+Cash book **-12.39%** ($8,761) · signal-only (no cash/fees) was -7.67%. Starts YES **1/30**. Fills 133 · skips 159 · realized $-515.67.
 
 ## How this sleeve decides (like you are 10)
 
@@ -292,6 +292,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `KLRA` | 198 | $10.64 | $2.58 | — | $2,159.64 | — | top 4 by cond; rank cond; list yday_gainer; ret5=-0.6; leftover $2116.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `PINS` | 95 | $22.23 | $2.27 | — | $45.51 | — | top 4 by cond; rank cond; list ohlc_hot; 🔵; ret5=+11.7; leftover $2116.73 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $45.51 | ▼ close $8,428.17 vs 09:30 $8,491.31 (session -29.33) | 16:00 close · cash $45.51 · equity $8,428.17 vs 09:30 $8,491.31 (-63.14; session marks -29.33) · 4 name(s) marked open→close (per-name table). SMMT×138 09:30 $15.29 → close $15.13 -22.08; CNK×55 09:30 $37.88 → close $38.20 +17.60; KLRA×198 09:30 $10.64 → close $10.74 +19.80; PINS×95 09:30 $22.23 → close $21.76 -44.65 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $45.51 | ▼ 09:30 equity $8,382.56 vs yday $8,428.17 (-45.61) | 09:30 open · cash $45.51 (unchanged overnight, no fees) · equity $8,382.56 vs prior close $8,428.17 (-45.61) · 4 name(s) re-marked at the open (per-name table). CNK×55 yday $38.20 → 09:30 $38.44 +13.20; KLRA×198 yday $10.74 → 09:30 $10.55 -37.62; PINS×95 yday $21.76 → 09:30 $21.59 -15.68; SMMT×138 yday $15.13 → 09:30 $15.09 -5.52 | — |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $45.51 | ▲ close $8,761.20 vs 09:30 $8,382.56 (session +378.65) | 16:00 close · cash $45.51 · equity $8,761.20 vs 09:30 $8,382.56 (+378.64; session marks +378.65) · 4 name(s) marked open→close (per-name table). CNK×55 09:30 $38.44 → close $38.52 +4.40; KLRA×198 09:30 $10.55 → close $11.71 +229.68; PINS×95 09:30 $21.59 → close $22.71 +105.93; SMMT×138 09:30 $15.09 → close $15.37 +38.64 | — |
 
 ## Not taken
 

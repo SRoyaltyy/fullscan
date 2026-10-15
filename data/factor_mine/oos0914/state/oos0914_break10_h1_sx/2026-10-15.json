@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 53.79,
+      "shares": 32,
+      "side": "BUY",
+      "ticker": "LW"
+    },
+    {
+      "fill_rule": "open",
+      "price": 84.47,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "ETSY"
+    },
+    {
+      "fill_rule": "open",
+      "price": 9.48,
+      "shares": 184,
+      "side": "BUY",
+      "ticker": "BLMN"
+    },
+    {
+      "fill_rule": "open",
+      "price": 21.0,
+      "shares": 83,
+      "side": "BUY",
+      "ticker": "CHWY"
+    }
+  ],
+  "cash": 98.24,
+  "date": "2026-10-15",
+  "equity": 7212.41,
+  "fees": 20.6408,
+  "fills": [
+    {
+      "fees": 2.0669,
+      "fill_rule": "open",
+      "pnl": -184.83,
+      "price": 89.67,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "ECO"
+    },
+    {
+      "fees": 5.1224,
+      "fill_rule": "open",
+      "pnl": -174.39,
+      "price": 4.34,
+      "shares": 391,
+      "side": "SELL",
+      "ticker": "JLHL"
+    },
+    {
+      "fees": 2.2674,
+      "fill_rule": "open",
+      "pnl": -26.92,
+      "price": 21.95,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "ODD"
+    },
+    {
+      "fees": 2.2671,
+      "fill_rule": "open",
+      "pnl": -57.21,
+      "price": 21.595,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "PINS"
+    },
+    {
+      "fees": 2.086,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 53.79,
+      "shares": 32,
+      "side": "BUY",
+      "ticker": "LW"
+    },
+    {
+      "fees": 2.05,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 84.47,
+      "shares": 20,
+      "side": "BUY",
+      "ticker": "ETSY"
+    },
+    {
+      "fees": 2.542,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 9.48,
+      "shares": 184,
+      "side": "BUY",
+      "ticker": "BLMN"
+    },
+    {
+      "fees": 2.239,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 21.0,
+      "shares": 83,
+      "side": "BUY",
+      "ticker": "CHWY"
+    }
+  ],
+  "holdings": [
+    "BLMN",
+    "CHWY",
+    "ETSY",
+    "LW"
+  ],
+  "mean": -0.0151,
+  "n_trades_today": 8,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 89.67,
+      "shares": 18,
+      "side": "SELL",
+      "ticker": "ECO"
+    },
+    {
+      "fill_rule": "open",
+      "price": 4.34,
+      "shares": 391,
+      "side": "SELL",
+      "ticker": "JLHL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 21.95,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "ODD"
+    },
+    {
+      "fill_rule": "open",
+      "price": 21.595,
+      "shares": 83,
+      "side": "SELL",
+      "ticker": "PINS"
+    }
+  ],
+  "state": {
+    "after": "2026-10-15",
+    "cash": 98.24,
+    "pos": {
+      "BLMN": {
+        "close_px": 9.93,
+        "cost": 1746.862,
+        "entry_date": "2026-10-15",
+        "entry_px": 9.48,
+        "fee_in": 2.542,
+        "last_px": 9.48,
+        "min_hold": 1,
+        "notional": 1744.3200000000002,
+        "peak_px": 9.48,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+14.4; leftover $1751.29",
+        "shares": 184,
+        "ticker": "BLMN"
+      },
+      "CHWY": {
+        "close_px": 21.31,
+        "cost": 1745.239,
+        "entry_date": "2026-10-15",
+        "entry_px": 21.0,
+        "fee_in": 2.239,
+        "last_px": 21.0,
+        "min_hold": 1,
+        "notional": 1743.0,
+        "peak_px": 21.0,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+14.3; leftover $1751.29",
+        "shares": 83,
+        "ticker": "CHWY"
+      },
+      "ETSY": {
+        "close_px": 89.18,
+        "cost": 1691.45,
+        "entry_date": "2026-10-15",
+        "entry_px": 84.47,
+        "fee_in": 2.05,
+        "last_px": 84.47,
+        "min_hold": 1,
+        "notional": 1689.4,
+        "peak_px": 84.47,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+16.0; leftover $1751.29",
+        "shares": 20,
+        "ticker": "ETSY"
+      },
+      "LW": {
+        "close_px": 54.21,
+        "cost": 1723.366,
+        "entry_date": "2026-10-15",
+        "entry_px": 53.79,
+        "fee_in": 2.086,
+        "last_px": 53.79,
+        "min_hold": 1,
+        "notional": 1721.28,
+        "peak_px": 53.79,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list ohlc_hot; ret5=+10.3; leftover $1751.29",
+        "shares": 32,
+        "ticker": "LW"
+      }
+    },
+    "yday_equity": 7212.41
+  }
+}

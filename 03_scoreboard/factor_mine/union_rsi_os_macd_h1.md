@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+16.18%** ($11,618) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 15 · skips 0 · realized $-826.45.
+Cash book **+17.61%** ($11,761) · signal-only (no cash/fees) was -3.93%. Starts YES **1/30**. Fills 20 · skips 0 · realized $-826.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -177,3 +177,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-14 09:30 ET | **BUY** | `BAC` | 57 | $49.83 | $2.16 | — | $5,758.48 | — | combo gate; gate macd_up=True,rsi_os=True; list earn_react; 🔵; ret5=-0.2; leftover $2866.05 | join🟢 sector🟡 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 09:30 ET | **BUY** | `MS` | 15 | $180.45 | $2.04 | — | $3,049.70 | — | combo gate; gate macd_up=True,rsi_os=True; list earn_react; 🔵; ret5=-2.3; leftover $2866.05 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,049.70 | ▲ close $11,617.68 vs 09:30 $11,464.21 (session +159.82) | 16:00 close · cash $3,049.70 · equity $11,617.68 vs 09:30 $11,464.21 (+153.47; session marks +159.82) · 3 name(s) marked open→close (per-name table). LW×55 09:30 $52.02 → close $53.02 +55.00; BAC×57 09:30 $49.83 → close $51.39 +88.92; MS×15 09:30 $180.45 → close $181.51 +15.90 | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,049.70 | ▲ 09:30 equity $11,678.72 vs yday $11,617.68 (+61.04) | 09:30 open · cash $3,049.70 (unchanged overnight, no fees) · equity $11,678.72 vs prior close $11,617.68 (+61.04) · 3 name(s) re-marked at the open (per-name table). BAC×57 yday $51.39 → 09:30 $51.46 +3.99; LW×55 yday $53.02 → 09:30 $53.79 +42.35; MS×15 yday $181.51 → 09:30 $182.49 +14.70 | — |
+| 2026-10-15 09:30 ET | **SELL** | `BAC` | 57 | $51.46 | $2.19 | $+88.55 | $5,980.73 | ▲ +88.55 after sell → book $11,676.53; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **SELL** | `MS` | 15 | $182.49 | $2.07 | $+26.50 | $8,716.01 | ▲ +26.50 after sell → book $11,674.46; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-10-15 09:30 ET | **BUY** | `FIS` | 59 | $36.40 | $2.17 | — | $6,566.24 | — | combo gate; gate macd_up=True,rsi_os=True; list flatten; 🔵; ret5=+4.9; leftover $2179.00 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-10-15 09:30 ET | **BUY** | `PNC` | 10 | $208.49 | $2.02 | — | $4,479.32 | — | combo gate; gate macd_up=True,rsi_os=True; list earn_react; ret5=+0.0; leftover $2179.00 | join🟢 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `JBHT` | 9 | $232.93 | $2.02 | — | $2,380.93 | — | combo gate; gate macd_up=True,rsi_os=True; list overnight; 🔵; ret5=+4.3; leftover $2179.00 | join🔴 sector🟡 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,380.93 | ▲ close $11,761.34 vs 09:30 $11,678.72 (session +93.09) | 16:00 close · cash $2,380.93 · equity $11,761.34 vs 09:30 $11,678.72 (+82.62; session marks +93.09) · 4 name(s) marked open→close (per-name table). LW×55 09:30 $53.79 → close $54.21 +23.10; FIS×59 09:30 $36.40 → close $36.13 -15.93; PNC×10 09:30 $208.49 → close $214.94 +64.50; JBHT×9 09:30 $232.93 → close $235.31 +21.42 | — |

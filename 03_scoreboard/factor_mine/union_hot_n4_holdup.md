@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `hot_score` · size `leftover` · sell `list` · S-boost `holdup` · hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book
 
-Cash book **+42.89%** ($14,289) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 112 · skips 79 · realized $+4974.44.
+Cash book **+47.25%** ($14,725) · signal-only (no cash/fees) was +89.81%. Starts YES **29/30**. Fills 116 · skips 79 · realized $+4974.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -272,6 +272,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-10-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,289.13 | ▲ close $14,289.13 vs 09:30 $14,345.00 (session +0.00) | 16:00 close · cash $14,289.13 · no lots left · equity $14,289.13. | — |
 | 2026-10-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,289.13 | ▲ 09:30 equity $14,289.13 vs yday $14,289.13 (+0.00) | 09:30 open · cash $14,289.13 · no holdings · equity $14,289.13 vs prior close $14,289.13 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-10-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,289.13 | ▲ close $14,289.13 vs 09:30 $14,289.13 (session +0.00) | 16:00 close · cash $14,289.13 · no lots left · equity $14,289.13. | — |
+| 2026-10-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,289.13 | ▲ 09:30 equity $14,289.13 vs yday $14,289.13 (+0.00) | 09:30 open · cash $14,289.13 · no holdings · equity $14,289.13 vs prior close $14,289.13 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-10-15 09:30 ET | **BUY** | `LW` | 66 | $53.79 | $2.19 | — | $10,736.80 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+10.3; leftover $3572.28 | join🔴 sector🟡 gen🔴 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `ETSY` | 42 | $84.47 | $2.12 | — | $7,186.95 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+16.0; leftover $3572.28 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `BLMN` | 376 | $9.48 | $4.85 | — | $3,617.62 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+14.4; leftover $3572.28 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-10-15 09:30 ET | **BUY** | `CHWY` | 170 | $21.00 | $2.50 | — | $45.12 | — | hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book; rank hot_score; list ohlc_hot; ret5=+14.3; leftover $3572.28 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-10-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $45.12 | ▲ close $14,724.92 vs 09:30 $14,289.13 (session +447.44) | 16:00 close · cash $45.12 · equity $14,724.92 vs 09:30 $14,289.13 (+435.79; session marks +447.44) · 4 name(s) marked open→close (per-name table). LW×66 09:30 $53.79 → close $54.21 +27.72; ETSY×42 09:30 $84.47 → close $89.18 +197.82; BLMN×376 09:30 $9.48 → close $9.93 +169.20; CHWY×170 09:30 $21.00 → close $21.31 +52.70 | — |
 
 ## Not taken
 
