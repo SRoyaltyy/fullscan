@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "workflow": "supergrok_ping",
+  "date": "2026-10-15",
+  "run_id": "38748043936",
+  "model": "",
+  "started_at": "2026-10-15T10:13:06-04:00",
+  "updated_at": "2026-10-15T10:13:06-04:00",
+  "heartbeat_at": "2026-10-15T10:13:06-04:00",
+  "stages": [
+    {
+      "name": "ping",
+      "state": "running",
+      "started_at": "2026-10-15T10:13:06-04:00",
+      "ended_at": "",
+      "heartbeat_at": "2026-10-15T10:13:06-04:00",
+      "done": 0,
+      "total": 1,
+      "model": "",
+      "error": ""
+    }
+  ]
+}
