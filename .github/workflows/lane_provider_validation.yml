@@ -125,7 +125,7 @@ jobs:
             --input tests/fixtures/semantic_frozen_20261014/batch_02.json \
             --output provider_results/grok_program_outputs.json \
             --limit 100 --budget-seconds 3600 --headline-timeout 450 \
-            --batch-size 10 --batch-interval-seconds 5 --require-catalog --no-review --sector-review --action-review --sector-roles \
+            --batch-size 10 --batch-interval-seconds 30 --require-catalog --no-review --sector-review --action-review --sector-roles --resume \
             --providers openclaw --models xai/grok-4.3
       - uses: actions/upload-artifact@v4
         if: always()
@@ -185,4 +185,57 @@ jobs:
         if: always()
         with:
           name: lane-semantic-development-score
+          path: scores/
+
+  grade_grok:
+    needs: grok
+    if: ${{ always() && needs.grok.result == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/evaluate_semantic_acceptance.py
+            /docs/benchmarks/references_20261014/
+            /tests/fixtures/semantic_frozen_20261014/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: lane-grok-diagnosis-and-100
+          path: scored_outputs
+      - name: Offline development comparison; no model or classifier calls
+        run: |
+          PYTHONPATH=scripts python - <<'PY'
+          import json,pathlib,hashlib
+          from evaluate_semantic_acceptance import compare
+          ip=pathlib.Path('tests/fixtures/semantic_frozen_20261014/batch_02.json')
+          rp=pathlib.Path('docs/benchmarks/references_20261014/batch_02.json')
+          files=list(pathlib.Path('scored_outputs').rglob('grok_program_outputs.json'))
+          if not files:
+              report={'status':'provider_not_ready_or_busy','acceptance_eligible':False,'best_consecutive_passes':0}
+              pathlib.Path('scores').mkdir()
+              pathlib.Path('scores/comparison.json').write_text(json.dumps(report))
+              print(json.dumps(report))
+              raise SystemExit(0)
+          raw=json.loads(files[0].read_text())
+          ref=json.loads(rp.read_text())
+          assert raw['input_sha256']==ref['input_sha256']==hashlib.sha256(ip.read_bytes()).hexdigest()
+          report=compare(json.loads(ip.read_text()),ref,raw)
+          report.update(acceptance_eligible=False,scope='Development replay after second holdout failed; never increments acceptance streak',best_consecutive_passes=0,candidate={'runtime':raw['runtime_sha256'],'configuration':raw['configuration'],'catalog':raw['catalog']})
+          pathlib.Path('scores').mkdir()
+          pathlib.Path('scores/comparison.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
+          print(json.dumps({k:v for k,v in report.items() if k not in ('samples','candidate')}))
+          for key in ('action','lane','sectors'):
+              print(key.upper()+'_MISSES='+json.dumps([(r['n'],r['title'],r['program'],r['reference']) for r in report['samples'] if not r['checks'][key]],ensure_ascii=False))
+          failures={r['n'] for r in report['samples'] if not r['checks']['action']}
+          print('RAW_ACTION_MISSES='+json.dumps([(r['n'],(r['program_output'].get('analysis_output') or r['program_output'].get('model_output') or {}).get('actions')) for r in raw['outputs'] if r['n'] in failures],ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lane-grok-semantic-development-score
           path: scores/
