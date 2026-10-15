@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T04:40:12.961862-04:00",
+  "generated_at": "2026-10-15T05:13:08.761021-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -251,10 +251,10 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-10-15_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "FAIL",
+          "reason": "empty/truncated (zero_events)",
+          "size": 212,
+          "said": "empty/truncated (zero_events) \u00b7 0 events",
           "bullets": []
         },
         {
@@ -330,11 +330,11 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7573,
+          "size": 7579,
           "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
-            "events:missing",
+            "events:zero_events",
             "news_judge:missing",
             "news_actions:missing"
           ]
@@ -1280,6 +1280,41 @@
         }
       ],
       "preview": "raw=562 usable=97 single=40 \u00b7 Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike  | Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike  | Fed Interest Rate Hike Seems More Likely This Month After Alarming Inflation Dat | Core inflation has not cooled as expected; does the Federal Reserve still have r | Dollar retreats from 18-month high as Treasury yields dip; Fed hike bets ease -  \u00b7 # News Parse v2 \u2014 2026-10-15T04:40:00.723032-04:00\nWindow\u224848h | news_mode=on | raw=562 | usable=97 | single_name=40 | noise_dropped=425\nusable polarity={'+': 1, '-': 16, 'mixed': 1, 'neutral': 79}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-10-15",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-15T04:57:31.919174-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-10-15",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-15T05:13:08.227678-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-15_events.json",
+          "ok": false,
+          "reason": "zero_events",
+          "size": 212,
+          "preview": "0 events \u00b7 "
+        },
+        {
+          "path": "01_daily/events/2026-10-15_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 205,
+          "preview": "# Event Scan \u2014 2026-10-15 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+        }
+      ],
+      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-15 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
     }
   ],
   "href": {
