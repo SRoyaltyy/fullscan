@@ -1,6 +1,6 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14T23:14:48.464315-04:00",
+  "generated_at": "2026-10-14T23:15:24.509446-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -833,9 +833,9 @@
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=184",
-          "size": 1464487,
-          "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
+          "reason": "horizons=5 names=188",
+          "size": 1477625,
+          "said": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
         {
@@ -845,10 +845,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 69370,
+          "size": 71632,
           "said": "Stock book \u2014 2026-10-14",
           "bullets": [
-            "_Generated 2026-10-14T09:18:35.516113-04:00_",
+            "_Generated 2026-10-14T23:14:58.278718-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -911,9 +911,9 @@
           "path": "data/stock_book/2026-10-14_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=184",
-          "size": 1464487,
-          "said": "1d BUY NTAP, BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
+          "reason": "horizons=5 names=188",
+          "size": 1477625,
+          "said": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL \u00b7 -0.3961",
           "bullets": []
         },
         {
@@ -962,70 +962,70 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "NTAP",
-        "score": 0.18239590894266144
-      },
-      {
         "ticker": "BAND",
         "score": 0.5054596446690593
       },
       {
         "ticker": "CNK",
-        "score": 0.6462022471693012
+        "score": 0.6357966990020554
       },
       {
         "ticker": "WLY",
-        "score": 0.5881875461728525
+        "score": 0.564450143358312
       },
       {
         "ticker": "FIS",
-        "score": 0.22514446794935988
+        "score": 0.2277386619475122
       },
       {
         "ticker": "PRCH",
-        "score": 0.5404266780690136
+        "score": 0.5607716584458136
       },
       {
         "ticker": "TMUS",
-        "score": 0.4429443674043055
+        "score": 0.44425258383753136
       },
       {
         "ticker": "UPWK",
-        "score": 0.4411786722204654
+        "score": 0.4653823007267254
+      },
+      {
+        "ticker": "TDS",
+        "score": 0.4243288052195573
       }
     ],
     "sell_1d": [
       {
         "ticker": "EOSE",
-        "score": -0.3332996476105277
+        "score": -0.32888358264634404
       },
       {
         "ticker": "TE",
-        "score": -0.29778163594966284
+        "score": -0.29309623791804923
       },
       {
         "ticker": "NEOV",
-        "score": -0.357067975796452
+        "score": -0.34925812899442465
       },
       {
         "ticker": "PLUG",
-        "score": -0.21292045250555586
+        "score": -0.21282865720419036
       },
       {
         "ticker": "OKLO",
-        "score": -0.2387618044895793
+        "score": -0.24039000857402237
       },
       {
         "ticker": "FCEL",
-        "score": -0.22590146154242213
+        "score": -0.22290235609057574
       },
       {
         "ticker": "NNDM",
-        "score": -0.16961541699668248
+        "score": -0.16148069733311426
       },
       {
         "ticker": "QUBT",
-        "score": -0.17822254200443488
+        "score": -0.16802532043576818
       }
     ],
     "flatten": {
@@ -1072,31 +1072,6 @@
     }
   },
   "lands": [
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "date": "2026-10-14",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-14T09:35:25.173717-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-14_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 41688,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-10-14_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 9569,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-10-14T09:35:14.208904-04:00\nraw=568 unique_events=4 tickers=61"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-14T09:35:14.208904-04:00\nraw=568 unique_events=4 tickers=61"
-    },
     {
       "key": "sector_predict",
       "title": "Per-sector predict (all 11)",
@@ -3686,6 +3661,59 @@
         }
       ],
       "preview": "5096 rows \u00b7 Ticker,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month,rs_week,rs_month,rs \u00b7 A, AA, AACG, AAL, AAME"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-10-14",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-14T23:15:23.591740-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-10-14_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1477625,
+          "preview": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT"
+        },
+        {
+          "path": "data/stock_book/2026-10-14_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-10-14_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2448,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-10-14_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12466,
+          "preview": "2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12466,
+          "preview": "2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT"
+        },
+        {
+          "path": "01_daily/2026-10-14_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 72750,
+          "preview": "# Stock book \u2014 2026-10-14\n_Generated 2026-10-14T23:14:58.278718-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT \u00b7 2026-10-14 BUY BAND, CNK, WLY, FIS, PRCH, TMUS, UPWK, TDS \u00b7 SELL EOSE, TE, NEOV, PLUG, OKLO, FCEL, NNDM, QUBT \u00b7 # Stock book \u2014 2026-10-14\n_Generated 2026-10-14T23:14:58.278718-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
@@ -3695,46 +3723,6 @@
     "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
   },
   "frozen_write_skips": [
-    {
-      "path": "data/day_board/2026-10-14_tickets.json",
-      "at": "2026-10-14T10:28:53-04:00",
-      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "data/exports/finviz_2026-10-14.scraped_at",
-      "at": "2026-10-14T10:28:53-04:00",
-      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "data/join/2026-10-14_ranked.csv",
-      "at": "2026-10-14T10:28:53-04:00",
-      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "data/stock_book/2026-10-14_input_health.json",
-      "at": "2026-10-14T10:28:53-04:00",
-      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
-    {
-      "path": "data/stock_book/2026-10-14_stock_book.json",
-      "at": "2026-10-14T10:28:53-04:00",
-      "commit_msg": "auto: stock book layer (ubuntu land) [2026-10-14]",
-      "workflow": "Pre-Open ALL (predictive one-shot)",
-      "run_id": "38578583308",
-      "manifest": "research/input_freeze/2026-10-14/manifest.json"
-    },
     {
       "path": "01_daily/2026-10-14_preopen_qc.json",
       "at": "2026-10-14T10:32:46-04:00",
@@ -5293,6 +5281,46 @@
       "commit_msg": "auto: post-close ALL [2026-10-15_0315]",
       "workflow": "Post-Close ALL (grade + learn + next captains)",
       "run_id": "38674627308",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "01_daily/2026-10-14_stock_book.md",
+      "at": "2026-10-14T23:15:25-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38674627338",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/day_board/2026-10-14.json",
+      "at": "2026-10-14T23:15:25-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38674627338",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_input_health.json",
+      "at": "2026-10-14T23:15:25-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38674627338",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_stock_book.json",
+      "at": "2026-10-14T23:15:25-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38674627338",
+      "manifest": "research/input_freeze/2026-10-14/manifest.json"
+    },
+    {
+      "path": "data/stock_book/2026-10-14_suggestions.json",
+      "at": "2026-10-14T23:15:25-04:00",
+      "commit_msg": "auto: land stock_book [2026-10-14]",
+      "workflow": "Pre-Open ALL (predictive one-shot)",
+      "run_id": "38674627338",
       "manifest": "research/input_freeze/2026-10-14/manifest.json"
     }
   ]
