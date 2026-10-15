@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Royal Borough of Kingston upon Thames",
+    "url": "https://www.gov.uk/government/publications/royal-borough-of-kingston-upon-thames",
+    "native_id": "/government/publications/royal-borough-of-kingston-upon-thames",
+    "published_at": "2026-10-14T08:30:00+00:00",
+    "published_raw": "2026-10-14T08:30:00Z",
+    "document_type": "decision",
+    "issuer": "Regulator of Social Housing",
+    "issuer_ids": [
+      "uk-gov:regulator-of-social-housing"
+    ],
+    "summary": "The Regulator of Social Housing's view of how well Royal Borough of Kingston upon Thames is meeting regulatory standards.",
+    "source_metadata": {
+      "document_type": "decision",
+      "document_stage": "decision_published",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "Regulator of Social Housing",
+      "jurisdiction": "UK",
+      "family": "typed_government_documents"
+    },
+    "primary_source_id": "uk-govuk-decision",
+    "n": 11,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-15T12:16:32.997656+00:00",
+    "source_ids": [
+      "uk-govuk-decision"
+    ]
+  },
+  {
+    "title": "Steady progress on the One Europe, One Market roadmap",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/jp_26_2169",
+    "native_id": "https://ec.europa.eu/commission/presscorner/detail/en/jp_26_2169",
+    "published_at": "2026-10-15T06:36:43+00:00",
+    "published_raw": "Thu, 15 Oct 2026 06:36:43 GMT",
+    "summary": "European Commission Joint press release Brussels, 15 Oct 2026 In their second review of the joint declaration and roadmap, designed to boost economic growth, the EU institutions reaffirmed their commitment to timely delivery.",
+    "source_metadata": {
+      "document_type": "official_announcement",
+      "document_stage": "requires_semantic_review",
+      "concrete_public_action": null,
+      "classification_status": "source_metadata_only; semantic action verdict not inferred",
+      "issuer": "European Commission press and decisions",
+      "jurisdiction": "EU",
+      "family": "executive_and_regulatory"
+    },
+    "primary_source_id": "eu-commission-07d4f58ccf",
+    "n": 1424,
+    "first_seen": "2026-10-15T10:17:11.133023+00:00",
+    "last_seen": "2026-10-15T12:16:32.997656+00:00",
+    "source_ids": [
+      "eu-commission-07d4f58ccf"
+    ]
+  }
+]
