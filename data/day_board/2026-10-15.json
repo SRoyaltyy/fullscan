@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T07:09:25.598646-04:00",
+  "generated_at": "2026-10-15T07:19:12.198523-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -327,7 +327,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6382,
+          "size": 6393,
           "said": "0 up / 0 down / 0 flat",
           "bullets": [
             "XLB missing",
@@ -343,7 +343,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 8431,
+          "size": 8442,
           "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 15 fail",
           "bullets": [
             "general_predict:missing",
@@ -696,7 +696,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6382,
+          "size": 6393,
           "said": "0 up / 0 down / 0 flat",
           "bullets": [
             "XLB missing",
@@ -1034,31 +1034,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat_baseline",
-      "title": "Map heat night baseline",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T04:37:34.718080-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-10-15_research_baseline.json",
-          "ok": true,
-          "reason": "",
-          "size": 336767,
-          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-10-15_research_baseline.md",
-          "ok": true,
-          "reason": "",
-          "size": 35107,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -3708,6 +3683,24 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, news_mode, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-10-15T07:08:35.652101-04:00\nraw=561 unique_events=4 tickers=61"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T07:19:10.574575-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-10-15/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6393,
+          "preview": "keys: date, generated_at, summary, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, summary, sectors"
     }
   ],
   "href": {
