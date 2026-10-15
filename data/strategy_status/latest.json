@@ -47,7 +47,7 @@
   }
  },
  "date": "2026-10-15",
- "generated_at": "2026-10-15T06:31:31-04:00",
+ "generated_at": "2026-10-15T06:39:01-04:00",
  "strategies": [
   {
    "buys": [
@@ -5641,11 +5641,10 @@
   {
    "buys": [
     "VEEV",
-    "CORT",
     "SYK",
     "CDNA",
     "PACS",
-    "PRGO",
+    "CON",
     "BLFS",
     "PCRX"
    ],
