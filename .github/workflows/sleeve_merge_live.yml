@@ -11,7 +11,11 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: "25 13 * * 1-5"   # ~09:25 ET — after book heal, around the bell
+    # Never inside the 03:00-09:40 ET input freeze (09:25 ET wrote
+    # today.json into the freeze on 10-14 and 10-15). 13:45Z = 09:45 EDT;
+    # 14:45Z = 09:45 EST. The off-season slot is gated or a harmless re-card.
+    - cron: "45 13 * * 1-5"
+    - cron: "45 14 * * 1-5"
   workflow_run:
     # Stock Book ALL is the later parent. Listening to Pre-Open AND the
     # book job canceled the first card mid-write (cancel-in-progress).
@@ -33,17 +37,21 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Clock gate (no clone before 09:00)
-        if: github.event_name == 'workflow_run'
+      - name: Freeze gate (no write 03:00-09:40 ET, any trigger)
+        env:
+          RUN_DATE: ${{ github.event.inputs.run_date }}
+          EVENT: ${{ github.event_name }}
+          GH_TOKEN: ${{ github.token }}
         run: |
-          ET_HM=$((10#$(TZ=America/New_York date +%H%M)))
-          echo "ET_HM=$ET_HM"
-          # Gated 01:00 Stock Book successes must not clone this repo
-          # or write a hollow flatten card.
-          if [ "$ET_HM" -lt 900 ]; then
-            echo "before 09:00 ET — wait for scrape + book (no checkout)"
-            echo "skip=yes" >> "$GITHUB_ENV"
-          fi
+          # Sparse fetch of the gate only; the full clone happens after.
+          gh api -H "Accept: application/vnd.github.raw" \
+            "repos/${GITHUB_REPOSITORY}/contents/src/sleeve_card_freeze.py?ref=${GITHUB_SHA}" \
+            > /tmp/sleeve_card_freeze.py || true
+          # Fail closed: if the gate cannot run or says nothing, do not write.
+          OUT=$(python3 /tmp/sleeve_card_freeze.py --event "$EVENT" --date "${RUN_DATE:-}" || true)
+          case "$OUT" in skip=no) ;; *) OUT="skip=yes" ;; esac
+          echo "$OUT" >> "$GITHUB_ENV"
+          tail -1 "$GITHUB_ENV"
 
       - uses: actions/checkout@v4
         if: env.skip != 'yes'
