@@ -211,7 +211,7 @@ Left as they are on purpose: paid DeepSeek and paid `glm-5.3` stay off (17, 18);
 These modes are changed in code now. The ones above that #597 / #599 / #600 already closed stay closed.
 
 - Mode 9 and the leftover of mode 2: a sector whose breaker file is already open does not sleep 60–120s, and a `/v1/models` 200 does not clear that file. After Grok is empty, free `glm-5.3-flash` may write the sector. Paid DeepSeek stays blocked.
-- Mode 14, the skip half: a token that expires before 06:30 ET is not "fresh", even when more than 90 minutes remain. The 00:41 ET run on 2026-10-15 had 267 minutes left and an expiry of 05:08 ET, which is before the 05:55 Pre-Open. It skipped. It will renew.
+- Mode 14, the skip half: a token that expires before 06:30 ET is not "fresh", even when more than 90 minutes remain. The 00:41 ET run on 2026-10-15 had 267 minutes left and an expiry of 05:08 ET, which is before the 05:55 Pre-Open. It skipped. A later 17+25 that returns 42 without moving that expiry is not treated as a renew (mode 13). OpenClaw refreshes only an already-expired profile, so the guard nudges that expiry field, calls once more, and restores the file if the expiry still does not move. It does not touch the profile while a Grok job is running.
 - Mode 24: `openclaw config set` does not run when the timeout and `gateway.mode` are already right, so a morning job does not race the gateway (`ConfigMutationConflictError`, mode 6). A missing `gateway.mode` is set to `local` (mode 16).
 - Mode 12: the device waiter sets `XDG_RUNTIME_DIR` when `/run/user/<uid>` exists, so `systemd-run --user` is not missing a bus.
 - Mode 19: a TokenHub/DeepSeek "Read timed out" wrapped as a retry error stops on the first one.

@@ -113,6 +113,50 @@ def test_token_dying_before_0630_is_not_fresh():
     now2 = datetime(2026, 10, 14, 21, 10, tzinfo=ET).astimezone(timezone.utc)
     exp2 = now2 + timedelta(hours=4)
     assert guard.token_is_fresh(4 * 60, exp2, now2) is True
+    # A 42 that does not move an expiry of 05:08 ET is not a renew.
+    assert guard.renew_verdict(exp, exp, now) == "NEEDS_FORCE"
+    later = datetime(2026, 10, 15, 14, 0, tzinfo=timezone.utc)
+    assert guard.renew_verdict(exp, later, now) == "OK"
+
+
+def test_nudge_expiry_only_touches_the_matching_field(tmp_path):
+    import importlib.util
+    import json
+    from datetime import datetime, timezone
+    from pathlib import Path
+    path = Path(__file__).resolve().parent.parent / "scripts" / "openclaw_oauth_guard.py"
+    spec = importlib.util.spec_from_file_location("openclaw_oauth_guard", path)
+    guard = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(guard)
+    exp = datetime(2026, 10, 15, 9, 8, 45, tzinfo=timezone.utc)
+    profile = tmp_path / "auth-profiles.json"
+    profile.write_text(json.dumps({
+        "profiles": {
+            "xai:oauth": {
+                "type": "oauth",
+                "provider": "xai",
+                "access": "keep-this-access",
+                "refresh": "keep-this-refresh",
+                "expires": "2026-10-15T09:08:45+00:00",
+            },
+            "other": {"expires": "2026-12-01T00:00:00+00:00", "access": "other"},
+        }
+    }), encoding="utf-8")
+    (tmp_path / "openclaw.json").write_text(
+        json.dumps({"gateway": {"expires": "2026-10-15T09:08:45+00:00"}}),
+        encoding="utf-8")
+    backups = guard.nudge_auth_expiry(exp, tmp_path)
+    assert len(backups) == 1
+    data = json.loads(profile.read_text(encoding="utf-8"))
+    nudged = data["profiles"]["xai:oauth"]
+    assert nudged["expires"] == "2000-01-01T00:00:00.000Z"
+    assert nudged["access"] == "keep-this-access"
+    assert nudged["refresh"] == "keep-this-refresh"
+    assert data["profiles"]["other"]["expires"] == "2026-12-01T00:00:00+00:00"
+    assert "09:08:45" in (tmp_path / "openclaw.json").read_text(encoding="utf-8")
+    guard.restore_auth(backups)
+    restored = json.loads(profile.read_text(encoding="utf-8"))
+    assert restored["profiles"]["xai:oauth"]["expires"] == "2026-10-15T09:08:45+00:00"
 
 
 def test_sector_retry_does_not_sleep_on_file_breaker(monkeypatch, tmp_path):
