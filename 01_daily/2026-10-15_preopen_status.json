@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T07:07:37.138032-04:00",
+  "generated_at": "2026-10-15T07:24:53.204648-04:00",
   "run_id": "38714326944",
   "runner": "GitHub Actions 1000030400",
   "all_ok": false,
@@ -184,14 +184,14 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-15_actions.json",
-        "size": 41707
+        "size": 42193
       },
       {
         "kind": "finviz_digest",
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-15_finviz_digest.json",
-        "size": 97061
+        "size": 97156
       },
       {
         "kind": "finviz_market_digest",
