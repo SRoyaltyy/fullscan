@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T07:03:47.324768-04:00",
+  "generated_at": "2026-10-15T07:07:38.719411-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1034,49 +1034,6 @@
     }
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T04:29:50.825466-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-10-15_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1123110,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T04:37:16.134112-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-10-15_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 97061,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-10-15_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11897,
-          "preview": "# Finviz Daily Digest \u2014 2026-10-15\n_Generated 2026-10-15T04:22:04.005103-04:00 \u00b7 export=data/exports/finviz_2026-10-14.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-15\n_Generated 2026-10-15T04:22:04.005103-04:00 \u00b7 export=data/exports/finviz_2026-10-14.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -3716,6 +3673,41 @@
         }
       ],
       "preview": "raw=563 usable=91 single=43 \u00b7 Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike  | Dollar retreats from 18-month high despite hot CPI as Fed officials temper hike  | TSMC\u2019s CEO sees no sign of a slowdown as chip foundry reports record profit | Fed Interest Rate Hike Seems More Likely This Month After Alarming Inflation Dat | U.S. CPI exceeding expectations has heightened market anticipation of Federal Re \u00b7 # News Parse v2 \u2014 2026-10-15T07:03:18.279067-04:00\nWindow\u224848h | news_mode=on | raw=563 | usable=91 | single_name=43 | noise_dropped=428\nusable polarity={'+': 2, '-': 15, 'mixed': 1, 'neutral': 73}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-10-15",
+      "ok": false,
+      "pushed": false,
+      "at": "2026-10-15T07:07:34.179865-04:00",
+      "files": [],
+      "preview": "no files"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-10-15",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-15T07:07:37.175641-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-10-15_events.json",
+          "ok": false,
+          "reason": "zero_events",
+          "size": 212,
+          "preview": "0 events \u00b7 "
+        },
+        {
+          "path": "01_daily/events/2026-10-15_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 205,
+          "preview": "# Event Scan \u2014 2026-10-15 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
+        }
+      ],
+      "preview": "0 events \u00b7  \u00b7 # Event Scan \u2014 2026-10-15 (catcher as primary)\n- events tracked: **0** (primary parse failed; catcher replaced it)"
     }
   ],
   "href": {
