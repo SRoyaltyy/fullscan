@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T06:14:30.932714-04:00",
+  "generated_at": "2026-10-15T06:16:42.137805-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -8,8 +8,8 @@
     "MISSING News judge MD `01_daily/news/2026-10-15_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 5,
-    "partial": 3,
+    "ok": 4,
+    "partial": 4,
     "fail": 0,
     "n": 8
   },
@@ -180,7 +180,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 5,
       "n_req": 9,
       "n_opt_ok": 3,
       "n_opt": 14,
@@ -271,22 +271,27 @@
           "name": "Morning refresh JSON",
           "path": "01_daily/map_heat/2026-10-15_research.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "cards=142",
+          "size": 361321,
+          "said": "morning_refresh \u00b7 142 cards \u00b7 refreshed 0 \u00b7 passthrough \u00b7 HEAT=128 SPLIT=8 OVERRIDE=6 \u00b7 err coverage:0/28<required:23",
+          "bullets": [
+            "Morning delta refresh failed captain-evidence QC (coverage:0/28<required:23). Using last night's post-close captain cards so the book still has heat. Overnight tape/news was not re-scored."
+          ]
         },
         {
           "key": "research_md",
           "name": "Morning refresh MD",
           "path": "01_daily/map_heat/2026-10-15_research.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 35309,
+          "said": "MAP HEAT RESEARCH \u2014 2026-10-15",
+          "bullets": [
+            "142 captain cards \u00b7 size_gate=True set by pre-open refresh",
+            "CAPTAIN CARDS"
+          ]
         },
         {
           "key": "actions",
@@ -665,7 +670,7 @@
       "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -841,10 +846,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-15)",
+          "status": "FAIL",
+          "reason": "session 2026-10-15 not in dashboard dates (last=2026-10-07)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-15)",
+          "said": "session 2026-10-15 not in dashboard dates (last=2026-10-07)",
           "bullets": []
         }
       ],
@@ -857,9 +862,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -880,10 +885,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-10-15)",
+          "status": "FAIL",
+          "reason": "session 2026-10-15 not in dashboard dates (last=2026-10-07)",
           "size": 10510589,
-          "said": "live-book poller + today.json (2026-10-15)",
+          "said": "session 2026-10-15 not in dashboard dates (last=2026-10-07)",
           "bullets": []
         },
         {
@@ -2211,6 +2216,31 @@
         }
       ],
       "preview": "keys: date, generated_at, summary, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T06:16:41.265497-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-15_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 35309,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-15_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 35309,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "href": {

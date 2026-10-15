@@ -1,11 +1,11 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T06:14:30.932714-04:00",
+  "generated_at": "2026-10-15T06:16:42.137805-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 5,
-    "partial": 3,
+    "ok": 4,
+    "partial": 4,
     "fail": 0,
     "n": 8
   },
@@ -30,31 +30,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T05:49:14.111260-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-10-15_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7558267,
-          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RSG, ELV, AUPH, YPF, GCT"
-        },
-        {
-          "path": "data/ab_checklist/2026-10-15_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8358668,
-          "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, CDNA, CVLT, A, RSG"
-        }
-      ],
-      "preview": "2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 RSG, ELV, AUPH, YPF, GCT \u00b7 2629 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PFE, CDNA, CVLT, A, RSG"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -347,6 +322,31 @@
         }
       ],
       "preview": "keys: date, generated_at, summary, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T06:16:41.265497-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-15_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 35309,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-15_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 35309,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
