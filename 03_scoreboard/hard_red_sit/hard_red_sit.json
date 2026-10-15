@@ -2925,10 +2925,10 @@
         "short_only": [],
         "dip_scoop": [
           {
-            "ticker": "VEEV",
+            "ticker": "IT",
             "side": "long",
             "open": null,
-            "px": 278.54,
+            "px": 185.73,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -2961,10 +2961,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "SYK",
+            "ticker": "FIS",
             "side": "long",
             "open": null,
-            "px": 275.44,
+            "px": 34.52,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -2997,10 +2997,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "CDNA",
+            "ticker": "TOST",
             "side": "long",
             "open": null,
-            "px": 64.95,
+            "px": 30.38,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3033,10 +3033,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "PACS",
+            "ticker": "PDFS",
             "side": "long",
             "open": null,
-            "px": 42.84,
+            "px": 56.43,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3069,10 +3069,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "CON",
+            "ticker": "YOU",
             "side": "long",
             "open": null,
-            "px": 35.36,
+            "px": 40.47,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3105,46 +3105,10 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "BLFS",
+            "ticker": "SHOO",
             "side": "long",
             "open": null,
-            "px": 39.15,
-            "px_src": "session_export",
-            "low": null,
-            "scoops": {
-              "0.5": {
-                "kind": "no_open",
-                "x": 0.5,
-                "fill": null
-              },
-              "1.0": {
-                "kind": "no_open",
-                "x": 1.0,
-                "fill": null
-              },
-              "1.5": {
-                "kind": "no_open",
-                "x": 1.5,
-                "fill": null
-              },
-              "2.0": {
-                "kind": "no_open",
-                "x": 2.0,
-                "fill": null
-              },
-              "3.0": {
-                "kind": "no_open",
-                "x": 3.0,
-                "fill": null
-              }
-            },
-            "tag": "RESEARCH"
-          },
-          {
-            "ticker": "PCRX",
-            "side": "long",
-            "open": null,
-            "px": 25.39,
+            "px": 44.9,
             "px_src": "session_export",
             "low": null,
             "scoops": {
