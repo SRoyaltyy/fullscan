@@ -62,6 +62,12 @@ def text(element,name):
     found=next((e for e in element if e.tag.split('}')[-1]==name),None)
     return clean(''.join(found.itertext())) if found is not None else ''
 
+def bill_headline(title, summary):
+    # Congress.gov often publishes the bill number as the title and the act name as the description.
+    name=clean(summary)
+    if re.fullmatch(r'[HS]\.(?:R\.|J\.Res\.|Con\.Res\.|J\.|Res\.)?\d+', title or '') and 8<=len(name)<=200:return name
+    return title
+
 def feed_rows(body,base):
     root=ET.fromstring(body)
     if root.tag.split('}')[-1] not in ('rss','feed','RDF'):raise ValueError('Not RSS/Atom')
@@ -78,7 +84,8 @@ def feed_rows(body,base):
         except ValueError:continue
         published=text(item,'pubDate') or text(item,'published') or text(item,'updated') or text(item,'date')
         identifier=text(item,'guid') or text(item,'id') or url
-        rows.append({'title':title,'url':url,'native_id':identifier,'published_at':iso(date(published)) if date(published) else None,'published_raw':published,'summary':(text(item,'description') or text(item,'summary'))[:1200]})
+        summary=(text(item,'description') or text(item,'summary'))[:1200]
+        rows.append({'title':bill_headline(title,summary),'url':url,'native_id':identifier,'published_at':iso(date(published)) if date(published) else None,'published_raw':published,'summary':summary})
     return rows
 
 class Links(HTMLParser):
@@ -147,6 +154,7 @@ def source_metadata(source,row):
     if kind=='traffic_commissioner_regulatory_decision':stage='decision_published'
     if kind=='court_order':stage='judicial_order_published'
     if kind=='presidential_document':stage='presidential_document_published'
+    if kind=='treasury_auction':stage='fiscal_auction_announced'
     return {'document_type':kind,'document_stage':stage,'concrete_public_action':None,'classification_status':'source_metadata_only; semantic action verdict not inferred','issuer':row.get('issuer') or source['name'],'jurisdiction':source['jurisdiction'],'family':source['family']}
 
 def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
@@ -176,6 +184,22 @@ def fetch_source(source,start,end,previous=None,fetch=get,max_pages=30):
             rows=feed_rows(body,resolved) if adapter=='rss' else index_rows(body,source)
             dates=[date(r.get('published_at')) for r in rows if date(r.get('published_at'))]
             if adapter=='rss' and len(rows)>=source.get('saturation_limit',100) and dates and min(dates)>=start:warnings.append('feed_at_capacity_in_requested_window; snapshots may miss overflow')
+            url=None
+        elif adapter=='treasury_announced':
+            blob=json.loads(body)
+            if not isinstance(blob,list):raise ValueError('Expected TreasuryDirect security list')
+            for record in blob:
+                announced=date(record.get('announcementDate'));cusip=str(record.get('cusip') or '');pdf=str(record.get('pdfFilenameAnnouncement') or '')
+                if not announced or not cusip or not re.fullmatch(r'A_\d{8}_\d+\.pdf',pdf):continue
+                resulted=any(str(record.get(k) or '').strip() for k in ('highYield','bidToCoverRatio','highDiscountRate'))
+                published=date(record.get('auctionDate')) if resulted and date(record.get('auctionDate')) else announced
+                amount=record.get('offeringAmount');billions=None
+                try:billions=float(amount)/1_000_000_000
+                except (TypeError,ValueError):billions=None
+                kind=clean(record.get('securityType') or 'security');term=clean(record.get('securityTerm') or '')
+                title=('Treasury auction result' if resulted else 'Treasury announces')+f' {term} {kind}'.replace('  ',' ')
+                if billions and billions>=1:title+=f' (${billions:.0f} billion offering)'
+                rows.append({'title':clean(title),'url':f'https://www.treasurydirect.gov/instit/annceresult/press/preanre/{pdf[2:6]}/{pdf}','native_id':cusip,'published_at':iso(published),'published_raw':record.get('auctionDate') if resulted else record.get('announcementDate'),'document_type':'treasury_auction','issuer':'U.S. Department of the Treasury','summary':''})
             url=None
         elif adapter=='hkma_press':
             blob=json.loads(body)
@@ -292,7 +316,7 @@ def collect(catalog,ledger,output,lookback_days=3,workers=8,fetch=get,asof=None)
     report.update(catalog_disabled_channels=len(catalog['sources'])-len(sources),changed_existing_documents=len(ledger.changed_ids))
     atomic_json(output/'report.json',report)
     atomic_json(output/'pending_headlines.json',[{'n':r['n'],'title':r['title'],'url':r['url'],'published_at':r['published_at'],'official_issuer':r['source_metadata']['issuer'],'document_type':r['source_metadata']['document_type'],'document_stage':r['source_metadata']['document_stage'],'source_ids':r['source_ids']} for r in new if r.get('published_at')])
-    final_stages={'final_rule_published','decision_published','judicial_decision_published','judicial_opinion_published','judicial_order_published','law_published','instrument_published','presidential_document_published'}
+    final_stages={'final_rule_published','decision_published','judicial_decision_published','judicial_opinion_published','judicial_order_published','law_published','instrument_published','presidential_document_published','fiscal_auction_announced'}
     atomic_json(output/'action_documents.json',[r for r in current if r['source_metadata']['document_stage'] in final_stages])
     atomic_json(output/'proposals_and_procedure.json',[r for r in current if r['source_metadata']['document_stage'] not in final_stages and r['source_metadata']['document_stage']!='requires_semantic_review'])
     atomic_json(output/'updated_documents_review.json',ledger.documents(ledger.changed_ids))

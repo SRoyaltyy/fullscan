@@ -133,6 +133,31 @@ class PrimaryActionsTests(unittest.TestCase):
   rows,h=fetch_source(SOURCE|{'adapter':'hkma_press','url':'https://api.hkma.gov.hk/public/press-releases','page_size':1},ASOF-timedelta(days=3),ASOF,fetch=fetch)
   self.assertEqual(rows[0]['issuer'],'Hong Kong Monetary Authority');self.assertEqual(h['requests'],2);self.assertIn('sortby=date',calls[0]);self.assertIn('offset=1',calls[1])
 
+ def test_congress_bill_number_uses_act_name_as_headline(self):
+  body=b'<rss><channel><item><title>S.2403</title><description>Retire through Ownership Act</description><link>https://www.congress.gov/bill/119th-congress/senate-bill/2403</link><guid>S.2403</guid></item></channel></rss>'
+  row=feed_rows(body,'https://www.congress.gov/rss/presented-to-president.xml')[0]
+  self.assertEqual(row['title'],'Retire through Ownership Act');self.assertIsNone(row['published_at']);self.assertEqual(row['native_id'],'S.2403')
+
+ def test_treasury_auction_uses_announcement_pdf_not_the_json_index(self):
+  blob=[{'cusip':'912797VX2','securityType':'Bill','securityTerm':'4-Week','announcementDate':'2026-10-13T00:00:00','auctionDate':'2026-10-15T00:00:00','offeringAmount':'110000000000','highYield':'','bidToCoverRatio':'','pdfFilenameAnnouncement':'A_20261013_1.pdf'}]
+  rows,health=fetch_source(SOURCE|{'adapter':'treasury_announced','url':'https://www.treasurydirect.gov/TA_WS/securities/announced?format=json','document_type':'treasury_auction'},ASOF-timedelta(days=3),ASOF,fetch=lambda u,**kw:(200,json.dumps(blob).encode(),{},u))
+  self.assertEqual(health['status'],'ok');self.assertEqual(rows[0]['url'],'https://www.treasurydirect.gov/instit/annceresult/press/preanre/2026/A_20261013_1.pdf')
+  self.assertEqual(rows[0]['title'],'Treasury announces 4-Week Bill ($110 billion offering)');self.assertEqual(source_metadata(SOURCE,rows[0])['document_stage'],'fiscal_auction_announced')
+  rows[0]['highYield']='4.1'
+  resulted=dict(blob[0],highYield='4.100',bidToCoverRatio='2.61')
+  rows,health=fetch_source(SOURCE|{'adapter':'treasury_announced','url':'https://www.treasurydirect.gov/TA_WS/securities/announced?format=json'},ASOF-timedelta(days=3),ASOF,fetch=lambda u,**kw:(200,json.dumps([resulted]).encode(),{},u))
+  self.assertTrue(rows[0]['title'].startswith('Treasury auction result'));self.assertEqual(rows[0]['published_at'],'2026-10-15T00:00:00+00:00')
+
+ def test_us_seed_feeds_replace_retired_doj_url(self):
+  seeds=json.loads(pathlib.Path('config/primary_action_seeds.json').read_text())['sources']
+  by={s['id']:s for s in seeds}
+  self.assertNotIn('https://www.justice.gov/feeds/opa/justice-news.xml', by['us-doj']['feed_urls'])
+  self.assertIn('https://www.justice.gov/news/rss', by['us-doj']['feed_urls'])
+  self.assertIn('https://www.congress.gov/rss/house-floor-today.xml', by['us-congress']['feed_urls'])
+  self.assertIn('https://www.congress.gov/rss/senate-floor-today.xml', by['us-congress']['feed_urls'])
+  self.assertIn('https://www.ustr.gov/rss.xml', by['us-ustr']['feed_urls'])
+  self.assertIn('https://www.cisa.gov/cybersecurity-advisories/all.xml', by['us-cisa']['feed_urls'])
+
  def test_public_feed_can_disable_unsupported_conditional_headers(self):
   calls=[]
   def fetch(url,**kw):calls.append(kw['headers']);return 200,RSS,{},url

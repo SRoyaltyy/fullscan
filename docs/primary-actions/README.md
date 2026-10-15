@@ -6,7 +6,7 @@ The maintained source catalog records verified channels, failed endpoints and ex
 
 The workflow is intended to run twice daily at 01:17 and 13:17 UTC (09:17 and 21:17 Hong Kong), with a rolling three-day window, weekly catalog refresh and persistent SQLite deduplication restored between runners. Scheduled operation only becomes active after the workflow reaches the default branch. Full worldwide completeness and semantic classification accuracy are not claimed.
 
-See the source catalog, taxonomy, health reports and workflow for implementation details. The experimental Lane/LLM benchmark remains separate.
+See the source catalog, taxonomy, health reports and workflow for implementation details. The US action-to-source map, including which official endpoints answered on 15 Oct 2026, is in [us-action-sources.md](us-action-sources.md). The experimental Lane/LLM benchmark remains separate.
 
 ## Persistent operation and outputs
 
