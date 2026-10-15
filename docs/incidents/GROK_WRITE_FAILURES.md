@@ -218,7 +218,7 @@ Left as they are on purpose: paid DeepSeek and paid `glm-5.3` stay off (17, 18);
 
 ## Fix pass after the catalog
 
-#603 and #604 are on main. The bullets through mode 3 are #603. Mode 39, the essay-budget half of mode 25, and the no-balance skip in mode 18 are #604. Modes 40 and 41 are PR #607 and are not on main yet. Mode 42 is not code.
+#603 and #604 are on main. The bullets through mode 3 are #603. Mode 39, the essay-budget half of mode 25, and the no-balance skip in mode 18 are #604. Modes 40, 41, and 43 are PR #607 and are not on main yet. Mode 42 is not code.
 
 - Mode 9 and the leftover of mode 2: a sector whose breaker file is already open does not sleep 60–120s, and a `/v1/models` 200 does not clear that file. After Grok is empty, free `glm-5.3-flash` may write the sector. Paid DeepSeek stays blocked.
 - Mode 14, the skip half: a token that expires before 06:30 ET is not "fresh", even when more than 90 minutes remain. The 00:41 ET run on 2026-10-15 had 267 minutes left and an expiry of 05:08 ET, which is before the 05:55 Pre-Open. It skipped. A later 17+25 that returns 42 without moving that expiry is not treated as a renew (mode 13). OpenClaw refreshes only an already-expired profile, so the guard nudges that expiry field, calls once more, and restores the file if the expiry still does not move. It does not touch the profile while a Grok job is running.
