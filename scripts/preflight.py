@@ -200,27 +200,29 @@ def _git(args, cwd):
                           text=True, timeout=min(15, _left()))
 
 
-def check_ecs_code_current(item, env, date):
-    """'ecs code stale': each ECS checkout's HEAD must equal GitHub main.
+CODE_PATHS = ("src", "scripts", "config", ".github")
 
-    Live main comes from ls-remote, so a stale local origin/main (or a
-    shallow checkout whose update failed, run 38751141629) cannot pass.
+
+def check_ecs_code_current(item, env, date):
+    """'ecs code stale': this checkout's code must match GitHub main.
+
+    Main gets data-only auto commits every few minutes, so HEAD == main
+    would fail on a race. Fetch main and compare only code paths.
     """
-    r = _git(["ls-remote", "origin", "refs/heads/main"], ROOT)
-    remote = r.stdout.split()[0] if r.returncode == 0 and r.stdout.strip() else ""
-    if not remote:
-        return False, f"ecs code stale: cannot read GitHub main ({r.stderr.strip()[:120]})"
-    paths = [ROOT] + [Path(p) for p in item.get("extra_checkouts", [])
-                      if (Path(p) / ".git").exists()]
-    notes, ok = [], True
-    for path in paths:
-        h = _git(["rev-parse", "HEAD"], path).stdout.strip()
-        if h != remote:
-            ok = False
-            notes.append(f"{path} HEAD {h[:7] or '?'} != main {remote[:7]}")
-        else:
-            notes.append(f"{path} at {remote[:7]}")
-    return ok, ("" if ok else "ecs code stale: ") + "; ".join(notes)
+    f = _git(["fetch", "--quiet", "--depth=1", "origin",
+              "+refs/heads/main:refs/remotes/origin/main"], ROOT)
+    if f.returncode != 0:
+        return False, f"ecs code stale: cannot fetch GitHub main ({f.stderr.strip()[:120]})"
+    head = _git(["rev-parse", "--short", "HEAD"], ROOT).stdout.strip()
+    main = _git(["rev-parse", "--short", "origin/main"], ROOT).stdout.strip()
+    d = _git(["diff", "--name-only", "HEAD", "origin/main", "--", *CODE_PATHS], ROOT)
+    if d.returncode != 0:
+        return False, f"ecs code stale: diff failed ({d.stderr.strip()[:120]})"
+    changed = [x for x in d.stdout.splitlines() if x.strip()]
+    if changed:
+        return False, (f"ecs code stale: HEAD {head} vs main {main} differ in "
+                       f"{len(changed)} code file(s): {', '.join(changed[:5])}")
+    return True, f"code matches main (HEAD {head}, main {main})"
 
 
 CHECKS = {k[len("check_"):]: v for k, v in globals().items() if k.startswith("check_")}
