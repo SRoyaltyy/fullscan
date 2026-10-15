@@ -13,7 +13,7 @@ def query_text(limit):
     # Snapshot bytes, not the service's transient row order, pin this candidate.
     return """SELECT DISTINCT ?company ?companyLabel ?companyDescription ?industry ?industryLabel
 WHERE {
-  { SELECT ?company ?industry WHERE { ?company wdt:P452 ?industry. FILTER EXISTS { ?company wdt:P31/wdt:P279* wd:Q4830453. } } LIMIT """+str(limit)+""" }
+  { SELECT ?company ?industry WHERE { VALUES ?type { wd:Q783794 wd:Q4830453 wd:Q891723 } ?company wdt:P31 ?type; wdt:P452 ?industry. } LIMIT """+str(limit)+""" }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
 """
