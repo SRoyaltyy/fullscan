@@ -23,7 +23,7 @@ on:
         default: ""
   push:
     branches: [main]
-    paths: ['01_daily/**', 'data/join/**', 'data/peers/**', 'data/ab_checklist/**', 'data/factor_mine/panel.json', 'excel_bot/suggestions/suggestions.csv', 'data/sleeve_merge/today.json']
+    paths: ['01_daily/**', '!01_daily/_xai_reauth.json', 'data/join/**', 'data/peers/**', 'data/ab_checklist/**', 'data/factor_mine/panel.json', 'excel_bot/suggestions/suggestions.csv', 'data/sleeve_merge/today.json']
   workflow_run:
     workflows:
       - "Stock Book ALL (one-shot)"
