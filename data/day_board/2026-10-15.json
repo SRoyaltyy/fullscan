@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T06:20:33.781542-04:00",
+  "generated_at": "2026-10-15T06:23:01.753688-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -9,8 +9,8 @@
   ],
   "counts": {
     "ok": 6,
-    "partial": 2,
-    "fail": 0,
+    "partial": 1,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -300,7 +300,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 41707,
+          "size": 41765,
           "said": "61 ticker actions \u00b7 4 events \u00b7 565 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
@@ -600,7 +600,7 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
@@ -614,7 +614,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 41707,
+          "size": 41765,
           "said": "61 ticker actions \u00b7 4 events \u00b7 565 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
@@ -643,11 +643,16 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-10-15_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "FAIL",
+          "reason": "zero usable dossiers (n=8)",
+          "size": 2466,
+          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 GOOG, GOOGL, MSFT, AMZN, META, TSLA, NFLX, NE",
+          "bullets": [
+            "GOOG: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOG",
+            "GOOGL: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 GOOGL",
+            "MSFT: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 MSFT",
+            "AMZN: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 AMZN"
+          ]
         }
       ],
       "said": "61 ticker actions \u00b7 4 events \u00b7 565 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
@@ -707,7 +712,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 41707,
+          "size": 41765,
           "said": "61 ticker actions \u00b7 4 events \u00b7 565 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
@@ -2636,6 +2641,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-10-07** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-10-07** ranker: **weighted** (green pile liquid=0, need 8).\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $8,825.81 | -11.74% | $4,458.43 | 2 | 510 | $1,080.39 | $-1,169.87 | $-4.32 | 32.7% | 0.0% |\n| 1d_size | $9,454.32 | -5.46% | $4,783.48 | 2 | 466 |  \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-10-15",
+      "ok": false,
+      "pushed": true,
+      "at": "2026-10-15T06:23:00.800399-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-10-15_dossiers.json",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1097,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-10-15_dossiers.md",
+          "ok": false,
+          "reason": "catalyst_fail n_ok=0/8",
+          "size": 1097,
+          "preview": "# CATALYST DAILY \u2014 2026-10-15\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, status, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-10-15\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
     }
   ],
   "href": {
