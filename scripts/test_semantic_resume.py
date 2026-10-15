@@ -105,4 +105,32 @@ class ResumeAndRateTests(unittest.TestCase):
             self.assertEqual(path.read_bytes(),previous)
             self.assertEqual(json.loads(previous)['title'],'初稿')
 
+    def test_runner_resumes_partial_batch_without_repeating_completed_row(self):
+        import contextlib,io,sys,types
+        from run_semantic_headlines import main
+        calls=[]
+        complete=record({});complete['analysis_output']={}
+        failed=rate();failed['draft_analysis']=record(lane());failed['fact_review']=rate()
+        class Client:
+            def __init__(self,*args,**kwargs):
+                self.provider_order=['zhipu'];self.model_allowlist=('glm-5.3-flash',)
+                self.review=False;self.sector_review=True;self.action_review=True;self.sector_roles=True
+                self.catalog=types.SimpleNamespace(metadata={'available':True,'sha256':'catalog'})
+            def analyze_many(self,rows,resume_drafts=None):
+                calls.append(([r['n'] for r in rows],resume_drafts))
+                if len(calls)==1:return [complete,failed]
+                return [complete]
+        with tempfile.TemporaryDirectory() as directory:
+            inp=pathlib.Path(directory)/'input.json';out=pathlib.Path(directory)/'output.json'
+            inp.write_text(json.dumps([{'n':1,'title':'one'},{'n':2,'title':'FDA approves device'}]))
+            argv=['runner','--input',str(inp),'--output',str(out),'--limit','2','--no-review','--action-review','--sector-roles','--resume']
+            with patch.object(sys,'argv',argv),patch('run_semantic_headlines.SemanticHeadlineClient',Client),patch('run_semantic_headlines.signal.signal'),patch('run_semantic_headlines.signal.setitimer'),contextlib.redirect_stdout(io.StringIO()):
+                main();first=json.loads(out.read_text());main();second=json.loads(out.read_text())
+            self.assertEqual(first['stop_reason'],'rate_limited')
+            self.assertEqual(second['generated_at'],first['generated_at'])
+            self.assertEqual(second['analyzed'],2)
+            self.assertEqual([r['n'] for r in second['outputs']],[1,2])
+            self.assertEqual([ids for ids,_ in calls],[[1,2],[2]])
+            self.assertEqual(set(calls[1][1]),{2})
+
 if __name__=='__main__':unittest.main()
