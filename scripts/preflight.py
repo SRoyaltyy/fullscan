@@ -195,6 +195,34 @@ def check_predict_on_main(item, env, date):
     return False, f"{rel} not on origin/main"
 
 
+def _git(args, cwd):
+    return subprocess.run(["git", *args], cwd=cwd, capture_output=True,
+                          text=True, timeout=min(15, _left()))
+
+
+def check_ecs_code_current(item, env, date):
+    """'ecs code stale': each ECS checkout's HEAD must equal GitHub main.
+
+    Live main comes from ls-remote, so a stale local origin/main (or a
+    shallow checkout whose update failed, run 38751141629) cannot pass.
+    """
+    r = _git(["ls-remote", "origin", "refs/heads/main"], ROOT)
+    remote = r.stdout.split()[0] if r.returncode == 0 and r.stdout.strip() else ""
+    if not remote:
+        return False, f"ecs code stale: cannot read GitHub main ({r.stderr.strip()[:120]})"
+    paths = [ROOT] + [Path(p) for p in item.get("extra_checkouts", [])
+                      if (Path(p) / ".git").exists()]
+    notes, ok = [], True
+    for path in paths:
+        h = _git(["rev-parse", "HEAD"], path).stdout.strip()
+        if h != remote:
+            ok = False
+            notes.append(f"{path} HEAD {h[:7] or '?'} != main {remote[:7]}")
+        else:
+            notes.append(f"{path} at {remote[:7]}")
+    return ok, ("" if ok else "ecs code stale: ") + "; ".join(notes)
+
+
 CHECKS = {k[len("check_"):]: v for k, v in globals().items() if k.startswith("check_")}
 
 
