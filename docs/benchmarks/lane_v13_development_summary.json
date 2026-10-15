@@ -1,0 +1,42 @@
+{
+  "pass": false,
+  "metrics": {
+    "action": 0.84,
+    "lane": 0.87,
+    "sectors": 0.76,
+    "action_precision": 0.6153846153846154,
+    "action_recall": 0.8
+  },
+  "tp": 16,
+  "fp": 10,
+  "fn_or_unavailable": 4,
+  "availability": 1,
+  "acceptance_eligible": false,
+  "scope": "Development replay after second holdout failed; never increments acceptance streak",
+  "best_consecutive_passes": 0,
+  "run_id": 38671138216,
+  "execution_commit": "dd9873989a67d199e3d765924929b409057a253c",
+  "artifacts": [
+    {
+      "id": 11944237668,
+      "name": "lane-glm-provider-100",
+      "digest": "sha256:b6b5b637f7ed11815bf023001fb10481c2b0d65be34d364e722f33386c54784e"
+    },
+    {
+      "id": 11943524442,
+      "name": "lane-semantic-development-score",
+      "digest": "sha256:0549d4d4d125dfbf5decf8a17658fbda9496948c866869a88a4350f740aec3ae"
+    }
+  ],
+  "first_stage_provider_counts": {
+    "zhipu_glm_5_3_flash": 40,
+    "gemini_2_5_flash": 10,
+    "qwen_flash": 50
+  },
+  "fact_stage_provider_counts": {
+    "zhipu_glm_5_3_flash": 40,
+    "gemini_2_5_flash": 10,
+    "qwen_flash": 50
+  },
+  "transport_diagnosis": "HTTP 429 on Zhipu and Gemini caused fallback to Qwen for the last fifty rows; these are provider-rate failures, not only semantic prompt changes."
+}

@@ -92,3 +92,15 @@ V13 adds opt-in --sector-roles within the existing independent fact/sector batch
 A reported meeting with a public official can include that official as a participant even when visitors are the grammatical subject. Explicitly fresh/latest executive/judicial instruments remain extractable separately from private filings and old background rulings. These clarify generic missed-action boundaries.
 
 All 55 semantic contracts passed locally. V13 live performance remains unmeasured. The workflow replays failed batch_02 with GLM first; batch_03 remains frozen and unrun. Source/configuration changes restart any future acceptance streak. The ten-pass goal is not met.
+
+## V13 measured fallback failure; V14 rate-limit recovery
+
+V13 run 38671138216 at dd9873989a67d199e3d765924929b409057a253c completed all 100, but failed: action agreement 84%, precision 61.5385% (16 TP, 10 FP), recall 80%, Lane 87%, exact sectors 76%. Raw artifact 11944237668 has ZIP SHA256 b6b5b637f7ed11815bf023001fb10481c2b0d65be34d364e722f33386c54784e. Score artifact 11943524442 has ZIP SHA256 0549d4d4d125dfbf5decf8a17658fbda9496948c866869a88a4350f740aec3ae.
+
+Both stages used GLM 5.3 for rows 1-40, Gemini 2.5 Flash for rows 41-50, then Qwen Flash for rows 51-100. HTTP 429 diagnostics on both Zhipu and Gemini explain the fallback. The 40 GLM rows had 37/40 exact sector matches (92.5%), a diagnostic subset, not an acceptance pass. Do not attribute the full regression solely to the role schema or report a pure GLM/Gemini score. All 100 mixed-provider predictions remain failed development data.
+
+V14 retains semantic role extraction but adds resumable execution with immutable runtime/configuration/catalog/input/limit guards, title/id checks, original first-execution timestamp preservation, atomic checkpoint replacement, and reuse of validated first-stage drafts after second-stage failure/deadline. Pure HTTP 429 failures do not fan out into pointless subset retries. A limited run stops with rate_limited while preserving completed analysis, rather than silently substituting an unqualified fallback.
+
+The development workflow tries only the already approved Zhipu glm-5.3-flash and glm-4.7-flash models. It pauses 30 seconds between batches and allows at most three resumed attempts with 60-second waits within one total time budget. Neither model's availability/accuracy is presumed. All 65 semantic tests pass locally, including rate-limit fan-out prevention, unchanged-candidate resume, first-stage reuse, row-identity rejection and interrupted-write preservation.
+
+Reserve batch_03 remains frozen and unrun. Batch_04 was also frozen before execution in commit 2400913e02d69b4f6acb294e06f8a48ab1c102b1; input SHA256 2551734d05971860b948c0ac1c27249445c9ad420edd3d4d1b1b3a9b450574de, reference freeze 2026-10-15T02:33:51.514Z. V14 is a new candidate with no measured live score. Acceptance remains 0/10, target unmet.

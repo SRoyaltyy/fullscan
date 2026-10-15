@@ -1,6 +1,6 @@
 """Small, independent sector-only batch pass. Never reads benchmark references."""
 import json
-from .semantic_headlines import SECTORS, schema, validation_errors, derive_analysis
+from .semantic_headlines import SECTORS, schema, validation_errors, derive_analysis, rate_limit_only
 
 SECTOR_ROLES=('issuer_or_operator','target_business','policy_target_industry','investor_or_lender','adviser_or_analyst','publisher_or_venue','background_or_macro','personal_or_campus')
 DIRECT_SECTOR_ROLES=frozenset(SECTOR_ROLES[:3])
@@ -111,7 +111,7 @@ class SectorBatchReviewer:
                 out[review_key]['validation_errors']=bad.get(n,['No usable sector response'])
             outputs[n]=out
         failed=[r for r in data if r['n'] not in good]
-        if failed and depth<2 and (good or len(failed)>1) and (good or any(a['status'] not in ('credential_unavailable','no_allowlisted_classification_model') for a in record['attempts'])):
+        if failed and not rate_limit_only(record) and depth<2 and (good or len(failed)>1) and (good or any(a['status'] not in ('credential_unavailable','no_allowlisted_classification_model') for a in record['attempts'])):
             groups=[failed] if good else [failed[:len(failed)//2],failed[len(failed)//2:]]
             for group in groups:outputs.update(self.review(group,drafts,depth+1,bad))
         return outputs
