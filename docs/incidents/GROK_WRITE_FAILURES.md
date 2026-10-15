@@ -204,7 +204,7 @@ Surveyed 2026-10-15 from the failed and cancelled runs of Pre-Open, Post-Close, 
 
 ### What is already changed, and what is not
 
-#597, #599, #600, #603, and #604 are on main. Together they change modes 1, 2, 3, 6, 8, 9, 12, 13, 14, 16, 18 (the no-balance skip), 19, 22, 24, 25, 26, 29, 30, 31, 32, 33, and 39. Mode 40 is the open follow-up. A dead refresh token is still mode 11. On 2026-10-15 at 06:56 ET the ECS gateway answered a no-search ping (`xai/grok-4.3`, HTTP 200, `PONG`), so mode 11 is not the current blocker.
+#597, #599, #600, #603, and #604 are on main. Together they change modes 1, 2, 3, 6, 8, 9, 12, 13, 14, 16, 18 (the no-balance skip), 19, 22, 24, 25, 26, 29, 30, 31, 32, 33, and 39. Mode 40 is PR #607 and is not on main yet. A dead refresh token is still mode 11. On 2026-10-15 at 06:56 ET the ECS gateway answered a no-search ping (`xai/grok-4.3`, HTTP 200, `PONG`), so mode 11 is not the current blocker.
 
 Still owner-only: mode 11 (open the device URL and press Allow), mode 15 if the message is the credits/subscription 403, and mode 27 until a `FULLSCAN_PUSH_TOKEN` secret exists.
 
@@ -212,7 +212,7 @@ Left as they are on purpose: paid DeepSeek and paid `glm-5.3` stay off (17, 18);
 
 ## Fix pass after the catalog
 
-#603 and #604 are on main. The bullets through mode 3 are #603. Mode 39, the essay-budget half of mode 25, and the no-balance skip in mode 18 are #604. Mode 40 is this follow-up.
+#603 and #604 are on main. The bullets through mode 3 are #603. Mode 39, the essay-budget half of mode 25, and the no-balance skip in mode 18 are #604. Mode 40 is PR #607 and is not on main yet.
 
 - Mode 9 and the leftover of mode 2: a sector whose breaker file is already open does not sleep 60–120s, and a `/v1/models` 200 does not clear that file. After Grok is empty, free `glm-5.3-flash` may write the sector. Paid DeepSeek stays blocked.
 - Mode 14, the skip half: a token that expires before 06:30 ET is not "fresh", even when more than 90 minutes remain. The 00:41 ET run on 2026-10-15 had 267 minutes left and an expiry of 05:08 ET, which is before the 05:55 Pre-Open. It skipped. A later 17+25 that returns 42 without moving that expiry is not treated as a renew (mode 13). OpenClaw refreshes only an already-expired profile, so the guard nudges that expiry field, calls once more, and restores the file if the expiry still does not move. It does not touch the profile while a Grok job is running.
@@ -283,4 +283,4 @@ Proof is strict. A run id is listed only when a real morning Pre-Open exercised 
 | 37 | Run red, every recorded job green, no preopen job | other | yes | already gone from tree | unproven until first morning on fix |
 | 38 | A person Force-cancels a live Grok pass | other | yes | not code: do not Force-cancel a live pass | unproven until first morning on fix |
 | 39 | 04:40 OAuth guard queues behind Pre-Open and the token expires | auth | yes | #604 merged | unproven until first morning on fix |
-| 40 | Pre-Open defaults to deepseek, so Grok is never called | auth | yes | this PR | unproven until first morning on fix |
+| 40 | Pre-Open defaults to deepseek, so Grok is never called | auth | yes | PR #607 pending | unproven until first morning on fix |
