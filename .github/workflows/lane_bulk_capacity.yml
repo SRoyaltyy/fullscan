@@ -1,0 +1,134 @@
+name: Lane subscription single-prompt capacity
+on:
+  push:
+    branches: [codex/lane-provider-repair-20261014]
+    paths:
+      - '.github/workflows/lane_bulk_capacity.yml'
+      - 'src/news_impact/bulk_screen.py'
+      - 'scripts/run_lane_bulk_screen.py'
+      - 'scripts/test_lane_bulk_screen.py'
+      - 'scripts/prepare_lane_bulk_capacity.py'
+      - 'scripts/grade_lane_bulk_capacity.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+# Replace the superseded queued two-pass development run on this branch.
+concurrency:
+  group: lane-provider-validation-${{ github.ref }}-grok
+  cancel-in-progress: true
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/
+            /scripts/
+            /tests/fixtures/
+            /data/exports/finviz_latest.csv
+            /data/exports/wikidata_companies.json.gz
+            /data/exports/wikidata_companies_provenance.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate no-resend ledger and single subscription request contract
+        run: |
+          PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_lane_bulk_screen.py'
+          PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_semantic*.py'
+          PYTHONPATH=.:scripts python -m unittest discover -s scripts -p 'test_provider_repairs.py'
+      - name: Prepare disjoint capacity samples from development articles only
+        run: PYTHONPATH=. python scripts/prepare_lane_bulk_capacity.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lane-bulk-inputs
+          path: bulk_capacity_inputs/
+  subscription_capacity:
+    needs: contracts
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 55
+    env:
+      FULLSCAN_HOME: /home/gha
+      OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+      OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+      OPENCLAW_AGENT: openclaw/default
+      OPENCLAW_GUARD_CALL_TIMEOUT: '60'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: lane_bulk_${{ github.run_id }}_${{ github.run_attempt }}
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/
+            /scripts/
+            /data/exports/finviz_latest.csv
+            /data/exports/wikidata_companies.json.gz
+            /data/exports/wikidata_companies_provenance.json
+      - uses: actions/download-artifact@v4
+        with:
+          name: lane-bulk-inputs
+          path: lane_bulk_${{ github.run_id }}_${{ github.run_attempt }}/capacity_results/inputs
+      - name: Check production idle and selected subscription model only
+        id: health
+        working-directory: lane_bulk_${{ github.run_id }}_${{ github.run_attempt }}
+        run: PYTHONPATH=.:scripts python3 scripts/diagnose_openclaw_lane.py --model xai/grok-4.3 --selected-only --output capacity_results/health.json
+      - name: One prompt for 100 previously unseen-by-this-method articles
+        if: steps.health.outputs.ready == 'true'
+        id: hundred
+        working-directory: lane_bulk_${{ github.run_id }}_${{ github.run_attempt }}
+        run: |
+          PYTHONPATH=. python3 scripts/run_lane_bulk_screen.py --input capacity_results/inputs/batch_100.json --output capacity_results/bulk_100.json --ledger /home/gha/fullscan_state/lane_subscription_bulk_v1.sqlite3 --batch-size 100 --max-new 100 --model xai/grok-4.3 --timeout 1200
+          python3 - <<'PY'
+          import json,os
+          r=json.load(open('capacity_results/bulk_100.json'))
+          ready=r['stop_reason'] is None and len(r['outputs'])==100 and all(x['status']=='analyzed' for x in r['outputs'])
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('complete='+str(ready).lower()+'\n')
+          PY
+      - name: One prompt for 200 disjoint development articles
+        if: steps.hundred.outputs.complete == 'true'
+        working-directory: lane_bulk_${{ github.run_id }}_${{ github.run_attempt }}
+        run: PYTHONPATH=. python3 scripts/run_lane_bulk_screen.py --input capacity_results/inputs/batch_200.json --output capacity_results/bulk_200.json --ledger /home/gha/fullscan_state/lane_subscription_bulk_v1.sqlite3 --batch-size 200 --max-new 200 --model xai/grok-4.3 --timeout 1200
+      - name: Back up the no-resend ledger without modifying production services
+        if: always()
+        working-directory: lane_bulk_${{ github.run_id }}_${{ github.run_attempt }}
+        run: |
+          python3 - <<'PY'
+          import pathlib,sqlite3
+          p=pathlib.Path('/home/gha/fullscan_state/lane_subscription_bulk_v1.sqlite3')
+          if p.is_file():
+              with sqlite3.connect('file:'+str(p)+'?mode=ro',uri=True) as source,sqlite3.connect('capacity_results/ledger_backup.sqlite3') as target:source.backup(target)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lane-subscription-capacity-results
+          path: lane_bulk_${{ github.run_id }}_${{ github.run_attempt }}/capacity_results/
+  offline_development_grade:
+    needs: subscription_capacity
+    if: always() && needs.subscription_capacity.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /src/
+            /scripts/
+            /tests/fixtures/semantic_frozen_20261014/
+            /docs/benchmarks/references_20261014/
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: lane-subscription-capacity-results
+          path: capacity_results
+      - name: Grade the 200-item development response against existing independent references
+        run: PYTHONPATH=.:scripts python scripts/grade_lane_bulk_capacity.py --root capacity_results
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lane-subscription-capacity-score
+          path: capacity_results/development_comparison.json

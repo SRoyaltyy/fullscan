@@ -11,6 +11,7 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--output', type=pathlib.Path, required=True)
     parser.add_argument('--model', choices=('xai/grok-4.3','xai/grok-4.6'), default='xai/grok-4.3')
+    parser.add_argument('--selected-only',action='store_true',help='Probe only the requested model to conserve subscription usage')
     args=parser.parse_args()
     out={'generated_at':datetime.now(timezone.utc).isoformat(), 'calls':[], 'model_required':args.model}
     expiry,source,refresh=guard.xai_oauth_expiry()
@@ -43,7 +44,7 @@ def main():
     except (OSError,ValueError):out['last_guard']=None
     # Do not compete with a running production prediction or restart it.
     if not out['grok_busy']:
-        for model in ('xai/grok-4.3','xai/grok-4.6'):
+        for model in ((args.model,) if args.selected_only else ('xai/grok-4.3','xai/grok-4.6')):
             guard.MODEL=model
             result={}
             with contextlib.redirect_stdout(io.StringIO()):
@@ -64,3 +65,4 @@ def main():
 
 
 if __name__=='__main__':main()
+
