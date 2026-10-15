@@ -1444,10 +1444,32 @@
       ],
       "net": -1.5,
       "side": "sell"
+    },
+    {
+      "ticker": "GOOG",
+      "buy_score": 0.0,
+      "sell_score": 0.45,
+      "events": [
+        {
+          "event": "catalyst",
+          "side": "sell",
+          "weight": 0.45,
+          "bucket": "earnings",
+          "net_signal": "Bearish",
+          "conviction": 16
+        }
+      ],
+      "net": -0.45,
+      "side": "sell",
+      "catalyst_signal": "Bearish",
+      "catalyst_conviction": 16,
+      "catalyst_stack": "On April 29 and July 22, 2026, Alphabet delivered consecutive beats, culminating in Q2 revenue of $119.8 billion (+24% YoY) and Google Cloud of $24.8 billion (+82%), and it raised the dividend 5% to $0.22 in Q1. Product cadence ran from Gemini Intelligence and I/O (May 12–19) thr"
     }
   ],
   "judge_tickers": {
     "XLE": -1.5,
     "AEM": -1.5
-  }
+  },
+  "catalyst_tickers": 1,
+  "catalyst_date": "2026-10-15"
 }
