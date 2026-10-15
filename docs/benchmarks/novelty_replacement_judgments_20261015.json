@@ -1,0 +1,170 @@
+{
+  "scope": "Independent title-only replacement judgments before classifier execution; not full references for batches 09–12",
+  "records": [
+    {
+      "batch": 5,
+      "n": 26,
+      "action": false,
+      "acceptable_lane_classes": [
+        "discard",
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Healthcare"
+        ]
+      ],
+      "judge_basis": "The main predicate is a nurse sharing a story ahead of a future union vote; suspension is background, with no new public act. The vote preview/commentary boundary is ambiguous. The named medical-center nursing workforce is Healthcare."
+    },
+    {
+      "batch": 6,
+      "n": 8,
+      "action": true,
+      "acceptable_lane_classes": [
+        "policy_personnel"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "A state representative actually resigns from legislative committees: public-office personnel action. The title does not identify an operating industry."
+    },
+    {
+      "batch": 6,
+      "n": 23,
+      "action": false,
+      "acceptable_lane_classes": [
+        "labor_organize"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Consumer Defensive"
+        ]
+      ],
+      "judge_basis": "Employees protest over honoring an existing collective-bargaining agreement; no actual public university decision or work stoppage is reported. UPR is the University of Puerto Rico, an education institution, and the operational employment dispute targets education."
+    },
+    {
+      "batch": 7,
+      "n": 40,
+      "action": false,
+      "acceptable_lane_classes": [
+        "corporate_action_mna"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Communication Services"
+        ]
+      ],
+      "judge_basis": "Private acquisition of a film library is an asset acquisition in film/media, without a public institutional act."
+    },
+    {
+      "batch": 7,
+      "n": 65,
+      "action": true,
+      "acceptable_lane_classes": [
+        "standard_mandate",
+        "statement_public"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Consumer Cyclical"
+        ]
+      ],
+      "judge_basis": "The title reports new city casual-trading rules and criticism of their wording; a fresh operative municipal trading instrument is independently supported. The rule versus criticism primary-event boundary permits the two classes. The rules directly target street retail trading, not unspecified counterfeit-goods manufacturers."
+    },
+    {
+      "batch": 7,
+      "n": 68,
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Bitcoin prices and lower expectations for a future Fed hike are market conditions, with jobs data as macro background. No actual rate decision or operating business is reported."
+    },
+    {
+      "batch": 8,
+      "n": 45,
+      "action": null,
+      "acceptable_lane_classes": [
+        "product_harm"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Consumer Defensive"
+        ]
+      ],
+      "judge_basis": "An actual safety recall is issued, but the headline leaves the issuer unspecified: it could be a private retailer/supplier or public authority. Preserve authority uncertainty. Named affected retailer Asda is a grocery supermarket; the unspecified product does not establish another sector."
+    },
+    {
+      "batch": 8,
+      "n": 58,
+      "action": false,
+      "acceptable_lane_classes": [
+        "distress_restruct"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Consumer Cyclical"
+        ]
+      ],
+      "judge_basis": "The golf equipment company announces restructuring, an actual private corporate restructuring announcement. Golf equipment is a discretionary consumer business."
+    },
+    {
+      "batch": 9,
+      "n": 89,
+      "action": false,
+      "acceptable_lane_classes": [
+        "capital_return"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Basic Materials"
+        ]
+      ],
+      "judge_basis": "Completed shareholder buyback is a private capital return; the stock-price condition is secondary. DSM-Firmenich manufactures specialty ingredients/flavors/fragrances, mapped to Basic Materials under the coarse business convention."
+    },
+    {
+      "batch": 10,
+      "n": 90,
+      "action": false,
+      "acceptable_lane_classes": [
+        "statement_public",
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Basic Materials"
+        ]
+      ],
+      "judge_basis": "The refinancing remains planned, rather than a completed debt transaction. The plan announcement or stock-price condition can be primary; Indah Kiat is a pulp and paper manufacturer."
+    },
+    {
+      "batch": 11,
+      "n": 94,
+      "action": false,
+      "acceptable_lane_classes": [
+        "discard"
+      ],
+      "acceptable_sector_sets": [
+        [
+          "Healthcare"
+        ]
+      ],
+      "judge_basis": "A valuation question cites approval and pipeline data as background; it does not independently establish a newly issued FDA act. AbbVie is the affected pharmaceutical issuer."
+    },
+    {
+      "batch": 12,
+      "n": 72,
+      "action": false,
+      "acceptable_lane_classes": [
+        "regime_state"
+      ],
+      "acceptable_sector_sets": [
+        []
+      ],
+      "judge_basis": "Generic IPO-market momentum commentary is a market condition, not a specific completed listing or an operating exchange/bank business. Named media participants are incidental."
+    }
+  ]
+}

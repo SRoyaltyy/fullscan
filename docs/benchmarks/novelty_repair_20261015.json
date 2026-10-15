@@ -1,0 +1,427 @@
+{
+  "version": "pre-execution-novelty-repair-v1",
+  "source_commit": "a62a3cc16b0a7303a7c4fa1b855566f75f23bd33",
+  "selection_input_commit": "07a5f2db9691d60dc786e318e6763e9f5912326f",
+  "original_reserve_sha256": {
+    "1": "ae854e17c4a2befaf8fda617b53c239f4eb854babfb60faccec53999adacf835",
+    "2": "879656fcf9f13111ad016a7092a32cf301b424545a079ecb9c893c87c7343da8",
+    "3": "66b9a896c4795dcc770e3f4f318a2ccabd7eaec0a37c991fecc8cc8a4c482c54",
+    "4": "d430c7c835b4968189cc17f78bf963f4617994b121878fffbdbe27d1613d4c51",
+    "5": "32997a9c91352b00550ebc67380b1a041299b0bde3e41ddf56eba38690e15fc0",
+    "6": "4139cac1543cc49788781e7aa62aabdf83164e894822760b098964a6989d5759",
+    "7": "4f789dbc846630f2512faa6a0c3a57de20b48481e45f93b6d71435a2eedc2bab",
+    "8": "7f1e71ffa09a24d98dbaef90d6046fa4fafe6ccc91d796c3cb7731fe325d15db",
+    "9": "1e645432dfe3d50289deef2942e540e4de91aaca567c720f4800d4ab4eb21625",
+    "10": "3574238f5062ebb516874888048a82442694fb60e0a9bafb1d77298f63c1cf00",
+    "11": "9f3cd4458a0c0986b03e1637a76d30352f074eb8a537c3b5ce308432efdda623",
+    "12": "65e5abb774cde094948329e6c764851f4a0d11d3f662561a2c82eb66a0326038"
+  },
+  "original_active_frozen_sha256": {
+    "3": "13e7174383594e2f7af4bb081aa677a9e35a29e20cdf5a34e4de33252a97c83c",
+    "4": "2551734d05971860b948c0ac1c27249445c9ad420edd3d4d1b1b3a9b450574de",
+    "5": "158c1b31ea4ca8d47e3a4d08b5d8c0522bbb03ffad609e8166f5775838cb9868",
+    "6": "2d9723ed670cdf2c625e747d21089675c77c08b14ac070f2a11588f935452a6e",
+    "7": "c092b83abf41fb4c9c7087e15b3911e7dbb6c63b7cad916be8946f17955c2d06",
+    "8": "7b9855ae865ba4aecfdffa47259c625609570f3f6914a7f6cb01eb313a25a7fa"
+  },
+  "seed": 20261016,
+  "scope": "Selection only. No classifier outputs, reference labels or answer correctness read. Corrected inputs must be independently frozen before execution. Original selections remain in their original paths and git history.",
+  "normalization": "NFKC; HTML unescape; casefold; remove final publisher suffix using rsplit; numeric normalization; Unicode word tokens; fixed stop words",
+  "stop_words": [
+    "a",
+    "after",
+    "an",
+    "and",
+    "are",
+    "as",
+    "at",
+    "be",
+    "been",
+    "before",
+    "by",
+    "for",
+    "from",
+    "in",
+    "is",
+    "latest",
+    "new",
+    "of",
+    "on",
+    "or",
+    "report",
+    "reports",
+    "said",
+    "says",
+    "that",
+    "the",
+    "this",
+    "to",
+    "update",
+    "was",
+    "were",
+    "with"
+  ],
+  "collision_rules": {
+    "same_url": true,
+    "normalized_title": true,
+    "token_jaccard": 0.65,
+    "min_tokens_for_containment": 4,
+    "intersection_over_min": 0.85,
+    "intersection_over_max": 0.6
+  },
+  "archive_sources": {
+    "01_daily/news/2026-10-02_intake.md": "f8d306f65f640e44ecfdd723f8ca9ed2adc8176d28743777163767259ac4bb8c",
+    "01_daily/news/2026-10-03_intake.md": "9522f39df1950c8337868b64c9865916cdc81e5abadfee1c40c7560e43ea9ab4",
+    "01_daily/news/2026-10-04_intake.md": "7df26e8e3794315c73bb7bac3ae0a89b0a34ccdb7e9faee239a98adbf7c76980",
+    "01_daily/news/2026-10-05_intake.md": "f631e1d3f63c5979db4acadc60366a9ab54f4dd5444f3bacdb6fcaf4188f910b",
+    "01_daily/news/2026-10-06_intake.md": "e3b58c9df1b94e14f42a3b67551762b0bb6d1ece9a0285460b7049f8744db711",
+    "01_daily/news/2026-10-07_intake.md": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+    "01_daily/news/2026-10-08_intake.md": "34fc130ba520d0e32e6c7f9e4b74d2f3459a02d82546485f7357a4562ab6c800",
+    "01_daily/news/2026-10-09_intake.md": "5ccf94ef2aca9346f4ebf471c26909976d94ffb65b03106b3a8dffbc35b142b2",
+    "01_daily/news/2026-10-10_intake.md": "85b30fea401581cf9aaf2aac71942171305942000a1c9ac73fd4c2fdc01e68cb",
+    "01_daily/news/2026-10-11_intake.md": "9b2ab0958641f20ba37df8be1661b541c4c7b199405564c28c07e3bf598e95e7",
+    "01_daily/news/2026-10-12_intake.md": "1ca8da95ddf81704e10bf6dfdda5edc0286da0dc5e2efeb2ae9e42d6690c9dff",
+    "01_daily/news/2026-10-13_intake.md": "852a654b720130ccfaa01846eb2896a03e18b35f971a1a6d80413323aaada2d1"
+  },
+  "prior_inputs": {
+    "tests/fixtures/semantic_headline_inputs.json": "6055b67b6087138571c0f01000220598b4ec09448e6b33660418087f5c6c4454",
+    "tests/fixtures/semantic_acceptance/batch_02.json": "5eaeaa74cf61546dc7a43f2386fb719519d2dfbeaa3fdc9641d14dbee72c6554",
+    "tests/fixtures/semantic_acceptance/batch_recall_fresh_01.json": "2e188f2f7e57dcf3fdde40d71f2646877ac5dfb3f0555e9e28162ec1952b9426",
+    "tests/fixtures/semantic_acceptance/batch_recall_fresh_02.json": "cd91e8cf4a981e13076afd1fade60dbd0f2dc0f7d1239b5a723b7969060e04df",
+    "tests/fixtures/semantic_frozen_20261014/batch_01.json": "92c2c76f24dcc9d06693bda8e809591ca06ef2679fcfc8a6104dd3495746f632",
+    "tests/fixtures/semantic_frozen_20261014/batch_02.json": "cf60e9b315856ede67b7de0be6932228a906cf2cdd3ed1af01ecf6ea8fba9e5f"
+  },
+  "prior_rows_including_repetitions": 520,
+  "final_fresh_rows": 1000,
+  "final_collisions": 0,
+  "retirements": [
+    {
+      "batch": 5,
+      "n": 26,
+      "original": {
+        "n": 26,
+        "title": "Ricoh announces strategic review: what it means for Ricoh stock - ad-hoc-news.de",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQTEtTbVFWWGdiUFpoY0ZQOXRlb2tESlRoY0lzM2d5SzQxeW5tUkhPTkZHWldpVS10dlVfSzl4R1JXU2d5Z1k3N0wxZkNBaTJ0UnZUcTlZVG9ZUGw3dlFZN1hSVXZ6WnkxaTh3SVdkVXBvdWV6ZWc5anMxb3AtRVlVQ0lMRi1NbFg3czJ0c3o1d3JVMlFQcG9SWm9Jem5aR0QyWGQ3QU5jeC0wX3cxTWNNRE1fczRxODA5OGd1TVRn?oc=5",
+        "source_archive": "01_daily/news/2026-10-13_intake.md",
+        "source_tag": "lane_strategic_review"
+      },
+      "collides_with": {
+        "path": "tests/fixtures/semantic_headline_inputs.json",
+        "n": 11,
+        "title": "Ricoh announces strategic review: what it means for Ricoh stock - ad-hoc-news.de"
+      },
+      "reason": "normalized_title",
+      "replacement": {
+        "n": 26,
+        "title": "Suspended Central Maine Medical Center nurse shares story ahead of union vote - WGME",
+        "source_report": "01_daily/news/2026-10-13_intake.md",
+        "source_line": 344,
+        "source_sha256": "852a654b720130ccfaa01846eb2896a03e18b35f971a1a6d80413323aaada2d1",
+        "source_url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNcDdrN1o4TWVGejdxcFRmSjZHdmNiZG9NaWRzZkpxUFUwQWowQVBONjg2SzFhc25ZclNmTkVYN0JNV2FzUjE1X0lmSklPS3dRRHM2VkFyX3RtOVF1ZG5SU1MweHVhbmxSRXI3emRVdUl4dUVYX1ZjenlWTzJHX21rMmZfZ0VId0tSQjhuVlBDQjZYZm15eGxsWGkwNUV3LW5PRXpSRXRyS3BvZW5fY1MyajNYMTA0NWx6RDBhby1iajZBenZOWU9IdDI1VVd0T2dhcE9kUndkQ2dWRWE4VFN1b29NZjRQMXBHNnZ3ODd4Mnk?oc=5",
+        "published": "2026-10-12T08:17:16+00:00"
+      }
+    },
+    {
+      "batch": 6,
+      "n": 8,
+      "original": {
+        "n": 8,
+        "title": "Update: Earthquake shakes region near Signal Hill, CA on Oct. 9 - 3.2 magnitude detected - Sacramento Bee",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9UTUlNaEVLOUxtTTBsY1JtZjhGZTJNWHZMeUVYTUJzS0xkSG5qOEZyZGh2WWJjcDRJZnhlOGxOV1djU2gzZ1NGRXhndEdJcFJNWHVjeG1BQmh0TTBQdlhzWFpReFNVTlRLNk0wUlVxV0NvWS1JRlh5Y0ZQZVE?oc=5",
+        "source_archive": "01_daily/news/2026-10-09_intake.md",
+        "source_tag": "lane_cat_weather"
+      },
+      "collides_with": {
+        "path": "tests/fixtures/semantic_acceptance/batch_recall_fresh_01.json",
+        "n": 31,
+        "title": "2.0 magnitude earthquake detected near Cobb, CA on Oct. 3 - Sacramento Bee"
+      },
+      "reason": "token_containment_ge_0.85_and_0.60",
+      "replacement": {
+        "n": 8,
+        "title": "GOP State Rep. resigns from committees following claims he used homophobic slur - NBC10 Philadelphia",
+        "source_report": "01_daily/news/2026-10-07_intake.md",
+        "source_line": 83,
+        "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+        "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPelBONXlQaWYwTHROXzlyM3lFMVlqd0Ntdl82cW01aVlmWTJoMzdBOF82cGoyd2pUREdHVlJuSHRYWG81TlZXOEtkVXM5WTUyMzVFMWxERXFDQnRPeEdLd2ZVVDJ5NWpuNFZYM1Q3aExGU2JFdUF3WEtuTlQyUXY1Z0x2cUFHQ2VuSUdyeXAzOVA0VWRGZHl3RUZPMmVPZFB4NEZVVTBkYnBzWEJLSThGTkFtd1pXWFhoM3JyZlZ6TmRucnJPNUEweEFqV1RoOHV1cmfSAdoBQVVfeXFMTWpNLWNFdnBraHYxUHNsRHVrVWZhT3Z4MWJiRXo3Rnk4cDNTT0VEaDdzLVZCY0JiNHYwNDFOOUF4Z2QxUS1aMGthT1huMDlwYXpjUkdjV2VDU0lsS3IwWWFISE5nd1dVSDlKMExvcjZydW9fN2VENnBFa25aMENRTld5eW1EU2htUXgxUnl5cElVNzFqTVZSTFd1dEh0bklGRFkxUU9zdUpCZm9uSHdFYWtHOXZLNWtXUUVDRXlhTW1kZlFodmsyWjU3Uk1iNlB3VGtWYXNXbDdfS0E?oc=5",
+        "published": "2026-10-07T13:35:02+00:00"
+      }
+    },
+    {
+      "batch": 6,
+      "n": 23,
+      "original": {
+        "n": 23,
+        "title": "Boissons du Cameroun-Guinness Merger Approved for January 2027 - Business in Cameroon",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQ1BRR1I0bnJaSHA3azZFUkt4ZDg1MFl2Mmk4N3dFeEdqa1NGZzZyYmJ4X1dsUnJMX1NVOENsOUNLY3N0bkE5V3l6Y0hMWnVKUWlSbjNtb3g3aDMwbXgzOWZuQW92THdCYlEwMG9NZGpSeFc4SmxZS0xqRVpmcFhkU3F4MEJ3d1RlRy01OW52UVdqOVNqVng5TkE4UlNUcXotandsZDBqTFBkZWJ4MnJ5MzJNSHItLUk2?oc=5",
+        "source_archive": "01_daily/news/2026-10-06_intake.md",
+        "source_tag": "lane_deal_review"
+      },
+      "collides_with": {
+        "path": "tests/fixtures/semantic_headline_inputs.json",
+        "n": 4,
+        "title": "Boissons du Cameroun-Guinness Merger Approved for January 2027 - Business in Cameroon"
+      },
+      "reason": "normalized_title",
+      "replacement": {
+        "n": 23,
+        "title": "Protest at UPR: Non-teaching employees demand that their collective bargaining agreement be honored - El Nuevo Día",
+        "source_report": "01_daily/news/2026-10-08_intake.md",
+        "source_line": 359,
+        "source_sha256": "34fc130ba520d0e32e6c7f9e4b74d2f3459a02d82546485f7357a4562ab6c800",
+        "source_url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPdzg1X1kyWmx0UXozeHdFNXlOMHBtQjhSZ0RNX0laM2tFbmEtaVF4dzNOaDcyRWR6dk9kMTkyT3h6eFc4XzM5QkUzSV9kdkJ3US1CaU9QazNvd0txTlYxRlVheUpJQi1sUTFGVGtMejB0aWpZZFk1ZUg1WU5oWFNROWV4R1NGbFlrUlg4YWxBUXhCdkstdHI4U1RYeHdGOHVNVXlvUWZIZkFKZHRUdkY3MlYyUWxMdHJfY0s4X0kyQ3RuVkhuUXFqQ2QzQ1F0TEhkZkRNenVfbm9RNE9aRmc?oc=5",
+        "published": "2026-10-07T17:26:00+00:00"
+      }
+    },
+    {
+      "batch": 7,
+      "n": 40,
+      "original": {
+        "n": 40,
+        "title": "Heavy Minerals Appoints Mineral Technologies for Maiden JORC Resource Estimate at Red Hill Garnet Project with Garnet Leading All 47 Samples - Kalkine Media",
+        "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQSVE5WElkRUd6U1B3ak1LdzA4WHZmaHc4VVNvYkxpTjU2V21qN2NobHdWS3QxVWoxVHBlT2xOdnJGNTFhVk9yOGdtNEV4ZzdaSXNHbHNkYXRMWkZoVmE5dnJ2T0tLWDQ0NWt5Mkh5djhuQjd5cjNscE5oVHFVaDBTNHNEV0xKUXk1ZkYwcFV0TnFQQUVxaW1pQ1ktVGVKZV84bWRRdWh1Q0RkemxtalJRb3RkdWRsWmdiS1dpVnlTN1Z6UnBTVDJFNXk5RktjMFlJLWlBUWl0X2d1TU45OEtJYmp4ZFdmcTItZ2hUNzRrRWN3OHFKcXUtcGl0MldJMlp0c0hxd3lOeFk4VDZZUmpzS0trYzU3dw?oc=5",
+        "source_archive": "01_daily/news/2026-10-06_intake.md",
+        "source_tag": "lane_reserve_revision"
+      },
+      "collides_with": {
+        "path": "tests/fixtures/semantic_acceptance/batch_recall_fresh_02.json",
+        "n": 26,
+        "title": "Heavy Minerals Engages Mineral Technologies for Red Hill Maiden JORC Resource Estimate as Garnet Dominates All 47 Composites - Kalkine"
+      },
+      "reason": "token_jaccard_ge_0.65",
+      "replacement": {
+        "n": 40,
+        "title": "MK2 Films Acquires Dardenne Brothers, Archipel 35 Film Library to Expand Its Heritage Footprint - Variety",
+        "source_report": "01_daily/news/2026-10-07_intake.md",
+        "source_line": 35,
+        "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+        "source_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcjRZc2hISTBUUW5vU1dROVJxSmNqUXZ4dWMwcENRZXRSVVZfX0ZUdDJrSVBLbjFoNXhJaXU5QVVpYlM5QmdhSDlhekFIRUd3enV3UUt0VWJ5WXZVNVlWdEhGTmtadnRaSUR5LXAyeWI0ZUNLTkltY1dpWm14cEVlTjRzYzBlZG1hRkxEMm1CbUxkT1l5S2lnejJTRXVzQ19wOVVGcjVqcWcyQjg3TkhZ?oc=5",
+        "published": "2026-10-07T14:59:00+00:00"
+      }
+    },
+    {
+      "batch": 7,
+      "n": 65,
+      "original": {
+        "n": 65,
+        "title": "Q2 earnings, inflation data, oil prices to guide stock markets this week: Analysts- Moneycontrol.com - LinkedIn",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOY1BKVnphUzMxYV8xTldlckNZTmx6RFZtdm91Q2VEN3ZmT3ppTW9lZ3pYNkNFUTAtYVdCTjVoOUVhTkJSb0o5dVFFYVJFcGVhSVJuWTAtUlZ2Q25vM3c3REJMallHTzY5N2FnN1dOTUxfTHpSWHE4YkRFdVFjczlGZm9ULU53V2c3bG1IUWVRNkpGZTR1MHdTQzRHbHZTSzQtOVFqZWl2YzhGTDdSMy1DbGhZdWxXX2wzNGc?oc=5",
+        "source_archive": "01_daily/news/2026-10-12_intake.md",
+        "source_tag": "lane_factor_impulse"
+      },
+      "collides_with": {
+        "path": "tests/fixtures/semantic_frozen_20261014/batch_02.json",
+        "n": 16,
+        "title": "Q2 Earnings, Inflation, Oil Prices to Guide Stock Markets - Rediff MoneyWiz"
+      },
+      "reason": "token_containment_ge_0.85_and_0.60",
+      "replacement": {
+        "n": 65,
+        "title": "Dublin’s new casual trading rules blasted for ‘stigmatising’ language on counterfeit goods - Irish Independent",
+        "source_report": "01_daily/news/2026-10-08_intake.md",
+        "source_line": 332,
+        "source_sha256": "34fc130ba520d0e32e6c7f9e4b74d2f3459a02d82546485f7357a4562ab6c800",
+        "source_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPWlM4WGNxVjhTT2JjSEFCZDlYME55QW9CeTNHdExHUTd6djBlX1lqVlhZSnNQazg3c3hPV1NYVkJjcUpwT0NZYU5nZDdtTURLTzBlXzBoVHdQOTZmcXlPMTQySnhkQzhkZlFfR2pfSmJQUGlkLW53bmhPdk02a21tRzNBdUdtTTFPalpBVGl4aHBpN1g0NUdPNDREelh0MHVpejYxSHVZVlFGTE9XTHZrYkJlbFhkeE1lOFdPZ1BvM05HenRyaXpEZGhUNE1vR3FDenhEUzJtUU00dw?oc=5",
+        "published": "2026-10-08T08:50:01+00:00"
+      }
+    },
+    {
+      "batch": 7,
+      "n": 68,
+      "original": {
+        "n": 68,
+        "title": "Vote No on Golden Gate Fire’s proposed tax increase - Golden Transcript",
+        "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPSkRKV1BDZzNJQmJRMzA4QkN3NWhVcTRER2h6WFotUC1sNm95dG1tcUV2RHRnbTJYOXpESUU2V1AyS0RoVDZHZnV1VkE3QTRtem5DdXNkQXdqUGpzU2FxVUw5Um5jZG55VmNhU1h5Ymsxdzc0aWk1Vm0yQ3FUOHlGbFVsbTJsOVRKUzZISVVPZGNfUFF5SHNjcXRUWmNMN25BVGZCZU9FUmJBaUdHc1lYMlNtY1cxcnJJMlk2eF9qYm8xWkpsQkFHcUFDZFNNU3RwYVY2Y1hQd0sxVkhXLXc?oc=5",
+        "source_archive": "01_daily/news/2026-10-08_intake.md",
+        "source_tag": "lane_tax_fiscal"
+      },
+      "collides_with": {
+        "path": "tests/fixtures/semantic_headline_inputs.json",
+        "n": 13,
+        "title": "Vote No on Golden Gate Fire’s proposed tax increase - Golden Transcript"
+      },
+      "reason": "normalized_title",
+      "replacement": {
+        "n": 68,
+        "title": "Bitcoin holds near $86,000 as weak US jobs data lowers October Fed rate hike expectations - The Economic Times",
+        "source_report": "01_daily/news/2026-10-06_intake.md",
+        "source_line": 96,
+        "source_sha256": "e3b58c9df1b94e14f42a3b67551762b0bb6d1ece9a0285460b7049f8744db711",
+        "source_url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxPT1gtQ0V6bmFCV2xhdWNuZWhSdEJveDFEMHQ3c29lV0hUanpNblBVNS1sMncyZnZ0WW9KTG9qbDhGRnZmQ0JfeWIyX0JqRHRVc1Juak5PNXNpejYxV0tXaDZxeXd6VEdaRTZNODhRRzdtdzlmRi1MU3FTY0FKX2tjalZVa3N2dHJxOG5QVm5UcWxqWDVjMXkzNHQ1YkNNd0dvNy12Rm0wNjYyTkR2WklKcGhteUdWMGx4eG52ZXZpbnFDWjBfWG5oSlR3LWg1MGNjbUJUaTVnSk9LTGVJc2pNbUU2cnloMV9WcGtuQllGOE5CWkQ5eEpNbHNTY1RDODh1RzlCc1RRQdIBjAJBVV95cUxQQ2RsQ3FiaV9TanVkaFJON3BNTzBvVUxNSWx0RWRDdy0yRWlDRUdOTXV2WGpaU1hsSUJNQU5WWU4wYzJlUFIzODZ6ei1GTS1QNEpoQ01Tc3RGTmdEdml1d090a3JlZ3BjVTc2LTdpTjUwNHRpY21SZUdIWVo4VVhCZXpuUDYtX0hlSVNWOVlPRFB5Mm91a3JVMy1RQ2RCQ3NEQTQ4U1I3MmMtVlBmOUJ3RG1zNUEtUC16ajJmUzJwMmRsdVQ3Z1ROdUpkaHlidjltdnhQa01yVWxmWk44V2tMd3NHQ1I0MGVIeDlFdmV6VmlZUlBYLWpWYnNNSV93a2c2SmxUVEQzTmFGT1I3?oc=5",
+        "published": "2026-10-06T10:38:31+00:00"
+      }
+    },
+    {
+      "batch": 8,
+      "n": 45,
+      "original": {
+        "n": 45,
+        "title": "DarkIris prices $6 million public offering on Nasdaq - StreetInsider",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRXlnRWFNb0czd0J4a3Z4MFBGeUJoajRUOFJNcU9rcGw3WTFGVmxPZ0pITmVrUUloOWY2d1ZtZmRPckZVVnhiUEtKRGJWa2Z6RmxVNDJJUUFDQWVFTmhKb1lSMUZ3bDVpQmQ5VHRUUUY0cS1KMzJOenFYLWZVWjhyZ0hiYlI0QmVqd2t6ejZvbVg5Z3RmVXNHaks1N2VZSTlLZFBYOVY1SHZoR3ZheVBNSlY5Q0E3Zw?oc=5",
+        "source_archive": "01_daily/news/2026-10-08_intake.md",
+        "source_tag": "lane_dilution"
+      },
+      "collides_with": {
+        "batch": 8,
+        "n": 24,
+        "title": "DarkIris prices $6 million public offering at $1.44 per unit By Investing.com - Investing.com Canada"
+      },
+      "reason": "token_containment_ge_0.85_and_0.60",
+      "replacement": {
+        "n": 45,
+        "title": "Asda shoppers warned to stop using product immediately as safety recall issued - Telegraph and Argus",
+        "source_report": "01_daily/news/2026-10-07_intake.md",
+        "source_line": 483,
+        "source_sha256": "b9050ffc07031560de0cf153b2967038cefe1317f472db29b8571040c6766fb5",
+        "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPczFWdlNuUGpoTWpVQ3lmdWpjQ3dqUnZleW05bW9lc2RDZXdJcDhoZk5zd0NubnZPeGkzUG1LVjAyX3ZuenA1NHN1VDBsYUlab0tLZVBYb3RxVVRmcVpGWFE5TjBEdVZ0dGFDQlBrZUtoSTVldFh3ZmtZYWJ4dlNpOHlFYXJOMVNVZ2lhSDh3R1E1ZjktTm51dnFMMS0xMVFCZGNjdEdhbHVHOUdiN200M3IwLWRBb1lUQk9yOFVrSQ?oc=5",
+        "published": "2026-10-06T07:59:02+00:00"
+      }
+    },
+    {
+      "batch": 8,
+      "n": 58,
+      "original": {
+        "n": 58,
+        "title": "EIA: US crude inventories down by 3.2 million barrels - Breakingthenews.net",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPdlFYRGRWSXJHZFF4bmk5MUZCTDgxTUhIamx5ZmF2NXcxbTlyRjdVY3g1Ni1XaEFWQWIteGZkbVN5UzZVdTdNNng3Ui1JbF9pdW9CWS1pNGRHV3ZQa2FoUGJheWQxY2tadWFEQ1F1a1pQQXI3NVlFcHRIYVl6TDJKMWoyWG52SzF2NU05bm44T1hET0stUVZNWTdtaVVzb0E?oc=5",
+        "source_archive": "01_daily/news/2026-10-09_intake.md",
+        "source_tag": "lane_inventory_print"
+      },
+      "collides_with": {
+        "path": "tests/fixtures/semantic_frozen_20261014/batch_01.json",
+        "n": 19,
+        "title": "US Crude Inventories Fall 2.09 Million Barrels - TradingView"
+      },
+      "reason": "token_jaccard_ge_0.65",
+      "replacement": {
+        "n": 58,
+        "title": "Not Dead: Ben Hogan Golf Equipment Company announces restructuring - GolfWRX",
+        "source_report": "01_daily/news/2026-10-13_intake.md",
+        "source_line": 366,
+        "source_sha256": "852a654b720130ccfaa01846eb2896a03e18b35f971a1a6d80413323aaada2d1",
+        "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQjBaYkgtT04wME1pOUYxa0Uzb3FRaWJwYmpZODJnNl81UHB5VDNkUWdpWFhMSGp6U1JseEl6ZURDMF9URndVWTI3UXVhcG5lM190RmNjaTYzZ01sSGdaUU81SUd0S0xJZ1VZUmpJRFZnZFlmWmFJaHFZN2pkVG9FTWF6OE5fX2hyNFpDSUNib21falFEeEhaUA?oc=5",
+        "published": "2026-10-12T15:52:19+00:00"
+      }
+    },
+    {
+      "batch": 9,
+      "n": 89,
+      "original": {
+        "n": 89,
+        "title": "Conditional EU antitrust approval expected for AkzoNobel, Axalta deal, sources say - Euronext Markets: Real-time Stock Market Data | live",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQc0VUd0VQc3JPVkhfZDVJbnJrUE9kS3diMXEwN3hyVHZoTmNZb0xRVE16VzdhcERnOXZYa25uYXVIMFV2enJ5X0xWU1loRnZGUzVpSFltSXFMdURRVHRuUHl6QVlld2M5dWRxSUVHLVo3QmhKdDlBTkpmWGhhUkhvbF9OQnZRd05fTFI1YkZQYU5MUkZDSHRQYUxQakpEcEdxSXV5SHN0S0Z2Y0FJMl9aY3h5b2hrdVB0Z2s4LQ?oc=5",
+        "source_archive": "01_daily/news/2026-10-09_intake.md",
+        "source_tag": "lane_deal_review"
+      },
+      "collides_with": {
+        "batch": 9,
+        "n": 8,
+        "title": "Conditional EU antitrust approval expected for AkzoNobel, Axalta deal, sources say - Reuters"
+      },
+      "reason": "normalized_title",
+      "replacement": {
+        "n": 89,
+        "title": "DSM-Firmenich completes buyback. DSM-Firmenich stock sits 0.40 percent below its high - ad-hoc-news.de",
+        "source_report": "01_daily/news/2026-10-12_intake.md",
+        "source_line": 124,
+        "source_sha256": "1ca8da95ddf81704e10bf6dfdda5edc0286da0dc5e2efeb2ae9e42d6690c9dff",
+        "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOVTctUUgtOXpUZEhHcWIyZ2pEQ2hGcDFwQXJQRmIxb2IxVDBERHo0a3lBVWIzQk9tYTF4dHRrekhvSTU4VXd1cnY0UnVuRTRGRjhod3hHWnQ4ZmZVTzdvTzdZckpVVVB6cVdNajJDVnBuVmwxdGtKUE1oc0ctN0dyTlkwY3VJRzdqaWY0bkNxNW0zczg0MGlwclVpZlVkbS1ZcW5FTmZselRZNkVhMGdCNWZabUdVYXBCRjlOQ3FPdHVuNVlfTXJZdHlvcjE?oc=5",
+        "published": "2026-10-12T07:07:50+00:00"
+      }
+    },
+    {
+      "batch": 10,
+      "n": 90,
+      "original": {
+        "n": 90,
+        "title": "Q2 earnings, inflation data, oil prices may drive stock markets this week - Business Standard",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOX19vMHpiVHZZNXF3WUJHeTFhM3JJbGpEVFl5NVlNN3JNeGVlWEhKU1p0SmUzTEVFNDBSbEpIYVZYZGlrOFc4RHB6NFRZeldBTTZ6YzEtQ1p5OExwSDIxenZ3TndubmVyMXh1OGZud09XNU4xcVQta1oweUhpV1dTRHBWTEJBS0pfeWx0d3o3QnhRMFhSLWwySU80aVVXdnRyaG1vNEI5dl9tVkU2XzhwX3M0dlRJVTIyN3BPaE1aYVVCRjhXQmwzS1QyVnVvTlMtX0E4ZmZTbl9LUdIB2gFBVV95cUxOX19vMHpiVHZZNXF3WUJHeTFhM3JJbGpEVFl5NVlNN3JNeGVlWEhKU1p0SmUzTEVFNDBSbEpIYVZYZGlrOFc4RHB6NFRZeldBTTZ6YzEtQ1p5OExwSDIxenZ3TndubmVyMXh1OGZud09XNU4xcVQta1oweUhpV1dTRHBWTEJBS0pfeWx0d3o3QnhRMFhSLWwySU80aVVXdnRyaG1vNEI5dl9tVkU2XzhwX3M0dlRJVTIyN3BPaE1aYVVCRjhXQmwzS1QyVnVvTlMtX0E4ZmZTbl9LUQ?oc=5",
+        "source_archive": "01_daily/news/2026-10-12_intake.md",
+        "source_tag": "lane_factor_impulse"
+      },
+      "collides_with": {
+        "path": "tests/fixtures/semantic_frozen_20261014/batch_02.json",
+        "n": 16,
+        "title": "Q2 Earnings, Inflation, Oil Prices to Guide Stock Markets - Rediff MoneyWiz"
+      },
+      "reason": "token_containment_ge_0.85_and_0.60",
+      "replacement": {
+        "n": 90,
+        "title": "Indah Kiat plans debt refinancing: stock pre-market at EUR 0.40 - ad-hoc-news.de",
+        "source_report": "01_daily/news/2026-10-12_intake.md",
+        "source_line": 177,
+        "source_sha256": "1ca8da95ddf81704e10bf6dfdda5edc0286da0dc5e2efeb2ae9e42d6690c9dff",
+        "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZUljajl0TnNkMkxRWEV1ajVrMGVzMDFsYXp0UHk4UHVmdHBiTGhLa0hpQWh0SXVWd1I1a3JqUFY5aHNVdFF4ODFzZUpPUUxwa1J3Nkt5dnRLWjFsR25rel9Pa3h5bkhmb1JZMVVoUDNhRDRIRnhiQ1l6QWJZSHoyTzVEcVhsdTREVkdxN3oxOVlSWVd2aFZOLXpjMzd6bGlYMnB0TUF5SUEyTXJfNnhBVzdjWTVpem5EVkFQZQ?oc=5",
+        "published": "2026-10-12T06:18:14+00:00"
+      }
+    },
+    {
+      "batch": 11,
+      "n": 94,
+      "original": {
+        "n": 94,
+        "title": "‘A Dark Day For Hollywood Labor’ - Paramount-Warner Brothers Mega Merger Approved - WNY Labor Today",
+        "source_report": "01_daily/news/2026-10-13_intake.md",
+        "source_line": 463,
+        "source_sha256": "852a654b720130ccfaa01846eb2896a03e18b35f971a1a6d80413323aaada2d1",
+        "source_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQWW1SOWlHZC1HcmVmSnNfdFVhanE5MXFMNVh2ZGdtZ1Rvd0FKLW84RXhSSWVra0QtaDh6YXkzMTdLS3NEdjY3OGg0LUZjWlE0cl82OGVZZjZzcmFDaVUtOWJaWTR5Y3RHWklhaUJfVUtEbmtQcUluaGl3WWxfLUF1SHI2SWxPcS0yeEIya3lzbVJkVGhxYkV0Z3p1NE4xbS1BbHowYWtqTG1pcjJRYktibURFUnVneUlJcTlVUlNaR1R5RVd6b2lhWjFsYUJrQTlYOVAzRmlGaVE4YUNj?oc=5",
+        "source_published_at": "2026-10-11T18:48:51+00:00"
+      },
+      "collides_with": {
+        "batch": 7,
+        "n": 80,
+        "title": "Dark day for Hollywood labor: Paramount-Warner Bros. mega merger approved - People's World"
+      },
+      "reason": "token_jaccard_ge_0.65",
+      "replacement": {
+        "n": 94,
+        "title": "Is AbbVie (ABBV) Still Undervalued On FDA Approval And Fresh Pipeline Data? - Simply Wall Street",
+        "source_report": "01_daily/news/2026-10-04_intake.md",
+        "source_line": 134,
+        "source_sha256": "7df26e8e3794315c73bb7bac3ae0a89b0a34ccdb7e9faee239a98adbf7c76980",
+        "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOYTFvV29QeDFrbDJSNG1RemUycGVLSV90bHFJZE9Gb2RUS0RtYW9sU2JCRzkzQklZdUJ5eTJRR0hMTUIxaFVwaFVqQ1BxWTN4REIyekRoOFI0RlBnWlE4bU03eWE4dURnUnBXT1pqZzJUWVgwbUxYbHVkNC1oSFZnbFRYOFZFM3NGbXFzVjRMcEFVdEZPM0Z2V2U4aThFV2daendXZ1ZPeU9lU3NXS3ctUWlUU3kyVU9udUQ2aWI2c2tFVVVPZjM3LThzNm0xTnRnOTZNbdIB2gFBVV95cUxQVzBoOS1hTndYQ3BIVE9EeUdOcnRJelVjdzNPSG9NSGpqT050V3k4Q3FnQnRLek5vZFN2NVdtVVRCYTNTYjE4emU3eHFxUjk4clB2alhFMlBZTjN5WTVLVlV5X1JkR2k2SmtYdjNGOFdkaTIxZ29fc3hBcFlDTEg1RGNmOHM2eHZOUkw5RlM5UEMtaEZ3VmViV2xYQlpzcmFzbnQwaWJwdmpSQkdoMV9PU1RuNnBEbmtUbEJjRGhfZGEyRzFsa2haeHlkc1U0MzExRXRsUmJvWUNQdw?oc=5",
+        "published": "2026-10-04T11:25:08+00:00"
+      }
+    },
+    {
+      "batch": 12,
+      "n": 72,
+      "original": {
+        "n": 72,
+        "title": "‘Portugal’s greatest symbol’: Bruno Fernandes backs Cristiano Ronaldo despite walkout - theguardian.com",
+        "source_report": "01_daily/news/2026-10-04_intake.md",
+        "source_line": 238,
+        "source_sha256": "7df26e8e3794315c73bb7bac3ae0a89b0a34ccdb7e9faee239a98adbf7c76980",
+        "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRVlmUmVZalVnTkx1akhHRjJucE1Wc3QwUUNNVUxwVnV2MUVVWmZjZ1JaVzBNdkxlUXdoOWxfZXRwdFdONkkyUi1DV2wtanpVOGE4YVRSYWE2Vm00ZGNZRlhVTUk4SzhyZEphaEdqemk5OGo2cV9TMVBLaFNKUFBlRTZLOEFINl9HaTA5RUlWNmlVTWlwVUZHZFU5WW5tY2JiNnJOUUJBRnBTRUg5RFJWb0FWV2lUVHBzMkE?oc=5",
+        "source_published_at": "2026-10-03T19:02:00+00:00"
+      },
+      "collides_with": {
+        "batch": 12,
+        "n": 6,
+        "title": "'Portugal's greatest symbol' - Fernandes defends Ronaldo after walkout - SportyTV"
+      },
+      "reason": "token_containment_ge_0.85_and_0.60",
+      "replacement": {
+        "n": 72,
+        "title": "THERE'S NOTHING BLACK OR WHITE ABOUT THE INDIA IPO MARKET It has both a speed breaker 🚧 and an accelerator ⚡ So is \"playing the momentum\" the right strategy? Shereen Bhan Prashant Nair Sriram Iyer Hormaz Fatakia #IPO #IndiaIPO #IPOmark - LinkedIn",
+        "source_report": "01_daily/news/2026-10-03_intake.md",
+        "source_line": 59,
+        "source_sha256": "9522f39df1950c8337868b64c9865916cdc81e5abadfee1c40c7560e43ea9ab4",
+        "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdlNxQTFXM1RLY1Y1YVdQVG5MZnZEbmYzRjJ3RDl6UmxhUU1UdjJ4RDBqdmlTbWdfaFY5azljcUlqMVZPTDcxeUtHY21OZFdXM2NWVnNrOG45WEdjSHA1YzZtd2lJa1lXTzNKbmZoTmg2eW5IVERGUzZQY1pHV2tQeWtOYnRyY283M3hpLVFJMkdmS0NlNVBSSmNlYVEzdw?oc=5",
+        "published": "2026-10-03T13:58:08+00:00"
+      }
+    }
+  ],
+  "corrected_input_sha256": {
+    "3": "13e7174383594e2f7af4bb081aa677a9e35a29e20cdf5a34e4de33252a97c83c",
+    "4": "2551734d05971860b948c0ac1c27249445c9ad420edd3d4d1b1b3a9b450574de",
+    "5": "4887a7f49efa0d90ef8116a6d1f2f2f11b75bd15855c3351f3475149313f956c",
+    "6": "69f541688505bc219bf6c52775ffca0b6b9685f2021929bfb76ea947a5581402",
+    "7": "6a4240ce10ec571aa46102f005bd9a1ba7482f781215286122002101d7dcd155",
+    "8": "c31a9d8e45f41d9621cc2ca8fe15ef8bfd35496d3dbe53318b75e3d7d61d6f75",
+    "9": "88f2e84286108605afecf9756a0788d228745a158882a6d1ac45a4d53827c206",
+    "10": "8ba37169d77c497c1dbe4003b3d64c0e54117f6592624b20f8428deafbe713c8",
+    "11": "850b7e87fad0dcc1217f6c94e459bcf5b9f54fd836b7982b004f9617ddc5f9e6",
+    "12": "bb678c7ce6ae5fbabaeb1e39e06e7e0f02490d8c854f9fd03371f493d4eceb73"
+  }
+}
