@@ -36,6 +36,8 @@ def test_predict_attempt_search_then_nosearch_then_skip(monkeypatch, tmp_path):
     monkeypatch.setattr(dc, "_breaker_file", lambda: str(tmp_path / "b.txt"))
     assert ff.predict_attempt(restart=lambda: True) == "nosearch"
     assert ff.predict_attempt(restart=lambda: True) == "skip"
+    ff.clear_predict_shot()
+    assert ff.predict_attempt(restart=lambda: True) == "nosearch"
 
 
 def test_probe_ok_and_restart(monkeypatch, tmp_path):
@@ -223,6 +225,11 @@ def test_wiring_strings():
     assert "gateway.mode set to local" in enable
     assert "skip hung chat ping" in enable
     assert "killing listener on 18789" in enable
+    force = enable.split("FORCE_RESTART — skip hung chat ping", 1)[1]
+    assert force.find("kill_listener") < force.find("restart fullscan-openclaw-gateway")
+    ff_src = (root / "src" / "openclaw_fastfail.py").read_text(encoding="utf-8")
+    assert "timeout=150" in ff_src
+    assert "exceeded 150s" in ff_src
     assert "XDG_RUNTIME_DIR" in reauth
     assert "quality-ok packet has no Grok trace" in orch
     assert "passthrough (deadline)" in orch

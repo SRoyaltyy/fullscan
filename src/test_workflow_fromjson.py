@@ -526,6 +526,20 @@ def test_preopen_all_job_resolves_ubuntu_and_ecs() -> None:
     # The live file must not still carry the #242 escape.
     assert r'[\"self-hosted\"' not in text
     assert "fromJSON('[\"self-hosted\",\"ecs\"]')" in text
+    # Mode 40: the morning button calls Grok. #608 set the default and the
+    # empty-input fallback to grok. deepseek remains a choice that skips
+    # OpenClaw; it is not the default.
+    assert "github.event.inputs.llm_backend || 'grok'" in text
+    assert "github.event.inputs.llm_backend || 'deepseek'" not in text
+    assert "github.event.inputs.llm_backend || 'auto'" not in text
+    backend = text.split("llm_backend:", 1)[1].split("with_book:", 1)[0]
+    assert 'default: "grok"' in backend
+    assert 'default: "deepseek"' not in backend
+    # Mode 43: push, schedule, and the button reach ECS unless ubuntu is
+    # explicit (assert_preopen_job).
+    runner = text.split("runner:", 1)[1].split("run_date:", 1)[0]
+    assert 'default: "ecs"' in runner
+    assert 'default: "ubuntu"' not in runner
 
 
 def test_stock_book_all_fromjson_resolves() -> None:

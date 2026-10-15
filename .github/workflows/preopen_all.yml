@@ -60,7 +60,7 @@ on:
           - tokenhub-glm
           - zhipu-glm-flash
       runner:
-        description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok."
+        description: "ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok. The button, push, and schedule use ecs unless ubuntu is explicit."
         required: false
         default: "ecs"
         type: choice
@@ -76,7 +76,7 @@ on:
         required: false
         default: "false"
       llm_backend:
-        description: "auto = Grok then DeepSeek · grok = Grok only · deepseek = no Grok"
+        description: "auto = Grok then the free model · grok = Grok only · deepseek = skip Grok"
         required: false
         default: "grok"
         type: choice
@@ -531,6 +531,10 @@ jobs:
           OPENCLAW_RESTART_ON_TIMEOUT: "1"
           OPENCLAW_BREAKER_FILE: ${{ runner.temp }}/openclaw_breaker_${{ github.run_id }}.txt
           GROK_ONLY: "0"
+          # Push and schedule have no input. #608 set this to grok so those
+          # runs call OpenClaw. deepseek is an explicit "skip Grok" choice.
+          # Run 38714326944 left the old deepseek default and never called
+          # OpenClaw.
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
           FINVIZ_SKIP_LIVE: "1"
           # 900 let five essays each hold ~16 min. Run 38704557910 died at

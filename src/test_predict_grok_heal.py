@@ -24,6 +24,27 @@ def test_ok_no_retry(monkeypatch):
     assert r["ok"] and g.n == 0
 
 
+def test_spent_shot_does_not_open_another_search(monkeypatch):
+    from src import run_predict
+    monkeypatch.setenv("OPENCLAW_RESTART_ON_TIMEOUT", "1")
+    monkeypatch.setattr(run_predict.config, "openclaw_enabled", lambda: True)
+    monkeypatch.setattr(
+        "src.openclaw_fastfail.predict_attempt", lambda restart=None: "skip")
+    calls = []
+    monkeypatch.setattr(
+        run_predict.deepseek_client, "_openclaw_chat",
+        lambda *a, **k: calls.append(("openclaw", k.get("tools"))))
+    monkeypatch.setattr(
+        run_predict.deepseek_client, "chat",
+        lambda *a, **k: calls.append(("chat", k.get("tools"),
+                                      k.get("force_deepseek"))))
+    monkeypatch.setattr(
+        run_predict.deepseek_client, "_free_primary_ready", lambda: False)
+    assert run_predict._grok_then_free(
+        "r", "u", "2026-10-15", "PREDICT 2026-10-15") == ""
+    assert calls == []
+
+
 def test_empty_retries_grok_only(monkeypatch):
     monkeypatch.setattr(h, "breaker_opened", lambda: False)
     monkeypatch.setattr(h, "reset_breaker", lambda: None)
@@ -115,6 +136,26 @@ def test_glm_trace_is_not_success(monkeypatch):
     assert envs[0]["PREDICT_GROK_REWRITE"] == "1"
     assert envs[0]["OPENCLAW_RESTART_ON_TIMEOUT"] == "1"
     assert "XAI_API_KEY" not in envs[0]
+
+
+def test_empty_backup_does_not_skip_grok_when_gateway_is_set(monkeypatch):
+    """Zhipu/TokenHub 402 must not cancel essays on the ECS gateway."""
+    from pathlib import Path
+    from src import run_preopen_all as rpa
+    monkeypatch.setenv("LLM_BACKEND", "auto")
+    monkeypatch.setenv("GROK_ONLY", "0")
+    monkeypatch.setenv("OPENCLAW_GATEWAY_URL", "http://127.0.0.1:18789")
+    assert rpa._gateway_blocks_essay_skip() is True
+    monkeypatch.delenv("OPENCLAW_GATEWAY_URL")
+    assert rpa._gateway_blocks_essay_skip() is False
+    monkeypatch.setenv("OPENCLAW_GATEWAY_URL", "http://127.0.0.1:18789")
+    monkeypatch.setenv("LLM_BACKEND", "deepseek")
+    assert rpa._gateway_blocks_essay_skip() is False
+    src = Path(__file__).resolve().parent.joinpath("run_preopen_all.py").read_text()
+    assert "Grok essays still run" in src
+    gate = src.split("if not skip_writes and not skip_essays:", 1)[1]
+    gate = gate.split("if not skip_writes:", 1)[0]
+    assert gate.index("_gateway_blocks_essay_skip") < gate.index("_deepseek_credits_ok")
 
 
 def test_ecs_preopen_exports_grok_before_run():

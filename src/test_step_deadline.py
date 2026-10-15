@@ -171,6 +171,21 @@ def test_sector_loop_does_not_start_a_doomed_sector() -> None:
     assert started == list(rsp.FINVIZ_SECTORS)[:2]
 
 
+def test_stock_book_wait_stops_at_the_step_deadline() -> None:
+    """A nested 480s/900s wait must not outlive the parent morning wall."""
+    from src import run_stock_book_all as book
+
+    t0 = time.time()
+    with mock.patch.dict(os.environ, {
+            step_deadline.ENV: f"{time.time() + 2:.0f}"}):
+        code = book._run(
+            [sys.executable, "-c", "import time; time.sleep(30)"],
+            check=False, timeout_s=30)
+    elapsed = time.time() - t0
+    assert code == 124
+    assert elapsed < 10, elapsed
+
+
 if __name__ == "__main__":
     for fn in [
         test_share_is_none_when_unbounded,
@@ -180,6 +195,7 @@ if __name__ == "__main__":
         test_narrowed_sets_and_restores_and_never_extends,
         test_sector_loop_gives_each_sector_a_slice_and_stops_when_spent,
         test_sector_loop_does_not_start_a_doomed_sector,
+        test_stock_book_wait_stops_at_the_step_deadline,
     ]:
         fn()
         print(f"ok {fn.__name__}")

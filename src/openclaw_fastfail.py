@@ -56,11 +56,11 @@ def restart_gateway(run=None) -> bool:
             env=env,
             capture_output=True,
             text=True,
-            timeout=75,
+            timeout=150,
             check=False,
         )
     except subprocess.TimeoutExpired:
-        print("[openclaw-fastfail] gateway restart exceeded 75s", flush=True)
+        print("[openclaw-fastfail] gateway restart exceeded 150s", flush=True)
         return False
     tail = "\n".join(((getattr(proc, "stdout", "") or "")).splitlines()[-4:])
     if tail:
@@ -99,6 +99,20 @@ def _clear_breaker() -> None:
         except OSError:
             pass
     dc.reset_openclaw_breaker("fastfail predict shot")
+
+
+def clear_predict_shot() -> None:
+    """Allow one no-search essay after a heal proves 17+25.
+
+    The shot file is per run. The first nosearch can be spent while the
+    gateway is still wedged. A later 42 must not be followed by a native
+    search turn (run 38720850552).
+    """
+    _restarted, shot = _markers()
+    try:
+        shot.unlink(missing_ok=True)
+    except OSError:
+        pass
 
 
 def predict_attempt(restart=None) -> str:

@@ -326,8 +326,12 @@ def _heal_general_predict(date: str, cmd: list[str], timeout_s: int) -> None:
 
     try:
         def _trace() -> bool:
+            # auto on ECS still has to come back as Grok. deepseek, and
+            # ubuntu after the loopback URL is unset, may keep a free-model
+            # essay.
             if (os.environ.get("LLM_BACKEND") != "grok"
-                    and os.environ.get("GROK_ONLY") != "1"):
+                    and os.environ.get("GROK_ONLY") != "1"
+                    and not _gateway_blocks_essay_skip()):
                 return True
             return _predict_trace_is_grok(date)
 
@@ -340,6 +344,20 @@ def _heal_general_predict(date: str, cmd: list[str], timeout_s: int) -> None:
     if res["ok"] and res["retries"]:
         snapshot_persist(date)
         _land(date, "general_predict", "General market predict (Grok heal)")
+
+
+def _gateway_blocks_essay_skip() -> bool:
+    """An empty Zhipu/TokenHub balance must not cancel Grok essays.
+
+    ``deepseek`` is an explicit skip-Grok choice, so a 402 still skips.
+    ``auto`` and ``grok`` call Grok when OPENCLAW_GATEWAY_URL is set.
+    Ubuntu unsets a loopback URL before this process starts, so a 402
+    there still skips the packet.
+    """
+    backend = (os.environ.get("LLM_BACKEND") or "auto").strip().lower()
+    if backend == "deepseek":
+        return False
+    return bool((os.environ.get("OPENCLAW_GATEWAY_URL") or "").strip())
 
 
 def _deepseek_credits_ok() -> bool:
@@ -754,10 +772,17 @@ def run(date: str | None = None, force: bool = False,
         snapshot_persist(date)
         _land(date, "ab", "AB checklist")
 
-    if not skip_writes and not skip_essays and not _deepseek_credits_ok():
-        print("[preopen-all] skip LLM essays (DeepSeek credits); "
-              "parse still runs if missing")
-        skip_essays = True
+    if not skip_writes and not skip_essays:
+        # Do not call the preflight when the gateway is set. A 402/429
+        # engages the TokenHub fallback inside that ping, and the free
+        # primary is then skipped for the rest of the morning.
+        if _gateway_blocks_essay_skip():
+            print("[preopen-all] gateway is set — not running the "
+                  "DeepSeek preflight; Grok essays still run", flush=True)
+        elif not _deepseek_credits_ok():
+            print("[preopen-all] skip LLM essays (DeepSeek credits); "
+                  "parse still runs if missing")
+            skip_essays = True
 
     if not skip_writes:
         # Parse is required on the day-board and does not need DeepSeek —
@@ -898,7 +923,8 @@ def run(date: str | None = None, force: bool = False,
             and date == _today()):
         grok_lane = (os.environ.get("GROK_ONLY") == "1"
                      or (os.environ.get("LLM_BACKEND") or "").strip().lower()
-                     == "grok")
+                     == "grok"
+                     or _gateway_blocks_essay_skip())
         if grok_lane and not _predict_trace_is_grok(date):
             from . import predict_grok_heal as _pgh
             if _pgh.before_cutoff():
