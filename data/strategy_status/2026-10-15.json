@@ -47,7 +47,7 @@
   }
  },
  "date": "2026-10-15",
- "generated_at": "2026-10-15T08:40:27-04:00",
+ "generated_at": "2026-10-15T08:47:55-04:00",
  "strategies": [
   {
    "buys": [
@@ -5640,13 +5640,12 @@
   },
   {
    "buys": [
-    "VEEV",
-    "SYK",
-    "CDNA",
-    "PACS",
-    "CON",
-    "BLFS",
-    "PCRX"
+    "IT",
+    "FIS",
+    "TOST",
+    "PDFS",
+    "YOU",
+    "SHOO"
    ],
    "family": "flatten_robust",
    "name": "flatten_robust",
