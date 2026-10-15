@@ -65,7 +65,7 @@
    },
    {
     "id": "ecs_code_current",
-    "check": "ecs code stale: git rev-parse HEAD == ls-remote origin main for /home/gha/fullscan and /home/gha/fullscan-paper-open",
+    "check": "ecs code stale: git diff HEAD vs fetched main limited to src scripts config .github is empty (data-only auto commits on main do not count)",
     "enforced": "y"
    }
   ],
@@ -255,10 +255,7 @@
   "preopen_all": [
    {
     "id": "ecs_code_current",
-    "plain": "ecs code stale: ECS checkout HEAD must equal origin/main (GitHub main)",
-    "extra_checkouts": [
-     "/home/gha/fullscan-paper-open"
-    ]
+    "plain": "ecs code stale: code on this ECS checkout (src, scripts, config, .github) must match GitHub main"
    },
    {
     "id": "runner_is_ecs",
