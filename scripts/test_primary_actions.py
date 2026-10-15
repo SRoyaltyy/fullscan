@@ -75,4 +75,63 @@ class PrimaryActionsTests(unittest.TestCase):
   with self.assertRaises(ValueError):OfficialRedirects().redirect_request(None,None,302,'',{},'https://dc.services.visualstudio.com/v2/track')
   self.assertTrue(allowed_public_source('https://www.federalregister.gov/api/v1/documents.json'))
 
+ def test_raw_agency_name_without_directory_id_is_supported(self):
+  one={'title':'Agency rule','document_number':'2026-1','html_url':'https://www.federalregister.gov/documents/1','publication_date':'2026-10-15','type':'Rule','agencies':[{'raw_name':'Unresolved agency'}]}
+  rows,h=fetch_source(SOURCE|{'adapter':'federal_register'},ASOF-timedelta(days=3),ASOF,fetch=lambda u,**kw:(200,json.dumps({'results':[one]}).encode(),{},u))
+  self.assertEqual(rows[0]['issuer'],'Unresolved agency');self.assertEqual(rows[0]['issuer_ids'],[]);self.assertEqual(h['status'],'ok')
+
+ def test_index_date_from_table_and_ofac_url(self):
+  source=SOURCE|{'link_pattern':'/orders/courtorders/.*pdf$'}
+  b=b'<table><tr><td>10/15/26</td><td><a href="/orders/courtorders/101526.pdf">Order list for October 15</a></td></tr></table>'
+  self.assertEqual(index_rows(b,source)[0]['published_at'],'2026-10-15T00:00:00+00:00')
+  source=SOURCE|{'link_pattern':'/recent-actions/[0-9]{8}','url':'https://ofac.treasury.gov/recent-actions'}
+  self.assertEqual(index_rows(b'<a href="/recent-actions/20261015">Sanctions list update today</a>',source)[0]['published_at'],'2026-10-15T00:00:00+00:00')
+
+ def test_revisions_keep_stable_identity_and_previous_payload(self):
+  with tempfile.TemporaryDirectory() as d:
+   l=Ledger(pathlib.Path(d)/'l.db');row=feed_rows(RSS,SOURCE['url'])[0]
+   a,_=l.retain(SOURCE,row,'first');b,f=l.retain(SOURCE,row|{'title':'Revised order 42'},'second')
+   self.assertEqual(a,b);self.assertFalse(f);self.assertEqual(l.documents()[0]['title'],'Revised order 42')
+   old,new=l.db.execute('SELECT previous_payload,new_payload FROM revisions').fetchone();self.assertEqual(json.loads(old)['title'],row['title']);self.assertEqual(json.loads(new)['title'],'Revised order 42');l.close()
+
+ def test_url_alias_dedup_across_sources_and_no_metadata_oscillation(self):
+  with tempfile.TemporaryDirectory() as d:
+   l=Ledger(pathlib.Path(d)/'l.db');row=feed_rows(RSS,SOURCE['url'])[0]
+   a,_=l.retain(SOURCE,row,'first');new=row|{'url':'https://example.gov/new/42'};l.retain(SOURCE,new,'second')
+   other=SOURCE|{'id':'other'};b,f=l.retain(other,new|{'title':'Other portal title','native_id':'other-id'},'third')
+   self.assertEqual(a,b);self.assertFalse(f);l.retain(other,new|{'title':'Other portal title','native_id':'other-id'},'fourth')
+   self.assertEqual(l.documents()[0]['title'],row['title']);self.assertEqual(l.db.execute('SELECT COUNT(*) FROM revisions').fetchone()[0],1);l.close()
+
+ def test_reference_only_channels_excluded_but_policy_publications_kept(self):
+  from build_primary_action_catalog import channel_scope
+  self.assertTrue(channel_scope(SOURCE|{'name':'Euro foreign exchange reference rates'}));self.assertTrue(channel_scope(SOURCE|{'document_type':'farming_grant'}))
+  self.assertIsNone(channel_scope(SOURCE|{'name':'Agency decisions','url':'https://example.gov/publications/decisions/rss.xml'}))
+
+ def test_new_queue_does_not_repeat_and_disabled_sources_leave_current_view(self):
+  with tempfile.TemporaryDirectory() as d:
+   l=Ledger(pathlib.Path(d)/'l.db');out=pathlib.Path(d)/'out';fake=lambda u,**kw:(200,RSS,{},u)
+   collect({'sources':[SOURCE]},l,out,fetch=fake,asof=ASOF);self.assertEqual(len(json.loads((out/'pending_headlines.json').read_text())),1)
+   collect({'sources':[SOURCE]},l,out,fetch=fake,asof=ASOF);self.assertEqual(json.loads((out/'pending_headlines.json').read_text()),[]);self.assertEqual(len(json.loads((out/'current_documents.json').read_text())),1)
+   r=collect({'sources':[SOURCE|{'enabled':False}]},l,out,fetch=fake,asof=ASOF);self.assertEqual(r['current_dated_documents'],0);self.assertEqual(len(l.documents()),1);l.close()
+
+ def test_refresh_fingerprints_and_branch_aware_state_promotion(self):
+  import hashlib
+  from primary_action_ops import refresh_needed,previous_artifact
+  with tempfile.TemporaryDirectory() as d:
+   root=pathlib.Path(d)
+   for p,c in [('config/primary_action_seeds.json','{}'),('src/primary_actions.py','core'),('scripts/build_primary_action_catalog.py','builder'),('data/primary_actions/institution_registry.json','{}')]:
+    dest=root/p;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(c)
+   self.assertTrue(refresh_needed(root));(root/'config/primary_action_sources.json').write_text(json.dumps({'generated_at':datetime.now(timezone.utc).isoformat(),'seed_sha256':hashlib.sha256(b'{}').hexdigest(),'implementation_sha256':hashlib.sha256(b'corebuilder').hexdigest()}));self.assertFalse(refresh_needed(root))
+   (root/'src/primary_actions.py').write_text('changed');self.assertTrue(refresh_needed(root))
+  a={'name':'primary-actions-state','expired':False,'created_at':'2026-10-15','workflow_run':{'head_branch':'codex/primary-action-scanner-20261015'},'id':1}
+  self.assertEqual(previous_artifact([a],'main')['id'],1);self.assertIsNone(previous_artifact([a],'unrelated'))
+  main=a|{'id':2,'created_at':'2026-10-14','workflow_run':{'head_branch':'main'}};self.assertEqual(previous_artifact([a,main],'main')['id'],2)
+
+ def test_hkma_documented_date_filter_and_pagination(self):
+  calls=[];pages=[[{'title':'Adjustment of Base Rate','date':'2026-10-15','link':'https://www.hkma.gov.hk/eng/news/1/'}],[]]
+  def fetch(url,**kw):calls.append(url);return 200,json.dumps({'header':{'success':True},'result':{'records':pages.pop(0)}}).encode(),{},url
+  rows,h=fetch_source(SOURCE|{'adapter':'hkma_press','url':'https://api.hkma.gov.hk/public/press-releases','page_size':1},ASOF-timedelta(days=3),ASOF,fetch=fetch)
+  self.assertEqual(rows[0]['issuer'],'Hong Kong Monetary Authority');self.assertEqual(h['requests'],2);self.assertIn('choose=date',calls[0]);self.assertIn('offset=1',calls[1])
+
 if __name__=='__main__':unittest.main()
+
