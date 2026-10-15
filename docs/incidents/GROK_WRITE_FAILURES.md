@@ -200,7 +200,7 @@ Surveyed 2026-10-15 from the failed and cancelled runs of Pre-Open, Post-Close, 
 
 ### What is already changed, and what is not
 
-#597, #599, and #600 already change modes 1, 2, 3, 8, 22, 25, 26, and 31. Mode 14 is changed only for the GitHub publisher and the 04:10 ET timer; a dead refresh token is still mode 11.
+#597, #599, #600, and #603 are on main. Together they change modes 1, 2, 3, 6, 8, 9, 12, 13, 14, 16, 19, 22, 24, 25, 26, 29, 30, 31, 32, and 33. Mode 39 is PR #604 and is not on main yet. A dead refresh token is still mode 11.
 
 Still owner-only: mode 11 (open the device URL and press Allow), mode 15 if the message is the credits/subscription 403, and mode 27 until a `FULLSCAN_PUSH_TOKEN` secret exists.
 
@@ -208,7 +208,7 @@ Left as they are on purpose: paid DeepSeek and paid `glm-5.3` stay off (17, 18);
 
 ## Fix pass after the catalog
 
-These modes are changed in code now. The ones above that #597 / #599 / #600 already closed stay closed.
+#603 is on main. The bullets through mode 3 are that merge. Mode 39 is this PR (#604) and is not on main yet.
 
 - Mode 9 and the leftover of mode 2: a sector whose breaker file is already open does not sleep 60–120s, and a `/v1/models` 200 does not clear that file. After Grok is empty, free `glm-5.3-flash` may write the sector. Paid DeepSeek stays blocked.
 - Mode 14, the skip half: a token that expires before 06:30 ET is not "fresh", even when more than 90 minutes remain. The 00:41 ET run on 2026-10-15 had 267 minutes left and an expiry of 05:08 ET, which is before the 05:55 Pre-Open. It skipped. A later 17+25 that returns 42 without moving that expiry is not treated as a renew (mode 13). OpenClaw refreshes only an already-expired profile, so the guard nudges that expiry field, calls once more, and restores the file if the expiry still does not move. It does not touch the profile while a Grok job is running.
@@ -234,46 +234,46 @@ Cannot be fixed from this session:
 
 ## Status of every mode
 
-Proof is strict. A run id is listed only when a real morning Pre-Open exercised the fix. Everything else is unproven until that morning. Failure run ids in the catalog above show the bug, not the fix. No morning has completed on #599, #600, or this PR yet. `38704557910` is the 2026-10-15 Pre-Open that held the runner; it is not proof.
+Proof is strict. A run id is listed only when a real morning Pre-Open exercised the fix. Everything else is unproven until that morning. Failure run ids in the catalog above show the bug, not the fix. #603 is on main and no morning has completed on it. This PR is #604. `38704557910` is the 2026-10-15 Pre-Open that held the runner; it is on an older SHA and is not proof.
 
 | # | Short name | Category | Hangs or kills the morning job? | Fix | Proof |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Native-search read timeout, then the breaker | hang | yes | #599 merged | unproven until first morning on fix |
-| 2 | Each sector burns its own timeout, no breaker | timeout | yes | #599 merged; leftover sleep is PR #603 pending | unproven until first morning on fix |
-| 3 | Gateway keeps the 10800s turn after the client gives up | hang | yes | #599 merged; the restart that actually kills the listener is PR #603 pending | unproven until first morning on fix |
+| 2 | Each sector burns its own timeout, no breaker | timeout | yes | #599 merged; leftover sleep is #603 merged | unproven until first morning on fix |
+| 3 | Gateway keeps the 10800s turn after the client gives up | hang | yes | #599 merged; the restart that actually kills the listener is #603 merged | unproven until first morning on fix |
 | 4 | PONG treated as a finished xAI login | auth | yes | already gone from tree | unproven until first morning on fix |
 | 5 | HTTP 500 marks the gateway down for the rest of the run | other | yes | already gone from tree | unproven until first morning on fix |
-| 6 | Config rewrite returns one 127-character body for every sector | other | yes | PR #603 pending | unproven until first morning on fix |
+| 6 | Config rewrite returns one 127-character body for every sector | other | yes | #603 merged | unproven until first morning on fix |
 | 7 | Format check throws out a real essay | other | no | not code: the format contract stays | unproven until first morning on fix |
 | 8 | Backup announced, then posted to OpenClaw again | other | yes | #597 merged | unproven until first morning on fix |
-| 9 | After the breaker, sectors sleep and stay degraded | hang | yes | PR #603 pending | unproven until first morning on fix |
+| 9 | After the breaker, sectors sleep and stay degraded | hang | yes | #603 merged | unproven until first morning on fix |
 | 10 | grok_ok is the reviewer, not the writer | other | no | not code: read the trace; grok_ok is the auditor | unproven until first morning on fix |
 | 11 | Device login never finished | auth | yes | not code: James presses Allow | unproven until first morning on fix |
-| 12 | Device waiter missing the user bus | auth | yes | PR #603 pending | unproven until first morning on fix |
-| 13 | A 17+25 answer of 42 did not move the expiry | auth | yes | PR #603 pending | unproven until first morning on fix |
-| 14 | Six-hour token, and a still-valid token skipped the morning | auth | yes | #599 merged for the 04:10 and 04:40 clocks; the skip-when-it-dies-before-06:30 half is PR #603 pending | unproven until first morning on fix |
+| 12 | Device waiter missing the user bus | auth | yes | #603 merged | unproven until first morning on fix |
+| 13 | A 17+25 answer of 42 did not move the expiry | auth | yes | #603 merged | unproven until first morning on fix |
+| 14 | Six-hour token, and a still-valid token skipped the morning | auth | yes | #599 merged for the 04:10 and 04:40 clocks; the skip-when-it-dies-before-06:30 half is #603 merged | unproven until first morning on fix |
 | 15 | 64-char bearer 401, or Grok credits/subscription 403 | auth | yes | #599 merged for the 64-char 401; not code: Grok credits or subscription | unproven until first morning on fix |
-| 16 | Gateway process down, or gateway.mode missing | other | yes | PR #603 pending | unproven until first morning on fix |
+| 16 | Gateway process down, or gateway.mode missing | other | yes | #603 merged | unproven until first morning on fix |
 | 17 | Paid DeepSeek HTTP 402 | auth | yes | not code: do not enable paid DeepSeek | unproven until first morning on fix |
 | 18 | Paid glm-5.3 HTTP 429 | auth | yes | not code: do not enable paid glm-5.3 | unproven until first morning on fix |
-| 19 | TokenHub read timeout retried until the step dies | timeout | yes | PR #603 pending | unproven until first morning on fix |
+| 19 | TokenHub read timeout retried until the step dies | timeout | yes | #603 merged | unproven until first morning on fix |
 | 20 | One ECS runner, so other Grok jobs wait or get cancelled | other | yes | not code: a second ECS runner cannot be added from here | unproven until first morning on fix |
 | 21 | Backing off a systemd lock exited 1 | other | yes | already gone from tree | unproven until first morning on fix |
 | 22 | Night post-close sits across renew and the morning | timeout | yes | #599 merged | unproven until first morning on fix |
 | 23 | Shared workdir left sparse, or the fetch never finishes | other | yes | already gone from tree | unproven until first morning on fix |
-| 24 | Two writers rewrite openclaw.json in the same minute | other | yes | PR #603 pending | unproven until first morning on fix |
-| 25 | 50-minute step kill revokes the push | timeout | yes | #599 merged; sector and map-heat budgets shrink in PR #603 pending | unproven until first morning on fix |
+| 24 | Two writers rewrite openclaw.json in the same minute | other | yes | #603 merged | unproven until first morning on fix |
+| 25 | 50-minute step kill revokes the push | timeout | yes | #599 merged; sector and map-heat budgets shrink in #603 merged | unproven until first morning on fix |
 | 26 | live_boards sat 480s at the end | timeout | yes | #599 merged | unproven until first morning on fix |
 | 27 | Cancel revokes GITHUB_TOKEN | other | yes | not code: set the FULLSCAN_PUSH_TOKEN secret | unproven until first morning on fix |
 | 28 | Pages upload 403 after the job is already dead | other | yes | not code: follows a cancelled job (mode 27) | unproven until first morning on fix |
-| 29 | Ubuntu cron calls the loopback gateway and burns 50 minutes | hang | yes | PR #603 pending | unproven until first morning on fix |
-| 30 | Late Finviz scrape exits 1 for obeying the cutoff | other | yes | PR #603 pending | unproven until first morning on fix |
+| 29 | Ubuntu cron calls the loopback gateway and burns 50 minutes | hang | yes | #603 merged | unproven until first morning on fix |
+| 30 | Late Finviz scrape exits 1 for obeying the cutoff | other | yes | #603 merged | unproven until first morning on fix |
 | 31 | An evening push starts a morning packet | other | no | #600 merged | unproven until first morning on fix |
-| 32 | A quality-ok packet skips the Grok rewrite | other | no | PR #603 pending | unproven until first morning on fix |
-| 33 | Missing map_heat_research fails the run after Grok wrote | other | yes | PR #603 pending | unproven until first morning on fix |
+| 32 | A quality-ok packet skips the Grok rewrite | other | no | #603 merged | unproven until first morning on fix |
+| 33 | Missing map_heat_research fails the run after Grok wrote | other | yes | #603 merged | unproven until first morning on fix |
 | 34 | FRED DGS30 HTTP 502 | other | no | not code: upstream; the code already falls back to the database | unproven until first morning on fix |
 | 35 | Map-heat f-string SyntaxError | other | yes | already gone from tree | unproven until first morning on fix |
 | 36 | Invalid workflow, zero jobs | other | yes | already gone from tree | unproven until first morning on fix |
 | 37 | Run red, every recorded job green, no preopen job | other | yes | already gone from tree | unproven until first morning on fix |
 | 38 | A person Force-cancels a live Grok pass | other | yes | not code: do not Force-cancel a live pass | unproven until first morning on fix |
-| 39 | 04:40 OAuth guard queues behind Pre-Open and the token expires | auth | yes | PR #603 pending | unproven until first morning on fix |
+| 39 | 04:40 OAuth guard queues behind Pre-Open and the token expires | auth | yes | PR #604 pending | unproven until first morning on fix |
