@@ -140,7 +140,6 @@ def test_publish_contents_puts_waiting_json_without_git():
     os.environ["GITHUB_TOKEN"] = "test-token"
     os.environ.pop("GH_TOKEN", None)
     os.environ["GITHUB_REPOSITORY"] = "SRoyaltyy/fullscan"
-    os.environ["XAI_REAUTH_SEND_CODE_TO_CYRUS"] = "1"
     calls = []
 
     def fake_urlopen(req, timeout=30):
@@ -161,7 +160,6 @@ def test_publish_contents_puts_waiting_json_without_git():
     try:
         assert mod.publish_contents("chore: xAI device code ABCD-EFGH") is True
     finally:
-        os.environ.pop("XAI_REAUTH_SEND_CODE_TO_CYRUS", None)
         for k, v in saved.items():
             if v is None:
                 os.environ.pop(k, None)
@@ -198,56 +196,121 @@ def test_publish_contents_skips_without_token():
                 os.environ[k] = v
 
 
-def test_daemon_does_not_send_the_code_to_cyrus():
-    """James auto-clicks Allow. The waiting user_code is not published."""
+def test_daemon_publishes_code_to_main_before_wait():
+    """James reads the code from main. It must land before wait_pid."""
     mod = _load_script()
     d = Path(tempfile.mkdtemp())
     mod.OUT = d / "01_daily" / "_xai_reauth.json"
     mod.PID = d / "xai_reauth.pid"
-    os.environ.pop("XAI_REAUTH_SEND_CODE_TO_CYRUS", None)
     calls = []
-
-    def start():
-        return 4242, 99
-
-    def read_until(fd, timeout):
-        return (
-            "ABCD-EFGH",
-            "https://accounts.x.ai/oauth2/device",
-            "enter code: ABCD-EFGH",
-        )
+    mod.start_login_pty = lambda: (4242, 99)
+    mod.read_until_code = lambda fd, timeout: (
+        "ABCD-EFGH", "https://accounts.x.ai/oauth2/device", "enter code: ABCD-EFGH")
 
     def publish(msg):
+        body = json.loads(mod.OUT.read_text(encoding="utf-8"))
+        assert body["status"] == "waiting" and body["user_code"] == "ABCD-EFGH"
+        assert body["waiter_pid"] == os.getpid()
+        assert body["host"] == mod.hostname()
         calls.append("publish")
         return True
 
     def wait(pid, timeout):
-        assert pid == 4242
-        assert timeout == mod.WAIT_S
-        body = json.loads(mod.OUT.read_text(encoding="utf-8"))
-        assert body["status"] == "waiting"
-        assert body["user_code"] == "ABCD-EFGH"
-        assert "James auto-clicks Allow" in body["reason"]
-        assert "phone" not in body["reason"].lower()
+        assert pid == 4242 and timeout == mod.WAIT_S
         calls.append("wait")
         return 124
 
-    def gitpush(msg):
-        calls.append("gitpush")
-
-    mod.start_login_pty = start
-    mod.read_until_code = read_until
     mod.publish_contents = publish
     mod.wait_pid = wait
-    mod.push = gitpush
-    mod.os.close = lambda fd: None
-    rc = mod.daemon(True)
-    assert rc == 1
-    assert "publish" not in calls
-    assert calls[0] == "wait"
+    mod.push = lambda msg: calls.append("push")
+    from unittest import mock
+    with mock.patch.object(mod.os, "close", lambda fd: None):
+        assert mod.daemon(True) == 1
+    assert calls[:2] == ["publish", "wait"]
     final = json.loads(mod.OUT.read_text(encoding="utf-8"))
-    assert final["status"] == "needs_reauth"
-    assert final["user_code"] is None
+    assert final["status"] == "needs_reauth" and final["user_code"] is None
+
+
+def _waiting(mod, **kw):
+    base = {
+        "status": "waiting", "user_code": "ABCD-EFGH",
+        "expires_at": (datetime.now(mod.ET) + timedelta(minutes=10)).isoformat(),
+        "waiter_pid": os.getpid(), "host": mod.hostname(),
+    }
+    base.update(kw)
+    return base
+
+
+def test_waiting_live_only_with_live_local_waiter_and_unexpired_code():
+    mod = _load_script()
+    assert mod.waiting_live(_waiting(mod)) is True
+    # dead waiter (GHA reaped it) -> stale
+    assert mod.waiting_live(_waiting(mod, waiter_pid=2 ** 22 + 12345)) is False
+    # other host
+    assert mod.waiting_live(_waiting(mod, host="some-other-box")) is False
+    # expired code
+    past = (datetime.now(mod.ET) - timedelta(minutes=1)).isoformat()
+    assert mod.waiting_live(_waiting(mod, expires_at=past)) is False
+    # legacy file without waiter_pid/host (2026-10-15 3CMT-SMT4) -> stale
+    legacy = _waiting(mod)
+    legacy.pop("waiter_pid"); legacy.pop("host")
+    assert mod.waiting_live(legacy) is False
+    assert mod.waiting_live(_waiting(mod, expires_at=None)) is False
+    assert mod.waiting_live({"status": "ok"}) is False
+
+
+def test_check_starts_fresh_over_stale_waiting_file():
+    mod = _load_script()
+    d = Path(tempfile.mkdtemp())
+    mod.OUT = d / "_xai_reauth.json"
+    mod.PID = d / "xai_reauth.pid"
+    mod.OUT.write_text(json.dumps(_waiting(mod, waiter_pid=2 ** 22 + 12345)))
+    spawned = []
+    mod.models_check = lambda: (1, "expired")
+    mod.grok_busy = lambda: False
+    mod.push = lambda msg: None
+    mod.spawn_daemon = lambda force: spawned.append(force) or 0
+    assert mod.check(False) == 0
+    assert spawned == [False]
+
+
+def test_publish_contents_retries_on_conflict():
+    mod = _load_script()
+    d = Path(tempfile.mkdtemp())
+    mod.OUT = d / "_xai_reauth.json"
+    mod.OUT.write_text(json.dumps(_waiting(mod)))
+    os.environ["GITHUB_TOKEN"] = "t"
+    seq = [409, 409, 201]
+    puts = []
+    mod._contents_sha = lambda url, h: "sha%d" % len(puts)
+    def put(url, h, payload):
+        puts.append(payload.get("sha"))
+        return seq[len(puts) - 1]
+    mod._contents_put = put
+    mod._purge_jsdelivr = lambda: None
+    from unittest import mock
+    try:
+        with mock.patch.object(mod.time, "sleep", lambda s: None):
+            assert mod.publish_contents("chore: xAI device code ABCD-EFGH") is True
+    finally:
+        os.environ.pop("GITHUB_TOKEN", None)
+    assert len(puts) == 3
+
+
+def test_wait_shorter_than_code_life():
+    mod = _load_script()
+    assert 15 * 60 <= mod.WAIT_S < 30 * 60
+
+
+def test_workflow_fails_red_unless_final_status_ok():
+    wf = (Path(__file__).resolve().parent.parent / ".github" / "workflows"
+          / "xai_reauth.yml").read_text(encoding="utf-8")
+    assert 'if [ "$FINAL" != "ok" ]' in wf
+    assert "exit 1" in wf.split('if [ "$FINAL" != "ok" ]', 1)[1][:200]
+    import re as _re
+    tmo = int(_re.search(r"timeout-minutes:\s*(\d+)", wf).group(1))
+    mod = _load_script()
+    assert tmo * 60 > mod.WAIT_S + 120
 
 
 if __name__ == "__main__":
