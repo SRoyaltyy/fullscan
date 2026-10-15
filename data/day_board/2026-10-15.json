@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T06:47:12.406592-04:00",
+  "generated_at": "2026-10-15T06:58:03.707858-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -57,7 +57,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 278827,
+          "size": 277618,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -68,10 +68,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 18186,
+          "size": 18216,
           "said": "MAP HEAT \u2014 2026-10-15",
           "bullets": [
-            "Export `finviz_2026-10-15.csv` \u00b7 11616 names \u00b7 generated 2026-10-15T06:37:37.848810-04:00",
+            "Export `finviz_2026-10-14.csv` \u00b7 11616 names \u00b7 generated 2026-10-15T04:25:29.692568-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -115,7 +115,7 @@
           "size": 11873,
           "said": "Finviz Daily Digest \u2014 2026-10-15",
           "bullets": [
-            "_Generated 2026-10-15T06:34:19.268602-04:00 \u00b7 export=data/exports/finviz_2026-10-15.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
+            "_Generated 2026-10-15T04:22:04.005103-04:00 \u00b7 export=data/exports/finviz_2026-10-14.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_",
             "Major indices (live quote page)"
           ]
         },
@@ -229,7 +229,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 278827,
+          "size": 277618,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -300,7 +300,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 41765,
+          "size": 41707,
           "said": "61 ticker actions \u00b7 4 events \u00b7 565 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
@@ -540,8 +540,8 @@
           "path": "01_daily/weather/2026-10-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9330 vix=calm yields=falling",
-          "size": 9330,
+          "reason": "sectors=11 bytes=9327 vix=calm yields=falling",
+          "size": 9327,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -584,16 +584,16 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8349619,
+          "size": 8359081,
           "said": "25 rows",
           "bullets": [
-            "BIIB, ICLR, ATRC, PFE, AUPH, CVLT, WAY, ROST"
+            "BIIB, ICLR, PFE, ATRC, CDNA, WAY, CVLT, DRH"
           ]
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "BIIB, ICLR, ATRC, PFE, AUPH"
+        "BIIB, ICLR, PFE, ATRC, CDNA"
       ]
     },
     {
@@ -614,7 +614,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 41765,
+          "size": 41707,
           "said": "61 ticker actions \u00b7 4 events \u00b7 565 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
@@ -712,7 +712,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 41765,
+          "size": 41707,
           "said": "61 ticker actions \u00b7 4 events \u00b7 565 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, TXO BUY, OXY BUY, FANG BUY",
           "bullets": [
             "BUY COP",
@@ -753,8 +753,8 @@
           "path": "01_daily/weather/2026-10-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9330 vix=calm yields=falling",
-          "size": 9330,
+          "reason": "sectors=11 bytes=9327 vix=calm yields=falling",
+          "size": 9327,
           "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Consumer Defensive, Energy, Industrials, Real Estate, Technology, Utilities"
@@ -767,10 +767,10 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2629",
-          "size": 8349619,
+          "size": 8359081,
           "said": "25 rows",
           "bullets": [
-            "BIIB, ICLR, ATRC, PFE, AUPH, CVLT, WAY, ROST"
+            "BIIB, ICLR, PFE, ATRC, CDNA, WAY, CVLT, DRH"
           ]
         },
         {
@@ -783,7 +783,7 @@
           "size": 2241897,
           "said": "204 rows",
           "bullets": [
-            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, WAY"
+            "HALO, ONC, LLY, HRMY, ETON, ARQT, AVAH, CORT"
           ]
         },
         {
@@ -806,7 +806,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1476285,
+          "size": 1475489,
           "said": "1d BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
@@ -817,10 +817,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 84353,
+          "size": 84297,
           "said": "Stock book \u2014 2026-10-15",
           "bullets": [
-            "_Generated 2026-10-15T06:44:39.574250-04:00_",
+            "_Generated 2026-10-15T06:28:12.415981-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -884,7 +884,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1476285,
+          "size": 1475489,
           "said": "1d BUY HITI, CON, SGRY, AMN, ASTH, MD, PACS, NTAP \u00b7 SELL NEOV, OKLO, FCEL, NNDM, POWL, EOSE",
           "bullets": []
         },
@@ -3740,6 +3740,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-10-15\n_Generated 2026-10-15T10:47:10 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$93,435.90** (after 09:30 $93,435.90 \u00b7 after 16:00 $102,914.14)\n- Prior close **$102,922.41** \u00b7 09:30 **$102,922.41** \u00b7 overnight **$+0.00** \u00b7 session **$-8.27** \u00b7 16:00 **$102,914.14**\n- Overnight lots **1** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$102,914.14** \u00b7 2026-10-15 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overni"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T06:58:01.986715-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-10-15_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 97061,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-10-15_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11897,
+          "preview": "# Finviz Daily Digest \u2014 2026-10-15\n_Generated 2026-10-15T04:22:04.005103-04:00 \u00b7 export=data/exports/finviz_2026-10-14.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, scraped_at, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-10-15\n_Generated 2026-10-15T04:22:04.005103-04:00 \u00b7 export=data/exports/finviz_2026-10-14.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2046_"
     }
   ],
   "href": {

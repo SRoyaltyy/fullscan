@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T06:37:37.898265-04:00",
+  "generated_at": "2026-10-15T06:58:01.926468-04:00",
   "run_id": "38714326944",
   "runner": "GitHub Actions 1000030400",
   "all_ok": false,
@@ -184,7 +184,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-10-15_actions.json",
-        "size": 41765
+        "size": 41707
       },
       {
         "kind": "finviz_digest",
@@ -212,7 +212,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-10-15_map_heat.json",
-        "size": 278827
+        "size": 277618
       },
       {
         "kind": "map_heat_baseline",
