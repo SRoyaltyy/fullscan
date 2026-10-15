@@ -1,7 +1,7 @@
 {
   "date": "2026-10-15",
   "policy": "flatten_robust",
-  "generated": "2026-10-15T14:10:25",
+  "generated": "2026-10-15T14:23:26",
   "cash": 100010.69,
   "io": [
     {
@@ -12,10 +12,10 @@
       "entry_date": "2026-10-12",
       "last_px": 197.51,
       "yday_px": 197.51,
-      "open_px": 195.77,
-      "overnight": -43.5,
-      "pct": -0.881,
-      "mv": 4894.25,
+      "open_px": 194.925,
+      "overnight": -64.62,
+      "pct": -1.309,
+      "mv": 4873.12,
       "exit_date": "2026-10-15",
       "reason": ""
     },
@@ -27,10 +27,10 @@
       "entry_date": "2026-10-12",
       "last_px": 26.41,
       "yday_px": 26.41,
-      "open_px": 28.365,
-      "overnight": 365.58,
-      "pct": 7.402,
-      "mv": 5304.26,
+      "open_px": 28.125,
+      "overnight": 320.71,
+      "pct": 6.494,
+      "mv": 5259.38,
       "exit_date": "2026-10-15",
       "reason": ""
     }
