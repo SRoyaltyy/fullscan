@@ -12,6 +12,14 @@
       "standing": false,
       "source": "run",
       "note": "day record kept; no order sent"
+    },
+    {
+      "at": "2026-10-14T23:23:25.906411-04:00",
+      "status": "missed_deadline",
+      "submit": false,
+      "standing": false,
+      "source": "run",
+      "note": "day record kept; no order sent"
     }
   ]
 }
