@@ -1,8 +1,8 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T04:23:13.556183-04:00",
+  "generated_at": "2026-10-15T04:25:29.692568-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-10-15.csv",
+  "export": "finviz_2026-10-14.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,7 +8935,7 @@
   ],
   "ticker_news": [
     {
-      "time": "6 min",
+      "time": "9 min",
       "title": "Nvidia stock sinks as chip sell-off deepens on hot inflation data",
       "url": "https://finance.yahoo.com/markets/stocks/article/nvidia-stock-sinks-as-chip-sell-off-deepens-on-hot-inflation-data-203235137.html",
       "source": "Yahoo Finance",
@@ -8948,7 +8948,7 @@
       ]
     },
     {
-      "time": "22 min",
+      "time": "24 min",
       "title": "Deepening tech sell-off drags stocks lower as major markets slide",
       "url": "https://finance.yahoo.com/markets/stocks/articles/deepening-tech-sell-off-drags-041902749.html",
       "source": "Euronews",
@@ -8957,7 +8957,7 @@
       ]
     },
     {
-      "time": "23 min",
+      "time": "25 min",
       "title": "Compass Lexecon Continues to Expand Competition Expertise With Appointment of Stephane Dewulf as Head of Brussels",
       "url": "/news/402786/compass-lexecon-continues-to-expand-competition-expertise-with-appointment-of-stephane-dewulf-as-head-of-brussels",
       "source": "GlobeNewswire",
@@ -8966,7 +8966,7 @@
       ]
     },
     {
-      "time": "23 min",
+      "time": "25 min",
       "title": "EXIT-CVD research consortium launches clinical studies to transform cardiovascular care across Europe",
       "url": "/news/402787/exit-cvd-research-consortium-launches-clinical-studies-to-transform-cardiovascular-care-across-europe",
       "source": "GlobeNewswire",
@@ -8975,7 +8975,7 @@
       ]
     },
     {
-      "time": "29 min",
+      "time": "32 min",
       "title": "SHOP Stock Heads For 4th Green Week: Analysts See Up To 10% Upside For Shopify Ahead Of Earnings",
       "url": "https://finance.yahoo.com/markets/stocks/articles/shop-stock-heads-4th-green-075304452.html",
       "source": "Stocktwits",
@@ -8985,7 +8985,7 @@
       ]
     },
     {
-      "time": "31 min",
+      "time": "33 min",
       "title": "Norway's sovereign wealth fund should invest in major defence groups, commission concludes",
       "url": "https://finance.yahoo.com/economy/policy/articles/norways-wealth-fund-set-overhaul-010618973.html",
       "source": "Reuters",
@@ -8995,7 +8995,7 @@
       ]
     },
     {
-      "time": "31 min",
+      "time": "33 min",
       "title": "Governments globally to turn to non-dollar bonds amid AI-driven liquidity crunch, Citi banker says",
       "url": "https://finance.yahoo.com/markets/currencies/articles/sovereign-funds-turn-non-dollar-062147304.html",
       "source": "Reuters",
@@ -9004,7 +9004,7 @@
       ]
     },
     {
-      "time": "41 min",
+      "time": "43 min",
       "title": "Global chip sell-off deepens as South Korean market plunges",
       "url": "https://finance.yahoo.com/markets/stocks/article/global-chip-sell-off-deepens-as-south-korean-market-plunges-024927049.html",
       "source": "Yahoo Finance",
@@ -9017,7 +9017,7 @@
       ]
     },
     {
-      "time": "42 min",
+      "time": "44 min",
       "title": "European shares trip on global tech bump and U.S. inflation spike",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/european-shares-trip-global-tech-074048177.html",
       "source": "Investing.com",
@@ -9027,7 +9027,7 @@
       ]
     },
     {
-      "time": "46 min",
+      "time": "49 min",
       "title": "TSMC Open to Working With Terafab But Must Control Plants",
       "url": "https://finance.yahoo.com/technology/articles/tsmc-open-working-terafab-must-073615782.html",
       "source": "Bloomberg",
@@ -9037,7 +9037,7 @@
       ]
     },
     {
-      "time": "48 min",
+      "time": "50 min",
       "title": "Taiwan president calls for Micron, workers to negotiate 'sincerely' ahead of possible strike",
       "url": "https://finance.yahoo.com/news/taiwan-president-calls-micron-workers-051325499.html",
       "source": "Reuters",
@@ -9046,7 +9046,7 @@
       ]
     },
     {
-      "time": "49 min",
+      "time": "51 min",
       "title": "Elon Musk Sees SpaceX Topping $100 Trillion In Under 10 Years  Retail Eyes Tesla Merger Reveal At Roadster Event",
       "url": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-sees-spacex-topping-073401877.html",
       "source": "Stocktwits",
@@ -9056,7 +9056,7 @@
       ]
     },
     {
-      "time": "55 min",
+      "time": "57 min",
       "title": "Michael Burry Warns Wall Streets Pain Trade Can Last As Mag 7 Weakness Could Deepen Red October Call",
       "url": "https://finance.yahoo.com/markets/stocks/articles/michael-burry-warns-wall-street-072757968.html",
       "source": "Stocktwits",
@@ -9149,9 +9149,9 @@
       "url": "https://finance.yahoo.com/markets/stocks/articles/really-driving-dell-boom-barclays-065253449.html",
       "source": "BeInCrypto",
       "tickers": [
+        "HPE",
         "DELL",
         "NTAP",
-        "HPE",
         "BCS"
       ]
     },
@@ -9217,9 +9217,9 @@
       "source": "Stocktwits",
       "tickers": [
         "ASTS",
-        "T",
         "VZ",
-        "TMUS"
+        "TMUS",
+        "T"
       ]
     },
     {
@@ -9229,8 +9229,8 @@
       "source": "Stocktwits",
       "tickers": [
         "NVDA",
-        "AVGO",
         "QCOM",
+        "AVGO",
         "GOOGL",
         "GOOG"
       ]
@@ -9387,7 +9387,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Ericsson announces simplification of Group structure and changes to the Executive Team",
       "url": "/news/402777/ericsson-announces-simplification-of-group-structure-and-changes-to-the-executive-team",
       "source": "PR Newswire",
@@ -9396,7 +9396,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Will SpaceX Be Worth $100 Trillion Within 10 Years? Musk Says Probably",
       "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-worth-100-trillion-within-052340858.html",
       "source": "BeInCrypto",
@@ -9828,39 +9828,38 @@
   ],
   "major_news_tickers": [
     "NVDA",
-    "CRWV",
     "SPGI",
-    "SKHY",
     "SPCX",
     "GOOGL",
+    "SKHY",
+    "CRWV",
     "TSLA",
     "GOOG",
     "TSM",
-    "ASML",
     "AAPL",
+    "ASML",
     "ORCL",
     "MU",
     "RKLB",
     "AMAT",
     "BAC",
     "AMZN",
-    "C",
     "META",
-    "AVGO",
     "JPM",
-    "HPE",
+    "AVGO",
     "SOXX",
-    "DELL",
+    "C",
     "AMD",
+    "CMTL",
     "ASTS",
     "BABA",
     "TTE",
-    "CMTL",
+    "DELL",
     "DIS",
     "ERIC",
+    "HPE",
     "LMT",
     "MRK",
-    "MRVL",
     "MSFT",
     "PFE",
     "SPY",
@@ -10412,7 +10411,7 @@
       "company": "Amazon.com Inc",
       "datetime": "2026-10-30T12:00:00",
       "session": "BMO",
-      "mcap": 2698520.0748197613,
+      "mcap": 2699490.968207393,
       "eps_est": 1.8233
     },
     {
@@ -10880,5 +10879,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 195,
   "earnings_window_count": 523,
-  "overlay_at": "2026-10-15T04:23:13.556183-04:00"
+  "overlay_at": "2026-10-15T04:25:29.692568-04:00"
 }

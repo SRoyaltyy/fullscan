@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-10-15
 
-Export `finviz_2026-10-15.csv` · 11616 names · generated 2026-10-15T04:23:13.556183-04:00
+Export `finviz_2026-10-14.csv` · 11616 names · generated 2026-10-15T04:25:29.692568-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -280,19 +280,19 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 6 min **SKHY,MU,MRVL,ORCL,ASML** Nvidia stock sinks as chip sell-off deepens on hot inflation data (Yahoo Finance)
-- 22 min **SKHY** Deepening tech sell-off drags stocks lower as major markets slide (Euronews)
-- 23 min **FCN** Compass Lexecon Continues to Expand Competition Expertise With Appointment of Stephane Dewulf as Head of Brussels (GlobeNewswire)
-- 23 min **PHG** EXIT-CVD research consortium launches clinical studies to transform cardiovascular care across Europe (GlobeNewswire)
-- 29 min **SHOP,JEF** SHOP Stock Heads For 4th Green Week: Analysts See Up To 10% Upside For Shopify Ahead Of Earnings (Stocktwits)
-- 31 min **LMT,BA** Norway's sovereign wealth fund should invest in major defence groups, commission concludes (Reuters)
-- 31 min **C** Governments globally to turn to non-dollar bonds amid AI-driven liquidity crunch, Citi banker says (Reuters)
-- 41 min **SKHY,CRWV,MU,INTC,AMD** Global chip sell-off deepens as South Korean market plunges (Yahoo Finance)
-- 42 min **STM,ASML** European shares trip on global tech bump and U.S. inflation spike (Investing.com)
-- 46 min **TSM,TSLA** TSMC Open to Working With Terafab But Must Control Plants (Bloomberg)
-- 48 min **MU** Taiwan president calls for Micron, workers to negotiate 'sincerely' ahead of possible strike (Reuters)
-- 49 min **SPCX,TSLA** Elon Musk Sees SpaceX Topping $100 Trillion In Under 10 Years  Retail Eyes Tesla Merger Reveal At Roadster Event (Stocktwits)
-- 55 min **QQQ** Michael Burry Warns Wall Streets Pain Trade Can Last As Mag 7 Weakness Could Deepen Red October Call (Stocktwits)
+- 9 min **SKHY,MU,MRVL,ORCL,ASML** Nvidia stock sinks as chip sell-off deepens on hot inflation data (Yahoo Finance)
+- 24 min **SKHY** Deepening tech sell-off drags stocks lower as major markets slide (Euronews)
+- 25 min **FCN** Compass Lexecon Continues to Expand Competition Expertise With Appointment of Stephane Dewulf as Head of Brussels (GlobeNewswire)
+- 25 min **PHG** EXIT-CVD research consortium launches clinical studies to transform cardiovascular care across Europe (GlobeNewswire)
+- 32 min **SHOP,JEF** SHOP Stock Heads For 4th Green Week: Analysts See Up To 10% Upside For Shopify Ahead Of Earnings (Stocktwits)
+- 33 min **LMT,BA** Norway's sovereign wealth fund should invest in major defence groups, commission concludes (Reuters)
+- 33 min **C** Governments globally to turn to non-dollar bonds amid AI-driven liquidity crunch, Citi banker says (Reuters)
+- 43 min **SKHY,CRWV,MU,INTC,AMD** Global chip sell-off deepens as South Korean market plunges (Yahoo Finance)
+- 44 min **STM,ASML** European shares trip on global tech bump and U.S. inflation spike (Investing.com)
+- 49 min **TSM,TSLA** TSMC Open to Working With Terafab But Must Control Plants (Bloomberg)
+- 50 min **MU** Taiwan president calls for Micron, workers to negotiate 'sincerely' ahead of possible strike (Reuters)
+- 51 min **SPCX,TSLA** Elon Musk Sees SpaceX Topping $100 Trillion In Under 10 Years  Retail Eyes Tesla Merger Reveal At Roadster Event (Stocktwits)
+- 57 min **QQQ** Michael Burry Warns Wall Streets Pain Trade Can Last As Mag 7 Weakness Could Deepen Red October Call (Stocktwits)
 - 1 hour **HG** Antofagasta Q3 copper output rises 7%, issues 2027 production guidance (Investing.com)
 - 1 hour **TSM** TSM Stock Still Caught In AI Chip Rout Despite Record Q3 Profit And Bright Outlook: Retail Stays Bullish (Stocktwits)
 - 1 hour **BABA** Bernstein is watching these two Chinese internet stocks amid growing AI interest (Investing.com)
@@ -301,7 +301,7 @@ COLD (1w):
 - 1 hour **CRNC** Cerence AI and Geely Advance Human-Machine Interaction Through Robotics Technology Services Partnership (GlobeNewswire)
 - 1 hour **GOOGL,GOOG** OpenAIs British staff handed £800,000 each (The Telegraph)
 - 1 hour **SPCX,AMZN,DIS,IMAX,COF** The Biggest 'Schumps:' From SpaceX to IMAX, We Scored the Disruptors (Barrons.com)
-- 1 hour **DELL,NTAP,HPE,BCS** Whats Really Driving Dells Boom? Barclays Has a Different Answer (BeInCrypto)
+- 1 hour **HPE,DELL,NTAP,BCS** Whats Really Driving Dells Boom? Barclays Has a Different Answer (BeInCrypto)
 - 1 hour **FUN** FUN Stock Heads For Worst Week Since COVID-19 Pandemic: Rider Death, Financial Woes Pile Up Ahead Of Earnings (Stocktwits)
 - 1 hour **TSM** Deepening tech sell-off drags stocks lower as major markets slide (Euronews)
 - 1 hour **V** Barclaycard Payments integrates Visa Unified Checkout in UK (Electronic Payments)
