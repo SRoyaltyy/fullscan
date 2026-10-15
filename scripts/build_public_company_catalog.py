@@ -13,7 +13,7 @@ def query_text(limit):
     # Snapshot bytes, not the service's transient row order, pin this candidate.
     return """SELECT DISTINCT ?company ?companyLabel ?companyDescription ?industry ?industryLabel
 WHERE {
-  { SELECT ?company ?industry WHERE { VALUES ?type { wd:Q783794 wd:Q4830453 wd:Q891723 } ?company wdt:P31 ?type; wdt:P452 ?industry. } LIMIT """+str(limit)+""" }
+  { SELECT ?company ?industry WHERE { VALUES ?type { wd:Q783794 wd:Q4830453 wd:Q891723 } ?company wdt:P31 ?type. ?article schema:about ?company; schema:isPartOf <https://en.wikipedia.org/>. OPTIONAL { ?company wdt:P452 ?industry. } } LIMIT """+str(limit)+""" }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
 """
@@ -41,7 +41,7 @@ def build(output,limit):
     for row in bindings:
         uri=value(row,"company");qid=uri.rsplit("/",1)[-1]
         name=value(row,"companyLabel");industry=value(row,"industryLabel")
-        if not qid.startswith("Q") or not name or name==qid or not industry:continue
+        if not qid.startswith("Q") or not name or name==qid or not (industry or value(row,"companyDescription")):continue
         target=companies.setdefault(qid,{"id":qid,"Company":name,
             "description":value(row,"companyDescription"),"tickers":set(),"industries":set()})
         target["tickers"].add(value(row,"ticker"));target["industries"].add(industry)
