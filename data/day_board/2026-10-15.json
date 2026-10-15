@@ -1,6 +1,6 @@
 {
   "date": "2026-10-15",
-  "generated_at": "2026-10-15T07:19:12.198523-04:00",
+  "generated_at": "2026-10-15T07:19:54.691985-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1034,24 +1034,6 @@
     }
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-10-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-10-15T04:37:51.304620-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-10-15_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1123110,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime (offline retry)",
@@ -3701,6 +3683,31 @@
         }
       ],
       "preview": "keys: date, generated_at, summary, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-10-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-10-15T07:19:53.100525-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-10-15_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 35309,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-10-15_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 35309,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-10-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "href": {
