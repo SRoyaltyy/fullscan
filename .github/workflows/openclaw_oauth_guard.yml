@@ -2,7 +2,8 @@ name: OpenClaw OAuth renew + gateway guard
 
 # Keeps OpenClaw on the SuperGrok OAuth login (no XAI_API_KEY, no paid
 # inference) and proves the gateway answers a real completion before the
-# 05:55 ET Pre-Open. Red run = renewal or guard failed -> DM Cyrus.
+# 05:55 ET Pre-Open. A dead refresh prints a device URL. James
+# auto-clicks Allow. Do not DM Cyrus and do not send him the code.
 on:
   push:
     branches: [main]

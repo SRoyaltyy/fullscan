@@ -140,6 +140,7 @@ def test_publish_contents_puts_waiting_json_without_git():
     os.environ["GITHUB_TOKEN"] = "test-token"
     os.environ.pop("GH_TOKEN", None)
     os.environ["GITHUB_REPOSITORY"] = "SRoyaltyy/fullscan"
+    os.environ["XAI_REAUTH_SEND_CODE_TO_CYRUS"] = "1"
     calls = []
 
     def fake_urlopen(req, timeout=30):
@@ -160,6 +161,7 @@ def test_publish_contents_puts_waiting_json_without_git():
     try:
         assert mod.publish_contents("chore: xAI device code ABCD-EFGH") is True
     finally:
+        os.environ.pop("XAI_REAUTH_SEND_CODE_TO_CYRUS", None)
         for k, v in saved.items():
             if v is None:
                 os.environ.pop(k, None)
@@ -196,17 +198,13 @@ def test_publish_contents_skips_without_token():
                 os.environ[k] = v
 
 
-def test_daemon_publishes_user_code_before_wait_pid():
-    """GitHub must see status=waiting before the 12-minute poll.
-
-    The old order wrote the code on the box, git-pushed (invalid
-    credentials), then wait_pid. Contents API ran only after that
-    returned, often as needs_reauth with user_code cleared.
-    """
+def test_daemon_does_not_send_the_code_to_cyrus():
+    """James auto-clicks Allow. The waiting user_code is not published."""
     mod = _load_script()
     d = Path(tempfile.mkdtemp())
     mod.OUT = d / "01_daily" / "_xai_reauth.json"
     mod.PID = d / "xai_reauth.pid"
+    os.environ.pop("XAI_REAUTH_SEND_CODE_TO_CYRUS", None)
     calls = []
 
     def start():
@@ -220,18 +218,17 @@ def test_daemon_publishes_user_code_before_wait_pid():
         )
 
     def publish(msg):
-        body = json.loads(mod.OUT.read_text(encoding="utf-8"))
-        assert body["status"] == "waiting"
-        assert body["user_code"] == "ABCD-EFGH"
-        assert body["verification_uri"].endswith("user_code=ABCD-EFGH")
-        assert body.get("expires_at")
-        assert "ABCD-EFGH" in msg
         calls.append("publish")
         return True
 
     def wait(pid, timeout):
         assert pid == 4242
         assert timeout == mod.WAIT_S
+        body = json.loads(mod.OUT.read_text(encoding="utf-8"))
+        assert body["status"] == "waiting"
+        assert body["user_code"] == "ABCD-EFGH"
+        assert "James auto-clicks Allow" in body["reason"]
+        assert "phone" not in body["reason"].lower()
         calls.append("wait")
         return 124
 
@@ -246,8 +243,8 @@ def test_daemon_publishes_user_code_before_wait_pid():
     mod.os.close = lambda fd: None
     rc = mod.daemon(True)
     assert rc == 1
-    assert calls[:2] == ["publish", "wait"]
-    assert calls.index("wait") < calls.index("gitpush")
+    assert "publish" not in calls
+    assert calls[0] == "wait"
     final = json.loads(mod.OUT.read_text(encoding="utf-8"))
     assert final["status"] == "needs_reauth"
     assert final["user_code"] is None

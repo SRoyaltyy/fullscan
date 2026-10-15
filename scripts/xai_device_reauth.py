@@ -9,7 +9,8 @@ The GH job must NOT occupy the one ECS runner for 15 minutes. This script:
              publish status=waiting + user_code, THEN wait ≤12 min for approval.
              Git push is not the publish path (ECS returns invalid credentials).
 
-Phone app polls the public JSON and one-taps accounts.x.ai/oauth2/device?user_code=.
+James auto-clicks Allow. Do not publish the user_code for Cyrus's phone.
+Set XAI_REAUTH_SEND_CODE_TO_CYRUS=1 only to restore that backup.
 """
 from __future__ import annotations
 
@@ -165,13 +166,27 @@ def _contents_put(url: str, headers: dict, payload: dict) -> int:
         return 0
 
 
+def send_code_to_cyrus() -> bool:
+    """The phone backup. Off. James auto-clicks Allow."""
+    return os.environ.get("XAI_REAUTH_SEND_CODE_TO_CYRUS", "") == "1"
+
+
 def publish_contents(message: str) -> bool:
     """PUT 01_daily/_xai_reauth.json via the GitHub Contents API.
 
     ECS git fetch/push returns invalid credentials, so this is the path that
-    lands the file on main. Call it as soon as status=waiting and user_code
-    are on disk, before wait_pid. The phone polls GitHub, not the ECS disk.
+    lands the file on main. The waiting user_code used to go out here so
+    Cyrus's phone could tap Allow. That backup is off unless
+    XAI_REAUTH_SEND_CODE_TO_CYRUS=1. James auto-clicks Allow.
     """
+    try:
+        preview = json.loads(OUT.read_text(encoding="utf-8")) if OUT.is_file() else {}
+    except (OSError, json.JSONDecodeError):
+        preview = {}
+    if preview.get("user_code") and not send_code_to_cyrus():
+        print("[reauth] not sending the device code to Cyrus — James auto-clicks Allow",
+              flush=True)
+        return False
     token = _github_token()
     if not token:
         print("[reauth] contents publish skipped: no GITHUB_TOKEN", flush=True)
@@ -466,18 +481,20 @@ def daemon(force: bool) -> int:
         "status": "waiting",
         "oauth": "FAIL",
         "pong_ok": None,
-        "reason": "Approve this code on the phone at accounts.x.ai",
+        "reason": "James auto-clicks Allow; not sending the code to Cyrus",
         "user_code": code,
         "verification_uri": complete_uri(code, uri),
         "expires_at": expires,
         "source": "xai_device_reauth",
         "pid": pid,
     })
-    # Phone/Claw reads GitHub, not this box. Publish status=waiting +
-    # user_code + verification_uri before the ~12 minute wait_pid.
-    # Do not git-push here: ECS returns invalid credentials and that
-    # call used to run out the clock before any Contents API publish.
-    publish_contents(f"chore: xAI device code {code}")
+    # The URL stays in the local JSON and in this log. James auto-clicks
+    # Allow. Do not Contents-API publish the user_code for Cyrus's phone.
+    print(f"[reauth] device url for James: {complete_uri(code, uri)}", flush=True)
+    if send_code_to_cyrus():
+        publish_contents(f"chore: xAI device code {code}")
+    else:
+        print("[reauth] not sending the device code to Cyrus", flush=True)
     rc = wait_pid(pid, WAIT_S)
     try:
         os.close(fd)
@@ -542,7 +559,7 @@ def check(force: bool) -> int:
             "status": "needs_reauth" if code != 0 else existing.get("status") or "ok",
             "oauth": "FAIL" if code == 1 else ("WARN" if code == 2 else "OK"),
             "pong_ok": None,
-            "reason": "Grok job running — not starting device login. Phone: wait, then Start.",
+            "reason": "Grok job running — not starting device login. James auto-clicks Allow when the run is free.",
             "user_code": None,
             "verification_uri": DEVICE_URI,
             "expires_at": None,
